@@ -5,27 +5,34 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Event/cancelable
 ---
-{{ ApiRef("DOM") }}
+<div>{{ ApiRef("DOM") }}</div>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Indica si el elemento puede ser cancelado o no.
+<p>Indica si el elemento puede ser cancelado o no.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    bool =
-    event.cancelable;
+<pre class="eval"><i>bool</i> =
+<i>event</i>.cancelable;
+</pre>
 
-`bool` tiene valor `true` o `false`, dependiendo de si el evento puede ser desactivado.
+<p><code>bool</code> tiene valor <code>true</code> o <code>false</code>, dependiendo de si el evento puede ser desactivado.</p>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-Si un evento puede ser cancelado o no, es algo que se determina en el momento en que el evento es inicializado.
+<p>Si un evento puede ser cancelado o no, es algo que se determina en el momento en que el evento es inicializado.</p>
 
-Para cancelar un evento, llama al método [preventDefault](es/DOM/event.preventDefault) en el evento. Esto evita que la tarea de implementación ejecute la acción por defecto asociada con el evento.
+<p>Para cancelar un evento, llama al método <a href="es/DOM/event.preventDefault">preventDefault</a> en el evento. Esto evita que la tarea de implementación ejecute la acción por defecto asociada con el evento.</p>
 
-### Especificación
+<h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>
 
-[DOM Level 2 Events: cancelable](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-canCancel)
+<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-canCancel">DOM Level 2 Events: cancelable</a></p>
 
-{{ languages( { "en": "en/DOM/event.cancelable", "ja": "ja/DOM/event.cancelable", "pl": "pl/DOM/event.cancelable" } ) }}
+<p> </p>
+
+<p> </p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/DOM/event.cancelable", "ja": "ja/DOM/event.cancelable", "pl": "pl/DOM/event.cancelable" } ) }}</p>

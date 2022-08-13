@@ -1,28 +1,30 @@
 ---
 title: ':-moz-submit-invalid'
-slug: Web/CSS/:-moz-submit-invalid
+slug: 'Web/CSS/:-moz-submit-invalid'
 tags:
   - CSS
   - No estandar
   - Pseudo clase CSS
   - Referencia CSS
-translation_of: Web/CSS/:-moz-submit-invalid
+translation_of: 'Web/CSS/:-moz-submit-invalid'
 ---
-{{Non-standard_header}}{{ CSSRef() }}
+<p>{{Non-standard_header}}{{ CSSRef() }}</p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La [pseudo-clase](/es/CSS/Pseudo-classes "Pseudo-classes") CSS `:-moz-submit-invalid` representa cualquier botón de enviar de formularios cuyos contenidos no sean válidos conforme a las [restricciones de validación HTML](/en/HTML/Forms_in_HTML#Constraint_Validation "es/HTML/HTML5/Forms in HTML5#Constraint Validation").
+<p>La <a href="/es/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-clase</a> CSS <code>:-moz-submit-invalid</code>  representa cualquier botón de enviar de formularios cuyos contenidos no sean válidos conforme a las  <a href="/en/HTML/Forms_in_HTML#Constraint_Validation" title="es/HTML/HTML5/Forms in HTML5#Constraint Validation">restricciones de validación HTML</a>.</p>
 
-Por defecto no se aplica ningún estilo. Puedes usar tu estilo para personalizar la apariencia del botón de enviar cuando existen campos no válidos en el formulario.
+<p>Por defecto no se aplica ningún estilo. Puedes usar tu estilo para personalizar la apariencia del botón de enviar cuando existen campos no válidos en el formulario.</p>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("css.selectors.-moz-submit-invalid")}}
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-- {{ cssxref(":valid") }}
-- {{ cssxref(":invalid") }}
-- {{ cssxref(":required") }}
-- {{ cssxref(":optional") }}
+<ul>
+ <li>{{ cssxref(":valid") }}</li>
+ <li>{{ cssxref(":invalid") }}</li>
+ <li>{{ cssxref(":required") }}</li>
+ <li>{{ cssxref(":optional") }}</li>
+</ul>

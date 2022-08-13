@@ -10,80 +10,105 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/slice
 ---
-{{JSRef("Objetos_globales", "String")}}
+<p>{{JSRef("Objetos_globales", "String")}}</p>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-El método **`slice()`** extrae una sección de una cadena y devuelve una cadena nueva.
+<p>El método <strong><code>slice()</code></strong> extrae una sección de una cadena y devuelve una cadena nueva.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-```html
-cadena.slice(inicioTrozo[, finTrozo])
-```
+<pre class="eval"><code class="language-html"><em>cadena</em>.slice(<em>inicioTrozo</em>[, <em>finTrozo</em>])</code>
+</pre>
 
-### Parameters
+<h3 id="Parameters" name="Parameters">Parameters</h3>
 
-- `inicioTrozo`
-  - : El índice basado en cero en el cual empieza la extracción. Si es negativo, se trata como `longCadena + inicioTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `inicioTrozo` es `-3` se trata como `longCadena - 3`)
+<dl>
+ <dt><code>inicioTrozo</code></dt>
+ <dd>El índice basado en cero en el cual empieza la extracción.  Si es negativo, se trata como <code>longCadena + inicioTrozo</code> donde <code>longCadena</code> es la longitud de la cadena (por ejemplo, si <code>inicioTrozo</code> es <code>-3</code> se trata como <code>longCadena - 3</code>)</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><code>finTrozo</code></dt>
+ <dd>Opcional. El índice basado en cero en el que termina la extracción. Si se omite, <code>slice</code> extrae hasta el final de la cadena.  Si es negativo, se trata como <code>longCadena + finTrozo</code> donde <code>longCadena</code> es la longitud de la cadena (por ejemplo, si <code>finTrozo </code>es <code>-3</code> se trata como <code>longCadena - 3</code>).</dd>
+</dl>
 
-- `finTrozo`
-  - : Opcional. El índice basado en cero en el que termina la extracción. Si se omite, `slice` extrae hasta el final de la cadena. Si es negativo, se trata como `longCadena + finTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `finTrozo `es `-3` se trata como `longCadena - 3`).
+<h3 id="Valor_retornado">Valor retornado</h3>
 
-### Valor retornado
+<p>Una nueva cadena que contiene la sección de la cadena.</p>
 
-Una nueva cadena que contiene la sección de la cadena.
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-## Descripción
+<p><code>slice</code> extrae el texto de una cadena y devuelve una nueva cadena. Los cambios en el texto de una cadena no afectan a la otra cadena.</p>
 
-`slice` extrae el texto de una cadena y devuelve una nueva cadena. Los cambios en el texto de una cadena no afectan a la otra cadena.
+<p><code>slice</code> extrae hasta, pero sin incluir <code>finalTrozo</code>. <code>string.slice(1,4)</code> extrae del segundo carácter hasta el cuarto carácter (caracteres con índice 1, 2 y 3).</p>
 
-`slice` extrae hasta, pero sin incluir `finalTrozo`. `string.slice(1,4)` extrae del segundo carácter hasta el cuarto carácter (caracteres con índice 1, 2 y 3).
+<p>Si se usa un índice negativo, finalTrozo indica el punto desde el final de la cadena.string.slice(2, -1) extrae desde tercer carácter hasta el último carácter de la cadena.</p>
 
-Si se usa un índice negativo, finalTrozo indica el punto desde el final de la cadena.string.slice(2, -1) extrae desde tercer carácter hasta el último carácter de la cadena.
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-## Ejemplos
+<h3 id="Ejemplo:_Usando_slice_para_crear_una_nueva_cadena" name="Ejemplo:_Usando_slice_para_crear_una_nueva_cadena">Ejemplo: Uso de <code>slice()</code> para crear una nueva cadena</h3>
 
-### Ejemplo: Uso de `slice()` para crear una nueva cadena
+<p>El siguiente ejemplo usa <code>slice()</code> para crear una nueva cadena.</p>
 
-El siguiente ejemplo usa `slice()` para crear una nueva cadena.
-
-```js
-var cadena1 = "La mañana se nos echa encima.";
+<pre class="brush: js">var cadena1 = "La mañana se nos echa encima.";
 var cadena2 = cadena1.slice(3, -2);
 console.log(cadena2);
-```
+</pre>
 
-Esto escribe:
+<p>Esto escribe:</p>
 
-    mañana se nos echa encim
+<pre class="eval">mañana se nos echa encim</pre>
 
-### Uso de `slice()` con índices negativos
+<h3 id="Uso_de_slice()_con_índices_negativos">Uso de <code>slice()</code> con índices negativos</h3>
 
-El siguiente ejemplo usa `slice()` con índices negativos.
+<p>El siguiente ejemplo usa <code>slice()</code> con índices negativos.</p>
 
-    var cad = "La mañana se nos echa encima.";
-    cad.slice(-3);     // retorna 'ma.'
-    cad.slice(-3, -1); // retorna 'ma'
-    cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
+<pre>var cad = "La mañana se nos echa encima.";<code>
+cad.slice(-3);     // retorna 'ma.'
+cad.slice(-3, -1); // retorna 'ma'
+cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'</code></pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                               | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.13', 'String.prototype.slice')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-string.prototype.slice', 'String.prototype.slice')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-string.prototype.slice', 'String.prototype.slice')}} | {{Spec2('ESDraft')}} |                                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES3')}}</td>
+   <td>{{Spec2('ES3')}}</td>
+   <td>Definición inicial. Implementado en JavaScript 1.2.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.5.4.13', 'String.prototype.slice')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-string.prototype.slice', 'String.prototype.slice')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-string.prototype.slice', 'String.prototype.slice')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("javascript.builtins.String.slice")}}
 
-## Vea También
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
 
-- {{jsxref("String.prototype.substr()")}}
-- {{jsxref("String.prototype.substring()")}}
-- {{jsxref("Array.prototype.slice()")}}
+<ul>
+ <li>{{jsxref("String.prototype.substr()")}}</li>
+ <li>{{jsxref("String.prototype.substring()")}}</li>
+ <li>{{jsxref("Array.prototype.slice()")}}</li>
+</ul>

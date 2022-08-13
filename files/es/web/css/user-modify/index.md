@@ -8,18 +8,17 @@ tags:
 translation_of: Web/CSS/user-modify
 original_slug: Web/CSS/-moz-user-modify
 ---
-{{Non-standard_header}}{{CSSRef}}
+<div>{{Non-standard_header}}{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad `-moz-user-modify` determina si el contenido de un elemento puede ser editado por el usuario. Se relaciona con el atributo {{htmlattrxref("contenteditable")}} . `user-focus` , que es una propiedad similar, fue propuesta como parte de los [borradores iniciales de un predecesor de la especificación CSS3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216) ,pero fue rechazada por el grupo de trabajo.
+<p>La propiedad <code>-moz-user-modify</code> determina si el contenido de un elemento puede ser editado por el usuario. Se relaciona con el atributo {{htmlattrxref("contenteditable")}} .  <code>user-focus</code> , que es una propiedad similar, fue propuesta como parte de los <a class="external" href="http://www.w3.org/TR/2000/WD-css3-userint-20000216">borradores iniciales de un predecesor de la especificación CSS3 UI</a> ,pero fue rechazada por el grupo de trabajo.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-```css
-/* Palabras clave valor */
+<pre class="brush:css">/* Palabras clave valor */
 -moz-user-modify: read-only;
 -moz-user-modify: read-write;
 -moz-user-modify: write-only;
@@ -28,52 +27,54 @@ La propiedad `-moz-user-modify` determina si el contenido de un elemento puede s
 -moz-user-modify: inherit;
 -moz-user-modify: initial;
 -moz-user-modify: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- read-only
-  - : Valor por defecto. El contenido sólo se puede leer.
-- read-write
-  - : El usuario puede leer y escribir contenidos.
-- write-only
-  - : El usuario puede editar el contenido pero no leerlo.
+<dl>
+ <dt>read-only</dt>
+ <dd>Valor por defecto. El contenido sólo se puede leer.</dd>
+ <dt>read-write</dt>
+ <dd>El usuario puede leer y escribir contenidos.</dd>
+ <dt>write-only</dt>
+ <dd>El usuario puede editar el contenido pero no leerlo.</dd>
+</dl>
 
-### Síntaxis Formal
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-.readwrite {
+<pre class="brush:css">.readwrite {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
 }
-```
+</pre>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<div class="readwrite">El usuario puede cambiar este texto.</div>
-```
+<pre class="brush:html">&lt;div class="readwrite"&gt;El usuario puede cambiar este texto.&lt;/div&gt;
+</pre>
 
-### Result
+<h3 id="Result">Result</h3>
 
-{{EmbedLiveSample("Example", 300, 30)}}
+<p>{{EmbedLiveSample("Example", 300, 30)}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-`user-modify` en [una versión inicial de la especificación CSS 3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216#user-modify) (Borrador de trabajo Febrero del 2000, Working Draft February 2000 que ya ha sido reeemplazado por _CSS 3 UI_)
+<p><code>user-modify</code> en <a class="external" href="http://www.w3.org/TR/2000/WD-css3-userint-20000216#user-modify" lang="en">una versión inicial de la especificación CSS 3 UI</a> (Borrador de trabajo Febrero del 2000, Working Draft February 2000 que ya ha sido reeemplazado por <em>CSS 3 UI</em>)</p>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("css.properties.user-modify")}}
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-- {{cssxref("-moz-user-focus")}}
-- {{cssxref("-moz-user-input")}}
-- {{cssxref("-moz-user-select")}}
+<ul>
+ <li>{{cssxref("-moz-user-focus")}}</li>
+ <li>{{cssxref("-moz-user-input")}}</li>
+ <li>{{cssxref("-moz-user-select")}}</li>
+</ul>

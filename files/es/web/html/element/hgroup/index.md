@@ -4,47 +4,65 @@ slug: Web/HTML/Element/hgroup
 translation_of: Web/HTML/Element/hgroup
 original_slug: Web/HTML/Elemento/hgroup
 ---
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-El _elemento de grupo de cabeceras HTML_ (\<hgroup>) representa el encabezado de una sección. Define un solo título que participa de [la estructura del documento ](/en/Sections_and_Outlines_of_an_HTML5_document "en/Sections and Outlines of an HTML5 document")como el encabezado de la sección implícita o explícita a la que pertenece.
+<p>El <em>elemento de grupo de cabeceras HTML</em> (<span style="font-family: Courier New;">&lt;hgroup&gt;</span>) representa el encabezado de una sección. Define un solo título que participa de <a href="/en/Sections_and_Outlines_of_an_HTML5_document" title="en/Sections and Outlines of an HTML5 document">la estructura del documento </a>como el encabezado de la sección implícita o explícita a la que pertenece.</p>
 
-Su _text_o para el algoritmo de estructura es el texto del primer elemento de encabezado HTML de más alto rango (ip.ej., el primer {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }} o {{ HTMLElement("h6") }} con el número más pequeño entre sus descendientes) y el \_rango_ es el rango del mismo elemento de encabezado HTML.
+<p>Su <em>text</em>o para el algoritmo de estructura es el texto del primer elemento de encabezado HTML de más alto rango (ip.ej., el primer {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }} o {{ HTMLElement("h6") }} con el número más pequeño entre sus descendientes) y el <em>rango</em> es el rango del mismo elemento de encabezado HTML.</p>
 
-Por tanto, este elemento agrupa varios encabezados, pero solo el primero contribuye a la estructura del documento. Permite asociar títulos secundarios, como subencabezados, títulos alternativos, e incluso lemas, con el encabezado principal, sin contaminar la estructura del documento.
+<p>Por tanto, este elemento agrupa varios encabezados, pero solo el primero contribuye a la estructura del documento. Permite asociar títulos secundarios, como subencabezados, títulos alternativos, e incluso lemas, con el encabezado principal, sin contaminar la estructura del documento.</p>
 
-Este elemento se fue removido de la especificacion HTML5 (W3C), por favor no usar mas.
+<p>Este elemento se fue removido de la especificacion HTML5 (W3C), por favor no usar mas.</p>
 
-### Contexto de uso
+<h3 id="Contexto_de_uso">Contexto de uso</h3>
 
-| Contenido permitido        | Cero o más elementos HTML de encabezado ({{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}) |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiqueta        | Ninguna, ambas, la etiqueta de inicio y fin son obligatorias                                                                                                                                                                                         |
-| Elementos padre permitidos | Cualquier elemento que acepte [flujo de contenido](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content").                                                                                                              |
-| Documento nomativo         | [HTML5, section 4.4.7](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-hgroup-element)                                                                                                                                 |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>Contenido permitido</td>
+   <td>Cero o más elementos HTML de encabezado ({{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }})</td>
+  </tr>
+  <tr>
+   <td>Omisión de etiqueta</td>
+   <td>Ninguna, ambas, la etiqueta de inicio y fin son obligatorias</td>
+  </tr>
+  <tr>
+   <td>Elementos padre permitidos</td>
+   <td>
+    <p>Cualquier elemento que acepte <a href="/en/HTML/Content_categories#flow_content" title="en/HTML/Content categories#flow content">flujo de contenido</a>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>Documento nomativo</td>
+   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-hgroup-element" rel="external nofollow">HTML5, section 4.4.7</a></td>
+  </tr>
+ </tbody>
+</table>
 
-### Atributos
+<h3 id="Atributos">Atributos</h3>
 
-Este elemento no tiene más atributos que los [atributos globales](/en/HTML/Global_attributes), común a todos los elementos.
+<p>Este elemento no tiene más atributos que los <a href="/en/HTML/Global_attributes" rel="internal">atributos globales</a>, común a todos los elementos.</p>
 
-## Notas de uso
+<h2 id="Notas_de_uso">Notas de uso</h2>
 
-> **Nota:** Si bien el elemento `<hgroup>` se eliminó de la especificación HTML5 (W3C), todavía se mantiene en la versión WHATWG de HTML. De todos modos, está parcialmente implementado en la mayoría de los navegadores, por lo que es improbable que desaparezca.
-> Sin embargo, dado que el propósito principal del elemento `<hgroup>` es afectar cómo [el algoritmo de generación de esquemas de documento](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm) muestra los encabezados, pero **dicho algoritmo no ha sido implementado por ningún navegador**, la semántica de `<hgroup>` es por el momento solo teórica.
-> La especificación HTML5 (W3C) aconseja entonces cómo maquetar [subtítulos, títulos alternativos y lemas](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) sin utilizar `<hgroup>`.
+<div class="note">
+<p>Si bien el elemento <code>&lt;hgroup&gt;</code> se eliminó de la especificación HTML5 (W3C), todavía se mantiene en la versión WHATWG de HTML. De todos modos, está parcialmente implementado en la mayoría de los navegadores, por lo que es improbable que desaparezca.<br>
+ Sin embargo, dado que el propósito principal del elemento <code>&lt;hgroup&gt;</code> es afectar cómo <a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">el algoritmo de generación de esquemas de documento</a> muestra los encabezados, pero <strong>dicho algoritmo no ha sido implementado por ningún navegador</strong>, la semántica de <code>&lt;hgroup&gt;</code> es por el momento solo teórica.<br>
+ La especificación HTML5 (W3C) aconseja entonces cómo maquetar <a href="https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements">subtítulos, títulos alternativos y lemas</a> sin utilizar <code>&lt;hgroup&gt;</code>.</p>
+</div>
 
-### Interfaz DOM
+<h3 class="editable" id="Interfaz_DOM">Interfaz DOM</h3>
 
-Este elemento implementa la interfaz` HTMLElement`.
+<p>Este elemento implementa la interfaz<code> <a href="/es/DOM/element" title="en/DOM/element">HTMLElement</a></code>.</p>
 
-### Ejemplos
+<h3 id="Ejemplos">Ejemplos</h3>
 
-```html
-<hgroup>
-  <h1>Main title</h1>
-  <h2>Secondary title</h2>
-</hgroup>
-```
+<pre class="brush: html">&lt;hgroup&gt;
+  &lt;h1&gt;Main title&lt;/h1&gt;
+  &lt;h2&gt;Secondary title&lt;/h2&gt;
+&lt;/hgroup&gt;
+</pre>
 
-### Compatibilidad
+<h3 id="Compatibilidad">Compatibilidad</h3>
 
 {{Compat("html.elements.hgroup")}}

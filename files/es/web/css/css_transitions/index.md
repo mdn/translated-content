@@ -9,31 +9,52 @@ tags:
   - Vista general
 translation_of: Web/CSS/CSS_Transitions
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-**Transiciones CSS** es un módulo de CSS que define cómo crear transiciones suaves entre diferentes valores de las propiedades CSS. Permite tanto crearlas como definir su evolución usando funciones relacionadas con el tiempo.
+<p><strong>Transiciones CSS </strong>es un módulo de CSS que define cómo crear transiciones suaves entre diferentes valores de las propiedades CSS. Permite tanto crearlas como definir su evolución usando funciones relacionadas con el tiempo.</p>
 
-## Referencia
+<h2 id="Referencia">Referencia</h2>
 
-### Propiedades
+<h3 id="Propiedades">Propiedades</h3>
 
-- {{cssxref("transition")}}
-- {{cssxref("transition-delay")}}
-- {{cssxref("transition-duration")}}
-- {{cssxref("transition-property")}}
-- {{cssxref("transition-timing-function")}}
+<div class="index">
+<ul>
+ <li>{{cssxref("transition")}}</li>
+ <li>{{cssxref("transition-delay")}}</li>
+ <li>{{cssxref("transition-duration")}}</li>
+ <li>{{cssxref("transition-property")}}</li>
+ <li>{{cssxref("transition-timing-function")}}</li>
+</ul>
+</div>
 
-## Guías
+<h2 id="Guías">Guías</h2>
 
-- [Using CSS transitions](/es/docs/Web/Guide/CSS/Using_CSS_transitions)
-  - : Tutorial donde se explica paso a paso cómo crear transiciones suaves usando CSS. El artículo describe cada propiedad CSS relevante y explica como interactúan entre ellas.
+<dl>
+ <dt><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">Using CSS transitions</a></dt>
+ <dd>Tutorial donde se explica paso a paso cómo crear transiciones suaves usando CSS. El artículo describe cada propiedad CSS relevante y explica como interactúan entre ellas.</dd>
+</dl>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                               | Estado                                   | Comentario         |
-| -------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Transitions')}} | {{Spec2('CSS3 Transitions')}} | Definición Inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Transitions')}}</td>
+   <td>{{Spec2('CSS3 Transitions')}}</td>
+   <td>Definición Inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-- Transiciones relacionadas, [CSS Animations](/es/docs/Web/CSS/CSS_Animations) pueden producir animaciones independientemente de los cambios en los valores.
+<ul>
+ <li>Transiciones relacionadas, <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> pueden producir animaciones independientemente de los cambios en los valores.</li>
+</ul>

@@ -9,40 +9,51 @@ tags:
   - persist()
 translation_of: Web/API/StorageManager/persist
 ---
-{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
+<p>{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}</p>
 
-El método **`persist()`** de la interfaz {{domxref("StorageManager")}} solicita permiso para usar el almacenamiento persistente, y devuelve una {{jsxref('Promise')}} que se resuelve como `true` si se concede el permiso y _box mode_ es persistente, y `false` en cualquier otro caso.
+<p><span class="seoSummary">El método <strong><code>persist()</code></strong> de la interfaz {{domxref("StorageManager")}} solicita permiso para usar el almacenamiento persistente, y devuelve una {{jsxref('Promise')}} que se resuelve como <code>true</code> si se concede el permiso y <em>box mode</em> es persistente, y <code>false</code> en cualquier otro caso.</span></p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    navigator.storage.persist().then(function(persistent) { ... })
+<pre class="syntaxbox">navigator.storage.persist().then(function(persistent) { ... })</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-Una {{jsxref('Promise')}} que se resuelve en un {{jsxref('Boolean')}}.
+<p>Una {{jsxref('Promise')}} que se resuelve en un {{jsxref('Boolean')}}.</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-if (navigator.storage && navigator.storage.persist)
+<pre class="brush: js">if (navigator.storage &amp;&amp; navigator.storage.persist)
   navigator.storage.persist().then(function(persistent) {
     if (persistent)
       console.log("Storage will not be cleared except by explicit user action");
     else
       console.log("Storage may be cleared by the UA under storage pressure.");
-  });
-```
+  });</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('Storage','#dom-storagemanager-persist','persist')}} | {{Spec2('Storage')}} | Definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Storage','#dom-storagemanager-persist','persist')}}</td>
+   <td>{{Spec2('Storage')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("api.StorageManager.persist")}}
+
+
+<p>{{Compat("api.StorageManager.persist")}}</p>

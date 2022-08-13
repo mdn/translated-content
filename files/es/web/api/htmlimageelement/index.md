@@ -8,100 +8,137 @@ tags:
   - Reference
 translation_of: Web/API/HTMLImageElement
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-La interfaz **`HTMLImageElement`** provee de propiedas especiales y métodos (más allá de las interfaces {{domxref("HTMLElement")}}, también tiene disponible la herencia) para manipular el diseño y la presentación de elementos {{HTMLElement("img")}}.
+<p>La interfaz <strong><code>HTMLImageElement</code></strong> provee de propiedas especiales y métodos (más allá de las interfaces {{domxref("HTMLElement")}}, también tiene disponible la herencia) para manipular el diseño y la presentación de elementos {{HTMLElement("img")}}.</p>
 
-## Propiedades
+<h2 id="Propiedades">Propiedades</h2>
 
-_Heredadas de su padre, {{domxref("HTMLElement")}}._
+<p><em>Heredadas de su padre, {{domxref("HTMLElement")}}.</em></p>
 
-- {{domxref("HTMLImageElement.align")}} {{obsolete_inline}}
-  - : Es un {{domxref("DOMString")}} que indica el alineamiento de la imagen respecto al contexto que la rodea.
-- {{domxref("HTMLImageElement.alt")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("alt", "img")}}, indicando texto de respaldo a la imagen.
-- {{domxref("HTMLImageElement.border")}} {{obsolete_inline}}
-  - : Es un {{domxref("DOMString")}} que indica el ancho del borde alrededor de la imagen. Este está desaprobado y debe usarse la propiedad CSS {{cssxref("border")}} en su lugar.
-- {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
-  - : Devuelve un {{domxref("Boolean")}} que es `true` si el navegador ha terminado de buscar la imagen, sea o no exitoso. También devuelve `true` si la imagen no tiene valor {{domxref("HTMLImageElement.src", "src")}}.
-- {{domxref("HTMLImageElement.crossOrigin")}}
-  - : Es un {{domxref("DOMString")}} representa la configuración CORS para el elemento imagen. Ver [Atributos de configuración CORS](/es/docs/Web/HTML/Atributos_de_configuracion_CORS) para más detalles.
-- {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un {{domxref("DOMString")}}
-- {{domxref("HTMLImageElement.height")}}
-  - : Es un `unsigned long` que refleja el atributo HTML {{htmlattrxref("height", "img")}}, indica el alto de la imagen en píxeles CSS.
-- {{domxref("HTMLImageElement.hspace")}} {{obsolete_inline}}
-  - : Es un `long` que representa el espacio a izquierda y derecha de la imagen.
-- {{domxref("HTMLImageElement.isMap")}}
-  - : Es un {{domxref("Boolean")}} que refleja el atributo HTML {{htmlattrxref("ismap", "img")}}, indica que la imagen es parte del mapa de imagen del lado del servidor.
-- {{domxref("HTMLImageElement.longDesc")}} {{obsolete_inline}}
-  - : Es un {{domxref("DOMString")}} que representa la URI de una larga descripción de la imagen.
-- {{domxref("HTMLImageElement.lowSrc")}} {{obsolete_inline}}
-  - : Es un {{domxref("DOMString")}} que referencia una copia de la imagen en mala calidad (pero más rápida cargando)
-- {{domxref("HTMLImageElement.name")}} {{obsolete_inline}}
-  - : Es un {{domxref("DOMString")}}.
-- {{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}
-  - : Devuelve un `unsigned long` que representa el alto intrínseco de la imagen en píxeles CSS, si está disponible, de otro modo, es 0.
-- {{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}
-  - : Devuelve un `unsigned long` que representa el ancho intrínseco de la imagen en píxeles CSS, si está disponible, de otro modo, es 0.
-- {{domxref("HTMLImageElement.referrerPolicy")}} {{experimental_inline}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("referrerpolicy", "img")}} indica la referencia a usar para buscar la imagen.
-- {{domxref("HTMLImageElement.src")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("src", "img")}} HTML attribute, contiene la URL completa de la imagen, incluido la base del URI
-- {{domxref("HTMLImageElement.sizes")}} {{experimental_inline}}
-  - : Es un {{domxref("DOMString")}}
-- {{domxref("HTMLImageElement.srcset")}} {{experimental_inline}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("srcset", "img")}}, contiene una ista de imágenes candidatas, separadas por una coma (`',', U+002C COMMA`). Una imagen candidata es una URL seguida por `'w'` con el ancho, o una `'x'` seguida de la densidad del píxel.
-- {{domxref("HTMLImageElement.useMap")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("usemap", "img")}}, contiene una URL parcial del mapa del elemento.
-- {{domxref("HTMLImageElement.vspace")}} {{obsolete_inline}}
-  - : Es un `long` que representa el espacio sobre y bajo la imagen.
-- {{domxref("HTMLImageElement.width")}}
-  - : Es un `unsigned long` que refleja el atributo HTML {{htmlattrxref("width", "img")}}, indica el ancho de la imagen en píxeles CSS.
-- {{domxref("HTMLImageElement.x")}} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un `long` que representa el hueco horizontal hasta la capa más cercana. Esta propiedad copia el comportamiento de Netscape 4.
-- {{domxref("HTMLImageElement.y")}} {{readonlyInline}} {{experimental_inline}}
-  - : Devuelve un `long` que representa el hueco vertical hasta la capa más cercana. Esta propiedad copia el comportamiento de Netscape 4.
+<dl>
+ <dt>{{domxref("HTMLImageElement.align")}} {{obsolete_inline}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que indica el alineamiento de la imagen respecto al contexto que la rodea.</dd>
+ <dt>{{domxref("HTMLImageElement.alt")}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("alt", "img")}}, indicando texto de respaldo a la imagen.</dd>
+ <dt>{{domxref("HTMLImageElement.border")}} {{obsolete_inline}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que indica el ancho del borde alrededor de la imagen. Este está desaprobado y debe usarse la propiedad CSS {{cssxref("border")}} en su lugar.</dd>
+ <dt>{{domxref("HTMLImageElement.complete")}} {{readonlyInline}}</dt>
+ <dd>Devuelve un {{domxref("Boolean")}} que es <code>true</code> si el navegador ha terminado de buscar la imagen, sea o no exitoso. También devuelve <code>true</code> si la imagen no tiene valor {{domxref("HTMLImageElement.src", "src")}}.</dd>
+ <dt>{{domxref("HTMLImageElement.crossOrigin")}}</dt>
+ <dd>Es un {{domxref("DOMString")}} representa la configuración CORS para el elemento imagen. Ver <a href="/es/docs/Web/HTML/Atributos_de_configuracion_CORS">Atributos de configuración CORS</a> para más detalles.</dd>
+ <dt>{{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Devuelve un {{domxref("DOMString")}}</dd>
+ <dt>{{domxref("HTMLImageElement.height")}}</dt>
+ <dd>Es un <code>unsigned long</code> que refleja el atributo HTML {{htmlattrxref("height", "img")}}, indica el alto de la imagen en píxeles CSS.</dd>
+ <dt>{{domxref("HTMLImageElement.hspace")}} {{obsolete_inline}}</dt>
+ <dd>Es un <code>long</code> que representa el espacio a izquierda y derecha de la imagen.</dd>
+ <dt>{{domxref("HTMLImageElement.isMap")}}</dt>
+ <dd>Es un {{domxref("Boolean")}} que refleja el atributo HTML {{htmlattrxref("ismap", "img")}}, indica que la imagen es parte del mapa de imagen del lado del servidor.</dd>
+ <dt>{{domxref("HTMLImageElement.longDesc")}} {{obsolete_inline}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que representa la URI de una larga descripción de la imagen.</dd>
+ <dt>{{domxref("HTMLImageElement.lowSrc")}} {{obsolete_inline}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que referencia una copia de la imagen en mala calidad (pero más rápida cargando)</dd>
+ <dt>{{domxref("HTMLImageElement.name")}} {{obsolete_inline}}</dt>
+ <dd>Es un {{domxref("DOMString")}}.</dd>
+ <dt>{{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}</dt>
+ <dd>Devuelve un <code>unsigned long</code>  que representa el alto intrínseco de la imagen en píxeles CSS, si está disponible, de otro modo, es 0.</dd>
+ <dt>{{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}</dt>
+ <dd>Devuelve un <code>unsigned long</code> que representa el ancho intrínseco de la imagen en píxeles CSS, si está disponible, de otro modo, es 0.</dd>
+ <dt>{{domxref("HTMLImageElement.referrerPolicy")}} {{experimental_inline}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("referrerpolicy", "img")}} indica la referencia a usar para buscar la imagen.</dd>
+ <dt>{{domxref("HTMLImageElement.src")}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("src", "img")}} HTML attribute, contiene la URL completa de la imagen, incluido la base del URI</dd>
+ <dt>{{domxref("HTMLImageElement.sizes")}} {{experimental_inline}}</dt>
+ <dd>Es un {{domxref("DOMString")}}</dd>
+ <dt>{{domxref("HTMLImageElement.srcset")}} {{experimental_inline}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("srcset", "img")}}, contiene una ista de imágenes candidatas, separadas por una coma (<code>',', U+002C COMMA</code>). Una imagen candidata es una URL seguida por <code>'w'</code> con el ancho, o una <code>'x'</code> seguida de la densidad del píxel.</dd>
+ <dt>{{domxref("HTMLImageElement.useMap")}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que refleja el atributo HTML {{htmlattrxref("usemap", "img")}}, contiene una URL parcial del mapa del elemento.</dd>
+ <dt>{{domxref("HTMLImageElement.vspace")}} {{obsolete_inline}}</dt>
+ <dd>Es un <code>long</code> que representa el espacio sobre y bajo la imagen.</dd>
+ <dt>{{domxref("HTMLImageElement.width")}}</dt>
+ <dd>Es un <code>unsigned long</code> que refleja el atributo HTML {{htmlattrxref("width", "img")}}, indica el ancho de la imagen en píxeles CSS.</dd>
+ <dt>{{domxref("HTMLImageElement.x")}} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Devuelve un <code>long</code> que representa el hueco horizontal hasta la capa más cercana. Esta propiedad copia el comportamiento de Netscape 4.</dd>
+ <dt>{{domxref("HTMLImageElement.y")}} {{readonlyInline}} {{experimental_inline}}</dt>
+ <dd>Devuelve un <code>long</code> que representa el hueco vertical hasta la capa más cercana. Esta propiedad copia el comportamiento de Netscape 4.</dd>
+</dl>
 
-## Métodos
+<h2 id="Métodos">Métodos</h2>
 
-_Heredados de su padre, {{domxref("HTMLElement")}}._
+<p><em>Heredados de su padre, {{domxref("HTMLElement")}}.</em></p>
 
-- {{domxref("HTMLImageElement.Image()", "Image()")}}
-  - : El constructor `Image()`, toma dos `unsigned long` opcionales, ancho y alto del recurso, crea una instacia de creates `HTMLImageElement` no insertada en el árbol DOM.
+<dl>
+ <dt>{{domxref("HTMLImageElement.Image()", "Image()")}}</dt>
+ <dd>El constructor <code>Image()</code>, toma dos <code>unsigned long</code> opcionales, ancho y alto del recurso, crea una instacia de creates <code>HTMLImageElement</code> no insertada en el árbol DOM.</dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-var img1 = new Image(); // HTML5 Constructor
+<pre class="brush: js">var img1 = new Image(); // HTML5 Constructor
 img1.src = 'image1.png';
 img1.alt = 'alt';
 document.body.appendChild(img1);
 
-var img2 = document.createElement('img'); // Uso DOM HTMLImageElement
+var img2 = document.createElement('img'); // Uso DOM <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/html/nsIDOMHTMLImageElement.idl">HTMLImageElement</a>
 img2.src = 'image2.jpg';
 img2.alt = 'alt text';
 document.body.appendChild(img2);
 
 // Usando la primera imagen en el documento
 alert(document.images[0].src);
-```
+</pre>
 
-## Especificiaciones
+<h2 id="Especificiaciones">Especificiaciones</h2>
 
-| Especicifación                                                                                                                                   | Estado                               | Comentario                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}         | {{Spec2('Referrer Policy')}} | Añadida la propiedad `referrerPolicy`.                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName("CSSOM View", "#excensions-to-the-htmlimageelement-interface", "Extensions to HTMLImageElement")}} | {{Spec2('CSSOM View')}}     | Añadidas propiedades `x` e `y`                                                                                                                                                                                                                                                                                                                                            |
-| {{SpecName('HTML WHATWG', "embedded-content.html#the-img-element", "HTMLImageElement")}}                             | {{Spec2('HTML WHATWG')}}     | Las siguientes propiedades han sido añadidas: `srcset`, `currentSrc` y `sizes`.                                                                                                                                                                                                                                                                                           |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-img-element", "HTMLImageElement")}}                             | {{Spec2('HTML5 W3C')}}         | Un constructor (con 2 parámetros opcionales) añadido. Las siguientes propiedades quedaron obsoletas: `name`, `border`, `align`, `hspace`, `vspace`, y `longdesc`. Las siguientes propiedades son ahora `unsigned long`, en lugar de `long`: `height`, y width.Las siguientes propiedades fueron añadidas: `crossorigin`, `naturalWidth`, `naturalHeight`, `y` `complete`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-17701901', 'HTMLImgElement')}}                                                     | {{Spec2('DOM2 HTML')}}         | La propiedad `lowSrc` fue eliminada. Las siguientes propiedades son ahora `long`, en lugar de `DOMString`: `height`, `width`, `hspace`, y `vspace`.                                                                                                                                                                                                                       |
-| {{SpecName('DOM1', 'level-one-html.html#ID-17701901', 'HTMLImgElement')}}                                                 | {{Spec2('DOM1')}}             | Definición inicial.                                                                                                                                                                                                                                                                                                                                                       |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especicifación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}</td>
+   <td>{{Spec2('Referrer Policy')}}</td>
+   <td>Añadida la propiedad <code>referrerPolicy</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSSOM View", "#excensions-to-the-htmlimageelement-interface", "Extensions to HTMLImageElement")}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td>Añadidas propiedades <code>x</code> e <code>y</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "embedded-content.html#the-img-element", "HTMLImageElement")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Las siguientes propiedades han sido añadidas: <code>srcset</code>, <code>currentSrc</code> y <code>sizes</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-img-element", "HTMLImageElement")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Un constructor (con 2 parámetros opcionales) añadido. Las siguientes propiedades quedaron obsoletas: <code>name</code>, <code>border</code>, <code>align</code>, <code>hspace</code>, <code>vspace</code>, y <code>longdesc</code>. Las siguientes propiedades son ahora <code>unsigned long</code>, en lugar de <code>long</code>: <code>height</code>, y width.Las siguientes propiedades fueron añadidas: <code>crossorigin</code>, <code>naturalWidth</code>, <code>naturalHeight</code>, <code>y</code> <code>complete</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 HTML', 'html.html#ID-17701901', 'HTMLImgElement')}}</td>
+   <td>{{Spec2('DOM2 HTML')}}</td>
+   <td>La propiedad <code>lowSrc</code> fue eliminada.<br>
+    Las siguientes propiedades son ahora <code>long</code>, en lugar de <code>DOMString</code>: <code>height</code>, <code>width</code>, <code>hspace</code>, y <code>vspace</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-html.html#ID-17701901', 'HTMLImgElement')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegador
+<h2 id="Compatibilidad_con_navegador">Compatibilidad con navegador</h2>
 
 {{Compat("api.HTMLImageElement")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- El elemento HTML implementa esta interfaz: {{HTMLElement("img")}}
+<ul>
+ <li>El elemento HTML implementa esta interfaz: {{HTMLElement("img")}}</li>
+</ul>

@@ -3,12 +3,11 @@ title: border-top-color
 slug: Web/CSS/border-top-color
 translation_of: Web/CSS/border-top-color
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-La propiedad CSS **`border-top-color`** establece el color superior de un elemento {{cssxref("border")}}. Tenga en cuenta que en la mayoria de los casos las propiedades abreviadas {{cssxref("border-color")}} o {{cssxref("border-top")}} son mas convenientes y preferidas.
+<p>La  propiedad CSS <strong><code>border-top-color</code></strong>  establece el color superior de un elemento {{cssxref("border")}}. Tenga en cuenta que en la mayoria de los casos las propiedades abreviadas {{cssxref("border-color")}} o {{cssxref("border-top")}} son mas convenientes y preferidas.</p>
 
-```css
-/*valores <color> */
+<pre class="brush: css no-line-numbers  language-css">/*valores &lt;color&gt; */
 border-top-color: red;
 border-top-color: #ffbb00;
 border-top-color: rgb(255, 0, 0);
@@ -20,41 +19,40 @@ border-top-color: transparent;
 border-top-color: inherit;
 border-top-color: initial;
 border-top-color: unset;
-```
+</pre>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-La propiedad `border-top-color` es especificada con un valor unico.
+<p>La propiedad <code>border-top-color</code> es especificada con un valor unico.</p>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- {{cssxref("&lt;color&gt;")}}
-  - : El color superior del borde
+<dl>
+ <dt>{{cssxref("&lt;color&gt;")}}</dt>
+ <dd>El color superior del borde</dd>
+</dl>
 
-### Sintaxis Formal
+<h3 id="Sintaxis_Formal">Sintaxis Formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Un div simple con un borde
+<h3 id="Un_div_simple_con_un_borde">Un div simple con un borde</h3>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<div class="mybox">
-  <p>Esta es una caja con un border alrededor.
+<pre class="brush: html">&lt;div class="mybox"&gt;
+  &lt;p&gt;Esta es una caja con un border alrededor.
      Tenga en cuenta que un border de la caja es
-     <span class="redtext">Rojo</span>.</p>
-</div>
-```
+     &lt;span class="redtext"&gt;Rojo&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;</pre>
 
-#### CSS
+<h4 id="CSS">CSS</h4>
 
-```css
-.mybox {
+<pre class="brush: css">.mybox {
   border: solid 0.3em gold;
   border-top-color: red;
   width: auto;
@@ -62,26 +60,46 @@ La propiedad `border-top-color` es especificada con un valor unico.
 
 .redtext {
   color: red;
-}
-```
+}</pre>
 
-#### Resultado
+<h4 id="Resultado">Resultado</h4>
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+<p>{{EmbedLiveSample('A_simple_div_with_a_border')}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                           | Estado                                   | Comentarios                                                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-top-color', 'border-top-color')}}         | {{Spec2('CSS3 Backgrounds')}} | Sin cambios significativos, aunque la palabra clave `transparent` , ahora incluida en {{cssxref("&lt;color&gt;")}} que se ha extendido, se ha eliminado formalmente. |
-| {{SpecName('CSS2.1', 'box.html#border-color-properties', 'border-top-color')}} | {{Spec2('CSS2.1')}}                 | Definición inicial                                                                                                                                                           |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Backgrounds', '#border-top-color', 'border-top-color')}}</td>
+   <td>{{Spec2('CSS3 Backgrounds')}}</td>
+   <td>Sin cambios significativos, aunque la palabra clave <code>transparent</code> , ahora incluida en {{cssxref("&lt;color&gt;")}} que se ha extendido, se ha eliminado formalmente.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'box.html#border-color-properties', 'border-top-color')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad entre navegadores
+<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
 
-{{Compat("css.properties.border-top-color")}}
 
-## Ver tambien
 
-- Las propiedades abreviadas de CSS relacionadas con los bordes : {{Cssxref("border")}}, {{Cssxref("border-top")}}, y {{Cssxref("border-color")}}.
-- Las propiedades abrevadas de CSS relacionadas con el color para los bordes: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, y {{Cssxref("border-left-color")}}.
-- Las otras propiedades CSS relaciones con los bordes que se aplican al mismo borde : {{cssxref("border-top-style")}} y {{cssxref("border-top-width")}}.
+<p>{{Compat("css.properties.border-top-color")}}</p>
+
+<h2 id="Ver_tambien">Ver tambien</h2>
+
+<ul>
+ <li>Las propiedades abreviadas de CSS relacionadas con los bordes : {{Cssxref("border")}}, {{Cssxref("border-top")}}, y {{Cssxref("border-color")}}.</li>
+ <li>Las propiedades abrevadas de CSS relacionadas con el color para los bordes: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, y {{Cssxref("border-left-color")}}.</li>
+ <li>Las otras propiedades CSS relaciones con los bordes que se aplican al mismo borde : {{cssxref("border-top-style")}} y {{cssxref("border-top-width")}}.</li>
+</ul>

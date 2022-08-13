@@ -3,37 +3,55 @@ title: Console.dir()
 slug: Web/API/Console/dir
 translation_of: Web/API/Console/dir
 ---
-{{APIRef("Console API")}}
+<p>{{APIRef("Console API")}}</p>
 
-El método **`dir()`** de {{domxref("Console")}} despliega una lista interactiva de las propiedades del objeto JavaScript especificado. El resultado es presentado como un listado jerárquico con triángulos de despliegue que te dejan ver los contenidos de los objetos hijos.
+<p><span class="seoSummary">El método <strong><code>dir()</code></strong> de {{domxref("Console")}} despliega una lista interactiva de las propiedades del objeto JavaScript especificado. El resultado es presentado como un listado jerárquico con triángulos de despliegue que te dejan ver los contenidos de los objetos hijos.</span></p>
 
-Dicho de otra manera, `console.dir()` es la manera de ver todas las propiedades de un objeto JavaScript específicado por consola, mediante la cual el desarrollador puede facilmente obtener las propiedades del objeto.
+<p>Dicho de otra manera, <code>console.dir()</code> es la manera de ver todas las propiedades de un objeto JavaScript específicado por consola, mediante la cual el desarrollador puede facilmente obtener las propiedades del objeto.</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-![console-dir.png](/@api/deki/files/6081/=console-dir.png)
+<p><img alt="console-dir.png" class="default internal" src="/@api/deki/files/6081/=console-dir.png"></p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    console.dir(objeto);
+<pre class="syntaxbox notranslate">console.dir(<em>objeto</em>);
+</pre>
 
-## Parámetros
+<h2 id="Parámetros">Parámetros</h2>
 
-- `objeto`
-  - : `Un objeto JavaScript cuyas propiedades deben ser mostradas como resultado.`
+<dl>
+ <dt><code>objeto</code></dt>
+ <dd><code>Un objeto JavaScript cuyas propiedades deben ser mostradas como resultado.</code></dd>
+</dl>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                           | Estatus                          | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoledirobject", "console.dir()")}} | {{Spec2("Console API")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Console API", "#consoledirobject", "console.dir()")}}</td>
+   <td>{{Spec2("Console API")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("api.console.dir")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)
+<ul>
+ <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
+ <li><a href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome Console API reference</a></li>
+</ul>

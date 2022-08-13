@@ -3,33 +3,58 @@ title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
 translation_of: Web/HTTP/Headers/Content-Length
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-El encabezado de entidad **`Content-Length`** indica el tamaño de la entidad-cuerpo, en bytes, enviado al destinatario.
+<p>El encabezado de entidad <strong><code>Content-Length</code></strong> indica el tamaño de la entidad-cuerpo, en bytes, enviado al destinatario.</p>
 
-| Tipo de cabecera                                             | {{Glossary("Entity header")}} |
-| ------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Nombre de cabecera prohibido")}} | si                                       |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Tipo de cabecera</th>
+   <td>{{Glossary("Entity header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Nombre de cabecera prohibido")}}</th>
+   <td>si</td>
+  </tr>
+ </tbody>
+</table>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Content-Length: <longitud>
+<pre class="syntaxbox notranslate">Content-Length: &lt;longitud&gt;
+</pre>
 
-## Directivas
+<h2 id="Directivas">Directivas</h2>
 
-- \<length>
-  - : La longitud en número decimal de octetos.
+<dl>
+ <dt>&lt;length&gt;</dt>
+ <dd>La longitud en número decimal de octetos.</dd>
+</dl>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                           | Título                                                                                   |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| {{RFC("7230", "Content-Length", "3.3.2")}} | Protocolo de Transferencia de Hipertexto (HTTP/1.1): Sintaxis y enrutamiento de mensajes |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Título</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7230", "Content-Length", "3.3.2")}}</td>
+   <td>Protocolo de Transferencia de Hipertexto (HTTP/1.1): Sintaxis y enrutamiento de mensajes</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("http.headers.Content-Length")}}
 
-## Véase también
 
-- {{HTTPHeader("Transfer-Encoding")}}
+<p>{{Compat("http.headers.Content-Length")}}</p>
+
+<h2 id="Véase_también">Véase también</h2>
+
+<ul>
+ <li>{{HTTPHeader("Transfer-Encoding")}}</li>
+</ul>

@@ -11,54 +11,61 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/new
 original_slug: Web/JavaScript/Referencia/Operadores/new
 ---
-{{jsSidebar("Operators", "Operadores")}}
+<div>{{jsSidebar("Operators", "Operadores")}}</div>
 
-El **operador `new`** permite a los desarrolladores crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados que tiene un función constructora.
+<p><span class="seoSummary">El <strong>operador <code>new</code></strong> permite a los desarrolladores crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados que tiene un función constructora.</span></p>
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+<div>{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    new constructor[([arguments])]
+<pre class="syntaxbox notranslate">new <var>constructor</var>[([<var>arguments</var>])]</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `constructor`
-  - : Una clase o función que especifica el tipo de instancia del objeto.
+<dl>
+ <dt><code><var>constructor</var></code></dt>
+ <dd>Una clase o función que especifica el tipo de instancia del objeto.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><code><var>arguments</var></code></dt>
+ <dd>Una lista de valores con los que se llamará al <code><var>constructor</var></code>.</dd>
+</dl>
 
-- `arguments`
-  - : Una lista de valores con los que se llamará al `constructor`.
+<h2 id="Descripción">Descripción</h2>
 
-## Descripción
+<p>La palabra clave <strong><code>new</code></strong> hace lo siguiente:</p>
 
-La palabra clave **`new`** hace lo siguiente:
+<ol>
+ <li>Crea un objeto JavaScript simple y en blanco;</li>
+ <li>Vincula (establece el constructor de) este objeto a otro objeto;</li>
+ <li>Pasa el objeto recién creado del <em>Paso 1</em> como el contexto <code>this</code>;</li>
+ <li>Devuelve <code>this</code> si la función no devuelve un objeto.</li>
+</ol>
 
-1.  Crea un objeto JavaScript simple y en blanco;
-2.  Vincula (establece el constructor de) este objeto a otro objeto;
-3.  Pasa el objeto recién creado del _Paso 1_ como el contexto `this`;
-4.  Devuelve `this` si la función no devuelve un objeto.
+<p>La creación de un objeto definido por el usuario requiere dos pasos:</p>
 
-La creación de un objeto definido por el usuario requiere dos pasos:
+<ol>
+ <li>Defina el tipo de objeto escribiendo una función.</li>
+ <li>Crea una instancia del objeto con <code>new</code>.</li>
+</ol>
 
-1.  Defina el tipo de objeto escribiendo una función.
-2.  Crea una instancia del objeto con `new`.
+<p>Para definir un tipo de objeto, crea una función para el tipo de objeto que especifique su nombre y propiedades. Un objeto puede tener una propiedad que en sí misma es otro objeto. Ve los siguientes ejemplos.</p>
 
-Para definir un tipo de objeto, crea una función para el tipo de objeto que especifique su nombre y propiedades. Un objeto puede tener una propiedad que en sí misma es otro objeto. Ve los siguientes ejemplos.
+<p>Cuando se ejecuta el código <code>new <em>Foo</em>(...)</code>, sucede lo siguiente:</p>
 
-Cuando se ejecuta el código `new Foo(...)`, sucede lo siguiente:
+<ol>
+ <li>Se crea un nuevo objeto, heredado de <code><em>Foo</em>.prototype</code>.</li>
+ <li>La función constructora <code><em>Foo</em></code> se llama con los argumentos especificados y con {{JSxRef("Operators/this", "this")}} vinculado al objeto recién creado. <code>new <em>Foo</em></code> es equivalente a <code>new <em>Foo</em>()</code>, es decir, si no se especifica una lista de argumentos, <code><em>Foo</em></code> se llama sin argumentos.</li>
+ <li>El objeto (no nulo, <code>false</code>, 3.1415 u otros tipos primitivos) devuelto por la función constructora se convierte en el resultado de toda la expresión <code>new</code>. Si la función constructora no devuelve explícitamente un objeto, en su lugar se utiliza el objeto creado en el paso 1. (Normalmente, los constructores no devuelven un valor, pero pueden elegir hacerlo si quieren redefinir el proceso normal de creación de objetos).</li>
+</ol>
 
-1.  Se crea un nuevo objeto, heredado de `Foo.prototype`.
-2.  La función constructora `Foo` se llama con los argumentos especificados y con {{JSxRef("Operators/this", "this")}} vinculado al objeto recién creado. `new Foo` es equivalente a `new Foo()`, es decir, si no se especifica una lista de argumentos, `Foo` se llama sin argumentos.
-3.  El objeto (no nulo, `false`, 3.1415 u otros tipos primitivos) devuelto por la función constructora se convierte en el resultado de toda la expresión `new`. Si la función constructora no devuelve explícitamente un objeto, en su lugar se utiliza el objeto creado en el paso 1. (Normalmente, los constructores no devuelven un valor, pero pueden elegir hacerlo si quieren redefinir el proceso normal de creación de objetos).
+<p>Siempre puedes agregar una propiedad a un objeto definido previamente. Por ejemplo, la instrucción <code>car1.color = "black"</code> agrega una propiedad <code>color</code> a <code>car1</code> y le asigna un valor de "<code>black</code>". Sin embargo, esto no afecta a ningún otro objeto. Para agregar la nueva propiedad a todos los objetos del mismo tipo, debes agregar la propiedad a la definición del tipo de objeto <code>Car</code>.</p>
 
-Siempre puedes agregar una propiedad a un objeto definido previamente. Por ejemplo, la instrucción `car1.color = "black"` agrega una propiedad `color` a `car1` y le asigna un valor de "`black`". Sin embargo, esto no afecta a ningún otro objeto. Para agregar la nueva propiedad a todos los objetos del mismo tipo, debes agregar la propiedad a la definición del tipo de objeto `Car`.
+<p>Puedes agregar una propiedad compartida a un tipo de objeto definido previamente mediante la propiedad {{JSxRef("Global_Objects/Function/prototype", "Function.prototype")}}. Esto define una propiedad que comparten todos los objetos creados con esa función, en lugar de solo una instancia del tipo de objeto. El siguiente código agrega una propiedad de color con el valor <code>"color original"</code> a todos los objetos de tipo <code>Car</code>, y luego redefine ese valor con la cadena "<code>black</code>" solo en la instancia <code>car1</code> del objeto. Para obtener más información, consulta {{JSxRef("Global_Objects/Function/prototype", "prototype")}}.</p>
 
-Puedes agregar una propiedad compartida a un tipo de objeto definido previamente mediante la propiedad {{JSxRef("Global_Objects/Function/prototype", "Function.prototype")}}. Esto define una propiedad que comparten todos los objetos creados con esa función, en lugar de solo una instancia del tipo de objeto. El siguiente código agrega una propiedad de color con el valor `"color original"` a todos los objetos de tipo `Car`, y luego redefine ese valor con la cadena "`black`" solo en la instancia `car1` del objeto. Para obtener más información, consulta {{JSxRef("Global_Objects/Function/prototype", "prototype")}}.
-
-```js
-function Car() {}
+<pre class="brush: js notranslate">function Car() {}
 car1 = new Car();
 car2 = new Car();
 
@@ -74,93 +81,100 @@ console.log(Object.getPrototypeOf(car1).color); // 'color original'
 console.log(Object.getPrototypeOf(car2).color); // 'color original'
 console.log(car1.color);   // 'black'
 console.log(car2.color);   // 'color original'
-```
+</pre>
 
-> **Nota:** Si no escribiste el operador `new`, **la función `constructor` se invocará como cualquier función normal**, _sin crear un objeto._ En este caso, el valor de `this` también es diferente.
+<div class="note">
+<p>Si no escribiste el operador <code>new</code>, <strong>la función <code>constructor</code> se invocará como cualquier función normal</strong>, <em>sin crear un objeto.</em> En este caso, el valor de <code>this</code> también es diferente.</p>
+</div>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Tipo de objeto e instancia de objeto
+<h3 id="Tipo_de_objeto_e_instancia_de_objeto">Tipo de objeto e instancia de objeto</h3>
 
-Supongamos que deseas crear un tipo de objeto para `cars`. Quieres que este tipo de objeto se llame `Car`, y quieres que tenga propiedades para marca, modelo y año (`make`, `model` y `year` en inglés respectivamente). Para ello, podrías escribir la siguiente función:
+<p>Supongamos que deseas crear un tipo de objeto para <code>cars</code>. Quieres que este tipo de objeto se llame <code>Car</code>, y quieres que tenga propiedades para marca, modelo y año (<code>make</code>, <code>model</code> y <code>year</code> en inglés respectivamente). Para ello, podrías escribir la siguiente función:</p>
 
-```js
-function Car(make, model, year) {
+<pre class="brush: js notranslate">function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
 }
-```
+</pre>
 
-Ahora puedes crear un objeto llamado `myCar` de la siguiente manera:
+<p>Ahora puedes crear un objeto llamado <code>myCar</code> de la siguiente manera:</p>
 
-```js
-var myCar = new Car('Eagle', 'Talon TSi', 1993);
-```
+<pre class="brush: js notranslate">var myCar = new Car('Eagle', 'Talon TSi', 1993);
+</pre>
 
-Esta declaración crea `myCar` y le asigna los valores especificados para sus propiedades. Entonces el valor de `myCar.make` es la cadena "Eagle", `myCar.year` es el entero 1993, y así sucesivamente.
+<p>Esta declaración crea <code>myCar</code> y le asigna los valores especificados para sus propiedades. Entonces el valor de <code>myCar.make</code> es la cadena "Eagle", <code>myCar.year</code> es el entero 1993, y así sucesivamente.</p>
 
-Puedes crear cualquier número de objetos `car` mediante llamadas a `new`. Por ejemplo:
+<p>Puedes crear cualquier número de objetos <code>car</code> mediante llamadas a <code>new</code>. Por ejemplo:</p>
 
-```js
-var kensCar = new Car('Nissan', '300ZX', 1992);
-```
+<pre class="brush: js notranslate">var kensCar = new Car('Nissan', '300ZX', 1992);
+</pre>
 
-### Propiedad del objeto que en sí mismo es otro objeto
+<h3 id="Propiedad_del_objeto_que_en_sí_mismo_es_otro_objeto">Propiedad del objeto que en sí mismo es otro objeto</h3>
 
-Supongamos que defines un objeto llamado `Person` de la siguiente manera:
+<p>Supongamos que defines un objeto llamado <code>Person</code> de la siguiente manera:</p>
 
-```js
-function Person(name, age, sex) {
+<pre class="brush: js notranslate">function Person(name, age, sex) {
   this.name = name;
   this.age = age;
   this.sex = sex;
 }
-```
+</pre>
 
-Y luego creas una instancia de dos nuevos objetos `Person` de la siguiente manera:
+<p>Y luego creas una instancia de dos nuevos objetos <code>Person</code> de la siguiente manera:</p>
 
-```js
-var rand = new Person('Rand McNally', 33, 'M');
+<pre class="brush: js notranslate">var rand = new Person('Rand McNally', 33, 'M');
 var ken = new Person('Ken Jones', 39, 'M');
-```
+</pre>
 
-Luego, puedes reescribir la definición de `Car` para incluir una propiedad para `owner` (propietario en español) que tome un objeto `Person`, de la siguiente manera:
+<p>Luego, puedes reescribir la definición de <code>Car</code> para incluir una propiedad para <code>owner</code> (propietario en español) que tome un objeto <code>Person</code>, de la siguiente manera:</p>
 
-```js
-function Car(make, model, year, owner) {
+<pre class="brush: js notranslate">function Car(make, model, year, owner) {
   this.make = make;
   this.model = model;
   this.year = year;
   this.owner = owner;
 }
-```
+</pre>
 
-Para crear instancias de los nuevos objetos, utiliza lo siguiente:
+<p>Para crear instancias de los nuevos objetos, utiliza lo siguiente:</p>
 
-```js
-var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+<pre class="brush: js notranslate">var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
 var car2 = new Car('Nissan', '300ZX', 1992, ken);
-```
+</pre>
 
-En lugar de pasar una cadena literal o un valor entero al crear los nuevos objetos, las declaraciones anteriores pasan los objetos `rand` y `ken` como parámetros para los propietarios. Para conocer el nombre del propietario de `car2`, puedes acceder a la siguiente propiedad:
+<p>En lugar de pasar una cadena literal o un valor entero al crear los nuevos objetos, las declaraciones anteriores pasan los objetos <code>rand</code> y <code>ken</code> como parámetros para los propietarios. Para conocer el nombre del propietario de <code>car2</code>, puedes acceder a la siguiente propiedad:</p>
 
-```js
-car2.owner.name
-```
+<pre class="brush: js notranslate">car2.owner.name
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-new-operator', 'El operador new')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-new-operator', 'El operador new')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("javascript.operators.new")}}
 
-## Ve también
 
-- {{JSxRef("Function", "Funciones")}}
-- {{jsxref("Reflect.construct()")}}
-- {{jsxref("Object.prototype")}}
+<p>{{Compat("javascript.operators.new")}}</p>
+
+<h2 id="Ve_también">Ve también</h2>
+
+<ul>
+ <li>{{JSxRef("Function", "Funciones")}}</li>
+ <li>{{jsxref("Reflect.construct()")}}</li>
+ <li>{{jsxref("Object.prototype")}}</li>
+</ul>

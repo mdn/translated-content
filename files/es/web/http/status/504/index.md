@@ -3,26 +3,43 @@ title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
 translation_of: Web/HTTP/Status/504
 ---
-El código de respuesta de error del servidor de HTTP **`504 Gateway Timeout`** indica que el servidor, mientras actuaba como una puerta de enlace o proxy, no pudo obtener una respuesta a tiempo.
+<div> </div>
 
-> **Nota:**Una {{interwiki("wikipedia", "Puerta_de_enlace", "puerta de enlace")}} puede referirse a cosas distintas en redes y un error 502 no es algo que normalmente puedas arreglar, ya que requiere correcciones por parte del servidor o los proxies a través de los que intentas acceder.
+<div>El código de respuesta de error del servidor de HTTP  <code><strong>504 Gateway Timeout</strong></code> indica que el servidor, mientras actuaba como una puerta de enlace o proxy, no pudo obtener una respuesta a tiempo.</div>
 
-## Estado
+<div> </div>
 
-    504 Gateway Timeout
+<div class="note">
+<p><strong>Nota: </strong>Una {{interwiki("wikipedia", "Puerta_de_enlace", "puerta de enlace")}} puede referirse a cosas distintas en redes y un error 502 no es algo que normalmente puedas arreglar, ya que requiere correcciones por parte del servidor o los proxies a través de los que intentas acceder.</p>
+</div>
 
-## Especificaciones
+<h2 id="Estado">Estado</h2>
 
-| Especificación                                                   | Título                                                        |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "504 Gateway Timeout" , "6.6.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<pre class="syntaxbox">504 Gateway Timeout</pre>
 
-## Compatibilidad con navegadores
+<h2 id="Especificaciones">Especificaciones</h2>
 
-La información que se muestra a continuación fue extraída de la de cuenta de Github de MDN (<https://github.com/mdn/browser-compat-data>).
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Título</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7231", "504 Gateway Timeout" , "6.6.4")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("http.status.504")}}
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-## Vea también
+<p>La información que se muestra a continuación fue extraída de la de cuenta de Github de MDN (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
 
-- {{HTTPStatus(502)}}
+<p>{{Compat("http.status.504")}}</p>
+
+<h2 id="Vea_también">Vea también</h2>
+
+<ul>
+ <li>{{HTTPStatus(502)}}</li>
+</ul>

@@ -6,22 +6,25 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/EventLoop
 ---
-{{JsSidebar("Advanced")}}JavaScript poseé un modelo de concurrencia basado en un "loop de eventos". Este modelo es bastante diferente al modelo de otros lenguajes como C o Java.
+<div>{{JsSidebar("Advanced")}}</div>
 
-## Conceptos de un programa en ejecución
+<div>JavaScript poseé un modelo de concurrencia basado en un "loop de eventos". Este modelo es bastante diferente al modelo de otros lenguajes como C o Java.</div>
 
-Las siguientes secciones explican un modelo teórico. Los motores modernos de JavaScript implementan y optimizan fuertemente la semántica descrita a continuación.
+<div> </div>
 
-### Representación visual
+<h2 id="Conceptos_de_un_programa_en_ejecución">Conceptos de un programa en ejecución</h2>
 
-![Stack, heap, queue](the_javascript_runtime_environment_example.svg)
+<p>Las siguientes secciones explican un modelo teórico. Los motores modernos de JavaScript implementan y optimizan fuertemente la semántica descrita a continuación.</p>
 
-### Pila (Stack)
+<h3 id="Representación_visual">Representación visual</h3>
 
-Las llamadas a función forman una pila de _frames._ Un frame encapsula información como el contexto y las variables locales de una función.
+<p style="text-align: center;"><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg"></p>
 
-```js
-function f(b){
+<h3 id="Pila_(Stack)">Pila (Stack)</h3>
+
+<p>Las llamadas a función forman una pila de <em>frames.</em> Un frame encapsula información como el contexto y las variables locales de una función.</p>
+
+<pre class="brush: js">function f(b){
   var a = 12;
   return a+b+35;
 }
@@ -32,48 +35,45 @@ function g(x){
 }
 
 g(21);
-```
+</pre>
 
-Cuando se llama a `g`, un primer frame es creado, el cual contiene `g` argumentos y variables locales. Cuando `g` llama a `f`, un segundo frame es creado y colocado encima del primero, con `f` argumentos y variables locales. Cuando `f` termina de ejecutarse, el último frame (en este caso `f`) es sacado de la pila (déjando solo el frame de `g`). Cuando `g` termina de ejecutarse, la pila está vacía.
+<p>Cuando se llama a <code>g</code>, un primer frame es creado, el cual contiene <code>g</code> argumentos y variables locales. Cuando <code>g</code> llama a <code>f</code>, un segundo frame es creado y colocado encima del primero, con <code>f</code> argumentos y variables locales. Cuando <code>f</code> termina de ejecutarse, el último frame (en este caso <code>f</code>) es sacado de la pila (déjando solo el frame de <code>g</code>). Cuando <code>g</code> termina de ejecutarse, la pila está vacía.</p>
 
-### Montículo (Heap)
+<h3 id="Montículo_(Heap)">Montículo (Heap)</h3>
 
-Los objetos son colocados en un montículo, el cual, como su nombre lo dice, denota una gran región de memoria, mayormente sin estructura u orden.
+<p>Los objetos son colocados en un montículo, el cual, como su nombre lo dice, denota una gran región de memoria, mayormente sin estructura u orden.</p>
 
-### Cola (Queue)
+<h3 id="Cola_(Queue)">Cola (Queue)</h3>
 
-Un programa en ejecución en JavaScript contiene una cola de mensajes, la cual es una lista de mensajes a ser procesados. Cada mensaje se asocia con una función. Cuando la pila está vacía, un mensaje es sacado de la cola y procesado. Procesar un mensaje consiste en llamar a la función asociada al mensaje (y por ende crear una frame en la pila). El mensaje procesado termina cuando la pila está vacía de nuevo.
+<p>Un programa en ejecución en JavaScript contiene una cola de mensajes, la cual es una lista de mensajes a ser procesados. Cada mensaje se asocia con una función. Cuando la pila está vacía, un mensaje es sacado de la cola y procesado. Procesar un mensaje consiste en llamar a la función asociada al mensaje (y por ende crear una frame en la pila). El mensaje procesado termina cuando la pila está vacía de nuevo.</p>
 
-## Loop de eventos
+<h2 id="Loop_de_eventos">Loop de eventos</h2>
 
-El `loop de eventos` obtiene su nombre por la forma en que es usualmente implementado, la cual generalmente se parece a:
+<p>El <code>loop de eventos</code> obtiene su nombre por la forma en que es usualmente implementado, la cual generalmente se parece a:</p>
 
-```js
-while(queue.waitForMessage()){
+<pre class="brush: js">while(queue.waitForMessage()){
   queue.processNextMessage();
-}
-```
+}</pre>
 
-`queue.waitForMessage` espera de manera síncrona a que llegue un mensaje si no hay ninguno actualmente.
+<p><code>queue.waitForMessage</code> espera de manera síncrona a que llegue un mensaje si no hay ninguno actualmente.</p>
 
-### "Ejecutar-hasta-completar"
+<h3 id="Ejecutar-hasta-completar">"Ejecutar-hasta-completar"</h3>
 
-Cada mensaje es procesado completamente antes que cualquier otro mensaje sea procesado. Esto ofrece algunas propiedades convenientes al momento de pensar en un programa, incluido el hecho de que cada vez que una función se ejecuta, ésta no puede ser terminada y se ejecutará totalmente antes de que cualquier otro código se ejecute (y de este modo pueda modificar la información que la función manipula). Esto es diferente de C, por ejemplo, donde si una función se ejecuta en un hilo, esta puede ser detenida en cualquier punto para ejecutar código en otro hilo.
+<p>Cada mensaje es procesado completamente antes que cualquier otro mensaje sea procesado. Esto ofrece algunas propiedades convenientes al momento de pensar en un programa, incluido el hecho de que cada vez que una función se ejecuta, ésta no puede ser terminada y se ejecutará totalmente antes de que cualquier otro código se ejecute (y de este modo pueda modificar la información que la función manipula). Esto es diferente de C, por ejemplo, donde si una función se ejecuta en un hilo, esta puede ser detenida en cualquier punto para ejecutar código en otro hilo.</p>
 
-Una desventaja de este modelo es que, si un mensaje toma mucho tiempo en completarse, la aplicación es incapaz de procesar las interacciones de usuario, tales como clicks o scrolling. El navegador mitiga esta desventaja con el mensaje "un script esta tomando mucho tiempo en ejecutarse". Una buena práctica es hacer que el procesamiento del mensaje sea corto y, si es posible, dividir une mensaje en varios más.
+<p>Una desventaja de este modelo es que, si un mensaje toma mucho tiempo en completarse, la aplicación es incapaz de procesar las interacciones de usuario, tales como clicks o scrolling. El navegador mitiga esta desventaja con el mensaje "un script esta tomando mucho tiempo en ejecutarse". Una buena práctica es hacer que el procesamiento del mensaje sea corto y, si es posible, dividir une mensaje en varios más.</p>
 
-### Añadiendo mensajes
+<h3 id="Añadiendo_mensajes">Añadiendo mensajes</h3>
 
-En los navegadores web, los mensajes son añadidos cada vez que un evento ocurre y hay un escuchador de eventos asociado a él. Si no hay un escuchador, el evento se pierde. De este modo, al hacer click en un elemento con un manejador de eventos tipo click, se añadirá un mensaje. Lo mismo sucede en otros tipos de eventos.
+<p>En los navegadores web, los mensajes son añadidos cada vez que un evento ocurre y hay un escuchador de eventos asociado a él. Si no hay un escuchador, el evento se pierde. De este modo, al hacer click en un elemento con un manejador de eventos tipo click, se añadirá un mensaje. Lo mismo sucede en otros tipos de eventos.</p>
 
-Al llamar [`setTimeout`](/es/docs/Web/API/setTimeout "/es/docs/Web/API/setTimeout") se añadirá un mensaje a la cola después de el tiempo especificado como segundo parámetro. Si no hay ningún otro mensaje en la cola, el mensaje es procesado en el momento; sin embargo, si hay mensajes en la cola, el mensaje de `setTimeout `tendrá que esperar a que los otros mensajes sean procesados. Por esta razón el segundo parámetro indica el tiempo mínimo tiempo esperado y no es una garantía.
+<p>Al llamar <code><a href="/es/docs/Web/API/setTimeout" title="/es/docs/Web/API/setTimeout">setTimeout</a></code> se añadirá un mensaje a la cola después de el tiempo especificado como segundo parámetro. Si no hay ningún otro mensaje en la cola, el mensaje es procesado en el momento; sin embargo, si hay mensajes en la cola, el mensaje de <code>setTimeout </code>tendrá que esperar a que los otros mensajes sean procesados. Por esta razón el segundo parámetro indica el tiempo mínimo tiempo esperado y no es una garantía.</p>
 
-### Cero retraso
+<h3 id="Cero_retraso">Cero retraso</h3>
 
-Cero retraso no significa que una llamada a una función (call back) se disparará después de cero milisegundos. Al llamar {{domxref("WindowTimers.setTimeout", "setTimeout")}} con un retraso de 0 (cero) milisegundos, no se ejecuta la llamada de la función después de el intervado dado. La ejecución depende del número de tareas en espera en la cola. En el ejemplo de abajo el mensaje "this is just a message" será escrito en la terminal antes de que el mensaje de la llamada a la función sea procesado, esto es por que el retraso es el tiempo mínimo requerido para que el programa procese la petición, pero no es un tiempo garantizado.
+<p>Cero retraso no significa que una llamada a una función (call back) se disparará después de cero milisegundos. Al llamar {{domxref("WindowTimers.setTimeout", "setTimeout")}} con un retraso de 0 (cero) milisegundos, no se ejecuta la llamada de la función después de el intervado dado. La ejecución depende del número de tareas en espera en la cola. En el ejemplo de abajo el mensaje "this is just a message" será escrito en la terminal antes de que el mensaje de la llamada a la función sea procesado, esto es por que el retraso es el tiempo mínimo requerido para que el programa procese la petición, pero no es un tiempo garantizado.</p>
 
-```js
-(function () {
+<pre class="brush: js">(function () {
 
   console.log('this is the start');
 
@@ -97,14 +97,14 @@ Cero retraso no significa que una llamada a una función (call back) se disparar
 // cabe notar que la función retorna en este punto (undefined)
 // "this is a msg from call back"
 // "this is a msg from call back1"
-```
+</pre>
 
-### Varios programas comunicandose al mismo tiempo
+<h3 id="Varios_programas_comunicandose_al_mismo_tiempo">Varios programas comunicandose al mismo tiempo</h3>
 
-Un web worker o cross-origin `iframe` tiene su propia pila, montículo y cola de mensajes. Dos programas diferentes solo se pueden comunicar enviando mensajes a través del método [`postMessage`](/es/docs/Web/API/Window/postMessage "/es/docs/Web/API/Window/postMessage"). Este método añade un mensaje al otro programa si éste último escucha eventos de tipo `message`.
+<p>Un web worker o cross-origin <code>iframe</code> tiene su propia pila, montículo y cola de mensajes. Dos programas diferentes solo se pueden comunicar enviando mensajes a través del método  <code><a href="/es/docs/Web/API/Window/postMessage" title="/es/docs/Web/API/Window/postMessage">postMessage</a></code>. Este método añade un mensaje al otro programa si éste último escucha eventos de tipo <code>message</code>.</p>
 
-## Nunca se interrumpe
+<h2 id="Nunca_se_interrumpe">Nunca se interrumpe</h2>
 
-Una propiedad muy interesante del modelo de loop de eventos es que JavaScript, a diferencia de otros lenguajes, nunca interrumpe otros programas en ejecución. Manejar operaciones de I/O (entrada/salida) es normalmente hecho a través de eventos y llamadas a función, de modo que cuando la aplicación, por ejemplo, está esperando por el retorno de una consulta [IndexedDB](/es/docs/Web/API/IndexedDB_API "/es/docs/IndexedDB") o una petición [XHR](/es/docs/Web/API/XMLHttpRequest "/es/docs/DOM/XMLHttpRequest"), ésta puede continuar procesando otras cosas como interacciones con el usuario (e.g. clicks).
+<p>Una propiedad muy interesante del modelo de loop de eventos es que JavaScript, a diferencia de otros lenguajes, nunca interrumpe otros programas en ejecución. Manejar operaciones de I/O (entrada/salida) es normalmente hecho a través de eventos y llamadas a función, de modo que cuando la aplicación, por ejemplo, está esperando por el retorno de una consulta <a href="/es/docs/Web/API/IndexedDB_API" title="/es/docs/IndexedDB">IndexedDB</a> o una petición <a href="/es/docs/Web/API/XMLHttpRequest" title="/es/docs/DOM/XMLHttpRequest">XHR</a>, ésta puede continuar procesando otras cosas como interacciones con el usuario (e.g. clicks).</p>
 
-Excepciones a esta regla existe en versiones anteriores del lenguaje, tales como `alert` o XHR síncrono, pero es considerada una buena práctica evitar su uso. Finalmente, hay que estar conscientes que hay [excepciones](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) a las excepciones (pero son usualmente errores de implementación mas que otra cosa).
+<p>Excepciones a esta regla existe en versiones anteriores del lenguaje, tales como <code>alert</code> o XHR síncrono, pero es considerada una buena práctica evitar su uso. Finalmente, hay que estar conscientes que hay <a href="https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">excepciones</a> a las excepciones (pero son usualmente errores de implementación mas que otra cosa).</p>

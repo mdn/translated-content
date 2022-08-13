@@ -9,27 +9,48 @@ tags:
 translation_of: Web/HTML/Global_attributes/translate
 original_slug: Web/HTML/Atributos_Globales/translate
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+<p class="note">{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}</p>
 
-El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **translate** es un atributo enumerado que es usado para especificar si los valores del atributo de un elemento y los valores de sus nodos hijos de [Texto](https://html.spec.whatwg.org/multipage/infrastructure.html#text) serán traducidos cuando la página es localizada , o si se debe de dejarlos sin cambio . Puede tener los siguientes valores :
+<p>El <a href="/es/docs/Web/HTML/Atributos_Globales">atributo global</a> <strong>translate </strong> es un atributo enumerado que es usado para especificar si los valores del atributo de un elemento y los valores de sus nodos hijos de <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#text">Texto</a> serán traducidos cuando la página es localizada , o si se debe de dejarlos sin cambio . Puede tener los siguientes valores : </p>
 
-- Cadena vacía y "yes" , que indica que el elemento debe de ser traducido cuando la página es localizada .
-- "no", que indica que el elemento no debe de ser traducido .
+<ul>
+ <li>Cadena vacía y "yes" , que indica que el elemento debe de ser traducido cuando la página es localizada .</li>
+ <li>"no", que indica que el elemento no debe de ser traducido .</li>
+</ul>
 
-## Especificaciones
+<p> </p>
 
-| Especificación                                                                                   | Estatus                          | Comentario                                                            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#attr-translate", "translate")}}         | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', "dom.html#the-translate-attribute", "translate")}} | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial  |
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Compatibilidad en exploradores
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "dom.html#attr-translate", "translate")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "dom.html#the-translate-attribute", "translate")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores</h2>
 
 {{Compat("html.global_attributes.translate")}}
 
-##
+<h2 id="sect1"> </h2>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [atributos globales](/es/docs/Web/HTML/Atributos_Globales)
-- La propiedad {{domxref("HTMLElement.translate")}} que refleja a este atributo
+<ul>
+ <li><a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales  </a></li>
+ <li>La propiedad  {{domxref("HTMLElement.translate")}} que refleja a este atributo </li>
+</ul>

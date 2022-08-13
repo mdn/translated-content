@@ -7,18 +7,17 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/-webkit-text-stroke-color
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad CSS **`-webkit-text-stroke-color`** especifica el [color](/es/docs/Web/CSS/color_value) del trazo de los caracteres de texto. Si no se fija se usa el valor de la propiedad {{cssxref("color")}}.
+<p>La propiedad CSS <strong><code>-webkit-text-stroke-color</code></strong> especifica el  <a href="/es/docs/Web/CSS/color_value">color</a> del trazo de los caracteres de texto. Si no se fija se usa el valor de la propiedad {{cssxref("color")}}.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-```css
-/* valores <color> */
+<pre class="brush:css">/* valores &lt;color&gt; */
 -webkit-text-stroke-color: red;
 -webkit-text-stroke-color: #e08ab4;
 -webkit-text-stroke-color: rgb(200, 100, 0);
@@ -27,36 +26,58 @@ La propiedad CSS **`-webkit-text-stroke-color`** especifica el [color](/es/docs/
 -webkit-text-stroke-color: inherit;
 -webkit-text-stroke-color: initial;
 -webkit-text-stroke-color: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `<color>`
-  - : El color del trazo.
+<dl>
+ <dt><code>&lt;color&gt;</code></dt>
+ <dd>El color del trazo.</dd>
+</dl>
 
-### Síntaxis Formal
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
 
 {{csssyntax}}
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                                                                                                                                                               | Estado                                  | Comentario              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ----------------------- |
-| {{SpecName('Compat', '#the-webkit-text-stroke-color', '-webkit-text-stroke-color')}}                                                                                                                                                             | {{Spec2('Compat')}}                | Estandarización Inicial |
-| [Referencia CSS de Safari CSS '-webkit-text-stroke-color' en ese documento.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-color) | Documentación no estándar y no oficial. | Documentación Inicial   |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Compat', '#the-webkit-text-stroke-color', '-webkit-text-stroke-color')}}</td>
+   <td>{{Spec2('Compat')}}</td>
+   <td>Estandarización Inicial</td>
+  </tr>
+  <tr>
+   <td><a class="external external-icon" href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-color" hreflang="en" lang="en">Referencia CSS de Safari CSS<br>
+    <small lang="en-US">'-webkit-text-stroke-color' en ese documento.</small></a></td>
+   <td>Documentación no estándar y no oficial.</td>
+   <td>Documentación Inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-No es parte de ninguna especificación.
+<p>No es parte de ninguna especificación.</p>
 
-Apple tiene una descripción de `-webkit-text-stroke-color` en la referencia CSS de Safari.
+<p>Apple tiene <a href="">una descripción de <code>-webkit-text-stroke-color</code> en la referencia CSS de Safari</a>.</p>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("css.properties.-webkit-text-stroke-color")}}
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-- [Post en el blog Surfin' Safari anunciando esta característica](https://www.webkit.org/blog/85/introducing-text-stroke/)
-- [Artículo en CSS-Tricks explicando esta característica](https://css-tricks.com/adding-stroke-to-web-text/)
-- {{cssxref("-webkit-text-fill-color")}}
-- {{cssxref("-webkit-text-stroke-width")}}
-- {{cssxref("-webkit-text-stroke")}}
+<ul>
+ <li><a href="https://www.webkit.org/blog/85/introducing-text-stroke/">Post en el blog Surfin' Safari anunciando esta característica</a></li>
+ <li><a href="https://css-tricks.com/adding-stroke-to-web-text/">Artículo en CSS-Tricks explicando esta característica</a></li>
+ <li>{{cssxref("-webkit-text-fill-color")}}</li>
+ <li>{{cssxref("-webkit-text-stroke-width")}}</li>
+ <li>{{cssxref("-webkit-text-stroke")}}</li>
+</ul>

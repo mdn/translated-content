@@ -3,35 +3,37 @@ title: document.body
 slug: Web/API/Document/body
 translation_of: Web/API/Document/body
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Devuelve el nodo del `<body>` o el nodo del `<frameset>` del documento.
+<p>Devuelve el nodo del <code>&lt;body&gt;</code> o el nodo del <code>&lt;frameset&gt;</code> del documento.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    objRef = document.body
-    document.body =
-    objRef
+<pre class="eval"><i>objRef</i> = document.body
+document.body =
+<i>objRef</i>
+</pre>
 
-### Ejemplo
+<h3 id="Ejemplo" name="Ejemplo">Ejemplo</h3>
 
-    // en HTML: <body id="oldBodyElement"></body>
-    alert(document.body.id); // "oldBodyElement"
-    var aNewBodyElement = document.createElement("body");
-    aNewBodyElement.id = "newBodyElement";
-    document.body = aNewBodyElement;
-    alert(document.body.id); // "newBodyElement"
+<pre class="eval">// en HTML: &lt;body id="oldBodyElement"&gt;&lt;/body&gt;
+alert(document.body.id); // "oldBodyElement"
+var aNewBodyElement = document.createElement("body");
+aNewBodyElement.id = "newBodyElement";
+document.body = aNewBodyElement;
+alert(document.body.id); // "newBodyElement"
+</pre>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-`document.body` es el elemento que contiene el contenido para el documento. En documentos con contenidos `<body>`, devuelven el elemento `<body>`, y en documentos de marco de sistema, esto devuelve el elemento extremo `<frameset>`.
+<p><code>document.body</code> es el elemento que contiene el contenido para el documento. En documentos con contenidos <code>&lt;body&gt;</code>, devuelven el elemento <code>&lt;body&gt;</code>, y en documentos de marco de sistema, esto devuelve el elemento extremo <code>&lt;frameset&gt;</code>.</p>
 
-Aunque `body` es programable, colocando un nuevo cuerpo en un documento efectivamente quitará a todos los hijos actuales del elemento existente `<body>`.
+<p>Aunque <code>body</code> es programable, colocando un nuevo cuerpo en un documento efectivamente quitará a todos los hijos actuales del elemento existente <code>&lt;body&gt;</code>.</p>
 
-### Especificación
+<h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>
 
-[DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201">DOM Level 2 HTML: HTMLDocument.body</a></p>
 
-{{ languages( { "en": "en/DOM/document.body", "pl": "pl/DOM/document.body" } ) }}
+<p>{{ languages( { "en": "en/DOM/document.body", "pl": "pl/DOM/document.body" } ) }}</p>

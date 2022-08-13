@@ -11,60 +11,94 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toUTCString
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-`El método`**`toUTCString()`** convierte una fecha en una cadena, utilizando la zona horaria UTC.
+<p><code>El método</code><strong><code>toUTCString()</code></strong> convierte una fecha en una cadena, utilizando <span class="tlid-translation translation" lang="es"><span title="">la zona horaria UTC.</span></span></p>
 
-{{EmbedInteractiveExample("pages/js/date-toutcstring.html")}}
+<div>{{EmbedInteractiveExample("pages/js/date-toutcstring.html")}}</div>
 
-## Sintaxis
 
-    dateObj.toUTCString()
 
-### Valor de retorno
+<h2 id="Sintaxis">Sintaxis</h2>
 
-Una cadena que representa la fecha dada usando la zona horaria UTC
+<pre class="syntaxbox"><code><var>dateObj</var>.toUTCString()</code></pre>
 
-## Descripción
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-El valor devuelto por `toUTCString()` es una cadena con la forma
+<p>Una cadena que representa la fecha dada usando la zona horaria UTC</p>
 
-`Www, dd Mmm yyyy hh:mm:ss GMT`
+<h2 id="Descripción">Descripción</h2>
 
-donde:
+<p>El valor devuelto por <code>toUTCString()</code> es una cadena con la forma</p>
 
-| Www  | Día de la semana, como tres letras (ej. Sun, Mon, ...)                  |
-| ---- | ----------------------------------------------------------------------- |
-| dd   | Día del mes, como dos dígitos, con cero a la izquierda si es necesario. |
-| Mmm  | Mes, como tres letras (ej. Jan, Feb, ...)                               |
-| yyyy | Año, como cuatro o más dígitos con cero a la izquierda si es necesario. |
-| hh   | Hora, como dos dígitos con cero a la izquierda si es necesario.         |
-| mm   | Minutos, como dos dígitos con cero a la izquierda si es necesario.      |
-| ss   | Segundos, como dos dígitos con cero a la izquierda si es necesario.     |
+<p><code>Www, dd Mmm yyyy hh:mm:ss GMT</code></p>
 
-Antes de ECMAScript 2018, el formato del valor devuelto variaba según la plataforma. El valor devuelto más comun era un sello de fecha con formato RFC-1123, que es una versión ligeramente actualizada de los sellos de fecha RFC-822.
+<p>donde:</p>
 
-## Ejemplos
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>Www</td>
+   <td>Día de la semana, como tres letras (ej. Sun, Mon, ...)</td>
+  </tr>
+  <tr>
+   <td>dd</td>
+   <td>Día del mes, como dos dígitos, con cero a la izquierda si es necesario.</td>
+  </tr>
+  <tr>
+   <td>Mmm</td>
+   <td>Mes, como tres letras (ej. Jan, Feb, ...)</td>
+  </tr>
+  <tr>
+   <td>yyyy</td>
+   <td>Año, como cuatro o más dígitos con cero a la izquierda si es necesario.</td>
+  </tr>
+  <tr>
+   <td>hh</td>
+   <td>Hora, como dos dígitos con cero a la izquierda si es necesario.</td>
+  </tr>
+  <tr>
+   <td>mm</td>
+   <td>Minutos, como dos dígitos con cero a la izquierda si es necesario.</td>
+  </tr>
+  <tr>
+   <td>ss</td>
+   <td>Segundos, como dos dígitos con cero a la izquierda si es necesario.</td>
+  </tr>
+ </tbody>
+</table>
 
-### Usando `toUTCString()`
+<p>Antes de ECMAScript 2018, el formato del valor devuelto variaba según la plataforma. El valor devuelto más comun era un sello de fecha con formato RFC-1123, que es una versión ligeramente actualizada de los sellos de fecha RFC-822.</p>
 
-```js
-var today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Usando_toUTCString">Usando <code>toUTCString()</code></h3>
+
+<pre class="brush: js">var today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
 var UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("javascript.builtins.Date.toUTCString")}}
+<p>{{Compat("javascript.builtins.Date.toUTCString")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toDateString()")}}
-- {{jsxref("Date.prototype.toISOString()")}}
+<ul>
+ <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date.prototype.toDateString()")}}</li>
+ <li>{{jsxref("Date.prototype.toISOString()")}}</li>
+</ul>

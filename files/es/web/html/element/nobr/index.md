@@ -12,19 +12,19 @@ tags:
 translation_of: Web/HTML/Element/nobr
 original_slug: Web/HTML/Elemento/nobr
 ---
-{{non-standard_header}}
+<div>{{non-standard_header}}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-El elemento HTML `<nobr>` previene que una línea de texto se divida en una nueva línea, así, se presentará en una línea larga por lo que puede ser necesario hacer un desplazamiento de pantalla. Esta etiqueta no es un estándar HTML y no debería ser usada, en su lugar use la propiedad CSS {{Cssxref("white-space")}} como en este ejemplo:
+<p><span class="seoSummary">El elemento HTML <code>&lt;nobr&gt;</code> previene que una línea de texto se divida en una nueva línea, así, se presentará en una línea larga por lo que puede ser necesario hacer un desplazamiento de pantalla. Esta etiqueta no es un estándar HTML y no debería ser usada, en su lugar use la propiedad CSS </span>{{Cssxref("white-space")}} como en este ejemplo:</p>
 
-```css
-<span style="white-space: nowrap">Línea larga sin saltos</span>
-```
+<pre class="brush:css">&lt;span style="white-space: nowrap"&gt;Línea larga sin saltos&lt;/span&gt;</pre>
 
-## Vea también
+<h2 id="See_also" name="See_also">Vea también</h2>
 
-- {{Cssxref("white-space")}}
-- {{Cssxref("overflow")}}
+<ul>
+ <li>{{Cssxref("white-space")}}</li>
+ <li>{{Cssxref("overflow")}}</li>
+</ul>
 
-{{HTMLRef}}
+<div>{{HTMLRef}}</div>

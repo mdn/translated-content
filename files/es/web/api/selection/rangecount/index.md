@@ -5,22 +5,24 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/rangeCount
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Devuelve el número de los rangos que hay en la selección.
+<p>Devuelve el número de los rangos que hay en la selección.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    sel.rangeCount
+<pre class="eval"><i>sel</i>.rangeCount
+</pre>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-Antes de que el usuario haya hecho
-_click_
-en una página recién cargada, el `rangeCount` es 0. Un usuario normalmente puede seleccionar un rango a la vez, entonces el `rangeCount` usualmente será 1. El
-_scripting_
-puede usarse para hacer que la selección contenga más de 1 rango.
+<p>Antes de que el usuario haya hecho
+ <i>click</i>
+ en una página recién cargada, el <code>rangeCount</code> es 0. Un usuario normalmente puede seleccionar un rango a la vez, entonces el <code>rangeCount</code> usualmente será 1. El
 
-{{ languages( { "en": "en/DOM/Selection/rangeCount", "it": "it/DOM/Selection/rangeCount", "pl": "pl/DOM/Selection/rangeCount" } ) }}
+ <i>scripting</i>
+ puede usarse para hacer que la selección contenga más de 1 rango.</p>
+
+<p>{{ languages( { "en": "en/DOM/Selection/rangeCount", "it": "it/DOM/Selection/rangeCount", "pl": "pl/DOM/Selection/rangeCount" } ) }}</p>

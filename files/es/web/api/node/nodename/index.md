@@ -5,58 +5,103 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Node/nodeName
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Devuelve el nombre del nodo actual, en forma de cadena.
+<p>Devuelve el nombre del nodo actual, en forma de cadena.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    varstr =node.nodeName;
+<pre class="eval">var<em>str</em> =<em>node</em>.nodeName;
+</pre>
 
-`str` es una variable de cadena en la que se almacena el nombre del elemento actual.
+<p><code>str</code> es una variable de cadena en la que se almacena el nombre del elemento actual.</p>
 
-`nodeName` es un atributo de solo-lectura.
+<p><code>nodeName</code> es un atributo de solo-lectura.</p>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-Aquí tenemos el valor devuelto por varios tipos de nodo.
+<p>Aquí tenemos el valor devuelto por varios tipos de nodo.</p>
 
-| Interfaz                                              | nodeName                                                                        |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [Attr](es/DOM/Attr)                                   | igual que [`Attr.name`](es/DOM/Attr.name)                                       |
-| [CDATASection](es/DOM/CDATASection)                   | "#cdata-section"                                                                |
-| [Comment](es/DOM/Comment)                             | "#comment"                                                                      |
-| [Document](es/DOM/document)                           | "#document"                                                                     |
-| [DocumentFragment](es/DOM/DocumentFragment)           | "#document-fragment"                                                            |
-| [DocumentType](es/DOM/DocumentType)                   | igual que [`DocumentType.name`](es/DOM/DocumentType.name)                       |
-| [Element](es/DOM/element)                             | igual que [`Element.tagName`](es/DOM/element.tagName)                           |
-| [Entity](es/DOM/Entity)                               | nombre de entity                                                                |
-| [EntityReference](es/DOM/EntityReference)             | nombre de la identidad de referencia                                            |
-| [Notation](es/DOM/Notation)                           | nombre de la notación                                                           |
-| [ProcessingInstruction](es/DOM/ProcessingInstruction) | igual que [`ProcessingInstruction.target`](es/DOM/ProcessingInstruction.target) |
-| Text                                                  | "#text"                                                                         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th class="header" style="text-align: center;">Interfaz</th>
+   <th class="header" style="text-align: center;">nodeName</th>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/Attr">Attr</a></td>
+   <td>igual que <code><a href="es/DOM/Attr.name">Attr.name</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/CDATASection">CDATASection</a></td>
+   <td>"#cdata-section"</td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/Comment">Comment</a></td>
+   <td>"#comment"</td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/document">Document</a></td>
+   <td>"#document"</td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/DocumentFragment">DocumentFragment</a></td>
+   <td>"#document-fragment"</td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/DocumentType">DocumentType</a></td>
+   <td>igual que <code><a href="es/DOM/DocumentType.name">DocumentType.name</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/element">Element</a></td>
+   <td>igual que <code><a href="es/DOM/element.tagName">Element.tagName</a></code></td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/Entity">Entity</a></td>
+   <td>nombre de entity</td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/EntityReference">EntityReference</a></td>
+   <td>nombre de la identidad de referencia</td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/Notation">Notation</a></td>
+   <td>nombre de la notación</td>
+  </tr>
+  <tr>
+   <td><a href="es/DOM/ProcessingInstruction">ProcessingInstruction</a></td>
+   <td>igual que <code><a href="es/DOM/ProcessingInstruction.target">ProcessingInstruction.target</a></code></td>
+  </tr>
+  <tr>
+   <td>Text</td>
+   <td>"#text"</td>
+  </tr>
+ </tbody>
+</table>
 
-### Ejemplo
+<h3 id="Ejemplo" name="Ejemplo">Ejemplo</h3>
 
-Dado el siguiente código:
+<p>Dado el siguiente código:</p>
 
-    <div id="d1">hola mundo</div>
-    <input type="text" id="t"/>
+<pre>&lt;div id="d1"&gt;hola mundo&lt;/div&gt;
+&lt;input type="text" id="t"/&gt;
+</pre>
 
-y el siguiente script:
+<p>y el siguiente script:</p>
 
-    var div1 = document.getElementById("d1");
-    var text_field = document.getElementById("t");
-    text_field.value = div1.nodeName;
+<pre>var div1 = document.getElementById("d1");
+var text_field = document.getElementById("t");
+text_field.value = div1.nodeName;
+</pre>
 
-En XHTML (o alguna otra forma de XML) el valor de `text_field` será "div". Sin embargo, en HTML, el valor de `text_field` sería "DIV".
+<p>En XHTML (o alguna otra forma de XML) el valor de <code>text_field</code> será "div". Sin embargo, en HTML, el valor de <code>text_field</code> sería "DIV".</p>
 
-Ten en cuenta que podríamos haber usado la propiedad [`tagName`](es/DOM/element.tagName) en su lugar, ya que `nodeName` tiene el mismo valor que `tagName` para un elemento. Presta atención, sin embargo, a que `nodeName` devolverá `#text` para los nodos de texto, mientras que `tagName` devolverá `undefined`.
+<p>Ten en cuenta que podríamos haber usado la propiedad <code><a href="es/DOM/element.tagName">tagName</a></code> en su lugar, ya que <code>nodeName</code> tiene el mismo valor que <code>tagName</code> para un elemento. Presta atención, sin embargo, a que <code>nodeName</code> devolverá <code>#text</code> para los nodos de texto, mientras que <code>tagName</code> devolverá <code>undefined</code>.</p>
 
-### Especificaciones
+<h3 id="Especificaciones" name="Especificaciones">Especificaciones</h3>
 
-[DOM Level 2 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095)
+<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D095">DOM Level 2 Core: Node.nodeName</a></p>
 
-[DOM Level 3 Core: Node.nodeName](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095)
+<p><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-F68D095">DOM Level 3 Core: Node.nodeName</a></p>

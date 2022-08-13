@@ -8,12 +8,14 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-moz-outline-radius-bottomright
 ---
-{{Non-standard_header}}{{CSSRef}}
+<div>{{Non-standard_header}}{{CSSRef}}</div>
 
-## Summary
+<h2 id="Summary">Summary</h2>
 
-La propiedad [CSS ](/es/docs/Web/CSS)`-moz-outline-radius-bottomright` establece, en aplicaciones Mozilla, el redondeado de la esquina inferior derecha de un contorno.
+<p>La propiedad  <a href="/en-US/docs/Web/CSS">CSS </a><code>-moz-outline-radius-bottomright</code> establece, en aplicaciones Mozilla, el redondeado de la esquina inferior derecha de un contorno.</p>
 
-{{cssinfo}}
+<p>
+ </p><p>{{cssinfo}}</p>
 
-Ver la propiedad {{cssxref("-moz-outline-radius")}} para más información.
+
+<p>Ver la propiedad  {{cssxref("-moz-outline-radius")}} para más información.</p>

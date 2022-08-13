@@ -9,53 +9,74 @@ tags:
   - Referencia
 translation_of: Web/API/Element/className
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-**className** obtiene y establece el valor del atributo `class` del elemento especificado.
+<p><strong>className</strong> obtiene y establece el valor del atributo <code>class</code> del elemento especificado.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var cName = elementNodeReference.className;
-    elementNodeReference.className = cName;
+<pre class="syntaxbox"><var>var cName</var> = <var>elementNodeReference</var>.className;
+<var>elementNodeReference</var>.className = <var>cName</var>;</pre>
 
-- _cName_ es una variable de cadena representando la clase o la lista de clases separada por espacios, del elemento en cuestión.
+<ul>
+ <li><var>cName</var> es una variable de cadena representando la clase o la lista de clases separada por espacios, del elemento en cuestión.</li>
+</ul>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-let elm = document.getElementById('item');
+<pre class="brush: js">let elm = document.getElementById('item');
 
 if(elm.className === 'active'){
     elm.className = 'inactive';
 } else {
     elm.className = 'active';
-}
-```
+}</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-El nombre `className` es utilizado para esta propiedad en lugar de `class` para evitar conflictos con la palabra clave "class" existente en muchos de los lenguages que son usados para manipular el DOM.
+<p>El nombre <code>className</code> es utilizado para esta propiedad en lugar de <code>class</code> para evitar conflictos con la palabra clave "class" existente en muchos de los lenguages que son usados para manipular el DOM.</p>
 
-`className` también puede ser una instancia de {{domxref("SVGAnimatedString")}} si `element` es un {{domxref("SVGElement")}}. Es mejor de obtener/establecer la propiedad `className` de un elemento utilizando {{domxref("Element.getAttribute")}} y {{domxref("Element.setAttribute")}} si estás tratando con elementos SVG.
+<p><code>className</code> también puede ser una instancia de {{domxref("SVGAnimatedString")}} si <code>element</code> es un {{domxref("SVGElement")}}. Es mejor de obtener/establecer la propiedad <code>className</code> de un elemento utilizando {{domxref("Element.getAttribute")}} y {{domxref("Element.setAttribute")}} si estás tratando con elementos SVG.</p>
 
-```js
-elm.setAttribute('class', elm.getAttribute('class'))
-```
+<pre class="brush: js">elm.setAttribute('class', elm.getAttribute('class'))</pre>
 
-## Especificaciones
+<p> </p>
 
-| Especificación                                                                                   | Estado                           | Observaciones      |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-element-classname", "element.className")}} | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-element-classname", "element.className")}}         | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-95362176", "element.className")}} | {{Spec2("DOM2 HTML")}}     | Definición inicial |
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Compatibilidad con navegadores
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Observaciones</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM WHATWG", "#dom-element-classname", "element.className")}}</td>
+   <td>{{Spec2("DOM WHATWG")}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM4", "#dom-element-classname", "element.className")}}</td>
+   <td>{{Spec2("DOM4")}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 HTML", "html.html#ID-95362176", "element.className")}}</td>
+   <td>{{Spec2("DOM2 HTML")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.Element.className")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{domxref("element.classList")}}
+<ul>
+ <li>{{domxref("element.classList")}}</li>
+</ul>

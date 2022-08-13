@@ -9,29 +9,29 @@ tags:
   - Referencia
 translation_of: Web/API/Event/type
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-La propiedad de sólo-lectura **`Event.type`** devuelve una cadena de texto que contiene el tipo de evento. Se establece cuando se contruye el evento y es el nombre que se utiliza normalmente para referirse al evento en cuestión, como `click`, `load` o `error`.
+<p>La propiedad de sólo-lectura <code><strong>Event.type</strong></code> devuelve una cadena de texto que contiene el tipo de evento. Se establece cuando se contruye el evento y es el nombre que se utiliza normalmente para referirse al evento en cuestión, como <code>click</code>, <code>load</code> o <code>error</code>.</p>
 
-El argumento `event` de {{ domxref("EventTarget.addEventListener()") }} y {{ domxref("EventTarget.removeEventListener()") }} no es sensible a mayúsculas.
+<p>El argumento <code>event</code> de {{ domxref("EventTarget.addEventListener()") }} y {{ domxref("EventTarget.removeEventListener()") }} no es sensible a mayúsculas.</p>
 
-Para una lista de tipos de evento displonibles, vea la [referencia de eventos](/es/docs/Web/Reference/Events)
+<p>Para una lista de tipos de evento displonibles, vea la <a href="/es/docs/Web/Reference/Events">referencia de eventos</a></p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    event.type
+<pre class="syntaxbox">event.type
+</pre>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
 
-    <title>Event.type Example</title>
+    &lt;title&gt;Event.type Example&lt;/title&gt;
 
-    <script>
+    &lt;script&gt;
         var currEvent;
         function getEvtType(evt) {
             console.group();
@@ -56,29 +56,48 @@ Para una lista de tipos de evento displonibles, vea la [referencia de eventos](/
         document.addEventListener("mousedown", getEvtType, false); //first
         document.addEventListener("mouseup", getEvtType, false); //second
 
-    </script>
-</head>
+    &lt;/script&gt;
+&lt;/head&gt;
 
-<body>
+&lt;body&gt;
 
-<p>Press any key or click the mouse to get the event type.</p>
-<p>Event type: <span id="Etype" style="color:red">-</span></p>
+&lt;p&gt;Press any key or click the mouse to get the event type.&lt;/p&gt;
+&lt;p&gt;Event type: &lt;span id="Etype" style="color:red"&gt;-&lt;/span&gt;&lt;/p&gt;
 
-</body>
-</html>
-```
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample('Example')}}
+<p>{{EmbedLiveSample('Example')}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                               | Comentario          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-type', 'Event.type')}}     | {{ Spec2('DOM WHATWG') }}     |                     |
-| {{SpecName('DOM2 Events', '#Events-Event-type', 'Event.type')}} | {{ Spec2('DOM2 Events') }} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-event-type', 'Event.type')}}</td>
+   <td>{{ Spec2('DOM WHATWG') }}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Events', '#Events-Event-type', 'Event.type')}}</td>
+   <td>{{ Spec2('DOM2 Events') }}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("api.Event.type")}}
+
+
+<p>{{Compat("api.Event.type")}}</p>

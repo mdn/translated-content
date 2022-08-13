@@ -10,42 +10,54 @@ tags:
   - timeline
 translation_of: Web/API/Animation/timeline
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
-La propiedad **`Animation.timeline`** de la interfaz {{domxref ("Animation")}} devuelve o establece el {{domxref ("AnimationTimeline", "timeline")}} asociado a esta animación. Un 'timeline' es una fuente de valores de tiempo para propósitos de sincronización, y es un objeto basado en {{domxref ("AnimationTimeline")}}. Por defecto, la línea de tiempo de la animación y la línea de tiempo de {{domxref ("Document")}} son las mismas.
+<p>La propiedad <strong><code>Animation.timeline</code></strong> de la interfaz {{domxref ("Animation")}} devuelve o establece el {{domxref ("AnimationTimeline", "timeline")}} asociado a esta animación. Un 'timeline' es una fuente de valores de tiempo para propósitos de sincronización, y es un objeto basado en {{domxref ("AnimationTimeline")}}. Por defecto, la línea de tiempo de la animación y la línea de tiempo de {{domxref ("Document")}} son las mismas.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var animationsTimeline = Animation.timeline;
+<pre class="syntaxbox">var <em>animationsTimeline</em> = <em>Animation</em>.timeline;
 
-    Animation.timeline = newTimeline;
+<em>Animation</em>.timeline = <em>newTimeline</em>;</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Un {{domxref ("AnimationTimeline", "timeline object", "", 1)}} para usar como la fuente de sincronización para la animación, o `null` para usar el predeterminado, que es el 'timeline' del {{domxref ("Document")}}.
+<p>Un {{domxref ("AnimationTimeline", "timeline object", "", 1)}} para usar como la fuente de sincronización para la animación, o <code>null</code> para usar el predeterminado, que es el 'timeline' del {{domxref ("Document")}}.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Aquí establecemos que la línea de tiempo `timeline` de la animación sea la misma que la del tiempo del documento (por cierto, esta es la `timeline` predeterminada para todas las animaciones):
+<p>Aquí establecemos que la línea de tiempo <code>timeline</code> de la animación sea la misma que la del tiempo del documento (por cierto, esta es la <code>timeline</code> predeterminada para todas las animaciones):</p>
 
-```js
-animation.timeline = document.timeline;
-```
+<pre class="brush: js">animation.timeline = document.timeline;
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                | Status                               | Comment         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------- |
-| {{SpecName('Web Animations', '#dom-animation-timeline', 'Animation.timeline' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Animations', '#dom-animation-timeline', 'Animation.timeline' )}}</td>
+   <td>{{Spec2('Web Animations')}}</td>
+   <td>Editor's draft.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{Compat("api.Animation.timeline")}}
 
-## Ver también
+<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- {{domxref("AnimationTimeline")}} el objeto padre del que heredan todas las timeLine.
-- {{domxref("DocumentTimeline")}} el único objeto timeLine disponible en este momento.
-- {{domxref("Document.timeline")}} el timeLine predeterminado asignado a todas las animaciones.
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li>{{domxref("Animation")}}</li>
+ <li>{{domxref("AnimationTimeline")}}  el objeto padre del que heredan todas las timeLine.</li>
+ <li>{{domxref("DocumentTimeline")}} el único objeto timeLine disponible en este momento.</li>
+ <li>{{domxref("Document.timeline")}} el timeLine predeterminado asignado a todas las animaciones.</li>
+</ul>

@@ -7,34 +7,38 @@ tags:
 translation_of: Web/XSLT/Element/attribute
 original_slug: Web/XSLT/attribute
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-El elemento `<xsl:attribute>` genera un atributo en el documento de salida, usando cualquier valor que puede ser accedido desde la hoja de estilo. Este elemento tiene que ser la primer cosa que se encuentre dentro del elemento del documento de salida para el cual se desea generar el atributo.
+<p>El elemento <code>&lt;xsl:attribute&gt;</code> genera un atributo en el documento de salida, usando cualquier valor que puede ser accedido desde la hoja de estilo. Este elemento tiene que ser la primer cosa que se encuentre dentro del elemento del documento de salida para el cual se desea generar el atributo.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    <xsl:attribute name=NOMBRE namespace=URI>
-    	PLANTILLA
-    </xsl:attribute>
+<pre>&lt;xsl:attribute name=NOMBRE namespace=URI&gt;
+	PLANTILLA
+&lt;/xsl:attribute&gt;</pre>
 
-### Atributos requeridos
+<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
 
-- `name`
-  - : Indica el nombre del atributo a ser generado en el documento de salida. El nombre debe seguir las reglas de QName.
+<dl>
+ <dt><code>name</code></dt>
+ <dd>Indica el nombre del atributo a ser generado en el documento de salida. El nombre debe seguir las reglas de QName.</dd>
+</dl>
 
-### Atributos opcionales
+<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
 
-- `namespace`
-  - : Define el URI del nombre de espacio para el atributo en el documento de salida. No se puede especificar el prefijo del nombre de espacio con este elemento.
+<dl>
+ <dt><code>namespace</code></dt>
+ <dd>Define el URI del nombre de espacio para el atributo en el documento de salida. No se puede especificar el prefijo del nombre de espacio con este elemento.</dd>
+</dl>
 
-### Tipo
+<h3 id="Tipo" name="Tipo">Tipo</h3>
 
-Instrucción, aparece dentro de una plantilla o dentro del elemento `<xsl:attribute-set>`.
+<p>Instrucción, aparece dentro de una plantilla o dentro del elemento <code>&lt;xsl:attribute-set&gt;</code>.</p>
 
-### Definido
+<h3 id="Definido" name="Definido">Definido</h3>
 
-XSLT, sección 7.1.3.
+<p>XSLT, sección 7.1.3.</p>
 
-### Soporte en Gecko
+<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
 
-Soportado.
+<p>Soportado.</p>

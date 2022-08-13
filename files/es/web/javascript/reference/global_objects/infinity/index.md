@@ -6,41 +6,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Infinity
 ---
-{{jsSidebar("Objects")}}
-
-## Resumen
-
-La propiedad global **`Infinity `**es un valor numérico que representa el infinito.
-
-{{js_property_attributes(0,0,0)}}
-
-## Sintaxis
-
-```js
-Infinity
-```
-
-## Description
-
-`Infinity `es una del objeto global, es decir, esta es una variable de alcance global.
-
-El valor inicial de `Infinity` es {{jsxref("Number.POSITIVE_INFINITY")}}. El valor de `Infinity` (infinito positivo) es mayor que cualquier otro numero incluido el mismo. Este valor se comporta matematicamente como el infinito matemático; por ejemplo, cualquier numero multiplicado por `Infinity` da como resultado `Infinity`, y cualquier numero divido por `Infinity` da como resultado cero.
-
-Para la especificación ECMAScript 5, `Infinity `es de solo lectura (implementado en JavaScript 1.8.5 / Firefox 4).
-
-## Especificaciones
-
-| Especificación                                                                                                       | Estado                   | Comentario                                         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1ra edición.                                                                                              | Estándar                 | Definición inicial. Implementada en JavaScript 1.3 |
-| {{SpecName('ES5.1', '#sec-15.1.1.2', 'Infinity')}}                                                 | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}} | {{Spec2('ES6')}}     |                                                    |
-
-## Compatibilidad con navegadores
-
+<div>
+ {{jsSidebar("Objects")}}</div>
+<h2 id="Resumen">Resumen</h2>
+<p>La propiedad global <strong><code>Infinity </code></strong>es un valor numérico que representa el infinito.</p>
+<p>{{js_property_attributes(0,0,0)}}</p>
+<h2 id="Sintaxis">Sintaxis</h2>
+<pre class="brush: js">Infinity</pre>
+<h2 id="Description" name="Description" style="padding-top: 0px; padding-left: 0px; border: 0px; line-height: 24px;">Description</h2>
+<p><code>Infinity </code>es una del objeto global, es decir, esta es una variable de alcance global.</p>
+<p>El valor inicial de <code>Infinity</code> es {{jsxref("Number.POSITIVE_INFINITY")}}. El valor de <code>Infinity</code> (infinito positivo) es mayor que cualquier otro numero incluido el mismo. Este valor se comporta matematicamente como el infinito matemático; por ejemplo, cualquier numero multiplicado por <code>Infinity</code> da como resultado <code>Infinity</code>, y cualquier numero divido por <code>Infinity</code> da como resultado cero.</p>
+<p>Para la especificación ECMAScript 5, <code>Infinity </code>es de solo lectura (implementado en JavaScript 1.8.5  / Firefox 4).</p>
+<h2 id="Especificaciones">Especificaciones</h2>
+<table class="standard-table" style="">
+ <tbody>
+  <tr>
+   <th scope="col" style="font-style: inherit;">Especificación</th>
+   <th scope="col" style="font-style: inherit;">Estado</th>
+   <th scope="col" style="font-style: inherit;">Comentario</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1ra edición.</td>
+   <td>Estándar</td>
+   <td>Definición inicial. Implementada en JavaScript 1.3</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.1.1.2', 'Infinity')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Compatibilidad_con_navegadores" style="margin-bottom: 20px; padding-top: 0px; padding-left: 0px; font-size: 28px; border: 0px; line-height: 28px;">Compatibilidad con navegadores</h2>
 {{Compat("javascript.builtins.Infinity")}}
 
-## Ver también
-
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
+<h2 id="See_also" name="See_also" style="margin-bottom: 20px; padding-top: 0px; padding-left: 0px; font-size: 28px; border: 0px; line-height: 28px;">Ver también</h2>
+<ul>
+ <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
+ <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
+</ul>

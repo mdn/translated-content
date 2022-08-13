@@ -10,37 +10,41 @@ tags:
   - playState
 translation_of: Web/API/Animation/playState
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
 
-La propiedad **`Animation`\*\***`.playState`\*\* de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve y establece un valor enumerado que describe el estado de reproducción de una animación.
+<p>La propiedad  <code><strong>Animation</strong></code><strong><code>.playState</code></strong> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve y establece un valor enumerado que describe el estado de reproducción de una animación.</p>
 
-> **Nota:** Esta propiedad es de solo lectura para las Animaciones y Transiciones en CSS.
+<div class="note">
+<p>Esta propiedad es de solo lectura para las Animaciones y Transiciones en CSS.</p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var currentPlayState = Animation.playState;
+<pre class="syntaxbox">var<em> currentPlayState</em> = <em>Animation</em>.playState;
 
-    Animation.playState = newState;
+<em>Animation</em>.playState = <em>newState</em>;
+</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-- `idle(inactivo)`
-  - : El tiempo actual de la animación no está resuelto y no hay tareas pendientes.
-- `pending(pendiente)`
-  - : La animación está esperando que se complete una tarea pendiente.
-- `running(funcionando)`
-  - : La animación se está ejecutando.
-- `paused(pausado)`
-  - : La animación se ha suspendido y la propiedad {{domxref ("Animation.currentTime")}} no se está actualizando.
-- `finished(finalizado)`
-  - : La animación ha alcanzado uno de sus límites y la propiedad {{domxref ("Animation.currentTime")}} no se está actualizando.
+<dl>
+ <dt><code>idle(inactivo)</code></dt>
+ <dd><span id="result_box" lang="es"><span>El tiempo actual de la animación no está resuelto y no hay tareas pendientes.</span></span></dd>
+ <dt><code>pending(pendiente)</code></dt>
+ <dd><span id="result_box" lang="es"><span>La animación está esperando que se complete una tarea pendiente.</span></span></dd>
+ <dt><code>running(funcionando)</code></dt>
+ <dd><span class="short_text" id="result_box" lang="es"><span>La animación se está ejecutando.</span></span></dd>
+ <dt><code>paused(pausado)</code></dt>
+ <dd><span id="result_box" lang="es"><span>La animación se ha suspendido y la propiedad {{domxref ("Animation.currentTime")}} no se está actualizando.</span></span></dd>
+ <dt><code>finished(finalizado)</code></dt>
+ <dd><span id="result_box" lang="es"><span>La animación ha alcanzado uno de sus límites y la propiedad {{domxref ("Animation.currentTime")}} no se está actualizando.</span></span></dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-En el ejemplo [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , los jugadores pueden tener un final con (Alicia llorando en un mar de lágrimas) [Alice crying into a pool of tears](http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010). En el juego, por razones de rendimiento, las lágrimas solo se deben animar cuando son visibles. Por lo tanto, deben detenerse tan pronto como estén animadas, de esta manera:
+<p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> , los jugadores pueden tener un final con (Alicia llorando en un mar de lágrimas) <a href="http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Alice crying into a pool of tears</a>. En el juego, por razones de rendimiento, las lágrimas solo se deben animar cuando son visibles. <span id="result_box" lang="es"><span>Por lo tanto, deben detenerse tan pronto como estén animadas, de esta manera:</span></span></p>
 
-```js
-// Configurando las animaciones de lágrimas
+<pre class="brush: js">// <span class="short_text" id="result_box" lang="es"><span>Configurando las animaciones de lágrimas</span></span>
 
 tears.forEach(function(el) {
   el.animate(
@@ -68,20 +72,33 @@ tears.forEach(function(el) {
   el.playState = "paused";
   el.currentTime = 0;
 });
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones"><span class="highlight-span">Especificaciones</span></h2>
 
-| Specification                                                                | Status                               | Comment             |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Animations', '#play-state', 'playState')}} | {{Spec2("Web Animations")}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Animations', '#play-state', 'playState')}}</td>
+   <td>{{Spec2("Web Animations")}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador"><span class="highlight-span">Compatibilidad del navegador</span></h2>
 
 {{Compat("api.Animation.playState")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}} para otros métodos y propiedades que puede usar para controlar la animación de la página web.
-- Los métodos {{domxref("Animation.play()")}}, {{domxref("Animation.pause()")}}, {{domxref("Animation.finish()")}} pueden establecer el `playState` de un `Animation` .
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li>{{domxref("Animation")}} <span id="result_box" lang="es"><span>para otros métodos y propiedades que puede usar para controlar la animación de la página web.</span></span></li>
+ <li>Los métodos  {{domxref("Animation.play()")}}, {{domxref("Animation.pause()")}}, {{domxref("Animation.finish()")}} pueden establecer el <code>playState</code> de un  <code>Animation</code> .</li>
+</ul>

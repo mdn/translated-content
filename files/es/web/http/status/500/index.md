@@ -7,22 +7,33 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Status/500
 ---
-El código de respuesta **`500 Error Interno del Servidor`** del Protocolo de Transferencia de Hipertexto (HTTP) indica que el servidor encontró una condición inesperada que le impide completar la petición.
+<p>El código de respuesta <code><strong>500 Error Interno del Servidor</strong></code> del Protocolo de Transferencia de Hipertexto (HTTP) indica que el servidor encontró una condición inesperada que le impide completar la petición.</p>
 
-Este código es una respuesta genérica. Usualmente, esto indica que el servidor no puede encontrar un mejor código de respuesta del tipo 5xx. En ocasiones, los administradores del servidor registran respuestas como el código de estado 500 con más detalles sobre la petición en aras de evitar que el error vuelva a ocurrir en el futuro.
+<p>Este código es una respuesta genérica. Usualmente, esto indica que el servidor no puede encontrar un mejor código de respuesta del tipo 5xx. En ocasiones, los administradores del servidor registran respuestas como el código de estado 500 con más detalles sobre la petición en aras de evitar que el error vuelva a ocurrir en el futuro.</p>
 
-## Estado
+<h2 id="Estado">Estado</h2>
 
-    500 Error Interno del Servidor
+<pre class="syntaxbox notranslate">500 Error Interno del Servidor</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                   | Titulo                                                                     |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| {{RFC("7231", "500 Error Interno del Servidor" , "6.6.1")}} | Protocolo de Transferencia de Hipertexto (HTTP/1.1): Semántica y Contenido |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Titulo</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7231", "500 Error Interno del Servidor" , "6.6.1")}}</td>
+   <td><span class="tlid-translation translation"><span title="">Protocolo de Transferencia de Hipertexto</span></span> (HTTP/1.1): <span class="tlid-translation translation"><span title="">Semántica y Contenido</span></span></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-La información que se muestra a continuación se ha extraído del MDN de GitHub. (<https://github.com/mdn/browser-compat-data>).
+<p><span class="tlid-translation translation"><span title="">La información que se muestra a continuación se ha extraído del MDN de GitHub.</span></span> (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
 
-{{Compat("http.status.500")}}
+
+
+<p>{{Compat("http.status.500")}}</p>

@@ -10,46 +10,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/anchor
 ---
-{{JSRef("Objetos_globales", "String")}}
+<div>{{JSRef("Objetos_globales", "String")}}</div>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-El método **`anchor()`** crea un ancla HTML, {{HTMLElement("a")}}, que se usa como un enlace a hipertexto.
+<p>El método <strong><code>anchor()</code></strong> crea un ancla HTML, {{HTMLElement("a")}}, que se usa como un enlace a hipertexto.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    cadena.anchor(nombreAtributo)
+<pre class="syntaxbox"><em>cadena</em>.anchor(<em>nombreAtributo</em>)</pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-- `nombreAtributo`
-  - : Una cadena.
+<dl>
+ <dt><code>nombreAtributo</code></dt>
+ <dd>Una cadena.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-Usa el método `anchor` con los métodos `document.write` o `document.writeln` para crear y mostrar programando un ancla en un documento. Crea el ancla con el método `anchor`, y entonces llama a `write` o `writeln` para mostrar el ancla en el documento. En JavaScript en el lado Servidor, usa la función `write` para mostrar el ancla.
+<p>Usa el método <code>anchor</code> con los métodos <code>document.write</code> o <code>document.writeln</code> para crear y mostrar programando un ancla en un documento. Crea el ancla con el método <code>anchor</code>, y entonces llama a <code>write</code> o <code>writeln</code> para mostrar el ancla en el documento. En JavaScript en el lado Servidor, usa la función <code>write</code> para mostrar el ancla.</p>
 
-En la sintaxis, la cadena de texto representa el texto literal que usted quiere que el usuario vea. La cadena `nombreAtributo` representa el atributo `NAME` de la etiqueta A.
+<p>En la sintaxis, la cadena de texto representa el texto literal que usted quiere que el usuario vea. La cadena <code>nombreAtributo</code> representa el atributo <code>NAME</code> de la etiqueta A.</p>
 
-Los anclas creados con el método `anchor` serán elementos del arreglo {{domxref("document.anchors")}}
+<p>Los anclas creados con el método <code>anchor</code> serán elementos del arreglo {{domxref("document.anchors")}}</p>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-### Ejemplo: Usando `anchor`
+<h3 id="Ejemplo:_Usando_anchor" name="Ejemplo:_Usando_anchor">Ejemplo: Usando <code>anchor</code></h3>
 
-El siguiente código de ejemplo dentro de un elemento HTML `script`:
+<p>El siguiente código de ejemplo dentro de un elemento HTML <code>script</code>:</p>
 
-```js
-var miCadena = "Tabla de Contenidos";
+<pre class="brush: js">var miCadena = "Tabla de Contenidos";
 document.body.innerHTML = miCadena.anchor("ancla_contenidos");
-```
+</pre>
 
-obtendrá el siguiente HTML:
+<p>obtendrá el siguiente HTML:</p>
 
-```html
-<a name="ancla_contenidos">Tabla de Contenidos</A>
-```
+<pre class="brush: html">&lt;a name="ancla_contenidos"&gt;Tabla de Contenidos&lt;/A&gt;
+</pre>
 
-### Vea También
+<h3 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h3>
 
-- {{jsxref("String.prototype.link()")}}
+<ul>
+ <li>{{jsxref("String.prototype.link()")}}</li>
+</ul>

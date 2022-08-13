@@ -5,84 +5,81 @@ tags:
   - Propiedades CSS
 translation_of: Web/CSS/padding
 ---
-{{CSSRef}}
+<p>{{CSSRef}}</p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad CSS **`padding`** establece el espacio de relleno requerido por todos los lados de un elemento. El [área de padding](/en/CSS/box_model#padding "http://developer.mozilla.org/en/CSS/Box_model#padding") es el espacio entre el contenido del elemento y su borde (`border`). No se permiten valores negativos.
+<p>La propiedad CSS <strong><code>padding</code></strong> establece el espacio de relleno requerido por todos los lados de un elemento. El <a href="/en/CSS/box_model#padding" title="http://developer.mozilla.org/en/CSS/Box_model#padding">área de padding</a> es el espacio entre el contenido del elemento y su borde (<code>border</code>). No se permiten valores negativos.</p>
 
-La propiedad padding es un atajo para evitar la asignación de cada lado por separado (`padding-top`, `padding-right`, `padding-bottom`, `padding-left`).
+<p>La propiedad padding es un atajo para evitar la asignación de cada lado por separado (<code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, <code>padding-left</code>).</p>
 
-{{EmbedInteractiveExample("pages/css/padding.html")}}
+<p>{{EmbedInteractiveExample("pages/css/padding.html")}}</p>
 
-> **Nota:** Padding crea espacio extra dentro de un elemento. En contraste, `margin` crea espacio extra _alrededor_ de un elemento.
+<div class="blockIndicator note">
+<p><strong>Nota:</strong> Padding crea espacio extra dentro de un elemento. En contraste, <code>margin</code> crea espacio extra <em>alrededor </em>de un elemento.</p>
+</div>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Sintaxis formal: {{csssyntax("padding")}}
+<pre class="syntaxbox notranslate"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Sintaxis formal</a>: {{csssyntax("padding")}}</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-Esta propiedad puede ser especificada utilizando uno, dos, tres o cuatro de los siguientes valores:
+<p>Esta propiedad puede ser especificada utilizando uno, dos, tres o cuatro de los siguientes valores:</p>
 
-- `<length>`
-  - : Especifica un ancho fijo no negativo. Ver más detalles {{ cssxref("&lt;length&gt;") }} .
-- `<percentage>`
-  - : Con respecto a la anchura("width") del bloque que lo contiene.
+<dl>
+ <dt><code>&lt;length&gt;</code></dt>
+ <dd>Especifica un ancho fijo no negativo. Ver más detalles {{ cssxref("&lt;length&gt;") }} .</dd>
+ <dt><code>&lt;percentage&gt;</code></dt>
+ <dd>Con respecto a la anchura("width") del bloque que lo contiene.</dd>
+</dl>
 
-<!---->
+<ul>
+ <li><strong>Uno:</strong> un valor unico se aplica a los 4 lados.</li>
+ <li><strong>Dos:</strong> el primer valor se aplica a <strong>arriba y abajo</strong>, el segundo valor se aplica a <strong>derecha e izquierda</strong>.</li>
+ <li><strong>Tres:</strong> el primer valor se aplica a <strong>arriba</strong>, el segundo valor a <strong>derecha e izquierda</strong> y el tercer valor se aplica a <strong>abajo </strong>del elemento.</li>
+ <li><strong>Cuatro:</strong> el primer valor se aplica a <strong>arriba</strong>, el segundo valor se aplica a la <strong>derecha</strong>, el tercer valor se aplica a <strong>abajo </strong>y el cuarto valor se aplica a la <strong>izquierda</strong>. </li>
+</ul>
 
-- **Uno:** un valor unico se aplica a los 4 lados.
-- **Dos:** el primer valor se aplica a **arriba y abajo**, el segundo valor se aplica a **derecha e izquierda**.
-- **Tres:** el primer valor se aplica a **arriba**, el segundo valor a **derecha e izquierda** y el tercer valor se aplica a **abajo** del elemento.
-- **Cuatro:** el primer valor se aplica a **arriba**, el segundo valor se aplica a la **derecha**, el tercer valor se aplica a **abajo** y el cuarto valor se aplica a la **izquierda**.
+<h3 id="Ejemplos">Ejemplos</h3>
 
-### Ejemplos
+<pre class="brush: css notranslate"> padding: 5%;               /* aplica 5% de padding en todos los lados*/
+</pre>
 
-```css
- padding: 5%;               /* aplica 5% de padding en todos los lados*/
-```
+<pre class="brush: css notranslate"> padding: 10px;              /* aplica 10px de padding en todos los lados */
+</pre>
 
-```css
- padding: 10px;              /* aplica 10px de padding en todos los lados */
-```
-
-```css
- padding: 10px 20px;         /*  arriba y abajo, 10px de padding */
+<pre class="brush: css notranslate"> padding: 10px 20px;         /*  arriba y abajo, 10px de padding */
                              /* izquierda y derecha, 20px de padding */
-```
+</pre>
 
-```css
- padding: 10px 3% 20px;      /*  arriba, 10px de padding          */
+<pre class="brush: css notranslate"> padding: 10px 3% 20px;      /*  arriba, 10px de padding          */
                              /*  izquierda y derecha, 3% de padding */
                              /*  bottom, 20px padding       */
-```
+</pre>
 
-```css
- padding: 1em 3px 30px 5px;  /*  arriba    1em  padding  */
+<pre class="brush: css notranslate"> padding: 1em 3px 30px 5px;  /*  arriba    1em  padding  */
                              /*  derecha  3px  padding  */
                              /*  abajo 30px padding  */
                              /*  izquierda   5px  padding
                  /* en dirección de las agujas del reloj */
-```
+</pre>
 
-border:outset; padding:5% 1em;
+<p style="padding: 5% 1em; border: outset currentColor;">border:outset; padding:5% 1em;</p>
 
-## Ver ejemplo
+<h2 id="Live_Sample" name="Live_Sample">Ver ejemplo</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<h4>¡Hola Mundo!</h4>
-<h3>El padding es diferente en esta linea.</h3>
-```
+<pre class="brush: html notranslate">&lt;h4&gt;¡Hola Mundo!&lt;/h4&gt;
+&lt;h3&gt;El padding es diferente en esta linea.&lt;/h3&gt;
+</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-h4{
+<pre class="brush: css notranslate">h4{
   background-color: green;
   padding: 50px 20px 20px 50px;
 }
@@ -91,22 +88,45 @@ h3{
   background-color: blue;
   padding: 400px 50px 50px 400px;
 }
-```
+</pre>
 
-{{ EmbedLiveSample('Live_Sample', 'Live Sample Link', 300) }}
+<p>{{ EmbedLiveSample('Live_Sample', 'Live Sample Link', 300) }}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                           | Estado                           | Comentario          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding') }}                 | {{ Spec2('CSS3 Box') }} | Sin cambio.         |
-| {{ SpecName('CSS2.1', 'box.html#propdef-padding', 'padding-top') }} | {{ Spec2('CSS2.1') }}     | Sin cambio.         |
-| {{ Specname('CSS1', '#padding', 'padding') }}                             | {{ Spec2('CSS1') }}         | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Box', '#the-padding', 'padding') }}</td>
+   <td>{{ Spec2('CSS3 Box') }}</td>
+   <td>Sin cambio.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS2.1', 'box.html#propdef-padding', 'padding-top') }}</td>
+   <td>{{ Spec2('CSS2.1') }}</td>
+   <td>Sin cambio.</td>
+  </tr>
+  <tr>
+   <td>{{ Specname('CSS1', '#padding', 'padding') }}</td>
+   <td>{{ Spec2('CSS1') }}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad en navegadores</h2>
 
 {{Compat("css.properties.padding")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [CSS Box Model](/en/CSS/box_model "en/CSS/box model")
+<ul>
+ <li><a class="internal" href="/en/CSS/box_model" title="en/CSS/box model">CSS Box Model</a></li>
+</ul>

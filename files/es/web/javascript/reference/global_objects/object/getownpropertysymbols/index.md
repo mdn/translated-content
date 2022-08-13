@@ -10,29 +10,30 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertySymbols
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`Object.getOwnPropertySymbols()`** regresa una colección de todos las propiedades de los simbolos encontrados directamente en un objeto dado.
+<p>El método <code><strong>Object.getOwnPropertySymbols()</strong></code> regresa una colección de todos las propiedades de los simbolos encontrados directamente en un objeto dado.</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-    Object.getOwnPropertySymbols(obj)
+<pre class="syntaxbox"><code>Object.getOwnPropertySymbols(<var>obj</var>)</code></pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- `obj`
-  - : El objeto del cual los simbolos de propiedades son devueltos.
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>El objeto del cual los simbolos de propiedades son devueltos.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Similar a {{jsxref("Object.getOwnPropertyNames()")}}, puedes obtener todas las propiedades de simbolos de un objeto dado como una colección de simbolos. Note que {{jsxref("Object.getOwnPropertyNames()")}} no contiene en sí mismo las propiedades de simbolos de un objeto y solo contiene las propiedades de cadenas.
+<p>Similar a {{jsxref("Object.getOwnPropertyNames()")}}, puedes obtener todas las propiedades de simbolos de un objeto dado como una colección de simbolos. Note que {{jsxref("Object.getOwnPropertyNames()")}} no contiene en sí mismo las propiedades de simbolos de un objeto y solo contiene las propiedades de cadenas.</p>
 
-Cómo todos los objetos no tienen inicialmente propiedades simbolos propios, `Object.getOwnPropertySymbols()` regresa una colección vacia a menos que tengas propiedades de simbolos establecidas en tu objeto.
+<p>Cómo todos los objetos no tienen inicialmente propiedades simbolos propios, <code>Object.getOwnPropertySymbols()</code> regresa una colección vacia a menos que tengas propiedades de simbolos establecidas en tu objeto.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-var obj = {};
+<pre class="brush: js">var obj = {};
 var a = Symbol('a');
 var b = Symbol.for('b');
 
@@ -44,19 +45,32 @@ var objectSymbols = Object.getOwnPropertySymbols(obj);
 console.log(objectSymbols.length); // 2
 console.log(objectSymbols);        // [Symbol(a), Symbol(b)]
 console.log(objectSymbols[0]);     // Symbol(a)
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                       | Estado               | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} | {{Spec2('ES6')}} | Definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Symbol")}}
+<ul>
+ <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
+ <li>{{jsxref("Symbol")}}</li>
+</ul>

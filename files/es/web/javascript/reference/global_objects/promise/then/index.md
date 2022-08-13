@@ -10,80 +10,84 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/then
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`then()`** retorna una {{domxref("Promesa")}}. Recibe dos argumentos: funciones callback para los casos de éxito y fallo de [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise).
+<p>El método <code><strong>then()</strong></code> retorna una {{domxref("Promesa")}}. Recibe dos argumentos: funciones callback  para los casos de éxito y fallo de <code><a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise">Promise</a></code>.</p>
 
-Nota: Si ambos argumentos son omitidos, o se proveen métodos que no sean funciones, se creará una nueva `Promesa` sin handlers adicionales, que simplemente adoptan el estado final de la `Promesa` que entonces es llamado. Si el primer argumento es omitido o se provee una no-función, el nuevo `Promise` que es creado simplemente adopta el estado cumplido del `Promise` que entonces es llamado (si se convierte en fulfilled). Si el segundo argument es omitido o se provee una no-función, el nuevo `Promise` que es creado simplemente adopta el estado de rechazo del `Promesa` que entonces es llamado (si se convierte en rechazado).
+<p>Nota: Si ambos argumentos son omitidos, o se proveen métodos que no sean funciones, se creará una nueva <code>Promesa</code> sin handlers adicionales, que simplemente adoptan el estado final de la <code>Promesa</code> que entonces es llamado. Si el primer argumento es omitido o se provee una no-función, el nuevo <code>Promise</code> que es creado simplemente adopta el  estado cumplido del <code>Promise</code> que entonces es llamado (si se convierte en fulfilled). Si el segundo argument es omitido o se provee una no-función, el nuevo <code>Promise</code> que es creado simplemente adopta  el estado de rechazo del <code>Promesa</code> que entonces es llamado (si se convierte en rechazado).</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    p.then(alCumplir[, enRechazo]);
+<pre class="syntaxbox notranslate"><var>p.then(alCumplir[, enRechazo])</var>;
 
-    p.then(function(value) {
-       // cumplimiento
-      }, function(reason) {
-      // rechazo
-    });
+p.then(function(value) {
+   // cumplimiento
+  }, function(reason) {
+  // rechazo
+});
+</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-Retorna un `Promise` el cual es determinado por las funciones input:
+<p>Retorna un <code>Promise</code> el cual es determinado por las funciones input:</p>
 
-- Si alCumplir o `enRechazo` arroja un error, o retorna un [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise) rechazado, `then` retorna un `Promise` rechazado.
-- Si alCumplir o `enRechazo` retorna un `Promise` que resuelve, o retorna cualquier otro valor, `then` retorna un `Promise `resuelto.
+<ul>
+ <li>Si <font face="consolas, Liberation Mono, courier, monospace">alCumplir</font> o <code>enRechazo</code> arroja un error, o retorna un <code><a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise">Promise</a></code> rechazado, <code>then</code> retorna un <code>Promise</code> rechazado.</li>
+ <li>Si <font face="consolas, Liberation Mono, courier, monospace">alCumplir</font> o <code>enRechazo</code> retorna un <code>Promise</code> que resuelve, o retorna cualquier otro valor, <code>then</code> retorna un <code>Promise </code>resuelto.</li>
+</ul>
 
-<!---->
+<dl>
+ <dt><font face="consolas, Liberation Mono, courier, monospace">alCumplir </font>{{optional_inline}}</dt>
+ <dd>Una <a href="es/docs/Web/JavaScript/Referencia/Objetos_globales/Function">Función</a> es llamada si la <code>Promesa</code> se cumple. Esta función tiene un argumento, el <code>valor de</code> cumplimiento. Si no es una función, se reemplaza internamente con una función de "Identidad"  (devuelve el argumento recibido).</dd>
+ <dt><code>enRechazo</code> {{optional_inline}}</dt>
+ <dd>Una <a href="es/docs/Web/JavaScript/Referencia/Objetos_globales/Function">Función</a> es llamada si la <code>Promesa </code>es rechazada. Esta función tiene un argumento, la <code>razón</code> de rechazo. Si no es una función, se reemplaza internamente con una función "Lanzador" (lanza un error que recibió como argumento).</dd>
+</dl>
 
-- alCumplir {{optional_inline}}
-  - : Una [Función](es/docs/Web/JavaScript/Referencia/Objetos_globales/Function) es llamada si la `Promesa` se cumple. Esta función tiene un argumento, el `valor de` cumplimiento. Si no es una función, se reemplaza internamente con una función de "Identidad" (devuelve el argumento recibido).
-- `enRechazo` {{optional_inline}}
-  - : Una [Función](es/docs/Web/JavaScript/Referencia/Objetos_globales/Function) es llamada si la `Promesa `es rechazada. Esta función tiene un argumento, la `razón` de rechazo. Si no es una función, se reemplaza internamente con una función "Lanzador" (lanza un error que recibió como argumento).
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-### Valor de retorno
+<p>Un <code><a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise">Promise</a></code> en estado <strong>pendiente.</strong> La función de control (<code>alCumplir o enRechazo)</code> es llamada de forma <strong>asíncrona</strong> (tan pronto como el stack se vacíe). Después de la invocación de la función de control pueden darse diferentes casos:</p>
 
-Un [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise) en estado **pendiente.** La función de control (`alCumplir o enRechazo)` es llamada de forma **asíncrona** (tan pronto como el stack se vacíe). Después de la invocación de la función de control pueden darse diferentes casos:
+<ul>
+ <li>Si se recibe un valor, la Promesa devuelta por el método <code>then</code> queda resuelta adoptando el valor de retorno.</li>
+ <li>Si se produce un error, la Promesa devuelta por el método <code>then</code> es rechazada, adoptando el error como su valor.</li>
+ <li>Si se devuelve una Promesa ya resuelta, la Promesa devuelta por el método <code>then</code> queda resuelta adoptando el valor de la promesa anterior.</li>
+ <li>Si se devuelve una Promesa con un objeto <strong>pendiente</strong> de resolver, la resolución o rechazo devueltos por  <code>then</code> quedará a esperas de que la Promesa establecida para la función de control quede resuelta. Además, el valor de la Promesa en estado pendiente será el mismo que el valor devuelto por el controlador.</li>
+</ul>
 
-- Si se recibe un valor, la Promesa devuelta por el método `then` queda resuelta adoptando el valor de retorno.
-- Si se produce un error, la Promesa devuelta por el método `then` es rechazada, adoptando el error como su valor.
-- Si se devuelve una Promesa ya resuelta, la Promesa devuelta por el método `then` queda resuelta adoptando el valor de la promesa anterior.
-- Si se devuelve una Promesa con un objeto **pendiente** de resolver, la resolución o rechazo devueltos por `then` quedará a esperas de que la Promesa establecida para la función de control quede resuelta. Además, el valor de la Promesa en estado pendiente será el mismo que el valor devuelto por el controlador.
+<p>Veamos un ejemplo para demostrar la asincronía del método <code>then</code>.</p>
 
-Veamos un ejemplo para demostrar la asincronía del método `then`.
+<pre class="notranslate"><code>// al usar una promesa revuelta, el bloque 'then' se lanzará automáticamente,
+// pero sus funciones controladoras se lanzarán asíncronamente,
+// como demuestran los console.logs
+var promResuelta = Promise.resolve(33);
 
-    // al usar una promesa revuelta, el bloque 'then' se lanzará automáticamente,
-    // pero sus funciones controladoras se lanzarán asíncronamente,
-    // como demuestran los console.logs
-    var promResuelta = Promise.resolve(33);
+var thenProm = promResuelta.then(función(valor){
+    console.log("ésto será invocado cuando acabe el stack principal. El valor recibido y devuelto es: " + valor);
+    return valor;
+});
+// imprimimos al momento el valor de thenProm()
+console.log(thenProm);
 
-    var thenProm = promResuelta.then(función(valor){
-        console.log("ésto será invocado cuando acabe el stack principal. El valor recibido y devuelto es: " + valor);
-        return valor;
-    });
-    // imprimimos al momento el valor de thenProm()
+// usando setTimeout podemos posponer la ejecución de una función al momento en el que el stack quede vacío.
+setTimeout(función(){
     console.log(thenProm);
-
-    // usando setTimeout podemos posponer la ejecución de una función al momento en el que el stack quede vacío.
-    setTimeout(función(){
-        console.log(thenProm);
-    });
+});
 
 
-    // logs, en orden:
-    // Promise {[[EstadoPromise¡]]: "pendiente", [[ValorPromise]]: undefined}
-    // "ésto será invocado cuando acabe el stack principal. El valor recibido y devuelto es: "33"
-    // Promise {[[EstadoPromise]]: "resuelta", [[ValorPromise]]: 33}
+// logs, en orden:
+// Promise {[[EstadoPromise¡]]: "pendiente", [[ValorPromise]]: undefined}
+// "ésto será invocado cuando acabe el stack principal. El valor recibido y devuelto es: "33"
+// Promise {[[EstadoPromise]]: "resuelta", [[ValorPromise]]: 33}</code></pre>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Ya que los métodos `then` y {{jsxref("Promise.prototype.catch()")}} devuelven promesas, pueden ser encadenados — una operación llamada _composición_.
+<p>Ya que los métodos <code>then</code> y {{jsxref("Promise.prototype.catch()")}} devuelven promesas, pueden ser encadenados — una operación llamada <em>composición</em>.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando el metodo `then`
+<h3 id="Usando_el_metodo_then">Usando el metodo <code>then</code></h3>
 
-```js
-var p1 = new Promise(function(resolve, reject) {
+<pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
   resolve('Success!');
   // or
   // reject ("Error!");
@@ -94,16 +98,15 @@ p1.then(function(value) {
 }, function(reason) {
   console.log(reason); // Error!
 });
-```
+</pre>
 
-### Encadenamiento
+<h3 id="Encadenamiento">Encadenamiento</h3>
 
-El método `then` devuelve una `Promise` que permite encadenar métodos.
+<p>El método <code>then</code> devuelve una <code>Promise</code> que permite encadenar métodos.</p>
 
-Puedes pasar una lambda a `then` y si devuelve una promesa, una `Promise` equivalente será expuesta al `then` subsecuente en la cadena de métodos. El fragmento incluido debajo simula un código asíncrono mediante la función `setTimeout`.
+<p>Puedes pasar una lambda a <code>then</code> y si devuelve una promesa, una <code>Promise</code> equivalente será expuesta al <code>then</code> subsecuente en la cadena de métodos. El fragmento incluido debajo simula un código asíncrono mediante la función <code>setTimeout</code>. </p>
 
-```js
-Promise.resolve('foo')
+<pre class="brush: js notranslate">Promise.resolve('foo')
   // 1. Recibe "foo", concatena "bar" con él, y resuelve la cadena con el siguiente 'then'
   .then(función(hilo) {
     return new Promise(function(resolve, reject) {
@@ -134,13 +137,11 @@ Promise.resolve('foo')
     // Observemos que `string` no incluye el trozo 'baz' en éste punto. Ésto ocurre
     // porque lo hemos contruido para que ocurra asíncronamente con una función setTimeout
     console.log(hilo);
-});
-```
+});</pre>
 
-Cuando un valor sencillamente se devuelve desde un lambda `then` , devolverá un `Promise.resolve(<valor devuelto por el controlador que haya sido invocado>)`.
+<p>Cuando un valor sencillamente se devuelve desde un lambda <code>then</code> , devolverá un <code>Promise.resolve(&lt;valor devuelto por el controlador que haya sido invocado&gt;)</code>.</p>
 
-```js
-var p2 = nueva Promise(function(resolver, rechazar) {
+<pre class="brush: js notranslate">var p2 = nueva Promise(function(resolver, rechazar) {
   resolver(1);
 });
 
@@ -154,56 +155,50 @@ p2.then(función(valor) {
 p2.then(función(valor) {
   console.log(valor); // 1
 });
-```
+</pre>
 
-Una llamada a `then` devolverá una promesa rechazada si la función lanza un error o devuelve una Promise rechazada.
+<p>Una llamada a  <code>then</code> devolverá una promesa rechazada si la función lanza un error o devuelve una Promise rechazada.</p>
 
-```js
-Promise.resolve()
-  .then( () => {
+<pre class="brush: js notranslate">Promise.resolve()
+  .then( () =&gt; {
     // Hace que .then() devuelva una promera rechazada
     throw new Error('Oh no!');
   })
-  .then( () => {
+  .then( () =&gt; {
     console.log( 'No invocada.' );
-  }, error => {
+  }, error =&gt; {
     console.error( 'Función de rechazo llamada: ', error );
-});
-```
+});</pre>
 
-En cualquier otro caso, una Promise en resolución será devuelta. El el siguiente ejemplo, el primer `then()` devolverá un `42` dentro de una Promise en resolución, aunque la Promise de la cadena fue rechazada.
+<p>En cualquier otro caso, una Promise en resolución será devuelta. El el siguiente ejemplo, el primer <code>then()</code> devolverá un <code>42</code> dentro de una Promise en resolución, aunque la Promise de la cadena fue rechazada.</p>
 
-```js
-Promise.reject()
-  .then( () => 99, () => 42 ) // enRechazo devuelve 42, que está dentro de una Promise en resolución
-  .then( respuesta => console.log( 'Resuelta con ' + respuesta ) ); // Resuelta con 42
-```
+<pre class="brush: js notranslate">Promise.reject()
+  .then( () =&gt; 99, () =&gt; 42 ) // enRechazo devuelve 42, que está dentro de una Promise en resolución
+  .then( respuesta =&gt; console.log( 'Resuelta con ' + respuesta ) ); // Resuelta con 42</pre>
 
-En la práctica, suele ser preferible capturar promesas rechazadas en lugar de utilizar la sintaxis de dos casos de `then,` como demostramos abajo.
+<p>En la práctica, suele ser preferible capturar promesas rechazadas en lugar de utilizar la sintaxis de dos casos de <code>then,</code> como demostramos abajo.</p>
 
-```js
-Promise.resolve()
-  .then( () => {
+<pre class="brush: js notranslate">Promise.resolve()
+  .then( () =&gt; {
     // Hace que .then() devuelva una promesa rechazada
     throw new Error('Oh no!');
   })
-  .catch( error => {
+  .catch( error =&gt; {
     console.error( 'función enRechazo invocada: ', error );
   })
-  .then( () => {
+  .then( () =&gt; {
     console.log( "Siempre soy invocada, incluso si la promesa del then previo es rechazada" );
-  });
-```
+  });</pre>
 
-También puedes usar encadenamiento para implementar una función con una API basada en promesas, sobre una función del mismo tipo.
+<p><br>
+ También puedes usar encadenamiento para implementar una función con una API basada en promesas, sobre una función del mismo tipo.</p>
 
-```js
-function traer_datos_actuales() {
-  // La función fetch() de la API devuelve una Promesa. Esta función
+<pre class="brush: js notranslate">function traer_datos_actuales() {
+  // La función <a href="/en-US/docs/Web/API/GlobalFetch/fetch">fetch</a>() de la API devuelve una Promesa. Esta función
   // expone una API similar, pero el valor de cumplimiento
   // de la Promesa de esta función tiene más tareas
   // implementadas sobre ella.
-  return fetch('datos_actuales.json').then((response) => {
+  return fetch('datos_actuales.json').then((response) =&gt; {
     if (response.headers.get('content-type') != 'application/json') {
       throw new TypeError();
     }
@@ -213,12 +208,11 @@ function traer_datos_actuales() {
               // fetch_datos_actuales().then()
   });
 }
-```
+</pre>
 
-Si `alCumplir` devuelve una promesa, el valor de retorno de `then` será resuelto o rechazado por la promesa.
+<p>Si <code>alCumplir</code> devuelve una promesa, el valor de retorno de <code>then</code> será resuelto o rechazado por la promesa.</p>
 
-```js
-function resolverDespues(resolver, reject) {
+<pre class="brush: js notranslate">function resolverDespues(resolver, reject) {
   setTimeout(función () {
     resolver(10);
   }, 1000);
@@ -251,40 +245,59 @@ p3.then(funcion(v) {
 }, funcion(e) {
   console.log('rechazada', e); // "rechazada", 'Error'
 });
-```
+</pre>
 
-### [`window.setImmediate`](/es/docs/Web/API/Window/setImmediate "This method is used to break up long running operations and run a callback function immediately after the browser has completed other operations such as events and display updates.") estilo polyfill basado en promesas
+<h3 id="window.setImmediate_estilo_polyfill_basado_en_promesas"><a href="/en-US/docs/Web/API/Window/setImmediate" title="This method is used to break up long running operations and run a callback function immediately after the browser has completed other operations such as events and display updates."><code>window.setImmediate</code></a> estilo polyfill basado en promesas</h3>
 
-Usar un método {{jsxref("Function.prototype.bind()")}}`Reflect.apply` ({{jsxref("Reflect.apply()")}}) para crear un (non-cancellable) setImmediate-style function.
+<p>Usar un método {{jsxref("Function.prototype.bind()")}}<code>Reflect.apply</code> ({{jsxref("Reflect.apply()")}}) para crear un (non-cancellable) setImmediate-style function.</p>
 
-    const nextTick = (() => {
-      const noop = () => {}; // literally
-      const nextTickPromise = () => Promise.resolve().then(noop);
+<pre class="notranslate">const nextTick = (() =&gt; {
+  const noop = () =&gt; {}; // literally
+  const nextTickPromise = () =&gt; Promise.resolve().then(noop);
 
-      const rfab = Reflect.apply.bind; // (thisArg, fn, thisArg, [...args])
-      const nextTick = (fn, ...args) => (
-        fn !== undefined
-        ? Promise.resolve(args).then(rfab(null, fn, null))
-        : nextTickPromise(),
-        undefined
-      );
-      nextTick.ntp = nextTickPromise;
+  const rfab = Reflect.apply.bind; // (thisArg, fn, thisArg, [...args])
+  const nextTick = (fn, ...args) =&gt; (
+    fn !== undefined
+    ? Promise.resolve(args).then(rfab(null, fn, null))
+    : nextTickPromise(),
+    undefined
+  );
+  nextTick.ntp = nextTickPromise;
 
-      return nextTick;
-    })();
+  return nextTick;
+})();</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                               | Estado                       | Comentario                              |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}     | {{Spec2('ES2015')}}     | Definición inicial en el estándar ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}} | {{Spec2('ESDraft')}} |                                         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Definición inicial en el estándar ECMA.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegador
+<h2 id="Compatibilidad_en_navegador">Compatibilidad en navegador</h2>
 
-{{Compat("javascript/promise","Promise.prototype.then")}}
 
-## Ver también
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.prototype.catch()")}}
+<p>{{Compat("javascript/promise","Promise.prototype.then")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Promise")}}</li>
+ <li>{{jsxref("Promise.prototype.catch()")}}</li>
+</ul>

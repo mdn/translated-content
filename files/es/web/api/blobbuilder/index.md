@@ -11,91 +11,115 @@ tags:
   - Referencia
 translation_of: Web/API/BlobBuilder
 ---
-{{APIRef("File API")}}{{ obsolete_header}}
+<p>{{APIRef("File API")}}{{ obsolete_header}}</p>
 
-La interfaz BlobBuilder provee una manera fácil de construir objetos {{domxref("Blob")}} . Solo crea un BlobBuilder y anexa trozos de datos invocando el método [append](#append) . Cuando termines de construir tu objeto, llama al método [getBlob](#getblob) para obtener un objeto {{domxref("Blob")}} que contiene los datos que le enviaste al blob builder.
+<p>La interfaz BlobBuilder provee una manera fácil de construir objetos {{domxref("Blob")}} . Solo crea un BlobBuilder y anexa trozos de datos invocando  el método <a href="#append">append</a> . Cuando termines de construir tu objeto, llama al método <a href="#getblob">getBlob</a> para obtener un objeto  {{domxref("Blob")}}  que contiene los datos que le enviaste al blob builder.</p>
 
-> **Nota:** La interfaz `BlobBuilder` ha sido descontinuada en favor de introducir el constructor mas reciente {{domxref('Blob')}}.
+<div class="note"><strong>Nota:</strong> La interfaz <code>BlobBuilder</code> ha sido descontinuada en favor de introducir el constructor mas reciente {{domxref('Blob')}}.</div>
 
-## Información general de los metodos
+<h2 id="Información_general_de_los_metodos">Información general de los metodos</h2>
 
-| `void append(in ArrayBuffer data);`                                     |
-| ----------------------------------------------------------------------- |
-| `void append(in Blob data);`                                            |
-| `void append(in String data, [optional] in String endings);`            |
-| `Blob getBlob([optional] in DOMString contentType);`                    |
-| `File getFile(in DOMString name, [optional] in DOMString contentType);` |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="/en-US/docs/Web/API/BlobBuilder#append()">append</a>(in ArrayBuffer data);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en-US/docs/Web/API/BlobBuilder#append()">append</a>(in Blob data);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en-US/docs/Web/API/BlobBuilder#append()">append</a>(in String data, [optional] in String endings);</code></td>
+  </tr>
+  <tr>
+   <td><code>Blob <a href="/en-US/docs/Web/API/BlobBuilder#getBlob()">getBlob</a>([optional] in DOMString contentType);</code></td>
+  </tr>
+  <tr>
+   <td><code>File <a href="/en-US/docs/Web/API/BlobBuilder#getFile()">getFile</a>(in DOMString name, [optional] in DOMString contentType);</code></td>
+  </tr>
+ </tbody>
+</table>
 
-## Metodos
+<h2 id="Metodos">Metodos</h2>
 
-### append()
+<h3 id="append()">append()</h3>
 
-Anexa el contenido del objeto javascript especificado al {{domxref("Blob")}} que esta siendo construido. Si el valor especificado no es un {{domxref("Blob")}}, [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), o [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String), el valor es convertido a String antes de ser anexado al blob.
+<p>Anexa el contenido del objeto javascript especificado al {{domxref("Blob")}} que esta siendo construido. Si el valor especificado no es  un  {{domxref("Blob")}}, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>, o <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>, el valor es convertido a String antes de ser anexado al  blob.</p>
 
-    void append(
-      in ArrayBuffer data
-    );
+<pre class="syntaxbox">void append(
+  in ArrayBuffer data
+);
 
-    void append(
-      in Blob data
-    );
+void append(
+  in Blob data
+);
 
 
-    void append(
-      in String data,
-      [optional] in String endings
-    );
+void append(
+  in String data,
+  [optional] in String endings
+);
+</pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- `data`
-  - : Los datos a anexar al objeto {{domxref("Blob")}} que esta siendo construido.
-- `endings`
-  - : Establece como serán escritas las cadenas que contienen `\n`. Puede ser `"transparent"` (los finales no cambian) o `"native"` (los finales cambian para coincidir a conveniencia del sistema operativo anfitrión). El valor predeterminado es `"transparent"`.
+<dl>
+ <dt><code>data</code></dt>
+ <dd>Los datos a anexar al objeto {{domxref("Blob")}} que esta siendo construido.</dd>
+ <dt><code>endings</code></dt>
+ <dd>Establece como serán escritas las cadenas que contienen  <code>\n</code>. Puede ser <code>"transparent"</code> (los finales no cambian) o <code>"native"</code> (los finales cambian para coincidir  a conveniencia del sistema operativo anfitrión). El valor predeterminado es <code>"transparent"</code>.</dd>
+</dl>
 
-### getBlob()
+<h3 id="getBlob()">getBlob()</h3>
 
-Regresa el objeto {{domxref("Blob")}} que ha sido construido usando los datos pasados atraves del método [append](#append).
+<p>Regresa el objeto  {{domxref("Blob")}} que ha sido construido usando los datos pasados atraves del método <a href="#append">append</a>.</p>
 
-    Blob getBlob(
-      in DOMString contentType {{optional_inline}}
-    );
+<pre class="syntaxbox">Blob getBlob(
+  in DOMString contentType {{optional_inline}}
+);
+</pre>
 
-### Parametros
+<h3 id="Parametros_2">Parametros</h3>
 
-- contentType {{optional_inline}}
-  - : El tipo MIME de los datos que seran regresados en el objeto {{domxref("Blob")}}. Esto será la propiedad tipo (Type) de los objetos `Blob`.
+<dl>
+ <dt>contentType {{optional_inline}}</dt>
+ <dd>El tipo MIME de los datos que seran regresados en el objeto {{domxref("Blob")}}. Esto será la propiedad tipo (Type) de los objetos <code>Blob</code>.</dd>
+</dl>
 
-### Valor de Retorno
+<h3 id="Valor_de_Retorno">Valor de Retorno</h3>
 
-Un objeto {{domxref("Blob")}} conteniendo todos los datos pasados por cualquier llamada hecha al método [append](#append) desde que el `BlobBuilder` fue creado. Esto tambien reinicializa el `BlobBuilder` sí que la siguiente llamada al metodo [append](#append) es empezar de nuevo , un blob vacio.
+<p>Un objeto  {{domxref("Blob")}} conteniendo todos los datos pasados por cualquier llamada hecha  al método <a href="#append">append</a> desde que el  <code>BlobBuilder</code> fue creado. Esto tambien reinicializa el  <code>BlobBuilder</code> sí que la siguiente llamada al metodo <a href="#append">append</a> es empezar de nuevo , un blob vacio.</p>
 
-### getFile() {{non-standard_inline}}
+<h3 id="getFile()_non-standard_inline">getFile() {{non-standard_inline}}</h3>
 
-Retorna un objeto {{domxref("File")}}.
+<p>Retorna un objeto {{domxref("File")}}.</p>
 
-    File getFile(
-      in DOMString name,
-      [optional] in DOMString contentType
-    );
+<pre class="syntaxbox">File getFile(
+  in DOMString name,
+  [optional] in DOMString contentType
+);
+</pre>
 
-### Parametros
+<h3 id="Parametros_3">Parametros</h3>
 
-- name
-  - : El nombre del archivo.
-- contentType {{optional_inline}}
-  - : El tipo MIME de dats regresados en el objeto {{domxref("File")}}. Este será el valor de la propiedad tipo (type) del objeto `File`.
+<dl>
+ <dt>name</dt>
+ <dd>El nombre del archivo.</dd>
+ <dt>contentType {{optional_inline}}</dt>
+ <dd>El tipo MIME de dats regresados en el objeto {{domxref("File")}}. Este será el valor de la propiedad tipo (type) del objeto <code>File</code>.</dd>
+</dl>
 
-### Valor de Retorno
+<h3 id="Valor_de_Retorno_2">Valor de Retorno</h3>
 
-Un Objeto {{domxref("File")}}.
+<p>Un Objeto {{domxref("File")}}.</p>
 
-## Compatibilidad con Nevegadores
+<h2 id="Compatibilidad_con_Nevegadores">Compatibilidad con Nevegadores</h2>
 
 {{Compat("api.BlobBuilder")}}
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-- {{spec("http://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder", "File API Specification: BlobBuilder", "ED")}}
-- {{domxref("Blob")}}
-- {{domxref("File")}}
+<ul>
+ <li>{{spec("http://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder", "File API Specification: BlobBuilder", "ED")}}</li>
+ <li>{{domxref("Blob")}}</li>
+ <li>{{domxref("File")}}</li>
+</ul>

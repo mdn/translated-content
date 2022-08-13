@@ -11,146 +11,160 @@ tags:
 translation_of: Web/HTML/Attributes/accept
 original_slug: Web/HTML/Atributos/accept
 ---
-El atributo **`accept`** toma como valor una lista separada por comas de uno o más tipos de archivos, o [especificadores de tipo de archivo únicos](#especificadores_de_tipo_de_archivo_únicos), que describen qué tipos de archivo permitir. La propiedad «_accept_» es un atributo del tipo {{HTMLElement("input/file", "file")}} {{HTMLElement("input")}}. Se admitía en el elemento {{HTMLElement("form")}}, pero se eliminó a favor de {{HTMLElement("input/file", "file")}} en HTML5.
+<p class="summary"><span class="seoSummary">El atributo <strong><code>accept</code></strong> toma como valor una lista separada por comas de uno o más tipos de archivos, o <a href="#especificadores_de_tipo_de_archivo_únicos">especificadores de tipo de archivo únicos</a>, que describen qué tipos de archivo permitir. </span>La propiedad «<em>accept</em>» es un atributo del tipo {{HTMLElement("input/file", "file")}} {{HTMLElement("input")}}. Se admitía en el elemento {{HTMLElement("form")}}, pero se eliminó a favor de {{HTMLElement("input/file", "file")}} en HTML5.</p>
 
-Debido a que un determinado tipo de archivo se puede identificar de más de una manera, es útil proporcionar un conjunto completo de especificadores de tipo cuando necesiten archivos de un tipo específico, o usar el comodín para indicar que un tipo de cualquier formato es aceptable.
+<p>Debido a que un determinado tipo de archivo se puede identificar de más de una manera, es útil proporcionar un conjunto completo de especificadores de tipo cuando necesiten archivos de un tipo específico, o usar el comodín para indicar que un tipo de cualquier formato es aceptable.</p>
 
-Por ejemplo, hay varias formas de identificar los archivos de Microsoft Word, por lo que un sitio que acepta archivos de Word puede usar un `<input>` como este:
+<p>Por ejemplo, hay varias formas de identificar los archivos de Microsoft Word, por lo que un sitio que acepta archivos de Word puede usar un <code>&lt;input&gt;</code> como este:</p>
 
-```html
-<input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-```
+<pre class="brush: html notranslate">&lt;input type="file" id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"&gt;</pre>
 
-Mientras que si aceptas un archivo multimedia, es posible que desees incluir cualquier formato de ese tipo de medio:
+<p>Mientras que si aceptas un archivo multimedia, es posible que desees incluir cualquier formato de ese tipo de medio:</p>
 
-```html
-<input type="file" id="soundFile" accept="audio/*">
-<input type="file" id="videoFile" accept="video/*">
-<input type="file" id="imageFile" accept="image/*">
-```
+<pre class="brush: html notranslate">&lt;input type="file" id="soundFile" accept="audio/*"&gt;
+&lt;input type="file" id="videoFile" accept="video/*"&gt;
+&lt;input type="file" id="imageFile" accept="image/*"&gt;</pre>
 
-El atributo `accept` no valida los tipos de archivos seleccionados; simplemente proporciona sugerencias para los navegadores para guiar a los usuarios hacia la selección de los tipos de archivo correctos. Todavía es posible (en la mayoría de los casos) que los usuarios cambien una opción en el selector de archivos que hace posible anular esto y seleccionar cualquier archivo que deseen, y luego elegir tipos de archivo incorrectos.
+<p>El atributo <code>accept</code> no valida los tipos de archivos seleccionados; simplemente proporciona sugerencias para los navegadores para guiar a los usuarios hacia la selección de los tipos de archivo correctos. Todavía es posible (en la mayoría de los casos) que los usuarios cambien una opción en el selector de archivos que hace posible anular esto y seleccionar cualquier archivo que deseen, y luego elegir tipos de archivo incorrectos.</p>
 
-Debido a esto, te debes asegurar de que el requisito esperado esté validado en el lado del servidor.
+<p>Debido a esto, te debes asegurar de que el requisito esperado esté validado en el lado del servidor.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Cuando se configura en un tipo de entrada de archivo, el selector de archivos nativo que se abre solo debe permitir seleccionar archivos del tipo de archivo correcto. La mayoría de los sistemas operativos aligeran los archivos que no coinciden con los criterios y no se pueden seleccionar.
+<p>Cuando se configura en un tipo de entrada de archivo, el selector de archivos nativo que se abre solo debe permitir seleccionar archivos del tipo de archivo correcto. La mayoría de los sistemas operativos aligeran los archivos que no coinciden con los criterios y no se pueden seleccionar.</p>
 
-```html
-<p>
-	<label for="soundFile">Selecciona un archivo de audio:</label>
-	<input type="file" id="soundFile" accept="audio/*">
-	</p>
-	<p>
-	<label for="videoFile">Selecciona un archivo de video:</label>
-	<input type="file" id="videoFile" accept="video/*">
-	</p>
-	<p>
-	<label for="imageFile">Selecciona algunas imágenes:</label>
-	<input type="file" id="imageFile" accept="image/*" multiple>
-	</p>
-```
+<div id="ejemplo_sencillo">
+<pre class="brush: html notranslate">&lt;p&gt;
+	&lt;label for="soundFile"&gt;Selecciona un archivo de audio:&lt;/label&gt;
+	&lt;input type="file" id="soundFile" accept="audio/*"&gt;
+	&lt;/p&gt;
+	&lt;p&gt;
+	&lt;label for="videoFile"&gt;Selecciona un archivo de video:&lt;/label&gt;
+	&lt;input type="file" id="videoFile" accept="video/*"&gt;
+	&lt;/p&gt;
+	&lt;p&gt;
+	&lt;label for="imageFile"&gt;Selecciona algunas imágenes:&lt;/label&gt;
+	&lt;input type="file" id="imageFile" accept="image/*" multiple&gt;
+	&lt;/p&gt;</pre>
 
-{{EmbedLiveSample('ejemplo_sencillo', '100%', 200)}}
+<p>{{EmbedLiveSample('ejemplo_sencillo', '100%', 200)}}</p>
 
-Ten en cuenta que el último ejemplo te permite seleccionar varias imágenes. Consulta el atributo [`multiple`](multiple) para obtener más información.
+<p>Ten en cuenta que el último ejemplo te permite seleccionar varias imágenes. Consulta el atributo <code><a href="multiple">multiple</a></code> para obtener más información.</p>
+</div>
 
-## Especificadores de tipo de archivo únicos
+<h2 id="Especificadores_de_tipo_de_archivo_únicos">Especificadores de tipo de archivo únicos</h2>
 
-Un **especificador de tipo de archivo único** es una cadena que describe un tipo de archivo que el usuario puede seleccionar en un elemento {{HTMLElement("input")}} de tipo `file`. Cada especificador de tipo de archivo único puede adoptar una de las siguientes formas:
+<p>Un <strong>especificador de tipo de archivo único</strong> es una cadena que describe un tipo de archivo que el usuario puede seleccionar en un elemento {{HTMLElement("input")}} de tipo <code>file</code>. Cada especificador de tipo de archivo único puede adoptar una de las siguientes formas:</p>
 
-- Una extensión de nombre de archivo válida que no distingue entre mayúsculas y minúsculas, que comienza con un punto ("."). Por ejemplo: `.jpg`, `.pdf`, o `.doc`.
-- Una cadena de tipo MIME válida, sin extensiones.
-- La cadena `audio/*` significa "cualquier archivo de audio".
-- La cadena `video/*` significa "cualquier archivo de video".
-- La cadena `image/*` significa "cualquier archivo de imagen".
+<ul>
+ <li>Una extensión de nombre de archivo válida que no distingue entre mayúsculas y minúsculas, que comienza con un punto ("."). Por ejemplo: <code>.jpg</code>, <code>.pdf</code>, o <code>.doc</code>.</li>
+ <li>Una cadena de tipo MIME válida, sin extensiones.</li>
+ <li>La cadena <code>audio/*</code> significa "cualquier archivo de audio".</li>
+ <li>La cadena <code>video/*</code> significa "cualquier archivo de video".</li>
+ <li>La cadena <code>image/*</code> significa "cualquier archivo de imagen".</li>
+</ul>
 
-El atributo `accept` toma como valor una cadena que contiene uno o más de estos especificadores de tipo de archivo únicos, separados por comas. Por ejemplo, un selector de archivos que necesita contenido que se puede presentar como una imagen, incluidos los formatos de imagen estándar y los archivos PDF, podría verse así:
+<p>El atributo <code>accept</code> toma como valor una cadena que contiene uno o más de estos especificadores de tipo de archivo únicos, separados por comas. Por ejemplo, un selector de archivos que necesita contenido que se puede presentar como una imagen, incluidos los formatos de imagen estándar y los archivos PDF, podría verse así:</p>
 
-```html
-<input type="file" accept="image/*,.pdf">
-```
+<pre class="brush: html notranslate">&lt;input type="file" accept="image/*,.pdf"&gt;</pre>
 
-## Usar \_input_s de archivo
+<h2 id="Usar_inputs_de_archivo">Usar <em>input</em>s de archivo</h2>
 
-### Un ejemplo básico
+<h3 id="Un_ejemplo_básico">Un ejemplo básico</h3>
 
-```html
-<form method="post" enctype="multipart/form-data">
- <div>
-   <label for="file">Elige el archivo a cargar</label>
-   <input type="file" id="file" name="file" multiple>
- </div>
- <div>
-   <button>Enviar</button>
- </div>
-</form>
-```
+<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
+ &lt;div&gt;
+   &lt;label for="file"&gt;Elige el archivo a cargar&lt;/label&gt;
+   &lt;input type="file" id="file" name="file" multiple&gt;
+ &lt;/div&gt;
+ &lt;div&gt;
+   &lt;button&gt;Enviar&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/form&gt;</pre>
 
-```css hidden
-div {
+<div class="hidden">
+<pre class="brush: css notranslate">div {
   margin-bottom: 10px;
-}
-```
+}</pre>
+</div>
 
-Esto produce la siguiente salida:
+<p>Esto produce la siguiente salida:</p>
 
-{{EmbedLiveSample('Un_ejemplo_básico', 650, 60)}}
+<p>{{EmbedLiveSample('Un_ejemplo_básico', 650, 60)}}</p>
 
-> **Nota:** También puedes encontrar este ejemplo en GitHub; consulta [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html) y también puedes [verlo funcionando en vivo](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+<div class="note">
+<p><strong>Nota</strong>: También puedes encontrar este ejemplo en GitHub; consulta <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html">código fuente</a> y también puedes <a href="https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html">verlo funcionando en vivo</a>.</p>
+</div>
 
-Independientemente del dispositivo o sistema operativo del usuario, el `<input>` de archivo proporciona un botón que abre un cuadro de diálogo selector de archivos que permite al usuario elegir un archivo.
+<p>Independientemente del dispositivo o sistema operativo del usuario, el <code>&lt;input&gt;</code> de archivo proporciona un botón que abre un cuadro de diálogo selector de archivos que permite al usuario elegir un archivo.</p>
 
-La inclusión del atributo [`multiple`](multiple), como se muestra arriba, especifica que se pueden elegir varios archivos a la vez. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo deseas que el usuario elija un único archivo por `<input>`, omite el atributo `multiple`.
+<p>La inclusión del atributo <code><a href="multiple">multiple</a></code>, como se muestra arriba, especifica que se pueden elegir varios archivos a la vez. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo deseas que el usuario elija un único archivo por <code>&lt;input&gt;</code>, omite el atributo <code>multiple</code>.</p>
 
-### Limitar los tipos de archivo aceptados
+<h3 id="Limitar_los_tipos_de_archivo_aceptados">Limitar los tipos de archivo aceptados</h3>
 
-A menudo, no querrás que el usuario pueda elegir cualquier tipo de archivo arbitrario; en su lugar, quieres que seleccionen archivos de un tipo o tipos específicos. Por ejemplo, si la entrada de tu archivo permite a los usuarios cargar una imagen de perfil, probablemente desees que seleccionen formatos de imagen compatibles con la web, como {{Glossary("JPEG")}} o {{Glossary("PNG")}}.
+<p>A menudo, no querrás que el usuario pueda elegir cualquier tipo de archivo arbitrario; en su lugar, quieres que seleccionen archivos de un tipo o tipos específicos. Por ejemplo, si la entrada de tu archivo permite a los usuarios cargar una imagen de perfil, probablemente desees que seleccionen formatos de imagen compatibles con la web, como {{Glossary("JPEG")}} o {{Glossary("PNG")}}.</p>
 
-Los tipos de archivo aceptables se pueden especificar con el atributo {{HTMLAttrxRef("accept", "input/file")}}, que toma una lista separada por comas de extensiones de archivo permitidas o tipos MIME. Algunos ejemplos:
+<p>Los tipos de archivo aceptables se pueden especificar con el atributo {{HTMLAttrxRef("accept", "input/file")}}, que toma una lista separada por comas de extensiones de archivo permitidas o tipos MIME. Algunos ejemplos:</p>
 
-- `accept="image/png"` o `accept=".png"` — Acepta archivos PNG.
-- `accept="image/png, image/jpeg"` o `accept=".png, .jpg, .jpeg"` — Acepta archivos PNG o JPEG.
-- `accept="image/*"` — Acepta cualquier archivo con un tipo MIME de `image/*`. (Muchos dispositivos móviles también permiten que el usuario tome una foto con la cámara cuando se usa).
-- `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — Acepta cualquier cosa que huela a un documento de MS Word.
+<ul>
+ <li><code>accept="image/png"</code> o <code>accept=".png"</code> — Acepta archivos PNG.</li>
+ <li><code>accept="image/png, image/jpeg"</code> o <code>accept=".png, .jpg, .jpeg"</code> — Acepta archivos PNG o JPEG.</li>
+ <li><code>accept="image/*"</code> — Acepta cualquier archivo con un tipo MIME de <code>image/*</code>. (Muchos dispositivos móviles también permiten que el usuario tome una foto con la cámara cuando se usa).</li>
+ <li><code>accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"</code> — Acepta cualquier cosa que huela a un documento de MS Word.</li>
+</ul>
 
-Veamos un ejemplo más completo:
+<p>Veamos un ejemplo más completo:</p>
 
-```html
-<form method="post" enctype="multipart/form-data">
-  <div>
-    <label for="profile_pic">Elige el archivo para cargar</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
-  </div>
-  <div>
-    <button>Enviar</button>
-  </div>
-</form>
-```
+<pre class="brush: html notranslate">&lt;form method="post" enctype="multipart/form-data"&gt;
+  &lt;div&gt;
+    &lt;label for="profile_pic"&gt;Elige el archivo para cargar&lt;/label&gt;
+    &lt;input type="file" id="profile_pic" name="profile_pic"
+          accept=".jpg, .jpeg, .png"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button&gt;Enviar&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
 
-```css hidden
-div {
+<div class="hidden">
+<pre class="brush: css notranslate">div {
   margin-bottom: 10px;
-}
-```
+}</pre>
+</div>
 
-{{EmbedLiveSample('Limitar_los_tipos_de_archivo_aceptados', 650, 60)}}
+<p>{{EmbedLiveSample('Limitar_los_tipos_de_archivo_aceptados', 650, 60)}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                           | Estado                               |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'atributo accept')}} | {{ Spec2('HTML WHATWG') }} |
-| {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'Atributo accept')}} | {{Spec2('HTML5.1')}}         |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'atributo accept')}}</td>
+   <td>{{ Spec2('HTML WHATWG') }}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'Atributo accept')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("html.elements.attribute.accept")}}
 
-## Ve también
 
-- {{web.link("/es/docs/Using_files_from_web_applications", "Uso de archivos de aplicaciones web")}}
-- {{web.link("/es/docs/Web/API/File", "API de File")}}
+<p>{{Compat("html.elements.attribute.accept")}}</p>
+
+<h2 id="Ve_también">Ve también</h2>
+
+<ul>
+ <li>{{web.link("/es/docs/Using_files_from_web_applications", "Uso de archivos de aplicaciones web")}}</li>
+ <li>{{web.link("/es/docs/Web/API/File", "API de File")}}</li>
+</ul>

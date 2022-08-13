@@ -9,37 +9,38 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/sign
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La función **`Math.sign()`** retorna el signo de un número, indicando si el número es positivo, negativo o cero.
+<p>La función <strong><code>Math.sign()</code></strong> retorna el signo de un número, indicando si el número es positivo, negativo o cero.</p>
 
-## Syntaxis
+<h2 id="Syntaxis">Syntaxis</h2>
 
-    Math.sign(x)
+<pre class="syntaxbox"><code>Math.sign(<var>x</var>)</code></pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- `x`
-  - : Un número.
+<dl>
+ <dt><code>x</code></dt>
+ <dd>Un número.</dd>
+</dl>
 
-### Valor de retorno.
+<h3 id="Valor_de_retorno.">Valor de retorno.</h3>
 
-Un número representando el signo del argumento dado. Si el argumento es un número positivo, negativo, cero positivo, o cero negativo, la función retornará `1`, `-1`, `0` or `-0` respectivamente. De lo contrario, retorna {{jsxref("NaN")}}.
+<p>Un número representando el signo del argumento dado. Si el argumento es un número positivo, negativo, cero positivo, o cero negativo, la función retornará <code>1</code>, <code>-1</code>, <code>0</code> or <code>-0</code> respectivamente. De lo contrario, retorna {{jsxref("NaN")}}.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Como `sign()` es un método estático de `Math`, siempre se utiliza como `Math.sign()`, en vez de un método de un objeto Math que hayas creado. (`Math` no es un constructor).
+<p>Como <code>sign()</code> es un método estático de <code>Math</code>, siempre se utiliza como <code>Math.sign()</code>, en vez de un método de un objeto Math que hayas creado. (<code>Math</code> no es un constructor).</p>
 
-Esta función tiene 5 tipos de valores de retorno, `1`, `-1`, `0`, `-0`, `NaN`, que representan "número positivo", "número negativo", "cero positivo", "cero negativo" y {{jsxref("NaN")}} respectivamente.
+<p>Esta función tiene 5 tipos de valores de retorno, <code>1</code>, <code>-1</code>, <code>0</code>, <code>-0</code>, <code>NaN</code>, que representan "número positivo", "número negativo", "cero positivo", "cero negativo" y {{jsxref("NaN")}} respectivamente.</p>
 
-El argumento pasado a esta función será convertido a tipo `x` implicitamente.
+<p>El argumento pasado a esta función será convertido a tipo <code>x</code> implicitamente.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `Math.sign()`
+<h3 id="Usando_Math.sign()">Usando <code>Math.sign()</code></h3>
 
-```js
-Math.sign(3);     //  1
+<pre class="brush: js">Math.sign(3);     //  1
 Math.sign(-3);    // -1
 Math.sign('-3');  // -1
 Math.sign(0);     //  0
@@ -47,12 +48,11 @@ Math.sign(-0);    // -0
 Math.sign(NaN);   // NaN
 Math.sign('foo'); // NaN
 Math.sign();      // NaN
-```
+</pre>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-```js
-if (!Math.sign) {
+<pre class="brush: js">if (!Math.sign) {
   Math.sign = function(x) {
     // Si x es NaN, el resultado es NaN.
     // Si x es -0, el resultado es -0.
@@ -63,26 +63,42 @@ if (!Math.sign) {
     if (x === 0 || isNaN(x)) {
       return Number(x);
     }
-    return x > 0 ? 1 : -1;
+    return x &gt; 0 ? 1 : -1;
   };
-}
-```
+}</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.sign', 'Math.sign')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-math.sign', 'Math.sign')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Math.sign")}}
 
-## Ver También
+<h2 id="Ver_También">Ver También</h2>
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.trunc()")}}
+<ul>
+ <li>{{jsxref("Math.abs()")}}</li>
+ <li>{{jsxref("Math.ceil()")}}</li>
+ <li>{{jsxref("Math.floor()")}}</li>
+ <li>{{jsxref("Math.round()")}}</li>
+ <li>{{jsxref("Math.trunc()")}}</li>
+</ul>

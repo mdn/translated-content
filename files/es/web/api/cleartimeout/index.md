@@ -4,24 +4,26 @@ slug: Web/API/clearTimeout
 translation_of: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
-{{ApiRef}}
+<div>{{ApiRef}}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-Borra el retraso asignado por {{domxref("window.setTimeout","window.setTimeout()")}}.
+<p>Borra el retraso asignado por {{domxref("window.setTimeout","window.setTimeout()")}}.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    window.clearTimeout(timeoutID)
+<pre class="syntaxbox">window.clearTimeout(<em>timeoutID</em>)
+</pre>
 
-- `timeoutID` es el ID del timeout que desee borrar, retornado por {{domxref("window.setTimeout","window.setTimeout()")}}.
+<ul>
+ <li><code>timeoutID</code> es el ID del timeout que desee borrar, retornado por {{domxref("window.setTimeout","window.setTimeout()")}}.</li>
+</ul>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-Ejecute el script de abajo en el contexto de una página web y haga clic en la página una vez. Verá un mensaje emergente en un segundo. Si permanece haciendo clic en la página cada segundo, la alerta nunca aparece.
+<p>Ejecute el script de abajo en el contexto de una página web y haga clic en la página una vez. Verá un mensaje emergente en un segundo. Si permanece haciendo clic en la página cada segundo, la alerta nunca aparece.</p>
 
-```js
-var alarm = {
+<pre class="brush: js">var alarm = {
   remind: function(aMessage) {
     alert(aMessage);
     delete this.timeoutID;
@@ -40,22 +42,23 @@ var alarm = {
     }
   }
 };
-window.onclick = function() { alarm.setup() };
-```
+window.onclick = function() { alarm.setup() };</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-Pasar un ID inválido a `clearTimeout` no tiene ningún efecto (y no lanza una excepción).
+<p>Pasar un ID inválido a <code>clearTimeout</code> no tiene ningún efecto (y no lanza una excepción).</p>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-DOM Nivel 0. Especificado en [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-windowtimers-cleartimeout).
+<p>DOM Nivel 0. Especificado en <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-windowtimers-cleartimeout">HTML5</a>.</p>
 
-## Vea también
+<h2 id="See_also" name="See_also">Vea también</h2>
 
-- [JavaScript timers](/es/docs/JavaScript/Timers "JavaScript/Timers")
-- {{domxref("window.setTimeout")}}
-- {{domxref("window.setInterval")}}
-- {{domxref("window.clearInterval")}}
-- {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/es/docs/JavaScript/Timers/Daemons "JavaScript/Timers/Daemons")
+<ul>
+ <li><a href="/en-US/docs/JavaScript/Timers" title="JavaScript/Timers">JavaScript timers</a></li>
+ <li>{{domxref("window.setTimeout")}}</li>
+ <li>{{domxref("window.setInterval")}}</li>
+ <li>{{domxref("window.clearInterval")}}</li>
+ <li>{{domxref("window.requestAnimationFrame")}}</li>
+ <li><a href="/en-US/docs/JavaScript/Timers/Daemons" title="JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
+</ul>

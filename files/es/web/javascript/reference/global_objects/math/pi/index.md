@@ -9,43 +9,71 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/PI
 ---
-{{JSRef}}La propiedad **`Math.PI`** representa la relacion entre la longitud de la circunferencia de un circulo y su diametro, la cual es aproximadamente 3.14159.
+<div>{{JSRef}}</div>
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3.14159</annotation></semantics></math>
+<div>La propiedad <code><strong>Math.PI</strong></code> representa la relacion entre la longitud de la circunferencia de un circulo y su diametro, la cual es aproximadamente 3.14159.</div>
 
-{{js_property_attributes(0, 0, 0)}}
+<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3.14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3.14159</annotation></semantics></math></p>
 
-## Descripción
+<div>{{js_property_attributes(0, 0, 0)}}</div>
 
-Debido a que PI es una propiedad estatica del modulo **`Math`**, siempre debes de utilizarla como **`Math.PI`**, en lugar de una propiedad de un objeto **`Math`** que tu hayas creado ( **`Math`** no es un constructor ).
+<h2 id="Descripción">Descripción</h2>
 
-## Ejemplos
+<p>Debido a que PI es una propiedad estatica del modulo <strong><code>Math</code></strong>, siempre debes de utilizarla como <strong><code>Math.PI</code></strong>, en lugar de una propiedad de un objeto <strong><code>Math</code></strong> que tu hayas creado ( <strong><code>Math</code></strong> no es un constructor ).</p>
 
-### Utilizando `Math.PI`
+<h2 id="Ejemplos">Ejemplos</h2>
 
-La siguiente función utiliza **`Math.PI`** para calcular la longitud de la circunferencia de un circulo mediante el radio del circulo proporcionado como parametro.
+<h3 id="Utilizando_Math.PI">Utilizando <code>Math.PI</code></h3>
 
-```js
-function calculaCircunferencia(radio) {
+<p>La siguiente función utiliza <strong><code>Math.PI</code></strong> para calcular la longitud de la circunferencia de un circulo mediante el radio del circulo proporcionado como parametro.</p>
+
+<pre class="brush: js">function calculaCircunferencia(radio) {
   return 2 * Math.PI * radio;
 }
 
 calculaCircunferencia(1);  // 6.283185307179586
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                       | Estatus                      | Comentario                                          |
-| -------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.6', 'Math.PI')}}     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.pi', 'Math.PI')}} | {{Spec2('ESDraft')}} |                                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>
+    <p>Definición inicial. Implementado en JavaScript 1.0.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.8.1.6', 'Math.PI')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.pi', 'Math.PI')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Navegadores Compatibles
+<h2 id="Navegadores_Compatibles">Navegadores Compatibles</h2>
 
 {{Compat("javascript.builtins.Math.PI")}}
 
-## Ver tambien
+<h2 id="Ver_tambien">Ver tambien</h2>
 
-- {{jsxref("Math")}}
+<ul>
+ <li>{{jsxref("Math")}}</li>
+</ul>

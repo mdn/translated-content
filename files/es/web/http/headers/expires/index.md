@@ -9,43 +9,71 @@ tags:
   - encabezado
 translation_of: Web/HTTP/Headers/Expires
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-El encabezado **`Expires`** contiene la fecha y hora en la que se considerará la respuesta caducada.
+<p>El encabezado <code><strong>Expires</strong></code> contiene la fecha y hora en la que se considerará la respuesta caducada.</p>
 
-Fechas inválidas, como el valor 0, representan una fecha en el pasado, esto significa que el recurso ya ha expirado.
+<p>Fechas inválidas, como el valor 0, representan una fecha en el pasado, esto significa que el recurso ya ha expirado.</p>
 
-Si existe un encabezado {{HTTPHeader("Cache-Control")}} con la directiva "max-age" o "s-max-age" en la respuesta, el encabezado `Expires` será ignorado.
+<p>Si existe un encabezado {{HTTPHeader("Cache-Control")}} con la directiva "max-age" o "s-max-age" en la respuesta, el encabezado <code>Expires</code> será ignorado.</p>
 
-| Encabezado                                                                                       | {{Glossary("Response header")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Nombre de encabezado Prohibido")}}                                     | no                                       |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                                       |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Encabezado</th>
+   <td>{{Glossary("Response header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Nombre de encabezado Prohibido")}}</th>
+   <td>no</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
+   <td>si</td>
+  </tr>
+ </tbody>
+</table>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Expires: <http-date>
+<pre class="syntaxbox">Expires: &lt;http-date&gt;
+</pre>
 
-## Directivas
+<h2 id="Directivas">Directivas</h2>
 
-- \<http-date>
-  - : Una estampa de tiempo HTTP.
+<dl>
+ <dt>&lt;http-date&gt;</dt>
+ <dd>
+ <p>Una estampa de tiempo HTTP.</p>
+ </dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-    Expires: Jue, 21 Oct 2017 07:28:00 GMT
+<pre>Expires: Jue, 21 Oct 2017 07:28:00 GMT</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                               | Título                                          |
-| -------------------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Título</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7234", "Expires", "5.3")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Caching</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en Navegadores
+<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
 
-{{Compat("http.headers.Expires")}}
+<p>{{Compat("http.headers.Expires")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Age")}}
+<ul>
+ <li>{{HTTPHeader("Cache-Control")}}</li>
+ <li>{{HTTPHeader("Age")}}</li>
+</ul>

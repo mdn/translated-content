@@ -3,56 +3,83 @@ title: padding-bottom
 slug: Web/CSS/padding-bottom
 translation_of: Web/CSS/padding-bottom
 ---
-{{CSSRef}}
+<p>{{CSSRef}}</p>
 
-## Sumario
+<h2 id="Sumario">Sumario</h2>
 
-La propiedad **`padding-bottom`** [CSS](https://developer.mozilla.org/en/CSS "CSS") establece el espacio de relleno requerido en la parte inferior del elemento. El [área de padding](https://developer.mozilla.org/en/CSS/box_model#padding) es el espacio entre el contenido del elemento y su borde. Contrariamente de la propiedad **`margin-bottom`**, valores negativos no son válidos.
+<p>La propiedad <strong><code>padding-bottom</code></strong> <a href="https://developer.mozilla.org/en/CSS" title="CSS">CSS</a> establece el espacio de relleno requerido en la parte inferior del elemento. El <a href="https://developer.mozilla.org/en/CSS/box_model#padding">área de padding</a> es el espacio entre el contenido del elemento y su borde. Contrariamente de la propiedad <strong><code>margin-bottom</code></strong>, valores negativos no son válidos.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-/* <length> values (Valores fijos)*/
+<pre class="brush:css">/* &lt;length&gt; values (Valores fijos)*/
 padding-bottom: 0.5em;
 padding-bottom: 0;
 padding-bottom: 2cm;
 
-/* <percentage> value (Valores porcentuales)*/
+/* &lt;percentage&gt; value (Valores porcentuales)*/
 padding-bottom: 10%;
 
 /* Global values (Valores globales)*/
 padding-bottom: inherit;
 padding-bottom: initial;
 padding-bottom: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- \<length>
-  - : Especifica un valor positivo fijo. Veáse {{cssxref("&lt;length&gt;")}} para más detalles.
-- \<percentage>
-  - : Especifica un porcentaje con respecto al bloque que lo contiene.
+<dl>
+ <dt>&lt;length&gt;</dt>
+ <dd>Especifica un valor positivo fijo. Veáse {{cssxref("&lt;length&gt;")}} para más detalles.</dd>
+ <dt>&lt;percentage&gt;</dt>
+ <dd>Especifica un porcentaje con respecto al bloque que lo contiene.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-    .content { padding-bottom: 5%; }
-    .sidebox { padding-bottom: 10px; }
+<pre class="eval">.content { padding-bottom: 5%; }
+.sidebox { padding-bottom: 10px; }
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                   | Estado                                   | Comentarios                                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-bottom') }}                 | {{ Spec2('CSS3 Box') }}         | No change from {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-bottom') }}. |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-bottom') }} | {{ Spec2('CSS3 Transitions') }} | Defines `padding-bottom` as animatable.                                                                          |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-bottom') }} | {{ Spec2('CSS2.1') }}             | No change from {{ Specname('CSS1', '#padding-bottom', 'padding-bottom') }}.                 |
-| {{ Specname('CSS1', '#padding-bottom', 'padding-bottom') }}                 | {{ Spec2('CSS1') }}                 | Initial definition                                                                                               |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Box', '#the-padding', 'padding-bottom') }}</td>
+   <td>{{ Spec2('CSS3 Box') }}</td>
+   <td>No change from {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-bottom') }}.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-bottom') }}</td>
+   <td>{{ Spec2('CSS3 Transitions') }}</td>
+   <td>Defines <code>padding-bottom</code> as animatable.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-bottom') }}</td>
+   <td>{{ Spec2('CSS2.1') }}</td>
+   <td>No change from {{ Specname('CSS1', '#padding-bottom', 'padding-bottom') }}.</td>
+  </tr>
+  <tr>
+   <td>{{ Specname('CSS1', '#padding-bottom', 'padding-bottom') }}</td>
+   <td>{{ Spec2('CSS1') }}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("css.properties.padding-bottom")}}

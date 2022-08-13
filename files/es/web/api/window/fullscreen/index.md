@@ -6,34 +6,38 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Window/fullScreen
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Esta propiedad indica si la ventana se presenta en modo de pantalla comleta o no. Su funcionamiento es sólo fiable a partir de Gecko 1.9 (Firefox 3), ver Notas más abajo.
+<p>Esta propiedad indica si la ventana se presenta en modo de pantalla comleta o no. Su funcionamiento es sólo fiable a partir de Gecko 1.9 (Firefox 3), ver Notas más abajo.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    var isInFullScreen = windowRef.fullScreen;
+<pre class="eval">var <var>isInFullScreen</var> = <var>windowRef</var>.fullScreen;
+</pre>
 
-Con privilegios chrome, el valor de esta propiedad se puede cambiar, de otra forma, es de sólo lectura. Ten en cuenta que si intentas cambiar el valor de esta propiedad sin tener privilegios chrome, no cambiará nada y la propiedad simplemente fallará. Esto se hace para evitar que los programas diseñados para Internet Explorer fallen.
+<p><br>
+ Con privilegios chrome, el valor de esta propiedad se puede cambiar, de otra forma, es de sólo lectura. Ten en cuenta que si intentas cambiar el valor de esta propiedad sin tener privilegios chrome, no cambiará nada y la propiedad simplemente fallará. Esto se hace para evitar que los programas diseñados para Internet Explorer fallen.</p>
 
-### Valor devuelto
+<h3 id="Valor_devuelto" name="Valor_devuelto">Valor devuelto</h3>
 
-- `isInFullScreen`
-  - : Un valor*binario* . Los valores posibles son:
+<dl>
+ <dt><code>isInFullScreen</code></dt>
+ <dd>Un valor<em>binario</em> . Los valores posibles son:</dd>
+</dl>
 
-<!---->
+<ul>
+ <li><code>true</code>: (Cierto) la ventana esta en modo pantalla completa.</li>
+ <li><code>false</code>: (Falso)la ventana NO esta en modo pantalla completa.</li>
+</ul>
 
-- `true`: (Cierto) la ventana esta en modo pantalla completa.
-- `false`: (Falso)la ventana NO esta en modo pantalla completa.
+<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
 
-### Ejemplos
+<h3 id="Especificaciones" name="Especificaciones">Especificaciones</h3>
 
-### Especificaciones
+<p>DOM nivel 0. <code>window.fullScreen</code> no forma parte de ninguna especificación W3C.</p>
 
-DOM nivel 0. `window.fullScreen` no forma parte de ninguna especificación W3C.
+<h3 id="Notas" name="Notas">Notas</h3>
 
-### Notas
-
-El funcionamiento de esta propiedad es fiable sólo en Mozilla 1.9 (Firefox 3) y posteriores. Mozilla 1.8 y versiones anteriores manejan esta propiedad pero el valor devuelto es siempre `false`, aún cuando la ventana está en modo pantalla completa ({{ Bug(127013) }}).
+<p>El funcionamiento de esta propiedad es fiable sólo en Mozilla 1.9 (Firefox 3) y posteriores. Mozilla 1.8 y versiones anteriores manejan esta propiedad pero el valor devuelto es siempre <code>false</code>, aún cuando la ventana está en modo pantalla completa ({{ Bug(127013) }}).</p>

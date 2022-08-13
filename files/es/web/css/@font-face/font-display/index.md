@@ -12,70 +12,83 @@ tags:
   - web fonts
 translation_of: Web/CSS/@font-face/font-display
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-El descriptor `font-display` determina cómo se muestra una fuente basándose en cuándo está descargada y lista para usarse.
+<p>El descriptor <code>font-display</code> determina cómo se muestra una fuente basándose en cuándo está descargada y lista para usarse.</p>
 
-## La visualización de las fuentes
+<h2 id="La_visualización_de_las_fuentes">La visualización de las fuentes</h2>
 
-La visualización de la fuentes se basa en un temporizador que comienza en el momento en que el agente de usuario intenta utilizar una fuente descargada. El tiempo de visualización se divide en tres periodos dictan el comportamiento de renderizado de cualquier elemento que utilice la fuente.
+<p>La  visualización de la fuentes se basa en un temporizador que comienza en el momento en que el agente de usuario intenta utilizar una fuente descargada. El tiempo de visualización se divide en tres periodos dictan el comportamiento de renderizado de cualquier elemento que utilice la fuente.</p>
 
-- Tiempo de bloqueo de fuente
-  - : Si la fuente no está cargada, cualquier elemento que intente utilizarla debe mostrar una fuente alternativa _invisible_. Si la fuente se carga correctamente durante este período, se utiliza normalmente.
-- Tiempo de intercambio de fuente
-  - : Si la fuente no está cargada, cualquier elemento que intente usarla debe mostrar una fuente alternativa. Si la fuente se carga correctamente durante este período, se utiliza normalmente.
-- Tiempo de fallo de la fuente
-  - : Si la fuente no está cargada el agente de usuario lo trata como una descarga fallida y utiliza una fuente alternativa.
+<dl>
+ <dt>Tiempo de bloqueo de fuente</dt>
+ <dd>Si la fuente no está cargada, cualquier elemento que intente utilizarla debe mostrar una fuente alternativa <em>invisible</em>. Si la fuente se carga correctamente durante este período, se utiliza normalmente.</dd>
+ <dt>Tiempo de intercambio de fuente</dt>
+ <dd>Si la fuente no está cargada, cualquier elemento que intente usarla debe mostrar una fuente alternativa. Si la fuente se carga correctamente durante este período, se utiliza normalmente.</dd>
+ <dt>Tiempo de fallo de la fuente</dt>
+ <dd>Si la fuente no está cargada el agente de usuario lo trata como una descarga fallida y utiliza una fuente alternativa.</dd>
+</dl>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-/* Valores */
+<pre class="brush: css;">/* Valores */
 font-display: auto;
 font-display: block;
 font-display: swap;
 font-display: fallback;
-font-display: optional;
-```
+font-display: optional;</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `auto`
-  - : El agente de usuario define la estrategia de visualización de fuentes.
-- `block`
-  - : Establece un tiempo de bloqueo de la fuente corto y un periodo de intercambio infinito
-- `swap`
-  - : No establece tiempo de bloqueo para la fuente y un tiempo infinito de intercambio.
-- `fallback`
-  - : Establece un tiempo de bloqueo muy pequeño y un período de intercambio corto.
-- `optional`
-  - : Establece un tiempo de bloqueo muy corto y sin tiempo de intercambio.
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>El agente de usuario define la estrategia de visualización de fuentes.</dd>
+ <dt><code>block</code></dt>
+ <dd>Establece un tiempo de bloqueo de la fuente corto y un periodo de intercambio infinito</dd>
+ <dt><code>swap</code></dt>
+ <dd>No establece  tiempo de bloqueo para la fuente y un tiempo infinito de intercambio.</dd>
+ <dt><code>fallback</code></dt>
+ <dd>Establece un tiempo de bloqueo muy pequeño y un período de intercambio corto.</dd>
+ <dt><code>optional</code></dt>
+ <dd>Establece un tiempo de bloqueo muy corto y sin tiempo de intercambio.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```css
-@font-face {
+<pre class="brush: css; highlight[7]">@font-face {
   font-family: ExampleFont;
   src: url(/path/to/fonts/examplefont.woff) format('woff'),
        url(/path/to/fonts/examplefont.eot) format('eot');
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
-}
-```
+}</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}} | {{Spec2('CSS4 Fonts')}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}}</td>
+   <td>{{Spec2('CSS4 Fonts')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-{{Compat("css.at-rules.font-face.font-display")}}
+<p>{{Compat("css.at-rules.font-face.font-display")}}</p>

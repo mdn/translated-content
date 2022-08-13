@@ -14,74 +14,85 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/startsWith
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`startsWith()`** indica si una cadena de texto comienza con los caracteres de una cadena de texto concreta, devolviendo `true` o `false` según corresponda.
+<p>El método <strong><code>startsWith()</code></strong> indica si una cadena de texto comienza con los caracteres de una cadena de texto concreta, devolviendo <code>true</code> o <code>false</code> según corresponda.</p>
 
-{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
+<div>{{EmbedInteractiveExample("pages/js/string-startswith.html")}}</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    str.startsWith(stringBuscada[, posicion])
+<pre class="syntaxbox notranslate"><var>str</var>.startsWith(<var>stringBuscada</var>[, <var>posicion</var>])</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `stringBuscada`
-  - : Los caracteres a ser buscados al inicio de la cadena de texto.
-- `posicion` {{optional_inline}}
-  - : La posición de `str` en la cual debe comenzar la búsqueda de `stringBuscada`. El valor por defecto es `0`.
+<dl>
+ <dt><code><var>stringBuscada</var></code></dt>
+ <dd>Los caracteres a ser buscados al inicio de la cadena de texto.</dd>
+ <dt><code><var>posicion</var></code> {{optional_inline}}</dt>
+ <dd>La posición de <code><em>str</em></code> en la cual debe comenzar la búsqueda de <code>stringBuscada</code>. El valor por defecto es <code>0</code>.</dd>
+</dl>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-**`true`** si los caracteres dados se encuentran al inicio de la cadena de texto; **`false`** en cualquier otro caso.
+<p><strong><code>true</code></strong> si los caracteres dados se encuentran al inicio de la cadena de texto; <strong><code>false</code></strong> en cualquier otro caso.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Este método te permite saber si una cadena de texto comienza o no con otra cadena de texto. Este método distingue entre mayúsculas y minúsculas.
+<p>Este método te permite saber si una cadena de texto comienza o no con otra cadena de texto. Este método distingue entre mayúsculas y minúsculas.</p>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-Este método se ha añadido a la especificación ECMAScript 2015 y podría no estar disponible aún en todas las implementaciones de JavaScript. Sin embargo, puedes utilizar un _polyfill_ de `String.prototype.startsWith()` con el siguiente fragmento de código:
+<p>Este método se ha añadido a la especificación ECMAScript 2015 y podría no estar disponible aún en todas las implementaciones de JavaScript. Sin embargo, puedes utilizar un <em>polyfill</em> de <code>String.prototype.startsWith()</code> con el siguiente fragmento de código:</p>
 
-```js
-if (!String.prototype.startsWith) {
+<pre class="brush: js notranslate">if (!String.prototype.startsWith) {
     Object.defineProperty(String.prototype, 'startsWith', {
         value: function(search, rawPos) {
-            var pos = rawPos > 0 ? rawPos|0 : 0;
+            var pos = rawPos &gt; 0 ? rawPos|0 : 0;
             return this.substring(pos, pos + search.length) === search;
         }
     });
 }
-```
+</pre>
 
-Un _polyfill_ más robusto (totalmente compatible con la especificación ES2015), pero con menos rendimiento y menos compacto está disponible [en GitHub, por Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith).
+<p>Un <em>polyfill</em> más robusto (totalmente compatible con la especificación ES2015), pero con menos rendimiento y menos compacto está disponible <a href="https://github.com/mathiasbynens/String.prototype.startsWith">en GitHub, por Mathias Bynens</a>.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `startsWith()`
+<h3 id="Usando_startsWith">Usando <code>startsWith()</code></h3>
 
-```js
-//startswith
+<pre class="brush: js notranslate">//startswith
 var str = 'Ser, o no ser. ¡Esa es la cuestión!';
 
 console.log(str.startsWith('Ser'));           // true
 console.log(str.startsWith('no ser'));        // false
 console.log(str.startsWith('Esa es la', 16)); // true
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("javascript.builtins.String.startsWith")}}
+<p>{{Compat("javascript.builtins.String.startsWith")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("String.prototype.endsWith()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+<ul>
+ <li>{{jsxref("String.prototype.endsWith()")}}</li>
+ <li>{{jsxref("String.prototype.includes()")}}</li>
+ <li>{{jsxref("String.prototype.indexOf()")}}</li>
+ <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
+</ul>

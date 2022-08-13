@@ -11,32 +11,49 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLFormElement/reset
 ---
-{{APIRef("HTML DOM")}}
+<div>{{APIRef("HTML DOM")}}</div>
 
-El método **`HTMLFormElement.reset()`** restaura los elementos de un formulario a sus valores por defecto. Este método hace lo mismo que haciendo clic en el botón de restauración.
+<p>El método <strong><code>HTMLFormElement.reset()</code></strong> restaura los elementos de un formulario a sus valores por defecto. Este método hace lo mismo que haciendo clic en el botón de restauración.</p>
 
-Si un control del formulario (como el botón de restaurar) tiene el nombre o un id de _reset_ enmascarará el método de restauración del formulario. No restaura otros atributos del campo, como el de `disabled`.
+<p>Si un control del formulario (como el botón de restaurar) tiene el nombre o un id de <em>reset</em> enmascarará el método de restauración del formulario. No restaura otros atributos del campo, como el de <code>disabled</code>.</p>
 
-## Síntaxis
+<h2 id="Syntax" name="Syntax">Síntaxis</h2>
 
-    HTMLFormElement.reset()
+<pre class="syntaxbox notranslate"><em>HTMLFormElement</em>.reset()
+</pre>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-document.getElementById('myform').reset();
-```
+<pre class="brush: js notranslate">document.getElementById('myform').reset();
+</pre>
 
-## Especificaciones
+<h2 id="Specification" name="Specification">Especificaciones</h2>
 
-| Especificación                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#dom-form-reset', 'HTMLFormElement: reset')}} | {{Spec2('HTML WHATWG')}} |            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-form-reset', 'HTMLFormElement: reset')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("api.HTMLFormElement.reset")}}
 
-## Vea también
 
-- {{domxref("HTMLFormElement.submit()")}}
+<p>{{Compat("api.HTMLFormElement.reset")}}</p>
+
+<h2 id="Vea_también">Vea también</h2>
+
+<ul>
+ <li>{{domxref("HTMLFormElement.submit()")}}</li>
+</ul>

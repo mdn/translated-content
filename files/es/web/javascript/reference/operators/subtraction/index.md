@@ -6,49 +6,61 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Subtraction
 original_slug: Web/JavaScript/Referencia/Operadores/Sustracción
 ---
-{{jsSidebar("Operators")}}
+<div>{{jsSidebar("Operators")}}</div>
 
-El operador de sustracción (`-`) sustrae dos operandos, produciendo su diferencia.
+<p>El operador de sustracción (<code>-</code>) sustrae dos operandos, produciendo su diferencia.</p>
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
+<div>{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}</div>
 
-## Sintaxis
 
-    Operator: x - y
 
-## Ejemplos
 
-### Sustracción con números
 
-```js
-5 - 3     // 2
-3 - 5     // -2
-```
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Sustracción de no numéricos
+<pre class="syntaxbox notranslate"><strong>Operator:</strong> <var>x</var> - <var>y</var>
+</pre>
 
-```js
-'foo' - 3 // NaN
-```
+<h2 id="Ejemplos">Ejemplos</h2>
 
-## Especificaciones
+<h3 id="Sustracción_con_números">Sustracción con números</h3>
 
-| Specification                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-subtraction-operator-minus', 'Subtraction operator')}} |
+<pre class="brush: js notranslate">5 - 3     // 2
+3 - 5     // -2</pre>
 
-## Compatibilidad entre exploradores
+<h3 id="Sustracción_de_no_numéricos">Sustracción de no numéricos</h3>
 
-{{Compat("javascript.operators.subtraction")}}
+<pre class="brush: js notranslate">'foo' - 3 // NaN</pre>
 
-## También revisa
+<h2 id="Especificaciones">Especificaciones</h2>
 
-- [Addition operator](/es/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Division operator](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/es/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/es/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-subtraction-operator-minus', 'Subtraction operator')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_entre_exploradores">Compatibilidad entre exploradores</h2>
+
+
+
+<p>{{Compat("javascript.operators.subtraction")}}</p>
+
+<h2 id="También_revisa">También revisa</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder operator</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
+</ul>

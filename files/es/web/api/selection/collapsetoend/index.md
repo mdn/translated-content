@@ -5,18 +5,23 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/collapseToEnd
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Traslada el ancla hasta el mismo punto del foco. El foco no se mueve. Si el contenido es enfocado y editable, el cursor parpadeará ahí.
+<p>Traslada el ancla hasta el mismo punto del foco. El foco no se mueve. Si el contenido es enfocado y editable, el cursor parpadeará ahí.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    sel.collapseToEnd()
+<pre class="eval"><i>sel</i>.collapseToEnd()
+</pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-{{ languages( { "en": "en/DOM/Selection/collapseToEnd", "it": "it/DOM/Selection/collapseToEnd", "pl": "pl/DOM/Selection/collapseToEnd" } ) }}
+<p> </p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/DOM/Selection/collapseToEnd", "it": "it/DOM/Selection/collapseToEnd", "pl": "pl/DOM/Selection/collapseToEnd" } ) }}</p>

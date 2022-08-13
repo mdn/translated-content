@@ -9,18 +9,17 @@ tags:
 translation_of: Web/HTML/Global_attributes/is
 original_slug: Web/HTML/Atributos_Globales/is
 ---
-{{HTMLSidebar("Global_attributes")}}
+<div>{{HTMLSidebar("Global_attributes")}}</div>
 
-La construcción is [global attribute](/es/docs/Web/HTML/Atributos_Globales) permite especificar que un elemento HTML estándar se debería comportar como un elemento personalizado provisto originalmente por el lenguaje (para más detalles, vea [Utilizando elementos personalizados](/es/docs/Web/Web_Components/Using_custom_elements)).
+<p><span class="seoSummary">La construcción is <a href="/es/docs/Web/HTML/Atributos_Globales">global attribute</a> permite especificar que un elemento HTML estándar se debería comportar como un elemento personalizado provisto originalmente por el lenguaje (para más detalles, vea <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Utilizando elementos personalizados</a>).</span></p>
 
-Este atributo puede ser utilizado sólo si nombre del elemento personalizado especificado ha sido [definido](/es/docs/Web/API/CustomElementRegistry/define) extósamente en el documento actual, y extiende el tipo de elemento al que está siendo aplicado.
+<p>Este atributo puede ser utilizado sólo si nombre del elemento personalizado especificado ha sido <a href="/en-US/docs/Web/API/CustomElementRegistry/define">definido</a> extósamente en el documento actual, y extiende el tipo de elemento al que está siendo aplicado.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-El siguiente código fue tomado de nuestro ejemplo [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) ([véalo también en vivo](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+<p>El siguiente código fue tomado de nuestro ejemplo <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">véalo también en vivo</a>).</p>
 
-```js
-// Crea una clase para el elemento
+<pre class="brush: js">// Crea una clase para el elemento
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Siempre llamar a super al comienzo del constructor
@@ -33,23 +32,37 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define el nuevo elemento
-customElements.define('word-count', WordCount, { extends: 'p' });
-```
+customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
-```html
-<p is="word-count"></p>
-```
+<pre class="brush: html">&lt;<span class="pl-ent">p</span> <span class="pl-e">is</span>=<span class="pl-s"><span class="pl-pds">"</span>word-count<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">p</span>&gt;</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                           | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "custom-elements.html#attr-is", "is")}} | {{Spec2('HTML WHATWG')}} |            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "custom-elements.html#attr-is", "is")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-{{Compat("html.global_attributes.is")}}
 
-## Vea también
 
-- Todos los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+<p>{{Compat("html.global_attributes.is")}}</p>
+
+<h2 id="Vea_también">Vea también</h2>
+
+<ul>
+ <li>Todos los <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a>.</li>
+</ul>
+
+<p> </p>

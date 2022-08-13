@@ -7,28 +7,31 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/math/max
 ---
-{{XsltRef}}
-`math:max()` devuelve el valor máximo de un conjunto de nodos (node-set).
+<p>{{XsltRef}}<br>
+ <code>math:max()</code> devuelve el valor máximo de un conjunto de nodos (node-set).</p>
 
-To compute the maximum value of the node-set, the node set is sorted into descending order as it would be using [`xsl:sort()`](es/XSLT/sort) with a data type of `number`. The maximum value is then the first node in the sorted list, converted into a number.
+<p>To compute the maximum value of the node-set, the node set is sorted into descending order as it would be using <code><a href="es/XSLT/sort">xsl:sort()</a></code> with a data type of <code>number</code>. The maximum value is then the first node in the sorted list, converted into a number.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    math:max(conjuntoNodos)
+<pre class="eval">math:max(<em>conjuntoNodos</em>)
+</pre>
 
-### Argumentos
+<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
 
-- `conjuntoNodos`
-  - : El conjunto de nodos cuyo valor más alto va a ser devuelto.
+<dl>
+ <dt><code><em>conjuntoNodos</em></code></dt>
+ <dd>El conjunto de nodos cuyo valor más alto va a ser devuelto.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-Un fragmento de árbol resultante que representa como una cadena el valor numérico del nodo valorado como más alto.
+<p>Un fragmento de árbol resultante que representa como una cadena el valor numérico del nodo valorado como más alto.</p>
 
-## Definido en
+<h2 id="Definido_en" name="Definido_en">Definido en</h2>
 
-[EXSLT - MATH:MAX](http://www.exslt.org/math/functions/max/index.html)
+<p><a class="external" href="http://www.exslt.org/math/functions/max/index.html">EXSLT - MATH:MAX</a></p>
 
-## Implementación en Gecko
+<h2 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h2>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

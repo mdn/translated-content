@@ -9,56 +9,81 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reverse
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`reverse()`** invierte el orden de los elementos de un array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_. El primer elemento pasa a ser el último y el último pasa a ser el primero.
+<p>El método <code><strong>reverse()</strong></code> invierte el orden de los elementos de un array <em><a href="https://en.wikipedia.org/wiki/In-place_algorithm">in place</a></em>. El primer elemento pasa a ser el último y el último pasa a ser el primero.</p>
 
-{{EmbedInteractiveExample("pages/js/array-reverse.html")}}
+<p>{{EmbedInteractiveExample("pages/js/array-reverse.html")}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    reverse()
+<pre class="syntaxbox">reverse()</pre>
 
-### Valor devuelto
+<h3 id="Valor devuelto" name="Valor devuelto">Valor devuelto</h3>
 
-El array invertido.
+<p>El array invertido.</p>
 
-## Descripción
+<h2 id="Descripción" name="Descripción">Descripción</h2>
 
-El método `reverse` cruza los elementos del objeto matriz invocados en su lugar, mutando la matriz, y retornando una referencia a la misma.
+<p>El método <code>reverse</code> cruza los elementos del objeto matriz invocados en su lugar, mutando la matriz, y retornando una referencia a la misma.</p>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-### Colocar al revés los elementos de un array
+<h3 id="Ejemplo:Colocar al revés los elementos de un array" name="Ejemplo:Colocar al revés los elementos de un array">Colocar al revés los elementos de un array</h3>
 
-El siguiente ejemplo crea un array `a` que contiene tres elementos y luego lo invierte.
-La llamada a `reverse()` devuelve una referencia al array `a` invertido.
+<p>El siguiente ejemplo crea un array <code>a</code> que contiene tres elementos y luego lo invierte.<br>
+ La llamada a <code>reverse()</code> devuelve una referencia al array <code>a</code> invertido.</p>
 
-```js
-const a = [1, 2, 3];
+<pre class="brush: js">const a = [1, 2, 3];
 
 console.log(a); // [1, 2, 3]
 
 a.reverse();
 
 console.log(a); // [3, 2, 1]
-```
 
-## Especificaciones
+</pre>
 
-| Especificación                                                                                               | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.8', 'Array.prototype.reverse')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}} | {{Spec2('ESDraft')}} |                                                     |
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-## Compatibilidad en navegadores
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial. Implementado en JavaScript 1.1.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.4.4.8', 'Array.prototype.reverse')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("javascript.builtins.Array.reverse")}}
+<h2 id="Compatibilidad en navegadores" name="Compatibilidad en navegadores">Compatibilidad en navegadores</h2>
 
-## Ver también
+<p>{{Compat("javascript.builtins.Array.reverse")}}</p>
 
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Array.prototype.sort()")}}
-- {{jsxref("TypedArray.prototype.reverse()")}}
+<h2 id="Ver también" name="Ver también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Array.prototype.join()")}}</li>
+ <li>{{jsxref("Array.prototype.sort()")}}</li>
+ <li>{{jsxref("TypedArray.prototype.reverse()")}}</li>
+</ul>

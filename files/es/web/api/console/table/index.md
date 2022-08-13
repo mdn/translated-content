@@ -9,32 +9,29 @@ tags:
 translation_of: Web/API/Console/table
 original_slug: Web/API/Console/tabla
 ---
-{{APIRef("Console API")}}
+<div>{{APIRef("Console API")}}</div>
 
-Muestra datos tabulares como una tabla.
+<p><span class="seoSummary">Muestra datos tabulares como una tabla.</span></p>
 
-Esta función toma un argumento obligatorio: `data`, que debe ser un array o un objeto, y un parámetro adicional: `columns`.
+<p>Esta función toma un argumento obligatorio: <code>data</code>, que debe ser un array o un objeto, y un parámetro adicional: <code>columns</code>.</p>
 
-Muestra `data` como una tabla en la consola. Cada elemento en el array (o propiedad enumerable si `data` es un objeto) será una fila en la tabla.
+<p>Muestra <code>data</code> como una tabla en la consola. Cada elemento en el array (o propiedad enumerable si <code>data</code> es un objeto) será una fila en la tabla.</p>
 
-La primera columna de la tabla se identificará como `(index)`. Si `data` es un array, sus valores serán los índices del array. Si `data` es un objeto, entonces sus valores serán los nombres de las propiedades. Tenga en cuenta que (en Firefox) `console.table` está limitado a mostrar 1000 filas (la primera columna es la llamada `index`).
+<p>La primera columna de la tabla se identificará como <code>(index)</code>. Si <code>data</code> es un array, sus valores serán los índices del array. Si <code>data</code> es un objeto, entonces sus valores serán los nombres de las propiedades. Tenga en cuenta que (en Firefox) <code>console.table</code> está limitado a mostrar 1000 filas (la primera columna es la llamada <code>index</code>).</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-### Colecciones de tipos primitivos
+<h3 id="Colecciones_de_tipos_primitivos">Colecciones de tipos primitivos</h3>
 
-El argumento `data` puede ser un array o un objeto.
+<p>El argumento <code>data</code> puede ser un array o un objeto.</p>
 
-```js
-// un array de strings
+<pre class="brush: js">// un array de strings
 
-console.table(["apples", "oranges", "bananas"]);
-```
+console.table(["apples", "oranges", "bananas"]);</pre>
 
-![](https://mdn.mozillademos.org/files/8567/console-table-array.png)
+<p><img alt="" src="https://mdn.mozillademos.org/files/8567/console-table-array.png"></p>
 
-```js
-// un objeto cuyas propiedades son strings
+<pre class="brush: js">// un objeto cuyas propiedades son strings
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -43,26 +40,22 @@ function Person(firstName, lastName) {
 
 var me = new Person("John", "Smith");
 
-console.table(me);
-```
+console.table(me);</pre>
 
-![](https://mdn.mozillademos.org/files/8559/console-table-simple-object.png)
+<p><img alt="" src="https://mdn.mozillademos.org/files/8559/console-table-simple-object.png"></p>
 
-### Colecciones de tipos compuestos
+<h3 id="Colecciones_de_tipos_compuestos">Colecciones de tipos compuestos</h3>
 
-Si los elementos en el array, o propiedades en el objeto, son también arrays u objetos, sus elementos o propiedades serán enumeradas en la fila, una por columna:
+<p>Si los elementos en el array, o propiedades en el objeto, son también arrays u objetos, sus elementos o propiedades serán enumeradas en la fila, una por columna:</p>
 
-```js
-// un array de arrays
+<pre class="brush: js">// un array de arrays
 
 var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
-console.table(people);
-```
+console.table(people);</pre>
 
-![Table displaying array of arrays](https://mdn.mozillademos.org/files/8561/console-table-array-of-array.png)
+<p><img alt="Table displaying array of arrays" src="https://mdn.mozillademos.org/files/8561/console-table-array-of-array.png"></p>
 
-```js
-// un array de objetos
+<pre class="brush: js">// un array de objetos
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -73,15 +66,13 @@ var john = new Person("John", "Smith");
 var jane = new Person("Jane", "Doe");
 var emily = new Person("Emily", "Jones");
 
-console.table([john, jane, emily]);
-```
+console.table([john, jane, emily]);</pre>
 
-Tenga en cuenta que si el array contiene objetos, las columnas se etiquetarán con el nombre de la propiedad.
+<p>Tenga en cuenta que si el array contiene objetos, las columnas se etiquetarán con el nombre de la propiedad.</p>
 
-![Table displaying array of objects](https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png)
+<p><img alt="Table displaying array of objects" src="https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png"></p>
 
-```js
-// un objeto cuyas propiedades son objetos
+<pre class="brush: js">// un objeto cuyas propiedades son objetos
 
 var family = {};
 
@@ -89,17 +80,15 @@ family.mother = new Person("Jane", "Smith");
 family.father = new Person("John", "Smith");
 family.daughter = new Person("Emily", "Smith");
 
-console.table(family);
-```
+console.table(family);</pre>
 
-![Table displaying object of objects](https://mdn.mozillademos.org/files/8565/console-table-object-of-objects.png)
+<p><img alt="Table displaying object of objects" src="https://mdn.mozillademos.org/files/8565/console-table-object-of-objects.png"></p>
 
-### Restringiendo las columnas mostradas
+<h3 id="Restringiendo_las_columnas_mostradas">Restringiendo las columnas mostradas</h3>
 
-Por defecto, `console.table()` muestra todos los elementos de cada fila. Puedes emplear el parámetro opcional `columns` para seleccionar un subconjunto de columnas que mostrar:
+<p>Por defecto, <code>console.table()</code> muestra todos los elementos de cada fila. Puedes emplear el parámetro opcional <code>columns</code>  para seleccionar un subconjunto de columnas que mostrar:</p>
 
-```js
-// an array of objects, logging only firstName
+<pre class="brush: js">// an array of objects, logging only firstName
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -110,32 +99,47 @@ var john = new Person("John", "Smith");
 var jane = new Person("Jane", "Doe");
 var emily = new Person("Emily", "Jones");
 
-console.table([john, jane, emily], ["firstName"]);
-```
+console.table([john, jane, emily], ["firstName"]);</pre>
 
-![Table displaying array of objects with filtered output](https://mdn.mozillademos.org/files/8569/console-table-array-of-objects-firstName-only.png)
+<p><img alt="Table displaying array of objects with filtered output" src="https://mdn.mozillademos.org/files/8569/console-table-array-of-objects-firstName-only.png"></p>
 
-### Ordenando columnas
+<h3 id="Ordenando_columnas">Ordenando columnas</h3>
 
-Se puede ordenar la tabla por una columna en particular pulsando en la etiqueta de dicha columna.
+<p>Se puede ordenar la tabla por una columna en particular pulsando en la etiqueta de dicha columna.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    console.table(data [, columns]);
+<pre class="syntaxbox">console.table(data [, <em>columns</em>]);
+</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `data`
-  - : La información a mostrar. Puede ser tanto un array como un objeto.
-- `columns`
-  - : Un array que contenga los nombres de las columnas a incluir.
+<dl>
+ <dt><code>data</code></dt>
+ <dd>La información a mostrar. Puede ser tanto un array como un objeto.</dd>
+ <dt><code>columns</code></dt>
+ <dd>Un array que contenga los nombres de las columnas a incluir.</dd>
+</dl>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                               | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#table", "console.table()")}} | {{Spec2("Console API")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Console API", "#table", "console.table()")}}</td>
+   <td>{{Spec2("Console API")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.console.table")}}

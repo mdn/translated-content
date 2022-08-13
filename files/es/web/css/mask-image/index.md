@@ -10,39 +10,39 @@ translation_of: Web/CSS/mask-image
 translation_of_original: Web/CSS/-webkit-mask-image
 original_slug: Web/CSS/-webkit-mask-image
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-`La propiedad CSS -webkit-mask-image` establece la imagen de máscara para un elemento. Una imagen de máscara fija que partes del elemento serán visibles de acuerdo a la transparencia de la imagen de máscara.
+<p><code><font face="Open Sans, Arial, sans-serif">La propiedad CSS </font>-webkit-mask-image</code> establece la imagen de máscara para un elemento. Una imagen de máscara fija que partes del elemento serán visibles de acuerdo a la transparencia de la imagen de máscara.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
--webkit-mask-image: url(images/mymask.png);
+<pre class="brush:css">-webkit-mask-image: url(images/mymask.png);
 -webkit-mask-image: url(images/foo.png), url(images/bar.png);
 -webkit-mask-image: none;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- \<uri>
-  - : La localización del recurso imagen que será utilizado como imagen de máscara.
-- \<gradient>
-  - : La función `webkit-gradient` que será usada como imagen de máscara.
-- none
-  - : Usado para especificar si un elemento no tiene imagen de máscara.
+<dl>
+ <dt>&lt;uri&gt;</dt>
+ <dd>La localización del recurso imagen que será utilizado como imagen de máscara.</dd>
+ <dt>&lt;gradient&gt;</dt>
+ <dd>La función <code>webkit-gradient</code> que será usada como imagen de máscara.</dd>
+ <dt>none</dt>
+ <dd>Usado para especificar si un elemento no tiene imagen de máscara.</dd>
+</dl>
 
-### Sintaxis Formal
+<h3 id="Sintaxis_Formal">Sintaxis Formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```css
-body {
+<pre class="brush: css">body {
   -webkit-mask-image: url('images/mymask.png');
 }
 
@@ -53,14 +53,14 @@ div {
 p {
   -webkit-mask-image: none;
 }
-```
+</pre>
 
-Si se especifican varias imágenes, la región visible que sale como resultado es la combinación de las regiones visibles de cada máscara individual.
+<p>Si se especifican varias imágenes, la región visible que sale como resultado es la combinación de las regiones visibles de cada máscara individual.</p>
 
-## Compatibilidad con los distintos navegadores.
+<h2 id="Compatibilidad_con_los_distintos_navegadores.">Compatibilidad con los distintos navegadores.</h2>
 
 {{Compat("css.properties.mask-image")}}
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-{{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}},{{cssxref("-webkit-mask-image")}},{{cssxref("-webkit-mask-composite")}},{{cssxref("-webkit-mask-repeat")}}
+<p>{{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}},{{cssxref("-webkit-mask-image")}},{{cssxref("-webkit-mask-composite")}},{{cssxref("-webkit-mask-repeat")}}</p>

@@ -11,44 +11,58 @@ tags:
 translation_of: Web/API/Animation/oncancel
 original_slug: Web/API/Animation/oncancel
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
-La propiedad **`oncancel`** de la interfaz {{domxref("Animation")}} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) es el manejador de eventos para el evento {{event("cancel")}} .
+<p>La propiedad <code><strong>oncancel</strong></code> de la interfaz {{domxref("Animation")}} de la  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> es el manejador de eventos para el evento {{event("cancel")}} .</p>
 
-El evento `cancel` puede ser activado manualmente con {{domxref("Animation.cancel()")}} cuando la animación entra en estado de reproducción `"idle"(inactivo)` desde otro estado, como cuando una animación se elimina de un elemento antes de que termine de reproducirse.
+<p>El evento <code>cancel</code> puede ser activado manualmente con {{domxref("Animation.cancel()")}} cuando la animación entra en estado de reproducción <code>"idle"(inactivo)</code> desde otro estado, como cuando una animación se elimina de un elemento antes de que termine de reproducirse.</p>
 
-> **Nota:** La creación de una nueva animación, inicialmente inactiva, no activa el evento {{event("cancel")}} en la nueva animación.
+<div class="note">
+<p>La creación de una nueva animación, inicialmente inactiva, no activa el evento {{event("cancel")}} en la nueva animación.</p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var cancelHandler = Animation.oncancel;
+<pre class="syntaxbox">var <em>cancelHandler</em> = <em>Animation</em>.oncancel;
 
-    Animation.oncancel = cancelHandler;
+<em>Animation</em>.oncancel = <em>cancelHandler</em>;</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Una función que será ejecutada cuando la animación sea cancelada, o `null` si no hay un manejador de eventos {{event("cancel")}}.
+<p>Una función que será ejecutada cuando la animación sea cancelada, o <code>null</code> si no hay un manejador de eventos {{event("cancel")}}.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Si esta animación es cancelada, elimina su elemento.
+<p>Si esta animación es cancelada, elimina su elemento.</p>
 
-```js
-animation.oncancel = animation.effect.target.remove();
-```
+<pre class="brush: js">animation.oncancel = animation.effect.target.remove();
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                | Status                               | Comment         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------- |
-| {{SpecName('Web Animations', '#dom-animation-oncancel', 'Animation.oncancel' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Animations', '#dom-animation-oncancel', 'Animation.oncancel' )}}</td>
+   <td>{{Spec2('Web Animations')}}</td>
+   <td>Editor's draft.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{Compat("api.Animation.cancel_event")}}
 
-## Ver también
+<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- The {{event("cancel")}} event
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li>{{domxref("Animation")}}</li>
+ <li>The {{event("cancel")}} event</li>
+</ul>

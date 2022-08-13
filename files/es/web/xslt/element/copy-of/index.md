@@ -7,31 +7,33 @@ tags:
 translation_of: Web/XSLT/Element/copy-of
 original_slug: Web/XSLT/copy-of
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-El elemento `<xsl:copy-of>` crea una copia completa (incluyendo nodos descendientes) en el documento de salida de lo que sea que indique el atributo.
+<p>El elemento <code>&lt;xsl:copy-of&gt;</code> crea una copia completa (incluyendo nodos descendientes) en el documento de salida de lo que sea que indique el atributo.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    <xsl:copy-of select=EXPRESIÓN />
+<pre>&lt;xsl:copy-of select=EXPRESIÓN /&gt;</pre>
 
-### Atributos requeridos
+<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
 
-- `select`
-  - : Indica la expresión XPath a utilizar para seleccionar lo que será copiado.
+<dl>
+ <dt><code>select</code></dt>
+ <dd>Indica la expresión XPath a utilizar para seleccionar lo que será copiado.</dd>
+</dl>
 
-### Atributos opcionales
+<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Tipo
+<h3 id="Tipo" name="Tipo">Tipo</h3>
 
-Instrucción, aparece dentro de una plantilla.
+<p>Instrucción, aparece dentro de una plantilla.</p>
 
-### Definido
+<h3 id="Definido" name="Definido">Definido</h3>
 
-XSLT, sección 11.3.
+<p>XSLT, sección 11.3.</p>
 
-### Soporte en Gecko
+<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
 
-Soportado.
+<p>Soportado.</p>

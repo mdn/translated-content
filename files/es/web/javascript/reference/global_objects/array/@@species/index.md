@@ -9,51 +9,69 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@species
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La propiedad de acceso **`Array[@@species]`** devuelve el constructor de `Array`.
+<p>La propiedad de acceso <code><strong>Array[@@species]</strong></code> devuelve el constructor de <code>Array</code>.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Array[Symbol.species]
+<pre class="syntaxbox">Array[Symbol.species]
+</pre>
 
-### Valor de retorno
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-El constructor {{jsxref("Array")}}.
+<p>El constructor {{jsxref("Array")}}.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-La propiedad de acceso `species` devuelve el constructor predeterminado para objetos `Array`. Los constructores de subclase pueden anularlo para cambiar la asignación del constructor.
+<p>La propiedad de acceso <code>species</code> devuelve el constructor predeterminado para objetos <code>Array</code>. Los constructores de subclase pueden anularlo para cambiar la asignación del constructor.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-La propiedad `species` devuelve la función de constructor predeterminada, que es el constructor `Array` para objetos `Array`:
+<p>La propiedad <code>species</code> devuelve la función de constructor predeterminada, que es el constructor <code>Array</code> para objetos <code>Array</code>:</p>
 
-```js
-Array[Symbol.species]; // function Array()
-```
+<pre class="brush: js">Array[Symbol.species]; // function Array()</pre>
 
-In a derived collection object (e.g. your custom array `MyArray`), the `MyArray` species is the `MyArray` constructor. However, you might want to overwrite this, in order to return parent `Array` objects in your derived class methods:
+<p>In a derived collection object (e.g. your custom array <code>MyArray</code>), the <code>MyArray</code> species is the <code>MyArray</code> constructor. However, you might want to overwrite this, in order to return parent <code>Array</code> objects in your derived class methods:</p>
 
-```js
-class MyArray extends Array {
+<pre class="brush: js">class MyArray extends Array {
   // Overwrite MyArray species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
-}
-```
+}</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                           | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-get-array-@@species', 'get Array [ @@species ]')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-get-array-@@species', 'get Array [ @@species ]')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-get-array-@@species', 'get Array [ @@species ]')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-get-array-@@species', 'get Array [ @@species ]')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("javascript.builtins.Array.@@species")}}
+<div>
 
-## Ver también
 
-- {{jsxref("Array")}}
-- {{jsxref("Symbol.species")}}
+<p>{{Compat("javascript.builtins.Array.@@species")}}</p>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Array")}}</li>
+ <li>{{jsxref("Symbol.species")}}</li>
+</ul>

@@ -8,30 +8,57 @@ tags:
 translation_of: Web/HTML/Global_attributes/id
 original_slug: Web/HTML/Atributos_Globales/id
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+<p class="note">{{HTMLSidebar("Global_attributes")}}</p>
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **id** define un identificador único (ID) el cual no debe repetirse en todo el documento. Su propósito es identificar el elemento al vincularlo (usando un identificador de fragmento), en scripts u hojas de estilo (con CSS).
+<p>El <a href="/en-US/docs/Web/HTML/Global_attributes">atributo global</a> <strong>id</strong> define un identificador único (ID) el cual no debe repetirse en todo el documento. Su propósito es identificar el elemento al vincularlo (usando un identificador de fragmento), en scripts u hojas de estilo (con CSS).</p>
 
-El valor de este atributo es una cadena de caracteres opaca: es decir, el autor del sitio no debe usarlo para proporcionar información. De forma particular, en sentido semántico por ejemplo, no debe ser derivado de la misma cadena.
+<p>El valor de este atributo es una cadena de caracteres opaca: es decir,  el autor del sitio no debe usarlo para proporcionar información. De forma particular, en sentido semántico por ejemplo, no debe ser derivado de la misma cadena.</p>
 
-El valor de este atributo no debe contener espacios en blanco. Los navegadores tratan los IDs que contienen espacios en blanco como si los espacios fueran parte del ID. En contraste con el atributo **class**, el cual permite valores separados por espacios, los elementos pueden tener sólo un ID definido mediante el atributo ID. Tenga en cuenta que un elemento puede tener muchos ID, pero los demás deben ser definidos de otra forma, como por medio de un script interactuando con el DOM.
+<p>El valor de este atributo no debe contener espacios en blanco. Los navegadores tratan los IDs que contienen espacios en blanco como si los espacios fueran parte del ID. En contraste con el atributo <strong>class</strong>, el cual permite valores separados por espacios, los elementos pueden tener sólo un ID definido mediante el atributo ID. Tenga en cuenta que un elemento puede tener muchos ID, pero los demás deben ser definidos de otra forma, como por medio de un script interactuando con el DOM.</p>
 
-> **Nota:** El uso de caracteres a excepción de letras en ASCII, dígitos, '\_', `'-'` y `'.'` pueden ocasionar problemas de compatibilidad, por no ser permitidos en HTML 4. A pesar de que esta limitación ha sido removida en HTML 5, un ID debe iniciar con una letra para asegurar la compatibilidad.
+<div class="note">
+<p><strong>Nota:</strong> El uso de caracteres a excepción de letras en ASCII, dígitos, '_', <code>'-'</code> y <code>'.'</code> pueden ocasionar problemas de compatibilidad, por no ser permitidos en HTML 4. A pesar de que esta limitación ha sido removida en HTML 5, un ID debe iniciar con una letra para asegurar la compatibilidad.</p>
+</div>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                           | Comentario                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-id-attribute", "id")}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde el último snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                          |
-| {{SpecName('HTML5.1', "dom.html#the-id-attribute", "id")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, sin cambios de {{SpecName('HTML5 W3C')}}                                                                                                                                                                                               |
-| {{SpecName('HTML5 W3C', "dom.html#the-id-attribute", "id")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, ahora acepta `'_'`, `'-'` and `'.'` si no se encuentra al principio del id. También es un atributo global verdadero.                                                                                                                          |
-| {{SpecName('HTML4.01', 'struct/global.html#adef-id', 'id')}}     | {{Spec2('HTML4.01')}}     | Soportado en todos los elementos a excepción de {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, y {{HTMLElement("title")}}. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "dom.html#the-id-attribute", "id")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Sin cambios desde el último snapshot, {{SpecName('HTML5.1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "dom.html#the-id-attribute", "id")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Snapshot de {{SpecName('HTML WHATWG')}}, sin cambios de {{SpecName('HTML5 W3C')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "dom.html#the-id-attribute", "id")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Snapshot de {{SpecName('HTML WHATWG')}}, ahora acepta <code>'_'</code>, <code>'-'</code> and <code>'.'</code> si no se encuentra al principio del id. También es un atributo global verdadero.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'struct/global.html#adef-id', 'id')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td>Soportado en todos los elementos a excepción de {{HTMLElement("base")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, y {{HTMLElement("title")}}.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("html.global_attributes.id")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- Todos los [atributos globales](/es/docs/Web/HTML/Global_attributes).
-- {{domxref("Element.id")}} que se asemeja a este atributo.
+<ul>
+ <li>Todos los <a href="/en-US/docs/Web/HTML/Global_attributes">atributos globales</a>.</li>
+ <li>{{domxref("Element.id")}} que se asemeja a este atributo.</li>
+</ul>

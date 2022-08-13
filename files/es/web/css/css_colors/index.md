@@ -12,47 +12,74 @@ translation_of: Web/CSS/CSS_Color
 translation_of_original: Web/CSS/CSS_Colors
 original_slug: Web/CSS/CSS_Color
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-**Los colores CSS** son un módulo de CSS que trabaja con colores, tipos de colores y transparencias.
+<p><strong>Los colores CSS</strong> son un módulo de CSS que trabaja con colores, tipos de colores y transparencias.</p>
 
-## Referencia
+<h2 id="Referencia">Referencia</h2>
 
-### Propiedades
+<h3 id="Propiedades">Propiedades</h3>
 
-- {{cssxref("color")}}
-- {{cssxref("opacity")}}
+<div class="index">
+<ul>
+ <li>{{cssxref("color")}}</li>
+ <li>{{cssxref("opacity")}}</li>
+</ul>
+</div>
 
-### Tipos de datos CSS
+<h3 id="Tipos_de_datos_CSS">Tipos de datos CSS</h3>
 
-{{cssxref("&lt;color&gt;")}}
+<p>{{cssxref("&lt;color&gt;")}}</p>
 
-## Guías
+<h2 id="Guías">Guías</h2>
 
-_Ninguna._
+<p><em>Ninguna.</em></p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                   | Estado                           | Comentario         |
-| ------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                    |
-| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Initial definition |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Colors')}}</td>
+   <td>{{Spec2('CSS3 Colors')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'colors.html')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-### `color` property
+<h3><code>color</code> property</h3>
 
 {{Compat("css.properties.color")}}
 
-### `print-color-adjust` property
+<h3><code>print-color-adjust</code> property</h3>
 
 {{Compat("css.properties.print-color-adjust")}}
 
-### `opacity` property
+<h3><code>opacity</code> property</h3>
 
 {{Compat("css.properties.opacity")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- En CSS, las gradientes no son colores sino [imágenes](/es/docs/Web/CSS/CSS_Images).
+<ul>
+ <li>En CSS, las gradientes no son colores sino <a href="/en-US/docs/Web/CSS/CSS_Images">imágenes</a>.</li>
+</ul>

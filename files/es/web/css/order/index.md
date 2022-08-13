@@ -3,22 +3,23 @@ title: order
 slug: Web/CSS/order
 translation_of: Web/CSS/order
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad [CSS](/es/docs/Web/CSS) **`order`** especifica el orden utilizado para disponer los elementos en su contenedor flexible. Los elementos estarán dispuestos en orden ascendente según el valor de `order`. Los elementos con el mismo valor de `order` se dispondrán en el orden en el cual aparecen en el código fuente.
+<p>La propiedad <a href="/es/docs/Web/CSS">CSS</a> <strong><code>order</code></strong> especifica el orden utilizado para disponer los elementos en su contenedor flexible. Los elementos estarán dispuestos en orden ascendente según el valor de <code>order</code>. Los elementos con el mismo valor de <code>order</code> se dispondrán en el orden en el cual aparecen en el código fuente.</p>
 
-> **Nota:** `order` sólo pretende afectar el orden visual de los elementos y no su orden lógico u orden de tabulación. **`order`** no se debe usar en un medio no visual tal como un speech (sintetizador de voz).
+<div class="note">
+<p><strong>Nota</strong>: <code>order</code> sólo pretende afectar el orden visual de los elementos y no su orden lógico u orden de tabulación. <code><strong>order</strong></code> no se debe usar en un medio no visual tal como un speech (sintetizador de voz).</p>
+</div>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-Ver [Uso de cajas flexibles de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS) para más propiedades e información.
+<p>Ver <a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS">Uso de cajas flexibles de CSS</a> para más propiedades e información.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-/* Valor numérico incluyendo números negativos */
+<pre class="brush:css">/* Valor numérico incluyendo números negativos */
 order: 5;
 order: -5;
 
@@ -26,67 +27,82 @@ order: -5;
 order: inherit;
 order: initial;
 order: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `<integer>`
-  - : Representa el grupo ordinal al que el elemento flexible ha sido asignado.
+<dl>
+ <dt><code>&lt;integer&gt;</code></dt>
+ <dd>Representa el grupo ordinal al que el elemento flexible ha sido asignado.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Aquí tiene un trozo de HTML básico:
+<p>Aquí tiene un trozo de HTML básico:</p>
 
-```html
-<!DOCTYPE html>
-<header>...</header>
-<div id='main'>
-   <article>Article</article>
-   <nav>Nav</nav>
-   <aside>Aside</aside>
-</div>
-<footer>...</footer>
-```
+<pre class="brush:html;">&lt;!DOCTYPE html&gt;
+&lt;header&gt;...&lt;/header&gt;
+&lt;div id='main'&gt;
+   &lt;article&gt;Article&lt;/article&gt;
+   &lt;nav&gt;Nav&lt;/nav&gt;
+   &lt;aside&gt;Aside&lt;/aside&gt;
+&lt;/div&gt;
+&lt;footer&gt;...&lt;/footer&gt;</pre>
 
-El siguiente código CSS debería crear un diseño clásico de dos barra laterales que rodea a un bloque de contenido. EL Módulo de Diseño de Caja Flexible crea automáticamente bloques de tamaño vertical igual y utiliza todo el espacio horizontal disponible.
+<p>El siguiente código CSS debería crear un diseño clásico de dos barra laterales que rodea a un bloque de contenido. EL Módulo de Diseño de Caja Flexible crea automáticamente bloques de tamaño vertical igual y utiliza todo el espacio horizontal disponible.</p>
 
-\#main { display: flex; text-align:center; }
+<p><span style='background-color: #fafbfc; font-family: Consolas,Monaco,"Andale Mono",monospace; font-size: 1rem; line-height: 19px; white-space: pre;'>#main { display: flex;  text-align:center; }</span></p>
 
-```css
-#main > article { flex:1;        order: 2; }
-#main > nav     { width: 200px;  order: 1; }
-#main > aside   { width: 200px;  order: 3; }
-```
+<pre class="brush:css;">#main &gt; article { flex:1;        order: 2; }
+#main &gt; nav     { width: 200px;  order: 1; }
+#main &gt; aside   { width: 200px;  order: 3; }</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{ EmbedLiveSample('Examples' ,'','','','Web/CSS/order') }}
+<p>{{ EmbedLiveSample('Examples' ,'','','','Web/CSS/order') }}</p>
 
-## Sobre Accesibilidad
+<h2 id="Sobre_Accesibilidad">Sobre Accesibilidad</h2>
 
-Utilizar la propiedad `order` rompe la conexión entre la presentación visual y el order original de los elementos en el DOM. Esto afecta de forma negativa a los usuarios que navegan a través de teclado utilizando, por ejemplo, un lector de pantalla. Si el orden visual (CSS) es importante, entonces los lectores de pantallas no podrán acceder a ese dato y recorrerán los elementos de forma desordenada.
+<p>Utilizar la propiedad <code>order</code> rompe la conexión entre la presentación visual y el order original de los elementos en el DOM. Esto afecta de forma negativa a los usuarios que navegan a través de teclado utilizando, por ejemplo, un lector de pantalla. Si el orden visual (CSS) es importante, entonces los lectores de pantallas no podrán acceder a ese dato y recorrerán los elementos de forma desordenada.</p>
 
-Para más información por favor, referirse a estos artículos:
+<p>Para más información por favor, referirse a estos artículos:</p>
 
-- [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [Source Order Matters | Adrian Roselli](http://adrianroselli.com/2015/09/source-order-matters.html)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
+<ul>
+ <li><a href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Flexbox &amp; the keyboard navigation disconnect — Tink</a></li>
+ <li><a href="http://adrianroselli.com/2015/09/source-order-matters.html">Source Order Matters | Adrian Roselli</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html">Understanding Success Criterion 1.3.2  | W3C Understanding WCAG 2.0</a></li>
+</ul>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                               | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#order-property', 'order')}} | {{Spec2('CSS3 Flexbox')}} | Definición Inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Flexbox', '#order-property', 'order')}}</td>
+   <td>{{Spec2('CSS3 Flexbox')}}</td>
+   <td>Definición Inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de Navegadores
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
 {{Compat("css.properties.order")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Uso de cajas flexibles de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)
+<ul>
+ <li><a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS">Uso de cajas flexibles de CSS</a></li>
+</ul>

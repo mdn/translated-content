@@ -10,52 +10,59 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}</div>
 
-Ya que estamos usando JavaScript para controlar elementos {{HTMLElement("canvas")}} , también es muy fácil hacer animaciones (interactivas). En este capitulo veremos como hacer algunas animaciones básicas.
+<div class="summary">
+<p>Ya que estamos usando JavaScript para controlar elementos {{HTMLElement("canvas")}} , también es muy fácil hacer animaciones (interactivas). En este capitulo veremos como hacer algunas animaciones básicas.</p>
+</div>
 
-Probablemente la mayor limitación es que una vez que se dibuja una forma, se mantiene de esa manera. Si necesitamos moverlo tenemos que volver a dibujarlo y todo lo que se dibujó antes. Se necesita mucho tiempo para volver a dibujar estructuras complejas y el rendimiento depende en gran medida de la velocidad de la computadora en la que se ejecuta.
+<p>Probablemente la mayor limitación es que una vez que se dibuja una forma, se mantiene de esa manera. Si necesitamos moverlo tenemos que volver a dibujarlo y todo lo que se dibujó antes. Se necesita mucho tiempo para volver a dibujar estructuras complejas y el rendimiento depende en gran medida de la velocidad de la computadora en la que se ejecuta.</p>
 
-## Pasos básicos de animación
+<h2 id="Basic_animation_steps" name="Basic_animation_steps">Pasos básicos de animación</h2>
 
-Estos son los pasos que necesitas para dibujar un cuadro:
+<p>Estos son los pasos que necesitas para dibujar un cuadro:</p>
 
-1.  **Limpiar el canvas**
-    A menos que las formas que vas a dibujar llenen el canvas completo (por ejemplo, una imagen de fondo), debes borrar cualquier forma que haya dibujado previamente. La forma más fácil de hacerlo es usar el método {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}.
-2.  **Guardar el estado del canvas**
-    Si estás cambiando alguna configuración (como estilos, transformaciones, etc.) que afecte el estado del canvas y deseas asegurarte de que se utiliza el estado original cada vez que se dibuja una figura, debes guardar ese estado original.
-3.  **Dibujar formas animadas**
-    El paso en el que realizas el renderizado del cuadro actual.
-4.  **Restaurar el estado del canvas**
-    Si has guardado el estado, restáuralo antes de dibujar un nuevo cuadro.
+<ol>
+ <li><strong>Limpiar el canvas</strong><br>
+  A menos que las formas que vas a dibujar llenen el canvas completo (por ejemplo, una imagen de fondo), debes borrar cualquier forma que haya dibujado previamente. La forma más fácil de hacerlo es usar el método {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}.</li>
+ <li><strong>Guardar el estado del canvas</strong><br>
+  Si estás cambiando alguna configuración (como estilos, transformaciones, etc.) que afecte el estado del canvas y deseas asegurarte de que se utiliza el estado original cada vez que se dibuja una figura, debes guardar ese estado original. </li>
+ <li><strong>Dibujar formas animadas</strong><br>
+  El paso en el que realizas el renderizado del cuadro actual.</li>
+ <li><strong>Restaurar el estado del canvas</strong><br>
+  Si has guardado el estado, restáuralo antes de dibujar un nuevo cuadro.</li>
+</ol>
 
-## Controlando una animación
+<h2 id="Controlling_an_animation" name="Controlling_an_animation">Controlando una animación</h2>
 
-Las formas se dibujan en el canvas utilizando los métodos de canvas directamente o llamando a funciones personalizadas. En circunstancias normales, solo vemos que estos resultados aparecen en el canvas cuando el script termina de ejecutarse. Por ejemplo, no es posible hacer una animación desde un bucle `for`.
+<p>Las formas se dibujan en el canvas utilizando los métodos de canvas directamente o llamando a funciones personalizadas. En circunstancias normales, solo vemos que estos resultados aparecen en el canvas cuando el script termina de ejecutarse. Por ejemplo, no es posible hacer una animación desde un bucle <code>for</code>.</p>
 
-Eso significa que necesitamos una forma de ejecutar nuestras funciones de dibujo durante un período de tiempo. Hay dos formas de controlar una animación como esta.
+<p>Eso significa que necesitamos una forma de ejecutar nuestras funciones de dibujo durante un período de tiempo. Hay dos formas de controlar una animación como esta.</p>
 
-### Actualizaciones Programadas
+<h3 id="Actualizaciones_Programadas">Actualizaciones Programadas</h3>
 
-Primero {{domxref("window.setInterval()")}}, {{domxref("window.setTimeout()")}}, y {{domxref("window.requestAnimationFrame()")}} son funciones que pueden ser usadas para llamar una función especifica en un periodo de tiempo establecido.
+<p>Primero {{domxref("window.setInterval()")}}, {{domxref("window.setTimeout()")}}, y {{domxref("window.requestAnimationFrame()")}} son funciones que pueden ser usadas para llamar una función especifica en un periodo de tiempo establecido.</p>
 
-- {{domxref("WindowTimers.setInterval", "setInterval(function, delay)")}}
-  - : Ejecuta una función especificada por `function` cada `delay` milisegundos.
-- {{domxref("WindowTimers.setTimeout", "setTimeout(function, delay)")}}
-  - : Ejecuta una función especificada por `function` dentro de `delay` milisegundos.
-- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
-  - : Comunica al navegador que deseas iniciar una animación y requieres que el navegador llame a las funciones especificas para actualizar la misma antes de la siguiente escena.
+<dl>
+ <dt>{{domxref("WindowTimers.setInterval", "setInterval(function, delay)")}}</dt>
+ <dd>Ejecuta una función especificada por <code>function</code> cada <code>delay</code> milisegundos.</dd>
+ <dt>{{domxref("WindowTimers.setTimeout", "setTimeout(function, delay)")}}</dt>
+ <dd>Ejecuta una función especificada por <code>function</code> dentro de <code>delay</code> milisegundos.</dd>
+ <dt>{{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}</dt>
+ <dd>Comunica al navegador que  deseas iniciar una animación y requieres que el navegador llame a las funciones especificas para actualizar la misma antes de la siguiente escena.</dd>
+</dl>
 
-Si no quieres ninguna interacción del usuario puedes usar la función `setInterval()` que repite la ejecución del código suministrado. Si lo que queremos es hacer un juego, podríamos usar eventos de teclado o el mouse para controlar la animación y usar `setTimeout()`. Al establecer los {{domxref("EventListener")}}, capturamos cualquier interacción del usuario y ejecutamos nuestras funciones de animación.
+<p>Si no quieres ninguna interacción del usuario puedes usar la función <code>setInterval()</code> que repite la ejecución del código suministrado. Si lo que queremos es hacer un juego, podríamos usar eventos de teclado o el mouse para controlar la animación y usar <code>setTimeout()</code>. Al establecer los {{domxref("EventListener")}}, capturamos cualquier interacción del usuario y ejecutamos nuestras funciones de animación.</p>
 
-> **Nota:** En los siguiente ejemplo,usaremos el método para controlar animaciones {{domxref("window.requestAnimationFrame()")}}. El método `requestAnimationFrame` provee formas amigables y mas eficientes para animar llamando cada marco de animación cuando el sistema esta listo para dibujar. La cantidad de devoluciones de llamadas suele ser 60 veces por segundo y podría ser reducido a menor periodo cuando se corre en un segundo plano. Para mas información acerca de los ciclos de animación, especialmente para juegos, Ver el Articulo [Anatomía de un videojuego](/es/docs/Games/Anatomy) en nuestra [GameZona de desarrollo de Juegos](/es/docs/Games).
+<div class="note">
+<p>En los siguiente ejemplo,usaremos el método para controlar animaciones {{domxref("window.requestAnimationFrame()")}}. El método <code>requestAnimationFrame</code> provee formas amigables y mas eficientes  para animar llamando cada marco de animación cuando el sistema esta listo para dibujar. La cantidad de devoluciones de llamadas suele ser 60 veces por segundo y podría ser reducido a menor periodo cuando se corre en un segundo plano. Para mas información acerca de los ciclos de animación, especialmente para juegos, Ver el Articulo <a href="/es/docs/Games/Anatomy">Anatomía de un videojuego</a> en nuestra <a href="/en-US/docs/Games">GameZona de desarrollo de Juegos</a>.</p>
+</div>
 
-## Un sistema solar animado
+<h2 id="Un_sistema_solar_animado">Un sistema solar animado</h2>
 
-Este ejemplo animado es un pequeño modelo de nuestro sistema solar.
+<p>Este ejemplo animado es un pequeño modelo de nuestro sistema solar.</p>
 
-```js
-var sun = new Image();
+<pre class="brush: js">var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
@@ -102,20 +109,19 @@ function draw() {
 }
 
 init();
-```
+</pre>
 
-```html hidden
-<canvas id="canvas" width="300" height="300"></canvas>
-```
+<div class="hidden">
+<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
+</div>
 
-{{EmbedLiveSample("Un_sistema_solar_animado", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+<p>{{EmbedLiveSample("Un_sistema_solar_animado", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}</p>
 
-## Un reloj animado
+<h2 id="Un_reloj_animado">Un reloj animado</h2>
 
-Este ejemplo dibuja una reloj animado, mostrando la hora actual.
+<p>Este ejemplo dibuja una reloj animado, mostrando la hora actual.</p>
 
-```js
-function clock(){
+<pre class="brush: js">function clock(){
   var now = new Date();
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.save();
@@ -130,7 +136,7 @@ function clock(){
 
   // Aguja de la hora
   ctx.save();
-  for (var i=0;i<12;i++){
+  for (var i=0;i&lt;12;i++){
     ctx.beginPath();
     ctx.rotate(Math.PI/6);
     ctx.moveTo(100,0);
@@ -142,7 +148,7 @@ function clock(){
   // Aguja del minuto
   ctx.save();
   ctx.lineWidth = 5;
-  for (i=0;i<60;i++){
+  for (i=0;i&lt;60;i++){
     if (i%5!=0) {
       ctx.beginPath();
       ctx.moveTo(117,0);
@@ -156,7 +162,7 @@ function clock(){
   var sec = now.getSeconds();
   var min = now.getMinutes();
   var hr  = now.getHours();
-  hr = hr>=12 ? hr-12 : hr;
+  hr = hr&gt;=12 ? hr-12 : hr;
 
   ctx.fillStyle = "black";
 
@@ -212,21 +218,19 @@ function clock(){
   window.requestAnimationFrame(clock);
 }
 
-window.requestAnimationFrame(clock);
-```
+window.requestAnimationFrame(clock);</pre>
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
-```
+<div class="hidden">
+<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+</div>
 
-{{EmbedLiveSample("Un_reloj_animado", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+<p>{{EmbedLiveSample("Un_reloj_animado", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}</p>
 
-## Un panorama en bucle
+<h2 id="Un_panorama_en_bucle">Un panorama en bucle</h2>
 
-En este ejemplo, una foto panorámica avanza de izquierda a derecha. Donde usaremos [una imagen del Parque Nacional de Yosemite](http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg) que tomamos de Wikipedia, pero tu podrías usar cualquier imagen que sea mas grande que el canvas.
+<p>En este ejemplo, una foto panorámica avanza de izquierda a derecha. Donde usaremos <a href="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg">una imagen del Parque Nacional de Yosemite</a> que tomamos de Wikipedia, pero tu podrías usar cualquier imagen que sea mas grande que el canvas.</p>
 
-```js
-var img = new Image();
+<pre class="brush: js">var img = new Image();
 
 // Variables de usuario - personalizar estas para cambiar la imagen cuando inicie el desplazamiento
 // dirección y velocidad.
@@ -252,17 +256,17 @@ img.onload = function() {
     imgW = img.width * scale;
     imgH = img.height * scale;
 
-    if (imgW > CanvasXSize) {
+    if (imgW &gt; CanvasXSize) {
         // imagen más grande que canvas
         x = CanvasXSize - imgW;
     }
-    if (imgW > CanvasXSize) {
+    if (imgW &gt; CanvasXSize) {
         // ancho de imagen más grande que canvas
         clearX = imgW;
     } else {
         clearX = CanvasXSize;
     }
-    if (imgH > CanvasYSize) {
+    if (imgH &gt; CanvasYSize) {
         // altura de la imagen más grande que canvas
         clearY = imgH;
     } else {
@@ -279,30 +283,30 @@ img.onload = function() {
 function draw() {
     ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // si la imagen es <= tamaño de Canvas
-    if (imgW <= CanvasXSize) {
+    // si la imagen es &lt;= tamaño de Canvas
+    if (imgW &lt;= CanvasXSize) {
         // reiniciar, comenzar desde el principio
-        if (x > CanvasXSize) {
+        if (x &gt; CanvasXSize) {
             x = -imgW + x;
         }
         // dibujar image1 adicional
-        if (x > 0) {
+        if (x &gt; 0) {
             ctx.drawImage(img, -imgW + x, y, imgW, imgH);
         }
         // dibujar image2 adicional
-        if (x - imgW > 0) {
+        if (x - imgW &gt; 0) {
             ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
         }
     }
 
-    // la imagen es > tamaño de Canvas
+    // la imagen es &gt; tamaño de Canvas
     else {
         // reiniciar, comenzar desde el principio
-        if (x > (CanvasXSize)) {
+        if (x &gt; (CanvasXSize)) {
             x = CanvasXSize - imgW;
         }
         // dibujar image adicional
-        if (x > (CanvasXSize-imgW)) {
+        if (x &gt; (CanvasXSize-imgW)) {
             ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
         }
     }
@@ -310,22 +314,21 @@ function draw() {
     ctx.drawImage(img, x, y,imgW, imgH);
     // cantidad para moverse
     x += dx;
-}
-```
+}</pre>
 
-Debajo esta el elemento {{HTMLElement("canvas")}} en el cual va la imagen se va ha desplazar. Nota que el ancho y el alto especificado aquí son las variables `CanvasXZSize` y `CanvasYSize`.
+<p>Debajo esta el elemento {{HTMLElement("canvas")}} en el cual va la imagen se va ha desplazar. Nota que el ancho y el alto especificado aquí son las variables <code>CanvasXZSize</code> y <code>CanvasYSize</code>.</p>
 
-```html
-<canvas id="canvas" width="800" height="200"></canvas>
-```
+<pre class="brush: html">&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
 
-{{EmbedLiveSample("Un_panorama_en_bucle", "830", "230")}}
+<p>{{EmbedLiveSample("Un_panorama_en_bucle", "830", "230")}}</p>
 
-## Otros ejemplos
+<h2 id="Other_examples" name="Other_examples">Otros ejemplos</h2>
 
-- [Un ray-caster básico](/es/docs/Web/API/Canvas_API/A_basic_ray-caster "/en-US/docs/Web/Guide/HTML/A_basic_ray-caster")
-  - : Un buen ejemplo de como hacer animaciones usando como control el teclado.
-- [Animaciones avanzadas](/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
-  - : Vamos a echar un vistazo a algunas técnicas de animación avanzadas y física en el próximo capítulo.
+<dl>
+ <dt><a href="/es/docs/Web/API/Canvas_API/A_basic_ray-caster" title="/en-US/docs/Web/Guide/HTML/A_basic_ray-caster">Un ray-caster básico</a></dt>
+ <dd>Un buen ejemplo de como hacer animaciones usando como control el teclado.</dd>
+ <dt><a href="/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations">Animaciones avanzadas</a></dt>
+ <dd>Vamos a echar un vistazo a algunas técnicas de animación avanzadas y física en el próximo capítulo.</dd>
+</dl>
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}</p>

@@ -14,49 +14,54 @@ tags:
 translation_of: Web/CSS/min()
 original_slug: Web/CSS/min()
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-La [función](/es/docs/Web/CSS/CSS_Functionals) [CSS](/es/docs/Web/CSS) **`min()`** permite establecer el valor mas pequeño (mas negativo) de una lista de expresiones separadas por coma como el valor de una propiedad CSS. La función `min()` puede ser usada donde quiera que {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, o {{CSSxRef("&lt;integer&gt;")}} esté permitido.
+<p>La <a href="/en-US/docs/Web/CSS/CSS_Functionals">función</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>min()</code></strong> permite establecer el valor mas pequeño (mas negativo) de una lista de expresiones separadas por coma como el valor de una propiedad CSS. La función <code>min()</code> puede ser usada donde quiera que  {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, o {{CSSxRef("&lt;integer&gt;")}} esté permitido.</p>
 
-{{EmbedInteractiveExample("pages/css/function-min.html")}}
+<div>{{EmbedInteractiveExample("pages/css/function-min.html")}}</div>
 
-En el primer ejemplo anterior, el ancho será al menos 200px, pero será menor si el viewport es menor de 400px de ancho (en tal caso 1vw sería 4px, así 50vw sería 200px). En otras palabras, el ancho máximo es 200px. Piensa en el valor de `min()` como el máximo valor que una propiedad puede tener.
 
-## Sintaxis
 
-La funcion `min()` toma uno o mas expresiones separadas por coma como sus parametros, y usa el valor mas pequeño de esas expresiones como su valor.
+<p>En el primer ejemplo anterior, el ancho será al menos 200px, pero será menor si el viewport es menor de 400px de ancho (en tal caso 1vw sería 4px, así 50vw sería 200px). En otras palabras, el ancho máximo es 200px. Piensa en el valor de  <code>min()</code> como el máximo valor que una propiedad puede tener.</p>
 
-Las expresiones pueden ser expresiones matemáticas (usando operadores aritmeticos), valores literales, u otras expresiones, tales como {{CSSxRef("attr", "attr()")}}, que se evaluan a un tipo de argumento válido (like {{CSSxRef("&lt;length&gt;")}}).
+<h2 id="Sintaxis">Sintaxis</h2>
 
-Se pueden usar distintas unidades de medida para cada valor en la expresion, si se desea. Tambien puede usar parentesis para establecer orden de percedencia si lo requiere.
+<p>La funcion <code>min()</code> toma uno o mas expresiones separadas por coma como sus parametros, y usa el valor mas pequeño de esas expresiones como su valor.</p>
 
-- Expresiones matematicas que involucran porcentajes para los anchos y altos en columnas de tabla, grupos de columnas de tabla, filas de tablas, y celdas de tablas en ambos layout fijo y tablas pueden ser tratados como si se hubiera especificado `auto`
-- Es permitido anidar `max()` y otros funciones `min()` como valores de expresiones. Las expresiones son completamente matematicas asi que puede usarse adicion directa, resta, multiplicacion y division sin usar la funcion `calc()` en si.
-- La expresion pueden ser valores combinando los operadores de adicion ( + ), resta ( - ), multiplicacion ( \* ) y division ( / ) , aplicando las reglas estandares de precedencia de operadores. Asegurese de poner un espacio en cada lado de los operandos de + y -. Los oprandos en la expresion pueden ser cualquier valor de sintaxis `<length>`.
-- Usted puede (y con frecuencia necesitara) combinar los valores `min()` y `max()`, o usar `min()` dentro de las funciones `clamp()` o `calc()`.
-- Usted puede proveer mas de 2 argumentos, si tiene multiples restricciones para aplicar.
+<p>Las expresiones pueden ser expresiones matemáticas (usando operadores aritmeticos), valores literales, u otras expresiones, tales como {{CSSxRef("attr", "attr()")}}, que se evaluan a un tipo de argumento válido (like {{CSSxRef("&lt;length&gt;")}}).</p>
 
-### Sintaxis formal
+<p>Se pueden usar distintas unidades de medida para cada valor en la expresion, si se desea. Tambien puede usar parentesis para establecer orden de percedencia si lo requiere.</p>
+
+<ul>
+ <li>Expresiones matematicas que involucran porcentajes para los anchos y altos en columnas de tabla, grupos de columnas de tabla, filas de tablas, y celdas de tablas en ambos layout fijo y tablas pueden ser tratados como si se hubiera especificado <code>auto</code></li>
+ <li>Es permitido anidar  <code>max()</code> y otros funciones <code>min()</code> como valores de expresiones. Las expresiones son completamente matematicas asi que puede usarse adicion directa, resta, multiplicacion y division sin usar la funcion <code>calc()</code> en si.</li>
+ <li>La expresion pueden ser valores combinando los operadores de adicion ( + ), resta ( - ), multiplicacion ( * ) y division ( / ) , aplicando las reglas estandares de precedencia de operadores. Asegurese de poner un espacio en cada lado de los operandos de + y -. Los oprandos en la expresion pueden ser cualquier valor de sintaxis <code>&lt;length&gt;</code>.</li>
+ <li>Usted puede (y con frecuencia necesitara) combinar los valores  <code>min()</code> y <code>max()</code>, o usar <code>min()</code> dentro de las funciones  <code>clamp()</code> o <code>calc()</code>.</li>
+ <li>Usted puede proveer mas de 2 argumentos, si tiene multiples restricciones para aplicar.</li>
+</ul>
+
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{CSSSyntax}}
 
-## Probemas de accesibilidad
+<h2 id="Probemas_de_accesibilidad">Probemas de accesibilidad</h2>
 
-Cuando use `min()` para establecer el maximo valor de fonr size, asegurese de que la fuente todavia podra ser escalada por lo menos al 200% para mas legibilidad (sin tecnologia asistente como la funcion de zoom).
+<p>Cuando use <code>min()</code> para establecer el maximo valor de fonr size, asegurese de que la fuente todavia podra ser escalada por lo menos al 200% para mas legibilidad (sin tecnologia asistente como la funcion de zoom).</p>
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+<ul>
+ <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
+</ul>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Setting a maximum size for a label and input
+<h3 id="Setting_a_maximum_size_for_a_label_and_input">Setting a maximum size for a label and input</h3>
 
-Otro caso de uso para las funciones CSS es establecer la maxima longitud en controles enformularios responsive: habilitando el ancho de los labels y los inputs para encogerse como lo hace el ancho del formulario
+<p>Otro caso de uso para las funciones CSS es establecer la maxima longitud en controles enformularios responsive: habilitando el ancho de los labels y los inputs para encogerse como lo hace el ancho del formulario</p>
 
-Veamos algo de CSS:
+<p>Veamos algo de CSS:</p>
 
-```css
-input, label {
+<pre class="brush: css; notranslate">input, label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -69,32 +74,48 @@ form {
   border: 1px solid black;
   padding: 4px;
 }
-```
+</pre>
 
-Aquí, el formulario en si mismo, junto con el margen, borde y padding, será de 100% del ancho de su padre. Declaramos el input y el label para que sean menores ente el 40% del ancho del formulario hasta el padding o de 400px, el que sea menor. En otras palabras, lo mas ancho que el label y el input pueden ser es de 400px. Lo mas estrecho que serán es 40% del ancho del formulario, el cual en pantallas de relojes inteligentes es muy pequeño.
+<p>Aquí, el formulario en si mismo, junto con el margen, borde y padding, será de 100% del ancho de su padre. Declaramos el input y el label para que sean menores ente el 40% del ancho del formulario hasta el padding o de 400px, el que sea menor. En otras palabras, lo mas ancho que el label y el input pueden ser es de 400px. Lo mas estrecho que serán es 40% del ancho del formulario, el cual en pantallas de relojes inteligentes es muy pequeño.</p>
 
-```html
-<form>
-  <label>Escribe algo:</label>
-  <input type="text">
-</form>
-```
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;label&gt;Escribe algo:&lt;/label&gt;
+  &lt;input type="text"&gt;
+&lt;/form&gt;
+</pre>
 
-{{EmbedLiveSample("Setting_a_maximum_size_for_a_label_and_input", "100%", "110")}}
+<p>{{EmbedLiveSample("Setting_a_maximum_size_for_a_label_and_input", "100%", "110")}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                           | Estado                           | Comentario          |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("CSS4 Values", "#calc-notation", "min()")}} | {{Spec2("CSS4 Values")}} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS4 Values", "#calc-notation", "min()")}}</td>
+   <td>{{Spec2("CSS4 Values")}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("css.types.min")}}
 
-## Ver también
 
-- {{CSSxRef("calc", "calc()")}}
-- {{CSSxRef("clamp", "clamp()")}}
-- {{CSSxRef("max", "max()")}}
-- [CSS Values](/es/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+<p>{{Compat("css.types.min")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{CSSxRef("calc", "calc()")}}</li>
+ <li>{{CSSxRef("clamp", "clamp()")}}</li>
+ <li>{{CSSxRef("max", "max()")}}</li>
+ <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS Values</a></li>
+</ul>

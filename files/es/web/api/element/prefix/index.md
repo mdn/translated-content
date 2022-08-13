@@ -10,41 +10,58 @@ tags:
   - Referencia
 translation_of: Web/API/Element/prefix
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-La propiedad **`Element.prefix`** unicamente de lectura devuelve el namespace prefix de el elemento especificado, o` null si no hay especificado `prefix .
+<p>La propiedad <code><strong>Element.prefix</strong></code> unicamente de lectura devuelve el namespace prefix de el elemento especificado, o<code> null si no hay especificado </code>prefix .</p>
 
-> **Nota:** Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
+<div class="note">
+<p>Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.</p>
+</div>
 
-## Síntasix
+<h2 id="Síntasix">Síntasix</h2>
 
-    string = element.prefix
+<pre class="syntaxbox"><var>string</var> = <var>element</var>.prefix
+</pre>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Los siguientes registros "x" en la consola.
+<p><span class="short_text" id="result_box" lang="es"><span>Los siguientes registros</span> <span>"</span><span>x</span><span>"</span> <span>en la consola.</span></span></p>
 
-```xml
-<x:div onclick="console.log(this.prefix)"/>
-```
+<pre class="brush:xml">&lt;x:div onclick="console.log(this.prefix)"/&gt;
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-Solo funcionará cuando se utiliza un analizador de namespace, ej. Cuando un documento es servido con un tipo XML MIME . No funcionará para documentos HTML.
+<p> Solo funcionará cuando se utiliza un analizador de namespace, ej. Cuando un documento es servido con un tipo XML MIME . No funcionará para documentos HTML.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                   | Estado                   | Comentario         |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("DOM4", "#dom-element-prefix", "Element.prefix")}} | {{Spec2("DOM4")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("DOM4", "#dom-element-prefix", "Element.prefix")}}</td>
+   <td>{{Spec2("DOM4")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en los Navegadores
+<h2 id="Compatibilidad_en_los_Navegadores">Compatibilidad en los Navegadores</h2>
 
 {{Compat("api.Element.prefix")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{domxref("Element.namespaceURI")}}
-- {{domxref("Element.localName")}}
-- {{domxref("Attr.prefix")}}
-- {{domxref("Node.prefix")}}
+<ul>
+ <li>{{domxref("Element.namespaceURI")}}</li>
+ <li>{{domxref("Element.localName")}}</li>
+ <li>{{domxref("Attr.prefix")}}</li>
+ <li>{{domxref("Node.prefix")}}</li>
+</ul>

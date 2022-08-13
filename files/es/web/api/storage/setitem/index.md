@@ -10,54 +10,67 @@ tags:
   - metodo
 translation_of: Web/API/Storage/setItem
 ---
-{{APIRef("Web Storage API")}}
+<p>{{APIRef("Web Storage API")}}</p>
 
-El método `setItem()` de la interfaz {{domxref("Storage")}}, cuando reciba una clave y un valor, añadirá estos al almacén, o actualizará el valor si la clave ya existe.
+<p>El método <code>setItem()</code> de la interfaz {{domxref("Storage")}}, cuando reciba una clave y un valor, añadirá estos al almacén, o actualizará el valor si la clave ya existe.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    storage.setItem(keyName, keyValue);
+<pre class="syntaxbox"><em>storage</em>.setItem(<em>keyName</em>, <em>keyValue</em>);</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- _keyName_
-  - : Un {{domxref("DOMString")}} conteniendo la clave que se quiere crear/actualizar.
-- _keyValue_
-  - : Un {{domxref("DOMString")}} conteniendo el valor que se le quiere dar a la clave que se está creando/actualizando.
+<dl>
+ <dt><em>keyName</em></dt>
+ <dd>Un {{domxref("DOMString")}} conteniendo la clave que se quiere crear/actualizar.</dd>
+ <dt><em>keyValue</em></dt>
+ <dd>Un {{domxref("DOMString")}} conteniendo el valor que se le quiere dar a la clave que se está creando/actualizando.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve">Devuelve</h3>
 
-_No devuelve valor._
+<p><em>No devuelve valor.</em></p>
 
-### Excepciones
+<h3 id="Excepciones">Excepciones</h3>
 
-`setItem()` puede lanzar una excepción si el almacén esta lleno. Particularmente, en Safari Mobile (desde iOS 5) siempre lo hará cuando el usuario ingresa en modo privado (Safari determina una cuota de 0 bytes en modo privado, al contrario de otros navegadores, que permiten almacenamiento en modo privado, usando contenedores de información separados).
-Por lo tanto, los desarrolladores deben asegurarse de **capturar siempre las posibles excepciones de `setItem()`**.
+<p><code>setItem()</code> puede lanzar una excepción si el almacén esta lleno. Particularmente, en Safari Mobile (desde iOS 5) siempre lo hará cuando el usuario ingresa en modo privado (Safari determina una cuota de 0 bytes en modo privado, al contrario de otros navegadores, que permiten almacenamiento en modo privado, usando contenedores de información separados).<br>
+ Por lo tanto, los desarrolladores deben asegurarse de <strong>capturar siempre las posibles excepciones de <code>setItem()</code></strong>.</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-La siguiente función crea tres ítems dentro del almacenamiento local.
+<p>La siguiente función crea tres ítems dentro del almacenamiento local.</p>
 
-```js
-function populateStorage() {
+<pre class="brush: js">function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
-}
-```
+}</pre>
 
-> **Nota:** Para ver un ejemplo real, vea nuestro [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+<div class="note">
+<p><strong>Nota</strong>: Para ver un ejemplo real, vea nuestro <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>.</p>
+</div>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#dom-storage-setitem', 'setItem()')}} | {{Spec2('Web Storage')}} |            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Storage', '#dom-storage-setitem', 'setItem()')}}</td>
+   <td>{{Spec2('Web Storage')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("api.Storage.setItem")}}
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-[Usando la Web Storage API](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Usando la Web Storage API</a></p>

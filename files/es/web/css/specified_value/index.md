@@ -6,21 +6,38 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/specified_value
 ---
-{{CSSRef}}
+<p>{{CSSRef}}</p>
 
-El **valor especificado** (**specified value**) de una propiedad CSS es establecido de una de las siguientes maneras:
+<p>El <strong>valor especificado</strong> (<strong>specified value</strong>) de una propiedad CSS es establecido de una de las siguientes maneras:</p>
 
-1.  Si la hoja de estilos del documento tiene un valor especificado para la propiedad, éste será usado. Por ejemplo, si la propiedad {{cssxref("color")}} es establecida con valor `green`, el color del texto del elemento que corresponda será verde.
-2.  Si la hoja de estilos del documento no tiene un valor especificado para la propiedad, se heredará del elemento padre (si es posible). Por ejemplo, si tenemos un párrafo ({{HTMLElement("p")}}) dentro de un {{HTMLElement("div")}}, y el {{HTMLElement("div")}} tiene el valor de su propiedad `font` como "Arial", y el {{HTMLElement("p")}} no tiene definida la propiedad `font`, se heredará la fuente Arial.
-3.  Si ninguna de las anteriores está disponible, se aplica el valor inicial del elemento segun la especificación CSS.
+<ol>
+ <li>Si la hoja de estilos del documento tiene un valor especificado para la propiedad, éste será usado. Por ejemplo, si la propiedad {{cssxref("color")}} es establecida con valor <code>green</code>, el color del texto del elemento que corresponda será verde.</li>
+ <li>Si la hoja de estilos del documento no tiene un valor especificado para la propiedad, se heredará del elemento padre (si es posible). Por ejemplo, si tenemos un párrafo ({{HTMLElement("p")}}) dentro de un {{HTMLElement("div")}}, y el {{HTMLElement("div")}} tiene el valor de su propiedad <code>font</code> como "Arial", y el {{HTMLElement("p")}} no tiene definida la propiedad <code>font</code>, se heredará la fuente Arial.</li>
+ <li>Si ninguna de las anteriores está disponible, se aplica el valor inicial del elemento segun la especificación CSS.</li>
+</ol>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                   | Estatus                  | Comentarios        |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName("CSS2.1", "cascade.html#specified-value", "cascaded value")}} | {{Spec2("CSS2.1")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS2.1", "cascade.html#specified-value", "cascaded value")}}</td>
+   <td>{{Spec2("CSS2.1")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- [Referencia CSS](/es/docs/Web/CSS/Referencia_CSS)
-- {{CSS_key_concepts}}
+<ul>
+ <li><a href="/es/docs/Web/CSS/Referencia_CSS">Referencia CSS</a></li>
+ <li>{{CSS_key_concepts}}</li>
+</ul>

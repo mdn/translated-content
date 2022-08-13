@@ -10,62 +10,81 @@ tags:
   - system
 translation_of: Web/API/Notifications_API
 ---
-{{DefaultAPISidebar("Web Notifications")}}
+<p>{{DefaultAPISidebar("Web Notifications")}}</p>
 
-The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.
+<p class="summary">The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.</p>
 
-## Concepts and usage
+<h2 id="Concepts_and_usage">Concepts and usage</h2>
 
-On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initialises, using the {{domxref("Notification.requestPermission()")}} method. This will spawn a request dialog, along the following lines:
+<p>On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initialises, using the {{domxref("Notification.requestPermission()")}} method. This will spawn a request dialog, along the following lines:</p>
 
-![](https://mdn.mozillademos.org/files/10819/notification-bubble.png)
+<p><img alt="" src="https://mdn.mozillademos.org/files/10819/notification-bubble.png" style="display: block; height: 205px; margin: 0 auto; width: 453px;"></p>
 
-From here the user can choose to allow notifications from this origin, block notifications from this origin, or not choose at this point. Once a choice has been made, the setting will generally persist for the current session.
+<p>From here the user can choose to allow notifications from this origin, block notifications from this origin, or not choose at this point. Once a choice has been made, the setting will generally persist for the current session. </p>
 
-> **Nota:** As of Firefox 44, the permissions for Notifications and [Push](/es/docs/Web/API/Push_API) have been merged. If permission is granted for notifications, push will also be enabled.
+<div class="note">
+<p><strong>Note</strong>: As of Firefox 44, the permissions for Notifications and <a href="/en-US/docs/Web/API/Push_API">Push</a> have been merged. If permission is granted for notifications, push will also be enabled.</p>
+</div>
 
-Next, a new notification is created using the {{domxref("Notification.Notification","Notification()")}} constructor. This must be passed a title argument, and can optionally be passed an options object to specify options, such as text direction, body text, icon to display, notification sound to play, and more.
+<p>Next, a new notification is created using the {{domxref("Notification.Notification","Notification()")}} constructor. This must be passed a title argument, and can optionally be passed an options object to specify options, such as text direction, body text, icon to display, notification sound to play, and more.</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-In addition, the Notifications API spec specifies a number of additions to the [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API), to allow service workers to fire notifications.
+<p>In addition, the Notifications API spec specifies a number of additions to the <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a>, to allow service workers to fire notifications.</p>
 
-> **Nota:** To find out more about using notifications in your own app, read [Using the Notifications API](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+<div class="note">
+<p><strong>Note</strong>: To find out more about using notifications in your own app, read <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a>.</p>
+</div>
 
-## Notifications interfaces
+<h2 id="Notifications_interfaces">Notifications interfaces</h2>
 
-- {{domxref("Notification")}}
-  - : Defines a notification object.
+<dl>
+ <dt>{{domxref("Notification")}}</dt>
+ <dd>Defines a notification object.</dd>
+</dl>
 
-### Service worker additions
+<h3 id="Service_worker_additions">Service worker additions</h3>
 
-- {{domxref("ServiceWorkerRegistration")}}
-  - : Includes the {{domxref("ServiceWorkerRegistration.showNotification()")}} and {{domxref("ServiceWorkerRegistration.getNotifications()")}} method, for controlling the display of notifications.
-- {{domxref("ServiceWorkerGlobalScope")}}
-  - : Includes the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} handler, for firing custom functions when a notification is clicked.
-- {{domxref("NotificationEvent")}}
-  - : A specific type of event object, based on {{domxref("ExtendableEvent")}}, which represents a notification that has fired.
+<dl>
+ <dt>{{domxref("ServiceWorkerRegistration")}}</dt>
+ <dd>Includes the {{domxref("ServiceWorkerRegistration.showNotification()")}} and {{domxref("ServiceWorkerRegistration.getNotifications()")}} method, for controlling the display of notifications.</dd>
+ <dt>{{domxref("ServiceWorkerGlobalScope")}}</dt>
+ <dd>Includes the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} handler, for firing custom functions when a notification is clicked.</dd>
+ <dt>{{domxref("NotificationEvent")}}</dt>
+ <dd>A specific type of event object, based on {{domxref("ExtendableEvent")}}, which represents a notification that has fired.</dd>
+</dl>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                | Status                                   | Comment         |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Notifications')}}</td>
+   <td>{{Spec2('Web Notifications')}}</td>
+   <td>Living standard</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("api.Notification")}}
 
-## Firefox OS permissions
+<h2 id="Firefox_OS_permissions">Firefox OS permissions</h2>
 
-When using notifications in a Firefox OS app, be sure to add the `desktop-notification` permission in your manifest file. Notifications can be used at any permission level, hosted or above:
+<p>When using notifications in a Firefox OS app, be sure to add the <code>desktop-notification</code> permission in your manifest file. Notifications can be used at any permission level, hosted or above:</p>
 
-```json
-"permissions": {
+<pre class="brush: json">"permissions": {
   "desktop-notification": {}
-}
-```
+}</pre>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [Using the Notifications API](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+<ul>
+ <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
+</ul>

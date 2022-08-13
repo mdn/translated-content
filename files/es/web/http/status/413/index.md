@@ -4,21 +4,32 @@ slug: Web/HTTP/Status/413
 translation_of: Web/HTTP/Status/413
 original_slug: Web/HTTP/Status/8080
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-The HTTP **`413 Payload Too Large`** response status code indicates that the request entity is larger than limits defined by server; the server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
+<p>The HTTP <code><strong>413 Payload Too Large</strong></code> response status code indicates that the request entity is larger than limits defined by server; the server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.</p>
 
-## Status
+<h2 id="Status">Status</h2>
 
-    413 Payload Too Large
+<pre class="syntaxbox">413 Payload Too Large</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "413 Payload Too Large" , "6.5.11")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Title</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7231", "413 Payload Too Large" , "6.5.11")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- {{HTTPHeader("Connection")}}
-- {{HTTPHeader("Retry-After")}}
+<ul>
+ <li>{{HTTPHeader("Connection")}}</li>
+ <li>{{HTTPHeader("Retry-After")}}</li>
+</ul>

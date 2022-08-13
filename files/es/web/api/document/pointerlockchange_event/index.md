@@ -4,48 +4,78 @@ slug: Web/API/Document/pointerlockchange_event
 translation_of: Web/API/Document/pointerlockchange_event
 original_slug: Web/Events/pointerlockchange
 ---
-El evento `pointerlockchange` es disparado cuando el cursor del navegador es bloqueado o desbloqueado.
+<p>El evento <code>pointerlockchange</code> es disparado cuando el cursor del navegador es bloqueado o desbloqueado.</p>
 
-## Información general
+<h2 id="Información_general">Información general</h2>
 
-- Specification
-  - : [Pointer Lock](http://www.w3.org/TR/pointerlock/#pointerlockchange-and-pointerlockerror-events)
-- Interface
-  - : Event
-- Bubbles
-  - : Yes
-- Cancelable
-  - : No
-- Target
-  - : Document
-- Default Action
-  - : None
+<dl>
+ <dt style="float: left; text-align: right; width: 120px;">Specification</dt>
+ <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/pointerlock/#pointerlockchange-and-pointerlockerror-events">Pointer Lock</a></dd>
+ <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
+ <dd style="margin: 0 0 0 120px;">Event</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
+ <dd style="margin: 0 0 0 120px;">Yes</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
+ <dd style="margin: 0 0 0 120px;">No</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Target</dt>
+ <dd style="margin: 0 0 0 120px;">Document</dd>
+ <dt style="float: left; text-align: right; width: 120px;">Default Action</dt>
+ <dd style="margin: 0 0 0 120px;">None</dd>
+</dl>
 
-## Propiedades
+<h2 id="Propiedades">Propiedades</h2>
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Property</th>
+   <th scope="col">Type</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>target</code> {{readonlyInline}}</td>
+   <td>{{domxref("EventTarget")}}</td>
+   <td>The event target (the topmost target in the DOM tree).</td>
+  </tr>
+  <tr>
+   <td><code>type</code> {{readonlyInline}}</td>
+   <td>{{domxref("DOMString")}}</td>
+   <td>The type of event.</td>
+  </tr>
+  <tr>
+   <td><code>bubbles</code> {{readonlyInline}}</td>
+   <td>{{jsxref("Boolean")}}</td>
+   <td>Whether the event normally bubbles or not.</td>
+  </tr>
+  <tr>
+   <td><code>cancelable</code> {{readonlyInline}}</td>
+   <td>{{jsxref("Boolean")}}</td>
+   <td>Whether the event is cancellable or not.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-//Ten en cuenta que el nombre del evento, en este caso "pointerlockchange" puede variar según el navegador.
+<pre class="brush:js;">//Ten en cuenta que el nombre del evento, en este caso "pointerlockchange" puede variar según el navegador.
 document.addEventListener("pointerlockchange", function( event ) {
     // El objetivo, parámetro "target", del objeto "event" es siempre el objeto "document".
     // para recuperar el objeto que recibe el bloqueo/desbloqueo es document.pointerlockElement.
     document.pointerLockElement;
 
 });
-```
+</pre>
 
-## Eventos relacionados
+<h2 id="Eventos_relacionados">Eventos relacionados</h2>
 
-- [`pointerlockerror`](/es/docs/Mozilla_event_reference/pointerlockerror)
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/pointerlockerror"><code>pointerlockerror</code></a></li>
+</ul>
 
-## Véase también:
+<h2 id="Véase_también">Véase también:</h2>
 
-- [Using Pointer Lock API](/es/docs/API/Pointer_Lock_API)
+<ul>
+ <li><a href="/en-US/docs/API/Pointer_Lock_API">Using Pointer Lock API</a></li>
+</ul>

@@ -9,40 +9,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toISOString
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`toISOString()`** devuelve una cadena en el formato _simplificado_ extendido ISO ([ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)), que siempre mide 24 o 27 caracteres de largo: (`YYYY-MM-DDTHH:mm:ss.sssZ` or `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectivamente). El uso horario no tiene retraso respecto a UTC, como lo denota el sufijo `"Z"`.
+<p>El método <strong><code>toISOString()</code></strong> devuelve una cadena en el formato <em>simplificado</em> extendido ISO (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>), que siempre mide 24 o 27 caracteres de largo: (<code><var>YYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code> or <code><var>±</var><var>YYYYYY</var>-<var>MM</var>-<var>DD</var>T<var>HH</var>:<var>mm</var>:<var>ss.sss</var>Z</code>, respectivamente). El uso horario no tiene retraso respecto a UTC, como lo denota el sufijo <code>"Z"</code>.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    dateObj.toISOString()
+<pre class="syntaxbox notranslate"><code><var>dateObj</var>.toISOString()</code>
+</pre>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-Una cadena que representa la fecha dada en el formato [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) según la hora universal.
+<p>Una cadena que representa la fecha dada en el formato <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> según la hora universal.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `toISOString()`
+<h3 id="Usando_toISOString">Usando <code>toISOString()</code></h3>
 
-```js
-var today = new Date('05 October 2011 14:48 UTC');
+<pre class="brush: js notranslate">var today = new Date('05 October 2011 14:48 UTC');
 
 console.log(today.toISOString()); // Devuelve 2011-10-05T14:48:00.000Z
-```
+</pre>
 
-El ejemplo de arriba usa una cadena no estándar que podría no ser interpretada correctamente en navegadores distintos de Firefox.
+<p>El ejemplo de arriba usa una cadena no estándar que podría no ser interpretada correctamente en navegadores distintos de Firefox.</p>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-Este método fue estandarizado en ECMA-262 5° edición. Los motores javascript que no han sido actualizados para soportar este método pueden solucionar su ausencia de la siguiente manera:
+<p>Este método fue estandarizado en ECMA-262 5° edición. Los motores javascript que no han sido actualizados para soportar este método pueden solucionar su ausencia de la siguiente manera:</p>
 
-```js
-if (!Date.prototype.toISOString) {
+<pre class="brush: js notranslate">if (!Date.prototype.toISOString) {
   (function() {
 
     function pad(number) {
-      if (number < 10) {
+      if (number &lt; 10) {
         return '0' + number;
       }
       return number;
@@ -61,21 +60,38 @@ if (!Date.prototype.toISOString) {
 
   }());
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                   | Estatus                  | Comentario                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.9.5.43', 'Date.prototype.toISOString')}}                     | {{Spec2('ES5.1')}} | Definición inicial. Implementado en javascript 1.8 |
-| {{SpecName('ES6', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}} | {{Spec2('ES6')}}     |                                                    |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.9.5.43', 'Date.prototype.toISOString')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td>Definición inicial. Implementado en javascript 1.8</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Date.toISOString")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+<ul>
+ <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
+ <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
+ <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
+</ul>

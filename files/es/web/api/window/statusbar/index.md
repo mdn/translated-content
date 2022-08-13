@@ -3,53 +3,70 @@ title: Window.statusbar
 slug: Web/API/Window/statusbar
 translation_of: Web/API/Window/statusbar
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-Retorna el objeto statusbar, la visibilidad se puede alternar en la ventana.
+<p>Retorna el objeto statusbar, la visibilidad se puede alternar en la ventana.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    objRef = window.statusbar
+<pre class="syntaxbox"><var>objRef</var> = window.statusbar
+</pre>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-El siguiente ejemplo HTML muestra una forma de utilizar la propiedad visible de los diversos objetos de "bar", y tambien el cambio de privilegios nesesarios para escribir en la propiedad visible para cada una de las ventanas existentes.
+<p>El siguiente ejemplo HTML muestra una forma de utilizar la propiedad visible de los diversos objetos de "bar", y tambien el cambio de privilegios nesesarios para escribir en la propiedad visible para cada una de las ventanas existentes.</p>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>Various DOM Tests</title>
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;Various DOM Tests&lt;/title&gt;
 
-<script>
+&lt;script&gt;
 // cambia el estado de la barra en la ventana existente
 netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
 window.statusbar.visible=!window.statusbar.visible;
-</script>
+&lt;/script&gt;
 
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
-</html>
-```
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Various DOM Tests&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-Al cargar la pagina del ejemplo anterior se muestra el siguiente cuadro de dialogo:![](https://mdn.mozillademos.org/files/550/Modify_any_open_window_dialog.png)
+<p>Al cargar la pagina del ejemplo anterior se muestra el siguiente cuadro de dialogo:<img alt="" src="https://mdn.mozillademos.org/files/550/Modify_any_open_window_dialog.png" style="height: 262px; width: 607px;"></p>
 
-Para alternar la visibilidad de las barras, debe de firmar sus scripts o abilitar los privilegios apropiados, como en el ejemplo anterior. Tenga en cuenta que cambiar la visibilidad de manera dinamica de las barras de herramientas puede cambiar el tamaño de la ventana de forma dramatica y afectando de manera significativa el rendimiento de su pagina.
+<p>Para alternar la visibilidad de las barras,  debe de firmar sus scripts o abilitar los privilegios apropiados, como en el ejemplo anterior. Tenga en cuenta que cambiar la visibilidad de manera dinamica de las barras de herramientas puede cambiar el tamaño de la ventana de forma dramatica y afectando de manera significativa el rendimiento de su pagina.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                   | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}} | {{Spec2('HTML5 W3C')}}     |            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-window-statusbar', 'Window.statusbar')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Ver tambien
+<h2 id="See_also" name="See_also">Ver tambien</h2>
 
-- [window.locationbar](/es/docs/Web/API/Window.locationbar), [window.menubar](/es/docs/Web/API/Window.menubar), [window.personalbar](/es/docs/Web/API/Window.personalbar), [window.scrollbars](/es/docs/Web/API/Window.scrollbars), [window.toolbar](/es/docs/Web/API/Window.toolbar)
+<ul>
+ <li><a href="/en-US/docs/Web/API/Window.locationbar">window.locationbar</a>, <a href="/en-US/docs/Web/API/Window.menubar">window.menubar</a>, <a href="/en-US/docs/Web/API/Window.personalbar">window.personalbar</a>, <a href="/en-US/docs/Web/API/Window.scrollbars">window.scrollbars</a>, <a href="/en-US/docs/Web/API/Window.toolbar">window.toolbar</a></li>
+</ul>

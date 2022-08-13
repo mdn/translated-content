@@ -8,28 +8,27 @@ tags:
   - Referencia
 translation_of: Web/CSS/block-size
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<p>{{CSSRef}}{{SeeCompatTable}}</p>
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`block-size`** [CSS](/es/docs/Web/CSS "CSS") define el tamaño horizontal o vertical de los elementos en bloque, dependiendo de los modos de escritura. estos corresponden ya sea a la propiedad {{cssxref("width")}} o la propiedad {{cssxref("height")}}, dependiendo de los valores de {{cssxref("writing-mode")}}.
+<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <strong><code>block-size</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> define el tamaño horizontal o vertical de los elementos en bloque, dependiendo de los modos de escritura. estos corresponden ya sea a la propiedad {{cssxref("width")}} o la propiedad {{cssxref("height")}}, dependiendo de los valores de {{cssxref("writing-mode")}}.</p>
 
-{{EmbedInteractiveExample("pages/css/block-size.html")}}
+<p>{{EmbedInteractiveExample("pages/css/block-size.html")}} </p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`block-size`** define el tamaño horizontal y vertical del bloque de un elemento, dependiendo de su modo de escritura. Corresponde a la propiedad {{cssxref("width")}} o {{cssxref("height")}}, dependiendo del valor definido en {{cssxref("writing-mode")}}.
+<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <strong><code>block-size</code></strong> define el tamaño horizontal y vertical del bloque de un elemento, dependiendo de su modo de escritura. Corresponde a la propiedad {{cssxref("width")}} o {{cssxref("height")}}, dependiendo del valor definido en {{cssxref("writing-mode")}}.</p>
 
-Si el modo de escritura está orientado verticalmente, el valor de `block-size` se relaciona con la anchura del elemento, de lo contrario, se relaciona con la altura del elemento. Está relacionada con {{cssxref("inline-size")}}, la cual define las otras dimensiones del elemento.
+<p>Si el modo de escritura está orientado verticalmente, el valor de <code>block-size</code> se relaciona con la anchura del elemento, de lo contrario, se relaciona con la altura del elemento. Está relacionada con {{cssxref("inline-size")}}, la cual define las otras dimensiones del elemento.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-/* <length> values */
+<pre class="brush:css">/* &lt;length&gt; values */
 block-size: 300px;
 block-size: 25em;
 
-/* <percentage> values */
+/* &lt;percentage&gt; values */
 block-size: 75%;
 
 /* Keyword values */
@@ -45,47 +44,59 @@ block-size: auto;
 block-size: inherit;
 block-size: initial;
 block-size: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-La propiedad `block-size` toma los mismos valores que las propiedades {{cssxref("width")}} y {{cssxref("height")}}.
+<p>La propiedad <code>block-size</code> toma los mismos valores que las propiedades {{cssxref("width")}} y {{cssxref("height")}}.</p>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### Contenido HTML
+<h3 id="Contenido_HTML">Contenido HTML</h3>
 
-```html
-<p class="texto">Texto de ejemplo</p>
-```
+<pre class="brush: html">&lt;p class="texto"&gt;Texto de ejemplo&lt;/p&gt;
+</pre>
 
-### Contenido CSS
+<h3 id="Contenido_CSS">Contenido CSS</h3>
 
-```css
-.texto {
+<pre class="brush: css">.texto {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 200px;
-}
-```
+}</pre>
 
-{{EmbedLiveSample("Ejemplo")}}
+<p>{{EmbedLiveSample("Ejemplo")}}</p>
 
-## Especificación
+<h2 id="Especificación">Especificación</h2>
 
-| Especificación                                                                                                   | Estatus                                          | Comentarios        |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}}</td>
+   <td>{{Spec2("CSS Logical Properties")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("css.properties.block-size")}}
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- Las propiedades físicas asignadas: {{cssxref("width")}} y {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+<ul>
+ <li>Las propiedades físicas asignadas: {{cssxref("width")}} y {{cssxref("height")}}</li>
+ <li>{{cssxref("writing-mode")}}</li>
+</ul>

@@ -4,26 +4,30 @@ slug: Web/API/Window/popstate_event
 translation_of: Web/API/WindowEventHandlers/onpopstate
 original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-La propiedad **`onpopstate`** del [mixin](/es/docs/Glossary/Mixin) {{domxref("WindowEventHandlers")}} es el {{event("Event_handlers", "event handler")}} para procesar eventos [`popstate`](/en-US/docs/Web/API/Window/popstate_event) de la ventana.
+<p>La propiedad <strong><code>onpopstate</code></strong> del <a href="/en-US/docs/Glossary/Mixin">mixin</a> {{domxref("WindowEventHandlers")}} es el {{event("Event_handlers", "event handler")}} para procesar eventos <code><a href="/en-US/docs/Web/API/Window/popstate_event">popstate</a></code> de la ventana.</p>
 
-Se envía un evento `popstate` a la ventana cada vez que la entrada activa de la historia cambia entre otra otras dos entradas del mismo documento. Si la entrada de la historia fue creada al llamar a `history.pushState()`, o fue afectada por una llamada a `history.replaceState()`, la propiedad `state` del evento `popstate` contendrá una copia del objeto de estado de la entrada de la hisotria.
+<p>Se envía un evento <code>popstate</code> a la ventana cada vez que la entrada activa de la historia cambia entre otra otras dos entradas del mismo documento. Si la entrada de la historia fue creada al llamar a <code>history.pushState()</code>, o fue afectada por una llamada a <code>history.replaceState()</code>, la propiedad <code>state</code> del evento <code>popstate</code> contendrá una copia del objeto de estado de la entrada de la hisotria.</p>
 
-> **Nota:** Llamar a `history.pushState()` o a `history.replaceState()` no dispararán un evento `popstate`. El evento `popstate` solamente se dispará realizando una acción de navegador, tal como pulsar el botón volver (o llamando a `history.back()` en JavaScript), mientras se navega entre dos entradas de la historia de un mismo documento.
+<div class="note">
+<p><strong>Nota</strong>: Llamar a <code>history.pushState()</code> o a <code>history.replaceState()</code> no dispararán un evento <code>popstate</code>. El evento <code>popstate</code> solamente se dispará realizando una acción de navegador, tal como pulsar el botón volver (o llamando a <code>history.back()</code> en JavaScript), mientras se navega entre dos entradas de la historia de un mismo documento.</p>
+</div>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    window.onpopstate = funcRef;
+<pre class="syntaxbox">window.onpopstate = <em>funcRef</em>;
+</pre>
 
-- `funcRef` es una función manejadora (handler).
+<ul>
+ <li><code>funcRef</code> es una función manejadora (handler).</li>
+</ul>
 
-## El evento popstate
+<h2 id="The_popstate_event" name="The_popstate_event">El evento popstate</h2>
 
-Por ejemplo, la página en `http://example.com/example.html` ejecutando el código siguiente, generará alertas como se indica.:
+<p>Por ejemplo, la página en <code>http://example.com/example.html</code> ejecutando el código siguiente, generará alertas como se indica.:</p>
 
-```js
-window.onpopstate = function(event) {
+<pre class="brush:js">window.onpopstate = function(event) {
   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
 };
 
@@ -33,22 +37,39 @@ history.replaceState({page: 3}, "title 3", "?page=3");
 history.back(); // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back(); // alerts "location: http://example.com/example.html, state: null
 history.go(2);  // alerts "location: http://example.com/example.html?page=3, state: {"page":3}
-```
+</pre>
 
-Tenga en cuenta que, a pesar de que la entrada original (para `http://example.com/example.html`) no tiene un objeto de estado asociado, el evento `popstate` se dispara igualemente cuando se activa la entrada después de la segunda llamada a `history.back()`.
+<p>Tenga en cuenta que, a pesar de que la entrada original (para <code>http://example.com/example.html</code>) no tiene un objeto de estado asociado, el evento <code>popstate</code> se dispara igualemente cuando se activa la entrada después de la segunda llamada a <code>history.back()</code>.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                        | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#handler-window-onpopstate', 'onpopstate')}} | {{Spec2('HTML WHATWG')}} |         |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webappapis.html#handler-window-onpopstate', 'onpopstate')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("api.WindowEventHandlers.onpopstate")}}
 
-## Vea también
 
-- {{domxref("window.history")}}
-- [Manipulando la historia del navegador](/es/docs/Web/Guide/DOM/Manipulating_the_browser_history)
-- [Ejemplo de navegación con Ajax](/es/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example)
+<p>{{Compat("api.WindowEventHandlers.onpopstate")}}</p>
+
+<h2 id="See_also" name="See_also">Vea también</h2>
+
+<ul>
+ <li>{{domxref("window.history")}}</li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history">Manipulando la historia del navegador</a></li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example">Ejemplo de navegación con Ajax</a></li>
+</ul>

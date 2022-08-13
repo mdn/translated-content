@@ -5,36 +5,52 @@ tags:
   - Pantalla completa
 translation_of: Web/API/Element/requestFullScreen
 ---
-{{APIRef("DOM")}}{{seeCompatTable}}
+<div>{{APIRef("DOM")}}{{seeCompatTable}}</div>
 
-Asynchronously requests that the element be made full-screen.
+<p>Asynchronously requests that the element be made full-screen.</p>
 
-## Syntax
+<h2 id="Syntax">Syntax</h2>
 
-    element.mozRequestFullScreen();
+<pre class="syntaxbox">element.mozRequestFullScreen();
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-No esta garantizado que el elemento se cambie a modo pantalla completa. Si la autorización para entrar a modo pantalla completa es permitida, el documento obtendrá un evento "mozfullscreenchange" para hacerle saber que esta en modo pantalla completa en ese momento. Si la autorización es denegada, el documento obtiene un evento "mozfullscreenerror".
+<p>No esta garantizado que el elemento se cambie a modo pantalla completa. Si la autorización para entrar a modo pantalla completa es permitida, el documento obtendrá un evento "mozfullscreenchange" para hacerle saber que esta en modo pantalla completa en ese momento. Si la autorización es denegada, el documento obtiene un evento "mozfullscreenerror".</p>
 
-Ve a [Using full-screen mode](/es/docs/Web/Guide/API/DOM/Using_full_screen_mode) para mas detalles y ejemplos.
+<p>Ve a <a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Using full-screen mode</a> para mas detalles y ejemplos.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Fullscreen", "#dom-element-requestfullscreen", "Element.requestFullScreen()")}} | {{Spec2("Fullscreen")}} | Initial definition |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Fullscreen", "#dom-element-requestfullscreen", "Element.requestFullScreen()")}}</td>
+   <td>{{Spec2("Fullscreen")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.Element.requestFullscreen")}}
 
-## Mira también
+<h2 id="Mira_también">Mira también</h2>
 
-- [Using full-screen mode](/es/docs/Web/Guide/API/DOM/Using_full_screen_mode)
-- {{domxref("document.mozCancelFullScreen()")}}
-- {{domxref("document.mozFullScreen")}}
-- {{domxref("document.mozFullScreenElement")}}
-- {{domxref("document.mozFullScreenEnabled")}}
-- {{cssxref(":-moz-full-screen")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Using full-screen mode</a></li>
+ <li>{{domxref("document.mozCancelFullScreen()")}}</li>
+ <li>{{domxref("document.mozFullScreen")}}</li>
+ <li>{{domxref("document.mozFullScreenElement")}}</li>
+ <li>{{domxref("document.mozFullScreenEnabled")}}</li>
+ <li>{{cssxref(":-moz-full-screen")}}</li>
+ <li>{{HTMLAttrXRef("allowfullscreen", "iframe")}}</li>
+</ul>

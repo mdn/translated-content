@@ -7,32 +7,34 @@ tags:
 translation_of: Web/XSLT/Element/if
 original_slug: Web/XSLT/if
 ---
-{{XsltRef}}
-El elemento \<xsl:if> contiene un atributo a probar y una plantilla. Si el atributo resulta verdadero, la plantilla es procesada. Este comportamiento es similar a la sentencia if de otros lenguajes. Sin embargo, para conseguir la funcionalidad de una sentencia if-then-else, es necesario utilizar el elemento \<xsl:choose> con un elemento hijo \<xsl:when>, y otro elemento hijo \<xsl:otherwise>
+<p>{{XsltRef}}<br>
+ El elemento &lt;xsl:if&gt; contiene un atributo a probar y una plantilla. Si el atributo resulta verdadero, la plantilla es procesada. Este comportamiento es similar a la sentencia if de otros lenguajes. Sin embargo, para conseguir la funcionalidad de una sentencia if-then-else, es necesario utilizar el elemento &lt;xsl:choose&gt; con un elemento hijo &lt;xsl:when&gt;, y otro elemento hijo &lt;xsl:otherwise&gt;</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    <xsl:if test=EXPRESSION>
-    	TEMPLATE
-    </xsl:if>
+<pre>&lt;xsl:if test=EXPRESSION&gt;
+	TEMPLATE
+&lt;/xsl:if&gt;</pre>
 
-### Atributos requeridos
+<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
 
-- `test`
-  - : Contiene una expresión XPath que puede ser evaluada (usando las reglas definidas para `boolean( )` si es necesario) como un valor boleano. Si el valor resulta verdadero, la plantilla es procesada; si resulta falso, no se lleva a cabo ninguna acción.
+<dl>
+ <dt><code>test</code></dt>
+ <dd>Contiene una expresión XPath que puede ser evaluada (usando las reglas definidas para <code>boolean( )</code> si es necesario) como un valor boleano. Si el valor resulta verdadero, la plantilla es procesada; si resulta falso, no se lleva a cabo ninguna acción.</dd>
+</dl>
 
-### Atributos opcionales
+<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Tipo
+<h3 id="Tipo" name="Tipo">Tipo</h3>
 
-Instrucción, aparece dentro de una plantilla.
+<p>Instrucción, aparece dentro de una plantilla.</p>
 
-### Definido
+<h3 id="Definido" name="Definido">Definido</h3>
 
-XSL sección 9.1.
+<p>XSL sección 9.1.</p>
 
-### Soporte en Gecko
+<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
 
-Soportado
+<p>Soportado</p>

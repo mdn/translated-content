@@ -3,27 +3,26 @@ title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
 translation_of: Web/API/BaseAudioContext/createBiquadFilter
 ---
-{{ APIRef("Web Audio API") }}
+<p>{{ APIRef("Web Audio API") }}</p>
 
-El metodo `createBiquadFilter()` de la interfaz {{ domxref("BaseAudioContext") }} crea un {{ domxref("BiquadFilterNode") }}, el cual representa un filtro de segundo orden configurable, asi como varios tipos de filtros comunes diferentes.
+<div>
+<p>El metodo <code>createBiquadFilter()</code> de la interfaz {{ domxref("BaseAudioContext") }} crea un {{ domxref("BiquadFilterNode") }}, el cual representa un filtro de segundo orden configurable, asi como varios tipos de filtros comunes diferentes.</p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```js
-var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();
-```
+<pre class="brush: js">var audioCtx = new AudioContext();
+var biquadFilter = audioCtx.createBiquadFilter();</pre>
 
-### Retorna
+<h3 id="Description" name="Description">Retorna</h3>
 
-Un {{domxref("BiquadFilterNode")}}.
+<p>Un {{domxref("BiquadFilterNode")}}.</p>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-El siguiente ejemplo muestra el uso básico de un AudioContext para crear un nodo de filtro Biquad. Para ver el ejemplo trabanjando completamente, mire nuestra demostración [voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) (mirar tambien [source code](https://github.com/mdn/voice-change-o-matic)).
+<p>El siguiente ejemplo muestra el uso básico de un AudioContext para crear un nodo de filtro Biquad. Para ver el ejemplo trabanjando completamente, mire nuestra demostración <a href="http://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a> (mirar tambien <a href="https://github.com/mdn/voice-change-o-matic">source code</a>).</p>
 
-```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Configurar los diferentes nodos de audio que usaremos para la aplicación.
 var analyser = audioCtx.createAnalyser();
@@ -46,19 +45,31 @@ gainNode.connect(audioCtx.destination);
 
 biquadFilter.type = "lowshelf";
 biquadFilter.frequency.value = 1000;
-biquadFilter.gain.value = 25;
-```
+biquadFilter.gain.value = 25;</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificaciones                                                                                                                 | Estados                              | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbiquadfilter', 'createBiquadFilter()')}} | {{Spec2('Web Audio API')}} |            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificaciones</th>
+   <th scope="col">Estados</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createbiquadfilter', 'createBiquadFilter()')}}</td>
+   <td>{{Spec2('Web Audio API')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con el navegador
+<h2 id="Compatibilidad_con_el_navegador">Compatibilidad con el navegador</h2>
 
 {{Compat("api.BaseAudioContext.createBiquadFilter")}}
 
-## Ver tambien
+<h2 id="Ver_tambien">Ver tambien</h2>
 
-- [Using the Web Audio API](/es/docs/Web_Audio_API/Using_Web_Audio_API)
+<ul>
+ <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+</ul>

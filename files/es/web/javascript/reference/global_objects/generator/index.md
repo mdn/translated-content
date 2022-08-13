@@ -12,51 +12,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "función generator", "", 1)}} y es conformado tanto el protocolo iterable como el protocolo iterador.
 
-## Constructor
 
-Este objeto no puede ser instanciado directamente. En su lugar, una instancia del objeto `Generator` puede ser devuelta por una [función generator](/es/docs/Web/JavaScript/Referencia/Sentencias/function*):
+<p>El objeto <code>Generator</code> es retornado por una {{jsxref("Statements/function*", "función generator", "", 1)}} y es conformado tanto el protocolo iterable como el protocolo iterador.</p>
 
-    	function* gen() {
-    	  yield 1;
-    	  yield 2;
-    	  yield 3;
-    	}
+<h2 id="Constructor">Constructor</h2>
 
-    	var g = gen(); // "Generator { }"
+<p>Este objeto no puede ser instanciado directamente. En su lugar, una instancia del objeto <code>Generator</code> puede ser devuelta por una <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/function*">función generator</a>:</p>
 
-## Métodos de instanciación
+<pre class="syntaxbox notranslate">	function* gen() {
+	  yield 1;
+	  yield 2;
+	  yield 3;
+	}
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}_
+	var g = gen(); // "Generator { }"</pre>
 
-- {{jsxref("Generator.prototype.next()")}}
-  - : Retorna el valor ofecido por la expresión {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Generator.prototype.return()")}}
-  - : Retorna el valor dado y finaliza el generador.
-- {{jsxref("Generator.prototype.throw()")}}
-  - : Lanza un error al generador (también finaliza el generador, a menos que sea atrapado desde ese generador)
+<dl>
+</dl>
 
-## Propiedades
+<h2 id="Métodos_de_instanciación">Métodos de instanciación</h2>
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}_
+<p><em>Tambien hereda propiedades de {{JSxRef("Iterator")}}</em></p>
 
-- `Generator.prototype.constructor`
-  - : Especifica la funciòn que construye el prototipo del objeto.
+<dl>
+ <dt>{{jsxref("Generator.prototype.next()")}}</dt>
+ <dd>Retorna el valor ofecido por la expresión {{jsxref("Operators/yield", "yield")}}</dd>
+ <dt>{{jsxref("Generator.prototype.return()")}}</dt>
+ <dd>Retorna el valor dado y finaliza el generador.</dd>
+ <dt>{{jsxref("Generator.prototype.throw()")}}</dt>
+ <dd>Lanza un error al generador (también finaliza el generador, a menos que sea atrapado desde ese generador)</dd>
+</dl>
 
-<!---->
+<h2 id="Propiedades">Propiedades</h2>
 
-- `Generator.prototype[@@toStringTag]`
-  - : La cuerda `"Generator"`.
+<p><em>Tambien hereda propiedades de {{JSxRef("Iterator")}}</em></p>
 
-## Ejemplo
+<dl>
+ <dt><code>Generator.prototype.constructor</code></dt>
+ <dd>Especifica la funciòn que construye el prototipo del objeto.</dd>
+</dl>
 
-### Un iterador infinito
+<dl>
+ <dt><code>Generator.prototype[@@toStringTag]</code></dt>
+ <dd>La cuerda <code>"Generator"</code>.</dd>
+</dl>
 
-```js
-	function* idMaker() {
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<h3 id="Un_iterador_infinito">Un iterador infinito</h3>
+
+<pre class="brush: js notranslate">	function* idMaker() {
 	    var index = 0;
 	    while(true)
 	        yield index++;
@@ -67,33 +75,31 @@ _Tambien hereda propiedades de {{JSxRef("Iterator")}}_
 	console.log(gen.next().value); // 0
 	console.log(gen.next().value); // 1
 	console.log(gen.next().value); // 2
-	// ...
-```
+	// ...</pre>
 
-## Objetos generadores legados
+<h2 id="Objetos_generadores_legados">Objetos generadores legados</h2>
 
-Firefox(SpderMonkey) tambén implementa una versón mas temprana de generadores en JavaScript 1.7, donde el asterisco (\*) en la declaración de la funcion no era necesario(sólo use la palabra reservada yield en el cuerpo de la función). Sin embargo, los generadores legados se encuentran depreciados. No los use. Serán removidos ({{bug(1083482)}}).
+<p>Firefox(SpderMonkey) tambén implementa una versón mas temprana de generadores en JavaScript 1.7, donde el asterisco (*) en la declaración de la funcion no era necesario(sólo use la palabra reservada yield en el cuerpo de la función). Sin embargo, los generadores legados se encuentran depreciados. No los use. Serán removidos ({{bug(1083482)}}).</p>
 
-### Métodos de generadores legados
+<h3 id="Métodos_de_generadores_legados">Métodos de generadores legados</h3>
 
-- `Generator.prototype.next() `{{non-standard_inline}}
+<dl>
+ <dt><code>Generator.prototype.next() </code>{{non-standard_inline}}</dt>
+ <dt></dt>
+ <dt>Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}.  Esto se corresponde con el método next() en el objeto generador de ES2015.</dt>
+ <dt></dt>
+ <dt><code>Generator.prototype.close()</code> {{non-standard_inline}}</dt>
+ <dd><br>
+ Cierra el generador. Sí el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.</dd>
+ <dt><code>Generator.prototype.send()</code> {{non-standard_inline}}</dt>
+ <dd>Utilizado para enviar un valor al generador. El valor es retornado por la expresion {{jsxref("Operators/yield", "yield")}}, y retorna el valor ofrecido por la siguiente expresion {{jsxref("Operators/yield", "yield")}}. <code>send(x)</code> Se corresponde a <code>next(x)</code> en el objeto generador de ECMAScript 2015.</dd>
+ <dt><strong><code>Generator.</code></strong><code>prototype.</code> <strong><code>throw()</code> </strong> {{non-standard_inline}}</dt>
+ <dd>Lanza un error al generador. Esto se corresponde con el metodo throw() en el objeto genererador de ES2015.</dd>
+</dl>
 
-  Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}. Esto se corresponde con el método next() en el objeto generador de ES2015.
+<h3 id="Ejemplo_de_generador_legado">Ejemplo de generador legado</h3>
 
-  `Generator.prototype.close()` {{non-standard_inline}}
-
-  - :
-    Cierra el generador. Sí el método next() es llamado por la expresión {{jsxref("StopIteration")}}, un error será lanzado. Esto se corresponde con el método return() del objeto generador de ES2015.
-
-- `Generator.prototype.send()` {{non-standard_inline}}
-  - : Utilizado para enviar un valor al generador. El valor es retornado por la expresion {{jsxref("Operators/yield", "yield")}}, y retorna el valor ofrecido por la siguiente expresion {{jsxref("Operators/yield", "yield")}}. `send(x)` Se corresponde a `next(x)` en el objeto generador de ECMAScript 2015.
-- **`Generator.`**`prototype.` **`throw()` **{{non-standard_inline}}
-  - : Lanza un error al generador. Esto se corresponde con el metodo throw() en el objeto genererador de ES2015.
-
-### Ejemplo de generador legado
-
-```js
-	function fibonacci() {
+<pre class="brush: js notranslate">	function fibonacci() {
 	  var a = yield 1;
 	  yield a * 2;
 	}
@@ -104,40 +110,66 @@ Firefox(SpderMonkey) tambén implementa una versón mas temprana de generadores 
 	console.log(it.send(10)); // 20
 	console.log(it.close());  // undefined
 	console.log(it.next());   // throws StopIteration (as the generator is now closed)
+	</pre>
 
-```
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Especificaciones
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-generator-objects', 'Generator objects')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+  <tr>
+   <td></td>
+   <td></td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-| Especificación                                                                               | Estado                       | Comentario         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ES2015')}}     | Definición inicial |
-| {{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ESDraft')}} |                    |
-|                                                                                              |                              |                    |
-|                                                                                              |                              |                    |
-
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Generator")}}
 
-##
+<h2 id="sect1"></h2>
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-### Generadores Legados
+<h3 id="Generadores_Legados">Generadores Legados</h3>
 
-- {{jsxref("Statements/Legacy_generator_function", "The legacy generator function", "", 1)}}
-- {{jsxref("Operators/Legacy_generator_function", "The legacy generator function expression", "", 1)}}
-- {{jsxref("StopIteration")}}
-- [The legacy Iterator protocol](/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol)
+<ul>
+ <li>{{jsxref("Statements/Legacy_generator_function", "The legacy generator function", "", 1)}}</li>
+ <li>{{jsxref("Operators/Legacy_generator_function", "The legacy generator function expression", "", 1)}}</li>
+ <li>{{jsxref("StopIteration")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol">The legacy Iterator protocol</a></li>
+</ul>
 
-### Generadores ES2015
+<h3 id="Generadores_ES2015">Generadores ES2015</h3>
 
-- {{jsxref("Functions", "Functions", "", 1)}}
-- {{jsxref("Statements/function", "function")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Function")}}
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}}
-- [The Iterator protocol](/es/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+<ul>
+ <li>{{jsxref("Functions", "Functions", "", 1)}}</li>
+ <li>{{jsxref("Statements/function", "function")}}</li>
+ <li>{{jsxref("Operators/function", "function expression")}}</li>
+ <li>{{jsxref("Function")}}</li>
+ <li>{{jsxref("Statements/function*", "function*")}}</li>
+ <li>{{jsxref("Operators/function*", "function* expression")}}</li>
+ <li>{{jsxref("GeneratorFunction")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
+</ul>

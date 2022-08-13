@@ -5,18 +5,25 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/collapseToStart
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Traslada el foco de la selección al mismo punto que el ancla. El ancla no se mueve. Si el contenido es enfocado y editable, el cursor parpadeará ahí.
+<p>Traslada el foco de la selección al mismo punto que el ancla. El ancla no se mueve. Si el contenido es enfocado y editable, el cursor parpadeará ahí.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    sel.collapseToStart()
+<pre class="eval"><i>sel</i>.collapseToStart()
+</pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-{{ languages( { "en": "en/DOM/Selection/collapseToStart", "it": "it/DOM/Selection/collapseToStart", "pl": "pl/DOM/Selection/collapseToStart" } ) }}
+<p> </p>
+
+<p> </p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/DOM/Selection/collapseToStart", "it": "it/DOM/Selection/collapseToStart", "pl": "pl/DOM/Selection/collapseToStart" } ) }}</p>

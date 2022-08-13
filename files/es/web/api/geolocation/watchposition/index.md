@@ -3,34 +3,35 @@ title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 translation_of: Web/API/Geolocation/watchPosition
 ---
-{{ APIref("Geolocation API") }}
+<p>{{ APIref("Geolocation API") }}</p>
 
-El método **`Geolocation.watchPosition()`** se utiliza para registrar una función de controlador que se llamará automáticamente cada vez que la posición del dispositivo cambia. También puede, opcionalmente, especificar una función de devolución de la gestión de errores.
+<p><span id="result_box" lang="es"><span class="hps">El método</span> <strong><code>Geolocation.watchPosition()</code></strong> <span class="hps">se utiliza para registrar</span> <span class="hps">una función de controlador</span> <span class="hps">que se llamará</span> <span class="hps">automáticamente cada vez que</span> <span class="hps">la posición</span> <span class="hps">del dispositivo cambia</span><span>.</span> <span class="hps">También puede</span><span>,</span> <span class="hps">opcionalmente</span><span>,</span> <span class="hps">especificar una</span> <span class="hps">función de devolución de</span> <span class="hps">la gestión de errores</span><span>.</span></span></p>
 
-Este método devuelve un valor de ID de seguimiento que se puede utilizar para anular el registro del controlador pasándolo al método [Geolocation.clearWatch()](/es/docs/Web/API/Geolocation.clearWatch).
+<p><span id="result_box" lang="es"><span class="hps">Este método devuelve un</span> <span class="hps">valor de ID de</span> <span class="hps">seguimiento</span> <span class="hps">que</span> <span class="hps">se puede utilizar para</span> <span class="hps">anular el registro del</span> <span class="hps">controlador</span> <span class="hps">pasándolo</span> <span class="hps">al método</span> </span><a href="/es/docs/Web/API/Geolocation.clearWatch">Geolocation.clearWatch()</a>.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    id = navigator.geolocation.watchPosition(success, error, options)
+<pre class="syntaxbox"><em>id</em> = navigator.geolocation.watchPosition(<em>success</em>, <em>error</em>, <em>options</em>)</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- _success_
-  - : Una función de devolución de llamada que toma un objeto de posición({{domxref("Position")}}) como parámetro de entrada.
-- _error_ {{optional_inline}}
-  - : Una función de devolución de llamada opcional que toma un objeto {{domxref("PositionError")}} como parámetro de entrada.
-- _options_ {{optional_inline}}
-  - : Un objeto opcional {{domxref("PositionOptions")}}.
+<dl>
+ <dt><em>success</em></dt>
+ <dd><span id="result_box" lang="es"><span class="hps">Una función de</span> <span class="hps">devolución de llamada que</span> <span class="hps">toma un objeto</span> <span class="hps">de posición</span>({{domxref("Position")}}) <span class="hps">como parámetro de entrada</span><span>.</span></span></dd>
+ <dt><em>error</em> {{optional_inline}}</dt>
+ <dd><span id="result_box" lang="es"><span class="hps">Una función</span> <span class="hps">de devolución de llamada</span> <span class="hps">opcional que</span> <span class="hps">toma un objeto</span> {{domxref("PositionError")}} <span class="hps">como parámetro de entrada</span><span>.</span></span></dd>
+ <dt><em>options</em> {{optional_inline}}</dt>
+ <dd>Un objeto opcional {{domxref("PositionOptions")}}.</dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-var id, target, option;
+<pre class="brush: js">var id, target, option;
 
 function success(pos) {
   var crd = pos.coords;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
+  if (target.latitude === crd.latitude &amp;&amp; target.longitude === crd.longitude) {
     console.log('Congratulation, you reach the target');
     navigator.geolocation.clearWatch(id);
   }
@@ -52,21 +53,36 @@ options = {
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
-```
+</pre>
 
-## Especificacines
+<h2 id="Especificacines">Especificacines</h2>
 
-| Especificación                                                                                           | Estado                           | Comentario             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation', '#watch-position', 'Geolocation.watchPosition()')}} | {{Spec2('Geolocation')}} | Especificación inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Geolocation', '#watch-position', 'Geolocation.watchPosition()')}}</td>
+   <td>{{Spec2('Geolocation')}}</td>
+   <td>Especificación inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegador
+<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
 
 {{Compat("api.Geolocation.watchPosition")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Uso de la geolocalización](/es/docs/Usar_la_Geolocalizaci%C3%B3n)
-- [Geolocalización](/es/docs/Web/API/Geolocalizaci%C3%B3n).
-- [Geolocation.clearWatch()](/es/docs/Web/API/Geolocation.clearWatch)
-- [Geolocation.getCurrentPosition()](/es/docs/Web/API/Geolocation.getCurrentPosition)
+<ul>
+ <li><a href="/es/docs/Usar_la_Geolocalizaci%C3%B3n">Uso de la geolocalización</a></li>
+ <li><a href="/es/docs/Web/API/Geolocalizaci%C3%B3n">Geolocalización</a>.</li>
+ <li><a href="/es/docs/Web/API/Geolocation.clearWatch">Geolocation.clearWatch()</a></li>
+ <li><a href="/es/docs/Web/API/Geolocation.getCurrentPosition">Geolocation.getCurrentPosition()</a></li>
+</ul>

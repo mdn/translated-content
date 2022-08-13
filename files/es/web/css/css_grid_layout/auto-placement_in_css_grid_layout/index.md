@@ -3,10 +3,11 @@ title: Colocación automática en diseño de cuadrícula CSS
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
-Además de la capacidad de colocar elementos con precisión en una cuadrícula creada, la especificación de diseño de cuadrícula CSS contiene reglas que controlan lo que sucede cuando crea una cuadrícula y no coloca algunos o todos los elementos secundarios. Puede ver la colocación automática en acción de la manera más simple creando una cuadrícula en un conjunto de elementos. Si no proporciona información de ubicación a los elementos, se colocarán en la cuadrícula, uno en cada celda de la cuadrícula.
+<p><span class="notranslate">Además de la capacidad de colocar elementos con precisión en una cuadrícula creada, la especificación de diseño de cuadrícula CSS contiene reglas que controlan lo que sucede cuando crea una cuadrícula y no coloca algunos o todos los elementos secundarios.</span> <span class="notranslate"> Puede ver la colocación automática en acción de la manera más simple creando una cuadrícula en un conjunto de elementos.</span> <span class="notranslate"> Si no proporciona información de ubicación a los elementos, se colocarán en la cuadrícula, uno en cada celda de la cuadrícula.</span></p>
 
-```css hidden
-* {box-sizing: border-box;}
+<div id="placement_1">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -14,47 +15,50 @@ Además de la capacidad de colocar elementos con precisión en una cuadrícula c
     background-color: #fff4e6;
 }
 
-.wrapper > div {
+.wrapper &gt; div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-```
+</pre>
+</div>
 
-```css
-.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
-```
+</pre>
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+  &lt;div&gt;One&lt;/div&gt;
+  &lt;div&gt;Two&lt;/div&gt;
+  &lt;div&gt;Three&lt;/div&gt;
+  &lt;div&gt;Four&lt;/div&gt;
+  &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>{{ EmbedLiveSample('placement_1', '500', '230') }}</p>
 </div>
-```
 
-{{ EmbedLiveSample('placement_1', '500', '230') }}
+<h2 id="Reglas_predeterminadas_para_la_colocación_automática"><span class="notranslate">Reglas predeterminadas para la colocación automática</span></h2>
 
-## Reglas predeterminadas para la colocación automática
+<p><span class="notranslate">Como puede ver con el ejemplo anterior, si crea una cuadrícula, todos los elementos secundarios se colocarán uno en cada celda de la cuadrícula.</span> <span class="notranslate"> El flujo predeterminado es organizar los elementos por fila.</span> <span class="notranslate"> La cuadrícula colocará un elemento en cada celda de la fila 1. Si ha creado filas adicionales utilizando la propiedad <code>grid-template-rows</code> , entonces grid continuará colocando elementos en estas filas.</span> <span class="notranslate"> Si la cuadrícula no tiene suficientes filas en la cuadrícula explícita para colocar todos los elementos, se crearán nuevas filas <em>implícitas</em> .</span></p>
 
-Como puede ver con el ejemplo anterior, si crea una cuadrícula, todos los elementos secundarios se colocarán uno en cada celda de la cuadrícula. El flujo predeterminado es organizar los elementos por fila. La cuadrícula colocará un elemento en cada celda de la fila 1. Si ha creado filas adicionales utilizando la propiedad `grid-template-rows` , entonces grid continuará colocando elementos en estas filas. Si la cuadrícula no tiene suficientes filas en la cuadrícula explícita para colocar todos los elementos, se crearán nuevas filas _implícitas_ .
+<h3 id="Dimensionar_filas_en_la_cuadrícula_implícita"><span class="notranslate">Dimensionar filas en la cuadrícula implícita</span></h3>
 
-### Dimensionar filas en la cuadrícula implícita
+<p><span class="notranslate">El valor predeterminado para las filas creadas automáticamente en la cuadrícula implícita es que tengan el tamaño automático.</span> <span class="notranslate"> Esto significa que contendrán el contenido agregado a ellos sin causar un desbordamiento.</span></p>
 
-El valor predeterminado para las filas creadas automáticamente en la cuadrícula implícita es que tengan el tamaño automático. Esto significa que contendrán el contenido agregado a ellos sin causar un desbordamiento.
+<p><span class="notranslate">Sin embargo, puede controlar el tamaño de estas filas con la propiedad <code>grid-auto-rows</code> .</span> <span class="notranslate"> Para hacer que todas las filas creadas tengan 100 píxeles de alto, por ejemplo, usaría:</span></p>
 
-Sin embargo, puede controlar el tamaño de estas filas con la propiedad `grid-auto-rows` . Para hacer que todas las filas creadas tengan 100 píxeles de alto, por ejemplo, usaría:
 
-```css hidden
-* {box-sizing: border-box;}
+
+<div id="placement_2">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -62,40 +66,41 @@ Sin embargo, puede controlar el tamaño de estas filas con la propiedad `grid-au
     background-color: #fff4e6;
 }
 
-.wrapper > div {
+.wrapper &gt; div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-```
-
-```html
-<div class="wrapper">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-    <div>Four</div>
-    <div>Five</div>
+</pre>
 </div>
-```
 
-```css
-.wrapper {
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+    &lt;div&gt;One&lt;/div&gt;
+    &lt;div&gt;Two&lt;/div&gt;
+    &lt;div&gt;Three&lt;/div&gt;
+    &lt;div&gt;Four&lt;/div&gt;
+    &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: 100px;
 }
-```
+</pre>
 
-{{ EmbedLiveSample('placement_2', '500', '330') }}
+<p>{{ EmbedLiveSample('placement_2', '500', '330') }}</p>
+</div>
 
-Puede usar [`minmax()`](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://developer.mozilla.org/en-US/docs/Web/CSS/minmax&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhjUmn8CALnPlLGqwXvXDDpfMu0Tww "La documentación sobre esto aún no se ha escrito; por favor considere contribuir!") en su valor para [`grid-auto-rows`](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhgNi8Od6ONl2VQi-luh1_WHMnhvGA "La propiedad CSS grid-auto-rows especifica el tamaño de una pista de fila de cuadrícula creada implícitamente.") permite la creación de filas de un tamaño mínimo pero luego crecer para ajustarse al contenido si es más alto.
+<p><span class="notranslate">Puede usar <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://developer.mozilla.org/en-US/docs/Web/CSS/minmax&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhjUmn8CALnPlLGqwXvXDDpfMu0Tww" title="La documentación sobre esto aún no se ha escrito; por favor considere contribuir!"><code>minmax()</code></a> en su valor para <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhgNi8Od6ONl2VQi-luh1_WHMnhvGA" title="La propiedad CSS grid-auto-rows especifica el tamaño de una pista de fila de cuadrícula creada implícitamente."><code>grid-auto-rows</code></a> permite la creación de filas de un tamaño mínimo pero luego crecer para ajustarse al contenido si es más alto.</span></p>
 
-```css hidden
-* {box-sizing: border-box;}
+<div id="placement_3">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -103,46 +108,47 @@ Puede usar [`minmax()`](https://translate.googleusercontent.com/translate_c?dept
     background-color: #fff4e6;
 }
 
-.wrapper > div {
+.wrapper &gt; div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-```
-
-```html
-<div class="wrapper">
-     <div>One</div>
-     <div>Two</div>
-     <div>Three</div>
-     <div>Four
-     <br>This cell
-     <br>Has extra
-     <br>content.
-     <br>Max is auto
-     <br>so the row expands.
-     </div>
-     <div>Five</div>
+</pre>
 </div>
-```
 
-```css
-.wrapper {
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+     &lt;div&gt;One&lt;/div&gt;
+     &lt;div&gt;Two&lt;/div&gt;
+     &lt;div&gt;Three&lt;/div&gt;
+     &lt;div&gt;Four
+     &lt;br&gt;This cell
+     &lt;br&gt;Has extra
+     &lt;br&gt;content.
+     &lt;br&gt;Max is auto
+     &lt;br&gt;so the row expands.
+     &lt;/div&gt;
+     &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
-```
+</pre>
 
-{{ EmbedLiveSample('placement_3', '500', '330') }}
+<p>{{ EmbedLiveSample('placement_3', '500', '330') }}</p>
+</div>
 
-También puede pasar una lista de pistas, esto se repetirá. La siguiente lista de pistas creará una pista de fila implícita inicial como 100 píxeles y una segunda como `200px` píxeles. Esto continuará mientras se agregue contenido a la cuadrícula implícita. **Las listas de seguimiento no son compatibles con Firefox.**
+<p><span class="notranslate">También puede pasar una lista de pistas, esto se repetirá.</span> <span class="notranslate"> La siguiente lista de pistas creará una pista de fila implícita inicial como 100 píxeles y una segunda como <code>200px</code> píxeles.</span> <span class="notranslate"> Esto continuará mientras se agregue contenido a la cuadrícula implícita.</span> <span class="notranslate"> <strong>Las listas de seguimiento no son compatibles con Firefox.</strong></span></p>
 
-```css hidden
-* {box-sizing: border-box;}
+<div id="placement_4">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -150,102 +156,59 @@ También puede pasar una lista de pistas, esto se repetirá. La siguiente lista 
     background-color: #fff4e6;
 }
 
-.wrapper > div {
+.wrapper &gt; div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-```
-
-```html
-<div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
+</pre>
 </div>
-```
 
-```css
-.wrapper {
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: 100px 200px;
 }
-```
+</pre>
 
-{{ EmbedLiveSample('placement_4', '500', '330') }}
+<p>{{ EmbedLiveSample('placement_4', '500', '330') }}</p>
+</div>
 
-### Colocación automática por columna
+<h3 id="Colocación_automática_por_columna"><span class="notranslate">Colocación automática por columna</span></h3>
 
-También puede pedirle a la cuadrícula que coloque automáticamente los elementos por columna. Usando la propiedad [`grid-auto-flow`](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhhGAPsqylJcBEC8EgSX7Gqqc-us4Q "La propiedad CSS grid-auto-flow controla cómo funciona el algoritmo de colocación automática, especificando exactamente cómo fluyen los elementos colocados automáticamente en la cuadrícula.") con un valor de `column` . En este caso, la cuadrícula agregará elementos en las filas que haya definido utilizando [`grid-template-rows`](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhiibrTdo1Q-C-swZP-9Hj4FqNhSYA "La propiedad CSS grid-template-rows define los nombres de línea y las funciones de tamaño de seguimiento de las filas de la cuadrícula.") . Cuando llena una columna, se moverá a la siguiente columna explícita o creará una nueva pista de columna en la cuadrícula implícita. Al igual que con las pistas de fila implícitas, estas pistas de columna tendrán el tamaño automático. Puede controlar el tamaño de las pistas de columna implícitas con [`grid-auto-columns`](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhisTQnhckNG69vB3s3mdkckl3PnrQ "La propiedad CSS grid-auto-columnas especifica el tamaño de una pista de columna de cuadrícula creada implícitamente.") , esto funciona de la misma manera que [`grid-auto-rows`](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhgNi8Od6ONl2VQi-luh1_WHMnhvGA "La propiedad CSS grid-auto-rows especifica el tamaño de una pista de fila de cuadrícula creada implícitamente.") .
+<p><span class="notranslate">También puede pedirle a la cuadrícula que coloque automáticamente los elementos por columna.</span> <span class="notranslate"> Usando la propiedad <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhhGAPsqylJcBEC8EgSX7Gqqc-us4Q" title="La propiedad CSS grid-auto-flow controla cómo funciona el algoritmo de colocación automática, especificando exactamente cómo fluyen los elementos colocados automáticamente en la cuadrícula."><code>grid-auto-flow</code></a> con un valor de <code>column</code> .</span> <span class="notranslate"> En este caso, la cuadrícula agregará elementos en las filas que haya definido utilizando <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhiibrTdo1Q-C-swZP-9Hj4FqNhSYA" title="La propiedad CSS grid-template-rows define los nombres de línea y las funciones de tamaño de seguimiento de las filas de la cuadrícula."><code>grid-template-rows</code></a> .</span> <span class="notranslate"> Cuando llena una columna, se moverá a la siguiente columna explícita o creará una nueva pista de columna en la cuadrícula implícita.</span> <span class="notranslate"> Al igual que con las pistas de fila implícitas, estas pistas de columna tendrán el tamaño automático.</span> <span class="notranslate"> Puede controlar el tamaño de las pistas de columna implícitas con <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhisTQnhckNG69vB3s3mdkckl3PnrQ" title="La propiedad CSS grid-auto-columnas especifica el tamaño de una pista de columna de cuadrícula creada implícitamente."><code>grid-auto-columns</code></a> , esto funciona de la misma manera que <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhgNi8Od6ONl2VQi-luh1_WHMnhvGA" title="La propiedad CSS grid-auto-rows especifica el tamaño de una pista de fila de cuadrícula creada implícitamente."><code>grid-auto-rows</code></a> .</span></p>
 
-En el siguiente ejemplo, he creado una cuadrícula con tres pistas de fila de 200 píxeles de altura. Estoy colocando automáticamente por columna y las columnas creadas tendrán un ancho de columna de 300 píxeles, luego un ancho de columna de 100 píxeles hasta que haya suficientes pistas de columna para contener todos los elementos.
+<p><span class="notranslate">En el siguiente ejemplo, he creado una cuadrícula con tres pistas de fila de 200 píxeles de altura.</span> <span class="notranslate"> Estoy colocando automáticamente por columna y las columnas creadas tendrán un ancho de columna de 300 píxeles, luego un ancho de columna de 100 píxeles hasta que haya suficientes pistas de columna para contener todos los elementos.</span></p>
 
-```css
-.wrapper {
+
+
+<div id="placement_5">
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-rows: repeat(3, 200px);
     grid-gap: 10px;
     grid-auto-flow: column;
     grid-auto-columns: 300px 100px;
 }
-```
+</pre>
 
-```css hidden
-* {box-sizing: border-box;}
-
-.wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-}
-
-.wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
-}
-```
-
-```html
-<div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-</div>
-```
-
-{{ EmbedLiveSample('placement_5', '500', '640') }}
-
-## El orden de los artículos colocados automáticamente
-
-Una cuadrícula puede contener una mezcla de elementos. Algunos de los elementos pueden tener una posición en la cuadrícula, pero otros pueden colocarse automáticamente. Esto puede ser útil, si tiene un orden de documentos que refleja el orden en que los elementos se ubican en la cuadrícula, es posible que no necesite escribir reglas CSS para colocar absolutamente todo. La especificación contiene una sección larga que detalla el [algoritmo de colocación de elementos de](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://drafts.csswg.org/css-grid/&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhht1KzrS4YJdz-dIfSz4pbcik3Zqg#auto-placement-algo) la [cuadrícula](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://drafts.csswg.org/css-grid/&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhht1KzrS4YJdz-dIfSz4pbcik3Zqg#auto-placement-algo) , sin embargo, para la mayoría de nosotros solo necesitamos recordar algunas reglas simples para nuestros elementos.
-
-### Pedido de documentos modificados
-
-La cuadrícula coloca los elementos a los que no se les ha asignado una posición de cuadrícula en lo que se describe en la especificación como "orden de documento modificado de orden". Esto significa que si ha utilizado la propiedad del `order` , los artículos se colocarán por ese orden, no por su orden DOM. De lo contrario, permanecerán de forma predeterminada en el orden en que se ingresan en el origen del documento.
-
-### Artículos con propiedades de colocación
-
-Lo primero que hará la cuadrícula es colocar cualquier elemento que tenga una posición. En el siguiente ejemplo, tengo 12 elementos de cuadrícula. El elemento 2 y el elemento 5 se han colocado utilizando una colocación basada en líneas en la cuadrícula. Puede ver cómo se colocan esos elementos y luego los otros elementos se colocan automáticamente en los espacios. Los artículos colocados automáticamente se colocarán antes de los artículos colocados en orden DOM, no comienzan después de la posición de un artículo colocado que viene antes que ellos.
-
-```css hidden
-* {box-sizing: border-box;}
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -253,34 +216,80 @@ Lo primero que hará la cuadrícula es colocar cualquier elemento que tenga una 
     background-color: #fff4e6;
 }
 
-.wrapper > div {
+.wrapper &gt; div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-```
-
-```html
-<div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+</pre>
 </div>
-```
 
-```css
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>{{ EmbedLiveSample('placement_5', '500', '640') }}</p>
+</div>
+
+<h2 id="El_orden_de_los_artículos_colocados_automáticamente"><span class="notranslate">El orden de los artículos colocados automáticamente</span></h2>
+
+<p><span class="notranslate">Una cuadrícula puede contener una mezcla de elementos.</span> <span class="notranslate"> Algunos de los elementos pueden tener una posición en la cuadrícula, pero otros pueden colocarse automáticamente.</span> <span class="notranslate"> Esto puede ser útil, si tiene un orden de documentos que refleja el orden en que los elementos se ubican en la cuadrícula, es posible que no necesite escribir reglas CSS para colocar absolutamente todo.</span> <span class="notranslate"> La especificación contiene una sección larga que detalla el <a class="external" href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://drafts.csswg.org/css-grid/&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhht1KzrS4YJdz-dIfSz4pbcik3Zqg#auto-placement-algo" rel="noopener">algoritmo de colocación de elementos de</a> la <a class="external" href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://drafts.csswg.org/css-grid/&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhht1KzrS4YJdz-dIfSz4pbcik3Zqg#auto-placement-algo" rel="noopener">cuadrícula</a> , sin embargo, para la mayoría de nosotros solo necesitamos recordar algunas reglas simples para nuestros elementos.</span></p>
+
+<h3 id="Pedido_de_documentos_modificados"><span class="notranslate">Pedido de documentos modificados</span></h3>
+
+<p><span class="notranslate">La cuadrícula coloca los elementos a los que no se les ha asignado una posición de cuadrícula en lo que se describe en la especificación como "orden de documento modificado de orden".</span> <span class="notranslate"> Esto significa que si ha utilizado la propiedad del <code>order</code> , los artículos se colocarán por ese orden, no por su orden DOM.</span> <span class="notranslate"> De lo contrario, permanecerán de forma predeterminada en el orden en que se ingresan en el origen del documento.</span></p>
+
+<h3 id="Artículos_con_propiedades_de_colocación"><span class="notranslate">Artículos con propiedades de colocación</span></h3>
+
+<p><span class="notranslate">Lo primero que hará la cuadrícula es colocar cualquier elemento que tenga una posición.</span> <span class="notranslate"> En el siguiente ejemplo, tengo 12 elementos de cuadrícula.</span> <span class="notranslate"> El elemento 2 y el elemento 5 se han colocado utilizando una colocación basada en líneas en la cuadrícula.</span> <span class="notranslate"> Puede ver cómo se colocan esos elementos y luego los otros elementos se colocan automáticamente en los espacios.</span> <span class="notranslate"> Los artículos colocados automáticamente se colocarán antes de los artículos colocados en orden DOM, no comienzan después de la posición de un artículo colocado que viene antes que ellos.</span></p>
+
+<div id="placement_6">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
 .wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+</pre>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+   &lt;div&gt;Nine&lt;/div&gt;
+   &lt;div&gt;Ten&lt;/div&gt;
+   &lt;div&gt;Eleven&lt;/div&gt;
+   &lt;div&gt;Twelve&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
@@ -294,52 +303,53 @@ Lo primero que hará la cuadrícula es colocar cualquier elemento que tenga una 
    grid-column: 1 / 3;
    grid-row: 1 / 3;
 }
-```
+</pre>
 
-{{ EmbedLiveSample('placement_6', '500', '450') }}
+<p>{{ EmbedLiveSample('placement_6', '500', '450') }}</p>
+</div>
 
-### Maneja artículos que abarcan pistas
+<h3 id="Maneja_artículos_que_abarcan_pistas"><span class="notranslate">Maneja artículos que abarcan pistas</span></h3>
 
-Puede usar las propiedades de ubicación sin dejar de aprovechar la colocación automática. En el siguiente ejemplo, he agregado al diseño configurando elementos impares para abarcar dos pistas tanto para filas como para columnas. Hago esto con las propiedades [`grid-column-end`](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhiTUP0c3kBpxu_o_84hDEyxHQeuuA "La propiedad CSS de fin de columna de cuadrícula especifica la posición final de un elemento de cuadrícula dentro de la columna de cuadrícula al contribuir una línea, un tramo o nada (automático) a su ubicación de cuadrícula, especificando así el borde del extremo del bloque de su área de cuadrícula.") y [`grid-row-end`](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhiMYehNwPR_y2q7E_32YoeGI3FJ8w "La propiedad CSS de fin de fila de cuadrícula especifica la posición final de un elemento de cuadrícula dentro de la fila de cuadrícula al contribuir una línea, un tramo o nada (automático) a su ubicación de cuadrícula, especificando así el borde final en línea de su área de cuadrícula.") y establezco el valor de esto para `span 2` . Lo que esto significa es que la línea de inicio del artículo se establecerá mediante la colocación automática, y la línea final abarcará dos pistas.
+<p><span class="notranslate">Puede usar las propiedades de ubicación sin dejar de aprovechar la colocación automática.</span> <span class="notranslate"> En el siguiente ejemplo, he agregado al diseño configurando elementos impares para abarcar dos pistas tanto para filas como para columnas.</span> <span class="notranslate"> Hago esto con las propiedades <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhiTUP0c3kBpxu_o_84hDEyxHQeuuA" title="La propiedad CSS de fin de columna de cuadrícula especifica la posición final de un elemento de cuadrícula dentro de la columna de cuadrícula al contribuir una línea, un tramo o nada (automático) a su ubicación de cuadrícula, especificando así el borde del extremo del bloque de su área de cuadrícula."><code>grid-column-end</code></a> y <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhiMYehNwPR_y2q7E_32YoeGI3FJ8w" title="La propiedad CSS de fin de fila de cuadrícula especifica la posición final de un elemento de cuadrícula dentro de la fila de cuadrícula al contribuir una línea, un tramo o nada (automático) a su ubicación de cuadrícula, especificando así el borde final en línea de su área de cuadrícula."><code>grid-row-end</code></a> y establezco el valor de esto para <code>span 2</code> .</span> <span class="notranslate"> Lo que esto significa es que la línea de inicio del artículo se establecerá mediante la colocación automática, y la línea final abarcará dos pistas.</span></p>
 
-Puede ver cómo esto deja huecos en la cuadrícula, en cuanto a los elementos colocados automáticamente si la cuadrícula se encuentra con un elemento que no cabe en una pista, se moverá a la siguiente fila hasta que encuentre un espacio que el elemento pueda caber en.
+<p><span class="notranslate">Puede ver cómo esto deja huecos en la cuadrícula, en cuanto a los elementos colocados automáticamente si la cuadrícula se encuentra con un elemento que no cabe en una pista, se moverá a la siguiente fila hasta que encuentre un espacio que el elemento pueda caber en.</span></p>
 
-```css hidden
-* {box-sizing: border-box;}
+<div id="placement_7">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
 }
 
-.wrapper > div {
+.wrapper &gt; div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-```
-
-```html
-<div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+</pre>
 </div>
-```
 
-```css
-.wrapper {
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+   &lt;div&gt;Nine&lt;/div&gt;
+   &lt;div&gt;Ten&lt;/div&gt;
+   &lt;div&gt;Eleven&lt;/div&gt;
+   &lt;div&gt;Twelve&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
@@ -358,54 +368,55 @@ Puede ver cómo esto deja huecos en la cuadrícula, en cuanto a los elementos co
    grid-column: 1 / 3;
    grid-row: 1 / 3;
 }
-```
+</pre>
 
-{{ EmbedLiveSample('placement_7', '500', '770') }}
+<p>{{ EmbedLiveSample('placement_7', '500', '770') }}</p>
+</div>
 
-### Llenando los huecos
+<h3 id="Llenando_los_huecos"><span class="notranslate">Llenando los huecos</span></h3>
 
-Hasta ahora, aparte de los elementos que hemos colocado específicamente, la cuadrícula siempre avanza y mantiene los elementos en orden DOM. En general, esto es lo que desea, si está diseñando un formulario, por ejemplo, no desea que las etiquetas y los campos se mezclen para llenar un vacío. Sin embargo, a veces, estamos diseñando cosas que no tienen un orden lógico y nos gustaría crear un diseño que no tenga huecos.
+<p><span class="notranslate">Hasta ahora, aparte de los elementos que hemos colocado específicamente, la cuadrícula siempre avanza y mantiene los elementos en orden DOM.</span> <span class="notranslate"> En general, esto es lo que desea, si está diseñando un formulario, por ejemplo, no desea que las etiquetas y los campos se mezclen para llenar un vacío.</span> <span class="notranslate"> Sin embargo, a veces, estamos diseñando cosas que no tienen un orden lógico y nos gustaría crear un diseño que no tenga huecos.</span></p>
 
-Para hacer esto, agregue la propiedad [`grid-auto-flow`](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhhGAPsqylJcBEC8EgSX7Gqqc-us4Q "La propiedad CSS grid-auto-flow controla cómo funciona el algoritmo de colocación automática, especificando exactamente cómo fluyen los elementos colocados automáticamente en la cuadrícula.") con un valor `dense` al contenedor. Esta es la misma propiedad que usa para cambiar el orden de flujo a `column` , por lo que si estuviera trabajando en columnas agregaría ambos valores `grid-auto-flow: column dense` .
+<p><span class="notranslate">Para hacer esto, agregue la propiedad <a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhhGAPsqylJcBEC8EgSX7Gqqc-us4Q" title="La propiedad CSS grid-auto-flow controla cómo funciona el algoritmo de colocación automática, especificando exactamente cómo fluyen los elementos colocados automáticamente en la cuadrícula."><code>grid-auto-flow</code></a> con un valor <code>dense</code> al contenedor.</span> <span class="notranslate"> Esta es la misma propiedad que usa para cambiar el orden de flujo a <code>column</code> , por lo que si estuviera trabajando en columnas agregaría ambos valores <code>grid-auto-flow: column dense</code> .</span></p>
 
-Una vez hecho esto, la grilla ahora rellenará los huecos, a medida que se mueva a través de la grilla, deja huecos como antes, pero luego, si encuentra un elemento que se ajuste a un hueco anterior, lo recogerá y lo sacará del orden DOM para colóquelo en la brecha. Al igual que con cualquier otro reordenamiento en la cuadrícula, esto no cambia el orden lógico. El orden de tabulación, por ejemplo, seguirá el orden del documento. Examinaremos los posibles problemas de accesibilidad de Grid Layout en una guía posterior, pero debe tener cuidado al crear esta desconexión entre el orden visual y el orden de visualización.
+<p><span class="notranslate">Una vez hecho esto, la grilla ahora rellenará los huecos, a medida que se mueva a través de la grilla, deja huecos como antes, pero luego, si encuentra un elemento que se ajuste a un hueco anterior, lo recogerá y lo sacará del orden DOM para colóquelo en la brecha.</span> <span class="notranslate"> Al igual que con cualquier otro reordenamiento en la cuadrícula, esto no cambia el orden lógico.</span> <span class="notranslate"> El orden de tabulación, por ejemplo, seguirá el orden del documento.</span> <span class="notranslate"> Examinaremos los posibles problemas de accesibilidad de Grid Layout en una guía posterior, pero debe tener cuidado al crear esta desconexión entre el orden visual y el orden de visualización.</span></p>
 
-```css hidden
-* {box-sizing: border-box;}
+<div id="placement_8">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
 }
 
-.wrapper > div {
+.wrapper &gt; div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-```
-
-```html
-<div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
-   <div>Six</div>
-   <div>Seven</div>
-   <div>Eight</div>
-   <div>Nine</div>
-   <div>Ten</div>
-   <div>Eleven</div>
-   <div>Twelve</div>
+</pre>
 </div>
-```
 
-```css
-.wrapper div:nth-child(4n+1) {
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+   &lt;div&gt;Nine&lt;/div&gt;
+   &lt;div&gt;Ten&lt;/div&gt;
+   &lt;div&gt;Eleven&lt;/div&gt;
+   &lt;div&gt;Twelve&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper div:nth-child(4n+1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
@@ -425,30 +436,30 @@ Una vez hecho esto, la grilla ahora rellenará los huecos, a medida que se mueva
   grid-gap: 10px;
   grid-auto-flow: dense;
 }
-```
+</pre>
 
-{{ EmbedLiveSample('placement_8', '500', '730') }}
-
-### Elementos de cuadrícula anónimos
-
-Hay una mención en la especificación de elementos de cuadrícula anónimos. Estos se crean si tiene una cadena de texto dentro de su contenedor de cuadrícula, que no está envuelta en ningún otro elemento. En el siguiente ejemplo, tenemos tres elementos de cuadrícula, suponiendo que haya configurado el padre con una clase de `grid` para `display: grid` . El primero es un elemento anónimo, ya que no tiene un marcado adjunto, este elemento siempre se tratará a través de las reglas de colocación automática. Los otros dos son elementos de cuadrícula encerrados en un div, pueden colocarse automáticamente o puede colocarlos con un método de posicionamiento en su cuadrícula.
-
-```css
-<div class="grid">
-  I am a string and will become an anonymous item
-  <div>A grid item</div>
-  <div>A grid item</div>
+<p>{{ EmbedLiveSample('placement_8', '500', '730') }}</p>
 </div>
-```
 
-Los elementos anónimos siempre se colocan automáticamente porque no hay forma de orientarlos. Por lo tanto, si tiene algún texto sin envolver por alguna razón en su cuadrícula, tenga en cuenta que puede aparecer en algún lugar inesperado, ya que se colocará automáticamente de acuerdo con las reglas de colocación automática.
+<h3 id="Elementos_de_cuadrícula_anónimos"><span class="notranslate">Elementos de cuadrícula anónimos</span></h3>
 
-### Casos de uso para la colocación automática
+<p><span class="notranslate">Hay una mención en la especificación de elementos de cuadrícula anónimos.</span> <span class="notranslate"> Estos se crean si tiene una cadena de texto dentro de su contenedor de cuadrícula, que no está envuelta en ningún otro elemento.</span> <span class="notranslate"> En el siguiente ejemplo, tenemos tres elementos de cuadrícula, suponiendo que haya configurado el padre con una clase de <code>grid</code> para <code>display: grid</code> .</span> <span class="notranslate"> El primero es un elemento anónimo, ya que no tiene un marcado adjunto, este elemento siempre se tratará a través de las reglas de colocación automática.</span> <span class="notranslate"> Los otros dos son elementos de cuadrícula encerrados en un div, pueden colocarse automáticamente o puede colocarlos con un método de posicionamiento en su cuadrícula.</span></p>
 
-La colocación automática es útil siempre que tenga una colección de artículos. Pueden ser elementos que no tienen un orden lógico, como una galería de fotos o una lista de productos. En ese caso, puede optar por utilizar el modo de embalaje denso para rellenar los agujeros en su cuadrícula. En mi ejemplo de galería de imágenes tengo algunas imágenes de paisajes y algunas de retratos. He configurado imágenes de paisajes, con una clase de `landscape` para abarcar dos pistas de columna. Luego uso `grid-auto-flow: dense` para crear una grilla densamente empaquetada.
+<pre class="brush: css">&lt;div class="grid"&gt;
+  I am a string and will become an anonymous item
+  &lt;div&gt;A grid item&lt;/div&gt;
+  &lt;div&gt;A grid item&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-```css
-.wrapper {
+<p><span class="notranslate">Los elementos anónimos siempre se colocan automáticamente porque no hay forma de orientarlos.</span> <span class="notranslate"> Por lo tanto, si tiene algún texto sin envolver por alguna razón en su cuadrícula, tenga en cuenta que puede aparecer en algún lugar inesperado, ya que se colocará automáticamente de acuerdo con las reglas de colocación automática.</span></p>
+
+<h3 id="Casos_de_uso_para_la_colocación_automática"><span class="notranslate">Casos de uso para la colocación automática</span></h3>
+
+<p><span class="notranslate">La colocación automática es útil siempre que tenga una colección de artículos.</span> <span class="notranslate"> Pueden ser elementos que no tienen un orden lógico, como una galería de fotos o una lista de productos.</span> <span class="notranslate"> En ese caso, puede optar por utilizar el modo de embalaje denso para rellenar los agujeros en su cuadrícula.</span> <span class="notranslate"> En mi ejemplo de galería de imágenes tengo algunas imágenes de paisajes y algunas de retratos.</span> <span class="notranslate"> He configurado imágenes de paisajes, con una clase de <code>landscape</code> para abarcar dos pistas de columna.</span> <span class="notranslate"> Luego uso <code>grid-auto-flow: dense</code> para crear una grilla densamente empaquetada.</span></p>
+
+<div id="placement_9">
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     grid-gap: 10px;
@@ -470,55 +481,55 @@ La colocación automática es útil siempre que tenga una colección de artícul
    width: 100%;
    height: 100%;
 }
-```
+</pre>
 
-```html
-<ul class="wrapper">
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-   <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-   <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-   <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-</ul>
-```
+<pre class="brush: html">&lt;ul class="wrapper"&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li class="landscape"&gt;&lt;img src="http://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li class="landscape"&gt;&lt;img src="http://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li class="landscape"&gt;&lt;img src="http://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li class="landscape"&gt;&lt;img src="http://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
 
-{{ EmbedLiveSample('placement_9', '500', '1300') }}
+<p>{{ EmbedLiveSample('placement_9', '500', '1300') }}</p>
+</div>
 
-La colocación automática también puede ayudarlo a diseñar elementos de interfaz que tengan un orden lógico. Un ejemplo es la lista de definiciones en el siguiente ejemplo. Las listas de definición son un desafío interesante para el estilo, ya que son planas, no hay nada que envuelva los grupos de elementos `dt` y `dd` . En mi ejemplo, estoy permitiendo la colocación automática para colocar los elementos, sin embargo, tengo clases que comienzan un `dt` en la columna 1, y `dd` en la columna 2, esto garantiza que los términos vayan de un lado y las definiciones del otro, sin importar cuántos de cada uno que tenemos.
+<p><span class="notranslate">La colocación automática también puede ayudarlo a diseñar elementos de interfaz que tengan un orden lógico.</span> <span class="notranslate"> Un ejemplo es la lista de definiciones en el siguiente ejemplo.</span> <span class="notranslate"> Las listas de definición son un desafío interesante para el estilo, ya que son planas, no hay nada que envuelva los grupos de elementos <code>dt</code> y <code>dd</code> .</span> <span class="notranslate"> En mi ejemplo, estoy permitiendo la colocación automática para colocar los elementos, sin embargo, tengo clases que comienzan un <code>dt</code> en la columna 1, y <code>dd</code> en la columna 2, esto garantiza que los términos vayan de un lado y las definiciones del otro, sin importar cuántos de cada uno que tenemos.</span></p>
 
-```css hidden
-* {box-sizing: border-box;}
+<div id="placement_10">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
 }
-```
-
-```html
-<div class="wrapper">
-   <dl>
-       <dt>Mammals</dt>
-       <dd>Cat</dd>
-       <dd>Dog</dd>
-       <dd>Mouse</dd>
-       <dt>Fish</dt>
-       <dd>Guppy</dd>
-       <dt>Birds</dt>
-       <dd>Pied Wagtail</dd>
-       <dd>Owl</dd>
-   </dl>
+</pre>
 </div>
-```
 
-```css
-dl {
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;dl&gt;
+       &lt;dt&gt;Mammals&lt;/dt&gt;
+       &lt;dd&gt;Cat&lt;/dd&gt;
+       &lt;dd&gt;Dog&lt;/dd&gt;
+       &lt;dd&gt;Mouse&lt;/dd&gt;
+       &lt;dt&gt;Fish&lt;/dt&gt;
+       &lt;dd&gt;Guppy&lt;/dd&gt;
+       &lt;dt&gt;Birds&lt;/dt&gt;
+       &lt;dd&gt;Pied Wagtail&lt;/dd&gt;
+       &lt;dd&gt;Owl&lt;/dd&gt;
+   &lt;/dl&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">dl {
   display: grid;
   grid-template-columns: auto 1fr;
   max-width: 300px;
@@ -532,62 +543,71 @@ dt {
 dd {
    grid-column: 2;
  }
-```
+</pre>
 
-{{ EmbedLiveSample('placement_10', '500', '230') }}
+<p>{{ EmbedLiveSample('placement_10', '500', '230') }}</p>
+</div>
 
-## ¿Qué no podemos hacer con la colocación automática (todavía)?
+<h2 id="¿Qué_no_podemos_hacer_con_la_colocación_automática_todavía"><span class="notranslate">¿Qué no podemos hacer con la colocación automática (todavía)?</span></h2>
 
-Hay un par de cosas que a menudo surgen como preguntas. Actualmente no podemos hacer cosas como apuntar a cualquier otra celda de la cuadrícula con nuestros artículos. Es posible que ya se le haya ocurrido un problema relacionado si siguió la última guía sobre líneas con nombre en la cuadrícula. Sería definir una regla que dijera "colocar elementos automáticamente en la siguiente línea llamada" n ", y la cuadrícula se saltaría otras líneas. Se plantea [un problema al respecto](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=es&u=https://github.com/w3c/csswg-drafts/issues/796&xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&usg=ALkJrhi1X-T_53Yxbg3lSUNap9U7hwWSnQ) en el repositorio CSSWG GitHub, y sería bienvenido a agregue sus propios casos de uso a esto.
+<p><span class="notranslate">Hay un par de cosas que a menudo surgen como preguntas.</span> <span class="notranslate"> Actualmente no podemos hacer cosas como apuntar a cualquier otra celda de la cuadrícula con nuestros artículos.</span> <span class="notranslate"> Es posible que ya se le haya ocurrido un problema relacionado si siguió la última guía sobre líneas con nombre en la cuadrícula.</span> <span class="notranslate"> Sería definir una regla que dijera "colocar elementos automáticamente en la siguiente línea llamada" n ", y la cuadrícula se saltaría otras líneas. Se plantea <a class="external" href="https://translate.googleusercontent.com/translate_c?depth=1&amp;rurl=translate.google.com&amp;sl=auto&amp;sp=nmt4&amp;tl=es&amp;u=https://github.com/w3c/csswg-drafts/issues/796&amp;xid=17259,15700019,15700186,15700190,15700256,15700259,15700262,15700265,15700271,15700280,15700283&amp;usg=ALkJrhi1X-T_53Yxbg3lSUNap9U7hwWSnQ" rel="noopener">un problema al respecto</a> en el repositorio CSSWG GitHub, y sería bienvenido a agregue sus propios casos de uso a esto.</span></p>
 
-Puede ser que se te ocurran tus propios casos de uso para la colocación automática o cualquier otra parte del diseño de la cuadrícula. Si lo hace, créelos como problemas o agréguelos a un problema existente que podría resolver su caso de uso. Esto ayudará a mejorar las futuras versiones de la especificación.
+<p><span class="notranslate">Puede ser que se te ocurran tus propios casos de uso para la colocación automática o cualquier otra parte del diseño de la cuadrícula.</span> <span class="notranslate"> Si lo hace, créelos como problemas o agréguelos a un problema existente que podría resolver su caso de uso.</span> <span class="notranslate"> Esto ayudará a mejorar las futuras versiones de la especificación.</span></p>
 
-1.  [**CSS**](/es/docs/Web/CSS)
-2.  [**CSS Reference**](/es/docs/Web/CSS/Reference)
-3.  [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout)
-4.  **Guides**
-
-    1.  [Basics concepts of grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2.  [Relationship to other layout methods](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3.  [Line-based placement](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4.  [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5.  [Layout using named grid lines](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6.  [Auto-placement in grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7.  [Box alignment in grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8.  [Grids, logical values and writing modes](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9.  [CSS Grid Layout and Accessibility](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-
-5.  **Properties**
-
-    1.  [grid](/es/docs/Web/CSS/grid)
-    2.  [grid-area](/es/docs/Web/CSS/grid-area)
-    3.  [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
-    4.  [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
-    5.  [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
-    6.  [grid-column](/es/docs/Web/CSS/grid-column)
-    7.  [grid-column-end](/es/docs/Web/CSS/grid-column-end)
-    8.  [grid-column-gap](/es/docs/Web/CSS/grid-column-gap)
-    9.  [grid-column-start](/es/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/es/docs/Web/CSS/grid-gap)
-    11. [grid-row](/es/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/es/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/es/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/es/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/es/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
-
-6.  **Glossary**
-
-    1.  [Grid](/es/docs/Glossary/Grid)
-    2.  [Grid lines](/es/docs/Glossary/Grid_lines)
-    3.  [Grid tracks](/es/docs/Glossary/Grid_tracks)
-    4.  [Grid cell](/es/docs/Glossary/Grid_cell)
-    5.  [Grid areas](/es/docs/Glossary/Grid_areas)
-    6.  [Gutters](/es/docs/Glossary/Gutters)
-    7.  [Grid Axis](/es/docs/Glossary/Grid_Axis)
-    8.  [Grid row](/es/docs/Glossary/Grid_rows)
-    9.  [Grid column](/es/docs/Glossary/Grid_column)
+<section id="Quick_links">
+<ol>
+ <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
+ <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
+ <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
+   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
+   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
+   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
+   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
+  </ol>
+ </li>
+</ol>
+</section>

@@ -1,52 +1,54 @@
 ---
 title: ':empty'
-slug: Web/CSS/:empty
+slug: 'Web/CSS/:empty'
 tags:
   - CSS
   - Diseño
   - Pseudo-clase
   - Referencia
   - Web
-translation_of: Web/CSS/:empty
+translation_of: 'Web/CSS/:empty'
 ---
-{{ CSSRef() }}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:empty`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.
+<div>{{ CSSRef() }}</div>
 
-> **Nota:** En {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} la pseudo-clase `:empty` fue modificada para actuar como {{CSSxRef(":-moz-only-whitespace")}}, pero ningún navegador actualmente suporta aún esto.
+<div>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:empty</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.</div>
 
-```css
-/* Selecciona cualquier <div> que no contenga contenido */
+
+
+<div class="blockIndicator note">
+<p><strong>Nota:</strong> En {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} la pseudo-clase <code>:empty</code> fue modificada para actuar como <span style="white-space: nowrap;">{{CSSxRef(":-moz-only-whitespace")}}</span>, pero ningún navegador actualmente suporta aún esto.</p>
+</div>
+
+<pre class="brush: css">/* Selecciona cualquier &lt;div&gt; que no contenga contenido */
 div:empty {
   background: lime;
-}
-```
+}</pre>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<div class="box"><!-- Voy a ser de color lima. --></div>
-<div class="box">Voy a ser de color rosa.</div>
-<div class="box">
-    <!-- Seré de color rosa debido a los espacios en blanco alrededor de este comentario. -->
-</div>
-```
+<pre class="brush: html">&lt;div class="box"&gt;&lt;!-- Voy a ser de color lima. --&gt;&lt;/div&gt;
+&lt;div class="box"&gt;Voy a ser de color rosa.&lt;/div&gt;
+&lt;div class="box"&gt;
+    &lt;!-- Seré de color rosa debido a los espacios en blanco alrededor de este comentario. --&gt;
+&lt;/div&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css hidden
-body {
+<div class="hidden">
+<pre class="brush: css">body {
   display: flex;
   justify-content: space-around;
 }
-```
+</pre>
+</div>
 
-```css
-.box {
+<pre class="brush: css">.box {
   background: pink;
   height: 80px;
   width: 80px;
@@ -54,31 +56,51 @@ body {
 
 .box:empty {
   background: lime;
-}
-```
+}</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample('Ejemplo', 300, 80)}}
+<p>{{EmbedLiveSample('Ejemplo', 300, 80)}}</p>
 
-## Problemas de accesibilidad
+<h2 id="Problemas_de_accesibilidad">Problemas de accesibilidad</h2>
 
-La tecnología de asistencia, como los lectores de pantalla, no puede analizar el contenido interactivo que está vacío. Todo el contenido interactivo debe tener un nombre accesible, que se crea proporcionando un valor de texto para el elemento principal del control interactivo ([anclajes](/es/docs/Web/HTML/Element/a), [botones](/es/docs/Web/HTML/Element/button), etc.). Los nombres accesibles exponen el control interactivo al [árbol de accesibilidad](/es/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs), una API que comunica información útil para las tecnologías de asistencia.
+<p>La tecnología de asistencia, como los lectores de pantalla, no puede analizar el contenido interactivo que está vacío. Todo el contenido interactivo debe tener un nombre accesible, que se crea proporcionando un valor de texto para el elemento principal del control interactivo (<a href="/es/docs/Web/HTML/Element/a">anclajes</a>, <a href="/es/docs/Web/HTML/Element/button">botones</a>, etc.). Los nombres accesibles exponen el control interactivo al <a href="/es/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">árbol de accesibilidad</a>, una API que comunica información útil para las tecnologías de asistencia.</p>
 
-El texto que proporciona el nombre accesible del control interactivo se puede ocultar mediante una [combinación de propiedades](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) que lo eliminan visualmente de la pantalla, pero que la tecnología de asistencia lo puede analizar. Esto se usa comúnmente para botones que dependen solo de un ícono para transmitir el propósito.
+<p>El texto que proporciona el nombre accesible del control interactivo se puede ocultar mediante una <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">combinación de propiedades</a> que lo eliminan visualmente de la pantalla, pero que la tecnología de asistencia lo puede analizar. Esto se usa comúnmente para botones que dependen solo de un ícono para transmitir el propósito.</p>
 
-- [Qué es un nombre accesible (What is an accessible name?) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
-- [Contenido oculto para mejor a11y (Hidden content for better a11y) | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN entendiendo WCAG, explicaciones para el lineamiento 2.4](/es/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Understanding Success Criterion 2.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
+<ul>
+ <li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/">Qué es un nombre accesible (What is an accessible name?) | The Paciello Group</a></li>
+ <li><a href="https://gomakethings.com/hidden-content-for-better-a11y/">Contenido oculto para mejor a11y (Hidden content for better a11y) | Go Make Things</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN entendiendo WCAG, explicaciones para el lineamiento 2.4</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html">Understanding Success Criterion 2.4.4  | W3C Understanding WCAG 2.0</a></li>
+</ul>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                   | Estado                                   | Comentarios         |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS4 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.      |
-| {{ SpecName('CSS3 Selectors', '#empty-pseudo', ':empty') }} | {{ Spec2('CSS3 Selectors') }} | Definición Inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS4 Selectors', '#empty-pseudo', ':empty') }}</td>
+   <td>{{ Spec2('CSS4 Selectors') }}</td>
+   <td>Ningún cambio.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS3 Selectors', '#empty-pseudo', ':empty') }}</td>
+   <td>{{ Spec2('CSS3 Selectors') }}</td>
+   <td>Definición Inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("css.selectors.empty")}}
+<div>
+<p>{{Compat("css.selectors.empty")}}</p>
+</div>

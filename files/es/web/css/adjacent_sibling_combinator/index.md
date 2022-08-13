@@ -9,59 +9,80 @@ tags:
 translation_of: Web/CSS/Adjacent_sibling_combinator
 original_slug: Web/CSS/Selectores_hermanos_adyacentes
 ---
-{{CSSRef("Selectors")}}
+<p>{{CSSRef("Selectors")}}</p>
 
-Se hace referencia a este selector como selector adyacente o selector del próximo hermano. Sólo seleccionará un elemento especificado que esté inmediatamente después de otro elemento especificado.
+<p>Se hace referencia a este selector como selector adyacente o selector del próximo hermano. Sólo seleccionará un elemento especificado que esté inmediatamente después de otro elemento especificado.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    elemento_anterior + elemento_afectado { estilos }
+<pre class="syntaxbox">elemento_anterior + elemento_afectado { <em>estilos</em> }
+</pre>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```css
-li:first-of-type + li {
+<div id="Example_1">
+<pre class="brush: css">li:first-of-type + li {
   color: red;
 }
-```
+</pre>
 
-```html
-<ul>
-  <li>Uno</li>
-  <li>Dos</li>
-  <li>Tres</li>
-</ul>
-```
+<pre class="brush: html">&lt;ul&gt;
+  &lt;li&gt;Uno&lt;/li&gt;
+  &lt;li&gt;Dos&lt;/li&gt;
+  &lt;li&gt;Tres&lt;/li&gt;
+&lt;/ul&gt;</pre>
+</div>
 
-{{EmbedLiveSample('Example_1', 200, 100)}}
+<p>{{EmbedLiveSample('Example_1', 200, 100)}}</p>
 
-Otro caso podría ser dar estilos a un span que se use de pie de foto de los siguientes elementos {{HTMLElement("img")}} :
+<p>Otro caso podría ser dar estilos a un span que se use de pie de foto de los siguientes elementos {{HTMLElement("img")}} :</p>
 
-```css
-img + span.caption {
+<pre class="brush: css">img + span.caption {
   font-style: italic;
 }
-```
+</pre>
 
-que coincidiría con los siguientes elementos {{HTMLElement("span")}} :
+<p>que coincidiría con los siguientes elementos {{HTMLElement("span")}} :</p>
 
-```html
-<img src="photo1.jpg"><span class="caption">The first photo</span>
-<img src="photo2.jpg"><span class="caption">The second photo</span>
-```
+<pre class="brush: html">&lt;img src="photo1.jpg"&gt;&lt;span class="caption"&gt;The first photo&lt;/span&gt;
+&lt;img src="photo2.jpg"&gt;&lt;span class="caption"&gt;The second photo&lt;/span&gt;
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificacion                                                                                                               | Estado                               | Comentarios        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#adjacent-sibling-combinators', 'next-sibling combinator')}}     | {{Spec2('CSS4 Selectors')}} |                    |
-| {{SpecName('CSS3 Selectors', '#adjacent-sibling-combinators', 'Adjacent sibling combinator')}} | {{Spec2('CSS3 Selectors')}} |                    |
-| {{SpecName('CSS2.1', 'selector.html#adjacent-selectors', 'Adjacent sibling selectors')}}         | {{Spec2('CSS2.1')}}             | Initial definition |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificacion</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#adjacent-sibling-combinators', 'next-sibling combinator')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#adjacent-sibling-combinators', 'Adjacent sibling combinator')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'selector.html#adjacent-selectors', 'Adjacent sibling selectors')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad entre navegadores
+<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
 
 {{Compat("css.selectors.adjacent_sibling")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Selectores de hermanos generales](/es/docs/Web/CSS/Selectores_hermanos_generales)
+<ul>
+ <li><a href="/es/docs/Web/CSS/Selectores_hermanos_generales">Selectores de hermanos generales</a></li>
+</ul>

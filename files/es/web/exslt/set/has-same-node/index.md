@@ -7,29 +7,33 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/has-same-node
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-`set:has-same-node()` determina si dos conjuntos de nodos tienen algún nodo en común.
+<p><br>
+ <code>set:has-same-node()</code> determina si dos conjuntos de nodos tienen algún nodo en común.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    set:has-same-node(conjuntoNodos1,conjuntoNodos2)
+<pre class="eval">set:has-same-node(<em>conjuntoNodos1</em>,<em>conjuntoNodos2</em>)
+</pre>
 
-### Argumentos
+<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
 
-- `conjuntoNodos1`
-  - : El primer conjunto de nodos a revisar.
-- `conjuntoNodos2`
-  - : El segundo conjunto de nodos a revisar.
+<dl>
+ <dt><code><em>conjuntoNodos1</em></code></dt>
+ <dd>El primer conjunto de nodos a revisar.</dd>
+ <dt><code><em>conjuntoNodos2</em></code></dt>
+ <dd>El segundo conjunto de nodos a revisar.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-`true` si los dos conjuntos de nodos tienen algún nodo en común; de otro modo `false`.
+<p><code>true</code> si los dos conjuntos de nodos tienen algún nodo en común; de otro modo <code>false</code>.</p>
 
-### Definido en
+<h3 id="Definido_en" name="Definido_en">Definido en</h3>
 
-[EXSLT - SET:HAS-SAME-NODE](http://www.exslt.org/set/functions/has-same-node/index.html)
+<p><a class="external" href="http://www.exslt.org/set/functions/has-same-node/index.html">EXSLT - SET:HAS-SAME-NODE</a></p>
 
-### Implementación de Gecko
+<h3 id="Implementaci.C3.B3n_de_Gecko" name="Implementaci.C3.B3n_de_Gecko">Implementación de Gecko</h3>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

@@ -7,33 +7,35 @@ tags:
 translation_of: Web/XSLT/Element/call-template
 original_slug: Web/XSLT/call-template
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-El elemento `<xsl:call-template>` invoca una plantilla con nombre.
+<p>El elemento <code>&lt;xsl:call-template&gt;</code> invoca una plantilla con nombre.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    <xsl:call-template name=NOMBRE>
-    	<xsl:with-param> [opcional]
-    </xsl:call-template>
+<pre>&lt;xsl:call-template name=NOMBRE&gt;
+	&lt;xsl:with-param&gt; [opcional]
+&lt;/xsl:call-template&gt;</pre>
 
-### Atributos requeridos
+<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
 
-- `name`
-  - : Indica el nombre del template que se desea invocar.
+<dl>
+ <dt><code>name</code></dt>
+ <dd>Indica el nombre del template que se desea invocar.</dd>
+</dl>
 
-### Atributos opcionales
+<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Tipo
+<h3 id="Tipo" name="Tipo">Tipo</h3>
 
-Instrucción, aparece dentro de una plantilla.
+<p>Instrucción, aparece dentro de una plantilla.</p>
 
-### Definido
+<h3 id="Definido" name="Definido">Definido</h3>
 
-XSLT, sección 6.
+<p>XSLT, sección 6.</p>
 
-### Soporte en Gecko
+<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
 
-Soportado.
+<p>Soportado.</p>

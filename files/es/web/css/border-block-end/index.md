@@ -9,51 +9,50 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-block-end
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<p>{{CSSRef}}{{SeeCompatTable}}</p>
 
-La propiedad [CSS](/es/docs/Web/CSS "CSS") **`border-block-end`** es un atajo para establecer los valores de las propiedades individuales del borde final lógico de un bloque en un solo lugar de la hoja de estilos. `border-block-end` puede ser usada para establecer los valores de una o más de las siguientes propiedades: {{Cssxref("border-block-end-width")}}, {{Cssxref("border-block-end-style")}}, {{Cssxref("border-block-end-color")}}. Se asigna a un borde físico, dependiendo del modo de escritura del elemento, su direccionalidad y orientación de texto. Corresponde a las propiedades {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}, dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+<p>La propiedad <a href="/es/docs/Web/CSS" title="CSS">CSS</a> <strong><code>border-block-end</code></strong> es un atajo para establecer los valores de las propiedades individuales del borde final lógico de un bloque en un solo lugar de la hoja de estilos. <code>border-block-end</code> puede ser usada para establecer los valores de una o más de las siguientes propiedades: {{Cssxref("border-block-end-width")}}, {{Cssxref("border-block-end-style")}}, {{Cssxref("border-block-end-color")}}. Se asigna a un borde físico, dependiendo del modo de escritura del elemento, su direccionalidad y orientación de texto. Corresponde a las propiedades {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, o {{cssxref("border-left")}}, dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.</p>
 
-```css
-border-block-end: 1px;
+<pre class="brush:css no-line-numbers">border-block-end: 1px;
 border-block-end: 2px dotted;
 border-block-end: medium dashed blue;
-```
+</pre>
 
-Está relacionada con {{cssxref("border-block-start")}}, {{cssxref("border-inline-start")}}, y {{cssxref("border-inline-end")}}, las cuales definen el borde contrario del elemento.
+<p>Está relacionada con {{cssxref("border-block-start")}}, {{cssxref("border-inline-start")}}, y {{cssxref("border-inline-end")}}, las cuales definen el borde contrario del elemento.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-Una o más de los siguientes, en cualquier orden:
+<p>Una o más de los siguientes, en cualquier orden:</p>
 
-- `<'border-width'>`
-  - : Véase {{ cssxref("border-width") }}
-- `<'border-style'>`
-  - : Véase {{ cssxref("border-style") }}
-- `<'color'>`
-  - : Véase {{ cssxref("color") }}
+<dl>
+ <dt><code>&lt;'border-width'&gt;</code></dt>
+ <dd>Véase {{ cssxref("border-width") }}</dd>
+ <dt><code>&lt;'border-style'&gt;</code></dt>
+ <dd>Véase {{ cssxref("border-style") }}</dd>
+ <dt><code>&lt;'color'&gt;</code></dt>
+ <dd>Véase {{ cssxref("color") }}</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### Contenido HTML
+<h3 id="Contenido_HTML">Contenido HTML</h3>
 
-```html
-<div>
-  <p class="exampleText">Texto de ejemplo</p>
-</div>
-```
+<pre class="brush: html">&lt;div&gt;
+  &lt;p class="exampleText"&gt;Texto de ejemplo&lt;/p&gt;
+&lt;/div&gt;
+</pre>
 
-### Contenido CSS
+<h3 id="Contenido_CSS">Contenido CSS</h3>
 
-```css
-div {
+<pre class="brush: css">div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -62,22 +61,36 @@ div {
 .exampleText {
   writing-mode: vertical-rl;
   border-block-end: 5px dashed blue;
-}
-```
+}</pre>
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
 
-## Especificación
+<h2 id="Especificación">Especificación</h2>
 
-| Especificación                                                                                                       | Estatus                                          | Comentarios        |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-end", "border-block-end")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block-end", "border-block-end")}}</td>
+   <td>{{Spec2("CSS Logical Properties")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("css.properties.border-block-end")}}
 
-## Mira también
+<h2 id="Mira_también">Mira también</h2>
 
-- Las propiedades físicas mapeadas: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, y {{cssxref("border-left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+<ul>
+ <li>Las propiedades físicas mapeadas: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, y {{cssxref("border-left")}}</li>
+ <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
+</ul>

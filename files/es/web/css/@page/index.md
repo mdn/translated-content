@@ -3,56 +3,81 @@ title: '@page'
 slug: Web/CSS/@page
 translation_of: Web/CSS/@page
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La regla @page es usada para modificar algunas propiedades CSS cuando se va a imprimir una página web.\*\* \*\*No se pueden cambiar todas las propiedades CSS con `@page, `solo los márgenes, las líneas viudas, huérfanas y los saltos de página. Cualquier intento de cambiar otra propiedad será ignorada.
+<p>La regla @page es usada para modificar algunas propiedades CSS cuando se va a imprimir una página web.<strong> </strong>No se pueden cambiar todas las propiedades CSS con <code>@page, </code>solo los márgenes, las líneas viudas, huérfanas y los saltos de página. Cualquier intento de cambiar otra propiedad será ignorada.</p>
 
-La regla `@page` puede ser accesada por medio de la interfaz modelo objeto {{domxref("CSSPageRule")}}.
+<p>La regla <code>@page</code> puede ser accesada por medio de la interfaz modelo objeto {{domxref("CSSPageRule")}}.</p>
 
-> **Nota:** La W3C esta discutiendo como manejar las unidades relativas {{cssxref("&lt;length&gt;")}} : `vh`, `vw`, `vmin`, y `vmax`. Mientras tanto, se recomienda no usarlas en la regla `@page`.
+<div class="note"><strong>Nota:</strong> La W3C esta discutiendo como manejar las unidades relativas {{cssxref("&lt;length&gt;")}} : <code>vh</code>, <code>vw</code>, <code>vmin</code>, y <code>vmax</code>. Mientras tanto, se recomienda no usarlas en la regla <code>@page</code>.</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Descriptores
+<h3 id="Descriptores">Descriptores</h3>
 
-- [`size`](/es/docs/Web/CSS/@page/size)
-  - : Especifica el tamaño y la orientación de la caja objetivo de la página. En general, una caja es representada dentro de una hoja, también indica el tamaño de la hoja destino.
+<dl>
+ <dt><a href="/en-US/docs/Web/CSS/@page/size"><code>size</code></a></dt>
+ <dd>Especifica el tamaño y la orientación de la caja objetivo de la página. En general, una caja es representada dentro de una hoja, también indica el tamaño de la hoja destino.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><a href="/en-US/docs/Web/CSS/@page/marks"><code>marks</code></a></dt>
+ <dd>Añade marcas de corte y/o registro al documento.</dd>
+</dl>
 
-- [`marks`](/es/docs/Web/CSS/@page/marks)
-  - : Añade marcas de corte y/o registro al documento.
+<dl>
+ <dt><a href="/en-US/docs/Web/CSS/@page/bleed"><code>bleed</code></a></dt>
+ <dd>Especifica la extensión más allá de la caja de página a la que se recorta el procesamiento de página.</dd>
+</dl>
 
-<!---->
-
-- [`bleed`](/es/docs/Web/CSS/@page/bleed)
-  - : Especifica la extensión más allá de la caja de página a la que se recorta el procesamiento de página.
-
-### Sintaxis Formal
+<h3 id="Sintaxis_Formal">Sintaxis Formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Por favor dirígete a las [pseudo-classes](/es/docs/CSS/Pseudo-classes "Pseudo-classes") de `@page` por ejemplos.
+<p>Por favor dirígete a las <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-classes</a> de <code>@page</code> por ejemplos.</p>
 
-- {{Cssxref(":blank")}}
-- {{Cssxref(":first")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
-- {{Cssxref(":recto")}} {{experimental_inline}}
-- {{Cssxref(":verso")}} {{experimental_inline}}
+<ul>
+ <li>{{Cssxref(":blank")}}</li>
+ <li>{{Cssxref(":first")}}</li>
+ <li>{{Cssxref(":left")}}</li>
+ <li>{{Cssxref(":right")}}</li>
+ <li>{{Cssxref(":recto")}} {{experimental_inline}}</li>
+ <li>{{Cssxref(":verso")}} {{experimental_inline}}</li>
+</ul>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                       | Estatus                                          | Comentario                                                                                                   |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS Logical Properties', '#logical-page', ':recto and :verso')}} | {{Spec2('CSS Logical Properties')}} | Agrega los selectores de página`:recto` y `:verso.`                                                          |
-| {{SpecName('CSS3 Paged Media', '#at-page-rule', '@page')}}                         | {{Spec2('CSS3 Paged Media')}}         | Ningún cambio desde {{SpecName('CSS2.1')}}, aunque mas reglas CSS pueden ser usadas dentro de `@page`. |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', '@page')}}                     | {{Spec2('CSS2.1')}}                         | Definición inicial                                                                                           |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS Logical Properties', '#logical-page', ':recto and :verso')}}</td>
+   <td>{{Spec2('CSS Logical Properties')}}</td>
+   <td>Agrega los selectores de página<code>:recto</code> y <code>:verso.</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Paged Media', '#at-page-rule', '@page')}}</td>
+   <td>{{Spec2('CSS3 Paged Media')}}</td>
+   <td>Ningún cambio desde {{SpecName('CSS2.1')}}, aunque mas reglas CSS pueden ser usadas dentro de <code>@page</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'page.html#page-selectors', '@page')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{Compat("css.at-rules.page")}}

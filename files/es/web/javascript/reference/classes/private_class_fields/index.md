@@ -4,32 +4,34 @@ slug: Web/JavaScript/Reference/Classes/Private_class_fields
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 original_slug: Web/JavaScript/Referencia/Classes/Private_class_fields
 ---
-Las propiedades de la clase son públicas de forma predeterminada y se pueden examinar o modificar fuera de la clase. Sin embargo, existe [una propuesta experimental](https://translate.googleusercontent.com/translate_c?depth=1&pto=aue&rurl=translate.google.com&sl=en&sp=nmt4&tl=es&u=https://github.com/tc39/proposal-class-fields&usg=ALkJrhgmG5nvuZjYd2YQRSuRJHti_gdXeQ) para permitir la definición de campos de clase privados utilizando un `#`prefijo hash .
+<div>
+<p><font><font>Las propiedades de la clase son públicas de forma predeterminada y se pueden examinar o modificar fuera de la clase. </font><font>Sin embargo, existe </font></font><a class="external" href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=es&amp;u=https://github.com/tc39/proposal-class-fields&amp;usg=ALkJrhgmG5nvuZjYd2YQRSuRJHti_gdXeQ" rel="noopener"><font><font>una propuesta experimental</font></font></a><font><font>  para permitir la definición de campos de clase privados utilizando un </font></font><code>#</code><font><font>prefijo </font><font>hash </font><font>.</font></font></p>
+</div>
 
-## Syntax
+<h2 id="Syntax">Syntax</h2>
 
-    class ClassWithPrivateField {
-      #privateField
-    }
+<pre class="syntaxbox notranslate">class ClassWithPrivateField {
+  #privateField
+}
 
-    class ClassWithPrivateMethod {
-      #privateMethod() {
-        return 'hello world'
-     }
-    }
+class ClassWithPrivateMethod {
+  #privateMethod() {
+    return 'hello world'
+ }
+}
 
-    class ClassWithPrivateStaticField {
-      static #PRIVATE_STATIC_FIELD
-    }
-
-### Campos estáticos privados
-
-Los campos privados son accesibles en el constructor de clases desde dentro de la propia declaración de clases.
-
-La limitación de las variables estáticas que se llaman solo por métodos estáticos aún se mantiene
-
-```js
 class ClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD
+}
+</pre>
+
+<h3 id="Campos_estáticos_privados"><font><font>Campos estáticos privados </font></font></h3>
+
+<p><font><font>Los campos privados son accesibles en el constructor de clases desde dentro de la propia declaración de clases.</font></font></p>
+
+<p><font><font>La limitación de las variables estáticas que se llaman solo por métodos estáticos aún se mantiene</font></font></p>
+
+<pre class="brush: js notranslate">class ClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static publicStaticMethod() {
@@ -38,17 +40,15 @@ class ClassWithPrivateStaticField {
   }
 }
 
-console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)
-```
+console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
 
-Los campos estáticos privados se agregan al constructor de la clase en el momento de la evaluación de la clase.
+<p><font><font>Los campos estáticos privados se agregan al constructor de la clase en el momento de la evaluación de la clase.</font></font></p>
 
-Existe una restricción de procedencia en los campos estáticos privados. Solo la clase que define el campo estático privado puede acceder al campo.
+<p><font><font>Existe una restricción de procedencia en los campos estáticos privados. </font><font>Solo la clase que define el campo estático privado puede acceder al campo.</font></font></p>
 
-Esto puede conducir a un comportamiento inesperado al usar **`this`**.
+<p><font><font>Esto puede conducir a un comportamiento inesperado al usar </font></font><strong><code>this</code></strong><font><font>.</font></font></p>
 
-```js
-class BaseClassWithPrivateStaticField {
+<pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
   static #PRIVATE_STATIC_FIELD
 
   static basePublicStaticMethod() {
@@ -66,16 +66,15 @@ try {
 } catch(e) { error = e}
 
 console.assert(error instanceof TypeError)
-```
+</pre>
 
-### Campos de instancia privados
+<h3 id="Campos_de_instancia_privados"><font><font>Campos de instancia privados</font></font></h3>
 
-Los campos de instancia privados se declaran con **# nombres** (pronunciados " _nombres hash_ "), que son identificadores con el prefijo `#`. El `#`es una parte del nombre propio. También se utiliza para la declaración y el acceso.
+<p><font><font>Los campos de instancia privados se declaran con </font></font><strong><font><font># nombres </font></font></strong><font><font> (pronunciados " </font></font><em><font><font>nombres hash</font></font></em><font><font> "), que son identificadores con el prefijo </font></font><code>#</code><font><font>. </font><font>El </font></font><code>#</code><font><font>es una parte del nombre propio. </font><font>También se utiliza para la declaración y el acceso.</font></font></p>
 
-La encapsulación es impuesta por el lenguaje. Es un error de sintaxis referirse a `#`nombres que están fuera del alcance.
+<p><font><font>La encapsulación es impuesta por el lenguaje. </font><font>Es un error de sintaxis referirse a </font></font><code>#</code><font><font>nombres que están fuera del alcance.</font></font></p>
 
-```js
-class ClassWithPrivateField {
+<pre class="brush: js notranslate">class ClassWithPrivateField {
   #privateField
 
   constructor() {
@@ -86,18 +85,17 @@ class ClassWithPrivateField {
 
 const instance = new ClassWithPrivateField()
 instance.#privateField === 42 // Syntax error
-```
+</pre>
 
-### Métodos privados
+<h3 id="Métodos_privados"><font><font>Métodos privados</font></font></h3>
 
-#### Métodos estáticos privados
+<h4 id="Métodos_estáticos_privados"><font><font>Métodos estáticos privados</font></font></h4>
 
-Al igual que su equivalente público, los métodos estáticos privados se invocan en la propia clase, no en instancias de la clase. Al igual que los campos estáticos privados, solo se puede acceder a ellos desde dentro de la declaración de clase.
+<p><font><font>Al igual que su equivalente público, los métodos estáticos privados se invocan en la propia clase, no en instancias de la clase. </font><font>Al igual que los campos estáticos privados, solo se puede acceder a ellos desde dentro de la declaración de clase.</font></font></p>
 
-Los métodos estáticos privados pueden ser funciones generadoras, asíncronas y asíncronas.
+<p><font><font>Los métodos estáticos privados pueden ser funciones generadoras, asíncronas y asíncronas.</font></font></p>
 
-```js
-class ClassWithPrivateStaticMethod {
+<pre class="brush: js notranslate">class ClassWithPrivateStaticMethod {
     static #privateStaticMethod() {
         return 42
     }
@@ -113,12 +111,11 @@ class ClassWithPrivateStaticMethod {
 
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
-```
+</pre>
 
-Esto puede conducir a un comportamiento inesperado al usar **`this`**. En el siguiente ejemplo se `this`hace referencia a la `Derived`clase (no a la `Base`clase) cuando intentamos llamar `Derived.publicStaticMethod2()`, y por lo tanto exhibe la misma "restricción de procedencia" que se mencionó anteriormente:
+<p><font><font>Esto puede conducir a un comportamiento inesperado al usar </font></font><strong><code>this</code></strong><font><font>. </font><font>En el siguiente ejemplo se </font></font><code>this</code><font><font>hace referencia a la </font></font><code>Derived</code><font><font>clase (no a la </font></font><code>Base</code><font><font>clase) cuando intentamos llamar </font></font><code>Derived.publicStaticMethod2()</code><font><font>, y por lo tanto exhibe la misma "restricción de procedencia" que se mencionó anteriormente:</font></font></p>
 
-```js
-class Base {
+<pre class="brush: js notranslate">class Base {
     static #privateStaticMethod() {
         return 42;
     }
@@ -134,14 +131,13 @@ class Derived extends Base {}
 
 console.log(Derived.publicStaticMethod1()); // 42
 console.log(Derived.publicStaticMethod2()); // TypeError
-```
+</pre>
 
-#### Métodos de instancia privada
+<h4 id="Métodos_de_instancia_privada"><font><font>Métodos de instancia privada</font></font></h4>
 
-Los métodos de instancia privada son métodos disponibles en instancias de clase cuyo acceso está restringido de la misma manera que los campos de instancia privada.
+<p><font><font>Los métodos de instancia privada son métodos disponibles en instancias de clase cuyo acceso está restringido de la misma manera que los campos de instancia privada.</font></font></p>
 
-```js
-class ClassWithPrivateMethod {
+<pre class="brush: js notranslate">class ClassWithPrivateMethod {
   #privateMethod() {
     return 'hello world'
   }
@@ -153,13 +149,11 @@ class ClassWithPrivateMethod {
 
 const instance = new ClassWithPrivateMethod()
 console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"
-```
+// expected output: "hello worl​d"</pre>
 
-Los métodos de instancia privada pueden ser funciones generadoras, asíncronas o asíncronas. Los getters y setters privados también son posibles:
+<p><font><font>Los métodos de instancia privada pueden ser funciones generadoras, asíncronas o asíncronas. </font><font>Los getters y setters privados también son posibles:</font></font></p>
 
-```js
-class ClassWithPrivateAccessor {
+<pre class="brush: js notranslate">class ClassWithPrivateAccessor {
   #message
 
   get #decoratedMessage() {
@@ -177,19 +171,32 @@ class ClassWithPrivateAccessor {
 
 new ClassWithPrivateAccessor();
 // expected output: "✨hello worl​d✨"
-```
+</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("javascript.classes.private_class_fields")}}
 
-## See also
 
-- [Public class fields](/es/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+<p>{{Compat("javascript.classes.private_class_fields")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">Public class fields</a></li>
+ <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The Semantics of All JS Class Elements</a></li>
+</ul>

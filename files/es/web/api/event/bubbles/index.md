@@ -10,36 +10,38 @@ tags:
   - eventos
 translation_of: Web/API/Event/bubbles
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Indica si el evento determinado _se propaga_ (burbujea) a través del DOM o no. Esta propagación se refiere a si el evento viaja desde el elemento donde se originó hasta los elementos padres en orden de anidamiento.
+<p>Indica si el evento determinado <em>se propaga</em> (burbujea) a través del DOM o no. Esta propagación se refiere a si el evento viaja desde el elemento donde se originó hasta los elementos padres<font face="Consolas, Monaco, Andale Mono, monospace"> </font>en orden de anidamiento.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    event.bubbles
+<pre class="eval"><em>e</em>vent.bubbles
+</pre>
 
-Retorna un valor Booleano que es `true` si el evento se propaga en el DOM.
+<p>Retorna un valor Booleano que es <code>true</code> si el evento se propaga en el DOM.</p>
 
-### Ejemplo
+<h3 id="Ejemplo_2">Ejemplo</h3>
 
-    var bool = event.bubbles;
+<pre>var bool = event.bubbles;</pre>
 
-`bool` tiene el valor `true` o `false`, dependiendo de si el evento puede ser burbuja o no.
+<p><code>bool</code> tiene el valor <code>true</code> o <code>false</code>, dependiendo de si el evento puede ser burbuja o no.</p>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-Sólo ciertos eventos pueden ser burbuja. Los eventos que pueden ser burbuja tienen esta propiedad con el valor `true`. Podemos usar esta propiedad para comprobar si un elemento puede ser burbuja o no.
+<p>Sólo ciertos eventos pueden ser burbuja. Los eventos que pueden ser burbuja tienen esta propiedad con el valor <code>true</code>. Podemos usar esta propiedad para comprobar si un elemento puede ser burbuja o no.</p>
 
-### Ejemplo
+<h3 id="Ejemplo" name="Ejemplo">Ejemplo</h3>
 
-     function goInput(e) {
-      // comprueba si es burbuja y
-      if (!e.bubbles) {
-         // entrega el evento si no lo es
-         passItOn(e);
-      }
-      // está siendo propagado
-      doOutput(e)
-    }
+<pre> function goInput(e) {
+  // comprueba si es burbuja y
+  if (!e.bubbles) {
+     // entrega el evento si no lo es
+     passItOn(e);
+  }
+  // está siendo propagado
+  doOutput(e)
+}
+</pre>

@@ -3,12 +3,14 @@ title: <integer>
 slug: Web/CSS/integer
 translation_of: Web/CSS/integer
 ---
-{{ CSSRef() }}
+<p>{{ CSSRef() }}</p>
 
-## Sumario
+<h2 id="Sumario" name="Sumario">Sumario</h2>
 
-Un valor entero usado para algunas propiedades CSS que no tiene unidades.
+<p>Un valor entero usado para algunas propiedades CSS que no tiene unidades.</p>
 
-### Usado en
+<h3 id="Usado_en" name="Usado_en">Usado en</h3>
 
-- {{ Cssxref("-moz-column-count") }}
+<ul>
+ <li>{{ Cssxref("-moz-column-count") }}</li>
+</ul>

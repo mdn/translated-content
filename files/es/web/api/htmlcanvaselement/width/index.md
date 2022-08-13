@@ -3,45 +3,69 @@ title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
 translation_of: Web/API/HTMLCanvasElement/width
 ---
-{{APIRef("Canvas API")}}
+<div>
+<div>
+<div>{{APIRef("Canvas API")}}</div>
+</div>
+</div>
 
-TLa propiedad **`HTMLCanvasElement.width`** es un entero positivo que refleja el atributo {{htmlattrxref("width", "canvas")}} del elemento {{HTMLElement("canvas")}} interpretado en pixeles CSS. Cuando el atributo no esta especificado o se define con un valor invalido (ej. Número negativo), es usado el valor por defecto de 150.
+<p>TLa propiedad  <strong><code><span>HTMLCanvasElement.width</span></code></strong> es un entero positivo que refleja el atributo {{htmlattrxref("width", "canvas")}} del elemento {{HTMLElement("canvas")}} interpretado en pixeles CSS. Cuando el atributo no esta especificado o se define con un valor invalido (ej. Número negativo), es usado el valor por defecto de 150.</p>
 
-Esta es una de de las dos propiedades que controlan el tamaño del canvas, siendo la otra {{domxref("HTMLCanvasElement.height")}}, that controls the size of the canvas.
+<p>Esta es una de de las dos propiedades que controlan el tamaño del canvas, siendo la otra {{domxref("HTMLCanvasElement.height")}}, that controls the size of the canvas.</p>
 
-## Syntax
+<h2 id="Syntax" name="Syntax">Syntax</h2>
 
-    var pxl = canvas.width;
-    canvas.width = pxl;
+<pre class="syntaxbox"><var>var <em>pxl</em> = <em>canvas</em></var>.width;
+<em>canvas</em>.width = <em>pxl</em>;
+</pre>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Dado el siguiente elemento {{HTMLElement("canvas")}} :
+<p>Dado el siguiente elemento {{HTMLElement("canvas")}} :</p>
 
-```html
-<canvas id="canvas" width="300" height="300"></canvas>
-```
+<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;
+</pre>
 
-Puedes obtener el ancho del canvas con el siguiente codigo:
+<p>Puedes obtener el ancho del canvas con el siguiente codigo:</p>
 
-```js
-var canvas = document.getElementById("canvas");
+<pre class="brush: js">var canvas = document.getElementById("canvas");
 console.log(canvas.width); // 300
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                           | Status                           | Comentarios                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#attr-canvas-width", "HTMLCanvasElement.width")}} | {{Spec2('HTML WHATWG')}} | No hay cambios desde la ultima foto {{SpecName('HTML5 W3C')}}          |
-| {{SpecName('HTML5.1', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}}     | {{Spec2('HTML5.1')}}     |                                                                               |
-| {{SpecName('HTML5 W3C', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}} | {{Spec2('HTML5 W3C')}}     | Foto que contiene la definición inicial {{SpecName('HTML WHATWG')}}. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "scripting.html#attr-canvas-width", "HTMLCanvasElement.width")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>No hay cambios desde la ultima foto {{SpecName('HTML5 W3C')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Foto que contiene la definición inicial {{SpecName('HTML WHATWG')}}.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de Navegadores
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
 {{Compat("api.HTMLCanvasElement.width")}}
 
-## Ver también
+<h2 id="See_Also" name="See_Also">Ver también</h2>
 
-- La interfaz que lo define, {{domxref("HTMLCanvasElement")}}.
-- La otra propiedad que controla el tamaño del canvas,{{domxref("HTMLCanvasElement.height")}}.
+<ul>
+ <li>La interfaz que lo define, {{domxref("HTMLCanvasElement")}}.</li>
+ <li>La otra propiedad que controla el tamaño del canvas,{{domxref("HTMLCanvasElement.height")}}.</li>
+</ul>

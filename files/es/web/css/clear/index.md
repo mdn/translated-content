@@ -6,33 +6,32 @@ tags:
   - Reference
 translation_of: Web/CSS/clear
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-La propiedad [CSS](/es/docs/CSS) **`clear `**especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.
+<p>La propiedad <a href="/es/docs/CSS">CSS</a> <strong><code>clear </code></strong>especifica si un elemento puede estar al lado de elementos <a href="/es/docs/CSS/float">flotantes</a> que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad <code>clear</code> aplica a ambos elementos flotantes y no flotantes.</p>
 
-Cuando es aplicado a bloques no flotantes, mueve el [border edge](/es/docs/CSS/box_model) del elemento hacia abajo hasta que este debajo del [margin edge](/es/docs/CSS/box_model) de todos los floats relevantes. Este movimiento (cuando acontece) causa que [margin collapsing](/es/docs/CSS/margin_collapsing) no ocurra.
+<p>Cuando es aplicado a bloques no flotantes, mueve el <a href="/es/docs/CSS/box_model">border edge</a> del elemento hacia abajo hasta que este debajo del <a href="/es/docs/CSS/box_model">margin edge</a> de todos los floats relevantes. Este movimiento (cuando acontece) causa que <a href="/es/docs/CSS/margin_collapsing">margin collapsing</a> no ocurra.</p>
 
-Cuando se aplica a elementos flotantes, mueve el [margin edge](/es/docs/CSS/box_model) del elemento debajo del [margin edge](/es/docs/CSS/box_model) de todos los floats relevantes. Esto afecta la posición de floats posteriores, ya que estos no pueden ser posicionados más arriba que los primeros.
+<p>Cuando se aplica a elementos flotantes, mueve el <a href="/es/docs/CSS/box_model">margin edge</a> del elemento debajo del <a href="/es/docs/CSS/box_model">margin edge</a> de todos los floats relevantes. Esto afecta la posición de floats posteriores, ya que estos no pueden ser posicionados más arriba que los primeros.</p>
 
-Los floats que son relevantes para ser limpiados (cleared) son los primeros floats dentro del mismo [contexto de formato de bloque](/es/docs/Web/Guide/CSS/Block_formatting_context).
+<p>Los floats que son relevantes para ser limpiados (cleared) son los primeros floats dentro del mismo <a href="/es/docs/Web/Guide/CSS/Block_formatting_context">contexto de formato de bloque</a>.</p>
 
-> **Nota:** **Nota:** Si deseas que un elemento contenga todos los elementos flotantes dentro, puedes hacer dos cosas, o bien flotar el contenedor también o usar `clear` en un [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) {{cssxref("::after")}}.```css
-> #container::after {
-> content: "";
-> display: block;
-> clear: both;
-> }
->
-> ```
->
-> ```
+<div class="note">
+<p><strong>Nota: </strong>Si deseas que un elemento contenga todos los elementos flotantes dentro, puedes hacer dos cosas, o bien flotar el contenedor también o usar <code>clear</code> en un <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-element</a> {{cssxref("::after")}}.</p>
 
-{{cssinfo}}
+<pre class="brush: css notranslate">#container::after {
+   content: "";
+   display: block;
+   clear: both;
+}
+</pre>
+</div>
 
-## Sintaxis
+<p>{{cssinfo}}</p>
 
-```css
-clear: none;
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="brush: css notranslate">clear: none;
 clear: left;
 clear: right;
 clear: both;
@@ -40,51 +39,51 @@ clear: inline-start;
 clear: inline-end;
 
 clear: inherit;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `none`
-  - : Es un keyword que indica que el elemento no es movido hacia abajo para limpiar elementos flotantes anteriores.
-- `left`
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes a la izquierda.
-- `right`
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes a la derecha.
-- `both`
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar tanto elementos flotantes de la izquierda como de la derecha.
-- `inline-start` {{experimental_inline}}
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes al inicio del bloque contenedor, estos son los elementos con valor float _left_ en scripts ltr (left to right) y elementos con valor float _right_ en scripts rtl (right to left).
-- `inline-end` {{experimental_inline}}
-  - : Es un keyword que indica que el elemento es movido hacia abajo para limpiar floats al final del bloque contenedor, estos son los elementos con valor float _right_ en scripts ltr (left to right) y elementos con valor float _left_ en scripts rtl (right to left).
+<dl>
+ <dt><code>none</code></dt>
+ <dd>Es un keyword que indica que el elemento no es movido hacia abajo para limpiar elementos flotantes anteriores.</dd>
+ <dt><code>left</code></dt>
+ <dd>Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes a la izquierda.</dd>
+ <dt><code>right</code></dt>
+ <dd>Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes a la derecha.</dd>
+ <dt><code>both</code></dt>
+ <dd>Es un keyword que indica que el elemento es movido hacia abajo para limpiar tanto elementos flotantes de la izquierda como de la derecha.</dd>
+ <dt><code>inline-start</code> {{experimental_inline}}</dt>
+ <dd>Es un keyword que indica que el elemento es movido hacia abajo para limpiar elementos flotantes al inicio del bloque contenedor, estos son los elementos con valor float <em>left</em> en scripts ltr (left to right) y elementos con valor float <em>right</em> en scripts rtl (right to left).</dd>
+ <dt><code>inline-end</code> {{experimental_inline}}</dt>
+ <dd>Es un keyword que indica que el elemento es movido hacia abajo para limpiar floats al final del bloque contenedor, estos son los elementos con valor float <em>right</em> en scripts ltr (left to right) y elementos con valor float <em>left</em>  en scripts rtl (right to left).</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-> **Nota:**El div con clase 'wrapper' añade un borde para una mejor visibilidad de la utilidad de la propiedad clear
+<div class="note"><strong>Nota: </strong>El div con clase 'wrapper' añade un borde para una mejor visibilidad de la utilidad de la propiedad clear</div>
 
-### clear: left
+<h3 id="clear_left">clear: left</h3>
 
-#### Contenido HTML
+<h4 id="Contenido_HTML">Contenido HTML</h4>
 
-```html
-<div class="wrapper">
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
 
-    <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+    &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
 
-    <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
 
-    <p class="left">This paragraph clears left.</p>
+    &lt;p class="left"&gt;This paragraph clears left.&lt;/p&gt;
 
-</div>
-```
+&lt;/div&gt;
+</pre>
 
-#### Contenido CSS
+<h4 id="Contenido_CSS">Contenido CSS</h4>
 
-```css
-.wrapper{
+<pre class="brush: css notranslate">.wrapper{
     border:1px solid black;
     padding:10px;
 }
@@ -108,30 +107,28 @@ clear: inherit;
 p {
     width: 50%;
 }
-```
+</pre>
 
-{{ EmbedLiveSample('clear:_left','100%','250') }}
+<p>{{ EmbedLiveSample('clear:_left','100%','250') }}</p>
 
-### clear: right
+<h3 id="clear_right">clear: right</h3>
 
-#### Contenido HTML
+<h4 id="Contenido_HTML_2">Contenido HTML</h4>
 
-```html
-<div class="wrapper">
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
 
-    <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+    &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
 
-    <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
 
-    <p class="right">This paragraph clears right.</p>
+    &lt;p class="right"&gt;This paragraph clears right.&lt;/p&gt;
 
-</div>
-```
+&lt;/div&gt;
+</pre>
 
-#### Contenido CSS
+<h4 id="Contenido_CSS_2">Contenido CSS</h4>
 
-```css
-.wrapper{
+<pre class="brush: css notranslate">.wrapper{
     border:1px solid black;
     padding:10px;
 }
@@ -154,31 +151,28 @@ p {
 }
 p {
     width: 50%;
-}
-```
+}</pre>
 
-{{ EmbedLiveSample('clear:_right','100%','250') }}
+<p>{{ EmbedLiveSample('clear:_right','100%','250') }}</p>
 
-### clear: both
+<h3 id="clear_both">clear: both</h3>
 
-#### Contenido HTML
+<h4 id="Contenido_HTML_3">Contenido HTML</h4>
 
-```html
-<div class="wrapper">
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
 
-    <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
+    &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.&lt;/p&gt;
 
-    <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+    &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
 
-    <p class="both">This paragraph clears both.</p>
+    &lt;p class="both"&gt;This paragraph clears both.&lt;/p&gt;
 
-</div>
-```
+&lt;/div&gt;
+</pre>
 
-#### Contenido CSS
+<h4 id="Contenido_CSS_3">Contenido CSS</h4>
 
-```css
-.wrapper{
+<pre class="brush: css notranslate">.wrapper{
     border:1px solid black;
     padding:10px;
 }
@@ -201,23 +195,45 @@ p {
 }
 p {
     width: 45%;
-}
-```
+}</pre>
 
-{{ EmbedLiveSample('clear:_both','100%','300') }}
+<p>{{ EmbedLiveSample('clear:_both','100%','300') }}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                    | Status                                           | Comment                                                     |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ----------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Agrega los valores inline-start y inline-end                |
-| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}                 | {{Spec2('CSS2.1')}}                         | Sin cambios significativos, aunque se aclaran los detalles. |
-| {{SpecName('CSS1', '#clear', 'clear')}}                                             | {{Spec2('CSS1')}}                         | Definición inicial                                          |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}}</td>
+   <td>{{Spec2('CSS Logical Properties')}}</td>
+   <td>Agrega los valores inline-start y inline-end</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Sin cambios significativos, aunque se aclaran los detalles.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1', '#clear', 'clear')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("css.properties.clear")}}
+<p>{{Compat("css.properties.clear")}}</p>
 
-## También puedes ver
+<h2 id="También_puedes_ver">También puedes ver</h2>
 
-- [El modelo de caja](/es/docs/Escuela_XUL/El_modelo_de_caja)
+<ul>
+ <li><a href="/es/docs/Escuela_XUL/El_modelo_de_caja">El modelo de caja</a></li>
+</ul>

@@ -7,29 +7,33 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/math/min
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-`math:min()` devuelve el valor mínimo de un conjunto de nodos (node-set).
+<p><br>
+ <code>math:min()</code> devuelve el valor mínimo de un conjunto de nodos (node-set).</p>
 
-Para calcular el valor mínimo de un conjunto de nodos, el conjunto de nodos se ordena en orden ascendente como se haría usando [`xsl:sort()`](es/XSLT/sort) con datos de tipo `number` (numéricos). Entonces el valor mínimo será el primer nodo de la lista ordenada, convertido en número.
+<p>Para calcular el valor mínimo de un conjunto de nodos, el conjunto de nodos se ordena en orden ascendente como se haría usando <code><a href="es/XSLT/sort">xsl:sort()</a></code> con datos de tipo <code>number</code> (numéricos). Entonces el valor mínimo será el primer nodo de la lista ordenada, convertido en número.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    math:min(conjuntoNodos)
+<pre class="eval">math:min(<em>conjuntoNodos</em>)
+</pre>
 
-### Argumentos
+<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
 
-- `conjuntoNodos`
-  - : El conjunto de nodos cuyo valor más bajo se va a devolver.
+<dl>
+ <dt><code><em>conjuntoNodos</em></code></dt>
+ <dd>El conjunto de nodos cuyo valor más bajo se va a devolver.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-Un fragmento de árbol resultante que representa como una cadena el valor numérico del nodo valorado más bajo.
+<p>Un fragmento de árbol resultante que representa como una cadena el valor numérico del nodo valorado más bajo.</p>
 
-## Definido en
+<h2 id="Definido_en" name="Definido_en">Definido en</h2>
 
-[EXSLT - MATH:MIN](http://www.exslt.org/math/functions/min/index.html)
+<p><a class="external" href="http://www.exslt.org/math/functions/min/index.html">EXSLT - MATH:MIN</a></p>
 
-## Implementación en Gecko
+<h2 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h2>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

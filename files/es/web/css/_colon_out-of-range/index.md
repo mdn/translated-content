@@ -1,53 +1,49 @@
 ---
 title: ':out-of-range'
-slug: Web/CSS/:out-of-range
+slug: 'Web/CSS/:out-of-range'
 tags:
   - CSS
   - Presentación
   - Pseudo-Clase CSS
   - Referencia CSS
   - Web
-translation_of: Web/CSS/:out-of-range
+translation_of: 'Web/CSS/:out-of-range'
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:out-of-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual está fuera de los límites de rango especificados por los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max","input")}}.
+<p>La <a href="/es/docs/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:out-of-range</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa un elemento {{htmlelement("input")}} cuyo valor actual está fuera de los límites de rango especificados por los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max","input")}}.</p>
 
-```css
-/* Selecciona cualquier <input>, pero solo cuando tiene un
+<pre class="brush: css no-line-numbers">/* Selecciona cualquier &lt;input&gt;, pero solo cuando tiene un
    rango especificado, y su valor está fuera de ese rango */
 input:out-of-range {
   background-color: rgba(255, 0, 0, 0.25);
-}
-```
+}</pre>
 
-Esta pseudo-clase es útil para dar al usuario una indicación visual de que el valor actual de un campo está fuera de los límites permitidos.
+<p>Esta pseudo-clase es útil para dar al usuario una indicación visual de que el valor actual de un campo está fuera de los límites permitidos.</p>
 
-> **Nota:** Esta pseudo-clase solo se aplica a los elementos que tienen (y pueden tomar) una limitación de rango. En ausencia de tal limitación, el elemento no puede estar "dentro del rango" ni "fuera de rango".
+<div class="note"><strong>Nota:</strong> Esta pseudo-clase solo se aplica a los elementos que tienen (y pueden tomar) una limitación de rango. En ausencia de tal limitación, el elemento no puede estar "dentro del rango" ni "fuera de rango".</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
 
-### HTML
+<div id="example">
+<h3 id="HTML">HTML</h3>
 
-```html
-<form action="" id="form1">
-  <ul>Los valores entre 1 y 10 son válidos.
-    <li>
-      <input id="value1" name="value1" type="number" placeholder="1 a 10" min="1" max="10" value="12">
-      <label for="value1">Tu valor esta </label>
-    </li>
-  </ul>
-</form>
-```
+<pre class="brush: html">&lt;form action="" id="form1"&gt;
+  &lt;ul&gt;Los valores entre 1 y 10 son válidos.
+    &lt;li&gt;
+      &lt;input id="value1" name="value1" type="number" placeholder="1 a 10" min="1" max="10" value="12"&gt;
+      &lt;label for="value1"&gt;Tu valor esta &lt;/label&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/form&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-li {
+<pre class="brush: css;">li {
   list-style: none;
   margin-bottom: 1em;
 }
@@ -71,25 +67,50 @@ input:in-range + label::after {
 
 input:out-of-range + label::after {
   content: '¡fuera de rango!';
-}
-```
+}</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
+</div>
 
-{{EmbedLiveSample('Ejemplo', 600, 140)}}
+<div>{{EmbedLiveSample('Ejemplo', 600, 140)}}</div>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                   | Estado                               | Comentarios                                                       |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}     | Define cuándo `:out-of-range` coincide con los elementos en HTML. |
-| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}                 | {{Spec2('CSS4 Selectors')}} | Definición Inicial.                                               |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Define cuándo <code>:out-of-range</code> coincide con los elementos en HTML.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td>Definición Inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("css.selectors.out-of-range")}}
+<div>
+<div>
 
-## Ver también
 
-- {{cssxref(":in-range")}}
-- [Validación de datos de formulario](/es/docs/Learn/HTML/Forms/Form_validation)
+<p>{{Compat("css.selectors.out-of-range")}}</p>
+</div>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{cssxref(":in-range")}}</li>
+ <li><a href="/es/docs/Learn/HTML/Forms/Form_validation">Validación de datos de formulario</a></li>
+</ul>

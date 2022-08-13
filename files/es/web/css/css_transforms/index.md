@@ -3,29 +3,50 @@ title: CSS Transforms
 slug: Web/CSS/CSS_Transforms
 translation_of: Web/CSS/CSS_Transforms
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<p>{{CSSRef}}{{SeeCompatTable}}</p>
 
-**CSS Transforms** is a module of CSS that defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.
+<p><strong>CSS Transforms</strong> is a module of CSS that defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.</p>
 
-## Reference
+<h2 id="Reference">Reference</h2>
 
-### CSS Properties
+<h3 id="CSS_Properties">CSS Properties</h3>
 
-- {{cssxref("backface-visibility")}}
-- {{cssxref("perspective")}}
-- {{cssxref("perspective-origin")}}
-- {{cssxref("transform")}}
-- {{cssxref("transform-box")}}
-- {{cssxref("transform-origin")}}
-- {{cssxref("transform-style")}}
+<div class="index">
+<ul>
+ <li>{{cssxref("backface-visibility")}}</li>
+ <li>{{cssxref("perspective")}}</li>
+ <li>{{cssxref("perspective-origin")}}</li>
+ <li>{{cssxref("transform")}}</li>
+ <li>{{cssxref("transform-box")}}</li>
+ <li>{{cssxref("transform-origin")}}</li>
+ <li>{{cssxref("transform-style")}}</li>
+</ul>
+</div>
 
-## Guides
+<h2 id="Guides">Guides</h2>
 
-- [Using CSS transforms](/es/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
-  - : Step-by-step tutorial about how to transform elements styled with CSS.
+<dl>
+ <dt><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></dt>
+ <dd>Step-by-step tutorial about how to transform elements styled with CSS.</dd>
+</dl>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Transforms') }} | {{ Spec2('CSS3 Transforms') }} | Initial definition. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Transforms') }}</td>
+   <td>{{ Spec2('CSS3 Transforms') }}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+

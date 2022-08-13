@@ -3,12 +3,11 @@ title: widows
 slug: Web/CSS/widows
 translation_of: Web/CSS/widows
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-La propiedad [CSS](/es/docs/CSS "CSS") **`widows`** especifica el número minimo de lineas en un contenedor de bloques que se deben mostrar en la parte superior de la [pagina](/es/docs/Web/CSS/Paged_Media), region o [columna](/es/docs/Web/CSS/CSS_Columns). Esta propiedad se usa normalmente para controlar como se producen las pausas.
+<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a>  <strong><code>widows</code></strong> especifica el número minimo de lineas en un contenedor de bloques que se deben mostrar en la parte superior de la <a href="/en-US/docs/Web/CSS/Paged_Media">pagina</a>, region o <a href="/en-US/docs/Web/CSS/CSS_Columns">columna</a>.  Esta propiedad se usa normalmente para controlar como se producen las pausas.  </p>
 
-```css
-/* valores <enteros> */
+<pre class="brush:css no-line-numbers">/* valores &lt;enteros&gt; */
 widows: 2;
 widows: 3;
 
@@ -16,39 +15,41 @@ widows: 3;
 widows: inherit;
 widows: initial;
 widows: unset;
-```
+</pre>
 
-> **Nota:** En la tipografia, un _widow_ is la ultima linea de un paragrafo que aparece solo en la parte superior de la pagina.
+<div class="note">
+<p>En la tipografia, un <em>widow</em> is la ultima linea de un paragrafo que aparece solo en la parte superior de la pagina.</p>
+</div>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- {{cssxref("&lt;integer&gt;")}}
-  - : The minimum number of lines that can stay by themselves at the top of a new fragment after a fragmentation break. The value must be positive.
+<dl>
+ <dt>{{cssxref("&lt;integer&gt;")}}</dt>
+ <dd>The minimum number of lines that can stay by themselves at the top of a new fragment after a fragmentation break. The value must be positive.</dd>
+</dl>
 
-### Sintaxis Formal
+<h3 id="Sintaxis_Formal">Sintaxis Formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<div>
-  <p>Este es el primer paragrafo que contiene algun texto.</p>
-  <p>Este es el segundo paragrafo que contiene algún texto mayor que el primero. Es usado para desmostrar como trabaja widows.</p>
-  <p>Este es el tercer paragrafo. Es un poco mas extenso en texto que el primero.</p>
-</div>
-```
+<pre class="brush: html">&lt;div&gt;
+  &lt;p&gt;Este es el primer paragrafo que contiene algun texto.&lt;/p&gt;
+  &lt;p&gt;Este es el segundo paragrafo que contiene algún texto mayor que el primero. Es usado para desmostrar como trabaja widows.&lt;/p&gt;
+  &lt;p&gt;Este es el tercer paragrafo. Es un poco mas extenso en texto que el primero.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-div {
+<pre class="brush: css; highlight[4]">div {
   background-color: #8cffa0;
   columns: 3;
   widows: 2;
@@ -61,25 +62,52 @@ p {
 p:first-child {
   margin-top: 0;
 }
-```
+</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample("Example", 400, 160)}}
+<p>{{EmbedLiveSample("Example", 400, 160)}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                                   | Comentario                                                                                                    |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#widows-orphans', 'widows')}} | {{Spec2('CSS3 Fragmentation')}} | Extiende `widows` para que se apliqye a cualquier tipo de fragmento, incluyendo paginas, regiones o columnas. |
-| {{SpecName('CSS3 Multicol', '#filling-columns', 'widows')}}     | {{Spec2('CSS3 Multicol')}}     | Recomendaciones a considerar de `widows` en relacion con las columnas.                                        |
-| {{SpecName('CSS2.1', 'page.html#break-inside', 'widows')}}         | {{Spec2('CSS2.1')}}                 | Definición Inicial.                                                                                           |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Fragmentation', '#widows-orphans', 'widows')}}</td>
+   <td>{{Spec2('CSS3 Fragmentation')}}</td>
+   <td>Extiende <code>widows</code> para que se apliqye a cualquier tipo de fragmento, incluyendo paginas, regiones o columnas. </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Multicol', '#filling-columns', 'widows')}}</td>
+   <td>{{Spec2('CSS3 Multicol')}}</td>
+   <td>Recomendaciones a considerar de <code>widows</code> en relacion con las columnas. </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'page.html#break-inside', 'widows')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Definición Inicial. </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad entre navegadores
+<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
 
-{{Compat("css.properties.widows")}}
+<div>
 
-## Ver tambien
 
-- {{cssxref("orphans")}}
-- [Medio paginados](/es/docs/Web/CSS/Paged_Media)
+<p>{{Compat("css.properties.widows")}}</p>
+</div>
+
+<h2 id="Ver_tambien">Ver tambien</h2>
+
+<ul>
+ <li>{{cssxref("orphans")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/Paged_Media">Medio paginados</a></li>
+</ul>

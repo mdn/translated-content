@@ -7,28 +7,31 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/math/lowest
 ---
-{{XsltRef}}
-`math:lowest()` devuelve el nodo del conjunto de nodos (node-set) especificado con el valor más bajo (donde el valor más bajo se calcula usando [`math:min()`](es/EXSLT/math/min)).
+<p>{{XsltRef}}<br>
+ <code>math:lowest()</code> devuelve el nodo del conjunto de nodos (node-set) especificado con el valor más bajo (donde el valor más bajo se calcula usando <code><a href="es/EXSLT/math/min">math:min()</a></code>).</p>
 
-Un nodo tiene este valor mínimo si convirtiendo su valor de cadena a número iguala el valor mínimo.
+<p>Un nodo tiene este valor mínimo si convirtiendo su valor de cadena a número iguala el valor mínimo.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    math:lowest(conjuntoNodos)
+<pre class="eval">math:lowest(<em>conjuntoNodos</em>)
+</pre>
 
-### Argumentos
+<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
 
-- `conjuntoNodos`
-  - : El conjunto de nodos cuyo valor más bajo va a ser devuelto.
+<dl>
+ <dt><code><em>conjuntoNodos</em></code></dt>
+ <dd>El conjunto de nodos cuyo valor más bajo va a ser devuelto.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-Un fragmento de árbol resultante que consiste en la copia de los nodos devueltos por [`math:min()`](es/EXSLT/math/min).
+<p>Un fragmento de árbol resultante que consiste en la copia de los nodos devueltos por <code><a href="es/EXSLT/math/min">math:min()</a></code>.</p>
 
-## Definido en
+<h2 id="Definido_en" name="Definido_en">Definido en</h2>
 
-[EXSLT - MATH:LOWEST](http://www.exslt.org/math/functions/lowest/index.html)
+<p><a class="external" href="http://www.exslt.org/math/functions/lowest/index.html">EXSLT - MATH:LOWEST</a></p>
 
-## Implementación en Gecko
+<h2 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h2>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

@@ -10,59 +10,62 @@ tags:
 translation_of: Web/CSS/:not
 original_slug: Web/CSS/:not()
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-La [pseudoclase](/es/docs/Web/CSS/Pseudo-classes) **`:not()`** de [CSS](/es/docs/Web/CSS) representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la _pseudoclase de negación_.
+<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudoclase</a> <strong><code>:not()</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen elementos específicos, se lo conoce como la <em>pseudoclase de negación</em>.</p>
 
-```css
-/* Selecciona cualquier elemento que NO sea un párrafo */
+<pre class="brush: css no-line-numbers notranslate">/* Selecciona cualquier elemento que NO sea un párrafo */
 :not(p) {
   color: blue;
-}
-```
+}</pre>
 
-> **Nota:** **Notas:\*** Se pueden escribir selectores inútiles usando esta pseudoclase. Por ejemplo, `:not(*)` coincide con cualquier elemento que no sea un elemento, por lo que la regla nunca se aplicará.
->
-> - Esta pseudoclase puede aumentar la [especificidad](/es/docs/Web/CSS/Specificity) de una regla. Por ejemplo, `#foo:not(#bar)` coincidirá con el mismo elemento que el `#foo` más simple, pero tiene una especificidad más alta.
-> - `:not(.foo)` coincidirá con cualquier cosa que no sea `.foo`, _incluidos {{HTMLElement("html")}} y {{HTMLElement("body")}}._
-> - Este selector solo se aplica a un elemento; no puedes usarlo para excluir a todos los antepasados. Por ejemplo, `body :not(table) a` se aplicará a los enlaces dentro de una tabla, ya que {{HTMLElement("tr")}} coincidirá con la parte `:not()` del selector.
+<div class="note">
+<p><strong>Notas:</strong></p>
 
-## Sintaxis
+<ul>
+ <li>Se pueden escribir selectores inútiles usando esta pseudoclase. Por ejemplo, <code>:not(*)</code> coincide con cualquier elemento que no sea un elemento, por lo que la regla nunca se aplicará.</li>
+ <li>Esta pseudoclase puede aumentar la <a href="/es/docs/Web/CSS/Specificity">especificidad</a> de una regla. Por ejemplo, <code>#foo:not(#bar)</code> coincidirá con el mismo elemento que el <code>#foo</code> más simple, pero tiene una especificidad más alta.</li>
+ <li><code>:not(.foo)</code> coincidirá con cualquier cosa que no sea <code>.foo</code>, <em>incluidos {{HTMLElement("html")}} y {{HTMLElement("body")}}.</em></li>
+ <li>Este selector solo se aplica a un elemento; no puedes usarlo para excluir a todos los antepasados. Por ejemplo, <code>body :not(table) a</code> se aplicará a los enlaces dentro de una tabla, ya que {{HTMLElement("tr")}} coincidirá con la parte <code>:not()</code> del selector.</li>
+</ul>
+</div>
 
-La pseudoclase `:not()` requiere una lista separada por comas de uno o más selectores como argumento. La lista no debe contener otro selector de negación o un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements).
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-> **Advertencia:** La capacidad de enumerar más de un selector es experimental y aún no es ampliamente compatible.
+<p>La pseudoclase <code>:not()</code> requiere una lista separada por comas de uno o más selectores como argumento. La lista no debe contener otro selector de negación o un <a href="/es/docs/Web/CSS/Pseudo-elements">pseudoelemento</a>.</p>
+
+<div class="warning">
+<p>La capacidad de enumerar más de un selector es experimental y aún no es ampliamente compatible.</p>
+</div>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<p>Soy un párrafo.</p>
-<p class="fancy">¡Soy muy elegante!</p>
-<div>NO soy un párrafo.</div>
-```
+<pre class="brush: html notranslate">&lt;p&gt;Soy un párrafo.&lt;/p&gt;
+&lt;p class="fancy"&gt;¡Soy muy elegante!&lt;/p&gt;
+&lt;div&gt;NO soy un párrafo.&lt;/div&gt;
+</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-.fancy {
+<pre class="brush: css notranslate">.fancy {
   text-shadow: 2px 2px 3px gold;
 }
 
-/* elementos <p> que no están en la clase `.fancy` */
+/* elementos &lt;p&gt; que no están en la clase `.fancy` */
 p:not(.fancy) {
   color: green;
 }
 
-/* Elementos que no son elementos <p> */
+/* Elementos que no son elementos &lt;p&gt; */
 body :not(p) {
   text-decoration: underline;
 }
 
-/* Elementos que no son elementos <div> o <span> */
+/* Elementos que no son elementos &lt;div&gt; o &lt;span&gt; */
 body :not(div):not(span) {
   font-weight: bold;
 }
@@ -71,20 +74,40 @@ body :not(div):not(span) {
 /* Tenga en cuenta que esta sintaxis aún no está bien soportada. */
 body :not(.crazy, .fancy) {
   font-family: sans-serif;
-}
-```
+}</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample('Ejemplo')}}
+<p>{{EmbedLiveSample('Ejemplo')}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                            | Status                               | Comment                                                            |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#negation', ':not()')}} | {{Spec2('CSS4 Selectors')}} | Extiende su argumento para permitir algunos selectores no simples. |
-| {{SpecName('CSS3 Selectors', '#negation', ':not()')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                                |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#negation', ':not()')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td>Extiende su argumento para permitir algunos selectores no simples.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#negation', ':not()')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td>Definición Inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("css.selectors.not")}}
+<div>
+
+
+<p>{{Compat("css.selectors.not")}}</p>
+</div>

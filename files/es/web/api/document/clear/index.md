@@ -13,16 +13,19 @@ tags:
   - Referencia
 translation_of: Web/API/Document/clear
 ---
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+<p>{{APIRef("DOM")}}{{ Deprecated_header() }}</p>
 
-Método que se usa en versiones anterior a las 1.0 de Mozilla para para limpiar el documento completo.
+<p>Método que se usa en versiones anterior a las 1.0 de Mozilla para para limpiar el documento completo.</p>
 
-No hace nada en versiones más recientes basado en Mozilla así como en Internet Explorer y Netscape 4.
+<p>No hace nada en versiones más recientes basado en Mozilla así como en Internet Explorer y Netscape 4.</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-    document.clear()
+<pre class="eval">document.clear()
+</pre>
 
-## Especificación
+<h2 id="Especificación">Especificación</h2>
 
-- [HTML5](http://www.whatwg.org/html/#dom-document-clear)
+<ul>
+ <li><a class="external" href="http://www.whatwg.org/html/#dom-document-clear">HTML5</a></li>
+</ul>

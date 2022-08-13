@@ -4,14 +4,13 @@ slug: Web/API/XMLDocument/async
 translation_of: Web/API/XMLDocument/async
 original_slug: Web/API/Document/async
 ---
-`document.async` es utilizado para indicar cuándo un llamado de {{domxref("document.load")}} debe ser sincrónico o asincrónico. `true` es su valor por defecto, indicando que el documento se cargó asincrónicamente.
+<p><code>document.async</code> es utilizado para indicar cuándo un llamado de  {{domxref("document.load")}} debe ser sincrónico o asincrónico. <code>true</code> es su valor por defecto, indicando que el documento se cargó asincrónicamente.</p>
 
-(Desde la versión 1.4 alpha es posible cargar documentos sincrónicamente)
+<p>(Desde la versión 1.4 alpha es posible cargar documentos sincrónicamente)</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-function loadXMLData(e) {
+<pre class="brush:js">function loadXMLData(e) {
   alert(new XMLSerializer().serializeToString(e.target)); // Devuelve los contenidos de querydata.xml como un string
 }
 
@@ -19,14 +18,17 @@ var xmlDoc = document.implementation.createDocument("", "test", null);
 
 xmlDoc.async = false;
 xmlDoc.onload = loadXMLData;
-xmlDoc.load('querydata.xml');
-```
+xmlDoc.load('querydata.xml');</pre>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-- [DOM Level 3 Load & Save module](http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS)
+<ul>
+ <li><a href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS">DOM Level 3 Load &amp; Save module</a></li>
+</ul>
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- [XML in Mozilla](/es/docs/XML_in_Mozilla "XML_in_Mozilla")
-- {{domxref("document.load")}}
+<ul>
+ <li><a href="/en-US/docs/XML_in_Mozilla" title="XML_in_Mozilla">XML in Mozilla</a></li>
+ <li>{{domxref("document.load")}}</li>
+</ul>

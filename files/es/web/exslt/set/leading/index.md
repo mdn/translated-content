@@ -7,31 +7,35 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/leading
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-`set:leading()` devuelve los nodos de un conjunto de nodos que viene antes del primer nodo del otro conjunto de nodos.
+<p><br>
+ <code>set:leading()</code> devuelve los nodos de un conjunto de nodos que viene antes del primer nodo del otro conjunto de nodos.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    set:leading(conjuntoNodos1,conjuntoNodos2)
+<pre class="eval">set:leading(<em>conjuntoNodos1</em>,<em>conjuntoNodos2</em>)
+</pre>
 
-### Arguments
+<h3 id="Arguments" name="Arguments">Arguments</h3>
 
-- `conjuntoNodos1`
-  - : El conjunto de nodos en el que hallar los nodos que preceden al primer nodo del segundo conjunto de nodos.
-- `conjuntoNodos2`
-  - : El conjunto de nodos contra el que se compara.
+<dl>
+ <dt><code><em>conjuntoNodos1</em> </code></dt>
+ <dd>El conjunto de nodos en el que hallar los nodos que preceden al primer nodo del segundo conjunto de nodos.</dd>
+ <dt><code><em>conjuntoNodos2</em> </code></dt>
+ <dd>El conjunto de nodos contra el que se compara.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-Un conjunto de nodos que contiene los nodos del `conjuntoNodos1 `cuyos valores preceden al primer nodo del `conjuntoNodos2 `.
+<p>Un conjunto de nodos que contiene los nodos del <code><em>conjuntoNodos1</em> </code> cuyos valores preceden al primer nodo del <code><em>conjuntoNodos2</em> </code>.</p>
 
-{{NoteStart}}Si el primer nodo del `conjuntoNodos2 `no está contenido en `conjuntoNodos1 `, de devuelve un conjunto de nodos vacío. Si `conjuntoNodos2 `está vacío, entonces el resultado es `conjuntoNodos1 `.{{NoteEnd}}
+<p>{{NoteStart}}Si el primer nodo del <code><em>conjuntoNodos2</em> </code> no está contenido en <code><em>conjuntoNodos1</em> </code>, de devuelve un conjunto de nodos vacío. Si <code><em>conjuntoNodos2</em> </code> está vacío, entonces el resultado es <code><em>conjuntoNodos1</em> </code>.{{NoteEnd}}</p>
 
-### Definido en
+<h3 id="Definido_en" name="Definido_en">Definido en</h3>
 
-[EXSLT - SET:LEADING](http://www.exslt.org/set/functions/leading/index.html)
+<p><a class="external" href="http://www.exslt.org/set/functions/leading/index.html">EXSLT - SET:LEADING</a></p>
 
-### Implementación de Gecko
+<h3 id="Implementaci.C3.B3n_de_Gecko" name="Implementaci.C3.B3n_de_Gecko">Implementación de Gecko</h3>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

@@ -8,22 +8,21 @@ tags:
 translation_of: Web/CSS/Comments
 original_slug: Web/CSS/Comentarios
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-Los comentarios son usados para añadir notas explicatorias o prevenir que el navegador interprete partes de la hoja de estilos.
+<p>Los comentarios son usados para añadir notas explicatorias o prevenir que el navegador interprete partes de la hoja de estilos.</p>
 
-Los comentarios se pueden colocar en cualquier espacio en blanco que se permita en la hoja de estilos.
+<p>Los comentarios se pueden colocar en cualquier espacio en blanco que se permita en la hoja de estilos.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    /* Comentario */
+<pre class="syntaxbox">/* Comentario */</pre>
 
-## Examples
+<h2 id="Examples">Examples</h2>
 
-```css
-/* Comentario de una sola línea */
+<pre class="brush:css">/* Comentario de una sola línea */
 
 /*
 Un comentario
@@ -31,17 +30,21 @@ que se extiende
 en varias
 líneas
 */
-```
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-La sintaxis de comentarios `/* */` es usada para comentarios de una o múltiples líneas. No hay otra forma de especificar comentarios en hojas de estilos externas. Sin embargo, cuando se usa el elemento `<style>`, se puede usar `<!-- -->` para ocultar CSS para navegadores antiguos, aunque no es recomendable. Como en la mayoría de los lenguajes de programación que usan la sintaxis de comentarios `/* */` estos no pueden ser anidados. En otras palabras, la primera instancia de `*/` que siga a una instancia de `/*` cerrará el comentario.
+<p>La sintaxis de comentarios <code>/* */</code> es usada para comentarios de una o múltiples líneas. No hay otra forma de especificar comentarios en hojas de estilos externas. Sin embargo, cuando se usa el elemento <code>&lt;style&gt;</code>, se puede usar <code>&lt;!-- --&gt;</code> para ocultar CSS para navegadores antiguos, aunque no es recomendable. Como en la mayoría de los lenguajes de programación que usan la sintaxis de comentarios <code>/* */</code> estos no pueden ser anidados. En otras palabras, la primera instancia de <code>*/</code> que siga a una instancia de <code>/*</code> cerrará el comentario.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-- [CSS 2.1 Syntax and basic data types #comments](http://www.w3.org/TR/CSS21/syndata.html#comments)
+<ul>
+ <li><a href="http://www.w3.org/TR/CSS21/syndata.html#comments">CSS 2.1 Syntax and basic data types #comments</a></li>
+</ul>
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- [Referencia CSS](/es/docs/Web/CSS/Referencia_CSS)
-- {{CSS_key_concepts}}
+<ul>
+ <li><a href="/es/docs/Web/CSS/Referencia_CSS">Referencia CSS</a></li>
+ <li>{{CSS_key_concepts}}</li>
+</ul>

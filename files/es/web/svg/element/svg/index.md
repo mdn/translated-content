@@ -9,85 +9,102 @@ tags:
   - red
 translation_of: Web/SVG/Element/svg
 ---
-El elemento `svg` es un contenedor que define un nuevo sistema de coordenadas y [viewport](/es/docs/Web/SVG/Attribute/viewBox). Es usado como el elemento más externo de cualquier documento SVG, pero también puede ser usado para agregar un fragmento de un SVG dentro de un documento SVG o HTML.
+<p>El elemento <code>svg</code> es un contenedor que define un nuevo sistema de coordenadas y <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewport</a>. Es usado como el elemento más externo de cualquier documento SVG, pero también puede ser usado para agregar un fragmento de un SVG dentro de un documento SVG o HTML.</p>
 
-## Contexto de Uso
+<h2 id="Contexto_de_Uso">Contexto de Uso</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-Considere la sigiente imagen SVG (representando la bandera nacional de Italia):
+<p>Considere la sigiente imagen SVG (representando la bandera nacional de Italia):</p>
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="150" height="100" viewBox="0 0 3 2">
+<pre class="brush: xml notranslate">&lt;svg xmlns="http://www.w3.org/2000/svg"
+     width="150" height="100" viewBox="0 0 3 2"&gt;
 
-  <rect width="1" height="2" x="0" fill="#008d46" />
-  <rect width="1" height="2" x="1" fill="#ffffff" />
-  <rect width="1" height="2" x="2" fill="#d2232c" />
-</svg>
-```
+  &lt;rect width="1" height="2" x="0" fill="#008d46" /&gt;
+  &lt;rect width="1" height="2" x="1" fill="#ffffff" /&gt;
+  &lt;rect width="1" height="2" x="2" fill="#d2232c" /&gt;
+&lt;/svg&gt;</pre>
 
-Esta puede ser incluida en un docuemnto HTML5 de la siguiente manera:
+<p>Esta puede ser incluida en un docuemnto HTML5 de la siguiente manera:</p>
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>HTML/SVG Example</title>
-</head>
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;HTML/SVG Example&lt;/title&gt;
+&lt;/head&gt;
 
-<body>
+&lt;body&gt;
 
-  <svg width="150" height="100" viewBox="0 0 3 2">
-    <rect width="1" height="2" x="0" fill="#008d46" />
-    <rect width="1" height="2" x="1" fill="#ffffff" />
-    <rect width="1" height="2" x="2" fill="#d2232c" />
-  </svg>
+  &lt;svg width="150" height="100" viewBox="0 0 3 2"&gt;
+    &lt;rect width="1" height="2" x="0" fill="#008d46" /&gt;
+    &lt;rect width="1" height="2" x="1" fill="#ffffff" /&gt;
+    &lt;rect width="1" height="2" x="2" fill="#d2232c" /&gt;
+  &lt;/svg&gt;
 
-</body>
-</html>
-```
+&lt;/body&gt;
+&lt;/html&gt;</pre>
 
-## Atributos
+<h2 id="Atributos">Atributos</h2>
 
-### Atributos Globales
+<h3 id="Atributos_Globales">Atributos Globales</h3>
 
-- [Atributos de procesamiento condicional](/es/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [Atributo Central](/es/docs/Web/SVG/Attribute#Core_attributes) »
-- [Atributos de evento del Documento](/es/docs/Web/SVG/Attribute#DocumentEvent) »
-- [Atributo de Eventos Gráficos](/es/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [Atributos de presentación](/es/docs/Web/SVG/Attribute#Presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
+<ul>
+ <li><a href="/en-US/docs/Web/SVG/Attribute#ConditionalProccessing">Atributos de procesamiento condicional</a> »</li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute#Core_attributes">Atributo Central</a> »</li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute#DocumentEvent">Atributos de evento del Documento</a> »</li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute#GraphicalEvent">Atributo de Eventos Gráficos</a> »</li>
+ <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation">Atributos de presentación</a> »</li>
+ <li>{{SVGAttr("class")}}</li>
+ <li>{{SVGAttr("style")}}</li>
+ <li>{{SVGAttr("externalResourcesRequired")}}</li>
+</ul>
 
-### Specific attributes
+<h3 id="Specific_attributes">Specific attributes</h3>
 
-- {{SVGAttr("version")}}
-- {{SVGAttr("baseProfile")}}
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("width")}}
-- {{SVGAttr("height")}}
-- {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("contentScriptType")}}
-- {{SVGAttr("contentStyleType")}}
-- {{SVGAttr("viewBox")}}
+<ul>
+ <li>{{SVGAttr("version")}}</li>
+ <li>{{SVGAttr("baseProfile")}}</li>
+ <li>{{SVGAttr("x")}}</li>
+ <li>{{SVGAttr("y")}}</li>
+ <li>{{SVGAttr("width")}}</li>
+ <li>{{SVGAttr("height")}}</li>
+ <li>{{SVGAttr("preserveAspectRatio")}}</li>
+ <li>{{SVGAttr("contentScriptType")}}</li>
+ <li>{{SVGAttr("contentStyleType")}}</li>
+ <li>{{SVGAttr("viewBox")}}</li>
+</ul>
 
-## Interfaz DOM
+<h2 id="Interfaz_DOM">Interfaz DOM</h2>
 
-Este elemento implementa [`SVGSVGElement`](/en-US/docs/Web/API/SVGSVGElement) en la interfaz.
+<p>Este elemento implementa <code><a href="/en-US/docs/Web/API/SVGSVGElement">SVGSVGElement</a></code> en la interfaz.</p>
 
-## Specificaciones
+<h2 id="Specificaciones">Specificaciones</h2>
 
-| Specificación                                                                        | Estado                   | Comentario         |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG2')}} |                    |
-| {{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}}</td>
+   <td>{{Spec2('SVG2')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}}</td>
+   <td>{{Spec2('SVG1.1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de Navegador
+<h2 id="Compatibilidad_de_Navegador">Compatibilidad de Navegador</h2>
 
-{{Compat("svg.elements.svg")}}
+<p>{{Compat("svg.elements.svg")}}</p>

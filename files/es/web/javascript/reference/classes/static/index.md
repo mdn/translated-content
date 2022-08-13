@@ -4,24 +4,23 @@ slug: Web/JavaScript/Reference/Classes/static
 translation_of: Web/JavaScript/Reference/Classes/static
 original_slug: Web/JavaScript/Referencia/Classes/static
 ---
-{{jsSidebar("Classes")}}
+<div>{{jsSidebar("Classes")}}</div>
 
-La palabra clave **static** define un método estático para una clase.
+<p>La palabra clave <strong>static</strong> define un método estático para una clase.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    static methodName() { ... }
+<pre class="syntaxbox">static methodName() { ... }</pre>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Los métodos estáticos son llamados sin instanciar su clase. Son habitualmente utilizados para crear funciones para una aplicación.
+<p>Los métodos estáticos son llamados sin instanciar su clase. Son habitualmente utilizados para crear funciones para una aplicación.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-El siguiente ejemplo demuestra varias cosas. Una de ellas es cómo un método estático es implementado en una clase, otra es que una clase con un miembro estático puede ser sub-claseada. Finalmente demuestra cómo un método estático puede (y cómo no) ser llamado.
+<p>El siguiente ejemplo demuestra varias cosas. Una de ellas es cómo un método estático es implementado en una clase, otra es que una clase con un miembro estático puede ser sub-claseada. Finalmente demuestra cómo un método estático puede (y cómo no) ser llamado.</p>
 
-```js
-class Tripple {
+<pre class="brush: js">class Tripple {
   static tripple(n) {
     n = n || 1;
     return n * 3;
@@ -38,23 +37,35 @@ console.log(Tripple.tripple());
 console.log(Tripple.tripple(6));
 console.log(BiggerTripple.tripple(3));
 var tp = new Tripple();
-console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
-```
+console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                            | Status               | Comment             |
-| ---------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES6')}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("javascript.classes.static")}}
 
-##
+<h2 id="sect1"> </h2>
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- [`class` expression](/es/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/es/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/es/docs/Web/JavaScript/Reference/Classes)
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaration</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
+</ul>

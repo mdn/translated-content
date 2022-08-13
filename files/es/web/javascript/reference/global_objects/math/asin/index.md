@@ -4,64 +4,90 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asin
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La Funcion **`Math.asin()`** retorna El arco seno (en radianes) de un número, eso es.
+<p>La Funcion <strong><code>Math.asin()</code></strong> retorna El arco seno (en radianes) de un número, eso es.</p>
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \sin(y) = x</annotation></semantics></math>
+<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \sin(y) = x</annotation></semantics></math></p>
 
-## Syntax
+<h2 id="Syntax">Syntax</h2>
 
-    Math.asin(x)
+<pre class="syntaxbox"><code>Math.asin(<var>x</var>)</code></pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- `x`
-  - : Un Numero.
+<dl>
+ <dt><code>x</code></dt>
+ <dd>Un Numero.</dd>
+</dl>
 
-### Return value
+<h3 id="Return_value">Return value</h3>
 
-The arcsine (in radians) of the given number if it's between **-1** and **1**; otherwise, {{jsxref("NaN")}}.
+<p>The arcsine (in radians) of the given number if it's between <strong>-1</strong> and <strong>1</strong>; otherwise, {{jsxref("NaN")}}.</p>
 
-## Descripcion
+<h2 id="Descripcion">Descripcion</h2>
 
-The `Math.asin()` method returns a numeric value between <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> and <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> radians for `x` between -1 and 1. If the value of `x` is outside this range, it returns {{jsxref("NaN")}}.
+<p>The <code>Math.asin()</code> method returns a numeric value between <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> and <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> radians for <code>x</code> between -1 and 1. If the value of <code>x</code> is outside this range, it returns {{jsxref("NaN")}}.</p>
 
-Because `asin()` is a static method of `Math`, you always use it as `Math.asin()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
+<p>Because <code>asin()</code> is a static method of <code>Math</code>, you always use it as <code>Math.asin()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `Math.asin()`
+<h3 id="Usando_Math.asin()">Usando <code>Math.asin()</code></h3>
 
-```js
-Math.asin(-2);  // NaN
+<pre class="brush: js">Math.asin(-2);  // NaN
 Math.asin(-1);  // -1.5707963267948966 (-pi/2)
 Math.asin(0);   // 0
 Math.asin(0.5); // 0.5235987755982989
 Math.asin(1);   // 1.5707963267948966 (pi/2)
 Math.asin(2);   // NaN
-```
+</pre>
 
-For values less than -1 or greater than 1, `Math.asin()` returns {{jsxref("NaN")}}.
+<p>For values less than -1 or greater than 1, <code>Math.asin()</code> returns {{jsxref("NaN")}}.</p>
 
-## Espesificaciones
+<h2 id="Espesificaciones">Espesificaciones</h2>
 
-| Espesificacion                                                           | Estado                       | Comentario                                         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.3', 'Math.asin')}}     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-math.asin', 'Math.asin')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-math.asin', 'Math.asin')}} | {{Spec2('ESDraft')}} |                                                    |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Espesificacion</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Initial definition. Implemented in JavaScript 1.0.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.8.2.3', 'Math.asin')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-math.asin', 'Math.asin')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.asin', 'Math.asin')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con Navegadores
+<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
 
 {{Compat("javascript.builtins.Math.asin")}}
 
-## Ver Mas
+<h2 id="Ver_Mas">Ver Mas</h2>
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+<ul>
+ <li>{{jsxref("Math.acos()")}}</li>
+ <li>{{jsxref("Math.atan()")}}</li>
+ <li>{{jsxref("Math.atan2()")}}</li>
+ <li>{{jsxref("Math.cos()")}}</li>
+ <li>{{jsxref("Math.sin()")}}</li>
+ <li>{{jsxref("Math.tan()")}}</li>
+</ul>

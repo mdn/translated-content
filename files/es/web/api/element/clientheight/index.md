@@ -5,37 +5,57 @@ tags:
   - Propiedad
 translation_of: Web/API/Element/clientHeight
 ---
-{{ APIRef("DOM") }}
+<p>{{ APIRef("DOM") }}</p>
 
-La propiedad de sólo lectura **`Element.clientHeight`** devuelve la altura de un elemento en píxeles, incluyendo el padding pero no las barras horizontales, el borde o el margen.
+<p>La propiedad de sólo lectura <code><strong>Element.clientHeight</strong></code> devuelve la altura de un elemento en píxeles, incluyendo el padding pero no las barras horizontales, el borde o el margen.</p>
 
-`clientHeight` puede ser calculado como CSS `height` + CSS `padding` - alto de la barra horizontal (si existe).
+<p><code>clientHeight</code> puede ser calculado como CSS <code>height</code> + CSS <code>padding</code> - alto de la barra horizontal (si existe).</p>
 
-> **Nota:** Esta propiedad redondeará el valor a un entero. Si necesitas un valor fraccional usa {{ domxref("element.getBoundingClientRect()") }}.
+<div class="note">
+<p><strong>Nota:</strong> Esta propiedad redondeará el valor a un entero. Si necesitas un valor fraccional usa {{ domxref("element.getBoundingClientRect()") }}.</p>
+</div>
 
-## Sintaxis
+<h2 id="Syntax_and_values" name="Syntax_and_values">Sintaxis</h2>
 
-    var h = element.clientHeight;
+<pre class="syntaxbox">var <var>h</var> = <var>element</var>.clientHeight;</pre>
 
-`h` es un entero que representa el alto de _element_ en píxeles.
+<p><code><var>h</var></code> es un entero que representa el alto de <em>element</em> en píxeles.</p>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+<p> </p>
 
-## Specification
+<p>              <img alt="Image:Dimensions-client.png" class="internal" src="/@api/deki/files/185/=Dimensions-client.png"></p>
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-clientheight', 'clientheight')}} | {{Spec2('CSSOM View')}} |         |
 
-### Notas
+<h2 id="Specification" name="Specification">Specification</h2>
 
-`clientHeight` es una propiedad introducida en el modelo de objeto de Internet Explorer.
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM View', '#dom-htmlelement-clientheight', 'clientheight')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Ver también
+<h3 id="Notes" name="Notes">Notas</h3>
 
-- {{domxref("Element.offsetHeight")}}
-- {{domxref("Element.scrollHeight")}}
-- [Determining the dimensions of elements](/es/docs/Determining_the_dimensions_of_elements)
-- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+<p><code>clientHeight</code> es una propiedad introducida en el modelo de objeto de Internet Explorer.</p>
+
+<h2 id="See_Also" name="See_Also">Ver también</h2>
+
+<ul>
+ <li>{{domxref("Element.offsetHeight")}}</li>
+ <li>{{domxref("Element.scrollHeight")}}</li>
+ <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
+ <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location</a></li>
+</ul>

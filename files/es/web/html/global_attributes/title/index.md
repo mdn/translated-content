@@ -8,41 +8,67 @@ tags:
 translation_of: Web/HTML/Global_attributes/title
 original_slug: Web/HTML/Atributos_Globales/title
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+<p class="note">{{HTMLSidebar("Global_attributes")}}</p>
 
-El [atributo global ](/es/docs/Web/HTML/Atributos_Globales)**title** contiene un texto representado información relacionada al elemento al cual pertenece . Tal información puede típicamente , pero no necesariamente , ser presentada al usuario como un tip . Aquí hay algunos usos típicos para este atributo :
+<p>El <a href="/es/docs/Web/HTML/Atributos_Globales">atributo global </a><strong>title </strong>contiene un texto representado información relacionada al elemento al cual pertenece . Tal información puede típicamente , pero no necesariamente , ser presentada al usuario como un tip . Aquí hay algunos usos típicos para este atributo :</p>
 
-- Vínculo : el título o la descripción del documento vinculado
-- Elemento mediático como una imagen : una descripción o créditos asociados
-- Párrafo : una nota de pié de página o comentario acerca de este
-- Cita : alguna información sobre el autor y otros datos .
+<ul>
+ <li>Vínculo : el título o la descripción del documento vinculado </li>
+ <li>Elemento mediático como una imagen : una descripción o créditos asociados</li>
+ <li>Párrafo : una nota de pié de página o comentario acerca de este </li>
+ <li>Cita : alguna información sobre el autor y otros datos .</li>
+</ul>
 
-Si este atributo es omitido , significa que el título del ancestro más cercano de este elemento es todavía relevante para este (puede usarse legítimamente como un tip para ese elemento ) . Si el atributo es establecido como la _cadena vacía_ , significa explícitamente que el título de su ancestro más cercano no es relevante para este elemento ( y no debería de usarse en el tip para ese elemento )
+<p>Si este atributo es omitido  , significa que el título del ancestro más cercano de este elemento es todavía relevante para este (puede usarse legítimamente como un tip para ese elemento ) . Si el atributo es establecido como la <em>cadena vacía </em>, significa explícitamente que el título de su ancestro más  cercano no es relevante para este elemento ( y no debería de usarse en el tip para ese elemento )</p>
 
-Semánticas adicionales se adjuntan a los atributos de **title** de los elementos {{ HTMLElement("link") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("input") }} y {{ HTMLElement("menuitem") }}
+<p>Semánticas adicionales se adjuntan a los atributos de <strong>title </strong>de los elementos {{ HTMLElement("link") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("input") }} y {{ HTMLElement("menuitem") }} </p>
 
-El atributo **title** puede contener varias líneas . Cada `U+000A LINE FEED` (`LF`) insertada representa una línea nueva . Se debe tener precaución ya que esto significa que :
+<p>El atributo <strong>title </strong>puede contener varias líneas . Cada  <code>U+000A LINE FEED</code> (<code>LF</code>) insertada representa una línea nueva . Se debe tener precaución ya que esto significa que :</p>
 
-```html
-<p>Líneas nuevas en title deben de tomarse en cuenta , como esta <abbr title="Este es un título multilínea">ejemplo </abbr>.</p>
-```
+<pre class="brush: html">&lt;p&gt;Líneas nuevas en title deben de tomarse en cuenta , como esta &lt;abbr title="Este es un título multilínea"&gt;ejemplo &lt;/abbr&gt;.&lt;/p&gt;
+</pre>
 
-define un título de dos líneas .
+<p>define un título de dos líneas .</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                   | Estatus                          | Comentario                                                                                                                                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "elements.html#the-title-attribute", "title")}} | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                             |
-| {{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}             | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, sin cambio desde {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                               |
-| {{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}         | {{Spec2('HTML5 W3C')}}     | Snapshot of {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, es ahora un verdadero atributo global.                                                                                                                                                                                                  |
-| {{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}         | {{Spec2('HTML4.01')}}     | Soportado en todos los elementos pero no en {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, y {{HTMLElement("title")}}. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "elements.html#the-title-attribute", "title")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Snapshot de {{SpecName('HTML WHATWG')}}, sin cambio desde {{SpecName('HTML5 W3C')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Snapshot of {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, es ahora  un verdadero atributo global.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td>Soportado en todos los elementos pero no en {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, y {{HTMLElement("title")}}.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en exploradores
+<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores</h2>
 
 {{Compat("html.global_attributes.title")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [atributos globales](/es/docs/Web/HTML/Atributos_Globales) .
-- {{domxref("HTMLElement.title")}} que refleja a este atributo .
+<ul>
+ <li><a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a> .</li>
+ <li>{{domxref("HTMLElement.title")}} que refleja a este atributo .</li>
+</ul>

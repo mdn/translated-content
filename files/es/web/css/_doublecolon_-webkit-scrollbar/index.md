@@ -1,25 +1,26 @@
 ---
 title: '::-webkit-scrollbar'
-slug: Web/CSS/::-webkit-scrollbar
+slug: 'Web/CSS/::-webkit-scrollbar'
 tags:
   - CSS
   - NeedsCompatTable
   - Pseudo-elemento
   - Referencia
-translation_of: Web/CSS/::-webkit-scrollbar
+translation_of: 'Web/CSS/::-webkit-scrollbar'
 ---
-{{CSSRef}}
+<p>{{CSSRef}}</p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) ::-webkit-scrollbar afecta el estilo de la barra de desplazamiento asociada a un elemento.
+<p>El <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> <a href="/es/docs/Web/CSS">CSS</a>  <font face="Consolas, Liberation Mono, Courier, monospace">::-webkit-scrollbar</font> afecta el estilo de la barra de desplazamiento asociada a un elemento.</p>
 
-> **Nota:** `::-webkit-scrollbar` sólo está disponible en navegadores basados en [WebKit](https://webkit.org) (p.e., Google Chrome).
+<div class="note">
+<p><code>::-webkit-scrollbar</code> sólo está disponible en navegadores basados en  <a class="external external-icon" href="https://webkit.org">WebKit</a><span style="font-size: 85%;"> (p.e., Google Chrome)</span>.</p>
+</div>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```css
-.visible-scrollbar, .invisible-scrollbar {
+<pre class="brush: css">.visible-scrollbar, .invisible-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;
@@ -27,11 +28,10 @@ El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) :
 .invisible-scrollbar::-webkit-scrollbar {
   display: none;
 }
-```
+</pre>
 
-```html
-<div class="visible-scrollbar">Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword</div>
-<div class="invisible-scrollbar">Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword</div>
-```
+<pre class="brush: html">&lt;div class="visible-scrollbar"&gt;Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;/div&gt;
+&lt;div class="invisible-scrollbar"&gt;Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;/div&gt;
+</pre>
 
-{{EmbedLiveSample('Ejemplo')}}
+<p>{{EmbedLiveSample('Ejemplo')}}</p>

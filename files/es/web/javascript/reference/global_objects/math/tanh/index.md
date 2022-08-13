@@ -9,67 +9,88 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tanh
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La funcion **`Math.tanh()`** devuelve la hyperbolica tangente de un numero, esto es
+<p>La funcion <strong><code>Math.tanh()</code></strong> devuelve la hyperbolica tangente de un numero, esto es </p>
 
-<math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
+<p><math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math></p>
 
-{{EmbedInteractiveExample("pages/js/math-tanh.html")}}
+<div>{{EmbedInteractiveExample("pages/js/math-tanh.html")}}</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Math.tanh(x)
+<pre class="syntaxbox"><code>Math.tanh(<var>x</var>)</code></pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- `x`
-  - : Un numero.
+<dl>
+ <dt><code>x</code></dt>
+ <dd>Un numero.</dd>
+</dl>
 
-### Devolver valor
+<h3 id="Devolver_valor">Devolver valor</h3>
 
-La hyperbolica tangente del numero obtenido.
+<p>La hyperbolica tangente del numero obtenido.</p>
 
-## Descripcion
+<h2 id="Descripcion">Descripcion</h2>
 
-Porque `tanh()` es un metodo estatico de `Math`, siempre se usa como `Math.tanh()`, en lugar de ser un metodo de `Math` objeto que creas (`Math` no es un constructor).
+<p>Porque <code>tanh()</code> es un metodo estatico de <code>Math</code>, siempre se usa como <code>Math.tanh()</code>, en lugar de ser un metodo de <code>Math</code> objeto que creas (<code>Math</code> no es un constructor).</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `Math.tanh()`
+<h3 id="Usando_Math.tanh()">Usando <code>Math.tanh()</code></h3>
 
-```js
-Math.tanh(0);        // 0
+<pre class="brush: js">Math.tanh(0);        // 0
 Math.tanh(Infinity); // 1
 Math.tanh(1);        // 0.7615941559557649
-```
+</pre>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-Esto puede ser emulado con ayuda de {{jsxref("Math.exp()")}} funcion:
+<p>Esto puede ser emulado con ayuda de {{jsxref("Math.exp()")}} funcion:</p>
 
-```js
-Math.tanh = Math.tanh || function(x){
+<pre class="brush: js">Math.tanh = Math.tanh || function(x){
     var a = Math.exp(+x), b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificacion                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ES2015')}}     | Definicion inicial. |
-| {{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificacion</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-math.tanh', 'Math.tanh')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>
+    <p>Definicion inicial.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("javascript.builtins.Math.tanh")}}
 
-##
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
+<p>{{Compat("javascript.builtins.Math.tanh")}}</p>
+
+<h2 id="sect1"> </h2>
+
+<ul>
+ <li>{{jsxref("Math.acosh()")}}</li>
+ <li>{{jsxref("Math.asinh()")}}</li>
+ <li>{{jsxref("Math.atanh()")}}</li>
+ <li>{{jsxref("Math.cosh()")}}</li>
+ <li>{{jsxref("Math.sinh()")}}</li>
+</ul>

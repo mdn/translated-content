@@ -11,61 +11,72 @@ tags:
   - metodo
 translation_of: Web/API/Storage/removeItem
 ---
-{{APIRef("Web Storage API")}}
+<p>{{APIRef("Web Storage API")}}</p>
 
-El método `removeItem()` de la interfaz {{domxref("Storage")}} elimina la clave cuyo nombre recibe por parámetro del almacenamiento. La interfaz `Storage` de la [API de almacenamiento web](/es/docs/Web/API/API_de_almacenamiento_web) provee acceso al almacenamiento de la sesión (`sessionStorage`) o al almacenamiento local (`localStorage`).
+<p>El método <code>removeItem()</code> de la interfaz {{domxref("Storage")}} elimina la clave cuyo nombre recibe por parámetro del almacenamiento. La interfaz <code>Storage</code> de la <a href="/es/docs/Web/API/API_de_almacenamiento_web">API de almacenamiento web</a> provee acceso al almacenamiento de la sesión (<code>sessionStorage</code>) o al almacenamiento local (<code>localStorage</code>).</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    storage.removeItem(keyName);
+<pre class="syntaxbox notranslate"><em>storage</em>.removeItem(<em>keyName</em>);</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- _**keyName**_
-  - : Una {{domxref("DOMString")}} que contiene el nombre de la clave que se desea eliminar.
+<dl>
+ <dt><em><u>keyName</u></em></dt>
+ <dd>Una {{domxref("DOMString")}} que contiene el nombre de la clave que se desea eliminar.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve">Devuelve</h3>
 
-_Ningún valor._
+<p><em>Ningún valor.</em></p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-La siguiente función crea 3 elementos dentro del almacenamiento local y después elimina el elemento `image`.
+<p>La siguiente función crea 3 elementos dentro del almacenamiento local y después elimina el elemento <code>image</code>.</p>
 
-```js
-function populateStorage() {
+<pre class="brush: js notranslate">function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
 
   localStorage.removeItem('image');
-}
-```
+}</pre>
 
-De la misma manera se podría manipular el almacenamiento de sesión:
+<p>De la misma manera se podría manipular el almacenamiento de sesión:</p>
 
-```js
-function populateSessionStorage() {
+<pre class="brush: js notranslate">function populateSessionStorage() {
   sessionStorage.setItem('bgcolor', 'red');
   sessionStorage.setItem('font', 'Helvetica');
   sessionStorage.setItem('image', 'myCat.png');
 
   sessionStorage.removeItem('image');
-}
-```
+}</pre>
 
-> **Nota:** Para ver esto en un ejemplo real, vea nuestra [Demo de Web Storage](https://github.com/mdn/web-storage-demo).
+<div class="note">
+<p><strong>Nota</strong>: Para ver esto en un ejemplo real, vea nuestra <a href="https://github.com/mdn/web-storage-demo">Demo de Web Storage</a>.</p>
+</div>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                           | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('Web Storage')}} |             |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}}</td>
+   <td>{{Spec2('Web Storage')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.Storage.removeItem")}}
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-[Utilizando la API de Web Storage](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utilizando la API de Web Storage</a></p>

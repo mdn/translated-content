@@ -9,69 +9,121 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-fill-mode
 ---
-{{ CSSRef() }}{{ SeeCompatTable() }}
+<div>{{ CSSRef() }}</div>
 
-## Definición
+<div>{{ SeeCompatTable() }}</div>
 
-La propiedad [CSS](/en/CSS "CSS") `animation-fill-mode` especifica el modo en que una animación CSS aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución.
+<h2 id="Definición">Definición</h2>
 
-{{cssinfo}}
+<p>La propiedad <a href="/en/CSS" title="CSS">CSS</a> <code>animation-fill-mode</code> especifica el modo en que una animación CSS aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución.</p>
 
-## Sintaxis
+<p>{{cssinfo}}</p>
 
-    Formal syntax: {{csssyntax("animation-fill-mode")}}
+<h2 id="Sintaxis">Sintaxis</h2>
 
-<!---->
+<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("animation-fill-mode")}}
+</pre>
 
-    animation-fill-mode: none
-    animation-fill-mode: forwards
-    animation-fill-mode: backwards
-    animation-fill-mode: both
+<pre>animation-fill-mode: none
+animation-fill-mode: forwards
+animation-fill-mode: backwards
+animation-fill-mode: both
 
-    El caracter # indica que pueden darse varios valores separados por comas.
-    Cada uno de los valores se aplicará en el mismo orden en que se ha declarado en la propiedad 'animation'
-    animation-fill-mode: none, backwards
-    animation-fill-mode: both, forwards, none
+<strong>El caracter # indica que pueden darse varios valores separados por comas.
+Cada uno de los valores se aplicará en el mismo orden en que se ha declarado en la propiedad 'animation'</strong>
+animation-fill-mode: none, backwards
+animation-fill-mode: both, forwards, none
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `none`
-  - : La animación no aplicará los estilos antes ni después de su ejecución.
-- `forwards`
-  - | : El objeto sobre el que se aplica la animación quedará con los valores y estilos que le aplique el último keyframe de la ejecución de la animación. El último valor dependerá del valor de {{ cssxref("animation-direction") }} y {{ cssxref("animation-iteration-count") }}: | `animation-direction` | `animation-iteration-count` | ultimo keyframe encontrado |
-    | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------------- | -------------------------- |
-    | `normal`                                                                                                                                                                                                                                                                                                 | even o odd            | `100%` or `to`              |
-    | `reverse`                                                                                                                                                                                                                                                                                                | even o odd            | `0%` or `from`              |
-    | `alternate`                                                                                                                                                                                                                                                                                              | even                  | `0%` or `from`              |
-    | `alternate`                                                                                                                                                                                                                                                                                              | odd                   | `100%` or `to`              |
-    | `alternate-reverse`                                                                                                                                                                                                                                                                                      | even                  | `100%` or `to`              |
-    | `alternate-reverse`                                                                                                                                                                                                                                                                                      | odd                   | `0%` or `from`              |
-- `backwards`
-  - | : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}: | `animation-direction` | primer keyframe |
-    | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- | --------------- |
-    | `normal` o `alternate`                                                                                                                                                                                                                                                                                             | `0%` or `from`        |
-    | `reverse` o `alternate-reverse`                                                                                                                                                                                                                                                                                    | `100%` or `to`        |
-- `both`
-  - : La animación seguirá las reglas de las opciones forwards y backwards, extendiendo las propiedades de la animación en ambas direcciones.
+<dl>
+ <dt><code>none</code></dt>
+ <dd>La animación no aplicará los estilos antes ni después de su ejecución.</dd>
+ <dt><code>forwards</code></dt>
+ <dd>El objeto sobre el que se aplica la animación quedará con los valores y estilos que le aplique el último keyframe de la ejecución de la animación. El último valor dependerá del valor de {{ cssxref("animation-direction") }} y {{ cssxref("animation-iteration-count") }}:
+ <table class="standard-table">
+  <thead>
+   <tr>
+    <th scope="col"><code>animation-direction</code></th>
+    <th scope="col"><code>animation-iteration-count</code></th>
+    <th scope="col">ultimo keyframe encontrado</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td><code>normal</code></td>
+    <td>even o odd</td>
+    <td><code>100%</code> or <code>to</code></td>
+   </tr>
+   <tr>
+    <td><code>reverse</code></td>
+    <td>even o odd</td>
+    <td><code>0%</code> or <code>from</code></td>
+   </tr>
+   <tr>
+    <td><code>alternate</code></td>
+    <td>even</td>
+    <td><code>0%</code> or <code>from</code></td>
+   </tr>
+   <tr>
+    <td><code>alternate</code></td>
+    <td>odd</td>
+    <td><code>100%</code> or <code>to</code></td>
+   </tr>
+   <tr>
+    <td><code>alternate-reverse</code></td>
+    <td>even</td>
+    <td><code>100%</code> or <code>to</code></td>
+   </tr>
+   <tr>
+    <td><code>alternate-reverse</code></td>
+    <td>odd</td>
+    <td><code>0%</code> or <code>from</code></td>
+   </tr>
+  </tbody>
+ </table>
+ </dd>
+ <dt><code>backwards</code></dt>
+ <dd>La animación aplicará los valores definidos en el primer <a href="/en-US/docs/CSS/@keyframes">keyframe</a> tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
+ <table class="standard-table">
+  <thead>
+   <tr>
+    <th scope="col"><code>animation-direction</code></th>
+    <th scope="col">primer keyframe</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td><code>normal</code> o <code>alternate</code></td>
+    <td><code>0%</code> or <code>from</code></td>
+   </tr>
+   <tr>
+    <td><code>reverse</code> o <code>alternate-reverse</code></td>
+    <td><code>100%</code> or <code>to</code></td>
+   </tr>
+  </tbody>
+ </table>
+ </dd>
+ <dt><code>both</code></dt>
+ <dd>La animación seguirá las reglas de las opciones forwards y backwards, extendiendo las propiedades de la animación en ambas direcciones.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Example" name="Example">Ejemplos</h2>
 
-Puedes ver el efecto de animation-fill-mode en el siguiente ejemplo. Para animaciones que iteran de forma infinita, puede que quieras que al final de cada iteración queden en su estado final mejor que en el estado inicial.
+<p>Puedes ver el efecto de animation-fill-mode en el siguiente ejemplo.  Para animaciones que iteran de forma infinita, puede que quieras que al final de cada iteración queden en su estado final mejor que en el estado inicial. </p>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<p>Mueve el raton sobre la caja gris</p>
-<div class="demo">
-  <div class="grows">Esto sólo crece</div>
-  <div class="growsandstays">Esto crece y se queda grande</div>
-</div>
-```
+<pre class="brush: html">&lt;p&gt;Mueve el raton sobre la caja gris&lt;/p&gt;
+&lt;div class="demo"&gt;
+  &lt;div class="grows"&gt;Esto sólo crece&lt;/div&gt;
+  &lt;div class="growsandstays"&gt;Esto crece y se queda grande&lt;/div&gt;
+&lt;/div&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-.demo {
+<pre class="brush: css">.demo {
   border-top: 100px solid #ccc;
   height: 300px;
   font-family: sans-serif;
@@ -97,22 +149,36 @@ Puedes ver el efecto de animation-fill-mode en el siguiente ejemplo. Para animac
     -webkit-animation-name: grow;
     -webkit-animation-duration: 3s;
     -webkit-animation-fill-mode: forwards;
-}
-```
+}</pre>
 
-{{ EmbedLiveSample('Example',700,300) }}
+<p>{{ EmbedLiveSample('Example',700,300) }}</p>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                                               | Estado                                   | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode') }} | {{ Spec2('CSS3 Animations') }} |            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode') }}</td>
+   <td>{{ Spec2('CSS3 Animations') }}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad entre navegadores
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad entre navegadores</h2>
 
 {{Compat("css.properties.animation-fill-mode")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Usando CSS Animations](/es/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+<ul>
+ <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations" title="Tutorial about CSS animations">Usando CSS Animations</a></li>
+ <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
+</ul>

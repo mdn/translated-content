@@ -10,41 +10,44 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/padStart
 ---
-{{JSRef}}{{SeeCompatTable}}
+<div>{{JSRef}}{{SeeCompatTable}}</div>
 
-El método **`padStart()`** rellena la cadena actual con una cadena dada (repetida eventualmente) de modo que la cadena resultante alcance una longitud dada. El relleno es aplicado desde el inicio (izquierda) de la cadena actual.
+<p>El método <code><strong>padStart()</strong></code> rellena la cadena actual con una cadena dada (repetida eventualmente) de modo que la cadena resultante alcance una longitud dada. El relleno es aplicado desde el inicio (izquierda) de la cadena actual.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    str.padStart(targetLength [, padString])
+<pre class="syntaxbox"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `targetLength`
-  - : La longitud de la cadena resultante una vez la cadena actual haya sido rellenada. Si este parámetro es más pequeño que la longitud de la cadena actual, la cadena actual será devuelta sin modificar.
-- `padString` {{optional_inline}}
-  - : La cadena para rellenar la cadena actual. Si esta cadena es muy larga, será recortada y la parte más a la izquierda será aplicada. El valor por defecto para este parámetro es " " (U+0020).
+<dl>
+ <dt><code>targetLength</code></dt>
+ <dd>La longitud de la cadena resultante una vez la cadena actual haya sido rellenada. Si este parámetro es más pequeño que la longitud de la cadena actual, la cadena actual será devuelta sin modificar.</dd>
+ <dt><code>padString</code> {{optional_inline}}</dt>
+ <dd>La cadena para rellenar la cadena actual. Si esta cadena es muy larga, será recortada y la parte más a la izquierda será aplicada. El valor por defecto para este parámetro es " " (U+0020).</dd>
+</dl>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-Un {{jsxref("String")}} de la longitud específicada con la cadena de relleno aplicada desde el inicio.
+<p>Un {{jsxref("String")}} de la longitud específicada con la cadena de relleno aplicada desde el inicio.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-'abc'.padStart(10);         // "       abc"
+<pre class="brush: js">'abc'.padStart(10);         // "       abc"
 'abc'.padStart(10, "foo");  // "foofoofabc"
 'abc'.padStart(6,"123465"); // "123abc"
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-Este método aún no ha alcanzado el estándar ECMAScript. Actualmente es una [propuesta para ECMAScript](https://github.com/tc39/proposal-string-pad-start-end).
+<p>Este método aún no ha alcanzado el estándar ECMAScript. Actualmente es una <a href="https://github.com/tc39/proposal-string-pad-start-end">propuesta para ECMAScript</a>.</p>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.String.padStart")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("String.padEnd()")}}
+<ul>
+ <li>{{jsxref("String.padEnd()")}}</li>
+</ul>

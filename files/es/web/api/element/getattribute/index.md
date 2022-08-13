@@ -7,39 +7,42 @@ tags:
   - metodo
 translation_of: Web/API/Element/getAttribute
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-`getAttribute()` devuelve el valor del atributo especificado en el elemento. Si el atributo especificado no existe, el valor retornado puede ser tanto `null` como `""` (una cadena vacía); ver [Notes](#notes) para más detalles.
+<p><span class="seoSummary"><code>getAttribute()</code> devuelve el valor del atributo especificado en el elemento.</span> Si el atributo especificado no existe, el valor retornado puede ser tanto <code>null</code> como <code>""</code> (una cadena vacía); ver <a href="#notes">Notes</a> para más detalles.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    var atributo = element.getAttribute(nombreAtributo);
+<pre class="syntaxbox"><em>var atributo</em> = element.getAttribute(<em>nombreAtributo</em>);
+</pre>
 
-donde
+<p>donde</p>
 
-- `atributo` es una cadena que contiene el valor del atributo `nombreAtributo`.
-- `nombreAtributo` es el nombre del atributo del cual se quiere obtener el valor.
+<ul>
+ <li><code><em>atributo</em></code> es una cadena que contiene el valor del atributo <code><em>nombreAtributo</em></code>.</li>
+ <li><code><em>nombreAtributo</em></code> es el nombre del atributo del cual se quiere obtener el valor.</li>
+</ul>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-var div1 = document.getElementById("div1");
+<pre class="brush:js">var div1 = document.getElementById("div1");
 var align = div1.getAttribute("align");
 
-alert(align); // Muestra el valor de la alineación(align) del elemento con id="div1"
-```
+alert(align); // Muestra el valor de la alineación(align) del elemento con id="div1"</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-Cuando es invocado en un elemento HTML desde un DOM marcado como documento HTML, `getAttribute()` convierte a minúsculas el argumento antes de proceder.
+<p>Cuando es invocado en un elemento HTML desde un DOM marcado como documento HTML, <code>getAttribute()</code> convierte a minúsculas el argumento antes de proceder.</p>
 
-Esencialmente todos los navegadores (Firefox, Internet Explorer, versiones recientes de Opera, Safari, Konqueror, y iCab, siendo una lista no exhaustiva) devuelven `null` cuando el atributo especificado no existe en el elemento especificado y esto es lo que establece [el actual borrador de la especificación del DOM](http://dom.spec.whatwg.org/#dom-element-getattribute). Por otra parte, la antigua especificación del DOM 3 Core dice que el valor correcto de retorno es de hecho una _cadena vacía_, y algunas implementaciones de DOM aplican este comportamiento. La implementación de getAttribute en XUL (Gecko) sigue la especificación de DOM 3 Core y retorna una cadena vacía. Por consiguiente, es recomendable usar {{domxref("element.hasAttribute()")}} para verificar la existencia de un atributo previo a la utilización de `getAttribute()` si es posible que el atributo requerido no exista en el elemento especificado.
+<p>Esencialmente todos los navegadores (Firefox, Internet Explorer, versiones recientes de Opera, Safari, Konqueror, y iCab, siendo una lista no exhaustiva) devuelven <code>null</code> cuando el atributo especificado no existe en el elemento especificado y esto es lo que establece <a href="http://dom.spec.whatwg.org/#dom-element-getattribute">el actual borrador de la especificación del DOM</a>. Por otra parte, la antigua especificación del DOM 3 Core dice que el valor correcto de retorno es de hecho una <em>cadena vacía</em>, y algunas implementaciones de DOM aplican este comportamiento. La implementación de getAttribute en XUL (Gecko) sigue la especificación de DOM 3 Core y retorna una cadena vacía. Por consiguiente, es recomendable usar {{domxref("element.hasAttribute()")}} para verificar la existencia de un atributo previo a la utilización de <code>getAttribute()</code> si es posible que el atributo requerido no exista en el elemento especificado.</p>
 
-{{DOMAttributeMethods}}
+<div>{{DOMAttributeMethods}}</div>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-- [DOM Level 2 Core: getAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9) (introducido en [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute))
-- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9">DOM Level 2 Core: getAttribute</a> (introducido en <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">DOM Level 1 Core</a>)</li>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
+</ul>

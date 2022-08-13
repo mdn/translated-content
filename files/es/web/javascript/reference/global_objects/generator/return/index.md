@@ -11,31 +11,32 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/return
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`return()`** regresa el valor dado y finaliza al generador.
+<p>El método <code><strong>return()</strong></code> regresa el valor dado y finaliza al generador.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    gen.return(valor)
+<pre class="syntaxbox"><code><var>gen</var>.return(valor)</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `valor`
-  - : El valor a regresar.
+<dl>
+ <dt><code>valor</code></dt>
+ <dd>El valor a regresar.</dd>
+</dl>
 
-### Valor de retorno
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-El valor dado como argumento.
+<p>El valor dado como argumento.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Utilizando `return()`
+<h3 id="Utilizando_return()">Utilizando <code>return()</code></h3>
 
-El siguiente ejemplo muestra un generador simple y su método `return`.
+<p>El siguiente ejemplo muestra un generador simple y su método <code>return</code>.</p>
 
-```js
-function* gen() {
+<pre class="brush: js">function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -46,12 +47,11 @@ var g = gen();
 g.next();        // { value: 1, done: false }
 g.return('foo'); // { value: "foo", done: true }
 g.next();        // { value: undefined, done: true }
-```
+</pre>
 
-Si `return(valor)` es invocado en un generador que ya está en su estado "completado", el generador permanecerá en estado "completado". Si no se da ningún argumento, el objeto regresado es el mismo a que si se invocara `.next()`. Si se da un argumento, éste se asignará como valor en la propiedad `value` del objeto regresado.
+<p>Si <code>return(valor)</code> es invocado en un generador que ya está en su estado "completado", el generador permanecerá en estado "completado". Si no se da ningún argumento, el objeto regresado es el mismo a que si se invocara <code>.next()</code>. Si se da un argumento, éste se asignará como valor en la propiedad <code>value</code> del objeto regresado.</p>
 
-```js
-function* gen() {
+<pre class="brush: js">function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -64,19 +64,40 @@ g.next(); // { value: 3, done: false }
 g.next(); // { value: undefined, done: true }
 g.return(); // { value: undefined, done: true }
 g.return(1); // { value: 1, done: true }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                       | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-generator.prototype.return', 'Generator.prototype.return')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("javascript.builtins.Generator.return")}}
+<div>
 
-## Ver también
 
-- {{jsxref("Sentencias/function*","function*")}}
+<p>{{Compat("javascript.builtins.Generator.return")}}</p>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Sentencias/function*","function*")}}</li>
+</ul>

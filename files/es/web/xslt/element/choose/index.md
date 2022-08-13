@@ -7,32 +7,32 @@ tags:
 translation_of: Web/XSLT/Element/choose
 original_slug: Web/XSLT/choose
 ---
-{{XsltRef}}
-El elemento `<xsl:choose>` define una elección entre un número de alternativas. Funciona como una sentencia switch en los lenguajes procedurales.
+<p>{{XsltRef}}<br>
+ El elemento <code>&lt;xsl:choose&gt;</code> define una elección entre un número de alternativas. Funciona como una sentencia switch en los lenguajes procedurales.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    <xsl:choose>
-    	<xsl:when>
-    	<xsl:otherwise> [opcional]
-    </<xsl:choose>
+<pre>&lt;xsl:choose&gt;
+	&lt;xsl:when&gt;
+	&lt;xsl:otherwise&gt; [opcional]
+&lt;/&lt;xsl:choose&gt;</pre>
 
-### Atributos necesarios
+<h3 id="Atributos_necesarios" name="Atributos_necesarios">Atributos necesarios</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Atributos opcionales
+<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Tipo
+<h3 id="Tipo" name="Tipo">Tipo</h3>
 
-Instrucción, aparece con una plantilla. Contiene uno o mas elementos `<xsl:when>`, y, opcionalmente, un elemento `<xsl:otherwise>` final.
+<p>Instrucción, aparece con una plantilla. Contiene uno o mas elementos <code>&lt;xsl:when&gt;</code>, y, opcionalmente, un elemento <code>&lt;xsl:otherwise&gt;</code> final.</p>
 
-### Definido
+<h3 id="Definido" name="Definido">Definido</h3>
 
-XSLT, sección 9.2.
+<p>XSLT, sección 9.2.</p>
 
-### Soporte en Gecko
+<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
 
-Soportado.
+<p>Soportado.</p>

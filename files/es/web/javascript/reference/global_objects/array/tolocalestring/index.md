@@ -4,52 +4,55 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/toLocaleString
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`toLocaleString()`** devuelve una cadena de texto representando los elementos del array. Los elementos son convertidos a texto usando su método `toLocaleString` y dichos Strings son separados por un caracter específico para la localidad (como una coma para la separación de decimales “,”).
+<p>El método <code><strong>toLocaleString()</strong></code> devuelve una cadena de texto representando los elementos del array. Los elementos son convertidos a texto usando su método <code>toLocaleString</code>  y dichos Strings son separados por un caracter específico para la localidad (como una coma para la separación de decimales “,”).</p>
 
-{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
+<div>{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    arr.toLocaleString([locales[, options]]);
+<pre class="syntaxbox"><var>arr</var>.toLocaleString([<var>locales[</var>, <var>options]]</var>);
+</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `locales` {{optional_inline}}
-  - : Una cadena de texto con una etiqueta de idioma BCP 47, o un array de dichos strings. Para la forma general e interpretación the los argumentos `locales`, ver la página {{jsxref("Intl")}}.
-- `options` {{optional_inline}}
-  - : Un objeto con las configuraciones, para números ver {{jsxref("Number.prototype.toLocaleString()")}}, y para fechas ver {{jsxref("Date.prototype.toLocaleString()")}}.
+<dl>
+ <dt><code>locales</code> {{optional_inline}}</dt>
+ <dd>Una cadena de texto con una etiqueta de idioma BCP 47, o un array de dichos strings. Para la forma general e interpretación the los argumentos <code>locales</code>, ver la página {{jsxref("Intl")}}.</dd>
+ <dt><code>options</code> {{optional_inline}}</dt>
+ <dd>Un objeto con las configuraciones, para números ver {{jsxref("Number.prototype.toLocaleString()")}}, y para fechas ver {{jsxref("Date.prototype.toLocaleString()")}}.</dd>
+</dl>
 
-### Valor de retorno
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-Una cadena de texto representando los elementos del array.
+<p>Una cadena de texto representando los elementos del array.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `locales` y `options`
+<h3 id="Usando_locales_y_options">Usando <code>locales</code> y <code>options</code></h3>
 
-Los elementos del array son convertidos a strings usando sus métodos `toLocaleString`.
+<p>Los elementos del array son convertidos a strings usando sus métodos <code>toLocaleString</code>.</p>
 
-- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
-- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
-- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
+<ul>
+ <li><code>Object</code>: {{jsxref("Object.prototype.toLocaleString()")}}</li>
+ <li><code>Number</code>: {{jsxref("Number.prototype.toLocaleString()")}}</li>
+ <li><code>Date</code>: {{jsxref("Date.prototype.toLocaleString()")}}</li>
+</ul>
 
-Siempre mostrar la moneda para los strings y números en el array `precios`:
+<p>Siempre mostrar la moneda para los strings y números en el array <code>precios</code>:</p>
 
-```js
-var precios = ['$7', 500, 8123, 12];
+<pre class="brush: js">var precios = ['$7', 500, 8123, 12];
 precios.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' });
 
 // "$7, $500, $8.123, $12"
-```
+</pre>
 
-Para más ejemplos, ver también {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, y {{jsxref("DateTimeFormat")}}.
+<p>Para más ejemplos, ver también {{jsxref("Intl")}}, {{jsxref("NumberFormat")}}, y {{jsxref("DateTimeFormat")}}.</p>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-```js
-// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
+<pre class="brush: js">// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
   Object.defineProperty(Array.prototype, 'toLocaleString', {
     value: function(locales, options) {
@@ -61,7 +64,7 @@ if (!Array.prototype.toLocaleString) {
       var a = Object(this);
 
       // 2. Let len be ? ToLength(? Get(A, "length")).
-      var len = a.length >>> 0;
+      var len = a.length &gt;&gt;&gt; 0;
 
       // 3. Let separator be the String value for the
       //    list-separator String appropriate for the
@@ -94,8 +97,8 @@ if (!Array.prototype.toLocaleString) {
       // 8. Let k be 1.
       var k = 1;
 
-      // 9. Repeat, while k < len
-      while (k < len) {
+      // 9. Repeat, while k &lt; len
+      while (k &lt; len) {
         // a. Let S be a String value produced by
         //   concatenating R and separator.
         var s = r + separator;
@@ -130,25 +133,46 @@ if (!Array.prototype.toLocaleString) {
     }
   });
 }
-```
+</pre>
 
-Si necesitas soportar motores de JavaScript obsoletos que no compatibilizan con [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), es mejor no utilizar los métodos `Array.prototype`, ya que no se pueden hacer no-enumerables.
+<p>Si necesitas soportar motores de JavaScript obsoletos que no compatibilizan con <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>, es mejor no utilizar los métodos <code>Array.prototype</code>, ya que no se pueden hacer no-enumerables.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                           | Estado                           | Comentario                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}         | {{Spec2('ESDraft')}}     | La definicion original fue en ECMAScript 3.             |
-| {{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} | Esta definición reemplaza la proporcionada en ECMA-262. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td>La definicion original fue en ECMAScript 3.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}</td>
+   <td>{{Spec2('ES Int Draft')}}</td>
+   <td>Esta definición reemplaza la proporcionada en ECMA-262.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("javascript.builtins.Array.toLocaleString")}}
+<div>
 
-## Ver también
 
-- {{jsxref("Array.prototype.toString()")}}
-- {{jsxref("Intl")}}
-- {{jsxref("Object.prototype.toLocaleString()")}}
-- {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
+<p>{{Compat("javascript.builtins.Array.toLocaleString")}}</p>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Array.prototype.toString()")}}</li>
+ <li>{{jsxref("Intl")}}</li>
+ <li>{{jsxref("Object.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+</ul>

@@ -9,42 +9,74 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLLabelElement
 ---
-{{ APIRef("HTML DOM") }}
+<div>{{ APIRef("HTML DOM") }}</div>
 
-La interfaz **`HTMLLabelElement`** proporciona acceso a propiedades especificas de los elementos {{HTMLElement("label")}}. A su vez, hereda métodos y propiedades de la interfaz base {{domxref("HTMLElement")}}.
+<p>La interfaz <strong><code>HTMLLabelElement</code></strong> proporciona acceso a propiedades especificas de los elementos {{HTMLElement("label")}}. A su vez, hereda métodos y propiedades de la interfaz base {{domxref("HTMLElement")}}.</p>
 
-{{InheritanceDiagram(600,120)}}
+<p>{{InheritanceDiagram(600,120)}}</p>
 
-## Propiedades
+<h2 id="Propiedades">Propiedades</h2>
 
-_Heredando propiedades de los elementos padres {{domxref("HTMLElement")}}._
+<p><em>Heredando propiedades de los elementos padres {{domxref("HTMLElement")}}.</em></p>
 
-- {{domxref("HTMLLabelElement.control")}} {{ReadOnlyInline}}
-  - : Es un {{domxref("HTMLElement")}} representando el control a la cual cada etiqueta esta asociado.
-- {{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}
-  - : Es un objeto {{domxref("HTMLFormElement")}} representado el formulario al cual el control etiquetado está asociado, arrojando el valor `null`, si no hay asociado ningun control o si ese control no está asociado con un formulario. En otras palabras, esto es un atajo para: `HTMLLabelElement.control.form`.
-- {{domxref("HTMLLabelElement.htmlFor")}}
-  - : Este es un contenedor de caracteres que contiene el ID del control etiquetado, esto es lo que refleja el atributo {{htmlattrxref("for", "label")}}
+<dl>
+ <dt>{{domxref("HTMLLabelElement.control")}} {{ReadOnlyInline}}</dt>
+ <dd>Es un {{domxref("HTMLElement")}} representando el control a la cual cada etiqueta esta asociado.</dd>
+ <dt>{{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}</dt>
+ <dd>Es un objeto {{domxref("HTMLFormElement")}} representado el formulario al cual el control etiquetado está asociado, arrojando el valor <code>null</code>, si no hay asociado ningun control o si ese control no está asociado con un formulario. En otras palabras, esto es un atajo para: <code><em>HTMLLabelElement</em>.control.form</code>.</dd>
+ <dt>{{domxref("HTMLLabelElement.htmlFor")}}</dt>
+ <dd>Este es un contenedor de caracteres que contiene el ID del control etiquetado, esto es lo que refleja el atributo {{htmlattrxref("for", "label")}}</dd>
+</dl>
 
-## Métodos
+<h2 id="Métodos">Métodos</h2>
 
-_No hay metodos específicos, hereda los metodos de los elelemtos padres, {{domxref("HTMLElement")}}._
+<p><em>No hay metodos específicos, hereda los metodos de los elelemtos padres, {{domxref("HTMLElement")}}.</em></p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                           | Estatus                          | Comentario                                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmllabelelement", "HTMLLabelElement")}}             | {{Spec2('HTML WHATWG')}} |                                                                                                                                            |
-| {{SpecName('HTML5 W3C', "forms.html#the-label-element", "HTMLLabelElement")}} | {{Spec2('HTML5 W3C')}}     | La propiedad `accessKey` ahora está definida en: {{domxref("HTMLElement")}}. La siguiente propiedad ha sido agregada: `control`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-13691394', 'HTMLLabelElement')}}             | {{Spec2('DOM2 HTML')}}     | Sin cambios desde: {{SpecName("DOM1")}}.                                                                                           |
-| {{SpecName('DOM1', 'level-one-html.html#ID-13691394', 'HTMLLabelElement')}}     | {{Spec2('DOM1')}}         | definición inicial                                                                                                                         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#htmllabelelement", "HTMLLabelElement")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "forms.html#the-label-element", "HTMLLabelElement")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>La propiedad <code>accessKey</code> ahora está definida en: {{domxref("HTMLElement")}}.<br>
+    La siguiente propiedad ha sido agregada: <code>control</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 HTML', 'html.html#ID-13691394', 'HTMLLabelElement')}}</td>
+   <td>{{Spec2('DOM2 HTML')}}</td>
+   <td>Sin cambios desde: {{SpecName("DOM1")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-html.html#ID-13691394', 'HTMLLabelElement')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de Navegador Web
+<h2 id="Compatibilidad_de_Navegador_Web">Compatibilidad de Navegador Web</h2>
 
-{{Compat("api.HTMLLabelElement")}}
+<div>
 
-## Ver también
 
-- Elementos HTML implementando esta interfaz: {{HTMLElement("label")}}
-- {{HTMLElement("form")}}
-- {{domxref("HTMLFormElement")}}
+<p>{{Compat("api.HTMLLabelElement")}}</p>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>Elementos HTML implementando esta interfaz: {{HTMLElement("label")}}</li>
+ <li>{{HTMLElement("form")}}</li>
+ <li>{{domxref("HTMLFormElement")}}</li>
+</ul>

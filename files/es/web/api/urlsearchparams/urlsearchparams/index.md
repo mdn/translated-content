@@ -9,32 +9,33 @@ tags:
   - URLSearchParams
 translation_of: Web/API/URLSearchParams/URLSearchParams
 ---
-{{ApiRef("URL API")}}
+<p>{{ApiRef("URL API")}}</p>
 
-El constructor **`URLSearchParams()`** crea y retorna un nuevo objeto {{domxref("URLSearchParams")}}. Si se incluye el caracter `'?'` al comienzo, éste es ignorado.
+<p>El constructor <code><strong>URLSearchParams()</strong></code> crea y retorna un nuevo objeto {{domxref("URLSearchParams")}}. Si se incluye el caracter <code>'?'</code> al comienzo, éste es ignorado.</p>
 
-{{availableinworkers}}
+<p>{{availableinworkers}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var URLSearchParams = new URLSearchParams(init);
+<pre class="syntaxbox">var <em>URLSearchParams</em> = new URLSearchParams(<em>init</em>);</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- _`init`_ {{optional_inline}}
-  - : Una instancia de {{domxref("USVString")}}, una secuencia de {{domxref("USVString")}}s, o un registro conteniendo dos {{domxref("USVString")}}s.
+<dl>
+ <dt><em><code>init</code></em> {{optional_inline}}</dt>
+ <dd>Una instancia de {{domxref("USVString")}}, una secuencia de {{domxref("USVString")}}s, o un registro conteniendo dos {{domxref("USVString")}}s.</dd>
+</dl>
 
-### Valor retornado
+<h3 id="Valor_retornado">Valor retornado</h3>
 
-Un objeto instancia de {{domxref("URLSearchParams")}}.
+<p>Un objeto instancia de {{domxref("URLSearchParams")}}.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-El siguiente ejemplo muestra cómo crear un objeto {{domxref("URLSearchParams")}} desde un string que representa una URL.
+<p>El siguiente ejemplo muestra cómo crear un objeto {{domxref("URLSearchParams")}} desde un string que representa una URL.</p>
 
-```js
-// Pasar un literal string
-var url = new URL('https://example.com?foo=1&bar=2');
+<pre class="brush: js">// Pasar un literal string
+var url = new URL('https://example.com?foo=1&amp;bar=2');
 // Obtener la URL actual desde window.location
 var url2 = new URL(window.location);
 
@@ -47,14 +48,31 @@ var params3 = new URLSearchParams([["foo", 1],["bar", 2]]);
 
 // Pasar un registro
 var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                               | Estado               | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('URL', '#dom-urlsearchparams-urlsearchparams', "URLSearchParams()")}} | {{Spec2('URL')}} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('URL', '#dom-urlsearchparams-urlsearchparams', "URLSearchParams()")}}</td>
+   <td>{{Spec2('URL')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de browsers
+<h2 id="Compatibilidad_de_browsers">Compatibilidad de browsers</h2>
 
-{{Compat("api.URLSearchParams.URLSearchParams")}}
+<div>
+
+
+<p>{{Compat("api.URLSearchParams.URLSearchParams")}}</p>
+</div>

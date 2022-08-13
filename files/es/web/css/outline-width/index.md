@@ -6,62 +6,61 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/outline-width
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad CSS **`outline-width`** es usada para establecer el grosor del contorno de un elemento. Un contorno es una línea que se dibuja al rededor de los elementos, fuera de los límites del borde, para resaltar al elemento:
+<p>La propiedad CSS <strong><code>outline-width</code></strong> es usada para establecer el grosor del contorno de un elemento. Un contorno es una línea que se dibuja al rededor de los elementos, fuera de los límites del borde, para resaltar al elemento:</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-/* Valores clave */
+<pre class="brush:css">/* Valores clave */
 outline-width: thin;
 outline-width: medium;
 outline-width: thick;
 
-/* Valores <length> */
+/* Valores &lt;length&gt; */
 outline-width: 1px;
 outline-width: 0.1em;
 
 /* Valores globales */
 outline-width: inherit;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `thin`
-  - : Depende del Agente Usuario. Generalmente **1px** en navegadores de escritorio como Firefox.
-- `medium`
-  - : Depende del Agente Usuario. Generalmente **3px** en navegadores de escritorio como Firefox.
-- `thick`
-  - : Depende del Agente Usuario. Generalmente **5px** en navegadores de escritorio como Firefox.
-- `<length>`
-  - : Ver valores {{cssxref("&lt;length&gt;")}}.
+<dl>
+ <dt><code>thin</code></dt>
+ <dd>Depende del Agente Usuario. Generalmente <strong>1px</strong> en navegadores de escritorio como Firefox.</dd>
+ <dt><code>medium</code></dt>
+ <dd>Depende del Agente Usuario. Generalmente <strong>3px</strong> en navegadores de escritorio como Firefox.</dd>
+ <dt><code>thick</code></dt>
+ <dd>Depende del Agente Usuario. Generalmente <strong>5px</strong> en navegadores de escritorio como Firefox.</dd>
+ <dt><code>&lt;length&gt;</code></dt>
+ <dd>Ver valores {{cssxref("&lt;length&gt;")}}.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Contenido HTML
+<h3 id="Contenido_HTML">Contenido HTML</h3>
 
-```html
-<span id="thin">thin</span>
-<span id="medium">medium</span>
-<span id="thick">thick</span>
-<span id="twopixels">2px</span>
-<span id="oneex">1ex</span>
-<span id="twoem">2em</span>
-```
+<pre class="brush: html">&lt;span id="thin"&gt;thin&lt;/span&gt;
+&lt;span id="medium"&gt;medium&lt;/span&gt;
+&lt;span id="thick"&gt;thick&lt;/span&gt;
+&lt;span id="twopixels"&gt;2px&lt;/span&gt;
+&lt;span id="oneex"&gt;1ex&lt;/span&gt;
+&lt;span id="twoem"&gt;2em&lt;/span&gt;
+</pre>
 
-### Contenido CSS
+<h3 id="Contenido_CSS">Contenido CSS</h3>
 
-```css
-span {
+<pre class="brush: css">span {
   outline-style: solid;
   display: inline-block;
   margin: 20px;
@@ -90,18 +89,40 @@ span {
 #twoem {
   outline-width: 2em;
 }
-```
 
-{{EmbedLiveSample('Examples', '100%', '80')}}
+</pre>
 
-## Especificaciones
+<p>{{EmbedLiveSample('Examples', '100%', '80')}}</p>
 
-| Especificación                                                                                   | Estado                                   | Comentarios                                                  |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------ |
-| {{SpecName('CSS3 Basic UI', '#outline-width', 'outline-width')}}             | {{Spec2('CSS3 Basic UI')}}     | Sin cambios                                                  |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-width')}}     | {{Spec2('CSS3 Transitions')}} | Define `outline-width` como propiedad que puede ser animada. |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline-width', 'outline-width')}} | {{Spec2('CSS2.1')}}                 | Definición inicial                                           |
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Compatibilidad de navegadores
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Basic UI', '#outline-width', 'outline-width')}}</td>
+   <td>{{Spec2('CSS3 Basic UI')}}</td>
+   <td>Sin cambios</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'outline-width')}}</td>
+   <td>{{Spec2('CSS3 Transitions')}}</td>
+   <td>Define <code>outline-width</code> como propiedad que puede ser animada.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'ui.html#propdef-outline-width', 'outline-width')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("css.properties.outline-width")}}

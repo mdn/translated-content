@@ -3,42 +3,54 @@ title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
 translation_of: Web/API/MediaQueryList/matches
 ---
-{{APIRef("CSSOM View")}}
+<div>{{APIRef("CSSOM View")}}</div>
 
-La propiedad **`matches` **de sólo lectura de la interfaz {{domxref ("MediaQueryList")}} es {{domxref ("Boolean")}} que devuelve `true` si el {{domxref ("document")}} coincide actualmente con el medio lista de consultas, o `false` si no.
+<p>La propiedad <strong><code>matches</code> </strong>de sólo lectura de la interfaz {{domxref ("MediaQueryList")}} es {{domxref ("Boolean")}} que devuelve <code>true</code> si el {{domxref ("document")}} coincide actualmente con el medio lista de consultas, o <code>false</code> si no.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var matches = MediaQueryList.matches;
+<pre class="syntaxbox">var <em>matches</em> = <em>MediaQueryList.matches;</em></pre>
 
-### Value
+<h3 id="Value">Value</h3>
 
-A {{domxref("Boolean")}}; returns `true` if the {{domxref("document")}} currently matches the media query list, `false` if not.
+<p>A {{domxref("Boolean")}}; returns <code>true</code> if the {{domxref("document")}} currently matches the media query list, <code>false</code> if not.</p>
 
-## Examples
+<h2 id="Examples">Examples</h2>
 
-```js
-var mql = window.matchMedia('(max-width: 600px)');
+<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
 
 if(mql.matches) {
   // media query test returning true
 }
-```
+</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-mediaquerylist-matches", "matches")}} | {{Spec2("CSSOM View")}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Specification</th>
+   <th>Status</th>
+   <th>Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-matches", "matches")}}</td>
+   <td>{{Spec2("CSSOM View")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("api.MediaQueryList.matches")}}
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [Media queries](/es/docs/CSS/Media_queries)
-- [Using media queries from code](/es/docs/CSS/Using_media_queries_from_code)
-- {{domxref("window.matchMedia()")}}
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListEvent")}}
+<ul>
+ <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+ <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
+ <li>{{domxref("window.matchMedia()")}}</li>
+ <li>{{domxref("MediaQueryList")}}</li>
+ <li>{{domxref("MediaQueryListEvent")}}</li>
+</ul>

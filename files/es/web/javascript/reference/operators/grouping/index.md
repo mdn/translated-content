@@ -8,24 +8,23 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Grouping
 original_slug: Web/JavaScript/Referencia/Operadores/Grouping
 ---
-{{jsSidebar("Operators")}}
+<div>{{jsSidebar("Operators")}}</div>
 
-El operador de agrupación `( )` controla la precedencia de las expresiones a evaluar.
+<p>El operador de agrupación <code>( )</code> controla la precedencia de las expresiones a evaluar.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-     ( )
+<pre class="syntaxbox"> ( )</pre>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-El operador de agrupación consiste en un par de paréntesis alrededor de la expresión (o sub-expresión) que sobrescribe el comportamiento por defecto de la [precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), lo que causa que expresiones con menor precedencia puedan ser evaluadas antes que expresiones con una mayor precedencia.
+<p>El operador de agrupación consiste en un par de paréntesis alrededor de la expresión (o sub-expresión) que sobrescribe el comportamiento por defecto de la <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">precedencia de operadores</a>, lo que causa que expresiones con menor precedencia puedan ser evaluadas antes que expresiones con una mayor precedencia.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Sobrescribir la precedencia de operadores aritméticos por defecto para que se evalúe primero la adición y luego la multiplicación.
+<p>Sobrescribir la precedencia de operadores aritméticos por defecto para que se evalúe primero la adición y luego la multiplicación.</p>
 
-```js
-var a = 1;
+<pre class="brush:js">var a = 1;
 var b = 2;
 var c = 3;
 
@@ -40,22 +39,43 @@ a + (b * c)   // 7
 
 // que es equivalente a:
 a * c + b * c // 9
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                               | Estatus                  | Comentario                                         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                      | Estándar                 | Definición inicial. Implementado en JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-11.1.6', 'The Grouping Operator')}}             | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-grouping-operator', 'The Grouping Operator')}} | {{Spec2('ES6')}}     |                                                    |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1st Edition.</td>
+   <td>Estándar</td>
+   <td>Definición inicial. Implementado en JavaScript 1.0</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-11.1.6', 'The Grouping Operator')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-grouping-operator', 'The Grouping Operator')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("javascript.operators.grouping")}}
 
-## Temas relacionados
+<h2 id="Temas_relacionados">Temas relacionados</h2>
 
-- [Precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Operators/typeof", "typeof")}}
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">Precedencia de operadores</a></li>
+ <li>{{jsxref("Operators/delete", "delete")}}</li>
+ <li>{{jsxref("Operators/typeof", "typeof")}}</li>
+</ul>

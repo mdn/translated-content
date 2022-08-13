@@ -1,6 +1,6 @@
 ---
 title: '::-moz-progress-bar'
-slug: Web/CSS/::-moz-progress-bar
+slug: 'Web/CSS/::-moz-progress-bar'
 tags:
   - CSS
   - 'CSS: Extensiones Mozilla'
@@ -8,50 +8,48 @@ tags:
   - No estandar
   - Pseudo-elemento
   - Referencia
-translation_of: Web/CSS/::-moz-progress-bar
+translation_of: 'Web/CSS/::-moz-progress-bar'
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::-moz-progress-bar`** de [CSS](/es/docs/Web/CSS) es una [extensión de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) que representa la barra de progreso dentro de un elemento {{HTMLElement("progress")}}. (La barra representa la cantidad de progreso que se ha realizado).
+<p>El <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> <strong><code>::-moz-progress-bar</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> es una <a href="/es/docs/Web/CSS/Mozilla_Extensions">extensión de Mozilla</a> que representa la barra de progreso dentro de un elemento {{HTMLElement("progress")}}. (La barra representa la cantidad de progreso que se ha realizado).</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<progress value="30" max="100">30%</progress>
-<progress max="100">Indeterminado</progress>
-```
+<pre class="brush:html;">&lt;progress value="30" max="100"&gt;30%&lt;/progress&gt;
+&lt;progress max="100"&gt;Indeterminado&lt;/progress&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-::-moz-progress-bar {
+<pre class="brush: css">::-moz-progress-bar {
   background-color: red;
 }
 
 /* Forzar barras indeterminadas para tener ancho cero */
 :indeterminate::-moz-progress-bar {
   width: 0;
-}
-```
+}</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample('Ejemplos')}}
+<p>{{EmbedLiveSample('Ejemplos')}}</p>
 
-La primera barra de arriba debe tener este aspecto:
+<p>La primera barra de arriba debe tener este aspecto:</p>
 
-![Custom styled progress bar](/@api/deki/files/5387/=redbar.png)
+<p><img alt="Custom styled progress bar" class="default internal" src="/@api/deki/files/5387/=redbar.png"></p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{HTMLElement("progress")}}
-- {{ cssxref("::-ms-fill") }}
-- {{ cssxref("::-webkit-progress-bar") }}
-- {{ cssxref("::-webkit-progress-value") }}
-- {{ cssxref("::-webkit-progress-inner-element") }}
+<ul>
+ <li>{{HTMLElement("progress")}}</li>
+ <li>{{ cssxref("::-ms-fill") }}</li>
+ <li>{{ cssxref("::-webkit-progress-bar") }}</li>
+ <li>{{ cssxref("::-webkit-progress-value") }}</li>
+ <li>{{ cssxref("::-webkit-progress-inner-element") }}</li>
+</ul>

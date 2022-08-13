@@ -10,70 +10,71 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/lastIndexOf
 ---
-{{JSRef("Objetos_globales", "String")}}
+<p>{{JSRef("Objetos_globales", "String")}}</p>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-El método **`lastIndexOf() `**`devuelve `la posicion (indice) en la que se encuentra el **valorBusqueda**, dentro del objeto `String` que realiza la llamada, de la última ocurrencia del valor especificado; o -1 si no se halla. La búsqueda se realiza empezando por el final de la cadena que realiza la llamada, empezando en **`indiceDesde`**.
+<p>El  método <strong><code>lastIndexOf() </code></strong><code>devuelve </code>la posicion (indice) en la que se encuentra el <strong>valorBusqueda</strong>, dentro del objeto <code>String</code> que realiza la llamada, de la última ocurrencia del valor especificado; o -1 si no se halla. La búsqueda se realiza empezando por el final de la cadena que realiza la llamada, empezando en <strong><code>indiceDesde</code></strong>.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    cadena.lastIndexOf(valorBusqueda[, indiceDesde])
+<pre class="syntaxbox"><em>cadena</em>.lastIndexOf(<em>valorBusqueda</em>[,<em> indiceDesde</em>]<em>)</em></pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-- `valorBusqueda`
-  - : Una cadena que representa el valor que se desea buscar.
+<dl>
+ <dt><code>valorBusqueda</code></dt>
+ <dd>Una cadena que representa el valor que se desea buscar.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><code>indiceDesde</code></dt>
+ <dd>La localización dentro de la cadena que realiza la llamada desde donde comenzará la búsqueda. Puede ser cualquier entero entre 0 y la longitud de la cadena. El valor predeterminado es la longitud de la cadena.</dd>
+</dl>
 
-- `indiceDesde`
-  - : La localización dentro de la cadena que realiza la llamada desde donde comenzará la búsqueda. Puede ser cualquier entero entre 0 y la longitud de la cadena. El valor predeterminado es la longitud de la cadena.
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-## Descripción
+<p>Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer carácter es 0, y el índice del último carácter es <code>nombreCadena.length - 1</code>.</p>
 
-Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer carácter es 0, y el índice del último carácter es `nombreCadena.length - 1`.
-
-```js
-"canal".lastIndexOf("a")   // returns 3
+<pre class="brush: js">"canal".lastIndexOf("a")   // returns 3
 "canal".lastIndexOf("a",2) // returns 1
 "canal".lastIndexOf("a",0) // returns -1
 "canal".lastIndexOf("x")   // returns -1
-```
+</pre>
 
-El método `lastIndexOf` es sensible a mayúsculas. Por ejemplo, la siguiente expresión devuelve -1:
+<p>El método <code>lastIndexOf</code> es sensible a mayúsculas. Por ejemplo, la siguiente expresión devuelve -1:</p>
 
-```js
-"Ballena Azul, Ballena Asesina".lastIndexOf("azul")
-```
+<pre class="brush: js">"Ballena Azul, Ballena Asesina".lastIndexOf("azul")
+</pre>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-### Ejemplo: Usando `indexOf` y `lastIndexOf`
+<h3 id="Ejemplo:_Usando_indexOf_y_lastIndexOf" name="Ejemplo:_Usando_indexOf_y_lastIndexOf">Ejemplo: Usando <code>indexOf</code> y <code>lastIndexOf</code></h3>
 
-El siguiente ejemplo utiliza `indexOf` y `lastIndexOf` para localizar valores en la cadena "`Brave new world`".
+<p>El siguiente ejemplo utiliza <code>indexOf</code> y <code>lastIndexOf</code> para localizar valores en la cadena "<code>Brave new world</code>".</p>
 
-```js
-var anyString="Brave new world"
+<pre class="brush: js">var anyString="Brave new world"
 
 // Displays 8
-document.write("<P>The index of the first w from the beginning is " +
+document.write("&lt;P&gt;The index of the first w from the beginning is " +
    anyString.indexOf("w"))
 // Displays 10
-document.write("<P>The index of the first w from the end is " +
+document.write("&lt;P&gt;The index of the first w from the end is " +
    anyString.lastIndexOf("w"))
 // Displays 6
-document.write("<P>The index of 'new' from the beginning is " +
+document.write("&lt;P&gt;The index of 'new' from the beginning is " +
    anyString.indexOf("new"))
 // Displays 6
-document.write("<P>The index of 'new' from the end is " +
+document.write("&lt;P&gt;The index of 'new' from the end is " +
    anyString.lastIndexOf("new"))
-```
+</pre>
 
-## Vea También
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("Array.prototype.lastIndexOf()")}}
+<ul>
+ <li>{{jsxref("String.prototype.charAt()")}}</li>
+ <li>{{jsxref("String.prototype.indexOf()")}}</li>
+ <li>{{jsxref("String.prototype.split()")}}</li>
+ <li>{{jsxref("Array.prototype.indexOf()")}}</li>
+ <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>
+</ul>

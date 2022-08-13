@@ -6,22 +6,24 @@ tags:
   - metodo
 translation_of: Web/API/Window/prompt
 ---
-{{ApiRef("Window")}}
+<div>{{ApiRef("Window")}}</div>
 
-El método `Window.prompt()` muestra un diálogo con mensaje opcional, que solicita al usuario que introduzca un texto.
+<p>El método <code>Window.prompt()</code> muestra un diálogo con mensaje opcional, que solicita al usuario que introduzca un texto.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    result = window.prompt(message, default);
+<pre class="syntaxbox"><em>result</em> = window.prompt(<em>message</em>, <em>default</em>);
+</pre>
 
-- `result` es una cadena de texto que contiene el valor introducido por el usuario, o `null`.
-- `message` es una cadena de texto que se mostrará al usuario. Este parámetro es opcional y puede ser omitido si no se necesita mostrar nada en la ventana.
-- `default` es una cadena de texto que contiene el valor predeterminado para el texto de entrada. Es un parámetro opcional. Nótese que en Internet Explorer 7 y 8, si no se provee un valor para este parámetro, el valor predeterminado es `"undefined"`.
+<ul>
+ <li><code>result</code> es una cadena de texto que contiene el valor introducido por el usuario, o <code>null</code>.</li>
+ <li><code>message</code> es una cadena de texto que se mostrará al usuario. Este parámetro es opcional y puede ser omitido si no se necesita mostrar nada en la ventana.</li>
+ <li><code>default</code> es una cadena de texto que contiene el valor predeterminado para el texto de entrada. Es un parámetro opcional. Nótese que en Internet Explorer 7 y 8, si no se provee un valor para este parámetro, el valor predeterminado es <code>"undefined"</code>.</li>
+</ul>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-var sign = prompt("What's your sign?");
+<pre class="brush: js">var sign = prompt("What's your sign?");
 
 if (sign.toLowerCase() == "scorpio") {
   alert("Wow! I'm a Scorpio too!");
@@ -31,38 +33,50 @@ if (sign.toLowerCase() == "scorpio") {
 var sign = window.prompt(); // open the blank prompt window
 var sign = prompt();       //  open the blank prompt window
 var sign = window.prompt('Are you feeling lucky'); // open the window with Text "Are you feeling lucky"
-var sign = window.prompt('Are you feeling lucky', 'sure'); // open the window with Text "Are you feeling lucky" and default value "sure"
-```
+var sign = window.prompt('Are you feeling lucky', 'sure'); // open the window with Text "Are you feeling lucky" and default value "sure"</pre>
 
-Cuando el usuario hace clic en el botón OK, el valor introducido en el campo de texto es devuelto por el método. Si el usuario da clic al botón OK sin introducir algun texto, se devuelve una cadena vacía. Si el usuario presiona el botón Cancel, la función devuelve `null`.
+<p>Cuando el usuario hace clic en el botón OK, el valor introducido en el campo de texto es devuelto por el método. Si el usuario da clic al botón OK sin introducir algun texto, se devuelve una cadena vacía. Si el usuario presiona el botón Cancel, la función devuelve <code>null</code>.</p>
 
-El ejemplo anterior muestra el siguiente cuadro de diálogo (en Chrome en OS X):
+<p>El ejemplo anterior muestra el siguiente cuadro de diálogo (en Chrome en OS X):</p>
 
-[![prompt() dialog in Chrome on OS X](https://mdn.mozillademos.org/files/11303/prompt.png)](https://mdn.mozillademos.org/files/11303/prompt.png)
+<p><a href="https://mdn.mozillademos.org/files/11303/prompt.png"><img alt="prompt() dialog in Chrome on OS X" src="https://mdn.mozillademos.org/files/11303/prompt.png" style="height: 298px; width: 535px;"></a></p>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-Un diálogo prompt contiene un cuadro de texto de una línea, un botón Cancel (Cancelar) un botón OK (Aceptar), y devuelve el texto (posiblemente vacío) que el usuario introdujo en el cuadro de texto.
+<p>Un diálogo prompt contiene un cuadro de texto de una línea, un botón Cancel (Cancelar)  un botón OK (Aceptar), y devuelve el texto (posiblemente vacío) que el usuario introdujo en el cuadro de texto.</p>
 
-The following text is shared between this article, DOM:window\.confirm and DOM:window\.alertLos cuadros de diálogo son ventanas modales; previenen que el usuario acceda al resto de la interfaz del programa hasta que el cuadro de diálogo es cerrado. Por esta razón, no se debe abusar de cualquier función que crea un cuadro de diálogo (o ventana modal).
+<p><span class="comment">The following text is shared between this article, DOM:window.confirm and DOM:window.alert</span>Los cuadros de diálogo son ventanas modales; previenen que el usuario acceda al resto de la interfaz del programa hasta que el cuadro de diálogo es cerrado. Por esta razón, no se debe abusar de cualquier función que crea un cuadro de diálogo (o ventana modal).</p>
 
-Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. var aNumber = Number(window\.prompt("Type a number", ""));
+<p>Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. <span style="background-color: #f6f6f2; font-family: courier new,andale mono,monospace; font-size: 12px; line-height: normal;">var aNumber = Number(window.prompt("Type a number", "")); </span></p>
 
-Usuarios de [Mozilla Chrome](/en-US/Chrome "Chrome") (p.ej. extensiones de Firefox) deben usar preferentemente métodos de `nsIPromptService`.
+<p>Usuarios de <a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> (p.ej. extensiones de Firefox) deben usar preferentemente métodos de <code>nsIPromptService</code>.</p>
 
-A partir de Chrome {{CompatChrome(46.0)}} este método está bloqueado para los elementos {{htmlelement("iframe")}}, , a menos que su atributo [sandbox](/es/docs/Web/HTML/Elemento/iframe#attr-sandbox) tenga el valor `allow-modal`.
+<p>A partir de Chrome {{CompatChrome(46.0)}} este método está bloqueado para los elementos {{htmlelement("iframe")}}, , a menos que su atributo <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/iframe#attr-sandbox">sandbox</a> tenga el valor <code>allow-modal</code>.</p>
 
-En Safari, si el usuario presiona el botón Cancel, la función devuelve una cadena vacía. Por lo tanto, no se puede diferenciar si canceló o si mandó una cadena de texto vacía como valor del cuadro de texto.
+<p>En Safari, si el usuario presiona el botón Cancel, la función devuelve una cadena vacía. Por lo tanto, no se puede diferenciar si canceló o si mandó una cadena de texto vacía como valor del cuadro de texto.</p>
 
-Esta función no tiene efecto en la versión Modern UI/Metro de Internet Explorer para Windows 8. No se muestra un diálogo al usuario, y siempre devuelve `undefined`. No está claro si esto es un bug o un comportamiento previsto. Las versiones de escritorio de IE sí implementan esta función
+<p>Esta función no tiene efecto en la versión Modern UI/Metro de Internet Explorer para Windows 8. No se muestra un diálogo al usuario, y siempre devuelve <code>undefined</code>. No está claro si esto es un bug o un comportamiento previsto. Las versiones de escritorio de IE sí implementan esta función</p>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-| Especificación                                                                       | Estado                                       | Comentarios        |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('HTML5 Web application', '#dom-prompt', 'prompt()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 Web application', '#dom-prompt', 'prompt()')}}</td>
+   <td>{{Spec2('HTML5 Web application')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Véase también
+<h2 id="See_also" name="See_also">Véase también</h2>
 
-- {{domxref("window.alert", "alert")}}
-- {{domxref("window.confirm", "confirm")}}
+<ul>
+ <li>{{domxref("window.alert", "alert")}}</li>
+ <li>{{domxref("window.confirm", "confirm")}}</li>
+</ul>

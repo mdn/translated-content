@@ -10,55 +10,76 @@ tags:
   - Referencia
 translation_of: Web/API/Window/scrollBy
 ---
-{{ APIRef() }}
+<p>{{ APIRef() }}</p>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-Desplaza el documento el número de pixels proporcionados.
+<p>Desplaza el documento el número de pixels proporcionados.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    window.scrollBy(X, Y);
-    window.scrollBy(opciones)
+<pre>window.scrollBy(<em>X</em>, <em>Y</em>);
+window.scrollBy(opciones)</pre>
 
-### Parámetros
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
 
-- `X` es el número de pixels a desplazar horizontalmente.
-- `Y` es el número de pixels a desplazar verticalmente.
+<ul>
+ <li><code>X</code> es el número de pixels a desplazar horizontalmente.</li>
+ <li><code>Y</code> es el número de pixels a desplazar verticalmente.</li>
+</ul>
 
-Si X o Y son positivos, desplazarán la página hacia la derecha o hacia abajo respectivamente. Si son negativos, la desplazarán hacia la izquierda o hacia arriba respectivamente.
+<p>Si X o Y son positivos, desplazarán la página hacia la derecha o hacia abajo respectivamente. Si son negativos, la desplazarán hacia la izquierda o hacia arriba respectivamente.</p>
 
-\- or -
+<p>- or -</p>
 
-- opciones es un objeto con tres posibles propiedades:
+<ul>
+ <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">opciones</span></font> es un objeto con tres posibles propiedades:
 
-  - top, que es lo mismo que Y
-  - left, que es lo mismo que X
-  - behavior, que es un string cuyo valor puede ser smooth, instant, or auto. Por defecto el valor es auto
+  <ul>
+   <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">top</span></font>, que es lo mismo que <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Y</span></font></li>
+   <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">left</span></font>, que es lo mismo que X</li>
+   <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">behavior</span></font>, que es un string cuyo valor puede ser <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">smooth</span></font>, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">instant</span></font>, or <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">auto</span></font>. Por defecto el valor es <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">auto</span></font></li>
+  </ul>
+ </li>
+</ul>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-    // Desplazarse la longitud de una página
-    window.scrollBy(0, window.innerHeight);
+<pre class="eval">// Desplazarse la longitud de una página
+window.scrollBy(0, window.innerHeight);
+</pre>
 
-Para hacer scroll hacia arriba:
+<p>Para hacer scroll hacia arriba:</p>
 
-    window.scrollBy(0, -window.innerHeight);
+<pre>window.scrollBy(0, -window.innerHeight);</pre>
 
-Utilizando opciones:
+<p>Utilizando <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">opciones</span></font>:</p>
 
-    window.scrollBy({
-      top: 100,
-      left: 100,
-      behaviour: 'smooth'
-    })
+<pre>window.scrollBy({
+  top: 100,
+  left: 100,
+  behaviour: 'smooth'
+})</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-[window.scrollBy](/es/docs/DOM/Window.scrollBy) desplaza el documento una cantidad determinada, mientras que [window.scroll](/es/docs/DOM/Window.scroll) lo hace hacia una posición absoluta en el documento. Vea también [window.scrollByLines](/es/docs/DOM/Window.scrollByLines), [window.scrollByPages](/es/docs/DOM/Window.scrollByPages)
+<p><a href="/en-US/docs/DOM/Window.scrollBy">window.scrollBy</a> desplaza el documento una cantidad determinada, mientras que <a href="/en-US/docs/DOM/Window.scroll">window.scroll</a> lo hace hacia una posición absoluta en el documento. Vea también <a href="/en-US/docs/DOM/Window.scrollByLines">window.scrollByLines</a>, <a href="/en-US/docs/DOM/Window.scrollByPages">window.scrollByPages</a></p>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-| Especificación                                                                                   | Estado                           | Comentarios         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }} | {{ Spec2('CSSOM View') }} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }}</td>
+   <td>{{ Spec2('CSSOM View') }}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>

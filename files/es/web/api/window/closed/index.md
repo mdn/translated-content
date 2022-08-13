@@ -9,44 +9,48 @@ tags:
   - Ventana
 translation_of: Web/API/Window/closed
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-Esta propiedad de solo lectura indica si la ventana referenciada está cerrada o no.
+<p>Esta propiedad de solo lectura indica si la ventana referenciada está cerrada o no.</p>
 
-## Syntax
+<h2 id="Syntax">Syntax</h2>
 
-    isClosed = windowRef.closed;
+<pre class="syntaxbox"><var>isClosed</var> = <var>windowRef</var>.closed;
+</pre>
 
-- `isClosed`
-  - : Booleano. Valores posibles:\* `true`: La ventana ha sido cerrada.
-    - `false`: La ventana está abierta.
+<dl>
+ <dt><code>isClosed</code></dt>
+ <dd>Booleano. Valores posibles:
+ <ul>
+  <li><code>true</code>: La ventana ha sido cerrada.</li>
+  <li><code>false</code>: La ventana está abierta.</li>
+ </ul>
+ </dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Cambiar la URL de una ventana desde una ventana emergente
+<h3 id="Cambiar_la_URL_de_una_ventana_desde_una_ventana_emergente">Cambiar la URL de una ventana desde una ventana emergente</h3>
 
-El siguiente ejemplo demuestra cómo una ventana emergente puede cambiar la URL de la ventana que la abrió. Antes de intentar cambiar la URL, verifica que la ventana actual tiene referencia a la ventana que la abrió usando la propiedad [window.opener](/es/docs/DOM/window.opener) y que esa ventana no está cerrada:
+<p>El siguiente ejemplo demuestra cómo una ventana emergente puede cambiar la URL de la ventana que la abrió. Antes de intentar cambiar la URL, verifica que la ventana actual tiene referencia a la ventana que la abrió usando la propiedad <a href="/en-US/docs/DOM/window.opener">window.opener</a> y que esa ventana no está cerrada:</p>
 
-```js
-// Verifica que opener existe y no esté cerrado
-if (window.opener && !window.opener.closed) {
+<pre class="brush:js">// Verifica que <em>opener</em> existe y no esté cerrado
+if (window.opener &amp;&amp; !window.opener.closed) {
   window.opener.location.href = "http://www.mozilla.org";
-}
-```
+}</pre>
 
-Nótese que las ventanas emergentes solo pueden acceder a la ventana que las abrió.
+<p>Nótese que las ventanas emergentes solo pueden acceder a la ventana que las abrió.</p>
 
-### Actualizando una ventana emergente abierta previamente
+<h3 id="Actualizando_una_ventana_emergente_abierta_previamente">Actualizando una ventana emergente abierta previamente</h3>
 
-En este ejemplo la función `refreshPopupWindow()` llama al método `reload` del objeto location de la ventana emergente para actualizar su información. Si la ventana emergente no ha sido abierta o el usuario la cerró una nueva ventana es abierta.
+<p>En este ejemplo la función <code>refreshPopupWindow()</code> llama al método <code>reload</code> del objeto location de la ventana emergente para actualizar su información. Si la ventana emergente no ha sido abierta o el usuario la cerró una nueva ventana es abierta.</p>
 
-```js
-var popupWindow = null;
+<pre class="brush:js">var popupWindow = null;
 
 function refreshPopupWindow() {
-  if (popupWindow && !popupWindow.closed) {
+  if (popupWindow &amp;&amp; !popupWindow.closed) {
     // popupWindow está abierta, actualízala
     popupWindow.location.reload(true);
   } else {
@@ -54,8 +58,8 @@ function refreshPopupWindow() {
     popupWindow = window.open("popup.html","dataWindow");
   }
 }
-```
+</pre>
 
-## Especificación
+<h2 id="Especificación">Especificación</h2>
 
-HTML5
+<p>HTML5</p>

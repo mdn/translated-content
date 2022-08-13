@@ -7,77 +7,107 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-La cabecera de respuesta **`Access-Control-Expose-Headers`** indica qué cabeceras pueden ser expuestas como parte de la respuesta listando sus nombres.
+<p>La cabecera de respuesta <strong><code>Access-Control-Expose-Headers</code></strong> indica qué cabeceras pueden ser expuestas como parte de la respuesta listando sus nombres.</p>
 
-Por defecto, solo se exponen las 7 cabeceras HTTP seguras ({{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}}, {{Glossary("Simple response header", "simple response headers")}}):
+<p>Por defecto, solo se exponen las 7 cabeceras HTTP seguras ({{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}}, {{Glossary("Simple response header", "simple response headers")}}):</p>
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Content-Language")}}
-- {{HTTPHeader("Content-Length")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Expires")}}
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("Pragma")}}
+<ul>
+ <li>{{HTTPHeader("Cache-Control")}}</li>
+ <li>{{HTTPHeader("Content-Language")}}</li>
+ <li>{{HTTPHeader("Content-Length")}}</li>
+ <li>{{HTTPHeader("Content-Type")}}</li>
+ <li>{{HTTPHeader("Expires")}}</li>
+ <li>{{HTTPHeader("Last-Modified")}}</li>
+ <li>{{HTTPHeader("Pragma")}}</li>
+</ul>
 
-Si quieres que los clientes puedan acceder a otra cabeceras, tienes que listarlas usando la cabecera `Access-Control-Expose-Headers`
+<p>Si quieres que los clientes puedan acceder a otra cabeceras, tienes que listarlas usando la cabecera <code>Access-Control-Expose-Headers</code></p>
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Header type</th>
+   <td>{{Glossary("Response header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <td>no</td>
+  </tr>
+ </tbody>
+</table>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Access-Control-Expose-Headers: <header-name>, <header-name>, ...
-    Access-Control-Expose-Headers: *
+<pre>Access-Control-Expose-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
+Access-Control-Expose-Headers: *</pre>
 
-## Directivas
+<h2 id="Directivas">Directivas</h2>
 
-- \<header-name>
-  - : Una lista de cabeceras expuestas que consiste en cero o mas [nombres de cabeceras](/es/docs/Web/HTTP/Headers) diferentes a {{Glossary("Simple response header", "simple response headers")}} que el recurso puede usar y pueden ser expuestas.
-- `*` (_wildcard_, comodín)
-  - : El valor "`*`" solo funciona como comodín para peticiones sin credenciales (peticiones sin [HTTP cookies](/es/docs/Web/HTTP/Cookies) o autenticación HTTP). Para peticiones con credenciales, se trata como el literal "`*`", sin semánticas especiales.
-    La cabecera {{HTTPHeader("Authorization")}} siempre se añadirá de manera explícita.
-    _Vea cómo se añade en los ejemplos de más abajo_.
+<dl>
+ <dt>&lt;header-name&gt;</dt>
+ <dd>Una lista de cabeceras expuestas que consiste en cero o mas <a href="/en-US/docs/Web/HTTP/Headers">nombres de cabeceras</a> diferentes a {{Glossary("Simple response header", "simple response headers")}} que el recurso puede usar y pueden ser expuestas.</dd>
+ <dt><code>*</code> (<em>wildcard</em>, comodín)</dt>
+ <dd>El valor "<code>*</code>" solo funciona como comodín para peticiones sin credenciales (peticiones sin <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> o autenticación HTTP). Para peticiones con credenciales, se trata como el literal "<code>*</code>", sin semánticas especiales.<br>
+ La cabecera {{HTTPHeader("Authorization")}} siempre se añadirá de manera explícita.<br>
+ <em>Vea cómo se añade en los ejemplos de más abajo</em>.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Para exponer una cabecera no simple, puedes especificar:
+<p>Para exponer una cabecera no simple, puedes especificar:</p>
 
-    Access-Control-Expose-Headers: Content-Length
+<pre>Access-Control-Expose-Headers: Content-Length</pre>
 
-Para exponer cabeceras personalizadas, como `X-Kuma-Revision`, puedes especificar varias cabeceras separadas por coma:
+<p>Para exponer cabeceras personalizadas, como <code>X-Kuma-Revision</code>, puedes especificar varias cabeceras separadas por coma:</p>
 
-    Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision
+<pre>Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision</pre>
 
-En peticiones sin credenciales puedes utilizar el valor comodín:
+<p>En peticiones sin credenciales puedes utilizar el valor comodín:</p>
 
-    Access-Control-Expose-Headers: *
+<pre>Access-Control-Expose-Headers: *</pre>
 
-Si necesitas acceder (exponer) la cabecera {{HTTPHeader("Authorization")}}, hay que añadirla de manera explícita:
+<p>Si necesitas acceder (exponer) la cabecera {{HTTPHeader("Authorization")}}, hay que añadirla de manera explícita:</p>
 
-    Access-Control-Expose-Headers: *, Authorization
+<pre>Access-Control-Expose-Headers: *, Authorization</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                               | Estado                   | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('Fetch','#http-access-control-expose-headers', 'Access-Control-Expose-Headers')}} | {{Spec2("Fetch")}} |            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#http-access-control-expose-headers', 'Access-Control-Expose-Headers')}}</td>
+   <td>{{Spec2("Fetch")}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-{{Compat("http.headers.Access-Control-Expose-Headers")}}
+<p>{{Compat("http.headers.Access-Control-Expose-Headers")}}</p>
 
-## Notas de compatibilidad
+<h2 id="Notas_de_compatibilidad">Notas de compatibilidad</h2>
 
-- El valor asterisco (\*) indica que no es implementado en navegadores:
+<ul>
+ <li>El valor asterisco (*) indica que no es implementado en navegadores:
+  <ul>
+   <li>Chromium: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615313">Issue 615313</a></li>
+   <li>Firefox: {{bug(1309358)}}</li>
+   <li>Servo: <a href="https://github.com/servo/servo/issues/13283">Issue 13283</a></li>
+  </ul>
+ </li>
+</ul>
 
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
+<h2 id="Ver_también">Ver también</h2>
 
-## Ver también
-
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
+<ul>
+ <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
+ <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
+</ul>

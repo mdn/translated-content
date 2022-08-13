@@ -11,29 +11,31 @@ tags:
   - metodo
 translation_of: Web/API/Storage/getItem
 ---
-{{APIRef("Web Storage API")}}
+<p>{{APIRef("Web Storage API")}}</p>
 
-El método `getItem()` de la interfaz {{domxref("Storage")}} devuelve el valor de la clave cuyo nombre se le pasa por parámetro.
+<p>El método <code>getItem()</code> de la interfaz {{domxref("Storage")}} devuelve el valor de la clave cuyo nombre se le pasa por parámetro.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var aValue = storage.getItem(keyName);
+<pre class="syntaxbox">var <em>aValue</em> = <em>storage</em>.getItem(<em>keyName</em>);
+</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- _`keyName`_
-  - : Una {{domxref("DOMString")}} que contiene el nombre de la clave cuyo valor se quiere obtener.
+<dl>
+ <dt><em><code>keyName</code></em></dt>
+ <dd>Una {{domxref("DOMString")}} que contiene el nombre de la clave cuyo valor se quiere obtener.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve">Devuelve</h3>
 
-Una {{domxref("DOMString")}} que contiene el valor de la clave. Si la clave no existe, devuelve `null`.
+<p>Una {{domxref("DOMString")}} que contiene el valor de la clave. Si la clave no existe, devuelve <code>null</code>.</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-La siguiente función toma 3 elementos del almacenamiento local (local storage) y los utiliza para establecer estilos personalizados en una página.
+<p>La siguiente función toma 3 elementos del almacenamiento local (local storage) y los utiliza para establecer estilos personalizados en una página.</p>
 
-```js
-function setStyles() {
+<pre class="brush: js">function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -45,21 +47,33 @@ function setStyles() {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}
-```
+}</pre>
 
-> **Nota:** Para ver esto utilizado en un ejemplo real, vea nuestra [Demo de Web Storage](https://github.com/mdn/web-storage-demo).
+<div class="note">
+<p><strong>Nota</strong>: Para ver esto utilizado en un ejemplo real, vea nuestra <a href="https://github.com/mdn/web-storage-demo">Demo de Web Storage</a>.</p>
+</div>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}} | {{Spec2('Web Storage')}} |             |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}}</td>
+   <td>{{Spec2('Web Storage')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.Storage.getItem")}}
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-[Utilizando la API de Web Storage](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utilizando la API de Web Storage</a></p>

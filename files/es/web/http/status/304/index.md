@@ -3,29 +3,52 @@ title: 304 Not Modified
 slug: Web/HTTP/Status/304
 translation_of: Web/HTTP/Status/304
 ---
-El código HTTP de redirección **`304 Not Modified`** en el response de la petición indica que no hay necesidad de retransmitir los recursos solicitados. Es una redirección implícita a un elemento/recurso de caché.Esto sucede cuando el método de la solicitud es {{glossary("seguro")}} ({{glossary("safe")}}), como en el las peticiones con métodos {{HTTPMethod("GET")}} o {{HTTPMethod("HEAD")}}, o cuando el request (petición) está condicionada y usa la cabecera {{HTTPHeader("If-None-Match")}} o un {{HTTPHeader("If-Modified-Since")}}El response {{HTTPStatus("200")}} `OK` habría incluido los encabezados {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, y {{HTTPHeader("Vary")}}.
+<div> </div>
 
-> **Nota:** Muchos [developer tools' network panels](/es/docs/Tools/Network_Monitor) (paneles de red de desarrollo) de los navegadores crean extraños request que conducen a un "response(respuesta del servidor) `304` ", entonces el acceso al caché local es accesible a los desarrollodares.
+<div>El código HTTP de redirección  <code><strong>304 Not Modified</strong></code> en el response de la petición indica que no hay necesidad de retransmitir los recursos solicitados. Es una redirección implícita a un elemento/recurso de caché.</div>
 
-## Status
+<div>Esto sucede cuando el método de la solicitud es {{glossary("seguro")}} ({{glossary("safe")}}), como en el las peticiones con métodos {{HTTPMethod("GET")}} o {{HTTPMethod("HEAD")}}, o cuando el request (petición) está condicionada y usa la cabecera {{HTTPHeader("If-None-Match")}} o un {{HTTPHeader("If-Modified-Since")}}</div>
 
-    304 Not Modified
+<div>El response {{HTTPStatus("200")}} <code>OK</code> habría incluido los encabezados {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, y {{HTTPHeader("Vary")}}.</div>
 
-## Especificaciones
+<div> </div>
 
-| Especificación                                           | Título                                                       |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "304 Not Modified" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+<div class="note">
+<p>Muchos <a href="/en-US/docs/Tools/Network_Monitor">developer tools' network panels</a> (paneles de red de desarrollo) de los navegadores crean extraños request que conducen a un "response(respuesta del servidor) <code>304</code> ", entonces el acceso al caché local es accesible a los desarrollodares.</p>
+</div>
 
-## Compatibilidad en navegadores
+<h2 id="Status">Status</h2>
 
-{{Compat("http.status.304")}}
+<pre class="syntaxbox">304 Not Modified</pre>
 
-## Notas de compatibilidad
+<h2 id="Especificaciones">Especificaciones</h2>
 
-- Browser behavior differs if this response erroneously includes a body on persistent connections See [204 No Content](/es/docs/Web/HTTP/Status/204) for more detail.
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Título</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7232", "304 Not Modified" , "4.1")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
+  </tr>
+ </tbody>
+</table>
 
-## See also
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-- {{HTTPHeader("If-Modified-Since")}}
-- {{HTTPHeader("If-None-Match")}}
+<p>{{Compat("http.status.304")}}</p>
+
+<h2 id="Notas_de_compatibilidad">Notas de compatibilidad</h2>
+
+<ul>
+ <li>Browser behavior differs if this response erroneously includes a body on persistent connections See <a href="/en-US/docs/Web/HTTP/Status/204">204 No Content</a> for more detail.</li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{HTTPHeader("If-Modified-Since")}}</li>
+ <li>{{HTTPHeader("If-None-Match")}}</li>
+</ul>

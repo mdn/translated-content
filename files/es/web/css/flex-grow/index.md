@@ -7,24 +7,23 @@ tags:
   - Propiedades CSS
 translation_of: Web/CSS/flex-grow
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad **`flex-grow`** de [CSS](/es/docs/Web/CSS) especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex), en su dirección principal. El factor de crecimiento especifica qué cantidad del espacio restante dentro del contenedor flexible, debería ocupar el item en cuestión.
+<p>La propiedad <strong><code>flex-grow</code></strong> de <a href="/en-US/docs/Web/CSS">CSS</a> especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex), en su dirección principal. El factor de crecimiento especifica qué cantidad del espacio restante dentro del contenedor flexible, debería ocupar el item en cuestión.</p>
 
-La dirección principal puede ser la altura o el ancho del elemento, dependiendo del valor de {{cssxref("flex-direction")}}.
+<p>La dirección principal puede ser la altura o el ancho del elemento, dependiendo del valor de {{cssxref("flex-direction")}}. </p>
 
-El espacio restante es el tamaño del contenedor flexible menos el tamaño de todos los elementos flexibles juntos. Si todos los ítems dentro del contenedor tienen el mismo factor de crecimiento, todos los elementos reciben la misma cantidad del espacio restante. De lo contrario, el espacio restante se distribuye en función de los diferentes factores de crecimientos de cada item.
+<p>El espacio restante es el tamaño del contenedor flexible menos el tamaño de todos los elementos flexibles juntos. Si todos los ítems dentro del contenedor tienen el mismo factor de crecimiento, todos los elementos reciben la misma cantidad del espacio restante. De lo contrario, el espacio restante se distribuye en función de los diferentes factores de crecimientos de cada item.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-Ver [Usando las cajas flexibles en CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS) para más propiedades e información.
+<p>Ver <a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS">Usando las cajas flexibles en CSS</a> para más propiedades e información.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-/* <number> valores */
+<pre class="brush:css">/* &lt;number&gt; valores */
 flex-grow: 3;
 flex-grow: 0.6;
 
@@ -32,38 +31,39 @@ flex-grow: 0.6;
 flex-grow: inherit;
 flex-grow: initial;
 flex-grow: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `<number>`
-  - : Ver {{cssxref("&lt;number&gt;")}}. Los valores negativos no son válidos.
+<dl>
+ <dt><code>&lt;number&gt;</code></dt>
+ <dd>Ver {{cssxref("&lt;number&gt;")}}. Los valores negativos no son válidos.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<h4>This is a Flex-Grow</h4>
-<h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
-<div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box1" style="background-color:brown;">D</div>
-  <div class="box1" style="background-color:lightgreen;">E</div>
-  <div class="box" style="background-color:brown;">F</div>
-</div>
-```
+<div id="Live_Sample">
+<pre class="brush: html">&lt;h4&gt;This is a Flex-Grow&lt;/h4&gt;
+&lt;h5&gt;A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .&lt;/h5&gt;
+&lt;div id="content"&gt;
+  &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
+  &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
+  &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
+  &lt;div class="box1" style="background-color:brown;"&gt;D&lt;/div&gt;
+  &lt;div class="box1" style="background-color:lightgreen;"&gt;E&lt;/div&gt;
+  &lt;div class="box" style="background-color:brown;"&gt;F&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-#content {
+<pre class="brush: css">#content {
   -ms-box-orient: horizontal;
   display: -webkit-box;
   display: -moz-box;
@@ -89,22 +89,38 @@ flex-grow: unset;
   flex-grow: 2;
   border: 3px solid rgba(0,0,0,.2);
 }
-```
+</pre>
+</div>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample('Example', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+<p>{{EmbedLiveSample('Example', '700px', '300px', '', 'Web/CSS/flex-grow')}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                           | Estado                           | Comentario         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox','#flex-grow','flex-grow')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Flexbox','#flex-grow','flex-grow')}}</td>
+   <td>{{Spec2('CSS3 Flexbox')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de Navegadores
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
 {{Compat("css.properties.flex-grow")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Usando las cajas flexibles en CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)
+<ul>
+ <li><a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS">Usando las cajas flexibles en CSS</a></li>
+</ul>

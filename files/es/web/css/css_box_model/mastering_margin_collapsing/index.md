@@ -9,46 +9,47 @@ tags:
 translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 original_slug: Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-Los márgenes [Top](/es/docs/Web/CSS/margin-top) y [bottom](/es/docs/Web/CSS/margin-bottom) de los bloques a veces están combinados (colapsados) en un solo margen cuyo tamaño es el mayor de los márgenes combinados, un comportamiento conocido como **colapso de margen**. Ten en cuenta que los márgenes de [flotantes](/es/docs/Web/CSS/float) y elementos con [posición absoluta](/es/docs/Web/CSS/position) nunca colapsan.
+<p>Los márgenes <a href="/es/docs/Web/CSS/margin-top">Top</a> y <a href="/es/docs/Web/CSS/margin-bottom">bottom</a> de los bloques a veces están combinados (colapsados) en un solo margen cuyo tamaño es el mayor de los márgenes combinados, un comportamiento conocido como <strong>colapso de margen</strong>. Ten en cuenta que los márgenes de <a href="/es/docs/Web/CSS/float">flotantes</a> y elementos con <a href="/es/docs/Web/CSS/position"> posición absoluta</a> nunca colapsan.</p>
 
-El colapso de margen ocurre en tres casos básicos:
+<p>El colapso de margen ocurre en tres casos básicos:</p>
 
-- Hermanos adjacentes
-  - : Los márgenes de los hermanos adjacentes son colapsados (excepto cuando el último hermano necesita ser [limpiado](/es/docs/Web/CSS/clear) después de usar los flotantes).
-- Padre y primer/último hijo
-  - : Si no hay un borde, padding, contenido en línea, [block formatting context](/es/docs/Web/Guide/CSS/Block_formatting_context) creado, o un _[limpiado](/es/docs/Web/CSS/clear)_ para separar el {{cssxref("margin-top")}} de un bloque del {{cssxref("margin-top")}} de su primer bloque hijo; o no hay borde, padding, contenido en línea, {{cssxref("height")}}, {{cssxref("min-height")}}, o {{cssxref("max-height")}} para separar el {{cssxref("margin-bottom")}} de un bloque del {{cssxref("margin-bottom")}} de su último hijo, entonces esos márgenes colapsan. El margen colapsado termina fuera del padre.
-- Bloques vacíos
-  - : Si no hay borde, padding, contenido en línea, {{cssxref("height")}}, o {{cssxref("min-height")}} para separar el {{cssxref("margin-top")}} de un bloque de su {{cssxref("margin-bottom")}}, entonces sus márgenes superiores e inferiores colapsan.
+<dl>
+ <dt>Hermanos adjacentes</dt>
+ <dd>Los márgenes de los hermanos adjacentes son colapsados (excepto cuando el último hermano necesita ser <a href="/es/docs/Web/CSS/clear">limpiado</a> después de usar los flotantes).</dd>
+ <dt>Padre y primer/último hijo</dt>
+ <dd>Si no hay un borde, padding, contenido en línea, <a href="/es/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> creado, o un <em><a href="/es/docs/Web/CSS/clear">limpiado</a></em> para separar el {{cssxref("margin-top")}} de un bloque del {{cssxref("margin-top")}} de su primer bloque hijo; o no hay borde, padding, contenido en línea, {{cssxref("height")}}, {{cssxref("min-height")}}, o {{cssxref("max-height")}} para separar el {{cssxref("margin-bottom")}} de un bloque del {{cssxref("margin-bottom")}} de su último hijo, entonces esos márgenes colapsan. El margen colapsado termina fuera del padre.</dd>
+ <dt>Bloques vacíos</dt>
+ <dd>Si no hay borde, padding, contenido en línea, {{cssxref("height")}}, o {{cssxref("min-height")}} para separar el {{cssxref("margin-top")}} de un bloque de su {{cssxref("margin-bottom")}}, entonces sus márgenes superiores e inferiores colapsan.</dd>
+</dl>
+ <p>Cosas a tener en cuenta:</p>
 
-Cosas a tener en cuenta:
 
-- Cuando estos casos están combinados ocurrirá un colapso de márgenes más complejo (de más de dos márgenes).
-- Estas reglas se aplican incluso a márgenes con valor cero, así que el margen del primer/último hijo siempre termina fuera de su padre (de acuerdo a las reglas de arriba) independientemente de que el margen del padre sea o no sea cero.
-- Cuando se trata de márgenes negativos, el tamaño del margen colapsado es la suma del margen positivo más grande y el margen negativo más pequeño (el más negativo).
-- Cuando todos los márgenes son negativos, el tamaño del margen colapsado es el margen más pequeño (el más negativo). Esto se aplica tanto a los elementos adyacentes como a los elementos anidados.
+<ul>
+ <li>Cuando estos casos están combinados ocurrirá un colapso de márgenes más complejo (de más de dos márgenes).</li>
+ <li>Estas reglas se aplican incluso a márgenes con valor cero, así que el margen del primer/último hijo siempre termina fuera de su padre (de acuerdo a las reglas de arriba) independientemente de que el margen del padre sea o no sea cero.</li>
+ <li>Cuando se trata de márgenes negativos, el tamaño del margen colapsado es la suma del margen positivo más grande y el margen negativo más pequeño (el más negativo).</li>
+ <li>Cuando todos los márgenes son negativos, el tamaño del margen colapsado es el margen más pequeño (el más negativo). Esto se aplica tanto a los elementos adyacentes como a los elementos anidados.</li>
+</ul>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<p>El margen inferior de este párrafo está colapsado ....</p>
-<p>... con el margen superior de este párrafo, lo que deja un margen de<code>1.2rem</code> entre ellos.</p>
+<pre class="brush: html">&lt;p&gt;El margen inferior de este párrafo está colapsado ....&lt;/p&gt;
+&lt;p&gt;... con el margen superior de este párrafo, lo que deja un margen de&lt;code&gt;1.2rem&lt;/code&gt; entre ellos.&lt;/p&gt;
 
-<div>Este elemento padre contiene dos párrafos!
-  <p>Este párrafo tiene un margen de <code>.4rem</code>  entre él y el texto anterior.</p>
-  <p>Mi margen inferior se colapsa con mi padre, produciendo un margen inferior de <code>2rem</code>.</p>
-</div>
+&lt;div&gt;Este elemento padre contiene dos párrafos!
+  &lt;p&gt;Este párrafo tiene un margen de &lt;code&gt;.4rem&lt;/code&gt;  entre él y el texto anterior.&lt;/p&gt;
+  &lt;p&gt;Mi margen inferior se colapsa con mi padre, produciendo un margen inferior de &lt;code&gt;2rem&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
 
-<p>Estoy <code>2rem</code> por debajo del elemento de arriba.</p>
-```
+&lt;p&gt;Estoy &lt;code&gt;2rem&lt;/code&gt; por debajo del elemento de arriba.&lt;/p&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-div {
+<pre class="brush: css">div {
   margin: 2rem 0;
   background: lavender;
 }
@@ -56,23 +57,41 @@ div {
 p {
   margin: .4rem 0 1.2rem 0;
   background: yellow;
-}
-```
+}</pre>
 
-### Result
+<h3 id="Result">Result</h3>
 
-{{EmbedLiveSample('Ejemplos', 'auto', 350)}}
+<p>{{EmbedLiveSample('Ejemplos', 'auto', 350)}}</p>
 
-## Especificaciones
 
-| Specification                                                                                        | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Initial definition |
 
-## También puedes ver
+<p> </p>
 
-- [CSS Reference](/es/docs/Web/CSS/Referencia_CSS)
 
-<!---->
+<h2 id="Especificaciones">Especificaciones</h2>
 
-- {{css_key_concepts}}
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}}</td>
+   <td>{{Spec2("CSS2.1")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="También_puedes_ver">También puedes ver</h2>
+
+<ul>
+ <li><a href="/es/docs/Web/CSS/Referencia_CSS">CSS Reference</a></li>
+</ul>
+<ul>
+ <li>{{css_key_concepts}}</li>
+</ul>

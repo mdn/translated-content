@@ -7,38 +7,44 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/regexp/test
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-`regexp:test()` comprueba si una cadena coincide con una expresión regular especificada.
+<p><br>
+ <code>regexp:test()</code> comprueba si una cadena coincide con una expresión regular especificada.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    regexp:test(comprobacion,expresionRegular[,opciones])
+<pre class="eval">regexp:test(<em>comprobacion</em>,<em>expresionRegular</em>[,<em>opciones</em>])
+</pre>
 
-### Argumentos
+<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
 
-- `comprobacion`
-  - : Cadena a comprobar.
-- `expresionRegular`
-  - : Expresión regular a evaluar en estilo JavaScript.
-- `opciones`
-  - : Cadena opcional que contiene los caracteres con opciones.
+<dl>
+ <dt><code><em>comprobacion</em></code></dt>
+ <dd>Cadena a comprobar.</dd>
+ <dt><code><em>expresionRegular</em></code></dt>
+ <dd>Expresión regular a evaluar en estilo JavaScript.</dd>
+ <dt><code><em>opciones</em></code></dt>
+ <dd>Cadena opcional que contiene los caracteres con opciones.</dd>
+</dl>
 
-Los caracteres con opciones son:
+<p>Los caracteres con opciones son:</p>
 
-- `g` - Coincidencia global
-  - : No tiene efecto para esta función; se permite para mantener la consistencia con otras funciones relacionadas con expresiones regulares.
-- `i` - Coincidencia sin importar mayúsculas
-  - : Si se especifica esta opción el emparejamiento se realiza sin tener en cuenta las mayúsculas.
+<dl>
+ <dt><code>g</code> - Coincidencia global</dt>
+ <dd>No tiene efecto para esta función; se permite para mantener la consistencia con otras funciones relacionadas con expresiones regulares.</dd>
+ <dt><code>i</code> - Coincidencia sin importar mayúsculas</dt>
+ <dd>Si se especifica esta opción el emparejamiento se realiza sin tener en cuenta las mayúsculas.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-`true` si la expresión regular especificada coincide on la cadena de comprobación.
+<p><code>true</code> si la expresión regular especificada coincide on la cadena de comprobación.</p>
 
-### Definido en
+<h3 id="Definido_en" name="Definido_en">Definido en</h3>
 
-[EXSLT - REGEXP:TEST](http://www.exslt.org/regexp/functions/test/index.html)
+<p><a class="external" href="http://www.exslt.org/regexp/functions/test/index.html">EXSLT - REGEXP:TEST</a></p>
 
-### Implementación en Gecko
+<h3 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h3>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

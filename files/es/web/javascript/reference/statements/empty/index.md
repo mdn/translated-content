@@ -8,61 +8,87 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/Empty
 original_slug: Web/JavaScript/Referencia/Sentencias/Empty
 ---
-{{jsSidebar("Statements")}}
+<div>{{jsSidebar("Statements")}}</div>
 
-Un **empty statement** o sentencia vacía es usada para no proveer una sentencia, incluso si la sintaxis JavaScript esperase una.
+<p>Un <strong>empty statement</strong> o sentencia vacía es usada para no proveer una sentencia, incluso si la sintaxis JavaScript esperase una.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    ;
+<pre class="syntaxbox">;
+</pre>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-La sentencia vacía es un punto y coma (;) que indica que no se ejecutará ninguna sentencia, incluso si la sintaxis JavaScript requiere una. El comportamiento opuesto, donde se desean ejecutar varias sentencias pero JavaScript solo permite una sola, es posible usando una [sentencia de bloque](/es/docs/Web/JavaScript/Referencia/Sentencias/block); la cual combina varias declaraciones en una.
+<p>La sentencia vacía es un punto y coma (;) que indica que no se ejecutará ninguna sentencia, incluso si la sintaxis JavaScript requiere una. El comportamiento opuesto, donde se desean ejecutar varias sentencias pero JavaScript solo permite una sola, es posible usando una <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/block">sentencia de bloque</a>; la cual combina varias declaraciones en una.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-La sentencia vacía es comúnmente usada en bucles. Por ejemplo, un bucle for sin bloque de sentencias:
+<p>La sentencia vacía es comúnmente usada en bucles. Por ejemplo, un bucle for sin bloque de sentencias:</p>
 
-```js
-var arr = [1, 2, 3];
+<pre class="brush: js">var arr = [1, 2, 3];
 
 // Asignar el valor 0 a todos los elementos del array
-for (i = 0; i < arr.length; arr[i++] = 0) /* sentencia vacía */ ;
+for (i = 0; i &lt; arr.length; arr[i++] = 0) /* sentencia vacía */ ;
 
 console.log(arr);
 // [0, 0, 0]
-```
+</pre>
 
-**Nota:** Es una buena práctica comentar el uso intencional de la sentencia vacía, ya que no es fácilmente distinguible de un punto y coma normal. Un ejemplo de uso probablemente no intencional:
+<p><strong>Nota:</strong> Es una buena práctica comentar el uso intencional de la sentencia vacía, ya que no es fácilmente distinguible de un punto y coma normal. Un ejemplo de uso probablemente no intencional:</p>
 
-```js
-if (condicion);  // Esta condición no ejerce ningún control!
+<pre class="brush: js">if (condicion);  // Esta condición no ejerce ningún control!
    borrarTodo()  // Por lo cual esta sentencia será ejecutada siempre!!!
-```
+</pre>
 
-Otro ejemplo de uso:
+<p>Otro ejemplo de uso:</p>
 
-```js
-var a = 1, b = 1;
-if((a == 0) || (b = 0)); // Asigna a 'b' el valor cero si 'a' no es cero.
-console.log(b); // 0
-```
+<pre class="brush: js">var a = 1, b = 1;
+if((a == 0) || (b = 0)); // Asigna a '<code>b'</code> el valor cero si '<code>a'</code> no es cero.
+console.log(b); // 0</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                           | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}} | {{Spec2('ESDraft')}} |                     |
-| {{SpecName('ES6', '#sec-empty-statement', 'Empty statement')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ES5.1', '#sec-12.3', 'Empty statement')}}                 | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES3', '#sec-12.3', 'Empty statement')}}                     | {{Spec2('ES3')}}         |                     |
-| {{SpecName('ES1', '#sec-12.3', 'Empty statement')}}                     | {{Spec2('ES1')}}         | Definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-empty-statement', 'Empty statement')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-12.3', 'Empty statement')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES3', '#sec-12.3', 'Empty statement')}}</td>
+   <td>{{Spec2('ES3')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1', '#sec-12.3', 'Empty statement')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en Navegadores
+<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
 
 {{Compat("javascript.statements.empty")}}
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-- {{jsxref("Sentencias/block", "Sentencia de bloque")}}
+<ul>
+ <li>{{jsxref("Sentencias/block", "Sentencia de bloque")}}</li>
+</ul>

@@ -5,76 +5,75 @@ tags:
   - CSS
 translation_of: Web/CSS/background-attachment
 ---
-{{CSSRef}}
+<p>{{CSSRef}}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-La propiedad CSS **`background-attachment`** determina si la posición de la imagen de fondo será **fija** dentro de la pantalla o **se desplazará** con su bloque contenedor.
+<p>La propiedad CSS <strong><code>background-attachment</code></strong> determina si la posición de la imagen de fondo será <strong>fija</strong> dentro de la pantalla o <strong>se desplazará</strong> con su bloque contenedor.</p>
 
-- {{ Cssxref("initial", "Inicial") }}: desplazamiento (_scroll_)
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Herencia") }}: no
-- Porcentajes: N/A
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculada") }}: como se haya especificado
+<ul>
+ <li>{{ Cssxref("initial", "Inicial") }}: desplazamiento (<em>scroll</em>)</li>
+ <li>Se aplica a: todos los elementos</li>
+ <li>{{ Cssxref("inheritance", "Herencia") }}: no</li>
+ <li>Porcentajes: N/A</li>
+ <li>Medio: {{ Cssxref("Media:Visual", "visual") }}</li>
+ <li>{{ Cssxref("computed value", "Valor calculada") }}: como se haya especificado</li>
+</ul>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    background-attachment: scroll | fixed | inherit
+<pre class="eval notranslate">background-attachment: scroll | fixed | inherit
+</pre>
 
-### Valores
+<h3 id="Valores" name="Valores">Valores</h3>
 
-- scroll
-  - : Si `scroll` es especificado, la imagen de fondo se moverá dentro de la pantalla junto al bloque que la contiene.
-- fixed
-  - : Si `fixed` es especificado, la imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor.
+<dl>
+ <dt>scroll </dt>
+ <dd>Si <code>scroll</code> es especificado, la imagen de fondo se moverá dentro de la pantalla junto al bloque que la contiene.</dd>
+ <dt>fixed </dt>
+ <dd>Si <code>fixed</code> es especificado, la imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Ejemplo simple
+<h3 id="Ejemplo_simple">Ejemplo simple</h3>
 
-#### CSS
+<h4 id="CSS">CSS</h4>
 
-```css
-p {
+<pre class="brush:css; highlight:[3]; notranslate">p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
   background-attachment: fixed;
 }
-```
+</pre>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<p>
+<pre class="brush: html notranslate">&lt;p&gt;
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
   get out again.
-</p>
-```
+&lt;/p&gt;</pre>
 
-#### Resultado
+<h4 id="Resultado">Resultado</h4>
 
-{{EmbedLiveSample("Simple_example")}}
+<p>{{EmbedLiveSample("Simple_example")}}</p>
 
-### Soporta múltiples imagenes de fondo
+<h3 id="Soporta_múltiples_imagenes_de_fondo">Soporta múltiples imagenes de fondo</h3>
 
-Esta propiedad soporta multiples imágenes de fondo. Puedes especificar un `<attachment>` diferente por cada imagen de fondo, separado por comas. Cada imagen es asociada con el correspondiente valor de \<attachment>, especificado desde el primero hasta el último.
+<p>Esta propiedad soporta multiples imágenes de fondo. Puedes especificar un <code>&lt;attachment&gt;</code> diferente por cada imagen de fondo, separado por comas. Cada imagen es asociada con el correspondiente valor de &lt;attachment&gt;, especificado desde el primero hasta el último.</p>
 
-#### CSS
+<h4 id="CSS_2">CSS</h4>
 
-```css
-p {
+<pre class="brush:css; highlight:[3]; notranslate">p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
-}
-```
+}</pre>
 
-#### HTML
+<h4 id="HTML_2">HTML</h4>
 
-```html
-<p>
+<pre class="brush: html notranslate">&lt;p&gt;
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
@@ -88,28 +87,47 @@ p {
   time round, she came upon a low curtain she had not noticed before, and
   behind it was a little door about fifteen inches high: she tried the
   little golden key in the lock, and to her great delight it fitted!
-</p>
-```
+&lt;/p&gt;</pre>
 
-#### Resultado
+<h4 id="Resultado_2">Resultado</h4>
 
-{{EmbedLiveSample("Multiple_background_image_support")}}
+<p>{{EmbedLiveSample("Multiple_background_image_support")}}</p>
 
-### Especificaciones
+<h3 id="Especificaciones" name="Especificaciones">Especificaciones</h3>
 
-- [CSS 1](http://www.w3.org/TR/CSS1#background-attachment)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/colors.html#propdef-background-attachment)
-- [CSS 3](http://www.w3.org/TR/2005/WD-css3-background-20050216/#background-attachment)
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/CSS1#background-attachment">CSS 1</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-attachment">CSS 2.1</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/2005/WD-css3-background-20050216/#background-attachment">CSS 3</a></li>
+</ul>
 
-### Compatibilidad de navegadores
+<h3 id="Compatibilidad_de_navegadores" name="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h3>
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Navegador</th>
+   <th>Versión mínima</th>
+  </tr>
+  <tr>
+   <td>Internet Explorer</td>
+   <td>4</td>
+  </tr>
+  <tr>
+   <td>Firefox</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td>Netscape</td>
+   <td>6</td>
+  </tr>
+  <tr>
+   <td>Opera</td>
+   <td>3.5</td>
+  </tr>
+ </tbody>
+</table>
 
-### Ver también
+<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
 
-{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}
+<p>{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}</p>

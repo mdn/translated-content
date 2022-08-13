@@ -7,37 +7,36 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/throw
 original_slug: Web/JavaScript/Referencia/Sentencias/throw
 ---
-{{jsSidebar("Statements")}}
+<div>{{jsSidebar("Statements")}}</div>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-Lanza una excepcion definida por el usuario.
+<p>Lanza una excepcion definida por el usuario.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    throw expresion;
+<pre class="syntaxbox">throw <em>expresion</em>;</pre>
 
-- `expresion`
-  - : Expresión a lanzar.
+<dl>
+ <dt><code>expresion</code></dt>
+ <dd>Expresión a lanzar.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-Utilice la sentencia `throw` para lanzar una excepción. Cuando lanza una excepción, `expresion` especifica el valor de la excepción. Cada uno de los siguientes ejemplos lanza una excepción:
+<p>Utilice la sentencia <code>throw</code> para lanzar una excepción. Cuando lanza una excepción, <code>expresion</code> especifica el valor de la excepción. Cada uno de los siguientes ejemplos lanza una excepción:</p>
 
-```js
-throw "Error2"; // genera una excepción con un valor cadena
+<pre class="brush: js">throw "Error2"; // genera una excepción con un valor cadena
 throw 42; // genera una excepción con un valor 42
-throw true; // genera una excepción con un valor true
-```
+throw true; // genera una excepción con un valor true</pre>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-### Ejemplo: Lanzar un objeto
+<h3 id="Ejemplo:_Lanzar_un_objeto" name="Ejemplo:_Lanzar_un_objeto">Ejemplo: Lanzar un objeto</h3>
 
-Puede especificar un objeto cuando lanza una excepción. Puede entonces referenciar las propiedades del objeto en el bloque `catch`. El siguiente ejemplo crea un objeto `miExcepcionUsuario` del tipo `ExceptionUsuario` y la utiliza usándola en una sentencia `throw`.
+<p>Puede especificar un objeto cuando lanza una excepción. Puede entonces referenciar las propiedades del objeto en el bloque <code>catch</code>. El siguiente ejemplo crea un objeto <code>miExcepcionUsuario</code> del tipo <code>ExceptionUsuario</code> y la utiliza usándola en una sentencia <code>throw</code>.</p>
 
-```js
-function ExceptionUsuario(mensaje) {
+<pre class="brush: js">function ExceptionUsuario(mensaje) {
    this.mensaje = mensaje;
    this.nombre = "ExceptionUsuario";
 }
@@ -61,14 +60,13 @@ try {
    nombreMes = "desconocido";
    registrarMisErrores(excepcion.mensaje, excepcion.nombre); // pasa el objeto exception al manejador de errores
 }
-```
+</pre>
 
-### Ejemplo: Otro ejemplo sobre lanzar un objeto
+<h3 id="Ejemplo:_Otro_ejemplo_sobre_lanzar_un_objeto" name="Ejemplo:_Otro_ejemplo_sobre_lanzar_un_objeto">Ejemplo: Otro ejemplo sobre lanzar un objeto</h3>
 
-El siguiente ejemplo comprueba una cadena de entrada para un código postal de EE.UU. Si el código postal utiliza un formato no válido, la sentencia throw lanza una excepción creando un objeto de tipo `ExcepcionFormatoCodigoPostal`.
+<p>El siguiente ejemplo comprueba una cadena de entrada para un código postal de EE.UU. Si el código postal utiliza un formato no válido, la sentencia throw lanza una excepción creando un objeto de tipo <code>ExcepcionFormatoCodigoPostal</code>.</p>
 
-```js
-/*
+<pre class="brush: js">/*
  * Creates a ZipCode object.
  *
  * Accepted formats for a zip code are:
@@ -131,23 +129,26 @@ b = verificarCodigoPostal(9560;)          // devuelve -1
 c = verificarCodigoPostal("a");           // devuelve -1
 d = verificarCodigoPostal("95060");       // devuelve 95060
 e = verificarCodigoPostal("95060 1234");  // devuelve 95060 1234
-```
+</pre>
 
-### Ejemplo: Relanzar una excepción
+<h3 id="Ejemplo:_Relanzar_una_excepci.C3.B3n" name="Ejemplo:_Relanzar_una_excepci.C3.B3n">Ejemplo: Relanzar una excepción</h3>
 
-Puede usar `throw` para volver a lanzar una excepción después de cogerla. El siguiente ejemplo coge una excepción con un valor numérico y la vuelve a lanzar si el valor es superior a 50. La excepción relanzada propaga hacia arriba la función adjunta o a un nivel superior para que el usuario pueda verla.
+<p>Puede usar <code>throw</code> para volver a lanzar una excepción después de cogerla. El siguiente ejemplo coge una excepción con un valor numérico y la vuelve a lanzar si el valor es superior a 50. La excepción relanzada propaga hacia arriba la función adjunta o a un nivel superior para que el usuario pueda verla.</p>
 
-    try {
-       throw n; // lanza una excepción con un valor numérico
-    } catch (excepcion) {
-       if (excepcion <= 50) {
-          // sentencias para manejar la excepción 1-50
-       } else {
-          // no se puede manejar esta excepción, así que se vuelve a lanzar
-          throw excepcion;
-       }
-    }
+<pre class="eval">try {
+   throw n; // lanza una excepción con un valor numérico
+} catch (excepcion) {
+   if (excepcion &lt;= 50) {
+      // sentencias para manejar la excepción 1-50
+   } else {
+      // no se puede manejar esta excepción, así que se vuelve a lanzar
+      throw excepcion;
+   }
+}
+</pre>
 
-## Vea También
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
 
-- {{jsxref("Sentencias/try...catch", "try...catch")}}
+<ul>
+ <li>{{jsxref("Sentencias/try...catch", "try...catch")}}</li>
+</ul>

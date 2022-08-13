@@ -4,29 +4,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isNaN
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`Number.isNaN()`** determina si el valor pasado es {{jsxref("NaN")}}. Versión más robusta de la función global {{jsxref("isNaN", "isNaN()")}}.
+<p>El método <strong><code>Number.isNaN()</code></strong> determina si el valor pasado es {{jsxref("NaN")}}. Versión más robusta de la función global {{jsxref("isNaN", "isNaN()")}}.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Number.isNaN(value)
+<pre class="syntaxbox notranslate"><code>Number.isNaN(v<var>alue</var>)</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `valor`
-  - : El valor para ser evaluado por {{jsxref("NaN")}}.
+<dl>
+ <dt><code>valor</code></dt>
+ <dd>El valor para ser evaluado por {{jsxref("NaN")}}.</dd>
+</dl>
 
-## Description
+<h2 id="Description">Description</h2>
 
-Debido a los dos operadores de igualdad, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} y {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, evaluando a `false` cuando al comprobar si {{jsxref("NaN")}} _is_ {{jsxref("NaN")}}, la función `Number.isNaN()` se ha convertido en necesaria. Esta situación es diferente a las otras comparaciones de valor en JavaScript.
+<p>Debido a los dos operadores de igualdad, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} y {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, evaluando a <code>false</code> cuando al comprobar si {{jsxref("NaN")}} <em>is</em> {{jsxref("NaN")}}, la función <code>Number.isNaN()</code> se ha convertido en necesaria. Esta situación es diferente a las otras comparaciones de valor en JavaScript.</p>
 
-En comparación a la función global {{jsxref("isNaN", "isNaN()")}}, `Number.isNaN()` no sufre el problema de forzar la conversión del parámetro a un número. Esto significa que ahora es seguro pasar valores que normalmente se convertirían a {{jsxref("NaN")}}, pero no son del mismo valor que {{jsxref("NaN")}}. Esto también significa que solo los valores de tipo número, que también son {{jsxref("NaN")}}, retornan `true`.
+<p>En comparación a la función global {{jsxref("isNaN", "isNaN()")}}, <code>Number.isNaN()</code> no sufre el problema de forzar la conversión del parámetro a un número. Esto significa que ahora es seguro pasar valores que normalmente se convertirían a {{jsxref("NaN")}}, pero no son del mismo valor que {{jsxref("NaN")}}. Esto también significa que solo los valores de tipo número, que también son {{jsxref("NaN")}}, retornan <code>true</code>.</p>
 
-## Examples
+<h2 id="Examples">Examples</h2>
 
-```js
-Number.isNaN(NaN);        // true
+<pre class="brush: js notranslate">Number.isNaN(NaN);        // true
 Number.isNaN(Number.NaN); // true
 Number.isNaN(0 / 0)       // true
 
@@ -44,33 +45,49 @@ Number.isNaN("37");
 Number.isNaN("37.37");
 Number.isNaN("");
 Number.isNaN(" ");
-```
+</pre>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-```js
-Number.isNaN = Number.isNaN || function(value) {
-    return typeof value === "number" && isNaN(value);
+<pre class="brush: js notranslate">Number.isNaN = Number.isNaN || function(value) {
+    return typeof value === "number" &amp;&amp; isNaN(value);
 }
 
 // O
 Number.isNaN = Number.isNaN || function(value) {
     return value !== value;
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                    | Status                       | Comment             |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-number.isnan', 'Number.isnan')}}     | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-number.isnan', 'Number.isnan')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-number.isnan', 'Number.isnan')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-number.isnan', 'Number.isnan')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegador
+<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
 
 {{Compat("javascript.builtins.Number.isNaN")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Number")}}
-- {{jsxref("isNaN", "isNaN()")}}
+<ul>
+ <li>{{jsxref("Number")}}</li>
+ <li>{{jsxref("isNaN", "isNaN()")}}</li>
+</ul>

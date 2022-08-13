@@ -4,47 +4,73 @@ slug: Web/JavaScript/Reference/Global_Objects/unescape
 translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 original_slug: Web/JavaScript/Referencia/Objetos_globales/unescape
 ---
-{{jsSidebar("Objects")}}
+<div>{{jsSidebar("Objects")}}</div>
 
-La función deprecada **`unescape()`** calcula un nuevo string en el cual secuencia de valores hexadecimales son reemplazados con el caracter que representa. La secuencia de calculo deber{ia ser introducida por una función como {{jsxref("escape")}}. Por que `unescape` está deprecada, usar {{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}}.
+<p>La función deprecada <code><strong>unescape()</strong></code> calcula un nuevo string  en el cual secuencia de valores hexadecimales son reemplazados con el caracter que representa. La secuencia de calculo deber{ia ser introducida por una función como {{jsxref("escape")}}. Por que <code>unescape</code> está deprecada, usar {{jsxref("decodeURI")}} or {{jsxref("decodeURIComponent")}}.</p>
 
-> **Nota:** Do not use `unescape` to decode URIs, use `decodeURI` instead.
+<div class="note"><strong>Note:</strong> Do not use <code>unescape</code> to decode URIs, use <code>decodeURI</code> instead.</div>
 
-## Syntax
+<h2 id="Syntax">Syntax</h2>
 
-    unescape(str)
+<pre class="syntaxbox"><code>unescape(str)</code></pre>
 
-### Parameters
+<h3 id="Parameters">Parameters</h3>
 
-- `str`
-  - : A string to be decoded.
+<dl>
+ <dt><code>str</code></dt>
+ <dd>A string to be decoded.</dd>
+</dl>
 
-## Description
+<h2 id="Description">Description</h2>
 
-The `unescape` function is a property of the _global object_.
+<p>The <code>unescape</code> function is a property of the <em>global object</em>.</p>
 
-## Examples
+<h2 id="Examples">Examples</h2>
 
-```js
-unescape("abc123");     // "abc123"
+<pre class="brush: js">unescape("abc123");     // "abc123"
 unescape("%E4%F6%FC");  // "äöü"
 unescape("%u0107");     // "ć"
-```
+</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                    | Status                       | Comment                                                                                |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------- |
-| {{SpecName('ES1', '#sec-15.1.2.5', 'unescape')}}                 | {{Spec2('ES1')}}         | Initial definition.                                                                    |
-| {{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}                 | {{Spec2('ES5.1')}}     | Defined in the (informative) Compatibility Annex B                                     |
-| {{SpecName('ES6', '#sec-unescape-string', 'unescape')}}         | {{Spec2('ES6')}}         | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
-| {{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}} | {{Spec2('ESDraft')}} | Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1', '#sec-15.1.2.5', 'unescape')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-B.2.2', 'unescape')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td>Defined in the (informative) Compatibility Annex B</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-unescape-string', 'unescape')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-unescape-string', 'unescape')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td>Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("javascript.builtins.unescape")}}
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("decodeURIComponent")}}
+<ul>
+ <li>{{jsxref("decodeURI")}}</li>
+ <li>{{jsxref("decodeURIComponent")}}</li>
+</ul>

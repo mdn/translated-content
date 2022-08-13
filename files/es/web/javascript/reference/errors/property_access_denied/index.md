@@ -8,39 +8,39 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-## Mensaje
+<h2 id="Mensaje">Mensaje</h2>
 
-    Error: Permission denied to access property "x"
+<pre class="syntaxbox">Error: Permission denied to access property "x"</pre>
 
-## Tipo de error
+<h2 id="Tipo_de_error">Tipo de error</h2>
 
-{{jsxref("Error")}}.
+<p>{{jsxref("Error")}}.</p>
 
-## ¿Cuál es el problema?
+<h2 id="¿Cuál_es_el_problema">¿Cuál es el problema?</h2>
 
-Se ha intentado acceder a un objeto al cual no tienes permiso. Probablemente es un elemento {{HTMLElement("iframe")}} cargado de otro dominio en el cual violaste la [política del mismo origen](/es/docs/Web/Security/Same-origin_policy).
+<p><span class="seoSummary">Se ha intentado acceder a un objeto al cual no tienes permiso. Probablemente es un elemento {{HTMLElement("iframe")}} cargado de otro dominio en el cual violaste la <a href="/en-US/docs/Web/Security/Same-origin_policy">política del mismo origen</a>.</span></p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
-    <script>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
+    &lt;script&gt;
       onload = function() {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
       }
-    </script>
-  </head>
-  <body></body>
-</html>
-```
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;</pre>
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- {{HTMLElement("iframe")}}
-- [Política del mismo origen](/es/docs/Web/Security/Same-origin_policy)
+<ul>
+ <li>{{HTMLElement("iframe")}}</li>
+ <li><span class="seoSummary"><a href="/en-US/docs/Web/Security/Same-origin_policy">Política del mismo origen</a></span></li>
+</ul>

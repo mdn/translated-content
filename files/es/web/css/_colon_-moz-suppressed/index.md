@@ -1,6 +1,6 @@
 ---
 title: ':-moz-suppressed'
-slug: Web/CSS/:-moz-suppressed
+slug: 'Web/CSS/:-moz-suppressed'
 tags:
   - CSS
   - NeedsCompatTable
@@ -8,12 +8,12 @@ tags:
   - NeedsExample
   - No estandar
   - Referencia CSS
-translation_of: Web/CSS/:-moz-suppressed
+translation_of: 'Web/CSS/:-moz-suppressed'
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
+<div>{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS)`:-moz-suppressed` selecciona elementos que representan a imágenes que no han sido cargadas por estar bloqueado el sitio del que provienen.
+<p>La  <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <a href="/es/docs/Web/CSS">CSS</a><code>:-moz-suppressed</code> selecciona elementos que representan a imágenes que no han sido cargadas por estar bloqueado el sitio del que provienen.</p>
 
-Este selector está pensado sobre todo para los desarrolladores de temas.
+<p>Este selector está pensado sobre todo para los desarrolladores de temas.</p>

@@ -13,49 +13,54 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`Object.is()`** determina si dos valores [son iguales](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+<p>El método <code><strong>Object.is()</strong></code> determina si dos valores <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">son iguales</a>.</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-    Object.is(valor1, valor2);
+<pre class="syntaxbox notranslate"><code>Object.is(<var>valor1</var>, <var>valor2</var>);</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `valor1`
-  - : Primer valor a comparar.
-- `valor2`
-  - : Segundo valor a comparar.
+<dl>
+ <dt><code>valor1</code></dt>
+ <dd>Primer valor a comparar.</dd>
+ <dt><code>valor2</code></dt>
+ <dd>Segundo valor a comparar.</dd>
+</dl>
 
-### Valor return del método
+<h3 id="Valor_return_del_método">Valor return del método</h3>
 
-Este método devuelve un valor de tipo {{jsxref("Boolean")}} indicando si los valores pasados como parámetros son iguales o no.
+<p>Este método devuelve un valor de tipo {{jsxref("Boolean")}} indicando si los valores pasados como parámetros son iguales o no.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-`Object.is()` determina si dos valores [son iguales](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness). Dos valores son iguales si se puede asegurar que:
+<p><code>Object.is()</code> determina si dos valores <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">son iguales</a>. Dos valores son iguales si se puede asegurar que:</p>
 
-- ambos son {{jsxref("undefined")}}
-- ambos son {{jsxref("null")}}
-- ambos son `true` o `false`
-- ambos son strings y tienen la misma longitud con los mismos carácteres
-- ambos son el mismo objeto
-- ambos son números y
+<ul>
+ <li>ambos son {{jsxref("undefined")}}</li>
+ <li>ambos son {{jsxref("null")}}</li>
+ <li>ambos son <code>true</code> o <code>false</code></li>
+ <li>ambos son strings y tienen la misma longitud con los mismos carácteres</li>
+ <li>ambos son el mismo objeto</li>
+ <li>ambos son números y
+  <ul>
+   <li><code>ambos +0 (mayores que 0)</code></li>
+   <li><code>ambos -0 (menores que 0)</code></li>
+   <li>ambos son {{jsxref("NaN")}}</li>
+   <li>o ambos no son cero o no son de tipo {{jsxref("NaN")}} y tienen el mismo valor</li>
+  </ul>
+ </li>
+</ul>
 
-  - `ambos +0 (mayores que 0)`
-  - `ambos -0 (menores que 0)`
-  - ambos son {{jsxref("NaN")}}
-  - o ambos no son cero o no son de tipo {{jsxref("NaN")}} y tienen el mismo valor
+<p>Esta comparación <em>no</em> es igual a la que realiza el operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. El operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} aplica varias coerciones(comprobaciones) en ambos sentidos (si no tienen el mismo Type) antes de probar la igualdad (lo que resulta en comportamientos como  <code>"" == false</code> siendo <code>true</code>), pero <code>Object.is</code> no obliga a niguno de los valores.</p>
 
-Esta comparación _no_ es igual a la que realiza el operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}. El operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} aplica varias coerciones(comprobaciones) en ambos sentidos (si no tienen el mismo Type) antes de probar la igualdad (lo que resulta en comportamientos como `"" == false` siendo `true`), pero `Object.is` no obliga a niguno de los valores.
+<p>Esta <em>tampoco</em> es igual a la que realiza el operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. El operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (y el operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) trata los valores <code>-0</code> <code>y +0</code> como iguales, y además, trata {{jsxref("Number.NaN")}} como no igual a {{jsxref("NaN")}}.</p>
 
-Esta _tampoco_ es igual a la que realiza el operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}. El operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} (y el operador {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}) trata los valores `-0` `y +0` como iguales, y además, trata {{jsxref("Number.NaN")}} como no igual a {{jsxref("NaN")}}.
+<h2 id="Ejemplos">Ejemplos</h2>
 
-## Ejemplos
-
-```js
-Object.is('foo', 'foo');     // true
+<pre class="brush: js notranslate">Object.is('foo', 'foo');     // true
 Object.is(window, window);   // true
 
 Object.is('foo', 'bar');     // false
@@ -70,14 +75,13 @@ Object.is(null, null);       // true
 Object.is(0, -0);            // false
 Object.is(-0, -0);           // true
 Object.is(NaN, 0/0);         // true
-```
+</pre>
 
-## [Polyfill](https://en.wikipedia.org/wiki/Polyfill) para navegadores no ES6
+<h2 id="Polyfill_para_navegadores_no_ES6"><a href="https://en.wikipedia.org/wiki/Polyfill">Polyfill</a> para navegadores no ES6</h2>
 
-`Object.is()` es una adición propuesta en el estandar ECMA-262; y como tal, puede no estar presente en todos los navegadores. Para los casos en que no tenga disponible este método, podría utilizar este código haciendolo que se cargue antes que cualquier otro script. Esto permite que puedas utilizar `Object.is()` en los navegadores que no lo llevan incluído.
+<p><code>Object.is()</code> es una adición propuesta en el estandar ECMA-262; y como tal, puede no estar presente en todos los navegadores. Para los casos en que no tenga disponible este método, podría utilizar este código haciendolo que se cargue antes que cualquier otro script. Esto permite que puedas utilizar <code>Object.is()</code> en los navegadores que no lo llevan incluído.</p>
 
-```js
-if (!Object.is) {
+<pre class="brush: js notranslate">if (!Object.is) {
   Object.is = function(x, y) {
     // SameValue algorithm
     if (x === y) { // Steps 1-5, 7-10
@@ -85,24 +89,37 @@ if (!Object.is) {
       return x !== 0 || 1 / x === 1 / y;
     } else {
       // Step 6.a: NaN == NaN
-      return x !== x && y !== y;
+      return x !== x &amp;&amp; y !== y;
     }
   };
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                       | Estado               | Comentario          |
-| -------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.is', 'Object.is')}} | {{Spec2('ES6')}} | Definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-object.is', 'Object.is')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("javascript.builtins.Object.is")}}
 
-##
+<h2 id="sect1"></h2>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Comparadores de igualdad e identidad](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness) —Una comparación de las 3 operaciones de cotejamiento integradas.
+<ul>
+ <li><a href="/es/docs/Web/JavaScript/Equality_comparisons_and_sameness">Comparadores de igualdad e identidad</a> —Una comparación de las 3 operaciones de cotejamiento integradas.</li>
+</ul>

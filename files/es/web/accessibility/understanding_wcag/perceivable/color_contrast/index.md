@@ -8,35 +8,53 @@ tags:
 translation_of: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 original_slug: Web/Accesibilidad/Understanding_WCAG/Perceivable/Color_contraste
 ---
-El [contraste del color](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) entre el fondo y el contenido del primer plano (que suele ser texto) debe ser lo suficientemente alto como para garantizar la legibilidad.
+<p>El <a href="https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio">contraste del color</a> entre el fondo y el contenido del primer plano (que suele ser texto) debe ser lo suficientemente alto como para garantizar la legibilidad.</p>
 
-Al diseñar interfaces legibles para diferentes capacidades de visión, las directrices de la WCAG recomiendan las siguientes relaciones de contraste:
+<p>Al diseñar interfaces legibles para diferentes capacidades de visión, las directrices de la WCAG recomiendan las siguientes relaciones de contraste:</p>
 
-| Tipo de contenido                                                                       | Relación mínima (nivel AA) | Relación mejorada (nivel AAA) |
-| --------------------------------------------------------------------------------------- | -------------------------- | ----------------------------- |
-| Cuerpo de texto                                                                         | 4.5 : 1                    | 7 : 1                         |
-| Texto a gran escala (120-150% mayor que el cuerpo de texto)                             | 3 : 1                      | 4.5 : 1                       |
-| Componentes activos de la interfaz de usuario y objetos gráficos como iconos y gráficos | 3 : 1                      | No definido                   |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Tipo de contenido</th>
+   <th scope="col">Relación mínima (nivel AA)</th>
+   <th scope="col">Relación mejorada (nivel AAA)</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Cuerpo de texto</td>
+   <td>4.5 : 1</td>
+   <td>7 : 1</td>
+  </tr>
+  <tr>
+   <td>Texto a gran escala (120-150% mayor que el cuerpo de texto)</td>
+   <td>3 : 1</td>
+   <td>4.5 : 1</td>
+  </tr>
+  <tr>
+   <td>Componentes activos de la interfaz de usuario y objetos gráficos como iconos y gráficos</td>
+   <td>3 : 1</td>
+   <td>No definido</td>
+  </tr>
+ </tbody>
+</table>
 
-Estas proporciones no se aplican al texto "incidental", como controles inactivos, logotipos o texto puramente decorativo.
+<p>Estas proporciones no se aplican al texto "incidental", como controles inactivos, logotipos o texto puramente decorativo.</p>
 
-Consulta la sección [Solución](#solución) a continuación para obtener más información.
+<p>Consulta la sección <a href="#solución">Solución</a> a continuación para obtener más información.</p>
 
-Tener un buen contraste de color en tu sitio web beneficia a todos tus usuarios, pero es particularmente beneficioso para los que tienen cierto tipo de ceguera al color y otras afecciones similares, como los que experimentan una baja sensibilidad al contraste y tienen dificultades para diferenciar colores parecidos. Esto se debe a que no distinguen las áreas brillantes y oscuras con tanta facilidad como las personas que no tienen esa discapacidad, y por lo tanto tienen problemas para ver los bordes y otros detalles.
+<p>Tener un buen contraste de color en tu sitio web beneficia a todos tus usuarios, pero es particularmente beneficioso para los que tienen cierto tipo de ceguera al color y otras afecciones similares, como los que experimentan una baja sensibilidad al contraste y tienen dificultades para diferenciar colores parecidos. Esto se debe a que no distinguen las áreas brillantes y oscuras con tanta facilidad como las personas que no tienen esa discapacidad, y por lo tanto tienen problemas para ver los bordes y otros detalles.  </p>
 
-Es bueno tener un diseño atractivo en tu sitio web, pero el diseño es inútil si tus usuarios no pueden leer el contenido.
+<p>Es bueno tener un diseño atractivo en tu sitio web, pero el diseño es inútil si tus usuarios no pueden leer el contenido.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Veamos algunos ejemplos simples con código HTML y CSS:
+<p>Veamos algunos ejemplos simples con código HTML y CSS:</p>
 
-```html
-<div class="good">Buen contraste</div>
-<div class="bad">Mal contraste</div>
-```
+<pre class="brush: html notranslate">&lt;div class="good"&gt;Buen contraste&lt;/div&gt;
+&lt;div class="bad"&gt;Mal contraste&lt;/div&gt;</pre>
 
-```css
-div {
+<pre class="brush: css notranslate">div {
   /* General div styles here */
 }
 
@@ -46,19 +64,18 @@ div {
 
 .bad {
   background-color: #400064;
-}
-```
+}</pre>
 
-Ambos fragmentos de texto tienen color negro por defecto. El `<div>` "good" tiene un color de fondo púrpura claro, lo que hace que el texto sea fácil de leer:
+<p>Ambos fragmentos de texto tienen color negro por defecto. El <code>&lt;div&gt;</code> "good" tiene un color de fondo púrpura claro, lo que hace que el texto sea fácil de leer:</p>
 
-```html hidden
-    <div class="good">
+<div class="hidden">
+<h4 id="example1">example1</h4>
+
+<pre class="brush: html notranslate">    &lt;div class="good"&gt;
       Good contrast
-    </div>
-```
+    &lt;/div&gt;</pre>
 
-```css hidden
-div {
+<pre class="brush: css notranslate">div {
   font-family: sans-serif;
   text-align: center;
   font-size: 2rem;
@@ -71,21 +88,21 @@ div {
 
 .good {
   background-color: #fae6fa;
-}
-```
+}</pre>
+</div>
 
-{{EmbedLiveSample('example1', '100%', '100')}}
+<p>{{EmbedLiveSample('example1', '100%', '100')}}</p>
 
-El `<div>` "bad", por otro lado, tiene un color de fondo púrpura muy oscuro, lo que hace que el texto sea mucho más difícil de leer:
+<p>El <code>&lt;div&gt;</code> "bad", por otro lado, tiene un color de fondo púrpura muy oscuro, lo que hace que el texto sea mucho más difícil de leer:</p>
 
-```html hidden
-    <div class="bad">
+<div class="hidden">
+<h4 id="example2">example2</h4>
+
+<pre class="brush: html notranslate">    &lt;div class="bad"&gt;
       Bad contrast
-    </div>
-```
+    &lt;/div&gt;</pre>
 
-```css hidden
-div {
+<pre class="brush: css notranslate">div {
   font-family: sans-serif;
   text-align: center;
   font-size: 2rem;
@@ -98,34 +115,49 @@ div {
 
 .bad {
   background-color: #400064;
-}
-```
+}</pre>
+</div>
 
-{{EmbedLiveSample('example2', '100%', '100')}}
+<p>{{EmbedLiveSample('example2', '100%', '100')}}</p>
 
-## Solución
+<dl>
+</dl>
 
-Al elegir un esquema de color para tu sitio web, selecciona colores de primer plano y de fondo que tengan un buen contraste. Haz que el contraste de color sea lo mejor posible dentro de las limitaciones de tu diseño — preferiblemente elige el nivel AAA (ver 1.4.6 más abajo), pero al menos cumple con el nivel AA (ver 1.4.3 más abajo).
+<h2 id="Solución">Solución</h2>
 
-Si incluyes contenido no textual, como vídeo o animación, debes seguir 1.4.11 (nuevamente, ver más abajo).
+<p>Al elegir un esquema de color para tu sitio web, selecciona colores de primer plano y de fondo que tengan un buen contraste. Haz que el contraste de color sea lo mejor posible dentro de las limitaciones de tu diseño — preferiblemente elige el nivel AAA (ver 1.4.6 más abajo), pero al menos cumple con el nivel AA (ver 1.4.3 más abajo).</p>
 
-Para verificar el contraste a medida que seleccionas los colores puedes utlizar una herramienta como [Color Contrast Checker](http://webaim.org/resources/contrastchecker/) de WebAIM.
+<p>Si incluyes contenido no textual, como vídeo o animación, debes seguir 1.4.11 (nuevamente, ver más abajo).</p>
 
-También puedes comprobar el contraste de color sobre la marcha utilizando las herramientas para desarrolladores de Firefox— ver nuestra guía [Accessibility inspector](/es/docs/Tools/Accessibility_inspector), y en particular la sección [Check for accessibility issues](/es/docs/Tools/Accessibility_inspector#Check_for_accessibility_issues). Prueba a usarlo en los ejemplos en vivo en la sección de descripción.
+<p>Para verificar el contraste a medida que seleccionas los colores puedes utlizar una herramienta como <a class="external external-icon" href="http://webaim.org/resources/contrastchecker/" rel="noopener">Color Contrast Checker</a> de WebAIM.</p>
 
-## Criterios de conformidad relacionados con WCAG
+<p>También puedes comprobar el contraste de color sobre la marcha utilizando las herramientas para desarrolladores de Firefox— ver nuestra guía <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility inspector</a>, y en particular la sección <a href="/en-US/docs/Tools/Accessibility_inspector#Check_for_accessibility_issues">Check for accessibility issues</a>. Prueba a usarlo en los ejemplos en vivo en la sección de descripción.</p>
 
-- [1.4.3 Contraste mínimo (AA)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
-  - : El contraste de color entre el fondo y el contenido del primer plano debe tener un nivel mínimo para garantizar la legibilidad:\* El texto y el fondo deben tener una relación de contraste de al menos 4.5:1.
-    - Los encabezados (o simplemente el texto más grande) deben tener una relación de contraste de al menos 3:1. El texto más grande se define como de al menos 18pt, o 14pt en negrita.
-- [1.4.6 Contraste mejorado (AAA)](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
-  - : Esto sigue y se basa en el criterio 1.4.3.\* El texto y el fondo deben tener una relación de contraste de al menos 7:1.
-    - Los encabezados (o simplemente el texto más grande) deben tener una relación de contraste de al menos 4.5:1.
-- [1.4.11 Contraste no textual (AA)](https://www.w3.org/TR/WCAG21/#non-text-contrast) (añadido en 2.1)
-  - : Debe haber una relación mínima de contraste de color de 3 a 1 para los componentes de la interfaz de usuario y los objetos gráficos.
+<h2 id="Criterios_de_conformidad_relacionados_con_WCAG">Criterios de conformidad relacionados con WCAG</h2>
 
-## Ver también
+<dl>
+ <dt><a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contraste mínimo (AA)</a></dt>
+ <dd>El contraste de color entre el fondo y el contenido del primer plano debe tener un nivel mínimo para garantizar la legibilidad:
+ <ul>
+  <li>El texto y el fondo deben tener una relación de contraste de al menos 4.5:1.</li>
+  <li>Los encabezados (o simplemente el texto más grande) deben tener una relación de contraste de al menos 3:1. El texto más grande se define como de al menos 18pt, o 14pt en negrita.</li>
+ </ul>
+ </dd>
+ <dt><a href="https://www.w3.org/TR/WCAG21/#contrast-enhanced">1.4.6 Contraste mejorado (AAA)</a></dt>
+ <dd>Esto sigue y se basa en el criterio 1.4.3.
+ <ul>
+  <li>El texto y el fondo deben tener una relación de contraste de al menos 7:1.</li>
+  <li>Los encabezados (o simplemente el texto más grande) deben tener una relación de contraste de al menos 4.5:1.</li>
+ </ul>
+ </dd>
+ <dt><a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Contraste no textual (AA)</a> (añadido en 2.1)</dt>
+ <dd>Debe haber una relación mínima de contraste de color de 3 a 1 para los componentes de la interfaz de usuario y los objetos gráficos.</dd>
+</dl>
 
-- [Color and color contrast](/es/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)
-- [Multiple labels](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form#Multiple_labels)
-- [Understanding Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a></li>
+ <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form#Multiple_labels">Multiple labels</a></li>
+ <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Understanding Non-Text Contrast</a></li>
+</ul>

@@ -3,24 +3,23 @@ title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 translation_of: Web/CSS/animation-timing-function
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<p>{{CSSRef}}{{SeeCompatTable}}</p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad [CSS](/es/docs/CSS "CSS") **`animation-timing-function`** especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo. Los posibles valores son una o varias {{cssxref("&lt;timing-function&gt;")}}.
+<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a> <code><strong>animation-timing-function</strong></code> especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo. Los posibles valores son una o varias {{cssxref("&lt;timing-function&gt;")}}.</p>
 
-Para animaciones con keyframes, la timing function se aplica entre los [keyframes](/es/docs/Web/CSS/@keyframes "/en-US/docs/CSS/@keyframes") en lugar de sobre toda la animación. Es decir, se aplica al comienzo del keyframe y al final del mismo.
+<p>Para animaciones con keyframes,  la timing function se aplica entre los <a href="/en-US/docs/Web/CSS/@keyframes" title="/en-US/docs/CSS/@keyframes">keyframes</a> en lugar de sobre toda la animación. Es decir, se aplica al comienzo del keyframe y al final del mismo.</p>
 
-Una timing function definida dentro de un keyframe afecta a ese keyframe. Si no está definida para el keyframe, se aplica la timing function para la animación en general.
+<p>Una timing function definida dentro de un keyframe afecta a ese keyframe. Si no está definida para el keyframe, se aplica la timing function para la animación en general.</p>
 
-A menudo, es conveniente usar la propiedad abreviada {{cssxref("animation")}} para ajustar las propiedades de animación una sola vez.
+<p>A menudo, es conveniente usar la propiedad abreviada {{cssxref("animation")}} para ajustar las propiedades de animación una sola vez.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-/* Keyword values */
+<pre class="brush: css">/* Keyword values */
 animation-timing-function: ease;
 animation-timing-function: ease-in;
 animation-timing-function: ease-out;
@@ -40,34 +39,51 @@ animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 animation-timing-function: inherited;
 animation-timing-function: initial;
 animation-timing-function: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `<timingfunction>`
-  - : Cada {{cssxref("&lt;timing-function&gt;")}} representa la timing function vinculada a la propiedad correspondiente a animar, como se define en {{cssxref ("animación-propiedad")}}.
+<dl>
+ <dt><code>&lt;timingfunction&gt;</code></dt>
+ <dd>Cada {{cssxref("&lt;timing-function&gt;")}} representa la timing function vinculada a la propiedad correspondiente a animar, como se define en {{cssxref ("animación-propiedad")}}.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Visita [animaciones CSS](https://developer.mozilla.org/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations") para ver algunos ejemplos.
+<p>Visita <a href="https://developer.mozilla.org/es/CSS/Usando_animaciones_CSS" title="en/CSS/CSS_animations">animaciones CSS</a> para ver algunos ejemplos.</p>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                                                           | Estado                               | Comentario        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}} | {{Spec2('CSS3 Animations')}} | Definición incial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td>Definición incial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad entre navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad entre navegadores</h2>
 
 {{Compat("css.properties.animation-timing-function")}}
 
-##
+<h2 id="sect1"> </h2>
 
-## Consulte también
+<h2 id="Consulte_también">Consulte también</h2>
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+<ul>
+ <li><a href="/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS developer guide about CSS animations">Usando animaciones CSS</a></li>
+ <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
+</ul>

@@ -9,31 +9,32 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toUpperCase
 ---
-{{JSRef("Objetos_globales", "String")}}
+<p>{{JSRef("Objetos_globales", "String")}}</p>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-El **`toUpperCase()`** método devuelve el valor convertido en mayúsculas de la cadena que realiza la llamada.
+<p>El <strong><code>toUpperCase()</code></strong> método devuelve el valor convertido en mayúsculas de la cadena que realiza la llamada.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    cadena.toUpperCase()
+<pre><code><em>cadena</em>.toUpperCase() </code></pre>
 
-## Descripción
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-El método `toUpperCase` devuelve el valor de la cadena convertida a mayúsculas. `toUpperCase` no afecta al valor de la cadena en sí mismo.
+<p>El método <code>toUpperCase</code> devuelve el valor de la cadena convertida a mayúsculas. <code>toUpperCase</code> no afecta al valor de la cadena en sí mismo.</p>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-### Ejemplo: Usando `toUpperCase`
+<h3 id="Ejemplo:_Usando_toUpperCase" name="Ejemplo:_Usando_toUpperCase">Ejemplo: Usando <code>toUpperCase</code></h3>
 
-El siguiente ejemplo muestra la cadena "`ALPHABET`":
+<p>El siguiente ejemplo muestra la cadena "<code>ALPHABET</code>":</p>
 
-```js
-console.log( "alphabet".toUpperCase() ); // "ALPHABET"
-```
+<pre class="brush: js">console.log( "alphabet".toUpperCase() ); // "ALPHABET"
+</pre>
 
-### Vea También
+<h3 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h3>
 
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
+<ul>
+ <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
+ <li>{{jsxref("String.prototype.toLowerCase()")}}</li>
+</ul>

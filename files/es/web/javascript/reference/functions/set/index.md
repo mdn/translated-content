@@ -4,46 +4,51 @@ slug: Web/JavaScript/Reference/Functions/set
 translation_of: Web/JavaScript/Reference/Functions/set
 original_slug: Web/JavaScript/Referencia/Funciones/set
 ---
-{{jsSidebar("Funciones")}}
+<div>{{jsSidebar("Funciones")}}</div>
 
-La sintaxis **`set`** asocia la propiedad de un objeto a una función que será llamada cuando haya un intento de asignar valor a esa propiedad.
+<p>La sintaxis  <strong><code>set</code></strong>  asocia la propiedad de un objeto a una función que será llamada cuando haya un intento de asignar valor a esa propiedad.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    {set prop(val) { . . . }}
-    {set [expression](val) { . . . }}
+<pre class="syntaxbox notranslate">{set <em>prop</em>(<em>val</em>) { . . . }}
+{set [expression](<em>val</em>) { . . . }}</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- _`prop`_
-  - : El nombre de la propiedad a asociar con la función dada.
+<dl>
+ <dt><em><code>prop</code></em></dt>
+ <dd>El nombre de la propiedad a asociar con la función dada.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><em><code>val</code></em></dt>
+ <dd>Un alias para la variable que contiene el valor a asignar a la <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">propiedad</span></font>.</dd>
+ <dt><em><code>expression</code></em></dt>
+ <dd>A partir de ECMAScript 2015, se puede también usar expresiones para nombres de propiedades computados para asociar a la función dada.</dd>
+</dl>
 
-- _`val`_
-  - : Un alias para la variable que contiene el valor a asignar a la propiedad.
-- _`expression`_
-  - : A partir de ECMAScript 2015, se puede también usar expresiones para nombres de propiedades computados para asociar a la función dada.
+<h2 id="Descripción">Descripción</h2>
 
-## Descripción
+<p>En JavaScript, un setter puede ser usado para ejecutar una función donde sea que una propiedad se intente cambiar. Los setters son regularmente usados en conjunto con getters para crear un tipo de pseudo-propiedad. No es posible tener simultáneamente un setter en una propiedad que ya tiene un valor.</p>
 
-En JavaScript, un setter puede ser usado para ejecutar una función donde sea que una propiedad se intente cambiar. Los setters son regularmente usados en conjunto con getters para crear un tipo de pseudo-propiedad. No es posible tener simultáneamente un setter en una propiedad que ya tiene un valor.
+<p>Tenga en cuenta lo siguiente al trabajar con setters:</p>
 
-Tenga en cuenta lo siguiente al trabajar con setters:
+<div>
+<ul>
+ <li>Puede tener un identificador ya sea number o string;</li>
+ <li>Debe tener exactamente un parámentro (ver <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> para más información);</li>
+ <li>No debe aparecer en un objeto de notación literal con otro <code>set</code> o con otra entrada de datos con la misma propiedad.<br>
+  ( <code>{ set x(v) { }, set x(v) { } }</code> y <code>{ x: ..., set x(v) { } }</code> están prohibidos )</li>
+</ul>
+</div>
 
-- Puede tener un identificador ya sea number o string;
-- Debe tener exactamente un parámentro (ver [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para más información);
-- No debe aparecer en un objeto de notación literal con otro `set` o con otra entrada de datos con la misma propiedad.
-  ( `{ set x(v) { }, set x(v) { } }` y `{ x: ..., set x(v) { } }` están prohibidos )
+<h2 id="Ejemplos">Ejemplos</h2>
 
-## Ejemplos
+<h3 id="Definiendo_un_setter_en_el_inicializador_de_nuevos_objetos">Definiendo un setter en el inicializador de nuevos objetos</h3>
 
-### Definiendo un setter en el inicializador de nuevos objetos
+<p>En el siguiente ejemplo definimos una pseudo-propiedad  <code>actual</code>  al objeto <code>lenguaje</code>. Cuando se le asigne un valor a <code>actual</code>, actualiza <code>log</code> con ese valor:</p>
 
-En el siguiente ejemplo definimos una pseudo-propiedad `actual` al objeto `lenguaje`. Cuando se le asigne un valor a `actual`, actualiza `log` con ese valor:
-
-```js
-var lenguaje = {
+<pre class="brush: js notranslate">var lenguaje = {
   set actual(mensaje) {
     this.log.push(mensaje);
   },
@@ -54,39 +59,39 @@ console.log(lenguaje.log); // ['ES']
 
 lenguaje.actual='FR';
 console.log(lenguaje.log); // ['ES', 'FR']
-```
+</pre>
 
-Note que `actual` no está definido y cualquier intento de accederlo devolverá `undefined`.
 
-### Eliminando un setter con el operador `delete`
 
-Si desea eliminar el setter, puede simplemente aplicar [`delete`](/es/docs/Web/JavaScript/Referencia/Operadores/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete") en él:
+<p>Note que <code>actual</code> no está definido y cualquier intento de accederlo devolverá <code>undefined</code>.</p>
 
-```js
-delete lenguaje.actual;
-```
+<h3 id="Eliminando_un_setter_con_el_operador_delete">Eliminando un setter con el operador <code>delete</code> </h3>
 
-### Definiendo un setter en un objecto existente usando `defineProperty`
+<p>Si desea eliminar el setter, puede simplemente aplicar <a href="/es/docs/Web/JavaScript/Referencia/Operadores/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a> en él:</p>
 
-Para añadir un setter a un objeto _existente_,\_ \_use {{jsxref("Object.defineProperty()")}}
+<pre class="brush: js notranslate">delete lenguaje.actual;
+</pre>
 
-```js
-consr o = {a: 0};
+<h3 id="Definiendo_un_setter_en_un_objecto_existente_usando_defineProperty">Definiendo un setter en un objecto existente usando <code>defineProperty</code></h3>
+
+<p>Para añadir un setter a un objeto <em>existente</em>,<em> </em>use {{jsxref("Object.defineProperty()")}}</p>
+
+<pre class="brush: js notranslate">consr o = {a: 0};
 
 Object.defineProperty(o, 'b', {
   set: function (x) { this.a = x / 2; }
 });
 
 o.b = 10; // Ejecuta el setter, el cual asigna 10 / 2 (5) a la propiedad 'a'
-console.log(o.a) // 5
-```
+console.log(o.a) // 5</pre>
 
-### Usando un nombre de propiedad computado
+<h3 id="Usando_un_nombre_de_propiedad_computado">Usando un nombre de propiedad computado</h3>
 
-> **Nota:** Propiedades computadas son 'experimental technology'_,_ parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.
+<div class="note">
+<p><strong>Nota:</strong> Propiedades computadas son 'experimental technology'<em>,</em> parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.</p>
+</div>
 
-```js
-const expr = 'foo';
+<pre class="brush: js notranslate">const expr = 'foo';
 
 var obj = {
   baz: 'bar',
@@ -96,30 +101,53 @@ var obj = {
 console.log(obj.baz); // "bar"
 obj.foo = "baz";      // ejecuta el setter
 console.log(obj.baz); // "baz"
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                    | Status                       | Comment                               |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------- |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Definición inicial.                   |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Se añaden las propiedades computadas. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                       |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Se añaden las propiedades computadas.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.functions.set")}}
 
-## Notas específicas para SpiderMonkey-specific
+<h2 id="Notas_específicas_para_SpiderMonkey-specific">Notas específicas para SpiderMonkey-specific</h2>
 
-- Comenzando con[ JavaScript 1.8.1](/es/docs/Web/JavaScript/New_in_JavaScript/1.8.1), los setters ya no son llamados cuando se definen las propiedades en los inicializadores de objetos y arrays.
-- De SpiderMonkey 38 en adelante, un setter con un {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} es un {{jsxref("SyntaxError")}} conforme a la especificación ES6.
+<ul>
+ <li>Comenzando con<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.8.1"> JavaScript 1.8.1</a>, los setters ya no son llamados cuando se definen las propiedades en los inicializadores de objetos y arrays.</li>
+ <li>De SpiderMonkey 38 en adelante, un setter con un {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} es un {{jsxref("SyntaxError")}} conforme a la especificación ES6.</li>
+</ul>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [getter](/es/docs/Web/JavaScript/Reference/Functions/get)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- [Definiendo Getters y Setters](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) en la Guía JavaScript
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a></li>
+ <li>{{jsxref("Operators/delete", "delete")}}</li>
+ <li>{{jsxref("Object.defineProperty()")}}</li>
+ <li>{{jsxref("Object.defineGetter", "__defineGetter__")}}</li>
+ <li>{{jsxref("Object.defineSetter", "__defineSetter__")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Definiendo Getters y Setters</a> en la Guía JavaScript</li>
+</ul>

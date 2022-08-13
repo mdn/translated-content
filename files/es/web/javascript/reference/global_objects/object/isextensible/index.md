@@ -10,27 +10,28 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isExtensible
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`Object.isExtensible()`** determina si un objeto es extendible (si puede tener propiedades nuevas agregadas a éste).
+<p>El método <strong><code>Object.isExtensible()</code></strong> determina si un objeto es extendible (si puede tener propiedades nuevas agregadas a éste).</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-    Object.isExtensible(obj)
+<pre class="syntaxbox"><code>Object.isExtensible(<var>obj</var>)</code></pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- `obj`
-  - : El objeto a ser revisado.
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>El objeto a ser revisado.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Los objetos son extendibles por defecto: ellos pueden tener propiedades nuevas agregadas a ellos, y (en motores que soportan {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} la propiedad \_\_proto\_\_) pueden ser modificados. Un objeto puede ser marcado como no extendible usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, o {{jsxref("Object.freeze()")}}.
+<p>Los objetos son extendibles por defecto: ellos pueden tener propiedades nuevas agregadas a ellos, y (en motores que soportan {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} la propiedad __proto__) pueden ser modificados. Un objeto puede ser marcado como no extendible usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, o {{jsxref("Object.freeze()")}}.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-// Los Objetos nuevos son extendibles (por defecto).
+<pre class="brush: js">// Los Objetos nuevos son extendibles (por defecto).
 var empty = {};
 Object.isExtensible(empty); // === true
 
@@ -45,36 +46,52 @@ Object.isExtensible(sealed); // === false
 // Objetos congelados también por definición son no-extendibles.
 var frozen = Object.freeze({});
 Object.isExtensible(frozen); // === false
-```
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-En ES5, si el argumento pasado a éste método no es un objeto (primitivo), entonces regresará {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como argumento será tratado como si fuera un objeto no-extendible ordinario, simplemente regresa `false`.
+<p>En ES5, si el argumento pasado a éste método no es un objeto (primitivo), entonces regresará {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como argumento será tratado como si fuera un objeto no-extendible ordinario, simplemente regresa <code>false</code>.</p>
 
-```js
-Object.isExtensible(1);
+<pre class="brush: js">Object.isExtensible(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isExtensible(1);
 // false                         (ES6 code)
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                               | Estado                   | Comentario                                            |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.13', 'Object.isExtensible')}}         | {{Spec2('ES5.1')}} | Definición inicial. Implementada en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}} | {{Spec2('ES6')}}     |                                                       |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.2.3.13', 'Object.isExtensible')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td>Definición inicial. Implementada en JavaScript 1.8.5.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Object.isExtensible")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
-- {{jsxref("Reflect.isExtensible()")}}
+<ul>
+ <li>{{jsxref("Object.preventExtensions()")}}</li>
+ <li>{{jsxref("Object.seal()")}}</li>
+ <li>{{jsxref("Object.isSealed()")}}</li>
+ <li>{{jsxref("Object.freeze()")}}</li>
+ <li>{{jsxref("Object.isFrozen()")}}</li>
+ <li>{{jsxref("Reflect.isExtensible()")}}</li>
+</ul>

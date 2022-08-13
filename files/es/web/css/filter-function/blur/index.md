@@ -9,29 +9,33 @@ tags:
 translation_of: Web/CSS/filter-function/blur()
 original_slug: Web/CSS/filter-function/blur()
 ---
-{{cssref}}
+<div>{{cssref}}</div>
 
-La función CSS **`blur()`** aplica un [desenfoque Gaussiano](https://en.wikipedia.org/wiki/Gaussian_blur) a la imagen de entrada. El resultado es un {{cssxref("&lt;filter-function&gt;")}}.
+<p>La función CSS <strong><code>blur()</code></strong> aplica un <a href="https://en.wikipedia.org/wiki/Gaussian_blur">desenfoque Gaussiano</a> a la imagen de entrada. El resultado es un {{cssxref("&lt;filter-function&gt;")}}.</p>
 
-{{EmbedInteractiveExample("pages/css/function-blur.html")}}
+<div>{{EmbedInteractiveExample("pages/css/function-blur.html")}}</div>
 
-## Sintaxis
 
-    blur(radio)
 
-### Parámetros
+<h2 id="Sintaxis">Sintaxis</h2>
 
-- `radio`
-  - : El radio del desenfoque, especificado como {{cssxref("&lt;length&gt;")}}. Define el valor de la desviación estándar a la función gaussiana, es decir, cuántos píxeles en la pantalla se combinan entre sí; por lo tanto, un valor mayor creará más desenfoque. Un valor de `0` deja la entrada sin cambios. El valor de laguna para la interpolación es `0`.
+<pre class="syntaxbox notranslate">blur(<em>radio</em>)</pre>
 
-## Ejemplos
+<h3 id="Parámetros">Parámetros</h3>
 
-```css
-blur(0)        /* Sin efecto */
+<dl>
+ <dt><code>radio</code></dt>
+ <dd>El radio del desenfoque, especificado como {{cssxref("&lt;length&gt;")}}. Define el valor de la desviación estándar a la función gaussiana, es decir, cuántos píxeles en la pantalla se combinan entre sí; por lo tanto, un valor mayor creará más desenfoque. Un valor de <code>0</code> deja la entrada sin cambios. El valor de laguna para la interpolación es <code>0</code>.</dd>
+</dl>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<pre class="brush: css notranslate">blur(0)        /* Sin efecto */
 blur(8px)      /* Desenfoque con 8px de radio */
-blur(1.17rem)  /* Desenfoque con 1.17rem de radio */
-```
+blur(1.17rem)  /* Desenfoque con 1.17rem de radio */</pre>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{cssxref("&lt;filter-function&gt;")}}
+<ul>
+ <li>{{cssxref("&lt;filter-function&gt;")}}</li>
+</ul>

@@ -3,40 +3,59 @@ title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
 translation_of: Web/API/HTMLElement/offsetTop
 ---
-{{ APIRef("HTML DOM") }}
+<div>
+<div>{{ APIRef("HTML DOM") }}</div>
+</div>
 
-La propiedad de sólo lectura **`HTMLElement.offsetTop`** retorna la distancia del elemento actual respecto al borde superior del nodo {{domxref("HTMLelement.offsetParent","offsetParent")}}.
+<p>La propiedad de sólo lectura <strong><code>HTMLElement.offsetTop</code></strong> retorna la distancia del elemento actual respecto al borde superior del nodo {{domxref("HTMLelement.offsetParent","offsetParent")}}.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    topPos = element.offsetTop;
+<pre class="syntaxbox"><var>topPos</var> = element.offsetTop;
+</pre>
 
-### Parámetros
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
 
-- `topPos` es el número de pixels desde el borde superior del elemento padre _más cercano posicionado de forma relativa_.
+<ul>
+ <li><code>topPos</code> es el número de pixels desde el borde superior del elemento padre <em>más cercano posicionado de forma relativa</em>.</li>
+</ul>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-var d = document.getElementById("div1");
+<pre class="brush:js">var d = document.getElementById("div1");
 var topPos = d.offsetTop;
 
-if (topPos > 10) {
+if (topPos &gt; 10) {
   // objeto está posicionado a más de
   // de 10 pixels de distancia de su padre
-}
-```
+}</pre>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-| Especificación                                                                               | Estado                           | Observaciones |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsettop', 'offsetTop')}} | {{Spec2('CSSOM View')}} |               |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Observaciones</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM View', '#dom-htmlelement-offsettop', 'offsetTop')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("api.HTMLElement.offsetTop")}}
 
-In compliance with the specification, this property will return `null` on Webkit if the element is hidden (the `style.display` of this element or any ancestor is `"none"`) or if the `style.position` of the element itself is set to `"fixed"`.
 
-This property will return `null` on Internet Explorer (9) if the `style.position` of the element itself is set to `"fixed"`. (Having `display:none` does not affect this browser.)
+
+<p>{{Compat("api.HTMLElement.offsetTop")}}</p>
+
+<p>In compliance with the specification, this property will return <code>null</code> on Webkit if the element is hidden (the <code>style.display</code> of this element or any ancestor is <code>"none"</code>) or if the <code>style.position</code> of the element itself is set to <code>"fixed"</code>.</p>
+
+<p>This property will return <code>null</code> on Internet Explorer (9) if the <code>style.position</code> of the element itself is set to <code>"fixed"</code>. (Having <code>display:none</code> does not affect this browser.)</p>

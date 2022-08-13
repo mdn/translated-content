@@ -11,57 +11,73 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/values
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`values()`** devuelve un nuevo objeto **`Array Iterator`** que contiene los valores para cada índice del array.
+<p>El método <strong><code>values()</code></strong> devuelve un nuevo objeto <strong><code>Array Iterator</code></strong> que contiene los valores para cada índice del array.</p>
 
-```js
-var a = ['w', 'y', 'k', 'o', 'p'];
-var iterator = a.values();
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> a <span class="operator token">=</span> <span class="punctuation token">[</span><span class="string token">'w'</span><span class="punctuation token">,</span> <span class="string token">'y'</span><span class="punctuation token">,</span> <span class="string token">'k'</span><span class="punctuation token">,</span> <span class="string token">'o'</span><span class="punctuation token">,</span> <span class="string token">'p'</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<span class="keyword token">var</span> iterator <span class="operator token">=</span> a<span class="punctuation token">.</span><span class="function token">values</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
-console.log(iterator.next().value); // w
-console.log(iterator.next().value); // y
-console.log(iterator.next().value); // k
-console.log(iterator.next().value); // o
-console.log(iterator.next().value); // p
-```
+console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>iterator<span class="punctuation token">.</span><span class="function token">next</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// w </span>
+console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>iterator<span class="punctuation token">.</span><span class="function token">next</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// y </span>
+console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>iterator<span class="punctuation token">.</span><span class="function token">next</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// k </span>
+console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>iterator<span class="punctuation token">.</span><span class="function token">next</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// o </span>
+console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>iterator<span class="punctuation token">.</span><span class="function token">next</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// p</span></code>
+</pre>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    arr.values()
+<pre class="syntaxbox"><var>arr</var>.values()
+</pre>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-Un nuevo objeto {{jsxref("Array")}} iterator.
+<p>Un nuevo objeto {{jsxref("Array")}} iterator.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Iteración usando un bucle `for...of`
+<h3 id="Iteración_usando_un_bucle_for...of">Iteración usando un bucle <code>for...of</code></h3>
 
-```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
 var iterador = arr.values();
 
 for (let letra of iterador) {
   console.log(letra);
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                               | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.values', 'Array.prototype.values')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-array.prototype.values', 'Array.prototype.values')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("javascript.builtins.Array.values")}}
+<div>{{Compat("javascript.builtins.Array.values")}}</div>
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+<ul>
+ <li>{{jsxref("Array.prototype.keys()")}}</li>
+ <li>{{jsxref("Array.prototype.entries()")}}</li>
+ <li>{{jsxref("Array.prototype.forEach()")}}</li>
+ <li>{{jsxref("Array.prototype.every()")}}</li>
+ <li>{{jsxref("Array.prototype.some()")}}</li>
+</ul>

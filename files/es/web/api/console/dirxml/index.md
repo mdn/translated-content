@@ -8,23 +8,28 @@ tags:
   - metodo
 translation_of: Web/API/Console/dirxml
 ---
-{{APIRef("Console API")}}{{Non-standard_header}}
+<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
 
-Muestra en consola un árbol interactivo de los elementos descendientes del elemento XML/HTML especificado. Si no es posible mostrarlo como un elemento, la vista de objeto se muestra en su lugar. La salida se presenta como una lista jerárquica de nodos expandibles que le permiten ver el contenido de los nodos hijos.
+<p>Muestra en consola un árbol interactivo de los elementos descendientes del elemento XML/HTML especificado. Si no es posible mostrarlo como un elemento, la vista de objeto se muestra en su lugar. La salida se presenta como una lista jerárquica de nodos expandibles que le permiten ver el contenido de los nodos hijos.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    console.dirxml(objeto);
+<pre class="syntaxbox">console.dirxml(<em>objeto</em>);
+</pre>
 
-## Parámetros
+<h2 id="Parámetros">Parámetros</h2>
 
-- `objeto`
-  - : Un objeto JavaScript cuyas propiedades deben ser mostradas.
+<dl>
+ <dt><code>objeto</code></dt>
+ <dd>Un objeto JavaScript cuyas propiedades deben ser mostradas.</dd>
+</dl>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("api.console.dirxml")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+<ul>
+ <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
+</ul>

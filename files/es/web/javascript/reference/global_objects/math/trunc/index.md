@@ -10,39 +10,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/trunc
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La función **`Math.trunc()`** devuelve la parte entera de un numero removiendo cualquier dígito decimal (dígitos situados después de la coma).
+<p>La función <strong><code>Math.trunc()</code></strong> devuelve la parte entera de un numero removiendo cualquier dígito decimal (dígitos situados después de la coma).</p>
 
-## Sintaxis.
+<h2 id="Sintaxis.">Sintaxis.</h2>
 
-    Math.trunc(x)
+<pre class="syntaxbox notranslate"><code>Math.trunc(<var>x</var>)</code></pre>
 
-### Parámetros.
+<h3 id="Parámetros.">Parámetros.</h3>
 
-- `x`
-  - : Un número.
+<dl>
+ <dt><code>x</code></dt>
+ <dd>Un número.</dd>
+</dl>
 
-### Valor de retorno.
+<h3 id="Valor_de_retorno.">Valor de retorno.</h3>
 
-La parte entera del número dado.
+<p>La parte entera del número dado.</p>
 
-## Descripción.
+<h2 id="Descripción.">Descripción.</h2>
 
-A diferencia de los otros tres métodos de `Math`: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} y {{jsxref("Math.round()")}}, la forma en que `Math.trunc()` funciona es muy simple. _trunca_ (corta) el punto y los dígitos a la derecha de él, sin importar si el argumento es un número positivo o negativo.
+<p>A diferencia de los otros tres métodos de <code>Math</code>: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} y {{jsxref("Math.round()")}}, la forma en que <code>Math.trunc()</code> funciona es muy simple.  <em>trunca</em> (corta) el punto y los dígitos a la derecha de él, sin importar si el argumento es un número positivo o negativo.</p>
 
-Si el argumento es un número positivo, `Math.trunc()` es equivalente a `Math.floor();` de otra forma `Math.trunc()` es equivalente a `Math.ceil()`.
+<p>Si el argumento es un número positivo, <code>Math.trunc()</code> es equivalente a <code>Math.floor();</code> de otra forma <code>Math.trunc()</code> es equivalente a <code>Math.ceil()</code>.</p>
 
-El argumento pasado a este método será convertido a un tipo numérico entero.
+<p>El argumento pasado a este método será convertido a un tipo numérico entero.</p>
 
-Debido a que `trunc()` es un método estático de `Math`, siempre úsalo como `Math.trunc()`, en lugar de como un método de un objeto `Math` que hayas creado (`Math` no es un constructor).
+<p>Debido a que <code>trunc()</code> es un método estático de <code>Math</code>, siempre úsalo como <code>Math.trunc()</code>, en lugar de como un método de un objeto <code>Math</code> que hayas creado (<code>Math</code> no es un constructor).</p>
 
-## Ejemplos.
+<h2 id="Ejemplos.">Ejemplos.</h2>
 
-### Usando `Math.trunc()`
+<h3 id="Usando_Math.trunc">Usando <code>Math.trunc()</code></h3>
 
-```js
-Math.trunc(13.37);    // 13
+<pre class="brush: js notranslate">Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
 Math.trunc(0.123);    //  0
 Math.trunc(-0.123);   // -0
@@ -50,31 +51,47 @@ Math.trunc('-1.123'); // -1
 Math.trunc(NaN);      // NaN
 Math.trunc('foo');    // NaN
 Math.trunc();         // NaN
-```
+</pre>
 
-## Polyfill.
+<h2 id="Polyfill.">Polyfill.</h2>
 
-```js
-Math.trunc = Math.trunc || function (x) {
-    return (x < 0 ? Math.ceil(x) : Math.floor(x));
+<pre class="brush: js notranslate">Math.trunc = Math.trunc || function (x) {
+    return (x &lt; 0 ? Math.ceil(x) : Math.floor(x));
 }
-```
+</pre>
 
-## Especificaciones.
+<h2 id="Especificaciones.">Especificaciones.</h2>
 
-| Especificación                                                               | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.trunc', 'Math.trunc')}}         | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-math.trunc', 'Math.trunc')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores.
+<h2 id="Compatibilidad_con_navegadores.">Compatibilidad con navegadores.</h2>
 
 {{Compat("javascript.builtins.Math.trunc")}}
 
-## Vea también.
+<h2 id="Vea_también.">Vea también.</h2>
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
+<ul>
+ <li>{{jsxref("Math.abs()")}}</li>
+ <li>{{jsxref("Math.ceil()")}}</li>
+ <li>{{jsxref("Math.floor()")}}</li>
+ <li>{{jsxref("Math.round()")}}</li>
+ <li>{{jsxref("Math.sign()")}}</li>
+</ul>

@@ -8,42 +8,62 @@ tags:
   - Selectores
 translation_of: Web/CSS/Child_combinator
 ---
-{{CSSRef("Selectors")}}
+<div>{{CSSRef("Selectors")}}</div>
 
-El combinador `>` separa a dos selectores y busca solo a los elementos que coindicen con el segundo selector y que son hijos **directos** del primero. EN contraste, cuando se combinan dos selectores con el [selector de descendiente](/es/docs/Web/CSS/Descendant_selectors), la expresión busca elementos que coinciden con el segundo selector y que tienen algun ancestro que coindice con el primero, sin importar el nivel de separación que tengan dentro del DOM.
+<p>El combinador <code>&gt;</code> separa a dos selectores y busca solo a los elementos que coindicen con el segundo selector y que son hijos <strong>directos</strong> del primero. EN contraste, cuando se combinan dos selectores con el <a href="/es/docs/Web/CSS/Descendant_selectors">selector de descendiente</a>, la expresión busca elementos que coinciden con el segundo selector y que tienen algun ancestro que coindice con el primero, sin importar el nivel de separación que tengan dentro del DOM.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    selector1 > selector2 { style properties }
+<pre class="syntaxbox">selector1 &gt; selector2 { <em>style properties</em> }
+</pre>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```css
-span { background-color: white; }
-div > span {
+<pre class="brush: css">span { background-color: white; }
+div &gt; span {
   background-color: DodgerBlue;
 }
-```
+</pre>
 
-```html
-<div>
-  <span>Span #1, dentro del div.
-    <span>Span #2, dentro del span que está en el div.</span>
-  </span>
-</div>
-<span>Span #3, no está dentro del div.</span>
-```
+<pre class="brush: html">&lt;div&gt;
+  &lt;span&gt;Span #1, dentro del div.
+    &lt;span&gt;Span #2, dentro del span que está en el div.&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;span&gt;Span #3, no está dentro del div.&lt;/span&gt;
+</pre>
 
-{{EmbedLiveSample("Ejemplo", 200, 100)}}
+<p>{{EmbedLiveSample("Ejemplo", 200, 100)}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                       | Estatus                              | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#child-combinators', 'child combinator')}}     | {{Spec2('CSS4 Selectors')}} |                    |
-| {{SpecName('CSS3 Selectors', '#child-combinators', 'child combinators')}}     | {{Spec2('CSS3 Selectors')}} | Sin cambios        |
-| {{SpecName('CSS2.1', 'selector.html#child-selectors', 'child selectors')}} | {{Spec2('CSS2.1')}}             | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#child-combinators', 'child combinator')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#child-combinators', 'child combinators')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td>Sin cambios</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'selector.html#child-selectors', 'child selectors')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("css.selectors.child")}}

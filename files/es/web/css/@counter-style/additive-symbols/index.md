@@ -7,67 +7,77 @@ tags:
   - Referencia
 translation_of: Web/CSS/@counter-style/additive-symbols
 ---
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-El descriptor additive-symbols es similar al descriptor {{cssxref('symbols')}}, y permite al usuario especificar símbolos que se usarán para representación de contadores cuando el valor del descriptor {{cssxref('system')}} es _additive_. El descriptor `additive-symbols` define lo que se conoce como tuplas aditivas, cada una de las cuales es un par que contiene un símbolo y su peso como entero no negativo. El sistema aditivo es usado para construir sistemas de [numeración de valores de signos](http://en.wikipedia.org/wiki/Sign-value_notation) como la numeración romana.
+<p><span class="seoSummary">El descriptor additive-symbols es similar al descriptor {{cssxref('symbols')}}, y permite al usuario especificar símbolos que se usarán para representación de contadores cuando el valor del descriptor {{cssxref('system')}} es <em>additive</em>. El descriptor <code>additive-symbols</code> define lo que se conoce como tuplas aditivas, cada una de las cuales es un par que contiene un símbolo y su peso como entero no negativo.</span> El sistema aditivo es usado para construir sistemas de <a href="http://en.wikipedia.org/wiki/Sign-value_notation">numeración de valores de signos</a> como la numeración romana.</p>
 
-Cuando el valor del descriptor es _cyclic_, _numeric_, _alphabetic_, _symbolic_, o _fixed_, se usa el descriptor `symbols`, en lugar de `additive-symbols` para especificar los símbolos de conteo.
+<p>Cuando el valor del descriptor es <em>cyclic</em>, <em>numeric</em>, <em>alphabetic</em>, <em>symbolic</em>, o <em>fixed</em>, se usa el descriptor <code>symbols</code>, en lugar de <code>additive-symbols</code> para especificar los símbolos de conteo.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-additive-symbols: 3 "0";
+<pre class="brush: css">additive-symbols: 3 "0";
 additive-symbols: 3 "0", 2 "\2E\20";
 additive-symbols: 3 "0", 2 url(symbol.png);
-```
+</pre>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-### Contenido HTML
+<h3 id="Contenido_HTML">Contenido HTML</h3>
 
-```html
-<ul class="list">
-   <li>One</li>
-   <li>Two</li>
-   <li>Three</li>
-   <li>Four</li>
-   <li>Five</li>
-</ul>
-```
+<pre class="html prettyprint" id="htmlOutput">&lt;ul class="list"&gt;
+   &lt;li&gt;One&lt;/li&gt;
+   &lt;li&gt;Two&lt;/li&gt;
+   &lt;li&gt;Three&lt;/li&gt;
+   &lt;li&gt;Four&lt;/li&gt;
+   &lt;li&gt;Five&lt;/li&gt;
+&lt;/ul&gt;</pre>
 
-### Contenido CSS
+<h3 id="Contenido_CSS">Contenido CSS</h3>
 
-```css
-@counter-style additive-symbols-example {
+<pre class="brush: css">@counter-style additive-symbols-example {
   system: additive;
   additive-symbols: I 1;
 }
 .list {
   list-style: additive-symbols-example;
-}
-```
+}</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{ EmbedLiveSample('Example') }}
+<p>{{ EmbedLiveSample('Example') }}</p>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                                               | Estatus                                      | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'additive-symbols')}} | {{Spec2('CSS3 Counter Styles')}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'additive-symbols')}}</td>
+   <td>{{Spec2('CSS3 Counter Styles')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("css.at-rules.counter-style.additive-symbols")}}
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, la notación funcional para crear estilos de contador anónimos.
+<ul>
+ <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
+ <li>{{cssxref("symbols", "symbols()")}}, la notación funcional para crear estilos de contador anónimos.</li>
+</ul>

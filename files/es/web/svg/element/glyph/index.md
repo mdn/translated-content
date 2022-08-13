@@ -12,77 +12,104 @@ tags:
 translation_of: Web/SVG/Element/glyph
 original_slug: Web/SVG/Element/glifo
 ---
-{{SVGRef}}
+<div>{{SVGRef}}</div>
 
-Un glifo define a un glifo en particular en una fuente SVG.
+<p>Un glifo define a un glifo en particular en una fuente SVG.</p>
 
-## Contexto de uso
+<h2 id="Contexto_de_uso">Contexto de uso</h2>
 
-| Categories         | Elemento de contenido de texto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content  | Cualquier número de los siguientes elementos, en cualquier orden: [elementos de animación](/en/SVG/Element#Animation "en/SVG/Attribute#Animation") » [elementos descriptivos](/en/SVG/Element#Descriptive "en/SVG/Attribute#Descriptive") » [elementos de forma](/en/SVG/Element#Shape "en/SVG/Attribute#Shape") » [elementos estructurales](/en/SVG/Element#Structural "en/SVG/Attribute#Structural") » [elementos de gradiente](/en/SVG/Element#Gradient "en/SVG/Attribute#Gradient") » {{ SVGElement("a") }}, {{ SVGElement("altGlyphDef") }}, {{ SVGElement("clipPath") }}, {{ SVGElement("color-profile") }}, {{ SVGElement("cursor") }}, {{ SVGElement("filter") }}, {{ SVGElement("font") }}, {{ SVGElement("font-face") }}, {{ SVGElement("foreignObject") }}, {{ SVGElement("image") }}, {{ SVGElement("marker") }}, {{ SVGElement("mask") }}, {{ SVGElement("pattern") }}, {{ SVGElement("script") }}, {{ SVGElement("style") }}, {{ SVGElement("switch") }}, {{ SVGElement("text") }}, {{ SVGElement("view") }} |
-| Normative document | [SVG 1.1 (Segunda edición)](http://www.w3.org/TR/SVG/fonts.html#GlyphElement)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Categories</th>
+   <td>Elemento de contenido de texto.</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted content</th>
+   <td>
+    <p>Cualquier número de los siguientes elementos, en cualquier orden:<br>
+     <a href="/en/SVG/Element#Animation" title="en/SVG/Attribute#Animation">elementos de animación</a> »<br>
+     <a href="/en/SVG/Element#Descriptive" title="en/SVG/Attribute#Descriptive">elementos descriptivos</a> »<br>
+     <a href="/en/SVG/Element#Shape" title="en/SVG/Attribute#Shape">elementos de forma</a> »<br>
+     <a href="/en/SVG/Element#Structural" title="en/SVG/Attribute#Structural">elementos estructurales</a> »<br>
+     <a href="/en/SVG/Element#Gradient" title="en/SVG/Attribute#Gradient">elementos de gradiente</a> »<br>
+     {{ SVGElement("a") }}, {{ SVGElement("altGlyphDef") }}, {{ SVGElement("clipPath") }}, {{ SVGElement("color-profile") }}, {{ SVGElement("cursor") }}, {{ SVGElement("filter") }}, {{ SVGElement("font") }}, {{ SVGElement("font-face") }}, {{ SVGElement("foreignObject") }}, {{ SVGElement("image") }}, {{ SVGElement("marker") }}, {{ SVGElement("mask") }}, {{ SVGElement("pattern") }}, {{ SVGElement("script") }}, {{ SVGElement("style") }}, {{ SVGElement("switch") }}, {{ SVGElement("text") }}, {{ SVGElement("view") }}</p>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">Normative document</th>
+   <td><a class="external" href="http://www.w3.org/TR/SVG/fonts.html#GlyphElement">SVG 1.1 (Segunda edición)</a></td>
+  </tr>
+ </tbody>
+</table>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```xml
-<?xml version="1.0" standalone="yes"?>
-<svg width="400px" height="300px" version="1.1"
-  xmlns = 'http://www.w3.org/2000/svg'>
-<!-- Example copied from http://www.w3.org/TR/SVG/fonts.html#GlyphElement -->
-  <defs>
+<pre class="brush: xml">&lt;?xml version="1.0" standalone="yes"?&gt;
+&lt;svg width="400px" height="300px" version="1.1"
+  xmlns = 'http://www.w3.org/2000/svg'&gt;
+&lt;!-- Example copied from http://www.w3.org/TR/SVG/fonts.html#GlyphElement --&gt;
+  &lt;defs&gt;
 
-    <font id="Font1" horiz-adv-x="1000">
-      <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
+    &lt;font id="Font1" horiz-adv-x="1000"&gt;
+      &lt;font-face font-family="Super Sans" font-weight="bold" font-style="normal"
           units-per-em="1000" cap-height="600" x-height="400"
           ascent="700" descent="300"
-          alphabetic="0" mathematical="350" ideographic="400" hanging="500">
-        <font-face-src>
-          <font-face-name name="Super Sans Bold"/>
-        </font-face-src>
-      </font-face>
+          alphabetic="0" mathematical="350" ideographic="400" hanging="500"&gt;
+        &lt;font-face-src&gt;
+          &lt;font-face-name name="Super Sans Bold"/&gt;
+        &lt;/font-face-src&gt;
+      &lt;/font-face&gt;
 
-      <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
-      <glyph unicode="!" horiz-adv-x="80" d="M0,0h200v200h-200z"></glyph>
-      <glyph unicode="@" d="M0,50l100,300l400,100z"></glyph>
+      &lt;missing-glyph&gt;&lt;path d="M0,0h200v200h-200z"/&gt;&lt;/missing-glyph&gt;
+      &lt;glyph unicode="!" horiz-adv-x="80" d="M0,0h200v200h-200z"&gt;&lt;/glyph&gt;
+      &lt;glyph unicode="@" d="M0,50l100,300l400,100z"&gt;&lt;/glyph&gt;
 
-    </font>
-  </defs>
-  <text x="100" y="100"
+    &lt;/font&gt;
+  &lt;/defs&gt;
+  &lt;text x="100" y="100"
            style="font-family: 'Super Sans', Helvetica, sans-serif;
-                  font-weight: bold; font-style: normal">Text
-    using embe@dded font!</text>
-</svg>
-```
+                  font-weight: bold; font-style: normal"&gt;Text
+    using embe@dded font!&lt;/text&gt;
+&lt;/svg&gt;
 
-## Atributos
 
-### Atributos globales
+</pre>
 
-- [Atributos centrales](/en/SVG/Attribute#Core "en/SVG/Attribute#Core")»
-- [Atributos de presentación](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+<h2 id="Atributos">Atributos</h2>
 
-### Atributos específicos
+<h3 id="Atributos_globales">Atributos globales</h3>
 
-- {{ SVGAttr("d") }}
-- {{ SVGAttr("horiz-adv-x") }}
-- {{ SVGAttr("vert-origin-x") }}
-- {{ SVGAttr("vert-origin-y") }}
-- {{ SVGAttr("vert-adv-y") }}
-- {{ SVGAttr("unicode") }}
-- {{ SVGAttr("glyph-name") }}
-- {{ SVGAttr("orientation") }}
-- {{ SVGAttr("arabic-form") }}
-- {{ SVGAttr("lang") }}
+<ul>
+ <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Atributos centrales</a>»</li>
+ <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Atributos de presentación</a> »</li>
+ <li>{{ SVGAttr("class") }}</li>
+ <li>{{ SVGAttr("style") }}</li>
+</ul>
 
-## Interfaz DOM
+<h3 id="Atributos_específicos">Atributos específicos</h3>
 
-Este elemento implementa la interfaz [`SVGGlyphElement`](/en/DOM/SVGGlyphElement "en/DOM/SVGGlyphElement").
+<ul>
+ <li>{{ SVGAttr("d") }}</li>
+ <li>{{ SVGAttr("horiz-adv-x") }}</li>
+ <li>{{ SVGAttr("vert-origin-x") }}</li>
+ <li>{{ SVGAttr("vert-origin-y") }}</li>
+ <li>{{ SVGAttr("vert-adv-y") }}</li>
+ <li>{{ SVGAttr("unicode") }}</li>
+ <li>{{ SVGAttr("glyph-name") }}</li>
+ <li>{{ SVGAttr("orientation") }}</li>
+ <li>{{ SVGAttr("arabic-form") }}</li>
+ <li>{{ SVGAttr("lang") }}</li>
+</ul>
 
-## Relacionado
+<h2 id="Interfaz_DOM">Interfaz DOM</h2>
 
-- {{ SVGElement("font") }}
-- {{ SVGElement("missing-glyph") }}
-- [Tutorial SVG: Fuentes SVG](/en/SVG/Tutorial/SVG_fonts "en/SVG/Tutorial/SVG_Fonts")
+<p>Este elemento implementa la interfaz <code><a href="/en/DOM/SVGGlyphElement" title="en/DOM/SVGGlyphElement">SVGGlyphElement</a></code>.</p>
+
+<h2 id="Relacionado">Relacionado</h2>
+
+<ul>
+ <li>{{ SVGElement("font") }}</li>
+ <li>{{ SVGElement("missing-glyph") }}</li>
+ <li><a href="/en/SVG/Tutorial/SVG_fonts" title="en/SVG/Tutorial/SVG_Fonts">Tutorial SVG: Fuentes SVG</a></li>
+</ul>

@@ -12,94 +12,106 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`findIndex()`** devuelve el **índice** del **primer elemento** de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
+<p>El método <code><strong>findIndex()</strong></code> devuelve el <strong>índice</strong> del <strong>primer elemento</strong> de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.</p>
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
+<div>{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}</div>
 
-Vea también el método {{jsxref("Array.find", "find()")}}, que devuelve el **valor** de un elemento encontrado en el array en lugar de su índice.
+<p>Vea también el método {{jsxref("Array.find", "find()")}}, que devuelve el <strong>valor </strong>de un elemento encontrado en el array en lugar de su índice.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    arr.findIndex(callback( element[, index[, array]] )[, thisArg])
+<pre class="syntaxbox"><var>arr</var>.findIndex(<var>callback</var>( <var>element</var>[, <var>index</var>[, <var>array</var>]] )[, <var>thisArg</var>])
+</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `callback`
-  - : Función a ejecutar en cada uno de los valores del array hasta que devuelve `true`, indicando que el elemento que la cumple fue encontrado.Recibe tres argumentos:_ `element`
-    _ : El elemento actual siendo procesado en el array.
-    - `index` {{optional_inline}}
-      - : El índice del elemento actual que está siendo procesado en el array.
-    - `array` {{optional_inline}}
-      - : El array `findIndex()` de donde fue llamado.
-- `thisArg` {{optional_inline}}
-  - : Objeto opcional para usar como `this` cuando se ejecuta el `callback`.
+<dl>
+ <dt><code><var>callback</var></code></dt>
+ <dd>
+ <p>Función a ejecutar en cada uno de los valores del array hasta que devuelve <code>true</code>, indicando que el elemento que la cumple fue encontrado.</p>
 
-### Valor devuelto
+ <p>Recibe tres argumentos:</p>
 
-Un índice en el array si un elemento pasa la prueba; en caso contrario, `-1`.
+ <dl>
+  <dt><code><var>element</var></code></dt>
+  <dd>El elemento actual siendo procesado en el array.</dd>
+  <dt><code><var>index</var></code> {{optional_inline}}</dt>
+  <dd>El índice del elemento actual que está siendo procesado en el array.</dd>
+  <dt><code><var>array</var></code> {{optional_inline}}</dt>
+  <dd>El array <code>findIndex()</code> de donde fue llamado.</dd>
+ </dl>
+ </dd>
+ <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
+ <dd>Objeto opcional para usar como <code>this</code> cuando se ejecuta el <code><var>callback</var></code>.</dd>
+</dl>
 
-## Descripción
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-El método `findIndex()` ejecuta la función de _`callback`_ una vez por cada índice del array hasta que encuentre uno donde _`callback`_ devuelva un valor verdadero (eso es, un valor que [fuerza](/es/docs/Glossary/Type_Conversion) un `true`).
+<p>Un índice en el array si un elemento pasa la prueba; en caso contrario, <code>-1</code>.</p>
 
-Si dicho elemento es encontrado, `findIndex()` inmediatamente devuelve el índice del elemento. Si la función _`callback`_ nunca devuelve un valor verdadero (o el tamaño del array es 0), `findIndex` devuelve `-1`.
+<h2 id="Descripción">Descripción</h2>
 
-> **Nota:** **Alerta de Edge Case:** A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, `callback` se ejecuta incluso en índices sin valores asignados.
+<p>El método <code>findIndex()</code> ejecuta la función de <em><code>callback</code></em> una vez por cada índice del array hasta que encuentre uno donde <em><code>callback</code></em> devuelva un valor verdadero (eso es, un valor que <a href="/en-US/docs/Glossary/Type_Conversion">fuerza</a> un <code>true</code>).</p>
 
-_`callback`_ se invoca con tres argumentos:
+<p>Si dicho elemento es encontrado, <code>findIndex()</code> inmediatamente devuelve el índice del elemento. Si la función <em><code>callback</code></em> nunca devuelve un valor verdadero (o el tamaño del array es 0), <code>findIndex</code> devuelve <code>-1</code>.</p>
 
-1.  El valor del elemento
-2.  El índice del elemento
-3.  El Array que será recorrido.
+<div class="blockIndicator note">
+<p><strong>Alerta de Edge Case:</strong> A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, <code><var>callback</var></code> se ejecuta incluso en índices sin valores asignados.</p>
+</div>
 
-Si el parámetro `thisArg` es provisto a findIndex, entonces será usado como el this para cada invocación del `callback`. Si no es provisto, entonces {{jsxref("undefined")}} será utilizado.
+<p><em><code>callback</code></em> se invoca con tres argumentos:</p>
 
-El rango de elementos procesados por `findIndex()` se establece antes de la primera invocación de la función _`callback`_. Los elementos añadidos al array después de que la llamada a `findIndex()` comience no serán visitados por el `callback`. Si un elemento existente que no ha sido visitado en el array es modificado por el _`callback`_, el valor pasado al _`callback`_ que lo visite será el valor en el momento en que `findIndex()` visite el índice del elemento.
+<ol>
+ <li>El valor del elemento</li>
+ <li>El índice del elemento</li>
+ <li>El Array que será recorrido.</li>
+</ol>
 
-Los elementos [eliminados](/es/docs/Web/JavaScript/Referencia/Operadores/delete) aún son visitados.
+<p>Si el parámetro <code>thisArg</code> es provisto a findIndex, entonces será usado como el this para cada invocación del <code>callback</code>. Si no es provisto, entonces {{jsxref("undefined")}} será utilizado. </p>
 
-## Ejemplos
+<p>El rango de elementos procesados por <code>findIndex()</code> se establece antes de la primera invocación de la función <em><code>callback</code></em>. Los elementos añadidos al array después de que la llamada a <code>findIndex()</code> comience no serán visitados por el <code>callback</code>. Si un elemento existente que no ha sido visitado en el array es modificado por el <em><code>callback</code></em>, el valor pasado al <em><code>callback</code></em> que lo visite será el valor en el momento en que <code>findIndex()</code> visite el índice del elemento.</p>
 
-### Encontrar el índice de un número primo en un array
+<p>Los elementos <a href="/es/docs/Web/JavaScript/Referencia/Operadores/delete">eliminados</a> aún son visitados.</p>
 
-El siguiente ejemplo encuentra el índice de un elemento en el array que sea número primo (o devuelve `-1` si no hay ningún número primo).
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-function isPrime(element, index, array) {
+<h3 id="Encontrar_el_índice_de_un_número_primo_en_un_array">Encontrar el índice de un número primo en un array</h3>
+
+<p>El siguiente ejemplo encuentra el índice de un elemento en el array que sea número primo (o devuelve <code>-1</code> si no hay ningún número primo).</p>
+
+<pre class="brush: js">function isPrime(element, index, array) {
   var start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start < 1) {
+  while (start &lt;= Math.sqrt(element)) {
+    if (element % start &lt; 1) {
       return false;
     } else {
       start++;
     }
   }
-  return element > 1;
+  return element &gt; 1;
 }
 
 console.log([4, 6, 8, 12].findIndex(isPrime)); // -1, no encontrado
 console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
-```
+</pre>
 
-### Encontrar un índice utilizando funciones flecha
+<h3 id="Encontrar_un_índice_utilizando_funciones_flecha">Encontrar un índice utilizando funciones flecha</h3>
 
-El siguiente ejemplo encuentra el índice de una fruta utilizando funciones flecha.
+<p>El siguiente ejemplo encuentra el índice de una fruta utilizando funciones flecha.</p>
 
-```js
-const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+<pre class="brush: js">const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
 
-const index = fruits.findIndex(fruit => fruit === "blueberries");
+const index = fruits.findIndex(fruit =&gt; fruit === "blueberries");
 
 console.log(index); // 3
 console.log(fruits[index]); // blueberries
-```
+</pre>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-```js
-// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
+<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
 if (!Array.prototype.findIndex) {
   Object.defineProperty(Array.prototype, 'findIndex', {
     value: function(predicate) {
@@ -111,7 +123,7 @@ if (!Array.prototype.findIndex) {
       var o = Object(this);
 
       // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length >>> 0;
+      var len = o.length &gt;&gt;&gt; 0;
 
       // 3. If IsCallable(predicate) is false, throw a TypeError exception.
       if (typeof predicate !== 'function') {
@@ -124,8 +136,8 @@ if (!Array.prototype.findIndex) {
       // 5. Let k be 0.
       var k = 0;
 
-      // 6. Repeat, while k < len
-      while (k < len) {
+      // 6. Repeat, while k &lt; len
+      while (k &lt; len) {
         // a. Let Pk be ! ToString(k).
         // b. Let kValue be ? Get(O, Pk).
         // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
@@ -145,21 +157,32 @@ if (!Array.prototype.findIndex) {
     writable: true
   });
 }
-```
+</pre>
 
-Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Object.defineProperty`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty) es mejor no emplear polyfills para métodos `Array.prototype`, ya que no puede hacerlos no-enumerables.
+<p>Si necesita soporte para motores de JavaScript obsoletos que no soportan <code><a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty">Object.defineProperty</a></code> es mejor no emplear polyfills para métodos <code>Array.prototype</code>, ya que no puede hacerlos no-enumerables.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.findindex', 'Array.prototype.findIndex')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.findindex', 'Array.prototype.findIndex')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("javascript.builtins.Array.findIndex")}}
+<div>
+<p>{{Compat("javascript.builtins.Array.findIndex")}}</p>
+</div>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
+<ul>
+ <li>{{jsxref("Array.prototype.find()")}}</li>
+ <li>{{jsxref("Array.prototype.indexOf()")}}</li>
+</ul>

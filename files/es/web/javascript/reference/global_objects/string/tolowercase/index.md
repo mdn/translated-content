@@ -9,30 +9,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLowerCase
 ---
-{{JSRef("Objetos_globales", "String")}}
+<p>{{JSRef("Objetos_globales", "String")}}</p>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-El método **`toLowerCase()`** devuelve el valor **en minúsculas** de la cadena que realiza la llamada.
+<p>El método <strong><code>toLowerCase()</code></strong> devuelve el valor <strong>en minúsculas </strong>de la cadena que realiza la llamada.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    cadena.toLowerCase()
+<pre><code><em>cadena</em>.toLowerCase() </code></pre>
 
-## Descripción
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-El método `toLowerCase` devuelve el valor de la cadena convertida a minúsculas. `toLowerCase` no afecta al valor de la cadena en sí misma.
+<p>El método <code>toLowerCase</code> devuelve el valor de la cadena convertida a minúsculas. <code>toLowerCase</code> no afecta al valor de la cadena en sí misma.</p>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-### Ejemplo: Usando `toLowerCase`
+<h3 id="Ejemplo:_Usando_toLowerCase" name="Ejemplo:_Usando_toLowerCase">Ejemplo: Usando <code>toLowerCase</code></h3>
 
-El siguiente ejemplo muestra la cadena "alfabeto" en minúsculas:
+<p>El siguiente ejemplo muestra la cadena "alfabeto" en minúsculas:</p>
 
-    var textoMayusculas="ALFABETO"
-    document.write(textoMayusculas.toLowerCase())
+<pre>var textoMayusculas="ALFABETO"
+document.write(textoMayusculas.toLowerCase())
+</pre>
 
-## Vea También
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+<ul>
+ <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
+ <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
+</ul>

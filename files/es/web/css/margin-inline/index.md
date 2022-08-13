@@ -3,12 +3,11 @@ title: margin-inline
 slug: Web/CSS/margin-inline
 translation_of: Web/CSS/margin-inline
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<p>{{CSSRef}}{{SeeCompatTable}} </p>
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`margin-inline`** define los márgenes lógicos de inicio y final en línea de un elemento, que se asignan a márgenes físicos según el modo de escritura, la direccionalidad y la orientación del texto del elemento.
+<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <strong><code>margin-inline</code></strong> define los márgenes lógicos de inicio y final en línea de un elemento, que se asignan a márgenes físicos según el modo de escritura, la direccionalidad y la orientación del texto del elemento.</p>
 
-```css
-/* Valores <largo> */
+<pre class="brush:css no-line-numbers notranslate">/* Valores &lt;largo&gt; */
 margin-inline: 10px 20px;  /* Un largo absoluto */
 margin-inline: 1em 2em;    /* relativo al tamaño del texto */
 margin-inline: 5% 2%;      /* relativo al ancho del container del bloque más cercano */
@@ -21,36 +20,34 @@ margin-inline: auto;
 margin-inline: inherit;
 margin-inline: initial;
 margin-inline: unset;
-```
+</pre>
 
-Estos valores corresponden a las propiedades {{CSSxRef("margin-top")}} y {{CSSxRef("margin-bottom")}}, o {{CSSxRef("margin-right")}}, y {{CSSxRef("margin-left")}} dependiendo de los valores definidos por {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, y {{CSSxRef("text-orientation")}}.
+<p>Estos valores corresponden a las propiedades {{CSSxRef("margin-top")}} y {{CSSxRef("margin-bottom")}}, o {{CSSxRef("margin-right")}}, y {{CSSxRef("margin-left")}} dependiendo de los valores definidos por {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, y {{CSSxRef("text-orientation")}}.</p>
 
-Los valores pueden ser establecidos individualmente como {{CSSxRef("margin-inline-start")}} y {{CSSxRef("margin-inline-end")}}. La propiedad de dirección de bloque es {{CSSxRef("margin-block")}} que establece {{CSSxRef("margin-block-start")}}, y {{CSSxRef("margin-block-end")}}.
+<p>Los valores pueden ser establecidos individualmente como {{CSSxRef("margin-inline-start")}} y {{CSSxRef("margin-inline-end")}}. La propiedad de dirección de bloque es {{CSSxRef("margin-block")}} que establece {{CSSxRef("margin-block-start")}}, y {{CSSxRef("margin-block-end")}}.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-La propiedad `margin-inline` toma los mismos valores de la propiedad {{CSSxRef("margin-left")}}.
+<p>La propiedad <code>margin-inline</code> toma los mismos valores de la propiedad {{CSSxRef("margin-left")}}.</p>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{CSSSyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### Contenido HTML
+<h3 id="Contenido_HTML">Contenido HTML</h3>
 
-```html
-<div>
-  <p class="exampleText">Texto de ejemplo</p>
-</div>
-```
+<pre class="brush: html notranslate">&lt;div&gt;
+  &lt;p class="exampleText"&gt;Texto de ejemplo&lt;/p&gt;
+&lt;/div&gt;
+</pre>
 
-### Contenido CSS
+<h3 id="Contenido_CSS">Contenido CSS</h3>
 
-```css
-div {
+<pre class="brush: css notranslate">div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -60,24 +57,40 @@ div {
   writing-mode: vertical-rl;
   margin-inline: 20px 40px;
   background-color: #c8c800;
-}
-```
+}</pre>
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
 
-## Especificación
+<h2 id="Especificación">Especificación</h2>
 
-| Especificación                                                                                               | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-inline", "margin-inline")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS Logical Properties", "#propdef-margin-inline", "margin-inline")}}</td>
+   <td>{{Spec2("CSS Logical Properties")}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-{{CSSInfo}}
+<p id="Browser_compatibility">{{CSSInfo}}</p>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("css.properties.margin-inline")}}
 
-## Mira también
 
-- Las propiedades físicas mapeadas: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, y {{CSSxRef("margin-left")}}
-- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
+<p>{{Compat("css.properties.margin-inline")}}</p>
+
+<h2 id="Mira_también">Mira también</h2>
+
+<ul>
+ <li>Las propiedades físicas mapeadas: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, y {{CSSxRef("margin-left")}}</li>
+ <li>{{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}</li>
+</ul>

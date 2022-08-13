@@ -10,37 +10,42 @@ tags:
 translation_of: Web/CSS/-webkit-print-color-adjust
 original_slug: Web/CSS/-webkit-print-color-adjust
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad CSS `-webkit-print-color-adjust` es una extensión CSS no estándar que puede ser usada para forzar la impresión de fondos e imágenes en navegadores basado en el motor WebKit.
+<p>La propiedad CSS <code>-webkit-print-color-adjust</code> es una extensión CSS no estándar que puede ser usada para forzar la impresión de fondos e imágenes en navegadores basado en el motor WebKit.</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-    -webkit-print-color-adjust: economy | exact
+<pre class="syntaxbox">-webkit-print-color-adjust: economy | exact
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `economy`
-  - : Comportamiento normal. Los colores de fondo y las imágenes son sólo impresos si el usuario lo permite de manera explícita en el cuadro de diálogo de preferencias de impresión.
-- `exact`
-  - : Los colores de fondo y las imágenes del elemento en el que se aplica esta reglar son siempre impresos, la configuración de la impresora del usuario es ignorada.
+<dl>
+ <dt><code>economy</code></dt>
+ <dd>Comportamiento normal.  Los colores de fondo y las imágenes son sólo impresos si el usuario lo permite de manera explícita en el cuadro de diálogo de preferencias de impresión.</dd>
+ <dt><code>exact</code></dt>
+ <dd>Los colores de fondo y las imágenes del elemento en el que se aplica esta reglar son siempre impresos, la configuración de la impresora del usuario es ignorada.</dd>
+</dl>
 
-## Herencia
+<h2 id="Herencia">Herencia</h2>
 
-Esta propiedad es [heredada](/es/docs/Web/Guide/CSS/Getting_started/Cascading_and_inheritance).
+<p>Esta propiedad es <a href="/en-US/docs/Web/Guide/CSS/Getting_started/Cascading_and_inheritance">heredada</a>.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-Aún no es parte de ninguna especificación aunque hay una [propuesta en la wiki de CSSWG](http://wiki.csswg.org/ideas/print-backgrounds) para que sea estandarizada.
+<p>Aún no es parte de ninguna especificación aunque hay una <a href="http://wiki.csswg.org/ideas/print-backgrounds">propuesta en la wiki de CSSWG</a> para que sea estandarizada.</p>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("css.properties.print-color-adjust")}}
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-- WebKit [bug 64583](https://bugs.webkit.org/show_bug.cgi?id=64583): "WIP: Añade la propiedad CSS para controlar la impresión de fondos de elementos individuales"
-- CSSWG wiki: [print-backgrounds](http://wiki.csswg.org/ideas/print-backgrounds) - una propuesta para estandarizar esta propiedad
-- Módulo Color CSS Nivel 4: la propiedad `color-adjust `una propuesta más nueva para estandarizar esta propiedad
+<ul>
+ <li>WebKit <a href="https://bugs.webkit.org/show_bug.cgi?id=64583">bug 64583</a>: "WIP: Añade la propiedad CSS para controlar la impresión de fondos de elementos individuales"</li>
+ <li>CSSWG wiki: <a href="http://wiki.csswg.org/ideas/print-backgrounds">print-backgrounds</a> - una propuesta para estandarizar esta propiedad</li>
+ <li>Módulo Color CSS Nivel 4:  la propiedad  <code><a href="https://drafts.csswg.org/css-color-4/#color-adjust">color-adjust</a> </code>una propuesta más nueva para estandarizar esta propiedad</li>
+</ul>

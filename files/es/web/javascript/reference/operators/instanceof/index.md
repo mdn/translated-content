@@ -8,74 +8,82 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/instanceof
 original_slug: Web/JavaScript/Referencia/Operadores/instanceof
 ---
-{{jsSidebar("Operators")}}
+<div>{{jsSidebar("Operators")}}</div>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-El operador **`instanceof`** verifica si un objeto en su cadena de prototipos contiene la propiedad `prototype` de un constructor.
+<p>El operador <strong><code>instanceof</code></strong> verifica si un objeto en su cadena de prototipos contiene la propiedad <code>prototype</code> de un constructor.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    objeto instanceof constructor
+<pre class="syntaxbox"><em>objeto</em> instanceof <em>constructor</em></pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-- `objeto`
-  - : Objeto a verificar.
+<dl>
+ <dt><code>objeto</code></dt>
+ <dd>Objeto a verificar.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><code>constructor</code></dt>
+ <dd>Función contra la que se hará la verificación.</dd>
+</dl>
 
-- `constructor`
-  - : Función contra la que se hará la verificación.
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-## Descripción
+<p>Utilice <code>instanceof</code> cuando necesite confirmar el tipo de un objeto en tiempo de ejecución. Por ejemplo, cuando controle excepciones, puede recurrir a diferentes códigos de manipulación de excepciones dependiendo del tipo de excepción tomada.</p>
 
-Utilice `instanceof` cuando necesite confirmar el tipo de un objeto en tiempo de ejecución. Por ejemplo, cuando controle excepciones, puede recurrir a diferentes códigos de manipulación de excepciones dependiendo del tipo de excepción tomada.
+<p>Debe especificar un objeto en el lado derecho del operador <code>instanceof</code>. Por ejemplo, puede especificar una cadena creada con el constructor <code>String</code>, pero no puede especificar un literal de cadena.</p>
 
-Debe especificar un objeto en el lado derecho del operador `instanceof`. Por ejemplo, puede especificar una cadena creada con el constructor `String`, pero no puede especificar un literal de cadena.
+<pre>color1=new String("verde")
+color1 instanceof String // devuelve verdadero (true)
+color2="coral"
+color2 instanceof String // devuelve falso (color2 no es un objeto String)
+</pre>
 
-    color1=new String("verde")
-    color1 instanceof String // devuelve verdadero (true)
-    color2="coral"
-    color2 instanceof String // devuelve falso (color2 no es un objeto String)
+<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
 
-### Ejemplos
+<p>También vea los ejemplos de {{jsxref("Sentencias/throw", "throw")}}.</p>
 
-También vea los ejemplos de {{jsxref("Sentencias/throw", "throw")}}.
+<h4 id="Ejemplo:_Determinando_si_elDia_es_un_objeto_Date" name="Ejemplo:_Determinando_si_elDia_es_un_objeto_Date">Ejemplo: Determinando si <code>elDia</code> es un objeto <code>Date</code></h4>
 
-#### Ejemplo: Determinando si `elDia` es un objeto `Date`
+<p>El siguiente código utiliza <code>instanceof</code> para determinar si <code>elDia</code> es un objeto <code>Date</code>. Debido a que <code>elDia</code> es un objeto <code>Date</code>, las instrucciones de la sentencia if se ejecutan.</p>
 
-El siguiente código utiliza `instanceof` para determinar si `elDia` es un objeto `Date`. Debido a que `elDia` es un objeto `Date`, las instrucciones de la sentencia if se ejecutan.
+<pre>elDia = new Date(1995, 12, 17)
+if (elDia instanceof Date) {
+   // instrucciones a ejecutar
+}
+</pre>
 
-    elDia = new Date(1995, 12, 17)
-    if (elDia instanceof Date) {
-       // instrucciones a ejecutar
-    }
+<h4 id="Ejemplo:_Demostrando_que_String_y_Date_son_del_tipo_Object" name="Ejemplo:_Demostrando_que_String_y_Date_son_del_tipo_Object">Ejemplo: Demostrando que <code>String</code> y <code>Date</code> son del tipo <code>Object</code></h4>
 
-#### Ejemplo: Demostrando que `String` y `Date` son del tipo `Object`
+<p>El siguiente código utiliza <code>instanceof</code> para demostrar que los objetos <code>String</code> y <code>Date</code> son también del tipo <code>Object</code> (éstos se derivan de <code>Object</code>).</p>
 
-El siguiente código utiliza `instanceof` para demostrar que los objetos `String` y `Date` son también del tipo `Object` (éstos se derivan de `Object`).
+<pre>miCadena = new String()
+miFecha = new Date()
 
-    miCadena = new String()
-    miFecha = new Date()
+miCadena instanceof String // devuelve true
+miCadena instanceof Object // devuelve true
+miCadena instanceof Date   // devuelve false
 
-    miCadena instanceof String // devuelve true
-    miCadena instanceof Object // devuelve true
-    miCadena instanceof Date   // devuelve false
+miFecha instanceof Date     // devuelve true
+miFecha instanceof Object   // devuelve true
+miFecha instanceof String   // devuelve false
+</pre>
 
-    miFecha instanceof Date     // devuelve true
-    miFecha instanceof Object   // devuelve true
-    miFecha instanceof String   // devuelve false
+<h4 id="Ejemplo:_Demostrando_que_miCoche_es_del_tipo_Coche_y_del_tipo_Object" name="Ejemplo:_Demostrando_que_miCoche_es_del_tipo_Coche_y_del_tipo_Object">Ejemplo: Demostrando que <code>miCoche</code> es del tipo <code>Coche</code> y del tipo <code>Object</code></h4>
 
-#### Ejemplo: Demostrando que `miCoche` es del tipo `Coche` y del tipo `Object`
+<p>El siguiente código crea un objeto del tipo <code>Coche</code> y una instancia de ese tipo de objeto, <code>miCoche</code>. El operador <code>instanceof</code> demuestra que el objeto <code>miCoche</code> es del tipo <code>Coche</code> y del tipo <code>Object</code>.</p>
 
-El siguiente código crea un objeto del tipo `Coche` y una instancia de ese tipo de objeto, `miCoche`. El operador `instanceof` demuestra que el objeto `miCoche` es del tipo `Coche` y del tipo `Object`.
+<pre>function Coche(fabricante, modelo, ejercicio) {
+   this.fabricante = fabricante
+   this.modelo = modelo
+   this.ejercicio= ejercicio
+}
+miCoche = new Coche("Honda", "Accord", 1998)
+a = miCoche instanceof Coche // devuelve verdadero (true)
+b = miCoche instanceof Object // devuelve verdadero (true)
+</pre>
 
-    function Coche(fabricante, modelo, ejercicio) {
-       this.fabricante = fabricante
-       this.modelo = modelo
-       this.ejercicio= ejercicio
-    }
-    miCoche = new Coche("Honda", "Accord", 1998)
-    a = miCoche instanceof Coche // devuelve verdadero (true)
-    b = miCoche instanceof Object // devuelve verdadero (true)
+<div class="noinclude"> </div>

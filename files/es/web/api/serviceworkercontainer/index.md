@@ -15,46 +15,51 @@ tags:
   - Workers
 translation_of: Web/API/ServiceWorkerContainer
 ---
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
 
-The `ServiceWorkerContainer` interface of the [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API) provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
+<p><span class="seoSummary">The <code>ServiceWorkerContainer</code> interface of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.</span></p>
 
-Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} method used to register service workers, and the {{domxref("ServiceWorkerContainer.controller")}} property used to determine whether or not the current page is actively controlled.
+<p>Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} method used to register service workers, and the {{domxref("ServiceWorkerContainer.controller")}} property used to determine whether or not the current page is actively controlled.</p>
 
-## Properties
+<h2 id="Properties">Properties</h2>
 
-- {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
-  - : Returns a {{domxref("ServiceWorker")}} object if its state is `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
+<dl>
+ <dt>{{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}</dt>
+ <dd>Returns a {{domxref("ServiceWorker")}} object if its state is <code>activated</code> (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns <code>null</code> during a force-refresh request (<em>Shift</em> + refresh) or if there is no active worker.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt>{{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}</dt>
+ <dd>Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.</dd>
+</dl>
 
-- {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
-  - : Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.
+<h3 id="Event_handlers">Event handlers</h3>
 
-### Event handlers
+<dl>
+ <dt>{{domxref("ServiceWorkerContainer.oncontrollerchange")}}</dt>
+ <dd>Fired whenever a {{Event("controllerchange")}} event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.</dd>
+ <dt>{{domxref("ServiceWorkerContainer.onerror")}}</dt>
+ <dd>Fired whenever an {{Event("error")}} event occurs in the associated service workers.</dd>
+ <dt>{{domxref("ServiceWorkerContainer.onmessage")}}</dt>
+ <dd>Fired whenever a {{Event("message")}} event occurs — when incoming messages are received to the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)</dd>
+</dl>
 
-- {{domxref("ServiceWorkerContainer.oncontrollerchange")}}
-  - : Fired whenever a {{Event("controllerchange")}} event occurs — when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
-- {{domxref("ServiceWorkerContainer.onerror")}}
-  - : Fired whenever an {{Event("error")}} event occurs in the associated service workers.
-- {{domxref("ServiceWorkerContainer.onmessage")}}
-  - : Fired whenever a {{Event("message")}} event occurs — when incoming messages are received to the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
+<h2 id="Methods">Methods</h2>
 
-## Methods
+<dl>
+ <dt>{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} </dt>
+ <dd>Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given <code>scriptURL</code>.</dd>
+ <dt>{{domxref("ServiceWorkerContainer.getRegistration()")}}</dt>
+ <dd>Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope matches the provided document URL.  If the method can't return a {{domxref("ServiceWorkerRegistration")}}, it returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"><code>Promise</code></a>. </dd>
+ <dt>{{domxref("ServiceWorkerContainer.getRegistrations()")}}</dt>
+ <dd>Returns all {{domxref("ServiceWorkerRegistration")}} objects associated with a <code>ServiceWorkerContainer</code> in an array.  If the method can't return {{domxref("ServiceWorkerRegistration")}} objects, it returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:"><code>Promise</code></a>. </dd>
+</dl>
 
-- {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
-  - : Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.
-- {{domxref("ServiceWorkerContainer.getRegistration()")}}
-  - : Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope matches the provided document URL. If the method can't return a {{domxref("ServiceWorkerRegistration")}}, it returns a [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:").
-- {{domxref("ServiceWorkerContainer.getRegistrations()")}}
-  - : Returns all {{domxref("ServiceWorkerRegistration")}} objects associated with a `ServiceWorkerContainer` in an array. If the method can't return {{domxref("ServiceWorkerRegistration")}} objects, it returns a [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of the three states:").
+<h2 id="Examples">Examples</h2>
 
-## Examples
+<p>The example below first checks to see if the browser supports service workers. If supported, the code registers the service worker and determines if the page is actively controlled by the service worker. If it isn't, it prompts the user to reload the page so the service worker can take control. The code also reports any registration failures.</p>
 
-The example below first checks to see if the browser supports service workers. If supported, the code registers the service worker and determines if the page is actively controlled by the service worker. If it isn't, it prompts the user to reload the page so the service worker can take control. The code also reports any registration failures.
-
-```js
-if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -84,23 +89,39 @@ if ('serviceWorker' in navigator) {
   };
 } else {
   console.log('Service workers are not supported.');
-}
-```
+}</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                                        | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}} | {{Spec2('Service Workers')}} | Initial definition. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}}</td>
+   <td>{{Spec2('Service Workers')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("api.ServiceWorkerContainer")}}
+<div>
 
-## See also
 
-- [Using Service Workers](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Using web workers](/es/docs/Web/Guide/Performance/Using_web_workers)
+<p>{{Compat("api.ServiceWorkerContainer")}}</p>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
+ <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
+ <li>{{jsxref("Promise")}}</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
+</ul>

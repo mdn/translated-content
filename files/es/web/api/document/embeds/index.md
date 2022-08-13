@@ -9,24 +9,40 @@ tags:
   - Propiedad
 translation_of: Web/API/Document/embeds
 ---
-{{ApiRef}}
+<div>{{ApiRef}}</div>
 
-**`embeds`** es una propiedad de sólo lectura de la interfaz de {{domxref("Document")}}. Devuelve una lista con los elementos {{htmlelement("object")}} incrustados dentro del documento actual.
+<p><strong><code>embeds</code></strong> es una propiedad de sólo lectura de la interfaz de {{domxref("Document")}}. Devuelve una lista con los elementos {{htmlelement("object")}} incrustados dentro del documento actual.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    nodeList = document.embeds
+<pre class="syntaxbox"><var>nodeList</var> = document.embeds
+</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Una {{domxref("HTMLCollection")}}.
+<p>Una {{domxref("HTMLCollection")}}.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                               | Estado                               | Comentario |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', '#dom-document-embeds', 'Document.embeds')}} | {{ Spec2('HTML WHATWG') }} |            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-document-embeds', 'Document.embeds')}}</td>
+   <td>{{ Spec2('HTML WHATWG') }}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con Navegadores
+<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
 
-{{Compat("api.Document.embeds")}}
+
+
+<div>{{Compat("api.Document.embeds")}}</div>

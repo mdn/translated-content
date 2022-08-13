@@ -8,71 +8,83 @@ tags:
   - css3-color
 translation_of: Web/CSS/opacity
 ---
-{{ CSSRef() }}
+<div>{{ CSSRef() }}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-La propiedad CSS `opacity` define la transparencia de un elemento, esto es, en qué grado se superpone el fondo al elemento.
+<p>La propiedad CSS <code>opacity</code> define la transparencia de un elemento, esto es, en qué grado se superpone el fondo al elemento.</p>
 
-Usar esta propiedad con un valor diferente a 1 situa al elemento en un nuevo [contexto de apilamiento](/en/CSS/Understanding_z-index/The_stacking_context "en/CSS/Understanding_z-index/The_stacking_context").
+<p>Usar esta propiedad con un valor diferente a 1 situa al elemento en un nuevo <a href="/en/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">contexto de apilamiento</a>.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    opacity:  <valor alfanumérico>
+<pre class="syntaxbox">opacity:  &lt;valor alfanumérico&gt;</pre>
 
-### Valores
+<h3 id="Values" name="Values">Valores</h3>
 
-- `<alphavalue>`
-  - | : Es un número cuyo valor se encuentra entre 0.0 y 1.0, ambos incluidos. Este valor representa la opacidad. Si el valor se sale de la escala, será ajustado al valor válido más cercano. | valor                                    | Significado |
-    | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
-    | `0`                                                                                                                                                                                      | El elemento es transparente (invisible). |
-    | Cualquier valor entre 0 y 1                                                                                                                                                              | El elemento es translúcido.              |
-    | `1`                                                                                                                                                                                      | El elemento es opaco (sólido).           |
+<dl>
+ <dt><code>&lt;alphavalue&gt;</code></dt>
+ <dd>Es un número cuyo valor se encuentra entre 0.0 y 1.0, ambos incluidos. Este valor representa la opacidad. Si el valor se sale de la escala, será ajustado al valor válido más cercano.
+ <table class="standard-table">
+  <tbody>
+   <tr>
+    <th>valor</th>
+    <th>Significado</th>
+   </tr>
+   <tr>
+    <td><code>0</code></td>
+    <td>El elemento es transparente (invisible).</td>
+   </tr>
+   <tr>
+    <td>Cualquier valor entre 0 y 1</td>
+    <td>El elemento es translúcido.</td>
+   </tr>
+   <tr>
+    <td><code>1</code></td>
+    <td>El elemento es opaco (sólido).</td>
+   </tr>
+  </tbody>
+ </table>
+ </dd>
+</dl>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-```css
-hbox.example {
+<pre class="brush: css">hbox.example {
   opacity: 0.5; /* see the background through the hbox */
-}
-```
+}</pre>
 
-### Live Example
+<h3 id="Live_Example" name="Live_Example">Live Example</h3>
 
-    pre {                               /* make the box translucent (20% opaque) */
-       border: solid red;
-       opacity: 0.2;
-       filter: alpha(opacity=20);       /* IE8 and lower */
-       zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
-    }
+<pre>pre {                               /* make the box translucent (20% opaque) */
+   border: solid red;
+   opacity: 0.2;
+   filter: alpha(opacity=20);       /* IE8 and lower */
+   zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
+}</pre>
 
-<!---->
+<pre>pre {                               /* make the box translucent (50% opaque) */
+   border: solid red;
+   opacity: 0.5;
+   filter: alpha(opacity=50);       /* IE8 and lower */
+   zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
+}</pre>
 
-    pre {                               /* make the box translucent (50% opaque) */
-       border: solid red;
-       opacity: 0.5;
-       filter: alpha(opacity=50);       /* IE8 and lower */
-       zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
-    }
+<pre>pre {                               /* make the box translucent (80% opaque) */
+   border: solid red;
+   opacity: 0.8;
+   filter: alpha(opacity=80);       /* IE8 and lower */
+   zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
+}</pre>
 
-<!---->
+<h3 id="Different_opacity_with_.3Ahover" name="Different_opacity_with_.3Ahover">Variando la opacidad con :hover</h3>
 
-    pre {                               /* make the box translucent (80% opaque) */
-       border: solid red;
-       opacity: 0.8;
-       filter: alpha(opacity=80);       /* IE8 and lower */
-       zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
-    }
-
-### Variando la opacidad con :hover
-
-```html
-<!doctype html>
-<html>
-<head>
-<style>
+<pre class="brush: html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
 img.opacity {
    opacity: 1;
    filter: alpha(opacity=50);
@@ -84,26 +96,45 @@ img.opacity:hover {
    filter: alpha(opacity=100);
    zoom: 1;
  }
-</style>
-</head>
+&lt;/style&gt;
+&lt;/head&gt;
 
-<body>
-<img src="//developer.mozilla.org/media/img/mdn-logo.png" alt="MDN logo" width="128" height="146" class="opacity">
-</body>
-</html>
-```
+&lt;body&gt;
+&lt;img src="//developer.mozilla.org/media/img/mdn-logo.png" alt="MDN logo" width="128" height="146" class="opacity"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                                   | Comentarios                          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------ |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'opacity') }} | {{ Spec2('CSS3 Transitions') }} | Define `opacity` como una animación. |
-| {{ SpecName('CSS3 Colors', '#opacity', 'opacity') }}                 | {{ Spec2('CSS3 Colors') }}     | Definición inicial                   |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'opacity') }}</td>
+   <td>{{ Spec2('CSS3 Transitions') }}</td>
+   <td>Define <code>opacity</code> como una animación.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS3 Colors', '#opacity', 'opacity') }}</td>
+   <td>{{ Spec2('CSS3 Colors') }}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad entre navegadores
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad entre navegadores</h2>
 
 {{Compat("css.properties.opacity")}}
 
-## Más información
+<h2 id="See_also" name="See_also">Más información</h2>
 
-- [MSDN Microsoft's filter:alpha(opacity=xx)](http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx)
+<ul>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx">MSDN Microsoft's filter:alpha(opacity=xx)</a></li>
+</ul>

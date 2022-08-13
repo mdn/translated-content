@@ -9,35 +9,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/toString
 ---
-{{JSRef("Objetos_globales", "Object")}}
+<div>{{JSRef("Objetos_globales", "Object")}}</div>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-Devuelve una cadena que representa al objeto.
+<p>Devuelve una cadena que representa al objeto.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-`toString()`
+<p><code>toString() </code></p>
 
-## Descripción
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-Todos los objetos tienen un método `toString` que se llama automáticamente cuando el objeto se representa como un valor de texto o cuando un objeto se referencia de tal manera que se espera una cadena. Por defecto, el método `toString` es heredado por todos los objetos que descienden de `Object`. Si este método no se sobreescribe en el objeto personalizado, `toString` devuelve `{{ mediawiki.external('object<em>type</em> ') }}`, donde `type `es el tipo de objeto. El siguiente código ilustra esto:
+<p>Todos los objetos tienen un método <code>toString</code> que se llama automáticamente cuando el objeto se representa como un valor de texto o cuando un objeto se referencia de tal manera que se espera una cadena. Por defecto, el método <code>toString</code> es heredado por todos los objetos que descienden de <code>Object</code>. Si este método no se sobreescribe en el objeto personalizado, <code>toString</code> devuelve <code>{{ mediawiki.external('object<em>type</em> ') }}</code>, donde <code><em>type</em> </code> es el tipo de objeto. El siguiente código ilustra esto:</p>
 
-```js
-var objeto = new Object();
+<pre class="brush: js">var objeto = new Object();
 objeto.toString(); // Devuelve [object Object]
-```
+</pre>
 
-### Ejemplos
+<h3 id="Examples" name="Examples">Ejemplos</h3>
 
-#### Sobreescribir el método por defecto `toString`
+<h4 id="Sobreescribir_el_m.C3.A9todo_por_defecto_toString" name="Sobreescribir_el_m.C3.A9todo_por_defecto_toString">Sobreescribir el método por defecto <code>toString</code></h4>
 
-Puede crear una función que sea llamada en lugar del método predeterminado `toString`. El método `toString` no toma argumentos y debería devolver una cadena. El método `toString` que cree puede ser cualquier valor que quiera, pero será más útil si aporta información sobre el objeto.
+<p>Puede crear una función que sea llamada en lugar del método predeterminado <code>toString</code>. El método <code>toString</code> no toma argumentos y debería devolver una cadena. El método <code>toString</code> que cree puede ser cualquier valor que quiera, pero será más útil si aporta información sobre el objeto.</p>
 
-El siguiente código define el tipo de objeto `Perro` y crea `elPerro`, un objeto de tipo `Perro`:
+<p>El siguiente código define el tipo de objeto <code>Perro</code> y crea <code>elPerro</code>, un objeto de tipo <code>Perro</code>:</p>
 
-```js
-function Perro(nombre,criadero,color,sexo) {
+<pre class="brush: js">function Perro(nombre,criadero,color,sexo) {
    this.nombre=nombre;
    this.criadero=criadero;
    this.color=color;
@@ -45,28 +43,29 @@ function Perro(nombre,criadero,color,sexo) {
 }
 
 elPerro = new Perro("Gabby","Laboratorio","chocolate","femenino")
-```
+</pre>
 
-Si llama al método `toString` en el objeto personalizado, devuelve el valor predeterminado heredado de `Object`:
+<p>Si llama al método <code>toString</code> en el objeto personalizado, devuelve el valor predeterminado heredado de <code>Object</code>:</p>
 
-```js
-elPerro.toString() //devuelve [object Object]
-```
+<pre class="brush: js">elPerro.toString() //devuelve [object Object]
+</pre>
 
-El siguiente código crea y asigna `perroToString` para sobreescribir el método predeterminado `toString`. Esta función genera una cadena que contiene nombre, criadero, color, y sexo del objeto, en la forma "`propiedad = valor;`".
+<p>El siguiente código crea y asigna <code>perroToString</code> para sobreescribir el método predeterminado <code>toString</code>. Esta función genera una cadena que contiene nombre, criadero, color, y sexo del objeto, en la forma "<code>propiedad = valor;</code>".</p>
 
-```js
-Perro.prototype.toString = function perroToString() {
+<pre class="brush: js">Perro.prototype.toString = function perroToString() {
   var retorno = "Perro " + this.nombre + " es " + this.sexo + " " + this.color + " " + this.criadero;
   return retorno;
 }
-```
+</pre>
 
-Con el código precedente en su lugar, cualquier vez que se use `elDog` en un contexto de una cadena, JavaScript automáticamente llamará a la función `perroToString`, la cuál devuelve la siguiente cadena:
+<p>Con el código precedente en su lugar, cualquier vez que se use <code>elDog</code> en un contexto de una cadena, JavaScript automáticamente llamará a la función <code>perroToString</code>, la cuál devuelve la siguiente cadena:</p>
 
-    Perro Gabby es femenino chocolate Laboratorio
+<pre>Perro Gabby es femenino chocolate Laboratorio
+</pre>
 
-## Vea También
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+ <li>{{jsxref("Object.prototype.valueOf()")}}</li>
+</ul>

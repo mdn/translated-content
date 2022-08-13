@@ -7,63 +7,68 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/return
 original_slug: Web/JavaScript/Referencia/Sentencias/return
 ---
-{{jsSidebar("Statements")}}
+<div>{{jsSidebar("Statements")}}</div>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-La sentencia `return` finaliza la ejecución de la función y especifica un valor para ser devuelto a quien llama a la función.
+<p><span id="result_box" lang="es"><span>La</span> <span>sentencia <code>return</code></span> <span class="alt-edited">finaliza la</span> <span>ejecución de la función</span> <span>y especifica</span> <span>un valor</span> <span>para ser devuelto</span> <span class="alt-edited">a quien llama a la</span> <span>función.</span></span></p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    return [[ expresion ]];
+<pre class="syntaxbox">return [[ <em>expresion</em> ]];</pre>
 
-- expresion
-  - : La expresión a retornar. Si se omite, `undefined` es retornado en su lugar.
+<dl>
+ <dt><span class="short_text" id="result_box" lang="es"><span>expresion</span></span></dt>
+ <dd>La expresión a retornar. Si se omite, <code>undefined</code> es retornado en su lugar.</dd>
+</dl>
 
-## Description
+<h2 id="Description">Description</h2>
 
-Cuando una instrucción de retorno se llama en una función, se detiene la ejecución de esta. Si se especifica un valor dado, este se devuelve a quien llama a la función. Si se omite la expresión, `undefined` se devuelve en su lugar. Todas las siguientes sentencias de retorno rompen la ejecución de la función:
+<p>Cuando una instrucción de retorno se llama en una función, se detiene la ejecución de esta. Si se especifica un valor dado, este se devuelve a quien llama a la función. Si se omite la expresión, <code>undefined</code> se devuelve en su lugar. Todas las siguientes sentencias de retorno rompen la ejecución de la función:</p>
 
-```js
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
-```
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">return</span><span class="punctuation token">;</span>
+<span class="keyword token">return</span> <span class="keyword token">true</span><span class="punctuation token">;</span>
+<span class="keyword token">return</span> <span class="keyword token">false</span><span class="punctuation token">;</span>
+<span class="keyword token">return</span> x<span class="punctuation token">;</span>
+<span class="keyword token">return</span> x <span class="operator token">+</span> y <span class="operator token">/</span> <span class="number token">3</span><span class="punctuation token">;</span></code></pre>
 
-## <br>La inserción automática Punto y coma
+<h2 id="Sintaxis" name="Sintaxis"><br>
+ La inserción automática Punto y coma</h2>
 
-La instrucción de retorno se ve afectada por la inserción automática de punto y coma (ASI). No se permite el terminador de línea entre la palabra clave de retorno y la expresión.
+<p>La instrucción de retorno se ve afectada por la inserción automática de punto y coma (ASI). No se permite el terminador de línea entre la palabra clave de retorno y la expresión.</p>
 
-```js
-return
-a + b;
-```
+<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">return</span>
+a <span class="operator token">+</span> b<span class="punctuation token">;</span></code></pre>
 
-se transforma por ASI en:
+<dl>
+</dl>
 
-```html
-return;
-a + b;
-```
+<p><br>
+ se transforma por ASI en:</p>
 
-La consola le advertirá "código inalcanzable después de la declaración de retorno".
+<pre class="line-numbers  language-html"><code class="language-html">return;
+a + b;</code></pre>
 
-> **Nota:** A partir de Gecko 40 {{geckoRelease(40)}}, una advertencia es mostrada en la consola si se encuentra código inalcanzable despues de una instrucción return.
+<p><br>
+ La consola le advertirá "código inalcanzable después de la declaración de retorno".</p>
 
-## Ejemplos
+<div class="note">
+<p>A partir de Gecko 40 {{geckoRelease(40)}}, una advertencia es mostrada en la consola si se encuentra código inalcanzable despues de una instrucción return.</p>
+</div>
 
-### Ejemplo: Usando `return`
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-La siguiente función devuelve el cuadrado de su argumento, `x`, donde `x` es un número.
+<h3 id="Ejemplo:_Usando_return" name="Ejemplo:_Usando_return">Ejemplo: Usando <code>return</code></h3>
 
-```js
-function cuadrado(x) {
+<p>La siguiente función devuelve el cuadrado de su argumento, <code>x</code>, donde <code>x</code> es un número.</p>
+
+<pre class="brush: js">function cuadrado(x) {
    return x * x;
 }
-```
+</pre>
 
-## Vea También
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+<ul>
+ <li><a href="/es/docs/Web/JavaScript/Referencia/Funciones">Funciones</a></li>
+</ul>

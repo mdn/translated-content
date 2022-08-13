@@ -10,47 +10,52 @@ tags:
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 original_slug: Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web
 ---
-{{DefaultAPISidebar("Web Storage API")}}
+<div>{{DefaultAPISidebar("Web Storage API")}}</div>
 
-La API de almacenamiento web proporciona los mecanismos mediante los cuales el navegador puede almacenar información de tipo clave/valor, de una forma mucho más intuitiva que utilizando cookies.
+<div class="summary">
+<p>La API de almacenamiento web proporciona los mecanismos mediante los cuales el navegador puede almacenar información de tipo clave/valor, de una forma mucho más intuitiva que utilizando cookies.</p>
 
-Este artículo proporciona una guía general de cómo usar esta tecnología.
+<p>Este artículo proporciona una guía general de cómo usar esta tecnología.</p>
+</div>
 
-## Conceptos básicos
+<h2 id="Conceptos_básicos">Conceptos básicos</h2>
 
-Los objetos de almacenamiento son simples almacenes de clave/valor, similares a objetos, pero que permanecen intactos cuando la página se recarga. Las claves y los valores siempre son cadenas de texto (fíjate que las claves con enteros se convierten automáticamente a cadenas, tal y como lo hacen los objetos). Puedes acceder a estos valores como un objeto, o con los métodos {{domxref("Storage.getItem()")}} y {{domxref("Storage.setItem()")}}. Estas tres líneas modifican el valor de colorSetting de la misma manera:
+<p>Los objetos de almacenamiento son simples almacenes de clave/valor, similares a objetos, pero que permanecen intactos cuando la página se recarga. Las claves y los valores siempre son cadenas de texto (fíjate que las claves con enteros se convierten automáticamente a cadenas, tal y como lo hacen los objetos). Puedes acceder a estos valores como un objeto, o con los métodos {{domxref("Storage.getItem()")}} y {{domxref("Storage.setItem()")}}. Estas tres líneas modifican el valor de colorSetting de la misma manera:</p>
 
-```js
-localStorage.colorSetting = '#a4509b';
+<pre class="brush: js notranslate" style="white-space: pre;">localStorage.colorSetting = '#a4509b';
 localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');
-```
+localStorage.setItem('colorSetting', '#a4509b');</pre>
 
-> **Nota:** Se recomiendo usar la API de almacenamiento web (`setItem`, `getItem`, `removeItem`, `key`, `length`) para prevenir las dificultades asociadas al uso de simples objetos como almacenes de valores llave/valor.
+<div class="note">
+<p><strong>Nota</strong>: Se recomiendo usar la API de almacenamiento web (<code>setItem</code>, <code>getItem</code>, <code>removeItem</code>, <code>key</code>, <code>length</code>) para prevenir las dificultades asociadas al uso de simples objetos como almacenes de valores llave/valor.</p>
+</div>
 
-Los dos mecanismos en el almacenamiento web son los siguientes:
+<p>Los dos mecanismos en el almacenamiento web son los siguientes:</p>
 
-- **`sessionStorage` **mantiene un área de almacenamiento separada para cada origen que está disponible mientras dure la sesión de la página (mientras el navegador esté abierto, incluyendo recargas de página y restablecimientos).
-- **`localStorage` **hace lo mismo, pero persiste incluso cuando el navegador se cierre y se reabra.
+<ul>
+ <li><strong><code>sessionStorage</code> </strong>mantiene un área de almacenamiento separada para cada origen que está disponible mientras dure la sesión de la página (mientras el navegador esté abierto, incluyendo recargas de página y restablecimientos).</li>
+ <li><strong><code>localStorage</code> </strong>hace lo mismo, pero persiste incluso cuando el navegador se cierre y se reabra.</li>
+</ul>
 
-Estos mecanismos están disponibles mediante las propiedades [`Window.sessionStorage`](/es/docs/Web/API/Window/sessionStorage "La propiedad sessionStorage permite acceder a un objeto Storage asociado a la sesión actual. La propiedad sessionStorage es similar a localStorage, la única diferencia es que la información almacenada en localStorage no posee tiempo de expiración, por el contrario la información almacenada en sessionStorage es eliminada al finalizar la sesion de la página. La sesión de la página perdura mientras el navegador se encuentra abierto, y se mantiene por sobre las recargas y reaperturas de la página. Abrir una página en una nueva pestaña o ventana iniciará una nueva sesión, lo que difiere en la forma en que trabajan las cookies de sesión.") y [`Window.localStorage`](/es/docs/Web/API/Window/localStorage "La propiedad localStorage te permite acceder al objeto local Storage. localStorage es similar a sessionStorage. La única diferencia es que, mientras los datos almacenados en localStorage no tienen fecha de expiración, los datos almacenados en sessionStorage son eliminados cuando finaliza la sesion de navegación - lo cual ocurre cuando se cierra el navegador.") (dicho con más precisión, en navegadores con soporte, el objeto `Window` implementa los objetos `WindowLocalStorage` y `WindowSessionStorage`, en los cuales se basan las propiedades `localStorage` y `sessionStorage`). Al invocar uno de éstos, se creará una instancia del objeto [`Storage`](/es/docs/Web/API/Storage "La interfaz Storage de la API de almacenamiento web provee acceso al almacenamiento de la sesión o al almacenamiento local para un dominio en particular, permitiéndote por ejemplo añadir, modificar o eliminar elementos de dato almacenados."), a través del cual los datos pueden ser creados, recuperados y eliminados. sessionStorage y localStorage utilizan un objeto de almacenamiento diferente según su origen — funcionan y son controlados por separado.
+<p>Estos mecanismos están disponibles mediante las propiedades <a href="https://developer.mozilla.org/es/docs/Web/API/Window/sessionStorage" title="La propiedad sessionStorage permite acceder a un objeto Storage asociado a la sesión actual. La propiedad sessionStorage es similar a localStorage, la única diferencia es que la información almacenada en localStorage no posee tiempo de expiración, por el contrario la información almacenada en sessionStorage es eliminada al finalizar la sesion de la página. La sesión de la página perdura mientras el navegador se encuentra abierto, y se mantiene por sobre las recargas y reaperturas de la página. Abrir una página en una nueva pestaña o ventana iniciará una nueva sesión, lo que difiere en la forma en que trabajan las cookies de sesión."><code>Window.sessionStorage</code></a> y  <a href="https://developer.mozilla.org/es/docs/Web/API/Window/localStorage" title="La propiedad localStorage te permite acceder al objeto local Storage. localStorage es similar a sessionStorage. La única diferencia es que, mientras los datos almacenados en localStorage no tienen fecha de expiración, los datos almacenados en sessionStorage son eliminados cuando finaliza la sesion de navegación - lo cual ocurre cuando se cierra el navegador."><code>Window.localStorage</code></a> (dicho con más precisión, en navegadores con soporte, el objeto <code>Window</code> implementa los objetos  <code>WindowLocalStorage</code> y <code>WindowSessionStorage</code>, en los cuales se basan las propiedades <code>localStorage</code> y <code>sessionStorage</code>). Al invocar uno de éstos, se creará una instancia del objeto <a href="https://developer.mozilla.org/es/docs/Web/API/Storage" title="La interfaz Storage de la API de almacenamiento web provee acceso al almacenamiento de la sesión o al almacenamiento local para un dominio en particular, permitiéndote por ejemplo añadir, modificar o eliminar elementos de dato almacenados."><code>Storage</code></a>, a través del cual los datos pueden ser creados, recuperados y eliminados. sessionStorage y localStorage utilizan un objeto de almacenamiento diferente según su origen — funcionan y son controlados por separado.</p>
 
-Así que, por ejemplo, si en un inicio se llama a `localStorage` en un documento, esto devolverá un objeto {{domxref("Storage")}}; llamar a `sessionStorage` en un documento devolverá un objeto {{domxref("Storage")}} diferente. Ambos objetos se pueden manipular de la misma forma, pero separados.
+<p>Así que, por ejemplo, si en un inicio se llama a <code>localStorage</code> en un documento, esto devolverá un objeto {{domxref("Storage")}}; llamar a <code>sessionStorage</code> en un documento devolverá un objeto {{domxref("Storage")}} diferente. Ambos objetos se pueden manipular de la misma forma, pero separados.</p>
 
-## Detectar la característica localStorage
+<h2 id="Detectar_la_característica_localStorage">Detectar la característica localStorage</h2>
 
-Para poder usar localStorage, debemos de verificar que tiene soporte y que está disponible en la sesión del buscador actual.
+<p>Para poder usar localStorage, debemos de verificar que tiene soporte y que está disponible en la sesión del buscador actual.</p>
 
-### Probar la disponibilidad
+<h3 id="Probar_la_disponibilidad">Probar la disponibilidad</h3>
 
-> **Nota:** Nota: esta API está disponible en las versiones actuales de todos los navegadores principales. La prueba de disponibilidad es necesaria sólo si debes soportar navegadores muy antiguos, como Internet Explorer 6 o 7, o en las circunstancias limitadas descritas más abajo.
+<div class="blockIndicator note">
+<p>Nota: esta API está disponible en las versiones actuales de todos los navegadores principales. La prueba de disponibilidad es necesaria sólo si debes soportar navegadores muy antiguos, como Internet Explorer 6 o 7, o en las circunstancias limitadas descritas más abajo.</p>
+</div>
 
-Los buscadores que soportan localStorage tienen una propiedad en el objeto window que se llama localStorage. Sin embargo, por varias razones, el sólo asegurarse de que la propiedad existe puede arrojar excepciones. El que localStorage exista no es garantía suficiente de que en verdad esté disponible, puesto que varios buscadores ofrecen configuraciones que lo inhabilitan. Así que un buscador puede _soportar_ localStorage, pero puede no hacerlo _disponible_ para los scripts en la página. Un ejemplo de esto es Safari, que en el modo de búsqueda privada ofrece un objeto localStorage vacío con un cupo de 0, por lo que es inutilizable. Sin embargo, es posible que aún así obtengamos un QuotaExceededError legítimo, lo que significa que ya usamos todo el espacio de almacenamiento disponible, aunque el almacenamiento esté, de hecho, _disponible_. Nuestra detección de la característica debe de tomar en cuenta estos escenarios.
+<p>Los buscadores que soportan localStorage tienen una propiedad en el objeto window que se llama localStorage. Sin embargo, por varias razones, el sólo asegurarse de que la propiedad existe puede arrojar excepciones. El que localStorage exista no es garantía suficiente de que en verdad esté disponible, puesto que varios buscadores ofrecen configuraciones que lo inhabilitan. Así que un buscador puede <em>soportar </em>localStorage, pero puede no hacerlo <em>disponible </em>para los scripts en la página. Un ejemplo de esto es Safari, que en el modo de búsqueda privada ofrece un objeto localStorage vacío con un cupo de 0, por lo que es inutilizable. Sin embargo, es posible que aún así obtengamos un QuotaExceededError legítimo, lo que significa que ya usamos todo el espacio de almacenamiento disponible, aunque el almacenamiento esté, de hecho, <em>disponible</em>. Nuestra detección de la característica debe de tomar en cuenta estos escenarios.</p>
 
-Esta función detecta si localStorage tiene soporte y está disponible:
+<p>Esta función detecta si localStorage tiene soporte y está disponible:</p>
 
-```js
-function storageAvailable(type) {
+<pre class="brush: js notranslate">function storageAvailable(type) {
     try {
         var storage = window[type],
             x = '__storage_test__';
@@ -59,7 +64,7 @@ function storageAvailable(type) {
         return true;
     }
     catch(e) {
-        return e instanceof DOMException && (
+        return e instanceof DOMException &amp;&amp; (
             // everything except Firefox
             e.code === 22 ||
             // Firefox
@@ -68,62 +73,58 @@ function storageAvailable(type) {
             // everything except Firefox
             e.name === 'QuotaExceededError' ||
             // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &amp;&amp;
             // acknowledge QuotaExceededError only if there's something already stored
             storage.length !== 0;
     }
-}
-```
+}</pre>
 
-Y aquí se muestra cómo usarla:
+<p>Y aquí se muestra cómo usarla:</p>
 
-```js
-if (storageAvailable('localStorage')) {
+<pre class="brush: js notranslate">if (storageAvailable('localStorage')) {
   // Yippee! We can use localStorage awesomeness
 }
 else {
   // Too bad, no localStorage for us
-}
-```
+}</pre>
 
-También puedes probar sessionStorage invocando `storageAvailable('sessionStorage')`.
+<p>También puedes probar sessionStorage invocando <code>storageAvailable('sessionStorage')</code>.</p>
 
-Aquí puedes ver una [breve historia de la detección de la característica localStorage](https://gist.github.com/paulirish/5558557).
+<p>Aquí puedes ver una <a href="https://gist.github.com/paulirish/5558557">breve historia de la detección de la característica localStorage</a>.</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-Para ilustrar un uso típico de almacenamiento web, creamos un ejemplo simple que llamamos **Demo de almacenamiento web**. La [página de inicio](https://mdn.github.io/dom-examples/web-storage/) proporciona unos controles que se pueden usar para personalizar el color, la tipografía y la imagen decorativa:
+<p>Para ilustrar un uso típico de almacenamiento web, creamos un ejemplo simple que llamamos <strong>Demo de almacenamiento web</strong>. La <a href="https://mdn.github.io/dom-examples/web-storage/">página de inicio</a> proporciona unos controles que se pueden usar para personalizar el color, la tipografía y la imagen decorativa:</p>
 
-![](https://mdn.mozillademos.org/files/9685/landing.png)Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
+<p><img alt="" src="https://mdn.mozillademos.org/files/9685/landing.png" style="display: block; height: 482px; margin: 0px auto; width: 700px;">Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en <code>localStorage</code>, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.</p>
 
-También creamos una [página de salida del evento](https://mdn.github.io/dom-examples/web-storage/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un {{domxref("StorageEvent")}}.
+<p>También creamos una <a href="https://mdn.github.io/dom-examples/web-storage/event.html">página de salida del evento</a> — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un {{domxref("StorageEvent")}}.</p>
 
-![](https://mdn.mozillademos.org/files/9687/event-output.png)
+<p><img alt="" src="https://mdn.mozillademos.org/files/9687/event-output.png" style="display: block; height: 482px; margin: 0px auto; width: 700px;"></p>
 
-> **Nota:** Puedes ver las páginas de ejemplo usando los links de arriba y también puedes [ver el código fuente.](https://github.com/mdn/dom-examples/tree/master/web-storage)
+<div class="note">
+<p><strong>Nota</strong>: Puedes ver las páginas de ejemplo usando los links de arriba y también puedes <a href="https://github.com/mdn/dom-examples/tree/master/web-storage">ver el código fuente.</a></p>
+</div>
 
-### Probar si la memoria tiene valores
+<h3 id="Probar_si_la_memoria_tiene_valores">Probar si la memoria tiene valores</h3>
 
-En el inicio de [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), probamos si el objeto ya tiene valores (es decir, si la página ya fue visitada):
+<p>En el inicio de <a href="https://github.com/mdn/dom-examples/blob/master/web-storage/main.js">main.js</a>, probamos si el objeto ya tiene valores (es decir, si la página ya fue visitada):</p>
 
-```js
-if(!localStorage.getItem('bgcolor')) {
+<pre class="brush: js notranslate">if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
-}
-```
+}</pre>
 
-El método {{domxref("Storage.getItem()")}} se usa para obtener un dato de la memoria; en este caso, estamos probando si el dato `bgcolor` existe; si no, corremos `populateStorage()` para añadir los valores personalizados actuales a la memoria. Si ya hay valores guardados, corremos `setStyles()` para actualizar el estilo de la página con los valores almacenados.
+<p>El método {{domxref("Storage.getItem()")}} se usa para obtener un dato de la memoria; en este caso, estamos probando si el dato <code>bgcolor</code> existe; si no, corremos <code>populateStorage()</code> para añadir los valores personalizados actuales a la memoria. Si ya hay valores guardados, corremos <code>setStyles()</code> para actualizar el estilo de la página con los valores almacenados.</p>
 
-**Nota**: También puedes usar {{domxref("Storage.length")}} para probar si el objeto de almacenamiento está vació o no.
+<p><strong>Nota</strong>: También puedes usar {{domxref("Storage.length")}} para probar si el objeto de almacenamiento está vació o no.</p>
 
-### Obtener valores de la memoria
+<h3 id="Obtener_valores_de_la_memoria">Obtener valores de la memoria</h3>
 
-Como dijimos arriba, los valores se pueden recuperar de la memoria usando {{domxref("Storage.getItem()")}}. Este método usa la llave del dato como argumento y devuelve el valor. Por ejemplo:
+<p>Como dijimos arriba, los valores se pueden recuperar de la memoria usando {{domxref("Storage.getItem()")}}. Este método usa la llave del dato como argumento y devuelve el valor. Por ejemplo:</p>
 
-```js
-function setStyles() {
+<pre class="brush: js notranslate">function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -135,80 +136,90 @@ function setStyles() {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}
-```
+}</pre>
 
-Aquí, en las primeras tres líneas tomamos los valores del almacenamiento local. Después, fijamos los valores mostrados en los elementos del formulario a esos valores, de forma que se mantengan sincronizados cuando recargues la página. Finalmente, actualizamos los estilos y la imagen decorativa en la página para que tus opciones personalizadas vuelvan a aparecer al recargar.
+<p>Aquí, en las primeras tres líneas tomamos los valores del almacenamiento local. Después, fijamos los valores mostrados en los elementos del formulario a esos valores, de forma que se mantengan sincronizados cuando recargues la página. Finalmente, actualizamos los estilos y la imagen decorativa en la página para que tus opciones personalizadas vuelvan a aparecer al recargar.</p>
 
-### Guardar valores en la memoria
+<h3 id="Guardar_valores_en_la_memoria">Guardar valores en la memoria</h3>
 
-{{domxref("Storage.setItem()")}} se usa tanto para crear nuevos datos como para actualizar valores existentes (si el dato ya existía). Este método recibe dos argumentos: la llave del dato que se va a crear/modificar y el valor que se va a guardar.
+<p>{{domxref("Storage.setItem()")}} se usa tanto para crear nuevos datos como para actualizar valores existentes (si el dato ya existía). Este método recibe dos argumentos: la llave del dato que se va a crear/modificar y el valor que se va a guardar.</p>
 
-```js
-function populateStorage() {
+<pre class="brush: js notranslate">function populateStorage() {
   localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
   localStorage.setItem('font', document.getElementById('font').value);
   localStorage.setItem('image', document.getElementById('image').value);
 
   setStyles();
-}
-```
+}</pre>
 
-La función `populateStorage()` define tres elementos en el almacenamiento local — el color de fondo, la tipografía y la ruta de almacenamiento de la imagen. Luego corre la función `setStyles()` para actualizar el estilo de la página, etc.
+<p>La función <code>populateStorage()</code> define tres elementos en el almacenamiento local — el color de fondo, la tipografía y la ruta de almacenamiento de la imagen. Luego corre la función <code>setStyles()</code> para actualizar el estilo de la página, etc.</p>
 
-También incluimos un manejador `onchange` para cada elemento del formulario, de manera que los datos y los estilos son actualizados cada vez que un valor del formulario cambia:
+<p>También incluimos un manejador <code>onchange</code> para cada elemento del formulario, de manera que los datos y los estilos son actualizados cada vez que un valor del formulario cambia:</p>
 
-```js
-bgcolorForm.onchange = populateStorage;
+<pre class="brush: js notranslate">bgcolorForm.onchange = populateStorage;
 fontForm.onchange = populateStorage;
-imageForm.onchange = populateStorage;
-```
+imageForm.onchange = populateStorage;</pre>
 
-### Responder a cambios en la memoria con el evento StorageEvent
+<h3 id="Responder_a_cambios_en_la_memoria_con_el_evento_StorageEvent">Responder a cambios en la memoria con el evento StorageEvent</h3>
 
-El evento {{domxref("StorageEvent")}} se dispara siempre que se hace un cambio al objeto {{domxref("Storage")}} (nota que este evento no se dispara para cambios en sessionStorage). Este evento no va a trabajar en la misma página en la que se están haciendo los cambios, sino que es una manera para que las otras páginas del dominio que usan la memoria sincronicen los cambios que se están haciendo. Las páginas en otros dominios no pueden acceder a los mismos objetos de almacenamiento.
+<p>El evento {{domxref("StorageEvent")}} se dispara siempre que se hace un cambio al objeto {{domxref("Storage")}} (nota que este evento no se dispara para cambios en sessionStorage). Este evento no va a trabajar en la misma página en la que se están haciendo los cambios, sino que es una manera para que las otras páginas del dominio que usan la memoria sincronicen los cambios que se están haciendo. Las páginas en otros dominios no pueden acceder a los mismos objetos de almacenamiento.</p>
 
-En la página de eventos (ver [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)) el único JavaScript es el siguiente:
+<p>En la página de eventos (ver <a href="https://github.com/mdn/dom-examples/blob/master/web-storage/event.js">events.js</a>) el único JavaScript es el siguiente:</p>
 
-```js
-window.addEventListener('storage', function(e) {
+<pre class="brush: js notranslate">window.addEventListener('storage', function(e) {
   document.querySelector('.my-key').textContent = e.key;
   document.querySelector('.my-old').textContent = e.oldValue;
   document.querySelector('.my-new').textContent = e.newValue;
   document.querySelector('.my-url').textContent = e.url;
   document.querySelector('.my-storage').textContent = JSON.stringify(e.storageArea);
-});
-```
+});</pre>
 
-Aquí añadimos un detector de evento al objeto `window` que se dispara cuando el objeto {{domxref("Storage")}} asociado con el origen actual cambia. Como puedes ver arriba, el objeto asociado a este evento tiene varias propiedades que contienen información útil — la llave del dato que cambió, el valor anterior al cambio, el nuevo valor tras el cambio, la URL del documento que cambió la memoria y el objeto de almacenamiento mismo (que volvimos una cadena para que pudieras ver su contenido).
+<p>Aquí añadimos un detector de evento al objeto <code>window</code> que se dispara cuando el objeto {{domxref("Storage")}} asociado con el origen actual cambia. Como puedes ver arriba, el objeto asociado a este evento tiene varias propiedades que contienen información útil — la llave del dato que cambió, el valor anterior al cambio, el nuevo valor tras el cambio, la URL del documento que cambió la memoria y el objeto de almacenamiento mismo (que volvimos una cadena para que pudieras ver su contenido).</p>
 
-### Borrar registros
+<h3 id="Borrar_registros">Borrar registros</h3>
 
-El almacenamiento web también provee un par de métodos simples para remover datos. No los usamos en nuestro demo, pero se pueden añadir de manera muy simple a tu proyecto:
+<p>El almacenamiento web también provee un par de métodos simples para remover datos. No los usamos en nuestro demo, pero se pueden añadir de manera muy simple a tu proyecto:</p>
 
-- {{domxref("Storage.removeItem()")}} recibe un solo argumento — la llave del dato que quieres eliminar — y lo remueve del objeto de almacenamiento de ese dominio.
-- {{domxref("Storage.clear()")}} no recibe argumentos; vacía todo el objeto de almacenamiento de ese dominio.
+<ul>
+ <li>{{domxref("Storage.removeItem()")}} recibe un solo argumento — la llave del dato que quieres eliminar — y lo remueve del objeto de almacenamiento de ese dominio.</li>
+ <li>{{domxref("Storage.clear()")}} no recibe argumentos; vacía todo el objeto de almacenamiento de ese dominio.</li>
+</ul>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                               | Estado                           | Comentario |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-### `Window.localStorage`
+<h3><code>Window.localStorage</code></h3>
 
 {{Compat("api.Window.localStorage")}}
 
-### `Window.sessionStorage`
+<h3><code>Window.sessionStorage</code></h3>
 
 {{Compat("api.Window.sessionStorage")}}
 
-Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una [análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
+<p>Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una <a class="external external-icon" href="http://dev-test.nemikor.com/web-storage/support-test/" rel="noopener">análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores</a>.</p>
 
-> **Nota:**Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.
+<div class="note">
+<p><strong>Nota: </strong>Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.</p>
+</div>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Página de inicio de la API de almacenamiento web](/es/docs/Web/API/Web_Storage_API)
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Storage_API">Página de inicio de la API de almacenamiento web</a></li>
+</ul>

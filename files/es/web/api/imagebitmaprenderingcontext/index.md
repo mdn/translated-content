@@ -3,25 +3,35 @@ title: ImageBitmapRenderingContext
 slug: Web/API/ImageBitmapRenderingContext
 translation_of: Web/API/ImageBitmapRenderingContext
 ---
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
 
-El interface **`ImageBitmapRenderingContext`** es un lienzo de contexto renderizado que sólo permite la funcionalidad de reemplazar el contenido del lienzo ( [`<canvas>`](/es/docs/Web/HTML/Element/canvas "Use the HTML <canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations.") ) con el {{domxref("ImageBitmap")}} dado. La identificación de contenido (el primer argumento a {{domxref("HTMLCanvasElement.getContext()")}} o {{domxref("OffscreenCanvas.getContext()")}} es `"bitmaprenderer"`.
+<p>El interface <strong><code>ImageBitmapRenderingContext</code></strong> es un lienzo de contexto renderizado que sólo permite la funcionalidad de reemplazar el contenido del lienzo ( <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML &lt;canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a> ) con el  {{domxref("ImageBitmap")}} dado. La identificación de contenido (el primer argumento a {{domxref("HTMLCanvasElement.getContext()")}} o {{domxref("OffscreenCanvas.getContext()")}}  es <code>"bitmaprenderer"</code>.</p>
 
-Esta interface es posible en ambos , la ventana y el ["worker context" ](/es/docs/Web/API/Web_Workers_API)(contexto de tabajo).
+<p>Esta interface es posible en ambos , la ventana y el <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">"worker context" </a> (contexto de tabajo).</p>
 
-## Métodos
+<h2 id="Métodos">Métodos</h2>
 
-- {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}
-  - : Muestra el `ImageBitmap` en el lienzo asociado con el contexto de renderizado. La propiedad del `ImageBitmap` se transfiere al lienzo. Este se llamaba `transferImageBitmap()`, pero se renombra en un cambio especulativo . El viejo nombre se mantiene como un alias para evitar una ruptura del código.
+<dl>
+ <dt>{{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}</dt>
+ <dd>
+ <p>Muestra el <code>ImageBitmap</code> en el lienzo asociado con el contexto de renderizado. La propiedad del <code>ImageBitmap</code> se transfiere al lienzo. Este se llamaba <code>transferImageBitmap()</code>, pero se renombra en un cambio especulativo . El viejo nombre se mantiene como un alias para evitar una ruptura del código.</p>
+ </dd>
+</dl>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-Escrito como una propuesta en la especificaación [OffscreenCanvas](https://wiki.whatwg.org/wiki/OffscreenCanvas).
+<p>Escrito como una propuesta en la especificaación <a href="https://wiki.whatwg.org/wiki/OffscreenCanvas">OffscreenCanvas</a>.</p>
 
-## Compatibilidad del Buscador
+<h2 id="Compatibilidad_del_Buscador">Compatibilidad del Buscador</h2>
 
-{{Compat("api.ImageBitmapRenderingContext")}}
+<div>
 
-## Ver también
 
-- {{domxref("OffScreenCanvas")}}
+<p>{{Compat("api.ImageBitmapRenderingContext")}}</p>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{domxref("OffScreenCanvas")}}</li>
+</ul>

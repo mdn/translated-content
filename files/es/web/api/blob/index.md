@@ -3,102 +3,116 @@ title: Blob
 slug: Web/API/Blob
 translation_of: Web/API/Blob
 ---
-{{ APIRef("File API") }}
+<p>{{ APIRef("File API") }}</p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-Un objeto `Blob` representa un objeto tipo fichero de datos planos inmutables. Los Blobs representan datos que no necesariamente se encuentran en un formato nativo de JavaScript. La interfaz {{ domxref("File") }} se encuentra basada en un `Blob`, heredando y expendiendo la funcionalidad de un `Blob` para soportar archivos en el sistema del usuario.
+<p>Un objeto <code>Blob</code> representa un objeto tipo fichero de  datos planos inmutables. Los Blobs representan datos que no necesariamente se encuentran en un formato nativo de JavaScript. La interfaz {{ domxref("File") }} se encuentra basada en un <code>Blob</code>, heredando y expendiendo la funcionalidad de un <code>Blob</code> para soportar archivos en el sistema del usuario.</p>
 
-Una forma fácil de construir un `Blob` es invocando el constructor {{domxref("Blob.Blob", "Blob()")}}. Otra manera es utilizando el método `slice()` para crear un blob que contiene un subconjunto de los datos de otro `Blob`.
+<p>Una forma fácil de construir un <code>Blob</code> es invocando el constructor {{domxref("Blob.Blob", "Blob()")}}. Otra manera es utilizando el método <code>slice()</code> para crear un blob que contiene un subconjunto de los datos de otro <code>Blob</code>.</p>
 
-## Constructor
+<h2 id="Constructor">Constructor</h2>
 
-- {{domxref("Blob.Blob", "Blob()")}}
-  - : Regresa un nuevo objeto `Blob` creado cuyo contenido consiste en la concatenación de un arreglo de valores establecidos en el parámetro de la función.
+<dl>
+ <dt>{{domxref("Blob.Blob", "Blob()")}}</dt>
+ <dd>Regresa un nuevo objeto <code>Blob</code> creado cuyo contenido consiste en la concatenación de un arreglo de valores establecidos en el parámetro de la función.</dd>
+</dl>
 
-## Propiedades
+<h2 id="Propiedades">Propiedades</h2>
 
-- {{domxref("Blob.size")}} {{readonlyinline}}
-  - : El tamaño, en bytes, de los datos contenidos en el objeto `Blob`
-- {{domxref("Blob.type")}} {{readonlyinline}}
-  - : Una cadena (String) indicando el tipo MIME de los datos contenidos en el `Blob`. Si el tipo es desconocido, esta cadena será vacía.
+<dl>
+ <dt>{{domxref("Blob.size")}} {{readonlyinline}}</dt>
+ <dd>El tamaño, en bytes,  de los datos contenidos en el objeto <code>Blob</code></dd>
+ <dt>{{domxref("Blob.type")}} {{readonlyinline}}</dt>
+ <dd>Una cadena (String) indicando el tipo MIME de los datos contenidos en el <code>Blob</code>. Si el tipo es desconocido, esta cadena será vacía.</dd>
+</dl>
 
-## Métodos
+<h2 id="Métodos">Métodos</h2>
 
-- {{domxref("Blob.slice()")}}
-  - : `Regresa un nuevo objeto Blob` conteniendo los datos de un rango específico de bytes del origen del `Blob`.
+<dl>
+ <dt>{{domxref("Blob.slice()")}}</dt>
+ <dd><code><font face="Open Sans, sans-serif">Regresa un nuevo objeto </font>Blob</code> conteniendo los datos de un rango específico de bytes del origen del <code>Blob</code>.</dd>
+</dl>
 
-> **Nota:** Esté consciente que el método `slice()` posee prefijos propios del fabricante en algunos exploradores y versiones: `blob.mozSlice()` para Firefox 12 e inferior y `blob.webkitSlice()` en Safari. Una versión anterior del método `slice()`, sin prefijos del fabricante, tenía diferente semántica, y se encuentra obsoleto. El soporte para `blob.mozSlice()` ha sido eliminado a partir de Firefox 30.
+<div class="note"><strong>Nota:</strong> Esté consciente que el método <code>slice()</code> posee prefijos propios del fabricante en algunos exploradores y versiones: <code>blob.mozSlice()</code> para Firefox 12 e inferior y <code>blob.webkitSlice()</code> en Safari. Una versión anterior del método <code>slice()</code>, sin prefijos del fabricante, tenía diferente semántica, y se encuentra obsoleto. El soporte para  <code>blob.mozSlice()</code> ha sido eliminado a partir de  Firefox 30.</div>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Ejemplo de uso de un constructor de Blob
+<h3 id="Ejemplo_de_uso_de_un_constructor_de_Blob">Ejemplo de uso de un constructor de Blob</h3>
 
-El siguiente código:
+<p>El siguiente código:</p>
 
-```js
-var aFileParts = ['<a id="a"><b id="b">hey!</b></a>'];
+<pre class="brush: js">var aFileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;'];
 var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
-```
+</pre>
 
-es equivalente a:
+<p>es equivalente a:</p>
 
-```js
-var oBuilder = new BlobBuilder();
-var aFileParts = ['<a id="a"><b id="b">hey!</b></a>'];
+<pre class="brush: js">var oBuilder = new BlobBuilder();
+var aFileParts = ['&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;'];
 oBuilder.append(aFileParts[0]);
 var oMyBlob = oBuilder.getBlob('text/xml'); // the blob
-```
+</pre>
 
-> **Advertencia:** La interfaz {{ domxref("BlobBuilder") }} ofrece otra manera de crear `Blob`, pero se encuentra ahora obsoleta y no debería volverse a utilizar.
+<div class="warning">
+<p>La interfaz {{ domxref("BlobBuilder") }} ofrece otra manera de crear <code>Blob</code>, pero se encuentra ahora obsoleta y no debería volverse a utilizar.</p>
+</div>
 
-### Ejemplo para crear una URL en un arreglo tipado utilizando un blob
+<h3 id="Ejemplo_para_crear_una_URL_en_un_arreglo_tipado_utilizando_un_blob">Ejemplo para crear una URL en un arreglo tipado utilizando un blob</h3>
 
-El siguiente código:
+<p>El siguiente código:</p>
 
-```js
-var typedArray = GetTheTypedArraySomehow();
+<pre class="brush: js">var typedArray = GetTheTypedArraySomehow();
 var blob = new Blob([typedArray], {type: 'application/octet-binary'}); // pass a useful mime type here
 var url = URL.createObjectURL(blob);
 // url will be something like: blob:d3958f5c-0777-0845-9dcf-2cb28783acaf
 // now you can use the url in any context that regular URLs can be used in, for example img.src, etc.
-```
+</pre>
 
-### Ejemplo para extraer datos de un Blob
+<h3 id="Ejemplo_para_extraer_datos_de_un_Blob">Ejemplo para extraer datos de un Blob</h3>
 
-La única manera de leer contenido de un Blob es utilizando un {{domxref("FileReader")}}. El siguiente código lee el contenido de un Blob como un arreglo tipado.
+<p>La única manera de leer contenido de un Blob es utilizando un {{domxref("FileReader")}}. El siguiente código lee el contenido de un Blob como un arreglo tipado.</p>
 
-```js
-var reader = new FileReader();
+<pre class="brush: js">var reader = new FileReader();
 reader.addEventListener("loadend", function() {
    // reader.result contains the contents of blob as a typed array
 });
-reader.readAsArrayBuffer(blob);
-```
+reader.readAsArrayBuffer(blob);</pre>
 
-Al utilizar otros métodos de {{domxref("FileReader")}}, es posible leer los contenidos del Blob como una cadena o una URL de datos.
+<p>Al utilizar otros métodos de {{domxref("FileReader")}}, es posible leer los contenidos del Blob como una cadena o una URL de datos.</p>
 
-## Especificaciones
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Especificaciones</h2>
 
-| Especificación                                       | Estado                       | Comentario          |
-| ---------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API','#blob','Blob')}} | {{Spec2('File API')}} | Definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('File API','#blob','Blob')}}</td>
+   <td>{{Spec2('File API')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
 
 {{Compat("api.Blob")}}
 
-## Disponilidad del alcance del código en Chrome
+<h2 id="Disponilidad_del_alcance_del_código_en_Chrome">Disponilidad del alcance del código en Chrome</h2>
 
-El alcance JSM del `Blob `se encuentra disponible sin la necesidad de hacer nada en especial.
+<p>El alcance JSM del <code>Blob </code>se encuentra disponible sin la necesidad de hacer nada en especial.</p>
 
-En el alcance de arranque, este debe importarse de igual modo:
+<p>En el alcance de arranque, este debe importarse de igual modo:</p>
 
-```js
-const {Blob, Services} = Cu.import('resource://gre/modules/Services.jsm', {});
-```
+<pre class="brush: js">const {Blob, Services} = Cu.import('resource://gre/modules/Services.jsm', {});</pre>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{ domxref("BlobBuilder") }}
-- {{ domxref("File") }}
+<ul>
+ <li>{{ domxref("BlobBuilder") }}</li>
+ <li>{{ domxref("File") }}</li>
+</ul>

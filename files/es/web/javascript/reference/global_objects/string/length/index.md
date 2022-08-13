@@ -11,63 +11,85 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/length
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La propiedad** \*\***`length`\*\* de un objeto {{jsxref("String")}} representa la longitud de una cadena, en unidades de código UTF-16.
+<p>La propiedad<strong> </strong><code><strong>length</strong></code> de un objeto {{jsxref("String")}} representa la longitud de una cadena, en unidades de código UTF-16.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    str.length
+<pre class="syntaxbox notranslate"><var>str</var>.length</pre>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Esta propiedad devuelve el número de caracteres de una cadena. {{interwiki("wikipedia", "UTF-16")}}, el formato usado por JavaScript, usa 16-bit para representar los caracteres más comunes, pero necesita usar dos caracteres para otros menos usados, así que es posible que el valor devuelto por `length` no corresponda al número de caracteres de la cadena.
+<p>Esta propiedad devuelve el número de caracteres de una cadena. {{interwiki("wikipedia", "UTF-16")}}, el formato usado por JavaScript, usa 16-bit para representar los caracteres más comunes, pero necesita usar dos caracteres para otros menos usados, así que es posible que el valor devuelto por <code>length</code> no corresponda al número de caracteres de la cadena.</p>
 
-ECMASCript 2016 (ed. 7) estableció una longitud máxima de `2^53 - 1` elementos. Anteriormente, ninguna longitud máxima era especificada.
+<p>ECMASCript 2016 (ed. 7) estableció una longitud máxima de <code>2^53 - 1</code> elementos. Anteriormente, ninguna longitud máxima era especificada. </p>
 
-Para una cadena vacía, `length` es 0.
+<p>Para una cadena vacía, <code>length</code> es 0.</p>
 
-La propiedad static `String.length` devuelve 1.
+<p>La propiedad static <code>String.length</code> devuelve 1.</p>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-### Uso Básico
+<h3 id="Uso_Básico">Uso Básico</h3>
 
-```js
-var x = 'Mozilla';
+<pre class="brush: js notranslate">var x = 'Mozilla';
 var empty = '';
 
 console.log('Mozilla is ' + x.length + ' code units long');
 /* "Mozilla is 7 code units long" */
 
 console.log('The empty string has a length of ' + empty.length);
-/* "The empty string has a length of 0" */
-```
+/* "The empty string has a length of 0" */</pre>
 
-### Asignando a length
+<h3 id="Asignando_a_length">Asignando a length</h3>
 
-```js
-var myString = "bluebells";
+<pre class="brush: js notranslate">var myString = "bluebells";
 
 // Attempting to assign a value to a string's .length property has no observable effect.
 myString.length = 4;
 console.log(myString);
 /* "bluebells" */
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                   | Estatus                      | Comentario                                          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                                                          | Estándar                     | Primera definicíon. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}                                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-properties-of-string-instances-length', 'String.prototype.length')}} | {{Spec2('ESDraft')}} |                                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1st Edition.</td>
+   <td>Estándar</td>
+   <td>Primera definicíon. Implementado en JavaScript 1.0.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.5.5.1', 'String.prototype.length')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-properties-of-string-instances-length', 'String.prototype.length')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-properties-of-string-instances-length', 'String.prototype.length')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("javascript.builtins.String.length")}}
+<p>{{Compat("javascript.builtins.String.length")}}</p>
 
-## Ver también
+<h2 id="See_also" name="See_also">Ver también</h2>
 
-- [JavaScript String.length and Internationalizing Web Applications](http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications)
+<ul>
+ <li><a class="external" href="http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications">JavaScript String.length and Internationalizing Web Applications</a></li>
+</ul>

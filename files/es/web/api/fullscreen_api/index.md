@@ -3,100 +3,101 @@ title: Fullscreen API
 slug: Web/API/Fullscreen_API
 translation_of: Web/API/Fullscreen_API
 ---
-{{DefaultAPISidebar("Fullscreen API")}}
+<p>{{DefaultAPISidebar("Fullscreen API")}}</p>
 
-La **`API Fullscreen`** provee una manera fácil de presentar contenido web usando la pantalla completa del usuario. La API permite indicar al navegador que un elemento y sus hijos, si los tiene, ocupar la pantalla completa, ocultando toda la interfaz del usuario y otras aplicaciones de la pantalla mientras se esté en pantalla completa.
+<p class="summary">La <strong><code>API Fullscreen</code></strong> provee una manera fácil de presentar contenido web usando la pantalla completa del usuario. La API permite indicar al navegador que un elemento y sus hijos, si los tiene, ocupar la pantalla completa, ocultando toda la interfaz del usuario y otras aplicaciones de la pantalla mientras se esté en pantalla completa.</p>
 
-> **Nota:** De momento, no todos los navegadores usan la versión sin prefijo de la API. Consulta la [tabla que resume las diferencias de prefijos y nombres](#Prefijado).
+<div class="note">
+<p>De momento, no todos los navegadores usan la versión sin prefijo de la API. Consulta la <a href="#Prefijado">tabla que resume las diferencias de prefijos y nombres</a>.</p>
+</div>
 
-## Activando modo de pantalla completa
+<h2 id="Specification" name="Specification">Activando modo de pantalla completa</h2>
 
-Para cualquier elemento que quieras presentar en pantalla completa (como por ejemplo, un elemento {{ HTMLElement("video") }}), puedes presentarlo en pantalla completa, simplemente invocando a su método `requestFullscreen()`.
+<p>Para cualquier elemento que quieras presentar en pantalla completa (como por ejemplo, un elemento {{ HTMLElement("video") }}), puedes presentarlo en pantalla completa, simplemente invocando a su método <code>requestFullscreen()</code>.</p>
 
-Consideremos este elemento {{ HTMLElement("video") }}:
+<p>Consideremos este elemento {{ HTMLElement("video") }}:</p>
 
-```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
-</video>
-```
+<pre class="brush: html">&lt;video controls id="myvideo"&gt;
+  &lt;source src="somevideo.webm"&gt;&lt;/source&gt;
+  &lt;source src="somevideo.mp4"&gt;&lt;/source&gt;
+&lt;/video&gt;
+</pre>
 
-Podemos poner este video en pantalla completa con un script como éste:
+<p>Podemos poner este video en pantalla completa con un script como éste:</p>
 
-```js
-var elem = document.getElementById("myvideo");
+<pre class="brush: js">var elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
-```
+</pre>
 
-### Diferencias de presentación
+<h3 id="Diferencias_de_presentación">Diferencias de presentación</h3>
 
-Cabe aclarar una diferencia clave entre las implementaciones de Gecko y WebKit: Gecko automáticamente añade reglas CSS al elemento para ajustarlo a las dimensiones de la pantalla: "`width: 100%; height: 100%`". WebKit no hace esto; en su lugar, centra el elemento con su mismo tamaño original en un fondo negro. Para obtener el mismo comportamiento en WebKit, necesitas añadir manualmente las reglas CSS "`width: 100%; height: 100%;`" al elemento:
+<p>Cabe aclarar una diferencia clave entre las implementaciones de Gecko y WebKit: Gecko automáticamente añade reglas CSS al elemento para ajustarlo a las dimensiones de la pantalla: "<code>width: 100%; height: 100%</code>". WebKit no hace esto; en su lugar, centra el elemento con su mismo tamaño original en un fondo negro. Para obtener el mismo comportamiento en WebKit, necesitas añadir manualmente las reglas CSS "<code>width: 100%; height: 100%;</code>" al elemento:</p>
 
-```css
-#myvideo:-webkit-full-screen {
+<pre class="brush: css">#myvideo:-webkit-full-screen {
   width: 100%;
   height: 100%;
 }
-```
+</pre>
 
-Por otro lado, si quieres emular el comportamiento de WebKit en Gecko, necesitarías colocar el elemento a presentar dentro de otro elemento, con las reglas CSS necesarias para ajustarlo a la apariencia requerida, y será dicho elemento contenedor el que se establecerá para aparecer en pantalla completa.
+<p>Por otro lado, si quieres emular el comportamiento de WebKit en Gecko, necesitarías colocar el elemento a presentar dentro de otro elemento, con las reglas CSS necesarias para ajustarlo a la apariencia requerida, y será dicho elemento contenedor el que se establecerá para aparecer en pantalla completa.</p>
 
-### Notificación
+<h3 id="Notificación">Notificación</h3>
 
-Cuando el modo de pantalla completa sea invocado exitosamente, el documento que contiene al elemento recibe un evento {{ event("fullscreenchange") }}. Cuando se sale del modo de pantalla completa, el documento recibe de nuevo un evento {{ event("fullscreenchange") }}. Nótese que el evento {{ event("fullscreenchange") }} no provee información alguna sobre si el documento está entrando o saliendo a modo de pantalla completa, pero puedes saber si está en dicho modo si la propiedad {{ domxref("document.fullscreenElement", "fullscreenElement") }} del documento no es nula.
+<p>Cuando el modo de pantalla completa sea invocado exitosamente, el documento que contiene al elemento recibe un evento {{ event("fullscreenchange") }}. Cuando se sale del modo de pantalla completa, el documento recibe de nuevo un evento {{ event("fullscreenchange") }}. Nótese que el evento {{ event("fullscreenchange") }} no provee información alguna sobre si el documento está entrando o saliendo a modo de pantalla completa, pero puedes saber si está en dicho modo si la propiedad {{ domxref("document.fullscreenElement", "fullscreenElement") }} del documento no es nula.</p>
 
-### Cuando la solicitud de pantalla completa falla
+<h3 id="Cuando_la_solicitud_de_pantalla_completa_falla">Cuando la solicitud de pantalla completa falla</h3>
 
-No es garantía que se pueda cambiar a modo de pantalla completa. Por ejemplo, los elementos {{ HTMLElement("iframe") }} tienen un atributo {{ HTMLAttrXRef("allowfullscreen", "iframe") }} para decidir si se permitirá que el contenido se muestre en pantalla completa. Además, ciertos tipos de contenido, como plug-ins en ventana, no pueden ser presentados en modo de pantalla completa. Intentar hacerlo con elementos que no lo permitan (o el padre o descendente de un elemento así), no funcionará. En su lugar, el elemento que solicitó la pantalla completa recibirá un evento `fullscreenerror`. En Firefox, cuando falla una solicitud de pantalla completa, el navegador registrará un mensaje de error en la consola, explicando la falla de la solicitud. En Chrome y versiones recientes de Opera, sin embargo, no se genera ninguna advertencia.
+<p>No es garantía que se pueda cambiar a modo de pantalla completa. Por ejemplo, los elementos {{ HTMLElement("iframe") }} tienen un atributo {{ HTMLAttrXRef("allowfullscreen", "iframe") }} para decidir si se permitirá que el contenido se muestre en pantalla completa. Además, ciertos tipos de contenido, como plug-ins en ventana, no pueden ser presentados en modo de pantalla completa. Intentar hacerlo con elementos que no lo permitan (o el padre o descendente de un elemento así), no funcionará. En su lugar, el elemento que solicitó la pantalla completa recibirá un evento <code>fullscreenerror</code>. En Firefox, cuando falla una solicitud de pantalla completa, el navegador registrará un mensaje de error en la consola, explicando la falla de la solicitud. En Chrome y versiones recientes de Opera, sin embargo, no se genera ninguna advertencia.</p>
 
-> **Nota:** Las solicitudes de pantalla completa necesitan ser invocadas dentro de un manejador de eventos, o de otro modo, serán denegadas.
+<div class="note">
+<p><strong>Nota:</strong> Las solicitudes de pantalla completa necesitan ser invocadas dentro de un manejador de eventos, o de otro modo, serán denegadas.</p>
+</div>
 
-## Saliendo del modo de pantalla completa
+<h2 id="Saliendo_del_modo_de_pantalla_completa">Saliendo del modo de pantalla completa</h2>
 
-El usuario siempre tendrá la habilidad de salir del modo de pantalla completa por su propia cuenta; véase [Cosas que los usuarios querrán saber](#things_your_users_want_to_know). Incluso se puede hacer programáticamente, llamando al método {{domxref("exitFullscreen()")}}.
+<p>El usuario siempre tendrá la habilidad de salir del modo de pantalla completa por su propia cuenta; véase <a href="#things_your_users_want_to_know">Cosas que los usuarios querrán saber</a>. Incluso se puede hacer programáticamente, llamando al método {{domxref("exitFullscreen()")}}.</p>
 
-## Otra información
+<h2 id="Otra_información">Otra información</h2>
 
-El objeto {{ domxref("document") }} provee información adiciional que puede ser útil al desarrollar aplicaciones de pantalla completa:
+<p>El objeto {{ domxref("document") }} provee información adiciional que puede ser útil al desarrollar aplicaciones de pantalla completa:</p>
 
-- {{ domxref("document.fullscreenElement", "fullscreenElement") }}
-  - : El atributo `fullscreenElement` apunta al {{ domxref("element", "elemento") }} actualmente en modo pantalla. Si no es nulo, el documento está en pantalla completa, y si es nulo, no lo está.
-- {{ domxref("document.fullscreenEnabled", "fullscreenEnabled") }}
-  - : El atributo `fullscreenEnabled` indica si el documento está actualmente en un estado que permitiría solicitudes al modo de pantalla completa.
+<dl>
+ <dt>{{ domxref("document.fullscreenElement", "fullscreenElement") }}</dt>
+ <dd>El atributo <code>fullscreenElement</code> apunta al {{ domxref("element", "elemento") }} actualmente en modo pantalla. Si no es nulo, el documento está en pantalla completa, y si es nulo, no lo está.</dd>
+ <dt>{{ domxref("document.fullscreenEnabled", "fullscreenEnabled") }}</dt>
+ <dd>El atributo <code>fullscreenEnabled</code> indica si el documento está actualmente en un estado que permitiría solicitudes al modo de pantalla completa.</dd>
+</dl>
 
-## Cosas que los usuarios querrán saber
+<h2 id="Things_your_users_want_to_know" name="Things_your_users_want_to_know">Cosas que los usuarios querrán saber</h2>
 
-Puedes asegurarte de hacer saber a los usuarios que pueden presionar la tecla <kbd>ESC</kbd> (o <kbd>F11</kbd>) para salir del modo de pantalla completa.
+<p>Puedes asegurarte de hacer saber a los usuarios que pueden presionar la tecla <kbd>ESC</kbd> (o <kbd>F11</kbd>) para salir del modo de pantalla completa.</p>
 
-Adicionalmente, navegando a otra página, cambiando de pestaña, o cambiando a otra aplicación(usando, por ejemplo, <kbd>Alt</kbd>-<kbd>Tab</kbd>) mientras se está en pantalla completa, también se saldrá de dicho modo.
+<p>Adicionalmente, navegando a otra página, cambiando de pestaña, o cambiando a otra aplicación(usando, por ejemplo, <kbd>Alt</kbd>-<kbd>Tab</kbd>) mientras se está en pantalla completa, también se saldrá de dicho modo.</p>
 
-## Ejemplo
+<h2 id="Specification" name="Specification">Ejemplo</h2>
 
-En este ejemplo, se presenta un video en una página web. Presionando la tecla <kbd>Return</kbd> o <kbd>Enter</kbd> el usuario podrá moverse entre modo de ventana o de pantalla completa para la presentación del video.
+<p>En este ejemplo, se presenta un video en una página web. Presionando la tecla <kbd>Return</kbd> o <kbd>Enter</kbd> el usuario podrá moverse entre modo de ventana o de pantalla completa para la presentación del video.</p>
 
-[Ver ejemplo en vivo](/samples/domref/fullscreen.html)
+<p><a href="/samples/domref/fullscreen.html">Ver ejemplo en vivo</a></p>
 
-### Observando la tecla <kbd>Enter</kbd>
+<h3 id="Observando_la_tecla_Enter">Observando la tecla <kbd>Enter</kbd></h3>
 
-Cuando la página se carga, este código se ejecuta para establecer un evento para cuando se presione la tecla <kbd>Enter</kbd>.
+<p>Cuando la página se carga, este código se ejecuta para establecer un evento para cuando se presione la tecla <kbd>Enter</kbd>.</p>
 
-```js
-document.addEventListener("keydown", function(e) {
+<pre class="brush: js">document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
     toggleFullScreen();
   }
 }, false);
-```
+</pre>
 
-### Cambiando entre modo de pantalla completa y modo de ventana
+<h3 id="Cambiando_entre_modo_de_pantalla_completa_y_modo_de_ventana">Cambiando entre modo de pantalla completa y modo de ventana</h3>
 
-Este código es llamado cuando el usuario presiona la tecla <kbd>Enter</kbd>, como se ve arriba.
+<p>Este código es llamado cuando el usuario presiona la tecla <kbd>Enter</kbd>, como se ve arriba.</p>
 
-```js
-function toggleFullScreen() {
+<pre class="brush: js">function toggleFullScreen() {
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
   } else {
@@ -105,59 +106,133 @@ function toggleFullScreen() {
     }
   }
 }
-```
+</pre>
 
-En este código, primero se observa si el atributo `fullscreenElement` de {{ domxref("document") }} (comprobando si tiene prefijo `moz`,` ms`, o `webkit`). Si es `null`, el documento está en modo de ventana actualmente, así que necesitamos cambiarlo a modo de pantalla completa. Esto se hace llamando a la función {{ domxref("element.requestFullscreen()") }}.
+<p>En este código, primero se observa si el atributo <code>fullscreenElement</code> de {{ domxref("document") }} (comprobando si tiene prefijo <code>moz</code>,<code> ms</code>, o <code>webkit</code>). Si es <code>null</code>, el documento está en modo de ventana actualmente, así que necesitamos cambiarlo a modo de pantalla completa. Esto se hace llamando a la función {{ domxref("element.requestFullscreen()") }}.</p>
 
-Si el modo de pantalla completa está activado (`fullscreenElement` no es `null`), llamamos a la función {{ domxref("document.exitFullscreen()") }}.
+<p>Si el modo de pantalla completa está activado (<code>fullscreenElement</code> no es <code>null</code>), llamamos a la función {{ domxref("document.exitFullscreen()") }}.</p>
 
-## Prefijado
+<h2 id="Prefijado">Prefijado</h2>
 
-De momento, no todos los navegadores están implementando la versión sin prefijo de la API. Aquí está la tabla que resume los prefijos y diferencias de nombres entre ellos:
+<p>De momento, no todos los navegadores están implementando la versión sin prefijo de la API. Aquí está la tabla que resume los prefijos y diferencias de nombres entre ellos:</p>
 
-| Estándar                                                 | Blink (Chrome y Opera)      | Gecko (Firefox)          | Internet Explorer 11    | Edge                        | Safari (WebKit)             |
-| -------------------------------------------------------- | --------------------------- | ------------------------ | ----------------------- | --------------------------- | --------------------------- |
-| {{domxref("Document.fullscreen")}}             | `webkitIsFullScreen`        | `mozFullScreen`          | _-_                     | `webkitIsFullScreen`        | `webkitIsFullScreen`        |
-| {{domxref("Document.fullscreenEnabled")}} | `webkitFullscreenEnabled`   | `mozFullScreenEnabled`   | `msFullscreenEnabled`   | `webkitFullscreenEnabled`   | `webkitFullscreenEnabled`   |
-| {{domxref("Document.fullscreenElement")}} | `webkitFullscreenElement`   | `mozFullScreenElement`   | `msFullscreenElement`   | `webkitFullscreenElement`   | `webkitFullscreenElement`   |
-| {{domxref("Document.onfullscreenchange")}} | `onwebkitfullscreenchange`  | `onmozfullscreenchange`  | `onmsfullscreenchange`  | `onwebkitfullscreenchange`  | `onwebkitfullscreenchange`  |
-| {{domxref("Document.onfullscreenerror")}} | `onwebkitfullscreenerror`   | `onmozfullscreenerror`   | `onmsfullscreenerror`   | `onwebkitfullscreenerror`   | `onwebkitfullscreenerror`   |
-| {{domxref("Document.exitFullscreen()")}}     | `webkitExitFullscreen()`    | `mozCancelFullScreen()`  | `msExitFullscreen()`    | `webkitExitFullscreen()`    | `webkitExitFullscreen()`    |
-| {{domxref("Element.requestFullscreen()")}} | `webkitRequestFullscreen()` | `mozRequestFullScreen()` | `msRequestFullscreen()` | `webkitRequestFullscreen()` | `webkitRequestFullscreen()` |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Estándar</th>
+   <th scope="col">Blink (Chrome y Opera)</th>
+   <th scope="col">Gecko (Firefox)</th>
+   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">Edge</th>
+   <th scope="col">Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>{{domxref("Document.fullscreen")}}</td>
+   <td><code>webkitIsFullScreen</code></td>
+   <td><code>mozFullScreen</code></td>
+   <td><em>-</em></td>
+   <td><code>webkitIsFullScreen</code></td>
+   <td><code>webkitIsFullScreen</code></td>
+  </tr>
+  <tr>
+   <td>{{domxref("Document.fullscreenEnabled")}}</td>
+   <td><code>webkitFullscreenEnabled</code></td>
+   <td><code>mozFullScreenEnabled</code></td>
+   <td><code>msFullscreenEnabled</code></td>
+   <td><code>webkitFullscreenEnabled</code></td>
+   <td><code>webkitFullscreenEnabled</code></td>
+  </tr>
+  <tr>
+   <td>{{domxref("Document.fullscreenElement")}}</td>
+   <td><code>webkitFullscreenElement</code></td>
+   <td><code>mozFullScreenElement</code></td>
+   <td><code>msFullscreenElement</code></td>
+   <td><code>webkitFullscreenElement</code></td>
+   <td><code>webkitFullscreenElement</code></td>
+  </tr>
+  <tr>
+   <td>{{domxref("Document.onfullscreenchange")}}</td>
+   <td><code>onwebkitfullscreenchange</code></td>
+   <td><code>onmozfullscreenchange</code></td>
+   <td><code>onmsfullscreenchange</code></td>
+   <td><code>onwebkitfullscreenchange</code></td>
+   <td><code>onwebkitfullscreenchange</code></td>
+  </tr>
+  <tr>
+   <td>{{domxref("Document.onfullscreenerror")}}</td>
+   <td><code>onwebkitfullscreenerror</code></td>
+   <td><code>onmozfullscreenerror</code></td>
+   <td><code>onmsfullscreenerror</code></td>
+   <td><code>onwebkitfullscreenerror</code></td>
+   <td><code>onwebkitfullscreenerror</code></td>
+  </tr>
+  <tr>
+   <td>{{domxref("Document.exitFullscreen()")}}</td>
+   <td><code>webkitExitFullscreen()</code></td>
+   <td><code>mozCancelFullScreen()</code></td>
+   <td><code>msExitFullscreen()</code></td>
+   <td><code>webkitExitFullscreen()</code></td>
+   <td><code>webkitExitFullscreen()</code></td>
+  </tr>
+  <tr>
+   <td>{{domxref("Element.requestFullscreen()")}}</td>
+   <td><code>webkitRequestFullscreen()</code></td>
+   <td><code>mozRequestFullScreen()</code></td>
+   <td><code>msRequestFullscreen()</code></td>
+   <td><code>webkitRequestFullscreen()</code></td>
+   <td><code>webkitRequestFullscreen()</code></td>
+  </tr>
+ </thead>
+</table>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                       | Estatus                          | Comentarios      |
-| ------------------------------------ | -------------------------------- | ---------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} | Versión inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Fullscreen")}}</td>
+   <td>{{Spec2("Fullscreen")}}</td>
+   <td>Versión inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
-### `Document.fullscreen`
+<h3><code>Document.fullscreen</code></h3>
 
 {{Compat("api.Document.fullscreen")}}
 
-### `Document.fullscreenElement`
+<h3><code>Document.fullscreenElement</code></h3>
 
 {{Compat("api.Document.fullscreenElement")}}
 
-### `Document.fullscreenEnabled`
+<h3><code>Document.fullscreenEnabled</code></h3>
 
 {{Compat("api.Document.fullscreenEnabled")}}
 
-### `Document.exitFullscreen`
+<h3><code>Document.exitFullscreen</code></h3>
 
 {{Compat("api.Document.exitFullscreen")}}
 
-### `Element.requestFullscreen`
+<h3><code>Element.requestFullscreen</code></h3>
 
 {{Compat("api.Element.requestFullscreen")}}
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- {{ domxref("Element.requestFullscreen()") }}
-- {{ domxref("Document.exitFullscreen()") }}
-- {{ domxref("Document.fullscreen") }}
-- {{ domxref("Document.fullscreenElement") }}
-- {{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+<ul>
+ <li>{{ domxref("Element.requestFullscreen()") }}</li>
+ <li>{{ domxref("Document.exitFullscreen()") }}</li>
+ <li>{{ domxref("Document.fullscreen") }}</li>
+ <li>{{ domxref("Document.fullscreenElement") }}</li>
+ <li>{{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}</li>
+ <li>{{ HTMLAttrXRef("allowfullscreen", "iframe") }}</li>
+</ul>

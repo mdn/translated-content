@@ -8,14 +8,13 @@ tags:
   - Vista CSSOM
 translation_of: Web/CSS/scroll-behavior
 ---
-{{ CSSRef }}
+<div>{{ CSSRef }}</div>
 
-`La propiedad CSS `**`scroll-behavior `**`especifica el comportamiento del desplazamiento para un elemento con desplazamiento, cuando éste se produce debido a la navegación o a APIs CSSOM. Otros desplazamientos, p.ej. aquellos realizados por el usuario, no se ven afectados por esta propiedad. Cuando esta propiedad está especificada en el elemento raíz, se aplica al viewport.`
+<p><code>La propiedad CSS<strong> </strong></code><strong><code>scroll-behavior </code></strong><code>especifica el comportamiento del desplazamiento para un elemento con desplazamiento, cuando éste se produce debido a la navegación o a APIs CSSOM<strong>. </strong>Otros desplazamientos, p.ej. aquellos realizados por el usuario, no se ven afectados por esta propiedad. Cuando esta propiedad está especificada en el elemento raíz, se aplica al viewport.</code></p>
 
-Esta propiedad puede ser ignorada por los agentes de usuario.
+<p>Esta propiedad puede ser ignorada por los agentes de usuario.</p>
 
-```css
-/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
@@ -23,44 +22,43 @@ scroll-behavior: smooth;
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: unset;
-```
+</pre>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-Valores
+<p>Valores</p>
 
-- `auto`
-  - : La caja de desplazamiento realiza el desplazamiento instantáneamente.
-- `smooth`
-  - : La caja se desplaza suavemente, utilizando una función de tiempo definida por el agente de usuario (user-agent) sobre un período de tiempo también definido por éste. Los agentes de usuario seguirán las convenciones de su propia plataforma, en caso de que existan.
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>La caja de desplazamiento realiza el desplazamiento instantáneamente.</dd>
+ <dt><code>smooth</code></dt>
+ <dd>La caja se desplaza suavemente, utilizando una función de tiempo definida por el agente de usuario (user-agent) sobre un período de tiempo también definido por éste. Los agentes de usuario seguirán las convenciones de su propia plataforma, en caso de que existan.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Example
+<h2 id="Example" name="Example">Example</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<nav>
-  <a href="#page-1">1</a>
-  <a href="#page-2">2</a>
-  <a href="#page-3">3</a>
-</nav>
-<scroll-container>
-  <scroll-page id="page-1">1</scroll-page>
-  <scroll-page id="page-2">2</scroll-page>
-  <scroll-page id="page-3">3</scroll-page>
-</scroll-container>
-```
+<pre class="brush: html">&lt;nav&gt;
+  &lt;a href="#page-1"&gt;1&lt;/a&gt;
+  &lt;a href="#page-2"&gt;2&lt;/a&gt;
+  &lt;a href="#page-3"&gt;3&lt;/a&gt;
+&lt;/nav&gt;
+&lt;scroll-container&gt;
+  &lt;scroll-page id="page-1"&gt;1&lt;/scroll-page&gt;
+  &lt;scroll-page id="page-2"&gt;2&lt;/scroll-page&gt;
+  &lt;scroll-page id="page-3"&gt;3&lt;/scroll-page&gt;
+&lt;/scroll-container&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-a {
+<pre class="brush: css">a {
   display: inline-block;
   width: 50px;
   text-decoration: none;
@@ -89,18 +87,31 @@ scroll-page {
   height: 100%;
   font-size: 5em;
 }
-```
+</pre>
 
-### Output
+<h3 id="Output">Output</h3>
 
-{{ EmbedLiveSample('Example', "100%", 250) }}
+<p>{{ EmbedLiveSample('Example', "100%", 250) }}</p>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                                   | Estado                           | Comentarios           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
-| {{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}} | {{Spec2('CSSOM View')}} | Initial specification |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td>Initial specification</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
 
 {{Compat("css.properties.scroll-behavior")}}

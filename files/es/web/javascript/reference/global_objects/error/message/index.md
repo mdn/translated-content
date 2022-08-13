@@ -4,40 +4,64 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/message
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/message
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La propiedad **`message`** es una descripción legible del error.
+<p>La propiedad <code><strong>message</strong></code> es una descripción legible del error.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Esta propiedad contiene una breve descripción del error, si está disponible o ha sido fijado. [SpiderMonkey](/es/docs/Mozilla/Projects/SpiderMonkey) hace un amplio uso de esta propiedad para las excepciones. Esta porpiedad combinada con la propiedad {{jsxref("Error.prototype.name", "name")}} es usada por el método {{jsxref("Error.prototype.toString()")}} para crear una cadena de texto del objeto Error.
+<p>Esta propiedad contiene una breve descripción del error, si está disponible o ha sido fijado. <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> hace un amplio uso de esta propiedad para las excepciones. Esta porpiedad combinada con la propiedad {{jsxref("Error.prototype.name", "name")}} es usada por el método {{jsxref("Error.prototype.toString()")}} para crear una cadena de texto del objeto Error.</p>
 
-Por defecto, la propiedad `message` es una cadena vacía, pero se puede especificar un mensaje a través del primer parámetro del {{jsxref("Error", "constructor Error")}}.
+<p>Por defecto, la propiedad <code>message</code> es una cadena vacía, pero se puede especificar un mensaje a través del primer parámetro del {{jsxref("Error", "constructor Error")}}.</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### Lanzar un error personalizado
+<h3 id="Lanzar_un_error_personalizado">Lanzar un error personalizado</h3>
 
-```js
-var e = new Error('No se pudo analizar la entrada');
+<pre class="brush: js">var e = new Error('No se pudo analizar la entrada');
 // e.message es 'No se pudo analizar la entrada'
 throw e;
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                               | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.11.4.3', 'Error.prototype.message')}}                     | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-error.prototype.message', 'Error.prototype.message')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-error.prototype.message', 'Error.prototype.message')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.11.4.3', 'Error.prototype.message')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-error.prototype.message', 'Error.prototype.message')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-error.prototype.message', 'Error.prototype.message')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Error.message")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Error.prototype.name")}}
-- {{jsxref("Error.prototype.toString()")}}
+<ul>
+ <li>{{jsxref("Error.prototype.name")}}</li>
+ <li>{{jsxref("Error.prototype.toString()")}}</li>
+</ul>

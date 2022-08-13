@@ -9,50 +9,94 @@ tags:
 translation_of: Web/HTML/Element/head
 original_slug: Web/HTML/Elemento/head
 ---
-{{HTMLRef}}
+<div>{{HTMLRef}}</div>
 
-El **elemento HTML `<head>`** provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos.
+<p>El <strong>elemento HTML <code>&lt;head&gt;</code></strong> provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos.</p>
 
-| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | Ninguna.                                                                                                                                                                                                                                                                                                                                        |
-| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                        | Si el elemento es un {{htmlattrxref("srcdoc", "iframe")}} de un {{HTMLElement("iframe")}} , o si la información de título está disponible desde un protocolo de nivel superior, cero o más elementos de metadatos. De otro modo, uno o más elementos de metadatos donde exactamente uno es {{HTMLElement("title")}}. |
-| Omisión de etiqueta                                                        | La etiqueta de inicio puede ser omitida si lo primero dentro del elemento head es un elemento. La etiqueta de cierre puede ser omitida si lo primero después del elemento head no es un espacio o un comentario.                                                                                                                                |
-| Elementos padre permitidos                                                 | Un elemento {{HTMLElement("html")}}, pues éste es su primer hijo.                                                                                                                                                                                                                                                                      |
-| Interfaz DOM                                                               | {{domxref("HTMLHeadElement")}}                                                                                                                                                                                                                                                                                                        |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido">Categorías de contenido</a></th>
+   <td>Ninguna.</td>
+  </tr>
+  <tr>
+   <th>Contenido permitido</th>
+   <td>Si el elemento es un {{htmlattrxref("srcdoc", "iframe")}} de un {{HTMLElement("iframe")}} , o si la información de título está disponible desde un protocolo de nivel superior, cero o más elementos de metadatos.<br>
+    De otro modo, uno o más elementos de metadatos donde exactamente uno es {{HTMLElement("title")}}.</td>
+  </tr>
+  <tr>
+   <th>Omisión de etiqueta</th>
+   <td>La etiqueta de inicio puede ser omitida si lo primero dentro del elemento head es un elemento.<br>
+    La etiqueta de cierre puede ser omitida si lo primero después del elemento head no es un espacio o un comentario.</td>
+  </tr>
+  <tr>
+   <th>Elementos padre permitidos</th>
+   <td>Un elemento {{HTMLElement("html")}}, pues éste es su primer hijo.</td>
+  </tr>
+  <tr>
+   <th>Interfaz DOM</th>
+   <td>{{domxref("HTMLHeadElement")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Atributos
+<h2 id="Atributos">Atributos</h2>
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+<p>Este elemento incluye los <a href="/es/docs/Web/HTML/Global_attributes">atributos globales</a>.</p>
 
-- {{htmlattrdef("profile")}} {{obsolete_inline}}
-  - : Los URIs de uno o más perfiles de metadatos, separados por un espacio en blanco.
+<dl>
+ <dt>{{htmlattrdef("profile")}} {{obsolete_inline}}</dt>
+ <dd>Los URIs de uno o más perfiles de metadatos, separados por un espacio en blanco.</dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```html
-<html>
-  <head>
-    <title>Document title</title>
-  </head>
-</html>
-```
+<pre class="brush: html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Document title&lt;/title&gt;
+  &lt;/head&gt;
+&lt;/html&gt;
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-Navegadores modernos que cumplen con el estándar HTML5 construyen automáticamente un elemento `<head>` si las etiquetas son omitidas en el código. [Este comportamiento no puede ser garantizado en navegadores antiguos](http://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/).
+<p>Navegadores modernos que cumplen con el estándar HTML5 construyen automáticamente un elemento <code>&lt;head&gt;</code> si las etiquetas son omitidas en el código. <a class="external" href="http://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/">Este comportamiento no puede ser garantizado en navegadores antiguos</a>.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                   | Estatus                          | Comentarios                         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}         | {{Spec2('HTML WHATWG')}} | Sin cambios desde la última versión |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}} | {{Spec2('HTML5 W3C')}}     | Atributo `profile` obsoleto         |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                     |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Sin cambios desde la última versión</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Atributo <code>profile</code> obsoleto</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("html.elements.head")}}
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- Elementos que pueden ser usados dentro de un elemento `<head>:` {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}
+<ul>
+ <li>Elementos que pueden ser usados dentro de un elemento <code>&lt;head&gt;:</code> {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}</li>
+</ul>

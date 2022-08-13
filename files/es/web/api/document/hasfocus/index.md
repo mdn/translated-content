@@ -5,18 +5,19 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Document/hasFocus
 ---
-{{ ApiRef() }}
+<p>{{ ApiRef() }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-El atributo `hasFocus` devuelve `true` si el foco está en en algún sitio del documento activo. Este atributo es parte de la especificación HTML 5 actualmente en desarrollo.
+<p>El atributo <code>hasFocus</code> devuelve <code>true</code> si el foco está en en algún sitio del documento activo. Este atributo es parte de la especificación HTML 5 actualmente en desarrollo.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    focused = element.hasFocus
+<pre class="eval">focused = element.hasFocus
+</pre>
 
-### Ejemplo
+<h3 id="Ejemplo" name="Ejemplo">Ejemplo</h3>
 
-### Especificación
+<h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>
 
-[Focus management](http://www.whatwg.org/specs/web-apps/current-work/#focus-management)
+<p><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#focus-management">Focus management </a></p>

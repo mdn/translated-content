@@ -3,38 +3,51 @@ title: URL.port
 slug: Web/API/URL/port
 translation_of: Web/API/URL/port
 ---
-{{ApiRef("URL API")}}
+<div>{{ApiRef("URL API")}}</div>
 
-La propiedad **`port`** de la interfaz {{domxref("URL")}} es un {{domxref("USVString")}} que contiene el número de puerto de la URL. Si la URL no contiene un número de puerto explícito, se establecerá `''`.
+<p>La propiedad <strong><code>port</code></strong> de la interfaz {{domxref("URL")}} es un {{domxref("USVString")}} que contiene el número de puerto de la URL. Si la URL no contiene un número de puerto explícito, se establecerá <code>''</code>.</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    string = object.port;
-    object.port = string;
+<pre class="syntaxbox"><em>string</em> = <em>object</em>.port;
+<em>object</em>.port = <em>string</em>;
+</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Un {{domxref("USVString")}}.
+<p>Un {{domxref("USVString")}}.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-var url = new URL('https://mydomain.com:80/svn/Repos/');
+<pre class="brush: js">var url = new URL('<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-string">https://mydomain.com:80/svn/Repos/</span></span></span></span>');
 var result = url.port; // Devuelve:'80'
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                   | Estado               | Comentario          |
-| ---------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('URL', '#dom-url-port', 'URL.port')}} | {{Spec2('URL')}} | Definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('URL', '#dom-url-port', 'URL.port')}}</td>
+   <td>{{Spec2('URL')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("api.URL.port")}}
+<p>{{Compat("api.URL.port")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- La interfaz {{domxref("URL")}} a la que pertenece.
+<ul>
+ <li>La interfaz {{domxref("URL")}} a la que pertenece.</li>
+</ul>

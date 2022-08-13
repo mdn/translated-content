@@ -8,258 +8,278 @@ tags:
 translation_of: Web/HTML/Global_attributes/itemscope
 original_slug: Web/HTML/Atributos_Globales/itemscope
 ---
-{{HTMLSidebar("Global_attributes")}}
+<div>{{HTMLSidebar("Global_attributes")}}</div>
 
-**`itemscope`** es un [atributo global](/es/docs/Web/HTML/Global_attributes) booleano que define el scope asociado del metadata. Especificando el atributo **`itemscope`** en un elemento crea un nuevo item, cuyos resultados estan en los numeros de pares name-value asociados con el elemento. Un atributo relativo, {{htmlattrxref("itemtype")}}, es usado para especificar el URL valido de un medio/recipe (como lo es [schema.org](http://schema.org/)) que describe que el item es de propiedad contextual. En cada uno de los siguientes ejemplos, el medio/recipe es de [schema.org](https://schema.org/).
+<p><code><strong>itemscope</strong></code> es un <a href="/en-US/docs/Web/HTML/Global_attributes">atributo global</a> booleano que define el scope asociado del metadata. Especificando el atributo <code><strong>itemscope</strong></code> en un elemento crea un nuevo item, cuyos resultados estan en los numeros de pares name-value asociados con el elemento. Un atributo relativo, {{htmlattrxref("itemtype")}}, es usado para especificar el URL valido de un medio/recipe (como lo es <a href="http://schema.org/">schema.org</a>) que describe que el item es de propiedad contextual. En cada uno de los siguientes ejemplos, el medio/recipe es de <a href="https://schema.org/">schema.org</a>.</p>
 
-Todos los elementos HTML pueden tener un atributo `itemscope` especifico. Un elemento `itemscope` no tiene un asociado `itemtype` pero tiene un sociado `itemref`.
+<p>Todos los elementos HTML pueden tener un atributo <code>itemscope</code> especifico. Un elemento <code>itemscope</code> no tiene un asociado <code>itemtype</code> pero tiene un sociado <code>itemref</code>.</p>
 
-> **Nota:** Encuentra mas acerca del atributo `itemtype` en <http://schema.org/Thing>
-
-### Ejemplo simple
-
-#### HTML
-
-El siguiente ejemplo especifica que el atributo `itemscope`. El ejemplo especificado en el `itemtype` es "http\://schema.org/Movie", y especifica tres atributos `itemprop` relativos.
-
-```html
-<div itemscope itemtype="http://schema.org/Movie">
-  <h1 itemprop="nombre">Avatar</h1>
-  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
-  <span itemprop="genero">Ciencia ficcion</span>
-  <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
+<div class="note">
+<p><strong>Nota:</strong> Encuentra mas acerca del atributo <code>itemtype</code> en <a href="http://schema.org/Thing">http://schema.org/Thing</a></p>
 </div>
-```
 
-####
+<h3 id="Ejemplo_simple">Ejemplo simple</h3>
 
-#### Esctructura de informacion
+<h4 id="HTML">HTML</h4>
 
-La siguiente tabla muestran los datos esctructurados mostrados en el anterior ejemplo.
+<p>El siguiente ejemplo especifica que el atributo <code>itemscope</code>. El ejemplo especificado en el <code>itemtype</code> es "http://schema.org/Movie", y especifica tres atributos <code>itemprop</code> relativos.</p>
+
+<pre class="brush:html">&lt;div itemscope itemtype="http://schema.org/Movie"&gt;
+  &lt;h1 itemprop="nombre"&gt;Avatar&lt;/h1&gt;
+  &lt;span&gt;Director: &lt;span itemprop="director"&gt;James Cameron&lt;/span&gt; (born August 16, 1954)&lt;/span&gt;
+  &lt;span itemprop="genero"&gt;Ciencia ficcion&lt;/span&gt;
+  &lt;a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer"&gt;Trailer&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+<h4 id="sect1"> </h4>
+
+<h4 id="Esctructura_de_informacion">Esctructura de informacion</h4>
+
+<p>La siguiente tabla muestran los datos esctructurados mostrados en el anterior ejemplo.</p>
+
+<p> </p>
 
 <table class="standard-table">
-  <tbody>
-    <tr>
-      <td rowspan="6">itemscope</td>
-      <td>Itemtype</td>
-      <td colspan="2">Movie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>(itemprop name)</td>
-      <td>(itemprop value)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>director</td>
-      <td>James Cameron</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>genero</td>
-      <td>Ciencia Ficcion</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>nombre</td>
-      <td>Avatar</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>https://youtu.be/0AY1XIkX7bY</td>
-      <td>Trailer</td>
-    </tr>
-  </tbody>
+ <tbody>
+  <tr>
+   <td rowspan="6">itemscope</td>
+   <td>Itemtype</td>
+   <td colspan="2">Movie</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>(itemprop name)</td>
+   <td>(itemprop value)</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>director</td>
+   <td>James Cameron</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>genero</td>
+   <td>Ciencia Ficcion</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>nombre</td>
+   <td>Avatar</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>https://youtu.be/0AY1XIkX7bY</td>
+   <td>Trailer</td>
+  </tr>
+ </tbody>
 </table>
 
-### `itemscope` Atributos ID
+<h3 id="itemscope_Atributos_ID"><code>itemscope</code> Atributos ID</h3>
 
-Cuando especificas el atributo `itemscope` para un elemento, un nuevo item es creado. El item consiste de un grupo de pares de name-value. Para elementos con un atributo `itemscope` y un atributo `itemtype`, podrias tambien especificar un {{htmlattrxref("id")}} attribute. Puedes usar el atributo `id` para establecer un identificador global para el nuevo item. Un identificador global permite que los items relativos a otros items encuentren paginas atraves de la Web.
+<p>Cuando especificas el atributo <code>itemscope</code> para un elemento, un nuevo item es creado. El item consiste de un grupo de pares de name-value. Para elementos con un atributo <code>itemscope</code> y un atributo <code>itemtype</code>, podrias tambien especificar un {{htmlattrxref("id")}} attribute. Puedes usar el atributo <code>id</code> para establecer un identificador global para el nuevo item. Un identificador global permite que los items relativos a otros items encuentren paginas atraves de la Web.</p>
 
-### Ejemplo
+<h3 id="Ejemplo">Ejemplo</h3>
 
-Hay 4 atributos `itemscope` en el siguiente ejemplo. Cada atributo `itemscope` establecen el scope correspondiente a sus atributos `itemtype`. El `itemtype`s, `Recipe`, `AggregateRating`, y `NutritionInformation` en el siguiente ejemplo son parte de la informacion estructura por medio de [schema.org](www.schema.org), se especifico el primer `itemtype`, http\://schema.org/Recipe.
+<p>Hay 4 atributos <code>itemscope</code> en el siguiente ejemplo. Cada atributo <code>itemscope</code> establecen el scope correspondiente a sus atributos <code>itemtype</code>. El <code>itemtype</code>s, <code>Recipe</code>, <code>AggregateRating</code>, y <code>NutritionInformation</code> en el siguiente ejemplo son parte de la informacion estructura por medio de <a href="www.schema.org">schema.org</a>, se especifico el primer <code>itemtype</code>, http://schema.org/Recipe.</p>
 
-```html
-<div itemscope itemtype="http://schema.org/Recipe">
-<h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
-<img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50"/>
-<p>By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-<span itemprop="name">Carol Smith</p></span>
-</span>
-<p>Published: <time datetime="2009-11-05" itemprop="datePublished">
-November 5, 2009</p></time>
-<span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.<br></span>
- <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
- <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews<br></span>
-Prep time: <time datetime="PT30M" itemprop="prepTime">30 min<br></time>
- Cook time: <time datetime="PT1H" itemprop="cookTime">1 hour<br></time>
- Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min<br></time>
- Yield: <span itemprop="recipeYield">1 9" pie (8 servings)<br></span>
- <span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
- Serving size: <span itemprop="servingSize">1 medium slice<br></span>
- Calories per serving: <span itemprop="calories">250 cal<br></span>
- Fat per serving: <span itemprop="fatContent">12 g<br></span>
-</span>
-<p>Ingredients:<br>
-  <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
-  <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
- ... </p>
+<pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/Recipe"&gt;
+&lt;h2 itemprop="name"&gt;Grandma's Holiday Apple Pie&lt;/h2&gt;
+&lt;img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50"/&gt;
+&lt;p&gt;By &lt;span itemprop="author" itemscope itemtype="http://schema.org/Person"&gt;
+&lt;span itemprop="name"&gt;Carol Smith&lt;/p&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;p&gt;Published: &lt;time datetime="2009-11-05" itemprop="datePublished"&gt;
+November 5, 2009&lt;/p&gt;&lt;/time&gt;
+&lt;span itemprop="description"&gt;This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.&lt;br&gt;&lt;/span&gt;
+ &lt;span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"&gt;
+ &lt;span itemprop="ratingValue"&gt;4.0&lt;/span&gt; stars based on &lt;span itemprop="reviewCount"&gt;35&lt;/span&gt; reviews&lt;br&gt;&lt;/span&gt;
+Prep time: &lt;time datetime="PT30M" itemprop="prepTime"&gt;30 min&lt;br&gt;&lt;/time&gt;
+ Cook time: &lt;time datetime="PT1H" itemprop="cookTime"&gt;1 hour&lt;br&gt;&lt;/time&gt;
+ Total time: &lt;time datetime="PT1H30M" itemprop="totalTime"&gt;1 hour 30 min&lt;br&gt;&lt;/time&gt;
+ Yield: &lt;span itemprop="recipeYield"&gt;1 9" pie (8 servings)&lt;br&gt;&lt;/span&gt;
+ &lt;span itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation"&gt;
+ Serving size: &lt;span itemprop="servingSize"&gt;1 medium slice&lt;br&gt;&lt;/span&gt;
+ Calories per serving: &lt;span itemprop="calories"&gt;250 cal&lt;br&gt;&lt;/span&gt;
+ Fat per serving: &lt;span itemprop="fatContent"&gt;12 g&lt;br&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;p&gt;Ingredients:&lt;br&gt;
+  &lt;span itemprop="recipeIngredient"&gt;Thinly-sliced apples: 6 cups&lt;br&gt;&lt;/span&gt;
+  &lt;span itemprop="recipeIngredient"&gt;White sugar: 3/4 cup&lt;br&gt;&lt;/span&gt;
+ ... &lt;/p&gt;
 
-Directions: <br>
-  <div itemprop="recipeInstructions">
-    1. Cut and peel apples<br>
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
+Directions: &lt;br&gt;
+  &lt;div itemprop="recipeInstructions"&gt;
+    1. Cut and peel apples&lt;br&gt;
+    2. Mix sugar and cinnamon. Use additional sugar for tart apples. &lt;br&gt;
     ...
-  </div>
-</div>
-```
+  &lt;/div&gt;
+&lt;/div&gt; </pre>
 
-### Resultados
+<h3 id="Resultados">Resultados</h3>
 
-#### HTML
+<h4 id="HTML_2">HTML</h4>
 
-Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejemplo.
+<p>Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejemplo.</p>
 
-{{EmbedLiveSample('Example', '500', '550', '', 'Web/HTML/Global_attributes/itemscope')}}
+<p>{{EmbedLiveSample('Example', '500', '550', '', 'Web/HTML/Global_attributes/itemscope')}}</p>
 
-#### Structured data
+<h4 id="Structured_data">Structured data</h4>
 
 <table class="standard-table">
-  <tbody>
-    <tr>
-      <td colspan="1" rowspan="14">itemscope</td>
-      <td>itemtype</td>
-      <td colspan="2" rowspan="1">Medio/Recipe</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>name</td>
-      <td>Grandma's Holiday Apple Pie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>image</td>
-      <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>datePublished</td>
-      <td>2009-11-05</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>description</td>
-      <td>
-        This is my grandmother's apple pie recipe. I like to add a dash of
-        nutmeg.
-      </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>prepTime</td>
-      <td>PT30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>cookTime</td>
-      <td>PT1H</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>totalTime</td>
-      <td>PT1H30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeYield</td>
-      <td>1 9" pie (8 servings)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>Thinly-sliced apples: 6 cups</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient</td>
-      <td>White sugar: 3/4 cup</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeInstructions</td>
-      <td>
-        1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
-        for tart apples .
-      </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td colspan="2" rowspan="1">author [Person]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>name</td>
-      <td>Carol Smith</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="3">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">aggregateRating [AggregateRating]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>ratingValue</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>reviewCount</td>
-      <td>35</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="4">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">nutrition [NutritionInformation]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>servingSize</td>
-      <td>1 medium slice</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>calories</td>
-      <td>250 cal</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>fatContent</td>
-      <td>12 g</td>
-    </tr>
-  </tbody>
+ <tbody>
+  <tr>
+   <td colspan="1" rowspan="14">itemscope</td>
+   <td>itemtype</td>
+   <td colspan="2" rowspan="1">Medio/Recipe</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>name</td>
+   <td>Grandma's Holiday Apple Pie</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>image</td>
+   <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>datePublished</td>
+   <td>2009-11-05</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>description</td>
+   <td>This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>prepTime</td>
+   <td>PT30M</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>cookTime</td>
+   <td>PT1H</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>totalTime</td>
+   <td>PT1H30M</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>recipeYield</td>
+   <td>1 9" pie (8 servings)</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>recipeIngredient</td>
+   <td>Thinly-sliced apples: 6 cups</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>recipeIngredient</td>
+   <td>White sugar: 3/4 cup</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>recipeInstructions</td>
+   <td>1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar for tart apples .</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td colspan="2" rowspan="1">author [Person]</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>name</td>
+   <td>Carol Smith</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="3">itemscope</td>
+   <td>itemprop[itemtype]</td>
+   <td colspan="2" rowspan="1">aggregateRating [AggregateRating]</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>ratingValue</td>
+   <td>4.0</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>reviewCount</td>
+   <td>35</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="4">itemscope</td>
+   <td>itemprop[itemtype]</td>
+   <td colspan="2" rowspan="1">nutrition [NutritionInformation]</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>servingSize</td>
+   <td>1 medium slice</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>calories</td>
+   <td>250 cal</td>
+  </tr>
+  <tr>
+   <td>itemprop</td>
+   <td>fatContent</td>
+   <td>12 g</td>
+  </tr>
+ </tbody>
 </table>
 
-> **Nota:** Una herramienta practica para extraer estructuras microdata del HTML es[ Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/) de Google. Pruebalo en el HTML del ejemplo anterior.
+<div class="note">
+<p><strong>Note</strong>: Una herramienta practica para extraer estructuras microdata del HTML es<a href="https://developers.google.com/structured-data/testing-tool/"> Structured Data Testing Tool</a> de Google. Pruebalo en el HTML del ejemplo anterior.</p>
+</div>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificaciones                                                                                 | Estados                              | Comentario |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('HTML Microdata', "#dfn-itemscope", "itemscope")}}                 | {{Spec2('HTML Microdata')}} |            |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemscope", "itemscope")}} | {{Spec2('HTML WHATWG')}}     |            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificaciones</th>
+   <th scope="col">Estados</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML Microdata', "#dfn-itemscope", "itemscope")}}</td>
+   <td>{{Spec2('HTML Microdata')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "microdata.html#attr-itemscope", "itemscope")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Navegadores compatibles
+<h2 id="Navegadores_compatibles">Navegadores compatibles</h2>
 
-{{Compat("html.global_attributes.itemscope")}}
 
-## Ver tambien
 
-- [Otros atributos globales diferentes](/es/docs/Web/HTML/Global_attributes)
-- Otro, microdata relativo, atributos globales:
+<p>{{Compat("html.global_attributes.itemscope")}}</p>
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+<h2 id="Ver_tambien">Ver tambien</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/HTML/Global_attributes">Otros atributos globales diferentes</a></li>
+ <li>Otro, microdata relativo, atributos globales:
+  <ul>
+   <li>{{htmlattrxref("itemid")}}</li>
+   <li>{{htmlattrxref("itemprop")}}</li>
+   <li>{{htmlattrxref("itemref")}}</li>
+   <li>{{htmlattrxref("itemscope")}}</li>
+   <li>{{htmlattrxref("itemtype")}}</li>
+  </ul>
+ </li>
+</ul>

@@ -11,18 +11,17 @@ translation_of: Web/CSS/mask-repeat
 translation_of_original: Web/CSS/-webkit-mask-repeat
 original_slug: Web/CSS/-webkit-mask-repeat
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-`La propiedad -webkit-mask-repeat` especifica si la imagen de máscara se repite (en mosaico) y cómo se repite.
+<p><code><font face="Open Sans, Arial, sans-serif">La propiedad </font>-webkit-mask-repeat</code> especifica si la imagen de máscara se repite (en mosaico) y cómo se repite.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-```css
-/* Palabras clave de valor únicas */
+<pre class="brush:css">/* Palabras clave de valor únicas */
 -webkit-mask-repeat: repeat;
 -webkit-mask-repeat: repeat-x;
 -webkit-mask-repeat: repeat-y;
@@ -35,27 +34,28 @@ original_slug: Web/CSS/-webkit-mask-repeat
 -webkit-mask-repeat: inherit;
 -webkit-mask-repeat: initial;
 -webkit-mask-repeat: unset;
-```
+</pre>
 
-## Valores
+<h2 id="Valores">Valores</h2>
 
-- repeat
-  - : La máscara de imagen se repite tanto vertical como horizontalmente.
-- repeat-x
-  - : La imagen de máscara de repite sólo horizontalmente.
-- repeat-y
-  - : La imagen de máscara de repite sólo verticalemente.
-- no-repeat
-  - : La máscara de imagen no se repite. Sólo se dibuja una copia suya. El resto del contenido del elemento con máscara no se muestra.
+<dl>
+ <dt>repeat</dt>
+ <dd>La máscara de imagen se repite tanto vertical como horizontalmente.</dd>
+ <dt>repeat-x</dt>
+ <dd>La imagen de máscara de repite sólo horizontalmente.</dd>
+ <dt>repeat-y</dt>
+ <dd>La imagen de máscara de repite sólo verticalemente.</dd>
+ <dt>no-repeat</dt>
+ <dd>La máscara de imagen no se repite. Sólo se dibuja una copia suya. El resto del contenido del elemento con máscara no se muestra.</dd>
+</dl>
 
-### Síntaxis Formal
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```css
-.exampleone {
+<pre class="brush: css">.exampleone {
   -webkit-mask-image: url('mask.png');
   -webkit-mask-repeat: repeat-x;
 }
@@ -64,25 +64,24 @@ original_slug: Web/CSS/-webkit-mask-repeat
   -webkit-mask-image: url('mask.png');
   -webkit-mask-repeat: no-repeat;
 }
-```
+</pre>
 
-### Soporte para múltiples imágenes de máscara
+<h3 id="Soporte_para_múltiples_imágenes_de_máscara">Soporte para múltiples imágenes de máscara</h3>
 
-Se puede especificar, seperados por comas, un `<repeat-style>` para cada una de las imágenes de máscara:
+<p>Se puede especificar, seperados por comas,  un <code>&lt;repeat-style&gt;</code> para cada una de las imágenes de máscara:</p>
 
-```css
-.examplethree {
+<pre class="brush: css">.examplethree {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
   -webkit-mask-repeat: repeat-x, repeat-y;
 }
-```
+</pre>
 
-Cada imagen se relaciona con el correspondiente estilo, desde la primera especificada hasta la última.
+<p>Cada imagen se relaciona con el correspondiente estilo, desde la primera especificada hasta la última.</p>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("css.properties.mask-repeat")}}
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-{{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}
+<p>{{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}</p>

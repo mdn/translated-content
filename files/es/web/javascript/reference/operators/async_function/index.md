@@ -9,41 +9,42 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/async_function
 original_slug: Web/JavaScript/Referencia/Operadores/async_function
 ---
-{{jsSidebar("Operators")}}
+<div>{{jsSidebar("Operators")}}</div>
 
-La palabra clave **`async function`** puede ser utilizada para definir funciones `async` dentro de expresiones.
+<p>La palabra clave <strong><code>async function</code></strong> puede ser utilizada para definir funciones <code>async</code> dentro de expresiones.</p>
 
-También se pueden definir funciones asíncronas utilizando un[ enunciado de función asíncrona](/es/docs/Web/JavaScript/Reference/Statements/async_function "The async function keyword can be used to define async functions inside expressions.").
+<p>También se pueden definir funciones asíncronas utilizando un<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" title="The async function keyword can be used to define async functions inside expressions."> enunciado de función asíncrona</a>.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    async function [nombre]([param1[, param2[, ..., paramN]]]) {
-       enunciados
-    }
+<pre class="syntaxbox">async function [nombre]([<var>param1</var>[, <var>param2</var>[, ..., <var>paramN</var>]]]) {
+   <var>enunciados</var>
+}</pre>
 
-A partir de ES2015 (ES6), también se pueden emplear [funciones flecha.](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+<p>A partir de ES2015 (ES6), también se pueden emplear <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">funciones flecha.</a></p>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `name`
-  - : El nombre de la función. Puede ser omitida, en cuyo caso la función es _anónima_. El nombre es sólo local al cuerpo de la función.
-- `paramN`
-  - : El nombre de un argumento a ser pasado a la función.
-- `statements`
-  - : Los enunciados que componen el cuerpo de la función.
+<dl>
+ <dt><code><var>name</var></code></dt>
+ <dd>El nombre de la función. Puede ser omitida, en cuyo caso la función es <em>anónima</em>. El nombre es sólo local al cuerpo de la función.</dd>
+ <dt><code><var>paramN</var></code></dt>
+ <dd>El nombre de un argumento a ser pasado a la función.</dd>
+ <dt><code><var>statements</var></code></dt>
+ <dd>Los enunciados que componen el cuerpo de la función.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Una expresión `async function` es muy similar, y casi tiene la misma sintaxis que, una {{jsxref('Statements/async_function', 'async function statement')}}. La principal diferencia entre una expresión `async function` y un enunciado `async function` es el _nombre de la función_, que puede ser omitido en una expresión `async function` para crear funciones _anonymous_. Una expresión `async function` puede ser utilizada como un {{Glossary("IIFE")}} (Expresión de función inmediatamente invocada, Immediately Invoked Function Expression) que se ejecuta tan rápido como es definida. Ver el capítulo sobre [funciones](/es/docs/Web/JavaScript/Reference/Functions) para tener más información.
+<p>Una expresión <code>async function</code> es muy similar, y casi tiene la misma sintaxis que, una {{jsxref('Statements/async_function', 'async function statement')}}. La principal diferencia entre una expresión <code>async function</code> y un enunciado <code>async function</code> es el <em>nombre de la función</em>, que puede ser omitido en una expresión <code>async function</code> para crear funciones <em>anonymous</em>. Una expresión <code>async function</code> puede ser utilizada como un {{Glossary("IIFE")}} (Expresión de función inmediatamente invocada, Immediately Invoked Function Expression) que se ejecuta tan rápido como es definida. Ver el capítulo sobre <a href="/en-US/docs/Web/JavaScript/Reference/Functions">funciones</a> para tener más información.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Ejemplo sencillo
+<h3 id="Ejemplo_sencillo">Ejemplo sencillo</h3>
 
-```js
-function resuelve2SegundosDespues(x) {
-  return new Promise(resolve => {
-    setTimeout(() => {
+<pre class="brush: js">function resuelve2SegundosDespues(x) {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
       resolve(x);
     }, 2000);
   });
@@ -56,7 +57,7 @@ const agregar= async function(x) { // Expresión de una función asíncrona asig
   return x + a + b;
 };
 
-agregar(10).then(v => {
+agregar(10).then(v =&gt; {
   console.log(v);  // imprime 60 después de 4 segundos.
 });
 
@@ -65,23 +66,38 @@ agregar(10).then(v => {
   let p_a = resuelve2SegundosDespues(20);
   let p_b = resuelve2SegundosDespues(30);
   return x + await p_a + await p_b;
-})(10).then(v => {
+})(10).then(v =&gt; {
   console.log(v);  // imprime 60 después de 2 segundos.
 });
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de los navegadores
+<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
 
-{{Compat("javascript.operators.async_function_expression")}}
+<div>
 
-## Ver también
 
-- {{jsxref("Statements/async_function", "async function")}}
-- Objeto {{jsxref("AsyncFunction")}}
-- {{jsxref("Operators/await", "await")}}
+<p>{{Compat("javascript.operators.async_function_expression")}}</p>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Statements/async_function", "async function")}}</li>
+ <li>Objeto {{jsxref("AsyncFunction")}}</li>
+ <li>{{jsxref("Operators/await", "await")}}</li>
+</ul>

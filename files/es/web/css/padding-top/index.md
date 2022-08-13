@@ -3,58 +3,83 @@ title: padding-top
 slug: Web/CSS/padding-top
 translation_of: Web/CSS/padding-top
 ---
-{{CSSRef}}
+<p>{{CSSRef}}</p>
 
-## Sumario
+<h2 id="Summary" name="Summary">Sumario</h2>
 
-La propiedad **`padding-top`** [CSS](/en/CSS "CSS") establece el espacio de relleno requerido en la parte superior del elemento. El [área de padding](/en/CSS/box_model#padding) es el espacio entre el contenido del elemento y su borde. Contrariamente de la propiedad **`margin-top`**, valores negativos no son válidos.
+<p class="brush: js">La propiedad <strong><code>padding-top</code></strong> <a href="/en/CSS" title="CSS">CSS</a> establece el espacio de relleno requerido en la parte superior del elemento. El <a href="/en/CSS/box_model#padding">área de padding</a> es el espacio entre el contenido del elemento y su borde. Contrariamente de la propiedad <strong><code>margin-top</code></strong>, valores negativos no son válidos.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-```css
-/* <length> values (valores fijos) */
+<pre class="brush:css">/* &lt;length&gt; values (valores fijos) */
 padding-top: 0.5em;
 padding-top: 0;
 padding-top: 2cm;
 
-/* <percentage> value (valores porcentuales) */
+/* &lt;percentage&gt; value (valores porcentuales) */
 padding-top: 10%;
 
 /* Global values (valores globales) */
 padding-top: inherit;
 padding-top: initial;
 padding-top: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Values" name="Values">Valores</h3>
 
-- `<length>`
-  - : Especifica un valor positivo fijo. Veáse {{cssxref("&lt;length&gt;")}} para más detalles.
-- `<percentage>`
-  - : Especifica un porcentaje con respecto al bloque que lo contiene.
+<dl>
+ <dt><code>&lt;length&gt;</code></dt>
+ <dd>Especifica un valor positivo fijo. Veáse {{cssxref("&lt;length&gt;")}} para más detalles.</dd>
+ <dt><code>&lt;percentage&gt;</code></dt>
+ <dd>Especifica un porcentaje con respecto al bloque que lo contiene.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-```css
-.content { padding-top: 5%; }
+<pre class="brush: css">.content { padding-top: 5%; }
 .sidebox { padding-top: 10px; }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                               | Estado                                   | Comentarios                                                                                                  |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-top') }}                 | {{ Spec2('CSS3 Box') }}         | No change from {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top') }}. |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-top') }} | {{ Spec2('CSS3 Transitions') }} | Defines `padding-top` as animatable.                                                                         |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top') }} | {{ Spec2('CSS2.1') }}             | No change from {{ Specname('CSS1', '#padding-top', 'padding-top') }}.                     |
-| {{ Specname('CSS1', '#padding-top', 'padding-top') }}                     | {{ Spec2('CSS1') }}                 | Initial definition                                                                                           |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Box', '#the-padding', 'padding-top') }}</td>
+   <td>{{ Spec2('CSS3 Box') }}</td>
+   <td>No change from {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top') }}.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-top') }}</td>
+   <td>{{ Spec2('CSS3 Transitions') }}</td>
+   <td>Defines <code>padding-top</code> as animatable.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top') }}</td>
+   <td>{{ Spec2('CSS2.1') }}</td>
+   <td>No change from {{ Specname('CSS1', '#padding-top', 'padding-top') }}.</td>
+  </tr>
+  <tr>
+   <td>{{ Specname('CSS1', '#padding-top', 'padding-top') }}</td>
+   <td>{{ Spec2('CSS1') }}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad en navegadores</h2>
 
 {{Compat("css.properties.padding-top")}}

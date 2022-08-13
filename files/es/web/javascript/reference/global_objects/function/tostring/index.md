@@ -4,52 +4,80 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/toString
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`toString()`** retorna una cadena representando el código fuente de la función.
+<p>El método <code><strong>toString()</strong></code> retorna una cadena representando el código fuente de la función.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    function.toString(indentation)
+<pre class="syntaxbox"><code><var>function</var>.toString(indentation)</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `indentation` {{non-standard_inline}} {{obsolete_inline(17)}}
-  - : La cantidad de espacios a indentar en la representación de cadena del código fuente. Si `indentation` es menor o igual a `-1`, la mayoría de los espacios innecesarios son eliminados.
+<dl>
+ <dt><code>indentation</code> {{non-standard_inline}} {{obsolete_inline(17)}}</dt>
+ <dd>La cantidad de espacios a indentar en la representación de cadena del código fuente. Si <code>indentation</code> es menor o igual a <code>-1</code>, la mayoría de los espacios innecesarios son eliminados.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-El objeto {{jsxref("Function")}} reconduce el método {{jsxref("Object.prototype.toString", "toString")}} heredado de {{jsxref("Object")}}; no hereda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}}, el método `toString` retorna una representación de cadena del objeto en forma de declaración de función. Esto es, `toString` descompila la función y la cadena retornada incluye la palabra clave `function`, la lista de argumentos, llaves y el código fuente del cuerpo de la función.
+<p>El objeto {{jsxref("Function")}} reconduce el método {{jsxref("Object.prototype.toString", "toString")}} heredado de  {{jsxref("Object")}}; no hereda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}}, el método <code>toString</code> retorna una representación de cadena del objeto en forma de declaración de función. Esto es, <code>toString</code> descompila la función y la cadena retornada incluye la palabra clave <code>function</code>, la lista de argumentos, llaves y el código fuente del cuerpo de la función.</p>
 
-JavaScript llama al método `toString` automáticamente cuando una {{jsxref("Function")}} va a ser representada como un valor de texto, p.e. cuando una función es concatenada con un valor de cadena (string).
+<p>JavaScript llama al método <code>toString</code> automáticamente cuando una {{jsxref("Function")}} va a ser representada como un valor de texto, p.e. cuando una función es concatenada con un valor de cadena (string).</p>
 
-El método `toString()` producirá una excepción {{jsxref("TypeError")}} ("Function.prototype.toString called on incompatible object"), si el valor de su objeto `this` no es un objeto `Function`. Esto también ocurrirá para objetos {{jsxref("Proxy")}}, por ejemplo:
+<p>El método <code>toString()</code> producirá una excepción {{jsxref("TypeError")}} ("Function.prototype.toString called on incompatible object"), si el valor de su objeto <code>this</code> no es un objeto <code>Function</code>. Esto también ocurrirá para objetos {{jsxref("Proxy")}}, por ejemplo:</p>
 
-```js example-bad
-Function.prototype.toString.call("foo"); // TypeError
+<pre class="brush: js example-bad">Function.prototype.toString.call("foo"); // TypeError
 
 var proxy = new Proxy(function() {}, {});
 Function.prototype.toString.call(proxy); // TypeError
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                           | Estado                       | Observaciones                                                             |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                 | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.1.                       |
-| {{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}                             | {{Spec2('ES5.1')}}     |                                                                           |
-| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}     | {{Spec2('ES6')}}         | Añadidos requerimientos más específicos para la representación de cadena. |
-| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                           |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Observaciones</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial. Implementado en JavaScript 1.1.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Añadidos requerimientos más específicos para la representación de cadena.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Function.toString")}}
 
-## Notas específicas para Gecko
+<h2 id="Notas_específicas_para_Gecko">Notas específicas para Gecko</h2>
 
-- Desde Gecko 17.0 {{geckoRelease("17")}}, `Function.prototype.toString()` fue implementada salvando el código fuente de la función. El descompilador fue eliminado, de modo que el parámetro `indentation` ya no se necesita más. Ver {{bug("761723")}} para más detalles.
-- A partir de Gecko 38 {{geckoRelease("38")}}, `Function.prototype.toString()` produce error para objetos {{jsxref("Proxy")}} ({{bug(1100936)}}).
+<ul>
+ <li>Desde Gecko 17.0 {{geckoRelease("17")}}, <code>Function.prototype.toString()</code> fue implementada salvando el código fuente de la función. El descompilador fue eliminado, de modo que el parámetro <code>indentation</code> ya no se necesita más. Ver {{bug("761723")}} para más detalles.</li>
+ <li>A partir de Gecko 38 {{geckoRelease("38")}}, <code>Function.prototype.toString()</code> produce error para objetos {{jsxref("Proxy")}}  ({{bug(1100936)}}).</li>
+</ul>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Object.prototype.toString()")}}
+<ul>
+ <li>{{jsxref("Object.prototype.toString()")}}</li>
+</ul>

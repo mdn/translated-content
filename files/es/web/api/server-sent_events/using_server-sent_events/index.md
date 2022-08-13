@@ -4,57 +4,53 @@ slug: Web/API/Server-sent_events/Using_server-sent_events
 translation_of: Web/API/Server-sent_events/Using_server-sent_events
 original_slug: Server-sent_events/utilizando_server_sent_events_sse
 ---
-Desarrollar una aplicación web que utilice server-sent events es muy fácil. Solo necesitas un pequeño código del lado del servidor para transmitir los eventos a la aplicación web, pero del lado de la aplicacion web se trabaja prácticamente igual que con cualquier otro tipo de eventos.
+<p>Desarrollar una aplicación web que utilice server-sent events es muy fácil. Solo necesitas un pequeño código del lado del servidor para transmitir los eventos a la aplicación web, pero del lado de la aplicacion web se trabaja prácticamente igual que con cualquier otro tipo de eventos.</p>
 
-Puedes ver un ejemplo [aqui](https://developer.mozilla.org/samples/sse/) (actualmente no funciona).
+<p>Puedes ver un ejemplo <a href="https://developer.mozilla.org/samples/sse/">aqui</a> (actualmente no funciona).</p>
 
-[ejemplo2](http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_sse)
+<p><a href="http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_sse">ejemplo2</a></p>
 
-## Recibiendo eventos desde el servidor
+<h2 id="Recibiendo_eventos_desde_el_servidor">Recibiendo eventos desde el servidor</h2>
 
-El server-sent event API está contenido en la interfaz [`EventSource`](https://developer.mozilla.org/en/Server-sent_events/EventSource); para abrir una conexión al servidor para recibir eventos de él. Se crea un nuevo objeto new [EventSource](https://developer.mozilla.org/en/Server-sent_events/EventSource), especificando el URI de un script que genera los eventos, Por ejemplo:
+<p>El server-sent event API está contenido en la interfaz <a href="https://developer.mozilla.org/en/Server-sent_events/EventSource"><code>EventSource</code></a>; para abrir una conexión al servidor para recibir eventos de él. Se crea un nuevo objeto new <a href="https://developer.mozilla.org/en/Server-sent_events/EventSource">EventSource</a>, especificando el URI de un script que genera los eventos, Por ejemplo:</p>
 
-```js
-var evtSource = new EventSource("ssedemo.php");
-```
+<pre class="brush: js">var evtSource = new EventSource("ssedemo.php");
+</pre>
 
-> **Nota:** Aunque todavía no es parte de la norma, EventSource es soportado por Firefox 11 y posteriores. Se espera que pronto forme parte del estándar.
+<div class="note"><strong>Nota</strong>: Aunque todavía no es parte de la norma, EventSource es soportado por Firefox 11 y posteriores. Se espera que pronto forme parte del estándar.</div>
 
-Una vez que ha instanciado el origen del evento, puede comenzar a escuchar los mensajes:
+<p>Una vez que ha instanciado el origen del evento, puede comenzar a escuchar los mensajes:</p>
 
-```js
-evtSource.onmessage = function(e) {
+<pre class="brush: js">evtSource.onmessage = function(e) {
   var newElement = document.createElement("li");
 
   newElement.innerHTML = "message: " + e.data;
   eventList.appendChild(newElement);
 }
-```
+</pre>
 
-Este codigo escucha todos los mensajes entrantes (Es decir, todos los avisos del servidor, que no tienen un campo de eventos en ellos) y anexa texto del mensaje a la lista en el documento HTML.
+<p>Este codigo escucha todos los mensajes entrantes (Es decir, todos los avisos del servidor, que no tienen un campo de eventos en ellos) y anexa texto del mensaje a la lista en el documento HTML.</p>
 
-También puedes escuchar eventos, usando `addEventListener()`:
+<p>También puedes escuchar eventos, usando <code>addEventListener()</code>:</p>
 
-```js
-evtSource.addEventListener("ping", function(e) {
+<pre class="brush: js">evtSource.addEventListener("ping", function(e) {
   var newElement = document.createElement("li");
 
   var obj = JSON.parse(e.data);
   newElement.innerHTML = "ping at " + obj.time;
   eventList.appendChild(newElement);
 }, false);
-```
+</pre>
 
-Este código es similar, excepto que este se activa cada vez que el servidor envia un mensaje con el campo de evento "ping"; entonces se analiza el JSON en el campo de datos y retorna esa informacion.
+<p>Este código es similar,  excepto que este se activa cada vez que el servidor envia un mensaje con el campo de evento "ping"; entonces se analiza el JSON en el campo de datos y retorna esa informacion.</p>
 
-## Enviando eventos desde el servidor
+<h2 id="Enviando_eventos_desde_el_servidor">Enviando eventos desde el servidor</h2>
 
-El script del servidor que envia los datos tiene que responder con el tipo MIME text/event-stream. Cada notificación se envia con un bloque de texto terminado en un par de saltos de línea, para mas detalles sobre el formato sobre la secuencia de evetos, ver [Event stream format](#event_stream_format),
+<p>El script del servidor que envia los datos tiene que responder con el tipo MIME text/event-stream. Cada notificación se envia con un bloque de texto terminado en un par de saltos de línea, para mas detalles sobre el formato sobre la secuencia de evetos, ver <a href="#event_stream_format">Event stream format</a>,</p>
 
-El codigo PHP para este ejemplo que estamos utilizando:
+<p>El codigo PHP para este ejemplo que estamos utilizando:</p>
 
-```php
-date_default_timezone_set("America/New_York");
+<pre class="brush: php">date_default_timezone_set("America/New_York");
 header("Content-Type: text/event-stream\n\n");
 
 $counter = rand(1, 10);
@@ -79,108 +75,110 @@ while (1) {
   flush();
   sleep(1);
 }
-```
+</pre>
 
-Se genera un evento cada segundo, con el evento "ping". Los datos de cada evento es un objeto JSON que contiene, en este caso, solo la fecha en formato ISO 8601 correspondiente a la hora en que se generó el evento. A intervalos aleatorios, se envia un mensaje simple (sin ningún tipo de evento)
+<p>Se genera un evento cada segundo, con el evento "ping". Los datos de cada evento es un objeto JSON que contiene, en este caso, solo la fecha en formato ISO 8601 correspondiente a la hora en que se generó el evento. A intervalos aleatorios, se envia un mensaje simple (sin ningún tipo de evento)</p>
 
-## Gestion de errores
+<h2 id="Gestion_de_errores">Gestion de errores</h2>
 
-Cuando se producen problemas (como un tiempo de espera o problemas relacionados con el control de acceso), se genera un evento de error. Puedes tomar acción sobre esto al implementar una devolución de llamada al objeto EventSource:
+<p>Cuando se producen problemas (como un tiempo de espera o problemas relacionados con el control de acceso), se genera un evento de error. Puedes tomar acción sobre esto al implementar una devolución de llamada al objeto EventSource:</p>
 
-```js
-evtSource.onerror = function(e) {
+<pre class="brush: js">evtSource.onerror = function(e) {
   alert("EventSource failed.");
 };
-```
+</pre>
 
-En Firefox 22, no parece que haya manera de distinguir entre los diferentes de eventos de error.
+<p>En Firefox 22, no parece que haya manera de distinguir entre los diferentes de eventos de error.</p>
 
-## Cerrando flujo de eventos
+<h2 id="Cerrando_flujo_de_eventos" style="margin-bottom: 20px; line-height: 30px; font-size: 2.14285714285714rem;">Cerrando flujo de eventos</h2>
 
-Por defecto, si la conexión entre el cliente y el servidor se cierra, la conexión es reiniciada. Podemos terminar la conexión con el método `.close()`
+<p>Por defecto, si la conexión entre el cliente y el servidor se cierra, la conexión es reiniciada. Podemos terminar la conexión con el método <code>.close()</code></p>
 
-```html
-evtSource.close();
-```
+<pre class="language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">evtSource.close();</code></pre>
 
-## Formato de flujo de eventos (formato stream)
+<div> </div>
 
-El flujo de eventos es una corriente sencilla de datos de texto, que deben ser codificados usando UTF-8. Los mensajes en el flujo de eventos están separados por un par de caracteres de salto de línea. Si hay un símbolo de dos puntos como primer caracter de una línea, se entiende que es un comentario y es ignorado.
+<h2 id="Formato_de_flujo_de_eventos_(formato_stream)">Formato de flujo de eventos (formato stream)</h2>
 
-> **Nota:** La línea de comentario se puede usar para prevenir que la conexión se agote por tiempo (timeout); un sevidor puede enviar periódicamente un comentario para mantener viva la conexión.
+<p>El flujo de eventos es una corriente sencilla de datos de texto, que deben ser codificados usando UTF-8. Los mensajes en el flujo de eventos están separados por un par de caracteres de salto de línea. Si hay un símbolo de dos puntos como primer caracter de una línea, se entiende que es un comentario y es ignorado. </p>
 
-Cada mensaje consiste en una o más líneas de texto que enumeran los campos para ese mensaje. Cada campo está representado por el nombre del campo, seguido por los datos de texto para el valor de ese campo.
+<div class="note"><strong>Nota:</strong> La línea de comentario se puede usar para prevenir que la conexión se agote por tiempo (timeout); un sevidor puede enviar periódicamente un comentario para mantener viva la conexión.</div>
 
-### Campos
+<p>Cada mensaje consiste en una o más líneas de texto que enumeran los campos para ese mensaje. Cada campo está representado por el nombre del campo, seguido por los datos de texto para el valor de ese campo.</p>
 
-Los siguientes nombres de campo son definidos por la especificación:
+<h3 id="Campos">Campos</h3>
 
-#### event
+<p>Los siguientes nombres de campo son definidos por la especificación:</p>
 
-El tipo de evento. Si se especifica, un evento se enviará al navegador a la escucha para el nombre del evento especificado, el sitio web usaria `addEventLister()` para escuchar eventos nombrados. El controlador `onmessage` se llama si no se especifica el nombre del evento para un mensaje.
+<h4 id="event">event</h4>
 
-#### data
+<p style="margin-left: 40px;">El tipo de evento. Si se especifica, un evento se enviará al navegador a la escucha para el nombre del evento especificado, el sitio web usaria <code>addEventLister()</code> para escuchar eventos nombrados. El controlador <code>onmessage</code> se llama si no se especifica el nombre del evento para un mensaje.</p>
 
-El campo de datos para el mensaje. Cuando el EventSource recibe múltiples lineas con "`data:`", se concatenara, insertando un caracter de nueva de linea entre cada uno. Se eliminan los saltos de línea al final **\[VERIFICAR].**
+<h4 id="data">data</h4>
 
-#### id
+<p style="margin-left: 40px;">El campo de datos  para el mensaje. Cuando el EventSource recibe múltiples lineas con "<code>data:</code>", se concatenara, insertando un caracter de nueva de linea entre cada uno. Se eliminan los saltos de línea al final <strong>[VERIFICAR].</strong></p>
 
-El ID del evento que establecerá el último ID del objeto EventSource.
+<h4 id="id"><strong>id</strong></h4>
 
-#### Retry
+<p style="margin-left: 40px;">  El ID del evento que establecerá el último ID del objeto EventSource.</p>
 
-El tiempo de reconexión para usar al intentar enviar el evento. \[Qué código maneja esto?] Este debe ser un número entero, que especifica el tiempo de reconexion en milisegundos. Si se especifica un valor no entero, el campo se ignora.
+<h4 id="Retry"><strong>Retry</strong></h4>
 
-Se omiten todos los demas nombres de campo.
+<p style="margin-left: 40px;">El tiempo de reconexión para usar al intentar enviar el evento. [Qué código maneja esto?] Este debe ser un número entero, que especifica el tiempo de reconexion en milisegundos. Si se especifica un valor no entero, el campo se ignora.  </p>
 
-> **Nota:** Si una línea no contiene dos puntos, la línea entera se tratara como un nombre de campo, con una cadena de valor vacio.
+<p>Se omiten todos los demas nombres de campo.</p>
 
-### Ejemplos
+<div class="note"><strong>Nota:</strong> Si una línea no contiene dos puntos, la línea entera se tratara como un nombre de campo, con una cadena de valor vacio.</div>
 
-#### Mensajes con datos únicamente
+<h3 id="Ejemplos">Ejemplos</h3>
 
-En el siguiente ejemplo, hay tres mensajes enviados. El primero es solo un comentario, debido a que empieza con dos puntos. Como se mencionó anteriormente, esto puede ser útil para mantener la conexión viva si los mensajes no son enviados regularmente.
+<h4 id="Mensajes_con_datos_únicamente">Mensajes con datos únicamente</h4>
 
-The second message contains a data field with the value "some text". The third message contains a data field with the value "another message\nwith two lines". Note the newline in the value.
+<p>En el siguiente ejemplo, hay tres mensajes enviados. El primero es solo un comentario, debido a que empieza con dos puntos. Como se mencionó anteriormente, esto puede ser útil para mantener la conexión viva si los mensajes no son enviados regularmente.</p>
 
-El segundo mensaje contiene un campo de datos con el valor "some text". El tercer mensaje contiene un campo de datos con el valor "another message\nwith two lines". Nota la nueva línea en el valor.
+<p>The second message contains a data field with the value "some text". The third message contains a data field with the value "another message\nwith two lines". Note the newline in the value.</p>
 
-    : this is a test stream
+<p>El segundo mensaje contiene un campo de datos con el valor "some text". El tercer mensaje contiene un campo de datos con el valor "another message\nwith two lines". Nota la nueva línea en el valor.</p>
 
-    data: some text
+<pre>: this is a test stream
 
-    data: another message
-    data: with two lines
+data: some text
 
-#### Eventos nombrados
+data: another message
+data: with two lines
+</pre>
 
-Este ejemplo envia algunos eventos nombrados. Cada uno tiene un nombre de evento especificado por el campo `event`, y un campo `data` cuyo valor es una cadena JSON apropiada con los datos necesarios para que el cliente actue sobre el evento. El campo `data`, podria, por supuesto, tener cualquier cadena; no tiene que ser un JSON.
+<h4 id="Eventos_nombrados">Eventos nombrados</h4>
 
-    event: userconnect
-    data: {"username": "bobby", "time": "02:33:48"}
+<p>Este ejemplo envia algunos eventos nombrados. Cada uno tiene un nombre de evento especificado por el campo <code>event</code>, y un campo <code>data</code> cuyo valor es una cadena JSON apropiada con los datos necesarios para que el cliente actue sobre el evento. El campo <code>data</code>, podria, por supuesto, tener cualquier cadena; no tiene que ser un JSON.</p>
 
-    event: usermessage
-    data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+<pre>event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
 
-    event: userdisconnect
-    data: {"username": "bobby", "time": "02:34:23"}
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
-    event: usermessage
-    data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+event: userdisconnect
+data: {"username": "bobby", "time": "02:34:23"}
 
-#### Mezclando y emparejando
+event: usermessage
+data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+</pre>
 
-No tienes que usar solamente mensajes sin nombrar o eventos tipados; puedes mezclarlo juntos en un solo flujo de evento.
+<h4 id="Mezclando_y_emparejando">Mezclando y emparejando</h4>
 
-    event: userconnect
-    data: {"username": "bobby", "time": "02:33:48"}
+<p>No tienes que usar solamente mensajes sin nombrar o eventos tipados; puedes mezclarlo juntos en un solo flujo de evento.</p>
 
-    data: Here's a system message of some kind that will get used
-    data: to accomplish some task.
+<pre>event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
 
-    event: usermessage
-    data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+data: Here's a system message of some kind that will get used
+data: to accomplish some task.
 
-## Compatibilidad con navegadores
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+</pre>
+
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.EventSource")}}

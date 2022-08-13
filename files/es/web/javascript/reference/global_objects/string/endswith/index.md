@@ -10,71 +10,80 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/endsWith
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`endsWith()`** determina si una cadena de texto termina con los caracteres de una cadena indicada, devolviendo `true` o `false` según corresponda.
+<p>El método <strong><code>endsWith()</code></strong> determina si una cadena de texto termina con los caracteres de una cadena indicada, devolviendo <code>true</code> o <code>false</code> según corresponda.</p>
 
-{{EmbedInteractiveExample("pages/js/string-endswith.html")}}
+<div>{{EmbedInteractiveExample("pages/js/string-endswith.html")}}</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    str.endsWith(searchString[, position])
+<pre class="syntaxbox notranslate"><code><var>str</var>.endsWith(<var>searchString</var>[, <var>position</var>])</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `searchString`
-  - : Los caracteres a buscar hasta el final de la cadena _`str`_.
-- `length` {{optional_inline}}
-  - : Si se indica, se utiliza como el tamaño de _`str`_. Por defecto se usa `str.length`.
+<dl>
+ <dt><code><var>searchString</var></code></dt>
+ <dd>Los caracteres a buscar hasta el final de la cadena <em><code>str</code></em>.</dd>
+ <dt><code><var>length</var></code> {{optional_inline}}</dt>
+ <dd>Si se indica, se utiliza como el tamaño de <em><code>str</code></em>. Por defecto se usa <code><em>str</em>.length</code>.</dd>
+</dl>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-**`true`** si los caracteres proporcionados se encuentran al final de la cadena de texto; en caso contrario, **`false`**.
+<p><strong><code>true</code></strong> si los caracteres proporcionados se encuentran al final de la cadena de texto; en caso contrario, <strong><code>false</code></strong>.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Este método determina si una cadena de texto termina en otra cadena o no. Este método distingue entre mayúsculas y minúsculas.
+<p>Este método determina si una cadena de texto termina en otra cadena o no. Este método distingue entre mayúsculas y minúsculas.</p>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-Este método ha sido añadido a la especificación ECMAScript 6 y puede no estar disponible en todas las implementaciones de JavaScript. Sin embargo, puedes implementar el polyfill `String.prototype.endsWith()` con el siguiente fragmento de código:
+<p>Este método ha sido añadido a la especificación ECMAScript 6 y puede no estar disponible en todas las implementaciones de JavaScript. Sin embargo, puedes implementar el polyfill <code>String.prototype.endsWith()</code> con el siguiente fragmento de código:</p>
 
-```js
-if (!String.prototype.endsWith) {
+<pre class="brush: js notranslate">if (!String.prototype.endsWith) {
 	String.prototype.endsWith = function(search, this_len) {
-		if (this_len === undefined || this_len > this.length) {
+		if (this_len === undefined || this_len &gt; this.length) {
 			this_len = this.length;
 		}
 		return this.substring(this_len - search.length, this_len) === search;
 	};
 }
-```
+</pre>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `endsWith()`
+<h3 id="Usando_endsWith">Usando <code>endsWith()</code></h3>
 
-```js
-let str = 'To be, or not to be, that is the question.'
+<pre class="brush: js notranslate">let str = 'To be, or not to be, that is the question.'
 
 console.log(str.endsWith('question.'))  // true
 console.log(str.endsWith('to be'))      // false
 console.log(str.endsWith('to be', 19))  // true
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("javascript.builtins.String.endsWith")}}
+<p>{{Compat("javascript.builtins.String.endsWith")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+<ul>
+ <li>{{jsxref("String.prototype.startsWith()")}}</li>
+ <li>{{jsxref("String.prototype.includes()")}}</li>
+ <li>{{jsxref("String.prototype.indexOf()")}}</li>
+ <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
+</ul>

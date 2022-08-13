@@ -10,30 +10,43 @@ tags:
   - efecto
 translation_of: Web/API/Animation/effect
 ---
-{{ SeeCompatTable() }} {{ APIRef("Web Animations") }}
+<div>{{ SeeCompatTable() }} {{ APIRef("Web Animations") }}</div>
 
-La propiedad **`Animation`\*\***`.effect`\*\* de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) obtiene y establece el efecto objetivo de una animación. El efecto objetivo puede ser un objeto efecto de un tipo basado en {{domxref("AnimationEffectReadOnly")}}, como {{domxref("KeyframeEffect")}}, o `null`.
+<p>La propiedad <code><strong>Animation</strong></code><strong><code>.effect</code></strong> de la  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> obtiene y establece el efecto objetivo de una animación. El efecto objetivo puede ser un objeto efecto de un tipo basado en {{domxref("AnimationEffectReadOnly")}}, como {{domxref("KeyframeEffect")}}, o <code>null</code>.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var effect = Animation.effect;
+<pre class="syntaxbox">var <em>effect</em> = <em>Animation</em>.effect;
 
-    Animation.effect = {{domxref("AnimationEffectReadOnly")}}
+<em>Animation</em>.effect = <em>{{domxref("AnimationEffectReadOnly")}}</em></pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Un objeto {{domxref("AnimationEffectReadOnly")}} que describe el efecto de animación objetivo para la animación, o `null` para indicar que el efecto no está activo.
+<p>Un objeto {{domxref("AnimationEffectReadOnly")}} que describe el efecto de animación objetivo para la animación, o <code>null</code> para indicar que el efecto no está activo.</p>
 
-| Specification                                                                                        | Status                               | Comment         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------- |
-| {{SpecName('Web Animations', '#dom-animation-effect', 'Animation.effect' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Animations', '#dom-animation-effect', 'Animation.effect' )}}</td>
+   <td>{{Spec2('Web Animations')}}</td>
+   <td>Editor's draft.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.Animation.effect")}}
 
-## Ver también
+<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("AnimationEffectReadOnly")}}
-- {{domxref("Animation")}}
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li>{{domxref("AnimationEffectReadOnly")}}</li>
+ <li>{{domxref("Animation")}}</li>
+</ul>

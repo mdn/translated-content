@@ -4,24 +4,36 @@ slug: Web/API/isSecureContext
 translation_of: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 ---
-{{APIRef()}}{{SeeCompatTable}}
+<p>{{APIRef()}}{{SeeCompatTable}}</p>
 
-La propiedad de sólo-lectura **`isSecureContext`**, de la interface {{domxref("WindowOrWorkerGlobalScope")}} Devuelve un booleano indicando si el contexto actual es seguro (`true`) or not (`false`).
+<p>La propiedad de sólo-lectura <code><strong>isSecureContext</strong></code>, de la interface  {{domxref("WindowOrWorkerGlobalScope")}} Devuelve un booleano indicando si el contexto actual es seguro (<code>true</code>) or not (<code>false</code>).</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var isItSecure = self.isSecureContext; // or just isSecureContext
+<pre class="syntaxbox">var <em>isItSecure</em> = self.isSecureContext; // or just isSecureContext
+</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Un {{domxref("Boolean")}}.
+<p>Un {{domxref("Boolean")}}.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                               | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Secure Contexts', 'webappapis.html#dom-origin', 'WindowOrWorkerGlobalScope.isSecureContext')}} | {{Spec2('Secure Contexts')}} | Definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Secure Contexts', 'webappapis.html#dom-origin', 'WindowOrWorkerGlobalScope.isSecureContext')}}</td>
+   <td>{{Spec2('Secure Contexts')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de Navegadores
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
 {{Compat("api.isSecureContext")}}

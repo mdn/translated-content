@@ -13,127 +13,128 @@ tags:
   - progresiva
 translation_of: Web/Progressive_web_apps/App_structure
 ---
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+<div>{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}</div>
 
-Ahora que conoces la teoría detrás de las PWAs, veamos la estructura recomendada de una aplicación real. Comenzaremos analizando la aplicación [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), veamos por qué está construida de esa manera y qué beneficios aporta.
+<p class="summary">Ahora que conoces la teoría detrás de las PWAs, veamos la estructura recomendada de una aplicación real. Comenzaremos analizando la aplicación <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a>, veamos por qué está construida de esa manera y qué beneficios aporta.</p>
 
-## Arquitectura de una aplicación
+<h2 id="Arquitectura_de_una_aplicación">Arquitectura de una aplicación</h2>
 
-Hay dos principales y diferentes enfoques para representar un sitio web — en el servidor o en el cliente. Ambos tienen sus ventajas y desventajas, y puedes combinar los dos enfoques hasta cierto punto.
+<p>Hay dos principales y diferentes enfoques para representar un sitio web — en el servidor o en el cliente. Ambos tienen sus ventajas y desventajas, y puedes combinar los dos enfoques hasta cierto punto.</p>
 
-- La representación del lado del servidor (SSR) significa que un sitio web se representa en el servidor, por lo que ofrece una primera carga más rápida, pero navegar entre páginas requiere descargar contenido HTML nuevo. Funciona muy bien en todos los navegadores, pero adolece en términos de tiempo de navegación entre páginas y, por lo tanto, rendimiento percibido general — cargar una página requiere un nuevo viaje de ida y vuelta al servidor.
-- La representación de lado del cliente (CSR) permite que el sitio web se actualice en el navegador casi instantáneamente cuando se navega a diferentes páginas, pero requiere más de un golpe de descarga inicial y una representación adicional en el cliente al principio. El sitio web es más lento en una visita inicial, pero puede ser más rápido para navegar.
+<ul>
+ <li>La representación del lado del servidor (SSR) significa que un sitio web se representa en el servidor, por lo que ofrece una primera carga más rápida, pero navegar entre páginas requiere descargar contenido HTML nuevo. Funciona muy bien en todos los navegadores, pero adolece en términos de tiempo de navegación entre páginas y, por lo tanto, rendimiento percibido general — cargar una página requiere un nuevo viaje de ida y vuelta al servidor.</li>
+ <li>La representación de lado del cliente (CSR) permite que el sitio web se actualice en el navegador casi instantáneamente cuando se navega a diferentes páginas, pero requiere más de un golpe de descarga inicial y una representación adicional en el cliente al principio. El sitio web es más lento en una visita inicial, pero puede ser más rápido para navegar.</li>
+</ul>
 
-La combinación de SSR con CSR puede generar los mejores resultados: puedes representar un sitio web en el servidor, almacenar en caché su contenido y luego actualizar la representación en el lado del cliente cuando sea necesario. La carga de la primera página es rápida debido al SSR y la navegación entre páginas es fluida porque el cliente puede volver a renderizar la página solo con las partes que han cambiado.
+<p>La combinación de SSR con CSR puede generar los mejores resultados: puedes representar un sitio web en el servidor, almacenar en caché su contenido y luego actualizar la representación en el lado del cliente cuando sea necesario. La carga de la primera página es rápida debido al SSR y la navegación entre páginas es fluida porque el cliente puede volver a renderizar la página solo con las partes que han cambiado.</p>
 
-Las PWAs se pueden crear utilizando cualquier enfoque que desees, pero algunas funcionarán mejor que otras. El enfoque más popular es el concepto de "intérprete de la aplicación", que combina SSR y CSR exactamente de la manera descrita anteriormente, y además sigue la metodología "fuera de línea primero" que explicaremos en detalle en los próximos artículos y utilizaremos en nuestra aplicación de ejemplo. También hay un nuevo enfoque que involucra la {{web.link("/es/docs/Web/API/Streams_API", "API Streams")}}, que mencionaremos brevemente.
+<p>Las PWAs se pueden crear utilizando cualquier enfoque que desees, pero algunas funcionarán mejor que otras. El enfoque más popular es el concepto de "intérprete de la aplicación", que combina SSR y CSR exactamente de la manera descrita anteriormente, y además sigue la metodología "fuera de línea primero" que explicaremos en detalle en los próximos artículos y utilizaremos en nuestra aplicación de ejemplo. También hay un nuevo enfoque que involucra la {{web.link("/es/docs/Web/API/Streams_API", "API Streams")}}, que mencionaremos brevemente.</p>
 
-## Intérprete de la aplicación
+<h2 id="Intérprete_de_la_aplicación">Intérprete de la aplicación</h2>
 
-El concepto de intérprete de la aplicación se ocupa de cargar una interfaz de usuario mínima lo antes posible y luego almacenarla en caché para que esté disponible sin conexión para visitas posteriores antes de cargar todo el contenido de la aplicación. De esa manera, la próxima vez que alguien visite la aplicación desde el dispositivo, la interfaz de usuario se cargará desde la caché de inmediato y se solicitará cualquier contenido nuevo del servidor (si aún no está disponible en la caché).
+<p>El concepto de intérprete de la aplicación se ocupa de cargar una interfaz de usuario mínima lo antes posible y luego almacenarla en caché para que esté disponible sin conexión para visitas posteriores antes de cargar todo el contenido de la aplicación. De esa manera, la próxima vez que alguien visite la aplicación desde el dispositivo, la interfaz de usuario se cargará desde la caché de inmediato y se solicitará cualquier contenido nuevo del servidor (si aún no está disponible en la caché).</p>
 
-Esta estructura es rápida y también se siente rápida, ya que el usuario ve "algo" instantáneamente, en lugar de una ruleta de carga o una página en blanco. También permite que el sitio web sea accesible sin conexión si la conexión de red no está disponible.
+<p>Esta estructura es rápida y también se siente rápida, ya que el usuario ve "algo" instantáneamente, en lugar de una ruleta de carga o una página en blanco. También permite que el sitio web sea accesible sin conexión si la conexión de red no está disponible.</p>
 
-Podemos controlar lo que se solicita del servidor y lo que se recupera de la caché con un {{web.link("/es/docs/Web/API/Service_Worker_API", "servicio worker")}}, que se explicará en detalle en el próximo artículo, por ahora centrémonos en la estructura en sí misma.
+<p>Podemos controlar lo que se solicita del servidor y lo que se recupera de la caché con un {{web.link("/es/docs/Web/API/Service_Worker_API", "servicio worker")}}, que se explicará en detalle en el próximo artículo, por ahora centrémonos en la estructura en sí misma.</p>
 
-### ¿Por qué debería usarla?
+<h3 id="¿Por_qué_debería_usarla">¿Por qué debería usarla?</h3>
 
-Esta arquitectura permite que un sitio web se beneficie al máximo de todas las funciones de PWA — almacena en caché el intérprete de la aplicación y administra el contenido dinámico de una manera que mejora enormemente el rendimiento. Además del intérprete básico, puedes agregar otras funciones como {{web.link("/es/docs/Web/Progressive_web_apps/Add_to_home_screen", "agregar a la pantalla de inicio")}} o {{web.link("/es/docs/Web/API/Push_API", "notificaciones push")}}, con la certeza de que la aplicación seguirá funcionando correctamente si no son compatibles con el navegador del usuario — esta es la belleza de la mejora progresiva.
+<p>Esta arquitectura permite que un sitio web se beneficie al máximo de todas las funciones de PWA — almacena en caché el intérprete de la aplicación y administra el contenido dinámico de una manera que mejora enormemente el rendimiento. Además del intérprete básico, puedes agregar otras funciones como {{web.link("/es/docs/Web/Progressive_web_apps/Add_to_home_screen", "agregar a la pantalla de inicio")}} o {{web.link("/es/docs/Web/API/Push_API", "notificaciones push")}}, con la certeza de que la aplicación seguirá funcionando correctamente si no son compatibles con el navegador del usuario — esta es la belleza de la mejora progresiva.</p>
 
-El sitio web se siente como una aplicación nativa con interacción instantánea y un rendimiento sólido, al tiempo que conserva todos los beneficios de la web.
+<p>El sitio web se siente como una aplicación nativa con interacción instantánea y un rendimiento sólido, al tiempo que conserva todos los beneficios de la web.</p>
 
-### Ser enlazable, progresiva y adaptable por diseño
+<h3 id="Ser_enlazable_progresiva_y_adaptable_por_diseño">Ser enlazable, progresiva y adaptable por diseño</h3>
 
-Es importante recordar las ventajas de PWA y tenerlas en cuenta al diseñar la aplicación. El enfoque del intérprete de la aplicación permite que los sitios web sean:
+<p>Es importante recordar las ventajas de PWA y tenerlas en cuenta al diseñar la aplicación. El enfoque del intérprete de la aplicación permite que los sitios web sean:</p>
 
-- Enlazable: aunque se comporta como una aplicación nativa, sigue siendo un sitio web; puedes hacer clic en los enlaces dentro de la página y enviar una URL a alguien si deseas compartirla.
-- Progresiva: comienza con el "buen, antiguo sitio web básico" y agrega progresivamente nuevas funciones mientras recuerdas detectar si están disponibles en el navegador y manejas con elegancia cualquier error que surja si no hay soporte disponible. Por ejemplo, un modo fuera de línea con la ayuda del servicio _workers_ es solo un rasgo adicional que mejora la experiencia del sitio web, pero aún se puede usar perfectamente sin él.
-- Adaptable: El diseño web adaptable también se aplica a las aplicaciones web progresivas, ya que ambas son principalmente para dispositivos móviles. Hay una gran variedad de dispositivos con navegadores — es importante preparar tu sitio web para que funcione en diferentes tamaños de pantalla, ventanas gráficas o densidades de píxeles, utilizando tecnologías como {{web.link("/es/docs/Mozilla/Mobile/Viewport_meta_tag", "metaetiqueta de la ventana gráfica")}}, {{web.link("/es/docs/Web/CSS/Media_Queries/Using_media_queries", "consultas de medios CSS")}}, {{web.link("/es/docs/Web/CSS/CSS_Flexible_Box_Layout", "Flexbox")}} y {{web.link("/es/docs/Web/CSS/CSS_Grid_Layout", "Rejilla CSS")}}.
+<ul>
+ <li>Enlazable: aunque se comporta como una aplicación nativa, sigue siendo un sitio web; puedes hacer clic en los enlaces dentro de la página y enviar una URL a alguien si deseas compartirla.</li>
+ <li>Progresiva: comienza con el "buen, antiguo sitio web básico" y agrega progresivamente nuevas funciones mientras recuerdas detectar si están disponibles en el navegador y manejas con elegancia cualquier error que surja si no hay soporte disponible. Por ejemplo, un modo fuera de línea con la ayuda del servicio <em>workers</em> es solo un rasgo adicional que mejora la experiencia del sitio web, pero aún se puede usar perfectamente sin él.</li>
+ <li>Adaptable: El diseño web adaptable también se aplica a las aplicaciones web progresivas, ya que ambas son principalmente para dispositivos móviles. Hay una gran variedad de dispositivos con navegadores — es importante preparar tu sitio web para que funcione en diferentes tamaños de pantalla, ventanas gráficas o densidades de píxeles, utilizando tecnologías como {{web.link("/es/docs/Mozilla/Mobile/Viewport_meta_tag", "metaetiqueta de la ventana gráfica")}}, {{web.link("/es/docs/Web/CSS/Media_Queries/Using_media_queries", "consultas de medios CSS")}}, {{web.link("/es/docs/Web/CSS/CSS_Flexible_Box_Layout", "Flexbox")}} y {{web.link("/es/docs/Web/CSS/CSS_Grid_Layout", "Rejilla CSS")}}.</li>
+</ul>
 
-## Concepto diferente: _streams_ o transmisiones
+<h2 id="Concepto_diferente_streams_o_transmisiones">Concepto diferente: <em>streams</em> o transmisiones</h2>
 
-Se puede lograr un enfoque completamente diferente para la representación del lado del servidor o del cliente con la {{web.link("/es/docs/Web/API/Streams_API", "API Streams")}}. Con un poco de ayuda del servicio _workers_, las transmisiones pueden mejorar en gran medida la forma en que analizamos el contenido.
+<p>Se puede lograr un enfoque completamente diferente para la representación del lado del servidor o del cliente con la {{web.link("/es/docs/Web/API/Streams_API", "API Streams")}}. Con un poco de ayuda del servicio <em>workers</em>, las transmisiones pueden mejorar en gran medida la forma en que analizamos el contenido.</p>
 
-El modelo de intérprete de la aplicación requiere que todos los recursos estén disponibles antes de que el sitio web pueda comenzar a renderizarse. Es diferente con HTML, ya que el navegador ya está transmitiendo los datos y puede ver cuándo se cargan y procesan los elementos en el sitio web. Sin embargo, para que JavaScript esté "operativo", se debe descargar en su totalidad.
+<p>El modelo de intérprete de la aplicación requiere que todos los recursos estén disponibles antes de que el sitio web pueda comenzar a renderizarse. Es diferente con HTML, ya que el navegador ya está transmitiendo los datos y puede ver cuándo se cargan y procesan los elementos en el sitio web. Sin embargo, para que JavaScript esté "operativo", se debe descargar en su totalidad.</p>
 
-La API de _Streams_ permite a los desarrolladores tener acceso directo a la transmisión de datos desde el servidor — si deseas realizar una operación en los datos (por ejemplo, agregar un filtro a un video), ya no necesitas esperar a que se complete la descarga y convertirla en un blob (o lo que sea) — puedes comenzar de inmediato. Proporciona un control detallado: la transmisión se puede iniciar, encadenar con otra transmisión, cancelar, verificar errores y más.
+<p>La API de <em>Streams</em> permite a los desarrolladores tener acceso directo a la transmisión de datos desde el servidor — si deseas realizar una operación en los datos (por ejemplo, agregar un filtro a un video), ya no necesitas esperar a que se complete la descarga y convertirla en un blob (o lo que sea) — puedes comenzar de inmediato. Proporciona un control detallado: la transmisión se puede iniciar, encadenar con otra transmisión, cancelar, verificar errores y más.</p>
 
-En teoría, la transmisión es un mejor modelo, pero también es más complejo, y en el momento de redactar este artículo (marzo de 2018), la API de _Streams_ todavía está en proceso y aún no está completamente disponible en ninguno de los principales navegadores. Cuando esté disponible, será la forma más rápida de servir el contenido — los beneficios serán enormes en términos de rendimiento.
+<p>En teoría, la transmisión es un mejor modelo, pero también es más complejo, y en el momento de redactar este artículo (marzo de 2018), la API de <em>Streams</em> todavía está en proceso y aún no está completamente disponible en ninguno de los principales navegadores. Cuando esté disponible, será la forma más rápida de servir el contenido — los beneficios serán enormes en términos de rendimiento.</p>
 
-Para obtener ejemplos trabajando y más información, consulta la {{web.link("/es/docs/Web/API/Streams_API", "documentación de la API de Streams")}}.
+<p>Para obtener ejemplos trabajando y más información, consulta la {{web.link("/es/docs/Web/API/Streams_API", "documentación de la API de Streams")}}.</p>
 
-## Estructura de nuestra aplicación de ejemplo
+<h2 id="Estructura_de_nuestra_aplicación_de_ejemplo">Estructura de nuestra aplicación de ejemplo</h2>
 
-La estructura del sitio web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) es bastante simple: consta de un solo archivo HTML ([index.html](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html)) con estilo CSS básico ([style.css](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css)) y algunas imágenes, scripts y tipos de letra. La estructura de la carpeta se ve así:
+<p>La estructura del sitio web <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> es bastante simple: consta de un solo archivo HTML (<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html">index.html</a>) con estilo CSS básico (<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css">style.css</a>) y algunas imágenes, scripts y tipos de letra. La estructura de la carpeta se ve así:</p>
 
-![Estructura del directorio de js13kPWA.](https://mdn.mozillademos.org/files/15925/js13kpwa-directory.png)
+<p><img alt="Estructura del directorio de js13kPWA." src="https://mdn.mozillademos.org/files/15925/js13kpwa-directory.png" style="border-style: solid; border-width: 1px; display: block; height: 356px; margin: 0px auto; width: 320px;"></p>
 
-### El HTML
+<h3 id="El_HTML">El HTML</h3>
 
-Desde el punto de vista HTML, el intérprete de la aplicación es todo lo que está fuera de la sección de contenido:
+<p>Desde el punto de vista HTML, el intérprete de la aplicación es todo lo que está fuera de la sección de contenido:</p>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>js13kGames — Entradas del marco A</title>
-	<meta name="description" content="Una lista de las entradas del marco A enviadas a la competencia js13kGames 2017, que se utiliza como ejemplo para los artículos de MDN sobre Aplicaciones Web Progresivas">
-	<meta name="author" content="end3r">
-	<meta name="theme-color" content="#B12A34">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:image" content="icons/icon-512.png">
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="style.css">
-	<link rel="manifest" href="js13kpwa.webmanifest">
-	<script src="data/games.js" defer></script>
-	<script src="app.js" defer></script>
-</head>
-<body>
-<header>
-	<p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-</header>
-<main>
-	<h1>js13kGames — Entradas del marco A</h1>
-	<p class="description">Lista de juegos enviada a <a href="http://js13kgames.com/aframe">categoría Marco A</a> en la competencia de <a href="http://2017.js13kgames.com">js13kGames 2017</a>. Puedes <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">bifurcar js13kPWA en GitHub</a> para revisar su código fuente.</p>
-	<button id="notifications">Solicitar notificaciones ficticias</button>
-	<section id="content">
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;title&gt;js13kGames — Entradas del marco A&lt;/title&gt;
+	&lt;meta name="description" content="Una lista de las entradas del marco A enviadas a la competencia js13kGames 2017, que se utiliza como ejemplo para los artículos de MDN sobre Aplicaciones Web Progresivas"&gt;
+	&lt;meta name="author" content="end3r"&gt;
+	&lt;meta name="theme-color" content="#B12A34"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	&lt;meta property="og:image" content="icons/icon-512.png"&gt;
+	&lt;link rel="shortcut icon" href="favicon.ico"&gt;
+	&lt;link rel="stylesheet" href="style.css"&gt;
+	&lt;link rel="manifest" href="js13kpwa.webmanifest"&gt;
+	&lt;script src="data/games.js" defer&gt;&lt;/script&gt;
+	&lt;script src="app.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+	&lt;p&gt;&lt;a class="logo" href="http://js13kgames.com"&gt;&lt;img src="img/js13kgames.png" alt="js13kGames"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/header&gt;
+&lt;main&gt;
+	&lt;h1&gt;js13kGames — Entradas del marco A&lt;/h1&gt;
+	&lt;p class="description"&gt;Lista de juegos enviada a &lt;a href="http://js13kgames.com/aframe"&gt;categoría Marco A&lt;/a&gt; en la competencia de &lt;a href="http://2017.js13kgames.com"&gt;js13kGames 2017&lt;/a&gt;. Puedes &lt;a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"&gt;bifurcar js13kPWA en GitHub&lt;/a&gt; para revisar su código fuente.&lt;/p&gt;
+	&lt;button id="notifications"&gt;Solicitar notificaciones ficticias&lt;/button&gt;
+	&lt;section id="content"&gt;
 		// Contenido insertado aquí
-	</section>
-</main>
-<footer>
-	<p>© js13kGames 2012-2020, creado y mantenido por <a href="http://end3r.com">Andrzej Mazur</a> de <a href="http://enclavegames.com">Enclave Games</a>.</p>
-</footer>
-</body>
-</html>
-```
+	&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+	&lt;p&gt;© js13kGames 2012-2020, creado y mantenido por &lt;a href="http://end3r.com"&gt;Andrzej Mazur&lt;/a&gt; de &lt;a href="http://enclavegames.com"&gt;Enclave Games&lt;/a&gt;.&lt;/p&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
 
-La sección {{HTMLElement("head")}} contiene información básica como título, descripción y enlaces a CSS, manifiesto web, archivo JS de contenido de juegos y app.js; ahí es donde se inicia nuestra aplicación JavaScript. El {{HTMLElement("body")}} se divide en {{HTMLElement("header")}} (que contiene la imagen vinculada), {{HTMLElement("main")}} de la página (con título, descripción y lugar para el contenido) y {{HTMLElement("footer")}} (derechos de autor y enlaces).
+<p>La sección {{HTMLElement("head")}} contiene información básica como título, descripción y enlaces a CSS, manifiesto web, archivo JS de contenido de juegos y app.js; ahí es donde se inicia nuestra aplicación JavaScript. El {{HTMLElement("body")}} se divide en {{HTMLElement("header")}} (que contiene la imagen vinculada), {{HTMLElement("main")}} de la página (con título, descripción y lugar para el contenido) y {{HTMLElement("footer")}} (derechos de autor y enlaces).</p>
 
-El único trabajo de la aplicación es enumerar todas las entradas del Marco A de la competencia js13kGames 2017. Como puedes ver, es un sitio web muy común de una página — el objetivo es tener algo simple para que podamos centrarnos en la implementación de las características reales de PWA.
+<p>El único trabajo de la aplicación es enumerar todas las entradas del Marco A de la competencia js13kGames 2017. Como puedes ver, es un sitio web muy común de una página — el objetivo es tener algo simple para que podamos centrarnos en la implementación de las características reales de PWA.</p>
 
-### El CSS
+<h3 id="El_CSS">El CSS</h3>
 
-El CSS también es lo más sencillo posible: usa {{CSSxRef("@font-face")}} para cargar y usar un tipo de letra personalizado, y aplica un estilo simple de los elementos HTML. El enfoque general es que el diseño se vea bien tanto en dispositivos móviles (con un enfoque de diseño web adaptable) como en dispositivos de escritorio.
+<p>El CSS también es lo más sencillo posible: usa {{CSSxRef("@font-face")}} para cargar y usar un tipo de letra personalizado, y aplica un estilo simple de los elementos HTML. El enfoque general es que el diseño se vea bien tanto en dispositivos móviles (con un enfoque de diseño web adaptable) como en dispositivos de escritorio.</p>
 
-### El `main` de la aplicación JavaScript
+<h3 id="El_main_de_la_aplicación_JavaScript">El <code>main</code> de la aplicación JavaScript</h3>
 
-El archivo `app.js` hace algunas cosas que veremos de cerca en los próximos artículos. En primer lugar, genera el contenido en base a esta plantilla:
+<p>El archivo <code>app.js</code> hace algunas cosas que veremos de cerca en los próximos artículos. En primer lugar, genera el contenido en base a esta plantilla:</p>
 
-```js
-var template = "<article>\n\
-    <img src='data/img/SLUG.jpg' alt='NAME'>\n\
-    <h3>#POS. NAME</h3>\n\
-    <ul>\n\
-    <li><span>Author:</span> <strong>AUTHOR</strong></li>\n\
-    <li><span>Twitter:</span> <a href='https://twitter.com/TWITTER'>@TWITTER</a></li>\n\
-    <li><span>Website:</span> <a href='http://WEBSITE/'>WEBSITE</a></li>\n\
-    <li><span>GitHub:</span> <a href='https://GITHUB'>GITHUB</a></li>\n\
-    <li><span>More:</span> <a href='http://js13kgames.com/entries/SLUG'>js13kgames.com/entries/SLUG</a></li>\n\
-    </ul>\n\
-</article>";
+<pre class="brush: js notranslate">var template = "&lt;article&gt;\n\
+    &lt;img src='data/img/SLUG.jpg' alt='NAME'&gt;\n\
+    &lt;h3&gt;#POS. NAME&lt;/h3&gt;\n\
+    &lt;ul&gt;\n\
+    &lt;li&gt;&lt;span&gt;Author:&lt;/span&gt; &lt;strong&gt;AUTHOR&lt;/strong&gt;&lt;/li&gt;\n\
+    &lt;li&gt;&lt;span&gt;Twitter:&lt;/span&gt; &lt;a href='https://twitter.com/TWITTER'&gt;@TWITTER&lt;/a&gt;&lt;/li&gt;\n\
+    &lt;li&gt;&lt;span&gt;Website:&lt;/span&gt; &lt;a href='http://WEBSITE/'&gt;WEBSITE&lt;/a&gt;&lt;/li&gt;\n\
+    &lt;li&gt;&lt;span&gt;GitHub:&lt;/span&gt; &lt;a href='https://GITHUB'&gt;GITHUB&lt;/a&gt;&lt;/li&gt;\n\
+    &lt;li&gt;&lt;span&gt;More:&lt;/span&gt; &lt;a href='http://js13kgames.com/entries/SLUG'&gt;js13kgames.com/entries/SLUG&lt;/a&gt;&lt;/li&gt;\n\
+    &lt;/ul&gt;\n\
+&lt;/article&gt;";
 var content = '';
-for(var i=0; i<games.length; i++) {
+for(var i=0; i&lt;games.length; i++) {
     var entry = template.replace(/POS/g,(i+1))
         .replace(/SLUG/g,games[i].slug)
         .replace(/NAME/g,games[i].name)
@@ -141,37 +142,31 @@ for(var i=0; i<games.length; i++) {
         .replace(/TWITTER/g,games[i].twitter)
         .replace(/WEBSITE/g,games[i].website)
         .replace(/GITHUB/g,games[i].github);
-    entry = entry.replace('<a href=\'http:///\'></a>','-');
+    entry = entry.replace('&lt;a href=\'http:///\'&gt;&lt;/a&gt;','-');
     content += entry;
 };
-document.getElementById('content').innerHTML = content;
-```
+document.getElementById('content').innerHTML = content;</pre>
 
-A continuación, registra un servicio _works_:
+<p>A continuación, registra un servicio <em>works</em>:</p>
 
-```js
-if('serviceWorker' in navigator) {
+<pre class="brush: js notranslate">if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
-};
-```
+};</pre>
 
-El siguiente bloque de código solicita permiso para recibir notificaciones cuando se hace clic en un botón:
+<p>El siguiente bloque de código solicita permiso para recibir notificaciones cuando se hace clic en un botón:</p>
 
-```js
-var button = document.getElementById("notifications");
+<pre class="brush: js notranslate">var button = document.getElementById("notifications");
 button.addEventListener('click', function(e) {
     Notification.requestPermission().then(function(result) {
         if(result === 'granted') {
             randomNotification();
         }
     });
-});
-```
+});</pre>
 
-El último bloque crea notificaciones que muestran un elemento seleccionado al azar de la lista de juegos:
+<p>El último bloque crea notificaciones que muestran un elemento seleccionado al azar de la lista de juegos:</p>
 
-```js
-function randomNotification() {
+<pre class="brush: js notranslate">function randomNotification() {
     var randomItem = Math.floor(Math.random()*games.length);
     var notifTitle = games[randomItem].name;
     var notifBody = 'Creado por '+games[randomItem].author+'.';
@@ -182,21 +177,17 @@ function randomNotification() {
     }
     var notif = new Notification(notifTitle, options);
     setTimeout(randomNotification, 30000);
-}
-```
+}</pre>
 
-### El servicio _worker_
+<h3 id="El_servicio_worker">El servicio <em>worker</em></h3>
 
-El último archivo que veremos rápidamente es el servicio _worker_: `sw.js` — primero importa datos del archivo `games.js`:
+<p>El último archivo que veremos rápidamente es el servicio <em>worker</em>: <code>sw.js</code> — primero importa datos del archivo <code>games.js</code>:</p>
 
-```js
-self.importScripts('data/games.js');
-```
+<pre class="brush: js notranslate">self.importScripts('data/games.js');</pre>
 
-A continuación, crea una lista de todos los archivos que se almacenarán en caché, tanto del intérprete de la aplicación como del contenido:
+<p>A continuación, crea una lista de todos los archivos que se almacenarán en caché, tanto del intérprete de la aplicación como del contenido:</p>
 
-```js
-var cacheName = 'js13kPWA-v1';
+<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
   '/pwa-examples/js13kpwa/',
   '/pwa-examples/js13kpwa/index.html',
@@ -218,16 +209,14 @@ var appShellFiles = [
   '/pwa-examples/js13kpwa/icons/icon-512.png'
 ];
 var gamesImages = [];
-for(var i=0; i<games.length; i++) {
+for(var i=0; i&lt;games.length; i++) {
   gamesImages.push('data/img/'+games[i].slug+'.jpg');
 }
-var contentToCache = appShellFiles.concat(gamesImages);
-```
+var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
-El siguiente bloque instala el servicio _worker_, que luego almacena en caché todos los archivos contenidos en la lista anterior:
+<p>El siguiente bloque instala el servicio <em>worker</em>, que luego almacena en caché todos los archivos contenidos en la lista anterior:</p>
 
-```js
-self.addEventListener('install', function(e) {
+<pre class="brush: js notranslate">self.addEventListener('install', function(e) {
   console.log('[Service Worker] Install');
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
@@ -235,13 +224,11 @@ self.addEventListener('install', function(e) {
       return cache.addAll(contentToCache);
     })
   );
-});
-```
+});</pre>
 
-Por último, el servicio _worker_ obtiene contenido de la caché si está disponible allí, lo cual proporciona una funcionalidad fuera de línea:
+<p>Por último, el servicio <em>worker</em> obtiene contenido de la caché si está disponible allí, lo cual proporciona una funcionalidad fuera de línea:</p>
 
-```js
-self.addEventListener('fetch', function(e) {
+<pre class="brush: js notranslate">self.addEventListener('fetch', function(e) {
   e.respondWith(
     caches.match(e.request).then(function(r) {
       console.log('[Servicio Worker] Obteniendo recurso: '+e.request.url);
@@ -254,15 +241,13 @@ self.addEventListener('fetch', function(e) {
       });
     })
   );
-});
-```
+});</pre>
 
-### Los datos de JavaScript
+<h3 id="Los_datos_de_JavaScript">Los datos de JavaScript</h3>
 
-Los datos de los juegos están presentes en el directorio _data_ en forma de un objeto JavaScript ([`games.js`](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js)):
+<p>Los datos de los juegos están presentes en el directorio <em>data</em> en forma de un objeto JavaScript (<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js"><code>games.js</code></a>):</p>
 
-```js
-var games = [
+<pre class="brush: js notranslate">var games = [
     {
         slug: 'perdido-en-el-ciberespacio',
         name: 'Perdido en el ciberespacio',
@@ -288,15 +273,14 @@ var games = [
         website: '',
         github: 'github.com/coderprateek/Emma-3D'
     }
-];
-```
+];</pre>
 
-Cada entrada tiene su propia imagen en el directorio `data/img`. Este es nuestro contenido, cargado en la sección de contenido con JavaScript.
+<p>Cada entrada tiene su propia imagen en el directorio <code>data/img</code>. Este es nuestro contenido, cargado en la sección de contenido con JavaScript.</p>
 
-## Siguiente
+<h2 id="Siguiente">Siguiente</h2>
 
-En el próximo artículo veremos con más detalle cómo se almacenan en caché el intérprete de la aplicación y el contenido para su uso sin conexión con la ayuda del servicio _worker_.
+<p>En el próximo artículo veremos con más detalle cómo se almacenan en caché el intérprete de la aplicación y el contenido para su uso sin conexión con la ayuda del servicio <em>worker</em>.</p>
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
+<p>{{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}</p>
 
-{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}
+<p>{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}</p>

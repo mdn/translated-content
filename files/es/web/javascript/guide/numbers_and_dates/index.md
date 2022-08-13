@@ -13,261 +13,383 @@ tags:
   - Numérico
   - PF
   - Punto flotante
-  - l10n:priority
+  - 'l10n:priority'
 translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
-{{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+<div>{{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}</div>
 
-Este capítulo presenta los conceptos, objetos y funciones que se utilizan para trabajar y realizar cálculos utilizando números y fechas en JavaScript. Esto incluye el uso de números escritos en varias bases, incluyendo decimal, binario y hexadecimal, así como el uso del objeto global {{JSxRef("Math")}} para realizar una amplia variedad de operaciones matemáticas con números.
+<p><span class="seoSummary">Este capítulo presenta los conceptos, objetos y funciones que se utilizan para trabajar y realizar cálculos utilizando números y fechas en JavaScript.</span> Esto incluye el uso de números escritos en varias bases, incluyendo decimal, binario y hexadecimal, así como el uso del objeto global {{JSxRef("Math")}} para realizar una amplia variedad de operaciones matemáticas con números.</p>
 
-## Números
+<h2 id="Números">Números</h2>
 
-En JavaScript, los números se implementan en {{interwiki("wikipedia", "Formato en coma flotante de doble precisión")}} de 64 bits IEEE 754 (es decir, un número entre ±2−1022 y ±2+1023, o aproximadamente ±10−308 a ±10+308, con una precisión numérica de 53 bits). Los valores enteros hasta ±253 - 1 se pueden representar con exactitud.
+<p>En JavaScript, los números se implementan en {{interwiki("wikipedia", "Formato en coma flotante de doble precisión")}} de 64 bits IEEE 754 (es decir, un número entre ±2<sup>−1022</sup> y ±2<sup>+1023</sup>, o aproximadamente ±10<sup>−308</sup> a ±10<sup>+308</sup>, con una precisión numérica de 53 bits). Los valores enteros hasta ±2<sup>53</sup> - 1 se pueden representar con exactitud.</p>
 
-Además de poder representar números de punto flotante, el tipo `number` tiene tres valores simbólicos: `+`{{JSxRef("Infinity")}}, `-`{{JSxRef("Infinity")}} y {{JSxRef("NaN")}} (_Not-a-Number_, no es un número).
+<p>Además de poder representar números de punto flotante, el tipo <code>number</code> tiene tres valores simbólicos: <code>+</code>{{JSxRef("Infinity")}}, <code>-</code>{{JSxRef("Infinity")}} y {{JSxRef("NaN")}} (<em>Not-a-Number</em>, no es un número).</p>
 
-Una adición más reciente a JavaScript es el {{JSxRef("BigInt")}} que te permite representar números enteros que pueden ser muy grandes. Sin embargo, existen advertencias para usar `BigInt`; por ejemplo, no puedes mezclar y hacer coincidir los valores `BigInt` y {{JSxRef("Number")}} en la misma operación, y no puedes usar el objeto {{JSxRef("Math")}} con valores `BigInt`.
+<p>Una adición más reciente a JavaScript es el {{JSxRef("BigInt")}} que te permite representar números enteros que pueden ser muy grandes. Sin embargo, existen advertencias para usar <code>BigInt</code>; por ejemplo, no puedes mezclar y hacer coincidir los valores <code>BigInt</code> y {{JSxRef("Number")}} en la misma operación, y no puedes usar el objeto {{JSxRef("Math")}} con valores <code>BigInt</code>.</p>
 
-Consulta también {{JSxRef("../Data_structures", "estructuras y tipos de datos JavaScript")}} para conocer el contexto con otros tipos primitivos en JavaScript.
+<p>Consulta también {{JSxRef("../Data_structures", "estructuras y tipos de datos JavaScript")}} para conocer el contexto con otros tipos primitivos en JavaScript.</p>
 
-Puedes utilizar cuatro tipos de literales numéricos: decimal, binario, octal y hexadecimal.
+<p>Puedes utilizar cuatro tipos de literales numéricos: decimal, binario, octal y hexadecimal.</p>
 
-### Números decimales
+<h3 id="Números_decimales">Números decimales</h3>
 
-```js
-1234567890
+<pre class="brush: js notranslate">1234567890
 42
 
 // Precaución al usar ceros a la izquierda:
 
 0888 // 888 procesado como decimal
 0777 // procesado como octal en modo no estricto (511 en decimal)
-```
+</pre>
 
-Ten en cuenta que los decimales literales pueden comenzar con un cero (`0`) seguido de otro dígito decimal, pero si cada dígito después del `0` inicial es menor que 8, el número se procesa como un número octal.
+<p>Ten en cuenta que los decimales literales pueden comenzar con un cero (<code>0</code>) seguido de otro dígito decimal, pero si cada dígito después del <code>0</code> inicial es menor que 8, el número se procesa como un número octal.</p>
 
-### Números binarios
+<h3 id="Números_binarios">Números binarios</h3>
 
-La sintaxis de números binarios utiliza un cero inicial seguido de una letra "B" latina en minúscula o mayúscula (`0b` o `0B`). Si los dígitos después del `0b` no son 0 o 1, el siguiente {{JSxRef("Objetos_globales/SyntaxError", "SyntaxError")}} se lanza un: "Faltan dígitos binarios después de 0b".
+<p>La sintaxis de números binarios utiliza un cero inicial seguido de una letra "B" latina en minúscula o mayúscula (<code>0b</code> o <code>0B</code>). Si los dígitos después del <code>0b</code> no son 0 o 1, el siguiente {{JSxRef("Objetos_globales/SyntaxError", "SyntaxError")}} se lanza un: "Faltan dígitos binarios después de 0b".</p>
 
-```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+<pre class="brush: js notranslate">var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
-```
+var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</pre>
 
-### Números octales
+<h3 id="Números_octales">Números octales</h3>
 
-La sintaxis de números octales utiliza un cero a la izquierda. Si los dígitos después del `0` están fuera del rango de 0 a 7, el número se interpretará como un número decimal.
+<p>La sintaxis de números octales utiliza un cero a la izquierda. Si los dígitos después del <code>0</code> están fuera del rango de 0 a 7, el número se interpretará como un número decimal.</p>
 
-```js
-var n = 0755; // 493
+<pre class="brush: js notranslate">var n = 0755; // 493
 var m = 0644; // 420
-```
+</pre>
 
-El modo estricto en ECMAScript 5 prohíbe la sintaxis octal. La notación octal no es parte de ECMAScript 5, pero la admiten todos los navegadores al poner como prefijo un cero al número: `0644 == 420` y `"\045" === "%"`. En ECMAScript 2015, los números octales son compatibles si tienen el prefijo `0o`, por ejemplo:
+<p>El modo estricto en ECMAScript 5 prohíbe la sintaxis octal. La notación octal no es parte de ECMAScript 5, pero la admiten todos los navegadores al poner como prefijo un cero al número: <code>0644 == 420</code> y <code>"\045" === "%"</code>. En ECMAScript 2015, los números octales son compatibles si tienen el prefijo <code>0o</code>, por ejemplo:</p>
 
-```js
-var a = 0o10; // ES2015: 8
-```
+<pre class="brush: js notranslate">var a = 0o10; // ES2015: 8
+</pre>
 
-### Números hexadecimales
+<h3 id="Números_hexadecimales">Números hexadecimales</h3>
 
-La sintaxis de números hexadecimales utiliza un cero inicial seguido de una letra "X" latina en minúscula o mayúscula (`0x` o `0X`). Si los dígitos después de `0x` están fuera del rango (0123456789ABCDEF), el siguiente {{JSxRef("Objetos_globales/SyntaxError", "SyntaxError")}} se lanza: "El identificador comienza inmediatamente después del literal numérico".
+<p>La sintaxis de números hexadecimales utiliza un cero inicial seguido de una letra "X" latina en minúscula o mayúscula (<code>0x</code> o <code>0X</code>). Si los dígitos después de <code>0x</code> están fuera del rango (0123456789ABCDEF), el siguiente {{JSxRef("Objetos_globales/SyntaxError", "SyntaxError")}} se lanza: "El identificador comienza inmediatamente después del literal numérico".</p>
 
-```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+<pre class="brush: js notranslate">0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
 0XA                 // 10
-```
+</pre>
 
-### Exponenciación
+<h3 id="Exponenciación">Exponenciación</h3>
 
-```js
-1E3   // 1000
+<pre class="brush: js notranslate">1E3   // 1000
 2e6   // 2000000
-0.1e2 // 10
-```
+0.1e2 // 10</pre>
 
-## El objeto `Number`
+<h2 id="El_objeto_Number">El objeto <code>Number</code></h2>
 
-El objeto integrado {{JSxRef("Number")}} tiene propiedades para constantes numéricas, como valor máximo, `NaN` (no un número) e `infinity`. No puedes cambiar los valores de estas propiedades y las debes usar de la siguiente manera:
+<p>El objeto integrado {{JSxRef("Number")}} tiene propiedades para constantes numéricas, como valor máximo, <code>NaN</code> (no un número) e <code>infinity</code>. No puedes cambiar los valores de estas propiedades y las debes usar de la siguiente manera:</p>
 
-```js
-var biggestNum = Number.MAX_VALUE;
+<pre class="brush: js notranslate">var biggestNum = Number.MAX_VALUE;
 var smallestNum = Number.MIN_VALUE;
 var infiniteNum = Number.POSITIVE_INFINITY;
 var negInfiniteNum = Number.NEGATIVE_INFINITY;
 var notANum = Number.NaN;
-```
+</pre>
 
-Siempre haces referencia a una propiedad del objeto `Number` predefinido como se muestra arriba, y no como una propiedad de un objeto `Number` que creas tú mismo.
+<p>Siempre haces referencia a una propiedad del objeto <code>Number</code> predefinido como se muestra arriba, y no como una propiedad de un objeto <code>Number</code> que creas tú mismo.</p>
 
-La siguiente tabla resume las propiedades del objeto `Number`.
+<p>La siguiente tabla resume las propiedades del objeto <code>Number</code>.</p>
 
-| Propiedad                                            | Descripción                                                                                                                                       |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{JSxRef("Number.MAX_VALUE")}}             | El número representable más grande (`±1.7976931348623157e+308`)                                                                                   |
-| {{JSxRef("Number.MIN_VALUE")}}             | El número representable más pequeño (`±5e-324`)                                                                                                   |
-| {{JSxRef("Number.NaN")}}                     | Valor especial `not a number` ("no es un número")                                                                                                 |
-| {{JSxRef("Number.NEGATIVE_INFINITY")}} | Valor infinito negativo especial; devuelto por desbordamiento                                                                                     |
-| {{JSxRef("Number.POSITIVE_INFINITY")}} | Valor infinito positivo especial; devuelto por desbordamiento                                                                                     |
-| {{JSxRef("Number.EPSILON")}}                 | Diferencia entre `1` y el valor más pequeño mayor que `1` que se puede representar como un {{JSxRef("Number")}} (`2.220446049250313e-16`) |
-| {{JSxRef("Number.MIN_SAFE_INTEGER")}}     | Número entero seguro mínimo en JavaScript (−253 + 1 o `−9007199254740991`)                                                                        |
-| {{JSxRef("Number.MAX_SAFE_INTEGER")}}     | Máximo número entero seguro en JavaScript (+253 - 1 o `+9007199254740991`)                                                                        |
+<table class="standard-table">
+ <caption>Propiedades de <code>Number</code></caption>
+ <thead>
+  <tr>
+   <th scope="col">Propiedad</th>
+   <th scope="col">Descripción</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{JSxRef("Number.MAX_VALUE")}}</td>
+   <td>El número representable más grande (<code>±1.7976931348623157e+308</code>)</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.MIN_VALUE")}}</td>
+   <td>El número representable más pequeño (<code>±5e-324</code>)</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.NaN")}}</td>
+   <td>Valor especial <code>not a number</code> ("no es un número")</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.NEGATIVE_INFINITY")}}</td>
+   <td>Valor infinito negativo especial; devuelto por desbordamiento</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.POSITIVE_INFINITY")}}</td>
+   <td>Valor infinito positivo especial; devuelto por desbordamiento</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.EPSILON")}}</td>
+   <td>Diferencia entre <code>1</code> y el valor más pequeño mayor que <code>1</code> que se puede representar como un {{JSxRef("Number")}} (<code>2.220446049250313e-16</code>)</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.MIN_SAFE_INTEGER")}}</td>
+   <td>Número entero seguro mínimo en JavaScript (−2<sup>53</sup> + 1 o <code>−9007199254740991</code>)</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.MAX_SAFE_INTEGER")}}</td>
+   <td>Máximo número entero seguro en JavaScript (+2<sup>53</sup> - 1 o <code>+9007199254740991</code>)</td>
+  </tr>
+ </tbody>
+</table>
 
-| Método                                           | Descripción                                                                                                                                                                                         |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{JSxRef("Number.parseFloat()")}}     | Analiza un argumento de cadena y devuelve un número de punto flotante. Igual que la función {{JSxRef("parseFloat", "parseFloat()")}} global.                                            |
-| {{JSxRef("Number.parseInt()")}}         | Analiza un argumento de cadena y devuelve un número entero de la base o raíz especificada. Igual que la función {{JSxRef("parseInt", "parseInt()")}} global.                            |
-| {{JSxRef("Number.isFinite()")}}         | Determina si el valor pasado es un número finito.                                                                                                                                                   |
-| {{JSxRef("Number.isInteger()")}}     | Determina si el valor pasado es un número entero.                                                                                                                                                   |
-| {{JSxRef("Number.isNaN()")}}             | Determina si el valor pasado es {{JSxRef("Objetos_globales/NaN", "NaN")}}. Versión más robusta del {{JSxRef("Objetos_globales/isNaN", "isNaN()")}} global original. |
-| {{JSxRef("Number.isSafeInteger()")}} | Determina si el valor proporcionado es un número que es un _entero seguro_.                                                                                                                         |
+<table class="standard-table">
+ <caption>Métodos de <code>Number</code></caption>
+ <thead>
+  <tr>
+   <th>Método</th>
+   <th>Descripción</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{JSxRef("Number.parseFloat()")}}</td>
+   <td>Analiza un argumento de cadena y devuelve un número de punto flotante.<br>
+    Igual que la función {{JSxRef("parseFloat", "parseFloat()")}} global.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.parseInt()")}}</td>
+   <td>Analiza un argumento de cadena y devuelve un número entero de la base o raíz especificada.<br>
+    Igual que la función {{JSxRef("parseInt", "parseInt()")}} global.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.isFinite()")}}</td>
+   <td>Determina si el valor pasado es un número finito.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.isInteger()")}}</td>
+   <td>Determina si el valor pasado es un número entero.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.isNaN()")}}</td>
+   <td>Determina si el valor pasado es {{JSxRef("Objetos_globales/NaN", "NaN")}}. Versión más robusta del {{JSxRef("Objetos_globales/isNaN", "isNaN()")}} global original.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.isSafeInteger()")}}</td>
+   <td>Determina si el valor proporcionado es un número que es un <dfn>entero seguro</dfn>.</td>
+  </tr>
+ </tbody>
+</table>
 
-El prototipo `Number` proporciona métodos para recuperar información de objetos `Number` en varios formatos. La siguiente tabla resume los métodos de `Number.prototype`.
+<p>El prototipo <code>Number</code> proporciona métodos para recuperar información de objetos <code>Number</code> en varios formatos. La siguiente tabla resume los métodos de <code>Number.prototype</code>.</p>
 
-| Método                                                                   | Descripción                                                                                            |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| {{JSxRef("Number.toExponential", "toExponential()")}} | Devuelve una cadena que representa el número en notación exponencial.                                  |
-| {{JSxRef("Number.toFixed", "toFixed()")}}                 | Devuelve una cadena que representa el número en notación de punto fijo.                                |
-| {{JSxRef("Number.toPrecision", "toPrecision()")}}         | Devuelve una cadena que representa el número con una precisión especificada en notación de punto fijo. |
+<table class="standard-table">
+ <caption>Métodos de <code>Number.prototype</code></caption>
+ <thead>
+  <tr>
+   <th scope="col">Método</th>
+   <th scope="col">Descripción</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{JSxRef("Number.toExponential", "toExponential()")}}</td>
+   <td>Devuelve una cadena que representa el número en notación exponencial.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.toFixed", "toFixed()")}}</td>
+   <td>Devuelve una cadena que representa el número en notación de punto fijo.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Number.toPrecision", "toPrecision()")}}</td>
+   <td>Devuelve una cadena que representa el número con una precisión especificada en notación de punto fijo.</td>
+  </tr>
+ </tbody>
+</table>
 
-## El objeto `Math`
+<h2 id="El_objeto_Math">El objeto <code>Math</code></h2>
 
-El objeto integrado {{JSxRef("Math")}} tiene propiedades y métodos para constantes y funciones matemáticas. Por ejemplo, la propiedad `PI` del objeto `Math` tiene el valor de `pi` (3.141...), que usarías en una aplicación como:
+<p>El objeto integrado {{JSxRef("Math")}} tiene propiedades y métodos para constantes y funciones matemáticas. Por ejemplo, la propiedad <code>PI</code> del objeto <code>Math</code> tiene el valor de <code>pi</code> (3.141...), que usarías en una aplicación como:</p>
 
-```js
-Math.PI
-```
+<pre class="brush: js notranslate">Math.PI
+</pre>
 
-De manera similar, las funciones matemáticas estándar son métodos de `Math`. Estas incluyen funciones trigonométricas, logarítmicas, exponenciales y otras. Por ejemplo, si deseas utilizar la función trigonométrica «seno», debes escribir
+<p>De manera similar, las funciones matemáticas estándar son métodos de <code>Math</code>. Estas incluyen funciones trigonométricas, logarítmicas, exponenciales y otras. Por ejemplo, si deseas utilizar la función trigonométrica «seno», debes escribir</p>
 
-```js
-Math.sin(1.56)
-```
+<pre class="brush: js notranslate">Math.sin(1.56)
+</pre>
 
-Ten en cuenta que todos los métodos trigonométricos de `Math` toman argumentos en radianes.
+<p>Ten en cuenta que todos los métodos trigonométricos de <code>Math</code> toman argumentos en radianes.</p>
 
-La siguiente tabla resume los métodos del objeto `Math`.
+<p>La siguiente tabla resume los métodos del objeto <code>Math</code>.</p>
 
-| Método                                                                                                                                                                                                                                                                                 | Descripción                                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{JSxRef("Math.abs", "abs()")}}                                                                                                                                                                                                                                               | Valor absoluto                                                                                                                                         |
-| {{JSxRef("Math.sin", "sin()")}}, {{JSxRef("Math.cos", "cos()")}}, {{JSxRef("Math.tan", "tan()")}}                                                                                                                                                           | Funciones trigonométricas estándar; con el argumento en radianes.                                                                                      |
-| {{JSxRef("Math.asin", "asin()")}}, {{JSxRef("Math.acos", "acos()")}}, {{JSxRef("Math.atan", "atan()")}}, {{JSxRef("Math.atan2", "atan2()")}}                                                                                             | Funciones trigonométricas inversas; devuelven valores en radianes.                                                                                     |
-| {{JSxRef("Math.sinh", "sinh()")}}, {{JSxRef("Math.cosh", "cosh()")}}, {{JSxRef("Math.tanh", "tanh()")}}                                                                                                                                               | Funciones hiperbólicas; argumento en ángulo hiperbólico.                                                                                               |
-| {{JSxRef("Math.asinh", "asinh()")}}, {{JSxRef("Math.acosh", "acosh()")}}, {{JSxRef("Math.atanh", "atanh()")}}                                                                                                                                   | Funciones hiperbólicas inversas; devuelven valores en ángulo hiperbólico.                                                                              |
-| {{JSxRef("Math.pow", "pow()")}}, {{JSxRef("Math.exp", "exp()")}}, {{JSxRef("Math.expm1", "expm1()")}}, {{JSxRef("Math.log10", "log10()")}}, {{JSxRef("Math.log1p", "log1p()")}}, {{JSxRef("Math.log2", "log2()")}} | Funciones exponenciales y logarítmicas.                                                                                                                |
-| {{JSxRef("Math.floor", "floor()")}}, {{JSxRef("Math.ceil", "ceil()")}}                                                                                                                                                                                         | Devuelve el entero más grande/más pequeño menor/mayor o igual que un argumento.                                                                        |
-| {{JSxRef("Math.min", "min()")}}, {{JSxRef("Math.max", "max()")}}                                                                                                                                                                                                     | Devuelven el valor mínimo o máximo (respectivamente) de una lista de números separados por comas como argumentos.                                      |
-| {{JSxRef("Math.random", "random()")}}                                                                                                                                                                                                                                       | Devuelve un número aleatorio entre 0 y 1.                                                                                                              |
-| {{JSxRef("Math.round", "round()")}}, {{JSxRef("Math.fround", "fround()")}}, {{JSxRef("Math.trunc", "trunc()")}},                                                                                                                                  | Funciones de redondeo y truncamiento.                                                                                                                  |
-| {{JSxRef("Math.sqrt", "sqrt()")}}, {{JSxRef("Math.cbrt", "cbrt()")}}, {{JSxRef("Math.hypot", "hypot()")}}                                                                                                                                           | Raíz cuadrada, raíz cúbica, raíz cuadrada de la suma de argumentos cuadrados.                                                                          |
-| {{JSxRef("Math.sign", "sign()")}}                                                                                                                                                                                                                                           | El signo de un número, que indica si el número es positivo, negativo o cero.                                                                           |
-| {{JSxRef("Math.clz32", "clz32()")}}, {{JSxRef("Math.imul", "imul()")}}                                                                                                                                                                                         | Número de bits cero iniciales en la representación binaria de 32 bits. El resultado de la multiplicación de 32 bits similar a C de los dos argumentos. |
+<table class="standard-table">
+ <caption>Métodos de <code>Math</code></caption>
+ <thead>
+  <tr>
+   <th scope="col">Método</th>
+   <th scope="col">Descripción</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{JSxRef("Math.abs", "abs()")}}</td>
+   <td>Valor absoluto</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.sin", "sin()")}}, {{JSxRef("Math.cos", "cos()")}}, {{JSxRef("Math.tan", "tan()")}}</td>
+   <td>Funciones trigonométricas estándar; con el argumento en radianes.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.asin", "asin()")}}, {{JSxRef("Math.acos", "acos()")}}, {{JSxRef("Math.atan", "atan()")}}, {{JSxRef("Math.atan2", "atan2()")}}</td>
+   <td>Funciones trigonométricas inversas; devuelven valores en radianes.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.sinh", "sinh()")}}, {{JSxRef("Math.cosh", "cosh()")}}, {{JSxRef("Math.tanh", "tanh()")}}</td>
+   <td>Funciones hiperbólicas; argumento en ángulo hiperbólico.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.asinh", "asinh()")}}, {{JSxRef("Math.acosh", "acosh()")}}, {{JSxRef("Math.atanh", "atanh()")}}</td>
+   <td>Funciones hiperbólicas inversas; devuelven valores en ángulo hiperbólico.</td>
+  </tr>
+  <tr>
+   <td>
+    <p>{{JSxRef("Math.pow", "pow()")}}, {{JSxRef("Math.exp", "exp()")}}, {{JSxRef("Math.expm1", "expm1()")}}, {{JSxRef("Math.log10", "log10()")}}, {{JSxRef("Math.log1p", "log1p()")}}, {{JSxRef("Math.log2", "log2()")}}</p>
+   </td>
+   <td>Funciones exponenciales y logarítmicas.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.floor", "floor()")}}, {{JSxRef("Math.ceil", "ceil()")}}</td>
+   <td>Devuelve el entero más grande/más pequeño menor/mayor o igual que un argumento.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.min", "min()")}}, {{JSxRef("Math.max", "max()")}}</td>
+   <td>Devuelven el valor mínimo o máximo (respectivamente) de una lista de números separados por comas como argumentos.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.random", "random()")}}</td>
+   <td>Devuelve un número aleatorio entre 0 y 1.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.round", "round()")}}, {{JSxRef("Math.fround", "fround()")}}, {{JSxRef("Math.trunc", "trunc()")}},</td>
+   <td>Funciones de redondeo y truncamiento.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.sqrt", "sqrt()")}}, {{JSxRef("Math.cbrt", "cbrt()")}}, {{JSxRef("Math.hypot", "hypot()")}}</td>
+   <td>Raíz cuadrada, raíz cúbica, raíz cuadrada de la suma de argumentos cuadrados.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.sign", "sign()")}}</td>
+   <td>El signo de un número, que indica si el número es positivo, negativo o cero.</td>
+  </tr>
+  <tr>
+   <td>{{JSxRef("Math.clz32", "clz32()")}},<br>
+    {{JSxRef("Math.imul", "imul()")}}</td>
+   <td>Número de bits cero iniciales en la representación binaria de 32 bits.<br>
+    El resultado de la multiplicación de 32 bits similar a C de los dos argumentos.</td>
+  </tr>
+ </tbody>
+</table>
 
-A diferencia de muchos otros objetos, nunca creas un objeto `Math` propio. Siempre usas el objeto `Math` incorporado.
+<p>A diferencia de muchos otros objetos, nunca creas un objeto <code>Math</code> propio. Siempre usas el objeto <code>Math</code> incorporado.</p>
 
-## El objeto `Date`
+<h2 id="El_objeto_Date">El objeto <code>Date</code></h2>
 
-JavaScript no tiene un tipo de dato para fechas. Sin embargo, puedes utilizar el objeto {{JSxRef("Date")}} y sus métodos para trabajar con fechas y horas en tus aplicaciones. El objeto `Date` tiene una gran cantidad de métodos para establecer, obtener y manipular fechas. Pero no tiene propiedades.
+<p>JavaScript no tiene un tipo de dato para fechas. Sin embargo, puedes utilizar el objeto {{JSxRef("Date")}} y sus métodos para trabajar con fechas y horas en tus aplicaciones. El objeto <code>Date</code> tiene una gran cantidad de métodos para establecer, obtener y manipular fechas. Pero no tiene propiedades.</p>
 
-JavaScript maneja las fechas de manera similar a Java. Los dos lenguajes tienen muchos de los mismos métodos de fecha, y ambos lenguajes almacenan fechas como el número de milisegundos desde el 1 de enero de 1970, 00:00:00, con una marca de tiempo Unix que es el número de segundos desde el 1 de enero de 1970, 00: 00:00.
+<p>JavaScript maneja las fechas de manera similar a Java. Los dos lenguajes tienen muchos de los mismos métodos de fecha, y ambos lenguajes almacenan fechas como el número de milisegundos desde el 1 de enero de 1970, 00:00:00, con una marca de tiempo Unix que es el número de segundos desde el 1 de enero de 1970, 00: 00:00.</p>
 
-El rango del objeto `Date` es de -100,000,000 de días a 100,000,000 de días en relación con el 1 de enero de 1970 UTC.
+<p>El rango del objeto <code>Date</code> es de -100,000,000 de días a 100,000,000 de días en relación con el 1 de enero de 1970 UTC.</p>
 
-Para crear un objeto `Date`:
+<p>Para crear un objeto <code>Date</code>:</p>
 
-```js
-var dateObjectName = new Date([parameters]);
-```
+<pre class="brush: js notranslate">var dateObjectName = new Date([parameters]);
+</pre>
 
-donde `dateObjectName` es el nombre del objeto `Date` que se está creando; puede ser un objeto nuevo o una propiedad de un objeto existente.
+<p>donde <code>dateObjectName</code> es el nombre del objeto <code>Date</code> que se está creando; puede ser un objeto nuevo o una propiedad de un objeto existente.</p>
 
-Llamar a `Date` sin la palabra clave `new` devuelve una cadena que representa la fecha y hora actuales.
+<p>Llamar a <code>Date</code> sin la palabra clave <code>new</code> devuelve una cadena que representa la fecha y hora actuales.</p>
 
-Los parámetros de la sintaxis anterior pueden ser cualquiera de los siguientes:
+<p>Los parámetros de la sintaxis anterior pueden ser cualquiera de los siguientes:</p>
 
-- Nada: crea la fecha y hora de hoy. Por ejemplo, `today = new Date();`.
-- Una cadena que representa una fecha en la siguiente forma: "Mes día, año horas:minutos:segundos." Por ejemplo, `var Xmas95 = new Date("December 25, 1995 13:30:00")`. Si omites horas, minutos o segundos, el valor se establecerá en cero.
-- Un conjunto de valores enteros para año, mes y día. Por ejemplo, `var Xmas95 = new Date(1995, 11, 25)`.
-- Un conjunto de valores enteros para año, mes, día, hora, minuto y segundos. Por ejemplo, `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0)`.
+<ul>
+ <li>Nada: crea la fecha y hora de hoy. Por ejemplo, <code>today = new Date();</code>.</li>
+ <li>Una cadena que representa una fecha en la siguiente forma: "Mes día, año horas:minutos:segundos." Por ejemplo, <code>var Xmas95 = new Date("December 25, 1995 13:30:00")</code>. Si omites horas, minutos o segundos, el valor se establecerá en cero.</li>
+ <li>Un conjunto de valores enteros para año, mes y día. Por ejemplo, <code>var Xmas95 = new Date(1995, 11, 25)</code>.</li>
+ <li>Un conjunto de valores enteros para año, mes, día, hora, minuto y segundos. Por ejemplo, <code>var Xmas95 = new Date(1995, 11, 25, 9, 30, 0)</code>.</li>
+</ul>
 
-### Métodos del objeto `Date`
+<h3 id="Métodos_del_objeto_Date">Métodos del objeto <code>Date</code></h3>
 
-Los métodos del objeto `Date` para manejar fechas y horas se incluyen en estas categorías generales:
+<p>Los métodos del objeto <code>Date</code> para manejar fechas y horas se incluyen en estas categorías generales:</p>
 
-- métodos establecedores ("`set`"), para configurar valores de fecha y hora en objetos `Date`.
-- Métodos captadores ("`get`"), para obtener valores de fecha y hora de objetos `Date`.
-- métodos conversores ("`to`"), para devolver valores de cadena de objetos `Date`.
-- métodos `parse` y `UTC`, para analizar cadenas de `Date`.
+<ul>
+ <li>métodos establecedores ("<code>set</code>"), para configurar valores de fecha y hora en objetos <code>Date</code>.</li>
+ <li>Métodos captadores ("<code>get</code>"), para obtener valores de fecha y hora de objetos <code>Date</code>.</li>
+ <li>métodos conversores ("<code>to</code>"), para devolver valores de cadena de objetos <code>Date</code>.</li>
+ <li>métodos <code>parse</code> y <code>UTC</code>, para analizar cadenas de <code>Date</code>.</li>
+</ul>
 
-Con los métodos "`get`" y "`set`" puedes obtener y establecer segundos, minutos, horas, día del mes, día de la semana, meses y años por separado. Existe un método `getDay` que devuelve el día de la semana, pero no existe el método `setDay` correspondiente, porque el día de la semana se establece automáticamente. Estos métodos utilizan números enteros para representar estos valores de la siguiente manera:
+<p>Con los métodos "<code>get</code>" y "<code>set</code>" puedes obtener y establecer segundos, minutos, horas, día del mes, día de la semana, meses y años por separado. Existe un método <code>getDay</code> que devuelve el día de la semana, pero no existe el método <code>setDay</code> correspondiente, porque el día de la semana se establece automáticamente. Estos métodos utilizan números enteros para representar estos valores de la siguiente manera:</p>
 
-- Segundos y minutos: 0 a 59
-- Horas: 0 a 23
-- Día: 0 (Domingo) a 6 (Sábado)
-- Fecha: 1 al 31 (día del mes)
-- Meses: 0 (Enero) a 11 (Diciembre)
-- Año: años desde 1900
+<ul>
+ <li>Segundos y minutos: 0 a 59</li>
+ <li>Horas: 0 a 23</li>
+ <li>Día: 0 (Domingo) a 6 (Sábado)</li>
+ <li>Fecha: 1 al 31 (día del mes)</li>
+ <li>Meses: 0 (Enero) a 11 (Diciembre)</li>
+ <li>Año: años desde 1900</li>
+</ul>
 
-Por ejemplo, supongamos que defines la siguiente fecha:
+<p>Por ejemplo, supongamos que defines la siguiente fecha:</p>
 
-```js
-var Xmas95 = new Date('December 25, 1995');
-```
+<pre class="brush: js notranslate">var Xmas95 = new Date('December 25, 1995');
+</pre>
 
-Entonces, `Xmas95.getMonth()` devuelve 11 y `Xmas95.getFullYear()` devuelve 1995.
+<p>Entonces, <code>Xmas95.getMonth()</code> devuelve 11 y <code>Xmas95.getFullYear()</code> devuelve 1995.</p>
 
-Los métodos `getTime` y `setTime` son útiles para comparar fechas. El método `getTime` devuelve el número de milisegundos desde el 1 de enero de 1970, 00:00:00 para un objeto `Date`.
+<p>Los métodos <code>getTime</code> y <code>setTime</code> son útiles para comparar fechas. El método <code>getTime</code> devuelve el número de milisegundos desde el 1 de enero de 1970, 00:00:00 para un objeto <code>Date</code>.</p>
 
-Por ejemplo, el siguiente código muestra el número de días que quedan en el año actual:
+<p>Por ejemplo, el siguiente código muestra el número de días que quedan en el año actual:</p>
 
-```js
-var today = new Date();
+<pre class="brush: js notranslate">var today = new Date();
 var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Establece día y mes
 endYear.setFullYear(today.getFullYear()); // Establece año a este año
 var msPerDay = 24 * 60 * 60 * 1000; // Número de milisegundos por día
 var daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
 var daysLeft = Math.round(daysLeft); // devuelve los días que quedan en el año
-```
+</pre>
 
-Este ejemplo crea un objeto `Date` llamado `today` que contiene la fecha de hoy. Luego crea un objeto `Date` llamado `endYear` y establece el año en el año actual. Luego, usando la cantidad de milisegundos por día, calcula la cantidad de días entre `today` y `endYear`, usando `getTime` y redondeando a un número entero de días.
+<p>Este ejemplo crea un objeto <code>Date</code> llamado <code>today</code> que contiene la fecha de hoy. Luego crea un objeto <code>Date</code> llamado <code>endYear</code> y establece el año en el año actual. Luego, usando la cantidad de milisegundos por día, calcula la cantidad de días entre <code>today</code> y <code>endYear</code>, usando <code>getTime</code> y redondeando a un número entero de días.</p>
 
-El método `parse` es útil para asignar valores de cadenas de fecha a objetos `Date` existentes. Por ejemplo, el siguiente código usa `parse` y `setTime` para asignar un valor de fecha al objeto `IPOdate`:
+<p>El método <code>parse</code> es útil para asignar valores de cadenas de fecha a objetos <code>Date</code> existentes. Por ejemplo, el siguiente código usa <code>parse</code> y <code>setTime</code> para asignar un valor de fecha al objeto <code>IPOdate</code>:</p>
 
-```js
-var IPOdate = new Date();
+<pre class="brush: js notranslate">var IPOdate = new Date();
 IPOdate.setTime(Date.parse('Aug 9, 1995'));
-```
+</pre>
 
-### Ejemplo
+<h3 id="Ejemplo">Ejemplo</h3>
 
-En el siguiente ejemplo, la función `JSClock()` devuelve la hora en el formato de un reloj digital.
+<p>En el siguiente ejemplo, la función <code>JSClock()</code> devuelve la hora en el formato de un reloj digital.</p>
 
-```js
-function JSClock() {
+<pre class="brush: js notranslate">function JSClock() {
   var time = new Date();
   var hour = time.getHours();
   var minute = time.getMinutes();
   var second = time.getSeconds();
-  var temp = '' + ((hour > 12) ? hour - 12 : hour);
+  var temp = '' + ((hour &gt; 12) ? hour - 12 : hour);
   if (hour == 0)
     temp = '12';
-  temp += ((minute < 10) ? ':0' : ':') + minute;
-  temp += ((second < 10) ? ':0' : ':') + second;
-  temp += (hour >= 12) ? ' P.M.' : ' A.M.';
+  temp += ((minute &lt; 10) ? ':0' : ':') + minute;
+  temp += ((second &lt; 10) ? ':0' : ':') + second;
+  temp += (hour &gt;= 12) ? ' P.M.' : ' A.M.';
   return temp;
 }
-```
+</pre>
 
-La función `JSClock` primero crea un nuevo objeto `Date` llamado `time`; dado que no se dan argumentos, la hora se crea con la fecha y hora actuales. Luego, las llamadas a los métodos `getHours`, `getMinutes` y `getSeconds` asignan el valor de la hora, minuto y segundo actuales a `hour`, `minute` y `second`.
+<p>La función <code>JSClock</code> primero crea un nuevo objeto <code>Date</code> llamado <code>time</code>; dado que no se dan argumentos, la hora se crea con la fecha y hora actuales. Luego, las llamadas a los métodos <code>getHours</code>, <code>getMinutes</code> y <code>getSeconds</code> asignan el valor de la hora, minuto y segundo actuales a <code>hour</code>, <code>minute</code> y <code>second</code>.</p>
 
-Las siguientes cuatro declaraciones crean un valor de cadena basado en el tiempo. La primera declaración crea una variable `temp`, asignándole un valor mediante una expresión condicional; si `hour` es mayor que 12, (`hour - 12`), de lo contrario, simplemente hora, a menos que la hora sea 0, en cuyo caso se convierte en 12.
+<p>Las siguientes cuatro declaraciones crean un valor de cadena basado en el tiempo. La primera declaración crea una variable <code>temp</code>, asignándole un valor mediante una expresión condicional; si <code>hour</code> es mayor que 12, (<code>hour - 12</code>), de lo contrario, simplemente hora, a menos que la hora sea 0, en cuyo caso se convierte en 12.</p>
 
-La siguiente declaración agrega un valor de `minute` a `temp`. Si el valor de `minute` es menor que 10, la expresión condicional agrega una cadena con un cero precedente; de lo contrario, agrega una cadena con dos puntos de demarcación. Luego, una declaración agrega un valor de segundos a `temp` de la misma manera.
+<p>La siguiente declaración agrega un valor de <code>minute</code> a <code>temp</code>. Si el valor de <code>minute</code> es menor que 10, la expresión condicional agrega una cadena con un cero precedente; de lo contrario, agrega una cadena con dos puntos de demarcación. Luego, una declaración agrega un valor de segundos a <code>temp</code> de la misma manera.</p>
 
-Finalmente, una expresión condicional agrega "P.M." a `temp` si `hour` es 12 o mayor; de lo contrario, agrega "A.M." a `temp`.
+<p>Finalmente, una expresión condicional agrega "P.M." a <code>temp</code> si <code>hour</code> es 12 o mayor; de lo contrario, agrega "A.M." a <code>temp</code>.</p>
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+<p>{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}</p>

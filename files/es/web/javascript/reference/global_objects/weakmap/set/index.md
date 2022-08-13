@@ -10,58 +10,83 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/set
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`set()`** añade un nuevo elemento con su `key` y `value` específicos al objeto `WeakMap`.
+<p>El método <code><strong>set()</strong></code> añade un nuevo elemento con su <code>key</code> y <code>value</code> específicos al objeto <code>WeakMap</code>.</p>
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}
+<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-set.html")}}</div>
 
-## Sintaxis
 
-    wm.set(key, value);
 
-### Parámetros
+<h2 id="Sintaxis">Sintaxis</h2>
 
-- indentificador (key)
-  - : Requerido. El identificador (objeto) del elemento a añadir al objeto `WeakMap`.
-- valor (value)
-  - : Requerido. El valor del elemento a añadir al objeto `WeakMap`.
+<pre class="syntaxbox"><code><em>wm</em>.set(key, value);</code></pre>
 
-### Valor devuelto
+<h3 id="Parámetros">Parámetros</h3>
 
-El objeto `WeakMap`.
+<dl>
+ <dt>indentificador (key)</dt>
+ <dd>Requerido. El identificador (objeto) del elemento a añadir al objeto <code>WeakMap</code>.</dd>
+ <dt>valor (value)</dt>
+ <dd>Requerido. El valor del elemento a añadir al objeto <code>WeakMap</code>.</dd>
+</dl>
 
-## Ejemplos
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-### Utilización del método `set`
+<p>El objeto <code>WeakMap</code>.</p>
 
-```js
-var wm = new WeakMap();
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Utilización_del_método_set">Utilización del método <code>set</code> </h3>
+
+<pre class="brush: js">var wm = new WeakMap();
 var obj = {};
 
 // Agregando nuevos elementos a WeakMap
 wm.set(obj, 'foo').set(window, 'bar'); // encadenamiento
 // Actualiza el un elemento en el objeto WeakMap
 wm.set(obj, 'baz');
-```
 
-## Especificaciones
+</pre>
 
-| Especificación                                                                                           | Estado                       | Comentarios         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} | {{Spec2('ESDraft')}} |                     |
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Compatibilidad con navegadores
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("javascript.builtins.WeakMap.set")}}
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-## Notas específicas de Firefox
 
-- Antes de Firefox 33 {{geckoRelease("33")}}, `WeakMap.prototype.set` devolvía `undefined` y no permitía el encadenamiento. Esto ha sido corregido ({{bug(1031632)}}). Este comportamiento puede encontrarse también en Chrome/v8 ([fallo](https://code.google.com/p/v8/issues/detail?id=3410)).
 
-## Vea también
+<p>{{Compat("javascript.builtins.WeakMap.set")}}</p>
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.get()")}}
-- {{jsxref("WeakMap.prototype.has()")}}
+<h2 id="Notas_específicas_de_Firefox">Notas específicas de Firefox</h2>
+
+<ul>
+ <li>Antes de Firefox 33 {{geckoRelease("33")}}, <code>WeakMap.prototype.set</code> devolvía  <code>undefined</code> y no permitía el encadenamiento. Esto ha sido corregido ({{bug(1031632)}}). Este comportamiento puede encontrarse también en Chrome/v8 (<a href="https://code.google.com/p/v8/issues/detail?id=3410">fallo</a>).</li>
+</ul>
+
+<h2 id="Vea_también">Vea también</h2>
+
+<ul>
+ <li>{{jsxref("WeakMap")}}</li>
+ <li>{{jsxref("WeakMap.prototype.get()")}}</li>
+ <li>{{jsxref("WeakMap.prototype.has()")}}</li>
+</ul>

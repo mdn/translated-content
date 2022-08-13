@@ -4,45 +4,69 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/ignoreCase
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La propiedad **`ignoreCase`** indica si la expresión regular está usando la bandera "i". `ignoreCase` es una propiedad de _sólo lectura_ de una instancia de expresión regular.
+<p>La propiedad <strong><code>ignoreCase</code></strong> indica si la expresión regular está usando la bandera "i". <code>ignoreCase</code> es una propiedad de <em>sólo lectura </em>de una instancia de expresión regular.</p>
 
-{{js_property_attributes(0, 0, 1)}}
+<div>{{js_property_attributes(0, 0, 1)}}</div>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-El valor de `ignoreCase es un `{{jsxref("Boolean")}} y `true si la bandera "i" fue usada. De otra manera es false. La bandera "i" indica que el se debe ignorar la capitalización al tratar de encontrar los equivalentes en un texto.`
+<p>El valor de <code>ignoreCase es un </code>{{jsxref("Boolean")}} y <code>true si la bandera "i" fue usada. De otra manera es false. La bandera "i" indica que el se debe ignorar la capitalización al tratar de encontrar los equivalentes en un texto.</code></p>
 
-No se puede cambiar esta propiedad directamente.
+<p>No se puede cambiar esta propiedad directamente.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `ignoreCase`
+<h3 id="Usando_ignoreCase">Usando <code>ignoreCase</code></h3>
 
-```js
-var regex = new RegExp('foo', 'i');
+<pre class="brush: js">var regex = new RegExp('foo', 'i');
 
 console.log(regex.ignoreCase); // true
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                               | Estatus                      | Comentario                                                                                                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                     | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. JavaScript 1.5: `ignoreCase` es una propiedad de la instancia {{jsxref("RegExp")}}, y no del objecto {{jsxref("RegExp")}}. |
-| {{SpecName('ES5.1', '#sec-15.10.7.3', 'RegExp.prototype.ignoreCase')}}                                 | {{Spec2('ES5.1')}}     |                                                                                                                                                                                                |
-| {{SpecName('ES6', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}}     | {{Spec2('ES6')}}         | `ignoreCase` es ahora una propiedad accesora del prototipo en lugar de una propiedad de dato de una instancia.                                                                                 |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES3')}}</td>
+   <td>{{Spec2('ES3')}}</td>
+   <td>Definición inicial. Implementado en JavaScript 1.2. JavaScript 1.5: <code>ignoreCase</code> es una propiedad de la instancia  {{jsxref("RegExp")}}, y no del objecto {{jsxref("RegExp")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.10.7.3', 'RegExp.prototype.ignoreCase')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td><code>ignoreCase</code> es ahora una propiedad accesora del prototipo en lugar de una propiedad de dato de una instancia.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("javascript.builtins.RegExp.ignoreCase")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("RegExp.lastIndex")}}
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+<ul>
+ <li>{{jsxref("RegExp.lastIndex")}}</li>
+ <li>{{jsxref("RegExp.prototype.global")}}</li>
+ <li>{{jsxref("RegExp.prototype.multiline")}}</li>
+ <li>{{jsxref("RegExp.prototype.source")}}</li>
+ <li>{{jsxref("RegExp.prototype.sticky")}}</li>
+</ul>

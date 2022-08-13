@@ -4,70 +4,83 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atanh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/atanh
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La función **`Math.atanh()`** nos retorna un arco hiperbólico de un numero, eso es:
+<p>La función <strong><code>Math.atanh()</code></strong> nos retorna un arco hiperbólico de un numero, eso es:</p>
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mrow><mo>(</mo><mrow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arctanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in \left( -1, 1 \right), \mathtt{\operatorname{Math.atanh}(x)} = \operatorname{arctanh}(x) = \text{ el unico } \; y \; \text{de tal manera que} \; \tanh(y) = x</annotation></semantics></math>
+<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mrow><mo>(</mo><mrow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arctanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in \left( -1, 1 \right), \mathtt{\operatorname{Math.atanh}(x)} = \operatorname{arctanh}(x) = \text{ el unico } \; y \; \text{de tal manera que} \; \tanh(y) = x</annotation></semantics></math></p>
 
-{{EmbedInteractiveExample("pages/js/math-atanh.html")}}
+<div>{{EmbedInteractiveExample("pages/js/math-atanh.html")}}</div>
 
-## Sintaxis
 
-    Math.atanh(x)
 
-### Parametros
+<h2 id="Sintaxis">Sintaxis</h2>
 
-- _x_
-  - : Un numero.
+<pre class="syntaxbox notranslate"><code>Math.atanh(<var>x</var>)</code></pre>
 
-### Retorna un valor
+<h3 id="Parametros">Parametros</h3>
 
-El arco hiperbolico tangible nos otorga un numero.
+<dl>
+ <dt><var>x</var></dt>
+ <dd>Un numero.</dd>
+</dl>
 
-## Descripción
+<h3 id="Retorna_un_valor">Retorna un valor</h3>
 
-Por que `atanh()` es un metodo estatico de `Math`, tu siempre puedes usar eso como `Math.atanh()`, se puede usar como un metod de `Math` objeto que tu creaste (`Math` no es un constructor).
+<p>El arco hiperbolico tangible nos otorga un numero.</p>
 
-## Polimorfismo
+<h2 id="Descripción">Descripción</h2>
 
-Para <math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&#x3C;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &#x3C; 1</annotation></semantics></math>, tenemos <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math> por lo que esto puede estar emulado con la siguiente función:
+<p>Por que <code>atanh()</code> es un metodo estatico de <code>Math</code>, tu siempre puedes usar eso como <code>Math.atanh()</code>, se puede usar como un metod de <code>Math</code> objeto que tu creaste (<code>Math</code> no es un constructor).</p>
 
-```js
-Math.atanh = Math.atanh || function(x) {
+<h2 id="Polimorfismo">Polimorfismo</h2>
+
+<p>Para <math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &lt; 1</annotation></semantics></math>, tenemos <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math> por lo que esto puede estar emulado con la siguiente función:</p>
+
+<pre class="brush: js notranslate">Math.atanh = Math.atanh || function(x) {
   return Math.log((1+x)/(1-x)) / 2;
 };
-```
+</pre>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Using `Math.atanh()`
+<h3 id="Using_Math.atanh">Using <code>Math.atanh()</code></h3>
 
-```js
-Math.atanh(-2);  // NaN
+<pre class="brush: js notranslate">Math.atanh(-2);  // NaN
 Math.atanh(-1);  // -Infinito
 Math.atanh(0);   // 0
 Math.atanh(0.5); // 0.5493061443340548
 Math.atanh(1);   // Infinito
 Math.atanh(2);   // NaN
-```
+</pre>
 
-Para valores mayores a 1 o menores a -1, {{jsxref("NaN")}} retorna.
+<p>Para valores mayores a 1 o menores a -1, {{jsxref("NaN")}} retorna.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.atanh', 'Math.atanh')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.atanh', 'Math.atanh')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad entre navegadores
+<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
 
-{{Compat("javascript.builtins.Math.atanh")}}
+<p>{{Compat("javascript.builtins.Math.atanh")}}</p>
 
-## Puedes leer
+<h2 id="Puedes_leer">Puedes leer</h2>
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+<ul>
+ <li>{{jsxref("Math.acosh()")}}</li>
+ <li>{{jsxref("Math.asinh()")}}</li>
+ <li>{{jsxref("Math.cosh()")}}</li>
+ <li>{{jsxref("Math.sinh()")}}</li>
+ <li>{{jsxref("Math.tanh()")}}</li>
+</ul>

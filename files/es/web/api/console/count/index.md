@@ -3,20 +3,19 @@ title: Console.count()
 slug: Web/API/Console/count
 translation_of: Web/API/Console/count
 ---
-{{APIRef("Console API")}}
+<div>{{APIRef("Console API")}}</div>
 
-Registra el número de veces que se llama a `count()`. Esta función toma como argumento opcional una `etiqueta`.
+<p>Registra el número de veces que se llama a <code>count()</code>. Esta función toma como argumento opcional una <code>etiqueta</code>.</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-Si la `etiqueta` es colocada, esta funcion muestra el numeros de veces que `count()` ha sido utilizada con la misma etiqueta.
+<p>Si la <code>etiqueta</code> es colocada, esta funcion muestra el numeros de veces que <code>count()</code> ha sido utilizada con la misma etiqueta.</p>
 
-Si la `etiqueta` es omitida, la funcion registra el numero de veces que `count()` fue llamada en esta línea en particular.
+<p>Si la <code>etiqueta</code> es omitida, la funcion registra el numero de veces  que  <code>count()</code> fue llamada en esta línea en particular.</p>
 
-Por ejemplo, en este código:
+<p>Por ejemplo, en este código:</p>
 
-```js
-var user = "";
+<pre class="brush: js">var user = "";
 
 function greet() {
   console.count();
@@ -28,22 +27,21 @@ greet();
 user = "alice";
 greet();
 greet();
-console.count();
-```
+console.count();</pre>
 
-La salida de la consola va a mostrar algo como esto:
+<p>La salida de la consola va a mostrar algo como esto:</p>
 
-    "<no label>: 1"
-    "<no label>: 2"
-    "<no label>: 3"
-    "<no label>: 1"
+<pre class="eval">"&lt;no label&gt;: 1"
+"&lt;no label&gt;: 2"
+"&lt;no label&gt;: 3"
+"&lt;no label&gt;: 1"
+</pre>
 
-Note que al final de la linea de la salida: La llamada separada `count()` en la linea 11 es tratada como un evento independiente.
+<p>Note que al final de la linea de la salida: La llamada separada <code>count()</code> en la linea 11 es tratada como un evento independiente.</p>
 
-Si pasamos la variable `user` como `etiqueta` en la primera llamada a `count()` y la cadena "alice" en la segunda llamada:
+<p>Si pasamos la variable <code>user</code> como <code>etiqueta</code>  en la primera llamada a <code>count()</code>  y  la cadena "alice" en la segunda llamada:</p>
 
-```js
-var user = "";
+<pre class="brush: js">var user = "";
 
 function greet() {
   console.count(user);
@@ -55,33 +53,48 @@ greet();
 user = "alice";
 greet();
 greet();
-console.count("alice");
-```
+console.count("alice");</pre>
 
-Vamos a ver una salida como esta:
+<p>Vamos a ver una salida como esta:</p>
 
-    "bob: 1"
-    "alice: 1"
-    "alice: 2"
-    "alice: 3"
+<pre class="eval">"bob: 1"
+"alice: 1"
+"alice: 2"
+"alice: 3"</pre>
 
-Ahora tenemos diferentes contadores según el valor de la `etiqueta`. Al coincidir la etiqueta "alice" en la línea 11 con el valor de `user` dos veces, no se considera un evento independiente.
+<p>Ahora tenemos diferentes contadores según el valor de la <code>etiqueta</code>.  Al coincidir la etiqueta "alice" en la línea 11 con el valor de <code>user</code> dos veces, no se considera un evento independiente.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    console.count([label]);
+<pre class="syntaxbox">console.count([label]);
+</pre>
 
-## Parámetros
+<h2 id="Parámetros">Parámetros</h2>
 
-- `label`
-  - : Una cadena. Si se proporciona, la salida de `count()` indica el número de veces que fue llamada con la etiqueta. Si se omite, la salida de `count()` indica el número de veces que fue llamada en esa misma línea.
+<dl>
+ <dt><code>label</code></dt>
+ <dd>Una cadena. Si se proporciona, la salida de <code>count()</code> indica el número de veces que fue llamada con la etiqueta. Si se omite, la salida de <code>count()</code> indica el número de veces que fue llamada en esa misma línea.</dd>
+</dl>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                | Status                           | Comment            |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#count", "console.count()")}} | {{Spec2("Console API")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Console API", "#count", "console.count()")}}</td>
+   <td>{{Spec2("Console API")}}</td>
+   <td><span id="result_box" lang="es"><span>Definición inicial</span></span></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en los navegadores
+<h2 id="Compatibilidad_en_los_navegadores">Compatibilidad en los navegadores</h2>
 
 {{Compat("api.console.count")}}

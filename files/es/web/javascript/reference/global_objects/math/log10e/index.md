@@ -9,45 +9,75 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/LOG10E
 ---
-{{JSRef}}La propiedad **`Math.LOG10E`** representa el logaritmo base 10 de e, el cual es aproximadamente 0.434:
+<div>{{JSRef}}</div>
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG10E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>0.434</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG10E}} = \log_10(e) \approx 0.434</annotation></semantics></math>
+<div> </div>
 
-{{js_property_attributes(0, 0, 0)}}
+<div>La propiedad <strong><code>Math.LOG10E</code></strong> representa el logaritmo base 10 de e, el cual es aproximadamente 0.434:</div>
 
-## Descripción
+<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG10E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>0.434</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG10E}} = \log_10(e) \approx 0.434</annotation></semantics></math></p>
 
-Debido a que LOG10E es una propiedad estatica del módulo Math, se debe de invocar siempre como Math.LOG10E, en lugar de invocarla como una propiedad de algun objeto Math que hayas creado ( Math no es un constructor ).
+<div>{{js_property_attributes(0, 0, 0)}}</div>
 
-## Ejemplos
+<h2 id="Descripción">Descripción</h2>
 
-### Utilizando `Math.LOG10E`
+<p>Debido a que LOG10E es una propiedad estatica del módulo Math, se debe de invocar siempre como Math.LOG10E, en lugar de invocarla como una propiedad de algun objeto Math que hayas creado ( Math no es un constructor ).</p>
 
-La siguiente funcion regresa el logaritmo base 10 de e:
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-function getLog10e() {
+<h3 id="Utilizando_Math.LOG10E">Utilizando <code>Math.LOG10E</code></h3>
+
+<p>La siguiente funcion regresa el logaritmo base 10 de e:</p>
+
+<pre class="brush:js">function getLog10e() {
   return Math.LOG10E;
 }
 
 getLog10e(); // 0.4342944819032518
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificacion                                                               | Estatus                      | Comentarios                                         |
-| ---------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.5', 'Math.LOG10E')}}     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.log10e', 'Math.LOG10E')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.log10e', 'Math.LOG10E')}} | {{Spec2('ESDraft')}} |                                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificacion</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>
+    <p>Definición inicial. Implementado en JavaScript 1.0.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.8.1.5', 'Math.LOG10E')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-math.log10e', 'Math.LOG10E')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.log10e', 'Math.LOG10E')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Navegadores Compatibles
+<h2 id="Navegadores_Compatibles">Navegadores Compatibles</h2>
 
 {{Compat("javascript.builtins.Math.LOG10E")}}
 
-## Ver tambien
+<h2 id="Ver_tambien">Ver tambien</h2>
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
+<ul>
+ <li>{{jsxref("Math.exp()")}}</li>
+ <li>{{jsxref("Math.log()")}}</li>
+ <li>{{jsxref("Math.log10()")}}</li>
+</ul>

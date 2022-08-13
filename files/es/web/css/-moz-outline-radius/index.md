@@ -7,20 +7,19 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-moz-outline-radius
 ---
-{{Non-standard_header}}{{CSSRef}}
+<div>{{Non-standard_header}}{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-En aplicaciones de Mozilla como Firefox, la propiedad CSS `-moz-outline-radius` puede ser usada para a los contornos de esquinas redondeadas. Un {{cssxref("outline")}} es una línea que es dibujada alrededor de los elementos, fuera del límite del borde, para hacer que el elemento destaque.
+<p>En aplicaciones de Mozilla como Firefox, la propiedad CSS <code>-moz-outline-radius</code> puede ser usada para a los contornos de esquinas redondeadas. Un {{cssxref("outline")}} es una línea que es dibujada alrededor de los elementos, fuera del límite del borde, para hacer que el elemento destaque.</p>
 
-`-moz-outline-radius` es un atajo para establecer las cuatro propiedades{{cssxref("-moz-outline-radius-topleft")}}, {{cssxref("-moz-outline-radius-topright")}}, {{cssxref("-moz-outline-radius-bottomright")}} y {{cssxref("-moz-outline-radius-bottomleft")}}.
+<p><code>-moz-outline-radius</code> es un atajo para establecer las cuatro propiedades{{cssxref("-moz-outline-radius-topleft")}}, {{cssxref("-moz-outline-radius-topright")}}, {{cssxref("-moz-outline-radius-bottomright")}} y {{cssxref("-moz-outline-radius-bottomleft")}}.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-```css
-/* Un valor */
+<pre class="brush:css">/* Un valor */
 -moz-outline-radius: 25px;
 
 /* Dos valores */
@@ -36,69 +35,72 @@ En aplicaciones de Mozilla como Firefox, la propiedad CSS `-moz-outline-radius` 
 -moz-outline-radius: inherit;
 -moz-outline-radius: initial;
 -moz-outline-radius: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-> **Nota:** Los contornos elípticos y los valores `<porcentaje>` se expresan de acuerdo a la síntaxis descrita en {{cssxref("border-radius")}}.
+<div class="note">Los contornos elípticos y los valores <code>&lt;porcentaje&gt;</code> se expresan de acuerdo a la síntaxis descrita en {{cssxref("border-radius")}}.</div>
 
-Uno, dos,tres o cuatro valores `<outline-radius>` , representan uno de los siguientes casos:
+<p>Uno, dos,tres o cuatro valores  <code>&lt;outline-radius&gt;</code> , representan uno de los siguientes casos:</p>
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Ver {{cssxref("&lt;length&gt;")}} para ver los posibles valores.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Un {{cssxref("&lt;percentage&gt;")}}; ver {{cssxref("border-radius")}} para más detalles.
+<dl>
+ <dt>{{cssxref("&lt;length&gt;")}}</dt>
+ <dd>Ver {{cssxref("&lt;length&gt;")}} para ver los posibles valores.</dd>
+ <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
+ <dd>Un {{cssxref("&lt;percentage&gt;")}}; ver {{cssxref("border-radius")}} para más detalles.</dd>
+</dl>
 
-<!---->
+<ul>
+ <li>Si se establece un único valor se aplica a las cuatro esquinas-</li>
+ <li>Si se establecen dos valores, el primero se aplica a la esquina superior-izquierda e inferior-derecha y el segundo a las esquinas superior-derecha e inferior-izquierda</li>
+ <li>Si se establecen tres valores el primero se aplica a la esquina superior-izquierda, el segundo a las esquinas superior-derecha e inferior-izquierda y el tercero a la esquina inferior-derecha.</li>
+ <li>Si se establecen cautro valores el primero se aplica a la esquina superior-izquierda, el segundo a la esquina superior-derecha, el tercero la esquina inferior-derecha y el cuarto a la esquina inferior-izquierda.</li>
+</ul>
 
-- Si se establece un único valor se aplica a las cuatro esquinas-
-- Si se establecen dos valores, el primero se aplica a la esquina superior-izquierda e inferior-derecha y el segundo a las esquinas superior-derecha e inferior-izquierda
-- Si se establecen tres valores el primero se aplica a la esquina superior-izquierda, el segundo a las esquinas superior-derecha e inferior-izquierda y el tercero a la esquina inferior-derecha.
-- Si se establecen cautro valores el primero se aplica a la esquina superior-izquierda, el segundo a la esquina superior-derecha, el tercero la esquina inferior-derecha y el cuarto a la esquina inferior-izquierda.
-
-### Síntaxis Formal
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<style>
+<pre class="brush: html">&lt;style&gt;
 p {
-border: 1px solid black;
-outline: dotted red; -moz-outline-radius: 12% 1em 25px;
+border: 1px solid black; <code class="language-css"><span class="property token">
+outline</span><span class="punctuation token">:</span> dotted red<span class="punctuation token">;</span> <span class="property token">-moz-outline-radius</span><span class="punctuation token">:</span> <span class="number token">12%</span> <span class="number token">1</span>em <span class="number token">25</span>px<span class="punctuation token">;</span></code>
 }
-</style> </head>
+&lt;/style&gt; &lt;/head&gt;
 
-<body> <p>La propiedad  outline-style usando -moz-outline-radius</p> </body>
+&lt;body&gt; &lt;p&gt;La propiedad  outline-style usando <code class="language-css"><span class="property token">-moz-outline-radius</span></code>&lt;/p&gt; &lt;/body&gt;
 
-<head> <style>
+&lt;head&gt; &lt;style&gt;
 p1 {
-border: 1px solid black; outline: dotted red;
--moz-outline-radius-topleft: 12%;
--moz-outline-radius-topright: 1em;
--moz-outline-radius-bottomright: 35px;
--moz-outline-radius-bottomleft: 1em; }
-</style> </head>
+border: 1px solid black; <code class="language-css"><span class="property token">outline</span><span class="punctuation token">:</span> dotted red<span class="punctuation token">; </span></code><code class="language-css"><span class="property token">
+-moz-outline-radius-topleft</span><span class="punctuation token">:</span> <span class="number token">12%</span><span class="punctuation token">;</span> <span class="property token">
+-moz-outline-radius-topright</span><span class="punctuation token">:</span> <span class="number token">1</span>em<span class="punctuation token">;</span> <span class="property token">
+-moz-outline-radius-bottomright</span><span class="punctuation token">:</span> <span class="number token">35</span>px<span class="punctuation token">;</span> <span class="property token">
+-moz-outline-radius-bottomleft</span><span class="punctuation token">:</span> <span class="number token">1</span>em<span class="punctuation token">;</span></code> }
+&lt;/style&gt; &lt;/head&gt;
 
-<body> <p1>La propiedad outline-style usando un -moz-outline-radius-xxx más complicado</p1> </body>
-```
+&lt;body&gt; &lt;p1&gt;La propiedad outline-style usando un <code class="language-css"><span class="property token">-moz-outline-radius-xxx más complicado</span></code>&lt;/p1&gt; &lt;/body&gt;
+</pre>
 
-### Result
+<h3 id="Result"><strong>Result</strong></h3>
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/-moz-outline-radius') }}
+<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/-moz-outline-radius') }}</p>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-- `Las esquinas con radio dotted` o `dashed` se muestran como solid, {{bug("382721")}}
-- Existe la posibilidad de que futuras versiones del motor Gecko/Firefox eliminen esta propiedad completamente. Ver {{bug("593717")}}.
+<ul>
+ <li><code>Las esquinas con radio dotted</code> o <code>dashed</code> se muestran como solid, {{bug("382721")}}</li>
+ <li>Existe la posibilidad de que futuras versiones del motor Gecko/Firefox eliminen esta propiedad completamente. Ver {{bug("593717")}}.</li>
+</ul>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-Esta propiedad no se define es ningún estándar CSS.
+<p>Esta propiedad no se define es ningún estándar CSS.</p>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("css.properties.-moz-outline-radius")}}

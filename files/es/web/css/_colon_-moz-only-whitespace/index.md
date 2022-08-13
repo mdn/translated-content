@@ -1,38 +1,36 @@
 ---
 title: ':-moz-only-whitespace'
-slug: Web/CSS/:-moz-only-whitespace
+slug: 'Web/CSS/:-moz-only-whitespace'
 tags:
   - CSS
   - NeedsCompatTable
   - No estandar
   - Pseudo-clase
   - Referencia CSS
-translation_of: Web/CSS/:-moz-only-whitespace
+translation_of: 'Web/CSS/:-moz-only-whitespace'
 ---
-{{Non-standard_header}}{{CSSRef}}
+<div>{{Non-standard_header}}{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La [pseudo-class ](/es/docs/Web/CSS/Pseudo-classes)[CSS](/es/docs/Web/CSS)`:-moz-only-whitespace` selecciona un elemento si no tiene ningún hijo, o bien nodos textos vacíos o bien nodos texto que sólo contienen espacios en blanco. Sólo cuando hay elementos o nodos texto con uno o más caracteres dentro, el elemento no será seleccionado por esta pseudo-clase.
+<p>La  <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class </a><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a><code>:-moz-only-whitespace</code> selecciona un elemento si no tiene ningún hijo, o bien nodos textos vacíos o bien nodos texto que sólo contienen espacios en blanco. Sólo cuando hay elementos o nodos texto con uno o más caracteres dentro, el elemento no será seleccionado por esta pseudo-clase.</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-    span:-moz-only-whitespace { propiedades del estilo }
+<pre class="syntaxbox"><var>span</var>:-moz-only-whitespace { <em>propiedades del estilo</em> }
+</pre>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-span:-moz-only-whitespace::before {
+<pre class="brush:css">span:-moz-only-whitespace::before {
   background-color: lime;
-}
-```
+}</pre>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<span> </span>
-```
+<pre class="brush: html">&lt;span&gt; &lt;/span&gt;
+</pre>
 
-{{EmbedLiveSample("Example", "50", "20")}}
+<p>{{EmbedLiveSample("Example", "50", "20")}}</p>

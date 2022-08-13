@@ -10,35 +10,36 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/unshift
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`unshift()`** agrega uno o más elementos al inicio del array, y devuelve la nueva longitud del array.
+<p>El método <code><strong>unshift()</strong></code> agrega uno o más elementos al inicio del array, y devuelve la nueva longitud del array.</p>
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+<p>{{EmbedInteractiveExample("pages/js/array-unshift.html")}}</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    arr.unshift(elemento1[, ...[, elementoN]])
+<pre class="syntaxbox"><var>arr</var>.unshift(<var>elemento1</var>[, ...[, <var>elementoN</var>]])</pre>
 
-### Parámetros
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
 
-- `elementoN`
-  - : Elementos a agregar al inicio del array.
+<dl>
+ <dt><code>elemento<em>N</em></code></dt>
+ <dd>Elementos a agregar al inicio del array.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Returns" name="Returns">Devuelve</h3>
 
-La nueva propiedad {{jsxref("Array.length", "length")}} del objeto sobre el cual el método fue llamado.
+<p>La nueva propiedad {{jsxref("Array.length", "length")}} del objeto sobre el cual el método fue llamado.</p>
 
-## Descripción
+<h2 id="Description" name="Description">Descripción</h2>
 
-El método `unshift` inserta los valores proporcionados al inicio de un objeto del tipo array.
+<p>El método <code>unshift</code> inserta los valores proporcionados al inicio de un objeto del tipo array.</p>
 
-`unshift` es intencionalmente genérico; este método puede ser {{jsxref("Function.call", "called", "", 1)}} o {{jsxref("Function.apply", "applied", "", 1)}} a objetos similares a arrays. Objetos que no contengan una propiedad `length` reflejando una serie de propiedades numéricas consecutivas, comenzada a partir del cero, pueden no comportarse de una manera comprensible.
+<p><code>unshift</code> es intencionalmente genérico; este método puede ser {{jsxref("Function.call", "called", "", 1)}} o {{jsxref("Function.apply", "applied", "", 1)}} a objetos similares a arrays. Objetos que no contengan una propiedad <code>length</code> reflejando una serie de propiedades numéricas consecutivas, comenzada a partir del cero, pueden no comportarse de una manera comprensible.</p>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-```js
-var arr = [1, 2];
+<pre class="brush: js">var arr = [1, 2];
 
 arr.unshift(0); // resultado de la llamada es 3, la nueva longitud del array
 // arr es [0, 1, 2]
@@ -48,24 +49,53 @@ arr.unshift(-2, -1); // = 5
 
 arr.unshift([-3]);
 // arr es [[-3], -2, -1, 0, 1, 2]
-```
+</pre>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                                               | Status                       | Comentario                                         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.13', 'Array.prototype.unshift')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}} | {{Spec2('ESDraft')}} |                                                    |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES3')}}</td>
+   <td>{{Spec2('ES3')}}</td>
+   <td>Initial definition. Implemented in JavaScript 1.2.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.4.4.13', 'Array.prototype.unshift')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.unshift', 'Array.prototype.unshift')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("javascript.builtins.Array.unshift")}}
+<div>
 
-## Ver también
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.concat()")}}
+<p>{{Compat("javascript.builtins.Array.unshift")}}</p>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Array.prototype.push()")}}</li>
+ <li>{{jsxref("Array.prototype.pop()")}}</li>
+ <li>{{jsxref("Array.prototype.shift()")}}</li>
+ <li>{{jsxref("Array.prototype.concat()")}}</li>
+</ul>

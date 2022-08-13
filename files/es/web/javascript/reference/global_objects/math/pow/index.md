@@ -4,35 +4,36 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/pow
 ---
-{{JSRef("Global_Objects", "Math")}}
+<div>{{JSRef("Global_Objects", "Math")}}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-La función **`Math.pow()`** devuelve la `base elevada al` `exponente` , esto es, `baseexponente`.
+<p>La función  <strong><code>Math.pow()</code></strong> devuelve la  <code>base elevada al</code> <code>exponente</code> , esto es, <code>base<sup>exponente</sup></code>.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    Math.pow(base, exponente)
+<pre class="syntaxbox"><code>Math.pow(<var>base</var>, <var>exponente</var>)</code></pre>
 
-### Parametros
+<h3 id="Parameters" name="Parameters">Parametros</h3>
 
-- `base`
-  - : El número base.
-- `exponente`
-  - : El exponente utilizado para elevar la `base`.
+<dl>
+ <dt><code>base</code></dt>
+ <dd>El número base.</dd>
+ <dt><code>exponente</code></dt>
+ <dd>El exponente utilizado para elevar la <code>base</code>.</dd>
+</dl>
 
-## Descripción
+<h2 id="Description" name="Description">Descripción</h2>
 
-La función **`Math.pow()`** retorna la `base` elevada al `exponente`, es decir, `baseexponente`. La base y el exponente estan en el sistema numérico decimal.
+<p>La función <strong><code>Math.pow()</code></strong> retorna la <code>base</code> elevada al <code>exponente</code>, es decir, <code>base<sup>exponente</sup></code>. La base y el exponente estan en el sistema numérico decimal.</p>
 
-Puesto que `pow()` es un método estático de `Math`, siempre se utiliza como `Math.pow()`. Si la base es negativa y el exponente no es un número entero, el resultado será NaN.
+<p>Puesto que <code>pow()</code> es un método estático de <code>Math</code>, siempre se utiliza como <code>Math.pow()</code>. Si la base es negativa y el exponente no es un número entero, el resultado será NaN.</p>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-### Ejemplo: Usando `Math.pow()`
+<h3 id="Example_Using_Math.pow" name="Example:_Using_Math.pow">Ejemplo: Usando <code>Math.pow()</code></h3>
 
-```js
-// simple
+<pre class="brush: js">// simple
 Math.pow(7, 2);    // 49
 Math.pow(7, 3);    // 343
 Math.pow(2, 10);   // 1024
@@ -49,23 +50,44 @@ Math.pow(-7, 2);   // 49 (los cuadrados son positivos)
 Math.pow(-7, 3);   // -343 (El cubo de una base negativa puede ser negativo)
 Math.pow(-7, 0.5); // NaN (Los números negativos no tienen raíz cuadrada real)
 Math.pow(-7, 1/3); // NaN
-```
+</pre>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                       | Estado                   | Comentarios                                        |
-| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                              | Estándar                 | Definición inicial implementada en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.13', 'Math.pow')}} | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-math.pow', 'Math.pow')}}     | {{Spec2('ES6')}}     |                                                    |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1st Edition.</td>
+   <td>Estándar</td>
+   <td>Definición inicial implementada en JavaScript 1.0.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.8.2.13', 'Math.pow')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-math.pow', 'Math.pow')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Math.pow")}}
 
-## Ver también
+<h2 id="See_also" name="See_also">Ver también</h2>
 
-- {{jsxref("Math.cbrt()")}} {{experimental_inline}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.sqrt()")}}
+<ul>
+ <li>{{jsxref("Math.cbrt()")}} {{experimental_inline}}</li>
+ <li>{{jsxref("Math.exp()")}}</li>
+ <li>{{jsxref("Math.log()")}}</li>
+ <li>{{jsxref("Math.sqrt()")}}</li>
+</ul>

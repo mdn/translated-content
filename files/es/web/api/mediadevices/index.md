@@ -11,25 +11,26 @@ tags:
   - TopicStub
 translation_of: Web/API/MediaDevices
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+<div>{{APIRef("WebRTC")}}{{SeeCompatTable}}</div>
 
-The **`MediaDevices`** interface provides access to connected media input devices like cameras and microphones, as well as screensharing.
+<p><span class="seoSummary">The <strong><code>MediaDevices</code></strong> interface provides access to connected media input devices like cameras and microphones, as well as screensharing.</span></p>
 
-## Properties
+<h2 id="Properties">Properties</h2>
 
-_None._
+<p><em>None.</em></p>
 
-## Methods
+<h2 id="Methods">Methods</h2>
 
-- {{ domxref("MediaDevices.getUserMedia()") }}
-  - : With the user's permission through a prompt, turns on a camera or screensharing and/or a microphone on the system and provides a {{domxref("MediaStream")}} containing a video track and/or an audio track with the input.
-- {{ domxref("MediaDevices.enumerateDevices()") }}
-  - : Obtains an array of information about the media input and output devices available on the system.
+<dl>
+ <dt>{{ domxref("MediaDevices.getUserMedia()") }}</dt>
+ <dd>With the user's permission through a prompt, turns on a camera or screensharing and/or a microphone on the system and provides a {{domxref("MediaStream")}} containing a video track and/or an audio track with the input.</dd>
+ <dt>{{ domxref("MediaDevices.enumerateDevices()") }}</dt>
+ <dd>Obtains an array of information about the media input and output devices available on the system.</dd>
+</dl>
 
-## Example
+<h2 id="Example">Example</h2>
 
-```js
-'use strict';
+<pre class="brush:js">'use strict';
 
 // Put variables in global scope to make them available to the browser console.
 var video = document.querySelector('video');
@@ -63,24 +64,36 @@ navigator.mediaDevices.getUserMedia(constraints)
 });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '<p>' + msg + '</p>';
+  errorElement.innerHTML += '&lt;p&gt;' + msg + '&lt;/p&gt;';
   if (typeof error !== 'undefined') {
     console.error(error);
   }
-}
-```
+}</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                        | Status                               | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}}</td>
+   <td>{{Spec2('Media Capture')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("api.MediaDevices")}}
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [WebRTC](/es/docs/WebRTC) - the introductory page to the API
-- [Navigator.getUserMedia()](/es/docs/WebRTC/navigator.getUserMedia)
+<ul>
+ <li><a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> - the introductory page to the API</li>
+ <li><a href="/en-US/docs/WebRTC/navigator.getUserMedia" title="/en-US/docs/WebRTC/navigator.getUserMedia">Navigator.getUserMedia()</a></li>
+</ul>

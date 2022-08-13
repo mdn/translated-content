@@ -8,78 +8,86 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/rect
 ---
-{{SVGRef}}
+<div>{{SVGRef}}</div>
 
-El elemento `rect` es una forma básica de SVG, usada para crear rectángulos basada en la posición de una esquina, su alto y ancho.
-También podría ser usada para crear rectángulos con esquinas redondeadas.
+<p>El elemento <code>rect</code> es una forma básica de SVG, usada para crear rectángulos basada en la posición de una esquina, su alto y ancho.<br>
+ También podría ser usada para crear rectángulos con esquinas redondeadas.</p>
 
-## Contexto de uso
+<h2 id="Contexto_de_uso">Contexto de uso</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### Uso simple de `rect`
+<h3 id="Uso_simple_de_rect">Uso simple de <code>rect</code></h3>
 
-```xml
-<?xml version="1.0"?>
-<svg width="120" height="120"
+<p> </p>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;svg width="120" height="120"
      viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="http://www.w3.org/2000/svg"&gt;
 
-  <rect x="10" y="10" width="100" height="100"/>
-</svg>
-```
+  &lt;rect x="10" y="10" width="100" height="100"/&gt;
+&lt;/svg&gt;</pre>
 
-» [rect-1.svg](https://mdn.mozillademos.org/files/8893/rect-1.svg)
+<p> </p>
 
-### `rect` con esquinas redondeados
+<p>» <a href="https://mdn.mozillademos.org/files/8893/rect-1.svg">rect-1.svg</a></p>
 
-```xml
-<?xml version="1.0"?>
-<svg width="120" height="120"
+<h3 id="rect_con_esquinas_redondeados"><code>rect</code> con esquinas redondeados</h3>
+
+<p> </p>
+
+<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
+&lt;svg width="120" height="120"
      viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="http://www.w3.org/2000/svg"&gt;
 
-  <rect x="10" y="10"
+  &lt;rect x="10" y="10"
         width="100" height="100"
-        rx="15" ry="15"/>
+        rx="15" ry="15"/&gt;
 
-</svg>
-```
+&lt;/svg&gt;</pre>
 
-» [rect-2.svg](https://mdn.mozillademos.org/files/8897/rect-2.svg)
+<p>» <a href="https://mdn.mozillademos.org/files/8897/rect-2.svg">rect-2.svg</a></p>
 
-## Atributos
+<h2 id="Atributos">Atributos</h2>
 
-### Atributos globales
+<h3 id="Atributos_globales">Atributos globales</h3>
 
-- [Conditional processing attributes](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Core attributes](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Graphical event attributes](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Presentation attributes](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+<ul>
+ <li><a href="/en/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">Conditional processing attributes</a> »</li>
+ <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Core attributes</a> »</li>
+ <li><a href="/en/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">Graphical event attributes</a> »</li>
+ <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">Presentation attributes</a> »</li>
+ <li>{{ SVGAttr("class") }}</li>
+ <li>{{ SVGAttr("style") }}</li>
+ <li>{{ SVGAttr("externalResourcesRequired") }}</li>
+ <li>{{ SVGAttr("transform") }}</li>
+</ul>
 
-### Atributos específicos
+<h3 id="Atributos_específicos">Atributos específicos</h3>
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
-- {{ SVGAttr("rx") }}
-- {{ SVGAttr("ry") }}
+<ul>
+ <li>{{ SVGAttr("x") }}</li>
+ <li>{{ SVGAttr("y") }}</li>
+ <li>{{ SVGAttr("width") }}</li>
+ <li>{{ SVGAttr("height") }}</li>
+ <li>{{ SVGAttr("rx") }}</li>
+ <li>{{ SVGAttr("ry") }}</li>
+</ul>
 
-## Interfaz DOM
+<h2 id="Interfaz_DOM">Interfaz DOM</h2>
 
-Este elemento implementa la interfaz [`SVGRectElement`](/en/DOM/SVGRectElement "en/DOM/SVGRectElement").
+<p>Este elemento implementa la interfaz <code><a href="/en/DOM/SVGRectElement" title="en/DOM/SVGRectElement">SVGRectElement</a></code>.</p>
 
-## Compatibilidad de los Navegadores
+<h2 id="Compatibilidad_de_los_Navegadores">Compatibilidad de los Navegadores</h2>
 
 {{Compat("svg.elements.rect")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{ SVGElement("path") }}
+<ul>
+ <li>{{ SVGElement("path") }}</li>
+</ul>

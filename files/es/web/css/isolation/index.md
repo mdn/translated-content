@@ -7,20 +7,19 @@ tags:
   - Propieiedad CSS
 translation_of: Web/CSS/isolation
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad CSS **`isolation`**` define si el elemento debe crear un nuevo `{{glossary("stacking context")}}.
+<p>La propiedad CSS <strong><code>isolation</code></strong><code> define si el elemento debe crear un nuevo </code>{{glossary("stacking context")}}.</p>
 
-Esto es especialmente útil en conjunto con {{cssxref("background-blend-mode")}} que solo mezclan fondos en un contexto de apilamiento determinado: permite aislar grupos de elementos de sus fondos más profundos y mezclar sus colores de fondo.
+<p>Esto es especialmente útil en conjunto con {{cssxref("background-blend-mode")}} que solo mezclan fondos en un contexto de apilamiento determinado: permite aislar grupos de elementos de sus fondos más profundos y mezclar sus colores de fondo.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-/* Keyword values */
+<pre class="brush:css">/* Keyword values */
 isolation: auto;
 isolation: isolate;
 
@@ -28,34 +27,34 @@ isolation: isolate;
 isolation: inherit;
 isolation: initial;
 isolation: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `auto`
-  - : Es un keyword que indica que un nuevo contexto de apilamiento debe ser creado solo si una de las propiedades aplicadas al elemento lo requiere.
-- `isolate`
-  - : Es un keyword que indica que un nuevo contexto de apilamiento debe ser creado.
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>Es un keyword que indica que un nuevo contexto de apilamiento debe ser creado solo si una de las propiedades aplicadas al elemento lo requiere.</dd>
+ <dt><code>isolate</code></dt>
+ <dd>Es un keyword que indica que un nuevo contexto de apilamiento debe ser creado.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```html
-<div id="b" class="a">
-  <div id="d">
-    <div class="a c">auto</div>
-  </div>
-  <div id="e">
-    <div class="a c">isolate</div>
-  </div>
-</div>
-```
+<pre class="brush: html">&lt;div id="b" class="a"&gt;
+  &lt;div id="d"&gt;
+    &lt;div class="a c"&gt;auto&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="e"&gt;
+    &lt;div class="a c"&gt;isolate&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-```css
-.a {
+<pre class="brush: css">.a {
   background-color: rgb(0,255,0);
 }
 #b {
@@ -74,22 +73,36 @@ isolation: unset;
 }
 #e {
   isolation: isolate;
-}
-```
+}</pre>
 
-{{ EmbedLiveSample('Examples', "230", "230") }}
+<p>{{ EmbedLiveSample('Examples', "230", "230") }}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#isolation', 'Isolation') }} | {{ Spec2('Compositing') }} | Initial definition |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('Compositing', '#isolation', 'Isolation') }}</td>
+   <td>{{ Spec2('Compositing') }}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("css.properties.isolation")}}
 
-## También puedes ver
+<h2 id="También_puedes_ver">También puedes ver</h2>
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}
+<ul>
+ <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
+ <li>{{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}</li>
+</ul>

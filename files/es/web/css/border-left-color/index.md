@@ -3,59 +3,71 @@ title: border-left-color
 slug: Web/CSS/border-left-color
 translation_of: Web/CSS/border-left-color
 ---
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-`border-left-color` pone el color del borde izquierdo de un elemento,con el valor de el color en hexadecimal o con palabras clave, como azul, verde, rojo `transparente `.
+<p><code>border-left-color</code> pone el color del borde izquierdo de un elemento,con el valor de el color en hexadecimal o con palabras clave, como azul, verde, rojo <code> transparente </code>.</p>
 
-- {{ Xref_cssinitial() }}: {{ Cssxref("color") }} propiedad
-- Se aplica a : todos los elementos
-- {{ Xref_cssinherited() }}: no
-- Porcentajes: N/A
-- Media: {{ Xref_cssvisual() }}
-- {{ Xref_csscomputed() }}: cuando son tomados de la propiedad 'color',los valores computarizados de 'color'; de otra manera como sean especificados.
+<ul>
+ <li>{{ Xref_cssinitial() }}: {{ Cssxref("color") }} propiedad</li>
+ <li>Se aplica a : todos los elementos</li>
+ <li>{{ Xref_cssinherited() }}: no</li>
+ <li>Porcentajes: N/A</li>
+ <li>Media: {{ Xref_cssvisual() }}</li>
+ <li>{{ Xref_csscomputed() }}: cuando son tomados de la propiedad 'color',los valores computarizados de 'color'; de otra manera como sean especificados.</li>
+</ul>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    border-left-color:color | transparent | inherit
+<pre class="eval">border-left-color:<em>color</em> | transparent | inherit
+</pre>
 
-### Valores
+<h3 id="Valores" name="Valores">Valores</h3>
 
-- color
-  - : El color puede ser especificado en un valor RGB en hexadecimal, o usando uno de los colores predeterminados
-- transparent
-  - : El elemento no tiene color de si mismo, en vez este enseña el color detras de este elemento.
+<dl>
+ <dt>color </dt>
+ <dd>El color puede ser especificado en un valor RGB en hexadecimal, o usando uno de los colores predeterminados</dd>
+ <dt>transparent </dt>
+ <dd>El elemento no tiene color de si mismo, en vez este enseña el color detras de este elemento.</dd>
+</dl>
 
-### Propiedades parecidas
+<h3 id="Propiedades_parecidas" name="Propiedades_parecidas">Propiedades parecidas</h3>
 
-- {{ Cssxref("border-color") }}
-- {{ Cssxref("border-bottom-color") }}
-- {{ Cssxref("border-right-color") }}
-- {{ Cssxref("border-top-color") }}
+<ul>
+ <li>{{ Cssxref("border-color") }}</li>
+ <li>{{ Cssxref("border-bottom-color") }}</li>
+ <li>{{ Cssxref("border-right-color") }}</li>
+ <li>{{ Cssxref("border-top-color") }}</li>
+</ul>
 
-### Examples
+<h3 id="Examples" name="Examples">Examples</h3>
 
-[Ver El Ejemplo Vivo](/samples/cssref/border.html)
+<p><a href="/samples/cssref/border.html">Ver El Ejemplo Vivo</a></p>
 
-    element {
-    	width: 300px;
-            padding: 15px;
-            border-bottom-size: 1px;
-            border-bottom-style: solid;
-            border-bottom-color: #000;
-    }
+<pre>element {
+	width: 300px;
+        padding: 15px;
+        border-bottom-size: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #000;
+}
 
+</pre>
 
+<p> </p>
 
-    p {
-    border-style: solid;
-    border-left-color: #ff0000
-    }
+<pre>p {
+border-style: solid;
+border-left-color: #ff0000
+}
 
-    p {
-    border-style: solid;
-    border-left-color: rgb(255,0,0)
-    }
+p {
+border-style: solid;
+border-left-color: rgb(255,0,0)
+}
+</pre>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-- [Color Chart by VisiBone](http://html-color-codes.com/)
+<ul>
+ <li><a class="external" href="http://html-color-codes.com/">Color Chart by VisiBone</a></li>
+</ul>

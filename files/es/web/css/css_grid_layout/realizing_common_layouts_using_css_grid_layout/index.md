@@ -7,20 +7,21 @@ tags:
   - Guía
 translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
-Para completar este conjunto de guías de CSS Grid Layout, voy a recorrer algunos diseños diferentes, que demuestran algunas de las diferentes técnicas que puede utilizar al diseñar con grid layout. Vamos a ver un ejemplo usando [grid-template-areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas) un típico sistema de cuadrícula flexible de 12 columnas, y también un listado de productos usando el emplazamiento automático. Como puedes ver en este conjunto de ejemplos, a menudo hay más de una manera de lograr el resultado que deseas con el diseño de cuadrícula. Escoge el método que encuentres más útil para los problemas que estás resolviendo y los diseños que necesitas implementar.
+<p>Para completar este conjunto de guías de CSS Grid Layout, voy a recorrer algunos diseños diferentes, que demuestran algunas de las diferentes técnicas que puede utilizar al diseñar con grid layout. Vamos a ver un ejemplo usando <a href="/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas"> grid-template-areas</a> un típico sistema de cuadrícula flexible de 12 columnas, y también un listado de productos usando el emplazamiento automático. Como puedes ver en este conjunto de ejemplos, a menudo hay más de una manera de lograr el resultado que deseas con el diseño de cuadrícula. Escoge el método que encuentres más útil para los problemas que estás resolviendo y los diseños que necesitas implementar.</p>
 
-## Responsive layout de 1 a 3 columnas fluidas usando `grid-template-areas`
+<h2 id="Responsive_layout_de_1_a_3_columnas_fluidas_usando_grid-template-areas">Responsive layout de 1 a 3 columnas fluidas usando <code>grid-template-areas</code></h2>
 
-Muchos sitios web son una variación de este tipo de diseño: contenido, barras laterales, un encabezado y un pie de página. En diseños responsivos, es posible que quieras mostrar el diseño en una sola columna, agregando una barra lateral en un punto de interrupción determinado y luego incorporar un diseño de tres columnas para pantallas más amplias.
+<p>Muchos sitios web son una variación de este tipo de diseño: contenido, barras laterales, un encabezado y un pie de página. En diseños responsivos, es posible que quieras mostrar el diseño en una sola columna, agregando una barra lateral en un punto de interrupción determinado y luego incorporar un diseño de tres columnas para pantallas más amplias.</p>
 
-![Image of the three different layouts created by redefining our grid at two breakpoints.](https://mdn.mozillademos.org/files/14749/11-responsive-areas.png)
+<p><img alt="Image of the three different layouts created by redefining our grid at two breakpoints." src="https://mdn.mozillademos.org/files/14749/11-responsive-areas.png"></p>
 
-Voy a crear este layout usando la propiedad _named template areas_ que aprendimos en la guía _[Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_.
+<p>Voy a crear este layout usando la propiedad <em>named template areas</em> que aprendimos en la guía <em><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></em>.</p>
 
-Mi marcado consiste en un container con elementos en su interior para el header, footer, contenido principal, navegación, sidebar, y un bloque para poner anuncios./p>
+<p>Mi marcado consiste en un container con elementos en su interior para el header, footer, contenido principal, navegación, sidebar, y un bloque para poner anuncios./p&gt;</p>
 
-```css hidden
-* {box-sizing: border-box;}
+<div id="layout_1">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 
     .wrapper {
         max-width: 1024px;
@@ -28,7 +29,7 @@ Mi marcado consiste en un container con elementos en su interior para el header,
         font: 1.2em Helvetica, arial, sans-serif;
     }
 
-    .wrapper > * {
+    .wrapper &gt; * {
         border: 2px solid #f08c00;
         background-color: #ffec99;
         border-radius: 5px;
@@ -40,32 +41,31 @@ Mi marcado consiste en un container con elementos en su interior para el header,
         margin: 0;
         padding: 0;
     }
-```
-
-```html
-<div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content">
-            <h1>Área principal del artículo</h1>
-            <p>En este diseño, las áreas se muestran en el orden en que están escritas en las pantallas de menos de 500 píxeles de ancho. Pasamos a un diseño de dos columnas, y luego a uno de tres columnas mediante la redefinición de la rejilla y la colocación de los elementos en ella.</p>
-        </article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
+</pre>
 </div>
-```
 
-Al usar {{cssxref("grid-template-areas")}} para crear el diseño. A parte de las media queries necesito nombrar las áreas. Nombremos las áreas con la propiedad {{cssxref("grid-area")}} property.
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+        &lt;header class="main-head"&gt;The header&lt;/header&gt;
+        &lt;nav class="main-nav"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;article class="content"&gt;
+            &lt;h1&gt;Área principal del artículo&lt;/h1&gt;
+            &lt;p&gt;En este diseño, las áreas se muestran en el orden en que están escritas en las pantallas de menos de 500 píxeles de ancho. Pasamos a un diseño de dos columnas, y luego a uno de tres columnas mediante la redefinición de la rejilla y la colocación de los elementos en ella.&lt;/p&gt;
+        &lt;/article&gt;
+        &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
+        &lt;div class="ad"&gt;Advertising&lt;/div&gt;
+        &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
+&lt;/div&gt;
+</pre>
 
-```css
-.main-head {
+<p>Al usar {{cssxref("grid-template-areas")}} para crear el diseño. A parte de las media queries necesito nombrar las áreas. Nombremos las áreas con la propiedad {{cssxref("grid-area")}} property.</p>
+
+<pre class="brush: css">.main-head {
   grid-area: header;
 }
 .content {
@@ -83,12 +83,11 @@ Al usar {{cssxref("grid-template-areas")}} para crear el diseño. A parte de las
 .main-footer {
   grid-area: footer;
 }
-```
+</pre>
 
-Esto no creará ningún diseño, sin embargo, nuestros elementos ahora tienen nombres que podemos utilizar para hacerlo. Al margen de las media queries, ahora voy a configurar el diseño para el ancho móvil. Aquí estoy manteniendo todo en el orden de origen, tratando de evitar cualquier separación entre la fuente y la pantalla, tal y como se describe en la guía _[Grid layout y accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_. No he definido ninguna vía de columna o de fila, pero este diseño dicta una sola columna, y las filas se crearán según sea necesario para cada uno de los items de la cuadrícula implícita.
+<p>Esto no creará ningún diseño, sin embargo, nuestros elementos ahora tienen nombres que podemos utilizar para hacerlo. Al margen de las media queries, ahora voy a configurar el diseño para el ancho móvil. Aquí estoy manteniendo todo en el orden de origen, tratando de evitar cualquier separación entre la fuente y la pantalla, tal y como se describe en la guía <em><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">Grid layout y accesibilidad</a></em>. No he definido ninguna vía de columna o de fila, pero este diseño dicta una sola columna, y las filas se crearán según sea necesario para cada uno de los items de la cuadrícula implícita.</p>
 
-```css
-.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
@@ -99,12 +98,11 @@ Esto no creará ningún diseño, sin embargo, nuestros elementos ahora tienen no
     "ad"
     "footer";
 }
-```
+</pre>
 
-Después de establecer la columna simple para todas los tamaños de pantalla, ahora podemos añadir una [media query](/es/docs/Web/CSS/Media_Queries) y redefinir nuestro layout para los casos en los que tuviéramos suficiente pantalla real como para mostrar dos columnas.
+<p>Después de establecer la columna simple para todas los tamaños de pantalla, ahora podemos añadir una <a href="/es/docs/Web/CSS/Media_Queries">media query</a> y redefinir nuestro layout para los casos en los que tuviéramos suficiente pantalla real como para mostrar dos columnas.</p>
 
-```css
-@media (min-width: 500px) {
+<pre class="brush: css">@media (min-width: 500px) {
   .wrapper {
     grid-template-columns: 1fr 3fr;
     grid-template-areas:
@@ -118,14 +116,13 @@ Después de establecer la columna simple para todas los tamaños de pantalla, ah
     justify-content: space-between;
   }
 }
-```
+</pre>
 
-Se puede ver la forma del layout en los valores de {{cssxref("grid-template-areas")}}. El `header` se expande en dos vías de columna, lo mismo que `nav`. En la tercera vía de fila tenemos el `sidebar` al costado del `content`. En la cuarta vía de fila he decidido poner el contenido `ad` – por tanto aparecerá debajo de sidebar,y a continuación, el `footer` , debajo del contenido. Estoy utilizando flexbox en la navegación para mostrarlo en una fila espaciada.
+<p>Se puede ver la forma del layout en los valores de {{cssxref("grid-template-areas")}}. El <code>header</code> se expande en dos vías de columna, lo mismo que <code>nav</code>. En la tercera vía de fila tenemos el <code>sidebar</code> al costado del <code>content</code>. En la cuarta vía de fila he decidido poner el contenido <code>ad</code> – por tanto aparecerá debajo de sidebar,y a continuación, el <code>footer</code> , debajo del contenido. Estoy utilizando flexbox en la navegación para mostrarlo en una fila espaciada.</p>
 
-Ahora puedo añadir un punto de ruptura final para pasar a un diseño de tres columnas.
+<p>Ahora puedo añadir un punto de ruptura final para pasar a un diseño de tres columnas.</p>
 
-```css
-@media (min-width: 700px) {
+<pre class="brush: css">@media (min-width: 700px) {
   .wrapper {
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas:
@@ -138,57 +135,57 @@ Ahora puedo añadir un punto de ruptura final para pasar a un diseño de tres co
      flex-direction: column;
    }
 }
-```
+</pre>
 
-El diseño de tres columnas tiene dos columnas laterales de `1fr` y una columna central que tiene `4fr` como tamaño de vía. Esto significa que el espacio disponible en el contenedor se divide en 6 y se asigna en proporción a nuestras tres pistas - una parte cada una a las columnas laterales y 4 partes al centro.
+<p>El diseño de tres columnas tiene dos columnas laterales de <code>1fr</code> y una columna central que tiene <code>4fr</code> como tamaño de vía. Esto significa que el espacio disponible en el contenedor se divide en 6 y se asigna en proporción a nuestras tres pistas - una parte cada una a las columnas laterales y 4 partes al centro.</p>
 
-En este diseño estoy mostrando `nav` en la columna de la izquierda, junto al `content`. En la columna de la derecha tenemos `sidebar` y debajo están los anuncios (`ad`). El `footer` se extiende a lo largo de la parte inferior del diseño. Luego uso flexbox para mostrar la navegación como una columna.
+<p>En este diseño estoy mostrando <code>nav</code> en la columna de la izquierda, junto al <code>content</code>. En la columna de la derecha tenemos <code>sidebar</code> y debajo están los anuncios (<code>ad</code>). El <code>footer</code> se extiende a lo largo de la parte inferior del diseño. Luego uso flexbox para mostrar la navegación como una columna.</p>
 
-{{ EmbedLiveSample('layout_1', '800', '500') }}
+<p>{{ EmbedLiveSample('layout_1', '800', '500') }}</p>
+</div>
 
-Este es un ejemplo simple pero demuestra cómo podemos usar un diseño de cuadrícula para reorganizar nuestro diseño para diferentes puntos de ruptura. En particular, estoy cambiando la ubicación de ese bloque de anuncios `ad`, según corresponda en mis diferentes configuraciones de columna. Este método de nombrar las áreas me parece muy útil en una etapa de prototipado, es fácil jugar con la ubicación de los elementos. Siempre se puede empezar a utilizar la rejilla de esta manera para la creación de prototipos, incluso si no se puede confiar plenamente en ella en producción debido a los navegadores que visitan su sitio.
+<p>Este es un ejemplo simple pero demuestra cómo podemos usar un diseño de cuadrícula para reorganizar nuestro diseño para diferentes puntos de ruptura. En particular, estoy cambiando la ubicación de ese bloque de anuncios <code>ad</code>, según corresponda en mis diferentes configuraciones de columna. Este método de nombrar las áreas me parece muy útil en una etapa de prototipado, es fácil jugar con la ubicación de los elementos. Siempre se puede empezar a utilizar la rejilla de esta manera para la creación de prototipos, incluso si no se puede confiar plenamente en ella en producción debido a los navegadores que visitan su sitio.</p>
 
-## Diseño flexible de 12-columnas
+<h2 id="Diseño_flexible_de_12-columnas">Diseño flexible de 12-columnas</h2>
 
-Si has estado trabajando con uno de los muchos frameworks o sistemas de cuadrícula puedes estar acostumbrado a diseñar tu sitio en una cuadrícula flexible de 12 o 16 columnas. Podemos crear este tipo de sistema utilizando CSS Grid Layout. Como ejemplo simple, estoy creando una cuadrícula flexible de 12 columnas que tiene 12 pistas de columna de `1fr` -unidad, todas tienen una línea de inicio llamada `col-start`. Esto significa que tendremos doce líneas de cuadrícula llamadas `col-start`.
+<p>Si has estado trabajando con uno de los muchos frameworks o sistemas de cuadrícula puedes estar acostumbrado a diseñar tu sitio en una cuadrícula flexible de 12 o 16 columnas. Podemos crear este tipo de sistema utilizando CSS Grid Layout. Como ejemplo simple, estoy creando una cuadrícula flexible de 12 columnas que tiene 12 pistas de columna de <code>1fr</code> -unidad, todas tienen una línea de inicio llamada <code>col-start</code>. Esto significa que tendremos doce líneas de cuadrícula llamadas <code>col-start</code>.</p>
 
-```css hidden
-.wrapper {
+<div id="layout_2">
+<div class="hidden">
+<pre class="brush: css">.wrapper {
   max-width: 1024px;
   margin: 0 auto;
   font: 1.2em Helvetica, arial, sans-serif;
 }
-.wrapper > * {
+.wrapper &gt; * {
   border: 2px solid #f08c00;
   background-color: #ffec99;
   border-radius: 5px;
   padding: 10px;
 }
-```
+</pre>
+</div>
 
-```css
-.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-gap: 20px;
 }
-```
+</pre>
 
-Para demostrar cómo funciona este sistema de rejilla tengo 4 ítems hijos dentro de mi wrapper.
+<p>Para demostrar cómo funciona este sistema de rejilla tengo 4 ítems hijos dentro de mi wrapper.</p>
 
-```html
-<div class="wrapper">
-  <div class="item1">Start column line 1, span 3 column tracks.</div>
-  <div class="item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
-  <div class="item3">Start row 2 column line 2, span 2 column tracks.</div>
-  <div class="item4">Start at column line 3, span to the end of the grid (-1).</div>
-</div>
-```
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+  &lt;div class="item1"&gt;Start column line 1, span 3 column tracks.&lt;/div&gt;
+  &lt;div class="item2"&gt;Start column line 6, span 4 column tracks. 2 row tracks.&lt;/div&gt;
+  &lt;div class="item3"&gt;Start row 2 column line 2, span 2 column tracks.&lt;/div&gt;
+  &lt;div class="item4"&gt;Start at column line 3, span to the end of the grid (-1).&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-Entonces puedo ponerlos en la rejilla usando los nombres de las líneas, y la palabra clave span.
+<p>Entonces puedo ponerlos en la rejilla usando los nombres de las líneas, y la palabra clave span.</p>
 
-```css
-.item1 {
+<pre class="brush: css">.item1 {
   grid-column: col-start / span 3;
 }
 .item2 {
@@ -203,24 +200,26 @@ Entonces puedo ponerlos en la rejilla usando los nombres de las líneas, y la pa
   grid-column: col-start 3 / -1;
   grid-row: 3;
 }
-```
+</pre>
 
-{{ EmbedLiveSample('layout_2', '800', '400') }}
+<p>{{ EmbedLiveSample('layout_2', '800', '400') }}</p>
+</div>
 
-Como se describe en la [guía de líneas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines), estamos utilizando la línea con nombre para colocar nuestro ítem. Como tenemos 12 líneas todas con el mismo nombre usamos el nombre, y luego el index de la línea. También puedes usar el propio index de líneas si lo prefieres y evitar el uso de líneas con nombre.
+<p>Como se describe en la <a href="/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">guía de líneas con nombre</a>, estamos utilizando la línea con nombre para colocar nuestro ítem. Como tenemos 12 líneas todas con el mismo nombre usamos el nombre, y luego el index de la línea. También puedes usar el propio index de líneas si lo prefieres y evitar el uso de líneas con nombre.</p>
 
-En lugar de establecer el número de la línea final, he elegido decir cuántas pistas debe expandir este elemento, utilizando la palabra clave span. Me gusta este enfoque, ya que cuando trabajamos con un sistema de diseño de múltiples columnas normalmente pensamos en bloques en términos del número de vías de la cuadrícula que atraviesan, y los ajustamos para diferentes puntos de ruptura. Para ver cómo se alinean los bloques con las vías, utiliza el [Firefox Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts). Muestra claramente cómo se colocan nuestros ítems.
+<p>En lugar de establecer el número de la línea final, he elegido decir cuántas pistas debe expandir este elemento, utilizando la palabra clave span. Me gusta este enfoque, ya que cuando trabajamos con un sistema de diseño de múltiples columnas normalmente pensamos en bloques en términos del número de vías de la cuadrícula que atraviesan, y los ajustamos para diferentes puntos de ruptura. Para ver cómo se alinean los bloques con las vías, utiliza el <a href="/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Inspector</a>. Muestra claramente cómo se colocan nuestros ítems.</p>
 
-![Showing the items placed on the grid with grid tracks highlighted.](https://mdn.mozillademos.org/files/14753/11-grid-inspector-12col.png)
+<p><img alt="Showing the items placed on the grid with grid tracks highlighted." src="https://mdn.mozillademos.org/files/14753/11-grid-inspector-12col.png"></p>
 
-Existen algunas diferencias clave sobre cómo funciona un diseño de cuadrícula en los sistemas de cuadrícula que se pueden haber utilizado anteriormente. Como puedes ver, no necesitamos añadir ningún marcado para crear una fila, los sistemas de cuadrícula necesitan hacer esto para evitar que los elementos salten a la fila de arriba. Con CSS Grid Layout, podemos colocar las cosas en filas, sin peligro de que suban a la fila de arriba si se dejan vacías. Debido a esta _estricta_ colocación de columnas y filas, también podemos dejar fácilmente espacio en blanco en nuestro diseño. Tampoco necesitamos clases especiales que tiren o empujen cosas, para que se introduzcan en la rejilla. Todo lo que tenemos que hacer es especificar la línea de inicio y final del ítem.
+<p>Existen algunas diferencias clave sobre cómo funciona un diseño de cuadrícula en los sistemas de cuadrícula que se pueden haber utilizado anteriormente. Como puedes ver, no necesitamos añadir ningún marcado para crear una fila, los sistemas de cuadrícula necesitan hacer esto para evitar que los elementos salten a la fila de arriba. Con CSS Grid Layout, podemos colocar las cosas en filas, sin peligro de que suban a la fila de arriba si se dejan vacías. Debido a esta <em>estricta</em> colocación de columnas y filas, también podemos dejar fácilmente espacio en blanco en nuestro diseño. Tampoco necesitamos clases especiales que tiren o empujen cosas, para que se introduzcan en la rejilla. Todo lo que tenemos que hacer es especificar la línea de inicio y final del ítem.</p>
 
-### Construcción de un diseño utilizando el sistema de 12 columnas
+<h3 id="Construcción_de_un_diseño_utilizando_el_sistema_de_12_columnas">Construcción de un diseño utilizando el sistema de 12 columnas</h3>
 
-Para ver cómo funciona este método de diseño en la práctica, podemos crear el mismo diseño que creamos con {{cssxref("grid-template-areas")}}, esta vez utilizando el sistema de cuadrícula de 12 columnas. Comienzo con el mismo marcado que el utilizado para el ejemplo de áreas de plantillas de cuadrícula.
+<p>Para ver cómo funciona este método de diseño en la práctica, podemos crear el mismo diseño que creamos con {{cssxref("grid-template-areas")}}, esta vez utilizando el sistema de cuadrícula de 12 columnas. Comienzo con el mismo marcado que el utilizado para el ejemplo de áreas de plantillas de cuadrícula.</p>
 
-```css hidden
-* {box-sizing: border-box;}
+<div id="layout_3">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
 
     .wrapper {
         max-width: 1024px;
@@ -228,7 +227,7 @@ Para ver cómo funciona este método de diseño en la práctica, podemos crear e
         font: 1.2em Helvetica, arial, sans-serif;
     }
 
-    .wrapper > * {
+    .wrapper &gt; * {
         border: 2px solid #f08c00;
         background-color: #ffec99;
         border-radius: 5px;
@@ -240,52 +239,49 @@ Para ver cómo funciona este método de diseño en la práctica, podemos crear e
         margin: 0;
         padding: 0;
     }
-```
+</pre>
+</div>
 
-```html
-<div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content"><h1>Área principal del artículo</h1>
-        <p>En este diseño, las áreas se muestran en el orden en que están escritas en las pantallas de menos de 500 píxeles de ancho. Pasamos a un diseño de dos columnas, y luego a uno de tres columnas mediante la redefinición de la rejilla y la colocación de los elementos en ella.</p></article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
-    </div>
-```
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+        &lt;header class="main-head"&gt;The header&lt;/header&gt;
+        &lt;nav class="main-nav"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=""&gt;Nav 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;Nav 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;Nav 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;article class="content"&gt;&lt;h1&gt;Área principal del artículo&lt;/h1&gt;
+        &lt;p&gt;En este diseño, las áreas se muestran en el orden en que están escritas en las pantallas de menos de 500 píxeles de ancho. Pasamos a un diseño de dos columnas, y luego a uno de tres columnas mediante la redefinición de la rejilla y la colocación de los elementos en ella.&lt;/p&gt;&lt;/article&gt;
+        &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
+        &lt;div class="ad"&gt;Advertising&lt;/div&gt;
+        &lt;footer class="main-footer"&gt;The footer&lt;/footer&gt;
+    &lt;/div&gt;
+</pre>
 
-Entonces puedo configurar nuestra cuadrícula, como en el ejemplo del diseño de 12 columnas de arriba.
+<p>Entonces puedo configurar nuestra cuadrícula, como en el ejemplo del diseño de 12 columnas de arriba.</p>
 
-```css
-.wrapper {
+<pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-gap: 20px;
 }
-```
+</pre>
 
-Una vez más vamos a hacer de este un diseño responsivo, pero esta vez usando líneas con nombre. Cada punto de interrupción utilizará una cuadrícula de 12 columnas, sin embargo, el número de pistas que los ítems expandirán cambiará dependiendo del tamaño de la pantalla.
+<p>Una vez más vamos a hacer de este un diseño responsivo, pero esta vez usando líneas con nombre. Cada punto de interrupción utilizará una cuadrícula de 12 columnas, sin embargo, el número de pistas que los ítems expandirán cambiará dependiendo del tamaño de la pantalla.</p>
 
-Empezamos con el móvil primero, y todo lo que queremos para las pantallas más estrechas es que los elementos permanezcan en el orden de origen, y que todos se expandan a lo largo de la cuadrícula.
+<p>Empezamos con el móvil primero, y todo lo que queremos para las pantallas más estrechas es que los elementos permanezcan en el orden de origen, y que todos se expandan a lo largo de la cuadrícula.</p>
 
-```css
-.wrapper > * {
+<pre class="brush: css">.wrapper &gt; * {
   grid-column: col-start / span 12;
 }
-```
+</pre>
 
-En el siguiente punto de ruptura queremos pasar a un diseño de dos columnas. Nuestro encabezado y navegación todavía se extienden por toda la cuadrícula, por lo que no necesitamos especificar ninguna posición para ellos. La barra lateral comienza en la primera línea de la columna llamada col-start, que abarca 3 líneas. Va después de la línea 3 de la fila, ya que la cabecera y la navegación se encuentran en las dos primeras pistas de la fila.
+<p>En el siguiente punto de ruptura queremos pasar a un diseño de dos columnas. Nuestro encabezado y navegación todavía se extienden por toda la cuadrícula, por lo que no necesitamos especificar ninguna posición para ellos. La barra lateral comienza en la primera línea de la columna llamada col-start, que abarca 3 líneas. Va después de la línea 3 de la fila, ya que la cabecera y la navegación se encuentran en las dos primeras pistas de la fila.</p>
 
-El panel de anuncios se encuentra debajo de la barra lateral, por lo que comienza en la línea 4 de la fila de la cuadrícula. Luego tenemos el contenido y el pie de página comenzando en col-start 4 y abarcando 9 pistas que los llevan al final de la cuadrícula.
+<p>El panel de anuncios se encuentra debajo de la barra lateral, por lo que comienza en la línea 4 de la fila de la cuadrícula. Luego tenemos el contenido y el pie de página comenzando en col-start 4 y abarcando 9 pistas que los llevan al final de la cuadrícula.</p>
 
-```css
-@media (min-width: 500px) {
+<pre class="brush: css">@media (min-width: 500px) {
 
   .side {
     grid-column: col-start / span 3;
@@ -303,12 +299,11 @@ El panel de anuncios se encuentra debajo de la barra lateral, por lo que comienz
     justify-content: space-between;
   }
 }
-```
+</pre>
 
-Finalmente vamos a la versión de tres columnas de este diseño. El encabezado continúa extendiéndose por toda la cuadrícula, pero ahora la navegación se mueve hacia abajo para convertirse en la primera barra lateral, con el contenido y la barra lateral al lado. El pie de página ahora también se extiende por todo el diseño.
+<p>Finalmente vamos a la versión de tres columnas de este diseño. El encabezado continúa extendiéndose por toda la cuadrícula, pero ahora la navegación se mueve hacia abajo para convertirse en la primera barra lateral, con el contenido y la barra lateral al lado. El pie de página ahora también se extiende por todo el diseño.</p>
 
-```css
-@media (min-width: 700px) {
+<pre class="brush: css">@media (min-width: 700px) {
   .main-nav {
     grid-column: col-start / span 2;
     grid-row: 2 / 4;
@@ -332,57 +327,58 @@ Finalmente vamos a la versión de tres columnas de este diseño. El encabezado c
     flex-direction: column;
   }
 }
-```
+</pre>
 
-{{ EmbedLiveSample('layout_3', '800', '450') }}
+<p>{{ EmbedLiveSample('layout_3', '800', '450') }}</p>
+</div>
 
-Una vez más el Grid Inspector [Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) es útil para ayudarnos a ver cómo ha tomado forma nuestro diseño.
+<p>Una vez más el Grid Inspector <a href="/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a> es útil para ayudarnos a ver cómo ha tomado forma nuestro diseño.</p>
 
-![Showing the layout with grid tracks highlighted by the grid inspector.](https://mdn.mozillademos.org/files/14755/11-grid-inspector-12col-layout.png)
+<p><img alt="Showing the layout with grid tracks highlighted by the grid inspector." src="https://mdn.mozillademos.org/files/14755/11-grid-inspector-12col-layout.png" style="height: 614px; width: 2050px;"></p>
 
-Algo a tener en cuenta a la hora de crear este diseño es que no hemos necesitado posicionar explícitamente cada elemento en la cuadrícula en cada punto de ruptura. Hemos sido capaces de heredar la colocación establecida para puntos de ruptura anteriores - una ventaja de trabajar " mobile first ". También podemos aprovechar la colocación automática de la rejilla. Al mantener los elementos en un orden lógico, la colocación automática realiza una gran cantidad de trabajo por nosotros al colocar los elementos en la cuadrícula. En el último ejemplo de esta guía crearemos un diseño que se basa totalmente en la colocación automática
+<p>Algo a tener en cuenta a la hora de crear este diseño es que no hemos necesitado posicionar explícitamente cada elemento en la cuadrícula en cada punto de ruptura. Hemos sido capaces de heredar la colocación establecida para puntos de ruptura anteriores - una ventaja de trabajar " mobile first ". También podemos aprovechar la colocación automática de la rejilla. Al mantener los elementos en un orden lógico, la colocación automática realiza una gran cantidad de trabajo por nosotros al colocar los elementos en la cuadrícula. En el último ejemplo de esta guía crearemos un diseño que se basa totalmente en la colocación automática</p>
 
-## Un listado de productos con auto-placement
+<h2 id="Un_listado_de_productos_con_auto-placement">Un listado de productos con auto-placement</h2>
 
-Muchos diseños son esencialmente conjuntos de "tarjetas" - listados de productos, galerías de imágenes, etc. Una cuadrícula puede hacer que sea muy fácil crear estos listados de una manera responsiva sin necesidad de añadir [media queries](/es/docs/Web/CSS/Media_Queries) para ello. En este siguiente ejemplo estoy combinando CSS Grid y Flexbox Layouts para hacer un sencillo diseño de listado de productos.
+<p>Muchos diseños son esencialmente conjuntos de "tarjetas" - listados de productos, galerías de imágenes, etc. Una cuadrícula puede hacer que sea muy fácil crear estos listados de una manera responsiva sin necesidad de añadir <a href="/es/docs/Web/CSS/Media_Queries">media queries</a> para ello. En este siguiente ejemplo estoy combinando CSS Grid y Flexbox Layouts para hacer un sencillo diseño de listado de productos.</p>
 
-El marcado de mi anuncio es una lista no ordenada de artículos. Cada elemento contiene un encabezado, un texto de altura variable y un enlace para llamar a la acción.
+<p>El marcado de mi anuncio es una lista no ordenada de artículos. Cada elemento contiene un encabezado, un texto de altura variable y un enlace para llamar a la acción.</p>
 
-```html
-<ul class="listing">
-  <li>
-    <h2>Item Uno</h2>
-    <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-  </li>
-   <li>
-     <h2>Item Dos</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Tres</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p>
-     <p>Este tiene más texto que los demás.</p>
-     <p>Un poquito más</p>
-     <p>¿Podríamos hacer algo diferente con él?</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-    <li>
-     <h2>Item Cuatro</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-     <li>
-     <h2>Item Cinco</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-      <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-</ul>
-```
+<div id="layout_4">
+<pre class="brush: html">&lt;ul class="listing"&gt;
+  &lt;li&gt;
+    &lt;h2&gt;Item Uno&lt;/h2&gt;
+    &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+  &lt;/li&gt;
+   &lt;li&gt;
+     &lt;h2&gt;Item Dos&lt;/h2&gt;
+     &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;&lt;/div&gt;
+     &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+   &lt;/li&gt;
+   &lt;li class="wide"&gt;
+     &lt;h2&gt;Item Tres&lt;/h2&gt;
+     &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;
+     &lt;p&gt;Este tiene más texto que los demás.&lt;/p&gt;
+     &lt;p&gt;Un poquito más&lt;/p&gt;
+     &lt;p&gt;¿Podríamos hacer algo diferente con él?&lt;/p&gt;&lt;/div&gt;
+     &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+     &lt;h2&gt;Item Cuatro&lt;/h2&gt;
+     &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;&lt;/div&gt;
+     &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+    &lt;/li&gt;
+     &lt;li&gt;
+     &lt;h2&gt;Item Cinco&lt;/h2&gt;
+     &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
 
-```css hidden
-* {box-sizing: border-box;}
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
     img {max-width: 100%; display: block;}
     body {
         font: 1.2em Helvetica, arial, sans-serif;
@@ -399,26 +395,25 @@ El marcado de mi anuncio es una lista no ordenada de artículos. Cada elemento c
       margin: 0;
       padding: 20px;
     }
-```
+</pre>
+</div>
 
-Vamos a crear una cuadrícula con un número flexible de columnas flexibles. Quiero que nunca sean más pequeñas que 200 píxeles, y que luego compartan el espacio restante disponible por igual, de modo que siempre obtengamos pistas de columna de igual ancho. Esto lo logramos con la función `minmax()` en nuestra notación repeat para el dimensionamiento de pistas.
+<p>Vamos a crear una cuadrícula con un número flexible de columnas flexibles. Quiero que nunca sean más pequeñas que 200 píxeles, y que luego compartan el espacio restante disponible por igual, de modo que siempre obtengamos pistas de columna de igual ancho. Esto lo logramos con la función <code>minmax()</code> en nuestra notación repeat para el dimensionamiento de pistas.</p>
 
-```css
-.listing {
+<pre class="brush: css">.listing {
   list-style: none;
   margin: 2em;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
 }
-```
+</pre>
 
-Tan pronto como añado este CSS, los ítems empiezan a desplegarse como una cuadrícula. Si hago la ventana más pequeña o más ancha, el número de pistas de columna cambia, sin necesidad de añadir puntos de interrupción mediante media queries y redefinir la cuadrícula.
+<p>Tan pronto como añado este CSS, los ítems empiezan a desplegarse como una cuadrícula. Si hago la ventana más pequeña o más ancha, el número de pistas de columna cambia, sin necesidad de añadir puntos de interrupción mediante media queries y redefinir la cuadrícula.</p>
 
-Luego puedo ordenar el interior de las cajas con un pequeño toque de flexbox. Establezco la lista de ítems como `display: flex` y la propiedad `flex-direction` como `column`. Entonces puedo usar un auto margin en `.cta` para empujar esta barra hacia abajo hasta el fondo de la caja./p>
+<p>Luego puedo ordenar el interior de las cajas con un pequeño toque de flexbox. Establezco la lista de ítems como <code>display: flex</code> y la propiedad <code>flex-direction</code> como <code>column</code>. Entonces puedo usar un auto margin en <code>.cta</code> para empujar esta barra hacia abajo hasta el fondo de la caja./p&gt;</p>
 
-```css
-.listing li {
+<pre class="brush: css">.listing li {
   border: 1px solid #ffe066;
   border-radius: 5px;
   display: flex;
@@ -433,53 +428,54 @@ Luego puedo ordenar el interior de las cajas con un pequeño toque de flexbox. E
 .listing .body {
   padding: 10px;
 }
-```
+</pre>
 
-Esta es realmente una de las razones clave por las que usaría flexbox en lugar de grid, si sólo estoy alineando o distribuyendo algo en una sola dimensión, ese es un caso de uso de flexbox.
+<p>Esta es realmente una de las razones clave por las que usaría flexbox en lugar de grid, si sólo estoy alineando o distribuyendo algo en una sola dimensión, ese es un caso de uso de flexbox.</p>
 
-{{ EmbedLiveSample('layout_4', '800', '900') }}
+<p>{{ EmbedLiveSample('layout_4', '800', '900') }}</p>
+</div>
 
-Todo esto se ve bastante completo ahora, sin embargo, a veces tenemos unas cartas que contienen mucho más contenido que las otras. Podría ser bueno hacer que se expandan a lo largo de dos pistas, y entonces no serán tan altas. Tengo una clase `wide` en mi ítem más grande, y añado una regla {{cssxref("grid-column-end")}} con el valor `span 2`. Ahora cuando la rejilla llegue a este ítem, le asignará dos pistas. En algunos puntos de ruptura, esto significa que obtendremos un hueco en la cuadrícula - donde no haya espacio para colocar un elemento de dos pistas.
+<p>Todo esto se ve bastante completo ahora, sin embargo, a veces tenemos unas cartas que contienen mucho más contenido que las otras. Podría ser bueno hacer que se expandan a lo largo de dos pistas, y entonces no serán tan altas. Tengo una clase <code>wide</code> en mi ítem más grande, y añado una regla {{cssxref("grid-column-end")}} con el valor <code>span 2</code>. Ahora cuando la rejilla llegue a este ítem, le asignará dos pistas. En algunos puntos de ruptura, esto significa que obtendremos un hueco en la cuadrícula - donde no haya espacio para colocar un elemento de dos pistas.</p>
 
-![The layout has gaps as there is not space to layout a two track item.](https://mdn.mozillademos.org/files/14751/11-grid-auto-flow-sparse.png)
+<p><img alt="The layout has gaps as there is not space to layout a two track item." src="https://mdn.mozillademos.org/files/14751/11-grid-auto-flow-sparse.png" style="height: 812px; width: 800px;"></p>
 
-Puedo hacer que una rejilla rellene esos huecos ajustando {{cssxref("grid-auto-flow")}}`: dense` en el grid container. Sin embargo, presta atención al hacer esto, ya que saca los elementos de su orden lógico de origen. Sólo deberías hacerlo si tus ítems no tienen un orden establecido - y en ese caso tener en cuenta características de [accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#Visual_not_logical_re-ordering): el tabulador seguirá el orden de la fuente y no de la visualización reordenada.
+<p>Puedo hacer que una rejilla rellene esos huecos ajustando {{cssxref("grid-auto-flow")}}<code>: dense</code> en el grid container. Sin embargo, presta atención al hacer esto, ya que saca los elementos de su orden lógico de origen. Sólo deberías hacerlo si tus ítems no tienen un orden establecido - y en ese caso tener en cuenta características de <a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#Visual_not_logical_re-ordering">accesibilidad</a>: el tabulador seguirá el orden de la fuente y no de la visualización reordenada.</p>
 
-```html hidden
-<ul class="listing">
-  <li>
-    <h2>Item Uno</h2>
-    <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-    <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-  </li>
-   <li>
-     <h2>Item Dos</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Tres</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p>
-     <p>Este tiene más texto que los demás.</p>
-     <p>Un poquito más</p>
-     <p>¿Podríamos hacer algo diferente con él?</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-    <li>
-     <h2>Item Cuatro</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-     <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-     <li>
-     <h2>Item Cinco</h2>
-     <div class="body"><p>El contenido de este ítem-lista va aquí.</p></div>
-      <div class="cta"><a href="">¡Llamada a la acción!</a></div>
-    </li>
-</ul>
-```
+<div id="layout_5">
+<div class="hidden">
+<pre class="brush: html">&lt;ul class="listing"&gt;
+  &lt;li&gt;
+    &lt;h2&gt;Item Uno&lt;/h2&gt;
+    &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+  &lt;/li&gt;
+   &lt;li&gt;
+     &lt;h2&gt;Item Dos&lt;/h2&gt;
+     &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;&lt;/div&gt;
+     &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+   &lt;/li&gt;
+   &lt;li class="wide"&gt;
+     &lt;h2&gt;Item Tres&lt;/h2&gt;
+     &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;
+     &lt;p&gt;Este tiene más texto que los demás.&lt;/p&gt;
+     &lt;p&gt;Un poquito más&lt;/p&gt;
+     &lt;p&gt;¿Podríamos hacer algo diferente con él?&lt;/p&gt;&lt;/div&gt;
+     &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+     &lt;h2&gt;Item Cuatro&lt;/h2&gt;
+     &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;&lt;/div&gt;
+     &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+    &lt;/li&gt;
+     &lt;li&gt;
+     &lt;h2&gt;Item Cinco&lt;/h2&gt;
+     &lt;div class="body"&gt;&lt;p&gt;El contenido de este ítem-lista va aquí.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="cta"&gt;&lt;a href=""&gt;¡Llamada a la acción!&lt;/a&gt;&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
 
-```css hidden
-* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
     img {max-width: 100%; display: block;}
     body {
         font: 1.2em Helvetica, arial, sans-serif;
@@ -512,10 +508,10 @@ Puedo hacer que una rejilla rellene esos huecos ajustando {{cssxref("grid-auto-f
 .listing .body {
   padding: 10px;
 }
-```
+</pre>
+</div>
 
-```css
-.listing {
+<pre class="brush: css">.listing {
   list-style: none;
   margin: 2em;
   display: grid;
@@ -526,65 +522,76 @@ Puedo hacer que una rejilla rellene esos huecos ajustando {{cssxref("grid-auto-f
 .listing .wide {
   grid-column-end: span 2;
 }
-```
+</pre>
 
-{{ EmbedLiveSample('layout_5', '800', '900') }}
+<p>{{ EmbedLiveSample('layout_5', '800', '900') }}</p>
 
-Esta técnica de auto-placement con algunas reglas aplicadas a ciertos ítems es muy útil, y puede ayudarte a lidiar con el contenido que está siendo generado por un CMS, por ejemplo, donde has repetido ítems y quizás puedas añadir una clase a ciertos ítems a medida que son generados en el HTML. with some rules applied to certain items is very useful, and can help you to deal with content that is being output by a CMS for example, where you have repeated items and can perhaps add a class to certain ones as they are rendered into the HTML.
+<p>Esta técnica de auto-placement con algunas reglas aplicadas a ciertos ítems es muy útil, y puede ayudarte a lidiar con el contenido que está siendo generado por un CMS, por ejemplo, donde has repetido ítems y quizás puedas añadir una clase a ciertos ítems a medida que son generados en el HTML. with some rules applied to certain items is very useful, and can help you to deal with content that is being output by a CMS for example, where you have repeated items and can perhaps add a class to certain ones as they are rendered into the HTML.</p>
+</div>
 
-## Aprender más
+<h2 id="Aprender_más">Aprender más</h2>
 
-La mejor manera de aprender a usar el diseño de la cuadrícula es continuar construyendo ejemplos como los que hemos tratado aquí. Escoge algo que normalmente construyes usando tu framework preferido, o usando floats, y ve si puedes construirlo usando grid. No olvides buscar ejemplos que sean imposibles de construir con los métodos actuales. Eso podría significar inspirarse en revistas u otras fuentes ajenas a la web. Grid Layout abre posibilidades que antes no teníamos, no necesitamos estar atados a los mismos viejos layouts para utilizarlo
+<p>La mejor manera de aprender a usar el diseño de la cuadrícula es continuar construyendo ejemplos como los que hemos tratado aquí. Escoge algo que normalmente construyes usando tu framework preferido, o usando floats, y ve si puedes construirlo usando grid. No olvides buscar ejemplos que sean imposibles de construir con los métodos actuales. Eso podría significar inspirarse en revistas u otras fuentes ajenas a la web. Grid Layout abre posibilidades que antes no teníamos, no necesitamos estar atados a los mismos viejos layouts para utilizarlo</p>
 
-- Para inspirarte mira [_Layout Labs_ de Jen Simmons](http://labs.jensimmons.com/), ella ha estado creando diseños basados en una variedad de fuentes.
-- ara obtener patrones de diseño comunes adicionales, consulta _[Grid by Example](http://gridbyexample.com)_, donde hay muchos ejemplos> de diseño de cuadrícula y también algunos patrones de interfaz de usuario más grandes y diseños de página completa.
+<ul>
+ <li>Para inspirarte mira <a href="http://labs.jensimmons.com/"><em>Layout Labs</em> de Jen Simmons</a>, ella ha estado creando diseños basados en una variedad de fuentes.</li>
+ <li>ara obtener patrones de diseño comunes adicionales, consulta <em><a href="http://gridbyexample.com">Grid by Example</a></em>, donde hay muchos ejemplos&gt; de diseño de cuadrícula y también algunos patrones de interfaz de usuario más grandes y diseños de página completa.</li>
+</ul>
 
-1.  [**CSS**](/es/docs/Web/CSS)
-2.  [**CSS Reference**](/es/docs/Web/CSS/Reference)
-3.  [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout)
-4.  **Guías**
-
-    1.  [Conceptos básicos del posicionamiento con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2.  [Relación con otros métodos de posicionamiento](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3.  [Posicionamiento basado en líneas](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4.  [Áreas de una plantilla de rejilla](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5.  [Posicionamiento usando líneas de rejilla con nombres](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6.  [Posicionamiento automático en grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7.  [Alineación de cajas en grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8.  [Rejillas, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9.  [CSS Grid Layout y Accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout y Mejora Progresiva](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Layouts comunes utilizando CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-
-5.  **Properties**
-
-    1.  [grid](/es/docs/Web/CSS/grid)
-    2.  [grid-area](/es/docs/Web/CSS/grid-area)
-    3.  [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
-    4.  [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
-    5.  [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
-    6.  [grid-column](/es/docs/Web/CSS/grid-column)
-    7.  [grid-column-end](/es/docs/Web/CSS/grid-column-end)
-    8.  [grid-column-gap](/es/docs/Web/CSS/grid-column-gap)
-    9.  [grid-column-start](/es/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/es/docs/Web/CSS/grid-gap)
-    11. [grid-row](/es/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/es/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/es/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/es/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/es/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
-
-6.  **Glossary**
-
-    1.  [Rejilla](/es/docs/Glossary/Grid)
-    2.  [Líneas de rejilla](/es/docs/Glossary/Grid_lines)
-    3.  [Pistas de rejilla](/es/docs/Glossary/Grid_tracks)
-    4.  [Celda de rejilla](/es/docs/Glossary/Grid_cell)
-    5.  [Áreas de rejilla](/es/docs/Glossary/Grid_areas)
-    6.  [Canaletas](/es/docs/Glossary/Gutters)
-    7.  [Ejes de rejilla](/es/docs/Glossary/Grid_Axis)
-    8.  [Fila de rejilla](/es/docs/Glossary/Grid_rows)
-    9.  [Columna de rejilla](/es/docs/Glossary/Grid_column)
+<section id="Quick_links">
+<ol>
+ <li><a href="/es/docs/Web/CSS"><strong>CSS</strong></a></li>
+ <li><a href="/es/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
+ <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
+ <li data-default-state="open"><a href="#"><strong>Guías</strong></a>
+  <ol>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Conceptos básicos del posicionamiento con rejillas</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relación con otros métodos de posicionamiento</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Posicionamiento basado en líneas</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Áreas de una plantilla de rejilla</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Posicionamiento usando líneas de rejilla con nombres</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Posicionamiento automático en grid layout</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Alineación de cajas en grid layout</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Rejillas, valores lógicos y modos de escritura</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout y Accesibilidad</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout y Mejora Progresiva</a></li>
+   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Layouts comunes utilizando CSS Grid</a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
+  <ol>
+   <li><a href="/es/docs/Web/CSS/grid">grid</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-area">grid-area</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-column">grid-column</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-gap">grid-gap</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-row">grid-row</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-template">grid-template</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
+   <li><a href="/es/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+  </ol>
+ </li>
+ <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
+  <ol>
+   <li><a href="/es/docs/Glossary/Grid">Rejilla</a></li>
+   <li><a href="/es/docs/Glossary/Grid_lines">Líneas de rejilla</a></li>
+   <li><a href="/es/docs/Glossary/Grid_tracks">Pistas de rejilla</a></li>
+   <li><a href="/es/docs/Glossary/Grid_cell">Celda de rejilla</a></li>
+   <li><a href="/es/docs/Glossary/Grid_areas">Áreas de rejilla</a></li>
+   <li><a href="/es/docs/Glossary/Gutters">Canaletas</a></li>
+   <li><a href="/es/docs/Glossary/Grid_Axis">Ejes de rejilla</a></li>
+   <li><a href="/es/docs/Glossary/Grid_rows">Fila de rejilla</a></li>
+   <li><a href="/es/docs/Glossary/Grid_column">Columna de rejilla</a></li>
+  </ol>
+ </li>
+</ol>
+</section>

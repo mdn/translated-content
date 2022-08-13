@@ -12,47 +12,52 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 original_slug: Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 ---
-{{APIRef("Canvas API")}}
+<div>{{APIRef("Canvas API")}}</div>
 
-El método **`createImageBitmap()`** crea un _bitmap_ a partir de un recurso especificado, opcionalmente recortado para mostrar únicamente una porción de este. El método existe a nivel global como parte, tanto de las ventanas (_window_), como de los _workers_. Este admite una variedad de tipos de entrada, y devuelve una {{domxref("Promise")}} que es resuelta con un {{domxref("ImageBitmap")}}.
+<p>El método <code><strong>createImageBitmap()</strong></code> crea un <em>bitmap</em> a partir de un recurso especificado, opcionalmente recortado para mostrar únicamente una porción de este. El método existe a nivel global como parte, tanto de las ventanas (<em>window</em>), como de los <em>workers</em>. Este admite una variedad de tipos de entrada, y devuelve una {{domxref("Promise")}} que es resuelta con un {{domxref("ImageBitmap")}}.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    createImageBitmap(image[, options]).then(function(response) { ... });
-    createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ... });
+<pre class="syntaxbox">createImageBitmap(<em>image</em>[, options]).then(function(response) { ... });
+createImageBitmap(<em>image, sx, sy, sw, sh</em>[, options]).then(function(response) { ... });</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `image`
-  - : Un recurso/imagen origen, que puede uno de los siguientes elementos: {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}}, {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}}, {{domxref("ImageBitmap")}}, o {{domxref("OffscreenCanvas")}}.
-- `sx`
-  - : La coordenada x del rectángulo que será usado para la extracción del `ImageBitmap`.
-- `sy`
-  - : La coordenada y del rectángulo que será usado para la extracción del `ImageBitmap`.
-- `sw`
-  - : La anchura del rectángulo que será usado para extraer el `ImageBitmap`. El valor podría ser negativo.
-- `sh`
-  - : La altura del rectángulo que será usado para extraer el `ImageBitmap`. El valor podría ser negativo.
-- `options` {{optional_inline}}
-  - : Un objeto que proporciona opciones para la extracción de la imagen. Las opciones posibles son:\* `imageOrientation`: Especifica si la imagen debe ser extraida tal y como se muestra, o debe ser volteada verticalmente. Las valores posibles: `none` (por defecto) o `flipY`.
-    - `premultiplyAlpha`: Especifica si los canales de color del mapa de bits generado deben premultiplicarse por el canal alpha. Uno de: `none`, `premultiply`, o `default` (por defecto).
-    - `colorSpaceConversion`: Especifica si la imagen debe ser decodificada usando conversión del espacio de color. Uno de: `none` o `default` (por defecto). El valor `default` indica que se usará la implementación que haya disponible.
-    - `resizeWidth`: Un entero largo que especifica la anchura final.
-    - `resizeHeight`: Un entero largo que especifica la altura final.
-    - `resizeQuality`: Especifica que algorítmo debe ser usado en el redimensionado para alcanzar las dimensiones deseadas. Uno de estos valores: `pixelated`, `low` (por defecto), `medium`, o `high`.
+<dl>
+ <dt><code>image</code></dt>
+ <dd>Un recurso/imagen origen, que puede uno de los siguientes elementos: {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}}, {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}}, {{domxref("ImageBitmap")}}, o {{domxref("OffscreenCanvas")}}.</dd>
+ <dt><code>sx</code></dt>
+ <dd>La coordenada x del rectángulo que será usado para la extracción del <code>ImageBitmap</code>.</dd>
+ <dt><code>sy</code></dt>
+ <dd>La coordenada y del rectángulo que será usado para la extracción del <code>ImageBitmap</code>.</dd>
+ <dt><code>sw</code></dt>
+ <dd>La anchura del rectángulo que será usado para extraer el <code>ImageBitmap</code>. El valor podría ser negativo.</dd>
+ <dt><code>sh</code></dt>
+ <dd>La altura del rectángulo que será usado para extraer el <code>ImageBitmap</code>. El valor podría ser negativo.</dd>
+ <dt><code>options</code> {{optional_inline}}</dt>
+ <dd>Un objeto que proporciona opciones para la extracción de la imagen. Las opciones posibles son:
+ <ul>
+  <li><code>imageOrientation</code>: Especifica si la imagen debe ser extraida tal y como se muestra, o debe ser volteada verticalmente. Las valores posibles: <code>none</code> (por defecto) o <code>flipY</code>.</li>
+  <li><code>premultiplyAlpha</code>: Especifica si los canales de color del mapa de bits generado deben premultiplicarse por el canal alpha. Uno de: <code>none</code>, <code>premultiply</code>, o <code>default</code> (por defecto).</li>
+  <li><code>colorSpaceConversion</code>: Especifica si la imagen debe ser decodificada usando conversión del espacio de color. Uno de: <code>none</code> o <code>default</code> (por defecto). El valor <code>default</code> indica que se usará la implementación que haya disponible.</li>
+  <li><code>resizeWidth</code>: Un entero largo que especifica la anchura final.</li>
+  <li><code>resizeHeight</code>: Un entero largo que especifica la altura final.</li>
+  <li><code>resizeQuality</code>: Especifica que algorítmo debe ser usado en el redimensionado para alcanzar las dimensiones deseadas. Uno de estos valores: <code>pixelated</code>, <code>low</code> (por defecto), <code>medium</code>, o <code>high</code>.</li>
+ </ul>
+ </dd>
+</dl>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-Una {{domxref("Promise")}} que es resuelta con un objeto {{domxref("ImageBitmap")}}, el cual contiene los datos del mapa de bits generado para el rectángulo dado.
+<p>Una {{domxref("Promise")}} que es resuelta con un objeto {{domxref("ImageBitmap")}}, el cual contiene los datos del mapa de bits generado para el rectángulo dado.</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### Creando _sprites_ desde un _sprite sheet_
+<h3 id="Creando_sprites_desde_un_sprite_sheet">Creando <em>sprites</em> desde un <em>sprite sheet</em></h3>
 
-El siguiente ejemplo carga un _sprite sheet_, extrae los _sprites_, y muestra cada uno de ellos en el _canvas_. Un _sprite sheet_ es una imagen que contiene multiples imágenes más pequeñas, que finalmente son utilizadas de manera individual.
+<p>El siguiente ejemplo carga un<em> sprite sheet</em>, extrae los <em>sprites</em>, y muestra cada uno de ellos en el <em>canvas</em>. Un <em>sprite sheet</em> es una imagen que contiene multiples imágenes más pequeñas, que finalmente son utilizadas de manera individual.</p>
 
-```js
-var canvas = document.getElementById('myCanvas'),
+<pre class="brush: js  language-js">var canvas = document.getElementById('myCanvas'),
 ctx = canvas.getContext('2d'),
 image = new Image();
 
@@ -71,19 +76,34 @@ image.onload = function() {
 
 // Cargar el sprite sheet desde un archivo de imagen
 image.src = 'sprites.png';
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "webappapis.html#dom-createimagebitmap", "createImageBitmap")}} | {{Spec2('HTML WHATWG')}} |            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col"> Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "webappapis.html#dom-createimagebitmap", "createImageBitmap")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("api.WindowOrWorkerGlobalScope.createImageBitmap")}}
 
-## Ver también
 
-- {{domxref("CanvasRenderingContext2D.drawImage()")}}
-- {{domxref("ImageData")}}
+<p>{{Compat("api.WindowOrWorkerGlobalScope.createImageBitmap")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{domxref("CanvasRenderingContext2D.drawImage()")}}</li>
+ <li>{{domxref("ImageData")}}</li>
+</ul>

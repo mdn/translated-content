@@ -7,36 +7,68 @@ tags:
   - solicitud
 translation_of: Web/HTTP/Headers/Cookie
 ---
-{{HTTPSidebar}}El encabezado **`Cookie`** de una solicitud HTTP contiene [cookies HTTP ](/es/docs/Web/HTTP/Cookies)almacenadas y enviadas previamente por el servidor con el encabezado (_**`header`**_) {{HTTPHeader("Set-Cookie")}}Los encabezados `Cookie` puede ser omitidos por completo, si las preferencias de privacidad del navegador están configuradas para bloquearlos, por ejemplo.
+<div>{{HTTPSidebar}}</div>
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+<div>El encabezado <strong><code>Cookie</code></strong> de una solicitud HTTP contiene <a href="/en-US/docs/Web/HTTP/Cookies">cookies HTTP </a>almacenadas y enviadas previamente por el servidor con el encabezado (<em><strong><code>header</code></strong></em>) {{HTTPHeader("Set-Cookie")}}</div>
 
-## Sintaxis
+<div> </div>
 
-    Cookie: <cookie-lista>
-    Cookie: nombre=valor
-    Cookie: nombre=valor; nombre2=valor2...nombreN=valorN;
+<div>Los encabezados <code>Cookie</code> puede ser omitidos por completo, si las preferencias de privacidad del navegador están configuradas para bloquearlos, por ejemplo.</div>
 
-- \<cookie-lista>
-  - : Una lista de pares `nombre:valor `definidos como` <nombre-de-cookie=<valor-de-cookie>`. Los pares en la lista son separados por un punto y coma seguido de un espacio `('; ')`.
+<div> </div>
 
-## Ejemplos
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Header type</th>
+   <td>{{Glossary("Request header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <td>yes</td>
+  </tr>
+ </tbody>
+</table>
 
-    Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;
+<h2 id="Sintaxis">Sintaxis</h2>
 
-## Especificaciones
+<pre class="syntaxbox">Cookie: &lt;cookie-lista&gt;
+Cookie: nombre=valor
+Cookie: nombre=valor; nombre2=valor2...nombreN=valorN;</pre>
 
-| Specification                                | Title                           |
-| -------------------------------------------- | ------------------------------- |
-| {{RFC("6265", "Cookie", "5.4")}} | HTTP State Management Mechanism |
+<dl>
+ <dt>&lt;cookie-lista&gt;</dt>
+ <dd>Una lista de pares <code>nombre:valor </code>definidos como<code> &lt;nombre-de-cookie=&lt;valor-de-cookie&gt;</code>. Los pares en la lista son separados por un punto y coma seguido de un espacio <code>('; ')</code>.</dd>
+</dl>
 
-## Compatibilidad en navegadores
+<h2 id="Ejemplos">Ejemplos</h2>
 
-{{Compat("http.headers.Cookie")}}
+<pre>Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1;</pre>
 
-## Ver también
+<h2 id="Especificaciones">Especificaciones</h2>
 
-- {{HTTPHeader("Set-Cookie")}}
-- {{domxref("Document.cookie")}}
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Title</th>
+  </tr>
+  <tr>
+   <td>{{RFC("6265", "Cookie", "5.4")}}</td>
+   <td>HTTP State Management Mechanism</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+
+
+
+<p>{{Compat("http.headers.Cookie")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{HTTPHeader("Set-Cookie")}}</li>
+ <li>{{domxref("Document.cookie")}}</li>
+</ul>

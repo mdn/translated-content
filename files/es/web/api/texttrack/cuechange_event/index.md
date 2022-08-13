@@ -16,70 +16,92 @@ tags:
   - track
 translation_of: Web/API/TextTrack/cuechange_event
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-El evento **`cuechange`** se activa cuando un {{domxref("TextTrack")}} ha cambiado las anotaciones que se estan mostrando. El evento es activado tanto en `TextTrack` _y_ en el {{domxref("HTMLTrackElement")}} donde esta siendo mostrado, si lo hay.
+<p><span class="seoSummary">El evento <strong><code>cuechange</code></strong> se activa cuando un {{domxref("TextTrack")}} ha cambiado las anotaciones que se estan mostrando.</span> El evento es activado tanto en <code>TextTrack</code> <em>y</em> en el {{domxref("HTMLTrackElement")}} donde esta siendo mostrado, si lo hay.</p>
 
-| Burbujas                             | No                                                           |
-| ------------------------------------ | ------------------------------------------------------------ |
-| Cancelable                           | No                                                           |
-| Interfaz                             | {{domxref("Event")}}                                 |
-| Propiedad del controlador de eventos | {{domxref("GlobalEventHandlers.oncuechange")}} |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Burbujas</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Interfaz</th>
+   <td>{{domxref("Event")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Propiedad del controlador de eventos</th>
+   <td>{{domxref("GlobalEventHandlers.oncuechange")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### En el TextTrack
+<h3 id="En_el_TextTrack">En el TextTrack</h3>
 
-Tu puedes preparar una escucha para el evento `cuechange` en un `TextTrack` usando el método {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
+<p>Tu puedes preparar una escucha para el evento <code>cuechange</code> en un <code>TextTrack</code> usando el método {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
 
-```js
-track.addEventListener('cuechange', function () {
+<pre class="brush: js notranslate">track.addEventListener('cuechange', function () {
   let cues = track.activeCues;  // array de las anotaciones actuales
 });
-```
+</pre>
 
-O puedes solo preparar la propiedad del controlador de eventos {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}}:
+<p>O puedes solo preparar la propiedad del controlador de eventos {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}}:</p>
 
-```js
-track.oncuechange = function () {
+<pre class="brush: js notranslate">track.oncuechange = function () {
   let cues = track.activeCues; // array of current cues
-}
-```
+}</pre>
 
-### En el elemento track
+<h3 id="En_el_elemento_track">En el elemento track</h3>
 
-El subyacente {{domxref("TextTrack")}}, indicado por la propiedad {{domxref("HTMLTrackElement.track", "track")}}, recive un evento {{domxref("TextTrack.cuechange_event", "cuechange")}} cada vez que la anotación que esta siendo actualmente presentada cambia. Est sucede incluso si la pista de texto no está asociada cun un elemento multimedia.
+<p>El subyacente {{domxref("TextTrack")}}, indicado por la propiedad {{domxref("HTMLTrackElement.track", "track")}}, recive un evento  {{domxref("TextTrack.cuechange_event", "cuechange")}} cada vez que la anotación que esta siendo actualmente presentada cambia. Est sucede incluso si la pista de texto no está asociada cun un elemento multimedia.</p>
 
-Si la pista de texto _está_ asociada con el elemento multimedia, usando el elemento {{HTMLElement("track")}} como hijo del elemento {{HTMLElement("audio")}} o del elemento {{HTMLElement("video")}}, el evento `cuechange` es también enviado al {{domxref("HTMLTrackElement")}}.
+<p>Si la pista de texto <em>está</em> asociada con el elemento multimedia, usando el elemento {{HTMLElement("track")}} como hijo del elemento {{HTMLElement("audio")}} o del elemento {{HTMLElement("video")}}, el evento <code>cuechange</code> es también enviado al {{domxref("HTMLTrackElement")}}.</p>
 
-```js
-let textTrackElem = document.getElementById("texttrack");
+<pre class="brush: js notranslate">let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.addEventListener("cuechange", (event) => {
+textTrackElem.addEventListener("cuechange", (event) =&gt; {
   let cues = event.target.track.activeCues;
 });
-```
+</pre>
 
-Además, puedes utilizar el controlador de eventos `oncuechange`:
+<p>Además, puedes utilizar el controlador de eventos <code>oncuechange</code>:</p>
 
-```js
-let textTrackElem = document.getElementById("texttrack");
+<pre class="brush: js notranslate">let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.oncuechange = (event) => {
+textTrackElem.oncuechange = (event) =&gt; {
   let cues = event.target.track.activeCues;
-});
-```
+});</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                           | Estado                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', '#event-media-cuechange', 'cuechange')}} | {{Spec2('HTML WHATWG')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#event-media-cuechange', 'cuechange')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de los navegadores
+<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
 
-{{Compat("api.TextTrack.cuechange_event")}}
+<p>{{Compat("api.TextTrack.cuechange_event")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{glossary("WebVTT")}}
+<ul>
+ <li>{{glossary("WebVTT")}}</li>
+</ul>

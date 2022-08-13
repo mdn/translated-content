@@ -4,54 +4,76 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/seno
 ---
-{{JSRef("Global_Objects", "Math")}}
+<div>{{JSRef("Global_Objects", "Math")}}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-La función **`Math.sin()`**` devuelve el seno de un número`.
+<p>La función <strong><code>Math.sin()</code></strong><code> devuelve el seno de un número</code>.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    Math.sin(x)
+<pre class="syntaxbox"><code>Math.sin(<var>x</var>)</code></pre>
 
-### Parámetros
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
 
-- `x`
-  - : Un número (en radianes).
+<dl>
+ <dt><code>x</code></dt>
+ <dd>Un número (en radianes).</dd>
+</dl>
 
-## Descripción
+<h2 id="Description" name="Description">Descripción</h2>
 
-El método `Math.sin()` devuelve un valor numérico entre -1 y 1, que representa el seno del ángulo dado en radianes.
-Debido a que `sin()` es un método estático de `Math`, siempre se usa como `Math.sin()`, en vez de crear un objeto `Math` y usarlo como un método (`Math` no es un constructor).
+<p>El método <code>Math.sin()</code> devuelve  un valor numérico entre -1 y 1, que representa el seno del ángulo dado en radianes.<br>
+ Debido a que <code>sin()</code> es un método estático de <code>Math</code>, siempre se usa como <code>Math.sin()</code>, en vez de  crear un objeto <code>Math</code> y usarlo como un método (<code>Math</code> no es un constructor).</p>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-### Ejemplo: Usando `Math.sin()`
+<h3 id="Example:_Using_Math.sin" name="Example:_Using_Math.sin">Ejemplo: Usando <code>Math.sin()</code></h3>
 
-```js
-Math.sin(0);           // 0
+<pre class="brush: js">Math.sin(0);           // 0
 Math.sin(1);           // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
-```
+</pre>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificaciones                                                     | Estatus                  | Comentarios                                         |
-| -------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
-| ECMAScript 1ª Edición.                                               | {{Spec2('ES1')}}     | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}} | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}     | {{Spec2('ES6')}}     |                                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificaciones</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1ª Edición.</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial. Implementado en JavaScript 1.0.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Math.sin")}}
 
-## Ver también
+<h2 id="See_also" name="See_also">Ver también</h2>
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.tan()")}}
+<ul>
+ <li>{{jsxref("Math.acos()")}}</li>
+ <li>{{jsxref("Math.asin()")}}</li>
+ <li>{{jsxref("Math.atan()")}}</li>
+ <li>{{jsxref("Math.atan2()")}}</li>
+ <li>{{jsxref("Math.cos()")}}</li>
+ <li>{{jsxref("Math.tan()")}}</li>
+</ul>

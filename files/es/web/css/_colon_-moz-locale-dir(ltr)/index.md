@@ -1,6 +1,6 @@
 ---
 title: ':-moz-locale-dir(ltr)'
-slug: Web/CSS/:-moz-locale-dir(ltr)
+slug: 'Web/CSS/:-moz-locale-dir(ltr)'
 tags:
   - CSS
   - Localización
@@ -9,18 +9,20 @@ tags:
   - No estandar
   - Pseudo-clase
   - Referencia CSS
-translation_of: Web/CSS/:-moz-locale-dir(ltr)
+translation_of: 'Web/CSS/:-moz-locale-dir(ltr)'
 ---
-{{Non-standard_header}}{{CSSRef}} {{gecko_minversion_header("1.9.2")}}
+<div>{{Non-standard_header}}{{CSSRef}} {{gecko_minversion_header("1.9.2")}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La [pseudo-clase](/es/docs/Web/CSS/pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-locale-dir(ltr)` selecciona un elemento si el interfaz del usuario se está mostrando de izquierda a derecha. Esto viene determinado cuando la opción de las preferencias `intl.uidirection.locale` (donde `locale` es la localización de idioma actual) está estáblecido a "ltr".
+<p>La <a href="/es/docs/Web/CSS/pseudo-classes">pseudo-clase</a> <a href="/es/docs/Web/CSS">CSS</a> <code>:-moz-locale-dir(ltr)</code>  selecciona un elemento si el interfaz del usuario se está mostrando de izquierda a derecha. Esto viene determinado cuando la opción de las preferencias  <code>intl.uidirection.<em>locale</em></code> (donde  <code><em>locale</em></code> es la localización de idioma actual) está estáblecido a "ltr".</p>
 
-Esto permite que extensiones (y temas) puedan fácilmente adaptar su interfaz de usuario dependiendo de las necesidades del usuario en relación a la localización.Puede variar de ventana a ventana e incluso de pestaña a pestaña. Permite que las extensiones funcionen incluso si no soportan esa preferencia del usuario siempre que puedan soportar izquierda-derecha o derecha-izquierda, sin preocuparse de las necesidades específicas con respecto a la localización.
+<p>Esto permite que extensiones (y temas) puedan fácilmente adaptar su interfaz de usuario dependiendo de las necesidades del usuario en relación a la localización.Puede variar de ventana a ventana e incluso de pestaña a pestaña.  Permite que las extensiones funcionen incluso si no soportan esa preferencia del usuario siempre que puedan soportar izquierda-derecha o derecha-izquierda, sin preocuparse de las necesidades específicas con respecto a la localización.</p>
 
-Este selector no funciona adecuadamente en HTML; siempre selecciona no importa si la localización del UI (Interfaz de Usuario) sea izquierda a derecha (left-to-right) o derecha a izqauierda (right-to-left).
+<p>Este selector no funciona adecuadamente en HTML; siempre selecciona no importa si la localización del UI (Interfaz de Usuario) sea izquierda a derecha (left-to-right) o derecha a izqauierda (right-to-left).</p>
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-- {{Cssxref(":-moz-locale-dir(rtl)")}}
+<ul>
+ <li>{{Cssxref(":-moz-locale-dir(rtl)")}}</li>
+</ul>

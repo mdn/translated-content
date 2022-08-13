@@ -8,18 +8,17 @@ tags:
   - Tipos de letra de CSS
 translation_of: Web/CSS/font-weight
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad **`font-weight`** de [CSS](/es/docs/CSS "CSS") especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en `normal` y `bold`.
+<p>La propiedad <strong><code>font-weight</code></strong> de <a href="/en-US/docs/CSS" title="CSS">CSS</a> especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en <code>normal</code> y <code>bold</code>.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-font-weight: normal;
+<pre class="brush:css notranslate">font-weight: normal;
 font-weight: bold;
 
 /* Relativo al padre */
@@ -40,43 +39,43 @@ font-weight: 900;
 font-weight: inherit;
 font-weight: initial;
 font-weight: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- normal
-  - : Peso/grueso normal de la fuente. Igual que 400.
-- bold
-  - : Grueso ancho (_negrita_). Igual que 700.
-- lighter
-  - : Corresponde a un tipo de fuente menos grueso que el tipo del elemento padre (dentro de los valores disponibles).
-- bolder
-  - : Corresponde a un tipo de fuente más grueso que el tipo del elemento padre (dentro de los valores disponibles).
-- 100, 200, 300, 400, 500, 600, 700, 800, 900
-  - : Pesos numéricos para los tipos de fuente que nos permiten más flexibilidad que `normal - bold`. Si el peso especificado no existe en el tipo de fuente escogido, un valor entre 600 y 900 se presentará con el valor más próximo disponible para dar una letra más oscura. De igual forma, un valor entre 100 y 500 se presentará con el valor más próximo disponible para dar una letra más clara. Esto significa que para los tipos de letra que sólo dispongan de normal y bold, cualquier valor entre 100 y 500 será normal y entre 600 y 900, será bold.
+<dl>
+ <dt>normal </dt>
+ <dd>Peso/grueso normal de la fuente. Igual que 400.</dd>
+ <dt>bold </dt>
+ <dd>Grueso ancho (<em>negrita</em>). Igual que 700.</dd>
+ <dt>lighter </dt>
+ <dd>Corresponde a un tipo de fuente menos grueso que el tipo del elemento padre (dentro de los valores disponibles).</dd>
+ <dt>bolder </dt>
+ <dd>Corresponde a un tipo de fuente más grueso que el tipo del elemento padre (dentro de los valores disponibles).</dd>
+ <dt>100, 200, 300, 400, 500, 600, 700, 800, 900 </dt>
+ <dd>Pesos numéricos para los tipos de fuente que nos permiten más flexibilidad que <code>normal - bold</code>. Si el peso especificado no existe en el tipo de fuente escogido, un valor entre 600 y 900 se presentará con el valor más próximo disponible para dar una letra más oscura. De igual forma, un valor entre 100 y 500 se presentará con el valor más próximo disponible para dar una letra más clara. Esto significa que para los tipos de letra que sólo dispongan de normal y bold, cualquier valor entre 100 y 500 será normal y entre 600 y 900, será bold.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<p>
+<pre class="brush: html notranslate">&lt;p&gt;
   Alice was beginning to get very tired of sitting by her sister on the
   bank, and of having nothing to do: once or twice she had peeped into the
   book her sister was reading, but it had no pictures or conversations in
   it, 'and what is the use of a book,' thought Alice 'without pictures or
   conversations?'
-</p>
+&lt;/p&gt;
 
-<div>I'm heavy<br/>
-  <span>I'm lighter</span>
-</div>
-```
+&lt;div&gt;I'm heavy&lt;br/&gt;
+  &lt;span&gt;I'm lighter&lt;/span&gt;
+&lt;/div&gt;
+</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-/* Poner texto del párrafo en negrita. */
+<pre class="brush:css notranslate">/* Poner texto del párrafo en negrita. */
 p {
   font-weight: bold;
 }
@@ -91,22 +90,46 @@ div {
    to be one step lighter than the parent. */
 span {
   font-weight: lighter;
-}
-```
+}</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample("Examples","400","300")}}
+<p>{{EmbedLiveSample("Examples","400","300")}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                   | Estado                                   | Comentario                          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-weight-prop', 'font-weight')}}             | {{Spec2('CSS3 Fonts')}}         | Sin cambio                          |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-weight')}}         | {{Spec2('CSS3 Transitions')}} | Define `font-weight` como animable. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-weight', 'font-weight')}} | {{Spec2('CSS2.1')}}                 | Sin cambio                          |
-| {{SpecName('CSS1', '#font-weight', 'font-weight')}}                             | {{Spec2('CSS1')}}                 | Definición inicial                  |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Fonts', '#font-weight-prop', 'font-weight')}}</td>
+   <td>{{Spec2('CSS3 Fonts')}}</td>
+   <td>Sin cambio</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'font-weight')}}</td>
+   <td>{{Spec2('CSS3 Transitions')}}</td>
+   <td>Define <code>font-weight</code> como animable.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-weight', 'font-weight')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Sin cambio</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1', '#font-weight', 'font-weight')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad entre navegadores
+<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
 
 {{Compat("css.properties.font-weight")}}

@@ -9,53 +9,70 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-delay
 ---
-{{ CSSRef() }}
+<p>{{ CSSRef() }}</p>
 
-{{ SeeCompatTable() }}
+<p>{{ SeeCompatTable() }}</p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad [CSS](/en/CSS "CSS") `animation-delay` especifica el tiempo de retardo que debe transcurrir antes de comenzar la animación. Esto permite que la secuencia de animación no comience nada más ser aplicada a un elemento.
+<p>La propiedad <a href="/en/CSS" title="CSS">CSS</a> <code>animation-delay</code> especifica el tiempo de retardo que debe transcurrir antes de comenzar la animación. Esto permite que la secuencia de animación no comience nada más ser aplicada a un elemento.</p>
 
-El valor 0, que es el valor por defecto, indica que la animación debería comenzar inmediatamente. Usando otro valor, definimos el retardo entre el momento en que el elemento recibe la animación y el comienzo de la secuencia de la misma.
+<p>El valor 0, que es el valor por defecto, indica que la animación debería comenzar inmediatamente. Usando otro valor, definimos el retardo entre el momento en que el elemento recibe la animación y el comienzo de la secuencia de la misma.</p>
 
-Si especificamos un valor negativo, la animación comenzará inmediatamente, pero no desde el principio de la misma, sino desde el punto que le hemos indicado. Por ejemplo, si ponemos un retardo de -1s, la animación se iniciará inmediatamente pero comenzará en el segundo 1 de la secuencia.
+<p>Si especificamos un valor negativo, la animación comenzará inmediatamente, pero no desde el principio de la misma, sino desde el punto que le hemos indicado. Por ejemplo, si ponemos un retardo de -1s, la animación se iniciará inmediatamente pero comenzará en el segundo 1 de la secuencia.</p>
 
-Si se especifica un valor negativo para el retraso de la animación, pero el valor de inicio es implícito, el valor inicial es tomado desde el momento en que la animación es aplicada al elemento.
+<p>Si se especifica un valor negativo para el retraso de la animación, pero el valor de inicio es implícito, el valor inicial es tomado desde el momento en que la animación es aplicada al elemento.</p>
 
-A menudo es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajustar las propiedades de animación una sola vez.
+<p>A menudo es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajustar las propiedades de animación una sola vez.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Gramática formal: <time> [, <time>]*
+<pre class="twopartsyntaxbox">Gramática formal: <a href="/en-US/docs/CSS/time">&lt;time&gt;</a> [, <a href="/en-US/docs/CSS/time">&lt;time&gt;</a>]*
+</pre>
 
-<!---->
+<pre>animation-delay: 3s
+animation-delay: 2s, 4ms
+</pre>
 
-    animation-delay: 3s
-    animation-delay: 2s, 4ms
+<h3 id="Valores">Valores</h3>
 
-### Valores
+<dl>
+ <dt><code>&lt;time&gt;</code></dt>
+ <dd>El espacio de tiempo que debe transcurrir desde que la animación se aplica al elemento y el comienzo de la misma. Podemos especificarlo en segundos (usando <code>s</code>) o milisegundos (usando <code>ms</code>). Si no especificamos la unidad, la sentencia no será válida.</dd>
+</dl>
 
-- `<time>`
-  - : El espacio de tiempo que debe transcurrir desde que la animación se aplica al elemento y el comienzo de la misma. Podemos especificarlo en segundos (usando `s`) o milisegundos (usando `ms`). Si no especificamos la unidad, la sentencia no será válida.
+<h2 id="Ejemplos">Ejemplos</h2>
 
-## Ejemplos
+<p>Visitar <a href="/es/CSS/Usando_animaciones_CSS" title="en/CSS/CSS_animations">animaciones CSS</a> para ver algunos ejemplos.</p>
 
-Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations") para ver algunos ejemplos.
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Especificaciones
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Animations', '#animation-delay', 'animation-delay') }}</td>
+   <td>{{ Spec2('CSS3 Animations') }}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-| Especificación                                                                                   | Estado                                   | Comentario |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-delay', 'animation-delay') }} | {{ Spec2('CSS3 Animations') }} |            |
-
-## Compatibilidad entre navegadores
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad entre navegadores</h2>
 
 {{Compat("css.properties.animation-delay")}}
 
-## Consulte también
+<h2 id="Consulte_también">Consulte también</h2>
 
-- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations "en/CSS/CSS_animations")
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+<ul>
+ <li><a href="/en-US/docs/CSS/Using_CSS_animations" title="en/CSS/CSS_animations">Usando animaciones CSS</a></li>
+ <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
+</ul>

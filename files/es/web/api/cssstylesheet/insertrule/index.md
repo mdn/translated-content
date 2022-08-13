@@ -5,40 +5,30 @@ tags:
   - CSSStyleSheet
 translation_of: Web/API/CSSStyleSheet/insertRule
 ---
-{{APIRef}}
-
-El método **`CSSStyleSheet.insertRule()`** inserta una nueva regla de estilo en la actual hoja de estilos.
-
-Para conjuntos de reglas ésta contiene tanto al selector como la declaración de estilo. Para reglas-arroba, ésta especifica tanto al identificador-arroba como como al contenido de la regla. Si se asignan varias reglas en el {{domxref("DOMString")}} como parámetro se dispara una {{domxref("DOMException")}} con el código SYNTAX_ERR.
-
-## Syntax
-
-    stylesheet.insertRule(regla, índice)
-
-### Parameters
-
-- `regla` es un {{domxref("DOMString")}} que contiene la regla que se va a insertar (selector y declaración).
-- índice es un `unsigned int` que representa la posicion en la que se va a insertar.
-
-## Ejemplos
-
-### Ejemplo 1
-
-```js
-// Insertar una nueva regla al principio de mi hoja de estilos
+<div>
+ {{APIRef}}</div>
+<p><span style="color: rgb(77, 78, 83);">El método </span><code style="font-size: 14px; color: rgb(77, 78, 83);"><strong>CSSStyleSheet.insertRule()</strong></code><span style="color: rgb(77, 78, 83);"> inserta una nueva regla de estilo en la actual hoja de estilos.</span></p>
+<p><span style="color: rgb(77, 78, 83);">Para conjuntos de reglas ésta contiene tanto al selector como la declaración de estilo. Para reglas-arroba, ésta especifica tanto al identificador-arroba como como al contenido de la regla. Si se asignan varias reglas en el  </span>{{domxref("DOMString")}}<span style="color: rgb(77, 78, 83);"> como parámetro se dispara una </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;"> </span><span style="line-height: 1.5;">{{domxref("DOMException")}}</span><span style="line-height: 1.5;"> con el código </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">SYNTAX_ERR</span><span style="line-height: 1.5;">.</span></p>
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+<pre class="syntaxbox"><var>stylesheet</var>.insertRule(<var>regla</var>, índice)</pre>
+<h3 id="Parameters" name="Parameters">Parameters</h3>
+<ul>
+ <li><code>regla</code> es un {{domxref("DOMString")}} que contiene la regla que se va a insertar (selector y declaración).</li>
+ <li><font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">índice</span></font> es un <code>unsigned int</code> que representa la posicion en la que se va a insertar.</li>
+</ul>
+<h2 id="Examples" name="Examples">Ejemplos</h2>
+<h3 id="Example_1" name="Example_1">Ejemplo 1</h3>
+<pre class="brush: js">// Insertar una nueva regla al principio de mi hoja de estilos
 myStyle.insertRule("#blanc { color: white }", 0);
-```
-
-### Example 2
-
-```js
-/**
+</pre>
+<h3 id="Example_2" name="Example_2">Example 2</h3>
+<pre class="brush: js">/**
  * Agregar una regla de hoja de estilos al documento(sin embargo, una mejor práctica puede ser
  * cambiar las clases dinamicamente, así se mantiene la información de estilo en
  * hojas de estilo genuinas (evitando agregar elementos extras al DOM))
  * Note que se necesita una matriz para las declaraciones y reglas ya que ECMAScript
  * no proporciona un orden de iteración predecible y como CSS
- * depende del orden(i.e., es cascada); aquellos sin necesidad de
+ * depende del <span style="line-height: normal;">orden</span><span style="line-height: normal;">(i.e., es cascada); aquellos sin necesidad de</span>
  * reglas en cascada podrían construir una API basada en objetos de acceso más amigable.
  * @param {Matriz} reglas. Acepta una matriz de  declaraciones JSON-encoded
  * @example
@@ -57,30 +47,28 @@ function addStylesheetRules (decls) {
   // Aparentemente ¿alguna versión de Safari necesita la siguiente linea? No lo sé.
   styleEl.appendChild(document.createTextNode(''));
   var s = styleEl.sheet;
-  for (var i=0, rl = rules.length; i < rl; i++) {
+  for (var i=0, rl = rules.length; i &lt; rl; i++) {
     var j = 1, rule = rules[i], selector = decl[0], propStr = '';
     // Si el segundo argumento de una regla es una matriz de matrices, corrijamos nuestras variables.
     if (Object.prototype.toString.call(rule[1][0]) === '[object Array]') {
       rule = rule[1];
       j = 0;
     }
-    for (var pl=rule.length; j < pl; j++) {
+    for (var pl=rule.length; j &lt; pl; j++) {
       var prop = rule[j];
       propStr += prop[0] + ':' + prop[1] + (prop[2] ? ' !important' : '') + ';\n';
     }
     s.insertRule(selector + '{' + propStr + '}', s.cssRules.length);
   }
-}
-```
-
-## Specification
-
-- [insertRule](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-insertRule)
-
-## Browser compatibility
-
+}</pre>
+<h2 id="Specification" name="Specification">Specification</h2>
+<ul>
+ <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-insertRule">insertRule </a></li>
+</ul>
+<h2 id="Browser_compatibility" style="line-height: 30px;">Browser compatibility</h2>
 {{Compat("api.CSSStyleSheet.insertRule")}}
 
-## See also
-
-- [`deleteRule`](/es/docs/Web/API/CSSStyleSheet/deleteRule)
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="/en-US/docs/Web/API/CSSStyleSheet/deleteRule"><code>deleteRule</code></a></li>
+</ul>

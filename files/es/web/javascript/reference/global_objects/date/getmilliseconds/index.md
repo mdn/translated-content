@@ -9,47 +9,71 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMilliseconds
 browser-compat: javascript.builtins.Date.getMilliseconds
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`getMilliseconds()`** devuelve la cantidad de milisegundos en el objeto fecha especificado de acuerdo a la hora local.
+<p>El método <strong><code>getMilliseconds()</code></strong> devuelve la cantidad de milisegundos en el objeto fecha especificado de acuerdo a la hora local.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    dateObj.getMilliseconds()
+<pre class="syntaxbox"><code><var>dateObj</var>.getMilliseconds()</code></pre>
 
-### Valor de Retorno
+<h3 id="Valor_de_Retorno">Valor de Retorno</h3>
 
-Un número, entre 0 y 999, que representa la cantidad de milisegundos en la fecha dada, de acuerdo a la hora local.
+<p>Un número, entre 0 y 999, que representa la cantidad de milisegundos en la fecha dada, de acuerdo a la hora local.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `getMilliseconds()`
+<h3 id="Usando_getMilliseconds()">Usando <code>getMilliseconds()</code></h3>
 
-El siguiente ejemplo asigna la cantidad de milisegundos de la hora actual a la variable `milisegundos`:
+<p>El siguiente ejemplo asigna la cantidad de milisegundos de la hora actual a la variable <code>milisegundos</code>:</p>
 
-```js
-var ahora = new Date();
+<pre class="brush: js">var ahora = new Date();
 var milisegundos = ahora.getMilliseconds();
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                   | Estado                       | Comentario                                          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                         | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.24', 'Date.prototype.getMilliseconds')}}                                 | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}} | {{Spec2('ESDraft')}} |                                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial. Implementado en JavaScript 1.3.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.9.5.24', 'Date.prototype.getMilliseconds')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
 {{Specification}}
 
-## Compatibilidad en Navegadores
+<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
 
 {{Compat}}
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
-- {{jsxref("Date.prototype.setMilliseconds()")}}
+<ul>
+ <li>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</li>
+ <li>{{jsxref("Date.prototype.setMilliseconds()")}}</li>
+</ul>

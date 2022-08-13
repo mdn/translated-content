@@ -4,38 +4,69 @@ slug: Web/HTML/Attributes/crossorigin
 translation_of: Web/HTML/Attributes/crossorigin
 original_slug: Web/HTML/Atributos_de_configuracion_CORS
 ---
-En HTML5, algunos elementos HTML que dan soporte para [CORS](/es/docs/HTTP/Access_control_CORS), tales como {{ HTMLElement("img") }} o {{ HTMLElement("video") }}, tienen un atributo `crossorigin` (propiedad `crossOrigin`), que les permite configurar las peticiones CORS de los datos que se cargan. Estos atributos están enumerados, y tienen los siguientes valores posibles:
+<p><span class="seoSummary">En HTML5, algunos elementos HTML que dan soporte para <a href="/en-US/docs/HTTP/Access_control_CORS">CORS</a>, tales como {{ HTMLElement("img") }} o {{ HTMLElement("video") }}, tienen un atributo <code>crossorigin</code>  (propiedad <code>crossOrigin</code>), que les permite configurar las peticiones CORS de los datos que se cargan.</span> Estos atributos están enumerados, y tienen los siguientes valores posibles:</p>
 
-| Palabra clave     | Descripción                                                                                                                                      |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `anonymous`       | CORS, las solicitudes de este elemento no tendrán establecido el indicador de credenciales.                                                      |
-| `use-credentials` | CORS, las solicitudes de este elemento tendrán marcado el indicador de credenciales; esto significa que la solicitud proporcionará credenciales. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Palabra clave</td>
+   <td class="header">Descripción</td>
+  </tr>
+  <tr>
+   <td><code>anonymous</code></td>
+   <td>CORS, las solicitudes de este elemento no tendrán establecido el indicador de credenciales.</td>
+  </tr>
+  <tr>
+   <td><code>use-credentials</code></td>
+   <td>CORS, las solicitudes de este elemento tendrán marcado el indicador de credenciales; esto significa que la solicitud proporcionará credenciales.</td>
+  </tr>
+ </tbody>
+</table>
 
-Por defecto, es decir cuando el atributo no es específicado, CORS no se usa. La palabra clave "anonymous" indica que no habrá intercambio de credenciales de usuario a través de las cookies, ni por parte del cliente con certificados SSL o autenticación HTTP como se describe en la sección de terminología de la especificación CORS.
+<p>Por defecto, es decir cuando el atributo no es específicado, CORS no se usa. La palabra clave "anonymous" indica que no habrá intercambio de credenciales de usuario a través de las cookies, ni por parte del cliente con certificados SSL o autenticación HTTP como se describe en la sección de terminología de la especificación CORS.</p>
 
-Una clave inválida y un string vacío serán gestionados como una clave anónima.
+<p>Una clave inválida y un string vacío serán gestionados como  una clave anónima.</p>
 
-Especificaciones
+<p>Especificaciones</p>
 
-| Especificación                                                                                                                           | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                     | {{Spec2('HTML WHATWG')}} |            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-### script crossorigin
+<h3>script crossorigin</h3>
 
 {{Compat("html.elements.script.crossorigin")}}
 
-### video crossorigin
+<h3>video crossorigin</h3>
 
 {{Compat("html.elements.video.crossorigin")}}
 
-### link crossorigin
+<h3>link crossorigin</h3>
 
 {{Compat("html.elements.link.crossorigin")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [HTTP access control](/En/HTTP_access_control "en/HTTP access control")
+<ul>
+ <li><a href="/En/HTTP_access_control" title="en/HTTP access control">HTTP access control</a></li>
+</ul>

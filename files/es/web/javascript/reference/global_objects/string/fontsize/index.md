@@ -4,58 +4,73 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontsize
 ---
-{{JSRef}} {{deprecated_header}}
+<div>{{JSRef}} {{deprecated_header}}</div>
 
-`El método `**`fontsize()`** crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.
+<p><code>El método </code><strong><code>fontsize()</code></strong> crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.</p>
 
-> **Nota:** **Usage note:** El elemento \<font> ha sido eliminado [HTML5](/es/docs/Web/Guide/HTML/HTML5) y no se debe usar. Los desarrolladores web deben usar propiedades [CSS](/es/docs/Web/CSS).
+<div class="note">
+<p><strong>Usage note:</strong> El elemento &lt;font&gt; ha sido eliminado <a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> y no se debe usar. Los desarrolladores web deben usar propiedades <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    str.fontsize(size)
+<pre class="syntaxbox"><code><var>str</var>.fontsize(<var>size</var>)</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `size`
-  - : Un entero entre 1 y 7.
+<dl>
+ <dt><code>size</code></dt>
+ <dd>Un entero entre 1 y 7.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Cuando especificas el tamaño como entero, estableces el tamaño de la fuente. Cuando especificas el tamaño como cadena tal como "-2", se ajusta el tamaño de la fuente al de la etiqueta {{HTMLElement("basefont")}}.
+<p>Cuando especificas el tamaño como entero, estableces el tamaño de la fuente. Cuando especificas el tamaño como cadena tal como "-2", se ajusta el tamaño de la fuente al de la etiqueta {{HTMLElement("basefont")}}.</p>
 
-When you specify size as an integer, you set the font size of `str` to one of the 7 defined sizes. When you specify `size` as a string such as "-2", you adjust the font size of `str` relative to the size set in the {{HTMLElement("basefont")}} tag.
+<p>When you specify size as an integer, you set the font size of <code>str</code> to one of the 7 defined sizes. When you specify <code>size</code> as a string such as "-2", you adjust the font size of <code>str</code> relative to the size set in the {{HTMLElement("basefont")}} tag.</p>
 
-## Ejemlpos
+<h2 id="Ejemlpos">Ejemlpos</h2>
 
-### `Usos fontsize()`
+<h3 id="Usos_fontsize()"><code>Usos fontsize()</code></h3>
 
-The following example uses string methods to change the size of a string:
+<p>The following example uses string methods to change the size of a string:</p>
 
-```js
-var worldString = 'Hello, world';
+<pre class="brush: js">var worldString = 'Hello, world';
 
-console.log(worldString.small());     // <small>Hello, world</small>
-console.log(worldString.big());       // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
-```
+console.log(worldString.small());     // &lt;small&gt;Hello, world&lt;/small&gt;
+console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
+console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Hello, world&lt;/fontsize&gt;
+</pre>
 
-With the {{domxref("HTMLElement.style", "element.style")}} object you can get the element's `style` attribute and manipulate it more generically, for example:
+<p>With the {{domxref("HTMLElement.style", "element.style")}} object you can get the element's <code>style</code> attribute and manipulate it more generically, for example:</p>
 
-```js
-document.getElementById('yourElemId').style.fontSize = '0.7em';
-```
+<pre class="brush: js">document.getElementById('yourElemId').style.fontSize = '0.7em';
+</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                                | Status               | Comment                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES6', '#sec-string.prototype.fontsize', 'String.prototype.fontsize')}} | {{Spec2('ES6')}} | Initial definition. Implemented in JavaScript 1.0. Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-string.prototype.fontsize', 'String.prototype.fontsize')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Initial definition. Implemented in JavaScript 1.0. Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("javascript.builtins.String.fontsize")}}
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- {{jsxref("String.prototype.big()")}}
-- {{jsxref("String.prototype.small()")}}
+<ul>
+ <li>{{jsxref("String.prototype.big()")}}</li>
+ <li>{{jsxref("String.prototype.small()")}}</li>
+</ul>

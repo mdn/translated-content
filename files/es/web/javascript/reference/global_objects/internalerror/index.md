@@ -10,78 +10,90 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
 original_slug: Web/JavaScript/Referencia/Objetos_globales/InternalError
 ---
-{{JSRef}} {{non-standard_header}}
+<div>{{JSRef}} {{non-standard_header}}</div>
 
-El objeto **`InternalError`** indica un error que se produjo internamente en el motor JavaScript.
+<p>El objeto <strong><code>InternalError</code></strong> indica un error que se produjo internamente en el motor JavaScript.</p>
 
-Los principalmente casos de ejemplo son cuando algo es demasiado grande, por ejemplo:
+<p>Los principalmente casos de ejemplo son cuando algo es demasiado grande, por ejemplo:</p>
 
-- "demasiados casos del switch",
-- "demasiados paréntesis en la expresión regular",
-- "iniciador de arreglo demasiado grande",
-- "demasiada recursividad".
+<ul>
+ <li>"demasiados casos del switch",</li>
+ <li>"demasiados paréntesis en la expresión regular",</li>
+ <li>"iniciador de arreglo demasiado grande",</li>
+ <li>"demasiada recursividad".</li>
+</ul>
 
-## Constructor
+<h2 id="Constructor">Constructor</h2>
 
-- {{JSxRef("Global_Objects/InternalError/InternalError", "InternalError()")}}
-  - : Crea un nuevo objeto `InternalError`.
+<dl>
+ <dt>{{JSxRef("Global_Objects/InternalError/InternalError", "InternalError()")}}</dt>
+ <dd>Crea un nuevo objeto <code>InternalError</code>.</dd>
+</dl>
 
-## Propiedades de la instancia
+<h2 id="Propiedades_de_la_instancia">Propiedades de la instancia</h2>
 
-- {{jsxref("Error.prototype.message", "InternalError.prototype.message")}}
-  - : Mensaje de error. Heredado de {{JSxRef("Error")}}.
-- {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
-  - : Nombre del error. Heredado de {{JSxRef("Error")}}.
-- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}
-  - : Ruta al archivo que generó este error. Heredado de {{JSxRef("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}
-  - : Número de línea en el archivo que generó este error. Heredado de {{JSxRef("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}
-  - : Número de columna en la línea que generó este error. Heredado de {{JSxRef("Error")}}.
-- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}
-  - : Seguimiento de la pila. Heredado de {{JSxRef("Error")}}.
+<dl>
+ <dt>{{jsxref("Error.prototype.message", "InternalError.prototype.message")}}</dt>
+ <dd>Mensaje de error. Heredado de {{JSxRef("Error")}}.</dd>
+ <dt>{{jsxref("Error.prototype.name", "InternalError.prototype.name")}}</dt>
+ <dd>Nombre del error. Heredado de {{JSxRef("Error")}}.</dd>
+ <dt>{{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}</dt>
+ <dd>Ruta al archivo que generó este error. Heredado de {{JSxRef("Error")}}.</dd>
+ <dt>{{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}</dt>
+ <dd>Número de línea en el archivo que generó este error. Heredado de {{JSxRef("Error")}}.</dd>
+ <dt>{{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}</dt>
+ <dd>Número de columna en la línea que generó este error. Heredado de {{JSxRef("Error")}}.</dd>
+ <dt>{{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}</dt>
+ <dd>Seguimiento de la pila. Heredado de {{JSxRef("Error")}}.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Demasiada recursividad
+<h3 id="Demasiada_recursividad">Demasiada recursividad</h3>
 
-Esta función recursiva se ejecuta 10 veces, según la condición de salida.
+<p>Esta función recursiva se ejecuta 10 veces, según la condición de salida.</p>
 
-```js
-function loop(x) {
-  if (x >= 10) // "x >= 10" es la condición de salida
+<pre class="brush: js notranslate">function loop(x) {
+  if (x &gt;= 10) // "x &gt;= 10" es la condición de salida
     return;
   // hacer cosas
   loop(x + 1); // la llamada recursiva
 }
-loop(0);
-```
+loop(0);</pre>
 
-Establecer esta condición en un valor extremadamente alto, no funcionará:
+<p>Establecer esta condición en un valor extremadamente alto, no funcionará:</p>
 
-```js example-bad
-function loop(x) {
-  if (x >= 1000000000000)
+<pre class="brush: js example-bad notranslate">function loop(x) {
+  if (x &gt;= 1000000000000)
     return;
   // hacer cosas
   loop(x + 1);
 }
 loop(0);
 
-// InternalError: demasiada recursividad
-```
+// InternalError: demasiada recursividad</pre>
 
-Para obtener más información, consulta {{JSxRef("Errors/Too_much_recursion", "InternalError: demasiada recursividad.")}}
+<p>Para obtener más información, consulta {{JSxRef("Errors/Too_much_recursion", "InternalError: demasiada recursividad.")}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-No forma parte de ningún estándar.
+<p><span class="pl-s">No forma parte de ningún estándar.</span></p>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("javascript.builtins.InternalError")}}
+<div>
+<div>
 
-## Ve también
 
-- {{JSxRef("Error")}}
-- {{JSxRef("Errors/Too_much_recursion", "demasiada recursividad")}}
+<p>{{Compat("javascript.builtins.InternalError")}}</p>
+</div>
+</div>
+
+<h2 id="Ve_también">Ve también</h2>
+
+<ul>
+ <li>{{JSxRef("Error")}}</li>
+ <li>
+  <p>{{JSxRef("Errors/Too_much_recursion", "demasiada recursividad")}}</p>
+ </li>
+</ul>

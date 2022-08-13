@@ -9,27 +9,26 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-mask-position-x
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad CSS `-webkit-mask-position-x` CSS establece la posición horizontal inicial de una imagen de máscara.
+<p>La propiedad CSS <code>-webkit-mask-position-x</code> CSS establece la posición horizontal inicial de una imagen de máscara.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-```css
-/* Palabras Clave valores */
+<pre class="brush: css">/* Palabras Clave valores */
 -webkit-mask-position-x: left;
 -webkit-mask-position-x: center;
 -webkit-mask-position-x: right;
 
-/* <porcentaje> valores */
+/* &lt;porcentaje&gt; valores */
 -webkit-mask-position-x: 100%;
 -webkit-mask-position-x: -50%;
 
-/* <longitud> valores */
+/* &lt;longitud&gt; valores */
 -webkit-mask-position-x: 50px;
 -webkit-mask-position-x: -1cm;
 
@@ -40,29 +39,30 @@ La propiedad CSS `-webkit-mask-position-x` CSS establece la posición horizontal
 -webkit-mask-position-x: inherit;
 -webkit-mask-position-x: initial;
 -webkit-mask-position-x: unset;
-```
+</pre>
 
-## Valores
+<h2 id="Valores">Valores</h2>
 
-- `<percentage>`
-  - : Un porcentaje que sirve para indicar, empezando por el lado izquierdo, la posición de la imagen en relación a la dimensión horizontal del área de la caja de relleno (padding). Un valor del 0% indica que el lado izquierdo de la imagen de máscara se alinea con el lado izquierdo de la caja. Un valor del 100% indica que que el lado derecho de la imagen se alinea con el lado derecho de la caja.
-- `<length>`
-  - : Una longitud indicando la posición del lado izquierdo de la imagen en relación con el lado izquierdo de la caja.
-- **`left`**
-  - : Equivalente a `0%`.
-- **`center`**
-  - : Equivalente a `50%`.
-- **`right`**
-  - : Equivalente a `100%`.
+<dl>
+ <dt><code>&lt;percentage&gt;</code></dt>
+ <dd>Un porcentaje que sirve para indicar, empezando por el lado izquierdo, la posición de la imagen en relación a la dimensión horizontal del área de la caja de relleno (padding). Un valor del 0% indica que  el lado izquierdo de la imagen de máscara se alinea con el lado izquierdo de la caja. Un valor del 100% indica que que el lado derecho de la imagen se alinea con el lado derecho de la caja.</dd>
+ <dt><code>&lt;length&gt;</code></dt>
+ <dd>Una longitud indicando la posición del lado izquierdo de la imagen en relación con el lado izquierdo de la caja.</dd>
+ <dt><code><strong>left</strong></code></dt>
+ <dd>Equivalente a <code>0%</code>.</dd>
+ <dt><code><strong>center</strong></code></dt>
+ <dd>Equivalente a <code>50%</code>.</dd>
+ <dt><code><strong>right</strong></code></dt>
+ <dd>Equivalente a <code>100%</code>.</dd>
+</dl>
 
-### Síntaxis Formal
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```css
-.exampleOne {
+<pre class="brush:css">.exampleOne {
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position-x: right;
 }
@@ -71,16 +71,16 @@ La propiedad CSS `-webkit-mask-position-x` CSS establece la posición horizontal
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position-x: 25%;
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-No forma parte de ninguna especificación.
+<p>No forma parte de ninguna especificación.</p>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("css.properties.-webkit-mask-position-x")}}
 
-## See also
+<h2 id="See_also">See also</h2>
 
-{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}
+<p>{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}</p>

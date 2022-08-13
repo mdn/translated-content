@@ -11,37 +11,34 @@ tags:
 translation_of: Web/HTML/CORS_enabled_image
 original_slug: Web/HTML/Imagen_con_CORS_habilitado
 ---
-La especificación HTML introduce un atributo {{ htmlattrxref("crossorigin", "img") }} para imágenes que, en conjunto con el encabezado {{Glossary("CORS")}} apropiado, permite definir imágenes con el elemento {{ HTMLElement("img") }} que se carguen de orígenes externos dentro de un lienzo (_canvas_) como si estas fuesen cargadas del origen actual.
+<p><span class="seoSummary">La especificación HTML introduce un atributo {{ htmlattrxref("crossorigin", "img") }} para imágenes que, en conjunto con el encabezado  {{Glossary("CORS")}} apropiado, permite definir imágenes con el elemento {{ HTMLElement("img") }} que se carguen de orígenes externos dentro de un lienzo (<em>canvas</em>) como si estas fuesen cargadas del origen actual.</span></p>
 
-Vea el artículo ["Atributos de configuración CORS"](/en/HTML/CORS_settings_attributes "Atributos de configuración CORS") para mas detalles de como el atributo "crossorigin" es usado.
+<p>Vea el artículo <a href="/en/HTML/CORS_settings_attributes" title="Atributos de configuración CORS">"Atributos de configuración CORS"</a> para mas detalles de como el atributo "crossorigin" es usado.</p>
 
-## ¿Qué es un "tainted" canvas?
+<h2 id="¿Qué_es_un_tainted_canvas">¿Qué es un "tainted" canvas? </h2>
 
-Aunque puedes usar imágenes sin la aprobación del CORS en el elemento canvas, hacerlo puede "manchar" el canvas. Por ejemplo, no puedes usar los métodos canvas `toBlob()`, `toDataURL()`, or `getImageData(). Si los usas se lanzará un mensaje de seguridad.`
+<p>Aunque puedes usar imágenes sin la aprobación del CORS en el elemento canvas, hacerlo puede "manchar" el canvas. Por ejemplo, no puedes usar los métodos canvas <code>toBlob()</code>, <code>toDataURL()</code>, or <code>getImageData(). Si los usas se lanzará un mensaje de seguridad.</code></p>
 
-Esto protegerá a los usuarios de tener información privada usada por medio de imágenes que cogen información desde otras web sin permiso.
+<p>Esto protegerá a los usuarios de tener información privada usada por medio de imágenes que cogen información desde otras web sin permiso.</p>
 
-## Ejemplo: Almacenando una imagen desde un origen externo
+<h2 id="Ejemplo_Almacenando_una_imagen_desde_un_origen_externo">Ejemplo: Almacenando una imagen desde un origen externo</h2>
 
-Debes de tener un servidor de hosting de imágenes con el apropiado `Access-Control-Allow-Origin` header. Añadiendo el atributo crossOrigin crea un request header.
+<p>Debes de tener un servidor de hosting de imágenes con el apropiado <code>Access-Control-Allow-Origin</code> header. Añadiendo el atributo crossOrigin crea un request header.</p>
 
-Puedes utilizar este fragemto de la configuración del servidor Apache del Boilerplate HTML5 para responder apropiadamente con este encabezado de respuesta.
+<p>Puedes utilizar este fragemto de la configuración del servidor Apache del Boilerplate HTML5 para responder apropiadamente con este encabezado de respuesta.</p>
 
-```xml
-<IfModule mod_setenvif.c>
-    <IfModule mod_headers.c>
-        <FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
+<pre class="brush:xml">&lt;IfModule mod_setenvif.c&gt;
+    &lt;IfModule mod_headers.c&gt;
+        <span class="nt">&lt;FilesMatch</span> <span class="s">"\.(cur|gif|ico|jpe?g|png|svgz?|webp)$"</span><span class="nt">&gt;</span>
             SetEnvIf Origin ":" IS_CORS
             Header set Access-Control-Allow-Origin "*" env=IS_CORS
-        </FilesMatch>
-    </IfModule>
-</IfModule>
-```
+        &lt;/FilesMatch&gt;
+    &lt;/IfModule&gt;
+&lt;/IfModule&gt;</pre>
 
-Dado que está todo ordenado, serás capás de guardar esas imagenes en el almacenamiento del DOM, así como si fueran solicitados de tu dominio.
+<p>Dado que está todo ordenado, serás capás de guardar esas imagenes en el almacenamiento del DOM, así como si fueran solicitados de tu dominio.</p>
 
-```js
-var img = new Image,
+<pre class="brush: js">var img = new Image,
     canvas = document.createElement("canvas"),
     ctx = canvas.getContext("2d"),
     src = "http://example.com/image"; // insert image url here
@@ -59,10 +56,13 @@ img.src = src;
 if ( img.complete || img.complete === undefined ) {
     img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
     img.src = src;
-}
-```
+}</pre>
 
-## También puede ver
 
-- [Using Cross-domain images in WebGL and Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
-- [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
+
+<h2 id="También_puede_ver">También puede ver</h2>
+
+<ul>
+ <li><a class="external" href="http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html">Using Cross-domain images in WebGL and Chrome 13</a></li>
+ <li><a class="external" href="http://whatwg.org/html#attr-img-crossorigin">HTML Specification - the <code>crossorigin</code> attribute</a></li>
+</ul>

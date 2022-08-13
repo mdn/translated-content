@@ -3,27 +3,41 @@ title: Coordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
 translation_of: Web/API/GeolocationCoordinates/latitude
 ---
-{{APIRef("Geolocation API")}}
+<div>{{APIRef("Geolocation API")}}</div>
 
-**`Coordinates.latitude`** es una propiedad de sólo lectura que devuelve un `double` representando la latitud de la posición en grados decimales.
+<p><code><strong>Coordinates.latitude</strong></code> es una propiedad de sólo lectura que devuelve un <code>double</code> representando la latitud de la posición en grados decimales.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```js
-lat = coordinates.latitude
-```
+<pre class="brush: js"><em>lat</em> = <code><em>coordinates</em><code>.latitude</code></code>
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                   | Estatus                          | Comentario              |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation', '#lat', 'Coordinates.latitude')}} | {{Spec2('Geolocation')}} | Especificación Inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Geolocation', '#lat', 'Coordinates.latitude')}}</td>
+   <td>{{Spec2('Geolocation')}}</td>
+   <td>Especificación Inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("api.GeolocationCoordinates.latitude")}}
 
-## Mirar también
+<h2 id="Mirar_también">Mirar también</h2>
 
-- [Uso de geolocalización](/es/docs/WebAPI/Using_geolocation)
-- La interfaz {{domxref("Coordinates")}} a la que pertenece.
+<ul>
+ <li><a href="/es/docs/WebAPI/Using_geolocation">Uso de geolocalización</a></li>
+ <li>La interfaz {{domxref("Coordinates")}} a la que pertenece.</li>
+</ul>

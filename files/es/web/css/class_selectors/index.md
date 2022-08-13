@@ -8,46 +8,69 @@ tags:
   - Selectores
 translation_of: Web/CSS/Class_selectors
 ---
-{{CSSRef("Selectors")}}
+<div>{{CSSRef("Selectors")}}</div>
 
-En un documento HTML, los selectores de clase buscan un elemento basado en el contenido de su atributo `class`. El atributo {{htmlattrxref("class")}} está definido como una lista de elementos separados por espacio, y uno de esos elementos debe coincidir exactamente con el nombre de clase dado en el selector.
+<p>En un documento HTML, los selectores de clase buscan un elemento basado en el contenido de su atributo <code>class</code>. El atributo {{htmlattrxref("class")}} está definido como una lista de elementos separados por espacio, y uno de esos elementos debe coincidir exactamente con el nombre de clase dado en el selector.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    .classname { style properties }
+<pre class="syntaxbox">.classname { <em>style properties</em> }</pre>
 
-Nótese que esto es equivalente al siguiente {{Cssxref("Attribute_selectors", "selector de atributo")}}:
+<p>Nótese que esto es equivalente al siguiente {{Cssxref("Attribute_selectors", "selector de atributo")}}:</p>
 
-    [class~=classname] { style properties }
+<pre class="syntaxbox">[class~=classname] { <em>style properties</em> }</pre>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-span.classy {
+<pre class="brush: css">span.classy {
   background-color: DodgerBlue;
 }
-```
+</pre>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<span class="classy">Aquí hay un span con algo de texto.</span>
-<span>Aquí hay otro.</span>
-```
+<pre class="brush: html">&lt;span class="classy"&gt;Aquí hay un span con algo de texto.&lt;/span&gt;
+&lt;span&gt;Aquí hay otro.&lt;/span&gt;
+</pre>
 
-{{EmbedLiveSample('Ejemplo', 200, 50)}}
+<p>{{EmbedLiveSample('Ejemplo', 200, 50)}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                               | Estatus                              | Comentarios        |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS4 Selectors')}} | Sin cambios        |
-| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS3 Selectors')}} |                    |
-| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}             |                    |
-| {{SpecName('CSS1', '#class-as-selector', 'child selectors')}}             | {{Spec2('CSS1')}}             | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}</td>
+   <td>{{Spec2('CSS4 Selectors')}}</td>
+   <td>Sin cambios</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}</td>
+   <td>{{Spec2('CSS3 Selectors')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1', '#class-as-selector', 'child selectors')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("css.selectors.class")}}

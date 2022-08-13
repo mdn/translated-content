@@ -10,52 +10,65 @@ tags:
   - Reference
 translation_of: Web/API/Animation/ready
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
-La propiedad de solo-lectura **`Animation.ready`** de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve cuando la animación está lista para reproducirse. Una nueva 'promesa' es creada cada vez que la animación entra en [play state(estado de reproducción)](/es/docs/Web/API/Animation/playState) `"pending"(pendiente)` así como si la reproducción es cancelada, ya que en ambos escenarios, la animación estará lista para ser reiniciada.
+<p>La propiedad de solo-lectura  <strong><code>Animation.ready</code></strong> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve un {{jsxref("Promise")}} que se resuelve cuando la animación está lista para reproducirse. Una nueva 'promesa' es creada cada vez que la animación entra en <a href="/en-US/docs/Web/API/Animation/playState">play state(estado de reproducción)</a> <code>"pending"(pendiente)</code> así como si la reproducción es cancelada, ya que en ambos escenarios, la animación estará lista para ser reiniciada.</p>
 
-> **Nota:** Dado que la misma {{jsxref("Promise")}} es usada para las solicitudes pendientes de `play` y`pause` , se recomienda a los autores que comprueben el estado de la animación cuando se resuelva la promesa.
+<div class="note">
+<p>Dado que la misma {{jsxref("Promise")}} es usada para las solicitudes pendientes de <code>play</code> y<code>pause</code> , <span id="result_box" lang="es"><span>se recomienda a los autores que comprueben el estado de la animación cuando se resuelva la promesa</span></span>.</p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis"><span class="highlight-span">Sintaxis</span></h2>
 
-    var readyPromise = Animation.ready;
+<pre class="syntaxbox">var <em>readyPromise</em> = <em>Animation</em>.ready;
+</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Un {{jsxref("Promise")}} que se resuelve cuando la animación esta lista para reproducirse. Por lo general, se usará una construcción similar a esta usando una promise lista:
+<p>Un {{jsxref("Promise")}} que se resuelve cuando la animación esta lista para reproducirse. Por lo general, se usará una construcción similar a esta usando una promise lista:</p>
 
-```js
-animation.ready.then(function() {
+<pre class="brush: js">animation.ready.then(function() {
   // Hace lo que sea necesario cuando
   // la animación está lista para reproducirse
-});
-```
+});</pre>
 
-## Ejemplo
+<h2 id="Ejemplo"><span class="highlight-span">Ejemplo</span></h2>
 
-En el siguiente ejemplo, el estado de la animación será `running(reproduciendo)` cuando la **Promise actual** se resuelva ya que la animación no deja el estado de reproducción `pending` entre las llamadas `pause` and `play` ,por lo tanto, la **Promise actual** no cambia.
+<p>En el siguiente ejemplo, el estado de la animación será <code>running(reproduciendo)</code> cuando la<strong> Promise actual</strong> se resuelva ya que la animación no deja el estado de reproducción <code>pending</code> entre las llamadas <code>pause</code> and <code>play</code> ,por lo tanto, la <strong>Promise actual</strong> no cambia.</p>
 
-```js
-animation.pause();
+<pre class="brush: js">animation.pause();
 animation.ready.then(function() {
   // Displays 'running'
   alert(animation.playState);
 });
 animation.play();
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones"><span class="highlight-span"><span class="highlight-span">Especificaciones</span></span></h2>
 
-| Specification                                                                                        | Status                               | Comment         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------- |
-| {{SpecName('Web Animations', '#dom-animation-ready', 'Animation.ready' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Animations', '#dom-animation-ready', 'Animation.ready' )}}</td>
+   <td>{{Spec2('Web Animations')}}</td>
+   <td>Editor's draft.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador"><span class="highlight-span"><span class="highlight-span">Compatibilidad del navegador</span></span></h2>
 
 {{Compat("api.Animation.ready")}}
 
-## Ver también
+<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;"><span class="highlight-span">Ver también</span></h2>
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- {{domxref("Animation.playState")}}
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li>{{domxref("Animation")}}</li>
+ <li>{{domxref("Animation.playState")}}</li>
+</ul>

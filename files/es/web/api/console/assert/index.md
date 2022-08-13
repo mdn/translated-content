@@ -13,44 +13,66 @@ tags:
   - consola web
 translation_of: Web/API/console/assert
 ---
-{{APIRef("Console API")}}{{Non-standard_header}}
+<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
 
-Aparece un mensaje de error en la consola si la afirmación es falsa. Si la afirmación es verdadera, no aparecerá nada.
+<p>Aparece un mensaje de error en la consola si la afirmación es falsa. Si la afirmación es verdadera, no aparecerá nada.</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-> **Nota:** **Nota:** El método `console.assert()` se implementa de diferente manera en Node.js que el mismo método disponible en los navegadores.En los navegadores, llamando `console.assert()` con una falsa afirmación hará que el `message` se imprima por consola sin interrumpir la ejecución del código posterior. En Node.js, sin embargo, una falsa afirmación lanzará un `AssertionError`.
+<div class="note">
+<p><strong>Nota: </strong>El método <code>console.assert()</code> se implementa de diferente manera en Node.js que el mismo método disponible en los navegadores.</p>
 
-## Sintaxis
+<p>En los navegadores, llamando <code>console.assert()</code> con una falsa afirmación hará que el <code>message</code> se imprima por consola sin interrumpir la ejecución del código posterior. En Node.js, sin embargo, una falsa afirmación lanzará un <code>AssertionError</code>.</p>
+</div>
 
-    console.assert(afirmación, obj1 [, obj2, ..., objN]);
-    console.assert(afirmación, msg [, subst1, ..., substN]);
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Parámetros
+<pre class="syntaxbox">console.assert(<em>afirmación</em>, <em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
+console.assert(<em>afirmación</em>, <em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
+</pre>
 
-- `afirmación`
-  - : Cualquier expresión booleana.Si la afirmación es falsa, el mensaje aparecerá en consola.
-- `obj1` ... `objN`
-  - : Salida de una lista de objetos de JavaScript. Las representaciones de cadena de cada uno de estos objetos se añaden juntos en el orden y salida indicados.
-- `msg`
-  - : Una cadena de JavaScript que contiene cero o más cadenas de sustitución.
-- `subst1` ... `substN`
-  - : Objetos de JavaScript con el que reemplaza las cadenas dentro de `msg`. Esto te da más control sobre el formato de salida.
+<h3 id="Parámetros">Parámetros</h3>
 
-Para más detalles ver [Salida de texto a la consola](/es/docs/Web/API/console#Outputting_text_to_the_console) en la documentación de {{domxref("console")}}.
+<dl>
+ <dt><code>afirmación</code></dt>
+ <dd>Cualquier expresión booleana.Si la afirmación es falsa, el mensaje aparecerá en consola.</dd>
+ <dt><code>obj1</code> ... <code>objN</code></dt>
+ <dd>Salida de una lista de objetos de  JavaScript. Las representaciones de cadena de cada uno de estos objetos se añaden juntos en el orden y salida indicados.</dd>
+ <dt><code>msg</code></dt>
+ <dd>Una cadena de JavaScript que contiene cero o más cadenas de sustitución.</dd>
+ <dt><code>subst1</code> ... <code>substN</code></dt>
+ <dd>Objetos de JavaScript con el que reemplaza las cadenas dentro de <code>msg</code>. Esto te da más control sobre el formato de salida.</dd>
+</dl>
 
-## Especificaciones
+<p>Para más detalles ver <a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Salida de texto a la consola</a> en la documentación de {{domxref("console")}}.</p>
 
-| Especificaciones                                                                                             | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoleassertexpression-object", "console.assert()")}} | {{Spec2("Console API")}} | Definición inicial |
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Compatibilidad de navegadores
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificaciones</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Console API", "#consoleassertexpression-object", "console.assert()")}}</td>
+   <td>{{Spec2("Console API")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("api.console.assert")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Opera Dragonfly documentación: Consola](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Usando F12 Herramientas de Consola para ver Errores y Estados](http://msdn.microsoft.com/library/gg589530)
-- [Herramientas de Desarrollo de Chrome: Usando la Consola](https://developer.chrome.com/devtools/docs/console#assertions)
+<ul>
+ <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentación: Consola</a></li>
+ <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: Usando F12 Herramientas de Consola para ver Errores y Estados</a></li>
+ <li><a href="https://developer.chrome.com/devtools/docs/console#assertions">Herramientas de Desarrollo de Chrome: Usando la Consola</a></li>
+</ul>

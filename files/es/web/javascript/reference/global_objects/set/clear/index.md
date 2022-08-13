@@ -9,24 +9,23 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/clear
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`clear()`** remueve todos los elementos de un objeto `Set`.
+<p>El método <code><strong>clear()</strong></code> remueve todos los elementos de un objeto <code>Set</code>.</p>
 
-## Syntaxis
+<h2 id="Syntaxis">Syntaxis</h2>
 
-    mySet.clear();
+<pre class="syntaxbox"><code><em>mySet</em>.clear();</code></pre>
 
-### Valor de retorno
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-{{jsxref("undefined")}}.
+<p>{{jsxref("undefined")}}.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando el método clear
+<h3 id="Usando_el_método_clear">Usando el método clear</h3>
 
-```js
-var mySet = new Set();
+<pre class="brush: js">var mySet = new Set();
 mySet.add(1);
 mySet.add("foo");
 
@@ -37,20 +36,37 @@ mySet.clear();
 
 mySet.size;       // 0
 mySet.has("bar")  // false
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                       | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-set.prototype.clear', 'Set.prototype.clear')}}         | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-set.prototype.clear', 'Set.prototype.clear')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("javascript.builtins.Set.clear")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
+<ul>
+ <li>{{jsxref("Set")}}</li>
+ <li>{{jsxref("Set.prototype.delete()")}}</li>
+</ul>

@@ -8,131 +8,106 @@ tags:
 translation_of: Web/XSLT/Transforming_XML_with_XSLT
 original_slug: Web/XSLT/Transformando_XML_con_XSLT
 ---
-### [Introducción](es/Transformando_XML_en_XSLT/Introducci%c3%b3n)
-
-La separación del contenido y la presentación es una característica clave en el diseño de [XML](es/XML). La estructura de un documento XML esta diseñada para reflejar y clarificar relaciones importantes entre los aspectos individuales del contenido en si mismo, sin preocuparse de la forma en que posteriormente se visualizaran los datos. Una estructuración inteligente es particularmente importante cuando cada día se realizan más conexiones entre máquinas muy diferentes a través de la red.
-
-Finalmente, gran parte del contenido almacenado en los documentos XML será mostrado al lector (humano). Dado que el navegador proporciona un interfaz conocido y flexible al usuario, es el mecanismo ideal para presentar los contenidos en XML. Construido él mismo usando numerosas tecnologías XML, Mozilla incluye todos los mecanismos necesarios para procesar tanto los documentos XML originales, como las hojas de transformación utilizadas para formatearlo y mostrarlo en HTML. Al mismo tiempo se reduce la carga del servidor, dado que el procesamiento se produce en el lado del cliente.
-
-Actualmente, Gecko (el motor de visualización que utilizan Mozilla y Firefox) soporta dos tipos de hojas de estilo para XML. Para el control básico de la apariencia (como fuentes, colores, posición, etc...) Gecko utiliza [CSS](es/CSS), parecido al [DHTML](es/DHTML). Todo CSS1 y la mayor parte de CSS2 están soportados. El soporte para el estándar CSS3 está en desarrollo. Para más información sobre CSS, véase [Eric Meyer's CSS pages](http://www.meyerweb.com/eric/css/). Para una introducción de CSS1 y Netscape, véase [Browser Central page](http://home.netscape.com/browsers/future/standards.html#1).
-
-El segundo tipo de hojas de transformación que soporta Gecko son las hojas de estilo XSLT, eXtensible Stylesheet Language/Transform. XSLT permite al autor de una hoja de estilo transformar un documento original XML de dos formas: manipulando y ordenando el contenido (incluyendo una reordenación general de éste si es necesario), y transformando el contenido en distintos formatos (en el caso de Netscape, se convierte al vuelo en HTML para ser mostrado por el navegador).
-
-### Referencia de XSLT/XPath
-
-#### [Elementos](es/XSLT/Elementos)
-
-- [xsl:apply-imports](es/XSLT/apply-imports) _(soportado)_
-- [xsl:apply-templates](es/XSLT/apply-templates) _(soportado)_
-- [xsl:attribute](es/XSLT/attribute) _(soportado)_
-- [xsl:attribute-set](es/XSLT/attribute-set) _(soportado)_
-- [xsl:call-template](es/XSLT/call-template) _(soportado)_
-- [xsl:choose](es/XSLT/choose) _(soportado)_
-- [xsl:comment](es/XSLT/comment) _(soportado)_
-- [xsl:copy](es/XSLT/copy) _(soportado)_
-- [xsl:copy-of](es/XSLT/copy-of) _(soportado)_
-- [xsl:decimal-format](es/XSLT/decimal-format) _(soportado)_
-- [xsl:element](es/XSLT/element) _(soportado)_
-- [xsl:fallback](es/XSLT/fallback) _(no soportado)_
-- [xsl:for-each](es/XSLT/for-each) _(soportado)_
-- [xsl:if](es/XSLT/if) _(soportado)_
-- [xsl:import](es/XSLT/import) _(soportado en la mayoría de casos)_
-- [xsl:include](es/XSLT/include) _(soportado)_
-- [xsl:key](es/XSLT/key) _(soportado)_
-- [xsl:message](es/XSLT/message) _(soportado)_
-- [xsl:namespace-alias](es/XSLT/namespace-alias) _(no soportado)_
-- [xsl:number](es/XSLT/number) _(parcialmente soportado)_
-- [xsl:otherwise](es/XSLT/otherwise) _(soportado)_
-- [xsl:output](es/XSLT/output) _(parcialmente soportado)_
-- [xsl:param](es/XSLT/param) _(soportado)_
-- [xsl:preserve-space](es/XSLT/preserve-space) _(soportado)_
-- [xsl:processing-instruction](es/XSLT/processing-instruction)
-- [xsl:sort](es/XSLT/sort) _(soportado)_
-- [xsl:strip-space](es/XSLT/strip-space) _(soportado)_
-- [xsl:stylesheet](es/XSLT/stylesheet) _(parcialmente soportado)_
-- [xsl:template](es/XSLT/template) _(soportado)_
-- [xsl:text](es/XSLT/text) _(parcialmente supported)_
-- [xsl:transform](es/XSLT/transform) _(soportado)_
-- [xsl:value-of](es/XSLT/value-of) _(parcialmente soportado)_
-- [xsl:variable](es/XSLT/variable) _(soportado)_
-- [xsl:when](es/XSLT/when) _(soportado)_
-- [xsl:with-param](es/XSLT/with-param) _(soportado)_
-
-#### [Ejes](es/XPath/Ejes)
-
-- [ancestor](es/XPath/Ejes/ancestor)
-- [ancestor-or-self](es/XPath/Ejes/ancestor-or-self)
-- [attribute](es/XPath/Ejes/attribute)
-- [child](es/XPath/Ejes/child)
-- [descendant](es/XPath/Ejes/descendant)
-- [descendant-or-self](es/XPath/Ejes/descendant-or-self)
-- [following](es/XPath/Ejes/following)
-- [following-sibling](es/XPath/Ejes/following-sibling)
-- [namespace](es/XPath/Ejes/namespace) _(no soportado)_
-- [parent](es/XPath/Ejes/parent)
-- [preceding](es/XPath/Ejes/preceding)
-- [preceding-sibling](es/XPath/Ejes/preceding-sibling)
-- [self](es/XPath/Ejes/self)
-
-#### [Funciones](es/XPath/Funciones)
-
-- [boolean()](es/XPath/Funciones/boolean) _(soportado)_
-- [ceiling()](es/XPath/Funciones/ceiling) _(soportado)_
-- [concat()](es/XPath/Funciones/concat) _(soportado)_
-- [contains()](es/XPath/Funciones/contains) _(soportado)_
-- [count()](es/XPath/Funciones/count) _(soportado)_
-- [current()](es/XPath/Funciones/current) _(soportado)_
-- [document()](es/XPath/Funciones/document) _(soportado)_
-- [element-available()](es/XPath/Funciones/element-available) _(soportado)_
-- [false()](es/XPath/Funciones/false) _(soportado)_
-- [floor()](es/XPath/Funciones/floor) _(soportado)_
-- [format-number()](es/XPath/Funciones/format-number) _(soportado)_
-- [function-available()](es/XPath/Funciones/function-available) _(soportado)_
-- [generate-id()](es/XPath/Funciones/generate-id) _(soportado)_
-- [id()](es/XPath/Funciones/id) _(parcialmente soportado)_
-- [key()](es/XPath/Funciones/key) _(soportado)_
-- [lang()](es/XPath/Funciones/lang) _(soportado)_
-- [last()](es/XPath/Funciones/last) _(soportado)_
-- [local-name()](es/XPath/Funciones/local-name) _(soportado)_
-- [name()](es/XPath/Funciones/name) _(soportado)_
-- [namespace-uri()](es/XPath/Funciones/namespace-uri) _(soportado)_
-- [normalize-space()](es/XPath/Funciones/normalize-space) _(soportado)_
-- [not()](es/XPath/Funciones/not) _(soportado)_
-- [number()](es/XPath/Funciones/number) _(soportado)_
-- [position()](es/XPath/Funciones/position) _(soportado)_
-- [round()](es/XPath/Funciones/round) _(soportado)_
-- [starts-with()](es/XPath/Funciones/starts-with) _(soportado)_
-- [string()](es/XPath/Funciones/string) _(soportado)_
-- [string-lenght()](es/XPath/Funciones/string-length) _(soportado)_
-- [substring()](es/XPath/Funciones/substring) _(soportado)_
-- [substring-after()](es/XPath/Funciones/substring-after) _(soportado)_
-- [substring-before()](es/XPath/Funciones/substring-before) _(soportado)_
-- [sum()](es/XPath/Funciones/sum) _(soportado)_
-- [system-property()](es/XPath/Funciones/system-property) _(soportado)_
-- [translate()](es/XPath/Funciones/translate) _(soportado)_
-- [true()](es/XPath/Funciones/true) _(soportado)_
-- [unparsed-entity-url()](es/XPath/Funciones/unparsed-entity-url) _(no soportado)_
-
-### [Para futuras lecturas](es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas)
-
-- [Libros](es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Libros)
-- [Online](es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Online)
-
-  - [El Consorcio del amplio mundo de la Web](es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#El_Consorcio_del_Mundo_de_la_Web)
-  - [Portales](es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Portales)
-  - [Artículos](es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Art.C3.ADculos)
-  - [Tutoriales/Ejemplos](es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Tutoriales.2FEjemplos)
-  - [Listas de mails/Grupos de noticias](es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Listas_de_mails.2FGrupos_de_noticias)
-
-### [Índice](es/Transformando_XML_con_XSLT/Indice)
-
-### Información original del documento
-
-- Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.
-- Note: This reprinted article was originally part of the DevEdge site.
-
-Categorías
-
-enlaces interwikis
-
-{{ languages( { "en": "en/Transforming_XML_with_XSLT", "fr": "fr/Transformations_XML_avec_XSLT", "ko": "ko/Transforming_XML_with_XSLT", "pl": "pl/Transformacje_XML_z_XSLT" } ) }}
+<p>
+</p><p><br>
+</p>
+<h3 id="Introducci.C3.B3n"> <a href="es/Transformando_XML_en_XSLT/Introducci%c3%b3n">Introducción</a> </h3>
+<p>La separación del contenido y la presentación es una característica clave en el diseño de <a href="es/XML">XML</a>. La estructura de un documento XML esta diseñada para reflejar y clarificar relaciones importantes entre los aspectos individuales del contenido en si mismo, sin preocuparse de la forma en que posteriormente se visualizaran los datos. Una estructuración inteligente es particularmente importante cuando cada día se realizan más conexiones entre máquinas muy diferentes a través de la red.
+</p><p>Finalmente, gran parte del contenido almacenado en los documentos XML será mostrado al lector (humano). Dado que el navegador proporciona un interfaz conocido y flexible al usuario, es el mecanismo ideal para presentar los contenidos en XML. Construido él mismo usando numerosas tecnologías XML, Mozilla incluye todos los mecanismos necesarios para procesar tanto los documentos XML originales, como las hojas de transformación utilizadas para formatearlo y mostrarlo en HTML. Al mismo tiempo se reduce la carga del servidor, dado que el procesamiento se produce en el lado del cliente.
+</p><p>Actualmente, Gecko (el motor de visualización que utilizan Mozilla y Firefox) soporta dos tipos de hojas de estilo para XML. Para el control básico de la apariencia (como fuentes, colores, posición, etc...) Gecko utiliza <a href="es/CSS">CSS</a>, parecido al <a href="es/DHTML">DHTML</a>. Todo CSS1 y la mayor parte de CSS2 están soportados. El soporte para el estándar CSS3 está en desarrollo. Para más información sobre CSS, véase <a class="external" href="http://www.meyerweb.com/eric/css/">Eric Meyer's CSS pages</a>. Para una introducción de CSS1 y Netscape, véase <a class="external" href="http://home.netscape.com/browsers/future/standards.html#1">Browser Central page</a>.
+</p><p>El segundo tipo de hojas de transformación que soporta Gecko son las hojas de estilo XSLT, eXtensible Stylesheet Language/Transform. XSLT permite al autor de una hoja de estilo transformar un documento original XML de dos formas: manipulando y ordenando el contenido (incluyendo una reordenación general de éste si es necesario), y transformando el contenido en distintos formatos (en el caso de Netscape, se convierte al vuelo en HTML para ser mostrado por el navegador).
+</p>
+<h3 id="Referencia_de_XSLT.2FXPath"> Referencia de XSLT/XPath </h3>
+<h4 id="Elementos"> <a href="es/XSLT/Elementos">Elementos</a> </h4>
+<ul><li> <a href="es/XSLT/apply-imports">xsl:apply-imports</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/apply-templates">xsl:apply-templates</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/attribute">xsl:attribute</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/attribute-set">xsl:attribute-set</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/call-template">xsl:call-template</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/choose">xsl:choose</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/comment">xsl:comment</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/copy">xsl:copy</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/copy-of">xsl:copy-of</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/decimal-format">xsl:decimal-format</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/element">xsl:element</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/fallback">xsl:fallback</a> <i>(no soportado)</i>
+</li><li> <a href="es/XSLT/for-each">xsl:for-each</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/if">xsl:if</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/import">xsl:import</a> <i>(soportado en la mayoría de casos)</i>
+</li><li> <a href="es/XSLT/include">xsl:include</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/key">xsl:key</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/message">xsl:message</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/namespace-alias">xsl:namespace-alias</a> <i>(no soportado)</i>
+</li><li> <a href="es/XSLT/number">xsl:number</a> <i>(parcialmente soportado)</i>
+</li><li> <a href="es/XSLT/otherwise">xsl:otherwise</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/output">xsl:output</a> <i>(parcialmente soportado)</i>
+</li><li> <a href="es/XSLT/param">xsl:param</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/preserve-space">xsl:preserve-space</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/processing-instruction">xsl:processing-instruction</a> </li><li> <a href="es/XSLT/sort">xsl:sort</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/strip-space">xsl:strip-space</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/stylesheet">xsl:stylesheet</a> <i>(parcialmente soportado)</i>
+</li><li> <a href="es/XSLT/template">xsl:template</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/text">xsl:text</a> <i>(parcialmente supported)</i>
+</li><li> <a href="es/XSLT/transform">xsl:transform</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/value-of">xsl:value-of</a> <i>(parcialmente soportado)</i>
+</li><li> <a href="es/XSLT/variable">xsl:variable</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/when">xsl:when</a> <i>(soportado)</i>
+</li><li> <a href="es/XSLT/with-param">xsl:with-param</a> <i>(soportado)</i>
+</li></ul>
+<h4 id="Ejes"> <a href="es/XPath/Ejes">Ejes</a> </h4>
+<ul><li> <a href="es/XPath/Ejes/ancestor">ancestor</a> </li><li> <a href="es/XPath/Ejes/ancestor-or-self">ancestor-or-self</a> </li><li> <a href="es/XPath/Ejes/attribute">attribute</a> </li><li> <a href="es/XPath/Ejes/child">child</a> </li><li> <a href="es/XPath/Ejes/descendant">descendant</a> </li><li> <a href="es/XPath/Ejes/descendant-or-self">descendant-or-self</a> </li><li> <a href="es/XPath/Ejes/following">following</a> </li><li> <a href="es/XPath/Ejes/following-sibling">following-sibling</a> </li><li> <a href="es/XPath/Ejes/namespace">namespace</a> <i>(no soportado)</i>
+</li><li> <a href="es/XPath/Ejes/parent">parent</a> </li><li> <a href="es/XPath/Ejes/preceding">preceding</a> </li><li> <a href="es/XPath/Ejes/preceding-sibling">preceding-sibling</a> </li><li> <a href="es/XPath/Ejes/self">self</a>
+</li></ul>
+<h4 id="Funciones"> <a href="es/XPath/Funciones">Funciones</a> </h4>
+<ul><li> <a href="es/XPath/Funciones/boolean">boolean()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/ceiling">ceiling()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/concat">concat()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/contains">contains()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/count">count()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/current">current()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/document">document()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/element-available">element-available()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/false">false()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/floor">floor()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/format-number">format-number()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/function-available">function-available()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/generate-id">generate-id()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/id">id()</a> <i>(parcialmente soportado)</i>
+</li><li> <a href="es/XPath/Funciones/key">key()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/lang">lang()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/last">last()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/local-name">local-name()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/name">name()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/namespace-uri">namespace-uri()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/normalize-space">normalize-space()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/not">not()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/number">number()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/position">position()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/round">round()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/starts-with">starts-with()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/string">string()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/string-length">string-lenght()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/substring">substring()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/substring-after">substring-after()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/substring-before">substring-before()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/sum">sum()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/system-property">system-property()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/translate">translate()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/true">true()</a> <i>(soportado)</i>
+</li><li> <a href="es/XPath/Funciones/unparsed-entity-url">unparsed-entity-url()</a> <i>(no soportado)</i>
+</li></ul>
+<h3 id="Para_futuras_lecturas"> <a href="es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas">Para futuras lecturas</a> </h3>
+<ul><li> <a href="es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Libros">Libros</a> </li><li> <a href="es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Online">Online</a> <ul><li> <a href="es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#El_Consorcio_del_Mundo_de_la_Web">El Consorcio del amplio mundo de la Web</a> </li><li> <a href="es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Portales">Portales</a> </li><li> <a href="es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Art.C3.ADculos">Artículos</a> </li><li> <a href="es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Tutoriales.2FEjemplos">Tutoriales/Ejemplos</a> </li><li> <a href="es/Transformando_XMLcon_XSLT/Para_Futuras_Lecturas#Listas_de_mails.2FGrupos_de_noticias">Listas de mails/Grupos de noticias</a>
+</li></ul>
+</li></ul>
+<h3 id=".C3.8Dndice"> <a href="es/Transformando_XML_con_XSLT/Indice">Índice</a> </h3>
+<div class="originaldocinfo">
+<h3 id="Informaci.C3.B3n_original_del_documento"> Información original del documento </h3>
+<ul><li> Copyright Information: Copyright © 2001-2003 Netscape. All rights reserved.
+</li><li> Note: This reprinted article was originally part of the DevEdge site.
+</li></ul>
+</div>
+<p><br>
+<span>Categorías</span>
+</p><p><span>enlaces interwikis</span>
+</p>{{ languages( { "en": "en/Transforming_XML_with_XSLT", "fr": "fr/Transformations_XML_avec_XSLT", "ko": "ko/Transforming_XML_with_XSLT", "pl": "pl/Transformacje_XML_z_XSLT" } ) }}

@@ -7,43 +7,53 @@ tags:
   - agente
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 ---
-El atributo [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) se utiliza para definir una cadena que etiqueta el elemento actual. Úselo en los casos en que no haya una etiqueta de texto visible en pantalla. Si hay texto visible etiquetando el elemento, utilice [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "Using the aria-labelledby attribute") en su lugar.
 
-Este atributo puede ser utilizado con cualquier elemento HTML típico; no se limita a los elementos que tienen un papel ARIA asignado.
+<p><span class="seoSummary">El atributo <a class="external" href="https://www.w3.org/TR/wai-aria/#aria-label" rel="external"><code>aria-label</code></a> se utiliza para definir una cadena que etiqueta el elemento actual. Úselo en los casos en que no haya una etiqueta de texto visible en pantalla. Si hay texto visible etiquetando el elemento, utilice <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="Using the aria-labelledby attribute">aria-labelledby</a> en su lugar.</span></p>
 
-### Valor
+<p>Este atributo puede ser utilizado con cualquier elemento HTML típico; no se limita a los elementos que tienen un papel ARIA asignado.</p>
 
-string
+<h3 class="editable" id="Valor"><span>Valor</span></h3>
 
-### Posibles efectos sobre los agentes de usuario y la tecnología de asistencia
+<p>string</p>
 
-> **Nota:** Las opiniones pueden diferir en cómo la tecnología asistencial debe manejar esta técnica. La información proporcionada más arriba es una de esas opiniones y por lo tanto no normativa.
+<h3 class="editable" id="Posibles_efectos_sobre_los_agentes_de_usuario_y_la_tecnología_de_asistencia">Posibles efectos sobre los agentes de usuario y la tecnología de asistencia<span> </span></h3>
 
-## Ejemplos
+<div class="note"><strong>Nota:</strong> Las opiniones pueden diferir en cómo la tecnología asistencial debe manejar esta técnica. La información proporcionada más arriba es una de esas opiniones y por lo tanto no normativa.</div>
 
-#### Ejemplo 1: Varias etiquetas
+<h2 id="Ejemplos">Ejemplos</h2>
 
-En el siguiente ejemplo se aplica estilo a un botón para que parezca un típico botón "cerrar", con una X en medio. Al no haber nada que indique que el propósito del botón es cerrar el diálogo, se usa el atributo `aria-label` para proporcionar una etiqueta a cualquier tecnología de asistencia.
+<div id="section_5">
+<h4 id="Ejemplo_1_Varias_etiquetas">Ejemplo 1: Varias etiquetas</h4>
 
-    <button aria-label="Close" onclick="myDialog.close()">X</button>
+<p>En el siguiente ejemplo se aplica estilo a un botón para que parezca un típico botón "cerrar", con una X en medio. Al no haber nada que indique que el propósito del botón es cerrar el diálogo, se usa el atributo <code>aria-label</code> para proporcionar una etiqueta a cualquier tecnología de asistencia.</p>
+</div>
 
-### Notas
+<pre class="notranslate"><span class="tag">&lt;button aria-label=<span class="str">"Close"</span> onclick=<span class="str">"myDialog.close()"</span>&gt;</span>X<span class="tag">&lt;/button&gt;</span>
+</pre>
 
-- La API de accesibilidad más común para mapear una etiqueta es la propiedad accessible name.
-- Los atributos, incluyedo las declaraciones `aria-label`, son ignoradas por la mayoría de servicios de traducción
+<h3 id="Notas">Notas</h3>
 
-### Used by ARIA roles
+<ul>
+ <li>La API de accesibilidad más común para mapear una etiqueta es la propiedad accessible name.</li>
+ <li>Los atributos, incluyedo las declaraciones <code>aria-label</code>, son ignoradas por la mayoría de servicios de traducción</li>
+</ul>
 
-Todos los elementos del DOM
+<h3 id="Used_by_ARIA_roles">Used by ARIA roles</h3>
 
-### Técnicas ARIA relacionadas
+<p>Todos los elementos del DOM</p>
 
-- [Usando el atributo aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute "en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute")
+<h3 id="Técnicas_ARIA_relacionadas">Técnicas ARIA relacionadas</h3>
 
-### Compatibilidad
+<ul>
+ <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">Usando el atributo aria-labelledby</a></li>
+</ul>
 
-Pendiente: añadir información de soporte para combinaciones de producto comunes a UA y AT.
+<h3 id="Compatibilidad">Compatibilidad</h3>
 
-### Recursos adicionales
+<p class="comment">Pendiente: añadir información de soporte para combinaciones de producto comunes a UA y AT.</p>
 
-- [Especificación WAI-ARIA para aria-label](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html)
+<h3 id="Recursos_adicionales">Recursos adicionales</h3>
+
+<ul>
+ <li><a class="external" href="https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html">Especificación WAI-ARIA para aria-label</a></li>
+</ul>

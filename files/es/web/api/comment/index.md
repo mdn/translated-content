@@ -8,39 +8,68 @@ tags:
   - comentários
 translation_of: Web/API/Comment
 ---
-{{ ApiRef("DOM") }}
+<div>{{ ApiRef("DOM") }}</div>
 
-La interfaz **`Comment`** representa las anotaciones y comentarios dentro del código fuente; aunque generalmente no se muestran visualmente en el navegador, dichos comentarios están disponibles para ser leídos en la** [vista de código](/es/docs/Tools/View_source)**.
-Los comentarios se representan en HTML y XML como contenido entre '\<!--' y '-->'. En XML, la secuencia de caracteres '--' no se puede usar dentro de un comentario.
+<p><span class="seoSummary">La interfaz <code><strong>Comment</strong></code> representa las anotaciones y comentarios dentro del código fuente; aunque generalmente no se muestran visualmente en el navegador, dichos comentarios están disponibles para ser leídos en la<strong> <a href="/es/docs/Tools/View_source">vista de código</a></strong>.<br>
+ Los comentarios se representan en HTML y XML como contenido entre '&lt;!--' y '--&gt;'. En XML, la secuencia de caracteres '--' no se puede usar dentro de un comentario.</span></p>
 
-{{InheritanceDiagram}}
+<p>{{InheritanceDiagram}}</p>
 
-## Propiedades
+<h2 id="Propiedades">Propiedades</h2>
 
-_Esta interfaz no tiene ninguna propiedad específica, pero hereda las de su padre,{{domxref("CharacterData")}}, e indirectamente los de {{domxref("Node")}}._
+<p><em>Esta interfaz no tiene ninguna propiedad específica, pero hereda las de su padre,{{domxref("CharacterData")}}, e indirectamente los de {{domxref("Node")}}.</em></p>
 
-## Constructor
+<h2 id="Constructor">Constructor</h2>
 
-- {{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}
-  - : Devuelve un objeto `Comment` con el contenido del comentario como parámetro.
+<dl>
+ <dt>{{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}</dt>
+ <dd>Devuelve un objeto <code>Comment</code> con el contenido del comentario como parámetro.</dd>
+</dl>
 
-## Métodos
+<h2 id="Métodos">Métodos</h2>
 
-_Esta interfaz no tiene ninguna propiedad específica, pero hereda las de su padre,{{domxref("CharacterData")}}, e indirectamente los de {{domxref("Node")}}._
+<p><em>Esta interfaz no tiene ninguna propiedad específica, pero hereda las de su padre,{{domxref("CharacterData")}}, e indirectamente los de {{domxref("Node")}}.</em></p>
 
-## Especificaciones
+<h2 id="Specification" name="Specification">Especificaciones</h2>
 
-| Specification                                                                                | Status                           | Comment                                         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#comment', 'Comment')}}                             | {{Spec2('DOM WHATWG')}} | Agregado el constructor.                        |
-| {{SpecName('DOM3 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM3 Core')}}     | Sin cambios de {{SpecName('DOM2 Core')}} |
-| {{SpecName('DOM2 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM2 Core')}}     | Sin cambios de {{SpecName('DOM1')}}     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1728279322', 'Comment')}} | {{Spec2('DOM1')}}         | Definición inicial                              |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#comment', 'Comment')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Agregado el constructor.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#ID-1728279322', 'Comment')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Sin cambios de {{SpecName('DOM2 Core')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', 'core.html#ID-1728279322', 'Comment')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td>Sin cambios de {{SpecName('DOM1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1728279322', 'Comment')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad entre navegadores
+<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
 
-{{Compat("api.Comment")}}
 
-## Lea también
 
-- [Índice de interfaces DOM](/es/docs/Web/API/Document_Object_Model "/en-US/docs/DOM/DOM_Reference")
+<p>{{Compat("api.Comment")}}</p>
+
+<h2 id="Lea_también">Lea también</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Document_Object_Model" title="/en-US/docs/DOM/DOM_Reference">Índice de interfaces DOM</a></li>
+</ul>

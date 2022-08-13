@@ -4,31 +4,34 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isPrototypeOf
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`isPrototypeOf()`** comprueba si un objeto se encuentra en la cadena de prototipado de otro.
+<p>El método <code><strong>isPrototypeOf()</strong></code> comprueba si un objeto se encuentra en la cadena de prototipado de otro.</p>
 
-> **Nota:** `isPrototypeOf` difiere del operador {{jsxref("Operators/instanceof", "instanceof")}}. En la expresión "`object instanceof AFunction`", la cadena de prototipado de `object` es comprobada contra `AFunction.prototype`, no contra la propia `AFunction`.
+<div class="note">
+<p><strong>Nota:</strong> <code>isPrototypeOf</code> difiere del operador {{jsxref("Operators/instanceof", "instanceof")}}. En la expresión "<code>object instanceof AFunction</code>", la cadena de prototipado de <code>object</code> es comprobada contra <code>AFunction.prototype</code>, no contra la propia <code>AFunction</code>.</p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    prototypeObj.isPrototypeOf(obj)
+<pre class="syntaxbox"><code><var>prototypeObj</var>.isPrototypeOf(<var>obj</var>)</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `prototypeObj`
-  - : Un objeto para ver comprobado contra cada vínculo en la cadena de prototipado del argumento **object**.
-- `object`
-  - : El object sobre cuya cadena de prototipado se realizará la búsqueda.
+<dl>
+ <dt><code>prototypeObj</code></dt>
+ <dd>Un objeto para ver comprobado contra cada vínculo en la cadena de prototipado del argumento <strong>object</strong>.</dd>
+ <dt><code>object</code></dt>
+ <dd>El object sobre cuya cadena de prototipado se realizará la búsqueda.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-El método `isPrototypeOf` permite comprobar si un objetyo existe o no en la cadena de prototipado de otro.
+<p>El método <code>isPrototypeOf</code> permite comprobar si un objetyo existe o no en la cadena de prototipado de otro.</p>
 
-Por ejemplo, considerese la siguiente cadena de prototipado:
+<p>Por ejemplo, considerese la siguiente cadena de prototipado:</p>
 
-```js
-function Fee() {
+<pre class="brush: js">function Fee() {
   // ...
 }
 
@@ -46,37 +49,63 @@ function Fum() {
   // ...
 }
 Fum.prototype = new Fo();
-```
+</pre>
 
-Al final de la secuencia, si se instanci `Fum` y se necesita verificar si el prototipo de `Fi` existe en la cadena de prototipado de `Fum` prototype chain, puede hacerse esto:
+<p>Al final de la secuencia, si se instanci <code>Fum</code> y se necesita verificar si el prototipo de <code>Fi</code> existe en la cadena de prototipado de <code>Fum</code> prototype chain, puede hacerse esto:</p>
 
-```js
-var fum = new Fum();
+<pre class="brush: js">var fum = new Fum();
 // ...
 
 if (Fi.prototype.isPrototypeOf(fum)) {
   // do something safe
 }
-```
+</pre>
 
-Esto, junto con el operador {{jsxref("Operators/instanceof", "instanceof")}} resulta especialmente útil si se tiene código que sólo puede operar cuando se trata de objetos descendientes de una cadena de prototipado específica, p.e., para garantizar que ciertos métodos o propiedades estén presentes en dichos objetos.
+<p>Esto, junto con el operador {{jsxref("Operators/instanceof", "instanceof")}} resulta especialmente útil si se tiene código que sólo puede operar cuando se trata de objetos descendientes de una cadena de prototipado específica, p.e., para garantizar que ciertos métodos o propiedades estén presentes en dichos objetos.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                       | Estado                       | Observaciones       |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                                     | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}         | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Observaciones</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES3')}}</td>
+   <td>{{Spec2('ES3')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Object.isPrototypeOf")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+<ul>
+ <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
+ <li>{{jsxref("Object.getPrototypeOf()")}}</li>
+ <li>
+  <div>{{jsxref("Object.setPrototypeOf()")}}</div>
+ </li>
+ <li>{{jsxref("Object.prototype.__proto__")}} </li>
+</ul>

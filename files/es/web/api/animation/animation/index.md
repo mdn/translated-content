@@ -6,40 +6,54 @@ tags:
 translation_of: Web/API/Animation/Animation
 original_slug: Web/API/Animation/Animación
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
 
-El constructor **`Animation()`** de [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve una instancia del objeto `Animation`.
+<p>El constructor <strong><code>Animation()</code></strong> de <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve una instancia del objeto <code>Animation</code>.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var animation = new Animation([effect][, timeline]);
+<pre class="syntaxbox">var <em>animation</em> = new Animation([<em>effect</em>][, <em>timeline</em>]);</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `effect` {{optional_inline}}
-  - : El efecto objetivo, es un objeto de la interfaz {{domxref("AnimationEffectReadOnly")}} ,para asignarlo a la animación. Aunque en el futuro podrían ser asignados otros efectos como `SequenceEffect` o `GroupEffect`, el único efecto disponible actualmente es {{domxref("KeyframeEffect")}}. Este puede ser `null` (valor por defecto) para indicar que no debe aplicarse ningún efecto.
-- `timeline` {{optional_inline}}
-  - : Especifica el `timeline` con el que asociar la animación, como un objeto de tipo basado en la interfaz {{domxref("AnimationTimeline")}} . Actualmente el único tipo de línea de tiempo disponible es {{domxref("DocumentTimeline")}}, pero en el futuro habrá lineas de tiempo asociadas , por ejemplo, con gestos o desplazamiento. El valor por defecto es {{domxref("Document.timeline")}}, pero puede ser establecido en `null`.
+<dl>
+ <dt><code>effect</code> {{optional_inline}}</dt>
+ <dd>El efecto objetivo, es un objeto de la interfaz {{domxref("AnimationEffectReadOnly")}} ,para asignarlo a la animación. Aunque en el futuro podrían ser asignados otros efectos como <code>SequenceEffect</code> o <code>GroupEffect</code>, el único efecto disponible actualmente es {{domxref("KeyframeEffect")}}. Este puede ser <code>null</code> (valor por defecto) para indicar que no debe aplicarse ningún efecto.</dd>
+ <dt><code>timeline</code> {{optional_inline}}</dt>
+ <dd>Especifica el  <code>timeline</code> con el que asociar la animación, como un objeto de tipo basado en la interfaz {{domxref("AnimationTimeline")}} . Actualmente el único tipo de línea de tiempo disponible es {{domxref("DocumentTimeline")}}, pero en el futuro habrá lineas de tiempo asociadas , por ejemplo, con gestos o desplazamiento. El valor por defecto es {{domxref("Document.timeline")}}, pero puede ser establecido en <code>null</code>.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-En el ejemplo [Follow the White Rabbit ](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), el constructor `Animation()` es usado para crear una `Animation` para el `rabbitDownKeyframes` utilizando el `timeline` del documento:
+<p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010">Follow the White Rabbit </a>, el constructor <code>Animation()</code> es usado para crear una <code>Animation</code> para el <code>rabbitDownKeyframes</code> utilizando el <code>timeline</code> del documento:</p>
 
-```js
-var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
-```
+<pre class="brush: js">var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                        | Status                               | Comment         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------- |
-| {{SpecName('Web Animations', '#dom-animation-animation', 'Animation()' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Animations', '#dom-animation-animation', 'Animation()' )}}</td>
+   <td>{{Spec2('Web Animations')}}</td>
+   <td>Editor's draft.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{Compat("api.Animation.Animation")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li>{{domxref("Animation")}}</li>
+</ul>

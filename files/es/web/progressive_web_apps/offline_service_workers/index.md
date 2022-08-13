@@ -10,68 +10,63 @@ tags:
   - progresiva
 translation_of: Web/Progressive_web_apps/Offline_Service_workers
 ---
-{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
+<div>{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}</div>
 
-Ahora que hemos visto cómo se ve la estructura de js13kPWA y hemos visto el intérprete básico en funcionamiento, veamos cómo se implementan las capacidades sin conexión con el Servicio _Worker_. En este artículo, analizamos cómo se usa en nuestro [ejemplo de js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) ([ve el código fuente también](<https: //github.com/mdn/pwa-examples/tree/master/js13kpwa>)). Examinamos cómo agregar funcionalidad fuera de línea.
+<p class="summary">Ahora que hemos visto cómo se ve la estructura de js13kPWA y hemos visto el intérprete básico en funcionamiento, veamos cómo se implementan las capacidades sin conexión con el Servicio <em>Worker</em>. En este artículo, analizamos cómo se usa en nuestro <a href="https://mdn.github.io/pwa-examples/js13kpwa/">ejemplo de js13kPWA</a> (<a href="https: //github.com/mdn/pwa-examples/tree/master/js13kpwa">ve el código fuente también</a>). Examinamos cómo agregar funcionalidad fuera de línea.</p>
 
-## El servicio _workers_ explicado
+<h2 id="El_servicio_workers_explicado">El servicio <em>workers</em> explicado</h2>
 
-El servicio _workers_ son un delegado virtual entre el navegador y la red. Finalmente, solucionan problemas con los que los desarrolladores de aplicaciones para el usuario han luchado durante años, en particular, cómo almacenar correctamente en caché los activos de un sitio web y ponerlos a disposición cuando el dispositivo del usuario está desconectado.
+<p>El servicio <em>workers</em> son un delegado virtual entre el navegador y la red. Finalmente, solucionan problemas con los que los desarrolladores de aplicaciones para el usuario han luchado durante años, en particular, cómo almacenar correctamente en caché los activos de un sitio web y ponerlos a disposición cuando el dispositivo del usuario está desconectado.</p>
 
-Se ejecutan en un hilo separado del código JavaScript principal de nuestra página y no tienen acceso a la estructura DOM. Esto introduce un enfoque diferente al de la programación web tradicional — la API no bloquea y puede enviar y recibir comunicación entre diferentes contextos. Puede darle a un servicio _worker_ algo en lo que trabajar y recibir el resultado cuando esté listo utilizando un enfoque basado en una {{JSxRef("Objetos_globales/Promise", "promesa")}}.
+<p>Se ejecutan en un hilo separado del código JavaScript principal de nuestra página y no tienen acceso a la estructura DOM. Esto introduce un enfoque diferente al de la programación web tradicional — la API no bloquea y puede enviar y recibir comunicación entre diferentes contextos. Puede darle a un servicio <em>worker</em> algo en lo que trabajar y recibir el resultado cuando esté listo utilizando un enfoque basado en una {{JSxRef("Objetos_globales/Promise", "promesa")}}.</p>
 
-Pueden hacer mucho más que "solo" ofrecer capacidades sin conexión, incluido el manejo de notificaciones, la realización de cálculos pesados​en un hilo separado, etc. El servicio _workers_ es bastante poderoso, ya que pueden tomar el control de las solicitudes de red, modificarlas, entregar respuestas personalizadas recuperadas de la caché o sintetizar respuestas por completo.
+<p>Pueden hacer mucho más que "solo" ofrecer capacidades sin conexión, incluido el manejo de notificaciones, la realización de cálculos pesados​en un hilo separado, etc. El servicio <em>workers</em> es bastante poderoso, ya que pueden tomar el control de las solicitudes de red, modificarlas, entregar respuestas personalizadas recuperadas de la caché o sintetizar respuestas por completo.</p>
 
-### Seguridad
+<h3 id="Seguridad">Seguridad</h3>
 
-Debido a que son tan poderosos, los Servicios _Workers_ solo se pueden ejecutar en contextos seguros (es decir, HTTPS). Si deseas experimentar primero antes de enviar tu código a producción, siempre puedes probar en un anfitrión local o configurar las páginas de GitHub — ambas admiten HTTPS.
+<p>Debido a que son tan poderosos, los Servicios <em>Workers</em> solo se pueden ejecutar en contextos seguros (es decir, HTTPS). Si deseas experimentar primero antes de enviar tu código a producción, siempre puedes probar en un anfitrión local o configurar las páginas de GitHub — ambas admiten HTTPS.</p>
 
-## Desconectado primero
+<h2 id="Desconectado_primero">Desconectado primero</h2>
 
-El patrón "desconectado primero" o "primero caché" es la estrategia más popular para entregar contenido al usuario. Si un recurso está almacenado en caché y disponible sin conexión, devuélvelo primero antes de intentar descargarlo del servidor. Si aún no está en la caché, descárgalo y almacénalo para uso futuro.
+<p>El patrón "desconectado primero" o "primero caché" es la estrategia más popular para entregar contenido al usuario. Si un recurso está almacenado en caché y disponible sin conexión, devuélvelo primero antes de intentar descargarlo del servidor. Si aún no está en la caché, descárgalo y almacénalo para uso futuro.</p>
 
-## "Progresiva" en PWA
+<h2 id="Progresiva_en_PWA">"Progresiva" en PWA</h2>
 
-Cuando se implementa correctamente como una mejora progresiva, el servicio _workers_ puede beneficiar a los usuarios que tienen navegadores modernos que admiten la API al brindar soporte fuera de línea, pero no romperán nada para aquellos que usan navegadores heredados.
+<p>Cuando se implementa correctamente como una mejora progresiva, el servicio <em>workers</em> puede beneficiar a los usuarios que tienen navegadores modernos que admiten la API al brindar soporte fuera de línea, pero no romperán nada para aquellos que usan navegadores heredados.</p>
 
-## El servicio _workers_ en la aplicación `js13kPWA`
+<h2 id="El_servicio_workers_en_la_aplicación_js13kPWA">El servicio <em>workers</em> en la aplicación <code>js13kPWA</code></h2>
 
-Suficiente teoría, ¡veamos algo de código real!
+<p>Suficiente teoría, ¡veamos algo de código real!</p>
 
-### Registrar el servicio _worker_
+<h3 id="Registrar_el_servicio_worker">Registrar el servicio <em>worker</em></h3>
 
-Comenzaremos mirando el código que registra un nuevo Servicio _Worker_, en el archivo `app.js`:
+<p>Comenzaremos mirando el código que registra un nuevo Servicio <em>Worker</em>, en el archivo <code>app.js</code>:</p>
 
-**Nota**: Usamos la sintaxis de las **funciones flecha** de [ES6](http://es6-features.org/) en la implementación del servicio _worker_
+<p><strong>Nota</strong>: Usamos la sintaxis de las <strong>funciones flecha</strong> de <a href="http://es6-features.org/">ES6</a> en la implementación del servicio <em>worker</em></p>
 
-```js
-if('serviceWorker' in navigator) {
+<pre class="brush: js notranslate">if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./pwa-examples/js13kpwa/sw.js');
-};
-```
+};</pre>
 
-Si la API del servicio _worker_ es compatible con el navegador, se registra en el sitio mediante el método {{DOMxRef("ServiceWorkerContainer.register()")}}. Su contenido reside en el archivo `sw.js` y se puede ejecutar después de que el registro sea exitoso. Es la única parte del código de servicio _worker_ que se encuentra dentro del archivo `app.js`; todo lo demás que sea específico de servicio _worker_ se escribe en el archivo `sw.js`.
+<p>Si la API del servicio <em>worker</em> es compatible con el navegador, se registra en el sitio mediante el método {{DOMxRef("ServiceWorkerContainer.register()")}}. Su contenido reside en el archivo <code>sw.js</code> y se puede ejecutar después de que el registro sea exitoso. Es la única parte del código de servicio <em>worker</em> que se encuentra dentro del archivo <code>app.js</code>; todo lo demás que sea específico de servicio <em>worker</em> se escribe en el archivo <code>sw.js</code>.</p>
 
-### Ciclo de vida de un servicio _worker_
+<h3 id="Ciclo_de_vida_de_un_servicio_worker">Ciclo de vida de un servicio <em>worker</em></h3>
 
-Cuando se completa el registro, el archivo `sw.js` se descarga automáticamente, luego se instala y finalmente se activa.
+<p>Cuando se completa el registro, el archivo <code>sw.js</code> se descarga automáticamente, luego se instala y finalmente se activa.</p>
 
-#### Instalación
+<h4 id="Instalación">Instalación</h4>
 
-La API nos permite agregar escuchas de eventos para los eventos clave que nos interesan; el primero es el evento `install`:
+<p>La API nos permite agregar escuchas de eventos para los eventos clave que nos interesan; el primero es el evento <code>install</code>:</p>
 
-```js
-self.addEventListener('install', (e) => {
+<pre class="brush: js notranslate">self.addEventListener('install', (e) =&gt; {
     console.log('[Service Worker] Install');
-});
-```
+});</pre>
 
-En el escucha de `install`, podemos iniciar la caché y agregarle archivos para su uso sin conexión. Nuestra aplicación _js13kPWA_ hace exactamente eso.
+<p>En el escucha de <code>install</code>, podemos iniciar la caché y agregarle archivos para su uso sin conexión. Nuestra aplicación <em>js13kPWA</em> hace exactamente eso.</p>
 
-Primero, se crea una variable para almacenar el nombre de la caché y los archivos del intérprete de la aplicación se enumeran en un arreglo.
+<p>Primero, se crea una variable para almacenar el nombre de la caché y los archivos del intérprete de la aplicación se enumeran en un arreglo.</p>
 
-```js
-var cacheName = 'js13kPWA-v1';
+<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
   '/pwa-examples/js13kpwa/',
   '/pwa-examples/js13kpwa/index.html',
@@ -91,66 +86,58 @@ var appShellFiles = [
   '/pwa-examples/js13kpwa/icons/icon-192.png',
   '/pwa-examples/js13kpwa/icons/icon-256.png',
   '/pwa-examples/js13kpwa/icons/icon-512.png'
-];
-```
+];</pre>
 
-A continuación, los enlaces a las imágenes que se cargarán junto con el contenido del archivo `data/games.js` se generan en el segundo arreglo. Después de eso, ambos arreglos se fusionan usando la función {{JSxRef("Array.prototype.concat()")}}.
+<p>A continuación, los enlaces a las imágenes que se cargarán junto con el contenido del archivo <code>data/games.js</code> se generan en el segundo arreglo. Después de eso, ambos arreglos se fusionan usando la función {{JSxRef("Array.prototype.concat()")}}.</p>
 
-```js
-var gamesImages = [];
-for(var i=0; i<games.length; i++) {
+<pre class="brush: js notranslate">var gamesImages = [];
+for(var i=0; i&lt;games.length; i++) {
   gamesImages.push('data/img/'+games[i].slug+'.jpg');
 }
-var contentToCache = appShellFiles.concat(gamesImages);
-```
+var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
-Entonces podemos manejar el evento `install` en sí mismo:
+<p>Entonces podemos manejar el evento <code>install</code> en sí mismo:</p>
 
-```js
-self.addEventListener('install', (e) => {
+<pre class="brush: js notranslate">self.addEventListener('install', (e) =&gt; {
   console.log('[Service Worker] Install');
   e.waitUntil(
-    caches.open(cacheName).then((cache) => {
+    caches.open(cacheName).then((cache) =&gt; {
           console.log('[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación');
       return cache.addAll(contentToCache);
     })
   );
-});
-```
+});</pre>
 
-Aquí hay dos cosas que necesitan una explicación: qué hace {{DOMxRef("ExtendableEvent.waitUntil")}} y qué es el objeto {{DOMxRef("Caches", "caches")}}.
+<p>Aquí hay dos cosas que necesitan una explicación: qué hace {{DOMxRef("ExtendableEvent.waitUntil")}} y qué es el objeto {{DOMxRef("Caches", "caches")}}.</p>
 
-El servicio _worker_ no se instala hasta que se ejecuta el código dentro de `waitUntil`. Este devuelve una promesa — este enfoque es necesario porque la instalación puede llevar algún tiempo, por lo que tenemos que esperar a que finalice.
+<p>El servicio <em>worker</em> no se instala hasta que se ejecuta el código dentro de <code>waitUntil</code>. Este devuelve una promesa — este enfoque es necesario porque la instalación puede llevar algún tiempo, por lo que tenemos que esperar a que finalice.</p>
 
-`caches` es un objeto {{DOMxRef("CacheStorage")}} especial disponible en el ámbito del servicio _worker_ dado para permitir guardar datos, guardar en el {{web.link("/es/docs/Web/API/Web_Storage_API", "almacenamiento web")}} no funcionará porque el almacenamiento web es síncrono. Con el servicio _workers_, usamos la API de `Cache` en su lugar.
+<p><code>caches</code> es un objeto {{DOMxRef("CacheStorage")}} especial disponible en el ámbito del servicio <em>worker</em> dado para permitir guardar datos, guardar en el {{web.link("/es/docs/Web/API/Web_Storage_API", "almacenamiento web")}} no funcionará porque el almacenamiento web es síncrono. Con el servicio <em>workers</em>, usamos la API de <code>Cache</code> en su lugar.</p>
 
-Aquí, abrimos una caché con un nombre dado, luego agregamos a la caché todos los archivos que nuestra aplicación usa, para que estén disponibles la próxima vez que se cargue (identificado por la URL de la solicitud).
+<p>Aquí, abrimos una caché con un nombre dado, luego agregamos a la caché todos los archivos que nuestra aplicación usa, para que estén disponibles la próxima vez que se cargue (identificado por la URL de la solicitud).</p>
 
-#### Activación
+<h4 id="Activación">Activación</h4>
 
-También hay un evento `activate`, que se usa de la misma manera que `install`. Este evento generalmente se usa para eliminar cualquier archivo que ya no sea necesario y limpiar después la aplicación en general. No es necesario que hagamos eso en nuestra aplicación, así que lo omitiremos.
+<p>También hay un evento <code>activate</code>, que se usa de la misma manera que <code>install</code>. Este evento generalmente se usa para eliminar cualquier archivo que ya no sea necesario y limpiar después la aplicación en general. No es necesario que hagamos eso en nuestra aplicación, así que lo omitiremos.</p>
 
-### Responder a las recuperaciones
+<h3 id="Responder_a_las_recuperaciones">Responder a las recuperaciones</h3>
 
-También tenemos un evento `fetch` a nuestra disposición, que se activa cada vez que se activa una solicitud HTTP desde nuestra aplicación. Esto es muy útil, ya que nos permite interceptar solicitudes y reaccionar con respuestas personalizadas. Aquí hay un sencillo ejemplo de uso:
+<p>También tenemos un evento <code>fetch</code> a nuestra disposición, que se activa cada vez que se activa una solicitud HTTP desde nuestra aplicación. Esto es muy útil, ya que nos permite interceptar solicitudes y reaccionar con respuestas personalizadas. Aquí hay un sencillo ejemplo de uso:</p>
 
-```js
-self.addEventListener('fetch', (e) => {
+<pre class="brush: js notranslate">self.addEventListener('fetch', (e) =&gt; {
     console.log('[Servicio Worker] Recurso obtenido ' + e.request.url);
-});
-```
+});</pre>
 
-La respuesta puede ser cualquier cosa que queramos: el archivo solicitado, su copia en caché o un fragmento de código JavaScript que hará algo específico; las posibilidades son infinitas.
+<p>La respuesta puede ser cualquier cosa que queramos: el archivo solicitado, su copia en caché o un fragmento de código JavaScript que hará algo específico; las posibilidades son infinitas.</p>
 
-En nuestra aplicación de ejemplo, servimos contenido de la caché en lugar de la red siempre que el recurso realmente esté en la caché. Hacemos esto tanto si la aplicación está en línea como si está fuera de línea. Si el archivo no está en la caché, la aplicación primero lo agrega allí antes de servirlo:
+<p>En nuestra aplicación de ejemplo, servimos contenido de la caché en lugar de la red siempre que el recurso realmente esté en la caché. Hacemos esto tanto si la aplicación está en línea como si está fuera de línea. Si el archivo no está en la caché, la aplicación primero lo agrega allí antes de servirlo:</p>
 
-```js
-self.addEventListener('fetch', (e) => {
+<pre class="brush: js notranslate">self.addEventListener('fetch', (e) =&gt; {
   e.respondWith(
-    caches.match(e.request).then((r) => {
+    caches.match(e.request).then((r) =&gt; {
           console.log('[Servicio Worker] Obteniendo recurso: '+e.request.url);
-      return r || fetch(e.request).then((response) => {
-                return caches.open(cacheName).then((cache) => {
+      return r || fetch(e.request).then((response) =&gt; {
+                return caches.open(cacheName).then((cache) =&gt; {
           console.log('[Servicio Worker] Almacena el nuevo recurso: '+e.request.url);
           cache.put(e.request, response.clone());
           return response;
@@ -158,71 +145,64 @@ self.addEventListener('fetch', (e) => {
       });
     })
   );
-});
-```
+});</pre>
 
-Aquí, respondemos al evento `fetch` con una función que intenta encontrar el recurso en la caché y devolver la respuesta si está allí. Si no es así, usamos otra solicitud de recuperación para obtenerla de la red, luego almacenamos la respuesta en la caché para que esté disponible allí la próxima vez que se solicite.
+<p>Aquí, respondemos al evento <code>fetch</code> con una función que intenta encontrar el recurso en la caché y devolver la respuesta si está allí. Si no es así, usamos otra solicitud de recuperación para obtenerla de la red, luego almacenamos la respuesta en la caché para que esté disponible allí la próxima vez que se solicite.</p>
 
-El método {{DOMxRef("FetchEvent.respondWith")}} toma el control; esta es la parte que funciona como un servidor delegado entre la aplicación y la red. Esto nos permite responder a cada solicitud con cualquier cosa que queramos: preparada por el servicio _worker_, tomada de la caché o modificada si es necesario.
+<p>El método {{DOMxRef("FetchEvent.respondWith")}} toma el control; esta es la parte que funciona como un servidor delegado entre la aplicación y la red. Esto nos permite responder a cada solicitud con cualquier cosa que queramos: preparada por el servicio <em>worker</em>, tomada de la caché o modificada si es necesario.</p>
 
-¡Eso es! Nuestra aplicación almacena en caché sus recursos al instalarlos y los sirve con la recuperación de la caché, por lo tanto, funciona incluso si el usuario está desconectado. También almacena en caché contenido nuevo cada vez que se agrega.
+<p>¡Eso es! Nuestra aplicación almacena en caché sus recursos al instalarlos y los sirve con la recuperación de la caché, por lo tanto, funciona incluso si el usuario está desconectado. También almacena en caché contenido nuevo cada vez que se agrega.</p>
 
-## Actualizaciones
+<h2 id="Actualizaciones">Actualizaciones</h2>
 
-Todavía hay un punto que cubrir: ¿cómo se actualiza un servicio _worker_ cuando hay disponible una nueva versión de la aplicación que contiene nuevos activos? El número de versión en el nombre de la caché es clave para esto:
+<p>Todavía hay un punto que cubrir: ¿cómo se actualiza un servicio <em>worker</em> cuando hay disponible una nueva versión de la aplicación que contiene nuevos activos? El número de versión en el nombre de la caché es clave para esto:</p>
 
-```js
-var cacheName = 'js13kPWA-v1';
-```
+<pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';</pre>
 
-Cuando esto se actualice a v2, podemos agregar todos nuestros archivos (incluidos nuestros archivos nuevos) a una nueva caché:
+<p>Cuando esto se actualice a v2, podemos agregar todos nuestros archivos (incluidos nuestros archivos nuevos) a una nueva caché:</p>
 
-```js
-contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
+<pre class="brush: js notranslate">contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
 
 // ...
 
-self.addEventListener('install', (e) => {
+self.addEventListener('install', (e) =&gt; {
   e.waitUntil(
-    caches.open('js13kPWA-v2').then((cache) => {
+    caches.open('js13kPWA-v2').then((cache) =&gt; {
       return cache.addAll(contentToCache);
     })
   );
-});
-```
+});</pre>
 
-Se instala un nuevo servicio _worker_ en segundo plano y el anterior (v1) funciona correctamente hasta que no hay páginas que lo utilicen; el nuevo servicio _worker_ se activa y se hace cargo de la administración de la página desde el anterior.
+<p>Se instala un nuevo servicio <em>worker</em> en segundo plano y el anterior (v1) funciona correctamente hasta que no hay páginas que lo utilicen; el nuevo servicio <em>worker</em> se activa y se hace cargo de la administración de la página desde el anterior.</p>
 
-## Limpiar la caché
+<h2 id="Limpiar_la_caché">Limpiar la caché</h2>
 
-¿Recuerdas el evento `active` que omitimos?, se puede usar para borrar la antigua caché que ya no necesitamos:
+<p>¿Recuerdas el evento <code>active</code> que omitimos?, se puede usar para borrar la antigua caché que ya no necesitamos:</p>
 
-```js
-self.addEventListener('activate', (e) => {
+<pre class="brush: js notranslate">self.addEventListener('activate', (e) =&gt; {
   e.waitUntil(
-    caches.keys().then((keyList) => {
-          return Promise.all(keyList.map((key) => {
+    caches.keys().then((keyList) =&gt; {
+          return Promise.all(keyList.map((key) =&gt; {
         if(key !== cacheName) {
           return caches.delete(key);
         }
       }));
     })
   );
-});
-```
+});</pre>
 
-Esto asegura que solo tengamos los archivos que necesitamos en la caché, por lo que no dejamos basura; el [espacio de caché disponible en el navegador es limitado](/es/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria), por lo que es una buena idea limpiarlo nosotros mismos después.
+<p>Esto asegura que solo tengamos los archivos que necesitamos en la caché, por lo que no dejamos basura; el <a href="/es/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">espacio de caché disponible en el navegador es limitado</a>, por lo que es una buena idea limpiarlo nosotros mismos después.</p>
 
-## Otros casos de uso
+<h2 id="Otros_casos_de_uso">Otros casos de uso</h2>
 
-Servir archivos desde la caché no es la única característica que ofrece el servicio _worker_. Si tienes que hacer cálculos pesados, los puedes descargar del hilo principal y hacerlos en el _worker_, y recibir el resultado tan pronto como estén disponibles. En cuanto al rendimiento, puedes obtener recursos que no se necesitan en este momento, pero que podrían serlo en un futuro cercano, por lo que la aplicación será más rápida cuando realmente los necesite.
+<p>Servir archivos desde la caché no es la única característica que ofrece el servicio <em>worker</em>. Si tienes que hacer cálculos pesados, los puedes descargar del hilo principal y hacerlos en el <em>worker</em>, y recibir el resultado tan pronto como estén disponibles. En cuanto al rendimiento, puedes obtener recursos que no se necesitan en este momento, pero que podrían serlo en un futuro cercano, por lo que la aplicación será más rápida cuando realmente los necesite.</p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-En este artículo, analizamos cómo puedes hacer que tu PWA funcione sin conexión con el servicio _workers_. Asegúrate de consultar nuestra documentación adicional si deseas obtener más información sobre los conceptos detrás de la {{web.link("/es/docs/Web/API/Service_Worker_API", "API de Service Worker")}} y cómo usarla con más detalle.
+<p>En este artículo, analizamos cómo puedes hacer que tu PWA funcione sin conexión con el servicio <em>workers</em>. Asegúrate de consultar nuestra documentación adicional si deseas obtener más información sobre los conceptos detrás de la {{web.link("/es/docs/Web/API/Service_Worker_API", "API de Service Worker")}} y cómo usarla con más detalle.</p>
 
-El servicio _workers_ también se utilizan cuando se trata de {{web.link("/es/docs/Web/API/Push_API", "notificaciones push")}}; esto se explicará en un artículo posterior.
+<p>El servicio <em>workers</em> también se utilizan cuando se trata de {{web.link("/es/docs/Web/API/Push_API", "notificaciones push")}}; esto se explicará en un artículo posterior.</p>
 
-{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
+<p>{{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}</p>
 
-{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}
+<div>{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}</div>

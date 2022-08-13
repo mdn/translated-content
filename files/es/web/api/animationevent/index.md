@@ -9,46 +9,67 @@ tags:
   - Referencia
 translation_of: Web/API/AnimationEvent
 ---
-{{SeeCompatTable}}{{APIRef("Web Animations API")}}
+<p>{{SeeCompatTable}}{{APIRef("Web Animations API")}}</p>
 
-La interfaz **`AnimationEvent`** representa los eventos que proporciona información relacionada con las [animaciones](/es/docs/Web/Guide/CSS/Using_CSS_animations).
+<p>La interfaz <strong><code>AnimationEvent</code></strong> representa los eventos que proporciona información relacionada con las <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">animaciones</a>.</p>
 
-{{InheritanceDiagram}}
+<p>{{InheritanceDiagram}}</p>
 
-## Propiedades
+<h2 id="Propiedades">Propiedades</h2>
 
-_También hereda las propiedades de su padre {{domxref("Event")}}_.
+<p><em>También hereda las propiedades de su padre {{domxref("Event")}}</em>.</p>
 
-- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
-  - : Es un {{domxref("DOMString")}} que contiene el valor de la propiedad CSS {{cssxref("animation-name")}} asociado con la transición.
-- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
-  - : Es un número flotante que da la cantidad de tiempo que ha estado corriendo la animación, en segundos, cuando este evento es disparado, excluyendo cualquier vez que la aimación fue pausada. Para un evento `"animationstart"`, `elapsedTime` es `0.0` a ménos que hubiera un valor negativo para {{cssxref("animation-delay")}}, en tal caso sería disparado el evento con `elapsedTime` conteniendo `(-1 * `_retraso_`)`.
-- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
-  - : Es un {{domxref("DOMString")}}, empezando con `'::'`, conteniendo el nombre del [pseudo-element](/es/docs/Web/CSS/Pseudo-elements) en el cual corre la animación. Si la animación no corre sobre un pseudo-element sino en el elemento, un string vacío: ''.
+<dl>
+ <dt>{{domxref("AnimationEvent.animationName")}} {{readonlyInline}}</dt>
+ <dd>Es un {{domxref("DOMString")}} que contiene el valor de la propiedad CSS {{cssxref("animation-name")}} asociado con la transición.</dd>
+ <dt>{{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}</dt>
+ <dd>Es un número flotante que da la cantidad de tiempo que ha estado corriendo la animación, en segundos, cuando este evento es disparado, excluyendo cualquier vez que la aimación fue pausada.  Para un evento <code>"animationstart"</code>, <code>elapsedTime</code> es <code>0.0</code> a ménos que hubiera un valor negativo para {{cssxref("animation-delay")}}, en tal caso sería disparado el evento con <code>elapsedTime</code> conteniendo <code>(-1 * </code><em>retraso</em><code>)</code>.</dd>
+ <dt>{{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}</dt>
+ <dd>Es un {{domxref("DOMString")}}, empezando con <code>'::'</code>, conteniendo el nombre del <a href="/en-US/docs/Web/CSS/Pseudo-elements" title="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> en el cual corre la animación. Si la animación no corre sobre un pseudo-element sino en el elemento, un string vacío: ''. </dd>
+</dl>
 
-## Constructor
+<h2 id="Constructor">Constructor</h2>
 
-- {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}
-  - : Crea un evento `AnimationEvent` con los parametros dados.
+<dl>
+ <dt>{{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}</dt>
+ <dd>Crea un evento <code>AnimationEvent</code> con los parametros dados.</dd>
+</dl>
 
-## Métodos
+<h2 id="Métodos">Métodos</h2>
 
-_También hereda los métodos de su padre {{domxref("Event")}}_.
+<p><em>También hereda los métodos de su padre {{domxref("Event")}}</em>.</p>
 
-- {{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
-  - : Inicializa un evento `AnimationEvent` creado utilizando el método obsoleto {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}}
+<dl>
+ <dt>{{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}</dt>
+ <dd>Inicializa un evento <code>AnimationEvent</code> creado utilizando el método obsoleto  {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}}</dd>
+</dl>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                               | Estatus                                  | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent') }} | {{ Spec2('CSS3 Animations') }} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent') }}</td>
+   <td>{{ Spec2('CSS3 Animations') }}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de Navegadores
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
 {{Compat("api.AnimationEvent")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)
-- Las propiedades CSS referentes a animación y reglas: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
+<ul>
+ <li><a href="/en-US/docs/CSS/Using_CSS_animations">Usando animaciones CSS</a></li>
+ <li>Las propiedades CSS referentes a animación  y reglas: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.</li>
+</ul>

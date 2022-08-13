@@ -3,18 +3,19 @@ title: transform-style
 slug: Web/CSS/transform-style
 translation_of: Web/CSS/transform-style
 ---
-La propiedad **`transform-style`** [CSS](/es/docs/Web/CSS) establece si el elemento hijo esta posicionado en el espacio 3D (preserve-3d) o esta integrado(flat) en el plano del elemento.
+<p><span class="seoSummary">La propiedad <strong><code>transform-style</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> establece si el elemento hijo esta posicionado en el espacio 3D (preserve-3d) o esta integrado(flat) en el plano del elemento.</span></p>
 
-{{EmbedInteractiveExample("pages/css/transform-style.html")}}
+<div>{{EmbedInteractiveExample("pages/css/transform-style.html")}}</div>
 
-Si esta integrado (flat), el elemento hijo no existirá por sí solo en el espacio 3D.
 
-Como esta propiedad no se hereda, debe establecerse para todos los nodos internos descendientes (hijos) del elemento.
 
-## Syntax
+<p>Si esta integrado (flat), el elemento hijo no existirá por sí solo en el espacio 3D.</p>
 
-```css
-/* Keyword values */
+<p>Como esta propiedad no se hereda, debe establecerse para todos los nodos internos descendientes (hijos) del elemento.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
 transform-style: flat;
 transform-style: preserve-3d;
 
@@ -22,33 +23,52 @@ transform-style: preserve-3d;
 transform-style: inherit;
 transform-style: initial;
 transform-style: unset;
-```
+</pre>
 
-### Values
+<h3 id="Values">Values</h3>
 
-- `flat`
-  - : Indica que el elemento hijo yace en el plano del elemento mismo.
-- `preserve-3d`
-  - : Indica que el elemento hijo debe ser posicionado en el espacio 3D.
+<dl>
+ <dt><code>flat</code></dt>
+ <dd>Indica que el elemento hijo yace en el plano del elemento mismo.</dd>
+ <dt><code>preserve-3d</code></dt>
+ <dd>Indica que el elemento hijo debe ser posicionado en el espacio 3D.</dd>
+</dl>
 
-### Formal syntax
+<h3 id="Formal_syntax">Formal syntax</h3>
 
 {{csssyntax}}
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                                | Status                                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-style-property', 'transform-style')}} | {{Spec2('CSS Transforms 2')}} | Initial definition. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS Transforms 2', '#transform-style-property', 'transform-style')}}</td>
+   <td>{{Spec2('CSS Transforms 2')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("css.properties.transform-style")}}
 
-## See also
 
-- [Using CSS transforms](/es/docs/CSS/Using_CSS_transforms)
+<p>{{Compat("css.properties.transform-style")}}</p>
 
-{{CSSRef}}
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
+</ul>
+
+<div>{{CSSRef}}</div>

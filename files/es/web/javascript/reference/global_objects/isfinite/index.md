@@ -8,53 +8,63 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 original_slug: Web/JavaScript/Referencia/Objetos_globales/isFinite
 ---
-{{jsSidebar("Objects")}}
+<div>
+ {{jsSidebar("Objects")}}</div>
+<h2 id="Resumen">Resumen</h2>
+<p>La función global <strong><code>isFinite()</code></strong> determina si el valor que se le pasa como argumento es un numero finito. Si es necesario, realiza una conversión a un numero al parametro pasado.</p>
+<h2 id="Sintaxis">Sintaxis</h2>
+<pre><code>isFinite(testValue)</code></pre>
+<h2 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h2>
+<dl>
+ <dt>
+  <code>testvalue</code></dt>
+ <dd>
+  Valor a ser evaluado.</dd>
+</dl>
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
+<p><code>isFinite</code> es una función de alto nivel y no está asociada a ningún objeto.</p>
+<p>Puede usar esta función para determinar si un número es un número finito. La función <code>isFinite</code> examina el número de su argumento. Si el argumento es <code>NaN</code>, infinito positivo o infinito negativo, este método devuelve <code>false</code>, de otro modo devuelve <code>true</code>.</p>
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+<pre>isFinite(Infinity);    // falso
+isFinite(NaN);         // falso
+isFinite(-Inifinity);  // falso
 
-## Resumen
+isFinite(0);           // verdadero
+isFinite(2e64);        // verdadero
 
-La función global **`isFinite()`** determina si el valor que se le pasa como argumento es un numero finito. Si es necesario, realiza una conversión a un numero al parametro pasado.
-
-## Sintaxis
-
-    isFinite(testValue)
-
-## Parámetros
-
-- `testvalue`
-  - : Valor a ser evaluado.
-
-## Descripción
-
-`isFinite` es una función de alto nivel y no está asociada a ningún objeto.
-
-Puede usar esta función para determinar si un número es un número finito. La función `isFinite` examina el número de su argumento. Si el argumento es `NaN`, infinito positivo o infinito negativo, este método devuelve `false`, de otro modo devuelve `true`.
-
-## Ejemplos
-
-    isFinite(Infinity);    // falso
-    isFinite(NaN);         // falso
-    isFinite(-Inifinity);  // falso
-
-    isFinite(0);           // verdadero
-    isFinite(2e64);        // verdadero
-
-    isFinite("0");         // verdadero, hubiera sido falso en el caso de usar Number.isFinite("0") que es mas robusta
-
-## Especificaciones
-
-| Especificaciones                                                         | Estado                   | Comentarios        |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| ECMAScript 2nd Edition.                                                  | Estándar                 | Definición inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}     | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ES6')}}     |                    |
-
-## Compatibilidad con navegadores
-
+isFinite("0");         // verdadero, hubiera sido falso en el caso de usar Number.isFinite("0") que es mas robusta</pre>
+<h2 id="Especificaciones">Especificaciones</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificaciones</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 2nd Edition.</td>
+   <td>Estándar</td>
+   <td>Definición inicial</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 {{Compat("javascript.builtins.isFinite")}}
 
-## Vea También
-
-- **`Number.isFinite()`**
-- **`Number.NaN()`**
-- [**`Number.POSITIVE_INFINITY`**](/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Number/POSITIVE_INFINITY)
-- [**`Number.NEGATIVE_INFINITY`**](/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Number/NEGATIVE_INFINITY)
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
+<ul>
+ <li><code><strong>Number.isFinite()</strong></code></li>
+ <li><strong><code>Number.NaN()</code></strong></li>
+ <li><a href="/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Number/POSITIVE_INFINITY"><code><strong>Number.POSITIVE_INFINITY</strong></code></a></li>
+ <li><a href="/es/docs/Referencia_de_JavaScript_1.5/Objetos_globales/Number/NEGATIVE_INFINITY"><code><strong>Number.NEGATIVE_INFINITY</strong></code></a></li>
+</ul>

@@ -15,72 +15,84 @@ tags:
   - metodo
 translation_of: Web/API/Element/getBoundingClientRect
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-El método **`Element.getBoundingClientRect()`** devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización (_viewport)._
+<p>El método <code><strong>Element.getBoundingClientRect()</strong></code> devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización (<em>viewport).</em></p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    domRect = element.getBoundingClientRect();
+<pre class="syntaxbox notranslate"><em>domRect</em> = <em>element</em>.getBoundingClientRect();</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-El valor devuelto es un objeto {{domxref("DOMRect")}} que es la unión de los rectángulos devueltos por {{domxref("Element.getClientRects", "getClientRects()")}}para el elemento, es decir, las _CSS border-boxes_ asociadas con el elemento. El resultado es el rectángulo más pequeño que contiene al elemento completo, con las propiedades de solo lectura `left`, `top`, `right`, `bottom`, `x`, `y`, `width`, and `height` describiendo la _border-box_ total en pixels. Excepto `width` and `height` las propiedades son relativas a la esquina superior izquierda (_top-left_) de la ventana.
+<p>El valor devuelto es un objeto {{domxref("DOMRect")}} que es la unión de los rectángulos devueltos por {{domxref("Element.getClientRects", "getClientRects()")}}para el elemento, es decir, las <em>CSS border-boxes</em> asociadas con el elemento. El resultado es el rectángulo más pequeño que contiene al elemento completo, con las propiedades de solo lectura <code>left</code>, <code>top</code>, <code>right</code>, <code>bottom</code>, <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> describiendo la <em>border-box</em> total en pixels. Excepto <code>width</code> and <code>height</code> las propiedades son relativas a la esquina superior izquierda (<em>top-left</em>) de la ventana.</p>
 
-![Explicación de los valores DOMRect](https://mdn.mozillademos.org/files/15087/rect.png "Explicación de los valores DOMRect")
+<p style="display: block;"><img alt="Explicación de los valores DOMRect" src="https://mdn.mozillademos.org/files/15087/rect.png" style="float: right; height: 300px; width: 300px;" title="Explicación de los valores DOMRect"></p>
 
-Las _border-boxes_ vacías son ignoradas. Si todas las _border-boxes_ del elemento estan vacías, entonces se devuelve un rectángulo con `width` and `height` iguales a cero donde el `top` y el `left` son el top-left de la _border-box_ de la primera _CSS box_ (en onden de contenido) para el elemento.
+<p>Las <em>border-boxes</em> vacías son ignoradas. Si todas las <em>border-boxes</em> del elemento estan vacías, entonces se devuelve un rectángulo con <code>width</code> and <code>height</code> iguales a cero donde el <code>top</code> y el <code>left</code> son el top-left de la <em>border-box</em> de la primera <em>CSS box</em> (en onden de contenido) para el elemento.</p>
 
-La cantidad de _scrolling_ realizado en la ventana (o cualquier otro elemento _scrollable_) se tiene en cuenta cuando se calcula el rectángulo. Esto implica que los bordes del rectángulo (`top`, `left`, `bottom`, and `right`) cambián sus valores cada vez que la posición de _scrolling_ cambia (ya que sus valores no son absolutos sino relativos a la ventana). Si se necesita el _bounding rectangle_ relativo a la esquina _top-left_ del documento, hay que añadir la posición de _scrolling_ actual a las propiedades `top` and `left` (dicha posición de _scrolling_ puede obtenerse usando {{domxref("window.scrollX")}} y {{domxref("window.scrollY")}}) para obtener el _bounding rectangle_ independiente de la posición de _scrolling_.
+<p>La cantidad de <em>scrolling</em> realizado en la ventana (o cualquier otro elemento <em>scrollable</em>) se tiene en cuenta cuando se calcula el rectángulo. Esto implica que los bordes del rectángulo (<code>top</code>, <code>left</code>, <code>bottom</code>, and <code>right</code>) cambián sus valores cada vez que la posición de <em>scrolling</em> cambia (ya que sus valores no son absolutos sino relativos a la ventana). Si se necesita el <em>bounding rectangle</em> relativo a la esquina <em>top-left</em> del documento, hay que añadir la posición de <em>scrolling</em> actual a las propiedades <code>top</code> and <code>left</code>  (dicha posición de <em>scrolling</em> puede obtenerse usando {{domxref("window.scrollX")}} y {{domxref("window.scrollY")}}) para obtener el <em>bounding rectangle</em> independiente de la posición de <em>scrolling</em>.</p>
 
-### Fallback para todos los navegadores
+<h3 id="Fallback_para_todos_los_navegadores">Fallback para todos los navegadores</h3>
 
-Los scripts que requieran una alta compatibilidad _cross-browser_ pueden usar {{domxref("window.pageXOffset")}} y {{domxref("window.pageYOffset")}} en lugar de `window.scrollX` y `window.scrollY.` Si no se tiene acceso a esas propiedades puede usarse el siguiente código:
+<p>Los scripts que requieran una alta compatibilidad <em>cross-browser</em> pueden usar {{domxref("window.pageXOffset")}} y {{domxref("window.pageYOffset")}} en lugar de <code>window.scrollX</code> y <code>window.scrollY.</code> Si no se tiene acceso a esas propiedades puede usarse el siguiente código:</p>
 
-```js
-// Para scrollX
+<pre class="brush: js notranslate">// Para scrollX
 (((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
+  &amp;&amp; typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
 // Para scrollY
 (((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
-```
+  &amp;&amp; typeof t.scrollTop == 'number' ? t : document.body).scrollTop
+</pre>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-// rect es un objeto DOMRect con ocho propiedades: left, top, right, bottom, x, y, width, height
+<pre class="brush:js notranslate">// rect es un objeto DOMRect con ocho propiedades: left, top, right, bottom, x, y, width, height
 var rect = obj.getBoundingClientRect();
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                       | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}} | {{Spec2("CSSOM View")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}}</td>
+   <td>{{Spec2("CSSOM View")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-### Notas
+<h3 id="Notas">Notas</h3>
 
-El objeto `DOMRect` devuelto puede modificarse en navegadores modernos. Esto no era así en versiones anteriores que devolvían `DOMRectReadOnly` de forma efectiva. Con IE y Edge, el hecho de no poder agregar propiedades faltantes a su objeto `ClientRect` [MSDN: `ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), devuelto impide rellenar los valores `x` e `y`.
+<p>El objeto <code>DOMRect</code> devuelto puede modificarse en navegadores modernos. Esto no era así en versiones anteriores que devolvían <code>DOMRectReadOnly</code> de forma efectiva. Con IE y Edge, el hecho de no poder agregar propiedades faltantes a su objeto <code>ClientRect</code> <a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx">MSDN: <code>ClientRect</code></a>, devuelto impide rellenar los valores <code>x</code> e <code>y</code>.</p>
 
-Debido a problemas de compatibilidad (ver a continuación), es más seguro confiar sólo en las propiedades `left`, `top`, `right`, and `bottom`.
+<p>Debido a problemas de compatibilidad (ver a continuación), es más seguro confiar sólo en las propiedades <code>left</code>, <code>top</code>, <code>right</code>, and <code>bottom</code>. </p>
 
-Las propiedades en el objeto `DOMRect` devuelto no son suyas. Mientras que el operador `in` y `for...in` encontrarán las propiedades devueltas, otras API como `Object.keys()` fallarán. Además, e inesperadamente, ES2015 y nuevas características como `Object.assign()` y los operadores rest/spread de los objetos, no podrán copiar las propiedades devueltas.
+<p>Las propiedades en el objeto <code>DOMRect</code> devuelto no son suyas. Mientras que el operador <code>in</code> y <code>for...in</code> encontrarán las propiedades devueltas, otras API como <code>Object.keys()</code> fallarán. Además, e inesperadamente, ES2015 y nuevas características como <code>Object.assign()</code> y los operadores rest/spread de los objetos, no podrán copiar las propiedades devueltas.</p>
 
-```js
-rect = elt.getBoundingClientRect()
+<pre class="brush: js notranslate">rect = elt.getBoundingClientRect()
 // El resultado en emptyObj es {}
 emptyObj = Object.assign({}, rect)
 emptyObj = { ...rect }
 {width, ...emptyObj} = rect
-```
+</pre>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("api.Element.getBoundingClientRect")}}
+<p>{{Compat("api.Element.getBoundingClientRect")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx>)
-- [MSDN: `ClientRect`](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>), una versión anterior a `DOMRect`
+<ul>
+ <li>{{domxref("Element.getClientRects", "getClientRects()")}}</li>
+ <li><a href="https://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx">MSDN: <code>getBoundingClientRect</code></a></li>
+ <li><a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx">MSDN: <code>ClientRect</code></a>, una versión anterior a <code>DOMRect</code> </li>
+</ul>

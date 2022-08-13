@@ -9,62 +9,76 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Decrement
 original_slug: Web/JavaScript/Referencia/Operadores/Decremento
 ---
-{{jsSidebar("Operators")}}
+<div>{{jsSidebar("Operators")}}</div>
 
-El operador de decremento (--) disminuye (o resta de a uno) su operando y retorna un valor.
+<p>El operador de decremento (--) disminuye (o resta de a uno) su operando y retorna un valor.</p>
 
-{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
+<div>{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}</div>
 
-## Sintaxis
 
-    Operadores: x-- o --x
 
-## Descripción
 
-Si usamos la forma de sufijo, operador después del operando (por ejemplo, `x--`), el operador de disminución disminuye y devuelve el valor antes de disminuir.
 
-Si se usamos la forma de prefijo, operador antes del operando (por ejemplo, `--x`), el operador de disminución disminuye y devuelve el valor después de disminuir.
+<h2 id="Sintaxis">Sintaxis</h2>
 
-## Ejemplos
+<pre class="syntaxbox notranslate"><strong>Operadores:</strong> <var>x</var>-- o --<var>x</var>
+</pre>
 
-### Usando Sufijo
+<h2 id="Descripción">Descripción</h2>
 
-```js
-let x = 3;
+<p>Si usamos la forma de sufijo, operador después del operando (por ejemplo, <code>x--</code>), el operador de disminución disminuye y devuelve el valor antes de disminuir.</p>
+
+<p>Si se usamos la forma de prefijo, operador antes del operando (por ejemplo, <code>--x</code>), el operador de disminución disminuye y devuelve el valor después de disminuir.</p>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Usando_Sufijo">Usando Sufijo </h3>
+
+<pre class="brush: js notranslate">let x = 3;
 y = x--;
 
 // y = 3
 // x = 2
-```
+</pre>
 
-### Usando Prefijo
+<h3 id="Usando_Prefijo">Usando Prefijo</h3>
 
-```js
-let a = 2;
+<pre class="brush: js notranslate">let a = 2;
 b = --a;
 
 // a = 1
 // b = 1
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificaciones                                                                                             |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-postfix-decrement-operator', 'Decrement operator')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificaciones</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-postfix-decrement-operator', 'Decrement operator')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("javascript.operators.decrement")}}
 
-## Ver también
 
-- [Addition operator](/es/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/es/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/es/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/es/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/es/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/es/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/es/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Unary negation operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/es/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+<p>{{Compat("javascript.operators.decrement")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
+</ul>

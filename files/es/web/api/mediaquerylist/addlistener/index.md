@@ -3,27 +3,33 @@ title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
 translation_of: Web/API/MediaQueryList/addListener
 ---
-{{APIRef("CSSOM View")}}El método **`addListener()`** de la interfaz {{domxref ("MediaQueryList")}} añade un escucha al `MediaQueryListener` que ejecutará una función de devolución de llamada personalizada en respuesta al cambio de estado de consulta de medios.
+<div>{{APIRef("CSSOM View")}}</div>
 
-Esto es básicamente un alias para {{domxref("EventTarget.addEventListener()")}}, para propósitos de compatibilidad con versiones anteriores: en los navegadores antiguos se puede usar `addEventListener.`
+<div>El método <code><strong>addListener()</strong></code> de la interfaz {{domxref ("MediaQueryList")}} añade un escucha al <code>MediaQueryListener</code> que ejecutará una función de devolución de llamada personalizada en respuesta al cambio de estado de consulta de medios.<br>
+ </div>
 
-## Sintaxis
+<div>
+<p>Esto es básicamente un alias para {{domxref("EventTarget.addEventListener()")}}, para propósitos de compatibilidad con versiones anteriores: en los navegadores antiguos se puede usar <code>addEventListener.</code></p>
+</div>
 
-    MediaQueryList.addListener(func)
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Parametros
+<pre class="syntaxbox"><em>MediaQueryList.addListener(func)</em></pre>
 
-- func
-  - : A function or function reference representing the callback function you want to run when the media query status changes. In the original implementation, the callback was a non-standard {{domxref("MediaQueryListListener")}} object. In the new implementation the standard event mechanism is used, the callback is a standard function, and the event object is a {{domxref("MediaQueryListEvent")}}, which inherits from {{domxref("Event")}}.
+<h3 id="Parametros">Parametros</h3>
 
-### Return value
+<dl>
+ <dt>func</dt>
+ <dd>A function or function reference representing the callback function you want to run when the media query status changes. In the original implementation, the callback was a non-standard {{domxref("MediaQueryListListener")}} object. In the new implementation the standard event mechanism is used, the callback is a standard function, and the event object is a {{domxref("MediaQueryListEvent")}}, which inherits from {{domxref("Event")}}.</dd>
+</dl>
 
-Void.
+<h3 id="Return_value">Return value</h3>
 
-## Examples
+<p>Void.</p>
 
-```js
-var mql = window.matchMedia('(max-width: 600px)');
+<h2 id="Examples">Examples</h2>
+
+<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -37,23 +43,35 @@ function screenTest(e) {
   }
 }
 
-mql.addListener(screenTest);
-```
+mql.addListener(screenTest);</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-mediaquerylist-addlistener", "addListener")}} | {{Spec2("CSSOM View")}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Specification</th>
+   <th>Status</th>
+   <th>Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-addlistener", "addListener")}}</td>
+   <td>{{Spec2("CSSOM View")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("api.MediaQueryList.addListener")}}
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [Media queries](/es/docs/CSS/Media_queries)
-- [Using media queries from code](/es/docs/CSS/Using_media_queries_from_code)
-- {{domxref("window.matchMedia()")}}
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListEvent")}}
+<ul>
+ <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
+ <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
+ <li>{{domxref("window.matchMedia()")}}</li>
+ <li>{{domxref("MediaQueryList")}}</li>
+ <li>{{domxref("MediaQueryListEvent")}}</li>
+</ul>

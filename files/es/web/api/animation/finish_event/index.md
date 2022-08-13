@@ -12,37 +12,38 @@ tags:
 translation_of: Web/API/Animation/onfinish
 original_slug: Web/API/Animation/onfinish
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
+<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
-La propiedad **`onfinish`** de la interfaz {{domxref("Animation")}} (de la [Web Animations API](/es/docs/Web/API/Web_Animations_API)) es el manejador de eventos para el evento {{event("finish")}}. Este evento se envía cuando la animación termina de reproducirse.
+<p>La propiedad <code><strong>onfinish</strong></code> de la interfaz {{domxref("Animation")}} (de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>) es el manejador de eventos para el evento {{event("finish")}}. <span id="result_box" lang="es"><span>Este evento se envía cuando la animación termina de reproducirse</span></span>.</p>
 
-El evento `finish` ocurre cuando la reproducción se completa de forma natural, así como cuando se llama al método {{domxref("Animation.finish()")}} para que la animación termine inmediatamente.
+<p>El evento <code>finish</code> ocurre cuando la reproducción se completa de forma natural, así como cuando se llama al  método {{domxref("Animation.finish()")}} para que la animación termine inmediatamente.</p>
 
-> **Nota:** El estado de reproducción `"paused"` reemplaza al estado `"finished"` ; Si la animación está pausada y finalizada, el estado`"paused"` será el único reportado. Puedes forzar el estado de la animación a `"finished"` configurando su {{domxref("Animation.startTime", "startTime")}} a `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)`.
+<div class="note">
+<p>El estado de reproducción <code>"paused"</code> reemplaza al estado  <code>"finished"</code> ; Si la animación está pausada y finalizada, el estado<code>"paused"</code> será el único reportado. Puedes forzar el estado de la animación a <code>"finished"</code> configurando su {{domxref("Animation.startTime", "startTime")}} a <code>document.timeline.currentTime - (<em>Animation</em>.currentTime * <em>Animation</em>.playbackRate)</code>.</p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis"><span class="highlight-span">Sintaxis</span></h2>
 
-    var finishHandler = Animation.onfinish;
+<pre class="syntaxbox">var <em>finishHandler</em> = <em>Animation</em>.onfinish;
 
-    Animation.onfinish = finishHandler;
+<em>Animation</em>.onfinish = <em>finishHandler</em>;</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Una función que debe ser llamada para manejar el evento {{event("finish")}} , o `null` si no se establece ningún manejador para el evento `finish`.
+<p>Una función que debe ser llamada para manejar el evento {{event("finish")}} , o <code>null</code> si no se establece ningún manejador para el evento <code>finish</code>.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-`Animation.onfinish` es utilizado en varias ocasiones en el juego de Alice in Web Animations API Land [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010). Aquí hay una instancia en la que agregamos eventos de puntero a un elemento después de que su animación de opacidad se haya desvanecido:
+<p><code>Animation.onfinish</code> es utilizado en varias ocasiones en el juego de Alice in Web Animations API Land <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a>.  Aquí hay una instancia en la que agregamos eventos de puntero a un elemento después de que su animación de opacidad se haya desvanecido:</p>
 
-```js
-// Agrega una animación a los créditos finales del juego.
+<pre class="brush: js">// <span id="result_box" lang="es"><span>Agrega una animación a los créditos finales del juego.</span></span>
 var endingUI = document.getElementById("ending-ui");
 var bringUI = endingUI.animate(keysFade, timingFade);
 
 // Pone en Pausa dichos créditos.
 bringUI.pause();
 
-// Esta función elimina los eventos de puntero en los créditos.
+// <span id="result_box" lang="es"><span>Esta función elimina los eventos de puntero en los créditos.</span></span>
 hide(endingUI);
 
 // Cuando los créditos se hayan desvanecido,
@@ -50,20 +51,34 @@ hide(endingUI);
 bringUI.onfinish = function() {
   endingUI.style.pointerEvents = 'auto';
 };
-```
 
-## Especificaciones
+</pre>
 
-| Specification                                                                                                | Status                               | Comment         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------- |
-| {{SpecName('Web Animations', '#dom-animation-onfinish', 'Animation.onfinish' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Browser compatibility
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Animations', '#dom-animation-onfinish', 'Animation.onfinish' )}}</td>
+   <td>{{Spec2('Web Animations')}}</td>
+   <td>Editor's draft.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("api.Animation.finish_event")}}
 
-## Ver también
+<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- {{domxref("Animation.finish()")}}
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li>{{domxref("Animation")}}</li>
+ <li>{{domxref("Animation.finish()")}}</li>
+</ul>

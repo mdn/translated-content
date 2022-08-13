@@ -10,26 +10,23 @@ tags:
 translation_of: Web/CSS/@media/height
 original_slug: Web/CSS/@media/altura
 ---
-{{cssref}}
+<div>{{cssref}}</div>
 
-Las [CSS](/es/docs/CSS) [media feature (consulta de medios) ](/es/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features)**`height`** puede ser usada para aplicar estilos basados en la altura del {{glossary("viewport")}} (o la caja de la página, para [paged media](/es/docs/Web/CSS/Paged_media)).
+<p>Las <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature (consulta de medios) </a><strong><code>height</code></strong> puede ser usada para aplicar estilos basados en la altura del {{glossary("viewport")}} (o la caja de la página, para <a href="/en-US/docs/Web/CSS/Paged_media">paged media</a>).</p>
 
-## Sintáxis
+<h2 id="Sintáxis">Sintáxis</h2>
 
-La característica `height` es especificada como un valor {{cssxref("&lt;length&gt;")}} representando la altura de la vista (viewport). Es una característica en rangos, lo que siginifica que puede ser prefijada con las variantes **`min-height`** y **`max-height`** para consultar valores mínimos y máximos, respectivamente.
+<p>La característica <code>height</code> es especificada como un valor {{cssxref("&lt;length&gt;")}} representando la altura de la vista (viewport). Es una característica en rangos, lo que siginifica que puede ser prefijada con las variantes <strong><code>min-height</code></strong> y <code><strong>max-height</strong></code> para consultar valores mínimos y máximos, respectivamente.</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<div>Watch this element as you resize your viewport's height.</div>
-```
+<pre class="brush: html">&lt;div&gt;Watch this element as you resize your viewport's height.&lt;/div&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-/* Altura exacta */
+<pre class="brush: css">/* Altura exacta */
 @media (height: 360px) {
   div {
     color: red;
@@ -49,19 +46,38 @@ La característica `height` es especificada como un valor {{cssxref("&lt;length&
     border: 2px solid blue;
   }
 }
-```
+</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample('Example','90%')}}
+<p>{{EmbedLiveSample('Example','90%')}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                           | Estado                                   | Comentario                                                                |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#height', 'height')}} | {{Spec2('CSS4 Media Queries')}} | El valor ahora puede ser negativo, en cuyo caso se calcula como negativo. |
-| {{SpecName('CSS3 Media Queries', '#height', 'height')}} | {{Spec2('CSS3 Media Queries')}} | Definición inicial. El valor debe ser positivo.                           |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Media Queries', '#height', 'height')}}</td>
+   <td>{{Spec2('CSS4 Media Queries')}}</td>
+   <td>El valor ahora puede ser negativo, en cuyo caso se calcula como negativo.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Media Queries', '#height', 'height')}}</td>
+   <td>{{Spec2('CSS3 Media Queries')}}</td>
+   <td>Definición inicial. El valor debe ser positivo.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("css.at-rules.media.height")}}
+
+
+<p>{{Compat("css.at-rules.media.height")}}</p>

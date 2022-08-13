@@ -11,28 +11,47 @@ tags:
   - Tiempo de navegación
 translation_of: Web/API/Performance/timing
 ---
-{{APIRef("Navigation Timing")}}{{deprecated_header}}
+<p>{{APIRef("Navigation Timing")}}{{deprecated_header}}</p>
 
-> **Advertencia:** Esta propiedad está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Por favor usa {{domxref("Performance.timeOrigin")}} en vez esta..
+<div class="warning">
+<p>Esta propiedad está deprecada en <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Por favor usa {{domxref("Performance.timeOrigin")}} en vez esta..</p>
+</div>
 
-La propiedad de solo lecutra **`Performance`\*\***`.timing`\*\* de legado devulve un objeto {{domxref("PerformanceTiming")}} que contienen información relacionada con el rendimiento en relación a la latencia.
+<p>La propiedad de solo lecutra <code><strong>Performance</strong></code><strong><code>.timing</code></strong> de legado devulve un objeto {{domxref("PerformanceTiming")}} que contienen información relacionada con el rendimiento en relación a la latencia.</p>
 
-Esta propiedad no está disponible en workers.
+<p>Esta propiedad no está disponible en workers.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var timingInfo = performance.timing;
+<pre class="syntaxbox"><em>var timingInfo</em> = <em>performance</em>.timing;</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                               | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance.timing')}} | {{Spec2('Navigation Timing')}} | Definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance.timing')}}</td>
+   <td>{{Spec2('Navigation Timing')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-{{Compat("api.Performance.timing")}}
+<div>
 
-## Ver también
 
-- The {{domxref("Performance")}} interface it belongs to.
+<p>{{Compat("api.Performance.timing")}}</p>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>The {{domxref("Performance")}} interface it belongs to.</li>
+</ul>

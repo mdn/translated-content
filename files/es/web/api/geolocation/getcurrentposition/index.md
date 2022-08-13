@@ -3,29 +3,30 @@ title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 translation_of: Web/API/Geolocation/getCurrentPosition
 ---
-{{ APIref("Geolocation API") }}
+<p>{{ APIref("Geolocation API") }}</p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-El método **`Geolocation.getCurrentPosition()`** se utiliza para obtener la posición de un dispositivo.
+<p>El método <strong><code>Geolocation.getCurrentPosition()</code></strong> se utiliza para obtener la posición de un dispositivo.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    navigator.geolocation.getCurrentPosition(success, error, options)
+<pre class="syntaxbox">navigator.geolocation.getCurrentPosition(<em>success</em>, <em>error</em>, <em>options</em>)</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- _success_
-  - : Una función de devolución de llamada que toma un objeto de posición({{domxref("Position")}}) como único parámetro de entrada.
-- _error_ {{optional_inline}}
-  - : Una función de devolución de llamada opcional que toma un objeto {{domxref("PositionError")}} como único parámetro de entrada.
-- _options_ {{optional_inline}}
-  - : Un objeto opcional {{domxref("PositionOptions")}}.
+<dl>
+ <dt><em>success</em></dt>
+ <dd><span id="result_box" lang="es"><span class="hps">Una función de</span> <span class="hps">devolución de llamada que</span> <span class="hps">toma un objeto</span> <span class="hps">de posición({{domxref("Position")}})</span> <span class="hps">como único</span> <span class="hps">parámetro de entrada.</span></span></dd>
+ <dt><em>error</em> {{optional_inline}}</dt>
+ <dd><span id="result_box" lang="es"><span class="hps">Una función</span> <span class="hps">de devolución de llamada</span> <span class="hps">opcional que</span> <span class="hps">toma un objeto</span> {{domxref("PositionError")}} <span class="hps">como único</span> <span class="hps">parámetro de entrada.</span></span></dd>
+ <dt><em>options</em> {{optional_inline}}</dt>
+ <dd>Un objeto opcional {{domxref("PositionOptions")}}.</dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-var options = {
+<pre class="brush: js">var options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
@@ -45,20 +46,35 @@ function error(err) {
 };
 
 navigator.geolocation.getCurrentPosition(success, error, options);
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                       | Estado                           | Comentario             |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Especificación inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Geolocation')}}</td>
+   <td>{{Spec2('Geolocation')}}</td>
+   <td>Especificación inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegador
+<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
 
 {{Compat("api.Geolocation.getCurrentPosition")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Usar la geolocalización](/es/docs/Usar_la_Geolocalizaci%C3%B3n)
-- [Geolocalización](/es/docs/Web/API/Geolocalizaci%C3%B3n)
-- [watchPosition()](/es/docs/Web/API/Geolocation.watchPosition)
+<ul>
+ <li><a href="/es/docs/Usar_la_Geolocalizaci%C3%B3n">Usar la geolocalización</a></li>
+ <li><a href="/es/docs/Web/API/Geolocalizaci%C3%B3n">Geolocalización</a></li>
+ <li><a href="/es/docs/Web/API/Geolocation.watchPosition">watchPosition()</a></li>
+</ul>

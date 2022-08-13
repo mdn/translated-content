@@ -4,56 +4,86 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 original_slug: Web/JavaScript/Referencia/Objetos_globales/isNaN
 ---
-{{jsSidebar("Objects")}}
+<div>{{jsSidebar("Objects")}}
+<p>La función <code><strong>isNaN()</strong></code> determina cuando el valor es {{jsxref("NaN")}} o no. Tenga presente que la coerción dentro de la función <code>isNaN</code> tiene reglas <a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/isNaN$edit#Description">interesantes</a>; tal vez quieras usar de forma alternativa <strong><code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/isNaN">Number.isNaN()</a></code></strong>, como fue definido en ECMAScript 2015.</p>
 
-La función **`isNaN()`** determina cuando el valor es {{jsxref("NaN")}} o no. Tenga presente que la coerción dentro de la función `isNaN` tiene reglas [interesantes](/es/docs/Web/JavaScript/Referencia/Objetos_globales/isNaN$edit#Description); tal vez quieras usar de forma alternativa **[`Number.isNaN()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/isNaN)**, como fue definido en ECMAScript 2015.
+<div>{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}</div>
+</div>
 
-{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-## Sintaxis
+<pre><code>isNaN(<em>valor</em>)</code></pre>
 
-    isNaN(valor)
+<h3 id="Parámetros">Parámetros</h3>
 
-### Parámetros
+<dl>
+ <dt><strong><code>valor</code></strong></dt>
+ <dd>El valor a probar o evaluar.</dd>
+</dl>
 
-- **`valor`**
-  - : El valor a probar o evaluar.
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-### Valor de retorno
+<p><strong><code>true</code></strong> si es valor dado es {{jsxref("NaN")}}, de otro modo, <code><strong>false</strong></code>.</p>
 
-**`true`** si es valor dado es {{jsxref("NaN")}}, de otro modo, **`false`**.
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-## Descripción
+<p><code>isNaN</code> es una función de alto nivel y no está asociada a ningún objeto.</p>
 
-`isNaN` es una función de alto nivel y no está asociada a ningún objeto.
+<p><code>isNaN</code> intenta convertir el parámetro pasado a un número. Si el parámetro no se puede convertir, devuelve true; en caso contrario, devuelve false.</p>
 
-`isNaN` intenta convertir el parámetro pasado a un número. Si el parámetro no se puede convertir, devuelve true; en caso contrario, devuelve false.
+<p>Esta función es útil ya que el valor {{jsxref("Objetos_globales/NaN", "NaN")}} no puede se probado correctamente con operadores de igualdad. <code>x == NaN</code> y <code>x === NaN</code> son siempre false, sin importar lo que sea <code>x</code>, incluso si <code>x</code> es <code>NaN</code>. Por ejemplo, tanto <code>1 == NaN</code> como <code>NaN == NaN</code> devuelven <code>false</code>.</p>
 
-Esta función es útil ya que el valor {{jsxref("Objetos_globales/NaN", "NaN")}} no puede se probado correctamente con operadores de igualdad. `x == NaN` y `x === NaN` son siempre false, sin importar lo que sea `x`, incluso si `x` es `NaN`. Por ejemplo, tanto `1 == NaN` como `NaN == NaN` devuelven `false`.
+<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
 
-### Ejemplos
-
-```js
-isNaN(NaN) //devuelve true
+<pre class="brush: js">isNaN(NaN) //devuelve true
 isNaN("string") //devuelve true
 isNaN("12") //devuelve false
 isNaN(12) //devuelve false
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                           | Estado                       | Comentario         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definición inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.4', 'isNaN')}}         | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES6', '#sec-isnan-number', 'isNaN')}}         | {{Spec2('ES6')}}         |                    |
-| {{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}} | {{Spec2('ESDraft')}} |                    |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.1.2.4', 'isNaN')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-isnan-number', 'isNaN')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-{{Compat("javascript.builtins.isNaN")}}
 
-### Vea También
 
-- {{jsxref("Objetos_globales/NaN", "NaN")}}
-- {{jsxref("Number.isNaN()")}}
+<p>{{Compat("javascript.builtins.isNaN")}}</p>
+
+<h3 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h3>
+
+<ul>
+ <li>{{jsxref("Objetos_globales/NaN", "NaN")}}</li>
+ <li>{{jsxref("Number.isNaN()")}}</li>
+</ul>

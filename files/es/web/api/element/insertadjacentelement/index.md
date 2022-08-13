@@ -3,51 +3,70 @@ title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
 translation_of: Web/API/Element/insertAdjacentElement
 ---
-{{APIRef("DOM")}}
+<p>{{APIRef("DOM")}}</p>
 
-El método **`insertAdjacentElement()`** inserta un elemento nodo dado en una posición dada con respecto al elemento sobre el que se invoca.
+<p>El método <strong><code>insertAdjacentElement()</code></strong> inserta un elemento nodo dado en una posición dada con respecto al elemento sobre el que se invoca.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    elementoObjetivo.insertAdjacentElement(posición, elemento);
+<pre class="notranslate"><em>elementoObjetivo</em>.insertAdjacentElement(<em>posición</em>, <em>elemento</em>);</pre>
 
-### Parameters
+<h3 id="Parameters">Parameters</h3>
 
-- `posición`
-  - : Un {{domxref("DOMString")}} representando la posición relativa al elementoObjetivo; debe ser una de las siguientes cadenas:\* `'beforebegin'`: Antes del `elementoObjetivo`.
-    - `'afterbegin'`: Dentro del `elementoObjetivo`, antes de su primer hijo.
-    - `'beforeend'`: Dentro del `elementoObjetivo`, después de su último hijo.
-    - `'afterend'`: Después del `elementoObjetivo`.
-- `elemento`
-  - : El elemento HTML a ser insertado.
+<dl>
+ <dt><code>posición</code></dt>
+ <dd>Un {{domxref("DOMString")}} representando la posición relativa al <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">elementoObjetivo</span></font>; debe ser una de las siguientes cadenas:
+ <ul>
+  <li><code style="color: red;">'beforebegin'</code>: Antes del <code>elementoObjetivo</code>.</li>
+  <li><code style="color: green;">'afterbegin'</code>: Dentro del <code>elementoObjetivo</code>, antes de su primer hijo.</li>
+  <li><code style="color: blue;">'beforeend'</code>: Dentro del <code>elementoObjetivo</code>, después de su último hijo.</li>
+  <li><code style="color: magenta;">'afterend'</code>: Después del <code>elementoObjetivo</code>.</li>
+ </ul>
+ </dd>
+ <dt><code>elemento</code></dt>
+ <dd>El elemento HTML a ser insertado.</dd>
+</dl>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-El elemento insertado o `null`, si la inserción falla.
+<p>El elemento insertado  o <code>null</code>, si la inserción falla.</p>
 
-### Excepciones
+<h3 id="Excepciones">Excepciones</h3>
 
-| Excepción     | Explicación                                              |
-| ------------- | -------------------------------------------------------- |
-| `SyntaxError` | La `posición` especificada no tiene un valor reconocido. |
-| `TypeError`   | El `elemento` especificado no es un elemento válido.     |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Excepción</th>
+   <th scope="col">Explicación</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>SyntaxError</code></td>
+   <td>La <code>posición</code> especificada no tiene un valor reconocido.</td>
+  </tr>
+  <tr>
+   <td><code>TypeError</code></td>
+   <td>El <code>elemento</code> especificado no es un elemento válido.</td>
+  </tr>
+ </tbody>
+</table>
 
-### Visualización de los nombres de posición
+<h3 id="Visualización_de_los_nombres_de_posición">Visualización de los nombres de posición</h3>
 
-    <!-- beforebegin -->
-    <p>
-      <!-- afterbegin -->
-      foo
-      <!-- beforeend -->
-    </p>
-    <!-- afterend -->
+<pre class="notranslate">&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
+<code style="font-weight: bold;">&lt;p&gt;</code>
+  &lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+  foo
+  &lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
+<code style="font-weight: bold;">&lt;/p&gt;</code>
+&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
 
-> **Nota:** Las posiciones `beforebegin` y `afterend` sólo funcionan si el nodo está en un árbol y tiene un padre.
+<div class="note"><strong>Nota:</strong> Las posiciones <code>beforebegin</code> y <code>afterend</code> sólo funcionan si el nodo está en un árbol y tiene un padre.</div>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-beforeBtn.addEventListener('click', function() {
+<pre class="brush: js notranslate">beforeBtn.addEventListener('click', function() {
   var tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   activeElem.insertAdjacentElement('beforebegin',tempDiv);
@@ -59,24 +78,38 @@ afterBtn.addEventListener('click', function() {
   tempDiv.style.backgroundColor = randomColor();
   activeElem.insertAdjacentElement('afterend',tempDiv);
   setListener(tempDiv);
-});
-```
+});</pre>
 
-Mira nuestro [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) demo en Github (mira el[ código fuente](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) también.) Aquí tenemos una secuencia de elementos {{htmlelement("div")}} dentro de un contenedor. Cuando uno es clickeado, se torna en seleccionado y tu puedes presionar los botones _Insert before_ e _Insert after_ para insertar nuevos divs antes o despues del elemento seleccionado usando `insertAdjacentElement()`.
+<p>Mira nuestro <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> demo en Github (mira el<a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html"> código fuente</a> también.) Aquí tenemos una  secuencia de elementos {{htmlelement("div")}} dentro de un contenedor. Cuando uno es clickeado, se torna en seleccionado y tu puedes presionar los botones <em>Insert before</em> e <em>Insert after</em> para insertar nuevos divs antes o despues del elemento seleccionado usando <code>insertAdjacentElement()</code>.</p>
 
-## Especificaciones
+<h2 id="Specification" name="Specification">Especificaciones</h2>
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('DOM WHATWG', '#dom-element-insertadjacentelement', 'insertAdjacentElement()')}} | {{ Spec2('DOM WHATWG') }} |            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-element-insertadjacentelement', 'insertAdjacentElement()')}}</td>
+   <td>{{ Spec2('DOM WHATWG') }}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con Navegadores
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad con Navegadores</h2>
 
-{{Compat("api.Element.insertAdjacentElement")}}
+<p>{{Compat("api.Element.insertAdjacentElement")}}</p>
 
-## Mira también
+<h2 id="Mira_también">Mira también</h2>
 
-- {{domxref("Element.insertAdjacentHTML()")}}
-- {{domxref("Element.insertAdjacentText()")}}
-- {{domxref("Node.insertBefore()")}} (similar to `beforebegin`, with different arguments)
-- {{domxref("Node.appendChild()")}} (mismo efecto que `beforeend`)
+<ul>
+ <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
+ <li>{{domxref("Element.insertAdjacentText()")}}</li>
+ <li>{{domxref("Node.insertBefore()")}} (similar to <code>beforebegin</code>, with different arguments)</li>
+ <li>{{domxref("Node.appendChild()")}} (mismo efecto que <code>beforeend</code>)</li>
+</ul>

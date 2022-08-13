@@ -4,47 +4,71 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/MIN_VALUE
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La propiedad **`Number.MIN_VALUE`** representa el menor valor positivo numérico representable en JavaScript.
+<p>La propiedad <code><strong>Number.MIN_VALUE</strong></code> representa el menor valor positivo numérico representable en JavaScript.</p>
 
-{{js_property_attributes(0, 0, 0)}}
+<div>{{js_property_attributes(0, 0, 0)}}</div>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-La propiedad `MIN_VALUE `es el número más cercano a 0, no el más negativo, que JavaScript puede representar.
+<p>La propiedad <code>MIN_VALUE </code>es el número más cercano a 0, no el más negativo, que JavaScript puede representar.</p>
 
-`MIN_VALUE `tiene un valor aproximado de `5e-324`. Los valores menores que `MIN_VALUE `(“subdesbordamiento de valores”) son convertidos a 0.
+<p><code>MIN_VALUE </code>tiene un valor aproximado de <code>5e-324</code>. Los valores menores que <code>MIN_VALUE </code>(“subdesbordamiento de valores”) son convertidos a 0.</p>
 
-Ya que `MIN_VALUE `es una propiedad estática de {{jsxref("Number")}}, debes utilizarla como `Number.MIN_VALUE`, más que como una propiedad del objeto {{jsxref("Number")}} que has creado.
+<p>Ya que <code>MIN_VALUE </code>es una propiedad estática de {{jsxref("Number")}}, debes utilizarla como <code>Number.MIN_VALUE</code>, más que como una propiedad del objeto {{jsxref("Number")}} que has creado.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `MIN_VALUE`
+<h3 id="Usando_MIN_VALUE">Usando <code>MIN_VALUE</code></h3>
 
-El siguiente código divide dos valores numéricos. Si el resultado es mayor o igual a `MIN_VALUE`, se ejecuta la función `func1`, si no, se ejecuta la función `func2`.
+<p>El siguiente código divide dos valores numéricos. Si el resultado es mayor o igual a <code>MIN_VALUE</code>, se ejecuta la función <code>func1</code>, si no, se ejecuta la función <code>func2</code>.</p>
 
-```js
-if (num1 / num2 >= Number.MIN_VALUE) {
+<pre class="brush: js">if (num1 / num2 &gt;= Number.MIN_VALUE) {
   func1();
 } else {
   func2();
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                | Status                       | Comment                                            |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.3.3', 'Number.MIN_VALUE')}}                 | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-number.min_value', 'Number.MIN_VALUE')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-number.min_value', 'Number.MIN_VALUE')}} | {{Spec2('ESDraft')}} |                                                    |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Initial definition. Implemented in JavaScript 1.1.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.7.3.3', 'Number.MIN_VALUE')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-number.min_value', 'Number.MIN_VALUE')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-number.min_value', 'Number.MIN_VALUE')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegador
+<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
 
 {{Compat("javascript.builtins.Number.MIN_VALUE")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Number.MAX_VALUE")}}
+<ul>
+ <li>{{jsxref("Number.MAX_VALUE")}}</li>
+</ul>

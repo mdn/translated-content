@@ -13,28 +13,28 @@ tags:
   - waapi
 translation_of: Web/API/Animation/play
 ---
-{{ APIRef("Web Animations") }}{{SeeCompatTable}}
+<div>{{ APIRef("Web Animations") }}{{SeeCompatTable}}</div>
 
-El método **`play()`** de la interfaz {{ domxref("Animation") }} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) inicia o reanuda la reproducción de una animación. Si la animación ha finalizado, llamando a `play()` reinicia la animación y la reproduce desde el principio.
+<p>El método <strong><code>play()</code></strong> de la interfaz {{ domxref("Animation") }} de la  <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> inicia o reanuda la reproducción de una animación. Si la animación ha finalizado, llamando a  <code>play()</code> reinicia la animación y la reproduce desde el principio.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    animation.play();
+<pre class="syntaxbox">animation.play();
+</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-None.
+<p>None.</p>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-{{jsxref("undefined")}}
+<p>{{jsxref("undefined")}}</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-En el ejemplo [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , hacer click o tocar el pastel hace que la animación de crecimiento de Alicia (`aliceChange`) sea reproducida hacia adelante, causando que Alicia se haga más grande, ademas de desencadenar la animación del pastel. Dos `Animation.play()` y un `EventListener`:
+<p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> , hacer click o tocar el pastel hace que la animación de crecimiento de Alicia (<code>aliceChange</code>) sea reproducida hacia adelante, causando que Alicia se haga más grande, ademas de desencadenar la animación del pastel. Dos  <code>Animation.play()</code> y un <code>EventListener</code>:</p>
 
-```js
-// El pastel tiene su propia animación:
+<pre class="brush: js">// El pastel tiene su propia animación:
 var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
@@ -62,23 +62,36 @@ var growAlice = function() {
 // Cuando el usuario hace click o toca, llama a growAlice, para reproducir todas las animaciones.
 cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                        | Status                               | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Animations', '#dom-animation-play', 'play()')}} | {{Spec2("Web Animations")}} |         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Animations', '#dom-animation-play', 'play()')}}</td>
+   <td>{{Spec2("Web Animations")}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{Compat("api.Animation.play")}}
 
-## Ver también
+<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
 
-- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}} para otros métodos y propiedades que puedes usar para el control de animaciones en páginas web.
-- {{domxref("Animation.pause()")}} para pausar una animación.
-- {{domxref("Animation.reverse()")}} para reproducir una animación al revés.
-- {{domxref("Animation.finish()")}} para finalizar una animación.
-- {{domxref("Animation.cancel()")}} para cancelar una animación.
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li>{{domxref("Animation")}} para otros métodos y propiedades que puedes usar para el control de animaciones en páginas web.</li>
+ <li>{{domxref("Animation.pause()")}} para pausar una animación.</li>
+ <li>{{domxref("Animation.reverse()")}} para reproducir una animación al revés.</li>
+ <li>{{domxref("Animation.finish()")}} para finalizar una animación.</li>
+ <li>{{domxref("Animation.cancel()")}} para cancelar una animación.</li>
+</ul>

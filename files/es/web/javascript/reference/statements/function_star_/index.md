@@ -10,45 +10,49 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/function*
 original_slug: Web/JavaScript/Referencia/Sentencias/function*
 ---
-{{jsSidebar("Statements")}}
+<div>{{jsSidebar("Statements")}}</div>
 
-La declaración **`function*`** (la palabra clave `function` seguida de un asterisco) define una _función generadora_, que devuelve un objeto {{jsxref("Global_Objects/Generator","Generator")}}.
+<p>La declaración <code><strong>function*</strong></code> (la palabra clave <code>function</code> seguida de un asterisco) define una <em>función generadora</em>, que devuelve un objeto {{jsxref("Global_Objects/Generator","Generator")}}.</p>
 
-También puedes definir funciones generadoras usando el constructor {{jsxref("GeneratorFunction")}} y una {{jsxref("Operators/function*", "function* expression")}}.
+<div class="noinclude">
+<p>También puedes definir funciones generadoras usando el constructor {{jsxref("GeneratorFunction")}} y una {{jsxref("Operators/function*", "function* expression")}}.</p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    function* nombre([param[, param[, ... param]]]) {
-       instrucciones
-    }
+<pre class="syntaxbox">function* <em>nombre</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
+   <em>instrucciones</em>
+}
+</pre>
 
-- `nombre`
-  - : El nombre de la función.
+<dl>
+ <dt><code>nombre</code></dt>
+ <dd>El nombre de la función.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><code>param</code></dt>
+ <dd>El nombre de los argumentos que se le van a pasar a la función. Una función puede tener hasta 255 argumentos.</dd>
+</dl>
 
-- `param`
-  - : El nombre de los argumentos que se le van a pasar a la función. Una función puede tener hasta 255 argumentos.
+<dl>
+ <dt><code>instrucciones</code></dt>
+ <dd>Las instrucciones que componen el cuerpo de la función.</dd>
+</dl>
 
-<!---->
+<h2 id="Descripción">Descripción</h2>
 
-- `instrucciones`
-  - : Las instrucciones que componen el cuerpo de la función.
+<p>Los generadores son funciones de las que se puede salir y volver a entrar. Su contexto (asociación de variables) será conservado entre las reentradas.</p>
 
-## Descripción
+<p>La llamada a una función generadora no ejecuta su cuerpo inmediatamente; se devuelve un objeto <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">iterador</a> para la función en su lugar. Cuando el metodo <code>next()</code> del iterador es llamado , el cuerpo de la función generadora es ejecutado hasta la primera expresión {{jsxref("Operators/yield", "yield")}}, la cual especifica el valor que será retornado por el iterador o con, {{jsxref("Operators/yield*", "yield*")}}, delega a otra función generadora. El método <code>next()</code> retorna un objeto con una propiedad <em>value</em> que contiene el valor bajo el operador yield y una propiedad <em>done </em>que indica, con un booleano, si la función generadora ha hecho yield al último valor.</p>
 
-Los generadores son funciones de las que se puede salir y volver a entrar. Su contexto (asociación de variables) será conservado entre las reentradas.
+<h2 id="Ejemplos">Ejemplos</h2>
 
-La llamada a una función generadora no ejecuta su cuerpo inmediatamente; se devuelve un objeto [iterador](/es/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) para la función en su lugar. Cuando el metodo `next()` del iterador es llamado , el cuerpo de la función generadora es ejecutado hasta la primera expresión {{jsxref("Operators/yield", "yield")}}, la cual especifica el valor que será retornado por el iterador o con, {{jsxref("Operators/yield*", "yield*")}}, delega a otra función generadora. El método `next()` retorna un objeto con una propiedad _value_ que contiene el valor bajo el operador yield y una propiedad _done_ que indica, con un booleano, si la función generadora ha hecho yield al último valor.
+<h3 id="Ejemplo_simple">Ejemplo simple</h3>
 
-## Ejemplos
-
-### Ejemplo simple
-
-```js
-function* idMaker(){
+<pre class="brush: js">function* idMaker(){
   var index = 0;
-  while(index < 3)
+  while(index &lt; 3)
     yield index++;
 }
 
@@ -58,13 +62,11 @@ console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // undefined
-// ...
-```
+// ...</pre>
 
-### Ejemplo con yield\*
+<h3 id="Ejemplo_con_yield*">Ejemplo con yield*</h3>
 
-```js
-function* anotherGenerator(i) {
+<pre class="brush: js">function* anotherGenerator(i) {
   yield i + 1;
   yield i + 2;
   yield i + 3;
@@ -83,32 +85,49 @@ console.log(gen.next().value); // 11
 console.log(gen.next().value); // 12
 console.log(gen.next().value); // 13
 console.log(gen.next().value); // 20
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificaciones                                     | Status                   | Comentarios         |
-| ---------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES2015', '#', 'function*')}} | {{Spec2('ES2015')}} | Initial definition. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificaciones</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ES2015', '#', 'function*')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.statements.generator_function")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}} object
-- [The Iterator protocol](/es/docs/Web/JavaScript/Guide/The_Iterator_protocol)
-- {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function declaration")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
-- Other web resources:
-
-  - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
-  - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)
-  - [Task.js](http://taskjs.org/)
+<ul>
+ <li>{{jsxref("Operators/function*", "function* expression")}}</li>
+ <li>{{jsxref("GeneratorFunction")}} object</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
+ <li>{{jsxref("Operators/yield", "yield")}}</li>
+ <li>{{jsxref("Operators/yield*", "yield*")}}</li>
+ <li>{{jsxref("Function")}} object</li>
+ <li>{{jsxref("Statements/function", "function declaration")}}</li>
+ <li>{{jsxref("Operators/function", "function expression")}}</li>
+ <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
+ <li>Other web resources:
+  <ul>
+   <li><a href="http://facebook.github.io/regenerator/">Regenerator</a> an ES2015 generator compiler to ES5</li>
+   <li><a href="http://www.youtube.com/watch?v=qbKWsbJ76-s">Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013</a></li>
+   <li><a href="https://www.youtube.com/watch?v=ZrgEZykBHVo&amp;list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&amp;index=1">Hemanth.HM: The New gen of *gen(){}</a></li>
+   <li><a href="http://taskjs.org/">Task.js</a></li>
+  </ul>
+ </li>
+</ul>

@@ -3,30 +3,36 @@ title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
 translation_of: Web/API/HTMLTableElement/insertRow
 ---
-{{APIRef("HTML DOM")}}
+<div>
+<div>
+<div>{{APIRef("HTML DOM")}}</div>
+</div>
+</div>
 
-El método **`HTMLTableElement.insertRow()`** inserta una nueva fila en la tabla.
+<p>El método <strong><code>HTMLTableElement.insertRow()</code></strong> inserta una nueva fila en la tabla.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var row = HTMLTableElement.insertRow(optional index = -1);
+<pre class="syntaxbox">var <em>row</em> = <em>HTMLTableElement</em>.insertRow(<em>optional index = -1</em>);</pre>
 
-- [`HTMLTableElement`](/es/docs/DOM/HTMLTableElement) es una referencia a un elemento table HTML.
-- `index` es el índice de fila de la nueva fila.
-- `row` queda asignada a una referencia a la nueva fila. Una referencia a un [HTMLTableRowElement](/es/docs/Web/API/HTMLTableRowElement).
-  Si `index` es -1 o igual al número de filas, la nueva fila es añadida detrás de la última. Si `index` es mayor que el números defilas, es lanzada una excepción IndexSizeError. Si index se omite, se asume por defecto -1.
-- Si una tabla tiene múltiples elementos `tbody`, por defecto la nueva fila es insertada en el último `tbody`. Para insertar una fila dentro de un `tbody` especifico pued hacer:
-  `var specific_tbody=document.getElementById(tbody_id); var row=specific_tbody.insertRow(index)`
+<ul>
+ <li><a href="/en-US/docs/DOM/HTMLTableElement"><code>HTMLTableElement</code></a> es una referencia a un elemento table HTML.</li>
+ <li><code>index</code> es el índice de fila de la nueva fila.</li>
+ <li><code>row</code> queda asignada a una referencia a la nueva fila. Una referencia a un <a href="/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement</a>.<br>
+  Si <code>index</code> es -1 o igual al número de filas, la nueva fila es añadida detrás de la última. Si <code>index</code> es mayor que el números defilas, es lanzada una excepción IndexSizeError. Si index se omite, se asume por defecto -1.</li>
+ <li>Si  una tabla tiene múltiples elementos <code>tbody</code>, por defecto la nueva fila es insertada en el último <code>tbody</code>. Para insertar una fila dentro de un  <code>tbody</code> especifico pued hacer:<br>
+  <code>var <em>specific_tbody</em>=document.getElementById(<em>tbody_id</em>);<br>
+  var <em>row</em>=specific_tbody.insertRow(<em>index</em>)</code></li>
+</ul>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```html
-<table id="TableA">
-<tr>
-<td>Antigua fila superior</td>
-</tr>
-</table>
-<script type="text/javascript">
+<pre class="brush:html">&lt;table id="TableA"&gt;
+&lt;tr&gt;
+&lt;td&gt;Antigua fila superior&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;script type="text/javascript"&gt;
 
 function addRow(tableID) {
   // Obtiene una referencia a la tabla
@@ -46,25 +52,45 @@ function addRow(tableID) {
 // Llama a addRow() con el ID de la tabla
 addRow('TableA');
 
-</script>
-```
+&lt;/script&gt;</pre>
 
-Para ser válida en un documento HTML, una TR debe contener al menos un elemento TD.
+<p>Para ser válida en un documento HTML, una TR debe contener al menos un elemento TD.</p>
 
-Observese que `insertRow` inserta la fila diréctamente en la tabla y retorna una referencia a la nueva fila. La fila no necesita ser añadida separadamente (p.e. con [`document.appendChild()`](/es/docs/DOM/document.appendChild)) tal sería el caso si se usase [`document.createElement()`](/en-US/docs/DOM/document.createElement) para crear el nuevo elemento TR.
+<p>Observese que <code>insertRow</code> inserta la fila diréctamente en la tabla y retorna una referencia a la nueva fila. La fila no necesita ser añadida separadamente (p.e. con <code><a href="/es/docs/DOM/document.appendChild">document.appendChild()</a></code>) tal sería el caso si se usase <code><a href="/en-US/docs/DOM/document.createElement">document.createElement()</a></code> para crear el nuevo elemento TR.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                               | Estado                           | Observaciones                                        |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "tables.html#dom-table-insertrow", "HTMLTableElement.insertRow()")}} | {{Spec2("HTML WHATWG")}} |                                                      |
-| {{SpecName("DOM2 HTML", "html.html#ID-93995626", "HTMLTableElement.insertRow()")}}                 | {{Spec2("DOM2 HTML")}}     | Especificó con más detalle dónde se inserta la fila. |
-| {{SpecName("DOM1", "level-one-html.html#ID-39872903", "HTMLTableElement.insertRow()")}}         | {{Spec2("DOM1")}}         | Definición inicial                                   |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Especificación</th>
+   <th>Estado</th>
+   <th>Observaciones</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "tables.html#dom-table-insertrow", "HTMLTableElement.insertRow()")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 HTML", "html.html#ID-93995626", "HTMLTableElement.insertRow()")}}</td>
+   <td>{{Spec2("DOM2 HTML")}}</td>
+   <td>Especificó con más detalle dónde se inserta la fila.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM1", "level-one-html.html#ID-39872903", "HTMLTableElement.insertRow()")}}</td>
+   <td>{{Spec2("DOM1")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.HTMLTableElement.insertRow")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{domxref("HTMLTableRowElement.insertCell()")}}
+<ul>
+ <li>{{domxref("HTMLTableRowElement.insertCell()")}}</li>
+</ul>

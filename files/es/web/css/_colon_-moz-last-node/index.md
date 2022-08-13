@@ -1,47 +1,48 @@
 ---
 title: ':-moz-last-node'
-slug: Web/CSS/:-moz-last-node
+slug: 'Web/CSS/:-moz-last-node'
 tags:
   - CSS
   - NeedsCompatTable
   - No estandar
   - Referencia CSS
-translation_of: Web/CSS/:-moz-last-node
+translation_of: 'Web/CSS/:-moz-last-node'
 ---
-{{Non-standard_header}}{{CSSRef}}
+<div>{{Non-standard_header}}{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes "Pseudo-classes") [CSS](/es/docs/Web/CSS) `:-moz-last-node` selecciona un elemento si es el último nodo hijo de algún otro elemento. Se diferencia de {{cssxref(":last-child")}} en que no selecciona el último elemento hijo si tiene texto (sin contar espacios en blanco) después de él.
+<p>La  <a href="/es/docs/Web/CSS/Pseudo-classes" title="Pseudo-classes">pseudo-clase</a> <a href="/es/docs/Web/CSS">CSS</a> <code>:-moz-last-node</code> selecciona un elemento si es el último nodo hijo de algún otro elemento. Se diferencia de {{cssxref(":last-child")}} en que no selecciona el último elemento hijo si tiene texto (sin contar espacios en blanco) después de él.</p>
 
-> **Nota:** Cualquier espacio en blanco al final de un elemento se ignora al usar `:-moz-last-node`.
+<p class="note">Cualquier espacio en blanco al final de un elemento se ignora al usar <code>:-moz-last-node</code>.</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-    span:-moz-last-node {propiedades del estilo }
+<pre class="syntaxbox"><var>span</var>:-moz-last-node {<em>propiedades del estilo</em> }
+</pre>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-span:-moz-last-node {
+<pre class="brush:css">span:-moz-last-node {
   background-color: lime;
 }
-```
+</pre>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<div>
-  <span>:-moz-first-node</span>
-  <span>:-moz-last-node</span>
-</div>
-```
+<pre class="brush:html">&lt;div&gt;
+  &lt;span&gt;:-moz-first-node&lt;/span&gt;
+  &lt;span&gt;:-moz-last-node&lt;/span&gt;
+&lt;/div&gt;
+</pre>
 
-{{EmbedLiveSample("Example", "220", "20")}}
+<p>{{EmbedLiveSample("Example", "220", "20")}}</p>
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-- {{cssxref(":-moz-first-node")}}
-- {{cssxref(":last-child")}}
+<ul>
+ <li>{{cssxref(":-moz-first-node")}}</li>
+ <li>{{cssxref(":last-child")}}</li>
+</ul>

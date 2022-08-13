@@ -3,12 +3,11 @@ title: margin-block
 slug: Web/CSS/margin-block
 translation_of: Web/CSS/margin-block
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<p>{{CSSRef}}{{SeeCompatTable}}  </p>
 
-La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`margin-block`** define el bloque lógico de inicio y fin de las márgenes de un elemento, que se asigna a las márgenes físicas en función del modo de escritura del elemento, la direccionalidad y la orientación del texto.
+<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <strong><code>margin-block</code></strong> define el bloque lógico de inicio y fin de las márgenes de un elemento, que se asigna a las márgenes físicas en función del modo de escritura del elemento, la direccionalidad y la orientación del texto.</p>
 
-```css
-/* <length> values */
+<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; values */
 margin-block: 10px 20px;  /* An absolute length */
 margin-block: 1em 2em;   /* relative to the text size */
 margin-block: 5% 2%;    /* relative to the nearest block container's width */
@@ -21,44 +20,44 @@ margin-block: auto;
 margin-block: inherit;
 margin-block: initial;
 margin-block: unset;
-```
+</pre>
 
-Estos valores corresponden a {{CSSxRef("margin-top")}} y {{CSSxRef("margin-bottom")}}, o {{CSSxRef("margin-right")}}, y {{CSSxRef("margin-left")}} depende de los valores definidos para {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, y {{CSSxRef("text-orientation")}}.
 
-## Propiedades que lo constituyen
 
-Los valores se pueden establecer individualmente como {{CSSxRef("margin-block-start")}} y {{CSSxRef("margin-block-end")}}. La propiedad de dirección en línea es {{CSSxRef("margin-inline")}} que establece {{CSSxRef("margin-inline-start")}}, y {{CSSxRef("margin-inline-end")}}.
+<p>Estos valores corresponden a {{CSSxRef("margin-top")}} y  {{CSSxRef("margin-bottom")}}, o {{CSSxRef("margin-right")}}, y {{CSSxRef("margin-left")}} depende de los valores definidos para {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, y {{CSSxRef("text-orientation")}}.</p>
 
-## Sintaxis
+<h2 id="Propiedades_que_lo_constituyen">Propiedades que lo constituyen</h2>
 
-### Valores
+<p>Los valores se pueden establecer individualmente como {{CSSxRef("margin-block-start")}} y {{CSSxRef("margin-block-end")}}. La propiedad de dirección en línea es {{CSSxRef("margin-inline")}} que establece {{CSSxRef("margin-inline-start")}}, y {{CSSxRef("margin-inline-end")}}.</p>
 
-La propiedad `margin-block` toma los mismos valores de la propiedad {{CSSxRef("margin-left")}}.
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Definición formal
+<h3 id="Valores">Valores</h3>
 
-{{cssinfo}}
+<p>La propiedad <code>margin-block</code> toma los mismos valores de la propiedad {{CSSxRef("margin-left")}}.</p>
 
-### Sintaxis formal
+<h3 id="Definición_formal">Definición formal</h3>
+
+<p>{{cssinfo}}</p>
+
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{CSSSyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### Definiendo el comienzo del bloque y el fin de los margenes
+<h3 id="Definiendo_el_comienzo_del_bloque_y_el_fin_de_los_margenes">Definiendo el comienzo del bloque y el fin de los margenes</h3>
 
-#### HTML
+<h4 id="HTML"><strong>HTML</strong></h4>
 
-```html
-<div>
-  <p class="exampleText">Example text</p>
-</div>
-```
+<pre class="brush: html notranslate">&lt;div&gt;
+  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
+&lt;/div&gt;
+</pre>
 
-#### CSS
+<h4 id="CSS"><strong>CSS</strong></h4>
 
-```css
-div {
+<pre class="brush: css notranslate">div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -68,26 +67,42 @@ div {
   writing-mode: vertical-rl;
   margin-block: 20px 40px;
   background-color: #c8c800;
-}
-```
+}</pre>
 
-#### Resultado
+<h4 id="Resultado"><strong>Resultado</strong></h4>
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
 
-## Especificación
+<h2 id="Especificación">Especificación</h2>
 
-| Especificación                                                                                           | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-block", "margin-block")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS Logical Properties", "#propdef-margin-block", "margin-block")}}</td>
+   <td>{{Spec2("CSS Logical Properties")}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-{{CSSInfo}}
+<p>{{CSSInfo}}</p>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("css.properties.margin-block")}}
 
-## Mira también
 
-- Las propiedades físicas mapeadas: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, y {{CSSxRef("margin-left")}}
-- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
+<p>{{Compat("css.properties.margin-block")}}</p>
+
+<h2 id="Mira_también">Mira también</h2>
+
+<ul>
+ <li>Las propiedades físicas mapeadas: {{CSSxRef("margin-top")}}, {{CSSxRef("margin-right")}}, {{CSSxRef("margin-bottom")}}, y {{CSSxRef("margin-left")}}</li>
+ <li>{{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}</li>
+</ul>

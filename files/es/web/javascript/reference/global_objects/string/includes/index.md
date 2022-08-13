@@ -11,47 +11,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`includes()`** determina si una cadena de texto puede ser encontrada dentro de otra cadena de texto, devolviendo **`true`** o **`false`** según corresponda.
+<p>El método <strong><code>includes()</code></strong> determina si una cadena de texto puede ser encontrada dentro de otra cadena de texto, devolviendo <code><strong>true</strong></code> o <strong><code>false</code></strong> según corresponda.</p>
 
-{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
+<div>{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    str.includes(searchString[, position])
+<pre class="syntaxbox notranslate"><code><var>str</var>.includes(<var>searchString</var>[, <var>position</var>])</code></pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- `searchString`
-  - : Una cadena a buscar en el texto _`str`_.
-- `position` {{optional_inline}}
-  - : La posición dentro de la cadena en la cual empieza la búsqueda de `searchString` (Por defecto este valor es 0).
+<dl>
+ <dt><code><var>searchString</var></code></dt>
+ <dd>Una cadena a buscar en el texto <em><code>str</code></em>.</dd>
+ <dt><code><var>position</var></code> {{optional_inline}}</dt>
+ <dd>La posición dentro de la cadena en la cual empieza la búsqueda de <code>searchString</code> (Por defecto este valor es 0).</dd>
+</dl>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-**`true`** si la cadena de texto contiene la cadena buscada; en caso contrario, **`false`**.
+<p><strong><code>true</code></strong> si la cadena de texto contiene la cadena buscada; en caso contrario, <strong><code>false</code></strong>.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Este método permite determinar si una cadena de texto se encuentra incluida dentro de la otra.
+<p>Este método permite determinar si una cadena de texto se encuentra incluida dentro de la otra.</p>
 
-### Sensibilidad a Mayúsculas/Minúsculas
+<h3 id="Sensibilidad_a_MayúsculasMinúsculas">Sensibilidad a Mayúsculas/Minúsculas</h3>
 
-El método `includes()` es "case sensitive" (tiene en cuenta mayúsculas y minúsculas). Por ejemplo, la siguiente expresión devolverá `false`:
+<p>El método <code>includes()</code> es "case sensitive" (tiene en cuenta mayúsculas y minúsculas). Por ejemplo, la siguiente expresión devolverá <code>false</code>:</p>
 
-```js
-'Ballena azul'.includes('ballena'); // devuelve false
-```
+<pre class="brush: js notranslate">'Ballena azul'.includes('ballena'); // devuelve false
+</pre>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-Este método ha sido agregado a la especificación ECMAScript 2015 y puede no estar disponible en toda las implementaciones de JavaScript.
+<p>Este método ha sido agregado a la especificación ECMAScript 2015 y puede no estar  disponible en toda las implementaciones de JavaScript.</p>
 
-Sin embargo, puedes usar este método como polyfill:
+<p>Sin embargo, puedes usar este método como polyfill:</p>
 
-```js
-if (!String.prototype.includes) {
+<pre class="brush: js notranslate">if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
     'use strict';
 
@@ -62,14 +62,13 @@ if (!String.prototype.includes) {
     return this.indexOf(search, start) !== -1;
   };
 }
-```
+</pre>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `includes()`
+<h3 id="Usando_includes">Usando <code>includes()</code></h3>
 
-```js
-const str = 'To be, or not to be, that is the question.'
+<pre class="brush: js notranslate">const str = 'To be, or not to be, that is the question.'
 
 console.log(str.includes('To be'))        // true
 console.log(str.includes('question'))     // true
@@ -77,23 +76,34 @@ console.log(str.includes('nonexistent'))  // false
 console.log(str.includes('To be', 1))     // false
 console.log(str.includes('TO BE'))        // false
 console.log(str.includes(''))             // true
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.includes', 'String.prototype.includes')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-string.prototype.includes', 'String.prototype.includes')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("javascript.builtins.String.includes")}}
+<p>{{Compat("javascript.builtins.String.includes")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.endsWith()")}}
+<ul>
+ <li>{{jsxref("Array.prototype.includes()")}}</li>
+ <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
+ <li>{{jsxref("String.prototype.indexOf()")}}</li>
+ <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
+ <li>{{jsxref("String.prototype.startsWith()")}}</li>
+ <li>{{jsxref("String.prototype.endsWith()")}}</li>
+</ul>

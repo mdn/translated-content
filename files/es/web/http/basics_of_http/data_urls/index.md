@@ -10,80 +10,108 @@ tags:
 translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**Datos URIs**, URLs prefijados con los datos`:` esquema, permiten a los creadores de contenido incorporar pequeños archivos en linea en los documentos.
+<p><strong>Datos URIs</strong>, URLs prefijados con los datos<code>:</code> esquema, permiten a los creadores de contenido incorporar pequeños archivos en linea en los documentos.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-Los datos URIs se componen de cuatro partes a: un prefijo (`data:`), un tipo MIME que indica el tipo de datos, un token `base64` opcional no textual, y los datos en si:
+<p>Los datos URIs se componen de cuatro partes a: un prefijo (<code>data:</code>), un tipo MIME que indica el tipo de datos, un token <code>base64</code> opcional no textual, y los datos en si:</p>
 
-    data:[<mediatype>][;base64],<data>
+<pre class="syntaxbox">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
+</pre>
 
-El `mediatype` es una cadena de tipo MIME, por ejemplo `'image/jpeg'` para un archivo de imagen JPEG. si se omite, será por defecto `text/plain;charset=US-ASCII`
+<p>El <code>mediatype</code> es una cadena de tipo MIME, por ejemplo <code>'image/jpeg'</code> para un archivo de imagen JPEG. si se omite, será por defecto <code>text/plain;charset=US-ASCII</code></p>
 
-Si el dato es textual, solo tiene que insertar el texto (utilizando las entidades o escapes adecuados en función del tipo de documento). Por otra parte, puedes especificar base-64 para insertar datos binarios codificados en base-64.
+<p>Si el dato es textual, solo tiene que insertar el texto (utilizando las entidades o escapes adecuados en función del tipo de documento). Por otra parte, puedes especificar base-64 para insertar datos binarios codificados en base-64.</p>
 
-Algunos ejemplos:
+<p>Algunos ejemplos:</p>
 
-- `data:,Hello%2C%20World!`
-  - : Datos simples text/plain
-- `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D`
-  - : versión codificada en base64-encoded de las anteriores
-- `data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E`
-  - : Un documento HTML con `<h1>Hello, World!</h1>`
-- `data:text/html,<script>alert('hi');</script>`
-  - : Un documento HTML que ejecuta una alerta Javascript. Tenga en cuenta que se requiere la etiqueta script de cierre.
+<dl>
+ <dt><code>data:,Hello%2C%20World!</code></dt>
+ <dd>Datos simples text/plain</dd>
+ <dt><code>data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D</code></dt>
+ <dd>versión codificada en base64-encoded de las anteriores</dd>
+ <dt><code>data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E</code></dt>
+ <dd>Un documento HTML con <code>&lt;h1&gt;Hello, World!&lt;/h1&gt;</code></dd>
+ <dt><code>data:text/html,&lt;script&gt;alert('hi');&lt;/script&gt;</code></dt>
+ <dd>Un documento HTML que ejecuta una alerta Javascript. Tenga en cuenta que se requiere la etiqueta script de cierre.</dd>
+</dl>
 
-## Codificación de datos en formato base64
+<h2 id="Codificación_de_datos_en_formato_base64">Codificación de datos en formato base64</h2>
 
-Esto se puede hacer fácilmente desde la línea de comandos usando `uuencode, `una utilidad disponible en sistemas Linux y Mac OS X:
+<p>Esto se puede hacer fácilmente desde la línea de comandos usando <code>uuencode, </code>una utilidad disponible en sistemas Linux y Mac OS X:</p>
 
-    uuencode -m infile remotename
+<pre>uuencode -m infile remotename
+</pre>
 
-El parámetro `infile` es el nombre para el archivo que desees decodificar en formato base64, y `remotename` es el nombre remoto para el archivo, que no se utilizará realmente en los datos de las URLs.
+<p>El parámetro <code>infile</code> es el nombre para el archivo que desees decodificar en formato base64, y <code>remotename</code> es el nombre remoto para el archivo, que no se utilizará realmente en los datos de las URLs.</p>
 
-La salida será similar a esto:
+<p>La salida será similar a esto:</p>
 
-    xbegin-base64 664 test
-    YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
-    ====
+<pre>xbegin-base64 664 test
+YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
+====
+</pre>
 
-El URI de datos utilizará los datos codificados después de la cabezera inicial.
+<p>El URI de datos utilizará los datos codificados después de la cabezera inicial.</p>
 
-### En la pagina Web, usando JavaScript
+<h3 id="En_la_pagina_Web_usando_JavaScript">En la pagina Web, usando JavaScript</h3>
 
-Las Web tiene APIs primitivas para codificar o decodificar en base64: [codificación y decodificación Base64](/es/docs/Web/JavaScript/Base64_encoding_and_decoding).
+<p>Las Web tiene APIs primitivas para codificar o decodificar en base64: <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding">codificación y decodificación Base64</a>.</p>
 
-## Problemas comunes
+<h2 id="Problemas_comunes">Problemas comunes</h2>
 
-Esta sección describe los problemas que comunmente ocurren cuando se crean o se usan los datos URIs.
+<p>Esta sección describe los problemas que comunmente ocurren cuando se crean o se usan los datos URIs.</p>
 
-- Sintaxis
-  - : El formato de los datos URIs es muy simple, pero es facil olvidarse de poner una coma antes del segmento de la "data", o para codificar incorrectamente los datos en formato base64.
-- Formateando en HTML
-  - : Un dato URI provee un archivo dentro de un archivo, que potenciamente puede ser muy amplia con relación con el ancho del documento de cierre. Como una URL, los datos se les puede dar formato con espacios en blanco (avance de línea, pestaña, o espacios), pero hay cuestiones prácticas que se plantean [cuando se usa codificación base64](http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12).
-- Limitaciones de longitud
-  - : Aunque Firefox soporta con URIs de datos de longitud esencialmente ilimitada, los navegadores no estan obligados a apoyar cualquier longitud máxima de datos en particular. Por ejemplo, el navegador Opera 11 limita las URIs de datos cerca de` los `65000 caracteres.
-- Falta de control de errores
-  - : Los parametros no válidos en los medios de comunicación, o errores ortográficos cuando se especifiquen` 'base64'`, se ignoran, pero no se proporciona ningún error.
-- No hay soporte para consulta de cadenas, etc.
-  - : Las partes de datos de URIs de datos son opácos, por lo que un intento de utilizar una cadena de consulta (parametros específicos de página, con la sintaxis` <url>?parameter-data`) con un URIs de datos que se acaba de incluir la cadena de consulta en los datos de la URI que representa. Por ejemplo: data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=valEsto representa un recurso HTML cuyo contenido es: lots of text...<p><a name="bottom">bottom</a>?arg=val
+<dl>
+ <dt>Sintaxis</dt>
+ <dd>El formato de los datos URIs es muy simple, pero es facil olvidarse de poner una coma antes del segmento de la "data", o para codificar incorrectamente los datos en formato base64.</dd>
+ <dt>Formateando en HTML</dt>
+ <dd>Un dato URI provee un archivo dentro de un archivo, que potenciamente puede ser muy amplia con relación con el ancho del documento de cierre. Como una URL, los datos se les puede dar formato con espacios en blanco (<span class="short_text" id="result_box" lang="es"><span>avance de línea</span><span>,</span> <span>pestaña</span><span>, o espacios</span></span>), pero hay cuestiones prácticas que se plantean <a class="external" href="http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12">cuando se usa codificación base64</a>.</dd>
+ <dt>Limitaciones de longitud</dt>
+ <dd>Aunque Firefox soporta con URIs de datos de longitud esencialmente ilimitada, los navegadores no estan obligados a apoyar cualquier longitud máxima de datos en particular. Por ejemplo, el navegador Opera 11 limita las URIs de datos cerca de<code> los </code>65000 caracteres.</dd>
+ <dt>Falta de control de errores</dt>
+ <dd>Los parametros no válidos en los medios de comunicación, o errores ortográficos cuando se especifiquen<code> 'base64'</code>, se ignoran, pero no se proporciona ningún error.</dd>
+ <dt>No hay soporte para consulta de cadenas, etc.</dt>
+ <dd>
+ <p>Las partes de datos de URIs de datos son opácos, por lo que un intento de utilizar una cadena de consulta (parametros específicos de página, con la sintaxis<code> &lt;url&gt;?parameter-data</code>) con un URIs de datos que se acaba de incluir la cadena de consulta en los datos de la URI que representa. Por ejemplo:</p>
 
-## Especificaciones
+ <pre>data:text/html,lots of text...&lt;p&gt;&lt;a name%3D"bottom"&gt;bottom&lt;/a&gt;?arg=val
+</pre>
 
-| Especificación       | Título                 |
-| -------------------- | ---------------------- |
-| {{RFC("2397")}} | The "data" URL scheme" |
+ <p>Esto representa un recurso HTML cuyo contenido es:</p>
 
-## Compatibilidad del navegador
+ <pre class="eval">lots of text...&lt;p&gt;&lt;a name="bottom"&gt;bottom&lt;/a&gt;?arg=val
+</pre>
+ </dd>
+</dl>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Título</th>
+  </tr>
+  <tr>
+   <td>{{RFC("2397")}}</td>
+   <td>The "data" URL scheme"</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{compat}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Base64 codificación y decodificación](/es/docs/Web/JavaScript/Base64_encoding_and_decoding)
-- {{domxref("WindowBase64.atob","atob()")}}
-- {{domxref("WindowBase64.btoa","btoa()")}}
-- [CSS `url()`](/es/docs/Web/CSS/uri)
-- [URI](/es/docs/URI)
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding">Base64 codificación y decodificación</a></li>
+ <li>{{domxref("WindowBase64.atob","atob()")}}</li>
+ <li>{{domxref("WindowBase64.btoa","btoa()")}}</li>
+ <li><a href="/en-US/docs/Web/CSS/uri">CSS <code>url()</code></a></li>
+ <li><a href="/en-US/docs/URI">URI</a></li>
+</ul>

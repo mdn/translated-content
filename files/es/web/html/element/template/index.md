@@ -6,56 +6,78 @@ tags:
 translation_of: Web/HTML/Element/template
 original_slug: Web/HTML/Elemento/template
 ---
-El **elemento** **HTML `<template>`** es un mecanismo para mantener el contenido {{Glossary("HTML")}} del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript.
+<p><span class="seoSummary">El <strong>elemento</strong> <strong>HTML <code>&lt;template&gt;</code></strong> es un mecanismo para mantener el contenido </span> <span class="seoSummary">{{Glossary("HTML")}}</span> <span class="seoSummary">del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript.</span></p>
 
-Piensa en la plantilla como un fragmento de contenido que está siendo almacenado para un uso posterior en el documento. El analizador procesa el contenido del elemento **`<template>` **durante la carga de la página, pero sólo lo hace para asegurar que esos contenidos son válidos; sin embargo, estos contenidos del elemento no se renderizan.
+<p>Piensa en la plantilla como un fragmento de contenido que está siendo almacenado para un uso posterior en el documento. El analizador procesa el contenido del elemento <strong><code>&lt;template&gt;</code> </strong>durante la carga de la página, pero sólo lo hace para asegurar que esos contenidos son válidos; sin embargo, estos contenidos del elemento no se renderizan.</p>
 
-| [Categorías de Contenido](/es/docs/Web/HTML/Content_categories) | [Metadata content](/es/docs/Web/HTML/Content_categories#Metadata_content), [flow content](/es/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/es/docs/Web/Guide/HTML/Content_categories#Phrasing_content), script-supporting element                                                                                                                                                                                                              |
-| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | Sin restricciones                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Omisión de etiquetas                                            | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Padres permitidos                                               | Cualquier elemento que acepte [metadata content](/es/docs/Web/Guide/HTML/Content_categories#Metadata_content), [phrasing content](/es/docs/Web/Guide/HTML/Content_categories#Phrasing_content), o [script-supporting elements](/es/docs/Web/Guide/HTML/Content_categories#Script-supporting_elements). También se permiten como hijos de un elemento {{HTMLElement("colgroup")}} que no tenga un atributo {{htmlattrxref("span", "colgroup")}} . |
-| Implicit ARIA role                                              | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                                                                                                                                                                                                                                                                                                                   |
-| Permitted ARIA roles                                            | No `role` permitted                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| DOM interface                                                   | {{domxref("HTMLTemplateElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                          |
-
-## Atributos
-
-Este elemento sólo incluye [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
-
-SInembargo, {{domxref("HTMLTemplateElement")}} tiene una propiedad {{domxref("HTMLTemplateElement.content", "content")}}, que es solo-lectura cuyo {{domxref("DocumentFragment")}} contiene el subárbol DOM que representa a la plantilla.
-
-## Ejemplo
-
-Primero empezamos con la parte HTML del ejemplo.
-
-```html
-<table id="producttable">
-  <thead>
-    <tr>
-      <td>UPC_Code</td>
-      <td>Product_Name</td>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- datos opcionales pueden incluirse aquí opcionalmente -->
-  </tbody>
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Categorías de Contenido</a></th>
+   <td><a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, script-supporting element</td>
+  </tr>
+  <tr>
+   <th scope="row">Contenido permitido</th>
+   <td>Sin restricciones</td>
+  </tr>
+  <tr>
+   <th scope="row">Omisión de etiquetas</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Padres permitidos</th>
+   <td>Cualquier elemento que acepte <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Metadata_content">metadata content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, o <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Script-supporting_elements">script-supporting elements</a>. También se permiten como hijos de un elemento {{HTMLElement("colgroup")}} que no tenga un atributo {{htmlattrxref("span", "colgroup")}} .</td>
+  </tr>
+  <tr>
+   <th scope="row">Implicit ARIA role</th>
+   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted ARIA roles</th>
+   <td>No <code>role</code> permitted</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM interface</th>
+   <td>{{domxref("HTMLTemplateElement")}}</td>
+  </tr>
+ </tbody>
 </table>
 
-<template id="productrow">
-  <tr>
-    <td class="record"></td>
-    <td></td>
-  </tr>
-</template>
-```
+<h2 id="Atributos">Atributos</h2>
 
-Inicialmente tenemos una tabla en la cual insertaremos más tarde contenido usando código JavaScript. Más abajo viene el template, el cual describe la estructura de un fragmento HTML representando la fila de una tabla.
+<p>Este elemento sólo incluye <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a>.</p>
 
-Ahora que la tabla ha sido creada y el template definido, usamos JavaScript para insertar filas en la tabla, con cada fila siendo construida usando el template como su base.
+<p>SInembargo, {{domxref("HTMLTemplateElement")}} tiene una propiedad  {{domxref("HTMLTemplateElement.content", "content")}}, que es solo-lectura cuyo  {{domxref("DocumentFragment")}} contiene el subárbol DOM que representa a la plantilla.</p>
 
-```js
-// Comprobar si el navegador soporta el elemento HTML template element chequeando
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<p>Primero empezamos con la parte HTML del ejemplo.</p>
+
+<pre class="brush: html">&lt;table id="producttable"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;UPC_Code&lt;/td&gt;
+      &lt;td&gt;Product_Name&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;!-- datos opcionales pueden incluirse aquí opcionalmente --&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;template id="productrow"&gt;
+  &lt;tr&gt;
+    &lt;td class="record"&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/template&gt;
+</pre>
+
+<p>Inicialmente tenemos una tabla en la cual insertaremos más tarde contenido usando código JavaScript. Más abajo viene el template, el cual describe la estructura de un fragmento HTML representando la fila de una tabla.</p>
+
+<p>Ahora que la tabla ha sido creada y el template definido, usamos JavaScript para insertar filas en la tabla, con cada fila siendo construida usando el template como su base.</p>
+
+<pre class="brush:js;">// Comprobar si el navegador soporta el elemento HTML template element chequeando
 // si tiene el atributo 'content'
 if ('content' in document.createElement('template')) {
 
@@ -83,33 +105,52 @@ if ('content' in document.createElement('template')) {
   // Buscar otra manera de añadir filas a la tabla porque el
   // elemento template no está soportado.
 }
-```
+</pre>
 
-El resultado es la tabla HTML original HTML , con dos nuevas filas adjuntadas via JavaScript:
+<p>El resultado es la tabla HTML original HTML , con dos nuevas filas adjuntadas via JavaScript:</p>
 
-```css hidden
-table {
+<div class="hidden">
+<pre class="brush: css">table {
   background: #000;
 }
 table td {
   background: #fff;
-}
-```
+}</pre>
+</div>
 
-{{EmbedLiveSample("Examples", 500, 120)}}
+<p>{{EmbedLiveSample("Examples", 500, 120)}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                   | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG','scripting.html#the-template-element','template element')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}} | {{Spec2('HTML5 W3C')}}     | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','scripting.html#the-template-element','template element')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad navegadores
+<h2 id="Compatibilidad_navegadores">Compatibilidad navegadores</h2>
 
-{{Compat("html.elements.template")}}
 
-## Ver también
 
-- Web components: {{HTMLElement("slot")}} (e históríco: {{HTMLElement("shadow")}})
-- [Usando templates y slots](/es/docs/Web/Web_Components/Using_templates_and_slots)
+<p>{{Compat("html.elements.template")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>Web components: {{HTMLElement("slot")}} (e históríco: {{HTMLElement("shadow")}})</li>
+ <li><a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Usando templates y slots</a></li>
+</ul>

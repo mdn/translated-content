@@ -8,36 +8,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/NaN
 original_slug: Web/JavaScript/Referencia/Objetos_globales/NaN
 ---
-{{jsSidebar("Objects")}}
+<div>{{jsSidebar("Objects")}}</div>
 
-La propiedad global `NaN` es un valor que representa Not-A-Number.
+<div>
+<p dir="ltr" id="tw-target-text">La propiedad global <code>NaN</code> es un valor que representa Not-A-Number.</p>
+</div>
 
-## Sumario
+<h2 id="Summary" name="Summary">Sumario</h2>
 
-Un valor representando un Not-A-Number (No es Un Número).
+<p>Un valor representando un Not-A-Number (No es Un Número).</p>
 
-{{js_property_attributes(0,0,0)}}
+<p>{{js_property_attributes(0,0,0)}}</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-`NaN`
+<p><code>NaN</code></p>
 
-## Descripción
+<h2 id="Description" name="Description">Descripción</h2>
 
-`NaN` es una propiedad del _global object (objeto global)_, por ejemplo, es una variable de alcance global.
+<p><code>NaN</code> es una propiedad del <em>global object (objeto global)</em>, por ejemplo, es una variable de alcance global.</p>
 
-El valor inicial de `NaN` es Not-A-Number (No es Un Número) - lo mismo que el valor de {{jsxref("Number.NaN")}}.
+<p>El valor inicial de <code>NaN</code> es Not-A-Number (No es Un Número) - lo mismo que el valor de {{jsxref("Number.NaN")}}.</p>
 
-Keep text below in sync with Number.NaN page `NaN` nunca es equivalente con cualquier otro número, incluido el mismo `NaN`; no puedes chequear el valor de un not-a-number comparándolo con `Number.NaN`. Usar la función {{jsxref("isNaN()")}} para aquello.
+<p><span class="comment">Keep text below in sync with Number.NaN page</span> <code>NaN</code> nunca es equivalente con cualquier otro número, incluido el mismo <code>NaN</code>; no puedes chequear el valor de un not-a-number comparándolo con <code>Number.NaN</code>. Usar la función {{jsxref("isNaN()")}} para aquello.</p>
 
-Muchos métodos de JavaScript (como son el {{jsxref("Number")}} constructor, {{jsxref("parseFloat")}} y {{jsxref("parseInt")}}) retornan `NaN` si el valor especificado en el parámetro no puede ser parseado como un número.
+<p>Muchos métodos de JavaScript (como son el {{jsxref("Number")}} constructor, {{jsxref("parseFloat")}} y {{jsxref("parseInt")}}) retornan <code>NaN</code> si el valor especificado en el parámetro no puede ser parseado como un número.</p>
 
-Puedes utilizar la propiedad `NaN` para indicar una condición de error para tu función que devuelva un número en caso de éxito.
+<p><span class="hps">Puedes utilizar</span> <span class="hps">la propiedad</span> <code>NaN</code> <span class="hps">para indicar</span> <span class="hps">una condición de error</span> <span class="hps">para</span> tu<span class="hps"> función</span> <span class="hps">que devuelva un número</span> <span class="hps">en caso de éxito</span><span>.</span></p>
 
-JavaScript imprime el valor `Number.NaN` como `NaN`.
+<p>JavaScript imprime el valor <code>Number.NaN</code> como <code>NaN</code>.</p>
 
-## Ver también
+<h2 id="See_also" name="See_also">Ver también</h2>
 
-- {{jsxref("Number.NaN")}}
-- {{jsxref("Number.isNaN()")}}
-- {{jsxref("Objetos_globales/isNaN", "isNaN()")}}
+<ul>
+ <li>{{jsxref("Number.NaN")}}</li>
+ <li>{{jsxref("Number.isNaN()")}}</li>
+ <li>{{jsxref("Objetos_globales/isNaN", "isNaN()")}}</li>
+</ul>

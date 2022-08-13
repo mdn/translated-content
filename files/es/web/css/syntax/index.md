@@ -8,66 +8,74 @@ tags:
   - Web
 translation_of: Web/CSS/Syntax
 ---
-{{cssref}}
+<div>{{cssref}}</div>
 
-La meta básica del lenguaje Cascading Stylesheet (CSS) es permitir al motor del navegador pintar elementos de la página con características específicas, como colores, posición o decoración. La sintaxis CSS refleja estas metas y estos son los bloques básicos de construcción.
+<p>La meta básica del lenguaje Cascading Stylesheet (CSS) es permitir al motor del navegador pintar elementos de la página con características específicas, como colores, posición o decoración. La sintaxis CSS refleja estas metas y estos son los bloques básicos de construcción.</p>
 
-- La **propiedad** que es un identificador, un _nombre_ leíble por humanos, que define qué característica es considerada.
-- El **valor** que describe como las características deben ser manejadas por el motor. Cada propiedad tiene un conjunto de valores válidos, definido por una gramática formal, así como un significado semántico, implementados por el motor del navegador.
+<ul>
+ <li>La <strong>propiedad</strong> que es un identificador, un <em>nombre</em> leíble por humanos, que define qué característica es considerada.</li>
+ <li>
+  <p>El <strong>valor</strong> que describe como las características deben ser manejadas por el motor. Cada propiedad tiene un conjunto de valores válidos, definido por una gramática formal, así como un significado semántico, implementados por el motor del navegador.</p>
+ </li>
+</ul>
 
-## Declaraciones de CSS
+<h2 id="Declaraciones_de_CSS">Declaraciones de CSS</h2>
 
-Configurando propiedades CSS a valores específicos es la función principal del lenguaje del CSS. Una propiedad y su valor son llamados una d**eclaración**, y cualquier motor de CSS calcula qué declaraciones aplican a cada uno de los elementos de una página para mostralos apropiadamente y estilizarlos.
+<p>Configurando propiedades CSS a valores específicos es la función principal del lenguaje del CSS. Una propiedad y su valor son llamados una d<strong>eclaración</strong>, y cualquier motor de CSS calcula qué declaraciones aplican a cada uno de los elementos de una página para mostralos apropiadamente y estilizarlos.</p>
 
-Ambos propiedades y valores son sensibles a mayúculas y minúsculas en CSS. El par se separa por dos puntos, '`:`' (`U+003A COLON`), y los espacios en blanco antes, entre ellos y después, pero no necesariamente dentro de ellos, son ignorados.
+<p>Ambos propiedades y valores son sensibles a mayúculas y minúsculas en CSS. El par se separa por dos puntos, '<code>:</code>' (<code>U+003A COLON</code>), y los espacios en blanco antes, entre ellos y después, pero no necesariamente dentro de ellos, son ignorados.</p>
 
-![css syntax - declaration.png](/@api/deki/files/6164/=css_syntax_-_declaration.png)
+<p><img alt="css syntax - declaration.png" class="default internal" src="/@api/deki/files/6164/=css_syntax_-_declaration.png" style="border: 1px solid black; padding: 1em;"></p>
 
-Hay más de [100 propiedades diferentes](/es/docs/Web/CSS/Reference) en CSS y cerca de un número infinito de diferentes valores. No todos los pares de propiedades y valores son permitidos cada propiedad define que valores son válidos. Cuando un valor no es válido para una propiedad específica, la declaración es considerada _inválida_ y es completamente ignorada por el motor del CSS.
+<p>Hay más de <a href="/es/docs/Web/CSS/Reference" title="/es/docs/Web/CSS/Reference">100 propiedades diferentes</a> en CSS y cerca de un número infinito de diferentes valores. No todos los pares de propiedades y valores son permitidos cada propiedad define que valores son válidos. Cuando un valor no es válido para una propiedad específica, la declaración es considerada <em>inválida</em> y es completamente ignorada por el motor del CSS.</p>
 
-## Bloques de declaraciones en CSS
+<h2 id="Bloques_de_declaraciones_en_CSS">Bloques de declaraciones en CSS</h2>
 
-Las declaraciones son agrupadas en **bloques**, que es una estructura delimitada por una llave de apertura, '`{`' (`U+007B LEFT CURLY BRACKET`), y una de cierre, '`}`' (`U+007D RIGHT CURLY BRACKET`). Los bloques en ocasiones pueden anidarse, por lo que las llaves de apertura y cierre deben de coindidir.
+<p>Las declaraciones son agrupadas en <strong>bloques</strong>, que es una estructura delimitada por una llave de apertura, '<code>{</code>' (<code>U+007B LEFT CURLY BRACKET</code>), y una de cierre, '<code>}</code>' (<code>U+007D RIGHT CURLY BRACKET</code>). Los bloques en ocasiones pueden anidarse, por lo que las llaves de apertura y cierre deben de coindidir.</p>
 
-![css syntax - block.png](/@api/deki/files/6165/=css_syntax_-_block.png)
+<p><img alt="css syntax - block.png" class="default internal" src="/@api/deki/files/6165/=css_syntax_-_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
-Esos bloques son naturalmente llamados **bloques de declaraciones** y las declaraciones dentro de ellos están separadas por un punto y coma, '`;`' (`U+003B SEMICOLON`). Un bloque de declaración puede estar vacío, que es contener una declaración nula. Los espacios en blanco alrededor de las declaraciones son ignorados. En cuanto a la última declaración de un bloque, esta no necesita terminar en un punto y coma, aunque es usualmente considerado una _buena práctica_ porque previene el olvidar agregarlo cuando se extienda el bloque con otra declaración.
+<p>Esos bloques son naturalmente llamados <strong>bloques de declaraciones</strong> y las declaraciones dentro de ellos están separadas por un punto y coma, '<code>;</code>' (<code>U+003B SEMICOLON</code>). Un bloque de declaración puede estar vacío, que es contener una declaración nula. Los espacios en blanco alrededor de las declaraciones son ignorados. En cuanto a la última declaración de un bloque, esta no necesita terminar en un punto y coma, aunque es usualmente considerado una <em>buena práctica</em> porque previene el olvidar agregarlo cuando se extienda el bloque con otra declaración.</p>
 
-![css syntax - declarations block.png](/@api/deki/files/6166/=css_syntax_-_declarations_block.png)
+<p><img alt="css syntax - declarations block.png" class="default internal" src="/@api/deki/files/6166/=css_syntax_-_declarations_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
-> **Nota:** El contenido de un bloque de declaración CSS, que es una lista de declaraciones separadas por un punto y coma, sin las llaves de apertura y cierre, pueden ser colocadas dentro del atributo `style de HTML`.
+<div class="note">El contenido de un bloque de declaración CSS, que es una lista de declaraciones separadas por un punto y coma, sin las llaves de apertura y cierre, pueden ser colocadas dentro del atributo  <code><a href="/es/docs/Web/HTML/Global_attributes#attr-style" title="/es/HTML/Global_attributes#attr-style">style</a> de HTML</code>.</div>
 
-## Sets de reglas CSS
+<h2 id="Sets_de_reglas_CSS">Sets de reglas CSS</h2>
 
-Si cada hoja de estilos pudiera aplicar una sola declaración a cada elemento de una página web, sería algo inútil. El verdadero objetivo es aplicar varias declaraciones a distintas partes del documento.
+<p>Si cada hoja de estilos pudiera aplicar una sola declaración a cada elemento de una página web, sería algo inútil. El verdadero objetivo es aplicar varias declaraciones a distintas partes del documento.</p>
 
-CSS permite esto asociando condiciones con bloques de declaraciones. Cada declaración (válida) es precedida por un _selector_, es decir, una condición que selecciona algunos elementos de la página. El bloque que forma el par selector-declaraciones recibe el nombre de **set de reglas**, o simplemente una **regla**.
+<p>CSS permite esto asociando condiciones con bloques de declaraciones. Cada declaración (válida) es precedida por un <em>selector</em>, es decir, una condición que selecciona algunos elementos de la página. El bloque que forma el par selector-declaraciones recibe el nombre de <strong>set de reglas</strong>, o simplemente una <strong>regla</strong>.</p>
 
-![css syntax - ruleset.png](/@api/deki/files/6167/=css_syntax_-_ruleset.png)
+<p><img alt="css syntax - ruleset.png" class="default internal" src="/@api/deki/files/6167/=css_syntax_-_ruleset.png" style="border: 1px solid black; padding: 1em;"></p>
 
-Debido a que un elemento de la página puede ser seleccionado por varios selectores, y, por lo tanto, por varias reglas que pueden contener la misma propiedad más de una vez, con diferentes valores, el estandar CSS define cuál regla tiene precedencia por sobre las otras y debe ser aplicada: esto se conoce como el algoritmo [cascada](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance "Cascading and inheritance").
+<p>Debido a que un elemento de la página puede ser seleccionado por varios selectores, y, por lo tanto, por varias reglas que pueden contener la misma propiedad más de una vez, con diferentes valores, el estandar CSS define cuál regla tiene precedencia por sobre las otras y debe ser aplicada: esto se conoce como el algoritmo <a href="/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance" title="Cascading and inheritance">cascada</a>.</p>
 
-> **Nota:** Es importante resaltar que si un set de reglas formado por un grupo de selectores es un atajo que reemplaza varios sets de reglas con un solo selector cada una, esto no aplica a la validez del set de reglas en sí.
->
-> Esto tiene una consecuencia importante: si algún selector básico es inválido, como cuando se usa un pseudo-elemento o pseudo-clase inválida, el _selector_ entero es inválido y, por lo tanto, el set de reglas completo es ignorado (por ser inválido también).
+<div class="note">Es importante resaltar que si un set de reglas formado por un grupo de selectores es un atajo que reemplaza varios sets de reglas con un solo selector cada una, esto no aplica a la validez del set de reglas en sí.<br>
+<br>
+Esto tiene una consecuencia importante: si algún selector básico es inválido, como cuando se usa un pseudo-elemento o pseudo-clase inválida, el <em>selector </em>entero es inválido y, por lo tanto, el set de reglas completo es ignorado (por ser inválido también).</div>
 
-## Declaraciones CSS
+<h2 id="Declaraciones_CSS">Declaraciones CSS</h2>
 
-Los sets de reglas son los bloques principales de una hoja de estilos, que generalmente consiste en una larga lista de ellos. Pero existe otro tipo de información que el autor web puede transmitir en la hoja de estilos, como el set de caracteres, otra hoja de estilos a importar, font face o listar descripciones de contador, entre otros. Se usarán tipos de declaracionnes específicas para esto mismo.
+<p>Los sets de reglas son los bloques principales de una hoja de estilos, que generalmente consiste en una larga lista de ellos. Pero existe otro tipo de información que el autor web puede transmitir en la hoja de estilos, como el set de caracteres, otra hoja de estilos a importar, font face o listar descripciones de contador, entre otros. Se usarán tipos de declaracionnes específicas para esto mismo.</p>
 
-Una **declaración** es un bloque que empieza con un caracter (no espacio) y termina con la primer llave de cierre o punto y coma (fuera de una cadena, sin escape y no incluñido dentro de otro par de {}. () o \[]).
+<p>Una <strong>declaración </strong>es un bloque que empieza con un caracter (no espacio) y termina con la primer llave de cierre o punto y coma (fuera de una cadena, sin escape y no incluñido dentro de otro par de {}. () o []).</p>
 
-![css syntax - statements Venn diag.png](/@api/deki/files/6168/=css_syntax_-_statements_Venn_diag.png)
+<p><img alt="css syntax - statements Venn diag.png" class="default internal" src="/@api/deki/files/6168/=css_syntax_-_statements_Venn_diag.png" style="padding: 1em;"></p>
 
-Existen dos tipos de declaraciones:
+<p>Existen dos tipos de declaraciones:</p>
 
-- **Sets de reglas** (o _reglas_) que, como lo visto, asocian una colección de declaraciones CSS a una condición descrita como selector.
-- **Reglas At** que inician con un símbolo '`@`' (`U+0040 COMMERCIAL AT`), seguido de un identificador y luego el resto de la declaración que finaliza con un punto y coma (;) por fuera de un bloque o al inicio del próximo bloque. Cada tipo de [reglas at](/es/docs/Web/CSS/At-rule "At-rule"), definidas por un identificador, tienen su propia sintaxis interna, y semántica por supuesto. Se utilizan para establecer información de meta datos (como {{ cssxref("@charset") }} o {{ cssxref("@import") }}), información condicional (como {{ cssxref("@media") }} o {{ cssxref("@document") }}), o información descrciptiva (como {{ cssxref("@font-face") }}).
+<ul>
+ <li><strong>Sets de reglas </strong>(o <em>reglas</em>) que, como lo visto, asocian una colección de declaraciones CSS a una condición descrita como selector.</li>
+ <li><strong>Reglas At</strong> que inician con un símbolo '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), seguido de un identificador y luego el resto de la declaración que finaliza con un punto y coma (;) por fuera de un bloque o al inicio del próximo bloque. Cada tipo de <a href="/es/docs/Web/CSS/At-rule" title="At-rule">reglas at</a>, definidas por un identificador, tienen su propia sintaxis interna, y semántica por supuesto. Se utilizan para establecer información de meta datos (como {{ cssxref("@charset") }} o {{ cssxref("@import") }}), información condicional (como {{ cssxref("@media") }} o {{ cssxref("@document") }}), o información descrciptiva (como {{ cssxref("@font-face") }}).</li>
+</ul>
 
-Toda declaración que no es un set de reglas ni una regla at es considerada inválida e ignorada.
+<p>Toda declaración que no es un set de reglas ni una regla at es considerada inválida e ignorada.</p>
 
-Existe otro grupo de declaraciones: las **declaraciones anidadas**. Estas son declaraciones que pueden ser usadas en un subset específico de reglas at (las _reglas de grupo condicionales_). Estas declaraciones sólo aplican si una condición específica se cumple: el contenido de la regla at `@media` se aplica sólo si el dispositivo en el que el navegador se encuentra corriendo cumple dadas condiciones; el contenido de la regla at `@document` se aplica sólo si la página actual cumple dadas condiciones, y así. En CSS1 y CSS2.1, sólo los sets de reglas pueden ser usados dentro de reglas de grupo condicionales. Esto era muy restrictivo y se dejó de aplicar en [_CSS Conditionals Level 3_](/es/docs/Web/CSS/CSS_Conditional_Rules). Actualmente, aunque sigue siendo experimental y no es soportado por todos los navegadores, las reglas de grupo condicional pueden contener varios sets de reglas, e incluso, aunque no todas, reglas at.
+<p><a name="nested_statements">Existe otro grupo de declaraciones: las <strong>declaraciones anidadas</strong>. Estas son declaraciones que pueden ser usadas en un subset específico de reglas at (las <em>reglas de grupo condicionales</em>). Estas declaraciones sólo aplican si una condición específica se cumple: el contenido de la regla at <code>@media</code> se aplica sólo si el dispositivo en el que el navegador se encuentra corriendo cumple dadas condiciones; el contenido de la regla at <code>@document</code> se aplica sólo si la página actual cumple dadas condiciones, y así. En CSS1 y CSS2.1, sólo los sets de reglas pueden ser usados dentro de reglas de grupo condicionales. Esto era muy restrictivo y se dejó de aplicar en </a><a href="/es/docs/Web/CSS/CSS_Conditional_Rules" title="/es/docs/Web/CSS/CSS_Conditional_Rules"><em>CSS Conditionals Level 3</em></a>. Actualmente, aunque sigue siendo experimental y no es soportado por todos los navegadores, las reglas de grupo condicional pueden contener varios sets de reglas, e incluso, aunque no todas, reglas at.</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{ CSS_key_concepts()}}
+<ul>
+ <li>{{ CSS_key_concepts()}}</li>
+</ul>

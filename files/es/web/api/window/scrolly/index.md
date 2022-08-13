@@ -8,51 +8,54 @@ tags:
   - Scroll Vertical
 translation_of: Web/API/Window/scrollY
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-## Sumario
+<h2 id="Summary" name="Summary">Sumario</h2>
 
-Retorna el número de píxeles que han sido desplazados en el documento mediante el scroll vertical.
+<p>Retorna el número de píxeles que han sido desplazados en el documento mediante el scroll vertical.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    var y = window.scrollY;
+<pre class="syntaxbox">var y = window.scrollY;</pre>
 
-- y es el número de píxeles que se han desplazado actualmente desde el extremo superior de la página.
+<ul>
+ <li>y es el número de píxeles que se han desplazado actualmente desde el extremo superior de la página.</li>
+</ul>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-// Asegurate de bajar a la segunda página
+<pre class="brush:js">// Asegurate de bajar a la segunda página
 if (window.scrollY) {
   window.scroll(0, 0);  // Restablece la posición de desplazamiento en la parte superior izquierda del documento
 }
 
-window.scrollByPages(1);
-```
+window.scrollByPages(1);</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-Usa esta propiedad para verificar que al documento no se le ha hecho scroll, si estás usando funciones relativas de scroll como {{domxref("window.scrollBy")}}, {{domxref("window.scrollByLines")}}, o {{domxref("window.scrollByPages")}}.
+<p>Usa esta propiedad para verificar que al documento no se le ha hecho scroll, si estás usando funciones relativas de scroll como {{domxref("window.scrollBy")}}, {{domxref("window.scrollByLines")}}, o {{domxref("window.scrollByPages")}}.</p>
 
-La propiedad `pageYOffset` es un alias para la propiedad `scrollY`:
+<p>La propiedad <code>pageYOffset</code> es un alias para la propiedad <code>scrollY</code>:</p>
 
-    window.pageYOffset == window.scrollY; // Siempre verdadero
+<pre>window.pageYOffset == window.scrollY; // Siempre verdadero</pre>
 
-Para compatibilidad entre navegadores, es recomendable usar window\.pageYOffset en vez de window\.scrollY. **Adicionalmente**, tener en cuenta que versiones más viejas de Internet Explorer (<9) no soportan del todo la propiedad y debe ser solucionado usando propiedades no estandarizadas . Un ejemplo totalmente compatible entre navegadores:
+<p>Para compatibilidad entre navegadores, es recomendable usar window.pageYOffset en vez de window.scrollY. <strong>Adicionalmente</strong>, tener en cuenta que versiones más viejas de Internet Explorer (&lt;9) no soportan del todo la propiedad y debe ser solucionado usando propiedades no estandarizadas . Un ejemplo totalmente compatible entre navegadores:</p>
 
-```js
-var supportPageOffset = window.pageXOffset !== undefined;
+<pre class="brush:js">var supportPageOffset = window.pageXOffset !== undefined;
 var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 
 var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
 var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
-```
+</pre>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-- CSSOM View Module: [window.scrollY](http://dev.w3.org/csswg/cssom-view/#dom-window-scrolly) (Editor's Draft)
+<ul>
+ <li>CSSOM View Module: <a href="http://dev.w3.org/csswg/cssom-view/#dom-window-scrolly">window.scrollY</a> (Editor's Draft)</li>
+</ul>
 
-## Ver también
+<h2 id="See_also" name="See_also">Ver también</h2>
 
-- {{domxref("window.scrollX")}}
+<ul>
+ <li>{{domxref("window.scrollX")}}</li>
+</ul>

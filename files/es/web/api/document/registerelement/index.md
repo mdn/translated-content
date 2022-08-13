@@ -3,54 +3,67 @@ title: Document.registerElement()
 slug: Web/API/Document/registerElement
 translation_of: Web/API/Document/registerElement
 ---
-{{APIRef("DOM")}}{{Deprecated_header}}
+<p>{{APIRef("DOM")}}{{Deprecated_header}}</p>
 
-El **`Document.registerElement()`** registra un nuevo [elemento personalizado](/es/docs/Web/Web_Components/Custom_Elements) en el navegador y devuelve un constructor para el nuevo elemento.
+<p>El <code><strong>Document.registerElement()</strong></code> registra un nuevo <a href="/en-US/docs/Web/Web_Components/Custom_Elements">elemento personalizado</a> en el navegador y devuelve un constructor para el nuevo elemento.</p>
 
-> **Nota:** Esta es una tecnología experimental. El navegador que utilice debe ser compatible con Web Components. Ver [Web Components habilitados en Firefox](/es/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox).
+<div class="note">
+<p><strong>Nota:</strong> Esta es una tecnología experimental. El navegador que utilice debe ser compatible con Web Components. Ver <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Web Components habilitados en Firefox</a>.</p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var constructor = document.registerElement(tag-name, options);
+<pre class="syntaxbox">var <em>constructor</em> = document.registerElement(<em>tag-name</em>, <em>options</em>);</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- _tag-name_
-  - : El nombre del elemento personalizado. El nombre debe contener un guión (-), por ejemplo `my-tag`.
-- _options {{optional_inline}}_
-  - : Un objeto que da nombre al prototipo que sirve de base para el elemento personalizado, y una etiqueta existente para extender. Ambos son opcionales.
+<dl>
+ <dt><em>tag-name</em></dt>
+ <dd>El nombre del elemento personalizado. El nombre debe contener un guión (-), por ejemplo <code>my-tag</code>.</dd>
+ <dt><em>options {{optional_inline}}</em></dt>
+ <dd>Un objeto que da nombre al prototipo que sirve de base para el elemento personalizado, y una etiqueta existente para extender. Ambos son opcionales.</dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-Aquí hay un ejemplo muy simple:
+<p>Aquí hay un ejemplo muy simple:</p>
 
-```js
-var Mytag = document.registerElement('my-tag');
-```
+<pre class="brush: js">var Mytag = document.registerElement('my-tag');
+</pre>
 
-Ahora el nuevo tag se ha registrado en el navegador. La variable MyTag contiene un constructor que lo puedes usar para crear un elemento my-tag en el documento de la siguiente manera:
+<p>Ahora el nuevo tag se ha registrado en el navegador. La variable MyTag contiene un constructor que lo puedes usar para crear un elemento my-tag  en el documento de la siguiente manera:</p>
 
-```js
-document.body.appendChild(new Mytag());
-```
+<pre class="brush: js">document.body.appendChild(new Mytag());</pre>
 
-Esto inserta un elemento my-tag vacío que será visible si utiliza las herramientas de desarrollo del navegador. No será visible si usa la capacidad de ver el código fuente del navegador. Y no será visible en el navegador a menos que agregue algún contenido para la etiqueta. Esta es la manera de agregar contenido a la nueva etiqueta:
+<p>Esto inserta un elemento my-tag vacío que será visible si utiliza las herramientas de desarrollo del navegador. No será visible si usa la capacidad de ver el código fuente del navegador. Y no será visible en el navegador a menos que agregue algún contenido para la etiqueta. Esta es la manera de agregar contenido a la nueva etiqueta:</p>
 
-```js
-var mytag = document.getElementsByTagName("my-tag")[0];
+<pre class="brush: js">var mytag = document.getElementsByTagName("my-tag")[0];
 mytag.textContent = "I am a my-tag element.";
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                           | Estado                               | Comentario         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Custom Elements')}} | {{Spec2('Custom Elements')}} | Definición inicial |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Custom Elements')}}</td>
+   <td>{{Spec2('Custom Elements')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{Compat("api.Document.registerElement")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Custom Elements](/es/docs/Web/Web_Components/Custom_Elements)
+<ul>
+ <li><a dir="ltr" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements">Custom Elements</a></li>
+</ul>

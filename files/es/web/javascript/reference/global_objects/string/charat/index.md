@@ -9,33 +9,34 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/charAt
 ---
-{{JSRef("Objetos_globales", "String")}}
+<p>{{JSRef("Objetos_globales", "String")}}</p>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-El método **`charAt() `**`de`**` `**{{jsxref("String")}} devuelve en un nuevo String el carácter UTF-16 de una cadena.
+<p>El método <strong><code>charAt() </code></strong><code>de</code><strong><code> </code></strong>{{jsxref("String")}} devuelve en un nuevo String el carácter UTF-16 de una cadena.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    str.charAt(indice)
+<pre class="syntaxbox"><em>str</em>.charAt(<em>indice</em>)</pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-- `indice`
-  - : Un entero entre 0 y 1 menos que la longitud de la cadena. Si no se proporciona ningún indice charAt() utilizará 0.
+<dl>
+ <dt><code>indice</code></dt>
+ <dd>Un entero entre 0 y 1 menos que la longitud de la cadena. Si no se proporciona ningún indice charAt() utilizará 0.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer caracter es 0, y el índice del último caracter en una cadena llamada `nombreCadena` es `nombreCadena.length - 1`. Si el `indice` que usted proporciona está fuera del rango, JavaScript devuelve una cadena vacía.
+<p>Los caracteres de una cadena se indexan de izquierda a derecha. El índice del primer caracter es 0, y el índice del último caracter en una cadena llamada <code>nombreCadena</code> es <code>nombreCadena.length - 1</code>. Si el <code>indice</code> que usted proporciona está fuera del rango, JavaScript devuelve una cadena vacía.</p>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-### Ejemplo: Mostrando caracteres de diferentes localizaciones en una cadena
+<h3 id="Ejemplo:_Mostrando_caracteres_de_diferentes_localizaciones_en_una_cadena" name="Ejemplo:_Mostrando_caracteres_de_diferentes_localizaciones_en_una_cadena">Ejemplo: Mostrando caracteres de diferentes localizaciones en una cadena</h3>
 
-El siguiente ejemplo muestra caracteres de diferentes localizaciones en la cadena "`Brave new world`":
+<p>El siguiente ejemplo muestra caracteres de diferentes localizaciones en la cadena "<code>Brave new world</code>":</p>
 
-```js
-var cualquierCadena="Brave new world";
+<pre class="brush: js">var cualquierCadena="Brave new world";
 
 console.log("El carácter en el índice 0 es '" + cualquierCadena.charAt(0) + "'")
 console.log("El carácter en el índice 1 es '" + cualquierCadena.charAt(1) + "'")
@@ -43,33 +44,55 @@ console.log("El carácter en el índice 2 es '" + cualquierCadena.charAt(2) + "'
 console.log("El carácter en el índice 3 es '" + cualquierCadena.charAt(3) + "'")
 console.log("El carácter en el índice 4 es '" + cualquierCadena.charAt(4) + "'")
 console.log("El carácter en el índice 999 es '" + cualquierCadena.charAt(999) + "'")
-```
+</pre>
 
-Estas líneas muestran lo siguiente:
+<p>Estas líneas muestran lo siguiente:</p>
 
-    El carácter en el índice 0 es 'B'
-    El carácter en el índice 1 es 'r'
-    El carácter en el índice 2 es 'a'
-    El carácter en el índice 3 es 'v'
-    El carácter en el índice 4 es 'e'
-    El carácter en el índice 999 es ''
+<pre>El carácter en el índice 0 es 'B'
+El carácter en el índice 1 es 'r'
+El carácter en el índice 2 es 'a'
+El carácter en el índice 3 es 'v'
+El carácter en el índice 4 es 'e'
+El carácter en el índice 999 es ''
+</pre>
 
-## Especificaciónes
+<h2 id="Especificaciónes">Especificaciónes</h2>
 
-| Especificación                                                                                           | Estado                   | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| ECMAScript 1st Edition.                                                                                  | Estándar                 | Primera definición |
-| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}                 | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}     |                    |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1st Edition.</td>
+   <td>Estándar</td>
+   <td>Primera definición</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("javascript.builtins.String.charAt")}}
 
-## Vea También
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
 
-- {{jsxref("String.prototype.indexOf()")}}, {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
+<ul>
+ <li>{{jsxref("String.prototype.indexOf()")}}, {{jsxref("String.prototype.lastIndexOf()")}}</li>
+ <li>{{jsxref("String.prototype.split()")}}</li>
+ <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
+ <li>{{jsxref("String.fromCodePoint()")}}</li>
+ <li>{{jsxref("String.prototype.codePointAt()")}}</li>
+</ul>

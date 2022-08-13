@@ -3,48 +3,77 @@ title: Access-Control-Allow-Methods
 slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-La cabecera de respuesta **`Access-Control-Allow-Methods`** especifica el método o los métodos aceptados cuando se accede al recurso en respuesta de un {{glossary("preflight request")}}.
+<p>La cabecera de respuesta <strong><code>Access-Control-Allow-Methods</code></strong> especifica el método o los métodos aceptados cuando se accede al recurso en respuesta de un {{glossary("preflight request")}}.</p>
 
-| Tipo de cabecera                                 | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Tipo de cabecera</th>
+   <td>{{Glossary("Response header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <td>no</td>
+  </tr>
+ </tbody>
+</table>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Access-Control-Allow-Methods: <method>, <method>, ...
+<pre class="syntaxbox">Access-Control-Allow-Methods: &lt;method&gt;, &lt;method&gt;, ...
+</pre>
 
-## Directivas
+<h2 id="Directivas">Directivas</h2>
 
-- \<método>
-  - : Comma-delimited list of the allowed [HTTP request methods](/es/docs/Web/HTTP/Methods).
+<dl>
+ <dt>&lt;método&gt;</dt>
+ <dd>Comma-delimited list of the allowed <a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a>.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-    Access-Control-Allow-Methods: POST, GET, OPTIONS
+<pre>Access-Control-Allow-Methods: POST, GET, OPTIONS</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}}</td>
+   <td>{{Spec2("Fetch")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegador
+<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
 
-{{Compat("http.headers.Access-Control-Allow-Methods")}}
+<p>{{Compat("http.headers.Access-Control-Allow-Methods")}}</p>
 
-## Notas de compatibilidad
+<h2 id="Notas_de_compatibilidad">Notas de compatibilidad</h2>
 
-- The wildcard value (\*) that is mentioned in the latest specification, is not yet implemented in browsers:
+<ul>
+ <li>The wildcard value (*) that is mentioned in the latest specification, is not yet implemented in browsers:
+  <ul>
+   <li>Chromium: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615313">Issue 615313</a></li>
+   <li>Firefox: {{bug(1309358)}}</li>
+   <li>Servo: <a href="https://github.com/servo/servo/issues/13283">Issue 13283</a></li>
+  </ul>
+ </li>
+</ul>
 
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
+<h2 id="See_also">See also</h2>
 
-## See also
-
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Request-Method")}}
+<ul>
+ <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
+ <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
+ <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
+ <li>{{HTTPHeader("Access-Control-Request-Method")}}</li>
+</ul>

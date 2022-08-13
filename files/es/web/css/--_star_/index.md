@@ -3,45 +3,47 @@ title: 'Propiedades personalizadas (--*): variables CSS'
 slug: Web/CSS/--*
 translation_of: Web/CSS/--*
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-Los nombres de las propiedades que tiene el prefijo `--`, como `--ejemplo-nombre`, representan las _propiedades personalizadas_ que contienen un valor que puede ser usado en otras declaraciones usando la función {{cssxref("var")}}.
+<p class="summary"><span class="seoSummary">Los nombres de las propiedades que tiene el prefijo <code>--</code>, como <code>--ejemplo-nombre</code>, representan las <em>propiedades personalizadas </em>que contienen un valor que puede ser usado en otras declaraciones usando la función {{cssxref("var")}}.</span></p>
 
-Las propiedades personalizadas tienen como alcance los elementos en los que se declaran y participan en la cascada: el valor de dicha propiedad personalizada es el de la declaración decidida por el algoritmo en cascada.
+<p>Las propiedades personalizadas tienen como alcance los elementos en los que se declaran y participan en la cascada: el valor de dicha propiedad personalizada es el de la declaración decidida por el algoritmo en cascada.</p>
 
-{{CSSInfo}}
+<p>{{CSSInfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    --somekeyword: left;
-    --somecolor: #0000ff;
-    --somecomplexvalue: 3px 6px rgb(20, 32, 54);
+<pre class="syntaxbox notranslate">--somekeyword: left;
+--somecolor: #0000ff;
+--somecomplexvalue: 3px 6px rgb(20, 32, 54);
+</pre>
 
-- `<declaración-valor>`
-  - : Este valor coincide con cualquier secuencia de uno o más tokens, siempre que la secuencia no contenga un token no permitido.
+<dl>
+ <dt><code>&lt;declaración-valor&gt;</code></dt>
+ <dd>Este valor coincide con cualquier secuencia de uno o más tokens, siempre que la secuencia no contenga un token no permitido.</dd>
+</dl>
 
-> **Nota:** Los nombres de las propiedades personalizadas distinguen entre mayúsculas y minúsculas — `--mi-color` se tratará como una propiedad personalizada separada de `--Mi-color`.
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: Los nombres de las propiedades personalizadas distinguen entre mayúsculas y minúsculas — <code>--mi-color</code> se tratará como una propiedad personalizada separada de <code>--Mi-color</code>.</p>
+</div>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{CSSSyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<p id="firstParagraph">Este párrafo debe tener un fondo azul y un texto amarillo.</p>
-<p id="secondParagraph">Este párrafo debe tener un fondo amarillo y un texto azul.</p>
-<div id="container">
-  <p id="thirdParagraph">Este párrafo debe tener un fondo verde y un texto amarillo.</p>
-</div>
-```
+<pre class="brush: html notranslate">&lt;p id="firstParagraph"&gt;Este párrafo debe tener un fondo azul y un texto amarillo.&lt;/p&gt;
+&lt;p id="secondParagraph"&gt;Este párrafo debe tener un fondo amarillo y un texto azul.&lt;/p&gt;
+&lt;div id="container"&gt;
+  &lt;p id="thirdParagraph"&gt;Este párrafo debe tener un fondo verde y un texto amarillo.&lt;/p&gt;
+&lt;/div&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-:root {
+<pre class="brush: css; highlight[2,3] notranslate">:root {
   --first-color: #488cff;
   --second-color: #ffff8c;
 }
@@ -64,23 +66,41 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
   background-color: var(--first-color);
   color: var(--second-color);
 }
-```
 
-### Resultado
+</pre>
 
-{{EmbedLiveSample('Example', 500, 130)}}
+<h3 id="Resultado">Resultado</h3>
 
-## Especificaciones
+<p>{{EmbedLiveSample('Example', 500, 130)}}</p>
 
-| Especificación                                                                   | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Initial definition. |
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Compatibilidad con navegadores
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS3 Variables", "#defining-variables", "--*")}}</td>
+   <td>{{Spec2("CSS3 Variables")}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("css.properties.custom-property")}}
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-## Ver también
 
-- [Usando variables CSS](/es/docs/Web/CSS/Using_CSS_variables)
-- La función {{cssxref("var")}}
+
+<p>{{Compat("css.properties.custom-property")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">Usando variables CSS</a></li>
+ <li><span class="seoSummary">La función {{cssxref("var")}}</span></li>
+</ul>

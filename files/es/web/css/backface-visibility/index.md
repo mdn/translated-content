@@ -8,85 +8,86 @@ tags:
   - Referencia
 translation_of: Web/CSS/backface-visibility
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<p>{{CSSRef}}{{SeeCompatTable}}</p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad [CSS](/es/docs/CSS "CSS") **`backface-visibility`** determina si la cara posterior de un elemento es visible de frente al usuario. La cara posterior de un elemento siempre es un fondo transparente, permitiendo, cuando es visible, que se muestre una imagen de espejo de la cara frontal.
+<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>backface-visibility</code></strong> determina si la cara posterior de un elemento es visible de frente al usuario. La cara posterior de un elemento siempre es un fondo transparente, permitiendo, cuando es visible, que se muestre una imagen de espejo de la cara frontal.</p>
 
-Hay casos en los que no queremos que la cara frontal de un elemento sea visible a través de la cara posterior, como cuando se hace el efecto de voltear una tarjeta (estableciendo dos elementos lado a lado).
+<p>Hay casos en los que no queremos que la cara frontal de un elemento sea visible a través de la cara posterior, como cuando se hace el efecto de voltear una tarjeta (estableciendo dos elementos lado a lado).</p>
 
-Esta propiedad no tiene efecto en transformaciones 2D, pues estos no tienen perspectiva.
+<p>Esta propiedad no tiene efecto en transformaciones 2D, pues estos no tienen perspectiva.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-backface-visibility: visible;
+<pre class="brush: css">backface-visibility: visible;
 backface-visibility: hidden;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-Esta propiedad puede tener dos valores diferentes (y exclusivos):
+<p>Esta propiedad puede tener dos valores diferentes (y exclusivos):</p>
 
-- `visible` significa que la cara posterior es visible, permitiendo que la cara frontal se muestre invertida
-- `hidden` significa que la cara posterior no es visible, ocultando la cara frontal
+<ul>
+ <li><code>visible</code> significa que la cara posterior es visible, permitiendo que la cara frontal se muestre invertida</li>
+ <li><code>hidden</code> significa que la cara posterior no es visible, ocultando la cara frontal</li>
+</ul>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+
+<dl>
+</dl>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Cubo con caras transparentes
+<h3 id="Cubo_con_caras_transparentes">Cubo con caras transparentes</h3>
 
-#### Contenido HTML
+<h4 id="Contenido_HTML">Contenido HTML</h4>
 
-```html
-<table>
-  <tbody>
-    <tr>
-      <th><code>backface-visibility: visible;</code></th>
-      <th><code>backface-visibility: hidden;</code></th>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="cube showbf">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-        <p>All the faces are transparent and the three back faces are visible through the front ones.</p>
-      </td>
-      <td>
-        <div class="container">
-          <div class="cube hidebf">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-        <p>No face is opaque, but the three back faces are always hidden now.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-```
+<pre class="brush: html">&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;code&gt;backface-visibility: visible;&lt;/code&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;code&gt;backface-visibility: hidden;&lt;/code&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;div class="container"&gt;
+          &lt;div class="cube showbf"&gt;
+            &lt;div class="face front"&gt;1&lt;/div&gt;
+            &lt;div class="face back"&gt;2&lt;/div&gt;
+            &lt;div class="face right"&gt;3&lt;/div&gt;
+            &lt;div class="face left"&gt;4&lt;/div&gt;
+            &lt;div class="face top"&gt;5&lt;/div&gt;
+            &lt;div class="face bottom"&gt;6&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p&gt;All the faces are transparent and the three back faces are visible through the front ones.&lt;/p&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;div class="container"&gt;
+          &lt;div class="cube hidebf"&gt;
+            &lt;div class="face front"&gt;1&lt;/div&gt;
+            &lt;div class="face back"&gt;2&lt;/div&gt;
+            &lt;div class="face right"&gt;3&lt;/div&gt;
+            &lt;div class="face left"&gt;4&lt;/div&gt;
+            &lt;div class="face top"&gt;5&lt;/div&gt;
+            &lt;div class="face bottom"&gt;6&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p&gt;No face is opaque, but the three back faces are always hidden now.&lt;/p&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
 
-#### Contenido CSS
+<h4 id="Contenido_CSS">Contenido CSS</h4>
 
-```css
-/* Shorthand classes that will show or hide the three back faces of the "cube" */
+<pre class="brush: css">/* Shorthand classes that will show or hide the three back faces of the "cube" */
 .hidebf div {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -174,23 +175,37 @@ th, p, td {
   padding: 6px;
   font-family: sans-serif;
   text-align: left;
-}
-```
+}</pre>
 
-#### Resultado
+<h4 id="Resultado">Resultado</h4>
 
-{{EmbedLiveSample('Cube_with_transparent_faces', 620, 460)}}
+<p>{{EmbedLiveSample('Cube_with_transparent_faces', 620, 460)}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                       | Estatus                              | Comentarios        |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Transforms', '#backface-visibility-property', 'backface-visibility')}} | {{Spec2('CSS3 Transforms')}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Transforms', '#backface-visibility-property', 'backface-visibility')}}</td>
+   <td>{{Spec2('CSS3 Transforms')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("css.properties.backface-visibility")}}
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- [Uso de CSS transforms](/es/docs/CSS/Using_CSS_transforms "/en-US/docs/CSS/Using_CSS_transforms")
+<ul>
+ <li><a href="/es/docs/CSS/Using_CSS_transforms" title="/en-US/docs/CSS/Using_CSS_transforms">Uso de CSS transforms</a></li>
+</ul>

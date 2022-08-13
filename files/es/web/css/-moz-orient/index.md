@@ -3,67 +3,67 @@ title: '-moz-orient'
 slug: Web/CSS/-moz-orient
 translation_of: Web/CSS/-moz-orient
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-The `-moz-orient` [CSS](/es/docs/Web/CSS) especifica la orientación del elemento al que se aplica.
+<p>The <code>-moz-orient</code> <a href="/en-US/docs/Web/CSS">CSS</a> especifica la orientación del elemento al que se aplica.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
 {{csssyntax}}
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `inline`
-  - : El elemento se representa en la misma dirección que el eje del texto : horizontal para los modos de escritura horizontales , verticalmente para los modos de escritura vertical .
-- `block`
-  - : El elemento se representa de forma ortogonal al eje del texto : verticalmente para los modos de escritura horizontal , horizontal para los modos de escritura vertical .
-- `horizontal`
-  - : El elemento se representa horizontalmente.
-- `vertical`
-  - : El elemento se representa verticalmente.
+<dl>
+ <dt><code>inline</code></dt>
+ <dd>El elemento se representa en la misma dirección que el eje del texto : horizontal para los modos de escritura horizontales , verticalmente para los modos de escritura vertical .</dd>
+ <dt><code>block</code></dt>
+ <dd>El elemento se representa de forma ortogonal al eje del texto : verticalmente para los modos de escritura horizontal , horizontal para los modos de escritura vertical .</dd>
+ <dt><code>horizontal</code></dt>
+ <dd>El elemento se representa horizontalmente.</dd>
+ <dt><code>vertical</code></dt>
+ <dd>El elemento se representa verticalmente.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<p>
+<pre class="brush: html">&lt;p&gt;
   The following progress meter
   is horizontal (the default):
-</p>
-<progress max="100" value="75"></progress>
+&lt;/p&gt;
+&lt;progress max="100" value="75"&gt;&lt;/progress&gt;
 
-<p>
+&lt;p&gt;
  The following progress meter
  is vertical:
-</p>
-<progress class="vert" max="100" value="75"></progress>
-```
+&lt;/p&gt;
+&lt;progress class="vert" max="100" value="75"&gt;&lt;/progress&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-.vert {
+<pre class="brush: css">.vert {
   -moz-orient: vertical;
   width: 16px;
   height: 150px;
-}
-```
+}</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample("Examples","200","360")}}
+<p>{{EmbedLiveSample("Examples","200","360")}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-Aunque [somete](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html) al W3C , con retroalimentación positiva inicial , esta propiedad no es todavía parte de ninguna especificación ; Actualmente , esto es una extensión de Mozilla-specific (that is, `-moz-orient`).
+<p>Aunque <a href="https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html">somete</a> al W3C , con retroalimentación positiva inicial , esta propiedad no es todavía parte de ninguna especificación ; Actualmente , esto es una extensión de Mozilla-specific (that is, <code>-moz-orient</code>).</p>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{Compat("css.properties.-moz-orient")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{cssxref("box-orient")}}
+<ul>
+ <li>{{cssxref("box-orient")}}</li>
+</ul>

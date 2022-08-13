@@ -9,63 +9,78 @@ tags:
   - Web
 translation_of: Web/CSS/quotes
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Sumario
+<h2 id="Summary" name="Summary">Sumario</h2>
 
-La propiedad [CSS](/es/docs/CSS "CSS") `quotes` indica cómo debe renderizar las citas el navegador.
+<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a> <code>quotes</code> indica cómo debe renderizar las citas el navegador.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-```css
-/* Valor con palabras clave */
+<pre class="brush:css">/* Valor con palabras clave */
 quotes: none;
 
-/* Valor <string> */
-quotes: "«" "»";           /* Especifica open-quote y close-quote a las marcas de cita francesas */
+/* Valor &lt;string&gt; */
+quotes: "«" "»";           /* Especifica <em>open-quote</em> y <em>close-quote</em> a las marcas de cita francesas */
 quotes: "«" "»" "‹" "›";   /* Especifica dos niveles de marcas de cita */
 
 /* Valores globales */
 quotes: inherit;
 quotes: initial;
 quotes: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Values" name="Values">Valores</h3>
 
-- `none`
-  - : Los valores `open-quote` y `close-quote` de la propiedad {{cssxref("content")}} no renderiza marcas de cita.
-- `[<string> <string>]+`
-  - : Uno o más pares de valores {{cssxref("&lt;string&gt;")}} para `open-quote` y `close-quote`. El primer par representa el nivel más externo de citación, el segundo par es para el primer nivel anidado, el siguiente par para el siguiente nivel, y así sucesivamente.
+<dl>
+ <dt><code>none</code></dt>
+ <dd>Los valores <code>open-quote</code> y <code>close-quote</code> de la propiedad {{cssxref("content")}} no renderiza marcas de cita.</dd>
+ <dt><code>[&lt;string&gt; &lt;string&gt;]+</code></dt>
+ <dd>Uno o más pares de valores {{cssxref("&lt;string&gt;")}} para <code>open-quote</code> y <code>close-quote</code>. El primer par representa el nivel más externo de citación, el segundo par es para el primer nivel anidado, el siguiente par para el siguiente nivel, y así sucesivamente.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-```css
-q { quotes: '"' '"' "'" "'" }
+<pre class="brush:css">q { quotes: '"' '"' "'" "'" }
 q:before { content: open-quote }
 q:after  { content: close-quote }
-```
+</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-Desde Firefox 3.5, el valor inicial de la propiedad de las citas se puede leer usando `-moz-initial`. Esto no es posible en versiones anteriores de Firefox.
+<p>Desde Firefox 3.5, el valor inicial de la propiedad de las citas se puede leer usando <code>-moz-<a class="internal" href="/en-US/docs/CSS/initial" title="en-US/docs/CSS/initial">initial</a></code>. Esto no es posible en versiones anteriores de Firefox.</p>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                               | Estado                       | Commentario        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{ SpecName('CSS2.1', 'generate.html#quotes', 'quotes') }} | {{ Spec2('CSS2.1') }} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Commentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS2.1', 'generate.html#quotes', 'quotes') }}</td>
+   <td>{{ Spec2('CSS2.1') }}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad con navegadores</h2>
 
 {{Compat("css.properties.quotes")}}
 
-## Ver también
+<h2 id="See_also" name="See_also">Ver también</h2>
 
-- {{ Cssxref("content") }}
+<ul>
+ <li>{{ Cssxref("content") }}</li>
+</ul>

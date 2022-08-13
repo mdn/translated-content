@@ -8,23 +8,38 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Status/418
 ---
-El código de error HTTP **`418 Soy una tetera`** indica que el servidor se rehusa a preparar café porque es una tetera. Este error es una referencia al Hyper Text Coffee Pot Control Protocol, creado como parte de una broma del April Fools' de 1998.
+<p>El código de error HTTP <strong><code>418 Soy una tetera</code></strong> indica que el servidor se rehusa a preparar café porque es una tetera. Este error es una referencia al Hyper Text Coffee Pot Control Protocol, creado como parte de una broma del April Fools' de 1998.</p>
 
-## Estado
+<h2 id="Estado">Estado</h2>
 
-    418 I'm a teapot
+<pre class="syntaxbox">418 I'm a teapot</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                               | Título                                                                     |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| {{RFC("2324", "418 I'm a teapot" , "2.3.2")}} | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Título</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("2324", "418 I'm a teapot" , "2.3.2")}}</td>
+   <td>Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("http.status.418")}}
 
-## Ver también
 
-- [Wikipedia: Hyper Text Coffee Pot Control Protocol (Español)](https://es.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)
-- [Wikipedia: Hyper Text Coffee Pot Control Protocol (Inglés)](https://en.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)
+<p>{{Compat("http.status.418")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a href="https://es.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol" lang="ES">Wikipedia: Hyper Text Coffee Pot Control Protocol (Español)</a></li>
+ <li><a href="https://en.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol" lang="EN">Wikipedia: Hyper Text Coffee Pot Control Protocol (Inglés)</a></li>
+</ul>

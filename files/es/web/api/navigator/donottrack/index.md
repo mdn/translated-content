@@ -9,33 +9,48 @@ tags:
   - Referencia
 translation_of: Web/API/Navigator/doNotTrack
 ---
-{{ApiRef("HTML DOM")}}{{SeeCompatTable}}
+<div>{{ApiRef("HTML DOM")}}{{SeeCompatTable}}</div>
 
-Devuelve los ajustes de do-not-track del usuario. Esto es `"1"` si el usuario ha solicitado no ser rastreado por sitios web, contenidos, o anuncios.
+<p>Devuelve los ajustes de do-not-track del usuario. Esto es <code>"1"</code> si el usuario ha solicitado no ser rastreado por sitios web, contenidos, o anuncios.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    dnt = navigator.doNotTrack;
+<pre class="syntaxbox"><em>dnt</em> = <em>navigator</em>.doNotTrack;
+</pre>
 
-El valor refleja el de la cabecera do-not-track, ej. valores de {"1", "0", "unspecified" }. Nota: Antes de Gecko 32, Gecko empleaba los valores { "yes", "no", "unspecified"} ([bug 887703](https://bugzilla.mozilla.org/show_bug.cgi?id=887703)).
+<p>El valor refleja el de la cabecera do-not-track, ej. valores de {"1", "0", "unspecified" }. Nota: Antes de Gecko 32, Gecko empleaba los valores { "yes", "no", "unspecified"} (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=887703">bug 887703</a>).</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-console.log(navigator.doNotTrack);
+<pre class="brush: js">console.log(navigator.doNotTrack);
 // imprime "1" si DNT está habilitado; "0" si el usuario ha aceptado el rastreo; en caso contrario es "unspecified"
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                           | Estado                       | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Tracking", "#widl-Navigator-doNotTrack", "Navigator.doNotTrack")}} | {{Spec2("Tracking")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Tracking", "#widl-Navigator-doNotTrack", "Navigator.doNotTrack")}}</td>
+   <td>{{Spec2("Tracking")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.Navigator.doNotTrack")}}
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-- [Guía sobre el campo Do Not Track](/es/docs/Web/Security/Do_not_track_field_guide)
+<ul>
+ <li><a href="/en-US/docs/Web/Security/Do_not_track_field_guide">Guía sobre el campo Do Not Track</a></li>
+</ul>

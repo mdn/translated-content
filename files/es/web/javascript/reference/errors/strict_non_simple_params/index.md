@@ -9,111 +9,110 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 original_slug: Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos
 ---
-{{jsSidebar("Errors", "Errores")}}
+<div>{{jsSidebar("Errors", "Errores")}}</div>
 
-La excepción de JavaScript: "`'use strict' no permitida en función`" ocurre cuando se usa una directiva `"use strict"` en la parte superior de una función con {{jsxref("Functions/Default_parameters", "parámetros predeterminados", "", 1)}}, {{jsxref("Functions/rest_parameters", "parámetros rest", "", 1)}} o {{jsxref("Operators/Destructuring_assignment" , "Desestructuración de parámetros", "", 1)}}.
+<p>La excepción de JavaScript: "<code>'use strict' no permitida en función</code>" ocurre cuando se usa una directiva <code>"use strict"</code> en la parte superior de una función con {{jsxref("Functions/Default_parameters", "parámetros predeterminados", "", 1)}}, {{jsxref("Functions/rest_parameters", "parámetros rest", "", 1)}} o {{jsxref("Operators/Destructuring_assignment" , "Desestructuración de parámetros", "", 1)}}.</p>
 
-## Mensaje
+<h2 id="Mensaje">Mensaje</h2>
 
-    Edge:
-    No se puede aplicar el modo estricto en funciones con una lista de parámetros complejos
+<pre class="syntaxbox notranslate">Edge:
+No se puede aplicar el modo estricto en funciones con una lista de parámetros complejos
 
-    Firefox:
-    SyntaxError: "use strict" no permitido en la función con parámetro predeterminado
-    SyntaxError: "use strict" no permitido en la función con parámetro rest
-    SyntaxError: "use strict" no permitido en la función con parámetro de desestructuración
+Firefox:
+SyntaxError: "use strict" no permitido en la función con parámetro predeterminado
+SyntaxError: "use strict" no permitido en la función con parámetro rest
+SyntaxError: "use strict" no permitido en la función con parámetro de desestructuración
 
-    Chrome:
-    SyntaxError: directiva ilegal 'use strict' en función con una lista de parámetros complejos
+Chrome:
+SyntaxError: directiva ilegal 'use strict' en función con una lista de parámetros complejos
+</pre>
 
-## Tipo `Error`
+<h2 id="Tipo_Error">Tipo <code>Error</code></h2>
 
-{{jsxref("SyntaxError")}}.
+<p>{{jsxref("SyntaxError")}}.</p>
 
-## ¿Qué salió mal?
+<h2 id="¿Qué_salió_mal">¿Qué salió mal?</h2>
 
-Se escribió una directiva `"use strict"` en la parte superior de una función que tiene uno de los siguientes parámetros:
+<p>Se escribió una directiva <code>"use strict"</code> en la parte superior de una función que tiene uno de los siguientes parámetros:</p>
 
-- {{jsxref("Functions/Default_parameters", "Parámetros predeterminados", "", 1)}}
-- {{jsxref("Functions/rest_parameters", "Parámetros rest", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Desestructuración de parámetros", "", 1)}}
+<ul>
+ <li>{{jsxref("Functions/Default_parameters", "Parámetros predeterminados", "", 1)}}</li>
+ <li>{{jsxref("Functions/rest_parameters", "Parámetros rest", "", 1)}}</li>
+ <li>{{jsxref("Operators/Destructuring_assignment", "Desestructuración de parámetros", "", 1)}}</li>
+</ul>
 
-No está permitida una directiva `"use strict"` en la parte superior de dichas funciones según la especificación ECMAScript.
+<p>No está permitida una directiva <code>"use strict"</code> en la parte superior de dichas funciones según la especificación ECMAScript.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Declaración de función
+<h3 id="Declaración_de_función">Declaración de función</h3>
 
-En este caso, la función `sum` tiene los parámetros predeterminados `a = 1` y `b = 2`:
+<p>En este caso, la función <code>sum</code> tiene los parámetros predeterminados <code>a = 1</code> y <code>b = 2</code>:</p>
 
-```js example-bad
-function sum(a = 1, b = 2) {
+<pre class="brush: js example-bad notranslate">function sum(a = 1, b = 2) {
   SyntaxError: 'use strict' no permitida en la función con parámetros predeterminados
   'use strict';
   return a + b;
 }
-```
+</pre>
 
-Si la función debe estar en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode), y todo el script o la función adjunta también está bien que esté en modo estricto, puedes mover la directiva `"use strict"` fuera de la función:
+<p>Si la función debe estar en <a href="/es/docs/Web/JavaScript/Reference/Strict_mode">modo estricto</a>, y todo el script o la función adjunta también está bien que esté en modo estricto, puedes mover la directiva <code>"use strict"</code> fuera de la función:</p>
 
-```js example-good
-'use strict';
+<pre class="brush: js example-good notranslate">'use strict';
 function sum(a = 1, b = 2) {
   return a + b;
 }
-```
+</pre>
 
-### Expresión `Function`
+<h3 id="Expresión_Function">Expresión <code>Function</code></h3>
 
-Una expresión `function` puede usar otra solución alternativa:
+<p>Una expresión <code>function</code> puede usar otra solución alternativa:</p>
 
-```js example-bad
-var sum = function sum([a, b]) {
+<pre class="brush: js example-bad notranslate">var sum = function sum([a, b]) {
   // SyntaxError: "use strict" no permitido en función con parámetros de desestructuración
   'use strict';
   return a + b;
 };
-```
+</pre>
 
-Esta se puede convertir a la siguiente expresión:
+<p>Esta se puede convertir a la siguiente expresión:</p>
 
-```js example-good
-var sum = (function() {
+<pre class="brush: js example-good notranslate">var sum = (function() {
   'use strict';
   return function sum([a, b]) {
     return a + b;
   };
 })();
-```
+</pre>
 
-### Función de flecha
+<h3 id="Función_de_flecha">Función de flecha</h3>
 
-Si una función de flecha necesita acceder a la variable `this`, puedes usar la función de flecha como función circundante:
+<p>Si una función de flecha necesita acceder a la variable <code>this</code>, puedes usar la función de flecha como función circundante:</p>
 
-```js example-bad
-var callback = (...args) => {
+<pre class="brush: js example-bad notranslate">var callback = (...args) =&gt; {
   SyntaxError: "use strict" no permitido en la función con parámetro rest
   'use strict';
   return this.run(args);
 };
-```
+</pre>
 
-Esta se puede convertir a la siguiente expresión:
+<p>Esta se puede convertir a la siguiente expresión:</p>
 
-```js example-good
-var callback = (() => {
+<pre class="brush: js example-good notranslate">var callback = (() =&gt; {
   'use strict';
-  return (...args) => {
+  return (...args) =&gt; {
     return this.run(args);
   };
 })();
-```
+</pre>
 
-## Ve también
+<h2 id="Ve_también">Ve también</h2>
 
-- {{jsxref("Strict_mode", "Modo estricto", "", 1)}}
-- {{jsxref("Statements/function", "Declaración de función", "", 1)}}
-- {{jsxref("Operators/function", "Expresión function", "", 1)}}
-- {{jsxref("Functions/Default_parameters", "Parámetros predeterminados", "", 1)}}
-- {{jsxref("Functions/rest_parameters", "Parámetros rest", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Desestructuración de parámetros", "", 1)}}
+<ul>
+ <li>{{jsxref("Strict_mode", "Modo estricto", "", 1)}}</li>
+ <li>{{jsxref("Statements/function", "Declaración de función", "", 1)}}</li>
+ <li>{{jsxref("Operators/function", "Expresión function", "", 1)}}</li>
+ <li>{{jsxref("Functions/Default_parameters", "Parámetros predeterminados", "", 1)}}</li>
+ <li>{{jsxref("Functions/rest_parameters", "Parámetros rest", "", 1)}}</li>
+ <li>{{jsxref("Operators/Destructuring_assignment", "Desestructuración de parámetros", "", 1)}}</li>
+</ul>

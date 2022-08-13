@@ -9,50 +9,69 @@ tags:
   - Referencia
 translation_of: Web/API/Element/namespaceURI
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-La propiedad **`Element.namespaceURI`** unicamente de lectura devuelve la URI namespace de el elemento, `o la anula si el elemento no está en un` namespace.
+<p>La propiedad <code><strong>Element.namespaceURI</strong></code> unicamente de lectura devuelve la URI namespace de el elemento, <code>o la anula si el elemento no está en un</code> namespace.</p>
 
-> **Nota:** Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.
+<div class="note">
+<p>Antes de DOM4 esta API fué definida dentro de la interfaz {{domxref("Node")}}.</p>
+</div>
 
-## Síntasix
+<h2 id="Síntasix">Síntasix</h2>
 
-    namespace = element.namespaceURI
+<pre class="syntaxbox"><var>namespace</var> = <var>element</var>.namespaceURI</pre>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-En este snippet, un elemento está siendo examinado por su {{domxref("localName")}} y su `namespaceURI`. Si el `namespaceURI` devuelve el XUL namespace y el `localName` devuelve "browser", entonces se entiende que el nodo es XUL `<browser/>`.
+<p>En este snippet, un elemento está siendo examinado por su {{domxref("localName")}} y  su <code>namespaceURI</code>. Si el <code>namespaceURI</code> devuelve el  XUL namespace y el <code>localName</code> devuelve "browser", entonces  se entiende  que el nodo es  XUL <code>&lt;browser/&gt;</code>.</p>
 
-```js
-if (element.localName == "browser" &&
+<pre class="brush:js">if (element.localName == "browser" &amp;&amp;
     element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
   // this is a XUL browser
-}
-```
+}</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-Esto no es un valor calculado resultante de una búsqueda de un namespace, basado en un examen de las declaraciones del namespace en el campo de aplicación. La URI del namespace de un nodo se congela en el momento de creación del nodo.
+<p><span id="result_box" lang="es"><span>Esto no es un</span> <span>valor calculado</span> <span>resultante</span><span> de</span> <span>una búsqueda de</span> un namespace<span>, basado</span> <span>en un examen de</span> <span>las</span> <span>declaraciones</span> <span>del namespace</span> <span>en el campo de aplicación</span><span>.</span> <span>La</span> <span>URI del namespace</span> <span>de un nodo</span> <span>se congela</span> <span>en el momento</span> <span>de creación</span> <span>del nodo</span><span>.</span></span></p>
 
-En Firefox 3.5 y versiones anteriores, la URI del namespace para elementos HTML en documentos HTML `es nula`. En versiones posteriores, de conformidad con HTML5, es [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) como en XHTML. {{gecko_minversion_inline("1.9.2")}}
+<div id="gt-input-tool">
+<div dir="ltr" style="zoom: 1;">En Firefox 3.5 y versiones anteriores, la  URI del namespace  para elementos HTML en documentos HTML <code>es nula</code>. En versiones posteriores, de conformidad con HTML5, es <code><a class="external" href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a></code> como en XHTML. {{gecko_minversion_inline("1.9.2")}}</div>
 
-Se puede crear un elemento con el `namespaceURI` especificado utilizando el método DOM Level 2 [document.createElementNS](/es/docs/Web/API/Document/createElementNS "Document.createElementNS").
+<div dir="ltr" style="zoom: 1;"> </div>
+</div>
 
-El DOM no maneja o hace valer la validación del namespace por si mismo. Depende de la aplicación DOM para hacer cualquier validación necesaria. Date cuenta también que el prefijo del namespace , una vez que se asocia con un particular elemento, no puede ser cambiado.
+<p>Se puede crear un elemento con el <code>namespaceURI</code> especificado utilizando el método  DOM Level 2  <a href="/en-US/docs/Web/API/Document/createElementNS" title="Document.createElementNS">document.createElementNS</a>.</p>
 
-## Especificaciones
+<p>El DOM no maneja o hace valer la validación del  namespace  por si mismo. Depende de la aplicación DOM para hacer cualquier validación necesaria. Date cuenta también que el prefijo del namespace , una vez que se asocia con un particular elemento, no puede ser cambiado.</p>
 
-| Especificación                                                                                   | Estado                   | Comentario         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}} | {{Spec2("DOM4")}} | definición inicial |
+<h2 id="Especificaciones">Especificaciones</h2>
 
-## Compatibilidad en los navegadores
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("DOM4", "#dom-element-namespaceuri", "Element.namespaceuri")}}</td>
+   <td>{{Spec2("DOM4")}}</td>
+   <td>definición inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_en_los_navegadores">Compatibilidad en los navegadores</h2>
 
 {{Compat("api.Element.namespaceURI")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{domxref("Element.localName")}}
-- {{domxref("Element.prefix")}}
-- {{domxref("Attr.namespaceURI")}}
-- {{domxref("Node.namespaceURI")}}
+<ul>
+ <li>{{domxref("Element.localName")}}</li>
+ <li>{{domxref("Element.prefix")}}</li>
+ <li>{{domxref("Attr.namespaceURI")}}</li>
+ <li>{{domxref("Node.namespaceURI")}}</li>
+</ul>

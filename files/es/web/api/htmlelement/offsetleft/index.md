@@ -3,62 +3,79 @@ title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 translation_of: Web/API/HTMLElement/offsetLeft
 ---
-{{ APIRef("HTML DOM") }}
+<div>{{ APIRef("HTML DOM") }}</div>
 
-La propiedad de solo lectura **`HTMLElement.offsetLeft`** devuelve el número de _píxeles a la izquierda_ del elemento actual con respecto al nodo {{domxref("HTMLElement.offsetParent")}} .
+<p>La propiedad de solo lectura <strong><code>HTMLElement.offsetLeft</code></strong> devuelve el número de <em>píxeles a la izquierda </em>del elemento actual con respecto al nodo {{domxref("HTMLElement.offsetParent")}} .</p>
 
-Para los elementos de bloque, `offsetTop`, `offsetLeft`, `offsetWidth`, y `offsetHeight` determina el borde de la caja del elemento relativo al `offsetParent.`
+<p>Para los elementos de bloque, <code>offsetTop</code>, <code>offsetLeft</code>, <code>offsetWidth</code>, y <code>offsetHeight</code> determina el borde de la caja del elemento relativo al <code>offsetParent.</code></p>
 
-Sin embargo, para los elementos inline (por ejemplo **span**), que puede ser cortado de un línea a otra, `offsetTop,` and `offsetLeft `describe la posición de la primer borde de la caja (usar {{domxref("Element.getClientRects()")}} para obtener el ancho y el alto), mientras que `offsetWidth `y `offsetHeight `describen las dimensiones de los límites (usar {{domxref("Element.getBoundingClientRect()")}} para obtener su posición). Por lo tanto, una caja con left, top, width y height del `offsetLeft`, `offsetTop`, `offsetWidth`, `offsetHeight`, no definirá los límites para un span con texto que continúa en otra línea.
+<p>Sin embargo, para los elementos inline (por ejemplo <strong>span</strong>), que puede ser cortado de un línea a otra, <code>offsetTop,</code> and <code>offsetLeft </code>describe la posición de la primer borde de la caja (usar {{domxref("Element.getClientRects()")}} para obtener el ancho y el alto), mientras que <code>offsetWidth </code>y <code>offsetHeight </code>describen las dimensiones de los límites (usar {{domxref("Element.getBoundingClientRect()")}} para obtener su posición). Por lo tanto, una caja con left, top, width y height del <code>offsetLeft</code>, <code>offsetTop</code>, <code>offsetWidth</code>, <code>offsetHeight</code>, no definirá los límites para un span con texto que continúa en otra línea.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    left = element.offsetLeft;
+<pre class="eval"><em>left</em> = <em>element</em>.offsetLeft;
+</pre>
 
-`left` es un entero que representa la posición de la izquierda del elemento actual con respecto al padre.
+<p><code>left</code> es un entero que representa la posición de la izquierda del elemento actual con respecto al padre.</p>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-    var colorTable = document.getElementById("t1");
-    var tOLeft = colorTable.offsetLeft;
+<pre>var colorTable = document.getElementById("t1");
+var tOLeft = colorTable.offsetLeft;
 
-    if (tOLeft > 5) {
-      // posición izquierda muy larga: hacer algo
-    }
+if (tOLeft &gt; 5) {
+  // posición izquierda muy larga: hacer algo
+}
+</pre>
 
-This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.
+<p>This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.</p>
 
-![Image:offsetLeft.jpg](/@api/deki/files/790/=OffsetLeft.jpg)
+<p><img alt="Image:offsetLeft.jpg" class="internal" src="/@api/deki/files/790/=OffsetLeft.jpg"></p>
 
-    <div style="width: 300px; border-color:blue;
-      border-style:solid; border-width:1;">
-      <span>Short span. </span>
-      <span id="long">Long span that wraps within this div.</span>
-    </div>
+<pre>&lt;div style="width: 300px; border-color:blue;
+  border-style:solid; border-width:1;"&gt;
+  &lt;span&gt;Short span. &lt;/span&gt;
+  &lt;span id="long"&gt;Long span that wraps within this div.&lt;/span&gt;
+&lt;/div&gt;
 
-    <div id="box" style="position: absolute; border-color: red;
-      border-width: 1; border-style: solid; z-index: 10">
-    </div>
+&lt;div id="box" style="position: absolute; border-color: red;
+  border-width: 1; border-style: solid; z-index: 10"&gt;
+&lt;/div&gt;
 
-    <script>
-      var box = document.getElementById("box");
-      var long = document.getElementById("long");
-      box.style.left = long.offsetLeft + document.body.scrollLeft + "px";
-      box.style.top = long.offsetTop + document.body.scrollTop + "px";
-      box.style.width = long.offsetWidth + "px";
-      box.style.height = long.offsetHeight + "px";
-    </script>
+&lt;script&gt;
+  var box = document.getElementById("box");
+  var long = document.getElementById("long");
+  box.style.left = long.offsetLeft + document.body.scrollLeft + "px";
+  box.style.top = long.offsetTop + document.body.scrollTop + "px";
+  box.style.width = long.offsetWidth + "px";
+  box.style.height = long.offsetHeight<span style="line-height: normal;"> + "px"</span><span style="line-height: normal;">;
+</span><span style="line-height: normal;">&lt;/script&gt; </span></pre>
 
-## Specification
+<h2 id="Specification" name="Specification">Specification</h2>
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetleft', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |         |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM View', '#dom-htmlelement-offsetleft', 'offsetLeft')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Compatibility" name="Compatibility">Browser compatibility</h2>
 
 {{Compat("api.HTMLElement.offsetLeft")}}
 
-## See also
+<h2 id="See_also" name="See_also">See also</h2>
 
-- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}
+<ul>
+ <li>{{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}</li>
+</ul>

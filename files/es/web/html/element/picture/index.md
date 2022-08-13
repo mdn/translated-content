@@ -9,68 +9,104 @@ tags:
 translation_of: Web/HTML/Element/picture
 original_slug: Web/HTML/Elemento/picture
 ---
-{{HTMLRef}}{{SeeCompatTable}}
+<div>{{HTMLRef}}{{SeeCompatTable}}</div>
 
-El **elemento HTML `<picture>` **es un contenedor usado para especificar múltiples elementos {{HTMLElement("source")}} y un elemento {{HTMLElement("img")}} contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos `<source>`, el archivo especificado en los atributos {{htmlattrxref("src", "img")}} del elemento `<img>` es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento `<img>`.
+<p>El <strong>elemento HTML <code>&lt;picture&gt;</code> </strong>es un contenedor usado para especificar múltiples elementos {{HTMLElement("source")}} y un elemento {{HTMLElement("img")}} contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos <code>&lt;source&gt;</code>, el archivo especificado en los atributos {{htmlattrxref("src", "img")}} del elemento <code>&lt;img&gt;</code> es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento <code>&lt;img&gt;</code>.</p>
 
-Para seleccionar la imagen óptima, el {{Glossary("user agent")}} examina cada atributo {{htmlattrxref("srcset", "source")}}, {{htmlattrxref("media", "source")}}, y {{htmlattrxref("type", "source")}} de la fuente para seleccionar la imagen compatible.
+<p>Para seleccionar la imagen óptima, el {{Glossary("user agent")}} examina cada atributo {{htmlattrxref("srcset", "source")}}, {{htmlattrxref("media", "source")}}, y {{htmlattrxref("type", "source")}} de la fuente para seleccionar la imagen compatible.</p>
 
-El navegador escogerá la fuente más apropiada de acuerdo al diseño de la página (las limitaciones de la caja donde aparecerá la imagen) y el dispositivo que se utilize para visualizarla (p.ej. pantalla normal o hiDPI).
+<p>El navegador escogerá la fuente más apropiada de acuerdo al diseño de la página (las limitaciones de la caja donde aparecerá la imagen) y el dispositivo que se utilize para visualizarla (p.ej. pantalla normal o hiDPI).</p>
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Flujo de contenido](/es/docs/Web/HTML/Content_categories#flow_content), contenido textual o estático, contenido incrustado                                            |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | Cero o más elementos {{HTMLElement("source")}}, seguidos por un elemento {{HTMLElement("img")}}, mezclados opcionalmente con elementos script-supporting. |
-| Omisión de etiquetas                                            | {{no_tag_omission}}                                                                                                                                               |
-| Padres permitidos                                               | Cualquier elemento que permita embeber contenido.                                                                                                                      |
-| ARIA roles permitidos                                           | Ninguno.                                                                                                                                                               |
-| DOM interface                                                   | {{domxref("HTMLPictureElement")}}                                                                                                                           |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/es-ES/docs/Web/HTML/Content_categories">Categorías de contenido</a></th>
+   <td><a href="/es-ES/docs/Web/HTML/Content_categories#flow_content">Flujo de contenido</a>, contenido textual o estático, contenido incrustado</td>
+  </tr>
+  <tr>
+   <th scope="row">Contenido permitido</th>
+   <td>Cero o más elementos {{HTMLElement("source")}}, seguidos por un elemento {{HTMLElement("img")}}, mezclados opcionalmente con elementos script-supporting.</td>
+  </tr>
+  <tr>
+   <th scope="row">Omisión de etiquetas</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Padres permitidos</th>
+   <td>Cualquier elemento que permita embeber contenido.</td>
+  </tr>
+  <tr>
+   <th scope="row">ARIA roles permitidos</th>
+   <td>Ninguno.</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM interface</th>
+   <td>{{domxref("HTMLPictureElement")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Atributos
+<h2 id="Atributos">Atributos</h2>
 
-Este elemento sólo incluye [atributos globales.](/es/docs/Web/HTML/Global_attributes)
+<p>Este elemento sólo incluye <a href="/en-US/docs/Web/HTML/Global_attributes">atributos globales.</a></p>
 
-## Notas de uso
 
-Se puede usar la propiedad {{cssxref("object-position")}} para ajustar la posición de la imagen dentro del marco del elemento, y la propiedad {{cssxref("object-fit")}} para controlar como el tamaño de la imagen se ajusta para adaptarse al marco.
 
-## Ejemplos
+<h2 id="Notas_de_uso">Notas de uso</h2>
 
-Estos ejemplos demuestran los efectos que tienen diferentes atributos del atributo {{HTMLElement("source")}} en la selección de la imagen a desplegar cuando se usa dentro de `<picture>`.
+<p>Se puede usar la propiedad {{cssxref("object-position")}} para ajustar la posición de la imagen dentro del marco del elemento, y la propiedad {{cssxref("object-fit")}} para controlar como el tamaño de la imagen se ajusta para adaptarse al marco.</p>
 
-### El atributo `media`
+<h2 id="Ejemplos">Ejemplos</h2>
 
-El atributo `media` permite especificar una media query que el agente de usuario evaluará para seleccionar un elemento {{HTMLElement("source")}}. Si la media query evalua a `false`, el elemento {{HTMLElement("source")}} es omitido.
+<p>Estos ejemplos demuestran los efectos que tienen diferentes atributos del atributo {{HTMLElement("source")}} en la selección de la imagen a desplegar cuando se usa dentro de <code>&lt;picture&gt;</code>.</p>
 
-```html
-<picture>
- <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
- <img src="mdn-logo-narrow.png" alt="MDN">
-</picture>
-```
+<h3 id="El_atributo_media">El atributo <code>media</code></h3>
 
-### El atributo `type`
+<p>El atributo <code>media</code> permite especificar una media query que el agente de usuario evaluará para seleccionar un elemento {{HTMLElement("source")}}. Si la media query evalua a <code>false</code>, el elemento {{HTMLElement("source")}} es omitido.</p>
 
-El atributo `type` permite especificar un tipo MIME para los recursos dados en el atributo srcset del elemento {{HTMLElement("source")}}. Si el agente de usuario no soporta dicho tipo, el elemento {{HTMLElement("source")}} es omitido.
+<pre class="brush: html">&lt;picture&gt;
+ &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)"&gt;
+ &lt;img src="mdn-logo-narrow.png" alt="MDN"&gt;
+&lt;/picture&gt;
+</pre>
 
-```html
-​<picture>
- <source srcset="mdn-logo.svg" type="image/svg+xml">
- <img src="mdn-logo.png" alt="MDN">
-</picture>
-```
+<h3 id="El_atributo_type">El atributo <code>type</code></h3>
 
-## Especificaciones
+<p>El atributo <code>type</code> permite especificar un tipo MIME para los recursos dados en el atributo srcset del elemento {{HTMLElement("source")}}. Si el agente de usuario no soporta dicho tipo, el elemento {{HTMLElement("source")}} es omitido.</p>
 
-| Specification                                                                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+<pre class="brush: html">​&lt;picture&gt;
+ &lt;source srcset="mdn-logo.svg" type="image/svg+xml"&gt;
+ &lt;img src="mdn-logo.png" alt="MDN"&gt;
+&lt;/picture&gt;
+</pre>
 
-## Compatibilidad de navegadores
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("html.elements.picture")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- Elemento {{HTMLElement("img")}}
-- Elemento {{HTMLElement("source")}}
-- Posicionando y redimensionando la imagen dentro de su marco: {{cssxref("object-position")}} y {{cssxref("object-fit")}}
+<ul>
+ <li>Elemento {{HTMLElement("img")}}</li>
+ <li>Elemento {{HTMLElement("source")}}</li>
+ <li>Posicionando y redimensionando la imagen dentro de su marco: {{cssxref("object-position")}} y {{cssxref("object-fit")}}</li>
+</ul>

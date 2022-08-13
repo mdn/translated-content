@@ -4,81 +4,82 @@ slug: Web/JavaScript/Reference/Statements/switch
 translation_of: Web/JavaScript/Reference/Statements/switch
 original_slug: Web/JavaScript/Referencia/Sentencias/switch
 ---
-{{jsSidebar("Statements")}}
+<div>{{jsSidebar("Statements")}}</div>
 
-La **declaración** **`switch`** evalúa una [expresión](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators), comparando el valor de esa expresión con una instancia **`case`**, y ejecuta [declaraciones](/es/docs/Web/JavaScript/Referencia/Sentencias) asociadas a ese `case`, así como las declaraciones en los `case` que siguen.
+<p>La <strong>declaración</strong> <code><strong>switch</strong></code> evalúa una <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators">expresión</a>, comparando el valor de esa expresión con una instancia <code><strong>case</strong></code>, y ejecuta <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias">declaraciones</a> asociadas a ese <code>case</code>, así como las declaraciones en los <code>case</code> que siguen.</p>
 
-## Syntaxis
+<h2 id="Syntaxis">Syntaxis</h2>
 
-    switch (expresión) {
-      case valor1:
-        //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-        [break;]
-      case valor2:
-        //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
-        [break;]
-      ...
-      case valorN:
-        //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
-        [break;]
-      default:
-        //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
-        [break;]
-    }
+<pre class="syntaxbox notranslate">switch (expresión) {
+  case valor1:
+    //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
+    [break;]
+  case valor2:
+    //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
+    [break;]
+  ...
+  case valorN:
+    //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
+    [break;]
+  default:
+    //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+    [break;]
+}</pre>
 
-- `expresión`
-  - : Es una expresión que es comparada con el valor de cada instancia `case`.
-- `case valorN`
-  - : Una instancia `case valorN` es usada para ser comparada con la `expresión`. Si la `expresión` coincide con el `valorN`, las declaraciones dentro de la instancia `case` se ejecutan hasta que se encuentre el final de la declaración `switch` o hasta encontrar una interrupción `break`.
+<dl>
+ <dt><code>expresión</code></dt>
+ <dd>Es una expresión que es comparada con el valor de cada instancia <code>case</code>.</dd>
+ <dt><code>case valorN</code></dt>
+ <dd>Una instancia <code>case valorN</code> es usada para ser comparada con la <code>expresión</code>. Si la <code>expresión</code> coincide con el <code>valorN</code>, las declaraciones dentro de la instancia <code>case</code> se ejecutan hasta que se encuentre el final de la declaración <code>switch</code> o hasta encontrar una interrupción <code>break</code>.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">default</span></font></dt>
+ <dd>Una instancia <code>default</code>, cuando es declarada, es ejecutada si el valor de la <code>expresión</code> no coincide con cualquiera de las otras instancias <code>case valorN</code>.</dd>
+</dl>
 
-- default
-  - : Una instancia `default`, cuando es declarada, es ejecutada si el valor de la `expresión` no coincide con cualquiera de las otras instancias `case valorN`.
+<h2 id="Descripción">Descripción</h2>
 
-## Descripción
+<p>Si ocurre una coincidencia, el programa ejecuta las declaraciones asociadas correspondientes. Si la expresión coincide con múltiples entradas, la primera será la seleccionada, incluso si las mayúsculas son tenidas en cuenta.</p>
 
-Si ocurre una coincidencia, el programa ejecuta las declaraciones asociadas correspondientes. Si la expresión coincide con múltiples entradas, la primera será la seleccionada, incluso si las mayúsculas son tenidas en cuenta.
+<p>El programa primero busca la primer instacia <code>case</code> cuya expresión se evalúa con el mismo valor de la expresión de entrada (usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparación estricta</a>, <code>===)</code> y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas. Si no se encuentra una cláusula de <code>case</code> coincidente, el programa busca la cláusula <code>default</code> opcional, y si se encuentra, transfiere el control a esa instancia, ejecutando las declaraciones asociadas. Si no se encuentra una instancia <code>default</code>  el programa continúa la ejecución en la instrucción siguiente al final del <code>switch</code>. Por convención, la instancia <code>default</code> es la última cláusula, pero no tiene que ser así.</p>
 
-El programa primero busca la primer instacia `case` cuya expresión se evalúa con el mismo valor de la expresión de entrada (usando [comparación estricta](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===)` y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas. Si no se encuentra una cláusula de `case` coincidente, el programa busca la cláusula `default` opcional, y si se encuentra, transfiere el control a esa instancia, ejecutando las declaraciones asociadas. Si no se encuentra una instancia `default` el programa continúa la ejecución en la instrucción siguiente al final del `switch`. Por convención, la instancia `default` es la última cláusula, pero no tiene que ser así.
+<p>La declaración <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> es opcional y está asociada con cada etiqueta de <code>case</code> y asegura que el programa salga del <code>switch</code> una vez que se ejecute la instrucción coincidente y continúe la ejecución en la instrucción siguiente. Si se omite el  <code>break</code>  el programa continúa la ejecución en la siguiente instrucción en la declaración de <code>switch</code> .</p>
 
-La declaración [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break "JavaScript/Reference/Statements/break") es opcional y está asociada con cada etiqueta de `case` y asegura que el programa salga del `switch` una vez que se ejecute la instrucción coincidente y continúe la ejecución en la instrucción siguiente. Si se omite el `break` el programa continúa la ejecución en la siguiente instrucción en la declaración de `switch` .
+<h2 id="Ejemplos">Ejemplos</h2>
 
-## Ejemplos
+<h3 id="Usando_switch">Usando <code>switch</code></h3>
 
-### Usando `switch`
+<p>En el siguiente ejemplo, si <code>expresión</code> se resuelve a "Platanos", el algoritmo compara el valor con el <code>case</code> "Platanos" y ejecuta la declaración asociada. Cuando se encuentra un <code>break</code>, el programa sale del condicional <code>switch</code> y ejecuta la declaración que lo procede. Si se omite el <code>break</code>, el <code>case</code> "Cerezas" también es ejecutado.</p>
 
-En el siguiente ejemplo, si `expresión` se resuelve a "Platanos", el algoritmo compara el valor con el `case` "Platanos" y ejecuta la declaración asociada. Cuando se encuentra un `break`, el programa sale del condicional `switch` y ejecuta la declaración que lo procede. Si se omite el `break`, el `case` "Cerezas" también es ejecutado.
+<pre class="notranslate"><code>switch (expr) {
+  case 'Naranjas':
+    console.log('El kilogramo de naranjas cuesta $0.59.');
+    break;
+  case 'Manzanas':
+    console.log('El kilogramo de manzanas cuesta $0.32.');
+    break;
+  case 'Platanos':
+    console.log('El kilogramo de platanos cuesta $0.48.');
+    break;
+  case 'Cerezas':
+    console.log('El kilogramo de cerezas cuesta $3.00.');
+    break;
+  case 'Mangos':
+  case 'Papayas':
+    console.log('El kilogramo de mangos y papayas cuesta $2.79.');
+    break;
+  default:
+    console.log('Lo lamentamos, por el momento no disponemos de ' + expr + '.');
+}
 
-    switch (expr) {
-      case 'Naranjas':
-        console.log('El kilogramo de naranjas cuesta $0.59.');
-        break;
-      case 'Manzanas':
-        console.log('El kilogramo de manzanas cuesta $0.32.');
-        break;
-      case 'Platanos':
-        console.log('El kilogramo de platanos cuesta $0.48.');
-        break;
-      case 'Cerezas':
-        console.log('El kilogramo de cerezas cuesta $3.00.');
-        break;
-      case 'Mangos':
-      case 'Papayas':
-        console.log('El kilogramo de mangos y papayas cuesta $2.79.');
-        break;
-      default:
-        console.log('Lo lamentamos, por el momento no disponemos de ' + expr + '.');
-    }
+console.log("¿Hay algo más que te quisiera consultar?");</code></pre>
 
-    console.log("¿Hay algo más que te quisiera consultar?");
+<h3 id="¿Qué_pasa_si_olvido_un_break">¿Qué pasa si olvido un break?</h3>
 
-### ¿Qué pasa si olvido un break?
+<p>Si olvidas un <code>break</code>, el script se ejecutará desde donde se cumple la condición y ejecutará el siguiente <code>case</code> independientemente si esta condición se cumple o no. Ver el siguiente ejemplo:</p>
 
-Si olvidas un `break`, el script se ejecutará desde donde se cumple la condición y ejecutará el siguiente `case` independientemente si esta condición se cumple o no. Ver el siguiente ejemplo:
-
-```js
-var foo = 0;
+<pre class="brush: js notranslate">var foo = 0;
 switch (foo) {
   case -1:
     console.log('1 negativo');
@@ -95,40 +96,39 @@ switch (foo) {
   default:
     console.log('default');
 }
-```
+</pre>
 
-### ¿Puedo usar un \<default> entre condiciones?
+<h3 id="¿Puedo_usar_un_&lt;default>_entre_condiciones">¿Puedo usar un &lt;default&gt; entre condiciones?</h3>
 
-Sí, ¡es posible! JavaScript retornará a la instancia `default` en caso de no encontrar una coincidencia:
+<p>Sí, ¡es posible! JavaScript retornará a la instancia <code>default</code> en caso de no encontrar una coincidencia:</p>
 
-    var foo = 5;
-    switch (foo) {
-      case 2:
-        console.log(2);
-        break; // al encontrar este 'break' no se continuará con el siguiente 'default:'
-      default:
-        console.log('default')
-        // fall-through
-      case 1:
-        console.log('1');
-    }
+<pre class="notranslate"><code>var foo = 5;
+switch (foo) {
+  case 2:
+    console.log(2);
+    break; // al encontrar este 'break' no se continuará con el siguiente 'default:'
+  default:
+    console.log('default')
+    // fall-through
+  case 1:
+    console.log('1');
+}</code></pre>
 
-Al estar el `case 1:` a continuación de `default`, y al no haber un `break `de por medio, veremos que la declaración del `case 1:` será ejecutada, apareciendo el resultado `1` en el _log de consola._
+<p>Al estar el <code>case 1:</code> a continuación de <code>default</code>, y al no haber un <code>break </code>de por medio, veremos que la declaración del <code>case 1:</code> será ejecutada, apareciendo el resultado <code>1</code> en el <em>log de consola.</em></p>
 
-### Metodos para casos con múltiple criterio
+<h3 id="Metodos_para_casos_con_múltiple_criterio">Metodos para casos con múltiple criterio</h3>
 
-La fuente de esta técnica esta aquí:
+<p>La fuente de esta técnica esta aquí:</p>
 
-[Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
+<p><a href="http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript">Switch statement multiple cases in JavaScript (Stack Overflow)</a></p>
 
-#### Operación única con múltiples casos
+<h4 id="Operación_única_con_múltiples_casos">Operación única con múltiples casos</h4>
 
-Este método toma ventaja del hecho de que, si no hay un `break` debajo de una declaración `case`, continuará la ejecución hasta el siguiente `case`, ignorando si en dicho caso se cumple o no el criterio indicado. Comprobar en la sección _¿Qué pasa si olvido un `break`?_
+<p>Este método toma ventaja del hecho de que, si no hay un <code>break</code> debajo de una declaración <code>case</code>, continuará la ejecución hasta el siguiente <code>case</code>, ignorando si en dicho caso se cumple o no el criterio indicado. Comprobar en la sección <em>¿Qué pasa si olvido un <code>break</code>?</em></p>
 
-Este es un ejemplo de operación única con sentencia `switch` secuencial, donde cuatro valores diferentes se comportan exactamente de la misma manera:
+<p>Este es un ejemplo de operación única con sentencia <code>switch</code> secuencial, donde cuatro valores diferentes se comportan exactamente de la misma manera:</p>
 
-```js
-var Animal = 'Jirafa';
+<pre class="brush: js notranslate">var Animal = 'Jirafa';
 switch (Animal) {
   case 'Vaca':
   case 'Jirafa':
@@ -139,15 +139,13 @@ switch (Animal) {
   case 'Dinosaurio':
   default:
     console.log('Este animal no lo hará.');
-}
-```
+}</pre>
 
-#### Operaciones encadenadas con múltiples casos
+<h4 id="Operaciones_encadenadas_con_múltiples_casos">Operaciones encadenadas con múltiples casos</h4>
 
-Este es un ejemplo de una sentencia `switch` secuencial con múltiples operaciones, donde, dependiendo del valor entero dado, se pueden recibir diferentes resultados. Esto demuestra que el algoritmo correrá en el orden en que se coloquen las declaraciones `case`, y que no tiene que ser numéricamente secuencial. En JavaScript, también es posible combinar definiciones con valores \_`"string"` \_dentro de estas declaraciones `case`.
+<p>Este es un ejemplo de una sentencia <code>switch</code> secuencial con múltiples operaciones, donde, dependiendo del valor entero dado, se pueden recibir diferentes resultados. Esto demuestra que el algoritmo correrá en el orden en que se coloquen las declaraciones <code>case</code>, y que no tiene que ser numéricamente secuencial. En JavaScript, también es posible combinar definiciones con valores <em><code>"string"</code> </em>dentro de estas declaraciones <code>case</code>.</p>
 
-```js
-var foo = 1;
+<pre class="brush: js notranslate">var foo = 1;
 var output = 'Salida: ';
 switch (foo) {
   case 10:
@@ -169,29 +167,57 @@ switch (foo) {
     break;
   default:
     console.log('Por favor, selecciona un valor del 1 al 6.');
-}
-```
+}</pre>
 
-La salida (output) de este ejemplo:
+<p>La salida (output) de este ejemplo:</p>
 
-| Value                                  | Log text                                   |
-| -------------------------------------- | ------------------------------------------ |
-| foo es NaN o no es 1, 2, 3, 4, 5 ni 10 | Por favor, selecciona un valor del 1 al 6. |
-| 10                                     | Salida: ¿Y Cuál Es Tu Nombre?              |
-| 1                                      | Salida: Cuál Es Tu Nombre?                 |
-| 2                                      | Salida: Tu Nombre?                         |
-| 3                                      | Salida: Nombre?                            |
-| 4                                      | Salida: ?                                  |
-| 5                                      | Salida: !                                  |
+<table class="standard-table" style="height: 270px; width: 522px;">
+ <tbody>
+  <tr>
+   <th scope="col">Value</th>
+   <th scope="col">Log text</th>
+  </tr>
+  <tr>
+   <td>foo es NaN o no es 1, 2, 3, 4, 5 ni 10</td>
+   <td>Por favor, selecciona un valor del 1 al 6.</td>
+  </tr>
+  <tr>
+   <td>10</td>
+   <td>Salida: ¿Y Cuál Es Tu Nombre?</td>
+  </tr>
+  <tr>
+   <td>1</td>
+   <td>Salida: Cuál Es Tu Nombre?</td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td>Salida: Tu Nombre?</td>
+  </tr>
+  <tr>
+   <td>3</td>
+   <td>Salida: Nombre?</td>
+  </tr>
+  <tr>
+   <td>4</td>
+   <td>Salida: ?</td>
+  </tr>
+  <tr>
+   <td>5</td>
+   <td>Salida: !</td>
+  </tr>
+ </tbody>
+</table>
 
-### Variables centradas en bloques sin un estamento de switch
+<h3 id="Variables_centradas_en_bloques_sin_un_estamento_de_switch">Variables centradas en bloques sin un estamento de switch</h3>
 
-Con ECMAScript 2015 (ES6)
+<p>Con ECMAScript 2015 (ES6) </p>
 
-## Compatibilidad en Navegadores
+<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
 
 {{Compat("javascript.statements.switch")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [`if...else`](/es/docs/Web/JavaScript/Reference/Statements/if...else)
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if...else</code></a></li>
+</ul>

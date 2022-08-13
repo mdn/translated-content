@@ -9,50 +9,70 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMonth
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-El método getMonth() devuelve el mes del objeto Date según la hora local, donde el número cero indica el primer mes del año.
+<p>El método getMonth() devuelve el mes del objeto Date según la hora local, donde el número cero indica el primer mes del año.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    dateObj.getMonth()
+<pre class="syntaxbox"><code><var>dateObj</var>.getMonth()</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-El valor devuelto por getMonth() es un entero entre 0 y 11, donde 0 corresponde a Enero, 1 a Febrero y así sucesivamente.
+<p>El valor devuelto por getMonth() es un entero entre 0 y 11, donde 0 corresponde a Enero, 1 a Febrero y así sucesivamente.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `getMonth()`
+<h3 id="Usando_getMonth()">Usando <code>getMonth()</code></h3>
 
-En el siguiente ejemplo, la segunda línea asigna el valor 11 a la variable mes, basado en el valor del objeto {{jsxref("Date")}} N`avidad`.
+<p>En el siguiente ejemplo, la segunda línea asigna el valor 11 a la variable mes, basado en el valor del objeto {{jsxref("Date")}} N<code>avidad</code>.</p>
 
-```js
-var Navidad = new Date('December 25, 2014 23:15:30');
+<pre class="brush: js">var Navidad = new Date('December 25, 2014 23:15:30');
 var mes = Navidad.getMonth();
 
 console.log(mes); // 11
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                           | Estado                   | Comentario                                          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                 | {{Spec2('ES1')}}     | Primera definición. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.12', 'Date.prototype.getMonth')}}                 | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-date.prototype.getmonth', 'Date.prototype.getMonth')}} | {{Spec2('ES6')}}     |                                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Primera definición. Implementado en JavaScript 1.0.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.9.5.12', 'Date.prototype.getMonth')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-date.prototype.getmonth', 'Date.prototype.getMonth')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad
+<h2 id="Compatibilidad">Compatibilidad</h2>
 
 {{Compat("javascript.builtins.Date.getMonth")}}
 
-## Vea también
+<h2 id="See_also" name="See_also">Vea también</h2>
 
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-- {{jsxref("Date.prototype.setMonth()")}}
+<ul>
+ <li>{{jsxref("Date.prototype.getUTCMonth()")}}</li>
+ <li>{{jsxref("Date.prototype.setMonth()")}}</li>
+</ul>

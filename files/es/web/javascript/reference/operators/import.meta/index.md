@@ -4,81 +4,85 @@ slug: Web/JavaScript/Reference/Operators/import.meta
 translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
-{{JSSidebar("Statements")}}
+<div>{{JSSidebar("Statements")}}</div>
 
-El objeto** `import.meta`** expone el contenido especifico de la metadata al módulo JavaScript. Este contiene informacion sobre el módulo, como por ejemplo, la URL del mismo.
+<p>El objeto<strong> <code>import.meta</code></strong> expone el contenido especifico de la metadata al módulo JavaScript. Este contiene informacion sobre el módulo, como por ejemplo, la URL del mismo.</p>
 
-## Syntax
+<h2 id="Syntax">Syntax</h2>
 
-    import.meta
+<pre class="syntaxbox">import.meta</pre>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-La sintasis consiste de la palabra clave {{JSxRef("Statements/import","import")}},un punto, y un identificador `meta`. Normalmente, la parte a la izquierda del punto es el objeto sobre el cual la accion es realizada, pero aqui `import` no es realmente un objeto.
+<p>La sintasis consiste de la palabra clave  {{JSxRef("Statements/import","import")}},un punto, y un identificador <code>meta</code>. Normalmente, la parte a la izquierda del punto es el objeto sobre el cual la accion es realizada, pero aqui <code>import</code> no es realmente un objeto.</p>
 
-El objeto `import.meta` es creado por la implementacion ECMAScript , con un prototipo {{JSxRef("null")}} . El objeto es extensible y sus propiedades son grabables, editables y enumerables.
+<p>El objeto <code>import.meta</code> es creado por la implementacion ECMAScript , con un prototipo {{JSxRef("null")}} . El objeto es extensible y sus propiedades son grabables, editables y enumerables.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando import.meta
+<h3 id="Usando_import.meta">Usando import.meta</h3>
 
-Dado un módulo `my-module.js`
+<p>Dado un módulo <code>my-module.js</code></p>
 
-```html
-<script type="module" src="my-module.js"></script>
-```
+<pre class="brush: html">&lt;script type="module" src="my-module.js"&gt;&lt;/script&gt;
+</pre>
 
-puedes acceder a la meta información sobre el módulo usando el objeto `import.meta`.
+<p>puedes acceder a la meta información  sobre el módulo usando el objeto <code>import.meta</code>.</p>
 
-```js
-console.log(import.meta); // { url: "file:///home/user/my-module.js" }
-```
+<pre class="brush: js;">console.log(import.meta); // { url: "file:///home/user/my-module.js" }</pre>
 
-Este retorna un objeto con una propiedad `url` indicando la URL base del módulo.Esta será la URL de la que el script fue obtenido, por scripts externos, o la URL base del documento que contiene el documento, por scripts inline.
+<p>Este retorna un objeto con una propiedad  <code>url</code>  indicando la URL base del módulo.Esta será la URL de la que el script fue obtenido, por scripts externos, o  la URL base del documento que contiene el documento, por scripts inline.</p>
 
-Nota que este incluirá parametros de la consulta y/o el hash (ej: seguido del `?` or `#`).
+<p>Nota que este incluirá parametros de la consulta y/o el hash (ej: seguido del <code>?</code> or <code>#</code>).</p>
 
-Por ejemplo, con el siguiente HTML:
+<p>Por ejemplo, con el siguiente HTML:</p>
 
-```html
-<script type="module">
+<pre class="brush: html">&lt;script type="module"&gt;
 import './index.mjs?someURLInfo=5';
-</script>
-```
+&lt;/script&gt;</pre>
 
-..El siguiente archivo JavaScript registrará el parámetro `someURLInfo`:
+<p>..El siguiente archivo JavaScript registrará el parámetro <code>someURLInfo</code>:</p>
 
-```js
-// index.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
-```
+<pre class="brush: js">// index.mjs
+new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
 
-Lo mismo aplica cuando un archivo importa otro:
+<p>Lo mismo aplica cuando un archivo importa otro:</p>
 
-```js
-// index.mjs
+<pre class="brush: js">// index.mjs
 import './index2.mjs?someURLInfo=5';
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
-```
+new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
 
-Nota que mientras Node.js pasa en la consulta los parámetros (o el hash ) como en el último ejemplo, a partir de Node 14.1.0, una URL con parametros en la consulta fallará cuando se carguen en el formato `node --experimental-modules index.mjs?someURLInfo=5` (es tratado como un archivo en lugar de una URL en este contexto).
+<p>Nota que mientras Node.js pasa en la consulta los parámetros (o el hash ) como en el último ejemplo, a partir de Node 14.1.0, una URL con parametros en la consulta fallará  cuando se  carguen en el formato <code>node --experimental-modules index.mjs?someURLInfo=5</code> (es tratado como un archivo en lugar de una URL en este contexto).</p>
 
-Tal argumento específico del archivo podria ser complementario al usado en toda la aplicacion `location.href` (con consultas strings o hash añadidas despues de la ruta HTML) (o en Node.js, mediante `process.argv`).
+<p>Tal argumento específico del archivo podria ser complementario al  usado en toda la aplicacion  <code>location.href</code> (con consultas strings o hash añadidas despues de la ruta HTML) (o en Node.js, mediante <code>process.argv</code>).</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificaciones                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| [`import.meta`](https://tc39.es/proposal-import-meta/#prod-ImportMeta) proposal                                          |
-| {{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificaciones</th>
+  </tr>
+  <tr>
+   <td><code><a href="https://tc39.es/proposal-import-meta/#prod-ImportMeta">import.meta</a></code> proposal</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("javascript.statements.import_meta")}}
 
-## Ver también
 
-- {{JSxRef("Statements/import", "import")}}
-- {{JSxRef("Statements/export", "export")}}
+<p>{{Compat("javascript.statements.import_meta")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{JSxRef("Statements/import", "import")}}</li>
+ <li>{{JSxRef("Statements/export", "export")}}</li>
+</ul>

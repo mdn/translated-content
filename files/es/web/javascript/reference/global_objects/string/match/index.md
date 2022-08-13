@@ -11,65 +11,69 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/match
 ---
-{{JSRef("Objetos_globales", "String")}}
+<p>{{JSRef("Objetos_globales", "String")}}</p>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-El método **`match()`** se usa para obtener todas las ocurrencias de una _expresión regular_ dentro de una _cadena_.
+<p>El método <strong><code>match()</code></strong> se usa para obtener todas las ocurrencias de una <em>expresión regular</em> dentro de una <em>cadena</em>.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    cadena.match(regexp)
+<pre class="syntaxbox"><em>cadena</em>.match(<em>regexp</em>)</pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-- `regexp`
-  - : Un objeto [expresión regular](/es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp). Si se pasa un objeto `obj` que no es expresión regular, se convierte implícitamente a RegExp usando `new RegExp(obj)`.
+<dl>
+ <dt><code>regexp</code></dt>
+ <dd>Un objeto <a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp"> expresión regular</a>. Si se pasa un objeto <code>obj</code> que no es expresión regular, se convierte implícitamente a RegExp usando <code>new RegExp(obj)</code>.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
 
-Si la expresión regular no incluye el flag `g`, devuelve el mismo resultado que {{jsxref("Regexp.exec()")}}.
+<p>Si la expresión regular no incluye el flag <code>g</code>, devuelve el mismo resultado que {{jsxref("Regexp.exec()")}}.</p>
 
-Si la expresión regular incluye el flag `g`, el método devuelve un {{jsxref("Array")}} que contiene todos los emparejamientos.
+<p>Si la expresión regular incluye el flag <code>g</code>, el método devuelve un {{jsxref("Array")}} que contiene todos los emparejamientos.</p>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-- Si necesita conocer si una cadena se empareja con una expresión regular `regexp`, use {{jsxref("Regexp.test()")}}.
-- Si sólo quiere el primer emparejamiento hallado, podría querer usar {{jsxref("Regexp.exec()")}} a cambio.
+<ul>
+ <li>Si necesita conocer si una cadena se empareja con una expresión regular <code>regexp</code>, use {{jsxref("Regexp.test()")}}.</li>
+ <li>Si sólo quiere el primer emparejamiento hallado, podría querer usar {{jsxref("Regexp.exec()")}} a cambio.</li>
+</ul>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-### Ejemplo: Usando `match`
+<h3 id="Ejemplo:_Usando_match" name="Ejemplo:_Usando_match">Ejemplo: Usando <code>match</code></h3>
 
-En el siguiente ejemplo, se usa `match` para hallar "`Capítulo`" seguido de 1 o más caracteres numéricos seguidos de un punto decimal y caracteres numéricos cero o más veces. La expresión regular incluye el flag `i` por lo que las mayúsculas serán ignoradas.
+<p>En el siguiente ejemplo, se usa <code>match</code> para hallar "<code>Capítulo</code>" seguido de 1 o más caracteres numéricos seguidos de un punto decimal y caracteres numéricos cero o más veces. La expresión regular incluye el flag <code>i</code> por lo que las mayúsculas serán ignoradas.</p>
 
-```js
-cadena = "Para más información, vea Capítulo 3.4.5.1";
+<pre class="brush: js">cadena = "Para más información, vea Capítulo 3.4.5.1";
 expresion = /(capítulo \d+(\.\d)*)/i;
 hallado = cadena.match(expresion);
 console.log(hallado);
-```
+</pre>
 
-Esto devuelve un array que contiene Capítulo 3.4.5.1,Capítulo 3.4.5.1,.1
+<p>Esto devuelve un array que contiene Capítulo 3.4.5.1,Capítulo 3.4.5.1,.1</p>
 
-"`Capítulo 3.4.5.1`" es el primer emparejamiento y el primer valor referenciado por `(Chapter \d+(\.\d)*)`.
+<p>"<code>Capítulo 3.4.5.1</code>" es el primer emparejamiento y el primer valor referenciado por <code>(Chapter \d+(\.\d)*)</code>.</p>
 
-"`.1`" es el segundo valor referenciado por `(\.\d)`.
+<p>"<code>.1</code>" es el segundo valor referenciado por <code>(\.\d)</code>.</p>
 
-### Ejemplo: Usando los flags global e ignorar mayúsculas con `match`
+<h3 id="Ejemplo:_Usando_los_flags_global_e_ignorar_may.C3.BAsculas_con_match" name="Ejemplo:_Usando_los_flags_global_e_ignorar_may.C3.BAsculas_con_match">Ejemplo: Usando los flags global e ignorar mayúsculas con <code>match</code></h3>
 
-El siguiente ejemplo demuestra el uso de los flags global e ignorar mayúsculas con `match`. Todas las letras de A hasta E y de a hasta e son devueltas, en su propio elemento dentro del array.
+<p>El siguiente ejemplo demuestra el uso de los flags global e ignorar mayúsculas con <code>match</code>. Todas las letras de A hasta E y de a hasta e son devueltas, en su propio elemento dentro del array.</p>
 
-```js
-var cadena = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+<pre class="brush: js">var cadena = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 var expresion = /[A-E]/gi;
 var array_emparejamientos = cadena.match(expresion);
 console.log(array_emparejamientos);
-```
+</pre>
 
-`array_emparejamientos` será `{{ mediawiki.external('\'A\', \'B\', \'C\', \'D\', \'E\', \'a\', \'b\', \'c\', \'d\', \'e\'') }}`
+<p><code>array_emparejamientos</code> será <code>{{ mediawiki.external('\'A\', \'B\', \'C\', \'D\', \'E\', \'a\', \'b\', \'c\', \'d\', \'e\'') }}</code></p>
 
-## Vea También
+<h2 id="Vea_También">Vea También</h2>
 
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+<ul>
+ <li>{{jsxref("RegExp.prototype.exec()")}}</li>
+ <li>{{jsxref("RegExp.prototype.test()")}}</li>
+</ul>

@@ -9,42 +9,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/new.target
 original_slug: Web/JavaScript/Referencia/Operadores/new.target
 ---
-{{JSSidebar("Operators")}}
+<div>{{JSSidebar("Operators")}}</div>
 
-La propiedad** `new.target`** te permite detectar si una función o constructor fue llamado usando el operador [new](/es/docs/Web/JavaScript/Referencia/Operadores/new). En constructores y funciones instanciadas con el operador [new](/es/docs/Web/JavaScript/Referencia/Operadores/new), `new.target` devuelve una referencia al constructor o función. En llamadas a funciones normales, `new.target` es {{jsxref("undefined")}}.
+<p>La propiedad<strong> <code>new.target</code></strong> te permite detectar si una función o constructor fue llamado usando el operador <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/new">new</a>. En constructores y funciones instanciadas con el operador <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/new">new</a>, <code>new.target</code> devuelve una referencia al constructor o función. En llamadas a funciones normales, <code>new.target</code> es {{jsxref("undefined")}}.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    new.target
+<pre class="syntaxbox">new.target</pre>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-La sintaxis `new.target` consiste en el keyword `"new`", un punto, y el nombre de propiedad `"target"`. Normalmente "`new."` sirve como contexto para el acceso a la propiedad, pero aquí, `"new."` no es realmente un objeto. En llamadas a constructores, sin embargo, `new.target` hace referencia al constructor invocado por new por lo que "`new.`" se convierte en un contexto virtual.
+<p>La sintaxis <code>new.target</code> consiste en el keyword <code>"new</code>", un punto, y el nombre de propiedad <code>"target"</code>. Normalmente "<code>new."</code> sirve como contexto para el acceso a la propiedad, pero aquí, <code>"new."</code> no es realmente un objeto. En llamadas a constructores, sin embargo, <code>new.target</code> hace referencia al constructor invocado por new por lo que "<code>new.</code>" se convierte en un contexto virtual.</p>
 
-La propiedad `new.target` es una meta propiedad que está disponible para todas las funciones. En [funciones flecha](/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions), `new.target` se refiere al `new.target` de la función que la contiene.
+<p>La propiedad <code>new.target</code> es una meta propiedad que está disponible para todas las funciones. En <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions">funciones flecha</a>, <code>new.target</code> se refiere al <code>new.target</code> de la función que la contiene.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### new\.target en llamadas a funciones
+<h3 id="new.target_en_llamadas_a_funciones">new.target en llamadas a funciones</h3>
 
-En llamadas a funciones normales (en contraposición a llamadas a constructores), `new.target` es {{jsxref("undefined")}}. Esto te permite detectar si la función fue llamada con [new](/es/docs/Web/JavaScript/Referencia/Operadores/new) como constructor.
+<p>En llamadas a funciones normales (en contraposición a llamadas a constructores), <code>new.target</code> es {{jsxref("undefined")}}. Esto te permite detectar si la función fue llamada con <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/new">new</a> como constructor.</p>
 
-```js
-function Foo() {
+<pre class="brush: js">function Foo() {
   if (!new.target) throw 'Foo() debe ser llamado con new';
   console.log('Foo instanciado con new');
 }
 
 Foo(); // Lanza "Foo() debe ser llamado con new"
 new Foo(); // escribe en el log "Foo instanciado con new"
-```
+</pre>
 
-### new\.target en constructores
+<h3 id="new.target_en_constructores">new.target en constructores</h3>
 
-En constructores de clase, `new.target` hace referencia al constructor que fue directamente invocado por `new`. Este también es el caso si el constructor está en una clase padre y fue delegado desdes el constructor hijo.
+<p>En constructores de clase, <code>new.target</code> hace referencia al constructor que fue directamente invocado por <code>new</code>. Este también es el caso si el constructor está en una clase padre y fue delegado desdes el constructor hijo.</p>
 
-```js
-class A {
+<pre class="brush: js">class A {
   constructor() {
     console.log(new.target.name);
   }
@@ -54,22 +52,39 @@ class B extends A { constructor() { super(); } }
 
 var a = new A(); // escribe en el log "A"
 var b = new B(); // escribe en el log "B"
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                       | Estatus                      | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}     | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("javascript.operators.new_target")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Funciones](/es/docs/Web/JavaScript/Guide/Funciones)
-- [Clases](/es/docs/Web/JavaScript/Referencia/Classes)
-- [`new`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/new)
-- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+<ul>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Funciones">Funciones</a></li>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes">Clases</a></li>
+ <li><code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/new">new</a></code></li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code></li>
+</ul>

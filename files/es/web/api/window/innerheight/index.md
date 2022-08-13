@@ -8,53 +8,70 @@ tags:
   - Window
 translation_of: Web/API/Window/innerHeight
 ---
-**_//Propiedad solo lectura del objeto window\._**
+<div><strong><em>//Propiedad solo lectura del objeto window.</em></strong></div>
 
-Representa la altura (en pixeles) del viewport
+<p>    Representa la altura (en pixeles) del viewport</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var alturaDelViewport = window.innerHeight;
+<pre class="syntaxbox notranslate">var <em>alturaDelViewport</em> = window.innerHeight;</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Como retorno, la propiedad innerHeight del objeto window nos retornara un valor de tipo entero, que representara (en pixeles) la altura del viewport.
+<p>Como retorno, la propiedad innerHeight del objeto window nos retornara un valor de tipo entero, que representara (en pixeles) la altura del viewport.</p>
 
-La propiedad `window.innerHeight` es solo de lectura; Y no tiene un valor por defecto.
+<p>La propiedad <code>window.innerHeight</code> es solo de lectura; Y no tiene un valor por defecto.</p>
 
-## Notas .
+<h2 id="Notas_."><span style="">Notas .                           </span></h2>
 
-La propiedad innerHeight es soportada por cualquier objeto de ventana. Pudiendo ejectutarse en un conjunto de marcos (\<frameset> \</frameset>). O en una ventana secundaria.
+<p><span style="">La propiedad innerHeight es soportada por cualquier objeto de ventana. Pudiendo ejectutarse en un conjunto de marcos  (&lt;frameset&gt; &lt;/frameset&gt;). O en una ventana secundaria.</span></p>
 
-Es un algoritmo para obtener la altura del viewport, excluyendo si se representa la barra de desplazamiento horizontal
+<p>Es un algoritmo para obtener la altura del viewport, excluyendo si se representa la barra de desplazamiento horizontal</p>
 
-### **Ejemplo**
+<h3 id="Ejemplo"><font color="#333333"><span style="background-color: #ffffff; font-size: 37.3333px;"><strong>Ejemplo</strong></span></font></h3>
 
-### Asumiendo un frameset
+<h3 id="Asumiendo_un_frameset">Asumiendo un frameset</h3>
 
-```js
-var alturaViewport = window.innerHeight;
+<pre class="brush:js notranslate">var alturaViewport = window.innerHeight;
 
 var alturaViewport = self.innerHeight;
 // self es window
-```
 
-**//otra forma de obtener la altura (aúnque, no del viewport, síno de la ventana), es usando la propiedad outerHeight, del objeto window.**
 
-### Ejemplo (Grafica)
+</pre>
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+<p> <span class="seoSummary"> <strong>//otra forma de obtener la altura (aúnque, no del         viewport, síno de la ventana), es usando  la propiedad outerHeight, del objeto window.</strong></span></p>
 
-## Especificacion
+<h3 id="Ejemplo_Grafica"><span style="">Ejemplo (Grafica)</span></h3>
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSSOM View', '#dom-window-innerheight', 'window.innerHeight')}} | {{Spec2('CSSOM View')}} | Initial definition |
+<p><img alt="innerHeight vs outerHeight illustration" src="/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png"></p>
 
-**Compatibilidad del navegador**
+<h2 id="Especificacion">Especificacion</h2>
 
-## Tambien me intersa
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSSOM View', '#dom-window-innerheight', 'window.innerHeight')}}</td>
+   <td>{{Spec2('CSSOM View')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-- {{domxref("window.innerWidth")}}
-- {{domxref("window.outerHeight")}}
-- {{domxref("window.outerWidth")}}
+<p><br>
+ <font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.3333px;"><strong>Compatibilidad del navegador</strong></span></font></p>
+
+<h2 id="Tambien_me_intersa">Tambien me intersa</h2>
+
+<ul>
+ <li>{{domxref("window.innerWidth")}}</li>
+ <li>{{domxref("window.outerHeight")}}</li>
+ <li>{{domxref("window.outerWidth")}}</li>
+</ul>

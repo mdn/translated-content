@@ -9,45 +9,53 @@ tags:
   - metodo
 translation_of: Web/API/Document/adoptNode
 ---
-{{ ApiRef("DOM") }}
+<div>{{ ApiRef("DOM") }}</div>
 
-**`Document.adoptNode()`** transfiere un {{Glossary("node/dom", "node")}} desde otro {{domxref("Document", "document", "", "1")}} al documento del método. El nodo adoptado y sus subnodos se eliminan del documento original (si lo hubiera), encuentra y su {{domxref("Node.ownerDocument", "ownerDocument")}} se cambia por el documento actual. El nodo puede entoces ser insertado en el documento actual.
+<p><strong><code>Document.adoptNode()</code></strong> transfiere un {{Glossary("node/dom", "node")}} desde otro {{domxref("Document", "document", "", "1")}} al documento del método. El nodo adoptado y sus subnodos se eliminan del documento original (si lo hubiera), encuentra  y su {{domxref("Node.ownerDocument", "ownerDocument")}} se cambia por el documento actual. El nodo puede entoces ser insertado en el documento actual.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    node = document.adoptNode(externalNode);
+<pre class="syntaxbox"><em>node</em> = <em>document</em>.adoptNode(<em>externalNode</em>);
+</pre>
 
-- `node`
-  - : El nodo adoptado que ahora tiene este documento como su {{domxref("Node.ownerDocument", "ownerDocument")}}. El {{domxref("Node.parentNode", "parentNode")}} del nodo es `null`, esto se debe a que aún no a sido insertado en el árbol del documento. Tenga en cuenta que `node` y `externalNode` son el mismo objeto después de esta llamada.
-- `externalNode`
-  - : El nodo a ser adoptado desde otro documento.
+<dl>
+ <dt><code>node</code></dt>
+ <dd>El nodo adoptado que ahora tiene este documento como su {{domxref("Node.ownerDocument", "ownerDocument")}}. El {{domxref("Node.parentNode", "parentNode")}} del nodo es <code>null</code>, esto se debe a que aún no a sido insertado en el árbol del documento. Tenga en cuenta que <code>node</code> y <code>externalNode</code> son el mismo objeto después de esta llamada.</dd>
+ <dt><code>externalNode</code></dt>
+ <dd>El nodo a ser adoptado desde otro documento.</dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-var iframe = document.querySelector('iframe');
+<pre class="brush: js">var iframe = document.querySelector('iframe');
 var iframeImages = iframe.contentDocument.querySelectorAll('img');
 var newParent = document.getElementById('images');
 
 iframeImages.forEach(function(imgEl) {
   newParent.appendChild(document.adoptNode(imgEl));
 });
-```
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-Los nodos de documentos externos deberían ser clonados utilizando {{domxref("document.importNode()")}} (o adoptado utilizando `document.adoptNode()`) antes de que puedan ser insertados en el documento actual. Para más incidencias sobre {{domxref("Node.ownerDocument")}}, vea el [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
+<p>Los nodos de documentos externos deberían ser clonados utilizando {{domxref("document.importNode()")}} (o adoptado utilizando <code>document.adoptNode()</code>) antes de que puedan ser insertados en el documento actual. Para más incidencias sobre {{domxref("Node.ownerDocument")}}, vea el <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
 
-Firefox actualmente no obliga a cumplir esta regla (lo hizo un tiempo durante el desarrollo de Firefox 3, pero muchos sitios se rompían cuando esta regla era obligatoria). Animamos a los desarrolladores web a que corrijan su código para seguir esta regla con el fin de mejorar la compatibilidad futura.
+<p>Firefox actualmente no obliga a cumplir esta regla (lo hizo un tiempo durante el desarrollo de Firefox 3, pero muchos sitios se rompían cuando esta regla era obligatoria). Animamos a los desarrolladores web a que corrijan su código para seguir esta regla con el fin de mejorar la compatibilidad futura.</p>
 
-## Epecificación
+<h2 id="Epecificación">Epecificación</h2>
 
-- [DOM Level 3 Core: Document.adoptNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode)
+<ul>
+ <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode">DOM Level 3 Core: Document.adoptNode</a></li>
+</ul>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("api.Document.adoptNode")}}
 
-## Vea también
 
-- {{domxref("document.importNode")}}
+<p>{{Compat("api.Document.adoptNode")}}</p>
+
+<h2 id="Vea_también">Vea también</h2>
+
+<ul>
+ <li>{{domxref("document.importNode")}}</li>
+</ul>

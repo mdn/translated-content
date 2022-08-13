@@ -9,71 +9,95 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/min
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La función **`Math.min()`** devuelve el menor de cero o más números.
+<p>La función <strong><code>Math.min()</code></strong> devuelve el menor de cero o más números.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Math.min([valor1[, valor2[, ...]]])
+<pre class="syntaxbox"><code>Math.min([<var>valor1</var>[, <var>valor2</var>[, ...]]])</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `valor1, valor2, ...`
-  - : Números.
+<dl>
+ <dt><code>valor1, valor2, ...</code></dt>
+ <dd>Números.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Ya que `min()` es un método estático de `Math`, siempre debe usarse como `Math.min()`, en lugar de como un método de un objeto `Math` instanciado (Math no es un constructor).
+<p>Ya que <code>min()</code> es un método estático de <code>Math</code>, siempre debe usarse como <code>Math.min()</code>, en lugar de como un método de un objeto <code>Math</code> instanciado (Math no es un constructor).</p>
 
-Si no se proporcionan argumentos, el resultado es {{jsxref("Infinity")}}.
+<p>Si no se proporcionan argumentos, el resultado es {{jsxref("Infinity")}}.</p>
 
-Si al menos uno de los argumentos no puede ser convertido a número, el resultado es {{jsxref("NaN")}}.
+<p>Si al menos uno de los argumentos no puede ser convertido a número, el resultado es {{jsxref("NaN")}}.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `Math.min()`
+<h3 id="Usando_Math.min()">Usando <code>Math.min()</code></h3>
 
-Lo siguiente encuentra el mínimo de `x` e `y` y lo asigna a `z`:
+<p>Lo siguiente encuentra el mínimo de <code>x</code> e <code>y</code> y lo asigna a <code>z</code>:</p>
 
-```js
-var x = 10, y = -20;
+<pre class="brush: js">var x = 10, y = -20;
 var z = Math.min(x, y);
-```
+</pre>
 
-### Recortando un valor con `Math.min()`
+<h3 id="Recortando_un_valor_con_Math.min()">Recortando un valor con <code>Math.min()</code></h3>
 
-`Math.min()` es a menudo usado para recortar un valor de tal manera que siempre sea menor o igual a un límite. Este ejemplo
+<p><code>Math.min()</code> es a menudo usado para recortar un valor de tal manera que siempre sea menor o igual a un límite. Este ejemplo</p>
 
-```js
-var x = f(foo);
+<pre class="brush: js">var x = f(foo);
 
-if (x > limite) {
+if (x &gt; limite) {
   x = limite;
 }
-```
+</pre>
 
-puede ser escrito de la siguiente manera
+<p>puede ser escrito de la siguiente manera</p>
 
-```js
-var x = Math.min(f(foo), limite);
-```
+<pre class="brush: js">var x = Math.min(f(foo), limite);
+</pre>
 
-{{jsxref("Math.max()")}} puede ser usado en una forma similar para recortar un valor en el otro extremo.
+<p>{{jsxref("Math.max()")}} puede ser usado en una forma similar para recortar un valor en el otro extremo.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                       | Estatus                      | Comentario                                          |
-| -------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definición inicial. Implementada en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.12', 'Math.min')}} | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.min', 'Math.min')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.min', 'Math.min')}} | {{Spec2('ESDraft')}} |                                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial. Implementada en JavaScript 1.0.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.8.2.12', 'Math.min')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-math.min', 'Math.min')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.min', 'Math.min')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Math.min")}}
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-- {{jsxref("Math.max()")}}
+<ul>
+ <li>{{jsxref("Math.max()")}}</li>
+</ul>

@@ -7,27 +7,31 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/distinct
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-`set:distinct()` devuelve un subconjunto de los nodos del conjunto de nods especificado, devolviendo sólo los nodos con valores de texto únicos.
+<p><br>
+ <code>set:distinct()</code> devuelve un subconjunto de los nodos del conjunto de nods especificado, devolviendo sólo los nodos con valores de texto únicos.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    set:distinct(conjuntoNodos)
+<pre class="eval">set:distinct(<em>conjuntoNodos</em>)
+</pre>
 
-### Argumentos
+<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
 
-- `conjuntoNodos`
-  - : El conjunto de nodos en el que hallar nodos únicos.
+<dl>
+ <dt><code><em>conjuntoNodos</em></code></dt>
+ <dd>El conjunto de nodos en el que hallar nodos únicos.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-Un conjunto de nodos que contiene los nodos que tienen valores de texto únicos.
+<p>Un conjunto de nodos que contiene los nodos que tienen valores de texto únicos.</p>
 
-### Definido en
+<h3 id="Definido_en" name="Definido_en">Definido en</h3>
 
-[EXSLT - SET:DISTINCT](http://www.exslt.org/set/functions/distinct/index.html)
+<p><a class="external" href="http://www.exslt.org/set/functions/distinct/index.html">EXSLT - SET:DISTINCT</a></p>
 
-### Implementación en Gecko
+<h3 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h3>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

@@ -9,93 +9,104 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/constructor
 ---
-{{JSRef("Objetos_globales", "Object")}}
+<div>{{JSRef("Objetos_globales", "Object")}}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-Retorna una referencia a la función del {{jsxref("Object")}} que creó el objeto de la instancia. Note que el valor de esta propiedad es una referencia a la función misma, no a un string conteniendo el nombre de la función. El valor es sólo de lectura para valores primitivos tales como 1, true y 'test'.
+<p>Retorna una referencia a la función del {{jsxref("Object")}} que creó el objeto de la instancia. Note que el valor de esta propiedad es una referencia a la función misma, no a un string conteniendo el nombre de la función. El valor es sólo de lectura para valores primitivos tales como 1, true y 'test'.</p>
 
-## Descripción
+<h2 id="Description" name="Description">Descripción</h2>
 
-Todos los objetos tienen una propiedad `constructor.` Los objetos creados sin explicitar el uso de una función (como son los objetos y las cadenas literales) tendrán una propiedad de `constructor` que apunta al tipo de constructor del Objeto Fundamento para ese objeto.
+<p>Todos los objetos tienen una propiedad <code>constructor.</code> Los objetos creados sin explicitar el uso de una función (como son los objetos y las cadenas literales) tendrán una propiedad de <code>constructor</code> que apunta al tipo de constructor del Objeto Fundamento para ese objeto.</p>
 
-```js
-var o = {};
+<pre class="brush:js">var o = {};
 o.constructor === Object; // true
 
 var a = [];
 a.constructor === Array; // true
 
 var n = new Number(3);
-n.constructor === Number; // true
-```
+n.constructor === Number; // true</pre>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-### Ejemplo: Mostrando el constructor de un objeto.
+<h3 id="Example:_Displaying_the_constructor_of_an_object" name="Example:_Displaying_the_constructor_of_an_object">Ejemplo: Mostrando el constructor de un objeto.</h3>
 
-El siguiente ejemplo crea un prototipo, `Tree`, y un objeto de este tipo, `theTree`. El ejemplo muestra entonces la propiedad `constructor` para el objeto `theTree`.
+<p>El siguiente ejemplo crea un prototipo, <code>Tree</code>, y un objeto de este tipo, <code>theTree</code>. El ejemplo muestra entonces la propiedad <code>constructor</code> para el objeto <code>theTree</code>.</p>
 
-```js
-function Tree (name) {
+<pre class="brush:js">function Tree (name) {
    this.name = name;
 }
 
 var theTree = new Tree( "Redwood" );
-console.log( "theTree.constructor is " + theTree.constructor );
-```
+console.log( "theTree.constructor is " + theTree.constructor );</pre>
 
-Este ejemplo muestra la siguiente salida:
+<p>Este ejemplo muestra la siguiente salida:</p>
 
-```js
-theTree.constructor is function Tree (name) {
+<pre class="brush:js">theTree.constructor is function Tree (name) {
     this.name = name;
-}
-```
+}</pre>
 
-### Ejemplo: Cambiando el constructor de un objeto.
+<h3 id="Example:_Changing_the_constructor_of_an_object" name="Example:_Changing_the_constructor_of_an_object">Ejemplo: Cambiando el constructor de un objeto.</h3>
 
-El siguiente ejemplo demuestra como modificar el valor del constructor de objetos genéricos. Solo `true`, `1` y `"test"` no serán afectados ya que ellos tienen constructores nativos de solo lectura. Este ejemplo demuestra que no siempre es seguro confiar en la propiedad constructor de un objeto.
+<p>El siguiente ejemplo demuestra como modificar el valor del constructor de objetos genéricos. Solo <code>true</code>, <code>1</code> y <code>"test"</code> no serán afectados ya que ellos tienen constructores nativos de solo lectura. Este ejemplo demuestra que no siempre es seguro confiar en la propiedad constructor de un objeto.</p>
 
-```js
-function Type () {}
+<pre class="brush:js">function Type () {}
 
 var types = [
     new Array(),
     [],
     new Boolean(),
     true,             // no cambia
-    new Date(),
-    new Error(),
-    new Function(),
+<span style="line-height: normal;">    </span>new Date(),
+<span style="line-height: normal;">    </span>new Error(),
+<span style="line-height: normal;">    </span>new Function(),
     function () {},
-    Math,
-    new Number(),
+<span style="line-height: normal;">    </span>Math,
+<span style="line-height: normal;">    </span>new Number(),
     1,                // no cambia
-    new Object(),
+<span style="line-height: normal;">    </span>new Object(),
     {},
-    new RegExp(),
+<span style="line-height: normal;">    </span>new RegExp(),
     /(?:)/,
-    new String(),
+<span style="line-height: normal;">    </span>new String(),
     "test"            // no cambia
 ];
 
-for( var i = 0; i < types.length; i++ ) {
+for( var i = 0; i &lt; types.length; i++ ) {
     types[i].constructor = Type;
     types[i] = [ types[i].constructor, types[i] instanceof Type, types[i].toString() ];
 }
 
-console.log( types.join( "\n" ) );
-```
+console.log( types.join( "\n" ) );</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificaciones                                                                                                     | Estatus                  | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| ECMAScript 1ra. Edición. Implementado en JavaScript 1.1                                                              | Estandar.                | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Objectprototype.constructor')}}                         | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ES6')}}     |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificaciones</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>ECMAScript 1ra. Edición. Implementado en JavaScript 1.1</td>
+   <td>Estandar.</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.2.4.1', 'Objectprototype.constructor')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con Navegadores
+<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
 
 {{Compat("javascript.builtins.Object.constructor")}}

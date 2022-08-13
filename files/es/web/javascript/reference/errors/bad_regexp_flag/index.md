@@ -9,84 +9,106 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 original_slug: Web/JavaScript/Reference/Errors/Indicador_regexp_no-val
 ---
-{{jsSidebar("Errors", "Errores")}}
+<div>{{jsSidebar("Errors", "Errores")}}</div>
 
-La excepción de JavaScript "indicador de expresión regular no válido" se produce cuando las indicadores, definidas después de la segunda barra en la expresión regular literal, no son de `g`, `i`, `m`, `s`, `u` o `y`.
+<p>La excepción de JavaScript "indicador de expresión regular no válido" se produce cuando las indicadores, definidas después de la segunda barra en la expresión regular literal, no son de <code>g</code>, <code>i</code>, <code>m</code>, <code>s</code>, <code>u</code> o <code>y</code>.</p>
 
-## Mensaje
+<h2 id="Mensaje">Mensaje</h2>
 
-    SyntaxError: error de sintaxis en la expresión regular (Edge)
-    SyntaxError: marca de expresión regular no válida "x" (Firefox)
-    SyntaxError: indicadores de expresión regular no válidos (Chrome)
+<pre class="syntaxbox notranslate">SyntaxError: error de sintaxis en la expresión regular (Edge)
+SyntaxError: marca de expresión regular no válida "x" (Firefox)
+SyntaxError: indicadores de expresión regular no válidos (Chrome)
+</pre>
 
-## Tipo `Error`
+<h2 id="Tipo_Error">Tipo <code>Error</code></h2>
 
-{{jsxref("SyntaxError")}}
+<p>{{jsxref("SyntaxError")}}</p>
 
-## ¿Qué salió mal?
+<h2 id="¿Qué_salió_mal">¿Qué salió mal?</h2>
 
-Hay indicadores de expresión regular no válidos en el código. En una expresión regular literal, que consiste en un patrón encerrado entre barras, los indicadores se definen después de la segunda barra. También se pueden definir en la función constructora del objeto {{jsxref("RegExp")}} (segundo parámetro). Los indicadores de expresión regular se pueden usar por separado o juntos en cualquier orden, pero solo hay seis de ellos en ECMAScript.
+<p>Hay indicadores de expresión regular no válidos en el código. En una expresión regular literal, que consiste en un patrón encerrado entre barras, los indicadores se definen después de la segunda barra. También se pueden definir en la función constructora del objeto {{jsxref("RegExp")}} (segundo parámetro). Los indicadores de expresión regular se pueden usar por separado o juntos en cualquier orden, pero solo hay seis de ellos en ECMAScript.</p>
 
-Para incluir una bandera con la expresión regular, usa esta sintaxis:
+<p>Para incluir una bandera con la expresión regular, usa esta sintaxis:</p>
 
-```js
-var re = /patrón/indicadores;
-```
+<pre class="brush: js notranslate">var re = /patrón/indicadores;
+</pre>
 
-o
+<p>o</p>
 
-```js
-var re = new RegExp('patrón', 'indicadores');
-```
+<pre class="brush: js notranslate">var re = new RegExp('patrón', 'indicadores');</pre>
 
-| Bandera | Descripción                                                                                                                                                    |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`     | Búsqueda global.                                                                                                                                               |
-| i       | Búsqueda que no distingue entre mayúsculas y minúsculas.                                                                                                       |
-| m       | Búsqueda multilínea.                                                                                                                                           |
-| s       | Permite que el punto (`.`) coincida con las nuevas líneas (agregado en ECMAScript 2018)                                                                        |
-| u       | Unicode; trata el patrón como una secuencia de puntos de código Unicode                                                                                        |
-| y       | Realiza una búsqueda "pegajosa" que coincida a partir de la posición actual en la cadena de destino. Consulta {{jsxref("RegExp.sticky", "sticky")}} |
+<table class="standard-table">
+ <caption>Indicadores de expresión regular</caption>
+ <thead>
+  <tr>
+   <th scope="col">Bandera</th>
+   <th scope="col">Descripción</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>g</code></td>
+   <td>Búsqueda global.</td>
+  </tr>
+  <tr>
+   <td>i</td>
+   <td>Búsqueda que no distingue entre mayúsculas y minúsculas.</td>
+  </tr>
+  <tr>
+   <td>m</td>
+   <td>Búsqueda multilínea.</td>
+  </tr>
+  <tr>
+   <td>s</td>
+   <td>Permite que el punto (<code>.</code>) coincida con las nuevas líneas (agregado en ECMAScript 2018)</td>
+  </tr>
+  <tr>
+   <td>u</td>
+   <td>Unicode; trata el patrón como una secuencia de puntos de código Unicode</td>
+  </tr>
+  <tr>
+   <td>y</td>
+   <td>Realiza una búsqueda "pegajosa" que coincida a partir de la posición actual en la cadena de destino. Consulta {{jsxref("RegExp.sticky", "sticky")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Solo hay seis indicadores de expresión regular válidos.
+<p>Solo hay seis indicadores de expresión regular válidos.</p>
 
-```js example-bad
-/foo/bar;
+<pre class="brush: js example-bad notranslate">/foo/bar;
 
 // SyntaxError: indicador de expresión regular no válido "b"
-```
+</pre>
 
-¿Tenías la intención de crear una expresión regular? Una expresión que contiene dos barras se interpreta como una expresión regular literal.
+<p>¿Tenías la intención de crear una expresión regular? Una expresión que contiene dos barras se interpreta como una expresión regular literal.</p>
 
-```js example-bad
-let obj = {
+<pre class="brush: js example-bad notranslate">let obj = {
   url: /docs/Web
 };
 
 // SyntaxError: indicador de expresión regular no válido "W"
-```
+</pre>
 
-¿O pretendías crear una cadena en su lugar? Agrega comillas simples o dobles para crear una cadena literal.
+<p>¿O pretendías crear una cadena en su lugar? Agrega comillas simples o dobles para crear una cadena literal.</p>
 
-```js example-good
-let obj = {
+<pre class="brush: js example-good notranslate">let obj = {
   url: '/docs/Web'
-};
-```
+};</pre>
 
-### Indicadores de expresión regular válidos
+<h3 id="Indicadores_de_expresión_regular_válidos">Indicadores de expresión regular válidos</h3>
 
-Consulta la tabla anterior para ver las seis marcas de expresiones regulares válidas que están permitidas en JavaScript.
+<p>Consulta la tabla anterior para ver las seis marcas de expresiones regulares válidas que están permitidas en JavaScript.</p>
 
-```js example-good
-/foo/g;
+<pre class="brush: js example-good notranslate">/foo/g;
 /foo/gims;
 /foo/uy;
-```
+</pre>
 
-## Ve también
+<h2 id="Ve_también">Ve también</h2>
 
-- {{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}}
-- [Indicadores de RegEx](http://xregexp.com/flags/) – biblioteca de expresiones regulares que proporciona cuatro nuevos indicadores (`n`, `s`, `x`, `A`)
+<ul>
+ <li>{{JSxRef("../Guide/Regular_Expressions", "Expresiones regulares")}}</li>
+ <li><a href="http://xregexp.com/flags/">Indicadores de RegEx</a> – biblioteca de expresiones regulares que proporciona cuatro nuevos indicadores (<code>n</code>, <code>s</code>, <code>x</code>, <code>A</code>)</li>
+</ul>

@@ -7,36 +7,44 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/exsl/object-type
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`exsl:object-type()` devuelve una cadena que indica el tipo del objeto especificado.
+<p><br>
+ <code>exsl:object-type()</code> devuelve una cadena que indica el tipo del objeto especificado.</p>
 
-> **Nota:** La mayoría de tipos de objetos [XSLT](\"es/XSLT\") pueden ser convertidos en otros con seguridad; sin embargo, ciertas conversiones pueden aumentar las condiciones de error. En particular, el tratamiento de algo que no sea un conjunto de nodos (node-set) como un conjunto de nodos lo haría así. Esta función permite que los autores de plantillas con nombre y funciones de extensión proporcionen fácilmente flexibilidad en los valores de los parámetros.
+<div class="note">
+<p><strong>Nota:</strong> La mayoría de tipos de objetos <a href='\"es/XSLT\"'>XSLT</a> pueden ser convertidos en otros con seguridad; sin embargo, ciertas conversiones pueden aumentar las condiciones de error. En particular, el tratamiento de algo que no sea un conjunto de nodos (node-set) como un conjunto de nodos lo haría así. Esta función permite que los autores de plantillas con nombre y funciones de extensión proporcionen fácilmente flexibilidad en los valores de los parámetros.</p>
+</div>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    exsl:object-type(objeto)
+<pre class="eval">exsl:object-type(<em>objeto</em>)
+</pre>
 
-### Argumentos
+<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
 
-- `objeto`
-  - : El objeto cuyo tipo va a ser devuelto.
+<dl>
+ <dt><code><em>objeto</em></code></dt>
+ <dd>El objeto cuyo tipo va a ser devuelto.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-El tipo del objeto, que será uno de los siguientes:
+<p>El tipo del objeto, que será uno de los siguientes:</p>
 
-- `string`
-- `number`
-- `boolean`
-- `node-set`
-- `RTF`
-- `external`
+<ul>
+ <li><code>string</code></li>
+ <li><code>number</code></li>
+ <li><code>boolean</code></li>
+ <li><code>node-set</code></li>
+ <li><code>RTF</code></li>
+ <li><code>external</code></li>
+</ul>
 
-### Definido en
+<h3 id="Definido_en" name="Definido_en">Definido en</h3>
 
-[EXSLT - EXSL:OBJECT-TYPE](http://www.exslt.org/exsl/functions/object-type/index.html)
+<p><a class="external" href="http://www.exslt.org/exsl/functions/object-type/index.html">EXSLT - EXSL:OBJECT-TYPE</a></p>
 
-### Implementación de Gecko
+<h3 id="Implementaci.C3.B3n_de_Gecko" name="Implementaci.C3.B3n_de_Gecko">Implementación de Gecko</h3>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

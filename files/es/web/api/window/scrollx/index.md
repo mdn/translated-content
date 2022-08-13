@@ -3,57 +3,70 @@ title: Window.scrollX
 slug: Web/API/Window/scrollX
 translation_of: Web/API/Window/scrollX
 ---
-{{ APIRef() }}
+<div>{{ APIRef() }}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-Retorna el número de pixels que el documento ha sido desplazado horizontalmente.
+<p>Retorna el número de pixels que el documento ha sido desplazado horizontalmente.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    var x = window.scrollX;
+<pre class="syntaxbox">var x = window.scrollX;</pre>
 
-### Parámetros
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
 
-- x será el número de pixels que el documento está desplazado actualmente desde la izquierda.
+<ul>
+ <li><font face="Courier New, Andale Mono, monospace"><span style="line-height: normal;">x</span></font> será el número de pixels que el documento está desplazado actualmente desde la izquierda.</li>
+</ul>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-// Si scrollX es mayor que 400, reinicia la posición de desplazxamiento al inicio supuerior-izquierdo del documento.
-if (window.scrollX > 400) {
+<pre class="brush:js">// Si scrollX es mayor que 400, reinicia la posición de desplazxamiento al inicio supuerior-izquierdo del documento.
+if (window.scrollX &gt; 400) {
   window.scroll(0,0);
-}
-```
+}</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-La propiedad `pageXOffset` es un alias de la propiedad `scrollX`:
+<p><span style="line-height: 1.572;">La propiedad </span><code style="font-size: 14px;">pageXOffset</code><span style="line-height: 1.572;"> es un alias de la propiedad </span><code style="font-size: 14px;">scrollX</code><span style="line-height: 1.572;">:</span></p>
 
-    window.pageXOffset == window.scrollX; // siempre true
+<pre>window.pageXOffset == window.scrollX; // siempre true</pre>
 
-Para compatibilidad cruzada entre navegadores, use `window.pageXOffset` en lugar de `window.scrollX`. **Adicionalmente**, versiones más antiguas de Internet Explorer (< 9) no soportan ninguna de las dos propiedades y deben ser sorteadas examinando otras propiedade no estandar. Un ejemplo totalmente compatible:
+<p>Para compatibilidad cruzada entre navegadores, use <code>window.pageXOffset</code> en lugar de <code>window.scrollX</code>. <strong>Adicionalmente</strong>, versiones más antiguas de Internet Explorer (&lt; 9) no soportan ninguna de las dos propiedades y deben ser sorteadas examinando otras propiedade no estandar. Un ejemplo totalmente compatible:</p>
 
-```js
-var x = (window.pageXOffset !== undefined)
+<pre class="brush:js">var x = (window.pageXOffset !== undefined)
   ? window.pageXOffset
   : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
 
 var y = (window.pageYOffset !== undefined)
   ? window.pageYOffset
-  : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-```
+  : (document.documentElement || document.body.parentNode || document.body).scrollTop;</pre>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-| Especificación                                                                               | Estado                           | Observaciones |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollx', 'window.scrollX') }} | {{ Spec2('CSSOM View') }} |               |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Observaciones</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSSOM View', '#dom-window-scrollx', 'window.scrollX') }}</td>
+   <td>{{ Spec2('CSSOM View') }}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.Window.scrollX")}}
 
-## Ver también
+<h2 id="See_also" name="See_also">Ver también</h2>
 
-- [window.scrollY](/es/docs/DOM/window.scrollY "window.scrollX | Document Object Model (DOM) | MDN")
+<ul>
+ <li><a href="/en-US/docs/DOM/window.scrollY" title="window.scrollX | Document Object Model (DOM) | MDN">window.scrollY</a></li>
+</ul>

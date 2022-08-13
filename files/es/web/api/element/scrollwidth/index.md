@@ -3,26 +3,27 @@ title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
 translation_of: Web/API/Element/scrollWidth
 ---
-{{ APIRef("DOM") }}
+<div>{{ APIRef("DOM") }}</div>
 
-La propiedad de sólo lectura **`Element.scrollWidth`** retorna bien la anchura en pixels del contenido de un elemento o bien la anchura del elemento en si, la que sea mayor de ambas. Si el elemento es más ancho que su área contenedora (por ejemplo, si existen barras de desplazamiento para desplazarse a través del contenido), `scrollWidth` es mayor que `clientWidth`.
+<p>La propiedad de sólo lectura <strong><code>Element.scrollWidth</code></strong> retorna bien la anchura en pixels del contenido de un elemento o bien la anchura del elemento en si, la que sea mayor de ambas. Si el elemento es más ancho que su área contenedora (por ejemplo, si existen barras de desplazamiento para desplazarse a través del contenido),  <code>scrollWidth</code> es mayor que  <code>clientWidth</code>.</p>
 
-> **Nota:** El valor de esta propiedad será red redondedo a un entero. Si necesita un valor fraccional, use {{ domxref("element.getBoundingClientRect()") }}.
+<div class="note">
+<p>El valor de esta propiedad será red redondedo a un entero. Si necesita un valor fraccional, use {{ domxref("element.getBoundingClientRect()") }}.</p>
+</div>
 
-## Sintaxis
+<h2 id="Syntax_and_values" name="Syntax_and_values">Sintaxis</h2>
 
-    var xScrollWidth = element.scrollWidth;
+<pre class="syntaxbox">var <var>xScrollWidth</var> = <var>element</var>.scrollWidth;</pre>
 
-_xScrollWidth_ es el ancho del contenido de _element_ en pixels.
+<p><var>xScrollWidth</var> es el ancho del contenido de <var>element</var> en pixels.</p>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Ejemplo</title>
-    <style>
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Ejemplo&lt;/title&gt;
+    &lt;style&gt;
         div {
             overflow: hidden;
             white-space: nowrap;
@@ -36,25 +37,25 @@ _xScrollWidth_ es el ancho del contenido de _element_ en pixels.
         button {
             margin-bottom: 2em;
         }
-    </style>
-</head>
+    &lt;/style&gt;
+&lt;/head&gt;
 
-<body>
-    <div id="aDiv">
+&lt;body&gt;
+    &lt;div id="aDiv"&gt;
         FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="aButton">
+    &lt;/div&gt;
+    &lt;button id="aButton"&gt;
         Check for overflow
-    </button>
+    &lt;/button&gt;
 
-    <div id="anotherDiv">
+    &lt;div id="anotherDiv"&gt;
         FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="anotherButton">
+    &lt;/div&gt;
+    &lt;button id="anotherButton"&gt;
         Check for overflow
-    </button>
-</body>
-<script>
+    &lt;/button&gt;
+&lt;/body&gt;
+&lt;script&gt;
     var buttonOne = document.getElementById('aButton'),
     buttonTwo = document.getElementById('anotherButton'),
     divOne = document.getElementById('aDiv'),
@@ -62,7 +63,7 @@ _xScrollWidth_ es el ancho del contenido de _element_ en pixels.
 
     //comprueba si un desbordamiento está ocurriendo
     function isOverflowing(element) {
-        return (element.scrollWidth > element.offsetWidth);
+        return (element.scrollWidth &gt; element.offsetWidth);
     }
 
     function alertOverflow(element) {
@@ -80,22 +81,39 @@ _xScrollWidth_ es el ancho del contenido de _element_ en pixels.
     buttonTwo.addEventListener('click', function() {
         alertOverflow(divTwo);
     });
-</script>
-</html>
-```
+&lt;/script&gt;
+&lt;/html&gt;
 
-## Especificación
+</pre>
 
-| Especificación                                                                                           | Estado                           | Observaciones      |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-element-scrollwidth", "Element.scrollWidth")}} | {{Spec2("CSSOM View")}} | Definición inicial |
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-## Browser compatibility
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Especificación</th>
+   <th>Estado</th>
+   <th>Observaciones</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("CSSOM View", "#dom-element-scrollwidth", "Element.scrollWidth")}}</td>
+   <td>{{Spec2("CSSOM View")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("api.Element.scrollWidth")}}
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-## Ver también
 
-- {{domxref("Element.clientWidth")}}
-- {{domxref("HTMLElement.offsetWidth")}}
-- [Determinando las dimensiones de elementos](/es/docs/Determining_the_dimensions_of_elements)
+
+<p>{{Compat("api.Element.scrollWidth")}}</p>
+
+ <h2 id="See_also" name="See_also">Ver también</h2>
+
+
+<ul>
+ <li>{{domxref("Element.clientWidth")}}</li>
+ <li>{{domxref("HTMLElement.offsetWidth")}}</li>
+ <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determinando las dimensiones de elementos</a></li>
+</ul>

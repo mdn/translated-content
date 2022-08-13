@@ -9,45 +9,44 @@ tags:
   - Referencia
 translation_of: Web/CSS/border-block-end-style
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<p>{{CSSRef}}{{SeeCompatTable}}</p>
 
-La propiedad [CSS](/es/docs/Web/CSS "CSS") **`border-block-end-style`** define el estilo del borde del final lógico del bloque de un elemento, que se mapea a un estilo de borde físico, dependiendo el modo de escritura, direccionalidad y orientación de texto del elemento. Corresponde a las propiedades {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, o {{cssxref("border-left-style")}}, dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
+<p>La propiedad <a href="/es/docs/Web/CSS" title="CSS">CSS</a> <strong><code>border-block-end-style</code></strong> define el estilo del borde del final lógico del bloque de un elemento, que se mapea a un estilo de borde físico, dependiendo el modo de escritura, direccionalidad y orientación de texto del elemento. Corresponde a las propiedades {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, o {{cssxref("border-left-style")}}, dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.</p>
 
-```css
-border-block-end-style: dashed;
+<pre class="brush:css no-line-numbers">border-block-end-style: dashed;
 border-block-end-style: dotted;
 border-block-end-style: groove;
-```
+</pre>
 
-Está relacionada a {{cssxref("border-block-start-style")}}, {{cssxref("border-inline-start-style")}}, y {{cssxref("border-inline-end-style")}}, que definen las otras propiedades de estilos de borde del elemento.
+<p>Está relacionada a {{cssxref("border-block-start-style")}}, {{cssxref("border-inline-start-style")}}, y {{cssxref("border-inline-end-style")}}, que definen las otras propiedades de estilos de borde del elemento.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `<'border-style'>`
-  - : See {{ cssxref("border-style") }}
+<dl>
+ <dt><code>&lt;'border-style'&gt;</code></dt>
+ <dd>See {{ cssxref("border-style") }}</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### Contenido HTML
+<h3 id="Contenido_HTML">Contenido HTML</h3>
 
-```html
-<div>
-  <p class="exampleText">Texto de ejemplo</p>
-</div>
-```
+<pre class="brush: html">&lt;div&gt;
+  &lt;p class="exampleText"&gt;Texto de ejemplo&lt;/p&gt;
+&lt;/div&gt;
+</pre>
 
-### Contenido CSS
+<h3 id="Contenido_CSS">Contenido CSS</h3>
 
-```css
-div {
+<pre class="brush: css">div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -57,22 +56,36 @@ div {
   writing-mode: vertical-lr;
   border: 5px solid blue;
   border-block-end-style: dashed;
-}
-```
+}</pre>
 
-{{EmbedLiveSample("Ejemplo", 140, 140)}}
+<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
 
-## Especificación
+<h2 id="Especificación">Especificación</h2>
 
-| Especificación                                                                                                                       | Estatus                                          | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-end-style", "border-block-end-style")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block-end-style", "border-block-end-style")}}</td>
+   <td>{{Spec2("CSS Logical Properties")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("css.properties.border-block-end-style")}}
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- Las propiedades físicas mapeadas: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, y {{cssxref("border-left-style")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+<ul>
+ <li>Las propiedades físicas mapeadas: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, y {{cssxref("border-left-style")}}</li>
+ <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
+</ul>

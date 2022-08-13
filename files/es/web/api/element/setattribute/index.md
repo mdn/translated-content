@@ -12,71 +12,77 @@ tags:
   - setAttribute
 translation_of: Web/API/Element/setAttribute
 ---
-{{APIRef("DOM")}}
+<p>{{APIRef("DOM")}}</p>
 
-Establece el valor de un atributo en el elemento indicado. Si el atributo ya existe, el valor es actualizado, en caso contrario, el nuevo atributo es añadido con el nombre y valor indicado.
+<p>Establece el valor de un atributo en el elemento indicado. Si el atributo ya existe, el valor es actualizado, en caso contrario, el nuevo atributo es añadido con el nombre y valor indicado.</p>
 
-Para obtener el valor actual de un atributo, se utiliza {{domxref("Element.getAttribute", "getAttribute()")}}; para eliminar un atributo, se llama a {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+<p>Para obtener el valor actual de un atributo, se utiliza {{domxref("Element.getAttribute", "getAttribute()")}}; para eliminar un atributo, se llama a {{domxref("Element.removeAttribute", "removeAttribute()")}}.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    Element.setAttribute(name, value);
+<pre class="syntaxbox"><em>Element</em>.setAttribute(<em>name</em>, <em>value</em>);
+</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `name`
-  - : Un {{domxref("DOMString")}} indicando el nombre del atributo cuyo valor se va a cambiar. El nombre del atributo se convierte automáticamente en minúsculas cuando `setAttribute()` se llama sobre un elemento HTML en un documento HTML.
-- `value`
-  - : Un {{domxref("DOMString")}} que contenga el valor que asignar al atributo. Cualquier valor indicado que no sea una cadena de texto se convierte automáticamente en una cadena de texto.
+<dl>
+ <dt><code>name</code></dt>
+ <dd>Un {{domxref("DOMString")}} indicando el nombre del atributo cuyo valor se va a cambiar. El nombre del atributo se convierte automáticamente en minúsculas cuando <code>setAttribute()</code> se llama sobre un elemento HTML en un documento HTML.</dd>
+ <dt><code>value</code></dt>
+ <dd>Un {{domxref("DOMString")}} que contenga el valor que asignar al atributo. Cualquier valor indicado que no sea una cadena de texto se convierte automáticamente en una cadena de texto.</dd>
+</dl>
 
-Los atributos booleanos se consideran `true` si al menos están presentes en el elemento, independientemente de su `value` actual; como regla, se debería especificar una cadena de texto vacía (`""`) en `value` (algunas personas utilizan el nombre del atributo; esto funciona pero no es un standard). Vea un [ejemplo](#ejemplo) posterior para una demostración práctica.
+<p>Los atributos booleanos se consideran <code>true</code> si al menos están presentes en el elemento, independientemente de su <code>value</code> actual; como regla, se debería especificar una cadena de texto vacía (<code>""</code>) en <code>value</code> (algunas personas utilizan el nombre del atributo; esto funciona pero no es un standard). Vea un <a href="#ejemplo">ejemplo</a> posterior para una demostración práctica.</p>
 
-Dado que `value` se convierte en una cadena de texto, indicando `null` no necesariamente hace lo que se espera. En lugar de eliminar el atributo o establecer su valor para ser {{jsxref("null")}}, establece el valor del atributo a la cadena de texto `"null"`. Si se desea eliminar un atributo, se debe llamar a {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+<p>Dado que <code>value</code> se convierte en una cadena de texto, indicando <code>null</code> no necesariamente hace lo que se espera. En lugar de eliminar el atributo o establecer su valor para ser {{jsxref("null")}}, establece el valor del atributo a la cadena de texto <code>"null"</code>. Si se desea eliminar un atributo, se debe llamar a {{domxref("Element.removeAttribute", "removeAttribute()")}}.</p>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-{{jsxref("undefined")}}.
+<p>{{jsxref("undefined")}}.</p>
 
-### Excepciones
+<h3 id="Excepciones">Excepciones</h3>
 
-- `InvalidCharacterError`
-  - : El atributo especificado `name` contiene uno o más caracteres que no son válidos en el nombre del atributo.
+<dl>
+ <dt><code>InvalidCharacterError</code></dt>
+ <dd>El atributo especificado <code>name</code> contiene uno o más caracteres que no son válidos en el nombre del atributo.</dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
 
-En el siguiente ejemplo, `setAttribute()` se utiliza para establecer atributos en un {{HTMLElement("button")}}.
+<p>En el siguiente ejemplo, <code>setAttribute()</code> se utiliza para establecer atributos en un {{HTMLElement("button")}}.</p>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<button>Hola Mundo</button>
-```
+<pre class="brush: html">&lt;button&gt;Hola Mundo&lt;/button&gt;</pre>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-var b = document.querySelector("button");
+<pre class="brush:js">var b = document.querySelector("button");
 
 b.setAttribute("name", "helloButton");
 b.setAttribute("disabled", "");
-```
+</pre>
 
-Esto demuestra dos cosas:
+<p>Esto demuestra dos cosas:</p>
 
-- La primera llamada a `setAttribute()` muestra cómo se cambia el valor del atributo `name` a "helloButton". Puede ver esto utilizando el inspector de página de su navegador ([Chrome](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/?hl=es), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide), [Firefox](/es/docs/Tools/Page_Inspector), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)).
-- Para establecer el valor de un atributo booleano, como `disabled`, se puede especificar cualquier valor. Una cadena de texto vacía o el nombre de un atributo son valores recomendados. Todo lo que importa es que si el atributo está presente, _independientemente de su valor actual_, su valor se considera como `true`. La ausencia del atributo significa que su valor es `false`. Estableciendo una cadena vacía (`""`) como el valor del atributo `disabled`, se estaría cambiando `disabled` a `true`, lo que provoca que el botón sea deshabilitado.
+<ul>
+ <li>La primera llamada a <code>setAttribute()</code> muestra cómo se cambia el valor del atributo <code>name</code> a "helloButton". Puede ver esto utilizando el inspector de página de su navegador (<a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/?hl=es">Chrome</a>, <a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide">Edge</a>, <a href="/es/docs/Tools/Page_Inspector">Firefox</a>, <a href="https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html">Safari</a>).</li>
+ <li>Para establecer el valor de un atributo booleano, como <code>disabled</code>, se puede especificar cualquier valor. Una cadena de texto vacía o el nombre de un atributo son valores recomendados. Todo lo que importa es que si el atributo está presente, <em>independientemente de su valor actual</em>, su valor se considera como <code>true</code>. La ausencia del atributo significa que su valor es <code>false</code>. Estableciendo una cadena vacía (<code>""</code>) como el valor del atributo <code>disabled</code>, se estaría cambiando <code>disabled</code> a <code>true</code>, lo que provoca que el botón sea deshabilitado.</li>
+</ul>
 
-{{ EmbedLiveSample('Example', '300', '50') }}
+<p>{{ EmbedLiveSample('Example', '300', '50') }}</p>
 
-{{DOMAttributeMethods}}
+<p>{{DOMAttributeMethods}}</p>
 
-## Especificación
+<h2 id="Especificación" name="Especificación">Especificación</h2>
 
-- [DOM Level 2 Core: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) (introducido en [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute))
-- [HTML5: APIs en documentos HTML](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082">DOM Level 2 Core: setAttribute</a> (introducido en <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute">DOM Level 1 Core</a>)</li>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents">HTML5: APIs en documentos HTML</a></li>
+</ul>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad con navegadores" name="Compatibilidad con navegadores">Compatibilidad con navegadores</h2>
 
-### Notas Gecko
+<h3 id="Notas" name="Notas">Notas Gecko</h3>
 
-Utilizando `setAttribute()` para modificar ciertos atributos, el más notable es `value` en XUL, funciona de forma inconsistente, ya que el atributo especifica el valor determinado. Para acceder o modificar los valores actuales, se deben utilizar las propiedades. Por ejemplo, utilizar `Element.value` en lugar de `Element.setAttribute()`.
+<p>Utilizando <code>setAttribute()</code> para modificar ciertos atributos, el más notable es <code>value</code> en XUL, funciona de forma inconsistente, ya que el atributo especifica el valor determinado. Para acceder o modificar los valores actuales, se deben utilizar las propiedades. Por ejemplo, utilizar <code>Element.value</code> en lugar de <code>Element.setAttribute()</code>.</p>

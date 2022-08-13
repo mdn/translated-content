@@ -5,59 +5,66 @@ tags:
   - API
 translation_of: Web/API/IDBObjectStore
 ---
-{{APIRef("IndexedDB")}}
+<p>{{APIRef("IndexedDB")}}</p>
 
-The `IDBObjectStore` interface of the [IndexedDB API](/en/IndexedDB "en/IndexedDB") represents an [object store](/en/IndexedDB#gloss_object_store "en/IndexedDB#gloss object store") in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.
+<div>
+<p>The <code>IDBObjectStore</code> interface of the <a href="/en/IndexedDB" title="en/IndexedDB">IndexedDB API</a> represents an <a href="/en/IndexedDB#gloss_object_store" title="en/IndexedDB#gloss object store">object store</a> in a database. Records within an object store are sorted according to their keys. This sorting enables fast insertion, look-up, and ordered retrieval.</p>
+</div>
 
-## Methods
+<h2 id="Methods">Methods</h2>
 
-- {{domxref("IDBObjectStore.add")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for adding new records to an object store.
-- {{domxref("IDBObjectStore.clear")}}
-  - : Creates and immediately returns an {{domxref("IDBRequest")}} object, and clears this object store in a separate thread. This is for deleting all current records out of an object store.
-- {{domxref("IDBObjectStore.delete")}}
-  - : returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the current object store. This is for deleting individual records out of an object store.
-- {{domxref("IDBObjectStore.get")}}
-  - : returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns the object store selected by the specified key. This is for retrieving specific records from an object store.
-- {{domxref("IDBObjectStore.createIndex")}}
-  - : Creates a new index during a version upgrade, returning a new {{domxref("IDBIndex")}} object in the connected database.
-- {{domxref("IDBObjectStore.deleteIndex")}}
-  - : Destroys the specified index in the connected database, used during a version upgrade.
-- {{domxref("IDBObjectStore.index")}}
-  - : Opens an index from this object store after which it can, for example, be used to return a sequence of records sorted by that index using a cursor.
-- {{domxref("IDBObjectStore.put")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the `value`, and stores the cloned value in the object store. This is for updating existing records in an object store when the transaction's mode is `readwrite`.
-- {{domxref("IDBObjectStore.openCursor")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}} object. Used for iterating through an object store by primary key with a cursor.
+<dl>
+ <dt>{{domxref("IDBObjectStore.add")}}</dt>
+ <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. This is for adding new records to an object store.</dd>
+ <dt>{{domxref("IDBObjectStore.clear")}}</dt>
+ <dd>Creates and immediately returns an {{domxref("IDBRequest")}} object, and clears this object store in a separate thread. This is for deleting all current records out of an object store.</dd>
+ <dt>{{domxref("IDBObjectStore.delete")}}</dt>
+ <dd>returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the current object store. This is for deleting individual records out of an object store.</dd>
+ <dt>{{domxref("IDBObjectStore.get")}}</dt>
+ <dd>returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns the object store selected by the specified key. This is for retrieving specific records from an object store.</dd>
+ <dt>{{domxref("IDBObjectStore.createIndex")}}</dt>
+ <dd>Creates a new index during a version upgrade, returning a new {{domxref("IDBIndex")}} object in the connected database.</dd>
+ <dt>{{domxref("IDBObjectStore.deleteIndex")}}</dt>
+ <dd>Destroys the specified index in the connected database, used during a version upgrade.</dd>
+ <dt>{{domxref("IDBObjectStore.index")}}</dt>
+ <dd>Opens an index from this object store after which it can, for example, be used to return a sequence of records sorted by that index using a cursor.</dd>
+ <dt>{{domxref("IDBObjectStore.put")}}</dt>
+ <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. This is for updating existing records in an object store when the transaction's mode is <code>readwrite</code>.</dd>
+ <dt>{{domxref("IDBObjectStore.openCursor")}}<span style="line-height: 1.5;"> </span></dt>
+ <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}} object. Used for iterating through an object store by primary key with a cursor.</dd>
+</dl>
 
-## Properties
+<h2 id="Properties">Properties</h2>
 
-- {{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}
-  - : A list of the names of [indexes](/en/IndexedDB#gloss_index "en/IndexedDB#gloss index") on objects in this object store.
-- {{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}
-  - : The [key path](/en/IndexedDB#gloss_key_path "en/IndexedDB#gloss key path") of this object store. If this attribute is null, the application must provide a key for each modification operation.
-- {{domxref("IDBObjectStore.name")}} {{readonlyInline}}
-  - : The name of this object store.
-- {{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}
-  - : The name of the transaction to which this object store belongs.
-- {{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}
-  - : The value of the auto increment flag for this object store.
+<dl>
+ <dt>{{domxref("IDBObjectStore.indexNames")}} {{readonlyInline}}</dt>
+ <dd>A list of the names of <a href="/en/IndexedDB#gloss_index" title="en/IndexedDB#gloss index">indexes</a> on objects in this object store.</dd>
+ <dt>{{domxref("IDBObjectStore.keyPath")}} {{readonlyInline}}</dt>
+ <dd>The <a href="/en/IndexedDB#gloss_key_path" title="en/IndexedDB#gloss key path">key path</a> of this object store. If this attribute is null, the application must provide a key for each modification operation.</dd>
+ <dt>{{domxref("IDBObjectStore.name")}} {{readonlyInline}}</dt>
+ <dd>The name of this object store.</dd>
+ <dt>{{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}</dt>
+ <dd>The name of the transaction to which this object store belongs.</dd>
+ <dt>{{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}</dt>
+ <dd>The value of the auto increment flag for this object store.</dd>
+</dl>
 
-## Obsolete methods
+<h2 id="Obsolete_methods">Obsolete methods</h2>
 
-- {{domxref("IDBObjectStore.openKeyCursor")}}
-  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}}. Used for iterating through an object store with a key. However, this is now handled by {{domxref("IDBObjectStore.openCursor")}}, if a value is specified.
+<dl>
+ <dt>{{domxref("IDBObjectStore.openKeyCursor")}}<span style="line-height: 1.5;"> </span></dt>
+ <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}}. Used for iterating through an object store with a key. However, this is now handled by {{domxref("IDBObjectStore.openCursor")}}, if a value is specified.</dd>
+</dl>
 
-## Example
+<h2 id="Example">Example</h2>
 
-This example shows a variety of different uses of ObjectStores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an `onupgradeneeded` function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
+<p>This example shows a variety of different uses of ObjectStores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an <code>onupgradeneeded</code> function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
 
-```js
-// Let us open our database
+<pre class="brush: js">// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
   db = DBOpenRequest.result;
@@ -70,7 +77,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function(event) {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
   };
 
   // Create an objectStore for this database
@@ -87,7 +94,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>Object store created.</li>';
+  note.innerHTML += '&lt;li&gt;Object store created.&lt;/li&gt;';
 };
 
 // Create a new item to add in to the object store
@@ -100,11 +107,11 @@ var transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
 transaction.oncomplete = function(event) {
-  note.innerHTML += '<li>Transaction opened for task addition.</li>';
+  note.innerHTML += '&lt;li&gt;Transaction opened for task addition.&lt;/li&gt;';
 };
 
 transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  note.innerHTML += '&lt;li&gt;Transaction not opened due to error. Duplicate items not allowed.&lt;/li&gt;';
 };
 
 // create an object store on the transaction
@@ -113,26 +120,38 @@ var objectStore = transaction.objectStore("toDoList");
 var objectStoreRequest = objectStore.add(newItem[0]);
 
 objectStoreRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>New item added to database.</li>';
-}
-```
+  note.innerHTML += '&lt;li&gt;New item added to database.&lt;/li&gt;';
+}</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                | Status                       | Comment |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}} | {{Spec2('IndexedDB')}} |         |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('IndexedDB', '#idl-def-IDBObjectStore', 'IDBObjectStore')}}</td>
+   <td>{{Spec2('IndexedDB')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("api.IDBObjectStore")}}
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [Using IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+<ul>
+ <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+ <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
+ <li>Using transactions: {{domxref("IDBTransaction")}}</li>
+ <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
+ <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
+ <li>Using cursors: {{domxref("IDBCursor")}}</li>
+ <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+</ul>

@@ -10,27 +10,28 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isFrozen
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`Object.isFrozen()`** determina si un objeto está _congelado_.
+<p>El método <code><strong>Object.isFrozen()</strong></code> determina si un objeto está <em>congelado</em>.</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-    Object.isFrozen(obj)
+<pre class="syntaxbox"><code>Object.isFrozen(<var>obj</var>)</code></pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- `obj`
-  - : El objeto a ser revisado.
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>El objeto a ser revisado.</dd>
+</dl>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Un objeto está congelado si y solo si no es {{jsxref("Object.isExtensible()", "extendible", "", 1)}}, todas sus propiedades son no-configurables, y todos los datos de sus propiedades no tienen capacidad de escritura.
+<p>Un objeto está congelado si y solo si no es {{jsxref("Object.isExtensible()", "extendible", "", 1)}}, todas sus propiedades son no-configurables, y todos los datos de sus propiedades no tienen capacidad de escritura.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-// Un objeto nuevo es extendible, así que no está congelado.
+<pre class="brush: js">// Un objeto nuevo es extendible, así que no está congelado.
 Object.isFrozen({}); // === false
 
 // Un objeto vacio el cuál no es extendible está congelado vacuamente.
@@ -90,35 +91,53 @@ Object.isExtensible(frozen); // === false
 
 // Also by definition, a frozen object is sealed.
 Object.isSealed(frozen); // === true
-```
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-En ES5, si el argumento pasado a éste método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como argumento será tratado como si fuera un objeto ordinario congelado, simplemente regresa `true`.
+<p>En ES5, si el argumento pasado a éste método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como argumento será tratado como si fuera un objeto ordinario congelado, simplemente regresa <code>true</code>.</p>
 
-```js
-Object.isFrozen(1);
+<pre class="brush: js">Object.isFrozen(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isFrozen(1);
 // true                          (ES6 code)
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                   | Comentario                                            |
-| ------------------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}         | {{Spec2('ES5.1')}} | Definición inicial. Implementada en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}} | {{Spec2('ES6')}}     |                                                       |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td>
+    <p>Definición inicial. Implementada en JavaScript 1.8.5.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Object.isFrozen")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
+<ul>
+ <li>{{jsxref("Object.freeze()")}}</li>
+ <li>{{jsxref("Object.preventExtensions()")}}</li>
+ <li>{{jsxref("Object.isExtensible()")}}</li>
+ <li>{{jsxref("Object.seal()")}}</li>
+ <li>{{jsxref("Object.isSealed()")}}</li>
+</ul>

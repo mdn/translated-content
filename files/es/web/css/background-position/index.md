@@ -3,105 +3,130 @@ title: background-position
 slug: Web/CSS/background-position
 tags:
   - CSS
-  - CSS:Referencias
+  - 'CSS:Referencias'
   - Todas_las_Categorías
 translation_of: Web/CSS/background-position
 ---
-{{ PreviousNext("CSS:background-image", "CSS:background-repeat") }}
+<p>{{ PreviousNext("CSS:background-image", "CSS:background-repeat") }}</p>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-`background-position` define la posición inicial de la imagen de fondo especificada.
+<p><code>background-position</code> define la posición inicial de la imagen de fondo especificada.</p>
 
-- {{ Cssxref("initial", "Valor inicial") }}: 0% 0%
-- Se aplica a: todos los elementos
-- {{ Cssxref("inheritance", "Herencia") }}: no
-- Porcentajes: se refiere al tamaño de la caja misma
-- Medio: {{ Cssxref("Media:Visual", "visual") }}
-- {{ Cssxref("computed value", "Valor calculada") }}: para \<length> el valor absoluto, para otros un porcentaje.
+<ul>
+ <li>{{ Cssxref("initial", "Valor inicial") }}: 0% 0%</li>
+ <li>Se aplica a: todos los elementos</li>
+ <li>{{ Cssxref("inheritance", "Herencia") }}: no</li>
+ <li>Porcentajes: se refiere al tamaño de la caja misma</li>
+ <li>Medio: {{ Cssxref("Media:Visual", "visual") }}</li>
+ <li>{{ Cssxref("computed value", "Valor calculada") }}: para &lt;length&gt; el valor absoluto, para otros un porcentaje.</li>
+</ul>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    background-position: [ <percentage> | <length> | left | center | right  ]
-                         [ <percentage> | <length> | top  | center | bottom ] ? ;
+<pre class="eval">background-position: [ &lt;percentage&gt; | &lt;length&gt; | left | center | right  ]
+                     [ &lt;percentage&gt; | &lt;length&gt; | top  | center | bottom ] ? ;
+</pre>
 
-<!---->
+<pre class="eval">background-position: [ top | center | bottom ];
+</pre>
 
-    background-position: [ top | center | bottom ];
+<pre class="eval">background-position: inherit;
+</pre>
 
-<!---->
+<h3 id="Valores" name="Valores">Valores</h3>
 
-    background-position: inherit;
+<dl>
+ <dt>{{ Cssxref("porcentaje") }} &lt;percentage&gt;</dt>
+ <dd>Con el par de valores '0% 0%', la esquina izquierda de la imagen es alineada con la esquina izquierda del borde del espaciado de la caja. Un valor '100% 100%' pone la esquina inferior de la imagen en la esquina inferior del área de espaciado. Con un valor '14% 84%', el punto a 14% a la derecha y 84% abajo de la imagen es colocado en el punto al 14% derecha y 84% abajo del área de espaciado.</dd>
+ <dt>{{ Cssxref("length") }} &lt;length&gt;</dt>
+ <dd>con un valor '2cm 1cm', la esquina superior izquierda de la imagen es colocada a 2 cm a la derecha y a 1cm debajo de la esquina superior izquierda del área de espaciado.</dd>
+ <dt>top left y left top</dt>
+ <dd>Es igual a '0% 0%'.</dd>
+ <dt>top, top center y center top</dt>
+ <dd>Es igual a '50% 0%'.</dd>
+ <dt>right top y top right</dt>
+ <dd>Es igual a '100% 0%'.</dd>
+ <dt>left, left center y center left</dt>
+ <dd>Es igual a '0% 50%'.</dd>
+ <dt>center and center center</dt>
+ <dd>Es igual a '50% 50%'.</dd>
+ <dt>right, right center y center right</dt>
+ <dd>Es igual a '100% 50%'.</dd>
+ <dt>bottom left y left bottom</dt>
+ <dd>Es igual a '0% 100%'.</dd>
+ <dt>bottom, bottom center y center bottom</dt>
+ <dd>Es igual a '50% 100%'.</dd>
+ <dt>bottom right y right bottom</dt>
+ <dd>Es igual a '100% 100%'.</dd>
+</dl>
 
-### Valores
+<p>Si solo se especifica un valor, se entenderá que es la posición horizontal con la vertical al 50%. De otra manera el primer valor especifica la posición horizontal. Se admiten valores negativos y combinaciones de palabras claves, largos (<small>lenght</small>) o porcentajes, pero en el caso de mezclar las palabras claves con otros valores, '<strong>left' y 'right'</strong> solo se utilizarán como primer valor y '<strong>top' y 'bottom'</strong> como segundo.</p>
 
-- {{ Cssxref("porcentaje") }} \<percentage>
-  - : Con el par de valores '0% 0%', la esquina izquierda de la imagen es alineada con la esquina izquierda del borde del espaciado de la caja. Un valor '100% 100%' pone la esquina inferior de la imagen en la esquina inferior del área de espaciado. Con un valor '14% 84%', el punto a 14% a la derecha y 84% abajo de la imagen es colocado en el punto al 14% derecha y 84% abajo del área de espaciado.
-- {{ Cssxref("length") }} \<length>
-  - : con un valor '2cm 1cm', la esquina superior izquierda de la imagen es colocada a 2 cm a la derecha y a 1cm debajo de la esquina superior izquierda del área de espaciado.
-- top left y left top
-  - : Es igual a '0% 0%'.
-- top, top center y center top
-  - : Es igual a '50% 0%'.
-- right top y top right
-  - : Es igual a '100% 0%'.
-- left, left center y center left
-  - : Es igual a '0% 50%'.
-- center and center center
-  - : Es igual a '50% 50%'.
-- right, right center y center right
-  - : Es igual a '100% 50%'.
-- bottom left y left bottom
-  - : Es igual a '0% 100%'.
-- bottom, bottom center y center bottom
-  - : Es igual a '50% 100%'.
-- bottom right y right bottom
-  - : Es igual a '100% 100%'.
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-Si solo se especifica un valor, se entenderá que es la posición horizontal con la vertical al 50%. De otra manera el primer valor especifica la posición horizontal. Se admiten valores negativos y combinaciones de palabras claves, largos (lenght) o porcentajes, pero en el caso de mezclar las palabras claves con otros valores, '**left' y 'right'** solo se utilizarán como primer valor y '**top' y 'bottom'** como segundo.
+<pre>.exampleone {
+	background-image: url("logo.png");
+	background-position: top center;
+}
 
-## Ejemplos
+.exampletwo {
+	background-image: url("logo.png");
+	background-position: 25% 75%;
+}
 
-    .exampleone {
-    	background-image: url("logo.png");
-    	background-position: top center;
-    }
+.examplethree {
+	background-image: url("logo.png");
+	background-position: 2cm bottom;
+}
 
-    .exampletwo {
-    	background-image: url("logo.png");
-    	background-position: 25% 75%;
-    }
+.examplefour {
+	background-image: url("logo.png");
+	background-position: center 10%;
+}
 
-    .examplethree {
-    	background-image: url("logo.png");
-    	background-position: 2cm bottom;
-    }
+.examplefive {
+	background-image: url("logo.png");
+	background-position: 2cm 50%;
+}
 
-    .examplefour {
-    	background-image: url("logo.png");
-    	background-position: center 10%;
-    }
+</pre>
 
-    .examplefive {
-    	background-image: url("logo.png");
-    	background-position: 2cm 50%;
-    }
+<h2 id="Especificaciones" name="Especificaciones">Especificaciones</h2>
 
-## Especificaciones
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/CSS1#background-position">CSS 1</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-position">CSS 2.1</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/2005/WD-css3-background-20050216/#background-position">CSS 3</a></li>
+</ul>
 
-- [CSS 1](http://www.w3.org/TR/CSS1#background-position)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/colors.html#propdef-background-position)
-- [CSS 3](http://www.w3.org/TR/2005/WD-css3-background-20050216/#background-position)
+<h3 id="Compatibilidad" name="Compatibilidad">Compatibilidad</h3>
 
-### Compatibilidad
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Navegador</th>
+   <th>Versión mínima</th>
+  </tr>
+  <tr>
+   <td>Internet Explorer</td>
+   <td>4</td>
+  </tr>
+  <tr>
+   <td>Firefox</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td>Netscape</td>
+   <td>6</td>
+  </tr>
+  <tr>
+   <td>Opera</td>
+   <td>3.5</td>
+  </tr>
+ </tbody>
+</table>
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Firefox           | 1              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
 
-### Ver también
-
-{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}
+<p>{{ Cssxref("background") }}, {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}</p>

@@ -9,51 +9,76 @@ tags:
   - Web
 translation_of: Web/CSS/time
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-El [tipo de dato](/es/docs/Web/CSS/CSS_Types) **`<time>`** de [CSS](/es/docs/Web/CSS) representa un valor de tiempo expresado en segundos o milisegundos. Se usa en {{cssxref("animation")}}, {{cssxref("transition")}} y propiedades relacionadas.
+<p>El <a href="/es/docs/Web/CSS/CSS_Types">tipo de dato</a> <strong><code>&lt;time&gt;</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa un valor de tiempo expresado en segundos o milisegundos. Se usa en {{cssxref("animation")}}, {{cssxref("transition")}} y propiedades relacionadas.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-El tipo de datos `<time>` consta de un {{cssxref("&lt;number&gt;")}} seguido de una de las unidades enumeradas a continuación. Opcionalmente, puede estar precedido por un solo signo `+` o `-` . Al igual que con todas las dimensiones, no hay espacio entre la unidad literal y el número.
+<p>El tipo de datos <code>&lt;time&gt;</code> consta de un {{cssxref("&lt;number&gt;")}} seguido de una de las unidades enumeradas a continuación. Opcionalmente, puede estar precedido por un solo signo <code>+</code> o <code>-</code> . Al igual que con todas las dimensiones, no hay espacio entre la unidad literal y el número.</p>
 
-> **Nota:** Aunque el número `0` es siempre el mismo independientemente de la unidad, la unidad no se puede omitir. En otras palabras, `0` no es válido y no representa `0s` o `0ms`.
+<div class="note">
+<p><strong>Nota:</strong> Aunque el número <code>0</code> es siempre el mismo independientemente de la unidad, la unidad no se puede omitir. En otras palabras, <code>0</code> no es válido y no representa <code>0s</code> o <code>0ms</code>.</p>
+</div>
 
-### Unidades
+<h3 id="Unidades">Unidades</h3>
 
-- **`s`**
-  - : Representa un tiempo en segundos. Ejemplos: `0s`, `1.5s`, `-60s`.
-- **`ms`**
-  - : Representa un tiempo en milisegundos. Ejemplos: `0ms`, `150.25ms`, `-60000ms`.
+<dl>
+ <dt><strong><code id="s">s</code></strong></dt>
+ <dd>Representa un tiempo en segundos. Ejemplos: <code>0s</code>, <code>1.5s</code>, <code>-60s</code>.</dd>
+ <dt><strong><code id="ms">ms</code></strong></dt>
+ <dd>Representa un tiempo en milisegundos. Ejemplos: <code>0ms</code>, <code>150.25ms</code>, <code>-60000ms</code>.</dd>
+</dl>
 
-> **Nota:** Nota: La conversión entre `s` y `ms` sigue la lógica `1s` = `1000ms`.
+<div class="note">
+<p><strong>Nota:</strong> Nota: La conversión entre <code>s</code> y <code>ms</code> sigue la lógica <code>1s</code> = <code>1000ms</code>.</p>
+</div>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Tiempos válidos
+<h3 id="Tiempos_válidos">Tiempos válidos</h3>
 
-    12s         Entero positivo
-    -456ms      Entero negativo
-    4.3ms       No entero
-    14mS        La unidad no distingue entre mayúsculas y minúsculas, aunque no se recomiendan letras mayúsculas.
-    +0s         Cero con un signo + y una unidad
-    -0ms        Cero con un signo - y una unidad
+<pre>12s         Entero positivo
+-456ms      Entero negativo
+4.3ms       No entero
+14mS        La unidad no distingue entre mayúsculas y minúsculas, aunque no se recomiendan letras mayúsculas.
++0s         Cero con un signo + y una unidad
+-0ms        Cero con un signo - y una unidad
+</pre>
 
-### Tiempos inválidos
+<h3 id="Tiempos_inválidos">Tiempos inválidos</h3>
 
-```plain example-bad
-0           Aunque el cero sin unidades está permitido para <length>, no es válido para <time>.
-12.0        Este es un <number>, no un <time>, porque le falta una unidad.
+<pre class="example-bad">0           Aunque el cero sin unidades está permitido para &lt;length&gt;, no es válido para &lt;time&gt;.
+12.0        Este es un &lt;number&gt;, no un &lt;time&gt;, porque le falta una unidad.
 7 ms        No se permite espacio entre el número y la unidad.
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                               | Estado                           | Comentario                          |
-| ---------------------------------------------------------------------------- | -------------------------------- | ----------------------------------- |
-| {{SpecName('CSS3 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS3 Values')}} | Definición normativa de `s` y `ms`. |
-| {{SpecName('CSS2.1','aural.html#times','&lt;time&gt;')}} | {{Spec2('CSS2.1')}}         | Definición informal de `s` y `ms`.  |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Values','#time','&lt;time&gt;')}}</td>
+   <td>{{Spec2('CSS3 Values')}}</td>
+   <td>Definición normativa de <code>s</code> y <code>ms</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1','aural.html#times','&lt;time&gt;')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Definición informal de <code>s</code> y <code>ms</code>.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("css.types.time")}}
+
+
+<p>{{Compat("css.types.time")}}</p>

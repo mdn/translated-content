@@ -9,27 +9,26 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-mask-position-y
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad CSS `-webkit-mask-position-y` fija la posición inicial vertical de una imagen de máscara.
+<p>La propiedad CSS <code>-webkit-mask-position-y</code> fija la posición inicial vertical de una imagen de máscara.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-```css
-/* Palabras clave valores */
+<pre class="brush: css">/* Palabras clave valores */
 -webkit-mask-position-y: top;
 -webkit-mask-position-y: center;
 -webkit-mask-position-y: bottom;
 
-/* valores <porcentaje> */
+/* valores &lt;porcentaje&gt; */
 -webkit-mask-position-y: 100%;
 -webkit-mask-position-y: -50%;
 
-/* valores <longitud> */
+/* valores &lt;longitud&gt; */
 -webkit-mask-position-y: 50px;
 -webkit-mask-position-y: -1cm;
 
@@ -40,29 +39,30 @@ La propiedad CSS `-webkit-mask-position-y` fija la posición inicial vertical de
 -webkit-mask-position-y: inherit;
 -webkit-mask-position-y: initial;
 -webkit-mask-position-y: unset;
-```
+</pre>
 
-## Values
+<h2 id="Values">Values</h2>
 
-- `<percentage>`
-  - : Un porcentaje que sirve para indicar, empezando por el lado superior, la posición de la imagen en relación a la dimensión vertical del área de la caja de relleno (padding). Un valor del 0% indica que el lado superior de la imagen de máscara se alinea con el lado superior de la caja. Un valor del 100% indica que que el lado inferior de la imagen se alinea con el lado inferior de la caja.
-- `<length>`
-  - : Una longitud indicando la posición del lado superior de la imagen en relación con el lado superior de la cajade relleno (padding).
-- **`top`**
-  - : Equivalente a `0%`.
-- **`bottom`**
-  - : Equivalente a `100%`.
-- **`center`**
-  - : Equivalente a `50%`.
+<dl>
+ <dt><code>&lt;percentage&gt;</code></dt>
+ <dd>Un porcentaje que sirve para indicar, empezando por el lado superior, la posición de la imagen en relación a la dimensión vertical del área de la caja de relleno (padding). Un valor del 0% indica que  el lado superior de la imagen de máscara se alinea con el lado superior de la caja. Un valor del 100% indica que que el lado inferior de la imagen se alinea con el lado inferior de la caja.</dd>
+ <dt><code>&lt;length&gt;</code></dt>
+ <dd>Una longitud indicando la posición del lado superior de la imagen en relación con el lado superior de la cajade relleno (padding).</dd>
+ <dt><code><strong>top</strong></code></dt>
+ <dd>Equivalente a <code>0%</code>.</dd>
+ <dt><code><strong>bottom</strong></code></dt>
+ <dd>Equivalente a <code>100%</code>.</dd>
+ <dt><code><strong>center</strong></code></dt>
+ <dd>Equivalente a <code>50%</code>.</dd>
+</dl>
 
-### Síntaxis Formal
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```css
-.exampleOne {
+<pre class="brush:css">.exampleOne {
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position-y: bottom;
 }
@@ -71,16 +71,16 @@ La propiedad CSS `-webkit-mask-position-y` fija la posición inicial vertical de
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position-y: 25%;
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-Not part of any specification.
+<p>Not part of any specification.</p>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("css.properties.-webkit-mask-position-y")}}
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-x")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}
+<p>{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-x")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}</p>

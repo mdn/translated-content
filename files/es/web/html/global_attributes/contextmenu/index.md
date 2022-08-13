@@ -8,42 +8,43 @@ tags:
 translation_of: Web/HTML/Global_attributes/contextmenu
 original_slug: Web/HTML/Atributos_Globales/contextmenu
 ---
-{{HTMLSidebar("Global_attributes")}}
+<p>{{HTMLSidebar("Global_attributes")}}</p>
 
-El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **contextmenu** es el [**id**](/es/docs/Web/HTML/Atributos_Globales/id) de un {{HTMLElement("menu")}} para nosotros como el menu contextual para este elemento .
+<p>El <a href="/es/docs/Web/HTML/Atributos_Globales">atributo global</a>  <strong>contextmenu </strong>es el  <a href="/es/docs/Web/HTML/Atributos_Globales/id"><strong>id</strong></a> de un  {{HTMLElement("menu")}} para nosotros como el menu contextual para este elemento .</p>
 
-Un _menu contextual_ es un menu que aparece sobre la interacción del usuario , como por ejemplo un click derecho . HTML5 ahora permite modificar este menú . Aquí hay unos ejemplos de implementación , incluyendo menús anidados .
+<p>Un <em>menu contextual  </em>es un menu que aparece sobre la interacción del usuario , como por ejemplo un click derecho . HTML5 ahora permite modificar este menú . Aquí hay unos ejemplos de implementación , incluyendo menús anidados .</p>
 
-## Ejemplo
+<div id="ContextMenu_Example">
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```html
-<body contextmenu="share">
-  <menu type="context" id="share">
-    <menu label="share">
-      <menuitem label="Twitter" onclick="window.open('https://twitter.com/intent/tweet?text=Hurra! Estos aprendiendo sobre ContextMenuI en MDN a través de Mozilla ');"></menuitem>
-      <menuitem label="Facebook" onclick="window.open('https://facebook.com/sharer/sharer.php?u=https://https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus');"></menuitem>
-    </menu>
-  </menu>
-  <ol>
-    <li>En cualquier parte del ejemplo puedes compartir la página en twitter y Facebook usando el menú de compartir de tu menú contextual.</li>
-    <li><pre contextmenu="changeFont" id="fontSizing">En este elemento específico de la lista , puedes cambiar el tamaño del texto usando  las acciones "Incremenrar/Decrementar" de tu menú contextual ./pre></li>
-    <menu type="context" id="changeFont">
-      <menuitem label="Increase Font" onclick="incFont()"></menuitem>
-      <menuitem label="Decrease Font" onclick="decFont()"></menuitem>
-    </menu>
-    <li contextmenu="ChangeImage" id="changeImage">En la imagen de abajo , puedes accionar la accion "Cambio de Imagen " en tu menú contextual .</li><br />
-    <img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png" contextmenu="ChangeImage" id="promoButton" />
-    <menu type="context" id="ChangeImage">
-      <menuitem label="Change Image" onclick="changeImage()"></menuitem>
-    </menu>
-  </ol>
-</body>
-```
+<p> </p>
 
-en conjunto con este Javascript
+<pre class="brush:html; highlight:[1,10,15]">&lt;body contextmenu="share"&gt;
+  &lt;menu type="context" id="share"&gt;
+    &lt;menu label="share"&gt;
+      &lt;menuitem label="Twitter" onclick="window.open('https://twitter.com/intent/tweet?text=Hurra! Estos aprendiendo sobre ContextMenuI en MDN a través de Mozilla ');"&gt;&lt;/menuitem&gt;
+      &lt;menuitem label="Facebook" onclick="window.open('https://facebook.com/sharer/sharer.php?u=https://https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus');"&gt;&lt;/menuitem&gt;
+    &lt;/menu&gt;
+  &lt;/menu&gt;
+  &lt;ol&gt;
+    &lt;li&gt;En cualquier parte del ejemplo puedes compartir la página en twitter y Facebook usando el menú de compartir de tu menú contextual.&lt;/li&gt;
+    &lt;li&gt;&lt;pre contextmenu="changeFont" id="fontSizing"&gt;En este elemento específico de la lista , puedes cambiar el tamaño del texto usando  las acciones "Incremenrar/Decrementar" de tu menú contextual ./pre&gt;&lt;/li&gt;
+    &lt;menu type="context" id="changeFont"&gt;
+      &lt;menuitem label="Increase Font" onclick="incFont()"&gt;&lt;/menuitem&gt;
+      &lt;menuitem label="Decrease Font" onclick="decFont()"&gt;&lt;/menuitem&gt;
+    &lt;/menu&gt;
+    &lt;li contextmenu="ChangeImage" id="changeImage"&gt;En la imagen de abajo , puedes accionar la accion "Cambio de Imagen " en tu menú contextual .&lt;/li&gt;&lt;br /&gt;
+    &lt;img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png" contextmenu="ChangeImage" id="promoButton" /&gt;
+    &lt;menu type="context" id="ChangeImage"&gt;
+      &lt;menuitem label="Change Image" onclick="changeImage()"&gt;&lt;/menuitem&gt;
+    &lt;/menu&gt;
+  &lt;/ol&gt;
+&lt;/body&gt;
+</pre>
 
-```js
-function incFont(){
+<p>en conjunto con este Javascript</p>
+
+<pre class="brush:js">function incFont(){
   document.getElementById("fontSizing").style.fontSize="larger";
 }
 function decFont(){
@@ -52,24 +53,41 @@ function decFont(){
 function changeImage(){
   var j = Math.ceil((Math.random()*39)+1);
   document.images[0].src="https://developer.mozilla.org/media/img/promote/promobutton_mdn" + j + ".png";
-}
-```
+}</pre>
 
-resulta en :
+<p>resulta en :</p>
 
-{{EmbedLiveSample("ContextMenu_Example",550,200)}}
+<div>{{EmbedLiveSample("ContextMenu_Example",550,200)}}</div>
+</div>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                | Status                           | Comment                                                               |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "forms.html#attr-contextmenu", "contextmenu")}}             | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', "interactive-elements.html#context-menus", "contextmenu")}} | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "forms.html#attr-contextmenu", "contextmenu")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "interactive-elements.html#context-menus", "contextmenu")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en exploradores
+<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores</h2>
 
 {{Compat("html.global_attributes.contextmenu")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [atributos globales](/es/docs/Web/HTML/Atributos_Globales)
+<ul>
+ <li> <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a></li>
+</ul>

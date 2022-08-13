@@ -6,64 +6,92 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/Content-Encoding
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-La cabecera **`Content-Encoding`** es usada para comprimir el media-type. Cuando está presente, su valor indica qué codificación de contenido adicional ha sido aplicada al cuerpo de la entidad. Permite al cliente saber cómo decodificar para obtener el media-type referido por la cabecera `Content-Type`.
+<p>La cabecera <strong><code>Content-Encoding</code></strong> es usada para comprimir el media-type. Cuando está presente, su valor indica qué codificación de contenido adicional ha sido aplicada al cuerpo de la entidad. Permite al cliente saber cómo decodificar para obtener el media-type referido por la cabecera <code>Content-Type</code>.</p>
 
-Se recomienda comprimir los datos tanto como sea posible y por lo tanto utilizar este campo, pero algunos tipos de recursos, como imágenes JPEG, ya están comprimidos. A veces, el uso de compresión adicional no reduce el tamaño de la petición e incluso puede hacer que la petición sea más larga.
+<p><span id="result_box" lang="es"><span>Se recomienda comprimir los datos tanto como sea posible y por lo tanto utilizar este campo, pero algunos tipos de recursos, como imágenes JPEG, ya están comprimidos.</span> <span>A veces, el uso de compresión adicional no reduce el tamaño de la petición e incluso puede hacer que la petición sea más larga.</span></span></p>
 
-| Header type                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Header type</th>
+   <td>{{Glossary("Entity header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <td>no</td>
+  </tr>
+ </tbody>
+</table>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Content-Encoding: gzip
-    Content-Encoding: compress
-    Content-Encoding: deflate
-    Content-Encoding: identity
-    Content-Encoding: br
+<pre class="syntaxbox">Content-Encoding: gzip
+Content-Encoding: compress
+Content-Encoding: deflate
+Content-Encoding: identity
+Content-Encoding: br
+</pre>
 
-## Directivas
+<h2 id="Directivas">Directivas</h2>
 
-- `gzip`
-  - : Un formato que usa [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), con un CRC de 32 bits. Este es originalmente el formato del programa _gzip de_ UNIX . El estándar HTTP/1.1 también recomienda que los servidores que soporten esta codificación también deberían reconocer `x-gzip` como un alias por motivos de compatibilidad.
-- `compress`
-  - : Un formato que usa el algoritmo [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW). El nombre viene del programa _compress de_ UNIX , que implementó este algoritmo.
-    Al igual que el programa compress, el cual ha desaparecido de la mayoría de distribuciones UNIX, esta codificación apenas es utilizada por los navegadores de hoy día, en parte debido a un problema de patente (la cual expiró en 2003).
-- `deflate`
-  - : Usa la estructura [zlib](http://en.wikipedia.org/wiki/Zlib) (definida en [RFC 1950](http://tools.ietf.org/html/rfc1950)), con el algoritmo de compresión [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) (definido en [RFC 1951](http://tools.ietf.org/html/rfc1952)).
-- `identity`
-  - : Indica la función de identidad (es decir, sin compresión ni modificación). Este símbolo, excepto si se especifica explícitamente, siempre se considera aceptable.
-- `br`
-  - : Un formato que usa el algoritmo [Brotli](https://en.wikipedia.org/wiki/Brotli).
+<dl>
+ <dt><code>gzip</code></dt>
+ <dd>Un formato que usa <a class="external" href="http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a> (LZ77), con un CRC de 32 bits. Este es originalmente el formato del programa <em>gzip de </em>UNIX . El estándar HTTP/1.1 también recomienda que los servidores que soporten esta codificación también deberían reconocer  <code>x-gzip</code> como un alias por motivos de compatibilidad.</dd>
+ <dt><code>compress</code></dt>
+ <dd>Un formato que usa el algoritmo <a class="external" href="http://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW). El nombre viene del programa <em>compress de </em>UNIX , que implementó este algoritmo.<br>
+ Al igual que el programa compress, el cual ha desaparecido de la mayoría de distribuciones UNIX, esta codificación apenas es utilizada por los navegadores de hoy día, en parte debido a un problema de patente (la cual expiró en 2003).</dd>
+ <dt><code>deflate</code></dt>
+ <dd>Usa la estructura <a class="external" href="http://en.wikipedia.org/wiki/Zlib">zlib</a> (definida en <a class="external" href="http://tools.ietf.org/html/rfc1950">RFC 1950</a>), con el algoritmo de compresión <a class="external" href="http://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> (definido en <a class="external" href="http://tools.ietf.org/html/rfc1952">RFC 1951</a>).</dd>
+ <dt><code>identity</code></dt>
+ <dd><span id="result_box" lang="es"><span>Indica la función de identidad (es decir, sin compresión ni modificación).</span> <span>Este símbolo, excepto si se especifica explícitamente, siempre se considera aceptable.</span></span></dd>
+ <dt><code>br</code></dt>
+ <dd>Un formato que usa el algoritmo <a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a>.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Comprimiendo con gzip
+<h3 id="Comprimiendo_con_gzip">Comprimiendo con gzip</h3>
 
-En el lado del cliente, puede detectar una lista de esquemas de compresión que serán enviados en una petición HTTP. La cabecera {{HTTPHeader("Accept-Encoding")}} se utiliza para la negociación de la codificación del contenido.
+<p>En el lado del cliente, puede detectar una lista de esquemas de compresión que serán enviados en una petición HTTP. La cabecera {{HTTPHeader("Accept-Encoding")}} se utiliza para la negociación de la codificación del contenido.</p>
 
-    Accept-Encoding: gzip, deflate
+<pre>Accept-Encoding: gzip, deflate</pre>
 
-El servidor responde con el esquema usado, indicado por la cabecera de respuesta `Content-Encoding`.
+<p>El servidor responde con el esquema usado, indicado por la cabecera de respuesta <code>Content-Encoding</code>.</p>
 
-    Content-Encoding: gzip
+<pre>Content-Encoding: gzip</pre>
 
-Ten en cuenta que el servidor no está obligado a usar algun método de compresión. La compresión depende directamente de la configuración del servidor y los módulos que utilice.
+<p>Ten en cuenta que el servidor no está obligado a usar algun método de compresión. La compresión depende directamente de la configuración del servidor y los módulos que utilice.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                               | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semántica y Contenido |
-| <http://www.ietf.org/id/draft-alakuijala-brotli>             | Formato de datos comprimidos Brotli                           |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Título</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7231", "Content-Encoding", "3.1.2.2")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semántica y Contenido</td>
+  </tr>
+  <tr>
+   <td><a href="http://www.ietf.org/id/draft-alakuijala-brotli">http://www.ietf.org/id/draft-alakuijala-brotli</a></td>
+   <td>Formato de datos comprimidos Brotli</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con los navegadores
+<h2 id="Compatibilidad_con_los_navegadores">Compatibilidad con los navegadores</h2>
 
-{{Compat("http/headers/content-encoding")}}
 
-## Ver también
 
-- {{HTTPHeader("Accept-Encoding")}}
-- {{HTTPHeader("Transfer-Encoding")}}
+<p>{{Compat("http/headers/content-encoding")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{HTTPHeader("Accept-Encoding")}}</li>
+ <li>{{HTTPHeader("Transfer-Encoding")}}</li>
+</ul>

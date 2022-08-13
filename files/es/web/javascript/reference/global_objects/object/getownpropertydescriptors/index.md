@@ -8,63 +8,65 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyDescriptors
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método**`Object.getOwnPropertyDescriptors()`\*\*** \*\*regresa todos los descriptores de propiedad propios de un objeto dado.
+<p>El método<code><strong>Object.getOwnPropertyDescriptors()</strong></code><strong> </strong>regresa todos los descriptores de propiedad propios de un objeto dado.</p>
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
+<div>{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}</div>
 
-## Sintáxis
+<h2 id="Sintáxis">Sintáxis</h2>
 
-    Object.getOwnPropertyDescriptors(obj)
+<pre class="syntaxbox">Object.getOwnPropertyDescriptors(<var>obj</var>)</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `obj`
-  - : El objeto para el cual obtener todos los descriptores de propiedad.
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>El objeto para el cual obtener todos los descriptores de propiedad.</dd>
+</dl>
 
-### Valores devueltos
+<h3 id="Valores_devueltos">Valores devueltos</h3>
 
-Un objeto que contiene todos los descriptores de propiedad propios de un objeto.
+<p>Un objeto que contiene todos los descriptores de propiedad propios de un objeto.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Este método permite la examinación de la descripción precisa de todas las propiedades de un objeto. Una propiedad en JavaScript consiste en un valor-cadena nombre y un descriptor de propiedad. Más información acerca de los tipos de descriptores de propiedad y sus atributos pueden ser encontrados en {{jsxref("Object.defineProperty()")}}.
+<p>Este método permite la examinación de la descripción precisa de todas las propiedades de un objeto. Una propiedad en JavaScript consiste en un valor-cadena nombre y un descriptor de propiedad. Más información acerca de los tipos de descriptores de propiedad y sus atributos pueden ser encontrados en {{jsxref("Object.defineProperty()")}}.</p>
 
-Un descriptor de propiedad es un registro con algunos de los siguientes atributos:
+<p>Un descriptor de propiedad es un registro con algunos de los siguientes atributos:</p>
 
-- `value`
-  - : El valor asociado con la propiedad (solo descriptores de datos).
-- **`writable`**
-  - : `true` si y solo si el valor asociado con la propiedad puede ser cambiado (solo descriptores de datos).
-- `get`
-  - : Un función que sirve como un getter para la propiedad, o {{jsxref("undefined")}} si no hay getter (solo descriptores de acceso).
-- `set`
-  - : Una función que sirve como un setter para la propiedad, o {{jsxref("undefined")}} si no hay setter (solo descriptores de acceso).
-- `configurable`
-  - : `true` si y solo si el tipo de este descriptor de propiedad puede ser cambiado y si la propiedad puede ser borrada de el objeto correspondiente.
-- `enumerable`
-  - : `true` si y solo si esta propiedad aparece durante la enumeración de las propiedad en el objeto correspondiente.
+<dl>
+ <dt><code>value</code></dt>
+ <dd>El valor asociado con la propiedad (solo descriptores de datos).</dd>
+ <dt><code><strong>writable</strong></code></dt>
+ <dd><code>true</code> si y solo si el valor asociado con la propiedad puede ser cambiado (solo descriptores de datos).</dd>
+ <dt><code>get</code></dt>
+ <dd>Un función que sirve como un getter para la propiedad, o {{jsxref("undefined")}} si no hay getter (solo descriptores de acceso).</dd>
+ <dt><code>set</code></dt>
+ <dd>Una función que sirve como un setter para la propiedad, o {{jsxref("undefined")}} si no hay setter (solo descriptores de acceso).</dd>
+ <dt><code>configurable</code></dt>
+ <dd><code>true</code> si y solo si el tipo de este descriptor de propiedad puede ser cambiado y si la propiedad puede ser borrada de el objeto correspondiente.</dd>
+ <dt><code>enumerable</code></dt>
+ <dd><code>true</code> si y solo si esta propiedad aparece durante la enumeración de las propiedad en el objeto correspondiente.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Creando un clon superficial
+<h3 id="Creando_un_clon_superficial">Creando un clon superficial</h3>
 
-Mientras el método {{jsxref("Object.assign()")}} solo copiará las propiedades enumerables y propias de un objeto fuente a un objeto destino, puedes usar este método y {{jsxref("Object.create()")}} para una copia superficial entre dos objetos desconocidos:
+<p>Mientras el método {{jsxref("Object.assign()")}} solo copiará las propiedades enumerables y propias de un objeto fuente a un objeto destino, puedes usar este método y {{jsxref("Object.create()")}} para una copia superficial entre dos objetos desconocidos:</p>
 
-```js
-Object.create(
+<pre class="brush: js">Object.create(
   Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj)
 );
-```
+</pre>
 
-### Creando una subclase
+<h3 id="Creando_una_subclase">Creando una subclase</h3>
 
-Una manera típica de crear una subclase es definir la subclase, establecer su prototipo a una instancia de la superclase, y después definir propiedades en esa instancia. Esto puede ponerse incómodo especialmente por los getters y setters. En cambio, tú puedes usar este código para establecer el prototipo:
+<p>Una manera típica de crear una subclase es definir la subclase, establecer su prototipo a una instancia de la superclase, y después definir propiedades en esa instancia. Esto puede ponerse incómodo especialmente por los getters y setters. En cambio, tú puedes usar este código para establecer el prototipo:</p>
 
-```js
-function superclass() {}
+<pre class="brush: js">function superclass() {}
 superclass.prototype = {
   // Define tus métodos y propiedades aquí
 };
@@ -75,21 +77,42 @@ subclass.prototype = Object.create(
     // Define tus métodos y propiedades aquí
   }
 );
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                                        | Status                       | Comment                                |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} | {{Spec2('ESDraft')}} | Definición inicial en ECMAScript 2017. |
-| {{SpecName('ES2017', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} | {{Spec2('ES2017')}}     |                                        |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td>Definición inicial en ECMAScript 2017.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2017', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}}</td>
+   <td>{{Spec2('ES2017')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}
+<div>
 
-## Ver también:
 
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Object.defineProperty()")}}
-- [Polyfill](https://github.com/tc39/proposal-object-getownpropertydescriptors)
+<p>{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}</p>
+</div>
+
+<h2 id="Ver_también">Ver también:</h2>
+
+<ul>
+ <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
+ <li>{{jsxref("Object.defineProperty()")}}</li>
+ <li><a href="https://github.com/tc39/proposal-object-getownpropertydescriptors">Polyfill</a></li>
+</ul>

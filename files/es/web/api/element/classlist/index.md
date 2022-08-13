@@ -10,39 +10,41 @@ tags:
   - Sólo-Lectura
 translation_of: Web/API/Element/classList
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-La propiedad de sólo lectura **`Element.classList`** devuelve una colección activa de [`DOMTokenList`](/es/docs/Web/API/DOMTokenList "The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList or HTMLAreaElement.relList. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive.") de los atributos de clase del elemento.
+<p>La propiedad de sólo lectura <code><strong>Element.classList</strong></code> devuelve una colección activa de <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList" title="The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList or HTMLAreaElement.relList. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive."><code>DOMTokenList</code></a> de los atributos de clase del elemento.</p>
 
-Usar `classList` es una forma práctica de acceder a la lista de clases de un elemento como una cadena de texto delimitada por espacios a través de {{domxref("element.className")}}.
+<p>Usar <code>classList</code> es una forma práctica de acceder a la lista de clases de un elemento como una cadena de texto delimitada por espacios a través de {{domxref("element.className")}}.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var elementClasses = elementNodeReference.classList;
+<pre class="syntaxbox">var <var>elementClasses</var> = elementNodeReference.classList;
+</pre>
 
-_elementClasses_ es un [DOMTokenList](/es/docs/DOM/DOMTokenList) que representa el atributo clase de _elementNodeReference_. Si el atributo clase no está definido o está vacío, _elementClasses.length_ devuelve 0. `element.classList` por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos` add()` y `remove()`.
+<p><em>elementClasses</em> es un <a href="/en-US/docs/DOM/DOMTokenList">DOMTokenList</a> que representa el atributo clase de <em>elementNodeReference</em>. Si el atributo clase no está definido o está vacío, <em>elementClasses.length</em> devuelve 0. <code>element.classList</code> por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos<code> add()</code> y <code>remove()</code>.</p>
 
-## Métodos
+<h2 id="Métodos">Métodos</h2>
 
-- add( String \[, String] )
-  - : Añade las clases indicadas. Si estas clases existieran en el atributo del elemento serán ignoradas.
-- remove( String \[, String] )
-  - : Elimina las clases indicadas.
-    **Nota:** Eliminar una clase que no existe NO produce un error.
-- **item**( Number )
-  - : Devuelve el valor de la clase por índice en la colección.
-- **toggle**( String \[, force] )
-  - : Cuando sólo hay un argumento presente: Alterna el valor de la clase; ej., si la clase existe la **elimina** y devuelve `false`, si no, la **añade** y devuelve `true`.
-    Cuando el segundo argumento está presente: Si el segundo argumento se evalúa como `true`, se añade la clase indicada, y si se evalúa como `false`, la elimina.
-- contains( String )
-  - : Comprueba si la clase indicada existe en el atributo de clase del elemento.
-- replace( oldClass, newClass )
-  - : Reemplaza una clase existente por una nueva.
+<dl>
+ <dt>add( String [, String] )</dt>
+ <dd>Añade las clases indicadas. Si estas clases existieran en el atributo del elemento serán ignoradas.</dd>
+ <dt>remove( String [, String] )</dt>
+ <dd>Elimina las clases indicadas.<br>
+ <strong>Nota:</strong> Eliminar una clase que no existe NO produce un error.</dd>
+ <dt><strong>item</strong>( Number )</dt>
+ <dd>Devuelve el valor de la clase por índice en la colección.</dd>
+ <dt><strong>toggle</strong>( String [, force] )</dt>
+ <dd>Cuando sólo hay un argumento presente: Alterna el valor de la clase; ej., si la clase existe la <u>elimina</u> y devuelve <code>false</code>, si no, la <u>añade</u> y devuelve <code>true</code>.<br>
+ Cuando el segundo argumento está presente: Si el segundo argumento se evalúa como <code>true</code>, se añade la clase indicada, y si se evalúa como <code>false</code>, la elimina.</dd>
+ <dt>contains( String )</dt>
+ <dd>Comprueba si la clase indicada existe en el atributo de clase del elemento.</dd>
+ <dt>replace( oldClass, newClass )</dt>
+ <dd>Reemplaza una clase existente por una nueva.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-// div es una referencia de objeto al elemento <div> con class="foo bar"
+<pre class="brush: js" dir="ltr">// div es una referencia de objeto al elemento &lt;div&gt; con class="foo bar"
 div.classList.remove("foo");
 div.classList.add("anotherclass");
 
@@ -50,7 +52,7 @@ div.classList.add("anotherclass");
 div.classList.toggle("visible");
 
 // añadir/eliminar visible, dependiendo de la condición, i menor que 10
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i &lt; 10 );
 
 alert(div.classList.contains("foo"));
 
@@ -59,24 +61,48 @@ div.classList.add("foo", "bar");
 div.classList.remove("foo", "bar");
 
 // reemplazar la clase "foo" por "bar"
-div.classList.replace("foo", "bar");
-```
+div.classList.replace("foo", "bar");</pre>
 
-> **Nota:** Las versiones de Firefox anteriores a la 26 no implementan el uso de múltiples argumentos en los métodos add/remove/toggle. Vea <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
+<div class="note">
+<p>Las versiones de Firefox anteriores a la 26 no implementan el uso de múltiples argumentos en los métodos add/remove/toggle. Vea <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
+</div>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                       | Estado                           | Comentario                                                                                      |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}} | {{Spec2("HTML WHATWG")}} | Nota en la especificación de HTML relacionada con el atributo {{htmlattrxref("class")}}. |
-| {{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}     | {{Spec2("DOM WHATWG")}} | Definición inicial                                                                              |
-| {{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}             | {{Spec2("DOM4")}}         |                                                                                                 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>Nota en la especificación de HTML relacionada con el atributo {{htmlattrxref("class")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}</td>
+   <td>{{Spec2("DOM WHATWG")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}</td>
+   <td>{{Spec2("DOM4")}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("api.Element.classList")}}
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-- {{domxref("element.className")}}
-- {{domxref("DOMTokenList")}};
+<ul>
+ <li>{{domxref("element.className")}}</li>
+ <li>{{domxref("DOMTokenList")}};</li>
+</ul>

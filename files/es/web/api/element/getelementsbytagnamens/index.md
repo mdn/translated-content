@@ -3,42 +3,61 @@ title: Element.getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
 translation_of: Web/API/Element/getElementsByTagNameNS
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-El método **`Element.getElementsByTagNameNS()`** devuelve una {{domxref("HTMLCollection")}} viva de elementos con el nombre de etiqueta dado perteneciente al espacio de nombres dado. Es similar a {{Domxref("Document.getElementsByTagNameNS")}}, con la excepción de que su búsqueda está limitada a los descendientes del elemento especificado.
+<p>El método <code><strong>Element.getElementsByTagNameNS()</strong></code> devuelve una {{domxref("HTMLCollection")}} viva de elementos con el nombre de etiqueta dado perteneciente al espacio de nombres dado. Es similar a {{Domxref("Document.getElementsByTagNameNS")}}, con la excepción de que su búsqueda está limitada a los descendientes del elemento especificado.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    elementos = elemento.getElementsByTagNameNS(espacioNombreURI, nombreLocal)
+<pre class="syntaxbox"><var>elementos</var> = <var>elemento</var>.getElementsByTagNameNS(<var>espacioNombreURI</var>, <var>nombreLocal</var>)</pre>
 
-- `elementos` es una {{domxref("HTMLCollection")}} viva de elementos encontrados en el orden en el que aparecen en el árbol.
-- `elemento` es el elemento desde el cual la búsqueda debería comenzar. Nótese que sólo los descendientes de este elemento están incluídos en la búsqueda, no el nodo en sí.
-- `espacioNombreURI` es el URI del espacio de nombres de los elementos a buscar (vea {{domxref("Node.namespaceURI")}}). Por ejemplo, si usted necesita buscar elementos XHTML, use el URI de espacio de nombres de XHTML, `http://www.w3.org/1999/xhtml`.
-- nombreLocal puede ser el nombre local de los elementos a buscar o el valor especial `"*"`, que encuentra todos los elementos (vea {{domxref("Node.localName")}}).
+<ul>
+ <li><code>elementos</code> es una {{domxref("HTMLCollection")}} viva de elementos encontrados en el orden en el que aparecen en el árbol.</li>
+ <li><code>elemento</code> es el elemento desde el cual la búsqueda debería comenzar. Nótese que sólo los descendientes de este elemento están incluídos en la búsqueda, no el nodo en sí.</li>
+ <li><code>espacioNombreURI</code> es el URI del espacio de nombres de los elementos a buscar (vea {{domxref("Node.namespaceURI")}}). Por ejemplo, si usted necesita buscar elementos XHTML, use el URI de espacio de nombres de XHTML, <span class="nowiki"><code>http://www.w3.org/1999/xhtml</code></span>.</li>
+ <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: #eeeeee;">nombreLocal</span></font> puede ser el nombre local de los elementos a buscar o el valor especial <code>"*"</code>, que encuentra todos los elementos (vea {{domxref("Node.localName")}}).</li>
+</ul>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-// verifica la alineación en un número de celdas en una tabla en un documento XHTML.
+<pre class="brush:js">// verifica la alineación en un número de celdas en una tabla en un documento XHTML.
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td");
 
-for (var i = 0; i < cells.length; i++) {
+for (var i = 0; i &lt; cells.length; i++) {
     var axis = cells[i].getAttribute("axis");
     if (axis == "year") {
         // obtiene los datos
     }
-}
-```
+}</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                           | Estado                           | Comentario                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-getelementsbytagnamens', 'Element.getElementsByTagNameNS()')}} | {{Spec2('DOM WHATWG')}} | Cambió el valor devuelto de {{domxref("NodeList")}} a {{domxref("HTMLCollection")}}. |
-| {{SpecName('DOM3 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}                     | {{Spec2('DOM3 Core')}}     | Sin cambios desde {{SpecName('DOM2 Core')}}.                                                      |
-| {{SpecName('DOM2 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}                     | {{Spec2('DOM2 Core')}}     | Definición inicial                                                                                       |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-element-getelementsbytagnamens', 'Element.getElementsByTagNameNS()')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Cambió el valor devuelto de {{domxref("NodeList")}} a {{domxref("HTMLCollection")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>Sin cambios desde {{SpecName('DOM2 Core')}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', 'core.html#ID-A6C90942', 'Element.getElementsByTagNameNS()')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con los navegadores
+<h2 id="Compatibilidad_con_los_navegadores">Compatibilidad con los navegadores</h2>
 
 {{Compat("api.Element.getElementsByTagNameNS")}}

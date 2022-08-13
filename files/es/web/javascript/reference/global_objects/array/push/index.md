@@ -10,55 +10,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/push
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`push()`** añade uno o más elementos al final de un array y devuelve la nueva longitud del array.
+<p>El método <code><strong>push()</strong></code> añade uno o más elementos al final de un array y devuelve la nueva longitud del array.</p>
 
-{{EmbedInteractiveExample("pages/js/array-push.html")}}
+<div>{{EmbedInteractiveExample("pages/js/array-push.html")}}</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    arr.push(element1[, ...[, elementN]])
+<pre class="syntaxbox"><var>arr</var>.push(<var>element1</var>[, ...[, <var>elementN</var>]])</pre>
 
-### Parámetros
+<h3 id="Parámetros" name="Parámetros">Parámetros</h3>
 
-- `elementN`
-  - : Los elementos a añadir al final del array.
+<dl>
+ <dt><code>element<em>N</em></code></dt>
+ <dd>Los elementos a añadir al final del array.</dd>
+</dl>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-La nueva propiedad {{jsxref("Array.length", "length")}} del objeto sobre el cual se efectuó la llamada.
+<p>La nueva propiedad {{jsxref("Array.length", "length")}} del objeto sobre el cual se efectuó la llamada.</p>
 
-## Descripción
+<h2 id="Description" name="Description">Descripción</h2>
 
-El método `push` es muy práctico para añadir valores a un array.
+<p>El método <code>push</code> es muy práctico para añadir valores a un array.</p>
 
-`push` es genérico intencionadamente. Este método puede ser {{jsxref("Function.call", "call()")}} o {{jsxref("Function.apply", "apply()")}} a objetos que representen arrays. El método `push` depende de la propiedad `length` para decidir donde empezar a insertar los valores dados. Si el valor de la propiedad `length` no puede ser convertido en numérico, el índice 0 es usado. Esto permite la posibilidad de que la propiedad `length` sea inexistente, y en este caso `length` será creado.
+<p><code>push</code> es genérico intencionadamente. Este método puede ser {{jsxref("Function.call", "call()")}} o {{jsxref("Function.apply", "apply()")}} a objetos que representen arrays. El método <code>push</code> depende de la propiedad <code>length</code> para decidir donde empezar a insertar los valores dados. Si el valor de la propiedad <code>length</code> no puede ser convertido en numérico, el índice 0 es usado. Esto permite la posibilidad de que la propiedad <code>length</code> sea inexistente, y en este caso <code>length</code> será creado.</p>
 
-Los únicos objetos nativos que se asemejen al array son {{jsxref("Global_Objects/String", "strings", "", 1)}} objetos, aunque estos no se puedan usar en la aplicación de este método ya que son inmutables.
+<p>Los únicos objetos nativos que se asemejen al array son {{jsxref("Global_Objects/String", "strings", "", 1)}} objetos, aunque estos no se puedan usar en la aplicación de este método ya que son inmutables.</p>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-### Ejemplo: Añadiendo elementos a un array
+<h3 id="Ejemplo: Añadiendo elementos a un array" name="Ejemplo: Añadiendo elementos a un array">Ejemplo: Añadiendo elementos a un array</h3>
 
-El siguiente código crea el array `sports` que contiene dos elementos, luego añade 2 elementos más. Tras ejecutar el código, `sports` contiene 4 elementos: "soccer", "baseball", "football" and "swimming".
+<p>El siguiente código crea el array <code>sports</code> que contiene dos elementos, luego añade 2 elementos más. Tras ejecutar el código, <code>sports</code> contiene 4 elementos: "soccer", "baseball", "football" and "swimming".</p>
 
-```js
-var sports = ['soccer', 'baseball'];
+<pre class="brush: js">var sports = ['soccer', 'baseball'];
 var total = sports.push('football', 'swimming');
 
 console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
 console.log(total);  // 4
-```
+</pre>
 
-### Uniendo dos arrays
+<h3 id="Uniendo_dos_arrays">Uniendo dos arrays</h3>
 
-This example uses {{jsxref("Function.apply", "apply()")}} to push all elements from a second array.
+<p>This example uses {{jsxref("Function.apply", "apply()")}} to push all elements from a second array.</p>
 
-Do _not_ use this method if the second array (`moreVegs` in the example) is very large, because the maximum number of parameters that one function can take is limited in practice. See {{jsxref("Function.apply", "apply()")}} for more details.
+<p>Do <em>not</em> use this method if the second array (<code>moreVegs</code> in the example) is very large, because the maximum number of parameters that one function can take is limited in practice. See {{jsxref("Function.apply", "apply()")}} for more details.</p>
 
-```js
-var vegetables = ['parsnip', 'potato'];
+<pre class="brush: js">var vegetables = ['parsnip', 'potato'];
 var moreVegs = ['celery', 'beetroot'];
 
 // Merge the second array into the first one
@@ -66,14 +66,13 @@ var moreVegs = ['celery', 'beetroot'];
 Array.prototype.push.apply(vegetables, moreVegs);
 
 console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
-```
+</pre>
 
-### Using an object in an array-like fashion
+<h3 id="Using_an_object_in_an_array-like_fashion">Using an object in an array-like fashion</h3>
 
-Como se menciona anteriormente, `push` es intencionadamente genérico, y podemos usar eso a nuestro favor. `Array.prototype.push` puede funcionar bien con un objeto, como muestra este ejemplo. Ten en cuenta que no se crea un array para almacenar una colección de objetos. En su lugar, almacenamos la colección en el propio objeto y se utiliza el método `call` sobre `Array.prototype.push` para hacer creer al método que estamos tratando a un array, y simplemente funciona, gracias a la forma en que JavaScript nos permite establecer el contexto de la ejecución.
+<p>Como se menciona anteriormente, <code>push</code> es intencionadamente genérico, y podemos usar eso a nuestro favor. <code>Array.prototype.push</code> puede funcionar bien con un objeto, como muestra este ejemplo. Ten en cuenta que no se crea un array para almacenar una colección de objetos. En su lugar, almacenamos la colección en el propio objeto y se utiliza el método <code>call</code> sobre <code>Array.prototype.push</code> para hacer creer al método que estamos tratando a un array, y simplemente funciona, gracias a la forma en que JavaScript nos permite establecer el contexto de la ejecución.</p>
 
-```js
-var obj = {
+<pre class="brush: js">var obj = {
     length: 0,
 
     addElem: function addElem(elem) {
@@ -88,26 +87,55 @@ obj.addElem({});
 obj.addElem({});
 console.log(obj.length);
 // → 2
-```
+</pre>
 
-Tenga en cuenta que aunque `obj` no es un array, el método `push` ha incrementado satisfactoriamente la propiedad `length` de `obj` tal y como si se tratara de un array.
+<p>Tenga en cuenta que aunque <code>obj</code> no es un array, el método <code>push</code> ha incrementado satisfactoriamente la propiedad <code>length</code> de <code>obj</code> tal y como si se tratara de un array.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                       | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}                 | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.push', 'Array.prototype.push')}} | {{Spec2('ESDraft')}} |                                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES3')}}</td>
+   <td>{{Spec2('ES3')}}</td>
+   <td>Definición inicial. Implementado en JavaScript 1.2.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.push', 'Array.prototype.push')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("javascript.builtins.Array.push")}}
+<div>
 
-## Ver también
 
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.concat()")}}
+<p>{{Compat("javascript.builtins.Array.push")}}</p>
+</div>
+
+<h2 id="Ver también" name="Ver también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Array.prototype.pop()")}}</li>
+ <li>{{jsxref("Array.prototype.shift()")}}</li>
+ <li>{{jsxref("Array.prototype.unshift()")}}</li>
+ <li>{{jsxref("Array.prototype.concat()")}}</li>
+</ul>

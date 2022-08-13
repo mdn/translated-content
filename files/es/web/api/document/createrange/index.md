@@ -7,30 +7,36 @@ tags:
   - crear rango
 translation_of: Web/API/Document/createRange
 ---
-{{ ApiRef() }}
+<p>{{ ApiRef() }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Retorna un nuevo objeto [`Rango`](https://developer.mozilla.org/es/docs/Web/API/Range).
+<p>Retorna un nuevo objeto <code><a href="https://developer.mozilla.org/es/docs/Web/API/Range">Rango</a></code>.</p>
 
-### Sintáxis
+<h3 id="Sint.C3.A1xis" name="Sint.C3.A1xis">Sintáxis</h3>
 
-    range = document.createRange();
+<pre class="eval"><var>range</var> = <var>document</var>.createRange();
+</pre>
 
-En este ejemplo, `range` es el nuevo objeto [rango](/es/docs/Web/API/Range) creado.
+<p>En este ejemplo, <code>range</code> es el nuevo objeto <a href="https://developer.mozilla.org/es/docs/Web/API/Range">rango</a> creado.</p>
 
-### Ejemplo
+<h3 id="Ejemplo" name="Ejemplo">Ejemplo</h3>
 
-    var range = document.createRange();
-    range.setStart(startNode, startOffset);
-    range.setEnd(endNode, endOffset);
+<pre class="eval">var range = document.createRange();
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
+</pre>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-Una vez que se ha creado un objeto `Rango`, se necesita configurar sus puntos límites antes de hacer uso de la mayoría de sus métodos.
+<p>Una vez que se ha creado un objeto <code>Rango</code>, se necesita configurar sus puntos límites antes de hacer uso de la mayoría de sus métodos.</p>
 
-### Especificación
+<h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>
 
-[DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)
+<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange">DOM Level 2 Range: DocumentRange.createRange</a></p>
 
-{{ languages( { "en": "en/DOM/document.createRange", "pl": "pl/DOM/document.createRange" } ) }}
+
+
+<div class="noinclude"></div>
+
+<p>{{ languages( { "en": "en/DOM/document.createRange", "pl": "pl/DOM/document.createRange" } ) }}</p>

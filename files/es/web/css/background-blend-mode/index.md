@@ -6,20 +6,19 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/background-blend-mode
 ---
-{{CSSRef()}}
+<p>{{CSSRef()}}</p>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-La propiedad CSS **`background-blend-mode`** describe cómo las imágenes de fondo y el color de fondo del elemento deben mezclar entre sí.
+<p>La propiedad CSS <strong><code>background-blend-mode</code></strong> describe cómo las imágenes de fondo y el color de fondo del elemento deben mezclar entre sí. </p>
 
-Los modos de fusión deben ser definidos en el mismo orden que la propiedad CSS {{cssxref("background-image")}}. Si la cantidad de modos de fusión y de imagenes de fondo no son iguales, se repetirán y/o truncarán hasta igualar las cantidades.
+<p>Los modos de fusión deben ser definidos en el mismo orden que la propiedad CSS {{cssxref("background-image")}}. Si la cantidad de modos de fusión y de imagenes de fondo no son iguales, se repetirán y/o truncarán hasta igualar las cantidades.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-```css
-/* Un valor */
+<pre class="brush:css">/* Un valor */
 background-blend-mode: normal;
 
 /* Dos valores, uno por fondo */
@@ -29,63 +28,76 @@ background-blend-mode: darken, luminosity;
 background-blend-mode: initial;
 background-blend-mode: inherit;
 background-blend-mode: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Values" name="Values">Valores</h3>
 
-- `<blend-mode>`
-  - : Es un {{cssxref("&lt;blend-mode&gt;")}} que denota el modo de fusión que se aplicará. Puede haber varios valores, separados por coma.
+<dl>
+ <dt><code>&lt;blend-mode&gt;</code></dt>
+ <dd>Es un {{cssxref("&lt;blend-mode&gt;")}} que denota el modo de fusión que se aplicará. Puede haber varios valores, separados por coma.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-\<select id="select">
-\<option>normal\</option>
-\<option>multiply\</option>
-\<option selected>screen\</option>
-\<option>overlay\</option>
-\<option>darken\</option>
-\<option>lighten\</option>
-\<option>color-dodge\</option>
-\<option>color-burn\</option>
-\<option>hard-light\</option>
-\<option>soft-light\</option>
-\<option>difference\</option>
-\<option>exclusion\</option>
-\<option>hue\</option>
-\<option>saturation\</option>
-\<option>color\</option>
-\<option>luminosity\</option>
-\</select>
+&lt;select id="select"&gt;
+    &lt;option&gt;normal&lt;/option&gt;
+    &lt;option&gt;multiply&lt;/option&gt;
+    &lt;option selected&gt;screen&lt;/option&gt;
+    &lt;option&gt;overlay&lt;/option&gt;
+    &lt;option&gt;darken&lt;/option&gt;
+    &lt;option&gt;lighten&lt;/option&gt;
+    &lt;option&gt;color-dodge&lt;/option&gt;
+    &lt;option&gt;color-burn&lt;/option&gt;
+    &lt;option&gt;hard-light&lt;/option&gt;
+    &lt;option&gt;soft-light&lt;/option&gt;
+    &lt;option&gt;difference&lt;/option&gt;
+    &lt;option&gt;exclusion&lt;/option&gt;
+    &lt;option&gt;hue&lt;/option&gt;
+    &lt;option&gt;saturation&lt;/option&gt;
+    &lt;option&gt;color&lt;/option&gt;
+    &lt;option&gt;luminosity&lt;/option&gt;
+&lt;/select&gt;</pre>
 
-```css
-#div {
+<pre class="brush: css" class="hidden">#div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: screen;
-}
-```
+}</pre>
 
-```js
-document.getElementById("select").onchange = function(event) {
+<pre class="brush: js" class="hidden">document.getElementById("select").onchange = function(event) {
     document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
 }
-console.log(document.getElementById('div'));
-```
+console.log(document.getElementById('div'));</pre>
 
-{{ EmbedLiveSample('Examples', "330", "330") }}
+<p>{{ EmbedLiveSample('Examples', "330", "330") }}</p>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                                               | Estado                               | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#background-blend-mode', 'background-blend-mode') }} | {{ Spec2('Compositing') }} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('Compositing', '#background-blend-mode', 'background-blend-mode') }}</td>
+   <td>{{ Spec2('Compositing') }}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad en navegadores</h2>
 
 {{Compat("css.properties.background-blend-mode")}}
 
-## Véase también
+<h2 id="See_also" name="See_also">Véase también</h2>
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}
+<ul>
+ <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
+ <li>{{cssxref("mix-blend-mode")}}</li>
+</ul>

@@ -5,32 +5,42 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/addRange
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Añade un objeto de rango a la selección.
+<p>Añade un objeto de rango a la selección.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    sel.addRange(
-    range)
+<pre class="eval"><i>sel</i>.addRange(
+<i>range</i>)
+</pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-- _`range`_
-  - : Un objeto [range](es/DOM/range) que será añadido a la selección.
+<dl>
+ <dt>
+ <i><code>range</code></i>
+ </dt>
+ <dd>Un objeto <a href="es/DOM/range">range</a> que será añadido a la selección.</dd>
+</dl>
 
-### Ejemplos
+<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
 
-     /* Seleccionar todos los elementos en NEGRITA en un documento HTML */
-     var strongs = document.getElementsByTagName("strong");
-     var s = window.getSelection();
-     if(s.rangeCount > 0) s.removeAllRanges();
-     for(var i = 0; i < strongs.length; i++) {
-      var range = document.createRange();
-      range.selectNode(strongs[i]);
-      s.addRange(range);
-     }
+<pre class="eval"> /* Seleccionar todos los elementos en NEGRITA en un documento HTML */
+ var strongs = document.getElementsByTagName("strong");
+ var s = window.getSelection();
+ if(s.rangeCount &gt; 0) s.removeAllRanges();
+ for(var i = 0; i &lt; strongs.length; i++) {
+  var range = document.createRange();
+  range.selectNode(strongs[i]);
+  s.addRange(range);
+ }
+</pre>
 
-{{ languages( { "en": "en/DOM/Selection/addRange", "it": "it/DOM/Selection/addRange", "pl": "pl/DOM/Selection/addRange" } ) }}
+<p> </p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/DOM/Selection/addRange", "it": "it/DOM/Selection/addRange", "pl": "pl/DOM/Selection/addRange" } ) }}</p>

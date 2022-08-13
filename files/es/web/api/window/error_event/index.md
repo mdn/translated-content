@@ -4,30 +4,35 @@ slug: Web/API/Window/error_event
 translation_of: Web/API/GlobalEventHandlers/onerror
 original_slug: Web/API/GlobalEventHandlers/onerror
 ---
-{{ ApiRef("HTML DOM") }}
+<div>{{ ApiRef("HTML DOM") }}</div>
 
-Un manejador de eventos para errores en scripts en tiempo de ejecución.
+<p>Un manejador de eventos para errores en scripts en tiempo de ejecución.</p>
 
-Note that some/many `error` events do not trigger `window.onerror`, you have to listen for them specifically.
+<p>Note that some/many <code>error</code> events do not trigger <code>window.onerror</code>, you have to listen for them specifically.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    window.onerror = funcRef;
+<pre>window.onerror = funcRef;
+</pre>
 
-### Parámetros
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
 
-- `funcRef` es una referencia a una función. Cuando la función devuelva `true`, se prevendrá el disparado del manejador de eventos por defecto. Parámetros de la función:
+<ul>
+ <li><code>funcRef</code> es una referencia a una función. Cuando la función devuelva <code>true</code>, se prevendrá el disparado del manejador de eventos por defecto. Parámetros de la función:
 
-  - Mensaje de error (string)
-  - Url en la que el error fue lanzado (string)
-  - Número de línea en la que el error fue lanzado (number)
-  - Dentro de la línea en la que el error ocurrió, número de columna correspondiente (number) {{gecko_minversion_inline("31.0")}}
-  - [Error Object](/es/docs/Web/JavaScript/Reference/Global_Objects/Error) (object) {{gecko_minversion_inline("31.0")}}
+  <ul>
+   <li>Mensaje de error (string)</li>
+   <li>Url en la que el error fue lanzado (string)</li>
+   <li>Número de línea en la que el error fue lanzado (number)</li>
+   <li>Dentro de la línea en la que el error ocurrió, número de columna correspondiente (number) {{gecko_minversion_inline("31.0")}}</li>
+   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error Object</a> (object) {{gecko_minversion_inline("31.0")}}</li>
+  </ul>
+ </li>
+</ul>
 
-## Ejemplos
+<h2 id="Example" name="Example">Ejemplos</h2>
 
-```js
-// Example 1:
+<pre class="brush: js">// Example 1:
 
 // Prevent error dialogs from displaying -which is the window's normal
 // behavior- by overriding the default event handler for error events that
@@ -46,16 +51,16 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
   // Just let default handler run.
   return false;
 }
-```
+</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-El evento de error es lanzado cuando ocurre un error en el script.
+<p>El evento de error es lanzado cuando ocurre un error en el script.</p>
 
-Cuando se use el marcado html en línea (\<body onerror="alert('an error occurred')>...), los argumentos son anónimos. Pueden ser referenciados usando desde `arguments{{ mediawiki.external(0) }}` hasta `arguments{{ mediawiki.external(2) }}`.
+<p>Cuando se use el marcado html en línea (<span class="nowiki">&lt;body onerror="alert('an error occurred')&gt;...</span>), los argumentos son anónimos. Pueden ser referenciados usando desde <code>arguments{{ mediawiki.external(0) }}</code> hasta <code>arguments{{ mediawiki.external(2) }}</code>.</p>
 
-No hay llamante `Components.stack.caller` que recuperar. (Vea [**bug 355430**](https://bugzilla.mozilla.org/show_bug.cgi?id=355430).)
+<p>No hay llamante <code><a class="external" href="/en/Components.stack" title="https://developer.mozilla.org/En/Components.stack">Components.stack</a>.caller</code> que recuperar. (Vea <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=355430"><strong>bug 355430</strong></a>.)</p>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-[JavaScript 1.1](http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/handlers.html#1120097)
+<p><a class="external" href="http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/handlers.html#1120097">JavaScript 1.1</a></p>

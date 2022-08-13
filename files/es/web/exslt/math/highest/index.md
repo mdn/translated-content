@@ -7,28 +7,31 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/math/highest
 ---
-{{XsltRef}}
-`math:highest()` devuelve el nodo con el valor más alto (donde el valor más alto se calcula usando [`math:max()`](es/EXSLT/math/max)) del conjunto de nodos (node-set) especificado.
+<p>{{XsltRef}}<br>
+ <code>math:highest()</code> devuelve el nodo con el valor más alto (donde el valor más alto se calcula usando <code><a href="es/EXSLT/math/max">math:max()</a></code>) del conjunto de nodos (node-set) especificado.</p>
 
-Un nodo tiene este valor máximo si convierte su valor de cadena a un número igual al valor máximo.
+<p>Un nodo tiene este valor máximo si convierte su valor de cadena a un número igual al valor máximo.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    math:highest(conjuntoNodos)
+<pre class="eval">math:highest(<em>conjuntoNodos</em>)
+</pre>
 
-### Argumentos
+<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
 
-- `conjuntoNodos`
-  - : El conjunto de nodos cuyo valor más alto va a ser devuelto.
+<dl>
+ <dt><code><em>conjuntoNodos</em></code></dt>
+ <dd>El conjunto de nodos cuyo valor más alto va a ser devuelto.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-Un fragmento de árbol resultante que consiste en las copias de los nodos devueltos por [`math:max()`](es/EXSLT/math/max).
+<p>Un fragmento de árbol resultante que consiste en las copias de los nodos devueltos por <code><a href="es/EXSLT/math/max">math:max()</a></code>.</p>
 
-## Definido en
+<h2 id="Definido_en" name="Definido_en">Definido en</h2>
 
-[EXSLT - MATH:HIGHEST](http://www.exslt.org/math/functions/highest/index.html)
+<p><a class="external" href="http://www.exslt.org/math/functions/highest/index.html">EXSLT - MATH:HIGHEST</a></p>
 
-## Implementación en Gecko
+<h2 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h2>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

@@ -11,49 +11,85 @@ tags:
 translation_of: Web/HTML/Element/bdi
 original_slug: Web/HTML/Elemento/bdi
 ---
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-El elemento _HTML `<bdi>` _(o elemento de aislamiento Bi-Direccional) aisla un trozo de texto para que pueda ser formateado con una dirección diferente al texto que hay fuera de él.
+<p>El elemento <em>HTML <code>&lt;bdi&gt;</code> </em>(o elemento de aislamiento Bi-Direccional) aisla un trozo de texto para que pueda ser formateado con una dirección diferente al texto que hay fuera de él.</p>
 
-Es útil al embeber o incrustart texto del que se desconoce la direccionalidad, por ejemplo proveniente de una base de datos, dentro de un texto con una direccionalidad fija.
+<p>Es útil al embeber o incrustart texto del que se desconoce la direccionalidad, por ejemplo proveniente de una base de datos, dentro de un texto con una direccionalidad fija.</p>
 
-> **Nota:** Aunque el mismo efecto visual se puede conseguir usando la regla CSS {{cssxref("unicode-bidi")}}`: isolate` en un elemento {{HTMLElement("span")}} u otro elemento de formateado de texto, el significado semántico sólo se consigue usando el elemento` <bdi>`. En especial los navegadores permiten ignorar los estilos CSS. En tal caso el texto se mostrará correctamente usando el elemento HTML pero será basura usando CSS para fijar la semántica.
+<p class="note">Aunque el mismo efecto visual se puede conseguir usando la regla  CSS  {{cssxref("unicode-bidi")}}<code>: isolate</code> en un elemento  {{HTMLElement("span")}} u otro elemento de formateado de texto, el significado semántico sólo se consigue usando el elemento<code> &lt;bdi&gt;</code>. En especial los navegadores permiten ignorar los estilos CSS. En tal caso el texto se mostrará correctamente usando el elemento HTML pero será basura usando CSS para fijar la semántica.</p>
 
-| [Content categories](/es/docs/HTML/Content_categories "HTML/Content_categories") | [Flow content](/es/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"), contenido palpable. |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                              | [Phrasing content](/es/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Flow_content").                                                                                                                               |
-| Omisión de etiqueta                                                              | {{no_tag_omission}}                                                                                                                                                                                                                    |
-| Elementos padre permitidos                                                       | Any element that accepts [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Flow_content").                                                                                                      |
-| Interfaz DOM                                                                     | {{domxref("HTMLElement")}}                                                                                                                                                                                                        |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></th>
+   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">phrasing content</a>, contenido palpable.</td>
+  </tr>
+  <tr>
+   <th scope="row">Contenido permitido</th>
+   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Flow_content">Phrasing content</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Omisión de etiqueta</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Elementos padre permitidos</th>
+   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Flow_content">phrasing content</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Interfaz DOM</th>
+   <td>{{domxref("HTMLElement")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Atributos
+<h2 id="Atributos">Atributos</h2>
 
-Como los demás elementos HTML , este elemento tiene los [global attributes](/es/docs/HTML/Global_attributes "HTML/Global attributes"), pero con una pequeña diferencia semántica: el atributo **dir** no se hereda. Si no está definidio, su valor por defecto es `auto` y permitirá a los navegadores decidir la dirección basándose en el contexto del elemento.
+<p>Como los demás elementos HTML , este elemento tiene los <a href="/en-US/docs/HTML/Global_attributes" title="HTML/Global attributes">global attributes</a>, pero con una pequeña diferencia semántica: el atributo <strong>dir </strong>no se hereda. Si no está definidio, su valor por defecto es <code>auto</code> y permitirá a los navegadores decidir la dirección basándose en el contexto del elemento.</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```html
-<p dir="ltr">Esta palabara arábica<bdi>ARABIC_PLACEHOLDER</bdi> se muestra automáticamente de derecha a izquierda.</p>
-```
+<pre class="brush: html">&lt;p dir="ltr"&gt;Esta palabara arábica&lt;bdi&gt;ARABIC_PLACEHOLDER&lt;/bdi&gt; se muestra automáticamente de derecha a izquierda.&lt;/p&gt;
+</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-Esta palabra arábica REDLOHECALP_CIBARA se muestra automáticamente de derecha a izquierda.
+<p dir="ltr">Esta palabra arábica REDLOHECALP_CIBARA se muestra automáticamente de derecha a izquierda.</p>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                                                       | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}         | {{Spec2('HTML5 W3C')}}     |            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("html.elements.bdi")}}
 
-## Ver además
+<h2 dir="ltr" id="Ver_además">Ver además</h2>
 
-- Elementos HTML relacionados: {{HTMLElement("bdo")}}
-- Propiedades HTML relacionadas: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
+<ul>
+ <li>Elementos HTML relacionados: {{HTMLElement("bdo")}}</li>
+ <li>Propiedades HTML relacionadas: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}</li>
+</ul>
 
-{{HTMLRef}}
+<p>{{HTMLRef}}</p>

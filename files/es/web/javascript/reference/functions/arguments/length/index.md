@@ -9,50 +9,76 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments/length
 original_slug: Web/JavaScript/Referencia/Funciones/arguments/length
 ---
-{{jsSidebar("Functions")}}
+<div>{{jsSidebar("Functions")}}</div>
 
-La propiedad **`arguments.length`** contiene el número de argumentos pasados a una función.
+<p>La propiedad <strong><code>arguments.length</code></strong> contiene el número de argumentos pasados a una función.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    arguments.length
+<pre class="syntaxbox">arguments.length</pre>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-La propiedad arguments.length devuelve el número total de argumentos pasados a una función. Esto puede ser más o menos que el número de parametros definidos. (Véase {{jsxref("Function.length")}}).
+<p>La propiedad arguments.length devuelve el número total de argumentos pasados a una función. Esto puede ser más o menos que el número de parametros definidos. (Véase {{jsxref("Function.length")}}).</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando `arguments.length`
+<h3 id="Usando_arguments.length">Usando <code>arguments.length</code></h3>
 
-En este ejemplo definimos una función que puede sumar dos o más números.
+<p>En este ejemplo definimos una función que puede sumar dos o más números.</p>
 
-```js
-function adder(base /*, n2, ... */) {
+<pre class="brush: js">function adder(base /*, n2, ... */) {
   base = Number(base);
-  for (var i = 1; i < arguments.length; i++) {
+  for (var i = 1; i &lt; arguments.length; i++) {
     base += Number(arguments[i]);
   }
   return base;
 }
-```
+</pre>
 
-> **Nota:** Tenga en cuenta la diferencia entre {{jsxref("Function.length")}} y arguments.length
+<div class="note">
+<p>Tenga en cuenta la diferencia entre {{jsxref("Function.length")}} y arguments.length</p>
+</div>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                   | Estado                       | Comentario                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                    |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial. Implementado en JavaScript 1.1</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con los navegadores
+<h2 id="Compatibilidad_con_los_navegadores">Compatibilidad con los navegadores</h2>
 
 {{Compat("javascript.functions.arguments.length")}}
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- {{jsxref("Function")}}
-- {{jsxref("Function.length")}}
+<ul>
+ <li>{{jsxref("Function")}}</li>
+ <li>{{jsxref("Function.length")}}</li>
+</ul>

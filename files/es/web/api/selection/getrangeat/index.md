@@ -5,37 +5,45 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/getRangeAt
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Devuelve un objeto de rango representando uno de los rangos seleccionados.
+<p>Devuelve un objeto de rango representando uno de los rangos seleccionados.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    range =
-    sel.getRangeAt(
-    index)
+<pre class="eval"><i>range</i> =
+<i>sel</i>.getRangeAt(
+<i>index</i>)
+</pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-- _`range`_
-  - : El objeto [range](es/DOM/range) (rango) que será devuelto.
+<dl>
+ <dt>
+ <i><code>range</code></i>
+ </dt>
+ <dd>El objeto <a href="es/DOM/range">range</a> (rango) que será devuelto.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt>
+ <i><code>index</code></i>
+ </dt>
+ <dd>El exponente (basado en cero) del rango a devolver. Un número negativo o un número mayor o igual a <a href="es/DOM/Selection/rangeCount">rangeCount</a> provocará un error.</dd>
+</dl>
 
-- _`index`_
-  - : El exponente (basado en cero) del rango a devolver. Un número negativo o un número mayor o igual a [rangeCount](es/DOM/Selection/rangeCount) provocará un error.
+<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
 
-### Ejemplos
+<pre class="eval">ranges = [];
+sel = window.getSelection();
+for(var i = 0; i &lt; sel.rangeCount; i++) {
+ ranges[i] = sel.getRangeAt(i);
+}
+/* Cada artículo en el array de rangos ahora es
+ * un objeto rango representando uno de los
+ * rangos en la selección */
+</pre>
 
-    ranges = [];
-    sel = window.getSelection();
-    for(var i = 0; i < sel.rangeCount; i++) {
-     ranges[i] = sel.getRangeAt(i);
-    }
-    /* Cada artículo en el array de rangos ahora es
-     * un objeto rango representando uno de los
-     * rangos en la selección */
-
-{{ languages( { "en": "en/DOM/Selection/getRangeAt", "pl": "pl/DOM/Selection/getRangeAt" } ) }}
+<p>{{ languages( { "en": "en/DOM/Selection/getRangeAt", "pl": "pl/DOM/Selection/getRangeAt" } ) }}</p>

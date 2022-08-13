@@ -8,56 +8,66 @@ tags:
   - metodo
 translation_of: Web/API/Node/hasChildNodes
 ---
-{{APIRef("DOM")}}
+<div>
+<div>{{APIRef("DOM")}}</div>
+</div>
 
-El método **`Node.hasChildNodes()`** devuelve un valor **Boolean** indicando si el {{domxref("Node")}} (nodo) actual tiene [nodos hijos](/es/docs/Web/API/Node/childNodes "DOM/Node.childNodes") o no.
+<p>El método <code><strong>Node.hasChildNodes()</strong></code> devuelve un valor <strong>Boolean</strong> indicando si el {{domxref("Node")}} (nodo) actual tiene <a href="/es/docs/Web/API/Node/childNodes" title="DOM/Node.childNodes">nodos hijos</a> o no.</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    resultado = node.hasChildNodes();
+<pre class="syntaxbox"><code><em>resultado</em> = <em>node</em>.hasChildNodes();</code></pre>
 
-- `resultado`
-  - : almacena el valor devuelto `true` o `false`.
+<dl>
+ <dt><code>resultado</code></dt>
+ <dd>almacena el valor devuelto <code>true</code> o <code>false</code>.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-El siguiente ejemplo elimina el primer nodo dentro del elemento con id `"foo"` si _foo_ tiene nodos hijos.
+<p>El siguiente ejemplo elimina el primer nodo dentro del elemento con id <code>"foo"</code> si <em>foo</em> tiene nodos hijos.</p>
 
-```js
-var foo = document.getElementById("foo");
+<pre class="brush:js">var foo = document.getElementById("foo");
 if (foo.hasChildNodes()) {
     // do something with 'foo.childNodes'
 }
-```
+</pre>
 
-## Polyfill
+<h2 id="Polyfill">Polyfill</h2>
 
-```js
-;(function(prototype) {
+<pre class="brush:js">;(function(prototype) {
     prototype.hasChildNodes = prototype.hasChildNodes || function() {
         return !!this.firstChild;
     }
 })(Node.prototype);
-```
+</pre>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-Hay varias maneras de determinar si el nodo tiene nodos hijos.
+<p>Hay varias maneras de determinar si el nodo tiene nodos hijos.</p>
 
-- node.hasChildNodes()
-- node.firstChild != null (o sólo node.firstChild)
-- node.childNodes && node.childNodes.length (o node.childNodes.length > 0)
+<ul>
+ <li>node.hasChildNodes()</li>
+ <li>node.firstChild != null (o sólo node.firstChild)</li>
+ <li>node.childNodes &amp;&amp; node.childNodes.length (o node.childNodes.length &gt; 0)</li>
+</ul>
 
-## Especificación
+<h2 id="Especificación" name="Especificación">Especificación</h2>
 
-- [WHATWG: hasChildNodes](https://dom.spec.whatwg.org/#dom-node-haschildnodes)
-- [hasChildNodes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)
+<ul>
+ <li><a href="https://dom.spec.whatwg.org/#dom-node-haschildnodes">WHATWG: hasChildNodes</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187">hasChildNodes</a></li>
+</ul>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("api.Node.hasChildNodes")}}
 
-## Ver también
 
-- {{domxref("Node.childNodes")}}
-- {{domxref("Node.hasAttributes")}}
+<p>{{Compat("api.Node.hasChildNodes")}}</p>
+
+<h2 id="Ver_también" name="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{domxref("Node.childNodes")}}</li>
+ <li>{{domxref("Node.hasAttributes")}}</li>
+</ul>

@@ -8,24 +8,23 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toString
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`toString()`** devuelve una cadena que representa el objeto {{JSxRef("Error")}} especificado.
+<p>El método <code><strong>toString()</strong></code> devuelve una cadena que representa el objeto {{JSxRef("Error")}} especificado.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    e.toString()
+<pre class="syntaxbox notranslate"><code><var>e</var>.toString()</code></pre>
 
-### Valor de retorno
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-Una cadena que representa el objeto {{JSxRef("Error")}} especificado.
+<p>Una cadena que representa el objeto {{JSxRef("Error")}} especificado.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-El objeto {{JSxRef("Error")}} redefine el método {{JSxRef("Object.prototype.toString()")}} heredado por todos los objetos. Su semántica es la siguiente (asumiendo que {{JSxRef("Object")}} y {{JSxRef("String")}} tienen sus valores originales):
+<p>El objeto {{JSxRef("Error")}} redefine el método {{JSxRef("Object.prototype.toString()")}} heredado por todos los objetos. Su semántica es la siguiente (asumiendo que {{JSxRef("Object")}} y {{JSxRef("String")}} tienen sus valores originales):</p>
 
-```js
-Error.prototype.toString = function() {
+<pre class="brush: js notranslate">Error.prototype.toString = function() {
   'use strict';
 
   var obj = Object(this);
@@ -48,14 +47,13 @@ Error.prototype.toString = function() {
 
   return name + ': ' + msg;
 };
-```
+</pre>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usar `toString()`
+<h3 id="Usar_toString">Usar <code>toString()</code></h3>
 
-```js
-var e = new Error('fatal error');
+<pre class="brush: js notranslate">var e = new Error('fatal error');
 console.log(e.toString()); // 'Error: error fatal'
 
 e.name = undefined;
@@ -69,18 +67,33 @@ console.log(e.toString()); // ''
 
 e.name = 'hola';
 console.log(e.toString()); // 'hola'
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("javascript.builtins.Error.toString")}}
+<div>
 
-## Ve también
 
-- {{jsxref("Error.prototype.toSource()")}}
+<p>{{Compat("javascript.builtins.Error.toString")}}</p>
+</div>
+
+<h2 id="Ve_también">Ve también</h2>
+
+<ul>
+ <li>{{jsxref("Error.prototype.toSource()")}}</li>
+</ul>

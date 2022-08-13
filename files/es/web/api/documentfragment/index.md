@@ -3,59 +3,63 @@ title: DocumentFragment
 slug: Web/API/DocumentFragment
 translation_of: Web/API/DocumentFragment
 ---
-{{ APIRef("DOM") }}
+<div>{{ APIRef("DOM") }}</div>
 
-La interfaz **`DocumentFragment`** representa un objeto de documento mínimo que no tiene padre. Se utiliza como una versión ligera de {{domxref("Document")}} que almacena un segmento de una estructura de documento compuesta de nodos como un documento estándar. La gran diferencia se debe al hecho de que el fragmento de documento no forma parte de la estructura de árbol del documento activo. Los cambios realizados en el fragmento no afectan el documento (incluso en {{Glossary("reflow")}}) ni inciden en el rendimiento cuando se realizan cambios. {{InheritanceDiagram}}
+<p>La interfaz <span class="seoSummary"><strong><code>DocumentFragment</code></strong></span> representa un objeto de documento mínimo que no tiene padre. Se utiliza como una versión ligera de <span class="seoSummary">{{domxref("Document")}}</span> que almacena un segmento de una estructura de documento compuesta de nodos como un documento estándar. La gran diferencia se debe al hecho de que el fragmento de documento no forma parte de la estructura de árbol del documento activo. Los cambios realizados en el fragmento no afectan el documento  (incluso en {{Glossary("reflow")}})  ni inciden en el rendimiento cuando se realizan cambios. {{InheritanceDiagram}}</p>
 
-## Constructor
+<h2 id="Constructor">Constructor</h2>
 
-- {{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }}
-  - : Crea y devuelve un nuevo objeto `DocumentFragment`.
+<dl>
+ <dt>{{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }}</dt>
+ <dd>Crea y devuelve un nuevo objeto <code>DocumentFragment</code>.</dd>
+</dl>
 
-## Propiedades
+<h2 id="Propiedades">Propiedades</h2>
 
-Esta interfaz no tiene propiedades específicas*,* pero hereda las de su padre*, {{domxref("Node")}},* e implementa los de la interfaz _{{domxref("ParentNode")}}._
+<p>Esta interfaz no tiene propiedades específicas<em>, </em>pero hereda las de su padre<em>, {{domxref("Node")}}, </em>e implementa los de la interfaz <em>{{domxref("ParentNode")}}.</em></p>
 
-- {{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un {{domxref("HTMLCollection")}} que contiene los objetos de tipo {{domxref("Element")}} que son elementos secundarios del objeto `DocumentFragment`.
-- {{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve el {{domxref("Element")}} que es el primer hijo del objeto `DocumentFragment`, o `null` si no hay ninguno.
-- {{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve el {{domxref("Element")}} que es el último hijo del objeto `DocumentFragment`, o `null` si no hay ninguno.
-- {{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}
-  - : Devuelve un `unsigned long` que indica cantidad de elementos secundarios que tiene el objeto `DocumentFragment`.
+<dl>
+ <dt>{{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Devuelve un {{domxref("HTMLCollection")}} que contiene los objetos de tipo {{domxref("Element")}} que son elementos secundarios del objeto <code>DocumentFragment</code>.</dd>
+ <dt>{{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Devuelve el {{domxref("Element")}} que es el primer hijo del objeto <code>DocumentFragment</code>, o <code>null</code> si no hay ninguno.</dd>
+ <dt>{{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Devuelve el {{domxref("Element")}} que es el último hijo del objeto <code>DocumentFragment</code>, o <code>null</code> si no hay ninguno.</dd>
+ <dt>{{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}</dt>
+ <dd>Devuelve un <code>unsigned long</code> que indica cantidad de elementos secundarios que tiene el objeto <code>DocumentFragment</code>.</dd>
+</dl>
 
-## Métodos
+<h2 id="Métodos">Métodos</h2>
 
-_Esta interfaz hereda los métodos de su padre_, _{{domxref("Node")}}_, e implementa los de la interfaz {{domxref("ParentNode")}}_._
+<p><em>Esta interfaz hereda los métodos de su padre</em>, <em>{{domxref("Node")}}<em>, e implementa los de la interfaz {{domxref("ParentNode")}}</em>.</em></p>
 
-- {{domxref("DocumentFragment.querySelector()")}}
-  - : Devuelve el primer nodo {{domxref("Element")}} dentro de `DocumentFragment`, en el orden del documento, que coincide con los selectores especificados.
-- {{domxref("DocumentFragment.querySelectorAll()")}}
-  - : Devuelve un {{domxref("NodeList")}} de todos los nodos {{domxref("Element")}} dentro de `DocumentFragment` que coincide con los selectores especificados.
-- {{domxref("DocumentFragment.getElementById()")}}
-  - : Devuelve el primer nodo{{domxref("Element")}} dentro de `DocumentFragment`, en el orden del documento, que coincide con el **ID** especificado. funcionalmente equivale a {{domxref("Document.getElementById()")}}.
+<dl>
+ <dt>{{domxref("DocumentFragment.querySelector()")}}</dt>
+ <dd>Devuelve el primer nodo {{domxref("Element")}} dentro de <code>DocumentFragment</code>, en el orden del documento, que coincide con los selectores especificados.</dd>
+ <dt>{{domxref("DocumentFragment.querySelectorAll()")}}</dt>
+ <dd>Devuelve un {{domxref("NodeList")}} de todos los nodos {{domxref("Element")}} dentro de <code>DocumentFragment</code> que coincide con los selectores especificados.</dd>
+ <dt>{{domxref("DocumentFragment.getElementById()")}}</dt>
+ <dd>Devuelve el primer nodo{{domxref("Element")}} dentro de <code style="font-size: 14px;">DocumentFragment</code>, en el orden del documento, que coincide con el <strong>ID</strong> especificado. funcionalmente equivale a {{domxref("Document.getElementById()")}}.</dd>
+</dl>
 
-## Notas de uso
+<h2 id="Notas_de_uso">Notas de uso</h2>
 
-A common use for `DocumentFragment` is to create one, assemble a DOM subtree within it, then append or insert the fragment into the DOM using {{domxref("Node")}} interface methods such as {{domxref("Node.appendChild", "appendChild()")}} or {{domxref("Node.insertBefore", "insertBefore()")}}. Doing this moves the fragment's nodes into the DOM, leaving behind an empty `DocumentFragment`. Because all of the nodes are inserted into the document at once, only one reflow and render is triggered instead of potentially one for each node inserted if they were inserted separately.
+<p>A common use for <code>DocumentFragment</code> is to create one, assemble a DOM subtree within it, then append or insert the fragment into the DOM using {{domxref("Node")}} interface methods such as {{domxref("Node.appendChild", "appendChild()")}} or {{domxref("Node.insertBefore", "insertBefore()")}}. Doing this moves the fragment's nodes into the DOM, leaving behind an empty <code>DocumentFragment</code>. Because all of the nodes are inserted into the document at once, only one reflow and render is triggered instead of potentially one for each node inserted if they were inserted separately.</p>
 
-This interface is also of great use with Web components: {{HTMLElement("template")}} elements contain a `DocumentFragment` in their {{domxref("HTMLTemplateElement.content")}} property.
+<p>This interface is also of great use with Web components: {{HTMLElement("template")}} elements contain a <code>DocumentFragment</code> in their {{domxref("HTMLTemplateElement.content")}} property.</p>
 
-An empty `DocumentFragment` can be created using the {{domxref("document.createDocumentFragment()")}} method or the constructor.
+<p>An empty <code>DocumentFragment</code> can be created using the {{domxref("document.createDocumentFragment()")}} method or the constructor.</p>
 
-## Example
+<h2 id="Example">Example</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<ul id="list"></ul>
-```
+<pre class="brush: html">&lt;ul id="list"&gt;&lt;/ul&gt;
+</pre>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-var list = document.querySelector('#list')
+<pre class="brush: js">var list = document.querySelector('#list')
 var fruits = ['Apple', 'Orange', 'Banana', 'Melon']
 
 var fragment = new DocumentFragment()
@@ -67,26 +71,59 @@ fruits.forEach(function (fruit) {
 })
 
 list.appendChild(fragment)
-```
+</pre>
 
-### Result
+<h3 id="Result">Result</h3>
 
-{{EmbedLiveSample('Example')}}
+<p>{{EmbedLiveSample('Example')}}</p>
 
-## Specifications
+<h2 id="Specifications" name="Specifications">Specifications</h2>
 
-| Specification                                                                                            | Status                                       | Comment                                                                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-documentfragment', 'DocumentFragment')}} | {{Spec2('DOM WHATWG')}}             | Added the constructor and the implementation of {{domxref("ParentNode")}}. |
-| {{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}             | {{Spec2('Selectors API Level 1')}} | Added the `querySelector()` and `querySelectorAll()` methods.                     |
-| {{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM3 Core')}}                 | No change from {{SpecName('DOM2 Core')}}                                   |
-| {{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM2 Core')}}                 | No change from {{SpecName('DOM1')}}                                       |
-| {{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}}     | {{Spec2('DOM1')}}                     | Initial definition                                                                |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-documentfragment', 'DocumentFragment')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Added the constructor and the implementation of {{domxref("ParentNode")}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}</td>
+   <td>{{Spec2('Selectors API Level 1')}}</td>
+   <td>Added the <code>querySelector()</code> and <code>querySelectorAll()</code> methods.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
+   <td>{{Spec2('DOM3 Core')}}</td>
+   <td>No change from {{SpecName('DOM2 Core')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
+   <td>{{Spec2('DOM2 Core')}}</td>
+   <td>No change from {{SpecName('DOM1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}}</td>
+   <td>{{Spec2('DOM1')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("api.DocumentFragment")}}
 
-## See also
 
-- [The DOM interfaces index.](/es/docs/Web/API/Document_Object_Model)
+<p>{{Compat("api.DocumentFragment")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index.</a></li>
+</ul>

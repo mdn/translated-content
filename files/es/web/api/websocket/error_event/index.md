@@ -11,26 +11,41 @@ tags:
 translation_of: Web/API/WebSocket/onerror
 original_slug: Web/API/WebSocket/onerror
 ---
-{{APIRef("Web Sockets API")}}
+<p>{{APIRef("Web Sockets API")}}</p>
 
-La propiedad **`WebSocket.onerror`**, del tipo {{event("Event_handlers", "event handler")}}, será llamada cuando se dé un error. Esta llamada recibirá un tipo {{domxref("Event")}} como argumento.
+<p>La propiedad <strong><code>WebSocket.onerror</code></strong>, del tipo {{event("Event_handlers", "event handler")}}, será llamada cuando se dé un error. Esta llamada recibirá un tipo {{domxref("Event")}} como argumento.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    aWebSocket.onerror = function(event) {
-      console.error("Error en el WebSocket detectado:", event);
-    };
+<pre class="syntaxbox"><em>aWebSocket</em>.onerror = function(event) {
+  console.error("Error en el WebSocket detectado:", event);
+};</pre>
 
-## Valor
+<h2 id="Valor">Valor</h2>
 
-Un {{domxref("EventListener")}}.
+<p>Un {{domxref("EventListener")}}.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                           | Estado                           | Comentarios         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#handler-websocket-onerror', 'WebSocket: onerror')}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-websocket-onerror', 'WebSocket: onerror')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("api.WebSocket.onerror")}}
+
+
+<p>{{Compat("api.WebSocket.onerror")}}</p>

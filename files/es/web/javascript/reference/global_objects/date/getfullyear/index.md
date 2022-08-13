@@ -10,49 +10,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getFullYear
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`getFullYear()`** devuelve el año de la fecha indicada acorde a la hora local.
+<p>El método <strong><code>getFullYear()</code></strong> devuelve el año de la fecha indicada acorde a la hora local.</p>
 
-Usa este método en lugar del método {{jsxref("Date.prototype.getYear()", "getYear()")}}.
+<p>Usa este método en lugar del método {{jsxref("Date.prototype.getYear()", "getYear()")}}.</p>
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}
+<div>{{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    dateObj.getFullYear()
+<pre class="syntaxbox notranslate"><var>dateObj</var>.getFullYear()</pre>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-Un número correspondiente al año de la fecha indicada, según la hora local.
+<p>Un número correspondiente al año de la fecha indicada, según la hora local.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-El valor devuelto por `getFullYear()` es un número absoluto. Para fechas entre los años 1000 y 9999, `getFullYear()` devuelve un número de cuatro cifras, por ejemplo, 1995. Utiliza esta función para obtener un año que cumpla con los años posteriores al 2000.
+<p>El valor devuelto por <code>getFullYear()</code> es un número absoluto. Para fechas entre los años 1000 y 9999, <code>getFullYear()</code> devuelve un número de cuatro cifras, por ejemplo, 1995. Utiliza esta función para obtener un año que cumpla con los años posteriores al 2000.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Utilizando getFullYear()
+<h3 id="Utilizando_getFullYear">Utilizando getFullYear()</h3>
 
-El siguiente ejemplo asigna el valor de cuatro dígitos del año actual a la variable `year`.
+<p>El siguiente ejemplo asigna el valor de cuatro dígitos del año actual a la variable <code>year</code>.</p>
 
-```js
-var today = new Date();
+<pre class="brush: js notranslate">var today = new Date();
 var year = today.getFullYear();
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getfullyear', 'Date.prototype.getFullYear')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-date.prototype.getfullyear', 'Date.prototype.getFullYear')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("javascript.builtins.Date.getFullYear")}}
+<p>{{Compat("javascript.builtins.Date.getFullYear")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
-- {{jsxref("Date.prototype.getYear()")}}
+<ul>
+ <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.getYear()")}}</li>
+</ul>

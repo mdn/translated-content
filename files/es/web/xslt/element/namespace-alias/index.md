@@ -7,35 +7,37 @@ tags:
 translation_of: Web/XSLT/Element/namespace-alias
 original_slug: Web/XSLT/namespace-alias
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-El elemento `<xsl:namespace-alias>` es un mecanismo raramente usado para asociar un nombre de espacios en la hoja de estilos a otro nombre de espacios diferente en el árbol de salida. El uso más común para este elemento se da en la generación de una hoja de estilos a partir de otra hoja de estilos.
+<p>El elemento <code>&lt;xsl:namespace-alias&gt;</code> es un mecanismo raramente usado para asociar un nombre de espacios en la hoja de estilos a otro nombre de espacios diferente en el árbol de salida. El uso más común para este elemento se da en la generación de una hoja de estilos a partir de otra hoja de estilos.</p>
 
-Para prevenir que la cadena literal para el prefijo `xsl:` del elemento resultante (que simplemente debería ser copiada al árbol resultante) sea malinterpretada por el procesador, se le asigna temporalmente un nombre de espacio diferente que posteriormente es reconvertida al nombre de espacios de XSLT en el árbol de salida.
+<p>Para prevenir que la cadena literal para el prefijo <code>xsl:</code> del elemento resultante (que simplemente debería ser copiada al árbol resultante) sea malinterpretada por el procesador, se le asigna temporalmente un nombre de espacio diferente que posteriormente es reconvertida al nombre de espacios de XSLT en el árbol de salida.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    <xsl:namespace-alias stylesheet-prefix=NOMBRE result-prefix=NOMBRE />
+<pre>&lt;xsl:namespace-alias stylesheet-prefix=NOMBRE result-prefix=NOMBRE /&gt;</pre>
 
-### Atributos Requeridos
+<h3 id="Atributos_Requeridos" name="Atributos_Requeridos">Atributos Requeridos</h3>
 
-- `stylesheet-prefix`
-  - : Indica el nombre de espacios temporal.
-- `result-prefix`
-  - : Indica el nombre de espacios deseado en el árbol de salida.
+<dl>
+ <dt><code>stylesheet-prefix</code></dt>
+ <dd>Indica el nombre de espacios temporal.</dd>
+ <dt><code>result-prefix</code></dt>
+ <dd>Indica el nombre de espacios deseado en el árbol de salida.</dd>
+</dl>
 
-### Atributos opcionales
+<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Tipo
+<h3 id="Tipo" name="Tipo">Tipo</h3>
 
-Debe ser hijo directo de `<xsl:stylesheet>` o `<xsl:transform>`.
+<p>Debe ser hijo directo de <code>&lt;xsl:stylesheet&gt;</code> o <code>&lt;xsl:transform&gt;</code>.</p>
 
-### Definido
+<h3 id="Definido" name="Definido">Definido</h3>
 
-XSLT, sección 7.1.1
+<p>XSLT, sección 7.1.1</p>
 
-### Soporte en Gecko
+<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
 
-Sin soporte por el momento.
+<p>Sin soporte por el momento.</p>

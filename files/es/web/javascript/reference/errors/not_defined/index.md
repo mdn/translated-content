@@ -7,64 +7,61 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-    ReferenceError: "x" no está definida.
+<pre class="syntaxbox notranslate">ReferenceError: "x" no está definida.</pre>
 
-## Tipo de error
+<h2 id="Tipo_de_error">Tipo de error</h2>
 
-{{jsxref("ReferenceError")}}
+<p>{{jsxref("ReferenceError")}}</p>
 
-## ¿Qué está mal?
+<h2 id="¿Qué_está_mal">¿Qué está mal?</h2>
 
-Hay una variable no existente que está siendo referida en algún lugar. Esta variable necesita ser declarada o se debe comprobar su disponibilidad en el {{Glossary("ámbito")}} actual del script.
+<p>Hay una variable no existente que está siendo referida en algún lugar. Esta variable necesita ser declarada o se debe comprobar su disponibilidad en el {{Glossary("ámbito")}} actual del script.</p>
 
-> **Nota:**Cuando una librería es cargada (como por ejemplo jQuery) asegúrese de que se haya cargado antes de intentar acceder a sus variables, como por ejemplo "$". Ponga la etiqueta {{HTMLElement("script")}}, que carga la librería antes del código que la utiliza.
+<div class="note">
+<p><strong>Nota: </strong> Cuando una librería es cargada (como por ejemplo  jQuery) asegúrese de que se haya cargado antes de intentar acceder a sus variables, como por ejemplo "$". Ponga la etiqueta {{HTMLElement("script")}}, que carga la librería antes del código que la utiliza.</p>
+</div>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-### Variable no declarada
+<h3 id="Variable_no_declarada">Variable no declarada</h3>
 
-```js example-bad
-foo.substring(1); // ReferenceError: foo no está declarada.
-```
+<pre class="brush: js example-bad notranslate">foo.substring(1); // ReferenceError: foo no está declarada.
+</pre>
 
-La variable "foo" no está declarada en ninguna parte. La variable debe ser alguna cadena para que el método {{jsxref("String.prototype.substring()")}} funcione correctamente.
+<p>La variable "foo" no está declarada en ninguna parte. La variable debe ser alguna cadena para que el método {{jsxref("String.prototype.substring()")}} funcione correctamente.</p>
 
-```js example-good
-var foo = "bar";
-foo.substring(1); // "ar"
-```
+<pre class="brush: js example-good notranslate">var foo = "bar";
+foo.substring(1); // "ar"</pre>
 
-### Contexto erróneo
+<h3 id="Contexto_erróneo">Contexto erróneo</h3>
 
-Una variable necesita estar disponible en el contexto actual de ejecución. No se puede acceder a las variables definidas dentro de una [función](/es/docs/Web/JavaScript/Referencia/Funciones) desde fuera de dicha función, debido a que la variable está definida solamente dentro de la función.
+<p>Una variable necesita estar disponible en el contexto actual de ejecución. No se puede acceder a las variables definidas dentro de una <a href="/es/docs/Web/JavaScript/Referencia/Funciones">función</a> desde fuera de dicha función, debido a que la variable está definida solamente dentro de la función.</p>
 
-```js example-bad
-function numbers () {
+<pre class="brush: js example-bad notranslate">function numbers () {
   var num1 = 2,
       num2 = 3;
   return num1 + num2;
 }
 
-console.log(num1); // ReferenceError num1 sin definir.
-```
+console.log(num1); // ReferenceError num1 sin definir.</pre>
 
-Sin embargo, una función puede acceder a todas las variables y funciones definidas dentro del ámbito en la cual ha sido definida. Es decir, una función en el contexto global puede acceder a todas las variables definidas en el contexto global.
+<p>Sin embargo, una función puede acceder a todas las variables y funciones definidas dentro del ámbito en la cual ha sido definida. Es decir, una función en el contexto global puede acceder a todas las variables definidas en el contexto global.</p>
 
-```js example-good
-var num1 = 2,
+<pre class="brush: js example-good notranslate">var num1 = 2,
     num2 = 3;
 
 function numbers () {
   return num1 + num2;
 }
 
-console.log(num1); // 2
-```
+console.log(num1); // 2</pre>
 
-## Temas relacionados
+<h2 id="Temas_relacionados">Temas relacionados</h2>
 
-- {{Glossary("Ámbito")}}
-- [Guía; declarando variables en JavaScript](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
-- [Guía; contexto de la función en Java Script](/es/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/)
+<ul>
+ <li>{{Glossary("Ámbito")}}</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables">Guía; declarando variables en JavaScript</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/">Guía; contexto de la función en Java Script </a></li>
+</ul>

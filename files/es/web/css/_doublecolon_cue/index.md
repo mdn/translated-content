@@ -1,6 +1,6 @@
 ---
 title: '::cue'
-slug: Web/CSS/::cue
+slug: 'Web/CSS/::cue'
 tags:
   - '::cue'
   - Archivos multimedia
@@ -12,87 +12,100 @@ tags:
   - WebVTT
   - anotaciones
   - subtítulos
-translation_of: Web/CSS/::cue
+translation_of: 'Web/CSS/::cue'
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::cue`** señala las pistas de texto [WebVTT](/es/docs/Web/API/WebVTT_API) dentro del elemento seleccionado. Esto puede ser usado para [estilizar subtítulos y otras pistas de texto](/es/docs/Web/API/WebVTT_API#Estilizando_anotaciones_WebVTT) multimedia con pistas de texto.
+<p><span class="seoSummary">El <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>::cue</code></strong> señala las pistas de texto <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> dentro del elemento seleccionado. Esto puede ser usado para <a href="/es/docs/Web/API/WebVTT_API#Estilizando_anotaciones_WebVTT">estilizar subtítulos y otras pistas de texto</a> multimedia con pistas de texto.</span></p>
 
-```css
-::cue {
+<pre class="brush: css no-line-numbers notranslate">::cue {
   color: yellow;
   font-weight: bold;
-}
-```
+}</pre>
 
-Las propiedades son aplicadas al cojunto completo de anotaciones como si fuesen una unidad. La única excepción es que `background` y sus versiones largas se aplican a cada pista de texto individualmente para evitar crear cajas y oscurecer inesperadamente grandes partes de los archivos multimedia.
+<p>Las propiedades son aplicadas al cojunto completo de anotaciones como si fuesen una unidad. La única excepción es que <code>background</code> y sus versiones largas se aplican a cada pista de texto individualmente para evitar crear cajas y oscurecer inesperadamente grandes partes de los archivos multimedia.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
 {{CSSSyntax}}
 
-## Propiedades permitidas
+<h2 id="Propiedades_permitidas">Propiedades permitidas</h2>
 
-Las reglas cuyos selectores incluyen este elemento solo pueden usar las siguientes propiedades CSS:
+<p>Las reglas cuyos selectores incluyen este elemento solo pueden usar las siguientes propiedades CSS:</p>
 
-- [`background`](/es/docs/Web/CSS/background)
-- [`background-attachment`](/es/docs/Web/CSS/background-attachment)
-- [`background-clip`](/es/docs/Web/CSS/background-clip)
-- [`background-color`](/es/docs/Web/CSS/background-color)
-- [`background-image`](/es/docs/Web/CSS/background-image)
-- [`background-origin`](/es/docs/Web/CSS/background-origin)
-- [`background-position`](/es/docs/Web/CSS/background-position)
-- [`background-repeat`](/es/docs/Web/CSS/background-repeat)
-- [`background-size`](/es/docs/Web/CSS/background-size)
-- [`color`](/es/docs/Web/CSS/color)
-- [`font`](/es/docs/Web/CSS/font)
-- [`font-family`](/es/docs/Web/CSS/font-family)
-- [`font-size`](/es/docs/Web/CSS/font-size)
-- [`font-stretch`](/es/docs/Web/CSS/font-stretch)
-- [`font-style`](/es/docs/Web/CSS/font-style)
-- [`font-variant`](/es/docs/Web/CSS/font-variant)
-- [`font-weight`](/es/docs/Web/CSS/font-weight)
-- [`line-height`](/es/docs/Web/CSS/line-height)
-- [`opacity`](/es/docs/Web/CSS/opacity)
-- [`outline`](/es/docs/Web/CSS/outline)
-- [`outline-color`](/es/docs/Web/CSS/outline-color)
-- [`outline-style`](/es/docs/Web/CSS/outline-style)
-- [`outline-width`](/es/docs/Web/CSS/outline-width)
-- [`ruby-position`](/es/docs/Web/CSS/ruby-position)
-- [`text-combine-upright`](/es/docs/Web/CSS/text-combine-upright)
-- [`text-decoration`](/es/docs/Web/CSS/text-decoration)
-- [`text-decoration-color`](/es/docs/Web/CSS/text-decoration-color)
-- [`text-decoration-line`](/es/docs/Web/CSS/text-decoration-line)
-- [`text-decoration-style`](/es/docs/Web/CSS/text-decoration-style)
-- [`text-decoration-thickness`](/es/docs/Web/CSS/text-decoration-thickness)
-- [`text-shadow`](/es/docs/Web/CSS/text-shadow)
-- [`visibility`](/es/docs/Web/CSS/visibility)
-- [`white-space`](/es/docs/Web/CSS/white-space)
+<ul>
+ <li><a href="/en-US/docs/Web/CSS/background"><code>background</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/background-attachment"><code>background-attachment</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/background-clip"><code>background-clip</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/background-color"><code>background-color</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/background-image"><code>background-image</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/background-origin"><code>background-origin</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/background-position"><code>background-position</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/background-repeat"><code>background-repeat</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/background-size"><code>background-size</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/color"><code>color</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/font"><code>font</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/font-family"><code>font-family</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/font-size"><code>font-size</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/font-stretch"><code>font-stretch</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/font-style"><code>font-style</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/font-variant"><code>font-variant</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/line-height"><code>line-height</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/opacity"><code>opacity</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/outline"><code>outline</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/outline-color"><code>outline-color</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/outline-style"><code>outline-style</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/outline-width"><code>outline-width</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/ruby-position"><code>ruby-position</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/text-combine-upright"><code>text-combine-upright</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/text-decoration"><code>text-decoration</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/text-shadow"><code>text-shadow</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/visibility"><code>visibility</code></a></li>
+ <li><a href="/en-US/docs/Web/CSS/white-space"><code>white-space</code></a></li>
+</ul>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Estilizando las anotaciones WebVTT como blanco sobre negro
+<h3 id="Estilizando_las_anotaciones_WebVTT_como_blanco_sobre_negro">Estilizando las anotaciones WebVTT como blanco sobre negro</h3>
 
-El siguiente CSS ajusta el estilo de las anotaciones para que el texto sea blanco y el fondo sea una caja negro translúcido.
+<p>El siguiente CSS ajusta el estilo de las anotaciones para que el texto sea blanco y el fondo sea una caja negro translúcido.</p>
 
-```css
-::cue {
+<pre class="brush: css notranslate">::cue {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
-}
-```
+}</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificacion                                                               | Estado                   | Comentario          |
-| ---------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("WebVTT", "#the-cue-pseudo-element", "::cue")}} | {{Spec2("WebVTT")}} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>Especificacion</th>
+   <th>Estado</th>
+   <th>Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("WebVTT", "#the-cue-pseudo-element", "::cue")}}</td>
+   <td>{{Spec2("WebVTT")}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con los navegadores
+<h2 id="Compatibilidad_con_los_navegadores">Compatibilidad con los navegadores</h2>
 
-{{Compat("css.selectors.cue")}}
+<p>{{Compat("css.selectors.cue")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Formato de pistas de texto para la web (WebVTT)](/es/docs/Web/API/WebVTT_API)
-- {{HTMLElement("track")}}, {{HTMLElement("video")}}
+<ul>
+ <li><a href="/en-US/docs/Web/API/WebVTT_API">Formato de pistas de texto para la web (WebVTT)</a></li>
+ <li>{{HTMLElement("track")}}, {{HTMLElement("video")}}</li>
+</ul>

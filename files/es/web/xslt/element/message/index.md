@@ -7,33 +7,35 @@ tags:
 translation_of: Web/XSLT/Element/message
 original_slug: Web/XSLT/message
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-El elemento `<xsl:message>` muestra un mensaje (en la consola JavaScript en NS) y opcionalmente termina la ejecución de la hoja de estilos. Puede ser util para depuración.
+<p>El elemento <code>&lt;xsl:message&gt;</code> muestra un mensaje (en la consola JavaScript en NS) y opcionalmente termina la ejecución de la hoja de estilos. Puede ser util para depuración.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    <xsl:message terminate="yes" | "no" >
-    	PLANTILLA
-    </xsl:message>
+<pre>&lt;xsl:message terminate="yes" | "no" &gt;
+	PLANTILLA
+&lt;/xsl:message&gt;</pre>
 
-### Atributos requeridos
+<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Atributos opcionales
+<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
 
-- `terminate`
-  - : Establecido a "`yes`", indica que debe terminar la ejecución. El valor por defecto es "`no`", en cuyo caso se muestra el mensaje y continúa la ejecución.
+<dl>
+ <dt><code>terminate</code></dt>
+ <dd>Establecido a "<code>yes</code>", indica que debe terminar la ejecución. El valor por defecto es "<code>no</code>", en cuyo caso se muestra el mensaje y continúa la ejecución.</dd>
+</dl>
 
-### Tipo
+<h3 id="Tipo" name="Tipo">Tipo</h3>
 
-Instrucción, aparece dentro de una plantilla.
+<p>Instrucción, aparece dentro de una plantilla.</p>
 
-### Definido
+<h3 id="Definido" name="Definido">Definido</h3>
 
-XSLT, sección 13.
+<p>XSLT, sección 13.</p>
 
-### Soporte en Gecko
+<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
 
-Soportado.
+<p>Soportado.</p>

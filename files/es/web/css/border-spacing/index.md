@@ -3,67 +3,102 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 tags:
   - CSS
-  - CSS:Referencias
+  - 'CSS:Referencias'
   - Todas_las_Categorías
 translation_of: Web/CSS/border-spacing
 ---
-<< [Volver](es/Gu%c3%ada_de_referencia_de_CSS)
+<p>&lt;&lt; <a href="es/Gu%c3%ada_de_referencia_de_CSS">Volver</a></p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica la distancia entre los bordes de celdas adyacentes (sólo para el modelo de [separación de borde](es/CSS/border-collapse)). Es el equivalente al atributo `cellspacing` en HTML.
+<p>La propiedad de {{ Cssxref("border-spacing", "espaciado de borde") }} especifica la distancia entre los bordes de celdas adyacentes (sólo para el modelo de <a href="es/CSS/border-collapse">separación de borde</a>). Es el equivalente al atributo <code>cellspacing</code> en HTML.</p>
 
-- {{ Cssxref("initial", "Valor inicial") }}: 0
-- Se aplica a: tablas y elementos con la propiedad `inline-table`
-- {{ Cssxref("inheritance", "Valor heredado") }}: sí
-- Medio: {{ Xref_cssvisual() }}
-- {{ Cssxref("computed value", "Valor calculado") }}: dos largos absolutos.
+<ul>
+ <li>{{ Cssxref("initial", "Valor inicial") }}: 0</li>
+ <li>Se aplica a: tablas y elementos con la propiedad <code>inline-table</code></li>
+ <li>{{ Cssxref("inheritance", "Valor heredado") }}: sí</li>
+ <li>Medio: {{ Xref_cssvisual() }}</li>
+ <li>{{ Cssxref("computed value", "Valor calculado") }}: dos largos absolutos.</li>
+</ul>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-border-spacing: \<length> | \<length> \<length> | inherit
+<p>border-spacing: &lt;length&gt; | &lt;length&gt; &lt;length&gt; | inherit</p>
 
-### Valores
+<h3 id="Valores" name="Valores">Valores</h3>
 
-- **\<length>** : un largo a utilizar para el espaciado horizontal y vertical.
-- **\<length> \<length>** : el primero da el espaciado horizontal (espacio entre celdas de una fila) y el segundo el espaciado vertical (espacio entre celdas de una columna).
+<ul>
+ <li><strong>&lt;length&gt;</strong> : un largo a utilizar para el espaciado horizontal y vertical.</li>
+ <li><strong>&lt;length&gt; &lt;length&gt;</strong> : el primero da el espaciado horizontal (espacio entre celdas de una fila) y el segundo el espaciado vertical (espacio entre celdas de una columna).</li>
+</ul>
 
-### Ejemplos
+<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
 
-[Ver El Ejemplo Vivo](/samples/cssref/border-spacing.html)
+<p><a href="/samples/cssref/border-spacing.html">Ver El Ejemplo Vivo</a></p>
 
-    table#space {
-      border-collapse: separate;
-      border-spacing: 10px 5px;
-    }
+<pre>table#space {
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+}
+</pre>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-Ésta propiedad sólo se aplica cuando {{ Cssxref("border-collapse") }} es especificado en `separate`.
+<p>Ésta propiedad sólo se aplica cuando {{ Cssxref("border-collapse") }} es especificado en <code>separate</code>.</p>
 
-El espaciado de borde también se utiliza en los bordes exteriores de las tablas donde la distancia entre los bordes de tabla y las celdas en la primera/última columna o fila es la suma de los espaciados (horizontales o verticales) y de los espaciados (arriba, derecho, abajo o izquierdo) en una tabla.
+<p>El espaciado de borde también se utiliza en los bordes exteriores de las tablas donde la distancia entre los bordes de tabla y las celdas en la primera/última columna o fila es la suma de los espaciados (horizontales o verticales) y de los espaciados (arriba, derecho, abajo o izquierdo) en una tabla.</p>
 
-### Especificaciones
+<h3 id="Especificaciones" name="Especificaciones">Especificaciones</h3>
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/tables.html#propdef-border-spacing)
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/CSS21/tables.html#propdef-border-spacing">CSS 2.1</a></li>
+</ul>
 
-### Compatibilidades
+<h3 id="Compatibilidades" name="Compatibilidades">Compatibilidades</h3>
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Netscape          | 6              |
-| Internet Explorer | 7              |
-| Firefox           | 1              |
-| Mozilla           | 1              |
-| Safari            | 1              |
-| Opera             | 6              |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Navegador</th>
+   <th>Versión mínima</th>
+  </tr>
+  <tr>
+   <td>Netscape</td>
+   <td>6</td>
+  </tr>
+  <tr>
+   <td>Internet Explorer</td>
+   <td>7</td>
+  </tr>
+  <tr>
+   <td>Firefox</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td>Mozilla</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td>Safari</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td>Opera</td>
+   <td>6</td>
+  </tr>
+ </tbody>
+</table>
 
-### Ver también
+<p> </p>
 
-{{ Cssxref("border-collapse") }}
+<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
 
-Categorías
+<p>{{ Cssxref("border-collapse") }}</p>
 
-Interwiki Languages
+<div class="noinclude">
+<p><span class="comment">Categorías</span></p>
 
-{{ languages( { "fr": "fr/CSS/border-spacing", "pl": "pl/CSS/border-spacing", "en": "en/CSS/border-spacing" } ) }}
+<p><span class="comment">Interwiki Languages</span></p>
+</div>
+
+<p>{{ languages( { "fr": "fr/CSS/border-spacing", "pl": "pl/CSS/border-spacing", "en": "en/CSS/border-spacing" } ) }}</p>

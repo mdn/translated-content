@@ -10,34 +10,38 @@ tags:
 translation_of: Web/API/Node/parentElement
 original_slug: Web/API/Node/elementoPadre
 ---
-{{APIRef("DOM")}}
+<div>
+<div>{{APIRef("DOM")}}</div>
+</div>
 
-La propiedad de sólo lectura de **`Nodo.parentElement`** devuelve el nodo padre del DOM {{domxref("Element")}}, o `null`, si el nodo no tiene padre o si el padre no es un {{domxref("Element")}} DOM .
+<p>La propiedad de sólo lectura de <code><strong>Nodo.parentElement</strong></code> devuelve el nodo padre del DOM {{domxref("Element")}}, o <code>null</code>, si el nodo no tiene padre o si el padre no es un {{domxref("Element")}} DOM .</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    elementoPadre = node.parentElement
+<pre class="syntaxbox"><em>elementoPadre</em> = <em>node</em>.parentElement</pre>
 
-El `elementoPadre` es el padre del nodo actual. Esto es siempre un objecto {{domxref("Element")}} DOM, o `null`.
+<p>El <code>elementoPadre</code> es el padre del nodo actual. Esto es siempre un objecto {{domxref("Element")}} DOM, o <code>null</code>.</p>
 
-## Ejemplo
+<h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
 
-```js
-if (node.parentElement) {
+<pre class="brush:js">if (node.parentElement) {
     node.parentElement.style.color = "red";
-}
-```
+}</pre>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-En algunos navegadores, la propiedad `elementoPadre` es solo definida en nodos que ellos mismos son {{domxref("Element")}}. En particular, esto no está definido en nodos de texto.
+<p>En algunos navegadores, la propiedad <code>elementoPadre</code> es solo definida en nodos que ellos mismos son {{domxref("Element")}}. En particular, esto no está definido en nodos de texto.</p>
 
-{{Compat("api.Node.parentElement")}}
+<p>{{Compat("api.Node.parentElement")}}</p>
 
-## Especificación
+<h2 id="Especificación" name="Especificación">Especificación</h2>
 
-- {{spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#parent-element", "DOM Level 4: Node.parentElement", "WD")}}
+<ul>
+ <li>{{spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#parent-element", "DOM Level 4: Node.parentElement", "WD")}}</li>
+</ul>
 
-## Ver también
+<h2 id="Ver_también" name="Ver_también">Ver también</h2>
 
-- {{domxref("Node.parentNode")}}
+<ul>
+ <li>{{domxref("Node.parentNode")}}</li>
+</ul>

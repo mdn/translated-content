@@ -4,49 +4,69 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getDate
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`getDate()`** devuelve el día del mes para la fecha especificada de acuerdo con la hora local.
+<p>El método <strong><code>getDate()</code></strong> devuelve el día del mes para la fecha especificada de acuerdo con la hora local.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    dateObj.getDate()
+<pre class="syntaxbox"><code><var>dateObj</var>.getDate()</code></pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Valor de retorno
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-El valor devuelto por `getDate() es u`n número entero, entre 1 y 31, que representa el día del mes para la fecha dada según la hora local.
+<p>El valor devuelto por <code>getDate() es u</code>n número entero, entre 1 y 31, que representa el día del mes para la fecha dada según la hora local.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Uso de `getDate()`
+<h3 id="Uso_de_getDate()">Uso de <code>getDate()</code></h3>
 
-La segunda instrucción asigna el valor 25 a la variable `day`, en función del valor del objeto {{jsxref("Date")}} `Xmas95`.
+<p>La segunda instrucción asigna el valor 25 a la variable <code>day</code>, en función del valor del objeto {{jsxref("Date")}} <code>Xmas95</code>.</p>
 
-```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
 var day = Xmas95.getDate();
 
 console.log(day); // 25
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                       | Estado                   | Comentario                                        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
-| {{SpecName('ES6', '#sec-date.prototype.getdate', 'Date.prototype.getDate')}} | {{Spec2('ES6')}}     |                                                   |
-| {{SpecName('ES5.1', '#sec-15.9.5.14', 'Date.prototype.getDate')}}             | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}     | Definición inicial. Implantado en JavaScript 1.1. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-date.prototype.getdate', 'Date.prototype.getDate')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.9.5.14', 'Date.prototype.getDate')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES1')}}</td>
+   <td>{{Spec2('ES1')}}</td>
+   <td>Definición inicial. Implantado en JavaScript 1.1.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Date.getDate")}}
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+<ul>
+ <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
+ <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
+ <li>{{jsxref("Date.prototype.setDate()")}}</li>
+</ul>

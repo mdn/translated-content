@@ -9,50 +9,62 @@ tags:
   - Referencia
 translation_of: Web/API/File/name
 ---
-{{APIRef("File API")}}
+<p>{{APIRef("File API")}}</p>
 
-Retorna el nombre del archivo representado por el objeto {{domxref("File")}}. Por razones de seguridad, la ruta de directorios es excluida de esta propiedad.
+<p>Retorna el nombre del archivo representado por el objeto {{domxref("File")}}. Por razones de seguridad, la ruta de directorios es excluida de esta propiedad.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```js
-var nombre = file.name;
-```
+<pre class="brush: js">var nombre = <em>file</em>.name;</pre>
 
-## Valor
+<h2 id="Valor">Valor</h2>
 
-Una cadena, conteniendo el nombre del archivo sin la ruta de directorios, por ejemplo: "Mi resumen.rtf".
+<p>Una cadena, conteniendo el nombre del archivo sin la ruta de directorios, por ejemplo: "Mi resumen.rtf".</p>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
-```
+<pre class="brush: html">&lt;input type="file" multiple onchange="processSelectedFiles(this)"&gt;
+</pre>
 
-```js
-function processSelectedFiles(fileInput) {
+<pre class="brush: js">function processSelectedFiles(fileInput) {
   var files = fileInput.files;
 
-  for (var i = 0; i < files.length; i++) {
+  for (var i = 0; i &lt; files.length; i++) {
     alert("Filename " + files[i].name);
   }
-}
-```
+}</pre>
 
-Prueba el resultado:
+<p>Prueba el resultado:</p>
 
-{{ EmbedLiveSample('Example', 300, 50) }}
+<p>{{ EmbedLiveSample('Example', 300, 50) }}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificacion                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#file-attrs', 'name')}} | {{Spec2('File API')}} | Definicion inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificacion</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('File API', '#file-attrs', 'name')}}</td>
+   <td>{{Spec2('File API')}}</td>
+   <td>Definicion inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("api.File.name")}}
+<div>
 
-## Vea también
 
-- [Usando archivos desde aplicaciones web](/es/docs/Using_files_from_web_applications)
+<p>{{Compat("api.File.name")}}</p>
+</div>
+
+<h2 id="Specification" name="Specification">Vea también</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Using_files_from_web_applications">Usando archivos desde aplicaciones web</a></li>
+</ul>

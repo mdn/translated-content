@@ -8,22 +8,22 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</div>
 
-En el último capítulo hicimos unas [animaciones básicas](/es/docs/Web/API/Canvas_API/Tutorial/Basic_animations) y nos familiarizamos con varias maneras de mover cosas. En esta parte examinaremos la moción misma y agregaremos la física para hacer nuestras animaciones más avanzadas.
+<div class="summary">
+<p>En el último capítulo hicimos unas <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">animaciones básicas</a> y nos familiarizamos con varias maneras de mover cosas. En esta parte examinaremos la moción misma y agregaremos la física para hacer nuestras animaciones más avanzadas.</p>
+</div>
 
-## Dibujar una bola
+<h2 id="Dibujar_una_bola">Dibujar una bola</h2>
 
-Vamos a usar una bola para nuestro estudio de la animación, entonces primero dibujamos la bola dentro del canvas. El siguente código lo configurará.
+<p>Vamos a usar una bola para nuestro estudio de la animación, entonces primero dibujamos la bola dentro del canvas. El siguente código lo configurará.</p>
 
-```html
-<canvas id="canvas" width="600" height="300"></canvas>
-```
+<pre class="brush: html">&lt;canvas id="canvas" width="600" height="300"&gt;&lt;/canvas&gt;
+</pre>
 
-Como siempre, necesitamos un entorno para dibujar. Para dibujar la bola, creamos un contenido `ball` lo cual contiene propiedades y un método `draw()`.
+<p>Como siempre, necesitamos un entorno para dibujar. Para dibujar la bola, creamos un contenido <code>ball</code> lo cual contiene propiedades y un método <code>draw()</code>.</p>
 
-```js
-var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var ball = {
@@ -40,17 +40,15 @@ var ball = {
   }
 };
 
-ball.draw();
-```
+ball.draw();</pre>
 
-Nada especial aquí; la bola es en realidad un circulo sencillo y se dibuja con el método {{domxref("CanvasRenderingContext2D.arc()", "arc()")}}.
+<p>Nada especial aquí; la bola es en realidad un circulo sencillo y se dibuja con el método {{domxref("CanvasRenderingContext2D.arc()", "arc()")}}.</p>
 
-## Agregar velocidad
+<h2 id="Agregar_velocidad">Agregar velocidad</h2>
 
-Ya que tenemos una bola, estamos listos agregar una animación básica así como aprendimos en el [último capítulo](/es/docs/Web/API/Canvas_API/Tutorial/Basic_animations) de esta tutoría. De nuevo, {{domxref("window.requestAnimationFrame()")}} nos ayuda controlar la animación. La bola empieza moverse por agregar un vector de velocidad a la posición. Para cada fotograma, también {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} el canvas para quitar los circulos viejos de los fotogramas anteriores.
+<p>Ya que tenemos una bola, estamos listos agregar una animación básica así como aprendimos en el <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">último capítulo</a> de esta tutoría. De nuevo, {{domxref("window.requestAnimationFrame()")}} nos ayuda controlar la animación. La bola empieza moverse por agregar un vector de velocidad a la posición. Para cada fotograma, también {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} el canvas para quitar los circulos viejos de los fotogramas anteriores.</p>
 
-```js
-var canvas = document.getElementById('canvas');
+<pre class="brush: js; highlight:[8,9,24,25]">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -87,31 +85,27 @@ canvas.addEventListener('mouseout', function(e) {
 });
 
 ball.draw();
-```
+</pre>
 
-## Límites
+<h2 id="Límites">Límites</h2>
 
-Si no probamos los límites, de repente nuestra bola se agota el canvas. Necesitamos verificar si las posiciones `x` e `y` están fuera de las dimensiones del canvas y invertir la direción de los vectores de velocidad. Para hacer eso, agregamos los siguentes pasos al método `draw`:
+<p>Si no probamos los límites, de repente nuestra bola se agota el canvas. Necesitamos verificar si las posiciones <code>x</code> e <code>y</code> están fuera de las dimensiones del canvas y invertir la direción de los vectores de velocidad. Para hacer eso, agregamos los siguentes pasos al método <code>draw</code>:</p>
 
-```js
-if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+<pre class="brush: js">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
   ball.vy = -ball.vy;
 }
-if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
   ball.vx = -ball.vx;
-}
-```
+}</pre>
 
-### Primera demo
+<h3 id="Primera_demo">Primera demo</h3>
 
-Veamos como se ve en acción hasta este punto. Dirige el ratón dentro del canvas para empezar la animación.
+<p>Veamos como se ve en acción hasta este punto. Dirige el ratón dentro del canvas para empezar la animación.</p>
 
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
-```
+<div class="hidden">
+<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
-```js hidden
-var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -137,12 +131,12 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy &gt; canvas.height ||
+      ball.y + ball.vy &lt; 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx &gt; canvas.width ||
+      ball.x + ball.vx &lt; 0) {
     ball.vx = -ball.vx;
   }
 
@@ -157,28 +151,26 @@ canvas.addEventListener('mouseout', function(e) {
   window.cancelAnimationFrame(raf);
 });
 
-ball.draw();
-```
+ball.draw();</pre>
+</div>
 
-{{EmbedLiveSample("First_demo", "610", "310")}}
+<p>{{EmbedLiveSample("First_demo", "610", "310")}}</p>
 
-## Aceleración
+<h2 id="Aceleración">Aceleración</h2>
 
-Para convertir la moción en más auténtica, puedes jugar con la velocidad, así por ejemplo:
+<p>Para convertir la moción en más auténtica, puedes jugar con la velocidad, así por ejemplo:</p>
 
-```js
-ball.vy *= .99;
-ball.vy += .25;
-```
+<pre class="brush: js">ball.vy *= .99;
+ball.vy += .25;</pre>
 
-Esto reduce el vector vertical de velocidad para cada fotograma para que la bola termina rebotando en el suelo.
+<p>Esto reduce el vector vertical de velocidad para cada fotograma para que la bola termina rebotando en el suelo.</p>
 
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
-```
+<div class="hidden">
+<h6 id="Second_demo">Second demo</h6>
 
-```js hidden
-var canvas = document.getElementById('canvas');
+<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -206,12 +198,12 @@ function draw() {
   ball.vy *= .99;
   ball.vy += .25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy &gt; canvas.height ||
+      ball.y + ball.vy &lt; 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx &gt; canvas.width ||
+      ball.x + ball.vx &lt; 0) {
     ball.vx = -ball.vx;
   }
 
@@ -226,26 +218,24 @@ canvas.addEventListener('mouseout', function(e) {
   window.cancelAnimationFrame(raf);
 });
 
-ball.draw();
-```
+ball.draw();</pre>
+</div>
 
-{{EmbedLiveSample("Second_demo", "610", "310")}}
+<p>{{EmbedLiveSample("Second_demo", "610", "310")}}</p>
 
-## Efecto de rezagar
+<h2 id="Efecto_de_rezagar">Efecto de rezagar</h2>
 
-Hasta este punto hemos limpiado los fotogramas anteriores con el método {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}}. Si reemplazas este método con un semi-transparente {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}}, puedes facilmente crear un efecto de rezagar.
+<p>Hasta este punto hemos limpiado los fotogramas anteriores con el método {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}}. Si reemplazas este método con un semi-transparente {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}}, puedes facilmente crear un efecto de rezagar.</p>
 
-```js
-ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-```
+<pre class="brush: js">ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+ctx.fillRect(0, 0, canvas.width, canvas.height);</pre>
 
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
-```
+<div class="hidden">
+<h6 id="Third_demo">Third demo</h6>
 
-```js hidden
-var canvas = document.getElementById('canvas');
+<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -274,12 +264,12 @@ function draw() {
   ball.vy *= .99;
   ball.vy += .25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy &gt; canvas.height ||
+      ball.y + ball.vy &lt; 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx &gt; canvas.width ||
+      ball.x + ball.vx &lt; 0) {
     ball.vx = -ball.vx;
   }
 
@@ -294,21 +284,20 @@ canvas.addEventListener('mouseout', function(e) {
   window.cancelAnimationFrame(raf);
 });
 
-ball.draw();
-```
+ball.draw();</pre>
+</div>
 
-{{EmbedLiveSample("Third_demo", "610", "310")}}
+<p>{{EmbedLiveSample("Third_demo", "610", "310")}}</p>
 
-## Agregar control de ratón
+<h2 id="Agregar_control_de_ratón">Agregar control de ratón</h2>
 
-Para controlar la bola, podemos hacerla seguir nuestro ratón usando el evento [`mousemove`](/en-US/docs/Web/Reference/Events/mousemove), por ejemplo. El evento [`click`](/en-US/docs/Web/Events/click) solta la bola y la deja rebotar de nuevo.
+<p>Para controlar la bola, podemos hacerla seguir nuestro ratón usando el evento <code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code>, por ejemplo. El evento <code><a href="/en-US/docs/Web/Events/click">click</a></code> solta la bola y la deja rebotar de nuevo.</p>
 
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
-```
+<div class="hidden">
+<pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+</div>
 
-```js
-var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 var running = false;
@@ -340,10 +329,10 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
     ball.vx = -ball.vx;
   }
 
@@ -372,19 +361,21 @@ canvas.addEventListener('mouseout', function(e) {
 });
 
 ball.draw();
-```
+</pre>
 
-Mueve la bola usando el ratón y suéltala haciendo click.
+<p>Mueve la bola usando el ratón y suéltala haciendo click.</p>
 
-{{EmbedLiveSample("Adding_mouse_control", "610", "310")}}
+<p>{{EmbedLiveSample("Adding_mouse_control", "610", "310")}}</p>
 
-## Breakout
+<h2 id="Breakout">Breakout</h2>
 
-Este capítulo corto sólo explica algunas técnicas para crear animaciones más avanzadas. ¡Hay muchos más! ¿Qué tal agregar una raqueta, algunos ladrillos, y convertir esta demo en un partido [Breakout](http://en.wikipedia.org/wiki/Breakout_%28video_game%29)? Visita nuestra área de [Game development](/es/docs/Games) para mayor información.
+<p>Este capítulo corto sólo explica algunas técnicas para crear animaciones más avanzadas. ¡Hay muchos más!  ¿Qué tal agregar una raqueta, algunos ladrillos, y convertir esta demo en un partido <a href="http://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a>? Visita nuestra área de <a href="/en-US/docs/Games">Game development</a> para mayor información.</p>
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-- {{domxref("window.requestAnimationFrame()")}}
-- [Efficient animation for web games](/es/docs/Games/Techniques/Efficient_animation_for_web_games)
+<ul>
+ <li>{{domxref("window.requestAnimationFrame()")}}</li>
+ <li><a href="/en-US/docs/Games/Techniques/Efficient_animation_for_web_games">Efficient animation for web games</a></li>
+</ul>
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</p>

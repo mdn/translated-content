@@ -3,30 +3,38 @@ title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
 translation_of: Web/API/HTMLTableElement/align
 ---
-{{APIRef("HTML DOM")}}{{deprecated_header()}}
+<div>
+<div>{{APIRef("HTML DOM")}}{{deprecated_header()}}</div>
+</div>
 
-La propiedad **`HTMLTableElement.align`** representa la alineación de la tabla.
+<p>La propiedad <strong><code>HTMLTableElement.align</code></strong> representa la alineación de la tabla.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    HTMLTableElement.align =alignment;
-    varalignment =HTMLTableElement.align;
+<pre class="syntaxbox"><em>HTMLTableElement</em>.align =<em>alignment</em>;
+var<em>alignment</em> =<em>HTMLTableElement</em>.align;</pre>
 
-### Parámetros
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
 
-- `alignment` {{deprecatedGeneric('inline','HTML4')}}
-  - : `alignment` es una cadena con uno de los siguientes valores:\* left
-    - center
-    - right
+<dl>
+ <dt><code>alignment</code> {{deprecatedGeneric('inline','HTML4')}}</dt>
+ <dd><code>alignment</code> es una cadena con uno de los siguientes valores:
+ <ul>
+  <li>left</li>
+  <li>center</li>
+  <li>right</li>
+ </ul>
+ </dd>
+</dl>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-// Establecer la alineación de una tabla
+<pre class="brush:js">// Establecer la alineación de una tabla
 var t = document.getElementById('TableA');
-t.align = 'center';
-```
+t.align = 'center';</pre>
 
-## Especificación
+<h2 id="Specification" name="Specification">Especificación</h2>
 
-- Especificación W3C DOM 2 HTML [_HTMLTableElement_ .align](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977).
+<ul>
+ <li>Especificación W3C DOM 2 HTML <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977"><em>HTMLTableElement</em> .align</a>.</li>
+</ul>

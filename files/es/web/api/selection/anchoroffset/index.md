@@ -5,18 +5,23 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/anchorOffset
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Devuelve el número de caracteres en que el ancla de la selección es colocada dentro de [anchorNode](es/DOM/Selection/anchorNode).
+<p>Devuelve el número de caracteres en que el ancla de la selección es colocada dentro de <a href="es/DOM/Selection/anchorNode">anchorNode</a>.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    sel.anchorOffset
+<pre class="eval"><i>sel</i>.anchorOffset
+</pre>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-Este número está basado en cero. Si la selección empieza con el primer carácter en [anchorNode](es/DOM/Selection/anchorNode), el número devuelto será 0.
+<p>Este número está basado en cero. Si la selección empieza con el primer carácter en <a href="es/DOM/Selection/anchorNode">anchorNode</a>, el número devuelto será 0.</p>
 
-{{ languages( { "en": "en/DOM/Selection/anchorOffset", "it": "it/DOM/Selection/anchorOffset", "pl": "pl/DOM/Selection/anchorOffset" } ) }}
+<p> </p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/DOM/Selection/anchorOffset", "it": "it/DOM/Selection/anchorOffset", "pl": "pl/DOM/Selection/anchorOffset" } ) }}</p>

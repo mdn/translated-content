@@ -3,33 +3,37 @@ title: Window.history
 slug: Web/API/Window/history
 translation_of: Web/API/Window/history
 ---
-{{ APIRef }}
+<p>{{ APIRef }}</p>
 
-La propiedad de solo lectura **`Window.history`** regresa una referencia al objeto {{domxref("History")}}, quien provee una interfaz para manipular el historial de _sesión del navegador_ (páginas visitadas en el tab o marco de la pagina actual cargada).
+<p>La propiedad de solo lectura <code><strong>Window.history</strong></code> regresa una referencia al objeto {{domxref("History")}}, quien provee una interfaz para manipular el historial de <em>sesión del navegador</em> (páginas visitadas en el tab o marco de la pagina actual cargada).</p>
 
-Ver [Manipulando el historial del navegador](/es/docs/DOM/Manipulando_el_historial_del_navegador "en/DOM/Manipulating the browser history") para ejemplos y detalles. En particular, este articulo explica características seguras de los métodos `pushState()` y `replaceState()` que debe tener en cuenta antes de usarlos.
+<p>Ver <a href="/es/docs/DOM/Manipulando_el_historial_del_navegador" title="en/DOM/Manipulating the browser history">Manipulando el historial del navegador</a> para ejemplos y detalles. En particular, este articulo explica características seguras de los métodos <code>pushState()</code> y <code>replaceState()</code> que debe tener en cuenta antes de usarlos. </p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    var historyObj = window.history;
+<pre class="syntaxbox"><em>var historyObj</em> = <em>window</em>.history;
+</pre>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-history.back();     // equivalente a hacer clic en el botón de regresar
+<pre class="brush: js">history.back();     // equivalente a hacer clic en el botón de regresar
 history.go(-1);     // equivalente a history.back();
-```
+</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-Para las páginas de nivel superior se puede ver la lista de páginas en el historial de la sesión, accesible a través del objeto de la `History`, en los desplegables de tu navegador junto a los botones de avance y retroceso.
+<p>Para las páginas de nivel superior se puede ver la lista de páginas en el historial de la sesión, accesible a través del objeto de la <code>History</code>, en los desplegables de tu navegador junto a los botones de avance y retroceso.</p>
 
-Por razones de seguridad el objeto `History` no permite que el código sin privilegio acceda a las URLs de otras páginas en el historial de la sesión, pero permite navegar por el historial de la sesión.
+<p>Por razones de seguridad el objeto <code>History</code> no permite que el código sin privilegio acceda a las URLs de otras páginas en el historial de la sesión, pero permite navegar por el historial de la sesión.</p>
 
-No hay manera de limpiar el historial de la sesión o desactivar la parte de atrás/adelante desde la navegación de código sin privilegios. La solución más cercana disponible es el método [`location.replace()`](/es/docs/Web/API/Window/location#replace), que sustituye al elemento actual de la historia sesión con la URL proporcionada.
+<p>No hay manera de limpiar el historial de la sesión o desactivar la parte de atrás/adelante desde la navegación de código sin privilegios. La solución más cercana disponible es el método <code><a href="/es/docs/Web/API/Window/location#replace">location.replace()</a></code>, que sustituye al elemento actual de la historia sesión con la URL proporcionada.</p>
 
-{{Compat("api.Window.history")}}
+<p>{{Compat("api.Window.history")}}</p>
 
-## Especificaciones
+<p>
+ </p><h2 id="Specification" name="Specification">Especificaciones</h2>
 
-- [Historial de interface HTML5](http://whatwg.org/html#the-history-interface)
+
+<ul>
+ <li><a class="external" href="http://whatwg.org/html#the-history-interface">Historial de interface HTML5</a></li>
+</ul>

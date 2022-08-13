@@ -3,29 +3,48 @@ title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
 translation_of: Web/API/HTMLSelectElement/setCustomValidity
 ---
-{{ APIRef("HTML DOM") }}
+<div>{{ APIRef("HTML DOM") }}</div>
 
-El metodo **`HTMLSelectElement.setCustomValidity()`** define el mensaje de validación personalizado para el elemento seleccionado con el mensaje especifico. Usa una string vacia para indicar que ese elemento no tiene error de validación customizado.
+<p>El metodo <code><strong>HTMLSelectElement.setCustomValidity()</strong></code> define el mensaje de validación personalizado para el elemento seleccionado con el mensaje especifico. Usa una string vacia para indicar que ese elemento no tiene error de validación customizado.</p>
 
-## Syntax
+<h2 id="Syntax">Syntax</h2>
 
-    selectElt.setCustomValidity(string);
+<pre class="syntaxbox"><em>selectElt</em>.setCustomValidity(<em>string</em>);</pre>
 
-### Parameters
+<h3 id="Parameters">Parameters</h3>
 
-- `string` is the {{domxref("DOMString")}} containing the error message.
+<ul>
+ <li><code>string</code> is the {{domxref("DOMString")}} containing the error message.</li>
+</ul>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                                                                | Status                           | Comment                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}}         | {{Spec2('HTML WHATWG')}} | No change since the latest snapshot, {{SpecName('HTML5 W3C')}}. |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}} | {{Spec2('HTML5 W3C')}}     | Initial definition, snapshot of {{SpecName('HTML WHATWG')}}   |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>No change since the latest snapshot, {{SpecName('HTML5 W3C')}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'forms.html#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Initial definition, snapshot of {{SpecName('HTML WHATWG')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("api.HTMLSelectElement.setCustomValidity")}}
+<p>{{Compat("api.HTMLSelectElement.setCustomValidity")}}</p>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [Form validation.](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form validation.</a></li>
+</ul>

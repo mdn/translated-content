@@ -8,28 +8,57 @@ tags:
 translation_of: Web/HTML/Global_attributes/style
 original_slug: Web/HTML/Atributos_Globales/style
 ---
-> **Nota:** {{HTMLSidebar("Global_attributes")}}
+<p class="note">{{HTMLSidebar("Global_attributes")}}</p>
 
-El [atributo global ](/es/docs/Web/HTML/Atributos_Globales)**style** contiene declaraciones de estilo [CSS](/es/docs/Web/CSS) a ser aplicados a un elemento . Notar que es recomandado para los estilos ser definidos en archivo o archivos separados . Este atributo y el elemento {{ HTMLElement("style") }} tienen principalmente el propósito de permitir el estilizamiento rápido , por ejemplo para propósitos de pruebas .
+<p>El <a href="/es/docs/Web/HTML/Atributos_Globales">atributo global </a><strong>style</strong> contiene declaraciones de estilo  <a href="/es/docs/Web/CSS">CSS</a> a ser aplicados a un elemento . Notar que es recomandado para los estilos ser definidos en archivo o archivos separados . Este atributo y el elemento  {{ HTMLElement("style") }} tienen principalmente el propósito de permitir el estilizamiento rápido , por ejemplo para propósitos de pruebas .</p>
 
-**Nota de uso :** Este atributo no debe de ser usado para comunicar información semántica . Incluso si todo el estilo es removido , una página debería mantenerse semánticamente correcta . Típicamente no debe de ser usado para ocultar información irrelevante ; esto debe de hacerse usando el atributo [hidden](/es/docs/Web/HTML/Global_attributes/style$translate?tolocale=es#attr-hidden) .
+<p><strong>Nota de uso : </strong>Este atributo no debe de ser usado para comunicar información semántica . Incluso si todo el estilo es removido , una página debería mantenerse semánticamente correcta . Típicamente no debe de ser usado para ocultar información irrelevante ; esto debe de hacerse usando el atributo <a href="/en-US/docs/Web/HTML/Global_attributes/style$translate?tolocale=es#attr-hidden">hidden</a> .</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                               | Estatus                          | Comentario                                                                                                                                                                                                                                                                                                                                                        |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-style-attribute", "style")}} | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                                                             |
-| {{SpecName('HTML5.1', "dom.html#the-style-attribute", "style")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, sin cambio desde {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                                                               |
-| {{SpecName('HTML5 W3C', "dom.html#the-style-attribute", "style")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, es ahora un verdadero atributo global .                                                                                                                                                                                                                                 |
-| {{SpecName('HTML4.01', 'present/styles.html#h-14.2.2', 'style')}}     | {{Spec2('HTML4.01')}}     | Soportado en todos los elementos menos en {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, y {{HTMLElement("title")}}. |
-| {{ SpecName("CSS3 Style", "", "") }}                                             | {{Spec2("CSS3 Style")}} | Define el contenido del atributo **style** .                                                                                                                                                                                                                                                                                                                      |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "dom.html#the-style-attribute", "style")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Sin cambio desde el último  snapshot, {{SpecName('HTML5.1')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', "dom.html#the-style-attribute", "style")}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td>Snapshot de {{SpecName('HTML WHATWG')}}, sin  cambio desde {{SpecName('HTML5 W3C')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', "dom.html#the-style-attribute", "style")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Snapshot de {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, es ahora un verdadero atributo global .</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML4.01', 'present/styles.html#h-14.2.2', 'style')}}</td>
+   <td>{{Spec2('HTML4.01')}}</td>
+   <td>Soportado en todos los elementos menos en  {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, y {{HTMLElement("title")}}.</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName("CSS3 Style", "", "") }}</td>
+   <td>{{Spec2("CSS3 Style")}}</td>
+   <td>Define el contenido del atributo <strong>style </strong>.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en exploradores
+<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores</h2>
 
 {{Compat("html.global_attributes.style")}}
 
-##
+<h2 id="sect1"> </h2>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [atributos globales.](/es/docs/Web/HTML/Atributos_Globales)
+<ul>
+ <li><a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales.</a></li>
+</ul>

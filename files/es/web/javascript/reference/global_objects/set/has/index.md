@@ -9,49 +9,69 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/has
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`has()`** retorna un booleano indicando si el elemento especificado existe en el objeto `Set` o no.
+<p>El método <code><strong>has()</strong></code> retorna un booleano indicando si el elemento especificado existe en el objeto <code>Set</code> o no.</p>
 
-## Syntaxis
+<h2 id="Syntaxis">Syntaxis</h2>
 
-    mySet.has(value);
+<pre class="syntaxbox"><code><em>mySet</em>.has(value);</code></pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- valor
-  - : Requerido. El valor del cual se probará su presencia en el objeto `Set`.
+<dl>
+ <dt>valor</dt>
+ <dd>Requerido. El valor del cual se probará su presencia en el objeto <code>Set</code>.</dd>
+</dl>
 
-### Valor de retorno
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-- Booleano
-  - : Retorna `true` si el elemento con el valor especificado existe en el objeto `Set`; de otra manera retorna `false`.
+<dl>
+ <dt>Booleano</dt>
+ <dd>Retorna <code>true</code> si el elemento con el valor especificado existe en el objeto  <code>Set</code>; de otra manera retorna <code>false</code>.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando el método `has`
+<h3 id="Usando_el_método_has">Usando el método <code>has</code></h3>
 
-```js
-var mySet = new Set();
+<pre class="brush: js">var mySet = new Set();
 mySet.add("foo");
 
 mySet.has("foo");  // retorna true
 mySet.has("bar");  // retorna false
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                               | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-set.prototype.has', 'Set.prototype.has')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ESDraft')}} |                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("javascript.builtins.Set.has")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.add()")}}
-- {{jsxref("Set.prototype.delete()")}}
+<ul>
+ <li>{{jsxref("Set")}}</li>
+ <li>{{jsxref("Set.prototype.add()")}}</li>
+ <li>{{jsxref("Set.prototype.delete()")}}</li>
+</ul>

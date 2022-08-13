@@ -5,34 +5,44 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/toString
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Devuelve una cadena de caracteres (texto), la cual es representada por el objeto de selección, es decir, el texto seleccionado.
+<p>Devuelve una cadena de caracteres (texto), la cual es representada por el objeto de selección, es decir, el texto seleccionado.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    string =
-    sel.toString()
+<pre class="eval"><i>string</i> =
+<i>sel</i>.toString()
+</pre>
 
-- `string` es la representación del texto de selección.
+<ul>
+ <li><code>string</code> es la representación del texto de selección.</li>
+</ul>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Descripción
+<h3 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h3>
 
-Este método devuelve el texto seleccionado.
+<p>Este método devuelve el texto seleccionado.</p>
 
-En [JavaScript](es/JavaScript), este método es llamado automáticamente cuando una función, a la cual es pasado como parámetro el objeto de selección, requiere una cadena de caracteres (texto):
+<p>En <a href="es/JavaScript">JavaScript</a>, este método es llamado automáticamente cuando una función, a la cual es pasado como parámetro el objeto de selección, requiere una cadena de caracteres (texto):</p>
 
-    alert(window.getSelection()) // Lo que se llama.
-    alert(window.getSelection().toString())  // Lo que está siendo efectivamente llamado.
+<pre class="eval">alert(window.getSelection()) // Lo que se llama.
+alert(window.getSelection().toString())  // Lo que está siendo efectivamente llamado.
+</pre>
 
-### Ver también
+<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
 
-- [Object.toString](es/Core_JavaScript_1.5_Reference/Objects/Object/toString)
+<ul>
+ <li><a href="es/Core_JavaScript_1.5_Reference/Objects/Object/toString">Object.toString</a></li>
+</ul>
 
-{{ languages( { "en": "en/DOM/Selection/toString", "fr": "fr/DOM/Selection/toString", "it": "it/DOM/Selection/toString", "pl": "pl/DOM/Selection/toString" } ) }}
+<p> </p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/DOM/Selection/toString", "fr": "fr/DOM/Selection/toString", "it": "it/DOM/Selection/toString", "pl": "pl/DOM/Selection/toString" } ) }}</p>

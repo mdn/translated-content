@@ -8,30 +8,41 @@ tags:
   - redirecciones
 translation_of: Web/HTTP/Status/302
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-El código de estado de redirección HTTP **`302 Found`** indica que el recurso solicitado ha sido movido temporalmente a la URL dada por las cabeceras {{HTTPHeader("Location")}}. Un navegador redirecciona a esta página, pero los motores de búsqueda no actualizan sus enlaces al recurso ( hablando en lenguaje SEO, se suele decir que el link juice no es enviado a la nueva URL).
+<p>El código de estado de redirección HTTP <code><strong>302 Found</strong></code>  indica que el recurso solicitado ha sido movido temporalmente a la URL dada por las cabeceras {{HTTPHeader("Location")}}. Un navegador redirecciona a esta página, pero los motores de búsqueda no actualizan sus enlaces al recurso ( hablando en lenguaje SEO, se suele decir que  el link juice no es enviado a la nueva URL).</p>
 
-Incluso si la especificación requiere el método, y el cuerpo, no debe ser alterado cuando la redirección se completa, no todos los user-agents se conforman aquí, y tu puedes encontrar software inestable por ahí. Por la tanto se recomienda poner el código `302` sólo como respuesta a los métodos {{HTTPMethod("GET")}} o {{HTTPMethod("HEAD")}} , y usar en cambio {{HTTPStatus("307")}} `Temporary Redirect` , ya que el método de cambio está explicitamente prohibido en ese caso.
+<p>Incluso si la especificación requiere el método, y el cuerpo, no debe ser alterado cuando la redirección se completa, no todos los user-agents se conforman aquí, y tu puedes encontrar software inestable por ahí. Por la tanto se recomienda poner el código <code>302</code>  sólo como respuesta a los métodos {{HTTPMethod("GET")}} o {{HTTPMethod("HEAD")}} , y usar  en cambio {{HTTPStatus("307")}} <code>Temporary Redirect</code> , ya que el método de cambio está explicitamente prohibido en ese caso.</p>
 
-En casos en los que quieras que el método usado para cambiar a {{HTTPMethod("GET")}}, usa {{HTTPStatus("303")}} `See Other`. Esto es práctico cuando quieres dar una respuesta al método {{HTTPMethod("PUT")}} que no es el recurso subido, pero sí un mensaje de confirmación (como "Has subido satisfactoriamente XYZ").
+<p>En casos en los que quieras que el método usado para cambiar a {{HTTPMethod("GET")}},  usa {{HTTPStatus("303")}} <code>See Other</code>. Esto es práctico cuando quieres dar una respuesta al método {{HTTPMethod("PUT")}}  que no es el recurso subido, pero sí un mensaje de confirmación (como "Has subido satisfactoriamente XYZ").</p>
 
-## Estado
+<h2 id="Estado">Estado</h2>
 
-    302 Found
+<pre class="syntaxbox">302 Found</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                       | Título                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "302 Found" , "6.4.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Título</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7231", "302 Found" , "6.4.3")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad navegadores
+<h2 id="Compatibilidad_navegadores">Compatibilidad navegadores</h2>
 
-{{Compat("http.status.302")}}
+<p>{{Compat("http.status.302")}}</p>
 
-## Mira también
+<h2 id="Mira_también">Mira también</h2>
 
-- {{HTTPStatus("307")}} `Temporary Redirect`, el equivalente a este código de estado, pero que nunca cambia el método usado.
-- {{HTTPStatus("303")}} `See Other`, una redirección temporal que cambia el método usado a {{HTTPMethod("GET")}}.
-- {{HTTPStatus("301")}} `Moved Permanently`, la redirección permanente.
+<ul>
+ <li>{{HTTPStatus("307")}} <code>Temporary Redirect</code>,  el equivalente a este código de estado, pero que nunca cambia el método usado.</li>
+ <li>{{HTTPStatus("303")}} <code>See Other</code>, una redirección temporal que cambia el método usado a {{HTTPMethod("GET")}}.</li>
+ <li>{{HTTPStatus("301")}} <code>Moved Permanently</code>, la redirección permanente.</li>
+</ul>

@@ -11,131 +11,143 @@ tags:
   - counter
 translation_of: Web/CSS/@counter-style
 ---
-{{CSSRef}}
+<p>{{CSSRef}}</p>
 
-## Summary
+<h2 id="Summary">Summary</h2>
 
-The** `@counter-style`** [CSS](/en/CSS "CSS") [at-rule](/en/CSS/At-rule "en/CSS/At-rule") lets authors define specific counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.
+<p>The<strong> <code>@counter-style</code></strong> <a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="en/CSS/At-rule">at-rule</a> lets authors define specific counter styles that are not part of the predefined set of styles. A <code>@counter-style</code> rule defines how to convert a counter value into a string representation.</p>
 
-Initial version of CSS defined a set of useful counter styles. Although more styles were added to this set of predefined styles over the years, this restrictive way proved unable to fulfill the needs of worldwide typography. The `@counter-style` at-rule addresses this shortcoming in an open-ended manner, by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.
+<p>Initial version of CSS defined a set of useful counter styles. Although more styles were added to this set of predefined styles over the years, this restrictive way proved unable to fulfill the needs of worldwide typography. The <code>@counter-style</code> at-rule addresses this shortcoming in an open-ended manner, by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.</p>
 
-## Syntax
+<h2 id="Syntax" name="Syntax">Syntax</h2>
 
-### Descriptors
+<h3 id="Descriptors">Descriptors</h3>
 
-Each `@counter-style` is identified by a name and has a set of descriptors.
+<p>Each <code>@counter-style</code> is identified by a name and has a set of descriptors.</p>
 
-- {{cssxref("@counter-style/system", "system")}}
-  - : Specifies the algorithm to be used for converting the integer value of a counter to a string representation.
+<dl>
+ <dt>{{cssxref("@counter-style/system", "system")}}</dt>
+ <dd>Specifies the algorithm to be used for converting the integer value of a counter to a string representation.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt>{{cssxref("@counter-style/negative", "negative")}}</dt>
+ <dd>Lets the author specify symbols to be appended or prepended to the counter representation if the value is negative.</dd>
+</dl>
 
-- {{cssxref("@counter-style/negative", "negative")}}
-  - : Lets the author specify symbols to be appended or prepended to the counter representation if the value is negative.
+<dl>
+ <dt>{{cssxref("@counter-style/prefix", "prefix")}}</dt>
+ <dd>Specifies a symbol that should be prepended to the marker representation. Prefixes are added to the representation in the final stage, so in the final representation of the counter, it comes before the negative sign.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt>{{cssxref("@counter-style/suffix", "suffix")}}</dt>
+ <dd>Specifies, similar to the prefix descriptor, a symbol that is appended to the marker representation. Prefixes come after the marker representation.</dd>
+</dl>
 
-- {{cssxref("@counter-style/prefix", "prefix")}}
-  - : Specifies a symbol that should be prepended to the marker representation. Prefixes are added to the representation in the final stage, so in the final representation of the counter, it comes before the negative sign.
+<dl>
+ <dt>{{cssxref("@counter-style/range", "range")}}</dt>
+ <dd>Defines the range of values over which the conter style is applicable. If a counter style is used to represent a counter value outside of its ranges, the counter style will drop back to its fallback style.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt>{{cssxref("@counter-style/pad", "pad")}}</dt>
+ <dd>Is used when you need the marker representations to be of a minimum length. For example if you want the counters to start start at 01 and go through 02, 03, 04 etc, then the pad descriptor is to be used. For representations larger than the specified pad value, the marker is constructed as normal.</dd>
+</dl>
 
-- {{cssxref("@counter-style/suffix", "suffix")}}
-  - : Specifies, similar to the prefix descriptor, a symbol that is appended to the marker representation. Prefixes come after the marker representation.
+<dl>
+ <dt>{{cssxref("@counter-style/fallback", "fallback")}}</dt>
+ <dd>Specifies a system to fall back into if either the specified system is unable to construct the representation of or a counter value or if the counter value outside the specified range. If the specified fallback also fails to represent the value, then the fallback style's fallback is used, if one is specified. If there are either no fallback systems described or if the chain of fallback systems are unable to represent a counter value, then it will ultimately fall back to the decimal style.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt>{{cssxref("@counter-style/symbols", "symbols")}}</dt>
+ <dd>Specifies the symbols that are to be used for the marker representations. Symbols can contain string, images or custom identifiers. How the symbols are used to construct the marker representation is up to the algorithm specified in the system descriptor. For example, if the system specified is fixed, then each of the N symbols specified in the descriptor will be used to represent the first N counter symbols. Once the specified set of symbols have exhausted, the fallback style will be used for the rest of the list.<br>
+ <br>
+ The below @counter-style rule uses images instead of character symbols.<br>
 
-- {{cssxref("@counter-style/range", "range")}}
-  - : Defines the range of values over which the conter style is applicable. If a counter style is used to represent a counter value outside of its ranges, the counter style will drop back to its fallback style.
+ <pre class="brush: css">@counter-style winners-list {
+  system: fixed;
+  symbols: url(gold-medal.svg) url(silver-medal.svg) url(bronze-medal.svg);
+  suffix: " ";
+}</pre>
+ </dd>
+</dl>
 
-<!---->
+<dl>
+ <dt>{{cssxref("@counter-style/additive-symbols", "additive-symbols")}}</dt>
+ <dd>While the symbols specified in the symbols descriptor is used for constructing marker representation by most algorithms, some systems such as 'additive' rely on <em>additive tuples</em> described in this descriptor. Each additive tuple consists of a counter symbol and a non negative integer weight. The additive tuples must be specified in the descending order of their weights.</dd>
+</dl>
 
-- {{cssxref("@counter-style/pad", "pad")}}
-  - : Is used when you need the marker representations to be of a minimum length. For example if you want the counters to start start at 01 and go through 02, 03, 04 etc, then the pad descriptor is to be used. For representations larger than the specified pad value, the marker is constructed as normal.
+<dl>
+ <dt>{{cssxref("@counter-style/speak-as", "speak-as")}}</dt>
+ <dd>Describes how to read out the counter style in speech synthesizers, such as screen readers. For example, the value of the marker symbol can be read out as numbers or alphabets for ordered lists or as audio cues for unordered lists, based on the value of this descriptor.</dd>
+</dl>
 
-<!---->
-
-- {{cssxref("@counter-style/fallback", "fallback")}}
-  - : Specifies a system to fall back into if either the specified system is unable to construct the representation of or a counter value or if the counter value outside the specified range. If the specified fallback also fails to represent the value, then the fallback style's fallback is used, if one is specified. If there are either no fallback systems described or if the chain of fallback systems are unable to represent a counter value, then it will ultimately fall back to the decimal style.
-
-<!---->
-
-- {{cssxref("@counter-style/symbols", "symbols")}}
-
-  - : Specifies the symbols that are to be used for the marker representations. Symbols can contain string, images or custom identifiers. How the symbols are used to construct the marker representation is up to the algorithm specified in the system descriptor. For example, if the system specified is fixed, then each of the N symbols specified in the descriptor will be used to represent the first N counter symbols. Once the specified set of symbols have exhausted, the fallback style will be used for the rest of the list.
-
-    The below @counter-style rule uses images instead of character symbols.
-
-    ```css
-    @counter-style winners-list {
-      system: fixed;
-      symbols: url(gold-medal.svg) url(silver-medal.svg) url(bronze-medal.svg);
-      suffix: " ";
-    }
-    ```
-
-<!---->
-
-- {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - : While the symbols specified in the symbols descriptor is used for constructing marker representation by most algorithms, some systems such as 'additive' rely on _additive tuples_ described in this descriptor. Each additive tuple consists of a counter symbol and a non negative integer weight. The additive tuples must be specified in the descending order of their weights.
-
-<!---->
-
-- {{cssxref("@counter-style/speak-as", "speak-as")}}
-  - : Describes how to read out the counter style in speech synthesizers, such as screen readers. For example, the value of the marker symbol can be read out as numbers or alphabets for ordered lists or as audio cues for unordered lists, based on the value of this descriptor.
-
-### Formal syntax
+<h3 id="Formal_syntax">Formal syntax</h3>
 
 {{csssyntax}}
 
-## Examples
+<h2 id="Examples">Examples</h2>
 
-```css
-@counter-style circled-alpha {
+<pre class="brush: css">@counter-style circled-alpha {
   system: fixed;
   symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
   suffix: " ";
-}
-```
+}</pre>
 
-The above counter style rule can be applied to lists like this:
+<p>The above counter style rule can be applied to lists like this:</p>
 
-```css
-.items {
+<pre class="brush: css">.items {
    list-style: circled-alpha;
 }
-```
+</pre>
 
-Which will produce lists like this:
+<p>Which will produce lists like this:</p>
 
-Ⓐ One
-Ⓑ Two
-Ⓒ Three
-Ⓓ Four
-Ⓔ FIve
-....
-...
-Ⓨ Twenty Five
-Ⓩ Twenty Six
+<p>Ⓐ One<br>
+ Ⓑ Two<br>
+ Ⓒ Three<br>
+ Ⓓ Four<br>
+ Ⓔ FIve<br>
+ ....<br>
+ ...<br>
+ Ⓨ Twenty Five<br>
+ Ⓩ Twenty Six</p>
 
-27 Twenty Seven
-28 Twenty Eight
-29 Twenty Nine
-30 Thirty
+<p>27 Twenty Seven<br>
+ 28 Twenty Eight<br>
+ 29 Twenty Nine<br>
+ 30 Thirty</p>
 
-Checkout more examples on the [demo page](https://mdn.github.io/css-counter-style-demo/).
+<p>Checkout more examples on the <a href="https://mdn.github.io/css-counter-style-demo/">demo page</a>.</p>
 
-## Specifications
+<h2 id="Specifications" name="Specifications">Specifications</h2>
 
-| Specification                                                                                            | Status                                       | Comment             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Counter Styles', '#the-counter-style-rule', 'counter-style')}} | {{Spec2('CSS3 Counter Styles')}} | Initial definition. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Counter Styles', '#the-counter-style-rule', 'counter-style')}}</td>
+   <td>{{Spec2('CSS3 Counter Styles')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("css.at-rules.counter-style")}}
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.
+<ul>
+ <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
+ <li>{{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.</li>
+</ul>

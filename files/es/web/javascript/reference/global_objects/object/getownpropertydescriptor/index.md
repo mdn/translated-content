@@ -9,48 +9,51 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyDescriptor
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`Object.getOwnPropertyDescriptor()`** regresa como descripción de propiedad para una propiedad propia (eso es, una presente directamente en el objeto, no presente por la fuerza a través de la cadena de prototipo del objeto) de un objeto dado.
+<p>El método <code><strong>Object.getOwnPropertyDescriptor()</strong></code> regresa como descripción de propiedad para una propiedad propia (eso es, una presente directamente en el objeto, no presente por la fuerza a través de la cadena de prototipo del objeto) de un objeto dado.</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-    Object.getOwnPropertyDescriptor(obj, prop)
+<pre class="syntaxbox"><code>Object.getOwnPropertyDescriptor(<var>obj</var>, <var>prop</var>)</code></pre>
 
-### Parametros
+<h3 id="Parametros">Parametros</h3>
 
-- `obj`
-  - : El objeto en el que se busca la propiedad.
-- `prop`
-  - : El nombre de la propiedad del cuál se obtendrá la descripción.
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>El objeto en el que se busca la propiedad.</dd>
+ <dt><code>prop</code></dt>
+ <dd>El nombre de la propiedad del cuál se obtendrá la descripción.</dd>
+</dl>
 
-### Valor de retorno
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-Un descriptor de propiedad de una propiedad dada si existe en el objeto, {{jsxref("undefined")}} en cualquier otro caso.
+<p>Un descriptor de propiedad de una propiedad dada si existe en el objeto,  {{jsxref("undefined")}} en cualquier otro caso.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-Éste método permite la examinación precisa de la descripción de una propiedad. Una propiedad en JavaScript consiste de el nombre de una cadena de valor y un descriptor de propiedad. Información más detallada acerca de los tipos de descripciones y sus atributos puede ser encontrada en {{jsxref("Object.defineProperty()")}}.
+<p>Éste método permite la examinación precisa de la descripción de una propiedad. Una propiedad en JavaScript consiste de el nombre de una cadena de valor y un descriptor de propiedad. Información más detallada acerca de los tipos de descripciones y sus atributos puede ser encontrada en {{jsxref("Object.defineProperty()")}}.</p>
 
-Una descripción de propiedad es un registro con alguno de los siguientes atributos:
+<p>Una descripción de propiedad es un registro con alguno de los siguientes atributos:</p>
 
-- `value`
-  - : El valor asociado con la propiedad (descriptores de datos unicamente).
-- **`writable`**
-  - : `true` si y solo si el valor asociado con la propiedad puede ser cambiada (descriptores de datos unicamente).
-- `get`
-  - : Una función que sirve como método de acceso para la propiedad, o {{jsxref("undefined")}} si no hay método de acceso (métodos de acceso de descripciones unicamente).
-- `set`
-  - : Una función que sirve como método de establecimiento para la propieda, o {{jsxref("undefined")}} si no hay método de establecimiento (métodos de establecimiento de descripciones unicamente).
-- `configurable`
-  - : `true` si y solo si el tipo de ésta descripción de propiedad puede ser cambiada y si la propiedad puede ser eliminada del objeto correspondiente.
-- `enumerable`
-  - : `true` si y solo si ésta propiedad aparece durante la enumeración de las propiedades del objeto correspondiente.
+<dl>
+ <dt><code>value</code></dt>
+ <dd>El valor asociado con la propiedad (descriptores de datos unicamente).</dd>
+ <dt><code><strong>writable</strong></code></dt>
+ <dd><code>true</code> si y solo si el valor asociado con la propiedad puede ser cambiada (descriptores de datos unicamente).</dd>
+ <dt><code>get</code></dt>
+ <dd>Una función que sirve como método de acceso para la propiedad, o {{jsxref("undefined")}} si no hay método de acceso (métodos de acceso de descripciones unicamente).</dd>
+ <dt><code>set</code></dt>
+ <dd>Una función que sirve como método de establecimiento para la propieda, o {{jsxref("undefined")}} si no hay método de establecimiento (métodos de establecimiento de descripciones unicamente).</dd>
+ <dt><code>configurable</code></dt>
+ <dd><code>true</code> si y solo si el tipo de ésta descripción de propiedad puede ser cambiada y si la propiedad puede ser eliminada del objeto correspondiente.</dd>
+ <dt><code>enumerable</code></dt>
+ <dd><code>true</code> si y solo si ésta propiedad aparece durante la enumeración de las propiedades del objeto correspondiente.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-var o, d;
+<pre class="brush: js">var o, d;
 
 o = { get foo() { return 17; } };
 d = Object.getOwnPropertyDescriptor(o, 'foo');
@@ -64,32 +67,48 @@ o = {};
 Object.defineProperty(o, 'baz', { value: 8675309, writable: false, enumerable: false });
 d = Object.getOwnPropertyDescriptor(o, 'baz');
 // d es { value: 8675309, writable: false, enumerable: false, configurable: false }
-```
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-En ES5, si el primer argumento que se le pasa a éste método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como primer argumento será convertido (coerción) a un objeto en primera instancia.
+<p>En ES5, si el primer argumento que se le pasa a éste método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como primer argumento será convertido (coerción) a un objeto en primera instancia.</p>
 
-```js
-Object.getOwnPropertyDescriptor("foo", 0);
+<pre class="brush: js">Object.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not an object  // Código ES5
 
 Object.getOwnPropertyDescriptor("foo", 0);
 // {configurable:false, enumerable:true, value:"f", writable:false}  // Código ES6
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                               | Estado                   | Comentario                                            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}                             | {{Spec2('ES5.1')}} | Definición inicial. Implementado en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}} | {{Spec2('ES6')}}     |                                                       |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.2.3.3', 'Object.getOwnPropertyDescriptor')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td>Definición inicial. Implementado en JavaScript 1.8.5.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-object.getownpropertydescriptor', 'Object.getOwnPropertyDescriptor')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Object.getOwnPropertyDescriptor")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+<ul>
+ <li>{{jsxref("Object.defineProperty()")}}</li>
+ <li>{{jsxref("Reflect.getOwnPropertyDescriptor()")}}</li>
+</ul>

@@ -10,18 +10,17 @@ tags:
   - tipo de letra
 translation_of: Web/CSS/font-style
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad `font-style` permite definir el aspecto de una familia tipográfica entre los valores: `normal`, italic (cursiva) y `oblique`.
+<p>La propiedad <code>font-style</code> permite definir el aspecto de una familia tipográfica entre los valores: <code>normal</code>, italic (cursiva) y <code>oblique</code>.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-font-style: normal;
+<pre class="brush:css">font-style: normal;
 font-style: italic;
 font-style: oblique;
 
@@ -29,33 +28,33 @@ font-style: oblique;
 font-style: inherit;
 font-style: initial;
 font-style: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `normal`
-  - : Escoge un tipo de letra clasificado como `normal` dentro de una {{Cssxref("font-family", "familia de fuente")}}.
-- `italic`
-  - : Escoge un tipo de letra etiquetado como `italic`, o, si una versión cursiva del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como `oblique` en lugar de eso.
-- `oblique`
-  - : Escoge un tipo de letra etiquetado como `oblique`, o, si una versión oblique del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como `italic` en lugar de eso.
+<dl>
+ <dt><code>normal</code></dt>
+ <dd>Escoge un tipo de letra clasificado como <code>normal</code> dentro de una {{Cssxref("font-family", "familia de fuente")}}.</dd>
+ <dt><code>italic</code></dt>
+ <dd>Escoge un tipo de letra etiquetado como <code>italic</code>, o, si una versión cursiva del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como <code>oblique</code> en lugar de eso.</dd>
+ <dt><code>oblique</code></dt>
+ <dd>Escoge un tipo de letra etiquetado como <code>oblique</code>, o, si una versión oblique del tipo de letra no esté disponible, escoge un tipo de letra etiquetado como <code>italic</code> en lugar de eso.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
 
-El ejemplo muestra los valores diferentes de `font-style`.
+<p>El ejemplo muestra los valores diferentes de <code>font-style</code>.</p>
 
-```html
-<p class="normal">This paragraph is normal.</p>
-<p class="italic">This paragraph is italic.</p>
-<p class="oblique">This paragraph is oblique.</p>
-```
+<pre class="brush: html" style="display: none;">&lt;p class="normal"&gt;This paragraph is normal.&lt;/p&gt;
+&lt;p class="italic"&gt;This paragraph is italic.&lt;/p&gt;
+&lt;p class="oblique"&gt;This paragraph is oblique.&lt;/p&gt;
+</pre>
 
-```css
-.normal {
+<pre class="brush: css">.normal {
   font-style: normal;
 }
 
@@ -65,21 +64,41 @@ El ejemplo muestra los valores diferentes de `font-style`.
 
 .oblique {
   font-style: oblique;
-}
-```
+}</pre>
 
-{{ EmbedLiveSample('Ejemplo') }}
+<p>{{ EmbedLiveSample('Ejemplo') }}</p>
 
-Ten en cuenta que no todas las fuentes tienen tipos de letra distintos para `oblique` y `italic`, si este no es el caso, los navegadores simulan el estilo que falta utilizando el tipo de letra presente. Un ejemplo de representación de una fuente con ambos tipos de letra:
+<p>Ten en cuenta que no todas las fuentes tienen tipos de letra distintos para <code>oblique</code> y <code>italic</code>, si este no es el caso, los navegadores simulan el estilo que falta utilizando el tipo de letra presente. Un ejemplo de representación de una fuente con ambos tipos de letra:</p>
 
-![](https://mdn.mozillademos.org/files/12049/Screen%20Shot%202015-12-05%20at%2008.41.03.png)
+<p><img alt="" src="https://mdn.mozillademos.org/files/12049/Screen%20Shot%202015-12-05%20at%2008.41.03.png" style="height: 135px; width: 466px;"></p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}             | {{Spec2('CSS3 Fonts')}} | Sin cambio         |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}} | {{Spec2('CSS2.1')}}         | Sin cambio         |
-| {{SpecName('CSS1', '#font-style', 'font-style')}}                             | {{Spec2('CSS1')}}         | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}</td>
+   <td>{{Spec2('CSS3 Fonts')}}</td>
+   <td>Sin cambio</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Sin cambio</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1', '#font-style', 'font-style')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
 {{Compat("css.properties.font-style")}}

@@ -9,49 +9,54 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/g
 ---
-{{SVGRef}}El elemento `g` es un contenedor usado para agrupar objetos. Las transformaciones aplicadas al elemento `g` son realizadas sobre todos los elementos hijos del mismo. Los atributos aplicados son heredados por los elementos hijos. Además, puede ser usado para definir objetos complejos que pueden luego ser referenciados con el elemento {{SVGElement("use")}}.
+<div>{{SVGRef}}</div>
 
-## Contexto de uso
+<div>El elemento <code>g</code> es un contenedor usado para agrupar objetos. Las transformaciones aplicadas al elemento <code>g</code> son realizadas sobre todos los elementos hijos del mismo. Los atributos aplicados son heredados por los elementos hijos. Además, puede ser usado para definir objetos complejos que pueden luego ser referenciados con el elemento {{SVGElement("use")}}.</div>
 
-{{svginfo}}
+<div> </div>
 
-## Ejemplo
+<h2 id="Contexto_de_uso">Contexto de uso</h2>
 
-```html
-<svg width="100%" height="100%" viewBox="0 0 95 50"
-     xmlns="http://www.w3.org/2000/svg">
-  <g stroke="green" fill="white" stroke-width="5">
-    <circle cx="25" cy="25" r="15" />
-    <circle cx="40" cy="25" r="15" />
-    <circle cx="55" cy="25" r="15" />
-    <circle cx="70" cy="25" r="15" />
-  </g>
-</svg>
-```
+<p>{{svginfo}}</p>
 
-{{EmbedLiveSample("Ejemplo",220,130)}}
+<h2 id="Ejemplo">Ejemplo</h2>
 
-## Atributos
+<pre class="brush: html" style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: -webkit-auto; text-indent: 0px; text-transform: none;">&lt;svg width="100%" height="100%" viewBox="0 0 95 50"
+     xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;g stroke="green" fill="white" stroke-width="5"&gt;
+    &lt;circle cx="25" cy="25" r="15" /&gt;
+    &lt;circle cx="40" cy="25" r="15" /&gt;
+    &lt;circle cx="55" cy="25" r="15" /&gt;
+    &lt;circle cx="70" cy="25" r="15" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+</pre>
 
-### Atributos globales
+<p>{{EmbedLiveSample("Ejemplo",220,130)}}</p>
 
-- [Conditional processing attributes](/es/docs/SVG/Attribute#ConditionalProccessing "SVG/Attribute#ConditionalProccessing") »
-- [Core attributes](/es/docs/SVG/Attribute#Core "SVG/Attribute#Core") »
-- [Graphical event attributes](/es/docs/SVG/Attribute#GraphicalEvent "SVG/Attribute#GraphicalEvent") »
-- [Presentation attributes](/es/docs/SVG/Attribute#Presentation "SVG/Attribute#Presentation") »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+<h2 id="Atributos">Atributos</h2>
 
-### Atributos Específicos
+<h3 id="Atributos_globales">Atributos globales</h3>
 
-_No hay atributos específicos_
+<ul>
+ <li><a href="/en-US/docs/SVG/Attribute#ConditionalProccessing" title="SVG/Attribute#ConditionalProccessing">Conditional processing attributes</a> »</li>
+ <li><a href="/en-US/docs/SVG/Attribute#Core" title="SVG/Attribute#Core">Core attributes</a> »</li>
+ <li><a href="/en-US/docs/SVG/Attribute#GraphicalEvent" title="SVG/Attribute#GraphicalEvent">Graphical event attributes</a> »</li>
+ <li><a href="/en-US/docs/SVG/Attribute#Presentation" title="SVG/Attribute#Presentation">Presentation attributes</a> »</li>
+ <li>{{SVGAttr("class")}}</li>
+ <li>{{SVGAttr("style")}}</li>
+ <li>{{SVGAttr("externalResourcesRequired")}}</li>
+ <li>{{SVGAttr("transform")}}</li>
+</ul>
 
-## Interfaz DOM
+<h3 id="Atributos_Específicos">Atributos Específicos</h3>
 
-Este elemento implementa la interfaz [`SVGGElement`](/en-US/docs/DOM/SVGGElement "DOM/SVGGElement").
+<p><em>No hay atributos específicos</em></p>
 
-## Compatibilidad con navegadores
+<h2 id="Interfaz_DOM">Interfaz DOM</h2>
+
+<p>Este elemento implementa la interfaz <code><a href="/en-US/docs/DOM/SVGGElement" title="DOM/SVGGElement">SVGGElement</a></code>.</p>
+
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("svg.elements.g")}}

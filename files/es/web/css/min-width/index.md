@@ -5,54 +5,76 @@ tags:
   - Referencia_CSS
 translation_of: Web/CSS/min-width
 ---
-{{ CSSRef() }}
+<p>{{ CSSRef() }}</p>
 
-### Sumario
+<h3 id="Sumario" name="Sumario">Sumario</h3>
 
-La propiedad `min-width` se usa para determinar la anchura mínima de un elemento. Previene que la propiedad {{ Cssxref("width") }} pueda ser inferior que `min-width`.
+<p>La propiedad <code>min-width</code> se usa para determinar la anchura mínima de un elemento. Previene que la propiedad {{ Cssxref("width") }} pueda ser inferior que <code>min-width</code>.</p>
 
-- {{ Xref_cssinitial() }}: 0
-- Aplicable a: elementos de tipo bloque.
-- {{ Xref_cssinherited() }}: no
-- Porcentajes: se refieren a la anchura del bloque contenedor.
-- Media: {{ Xref_cssvisual() }}
-- {{ Xref_csscomputed() }}:
+<ul>
+ <li>{{ Xref_cssinitial() }}: 0</li>
+ <li>Aplicable a: elementos de tipo bloque.</li>
+ <li>{{ Xref_cssinherited() }}: no</li>
+ <li>Porcentajes: se refieren a la anchura del bloque contenedor.</li>
+ <li>Media: {{ Xref_cssvisual() }}</li>
+ <li>{{ Xref_csscomputed() }}:</li>
+</ul>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-min-width: \<longitud> | \<porcentaje> | -moz-max-content | -moz-min-content | -moz-fit-content | -moz-available
+<p>min-width: &lt;longitud&gt; | &lt;porcentaje&gt; | -moz-max-content | -moz-min-content | -moz-fit-content | -moz-available</p>
 
-### Valores
+<h3 id="Valores" name="Valores">Valores</h3>
 
-- **length** : puede ser expresado en px, cm, in
-- **percentage** : expresado con "%" es un porcentaje del ancho del elemento contenedor.
-- **-moz-max-content** : el ancho intrínseco preferido
-- **-moz-min-content** : el ancho intrínseco mínimo
-- **-moz-available** : el ancho del contenedor menos el margen horizontal, borde y padding
-- **-moz-fit-content** : igual que `-moz-min-content`
+<ul>
+ <li><strong>length</strong> : puede ser expresado en px, cm, in</li>
+ <li><strong>percentage</strong> : expresado con "%" es un porcentaje del ancho del elemento contenedor.</li>
+ <li><strong>-moz-max-content</strong> : el ancho intrínseco preferido</li>
+ <li><strong>-moz-min-content</strong> : el ancho intrínseco mínimo</li>
+ <li><strong>-moz-available</strong> : el ancho del contenedor menos el margen horizontal, borde y padding</li>
+ <li><strong>-moz-fit-content</strong> : igual que <code>-moz-min-content</code></li>
+</ul>
 
-### Ejemplos
+<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
 
-    table{min-width: 75%;}
+<pre>table{min-width: 75%;}
 
-    form{min-width: 0;}
+form{min-width: 0;}
+</pre>
 
-### Notas
+<h3 id="Notas" name="Notas">Notas</h3>
 
-{{ Cssxref("min-width") }} sobrescribe los valores de {{ Cssxref("max-width") }} y {{ Cssxref("width") }}.
+<p>{{ Cssxref("min-width") }} sobrescribe los valores de {{ Cssxref("max-width") }} y {{ Cssxref("width") }}.</p>
 
-### Especificaciones
+<h3 id="Especificaciones" name="Especificaciones">Especificaciones</h3>
 
-- [CSS 2.1](http://www.w3.org/TR/CSS2/visudet.html#min-max-widths)
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/CSS2/visudet.html#min-max-widths">CSS 2.1</a></li>
+</ul>
 
-### Compatibilidad entre navegadores
+<h3 id="Compatibilidad_entre_navegadores" name="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h3>
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 6              |
-| Netscape          | 6              |
-| Opera             | 3.5            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Navegador</th>
+   <th>Versión mínima</th>
+  </tr>
+  <tr>
+   <td>Internet Explorer</td>
+   <td>6</td>
+  </tr>
+  <tr>
+   <td>Netscape</td>
+   <td>6</td>
+  </tr>
+  <tr>
+   <td>Opera</td>
+   <td>3.5</td>
+  </tr>
+ </tbody>
+</table>
 
-### Ver también
+<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
 
-[box model](es/CSS/box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
+<p><a href="es/CSS/box_model">box model</a>, {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}</p>

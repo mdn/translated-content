@@ -7,85 +7,77 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-## Mensaje
+<h2 id="Mensaje">Mensaje</h2>
 
-    SyntaxError: missing variable name (Firefox)
-    SyntaxError: Unexpected token = (Chrome)
+<pre class="syntaxbox">SyntaxError: missing variable name (Firefox)
+SyntaxError: Unexpected token = (Chrome)</pre>
 
-## Error
+<h2 id="Error">Error </h2>
 
-{{jsxref("SyntaxError")}}
+<p>{{jsxref("SyntaxError")}}</p>
 
-## ¿Qué anda mal?
+<h2 id="¿Qué_anda_mal">¿Qué anda mal?</h2>
 
-Una variable no tiene nombre. Esto es un error recurrente en el código. Probablemente una coma está mal colocada en algún lugar o nombraste mal una variable. Completamente entendible. Nombrar cosas es difícil.
+<p>Una variable no tiene nombre. Esto es un error recurrente en el código. Probablemente una coma está mal colocada en algún lugar o nombraste mal una variable. Completamente entendible. Nombrar cosas es difícil.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Missing a variable name
+<h3 id="Missing_a_variable_name">Missing a variable name</h3>
 
-```js example-bad
-var = "foo";
-```
+<pre class="brush: js example-bad">var = "foo";
+</pre>
 
-Es bueno nombrar buenas variables. Todos hemos estado así.
+<p>Es bueno nombrar buenas variables. Todos hemos estado así.</p>
 
-```js example-good
-var ohGodWhy = "foo";
-```
+<pre class="brush: js example-good">var ohGodWhy = "foo";</pre>
 
-### Palabras reservadas no pueden ser nombre de variables
+<h3 id="Palabras_reservadas_no_pueden_ser_nombre_de_variables">Palabras reservadas no pueden ser nombre de variables</h3>
 
-Hay algunas palabras que son reservadas. No puedes usarlas para nombrar variables, lo siento :(
+<p>Hay algunas palabras que son reservadas. No puedes usarlas para nombrar variables, lo siento :(</p>
 
-```js example-bad
-var debugger = "whoop";
+<pre class="brush: js example-bad">var debugger = "whoop";
 // SyntaxError: missing variable name
-```
+</pre>
 
-### Declarar multiples variables
+<h3 id="Declarar_multiples_variables">Declarar multiples variables</h3>
 
-Toma especial atención a las comas cuando declaras multiples variables. ¿Hay un exceso de comas? ¿Accidentalmente añadiste comas en vez de punto y coma?
+<p>Toma especial atención a las comas cuando declaras multiples variables. ¿Hay un exceso de comas? ¿Accidentalmente añadiste comas en vez de punto y coma? </p>
 
-```js example-bad
-var x, y = "foo",
+<pre class="brush: js example-bad">var x, y = "foo",
 var x, = "foo"
 
 var first = document.getElementById('one'),
 var second = document.getElementById('two'),
 
 // SyntaxError: missing variable name
-```
+</pre>
 
-La versión arreglada:
+<p>La versión arreglada:</p>
 
-```js example-good
-var x, y = "foo";
+<pre class="brush: js example-good">var x, y = "foo";
 var x = "foo";
 
 var first = document.getElementById('one');
-var second = document.getElementById('two');
-```
+var second = document.getElementById('two');</pre>
 
-### Arrays
+<h3 id="Arrays">Arrays</h3>
 
-{{jsxref("Array")}} literales en JavaScript necesitan corchetes alrededor de los valores. Esto no funciona:
+<p>{{jsxref("Array")}} literales en JavaScript necesitan corchetes alrededor de los valores. Esto no funciona:</p>
 
-```js example-bad
-var arr = 1,2,3,4,5;
+<pre class="brush: js example-bad">var arr = 1,2,3,4,5;
 // SyntaxError: missing variable name
-```
+</pre>
 
-Esto es correcto:
+<p>Esto es correcto:</p>
 
-```js example-good
-var arr = [1,2,3,4,5];
-```
+<pre class="brush: js example-good">var arr = [1,2,3,4,5];</pre>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
-- [Variable declarations in the JavaScript Guide](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+<ul>
+ <li><a href="http://wiki.c2.com/?GoodVariableNames">Good variable names</a></li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations">Variable declarations in the JavaScript Guide</a></li>
+</ul>

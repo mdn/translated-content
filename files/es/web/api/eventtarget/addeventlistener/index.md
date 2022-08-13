@@ -3,45 +3,50 @@ title: element.addEventListener
 slug: Web/API/EventTarget/addEventListener
 translation_of: Web/API/EventTarget/addEventListener
 ---
-{{apiref("DOM Events")}}
+<p>{{apiref("DOM Events")}}</p>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/DOM/EventTarget "DOM/EventTarget") puede ser un simple [elemento](/es/docs/DOM/element "DOM/element") en un archivo, el mismo [`documento`](/en-US/docs/DOM/document "DOM/document") , una [`ventana`](/en-US/docs/DOM/window "DOM/window") o un [`XMLHttpRequest`](/en-US/docs/DOM/XMLHttpRequest "XMLHttpRequest").
+<p><code>addEventListener()</code> Registra un evento a un objeto en específico. El <a href="/en-US/docs/DOM/EventTarget" title="DOM/EventTarget">Objeto especifico</a> puede ser un simple <a href="/en-US/docs/DOM/element" title="DOM/element">elemento</a> en un archivo, el mismo  <code><a href="/en-US/docs/DOM/document" title="DOM/document">documento</a></code> , una <code><a href="/en-US/docs/DOM/window" title="DOM/window">ventana</a></code> o un  <code><a href="/en-US/docs/DOM/XMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a></code>.</p>
 
-Para registrar más de un eventListener, puedes llamar `addEventListener()` para el mismo elemento pero con diferentes tipos de eventos o parámetros de captura.
+<p>Para registrar más de un eventListener, puedes llamar <code>addEventListener()</code> para el mismo elemento pero con diferentes tipos de eventos o parámetros de captura.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    target.addEventListener(tipo, listener[, useCapture]);
-    target.addEventListener(tipo, listener[, useCapture, wantsUntrusted {{ Non-standard_inline() }}]); // Gecko/Mozilla only
+<pre class="syntaxbox notranslate"><code><em>target</em>.addEventListener(tipo, <em>listener</em>[, <em>useCapture</em>]);
+<em>target</em>.addEventListener(tipo, <em>listener</em>[, <em>useCapture</em>, <em>wantsUntrusted </em>{{ Non-standard_inline() }}]); // Gecko/Mozilla only</code></pre>
 
-- `tipo`
-  - : Una cadena representando el [tipo de evento](/es/docs/DOM/event.type "DOM/Event.type") a escuchar.
-- `listener`
-  - : El objeto que recibe una notificación cuando un evento de el tipo especificado ocurre. Debe ser un objeto implementando la interfaz [`EventListener`](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener) o solo una [function](/es/docs/JavaScript/Guide/Functions "JavaScript/Guide/Functions") en JavaScript.
-- `useCapture` {{ optional_inline() }}
-  - : Si es `true`, `useCapture` indica que el usuario desea iniciar la captura. Después de iniciar la captura, todos los eventos del tipo especificado serán lanzados al `listener` registrado antes de comenzar a ser controlados por algún `EventTarget` que esté por debajo en el arbol DOM del documento.> **Nota:** For event listeners attached to the event target; the event is in the target phase, rather than capturing and bubbling phases. Events in the target phase will trigger all listeners on an element regardless of the `useCapture` parameter.> **Nota:** `useCapture` became optional only in more recent versions of the major browsers; for example, it was not optional prior to Firefox 6. You should provide that parameter for broadest compatibility.
+<dl>
+ <dt><code>tipo</code></dt>
+ <dd>Una cadena representando el  <a class="internal" href="/en-US/docs/DOM/event.type" title="DOM/Event.type">tipo de evento</a> a escuchar.</dd>
+ <dt><code>listener</code></dt>
+ <dd>El objeto que recibe una notificación cuando un evento de el tipo especificado ocurre. Debe ser un objeto implementando la interfaz <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener"><code>EventListener</code></a> o solo una <a href="/en-US/docs/JavaScript/Guide/Functions" title="JavaScript/Guide/Functions">function</a> en JavaScript.</dd>
+ <dt><code>useCapture</code> {{ optional_inline() }}</dt>
+ <dd>Si es <code>true</code>, <code>useCapture</code> indica que el usuario desea iniciar la captura.   Después de iniciar la captura, todos los eventos del tipo especificado serán lanzados al <code>listener</code> registrado antes de comenzar  a ser controlados por algún <code>EventTarget</code> que esté por debajo en el arbol DOM del documento.
+ <div class="note"><strong>Note:</strong> For event listeners attached to the event target; the event is in the target phase, rather than capturing and bubbling phases. Events in the target phase will trigger all listeners on an element regardless of the <code>useCapture</code> parameter.</div>
 
-<!---->
+ <div class="note"><strong>Note:</strong> <code>useCapture</code> became optional only in more recent versions of the major browsers; for example, it was not optional prior to Firefox 6. You should provide that parameter for broadest compatibility.</div>
+ </dd>
+</dl>
 
-- wantsUntrusted {{Non-standard_inline}}
-  - : If `true`, the listener receives synthetic events dispatched by web content (the default is `false` for chrome and `true` for regular web pages). This parameter is only available in Gecko and is mainly useful for the code in add-ons and the browser itself. See [Interaction between privileged and non-privileged pages](/es/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages) for an example.
+<dl>
+ <dt>wantsUntrusted {{Non-standard_inline}}</dt>
+ <dd>If <code>true</code>, the listener receives synthetic events dispatched by web content (the default is <code>false</code> for chrome and <code>true</code> for regular web pages). This parameter is only available in Gecko and is mainly useful for the code in add-ons and the browser itself. See <a href="https://developer.mozilla.org/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">Interaction between privileged and non-privileged pages</a> for an example.</dd>
+</dl>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>DOM Event Example</title>
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;DOM Event Example&lt;/title&gt;
 
-<style>
+&lt;style&gt;
 #t { border: 1px solid red }
 #t1 { background-color: pink; }
-</style>
+&lt;/style&gt;
 
-<script>
+&lt;script&gt;
 // Function to change the content of t2
 function modifyText() {
   var t2 = document.getElementById("t2");
@@ -55,38 +60,37 @@ function load() {
 }
 
 document.addEventListener("DOMContentLoaded", load, false);
-</script>
+&lt;/script&gt;
 
-</head>
-<body>
+&lt;/head&gt;
+&lt;body&gt;
 
-<table id="t">
-   <tr><td id="t1">one</td></tr>
-   <tr><td id="t2">two</td></tr>
-</table>
+&lt;table id="t"&gt;
+   &lt;tr&gt;&lt;td id="t1"&gt;one&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;&lt;td id="t2"&gt;two&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
 
-</body>
-</html>
-```
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-[Ver en el JSFiddle](https://jsfiddle.net/madBYK/UumUP)
+<p><a href="https://jsfiddle.net/madBYK/UumUP">Ver en el JSFiddle</a></p>
 
-En el ejemplo anterior , `modifyText()` es una listener para los eventos `click` registrados utilzando `addEventListener()`. Un click en cualquier parte de la tabla notificara al handler y ejecutara la función `modifyText()`.
+<p>En el ejemplo anterior , <code>modifyText()</code> es una listener para los eventos <code style="font-style: normal; line-height: 1.5;">click</code><span style="line-height: 1.5;"> registrados utilzando</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">addEventListener()</code><span style="line-height: 1.5;">. Un click en cualquier parte de la tabla notificara al handler y ejecutara la función  </span><code style="font-style: normal; line-height: 1.5;">modifyText()</code><span style="line-height: 1.5;">.</span></p>
 
-Si quieres pasar parámetros a la función del listener, debes utilizar funciones anónimas.
+<p>Si quieres pasar parámetros a la función del listener, debes utilizar funciones anónimas.</p>
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>DOM Event Example</title>
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;DOM Event Example&lt;/title&gt;
 
-<style>
+&lt;style&gt;
 #t { border: 1px solid red }
 #t1 { background-color: pink; }
-</style>
+&lt;/style&gt;
 
-<script>
+&lt;script&gt;
 
 // Function to change the content of t2
 function modifyText(new_text) {
@@ -99,59 +103,59 @@ function load() {
   var el = document.getElementById("t");
   el.addEventListener("click", function(){modifyText("four")}, false);
 }
-</script>
+&lt;/script&gt;
 
-</head>
-<body onload="load();">
+&lt;/head&gt;
+&lt;body onload="load();"&gt;
 
-<table id="t">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
-</table>
+&lt;table id="t"&gt;
+  &lt;tr&gt;&lt;td id="t1"&gt;one&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td id="t2"&gt;two&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
 
-</body>
-</html>
-```
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## Notas
+<h2 id="Notas">Notas</h2>
 
-### ¿Porqué utilizar `addEventListener`?
+<h3 id="Why_use_addEventListener.3F" name="Why_use_addEventListener.3F">¿Porqué utilizar <code>addEventListener</code>?</h3>
 
-`addEventListener` es la forma de registrar un listener de eventos, como se especifica en W3C DOM. Sus beneficios son los siguientes:
+<p><code>addEventListener</code> es la forma de registrar un listener de eventos, como se especifica en W3C DOM. Sus beneficios son los siguientes:</p>
 
-- Permite agregar mas de un listener a un solo evento. Esto es particularmente útil para las librerias [DHTML](/es/docs/DHTML "DHTML") o las [Extensiones de Mozilla](/es/docs/Extensions "Extensions") que deben funcionar bien, incluso si se utilizan otras librerias/extensiones.
-- Da un control mas detallado de la fase en la que el listener se activa (capturing vs. bubbling)
-- Funciona en cualquier elemento del DOM, no únicamente con elementos de HTML.
+<ul>
+ <li>Permite agregar mas de un listener a un solo evento. Esto es particularmente útil para las librerias  <a href="/en-US/docs/DHTML" title="DHTML">DHTML</a> o las <a href="/en-US/docs/Extensions" title="Extensions">Extensiones de Mozilla</a> que deben funcionar bien, incluso si se utilizan otras librerias/extensiones.</li>
+ <li>Da un control mas detallado de la fase en la que el listener se activa (capturing vs. bubbling)</li>
+ <li>Funciona en cualquier elemento del DOM, no únicamente con elementos de HTML.</li>
+</ul>
 
-La alternativa, [Antigua forma de registrar event listeners](#Older_way_to_register_event_listeners) es descrita a continuación.
+<p>La alternativa,  <a href="#Older_way_to_register_event_listeners">Antigua forma de registrar event listeners</a> es descrita a continuación.</p>
 
-### Adding a listener during event dispatch
+<h3 id="Adding_a_listener_during_event_dispatch" name="Adding_a_listener_during_event_dispatch">Adding a listener during event dispatch</h3>
 
-If an `EventListener` is added to an `EventTarget` while it is processing an event, it will not be triggered by the current actions but may be triggered during a later stage of event flow, such as the bubbling phase.
+<p>If an <code>EventListener</code> is added to an <code>EventTarget</code> while it is processing an event, it will not be triggered by the current actions but may be triggered during a later stage of event flow, such as the bubbling phase.</p>
 
-### Multiple identical event listeners
+<h3 id="Multiple_identical_event_listeners" name="Multiple_identical_event_listeners">Multiple identical event listeners</h3>
 
-If multiple identical `EventListener`s are registered on the same `EventTarget` with the same parameters, the duplicate instances are discarded. They do not cause the `EventListener` to be called twice, and since the duplicates are discarded, they do not need to be removed manually with the [removeEventListener](/es/docs/Web/API/EventTarget/removeEventListener "DOM/element.removeEventListener") method.
+<p>If multiple identical <code>EventListener</code>s are registered on the same <code>EventTarget</code> with the same parameters, the duplicate instances are discarded. They do not cause the <code>EventListener</code> to be called twice, and since the duplicates are discarded, they do not need to be removed manually with the <a href="/en-US/docs/Web/API/EventTarget/removeEventListener" title="DOM/element.removeEventListener">removeEventListener</a> method.</p>
 
-### The value of `this` within the handler
+<h3 id="The_value_of_this_within_the_handler" name="The_value_of_this_within_the_handler">The value of <code>this</code> within the handler</h3>
 
-It is often desirable to reference the element from which the event handler was fired, such as when using a generic handler for a series of similar elements. When attaching a function using `addEventListener()` the value of `this` is changed—note that the value of `this` is passed to a function from the caller.
+<p>It is often desirable to reference the element from which the event handler was fired, such as when using a generic handler for a series of similar elements. When attaching a function using <code>addEventListener()</code> the value of <code>this</code> is changed—note that the value of <code>this</code> is passed to a function from the caller.</p>
 
-In the example above, the value of `this` within `modifyText()` when called from the click event is a reference to the table 't'. This is in contrast to the behavior that occurs if the handler is added in the HTML source:
+<p>In the example above, the value of <code>this</code> within <code>modifyText()</code> when called from the click event is a reference to the table 't'. This is in contrast to the behavior that occurs if the handler is added in the HTML source:</p>
 
-```html
-<table id="t" onclick="modifyText();">
+<pre class="brush: html notranslate">&lt;table id="t" onclick="modifyText();"&gt;
   . . .
-```
+</pre>
 
-The value of `this` within `modifyText()` when called from the onclick event will be a reference to the global (window) object.
+<p>The value of <code>this</code> within <code>modifyText()</code> when called from the onclick event will be a reference to the global (window) object.</p>
 
-> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind "JavaScript/Reference/Global Objects/Function/bind") method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
+<div class="note"><strong>Note:</strong> JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind" title="JavaScript/Reference/Global Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.</div>
 
-This is an example with and without `bind`:
+<p>This is an example with and without <code>bind</code>:</p>
 
-```js
-var Something = function(element)
+<pre class="brush: js notranslate">var Something = function(element)
 {
   this.name = 'Something Good';
   this.onclick1 = function(event) {
@@ -163,12 +167,11 @@ var Something = function(element)
   element.addEventListener('click', this.onclick1, false);
   element.addEventListener('click', this.onclick2.bind(this), false); // Trick
 }
-```
+</pre>
 
-A problem in the example above is that you cannot remove the listener with `bind`. Another solution is using a special function called `handleEvent` to catch any events:
+<p>A problem in the example above is that you cannot remove the listener with <code>bind</code>. Another solution is using a special function called <code>handleEvent</code> to catch any events:</p>
 
-```js
-var Something = function(element)
+<pre class="brush: js notranslate">var Something = function(element)
 {
   this.name = 'Something Good';
   this.handleEvent = function(event) {
@@ -191,48 +194,45 @@ var Something = function(element)
   element.removeEventListener('click', this, false);
   element.removeEventListener('dblclick', this, false);
 }
-```
+</pre>
 
-### Legacy Internet Explorer and attachEvent
+<h3 id="Compatibility" name="Compatibility">Legacy Internet Explorer and attachEvent</h3>
 
-In Internet Explorer versions prior to IE 9, you have to use [`attachEvent`](<http://msdn.microsoft.com/en-us/library/ms536343(VS.85).aspx>) rather than the standard `addEventListener`. To support IE, the example above can be modified to:
+<p>In Internet Explorer versions prior to IE 9, you have to use <code><a class="external" href="http://msdn.microsoft.com/en-us/library/ms536343(VS.85).aspx">attachEvent</a></code> rather than the standard <code>addEventListener</code>. To support IE, the example above can be modified to:</p>
 
-```js
-if (el.addEventListener) {
+<pre class="brush: js notranslate">if (el.addEventListener) {
   el.addEventListener('click', modifyText, false);
 } else if (el.attachEvent)  {
   el.attachEvent('onclick', modifyText);
 }
-```
+</pre>
 
-There is a drawback to `attachEvent`, the value of `this` will be a reference to the `window` object instead of the element on which it was fired.
+<p>There is a drawback to <code>attachEvent</code>, the value of <code>this</code> will be a reference to the <code>window</code> object instead of the element on which it was fired.</p>
 
-### Older way to register event listeners
+<h3 id="Older_way_to_register_event_listeners" name="Older_way_to_register_event_listeners">Older way to register event listeners</h3>
 
-`addEventListener()` was introduced with the DOM 2 [Events](http://www.w3.org/TR/DOM-Level-2-Events) specification. Before then, event listeners were registered as follows:
+<p><code>addEventListener()</code> was introduced with the DOM 2 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events">Events</a> specification. Before then, event listeners were registered as follows:</p>
 
-```js
-// Pass a function reference — do not add '()' after it, which would call the function!
+<pre class="brush: js notranslate">// Pass a function reference — do not add '()' after it, which would call the function!
 el.onclick = modifyText;
 
 // Using a function expression
 element.onclick = function() {
     // ... function logic ...
 };
-```
+</pre>
 
-This method replaces the existing `click` event listener(s) on the element if there are any. Similarly for other events and associated event handlers such as `blur` (`onblur`), `keypress` (`onkeypress`), and so on.
+<p>This method replaces the existing <code>click</code> event listener(s) on the element if there are any. Similarly for other events and associated event handlers such as <code>blur</code> (<code>onblur</code>), <code>keypress</code> (<code>onkeypress</code>), and so on.</p>
 
-Because it was essentially part of DOM 0, this method is very widely supported and requires no special cross–browser code; hence it is normally used to register event listeners dynamically unless the extra features of `addEventListener()` are needed.
+<p>Because it was essentially part of DOM 0, this method is very widely supported and requires no special cross–browser code; hence it is normally used to register event listeners dynamically unless the extra features of <code>addEventListener()</code> are needed.</p>
 
-### Memory issues
+<h3 id="Memory_issues" name="Memory_issues">Memory issues</h3>
 
-```js
-var i;
+<pre class="brush: js notranslate">var i;
 var els = document.getElementsByTagName('*');
 
 // Case 1
-for(i=0 ; i<els.length ; i++){
+for(i=0 ; i&lt;els.length ; i++){
   els[i].addEventListener("click", function(e){/*do something*/}, false});
 }
 
@@ -241,24 +241,29 @@ function processEvent(e){
   /*do something*/
 }
 
-for(i=0 ; i<els.length ; i++){
+for(i=0 ; i&lt;els.length ; i++){
   els[i].addEventListener("click", processEvent, false});
 }
-```
 
-In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call [`element.removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener "DOM/element.removeEventListener") because we do not have a reference to the handler, while in the second case, it's possible to do `myElement.removeEventListener("click", processEvent, false)`.
+</pre>
 
-## Browser compatibility
+<p>In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call <code><a href="/en-US/docs/Web/API/EventTarget/removeEventListener" title="DOM/element.removeEventListener">element.removeEventListener</a></code> because we do not have a reference to the handler, while in the second case, it's possible to do <code>myElement.removeEventListener("click", processEvent, false)</code>.</p>
+
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
 
 {{Compat("api.EventTarget.addEventListener")}}
 
-## See Also
+<h2 id="Specification" name="Specification">See Also</h2>
 
-- [element.removeEventListener()](/es/docs/DOM/element.removeEventListener "DOM/element.removeEventListener")
-- [Creating and triggering custom events](/es/docs/DOM/Creating_and_triggering_events "DOM/Creating_and_triggering_custom_events")
-- [More details on the use of `this` in event handlers](http://www.quirksmode.org/js/this.html)
+<ul>
+ <li><a href="/en-US/docs/DOM/element.removeEventListener" title="DOM/element.removeEventListener">element.removeEventListener()</a></li>
+ <li><a href="/en-US/docs/DOM/Creating_and_triggering_events" title="DOM/Creating_and_triggering_custom_events">Creating and triggering custom events</a></li>
+ <li><a class="external" href="http://www.quirksmode.org/js/this.html">More details on the use of <code>this</code> in event handlers</a></li>
+</ul>
 
-## Specification
+<h2 id="Specification" name="Specification">Specification</h2>
 
-- [DOM Level 2 Events: EventTarget.addEventListener](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener)
-- [DOM Level 3 Events: EventTarget.addEventListener](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener)
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener">DOM Level 2 Events: EventTarget.addEventListener</a></li>
+ <li><a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener">DOM Level 3 Events: EventTarget.addEventListener</a></li>
+</ul>

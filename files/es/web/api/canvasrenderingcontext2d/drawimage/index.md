@@ -9,89 +9,93 @@ tags:
   - Referencia
 translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-El método **`CanvasRenderingContext2D`\*\***`.drawImage()`\*\* de la API Canvas 2D proporciona diferentes formas para dibujar una imagen dentro de canvas.
+<p>El método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.drawImage()</code></strong> de la API Canvas 2D proporciona diferentes formas para dibujar una imagen dentro de canvas.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    void ctx.drawImage(image, dx, dy);
-    void ctx.drawImage(image, dx, dy, dWidth, dHeight);
-    void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+<pre class="syntaxbox">void <var><em>ctx</em>.drawImage(image, dx, dy);</var>
+void <var><em>ctx</em>.drawImage(image, dx, dy, dWidth, dHeight);</var>
+void <var><em>ctx</em>.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);</var>
+</pre>
 
-![drawImage](https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg)
+<p><img alt="drawImage" src="https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg" style="float: right;"></p>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `image`
-  - : Un elemento a dibujar dentro del context. La especificación permite cualquier fuente de imagen en canvas ({{domxref("CanvasImageSource")}}), tal como una {{domxref("HTMLImageElement")}}, un {{domxref("HTMLVideoElement")}}, un {{domxref("HTMLCanvasElement")}} o un{{domxref("ImageBitmap")}}.
-- `dx`
-  - : La coordenada X del canvas destino en la cual se coloca la esquina superior izquierda de la imagen origen.
-- `dy`
-  - : La coordenada Y del canvas destino en la cual se coloca la esquina superior izquierda de la imagen origen.
-- `dWidth`
-  - : El ancho para dibujar la imagen en el canvas destino.
-- `dHeight`
-  - : El alto para dibujar la imagen en el canvas destino. Esto permite escalar la imagen dibujada. Si no se especifica, el alto de la imagen no se escala al dibujar.
-- `sx`
-  - : La coordenada X de la esquina superior izquierda del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.
-- `sy`
-  - : La coordenada Y de la esquina superior izquierda del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.
-- `sWidth`
-  - : El ancho del sub-rectangulo de la imagen origen a dibujar en el contexto de destino. Si no se especifica, se utiliza todo el rectangulo entero desde las coordenadas especificadas por `sx` y `sy `hasta la esquina inferior derecha de la imagen.
-- `sHeight`
-  - : La altura del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.
+<dl>
+ <dt><code>image</code></dt>
+ <dd>Un elemento a dibujar dentro del context. La especificación permite cualquier fuente de imagen en canvas ({{domxref("CanvasImageSource")}}), tal como una {{domxref("HTMLImageElement")}}, un {{domxref("HTMLVideoElement")}}, un {{domxref("HTMLCanvasElement")}} o un{{domxref("ImageBitmap")}}.</dd>
+ <dt><code>dx</code></dt>
+ <dd>La coordenada X del canvas destino en la cual se coloca la esquina superior izquierda de la imagen origen.</dd>
+ <dt><code>dy</code></dt>
+ <dd>La coordenada Y del canvas destino en la cual se coloca la esquina superior izquierda de la imagen origen.</dd>
+ <dt><code>dWidth</code></dt>
+ <dd>El ancho para dibujar la imagen en el canvas destino.</dd>
+ <dt><code>dHeight</code></dt>
+ <dd>El alto para dibujar la imagen en el canvas destino. Esto permite escalar la imagen dibujada. Si no se especifica, el alto de  la imagen no se escala al dibujar.</dd>
+ <dt><code>sx</code></dt>
+ <dd>La coordenada X de la esquina superior izquierda del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.</dd>
+ <dt><code>sy</code></dt>
+ <dd>La coordenada Y de la esquina superior izquierda del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.</dd>
+ <dt><code>sWidth</code></dt>
+ <dd>El ancho del sub-rectangulo de la imagen origen a dibujar en el contexto de destino. Si no se especifica, se utiliza todo el rectangulo entero desde las coordenadas especificadas por <code>sx</code> y <code>sy </code>hasta la esquina inferior derecha de la imagen.</dd>
+ <dt><code>sHeight</code></dt>
+ <dd>La altura del sub-rectangulo de la imagen origen a dibujar en el contexto de destino.</dd>
+</dl>
 
-### Excepciones lanzadas
+<h3 id="Excepciones_lanzadas">Excepciones lanzadas</h3>
 
-- `INDEX_SIZE_ERR`
-  - : Si el canvas o la fuente de anchura o altura del rectangulo es igual a cero.
-- `INVALID_STATE_ERR`
-  - : La imagen no tiene datos de imagen.
-- `TYPE_MISMATCH_ERR`
-  - : El elemento de origen especificado no es compatible.
+<dl>
+ <dt><code>INDEX_SIZE_ERR</code></dt>
+ <dd>Si el canvas o la fuente de anchura o altura del rectangulo es igual a cero.</dd>
+ <dt><code>INVALID_STATE_ERR</code></dt>
+ <dd>La imagen no tiene datos de imagen.</dd>
+ <dt><code>TYPE_MISMATCH_ERR</code></dt>
+ <dd>El elemento de origen especificado no es compatible.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Usando el método drawImage
+<h3 id="Usando_el_método_drawImage">Usando el método drawImage</h3>
 
-Este es sólo un simple fragmento de código que utiliza el método drawImage.
+<p>Este es sólo un simple fragmento de código que utiliza el método drawImage.</p>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<canvas id="canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
-       width="300" height="227">
-</div>
-```
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+  &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+       width="300" height="227"&gt;
+&lt;/div&gt;
+</pre>
 
-#### JavaScript
+<h4 id="JavaScript">JavaScript</h4>
 
-```js
-var canvas = document.getElementById("canvas");
+<pre class="brush: js; highlight:[5]">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById('source');
 
 ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
-```
+</pre>
 
-Edita el código debajo y observa los cambios actualizarse en vivo en el canvas:
+<p>Edita el código debajo y observa los cambios actualizarse en vivo en el canvas:</p>
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
-</div>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
-```
+<div class="hidden">
+<h6 id="Playable_code">Playable code</h6>
 
-```js hidden
-var canvas = document.getElementById("canvas");
+<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+  &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"&gt;
+&lt;/div&gt;
+&lt;div class="playable-buttons"&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
+&lt;/div&gt;
+&lt;textarea id="code" class="playable-code"&gt;
+ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);&lt;/textarea&gt;
+</pre>
+
+<pre class="brush: js">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById('source');
 var textarea = document.getElementById("code");
@@ -115,31 +119,47 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-```
+</pre>
+</div>
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}} | {{Spec2('HTML WHATWG')}} |            |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("api.CanvasRenderingContext2D.drawImage")}}
 
-##
+<h2 id="sect1"> </h2>
 
-## Notas de compatibilidad
+<h2 id="Notas_de_compatibilidad">Notas de compatibilidad</h2>
 
-- Soporte para voltear imagen usando valores negativos para `sw` y `sh` fue añadido en Gecko 5.0 {{geckoRelease("5.0")}}.
-- Empezando con {{geckoRelease("5.0")}} `drawImage()` maneja argumentos negativos de acuerdo con la especificación, volteando el rectangulo alrededor del eje apopiado.
-- Especificación de una imagen `null` o `undefined` al llamar o `drawImage()` correctamente lanzando una excepción `TYPE_MISMATCH_ERR` empezando con {{geckoRelease("5.0")}}.
-- antes de Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox lanzó una excepción si alguno de los valores de las coordenadas no eran finitos o cero. De acuerado a la especificación esto ya no ocurre.
-- Gecko 9.0 {{ geckoRelease("9.0") }} ahora soporta correctamente CORS para dibujar imágenes a través de dominios sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
-- Gecko 11.0 {{ geckoRelease("11.0") }} ahora permite SVG-como-una-imagen para ser dibujada en el canvas sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
+<ul>
+ <li>Soporte para voltear imagen usando valores negativos para <code>sw</code> y <code>sh</code> fue añadido en Gecko 5.0 {{geckoRelease("5.0")}}.</li>
+ <li>Empezando con {{geckoRelease("5.0")}} <code>drawImage()</code> maneja argumentos negativos de acuerdo con la especificación, volteando el rectangulo alrededor del eje apopiado.</li>
+ <li>Especificación de una imagen <code>null</code> o <code>undefined</code> al llamar o <code>drawImage()</code> correctamente lanzando una excepción <code>TYPE_MISMATCH_ERR</code> empezando con {{geckoRelease("5.0")}}.</li>
+ <li>antes de Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox lanzó una excepción si alguno de los valores de las coordenadas no eran finitos o cero. De acuerado a la especificación esto ya no ocurre.</li>
+ <li>Gecko 9.0 {{ geckoRelease("9.0") }} ahora soporta correctamente CORS para dibujar imágenes a través de dominios sin <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">manchar el canvas</a>.</li>
+ <li>Gecko 11.0 {{ geckoRelease("11.0") }} ahora permite SVG-como-una-imagen para ser dibujada en el canvas sin <a href="/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">manchar el canvas</a>.</li>
+</ul>
 
-## Mira también
+<h2 id="Mira_también">Mira también</h2>
 
-- Definiendo la interfaz, {{domxref("CanvasRenderingContext2D")}}.
+<ul>
+ <li>Definiendo la interfaz, {{domxref("CanvasRenderingContext2D")}}.</li>
+</ul>

@@ -9,37 +9,62 @@ tags:
 translation_of: Web/HTML/Element/embed
 original_slug: Web/HTML/Elemento/embed
 ---
-> **Nota:** Nota: este tema documenta sólo el elemento \<embed> que se define como parte de HTML5. No trata las implementaciones anteriores no estandarizadas del elemento `<embed>`.
+<div class="note"><span class="goog-gtc-unit" id="goog-gtc-unit-3"><span class="goog-gtc-from-human goog-gtc-ph-missing goog-gtc-translatable" dir="ltr">Nota: este tema documenta sólo el elemento &lt;embed&gt; que se define como parte de HTML5.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-4"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">No trata las implementaciones anteriores no estandarizadas del elemento <code>&lt;embed&gt;</code>.</span></span></div>
 
-El _Elemento HTML Embed_ ( `<embed>` ) representa un punto de integración para una aplicación externa o de contenido interactivo (en otras palabras, un plug-in).
+<p><span class="goog-gtc-unit" id="goog-gtc-unit-5"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">El <em>Elemento HTML Embed </em> ( <code>&lt;embed&gt;</code> ) representa un punto de integración para una aplicación externa o de contenido interactivo (en otras palabras, un plug-in).</span></span></p>
 
-## Contexto de uso
+<h2 id="Contexto_de_uso"><span class="goog-gtc-unit" id="goog-gtc-unit-6"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Contexto de uso</span></span></h2>
 
-| Contenido permitido            | Ninguno; es un elemento vacío.                                                                                                                               |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Omisión de etiquetas           | Debe tener una etiqueta de inicio, pero no debe tener una etiqueta de cierre.                                                                                |
-| Elementos primarios permitidos | Cualquier elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content "../../../../en/HTML/Content categories#phrasing content") . |
-| Documento normativo            | [HTML 5, sección 4.8.3](http://www.w3.org/TR/html5/the-iframe-element.html#the-embed-element)                                                                |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><span class="goog-gtc-unit" id="goog-gtc-unit-7"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Contenido permitido</span></span></td>
+   <td><span class="goog-gtc-unit" id="goog-gtc-unit-8"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Ninguno; es un elemento vacío.</span></span></td>
+  </tr>
+  <tr>
+   <td><span class="goog-gtc-unit" id="goog-gtc-unit-9"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Omisión de etiquetas</span></span></td>
+   <td><span class="goog-gtc-unit" id="goog-gtc-unit-10"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Debe tener una etiqueta de inicio, pero no debe tener una etiqueta de cierre.</span></span></td>
+  </tr>
+  <tr>
+   <td><span class="goog-gtc-unit" id="goog-gtc-unit-11"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Elementos primarios permitidos</span></span></td>
+   <td><span class="goog-gtc-unit" id="goog-gtc-unit-12"><span class="goog-gtc-from-human goog-gtc-ph-missing goog-gtc-translatable" dir="ltr">Cualquier elemento que acepte <a href="/en/HTML/Content_categories#phrasing_content" title="../../../../en/HTML/Content categories#phrasing content">contenido estático</a> .</span></span></td>
+  </tr>
+  <tr>
+   <td><span class="goog-gtc-unit" id="goog-gtc-unit-13"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Documento normativo</span></span></td>
+   <td><a class="external" href="http://www.w3.org/TR/html5/the-iframe-element.html#the-embed-element"><span class="goog-gtc-unit" id="goog-gtc-unit-14"><span class="goog-gtc-from-mt goog-gtc-translatable" dir="ltr">HTML 5, sección 4.8.3</span></span></a></td>
+  </tr>
+ </tbody>
+</table>
 
-## Atributos
+<h2 id="Atributos"><span class="goog-gtc-unit" id="goog-gtc-unit-15"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Atributos</span></span></h2>
 
-Este elemento admite los siguientes atributos además de los [atributos globales](/en/HTML/Global_attributes "en/HTML/Global attributes") .
+<p><span class="goog-gtc-unit" id="goog-gtc-unit-16"><span class="goog-gtc-from-mt goog-gtc-translatable" dir="ltr">Este elemento admite los siguientes atributos además de los <a href="/en/HTML/Global_attributes" title="en/HTML/Global attributes">atributos globales</a> .</span></span></p>
 
-- {{ htmlattrdef("height") }}
-  - : La altura del recurso mostrada en píxeles CSS.
-- {{ htmlattrdef("src") }}
-  - : La dirección URL del recurso que se está incrustado.
-- {{ htmlattrdef("type") }}
-  - : El tipo MIME que se va a usar para la selección del plug-in para crear una instancia.
-- {{ htmlattrdef("width") }}
-  - : El ancho del recurso mostrado en píxeles CSS.
+<dl>
+ <dt><span class="goog-gtc-unit" id="goog-gtc-unit-17"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">{{ htmlattrdef("height") }}</span></span></dt>
+ <dd><span class="goog-gtc-unit" id="goog-gtc-unit-18"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">La altura del recurso mostrada en píxeles CSS.</span></span></dd>
+ <dt><span class="goog-gtc-unit" id="goog-gtc-unit-19"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">{{ htmlattrdef("src") }}</span></span></dt>
+ <dd><span class="goog-gtc-unit" id="goog-gtc-unit-20"><span class="goog-gtc-from-mt goog-gtc-translatable" dir="ltr">La dirección URL del recurso que se está incrustado.</span></span></dd>
+ <dt><span class="goog-gtc-unit" id="goog-gtc-unit-21"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">{{ htmlattrdef("type") }}</span></span></dt>
+ <dd><span class="goog-gtc-unit" id="goog-gtc-unit-22"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">El tipo MIME que se va a usar para la selección del plug-in para crear una instancia.</span></span></dd>
+ <dt><span class="goog-gtc-unit" id="goog-gtc-unit-23"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">{{ htmlattrdef("width") }}</span></span></dt>
+ <dd><span class="goog-gtc-unit" id="goog-gtc-unit-24"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">El ancho del recurso mostrado en píxeles CSS.</span></span></dd>
+</dl>
 
-## Interfaz DOM
+<h2 id="Interfaz_DOM"><span class="goog-gtc-unit" id="goog-gtc-unit-25"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-100 goog-gtc-translatable" dir="ltr">Interfaz DOM</span></span></h2>
 
-- [HTMLEmbedElement](/en/DOM/HTMLEmbedElement "en/DOM/HTMLEmbedElement")
+<ul>
+ <li><a href="/en/DOM/HTMLEmbedElement" title="en/DOM/HTMLEmbedElement"><span class="goog-gtc-unit" id="goog-gtc-unit-26"><span class="goog-gtc-from-mt goog-gtc-translatable" dir="ltr">HTMLEmbedElement</span></span></a></li>
+</ul>
 
-## Consulta también
+<h2 id="Consulta_también"><span class="goog-gtc-unit" id="goog-gtc-unit-27"><span class="goog-gtc-from-tm goog-gtc-from-tm-score-99 goog-gtc-translatable" dir="ltr">Consulta también</span></span></h2>
 
-Otros elementos que se utilizan para incrustar el contenido de varios tipos incluyen {{ HTMLElement("audio") }}, {{ HTMLElement("canvas") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("math") }}, {{ HTMLElement("object") }}, {{ HTMLElement("svg") }} y {{ HTMLElement("video") }}.
+<p><span class="goog-gtc-unit" id="goog-gtc-unit-28"><span class="goog-gtc-from-human goog-gtc-translatable" dir="ltr">Otros elementos que se utilizan para incrustar el contenido de varios tipos incluyen {{ HTMLElement("audio") }}, {{ HTMLElement("canvas") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("math") }}, {{ HTMLElement("object") }}, {{ HTMLElement("svg") }} y  {{ HTMLElement("video") }}. </span></span></p>
 
-{{ languages ( { "en": "en/HTML/Element/embed" } ) }}
+<p> </p>
+
+<p> </p>
+
+<p>{{ languages ( { "en": "en/HTML/Element/embed" } ) }}</p>
+
+<p> </p>

@@ -3,26 +3,26 @@ title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
 translation_of: Web/API/MouseEvent/shiftKey
 ---
-{{APIRef("DOM Events")}}
+<p>{{APIRef("DOM Events")}}</p>
 
-El evento de **`MouseEvent.shiftKey`** es una propiedad de solo lectura que indica si la tecla de <kbd>shift</kbd> se presionó (`true`) o no (`false`).
+<p>El evento de <strong><code>MouseEvent.shiftKey</code></strong> es una propiedad de solo lectura que indica si la tecla de <kbd>shift</kbd> se presionó (<code>true</code>) o no (<code>false</code>).</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var shiftKeyPressed = instanceOfMouseEvent.shiftKey
+<pre class="syntaxbox">var <em>shiftKeyPressed</em> = <em>instanceOfMouseEvent</em>.shiftKey
+</pre>
 
-### Valor que retorna
+<h3 id="Valor_que_retorna">Valor que retorna</h3>
 
-Un valor booleano
+<p>Un valor booleano</p>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```js
-<html>
-<head>
-<title>Ejemplo de shiftKey</title>
+<pre class="brush: js">&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Ejemplo de shiftKey&lt;/title&gt;
 
-<script type="text/javascript">
+&lt;script type="text/javascript"&gt;
 
 function showChar(e){
   alert(
@@ -33,27 +33,44 @@ function showChar(e){
   );
 }
 
-</script>
-</head>
+&lt;/script&gt;
+&lt;/head&gt;
 
-<body onkeypress="showChar(event);">
-<p>Presione cualquier tecla, con o sin la tecla SHIFT.<br />
-También puede utilizar SHIFT junto a la tecla ALT.</p>
-</body>
-</html>
-```
+&lt;body onkeypress="showChar(event);"&gt;
+&lt;p&gt;Presione cualquier tecla, con o sin la tecla SHIFT.&lt;br /&gt;
+También puede utilizar SHIFT junto a la tecla ALT.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## Especificación
+<h2 id="Especificación">Especificación</h2>
 
-| Especificación                                                                                           | Estado                           | Comentario                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('DOM3 Events','#widl-MouseEvent-shiftKey','MouseEvent.shiftKey')}} | {{Spec2('DOM3 Events')}} | Sin cambios desde {{SpecName('DOM2 Events')}}. |
-| {{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.shiftKey')}}             | {{Spec2('DOM2 Events')}} | Primera definición.                                     |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM3 Events','#widl-MouseEvent-shiftKey','MouseEvent.shiftKey')}}</td>
+   <td>{{Spec2('DOM3 Events')}}</td>
+   <td>Sin cambios desde {{SpecName('DOM2 Events')}}.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM2 Events','#Events-MouseEvent','MouseEvent.shiftKey')}}</td>
+   <td>{{Spec2('DOM2 Events')}}</td>
+   <td>Primera definición.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
 
 {{Compat("api.MouseEvent.shiftKey")}}
 
-## Ver más
+<h2 id="See_also" name="See_also">Ver más</h2>
 
-- {{ domxref("MouseEvent") }}
+<ul>
+ <li>{{ domxref("MouseEvent") }}</li>
+</ul>

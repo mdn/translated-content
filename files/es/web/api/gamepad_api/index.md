@@ -8,59 +8,88 @@ tags:
   - juegos
 translation_of: Web/API/Gamepad_API
 ---
-{{DefaultAPISidebar("Gamepad API")}}
+<div>{{DefaultAPISidebar("Gamepad API")}}</div>
 
-**Gamepad API** es la manera de los desarrolladores de acceder y responder a las señales de los gamepads y otros controles para juegos de una manera simple y consistente. Éste contiene tres interfaces, dos eventos y una función especializada, para responder a los gamepads siendo conectados y desconectados, y acceder a otra información sobre los mismos gamepads, y que botones y otros controles están siendo presionados.
+<p><strong>Gamepad API</strong> es la manera de los desarrolladores de acceder y responder a las señales de los gamepads y otros controles para juegos de una manera simple y consistente. Éste contiene tres interfaces, dos eventos y una función especializada, para responder a los gamepads siendo conectados y desconectados, y acceder a otra información sobre los mismos gamepads, y que botones y otros controles están siendo presionados.</p>
 
-## Interfaces
+<h2 id="Interfaces">Interfaces</h2>
 
-- [`Gamepad`](/es/docs/Web/API/Gamepad "The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.")
-  - : Representa un gamepad/control conectado a la computadora.
-- [`GamepadButton`](/es/docs/Web/API/GamepadButton "The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device.")
-  - : Representa un botón en uno de los gamepads conectados.
-- [`GamepadEvent`](/es/docs/Web/API/GamepadEvent "The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to.")
-  - : El evento objeto representa eventos que son enviados a los gamepads.
+<dl>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad" title="The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id."><code>Gamepad</code></a></dt>
+ <dd>Representa un gamepad/control conectado a la computadora.</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadButton" title="The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device."><code>GamepadButton</code></a></dt>
+ <dd>Representa un botón en uno de los gamepads conectados.</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent" title="The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to."><code>GamepadEvent</code></a></dt>
+ <dd>El evento objeto representa eventos que son enviados a los gamepads.</dd>
+</dl>
 
-### Extensiones experimentales de los gamepads
+<h3 id="Extensiones_experimentales_de_los_gamepads">Extensiones experimentales de los gamepads</h3>
 
-- [`GamepadHapticActuator`](/es/docs/Web/API/GamepadHapticActuator "The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.")
-  - : Representa el hardware en el control designado para proveer retroalimentación háptica al usuario (si está disponible), más comunmente hardware de vibración.
-- [`GamepadPose`](/es/docs/Web/API/GamepadPose "The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)")
-  - : Representa la posición de un control (ej. posición y orientación el espacio 3D) en el caso de un controllador [WebVR](/es/docs/Web/API/WebVR_API). Éste no es usado por el nuevo estándar [WebXR](/es/docs/Web/API/WebXR_Device_API).
+<dl>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator" title="The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware."><code>GamepadHapticActuator</code></a></dt>
+ <dd>Representa el hardware en el control designado para proveer retroalimentación háptica al usuario (si está disponible), más comunmente hardware de vibración.</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose" title="The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)"><code>GamepadPose</code></a></dt>
+ <dd>Representa la posición de un control (ej. posición y orientación el espacio 3D) en el caso de un controllador <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">WebVR</a>. Éste no es usado por el nuevo estándar <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a>.</dd>
+</dl>
 
-Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad), para caracteristicas que le permitan acceder a la información mencionada.
+<p>Ver también las <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad">extensiones para la interfaz del navegador</a>, para caracteristicas que le permitan acceder a la información mencionada.</p>
 
-### Extensiones y otras interfaces
+<h3 id="Extensiones_y_otras_interfaces">Extensiones y otras interfaces</h3>
 
-#### Navigator
+<h4 id="Navigator">Navigator</h4>
 
-- {{domxref("Navigator.getGamepads()")}}
-  - : Una extensión a el objeto {{domxref("Navigator")}} que devuelve un arreglo de objetos {{domxref("Gamepad")}}, uno para cada gamepad conectado.
+<dl>
+ <dt>{{domxref("Navigator.getGamepads()")}}</dt>
+ <dd>Una extensión a el objeto {{domxref("Navigator")}} que devuelve un arreglo de objetos {{domxref("Gamepad")}}, uno para cada gamepad conectado.</dd>
+</dl>
 
-#### Eventos del Window
+<h4 id="Eventos_del_Window">Eventos del Window</h4>
 
-- {{domxref("Window.ongamepadconnected")}}
-  - : Representa un manejador de evento que se ejecutará cuando un gamepad es conectado (cuando se dispara el evento {{event('gamepadconnected')}}).
-- {{domxref("Window.ongamepaddisconnected")}}
-  - : Representa un manejador de evento que se ejecutará cuando un gamepad es desconectado (cuando se dispara el evento {{event('gamepaddisconnected')}}).
+<dl>
+ <dt>{{domxref("Window.ongamepadconnected")}}</dt>
+ <dd>Representa un manejador de evento que se ejecutará cuando un gamepad es conectado (cuando se dispara el evento {{event('gamepadconnected')}}).</dd>
+ <dt>{{domxref("Window.ongamepaddisconnected")}}</dt>
+ <dd>Representa un manejador de evento que se ejecutará cuando un gamepad es desconectado (cuando se dispara el evento {{event('gamepaddisconnected')}}).</dd>
+</dl>
 
-## Guías y tutoriales
+<h2 id="Guías_y_tutoriales">Guías y tutoriales</h2>
 
-- [Usando la gamepad API](/es/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-- [Implementación de controles usando la gamepad API](/es/docs/Games/Techniques/Controls_Gamepad_API)
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Usando la gamepad API</a></li>
+ <li><a href="/en-US/docs/Games/Techniques/Controls_Gamepad_API">Implementación de controles usando la gamepad API</a></li>
+</ul>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                   | Estatus                                  | Comentario                                                                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                               |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("GamepadExtensions")}}</td>
+   <td>{{Spec2("GamepadExtensions")}}</td>
+   <td>Defines the <a href="#experimental_gamepad_extensions">Experimental Gamepad extensions</a>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("Gamepad", "", "The Gamepad API specification")}}</td>
+   <td>{{Spec2("Gamepad")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("api.Gamepad")}}
 
-## Ver también
 
-- [La gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) por Ted Mielczarek y Robert Nyman
-- [Página de demostración simple de la API](http://luser.github.io/gamepadtest/) ([código fuente](https://github.com/luser/gamepadtest))
+<p>{{Compat("api.Gamepad")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a class="external text" href="https://hacks.mozilla.org/2013/12/the-gamepad-api/" rel="nofollow">La gamepad API</a> por Ted Mielczarek y Robert Nyman</li>
+ <li><a href="http://luser.github.io/gamepadtest/">Página de demostración simple de la API</a> (<a href="https://github.com/luser/gamepadtest">código fuente</a>)</li>
+</ul>

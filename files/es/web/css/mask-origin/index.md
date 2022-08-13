@@ -8,29 +8,30 @@ translation_of: Web/CSS/mask-origin
 translation_of_original: Web/CSS/-webkit-mask-origin
 original_slug: Web/CSS/-webkit-mask-origin
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-La propiedad [CSS](/es/docs/Web/CSS) `-webkit-mask-origin` determina el origen de una imagen de máscara. El valor de la propiedad {{cssxref("-webkit-mask-position")}} se interpreta en relación al valor de esta propiedad. No se aplica cuando `-webkit-mask-attachment` es `fixed`.
+<p>La propiedad  <a href="/es/docs/Web/CSS">CSS</a> <code>-webkit-mask-origin</code> determina el origen de una imagen de máscara. El valor de la propiedad {{cssxref("-webkit-mask-position")}} se interpreta en relación al valor de esta propiedad. No se aplica cuando <code>-webkit-mask-attachment</code> es <code>fixed</code>.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
 {{csssyntax}}
 
-## Valores
+<h2 id="Valores">Valores</h2>
 
-- padding
-  - : Valor por defecto. La posición de la imagen de máscara es relativa al padding (relleno). (Para cajas solas "`0 0`" es la esquina superior izquierda del límite del padding, "`100% 100%`" es la esquina inferior derecha.)
-- border
-  - : La posición de la imagen de máscara es relativa al borde.
-- content
-  - : La posición de la imagen de máscara es relativa al contenido.
+<dl>
+ <dt>padding</dt>
+ <dd>Valor por defecto. La posición de la imagen de máscara es relativa al padding (relleno). (Para cajas solas  "<code>0 0</code>" es la esquina superior izquierda del límite del padding, "<code>100% 100%</code>" es la esquina inferior derecha.)</dd>
+ <dt>border</dt>
+ <dd>La posición de la imagen de máscara es relativa al borde.</dd>
+ <dt>content</dt>
+ <dd>La posición de la imagen de máscara es relativa al contenido.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```css
-.example {
+<pre class="brush: css">.example {
   border: 10px double;
   padding: 10px;
   -webkit-mask-image: url('mask.png');
@@ -38,19 +39,18 @@ La propiedad [CSS](/es/docs/Web/CSS) `-webkit-mask-origin` determina el origen d
   /* La imagen de máscara estará dentro del padding */
   -webkit-mask-origin: content;
 }
-```
+</pre>
 
-```css
-div {
+<pre class="brush: css">div {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
   -webkit-mask-origin: padding, content;
 }
-```
+</pre>
 
-## Compatibilidad con los distintos navegadores.
+<h2 id="Compatibilidad_con_los_distintos_navegadores.">Compatibilidad con los distintos navegadores.</h2>
 
 {{Compat("css.properties.mask-origin")}}
 
-## Ver además
+<h2 id="Ver_además">Ver además</h2>
 
-{{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-image")}},{{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-clip")}}
+<p>{{cssxref("-webkit-mask")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-image")}},{{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-clip")}}</p>

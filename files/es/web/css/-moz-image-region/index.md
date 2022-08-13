@@ -8,26 +8,25 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-moz-image-region
 ---
-{{Non-standard_header}}{{CSSRef}}
+<div>{{Non-standard_header}}{{CSSRef}}</div>
 
-_Para sistemas que funcionan con cualquier fondo ver {{ Cssxref("-moz-image-rect") }}._
+<p><em>Para sistemas que funcionan con cualquier fondo ver {{ Cssxref("-moz-image-rect") }}.</em></p>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-Para cierto elementos y pseudo-elementos XUL que usan una imagen para la propiedad {{cssxref("list-style-image")}}, esta propiedad especifica la parte de una imagen que es usada en lugar en vez de la imagen completa. Esto permite a los elementos usar diferentes partes de la misma imagen para mejorar el rendimiento.
+<p>Para cierto elementos y pseudo-elementos XUL que usan una imagen para la propiedad {{cssxref("list-style-image")}}, esta propiedad especifica la parte de una imagen que es usada en lugar en vez de la imagen completa. Esto permite a los elementos usar diferentes partes de la misma imagen para mejorar el rendimiento.</p>
 
-La síntaxis es similar a la síntaxis de la propiedad {{cssxref("clip")}}. Los 4 valors son relativos la esquina superior izquierda de la imagen.
+<p>La síntaxis es similar a la síntaxis de la propiedad {{cssxref("clip")}}. Los 4 valors son relativos la esquina superior izquierda de la imagen.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```css
-#example-button {
+<pre class="brush:css">#example-button {
   /* muestra sólo el área 4x4 desde la esquina izquierda de esta imagen */
   list-style-image: url("chrome://example/skin/example.png");
   -moz-image-region: rect(0px, 4px, 4px, 0px);
@@ -35,5 +34,4 @@ La síntaxis es similar a la síntaxis de la propiedad {{cssxref("clip")}}. Los 
 #example-button:hover {
   /* muestra sólo el área 4x4 a la derecha del primero para cuando pongamos el ratón sobre el botón */
   -moz-image-region: rect(0px, 8px, 4px, 4px);
-}
-```
+}</pre>

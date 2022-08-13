@@ -9,59 +9,77 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-name
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<div>{{SeeCompatTable}}</div>
 
-La propiedad [CSS](/es/docs/CSS "CSS") animation-name especifica una lista de animaciones que se deben aplicar al elemento seleccionado. Cada nombre indica un {{cssxref("@keyframes")}} esta regla define los valores de las propiedades de la secuencia de animación.
+<h2 id="Resumen">Resumen</h2>
 
-A menudo es conveniente utilizar la propiedad abrevieda {{cssxref("animation")}} para ajustar todas las propiedades de animación a la vez.
+<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a> <span style="font-family: consolas,monaco,andale mono,monospace;">animation-name especifica una lista de animaciones que se deben aplicar al elemento seleccionado. Cada nombre indica un</span> {{cssxref("@keyframes")}} esta regla define los valores de las propiedades de la secuencia de animación.</p>
 
-{{cssinfo}}
+<p>A menudo es conveniente utilizar la propiedad abrevieda {{cssxref("animation")}} para ajustar todas las propiedades de animación a la vez.</p>
 
-## Sintaxis
+<p>{{cssinfo}}</p>
 
-    Sintaxis formal: {{csssyntax("animation-name")}}
+<h2 id="Sintaxis">Sintaxis</h2>
 
-<!---->
+<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Sintaxis formal</a>: {{csssyntax("animation-name")}}</pre>
 
-    animation-name: none;
-    animation-name: test_05;
-    animation-name: -specific;
-    animation-name: sliding-vertically;
+<pre>animation-name: none;
+animation-name: test_05;
+animation-name: -specific;
+animation-name: sliding-vertically;
 
-    animation-name: test1;
-    animation-name: test1, animation4;
-    animation-name: none, -moz-specific, sliding;
+animation-name: test1;
+animation-name: test1, animation4;
+animation-name: none, -moz-specific, sliding;
 
-    animation-name: initial;
-    animation-name: inherit;
-    animation-name: unset;
+animation-name: <a href="/en-US/docs/Web/CSS/initial">initial</a>;
+animation-name: <a href="/en-US/docs/Web/CSS/inherit">inherit</a>;
+animation-name: <a href="/en-US/docs/Web/CSS/unset">unset</a>;
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-`<single-animation-name>` es una de las siguientes palabras clave:
+<p><code>&lt;single-animation-name&gt;</code> es una de las siguientes palabras clave:</p>
 
-- `none`
-  - : Es una palabra clave especial que denota que no hay fotogramas (keyframes) clave. Se puede utilizar para desactivar una animación sin cambiar el orden de los otros identificadores, o para desactivar animaciones procedentes de las cascada.
-- {{cssxref("custom-ident","&lt;custom-ident&gt;")}}
-  - : Cadena que identifica la animación. Este identificador está compuesto por una combinación de letras mayúsculas y minúsculas de la "A"a la "Z", números del 0 al 9, guiones bajos "\_" y/o guiones "-". el primer caracter siempre debe ser una letra, ni un numero, excepto un guión (no se pueden poner dos guiones seguidos o más al principio del nombre.) No puede usarse `none`, `unset`, `initial`, o `inherit` ni ninguna combinación de estos casos.
+<dl>
+ <dt><code>none</code></dt>
+ <dd>Es una palabra clave especial que denota que no hay fotogramas (keyframes) clave. Se puede utilizar para desactivar una animación sin cambiar el orden de los otros identificadores, o para desactivar animaciones procedentes de las cascada.</dd>
+ <dt>{{cssxref("custom-ident","&lt;custom-ident&gt;")}}</dt>
+ <dd>Cadena que identifica la animación. Este identificador está compuesto por una combinación de letras mayúsculas y minúsculas de la "A"a la "Z", números del 0 al 9, guiones bajos "_" y/o guiones "-". el primer caracter siempre debe ser una letra, ni un numero, excepto un guión (no se pueden poner dos guiones seguidos o más al principio del nombre.) No puede usarse <code style="font-style: normal;">none</code>, <code style="font-style: normal;">unset</code>, <code style="font-style: normal;">initial</code>, o <code style="font-style: normal;">inherit</code> ni ninguna combinación de estos casos.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Ver ejemplos [CSS animations](/es/docs/CSS/CSS_animations "CSS/CSS_animations").
+<p>Ver ejemplos <a href="/en-US/docs/CSS/CSS_animations" title="CSS/CSS_animations">CSS animations</a>.</p>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                               | Estado                               | Comentario |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('CSS3 Animations', '#animation-name', 'animation-name')}} | {{Spec2('CSS3 Animations')}} |            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Animations', '#animation-name', 'animation-name')}}</td>
+   <td>{{Spec2('CSS3 Animations')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad en navegadores</h2>
 
 {{Compat("css.properties.animation-name")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- [Usando CSS animations](/es/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+<ul>
+ <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations" title="Tutorial about CSS animations">Usando CSS animations</a></li>
+ <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
+</ul>

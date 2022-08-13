@@ -10,53 +10,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/const
 original_slug: Web/JavaScript/Referencia/Sentencias/const
 ---
-{{jsSidebar("Statements")}}
+<div>{{jsSidebar("Statements")}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-Las variables constantes presentan un **ámbito de bloque** ([block ](/es/docs/Web/JavaScript/Referencia/Sentencias/block)scope) tal y como lo hacen las variables definidas usando la instrucción [let](/es/docs/Web/JavaScript/Referencia/Sentencias/let), con la particularidad de que el valor de una constante no puede cambiarse a través de la reasignación. Las constantes **no se pueden redeclarar**.
+<p>Las variables constantes presentan un <strong>ámbito de bloque </strong><font><font>(</font></font><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/block">block </a>scope<font><font>)</font></font> tal y como lo hacen las variables definidas usando la instrucción <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/let">let</a>, con la particularidad de que el valor de una constante no puede cambiarse a través de la reasignación. Las constantes <u>no se pueden redeclarar</u>.</p>
 
-> **Advertencia:** La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError "SyntaxError"). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
+<div class="warning">
+<p>La <strong>redeclaración</strong> de la misma variable bajo un mismo <font><font><a href="https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments" rel="noopener">ámbito léxico</a></font></font> terminaría en un error de tipo <code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError" title="SyntaxError">SyntaxError</a></code>. Esto también es <strong>extensible</strong> si usamos <code>var</code> dentro del <font><font>ámbito léxico</font></font>. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible  solo con <code>var.</code></p>
+</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    const varname1 = value1 [, varname2 = value2 [, varname3 = value3 [, ... [, varnameN = valueN]]]];
+<pre class="syntaxbox">const <em>varname1 = <em>value1 [</em>, <em>varname2</em> = <em>value2 [</em>, <em>varname3</em> = <em>value3 [</em>, ... [</em>, <em>varnameN</em> = <em>valueN]]]]</em>;</pre>
 
-- `varnameN`
-  - : Nombre de la constante. Puede ser un identificador legal.
+<dl>
+ <dt><code>varnameN</code></dt>
+ <dd>Nombre de la constante. Puede ser un identificador legal.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><code>valueN</code></dt>
+ <dd>Valor de la constante. Puede ser cualquier expresión legal.</dd>
+</dl>
 
-- `valueN`
-  - : Valor de la constante. Puede ser cualquier expresión legal.
+<h2 id="Descripción">Descripción</h2>
 
-## Descripción
+<p>Esta declaración crea una constante cuyo alcance puede ser <strong>global o local para el bloque en el que se declara</strong>. Es necesario <strong>inicializar</strong> la constante, es decir, se debe especificar su valor en la misma sentencia en la que se declara, lo que tiene sentido, dado que no se puede cambiar posteriormente.</p>
 
-Esta declaración crea una constante cuyo alcance puede ser **global o local para el bloque en el que se declara**. Es necesario **inicializar** la constante, es decir, se debe especificar su valor en la misma sentencia en la que se declara, lo que tiene sentido, dado que no se puede cambiar posteriormente.
+<p>La declaración de una constante crea una referencia de sólo lectura. No significa que el valor que tiene sea inmutable, sino que el identificador de variable no puede ser reasignado, por lo tanto, en el caso de que la asignación a la constante sea un objeto, el objeto sí que puede ser alterado.</p>
 
-La declaración de una constante crea una referencia de sólo lectura. No significa que el valor que tiene sea inmutable, sino que el identificador de variable no puede ser reasignado, por lo tanto, en el caso de que la asignación a la constante sea un objeto, el objeto sí que puede ser alterado.
+<p>Una constante <strong>no puede compartir su nombre</strong> con una función o variable en el mismo ámbito.</p>
 
-Una constante **no puede compartir su nombre** con una función o variable en el mismo ámbito.
+<p><font><font>Todas las consideraciones acerca de la " <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let#muerta">zona muerta temporal</a> " se aplican tanto a </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code><font><font>y</font></font><code>const</code><font><font>.</font></font></p>
 
-Todas las consideraciones acerca de la " [zona muerta temporal](/es/docs/Web/JavaScript/Referencia/Sentencias/let#muerta) " se aplican tanto a [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)y`const`.
+<div class="warning">
+<p><code>const</code> <s>es </s><u>fue</u> una <strong>extensión especifica de Mozilla</strong>, no <s>es</s> <u>era</u> soportado en IE, pero <s>tiene</s> <u>tenia</u> soporte parcial por Opera desde la versión 9.0 y por Safari.</p>
+</div>
 
-> **Advertencia:** `const` ~~es~~ **fue** una **extensión especifica de Mozilla**, no ~~es~~ **era** soportado en IE, pero ~~tiene~~ **tenia** soporte parcial por Opera desde la versión 9.0 y por Safari.
+<h2 id="Ejemplos">Ejemplos</h2>
 
-## Ejemplos
+<p>El siguiente ejemplo produce una salida <code>"a es 7."</code></p>
 
-El siguiente ejemplo produce una salida `"a es 7."`
-
-```js
-const a = 7;
+<pre class="brush: js">const a = 7;
 document.writeln("a es " + a + ".");
-```
+</pre>
 
-Las siguientes instrucciones demuestra como se comporta `const`
+<p>Las siguientes instrucciones demuestra como se comporta <code>const</code></p>
 
-> **Advertencia:** Las instrucciones deberán ser ordenadas correctamente para conseguir la salida esperada a los ejemplos
+<div class="warning">
+<p>Las instrucciones deberán ser ordenadas correctamente para conseguir la salida esperada a los ejemplos</p>
+</div>
 
-```js
-// NOTA: Las constantes pueden ser declaradas en mayusculas o minusculaas,
+<pre class="brush: js">// NOTA: Las constantes pueden ser declaradas en mayusculas o minusculaas,
 //pero por convencion para distinguirlas del resto de variables se escribe todo en mayusculas
 
 // definimos MY_FAV como constante y le damos un valor de 7
@@ -111,11 +117,12 @@ const MY_ARRAY = [];
 // es posible empujar elementos en el array
 MY_ARRAY.push('A'); // ["A"]
 // Sin embargo, asignar un nuevo array a la variable lanza error
-MY_ARRAY = ['B']
-```
+MY_ARRAY = ['B']</pre>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Sentencias/var", "var")}}
-- {{jsxref("Sentencias/let", "let")}}
-- [Constants in JavaScript Guide](/en/JavaScript/Guide/Values,_Variables,_and_Literals#Constants "en/JavaScript/Guide/Values, Variables, and Literals#Constants")
+<ul>
+ <li>{{jsxref("Sentencias/var", "var")}}</li>
+ <li>{{jsxref("Sentencias/let", "let")}}</li>
+ <li><a href="/en/JavaScript/Guide/Values,_Variables,_and_Literals#Constants" title="en/JavaScript/Guide/Values, Variables, and Literals#Constants">Constants in JavaScript Guide</a></li>
+</ul>

@@ -3,15 +3,16 @@ title: text-emphasis
 slug: Web/CSS/text-emphasis
 translation_of: Web/CSS/text-emphasis
 ---
-La **propiedad** **[CSS](/es/docs/Web/CSS)** de **text-emphasis**, es una propiedad _abreviada_ para establecer los valores de [text-empahasis-style](/es/docs/Web/CSS/text-emphasis-style) y [text-emphasis-color](/es/docs/Web/CSS/text-emphasis-color), en una sola declaración.
+<div>
+<p>La <strong>propiedad</strong> <strong><a href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a></strong>  de <strong>text-emphasis</strong>, es una propiedad <em>abreviada</em> para establecer los valores de <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis-style">text-empahasis-style</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis-color">text-emphasis-color</a>, en una sola declaración.</p>
 
-Esta **propiedad** aplicara el énfasis a cada carácter especificado en el texto del elemento, a excepción de caracteres separados como espacios y caracteres de control .
+<p>Esta <strong>propiedad</strong> aplicara el  énfasis a cada carácter especificado en el texto del elemento,  a excepción de caracteres separados como espacios y caracteres de control .</p>
+</div>
 
-```css
-/* Valor Inicial */
+<pre class="brush:css no-line-numbers">/* Valor Inicial */
 text-emphasis: none; /* No emphasis marks */
 
-/* <string> valor */
+/* &lt;string&gt; valor */
 text-emphasis: 'x';
 text-emphasis: '点';
 text-emphasis: '\25B2';
@@ -31,82 +32,97 @@ text-emphasis: filled sesame #555;
 text-emphasis: inherit;
 text-emphasis: initial;
 text-emphasis: unset;
-```
+</pre>
 
-La propiedad **text-emphasis** es diferente a la propiedad [text-decoration](/es/docs/Web/CSS/text-decoration).
+<p>La propiedad <strong>text-emphasis</strong> es diferente a la propiedad <a href="https://developer.mozilla.org/es/docs/Web/CSS/text-decoration">text-decoration</a>.</p>
 
-[Text-decoration](/es/docs/Web/CSS/text-decoration) no hereda y la decoración se aplica atreves de todo el elemento. Sin embargo, la propiedad **test-emphasis** si hereda, lo que significa que es posible cambiar el **énfasis** para los descendientes.
+<p><a href="https://developer.mozilla.org/es/docs/Web/CSS/text-decoration">Text-decoration</a> no hereda y la decoración se aplica atreves de todo el elemento. Sin embargo, la propiedad <strong>test-emphasis</strong> si hereda, lo que significa que es posible cambiar el <strong>énfasis</strong> para los descendientes.</p>
 
-The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
+<p>The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and <code>text-emphasis</code> may affect line height when the current leading is not enough for the marks.</p>
 
-> **Nota:** `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.
+<div class="note">
+<p><code>text-emphasis</code> doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, the property {{cssxref("text-emphasis-position")}}.</p>
+</div>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `none`
-  - : No emphasis marks.
-- `filled`
-  - : The shape is filled with solid color. If neither `filled` nor `open` is present, this is the default.
-- `open`
-  - : The shape is hollow.
-- `dot`
-  - : Display small circles as marks. The filled dot is `'•'` (`U+2022`), and the open dot is `'◦'` (`U+25E6`).
-- `circle`
-  - : Display large circles as marks. The filled circle is `'●'` (`U+25CF`), and the open circle is `'○'` (`U+25CB`). This is the default shape in horizontal writing modes when no other shape is given.
-- `double-circle`
-  - : Display double circles as marks. The filled double-circle is `'◉'` (`U+25C9`), and the open double-circle is `'◎'` (`U+25CE`).
-- `triangle`
-  - : Display triangles as marks. The filled triangle is `'▲'` (`U+25B2`), and the open triangle is `'△'` (`U+25B3`).
-- `sesame`
-  - : Display sesames as marks. The filled sesame is `'﹅'` (`U+FE45`), and the open sesame is `'﹆'` (`U+FE46`). This is the default shape in vertical writing modes when no other shape is given.
-- `<string>`
-  - : Display the given string as marks. Authors should not specify more than one _character_ in `<string>`. The UA may truncate or ignore strings consisting of more than one grapheme cluster.
-- `<color>`
-  - : Defines the color of the mark. If no color is present, it defaults to `currentColor`.
+<dl>
+ <dt><code>none</code></dt>
+ <dd>No emphasis marks.</dd>
+ <dt><code>filled</code></dt>
+ <dd>The shape is filled with solid color. If neither <code>filled</code> nor <code>open</code> is present, this is the default.</dd>
+ <dt><code>open</code></dt>
+ <dd>The shape is hollow.</dd>
+ <dt><code>dot</code></dt>
+ <dd>Display small circles as marks. The filled dot is <code>'•'</code> (<code>U+2022</code>), and the open dot is <code>'◦'</code> (<code>U+25E6</code>).</dd>
+ <dt><code>circle</code></dt>
+ <dd>Display large circles as marks. The filled circle is <code>'●'</code> (<code>U+25CF</code>), and the open circle is <code>'○'</code> (<code>U+25CB</code>). This is the default shape in horizontal writing modes when no other shape is given.</dd>
+ <dt><code>double-circle</code></dt>
+ <dd>Display double circles as marks. The filled double-circle is <code>'◉'</code> (<code>U+25C9</code>), and the open double-circle is <code>'◎'</code> (<code>U+25CE</code>).</dd>
+ <dt><code>triangle</code></dt>
+ <dd>Display triangles as marks. The filled triangle is <code>'▲'</code> (<code>U+25B2</code>), and the open triangle is <code>'△'</code> (<code>U+25B3</code>).</dd>
+ <dt><code>sesame</code></dt>
+ <dd>Display sesames as marks. The filled sesame is <code>'﹅'</code> (<code>U+FE45</code>), and the open sesame is <code>'﹆'</code> (<code>U+FE46</code>). This is the default shape in vertical writing modes when no other shape is given.</dd>
+ <dt><code>&lt;string&gt;</code></dt>
+ <dd>Display the given string as marks. Authors should not specify more than one<em> character</em> in <code>&lt;string&gt;</code>. The UA may truncate or ignore strings consisting of more than one grapheme cluster.</dd>
+ <dt><code>&lt;color&gt;</code></dt>
+ <dd>Defines the color of the mark. If no color is present, it defaults to <code>currentColor</code>.</dd>
+</dl>
 
-### Formal syntax
+<h3 id="Formal_syntax">Formal syntax</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### A heading with emphasis shape and color
+<h3 id="A_heading_with_emphasis_shape_and_color">A heading with emphasis shape and color</h3>
 
-This example draws a heading with triangles used to emphasize each character.
+<p>This example draws a heading with triangles used to emphasize each character.</p>
 
-#### CSS
+<h4 id="CSS">CSS</h4>
 
-```css
-h2 {
+<pre class="brush: css">h2 {
   text-emphasis: triangle #D55;
-}
-```
+}</pre>
 
-#### HTML
+<h4 id="HTML">HTML</h4>
 
-```html
-<h2>This is important!</h2>
-```
+<pre class="brush: html">&lt;h2&gt;This is important!&lt;/h2&gt;</pre>
 
-#### Resultado
+<h4 id="Resultado">Resultado</h4>
 
-{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 70)}}
+<p>{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 70)}}</p>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                                                | Status                                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Initial definition |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Text Decoration', '#text-emphasis-property', 'text-emphasis')}}</td>
+   <td>{{Spec2('CSS3 Text Decoration')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{Compat("css.properties.text-emphasis")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- The longhand properties {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis-color')}}.
-- The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.
+<ul>
+ <li>The longhand properties {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis-color')}}.</li>
+ <li>The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.</li>
+</ul>

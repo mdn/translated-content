@@ -9,68 +9,63 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-## Mensaje
+<h2 id="Mensaje">Mensaje</h2>
 
-    TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+<pre class="syntaxbox">TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+</pre>
 
-## Tipo de Error
+<h2 id="Tipo_de_Error">Tipo de Error</h2>
 
-{{jsxref("TypeError")}}
+<p>{{jsxref("TypeError")}}</p>
 
-## ¿Qué salió mal?
+<h2 id="¿Qué_salió_mal">¿Qué salió mal?</h2>
 
-El [operador `in` ](/es/docs/Web/JavaScript/Reference/Operators/in)puede ser usado sólo para verificar si una propiedad se encuentra en un objeto. No puede buscar en cadenas de caracteres, o en números, u otro tipo primitivo.
+<p>El <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in">operador <code>in</code> </a>puede ser usado sólo para verificar si una propiedad se encuentra en un objeto. No puede buscar en cadenas de caracteres, o en números, u otro tipo primitivo.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Buscando en cadenas de caracteres
+<h3 id="Buscando_en_cadenas_de_caracteres">Buscando en cadenas de caracteres</h3>
 
-A diferencia de otros lenguajes de programación (ej. Python), no puede buscar cadenas de texto usando el[ operator](/es/docs/Web/JavaScript/Reference/Operators/in) [`in`](/es/docs/Web/JavaScript/Reference/Operators/in).
+<p>A diferencia de otros lenguajes de programación (ej. Python), no puede buscar cadenas de texto usando el<a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"> operator</a> <a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code></a>.</p>
 
-```js example-bad
-"Hello" in "Hello World";
-// TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'
-```
+<pre class="brush: js example-bad">"Hello" in "Hello World";
+// TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'</pre>
 
-En su lugar, deberá usar {{jsxref("String.prototype.indexOf()")}}, por ejemplo.
+<p>En su lugar, deberá usar {{jsxref("String.prototype.indexOf()")}}, por ejemplo.</p>
 
-```js example-good
-"Hello World".indexOf("Hello") !== -1;
-// true
-```
+<pre class="brush: js example-good">"Hello World".indexOf("Hello") !== -1;
+// true</pre>
 
-### El operando no puede ser `null` o `undefined`
+<h3 id="El_operando_no_puede_ser_null_o_undefined">El operando no puede ser <code>null</code> o <code>undefined</code></h3>
 
-Asegúrese que el objeto que está inspeccionando no sea {{jsxref("null")}} o {{jsxref("undefined")}}.
+<p>Asegúrese que el objeto que está inspeccionando no sea {{jsxref("null")}} o {{jsxref("undefined")}}.</p>
 
-```js example-bad
-var foo = null;
+<pre class="brush: js example-bad">var foo = null;
 "bar" in foo;
 // TypeError: cannot use 'in' operator to search for 'bar' in 'foo'
-```
+</pre>
 
-El operador `in` siempre espera un objeto.
+<p>El operador <code>in</code> siempre espera un objeto.</p>
 
-```js example-good
-var foo = { baz: "bar" };
+<pre class="brush: js example-good">var foo = { baz: "bar" };
 "bar" in foo; // false
 
 "PI" in Math; // true
 "pi" in Math; // false
-```
+</pre>
 
-### Buscando en arreglos
+<h3 id="Buscando_en_arreglos">Buscando en arreglos</h3>
 
-Tenga cuidado cuando use el operador `in` para buscar en objetos {{jsxref("Array")}}. El operador `in` verifica el índice numérico, no el valor de dicho índice.
+<p>Tenga cuidado cuando use el operador <code>in</code> para buscar en objetos {{jsxref("Array")}}. El operador <code>in</code> verifica el índice numérico, no el valor de dicho índice.</p>
 
-```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 3 in trees; // true
-"oak" in trees; // false
-```
+"oak" in trees; // false</pre>
 
-## Vea también
+<h2 id="Vea_también">Vea también</h2>
 
-- [`in` operator](/es/docs/Web/JavaScript/Reference/Operators/in)
+<ul>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a></li>
+</ul>

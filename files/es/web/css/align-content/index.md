@@ -6,22 +6,21 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/align-content
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad [CSS](/es/docs/CSS "CSS") `align-content` ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal.
+<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a> <code>align-content</code> ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal.</p>
 
-Esta propiedad no tiene efecto en cajas flexibles de una sola línea.
+<p>Esta propiedad no tiene efecto en cajas flexibles de una sola línea.</p>
 
-{{cssinfo}}
+<div>{{cssinfo}}</div>
 
-Vea [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS "CSS/Using_CSS_flexible_boxes") para más propiedades e información.
+<p>Vea <a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS" title="CSS/Using_CSS_flexible_boxes">Usando las cajas flexibles CSS</a> para más propiedades e información.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-```css
-/* Ajusta las líneas desde el inicio del eje transversal */
+<pre class="brush: css">/* Ajusta las líneas desde el inicio del eje transversal */
 align-content: flex-start;
 
 /* Ajusta las líneas desde el final del eje transversal */
@@ -43,94 +42,93 @@ align-content: stretch;
 align-content: inherit;
 align-content: initial;
 align-content: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `flex-start`
-  - : Las líneas son ajustadas a partir del inicio del eje transversal. El borde transversal de inicio de la primera línea y el del contenedor flexible quedan unidos. Cada línea siguiente es unida a su predecesora.
-- `flex-end`
-  - : Las líneas son ajustadas a partir del final del eje transversal. El borde transversal final de la última línea y el del contenedor flexible quedan unidos. Cada línea que precede es unida a la línea siguiente.
-- `center`
-  - : Las líneas son ajustadas hacia el centro del contenedor flexible. Las líneas son unidas entre sí, y centradas dentro del contenedor. El espacio entre el borde transversal de inicio y la primera línea, y el que hay entre el borde transversal final y la última línea es el mismo.
-- `space-between`
-  - : Las líneas son distribuidas de manera uniforme en el contenedor flexible. El espaciado se hace de modo que la separación entre cualquier par de elementos adyacentes sea el mismo. Los bordes transversales de inicio y de fin del contenedor son unidos a los bordes de la primera y última línea, respectivamente.
-- `space-around`
-  - : Las líneas son distribuidas uniformemente de modo que el espacio entre cualquier par de elementos adyacentes sea el mismo. El espacio vacío antes de la primera línea y el espacio después de la última es igual a la mitad del espacio entre cualquier par de líneas adyacentes.
-- `stretch`
-  - : Las líneas son estiradas para usar el espacio sobrante. El espacio libre en el contenedor es dividido por igual entre todas las líneas.
+<dl>
+ <dt><code>flex-start</code></dt>
+ <dd>Las líneas son ajustadas a partir del inicio del eje transversal. El borde transversal de inicio de la primera línea y el del contenedor flexible quedan unidos. Cada línea siguiente es unida a su predecesora.</dd>
+ <dt><code>flex-end</code></dt>
+ <dd>Las líneas son ajustadas a partir del final del eje transversal. El borde transversal final de la última línea y el del contenedor flexible quedan unidos. Cada línea que precede es unida a la línea siguiente.</dd>
+ <dt><code>center</code></dt>
+ <dd>Las líneas son ajustadas hacia el centro del contenedor flexible. Las líneas son unidas entre sí, y centradas dentro del contenedor. El espacio entre el borde transversal de inicio y la primera línea, y el que hay entre el borde transversal final y la última línea es el mismo.</dd>
+ <dt><code>space-between</code></dt>
+ <dd>Las líneas son distribuidas de manera uniforme en el contenedor flexible. El espaciado se hace de modo que la separación entre cualquier par de elementos adyacentes sea el mismo. Los bordes transversales de inicio y de fin del contenedor son unidos a los bordes de la primera y última línea, respectivamente.</dd>
+ <dt><code>space-around</code></dt>
+ <dd>Las líneas son distribuidas uniformemente de modo que el espacio entre cualquier par de elementos adyacentes sea el mismo. El espacio vacío antes de la primera línea y el espacio después de la última es igual a la mitad del espacio entre cualquier par de líneas adyacentes.</dd>
+ <dt><code>stretch</code></dt>
+ <dd>Las líneas son estiradas para usar el espacio sobrante. El espacio libre en el contenedor es dividido por igual entre todas las líneas.</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-**HTML:**
+<p><strong>HTML:</strong></p>
 
-```html
-<div id="container">
-  <p>align-content: flex-start</p>
-  <div id="flex-start">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <p>align-content: center</p>
-  <div id="center">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <p>align-content: flex-end</p>
-  <div id="flex-end">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <p>align-content: space-between</p>
-  <div id="space-between">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <p>align-content: space-around</p>
-  <div id="space-around">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <p>align-content: stretch</p>
-  <div id="stretch">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-```
+<pre class="brush: html">&lt;div id="container"&gt;
+  &lt;p&gt;align-content: flex-start&lt;/p&gt;
+  &lt;div id="flex-start"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;align-content: center&lt;/p&gt;
+  &lt;div id="center"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;align-content: flex-end&lt;/p&gt;
+  &lt;div id="flex-end"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;align-content: space-between&lt;/p&gt;
+  &lt;div id="space-between"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;align-content: space-around&lt;/p&gt;
+  &lt;div id="space-around"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;align-content: stretch&lt;/p&gt;
+  &lt;div id="stretch"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
 
-**CSS:**
+<p><strong>CSS:</strong></p>
 
-```css
-#container > div {
+<pre class="brush: css">#container &gt; div {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -141,7 +139,7 @@ align-content: unset;
   background: linear-gradient(-45deg, #78ff8c, #b4ffc8);
 }
 
-#container > div > div {
+#container &gt; div &gt; div {
   margin: 2px;
   width: 30px;
   min-height: 30px;
@@ -176,23 +174,37 @@ align-content: unset;
 #stretch {
   -webkit-align-content: stretch;
   align-content: stretch;
-}
-```
+}</pre>
 
-Su resultado es:
+<p>Su resultado es:</p>
 
-{{ EmbedLiveSample('Examples', 600, 550) }}
+<p>{{ EmbedLiveSample('Examples', 600, 550) }}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                           | Comentarios        |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#align-content', 'align-content')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Flexbox', '#align-content', 'align-content')}}</td>
+   <td>{{Spec2('CSS3 Flexbox')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 {{Compat("css.properties.align-content")}}
 
-## Véase también
+<h2 id="Véase_también">Véase también</h2>
 
-- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS "CSS/Using_CSS_flexible_boxes")
+<ul>
+ <li><a href="/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS" title="CSS/Using_CSS_flexible_boxes">Usando las cajas flexibles CSS</a></li>
+</ul>

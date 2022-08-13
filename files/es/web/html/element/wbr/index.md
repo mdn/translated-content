@@ -9,38 +9,60 @@ tags:
 translation_of: Web/HTML/Element/wbr
 original_slug: Web/HTML/Elemento/wbr
 ---
-{{HTMLRef}}El elemento HTML _word break opportunity_ `<wbr`_`>`_ representa una posición dentro del texto donde el explorador puede opcionalmente saltar una línea , aunque sus reglas de salto de línea de otra manera no crearían un salto en esa posición .En páginas codificadas en UTF-8 , \<wbr> se comporta como el punto de código ` U+200B`` ZERO-WIDTH SPACE  `. En particular se comporta como un punto de código unicode bidi BN , significando esto que no tiene efecto en ordenamiento bidi : `<div dir=rtl>123,<wbr>456</div> `muestra , cuando no se rompa en dos líneas , 123, 456 y no 456 , 123 .
+<div>{{HTMLRef}}</div>
 
-Por la misma razón el elemento `<wbr>` no introduce un guión en el salto de línea . Para hacer aparecer un guión solo al final de la línea , usar la entidad de caracter del guión de separación (`& shy;`) en su lugar.
+<div>El elemento HTML <em>word break opportunity </em><font face="Consolas, Liberation Mono, Courier, monospace"><code>&lt;wbr</code></font><em><font face="Consolas, Liberation Mono, Courier, monospace"><code>&gt;</code></font></em> representa una posición dentro del texto donde el explorador puede opcionalmente saltar una línea , aunque sus reglas de salto de línea de otra manera no crearían un salto en esa posición .</div>
 
-Este elemento fue implementado por primera vez en Internet Explorer 5.5 y fue oficialmente definido en HTML5 .
+<div> </div>
 
-## Contexto de uso
+<div>En páginas codificadas en UTF-8 , <font face="Consolas, Liberation Mono, Courier, monospace">&lt;wbr&gt; </font>se comporta como el punto de código <code>U+200B</code><code> ZERO-WIDTH SPACE </code>. En particular se comporta como un punto de código unicode bidi BN , significando esto que no tiene efecto en ordenamiento bidi : <code>&lt;div dir=rtl&gt;123,&lt;wbr&gt;456&lt;/div&gt; </code>muestra , cuando no se rompa en dos líneas , 123, 456 y no 456 , 123 .</div>
 
-| Contenido permitido        | Vacío                                                                                                                      |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas       | Es un {{Glossary("empty element")}}; debe de tener una etiqueta de inicio pero no debe de tener una de cierre . |
-| Elementos padre permitidos | Cualquier elemento que permita contenido estático de texto.                                                                |
-| Documento normativo        | [HTML 5, section 4.6.24](http://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element)                           |
+<div> </div>
 
-## Atributos
+<p>Por la misma razón el elemento <code>&lt;wbr&gt;</code> no introduce un guión en el salto de línea  .  Para hacer aparecer un guión solo al final de la línea , usar la entidad de caracter del  guión de separación  (<code>&amp;﻿shy;</code>) en su lugar.</p>
 
-Este elemento solo incluye los[ atributos globales](/es/docs/Web/HTML/Atributos_Globales) .
+<p>Este elemento fue implementado por primera vez en Internet Explorer 5.5 y fue oficialmente definido en HTML5 .</p>
 
-## Interfase DOM
+<h2 id="Contexto_de_uso">Contexto de uso</h2>
 
-## Este elemento implementa la interface [HTMLElement ](/es/docs/Web/API/HTMLElement).
+<table class="standard-table" style="font-size: 14px; font-weight: normal; line-height: 1.5;">
+ <tbody>
+  <tr>
+   <td>Contenido permitido</td>
+   <td>Vacío</td>
+  </tr>
+  <tr>
+   <td>Omisión de etiquetas</td>
+   <td>Es un  {{Glossary("empty element")}}; debe de tener una etiqueta de inicio pero no debe de tener una de cierre .</td>
+  </tr>
+  <tr>
+   <td>Elementos padre permitidos</td>
+   <td>Cualquier elemento que permita  contenido estático de texto.</td>
+  </tr>
+  <tr>
+   <td>Documento normativo</td>
+   <td><a class="external" href="http://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element">HTML 5, section 4.6.24</a></td>
+  </tr>
+ </tbody>
+</table>
 
-## Ejemplo
+<h2 id="Atributos">Atributos</h2>
 
-La [guia de estilo de Yahoo ](http://styleguide.yahoo.com/)recomienda [romper una URL antes de la puntuación](https://shopping.yahoo.com/9780312569846-yahoo-style-guide/) , para evitar dejar una marca de puntuación en el final de la línea , lo cual el lector podría confundir con el final de la URL .
+<p>Este elemento solo incluye los<a href="/es/docs/Web/HTML/Atributos_Globales"> atributos globales</a> .</p>
 
-```html
-<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
-```
+<h2 id="Interfase_DOM">Interfase DOM</h2>
 
-{{EmbedLiveSample("Example")}}
+<h2 id="Este_elemento_implementa_la_interface_HTMLElement_."><span style="font-size: 14px; font-weight: normal; line-height: 21px;">Este elemento implementa la interface <a href="/es/docs/Web/API/HTMLElement">HTMLElement </a>. </span></h2>
 
-## Compatibilidad en exploradores
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<p>La <a href="http://styleguide.yahoo.com/">guia de estilo de Yahoo </a>recomienda <a href="https://shopping.yahoo.com/9780312569846-yahoo-style-guide/">romper una URL antes de la puntuación</a> , para evitar dejar una marca de puntuación en el final de la línea , lo cual el lector podría confundir con el final de la URL .</p>
+
+<pre class="brush: html">&lt;p&gt;http://this&lt;wbr&gt;.is&lt;wbr&gt;.a&lt;wbr&gt;.really&lt;wbr&gt;.long&lt;wbr&gt;.example&lt;wbr&gt;.com/With&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;/p&gt;
+</pre>
+
+<p>{{EmbedLiveSample("Example")}}</p>
+
+<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores</h2>
 
 {{Compat("html.elements.wbr")}}

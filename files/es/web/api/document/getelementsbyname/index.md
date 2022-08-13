@@ -3,58 +3,79 @@ title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
 translation_of: Web/API/Document/getElementsByName
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-Returns a nodelist collection with a given {{domxref("element.name","name")}} in the (X)HTML document.
+<p>Returns a nodelist collection with a given {{domxref("element.name","name")}} in the (X)HTML document.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    elements = document.getElementsByName(name)
+<pre class="syntaxbox"><em>elements</em> = document.getElementsByName(<em>name</em>)
+</pre>
 
-- `elements` es una colección existente de {{domxref("NodeList")}}
-- `name` es el valor del atributo `name` del elemento.
+<ul>
+ <li><code>elements</code> es una colección existente de {{domxref("NodeList")}}</li>
+ <li><code>name</code> es el valor del atributo <code>name</code> del elemento.</li>
+</ul>
 
-## Ejemplo
+<h2 id="Example" name="Example">Ejemplo</h2>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
  ...
-</head>
+&lt;/head&gt;
 
-<body>
-<form name="up"><input type="text"></form>
-<div name="down"><input type="text"></div>
+&lt;body&gt;
+&lt;form name="up"&gt;&lt;input type="text"&gt;&lt;/form&gt;
+&lt;div name="down"&gt;&lt;input type="text"&gt;&lt;/div&gt;
 
-<script>
+&lt;script&gt;
 var up_forms = document.getElementsByName("up");
 console.log(up_forms[0].tagName); // returns "FORM"
-</script>
-</body>
-</html>
-```
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-El atributo [`name`](/es/docs/DOM/element.name) es solamente aplicable al documento (X)HTML. El método retorna una colección existente de {{domxref("NodeList")}} que contiene todos los elementos con el valor dado para el atributo `name`, tanto {{htmlelement("meta")}} o {{htmlelement("object")}} o en caso que `name` sea colocado en elementos que no soportan un atributo de atributo del todo.
+<p>El atributo <a href="/en-US/docs/DOM/element.name"><code>name</code></a> es solamente aplicable al documento (X)HTML. El método retorna una colección existente de {{domxref("NodeList")}} que contiene todos los elementos con el valor dado para el atributo <code>name</code>, tanto {{htmlelement("meta")}} o {{htmlelement("object")}} o en caso que <code>name</code> sea colocado en elementos que no soportan un atributo de atributo del todo.</p>
 
-El método **getElementsByName** trabaja de diferente manera en diferentes navegadires. En IE < 10, el método getElementsByName() tambipen retornará elementos que tienen un atributo `id` con el valor especificado. Entonces, debería tener cuidado de no usar el mismo string como `name` y `ID`.
+<p>El método <strong>getElementsByName</strong> trabaja de diferente manera en diferentes navegadires. En IE &lt; 10, el método getElementsByName() tambipen retornará elementos que tienen un atributo <code>id</code> con el valor especificado. Entonces, debería tener cuidado de no usar el mismo string como <code>name</code> y <code>ID</code>.</p>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-- [DOM Level 2 HTML: getElementsByName](http://www.w3.org/TR/DOM-Level-2-HTML/)
-- [HTML5: getElementsByName](http://www.whatwg.org/html/#dom-document-getelementsbyname)
+<ul>
+ <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/">DOM Level 2 HTML: getElementsByName</a></li>
+ <li><a href="http://www.whatwg.org/html/#dom-document-getelementsbyname">HTML5: getElementsByName</a></li>
+</ul>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificaciones                                                                                                             | estado                               | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | Initial definition |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificaciones</th>
+   <th scope="col">estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}}</td>
+   <td>{{ Spec2('HTML WHATWG') }}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}</td>
+   <td>{{Spec2("DOM2 HTML")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Mira también
+<h2 id="See_also" name="See_also">Mira también</h2>
 
-- {{domxref("document.getElementById()")}} para retornar una referencia de un elemento por su `id`
-- {{domxref("document.getElementsByTagName()")}} para retornar referencias de elementos por el nombre de sus etiquetas
-- {{domxref("document.querySelector()")}} for powerful selectors via queries like `'div.myclass'`
+<ul>
+ <li>{{domxref("document.getElementById()")}} para retornar una referencia de un elemento por su <code>id</code></li>
+ <li>{{domxref("document.getElementsByTagName()")}} para retornar referencias de elementos por el nombre de sus etiquetas</li>
+ <li>{{domxref("document.querySelector()")}} for powerful selectors via queries like <code>'div.myclass'</code></li>
+</ul>

@@ -7,14 +7,13 @@ tags:
   - Referencia
 translation_of: Web/CSS/column-span
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-La propiedad **`column-span`** [CSS](/es/docs/Web/CSS) hace posible que un elemento se extienda sobre todas las columnas cuando su valor se establece a `all`.
+<p>La propiedad <strong><code>column-span</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> hace posible que un elemento se extienda sobre todas las columnas cuando su valor se establece a <code>all</code>.</p>
 
-{{EmbedInteractiveExample("pages/css/column-span.html")}}
+<div>{{EmbedInteractiveExample("pages/css/column-span.html")}}</div>
 
-```css
-/* Keyword values */
+<pre class="brush:css no-line-numbers">/* Keyword values */
 column-span: none;
 column-span: all;
 
@@ -22,64 +21,79 @@ column-span: all;
 column-span: inherit;
 column-span: initial;
 column-span: unset;
-```
+</pre>
 
-A un elemento que se extiende más de una columna se le llama elemento extendido (_spanning element)_.
+<p>A un elemento que se extiende más de una columna se le llama elemento extendido (<em>spanning element)</em>.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-La propiedad `column-span` se especifica como una de las palabras clave listadas a continuación.
+<p>La propiedad <code>column-span</code> se especifica como una de las palabras clave listadas a continuación.</p>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `none`
-  - : El elemento no se extiende en sobre varias columnas.
-- `all`
-  - : El elemento se extiende sobre todas las columnas. El contenido en el flujo normal que aparece antes del elemento se equilibra automáticamente en todas las columnas antes de que aparezca el elemento. El elemento establece un nuevo contexto de formato de bloque..
+<dl>
+ <dt><code>none</code></dt>
+ <dd>El elemento no se extiende en sobre varias columnas.</dd>
+ <dt><code>all</code></dt>
+ <dd>El elemento se extiende sobre todas las columnas. El contenido en el flujo normal que aparece antes del elemento se equilibra automáticamente en todas las columnas antes de que aparezca el elemento. El elemento establece un nuevo contexto de formato de bloque..</dd>
+</dl>
 
-### Sintaxis formal
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-En este ejemplo, la cabecera se expande sobre todas las columnas del artículo.
+<p>En este ejemplo, la cabecera se expande sobre todas las columnas del artículo.</p>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<article>
-  <h2>My Very Special Columns</h2>
-  <p>This is a bunch of text split into three columns
+<pre class="brush: html">&lt;article&gt;
+  &lt;h2&gt;My Very Special Columns&lt;/h2&gt;
+  &lt;p&gt;This is a bunch of text split into three columns
      using the CSS `columns` property. The text
-     is equally distributed over the columns.</p>
-</article>
-```
+     is equally distributed over the columns.&lt;/p&gt;
+&lt;/article&gt;
+</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-article {
+<pre class="brush:css">article {
   columns: 3;
 }
 
 h2 {
   column-span: all;
 }
-```
+</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-{{EmbedLiveSample('Example', 'auto', 120)}}
+<p>{{EmbedLiveSample('Example', 'auto', 120)}}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                   | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('CSS3 Multicol', '#column-span', 'column-span')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Multicol', '#column-span', 'column-span')}}</td>
+   <td>{{Spec2('CSS3 Multicol')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("css.properties.column-span")}}
+
+
+<p>{{Compat("css.properties.column-span")}}</p>

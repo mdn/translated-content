@@ -10,26 +10,39 @@ tags:
   - timeOrigin
 translation_of: Web/API/Performance/timeOrigin
 ---
-{{SeeCompatTable}}{{APIRef("High Resolution Time")}}
+<p>{{SeeCompatTable}}{{APIRef("High Resolution Time")}}</p>
 
-La propiedad de solo lectura **`timeOrigin`** de la inferfaz {{domxref("Performance")}} devuelve una marca de tiempo de alta precisión del inicio de medida de rendimiento.
+<p>La propiedad de solo lectura <strong><code>timeOrigin</code></strong> de la inferfaz {{domxref("Performance")}} devuelve una marca de tiempo de alta precisión del inicio de medida de rendimiento.</p>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    var timeOrigin = performance.timeOrigin
+<pre class="syntaxbox">var <em>timeOrigin</em> = performance.timeOrigin</pre>
 
-### Valor
+<h3 id="Valor">Valor</h3>
 
-Una marca de tiempo de alta precisión.
+<p>Una marca de tiempo de alta precisión.</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                           | Estado                                       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| {{SpecName('Highres Time Level 2','#dom-performance-timeorigin','timeOrigin')}} | {{Spec2('Highres Time Level 2')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Highres Time Level 2','#dom-performance-timeorigin','timeOrigin')}}</td>
+   <td>{{Spec2('Highres Time Level 2')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad de navegadores
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-{{Compat("api.Performance.timeOrigin")}}
+<div>
+
+
+<p>{{Compat("api.Performance.timeOrigin")}}</p>
+</div>

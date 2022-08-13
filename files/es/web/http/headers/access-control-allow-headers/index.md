@@ -8,53 +8,84 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-El encabezado de respuesta **`Access-Control-Allow-Headers`** es usado en la respuesta a una {{glossary("preflight request", "solicitud preflight")}} para indicar cuáles encabezados HTTP pueden ser usados durante dicha solicitud.
+<p>El encabezado de respuesta <strong><code>Access-Control-Allow-Headers</code></strong> es usado en la respuesta  a una {{glossary("preflight request", "solicitud preflight")}} para indicar cuáles encabezados HTTP pueden ser usados durante dicha solicitud.</p>
 
-Los {{glossary("simple header", "encabezados simples")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} (pero sólo con un tipo MIME de sus valores analizados (ignorando los parámetros) de cualquier `application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`), siempre están disponibles y no necesitan ser incluidos por este encabezado.
+<p>Los {{glossary("simple header", "encabezados simples")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} (pero sólo con un tipo MIME de sus valores analizados (ignorando los parámetros) de cualquier <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, o <code>text/plain</code>), siempre están disponibles y no necesitan ser incluidos por este encabezado.</p>
 
-Este encabezado es necesario si la solicitud tiene un encabezado {{HTTPHeader("Access-Control-Request-Headers")}}.
+<p>Este encabezado es necesario si la solicitud tiene un encabezado {{HTTPHeader("Access-Control-Request-Headers")}}.</p>
 
-| Tipo de encabezado                                                                               | {{Glossary("Response header", "Encabezado de respuesta")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "Nombre de encabezado prohibido")}} | no                                                                           |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Tipo de encabezado</th>
+   <td>{{Glossary("Response header", "Encabezado de respuesta")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "Nombre de encabezado prohibido")}}</th>
+   <td>no</td>
+  </tr>
+ </tbody>
+</table>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    Access-Control-Allow-Headers: <nombre-de-encabezado>, <nombre-de-encabezado>, ...
+<pre class="syntaxbox">Access-Control-Allow-Headers: &lt;nombre-de-encabezado&gt;, &lt;nombre-de-encabezado&gt;, ...
+</pre>
 
-## Directivas
+<h2 id="Directivas">Directivas</h2>
 
-- \<nombre-de-encabezado>
-  - : Lista de los encabezados soportados separados por una coma.
+<dl>
+ <dt>&lt;nombre-de-encabezado&gt;</dt>
+ <dd>Lista de los encabezados soportados separados por una coma.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-    Access-Control-Allow-Headers: X-Custom-Header
+<pre>Access-Control-Allow-Headers: X-Custom-Header</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Specification                                                                                                            | Status                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | Definición inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}}</td>
+   <td>{{Spec2("Fetch")}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("http.headers.Access-Control-Allow-Headers")}}
+<p>{{Compat("http.headers.Access-Control-Allow-Headers")}}</p>
 
-## Notas de compatibilidad
+<h2 id="Notas_de_compatibilidad">Notas de compatibilidad</h2>
 
-- El carácter comodín (\*) que es mencionado en la última especificación, todavía no está implementado en los navegadores:
+<ul>
+ <li>El carácter comodín (*) que es mencionado en la última especificación, todavía no está implementado en los navegadores:
+  <ul>
+   <li>Chromium: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=615313">Issue 615313</a></li>
+   <li>Firefox: {{bug(1309358)}}</li>
+   <li>Servo: <a href="https://github.com/servo/servo/issues/13283">Issue 13283</a></li>
+   <li>WebKit: <a href="https://bugs.webkit.org/show_bug.cgi?id=165508">Issue 165508</a></li>
+  </ul>
+ </li>
+</ul>
 
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
-  - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
+<h2 id="Véase_también">Véase también</h2>
 
-## Véase también
-
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Access-Control-Request-Headers")}}
+<ul>
+ <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
+ <li>{{HTTPHeader("Access-Control-Expose-Headers")}}</li>
+ <li>{{HTTPHeader("Access-Control-Allow-Methods")}}</li>
+ <li>{{HTTPHeader("Access-Control-Request-Headers")}}</li>
+</ul>

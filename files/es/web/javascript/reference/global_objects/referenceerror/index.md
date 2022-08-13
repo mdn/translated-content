@@ -12,36 +12,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 original_slug: Web/JavaScript/Referencia/Objetos_globales/ReferenceError
 ---
-{{JSRef("Objetos_globales", "ReferenceError")}}
+<div>{{JSRef("Objetos_globales", "ReferenceError")}}</div>
 
-El objeto **`ReferenceError`** representa un error cuando se hace referencia a una variable inexistente.
+<p>El objeto <strong><code>ReferenceError</code></strong> representa un error cuando se hace referencia a una variable inexistente.</p>
 
-## Constructor
+<h2 id="Constructor">Constructor</h2>
 
-- [`ReferenceError()`](/es/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError)
-  - : Crea un nuevo objeto `ReferenceError`.
+<dl>
+ <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError"><code>ReferenceError()</code></a></dt>
+ <dd>Crea un nuevo objeto <code>ReferenceError</code>.</dd>
+</dl>
 
-## Propiedades de la instancia
+<h2 id="Propiedades_de_la_instancia">Propiedades de la instancia</h2>
 
-- {{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}
-  - : Mensaje de error. Aunque ECMA-262 especifica que {{jsxref("ReferenceError")}} debe proporcionar su propia propiedad `message`, en [`SpiderMonkey`](/es/docs/Mozilla/Projects/SpiderMonkey), hereda {{jsxref("Error.prototype.message")}}.
-- {{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}
-  - : Nombre del error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}}
-  - : Ruta al archivo que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}}
-  - : Número de línea en el archivo que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "ReferenceError.prototype.columnNumber")}}
-  - : Número de columna en la línea que generó este error. Heredado de {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}}
-  - : Seguimiento de la pila. Heredado de {{jsxref("Error")}}.
+<dl>
+ <dt>{{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}</dt>
+ <dd>Mensaje de error. Aunque ECMA-262 especifica que {{jsxref("ReferenceError")}} debe proporcionar su propia propiedad <code>message</code>, en <a href="/es/docs/Mozilla/Projects/SpiderMonkey"><code>SpiderMonkey</code></a>, hereda {{jsxref("Error.prototype.message")}}.</dd>
+ <dt>{{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}</dt>
+ <dd>Nombre del error. Heredado de {{jsxref("Error")}}.</dd>
+ <dt>{{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}}</dt>
+ <dd>Ruta al archivo que generó este error. Heredado de {{jsxref("Error")}}.</dd>
+ <dt>{{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}}</dt>
+ <dd>Número de línea en el archivo que generó este error. Heredado de {{jsxref("Error")}}.</dd>
+ <dt>{{jsxref("Error.prototype.columnNumber", "ReferenceError.prototype.columnNumber")}}</dt>
+ <dd>Número de columna en la línea que generó este error. Heredado de {{jsxref("Error")}}.</dd>
+ <dt>{{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}}</dt>
+ <dd>Seguimiento de la pila. Heredado de {{jsxref("Error")}}.</dd>
+</dl>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Capturar un `ReferenceError`
+<h3 id="Capturar_un_ReferenceError">Capturar un <code>ReferenceError</code></h3>
 
-```js
-try {
+<pre class="brush: js notranslate">try {
   let a = undefinedVariable
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -52,12 +55,11 @@ try {
   console.log(e.columnNumber)               // 6
   console.log(e.stack)                      // "@Scratchpad/2:2:7\n"
 }
-```
+</pre>
 
-### Crear un `ReferenceError`
+<h3 id="Crear_un_ReferenceError">Crear un <code>ReferenceError</code></h3>
 
-```js
-try {
+<pre class="brush: js notranslate">try {
   throw new ReferenceError('Hola', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -68,18 +70,31 @@ try {
   console.log(e.columnNumber)               // 0
   console.log(e.stack)                      // "@Scratchpad/2:2:9\n"
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("javascript.builtins.ReferenceError")}}
+<div>
 
-## Ve también
 
-- {{jsxref("Error")}}
+<p>{{Compat("javascript.builtins.ReferenceError")}}</p>
+</div>
+
+<h2 id="Ve_también">Ve también</h2>
+
+<ul>
+ <li>{{jsxref("Error")}}</li>
+</ul>

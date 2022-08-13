@@ -4,44 +4,42 @@ slug: Web/JavaScript/Reference/Global_Objects/String/Trim
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/Trim
 ---
-{{JSRef("Global_Objects", "String")}}
+<div>{{JSRef("Global_Objects", "String")}}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-El método **trim( )** elimina los espacios en blanco en ambos extremos del string. Los espacios en blanco en este contexto, son todos los caracteres sin contenido (espacio, tabulación, etc.) y todos los caracteres de nuevas lineas (LF,CR,etc.).
+<p>El método <strong>trim( )</strong> elimina los espacios en blanco en ambos extremos del string. Los espacios en blanco en este contexto, son todos los caracteres sin contenido (espacio, tabulación, etc.) y todos los caracteres de nuevas lineas (LF,CR,etc.).</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    str.trim()
+<pre class="syntaxbox"><code><var>str</var>.trim()</code></pre>
 
-Una nueva cadena que representa la cadena de llamada sin espacios en blanco de ambos extremos.
+<p>Una nueva cadena que representa la cadena de llamada sin espacios en blanco de ambos extremos.</p>
 
-## Descripción
+<h2 id="Description" name="Description">Descripción</h2>
 
-El método **trim( )** devuelve la cadena de texto despojada de los espacios en blanco en ambos extremos. El método no afecta al valor de la cadena de texto.
+<p>El método <strong>trim( ) </strong>devuelve la cadena de texto despojada de los espacios en blanco en ambos extremos. El método no afecta al valor de la cadena de texto.</p>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-### Ejemplo: Uso de `trim()`
+<h3 id="Example:_Using_trim" name="Example:_Using_trim">Ejemplo: Uso de <code>trim()</code></h3>
 
-El siguiente ejemplo muestra la cadena de texto en minúsculas 'foo':
+<p>El siguiente ejemplo muestra la cadena de texto en minúsculas 'foo':</p>
 
-```js
-var orig = '   foo  ';
+<pre class="brush: js">var orig = '   foo  ';
 console.log(orig.trim()); // 'foo'
 
 // Otro ejemplo de .trim() eliminando el espacio en blanco sólo de un lado.
 
 var orig = 'foo    ';
 console.log(orig.trim()); // 'foo'
-```
+</pre>
 
-## Polyfill
+<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
 
-Ejecutar el siguiente código antes de cualquier otro código creará un trim ( ) si este no está disponible de manera nativa.
+<p>Ejecutar el siguiente código antes de cualquier otro código creará un trim ( ) si este no está disponible de manera nativa.</p>
 
-```js
-if (!String.prototype.trim) {
+<pre class="brush: js">if (!String.prototype.trim) {
   (function() {
     // Make sure we trim BOM and NBSP
     var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
@@ -50,20 +48,39 @@ if (!String.prototype.trim) {
     };
   })();
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                       | Estatus                  | Comentario                                            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}                 | {{Spec2('ES5.1')}} | Definición inicial. Implementado en JavaScript 1.8.1. |
-| {{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}} | {{Spec2('ES6')}}     |                                                       |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}</td>
+   <td>{{Spec2('ES5.1')}}</td>
+   <td>
+    <p>Definición inicial. Implementado en JavaScript 1.8.1.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en Navegadores
+<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
 
 {{Compat("javascript.builtins.String.trim")}}
 
-## Ver también
+<h2 id="See_also" name="See_also">Ver también</h2>
 
-- {{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}
-- {{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}
+<ul>
+ <li>{{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}</li>
+ <li>{{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}</li>
+</ul>

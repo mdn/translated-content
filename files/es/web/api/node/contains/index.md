@@ -8,35 +8,49 @@ tags:
   - metodo
 translation_of: Web/API/Node/contains
 ---
-{{APIRef("DOM")}}
+<div>{{APIRef("DOM")}}</div>
 
-El método **`Node.contains()`** devuelve un valor {{jsxref("Boolean")}} indicando si un nodo es descendiente de un nodo dado o no, por ejemplo, el propio nodo, uno de sus hijos directos (({{domxref("Node.childNodes", "childNodes")}})), uno de los hijos directos de su nodo hijo, etc.
+<p>El método <strong><code>Node.contains()</code></strong> devuelve un valor {{jsxref("Boolean")}} indicando si un nodo es descendiente de un nodo dado o no, por ejemplo, el propio nodo, uno de sus hijos directos (({{domxref("Node.childNodes", "childNodes")}})), uno de los hijos directos de su nodo hijo, etc.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    node.contains( otroNodo )
+<pre class="syntaxbox">node.contains( otroNodo )
+</pre>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-Esta función verifica si un un elemento esté en el cuerpo de la página. Como `contains` es inclusivo y determinar si el cuerpo se contiene a sí mismo no es la intención de `isInPage` este caso explícitamente devuelve `false`.
+<p>Esta función verifica si un un elemento esté en el cuerpo de la página. Como <code>contains</code> es inclusivo y determinar si el cuerpo se contiene a sí mismo no es la intención de  <code>isInPage</code> este caso explícitamente devuelve <code>false</code>.</p>
 
-```js
-function isInPage(node) {
+<pre class="brush:js">function isInPage(node) {
   return (node === document.body) ? false : document.body.contains(node);
-}
-```
+}</pre>
 
-## Especificaciones
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
-| Especificación                                                                           | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-node-contains", "Node.contains()")}} | {{Spec2("DOM WHATWG")}} | Definición inicial |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("DOM WHATWG", "#dom-node-contains", "Node.contains()")}}</td>
+   <td>{{Spec2("DOM WHATWG")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("api.Node.contains")}}
+<p>{{Compat("api.Node.contains")}}</p>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{domxref("Node.compareDocumentPosition")}}
-- {{domxref("Node.hasChildNodes")}}
+<ul>
+ <li>{{domxref("Node.compareDocumentPosition")}}</li>
+ <li>{{domxref("Node.hasChildNodes")}}</li>
+</ul>

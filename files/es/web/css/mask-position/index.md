@@ -10,46 +10,47 @@ translation_of: Web/CSS/mask-position
 translation_of_original: Web/CSS/-webkit-mask-position
 original_slug: Web/CSS/-webkit-mask-position
 ---
-{{CSSRef}}{{Non-standard_header}}
+<div>{{CSSRef}}{{Non-standard_header}}</div>
 
-## Sumario
+<h2 id="Sumario">Sumario</h2>
 
-    la propiedad CSS -webkit-mask-position fija la posición inicial de una máscara de imagen.
+<pre>la propiedad CSS -webkit-mask-position fija la posición inicial de una máscara de imagen.</pre>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
 {{csssyntax}}
 
-## Valores
+<h2 id="Valores">Valores</h2>
 
-Acepta uno o dos valores. Se permiten valores negativos para {{cssxref("&lt;percentage&gt;")}} y {{cssxref("&lt;length&gt;")}}.
+<p> Acepta uno o dos valores.  Se permiten valores negativos para {{cssxref("&lt;percentage&gt;")}} y {{cssxref("&lt;length&gt;")}}.</p>
 
-- Si sólo se especifica un valor, el segundo valor se supone que es center.
-- El primer valor representa la posición horizontal y el segundo la posición vertical (si al menos un valor no es una palabra clave).
+<ul>
+ <li>Si sólo se especifica un valor, el segundo valor se supone que es center.</li>
+ <li>El primer valor representa la posición horizontal y el segundo la posición vertical (si al menos un valor no es una palabra clave).</li>
+</ul>
 
-<!---->
+<dl>
+ <dt><code>&lt;percentage&gt;</code></dt>
+ <dd>Con un par de valores  0% 0%,  (es igual a 0 0) la esquina superior izquierda de la imagen se alinea con la esquina superior izquierda del borde del relleno del cuadro. Un valor par de 100% 100% coloca la esquina inferior derecha de la imagen  en la esquina inferior derecha del zona del relleno. Con un par de valores de 14% 84%, el punto del 14%  a lo largo y el 84% hacia abajo de la imagen son situados el punto del 14%  a lo largo y el 84% del área del relleno.</dd>
+ <dt><code>&lt;length&gt;</code></dt>
+ <dd>Con un par de valores 2cm 1cm, la esquina superior izquierda de la imagen se coloca a 2cm a la derecha y 1cm por debajo de la esquina superior izquierda del área del relleno.</dd>
+ <dt><code><strong>top</strong></code></dt>
+ <dd>Equivalente al 0% para la posición vertical.</dd>
+ <dt><code><strong>right</strong></code></dt>
+ <dd>Equivalente al 100% para la posición horizontal.</dd>
+ <dt><code><strong>bottom</strong></code></dt>
+ <dd>Equivalente al 100% para la posición vertical.</dd>
+ <dt><code><strong>left</strong></code></dt>
+ <dd>Equivalente al 0% para la posición horizontal.</dd>
+ <dt><code><strong>center</strong></code></dt>
+ <dd>Equivalente al 50% para la posición horizontal si no se da otra forma, o 50% para la posición vertical si lo es.</dd>
+</dl>
 
-- `<percentage>`
-  - : Con un par de valores 0% 0%, (es igual a 0 0) la esquina superior izquierda de la imagen se alinea con la esquina superior izquierda del borde del relleno del cuadro. Un valor par de 100% 100% coloca la esquina inferior derecha de la imagen en la esquina inferior derecha del zona del relleno. Con un par de valores de 14% 84%, el punto del 14% a lo largo y el 84% hacia abajo de la imagen son situados el punto del 14% a lo largo y el 84% del área del relleno.
-- `<length>`
-  - : Con un par de valores 2cm 1cm, la esquina superior izquierda de la imagen se coloca a 2cm a la derecha y 1cm por debajo de la esquina superior izquierda del área del relleno.
-- **`top`**
-  - : Equivalente al 0% para la posición vertical.
-- **`right`**
-  - : Equivalente al 100% para la posición horizontal.
-- **`bottom`**
-  - : Equivalente al 100% para la posición vertical.
-- **`left`**
-  - : Equivalente al 0% para la posición horizontal.
-- **`center`**
-  - : Equivalente al 50% para la posición horizontal si no se da otra forma, o 50% para la posición vertical si lo es.
+<h2 id="Ejemplos">Ejemplos</h2>
 
-## Ejemplos
-
-```css
-.exampleOne {
+<pre class="brush:css">.exampleOne {
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position: bottom right;
 }
@@ -58,16 +59,16 @@ Acepta uno o dos valores. Se permiten valores negativos para {{cssxref("&lt;perc
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position: 25%;
 }
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-No forma parte de ninguna especificación.
+<p>No forma parte de ninguna especificación.</p>
 
-## Compatibilidad con los distintos nevegadores
+<h2 id="Compatibilidad_con_los_distintos_nevegadores">Compatibilidad con los distintos nevegadores</h2>
 
 {{Compat("css.properties.mask-position")}}
 
-## Ver tambien
+<h2 id="Ver_tambien">Ver tambien</h2>
 
-{{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}
+<p>{{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-box-image")}}, {{cssxref("-webkit-mask-attachment")}}, {{cssxref("-webkit-mask-clip")}}, {{cssxref("-webkit-mask-image")}}, {{cssxref("-webkit-mask-composite")}}, {{cssxref("-webkit-mask-repeat")}}</p>

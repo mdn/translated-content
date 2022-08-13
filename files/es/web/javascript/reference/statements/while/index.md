@@ -7,47 +7,53 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/while
 original_slug: Web/JavaScript/Referencia/Sentencias/while
 ---
-{{jsSidebar("Statements")}}
+<div>{{jsSidebar("Statements")}}</div>
 
-## Resumen
+<h2 id="Resumen" name="Resumen">Resumen</h2>
 
-Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar la sentencia
+<p>Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar la sentencia</p>
 
-## Sintaxis
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
-    while (condicion)
-      sentencia
+<pre class="eval">while (<em>condicion</em>)
+  <em>sentencia</em>
+</pre>
 
-- `condicion`
-  - : Una expresión que se evalúa antes de cada paso del bucle. Si esta condición se evalúa como verdadera, se ejecuta `sentencia`. Cuando la condición se evalúa como false, la ejecución continúa con la `sentencia `posterior al bucle `while`.
+<dl>
+ <dt><code>condicion</code></dt>
+ <dd>Una expresión que se evalúa antes de cada paso del bucle. Si esta condición se evalúa como verdadera, se ejecuta <code>sentencia</code>. Cuando la condición se evalúa como false, la ejecución continúa con la <code>sentencia </code>posterior al bucle <code>while</code>.</dd>
+</dl>
 
-<!---->
+<dl>
+ <dt><code>sentencia</code></dt>
+ <dd>Una sentecia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro de un bucle, utiliza una sentencia {{jsxref("Sentencias/block", "block")}} (<code>{ ... }</code>) para agrupar esas sentencias.</dd>
+</dl>
 
-- `sentencia`
-  - : Una sentecia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro de un bucle, utiliza una sentencia {{jsxref("Sentencias/block", "block")}} (`{ ... }`) para agrupar esas sentencias.
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
 
-## Ejemplos
+<p>El siguiente bucle <code>while</code> itera mientras <code>n</code> es menor que tres.</p>
 
-El siguiente bucle `while` itera mientras `n` es menor que tres.
-
-```js
-n = 0;
+<pre class="brush: js">n = 0;
 x = 0;
-while (n < 3) {
+while (n &lt; 3) {
   n ++;
   x += n;
 }
-```
+</pre>
 
-Cada interación, el bucle incrementa `n` y la añade a `x`. Por lo tanto, `x` y `n` toman los siguientes valores:
+<p>Cada interación, el bucle incrementa <code>n</code> y la añade a <code>x</code>. Por lo tanto, <code>x</code> y <code>n</code> toman los siguientes valores:</p>
 
-- Después del primer pase: `n` = 1 y `x` = 1
-- Después del segundo pase: `n` = 2 y `x` = 3
-- Después del tercer pase: `n` = 3 y `x` = 6
+<ul>
+ <li>Después del primer pase: <code>n</code> = 1 y <code>x</code> = 1</li>
+ <li>Después del segundo pase: <code>n</code> = 2 y <code>x</code> = 3</li>
+ <li>Después del tercer pase: <code>n</code> = 3 y <code>x</code> = 6</li>
+</ul>
 
-Después de completar el tercer pase, la condición `n` < 3 no será verdadera más tiempo, por lo que el bucle terminará.
+<p>Después de completar el tercer pase, la condición <code>n</code> &lt; 3 no será verdadera más tiempo, por lo que el bucle terminará.</p>
 
-## Vea También
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
 
-- {{jsxref("Sentencias/do...while", "do...while")}}
-- {{jsxref("Sentencias/for", "for")}}
+<ul>
+ <li>{{jsxref("Sentencias/do...while", "do...while")}}</li>
+ <li>{{jsxref("Sentencias/for", "for")}}</li>
+</ul>

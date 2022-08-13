@@ -7,36 +7,39 @@ tags:
 translation_of: Web/XSLT/Element/key
 original_slug: Web/XSLT/key
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-El elemento `<xsl:key>` declara una llave con nombre la cual puede ser usada en otro lugar dentro de la hoja de estilo usando la función `key( )`.
+<p><br>
+ El elemento <code>&lt;xsl:key&gt;</code> declara una llave con nombre la cual puede ser usada en otro lugar dentro de la hoja de estilo usando la función <code>key( )</code>.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    <xsl:key name=NOMBRE match=EXPRESIÓN
-    	use=EXPRESIÓN />
+<pre>&lt;xsl:key name=NOMBRE match=EXPRESIÓN
+	use=EXPRESIÓN /&gt; </pre>
 
-### Atributos requeridos
+<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
 
-- `name`
-  - : Indica el nombre para esta llave. Debe seguir las reglas de tipo QName.
-- `match`
-  - : Define el nodo para el que esta llave aplica.
-- `use`
-  - : Indica la expresión XPath que se usará para determinar el valor de la llave para cada uno de los nodos aplicables.
+<dl>
+ <dt><code>name</code></dt>
+ <dd>Indica el nombre para esta llave. Debe seguir las reglas de tipo QName.</dd>
+ <dt><code>match</code></dt>
+ <dd>Define el nodo para el que esta llave aplica.</dd>
+ <dt><code>use</code></dt>
+ <dd>Indica la expresión XPath que se usará para determinar el valor de la llave para cada uno de los nodos aplicables.</dd>
+</dl>
 
-### Atributos opcionales
+<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-### Tipo
+<h3 id="Tipo" name="Tipo">Tipo</h3>
 
-Elemento raíz, debe ser hijo del elemento `<xsl:stylesheet>` o del elemento `<xsl:transform>`.
+<p>Elemento raíz, debe ser hijo del elemento <code>&lt;xsl:stylesheet&gt;</code> o del elemento <code>&lt;xsl:transform&gt;</code>.</p>
 
-### Definido
+<h3 id="Definido" name="Definido">Definido</h3>
 
-XSLT, sección 12.2.
+<p>XSLT, sección 12.2.</p>
 
-### Soporte en Gecko
+<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
 
-Soportado.
+<p>Soportado.</p>

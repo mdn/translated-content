@@ -1,6 +1,6 @@
 ---
 title: ':first'
-slug: Web/CSS/:first
+slug: 'Web/CSS/:first'
 tags:
   - '@page'
   - CSS
@@ -8,73 +8,90 @@ tags:
   - Pseudo-clase
   - Referencia
   - Web
-translation_of: Web/CSS/:first
+translation_of: 'Web/CSS/:first'
 ---
-{{CSSRef}}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:first` de [CSS](/es/docs/Web/CSS), utilizada con la [regla-at](/es/docs/Web/CSS/At-rule) {{cssxref("@page")}}, representa la primera página de un documento impreso.
+<div>{{CSSRef}}</div>
 
-```css
-/* Selecciona la primera página al imprimir */
+<div>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <code>:first</code> de <a href="/es/docs/Web/CSS">CSS</a>, utilizada con la <a href="/es/docs/Web/CSS/At-rule">regla-at</a> {{cssxref("@page")}}, representa la primera página de un documento impreso.</div>
+
+<div> </div>
+
+<pre class="brush: css">/* Selecciona la primera página al imprimir */
 @page :first {
   margin-left: 50%;
   margin-top: 50%;
-}
-```
+}</pre>
 
-> **Nota:** No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, {{cssxref("orphans")}}, {{cssxref("widows")}} y saltos de página del documento. Además, solo puede usar unidades de [longitud absoluta](/es/docs/Web/CSS/length#Absolute_length_units) al definir los márgenes. Todas las otras propiedades serán ignoradas.
+<div class="note"><strong>Nota:</strong> No puede cambiar todas las propiedades de CSS con esta pseudoclase. Solo puede cambiar los márgenes, {{cssxref("orphans")}}, {{cssxref("widows")}} y saltos de página del documento. Además, solo puede usar unidades de <a href="/es/docs/Web/CSS/length#Absolute_length_units">longitud absoluta</a> al definir los márgenes. Todas las otras propiedades serán ignoradas.</div>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
 {{csssyntax}}
 
-## Ejemplo
+<h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-```html
-<p>Primera página.</p>
-<p>Segunda página.</p>
-<button>Imprimir!</button>
-```
+<pre class="brush: html">&lt;p&gt;Primera página.&lt;/p&gt;
+&lt;p&gt;Segunda página.&lt;/p&gt;
+&lt;button&gt;Imprimir!&lt;/button&gt;</pre>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-```css
-@page :first {
+<pre class="brush: css">@page :first {
   margin-left: 50%;
   margin-top: 50%;
 }
 
 p {
   page-break-after: always;
-}
-```
+}</pre>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-```js
-document.querySelector("button").onclick = function () {
+<pre class="brush: js">document.querySelector("button").onclick = function () {
   window.print();
-}
-```
+}</pre>
 
-### Resultado
+<h3 id="Resultado">Resultado</h3>
 
-Presione el botón "Imprimir!" para imprimir el ejemplo. Las palabras en la primera página deben estar en algún lugar del centro, mientras que otras páginas tendrán sus contenidos en la posición predeterminada.
+<p>Presione el botón "Imprimir!" para imprimir el ejemplo. Las palabras en la primera página deben estar en algún lugar del centro, mientras que otras páginas tendrán sus contenidos en la posición predeterminada.</p>
 
-{{ EmbedLiveSample('Ejemplo', '80%', '150px') }}
+<p>{{ EmbedLiveSample('Ejemplo', '80%', '150px') }}</p>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                       | Estado                                   | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}} | {{Spec2('CSS3 Paged Media')}} | Ningún cambio.      |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}     | {{Spec2('CSS2.1')}}                 | Definición Inicial. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}}</td>
+   <td>{{Spec2('CSS3 Paged Media')}}</td>
+   <td>Ningún cambio.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Definición Inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("css.selectors.first")}}
+<p>{{Compat("css.selectors.first")}}</p>
 
-## Ver también
+<div id="compat-mobile"> </div>
 
-- {{Cssxref("@page")}}
-- Otras pseudo-clases relacionadas con página: {{Cssxref(":left")}}, {{Cssxref(":right")}}
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{Cssxref("@page")}}</li>
+ <li>Otras pseudo-clases relacionadas con página: {{Cssxref(":left")}}, {{Cssxref(":right")}}</li>
+</ul>

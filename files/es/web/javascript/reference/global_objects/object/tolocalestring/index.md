@@ -4,93 +4,104 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/toLocaleString
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-El método **`toLocaleString()`** devuelve un string que representa a un objeto. Este método está pensado para ser redefinido en los objetos derivados, para los propósitos específicos de cada configuración regional.
+<p>El método <code><strong>toLocaleString()</strong></code> devuelve un string que representa a un objeto. Este método está pensado para ser redefinido en los objetos derivados, para los propósitos específicos de cada configuración regional.</p>
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
+<div>{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}</div>
 
-## Sintaxis
 
-    objeto.toLocaleString()
 
-### Valor de retorno
+<h2 id="Sintaxis">Sintaxis</h2>
 
-Un string que representa al objeto.
+<pre class="syntaxbox notranslate"><var>objeto</var>.toLocaleString()</pre>
 
-## Descripción
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-{{jsxref("Object")}}'s `toLocaleString` devuelve el resultado de llamar a {{jsxref("Object.toString", "toString()")}}.
+<p>Un string que representa al objeto.</p>
 
-Se proporciona esta función para que los objetos dispongan de un método `toLocaleString` genérico, aunque puede que no todos la utilicen. Véase la lista siguiente.
+<h2 id="Descripción">Descripción</h2>
 
-### Objetos que redefinen `toLocaleString`
+<p>{{jsxref("Object")}}'s <code>toLocaleString</code> devuelve el resultado de llamar a {{jsxref("Object.toString", "toString()")}}.</p>
 
-- {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("TypedArray")}}: {{jsxref("TypedArray.prototype.toLocaleString()")}}
-- {{jsxref("BigInt")}}: {{jsxref("BigInt.prototype.toLocaleString()")}}
+<p>Se proporciona esta función para que los objetos dispongan de un método <code>toLocaleString</code> genérico, aunque puede que no todos la utilicen. Véase la lista siguiente.</p>
 
-## Ejemplos
+<h3 id="Objetos_que_redefinen_toLocaleString">Objetos que redefinen <code>toLocaleString</code></h3>
 
-### Redefinición de toLocaleString() en Array
+<ul>
+ <li>{{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("TypedArray")}}: {{jsxref("TypedArray.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("BigInt")}}: {{jsxref("BigInt.prototype.toLocaleString()")}}</li>
+</ul>
 
-En los objetos [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) se puede utilizar [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString) para imprimir los valores del _array_ como un string, con indicadores opcionales de configuración regional (como símbolos de moneda) aplicados.
+<h2 id="Ejemplos">Ejemplos</h2>
 
-Por ejemplo:
+<h3 id="Redefinición_de_toLocaleString_en_Array">Redefinición de toLocaleString() en Array</h3>
 
-```js
-const unArray = [4, 7, 10];
+<p>En los objetos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> se puede utilizar <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString">toLocaleString()</a></code> para imprimir los valores del <em>array</em> como un string, con indicadores opcionales de configuración regional (como símbolos de moneda) aplicados.</p>
+
+<p>Por ejemplo:</p>
+
+<pre class="brush: js notranslate">const unArray = [4, 7, 10];
 
 let preciosEnEuros = unArray.toLocaleString('fr', { style: 'currency', currency: 'EUR'});
-// "4,00 €,7,00 €,10,00 €"
-```
+// "4,00 €,7,00 €,10,00 €"</pre>
 
-### Redefinición de toLocaleString() para Date
+<h3 id="Redefinición_de_toLocaleString_para_Date">Redefinición de toLocaleString() para Date</h3>
 
-En los objetos [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) se usa [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) para imprimir fechas en un formato adecuado a la configuración regional.
+<p>En los objetos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> se usa <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString">toLocaleString()</a></code> para imprimir fechas en un formato adecuado a la configuración regional.</p>
 
-Por ejemplo:
+<p>Por ejemplo:</p>
 
-```js
-const unaFecha = new Date(Date.now());
-// "2020-07-07T19:51:44.046Z"
+<pre class="brush: js notranslate">const unaFecha = new Date(Date.now());
+// <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox"><span class="objectTitle">"</span>2020-07-07T19:51:44.046Z<span class="Date">"
 
-let fechaAleman = unaFecha.toLocaleString('de');
+</span></span></span></span></span>let fechaAleman = unaFecha.toLocaleString('de');
 // "7.7.2020, 21:55:22"
 
 var fechaFrances= unaFecha.toLocaleString('fr');
-//"07/07/2020 à 21:55:22"
-```
+//"07/07/2020 à 21:55:22"</pre>
 
-### Redefinición de toLocaleString() para Number
+<h3 id="Redefinición_de_toLocaleString_para_Number">Redefinición de toLocaleString() para Number</h3>
 
-En los objetos [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) se usa [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) para imprimir números de forma adecuada a la configuración regional, p. ej. para usar los separadores de miles correctos.
+<p>En los objetos <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> se usa <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString">toLocaleString()</a></code> para imprimir números de forma adecuada a la configuración regional, p. ej. para usar los separadores de miles correctos.</p>
 
-Por ejemplo:
+<p>Por ejemplo:</p>
 
-```js
-const unNumero = 2901234564;
-// "2901234564"
+<pre class="brush: js notranslate">const unNumero = 2901234564;
+// <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-number">"2901234564"
 
-let numeroAleman = unNumero.toLocaleString('de');
+</span></span></span></span>let numeroAleman = unNumero.toLocaleString('de');
 // "2.901.234.564"
 
 let numeroFrances = unNumero.toLocaleString('fr');
-// "2 901 234 564"
-```
+// "2 901 234 564"</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-{{Compat("javascript.builtins.Object.toLocaleString")}}
 
-## Ver también
 
-- {{jsxref("Object.prototype.toString()")}}
+<p>{{Compat("javascript.builtins.Object.toLocaleString")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toString()")}}</li>
+</ul>

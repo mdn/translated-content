@@ -5,18 +5,23 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/removeAllRanges
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Quita todos los rangos de la selección, dejando las propiedades [anchorNode](es/DOM/Selection/anchorNode) y [focusNode](es/DOM/Selection/focusNode) con un valor `null` (nulo) y dejando nada seleccionado.
+<p>Quita todos los rangos de la selección, dejando las propiedades <a href="es/DOM/Selection/anchorNode">anchorNode</a> y <a href="es/DOM/Selection/focusNode">focusNode</a> con un valor <code>null</code> (nulo) y dejando nada seleccionado.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    sel.removeAllRanges();
+<pre class="eval"><i>sel</i>.removeAllRanges();
+</pre>
 
-### Parámetros
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
 
-Ninguno.
+<p>Ninguno.</p>
 
-{{ languages( { "en": "en/DOM/Selection/removeAllRanges", "it": "it/DOM/Selection/removeAllRanges", "pl": "pl/DOM/Selection/removeAllRanges" } ) }}
+<p> </p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/DOM/Selection/removeAllRanges", "it": "it/DOM/Selection/removeAllRanges", "pl": "pl/DOM/Selection/removeAllRanges" } ) }}</p>

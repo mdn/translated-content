@@ -7,42 +7,48 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/str/tokenize
 ---
-{{XsltRef}}
+<p>{{XsltRef}}</p>
 
-`str:tokenize()` divide una cadena usando un conjunto de caracteres como delimitadores que determinan donde deberían ocurrir las divisiones, devolviendo un conjunto de nodos que contiene las cadenas resultantes.
+<p><br>
+ <code>str:tokenize()</code> divide una cadena usando un conjunto de caracteres como delimitadores que determinan donde deberían ocurrir las divisiones, devolviendo un conjunto de nodos que contiene las cadenas resultantes.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    str:tokenize(cadena,delimitadores)
+<pre class="eval">str:tokenize(<em>cadena</em>,<em>delimitadores</em>)
+</pre>
 
-### Argumentos
+<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
 
-- `cadena`
-  - : La cadena a dividir.
-- `delimitadores`
-  - : Cada uno de los caracteres de esta cadena usados como separadores de palabras en la división.
+<dl>
+ <dt><code><em>cadena</em></code></dt>
+ <dd>La cadena a dividir.</dd>
+ <dt><code><em>delimitadores</em></code></dt>
+ <dd>Cada uno de los caracteres de esta cadena usados como separadores de palabras en la división.</dd>
+</dl>
 
-### Devuelve
+<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
 
-Un conjunto de nodos de elementos `token`, que contiene cada uno un trozo (token) de la `cadena`.
+<p>Un conjunto de nodos de elementos <code>token</code>, que contiene cada uno un trozo (token) de la <code><em>cadena</em></code>.</p>
 
-Por ejemplo:
+<p>Por ejemplo:</p>
 
-    str:tokenize('2007-09-14-03T11:40:23', '-T:')
+<pre class="eval">str:tokenize('2007-09-14-03T11:40:23', '-T:')
+</pre>
 
-Devuelve un conjunto de nodos como este:
+<p>Devuelve un conjunto de nodos como este:</p>
 
-    <token>2007</token>
-    <token>09</token>
-    <token>14</token>
-    <token>11</token>
-    <token>40</token>
-    <token>23</token>
+<pre class="eval">&lt;token&gt;2007&lt;/token&gt;
+&lt;token&gt;09&lt;/token&gt;
+&lt;token&gt;14&lt;/token&gt;
+&lt;token&gt;11&lt;/token&gt;
+&lt;token&gt;40&lt;/token&gt;
+&lt;token&gt;23&lt;/token&gt;
+</pre>
 
-### Definido en
+<h3 id="Definido_en" name="Definido_en">Definido en</h3>
 
-[EXSLT - STR:TOKENIZE](http://www.exslt.org/str/functions/tokenize/index.html)
+<p><a class="external" href="http://www.exslt.org/str/functions/tokenize/index.html">EXSLT - STR:TOKENIZE</a></p>
 
-### Implementación en Gecko
+<h3 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h3>
 
-Implementado en Gecko 1.9 y posteriores.
+<p>Implementado en Gecko 1.9 y posteriores.</p>

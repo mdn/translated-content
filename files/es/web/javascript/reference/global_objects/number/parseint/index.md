@@ -6,60 +6,76 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/parseInt
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-The **`Number.parseInt()`** method parses a string argument and returns an integer of the specified radix or base.
+<p>The <strong><code>Number.parseInt()</code></strong> method parses a string argument and returns an integer of the specified radix or base.</p>
 
-The **`Number.parseInt()`** El método Number.parseInt () analiza un argumento de cadena y devuelve un entero de la raíz o base especificada.
+<p>The <strong><code>Number.parseInt()</code></strong> El método Number.parseInt () analiza un argumento de cadena y devuelve un entero de la raíz o base especificada.</p>
 
-{{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
+<div>{{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}</div>
 
-## Syntax
 
-    Number.parseInt(string,[ radix])
 
-### Parameters
+<h2 id="Syntax">Syntax</h2>
 
-- `string`
-  - : The value to parse. If this argument is not a string, then it is converted to one using the [`ToString`](https://tc39.es/ecma262/#sec-tostring) abstract operation. Leading whitespace in this argument is ignored.
-- `radix`_ {{optional_inline}}_
-  - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. Be careful—this does **_not_** default to `10`!
+<pre class="syntaxbox">Number.parseInt(<var>string,</var>[ <var>radix</var>])</pre>
 
-### Return value
+<h3 id="Parameters">Parameters</h3>
 
-An integer parsed from the given `string`.
+<div>
+<dl>
+ <dt><code><var>string</var></code></dt>
+ <dd>The value to parse. If this argument is not a string, then it is converted to one using the <code><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></code> abstract operation. Leading whitespace in this argument is ignored.</dd>
+ <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
+ <dd>An integer between <code>2</code> and <code>36</code> that represents the <em>radix</em> (the base in mathematical numeral systems) of the <code><var>string</var></code>. Be careful—this does <strong><em>not</em></strong> default to <code>10</code>!</dd>
+</dl>
+</div>
 
-If the `radix` is smaller than `2` or bigger than `36`, and the first non-whitespace character cannot be converted to a number, {{jsxref("NaN")}} is returned.
+<h3 id="Return_value">Return value</h3>
 
-## Description
+<p>An integer parsed from the given <code><var>string</var></code>.</p>
 
-This method has the same functionality as the global {{jsxref("parseInt", "parseInt()")}} function:
+<p>If the <code><var>radix</var></code> is smaller than <code>2</code> or bigger than <code>36</code>, and the first non-whitespace character cannot be converted to a number, {{jsxref("NaN")}} is returned.</p>
 
-```js
-Number.parseInt === parseInt // true
-```
+<h2 id="Description">Description</h2>
 
-and is part of ECMAScript 2015 (its purpose is modularization of globals). Please see {{jsxref("parseInt", "parseInt()")}} for more detail and examples.
+<p>This method has the same functionality as the global {{jsxref("parseInt", "parseInt()")}} function:</p>
 
-## Polyfill
+<pre class="brush: js">Number.parseInt === parseInt // true</pre>
 
-```js
-if (Number.parseInt === undefined) {
+<p>and is part of ECMAScript 2015 (its purpose is modularization of globals). Please see {{jsxref("parseInt", "parseInt()")}} for more detail and examples.</p>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<pre class="brush: js">if (Number.parseInt === undefined) {
     Number.parseInt = window.parseInt
 }
-```
+</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("javascript.builtins.Number.parseInt")}}
 
-## See also
 
-- The {{jsxref("Number")}} object it belongs to.
-- The global {{jsxref("parseInt", "parseInt()")}} method.
+<p>{{Compat("javascript.builtins.Number.parseInt")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>The {{jsxref("Number")}} object it belongs to.</li>
+ <li>The global {{jsxref("parseInt", "parseInt()")}} method.</li>
+</ul>

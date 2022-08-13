@@ -3,37 +3,53 @@ title: Window.outerWidth
 slug: Web/API/Window/outerWidth
 translation_of: Web/API/Window/outerWidth
 ---
-{{APIRef}}
+<div>{{APIRef}}</div>
 
-## Sumario
+<h2 id="Summary" name="Summary">Sumario</h2>
 
-`Window.outerWidth` obtiene el ancho exterior del navegador. Representa el ancho total de la ventana incluyendo las barras laterales (si es expandida), interfaz grafíca y los de elementos para redimencionado de bordes.
+<p><code>Window.outerWidth</code> obtiene el ancho exterior del navegador. Representa el ancho total de la ventana incluyendo las barras laterales (si es expandida), interfaz grafíca y los de elementos para redimencionado de bordes.</p>
 
-Esta propiedad es de sólo lectura; no tiene valores por default.
+<p>Esta propiedad es de sólo lectura; no tiene valores por default.</p>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-    outWindowWidth = window.outerWidth;
+<pre class="syntaxbox"><var>outWindowWidth</var> = window.outerWidth;
+</pre>
 
-Lo que retorna `outWindowWidth` es el ancho exterior del navegador.
+<p>Lo que retorna <code>outWindowWidth</code> es el ancho exterior del navegador.</p>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-Para cambiar el tamaño de la ventana, ver {{domxref("window.resizeBy()")}} y {{domxref("window.resizeTo()")}}.
+<p>Para cambiar el tamaño de la ventana, ver {{domxref("window.resizeBy()")}} y {{domxref("window.resizeTo()")}}.</p>
 
-Para obtener el ancho exterior de la ventana, i.e. el ancho de la pagina desplegada, ver {{domxref("window.innerWidth")}}.
+<p>Para obtener el ancho exterior de la ventana, i.e. el ancho de la pagina desplegada, ver {{domxref("window.innerWidth")}}.</p>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
 {{Compat("api.Window.outerWidth")}}
 
-## Specificaciones
+<h2 id="Specification" name="Specification">Specificaciones</h2>
 
-| Specification                                                                                        | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} | Initial definition. |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }}</td>
+   <td>{{ Spec2('CSSOM View') }}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}
-- {{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}
+<ul>
+ <li>{{domxref("window.outerHeight")}}, {{domxref("window.innerHeight")}}, {{domxref("window.innerWidth")}}</li>
+ <li>{{domxref("window.resizeBy()")}}, {{domxref("window.resizeTo()")}}</li>
+</ul>

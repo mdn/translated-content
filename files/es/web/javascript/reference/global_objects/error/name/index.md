@@ -9,37 +9,51 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/name
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-La propiedad **`name`** representa un nombre para el tipo de error. El valor inicial es "Error".
+<p>La propiedad <code><strong>name</strong></code> representa un nombre para el tipo de error. El valor inicial es "Error".</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-De forma predeterminada, las instancias {{JSxRef("Error")}} reciben el nombre "Error". La propiedad `name`, además de la propiedad {{JSxRef("Error.prototype.message", "message")}}, la utiliza el método {{JSxRef("Error.prototype.toString()")}} para crear una representación de cadena del error.
+<p>De forma predeterminada, las instancias {{JSxRef("Error")}} reciben el nombre "Error". La propiedad <code>name</code>, además de la propiedad {{JSxRef("Error.prototype.message", "message")}}, la utiliza el método {{JSxRef("Error.prototype.toString()")}} para crear una representación de cadena del error.</p>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-### Lanzar un error personalizado
+<h3 id="Lanzar_un_error_personalizado">Lanzar un error personalizado</h3>
 
-```js
-var e = new Error('Entrada mal formada'); // e.name es 'Error'
+<pre class="brush: js notranslate">var e = new Error('Entrada mal formada'); // e.name es 'Error'
 
 e.name = 'ParseError';
 throw e;
 // e.toString() devolverá 'ParseError: Entrada mal formada'
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad del navegador
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
 
-{{Compat("javascript.builtins.Error.name")}}
+<div>
+<div>
 
-## Ve también
 
-- {{JSxRef("Error.prototype.message")}}
-- {{JSxRef("Error.prototype.toString()")}}
+<p>{{Compat("javascript.builtins.Error.name")}}</p>
+</div>
+</div>
+
+<h2 id="Ve_también">Ve también</h2>
+
+<ul>
+ <li>{{JSxRef("Error.prototype.message")}}</li>
+ <li>{{JSxRef("Error.prototype.toString()")}}</li>
+</ul>

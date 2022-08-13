@@ -5,88 +5,91 @@ tags:
   - Referencia_DOM_de_Gecko
 translation_of: Web/API/Event/preventDefault
 ---
-{{ApiRef("DOM")}}
+<p>{{ApiRef("DOM")}}</p>
 
-### Resumen
+<h3 id="Resumen" name="Resumen">Resumen</h3>
 
-Cancela el evento si este es cancelable, sin detener el resto del funcionamiento del evento, es decir, puede ser llamado de nuevo.
+<p>Cancela el evento si este es cancelable, sin detener el resto del funcionamiento del evento, es decir, puede ser llamado de nuevo.</p>
 
-### Sintaxis
+<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
 
-    event.preventDefault()
+<pre class="eval"><em>event</em>.preventDefault()
+</pre>
 
-### Ejemplo
+<h3 id="Ejemplo" name="Ejemplo">Ejemplo</h3>
 
-Cambiar el estado de una caja de selección es la función por defecto de la acción de hacer clic sobre la caja. Este ejemplo ilustra como hacer que esto no ocurra:
+<p>Cambiar el estado de una caja de selección es la función por defecto de la acción de hacer clic sobre la caja. Este ejemplo ilustra como hacer que esto no ocurra:</p>
 
-    <html>
-    <head>
-    <title>ejemplo de preventDefault</title>
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;ejemplo de preventDefault&lt;/title&gt;
 
-    <script type="text/javascript">
+&lt;script type="text/javascript"&gt;
 
-    function stopDefAction(evt) {
+function stopDefAction(evt) {
+  evt.preventDefault();
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;p&gt;Por favor, haz clic sobre la caja de selección.&lt;/p&gt;
+
+&lt;form&gt;
+&lt;input type="checkbox" onclick="stopDefAction(event);"/&gt;
+&lt;label for="checkbox"&gt;Selección&lt;/label&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Puedes ver <code>preventDefault</code> en acción <a class="external" href="http://developer.mozilla.org/samples/domref/dispatchEvent.html">aquí</a>.</p>
+
+<p>El siguiente ejemplo demuestra cómo puede evitarse que un texto invalido entre en un campo de formulario mediante preventDefault().</p>
+
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;preventDefault example&lt;/title&gt;
+
+&lt;script type="text/javascript"&gt;
+
+function checkName(evt) {
+var charCode = evt.charCode;
+
+  if (charCode != 0) {
+    if (charCode &lt; 97 || charCode &gt; 122) {
       evt.preventDefault();
+      alert("Por favor usa sólo letras minúsculas." + "\n"
+            + "charCode: " + charCode + "\n"
+      );
     }
-    </script>
-    </head>
+  }
+}
 
-    <body>
+&lt;/script&gt;
+&lt;/head&gt;
 
-    <p>Por favor, haz clic sobre la caja de selección.</p>
+&lt;body&gt;
 
-    <form>
-    <input type="checkbox" onclick="stopDefAction(event);"/>
-    <label for="checkbox">Selección</label>
-    </form>
+&lt;p&gt;Por favor entra tu nombre en letras minúsculas solamente.&lt;/p&gt;
+&lt;form&gt;
+&lt;input type="text" onkeypress="checkName(event);"/&gt;
+&lt;/form&gt;
 
-    </body>
-    </html>
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
 
-Puedes ver `preventDefault` en acción [aquí](http://developer.mozilla.org/samples/domref/dispatchEvent.html).
+<h3 id="Notas" name="Notas">Notas</h3>
 
-El siguiente ejemplo demuestra cómo puede evitarse que un texto invalido entre en un campo de formulario mediante preventDefault().
+<p>Llamar a <code>preventDefault</code> en cualquier momento durante la ejecución, cancela el evento, lo que significa que cualquier acción por defecto que deba producirse como resultado de este evento, no ocurrirá.</p>
 
-    <html>
-    <head>
-    <title>preventDefault example</title>
+<p>Puedes usar <a href="es/DOM/event.cancelable">event.cancelable</a> para comprobar si el evento es cancelable o no. Llamar a <code>preventDefault</code> para un evento no cancelable, no tiene ningún efecto.</p>
 
-    <script type="text/javascript">
+<p><code>preventDefault</code> no detiene las siguientes llamadas al evento producidas en el DOM. En su lugar debería usarse <a href="es/DOM/event.stopPropagation">event.stopPropagation</a> para ese propósito.</p>
 
-    function checkName(evt) {
-    var charCode = evt.charCode;
+<h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>
 
-      if (charCode != 0) {
-        if (charCode < 97 || charCode > 122) {
-          evt.preventDefault();
-          alert("Por favor usa sólo letras minúsculas." + "\n"
-                + "charCode: " + charCode + "\n"
-          );
-        }
-      }
-    }
-
-    </script>
-    </head>
-
-    <body>
-
-    <p>Por favor entra tu nombre en letras minúsculas solamente.</p>
-    <form>
-    <input type="text" onkeypress="checkName(event);"/>
-    </form>
-
-    </body>
-    </html>
-
-### Notas
-
-Llamar a `preventDefault` en cualquier momento durante la ejecución, cancela el evento, lo que significa que cualquier acción por defecto que deba producirse como resultado de este evento, no ocurrirá.
-
-Puedes usar [event.cancelable](es/DOM/event.cancelable) para comprobar si el evento es cancelable o no. Llamar a `preventDefault` para un evento no cancelable, no tiene ningún efecto.
-
-`preventDefault` no detiene las siguientes llamadas al evento producidas en el DOM. En su lugar debería usarse [event.stopPropagation](es/DOM/event.stopPropagation) para ese propósito.
-
-### Especificación
-
-[DOM Level 2 Events: preventDefault](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-preventDefault)
+<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-preventDefault">DOM Level 2 Events: preventDefault</a></p>

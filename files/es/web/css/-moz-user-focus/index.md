@@ -3,26 +3,25 @@ title: '-moz-user-focus'
 slug: Web/CSS/-moz-user-focus
 tags:
   - CSS
-  - CSS:Extensiones Mozilla
+  - 'CSS:Extensiones Mozilla'
   - Referencia CSS
 translation_of: Web/CSS/-moz-user-focus
 ---
-{{Non-standard_header}}
+<div>{{Non-standard_header}}</div>
 
-## Resumen
+<h2 id="Resumen">Resumen</h2>
 
-La propiedad [CSS ](/es/docs/Web/CSS)`-moz-user-focus`se usa para indicar si el elemento puedo obtener el foco.
+<p>La propiedad <a href="/es/docs/Web/CSS">CSS </a><code>-moz-user-focus</code>se usa para indicar si el elemento puedo obtener el foco.</p>
 
-Al poner el valor de esta propiedad a `ignore`, deshabilitas el hecho de que el elemento pueda obtener el foco lo que significa que el usuario no podrá activar el elemento. Se saltará el elemento es un secuncia de tabuladores.
+<p>Al poner el valor de esta propiedad a <code>ignore</code>, deshabilitas el hecho de que el elemento pueda obtener el foco lo que significa que el usuario no podrá activar el elemento. Se saltará el elemento es un secuncia de tabuladores.</p>
 
-{{cssinfo}}
+<p>{{cssinfo}}</p>
 
-> **Nota:** Esta propiedad no funciona con los elementos XUL {{XULElem("textbox")}} , porque el `textbox` en sí mismo nunca tomará el foco. En su lugar , XBL crea un elemento HTML {{HTMLElement("input")}} anónimo dentro del `textbox`, y es ese elemento el que recibe el foco. Se puede evitar que el `textbox` obtenga el foco de teclado estableciendo su índice de tabulación a `-1`, y que obtenga el foco del ratón evitando la acción por defecto para los eventos `mousedown`.
+<div class="note"><strong>Nota:</strong> Esta propiedad no funciona con los elementos XUL {{XULElem("textbox")}} , porque el <code>textbox</code> en sí mismo nunca tomará el foco. En su lugar , XBL crea un elemento HTML  {{HTMLElement("input")}} anónimo dentro del <code>textbox</code>, y es ese elemento el que recibe el foco. Se puede evitar que el <code>textbox</code> obtenga el foco de teclado estableciendo su índice de tabulación a <code>-1</code>, y que obtenga el foco del ratón evitando la acción por defecto para los eventos <code>mousedown</code>.</div>
 
-## Síntaxis
+<h2 id="Síntaxis">Síntaxis</h2>
 
-```css
-/* Palabras clave de valores */
+<pre class="brush:css">/* Palabras clave de valores */
 -moz-user-focus: normal;
 -moz-user-focus: ignore;
 
@@ -30,35 +29,37 @@ Al poner el valor de esta propiedad a `ignore`, deshabilitas el hecho de que el 
 -moz-user-focus: inherit;
 -moz-user-focus: initial;
 -moz-user-focus: unset;
-```
+</pre>
 
-### Valores
+<h3 id="Valores">Valores</h3>
 
-- `ignore`
-  - : El elemento no aceptará el foco y será saltado en el orden de tabulación.
-- `normal`
-  - : El elemento puedeo aceptar el foco del teclado.
-- `select-after`
-  - : ?
-- `select-before`
-  - : ?
-- `select-menu`
-  - : ?
-- `select-same`
-  - : ?
-- `select-all`
-  - : ?
-- `none`
-  - : ?
+<dl>
+ <dt><code>ignore</code></dt>
+ <dd>El elemento no aceptará el foco y será saltado en el orden de tabulación.</dd>
+ <dt><code>normal</code></dt>
+ <dd>El elemento puedeo aceptar el foco del teclado.</dd>
+ <dt><code>select-after</code></dt>
+ <dd>?</dd>
+ <dt><code>select-before</code></dt>
+ <dd>?</dd>
+ <dt><code>select-menu</code></dt>
+ <dd>?</dd>
+ <dt><code>select-same</code></dt>
+ <dd>?</dd>
+ <dt><code>select-all</code></dt>
+ <dd>?</dd>
+ <dt><code>none</code></dt>
+ <dd>?</dd>
+</dl>
 
-### Síntaxis Formal
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
 
 {{csssyntax}}
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-Esta propiedad no es parte de ninguna especificación. Una propiedad similar `user-focus` fue propuesta en [borradores previos de la especificación CSS 3 UI](http://www.w3.org/TR/2000/WD-css3-userint-20000216) pero finalmente fué rechazada por el grupo de trabajo.
+<p>Esta propiedad no es parte de ninguna especificación. Una propiedad similar <code>user-focus</code> fue propuesta en <a class="external" href="http://www.w3.org/TR/2000/WD-css3-userint-20000216">borradores previos de la especificación CSS 3 UI</a> pero finalmente fué rechazada por el grupo de trabajo.</p>
 
-## Compatibilidad con los distintos navegadores
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
 
 {{Compat("css.properties.-moz-user-focus")}}

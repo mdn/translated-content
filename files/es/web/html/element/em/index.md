@@ -8,30 +8,54 @@ tags:
 translation_of: Web/HTML/Element/em
 original_slug: Web/HTML/Elemento/em
 ---
-{{HTMLRef}}
+<div>{{HTMLRef}}</div>
 
-El **elemento HTML `<em>`** es el apropiado para marcar con énfasis las partes importantes de un texto. El elemento `<em>` puede ser anidado, con cada nivel de anidamiento indicando un mayor grado de énfasis.
+<p>El <strong>elemento HTML <code>&lt;em&gt;</code></strong> es el apropiado para marcar con énfasis las partes importantes de un texto. El elemento <code>&lt;em&gt;</code> puede ser anidado, con cada nivel de anidamiento indicando un mayor grado de énfasis.</p>
 
-{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
+<div>{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}</div>
 
-| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Contenido dinámico](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico), [contenido textual o estático](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático), contenido palpable |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                        | [Contenido textual o estático](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático).                                                                                                              |
-| Tag omission                                                               | {{no_tag_omission}}                                                                                                                                                                                                   |
-| Permitted parents                                                          | Any element that accepts [phrasing content](/es/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                                        |
-| Permitted ARIA roles                                                       | Any                                                                                                                                                                                                                        |
-| DOM interface                                                              | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.                                                  |
 
-### Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido">Categorías de contenido</a></th>
+   <td><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico">Contenido dinámico</a>, <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático">contenido textual o estático</a>, contenido palpable</td>
+  </tr>
+  <tr>
+   <th scope="row">Contenido permitido</th>
+   <td><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático">Contenido textual o estático</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Tag omission</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted parents</th>
+   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+  </tr>
+  <tr>
+   <th scope="row">Permitted ARIA roles</th>
+   <td>Any</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM interface</th>
+   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.</td>
+  </tr>
+ </tbody>
+</table>
 
-### Ejemplos
+<h3 id="Atributos" name="Atributos">Atributos</h3>
 
-     <p>
-         <em>El dinero</em> es importante pero <strong>la salud</strong> lo es más.
-     </p>
+<p>Este elemento solo incluye los <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a>.</p>
 
-### Comentarios
+<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
 
-[em](es/HTML/Elemento/em) tiene un hermano mayor: [strong](es/HTML/Elemento/strong). [em](es/HTML/Elemento/em) sirve para dar énfasis y [strong](es/HTML/Elemento/strong) para dar mucho énfasis
+<pre class="eval"> &lt;p&gt;
+     &lt;em&gt;El dinero&lt;/em&gt; es importante pero &lt;strong&gt;la salud&lt;/strong&gt; lo es más.
+ &lt;/p&gt;
+</pre>
+
+<h3 id="Comentarios" name="Comentarios">Comentarios</h3>
+
+<p><a href="es/HTML/Elemento/em">em</a> tiene un hermano mayor: <a href="es/HTML/Elemento/strong">strong</a>. <a href="es/HTML/Elemento/em">em</a> sirve para dar énfasis y <a href="es/HTML/Elemento/strong">strong</a> para dar mucho énfasis</p>

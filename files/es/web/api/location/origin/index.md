@@ -9,33 +9,48 @@ tags:
   - Ubicación
 translation_of: Web/API/Location/origin
 ---
-{{APIRef("Location")}}
+<p>{{APIRef("Location")}}</p>
 
-La propiedad de sólo-lectura **`origin`** de la interfaz {{domxref("Location")}} es una {{domxref("USVString")}} que contiene la serialización Unicode del origen de la URL que representa; que es:
+<p><span class="seoSummary">La propiedad de sólo-lectura <strong><code>origin</code></strong> de la interfaz {{domxref("Location")}} es una {{domxref("USVString")}} que contiene la serialización Unicode del origen de la URL que representa</span>; que es:</p>
 
-- para una URL que usa `http` o `https`, el esquema seguido de `'://'`, seguido del dominio, seguido de `':'`, seguido del puerto (el puerto por defecto, `80` y `443` respectivamente, si se indica de forma explícita);
-- para una URL que usa `file:` esquema, el valor es independiente del navegador;
-- para una URL que usa `blob:` esquema, el origen de la URL seguido de `blob:`. Ej. `"blob:https://mozilla.org"` tendrá `"https://mozilla.org".`
+<ul>
+ <li>para una URL que usa <code>http</code> o <code>https</code>, el esquema seguido de <code>'://'</code>, seguido del dominio, seguido de <code>':'</code>, seguido del puerto (el puerto por defecto, <code>80</code> y <code>443</code> respectivamente, si se indica de forma explícita);</li>
+ <li>para una URL que usa <code>file:</code> esquema, el valor es independiente del navegador;</li>
+ <li>para una URL que usa <code>blob:</code> esquema, el origen de la URL seguido de <code>blob:</code>. Ej. <code>"blob:https://mozilla.org"</code> tendrá <code>"https://mozilla.org".</code></li>
+</ul>
 
-{{AvailableInWorkers}}
+<p>{{AvailableInWorkers}}</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    string = object.origin;
+<pre class="syntaxbox notranslate"><em>string</em> = <em>object</em>.origin;
+</pre>
 
-## Ejemplos
+<h2 id="Ejemplos">Ejemplos</h2>
 
-```js
-// En esta página, devuelve el origen
+<pre class="brush: js notranslate">// En esta página, devuelve el origen
 var result = window.location.origin; // Devuelve:'https://developer.mozilla.org'
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificación                                                                   | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-location-origin', 'origin')}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#dom-location-origin', 'origin')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Definición inicial.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("api.Location.origin")}}
+
+
+<p>{{Compat("api.Location.origin")}}</p>

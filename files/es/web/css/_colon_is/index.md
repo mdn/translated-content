@@ -10,31 +10,32 @@ translation_of: Web/CSS/:is
 translation_of_original: Web/CSS/:any
 original_slug: Web/CSS/:any
 ---
-{{CSSRef}}{{SeeCompatTable}}
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-## Resumen
+<h2 id="Summary" name="Summary">Resumen</h2>
 
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes "CSS/Pseudo-classes") `:any()` permite construir rápidamente conjuntos de selectores similares estableciendo grupos desde los que cualquier elemento incluido coincidirá. Es una alternativa a tener que repetir el selector completo por uno de los elementos que va a variar.
+<p>La <a href="/es/docs/CSS/Pseudo-classes" title="CSS/Pseudo-classes">pseudo-clase</a> <code>:any()</code> permite construir rápidamente conjuntos de selectores similares estableciendo grupos desde los que cualquier elemento incluido coincidirá. Es una alternativa a tener que repetir el selector completo por uno de los elementos que va a variar.</p>
 
-> **Nota:** Esta pseudo-clase está en progreso de ser estandarizada en [_Selectores CSS Nivel 4_](http://dev.w3.org/csswg/selectors4/#matches) bajo el nombre `:matches()`. Es probable que la sintaxis y el nombre de `:-vendor-any()` sean cambiados para reflejar el estándar en el futuro próximo.
+<div class="note"><strong>Nota:</strong> Esta pseudo-clase está en progreso de ser estandarizada en <a class="external" href="http://dev.w3.org/csswg/selectors4/#matches"><em>Selectores CSS Nivel 4</em></a> bajo el nombre <code>:matches()</code>. Es probable que la sintaxis y el nombre de <code>:-<em>vendor</em>-any()</code> sean cambiados para reflejar el estándar en el futuro próximo.</div>
 
-## Sintaxis
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
 {{csssyntax}}
 
-### Valores
+<h3 id="Values" name="Values">Valores</h3>
 
-- `selector`
-  - : Un selector. Puede ser un selector simple o un selector múltiple, comprendido de [selectores simples de CSS 3](http://www.w3.org/TR/css3-selectors/#simple-selectors), y puede incluir el combinador descendiente.
+<dl>
+ <dt><code>selector</code></dt>
+ <dd>Un selector. Puede ser un selector simple o un selector múltiple, comprendido de <a class="external" href="http://www.w3.org/TR/css3-selectors/#simple-selectors">selectores simples de CSS 3</a>, y puede incluir el combinador descendiente.</dd>
+</dl>
 
-> **Nota:** Los selectores pueden **no** contener pseudo-elementos , y el combinador único combinador permitido es el de descendientes.
+<div class="note"><strong>Nota:</strong> Los selectores pueden <strong>no</strong> contener pseudo-elementos , y el combinador único combinador permitido es el de descendientes.</div>
 
-## Ejemplos
+<h2 id="Examples" name="Examples">Ejemplos</h2>
 
-Por ejemplo, el siguiente CSS:
+<p>Por ejemplo, el siguiente CSS:</p>
 
-```css
-/* Listas desordenadas a tres (o más) niveles de profundidad que usarán viñeta de cuadrado */
+<pre class="brush: css">/* Listas desordenadas a tres (o más) niveles de profundidad que usarán viñeta de cuadrado */
 ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
 ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
 ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
@@ -49,35 +50,30 @@ dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
 dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
   list-style-type: square;
 }
-```
+</pre>
 
-Puede ser reemplazado con:
+<p>Puede ser reemplazado con:</p>
 
-```css
-/* Listas desordenadas a tres (o más) niveles de profundidad que usarán viñeta de cuadrado */
+<pre class="brush: css">/* Listas desordenadas a tres (o más) niveles de profundidad que usarán viñeta de cuadrado */
 :-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) ul,
 :-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) menu,
 :-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) dir {
   list-style-type: square;
-}
-```
+}</pre>
 
-Sin embargo, no se debe usar lo siguiente: (Véase [la sección de rendimiento](#Issues_with_performance_and_specificity) abajo.)
+<p>Sin embargo, no se debe usar lo siguiente: (Véase <a href="#Issues_with_performance_and_specificity">la sección de rendimiento</a> abajo.)</p>
 
-```css
-:-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) :-moz-any(ul, menu, dir) {
+<pre class="brush: css">:-moz-any(ol, ul, menu, dir) :-moz-any(ol, ul, menu, dir) :-moz-any(ul, menu, dir) {
   list-style-type: square;
-}
-```
+}</pre>
 
-## Notas
+<h2 id="Notes" name="Notes">Notas</h2>
 
-Esto es particularmente útil al tratar con [secciones y encabezados](/es/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document") de HTML5. Puesto que {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, y {{HTMLElement("nav")}} pueden ser anidados, puede ser complicado aplicar estilos sin usar `:any()`.
+<p>Esto es particularmente útil al tratar con <a href="/es/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">secciones y encabezados</a> de HTML5. Puesto que {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, y {{HTMLElement("nav")}} pueden ser anidados, puede ser complicado aplicar estilos sin usar <code>:any()</code>.</p>
 
-Por ejemplo, sin `:any()`, estilizar todos los {{HTMLElement("h1")}} a diferentes niveles de profundidad podría ser muy complicado:
+<p>Por ejemplo, sin <code>:any()</code>, estilizar todos los {{HTMLElement("h1")}} a diferentes niveles de profundidad podría ser muy complicado:</p>
 
-```css
-/* Nivel 0 */
+<pre class="brush: css">/* Nivel 0 */
 h1 {
   font-size: 30px;
 }
@@ -94,12 +90,11 @@ nav section h1, nav article h1, nav aside h1, nav nav h1, {
 }
 /* Level 3 */
 /* ... ni siquiera lo pienses*/
-```
+</pre>
 
-Usando `:-any()`, en cambio, es mucho más fácil:
+<p>Usando <code>:-any()</code>, en cambio, es mucho más fácil:</p>
 
-```css
-/* Nivel 0 */
+<pre class="brush: css">/* Nivel 0 */
 h1 {
   font-size: 30px;
 }
@@ -117,31 +112,27 @@ h1 {
 :-moz-any(section, article, aside, nav)
 :-moz-any(section, article, aside, nav) h1 {
   font-size: 15px;
-}
-```
+}</pre>
 
-### Problemas con rendimiento y especificidad
+<h3 id="Issues_with_performance_and_specificity" name="Issues_with_performance_and_specificity">Problemas con rendimiento y especificidad</h3>
 
-[Bug 561154](https://bugzilla.mozilla.org/show_bug.cgi?id=561154) sigue un problema con Gecko donde la especificidad de `:-moz-any()` es incorrecta. La implementación hasta Firefox 12 pone a `:-moz-any()` en la categoría de reglas universales, por lo que usarlo como el selector más hacia la derecha será más lento que usando un ID, una clase o etiqueta como el selector a la derecha.
+<p><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=561154">Bug 561154</a> sigue un problema con Gecko donde la especificidad de <code>:-moz-any()</code> es incorrecta. La implementación hasta Firefox 12 pone a <code>:-moz-any()</code> en la categoría de reglas universales, por lo que usarlo como el selector más hacia la derecha será más lento que usando un ID, una clase o etiqueta como el selector a la derecha.</p>
 
-Por ejemplo
+<p>Por ejemplo</p>
 
-```css
-.a > :-moz-any(.b, .c)
-```
+<pre class="brush: css">.a &gt; :-moz-any(.b, .c)
+</pre>
 
-es más lento que:
+<p>es más lento que:</p>
 
-```css
-.a > .b, .a > .c
-```
+<pre class="brush: css">.a &gt; .b, .a &gt; .c
+</pre>
 
-y lo siguiente es rápido:
+<p>y lo siguiente es rápido:</p>
 
-```css
-:-moz-any(.a, .d) > .b, :-moz-any(.a, .d) > .c
-```
+<pre class="brush: css">:-moz-any(.a, .d) &gt; .b, :-moz-any(.a, .d) &gt; .c
+</pre>
 
-## Compatibilidad de navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
 
 {{Compat("css.selectors.is")}}
