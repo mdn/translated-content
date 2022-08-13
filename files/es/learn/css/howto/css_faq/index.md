@@ -152,6 +152,4 @@ Las reglas son más complicadas cuando el selector tiene varias partes. Se puede
 
 #### ¿Qué hacen las propiedades -moz-\*?
 
-Por favor, consulta la página [Extensiones CSS de Mozilla](/en/CSS_Reference/Mozilla_Extensions "en/CSS Reference/Mozilla Extensions").
-
-{{ languages( { "en": "en/Common_CSS_Questions", "pl": "pl/Cz\u0119ste_pytania_o_CSS", "zh-tw": "zh_tw/CSS\_\u4e00\u822c\u554f\u984c" } ) }}
+Por favor, consulta la página [Extensiones CSS de Mozilla](/en/CSS_Reference/Mozilla_Extensions "en/CSS Reference/Mozilla Extensions"). 

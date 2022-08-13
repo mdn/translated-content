@@ -49,6 +49,4 @@ Firefox 3 ofrece una mejor implementación de [Gráficos Vectoriales Escalables 
 
 - [SVG](es/SVG)
 - [SVG en Firefox](es/SVG_en_Firefox)
-- [Firefox 3 para desarrolladores](es/Firefox_3_para_desarrolladores)
-
-{{ languages( { "en": "en/SVG_improvements_in_Firefox\_3", "fr": "fr/Am\u00e9liorations_SVG_dans_Firefox\_3", "ja": "ja/SVG_improvements_in_Firefox\_3", "pl": "pl/Poprawki_SVG_w_Firefoksie\_3" } ) }}
+- [Firefox 3 para desarrolladores](es/Firefox_3_para_desarrolladores) 

@@ -27,6 +27,4 @@ Este artículo es una lista de correcciones importantes de errores en Firefox 3 
 
 ### Ver también
 
-- [Firefox 3 para desarrolladores](es/Firefox_3_para_desarrolladores)
-
-{{ languages( { "en": "en/Notable_bugs_fixed_in_Firefox\_3", "fr": "fr/Bugs_importants_corrig\u00e9s_dans_Firefox\_3", "ja": "ja/Notable_bugs_fixed_in_Firefox\_3", "pl": "pl/Istotne_b\u0142\u0119dy_poprawione_w_Firefoksie\_3" } ) }}
+- [Firefox 3 para desarrolladores](es/Firefox_3_para_desarrolladores) 

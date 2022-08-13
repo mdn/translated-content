@@ -90,6 +90,4 @@ Hay una [prueba sencilla](https://bugzilla.mozilla.org/attachment.cgi?id=220609)
 - [Sección 'Eventos Online/Offline ' de la especificación WHATWG Web Applications 1.0](http://www.whatwg.org/specs/web-apps/current-work/#offline)
 - [El bug que documenta la implementación de los eventos online/offline en Firefox ](https://bugzilla.mozilla.org/show_bug.cgi?id=336359)y un enlace [con una modificación posterior](https://bugzilla.mozilla.org/show_bug.cgi?id=336682)
 - [Un ejemplo sencillo](https://bugzilla.mozilla.org/attachment.cgi?id=220609)
-- [Una explicación de los eventos Online/Offline](http://ejohn.org/blog/offline-events/)
-
-{{ languages( { "en": "en/Online_and_offline_events", "fr": "fr/\u00c9v\u00e8nements_online_et_offline", "ja": "ja/Online_and_offline_events", "pl": "pl/Zdarzenia_online_i_offline", "pt": "pt/Eventos_online_e_offline" } ) }}
+- [Una explicación de los eventos Online/Offline](http://ejohn.org/blog/offline-events/) 

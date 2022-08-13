@@ -111,6 +111,4 @@ Firefox 2.0 proporciona una versión mejorada de la limpia interfaz que ofrecía
 
 Categorías
 
-Interwiki links
-
-{{ languages( { "ca": "ca/Firefox\_2\_per_a_desenvolupadors", "en": "en/Firefox\_2\_for_developers", "fr": "fr/Firefox\_2\_pour_les_d\u00e9veloppeurs", "it": "it/Firefox\_2.0\_per_Sviluppatori", "ja": "ja/Firefox\_2\_for_developers", "ko": "ko/Firefox\_2\_for_developers", "pl": "pl/Firefox\_2\_dla_programist\u00f3w", "pt": "pt/Firefox\_2\_para_desenvolvedores", "zh-tw": "zh_tw/Firefox\_2\_\u6280\u8853\u6587\u4ef6" } ) }}
+Interwiki links 
