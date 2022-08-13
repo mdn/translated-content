@@ -122,10 +122,10 @@ mySet2.size; // 4
 [...mySet2]; // [1,2,3,4]
 
 // пересечение можно представить следующим образом
-var intersection = new Set([...set1].filter(x =&gt; set2.has(x)));
+const intersection = new Set([...set1].filter(x =&gt; set2.has(x)));
 
 // разность можно представить следующим образом
-var difference = new Set([...set1].filter(x =&gt; !set2.has(x)));
+const difference = new Set([...set1].filter(x =&gt; !set2.has(x)));
 
 // Обход элементов set при помощи forEach
 mySet.forEach(function(value) {
@@ -141,7 +141,7 @@ mySet.forEach(function(value) {
 <h3 id="Реализация_простых_операций">Реализация простых операций</h3>
 
 <pre class="brush: js"><code>function isSuperset(set, subset) {
-    for (var elem of subset) {
+    for (const elem of subset) {
         if (!set.has(elem)) {
             return false;
         }
@@ -150,16 +150,16 @@ mySet.forEach(function(value) {
 }
 
 function union(setA, setB) {
-    var _union = new Set(setA);
-    for (var elem of setB) {
+    const _union = new Set(setA);
+    for (const elem of setB) {
         _union.add(elem);
     }
     return _union;
 }
 
 function intersection(setA, setB) {
-    var _intersection = new Set();
-    for (var elem of setB) {
+    const _intersection = new Set();
+    for (const elem of setB) {
         if (setA.has(elem)) {
             _intersection.add(elem);
         }
@@ -168,15 +168,15 @@ function intersection(setA, setB) {
 }
 
 function difference(setA, setB) {
-    var _difference = new Set(setA);
-    for (var elem of setB) {
+    const _difference = new Set(setA);
+    for (const elem of setB) {
         _difference.delete(elem);
     }
     return _difference;
 }
 
 // Например
-var setA = new Set([1, 2, 3, 4]),
+const setA = new Set([1, 2, 3, 4]),
     setB = new Set([2, 3]),
     setC = new Set([3, 4, 5, 6]);
 
@@ -188,10 +188,10 @@ difference(setA, setC);   // =&gt; Set [1, 2]</code>
 
 <h3 id="Взаимоотношения_с_объектом_Array">Взаимоотношения с объектом <code>Array</code></h3>
 
-<pre class="brush: js">var myArray = ["value1", "value2", "value3"];
+<pre class="brush: js">const myArray = ["value1", "value2", "value3"];
 
 // Используйте конструктор Set для преобразования Array в Set
-var mySet = new Set(myArray);
+const mySet = new Set(myArray);
 
 mySet.has("value1"); // вернёт true
 
@@ -201,9 +201,9 @@ console.log([...mySet]); // Отобразит тот же массив, что 
 
 <h3 id="Взаимоотношения_со_String">Взаимоотношения со <code>String</code></h3>
 
-<pre class="brush: js"><code>var text = 'India';
+<pre class="brush: js"><code>const text = 'India';
 
-var mySet = new Set(text);  // Set ['I', 'n', 'd', 'i', 'a']
+const mySet = new Set(text);  // Set ['I', 'n', 'd', 'i', 'a']
 mySet.size;  // 5</code>
 </pre>
 
