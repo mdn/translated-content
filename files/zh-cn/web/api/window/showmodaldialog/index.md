@@ -1,7 +1,6 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
-translation_of: Web/API/Window/showModalDialog
 ---
 {{ deprecated_header() }}{{APIRef}}
 

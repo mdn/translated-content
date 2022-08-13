@@ -1,7 +1,6 @@
 ---
 title: Window.personalbar
 slug: Web/API/Window/personalbar
-translation_of: Web/API/Window/personalbar
 ---
 {{APIRef}}
 

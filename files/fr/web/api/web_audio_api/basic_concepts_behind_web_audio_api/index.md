@@ -371,12 +371,8 @@ On peut accéder aux données en utilisant les méthodes suivantes:
 - {{domxref("AnalyserNode.getFloatFrequencyData()")}}
   - : Copie les données de fréquence dans le tableau {{domxref("Float32Array")}} passé en argument.
 
-<!---->
-
 - {{domxref("AnalyserNode.getByteFrequencyData()")}}
   - : Copies les données de fréquence dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
-
-<!---->
 
 - {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
   - : Copie les données de l'onde de forme, ou domaine temporel, dans le {{domxref("Float32Array")}} passé en argument.

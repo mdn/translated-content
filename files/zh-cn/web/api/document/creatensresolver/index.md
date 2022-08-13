@@ -1,7 +1,6 @@
 ---
 title: Document.createNSResolver()
 slug: Web/API/Document/createNSResolver
-translation_of: Web/API/Document/createNSResolver
 ---
 {{ ApiRef("DOM") }}
 

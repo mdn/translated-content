@@ -47,8 +47,6 @@ Où `<valeur>` peut optionnellement être une valeur parmi :
 - `allow-downloads-without-user-activation` {{experimental_inline}}
   - : Autorise les téléchargements sans action de l'utilisateur.
 
-<!---->
-
 - `allow-forms`
   - : Autorise la soumission de de formulaires. Si ce mot-clé n'est pas spécifié, cette opération est interdite.
 - `allow-modals`

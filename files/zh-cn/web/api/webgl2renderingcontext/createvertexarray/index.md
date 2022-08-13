@@ -1,10 +1,6 @@
 ---
 title: WebGL2RenderingContext.createVertexArray()
 slug: Web/API/WebGL2RenderingContext/createVertexArray
-tags:
-  - Method
-  - WebGL2
-translation_of: Web/API/WebGL2RenderingContext/createVertexArray
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 

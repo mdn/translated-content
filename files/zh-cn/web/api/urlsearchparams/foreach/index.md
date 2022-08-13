@@ -1,7 +1,6 @@
 ---
 title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
-translation_of: Web/API/URLSearchParams/forEach
 ---
 {{APIRef("URL API")}}
 

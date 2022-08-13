@@ -1,15 +1,6 @@
 ---
 title: SVGAnimationElement
 slug: Web/API/SVGAnimationElement
-tags:
-  - API
-  - NeedsExample
-  - NeedsTranslation
-  - Reference
-  - SVG
-  - SVG DOM
-  - TopicStub
-translation_of: Web/API/SVGAnimationElement
 ---
 {{APIRef("SVG")}}
 

@@ -1,16 +1,6 @@
 ---
 title: SpeechGrammar.SpeechGrammar()
 slug: Web/API/SpeechGrammar/SpeechGrammar
-tags:
-  - API
-  - SpeechGrammar
-  - Web
-  - Web Speech API
-  - 实验性
-  - 引用
-  - 构造函数
-  - 语音识别
-translation_of: Web/API/SpeechGrammar/SpeechGrammar
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 

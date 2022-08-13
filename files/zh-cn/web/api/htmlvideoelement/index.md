@@ -1,13 +1,6 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - HTML5
-  - Video
-translation_of: Web/API/HTMLVideoElement
 ---
 {{APIRef("HTML DOM")}}
 

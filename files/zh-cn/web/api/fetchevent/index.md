@@ -1,7 +1,6 @@
 ---
 title: FetchEvent
 slug: Web/API/FetchEvent
-translation_of: Web/API/FetchEvent
 ---
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 

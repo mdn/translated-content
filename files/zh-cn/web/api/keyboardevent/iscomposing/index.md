@@ -1,13 +1,6 @@
 ---
 title: KeyboardEvent.isComposing
 slug: Web/API/KeyboardEvent/isComposing
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - events
-  - 键盘事件
-translation_of: Web/API/KeyboardEvent/isComposing
 ---
 {{APIRef("DOM Events")}}
 

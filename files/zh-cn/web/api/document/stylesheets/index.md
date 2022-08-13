@@ -1,8 +1,6 @@
 ---
 title: DocumentOrShadowRoot.styleSheets
 slug: Web/API/Document/styleSheets
-translation_of: Web/API/DocumentOrShadowRoot/styleSheets
-original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
 {{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 

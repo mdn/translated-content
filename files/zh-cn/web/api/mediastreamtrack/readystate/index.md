@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.readyState
 slug: Web/API/MediaStreamTrack/readyState
-tags:
-  - API
-  - 参考
-  - 只读
-  - 媒体捕获和流
-  - 媒体流追踪
-  - 属性
-translation_of: Web/API/MediaStreamTrack/readyState
 ---
 {{APIRef("Media Capture and Streams")}}
 

@@ -1,7 +1,6 @@
 ---
 title: OscillatorNode()
 slug: Web/API/OscillatorNode/OscillatorNode
-translation_of: Web/API/OscillatorNode/OscillatorNode
 ---
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 

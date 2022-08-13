@@ -59,8 +59,6 @@ Le filtre fournit également des fonctions à {{WebEXTAPIRef("webRequest.StreamF
 - {{WebExtAPIRef("webRequest.StreamFilter.resume()")}}
   - : Reprend le traitement de la demande.
 
-<!---->
-
 - {{WebExtAPIRef("webRequest.StreamFilter.suspend()")}}
   - : Suspend le traitement de la demande.
 - {{WebExtAPIRef("webRequest.StreamFilter.write()")}}

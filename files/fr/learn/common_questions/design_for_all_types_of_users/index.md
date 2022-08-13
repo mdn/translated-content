@@ -222,8 +222,6 @@ Les images d'une page web peuvent être décoratives ou informatives mais il n'e
 - Vos lecteurs peuvent naviguer depuis un intranet très strict qui bloque les images provenant d'un {{Glossary("CDN")}}.
 - Vos lecteurs peuvent avoir désactivé l'affichage des images pour économiser de la bande passante, ceci est notamment valable pour les appareils mobiles (voir ci-après).
 
-<!---->
-
 - Les images décoratives
   - : Ces images servent uniquement à décorer et ne contiennent pas d'informations utiles à la compréhension de la page. Elles pourraient généralement être remplacées par une image d'arrière-plan. Assurez-vous de fournir un texte alternatif vide grâce à l'attribut `alt`&nbsp;: `<img src="deco.gif" alt="">` afin qu'elles n'encombrent pas le texte.
 - Les images informatives

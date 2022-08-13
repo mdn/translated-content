@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
-translation_of: Web/API/XMLHttpRequest/getAllResponseHeaders
 ---
 {{APIRef('XMLHttpRequest')}}
 

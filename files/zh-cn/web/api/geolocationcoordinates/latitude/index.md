@@ -1,7 +1,6 @@
 ---
 title: Coordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
-translation_of: Web/API/GeolocationCoordinates/latitude
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

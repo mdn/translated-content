@@ -1,7 +1,6 @@
 ---
 title: MessageChannel.port2
 slug: Web/API/MessageChannel/port2
-translation_of: Web/API/MessageChannel/port2
 ---
 {{APIRef("HTML DOM")}}
 

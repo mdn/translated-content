@@ -1,14 +1,6 @@
 ---
 title: URLSearchParams.getAll()
 slug: Web/API/URLSearchParams/getAll
-tags:
-  - API
-  - Experimental
-  - Method
-  - URL API
-  - URLSearchParams
-  - getAll
-translation_of: Web/API/URLSearchParams/getAll
 ---
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 

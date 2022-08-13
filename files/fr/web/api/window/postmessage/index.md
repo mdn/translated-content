@@ -55,8 +55,6 @@ Les propriétés du message envoyé sont :
 - `source`
   - : Une référence à l'objet [`window`](/fr/docs/DOM/window) qui a envoyé le message ; vous pouvez utiliser ceci pour établir une communication dans les deux sens entre deux fenêtres ayant différentes origines.
 
-<!---->
-
 ## Précautions de sécurité
 
 **Si vous ne prévoyez pas de recevoir de messages depuis d'autres sites, n'ajoutez pas de gestionnaire d'évènement pour les évènements `message`.** C'est un moyen sûr d'éviter les problèmes de sécurité.

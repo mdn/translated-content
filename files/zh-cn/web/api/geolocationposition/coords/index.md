@@ -1,12 +1,6 @@
 ---
 title: Position.coords
 slug: Web/API/GeolocationPosition/coords
-tags:
-  - API
-  - Geolocation API
-  - Position
-  - Property
-translation_of: Web/API/GeolocationPosition/coords
 ---
 {{APIRef("Geolocation API")}}
 

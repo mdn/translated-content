@@ -1,7 +1,6 @@
 ---
 title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
-translation_of: Web/API/URLSearchParams/delete
 ---
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 

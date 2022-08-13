@@ -1,10 +1,6 @@
 ---
 title: Text()
 slug: Web/API/Text/Text
-tags:
-  - API
-  - Text
-translation_of: Web/API/Text/Text
 ---
 {{ Apiref("DOM")}}{{seeCompatTable}}
 

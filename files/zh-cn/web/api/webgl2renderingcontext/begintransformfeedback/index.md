@@ -1,14 +1,6 @@
 ---
 title: WebGL2RenderingContext.beginTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/beginTransformFeedback
-tags:
-  - API
-  - WebGL
-  - WebGL2
-  - 参考
-  - 实验性
-  - 方法
-translation_of: Web/API/WebGL2RenderingContext/beginTransformFeedback
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 

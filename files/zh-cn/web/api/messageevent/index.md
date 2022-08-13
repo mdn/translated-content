@@ -1,14 +1,6 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
-tags:
-  - API
-  - MessageEvent
-  - WebRTC
-  - Websockets API
-  - 参考
-  - 接口
-translation_of: Web/API/MessageEvent
 ---
 {{APIRef("HTML DOM")}}
 

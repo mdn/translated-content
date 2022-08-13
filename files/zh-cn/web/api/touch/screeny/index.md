@@ -1,9 +1,6 @@
 ---
 title: Touch.screenY
 slug: Web/API/Touch/screenY
-tags:
-  - touch
-translation_of: Web/API/Touch/screenY
 ---
 {{ ApiRef() }}
 

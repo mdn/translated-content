@@ -1,7 +1,6 @@
 ---
 title: Accelerometer
 slug: Web/API/Accelerometer
-translation_of: Web/API/Accelerometer
 ---
 {{APIRef("Generic Sensor API")}}
 

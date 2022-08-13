@@ -1,7 +1,6 @@
 ---
 title: style
 slug: Web/API/CSSStyleRule/style
-translation_of: Web/API/CSSStyleRule/style
 ---
 {{ ApiRef() }}
 

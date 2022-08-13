@@ -1,12 +1,6 @@
 ---
 title: Selection.collapseToStart()
 slug: Web/API/Selection/collapseToStart
-tags:
-  - API
-  - Selection
-  - 参考
-  - 方法
-translation_of: Web/API/Selection/collapseToStart
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 

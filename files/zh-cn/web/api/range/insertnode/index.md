@@ -1,7 +1,6 @@
 ---
 title: Range.insertNode()
 slug: Web/API/Range/insertNode
-translation_of: Web/API/Range/insertNode
 ---
 {{ApiRef("DOM")}}
 

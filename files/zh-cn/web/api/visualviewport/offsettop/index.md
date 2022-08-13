@@ -1,10 +1,6 @@
 ---
 title: VisualViewport.offsetTop
 slug: Web/API/VisualViewport/offsetTop
-tags:
-  - API
-  - offsetTop
-translation_of: Web/API/VisualViewport/offsetTop
 ---
 {{SeeCompatTable}}{{APIRef("Visual Viewport")}}
 

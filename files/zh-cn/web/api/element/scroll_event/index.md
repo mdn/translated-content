@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.onscroll
 slug: Web/API/Element/scroll_event
-tags:
-  - API
-  - HTML DOM
-  - 属性
-translation_of: Web/API/GlobalEventHandlers/onscroll
-original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
 {{ ApiRef("HTML DOM") }}
 

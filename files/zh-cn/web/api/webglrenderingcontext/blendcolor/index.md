@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.blendColor()
 slug: Web/API/WebGLRenderingContext/blendColor
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/blendColor
 ---
 {{APIRef("WebGL")}}
 

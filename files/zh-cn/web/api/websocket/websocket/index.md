@@ -1,7 +1,6 @@
 ---
 title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
-translation_of: Web/API/WebSocket/WebSocket
 ---
 {{APIRef("Web Sockets API")}}
 **`WebSocket()`**构造函器会返回一个 {{domxref("WebSocket")}} 对象。

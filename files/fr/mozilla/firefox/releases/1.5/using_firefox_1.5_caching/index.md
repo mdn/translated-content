@@ -74,11 +74,7 @@ L'exemple ci-dessous illustre une page utilisant à la fois les évènements `lo
 
 - Dans les autres navigateurs que Firefox 1.5, voici ce qui se produit à chaque chargement de la page&nbsp;: l'évènement `load` déclenche la fonction `onLoad`, qui appelle la fonction `onPageShow` (ainsi qu'une autre fonction).
 
-<!---->
-
 - Dans Firefox 1.5, la première fois que la page est chargée, l'évènement `load` s'opère de la même façon que dans les autres navigateurs. De plus l'évènement `pageshow` se déclenche, et comme `persisted` est égal à `false`, rien d'autre ne se produit.
-
-<!---->
 
 - Dans Firefox 1.5, lorsque la page est chargée depuis le cache, seul l'évènement `pageshow` se déclenche. Comme `persisted` est égal à `true`, seules les actions JavaScript de la fonction `onPageShow` sont effectuées.
 

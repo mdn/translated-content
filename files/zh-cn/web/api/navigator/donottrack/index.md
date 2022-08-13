@@ -1,7 +1,6 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
-translation_of: Web/API/Navigator/doNotTrack
 ---
 {{ ApiRef("HTML DOM") }}{{SeeCompatTable}}
 

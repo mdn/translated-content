@@ -1,7 +1,6 @@
 ---
 title: WheelEvent.deltaX
 slug: Web/API/WheelEvent/deltaX
-translation_of: Web/API/WheelEvent/deltaX
 ---
 {{APIRef("DOM Events")}}
 

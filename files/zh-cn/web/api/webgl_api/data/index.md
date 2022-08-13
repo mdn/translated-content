@@ -1,21 +1,6 @@
 ---
 title: Data in WebGL
 slug: Web/API/WebGL_API/Data
-tags:
-  - 3D
-  - 3D 图像
-  - WebGL
-  - WebGL API
-  - 中间件
-  - 变体
-  - 图形
-  - 属性
-  - 指南
-  - 绘图
-  - 统一的
-  - 需要内容
-  - 需要示例
-translation_of: Web/API/WebGL_API/Data
 ---
 {{WebGLSidebar}}
 

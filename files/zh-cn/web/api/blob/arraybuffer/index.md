@@ -1,7 +1,6 @@
 ---
 title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
-translation_of: Web/API/Blob/arrayBuffer
 ---
 {{APIRef("File API")}}
 

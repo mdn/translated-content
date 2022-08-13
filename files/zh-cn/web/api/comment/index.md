@@ -1,12 +1,6 @@
 ---
 title: Comment
 slug: Web/API/Comment
-tags:
-  - API
-  - DOM
-  - 参考
-  - 注释
-translation_of: Web/API/Comment
 ---
 {{ ApiRef("DOM") }}
 

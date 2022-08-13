@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.onerror
 slug: Web/API/HTMLMediaElement/onerror
-translation_of: Web/API/HTMLMediaElement/onerror
 ---
 {{APIRef("HTML DOM")}}
 

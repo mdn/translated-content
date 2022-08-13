@@ -324,8 +324,6 @@ En résumé :
 
 - La fonction imbriquée ne peut être utilisée qu'à partir des instructions de la fonction parente.
 
-<!---->
-
 - La fonction imbriquée forme une fermeture : elle peut utiliser les arguments et les variables de la fonction parente. En revanche, la fonction parente ne peut pas utiliser les arguments et les variables de la fonction fille.
 
 > **Note :** Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).

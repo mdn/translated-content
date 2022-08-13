@@ -1,7 +1,6 @@
 ---
 title: Node.isDefaultNamespace
 slug: Web/API/Node/isDefaultNamespace
-translation_of: Web/API/Node/isDefaultNamespace
 ---
 {{ ApiRef() }}
 

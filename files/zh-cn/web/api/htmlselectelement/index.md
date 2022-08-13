@@ -1,15 +1,6 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Select
-  - 参考
-  - 接口
-  - 选择
-translation_of: Web/API/HTMLSelectElement
 ---
 {{APIRef("HTML DOM")}}
 

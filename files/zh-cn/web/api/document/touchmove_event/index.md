@@ -1,8 +1,6 @@
 ---
 title: touchmove
 slug: Web/API/Document/touchmove_event
-translation_of: Web/API/Document/touchmove_event
-original_slug: Web/API/Document/rouchmove_event
 ---
 {{APIRef}}
 

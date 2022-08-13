@@ -1,7 +1,6 @@
 ---
 title: ChannelMergerNode()
 slug: Web/API/ChannelMergerNode/ChannelMergerNode
-translation_of: Web/API/ChannelMergerNode/ChannelMergerNode
 ---
 {{APIRef("Web Audio API")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Window.pageXOffset
 slug: Web/API/Window/pageXOffset
-tags:
-  - API
-  - CSSOM
-translation_of: Web/API/Window/pageXOffset
 ---
 {{ APIRef() }}
 

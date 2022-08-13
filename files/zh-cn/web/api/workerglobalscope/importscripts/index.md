@@ -1,14 +1,6 @@
 ---
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
-tags:
-  - API
-  - Web Workers
-  - WorkerGlobalScope
-  - Workers
-  - 参考
-  - 方法
-translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
 {{APIRef("Web Workers API")}}
 

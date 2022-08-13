@@ -1,13 +1,6 @@
 ---
 title: DeviceMotionEvent.accelerationIncludingGravity
 slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
-tags:
-  - API
-  - Firefox OS
-  - 传感器
-  - 运动传感器
-  - 需要示例
-translation_of: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 ---
 {{ ApiRef("Device Orientation Events") }}
 

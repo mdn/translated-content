@@ -1,7 +1,6 @@
 ---
 title: Selection.collapseToEnd()
 slug: Web/API/Selection/collapseToEnd
-translation_of: Web/API/Selection/collapseToEnd
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 

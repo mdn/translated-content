@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.seekable
 slug: Web/API/HTMLMediaElement/seekable
-translation_of: Web/API/HTMLMediaElement/seekable
 ---
 {{APIRef("HTML DOM")}}
 

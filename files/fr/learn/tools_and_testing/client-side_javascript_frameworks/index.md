@@ -120,8 +120,6 @@ Nous avons créé un cours qui inclut toutes les informations essentielles dont 
 - [1. Premiers pas avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
   - : Dans cet articles, nous vous proposerons une brève introduction au framework Svelte. Nous verrons comment Svelte fonctionne et qu'est-ce qui le rend si différent des autrse frameworks et outils que nous avons vus jusqu'à présent. Ensuite, nous apprendronds à mettre en place notre environnement de développement, créerons une application démonstrative, appréhenderons la structure du projet et nous verrons comment la mettre en oeuvre localement puis la compiler pour la mettre en production.
 
-<!---->
-
 - [2. Commencer notre application todolist avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
   - : Maintenant que nous avons compris les bases du fonctionnement de Svelte, nous pouvons commencer à construirer application démonstrative : une liste de tâches. Dans cet article, nous verrons d'abord les fonctionnalités attendues dans notre application, puis nous créerons un composant Todos.svelte et mettrons en place un HTML statique et du CSS, prêts pour commencer le développement des fonctionnalités de notre application de liste de tâches avec laquelle nous continuerons dans les articles suivants.
 - [3. Comportements dynamiques dans Svelte : travailler avec les variables et les propriétés](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)

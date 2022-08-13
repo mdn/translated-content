@@ -1,16 +1,6 @@
 ---
 title: PerformancePaintTiming
 slug: Web/API/PerformancePaintTiming
-tags:
-  - API
-  - Interface
-  - Paint Timing
-  - Performance Timeline API
-  - PerformancePaintTiming
-  - Web Performance
-  - 渲染时机
-  - 渲染监测
-translation_of: Web/API/PerformancePaintTiming
 ---
 {{SeeCompatTable}}{{APIRef("Performance Timeline API")}}
 

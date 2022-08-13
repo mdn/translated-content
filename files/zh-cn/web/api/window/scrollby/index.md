@@ -1,9 +1,6 @@
 ---
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
-tags:
-  - 全局方法
-translation_of: Web/API/Window/scrollBy
 ---
 {{ APIRef() }}
 

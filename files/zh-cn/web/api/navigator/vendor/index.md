@@ -1,7 +1,6 @@
 ---
 title: Navigator.vendor
 slug: Web/API/Navigator/vendor
-translation_of: Web/API/Navigator/vendor
 ---
 {{ ApiRef() }}
 

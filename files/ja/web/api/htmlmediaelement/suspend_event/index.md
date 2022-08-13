@@ -105,6 +105,4 @@ video.onsuspend = (event) => {
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
 
-<!---->
-
 - [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)

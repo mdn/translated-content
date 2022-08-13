@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.bindFramebuffer()
 slug: Web/API/WebGLRenderingContext/bindFramebuffer
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/bindFramebuffer
 ---
 {{APIRef("WebGL")}}
 

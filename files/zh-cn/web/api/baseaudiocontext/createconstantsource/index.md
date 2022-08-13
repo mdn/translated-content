@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createConstantSource()
 slug: Web/API/BaseAudioContext/createConstantSource
-translation_of: Web/API/BaseAudioContext/createConstantSource
 ---
 {{APIRef("Web Audio API")}}
 

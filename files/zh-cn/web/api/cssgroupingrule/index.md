@@ -1,12 +1,6 @@
 ---
 title: CSSGroupingRule
 slug: Web/API/CSSGroupingRule
-tags:
-  - API
-  - CSSOM
-  - 参考
-  - 接口
-translation_of: Web/API/CSSGroupingRule
 ---
 {{ APIRef("CSSOM") }}
 

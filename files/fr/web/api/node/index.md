@@ -72,8 +72,6 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.textContent")}}
   - : Retourne / définit le contenu textuel d'un élément et de tous ses descendants.
 
-<!---->
-
 ### Propriétés obsolètes
 
 - {{DOMxRef("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}

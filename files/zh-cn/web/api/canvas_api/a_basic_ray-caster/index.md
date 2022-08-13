@@ -1,11 +1,6 @@
 ---
 title: 基本的光线投射
 slug: Web/API/Canvas_API/A_basic_ray-caster
-tags:
-  - Canvas
-  - 图形
-  - 网页
-translation_of: Web/API/Canvas_API/A_basic_ray-caster
 ---
 {{CanvasSidebar}}
 

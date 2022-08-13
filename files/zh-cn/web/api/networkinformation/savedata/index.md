@@ -1,7 +1,6 @@
 ---
 title: NetworkInformation.saveData
 slug: Web/API/NetworkInformation/saveData
-translation_of: Web/API/NetworkInformation/saveData
 ---
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 

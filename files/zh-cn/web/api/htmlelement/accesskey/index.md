@@ -1,13 +1,6 @@
 ---
 title: Element.accessKey
 slug: Web/API/HTMLElement/accessKey
-tags:
-  - API 接口
-  - 属性
-  - 需要丰富内容
-translation_of: Web/API/HTMLElement/accessKey
-translation_of_original: Web/API/Element/accessKey
-original_slug: Web/API/Element/accessKey
 ---
 {{APIRef("DOM")}}
 

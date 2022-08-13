@@ -1,7 +1,6 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
-translation_of: Web/API/Document/adoptNode
 ---
 {{ ApiRef("DOM") }}
 

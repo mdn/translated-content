@@ -1,13 +1,6 @@
 ---
 title: XMLDocument
 slug: Web/API/XMLDocument
-tags:
-  - API
-  - DOM
-  - XML
-  - 参考
-  - 接口
-translation_of: Web/API/XMLDocument
 ---
 {{APIRef("DOM")}}
 

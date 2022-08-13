@@ -1,7 +1,6 @@
 ---
 title: PageTransitionEvent.persisted
 slug: Web/API/PageTransitionEvent/persisted
-translation_of: Web/API/PageTransitionEvent/persisted
 ---
 {{APIRef("HTML DOM")}}
 

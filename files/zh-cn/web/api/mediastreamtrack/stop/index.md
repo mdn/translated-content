@@ -1,18 +1,6 @@
 ---
 title: MediaStreamTrack.stop()
 slug: Web/API/MediaStreamTrack/stop
-tags:
-  - API
-  - Media
-  - WebRTC
-  - 停止
-  - 参考
-  - 方法
-  - 流
-  - 视频捕获和流 API
-  - 视频流 API
-  - 视频流跟踪
-translation_of: Web/API/MediaStreamTrack/stop
 ---
 {{APIRef("Media Capture and Streams")}}
 

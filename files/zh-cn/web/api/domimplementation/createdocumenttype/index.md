@@ -1,10 +1,6 @@
 ---
 title: DOMImplementation.createDocumentType()
 slug: Web/API/DOMImplementation/createDocumentType
-tags:
-  - DOM
-  - DOMImplementation
-translation_of: Web/API/DOMImplementation/createDocumentType
 ---
 {{ ApiRef("DOM")}}
 

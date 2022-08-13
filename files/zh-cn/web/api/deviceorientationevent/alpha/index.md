@@ -1,10 +1,6 @@
 ---
 title: DeviceOrientationEvent.alpha
 slug: Web/API/DeviceOrientationEvent/alpha
-tags:
-  - API
-  - 陀螺仪
-translation_of: Web/API/DeviceOrientationEvent/alpha
 ---
 {{ ApiRef("Device Orientation Events") }}
 

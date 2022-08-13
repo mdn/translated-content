@@ -1,16 +1,6 @@
 ---
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Microtask
-  - 参考
-  - 同步
-  - 方法
-translation_of: Web/API/queueMicrotask
-original_slug: Web/API/WindowOrWorkerGlobalScope/queueMicrotask
 ---
 {{APIRef("HTML DOM")}}{{domxref("Window")}} 或 {{domxref("Worker")}} 接口的 **`queueMicrotask()`** 方法，queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.microtask 是一个简短的函数，它将在当前任务（task）完成其工作之后运行，并且在执行上下文的控制返回到浏览器的事件循环之前，没有其他代码等待运行。The microtask is a short function which will run after the current task has completed its work and when there is no other code waiting to be run before control of the execution context is returned to the browser's event loop.
 

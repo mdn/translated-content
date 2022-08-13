@@ -1,12 +1,6 @@
 ---
 title: 结构化克隆算法
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
-tags:
-  - DOM
-  - HTML5
-  - 结构化克隆算法
-translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
-original_slug: Web/Guide/API/DOM/The_structured_clone_algorithm
 ---
 结构化克隆算法是[由 HTML5 规范定义](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)的用于复制复杂 JavaScript 对象的算法。通过来自 [Workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker)的 `postMessage()` 或使用 [IndexedDB](https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB) 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。
 

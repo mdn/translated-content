@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.cullFace()
 slug: Web/API/WebGLRenderingContext/cullFace
-translation_of: Web/API/WebGLRenderingContext/cullFace
 ---
 {{APIRef("WebGL")}}
 

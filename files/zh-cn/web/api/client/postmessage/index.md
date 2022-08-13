@@ -1,7 +1,6 @@
 ---
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
-translation_of: Web/API/Client/postMessage
 ---
 {{SeeCompatTable}}{{APIRef("Client")}}
 

@@ -1,15 +1,6 @@
 ---
 title: XMLHttpRequest.mozAnon
 slug: Web/API/XMLHttpRequest/mozAnon
-tags:
-  - API
-  - Authentication
-  - Cookies
-  - Non-standard
-  - Property
-  - XMLHttpRequest
-  - mozAnon
-translation_of: Web/API/XMLHttpRequest/mozAnon
 ---
 {{APIRef('XMLHttpRequest')}}
 

@@ -1,9 +1,6 @@
 ---
 title: reading
 slug: Web/API/AmbientLightSensor/illuminance
-translation_of: Web/API/AmbientLightSensor/illuminance
-translation_of_original: Web/API/AmbientLightSensor/reading
-original_slug: Web/API/AmbientLightSensor/reading
 ---
 {{SeeCompatTable}}{{APIRef("Ambient Light Sensor API")}}
 

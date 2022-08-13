@@ -28,8 +28,6 @@ Aucun.
 - `select`
   - : Utilise une expression XPath qui spécifie les nœuds qui doivent être traités. Une astérisque (`*`) sélectionne l'ensemble des nœuds. Si cet attribut n'est pas défini, tous les nœuds enfants du nœud courant sont sélectionnés.
 
-<!---->
-
 - `mode`
   - : S'il existe plusieurs traitements définis pour un même nœud, permet de les différencier.
 

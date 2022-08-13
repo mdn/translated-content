@@ -1,7 +1,6 @@
 ---
 title: DOMImplementation.createHTMLDocument
 slug: Web/API/DOMImplementation/createHTMLDocument
-translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 

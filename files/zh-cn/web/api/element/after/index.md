@@ -1,15 +1,6 @@
 ---
 title: Element.after()
 slug: Web/API/Element/after
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
-translation_of: Web/API/Element/after
-original_slug: Web/API/ChildNode/after
-browser-compat: api.Element.after
 ---
 {{APIRef("DOM")}}
 

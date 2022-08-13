@@ -1,15 +1,6 @@
 ---
 title: atob()
 slug: Web/API/atob
-tags:
-  - API
-  - Base64
-  - DOM
-  - atob
-  - 参考
-  - 方法
-translation_of: Web/API/atob
-original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Navigator.mozIsLocallyAvailable()
 slug: Web/API/Navigator/mozIsLocallyAvailable
-translation_of: Web/API/Navigator/mozIsLocallyAvailable
 ---
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 

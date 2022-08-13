@@ -24,8 +24,6 @@ void gl.bindBuffer(cible, tampon);
 - cible
   - : Un {{domxref ("GLenum")}} spécifiant le point de liaison (cible). Valeurs possibles :
 
-<!---->
-
 - `gl.ARRAY_BUFFER` : tampon contenant des attributs de sommet, tels que des coordonnées de vertex, des données de coordonnées de texture ou des données de couleurs de sommet ;
 - `gl.ELEMENT_ARRAY_BUFFER` : tampon utilisé pour les indices d'éléments ;
 - Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL context 2", "", 1)}}, les valeurs suivantes sont disponibles en plus :
@@ -36,8 +34,6 @@ void gl.bindBuffer(cible, tampon);
   - `gl.UNIFORM_BUFFER` : tampon utilisé pour stocker des blocs uniformes ;
   - `gl.PIXEL_PACK_BUFFER` : tampon utilisé pour les opérations de transfert de pixels ;
   - `gl.PIXEL_UNPACK_BUFFER` : tampon utilisé pour les opérations de transfert de pixels.
-
-<!---->
 
 - tampon
   - : Un {{domxref ("WebGLBuffer")}} à lier.

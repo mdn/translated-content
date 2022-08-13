@@ -57,8 +57,6 @@ browser.sidebarAction.setPanel(
     - `windowId` {{optional_inline}}
       - : `integer`. Définit le panneau uniquement pour la fenêtre donnée.
 
-<!---->
-
 - Si `windowId` et `tabId` sont tous les deux spécifiés, la fonction échoue et le panneau n'est pas défini.
 - Si `windowId` et `tabId` sont tous les deux omis, le panneau global est défini.
 

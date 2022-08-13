@@ -1,8 +1,6 @@
 ---
 title: document.mozFullScreenEnabled
 slug: Web/API/Document/fullscreenEnabled
-translation_of: Web/API/Document/fullscreenEnabled
-original_slug: Web/API/Document/mozFullScreenEnabled
 ---
 {{ ApiRef() }}
 

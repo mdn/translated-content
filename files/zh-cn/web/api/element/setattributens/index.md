@@ -1,11 +1,6 @@
 ---
 title: Element.setAttributeNS()
 slug: Web/API/Element/setAttributeNS
-tags:
-  - Element.setAttributeNS()
-  - SVG
-  - http://svgjs.com/
-translation_of: Web/API/Element/setAttributeNS
 ---
 {{ APIRef("DOM") }}
 

@@ -1,11 +1,6 @@
 ---
 title: clearTimeout()
 slug: Web/API/clearTimeout
-tags:
-  - API
-  - clearTimeout
-translation_of: Web/API/clearTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
 {{APIRef("HTML DOM")}}
 

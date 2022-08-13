@@ -1,15 +1,6 @@
 ---
 title: Beacon API
 slug: Web/API/Beacon_API
-tags:
-  - SDK
-  - user behavior tracker
-  - user tracker
-  - 同步请求
-  - 埋点
-  - 数据分析
-  - 规范
-translation_of: Web/API/Beacon_API
 ---
 {{DefaultAPISidebar("Beacon")}}{{SeeCompatTable}}
 

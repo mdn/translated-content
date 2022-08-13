@@ -1,11 +1,6 @@
 ---
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
-tags:
-  - HTML Table Element
-  - HTMLTableElement.cells
-  - HTMLTableElement.rows
-translation_of: Web/API/HTMLTableElement/rows
 ---
 {{APIRef("HTML DOM")}}表中所有行的
 

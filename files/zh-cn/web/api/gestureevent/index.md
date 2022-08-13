@@ -1,7 +1,6 @@
 ---
 title: GestureEvent
 slug: Web/API/GestureEvent
-translation_of: Web/API/GestureEvent
 ---
 {{APIRef("DOM Events")}}
 

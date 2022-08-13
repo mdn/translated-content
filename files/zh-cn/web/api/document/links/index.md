@@ -1,11 +1,6 @@
 ---
 title: Document.links
 slug: Web/API/Document/links
-tags:
-  - API
-  - Document
-  - 属性
-translation_of: Web/API/Document/links
 ---
 {{APIRef("DOM")}}
 

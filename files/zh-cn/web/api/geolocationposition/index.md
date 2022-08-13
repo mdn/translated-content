@@ -1,11 +1,6 @@
 ---
 title: Position
 slug: Web/API/GeolocationPosition
-tags:
-  - API
-  - 位置
-  - 地理位置 API
-translation_of: Web/API/GeolocationPosition
 ---
 {{APIRef("Geolocation API")}}
 

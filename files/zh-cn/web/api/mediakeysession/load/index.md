@@ -1,7 +1,6 @@
 ---
 title: load()
 slug: Web/API/MediaKeySession/load
-translation_of: Web/API/MediaKeySession/load
 ---
 {{APIRef("EncryptedMediaExtensions")}} {{SeeCompatTable}}
 

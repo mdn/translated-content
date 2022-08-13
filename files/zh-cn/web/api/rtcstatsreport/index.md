@@ -1,7 +1,6 @@
 ---
 title: RTCStatsReport
 slug: Web/API/RTCStatsReport
-translation_of: Web/API/RTCStatsReport
 ---
 {{APIRef("WebRTC")}}
 

@@ -1,12 +1,6 @@
 ---
 title: Navigator.cookieEnabled
 slug: Web/API/Navigator/cookieEnabled
-tags:
-  - API
-  - DOM
-  - cookie
-  - 属性
-translation_of: Web/API/Navigator/cookieEnabled
 ---
 {{ ApiRef("HTML DOM") }}
 

@@ -1,7 +1,6 @@
 ---
 title: CSS 数字工厂函数
 slug: Web/API/CSS/factory_functions
-translation_of: Web/API/CSS/factory_functions
 ---
 {{SeeCompatTable}}**CSS numeric factory functions**，例如 `CSS.em()` 和 `CSS.turn()`，是一组使用传入的数字参数以及所指定的单位（单位名称即所用方法名称）来返回 [CSSUnitValues](/en-US/docs/Web/API/CSSUnitValue) 的方法。这些函数创建新的数字值，与使用 {{domxref('CSSUnitValue.CSSUnitValue()')}} 构造函数相比，没有后者那么冗长。
 

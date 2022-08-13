@@ -1,10 +1,6 @@
 ---
 title: Headers()
 slug: Web/API/Headers/Headers
-tags:
-  - Headers
-  - Headers 构造函数
-translation_of: Web/API/Headers/Headers
 ---
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 

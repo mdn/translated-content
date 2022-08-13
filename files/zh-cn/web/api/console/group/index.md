@@ -1,7 +1,6 @@
 ---
 title: console.group
 slug: Web/API/Console/group
-translation_of: Web/API/Console/group
 ---
 {{ ApiRef() }}
 

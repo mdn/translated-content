@@ -108,8 +108,6 @@ Mozilla supporte une large gamme de technologies open web vraiment intéressante
 
 - [Notifications HTML5](https://elfoxero.github.io/html5notifications/) ([code source](https://github.com/elfoxero/html5notifications))
 
-<!---->
-
 ### API Web Audio
 
 - [Web Audio Fireworks](https://ondras.github.io/fireworks-webgl/)

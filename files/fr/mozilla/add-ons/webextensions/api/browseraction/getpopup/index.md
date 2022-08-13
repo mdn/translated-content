@@ -38,8 +38,6 @@ var gettingPopup = browser.browserAction.getPopup(
     - `windowId`{{optional_inline}}
       - : `integer`. Les fenêtres dont le popup à obtenir.
 
-<!---->
-
 - Si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue.
 - Si `windowId` et `tabId` sont tous deux omis, la fenêtre contextuelle globale est retournée.
 

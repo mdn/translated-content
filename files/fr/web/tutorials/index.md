@@ -36,8 +36,6 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Element)
   - : Une référence complète pour les éléments HTML et qui contient des informations de compatibilité pour la prise en charge des différents navigateurs.
 
-<!---->
-
 - [Création d'une page web simple avec HTML](https://www.theblogstarter.com/html-for-beginners) (en anglais)
   - : Un guide HTML pour les débutants qui comprend des explications sur les balises courantes, y compris les balises HTML5. Il comprend également un guide étape par étape pour créer une page web de base avec des exemples de code.
 - [Défis HTML](https://wikiversity.org/wiki/Web_Design/HTML_Challenges) (en anglais)
@@ -48,8 +46,6 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 - [Multimédia et intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding)
   - : Ce module explore comment utiliser le langage HTML pour inclure des éléments multimédias dans vos pages web, y compris les différentes façons d'inclure des images, et comment intégrer des vidéos, des sons et même des pages web entières.
 
-<!---->
-
 - [Tableaux en HTML](/fr/docs/Learn/HTML/Tables)
   - : Représenter des données tabulaires sur une page web de manière compréhensible, [accessible](/fr/docs/Glossary/Accessibility) peut être un défi. Ce module couvre le balisage de base des tableaux, ainsi que des fonctionnalités plus complexes telles que l'implémentation de légendes et de résumés.
 
@@ -57,8 +53,6 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 
 - [Formulaires HTML](/fr/docs/Learn/Forms)
   - : Les formulaires sont une partie très importante du Web — ils fournissent une grande partie de la fonctionnalité dont vous avez besoin pour interagir avec les sites Web, par exemple pour vous enregistrer et vous connecter, envoyer des commentaires, acheter des produits, etc. Ce module vous permet de commencer à créer les parties côté client des formulaires.
-
-<!---->
 
 - [Astuces de création de pages HTML à affichage rapide](/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
   - : Optimisez les pages web pour offrir un site plus réactif aux visiteurs et réduire la charge sur votre serveur web et votre connexion Internet.
@@ -71,8 +65,6 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
   - : CSS (_Cascading Style Sheets_) est le code que vous utilisez pour styliser votre page web. _Les bases de CSS_ vous présente ce dont vous avez besoin pour commencer. Nous répondrons à des questions telles que : Comment rendre mon texte noir ou rouge ? Comment faire pour que mon contenu s'affiche à tel ou tel endroit de l'écran ? Comment puis-je décorer ma page web avec des images et des couleurs d'arrière-plan ?
 - [Premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps)
   - : Les feuilles de style en cascade (CSS) sont utilisées pour styliser et mettre en page des pages Web, par exemple pour modifier la police, la couleur, la taille et l'espacement de votre contenu, le diviser en plusieurs colonnes ou ajouter des animations et autres éléments décoratifs. Ce module vous permet de commencer en douceur votre parcours vers la maîtrise de CSS, en vous expliquant les bases de son fonctionnement, la syntaxe et la façon dont vous pouvez commencer à l'utiliser pour ajouter du style au HTML.
-
-<!---->
 
 - [Blocs de base en CSS](/fr/docs/Learn/CSS/Building_blocks)
 
@@ -92,8 +84,6 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 - [Référence CSS](/fr/docs/Web/CSS/Reference)
   - : Référence complète à CSS, avec des détails sur la prise en charge par Firefox et d'autres navigateurs.
 
-<!---->
-
 - [Grilles fluides](https://www.alistapart.com/articles/fluidgrids/) (en anglais)
   - : Concevez des mises en page qui se redimensionnent de manière fluide avec la fenêtre du navigateur, tout en utilisant une grille typographique.
 - [Les défis CSS](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (en anglais)
@@ -106,14 +96,10 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 - [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
   - : Les transitions CSS, qui font partie du projet de spécification CSS3, permettent d'animer les changements apportés aux propriétés CSS, plutôt que de leur donner un effet immédiat.
 
-<!---->
-
 - [Guide rapide pour l'implémentation des polices Web (avec @font-face)](https://www.html5rocks.com/tutorials/webfonts/quick/) (en anglais)
   - : La fonction @font-face de CSS3 vous permet d'utiliser des caractères personnalisés sur le web d'une manière accessible, manipulable et évolutive.
 - [Commencer à écrire du CSS](https://davidwalsh.name/starting-css) (en anglais)
   - : Une introduction aux outils et méthodologies pour écrire des CSS plus succinctes, maintenables et évolutifs.
-
-<!---->
 
 - [Tutoriel canvas](/fr/docs/Web/API/Canvas_API/Tutorial)
   - : Apprenez à dessiner des graphiques à l'aide de scripts en utilisant l'élément canvas.
@@ -129,8 +115,6 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 - [Principaux blocs en JS](/fr/docs/Learn/JavaScript/Building_blocks)
   - : Dans ce module, nous poursuivons notre couverture de toutes les fonctionnalités fondamentales de JavaScript, en portant notre attention sur les types de blocs de code les plus courants, tels que les instructions conditionnelles, les boucles, les fonctions et les événements. Vous avez déjà vu ces éléments dans le cours, mais seulement en passant — ici, nous allons en discuter de manière explicite.
 
-<!---->
-
 - [Bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
   - : Qu'est-ce que JavaScript et comment peut-il vous aider ?
 - [Codecademy](https://www.codecademy.com/) (en anglais)
@@ -144,8 +128,6 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
   - : En JavaScript, la plupart des choses sont des objets, qu'il s'agisse de fonctions JavaScript de base comme les chaînes de caractères et les tableaux ou des API de navigateur construites au-dessus de JavaScript. Vous pouvez même créer vos propres objets pour encapsuler des fonctions et des variables connexes dans des paquets efficaces. La nature orientée objet de JavaScript est importante à comprendre si vous voulez aller plus loin dans votre connaissance du langage et écrire un code plus efficace, c'est pourquoi nous avons prévu ce module pour vous aider. Nous y enseignons en détail la théorie et la syntaxe des objets, nous voyons comment créer vos propres objets et nous expliquons ce que sont les données JSON et comment travailler avec elles.
 - [API web utilisées côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs)
   - : Lorsque vous écrivez du JavaScript côté client pour des sites Web ou des applications, vous n'irez pas très loin avant de commencer à utiliser des API — des interfaces permettant de manipuler différents aspects du navigateur et du système d'exploitation sur lesquels le site s'exécute, ou même des données provenant d'autres sites Web ou services. Dans ce module, nous allons explorer ce que sont les API et comment utiliser certaines des API les plus courantes que vous rencontrerez souvent dans votre travail de développement.
-
-<!---->
 
 - [Réintroduction à JavaScript](/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   - : Une récapitulation du langage de programmation JavaScript destinée aux développeuses et développeurs de niveau intermédiaire.
@@ -166,8 +148,6 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
   - : Documentation des parties les plus étranges de JavaScript.
 - [Explorer ES6](https://exploringjs.com/es6/) (en anglais)
   - : Des informations fiables et approfondies sur ECMAScript 2015.
-
-<!---->
 
 - [Modèles JavaScript](https://shichuan.github.io/javascript-patterns) (en anglais)
   - : Une collection de modèles et d'anti-modèles JavaScript qui couvre les modèles de fonctions, les modèles jQuery, les modèles de plugins jQuery, les modèles de conception, les modèles généraux, les modèles de littéraux et de constructeurs, les modèles de création d'objets, les modèles de réutilisation du code, DOM.

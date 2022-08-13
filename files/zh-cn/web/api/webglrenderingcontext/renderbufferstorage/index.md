@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.renderbufferStorage()
 slug: Web/API/WebGLRenderingContext/renderbufferStorage
-translation_of: Web/API/WebGLRenderingContext/renderbufferStorage
 ---
 {{APIRef("WebGL")}}
 

@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
-translation_of: Web/API/ShadowRoot/mode
 ---
 {{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 

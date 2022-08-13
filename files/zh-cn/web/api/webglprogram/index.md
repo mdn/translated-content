@@ -1,12 +1,6 @@
 ---
 title: WebGLProgram
 slug: Web/API/WebGLProgram
-tags:
-  - WebGL
-  - WebGLProgram
-  - 着色器使用
-  - 着色器程序
-translation_of: Web/API/WebGLProgram
 ---
 {{APIRef("WebGL")}}
 

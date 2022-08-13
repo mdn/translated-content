@@ -1,7 +1,6 @@
 ---
 title: XMLDocument.load()
 slug: Web/API/XMLDocument/load
-translation_of: Web/API/XMLDocument/load
 ---
 {{APIRef("DOM")}}
 

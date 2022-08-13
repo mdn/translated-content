@@ -1,7 +1,6 @@
 ---
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
-translation_of: Web/API/PictureInPictureWindow
 ---
 {{APIRef("Picture-in-Picture API")}}
 

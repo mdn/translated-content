@@ -20,52 +20,32 @@ Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles 
 - [Microrésumés](http://wiki.mozilla.org/Microsummaries)
   - : Les microrésumés sont de courtes compilations, régulièrement mises à jour, des plus importantes informations présentes sur des pages Web. Ils peuvent être fournis tant par les sites eux-mêmes que par des développeurs tiers. Lorsque les utilisateurs marquent des pages présentant des microrésumés, ils peuvent choisir d'afficher ceux-ci en lieu et place de titres statiques.
 
-<!---->
-
 - [Création d'un générateur de microrésumé](/fr/Création_d'un_générateur_de_microrésumé)
   - : Un tutoriel sur la création d'un générateur de microrésumés.
-
-<!---->
 
 - [Référence grammaticale XML d'un microrésumé](/fr/Référence_grammaticale_XML_d'un_microrésumé)
   - : Un guide de référence sur la grammaire XML utilisée pour la création de générateurs de microrésumés.
 
-<!---->
-
 - [Création de plugins MozSearch](/fr/Création_de_plugins_MozSearch)
   - : Firefox 2 utilise MozSearch, un format de plugins de recherche basé sur OpenSearch.
-
-<!---->
 
 - [Création de plugins OpenSearch pour Firefox](/fr/Création_de_plugins_OpenSearch_pour_Firefox)
   - : Firefox 2 support le format de moteur de recherche OpenSearch.
 
-<!---->
-
 - [Gestion de suggestions dans les plugins de recherche](/fr/Gestion_de_suggestions_dans_les_plugins_de_recherche)
   - : Comment permettre à votre plugin MozSearch de proposer des suggestions, qui apparaîtront dans une liste déroulante au fur et à mesure de la frappe dans la Barre de recherche.
-
-<!---->
 
 - [Nouveautés dans JavaScript 1.7](/fr/Nouveautés_dans_JavaScript_1.7)
   - : Firefox 2 fournit JavaScript 1.7, qui comprend de nouvelles fonctionnalités comme `let`, des assignations déstructurantes, des générateurs et itérateurs, et la définition de tableaux par compréhension.
 
-<!---->
-
 - [WHATWG Client-side session and persistent storage (ou DOM Storage)](/fr/DOM/Storage)
   - : Le stockage de session et le stockage persistant côté client permet aux applications Web de conserver des données structurées du côté du client.
-
-<!---->
 
 - [SVG dans Firefox](/fr/SVG_dans_Firefox)
   - : Firefox 2 améliore le support du SVG (_Scalable Vector Graphics_) en implémentant l'élément `<textPath>` et en ajoutant le support de quelques attributs non encore supportés.
 
-<!---->
-
 - [Contrôle du correcteur d'orthographe dans les formulaires HTML](/fr/Contrôle_du_correcteur_d'orthographe_dans_les_formulaires_HTML)
   - : Firefox 2 contient un correcteur d'orthographe des zones de texte et des champs de saisie. Cet article décrit comment écrire votre HTML pour activer et désactiver ce correcteur d'orthographe sur des éléments individuels de formulaires.
-
-<!---->
 
 - [La sécurité dans Firefox 2](/fr/La_sécurité_dans_Firefox_2)
   - : Firefox 2 a modifié les protocoles de sécurité activés par défaut.
@@ -75,47 +55,29 @@ Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles 
 - [Mise à jour des extensions pour Firefox 2](/fr/Mise_à_jour_des_extensions_pour_Firefox_2)
   - : Comment migrer vos extensions existantes pour qu'elles fonctionnent avec Firefox 2.
 
-<!---->
-
 - [API de restauration de session](/fr/API_de_restauration_de_session)
   - : Ajout d'élément à enregistrer et à restaurer d'une session à l'autre dans Firefox.
-
-<!---->
 
 - [API d'accès au contenu de flux](/fr/API_d'accès_au_contenu_de_flux)
   - : API permettant aux développeurs d'accéder et de traiter des flux RSS et Atom.
 
-<!---->
-
 - [Support SAX](/fr/SAX)
   - : API de parcours XML basé sur les évènements.
-
-<!---->
 
 - [Ajout de moteurs de recherche depuis des pages Web](/fr/Ajout_de_moteurs_de_recherche_depuis_des_pages_Web)
   - : Un code JavaScript peut demander à Firefox d'installer un nouveau plugin de moteur de recherche, qui peut être fourni au format OpenSearch ou au format Sherlock.
 
-<!---->
-
 - [Utilisation du correcteur orthographique dans XUL](/fr/Utilisation_du_correcteur_orthographique_dans_XUL)
   - : Explique comment vérifier l'orthographe de certains mots et comment obtenir une liste de suggestions de corrections depuis le code.
-
-<!---->
 
 - [Ajout de fournisseurs de données de protection anti-phishing](/fr/Ajout_de_fournisseurs_de_données_de_protection_anti-phishing)
   - : Il est possible d'améliorer la protection de Firefox contre le phishing (hameçonnage) en ajoutant des fournisseurs de données pour le système de navigation sécurisée.
 
-<!---->
-
 - [Storage](/fr/Storage)
   - : Firefox 2 propose mozStorage, une architecture de base de données basée sur sqlite.
 
-<!---->
-
 - [Changements dans les thèmes graphiques pour Firefox 2](/fr/Changements_dans_les_thèmes_graphiques_pour_Firefox_2)
   - : Discussion autour des changements à apporter au thèmes graphiques existants pour qu'ils fonctionnent avec Firefox 2.
-
-<!---->
 
 - Améliorations de Textbox (à partir de Firefox 2.0.0.1 uniquement)
 

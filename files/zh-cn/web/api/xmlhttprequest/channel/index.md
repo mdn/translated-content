@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.channel
 slug: Web/API/XMLHttpRequest/channel
-translation_of: Web/API/XMLHttpRequest/channel
 ---
 {{APIRef('XMLHttpRequest')}}
 

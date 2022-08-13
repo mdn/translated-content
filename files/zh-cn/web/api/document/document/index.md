@@ -1,12 +1,6 @@
 ---
 title: Document()
 slug: Web/API/Document/Document
-tags:
-  - API
-  - DOM
-  - Document
-  - 构造器
-translation_of: Web/API/Document/Document
 ---
 {{APIRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: Text.wholeText
 slug: Web/API/Text/wholeText
-translation_of: Web/API/Text/wholeText
 ---
 {{ apiref("DOM") }}
 

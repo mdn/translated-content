@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
-translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
 {{APIRef("WebRTC")}}只读的 **{{domxref("RTCPeerConnection")}}** 属性 `canTrickleIceCandidates` 返回一个{{jsxref("Boolean")}}，它指示远程对等端是否可以接受 [trickled ICE candidates](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice-02) 。
 

@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onselectionchange
 slug: Web/API/HTMLInputElement/selectionchange_event
-translation_of: Web/API/GlobalEventHandlers/onselectionchange
-original_slug: Web/API/GlobalEventHandlers/onselectionchange
 ---
 {{ApiRef('DOM')}}{{SeeCompatTable}}
 

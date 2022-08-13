@@ -1,7 +1,6 @@
 ---
 title: document.linkColor
 slug: Web/API/Document/linkColor
-translation_of: Web/API/Document/linkColor
 ---
 {{ ApiRef() }}
 

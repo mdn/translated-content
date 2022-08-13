@@ -18,13 +18,9 @@ var sharePromise = window.navigator.share(data);
 - _data_
   - : Un objet contenant les données à partager. Au moins un des champs suivant doit être spécifié. Les champs possibles sont les suivant :
 
-<!---->
-
 - `url`: Un {{domxref("USVString")}} représentant l'URL à partager.
 - `text`: Un {{domxref("USVString")}} représentant le texte à partager.
 - `title`: Un {{domxref("USVString")}} représentant le titre à partager.
-
-<!---->
 
 ### Valeur retournée
 

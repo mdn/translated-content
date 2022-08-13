@@ -1,16 +1,6 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-tags:
-  - API
-  - Document
-  - Property
-  - Reference
-  - 参考
-  - 属性
-  - 文档
-  - 编辑
-translation_of: Web/API/Document/designMode
 ---
 {{ ApiRef()}}
 

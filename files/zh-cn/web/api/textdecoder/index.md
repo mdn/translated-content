@@ -1,13 +1,6 @@
 ---
 title: TextDecoder
 slug: Web/API/TextDecoder
-tags:
-  - API
-  - DOM
-  - 参考
-  - 接口
-  - 编码
-translation_of: Web/API/TextDecoder
 ---
 {{APIRef("Encoding API")}}
 

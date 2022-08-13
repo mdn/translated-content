@@ -75,8 +75,6 @@ Une clé est contenue dans un intervalle de clé lorsque les conditions suivante
 - {{domxref("IDBKeyRange.includes()")}}
   - : Cette méthode renvoie un booléen qui indique si la clé passée en argument est contenue dans l'intervalle de clé.
 
-<!---->
-
 ## Exemples
 
 Dans l'exemple qui suit, on montre comment utiliser un intervalle de clé. Ici, on déclare un objet `keyRangeValue` qui représente un intervalle pour les valeurs entre "A" et "F". On ouvre une transaction grâce à {{domxref("IDBTransaction")}}, on ouvre également un magasin d'objets puis un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} pour lequel on indique que `keyRangeValue` est l'intervalle de clé à considérer. Cela signifie que le curseur récupèrera uniquement les enregistrements pour lesquels les clés sont contenues dans cet intervalle. Cet intervalle est fermé, il inclut les valeur "A" and "F" (on n'a pas indiqué que ces bornes étaient ouvertes). Si on avait utilisé `IDBKeyRange.bound("A", "F", true, true);`, l'intervalle serait ouvert et ne contiendrait pas "A" ou "F" mais uniquement les valeurs intermédiaires.

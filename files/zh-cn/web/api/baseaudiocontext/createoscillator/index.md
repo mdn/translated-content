@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
-translation_of: Web/API/BaseAudioContext/createOscillator
 ---
 {{APIRef("Web Audio API")}}
 

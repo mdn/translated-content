@@ -1,7 +1,6 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-translation_of: Web/API/Document/location
 ---
 {{APIRef}}
 

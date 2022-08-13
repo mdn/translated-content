@@ -1,13 +1,6 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
-tags:
-  - 实验性
-  - 手柄
-  - 控制器
-  - 概述
-  - 游戏
-translation_of: Web/API/Gamepad_API
 ---
 {{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 

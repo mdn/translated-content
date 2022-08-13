@@ -1,12 +1,6 @@
 ---
 title: 'Location: ancestorOrigins'
 slug: Web/API/Location/ancestorOrigins
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
-browser-compat: api.Location.ancestorOrigins
 ---
 {{APIRef("Location")}}
 

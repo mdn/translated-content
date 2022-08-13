@@ -167,7 +167,7 @@ console.log(eval(s2.valueOf())); // 回傳數字 4
 
 ## `String` 通用方法
 
-> **警告：**字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。
+> **警告：** 字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。
 
 The `String` instance methods are also available in Firefox as of JavaScript 1.6 (though not part of the ECMAScript standard) on the String object for applying String methods to any object:
 

@@ -55,8 +55,6 @@ Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnen
 - {{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}
   - : La position du drapeau d’incrémentation automatique du magasin d'objet relié.
 
-<!---->
-
 ## Exemple
 
 Cet exemple montre différents usages de l'accès au magasin d'objet. On met à jour la structure de donnée avec {{domxref("IDBObjectStore.createIndex")}} dans un gestionnaire d'événement `onupgradeneeded`. On ajoute un nouvel enregistrement avec {{domxref("IDBObjectStore.add")}}.

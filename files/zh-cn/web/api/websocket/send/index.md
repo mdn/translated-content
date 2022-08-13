@@ -1,13 +1,6 @@
 ---
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
-tags:
-  - API
-  - Web API
-  - WebSocket
-  - 引用
-  - 方法
-translation_of: Web/API/WebSocket/send
 ---
 {{APIRef("Web Sockets API")}}
 

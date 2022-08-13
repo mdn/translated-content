@@ -1,14 +1,6 @@
 ---
 title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
-tags:
-  - API
-  - Channel messaging
-  - Constructor
-  - MessageChannel
-  - 参考
-  - 构造函数
-translation_of: Web/API/MessageChannel/MessageChannel
 ---
 {{APIRef("HTML DOM")}}
 

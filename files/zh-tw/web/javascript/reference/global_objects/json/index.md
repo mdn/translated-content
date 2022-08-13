@@ -26,11 +26,13 @@ JSON 是序列物件、陣列、數字、字串、布林值、還有 {{jsxref("n
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 物件與陣列      | 屬性名稱必須是包含在雙引號中的字串；禁止尾後逗號。                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | 數字            | 數字不可以 0 作為開頭(在 JSON.stringify 0 會被忽略，但是在 JSON.parse 會造成語法錯誤)；小數點前面必須至少有一位數字。                                                                                                                                                                                                                                                                                                                                                             |
-| 字串            | Only a limited set of characters may be escaped; certain control characters are prohibited; the Unicode line separator ([U+2028](http://unicode-table.com/en/2028/)) and paragraph separator ([U+2029](http://unicode-table.com/en/2029/)) characters are permitted; strings must be double-quoted. See the following example where {{jsxref("JSON.parse()")}} works fine and a {{jsxref("SyntaxError")}} is thrown when evaluating the code as JavaScript:```js |
+| 字串            | Only a limited set of characters may be escaped; certain control characters are prohibited; the Unicode line separator ([U+2028](http://unicode-table.com/en/2028/)) and paragraph separator ([U+2029](http://unicode-table.com/en/2029/)) characters are permitted; strings must be double-quoted. See the following example where {{jsxref("JSON.parse()")}} works fine and a {{jsxref("SyntaxError")}} is thrown when evaluating the code as JavaScript: |
 
-var code = '"\u2028\u2029"'; JSON.parse(code); // works fine eval(code); // fails
-
-````|
+```js
+const code = '"\u2028\u2029"';
+JSON.parse(code); // evaluates to "\u2028\u2029" in all engines
+eval(code); // throws a SyntaxError in old engines
+```
 
 JSON 的完整語法如下：
 
@@ -82,7 +84,7 @@ JSONArray = [ ]
          or [ ArrayElements ]
 ArrayElements = JSON
              or ArrayElements , JSON
-````
+```
 
 Insignificant whitespace may be present anywhere except within a `JSONNumber` (numbers must contain no whitespace) or `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). The tab character ([U+0009](http://unicode-table.com/en/0009/)), carriage return ([U+000D](http://unicode-table.com/en/000D/)), line feed ([U+000A](http://unicode-table.com/en/000A/)), and space ([U+0020](http://unicode-table.com/en/0020/)) characters are the only valid whitespace characters.
 

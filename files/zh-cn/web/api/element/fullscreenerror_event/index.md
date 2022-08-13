@@ -1,8 +1,6 @@
 ---
 title: Element.onfullscreenerror
 slug: Web/API/Element/fullscreenerror_event
-translation_of: Web/API/Element/onfullscreenerror
-original_slug: Web/API/Element/onfullscreenerror
 ---
 {{ApiRef("Fullscreen API")}}
 

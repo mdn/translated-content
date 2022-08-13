@@ -1,11 +1,6 @@
 ---
 title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
-tags:
-  - API
-  - DOM
-  - DOM Events
-translation_of: Web/API/MouseEvent/clientX
 ---
 {{APIRef("DOM Events")}}
 

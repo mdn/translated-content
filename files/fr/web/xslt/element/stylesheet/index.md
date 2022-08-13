@@ -37,12 +37,8 @@ Un pseudo-attribut est nécessaire pour identifier le document comme étant une 
 - `id` (Supporté comme dans Netscape 7.0 uniquement s'il est explicitement appelé par une DTD intégrée)
   - : Définit un identifiant `id` pour cette feuille de style. Cet attribut est le plus souvent utilisé lorsque la feuille de style est incorporée dans un autre document XML.
 
-<!---->
-
 - extension-element-prefixes (Non supporté)
   - : Définit la liste des préfixes des espaces de nommage pour les éléments d'extension présent dans ce document. Les noms sont séparés par des espaces.
-
-<!---->
 
 - exclude-result-prefixes
   - : Définit tous les espaces de nommage utilisés dans le document qui ne doivent pas être envoyés vers le document de sortie. Les noms sont séparés par des espaces.

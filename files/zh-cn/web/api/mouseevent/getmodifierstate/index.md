@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
-translation_of: Web/API/MouseEvent/getModifierState
 ---
 {{APIRef("DOM Events")}}
 

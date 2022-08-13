@@ -1,8 +1,6 @@
 ---
 title: DocumentOrShadowRoot.elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
-translation_of: Web/API/DocumentOrShadowRoot/elementsFromPoint
-original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
 {{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 

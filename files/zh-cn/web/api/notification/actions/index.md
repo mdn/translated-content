@@ -1,12 +1,6 @@
 ---
 title: Notification.actions
 slug: Web/API/notification/actions
-tags:
-  - Notification actions
-  - Notifications
-  - Web API
-  - Web Notifications API
-translation_of: Web/API/Notification/actions
 ---
 {{APIRef("Web Notifications")}}
 

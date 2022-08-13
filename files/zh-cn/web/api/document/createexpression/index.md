@@ -1,7 +1,6 @@
 ---
 title: document.createExpression
 slug: Web/API/Document/createExpression
-translation_of: Web/API/Document/createExpression
 ---
 {{ ApiRef() }}
 

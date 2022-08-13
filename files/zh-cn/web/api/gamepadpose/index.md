@@ -1,7 +1,6 @@
 ---
 title: GamepadPose
 slug: Web/API/GamepadPose
-translation_of: Web/API/GamepadPose
 ---
 {{APIRef("Gamepad API")}}{{SeeCompatTable}}
 

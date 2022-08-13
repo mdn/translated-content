@@ -33,8 +33,6 @@ Effectuez les étapes suivantes :
 
 7. Choisir **Parcourir...** pour trouver l'emplacement du module PKCS #11 sur votre ordinateur local, puis cliquez ou appuyez sur **OK** pour confirmer.
 
-<!---->
-
 ## Provisionnement des modules PKCS #11
 
 > **Note :** A partir de Firefox 58, les extensions peuvent utiliser l'API [pkcs11](/fr/Add-ons/WebExtensions/API/pkcs11) pour énumérer les modules PKCS #11 et les rendre accessibles au navigateur comme sources de clés et certificats.

@@ -1,7 +1,6 @@
 ---
 title: 媒体追踪约束
 slug: Web/API/MediaTrackConstraints
-translation_of: Web/API/MediaTrackConstraints
 ---
 {{APIRef("媒体捕获与媒体流")}}
 

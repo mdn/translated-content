@@ -1,12 +1,6 @@
 ---
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLStyleElement
-  - Reference
-translation_of: Web/API/HTMLStyleElement
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
-tags:
-  - API
-  - WebGL
-  - WebGLRenderingContext
-  - 参考
-  - 方法
-translation_of: Web/API/WebGLRenderingContext/bufferData
 ---
 {{APIRef("WebGL")}}
 

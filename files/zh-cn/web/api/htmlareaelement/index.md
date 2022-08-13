@@ -1,7 +1,6 @@
 ---
 title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
-translation_of: Web/API/HTMLAreaElement
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,9 +1,6 @@
 ---
 title: Window.updateCommands()
 slug: Web/API/Window/updateCommands
-tags:
-  - chrome 窗口（UI）的命令状态。
-translation_of: Web/API/Window/updateCommands
 ---
 {{ ApiRef() }}{{Non-standard_header}}
 

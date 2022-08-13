@@ -1,16 +1,6 @@
 ---
 title: Response.clone()
 slug: Web/API/Response/clone
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Method
-  - Reference
-  - Response
-  - clone
-translation_of: Web/API/Response/clone
-original_slug: Web/API/Response/克隆
 ---
 {{APIRef("Fetch")}}
 

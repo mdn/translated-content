@@ -1,7 +1,6 @@
 ---
 title: TimeRanges.length
 slug: Web/API/TimeRanges/length
-translation_of: Web/API/TimeRanges/length
 ---
 {{APIRef("DOM")}}
 

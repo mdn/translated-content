@@ -1,7 +1,6 @@
 ---
 title: IdleDeadline.timeRemaining()
 slug: Web/API/IdleDeadline/timeRemaining
-translation_of: Web/API/IdleDeadline/timeRemaining
 ---
 {{APIRef("Background Tasks")}}{{SeeCompatTable}}
 

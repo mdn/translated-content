@@ -1,7 +1,6 @@
 ---
 title: document.URL
 slug: Web/API/Document/URL
-translation_of: Web/API/Document/URL
 ---
 {{ ApiRef() }}
 

@@ -1,7 +1,6 @@
 ---
 title: NetworkInformation.rtt
 slug: Web/API/NetworkInformation/rtt
-translation_of: Web/API/NetworkInformation/rtt
 ---
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: Window.sizeToContent()
 slug: Web/API/Window/sizeToContent
-translation_of: Web/API/Window/sizeToContent
 ---
 {{APIRef}}{{Non-standard_header}}
 

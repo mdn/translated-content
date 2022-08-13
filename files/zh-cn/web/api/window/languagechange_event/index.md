@@ -1,7 +1,6 @@
 ---
 title: languagechange
 slug: Web/API/Window/languagechange_event
-translation_of: Web/API/Window/languagechange_event
 ---
 {{SeeCompatTable}}
 

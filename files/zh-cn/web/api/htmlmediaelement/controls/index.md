@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.controls
 slug: Web/API/HTMLMediaElement/controls
-translation_of: Web/API/HTMLMediaElement/controls
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,9 +1,6 @@
 ---
 title: HTMLImageElement.loading
 slug: Web/API/HTMLImageElement/loading
-tags:
-  - 懒加载
-translation_of: Web/API/HTMLImageElement/loading
 ---
 {{APIRef("HTML DOM")}}
 

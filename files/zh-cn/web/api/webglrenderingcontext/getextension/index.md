@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.getExtension()
 slug: Web/API/WebGLRenderingContext/getExtension
-tags:
-  - API
-  - WebGL
-  - WebGLRenderingContext
-  - 参考
-  - 方法
-translation_of: Web/API/WebGLRenderingContext/getExtension
 ---
 {{APIRef("WebGL")}}
 

@@ -1,7 +1,6 @@
 ---
 title: InputEvent.isComposing
 slug: Web/API/InputEvent/isComposing
-translation_of: Web/API/InputEvent/isComposing
 ---
 {{APIRef("DOM Events")}}
 

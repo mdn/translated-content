@@ -1,9 +1,6 @@
 ---
 title: window.openDialog
 slug: Web/API/Window/openDialog
-tags:
-  - Gecko DOM Reference
-translation_of: Web/API/Window/openDialog
 ---
 {{ ApiRef() }}
 

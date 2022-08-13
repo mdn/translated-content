@@ -1,15 +1,6 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-tags:
-  - API
-  - Advanced
-  - DOM
-  - DOM Reference
-  - MutationObserver
-  - requestAnimationFrame
-  - resize
-translation_of: Web/API/MutationObserver
 ---
 {{APIRef("DOM WHATWG")}}
 

@@ -1,15 +1,6 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
-tags:
-  - API
-  - DOM
-  - File
-  - Files
-  - 参考
-  - 属性
-  - 文件
-translation_of: Web/API/Blob/type
 ---
 {{APIRef("File API")}}
 

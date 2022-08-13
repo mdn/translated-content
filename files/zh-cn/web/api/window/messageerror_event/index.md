@@ -1,8 +1,6 @@
 ---
 title: WindowEventHandlers.onmessageerror
 slug: Web/API/Window/messageerror_event
-translation_of: Web/API/WindowEventHandlers/onmessageerror
-original_slug: Web/API/WindowEventHandlers/onmessageerror
 ---
 {{APIRef("HTML DOM")}}
 

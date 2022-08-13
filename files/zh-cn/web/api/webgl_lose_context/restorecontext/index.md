@@ -1,13 +1,6 @@
 ---
 title: WEBGL_lose_context.restoreContext()
 slug: Web/API/WEBGL_lose_context/restoreContext
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
-translation_of: Web/API/WEBGL_lose_context/restoreContext
 ---
 {{APIRef("WebGL")}}
 

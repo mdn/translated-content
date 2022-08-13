@@ -1,7 +1,6 @@
 ---
 title: CredentialsContainer
 slug: Web/API/CredentialsContainer
-translation_of: Web/API/CredentialsContainer
 ---
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 

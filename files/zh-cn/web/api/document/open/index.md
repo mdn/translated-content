@@ -1,11 +1,6 @@
 ---
 title: Document.open()
 slug: Web/API/Document/open
-tags:
-  - DOM
-  - Document
-  - Document.open()
-translation_of: Web/API/Document/open
 ---
 {{APIRef("DOM")}}
 

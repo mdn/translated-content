@@ -25,8 +25,6 @@ Si vous voulez manipuler le stockage de session pour un domaine, appelez la mét
 - {{domxref("Storage.key()")}}
   - : Lorsqu'on lui passe un nombre `n`, cette méthode renvoie le nom de la n-ième clé dans le stockage.
 
-<!---->
-
 - {{domxref("Storage.getItem()")}}
   - : Lorqu'on lui passe le nom d'une clé, cette méthode renvoie la valeur de la clé correspondante.
 - {{domxref("Storage.setItem()")}}

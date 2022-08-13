@@ -1,11 +1,6 @@
 ---
 title: Navigator.permissions
 slug: Web/API/Navigator/permissions
-tags:
-  - API
-  - Permissions
-  - 属性
-translation_of: Web/API/Navigator/permissions
 ---
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 

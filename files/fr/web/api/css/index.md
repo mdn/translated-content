@@ -22,8 +22,6 @@ _Aucun héritage de méthode statique_.
 - {{domxref("CSS.supports()")}}
   - : Retourne un {{domxref("Boolean")}} qui indique si la paire _propriété/valeur_, ou si la condition, passée en paramètre est supportée.
 
-<!---->
-
 - {{domxref("CSS.escape()")}} {{experimental_inline}}
   - : Utilisée pour protéger une chaine de caractère qui sera utiliser comme sélecteur CSS.
 

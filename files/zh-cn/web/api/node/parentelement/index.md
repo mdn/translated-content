@@ -1,7 +1,6 @@
 ---
 title: Node.parentElement
 slug: Web/API/Node/parentElement
-translation_of: Web/API/Node/parentElement
 ---
 {{ ApiRef() }}
 

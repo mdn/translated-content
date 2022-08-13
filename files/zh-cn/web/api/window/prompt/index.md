@@ -1,7 +1,6 @@
 ---
 title: window.prompt
 slug: Web/API/Window/prompt
-translation_of: Web/API/Window/prompt
 ---
 {{ ApiRef() }}
 

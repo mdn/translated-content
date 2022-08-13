@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
-translation_of: Web/API/HTMLMediaElement/readyState
 ---
 {{APIRef("HTML DOM")}}
 

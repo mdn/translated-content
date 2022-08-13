@@ -1,8 +1,6 @@
 ---
 title: URL.密码
 slug: Web/API/URL/password
-translation_of: Web/API/URL/password
-original_slug: Web/API/URL/密码
 ---
 {{ApiRef("URL API")}}
 

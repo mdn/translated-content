@@ -1,13 +1,6 @@
 ---
 title: Range.surroundContents
 slug: Web/API/Range/surroundContents
-tags:
-  - API
-  - DOM
-  - Range
-  - 方法
-  - 范围
-translation_of: Web/API/Range/surroundContents
 ---
 {{ ApiRef("Range") }}
 

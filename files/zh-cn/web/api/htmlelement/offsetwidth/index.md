@@ -1,12 +1,6 @@
 ---
 title: HTMLElement.offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
-tags:
-  - API
-  - 参考
-  - 只读属性
-  - 属性
-translation_of: Web/API/HTMLElement/offsetWidth
 ---
 {{ APIRef("HTML DOM") }}
 

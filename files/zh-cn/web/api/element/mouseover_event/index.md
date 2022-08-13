@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onmouseover
 slug: Web/API/Element/mouseover_event
-translation_of: Web/API/GlobalEventHandlers/onmouseover
-original_slug: Web/API/GlobalEventHandlers/onmouseover
 ---
 {{ ApiRef("HTML DOM") }}
 

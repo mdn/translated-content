@@ -1,14 +1,6 @@
 ---
 title: HTMLOptGroupElement
 slug: Web/API/HTMLOptGroupElement
-tags:
-  - API
-  - HTML DOM
-  - optgroup
-  - 参考
-  - 接口
-  - 表单
-translation_of: Web/API/HTMLOptGroupElement
 ---
 {{ APIRef("HTML DOM") }}
 

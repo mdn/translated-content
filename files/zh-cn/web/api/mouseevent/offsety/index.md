@@ -1,11 +1,6 @@
 ---
 title: MouseEvent.offsetY
 slug: Web/API/MouseEvent/offsetY
-tags:
-  - API
-  - 只读属性
-  - 鼠标事件
-translation_of: Web/API/MouseEvent/offsetY
 ---
 {{APIRef("DOM Events")}}{{SeeCompatTable}}
 

@@ -1,15 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointermove
 slug: Web/API/Element/pointermove_event
-tags:
-  - API
-  - GlobalEventHandlers
-  - HTML DOM
-  - PointerEvent
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onpointermove
-original_slug: Web/API/GlobalEventHandlers/onpointermove
 ---
 {{ApiRef("HTML DOM")}}
 

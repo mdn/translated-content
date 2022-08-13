@@ -1,7 +1,6 @@
 ---
 title: window.moveTo
 slug: Web/API/Window/moveTo
-translation_of: Web/API/Window/moveTo
 ---
 {{ApiRef}}
 

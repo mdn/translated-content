@@ -34,8 +34,6 @@ p.then((valeur) => {
 
 ### Paramètres
 
-<!---->
-
 - `siTenue`
   - : Une {{jsxref("Function","fonction","",1)}} appelée lorsque la `Promise` est tenue. Cette fonction a un seul argument, la `valeur` qui a permis de résoudre la promesse. Si `siTenue` n'est pas une fonction, elle est implicitement remplacée par une fonction « identité » qui renvoie l'argument tel quel.
 - `siRejetée` {{optional_inline}}

@@ -1,10 +1,6 @@
 ---
 title: WebGLRenderingContext.clearDepth()
 slug: Web/API/WebGLRenderingContext/clearDepth
-tags:
-  - WebGL
-  - 深度清除值
-translation_of: Web/API/WebGLRenderingContext/clearDepth
 ---
 {{APIRef("WebGL")}}
 

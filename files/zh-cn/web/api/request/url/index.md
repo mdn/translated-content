@@ -1,7 +1,6 @@
 ---
 title: Request.url
 slug: Web/API/Request/url
-translation_of: Web/API/Request/url
 ---
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: URL.hostname
 slug: Web/API/URL/hostname
-translation_of: Web/API/URL/hostname
 ---
 {{ApiRef("URL API")}}
 

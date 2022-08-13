@@ -29,8 +29,6 @@ Une chaîne représentant l'URI de l'espace de nommage dans lequel se trouve le 
 
 - S'il n'y a pas d'espace de nommage spécifié pour le noeud donné, la chaîne retournée sera une chaîne vide.
 
-<!---->
-
 - Pour les nœuds autres que les nœuds `element` et `attribute`, la chaîne retournée sera toujours une chaîne vide.
 
 ### Définition

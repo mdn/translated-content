@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.volume
 slug: Web/API/HTMLMediaElement/volume
-translation_of: Web/API/HTMLMediaElement/volume
 ---
 {{APIRef("HTML DOM")}}
 

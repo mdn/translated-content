@@ -1,18 +1,6 @@
 ---
 title: PushMessageData
 slug: Web/API/PushMessageData
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Push
-  - Push API
-  - PushMessageData
-  - Reference
-  - Service Workers
-  - TopicStub
-translation_of: Web/API/PushMessageData
 ---
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 

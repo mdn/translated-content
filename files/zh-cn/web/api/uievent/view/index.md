@@ -1,15 +1,6 @@
 ---
 title: 用户界面项目视图
 slug: Web/API/UIEvent/view
-tags:
-  - API
-  - DOM
-  - UI
-  - 参考
-  - 只读
-  - 属性
-translation_of: Web/API/UIEvent/view
-original_slug: Web/API/UIEvent/视图
 ---
 {{APIRef("DOM Events")}}
 

@@ -1,13 +1,6 @@
 ---
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Property
-  - 属性
-translation_of: Web/API/Node/ownerDocument
 ---
 {{ APIRef("DOM")}}
 

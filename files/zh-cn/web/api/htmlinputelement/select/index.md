@@ -1,7 +1,6 @@
 ---
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
-translation_of: Web/API/HTMLInputElement/select
 ---
 {{ APIRef("HTML DOM") }}
 

@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.oncuechange
 slug: Web/API/TextTrack/cuechange_event
-tags:
-  - API
-  - Event Handler
-  - GlobalEventHandlers
-  - 事件处理函数
-translation_of: Web/API/GlobalEventHandlers/oncuechange
-original_slug: Web/API/GlobalEventHandlers/oncuechange
 ---
 {{ ApiRef("HTML DOM") }}**`oncuechange`** 属性属于{{domxref("GlobalEventHandlers")}}，是一个处理{{event("cuechange")}}事件的{{event("Event_handlers", "event handler")}}。当{{domxref("TextTrack")}}更改了当前显示的提示时，`cuechange` 事件将会触发。
 

@@ -1,8 +1,6 @@
 ---
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
-translation_of: Web/API/HTMLCanvasElement/captureStream
-original_slug: Web/API/HTMLCanvasElement/捕获流
 ---
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 

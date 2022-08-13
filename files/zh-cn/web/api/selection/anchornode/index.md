@@ -1,7 +1,6 @@
 ---
 title: Selection.anchorNode
 slug: Web/API/Selection/anchorNode
-translation_of: Web/API/Selection/anchorNode
 ---
 {{ApiRef}}
 

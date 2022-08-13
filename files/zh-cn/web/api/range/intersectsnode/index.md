@@ -1,7 +1,6 @@
 ---
 title: Range.intersectsNode()
 slug: Web/API/Range/intersectsNode
-translation_of: Web/API/Range/intersectsNode
 ---
 {{ApiRef("DOM")}} {{SeeCompatTable}}
 

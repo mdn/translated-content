@@ -1,7 +1,6 @@
 ---
 title: Request.cache
 slug: Web/API/Request/cache
-translation_of: Web/API/Request/cache
 ---
 {{APIRef("Fetch")}}
 

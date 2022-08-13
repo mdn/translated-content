@@ -1,18 +1,6 @@
 ---
 title: Client
 slug: Web/API/Client
-tags:
-  - API
-  - Client
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Service Workers
-  - ServiceWorkerClient
-  - ServiceWorkers
-  - TopicStub
-translation_of: Web/API/Client
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 

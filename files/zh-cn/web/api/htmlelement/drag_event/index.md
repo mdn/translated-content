@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.ondrag
 slug: Web/API/HTMLElement/drag_event
-translation_of: Web/API/GlobalEventHandlers/ondrag
-original_slug: Web/API/GlobalEventHandlers/ondrag
 ---
 {{ApiRef("HTML DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.createProgram()
 slug: Web/API/WebGLRenderingContext/createProgram
-translation_of: Web/API/WebGLRenderingContext/createProgram
 ---
 {{APIRef("WebGL")}}
 

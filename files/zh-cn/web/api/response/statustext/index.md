@@ -1,9 +1,6 @@
 ---
 title: Response.statusText
 slug: Web/API/Response/statusText
-tags:
-  - Response.statusText
-translation_of: Web/API/Response/statusText
 ---
 {{APIRef("Fetch")}}
 

@@ -1,11 +1,6 @@
 ---
 title: canvas 的优化
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-tags:
-  - Advanced
-  - Canvas
-  - Tutorial
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 

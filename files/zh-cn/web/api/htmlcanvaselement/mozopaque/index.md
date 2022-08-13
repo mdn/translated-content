@@ -1,11 +1,6 @@
 ---
 title: HTMLCanvasElement.mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-translation_of: Web/API/HTMLCanvasElement/mozOpaque
 ---
 {{APIRef("Canvas API")}}{{non-standard_header}}
 

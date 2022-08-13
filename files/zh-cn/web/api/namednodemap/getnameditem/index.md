@@ -1,12 +1,6 @@
 ---
 title: NamedNodeMap.getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
-tags:
-  - DOM
-  - 参考
-  - 属性
-  - 方法
-translation_of: Web/API/NamedNodeMap/getNamedItem
 ---
 {{APIRef("DOM")}}
 

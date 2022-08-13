@@ -1,7 +1,6 @@
 ---
 title: ImageData.width
 slug: Web/API/ImageData/width
-translation_of: Web/API/ImageData/width
 ---
 {{APIRef("Canvas API")}}
 

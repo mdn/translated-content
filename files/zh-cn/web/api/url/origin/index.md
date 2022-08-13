@@ -1,7 +1,6 @@
 ---
 title: URL.origin
 slug: Web/API/URL/origin
-translation_of: Web/API/URL/origin
 ---
 {{APIRef("URL API")}}
 

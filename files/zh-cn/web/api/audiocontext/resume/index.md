@@ -1,11 +1,6 @@
 ---
 title: AudioContext.resume()
 slug: Web/API/AudioContext/resume
-tags:
-  - AudioContext
-  - Web Audio API
-  - resume
-translation_of: Web/API/AudioContext/resume
 ---
 {{ APIRef("Web Audio API") }}
 

@@ -32,12 +32,8 @@ La règle @ `@page` peut être manipulée via le CSSOM, notamment avec l'interfa
 - [`size`](/fr/docs/Web/CSS/@page/size)
   - : Définit la taille et l'orientation du bloc englobant la boîte de la page. En général, lorsqu'une boîte correspondant à une page est rendu sur une feuille, cela indique la taille de la page utilisée.
 
-<!---->
-
 - [`marks`](/fr/docs/orphaned/Web/CSS/@page/marks)
   - : Ajoute des marques pour la découpe ou l'alignement des pages du document.
-
-<!---->
 
 - [`bleed`](/fr/docs/orphaned/Web/CSS/@page/bleed)
   - : Définit la limite au-delà de la boîte de la page au-delà de laquelle le contenu affiché est rogné.
