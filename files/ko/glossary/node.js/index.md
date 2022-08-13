@@ -8,22 +8,18 @@ tags:
   - node.js
 translation_of: Glossary/Node.js
 ---
-<div>{{QuickLinksWithSubpages("/ko/docs/Glossary")}}</div>
+{{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 
-<p><strong>Node.js</strong>는 개발자가 서버 측과 네트워크 응용 프로그램을 만들 수 있도록 지원하는 크로스 플랫폼 {{Glossary("JavaScript")}} 런타임 환경입니다.</p>
+**Node.js**는 개발자가 서버 측과 네트워크 응용 프로그램을 만들 수 있도록 지원하는 크로스 플랫폼 {{Glossary("JavaScript")}} 런타임 환경입니다.
 
-<h2 id="더_알아보기">더 알아보기</h2>
+## 더 알아보기
 
-<h3 id="일반_지식">일반 지식</h3>
+### 일반 지식
 
-<ul>
- <li>위키백과 <a href="https://ko.wikipedia.org/wiki/Node.js">Node.js</a></li>
- <li><a href="https://nodejs.org/">Node.js 웹사이트</a></li>
-</ul>
+- 위키백과 [Node.js](https://ko.wikipedia.org/wiki/Node.js)
+- [Node.js 웹사이트](https://nodejs.org/)
 
-<h3 id="기술_정보">기술 정보</h3>
+### 기술 정보
 
-<ul>
- <li><a href="https://nodejs.org/api/">API 참조 문서</a></li>
- <li><a href="https://nodejs.org/documentation/tutorials/">자습서</a></li>
-</ul>
+- [API 참조 문서](https://nodejs.org/api/)
+- [자습서](https://nodejs.org/documentation/tutorials/)
