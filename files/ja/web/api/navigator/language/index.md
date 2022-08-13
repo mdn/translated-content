@@ -8,43 +8,43 @@ tags:
   - Property
   - Read-only
   - Reference
-browser-compat: api.Navigator.language
 translation_of: Web/API/Navigator/language
 original_slug: Web/API/NavigatorLanguage/language
+browser-compat: api.Navigator.language
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>Navigator.language</code></strong> は読み取り専用プロパティで、ユーザーの言語を表す文字列を返します。普通、ブラウザー UI の言語が返されます。</p>
+**`Navigator.language`** は読み取り専用プロパティで、ユーザーの言語を表す文字列を返します。普通、ブラウザー UI の言語が返されます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">const <em>lang</em> = navigator.language
-</pre>
+```js
+const lang = navigator.language
+```
 
-<h3 id="Value">値</h3>
+### 値
 
-<p>{{domxref("DOMString")}} です。。<em><code>lang</code></em> は、<a class="external" href="https://tools.ietf.org/rfc/bcp/bcp47.txt">BCP 47</a> で定義された言語バージョンを表す文字列が格納されます。例えば、"en"、"en-US"、"fr"、"fr-FR"、"es-ES" などが含まれます。</p>
+{{domxref("DOMString")}} です。。_`lang`_ は、[BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt) で定義された言語バージョンを表す文字列が格納されます。例えば、"en"、"en-US"、"fr"、"fr-FR"、"es-ES" などが含まれます。
 
-<p>iOS 10.2 以前の Safari では、国コードは "en-us"、"fr-fr" のように小文字で返されます。</p>
+iOS 10.2 以前の Safari では、国コードは "en-us"、"fr-fr" のように小文字で返されます。
 
-<h2 id="Example">例</h2>
+## 例
 
-<pre class="brush: js">if (/^en\b/.test(navigator.language)) {
+```js
+if (/^en\b/.test(navigator.language)) {
   doLangSelect(window.navigator.language);
 }
-</pre>
+```
 
-<h2 id="Specification">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("navigator.languages")}}</li>
-  <li>{{domxref("navigator")}}</li>
-</ul>
+- {{domxref("navigator.languages")}}
+- {{domxref("navigator")}}

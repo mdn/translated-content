@@ -11,28 +11,28 @@ tags:
   - tangentialPressure
 translation_of: Web/API/PointerEvent/tangentialPressure
 ---
-<div>{{ APIRef("Pointer Events") }}</div>
+{{ APIRef("Pointer Events") }}
 
-<p><span class="seoSummary">{{domxref("PointerEvent")}} インターフェイスの <strong><code>tangentialPressure</code></strong> 読み取り専用プロパティは、ポインタ入力の正規化された接線方向の圧力（バレル圧力またはシリンダー応力（<a href="https://en.wikipedia.org/wiki/Cylinder_stress">cylinder stress</a>）とも呼ばれます）を表します。</span></p>
+{{domxref("PointerEvent")}} インターフェイスの **`tangentialPressure`** 読み取り専用プロパティは、ポインタ入力の正規化された接線方向の圧力（バレル圧力またはシリンダー応力（[cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)）とも呼ばれます）を表します。
 
-<p>（訳注：エアブラシスタイラスのホイールのようなものを想定しています。）</p>
+（訳注：エアブラシスタイラスのホイールのようなものを想定しています。）
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>tanPressure</em> = <em>pointerEvent</em>.tangentialPressure;
-</pre>
+    var tanPressure = pointerEvent.tangentialPressure;
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>ポインタ入力の正規化された接線方向の圧力を表す <code>-1</code> から <code>1</code> の範囲の <code>float</code> 型。ここで、<code>0</code> はコントロールの中立位置です。</p>
+ポインタ入力の正規化された接線方向の圧力を表す `-1` から `1` の範囲の `float` 型。ここで、`0` はコントロールの中立位置です。
 
-<p>ハードウェアによっては、<code>0</code> から <code>1</code> の範囲の正の値しかサポートしない場合があることに注意してください。 接線方向の圧力をサポートしないハードウェアの場合、値は <code>0</code> になります。</p>
+ハードウェアによっては、`0` から `1` の範囲の正の値しかサポートしない場合があることに注意してください。 接線方向の圧力をサポートしないハードウェアの場合、値は `0` になります。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>このスニペットでは、{{event("pointerdown")}} イベントが発生すると、イベントの <code>tangentialPressure</code> プロパティの値に応じてさまざまな関数が呼び出されます。</p>
+このスニペットでは、{{event("pointerdown")}} イベントが発生すると、イベントの `tangentialPressure` プロパティの値に応じてさまざまな関数が呼び出されます。
 
-<pre class="brush: js">someElement.addEventListener('pointerdown', function(event) {
+```js
+someElement.addEventListener('pointerdown', function(event) {
   if (event.tangentialPressure == 0) {
     // 圧力なし
     process_no_tanPressure(event);
@@ -44,31 +44,18 @@ translation_of: Web/API/PointerEvent/tangentialPressure
     process_tanPressure(event);
   }
 }, false);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#dom-pointerevent-tangentialpressure', 'tangentialPressure')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                         | 状態                                     | コメント |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
+| {{SpecName('Pointer Events 2','#dom-pointerevent-tangentialpressure', 'tangentialPressure')}} | {{Spec2('Pointer Events 2')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.PointerEvent.tangentialPressure")}}</p>
+{{Compat("api.PointerEvent.tangentialPressure")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{ domxref("Touch.force") }}</li>
-</ul>
+- {{ domxref("Touch.force") }}

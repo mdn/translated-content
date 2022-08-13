@@ -9,83 +9,57 @@ tags:
   - ServiceWorkerContainer
 translation_of: Web/API/ServiceWorkerContainer/message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>message</code></strong> イベントは、サービスワーカーからメッセージを受信するために、サービスワーカーによって制御されるページで使用します。</span></p>
+**`message`** イベントは、サービスワーカーからメッセージを受信するために、サービスワーカーによって制御されるページで使用します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td><code><a href="/ja/docs/Web/API/ServiceWorkerContainer/onmessage">onmessage</a></code></td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | なし                                                             |
+| ---------------------------- | ---------------------------------------------------------------- |
+| キャンセル                   | 不可                                                             |
+| インターフェイス             | {{domxref("MessageEvent")}}                             |
+| イベントハンドラープロパティ | [`onmessage`](/ja/docs/Web/API/ServiceWorkerContainer/onmessage) |
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>この例では、サービスワーカーは <a href="/ja/docs/Web/API/ServiceWorkerGlobalScope/onfetch"><code>fetch</code></a> イベントからクライアントの ID を取得し、<a href="/ja/docs/Web/API/Client/postMessage"><code>Client.postMessage</code></a> を使用してメッセージを送信します。</p>
+この例では、サービスワーカーは [`fetch`](/ja/docs/Web/API/ServiceWorkerGlobalScope/onfetch) イベントからクライアントの ID を取得し、[`Client.postMessage`](/ja/docs/Web/API/Client/postMessage) を使用してメッセージを送信します。
 
-<pre class="brush: js">// サービスワーカー内
+```js
+// サービスワーカー内
 async function messageClient(clientId) {
     const client = await clients.get(clientId);
     client.postMessage('こんにちはクライアント！');
 }
 
-addEventListener('fetch', (event) =&gt; {
+addEventListener('fetch', (event) => {
     messageClient(event.clientId);
-    event.respondWith(() =&gt; {
+    event.respondWith(() => {
       // ...
     });
-});</pre>
+});
+```
 
-<p>クライアントは <code>message</code> イベントをリッスンしてメッセージを受信できます。</p>
+クライアントは `message` イベントをリッスンしてメッセージを受信できます。
 
-<pre class="brush: js">// 制御されているページ
-navigator.serviceWorker.addEventListener('message', (message) =&gt; {
+```js
+// 制御されているページ
+navigator.serviceWorker.addEventListener('message', (message) => {
     console.log(message);
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-serviceworkercontainer-onmessage', 'message')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                             | 状態                                 |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| {{SpecName('Service Workers', '#dom-serviceworkercontainer-onmessage', 'message')}} | {{Spec2('Service Workers')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("api.ServiceWorkerContainer.message_event")}}
 
+## 関連情報
 
-<p>{{Compat("api.ServiceWorkerContainer.message_event")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service worker の使用</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
- <li><a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">Web worker の使用</a></li>
-</ul>
+- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
+- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
+- [Web worker の使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

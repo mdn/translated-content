@@ -9,60 +9,37 @@ tags:
   - XMLDocument
 translation_of: Web/API/XMLDocument
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong>XMLDocument</strong> インターフェイスは XML ドキュメントを示します。汎用的な {{DOMxRef("Document")}} を継承し、特定のメソッドやプロパティを追加しません: それでも２つのタイプのドキュメントでは、いくつかのアルゴリズムの動作がことなります。</p>
+**XMLDocument** インターフェイスは XML ドキュメントを示します。汎用的な {{DOMxRef("Document")}} を継承し、特定のメソッドやプロパティを追加しません: それでも２つのタイプのドキュメントでは、いくつかのアルゴリズムの動作がことなります。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p><em>また、 {{DOMxRef("Document")}} からプロパティを継承します</em></p>
+_また、 {{DOMxRef("Document")}} からプロパティを継承します_
 
-<dl>
- <dt>{{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>{{DOMxRef("XMLDocument.load()")}} と併用して、非同期リクエストを示します。</dd>
-</dl>
+- {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : {{DOMxRef("XMLDocument.load()")}} と併用して、非同期リクエストを示します。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>また、 {{DOMxRef("Document")}} からメソッドを継承します</em></p>
+_また、 {{DOMxRef("Document")}} からメソッドを継承します_
 
-<dl>
- <dt>{{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>XML ドキュメントをロードします。</dd>
-</dl>
+- {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : XML ドキュメントをロードします。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#xmldocument", "XMLDocument")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#xmldocument", "XMLDocument")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | ステータス                       | 備考       |
+| ---------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName("DOM WHATWG", "#xmldocument", "XMLDocument")}} | {{Spec2("DOM WHATWG")}} | 変更なし。 |
+| {{SpecName("DOM4", "#xmldocument", "XMLDocument")}}         | {{Spec2("DOM4")}}         | 初回定義。 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("api.XMLDocument")}}
 
+## 関連項目
 
-<p>{{Compat("api.XMLDocument")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index.</a></li>
-</ul>
+- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference "/en-US/docs/DOM/DOM_Reference")

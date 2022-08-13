@@ -10,57 +10,40 @@ tags:
   - Reference
 translation_of: Web/API/PointerEvent/pointerId
 ---
-<div>{{ APIRef("Pointer Events") }}</div>
+{{ APIRef("Pointer Events") }}
 
-<p><span class="seoSummary">{{domxref("PointerEvent")}} インターフェイスの <strong><code>pointerId</code></strong> 読み取り専用プロパティは、特定のポインタのイベントに割り当てられた識別子です。</span> 識別子は一意であり、他のすべてのアクティブポインタのイベントの識別子とは異なります。 値はランダムに生成される可能性があるため、特定の意味を伝えることは保証されません。</p>
+{{domxref("PointerEvent")}} インターフェイスの **`pointerId`** 読み取り専用プロパティは、特定のポインタのイベントに割り当てられた識別子です。 識別子は一意であり、他のすべてのアクティブポインタのイベントの識別子とは異なります。 値はランダムに生成される可能性があるため、特定の意味を伝えることは保証されません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>id</em> = <em>pointerEvent</em>.pointerId;
-</pre>
+    var id = pointerEvent.pointerId;
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<dl>
- <dt><code>id</code></dt>
- <dd>ポインタイベントの一意の識別子番号。</dd>
-</dl>
+- `id`
+  - : ポインタイベントの一意の識別子番号。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>次のコードスニペットは、以前に保存された <code>pointerId</code> と、発生したばかりの {{event("pointerdown")}} イベントのものとを比較します。</p>
+次のコードスニペットは、以前に保存された `pointerId` と、発生したばかりの {{event("pointerdown")}} イベントのものとを比較します。
 
-<pre class="brush: js">let id; // これが以前に保存された pointerId であると仮定しましょう
+```js
+let id; // これが以前に保存された pointerId であると仮定しましょう
 
 target.addEventListener('pointerdown', function(event) {
   // キャッシュされた前のイベントの ID を現在の
   // イベントの ID と比較し、それに応じて処理する
   if (id === event.pointerId) process_event(event);
 }, false);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#dom-pointerevent-pointerid', 'pointerId')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>不安定版</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#dom-pointerevent-pointerid', 'pointerId')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                 | 状態                                     | コメント |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
+| {{SpecName('Pointer Events 2','#dom-pointerevent-pointerid', 'pointerId')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
+| {{SpecName('Pointer Events', '#dom-pointerevent-pointerid', 'pointerId')}} | {{Spec2('Pointer Events')}}     | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.PointerEvent.pointerId")}}</p>
+{{Compat("api.PointerEvent.pointerId")}}

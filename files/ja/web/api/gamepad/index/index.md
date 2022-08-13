@@ -11,50 +11,39 @@ tags:
   - リファレンス
 translation_of: Web/API/Gamepad/index
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>{{domxref("Gamepad") }} インターフェイスの <code><strong>Gamepad.index</strong></code> プロパティは、現在システムに接続されているそれぞれの機器の整数の固有番号 (自動更新) の整数を返します。</p>
+{{domxref("Gamepad") }} インターフェイスの **`Gamepad.index`** プロパティは、現在システムに接続されているそれぞれの機器の整数の固有番号 (自動更新) の整数を返します。
 
-<p>これは複数のコントローラーを識別するために使用することができます。接続が解除された後で再接続されたゲームパッドは、同じ番号を保持します。</p>
+これは複数のコントローラーを識別するために使用することができます。接続が解除された後で再接続されたゲームパッドは、同じ番号を保持します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">long</span>                <span class="idlAttrName">index</span>;</span></span></pre>
+    readonly    attribute long                index;
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function() {
+```js
+window.addEventListener("gamepadconnected", function() {
   var gp = navigator.getGamepads()[0];
   gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
-});</pre>
+});
+```
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>A {{jsxref("number") }}.</p>
+A {{jsxref("number") }}.
 
-<h2 id="Speicifications" name="Speicifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Gamepad", "#widl-Gamepad-index", "Gamepad.index")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               | 状態                         | 備考     |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName("Gamepad", "#widl-Gamepad-index", "Gamepad.index")}} | {{Spec2("Gamepad")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Gamepad.index")}}</p>
+{{Compat("api.Gamepad.index")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<p><a href="/ja/docs/Web/Guide/API/Gamepad">Gamepad API の利用</a></p>
+[Gamepad API の利用](/ja/docs/Web/Guide/API/Gamepad)

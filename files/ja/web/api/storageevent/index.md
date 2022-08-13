@@ -7,102 +7,63 @@ tags:
   - Web Storage API
 translation_of: Web/API/StorageEvent
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p><code>StorageEvent</code> は、ストレージエリアが変化したときに window へ送信されます。</p>
+`StorageEvent` は、ストレージエリアが変化したときに window へ送信されます。
 
-<div class="note">
-<p><strong>注記:</strong> {{Gecko("2.0")}} より前にもこのイベントは存在していましたが、仕様書に合致していませんでした。古いイベント形式は <code>nsIDOMStorageEventObsolete</code> インターフェイスで表します。</p>
-</div>
+> **Note:** **注記:** {{Gecko("2.0")}} より前にもこのイベントは存在していましたが、仕様書に合致していませんでした。古いイベント形式は `nsIDOMStorageEventObsolete` インターフェイスで表します。
 
-<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+## メソッドの概要
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#initStorageEvent()">initStorageEvent</a>(in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in DOMString keyArg, in DOMString oldValueArg, in DOMString newValueArg, in DOMString urlArg, in nsIDOMStorage storageAreaArg);</code></td>
-  </tr>
- </tbody>
-</table>
+| `void initStorageEvent(in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in DOMString keyArg, in DOMString oldValueArg, in DOMString newValueArg, in DOMString urlArg, in nsIDOMStorage storageAreaArg);` |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">属性</td>
-   <td class="header">型</td>
-   <td class="header">説明</td>
-  </tr>
-  <tr>
-   <td><code>key</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>変更されたキーを表します。storage の <code>clear()</code> メソッドで変更された場合は、<code>key</code> 属性が <code>null</code> になります。<strong>読み取り専用です。</strong></td>
-  </tr>
-  <tr>
-   <td><code>newValue</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td><code>key</code> の新しい値です。storage の <code>clear()</code> メソッドで変更された場合や <code>key</code> がストレージから削除された場合は、<code>newValue</code> が <code>null</code> になります。<strong>読み取り専用です。</strong></td>
-  </tr>
-  <tr>
-   <td><code>oldValue</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td><code>key</code> の元の値です。storage の <code>clear()</code> メソッドで変更された場合や <code>key</code> が新たに追加されたため以前の値がない場合は、<code>oldValue</code> が <code>null</code> になります。<strong>読み取り専用です。</strong></td>
-  </tr>
-  <tr>
-   <td><code>storageArea</code></td>
-   <td><code><code>nsIDOMStorage</code></code></td>
-   <td>影響を受けた Storage オブジェクトを表します。<strong>読み取り専用です。</strong></td>
-  </tr>
-  <tr>
-   <td><code>url</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td><code>key</code> が変更されたドキュメントの URL です。<strong>読み取り専用です。</strong></td>
-  </tr>
- </tbody>
-</table>
+| 属性          | 型                               | 説明                                                                                                                                                                          |
+| ------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `key`         | {{domxref("DOMString")}} | 変更されたキーを表します。storage の `clear()` メソッドで変更された場合は、`key` 属性が `null` になります。**読み取り専用です。**                                             |
+| `newValue`    | {{domxref("DOMString")}} | `key` の新しい値です。storage の `clear()` メソッドで変更された場合や `key` がストレージから削除された場合は、`newValue` が `null` になります。**読み取り専用です。**         |
+| `oldValue`    | {{domxref("DOMString")}} | `key` の元の値です。storage の `clear()` メソッドで変更された場合や `key` が新たに追加されたため以前の値がない場合は、`oldValue` が `null` になります。**読み取り専用です。** |
+| `storageArea` | `nsIDOMStorage`                  | 影響を受けた Storage オブジェクトを表します。**読み取り専用です。**                                                                                                           |
+| `url`         | {{domxref("DOMString")}} | `key` が変更されたドキュメントの URL です。**読み取り専用です。**                                                                                                             |
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<h3 id="initStorageEvent()" name="initStorageEvent()">initStorageEvent()</h3>
+### initStorageEvent()
 
-<p>DOM イベントインターフェイス内の同様の名前のメソッドに似た方法で、イベントを初期化します。</p>
+DOM イベントインターフェイス内の同様の名前のメソッドに似た方法で、イベントを初期化します。
 
-<pre>void initStorageEvent(
-  in DOMString typeArg,
-  in boolean canBubbleArg,
-  in boolean cancelableArg,
-  in DOMString keyArg,
-  in DOMString oldValueArg,
-  in DOMString newValueArg,
-  in DOMString urlArg,
-  in nsIDOMStorage storageAreaArg
-);
-</pre>
+    void initStorageEvent(
+      in DOMString typeArg,
+      in boolean canBubbleArg,
+      in boolean cancelableArg,
+      in DOMString keyArg,
+      in DOMString oldValueArg,
+      in DOMString newValueArg,
+      in DOMString urlArg,
+      in nsIDOMStorage storageAreaArg
+    );
 
-<h6 id="Parameters" name="Parameters">引数</h6>
+###### 引数
 
-<dl>
- <dt><code>typeArg</code></dt>
- <dd>イベントの名称。</dd>
- <dt><code>canBubbleArg</code></dt>
- <dd>イベントが DOM 内でバブリングするか否かを示す論理値。</dd>
- <dt><code>cancelableArg</code></dt>
- <dd>イベントがキャンセル可能であるかを示す論理値。</dd>
- <dt><code>keyArg</code></dt>
- <dd>イベントの結果として、値が変化したキー。</dd>
- <dt><code>oldValueArg</code></dt>
- <dd>キーに対する以前の値。</dd>
- <dt><code>newValueArg</code></dt>
- <dd>キーに対する新しい値。</dd>
- <dt><code>urlArg</code></dt>
- <dd>説明なし。</dd>
- <dt><code>storageAreaArg</code></dt>
- <dd>イベントが発生したストレージエリアを表す DOM {{domxref("Storage")}} オブジェクト。</dd>
-</dl>
+- `typeArg`
+  - : イベントの名称。
+- `canBubbleArg`
+  - : イベントが DOM 内でバブリングするか否かを示す論理値。
+- `cancelableArg`
+  - : イベントがキャンセル可能であるかを示す論理値。
+- `keyArg`
+  - : イベントの結果として、値が変化したキー。
+- `oldValueArg`
+  - : キーに対する以前の値。
+- `newValueArg`
+  - : キーに対する新しい値。
+- `urlArg`
+  - : 説明なし。
+- `storageAreaArg`
+  - : イベントが発生したストレージエリアを表す DOM {{domxref("Storage")}} オブジェクト。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="http://dev.w3.org/html5/webstorage/#the-storage-event">仕様書</a></li>
-</ul>
+- [仕様書](http://dev.w3.org/html5/webstorage/#the-storage-event)

@@ -12,42 +12,39 @@ tags:
   - Service Workers
 translation_of: Web/API/PushSubscription
 ---
-<div>{{SeeCompatTable}}{{ApiRef("Push API")}}</div>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p><a href="/ja/docs/Web/API/Push_API">Push API</a> の <code>PushSubscription</code> インターフェースは、サブスクリプションの URL エンドポイントを提供するとともに、プッシュサービスの登録を解除できます。</p>
+[Push API](/ja/docs/Web/API/Push_API) の `PushSubscription` インターフェースは、サブスクリプションの URL エンドポイントを提供するとともに、プッシュサービスの登録を解除できます。
 
-<p>このインターフェースのインスタンスはシリアライズできます。</p>
+このインターフェースのインスタンスはシリアライズできます。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("PushSubscription.endpoint")}} {{readonlyinline}}</dt>
- <dd>プッシュサービスに関連したエンドポイントを含む {{domxref("USVString")}}。</dd>
- <dt>{{domxref("PushSubscription.expirationTime")}} {{readonlyinline}}</dt>
- <dd>プッシュサブスクリプションに関連付いたサブスクリプション期限切れ時間を表す {{domxref("DOMHighResTimeStamp")}} 。存在しない場合は null。</dd>
- <dt>{{domxref("PushSubscription.options")}} {{readonlyinline}}</dt>
- <dd>サブスクリプションを作成するために用いられるオプションを含むオブジェクト。</dd>
-</dl>
+- {{domxref("PushSubscription.endpoint")}} {{readonlyinline}}
+  - : プッシュサービスに関連したエンドポイントを含む {{domxref("USVString")}}。
+- {{domxref("PushSubscription.expirationTime")}} {{readonlyinline}}
+  - : プッシュサブスクリプションに関連付いたサブスクリプション期限切れ時間を表す {{domxref("DOMHighResTimeStamp")}} 。存在しない場合は null。
+- {{domxref("PushSubscription.options")}} {{readonlyinline}}
+  - : サブスクリプションを作成するために用いられるオプションを含むオブジェクト。
 
-<dl>
- <dt>{{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}</dt>
- <dd>プッシュサービスに関連したサブスクリプション ID を含む {{domxref("DOMString")}}。</dd>
-</dl>
+<!---->
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{readonlyinline}}
+  - : プッシュサービスに関連したサブスクリプション ID を含む {{domxref("DOMString")}}。
 
-<dl>
- <dt>{{domxref("PushSubscription.getKey()")}}</dt>
- <dd>サーバーに送信されてプッシュメッセージの暗号化に使用される、クライアントのパブリックキーを含む {{domxref("ArrayBuffer")}} を返します。</dd>
- <dt>{{domxref("PushSubscription.toJSON()")}}</dt>
- <dd>標準シリアライザー — サブスクリプションプロパティの JSON 記法を返します。</dd>
- <dt>{{domxref("PushSubscription.unsubscribe()")}}</dt>
- <dd>プッシュサービスの登録を解除する非同期プロセスを開始します。現在のサブスクリプションが成功裏に登録解除できた場合、{{domxref("Boolean")}} で解決される {{jsxref("Promise")}} を返します。</dd>
-</dl>
+## メソッド
 
-<h2 id="Example" name="Example">例</h2>
+- {{domxref("PushSubscription.getKey()")}}
+  - : サーバーに送信されてプッシュメッセージの暗号化に使用される、クライアントのパブリックキーを含む {{domxref("ArrayBuffer")}} を返します。
+- {{domxref("PushSubscription.toJSON()")}}
+  - : 標準シリアライザー — サブスクリプションプロパティの JSON 記法を返します。
+- {{domxref("PushSubscription.unsubscribe()")}}
+  - : プッシュサービスの登録を解除する非同期プロセスを開始します。現在のサブスクリプションが成功裏に登録解除できた場合、{{domxref("Boolean")}} で解決される {{jsxref("Promise")}} を返します。
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(function(reg) {
+## 例
+
+```js
+navigator.serviceWorker.ready.then(function(reg) {
   reg.pushManager.getSubscription().then(function(subscription) {
     subscription.unsubscribe().then(function(successful) {
       // 成功裏に登録解除。
@@ -55,34 +52,20 @@ translation_of: Web/API/PushSubscription
       // 登録解除失敗。
     })
   })
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Push API", "#pushsubscription-interface", "PushSubscription")}}</td>
-   <td>{{Spec2("Push API")}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                 | 状態                         | コメント   |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| {{SpecName("Push API", "#pushsubscription-interface", "PushSubscription")}} | {{Spec2("Push API")}} | 初期定義。 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>
-<p>{{Compat("api.PushSubscription")}}</p>
-</div>
+{{Compat("api.PushSubscription")}}
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API">Push API</a></li>
- <li><a href="/ja/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+- [Push API](/ja/docs/Web/API/Push_API)
+- [Service Worker API](/ja/docs/Web/API/Service_Worker_API)

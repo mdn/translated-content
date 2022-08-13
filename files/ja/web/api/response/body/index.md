@@ -8,33 +8,36 @@ tags:
   - Reference
   - Streams
   - Response
-browser-compat: api.Response.body
 translation_of: Web/API/Response/body
 original_slug: Web/API/Body/body
+browser-compat: api.Response.body
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><strong><code>body</code></strong> は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、本文コンテンツの {{domxref("ReadableStream")}} です。</p>
+**`body`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、本文コンテンツの {{domxref("ReadableStream")}} です。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">response.body;</pre>
+```js
+response.body;
+```
 
-<h3 id="Value">値</h3>
+### 値
 
-<p>{{domxref("ReadableStream")}} です。</p>
+{{domxref("ReadableStream")}} です。
 
-<h2 id="Example">例</h2>
+## 例
 
-<p><a href="https://mdn.github.io/dom-examples/streams/simple-pump/">単純なストリームポンプ</a>の例では、画像を読み取り、<code>response.body</code> を使用してレスポンスのストリームを公開し、{{domxref("ReadableStream.getReader()", "ReadableStream.getReader()")}} を使用してリーダーを作成し、そのストリームのチャンクを2番目のカスタム読み取り可能なストリームのキューに入れます — 画像の同一コピーを効果的に作成します。</p>
+[単純なストリームポンプ](https://mdn.github.io/dom-examples/streams/simple-pump/)の例では、画像を読み取り、`response.body` を使用してレスポンスのストリームを公開し、{{domxref("ReadableStream.getReader()", "ReadableStream.getReader()")}} を使用してリーダーを作成し、そのストリームのチャンクを 2 番目のカスタム読み取り可能なストリームのキューに入れます — 画像の同一コピーを効果的に作成します。
 
-<pre class="brush: js">const image = document.getElementById('target');
+```js
+const image = document.getElementById('target');
 
 // 元の画像をフェッチ
 fetch('./tortoise.png')
 // その body を ReadableStream として取得
-.then(response =&gt; response.body)
-.then(body =&gt; {
+.then(response => response.body)
+.then(body => {
   const reader = body.getReader();
 
   return new ReadableStream({
@@ -42,7 +45,7 @@ fetch('./tortoise.png')
       return pump();
 
       function pump() {
-        return reader.read().then(({ done, value }) =&gt; {
+        return reader.read().then(({ done, value }) => {
           // データを消費する必要がなくなったら、ストリームを閉じます
           if (done) {
             controller.close();
@@ -57,24 +60,23 @@ fetch('./tortoise.png')
     }
   })
 })
-.then(stream =&gt; new Response(stream))
-.then(response =&gt; response.blob())
-.then(blob =&gt; URL.createObjectURL(blob))
-.then(url =&gt; console.log(image.src = url))
-.catch(err =&gt; console.error(err));</pre>
+.then(stream => new Response(stream))
+.then(response => response.blob())
+.then(blob => URL.createObjectURL(blob))
+.then(url => console.log(image.src = url))
+.catch(err => console.error(err));
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="/ja/docs/Web/API/Streams_API">Streams API</a></li>
- <li><a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-</ul>
+- [Fetch API](/ja/docs/Web/API/Fetch_API)
+- [Streams API](/ja/docs/Web/API/Streams_API)
+- [ServiceWorker API](/ja/docs/Web/API/Service_Worker_API)

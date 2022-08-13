@@ -13,41 +13,30 @@ tags:
   - プロパティ
 translation_of: Web/API/FederatedCredential/protocol
 ---
-<div>{{SeeCompatTable}}{{APIRef("")}}{{securecontext_header}}</div>
+{{SeeCompatTable}}{{APIRef("")}}{{securecontext_header}}
 
-<p><strong><code>protocol</code></strong> は {{domxref("FederatedCredential")}} インターフェイスのプロパティで、認証情報の連合アイデンティティプロトコルが入った読み取り専用の {{domxref("DOMString")}} を返します。このプロパティが {{jsxref("null")}} の場合、プロトコルは {{domxref("FederatedCredential.provider")}} プロパティから推測される可能性があります。</p>
+**`protocol`** は {{domxref("FederatedCredential")}} インターフェイスのプロパティで、認証情報の連合アイデンティティプロトコルが入った読み取り専用の {{domxref("DOMString")}} を返します。このプロパティが {{jsxref("null")}} の場合、プロトコルは {{domxref("FederatedCredential.provider")}} プロパティから推測される可能性があります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var protocol = FederatedCredential.protocol</pre>
+    var protocol = FederatedCredential.protocol
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>認証情報の連合アイデンティティプロトコルが入った {{domxref("DOMString")}} です (例えば <code>openidconnect</code>)。</p>
+認証情報の連合アイデンティティプロトコルが入った {{domxref("DOMString")}} です (例えば `openidconnect`)。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Credential Management','#dom-federatedcredential-protocol','protocol')}}</td>
-   <td>{{Spec2('Credential Management')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                                         | 備考     |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
+| {{SpecName('Credential Management','#dom-federatedcredential-protocol','protocol')}} | {{Spec2('Credential Management')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.FederatedCredential.protocol")}}</p>
+{{Compat("api.FederatedCredential.protocol")}}

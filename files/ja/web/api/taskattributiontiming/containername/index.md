@@ -10,39 +10,24 @@ tags:
   - TaskAttributionTiming
 translation_of: Web/API/TaskAttributionTiming/containerName
 ---
-<p>{{SeeCompatTable}}{{APIRef("Long Tasks")}}</p>
+{{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
-<p>{{domxref("TaskAttributionTiming")}} インタフェースの <strong><code>containerName</code></strong> 読み取り専用プロパティは、コンテナの <code>name</code> 属性を返します。 コンテナは、全体として長いタスクに関係している iframe、embed、object などです。</p>
+{{domxref("TaskAttributionTiming")}} インタフェースの **`containerName`** 読み取り専用プロパティは、コンテナの `name` 属性を返します。 コンテナは、全体として長いタスクに関係している iframe、embed、object などです。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>containerName</em> = TaskAttributionTiming.containerName;</pre>
+    var containerName = TaskAttributionTiming.containerName;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>コンテナの <code>name</code> 属性を含む {{domxref("DOMString")}}。</p>
+コンテナの `name` 属性を含む {{domxref("DOMString")}}。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Long Tasks','#dom-taskattributiontiming-containername','containerName')}}</td>
-   <td>{{Spec2('Long Tasks')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                             | 状態                             | コメント |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('Long Tasks','#dom-taskattributiontiming-containername','containerName')}} | {{Spec2('Long Tasks')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.TaskAttributionTiming.containerName")}}</p>
-</div>
+{{Compat("api.TaskAttributionTiming.containerName")}}

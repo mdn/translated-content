@@ -9,33 +9,32 @@ tags:
   - URLSearchParams
 translation_of: Web/API/URLSearchParams/URLSearchParams
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><span class="seoSummary"><strong><code>URLSearchParams()</code></strong> コンストラクターは、新しい {{domxref("URLSearchParams")}} オブジェクトを作成して返します。 先頭の <code>'?'</code> 文字は無視されます。</span></p>
+**`URLSearchParams()`** コンストラクターは、新しい {{domxref("URLSearchParams")}} オブジェクトを作成して返します。 先頭の `'?'` 文字は無視されます。
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>URLSearchParams</em> = new URLSearchParams(<em>init</em>);</pre>
+    var URLSearchParams = new URLSearchParams(init);
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><em><code>init</code></em> {{optional_inline}}</dt>
- <dd>{{domxref("USVString")}} のインスタンス、{{domxref("URLSearchParams")}} のインスタンス、{{domxref("USVString")}} のシーケンス、または {{domxref("USVString")}} を含むレコード。 <code>URLSearchParams</code> インスタンスの使用は推奨されないことに注意してください。 ブラウザーは単に <em><code>init</code></em> に <code>USVString</code> を使用するようになります。</dd>
-</dl>
+- _`init`_ {{optional_inline}}
+  - : {{domxref("USVString")}} のインスタンス、{{domxref("URLSearchParams")}} のインスタンス、{{domxref("USVString")}} のシーケンス、または {{domxref("USVString")}} を含むレコード。 `URLSearchParams` インスタンスの使用は推奨されないことに注意してください。 ブラウザーは単に _`init`_ に `USVString` を使用するようになります。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("URLSearchParams")}} のインスタンス。</p>
+{{domxref("URLSearchParams")}} のインスタンス。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>次の例は、URL 文字列から {{domxref("URLSearchParams")}} オブジェクトを作成する方法を示しています。</p>
+次の例は、URL 文字列から {{domxref("URLSearchParams")}} オブジェクトを作成する方法を示しています。
 
-<pre class="brush: js">// 文字列リテラルを渡す
-var url = new URL('https://example.com?foo=1&amp;bar=2');
+```js
+// 文字列リテラルを渡す
+var url = new URL('https://example.com?foo=1&bar=2');
 // window.location から取得
 var url2 = new URL(window.location);
 
@@ -48,31 +47,14 @@ var params3 = new URLSearchParams([["foo", 1],["bar", 2]]);
 
 // レコードを渡す
 var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#dom-urlsearchparams-urlsearchparams', "URLSearchParams()")}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                         | 状態                 | コメント |
+| ------------------------------------------------------------------------------------------------------------ | -------------------- | -------- |
+| {{SpecName('URL', '#dom-urlsearchparams-urlsearchparams', "URLSearchParams()")}} | {{Spec2('URL')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.URLSearchParams.URLSearchParams")}}</p>
-</div>
+{{Compat("api.URLSearchParams.URLSearchParams")}}

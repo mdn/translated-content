@@ -14,72 +14,43 @@ tags:
   - trackDefaults
 translation_of: Web/API/SourceBuffer/trackDefaults
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p><span class="seoSummary">{{domxref("SourceBuffer")}} インターフェイスの <strong><code>trackDefaults</code></strong> プロパティは、<code>SourceBuffer</code> に追加されるメディアの初期化セグメント（<a href="https://w3c.github.io/media-source/#init-segment">initialization segment</a>）で、種類、ラベル、言語情報が利用できない場合に使用するデフォルト値を指定します。</span></p>
+{{domxref("SourceBuffer")}} インターフェイスの **`trackDefaults`** プロパティは、`SourceBuffer` に追加されるメディアの初期化セグメント（[initialization segment](https://w3c.github.io/media-source/#init-segment)）で、種類、ラベル、言語情報が利用できない場合に使用するデフォルト値を指定します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>myTrackDefaults</em> = <em>sourceBuffer</em>.trackDefaults;
+    var myTrackDefaults = sourceBuffer.trackDefaults;
 
-<em>sourceBuffer</em>.trackDefaults = <em>myTrackDefaultList</em>;
-</pre>
+    sourceBuffer.trackDefaults = myTrackDefaultList;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("TrackDefaultList")}} オブジェクト。</p>
+{{domxref("TrackDefaultList")}} オブジェクト。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<p>このプロパティに新しい値を設定すると、次の例外がスローされる場合があります。</p>
+このプロパティに新しい値を設定すると、次の例外がスローされる場合があります。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">例外</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>{{domxref("MediaSource.sourceBuffers")}} の {{domxref("SourceBuffer")}} オブジェクトの1つ以上が更新中（つまり、{{domxref("SourceBuffer.updating")}} プロパティが現在 <code>true</code>）、またはこの <code>SourceBuffer</code> が {{domxref("MediaSource")}} から取り除かれています。</td>
-  </tr>
- </tbody>
-</table>
+| 例外                | 説明                                                                                                                                                                                                                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `InvalidStateError` | {{domxref("MediaSource.sourceBuffers")}} の {{domxref("SourceBuffer")}} オブジェクトの 1 つ以上が更新中（つまり、{{domxref("SourceBuffer.updating")}} プロパティが現在 `true`）、またはこの `SourceBuffer` が {{domxref("MediaSource")}} から取り除かれています。 |
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>未定</p>
+未定
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-trackdefaults', 'trackDefaults')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                             | 状態                                             | コメント |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
+| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-trackdefaults', 'trackDefaults')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("api.SourceBuffer.trackDefaults")}}
 
+## 関連情報
 
-<p>{{Compat("api.SourceBuffer.trackDefaults")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

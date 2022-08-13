@@ -12,30 +12,28 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onpointerenter
 original_slug: Web/API/GlobalEventHandlers/onpointerenter
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><strong><code>onpointerenter</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。</p>
+**`onpointerenter`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{domxref("HTMLElement/pointerenter_event", "pointerenter")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>targetElement</var>.onpointerenter = <var>enterHandler</var>;
+    targetElement.onpointerenter = enterHandler;
 
-var <var>enterHandler</var> = <var>targetElement</var>.onpointerenter;
-</pre>
+    var enterHandler = targetElement.onpointerenter;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<dl>
- <dt><code>enterHandler</code></dt>
- <dd>要素 <code>targetElement</code> の <code>pointerenter</code> イベントハンドラー。</dd>
-</dl>
+- `enterHandler`
+  - : 要素 `targetElement` の `pointerenter` イベントハンドラー。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例では、<code>onpointerenter</code> を使用して要素の <code>pointerenter</code> イベントハンドラーを設定する2つの方法を示します。</p>
+この例では、`onpointerenter` を使用して要素の `pointerenter` イベントハンドラーを設定する 2 つの方法を示します。
 
-<pre class="brush: html notranslate">&lt;html&gt;
-&lt;script&gt;
+```html
+<html>
+<script>
 function enterHandler(ev) {
   // pointerenter イベントの処理
 }
@@ -43,46 +41,27 @@ function init() {
   let el = document.getElementById('target1');
   el.onpointerenter = enterHandler;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" onpointerenter="enterHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" onpointerenter="enterHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerenter', 'onpointerenter')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>不安定版</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerenter', 'onpointerenter')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                       | 状態                                     | 備考     |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
+| {{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerenter', 'onpointerenter')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
+| {{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerenter', 'onpointerenter')}} | {{Spec2('Pointer Events')}}     | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.GlobalEventHandlers.onpointerenter")}}</p>
+{{Compat("api.GlobalEventHandlers.onpointerenter")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><code><a href="/ja/docs/Web/API/Document/pointerenter_event">Document: pointerenter</a></code> イベント</li>
- <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerenter_event">HTMLElement: pointerenter</a></code> イベント</li>
-</ul>
+- [`Document: pointerenter`](/ja/docs/Web/API/Document/pointerenter_event) イベント
+- [`HTMLElement: pointerenter`](/ja/docs/Web/API/HTMLElement/pointerenter_event) イベント

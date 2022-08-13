@@ -11,46 +11,32 @@ tags:
   - wheel
 translation_of: Web/API/Element/wheel_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><strong><code>wheel</code></strong> イベントは、ユーザーがポインティングデバイス (通常はマウス) のホイールボタンを回転させたときに発行されます。</p>
+**`wheel`** イベントは、ユーザーがポインティングデバイス (通常はマウス) のホイールボタンを回転させたときに発行されます。
 
-<p>このイベントは標準外、非推奨の {{domxref("Element/mousewheel_event", "mousewheel")}} イベントを置き換えるものです。</p>
+このイベントは標準外、非推奨の {{domxref("Element/mousewheel_event", "mousewheel")}} イベントを置き換えるものです。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("WheelEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.onwheel", "onwheel")}}</td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | あり                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------ |
+| キャンセル                   | 可                                                                       |
+| インターフェイス             | {{domxref("WheelEvent")}}                                         |
+| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers.onwheel", "onwheel")}} |
 
-<div class="blockIndicator note">
-<p><strong>注:</strong> <code>wheel</code> イベントと {{domxref("Element/scroll_event", "scroll")}} イベントを混同しないでください。 <code>wheel</code> イベントの既定のアクションは実装固有のものであり、必ずしも <code>scroll</code> イベントを発行するわけではありません。その場合でも、ホイールイベントの <code>delta*</code> 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。したがって、スクロールの方向を取得するために、 <code>wheel</code> イベントの <code>delta*</code> プロパティに頼らないようにしてください。代わりに、 <code>scroll</code> イベント内のターゲットの {{domxref("Element.scrollLeft", "scrollLeft")}} や {{domxref("Element.scrollTop", "scrollTop")}} の値の変化を検出するようにしてください。</p>
-</div>
+> **Note:** **注:** `wheel` イベントと {{domxref("Element/scroll_event", "scroll")}} イベントを混同しないでください。 `wheel` イベントの既定のアクションは実装固有のものであり、必ずしも `scroll` イベントを発行するわけではありません。その場合でも、ホイールイベントの `delta*` 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。したがって、スクロールの方向を取得するために、 `wheel` イベントの `delta*` プロパティに頼らないようにしてください。代わりに、 `scroll` イベント内のターゲットの {{domxref("Element.scrollLeft", "scrollLeft")}} や {{domxref("Element.scrollTop", "scrollTop")}} の値の変化を検出するようにしてください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Scaling_an_element_via_the_wheel" name="Scaling_an_element_via_the_wheel">ホイールで要素を拡大縮小</h3>
+### ホイールで要素を拡大縮小
 
-<p>この例は、マウス (またはその他のポインティングデバイスの) ホイールを使用して要素を拡大縮小する方法を示します。</p>
+この例は、マウス (またはその他のポインティングデバイスの) ホイールを使用して要素を拡大縮小する方法を示します。
 
-<pre class="brush: html notranslate">&lt;div&gt;Scale me with your mouse wheel.&lt;/div&gt;</pre>
+```html
+<div>Scale me with your mouse wheel.</div>
+```
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   min-height: 100vh;
   margin: 0;
   display: flex;
@@ -63,9 +49,11 @@ div {
   height: 105px;
   background: #cdf;
   padding: 5px;
-}</pre>
+}
+```
 
-<pre class="brush: js notranslate">function zoom(event) {
+```js
+function zoom(event) {
   event.preventDefault();
 
   scale += event.deltaY * -0.01;
@@ -79,42 +67,30 @@ div {
 
 let scale = 1;
 const el = document.querySelector('div');
-el.onwheel = zoom;</pre>
+el.onwheel = zoom;
+```
 
-<p>{{EmbedLiveSample("Scaling_an_element_via_the_wheel", 700, 300)}}</p>
+{{EmbedLiveSample("Scaling_an_element_via_the_wheel", 700, 300)}}
 
-<h3 id="addEventListener_equivalent" name="addEventListener_equivalent">addEventListener による同等のもの</h3>
+### addEventListener による同等のもの
 
-<p>イベントハンドラーは {{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドを使用して設定することもできます。</p>
+イベントハンドラーは {{domxref("EventTarget/addEventListener", "addEventListener()")}} メソッドを使用して設定することもできます。
 
-<pre class="brush: js notranslate">el.addEventListener('wheel', zoom);</pre>
+```js
+el.addEventListener('wheel', zoom);
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events','#event-type-wheel','wheel')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                   | 状態                         | 備考 |
+| ------------------------------------------------------------------------ | ---------------------------- | ---- |
+| {{SpecName('UI Events','#event-type-wheel','wheel')}} | {{Spec2('UI Events')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.wheel_event")}}</p>
+{{Compat("api.Element.wheel_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("WheelEvent")}}</li>
- <li><a href="/ja/docs/Web/API/Document/wheel_event">Document: <code>wheel</code> イベント</a></li>
-</ul>
+- {{domxref("WheelEvent")}}
+- [Document: `wheel` イベント](/ja/docs/Web/API/Document/wheel_event)

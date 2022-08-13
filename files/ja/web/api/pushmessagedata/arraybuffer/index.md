@@ -12,53 +12,44 @@ tags:
   - ServiceWorkers
 translation_of: Web/API/PushMessageData/arrayBuffer
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>{{domxref("PushMessageData")}} インターフェースの <code><strong>arrayBuffer()</strong></code> メソッドは、プッシュメッセージデータを {{domxref("ArrayBuffer")}} オブジェクトとして抽出します。</p>
+{{domxref("PushMessageData")}} インターフェースの **`arrayBuffer()`** メソッドは、プッシュメッセージデータを {{domxref("ArrayBuffer")}} オブジェクトとして抽出します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js">var myArrayBuffer = PushEvent.data.arrayBuffer();</pre>
+```js
+var myArrayBuffer = PushEvent.data.arrayBuffer();
+```
 
-<h3 id="パラメーター">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p>{{domxref("ArrayBuffer")}}。</p>
+{{domxref("ArrayBuffer")}}。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
+```js
+self.addEventListener('push', function(event) {
   var buffer = event.data.arrayBuffer();
 
   // array buffer を使用して何かを実行する。
-});</pre>
+});
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#widl-PushMessageData-arrayBuffer-ArrayBuffer', 'arrayBuffer()')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                     | 状態                         | コメント   |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
+| {{SpecName('Push API', '#widl-PushMessageData-arrayBuffer-ArrayBuffer', 'arrayBuffer()')}} | {{Spec2('Push API')}} | 初期定義。 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.PushMessageData.arrayBuffer")}}</p>
+{{Compat("api.PushMessageData.arrayBuffer")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
-</ul>
+- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)

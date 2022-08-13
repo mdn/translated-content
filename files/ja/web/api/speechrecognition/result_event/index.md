@@ -14,20 +14,20 @@ tags:
 translation_of: Web/API/SpeechRecognition/onresult
 original_slug: Web/API/SpeechRecognition/onresult
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>{{domxref("SpeechRecognition")}}インターフェイスの <strong><code>onresult</code></strong> プロパティは、音声認識サービスが結果を返した時に、つまり正しく言葉や文法が認識でき、アプリに通信した時 ({{event("result")}}イベントが発生した時) に、実行するイベントハンドラーになります。</p>
+{{domxref("SpeechRecognition")}}インターフェイスの **`onresult`** プロパティは、音声認識サービスが結果を返した時に、つまり正しく言葉や文法が認識でき、アプリに通信した時 ({{event("result")}}イベントが発生した時) に、実行するイベントハンドラーになります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">mySpeechRecognition.onresult = function() { ... };
-</pre>
+    mySpeechRecognition.onresult = function() { ... };
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>下記のソースコードは <a class="external external-icon" href="https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js">Speech color changer</a> の例文から取り出しました。</p>
+下記のソースコードは [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) の例文から取り出しました。
 
-<pre class="brush: js">recognition.onresult = function(event) {
+```js
+recognition.onresult = function(event) {
   // SpeechRecognitionEvent プロパティーは SpeechRecognitionResultList オブジェクトを返しました。
   // SpeechRecognitionResult オブジェクトは SpeechRecognitionResultList オブジェクトにあります。
   // ゲッターがあるので、配列のように呼び出すことができます。
@@ -40,52 +40,39 @@ original_slug: Web/API/SpeechRecognition/onresult
   diagnostic.textContent = '結果：' + color + '.';
   bg.style.backgroundColor = color;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-onresult', 'onresult')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 状態                                 | コメント |
+| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Web Speech API', '#dfn-onresult', 'onresult')}} | {{Spec2('Web Speech API')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>
+{{Compat("api.SpeechRecognition.onresult")}}
 
+### Firefox OS の権限
 
-<p>{{Compat("api.SpeechRecognition.onresult")}}</p>
-</div>
+アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加する必要があります。
 
-<h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS の権限</h3>
-
-<p>アプリで音声認識を利用する前に、下記の権限を <a href="/ja/docs/Web/Apps/Build/Manifest">manifest</a> に追加する必要があります。</p>
-
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>privileged アプリ権限も必要なので、下記も追加が必要です。</p>
+privileged アプリ権限も必要なので、下記も追加が必要です。
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)

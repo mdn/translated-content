@@ -15,42 +15,41 @@ tags:
   - read
 translation_of: Web/API/Clipboard/read
 ---
-<div>{{APIRef("Clipboard API")}}</div>
+{{APIRef("Clipboard API")}}
 
-<p><span class="seoSummary">{{domxref("Clipboard")}} インターフェイスの <strong><code>read()</code></strong> メソッドは、クリップボードの内容のコピーを要求し、戻り値の {{jsxref("Promise")}} が解決されたときにそのデータを取得できます。{{domxref("Clipboard.readText", "readText()")}} とは異なり、<code>read()</code> メソッドは画像など任意のデータを取得することができます。</span></p>
+{{domxref("Clipboard")}} インターフェイスの **`read()`** メソッドは、クリップボードの内容のコピーを要求し、戻り値の {{jsxref("Promise")}} が解決されたときにそのデータを取得できます。{{domxref("Clipboard.readText", "readText()")}} とは異なり、`read()` メソッドは画像など任意のデータを取得することができます。
 
-<p>クリップボードから読み込みを行うためには、まず <code>"clipboard-read"</code> パーミッションを取得する必要があります。</p>
+クリップボードから読み込みを行うためには、まず `"clipboard-read"` パーミッションを取得する必要があります。
 
-<div class="note">
-<p><strong>注意:</strong> 非同期の Clipboard API と <a href="/ja/docs/Web/API/Permissions_API">Permissions API</a> は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、パーミッションなどが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に <a href="#browser_compatibility">ブラウザー実装状況</a> を確認してください。</p>
-</div>
+> **Note:** **注意:** 非同期の Clipboard API と [Permissions API](/ja/docs/Web/API/Permissions_API) は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、パーミッションなどが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に [ブラウザー実装状況](#browser_compatibility) を確認してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>promise</em> = navigator.clipboard.read();</pre>
+    var promise = navigator.clipboard.read();
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>クリップボードの内容を持つ {{domxref("DataTransfer")}} に解決される、{{jsxref("Promise")}} オブジェクト。クリップボードへのアクセスが許可されない場合、この Promise は拒否される。</p>
+クリップボードの内容を持つ {{domxref("DataTransfer")}} に解決される、{{jsxref("Promise")}} オブジェクト。クリップボードへのアクセスが許可されない場合、この Promise は拒否される。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この使用例は、最初に {{domxref("Permissions.query", "navigator.permissions.query()")}} を使って <code>"clipboard-read"</code> 権限があるかどうか (またはプロンプトによってユーザーがそれを許可するかどうか) を調べ、その後クリップボードに現在あるデータを取得します。もしデータがプレーンテキストでない場合、エラーメッセージを表示します。そうでない場合は、変数 <code>textElem</code> により参照している要素の内容を、クリップボードの内容に置き換えます。</p>
+この使用例は、最初に {{domxref("Permissions.query", "navigator.permissions.query()")}} を使って `"clipboard-read"` 権限があるかどうか (またはプロンプトによってユーザーがそれを許可するかどうか) を調べ、その後クリップボードに現在あるデータを取得します。もしデータがプレーンテキストでない場合、エラーメッセージを表示します。そうでない場合は、変数 `textElem` により参照している要素の内容を、クリップボードの内容に置き換えます。
 
-<pre class="brush: js">// まず、Permissions API を使って、
+```js
+// まず、Permissions API を使って、
 // "clipboard-read" 機能を使えるかどうか確認します。
 
-navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {
+navigator.permissions.query({name: "clipboard-read"}).then(result => {
   // クリップボードの読み取りが許可されているか、またはプロンプトによって
   // ユーザーがそれを許可する場合、処理を続行します。
 
   if (result.state == "granted" || result.state == "prompt") {
-    navigator.clipboard.read().then(data =&gt; {
-      for (let i=0; i&lt;data.items.length; i++) {
+    navigator.clipboard.read().then(data => {
+      for (let i=0; i<data.items.length; i++) {
         if (data.items[i].type != "text/plain") {
           alert("クリップボードの内容がテキストでないため、読み込めません。");
         } else {
@@ -60,35 +59,18 @@ navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {
     });
   }
 });
-</pre>
+```
 
-<div class="note">
-<p><strong>注意:</strong> 現時点で Firefox は <code>read()</code> を実装していますが、<code>"clipboard-read"</code> パーミッションは認識できません。そのため、<a href="/ja/docs/Web/API/Permissions_API">Permissions API</a> を使ってこの API にアクセスしようとしても、失敗するでしょう。</p>
-</div>
+> **Note:** **注意:** 現時点で Firefox は `read()` を実装していますが、`"clipboard-read"` パーミッションは認識できません。そのため、[Permissions API](/ja/docs/Web/API/Permissions_API) を使ってこの API にアクセスしようとしても、失敗するでしょう。
 
-<div class="note">
-<p><strong>日本語訳注:</strong> 翻訳時点 (2020/02/15) で、この使用例は Google Chrome (v80) でも実行できなくなっています。クリップボードから取得するデータの型が <code>DataTransfer</code> から <code><a href="https://www.w3.org/TR/clipboard-apis/#typedefdef-clipboarditems">ClipboardItems</a></code> に変更されるなど、仕様が変更されているためです。</p>
-</div>
+> **Note:** **日本語訳注:** 翻訳時点 (2020/02/15) で、この使用例は Google Chrome (v80) でも実行できなくなっています。クリップボードから取得するデータの型が `DataTransfer` から [`ClipboardItems`](https://www.w3.org/TR/clipboard-apis/#typedefdef-clipboarditems) に変更されるなど、仕様が変更されているためです。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Clipboard API','#dom-clipboard-read','read()')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                           | 策定状況                             | コメント |
+| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Clipboard API','#dom-clipboard-read','read()')}} | {{Spec2('Clipboard API')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-
-
-<p>{{Compat("api.Clipboard.read")}}</p>
+{{Compat("api.Clipboard.read")}}

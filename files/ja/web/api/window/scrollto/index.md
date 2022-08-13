@@ -9,67 +9,52 @@ tags:
   - Reference
 translation_of: Web/API/Window/scrollTo
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><strong><code>Window.scrollTo()</code></strong> は文書内の特定の組み合わせの座標までスクロールします。</p>
+**`Window.scrollTo()`** は文書内の特定の組み合わせの座標までスクロールします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">window.scrollTo(<var>x-coord</var>, <var>y-coord</var>)
-window.scrollTo(<var>options</var>)
-</pre>
+    window.scrollTo(x-coord, y-coord)
+    window.scrollTo(options)
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code><var>x-coord</var></code> は、左上に表示されたい文書の水平軸上のピクセルです。</li>
- <li><code><var>y-coord</var></code> は、左上に表示されたい文書の垂直軸上のピクセルです。</li>
-</ul>
+- `x-coord` は、左上に表示されたい文書の水平軸上のピクセルです。
+- `y-coord` は、左上に表示されたい文書の垂直軸上のピクセルです。
 
-<p>- または -</p>
+\- または -
 
-<ul>
- <li><code><var>options</var></code> は {{domxref("ScrollToOptions")}} 辞書です。</li>
-</ul>
+- `options` は {{domxref("ScrollToOptions")}} 辞書です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush:js notranslate">window.scrollTo(0, 1000);
-</pre>
+```js
+window.scrollTo(0, 1000);
+```
 
-<p><code><var>options</var></code> の使用例:</p>
+`options` の使用例:
 
-<pre class="brush: js notranslate">window.scrollTo({
+```js
+window.scrollTo({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Notes" name="Notes">注</h2>
+## 注
 
-<p>{{domxref("Window.scroll()")}} はこのメソッドとほぼ同じです。相対スクロールについては、 {{domxref("Window.scrollBy()")}}, {{domxref("Window.scrollByLines()")}}, {{domxref("Window.scrollByPages()")}} を参照してください。</p>
+{{domxref("Window.scroll()")}} はこのメソッドとほぼ同じです。相対スクロールについては、 {{domxref("Window.scrollBy()")}}, {{domxref("Window.scrollByLines()")}}, {{domxref("Window.scrollByPages()")}} を参照してください。
 
-<p>要素をスクロールするには、 {{domxref("Element.scrollTop")}} および {{domxref("Element.scrollLeft")}} を参照してください。</p>
+要素をスクロールするには、 {{domxref("Element.scrollTop")}} および {{domxref("Element.scrollLeft")}} を参照してください。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       | 状態                             | 備考     |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Window.scrollTo")}}</p>
+{{Compat("api.Window.scrollTo")}}

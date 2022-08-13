@@ -11,68 +11,49 @@ tags:
   - pipeTo
 translation_of: Web/API/ReadableStream/pipeTo
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableStream")}} インターフェイスの <strong><code>pipeTo()</code></strong> メソッドは、現在の <code>ReadableStream</code> を<span class="tlid-translation translation" lang="ja"><span title="">与えられた</span></span> {{domxref("WritableStream")}} にパイプし、パイプのプロセスが正常に完了した場合は満たされ、エラーが発生した場合は拒否する promise を返します。</span></p>
+{{domxref("ReadableStream")}} インターフェイスの **`pipeTo()`** メソッドは、現在の `ReadableStream` を与えられた {{domxref("WritableStream")}} にパイプし、パイプのプロセスが正常に完了した場合は満たされ、エラーが発生した場合は拒否する promise を返します。
 
-<p>ストリームをパイプすると、通常、パイプしている間はストリームがロックされ、他のリーダーがロックできなくなります。</p>
+ストリームをパイプすると、通常、パイプしている間はストリームがロックされ、他のリーダーがロックできなくなります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>promise</em> = <em>readableStream</em>.pipeTo(<em>destination</em>[, <em>options</em>]);</pre>
+    var promise = readableStream.pipeTo(destination[, options]);
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>destination</dt>
- <dd>{{domxref("ReadableStream")}} の最終的な宛先として機能する {{domxref("WritableStream")}}。</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>ストリームのキャンセル、クローズ、または中止をいつ防止するかを定義できるプロパティを含むオプションのオブジェクト（すべて任意）。 オプションは次のとおりです。
- <ol>
-  <li><code>preventClose</code>: これが <code>true</code> に設定されている場合、ソースの <code>ReadableStream</code> を閉じても、宛先の <code>WritableStream</code> は閉じられません。 このメソッドは、宛先を閉じるときにエラーが発生しない限り、このプロセスが完了すると満たされる promise を返します。</li>
-  <li><code>preventAbort</code>: これが <code>true</code> に設定されている場合、ソースの <code>ReadableStream</code> のエラーは宛先の <code>WritableStream</code> を中止しません。 このメソッドは、ソースのエラー、または宛先の中止中に発生したエラーで拒否される promise を返します。</li>
-  <li><code>preventCancel</code>: これが <code>true</code> に設定されている場合、宛先の <code>WritableStream</code> のエラーはソースの <code>ReadableStream</code> をキャンセルしなくなります。 この場合、メソッドは、ソースのエラー、またはソースのキャンセル中に発生したエラーで拒否される promise を返します。 さらに、宛先の書き込み可能なストリームが閉じた状態または閉じようとしている状態で開始した場合、ソースの読み取り可能なストリームはキャンセルされなくなります。 この場合、メソッドは、閉じたストリームへのパイプが失敗したことを示すエラー、またはソースのキャンセル中に発生したエラーで拒否される promise を返します。</li>
- </ol>
- </dd>
-</dl>
+- destination
+  - : {{domxref("ReadableStream")}} の最終的な宛先として機能する {{domxref("WritableStream")}}。
+- options {{optional_inline}}
+  - : ストリームのキャンセル、クローズ、または中止をいつ防止するかを定義できるプロパティを含むオプションのオブジェクト（すべて任意）。 オプションは次のとおりです。1. `preventClose`: これが `true` に設定されている場合、ソースの `ReadableStream` を閉じても、宛先の `WritableStream` は閉じられません。 このメソッドは、宛先を閉じるときにエラーが発生しない限り、このプロセスが完了すると満たされる promise を返します。 2. `preventAbort`: これが `true` に設定されている場合、ソースの `ReadableStream` のエラーは宛先の `WritableStream` を中止しません。 このメソッドは、ソースのエラー、または宛先の中止中に発生したエラーで拒否される promise を返します。 3. `preventCancel`: これが `true` に設定されている場合、宛先の `WritableStream` のエラーはソースの `ReadableStream` をキャンセルしなくなります。 この場合、メソッドは、ソースのエラー、またはソースのキャンセル中に発生したエラーで拒否される promise を返します。 さらに、宛先の書き込み可能なストリームが閉じた状態または閉じようとしている状態で開始した場合、ソースの読み取り可能なストリームはキャンセルされなくなります。 この場合、メソッドは、閉じたストリームへのパイプが失敗したことを示すエラー、またはソースのキャンセル中に発生したエラーで拒否される promise を返します。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>パイプのプロセスが完了したときに解決する {{jsxref("Promise")}}。</p>
+パイプのプロセスが完了したときに解決する {{jsxref("Promise")}}。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd><code>writableStream</code> および/または <code>readableStream</code> オブジェクトは、書き込み可能なストリーム/読み取り可能なストリームではないか、ストリームの一方または両方がロックされています。</dd>
-</dl>
+- TypeError
+  - : `writableStream` および/または `readableStream` オブジェクトは、書き込み可能なストリーム/読み取り可能なストリームではないか、ストリームの一方または両方がロックされています。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// 元の画像をフェッチ
+```js
+// 元の画像をフェッチ
 fetch('png-logo.png')
 // その body を ReadableStream として取得
-.then(response =&gt; response.body)
-.then(body =&gt; body.pipeThrough(new PNGTransformStream()))
-.then(rs =&gt; rs.pipeTo(new FinalDestinationStream()))</pre>
+.then(response => response.body)
+.then(body => body.pipeThrough(new PNGTransformStream()))
+.then(rs => rs.pipeTo(new FinalDestinationStream()))
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rs-pipe-to","pipeTo()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                             | 状態                         | コメント |
+| ---------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#rs-pipe-to","pipeTo()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableStream.pipeTo")}}</p>
+{{Compat("api.ReadableStream.pipeTo")}}

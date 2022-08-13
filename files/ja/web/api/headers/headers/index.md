@@ -3,69 +3,60 @@ title: Headers()
 slug: Web/API/Headers/Headers
 translation_of: Web/API/Headers/Headers
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><code><strong>Headers()</strong></code><strong> </strong>コンストラクターは新しい {{domxref("Headers")}} オブジェクトを生成します。</p>
+**`Headers()`\*\*** \*\*コンストラクターは新しい {{domxref("Headers")}} オブジェクトを生成します。
 
-<h2 id="文法">文法</h2>
+## 文法
 
-<pre class="syntaxbox notranslate">var <em>myHeaders</em> = new Headers(<em>init</em>);</pre>
+    var myHeaders = new Headers(init);
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>init</code> {{optional_inline}}</dt>
- <dd><code>Headers</code> に前もって設定したい <a href="/ja/docs/Web/HTTP/Headers">HTTP headers</a> を含むオブジェクト。これは {{domxref("ByteString")}} を持つ単純なオブジェクトリテラルか、既存の <code>Headers</code> オブジェクトのどちらかです。最後の例では、新しい <code>Headers</code> オブジェクトは既存の <code>Headers</code> オブジェクトからデータを継承します。</dd>
-</dl>
+- `init` {{optional_inline}}
+  - : `Headers` に前もって設定したい [HTTP headers](/ja/docs/Web/HTTP/Headers) を含むオブジェクト。これは {{domxref("ByteString")}} を持つ単純なオブジェクトリテラルか、既存の `Headers` オブジェクトのどちらかです。最後の例では、新しい `Headers` オブジェクトは既存の `Headers` オブジェクトからデータを継承します。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>簡単に空の <code>Headers</code> オブジェクトを生成できます。</p>
+簡単に空の `Headers` オブジェクトを生成できます。
 
-<pre class="brush: js notranslate">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>{{domxref("Headers.append")}} を使用してヘッダーを追加できます。</p>
+{{domxref("Headers.append")}} を使用してヘッダーを追加できます。
 
-<pre class="brush: js notranslate">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
-</pre>
+```
 
-<p>または、<code>Headers</code> オブジェクトの生成時に必要なヘッダーを追加することもできます。次のスニペットでは、新しい {{domxref("Headers")}} を作成し、コンストラクターに init オブジェクトを引数として渡してヘッダーを追加しています。</p>
+または、`Headers` オブジェクトの生成時に必要なヘッダーを追加することもできます。次のスニペットでは、新しい {{domxref("Headers")}} を作成し、コンストラクターに init オブジェクトを引数として渡してヘッダーを追加しています。
 
-<pre class="brush: js notranslate">var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
-var myHeaders = new Headers(httpHeaders);</pre>
+```js
+var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
+var myHeaders = new Headers(httpHeaders);
+```
 
-<p>最初の <code>Headers</code> を init オブジェクトとして渡して、別の <code>Headers</code> オブジェクトを生成できます。</p>
+最初の `Headers` を init オブジェクトとして渡して、別の `Headers` オブジェクトを生成できます。
 
-<pre class="brush: js notranslate">var secondHeadersObj = new Headers(myHeaders);
-secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object</pre>
+```js
+var secondHeadersObj = new Headers(myHeaders);
+secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object
+```
 
-<h2 id="仕様書">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-headers','Headers()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                           | 状態                     | 備考 |
+| ---------------------------------------------------------------- | ------------------------ | ---- |
+| {{SpecName('Fetch','#dom-headers','Headers()')}} | {{Spec2('Fetch')}} |      |
 
-<h2 id="ブラウザの対応">ブラウザの対応</h2>
+## ブラウザの対応
 
-<p><br>
- {{Compat("api.Headers.headers")}}</p>
+{{Compat("api.Headers.headers")}}
 
-<h2 id="関連情報">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">サービスワーカー API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP アクセス制御 (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [サービスワーカー API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)

@@ -17,56 +17,51 @@ tags:
   - サービスワーカー
 translation_of: Web/API/Cache
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary"><strong><code>Cache</code></strong> インターフェイスは、<code><a href="http://fetch.spec.whatwg.org/#request">Request</a></code> / <code><a href="http://fetch.spec.whatwg.org/#response">Response</a></code> オブジェクトのペアのためのストレージの仕組みを提供します。例えば、 {{domxref("ServiceWorker")}} のライフサイクルの一部としてこれらをキャッシュします。なお、 <code>Cache</code> インターフェイスは、ワーカーだけでなくウィンドウスコープにも公開されています。サービスワーカーの仕様書で定義されているものですが、必ずしもサービスワーカーとの組み合わせで使用する必要はありません。</span></p>
+**`Cache`** インターフェイスは、[`Request`](http://fetch.spec.whatwg.org/#request) / [`Response`](http://fetch.spec.whatwg.org/#response) オブジェクトのペアのためのストレージの仕組みを提供します。例えば、 {{domxref("ServiceWorker")}} のライフサイクルの一部としてこれらをキャッシュします。なお、 `Cache` インターフェイスは、ワーカーだけでなくウィンドウスコープにも公開されています。サービスワーカーの仕様書で定義されているものですが、必ずしもサービスワーカーとの組み合わせで使用する必要はありません。
 
-<p>単一のオリジンが、複数の名前付き <code>Cache</code> オブジェクトを持つことができます。 (例えば {{domxref("ServiceWorker")}} の中などで) スクリプトがどのように <code>Cache</code> を更新するかを実装する必要があります。 <code>Cache</code> 内のアイテムは、明示的に要求しない限り更新されませんし、削除しない限り有効期限はありません。 {{domxref("CacheStorage.open", "CacheStorage.open()")}} を使用して特定の名前付き <code>Cache</code> オブジェクトを開き、それから任意の <code>Cache</code> のメソッドを呼び出して <code>Cache</code> を管理します。</p>
+単一のオリジンが、複数の名前付き `Cache` オブジェクトを持つことができます。 (例えば {{domxref("ServiceWorker")}} の中などで) スクリプトがどのように `Cache` を更新するかを実装する必要があります。 `Cache` 内のアイテムは、明示的に要求しない限り更新されませんし、削除しない限り有効期限はありません。 {{domxref("CacheStorage.open", "CacheStorage.open()")}} を使用して特定の名前付き `Cache` オブジェクトを開き、それから任意の `Cache` のメソッドを呼び出して `Cache` を管理します。
 
-<p>また、定期的にキャッシュエントリを一掃する必要があります。各ブラウザーは、指定されたオリジンが使用できるキャッシュストレージの総量に厳しい制限を設けています。キャッシュ容量の概算の使用量は {{domxref("StorageEstimate")}} API を用いて確認することができます。ブラウザーはディスク容量の管理に最善を尽くしますが、あるオリジンのキャッシュストレージを削除することがあります。ブラウザーはふつう、あるオリジンのデータをすべて削除するか、まったく削除しないかのいずれかです。名前を用いてキャッシュをバージョン管理し、安全に操作できるスクリプトのバージョンからのみキャッシュを使用するようにしてください。詳細は、<a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">古いキャッシュの削除</a>を確認してください。</p>
+また、定期的にキャッシュエントリを一掃する必要があります。各ブラウザーは、指定されたオリジンが使用できるキャッシュストレージの総量に厳しい制限を設けています。キャッシュ容量の概算の使用量は {{domxref("StorageEstimate")}} API を用いて確認することができます。ブラウザーはディスク容量の管理に最善を尽くしますが、あるオリジンのキャッシュストレージを削除することがあります。ブラウザーはふつう、あるオリジンのデータをすべて削除するか、まったく削除しないかのいずれかです。名前を用いてキャッシュをバージョン管理し、安全に操作できるスクリプトのバージョンからのみキャッシュを使用するようにしてください。詳細は、[古いキャッシュの削除](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches)を確認してください。
 
-<div class="note">
-<p><strong>メモ</strong>: キーの照合アルゴリズムは、値の中にある <a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">VARY ヘッダー</a>に依存しています。そのため、新しいキーを照合するには、キャッシュ内のエントリのキーと値の両方を調べる必要があります。</p>
-</div>
+> **Note:** **メモ**: キーの照合アルゴリズムは、値の中にある [VARY ヘッダー](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)に依存しています。そのため、新しいキーを照合するには、キャッシュ内のエントリのキーと値の両方を調べる必要があります。
 
-<div class="note">
-<p><strong>メモ</strong>: キャッシュ API は HTTP のキャッシュヘッダーを尊重しません。</p>
-</div>
+> **Note:** **メモ**: キャッシュ API は HTTP のキャッシュヘッダーを尊重しません。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("Cache.match", "Cache.match(request, options)")}}</dt>
- <dd><code>Cache</code> オブジェクトで最初に一致したリクエストに関連するレスポンスで解決する {{jsxref("Promise")}} を返します。</dd>
- <dt>{{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}</dt>
- <dd><code>Cache</code> オブジェクトで一致するすべてのリクエストの配列で解決する {{jsxref("Promise")}} を返します。</dd>
- <dt>{{domxref("Cache.add", "Cache.add(request)")}}</dt>
- <dd>URL を受け取り、それを取得して、指定されたキャッシュに結果のレスポンスオブジェクトを追加します。機能的には <code>fetch()</code> を呼び出してから、 <code>put()</code> を使用してキャッシュに結果を追加するのと同等です。</dd>
- <dt>{{domxref("Cache.addAll", "Cache.addAll(requests)")}}</dt>
- <dd>URL の配列を受け取り、それらを取得して指定されたキャッシュに結果のレスポンスオブジェクトを追加します。</dd>
- <dt>{{domxref("Cache.put", "Cache.put(request, response)")}}</dt>
- <dd>リクエストとそのレスポンスの両方を受け取り、指定されたキャッシュへ追加します。</dd>
- <dt>{{domxref("Cache.delete", "Cache.delete(request, options)")}}</dt>
- <dd>キーがリクエストである <code>Cache</code> エントリを探し、見つかった場合は {{domxref("Cache")}} エントリを削除して、 <code>true</code> で解決する {{jsxref("Promise")}} を返します。 {{domxref("Cache")}} エントリが見つからない場合、Promise は <code>false</code> で解決します。</dd>
- <dt>{{domxref("Cache.keys", "Cache.keys(request, options)")}}</dt>
- <dd><code>Cache</code> キーの配列で解決する {{jsxref("Promise")}} を返します。</dd>
-</dl>
+- {{domxref("Cache.match", "Cache.match(request, options)")}}
+  - : `Cache` オブジェクトで最初に一致したリクエストに関連するレスポンスで解決する {{jsxref("Promise")}} を返します。
+- {{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}
+  - : `Cache` オブジェクトで一致するすべてのリクエストの配列で解決する {{jsxref("Promise")}} を返します。
+- {{domxref("Cache.add", "Cache.add(request)")}}
+  - : URL を受け取り、それを取得して、指定されたキャッシュに結果のレスポンスオブジェクトを追加します。機能的には `fetch()` を呼び出してから、 `put()` を使用してキャッシュに結果を追加するのと同等です。
+- {{domxref("Cache.addAll", "Cache.addAll(requests)")}}
+  - : URL の配列を受け取り、それらを取得して指定されたキャッシュに結果のレスポンスオブジェクトを追加します。
+- {{domxref("Cache.put", "Cache.put(request, response)")}}
+  - : リクエストとそのレスポンスの両方を受け取り、指定されたキャッシュへ追加します。
+- {{domxref("Cache.delete", "Cache.delete(request, options)")}}
+  - : キーがリクエストである `Cache` エントリを探し、見つかった場合は {{domxref("Cache")}} エントリを削除して、 `true` で解決する {{jsxref("Promise")}} を返します。 {{domxref("Cache")}} エントリが見つからない場合、Promise は `false` で解決します。
+- {{domxref("Cache.keys", "Cache.keys(request, options)")}}
+  - : `Cache` キーの配列で解決する {{jsxref("Promise")}} を返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>このコードスニペットは、<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service worker selective caching sample</a> からのものです (<a href="https://googlechrome.github.io/samples/service-worker/selective-caching/">selective caching をライブで</a>見る)。このコードでは {{domxref("CacheStorage.open()")}} を使用して、 <code>font/</code> で始まる <code>Content-Type</code> ヘッダー用の <code>Cache</code> オブジェクトを開きます。</p>
+このコードスニペットは、[service worker selective caching sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) からのものです ([selective caching をライブで](https://googlechrome.github.io/samples/service-worker/selective-caching/)見る)。このコードでは {{domxref("CacheStorage.open()")}} を使用して、 `font/` で始まる `Content-Type` ヘッダー用の `Cache` オブジェクトを開きます。
 
-<p>そしてこのコードは、 {{domxref("Cache.match()")}} を使用してすでにキャッシュ内に一致するフォントがあるかどうかを確認し、もしあれば、それを返します。一致するフォントがなかった場合は、コードはネットワークからフォントを取得して、 {{domxref("Cache.put()")}} を用いて取得したリソースをキャッシュします。</p>
+そしてこのコードは、 {{domxref("Cache.match()")}} を使用してすでにキャッシュ内に一致するフォントがあるかどうかを確認し、もしあれば、それを返します。一致するフォントがなかった場合は、コードはネットワークからフォントを取得して、 {{domxref("Cache.put()")}} を用いて取得したリソースをキャッシュします。
 
-<p>このコードは {{domxref("Globalfetch.fetch","fetch()")}} の操作で発生する例外を処理します。なお、 HTTP のエラーレスポンス (404 など) はこの例外を発生させません。適切なエラーコードを持つ通常のレスポンスオブジェクトを返します。</p>
+このコードは {{domxref("Globalfetch.fetch","fetch()")}} の操作で発生する例外を処理します。なお、 HTTP のエラーレスポンス (404 など) はこの例外を発生させません。適切なエラーコードを持つ通常のレスポンスオブジェクトを返します。
 
-<p>このコードスニペットでは、サービスワーカーで使用されるバージョン付きキャッシュのベストプラクティスも示しています。この例ではキャッシュが1つしかありませんが、キャッシュが複数でも同じアプローチが利用できます。これはキャッシュの一括指定識別子を、具体的なバージョン付けされたキャッシュ名に対応させます。このコードはまた、 <code>CURRENT_CACHES</code> で名前が指定されていないキャッシュをすべて削除します。</p>
+このコードスニペットでは、サービスワーカーで使用されるバージョン付きキャッシュのベストプラクティスも示しています。この例ではキャッシュが 1 つしかありませんが、キャッシュが複数でも同じアプローチが利用できます。これはキャッシュの一括指定識別子を、具体的なバージョン付けされたキャッシュ名に対応させます。このコードはまた、 `CURRENT_CACHES` で名前が指定されていないキャッシュをすべて削除します。
 
-<p>このコード例において、 <code>caches</code> は {{domxref("ServiceWorkerGlobalScope")}} のプロパティです。これは <code>CacheStorage</code> オブジェクトを保持し、 {{domxref("CacheStorage")}} インターフェイスでアクセスすることができます。これは {{domxref("WindowOrWorkerGlobalScope")}} ミックスインを実装したものです。</p>
+このコード例において、 `caches` は {{domxref("ServiceWorkerGlobalScope")}} のプロパティです。これは `CacheStorage` オブジェクトを保持し、 {{domxref("CacheStorage")}} インターフェイスでアクセスすることができます。これは {{domxref("WindowOrWorkerGlobalScope")}} ミックスインを実装したものです。
 
-<div class="note"><strong>メモ</strong>: Chrome では、 <code>chrome://inspect/#service-workers</code> にアクセスして、登録されたサービスワーカーの下の "inspect" リンクをクリックすると、 <code><a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a></code> スクリプトが行う様々なアクションのログ状態を見ることができます。</div>
+> **Note:** **メモ**: Chrome では、 `chrome://inspect/#service-workers` にアクセスして、登録されたサービスワーカーの下の "inspect" リンクをクリックすると、 [`service-worker.js`](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) スクリプトが行う様々なアクションのログ状態を見ることができます。
 
-<pre class="brush: js">var CACHE_VERSION = 1;
+```js
+var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   font: 'font-cache-v' + CACHE_VERSION
 };
@@ -117,8 +112,8 @@ self.addEventListener('fetch', function(event) {
           console.log('  Response for %s from network is: %O',
             event.request.url, response);
 
-          if (response.status &lt; 400 &amp;&amp;
-              response.headers.has('content-type') &amp;&amp;
+          if (response.status < 400 &&
+              response.headers.has('content-type') &&
               response.headers.get('content-type').match(/^font\//i)) {
             // これにより、エラーであることがわかっているレスポンス（つまり、HTTP ステータスコード 4xx または 5xx）のキャッシュが回避されます。
             // また、フォントに対応するレスポンスのみをキャッシュする必要があります。
@@ -149,43 +144,27 @@ self.addEventListener('fetch', function(event) {
       });
     })
   );
-});</pre>
+});
+```
 
-<h3 id="Storing_cookies_in_Caches" name="Storing_cookies_in_Caches">クッキーのキャッシュへの格納</h3>
+### クッキーのキャッシュへの格納
 
-<p><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> では {{httpheader("Set-Cookie")}} ヘッダーを、 {{domxref("Response")}} オブジェクトを {{domxref("WindowOrWorkerGlobalScope", "fetch()")}} から返す前に削除する必要があります。したがって、キャッシュに含まれる <code>Response</code> はヘッダーを含みません。</p>
+[Fetch API](/ja/docs/Web/API/Fetch_API) では {{httpheader("Set-Cookie")}} ヘッダーを、 {{domxref("Response")}} オブジェクトを {{domxref("WindowOrWorkerGlobalScope", "fetch()")}} から返す前に削除する必要があります。したがって、キャッシュに含まれる `Response` はヘッダーを含みません。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Service Workers', '#cache', 'Cache')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                               | 状態                                 | 備考     |
+| -------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#cache', 'Cache')}} | {{Spec2('Service Workers')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Cache")}}</p>
-</div>
+{{Compat("api.Cache")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">サービスワーカーの使用</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">ウェブワーカーの使用</a></li>
-</ul>
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
+- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
+- {{jsxref("Promise")}}
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

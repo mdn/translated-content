@@ -11,46 +11,29 @@ tags:
   - ポインターイベント
 translation_of: Web/API/Navigator/maxTouchPoints
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{domxref("Navigator")}} インターフェイスの <strong><code>maxTouchPoints</code></strong> プロパティは読み取り専用で、現在の端末で対応している同時タッチコンタクト点の最大数を返します。</p>
+{{domxref("Navigator")}} インターフェイスの **`maxTouchPoints`** プロパティは読み取り専用で、現在の端末で対応している同時タッチコンタクト点の最大数を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>touchPoints</var> = <var>navigator</var>.maxTouchPoints;
-</pre>
+    touchPoints = navigator.maxTouchPoints;
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">if (navigator.maxTouchPoints &gt; 1) {
+```js
+if (navigator.maxTouchPoints > 1) {
   // ブラウザーがマルチタッチに対応
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#extensions-to-the-navigator-interface', 'maxTouchPoints')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>非安定バージョン。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#extensions-to-the-navigator-interface', 'maxTouchPoints')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                   | 状態                                     | 備考               |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{SpecName('Pointer Events 2','#extensions-to-the-navigator-interface', 'maxTouchPoints')}} | {{Spec2('Pointer Events 2')}} | 非安定バージョン。 |
+| {{SpecName('Pointer Events', '#extensions-to-the-navigator-interface', 'maxTouchPoints')}} | {{Spec2('Pointer Events')}}     | 初回定義           |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<div>{{Compat("api.Navigator.maxTouchPoints")}}</div>
+{{Compat("api.Navigator.maxTouchPoints")}}

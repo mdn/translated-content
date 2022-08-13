@@ -10,42 +10,39 @@ tags:
   - data
 translation_of: Web/API/Storage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>Web Storage API の <code>Storage</code> インターフェイスは、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供して、例えば保存されているデータアイテムを追加、変更、削除することができます。</p>
+Web Storage API の `Storage` インターフェイスは、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供して、例えば保存されているデータアイテムを追加、変更、削除することができます。
 
-<p>ドメインのセッションストレージを操作したい場合は、{{domxref("Window.sessionStorage")}} メソッドを呼び出してください。ドメインのローカルストレージを操作したい場合は、{{domxref("Window.localStorage")}} を呼び出してください。</p>
+ドメインのセッションストレージを操作したい場合は、{{domxref("Window.sessionStorage")}} メソッドを呼び出してください。ドメインのローカルストレージを操作したい場合は、{{domxref("Window.localStorage")}} を呼び出してください。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("Storage.length")}} {{readonlyInline}}</dt>
- <dd><code>Storage</code> オブジェクトに保存されているデータアイテムの数を表す整数を返します。</dd>
-</dl>
+- {{domxref("Storage.length")}} {{readonlyInline}}
+  - : `Storage` オブジェクトに保存されているデータアイテムの数を表す整数を返します。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("Storage.key()")}}</dt>
- <dd>このメソッドは数値 n を渡すと、ストレージ内で n 番目のキーの名称を返します。</dd>
-</dl>
+- {{domxref("Storage.key()")}}
+  - : このメソッドは数値 n を渡すと、ストレージ内で n 番目のキーの名称を返します。
 
-<dl>
- <dt>{{domxref("Storage.getItem()")}}</dt>
- <dd>キーの名称を渡すと、キーに対する値を返します。</dd>
- <dt>{{domxref("Storage.setItem()")}}</dt>
- <dd>キーの名称と値を渡すと、ストレージにキーを追加する、または既存のキーに対する値を更新します。</dd>
- <dt>{{domxref("Storage.removeItem()")}}</dt>
- <dd>キーの名称を渡すと、ストレージからキーを削除します。</dd>
- <dt>{{domxref("Storage.clear()")}}</dt>
- <dd>このメソッドを呼び出すと、ストレージからすべてのキーを消去します。</dd>
-</dl>
+<!---->
 
-<h2 id="Examples" name="Examples">例</h2>
+- {{domxref("Storage.getItem()")}}
+  - : キーの名称を渡すと、キーに対する値を返します。
+- {{domxref("Storage.setItem()")}}
+  - : キーの名称と値を渡すと、ストレージにキーを追加する、または既存のキーに対する値を更新します。
+- {{domxref("Storage.removeItem()")}}
+  - : キーの名称を渡すと、ストレージからキーを削除します。
+- {{domxref("Storage.clear()")}}
+  - : このメソッドを呼び出すと、ストレージからすべてのキーを消去します。
 
-<p>ここでは、<code>localStorage</code> を呼び出して <code>Storage</code> オブジェクトにアクセスしています。始めに <code>!localStorage.getItem('bgcolor')</code> というコードを使用して、ローカルストレージにデータアイテムが含まれているかを確認します。含まれている場合は、{{domxref("Storage.getItem()")}} を使用してデータアイテムを取得して、さらにそのデータを使用してページのスタイルを更新する <code>setStyles()</code> 関数を実行します。含まれていない場合は <code>populateStorage()</code> 関数を実行します。こちらは {{domxref("Storage.setItem()")}} を使用してアイテムの値を設定してから、<code>setStyles()</code> を実行します。</p>
+## 例
 
-<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
+ここでは、`localStorage` を呼び出して `Storage` オブジェクトにアクセスしています。始めに `!localStorage.getItem('bgcolor')` というコードを使用して、ローカルストレージにデータアイテムが含まれているかを確認します。含まれている場合は、{{domxref("Storage.getItem()")}} を使用してデータアイテムを取得して、さらにそのデータを使用してページのスタイルを更新する `setStyles()` 関数を実行します。含まれていない場合は `populateStorage()` 関数を実行します。こちらは {{domxref("Storage.setItem()")}} を使用してアイテムの値を設定してから、`setStyles()` を実行します。
+
+```js
+if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 }
 setStyles();
@@ -68,35 +65,21 @@ function setStyles() {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>注意</strong>: 完全に動作する例として実行する様子を見るために、<a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a> をご覧ください。</p>
-</div>
+> **Note:** **注意**: 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webstorage.html#the-storage-interface', 'Storage')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 策定状況                         | コメント |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', 'webstorage.html#the-storage-interface', 'Storage')}} | {{Spec2('HTML WHATWG')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.Storage")}}</p>
+{{Compat("api.Storage")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Web Storage API を使用する</a></li>
-</ul>
+- [Web Storage API を使用する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

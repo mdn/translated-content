@@ -12,28 +12,27 @@ tags:
   - Workers
 translation_of: Web/API/Clients
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary"><strong><code>Clients</code></strong> インターフェイスは、{{domxref("Client")}} オブジェクトへのアクセスを提供します。 これは、<a href="/ja/docs/Web/API/ServiceWorker_API">サービスワーカー</a>内で {{domxref("ServiceWorkerGlobalScope", "self")}}<code>.clients</code> を介してアクセスします。</span></p>
+**`Clients`** インターフェイスは、{{domxref("Client")}} オブジェクトへのアクセスを提供します。 これは、[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内で {{domxref("ServiceWorkerGlobalScope", "self")}}`.clients` を介してアクセスします。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("Clients.get()")}}</dt>
- <dd>指定された {{domxref("Client.id", "id")}} に一致する {{domxref("Client")}} の {{jsxref("Promise")}} を返します。</dd>
- <dt>{{domxref("Clients.matchAll()")}}</dt>
- <dd>{{domxref("Client")}} オブジェクトの配列の {{jsxref("Promise")}} を返します。 options 引数を使用すると、返されるクライアントの種類を制御できます。</dd>
- <dt>{{domxref("Clients.openWindow()")}}</dt>
- <dd>指定された URL の新しいブラウザーウィンドウを開き、新しい {{domxref("WindowClient")}} の {{jsxref("Promise")}} を返します。</dd>
- <dt>{{domxref("Clients.claim()")}}</dt>
- <dd>アクティブなサービスワーカーが自身の {{domxref("ServiceWorkerRegistration.scope", "scope")}} 内のすべてのクライアントの {{domxref("ServiceWorkerContainer.controller", "controller")}} として自分自身を設定できるようにします。</dd>
-</dl>
+- {{domxref("Clients.get()")}}
+  - : 指定された {{domxref("Client.id", "id")}} に一致する {{domxref("Client")}} の {{jsxref("Promise")}} を返します。
+- {{domxref("Clients.matchAll()")}}
+  - : {{domxref("Client")}} オブジェクトの配列の {{jsxref("Promise")}} を返します。 options 引数を使用すると、返されるクライアントの種類を制御できます。
+- {{domxref("Clients.openWindow()")}}
+  - : 指定された URL の新しいブラウザーウィンドウを開き、新しい {{domxref("WindowClient")}} の {{jsxref("Promise")}} を返します。
+- {{domxref("Clients.claim()")}}
+  - : アクティブなサービスワーカーが自身の {{domxref("ServiceWorkerRegistration.scope", "scope")}} 内のすべてのクライアントの {{domxref("ServiceWorkerContainer.controller", "controller")}} として自分自身を設定できるようにします。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>次の例は、ユーザーが通知をクリックしたときに既存のチャットウィンドウを表示するか、新しいチャットウィンドウを作成します。</p>
+次の例は、ユーザーが通知をクリックしたときに既存のチャットウィンドウを表示するか、新しいチャットウィンドウを作成します。
 
-<pre class="brush: js">addEventListener('notificationclick', event =&gt; {
+```js
+addEventListener('notificationclick', event => {
   event.waitUntil(async function() {
     const allClients = await clients.matchAll({
       includeUncontrolled: true
@@ -63,37 +62,20 @@ translation_of: Web/API/Clients
     chatClient.postMessage("新しいチャットメッセージ！");
   }());
 });
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#clients', 'Clients')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                     | 状態                                 | コメント |
+| ------------------------------------------------------------------------ | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#clients', 'Clients')}} | {{Spec2('Service Workers')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat("api.Clients")}}
 
+## 関連情報
 
-<p>{{Compat("api.Clients")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Service worker の使用</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- [Service worker の使用](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
+- {{jsxref("Promise")}}

@@ -1,71 +1,51 @@
 ---
-title: 'WebGLRenderingContext.uniformMatrix[234]fv()'
+title: WebGLRenderingContext.uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
 translation_of: Web/API/WebGLRenderingContext/uniformMatrix
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.uniformMatrix[234]fv()</code></strong> メソッドは、行列の値をユニフォームの値に指定します。</p>
+[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.uniformMatrix[234]fv()`** メソッドは、行列の値をユニフォームの値に指定します。
 
-<p>このメソッドの 3 つのバージョン (<code>uniformMatrix2fv()</code>, <code>uniformMatrix3fv()</code>, と <code>uniformMatrix4fv()</code>) は、入力値として 2 要素, 3 要素, 4 要素のベクトルをそれぞれ取ります。</p>
+このメソッドの 3 つのバージョン (`uniformMatrix2fv()`, `uniformMatrix3fv()`, と `uniformMatrix4fv()`) は、入力値として 2 要素, 3 要素, 4 要素のベクトルをそれぞれ取ります。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>WebGLRenderingContext</em>.uniformMatrix2fv(<em>location</em>, <em>transpose</em>, <em>value</em>);
-<em>WebGLRenderingContext</em>.uniformMatrix3fv(<em>location</em>, <em>transpose</em>, <em>value</em>);
-<em>WebGLRenderingContext</em>.uniformMatrix4fv(<em>location</em>, <em>transpose</em>, <em>value</em>);
-</pre>
+    WebGLRenderingContext.uniformMatrix2fv(location, transpose, value);
+    WebGLRenderingContext.uniformMatrix3fv(location, transpose, value);
+    WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>location</code></dt>
- <dd>変更するユニフォーム属性の位置を含むオブジェクト {{domxref("WebGLUniformLocation")}}。この位置は {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}} を用いて入手されます。</dd>
- <dt><code>transpose</code></dt>
- <dd>行列を転置するかどうか指定する {{domxref("GLboolean")}}。<code>false</code> でなければならない。</dd>
- <dt><code>value</code></dt>
- <dd>
- <p>{{jsxref("Float32Array")}} か <code>GLfloat</code> 値の並び。</p>
- </dd>
-</dl>
+- `location`
+  - : 変更するユニフォーム属性の位置を含むオブジェクト {{domxref("WebGLUniformLocation")}}。この位置は {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}} を用いて入手されます。
+- `transpose`
+  - : 行列を転置するかどうか指定する {{domxref("GLboolean")}}。`false` でなければならない。
+- `value`
+  - : {{jsxref("Float32Array")}} か `GLfloat` 値の並び。
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">gl.uniformMatrix2fv(loc, false, [2,1, 2,2]);</pre>
+```js
+gl.uniformMatrix2fv(loc, false, [2,1, 2,2]);
+```
 
-<h2 id="仕様策定状況">仕様策定状況</h2>
+## 仕様策定状況
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.10", "uniformMatrix")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>初回定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glUniform.xml", "glUniform")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>OpenGL API のマニュアルページ。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 策定状況                             | コメント                        |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
+| {{SpecName('WebGL', "#5.14.10", "uniformMatrix")}}             | {{Spec2('WebGL')}}             | 初回定義。                      |
+| {{SpecName('OpenGL ES 2.0', "glUniform.xml", "glUniform")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
 
-<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.WebGLRenderingContext.uniformMatrix2fv")}}</p>
+{{Compat("api.WebGLRenderingContext.uniformMatrix2fv")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.uniform()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.uniformMatrix()")}} – これらのメソッドの WebGL 2 版。</li>
-</ul>
+- {{domxref("WebGLRenderingContext.uniform()")}}
+- {{domxref("WebGL2RenderingContext.uniformMatrix()")}} – これらのメソッドの WebGL 2 版。

@@ -8,57 +8,34 @@ tags:
   - Reference
 translation_of: Web/API/HTMLBRElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLBRElement</code></strong>インターフェースはHTML改行要素 ({{htmlelement("br")}}) を表現します。{{domxref("HTMLElement")}}より継承しています。</span></p>
+**`HTMLBRElement`**インターフェースは HTML 改行要素 ({{htmlelement("br")}}) を表現します。{{domxref("HTMLElement")}}より継承しています。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>親である{{domxref("HTMLElement")}}より属性を継承しています。</em></p>
+_親である{{domxref("HTMLElement")}}より属性を継承しています。_
 
-<dl>
- <dt>{{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}</dt>
- <dd>は{domxref("DOMString")}}であり，回り込みオブジェクトの周囲の文章を回り込ませるよう指示します。</dd>
-</dl>
+- {{domxref("HTMLBRElement.clear")}} {{deprecated_inline}}
+  - : は{domxref("DOMString")}}であり，回り込みオブジェクトの周囲の文章を回り込ませるよう指示します。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>固有のメソッドなし。親である</em><em>{{domxref("HTMLElement")}}よりメソッドを継承しています。</em></p>
+_固有のメソッドなし。親である\_\_{{domxref("HTMLElement")}}よりメソッドを継承しています。_
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlbrelement", "HTMLBRElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName("HTML5 W3C")}}より変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "textlevel-semantics.html#the-br-element", "HTMLBRElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>{{SpecName("DOM2 HTML")}}より変更なし。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                             | 状態                             | 備考                                           |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
+| {{SpecName('HTML WHATWG', "#htmlbrelement", "HTMLBRElement")}}                             | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}}より変更なし。 |
+| {{SpecName('HTML5 W3C', "textlevel-semantics.html#the-br-element", "HTMLBRElement")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName("DOM2 HTML")}}より変更なし。 |
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザ互換性
 
-<div>
+{{Compat("api.HTMLBRElement")}}
 
+## 関連項目
 
-<p>{{Compat("api.HTMLBRElement")}}</p>
-</div>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>本インターフェースを実装しているHTML要素: {{HTMLElement("br")}}</li>
-</ul>
+- 本インターフェースを実装している HTML 要素: {{HTMLElement("br")}}

@@ -3,73 +3,50 @@ title: Response()
 slug: Web/API/Response/Response
 translation_of: Web/API/Response/Response
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><code><strong>Response()</strong></code> コンストラクターは、新しい {{domxref("Response")}} オブジェクトを生成します。</p>
+**`Response()`** コンストラクターは、新しい {{domxref("Response")}} オブジェクトを生成します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <var>myResponse</var> = new Response(<var>body</var>, <var>init</var>);</pre>
+    var myResponse = new Response(body, init);
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><em>body</em> {{optional_inline}}</dt>
- <dd><em>body</em>オブジェクトに<em>は、</em>レスポンスの本体を定義する。なお、これは <code>null</code> でも問題ない:
- <ul>
-  <li>{{domxref("Blob")}}</li>
-  <li>{{domxref("BufferSource")}}</li>
-  <li>{{domxref("FormData")}}</li>
-  <li>{{domxref("ReadableStream")}}</li>
-  <li>{{domxref("URLSearchParams")}}</li>
-  <li>{{domxref("USVString")}}</li>
- </ul>
- </dd>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>レスポンスに適用したオプションで、カスタム設定したい場合の可能なオプションは、次のとおりです。:
- <ul>
-  <li><code>status</code>: レスポンス[応答]のステータスコードです。（例： <code>200</code>）</li>
-  <li><code>statusText</code>: ステータスメッセージは次のようなものです。（例：<code>OK</code>など)</li>
-  <li><code>headers</code>: レスポンス[応答]に追加するヘッダーは、{{domxref("ByteString")}} のキーと値のペアか、もしくは{{domxref("Headers")}} 、または文字どおりの状態で含まれます。（詳細は、<a href="/ja/docs/Web/HTTP/Headers">HTTP headers</a>を参照）</li>
- </ul>
- </dd>
-</dl>
+- _body_ {{optional_inline}}
+  - : *body*オブジェクトに*は、*レスポンスの本体を定義する。なお、これは `null` でも問題ない:\* {{domxref("Blob")}}
+    - {{domxref("BufferSource")}}
+    - {{domxref("FormData")}}
+    - {{domxref("ReadableStream")}}
+    - {{domxref("URLSearchParams")}}
+    - {{domxref("USVString")}}
+- _init_ {{optional_inline}}
+  - : レスポンスに適用したオプションで、カスタム設定したい場合の可能なオプションは、次のとおりです。:\* `status`: レスポンス\[応答]のステータスコードです。（例： `200`）
+    - `statusText`: ステータスメッセージは次のようなものです。（例：`OK`など)
+    - `headers`: レスポンス\[応答]に追加するヘッダーは、{{domxref("ByteString")}} のキーと値のペアか、もしくは{{domxref("Headers")}} 、または文字どおりの状態で含まれます。（詳細は、[HTTP headers](/ja/docs/Web/HTTP/Headers)を参照）
 
-<h2 id="例">例</h2>
+## 例
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">Fetch Response example</a> (see <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new <code>Response</code> object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom <code>status</code> and <code>statusText</code>:</p>
+In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) we create a new `Response` object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom `status` and `statusText`:
 
-<pre class="brush: js">var myBlob = new Blob();
+```js
+var myBlob = new Blob();
 var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob,init);</pre>
+var myResponse = new Response(myBlob,init);
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-response','Response()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Status                   | Comment            |
+| -------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('Fetch','#dom-response','Response()')}} | {{Spec2('Fetch')}} | Initial definition |
 
-<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
+## ブラウザーの対応
 
+{{Compat("api.Response.Response")}}
 
+## 関連情報
 
-<p>{{Compat("api.Response.Response")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/ja/docs/Web/HTTP)

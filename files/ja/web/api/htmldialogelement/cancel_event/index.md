@@ -12,66 +12,51 @@ tags:
   - イベント
 translation_of: Web/API/HTMLDialogElement/cancel_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>cancel</code></strong> イベントは、ユーザーが現在開いているダイアログを閉じたいと操作したときに {{HTMLElement("dialog")}} に発生します。例えば、ユーザーがブラウザーの UI の中で <kbd>Esc</kbd> キーを押したり、「ダイアログを閉じる」ボタンをクリックしたりしたときにブラウザーがこのイベントを発生させることがあります。</p>
+**`cancel`** イベントは、ユーザーが現在開いているダイアログを閉じたいと操作したときに {{HTMLElement("dialog")}} に発生します。例えば、ユーザーがブラウザーの UI の中で <kbd>Esc</kbd> キーを押したり、「ダイアログを閉じる」ボタンをクリックしたりしたときにブラウザーがこのイベントを発生させることがあります。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/oncancel", "oncancel")}}</td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | なし                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------ |
+| キャンセル                   | 可                                                                       |
+| インターフェイス             | {{domxref("Event")}}                                             |
+| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers/oncancel", "oncancel")}} |
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Live_example" name="Live_example">ライブ例</h3>
+### ライブ例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;dialog class="example-dialog"&gt;
-    &lt;button class="close" type="reset"&gt;Close&lt;/button&gt;
-&lt;/dialog&gt;
+```html
+<dialog class="example-dialog">
+    <button class="close" type="reset">Close</button>
+</dialog>
 
-&lt;button class="open-dialog"&gt;Open dialog&lt;/button&gt;
+<button class="open-dialog">Open dialog</button>
 
-&lt;div class="result"&gt;&lt;/div&gt;</pre>
+<div class="result"></div>
+```
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">button, div {
+```css hidden
+button, div {
     margin: .5rem;
 }
-</pre>
-</div>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const result = document.querySelector('.result');
+```js
+const result = document.querySelector('.result');
 
 const dialog = document.querySelector('.example-dialog');
 
-dialog.addEventListener('cancel', (event) =&gt; {
+dialog.addEventListener('cancel', (event) => {
   result.textContent = 'dialog was canceled';
 });
 
 const openDialog = document.querySelector('.open-dialog');
-openDialog.addEventListener('click', () =&gt; {
+openDialog.addEventListener('click', () => {
   if (typeof dialog.showModal === 'function') {
       dialog.showModal();
       result.textContent = '';
@@ -81,40 +66,27 @@ openDialog.addEventListener('click', () =&gt; {
 });
 
 const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', () =&gt; {
+closeButton.addEventListener('click', () => {
     dialog.close();
 });
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '100px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '100px') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'indices.html#event-cancel', 'cancel') }}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       | 状態                             |
+| -------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{ SpecName('HTML WHATWG', 'indices.html#event-cancel', 'cancel') }} | {{Spec2('HTML WHATWG')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLDialogElement.cancel_event")}}</p>
+{{Compat("api.HTMLDialogElement.cancel_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("GlobalEventHandlers.oncancel")}}</li>
- <li>HTML {{HTMLElement("dialog")}} element</li>
- <li>{{domxref("HTMLDialogElement/close_event", "close")}}</li>
-</ul>
+- {{domxref("GlobalEventHandlers.oncancel")}}
+- HTML {{HTMLElement("dialog")}} element
+- {{domxref("HTMLDialogElement/close_event", "close")}}

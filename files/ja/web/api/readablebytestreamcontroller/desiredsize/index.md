@@ -11,39 +11,28 @@ tags:
   - desiredSize
 translation_of: Web/API/ReadableByteStreamController/desiredSize
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("ReadableByteStreamController")}} インターフェイスの <strong><code>desiredSize</code></strong> 読み取り専用プロパティは、ストリームの内部キューを満たすために必要な希望サイズを返します。</span></p>
+{{domxref("ReadableByteStreamController")}} インターフェイスの **`desiredSize`** 読み取り専用プロパティは、ストリームの内部キューを満たすために必要な希望サイズを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var><code>var <em>desiredSize</em> = </code>readableByteStreamController</var>.desiredSize;</pre>
+    var desiredSize = readableByteStreamController.desiredSize;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>整数。 キューがいっぱいになった場合、これは負になる可能性があることに注意してください。</p>
+整数。 キューがいっぱいになった場合、これは負になる可能性があることに注意してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>未定。</p>
+未定。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#rbs-controller-desired-size","desiredSize")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | 状態                         | コメント |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName("Streams","#rbs-controller-desired-size","desiredSize")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ReadableByteStreamController.desiredSize")}}</p>
+{{Compat("api.ReadableByteStreamController.desiredSize")}}

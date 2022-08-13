@@ -12,137 +12,142 @@ tags:
   - controllers
 translation_of: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 ---
-<div>{{APIRef("WebVR API")}}</div>
+{{APIRef("WebVR API")}}
 
-<p class="summary">多くのWebVRハードウェアは、ヘッドセットとコントローラーがセットになっています。WebVRアプリにおいては、ヘッドセットとコントローラーは<a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a>を通じて接続されます。中でも、<a href="/ja/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Gamepad Extensions API</a>は、コントローラーの状態(<a href="/ja/docs/Web/API/GamepadPose">controller pose</a>)、触覚アクチュエータ(<a href="/ja/docs/Web/API/GamepadHapticActuator">haptic actuators</a>)などの情報を取得します。この記事では、その基礎となる部分を解説いたします。</p>
+多くの WebVR ハードウェアは、ヘッドセットとコントローラーがセットになっています。WebVR アプリにおいては、ヘッドセットとコントローラーは[Gamepad API](/ja/docs/Web/API/Gamepad_API)を通じて接続されます。中でも、[Gamepad Extensions API](/ja/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions)は、コントローラーの状態([controller pose](/ja/docs/Web/API/GamepadPose))、触覚アクチュエータ([haptic actuators](/ja/docs/Web/API/GamepadHapticActuator))などの情報を取得します。この記事では、その基礎となる部分を解説いたします。
 
-<h2 id="The_WebVR_API">The WebVR API</h2>
+## The WebVR API
 
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> は初期段階ではあるが、開発者がウェブベースのバーチャルリアリティー経験を生み出すことのできるとても興味深いウェブの新しい機能です。コンピュータとつながっているVRヘッドセット（VRディスプレイ）へのアクセスを与えることで，ディスプレイをスタートしたり、ストップする操作ができます．動きのデータ（例：方向や位置）へアクセスして得られたデータは，各アニメーションループのフレームごとにディスプレイをアップデートするためなどに使用されます。</p>
+[WebVR API](/ja/docs/Web/API/WebVR_API) は初期段階ではあるが、開発者がウェブベースのバーチャルリアリティー経験を生み出すことのできるとても興味深いウェブの新しい機能です。コンピュータとつながっている VR ヘッドセット（VR ディスプレイ）へのアクセスを与えることで，ディスプレイをスタートしたり、ストップする操作ができます．動きのデータ（例：方向や位置）へアクセスして得られたデータは，各アニメーションループのフレームごとにディスプレイをアップデートするためなどに使用されます。
 
-<p>この記事を読む前提として、Web VR API の基礎についてすでに知っていることを想定しています。 — もしまだ<a href="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a>にを読んでいない場合には、まずはそちらを読んでみましょう．その記事の中では，ブラウザ側がハードウェアの設定をサポートしたり，設定を要求したりすることについて詳しく説明しています。</p>
+この記事を読む前提として、Web VR API の基礎についてすでに知っていることを想定しています。 — もしまだ[Using the WebVR API](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)にを読んでいない場合には、まずはそちらを読んでみましょう．その記事の中では，ブラウザ側がハードウェアの設定をサポートしたり，設定を要求したりすることについて詳しく説明しています。
 
-<h2 id="The_Gamepad_API">The Gamepad API</h2>
+## The Gamepad API
 
-<p><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a> はよくサポートされたAPIであり， これを使用することでPCにつながっているゲームパッドやコントローラーに開発者がアクセスすることができるようになります。また、ウェブアプリケーションをゲームパッドやコントローラーを通じて操作することもできるようになります。基本としてGamepad APIは、ゲームパッドオブジェクトとしてつながっているコントローラーに対してアクセスの許可を与えます。そしてどのボタンが押されているか、軸がどの方向に向いているかなどの情報を取得するよう要求します。</p>
+[Gamepad API](/ja/docs/Web/API/Gamepad_API) はよくサポートされた API であり， これを使用することで PC につながっているゲームパッドやコントローラーに開発者がアクセスすることができるようになります。また、ウェブアプリケーションをゲームパッドやコントローラーを通じて操作することもできるようになります。基本として Gamepad API は、ゲームパッドオブジェクトとしてつながっているコントローラーに対してアクセスの許可を与えます。そしてどのボタンが押されているか、軸がどの方向に向いているかなどの情報を取得するよう要求します。
 
-<p>Gamepad APIの基本的な使い方については、<a href="/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a>や<a href="/ja/docs/Games/Techniques/Controls_Gamepad_API">Implementing controls using the Gamepad API</a>の中で詳しく知ることができます。</p>
+Gamepad API の基本的な使い方については、[Using the Gamepad API](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)や[Implementing controls using the Gamepad API](/ja/docs/Games/Techniques/Controls_Gamepad_API)の中で詳しく知ることができます。
 
-<p>しかしながら，この記事では主に、位置、方向、触覚アクチュエーター（バイブレーション）などの高度なコントローラー情報へのアクセスのような、Gamepad Extensions APIで与えられたいくつかの新しい特徴に注目します。このAPIはとても新しく，Firefox 55+ BetaやFirefox Nightly のブラウザでのみデフォルトでWebVR APIがサポートされています。</p>
+しかしながら，この記事では主に、位置、方向、触覚アクチュエーター（バイブレーション）などの高度なコントローラー情報へのアクセスのような、Gamepad Extensions API で与えられたいくつかの新しい特徴に注目します。この API はとても新しく，Firefox 55+ Beta や Firefox Nightly のブラウザでのみデフォルトで WebVR API がサポートされています。
 
-<h2 id="コントローラーの種類">コントローラーの種類</h2>
+## コントローラーの種類
 
-<p>VRハードウェアに付随するコントローラーには、２つの種類があります。</p>
+VR ハードウェアに付随するコントローラーには、２つの種類があります。
 
-<ul>
- <li>６軸に対して自由度を持つコントローラーは位置と方向のデータを取得することができる。具体的には、コントローラーがVRシーンや動きや回転のある物体を操作することができる。例えば、HTC VIVEのコントローラーがそれにあたる。</li>
- <li>３軸に対して自由度を持つコントローラーは、位置データは取得できないが方向のデータを取得することができる．例えば Google  Daydreamのコントローラーである。具体的には、3D空間で異なる物体をレーザーポインターのように指し示すことはできるが、3D空間を動き回ることはできない。</li>
-</ul>
+- ６軸に対して自由度を持つコントローラーは位置と方向のデータを取得することができる。具体的には、コントローラーが VR シーンや動きや回転のある物体を操作することができる。例えば、HTC VIVE のコントローラーがそれにあたる。
+- ３軸に対して自由度を持つコントローラーは、位置データは取得できないが方向のデータを取得することができる．例えば Google Daydream のコントローラーである。具体的には、3D 空間で異なる物体をレーザーポインターのように指し示すことはできるが、3D 空間を動き回ることはできない。
 
-<h2 id="コントローラーへのアクセス方法">コントローラーへのアクセス方法</h2>
+## コントローラーへのアクセス方法
 
-<p>ここではいくつかのコードを紹介します。まず、Gamepad APIを使用してVRコントローラーへの基本的なアクセス方法を見ていきましょう。いくつかのおかしなニュアンスを心に留めておきましょう、それは後から調べる価値があるものです。</p>
+ここではいくつかのコードを紹介します。まず、Gamepad API を使用して VR コントローラーへの基本的なアクセス方法を見ていきましょう。いくつかのおかしなニュアンスを心に留めておきましょう、それは後から調べる価値があるものです。
 
-<p>シンプルな例を紹介します。-<a href="https://github.com/mdn/webvr-tests/blob/master/vr-controller-basic-info/index.html">vr-controller-basic-info</a>　のソースコード(<a href="https://mdn.github.io/webvr-tests/vr-controller-basic-info/">see it running live here also</a>)を御覧ください。この例はVRディスプレイやコンピューターと接続したゲームコントローラーへ情報を出力するシンプルなものです。</p>
+シンプルな例を紹介します。-[vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/master/vr-controller-basic-info/index.html)　のソースコード([see it running live here also](https://mdn.github.io/webvr-tests/vr-controller-basic-info/))を御覧ください。この例は VR ディスプレイやコンピューターと接続したゲームコントローラーへ情報を出力するシンプルなものです。
 
-<h3 id="ディスプレイの情報を取得">ディスプレイの情報を取得</h3>
+### ディスプレイの情報を取得
 
-<p>最初のコードです。</p>
+最初のコードです。
 
-<pre class="brush: js notranslate">var initialRun = true;
+```js
+var initialRun = true;
 
-if(navigator.getVRDisplays &amp;&amp; navigator.getGamepads) {
+if(navigator.getVRDisplays && navigator.getGamepads) {
   info.textContent = 'WebVR API and Gamepad API supported.'
   reportDisplays();
 } else {
   info.textContent = 'WebVR API and/or Gamepad API not supported by this browser.'
-}</pre>
+}
+```
 
-<p>ここでは、<code>initialRun</code>　というトラッキングの変数を使います。これは、「このページを初めてロードした」ことを示します。この点については、あとで詳しく述べます。次に、{{domxref("Navigator.getVRDisplays()")}} と {{domxref("Navigator.getGamepads()")}}メソッドがあるかないかをチェックして、WebVR と Gamepad APIs がサポートされているかどうかを検知します。もし、サポートされていれば、検知するプロセスをOFFにするために、カスタム機能である <code>reportDisplays()</code>    を実行します。  <code>reportDisplays()</code>   は、以下のような構成になっています。</p>
+ここでは、`initialRun`　というトラッキングの変数を使います。これは、「このページを初めてロードした」ことを示します。この点については、あとで詳しく述べます。次に、{{domxref("Navigator.getVRDisplays()")}} と {{domxref("Navigator.getGamepads()")}}メソッドがあるかないかをチェックして、WebVR と Gamepad APIs がサポートされているかどうかを検知します。もし、サポートされていれば、検知するプロセスを OFF にするために、カスタム機能である `reportDisplays()` を実行します。 `reportDisplays()` は、以下のような構成になっています。
 
-<pre class="brush: js notranslate">function reportDisplays() {
+```js
+function reportDisplays() {
   navigator.getVRDisplays().then(function(displays) {
       console.log(displays.length + ' displays');
-    for(var i = 0; i &lt; displays.length; i++) {
+    for(var i = 0; i < displays.length; i++) {
       var cap = displays[i].capabilities;
       // cap is a VRDisplayCapabilities object
       var listItem = document.createElement('li');
-      listItem.innerHTML = '&lt;strong&gt;Display ' + (i+1) + '&lt;/strong&gt;'
-                   + '&lt;br&gt;VR Display ID: ' + displays[i].displayId
-                   + '&lt;br&gt;VR Display Name: ' + displays[i].displayName
-                   + '&lt;br&gt;Display can present content: ' + cap.canPresent
-                   + '&lt;br&gt;Display is separate from the computer\'s main display: ' + cap.hasExternalDisplay
-                   + '&lt;br&gt;Display can return position info: ' + cap.hasPosition
-                   + '&lt;br&gt;Display can return orientation info: ' + cap.hasOrientation
-                   + '&lt;br&gt;Display max layers: ' + cap.maxLayers;
+      listItem.innerHTML = '<strong>Display ' + (i+1) + '</strong>'
+                   + '<br>VR Display ID: ' + displays[i].displayId
+                   + '<br>VR Display Name: ' + displays[i].displayName
+                   + '<br>Display can present content: ' + cap.canPresent
+                   + '<br>Display is separate from the computer\'s main display: ' + cap.hasExternalDisplay
+                   + '<br>Display can return position info: ' + cap.hasPosition
+                   + '<br>Display can return orientation info: ' + cap.hasOrientation
+                   + '<br>Display max layers: ' + cap.maxLayers;
       list.appendChild(listItem);
     }
 
     setTimeout(reportGamepads, 1000);
     // For VR, controllers will only be active after their corresponding headset is active
   });
-}</pre>
+}
+```
 
-<p>This function first uses the promise-based {{domxref("Navigator.getVRDisplays()")}} method, which resolves with an array containing {{domxref("VRDisplay")}} objects representing the connected displays. Next, it prints out each display's {{domxref("VRDisplay.displayId")}} and {{domxref("VRDisplay.displayName")}} values, and a number of useful values contained in the display's associated {{domxref("VRCapabilities")}} object. The most useful of these are {{domxref("VRCapabilities.hasOrientation","hasOrientation")}} and {{domxref("VRCapabilities.hasPosition","hasPosition")}}, which allow you to detect whether the device can return orientation and position data and set up your app accordingly.</p>
+This function first uses the promise-based {{domxref("Navigator.getVRDisplays()")}} method, which resolves with an array containing {{domxref("VRDisplay")}} objects representing the connected displays. Next, it prints out each display's {{domxref("VRDisplay.displayId")}} and {{domxref("VRDisplay.displayName")}} values, and a number of useful values contained in the display's associated {{domxref("VRCapabilities")}} object. The most useful of these are {{domxref("VRCapabilities.hasOrientation","hasOrientation")}} and {{domxref("VRCapabilities.hasPosition","hasPosition")}}, which allow you to detect whether the device can return orientation and position data and set up your app accordingly.
 
-<p>The last line contained in this function is a {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}} call, which runs the <code>reportGamepads()</code> function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after <code>getVRDisplays()</code> has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the <code>getGamepads()</code> method is synchronous, and just returns the <code>Gamepad</code> objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).</p>
+The last line contained in this function is a {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}} call, which runs the `reportGamepads()` function after a 1 second delay. Why do we need to do this? First of all, VR controllers will only be ready after their associated VR headset is active, so we need to invoke this after `getVRDisplays()` has been called and returned the display information. Second, the Gamepad API is much older than the WebVR API, and not promise-based. As you'll see later, the `getGamepads()` method is synchronous, and just returns the `Gamepad` objects immediately — it doesn't wait for the controller to be ready to report information. Unless you wait for a little while, returned information may not be accurate (at least, this is what we found in our tests).
 
-<h3 id="ゲームコントローラーの情報を取得">ゲームコントローラーの情報を取得</h3>
+### ゲームコントローラーの情報を取得
 
-<p><code>reportGamepads()</code> 関数は、このような構成になっています。</p>
+`reportGamepads()` 関数は、このような構成になっています。
 
-<pre class="brush: js notranslate">function reportGamepads() {
+```js
+function reportGamepads() {
     var gamepads = navigator.getGamepads();
     console.log(gamepads.length + ' controllers');
-    for(var i = 0; i &lt; gamepads.length; ++i) {
+    for(var i = 0; i < gamepads.length; ++i) {
         var gp = gamepads[i];
         var listItem = document.createElement('li');
         listItem.classList = 'gamepad';
-        listItem.innerHTML = '&lt;strong&gt;Gamepad ' + gp.index + '&lt;/strong&gt; (' + gp.id + ')'
-                 + '&lt;br&gt;Associated with VR Display ID: ' + gp.displayId
-                 + '&lt;br&gt;Gamepad associated with which hand: ' + gp.hand
-                 + '&lt;br&gt;Available haptic actuators: ' + gp.hapticActuators.length
-                 + '&lt;br&gt;Gamepad can return position info: ' + gp.pose.hasPosition
-                 + '&lt;br&gt;Gamepad can return orientation info: ' + gp.pose.hasOrientation;
+        listItem.innerHTML = '<strong>Gamepad ' + gp.index + '</strong> (' + gp.id + ')'
+                 + '<br>Associated with VR Display ID: ' + gp.displayId
+                 + '<br>Gamepad associated with which hand: ' + gp.hand
+                 + '<br>Available haptic actuators: ' + gp.hapticActuators.length
+                 + '<br>Gamepad can return position info: ' + gp.pose.hasPosition
+                 + '<br>Gamepad can return orientation info: ' + gp.pose.hasOrientation;
         list.appendChild(listItem);
     }
     initialRun = false;
-}</pre>
+}
+```
 
-<p>This works in a similar manner to <code>reportDisplays()</code> — we get an array of {{domxref("Gamepad")}} objects using the non-promise-based <code>getGamepads()</code> method, then cycle through each one and print out information on each:</p>
+This works in a similar manner to `reportDisplays()` — we get an array of {{domxref("Gamepad")}} objects using the non-promise-based `getGamepads()` method, then cycle through each one and print out information on each:
 
-<ul>
- <li>The {{domxref("Gamepad.displayId")}} property is the same as the <code>displayId</code> of the headet the controller is associated with, and therefore useful for tying controller and headset information together.</li>
- <li>The {{domxref("Gamepad.index")}} property is unique numerical index that identifies each connected controller.</li>
- <li>{{domxref("Gamepad.hand")}} returns which hand the controller is expected to be held in.</li>
- <li>{{domxref("Gamepad.hapticActuators")}} returns an array of the haptic actuators available in the controller. Here we are returning its length so we can see how many each has available.</li>
- <li>Finally, we return {{domxref("GamepadPose.hasPosition")}} and {{domxref("GamepadPose.hasOrientation")}} to show whether the controller can return position and orientation data. This works just the same as for the displays, except that in the case of gamepads these values are available on the pose object, not the capabilities object.</li>
-</ul>
+- The {{domxref("Gamepad.displayId")}} property is the same as the `displayId` of the headet the controller is associated with, and therefore useful for tying controller and headset information together.
+- The {{domxref("Gamepad.index")}} property is unique numerical index that identifies each connected controller.
+- {{domxref("Gamepad.hand")}} returns which hand the controller is expected to be held in.
+- {{domxref("Gamepad.hapticActuators")}} returns an array of the haptic actuators available in the controller. Here we are returning its length so we can see how many each has available.
+- Finally, we return {{domxref("GamepadPose.hasPosition")}} and {{domxref("GamepadPose.hasOrientation")}} to show whether the controller can return position and orientation data. This works just the same as for the displays, except that in the case of gamepads these values are available on the pose object, not the capabilities object.
 
-<p>Note that we also gave each list item containing controller information a class name of <code>gamepad</code>. We'll explain what this is for later.</p>
+Note that we also gave each list item containing controller information a class name of `gamepad`. We'll explain what this is for later.
 
-<p>The last thing to do here is set the <code>initialRun</code> variable to <code>false</code>, as the initial run is now over.</p>
+The last thing to do here is set the `initialRun` variable to `false`, as the initial run is now over.
 
-<h3 id="コントローラーのイベント">コントローラーのイベント</h3>
+### コントローラーのイベント
 
-<p>To finish off this section, we'll look at the gamepad-associated events. There are two we need concern ourselves with — {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} — and it is fairly obvious what they do.</p>
+To finish off this section, we'll look at the gamepad-associated events. There are two we need concern ourselves with — {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} — and it is fairly obvious what they do.
 
-<p>At the end of our example we first include the <code>removeGamepads()</code> function:</p>
+At the end of our example we first include the `removeGamepads()` function:
 
-<pre class="brush: js notranslate">function removeGamepads() {
+```js
+function removeGamepads() {
     var gpLi = document.querySelectorAll('.gamepad');
-    for(var i = 0; i &lt; gpLi.length; i++) {
+    for(var i = 0; i < gpLi.length; i++) {
     list.removeChild(gpLi[i]);
     }
 
     reportGamepads();
-}</pre>
+}
+```
 
-<p>This function simply grabs references to all list items with a class name of <code>gamepad</code>, and removes them from the DOM. Then it re-runs <code>reportGamepads()</code> to populate the list with the updated list of connected controllers.</p>
+This function simply grabs references to all list items with a class name of `gamepad`, and removes them from the DOM. Then it re-runs `reportGamepads()` to populate the list with the updated list of connected controllers.
 
-<p><code>removeGamepads()</code> will be run each time a gamepad is connected or disconnected, via the following event handlers:</p>
+`removeGamepads()` will be run each time a gamepad is connected or disconnected, via the following event handlers:
 
-<pre class="brush: js notranslate">window.addEventListener('gamepadconnected', function(e) {
+```js
+window.addEventListener('gamepadconnected', function(e) {
   info.textContent = 'Gamepad ' + e.gamepad.index + ' connected.';
   if(!initialRun) {
       setTimeout(removeGamepads, 1000);
@@ -152,27 +157,29 @@ if(navigator.getVRDisplays &amp;&amp; navigator.getGamepads) {
 window.addEventListener('gamepaddisconnected', function(e) {
   info.textContent = 'Gamepad ' + e.gamepad.index + ' disconnected.';
   setTimeout(removeGamepads, 1000);
-});</pre>
+});
+```
 
-<p>We have <code>setTimeout()</code> calls in place here — like we did with the initialization code at the top of the script — to make sure that the gamepads are ready to report their information when <code>reportGamepads()</code> is called in each case.</p>
+We have `setTimeout()` calls in place here — like we did with the initialization code at the top of the script — to make sure that the gamepads are ready to report their information when `reportGamepads()` is called in each case.
 
-<p>But there's one more thing to note — you'll see that inside the <code>gamepadconnected</code> handler, the timeout is only run if <code>initialRun</code> is <code>false</code>. This is because if your gamepads are connected when the document first loads, <code>gamepadconnected</code> is fired once for each gamepad, therefore <code>removeGamepads()</code>/<code>reportGamepads()</code> will be run several times. This could lead to inaccurate results, therefore we only want to run <code>removeGamepads()</code> inside the <code>gamepadconnected</code> handler after the initial run, not during it. This is what <code>initialRun</code> is for.</p>
+But there's one more thing to note — you'll see that inside the `gamepadconnected` handler, the timeout is only run if `initialRun` is `false`. This is because if your gamepads are connected when the document first loads, `gamepadconnected` is fired once for each gamepad, therefore `removeGamepads()`/`reportGamepads()` will be run several times. This could lead to inaccurate results, therefore we only want to run `removeGamepads()` inside the `gamepadconnected` handler after the initial run, not during it. This is what `initialRun` is for.
 
-<h2 id="実際のデモの紹介">実際のデモの紹介</h2>
+## 実際のデモの紹介
 
-<p>実際のWebVRのデモで使用されたGamepad APIを見てみましょう。このデモは<a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-controller-example">raw-webgl-controller-example</a> (<a href="https://mdn.github.io/webvr-tests/raw-webgl-controller-example/">see it live here also</a>).で見ることができます。</p>
+実際の WebVR のデモで使用された Gamepad API を見てみましょう。このデモは[raw-webgl-controller-example](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-controller-example) ([see it live here also](https://mdn.github.io/webvr-tests/raw-webgl-controller-example/)).で見ることができます。
 
-<p>私達の<a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">raw-webgl-example</a> (詳しくは <a href="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a> を御覧ください。)と同じ方法で、このデモにおいても回転する3D立方体をレンダリングしています。また、これをVRディスプレイへ投影することもできます。</p>
+私達の[raw-webgl-example](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) (詳しくは [Using the WebVR API](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API) を御覧ください。)と同じ方法で、このデモにおいても回転する 3D 立方体をレンダリングしています。また、これを VR ディスプレイへ投影することもできます。
 
-<p>唯一の違いとしては、VRディスプレイへ投影モードでは、VRコントローラーを使って立方体を動かすことができます。（オリジナルのデモ動画では、VRヘッドセットを動かすことで、立方体を動かすことができる。）</p>
+唯一の違いとしては、VR ディスプレイへ投影モードでは、VR コントローラーを使って立方体を動かすことができます。（オリジナルのデモ動画では、VR ヘッドセットを動かすことで、立方体を動かすことができる。）
 
-<p>以下に、このバージョンでのコードの違いをより詳しく紹介します。<a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-controller-example/webgl-demo.js">webgl-demo.js</a>.を御覧ください。</p>
+以下に、このバージョンでのコードの違いをより詳しく紹介します。[webgl-demo.js](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-controller-example/webgl-demo.js).を御覧ください。
 
-<h3 id="コントローラーデータへのアクセス">コントローラーデータへのアクセス</h3>
+### コントローラーデータへのアクセス
 
-<p><code>drawVRScene()</code> 関数についてのコードの一部です。</p>
+`drawVRScene()` 関数についてのコードの一部です。
 
-<pre class="brush: js notranslate">var gamepads = navigator.getGamepads();
+```js
+var gamepads = navigator.getGamepads();
 var gp = gamepads[0];
 
 if(gp) {
@@ -182,15 +189,17 @@ if(gp) {
   if(poseStatsDisplayed) {
     displayPoseStats(gpPose);
   }
-}</pre>
+}
+```
 
-<p> {{domxref("Navigator.getGamepads")}}を利用して、コントローラーが接続されました。また <code>gp</code> 変数の中に最初に認識したコントローラーを保存します。 デモでは、コントローラーを一つしか使用しないので、その他のコントローラーは無視します。</p>
+{{domxref("Navigator.getGamepads")}}を利用して、コントローラーが接続されました。また `gp` 変数の中に最初に認識したコントローラーを保存します。 デモでは、コントローラーを一つしか使用しないので、その他のコントローラーは無視します。
 
-<p>The next thing we do is to get the {{domxref("GamepadPose")}} object for the controller stored in gpPose (by querying {{domxref("Gamepad.pose")}}), and also store the current gamepad position and orientation for this frame in variables so they are easuy to access later. We also display the post stats for this frame in the DOM using the <code>displayPoseStats()</code> function. All of this is only done if <code>gp</code> actually has a value (if a gamepad is connected), which stops the demo erroring if we don't have our gamepad connected.</p>
+The next thing we do is to get the {{domxref("GamepadPose")}} object for the controller stored in gpPose (by querying {{domxref("Gamepad.pose")}}), and also store the current gamepad position and orientation for this frame in variables so they are easuy to access later. We also display the post stats for this frame in the DOM using the `displayPoseStats()` function. All of this is only done if `gp` actually has a value (if a gamepad is connected), which stops the demo erroring if we don't have our gamepad connected.
 
-<p>Slightly later in the code, you can find this block:</p>
+Slightly later in the code, you can find this block:
 
-<pre class="brush: js notranslate">if(gp &amp;&amp; gpPose.hasPosition) {
+```js
+if(gp && gpPose.hasPosition) {
   mvTranslate([
                 0.0 + (curPos[0] * 15) - (curOrient[1] * 15),
                 0.0 + (curPos[1] * 15) + (curOrient[0] * 15),
@@ -208,17 +217,19 @@ if(gp) {
                 0.0,
                 -15.0
              ]);
-}</pre>
+}
+```
 
-<p>Here we alter the position of the cube on the screen according to the {{domxref("GamepadPose.position","position")}} and {{domxref("GamepadPose.orientation","orientation")}} data received from the connected controller. These values (stored in <code>curPos</code> and <code>curOrient</code>) are {{domxref("Float32Array")}}s containing the X, Y, and Z values (here we are just using [0] which is X, and [1] which is Y).</p>
+Here we alter the position of the cube on the screen according to the {{domxref("GamepadPose.position","position")}} and {{domxref("GamepadPose.orientation","orientation")}} data received from the connected controller. These values (stored in `curPos` and `curOrient`) are {{domxref("Float32Array")}}s containing the X, Y, and Z values (here we are just using \[0] which is X, and \[1] which is Y).
 
-<p>If the <code>gp</code> variable has a <code>Gamepad</code> object inside it and it can return position values (<code>gpPose.hasPosition</code>), indicating a 6DoF controller, we modify the cube position using position and orientation values. If only the former is true, indicating a 3DoF controller, we modify the cube position using the orientation values only. If there is no gamepad connected, we don't modify the cube position at all.</p>
+If the `gp` variable has a `Gamepad` object inside it and it can return position values (`gpPose.hasPosition`), indicating a 6DoF controller, we modify the cube position using position and orientation values. If only the former is true, indicating a 3DoF controller, we modify the cube position using the orientation values only. If there is no gamepad connected, we don't modify the cube position at all.
 
-<h3 id="コントローラーの姿勢データの表示">コントローラーの姿勢データの表示</h3>
+### コントローラーの姿勢データの表示
 
-<p><code>displayPoseStats()</code> 関数では、{{domxref("GamepadPose")}} オブジェクトのうちの表示したいすべての情報を取得することができます。そして、そのようなデータを表示するためのデモの中に存在するUI パネルに表示します。</p>
+`displayPoseStats()` 関数では、{{domxref("GamepadPose")}} オブジェクトのうちの表示したいすべての情報を取得することができます。そして、そのようなデータを表示するためのデモの中に存在する UI パネルに表示します。
 
-<pre class="brush: js notranslate">function displayPoseStats(pose) {
+```js
+function displayPoseStats(pose) {
   var pos = pose.position;
   var orient = pose.orientation;
   var linVel = pose.linearVelocity;
@@ -252,17 +263,16 @@ if(gp) {
   } else {
     angAccStats.textContent = 'Angular acceleration not reported';
   }
-}</pre>
+}
+```
 
-<h2 id="まとめ">まとめ</h2>
+## まとめ
 
-<p>この記事は，WebVRアプリの中でVRコントローラーを使うためには，どのようにGamepad Extensionsを用いればよいのかというとても基本的な概念を解説したものです．実際のWebVRアプリの中では，VRコントローラーのボタンに紐付けられたコントローラーにより，おそらくより複雑なコントロールシステムをもたせることになるでしょう． そして，ディスプレイとコントローラーの両方の情報（位置や方向）を同期的にディスプレイへフィードバックするという複雑な処理を行うことになります．しかし，この記事でやりたかったのは，Gamepad Extensionsの中の純粋なGamepad Extensions部分を切り分けるということです．</p>
+この記事は，WebVR アプリの中で VR コントローラーを使うためには，どのように Gamepad Extensions を用いればよいのかというとても基本的な概念を解説したものです．実際の WebVR アプリの中では，VR コントローラーのボタンに紐付けられたコントローラーにより，おそらくより複雑なコントロールシステムをもたせることになるでしょう． そして，ディスプレイとコントローラーの両方の情報（位置や方向）を同期的にディスプレイへフィードバックするという複雑な処理を行うことになります．しかし，この記事でやりたかったのは，Gamepad Extensions の中の純粋な Gamepad Extensions 部分を切り分けるということです．
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a></li>
- <li><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a></li>
- <li><a href="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a></li>
- <li><a href="/ja/docs/Games/Techniques/Controls_Gamepad_API">Implementing controls using the Gamepad API</a></li>
-</ul>
+- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [Gamepad API](/ja/docs/Web/API/Gamepad_API)
+- [Using the WebVR API](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)
+- [Implementing controls using the Gamepad API](/ja/docs/Games/Techniques/Controls_Gamepad_API)

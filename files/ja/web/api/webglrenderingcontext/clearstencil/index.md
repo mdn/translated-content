@@ -3,68 +3,51 @@ title: WebGLRenderingContext.clearStencil()
 slug: Web/API/WebGLRenderingContext/clearStencil
 translation_of: Web/API/WebGLRenderingContext/clearStencil
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.clearStencil()</code></strong> メソッドは、ステンシルバッファーを消去する値を指定します。</p>
+[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.clearStencil()`** メソッドは、ステンシルバッファーを消去する値を指定します。
 
-<p>この指定は、{{domxref("WebGLRenderingContext.clear", "clear()")}} メソッドを呼ぶときに使用されるステンシルの値です。</p>
+この指定は、{{domxref("WebGLRenderingContext.clear", "clear()")}} メソッドを呼ぶときに使用されるステンシルの値です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <var>gl</var>.clearStencil(<var>s</var>);
-</pre>
+    void gl.clearStencil(s);
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>s</code></dt>
- <dd>インデックスを指定する {{domxref("GLint")}} で、ステンシルバッファーの消去に使用される値です。既定値は 0 です。</dd>
-</dl>
+- `s`
+  - : インデックスを指定する {{domxref("GLint")}} で、ステンシルバッファーの消去に使用される値です。既定値は 0 です。
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>ありません。</p>
+ありません。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">gl.clearStencil(1);
-</pre>
+```js
+gl.clearStencil(1);
+```
 
-<p>現在のステンシルを消去する値を取得するには、<code>STENCIL_CLEAR_VALUE</code> 定数で問い合わせます。</p>
+現在のステンシルを消去する値を取得するには、`STENCIL_CLEAR_VALUE` 定数で問い合わせます。
 
-<pre class="brush: js">gl.getParameter(gl.STENCIL_CLEAR_VALUE);
-// 1</pre>
+```js
+gl.getParameter(gl.STENCIL_CLEAR_VALUE);
+// 1
+```
 
-<h2 id="仕様策定状況">仕様策定状況</h2>
+## 仕様策定状況
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様策定状況</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.3", "clearStencil")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>初回定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glClearStencil.xml", "glClearStencil")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>OpenGL API のマニュアルページ。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様策定状況                                                                                 | 策定状況                             | コメント                        |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
+| {{SpecName('WebGL', "#5.14.3", "clearStencil")}}                             | {{Spec2('WebGL')}}             | 初回定義。                      |
+| {{SpecName('OpenGL ES 2.0', "glClearStencil.xml", "glClearStencil")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
 
-<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.WebGLRenderingContext.clearStencil")}}</p>
+{{Compat("api.WebGLRenderingContext.clearStencil")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.clear()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearColor()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearDepth()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.clear()")}}
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+- {{domxref("WebGLRenderingContext.clearDepth()")}}

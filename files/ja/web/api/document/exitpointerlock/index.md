@@ -9,44 +9,28 @@ tags:
   - mouse lock
 translation_of: Web/API/Document/exitPointerLock
 ---
-<div>{{APIRef("DOM")}} {{seeCompatTable}}</div>
+{{APIRef("DOM")}} {{seeCompatTable}}
 
-<p><strong><code>exitPointerLock()</code></strong> メソッドは、以前 {{domxref("Element.requestPointerLock")}} でリクエストされたポインターロックを非同期に解放します。</p>
+**`exitPointerLock()`** メソッドは、以前 {{domxref("Element.requestPointerLock")}} でリクエストされたポインターロックを非同期に解放します。
 
-<p>リクエストが成功したか失敗したかを追跡するには、 {{event("pointerlockchange")}} および {{event("pointerlockerror")}} イベントを待ち受けする必要があります。</p>
+リクエストが成功したか失敗したかを追跡するには、 {{event("pointerlockchange")}} および {{event("pointerlockerror")}} イベントを待ち受けする必要があります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">document.exitPointerLock();
-</pre>
+    document.exitPointerLock();
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Lock','#extensions-to-the-document-interface','Document')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td><code>Document</code> インターフェイスを拡張</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                   | 状態                             | 備考                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------- |
+| {{SpecName('Pointer Lock','#extensions-to-the-document-interface','Document')}} | {{Spec2('Pointer Lock')}} | `Document` インターフェイスを拡張 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.exitPointerLock")}}</p>
+{{Compat("api.Document.exitPointerLock")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{ domxref("Document.pointerLockElement") }}</li>
- <li>{{ domxref("Element.requestPointerLock()") }}</li>
- <li><a href="/ja/docs/Web/API/Pointer_Lock_API">ポインターロック</a></li>
-</ul>
+- {{ domxref("Document.pointerLockElement") }}
+- {{ domxref("Element.requestPointerLock()") }}
+- [ポインターロック](/ja/docs/Web/API/Pointer_Lock_API)

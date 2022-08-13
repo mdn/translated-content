@@ -9,55 +9,42 @@ tags:
   - Read-only
 translation_of: Web/API/Navigator/productSub
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p><code><strong>Navigator.productSub</strong></code> プロパティは読み取り専用で、現在のブラウザーのビルド番号を返します。</p>
+**`Navigator.productSub`** プロパティは読み取り専用で、現在のブラウザーのビルド番号を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>prodSub</em> = window.navigator.productSub</pre>
+    prodSub = window.navigator.productSub
 
-<ul>
- <li><code>prodSub</code> は、文字列です。</li>
-</ul>
+- `prodSub` は、文字列です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js">&lt;script&gt;
+```js
+<script>
 function prodsub() {
   var dt = document.getElementById("d").childNodes[0];
   dt.data = window.navigator.productSub;
 }
-&lt;/script&gt;
+</script>
 
-&lt;button onclick="prodsub();"&gt;productSub&lt;/button&gt;
-// 20010725 などを返します。</pre>
+<button onclick="prodsub();">productSub</button>
+// 20010725 などを返します。
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<p>IE では、このプロパティは、 <code>undefined</code> を返します。</p>
+IE では、このプロパティは、 `undefined` を返します。
 
-<p>Google Chrome および Apple Safari では、このプロパティは常に <code>20030107</code> を返します。</p>
+Google Chrome および Apple Safari では、このプロパティは常に `20030107` を返します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-navigator-productsub', 'NavigatorID: productSub')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                           | 状態                             | 備考     |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', '#dom-navigator-productsub', 'NavigatorID: productSub')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Navigator.productSub")}}</p>
+{{Compat("api.Navigator.productSub")}}

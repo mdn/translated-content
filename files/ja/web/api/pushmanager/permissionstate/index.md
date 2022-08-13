@@ -11,57 +11,35 @@ tags:
   - permissionState
 translation_of: Web/API/PushManager/permissionState
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>{{domxref("PushManager")}} インターフェースの  <strong><code>permissionState()</code></strong> メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される  {{jsxref("Promise")}} を返します。許可状態は、<code>'prompt' か</code> <code>'denied'、</code><code>'granted' です。</code></p>
+{{domxref("PushManager")}} インターフェースの **`permissionState()`** メソッドは、プッシュマネージャーの許可状態を示す {{domxref("DOMString")}} で解決される {{jsxref("Promise")}} を返します。許可状態は、`'prompt' か` ` 'denied'、``'granted' です。 `
 
-<div class="note">
-<p><strong>ノート</strong>： Firefox 44 では、<a href="/ja/docs/Web/API/Notifications_API">Notifications</a> と <a href="/ja/docs/Web/API/Push_API">Push</a> の許可は統合されています。notifications が許可された場合、 push も使用できます。</p>
-</div>
+> **Note:** **ノート**： Firefox 44 では、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) の許可は統合されています。notifications が許可された場合、 push も使用できます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">PushManager.permissionState(options).then(function(PushMessagingState) { ... });
-</pre>
+    PushManager.permissionState(options).then(function(PushMessagingState) { ... });
 
-<h3 id="パラメーター">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>options {{optional_inline}}</code></dt>
- <dd>オプションの設定パラメーターを含むオブジェクト。次のプロパティが設定可能：
- <ul>
-  <li><code>userVisibleOnly</code>: 返されたプッシュサブスクリプションの効果がユーザーに表示するメッセージにだけ使われるかを示す boolean 値。</li>
- </ul>
- </dd>
-</dl>
+- `options {{optional_inline}}`
+  - : オプションの設定パラメーターを含むオブジェクト。次のプロパティが設定可能：\* `userVisibleOnly`: 返されたプッシュサブスクリプションの効果がユーザーに表示するメッセージにだけ使われるかを示す boolean 値。
 
-<h3 id="戻り値">戻り値</h3>
+### 戻り値
 
-<p><code>'prompt' か </code><code>'denied'、'granted' を持つ </code>{{domxref("DOMString")}} で解決される {{jsxref("Promise")}} 。</p>
+` 'prompt' か `` 'denied'、'granted' を持つ  `{{domxref("DOMString")}} で解決される {{jsxref("Promise")}} 。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API','#widl-PushManager-permissionState-Promise-PushPermissionState--PushSubscriptionOptions-options','permissionState()')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                                                                                         | 状態                         | コメント   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| {{SpecName('Push API','#widl-PushManager-permissionState-Promise-PushPermissionState--PushSubscriptionOptions-options','permissionState()')}} | {{Spec2('Push API')}} | 初期定義。 |
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザ実装状況
 
-<p>{{Compat("api.PushManager.permissionState")}}</p>
+{{Compat("api.PushManager.permissionState")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
-</ul>
+- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)

@@ -11,25 +11,26 @@ tags:
   - Reference
 translation_of: Web/API/MessageChannel/port1
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>port1</strong></code> は {{domxref("MessageChannel")}} インターフェースの読み取り専用プロパティで、メッセージチャンネルの最初のポートを返します。このポートは、チャンネルの元となるコンテキストに付属します。</p>
+**`port1`** は {{domxref("MessageChannel")}} インターフェースの読み取り専用プロパティで、メッセージチャンネルの最初のポートを返します。このポートは、チャンネルの元となるコンテキストに付属します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">channel.port1;</pre>
+    channel.port1;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>チャンネルの最初のポートを表す {{domxref("MessagePort")}} オブジェクト。これはチャンネルの元となるコンテキストに付属するポートです。</p>
+チャンネルの最初のポートを表す {{domxref("MessagePort")}} オブジェクト。これはチャンネルの元となるコンテキストに付属するポートです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>次のコードブロックでは、 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} コンストラクターを使用して作成された新しいチャンネルが見られます。 {{HTMLElement("iframe")}} が読み込まれると、 {{domxref("MessageChannel.port2")}} を {{HTMLElement("iframe")}} へ、メッセージを通して {{domxref("MessagePort.postMessage")}} を使用して渡します。すると、 <code>handleMessage</code> ハンドラーが <code>&lt;iframe&gt;</code> から返送されたメッセージに ({{domxref("MessagePort.onmessage")}} を使用して) 返答し、これを段落に挿入します。メッセージが到着したとき、 <code>handleMessage</code> メソッドが <code>port1</code> に関連付けられて待ち受けします。</p>
+次のコードブロックでは、 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} コンストラクターを使用して作成された新しいチャンネルが見られます。 {{HTMLElement("iframe")}} が読み込まれると、 {{domxref("MessageChannel.port2")}} を {{HTMLElement("iframe")}} へ、メッセージを通して {{domxref("MessagePort.postMessage")}} を使用して渡します。すると、 `handleMessage` ハンドラーが `<iframe>` から返送されたメッセージに ({{domxref("MessagePort.onmessage")}} を使用して) 返答し、これを段落に挿入します。メッセージが到着したとき、 `handleMessage` メソッドが `port1` に関連付けられて待ち受けします。
 
-<pre class="brush: js highlight[13]">var channel = new MessageChannel();
+```js
+var channel = new MessageChannel();
 var para = document.querySelector('p');
 
 var ifr = document.querySelector('iframe');
@@ -45,35 +46,18 @@ channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#dom-messagechannel-port1', 'port1')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                             | 状態                             | 備考 |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('HTML WHATWG', 'web-messaging.html#dom-messagechannel-port1', 'port1')}} | {{Spec2('HTML WHATWG')}} |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<div>
-<p>{{Compat("api.MessageChannel.port1")}}</p>
-</div>
+{{Compat("api.MessageChannel.port1")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
-</ul>
+- [Using channel messaging](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

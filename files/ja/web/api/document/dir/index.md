@@ -9,41 +9,25 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/dir
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><code><strong>Document.dir</strong></code> プロパティは {{domxref("DOMString")}} で、文書のテキストの書字方向が、左書き (既定) か右書きかを表します。有効な値は <code>'rtl'</code> 右書き (右から左)、または <code>'ltr'</code> 左書き (左から右) です。</p>
+**`Document.dir`** プロパティは {{domxref("DOMString")}} で、文書のテキストの書字方向が、左書き (既定) か右書きかを表します。有効な値は `'rtl'` 右書き (右から左)、または `'ltr'` 左書き (左から右) です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>dirStr</em> = <em>document</em>.dir
-<em>document</em>.dir = <em>dirStr</em>
-</pre>
+    dirStr = document.dir
+    document.dir = dirStr
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-document-dir", "Document.dir")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               | 状態                             | 備考     |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName("HTML WHATWG", "#dom-document-dir", "Document.dir")}} | {{Spec2("HTML WHATWG")}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.dir")}}</p>
+{{Compat("api.Document.dir")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/HTML/Global_attributes/dir"><code>dir</code></a> グローバル属性</li>
-</ul>
+- [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) グローバル属性

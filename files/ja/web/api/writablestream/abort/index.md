@@ -11,70 +11,55 @@ tags:
   - abort
 translation_of: Web/API/WritableStream/abort
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p class="summary"><span class="seoSummary">{{domxref("WritableStream")}} インターフェイスの <strong><code>abort()</code></strong> メソッドはストリームを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに入れられた書き込みが破棄されてすぐにエラー状態に移行することを通知します。</span></p>
+{{domxref("WritableStream")}} インターフェイスの **`abort()`** メソッドはストリームを中止し、プロデューサーがストリームに正常に書き込むことができなくなり、キューに入れられた書き込みが破棄されてすぐにエラー状態に移行することを通知します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>promise</em> = <em>writableStream</em>.abort(<em>reason</em>);</pre>
+    var promise = writableStream.abort(reason);
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>reason</dt>
- <dd>人間が読むことができる中止の理由を提供する {{domxref("DOMString")}}。</dd>
-</dl>
+- reason
+  - : 人間が読むことができる中止の理由を提供する {{domxref("DOMString")}}。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>{{jsxref("Promise")}}。 <code>reason</code> パラメーターで指定された値で満たされます。</p>
+{{jsxref("Promise")}}。 `reason` パラメーターで指定された値で満たされます。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt>TypeError</dt>
- <dd>中止しようとしているストリームは {{domxref("WritableStream")}} ではないか、ロックされています。</dd>
-</dl>
+- TypeError
+  - : 中止しようとしているストリームは {{domxref("WritableStream")}} ではないか、ロックされています。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> writableStream <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">WritableStream</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="function token">write</span><span class="punctuation token">(</span>chunk<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+```js
+const writableStream = new WritableStream({
+  write(chunk) {
     ...
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">close</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">...</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="function token">abort</span><span class="punctuation token">(</span>err<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  },
+  close() {
     ...
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">,</span> queuingStrategy<span class="punctuation token">)</span><span class="punctuation token">;</span>
+  },
+  abort(err) {
+    ...
+  }
+}, queuingStrategy);
 
 ...
 
 // 必要に応じて、後でストリームを中止します
 writableStream.abort();
-</code>
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Streams","#ws-abort","abort()")}}</td>
-   <td>{{Spec2('Streams')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                         | 状態                         | コメント |
+| ------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName("Streams","#ws-abort","abort()")}} | {{Spec2('Streams')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.WritableStream.abort")}}</p>
+{{Compat("api.WritableStream.abort")}}

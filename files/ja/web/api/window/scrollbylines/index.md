@@ -2,51 +2,49 @@
 title: Window.scrollByLines()
 slug: Web/API/Window/scrollByLines
 tags:
-- API
-- HTML DOM
-- Method
-- Non-standard
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - Method
+  - Non-standard
+  - Reference
+  - Window
 translation_of: Web/API/Window/scrollByLines
 ---
-<div>{{ ApiRef() }} {{Non-standard_header}}</div>
+{{ ApiRef() }} {{Non-standard_header}}
 
-<p><code><strong>Window.scrollByLines()</strong></code> メソッドは、指定された行数だけ文書をスクロールさせます。</p>
+**`Window.scrollByLines()`** メソッドは、指定された行数だけ文書をスクロールさせます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">window.scrollByLines(<em>lines</em>)
-</pre>
+```js
+window.scrollByLines(lines)
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<ul>
-  <li><code>lines</code> は文書をスクロールする行数です。これは正または負の整数を指定することができます。</li>
-</ul>
+- `lines` は文書をスクロールする行数です。これは正または負の整数を指定することができます。
 
-<h2 id="Example">例</h2>
+## 例
 
-<pre class="brush:html">&lt;!-- 文書を 5 行だけ上方向にスクロールする --&gt;
-&lt;button id="scroll-up" onclick="scrollByLines(-5);"&gt;Up 5 lines&lt;/button&gt;
+```html
+<!-- 文書を 5 行だけ上方向にスクロールする -->
+<button id="scroll-up" onclick="scrollByLines(-5);">Up 5 lines</button>
 
-&lt;!-- 文書を 5 行だけ下方向にスクロールする --&gt;
-&lt;button id="scroll-down" onclick="scrollByLines(5);"&gt;Down 5 lines&lt;/button&gt;
-</pre>
+<!-- 文書を 5 行だけ下方向にスクロールする -->
+<button id="scroll-down" onclick="scrollByLines(5);">Down 5 lines</button>
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<p>どの仕様書にもありません。</p>
+どの仕様書にもありません。
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Window.scrollByLines")}}</p>
+{{Compat("api.Window.scrollByLines")}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("window.scroll()")}}</li>
-  <li>{{domxref("window.scrollBy()")}}</li>
-  <li>{{domxref("window.scrollByPages()")}}</li>
-  <li>{{domxref("window.scrollTo()")}}</li>
-</ul>
+- {{domxref("window.scroll()")}}
+- {{domxref("window.scrollBy()")}}
+- {{domxref("window.scrollByPages()")}}
+- {{domxref("window.scrollTo()")}}

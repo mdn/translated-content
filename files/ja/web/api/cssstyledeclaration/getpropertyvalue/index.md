@@ -2,46 +2,44 @@
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
 tags:
-- API
-- CSSOM
-- Method
-- Reference
-browser-compat: api.CSSStyleDeclaration.getPropertyValue
+  - API
+  - CSSOM
+  - Method
+  - Reference
 translation_of: Web/API/CSSStyleDeclaration/getPropertyValue
+browser-compat: api.CSSStyleDeclaration.getPropertyValue
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><strong>CSSStyleDeclaration.getPropertyValue()</strong> メソッドインターフェイスは、指定された CSS プロパティの値を含む {{domxref('DOMString')}} を返します。</p>
+**CSSStyleDeclaration.getPropertyValue()** メソッドインターフェイスは、指定された CSS プロパティの値を含む {{domxref('DOMString')}} を返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre
-  class="brush: js">var <em>value</em> = <em>style</em>.getPropertyValue(<em>property</em>);</pre>
+```js
+var value = style.getPropertyValue(property);
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<ul>
-  <li><em><code>property</code></em> は、チェックされるプロパティ名 (ハイフン区切り) を表す {{domxref('DOMString')}} です。</li>
-</ul>
+- _`property`_ は、チェックされるプロパティ名 (ハイフン区切り) を表す {{domxref('DOMString')}} です。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<ul>
- <li><code><em>value</em></code> は、プロパティの値を含む {{domxref('DOMString')}} です。設定されていない場合、空文字列を返します。</li>
-</ul>
+- `value` は、プロパティの値を含む {{domxref('DOMString')}} です。設定されていない場合、空文字列を返します。
 
-<h2 id="Example">例</h2>
+## 例
 
-<p>次の JavaScript コードは、 CSS セレクター規則の <code>margin</code> プロパティの値を問い合わせます。</p>
+次の JavaScript コードは、 CSS セレクター規則の `margin` プロパティの値を問い合わせます。
 
-<pre class="brush: js">var declaration = document.styleSheets[0].cssRules[0].style;
+```js
+var declaration = document.styleSheets[0].cssRules[0].style;
 var value = declaration.getPropertyValue('margin'); // "1px 2px"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}

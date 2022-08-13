@@ -3,66 +3,48 @@ title: WebGLRenderingContext.shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
 translation_of: Web/API/WebGLRenderingContext/shaderSource
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.shaderSource()</code></strong> メソッドは、{{domxref("WebGLShader")}} のソースコードを設定します。</p>
+[WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.shaderSource()`** メソッドは、{{domxref("WebGLShader")}} のソースコードを設定します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <var>gl</var>.shaderSource(<var>shader</var>, <var>source</var>);
-</pre>
+    void gl.shaderSource(shader, source);
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt>shader</dt>
- <dd>ソースコードを設定する {{domxref("WebGLShader")}} オブジェクト。</dd>
- <dt>source</dt>
- <dd>設定する GLSL ソースコードを含む {{domxref("DOMString")}}。</dd>
-</dl>
+- shader
+  - : ソースコードを設定する {{domxref("WebGLShader")}} オブジェクト。
+- source
+  - : 設定する GLSL ソースコードを含む {{domxref("DOMString")}}。
 
-<h3 id="返り値">返り値</h3>
+### 返り値
 
-<p>ありません。</p>
+ありません。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">var shader = gl.createShader(gl.VERTEX_SHADER);
+```js
+var shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, originalSource);
 
-var source = gl.getShaderSource(shader);</pre>
+var source = gl.getShaderSource(shader);
+```
 
-<h2 id="仕様策定状況">仕様策定状況</h2>
+## 仕様策定状況
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.9", "shaderSource")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>初回定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glShaderSource.xml", "glShaderSource")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>OpenGL API (と同様の) マニュアルページ。</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | 策定状況                             | コメント                                 |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------- |
+| {{SpecName('WebGL', "#5.14.9", "shaderSource")}}                             | {{Spec2('WebGL')}}             | 初回定義。                               |
+| {{SpecName('OpenGL ES 2.0', "glShaderSource.xml", "glShaderSource")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API (と同様の) マニュアルページ。 |
 
-<h2 id="ブラウザーの対応">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.WebGLRenderingContext.shaderSource")}}</p>
+{{Compat("api.WebGLRenderingContext.shaderSource")}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連項目
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderSource()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}

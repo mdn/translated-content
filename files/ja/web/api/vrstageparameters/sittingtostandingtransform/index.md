@@ -3,46 +3,35 @@ title: VRStageParameters.sittingToStandingTransform
 slug: Web/API/VRStageParameters/sittingToStandingTransform
 translation_of: Web/API/VRStageParameters/sittingToStandingTransform
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p> {{domxref("VRStageParameters")}} インターフェイスの <strong><code>sittingToStandingTransform</code></strong> 読取専用プロパティは，{{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} iで取得した「立った状態の位置」から「座った状態の位置」へと変換する行列を持っています．</p>
+{{domxref("VRStageParameters")}} インターフェイスの **`sittingToStandingTransform`** 読取専用プロパティは，{{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} i で取得した「立った状態の位置」から「座った状態の位置」へと変換する行列を持っています．
 
-<h2 id="シンタックス">シンタックス</h2>
+## シンタックス
 
-<pre class="brush: js">var myTransform = vrStageParametersInstance.<code>sittingToStandingTransform</code>;</pre>
+```js
+var myTransform = vrStageParametersInstance.sittingToStandingTransform;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>4x4の変換行列を成分として持つ16要素の {{domxref("Float32Array")}} です．</p>
+4x4 の変換行列を成分として持つ 16 要素の {{domxref("Float32Array")}} です．
 
-<h2 id="例">例</h2>
+## 例
 
-<pre>TBD.</pre>
+    TBD.
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vrstageparameters-sittingtostandingtransform', 'sittingToStandingTransform')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                | Status                   | Comment            |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('WebVR', '#dom-vrstageparameters-sittingtostandingtransform', 'sittingToStandingTransform')}} | {{Spec2('WebVR')}} | Initial definition |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.VRStageParameters.sittingToStandingTransform")}}</p>
+{{Compat("api.VRStageParameters.sittingToStandingTransform")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
+- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．

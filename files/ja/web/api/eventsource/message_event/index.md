@@ -12,59 +12,39 @@ tags:
 translation_of: Web/API/EventSource/onmessage
 original_slug: Web/API/EventSource/onmessage
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>{{domxref("EventSource")}} インターフェースの <code><strong>onmessage</strong></code> プロパティは、メッセージイベントが受信されたとき、つまりソースからメッセージが送信されたときに呼び出される {{event("Event_handlers", "event handler")}} です。</p>
+{{domxref("EventSource")}} インターフェースの **`onmessage`** プロパティは、メッセージイベントが受信されたとき、つまりソースからメッセージが送信されたときに呼び出される {{event("Event_handlers", "event handler")}} です。
 
-<p><code>onmessage</code> イベントハンドラのイベントオブジェクトの型は {{domxref("MessageEvent")}} です。</p>
+`onmessage` イベントハンドラのイベントオブジェクトの型は {{domxref("MessageEvent")}} です。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">eventSource.onmessage = function</pre>
+    eventSource.onmessage = function
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">evtSource.onmessage = function(e) {
+```js
+evtSource.onmessage = function(e) {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>メモ</strong>: 完全な例を GitHub から見つけることができます — <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events" rel="noopener">PHP を用いた簡単な SSE のデモ</a> を参照。</p>
-</div>
+> **Note:** **メモ**: 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onmessage", "onmessage")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                             | ステータス                       | コメント |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onmessage", "onmessage")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
 
-<ul>
-</ul>
+## ブラウザ互換性
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+{{Compat("api.EventSource.onmessage")}}
 
-<div>
+## 関連情報
 
-
-<p>{{Compat("api.EventSource.onmessage")}}</p>
-</div>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

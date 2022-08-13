@@ -3,79 +3,57 @@ title: MediaSource
 slug: Web/API/MediaSource
 translation_of: Web/API/MediaSource
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p><strong><code style="font-size: 14.44444465637207px;">MediaSource</code></strong><code style="font-size: 14.44444465637207px;">インターフェイスは、</code><span style="font-size: 14px; line-height: 1.5;">{{domxref("HTMLMediaElement")}}のデータを扱っています。</span><span style="font-size: 14px; line-height: 1.5;">MediaSourceをオブジェクトは、ユーザが再生する</span>{{domxref("HTMLMediaElement")}}<span style="font-size: 14px; line-height: 1.5;">につけることができます。</span></p>
+**`MediaSource`**`インターフェイスは、`{{domxref("HTMLMediaElement")}}のデータを扱っています。MediaSource をオブジェクトは、ユーザが再生する{{domxref("HTMLMediaElement")}}につけることができます。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p><em>{{domxref("EventTarget")}}からプロパティを継承しています。</em></p>
+_{{domxref("EventTarget")}}からプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("MediaSource.sourceBuffers")}}<span style="font-size: 14px; line-height: 1.5;">{{readonlyInline}}</span></dt>
- <dd>{{domxref("SourceBufferList")}}から成り立っています。</dd>
- <dt>{{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}</dt>
- <dd>{{domxref("SourceBufferList")}} <span style="font-size: 14px; line-height: 1.5;">から成り立っています。</span></dd>
- <dt>{{domxref("MediaSource.readyState")}} {{readonlyInline}}</dt>
- <dd>値を列挙します。</dd>
- <dt><em>{{domxref("MediaSource.duration")}}</em></dt>
- <dd><span>浮動小数点型です。</span></dd>
-</dl>
+- {{domxref("MediaSource.sourceBuffers")}}{{readonlyInline}}
+  - : {{domxref("SourceBufferList")}}から成り立っています。
+- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
+  - : {{domxref("SourceBufferList")}} から成り立っています。
+- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
+  - : 値を列挙します。
+- _{{domxref("MediaSource.duration")}}_
+  - : 浮動小数点型です。
 
-<h2 id="コンストラクタ">コンストラクタ</h2>
+## コンストラクタ
 
-<dl>
- <dt>{{domxref("MediaSource.MediaSource", "MediaSource()")}} {{readonlyInline}}</dt>
- <dd>コンストラクタはソースバッファと関連しない<span style="font-size: 14px; line-height: 1.5;">MediaSource</span><span style="font-size: 14px; line-height: 1.5;">オブジェクトを返します</span></dd>
-</dl>
+- {{domxref("MediaSource.MediaSource", "MediaSource()")}} {{readonlyInline}}
+  - : コンストラクタはソースバッファと関連しない MediaSource オブジェクトを返します
 
-<h2 id="Staticなメソッド">Staticなメソッド</h2>
+## Static なメソッド
 
-<dl>
- <dt>{{domxref("MediaSource.isTypeSupported()")}}</dt>
- <dd>与えられたMIMEタイプが完全に実行できるかどうかの<span style="font-size: 14px; line-height: 1.5;">{{domxref("Boolean")}}型を返します。</span></dd>
-</dl>
+- {{domxref("MediaSource.isTypeSupported()")}}
+  - : 与えられた MIME タイプが完全に実行できるかどうかの{{domxref("Boolean")}}型を返します。
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<p><em>親インターフェイス{{domxref("EventTarget")}}から、プロパティを継承しています。 </em></p>
+_親インターフェイス{{domxref("EventTarget")}}から、プロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("MediaSource.addSourceBuffer()")}}</dt>
- <dd><code style="font-size: 14.44444465637207px;">MediaSource</code> オブジェクト<span style="font-size: 14px; line-height: 1.5;">に関連づけて作成し、 ,  {{domxref("SourceBuffer")}} に与えられたMIMEタイプを返します。</span>
- <dl>
-  <dt></dt>
-  <dt>{{domxref("MediaSource.removeSourceBuffer()")}}</dt>
-  <dd>メディアソースオブジェクトから、与えられた<span style="font-size: 14px; line-height: 1.5;"> {{domxref("SourceBuffer")}} を削除します。</span></dd>
-  <dt>{{domxref("MediaSource.endOfStream()")}}</dt>
-  <dd>ストリームの終わりを合図します。最後にはerrorを発するでしょう。</dd>
- </dl>
- </dd>
-</dl>
+- {{domxref("MediaSource.addSourceBuffer()")}}
 
-<h2 id="仕様書">仕様書</h2>
+  - : `MediaSource` オブジェクトに関連づけて作成し、 , {{domxref("SourceBuffer")}} に与えられた MIME タイプを返します。\*
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}}</td>
-   <td>{{Spec2('Media Source Extensions')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+        {{domxref("MediaSource.removeSourceBuffer()")}}
+        *   : メディアソースオブジェクトから、与えられた {{domxref("SourceBuffer")}} を削除します。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+    - {{domxref("MediaSource.endOfStream()")}}
+      - : ストリームの終わりを合図します。最後には error を発するでしょう。
 
-<div>{{Compat("api.MediaSource")}}</div>
+## 仕様書
 
-<h2 id="関連項目">関連項目</h2>
+| Specification                                                                                | Status                                           | Comment             |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}} | {{Spec2('Media Source Extensions')}} | Initial definition. |
 
-<ul>
- <li>関連するインターフェイス: {{domxref("SourceBuffer")}} と{{domxref("SourceBufferList")}}.</li>
-</ul>
+## ブラウザの互換性
+
+{{Compat("api.MediaSource")}}
+
+## 関連項目
+
+- 関連するインターフェイス: {{domxref("SourceBuffer")}} と{{domxref("SourceBufferList")}}.

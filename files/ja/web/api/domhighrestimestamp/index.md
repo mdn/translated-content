@@ -10,75 +10,49 @@ tags:
   - Type
 translation_of: Web/API/DOMHighResTimeStamp
 ---
-<p>{{APIRef("High Resolution Time")}}</p>
+{{APIRef("High Resolution Time")}}
 
-<p><code><strong>DOMHighResTimeStamp</strong></code> 型は <code>double</code> であり、時間の値を保存するために使用します。この値は別々の時点や、2 つの別々の時点の間の時間を表すことができます。単位はミリ秒であり、精度は 5 µs (マイクロ秒) であるべきです。ただし、ブラウザーが 5 マイクロ秒精度の時間の値を提供できない場合 (例えば、ハードウェアやソフトウェアの制約により) は、1 ミリ秒精度の時間として表すことができます。</p>
+**`DOMHighResTimeStamp`** 型は `double` であり、時間の値を保存するために使用します。この値は別々の時点や、2 つの別々の時点の間の時間を表すことができます。単位はミリ秒であり、精度は 5 µs (マイクロ秒) であるべきです。ただし、ブラウザーが 5 マイクロ秒精度の時間の値を提供できない場合 (例えば、ハードウェアやソフトウェアの制約により) は、1 ミリ秒精度の時間として表すことができます。
 
-<div class="note">
-<p>ユーザーエージェントを実行するデバイスやオペレーティングシステムがマイクロ秒レベルのクロックを持たない場合は、ミリ秒精度に制限されます。</p>
-</div>
+> **Note:** ユーザーエージェントを実行するデバイスやオペレーティングシステムがマイクロ秒レベルのクロックを持たない場合は、ミリ秒精度に制限されます。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>この<em>型</em>はプロパティがありません。これは倍精度浮動小数点数です。</em></p>
+*この*型*はプロパティがありません。これは倍精度浮動小数点数です。*
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p><code>DOMHighResTimeStamp</code> の値は、2 つの時点の間で経過した時間をミリ秒単位 (デバイスがサポートすれば 5 マイクロ秒以内の精度で) で表した倍精度浮動小数点数です。開始時間はサイトやアプリのスクリプトで指定した特定の時刻か、<strong>time origin</strong> にすることができます。</p>
+`DOMHighResTimeStamp` の値は、2 つの時点の間で経過した時間をミリ秒単位 (デバイスがサポートすれば 5 マイクロ秒以内の精度で) で表した倍精度浮動小数点数です。開始時間はサイトやアプリのスクリプトで指定した特定の時刻か、**time origin** にすることができます。
 
-<h4 id="The_time_origin" name="The_time_origin">time origin</h4>
+#### time origin
 
-<p><strong>time origin</strong> は、現在のドキュメントの存続期間の開始時点であると考えられる標準時刻です。これは以下のように算出します:</p>
+**time origin** は、現在のドキュメントの存続期間の開始時点であると考えられる標準時刻です。これは以下のように算出します:
 
-<ul>
- <li>スクリプトの {{Glossary("global object", "グローバルオブジェクト")}} が {{domxref("Window")}} であれば、time origin を以下のように決定します:
-  <ul>
-   <li>現在の {{domxref("Document")}} が <code>Window</code> で最初に読み込まれたものであれば、ブラウザーコンテキストが生成された時刻を time origin にします。</li>
-   <li>window に以前読み込まれたドキュメントをアンロードする処理の間に、以前のページから去るかをユーザーに確認させるダイアログを表示した場合は、新しいページに移動することを受諾するとユーザーが確認した時刻を time origin にします。</li>
-   <li>前述のどちらでも time origin が決まらない場合は、window の現在の <code>Document</code> を生成する原因であるナビゲーションが発生した時刻を time origin にします。</li>
-  </ul>
- </li>
- <li>スクリプトのグローバルオブジェクトが {{domxref("WorkerGlobalScope")}} である (すなわち、スクリプトを web worker として実行している) 場合は、worker が生成された瞬間を time origin にします。</li>
- <li>その他の場合はすべて、time origin が未定義です。</li>
-</ul>
+- スクリプトの {{Glossary("global object", "グローバルオブジェクト")}} が {{domxref("Window")}} であれば、time origin を以下のように決定します:
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+  - 現在の {{domxref("Document")}} が `Window` で最初に読み込まれたものであれば、ブラウザーコンテキストが生成された時刻を time origin にします。
+  - window に以前読み込まれたドキュメントをアンロードする処理の間に、以前のページから去るかをユーザーに確認させるダイアログを表示した場合は、新しいページに移動することを受諾するとユーザーが確認した時刻を time origin にします。
+  - 前述のどちらでも time origin が決まらない場合は、window の現在の `Document` を生成する原因であるナビゲーションが発生した時刻を time origin にします。
 
-<p><em>この<em>型</em>はメソッドがありません。</em></p>
+- スクリプトのグローバルオブジェクトが {{domxref("WorkerGlobalScope")}} である (すなわち、スクリプトを web worker として実行している) 場合は、worker が生成された瞬間を time origin にします。
+- その他の場合はすべて、time origin が未定義です。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## メソッド
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2', '#dom-domhighrestimestamp', 'DOMHighResTimeStamp')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-   <td>インターフェイスや型を、より厳密に定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time', '#sec-DOMHighResTimeStamp', 'DOMHighResTimeStamp')}}</td>
-   <td>{{Spec2('Highres Time')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+*この*型*はメソッドがありません。*
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## 仕様
 
-<p>{{Compat("api.DOMHighResTimestamp")}}</p>
+| 仕様書                                                                                                               | 策定状況                                     | コメント                                 |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------- |
+| {{SpecName('Highres Time Level 2', '#dom-domhighrestimestamp', 'DOMHighResTimeStamp')}} | {{Spec2('Highres Time Level 2')}} | インターフェイスや型を、より厳密に定義。 |
+| {{SpecName('Highres Time', '#sec-DOMHighResTimeStamp', 'DOMHighResTimeStamp')}}             | {{Spec2('Highres Time')}}             | 初期定義                                 |
 
-<div id="compat-mobile"></div>
+## ブラウザー実装状況
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat("api.DOMHighResTimestamp")}}
 
-<ul>
- <li><a href="/ja/docs/Navigation_timing" title="Navigation_timing">Navigation Timing API</a></li>
- <li><a href="/ja/docs/Web/API/Performance/now">performance.now()</a></li>
-</ul>
+## 関連情報
+
+- [Navigation Timing API](/ja/docs/Navigation_timing "Navigation_timing")
+- [performance.now()](/ja/docs/Web/API/Performance/now)

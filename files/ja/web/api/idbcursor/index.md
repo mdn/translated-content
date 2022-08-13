@@ -13,66 +13,59 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBCursor
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p><a href="/ja/docs/IndexedDB">IndexedDB API</a> の <strong><code>IDBCursor</code></strong> インターフェイスはデータベースの複数レコードを横断したり繰り返すための<a href="/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor">カーソル</a>です。</p>
+[IndexedDB API](/ja/docs/IndexedDB) の **`IDBCursor`** インターフェイスはデータベースの複数レコードを横断したり繰り返すための[カーソル](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor)です。
 
-<p>このカーソルはどのインデックスやオブジェクトをループしているかを示す元です。これは範囲内の位置を示す持ち、レコードのキー順に増/減して動きます。カーソルはアプリケーションからカーソル範囲内の全レコードに非同期に処理できるようにします。</p>
+このカーソルはどのインデックスやオブジェクトをループしているかを示す元です。これは範囲内の位置を示す持ち、レコードのキー順に増/減して動きます。カーソルはアプリケーションからカーソル範囲内の全レコードに非同期に処理できるようにします。
 
-<p>一度に無制限の数のカーソルを持つことができます。あるカーソルを表す同一の <code>IDBCursor</code> オブジェクトを取得できます。操作はインデックスやオブジェクトストアに対して実行されます。</p>
+一度に無制限の数のカーソルを持つことができます。あるカーソルを表す同一の `IDBCursor` オブジェクトを取得できます。操作はインデックスやオブジェクトストアに対して実行されます。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("IDBCursor.source")}} {{readonlyInline}}</dt>
- <dd>カーソルが繰り返している{{domxref("IDBObjectStore")}} か {{domxref("IDBIndex")}} を返します。この関数は、カーソルが現在繰り返されていたり、繰り返しが終わりを過ぎたり、トランザクションがアクティブでなくても、null や例外を返しません。</dd>
- <dt>{{domxref("IDBCursor.direction")}} {{readonlyInline}}</dt>
- <dd>カーソルの横断の向きを返します。取りうる値については <a href="/ja/docs/Web/API/IDBCursor$edit#const_next">Constants</a> を見てください。</dd>
- <dt>{{domxref("IDBCursor.key")}} {{readonlyInline}}</dt>
- <dd>カーソル位置のレコードのキーを返します。カーソルが範囲外の場合、<code>undefined</code> にセットされます。カーソルキーはあらゆるデータ型となりえます。</dd>
- <dt>{{domxref("IDBCursor.value")}} {{readonlyInline}}</dt>
- <dd>カーソル位置のレコードの値を返します。カーソルの値はあらゆるデータ型となりえます。</dd>
- <dt>{{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}</dt>
- <dd>カーソルの現在有効な主キーを返します。カーソルが現在繰り返されていたり範囲外で繰り返されていた場合、これは <code>undefined</code> にセットされます。カーソルの主キーはあらゆるデータ型となりえます。</dd>
-</dl>
+- {{domxref("IDBCursor.source")}} {{readonlyInline}}
+  - : カーソルが繰り返している{{domxref("IDBObjectStore")}} か {{domxref("IDBIndex")}} を返します。この関数は、カーソルが現在繰り返されていたり、繰り返しが終わりを過ぎたり、トランザクションがアクティブでなくても、null や例外を返しません。
+- {{domxref("IDBCursor.direction")}} {{readonlyInline}}
+  - : カーソルの横断の向きを返します。取りうる値については [Constants](/ja/docs/Web/API/IDBCursor$edit#const_next) を見てください。
+- {{domxref("IDBCursor.key")}} {{readonlyInline}}
+  - : カーソル位置のレコードのキーを返します。カーソルが範囲外の場合、`undefined` にセットされます。カーソルキーはあらゆるデータ型となりえます。
+- {{domxref("IDBCursor.value")}} {{readonlyInline}}
+  - : カーソル位置のレコードの値を返します。カーソルの値はあらゆるデータ型となりえます。
+- {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
+  - : カーソルの現在有効な主キーを返します。カーソルが現在繰り返されていたり範囲外で繰り返されていた場合、これは `undefined` にセットされます。カーソルの主キーはあらゆるデータ型となりえます。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("IDBCursor.advance()")}}</dt>
- <dd>Sets the number times a cursor should move its position forward.</dd>
- <dt>{{domxref("IDBCursor.continue()")}}</dt>
- <dd>Advances the cursor to the next position along its direction, to the item whose key matches the optional <code>key</code> parameter.</dd>
- <dt>{{domxref("IDBCursor.continuePrimaryKey()")}}</dt>
- <dd>Sets the cursor to the given index key and primary key given as arguments.</dd>
- <dt>{{domxref("IDBCursor.delete()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the record at the cursor's position, without changing the cursor's position. This can be used to delete specific records.</dd>
- <dt>{{domxref("IDBCursor.update()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, updates the value at the current position of the cursor in the object store. This can be used to update specific records.</dd>
-</dl>
+- {{domxref("IDBCursor.advance()")}}
+  - : Sets the number times a cursor should move its position forward.
+- {{domxref("IDBCursor.continue()")}}
+  - : Advances the cursor to the next position along its direction, to the item whose key matches the optional `key` parameter.
+- {{domxref("IDBCursor.continuePrimaryKey()")}}
+  - : Sets the cursor to the given index key and primary key given as arguments.
+- {{domxref("IDBCursor.delete()")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, deletes the record at the cursor's position, without changing the cursor's position. This can be used to delete specific records.
+- {{domxref("IDBCursor.update()")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, updates the value at the current position of the cursor in the object store. This can be used to update specific records.
 
-<h2 id="Constants" name="Constants">Constants</h2>
+## Constants
 
-<div>{{ deprecated_header(13) }}</div>
+{{ deprecated_header(13) }}
 
-<div class="warning">
-<p>これらの constants は利用できません — Gecko 25 で削除されました。代わりに直接 string constants を使う必要があります。({{ bug(891944) }})</p>
-</div>
+> **Warning:** これらの constants は利用できません — Gecko 25 で削除されました。代わりに直接 string constants を使う必要があります。({{ bug(891944) }})
 
-<ul>
- <li><code>NEXT </code>: <code>"next"</code> : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).</li>
- <li><code>NEXTUNIQUE</code> : <code>"nextunique"</code> : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.</li>
- <li><code>PREV </code>: <code>"prev"</code> : The cursor shows all records, including duplicates. It starts at the upper bound of the key range and moves downwards (monotonically decreasing in the order of keys).</li>
- <li><code>PREVUNIQUE </code>: <code>"prevunique"</code> : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the upper bound of the key range and moves downwards.</li>
-</ul>
+- `NEXT `: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
+- `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.
+- `PREV `: `"prev"` : The cursor shows all records, including duplicates. It starts at the upper bound of the key range and moves downwards (monotonically decreasing in the order of keys).
+- `PREVUNIQUE `: `"prevunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the upper bound of the key range and moves downwards.
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. T<span style="line-height: 1.5;">he cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using </span><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. The cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor example](https://github.com/mdn/IDBcursor-example/) ([view example live](http://mdn.github.io/IDBcursor-example/).)
 
-<pre class="brush: js"><span style="line-height: 1.5;">function displayData() {</span>
+```js
+function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -88,41 +81,25 @@ translation_of: Web/API/IDBCursor
       console.log('Entries all displayed.');
     }
   };
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                       | 策定状況                     | コメント |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
+| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>
+{{Compat("api.IDBCursor")}}
 
+## 関連情報
 
-<p>{{Compat("api.IDBCursor")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">IndexedDB を使用する</a></li>
- <li>トランザクションを開始する: {{domxref("IDBDatabase")}}</li>
- <li>トランザクションを使用する: {{domxref("IDBTransaction")}}</li>
- <li>キーの範囲をセットする: {{domxref("IDBKeyRange")}}</li>
- <li>データを取得、変更する: {{domxref("IDBObjectStore")}}</li>
- <li>カーソルを使用する: {{domxref("IDBCursor")}}</li>
- <li>リファレンスの例: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [IndexedDB を使用する](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションを開始する: {{domxref("IDBDatabase")}}
+- トランザクションを使用する: {{domxref("IDBTransaction")}}
+- キーの範囲をセットする: {{domxref("IDBKeyRange")}}
+- データを取得、変更する: {{domxref("IDBObjectStore")}}
+- カーソルを使用する: {{domxref("IDBCursor")}}
+- リファレンスの例: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

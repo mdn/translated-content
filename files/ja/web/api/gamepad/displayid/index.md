@@ -13,52 +13,41 @@ tags:
   - displayId
 translation_of: Web/API/Gamepad/displayId
 ---
-<p>{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
-<p>{{domxref("Gamepad")}} インターフェイスの <strong><code>displayId</code></strong> 読取専用プロパティは <dfn>{{domxref("VRDisplay")}}</dfn> に関連付けられた<dfn> {{domxref("VRDisplay.displayId")}} を返します —  <code>VRDisplay</code> は表示されるシーンをそのゲームパッドで操作します．</dfn></p>
+{{domxref("Gamepad")}} インターフェイスの **`displayId`** 読取専用プロパティは _{{domxref("VRDisplay")}}_ に関連付けられた* {{domxref("VRDisplay.displayId")}} を返します — `VRDisplay` は表示されるシーンをそのゲームパッドで操作します．*
 
-<h2 id="シンタックス">シンタックス</h2>
+## シンタックス
 
-<pre class="brush: js notranslate">var myDisplayId = gamepadInstance.displayId;</pre>
+```js
+var myDisplayId = gamepadInstance.displayId;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>関連付けされている {{domxref("VRDisplay.displayId")}} を表すlong値です．</p>
+関連付けされている {{domxref("VRDisplay.displayId")}} を表す long 値です．
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="notranslate"><code>window.addEventListener("gamepadconnected", function(e) {
-  if(!e.gamepad.displayId) {
-    console.log('Gamepad connected');
-  } else {
-    console.log('Gamepad connected, associated with VR display ' + e.gamepad.displayId);
-  }
-});</code></pre>
+    window.addEventListener("gamepadconnected", function(e) {
+      if(!e.gamepad.displayId) {
+        console.log('Gamepad connected');
+      } else {
+        console.log('Gamepad connected, associated with VR display ' + e.gamepad.displayId);
+      }
+    });
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#gamepad-getvrdisplays-attribute', 'displayId')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>初回翻訳</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | ステータス               | 備考     |
+| -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
+| {{SpecName('WebVR', '#gamepad-getvrdisplays-attribute', 'displayId')}} | {{Spec2('WebVR')}} | 初回翻訳 |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.Gamepad.displayId")}}</p>
+{{Compat("api.Gamepad.displayId")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
+- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．

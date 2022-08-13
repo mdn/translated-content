@@ -10,51 +10,32 @@ tags:
   - メソッド
 translation_of: Web/API/Document/close
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Document.close()</code></strong> メソッドは、 {{domxref("Document.open()")}} で開かれた文書への書き込みを終了します。</p>
+**`Document.close()`** メソッドは、 {{domxref("Document.open()")}} で開かれた文書への書き込みを終了します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">document.close();
-</pre>
+    document.close();
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre>// 書きこむ文書を開きます。
-document.open();
+    // 書きこむ文書を開きます。
+    document.open();
 
-// 文書の内容を書き込みます。
-document.write("&lt;p&gt;たったひとつの内容。&lt;/p&gt;");
+    // 文書の内容を書き込みます。
+    document.write("<p>たったひとつの内容。</p>");
 
-// 文書を閉じます。
-document.close();
-</pre>
+    // 文書を閉じます。
+    document.close();
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-document-close", "document.close()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-98948567", "document.close()")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                       | 状態                             | 備考 |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName("HTML WHATWG", "#dom-document-close", "document.close()")}} | {{Spec2("HTML WHATWG")}} |      |
+| {{SpecName("DOM2 HTML", "html.html#ID-98948567", "document.close()")}} | {{Spec2("DOM2 HTML")}}     |      |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<div>{{Compat("api.Document.close")}}</div>
+{{Compat("api.Document.close")}}

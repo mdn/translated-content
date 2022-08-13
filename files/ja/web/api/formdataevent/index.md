@@ -8,44 +8,41 @@ tags:
   - Forms
   - Landing
   - Reference
-browser-compat: api.FormDataEvent
 translation_of: Web/API/FormDataEvent
+browser-compat: api.FormDataEvent
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>FormDataEvent</code></strong> インターフェイスは <a href="/ja/docs/Web/API/HTMLFormElement/formdata_event"><code>formdata</code> イベント</a>を表します。 — このようなイベントは {{domxref("HTMLFormElement")}} オブジェクトで、フォームデータを表すエントリーリストが構築された後に発行されます。これはフォームが送信されようとするときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターの呼び出しでも発行させることができます。</p>
+**`FormDataEvent`** インターフェイスは [`formdata` イベント](/ja/docs/Web/API/HTMLFormElement/formdata_event)を表します。 — このようなイベントは {{domxref("HTMLFormElement")}} オブジェクトで、フォームデータを表すエントリーリストが構築された後に発行されます。これはフォームが送信されようとするときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターの呼び出しでも発行させることができます。
 
-<p>これにより、 {{domxref("XMLHttpRequest")}} などのメソッドでフォームデータを送信する際に、自分で用意しなくても、 <code>formdata</code> イベントの発行に応じて、 {{domxref("FormData")}} オブジェクトをすばやく取得することができます (<a href="/ja/docs/Web/API/FormData/Using_FormData_Objects">FormData オブジェクトの使用</a>を参照)。</p>
+これにより、 {{domxref("XMLHttpRequest")}} などのメソッドでフォームデータを送信する際に、自分で用意しなくても、 `formdata` イベントの発行に応じて、 {{domxref("FormData")}} オブジェクトをすばやく取得することができます ([FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)を参照)。
 
-<h2 id="Constructor">コンストラクター</h2>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("FormDataEvent.FormDataEvent","FormDataEvent()")}}</dt>
- <dd>新しい <code>FormDataEvent</code> オブジェクトインスタンスを生成します。</dd>
-</dl>
+- {{domxref("FormDataEvent.FormDataEvent","FormDataEvent()")}}
+  - : 新しい `FormDataEvent` オブジェクトインスタンスを生成します。
 
-<h2 id="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>親インターフェイスである {{domxref("Event")}} からプロパティを継承しています。</em></p>
+_親インターフェイスである {{domxref("Event")}} からプロパティを継承しています。_
 
-<dl>
- <dt>{{domxref("FormDataEvent.formData")}}</dt>
- <dd>イベントが発行された時点のフォーム内に含まれるデータを表す {{domxref("FormData")}} オブジェクトです。</dd>
-</dl>
+- {{domxref("FormDataEvent.formData")}}
+  - : イベントが発行された時点のフォーム内に含まれるデータを表す {{domxref("FormData")}} オブジェクトです。
 
-<h2 id="Methods">メソッド</h2>
+## メソッド
 
-<p><em>親インターフェイスである {{domxref("Event")}} からメソッドを継承しています。</em></p>
+_親インターフェイスである {{domxref("Event")}} からメソッドを継承しています。_
 
-<h2 id="Examples">例</h2>
+## 例
 
-<pre class="brush: js">// フォームの参照を得る
+```js
+// フォームの参照を得る
 
 const formElem = document.querySelector('form');
 
 // submit ハンドラー
 
-formElem.addEventListener('submit', (e) =&gt; {
+formElem.addEventListener('submit', (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -55,7 +52,7 @@ formElem.addEventListener('submit', (e) =&gt; {
 
 // データを受け取るための formdata ハンドラー
 
-formElem.addEventListener('formdata', (e) =&gt; {
+formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // イベントお武衛ジェクトからフォームデータを取得
@@ -68,21 +65,20 @@ formElem.addEventListener('formdata', (e) =&gt; {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-});</pre>
+});
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li>{{domxref("FormData")}}</li>
- <li><a href="/ja/docs/Web/API/FormData/Using_FormData_Objects">FormData オブジェクトの使用</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- {{domxref("FormData")}}
+- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

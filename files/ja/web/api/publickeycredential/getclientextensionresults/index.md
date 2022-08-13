@@ -10,39 +10,34 @@ tags:
   - WebAuthn
 translation_of: Web/API/PublicKeyCredential/getClientExtensionResults
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p><strong><code>getClientExtensionResults()</code></strong> は {{domxref("PublicKeyCredential")}} インターフェイスのメソッドであり、 {{jsxref("ArrayBuffer")}} の形で拡張機能の識別子と、クライアントが処理した後の結果の対応表を返します。</p>
+**`getClientExtensionResults()`** は {{domxref("PublicKeyCredential")}} インターフェイスのメソッドであり、 {{jsxref("ArrayBuffer")}} の形で拡張機能の識別子と、クライアントが処理した後の結果の対応表を返します。
 
-<p><code>PublicKeyCredential</code> の生成または読み出し中 (それぞれ {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} および {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} で実施) に、それぞれ {{domxref("PublicKeyCredentialCreationOptions.extensions")}} および {{domxref("PublicKeyCredentialRequestOptions.extensions")}} によって与えられる別々の拡張機能のために、クライアントが処理する「専用の」処理を持つことができます。</p>
+`PublicKeyCredential` の生成または読み出し中 (それぞれ {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} および {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} で実施) に、それぞれ {{domxref("PublicKeyCredentialCreationOptions.extensions")}} および {{domxref("PublicKeyCredentialRequestOptions.extensions")}} によって与えられる別々の拡張機能のために、クライアントが処理する「専用の」処理を持つことができます。
 
-<div class="blockIndicator note">
-<p><strong>メモ:</strong> 拡張機能はオプションであり、ブラウザーによって認識する拡張機能は異なります。すべての拡張機能はクライアントが処理することはオプションです。ブラウザーが指定された拡張機能を知らない場合、失敗としてはいけません。</p>
-</div>
+> **Note:** **メモ:** 拡張機能はオプションであり、ブラウザーによって認識する拡張機能は異なります。すべての拡張機能はクライアントが処理することはオプションです。ブラウザーが指定された拡張機能を知らない場合、失敗としてはいけません。
 
-<div class="note">
-<p><strong>メモ:</strong> このプロパティは最上位のコンテキストでしか使えない可能性があり、例えば {{HTMLElement("iframe")}} の中では利用できません。</p>
-</div>
+> **Note:** **メモ:** このプロパティは最上位のコンテキストでしか使えない可能性があり、例えば {{HTMLElement("iframe")}} の中では利用できません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">mapArrayBuffer = publicKeyCredential.getClientExtensionResults()</pre>
+    mapArrayBuffer = publicKeyCredential.getClientExtensionResults()
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p>{{jsxref("ArrayBuffer")}} の形で、クライアントが様々な拡張機能を処理した結果です。拡張子の識別子と、クライアントが処理した後の結果の対応表を返します。このオブジェクトには拡張機能の識別子と処理の結果の対応表が入っています。</p>
+{{jsxref("ArrayBuffer")}} の形で、クライアントが様々な拡張機能を処理した結果です。拡張子の識別子と、クライアントが処理した後の結果の対応表を返します。このオブジェクトには拡張機能の識別子と処理の結果の対応表が入っています。
 
-<div class="blockIndicator warning">
-<p><strong>警告!</strong> 2019年3月時点で、 <code>appId</code> ({{domxref("PublicKeyCredentialRequestOptions.extensions")}} の生成の間に使用される) のみ、 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=818303">Chrome</a> および <a href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#api-surface">Edge</a> が対応しています。 Firefox は<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1370728">どの拡張機能にも対応していない</a>ようです。</p>
-</div>
+> **Warning:** **警告!** 2019 年 3 月時点で、 `appId` ({{domxref("PublicKeyCredentialRequestOptions.extensions")}} の生成の間に使用される) のみ、 [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=818303) および [Edge](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#api-surface) が対応しています。 Firefox は[どの拡張機能にも対応していない](https://bugzilla.mozilla.org/show_bug.cgi?id=1370728)ようです。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   // Here are the extensions (as "inputs")
   extensions: {
     "loc": true, // This extension has been defined to include location information in attestation
@@ -72,36 +67,22 @@ navigator.credentials.create({ publicKey })
     // myBuffer will contain the result of any of the processing of the "loc" and "uvi" extensions
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAuthn','#dom-publickeycredential-getclientextensionresults','getClientExtensionResults()')}}</td>
-   <td>{{Spec2('WebAuthn')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                                                           | 状態                         | 備考     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
+| {{SpecName('WebAuthn','#dom-publickeycredential-getclientextensionresults','getClientExtensionResults()')}} | {{Spec2('WebAuthn')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.PublicKeyCredential.getClientExtensionResults")}}</p>
+{{Compat("api.PublicKeyCredential.getClientExtensionResults")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="https://www.w3.org/TR/webauthn/#sctn-defined-extensions">現在定義されている拡張機能の一覧</a></li>
- <li>{{domxref("AuthenticatorAssertionResponse.authenticatorData")}}: 認証者の実行処理の結果が入る</li>
- <li>{{domxref("PublicKeyCredentialCreationOptions.extensions")}}: 認証情報を作成するためのクライアント拡張機能の入力値が入る</li>
- <li>{{domxref("PublicKeyCredentialRequestOptions.extensions")}}: 認証情報を受け取るクライアント拡張機能の入力値が入る</li>
-</ul>
+- [現在定義されている拡張機能の一覧](https://www.w3.org/TR/webauthn/#sctn-defined-extensions)
+- {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}: 認証者の実行処理の結果が入る
+- {{domxref("PublicKeyCredentialCreationOptions.extensions")}}: 認証情報を作成するためのクライアント拡張機能の入力値が入る
+- {{domxref("PublicKeyCredentialRequestOptions.extensions")}}: 認証情報を受け取るクライアント拡張機能の入力値が入る

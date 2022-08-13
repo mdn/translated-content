@@ -13,18 +13,14 @@ tags:
   - multipart
 translation_of: Web/API/XMLHttpRequest/multipart
 ---
-<div>{{APIRef('XMLHttpRequest')}}{{non-standard_header}}</div>
+{{APIRef('XMLHttpRequest')}}{{non-standard_header}}
 
-<div class="warning">
-<p>Gecko 22から廃止されました。</p>
-</div>
+> **Warning:** Gecko 22 から廃止されました。
 
-<p><strong>この Gecko 専用機能は Firefox/Gecko 22 で削除されました</strong>。代わりに <a href="/ja/docs/Web/API/Server-sent_events">Server-Sent Events</a>、<a href="/ja/docs/Web/API/WebSockets_API">Web Sockets</a>、または progress イベントからの <code>responseText</code> を使用してください。</p>
+**この Gecko 専用機能は Firefox/Gecko 22 で削除されました**。代わりに [Server-Sent Events](/ja/docs/Web/API/Server-sent_events)、[Web Sockets](/ja/docs/Web/API/WebSockets_API)、または progress イベントからの `responseText` を使用してください。
 
-<p><span class="seoSummary">この真偽値は、レスポンスが複数の XML ドキュメントのストリームになる可能性があることを示します。</span> <code>true</code> に設定されている場合、最初のレスポンスのコンテンツタイプは <code>multipart/x-mixed-replace</code> でなければなりません。すべてのリクエストは非同期でなければなりません。</p>
+この真偽値は、レスポンスが複数の XML ドキュメントのストリームになる可能性があることを示します。 `true` に設定されている場合、最初のレスポンスのコンテンツタイプは `multipart/x-mixed-replace` でなければなりません。すべてのリクエストは非同期でなければなりません。
 
-<p>このリクエストに書き込まれた各 XML ドキュメントに対して新しい XML DOM ドキュメントが作成され、ドキュメント間で <code>onload</code> ハンドラが呼び出されます。</p>
+このリクエストに書き込まれた各 XML ドキュメントに対して新しい XML DOM ドキュメントが作成され、ドキュメント間で `onload` ハンドラが呼び出されます。
 
-<div class="note">
-<p><strong>メモ:</strong> これが設定されている場合、最初の XMLdocument がロードされた後、<code>onload</code> ハンドラや他のイベントハンドラはリセットされず、レスポンスの各部分が受信された後に <code>onload</code> ハンドラが呼び出されます。</p>
-</div>
+> **Note:** **メモ:** これが設定されている場合、最初の XMLdocument がロードされた後、`onload` ハンドラや他のイベントハンドラはリセットされず、レスポンスの各部分が受信された後に `onload` ハンドラが呼び出されます。

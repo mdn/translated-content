@@ -11,56 +11,41 @@ tags:
   - ServiceWorker
 translation_of: Web/API/Navigator/serviceWorker
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary"><code><strong>Navigator.serviceWorker</strong></code> は読み取り専用のプロパティで、<a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">関連付けられた文書</a>で {{domxref("ServiceWorker")}} の登録、削除、更新、通信へのアクセスを提供する {{domxref("ServiceWorkerContainer")}} オブジェクトを返します。</span></p>
+**`Navigator.serviceWorker`** は読み取り専用のプロパティで、[関連付けられた文書](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)で {{domxref("ServiceWorker")}} の登録、削除、更新、通信へのアクセスを提供する {{domxref("ServiceWorkerContainer")}} オブジェクトを返します。
 
-<p>この機能はプライベートモードでは利用できない可能性があります。</p>
+この機能はプライベートモードでは利用できない可能性があります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var workerContainerInstance = navigator.serviceWorker;
-</pre>
+    var workerContainerInstance = navigator.serviceWorker;
 
-<h3 id="Value" name="Value">値</h3>
+### 値
 
-<p>{{domxref("ServiceWorkerContainer")}}</p>
+{{domxref("ServiceWorkerContainer")}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>このコードは、ブラウザーがサービスワーカーに対応しているかをチェックします。</p>
+このコードは、ブラウザーがサービスワーカーに対応しているかをチェックします。
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // Supported!
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Service Workers', '#navigator-serviceworker', 'navigator.serviceWorker')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                                                               | 状態                                 | 備考     |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Service Workers', '#navigator-serviceworker', 'navigator.serviceWorker')}} | {{Spec2('Service Workers')}} | 初回定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Navigator.serviceWorker")}}</p>
+{{Compat("api.Navigator.serviceWorker")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers">サービスワーカーの使用</a></li>
-</ul>
+- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
+- [サービスワーカーの使用](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)

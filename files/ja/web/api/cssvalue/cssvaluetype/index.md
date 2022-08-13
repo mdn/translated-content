@@ -10,72 +10,39 @@ tags:
   - cssValueType
 translation_of: Web/API/CSSValue/cssValueType
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("CSSValue")}} インターフェイスの <code><strong>cssValueType</strong></code> 読み取り専用プロパティは、現在計算されている CSS プロパティ値の型を表します。</p>
+{{domxref("CSSValue")}} インターフェイスの **`cssValueType`** 読み取り専用プロパティは、現在計算されている CSS プロパティ値の型を表します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>cssValueType</var> = <var>cssValue</var>.cssValueType;
-</pre>
+    cssValueType = cssValue.cssValueType;
 
-<h3 id="値">値</h3>
+### 値
 
-<p>値の型を定義するコードを表す <code>unsigned short</code> 。可能な値は次のとおりです:</p>
+値の型を定義するコードを表す `unsigned short` 。可能な値は次のとおりです:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">定数</td>
-   <td class="header">説明</td>
-  </tr>
-  <tr>
-   <td><code>CSS_CUSTOM</code></td>
-   <td>値はカスタム値です。</td>
-  </tr>
-  <tr>
-   <td><code>CSS_INHERIT</code></td>
-   <td>値は継承され、 <code>cssText</code> には <code>"inherit"</code> が含まれます。</td>
-  </tr>
-  <tr>
-   <td><code>CSS_PRIMITIVE_VALUE</code></td>
-   <td>値はプリミティブ値であり、 {{domxref("CSSPrimitiveValue")}} インターフェイスのインスタンスは、 <code>CSSValue</code> インターフェイスのこのインスタンスでバインディング固有のキャストメソッドを使用して取得できます。</td>
-  </tr>
-  <tr>
-   <td><code>CSS_VALUE_LIST</code></td>
-   <td>値は <code>CSSValue</code> リストであり、 {{domxref("CSSValueList")}} インターフェイスのインスタンスは、 <code>CSSValue</code> インターフェイスのこのインスタンスでバインディング固有のキャストメソッドを使用して取得できます。</td>
-  </tr>
- </tbody>
-</table>
+| 定数                  | 説明                                                                                                                                                                                                                   |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CSS_CUSTOM`          | 値はカスタム値です。                                                                                                                                                                                                   |
+| `CSS_INHERIT`         | 値は継承され、 `cssText` には `"inherit"` が含まれます。                                                                                                                                                               |
+| `CSS_PRIMITIVE_VALUE` | 値はプリミティブ値であり、 {{domxref("CSSPrimitiveValue")}} インターフェイスのインスタンスは、 `CSSValue` インターフェイスのこのインスタンスでバインディング固有のキャストメソッドを使用して取得できます。 |
+| `CSS_VALUE_LIST`      | 値は `CSSValue` リストであり、 {{domxref("CSSValueList")}} インターフェイスのインスタンスは、 `CSSValue` インターフェイスのこのインスタンスでバインディング固有のキャストメソッドを使用して取得できます。     |
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js; highlight[3] notranslate">var styleDeclaration = document.styleSheets[0].cssRules[0].style;
+```js
+var styleDeclaration = document.styleSheets[0].cssRules[0].style;
 var cssValue = styleDeclaration.getPropertyCSSValue("color");
 console.log(cssValue.cssValueType);
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSValue-cssValueType', 'CSSValue.cssValueType')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                                                     | ステータス                       | 備考     |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| {{SpecName('DOM2 Style', 'css.html#CSS-CSSValue-cssValueType', 'CSSValue.cssValueType')}} | {{Spec2('DOM2 Style')}} | 初回定義 |
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>
-
-
-<p>{{Compat("api.CSSValue.cssValueType")}}</p>
-</div>
+{{Compat("api.CSSValue.cssValueType")}}

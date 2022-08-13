@@ -9,63 +9,43 @@ tags:
   - get
 translation_of: Web/API/URLSearchParams/get
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><span class="seoSummary">{{domxref("URLSearchParams")}} インターフェースの <strong><code>get()</code></strong> メソッドは、指定された検索パラメーターに関連付けられた最初の値を返します。</span></p>
+{{domxref("URLSearchParams")}} インターフェースの **`get()`** メソッドは、指定された検索パラメーターに関連付けられた最初の値を返します。
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">URLSearchParams.get(<em>name</em>)</pre>
+    URLSearchParams.get(name)
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt>name</dt>
- <dd>返すパラメーターの名前。</dd>
-</dl>
+- name
+  - : 返すパラメーターの名前。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 戻り値
 
-<p>指定された検索パラメーターが見つかった場合、{{domxref("USVString")}}。 それ以外の場合、<strong><code>null</code></strong>。</p>
+指定された検索パラメーターが見つかった場合、{{domxref("USVString")}}。 それ以外の場合、**`null`**。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>ページの URL が <code>https://example.com/?name=Jonathan&amp;age=18</code> の場合、次を使用して 'name' および 'age' のパラメーターを解析できます。</p>
+ページの URL が `https://example.com/?name=Jonathan&age=18` の場合、次を使用して 'name' および 'age' のパラメーターを解析できます。
 
-<pre class="default prettyprint prettyprinted"><code>let params = new URLSearchParams(document.location.search.substring(1));
-let name = params.get("name")<span class="kwd">; // 文字列 "Jonathan" です。
-</span>let age = parseInt(params.get("age"), 10<span class="kwd">); // 数値 18 です。</span></code>
-</pre>
+    let params = new URLSearchParams(document.location.search.substring(1));
+    let name = params.get("name"); // 文字列 "Jonathan" です。
+    let age = parseInt(params.get("age"), 10); // 数値 18 です。
 
-<p>クエリー文字列に存在しないパラメーターを要求すると、<strong><code>null</code></strong> が返されます。</p>
+クエリー文字列に存在しないパラメーターを要求すると、**`null`** が返されます。
 
-<pre><code>let address = params.get("address"); // null</code></pre>
+    let address = params.get("address"); // null
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#dom-urlsearchparams-get', "get()")}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | 状態                 | コメント |
+| ---------------------------------------------------------------------------- | -------------------- | -------- |
+| {{SpecName('URL', '#dom-urlsearchparams-get', "get()")}} | {{Spec2('URL')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.URLSearchParams.get")}}</p>
-</div>
+{{Compat("api.URLSearchParams.get")}}

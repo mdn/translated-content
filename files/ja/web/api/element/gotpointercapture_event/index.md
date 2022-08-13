@@ -13,95 +13,69 @@ tags:
 translation_of: Web/API/Document/gotpointercapture_event
 original_slug: Web/API/Document/gotpointercapture_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>gotpointercapture</code></strong> イベントは、要素が {{domxref("Element.setPointerCapture", "setPointerCapture()")}} を使用してポインターをキャプチャしたときに発生します。</p>
+**`gotpointercapture`** イベントは、要素が {{domxref("Element.setPointerCapture", "setPointerCapture()")}} を使用してポインターをキャプチャしたときに発生します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}}</td>
-  </tr>
- </tbody>
-</table>
+| バブリング                   | なし                                                                                                     |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------- |
+| キャンセル可能               | いいえ                                                                                                   |
+| インターフェイス             | {{domxref("PointerEvent")}}                                                                     |
+| イベントハンドラープロパティ | {{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} |
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>この例は <code>&lt;p&gt;</code> 要素を取得し、 <code>gotpointercapture</code> イベントを待ち受けします。 <code>setPointerCapture()</code> を <code>pointerdown</code> イベントの要素上で呼び出し、 <code>gotpointercapture</code> を発生させます。</p>
+この例は `<p>` 要素を取得し、 `gotpointercapture` イベントを待ち受けします。 `setPointerCapture()` を `pointerdown` イベントの要素上で呼び出し、 `gotpointercapture` を発生させます。
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-document.addEventListener('gotpointercapture', () =&gt; {
+document.addEventListener('gotpointercapture', () => {
   console.log('I\'ve been captured!')
 });
 
-para.addEventListener('pointerdown', (event) =&gt; {
+para.addEventListener('pointerdown', (event) => {
   para.setPointerCapture(event.pointerId);
 });
-</pre>
+```
 
-<p>同じ例ですが、 <code>ongotpointercapture</code> イベントハンドラーを使用して行います。</p>
+同じ例ですが、 `ongotpointercapture` イベントハンドラーを使用して行います。
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-document.ongotpointercapture = () =&gt; {
+document.ongotpointercapture = () => {
   console.log('I\'ve been captured!')
 };
 
-para.addEventListener('pointerdown', (event) =&gt; {
+para.addEventListener('pointerdown', (event) => {
   para.setPointerCapture(event.pointerId);
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#the-gotpointercapture-event')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-  </tr>
- </tbody>
-</table>
+| 仕様書                                                                               | 状態                                 |
+| ------------------------------------------------------------------------------------ | ------------------------------------ |
+| {{SpecName('Pointer Events', '#the-gotpointercapture-event')}} | {{Spec2('Pointer Events')}} |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.gotpointercapture_event")}}</p>
+{{Compat("api.Document.gotpointercapture_event")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連イベント
-  <ul>
-   <li>{{domxref("Document/lostpointercapture_event", "lostpointercapture")}}</li>
-   <li>{{domxref("Document/pointerover_event", "pointerover")}}</li>
-   <li>{{domxref("Document/pointerenter_event", "pointerenter")}}</li>
-   <li>{{domxref("Document/pointerdown_event", "pointerdown")}}</li>
-   <li>{{domxref("Document/pointermove_event", "pointermove")}}</li>
-   <li>{{domxref("Document/pointerup_event", "pointerup")}}</li>
-   <li>{{domxref("Document/pointercancel_event", "pointercancel")}}</li>
-   <li>{{domxref("Document/pointerout_event", "pointerout")}}</li>
-   <li>{{domxref("Document/pointerleave_event", "pointerleave")}}</li>
-  </ul>
- </li>
- <li>{{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} イベントハンドラープロパティ</li>
- <li><code>HTMLElement</code> を対象としたこのイベント: {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}} イベント</li>
-</ul>
+- 関連イベント
+
+  - {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+  - {{domxref("Document/pointerover_event", "pointerover")}}
+  - {{domxref("Document/pointerenter_event", "pointerenter")}}
+  - {{domxref("Document/pointerdown_event", "pointerdown")}}
+  - {{domxref("Document/pointermove_event", "pointermove")}}
+  - {{domxref("Document/pointerup_event", "pointerup")}}
+  - {{domxref("Document/pointercancel_event", "pointercancel")}}
+  - {{domxref("Document/pointerout_event", "pointerout")}}
+  - {{domxref("Document/pointerleave_event", "pointerleave")}}
+
+- {{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} イベントハンドラープロパティ
+- `HTMLElement` を対象としたこのイベント: {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}} イベント

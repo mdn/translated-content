@@ -14,74 +14,59 @@ tags:
 translation_of: Web/API/SpeechRecognition/onnomatch
 original_slug: Web/API/SpeechRecognition/onnomatch
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>{{domxref("SpeechRecognition")}}インターフェイスの <strong><code>onnomatch</code></strong> プロパティ、文法の辞書による音声認識サービスの最終結果として何も認識されていない場合 ({{event("nomatch")}}イベントが発生した時)、実行するイベントハンドラーになります。</p>
+{{domxref("SpeechRecognition")}}インターフェイスの **`onnomatch`** プロパティ、文法の辞書による音声認識サービスの最終結果として何も認識されていない場合 ({{event("nomatch")}}イベントが発生した時)、実行するイベントハンドラーになります。
 
-<p>{{domxref("SpeechRecognitionAlternative.confidence","confidence")}}の<span class="text">閾値</span>を超えたり満たしたりしない程度の認識がされた場合も含まれます。</p>
+{{domxref("SpeechRecognitionAlternative.confidence","confidence")}}の閾値を超えたり満たしたりしない程度の認識がされた場合も含まれます。
 
-<div class="note">
-<p>注意：<code>onnomatch</code> ハンドラーは Firefox でまだ良く動作していませんので — 音声認識API は正規なマッチを返し、文法の辞書による項目を推測します。この不具合は今対応中です。</p>
-</div>
+> **Note:** 注意：`onnomatch` ハンドラーは Firefox でまだ良く動作していませんので — 音声認識 API は正規なマッチを返し、文法の辞書による項目を推測します。この不具合は今対応中です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">mySpeechRecognition.onnomatch = function() { ... };
-</pre>
+    mySpeechRecognition.onnomatch = function() { ... };
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">var recognition = new SpeechRecognition();
+```js
+var recognition = new SpeechRecognition();
 
 recognition.onnomatch = function() {
   console.log('音声は認識できませんでした。');
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-onnomatch', 'onnomatch')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                             | 状態                                 | コメント |
+| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Web Speech API', '#dfn-onnomatch', 'onnomatch')}} | {{Spec2('Web Speech API')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
-<div>
+{{Compat("api.SpeechRecognition.onnomatch")}}
 
+### Firefox OS の権限
 
-<p>{{Compat("api.SpeechRecognition.onnomatch")}}</p>
-</div>
+アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加するのは必要になります。
 
-<h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS の権限</h3>
-
-<p>アプリで音声認識を利用する前に、下記の権限を <a href="/ja/docs/Web/Apps/Build/Manifest">manifest</a> に追加するのは必要になります。</p>
-
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>privileged アプリも必要なので、下記の追加も必要になります。</p>
+privileged アプリも必要なので、下記の追加も必要になります。
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)

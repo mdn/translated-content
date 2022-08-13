@@ -3,52 +3,39 @@ title: VREyeParameters.offset
 slug: Web/API/VREyeParameters/offset
 translation_of: Web/API/VREyeParameters/offset
 ---
-<p>{{APIRef("WebVR API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>{{domxref("VREyeParameters")}} インターフェイスの <strong><code>offset</code></strong> 読取専用プロパティは，ユーザの両眼の中心からのオフセット量を表します．単位はメートルです．</p>
+{{domxref("VREyeParameters")}} インターフェイスの **`offset`** 読取専用プロパティは，ユーザの両眼の中心からのオフセット量を表します．単位はメートルです．
 
-<p>この値は，ユーザの瞳孔間距離(IPD)の半分になっているべきですが，指定した側の眼のレンズの中心とヘッドセットの中心との距離を表す場合があります．</p>
+この値は，ユーザの瞳孔間距離(IPD)の半分になっているべきですが，指定した側の眼のレンズの中心とヘッドセットの中心との距離を表す場合があります．
 
-<h2 id="シンタックス">シンタックス</h2>
+## シンタックス
 
-<pre class="brush: js">var myEyeTranslation = myVRDisplay.getEyeParameters('left').offset;</pre>
+```js
+var myEyeTranslation = myVRDisplay.getEyeParameters('left').offset;
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>{{domxref("Float32Array")}}．</p>
+{{domxref("Float32Array")}}．
 
-<div class="note">
-<p><dfn><strong>注記</strong>: 左目の値は負で，右目の場合は正の値になります．</dfn></p>
-</div>
+> **Note:** _**注記**: 左目の値は負で，右目の場合は正の値になります．_
 
-<h2 id="例">例</h2>
+## 例
 
-<pre>TBD.</pre>
+    TBD.
 
-<h2 id="仕様">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#dom-vreyeparameters-offset', 'offset')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                        | Status                   | Comment            |
+| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('WebVR', '#dom-vreyeparameters-offset', 'offset')}} | {{Spec2('WebVR')}} | Initial definition |
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.VREyeParameters.offset")}}</p>
+{{Compat("api.VREyeParameters.offset")}}
 
-<h2 id="参照">参照</h2>
+## 参照
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — Mozilla VRチームのデモ，ダウンロード，その他のリソース．</li>
-</ul>
+- [WebVR API homepage](/ja/docs/Web/API/WebVR_API).
+- [MozVr.com](http://mozvr.com/) — Mozilla VR チームのデモ，ダウンロード，その他のリソース．

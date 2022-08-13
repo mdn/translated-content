@@ -8,39 +8,37 @@ tags:
   - Reference
 translation_of: Web/API/StyleSheet/ownerNode
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+## 概要
 
-<p><strong>ownerNode</strong> は、このスタイルシートを document と関連付けているノードを返します。</p>
+**ownerNode** は、このスタイルシートを document と関連付けているノードを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>objRef</em> = stylesheet.ownerNode
-</pre>
+    objRef = stylesheet.ownerNode
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="eval">&lt;html&gt;
- &lt;head&gt;
-  &lt;link rel="StyleSheet" href="example.css" type="text/css" /&gt;
-  &lt;script&gt;
-   function stilo() {
-    alert(document.styleSheets[0].ownerNode);
-   }
-  &lt;/script&gt;
- &lt;/head&gt;
- &lt;body&gt;
-   &lt;button onclick="stilo()"&gt;ss&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-// displays "object HTMLLinkElement"
-</pre>
+    <html>
+     <head>
+      <link rel="StyleSheet" href="example.css" type="text/css" />
+      <script>
+       function stilo() {
+        alert(document.styleSheets[0].ownerNode);
+       }
+      </script>
+     </head>
+     <body>
+       <button onclick="stilo()">ss</button>
+     </body>
+    </html>
+    // displays "object HTMLLinkElement"
 
-<h2 id="Notes" name="Notes">補記</h2>
+## 補記
 
-<p>HTML の場合、<strong>ownerNode</strong> は、相当する {{HTMLElement("link")}} 要素または {{HTMLElement("style")}}  要素になるでしょう。XML の場合、リンク処理命令になるでしょう。他のスタイルシートに含まれるスタイルシートの場合、この属性の値は <code>NULL</code> になります。</p>
+HTML の場合、**ownerNode** は、相当する {{HTMLElement("link")}} 要素または {{HTMLElement("style")}} 要素になるでしょう。XML の場合、リンク処理命令になるでしょう。他のスタイルシートに含まれるスタイルシートの場合、この属性の値は `NULL` になります。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<p>DOM Level 2 Styles - STYLESHEET</p>
+DOM Level 2 Styles - STYLESHEET

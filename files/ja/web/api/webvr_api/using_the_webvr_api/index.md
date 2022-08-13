@@ -3,61 +3,54 @@ title: WebVR APIの使い方
 slug: Web/API/WebVR_API/Using_the_WebVR_API
 translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
-<p class="summary"><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> はウェブ開発者のツールキットへのすばらしい追加機能で、<a href="https://developer.oculus.com/">Oculus Rift</a> のようなバーチャルリアリティハードウェアへのアクセスが可能となります。そして出力された動きや向きはウェブアプリの描画更新に変換されます。しかし VR アプリを開発はどのようにやればいいのでしょうか？ この記事では、それに関する基礎的な解説を行います。</p>
+[WebVR API](/ja/docs/Web/API/WebVR_API) はウェブ開発者のツールキットへのすばらしい追加機能で、[Oculus Rift](https://developer.oculus.com/) のようなバーチャルリアリティハードウェアへのアクセスが可能となります。そして出力された動きや向きはウェブアプリの描画更新に変換されます。しかし VR アプリを開発はどのようにやればいいのでしょうか？ この記事では、それに関する基礎的な解説を行います。
 
-<div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>注記</strong></span>: WebVR は現在実験的な段階にあります（<a href="http://mozvr.github.io/webvr-spec/webvr.html">最新の仕様はこちら</a>にあります); 今の段階でもっとも正常に動作するのは Firefox Nightly/Developer Edition で、一部の機能は Google Chrome でも動作します。詳細は Brandon Jonesの  <a class="external external-icon" href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">Bringing VR to Chrome</a> を参照してください。</p>
-</div>
+> **Note:** **注記**: WebVR は現在実験的な段階にあります（[最新の仕様はこちら](http://mozvr.github.io/webvr-spec/webvr.html)にあります); 今の段階でもっとも正常に動作するのは Firefox Nightly/Developer Edition で、一部の機能は Google Chrome でも動作します。詳細は Brandon Jones の [Bringing VR to Chrome](http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html) を参照してください。
 
-<h2 id="始めるには">始めるには</h2>
+## 始めるには
 
-<p>WebVRを始めるには，VRハードウェアのマニュアルに従ったセットアップと、<a href="/ja/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a> に示されているコンピュータへの設定が必要になります、スムースな動作には専用GPUが推奨されます。</p>
+WebVR を始めるには，VR ハードウェアのマニュアルに従ったセットアップと、[WebVR environment setup](/ja/docs/Web/API/WebVR_API/WebVR_environment_setup) に示されているコンピュータへの設定が必要になります、スムースな動作には専用 GPU が推奨されます。
 
-<p><a href="https://nightly.mozilla.org/">Firefox Nightly</a> (または <a href="https://www.mozilla.org/en-US/firefox/developer/">Developer Edition</a>) のインストールと合わせて <a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR Enabler Add-on</a> も必要となります。</p>
+[Firefox Nightly](https://nightly.mozilla.org/) (または [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)) のインストールと合わせて [WebVR Enabler Add-on](http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi) も必要となります。
 
-<p>いちど環境が設定できたら、テストのために私たちの <a href="http://mozvr.com/projects/">MozVR projects</a> を開いて、[Enter VR<strong>]</strong> ボタンをクリックすることを試してください。</p>
+いちど環境が設定できたら、テストのために私たちの [MozVR projects](http://mozvr.com/projects/) を開いて、\[Enter VR**]** ボタンをクリックすることを試してください。
 
-<div class="note">
-<p><strong>注記</strong>: より深い情報のために，<a href="/ja/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a> をチェックしてください。</p>
-</div>
+> **Note:** **注記**: より深い情報のために，[WebVR environment setup](/ja/docs/Web/API/WebVR_API/WebVR_environment_setup) をチェックしてください。
 
-<div class="note">
-<p><strong>注記</strong>: モバイルデバイスを HMD として用いるような安価な選択肢もあります。この場合，位置センサは利用できませんので、代わりに <a href="/ja/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">deviceorientation API</a> を用いて擬似的な向きデータを使う必要があるかもしれません。</p>
-</div>
+> **Note:** **注記**: モバイルデバイスを HMD として用いるような安価な選択肢もあります。この場合，位置センサは利用できませんので、代わりに [deviceorientation API](/ja/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) を用いて擬似的な向きデータを使う必要があるかもしれません。
 
-<h2 id="簡単なデモ">簡単なデモ</h2>
+## 簡単なデモ
 
-<p>WebVR のデモは <a href="https://github.com/MozVR/">MozVR team repo</a> や <a href="https://github.com/mdn/webvr-tests">MDN webvr-tests repo</a> にたくさんありますが、この記事では、主に<a href="https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice">positionsensorvrdevice</a> について (<a href="http://mdn.github.io/webvr-tests/positionsensorvrdevice/">動作しているデモ</a>) を例に解説します。</p>
+WebVR のデモは [MozVR team repo](https://github.com/MozVR/) や [MDN webvr-tests repo](https://github.com/mdn/webvr-tests) にたくさんありますが、この記事では、主に[positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) について ([動作しているデモ](http://mdn.github.io/webvr-tests/positionsensorvrdevice/)) を例に解説します。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10797/vrpositionsensor-demo.png" style="display: block; height: 396px; margin: 0px auto; width: 800px;"></p>
+![](https://mdn.mozillademos.org/files/10797/vrpositionsensor-demo.png)
 
-<p>これは簡単な 2.5D のデモで，<a href="/ja/docs/Web/HTML/Element/canvas">HTML5 Canvas</a> にレンダリングされた Firefox ロゴが右目と左目のビューに表示されるものです．VR HMDでデモを見ているときにキャンバスをクリックすると、デモはフルスクリーンになり、Firefox ロゴに近づけるようになります。あなたが動くと頭の動きに合わせて上下左右や回転してリアルに動きます。</p>
+これは簡単な 2.5D のデモで，[HTML5 Canvas](/ja/docs/Web/HTML/Element/canvas) にレンダリングされた Firefox ロゴが右目と左目のビューに表示されるものです．VR HMD でデモを見ているときにキャンバスをクリックすると、デモはフルスクリーンになり、Firefox ロゴに近づけるようになります。あなたが動くと頭の動きに合わせて上下左右や回転してリアルに動きます。
 
-<p>あなたが WebVR のコードがどう動いているかを簡単に確認できるように、デモは意図的にシンプルになるよう保持されています。API は十分シンプルであるため，単純な DOM ベースインターフェイスでも複雑な WebGL シーンでも、好きなアプリに WebVR 制御の移動を簡単に適用できます。</p>
+あなたが WebVR のコードがどう動いているかを簡単に確認できるように、デモは意図的にシンプルになるよう保持されています。API は十分シンプルであるため，単純な DOM ベースインターフェイスでも複雑な WebGL シーンでも、好きなアプリに WebVR 制御の移動を簡単に適用できます。
 
-<h2 id="アプリはどう動く">アプリはどう動く?</h2>
+## アプリはどう動く?
 
-<p>このセクションでは、アプリを動作させるために必要なコードの変更箇所を通じて、基礎的なレベルで何が必要かを知ることができます。</p>
+このセクションでは、アプリを動作させるために必要なコードの変更箇所を通じて、基礎的なレベルで何が必要かを知ることができます。
 
-<h3 id="VRデバイスへのアクセス">VRデバイスへのアクセス</h3>
+### VR デバイスへのアクセス
 
-<p>最初にコンピュータに接続中のVRハードウェアへのプログラム的な参照を取得します。それには接続中の全 VR デバイスの配列へと解決できるプロミスを返す {{domxref("Navigator.getVRDevices")}} を使います。</p>
+最初にコンピュータに接続中の VR ハードウェアへのプログラム的な参照を取得します。それには接続中の全 VR デバイスの配列へと解決できるプロミスを返す {{domxref("Navigator.getVRDevices")}} を使います。
 
-<p>返される可能性のあるオブジェクトが2種類あります:</p>
+返される可能性のあるオブジェクトが 2 種類あります:
 
-<ul>
- <li>{{domxref("PositionSensorVRDevice")}}: 位置センサカメラ。</li>
- <li>{{domxref("HMDVRDevice")}}: VRヘッドマウントディスプレイ。</li>
-</ul>
+- {{domxref("PositionSensorVRDevice")}}: 位置センサカメラ。
+- {{domxref("HMDVRDevice")}}: VR ヘッドマウントディスプレイ。
 
-<p> <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/vrdevice">vrdevice demo</a> で基本的なデバイス情報を表示するための非常に簡単なコードを見ることができます。</p>
+[vrdevice demo](https://github.com/mdn/webvr-tests/tree/gh-pages/vrdevice) で基本的なデバイス情報を表示するための非常に簡単なコードを見ることができます。
 
-<p>本当に欲しいものはデバイスのペアを取得するものです (将来のマルチプレイヤVRゲームでは複数のペアになるかもですが)。WebVR 仕様からもってきた（そして <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice">positionsensorvrdevice</a> デモでも使っている）次のコードはかなりよく使うトリックです:</p>
+本当に欲しいものはデバイスのペアを取得するものです (将来のマルチプレイヤ VR ゲームでは複数のペアになるかもですが)。WebVR 仕様からもってきた（そして [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) デモでも使っている）次のコードはかなりよく使うトリックです:
 
-<pre class="brush: js">var gHMD, gPositionSensor;
+```js
+var gHMD, gPositionSensor;
 
 navigator.getVRDevices().then(function(devices) {
-  for (var i = 0; i &lt; devices.length; ++i) {
+  for (var i = 0; i < devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];
       break;
@@ -65,37 +58,43 @@ navigator.getVRDevices().then(function(devices) {
   }
 
   if (gHMD) {
-    for (var i = 0; i &lt; devices.length; ++i) {
-      if (devices[i] instanceof PositionSensorVRDevice &amp;&amp; devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
+    for (var i = 0; i < devices.length; ++i) {
+      if (devices[i] instanceof PositionSensorVRDevice && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
         gPositionSensor = devices[i];
         break;
       }
     }
   }
-});</pre>
+});
+```
 
-<p>最初に見つかった {{domxref("HMDVRDevice")}} のインスタンスを取得し、それを <code>gHMD</code> 変数へ保存します．次に見つかった {{domxref("PositionSensorVRDevice")}} のインスタンスを取得して <code>gPositionSensor</code> 変数に代入していますが，それは先ほど取得した <code>gHMD</code> オブジェクトの {{domxref("VRDevice.hardWareUnitId")}} プロパティが一致するものだけを対象にしています。同一のハードウェアは複数のデバイスとして取得されますが、それらはハードウェアユニットIDを共有しています — これは取得した 2 つのデバイスの参照がマッチングしているかをチェックする方法です。</p>
+最初に見つかった {{domxref("HMDVRDevice")}} のインスタンスを取得し、それを `gHMD` 変数へ保存します．次に見つかった {{domxref("PositionSensorVRDevice")}} のインスタンスを取得して `gPositionSensor` 変数に代入していますが，それは先ほど取得した `gHMD` オブジェクトの {{domxref("VRDevice.hardWareUnitId")}} プロパティが一致するものだけを対象にしています。同一のハードウェアは複数のデバイスとして取得されますが、それらはハードウェアユニット ID を共有しています — これは取得した 2 つのデバイスの参照がマッチングしているかをチェックする方法です。
 
-<h3 id="アプリの初期化">アプリの初期化</h3>
+### アプリの初期化
 
-<p>シーンを描画する {{htmlelement("canvas")}} 要素を次のように作成し、配置します:</p>
+シーンを描画する {{htmlelement("canvas")}} 要素を次のように作成し、配置します:
 
-<pre class="brush: js">var myCanvas = document.createElement('canvas');
+```js
+var myCanvas = document.createElement('canvas');
 var ctx = myCanvas.getContext('2d');
 var body = document.querySelector('body');
-body.appendChild(myCanvas);</pre>
+body.appendChild(myCanvas);
+```
 
-<p>次に、新しい <a href="/ja/docs/Web/API/HTMLImageElement">image</a> を作成し、アプリの <a href="/ja/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript">main loop</a> である<code>draw()を実行する前に </code>image が <code>ロードされているかをチェックするために</code> {{event("load")}} イベントを使います:</p>
+次に、新しい [image](/ja/docs/Web/API/HTMLImageElement) を作成し、アプリの [main loop](/ja/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript) である`draw()を実行する前に `image が `ロードされているかをチェックするために` {{event("load")}} イベントを使います:
 
-<pre class="brush: js">var image = new Image();
+```js
+var image = new Image();
 image.src = 'firefox.png';
-image.onload = draw;</pre>
+image.onload = draw;
+```
 
-<h3 id="メインループ">メインループ</h3>
+### メインループ
 
-<p><code>draw()</code> は次のように実装します:</p>
+`draw()` は次のように実装します:
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   WIDTH = window.innerWidth;
   HEIGHT = window.innerHeight;
   lCtrOffset = WIDTH*0.25;
@@ -109,58 +108,60 @@ image.onload = draw;</pre>
   drawCrosshairs();
 
   requestAnimationFrame(draw);
-}</pre>
+}
+```
 
-<p><a href="/ja/docs/Web/API/Window">window</a> の <code>WIDTH</code> と <code>HEIGHT</code> は各フレームでリサンプリングされ，次の設定に使われます:</p>
+[window](/ja/docs/Web/API/Window) の `WIDTH` と `HEIGHT` は各フレームでリサンプリングされ，次の設定に使われます:
 
-<ul>
- <li>左右の目のビュー中心からの相対的に描画される画像を維持するのに使われる左右のオフセット値です。半分の幅のシーンのコピーを描画するので、各コピーの中心はそれぞれ、エッジの端から端までのキャンバス全体幅のちょうど1/4の幅になります。</li>
- <li>キャンバスの <a href="/ja/docs/Web/API/HTMLCanvasElement/width">width</a> と <a href="/ja/docs/Web/API/HTMLCanvasElement/height">height</a>。</li>
-</ul>
+- 左右の目のビュー中心からの相対的に描画される画像を維持するのに使われる左右のオフセット値です。半分の幅のシーンのコピーを描画するので、各コピーの中心はそれぞれ、エッジの端から端までのキャンバス全体幅のちょうど 1/4 の幅になります。
+- キャンバスの [width](/ja/docs/Web/API/HTMLCanvasElement/width) と [height](/ja/docs/Web/API/HTMLCanvasElement/height)。
 
-<p>これによってブラウザウィンドウがリサイズされたとしても、シーンが正しくリサイズされます。</p>
+これによってブラウザウィンドウがリサイズされたとしても、シーンが正しくリサイズされます。
 
-<p>次にメインループの中で3つの関数を実行しています:</p>
+次にメインループの中で 3 つの関数を実行しています:
 
-<ul>
- <li><code>setView()</code> は，VR ハードウェアから位置と向きの情報を受け取り，シーン内の更新された画像位置の描画に使用する準備をします。</li>
- <li><code>drawImages()</code> はシーンを更新された位置で実際に描画します。</li>
- <li><code>drawCrosshairs()</code> は常にシーンの中央にある十字線を描画します。</li>
-</ul>
+- `setView()` は，VR ハードウェアから位置と向きの情報を受け取り，シーン内の更新された画像位置の描画に使用する準備をします。
+- `drawImages()` はシーンを更新された位置で実際に描画します。
+- `drawCrosshairs()` は常にシーンの中央にある十字線を描画します。
 
-<p>これらの詳細は、後ほど解説します。</p>
+これらの詳細は、後ほど解説します。
 
-<p>ループの最後に <a href="/ja/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame(draw)</a>  を実行し<code>、draw()</code> ループが連続して呼び出されるようにします。</p>
+ループの最後に [requestAnimationFrame(draw)](/ja/docs/Web/API/window/requestAnimationFrame) を実行し`、draw()` ループが連続して呼び出されるようにします。
 
-<h3 id="位置と向き情報の受取り">位置と向き情報の受取り</h3>
+### 位置と向き情報の受取り
 
-<p>では  <code>setView()</code> 関数の詳細を見ていきましょう。コードの各部分を順に追って、そこで何をしているかを説明します:</p>
+では `setView()` 関数の詳細を見ていきましょう。コードの各部分を順に追って、そこで何をしているかを説明します:
 
-<pre class="brush: js">function setView() {
-  var posState = gPositionSensor.getState();</pre>
+```js
+function setView() {
+  var posState = gPositionSensor.getState();
+```
 
-<p>位置センサへの参照を使って {{domxref("PositionSensorVRDevice.getState")}} を呼び出します。このメソッドは、あなたが知りたい現在のHMDの状態のすべてを返します —  {{domxref("VRPositionState")}} オブジェクトへのアクセスを通じて — 位置、向き、そして速度/ 加速度や角速度 / 角加速度のようなより高度な情報を含んでいます。</p>
+位置センサへの参照を使って {{domxref("PositionSensorVRDevice.getState")}} を呼び出します。このメソッドは、あなたが知りたい現在の HMD の状態のすべてを返します — {{domxref("VRPositionState")}} オブジェクトへのアクセスを通じて — 位置、向き、そして速度/ 加速度や角速度 / 角加速度のようなより高度な情報を含んでいます。
 
-<pre class="brush: js">  if(posState.hasPosition) {
+```js
+  if(posState.hasPosition) {
     posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
                                 + roundToTwo(posState.position.y) + " z"
                                 + roundToTwo(posState.position.z);
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
-    if(-posState.position.z &gt; 0.01) {
+    if(-posState.position.z > 0.01) {
       zPos = -posState.position.z;
     } else {
       zPos = 0.01;
     }
-  }</pre>
+  }
+```
 
-<p>HMDのスイッチがOFFにされたり位置センサを向いていなかったりした場合など、アプリがエラーになったり停止したりしないように、 {{domxref("VRPositionState.hasPosition")}} を使って HMD の正常な位置情報が利用可能かを確認する方法をチェックします。</p>
+HMD のスイッチが OFF にされたり位置センサを向いていなかったりした場合など、アプリがエラーになったり停止したりしないように、 {{domxref("VRPositionState.hasPosition")}} を使って HMD の正常な位置情報が利用可能かを確認する方法をチェックします。
 
-<p>そして通知を目的として、アプリのUI内のパラグラフへ現在の位置情報を出力します。読みやすくするために、カスタム関数を使って小数点以下 2 桁に丸めています。</p>
+そして通知を目的として、アプリの UI 内のパラグラフへ現在の位置情報を出力します。読みやすくするために、カスタム関数を使って小数点以下 2 桁に丸めています。
 
-<p>最後に {{domxref("VRPositionState.position")}} に格納されている位置情報に関して、<code>xPos</code>、 <code>yPos</code>、<code>zPos</code> 変数に代入します。<code>zPos</code> の値を 0.01 以上にするのに <code>if ... else</code> ブロックが利用されていることに気付くでしょう — このアプリは0以下になると例外を投げていました。</p>
+最後に {{domxref("VRPositionState.position")}} に格納されている位置情報に関して、`xPos`、 `yPos`、`zPos` 変数に代入します。`zPos` の値を 0.01 以上にするのに `if ... else` ブロックが利用されていることに気付くでしょう — このアプリは 0 以下になると例外を投げていました。
 
-<pre class="brush: js">  if(posState.hasOrientation) {
+```js
+  if(posState.hasOrientation) {
     orientPara.textContent = 'Orientation: x' + roundToTwo(posState.orientation.x) + " y"
                                 + roundToTwo(posState.orientation.y) + " z"
                                 + roundToTwo(posState.orientation.z);
@@ -168,89 +169,99 @@ image.onload = draw;</pre>
     yOrient = -posState.orientation.y * HEIGHT * 2;
     zOrient = posState.orientation.z * 180;
 
-  }</pre>
+  }
+```
 
-<p>次に同じような処理をして、HMDの向きに応じてシーンの更新処理をします — {{domxref("VRPositionState.hasOrientation")}} を使って有効な向きデータかをチェックして，向きのデータを通知用のUIに表示し、<code>xOrient</code>、<code>yOrient</code>、<code>zOrient</code> の値を {{domxref("VRPositionState.orientation")}} に格納されている値から設定します．</p>
+次に同じような処理をして、HMD の向きに応じてシーンの更新処理をします — {{domxref("VRPositionState.hasOrientation")}} を使って有効な向きデータかをチェックして，向きのデータを通知用の UI に表示し、`xOrient`、`yOrient`、`zOrient` の値を {{domxref("VRPositionState.orientation")}} に格納されている値から設定します．
 
-<pre>  timePara.textContent = 'Timestamp: ' + Math.floor(posState.timeStamp);
-}</pre>
+      timePara.textContent = 'Timestamp: ' + Math.floor(posState.timeStamp);
+    }
 
-<p>最後に {{domxref("VRPositionState.timeStamp")}} に格納されている現在のタイムスタンプを通知 UI に出力します。この値は位置データが更新済みか、どんな順序で更新が発生したかを判断するのに役立ちます。</p>
+最後に {{domxref("VRPositionState.timeStamp")}} に格納されている現在のタイムスタンプを通知 UI に出力します。この値は位置データが更新済みか、どんな順序で更新が発生したかを判断するのに役立ちます。
 
-<h3 id="シーンの更新">シーンの更新</h3>
+### シーンの更新
 
-<p><code>setView()</code> で取得された <code>xPos</code>、<code>yPos</code>、<code>zPos</code>、<code>xOrient</code>、<code>yOrient</code>、<code>zOrient</code> の値は、<code>drawImages() </code>で行われるシーン病がの更新のための変更値として使用されます。どうやっているかを見ていきますが、左目のビューの描画コードだけをウォークスルーしていきます。右目については、右にオーバーシフトしている以外はほぼ同じです:</p>
+`setView()` で取得された `xPos`、`yPos`、`zPos`、`xOrient`、`yOrient`、`zOrient` の値は、`drawImages() `で行われるシーン病がの更新のための変更値として使用されます。どうやっているかを見ていきますが、左目のビューの描画コードだけをウォークスルーしていきます。右目については、右にオーバーシフトしている以外はほぼ同じです:
 
-<pre class="brush: js">function drawImages() {
+```js
+function drawImages() {
   ctx.fillStyle = 'white';
-  ctx.fillRect(0,0,WIDTH,HEIGHT);</pre>
+  ctx.fillRect(0,0,WIDTH,HEIGHT);
+```
 
-<p>最初に次のフレームが描画される前にシーンをクリアするため、白い {{domxref("CanvasRenderingContext2D.fillRect","fillRect()")}} を描画します。</p>
+最初に次のフレームが描画される前にシーンをクリアするため、白い {{domxref("CanvasRenderingContext2D.fillRect","fillRect()")}} を描画します。
 
-<pre class="brush: js">  ctx.save();
+```js
+  ctx.save();
   ctx.beginPath();
   ctx.translate(WIDTH/4,HEIGHT/2);
-  ctx.rect(-(WIDTH/4),-(HEIGHT/2),WIDTH/2,HEIGHT);</pre>
+  ctx.rect(-(WIDTH/4),-(HEIGHT/2),WIDTH/2,HEIGHT);
+```
 
-<p>次に左目のビューを別の画像として扱って右目のビューに影響を与えないコードにするので、 {{domxref("CanvasRenderingContext2D.save","save()")}} でコンテキスト状態を保存します。</p>
+次に左目のビューを別の画像として扱って右目のビューに影響を与えないコードにするので、 {{domxref("CanvasRenderingContext2D.save","save()")}} でコンテキスト状態を保存します。
 
-<p>そして {{domxref("CanvasRenderingContext2D.beginPath","pathを開始し")}}, {{domxref("CanvasRenderingContext2D.translate","canvasを変換します")}}、これによって原点を左目の中心（全体の1/4幅で半分の高さ）に移動させます。回転を正しく動かすためにもこれは必要です。回転はcanvasの原点が中心となります。そして左目のビュー全体を覆うように {{domxref("CanvasRenderingContext2D.rect","rect()")}} を描画します。</p>
+そして {{domxref("CanvasRenderingContext2D.beginPath","pathを開始し")}}, {{domxref("CanvasRenderingContext2D.translate","canvasを変換します")}}、これによって原点を左目の中心（全体の 1/4 幅で半分の高さ）に移動させます。回転を正しく動かすためにもこれは必要です。回転は canvas の原点が中心となります。そして左目のビュー全体を覆うように {{domxref("CanvasRenderingContext2D.rect","rect()")}} を描画します。
 
-<p><code>rect()</code> はマイナスの 1/4 幅，マイナスの1/2 高さから描画し始めていることに注意してください。これは原点が既に移動しているためです。</p>
+`rect()` はマイナスの 1/4 幅，マイナスの 1/2 高さから描画し始めていることに注意してください。これは原点が既に移動しているためです。
 
-<pre>  ctx.clip();</pre>
+      ctx.clip();
 
-<p>canvas を {{domxref("CanvasRenderingContext2D.clip","clip()")}} します。<code>rect()</code> が描画された直後にこれを呼ぶので、キャンバス上に対して行うことは <code>rect() の内側に制限され</code>、<code>restore()</code> が呼び出されるまですべてのオーバーフローは隠蔽されます（後述）。これは左ビュー全体が右ビューから独立したままであることを保証します。</p>
+canvas を {{domxref("CanvasRenderingContext2D.clip","clip()")}} します。`rect()` が描画された直後にこれを呼ぶので、キャンバス上に対して行うことは `rect() の内側に制限され`、`restore()` が呼び出されるまですべてのオーバーフローは隠蔽されます（後述）。これは左ビュー全体が右ビューから独立したままであることを保証します。
 
-<pre class="brush: js">  ctx.rotate(zOrient * Math.PI / 180);</pre>
+```js
+  ctx.rotate(zOrient * Math.PI / 180);
+```
 
-<p>頭の回転と同じようにシーンを回転させるために、zOrientの値に従った回転が画像に適用します。</p>
+頭の回転と同じようにシーンを回転させるために、zOrient の値に従った回転が画像に適用します。
 
-<pre class="brush: js">  ctx.drawImage(image,-(WIDTH/4)+lCtrOffset-((image.width)/(2*(1/zPos)))+xPos-yOrient,-((image.height)/(2*(1/zPos)))+yPos+xOrient,image.width*zPos,image.height*zPos);</pre>
+```js
+  ctx.drawImage(image,-(WIDTH/4)+lCtrOffset-((image.width)/(2*(1/zPos)))+xPos-yOrient,-((image.height)/(2*(1/zPos)))+yPos+xOrient,image.width*zPos,image.height*zPos);
+```
 
-<p>実際に画像を描画しましょう!  この少し厄介なコードを、ここでは引数ごとに分解してみましょう:</p>
+実際に画像を描画しましょう! この少し厄介なコードを、ここでは引数ごとに分解してみましょう:
 
-<ul>
- <li><code>image</code>: 描画する画像</li>
- <li>
-  <p><code>-(WIDTH/4)+lCtrOffset-((image.width)/(2*(1/zPos)))+xPos-yOrient</code>: 画像原点の水平座標。前に行った平行移動を打ち消すために <code>WIDTH/4</code> を引きます．そして中心に戻すために左中心オフセットを加えて，画像幅を <code>zPos</code> の逆数の2倍で割ったものを引きます— 描画する画像が小さい（大きい）ほど減算値が小さい（大きい）くなり，画像中心が保持されます．最後に，HMD の水平方向の動きや回転にあわせて画像位置を更新するために <code>xPos</code> を加えて，<code>yOrient</code> を引きます（y軸周りの回転が画像を水平方向に移動します)。</p>
- </li>
- <li><code>-((image.height)/(2*(1/zPos)))+yPos+xOrient</code>: 画像原点の垂直方向の座標です。これはIn this case the "HEIGHT/2の減算"と"右中心オフセットの追加"は、ちょうどお互いにキャンセルされるので、計算式から取り除きます。計算式の残りは上と同じように、zPos の逆数の 2 倍で画像幅を割ったものを減算することによる画像中心を保持と、<code>yPos</code> と <code>xOrient </code>による描画位置の修正です。</li>
- <li><code>image.width*zPos</code>: 画像を描画する幅;  近いものほど大きく描画されるように <code>zPos</code> で修正します。</li>
- <li><code>image.height*zPos</code>: 画像を描画する高さ; 近いものほど大きく描画されるように <code>zPos</code> で修正します。</li>
-</ul>
+- `image`: 描画する画像
+- `-(WIDTH/4)+lCtrOffset-((image.width)/(2*(1/zPos)))+xPos-yOrient`: 画像原点の水平座標。前に行った平行移動を打ち消すために `WIDTH/4` を引きます．そして中心に戻すために左中心オフセットを加えて，画像幅を `zPos` の逆数の 2 倍で割ったものを引きます— 描画する画像が小さい（大きい）ほど減算値が小さい（大きい）くなり，画像中心が保持されます．最後に，HMD の水平方向の動きや回転にあわせて画像位置を更新するために `xPos` を加えて，`yOrient` を引きます（y 軸周りの回転が画像を水平方向に移動します)。
+- `-((image.height)/(2*(1/zPos)))+yPos+xOrient`: 画像原点の垂直方向の座標です。これは In this case the "HEIGHT/2 の減算"と"右中心オフセットの追加"は、ちょうどお互いにキャンセルされるので、計算式から取り除きます。計算式の残りは上と同じように、zPos の逆数の 2 倍で画像幅を割ったものを減算することによる画像中心を保持と、`yPos` と `xOrient `による描画位置の修正です。
+- `image.width*zPos`: 画像を描画する幅; 近いものほど大きく描画されるように `zPos` で修正します。
+- `image.height*zPos`: 画像を描画する高さ; 近いものほど大きく描画されるように `zPos` で修正します。
 
-<pre class="brush: js">  ctx.strokeStyle = "black";
-  ctx.stroke();</pre>
+```js
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+```
 
-<p>左目ビューの周囲に黒い {{domxref("CanvasRenderingContext2D.stroke","stroke()")}} を描画します。これはビューの分離をちょっとだけわかりやすくする手助けとなります。</p>
+左目ビューの周囲に黒い {{domxref("CanvasRenderingContext2D.stroke","stroke()")}} を描画します。これはビューの分離をちょっとだけわかりやすくする手助けとなります。
 
-<pre class="brush: js">  ctx.restore();</pre>
+```js
+  ctx.restore();
+```
 
-<p>右目ビューの描画の実施に移行するため、キャンバスの復元を {{domxref("CanvasRenderingContext2D.restore","restore()")}} で行います。</p>
+右目ビューの描画の実施に移行するため、キャンバスの復元を {{domxref("CanvasRenderingContext2D.restore","restore()")}} で行います。
 
-<pre class="brush: js">  ...
-}</pre>
+```js
+  ...
+}
+```
 
-<div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>注記</strong></span>: ここである種のチートをしていて，2D キャンバスを使って3Dシーンを擬似的に表現しています。学習目的の場合、物事を簡単にすることができます。WEBテクノロジで作成された任意のアプリで、ビューレンダリングを修正するために上述した位置と向きのデータを使うことができます。例えば <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/3Dpositionorientation">3Dpositionorientation</a> デモでは、<a href="http://threejs.org/">Three.js</a> を使って作成されたWebGLシーンのビューを制御するために上述の方法と非常によく似たコードを使っています。</p>
-</div>
+> **Note:** **注記**: ここである種のチートをしていて，2D キャンバスを使って 3D シーンを擬似的に表現しています。学習目的の場合、物事を簡単にすることができます。WEB テクノロジで作成された任意のアプリで、ビューレンダリングを修正するために上述した位置と向きのデータを使うことができます。例えば [3Dpositionorientation](https://github.com/mdn/webvr-tests/tree/gh-pages/3Dpositionorientation) デモでは、[Three.js](http://threejs.org/) を使って作成された WebGL シーンのビューを制御するために上述の方法と非常によく似たコードを使っています。
 
-<div class="note">
-<p><span style="font-size: 14px; line-height: 21px;"><strong>注記</strong></span>:  <a href="https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html#L106-L119"><code>drawCrosshairs() のコード</code></a> は <code>drawImages()と比較して</code>非常にシンプルですので、もし興味があるなら自分自身で勉強することをおすすめします!</p>
-</div>
+> **Note:** **注記**: [`drawCrosshairs() のコード`](https://github.com/mdn/webvr-tests/blob/gh-pages/positionsensorvrdevice/index.html#L106-L119) は `drawImages()と比較して`非常にシンプルですので、もし興味があるなら自分自身で勉強することをおすすめします!
 
-<h3 id="フルスクリーン表示">フルスクリーン表示</h3>
+### フルスクリーン表示
 
-<p>VRエフェクトはアプリを <a href="/ja/docs/Web/Guide/API/DOM/Using_full_screen_mode">フルスクリーンモード</a> で実行すると非常に効果的です。ディスプレイのダブルクリックやボタンの押下のような、特定のイベントが発生した時に {{htmlelement("canvas")}} 要素をフルスクリーンにするための一般的な設定を説明します。</p>
+VR エフェクトはアプリを [フルスクリーンモード](/ja/docs/Web/Guide/API/DOM/Using_full_screen_mode) で実行すると非常に効果的です。ディスプレイのダブルクリックやボタンの押下のような、特定のイベントが発生した時に {{htmlelement("canvas")}} 要素をフルスクリーンにするための一般的な設定を説明します。
 
-<p>シンプルさを保つために、ここではキャンバスのクリック時に <code>fullScreen()</code> 関数を実行します:</p>
+シンプルさを保つために、ここではキャンバスのクリック時に `fullScreen()` 関数を実行します:
 
-<pre class="brush: js">myCanvas.addEventListener('click',fullScreen,false);</pre>
+```js
+myCanvas.addEventListener('click',fullScreen,false);
+```
 
-<p><code>fullScreen()</code> 関数は、できるだけ互換性を保つために、ブラウザによって異なるキャンバスに実装されている <code>requestFullscreen()</code> メソッドのバージョンをチェックして、見つかった適切な関数を呼び出します:</p>
+`fullScreen()` 関数は、できるだけ互換性を保つために、ブラウザによって異なるキャンバスに実装されている `requestFullscreen()` メソッドのバージョンをチェックして、見つかった適切な関数を呼び出します:
 
-<pre class="brush: js">function fullScreen() {
+```js
+function fullScreen() {
   if (myCanvas.requestFullscreen) {
     myCanvas.requestFullscreen();
   } else if (myCanvas.msRequestFullscreen) {
@@ -260,39 +271,44 @@ image.onload = draw;</pre>
   } else if (myCanvas.webkitRequestFullscreen) {
     myCanvas.webkitRequestFullscreen();
   }
-}</pre>
+}
+```
 
-<h2 id="FOV_とデバイスのキャリブレーション">FOV とデバイスのキャリブレーション</h2>
+## FOV とデバイスのキャリブレーション
 
-<p>現在のデモではあまり考えませんでしたが，商用アプリでは，ユーザが持っているVRハードウェアを正しく動作させるためにユーザキャリブレーションをする必要があるでしょう．WebVR API はそれを手助けする多くの機能があります。</p>
+現在のデモではあまり考えませんでしたが，商用アプリでは，ユーザが持っている VR ハードウェアを正しく動作させるためにユーザキャリブレーションをする必要があるでしょう．WebVR API はそれを手助けする多くの機能があります。
 
-<p>HMDの位置と姿勢をリセットするために {{domxref("PositionSensorVRDevice.resetSensor")}} メソッドを利用できます。実行すると、現在のヘッドセットの位置/向きが 0 にセットされます。実行前に，ヘッドセットが検知可能な位置にあることを保証する必要があります。positionsensorvrdevice demo*** では、[Reset Sensor] ボタンでそれを実行することができます:</p>
+HMD の位置と姿勢をリセットするために {{domxref("PositionSensorVRDevice.resetSensor")}} メソッドを利用できます。実行すると、現在のヘッドセットの位置/向きが 0 にセットされます。実行前に，ヘッドセットが検知可能な位置にあることを保証する必要があります。positionsensorvrdevice demo\*\*\* では、\[Reset Sensor] ボタンでそれを実行することができます:
 
-<pre class="brush: html">&lt;button&gt;Reset Sensor&lt;/button&gt;</pre>
+```html
+<button>Reset Sensor</button>
+```
 
-<pre class="brush: js">document.querySelector('button').onclick = function() {
+```js
+document.querySelector('button').onclick = function() {
   gPositionSensor.resetSensor();
-}</pre>
+}
+```
 
-<p>他にもヘッドセットの視野角 (FOV) を、シーン内で上，右，下，左方向に見える範囲がどの程度かキャリブレーションします。それぞれの目のパラメータを別々に返す {{domxref("HMDVRDevice.getEyeParameters")}} メソッドを呼ぶと、両目それぞれの情報を個別に受け取ることができます。なお左目用パラメータで 1 回、右目用で 1 回の計 2 回の呼出しが必要です。それぞれの目用に {{domxref("VREyeParameters")}} オブジェクトを返します。</p>
+他にもヘッドセットの視野角 (FOV) を、シーン内で上，右，下，左方向に見える範囲がどの程度かキャリブレーションします。それぞれの目のパラメータを別々に返す {{domxref("HMDVRDevice.getEyeParameters")}} メソッドを呼ぶと、両目それぞれの情報を個別に受け取ることができます。なお左目用パラメータで 1 回、右目用で 1 回の計 2 回の呼出しが必要です。それぞれの目用に {{domxref("VREyeParameters")}} オブジェクトを返します。
 
-<p>一例として、 {{domxref("VREyeParameters.currentFieldOfView")}} を用いて片目分の現在のFOV を受け取れます。これは次の 4 つのプロパティを持つ {{domxref("VRFieldOfView")}} オブジェクトを返します:</p>
+一例として、 {{domxref("VREyeParameters.currentFieldOfView")}} を用いて片目分の現在の FOV を受け取れます。これは次の 4 つのプロパティを持つ {{domxref("VRFieldOfView")}} オブジェクトを返します:
 
-<ul>
- <li>{{domxref("VRFieldOfViewReadOnly.upDegrees","upDegrees")}}: FOVの上方向へ広がる角度の値．</li>
- <li>{{domxref("VRFieldOfViewReadOnly.rightDegrees","rightDegrees")}}: FOVの右方向へ広がる角度の値．</li>
- <li>{{domxref("VRFieldOfViewReadOnly.downDegrees","downDegrees")}}: FOVの下方向へ広がる角度の値．</li>
- <li>{{domxref("VRFieldOfViewReadOnly.leftDegrees","leftDegrees")}}: FOVの左方向へ広がる角度の値．</li>
-</ul>
+- {{domxref("VRFieldOfViewReadOnly.upDegrees","upDegrees")}}: FOV の上方向へ広がる角度の値．
+- {{domxref("VRFieldOfViewReadOnly.rightDegrees","rightDegrees")}}: FOV の右方向へ広がる角度の値．
+- {{domxref("VRFieldOfViewReadOnly.downDegrees","downDegrees")}}: FOV の下方向へ広がる角度の値．
+- {{domxref("VRFieldOfViewReadOnly.leftDegrees","leftDegrees")}}: FOV の左方向へ広がる角度の値．
 
-<p>FOVは眼を頂点としたピラミッド形になっています．</p>
+FOV は眼を頂点としたピラミッド形になっています．
 
-<p>あなたのアプリに適切なFOVをユーザが持っているかをチェックし，もしそうでないなら  {{domxref("HMDVRDevice.setFieldOfView")}} メソッドを使って新しいFOVを設定します．これを扱う簡単な関数は次のような感じです:</p>
+あなたのアプリに適切な FOV をユーザが持っているかをチェックし，もしそうでないなら {{domxref("HMDVRDevice.setFieldOfView")}} メソッドを使って新しい FOV を設定します．これを扱う簡単な関数は次のような感じです:
 
-<pre class="brush: js">function setCustomFOV(up,right,down,left) {
+```js
+function setCustomFOV(up,right,down,left) {
   var testFOV = new VRFieldOfView(up,right,down,left);
 
   gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
-}</pre>
+}
+```
 
-<p>この関数は引数として4つの角度を受け取り、VRFieldOfView() コンストラクタを用いて新しい {{domxref("VRFieldOfView")}} オブジェクトを作成します。これを <code>setFieldOfView()</code> の最初の2つの引数（左目と右目のFOV）として渡します。第 3、4 引数は，FOV のオブジェクト可視領域を定義する眼からの最短、最大距離を示す <code>zNear</code> と <code>zFar</code> です．</p>
+この関数は引数として 4 つの角度を受け取り、VRFieldOfView() コンストラクタを用いて新しい {{domxref("VRFieldOfView")}} オブジェクトを作成します。これを `setFieldOfView()` の最初の 2 つの引数（左目と右目の FOV）として渡します。第 3、4 引数は，FOV のオブジェクト可視領域を定義する眼からの最短、最大距離を示す `zNear` と `zFar` です．

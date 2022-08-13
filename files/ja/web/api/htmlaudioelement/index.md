@@ -9,116 +9,72 @@ tags:
   - Reference
 translation_of: Web/API/HTMLAudioElement
 ---
-<p><strong><code>HTMLAudioElement</code></strong> インターフェイスは {{HTMLElement("audio")}} 要素のプロパティと、操作するメソッドを提供します。 {{domxref("HTMLMediaElement")}} インターフェイスから派生しています。</p>
+**`HTMLAudioElement`** インターフェイスは {{HTMLElement("audio")}} 要素のプロパティと、操作するメソッドを提供します。 {{domxref("HTMLMediaElement")}} インターフェイスから派生しています。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>固有のプロパティはありません。親である {{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} からプロパティを継承しています。</em></p>
+_固有のプロパティはありません。親である {{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<p><em>{{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} からメソッドを継承しています。</em></p>
+_{{domxref("HTMLMediaElement")}} および {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<h3 id="Constructor" name="Constructor">コンストラクター</h3>
+### コンストラクター
 
-<h4 id="Syntax" name="Syntax">構文</h4>
+#### 構文
 
-<pre class="syntaxbox">mySound = new Audio([<em>URLString</em>]);
-</pre>
+    mySound = new Audio([URLString]);
 
-<h4 id="Description" name="Description">説明</h4>
+#### 説明
 
-<p>audio 要素のコンストラクターです。返されるオブジェクトの <code>preload</code> プロパティは <code>auto</code> に設定され、 <code>src</code> プロパティは引数の値が設定されます。ブラウザーはオブジェクトを返す前、<em>非同期的に</em>リソースの選択を始めます。</p>
+audio 要素のコンストラクターです。返されるオブジェクトの `preload` プロパティは `auto` に設定され、 `src` プロパティは引数の値が設定されます。ブラウザーはオブジェクトを返す前、*非同期的に*リソースの選択を始めます。
 
-<p><em>メモ: <code>new Audio()</code> で作成された audio 要素は、音声を再生中にガベージコレクションされることはありません。 <code>pause()</code> メソッドが呼ばれるか、再生が終了するまで、再生を続けます。</em></p>
+_メモ: `new Audio()` で作成された audio 要素は、音声を再生中にガベージコレクションされることはありません。 `pause()` メソッドが呼ばれるか、再生が終了するまで、再生を続けます。_
 
-<h4 id="Parameters" name="Parameters"><em>引数</em></h4>
+#### _引数_
 
-<dl>
- <dt><em><code>URLString</code> (期待される型: {{domxref("DOMString")}}; 任意)</em></dt>
- <dd><em>構築される <code>HTMLAudioElement</code> の <code>src </code> プロパティ</em></dd>
-</dl>
+- _`URLString` (期待される型: {{domxref("DOMString")}}; 任意)_
+  - : _構築される `HTMLAudioElement` の `src `プロパティ_
 
-<h3 id="Regular_methods" name="Regular_methods"><em>通常メソッド</em></h3>
+### _通常メソッド_
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><em>名前と引数</em></th>
-   <th scope="col"><em>返値</em></th>
-   <th scope="col"><em>説明</em></th>
-  </tr>
-  <tr>
-   <td><em><code>mozCurrentSampleOffset()</code> {{non-standard_inline}}</em></td>
-   <td><em><code>unsigned long long</code></em></td>
-   <td><em><code>mozWriteAudio()</code> によって作成された音声ストリームの、現在のオフセットを示します。このオフセットは、ストリームの先頭からのサンプル番号で指定されます。</em></td>
-  </tr>
-  <tr>
-   <td>
-    <p><em><code>mozSetup(in PRUint32 channels, in PRUint32 rate)</code> {{non-standard_inline}}</em></p>
-   </td>
-   <td><em><code>void</code></em></td>
-   <td><em>書き込み用の音声ストリームを初期化します。引数でチャンネル数 (<code>1</code> でモノラル、 <code>2</code> でステレオ) とサンプリング周波数 (例えば 44.1kHz の場合は <code>44100</code>) を指定できます。</em></td>
-  </tr>
-  <tr>
-   <td><em><code>mozWriteAudio(in jsval data) </code>{{non-standard_inline}}</em></td>
-   <td><em><code>unsigned long</code></em></td>
-   <td><em>ストリームの現在のオフセットに音声を書き込みます。実際にストリームに書き込まれたバイト数を返します。</em></td>
-  </tr>
- </tbody>
-</table>
+| _名前と引数_                                                                          | _返値_                 | _説明_                                                                                                                                                                   |
+| ------------------------------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| _`mozCurrentSampleOffset()` {{non-standard_inline}}_                         | _`unsigned long long`_ | _`mozWriteAudio()` によって作成された音声ストリームの、現在のオフセットを示します。このオフセットは、ストリームの先頭からのサンプル番号で指定されます。_                 |
+| _`mozSetup(in PRUint32 channels, in PRUint32 rate)` {{non-standard_inline}}_ | _`void`_               | _書き込み用の音声ストリームを初期化します。引数でチャンネル数 (`1` でモノラル、 `2` でステレオ) とサンプリング周波数 (例えば 44.1kHz の場合は `44100`) を指定できます。_ |
+| _`mozWriteAudio(in jsval data) `{{non-standard_inline}}_                     | _`unsigned long`_      | _ストリームの現在のオフセットに音声を書き込みます。実際にストリームに書き込まれたバイト数を返します。_                                                                   |
 
-<h2 id="Examples" name="Examples"><em>例</em></h2>
+## _例_
 
-<h3 id="Basic_usage" name="Basic_usage"><em>基本的な使用</em></h3>
+### _基本的な使用_
 
-<p><em><code>HTMLAudioElement</code> を完全に JavaScript で生成します。</em></p>
+_`HTMLAudioElement` を完全に JavaScript で生成します。_
 
-<pre><em>var flush = new Audio('toilet_flush.wav');
-flush.play();
-</em></pre>
+    var flush = new Audio('toilet_flush.wav');
+    flush.play();
 
-<p><em>audio 要素でもっと一般的に使用されるプロパティとしては、 <code>src</code>, <code>currentTime</code>, <code>duration</code>, <code>paused</code>, <code>muted</code>, <code>volume</code> などがあります。</em></p>
+_audio 要素でもっと一般的に使用されるプロパティとしては、 `src`, `currentTime`, `duration`, `paused`, `muted`, `volume` などがあります。_
 
-<pre><em>var flush = new Audio('toilet_flush.wav');
-flush.addEventListener('loadeddata',() =&gt; {
-    var duration = flush.duration; // the duration variable now holds the duration (in seconds) of the audio clip
-})</em></pre>
+    var flush = new Audio('toilet_flush.wav');
+    flush.addEventListener('loadeddata',() => {
+        var duration = flush.duration; // the duration variable now holds the duration (in seconds) of the audio clip
+    })
 
-<h2 id="Specifications" name="Specifications"><em>仕様書</em></h2>
+## _仕様書_
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><em>仕様書</em></th>
-   <th scope="col"><em>状態</em></th>
-   <th scope="col"><em>備考</em></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><em>{{SpecName('HTML WHATWG', "#htmlaudioelement", "HTMLAudioElement")}}</em></td>
-   <td><em>{{Spec2('HTML WHATWG')}}</em></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><em>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-audio-element", "HTMLAudioElement")}}</em></td>
-   <td><em>{{Spec2('HTML5 W3C')}}</em></td>
-   <td><em> </em></td>
-  </tr>
- </tbody>
-</table>
+| _仕様書_                                                                                                                   | _状態_                             | _備考_ |
+| -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------ |
+| _{{SpecName('HTML WHATWG', "#htmlaudioelement", "HTMLAudioElement")}}_                             | _{{Spec2('HTML WHATWG')}}_ |        |
+| _{{SpecName('HTML5 W3C', "embedded-content-0.html#the-audio-element", "HTMLAudioElement")}}_ | _{{Spec2('HTML5 W3C')}}_     | \_\_   |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility"><em>ブラウザーの対応</em></h2>
+## _ブラウザーの対応_
 
-<p><em>{{Compat("api.HTMLAudioElement")}}</em></p>
+_{{Compat("api.HTMLAudioElement")}}_
 
-<h2 id="See_also" name="See_also"><em>関連情報</em></h2>
+## _関連情報_
 
-<ul>
- <li><em>このインタフェースを実装した HTML 要素: {{HTMLElement("audio")}}</em></li>
-</ul>
+- _このインタフェースを実装した HTML 要素: {{HTMLElement("audio")}}_
 
-<div><em>{{APIRef("HTML DOM")}}</em></div>
+_{{APIRef("HTML DOM")}}_

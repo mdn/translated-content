@@ -11,80 +11,54 @@ tags:
   - revoke
 translation_of: Web/API/Permissions/revoke
 ---
-<p>{{APIRef("Permissions API")}}{{SeeCompatTable}}</p>
+{{APIRef("Permissions API")}}{{SeeCompatTable}}
 
-<p><span class="seoSummary">{{domxref("Permissions")}} インターフェイスの <strong><code>Permissions.revoke()</code></strong> メソッドは、現在設定されているパーミッションをデフォルト状態（通常は <code>prompt</code>）に戻します。</span></p>
+{{domxref("Permissions")}} インターフェイスの **`Permissions.revoke()`** メソッドは、現在設定されているパーミッションをデフォルト状態（通常は `prompt`）に戻します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p>このメソッドは、グローバルな {{domxref("Permissions")}} オブジェクトである {{domxref("navigator.permissions")}} に対して呼び出します。</p>
+このメソッドは、グローバルな {{domxref("Permissions")}} オブジェクトである {{domxref("navigator.permissions")}} に対して呼び出します。
 
-<pre class="syntaxbox">var <em>revokePromise</em> = navigator.permissions.revoke(<em>descriptor</em>);
-</pre>
+    var revokePromise = navigator.permissions.revoke(descriptor);
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### パラメーター
 
-<dl>
- <dt><code>descriptor</code></dt>
- <dd>名前と値のペアのコンマ区切りリストで構成される、操作のオプションを設定する <code>PermissionDescriptor</code> ディクショナリに基づくオブジェクト。 利用可能なオプションは次のとおりです。
- <ul>
-  <li><code>name</code>: パーミッションを照会したい API の名前。 有効な値は、<code>'geolocation'</code>、<code>'midi'</code>、<code>'notifications'</code>、<code>'push'</code> です。</li>
-  <li><code>userVisibleOnly</code>: Push のみ。 Firefox はサポートしていません。 下記の<a href="#browser_compatibility">ブラウザーの互換性</a>のセクションを参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。 デフォルトは <code>false</code> です。</li>
-  <li><code>sysex</code>: （MIDI のみ）システムエクスクルーシブメッセージが必要か受信するかどうかを示します。 デフォルトは <code>false</code> です。</li>
- </ul>
- </dd>
-</dl>
+- `descriptor`
+  - : 名前と値のペアのコンマ区切りリストで構成される、操作のオプションを設定する `PermissionDescriptor` ディクショナリに基づくオブジェクト。 利用可能なオプションは次のとおりです。\* `name`: パーミッションを照会したい API の名前。 有効な値は、`'geolocation'`、`'midi'`、`'notifications'`、`'push'` です。
+    - `userVisibleOnly`: Push のみ。 Firefox はサポートしていません。 下記の[ブラウザーの互換性](#browser_compatibility)のセクションを参照してください）すべてのメッセージについて通知を表示するか、サイレントプッシュ通知を送信できるかを示します。 デフォルトは `false` です。
+    - `sysex`: （MIDI のみ）システムエクスクルーシブメッセージが必要か受信するかどうかを示します。 デフォルトは `false` です。
 
-<div class="note">
-<p><strong>注</strong>: Firefox 44 以降、<a href="/ja/docs/Web/API/Notifications_API">Notifications</a> と <a href="/ja/docs/Web/API/Push_API">Push</a> のパーミッションは統合されました。 （例えば、ユーザーによって、関連するパーミッションのダイアログにより）パーミッションが与えられた場合、<code>navigator.permissions.query()</code> は <code>notifications</code> と <code>push</code> の両方に対して <code>true</code> を返します。</p>
-</div>
+> **Note:** **注**: Firefox 44 以降、[Notifications](/ja/docs/Web/API/Notifications_API) と [Push](/ja/docs/Web/API/Push_API) のパーミッションは統合されました。 （例えば、ユーザーによって、関連するパーミッションのダイアログにより）パーミッションが与えられた場合、`navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
 
-<div class="note">
-<p><strong>注</strong>: <code>persistent-storage</code> パーミッションは、<a href="https://storage.spec.whatwg.org/">Storage API</a> のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（<a href="https://storage.spec.whatwg.org/#persistence">persistent storage</a>））を使用することを許可します。</p>
-</div>
+> **Note:** **注**: `persistent-storage` パーミッションは、[Storage API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
 
-<h3 id="Returns" name="Returns">戻り値</h3>
+### 戻り値
 
-<p>要求の結果を示す {{domxref("PermissionStatus")}} オブジェクトと共に成功ハンドラを呼び出す {{jsxref("Promise")}}。</p>
+要求の結果を示す {{domxref("PermissionStatus")}} オブジェクトと共に成功ハンドラを呼び出す {{jsxref("Promise")}}。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt><code>TypeError</code></dt>
- <dd><code>PermissionDescriptor</code> 情報の取得が何らかの理由で失敗したか、アクセス権が存在しないか現在サポートされていません（例えば、<code>midi</code>、または <code>userVisibleOnly</code> と一緒の <code>push</code> で）。</dd>
-</dl>
+- `TypeError`
+  - : `PermissionDescriptor` 情報の取得が何らかの理由で失敗したか、アクセス権が存在しないか現在サポートされていません（例えば、`midi`、または `userVisibleOnly` と一緒の `push` で）。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この関数をアプリで使用して、それが有する Geolocation API のパーミッションを取り消すように要求できます。</p>
+この関数をアプリで使用して、それが有する Geolocation API のパーミッションを取り消すように要求できます。
 
-<pre class="brush: js">function revokePermission() {
+```js
+function revokePermission() {
   navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
     report(result.state);
   });
-}</pre>
+}
+```
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Permissions API','#dom-permissions-revoke','revoke()')}}</td>
-   <td>{{Spec2('Permissions API')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                                         | 状態                                 | コメント |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Permissions API','#dom-permissions-revoke','revoke()')}} | {{Spec2('Permissions API')}} | 初期定義 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-
-
-<p>{{Compat("api.Permissions.revoke")}}</p>
-</div>
+{{Compat("api.Permissions.revoke")}}

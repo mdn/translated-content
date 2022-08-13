@@ -11,44 +11,40 @@ tags:
   - プロパティ
 translation_of: Web/API/Document/linkColor
 ---
-<div>{{APIRef("DOM")}} {{Deprecated_header}}</div>
+{{APIRef("DOM")}} {{Deprecated_header}}
 
-<p><strong><code>Document.linkColor</code></strong> プロパティは、文書内のリンクの色を取得または設定します。</p>
+**`Document.linkColor`** プロパティは、文書内のリンクの色を取得または設定します。
 
-<p>このプロパティは非推奨です。代替手段として、 CSS の {{cssxref("color")}} プロパティを HTML のアンカーリンク ({{HtmlElement("a")}}) または {{cssxref(":link")}} 疑似クラスで設定することができます。もう一つの代替手段に <code>document.body.link</code> がありますが、これは <a class="external" href="http://www.w3.org/TR/html401/struct/global.html#adef-link">HTML 4.01 で非推奨になりました</a>。</p>
+このプロパティは非推奨です。代替手段として、 CSS の {{cssxref("color")}} プロパティを HTML のアンカーリンク ({{HtmlElement("a")}}) または {{cssxref(":link")}} 疑似クラスで設定することができます。もう一つの代替手段に `document.body.link` がありますが、これは [HTML 4.01 で非推奨になりました](http://www.w3.org/TR/html401/struct/global.html#adef-link)。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>color</var> = document.linkColor
-document.linkColor = <var>color</var>
-</pre>
+    color = document.linkColor
+    document.linkColor = color
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<ul>
- <li><code><var>color</var></code>: 色を単語 (例えば <code>red</code>) または16進値 (例えば <code>#ff0000</code>) で表す文字列。</li>
-</ul>
+- `color`: 色を単語 (例えば `red`) または 16 進値 (例えば `#ff0000`) で表す文字列。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js">document.linkColor = 'blue';
-</pre>
+```js
+document.linkColor = 'blue';
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<p>HTML5</p>
+HTML5
 
-<p><code>Document.linkColor</code> は <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268">DOM Level 2 HTML で非推奨になりました</a>。</p>
+`Document.linkColor` は [DOM Level 2 HTML で非推奨になりました](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの対応
 
-<p>{{Compat("api.Document.linkColor")}}</p>
+{{Compat("api.Document.linkColor")}}
 
-<p>Mozilla Firefox におけるこのプロパティの既定値は、青 (16進数で <code>#0000ee</code>) です。</p>
+Mozilla Firefox におけるこのプロパティの既定値は、青 (16 進数で `#0000ee`) です。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("document.vlinkColor")}}</li>
- <li>{{domxref("document.alinkColor")}}</li>
-</ul>
+- {{domxref("document.vlinkColor")}}
+- {{domxref("document.alinkColor")}}

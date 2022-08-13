@@ -13,21 +13,22 @@ tags:
   - speech
 translation_of: Web/API/SpeechRecognitionResult/isFinal
 ---
-<p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
-<p>{{domxref("SpeechRecognitionResult")}}インターフェイスの <code><strong>isFinal</strong></code> リードオンリーのプロパティは結果がファイナルかどうかの ({{domxref("Boolean")}} 型) のことです。true の場合は、これは結果を返す最終の時間です。false の場合は、暫定の結果を返し、後々それは更新されます。</p>
+{{domxref("SpeechRecognitionResult")}}インターフェイスの **`isFinal`** リードオンリーのプロパティは結果がファイナルかどうかの ({{domxref("Boolean")}} 型) のことです。true の場合は、これは結果を返す最終の時間です。false の場合は、暫定の結果を返し、後々それは更新されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var myIsFinal = speechRecognitionResultInstance.isFinal;</pre>
+    var myIsFinal = speechRecognitionResultInstance.isFinal;
 
-<h3 id="Returns" name="Returns">返り値</h3>
+### 返り値
 
-<p>A {{domxref("Boolean")}}.</p>
+A {{domxref("Boolean")}}.
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<pre class="brush: js">recognition.onresult = function(event) {
+```js
+recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array
@@ -41,50 +42,40 @@ translation_of: Web/API/SpeechRecognitionResult/isFinal
   bg.style.backgroundColor = color;
 
   console.log(event.results[0].isFinal);
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#dfn-isFinal', 'isFinal')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 仕様                                                                         | 状態                                 | コメント |
+| ---------------------------------------------------------------------------- | ------------------------------------ | -------- |
+| {{SpecName('Web Speech API', '#dfn-isFinal', 'isFinal')}} | {{Spec2('Web Speech API')}} |          |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザー実装状況
 
+{{Compat("api.SpeechRecognitionResult.isFinal")}}
 
+### Firefox OS 権限
 
-<p>{{Compat("api.SpeechRecognitionResult.isFinal")}}</p>
+アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加する必要があります。
 
-<h3 id="Firefox_OS_permissions" name="Firefox_OS_permissions">Firefox OS 権限</h3>
-
-<p>アプリで音声認識を利用する前に、下記の権限を <a href="/ja/docs/Web/Apps/Build/Manifest">manifest</a> に追加する必要があります。</p>
-
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>privileged アプリ権限も必要なので、下記も追加が必要です。</p>
+privileged アプリ権限も必要なので、下記も追加が必要です。
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)

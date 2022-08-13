@@ -7,33 +7,29 @@ tags:
   - 翻訳中
 translation_of: Web/API/Element/setAttributeNS
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+### 概要
 
-<p><code>setAttributeNS</code> は指定の名前空間と名前で新しい属性を追加したり、属性の値を変更します。</p>
+`setAttributeNS` は指定の名前空間と名前で新しい属性を追加したり、属性の値を変更します。
 
-<h3 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h3>
+### 構文
 
-<pre class="eval"><em>element</em>.setAttributeNS(<em>namespace</em>,<em>name</em>,<em>value</em>)
-</pre>
+    element.setAttributeNS(namespace,name,value)
 
-<ul>
- <li><code>namespace</code> は属性の名前空間を指定する文字列です。</li>
- <li><code>name</code> はセットしたい属性を特定する文字列です。</li>
- <li><code>value</code> は新しい属性の希望する文字列値です。</li>
-</ul>
+- `namespace` は属性の名前空間を指定する文字列です。
+- `name` はセットしたい属性を特定する文字列です。
+- `value` は新しい属性の希望する文字列値です。
 
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+### 例
 
-<pre class="eval">var d = document.getElementById("d1");
-d.setAttributeNS("<span class="nowiki">http://www.mozilla.org/ns/specialspace</span>", "align", "center");
-</pre>
+    var d = document.getElementById("d1");
+    d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 
-<h3 id="Notes" name="Notes">Notes</h3>
+### Notes
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h3 id=".E4.BB.95.E6.A7.98" name=".E4.BB.95.E6.A7.98">仕様</h3>
+### 仕様
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS">DOM Level 2 Core: setAttributeNS</a></p>
+[DOM Level 2 Core: setAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)
