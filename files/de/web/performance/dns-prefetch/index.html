@@ -38,7 +38,7 @@ translation_of: Web/Performance/dns-prefetch
 
 <p><strong>Zweitens</strong> ist es auch möglich, <code>dns-prefetch</code> (und andere Ressourcen-Hinweise) als <a href="/en-US/docs/Web/HTTP/Headers">HTTP-Header</a> anzugeben, indem Sie das <a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP-Link-Feld</a> verwenden:</p>
 
-<pre class="brush: unix">Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
+<pre class="brush: http">Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
 
 <p>Ziehen Sie es<strong> drittens </strong>in Betracht <code>dns-prefetch</code> mit dem <code>preconnect</code> Hinweis zu verwenden. Während <code>dns-prefetch</code> nur einen DNS lookup durchführt, stellt <code>preconnect</code> eine Verbindung zu einem Server her. Dieser Prozess umfasst sowohl die DNS-Auflösung als auch den Aufbau der TCP-Verbindung und die Durchführung des <a href="/en-US/docs/Glossary/TLS">TLS</a>-Handshakes, wenn eine Site über HTTPS ausgeliefert wird. Die Kombination dieser beiden Verfahren bietet die Möglichkeit, die wahrgenommene Latenzzeit von <a href="/en-US/docs/Web/HTTP/CORS">cross-origin</a>-Anfragen weiter zu reduzieren. Sie können sie auf folgende Weise sicher zusammen verwenden:</p>
 

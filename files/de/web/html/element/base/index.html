@@ -49,16 +49,17 @@ translation_of: Web/HTML/Element/base
  <dd>Die Basis URL die im Dokument für relative URLs genutzt werden soll. Wenn dieses Attribut verwendet wird, sollte das Element vor allen anderen Elementen definiert werden, die eine URL als Wert enthalten.<br>
  Absolute und relative URLs sind erlaubt (siehe Anmerkungen).</dd>
  <dt>{{htmlattrdef("target")}}</dt>
+
+  <dd>Dieses Attribut legt fest, wo die verlinkte Quelle angezeigt wird. In HTML4 ist das der Name eines Frames oder ein Schlüsselwort für ein Frame. In HTML5 ist es ein Name eines <em>browsing context</em>es oder ein Schlüsselwort für einen <em>browsing context</em> (zum Beispiel ein Tab, Fenster oder Inline Frame). Die folgenden Schlüsselwörter haben eine spezielle Bedeutung:
+
+  <ul>
+   <li><code>_self</code>: Lädt die Antwort in dasselbe Frame (HTML4) bzw. denselben <em>browsing context</em> (HTML5) wie die aktuelle Seite. Dieser Wert ist der Standardwert.</li>
+   <li><code>_blank</code>: Lädt die Antwort in ein neues unbenanntes Fenster (HTML4) bzw. einen neuen <em>browsing context</em> (HTML5).</li>
+   <li><code>_parent</code>: Lädt die Antwort in den <em>frameset parent</em> des aktuellen Frames (HTML4) bzw. <em>parent browsing context</em> (HTML5) des aktuellen. Falls es keinen <em>parent</em> gibt, verhält sich dieser Wert wie <code>_self</code>.</li>
+   <li><code>_top</code>: Lädt die Antwort in das gesamte Fenster und alle Frames werden überschrieben (HTML4) bzw. in den obersten <em>browsing context</em> (d.h. der <em>browsing context</em>, der dem aktuellen übergeordnet ist und keine übergeordneten <em>browsing context</em>e hat). Falls es keinen übergeordneten gibt, verhält sich dieser Wert wie <code>_self</code>.</li>
+  </ul>
+  </dd>
 </dl>
-
-<p>Dieses Attribut legt fest, wo die verlinkte Quelle angezeigt wird. In HTML4 ist das der Name eines Frames oder ein Schlüsselwort für ein Frame. In HTML5 ist es ein Name eines <em>browsing context</em>es oder ein Schlüsselwort für einen <em>browsing context</em> (zum Beispiel ein Tab, Fenster oder Inline Frame). Die folgenden Schlüsselwörter haben eine spezielle Bedeutung:</p>
-
-<ul>
- <li><code>_self</code>: Lädt die Antwort in dasselbe Frame (HTML4) bzw. denselben <em>browsing context</em> (HTML5) wie die aktuelle Seite. Dieser Wert ist der Standardwert.</li>
- <li><code>_blank</code>: Lädt die Antwort in ein neues unbenanntes Fenster (HTML4) bzw. einen neuen <em>browsing context</em> (HTML5).</li>
- <li><code>_parent</code>: Lädt die Antwort in den <em>frameset parent</em> des aktuellen Frames (HTML4) bzw. <em>parent browsing context</em> (HTML5) des aktuellen. Falls es keinen <em>parent</em> gibt, verhält sich dieser Wert wie <code>_self</code>.</li>
- <li><code>_top</code>: Lädt die Antwort in das gesamte Fenster und alle Frames werden überschrieben (HTML4) bzw. in den obersten <em>browsing context</em> (d.h. der <em>browsing context</em>, der dem aktuellen übergeordnet ist und keine übergeordneten <em>browsing context</em>e hat). Falls es keinen übergeordneten gibt, verhält sich dieser Wert wie <code>_self</code>.</li>
-</ul>
 
 <h2 id="Beispiele">Beispiele</h2>
 
