@@ -9,86 +9,60 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/optgroup
 ---
-<p><strong>HTML-элемент <code>&lt;optgroup&gt;</code> </strong>позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.</p>
+**HTML-элемент `<optgroup>` **позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Категории контента</a></th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимый контент</th>
-   <td>Ноль или более {{HTMLElement("option")}} элементов.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>Открывающий тег обязателен. Закрывающий тег может быть опущен, если сразу после элемента находится следующий элемент <code>&lt;optgroup&gt;</code>, или если это последний элемент внутри родителя.</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимые родители</th>
-   <td>Элемент {{HTMLElement("select")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимые ARIA-роли</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLOptGroupElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                                                                                                                                |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                     | Ноль или более {{HTMLElement("option")}} элементов.                                                                                                                         |
+| Пропуск тегов                                          | Открывающий тег обязателен. Закрывающий тег может быть опущен, если сразу после элемента находится следующий элемент `<optgroup>`, или если это последний элемент внутри родителя. |
+| Допустимые родители                                    | Элемент {{HTMLElement("select")}}                                                                                                                                           |
+| Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                |
+| DOM-интерфейс                                          | {{domxref("HTMLOptGroupElement")}}                                                                                                                                       |
 
-<p>{{Note("Элементы optgroup не могут быть вложенными друг в друга.")}}</p>
+{{Note("Элементы optgroup не могут быть вложенными друг в друга.")}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Элемент <code>&lt;optgroup&gt;</code> допускает использование <a href="/en-US/docs/Web/HTML/Global_attributes">глобальных атрибутов</a>.</p>
+Элемент `<optgroup>` допускает использование [глобальных атрибутов](/ru/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>Если установить этот атрибут, опции, находящиеся внутри элемента станут недоступными для выбора. Часто браузеры отображают эти опции серым цветом и игнорируют срабатывающие на них события, такие как события мыши или события получения фокуса.</dd>
- <dt>{{htmlattrdef("label")}}</dt>
- <dd>Имя группы, которое будет отображено браузером в выпадающем списке. Этот атрибут обязателен.</dd>
-</dl>
+- {{htmlattrdef("disabled")}}
+  - : Если установить этот атрибут, опции, находящиеся внутри элемента станут недоступными для выбора. Часто браузеры отображают эти опции серым цветом и игнорируют срабатывающие на них события, такие как события мыши или события получения фокуса.
+- {{htmlattrdef("label")}}
+  - : Имя группы, которое будет отображено браузером в выпадающем списке. Этот атрибут обязателен.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;select&gt;
-  &lt;optgroup label="Группа 1"&gt;
-    &lt;option&gt;Опция 1.1&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Группа 2"&gt;
-    &lt;option&gt;Опция 2.1&lt;/option&gt;
-    &lt;option&gt;Опция 2.2&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Группа 3" disabled&gt;
-    &lt;option&gt;Опция 3.1&lt;/option&gt;
-    &lt;option&gt;Опция 3.2&lt;/option&gt;
-    &lt;option&gt;Опция 3.3&lt;/option&gt;
-  &lt;/optgroup&gt;
-&lt;/select&gt;
-</pre>
+```html
+<select>
+  <optgroup label="Группа 1">
+    <option>Опция 1.1</option>
+  </optgroup>
+  <optgroup label="Группа 2">
+    <option>Опция 2.1</option>
+    <option>Опция 2.2</option>
+  </optgroup>
+  <optgroup label="Группа 3" disabled>
+    <option>Опция 3.1</option>
+    <option>Опция 3.2</option>
+    <option>Опция 3.3</option>
+  </optgroup>
+</select>
+```
 
-<h3 id="Результат">Результат</h3>
+### Результат
 
-<p>{{EmbedLiveSample('Пример')}}</p>
+{{EmbedLiveSample('Пример')}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
+- Элементы, имеющие отношение к формам: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Элементы, имеющие отношение к формам: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.</li>
-</ul>
-
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

@@ -3,92 +3,55 @@ title: <wbr>
 slug: Web/HTML/Element/wbr
 translation_of: Web/HTML/Element/wbr
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>Элемент HTML <code>&lt;wbr&gt;</code></strong> предоставляет возможность переноса слова – позицию в тексте, где браузер может по желанию разбить строку, в противном случае его правила разрыва строки не будут создавать разрыв в этом месте.</p>
+**Элемент HTML `<wbr>`** предоставляет возможность переноса слова – позицию в тексте, где браузер может по желанию разбить строку, в противном случае его правила разрыва строки не будут создавать разрыв в этом месте.
 
-<div><strong>{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}</strong></div>
+**{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}**
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Категории контента</th>
-   <td><strong><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Основной поток</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</strong></td>
-  </tr>
-  <tr>
-   <th scope="row"><strong>Разрешённое содержимое</strong></th>
-   <td><strong>Отсутствует</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td><strong>It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td><strong>Любой элемент принимающий <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td><strong>Любые</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td><strong>{{domxref("HTMLElement")}}</strong></td>
-  </tr>
- </tbody>
-</table>
+| Категории контента                | **[Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).** |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Разрешённое содержимое**        | **Отсутствует**                                                                                                                                                 |
+| Пропуск тега                      | **It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.**                                                  |
+| Разрешённые родительские элементы | **Любой элемент принимающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).**                                                  |
+| Разрешённые роли ARIA             | **Любые**                                                                                                                                                       |
+| DOM-интерфейс                     | **{{domxref("HTMLElement")}}**                                                                                                                        |
 
-<h2 id="Атрибуты"><strong>Атрибуты</strong></h2>
+## Атрибуты
 
-<p><strong>Элемент может содержать только <a href="/ru-R/docs/HTML/Global_attributes">глобальные атрибуты</a>.</strong></p>
+**Элемент может содержать только [глобальные атрибуты](/ru/docs/HTML/Global_attributes).**
 
-<h2 id="Примечания"><strong>Примечания</strong></h2>
+## Примечания
 
-<p>На страницах в кодировке UTF-8, элемент <code>&lt;wbr&gt;</code> ведёт себя как кодовое значение <code>U+200B ZERO-WIDTH SPACE</code> (пробел нулевой ширины). В частности, он ведёт себя как кодовое значение Unicode Bidi BN, то есть он не влияет на порядок {{Glossary("bidi")}}-направления (двунаправленного потока) <code>&lt;div dir=rtl&gt;123,&lt;wbr&gt;456&lt;/div&gt;</code>: отображается, если выражение не разбито на две строки, <code>123 456</code> и не <code>456,123</code>.</p>
+На страницах в кодировке UTF-8, элемент `<wbr>` ведёт себя как кодовое значение `U+200B ZERO-WIDTH SPACE` (пробел нулевой ширины). В частности, он ведёт себя как кодовое значение Unicode Bidi BN, то есть он не влияет на порядок {{Glossary("bidi")}}-направления (двунаправленного потока) `<div dir=rtl>123,<wbr>456</div>`: отображается, если выражение не разбито на две строки, `123 456` и не `456,123`.
 
-<p>По той же причине, элемент <code>&lt;wbr&gt;</code> не вводит дефис в точке разрыва строки. Чтобы дефис отображался только в конце строки, используйте вместо него символ «мягкого дефиса» (<code>&amp;shy;</code>).</p>
+По той же причине, элемент `<wbr>` не вводит дефис в точке разрыва строки. Чтобы дефис отображался только в конце строки, используйте вместо него символ «мягкого дефиса» (`&shy;`).
 
-<p>Этот элемент был впервые реализован в Internet Explorer 5.5 и был официально определён в HTML5.</p>
+Этот элемент был впервые реализован в Internet Explorer 5.5 и был официально определён в HTML5.
 
-<h2 id="Пример"><strong>Пример</strong></h2>
+## Пример
 
-<p><a href="https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/">Руководство по стилю Yahoo</a> рекомендует <a href="https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses">разбивать URL перед пунктуацией</a>, чтобы не оставлять знаки препинания в конце строки, которые читатель может ошибочно принять за конец URL.<strong> </strong></p>
+[Руководство по стилю Yahoo](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/) рекомендует [разбивать URL перед пунктуацией](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses), чтобы не оставлять знаки препинания в конце строки, которые читатель может ошибочно принять за конец URL.\*\*\*\*
 
-<pre class="brush: html"><strong>&lt;p&gt;http://this&lt;wbr&gt;.is&lt;wbr&gt;.a&lt;wbr&gt;.really&lt;wbr&gt;.long&lt;wbr&gt;.example&lt;wbr&gt;.com/With&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;/p&gt; </strong></pre>
+```html
+<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+```
 
-<p><strong>{{EmbedLiveSample("Пример")}}</strong></p>
+**{{EmbedLiveSample("Пример")}}**
 
-<h2 id="Спецификация"><strong>Спецификация</strong></h2>
+## Спецификация
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col"><strong>Статус</strong></th>
-   <th scope="col">Комментарии</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><strong>{{SpecName('HTML WHATWG', 'semantics.html#the-wbr-element', '&lt;wbr&gt;')}}</strong></td>
-   <td><strong>{{Spec2('HTML WHATWG')}}</strong></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><strong>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-wbr-element', '&lt;wbr&gt;')}}</strong></td>
-   <td><strong>{{Spec2('HTML5 W3C')}}</strong></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Спецификация                                                                                                         | **Статус**                           | Комментарии |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| **{{SpecName('HTML WHATWG', 'semantics.html#the-wbr-element', '&lt;wbr&gt;')}}**             | **{{Spec2('HTML WHATWG')}}** |             |
+| **{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-wbr-element', '&lt;wbr&gt;')}}** | **{{Spec2('HTML5 W3C')}}**     |             |
 
-<h2 id="Поддержка_браузерами"><strong>Поддержка браузерами</strong></h2>
-<p><strong>{{Compat}}</strong></p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также"><strong>Смотрите также</strong></h2>
+**{{Compat}}**
 
-<ul>
- <li><strong>{{cssxref("overflow-wrap")}}</strong></li>
- <li><strong>{{cssxref("word-break")}}</strong></li>
- <li><strong>{{cssxref("hyphens")}}</strong></li>
-</ul>
+## Смотрите также
+
+- **{{cssxref("overflow-wrap")}}**
+- **{{cssxref("word-break")}}**
+- **{{cssxref("hyphens")}}**

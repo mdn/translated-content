@@ -3,80 +3,56 @@ title: <blockquote>
 slug: Web/HTML/Element/blockquote
 translation_of: Web/HTML/Element/blockquote
 ---
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><strong>HTML-элемент <code>&lt;blockquote&gt;</code> </strong>(от англ. <em>Block Quotation</em>) указывает на то, что заключённый в нем текст является развёрнутой цитатой. Обычно он (текст) визуально выделяется наклонным (смотри <a href="/en-US/docs/HTML/Element/blockquote#Notes" title="HTML/Element/blockquote#Notes">Примечание</a>, где говорится о том, как это изменить). URI на источник цитаты можно указать в атрибуте <strong>cite</strong>, тогда как текстовое представление источника может быть задано элементом {{HTMLElement("cite")}}.</p>
+**HTML-элемент `<blockquote>` **(от англ. _Block Quotation_) указывает на то, что заключённый в нем текст является развёрнутой цитатой. Обычно он (текст) визуально выделяется наклонным (смотри [Примечание](/ru/docs/HTML/Element/blockquote#Notes "HTML/Element/blockquote#Notes"), где говорится о том, как это изменить). URI на источник цитаты можно указать в атрибуте **cite**, тогда как текстовое представление источника может быть задано элементом {{HTMLElement("cite")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories" title="HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_контент" title="HTML/Content categories#Flow content">Основной контент</a>, секционный корень, явный контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_контент" title="HTML/Content categories#Flow content">Основной контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Опускание тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, который принимает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_контент" title="HTML/Content categories#Flow content">основной контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA роли</th>
-   <td>Любые</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLQuoteElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories "HTML/Content_categories") | [Основной контент](/ru/docs/Web/Guide/HTML/Content_categories#Основной_контент "HTML/Content categories#Flow content"), секционный корень, явный контент. |
+| ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                                                        | [Основной контент](/ru/docs/Web/Guide/HTML/Content_categories#Основной_контент "HTML/Content categories#Flow content").                                   |
+| Опускание тегов                                                                            | {{no_tag_omission}}                                                                                                                                  |
+| Разрешённые родительские элементы                                                          | Любой элемент, который принимает [основной контент](/ru/docs/Web/Guide/HTML/Content_categories#Основной_контент "HTML/Content categories#Flow content").  |
+| Разрешённые ARIA роли                                                                      | Любые                                                                                                                                                     |
+| DOM интерфейс                                                                              | {{domxref("HTMLQuoteElement")}}                                                                                                                  |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Для данного элемента доступны<span style="line-height: 21px;"> </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">глобальные атрибуты</a><span style="line-height: 21px;">.</span></p>
+Для данного элемента доступны [глобальные атрибуты](/ru/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>URL, указывающий на исходный документ или  сообщение, откуда была взята цитата. Этот атрибут предназначен для того, чтобы сослаться на информацию, объясняющую контекст, или ссылки, из которых была взята цитата.</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : URL, указывающий на исходный документ или сообщение, откуда была взята цитата. Этот атрибут предназначен для того, чтобы сослаться на информацию, объясняющую контекст, или ссылки, из которых была взята цитата.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;blockquote cite="http://developer.mozilla.org"&gt;
-  &lt;p&gt;This is a quotation taken from the Mozilla Developer Center.&lt;/p&gt;
-&lt;/blockquote&gt;
-</pre>
+```html
+<blockquote cite="http://developer.mozilla.org">
+  <p>This is a quotation taken from the Mozilla Developer Center.</p>
+</blockquote>
+```
 
-<p>Результат:</p>
+Результат:
 
-<p>{{EmbedLiveSample("")}}</p>
+{{EmbedLiveSample("")}}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<p>Чтобы изменить отступ элемента <code>&lt;blockquote&gt;</code>, используйте <a href="/en-US/docs/CSS" title="CSS">CSS</a>-свойство {{cssxref("margin")}}.</p>
+Чтобы изменить отступ элемента `<blockquote>`, используйте [CSS](/ru/docs/CSS "CSS")-свойство {{cssxref("margin")}}.
 
-<p>Для коротких цитат используйте<code> элемент </code>{{HTMLElement("q")}}.</p>
+Для коротких цитат используйте` элемент `{{HTMLElement("q")}}.
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Элемент {{HTMLElement("q")}}  для встроенных (строковых) цитат.</li>
- <li>Элемент {{HTMLElement("cite")}} для указания источника.</li>
-</ul>
+- Элемент {{HTMLElement("q")}} для встроенных (строковых) цитат.
+- Элемент {{HTMLElement("cite")}} для указания источника.
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

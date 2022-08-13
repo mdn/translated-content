@@ -3,17 +3,18 @@ title: is
 slug: Web/HTML/Global_attributes/is
 translation_of: Web/HTML/Global_attributes/is
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/HTML/Global_attributes">Глобальный атрибут </a> <strong><code>is</code></strong> позволяет указать, что стандартный HTML-элемент должен вести себя как определённый пользовательский встроенный элемент (см <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a> для информации).</span></p>
+[Глобальный атрибут ](/ru/docs/Web/HTML/Global_attributes)**`is`** позволяет указать, что стандартный HTML-элемент должен вести себя как определённый пользовательский встроенный элемент (см [Using custom elements](/ru/docs/Web/Web_Components/Using_custom_elements) для информации).
 
-<p>Этот атрибут может быть использован только, если указанное имя пользовательского элемента было успешно <a href="/en-US/docs/Web/API/CustomElementRegistry/define">определено</a> в текущем документе и расширяет тип элемента, к которому оно применяется.</p>
+Этот атрибут может быть использован только, если указанное имя пользовательского элемента было успешно [определено](/ru/docs/Web/API/CustomElementRegistry/define) в текущем документе и расширяет тип элемента, к которому оно применяется.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<p>Следующий код взят из нашего примеры <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a>  (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">см. в живую</a>).</p>
+Следующий код взят из нашего примеры [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) ([см. в живую](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 
-<pre class="brush: js">// Создание класса для элемента
+```js
+// Создание класса для элемента
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Всегда вызывайте super первым в конструкторе
@@ -26,22 +27,21 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Определение нового элемента
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<pre class="brush: html">&lt;p is="word-count"&gt;&lt;/p&gt;</pre>
+```html
+<p is="word-count"></p>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
-</ul>
+- All [global attributes](/ru/docs/Web/HTML/Global_attributes).

@@ -12,110 +12,84 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/article
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;article&gt;</code></strong> представляет самостоятельную часть документа, страницы, приложения или сайта, предназначенную для независимого распространения или повторного использования.</span> Этот элемент может представлять статью на форуме, статью в журнале или газете, запись в блоге или какой-либо другой самостоятельный фрагмент содержимого.</p>
+**HTML-элемент `<article>`** представляет самостоятельную часть документа, страницы, приложения или сайта, предназначенную для независимого распространения или повторного использования. Этот элемент может представлять статью на форуме, статью в журнале или газете, запись в блоге или какой-либо другой самостоятельный фрагмент содержимого.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
 
-<p>Данный документ может иметь множество статей; например, когда читатель просматривает блог, в котором текст каждой статьи отображается один за другим, каждая публикация будет находиться в элементе <code>&lt;article&gt;</code>, возможно, с одним или более элементами <code>&lt;section&gt;</code> внутри.</p>
+Данный документ может иметь множество статей; например, когда читатель просматривает блог, в котором текст каждой статьи отображается один за другим, каждая публикация будет находиться в элементе `<article>`, возможно, с одним или более элементами `<section>` внутри.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент">секционный контент</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент">явный контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тега</th>
-   <td>Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, который разрешает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">контент основного потока</a> в качестве содержимого. Обратите внимание, что элемент <code>&lt;article&gt;</code> не должен быть потомком элемента {{HTMLElement("address")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA роли</th>
-   <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("main")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный контент](/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                     |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                                                     |
+| Пропуск тега                                                     | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                          |
+| Разрешённые родительские элементы                                | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого. Обратите внимание, что элемент `<article>` не должен быть потомком элемента {{HTMLElement("address")}}. |
+| Разрешённые ARIA роли                                            | {{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("main")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}                                                           |
+| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                             |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>К этому элементу применимы только <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<h2 id="Примечание">Примечание</h2>
+## Примечание
 
-<ul>
- <li>Каждый элемент <code>&lt;article&gt;</code> должен быть идентифицирован, обычно путём добавления заголовка (элементы <a href="/ru/docs/Web/HTML/Element/Heading_Elements"><code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code></a>) в качестве дочернего элемента.</li>
- <li>Когда элемент <code>&lt;article&gt;</code> является вложенным, внутренний элемент представляет собой контент связанный с внешним элементом. Например, комментарии к публикации в блоге могут быть элементами <code>&lt;article&gt;</code>, вложенными в другой <code>&lt;article&gt;</code>, являющийся публикацией в блоге.</li>
- <li>Информация об авторе в элементе <code>&lt;article&gt;</code> может быть представлена через элемент {{HTMLElement("address")}}, но это не применимо к вложенным элементам <code>&lt;article&gt;</code>.</li>
- <li>Дата и время публикации в элементе <code>&lt;article&gt;</code> могут быть описаны с помощью атрибута {{htmlattrxref("datetime", "time")}} элемента {{HTMLElement("time")}}. <em>Обратите внимание, что атрибут {{htmlattrxref("pubdate", "time")}} элемента {{HTMLElement("time")}} больше не является частью стандарта {{glossary("W3C")}} {{glossary("HTML5")}}.</em></li>
-</ul>
+- Каждый элемент `<article>` должен быть идентифицирован, обычно путём добавления заголовка (элементы [`<h1>`-`<h6>`](/ru/docs/Web/HTML/Element/Heading_Elements)) в качестве дочернего элемента.
+- Когда элемент `<article>` является вложенным, внутренний элемент представляет собой контент связанный с внешним элементом. Например, комментарии к публикации в блоге могут быть элементами `<article>`, вложенными в другой `<article>`, являющийся публикацией в блоге.
+- Информация об авторе в элементе `<article>` может быть представлена через элемент {{HTMLElement("address")}}, но это не применимо к вложенным элементам `<article>`.
+- Дата и время публикации в элементе `<article>` могут быть описаны с помощью атрибута {{htmlattrxref("datetime", "time")}} элемента {{HTMLElement("time")}}. _Обратите внимание, что атрибут {{htmlattrxref("pubdate", "time")}} элемента {{HTMLElement("time")}} больше не является частью стандарта {{glossary("W3C")}} {{glossary("HTML5")}}._
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<pre class="brush: html">&lt;article class="film_review"&gt;
-  &lt;header&gt;
-    &lt;h2&gt;Парк Юрского периода&lt;/h2&gt;
-  &lt;/header&gt;
-  &lt;section class="main_review"&gt;
-    &lt;p&gt;Динозавры были величественны!&lt;/p&gt;
-  &lt;/section&gt;
-  &lt;section class="user_reviews"&gt;
-    &lt;article class="user_review"&gt;
-      &lt;p&gt;Слишком страшно для меня.&lt;/p&gt;
-      &lt;footer&gt;
-        &lt;p&gt;
+```html
+<article class="film_review">
+  <header>
+    <h2>Парк Юрского периода</h2>
+  </header>
+  <section class="main_review">
+    <p>Динозавры были величественны!</p>
+  </section>
+  <section class="user_reviews">
+    <article class="user_review">
+      <p>Слишком страшно для меня.</p>
+      <footer>
+        <p>
           Опубликовано
-          &lt;time datetime="2015-05-16 19:00"&gt;16 мая&lt;/time&gt;
+          <time datetime="2015-05-16 19:00">16 мая</time>
           Лизой.
-        &lt;/p&gt;
-      &lt;/footer&gt;
-    &lt;/article&gt;
-    &lt;article class="user_review"&gt;
-      &lt;p&gt;Я согласен, динозавры мои любимцы.&lt;/p&gt;
-      &lt;footer&gt;
-        &lt;p&gt;
+        </p>
+      </footer>
+    </article>
+    <article class="user_review">
+      <p>Я согласен, динозавры мои любимцы.</p>
+      <footer>
+        <p>
           Опубликовано
-          &lt;time datetime="2015-05-17 19:00"&gt;17 мая&lt;/time&gt;
+          <time datetime="2015-05-17 19:00">17 мая</time>
           Томом.
-        &lt;/p&gt;
-      &lt;/footer&gt;
-    &lt;/article&gt;
-  &lt;/section&gt;
-  &lt;footer&gt;
-    &lt;p&gt;
+        </p>
+      </footer>
+    </article>
+  </section>
+  <footer>
+    <p>
       Опубликовано
-      &lt;time datetime="2015-05-15 19:00"&gt;15 мая&lt;/time&gt;
+      <time datetime="2015-05-15 19:00">15 мая</time>
       Стаффом.
-    &lt;/p&gt;
-  &lt;/footer&gt;
-&lt;/article&gt;
-</pre>
+    </p>
+  </footer>
+</article>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+## Поддержка браузерами
 
+{{Compat}}
 
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}</li>
- <li><a href="/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Разделы и структура документа HTML5</a>.</li>
-</ul>
+- Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [Разделы и структура документа HTML5](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).

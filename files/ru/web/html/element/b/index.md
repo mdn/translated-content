@@ -3,80 +3,59 @@ title: <b>
 slug: Web/HTML/Element/b
 translation_of: Web/HTML/Element/b
 ---
-<p><strong>HTML-элемент <code>&lt;b&gt;</code> </strong> является частью текста стилистически отличающейся от нормального текста, не носящий какого-либо специального значения или важности, и как правило выделен жирным шрифтом.</p>
+**HTML-элемент `<b>` **является частью текста стилистически отличающейся от нормального текста, не носящий какого-либо специального значения или важности, и как правило выделен жирным шрифтом.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the <a href="/en-US/docs/DOM/span"><code>HTMLSpanElement</code></a> interface for this element.</td>
-  </tr>
- </tbody>
-</table>
+| [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content.                 |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                    | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                  |
+| Tag omission                                           | {{no_tag_omission}}                                                                                                                                                |
+| Permitted parents                                      | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                         |
+| Permitted ARIA roles                                   | Any                                                                                                                                                                     |
+| DOM interface                                          | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [`HTMLSpanElement`](/ru/docs/DOM/span) interface for this element. |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент содержит только <a href="/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+Этот элемент содержит только [global attributes](/ru/docs/HTML/Global_attributes).
 
-<h2 id="Указания_по_применению">Указания по применению</h2>
+## Указания по применению
 
-<ul>
- <li>Используйте <code>&lt;b&gt;</code> в таких случаях, как ключевые слова в кратком содержании, имена продуктов в отзыве, или других частях текста, которые обычно выделяют жирным.</li>
- <li>Не путать элемент <code>&lt;b&gt;</code> с {{HTMLElement("strong")}}, {{HTMLElement("em")}}, или {{HTMLElement("mark")}} элементами. Элемент {{HTMLElement("strong")}} представляет собой текст определённой <em>важности</em>, {{HTMLElement("em")}} делает некий акцент на тексте, и элемент {{HTMLElement("mark")}} представляет собой текст определённой <em>значимости</em>. Элемент <code>&lt;b&gt;</code> не содержит специальной семантической информации, используйте его только в том случае, если другие не подошли.</li>
- <li>Также не помечайте заглавия и заголовки элементом <code>&lt;b&gt;</code>. Для этих целей используйте элементы с {{HTMLElement("h1")}} до {{HTMLElement("h6")}} . К тому же CSS может изменять стандартный вид этих элементов, в результате чего они <em>не всегда </em>будут выделены жирным текстом.</li>
- <li>Хорошей практикой является использование атрибута <strong>class</strong> на элементе <code>&lt;b&gt;</code> для того, чтобы передать дополнительную семантическую информацию (например, <code>&lt;b class="lead"&gt;</code> для первого предложения в абзаце). Это упрощает разработку различных стилизаций веб-документа без надобности менять его HTML-код.</li>
- <li>Исторически, элемент <code>&lt;b&gt;</code> был задуман для выделения текста жирным шрифтом. Информация о стилизации устарела, начиная с HTML4, значение элемента <code>&lt;b&gt;</code> было изменено.</li>
- <li>Если нет семантической причины использовать элемент &lt;b&gt;, использование css свойства <a href="/en-US/docs/CSS/font-weight">font-weight</a> со значением bold будет более грамотным выбором для изменения толщины текста.</li>
-</ul>
+- Используйте `<b>` в таких случаях, как ключевые слова в кратком содержании, имена продуктов в отзыве, или других частях текста, которые обычно выделяют жирным.
+- Не путать элемент `<b>` с {{HTMLElement("strong")}}, {{HTMLElement("em")}}, или {{HTMLElement("mark")}} элементами. Элемент {{HTMLElement("strong")}} представляет собой текст определённой _важности_, {{HTMLElement("em")}} делает некий акцент на тексте, и элемент {{HTMLElement("mark")}} представляет собой текст определённой _значимости_. Элемент `<b>` не содержит специальной семантической информации, используйте его только в том случае, если другие не подошли.
+- Также не помечайте заглавия и заголовки элементом `<b>`. Для этих целей используйте элементы с {{HTMLElement("h1")}} до {{HTMLElement("h6")}} . К тому же CSS может изменять стандартный вид этих элементов, в результате чего они _не всегда_ будут выделены жирным текстом.
+- Хорошей практикой является использование атрибута **class** на элементе `<b>` для того, чтобы передать дополнительную семантическую информацию (например, `<b class="lead">` для первого предложения в абзаце). Это упрощает разработку различных стилизаций веб-документа без надобности менять его HTML-код.
+- Исторически, элемент `<b>` был задуман для выделения текста жирным шрифтом. Информация о стилизации устарела, начиная с HTML4, значение элемента `<b>` было изменено.
+- Если нет семантической причины использовать элемент \<b>, использование css свойства [font-weight](/ru/docs/CSS/font-weight) со значением bold будет более грамотным выбором для изменения толщины текста.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: css">.keywords {
+```css
+.keywords {
     color:red;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;p&gt;
-    В этой статье описывается элемент для форматирования &lt;b class="keywords"&gt;текста&lt;/b&gt;.
-    Она объясняет его использование в документе &lt;b class="keywords"&gt;HTML&lt;/b&gt;.
-&lt;/p&gt;
-</pre>
+```html
+<p>
+    В этой статье описывается элемент для форматирования <b class="keywords">текста</b>.
+    Она объясняет его использование в документе <b class="keywords">HTML</b>.
+</p>
+```
 
-<p>{{EmbedLiveSample('Пример')}}</p>
+{{EmbedLiveSample('Пример')}}
 
-<p>Ключевые слова с тегом <code>&lt;b&gt;</code>, отображаемые со стилем, в<span style="">ыделены жирным шрифтом.</span></p>
+Ключевые слова с тегом `<b>`, отображаемые со стилем, выделены жирным шрифтом.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
-<p>{{Compat}}</p>
+## Браузерная совместимость
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Другие элементы содержащие <a href="/en-US/docs/HTML/Text_level_semantics_conveying_elements">text-level semantics</a>: {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.</li>
- <li><a class="external" href="https://www.w3.org/International/questions/qa-b-and-i-tags">Using &lt;b&gt; and &lt;i&gt; elements (W3C)</a></li>
-</ul>
+## Смотрите также
 
-<div>{{HTMLRef}}</div>
+- Другие элементы содержащие [text-level semantics](/ru/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
+- [Using \<b> and \<i> elements (W3C)](https://www.w3.org/International/questions/qa-b-and-i-tags)
+
+{{HTMLRef}}

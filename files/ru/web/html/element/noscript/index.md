@@ -3,73 +3,52 @@ title: <noscript>
 slug: Web/HTML/Element/noscript
 translation_of: Web/HTML/Element/noscript
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<h2 id="Резюме">Резюме</h2>
+## Резюме
 
-<p>Элемент HTML<strong> <code>&lt;noscript&gt;</code> </strong>определяет секцию html кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.</p>
+Элемент HTML** `<noscript>` **определяет секцию html кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Metadata_content" title="HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">phrasing content</a>.</li>
- <li><dfn>Permitted content</dfn> When scripting is disabled and when it is a descendant of the {{HTMLElement("head")}} element: in any order, zero or more {{HTMLElement("link")}} elements, zero or more {{HTMLElement("style")}} elements, and zero or more {{HTMLElement("meta")}} elements.<br>
-  When scripting is disabled and when it isn't a descendant of the {{HTMLElement("head")}} element: any transparent content, but no <code>&lt;noscript&gt;</code> element must be among its descendants.<br>
-  Otherwise: flow content or phrasing content.</li>
- <li><dfn>Tag omission</dfn> {{no_tag_omission}}</li>
- <li><dfn>Permitted parent elements</dfn> Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">phrasing content</a>, if there are no ancestor <code>&lt;noscript&gt;</code> element, or in a {{HTMLElement("head")}} element (but only for an HTML document), here again if there are no ancestor <code>&lt;noscript&gt;</code> element.</li>
- <li><dfn>DOM interface</dfn> {{domxref("HTMLElement")}}</li>
-</ul>
+- _[Content categories](/ru/docs/HTML/Content_categories "HTML/Content_categories")_ [Metadata content](/ru/docs/HTML/Content_categories#Metadata_content "HTML/Content_categories#Metadata_content"), [flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content").
+- _Permitted content_ When scripting is disabled and when it is a descendant of the {{HTMLElement("head")}} element: in any order, zero or more {{HTMLElement("link")}} elements, zero or more {{HTMLElement("style")}} elements, and zero or more {{HTMLElement("meta")}} elements.
+  When scripting is disabled and when it isn't a descendant of the {{HTMLElement("head")}} element: any transparent content, but no `<noscript>` element must be among its descendants.
+  Otherwise: flow content or phrasing content.
+- _Tag omission_ {{no_tag_omission}}
+- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"), if there are no ancestor `<noscript>` element, or in a {{HTMLElement("head")}} element (but only for an HTML document), here again if there are no ancestor `<noscript>` element.
+- _DOM interface_ {{domxref("HTMLElement")}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p><span style="line-height: 21px;">Этот элемент включает в себя только <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">глобальные атрибуты</a>.</span></p>
+Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<pre class="brush: html">&lt;noscript&gt;
-  &lt;!-- anchor linking to external file --&gt;
-  &lt;a href="http://www.mozilla.com/"&gt;External Link&lt;/a&gt;
-&lt;/noscript&gt;
-&lt;p&gt;Rocks!&lt;/p&gt;
-</pre>
-
-<h3 id="Пример_с_включённым_JavaScript'ом">Пример с включённым JavaScript</h3>
-
+```html
+<noscript>
+  <!-- anchor linking to external file -->
+  <a href="http://www.mozilla.com/">External Link</a>
+</noscript>
 <p>Rocks!</p>
+```
 
-<h3 id="Результат_с_выключенным_JavaScript'ом">Результат с выключенным JavaScript</h3>
+### Пример с включённым JavaScript
 
-<p><a class="external" href="http://www.mozilla.com/">External Link</a></p>
+Rocks!
 
-<p>Rocks!</p>
+### Результат с выключенным JavaScript
 
-<h2 id="Specifications">Specifications</h2>
+[External Link](http://www.mozilla.com/)
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/scripts.html#h-18.3.1', '&lt;noscript&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+Rocks!
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Specifications
+
+| Specification                                                                                                        | Status                           | Comment |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.3.1', '&lt;noscript&gt;')}}             | {{Spec2('HTML4.01')}}     |         |
+
+## Browser compatibility
+
+{{Compat}}

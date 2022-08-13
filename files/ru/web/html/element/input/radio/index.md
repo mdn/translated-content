@@ -14,129 +14,111 @@ tags:
   - Ссылки
 translation_of: Web/HTML/Element/input/radio
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary">Атрибут<strong> type</strong> тега <code>&lt;input&gt;</code> со значением <strong><code>radio</code></strong> обычно используется для создания группы радиокнопок (переключателей), описывающих набор взаимосвязанных параметров.</span> Одновременно пользователь может выбрать лишь одну радиокнопку из предложенных. Радиокнопки обычно отображаются как небольшие кружки, которые заполняются или подсвечиваются при наведении.</p>
+Атрибут **type** тега `<input>` со значением **`radio`** обычно используется для создания группы радиокнопок (переключателей), описывающих набор взаимосвязанных параметров. Одновременно пользователь может выбрать лишь одну радиокнопку из предложенных. Радиокнопки обычно отображаются как небольшие кружки, которые заполняются или подсвечиваются при наведении.
 
-<div id="Basic_example">
-<pre class="brush: html">&lt;input type="radio" id="radioButton"&gt;</pre>
+```html
+<input type="radio" id="radioButton">
+```
 
-<p>{{ EmbedLiveSample('Basic_example', 600, 30) }}</p>
+{{ EmbedLiveSample('Basic_example', 600, 30) }}
 
-<p>Исходный код к данному интерактивному примеру находиться на GitHub репозитории. Если вы желаете внести свой вклад в проект интерактивных примеров, то склонируйте удалённый репозиторий <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>и отправьте нам запрос на включение сделанных вами изменений «pull request».</p>
+Исходный код к данному интерактивному примеру находиться на GitHub репозитории. Если вы желаете внести свой вклад в проект интерактивных примеров, то склонируйте удалённый репозиторий [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)и отправьте нам запрос на включение сделанных вами изменений «pull request».
 
-<p>Радиокнопки называются так потому, что выглядят и функционируют в схожей манере с кнопками старомодных радиоприёмников, подобных представленному ниже. </p>
+Радиокнопки называются так потому, что выглядят и функционируют в схожей манере с кнопками старомодных радиоприёмников, подобных представленному ниже.
 
-<p><img alt="Shows what radio buttons looked like in the olden days." src="https://mdn.mozillademos.org/files/15610/old-radio.jpg" style="height: 400px; width: 600px;" title="Photo of an old-time radio"></p>
-</div>
+![Shows what radio buttons looked like in the olden days.](https://mdn.mozillademos.org/files/15610/old-radio.jpg "Photo of an old-time radio")
 
-<div class="note">
-<p><strong>Примечание</strong>: <a href="/en-US/docs/Web/HTML/Element/input/checkbox">Чекбоксы</a> похожи на радиокнопки, но с одним важным отличием: радиокнопки предназначены для выбора одного значения из предложенных, в то время как чекбоксы позволяют "включать" и "выключать"  значения. Если существует несколько элементов управления, то с помощью радиокнопок пользователь сможет выбрать лишь один из них, а чекбоксы позволят выбрать несколько значений одновременно.</p>
-</div>
+> **Примечание:** [Чекбоксы](/ru/docs/Web/HTML/Element/input/checkbox) похожи на радиокнопки, но с одним важным отличием: радиокнопки предназначены для выбора одного значения из предложенных, в то время как чекбоксы позволяют "включать" и "выключать" значения. Если существует несколько элементов управления, то с помощью радиокнопок пользователь сможет выбрать лишь один из них, а чекбоксы позволят выбрать несколько значений одновременно.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <td><strong><a href="#value">Value</a></strong></td>
-   <td>{{domxref("Строка DOM")}} отображающая значение радиокнопки</td>
-  </tr>
-  <tr>
-   <td><strong>События</strong></td>
-   <td>{{event("change")}} и {{event("input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Универсальные атрибуты</strong></td>
-   <td>{{htmlattrxref("checked", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Атрибуты IDL</strong></td>
-   <td><code>checked</code> и <code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Методы</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}</td>
-  </tr>
- </tbody>
-</table>
+| **[Value](#value)**        | {{domxref("Строка DOM")}} отображающая значение радиокнопки |
+| -------------------------- | -------------------------------------------------------------------------- |
+| **События**                | {{event("change")}} и {{event("input")}}                        |
+| **Универсальные атрибуты** | {{htmlattrxref("checked", "input")}}                           |
+| **Атрибуты IDL**           | `checked` и `value`                                                        |
+| **Методы**                 | {{domxref("HTMLInputElement.select", "select()")}}       |
 
-<h2 id="Атрибут_value">Атрибут value </h2>
+## Атрибут value
 
-<p>Атрибут <code>value</code> - это {{domxref("строка DOM")}}, содержащая значение радиокнопки. Это значение никогда не показывается пользователю его веб-браузером. Атрибут value используется для того, чтобы точно определить какая из радиокнопок была выбрана пользователем.</p>
+Атрибут `value` - это {{domxref("строка DOM")}}, содержащая значение радиокнопки. Это значение никогда не показывается пользователю его веб-браузером. Атрибут value используется для того, чтобы точно определить какая из радиокнопок была выбрана пользователем.
 
-<h3 id="Создание_группы_радиокнопок">Создание группы радиокнопок</h3>
+### Создание группы радиокнопок
 
-<p>Группа радиокнопок определяется путём присвоения каждой радиокнопке в данной группе одного и того же значения атрибута ({{htmlattrxref("name", "input")}}). Выбор любой радиокнопки в этой группе автоматически отменяет выбор другой радиокнопки в той же группе. </p>
+Группа радиокнопок определяется путём присвоения каждой радиокнопке в данной группе одного и того же значения атрибута ({{htmlattrxref("name", "input")}}). Выбор любой радиокнопки в этой группе автоматически отменяет выбор другой радиокнопки в той же группе.
 
-<p>Вы можете создать любое количество групп радиокнопок, если каждой из этих групп будет присвоено своё уникальное значение атрибута <code>name</code>.</p>
+Вы можете создать любое количество групп радиокнопок, если каждой из этих групп будет присвоено своё уникальное значение атрибута `name`.
 
-<p>Например, если в вашей форме необходимо запросить  предпочитаемый способ контакта с пользователем, то вы можете создать три радиокнопки с <strong>name= <code>"contact"</code> , </strong>но с разными<strong> value = </strong><code>"email"</code>, <strong>value =</strong><code>"phone"</code> и <strong>value =</strong>  <code>"mail"</code> соответственно. Пользователь не видит атрибуты <code>name</code>  и <code>value</code> (если только вы не добавляете код для их отображения).</p>
+Например, если в вашей форме необходимо запросить предпочитаемый способ контакта с пользователем, то вы можете создать три радиокнопки с **name= `"contact"` ,** но с разными **value =** `"email"`, **value =**`"phone"` и **value =** `"mail"` соответственно. Пользователь не видит атрибуты `name` и `value` (если только вы не добавляете код для их отображения).
 
-<p>HTML будет выглядеть следующим образом:</p>
+HTML будет выглядеть следующим образом:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;p&gt;Please select your preferred contact method:&lt;/p&gt;
-  &lt;div&gt;
-    &lt;input type="radio" id="contactChoice1"
-     name="contact" value="email"&gt;
-    &lt;label for="contactChoice1"&gt;Email&lt;/label&gt;
+```html
+<form>
+  <p>Please select your preferred contact method:</p>
+  <div>
+    <input type="radio" id="contactChoice1"
+     name="contact" value="email">
+    <label for="contactChoice1">Email</label>
 
-    &lt;input type="radio" id="contactChoice2"
-     name="contact" value="phone"&gt;
-    &lt;label for="contactChoice2"&gt;Phone&lt;/label&gt;
+    <input type="radio" id="contactChoice2"
+     name="contact" value="phone">
+    <label for="contactChoice2">Phone</label>
 
-    &lt;input type="radio" id="contactChoice3"
-     name="contact" value="mail"&gt;
-    &lt;label for="contactChoice3"&gt;Mail&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button type="submit"&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+    <input type="radio" id="contactChoice3"
+     name="contact" value="mail">
+    <label for="contactChoice3">Mail</label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+```
 
-<p>Здесь вы видите три радиокнопки, каждая из которых имеет атрибут <code>name</code>  со значением <code>"contact"</code> и уникальный атрибут <code>value</code>, который однозначно идентифицирует эту радиокнопку в данной группе. Каждой радиокнопке присвоен уникальный {{domxref("Element.id", "id")}},  связанный с тегом {{HTMLElement("label")}} через атрибут {{htmlattrxref("for", "label")}}  для установления связи между конкретной меткой и конкретной радиокнопкой. </p>
+Здесь вы видите три радиокнопки, каждая из которых имеет атрибут `name` со значением `"contact"` и уникальный атрибут `value`, который однозначно идентифицирует эту радиокнопку в данной группе. Каждой радиокнопке присвоен уникальный {{domxref("Element.id", "id")}}, связанный с тегом {{HTMLElement("label")}} через атрибут {{htmlattrxref("for", "label")}} для установления связи между конкретной меткой и конкретной радиокнопкой.
 
-<p>Вы можете опробовать этот код здесь: </p>
+Вы можете опробовать этот код здесь:
 
-<p>{{ EmbedLiveSample('Создание_группы_радиокнопок', 600, 130) }}</p>
+{{ EmbedLiveSample('Создание_группы_радиокнопок', 600, 130) }}
 
-<h3 id="Представление_данных_группы_радиокнопок">Представление данных группы радиокнопок</h3>
+### Представление данных группы радиокнопок
 
-<p>Когда представленная выше форма отправляется на сервер с информацией о выбранной радиокнопке,  то её данные  включают запись в виде <strong>"contact=name".</strong> Например, если пользователь кликает на радиокнопку "Phone", а затем отправляет форму на сервер, данные формы будут включать в себя строку <code>"contact=phone"</code>.</p>
+Когда представленная выше форма отправляется на сервер с информацией о выбранной радиокнопке, то её данные включают запись в виде **"contact=name".** Например, если пользователь кликает на радиокнопку "Phone", а затем отправляет форму на сервер, данные формы будут включать в себя строку `"contact=phone"`.
 
-<p>Если вы пренебрежёте атрибутом <code>value</code> в  вашем HTML, то отправленные данные просто присвоят данной группе значение <code>"on"</code>.  То есть, если пользователь кликнет на радиокнопку "Phone" и отправит форму, итоговые данные отобразятся как  <code>"contact=on"</code> и будут абсолютно бесполезны. Поэтому никогда не забывайте указывать атрибут <code>value</code>!</p>
+Если вы пренебрежёте атрибутом `value` в вашем HTML, то отправленные данные просто присвоят данной группе значение `"on"`. То есть, если пользователь кликнет на радиокнопку "Phone" и отправит форму, итоговые данные отобразятся как `"contact=on"` и будут абсолютно бесполезны. Поэтому никогда не забывайте указывать атрибут `value`!
 
-<div class="note">
-<p><strong>Примечание</strong>: Если в отправленной форме не была выбрана ни одна радиокнопка, то группа радиокнопок вообще не будет включать в себя никакие данные, так как отсутствуют значения для отправки.</p>
-</div>
+> **Примечание:** Если в отправленной форме не была выбрана ни одна радиокнопка, то группа радиокнопок вообще не будет включать в себя никакие данные, так как отсутствуют значения для отправки.
 
-<p>Поскольку отправлять пустую форму в большинстве случаев не имеет никакого смысла, то разумно оставлять одну радиокнопку активированной по умолчанию с помощью атрибута <code>"checked"</code>. Смотрите здесь <a href="#selecting_a_radio_button_by_default">Selecting a radio button by default</a>.</p>
+Поскольку отправлять пустую форму в большинстве случаев не имеет никакого смысла, то разумно оставлять одну радиокнопку активированной по умолчанию с помощью атрибута `"checked"`. Смотрите здесь [Selecting a radio button by default](#selecting_a_radio_button_by_default).
 
-<p>Давайте добавим немного кода в наш пример для того, чтобы изучить данные, полученные из этой формы. HTML изменяется путём добавления блока {{HTMLElement("pre")}} для вывода данных формы. </p>
+Давайте добавим немного кода в наш пример для того, чтобы изучить данные, полученные из этой формы. HTML изменяется путём добавления блока {{HTMLElement("pre")}} для вывода данных формы.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;p&gt;Please select your preferred contact method:&lt;/p&gt;
-  &lt;div&gt;
-    &lt;input type="radio" id="contactChoice1"
-           name="contact" value="email"&gt;
-    &lt;label for="contactChoice1"&gt;Email&lt;/label&gt;
-    &lt;input type="radio" id="contactChoice2"
-           name="contact" value="phone"&gt;
-    &lt;label for="contactChoice2"&gt;Phone&lt;/label&gt;
-    &lt;input type="radio" id="contactChoice3"
-           name="contact" value="mail"&gt;
-    &lt;label for="contactChoice3"&gt;Mail&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button type="submit"&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-&lt;pre id="log"&gt;
-&lt;/pre&gt;
+```html
+<form>
+  <p>Please select your preferred contact method:</p>
+  <div>
+    <input type="radio" id="contactChoice1"
+           name="contact" value="email">
+    <label for="contactChoice1">Email</label>
+    <input type="radio" id="contactChoice2"
+           name="contact" value="phone">
+    <label for="contactChoice2">Phone</label>
+    <input type="radio" id="contactChoice3"
+           name="contact" value="mail">
+    <label for="contactChoice3">Mail</label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+<pre id="log">
 </pre>
+```
 
-<p>Затем добавим немного <a href="/en-US/docs/Web/JavaScript">JavaScript</a>. Установим обработчик события {{event("submit")}}, которая будет отправляться при клике пользователя на кнопку "Отправить":</p>
+Затем добавим немного [JavaScript](/ru/docs/Web/JavaScript). Установим обработчик события {{event("submit")}}, которая будет отправляться при клике пользователя на кнопку "Отправить":
 
-<pre class="brush: js">var form = document.querySelector("form");
+```js
+var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
 form.addEventListener("submit", function(event) {
@@ -147,89 +129,93 @@ form.addEventListener("submit", function(event) {
   };
   log.innerText = output;
   event.preventDefault();
-}, false);</pre>
+}, false);
+```
 
-<p>Опробуйте этот пример и убедитесь, что для группы радиокнопок  <code>"contact"</code>  будет только один результат.</p>
+Опробуйте этот пример и убедитесь, что для группы радиокнопок `"contact"` будет только один результат.
 
-<p>{{EmbedLiveSample("Представление_данных_группы_радиокнопок", 600, 130)}}</p>
+{{EmbedLiveSample("Представление_данных_группы_радиокнопок", 600, 130)}}
 
-<h2 id="Использование_радиокнопок">Использование радиокнопок</h2>
+## Использование радиокнопок
 
-<p>Мы уже осветили основные моменты работы с радиокнопками выше. Давайте рассмотрим другие распространённые  функции и методы, связанные с использованием радиокнопок, о которых вам нужно знать.</p>
+Мы уже осветили основные моменты работы с радиокнопками выше. Давайте рассмотрим другие распространённые функции и методы, связанные с использованием радиокнопок, о которых вам нужно знать.
 
-<h3 id="Выбор_радиокнопки_по_умолчанию">Выбор радиокнопки по умолчанию</h3>
+### Выбор радиокнопки по умолчанию
 
-<p>Чтобы установить радиокнопку как выбранную по умолчанию, вам необходимо подключить атрибут <code>checked</code>, как показано ниже в немного изменённой версии предыдущего примера.</p>
+Чтобы установить радиокнопку как выбранную по умолчанию, вам необходимо подключить атрибут `checked`, как показано ниже в немного изменённой версии предыдущего примера.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;p&gt;Please select your preferred contact method:&lt;/p&gt;
-  &lt;div&gt;
-    &lt;input type="radio" id="contactChoice1"
-     name="contact" value="email" checked&gt;
-    &lt;label for="contactChoice1"&gt;Email&lt;/label&gt;
+```html
+<form>
+  <p>Please select your preferred contact method:</p>
+  <div>
+    <input type="radio" id="contactChoice1"
+     name="contact" value="email" checked>
+    <label for="contactChoice1">Email</label>
 
-    &lt;input type="radio" id="contactChoice2"
-     name="contact" value="phone"&gt;
-    &lt;label for="contactChoice2"&gt;Phone&lt;/label&gt;
+    <input type="radio" id="contactChoice2"
+     name="contact" value="phone">
+    <label for="contactChoice2">Phone</label>
 
-    &lt;input type="radio" id="contactChoice3"
-     name="contact" value="mail"&gt;
-    &lt;label for="contactChoice3"&gt;Mail&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button type="submit"&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+    <input type="radio" id="contactChoice3"
+     name="contact" value="mail">
+    <label for="contactChoice3">Mail</label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+```
 
-<p>{{ EmbedLiveSample('Выбор_радиокнопки_по_умолчанию', 600, 130) }}</p>
+{{ EmbedLiveSample('Выбор_радиокнопки_по_умолчанию', 600, 130) }}
 
-<p>В данном случае первая радиокнопка будет выбрана по умолчанию.</p>
+В данном случае первая радиокнопка будет выбрана по умолчанию.
 
-<div class="note">
-<p><strong>Примечание</strong>: Если вы устанавливаете атрибут <code>checked</code> более чем на одну кнопку, то стоит иметь в виду, что каждый последующий атрибут <code>checked</code> отменяет предыдущий, то  есть как отмеченная будет выбрана последняя радиокнопка с атрибутом <code>checked</code>. Это происходит потому, что в каждой группе радиокнопок одновременно может быть выбрана только одна кнопка, и браузер автоматически отменяет другие выбранные до этого радиокнопки.</p>
-</div>
+> **Примечание:** Если вы устанавливаете атрибут `checked` более чем на одну кнопку, то стоит иметь в виду, что каждый последующий атрибут `checked` отменяет предыдущий, то есть как отмеченная будет выбрана последняя радиокнопка с атрибутом `checked`. Это происходит потому, что в каждой группе радиокнопок одновременно может быть выбрана только одна кнопка, и браузер автоматически отменяет другие выбранные до этого радиокнопки.
 
-<h3 id="Providing_a_bigger_hit_area_for_your_radio_buttons">Providing a bigger hit area for your radio buttons</h3>
+### Providing a bigger hit area for your radio buttons
 
-<p>В примерах, представленных выше, вы могли заметить, что можно выбрать радиокнопку, кликнув как на соединённый с ней элемент  {{htmlelement("label")}}, так и на саму кнопку. Это действительно полезная функция HTML-форм, которая облегчает пользователям выбор нужной опции, особенно на устройствах с небольшим экраном, таких как смартфоны.  Помимо специальных возможностей, это другая веская причина для правильного использования элементов  <code>&lt;label&gt;</code>  в ваших формах.</p>
+В примерах, представленных выше, вы могли заметить, что можно выбрать радиокнопку, кликнув как на соединённый с ней элемент {{htmlelement("label")}}, так и на саму кнопку. Это действительно полезная функция HTML-форм, которая облегчает пользователям выбор нужной опции, особенно на устройствах с небольшим экраном, таких как смартфоны. Помимо специальных возможностей, это другая веская причина для правильного использования элементов `<label>` в ваших формах.
 
-<h2 id="Валидация_формы">Валидация формы</h2>
+## Валидация формы
 
-<p>Радиокнопки не участвуют в проверке ограничений, так как у них нет реальных значений для ограничения.</p>
+Радиокнопки не участвуют в проверке ограничений, так как у них нет реальных значений для ограничения.
 
-<h2 id="Установка_стилей_радиокнопок">Установка стилей радиокнопок</h2>
+## Установка стилей радиокнопок
 
-<p>Следующий пример отображает немного более проработанную версию примера, который мы использовали на протяжении всей статьи,  с некоторыми дополнительными стилями и с лучшей семантикой, установленной с помощью специализированных элементов.</p>
+Следующий пример отображает немного более проработанную версию примера, который мы использовали на протяжении всей статьи, с некоторыми дополнительными стилями и с лучшей семантикой, установленной с помощью специализированных элементов.
 
-<p>HTML будет выглядеть следующим образом:</p>
+HTML будет выглядеть следующим образом:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Please select your preferred contact method:&lt;/legend&gt;
-    &lt;div&gt;
-      &lt;input type="radio" id="contactChoice1"
-       name="contact" value="email" checked&gt;
-      &lt;label for="contactChoice1"&gt;Email&lt;/label&gt;
+```html
+<form>
+  <fieldset>
+    <legend>Please select your preferred contact method:</legend>
+    <div>
+      <input type="radio" id="contactChoice1"
+       name="contact" value="email" checked>
+      <label for="contactChoice1">Email</label>
 
-      &lt;input type="radio" id="contactChoice2"
-       name="contact" value="phone"&gt;
-      &lt;label for="contactChoice2"&gt;Phone&lt;/label&gt;
+      <input type="radio" id="contactChoice2"
+       name="contact" value="phone">
+      <label for="contactChoice2">Phone</label>
 
-      &lt;input type="radio" id="contactChoice3"
-       name="contact" value="mail"&gt;
-      &lt;label for="contactChoice3"&gt;Mail&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;button type="submit"&gt;Submit&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+      <input type="radio" id="contactChoice3"
+       name="contact" value="mail">
+      <label for="contactChoice3">Mail</label>
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </fieldset>
+</form>
+```
 
-<p>Здесь не так много нового, кроме дополнения в виде элементов {{htmlelement("fieldset")}} и {{htmlelement("legend")}}, которые позволяют сгруппировать элементы форм между собой функционально и семантически.</p>
+Здесь не так много нового, кроме дополнения в виде элементов {{htmlelement("fieldset")}} и {{htmlelement("legend")}}, которые позволяют сгруппировать элементы форм между собой функционально и семантически.
 
-<p>CSS будет выглядеть так:</p>
+CSS будет выглядеть так:
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -285,27 +271,26 @@ button:active {
   background-color: white;
   color: black;
   outline: 1px solid black;
-}</pre>
+}
+```
 
-<p>Самым примечательным здесь является использование свойства {{cssxref("appearance")}} с использованием префиксов некоторых браузеров. По умолчанию радиокнопки (и чекбоксы) уже имеют собственные стили в каждой операционной системе. Придав свойству <code>appearance</code> значение <code>none</code>, вы можете отменить все "родные" настройки стилей операционной системы и создать свои собственные. Здесь мы использовали свойства {{cssxref("border")}} и  {{cssxref("border-radius")}}, а также свойство {{cssxref("transition")}} для создания хорошо анимированного выбора радиокнопок. Заметьте также, что псевдокласс {{cssxref(":checked")}} используется для указания стилей внешнего вида кнопок при их выборе.</p>
+Самым примечательным здесь является использование свойства {{cssxref("appearance")}} с использованием префиксов некоторых браузеров. По умолчанию радиокнопки (и чекбоксы) уже имеют собственные стили в каждой операционной системе. Придав свойству `appearance` значение `none`, вы можете отменить все "родные" настройки стилей операционной системы и создать свои собственные. Здесь мы использовали свойства {{cssxref("border")}} и {{cssxref("border-radius")}}, а также свойство {{cssxref("transition")}} для создания хорошо анимированного выбора радиокнопок. Заметьте также, что псевдокласс {{cssxref(":checked")}} используется для указания стилей внешнего вида кнопок при их выборе.
 
-<p>Стоит иметь в виду, что свойство  <code>appearance</code> неплохо работает для создания простых стилей, но имеет тенденцию вести себя несколько непоследовательно в некоторых браузерах и полностью не работает в Internet Explorer. Тщательно проверяйте как работает ваш сайт в каждом браузере! </p>
+Стоит иметь в виду, что свойство `appearance` неплохо работает для создания простых стилей, но имеет тенденцию вести себя несколько непоследовательно в некоторых браузерах и полностью не работает в Internet Explorer. Тщательно проверяйте как работает ваш сайт в каждом браузере!
 
-<p>{{ EmbedLiveSample('Установка_стилей_радиокнопок', 600, 120) }}</p>
+{{ EmbedLiveSample('Установка_стилей_радиокнопок', 600, 120) }}
 
-<p>Обратите внимание, что при клике на радиокнопку, на предыдущей выбранной кнопке появляется мягкий эффект угасания. Кроме того, стиль и окраска легенды и кнопки "Submit" имеет сильный контраст с остальным текстом. Возможно, это не совсем тот эффект, который вы хотели бы видеть в своём реальном веб-приложении, но этот пример хорошо отображает возможности CSS.</p>
+Обратите внимание, что при клике на радиокнопку, на предыдущей выбранной кнопке появляется мягкий эффект угасания. Кроме того, стиль и окраска легенды и кнопки "Submit" имеет сильный контраст с остальным текстом. Возможно, это не совсем тот эффект, который вы хотели бы видеть в своём реальном веб-приложении, но этот пример хорошо отображает возможности CSS.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface that implements it.</li>
- <li><code>RadioNodeList</code>: the interface that describes a list of radio buttons</li>
-</ul>
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface that implements it.
+- `RadioNodeList`: the interface that describes a list of radio buttons

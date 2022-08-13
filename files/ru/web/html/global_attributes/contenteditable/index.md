@@ -7,35 +7,31 @@ tags:
   - Определение
 translation_of: Web/HTML/Global_attributes/contenteditable
 ---
-<p>{{HTMLSidebar("Global_attributes")}}</p>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><font> (Mozilla / 5.0 (Windows NT 6.3, WOW64; rv: 29.0) Gecko / 20100101 Firefox / 29.0) </font><br>
- Атрибут <code><strong>contenteditable</strong></code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">global attribute</a> - это перечисляемый атрибут, указывающий, должен ли элемент редактироваться пользователем. Если это так, браузер изменит свой виджет, чтобы разрешить редактирование. Атрибут должен принимать одно из следующих значений:</p>
+(Mozilla / 5.0 (Windows NT 6.3, WOW64; rv: 29.0) Gecko / 20100101 Firefox / 29.0)
+Атрибут **`contenteditable`** [global attribute](/ru/docs/Web/HTML/Global_attributes) - это перечисляемый атрибут, указывающий, должен ли элемент редактироваться пользователем. Если это так, браузер изменит свой виджет, чтобы разрешить редактирование. Атрибут должен принимать одно из следующих значений:
 
-<ul>
- <li><span style="font-family: courier new;">true</span> или <em>пустую строку</em>, которое показывает, что элемент должен быть редактируемым;</li>
- <li><span style="font-family: courier new;">false</span>, которое показывает, что элемент должен быть нередактируемым.</li>
-</ul>
+- true или _пустую строку_, которое показывает, что элемент должен быть редактируемым;
+- false, которое показывает, что элемент должен быть нередактируемым.
 
-<p>Если атрибут не указан, то его значение <em>наследуется</em> от своего родительского элемента.</p>
+Если атрибут не указан, то его значение _наследуется_ от своего родительского элемента.
 
-<p>Этот атрибут <em>принимает одно из определённых значений</em> и не является <em>булевским</em>. Это значит, что точное использование одного из значений <code>true, false</code> или пустая строка обязательно и такое сокращение, как <code>&lt;label contenteditable&gt;Пример метки&lt;/label&gt; </code>неразрешено. Верное использование — <code>&lt;label contenteditable="true"&gt;Пример метки&lt;/label&gt;</code>. </p>
+Этот атрибут _принимает одно из определённых значений_ и не является _булевским_. Это значит, что точное использование одного из значений `true, false` или пустая строка обязательно и такое сокращение, как `<label contenteditable>Пример метки</label> `неразрешено. Верное использование — `<label contenteditable="true">Пример метки</label>`.
 
-<p>Вы можете установить цвет, используемый для вставки текста {{Glossary("caret")}}<br>
- со свойством CSS {{cssxref("caret-color")}}.  </p>
+Вы можете установить цвет, используемый для вставки текста {{Glossary("caret")}}
+со свойством CSS {{cssxref("caret-color")}}.
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость">Совместимость</h2>
+## Совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li><a href="/ru/docs/Web/Guide/HTML/Editable_content">Создание контента для редактирования</a></li>
- <li>Все <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a></li>
- <li>{{domxref("HTMLElement.contentEditable")}} и {{domxref("HTMLElement.isContentEditable")}}</li>
-</ul>
+- [Создание контента для редактирования](/ru/docs/Web/Guide/HTML/Editable_content)
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты)
+- {{domxref("HTMLElement.contentEditable")}} и {{domxref("HTMLElement.isContentEditable")}}

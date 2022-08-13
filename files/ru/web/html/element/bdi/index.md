@@ -9,85 +9,49 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/bdi
 ---
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><strong>HTML-элемент <code>&lt;bdi&gt;</code></strong><em> </em>(<em>bidirectional isolation</em>, или изоляция двунаправленности [текста]) изолирует от окружающего текста текстовый фрагмент, направление в котором может отличаться от направления окружающего текста (но не обязательно отличается).</p>
+**HTML-элемент `<bdi>`**\_ _(\_bidirectional isolation_, или изоляция двунаправленности \[текста]) изолирует от окружающего текста текстовый фрагмент, направление в котором может отличаться от направления окружающего текста (но не обязательно отличается).
 
-<p>Этот элемент полезен при встраивании текста с неизвестным направлением (например, из базы данных) внутрь текста с заданным направлением.</p>
+Этот элемент полезен при встраивании текста с неизвестным направлением (например, из базы данных) внутрь текста с заданным направлением.
 
-<p class="note">Хотя тот же эффект может быть достигнут применением CSS правила {{cssxref("unicode-bidi")}}<code>: isolate</code> к элементу {{HTMLElement("span")}} или другому элементу форматирования текста, семантическое значение передаётся только с помощью элемента <code>&lt;bdi&gt;</code>. Тем более, что браузеры могут игнорировать стили. В этом случае, текст будет отображён корректно при использовании HTML-элемента, и некорректно при использовании только CSS стилей.</p>
+> **Примечание:** Хотя тот же эффект может быть достигнут применением CSS правила {{cssxref("unicode-bidi")}}`: isolate` к элементу {{HTMLElement("span")}} или другому элементу форматирования текста, семантическое значение передаётся только с помощью элемента `<bdi>`. Тем более, что браузеры могут игнорировать стили. В этом случае, текст будет отображён корректно при использовании HTML-элемента, и некорректно при использовании только CSS стилей.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Flow_content">Phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parent elements</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Flow_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Content categories](/ru/docs/HTML/Content_categories "HTML/Content_categories") | [Flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"), palpable content. |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                                                | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Flow_content").                                                                                                                             |
+| Tag omission                                                                     | {{no_tag_omission}}                                                                                                                                                                                                                  |
+| Permitted parent elements                                                        | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Flow_content").                                                                                                    |
+| DOM interface                                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                      |
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>Like all other HTML elements, this element has the <a href="/en-US/docs/HTML/Global_attributes" title="HTML/Global attributes">global attributes</a>, with a slight semantic difference: the <strong>dir</strong> attribute is not inherited. If not set, its default value is the <code>auto</code> which let the browser decide the direction based on the element's content.</p>
+Like all other HTML elements, this element has the [global attributes](/ru/docs/HTML/Global_attributes "HTML/Global attributes"), with a slight semantic difference: the **dir** attribute is not inherited. If not set, its default value is the `auto` which let the browser decide the direction based on the element's content.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;p dir="ltr"&gt;This arabic word &lt;bdi&gt;ARABIC_PLACEHOLDER&lt;/bdi&gt; is automatically displayed right-to-left.&lt;/p&gt;
-</pre>
+```html
+<p dir="ltr">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p dir="ltr">This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.</p>
+This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                           | Comment |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}         | {{Spec2('HTML5 W3C')}}     |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 dir="ltr" id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related HTML element: {{HTMLElement("bdo")}}</li>
- <li>Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}</li>
-</ul>
+- Related HTML element: {{HTMLElement("bdo")}}
+- Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

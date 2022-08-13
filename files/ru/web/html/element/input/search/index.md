@@ -3,290 +3,218 @@ title: <input type="search">
 slug: Web/HTML/Element/Input/search
 translation_of: Web/HTML/Element/input/search
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary">{{HTMLElement("input")}} элементы с типом <code><strong>search</strong></code> это текстовые поля разработанные для ввода пользователем поисковых запросов. Функциональность идентична элементам с типом <code><a href="/en-US/docs/Web/HTML/Element/input/text">text</a></code>, но может отличаться стилизация за счёт {{Glossary("user agent")}}, а также наличием специального <strong>не стандартизированного</strong> события </span>{{domxref("HTMLElement/search_event", "onsearch")}}.</p>
+{{HTMLElement("input")}} элементы с типом **`search`** это текстовые поля разработанные для ввода пользователем поисковых запросов. Функциональность идентична элементам с типом [`text`](/en-US/docs/Web/HTML/Element/input/text), но может отличаться стилизация за счёт {{Glossary("user agent")}}, а также наличием специального **не стандартизированного** события {{domxref("HTMLElement/search_event", "onsearch")}}.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <td><strong><a href="#value">Value</a></strong></td>
-   <td>A {{domxref("DOMString")}} representing the value contained in the search field.</td>
-  </tr>
-  <tr>
-   <td><strong>Events</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Supported Common Attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("required", "input")}}, {{htmlattrxref("size", "input")}}.</td>
-  </tr>
-  <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>value</code></td>
-  </tr>
-  <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.</td>
-  </tr>
- </tbody>
-</table>
+| **[Value](#value)**             | A {{domxref("DOMString")}} representing the value contained in the search field.                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Events**                      | {{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}                                                                                                                                                                                                                                                                                       |
+| **Supported Common Attributes** | {{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("required", "input")}}, {{htmlattrxref("size", "input")}}. |
+| **IDL attributes**              | `value`                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.                                                                                                                                                               |
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.</p>
+The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.
 
-<pre class="brush: js">searchTerms = mySearch.value;
-</pre>
+```js
+searchTerms = mySearch.value;
+```
 
-<p>If no validation constraints are in place for the input (see <a href="#validation">Validation</a> for more details), the value can be any text string or an empty string (<code>""</code>).</p>
+If no validation constraints are in place for the input (see [Validation](#validation) for more details), the value can be any text string or an empty string (`""`).
 
-<h2 id="Additional_attributes">Additional attributes</h2>
+## Additional attributes
 
-<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, search field inputs support the following attributes:</p>
+In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, search field inputs support the following attributes:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="#list">list</a></code></td>
-   <td>The id of the &lt;datalist&gt; element that contains the optional pre-defined autocomplete options</td>
-  </tr>
-  <tr>
-   <td><code><a href="#maxlength">maxlength</a></code></td>
-   <td>The maximum number of characters the input should accept</td>
-  </tr>
-  <tr>
-   <td><code><a href="#minlength">minlength</a></code></td>
-   <td>The minimum number of characters long the input can be and still be considered valid</td>
-  </tr>
-  <tr>
-   <td><code><a href="#pattern">pattern</a></code></td>
-   <td>A regular expression the input's contents must match in order to be valid</td>
-  </tr>
-  <tr>
-   <td><code><a href="#placeholder">placeholder</a></code></td>
-   <td>An exemplar value to display in the input field whenever it is empty</td>
-  </tr>
-  <tr>
-   <td><code><a href="#readonly">readonly</a></code></td>
-   <td>A Boolean attribute indicating whether or not the contents of the input should be read-only</td>
-  </tr>
-  <tr>
-   <td><code><a href="#size">size</a></code></td>
-   <td>A number indicating how many characters wide the input field should be</td>
-  </tr>
-  <tr>
-   <td><code><a href="#spellcheck">spellcheck</a></code></td>
-   <td>Controls whether or not to enable spell checking for the input field, or if the default spell checking configuration should be used</td>
-  </tr>
- </tbody>
-</table>
+| Attribute                     | Description                                                                                                                         |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| [`list`](#list)               | The id of the <datalist> element that contains the optional pre-defined autocomplete options                                        |
+| [`maxlength`](#maxlength)     | The maximum number of characters the input should accept                                                                            |
+| [`minlength`](#minlength)     | The minimum number of characters long the input can be and still be considered valid                                                |
+| [`pattern`](#pattern)         | A regular expression the input's contents must match in order to be valid                                                           |
+| [`placeholder`](#placeholder) | An exemplar value to display in the input field whenever it is empty                                                                |
+| [`readonly`](#readonly)       | A Boolean attribute indicating whether or not the contents of the input should be read-only                                         |
+| [`size`](#size)               | A number indicating how many characters wide the input field should be                                                              |
+| [`spellcheck`](#spellcheck)   | Controls whether or not to enable spell checking for the input field, or if the default spell checking configuration should be used |
 
-<p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
 
-<h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
+### {{htmlattrdef("maxlength")}}
 
-<p>The maximum number of characters (as UTF-16 code units) the user can enter into the search field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the search field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
+The maximum number of characters (as UTF-16 code units) the user can enter into the search field. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the search field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
+The input will fail [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long.
 
-<h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
+### {{htmlattrdef("minlength")}}
 
-<p>The minimum number of characters (as UTF-16 code units) the user can enter into the search field. This must be a non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the search input has no minimum length.</p>
+The minimum number of characters (as UTF-16 code units) the user can enter into the search field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the search input has no minimum length.
 
-<p>The search field will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
+The search field will fail [constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long.
 
-<h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
+### {{htmlattrdef("pattern")}}
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}
 
-<p>See the section <a href="#specifying_a_pattern">Specifying a pattern</a> for details and an example.</p>
+See the section [Specifying a pattern](#specifying_a_pattern) for details and an example.
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}
 
-<h3 id="htmlattrdefspellcheck">{{htmlattrdef("spellcheck")}}</h3>
+### {{htmlattrdef("spellcheck")}}
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck-include")}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck-include")}}
 
-<h2 id="Non-standard_attributes">Non-standard attributes</h2>
+## Non-standard attributes
 
-<p>The following non-standard attributes are available to search input fields. As a general rule, you should avoid using them unless it can't be helped.</p>
+The following non-standard attributes are available to search input fields. As a general rule, you should avoid using them unless it can't be helped.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="#autocorrect">autocorrect</a></code></td>
-   <td>Whether or not to allow autocorrect while editing this input field. <strong>Safari only.</strong></td>
-  </tr>
-  <tr>
-   <td><code><a href="#incremental">incremental</a></code></td>
-   <td>Whether or not to send repeated {{event("search")}} events to allow updating live search results while the user is still editing the value of the field. <strong>WebKit and Blink only (Safari, Chrome, Opera, etc.).</strong></td>
-  </tr>
-  <tr>
-   <td><code><a href="#mozactionhint">mozactionhint</a></code></td>
-   <td>A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. <strong>Firefox for Android only.</strong></td>
-  </tr>
-  <tr>
-   <td><code><a href="#results">results</a></code></td>
-   <td>The maximum number of items that should be displayed in the drop-down list of previous search queries. <strong>Safari only.</strong></td>
-  </tr>
- </tbody>
-</table>
+| Attribute                         | Description                                                                                                                                                                                                                                                             |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`autocorrect`](#autocorrect)     | Whether or not to allow autocorrect while editing this input field. **Safari only.**                                                                                                                                                                                    |
+| [`incremental`](#incremental)     | Whether or not to send repeated {{event("search")}} events to allow updating live search results while the user is still editing the value of the field. **WebKit and Blink only (Safari, Chrome, Opera, etc.).**                                                  |
+| [`mozactionhint`](#mozactionhint) | A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. **Firefox for Android only.** |
+| [`results`](#results)             | The maximum number of items that should be displayed in the drop-down list of previous search queries. **Safari only.**                                                                                                                                                 |
 
-<h3 id="htmlattrdefautocorrect_non-standard_inline">{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</h3>
+### {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}
 
-<h3 id="htmlattrdefincremental_non-standard_inline">{{htmlattrdef("incremental")}} {{non-standard_inline}}</h3>
+### {{htmlattrdef("incremental")}} {{non-standard_inline}}
 
-<div id="incremental-include">
-<p>The Boolean attribute <code>incremental</code> is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.</p>
+The Boolean attribute `incremental` is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.
 
-<p>If <code>incremental</code> is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).</p>
+If `incremental` is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).
 
-<p>The <code>search</code> event is rate-limited so that it is not sent more more frequently than an implementation-defined interval.</p>
-</div>
+The `search` event is rate-limited so that it is not sent more more frequently than an implementation-defined interval.
 
-<h3 id="htmlattrdefmozactionhint_non-standard_inline">{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</h3>
+### {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}
 
-<h3 id="htmlattrdefresults_non-standard_inline">{{htmlattrdef("results")}} {{non-standard_inline}}</h3>
+### {{htmlattrdef("results")}} {{non-standard_inline}}
 
-<div id="results-include">
-<p>The <code>results</code> attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.</p>
+The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.
 
-<p>The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.</p>
-</div>
+The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.
 
-<h2 id="Using_search_inputs">Using search inputs</h2>
+## Using search inputs
 
-<p><code>&lt;input&gt;</code> elements of type <code>search</code> are very similar to those of type <code>text</code>, except that they are specifically intended for handling search terms. They are basically equivalent in behavior, but user agents may choose to style them differently by default (and, of course, sites may use stylesheets to apply custom styles to them).</p>
+`<input>` elements of type `search` are very similar to those of type `text`, except that they are specifically intended for handling search terms. They are basically equivalent in behavior, but user agents may choose to style them differently by default (and, of course, sites may use stylesheets to apply custom styles to them).
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;input type="search" id="mySearch" name="q"&gt;
-    &lt;button&gt;Search&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <input type="search" id="mySearch" name="q">
+    <button>Search</button>
+  </div>
+</form>
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{EmbedLiveSample("Basic_example", 600, 40)}}</p>
+{{EmbedLiveSample("Basic_example", 600, 40)}}
 
-<p><code>q</code> is the most common <code>name</code> given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be <code>q=searchterm</code>.</p>
+`q` is the most common `name` given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be `q=searchterm`.
 
-<div class="note">
-<p>You must remember to set a {{htmlattrxref("name", "input")}} for your input, otherwise nothing will be submitted.</p>
-</div>
+> **Примечание:** You must remember to set a {{htmlattrxref("name", "input")}} for your input, otherwise nothing will be submitted.
 
-<h3 id="Differences_between_search_and_text_types">Differences between search and text types</h3>
+### Differences between search and text types
 
-<p>The main basic differences come in the way browsers handle them. The first thing to note is that some browsers show a cross icon that can be clicked on to remove the search term instantly if desired. The following screenshot comes from Chrome:</p>
+The main basic differences come in the way browsers handle them. The first thing to note is that some browsers show a cross icon that can be clicked on to remove the search term instantly if desired. The following screenshot comes from Chrome:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15235/chrome-cross-icon.png" style="display: block; height: 31px; margin: 0px auto; width: 144px;"></p>
+![](https://mdn.mozillademos.org/files/15235/chrome-cross-icon.png)
 
-<p>In addition, modern browsers also tend to automatically store search terms previously entered across domains, which then come up as autocomplete options when subsequent searches are performed in search inputs on that domain. This helps users who tend to do searches on the same or similar search queries over time. This screenshot is from Firefox:</p>
+In addition, modern browsers also tend to automatically store search terms previously entered across domains, which then come up as autocomplete options when subsequent searches are performed in search inputs on that domain. This helps users who tend to do searches on the same or similar search queries over time. This screenshot is from Firefox:
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15237/firefox-auto-complete.png" style="display: block; height: 83px; margin: 0px auto; width: 171px;">At this point, let's look at some useful techniques you can apply to your search forms.</p>
+![](https://mdn.mozillademos.org/files/15237/firefox-auto-complete.png)At this point, let's look at some useful techniques you can apply to your search forms.
 
-<h3 id="Setting_placeholders">Setting placeholders</h3>
+### Setting placeholders
 
-<p>You can provide a useful placeholder inside your search input that could give a hint on what to do using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:</p>
+You can provide a useful placeholder inside your search input that could give a hint on what to do using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;input type="search" id="mySearch" name="q"
-     placeholder="Search the site..."&gt;
-    &lt;button&gt;Search&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <input type="search" id="mySearch" name="q"
+     placeholder="Search the site...">
+    <button>Search</button>
+  </div>
+</form>
+```
 
-<p>You can see how the placeholder is rendered below:</p>
+You can see how the placeholder is rendered below:
 
-<p>{{EmbedLiveSample("Setting_placeholders", 600, 40)}}</p>
+{{EmbedLiveSample("Setting_placeholders", 600, 40)}}
 
-<h3 id="Search_form_labels_and_accessibility">Search form labels and accessibility</h3>
+### Search form labels and accessibility
 
-<p>One problem with search forms is their accessibility; a common design practice is not to provide a label for the search field (although there might be a magnifying glass icon or similar), as the purpose of a search form is normally fairly obvious for sighted users due to placement (<a href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">this example shows a typical pattern</a>).</p>
+One problem with search forms is their accessibility; a common design practice is not to provide a label for the search field (although there might be a magnifying glass icon or similar), as the purpose of a search form is normally fairly obvious for sighted users due to placement ([this example shows a typical pattern](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
 
-<p>This could, however, cause confusion for screenreader users, since they will not have any verbal indication of what the search input is. One way around this that won't impact on your visual design is to use <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> features:</p>
+This could, however, cause confusion for screenreader users, since they will not have any verbal indication of what the search input is. One way around this that won't impact on your visual design is to use [WAI-ARIA](/ru/docs/Learn/Accessibility/WAI-ARIA_basics) features:
 
-<ul>
- <li>A <code>role</code> attribute of value <code>search</code> on the <code>&lt;form&gt;</code> element will cause screenreaders to announce that the form is a search form.</li>
- <li>If that isn't enough, you can use an <code>aria-label</code> attribute on the {{HTMLElement("input")}} itself. This should be a descriptive text label that will be read out by the screenreader; it's used as a non-visual equivalent to <code>&lt;label&gt;</code>.</li>
-</ul>
+- A `role` attribute of value `search` on the `<form>` element will cause screenreaders to announce that the form is a search form.
+- If that isn't enough, you can use an `aria-label` attribute on the {{HTMLElement("input")}} itself. This should be a descriptive text label that will be read out by the screenreader; it's used as a non-visual equivalent to `<label>`.
 
-<p>Let's have a look at an example:</p>
+Let's have a look at an example:
 
-<pre class="brush: html">&lt;form role="search"&gt;
-  &lt;div&gt;
-    &lt;input type="search" id="mySearch" name="q"
+```html
+<form role="search">
+  <div>
+    <input type="search" id="mySearch" name="q"
      placeholder="Search the site..."
-     aria-label="Search through site content"&gt;
-    &lt;button&gt;Search&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+     aria-label="Search through site content">
+    <button>Search</button>
+  </div>
+</form>
+```
 
-<p>You can see how this is rendered below:</p>
+You can see how this is rendered below:
 
-<p>{{EmbedLiveSample("Search_form_labels_and_accessibility", 600, 40)}}</p>
+{{EmbedLiveSample("Search_form_labels_and_accessibility", 600, 40)}}
 
-<p>There is no visual difference from the previous example, but screenreader users have way more information available to them.</p>
+There is no visual difference from the previous example, but screenreader users have way more information available to them.
 
-<div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks">Signposts/Landmarks</a> for more information about such accessibility features.</p>
-</div>
+> **Примечание:** See [Signposts/Landmarks](/ru/docs/Learn/Accessibility/WAI-ARIA_basics#SignpostsLandmarks) for more information about such accessibility features.
 
-<h3 id="Physical_input_element_size">Physical input element size</h3>
+### Physical input element size
 
-<p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the search box is 30 characters wide:</p>
+The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the search box is 30 characters wide:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." size="30"&gt;
-    &lt;button&gt;Search&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <input type="search" id="mySearch" name="q"
+    placeholder="Search the site..." size="30">
+    <button>Search</button>
+  </div>
+</form>
+```
 
-<p>The result is this wider input box:</p>
+The result is this wider input box:
 
-<p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
+{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
 
-<h2 id="Validation">Validation</h2>
+## Validation
 
-<p><code>&lt;input&gt;</code> elements of type <code>search</code> have the same validation features available to them as regular <code>text</code> inputs. It is less likely that you'd want to use validation features in general for search boxes. In many cases, users should just be allowed to search for anything, but there are a few cases to consider, such as searches against data of a known format.</p>
+`<input>` elements of type `search` have the same validation features available to them as regular `text` inputs. It is less likely that you'd want to use validation features in general for search boxes. In many cases, users should just be allowed to search for anything, but there are a few cases to consider, such as searches against data of a known format.
 
-<div class="note">
-<p><strong>Note</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
-</div>
+> **Примечание:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
-<h3 id="A_note_on_styling">A note on styling</h3>
+### A note on styling
 
-<p>There are useful pseudo-classes available for styling valid/invalid form elements: {{cssxref(":valid")}} and {{cssxref(":invalid")}}. In this section, we'll use the following CSS, which will place a check (tick) next to inputs containing valid values, and a cross next to inputs containing invalid values.</p>
+There are useful pseudo-classes available for styling valid/invalid form elements: {{cssxref(":valid")}} and {{cssxref(":invalid")}}. In this section, we'll use the following CSS, which will place a check (tick) next to inputs containing valid values, and a cross next to inputs containing invalid values.
 
-<pre class="brush: css">input:invalid ~ span:after {
+```css
+input:invalid ~ span:after {
     content: '✖';
     padding-left: 5px;
     position: absolute;
@@ -296,25 +224,28 @@ input:valid ~ span:after {
     content: '✓';
     padding-left: 5px;
     position: absolute;
-}</pre>
+}
+```
 
-<p>The technique also requires a {{htmlelement("span")}} element to be placed after the form element, which acts as a holder for the icons. This was necessary because some input types on some browsers don't display icons placed directly after them very well.</p>
+The technique also requires a {{htmlelement("span")}} element to be placed after the form element, which acts as a holder for the icons. This was necessary because some input types on some browsers don't display icons placed directly after them very well.
 
-<h3 id="Making_input_required">Making input required</h3>
+### Making input required
 
-<p>You can use the {{htmlattrxref("required", "input")}} attribute as an easy way of making entering a value required before form submission is allowed:</p>
+You can use the {{htmlattrxref("required", "input")}} attribute as an easy way of making entering a value required before form submission is allowed:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." required&gt;
-    &lt;button&gt;Search&lt;/button&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <input type="search" id="mySearch" name="q"
+    placeholder="Search the site..." required>
+    <button>Search</button>
+    <span class="validity"></span>
+  </div>
+</form>
+```
 
-<div class="hidden">
-<pre class="brush: css">input {
+```css hidden
+input {
   margin-right: 10px;
 }
 
@@ -328,38 +259,40 @@ input:valid ~ span:after {
     content: '✓';
     padding-left: 5px;
     position: absolute;
-}</pre>
-</div>
+}
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{ EmbedLiveSample('Making_input_required', 600, 40) }}</p>
+{{ EmbedLiveSample('Making_input_required', 600, 40) }}
 
-<p>In addition, if you try to submit the form with no search term entered into it, the browser will show a message. The following example is from Firefox:</p>
+In addition, if you try to submit the form with no search term entered into it, the browser will show a message. The following example is from Firefox:
 
-<p><img alt="form field with attached message that says Please fill out this field" src="https://mdn.mozillademos.org/files/15241/firefox-required-message.png" style="display: block; margin: 0 auto;"></p>
+![form field with attached message that says Please fill out this field](https://mdn.mozillademos.org/files/15241/firefox-required-message.png)
 
-<p>Different messages will be shown when you try to submit the form with different types of invalid data contained inside the inputs; see the below examples.</p>
+Different messages will be shown when you try to submit the form with different types of invalid data contained inside the inputs; see the below examples.
 
-<h3 id="Input_value_length">Input value length</h3>
+### Input value length
 
-<p>You can specify a minimum length, in characters, for the entered value using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered value.</p>
+You can specify a minimum length, in characters, for the entered value using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered value.
 
-<p>The example below requires that the entered value be 4–8 characters in length.</p>
+The example below requires that the entered value be 4–8 characters in length.
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="mySearch"&gt;Search for user&lt;/label&gt;
-    &lt;input type="search" id="mySearch" name="q"
+```html
+<form>
+  <div>
+    <label for="mySearch">Search for user</label>
+    <input type="search" id="mySearch" name="q"
     placeholder="User IDs are 4–8 characters in length" required
-    size="30" minlength="4" maxlength="8"&gt;
-    &lt;button&gt;Search&lt;/button&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+    size="30" minlength="4" maxlength="8">
+    <button>Search</button>
+    <span class="validity"></span>
+  </div>
+</form>
+```
 
-<div class="hidden">
-<pre class="brush: css">input {
+```css hidden
+input {
   margin-right: 10px;
 }
 
@@ -373,34 +306,36 @@ input:valid ~ span:after {
     content: '✓';
     padding-left: 5px;
     position: absolute;
-}</pre>
-</div>
+}
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{ EmbedLiveSample('Input_value_length', 600, 40) }}</p>
+{{ EmbedLiveSample('Input_value_length', 600, 40) }}
 
-<p>If you try to submit the form with less than 4 characters, you'll be given an appropriate error message (which differs between browsers). If you try to go beyond 8 characters in length, the browser won't let you.</p>
+If you try to submit the form with less than 4 characters, you'll be given an appropriate error message (which differs between browsers). If you try to go beyond 8 characters in length, the browser won't let you.
 
-<h3 id="Specifying_a_pattern">Specifying a pattern</h3>
+### Specifying a pattern
 
-<p>You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see <a href="/en-US/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a> for a simple crash course).</p>
+You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see [Validating against a regular expression](/ru/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression) for a simple crash course).
 
-<p>Let's look at an example. Say we wanted to provide a product ID search form, and the IDs were all codes of two letters followed by four numbers. The following example covers it:</p>
+Let's look at an example. Say we wanted to provide a product ID search form, and the IDs were all codes of two letters followed by four numbers. The following example covers it:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="mySearch"&gt;Search for product by ID:&lt;/label&gt;
-    &lt;input type="search" id="mySearch" name="q"
+```html
+<form>
+  <div>
+    <label for="mySearch">Search for product by ID:</label>
+    <input type="search" id="mySearch" name="q"
     placeholder="two letters followed by four numbers" required
-    size="30" pattern="[A-z]{2}[0-9]{4}"&gt;
-    &lt;button&gt;Search&lt;/button&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+    size="30" pattern="[A-z]{2}[0-9]{4}">
+    <button>Search</button>
+    <span class="validity"></span>
+  </div>
+</form>
+```
 
-<div class="hidden">
-<pre class="brush: css">input {
+```css hidden
+input {
   margin-right: 10px;
 }
 
@@ -414,52 +349,31 @@ input:valid ~ span:after {
     content: '✓';
     padding-left: 5px;
     position: absolute;
-}</pre>
-</div>
+}
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{ EmbedLiveSample('Specifying_a_pattern', 600, 40) }}</p>
+{{ EmbedLiveSample('Specifying_a_pattern', 600, 40) }}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can see a good example of a search form used in context at our <a class="external external-icon" href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> example (<a class="external external-icon" href="http://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">see it live</a>).</p>
+You can see a good example of a search form used in context at our [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) example ([see it live](http://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'input.html#text-(type=text)-state-and-search-state-(type=search)', '&lt;input type="search"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="search"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                                            | Status                           | Comment            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('HTML WHATWG', 'input.html#text-(type=text)-state-and-search-state-(type=search)', '&lt;input type="search"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+| {{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="search"&gt;')}}         | {{Spec2('HTML5.1')}}     | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms">HTML Forms</a></li>
- <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
-</ul>
+- [HTML Forms](/ru/docs/Learn/HTML/Forms)
+- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
+- [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
+- [Compatibility of CSS properties](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

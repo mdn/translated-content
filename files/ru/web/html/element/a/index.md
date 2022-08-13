@@ -9,249 +9,199 @@ tags:
   - Содержание
 translation_of: Web/HTML/Element/a
 ---
-<p>HTML-элемент <code>&lt;a&gt;</code> определяет гиперссылку для перехода на определённое место на странице или на другую страницу в Интернете. Также он может быть использован (в устаревшем варианте) для создания якоря — это место назначения для гиперссылок внутри страницы: так ссылки не ограничены только в перемещении между страницами.</p>
+HTML-элемент `<a>` определяет гиперссылку для перехода на определённое место на странице или на другую страницу в Интернете. Также он может быть использован (в устаревшем варианте) для создания якоря — это место назначения для гиперссылок внутри страницы: так ссылки не ограничены только в перемещении между страницами.
 
-<pre class="brush: html">&lt;a href="https://developer.mozilla.org"&gt;MDN&lt;/a&gt;</pre>
+```html
+<a href="https://developer.mozilla.org">MDN</a>
+```
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories" title="HTML/Content_categories">Категории контента</a> </th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток" title="HTML/Content categories#Flow content">Основной поток</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">текстовый контент</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">интерактивный контент</a>, скрытый контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Логический_контент" title="HTML/Content_categories#Transparent_content_model">Логический контент</a>, содержащий либо <a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток" title="HTML/Content_categories#Flow_content">основной поток</a> (исключая <a href="/ru/docs/Web/Guide/HTML/Content_categories#interactive_content">интерактивный контент</a>), либо <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content_categories#Phrasing_content">заголовочный контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Опускание тегов</th>
-   <td>Открывающий и закрывающий теги обязательны.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любые элементы, в которых разрешён <a href="/ru/docs/Web/Guide/HTML/Content_categories#Заголовочный_контент">текстовый контент</a> или элементы, в которых разрешёны элементы <a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">основного потока</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLAnchorElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories "HTML/Content_categories") | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток "HTML/Content categories#Flow content"), [текстовый контент](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), [интерактивный контент](/ru/docs/Web/Guide/HTML/Content_categories#interactive_content), скрытый контент.                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                                                        | [Логический контент](/ru/docs/Web/Guide/HTML/Content_categories#Логический_контент "HTML/Content_categories#Transparent_content_model"), содержащий либо [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток "HTML/Content_categories#Flow_content") (исключая [интерактивный контент](/ru/docs/Web/Guide/HTML/Content_categories#interactive_content)), либо [заголовочный контент](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"). |
+| Опускание тегов                                                                            | Открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Разрешённые родительские элементы                                                          | Любые элементы, в которых разрешён [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Заголовочный_контент) или элементы, в которых разрешёны элементы [основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                                                                                                                          |
+| DOM-интерфейс                                                                              | {{domxref("HTMLAnchorElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-<h2 id="Attributes">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает в себя <a href="/ru/docs/Web/HTML/Общие_атрибуты">общие атрибуты</a>.</p>
+Этот элемент включает в себя [общие атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<dl>
- <dt><strong><code>{{htmlattrdef("download")}} {{HTMLVersionInline(5)}}</code></strong></dt>
- <dd>Этот атрибут сообщает о том, что эта ссылка должна быть использована для скачивания файла, и, когда пользователь нажимает на ссылку, ему будет предложено сохранить файл как локальный. Если у этого атрибута есть значение, оно будет использовано как заполненное название файла в Окне сохранения, которое открывается, когда пользователь нажимает на ссылку (пользователь может поменять название перед сохранением файла). Ограничений на позволенные значения нет (хотя оно будет конвертировано в нижние подчёркивания, предотвращая специфичные пути), но стоит обратить внимание, что у большинства файловых систем есть ограничения на то, какие знаки препинания поддерживаются файловой системой, и браузеры регулируют названия согласно ограничениям.</dd>
-</dl>
+- **`{{htmlattrdef("download")}} {{HTMLVersionInline(5)}}`**
+  - : Этот атрибут сообщает о том, что эта ссылка должна быть использована для скачивания файла, и, когда пользователь нажимает на ссылку, ему будет предложено сохранить файл как локальный. Если у этого атрибута есть значение, оно будет использовано как заполненное название файла в Окне сохранения, которое открывается, когда пользователь нажимает на ссылку (пользователь может поменять название перед сохранением файла). Ограничений на позволенные значения нет (хотя оно будет конвертировано в нижние подчёркивания, предотвращая специфичные пути), но стоит обратить внимание, что у большинства файловых систем есть ограничения на то, какие знаки препинания поддерживаются файловой системой, и браузеры регулируют названия согласно ограничениям.
 
-<div class="note">
-<p><strong>Примечание:</strong></p>
+> **Примечание:** **Примечание:\*** Атрибут может быть использован вместе с [blob: URLs](/ru/docs/Web/API/URL/createObjectURL) и `data: URLs`, чтобы пользователи могли проще скачать контент, который сгенерирован с помощью JavaScript (например, картинка, созданная с помощью онлайн-сайта для рисования).
+>
+> - Если представлен HTTP-заголовок `Content-Disposition:,` и он содержит иное название, у HTTP-заголовка есть преимущество над атрибутом.
+> - Если этот атрибут установлен и `Content-Disposition:` установлен на `inline`, Firefox отдаёт преимущество `Content-Disposition`, но в тоже время Chrome отдаёт преимущество атрибуту `download`.
+> - Этот атрибут соблюдается только на ресурсах с тем же доменом.
 
-<ul>
- <li>Атрибут может быть использован вместе с <a href="/ru/docs/Web/API/URL/createObjectURL">blob: URLs</a> и <code>data: URLs</code>, чтобы пользователи могли проще скачать контент, который сгенерирован с помощью JavaScript (например, картинка, созданная с помощью онлайн-сайта для рисования).</li>
- <li>Если представлен HTTP-заголовок <code>Content-Disposition:,</code> и он содержит иное название, у HTTP-заголовка есть преимущество над атрибутом.</li>
- <li>Если этот атрибут установлен и <code>Content-Disposition:</code> установлен на <code>inline</code>, Firefox отдаёт преимущество <code>Content-Disposition</code>, но в тоже время Chrome отдаёт преимущество атрибуту <code>download</code>.</li>
- <li>Этот атрибут соблюдается только на ресурсах с тем же доменом.</li>
-</ul>
-</div>
+- {{htmlattrdef("href")}}
+  - : Единственный обязательный атрибут для определения ссылки в HTML4, но больше необязательный в HTML5. Упущение этого атрибута создаёт ссылку-заполнитель. Атрибут `href` указывает ссылку: либо URL, либо якорь. Якорь — это название после символа `#`, который указывает на элемент ([ID](/ru/docs/HTML/Global_attributes#attr-id)) на текущей странице. URL не ограничены только ссылками на HTTP, они могут использовать любой протокол, поддерживающийся браузером. Например, `file`, `ftp` и `mailto` работают в большинстве браузеров.
 
-<dl>
- <dt>{{htmlattrdef("href")}}</dt>
- <dd>Единственный обязательный атрибут для определения ссылки в HTML4, но больше необязательный в HTML5. Упущение этого атрибута создаёт ссылку-заполнитель. Атрибут <code>href</code> указывает ссылку: либо URL, либо якорь. Якорь — это название после символа <code>#</code>, который указывает на элемент (<a href="/ru/docs/HTML/Global_attributes#attr-id">ID</a>) на текущей странице. URL не ограничены только ссылками на HTTP, они могут использовать любой протокол, поддерживающийся браузером. Например, <code>file</code>, <code>ftp</code> и <code>mailto</code> работают в большинстве браузеров.</dd>
-</dl>
+> **Примечание:** Вы можете использовать специальное значение «top», чтобы создать ссылки в начало страницы, например: `<a href="#top">Вернуться наверх</a>`. [Это поведение указано в Спецификациях HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid).
 
-<div class="note">
-<p><strong>Примечание:</strong> Вы можете использовать специальное значение «top», чтобы создать ссылки в начало страницы, например: <code>&lt;a href="#top"&gt;Вернуться наверх&lt;/a&gt;</code>. <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid" lang="en">Это поведение указано в Спецификациях HTML5</a>.</p>
-</div>
+- {{htmlattrdef("hreflang")}}
+  - : Этот атрибут сообщает язык документа по ссылке. Это чисто контрольная информация. Разрешённые значения определены в [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) для HTML5 и [RFC1766](http://www.ietf.org/rfc/rfc1766.txt) для HTML4. Используйте этот атрибут, только если задан {{htmlattrxref("href", "a")}}.
+- {{htmlattrdef("ping")}} {{HTMLVersionInline(5)}}
+  - : Этот атрибут уведомляет указанные в нём URL, что пользователь перешёл по ссылке.
+- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+  - : Этот атрибут сообщает, какую информацию передавать ресурсу по ссылке:\* `"no-referrer"` не отправляет заголовок `Referer`.
+    - `"no-referrer-when-downgrade"` не отправляет заголовок `Referer` ресурсу без TLS (HTTPS). Это стандартное поведение браузера, если не указана иная политика.
+    - `"origin"` отправляет такую информацию о текущей странице, как адрес, протокол, хост и порт.
+    - `"origin-when-cross-origin"` отправляет другим ресурсам только протокол, хост и порт, а внутри ресурса также отправляет путь.
+    - `"unsafe-url"` отправляет только ресурс и адрес (но не пароли или никнеймы). Это значение небезопасно, так как могут утечь ресурс и адрес с TLS-защищённых ресурсов на небезопасные.
+- {{htmlattrdef("rel")}}
+  - : Для ссылок, которые содержат атрибут `href`, этот атрибут устанавливает отношения между ссылками. Значением является [список значений](/ru/docs/Web/HTML/Link_types), разделённый пробелами. Значения и их семантика будут зарегистрированы другими сайтами, которые могут иметь произвольное значение к документу автора. Значением по умолчанию является `void`, если не задано иное. Используйте этот тег, только если задан атрибут {{htmlattrxref("href", "a")}}.
+- {{htmlattrdef("target")}}
+  - : Этот атрибут определяет, где показать содержимое по ссылке. В HTML4, это название и ключевое слово фрейма. В HTML5, это название или ключевое слово в браузере (например, вкладка, окно или iframe). У следующих ключевых слов специальные значения:\* `_self` загружает документ в текущем фрейме в HTML4 (или текущей вкладке в HTML5) как текущий. Это значение по умолчанию, если не указано иное значение.
+    - `_blank` загружает документ в новой окне в HTML4 или вкладке в HTML5.
+    - `_parent` загружает документ в родительском фрейме в HTML4 или в родительской вкладке в HTML5. Если нет родителя, параметр будет вести себя как` _self`: Load the response into the HTML4 frameset parent of the current frame or HTML5 parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
+    - `_top` в HTML4 загружает документ в новом окне, игнорируя другие фреймы. В HTML5 загружает в окне высшего уровня. Если родителя нет, опция ведёт себя как `_self`.Используйте этот атрибут только если указан {{htmlattrxref("href", "a")}}.> **Примечание:** Используя `target`, вы должны добавлять `rel="noopener noreferrer"`, чтобы избежать эксплуатацию API `window.opener`.
+- {{htmlattrdef("type")}}
+  - : Этот атрибут определяет [MIME-тип](http://www.w3.org/TR/html4/references.html#ref-MIMETYPES) для документа по ссылке. Обычно это используется как контрольная информация, но в будущем браузеры могут добавлять маленькую иконку для медиафайлов. Например, браузер может добавить маленькую иконку мегафона, если тип файла установлен как `audio/wav`.Используйте этот атрибут только если указан {{htmlattrxref("href", "a")}}.
 
-<dl>
- <dt>{{htmlattrdef("hreflang")}}</dt>
- <dd>Этот атрибут сообщает язык документа по ссылке. Это чисто контрольная информация. Разрешённые значения определены в <a href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a> для HTML5 и <a href="http://www.ietf.org/rfc/rfc1766.txt">RFC1766</a> для HTML4. Используйте этот атрибут, только если задан {{htmlattrxref("href", "a")}}.</dd>
- <dt>{{htmlattrdef("ping")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Этот атрибут уведомляет указанные в нём URL, что пользователь перешёл по ссылке.</dd>
- <dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt>
- <dd><p>Этот атрибут сообщает, какую информацию передавать ресурсу по ссылке:</p>
- <p>
- <ul>
-  <li><code>"no-referrer"</code> не отправляет заголовок <code>Referer</code>.</li>
-  <li><code>"no-referrer-when-downgrade"</code> не отправляет заголовок <code>Referer</code> ресурсу без TLS (HTTPS). Это стандартное поведение браузера, если не указана иная политика.</li>
-  <li><code>"origin"</code> отправляет такую информацию о текущей странице, как адрес, протокол, хост и порт.</li>
-  <li><code>"origin-when-cross-origin"</code> отправляет другим ресурсам только протокол, хост и порт, а внутри ресурса также отправляет путь. </li>
-  <li><code>"unsafe-url"</code> отправляет только ресурс и адрес (но не пароли или никнеймы). Это значение небезопасно, так как могут утечь ресурс и адрес с TLS-защищённых ресурсов на небезопасные.</li>
- </ul>
-</p>
- </dd>
- <dt>{{htmlattrdef("rel")}}</dt>
- <dd>Для ссылок, которые содержат атрибут <code>href</code>, этот атрибут устанавливает отношения между ссылками. Значением является <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types">список значений</a>, разделённый пробелами. Значения и их семантика будут зарегистрированы другими сайтами, которые могут иметь произвольное значение к документу автора. Значением по умолчанию является <code>void</code>, если не задано иное. Используйте этот тег, только если задан атрибут {{htmlattrxref("href", "a")}}.</dd>
- <dt>{{htmlattrdef("target")}}</dt>
- <dd><p>Этот атрибут определяет, где показать содержимое по ссылке. В HTML4, это название и ключевое слово фрейма. В HTML5, это название или ключевое слово в браузере (например, вкладка, окно или iframe). У следующих ключевых слов специальные значения:</p>
-  <p>
- <ul>
-  <li><code>_self</code> загружает документ в текущем фрейме в HTML4 (или текущей вкладке в HTML5) как текущий. Это значение по умолчанию, если не указано иное значение.</li>
-  <li><code>_blank</code> загружает документ в новой окне в HTML4 или вкладке в HTML5.</li>
-  <li><code>_parent</code> загружает документ в родительском фрейме в HTML4 или в родительской вкладке в HTML5. Если нет родителя, параметр будет вести себя как<code> _self</code>: Load the response into the HTML4 frameset parent of the current frame or HTML5 parent browsing context of the current one. If there is no parent, this option behaves the same way as <code>_self</code>.</li>
-  <li><code>_top</code> в HTML4 загружает документ в новом окне, игнорируя другие фреймы. В HTML5 загружает в окне высшего уровня. Если родителя нет, опция ведёт себя как <code>_self</code>.</li>
- </ul></p>
- <p>Используйте этот атрибут только если указан {{htmlattrxref("href", "a")}}.</p>
+### Устаревшие
 
-<div class="note">
-<p><strong>Примечание:</strong> Используя <code>target</code>, вы должны добавлять <code>rel="noopener noreferrer"</code>, чтобы избежать эксплуатацию API <code>window.opener</code>.</p>
-</div>
-</dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd><p>Этот атрибут определяет <a href="http://www.w3.org/TR/html4/references.html#ref-MIMETYPES">MIME-тип</a> для документа по ссылке. Обычно это используется как контрольная информация, но в будущем браузеры могут добавлять маленькую иконку для медиафайлов. Например, браузер может добавить маленькую иконку мегафона, если тип файла установлен как <code>audio/wav</code>.</p>
- <p>Используйте этот атрибут только если указан {{htmlattrxref("href", "a")}}.</p></dd>
-</dl>
+- {{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}
+  - : Этот атрибут определяет кодировку документа по ссылке. Значением является разделённый пробелами или запятыми [список кодировок](http://tools.ietf.org/html/rfc2045). Значением по умолчанию является ISO-8859-1.
 
-<h3 id="Устаревшие">Устаревшие </h3>
+> **Предупреждение:** Этот атрибут является устарелым в HTML5 и **не должен использоваться**. Чтобы достичь такого же эффекта, используйте HTTP-заголовок `Content-Type` на ссылающемся ресурсе.
 
-<dl>
- <dt>{{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>Этот атрибут определяет кодировку документа по ссылке. Значением является разделённый пробелами или запятыми <a href="http://tools.ietf.org/html/rfc2045">список кодировок</a>. Значением по умолчанию является ISO-8859-1.</dd>
-</dl>
+- {{htmlattrdef("coords")}} {{HTMLVersionInline(4)}}{{obsoleteGeneric("inline","HTML5")}}
+  - : Для использования с формой объекта, этот атрибут использует разделённый запятыми список чисел для определения координат объекта на странице.
+- **`name`\*\*** \***\*{{HTMLVersionInline(4)}}** **{{obsoleteGeneric("inline","HTML5")}}**
+  - : Этот атрибут обязателен в определении якоря на странице. Значение имени схоже со значением `id` и должен быть уникальным идентификатором и состоять из букв и цифр. Согласно спецификации HTML 4.01, и `id`, и `name` могут быть использованы с элементом `<a>`, пока у них идентичные значения.
+- **`rev` \*\***{{HTMLVersionInline(4)}}\*\* **{{obsoleteGeneric("inline","HTML5")}}**
+  - : Этот атрибут определяет обратную ссылку, обратные отношения атрибута `rel`. Это полезно, чтобы отобразить, откуда пришёл объект как автор или документ.
 
-<div class="warning">
-<p><strong>Предупреждение:</strong> Этот атрибут является устарелым в HTML5 и <strong>не должен использоваться</strong>. Чтобы достичь такого же эффекта, используйте HTTP-заголовок <code>Content-Type</code> на ссылающемся ресурсе.</p>
-</div>
+<!---->
 
-<dl>
- <dt>{{htmlattrdef("coords")}} {{HTMLVersionInline(4)}}{{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>Для использования с формой объекта, этот атрибут использует разделённый запятыми список чисел для определения координат объекта на странице.</dd>
- <dt><code><strong>name</strong></code><strong style="font-weight: 700; line-height: 1.5;"> </strong><strong>{{HTMLVersionInline(4)}}</strong> <strong>{{obsoleteGeneric("inline","HTML5")}}</strong></dt>
- <dd>Этот атрибут обязателен в определении якоря на странице. Значение имени схоже со значением <code>id</code> и должен быть уникальным идентификатором и состоять из букв и цифр. Согласно спецификации HTML 4.01, и <code>id</code>, и <code>name</code> могут быть использованы с элементом <code>&lt;a&gt;</code>, пока у них идентичные значения.</dd>
- <dt><strong style="font-weight: 700; line-height: 1.5;"><code>rev</code> </strong><strong>{{HTMLVersionInline(4)}}</strong> <strong>{{obsoleteGeneric("inline","HTML5")}}</strong></dt>
- <dd>Этот атрибут определяет обратную ссылку, обратные отношения атрибута <code>rel</code>. Это полезно, чтобы отобразить, откуда пришёл объект как автор или документ.</dd>
-</dl>
+- `shape` {{HTMLVersionInline(4)}} {{obsoleteGeneric("inline","HTML5")}}
+  - : Этот атрибут используется, чтобы определить выбранный регион для ссылок на источник гипертекста, которые соединены с фигурой для создания изображения-карты. Значения для атрибута — `circle`, `default`, `polygon` и `rect`. Формат координат зависит от выбранной формы. Для `circle` — `x`, `y`, `r`, где `x` и `y` — пиксельные координаты центра круга и `r` — радиус в пикселях. Для rect — `x`, `y`, `w`, `h`, где `x` и `y` — координаты верхнего левого угла прямоугольника, а `w` и `h` — ширина и высота соответственно. Значениями `polygon` для координатор формы являются `x1`, `y1`, `x2`, `y2`... Каждая пара `x`, `y` определяет точку в полигоне, с последующей точкой становится прямой линией, и последняя точка объединяется с первой. Значение `default` для форм требует, чтобы полностью закрытая территория, например, изображение, было использовано.
 
-<dl>
- <dt><code>shape</code> {{HTMLVersionInline(4)}} {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>Этот атрибут используется, чтобы определить выбранный регион для ссылок на источник гипертекста, которые соединены с фигурой для создания изображения-карты. Значения для атрибута — <code>circle</code>, <code>default</code>, <code>polygon</code> и <code>rect</code>. Формат координат зависит от выбранной формы. Для <code>circle</code> — <code>x</code>, <code>y</code>, <code>r</code>, где <code>x</code> и <code>y</code> — пиксельные координаты центра круга и <code>r</code> — радиус в пикселях. Для rect — <code>x</code>, <code>y</code>, <code>w</code>, <code>h</code>, где <code>x</code> и <code>y</code> — координаты верхнего левого угла прямоугольника, а <code>w</code> и <code>h</code> — ширина и высота соответственно. Значениями <code>polygon</code> для координатор формы являются <code>x1</code>, <code>y1</code>, <code>x2</code>, <code>y2</code>... Каждая пара <code>x</code>, <code>y</code> определяет точку в полигоне, с последующей точкой становится прямой линией, и последняя точка объединяется с первой. Значение <code>default</code> для форм требует, чтобы полностью закрытая территория, например, изображение, было использовано.</dd>
-</dl>
+> **Примечание:** Желательно использовать атрибут `usemap` для элемента [`<img>`](/ru/docs/Web/HTML/Element/img) и связанного элемента [`<map>`](/ru/docs/Web/HTML/Element/map), чтобы определить горячие точки вместо атрибутов формы.
 
-<div class="note">
-<p><strong>Примечание:</strong> Желательно использовать атрибут <code>usemap</code> для элемента <code><a href="/ru/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> и связанного элемента <code><a href="/ru/docs/Web/HTML/Element/map">&lt;map&gt;</a></code>, чтобы определить горячие точки вместо атрибутов формы.</p>
-</div>
+### Нестандартные
 
-<h3 id="Нестандартные">Нестандартные</h3>
+- {{htmlattrdef("datafld")}} {{Non-standard_inline}}
+  - : Этот атрибут определяет название столбца из объекта исходных данных, который принимает связанные данные.
 
-<dl>
- <dt>{{htmlattrdef("datafld")}} {{Non-standard_inline}}</dt>
- <dd>Этот атрибут определяет название столбца из объекта исходных данных, который принимает связанные данные.</dd>
-</dl>
-
-<div class="warning">
-<p><strong>Предупреждение: </strong>Этот атрибут нестандартный и <strong>не должен использоваться</strong>. Для достижения такого же эффекта, используйте скрипты и такие механизмы, как <a href="/ru/docs/nsIXMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a>, чтобы динамично заполнять страницу.</p>
-</div>
+> **Предупреждение:**Этот атрибут нестандартный и **не должен использоваться**. Для достижения такого же эффекта, используйте скрипты и такие механизмы, как [XMLHttpRequest](/ru/docs/nsIXMLHttpRequest "XMLHttpRequest"), чтобы динамично заполнять страницу.
 
 <table>
- <tbody>
-  <tr>
-   <td rowspan="2">Поддержка</td>
-   <td>Gecko</td>
-   <td>Presto</td>
-   <td>WebKit</td>
-   <td>Trident</td>
-  </tr>
-  <tr>
-   <td>Не реализована</td>
-   <td>Не реализована</td>
-   <td>Не реализована</td>
-   <td>IE4, IE5, IE6, IE7 (Убрана в IE8)</td>
-  </tr>
-  <tr>
-   <td>Нормативный документ</td>
-   <td colspan="4"><a href="http://msdn.microsoft.com/en-us/library/ms533703%28VS.85%29.aspx">Microsoft's Data Binding: dataFld Property (MSDN)</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td rowspan="2">Поддержка</td>
+      <td>Gecko</td>
+      <td>Presto</td>
+      <td>WebKit</td>
+      <td>Trident</td>
+    </tr>
+    <tr>
+      <td>Не реализована</td>
+      <td>Не реализована</td>
+      <td>Не реализована</td>
+      <td>IE4, IE5, IE6, IE7 (Убрана в IE8)</td>
+    </tr>
+    <tr>
+      <td>Нормативный документ</td>
+      <td colspan="4">
+        <a
+          href="http://msdn.microsoft.com/en-us/library/ms533703%28VS.85%29.aspx"
+          >Microsoft's Data Binding: dataFld Property (MSDN)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt>{{htmlattrdef("datasrc")}} {{Non-standard_inline}}</dt>
- <dd>Этот атрибут сообщает ID объекта исходных данных, который принимает связанные данные с этим элементом.</dd>
-</dl>
+- {{htmlattrdef("datasrc")}} {{Non-standard_inline}}
+  - : Этот атрибут сообщает ID объекта исходных данных, который принимает связанные данные с этим элементом.
 
-<div class="warning">
-<p><strong>Предупреждение: </strong>Этот атрибут нестандартный и <strong>не должен использоваться</strong>. Для достижения такого же эффекта, используйте скрипты и такие механизмы, как <a href="/ru/docs/nsIXMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a>, чтобы динамично заполнять страницу.</p>
-</div>
+> **Предупреждение:**Этот атрибут нестандартный и **не должен использоваться**. Для достижения такого же эффекта, используйте скрипты и такие механизмы, как [XMLHttpRequest](/ru/docs/nsIXMLHttpRequest "XMLHttpRequest"), чтобы динамично заполнять страницу.
 
 <table>
- <tbody>
-  <tr>
-   <td rowspan="2">Поддержка</td>
-   <td>Gecko</td>
-   <td>Presto</td>
-   <td>WebKit</td>
-   <td>Trident</td>
-  </tr>
-  <tr>
-   <td>Не реализована</td>
-   <td>Не реализована</td>
-   <td>Не реализована</td>
-   <td>IE4, IE5, IE6, IE7 (Убрана в IE8)</td>
-  </tr>
-  <tr>
-   <td>Нормативный документ</td>
-   <td colspan="4"><a href="http://msdn.microsoft.com/en-us/library/ms533709(VS.85).aspx">Microsoft's Data Binding: dataSrc Property (MSDN)</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td rowspan="2">Поддержка</td>
+      <td>Gecko</td>
+      <td>Presto</td>
+      <td>WebKit</td>
+      <td>Trident</td>
+    </tr>
+    <tr>
+      <td>Не реализована</td>
+      <td>Не реализована</td>
+      <td>Не реализована</td>
+      <td>IE4, IE5, IE6, IE7 (Убрана в IE8)</td>
+    </tr>
+    <tr>
+      <td>Нормативный документ</td>
+      <td colspan="4">
+        <a href="http://msdn.microsoft.com/en-us/library/ms533709(VS.85).aspx"
+          >Microsoft's Data Binding: dataSrc Property (MSDN)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt>{{htmlattrdef("methods")}}{{Non-standard_inline}}</dt>
- <dd>Значение этого атрибута предоставляет информацию о функциях, которые могут быть выполнены на объекте. Обычно значения даны HTTP-протоколом, когда он использован, но может (для похожих целей, как для атрибута <code>title</code>) быть полезным для включения контрольной информации в ссылке. Например, браузер может выбрать другой тип рендеринга для ссылки как функцию определённых методов; что-то, что может быть найдено, может иметь другую иконку, или внешняя ссылка может получить индикатор перехода с текущего сайта. Этот элемент не понимается или не поддерживается полностью даже браузером Internet Explorer 4, который определил этот атрибут. <a class="external" href="http://msdn.microsoft.com/en-us/library/ms534168(VS.85).aspx">Значения <code>methods</code> (MSDN)</a>.</dd>
- <dt>{{htmlattrdef("urn")}}{{Non-standard_inline}}</dt>
- <dd>Этот атрибут, предложенный Microsoft, определяет отношения уникального названия ресурса (URN) с ссылкой. Хотя он основан на стандартах работы нескольких лет назад, значение URN всё ещё не определено полностью, поэтому этот атрибут не имеет значения. <a class="external" href="http://msdn.microsoft.com/en-us/library/ms534710(VS.85).aspx">Значения <code>urn</code> (MSDN)</a>.</dd>
-</dl>
+- {{htmlattrdef("methods")}}{{Non-standard_inline}}
+  - : Значение этого атрибута предоставляет информацию о функциях, которые могут быть выполнены на объекте. Обычно значения даны HTTP-протоколом, когда он использован, но может (для похожих целей, как для атрибута `title`) быть полезным для включения контрольной информации в ссылке. Например, браузер может выбрать другой тип рендеринга для ссылки как функцию определённых методов; что-то, что может быть найдено, может иметь другую иконку, или внешняя ссылка может получить индикатор перехода с текущего сайта. Этот элемент не понимается или не поддерживается полностью даже браузером Internet Explorer 4, который определил этот атрибут. [Значения `methods` (MSDN)](<http://msdn.microsoft.com/en-us/library/ms534168(VS.85).aspx>).
+- {{htmlattrdef("urn")}}{{Non-standard_inline}}
+  - : Этот атрибут, предложенный Microsoft, определяет отношения уникального названия ресурса (URN) с ссылкой. Хотя он основан на стандартах работы нескольких лет назад, значение URN всё ещё не определено полностью, поэтому этот атрибут не имеет значения. [Значения `urn` (MSDN)](<http://msdn.microsoft.com/en-us/library/ms534710(VS.85).aspx>).
 
-<h2 id="Example">Примеры</h2>
+## Примеры
 
-<h3 id="Ссылка_на_внешний_сайт">Ссылка на внешний сайт</h3>
+### Ссылка на внешний сайт
 
-<pre class="brush: html">&lt;!-- Ссылка на внешний файл --&gt;
-&lt;a href="http://www.mozilla.com/"&gt;Внешняя ссылка&lt;/a&gt;
-</pre>
+```html
+<!-- Ссылка на внешний файл -->
+<a href="http://www.mozilla.com/">Внешняя ссылка</a>
+```
 
-<h4 id="Результат">Результат:</h4>
+#### Результат:
 
-<p><a class="external" href="http://www.mozilla.com/">Внешняя ссылка</a></p>
+[Внешняя ссылка](http://www.mozilla.com/)
 
-<h3 id="Создание_кликабельной_картинки">Создание кликабельной картинки</h3>
+### Создание кликабельной картинки
 
-<pre class="brush: html">&lt;a href="https://developer.mozilla.org/ru/" target="_blank"&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png" alt="MDN logo"&gt;
-&lt;/a&gt;
-</pre>
+```html
+<a href="https://developer.mozilla.org/ru/" target="_blank">
+  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png" alt="MDN logo">
+</a>
+```
 
-<h4 id="Результат_2">Результат:</h4>
+#### Результат:
 
-<p>{{ EmbedLiveSample("Создание_кликабельной_картинки", "320", "64") }}</p>
+{{ EmbedLiveSample("Создание_кликабельной_картинки", "320", "64") }}
 
-<h3 id="Создания_ссылки_для_написания_письма">Создания ссылки для написания письма</h3>
+### Создания ссылки для написания письма
 
-<pre class="brush: html">&lt;a href="mailto:nowhere@mozilla.org"&gt;Отправить сообщение в никуда&lt;/a&gt;
-</pre>
+```html
+<a href="mailto:nowhere@mozilla.org">Отправить сообщение в никуда</a>
+```
 
-<p>Результат выглядит примерно так: <a href="mailto:nowhere@mozilla.org">Отправить сообщение в никуда</a>.</p>
+Результат выглядит примерно так: [Отправить сообщение в никуда](mailto:nowhere@mozilla.org).
 
-<p>Для дополнительных деталей использования <code>mailto</code>, таких как тема, текст или другое, смотрите <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#ссылки_электронной_почты">Email-ссылки</a> или {{RFC(6068)}}.</p>
+Для дополнительных деталей использования `mailto`, таких как тема, текст или другое, смотрите [Email-ссылки](/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#ссылки_электронной_почты) или {{RFC(6068)}}.
 
-<h3 id="Создание_ссылки_с_номером_телефона">Создание ссылки с номером телефона</h3>
+### Создание ссылки с номером телефона
 
-<p>С телефонами, способными выходить в Интернет и ноутбуками, которые привязаны к телефонам, ссылки с номером телефона становятся всё больше и больше полезными.</p>
+С телефонами, способными выходить в Интернет и ноутбуками, которые привязаны к телефонам, ссылки с номером телефона становятся всё больше и больше полезными.
 
-<pre class="brush: html">&lt;a href="tel:+491570156"&gt;+49 157 0156&lt;/a&gt;
-</pre>
+```html
+<a href="tel:+491570156">+49 157 0156</a>
+```
 
-<p>Для дополнительных деталей о протоколе <code>tel</code>, смотрите {{RFC(2806)}} и {{RFC(2396)}}.</p>
+Для дополнительных деталей о протоколе `tel`, смотрите {{RFC(2806)}} и {{RFC(2396)}}.
 
-<h3 id="Использование_download_для_сохранения_canvas_как_PNG">Использование <code>download</code> для сохранения canvas как PNG</h3>
+### Использование `download` для сохранения canvas как PNG
 
-<p>Если вы хотите позволить пользователю скачивать HTML canvas как картинку, вы можете создать ссылку с атрибутом <code>download</code> и данные canvas как <code>data: URL</code>:</p>
+Если вы хотите позволить пользователю скачивать HTML canvas как картинку, вы можете создать ссылку с атрибутом `download` и данные canvas как `data: URL`:
 
-<pre class="brush: js">var link = document.createElement("a");
+```js
+var link = document.createElement("a");
 link.innerHTML = 'download image';
 
 link.addEventListener("click", function(ev) {
@@ -260,31 +210,30 @@ link.addEventListener("click", function(ev) {
 }, false);
 
 document.body.appendChild(link);
-</pre>
+```
 
-<p class="brush: js">Вы можете посмотреть на это в действии: <a href="http://jsfiddle.net/codepo8/V6ufG/2/">jsfiddle.net/codepo8/V6ufG/2/</a>.</p>
+Вы можете посмотреть на это в действии: [jsfiddle.net/codepo8/V6ufG/2/](http://jsfiddle.net/codepo8/V6ufG/2/).
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
-<p>{{Compat}}</p>
+## Совместимость с браузерами
 
-<h2 id="Notes">Примечания</h2>
+{{Compat}}
 
-<p>HTML 3.2 включает в себя только <code>name</code>, <code>href</code>, <code>rel</code>, <code>rev</code> и <code>title</code>.</p>
+## Примечания
 
-<p>Атрибут <code>target</code> не работает в браузерах, не поддерживающих фреймы, таких как Netscape 1 generation. Кроме того, <code>target</code> не допускается в «строгих» вариантах <a href="/en/XHTML" title="en/XHTML">XHTML</a>, но разрешён в формах frameset или «переходных» формах.</p>
+HTML 3.2 включает в себя только `name`, `href`, `rel`, `rev` и `title`.
 
-<h3 id="Рекомендации_по_JavaScript">Рекомендации по JavaScript</h3>
+Атрибут `target` не работает в браузерах, не поддерживающих фреймы, таких как Netscape 1 generation. Кроме того, `target` не допускается в «строгих» вариантах [XHTML](/en/XHTML "en/XHTML"), но разрешён в формах frameset или «переходных» формах.
 
-<p>Часто якорь используется с событием <code>onclick</code>. Для избежания обновления страницы, <code>href</code> часто устанавливается на <code>#</code>, либо на <code>javascript:void(0)</code>. Оба этих значения могут привести к некоторым неожиданным ошибкам во время копирования ссылки или открытия ссылки в новой вкладке или окне. Помните об этом, чтобы сделать юзабилити удобнее, когда пользователи используют якори и вы не допускаете стандартного поведения.</p>
+### Рекомендации по JavaScript
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+Часто якорь используется с событием `onclick`. Для избежания обновления страницы, `href` часто устанавливается на `#`, либо на `javascript:void(0)`. Оба этих значения могут привести к некоторым неожиданным ошибкам во время копирования ссылки или открытия ссылки в новой вкладке или окне. Помните об этом, чтобы сделать юзабилити удобнее, когда пользователи используют якори и вы не допускаете стандартного поведения.
 
-<ul>
- <li>Другие элементы: {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.</li>
-</ul>
+## Смотрите также
 
-<div>{{HTMLRef}}</div>
+- Другие элементы: {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
+
+{{HTMLRef}}

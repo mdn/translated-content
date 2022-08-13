@@ -3,155 +3,119 @@ title: '<ul>: The Unordered List element'
 slug: Web/HTML/Element/ul
 translation_of: Web/HTML/Element/ul
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML-элемент <code>&lt;ul&gt;</code> </strong>используется для неупорядоченного списка - в частности для маркированного списка.</p>
+**HTML-элемент `<ul>` **используется для неупорядоченного списка - в частности для маркированного списка.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Основной поток</a>, и если дочерний элемент <code>&lt;ol&gt;</code> включает в себя хотя бы один элемент {{HTMLElement("li")}}, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">явный контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Ноль или больше {{ HTMLElement("li") }} элементов, содержат вложенные элементы {{ HTMLElement("ol") }} или {{ HTMLElement("ul") }}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любой элемент, который принимает <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">основной поток</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA-роли</th>
-   <td>{{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLUListElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), и если дочерний элемент `<ol>` включает в себя хотя бы один элемент {{HTMLElement("li")}}, [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Palpable_content).                                                                                     |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                 | Ноль или больше {{ HTMLElement("li") }} элементов, содержат вложенные элементы {{ HTMLElement("ol") }} или {{ HTMLElement("ul") }}.                                                                                                                                                                                 |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                       |
+| Разрешённые родители                                   | Любой элемент, который принимает [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content).                                                                                                                                                                                                                                    |
+| Разрешённые ARIA-роли                                  | {{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}, {{ARIARole("presentation")}} |
+| DOM-интерфейс                                          | {{domxref("HTMLUListElement")}}                                                                                                                                                                                                                                                                                                       |
 
-<h2 id="Свойства">Свойства</h2>
+## Свойства
 
-<p>Этот элемент включает <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<dl>
- <dt>{{ htmlattrdef("compact") }} {{Deprecated_inline}}</dt>
- <dd><p>Атрибут логического значения (bool) говорит о том, что список будет представлен в более компактном стиле. Интерпретация этого атрибута зависит от {{glossary("user agent")}} и не работает со всеми браузерами.</p>
- <div class="warning"><strong>Предупреждение:</strong> Не используйте этот атрибут, ибо он устаревший и больше не используется, используйте <a href="/en-US/docs/CSS">CSS</a>. Для схожего эффекта с <code>compact</code>, подойдёт свойство CSS {{cssxref("line-height")}} с значением <code>80%</code>.</div>
- </dd>
- <dt>{{ htmlattrdef("type") }} {{Deprecated_inline}}</dt>
- <dd>Этот атрибут добавляет маркеры (bullets) в список. Значения установлены под <a href="/en-US/docs/HTML3.2">HTML3.2</a> и переходными на <a href="/en-US/docs/HTML4.01">HTML 4.0/4.01</a> являются:
- <ul>
-  <li><code>circle</code></li>
-  <li><code>disc</code></li>
-  <li><code>square</code></li>
- </ul>
+- {{ htmlattrdef("compact") }} {{Deprecated_inline}}
+  - : Атрибут логического значения (bool) говорит о том, что список будет представлен в более компактном стиле. Интерпретация этого атрибута зависит от {{glossary("user agent")}} и не работает со всеми браузерами.> **Предупреждение:** Не используйте этот атрибут, ибо он устаревший и больше не используется, используйте [CSS](/ru/docs/CSS). Для схожего эффекта с `compact`, подойдёт свойство CSS {{cssxref("line-height")}} с значением `80%`.
+- {{ htmlattrdef("type") }} {{Deprecated_inline}}
+  - : Этот атрибут добавляет маркеры (bullets) в список. Значения установлены под [HTML3.2](/ru/docs/HTML3.2) и переходными на [HTML 4.0/4.01](/ru/docs/HTML4.01) являются:\* `circle`
+    - `disc`
+    - `square`Четвёртый маркер задан в интерфейсе WebTV, но не все браузеры смогут его отобразить: `triangle`.Если данный атрибут отсутствует и если атрибут [CSS](/ru/docs/CSS) {{ cssxref("list-style-type") }} не присвоен к данному элементу, пользовательский агент (user agent) выберет маркер в зависимости от вложенного уровня в списке.> **Предупреждение:** Не используйте этот атрибут, ибо он устаревший; используйте свойство [CSS](/ru/docs/Web/CSS) {{ cssxref("list-style-type") }}.
 
- <p>Четвёртый маркер задан в интерфейсе WebTV, но не все браузеры смогут его отобразить: <code>triangle</code>.</p>
+## Примечания об использовании
 
- <p>Если данный атрибут отсутствует и если атрибут <a href="/en-US/docs/CSS">CSS</a> {{ cssxref("list-style-type") }} не присвоен к данному элементу, пользовательский агент (user agent) выберет маркер в зависимости от вложенного уровня в списке.</p>
+- Элемент `<ul>` используется для группировки непронумерованных элементов данных, и их последовательность в списке не нужна. Что характерно, непорядочные списки используют маркеры, которые могут быть разных форм (в форме точки, круга или прямоугольной формы). Стиль задаётся не в HTML, а со связанным с ним CSS, используя свойство {{ cssxref("list-style-type") }}.
+- Элементы `<ul>` и {{HTMLElement("ol")}} могут быть вложены на любом уровне. Более того, вложенные списки могут чередоваться между `<ol>` и `<ul>` без ограничений.
+- Элементы {{ HTMLElement("ol") }} и `<ul>` используются для списков. Различие лишь в том, что в элементе {{ HTMLElement("ol") }} порядок имеет значение. Согласно эмпирической закономерности (или правилу большого пальца), чтобы определить, какую маркировку использовать, попробуйте поменять порядок элементов в списке. Если суть списка меняется, то тогда подойдёт элемент {{ HTMLElement("ol") }}, в противном случае используйте `<ul>`.
 
- <div class="warning"><strong>Предупреждение:</strong> Не используйте этот атрибут, ибо он устаревший; используйте свойство <a href="/en-US/docs/Web/CSS">CSS</a> {{ cssxref("list-style-type") }}.</div>
- </dd>
-</dl>
+## Примеры
 
-<h2 id="Примечания_об_использовании">Примечания об использовании</h2>
+### Простой список
 
+```html
 <ul>
- <li>Элемент <code>&lt;ul&gt;</code> используется для группировки непронумерованных элементов данных, и их последовательность в списке не нужна. Что характерно, непорядочные списки используют маркеры, которые могут быть разных форм (в форме точки, круга или прямоугольной формы). Стиль задаётся не в HTML, а со связанным с ним CSS,  используя свойство {{ cssxref("list-style-type") }}.</li>
- <li>Элементы <code>&lt;ul&gt;</code> и {{HTMLElement("ol")}} могут быть вложены на любом уровне. Более того, вложенные списки могут чередоваться между <code>&lt;ol&gt;</code> и <code>&lt;ul&gt;</code> без ограничений.</li>
- <li>Элементы {{ HTMLElement("ol") }} и <code>&lt;ul&gt;</code> используются для списков. Различие лишь в том, что в элементе {{ HTMLElement("ol") }} порядок имеет значение. Согласно эмпирической закономерности (или правилу большого пальца), чтобы определить, какую маркировку использовать, попробуйте поменять порядок элементов в списке. Если суть списка меняется, то тогда подойдёт элемент {{ HTMLElement("ol") }}, в противном случае используйте <code>&lt;ul&gt;</code>.</li>
+  <li>first item</li>
+  <li>second item</li>
+  <li>third item</li>
 </ul>
+```
 
-<h2 id="Примеры">Примеры</h2>
+Результат HTML кода выше:
 
-<h3 id="Простой_список">Простой список</h3>
+{{EmbedLiveSample("Простой_список", 400, 100)}}
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item&lt;/li&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+### Вложенный список
 
-<p>Результат HTML кода выше:</p>
+```html
+<ul>
+  <li>first item</li>
+  <li>second item
+  <!-- Look, the closing </li> tag is not placed here! -->
+    <ul>
+      <li>second item first subitem</li>
+      <li>second item second subitem
+      <!-- Same for the second nested unordered list! -->
+        <ul>
+          <li>second item second subitem first sub-subitem</li>
+          <li>second item second subitem second sub-subitem</li>
+          <li>second item second subitem third sub-subitem</li>
+        </ul>
+      </li> <!-- Closing </li> tag for the li that
+                  contains the third unordered list -->
+      <li>second item third subitem</li>
+    </ul>
+  <!-- Here is the closing </li> tag -->
+  </li>
+  <li>third item</li>
+</ul>
+```
 
-<p>{{EmbedLiveSample("Простой_список", 400, 100)}}</p>
+Результат HTML кода выше:
 
-<h3 id="Вложенный_список">Вложенный список</h3>
+{{EmbedLiveSample("Вложенный_список", 400, 220)}}
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item
-  &lt;!-- Look, the closing &lt;/li&gt; tag is not placed here! --&gt;
-    &lt;ul&gt;
-      &lt;li&gt;second item first subitem&lt;/li&gt;
-      &lt;li&gt;second item second subitem
-      &lt;!-- Same for the second nested unordered list! --&gt;
-        &lt;ul&gt;
-          &lt;li&gt;second item second subitem first sub-subitem&lt;/li&gt;
-          &lt;li&gt;second item second subitem second sub-subitem&lt;/li&gt;
-          &lt;li&gt;second item second subitem third sub-subitem&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt; &lt;!-- Closing &lt;/li&gt; tag for the li that
-                  contains the third unordered list --&gt;
-      &lt;li&gt;second item third subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;!-- Here is the closing &lt;/li&gt; tag --&gt;
-  &lt;/li&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;</pre>
+### Упорядоченный список внутри неупорядоченного списка
 
-<p>Результат HTML кода выше:</p>
+```html
+<ul>
+  <li>first item</li>
+  <li>second item
+  <!-- Look, the closing </li> tag is not placed here! -->
+    <ol>
+      <li>second item first subitem</li>
+      <li>second item second subitem</li>
+      <li>second item third subitem</li>
+    </ol>
+  <!-- Here is the closing </li> tag -->
+  </li>
+  <li>third item</li>
+</ul>
+```
 
-<p>{{EmbedLiveSample("Вложенный_список", 400, 220)}}</p>
+Результат HTML кода выше:
 
-<h3 id="Упорядоченный_список_внутри_неупорядоченного_списка">Упорядоченный список внутри неупорядоченного списка</h3>
+{{EmbedLiveSample("Упорядоченный_список_внутри_неупорядоченного_списка", 400, 150)}}
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item
-  &lt;!-- Look, the closing &lt;/li&gt; tag is not placed here! --&gt;
-    &lt;ol&gt;
-      &lt;li&gt;second item first subitem&lt;/li&gt;
-      &lt;li&gt;second item second subitem&lt;/li&gt;
-      &lt;li&gt;second item third subitem&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;!-- Here is the closing &lt;/li&gt; tag --&gt;
-  &lt;/li&gt;
-  &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<p>Результат HTML кода выше:</p>
-
-<p>{{EmbedLiveSample("Упорядоченный_список_внутри_неупорядоченного_списка", 400, 150)}}</p>
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>Остальные списковые HTML-элементы: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} и устаревший {{ HTMLElement("dir") }};</li>
- <li>CSS-свойства, которые могут быть полезны для стилизации <code>&lt;ul&gt;</code> элементов:
-  <ul>
-   <li>свойство <a href="/en-US/docs/Web/CSS/list-style">list-style</a>, полезное для выбора способа отображения маркеров,</li>
-   <li><a href="/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS счётчики</a>, для более сложных вложенных списков,</li>
-   <li>свойство <a href="/en-US/docs/Web/CSS/line-height">line-height</a>, для замены убранного свойства {{ htmlattrxref("compact", "ul") }},</li>
-   <li>свойство <a href="/en-US/docs/Web/CSS/margin">margin</a>, для контроля отступа в списке.</li>
-  </ul>
- </li>
-</ul>
+## Смотрите также
+
+- Остальные списковые HTML-элементы: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} и устаревший {{ HTMLElement("dir") }};
+- CSS-свойства, которые могут быть полезны для стилизации `<ul>` элементов:
+
+  - свойство [list-style](/ru/docs/Web/CSS/list-style), полезное для выбора способа отображения маркеров,
+  - [CSS счётчики](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), для более сложных вложенных списков,
+  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства {{ htmlattrxref("compact", "ul") }},
+  - свойство [margin](/ru/docs/Web/CSS/margin), для контроля отступа в списке.

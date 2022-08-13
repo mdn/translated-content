@@ -10,193 +10,86 @@ tags:
 translation_of: Web/HTML/Element/button
 original_slug: Web/HTML/Element/кнопка
 ---
-<h2 id="Описание">Описание</h2>
+## Описание
 
-<p><strong>HTML-элемент <em><code>&lt;button&gt;</code></em></strong> создаёт кликабельную кнопку, которая может быть использована в формах или в любом другом месте документа, который требует простой, стандартной кнопки. По умолчанию, кнопки HTML обычно представлены в стиле, аналогичном стилю хост-платформы, на которой работает {{Glossary ("user agent")}}, но вы можете изменить внешний вид кнопки, используя CSS.</p>
+**HTML-элемент _`<button>`_** создаёт кликабельную кнопку, которая может быть использована в формах или в любом другом месте документа, который требует простой, стандартной кнопки. По умолчанию, кнопки HTML обычно представлены в стиле, аналогичном стилю хост-платформы, на которой работает {{Glossary ("user agent")}}, но вы можете изменить внешний вид кнопки, используя CSS.
 
+| [Категории контента](/ru/docs/HTML/Content_categories/) | [Общий поток](/ru/docs/HTML/Content_categories#Flow_content), [текстовый контент](/ru/docs/HTML/Content_categories#Phrasing_content), [интерактивный контент](/ru/docs/HTML/Content_categories#Interactive_content), [listed](/ru/docs/HTML/Content_categories#Form_listed "HTML/Content categories#Form listed"), [labelable](/ru/docs/HTML/Content_categories#Form_labelable "HTML/Content categories#Form labelable"), и [submittable](/ru/docs/HTML/Content_categories#Form_submittable "HTML/Content categories#Form submittable") [form-associated](/ru/docs/HTML/Content_categories#Form-associated_ "HTML/Content categories#Form-associated ") элемент, очевидный контент. |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                     | [Текстовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Tag omission                                            | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Разрешённый родительский контент                        | Любой элемент с поддержкой [текстового контента](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Разрешённые роли ARIA                                   | {{ARIARole("checkbox")}}, {{ARIARole("link")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}                                                                                                                                                                                                                                                                                                                                                                                                      |
+| DOM interface                                           | {{domxref("HTMLButtonElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Тип                                                     | Строчный                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
+## Атрибуты
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/HTML/Content_categories/">Категории контента</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Общий поток</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">текстовый контент</a>, <a href="/en-US/docs/HTML/Content_categories#Interactive_content">интерактивный контент</a>, <a href="/en-US/docs/HTML/Content_categories#Form_listed" title="HTML/Content categories#Form listed">listed</a>, <a href="/en-US/docs/HTML/Content_categories#Form_labelable" title="HTML/Content categories#Form labelable">labelable</a>, и <a href="/en-US/docs/HTML/Content_categories#Form_submittable" title="HTML/Content categories#Form submittable">submittable</a> <a href="/en-US/docs/HTML/Content_categories#Form-associated_" title="HTML/Content categories#Form-associated ">form-associated</a> элемент, очевидный контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">Текстовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}} </td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый родительский контент</th>
-   <td>Любой элемент с поддержкой <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">текстового контента</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>
-    <p>{{ARIARole("checkbox")}}, {{ARIARole("link")}}, {{ARIARole("menuitem")}}, <br>
-     {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLButtonElement")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Тип</th>
-   <td>Строчный</td>
-  </tr>
- </tbody>
-</table>
+Элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-<h2 id="Атрибуты">Атрибуты</h2>
+- {{htmlattrdef("autofocus")}} {{HTMLVersionInline(5)}}
+  - : Данный булевый атрибут позволяет указать, будет ли кнопка автоматически сфокусирована после загрузки страницы, до тех пор, пока пользователь не изменит фокус в ручную, например выбрав другой элемент. Только один связанный с формой элемент в документе может иметь данный атрибут.
+- {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
+  - : Использование данного атрибута на элементе `<button>` не описано в стандарте и используется только в Firefox браузере. По умолчанию, в отличие от прочих браузеров, [Firefox сохраняет назначенное динамически отключённое состояние ](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)для элемента `<button>` при последующих загрузках страницы. Установка для данного атрибута значения `off` отключает подобное поведение. Смотрите {{bug(654072)}}.
+- {{htmlattrdef("disabled")}}
+  - : Булевый атрибут, указывающий, что пользователь не может взаимодействовать с кнопкой. Если атрибут не установлен, то кнопка наследует его от элемента-контейнера, в котором она расположена, например от {{HTMLElement("fieldset")}}; если отсутствует элемент-контейнер, с установленным атрибутом **disabled**, то кнопка доступна для взаимодействия.Firefox по умолчанию, в отличие от прочих браузеров, [сохраняет назначенное динамически отключённое состояние ](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)для элемента `<button>`, даже при обновлении страницы. Чтобы изменить поведение браузера в этом случае, используйте атрибут {{htmlattrxref("autocomplete","button")}}.
+- {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
+  - : Атрибут **form** позволяет указать элемент {{HTMLElement("form")}}, с которым связана кнопка. Данный атрибут должен хранить значение **id** элемента {{HTMLElement("form")}}. Если данный атрибут не установлен, то элемент `<button>` будет связан с родительским элементом {{HTMLElement("form")}}, если последний существует.Атрибут работает независимо от расположения элементов в документе, поэтому он позволяет связать элемент `<button>` с формой, даже в случае, если `<button>` не является наследником элемента {{HTMLElement("form")}}.
+- {{htmlattrdef("formaction")}} {{HTMLVersionInline(5)}}
+  - : Ссылка на обработчик формы. Если атрибут определён — он переопределит атрибут {{htmlattrxref("action","form")}} у формы-родителя.
+- {{htmlattrdef("formenctype")}} {{HTMLVersionInline(5)}}
+  - : Если `button` имеет тип `submit`, то этот атрибут определяет тип контента, отправляемого на сервер. Возможные значения данного атрибута:\* `application/x-www-form-urlencoded`: значение по умолчанию, если атрибут не указан.
+    - `multipart/form-data`: следует использовать это значение, если форма содержит элемент {{HTMLElement("input")}} со значением атрибута {{htmlattrxref("type","input")}} `file`.
+    - `text/plain`Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("enctype","form")}} у формы-родителя.
+- {{htmlattrdef("formmethod")}} {{HTMLVersionInline(5)}}
+  - : Если `button` имеет тип `submit`, то этот атрибут определяет метод HTTP-запроса для отправки данных на сервер. Возможные варианты:\* `post`: данные формы включаются в тело сообщения и отправляются на сервер.
+    - `get`: данные формы отправляются на сервер в виде ссылки, состоящей из URI атрибута {{htmlattrxref("action","form")}} и непосредственно данных, отделённых знаком '?'. Данные формы будут иметь вид ключ/значение и разделены амперсандом, например name=Name\&id=35. Следует использовать этот метод только если нет побочных эффектов и данные формы содержат лишь ASCII-символы.Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("method","form")}} у формы-родителя.
+- {{htmlattrdef("formnovalidate")}} {{HTMLVersionInline(5)}}
+  - : Булевый атрибут. Указывает, что данные формы не будут валидироваться при отправке.Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("novalidate","form")}} у формы-родителя.
+- {{htmlattrdef("formtarget")}} {{HTMLVersionInline(5)}}
+  - : Если `button` имеет тип `submit`, этот атрибут является именем или ключевым словом,указывающим, где отображать ответ, полученный после отправки формы. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:\* `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
+    - `_blank`: Load the response into a new unnamed browsing context.
+    - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
+    - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
+- {{htmlattrdef("name")}}
+  - : The name of the button, which is submitted with the form data.
+- {{htmlattrdef("type")}}
+  - : The type of the button. Possible values are:\* `submit`: The button submits the form data to the server. This is the default if the attribute is not specified, or if the attribute is dynamically changed to an empty or invalid value.
+    - `reset`: The button resets all the controls to their initial values.
+    - `button`: The button has no default behavior. It can have client-side scripts associated with the element's events, which are triggered when the events occur.
+    - menu: The button opens a popup menu defined via its designated {{HTMLElement("menu")}} element.
+- {{htmlattrdef("value")}}
+  - : The initial value of the button.
 
-<p><span style="line-height: 21px;">Элемент поддерживает <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">глобальные атрибуты</a>.</span></p>
+## Пример
 
-<dl>
- <dt>{{htmlattrdef("autofocus")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Данный булевый атрибут позволяет указать, будет ли кнопка автоматически сфокусирована после загрузки страницы, до тех пор, пока пользователь не изменит фокус в ручную, например выбрав другой элемент. Только один связанный с формой элемент в документе может иметь данный атрибут.</dd>
- <dt>{{htmlattrdef("autocomplete")}} {{non-standard_inline}}</dt>
- <dd>Использование данного атрибута на элементе <code>&lt;button&gt;</code> не описано в стандарте и используется только в Firefox браузере. По умолчанию, в отличие от прочих браузеров, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox сохраняет назначенное динамически отключённое состояние </a>для элемента <code>&lt;button&gt;</code> при последующих загрузках страницы. Установка для данного атрибута значения <code>off</code> отключает подобное поведение. Смотрите {{bug(654072)}}.</dd>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>
- <p>Булевый атрибут, указывающий, что пользователь не может взаимодействовать с кнопкой. Если атрибут не установлен, то кнопка наследует его от элемента-контейнера, в котором она расположена, например от {{HTMLElement("fieldset")}}; если отсутствует элемент-контейнер, с установленным атрибутом <strong>disabled</strong>, то кнопка доступна для взаимодействия.</p>
+```html
+<button name="button">Тык!</button>
+```
 
- <p>Firefox по умолчанию, в отличие от прочих браузеров, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">сохраняет назначенное динамически отключённое состояние </a>для элемента <code>&lt;button&gt;</code>, даже при обновлении страницы. Чтобы изменить поведение браузера в этом случае, используйте атрибут {{htmlattrxref("autocomplete","button")}}.</p>
- </dd>
- <dt>{{htmlattrdef("form")}} {{HTMLVersionInline(5)}}</dt>
- <dd><p>Атрибут <strong>form</strong> позволяет указать элемент {{HTMLElement("form")}}, с которым связана кнопка. Данный атрибут должен хранить значение <strong>id</strong> элемента {{HTMLElement("form")}}. Если данный атрибут не установлен, то элемент <code>&lt;button&gt;</code> будет связан с родительским элементом {{HTMLElement("form")}}, если последний существует.</p>
- <p>Атрибут работает независимо от расположения элементов в документе, поэтому он позволяет связать элемент <code>&lt;button&gt;</code> с формой, даже в случае, если <code>&lt;button&gt;</code> не является наследником элемента {{HTMLElement("form")}}.</p></dd>
- <dt>{{htmlattrdef("formaction")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Ссылка на обработчик формы. Если атрибут определён — он переопределит атрибут {{htmlattrxref("action","form")}} у формы-родителя.</dd>
- <dt>{{htmlattrdef("formenctype")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Если <code>button</code> имеет тип <code>submit</code>, то этот атрибут определяет тип контента, отправляемого на сервер. Возможные значения данного атрибута:
- <ul>
-  <li><code>application/x-www-form-urlencoded</code>: значение по умолчанию, если атрибут не указан.</li>
-  <li><code>multipart/form-data</code>: следует использовать это значение, если форма содержит элемент {{HTMLElement("input")}} со значением атрибута {{htmlattrxref("type","input")}} <code>file</code>.</li>
-  <li><code>text/plain</code></li>
- </ul>
+{{ EmbedLiveSample('Example', 200, 64) }}
 
- <p>Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("enctype","form")}} у формы-родителя.</p>
- </dd>
- <dt>{{htmlattrdef("formmethod")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Если <code>button</code> имеет тип <code>submit</code>, то этот атрибут определяет метод HTTP-запроса для отправки данных на сервер. Возможные варианты:
- <ul>
-  <li><code>post</code>: данные формы включаются в тело сообщения и отправляются на сервер.</li>
-  <li><code>get</code>: данные формы отправляются на сервер в виде ссылки, состоящей из URI атрибута {{htmlattrxref("action","form")}} и непосредственно данных, отделённых знаком '?'. Данные формы будут иметь вид ключ/значение и разделены амперсандом, например name=Name&amp;id=35. Следует использовать этот метод только если нет побочных эффектов и данные формы содержат лишь ASCII-символы.</li>
- </ul>
+### Clicking and focus
 
- <p>Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("method","form")}} у формы-родителя.</p>
- </dd>
- <dt>{{htmlattrdef("formnovalidate")}} {{HTMLVersionInline(5)}}</dt>
- <dd><p>Булевый атрибут. Указывает, что данные формы не будут валидироваться при отправке.</p>
- <p>Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("novalidate","form")}} у формы-родителя.</p></dd>
- <dt>{{htmlattrdef("formtarget")}} {{HTMLVersionInline(5)}}</dt>
- <dd><p>Если <code>button</code> имеет тип <code>submit</code>, этот атрибут является именем или ключевым словом,</p>
- <p>указывающим, где отображать ответ, полученный после отправки формы. This is a name of, or keyword for, a <em>browsing context</em> (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:</p>
+Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become focused varies by browser and OS. The results for {{HTMLElement("input")}} of `type="button"` and `type="submit"` are the same.
 
- <ul>
-  <li><code>_self</code>: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.</li>
-  <li><code>_blank</code>: Load the response into a new unnamed browsing context.</li>
-  <li><code>_parent</code>: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as <code>_self</code>.</li>
-  <li><code>_top</code>: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as <code>_self</code>.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>The name of the button, which is submitted with the form data.</dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>The type of the button. Possible values are:
- <ul>
-  <li><code>submit</code>: The button submits the form data to the server. This is the default if the attribute is not specified, or if the attribute is dynamically changed to an empty or invalid value.</li>
-  <li><code>reset</code>: The button resets all the controls to their initial values.</li>
-  <li><code>button</code>: The button has no default behavior. It can have client-side scripts associated with the element's events, which are triggered when the events occur.</li>
-  <li>menu: The button opens a popup menu defined via its designated {{HTMLElement("menu")}} element.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("value")}}</dt>
- <dd>The initial value of the button.</dd>
-</dl>
+| Desktop Browsers  | Windows 8.1                | OS X 10.X                                                                                          |
+| ----------------- | -------------------------- | -------------------------------------------------------------------------------------------------- |
+| Firefox           | Yes - Firefox 30.0         | No (even with a `tabindex`) Firefox 63                                                             |
+| Chrome            | Yes - Chrome 35            | Yes - Chrome 65                                                                                    |
+| Safari            | N/A                        | No (even with a `tabindex`) Safari 12 ([bug 22261](https://bugs.webkit.org/show_bug.cgi?id=22261)) |
+| Internet Explorer | Yes - Internet Explorer 11 | N/A                                                                                                |
+| Presto            | Yes - Opera 12             | Yes - Opera 12                                                                                     |
 
-<h2 id="Example">Пример</h2>
+| Mobile Browsers | iOS 7.1.2                   | Android 4.4.4 |
+| --------------- | --------------------------- | ------------- |
+| Safari Mobile   | No (even with a `tabindex`) | N/A           |
+| Chrome 35       | No (even with a `tabindex`) | Yes           |
 
-<pre class="brush:html">&lt;button name="button"&gt;Тык!&lt;/button&gt;
-</pre>
-
-<p>{{ EmbedLiveSample('Example', 200, 64) }}</p>
-
-
-<h3 id="Clicking_and_focus">Clicking and focus</h3>
-
-<p>Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become focused varies by browser and OS. The results for {{HTMLElement("input")}} of <code>type="button"</code> and <code>type="submit"</code> are the same.</p>
-
-<table>
- <caption>Does clicking on a {{HTMLElement("button")}} give it focus?</caption>
- <thead>
-  <tr>
-   <th>Desktop Browsers</th>
-   <th>Windows 8.1</th>
-   <th>OS X 10.X</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>Firefox</th>
-   <td>Yes - Firefox 30.0</td>
-   <td>No (even with a <code>tabindex</code>) Firefox 63</td>
-  </tr>
-  <tr>
-   <th>Chrome</th>
-   <td>Yes - Chrome 35</td>
-   <td>Yes - Chrome 65</td>
-  </tr>
-  <tr>
-   <th>Safari</th>
-   <td style="background: #eee;">N/A</td>
-   <td>No (even with a <code>tabindex</code>) Safari 12 (<a href="https://bugs.webkit.org/show_bug.cgi?id=22261">bug 22261</a>)</td>
-  </tr>
-  <tr>
-   <th>Internet Explorer</th>
-   <td>Yes - Internet Explorer 11</td>
-   <td style="background: #eee;">N/A</td>
-  </tr>
-  <tr>
-   <th>Presto</th>
-   <td>Yes - Opera 12</td>
-   <td>Yes - Opera 12</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <caption>Does tapping on a {{HTMLElement("button")}} give it focus?</caption>
- <thead>
-  <tr>
-   <th>Mobile Browsers</th>
-   <th>iOS 7.1.2</th>
-   <th>Android 4.4.4</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>Safari Mobile</th>
-   <td>No (even with a <code>tabindex</code>)</td>
-   <td style="background-color: #eeeeee;">N/A</td>
-  </tr>
-  <tr>
-   <th>Chrome 35</th>
-   <td>No (even with a <code>tabindex</code>)</td>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

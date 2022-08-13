@@ -12,81 +12,63 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/dialog
 ---
-<div>{{SeeCompatTable}}</div>
+{{SeeCompatTable}}
 
-<p><strong>HTML-элемент <code>&lt;dialog&gt;</code> </strong>определяет диалоговое окно или другой интерактивный элемент, такой как инспектор или окно. Элементы <code>&lt;form&gt;</code> могут интегрироваться с диалогом с помощью указания атрибута <code>method="dialog"</code>. Когда отправляется такая форма, диалог закрывается с returnValue равным value нажатой кнопки submit.</p>
+**HTML-элемент `<dialog>` **определяет диалоговое окно или другой интерактивный элемент, такой как инспектор или окно. Элементы `<form>` могут интегрироваться с диалогом с помощью указания атрибута `method="dialog"`. Когда отправляется такая форма, диалог закрывается с returnValue равным value нажатой кнопки submit.
 
-<p>{{cssxref('::backdrop')}} CSS псевдо-элемент может быть использован для стилизации фона подложки элемента  <code>&lt;dialog&gt;, например для затемнения недоступного содержимого, пока диалог активен</code>.</p>
+{{cssxref('::backdrop')}} CSS псевдо-элемент может быть использован для стилизации фона подложки элемента `<dialog>, например для затемнения недоступного содержимого, пока диалог активен`.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент">секционный контент</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td><a href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Опускание тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, в котором разрешён <a href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">основной поток</a></td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLDialogElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный контент](/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент) |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                              | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток)                                                                                      |
+| Опускание тегов                                                  | {{no_tag_omission}}                                                                                                                                         |
+| Разрешённые родительские элементы                                | Любой элемент, в котором разрешён [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток)                                                    |
+| DOM-интерфейс                                                    | {{domxref("HTMLDialogElement")}}                                                                                                                     |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает в себя <a href="/ru/docs/Web/HTML/Общие_атрибуты">общие атрибуты</a>. Атрибут <code>tabindex</code> не должен использоваться с <code>&lt;dialog&gt;</code> элементом.</p>
+Этот элемент включает в себя [общие атрибуты](/ru/docs/Web/HTML/Общие_атрибуты). Атрибут `tabindex` не должен использоваться с `<dialog>` элементом.
 
-<dl>
- <dt>{{htmlattrdef("open")}}</dt>
- <dd>Этот атрибут сообщает о том, что диалог активен и доступен для взаимодействия. Когда атрибут open не установлен, диалог не должен быть видим для пользователя.</dd>
-</dl>
+- {{htmlattrdef("open")}}
+  - : Этот атрибут сообщает о том, что диалог активен и доступен для взаимодействия. Когда атрибут open не установлен, диалог не должен быть видим для пользователя.
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Пример_1">Пример 1</h3>
+### Пример 1
 
-<pre class="brush: html">&lt;dialog open&gt;
-  &lt;p&gt;Greetings, one and all!&lt;/p&gt;
-&lt;/dialog&gt;
-</pre>
+```html
+<dialog open>
+  <p>Greetings, one and all!</p>
+</dialog>
+```
 
-<h3 id="Пример_2">Пример 2</h3>
+### Пример 2
 
-<pre class="brush: html">&lt;!-- Простой попап диалог с формой --&gt;
-&lt;dialog id="favDialog"&gt;
-  &lt;form method="dialog"&gt;
-    &lt;section&gt;
-      &lt;p&gt;&lt;label for="favAnimal"&gt;Favorite animal:&lt;/label&gt;
-      &lt;select id="favAnimal"&gt;
-        &lt;option&gt;&lt;/option&gt;
-        &lt;option&gt;Brine shrimp&lt;/option&gt;
-        &lt;option&gt;Red panda&lt;/option&gt;
-        &lt;option&gt;Spider monkey&lt;/option&gt;
-      &lt;/select&gt;&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;menu&gt;
-      &lt;button id="cancel" type="reset"&gt;Cancel&lt;/button&gt;
-      &lt;button type="submit"&gt;Confirm&lt;/button&gt;
-    &lt;/menu&gt;
-  &lt;/form&gt;
-&lt;/dialog&gt;
+```html
+<!-- Простой попап диалог с формой -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p><label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select></p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </menu>
+  </form>
+</dialog>
 
-&lt;menu&gt;
-  &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-&lt;/menu&gt;
+<menu>
+  <button id="updateDetails">Update details</button>
+</menu>
 
-&lt;script&gt;
+<script>
   (function() {
     var updateButton = document.getElementById('updateDetails');
     var cancelButton = document.getElementById('cancel');
@@ -103,65 +85,63 @@ translation_of: Web/HTML/Element/dialog
     });
 
   })();
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre><code>&lt;!-- Простой попап диалог с формой --&gt;
-&lt;dialog id="favDialog"&gt;
-  &lt;form method="dialog"&gt;
-    &lt;section&gt;
-      &lt;p&gt;&lt;label for="favAnimal"&gt;Favorite animal:&lt;/label&gt;
-      &lt;select id="favAnimal"&gt;
-        &lt;option&gt;&lt;/option&gt;
-        &lt;option&gt;Brine shrimp&lt;/option&gt;
-        &lt;option&gt;Red panda&lt;/option&gt;
-        &lt;option&gt;Spider monkey&lt;/option&gt;
-      &lt;/select&gt;&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;menu&gt;
-      &lt;button id="cancel" type="reset"&gt;Cancel&lt;/button&gt;
-      &lt;button type="submit"&gt;Confirm&lt;/button&gt;
-    &lt;/menu&gt;
-  &lt;/form&gt;
-&lt;/dialog&gt;
+    <!-- Простой попап диалог с формой -->
+    <dialog id="favDialog">
+      <form method="dialog">
+        <section>
+          <p><label for="favAnimal">Favorite animal:</label>
+          <select id="favAnimal">
+            <option></option>
+            <option>Brine shrimp</option>
+            <option>Red panda</option>
+            <option>Spider monkey</option>
+          </select></p>
+        </section>
+        <menu>
+          <button id="cancel" type="reset">Cancel</button>
+          <button type="submit">Confirm</button>
+        </menu>
+      </form>
+    </dialog>
 
-&lt;menu&gt;
-  &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-&lt;/menu&gt;
+    <menu>
+      <button id="updateDetails">Update details</button>
+    </menu>
 
-&lt;script&gt;
-  (function() {
-    var updateButton = document.getElementById('updateDetails');
-    var cancelButton = document.getElementById('cancel');
-    var favDialog = document.getElementById('favDialog');
+    <script>
+      (function() {
+        var updateButton = document.getElementById('updateDetails');
+        var cancelButton = document.getElementById('cancel');
+        var favDialog = document.getElementById('favDialog');
 
-    // Update button opens a modal dialog
-    updateButton.addEventListener('click', function() {
-      favDialog.showModal();
-    });
+        // Update button opens a modal dialog
+        updateButton.addEventListener('click', function() {
+          favDialog.showModal();
+        });
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener('click', function() {
-      favDialog.close();
-    });
+        // Form cancel button closes the dialog box
+        cancelButton.addEventListener('click', function() {
+          favDialog.close();
+        });
 
-  })();
-&lt;/script&gt;</code></pre>
+      })();
+    </script>
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_в_браузерах">Совместимость в браузерах</h2>
+## Совместимость в браузерах
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Событие {{event("close")}}</li>
- <li>Событие {{event("cancel")}}</li>
- <li><a href="/ru/docs/Web/Guide/HTML/Forms">HTML forms guide</a>.</li>
-</ul>
+- Событие {{event("close")}}
+- Событие {{event("cancel")}}
+- [HTML forms guide](/ru/docs/Web/Guide/HTML/Forms).
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

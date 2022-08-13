@@ -3,66 +3,41 @@ title: <hgroup>
 slug: Web/HTML/Element/hgroup
 translation_of: Web/HTML/Element/hgroup
 ---
-<div>{{HTMLRef}}{{seeCompatTable}}</div>
+{{HTMLRef}}{{seeCompatTable}}
 
+> **Примечание:** **Примечание использования:** Этот элемент был удалён из HTML5 (W3C) спецификации , но до сих пор остаётся в спецификации WHATWG. Он частично встроен в большинство браузеров, хотя бы поэтому вряд ли уйдёт. Поскольку схематический алгоритм не реализован ни в одном браузере, семантика тега `<hgroup>` на практике реализована только теоретически. Спецификация HTML5 (W3C) даёт совет как обозначать [подзаголовки, альтернативные заголовки и слоганы](http://www.w3.org/TR/html5/common-idioms.html#sub-head).
 
+HTML \<hgroup> Элемент (HTML Headings Group Element - Элемент Группы Заголовков HTML) представляет заголовок раздела. Он определяет один заголовок, который участвует в схеме документа как заголовок явно или неявно заданного раздела, к которому он принадлежит.
 
-<div class="note">
-<p><strong>Примечание использования: </strong>Этот элемент был удалён из HTML5 (W3C) спецификации , но до сих пор остаётся в спецификации WHATWG. Он частично встроен в большинство браузеров, хотя бы поэтому вряд ли уйдёт. Поскольку схематический алгоритм не реализован ни в одном браузере, семантика тега <code>&lt;hgroup&gt;</code> на практике реализована только теоретически. Спецификация HTML5 (W3C) даёт совет как обозначать <a href="http://www.w3.org/TR/html5/common-idioms.html#sub-head">подзаголовки, альтернативные заголовки и слоганы</a>.</p>
-</div>
+Собственно текст для схематического алгоритма - это текст первого элемента заголовка HTML наивысшего ранга (т. Е. Первый {{HTMLElement ("h1")}}, {{HTMLElement ("h2")}}, {{HTMLElement (" h3 ")}}, {{HTMLElement (" h4 ")}}, {{HTMLElement (" h5 ")}} или {{HTMLElement (" h6 ")}} с наименьшим числом потомков), а rank - уровень этого элемента заголовка HTML.
 
-<p>HTML &lt;hgroup&gt; Элемент (HTML Headings Group Element - Элемент Группы Заголовков HTML) представляет заголовок раздела. Он определяет один заголовок, который участвует в схеме документа как заголовок явно или неявно заданного раздела, к которому он принадлежит.</p>
+Поэтому этот элемент группирует несколько заголовков, внося лишь основной текст в план документа. Он позволяет связывать вторичные заголовки, такие как подзаголовки, альтернативные заголовки или даже теги, с основным заголовком, без загрязнения структуры документа.
 
-<p>Собственно текст для схематического алгоритма - это текст первого элемента заголовка HTML наивысшего ранга (т. Е. Первый {{HTMLElement ("h1")}}, {{HTMLElement ("h2")}}, {{HTMLElement (" h3 ")}}, {{HTMLElement (" h4 ")}}, {{HTMLElement (" h5 ")}} или {{HTMLElement (" h6 ")}} с наименьшим числом потомков), а rank - уровень этого элемента заголовка HTML.</p>
+| Категория информации      | [Flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), heading content, palpable content.                                                               |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Permitted content         | One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}. |
+| Tag omission              | {{no_tag_omission}}                                                                                                                                                                               |
+| Permitted parent elements | Any element that accepts [flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").                                                                         |
+| DOM interface             | {{domxref("HTMLElement")}}                                                                                                                                                                   |
 
-<p>Поэтому этот элемент группирует несколько заголовков, внося лишь основной текст в план документа. Он позволяет связывать вторичные заголовки, такие как подзаголовки, альтернативные заголовки или даже теги, с основным заголовком, без загрязнения структуры документа.</p>
+## Атрибуты
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">
-    <p>Категория информации </p>
-   </th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">Flow content</a>, heading content, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parent elements</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+This element only includes the [global attributes](/ru/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Примеры
 
-<p><span style="line-height: 21px;">This element only includes the </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">global attributes</a><span style="line-height: 21px;">.</span></p>
+```html
+<hgroup>
+  <h1>Главный заголовок</h1>
+  <h2>Вторичный заголовок</h2>
+</hgroup>
+```
 
-<h2 id="Примеры">Примеры</h2>
+## Совместимость браузеров
 
-<pre class="brush: html">&lt;hgroup&gt;
-  &lt;h1&gt;Главный заголовок&lt;/h1&gt;
-  &lt;h2&gt;Вторичный заголовок&lt;/h2&gt;
-&lt;/hgroup&gt;
-</pre>
+{{Compat}}
 
-<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+## Смотрите также
 
-<p>{{Compat}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li>Другие элементы, связанные с разделом: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li><a href="/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Разделы и структура документа HTML5</a>.</li>
-</ul>
+- Другие элементы, связанные с разделом: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- [Разделы и структура документа HTML5](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).

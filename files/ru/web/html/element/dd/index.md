@@ -14,68 +14,41 @@ tags:
   - списки
 translation_of: Web/HTML/Element/dd
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;dd&gt;</code></strong> (<em>от англ. Description Details</em>) предоставляет подробности или определение предшествующего термина ({{HTMLElement("dt")}}) в списке определений ({{HTMLElement("dl")}}).</span></p>
+**HTML-элемент `<dd>`** (_от англ. Description Details_) предоставляет подробности или определение предшествующего термина ({{HTMLElement("dt")}}) в списке определений ({{HTMLElement("dl")}}).
 
-<div>{{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a></th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент">Потоковый контент</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>Открывающий тег обязателен. Конечный тег может быть опущен, если за элементом {{HTMLElement("dd")}} непосредственно следует элемент <code>&lt;dd&gt;</code> или {{HTMLElement("dt")}}, или если в родительском элементе нет больше содержимого.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>{{HTMLElement("dl")}} или (в <a href="/ru/docs/Glossary/WHATWG">WHATWG</a> HTML) {{HTMLElement("div")}} который внутри элемента {{HTMLElement("dl")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Предыдущий элемент</th>
-   <td>{{HTMLElement("dt")}} или другой {{HTMLElement("dd")}} элемент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA-роли</th>
-   <td>Нет</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                                                                                                                                                          |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое                                           | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент)                                                                                                                                                            |
+| Пропуск тегов                                                    | Открывающий тег обязателен. Конечный тег может быть опущен, если за элементом {{HTMLElement("dd")}} непосредственно следует элемент `<dd>` или {{HTMLElement("dt")}}, или если в родительском элементе нет больше содержимого. |
+| Разрешённые родители                                             | {{HTMLElement("dl")}} или (в [WHATWG](/ru/docs/Glossary/WHATWG) HTML) {{HTMLElement("div")}} который внутри элемента {{HTMLElement("dl")}}.                                                                              |
+| Предыдущий элемент                                               | {{HTMLElement("dt")}} или другой {{HTMLElement("dd")}} элемент.                                                                                                                                                                |
+| Разрешённые ARIA-роли                                            | Нет                                                                                                                                                                                                                                          |
+| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                         |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-<dl>
- <dt>{{htmlattrdef("nowrap")}} {{Non-standard_inline}}</dt>
- <dd>Если значение атрибута установлено <code>yes</code>, текст определения не будет переноситься. Значение по умолчанию <code>no</code>.</dd>
-</dl>
+- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+  - : Если значение атрибута установлено `yes`, текст определения не будет переноситься. Значение по умолчанию `no`.
 
-<h2 id="Пример">Пример</h2>
+## Пример
 
-<p>Для примера смотрите <a href="/ru/docs/HTML/Element/dl#examples">образец для &lt;dl&gt; элемента</a>.</p>
+Для примера смотрите [образец для \<dl> элемента](/ru/docs/HTML/Element/dl#examples).
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat}}</p>
+## Поддержка браузерами
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTMLELement("dl")}}</li>
- <li>{{HTMLElement("dt")}}</li>
-</ul>
+## Смотрите также
+
+- {{HTMLELement("dl")}}
+- {{HTMLElement("dt")}}

@@ -3,86 +3,63 @@ title: <time>
 slug: Web/HTML/Element/time
 translation_of: Web/HTML/Element/time
 ---
-<p><strong>Элемент HTML</strong> <strong><code>&lt;time&gt;</code></strong> используется для представления либо времени в 24-часовом формате, либо точной даты по <a class="external" href="http://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C">Григорианскому календарю</a> (с опциональным указанием времени и часового пояса).</p>
+**Элемент HTML** **`<time>`** используется для представления либо времени в 24-часовом формате, либо точной даты по [Григорианскому календарю](http://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C) (с опциональным указанием времени и часового пояса).
 
-<p>Этот элемент предназначен для представления дат и времени в машиночитаемом формате. Это облегчает клиентским приложениям добавление событий в календарь пользователя. </p>
+Этот элемент предназначен для представления дат и времени в машиночитаемом формате. Это облегчает клиентским приложениям добавление событий в календарь пользователя.
 
-<div class="note"><strong>Замечание по применению: </strong>Этот элемент неуместно использовать, когда точная дата не определена, а также при использовании дат ранее введения Григорианского календаря (из-за проблем с работой с такими датами).</div>
+> **Примечание:** **Замечание по применению:** Этот элемент неуместно использовать, когда точная дата не определена, а также при использовании дат ранее введения Григорианского календаря (из-за проблем с работой с такими датами).
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th><a href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Content_categories" title="HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>, явный контент.</td>
-  </tr>
-  <tr>
-   <th>Разрешённый контент</th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th>Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th>Разрешённые родители</th>
-   <td>Любой элемент, который принимает <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</td>
-  </tr>
-  <tr>
-   <th>Разрешённые ARIA роли</th>
-   <td>Любые</td>
-  </tr>
-  <tr>
-   <th>DOM-интерфейс</th>
-   <td>{{domxref("HTMLTimeElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories "HTML/Content_categories") | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), явный контент. |
+| ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                                                        | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                             |
+| Tag omission                                                                               | {{no_tag_omission}}                                                                                                                                                     |
+| Разрешённые родители                                                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                            |
+| Разрешённые ARIA роли                                                                      | Любые                                                                                                                                                                        |
+| DOM-интерфейс                                                                              | {{domxref("HTMLTimeElement")}}                                                                                                                                     |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Как и все другие элементы HTML, этот элемент поддерживает <a href="/ru/docs/HTML/Global_attributes" title="HTML/Global attributes">глобальные атрибуты</a>.</p>
+Как и все другие элементы HTML, этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes "HTML/Global attributes").
 
-<dl>
- <dt>{{htmlattrdef("datetime")}}</dt>
- <dd>Этот атрибут специфицирует время и дату и должен быть <a class="external" href="https://www.w3.org/TR/html/infrastructure.html#dates-and-times">допустимой датой с возможным дополнительным указанием времени</a>. Если значение элемента не может быть распознано как дата с возможным дополнительным указанием времени, элементу не будет сопоставлен временной срез (timestamp).</dd>
-</dl>
+- {{htmlattrdef("datetime")}}
+  - : Этот атрибут специфицирует время и дату и должен быть [допустимой датой с возможным дополнительным указанием времени](https://www.w3.org/TR/html/infrastructure.html#dates-and-times). Если значение элемента не может быть распознано как дата с возможным дополнительным указанием времени, элементу не будет сопоставлен временной срез (timestamp).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Simple_example">Простой пример</h3>
+### Простой пример
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Концерт начинается в &lt;time&gt;20:00&lt;/time&gt;.&lt;/p&gt;
-</pre>
+```html
+<p>Концерт начинается в <time>20:00</time>.</p>
+```
 
-<h4 id="Output">Вывод</h4>
+#### Вывод
 
-<p>{{ EmbedLiveSample('Simple_example', 250, 60) }}</p>
+{{ EmbedLiveSample('Simple_example', 250, 60) }}
 
-<h3 id="Datetime_example">пример <code>datetime</code></h3>
+### пример `datetime`
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Концерт состоялся &lt;time datetime="2001-05-15 19:00"&gt;15 мая&lt;/time&gt;.&lt;/p&gt;
-</pre>
+```html
+<p>Концерт состоялся <time datetime="2001-05-15 19:00">15 мая</time>.</p>
+```
 
-<h4 id="Вывод">Вывод</h4>
+#### Вывод
 
-<p>{{ EmbedLiveSample('Datetime_example', 250, 60) }}</p>
+{{ EmbedLiveSample('Datetime_example', 250, 60) }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>The {{HTMLElement("data")}} элемент, позволяющий обозначать другие типы данных.</li>
-</ul>
+- The {{HTMLElement("data")}} элемент, позволяющий обозначать другие типы данных.
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

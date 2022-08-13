@@ -3,137 +3,106 @@ title: '<fieldset>: The Field Set element'
 slug: Web/HTML/Element/fieldset
 translation_of: Web/HTML/Element/fieldset
 ---
-<p><strong>HTML-элемент <code>&lt;fieldset&gt;</code></strong> используется для группировки нескольких элементов управления в веб-форме.</p>
+**HTML-элемент `<fieldset>`** используется для группировки нескольких элементов управления в веб-форме.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
 
-<p>Пример выше показывает, как элемент <code>&lt;fieldset&gt;</code> группирует части HTML-формы, а вложенный элемент {{htmlelement("legend")}} даёт заголовок для <code>&lt;fieldset&gt;</code>. Он может иметь несколько атрибутов, самый используемый из них <code>form</code>, который содержит <code>id</code> формы {{htmlelement("form")}} на этой же странице. Этот атрибут позволяет сделать <code>&lt;fieldset&gt;</code> частью формы <code>&lt;form&gt;</code> даже если он не находится внутри неё. Также вы можете отключить <code>&lt;fieldset&gt;</code> и всё его содержимое с помощью атрибута <code>disabled</code>.</p>
+Пример выше показывает, как элемент `<fieldset>` группирует части HTML-формы, а вложенный элемент {{htmlelement("legend")}} даёт заголовок для `<fieldset>`. Он может иметь несколько атрибутов, самый используемый из них `form`, который содержит `id` формы {{htmlelement("form")}} на этой же странице. Этот атрибут позволяет сделать `<fieldset>` частью формы `<form>` даже если он не находится внутри неё. Также вы можете отключить `<fieldset>` и всё его содержимое с помощью атрибута `disabled`.
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает в себя <a href="/ru/docs/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("disabled")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Если этот логический атрибут установлен, все элементы управления формой, вложенные в <code>&lt;fieldset&gt;</code> будут отключены. Это значит, что их нельзя изменять, но можно отправить через форму <code>&lt;form&gt;</code>, в отличие от атрибута {{htmlattrdef("disabled")}} на элементах управления формой. Они не будут реагировать на браузерные события, такие как клики мышью или события focus. По умолчанию, браузер отображает такие элементы управления в сером цвете. Обратите внимание, что элементы формы внутри элемента {{HTMLElement("legend")}} не будут отключены.</dd>
- <dt>{{htmlattrdef("form")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Этот атрибут принимает значение атрибута <code>id</code> элемента {{HTMLElement("form")}}, с которой вам нужно связать <code>&lt;fieldset&gt;</code>, даже если он находится вне формы.</dd>
- <dt>{{htmlattrdef("name")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Имя, связанное с группой.
- <div class="note"><strong>Примечание</strong>: Заголовок для &lt;fieldset&gt; устанавливается первым {{HTMLElement("legend")}} внутри него.</div>
- </dd>
-</dl>
+- {{htmlattrdef("disabled")}} {{HTMLVersionInline(5)}}
+  - : Если этот логический атрибут установлен, все элементы управления формой, вложенные в `<fieldset>` будут отключены. Это значит, что их нельзя изменять, но можно отправить через форму `<form>`, в отличие от атрибута {{htmlattrdef("disabled")}} на элементах управления формой. Они не будут реагировать на браузерные события, такие как клики мышью или события focus. По умолчанию, браузер отображает такие элементы управления в сером цвете. Обратите внимание, что элементы формы внутри элемента {{HTMLElement("legend")}} не будут отключены.
+- {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
+  - : Этот атрибут принимает значение атрибута `id` элемента {{HTMLElement("form")}}, с которой вам нужно связать `<fieldset>`, даже если он находится вне формы.
+- {{htmlattrdef("name")}} {{HTMLVersionInline(5)}}
+  - : Имя, связанное с группой.> **Примечание:** Заголовок для \<fieldset> устанавливается первым {{HTMLElement("legend")}} внутри него.
 
-<h2 id="Стилизация_с_CSS">Стилизация с CSS</h2>
+## Стилизация с CSS
 
-<p>Есть несколько особенностей стилизации <code>&lt;fieldset&gt;</code>. </p>
+Есть несколько особенностей стилизации `<fieldset>`.
 
-<p>По умолчанию, значение свойства {{cssxref("display")}} равняется <code>block</code>, что создаёт блочный контекст форматирования. Если установить значение <code>display</code> как inline-элементу <code>&lt;fieldset&gt;</code>, это будет работать как <code>inline-block</code>, в ином случае, это будет работать как <code>block</code>. По умолчанию, имеется border 2px groobe вокруг содержимого и небольшой внутренний отступ. Элемент имеет <code>min-inline-size: min-content</code> по умолчанию.</p>
+По умолчанию, значение свойства {{cssxref("display")}} равняется `block`, что создаёт блочный контекст форматирования. Если установить значение `display` как inline-элементу `<fieldset>`, это будет работать как `inline-block`, в ином случае, это будет работать как `block`. По умолчанию, имеется border 2px groobe вокруг содержимого и небольшой внутренний отступ. Элемент имеет `min-inline-size: min-content` по умолчанию.
 
-<p>Если задан &lt;legend&gt;, он будет помещён поверх верхней границы. &lt;legend&gt; сжимается и переносится, также имеет свой контекст форматирования. Значение <code>display</code> блочное (например, <code>display: inline</code> работает как <code>block</code>).</p>
+Если задан \<legend>, он будет помещён поверх верхней границы. \<legend> сжимается и переносится, также имеет свой контекст форматирования. Значение `display` блочное (например, `display: inline` работает как `block`).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Простой_fieldset">Простой fieldset</h3>
+### Простой fieldset
 
-<p>Этот пример показывает простой <code>&lt;fieldset&gt;</code> с <code>&lt;legend&gt;</code> и единственным элементом управления внутри.</p>
+Этот пример показывает простой `<fieldset>` с `<legend>` и единственным элементом управления внутри.
 
-<pre class="brush: html">&lt;form action="#"&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Simple fieldset&lt;/legend&gt;
-    &lt;input type="radio" id="radio"&gt;
-    &lt;label for="radio"&gt;Spirit of radio&lt;/label&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="#">
+  <fieldset>
+    <legend>Simple fieldset</legend>
+    <input type="radio" id="radio">
+    <label for="radio">Spirit of radio</label>
+  </fieldset>
+</form>
+```
 
-<p>{{ EmbedLiveSample('Простой_fieldset', '100%', '80') }}</p>
+{{ EmbedLiveSample('Простой_fieldset', '100%', '80') }}
 
-<h3 id="Отключённый_fieldset">Отключённый fieldset</h3>
+### Отключённый fieldset
 
-<p>Этот пример показывает отключённый <code>&lt;fieldset&gt;</code> с двумя элементами управления внутри.</p>
+Этот пример показывает отключённый `<fieldset>` с двумя элементами управления внутри.
 
-<pre class="brush: html">&lt;form action="#"&gt;
-  &lt;fieldset disabled&gt;
-    &lt;legend&gt;Disabled fieldset&lt;/legend&gt;
-    &lt;div&gt;
-      &lt;label for="name"&gt;Name: &lt;/label&gt;
-      &lt;input type="text" id="name" value="Chris"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;label for="pwd"&gt;Archetype: &lt;/label&gt;
-      &lt;input type="password" id="pwd" value="Wookie"&gt;
-    &lt;/div&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="#">
+  <fieldset disabled>
+    <legend>Disabled fieldset</legend>
+    <div>
+      <label for="name">Name: </label>
+      <input type="text" id="name" value="Chris">
+    </div>
+    <div>
+      <label for="pwd">Archetype: </label>
+      <input type="password" id="pwd" value="Wookie">
+    </div>
+  </fieldset>
+</form>
+```
 
-<p>{{ EmbedLiveSample('Отключённый_fieldset', '100%', '110') }}</p>
+{{ EmbedLiveSample('Отключённый_fieldset', '100%', '110') }}
 
-<h2 id="Техническая_сводка">Техническая сводка</h2>
+## Техническая сводка
 
+| [Категории контента](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), [корневой раздел](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document), [listed](/ru/docs/HTML/Content_categories#form_listed), [контент форм](/ru/docs/Web/Guide/HTML/Content_categories#%D0%9A%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82_%D1%84%D0%BE%D1%80%D0%BC), явный контент. |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                    | Необязательный элемент {{HTMLElement("legend")}}, следующий в основном потоке.                                                                                                                                                                                                                                                                                                                                                       |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Разрешённые родители                                   | Любой элемент основного потока                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Разрешённые ARIA roles                                 | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                                                                                                                                                                                                                                                                                                                                                          |
+| Взаимодействие с DOM                                   | {{domxref("HTMLFieldSetElement")}}                                                                                                                                                                                                                                                                                                                                                                                                |
 
-
-<table class="properties" style="font-family: Arial,x-locale-body,sans-serif; font-size: 1rem; letter-spacing: -0.00278rem;">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ru/docs/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA">Основной поток</a>, <a href="/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">корневой раздел</a>, <a href="/en-US/docs/HTML/Content_categories#form_listed">listed</a>, <a href="/ru/docs/Web/Guide/HTML/Content_categories#%D0%9A%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82_%D1%84%D0%BE%D1%80%D0%BC">контент форм</a>, явный контент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённый контент</th>
-   <td>Необязательный элемент {{HTMLElement("legend")}}, следующий в основном потоке.</td>
-  </tr>
-  <tr>
-   <th scope="row">Пропуск тегов</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любой элемент основного потока</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые ARIA roles</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Взаимодействие с DOM </th>
-   <td>{{domxref("HTMLFieldSetElement")}}</td>
-  </tr>
- </tbody>
-</table>
-
-
-
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
+- Другие связанные элементы:
 
-<h2 id="See_also">See also</h2>
+  - {{HTMLElement("form")}}
+  - {{HTMLElement("legend")}}
+  - {{HTMLElement("label")}}
+  - {{HTMLElement("button")}}
+  - {{HTMLElement("select")}}
+  - {{HTMLElement("datalist")}}
+  - {{HTMLElement("optgroup")}}
+  - {{HTMLElement("option")}}
+  - {{HTMLElement("textarea")}}
+  - {{HTMLElement("keygen")}}
+  - {{HTMLElement("input")}}
+  - {{HTMLElement("output")}}
+  - {{HTMLElement("progress")}}
+  - {{HTMLElement("meter")}}
 
-<ul>
- <li>Другие связанные элементы:
-  <ul>
-   <li>{{HTMLElement("form")}}</li>
-   <li>{{HTMLElement("legend")}}</li>
-   <li>{{HTMLElement("label")}}</li>
-   <li>{{HTMLElement("button")}}</li>
-   <li>{{HTMLElement("select")}}</li>
-   <li>{{HTMLElement("datalist")}}</li>
-   <li>{{HTMLElement("optgroup")}}</li>
-   <li>{{HTMLElement("option")}}</li>
-   <li>{{HTMLElement("textarea")}}</li>
-   <li>{{HTMLElement("keygen")}}</li>
-   <li>{{HTMLElement("input")}}</li>
-   <li>{{HTMLElement("output")}}</li>
-   <li>{{HTMLElement("progress")}}</li>
-   <li>{{HTMLElement("meter")}}</li>
-  </ul>
- </li>
-</ul>
-
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

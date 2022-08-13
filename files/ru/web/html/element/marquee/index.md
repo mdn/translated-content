@@ -3,79 +3,73 @@ title: <marquee>
 slug: Web/HTML/Element/marquee
 translation_of: Web/HTML/Element/marquee
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}{{obsolete_header}}
 
-<div>{{obsolete_header}}</div>
+## Определение
 
-<h2 id="Summary">Определение</h2>
+HTML-элемент `<marquee>` используется для создания на странице прокручивающегося текста (бегущей строки).
 
-<p>HTML-элемент <code>&lt;marquee&gt;</code> используется для создания на странице прокручивающегося текста (бегущей строки).</p>
+## Атрибут
 
-<h2 id="Атрибут">Атрибут</h2>
+- {{htmlattrdef("behavior")}}
+  - : Описывает поведение прокрутки. Допустимые значения: `scroll`, `slide` `и alternate`. Если значение не указано, то используется `scroll`.
+- {{htmlattrdef("bgcolor")}}
+  - : Задаёт цвет фона (можно использовать имя цвета или шестнадцатеричное значение).
+- {{htmlattrdef("direction")}}
+  - : Задаёт направление прокрутки. `Допустимые значения: left`, `right`, `up` и `down`. Если значение не указано, то используется `left`.
+- {{htmlattrdef("height")}}
+  - : Задаёт высоту в пикселях или процентах.
+- {{htmlattrdef("hspace")}}
+  - : Задаёт поле (margin) слева.
+- {{htmlattrdef("loop")}}
+  - : Задаёт количество прокруток. Если значение не указано, то используется -1, что означает бесконечную прокрутку
+- {{htmlattrdef("scrollamount")}}
+  - : Задаёт сдвиг на каждом шаге в пикселях. По умолчанию 6.
+- {{htmlattrdef("scrolldelay")}}
+  - : Задаёт интервал между каждым шагом в миллисекундах. По умолчанию 85. Обратите внимание, что значения меньше 60 будут проигнорированы и будет использовано 60, если не присутствует атрибут `truespeed`.
+- {{htmlattrdef("truespeed")}}
+  - : По умолчанию значения меньше 60 в` scrolldelay игнорируются`. Однако, если присутствует `truespeed`, то они не игнорируются
+- {{htmlattrdef("vspace")}}
+  - : Задаёт вертикальный отступ (margin) в пикселях или процентах.
+- {{htmlattrdef("width")}}
+  - : Задаёт ширину в пикселях или процентах.
 
-<dl>
- <dt>{{htmlattrdef("behavior")}}</dt>
- <dd>Описывает поведение прокрутки. Допустимые значения: <code>scroll</code>, <code>slide</code> <code>и alternate</code>. Если значение не указано, то используется <code>scroll</code>.</dd>
- <dt>{{htmlattrdef("bgcolor")}}</dt>
- <dd>Задаёт цвет фона (можно использовать имя цвета или шестнадцатеричное значение).</dd>
- <dt>{{htmlattrdef("direction")}}</dt>
- <dd>Задаёт направление прокрутки. <code>Допустимые значения: left</code>, <code>right</code>, <code>up</code> и <code>down</code>. Если значение не указано, то используется <code>left</code>.</dd>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>Задаёт высоту в пикселях или процентах.</dd>
- <dt>{{htmlattrdef("hspace")}}</dt>
- <dd>Задаёт поле (margin) слева.</dd>
- <dt>{{htmlattrdef("loop")}}</dt>
- <dd>Задаёт количество прокруток. Если значение не указано, то используется -1, что означает бесконечную прокрутку</dd>
- <dt>{{htmlattrdef("scrollamount")}}</dt>
- <dd>Задаёт сдвиг на каждом шаге в пикселях. По умолчанию 6.</dd>
- <dt>{{htmlattrdef("scrolldelay")}}</dt>
- <dd>Задаёт интервал между каждым шагом в миллисекундах. По умолчанию 85. Обратите внимание, что значения меньше 60 будут проигнорированы и будет использовано 60, если не присутствует атрибут <code>truespeed</code>.</dd>
- <dt>{{htmlattrdef("truespeed")}}</dt>
- <dd>По умолчанию значения меньше 60 в<code> scrolldelay игнорируются</code>. Однако, если присутствует <code>truespeed</code>, то они не игнорируются</dd>
- <dt>{{htmlattrdef("vspace")}}</dt>
- <dd>Задаёт вертикальный отступ (margin) в пикселях или процентах.</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>Задаёт ширину в пикселях или процентах.</dd>
-</dl>
+## Обработчики событий
 
-<h2 id="Event_handlers">Обработчики событий</h2>
+- {{htmlattrdef("onbounce")}}
+  - : Срабатывает, когда marquee достиг конечного состояния. Срабатывает только в случаях, когда `behavior` имеет значение `alternate`.
+- {{htmlattrdef("onfinish")}}
+  - : Срабатывает, когда marquee прокрутился столько раз, сколько было задано в атрибуте `loop`. Срабатывает только тогда, когда атрибут `loop` имеет положительное значение.
+- {{htmlattrdef("onstart")}}
+  - : Срабатывает в начале прокрутки.
 
-<dl>
- <dt>{{htmlattrdef("onbounce")}}</dt>
- <dd>Срабатывает, когда marquee достиг конечного состояния. Срабатывает только в случаях, когда <code>behavior</code> имеет значение <code>alternate</code>.</dd>
- <dt>{{htmlattrdef("onfinish")}}</dt>
- <dd>Срабатывает, когда marquee прокрутился столько раз, сколько было задано в атрибуте <code>loop</code>. Срабатывает только тогда, когда атрибут <code>loop</code> имеет положительное значение.</dd>
- <dt>{{htmlattrdef("onstart")}}</dt>
- <dd>Срабатывает в начале прокрутки.</dd>
-</dl>
+## Методы
 
-<h2 id="Methods">Методы</h2>
+- start
+  - : Запускает прокрутку marquee.
+- stop
+  - : Останавливает прокрутку marquee.
 
-<dl>
- <dt>start</dt>
- <dd>Запускает прокрутку marquee.</dd>
- <dt>stop</dt>
- <dd>Останавливает прокрутку marquee.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+```html
+<marquee>This text will scroll from right to left</marquee>
 
-<pre class="brush: html">&lt;marquee&gt;This text will scroll from right to left&lt;/marquee&gt;
+<marquee direction="up">This text will scroll from bottom to top</marquee>
 
-&lt;marquee direction="up"&gt;This text will scroll from bottom to top&lt;/marquee&gt;
-
-&lt;marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid"&gt;
-  &lt;marquee behavior="alternate"&gt;
+<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+  <marquee behavior="alternate">
     This text will bounce
-  &lt;/marquee&gt;
-&lt;/marquee&gt;</pre>
+  </marquee>
+</marquee>
+```
 
-<p>{{EmbedLiveSample("Examples", 600, 450)}}</p>
+{{EmbedLiveSample("Examples", 600, 450)}}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}

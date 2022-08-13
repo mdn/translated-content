@@ -3,100 +3,68 @@ title: <input type="image">
 slug: Web/HTML/Element/Input/image
 translation_of: Web/HTML/Element/input/image
 ---
-<p><code>&lt;input type="image"&gt; - это кнопка отправки в виде изображения. Вы можете использовать атрибут src, чтобы выбрать источник изображения и атрибут alt, чтобы добавить альтернативный текст. Атрибутами width и height можно указать размер изображения в пикселях.</code></p>
+`<input type="image"> - это кнопка отправки в виде изображения. Вы можете использовать атрибут src, чтобы выбрать источник изображения и атрибут alt, чтобы добавить альтернативный текст. Атрибутами width и height можно указать размер изображения в пикселях.`
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Разрешённое содержимое</th>
-   <td>Нету, это пустой элемент.</td>
-  </tr>
-  <tr>
-   <th scope="row">Необязательный закрывающийся тег</th>
-   <td>Обязательно должен быть открывающийся тег, и обязательно отсутствует закрывающий.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родительские элементы</th>
-   <td>Любой элемент, которому доступен фразообразующий контент (<a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>).</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM-интерфейс </th>
-   <td>{{domxref("HTMLInputElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| Разрешённое содержимое            | Нету, это пустой элемент.                                                                                                         |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Необязательный закрывающийся тег  | Обязательно должен быть открывающийся тег, и обязательно отсутствует закрывающий.                                                 |
+| Разрешённые родительские элементы | Любой элемент, которому доступен фразообразующий контент ([phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content)). |
+| DOM-интерфейс                     | {{domxref("HTMLInputElement")}}                                                                                          |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этому элементу доступны глобальные атрибуты (<a href="/en-US/docs/HTML/Global_attributes">global attributes</a>).</p>
+Этому элементу доступны глобальные атрибуты ([global attributes](/ru/docs/HTML/Global_attributes)).
 
-<p>{{htmlattrdef("type")}}</p>
+{{htmlattrdef("type")}}
 
-<dl>
- <dt>{{htmlattrdef("formaction")}} {{HTMLVersionInline("5")}}</dt>
- <dd>The URI of a program that processes the information submitted by the input element, here image if specified, it overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.</dd>
-</dl>
+- {{htmlattrdef("formaction")}} {{HTMLVersionInline("5")}}
+  - : The URI of a program that processes the information submitted by the input element, here image if specified, it overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.
 
-<dl>
- <dt>{{htmlattrdef("formenctype")}} {{HTMLVersionInline("5")}}</dt>
- <dd>If the input element is an image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
- <ul>
-  <li><code>application/x-www-form-urlencoded</code>: The default value if the attribute is not specified.</li>
-  <li><code>multipart/form-data</code>: Use this value if you are using an {{HTMLElement("input")}} element with the {{htmlattrxref("type","input")}} attribute set to <code>file</code>.</li>
-  <li><code>text/plain</code></li>
- </ul>
+<!---->
 
- <p>If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.</p>
- </dd>
- <dt>{{htmlattrdef("formmethod")}} {{HTMLVersionInline("5")}}</dt>
- <dd>In image input element, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
- <ul>
-  <li><code>post</code>: The data from the form is included in the body of the form and is sent to the server.</li>
-  <li><code>get</code>: The data from the form is appended to the <strong>form</strong> attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.</li>
- </ul>
+- {{htmlattrdef("formenctype")}} {{HTMLVersionInline("5")}}
+  - : If the input element is an image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:\* `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
+    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the {{htmlattrxref("type","input")}} attribute set to `file`.
+    - `text/plain`If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
+- {{htmlattrdef("formmethod")}} {{HTMLVersionInline("5")}}
+  - : In image input element, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:\* `post`: The data from the form is included in the body of the form and is sent to the server.
+    - `get`: The data from the form is appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
+- {{htmlattrdef("formnovalidate")}} {{HTMLVersionInline("5")}}
+  - : This Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner.
+- {{htmlattrdef("formtarget")}} {{HTMLVersionInline("5")}}
+  - : This attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the element's form owner. The following keywords have special meanings:\* \_`self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
+    - `_blank`: Load the response into a new unnamed browsing context.
+    - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
+    - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
+- {{htmlattrdef("height")}} {{HTMLVersionInline("5")}}
+  - : This attribute defines the height of the image displayed for the button.
+- {{htmlattrdef("required")}} {{HTMLVersionInline("5")}}
+  - : This attribute specifies that the user must fill in a value before submitting a form but it cannot be used when the **type** attribute is `image` type (`submit`, `reset`, or `button`). The {{cssxref(":optional")}} and {{cssxref(":required")}} CSS pseudo-classes will be applied to the field as appropriate.
+- {{htmlattrdef("src")}}
+  - : This attribute specifies a URI for the location of an image to display on the graphical submit button; otherwise it is ignored.
+- {{htmlattrdef("usemap")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline", "HTML5")}}
+  - : The name of a {{HTMLElement("map")}} element as an image map.
+- {{htmlattrdef("width")}} {{HTMLVersionInline("5")}}
+  - : This attribute defines the width of the image displayed for the button.
 
- <p>If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.</p>
- </dd>
- <dt>{{htmlattrdef("formnovalidate")}} {{HTMLVersionInline("5")}}</dt>
- <dd>This Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner.</dd>
- <dt>{{htmlattrdef("formtarget")}} {{HTMLVersionInline("5")}}</dt>
- <dd>This attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a <em>browsing context</em> (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the element's form owner. The following keywords have special meanings:
- <ul>
-  <li>_<code>self</code>: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.</li>
-  <li><code>_blank</code>: Load the response into a new unnamed browsing context.</li>
-  <li><code>_parent</code>: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as <code>_self</code>.</li>
-  <li><code>_top</code>: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as <code>_self</code>.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("height")}} {{HTMLVersionInline("5")}}</dt>
- <dd>This attribute defines the height of the image displayed for the button.</dd>
- <dt>{{htmlattrdef("required")}} {{HTMLVersionInline("5")}}</dt>
- <dd>This attribute specifies that the user must fill in a value before submitting a form but it cannot be used when the <strong>type</strong> attribute is <code>image</code> type (<code>submit</code>, <code>reset</code>, or <code>button</code>). The {{cssxref(":optional")}} and {{cssxref(":required")}} CSS pseudo-classes will be applied to the field as appropriate.</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>This attribute specifies a URI for the location of an image to display on the graphical submit button; otherwise it is ignored.</dd>
- <dt>{{htmlattrdef("usemap")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline", "HTML5")}}</dt>
- <dd>The name of a {{HTMLElement("map")}} element as an image map.</dd>
- <dt>{{htmlattrdef("width")}} {{HTMLVersionInline("5")}}</dt>
- <dd>This attribute defines the width of the image displayed for the button.</dd>
-</dl>
+## Примеры
 
-<h2 id="Примеры">Примеры</h2>
-<h3 id="simple_input_image_example">Поле в виде логотипа Firefox </h3>
+### Поле в виде логотипа Firefox
 
-<pre class="brush: html">&lt;input type="image" name="image" src="https://mdn.mozillademos.org/files/2917/fxlogo.png" width="50"&gt;</pre>
+```html
+<input type="image" name="image" src="https://mdn.mozillademos.org/files/2917/fxlogo.png" width="50">
+```
 
-<h4 id="Результат">Результат</h4>
+#### Результат
 
-<p>{{ EmbedLiveSample('simple_input_image_example') }}</p>
+{{ EmbedLiveSample('simple_input_image_example') }}
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+## Браузерная совместимость
 
-<p>{{Compat}}</p>
+{{Compat}}
 
- <h2 id="Смотрите_также">Смотрите также</h2>
- </dt>
-</dl>
+## Смотрите также

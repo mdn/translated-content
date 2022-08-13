@@ -10,77 +10,73 @@ tags:
   - элементы
 translation_of: Web/HTML/Element/style
 ---
-<h2 id="Summary">Краткое описание</h2>
+## Краткое описание
 
-<p><em>HTML-элемент <strong>&lt;style&gt;</strong></em> содержит стилевую информацию для документа или его части. По умолчанию стилевые инструкции внутри этого элемента считаются написанными на <a href="/ru/docs/Web/CSS">CSS</a>.</p>
+_HTML-элемент **\<style>**_ содержит стилевую информацию для документа или его части. По умолчанию стилевые инструкции внутри этого элемента считаются написанными на [CSS](/ru/docs/Web/CSS).
 
-<ul>
- <li><dfn><a href="/ru/docs/HTML/Content_categories">Категории содержимого</a></dfn><a href="/ru/docs/Web/HTML/Content_categories#Metadata_content">Metadata content</a>, and if the <code>scoped</code> attribute is present: <a href="/ru/docs/Web/HTML/Content_categories#Flow_content">flow content </a>.</li>
- <li><dfn>Permitted content</dfn> Style information matching the language of the <code>type</code> attribute.</li>
- <li><dfn>Tag omission</dfn> {{no_tag_omission}}</li>
- <li><dfn>Допустимые родительские элементы</dfn> ...</li>
- <li><dfn>Интерфейс DOM</dfn> {{domxref("HTMLStyleElement")}}</li>
-</ul>
+- _[Категории содержимого](/ru/docs/HTML/Content_categories)_[Metadata content](/ru/docs/Web/HTML/Content_categories#Metadata_content), and if the `scoped` attribute is present: [flow content ](/ru/docs/Web/HTML/Content_categories#Flow_content).
+- _Permitted content_ Style information matching the language of the `type` attribute.
+- _Tag omission_ {{no_tag_omission}}
+- _Допустимые родительские элементы_ ...
+- _Интерфейс DOM_ {{domxref("HTMLStyleElement")}}
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>This element includes the <a href="/ru/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/ru/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>Этот атрибут определяет язык стиля в виде MIME-типа (кодировка не указывается). Этот атрибут необязателен, и при отсутствии считается «<code>text/css</code>».</dd>
- <dt>{{htmlattrdef("media")}}</dt>
- <dd>К какому виду медиа должен применяться этот стиль. Значением этого атрибута является <a href="/ru/docs/Web/Guide/CSS/Media_queries">медиавыражение</a>, которое по умолчанию соответствует <code>all</code>.</dd>
- <dt>{{htmlattrdef("scoped")}}</dt>
- <dd>Если указан этот атрибут, то стиль применяется только внутри своего родительского элемента. Если не указан, то стиль применяется ко всему документу.</dd>
- <dt>{{htmlattrdef("title")}}</dt>
- <dd>Specifies alternative style sheet sets.</dd>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>If set, disables (does not apply) the style rules, specified within the element, to the {{domxref("document","Document")}}.</dd>
-</dl>
+- {{htmlattrdef("type")}}
+  - : Этот атрибут определяет язык стиля в виде MIME-типа (кодировка не указывается). Этот атрибут необязателен, и при отсутствии считается «`text/css`».
+- {{htmlattrdef("media")}}
+  - : К какому виду медиа должен применяться этот стиль. Значением этого атрибута является [медиавыражение](/ru/docs/Web/Guide/CSS/Media_queries), которое по умолчанию соответствует `all`.
+- {{htmlattrdef("scoped")}}
+  - : Если указан этот атрибут, то стиль применяется только внутри своего родительского элемента. Если не указан, то стиль применяется ко всему документу.
+- {{htmlattrdef("title")}}
+  - : Specifies alternative style sheet sets.
+- {{htmlattrdef("disabled")}}
+  - : If set, disables (does not apply) the style rules, specified within the element, to the {{domxref("document","Document")}}.
 
-<h2 id="Examples">Примеры</h2>
+## Примеры
 
-<h3 id="Простая_таблица_стилей">Простая таблица стилей</h3>
+### Простая таблица стилей
 
-<pre class="brush:html">&lt;style type="text/css"&gt;
+```html
+<style type="text/css">
 body {
   color:red;
 }
-&lt;/style&gt;
-</pre>
+</style>
+```
 
-<h3 id="Таблица_стилей_с_ограниченной_областью_действия">Таблица стилей с ограниченной областью действия</h3>
+### Таблица стилей с ограниченной областью действия
 
-<pre class="brush:html">&lt;article&gt;
-  &lt;div&gt;Атрибут scoped позволяет включить элементы стиля в середине документа.
-   Внутренние правила применяются только внутри родительского элемента.&lt;/div&gt;
-  &lt;p&gt;Этот текст должен быть чёрным. Если он красный, ваш браузер не поддерживает атрибут scoped.&lt;/p&gt;
-  &lt;section&gt;
-    &lt;style scoped&gt;
+```html
+<article>
+  <div>Атрибут scoped позволяет включить элементы стиля в середине документа.
+   Внутренние правила применяются только внутри родительского элемента.</div>
+  <p>Этот текст должен быть чёрным. Если он красный, ваш браузер не поддерживает атрибут scoped.</p>
+  <section>
+    <style scoped>
       p { color: red; }
-    &lt;/style&gt;
-    &lt;p&gt;Этот должен быть красным.&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/article&gt;
-</pre>
+    </style>
+    <p>Этот должен быть красным.</p>
+  </section>
+</article>
+```
 
-<h4 id="Live_sample">Live sample</h4>
+#### Live sample
 
-<div>{{ EmbedLiveSample('Таблица_стилей_с_ограниченной_областью_действия', '100%', '200') }}</div>
+{{ EmbedLiveSample('Таблица_стилей_с_ограниченной_областью_действия', '100%', '200') }}
 
-<h2 id="Specifications">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Совместимость браузеров</h2>
+## Совместимость браузеров
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>Элемент {{HTMLElement("link")}}, позволяющий использовать внешние таблицы стилей.</li>
-</ul>
+- Элемент {{HTMLElement("link")}}, позволяющий использовать внешние таблицы стилей.
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

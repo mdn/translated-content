@@ -9,73 +9,52 @@ tags:
   - Web
 translation_of: Web/HTML/Element/ruby
 ---
-<p><code><font face="Open Sans, Arial, sans-serif">HTML-элемент</font><strong>&lt;ruby&gt;</strong></code> предназначен для добавления небольшой аннотации сверху или снизу от заданного текста. Такая форма записи преимущественно используется для идеографической письменности вроде китайского языка, но может применяться и для других языков, если требуется написать один текст над другим.</p>
+`HTML-элемент<ruby>` предназначен для добавления небольшой аннотации сверху или снизу от заданного текста. Такая форма записи преимущественно используется для идеографической письменности вроде китайского языка, но может применяться и для других языков, если требуется написать один текст над другим.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Основной поток(Flow content)</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">текстовой контент(phrasing content)</a>, явный контент(palpable content).</td>
-  </tr>
-  <tr>
-   <th scope="row">Допустимый контент</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">Текстовый контент(phrasing content)</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Тэг пропускания</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые родители</th>
-   <td>Любой элемент который согласован с <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">текстовым контентом(phrasing content)</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Разрешённые роли ARIA</th>
-   <td>Любые</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM интерфейс</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток(Flow content)](/ru/docs/Web/HTML/Content_categories#Flow_content), [текстовой контент(phrasing content)](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент(palpable content). |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                         | [Текстовый контент(phrasing content)](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                                                     |
+| Тэг пропускания                                            | {{no_tag_omission}}                                                                                                                                                                                          |
+| Разрешённые родители                                       | Любой элемент который согласован с [текстовым контентом(phrasing content)](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                    |
+| Разрешённые роли ARIA                                      | Любые                                                                                                                                                                                                             |
+| DOM интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                              |
 
-<h2 id="Атрибуты">Атрибуты</h2>
+## Атрибуты
 
-<p>Этот элемент включает в себя только <a href="/en-US/docs/Web/HTML/Global_attributes">глобальные атрибуты</a>.</p>
+Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-<h2 id="Примеры">Примеры</h2>
+## Примеры
 
-<h3 id="Пример_1_Символы">Пример 1: Символы</h3>
+### Пример 1: Символы
 
-<pre class="brush:html">&lt;ruby&gt;
-  漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Kan&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ji&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
 
-<h3 id="Пример_2_Слово">Пример 2: Слово</h3>
+### Пример 2: Слово
 
-<pre class="brush:html">&lt;ruby&gt;
-  明日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Ashita&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+</ruby>
+```
 
-<h2 id="Спецификации">Спецификации</h2>
+## Спецификации
 
 {{Specifications}}
 
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+## Совместимость с браузерами
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Смотрите_также">Смотрите также</h2>
+## Смотрите также
 
-<ul>
- <li>{{HTMLElement("rt")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>
-  <p>{{HTMLElement("rtc")}}</p>
- </li>
-</ul>
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}
 
-<p>{{ HTMLRef }}</p>
+{{ HTMLRef }}
