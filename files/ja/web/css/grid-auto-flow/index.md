@@ -11,7 +11,7 @@ browser-compat: css.properties.grid-auto-flow
 ---
 {{CSSRef}}
 
-**`grid-auto-flow`** はCSSのプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
+**`grid-auto-flow`** は CSS のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
 
 {{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
 
@@ -34,8 +34,8 @@ grid-auto-flow: unset;
 
 このプロパティは、次のいずれかの形態を取ることができます。
 
-- 単一のキーワード: `row`、 `column`、 `dense` のうち1つ
-- 2つのキーワード: `row dense` または `column dense`
+- 単一のキーワード: `row`、 `column`、 `dense` のうち 1 つ
+- 2 つのキーワード: `row dense` または `column dense`
 
 ### 値
 
@@ -149,6 +149,5 @@ inputElem.addEventListener('change', changeGridAutoFlow);
 ## 関連情報
 
 - 関連する CSS プロパティ: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- グリッドレイアウトガイド: _[グリッドレイアウトにおける自動配置
-](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
+- グリッドレイアウトガイド: _[グリッドレイアウトにおける自動配置](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
 - 動画チュートリアル: _[グリッドの自動配置と順序の紹介](http://gridbyexample.com/video/series-auto-placement-order/)_
