@@ -22,6 +22,8 @@ Traslada el foco de la selección a un punto especificado. El ancla de la selecc
 - _`parentNode`_
   - : El nodo dentro del cual el foco será movido.
 
+<!---->
+
 - _`offset`_
   - : El número de caracteres que habrá desde el principio del texto
     _`parentNode`_

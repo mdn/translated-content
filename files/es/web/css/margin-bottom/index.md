@@ -17,6 +17,8 @@ Esta propiedad no tiene ningun efecto sobre los elementos en linea _non-replaced
 
     Formal syntax: {{csssyntax("margin-bottom")}}
 
+<!---->
+
     margin-bottom: 10px;        /* Una longitud absoluta (sin redimension) */
     margin-bottom: 1em;         /* Una longitud en relacion con el tamaño del texto */
     margin-bottom: 5%;          /* Un margen respecto al ancho de su objeto padre (el que lo contiene)  */

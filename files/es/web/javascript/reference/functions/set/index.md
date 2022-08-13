@@ -18,6 +18,8 @@ La sintaxis **`set`** asocia la propiedad de un objeto a una función que será 
 - _`prop`_
   - : El nombre de la propiedad a asociar con la función dada.
 
+<!---->
+
 - _`val`_
   - : Un alias para la variable que contiene el valor a asignar a la propiedad.
 - _`expression`_

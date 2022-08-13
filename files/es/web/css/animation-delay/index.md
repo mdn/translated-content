@@ -31,6 +31,8 @@ A menudo es conveniente usar la propiedad abreviada {{ cssxref("animation") }} p
 
     Gramática formal: <time> [, <time>]*
 
+<!---->
+
     animation-delay: 3s
     animation-delay: 2s, 4ms
 

@@ -38,6 +38,8 @@ En el modelo de separación, cada celda adyacente tiene su propio borde (la dist
 
     <table border="1" style="border-collapse: collapse" bordercolor="#111111" width="500">
 
+<!---->
+
     <table border="1" style="border-collapse: separate" bordercolor="#111111" width="500">
 
 ### Notas

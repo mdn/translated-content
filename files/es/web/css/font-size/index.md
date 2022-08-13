@@ -32,6 +32,8 @@ La propiedad `font-size` especifica la dimensión de la letra. Este tamaño pued
 - [\<longitud>](es/CSS/length)
   - : una unidad positiva de [longitud](es/CSS/length).
 
+<!---->
+
 - \<Porcentaje>
   - : un porcentaje positivo del cuerpo de letra del elemento padre.
 

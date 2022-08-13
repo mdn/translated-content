@@ -25,6 +25,8 @@ Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajust
 
     Gramática formal: [ normal | reverse | alternate | alternate-reverse ] [, [ normal | reverse | alternate | alternate-reverse ] ]*
 
+<!---->
+
     animation-direction: normal
     animation-direction: reverse
     animation-direction: alternate

@@ -17,6 +17,8 @@ Los valores no establecidos explícitamente se restablecen a sus valores origina
 
     Sintaxis Formal: {{csssyntax("transform-origin")}}
 
+<!---->
+
     transform-origin: x-offset                                   /* Sintaxis con valor único */   E.g.  transform-origin: 2px
     transform-origin: offset-keyword                                                      E.g.  transform-origin: bottom
 

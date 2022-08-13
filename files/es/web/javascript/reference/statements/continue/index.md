@@ -26,6 +26,8 @@ En contraste con la sentencia {{jsxref("Sentencias/break", "break")}}, `continue
 
 - En un bucle {{jsxref("Sentencias/while", "while")}}, salta de regreso a la condición.
 
+<!---->
+
 - En un bucle {{jsxref("Sentencias/for", "for")}}, salta a la expresión actualizada.
 
 La sentencia `continue` puede incluir una etiqueta opcional que permite al programa saltar a la siguiente iteración del bucle etiquetado en vez del bucle actual. En este caso, la sentencia `continue` necesita estar anidada dentro de esta sentecia etiquetada.

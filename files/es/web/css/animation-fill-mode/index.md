@@ -21,6 +21,8 @@ La propiedad [CSS](/en/CSS "CSS") `animation-fill-mode` especifica el modo en qu
 
     Formal syntax: {{csssyntax("animation-fill-mode")}}
 
+<!---->
+
     animation-fill-mode: none
     animation-fill-mode: forwards
     animation-fill-mode: backwards

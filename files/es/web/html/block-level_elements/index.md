@@ -70,6 +70,8 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
 - {{ HTMLElement("fieldset") }}
   - : Etiqueta de conjunto de campos.
 
+<!---->
+
 - {{ HTMLElement("figcaption") }} {{ HTMLVersionInline(5) }}
   - : Leyenda de figura.
 - {{ HTMLElement("figure") }} {{ HTMLVersionInline(5) }}
@@ -92,6 +94,8 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
   - : Engloba el único contenido central del documento.
 - {{ HTMLElement("nav") }}
   - : Contiene enlaces de navegación.
+
+<!---->
 
 - {{ HTMLElement("noscript") }}
   - : Contenido para ser usado si los scripts no son soportados o permitidos.

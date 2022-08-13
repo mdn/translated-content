@@ -17,8 +17,12 @@ La función `substring` devuelve una parte de una cadena dada.
 - _`string`_
   - : La cadena a evaluar.
 
+<!---->
+
 - _`start`_
   - : La posición dentro de _`string`_ donde comienza la subcadena.
+
+<!---->
 
 - _`length`_ (opcional)
   - : La longitud de la subcadena. Si se omite, la cadena devuelta contendrá todos los carácteres desde la posición _`start`_ hasta el final de _`string`_.

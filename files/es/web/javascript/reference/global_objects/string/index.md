@@ -27,6 +27,8 @@ Las cadenas se pueden crear como primitivas, a partir de cadena literales o como
     const string2 = 'También una cadena primitiva';
     const string3 = `Otra cadena primitiva más`;
 
+<!---->
+
     const string4 = new String("Un objeto String");
 
 Las `string`s primitivas y los objetos `string` se pueden usar indistintamente en la mayoría de las situaciones. Consulta "[Primitivas `String` y objetos `String`](#Primitivas_string_y_objetos_string)" a continuación.

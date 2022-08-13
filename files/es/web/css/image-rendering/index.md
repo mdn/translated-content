@@ -32,6 +32,8 @@ Esta propiedad aplica tanto al elemento mismo, como a cualquier imagen provista 
 - **`auto`**
   - : Valor predeterminado, la imagen debe escalarse con un algoritmo que maximice la apariencia de la imagen. En particular, son aceptables los algoritmos de escala que "suavizan" colores, como la interpolación bilinear. So propósito son imágenes de fotografías. Desde la versión 1.9 (Firefox 3.0), Gecko usa remuestreo _bilinear_ (alta calidad).
 
+<!---->
+
 - **`crisp-edges`**
   - : La imagen se debe escalar con un algoritmo que preserve el contraste y los bordes de la imagen, y que no suavice los colores ni introduzca borrones en la imagen en el proceso. Los algoritmos adecuados incluyen algoritmos de escalamiento _nearest-neighbor_ y otros algoritmos de escalabilidad tales como algoritmos _2×SaI_ y _hqx-family_. Este valor está destinado a imágenes pixel-art, como en juegos de navegador.
 - **`pixelated`**

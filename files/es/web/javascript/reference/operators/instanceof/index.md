@@ -23,6 +23,8 @@ El operador **`instanceof`** verifica si un objeto en su cadena de prototipos co
 - `objeto`
   - : Objeto a verificar.
 
+<!---->
+
 - `constructor`
   - : Función contra la que se hará la verificación.
 

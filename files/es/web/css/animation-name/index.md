@@ -23,6 +23,8 @@ A menudo es conveniente utilizar la propiedad abrevieda {{cssxref("animation")}}
 
     Sintaxis formal: {{csssyntax("animation-name")}}
 
+<!---->
+
     animation-name: none;
     animation-name: test_05;
     animation-name: -specific;

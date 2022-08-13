@@ -52,6 +52,8 @@ Puedes encontrar una guía completa en [Usando la API de Solicitud de Pago](/es/
 - {{domxref('MerchantValidationEvent')}}
   - : Representa el navegador que requiere que el comerciante (sitio web) se valide a sí mismo como autorizado para usar un manejador de pagos en particular (por ejemplo, registrado como autorizado para usar Apple Pay).
 
+<!---->
+
 ## Diccionarios
 
 - {{domxref("AddressErrors")}}

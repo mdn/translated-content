@@ -33,6 +33,8 @@ Un nuevo string que contiene el número especificado de copias del string origin
 - {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: El número de repeticiones no debe ser negativo.
 - {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: El número de repeticiones debe ser menor que infinito y no desbordar el tamaño máximo para un string.
 
+<!---->
+
 ## Ejemplos
 
 ```js

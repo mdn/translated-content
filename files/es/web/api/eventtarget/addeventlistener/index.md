@@ -23,6 +23,8 @@ Para registrar más de un eventListener, puedes llamar `addEventListener()` para
 - `useCapture` {{ optional_inline() }}
   - : Si es `true`, `useCapture` indica que el usuario desea iniciar la captura. Después de iniciar la captura, todos los eventos del tipo especificado serán lanzados al `listener` registrado antes de comenzar a ser controlados por algún `EventTarget` que esté por debajo en el arbol DOM del documento.> **Nota:** For event listeners attached to the event target; the event is in the target phase, rather than capturing and bubbling phases. Events in the target phase will trigger all listeners on an element regardless of the `useCapture` parameter.> **Nota:** `useCapture` became optional only in more recent versions of the major browsers; for example, it was not optional prior to Firefox 6. You should provide that parameter for broadest compatibility.
 
+<!---->
+
 - wantsUntrusted {{Non-standard_inline}}
   - : If `true`, the listener receives synthetic events dispatched by web content (the default is `false` for chrome and `true` for regular web pages). This parameter is only available in Gecko and is mainly useful for the code in add-ons and the browser itself. See [Interaction between privileged and non-privileged pages](/es/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages) for an example.
 

@@ -60,6 +60,8 @@ Las interfaces que definen fuentes de audio para usar en la API de Web.
 - {{domxref("AudioScheduledSourceNode")}}
   - : La interfaz **`AudioScheduledSourceNode`** es una interfaz padre para muchos tipos de interfaces de nodos de fuentes de audio. Es un {{domxref("AudioNode")}}.
 
+<!---->
+
 - {{domxref("OscillatorNode")}}
   - : La interfaz **`OscillatorNode`\*\*** \*\*representa una forma de onda periódica, como una onda sinusoidal o triangular. Es un módulo de procesamiento de audio {{domxref("AudioNode")}} que causa que se cree una _frecuencia_ de onda determinada.
 - {{domxref("AudioBuffer")}}

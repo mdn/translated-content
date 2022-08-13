@@ -25,8 +25,12 @@ También puedes definir funciones generadoras usando el constructor {{jsxref("Ge
 - `nombre`
   - : El nombre de la función.
 
+<!---->
+
 - `param`
   - : El nombre de los argumentos que se le van a pasar a la función. Una función puede tener hasta 255 argumentos.
+
+<!---->
 
 - `instrucciones`
   - : Las instrucciones que componen el cuerpo de la función.

@@ -25,6 +25,8 @@ Las variables constantes presentan un **ámbito de bloque** ([block ](/es/docs/W
 - `varnameN`
   - : Nombre de la constante. Puede ser un identificador legal.
 
+<!---->
+
 - `valueN`
   - : Valor de la constante. Puede ser cualquier expresión legal.
 

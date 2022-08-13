@@ -49,6 +49,8 @@ Uno, dos,tres o cuatro valores `<outline-radius>` , representan uno de los sigui
 - {{cssxref("&lt;percentage&gt;")}}
   - : Un {{cssxref("&lt;percentage&gt;")}}; ver {{cssxref("border-radius")}} para más detalles.
 
+<!---->
+
 - Si se establece un único valor se aplica a las cuatro esquinas-
 - Si se establecen dos valores, el primero se aplica a la esquina superior-izquierda e inferior-derecha y el segundo a las esquinas superior-derecha e inferior-izquierda
 - Si se establecen tres valores el primero se aplica a la esquina superior-izquierda, el segundo a las esquinas superior-derecha e inferior-izquierda y el tercero a la esquina inferior-derecha.

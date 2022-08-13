@@ -70,6 +70,8 @@ Las siguientes guías te muestran lo que debes hacer para implementar una PWA, e
 - _[El libro de recetas para servicios \_worker_](https://serviceworke.rs/): una serie de excelentes recetas de servicios _worker_ que muestran cómo implementar una aplicación sin conexión, además de otros muchos concejos.\_
 - _[Extensión PWA de VS Code](https://marketplace.visualstudio.com/items?itemName=mayeedwin.vscode-pwa): una colección de todos los fragmentos de código esenciales que necesitas para crear aplicaciones web progresivas correctamente allí en tu entorno de VS Code._
 
+<!---->
+
 - _[Aplicaciones web progresivas](https://developers.google.com/web/progressive-web-apps) en Google Developers._
 - _[Aplicaciones web progresivas: escapar de las pestañas sin perder el alma](https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh) de Alex Russell._
 - _[Lista de verificación de aplicaciones web progresivas](https://developers.google.com/web/progressive-web-apps/checklist)._

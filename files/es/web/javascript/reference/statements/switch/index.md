@@ -31,6 +31,8 @@ La **declaración** **`switch`** evalúa una [expresión](/es/docs/Web/JavaScrip
 - `case valorN`
   - : Una instancia `case valorN` es usada para ser comparada con la `expresión`. Si la `expresión` coincide con el `valorN`, las declaraciones dentro de la instancia `case` se ejecutan hasta que se encuentre el final de la declaración `switch` o hasta encontrar una interrupción `break`.
 
+<!---->
+
 - default
   - : Una instancia `default`, cuando es declarada, es ejecutada si el valor de la `expresión` no coincide con cualquiera de las otras instancias `case valorN`.
 

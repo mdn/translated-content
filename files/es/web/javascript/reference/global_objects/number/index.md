@@ -96,6 +96,8 @@ Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El obje
 - {{jsxref("Number.prototype.toExponential()" ,"Number.prototype.toExponential(<var>fractionDigits</var>)")}}
   - : Devuelve una cadena que representa el número en notación exponencial.
 
+<!---->
+
 - {{jsxref("Number.prototype.toFixed()", "Number.prototype.toFixed(<var>digits</var>)")}}
   - : Devuelve una cadena que representa el número en notación de punto fijo.
 - {{jsxref("Number.prototype.toLocaleString()", "Number.prototype.toLocaleString([<var>locales</var> [, <var>options</var>]])")}}
@@ -158,6 +160,8 @@ Esto muestra "819199440000".
     Number('0o11')    // 9
     Number('foo')     // NaN
     Number('100a')    // NaN
+
+<!---->
 
     Number('-Infinity') //-Infinity
 

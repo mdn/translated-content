@@ -59,6 +59,8 @@ For more details on using these features, see [Using the Web Speech API](/es/doc
 - {{domxref("SpeechSynthesisUtterance")}}
   - : Represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
 
+<!---->
+
 - {{domxref("SpeechSynthesisVoice")}}
   - : Represents a voice that the system supports. Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 - {{domxref("Window.speechSynthesis")}}

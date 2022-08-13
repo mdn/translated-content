@@ -19,6 +19,8 @@ Nótese que, cambiando programáticamente el valor de `scrollTop` al elemento HT
 
     Sintáxis formal: {{csssyntax("overflow")}}
 
+<!---->
+
     overflow: visible
     overflow: hidden
     overflow: scroll

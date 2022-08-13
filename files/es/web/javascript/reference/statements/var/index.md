@@ -20,6 +20,8 @@ La sentencia **`var`** declara una variable, opcionalmente inicializándola con 
 - `nombreDeVariableN`
   - : Representa el nombre que el programador da a la variable. Puede ser cualquier identificador legal.
 
+<!---->
+
 - `valorN`
   - : Valor inicial de la variable. Puede ser cualquier expresión legal. El valor predeterminado es _undefined_ (en español, _indefinida_).
 

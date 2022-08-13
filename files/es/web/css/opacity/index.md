@@ -48,12 +48,16 @@ hbox.example {
        zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
     }
 
+<!---->
+
     pre {                               /* make the box translucent (50% opaque) */
        border: solid red;
        opacity: 0.5;
        filter: alpha(opacity=50);       /* IE8 and lower */
        zoom: 1;       /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
     }
+
+<!---->
 
     pre {                               /* make the box translucent (80% opaque) */
        border: solid red;

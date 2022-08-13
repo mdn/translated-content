@@ -27,6 +27,8 @@ El método estático **`URL.createObjectURL()`** crea un {{domxref("DOMString")}
 - `object`
   - : Un objeto {{domxref("File")}} o un objeto {{domxref("Blob")}} para el que se creará la URL.
 
+<!---->
+
 ## Ejemplo
 
 Ver [Usando objetos URL para representar imágenes](/es/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images "https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images").

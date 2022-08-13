@@ -322,6 +322,8 @@ Para resumir:
 
 - Solo se puede acceder a la función interna desde declaraciones en la función externa.
 
+<!---->
+
 - La función interna forma un cierre: la función interna puede usar los argumentos y variables de la función externa, mientras que la función externa no puede usar los argumentos y variables de la función interna.
 
 El siguiente ejemplo muestra funciones anidadas:
