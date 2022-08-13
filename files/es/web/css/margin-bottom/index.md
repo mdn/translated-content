@@ -3,83 +3,58 @@ title: margin-bottom
 slug: Web/CSS/margin-bottom
 translation_of: Web/CSS/margin-bottom
 ---
-<div>{{CSSRef()}}</div>
+{{CSSRef()}}
 
-<h2 id="Summary" name="Summary">Summary</h2>
+## Summary
 
-<p><img alt="The effect of the CSS margin-bottom property on the element box" src="/files/4045/margin-bottom.svg" style="border: 1px solid; float: left; height: 130px; margin-bottom: 1em; margin-right: 1em; padding-right: 0.5em; width: 400px;"><span class="seoSummary">El <code>margin-bottom</code> <a href="/en-US/docs/CSS" title="CSS">CSS</a>  (<em>margen-inferior</em>) es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento. Tambien se permiten valores negativos.</span></p>
+![The effect of the CSS margin-bottom property on the element box](/files/4045/margin-bottom.svg)El `margin-bottom` [CSS](/es/docs/CSS "CSS") (_margen-inferior_) es la propiedad de un elemento que establece el espacio requerido en la parte inferior de un elemento. Tambien se permiten valores negativos.
 
-<p><span class="seoSummary">Esta propiedad no tiene ningun efecto sobre los elementos en linea <em>non-replaced</em> , como {{HTMLElement("tt")}} o {{HTMLElement("span")}}.</span></p>
+Esta propiedad no tiene ningun efecto sobre los elementos en linea _non-replaced_ , como {{HTMLElement("tt")}} o {{HTMLElement("span")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("margin-bottom")}}</pre>
+    Formal syntax: {{csssyntax("margin-bottom")}}
 
-<pre>margin-bottom: 10px;        /* Una longitud absoluta (sin redimension) */
-margin-bottom: 1em;         /* Una longitud en relacion con el tamaño del texto */
-margin-bottom: 5%;          /* Un margen respecto al ancho de su objeto padre (el que lo contiene)  */
-margin-bottom: auto;
+<!---->
 
-margin-bottom: inherit; /*margen heredado*/
-</pre>
+    margin-bottom: 10px;        /* Una longitud absoluta (sin redimension) */
+    margin-bottom: 1em;         /* Una longitud en relacion con el tamaño del texto */
+    margin-bottom: 5%;          /* Un margen respecto al ancho de su objeto padre (el que lo contiene)  */
+    margin-bottom: auto;
 
-<h3 id="Values" name="Values">Values</h3>
+    margin-bottom: inherit; /*margen heredado*/
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Specifies a fixed width. See {{cssxref("&lt;length&gt;")}} for possible values.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>A {{cssxref("&lt;percentage&gt;")}} always relative to the <strong>width</strong> of the containing block.</dd>
- <dt><code>auto</code></dt>
- <dd>See {{cssxref("margin")}}.</dd>
-</dl>
+### Values
 
-<h2 id="Examples" name="Examples">Examples</h2>
+- `<length>`
+  - : Specifies a fixed width. See {{cssxref("&lt;length&gt;")}} for possible values.
+- `<percentage>`
+  - : A {{cssxref("&lt;percentage&gt;")}} always relative to the **width** of the containing block.
+- `auto`
+  - : See {{cssxref("margin")}}.
 
-<pre class="brush:css;">.content { margin-bottom:   5%; }
+## Examples
+
+```css
+.content { margin-bottom:   5%; }
 .sidebox { margin-bottom: 10px; }
 .logo    { margin-bottom: -5px; }
 #header  { margin-bottom:  1em; }
-</pre>
+```
 
-<div><a href="https://jsfiddle.net/V3hrF">Ver en el JSFiddle</a></div>
+[Ver en el JSFiddle](https://jsfiddle.net/V3hrF)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#the-margin', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>No significant change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Defines <code>margin-bottom</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Removes its effect on inline elements.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                                   | Comment                                |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------- |
+| {{SpecName('CSS3 Box', '#the-margin', 'margin-bottom')}}                 | {{Spec2('CSS3 Box')}}             | No significant change.                 |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}} | {{Spec2('CSS3 Transitions')}} | Defines `margin-bottom` as animatable. |
+| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}} | {{Spec2('CSS2.1')}}                 | Removes its effect on inline elements. |
+| {{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}                     | {{Spec2('CSS1')}}                 | Initial definition.                    |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.margin-bottom")}}

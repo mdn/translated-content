@@ -10,44 +10,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/concat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary">El método <strong><code>concat()</code></strong> combina dos o más cadenas de texto y devuelve una cadena de texto nueva.</span></p>
+El método **`concat()`** combina dos o más cadenas de texto y devuelve una cadena de texto nueva.
 
-<div>{{EmbedInteractiveExample("pages/js/string-concat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-concat.html")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate"><var>str</var>.concat(<var>str2</var> [, ...<var>strN</var>])</pre>
+    str.concat(str2 [, ...strN])
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code><var>str2</var> [, ...<var>strN</var>]</code></dt>
- <dd>Cadenas que se concatenarán con <code><var>str</var></code>.</dd>
-</dl>
+- `str2 [, ...strN]`
+  - : Cadenas que se concatenarán con `str`.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Una nueva cadena que contiene el texto combinado de las cadenas proporcionadas.</p>
+Una nueva cadena que contiene el texto combinado de las cadenas proporcionadas.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>La función <code>concat()</code> concatena los argumentos de tipo texto con la cadena de sobre la que se llama a la función y devuelve una nueva cadena de texto. Los cambios en la cadena original o la cadena devuelta no afectan al otro.</p>
+La función `concat()` concatena los argumentos de tipo texto con la cadena de sobre la que se llama a la función y devuelve una nueva cadena de texto. Los cambios en la cadena original o la cadena devuelta no afectan al otro.
 
-<p>Si los argumentos no son de tipo texto, son convertidos a texto antes de concatenarlos</p>
+Si los argumentos no son de tipo texto, son convertidos a texto antes de concatenarlos
 
-<h2 id="Rendimiento">Rendimiento</h2>
+## Rendimiento
 
-<p>Es altamente recomendado que se utilicen {{jsxref("Operators/Assignment_Operators", "operadores de asignación", "", 1)}} (<code>+</code>, <code>+=</code>) en lugar del método <code>concat()</code>.</p>
+Es altamente recomendado que se utilicen {{jsxref("Operators/Assignment_Operators", "operadores de asignación", "", 1)}} (`+`, `+=`) en lugar del método `concat()`.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_concat">Usando concat()</h3>
+### Usando concat()
 
-<p>El siguiente ejemplo combina cadenas de texto en una nueva.</p>
+El siguiente ejemplo combina cadenas de texto en una nueva.
 
-<pre class="brush: js notranslate">let hello = 'Hello, '
+```js
+let hello = 'Hello, '
 console.log(hello.concat('Kevin', '. Have a nice day.'))
 // Hello, Kevin. Have a nice day.
 
@@ -59,33 +58,19 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 "".concat(null)  // "null"
 "".concat(true)  // "true"
 "".concat(4, 5)  // "45"
+```
 
-</pre>
+## Especificaciones
 
-<h2 id="Especificaciones">Especificaciones</h2>
+| Especificación                                                                                               |
+| ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}}</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidad con navegadores
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+{{Compat("javascript.builtins.String.concat")}}
 
+## Ver también
 
-
-<p>{{Compat("javascript.builtins.String.concat")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
- <li>{{jsxref("Operators/Assignment_Operators", "Operadores de asignación", "", 1)}}</li>
-</ul>
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Operators/Assignment_Operators", "Operadores de asignación", "", 1)}}

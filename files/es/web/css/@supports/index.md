@@ -3,136 +3,139 @@ title: '@supports'
 slug: Web/CSS/@supports
 translation_of: Web/CSS/@supports
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La regla "CSS <code>@supports"</code>asocia un conjunto de declaraciones anidadas en un bloque CSS (que está delimitado por corchetes) con una condición consistente en probar declaraciones de CSS (es decir, pares propiedad-valor, así como conjunciones, disjunciones o negaciones abritrarias sobre ellas). A esas condiciones se le llama condición "soporta"<em> (</em><em>supports condition)</em>.</p>
+La regla "CSS `@supports"`asocia un conjunto de declaraciones anidadas en un bloque CSS (que está delimitado por corchetes) con una condición consistente en probar declaraciones de CSS (es decir, pares propiedad-valor, así como conjunciones, disjunciones o negaciones abritrarias sobre ellas). A esas condiciones se le llama condición "soporta" _(\_\_supports condition)_.
 
-<p><code>@supports</code> otorga la habilidad de realizar consultas que comprueben si ciertas funcionalidades están disponibles <em>(feature query)</em>.</p>
+`@supports` otorga la habilidad de realizar consultas que comprueben si ciertas funcionalidades están disponibles _(feature query)_.
 
-<p>La regla <code>@supports </code>puede ser usada tanto en el nivel superior de una hoja de estilos, como dentro de cualquier <a href="/en/CSS/At-rule#Conditional_Group_Rules" title="en/CSS/At-rule#Conditional_Group_Rules">regla de grupo condicional</a> y se puede acceder a ella a través del modelo de objetos de CSS {{domxref("CSSSupportsRule")}}.</p>
+La regla `@supports `puede ser usada tanto en el nivel superior de una hoja de estilos, como dentro de cualquier [regla de grupo condicional](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules") y se puede acceder a ella a través del modelo de objetos de CSS {{domxref("CSSSupportsRule")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<p>Una condición "soporta" <em>(</em><em>supports condition)</em> consiste en una o varias declaraciones combinadas por diferentes operadores lógicos. La precedencia de los operadores puede ser definida usando paréntesis.</p>
+Una condición "soporta" _(\_\_supports condition)_ consiste en una o varias declaraciones combinadas por diferentes operadores lógicos. La precedencia de los operadores puede ser definida usando paréntesis.
 
-<h3 id="Sintaxis_de_una_declaración">Sintaxis de una declaración</h3>
+### Sintaxis de una declaración
 
-<p>La expresión más simple es una declaración CSS, es decir el nombre de una propiedad CSS seguida por un valor, separada por dos puntos. La siguiente expresión</p>
+La expresión más simple es una declaración CSS, es decir el nombre de una propiedad CSS seguida por un valor, separada por dos puntos. La siguiente expresión
 
-<pre class="brush:css">( transform-origin: 5% 5% )</pre>
+```css
+( transform-origin: 5% 5% )
+```
 
-<p>devuelve "cierto" si la {{ cssxref("transform-origin") }} implementa una sintaxis que reconoce <code>5% 5%</code> como válida.</p>
+devuelve "cierto" si la {{ cssxref("transform-origin") }} implementa una sintaxis que reconoce `5% 5%` como válida.
 
-<p>Una declaración CSS está siempre rodeada entre paréntesis.</p>
+Una declaración CSS está siempre rodeada entre paréntesis.
 
-<h3 id="El_operador_not">El operador "<code>not</code> "</h3>
+### El operador "`not` "
 
-<p>El operador <code>not</code> puede preceder cualquier expresión para crear una nueva, resultando en la negación de la expresión original. La siguiente expresión</p>
+El operador `not` puede preceder cualquier expresión para crear una nueva, resultando en la negación de la expresión original. La siguiente expresión
 
-<pre class="brush:css">not ( transform-origin: 10em 10em 10em )</pre>
+```css
+not ( transform-origin: 10em 10em 10em )
+```
 
-<p>devuelve "cierto" si {{ cssxref("transform-origin") }} no reconoceo <code>10em 10em 10em</code> como una sintaxis válida.</p>
+devuelve "cierto" si {{ cssxref("transform-origin") }} no reconoceo `10em 10em 10em` como una sintaxis válida.
 
-<p>Como cualquier operador, el operador <code>not</code> puede ser aplicado a una declaración de complejidad arbitraria. Los siguientes ejemplos son todas expresiones válidas:</p>
+Como cualquier operador, el operador `not` puede ser aplicado a una declaración de complejidad arbitraria. Los siguientes ejemplos son todas expresiones válidas:
 
-<pre class="brush:css">not ( not ( transform-origin: 2px ) )
-(display: flexbox) and ( not (display: inline-grid) )</pre>
+```css
+not ( not ( transform-origin: 2px ) )
+(display: flexbox) and ( not (display: inline-grid) )
+```
 
-<div class="note style-wrap">
-<p><strong>Nota:</strong> no hay necesidad de encerrar el operador <code>not</code> entre paréntesis cuando se encuentra en el nivel superior. Para combinarlo con otros operadores, como <code>and</code> y <code>or</code>, sí se requieren paréntesis</p>
-</div>
+> **Nota:** no hay necesidad de encerrar el operador `not` entre paréntesis cuando se encuentra en el nivel superior. Para combinarlo con otros operadores, como `and` y `or`, sí se requieren paréntesis
 
-<h3 id="El_operador_and">El operador  "<code>and</code>"</h3>
+### El operador "`and`"
 
-<p>Partiendo de dos expresiones, el operador <code>and</code> crea una nueva expresión consistente en la conjunción de dos originales; la expresión resultante es verdadera si sólo ambas expresiones originales lo son. En este ejemplo, la expresión completa resuelve a true si y sólo si, las dos expresiones son simultáneamente veraderas:</p>
+Partiendo de dos expresiones, el operador `and` crea una nueva expresión consistente en la conjunción de dos originales; la expresión resultante es verdadera si sólo ambas expresiones originales lo son. En este ejemplo, la expresión completa resuelve a true si y sólo si, las dos expresiones son simultáneamente veraderas:
 
-<pre class="brush:css">(display: table-cell) and (display: list-item)</pre>
+```css
+(display: table-cell) and (display: list-item)
+```
 
-<p>Varias conjunciones pueden ser yuxtapuestas sin la necesidad de agregar paréntesis:</p>
+Varias conjunciones pueden ser yuxtapuestas sin la necesidad de agregar paréntesis:
 
-<pre class="brush:css">(display: table-cell) and (display: list-item) and (display:run-in)</pre>
+```css
+(display: table-cell) and (display: list-item) and (display:run-in)
+```
 
-<p>es equivalente a:</p>
+es equivalente a:
 
-<pre class="brush:css">(display: table-cell) and ((display: list-item) and (display:run-in))</pre>
+```css
+(display: table-cell) and ((display: list-item) and (display:run-in))
+```
 
-<h3 id="El_operador_or">El operador "<code>or"</code></h3>
+### El operador "`or"`
 
-<p>Partiendo de dos expresiones, el operador  <code>or</code> crea una nueva expresión consistente en la disyunción de dos originales; la expresión resultante es verdadera si una o ambas expresiones originales lo son. En este ejemplo, la expresión completa resuelve a true si al menos una de las dos expresiones es veradera:</p>
+Partiendo de dos expresiones, el operador `or` crea una nueva expresión consistente en la disyunción de dos originales; la expresión resultante es verdadera si una o ambas expresiones originales lo son. En este ejemplo, la expresión completa resuelve a true si al menos una de las dos expresiones es veradera:
 
-<pre class="brush:css;">( transform-style: preserve ) or ( -moz-transform-style: preserve )</pre>
+```css
+( transform-style: preserve ) or ( -moz-transform-style: preserve )
+```
 
-<p>Varias disyunciones pueden ser yuxtapuestas sin la necesidad de agregar paréntesis:</p>
+Varias disyunciones pueden ser yuxtapuestas sin la necesidad de agregar paréntesis:
 
-<pre class="brush:css">( transform-style: preserve ) or ( -moz-transform-style: preserve ) or
-( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve  )</pre>
+```css
+( transform-style: preserve ) or ( -moz-transform-style: preserve ) or
+( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve  )
+```
 
-<p>es equivalente a:</p>
+es equivalente a:
 
-<pre class="brush:css">( transform-style: preserve-3d ) or (( -moz-transform-style: preserve-3d ) or
-(( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))</pre>
+```css
+( transform-style: preserve-3d ) or (( -moz-transform-style: preserve-3d ) or
+(( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))
+```
 
-<div class="note style-wrap">
-<p><strong>Nota</strong>: cuando se usan <code>and</code> y <code>or</code>, el paréntesis debe ser usado para definir el orden en el cual aplican. Si no, la condición es inválida provocando que se ignore todo el "at-rule" .</p>
-</div>
+> **Nota:** cuando se usan `and` y `or`, el paréntesis debe ser usado para definir el orden en el cual aplican. Si no, la condición es inválida provocando que se ignore todo el "at-rule" .
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Prueba_soporta_de_una_propiedad_CSS_determinada">Prueba "soporta" de una propiedad CSS determinada</h3>
+### Prueba "soporta" de una propiedad CSS determinada
 
-<pre class="brush:css;">@supports (animation-name: test) {
+```css
+@supports (animation-name: test) {
     … /* specific CSS applied when animations are supported unprefixed */
     @keyframes { /* @supports being a CSS conditional group at-rule, it can includes other relevant at-rules */
       …
     }
 }
-</pre>
+```
 
-<h3 id="Prueba_soporta_de_una_propiedad_CSS_determinada_o_de_una_versión_con_prefijo">Prueba "soporta" de una propiedad CSS determinada o de una versión con prefijo</h3>
+### Prueba "soporta" de una propiedad CSS determinada o de una versión con prefijo
 
-<pre class="brush:css;">@supports ( (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
+```css
+@supports ( (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px) or
             (-ms-perspective: 10px) or (-o-perspective: 10px) ) {
     … /* specific CSS applied when 3D transforms, eventually prefixed, are supported */
 }
-</pre>
+```
 
-<h3 id="Prueba_soporta_para_propiedades_customizadas">Prueba "soporta" para propiedades customizadas</h3>
+### Prueba "soporta" para propiedades customizadas
 
-<pre class="brush:css;">@supports not ((text-align-last:justify) or (-moz-text-align-last:justify) ){
+```css
+@supports not ((text-align-last:justify) or (-moz-text-align-last:justify) ){
     … /* specific CSS applied to simulate text-align-last:justify */
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Conditional', '#at-supports', '@supports') }}</td>
-   <td>{{ Spec2('CSS3 Conditional') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                                   | Comentario          |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
+| {{ SpecName('CSS3 Conditional', '#at-supports', '@supports') }} | {{ Spec2('CSS3 Conditional') }} | Initial definition. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("css.at-rules.supports")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>La clase CSSOM {{ domxref("CSSSupportsRule") }}, y el método  {{ domxref("CSS.supports") }} que permite chequear via JavaScript.</li>
-</ul>
+- La clase CSSOM {{ domxref("CSSSupportsRule") }}, y el método {{ domxref("CSS.supports") }} que permite chequear via JavaScript.

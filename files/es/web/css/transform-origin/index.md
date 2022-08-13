@@ -3,189 +3,90 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 translation_of: Web/CSS/transform-origin
 ---
-<p>{{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}</p>
+{{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad CSS <code>transform-origin</code> le permite modificar el origen de las transformaciones de un elemento. Por ejemplo, el transform-origin de la función <code>rotate()</code> es el centro de rotación. (Esta propiedad es aplicada a la primera translación del elemento por el valor negativo de la propiedad. A continuación, aplicar la transformación del elemento y después trasladar el valor de la propiedad).</p>
+La propiedad CSS `transform-origin` le permite modificar el origen de las transformaciones de un elemento. Por ejemplo, el transform-origin de la función `rotate()` es el centro de rotación. (Esta propiedad es aplicada a la primera translación del elemento por el valor negativo de la propiedad. A continuación, aplicar la transformación del elemento y después trasladar el valor de la propiedad).
 
-<p>Los valores no establecidos explícitamente se restablecen a sus valores originales.</p>
+Los valores no establecidos explícitamente se restablecen a sus valores originales.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="twopartsyntaxbox"><a href="https://developer.mozilla.org/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Sintaxis Formal</a>: {{csssyntax("transform-origin")}}
-</pre>
+    Sintaxis Formal: {{csssyntax("transform-origin")}}
 
-<pre>transform-origin: <em>x-offset</em>                                   /* Sintaxis con valor único */   E.g.  transform-origin: 2px
-transform-origin: <em>offset-keyword</em>                                                      E.g.  transform-origin: bottom
+<!---->
 
-transform-origin: <em>x-offset</em> <em>y-offset</em>                          /* Sintaxis con dos valores */   E.g.  transform-origin: 3cm 2px
-transform-origin: <em>y-offset</em> <em>x-offset-keyword</em>                                           E.g.  transform-origin: 2px left
-transform-origin: <em>x-offset-keyword</em> <em>y-offset</em>                                           E.g.  transform-origin: left 2px
-transform-origin: x-<em>offset-keyword</em> <em>y-offset-keyword</em>                                   E.g.  transform-origin: right top
-transform-origin: <em>y-offset-keyword</em> <em>x-offset-keyword</em>                                   E.g.  transform-origin: top right
+    transform-origin: x-offset                                   /* Sintaxis con valor único */   E.g.  transform-origin: 2px
+    transform-origin: offset-keyword                                                      E.g.  transform-origin: bottom
 
-transform-origin: <em>x-offset</em> <em>y-offset</em> <em>z-offset</em>                 /* Sintaxis con tres valores */ E.g.  transform-origin: 2px 30% 10px
-transform-origin: <em>y-offset</em> <em>x-offset-keyword</em> <em>z-offset</em>                                  E.g.  transform-origin: 2px left 10px
-transform-origin: <em>x-offset-keyword</em> <em>y-offset</em> <em>z-offset</em>                                  E.g.  transform-origin: left 5px -3px
-transform-origin: x-<em>offset-keyword</em> <em>y-offset-keyword z-offset</em>                          E.g.  transform-origin: right bottom 2cm
-transform-origin: <em>y-offset-keyword</em> <em>x-offset-keyword z-offset</em>                          E.g.  transform-origin: bottom right 2cm
-</pre>
+    transform-origin: x-offset y-offset                          /* Sintaxis con dos valores */   E.g.  transform-origin: 3cm 2px
+    transform-origin: y-offset x-offset-keyword                                           E.g.  transform-origin: 2px left
+    transform-origin: x-offset-keyword y-offset                                           E.g.  transform-origin: left 2px
+    transform-origin: x-offset-keyword y-offset-keyword                                   E.g.  transform-origin: right top
+    transform-origin: y-offset-keyword x-offset-keyword                                   E.g.  transform-origin: top right
 
-<h3 id="Valores">Valores</h3>
+    transform-origin: x-offset y-offset z-offset                 /* Sintaxis con tres valores */ E.g.  transform-origin: 2px 30% 10px
+    transform-origin: y-offset x-offset-keyword z-offset                                  E.g.  transform-origin: 2px left 10px
+    transform-origin: x-offset-keyword y-offset z-offset                                  E.g.  transform-origin: left 5px -3px
+    transform-origin: x-offset-keyword y-offset-keyword z-offset                          E.g.  transform-origin: right bottom 2cm
+    transform-origin: y-offset-keyword x-offset-keyword z-offset                          E.g.  transform-origin: bottom right 2cm
 
-<dl>
- <dt><em>x-offset</em></dt>
- <dd><span lang="es"><span class="hps">Es</span> <span class="hps">una {{cssxref("&lt;length&gt;")}} o</span> <span class="hps">un {{cssxref("&lt;percentage&gt;")}}</span> <span class="hps">que describe</span> <span class="hps">a qué distancia del</span> <span class="hps">borde izquierdo</span> <span class="hps">de la caja</span> <span class="hps">se establece</span> <span class="hps">el origen de</span> <span class="hps">la transformación.</span></span></dd>
- <dt><em>offset-keyword</em></dt>
- <dd>Es una de las palabras clave <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code> o <code>center</code> que describen el correspondiente desplazamiento.</dd>
- <dt><em>y-offset</em></dt>
- <dd><span lang="es"><span class="hps">Es</span> <span class="hps">una {{cssxref("&lt;length&gt;")}} o</span> <span class="hps">un {{cssxref("&lt;percentage&gt;")}}</span> <span class="hps">que indica</span> a <span id="result_box" lang="es"><span class="gt-trans-draggable hps">qué distancia del</span> <span class="gt-trans-draggable hps">borde superior</span> <span class="gt-trans-draggable hps">de la caja</span> <span class="gt-trans-draggable hps">se establece</span> <span class="gt-trans-draggable hps">el origen de</span> <span class="gt-trans-draggable hps">la transformación.</span></span></span></dd>
- <dt><em>x-offset-keyword</em></dt>
- <dd>Es una de las palabras clave <code>left</code>, <code>right</code> o <code>center</code> que indica <span id="result_box" lang="es"><span class="hps">a qué distancia del</span> <span class="hps">borde izquierdo</span> <span class="hps">de la caja</span> <span class="hps">se establece</span> <span class="hps">el origen de</span> <span class="hps">la transformación.</span></span></dd>
- <dt><em>y-offset-keyword</em></dt>
- <dd>Es una de las palabras clave <code>top</code>, <code>bottom</code> o <code>center</code> que indica <span id="result_box" lang="es"><span class="gt-trans-draggable hps">a qué distancia del</span> <span class="gt-trans-draggable hps">borde superior</span> <span class="gt-trans-draggable hps">de la caja</span> <span class="gt-trans-draggable hps">se establece</span> <span class="gt-trans-draggable hps">el origen de</span> <span class="gt-trans-draggable hps">la transformación.</span></span></dd>
- <dt><em>z-offset</em></dt>
- <dd>Es una {{cssxref("&lt;length&gt;")}} (y nunca un {{cssxref("&lt;percentage&gt;")}} el cual sería una declaración no válida) que describe que tan lejos del ojo del usuario se estable el origen de la posición z=0.</dd>
-</dl>
+### Valores
 
-<p>Las palabras clave son abreviaciones por convención que coinciden con los siguientes valores {{cssxref("&lt;percentage&gt;")}}:</p>
+- _x-offset_
+  - : Es una {{cssxref("&lt;length&gt;")}} o un {{cssxref("&lt;percentage&gt;")}} que describe a qué distancia del borde izquierdo de la caja se establece el origen de la transformación.
+- _offset-keyword_
+  - : Es una de las palabras clave `left`, `right`, `top`, `bottom` o `center` que describen el correspondiente desplazamiento.
+- _y-offset_
+  - : Es una {{cssxref("&lt;length&gt;")}} o un {{cssxref("&lt;percentage&gt;")}} que indica a qué distancia del borde superior de la caja se establece el origen de la transformación.
+- _x-offset-keyword_
+  - : Es una de las palabras clave `left`, `right` o `center` que indica a qué distancia del borde izquierdo de la caja se establece el origen de la transformación.
+- _y-offset-keyword_
+  - : Es una de las palabras clave `top`, `bottom` o `center` que indica a qué distancia del borde superior de la caja se establece el origen de la transformación.
+- _z-offset_
+  - : Es una {{cssxref("&lt;length&gt;")}} (y nunca un {{cssxref("&lt;percentage&gt;")}} el cual sería una declaración no válida) que describe que tan lejos del ojo del usuario se estable el origen de la posición z=0.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propiedad</th>
-   <th scope="col">Valor</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <td><code>center</code></td>
-   <td><code>50%</code></td>
-  </tr>
-  <tr>
-   <td><code>right</code></td>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <td><code>top</code></td>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <td><code>bottom</code></td>
-   <td><code>100%</code></td>
-  </tr>
- </tbody>
-</table>
+Las palabras clave son abreviaciones por convención que coinciden con los siguientes valores {{cssxref("&lt;percentage&gt;")}}:
 
-<h2 id="Ejemplos">Ejemplos</h2>
+| Propiedad | Valor  |
+| --------- | ------ |
+| `left`    | `0%`   |
+| `center`  | `50%`  |
+| `right`   | `100%` |
+| `top`     | `0%`   |
+| `bottom`  | `100%` |
 
-<p>Ver <a class="internal" href="/En/CSS/Using_CSS_transforms" title="en/CSS/Using CSS transforms">Uso de CSS transforms</a> para más ejemplos.</p>
+## Ejemplos
 
-<h3 id="Ejemplos_en_vivo">Ejemplos en vivo:</h3>
+Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms "en/CSS/Using CSS transforms") para más ejemplos.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 22em;"><code>transform: none;</code></td>
-   <td>
-    <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid 1px; background-color: palegreen; transform: none; -webkit-transform: none; -moz-transform: none; -o-transform: none;"> </div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>transform: rotate(30deg);</code></td>
-   <td>
-    <div style=""> </div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>transform: rotate(30deg);<br>
-    transform-origin: 0 0;</code></td>
-   <td>
-    <div style=""> </div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>transform: rotate(30deg);<br>
-    transform-origin: 100% 100%;</code></td>
-   <td>
-    <div style=""> </div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>transform: rotate(30deg);<br>
-    transform-origin: -10em -30em;</code></td>
-   <td>
-    <div style=""> </div>
-   </td>
-  </tr>
-  <tr style="height: 5em;">
-   <td><code>transform: scale(1.9);</code></td>
-   <td>
-    <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid 1px; background-color: palegreen; transform: scale(1.9); -webkit-transform: scale(1.9); -moz-transform: scale(1.9); -o-transform: scale(1.9);"> </div>
-   </td>
-  </tr>
-  <tr style="height: 5em;">
-   <td><code>transform: scale(1.9);<br>
-    transform-origin: 0 0;</code></td>
-   <td>
-    <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid 1px; background-color: palegreen; transform: scale(1.9); -webkit-transform: scale(1.9); -moz-transform: scale(1.9); -o-transform: scale(1.9);"> </div>
-   </td>
-  </tr>
-  <tr style="height: 5em;">
-   <td><code>transform: scale(1.9);<br>
-    transform-origin: 100% -30%;</code></td>
-   <td>
-    <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid 1px; background-color: palegreen; transform: scale(1.9); -webkit-transform: scale(1.9); -moz-transform: scale(1.9); -o-transform: scale(1.9);"> </div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>transform: skewX(50deg);</code></td>
-   <td>
-    <div style=""> </div>
-   </td>
-  </tr>
-  <tr>
-   <td><code>transform: skewY(50deg);<br>
-    transform-origin: 0 0;</code></td>
-   <td>
-    <div style=""> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
+### Ejemplos en vivo:
 
-<h2 id="Especificaciones">Especificaciones</h2>
+| `transform: none;`                                         |     |
+| ---------------------------------------------------------- | --- |
+| `transform: rotate(30deg);`                                |     |
+| `transform: rotate(30deg); transform-origin: 0 0;`         |     |
+| `transform: rotate(30deg); transform-origin: 100% 100%;`   |     |
+| `transform: rotate(30deg); transform-origin: -10em -30em;` |     |
+| `transform: scale(1.9);`                                   |     |
+| `transform: scale(1.9); transform-origin: 0 0;`            |     |
+| `transform: scale(1.9); transform-origin: 100% -30%;`      |     |
+| `transform: skewX(50deg);`                                 |     |
+| `transform: skewY(50deg); transform-origin: 0 0;`          |     |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transforms', '#transform-origin', 'transform-origin') }}</td>
-   <td>{{ Spec2('CSS3 Transforms') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Especificaciones
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+| Especificación                                                                                       | Estado                                   | Comentario |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
+| {{ SpecName('CSS3 Transforms', '#transform-origin', 'transform-origin') }} | {{ Spec2('CSS3 Transforms') }} |            |
+
+## Compatibilidad con navegadores
 
 {{Compat("css.properties.transform-origin")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms" title="/en-US/docs/CSS/Using_CSS_transforms">Uso de CSS transform</a></li>
-</ul>
+- [Uso de CSS transform](/es/docs/CSS/Using_CSS_transforms)

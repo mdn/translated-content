@@ -12,79 +12,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El valor inicial de la propiedad <code><strong>@@iterator</strong></code> es el mismo objeto de función que el valor inicial de la propiedad {{jsxref("Array.prototype.values()", "values()")}}.</p>
+El valor inicial de la propiedad **`@@iterator`** es el mismo objeto de función que el valor inicial de la propiedad {{jsxref("Array.prototype.values()", "values()")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>arr</var>[Symbol.iterator]()</code></pre>
+    arr[Symbol.iterator]()
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>El valor inicial dado por el <strong>iterador</strong> {{jsxref("Array.prototype.values()", "values()")}}. Por defecto, usar <code>arr[Symbol.iterator]</code> devolverá la función {{jsxref("Array.prototype.values()", "values()")}}.</p>
+El valor inicial dado por el **iterador** {{jsxref("Array.prototype.values()", "values()")}}. Por defecto, usar `arr[Symbol.iterator]` devolverá la función {{jsxref("Array.prototype.values()", "values()")}}.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Iteración_usando_el_bucle_for...of">Iteración usando el bucle <code>for...of</code> </h3>
+### Iteración usando el bucle `for...of`
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr[Symbol.iterator]();
 // nuestro navegador debe ser compatible con el bucle for..of
 // y variables let-scoped en bucles for
 for (let letter of eArr) {
   console.log(letter);
 }
-</pre>
+```
 
-<h3 id="Iteración_alternativa">Iteración alternativa</h3>
+### Iteración alternativa
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y
 console.log(eArr.next().value); // k
 console.log(eArr.next().value); // o
 console.log(eArr.next().value); // p
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial..</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                           | Estado                       | Comentario           |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Definición inicial.. |
+| {{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
+{{Compat("javascript.builtins.Array.@@iterator")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Array.@@iterator")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.values()")}}

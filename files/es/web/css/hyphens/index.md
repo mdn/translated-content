@@ -3,25 +3,16 @@ title: hyphens
 slug: Web/CSS/hyphens
 translation_of: Web/CSS/hyphens
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}La propiedad [CSS](/es/docs/Web/CSS) **`hyphens`** especifica cómo deben dividirse las palabras cuando el texto se ajusta a través de múltiples líneas. Puede impedir la separación de sílabas por completo, usar guiones manualmente en puntos específicos del texto o dejar que el navegador inserte los guiones automáticamente donde corresponda.{{EmbedInteractiveExample("pages/css/hyphens.html")}}
 
-<div>La propiedad <a href="/es/docs/Web/CSS">CSS</a> <strong><code>hyphens</code></strong> especifica cómo deben dividirse las palabras cuando el texto se ajusta a través de múltiples líneas. Puede impedir la separación de sílabas por completo, usar guiones manualmente en puntos específicos del texto o dejar que el navegador inserte los guiones automáticamente donde corresponda.</div>
+Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo `xml:lang.`
 
+> **Nota:** Las reglas que definen cómo se realiza la separación de sílabas no están explícitamente definidas por la especificación, por lo que esta puede variar de un navegador a otro.
 
+## Sintaxis
 
-<div>{{EmbedInteractiveExample("pages/css/hyphens.html")}}</div>
-
-
-
-<p>Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo <code><a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></code> y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo <code><a href="/en-US/docs/Web/SVG/Attribute/xml:lang">xml:lang</a>.</code></p>
-
-<div class="note">
-<p><strong>Nota:</strong> Las reglas que definen cómo se realiza la separación de sílabas no están explícitamente definidas por la especificación, por lo que esta puede variar de un navegador a otro.</p>
-</div>
-
-<h2 id="Sintaxis">Sintaxis</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 hyphens: none;
 hyphens: manual;
 hyphens: auto;
@@ -30,62 +21,58 @@ hyphens: auto;
 hyphens: inherit;
 hyphens: initial;
 hyphens: unset;
-</pre>
+```
 
-<p>La propiedad <code>hyphens</code> se especifica con una única palabra de la lista a continuación.</p>
+La propiedad `hyphens` se especifica con una única palabra de la lista a continuación.
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Las palabras no se separan en los finales de línea, incluso si las letras dentro de las palabras sobrepasan el final de la línea. Las líneas solo se distribuyen en el espacio en blanco.</dd>
- <dt><code>manual</code></dt>
- <dd>Las palabras se separan para el ajuste de línea sólo cuando los caracteres dentro de la palabra sugieren oportunidades de salto de línea. Ver <a href="#sugiriendo_oportunidades_de_separación_de_línea">Sugiriendo oportunidades de separación de línea</a> más abajo para detalle.</dd>
- <dt><code>auto</code></dt>
- <dd>El navegador es libre de separar palabras en puntos de separación apropiados, siguiendo cualquiera de las reglas elegidas. Sin embargo, las oportunidades de separación de línea (ver <a href="#sugiriendo_oportunidades_de_separación_de_línea">Sugiriendo oportunidades de separación de línea</a> más abajo) anularán la separación automática cuando exista.</dd>
-</dl>
+- `none`
+  - : Las palabras no se separan en los finales de línea, incluso si las letras dentro de las palabras sobrepasan el final de la línea. Las líneas solo se distribuyen en el espacio en blanco.
+- `manual`
+  - : Las palabras se separan para el ajuste de línea sólo cuando los caracteres dentro de la palabra sugieren oportunidades de salto de línea. Ver [Sugiriendo oportunidades de separación de línea](#sugiriendo_oportunidades_de_separación_de_línea) más abajo para detalle.
+- `auto`
+  - : El navegador es libre de separar palabras en puntos de separación apropiados, siguiendo cualquiera de las reglas elegidas. Sin embargo, las oportunidades de separación de línea (ver [Sugiriendo oportunidades de separación de línea](#sugiriendo_oportunidades_de_separación_de_línea) más abajo) anularán la separación automática cuando exista.
 
-<div class="note">
-<p><strong>Nota:</strong> El comportamiento del valor <code>auto</code> dependerá de que el idioma esté bien etiquetado de manera que las reglas de separación silábica puedan ser seleccionadas. Se debe especificar el idioma con el atributo <code>lang</code> de HTML de cara a garantizar que la separación silábica automática se aplique en ese idioma.</p>
-</div>
+> **Nota:** El comportamiento del valor `auto` dependerá de que el idioma esté bien etiquetado de manera que las reglas de separación silábica puedan ser seleccionadas. Se debe especificar el idioma con el atributo `lang` de HTML de cara a garantizar que la separación silábica automática se aplique en ese idioma.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Sugiriendo_oportunidades_de_separación_de_línea">Sugiriendo oportunidades de separación de línea</h2>
+## Sugiriendo oportunidades de separación de línea
 
-<p>Hay dos caracteres Unicode que pueden ser usados manualmente para especificar un potencial punto de separación de línea dentro del texto:</p>
+Hay dos caracteres Unicode que pueden ser usados manualmente para especificar un potencial punto de separación de línea dentro del texto:
 
-<dl>
- <dt>U+2010 (HYPHEN)</dt>
- <dd>El carácter "fuerte" de separación de línea indica una oportunidad de separación visible. Incluso si la línea no está realmente separada en ese momento, se muestra el guión.</dd>
- <dt>U+00AD (SHY)</dt>
- <dd>Un carácter invisible y "suave" de separación de línea. Este carácter no se renderiza de manera visible; en lugar de ello, indica la posición en la que el navegador debería separar la palabra en caso de requerir separación de línea. En HTML puedes usar <code>&amp;shy;</code> para insertar una separación "suave".</dd>
-</dl>
+- U+2010 (HYPHEN)
+  - : El carácter "fuerte" de separación de línea indica una oportunidad de separación visible. Incluso si la línea no está realmente separada en ese momento, se muestra el guión.
+- U+00AD (SHY)
+  - : Un carácter invisible y "suave" de separación de línea. Este carácter no se renderiza de manera visible; en lugar de ello, indica la posición en la que el navegador debería separar la palabra en caso de requerir separación de línea. En HTML puedes usar `&shy;` para insertar una separación "suave".
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Este ejemplo usa tres clases, una por cada posible configuración de la propiedad <code>hyphens</code>.</p>
+Este ejemplo usa tres clases, una por cada posible configuración de la propiedad `hyphens`.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;none&lt;/code&gt;: sin separación; se desbordará si es preciso
-    &lt;p lang="es" class="none"&gt;Una extrema&amp;shy;damente larga palabra&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;manual&lt;/code&gt;: separación sólo en &amp;amp;hyphen; o &amp;amp;shy; (si fuera necesario)
-    &lt;p lang="es" class="manual"&gt;Una extrema&amp;shy;damente larga palabra&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;auto&lt;/code&gt;: separará donde decida el algoritmo (si fuera necesario)
-    &lt;p lang="enes class="auto"&gt;Una extrema&amp;shy;damente larga palabra&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+  <li><code>none</code>: sin separación; se desbordará si es preciso
+    <p lang="es" class="none">Una extrema&shy;damente larga palabra</p>
+  </li>
+  <li><code>manual</code>: separación sólo en &amp;hyphen; o &amp;shy; (si fuera necesario)
+    <p lang="es" class="manual">Una extrema&shy;damente larga palabra</p>
+  </li>
+  <li><code>auto</code>: separará donde decida el algoritmo (si fuera necesario)
+    <p lang="enes class="auto">Una extrema&shy;damente larga palabra</p>
+  </li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 55px;
   border: 1px solid black;
  }
@@ -104,45 +91,24 @@ p.auto {
   -ms-hyphens: auto;
   hyphens: auto;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<figure>
-<p>{{EmbedLiveSample("Example", "100%", 490)}}</p>
-</figure>
+{{EmbedLiveSample("Example", "100%", 490)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}}</td>
-   <td>{{Spec2("CSS3 Text")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               | Estado                       | Comentario         |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Initial definition |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<div>
+{{Compat("css.properties.hyphens")}}
 
+## Ver también
 
-<p>{{Compat("css.properties.hyphens")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{Cssxref("content")}}</li>
-</ul>
+- {{Cssxref("content")}}

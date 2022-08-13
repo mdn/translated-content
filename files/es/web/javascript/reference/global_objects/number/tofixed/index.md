@@ -4,45 +4,42 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toFixed
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>toFixed()</code></strong> formatea un número usando notación de punto fijo.</p>
+El método **`toFixed()`** formatea un número usando notación de punto fijo.
 
-<div>{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>numObj</var>.toFixed([<var>digitos</var>])</code></pre>
+    numObj.toFixed([digitos])
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>digitos</code></dt>
- <dd>Opcional. El número de digitos que aparecen después del punto decimal; este puede ser un valor entre 0 y 20, inclusive, algunas implementaciones pueden soportar un rango más amplio de valores. Si el argumento es omitido, es tratado como 0.</dd>
-</dl>
+- `digitos`
+  - : Opcional. El número de digitos que aparecen después del punto decimal; este puede ser un valor entre 0 y 20, inclusive, algunas implementaciones pueden soportar un rango más amplio de valores. Si el argumento es omitido, es tratado como 0.
 
-<h3 id="Valor_Devuelto">Valor Devuelto</h3>
+### Valor Devuelto
 
-<p>Una cadena que representa el número dado, usando notación de punto fijo.</p>
+Una cadena que representa el número dado, usando notación de punto fijo.
 
-<h3 id="Excepciones">Excepciones</h3>
+### Excepciones
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>Si <code>digits</code> es demasiado pequeño o demasiado grande. Los valores entre 0 y 20, inclusive, no causarán un error tipo<code> {{jsxref("RangeError")}}</code>. Las implementaciones también pueden admitir valores cada vez más grandes.</dd>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>Si este método se invoca en un objeto que no es un {{jsxref("Number")}}.</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : Si `digits` es demasiado pequeño o demasiado grande. Los valores entre 0 y 20, inclusive, no causarán un error tipo` {{jsxref("RangeError")}}`. Las implementaciones también pueden admitir valores cada vez más grandes.
+- {{jsxref("TypeError")}}
+  - : Si este método se invoca en un objeto que no es un {{jsxref("Number")}}.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p><strong><code>toFixed()</code></strong> devuelve una representación de cadena de <code> numObj </code> que no usa notación exponencial y tiene exactamente <code> dígitos </code> dígitos después del decimal. El número se redondea si es necesario, y la parte fraccional se rellena con ceros si es necesario para que tenga la longitud especificada.Si <code>numObj</code> es mayor que <code>1e+21</code>, este metodo llama a {{jsxref("Number.prototype.toString()")}} y retorna una cadena de notacion exponencial.</p>
+**`toFixed()`** devuelve una representación de cadena de `numObj `que no usa notación exponencial y tiene exactamente `dígitos `dígitos después del decimal. El número se redondea si es necesario, y la parte fraccional se rellena con ceros si es necesario para que tenga la longitud especificada.Si `numObj` es mayor que `1e+21`, este metodo llama a {{jsxref("Number.prototype.toString()")}} y retorna una cadena de notacion exponencial.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_toFixed">Using <code>toFixed</code></h3>
+### Using `toFixed`
 
-<pre class="brush: js">var numObj = 12345.6789;
+```js
+var numObj = 12345.6789;
 
 numObj.toFixed();       // Returns '12346': note rounding, no fractional part
 numObj.toFixed(1);      // Returns '12345.7': note rounding
@@ -53,48 +50,23 @@ numObj.toFixed(6);      // Returns '12345.678900': note added zeros
 2.35.toFixed(1);        // Returns '2.4'. Note that it rounds up in this case.
 -2.34.toFixed(1);       // Returns -2.3 (due to operator precedence, negative number literals don't return a string...)
 (-2.34).toFixed(1);     // Returns '-2.3' (...unless you use parentheses)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.5', 'Number.prototype.toFixed')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                       | Comment                                            |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.5. |
+| {{SpecName('ES5.1', '#sec-15.7.4.5', 'Number.prototype.toFixed')}}                         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("javascript.builtins.Number.toFixed")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toPrecision()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxref("Number.prototype.toString()")}}

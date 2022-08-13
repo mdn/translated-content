@@ -10,77 +10,68 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<h2 id="summary" name="summary">Resumen</h2>
+## Resumen
 
-<p>El  método estático <code><strong>Object.defineProperty()</strong></code> define una nueva propiedad sobre un objeto, o modifica una ya existente, y devuelve el objeto modificado.</p>
+El método estático **`Object.defineProperty()`** define una nueva propiedad sobre un objeto, o modifica una ya existente, y devuelve el objeto modificado.
 
-<div class="note">
-<p><strong>Nota:</strong> Ud. puede llamar a este método directamente mediante el constructor {{jsxref("Object")}} en vez de crear una instancia del tipo <code>Object</code>.</p>
-</div>
+> **Nota:** Ud. puede llamar a este método directamente mediante el constructor {{jsxref("Object")}} en vez de crear una instancia del tipo `Object`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</code></pre>
+    Object.defineProperty(obj, prop, descriptor)
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>El objeto sobre el cual se define la propiedad.</dd>
- <dt><code>prop</code></dt>
- <dd>El nombre de la propiedad a ser definida o modificada.</dd>
- <dt><code>descriptor</code></dt>
- <dd>El descriptor de la propiedad que está siendo definida o modificada.</dd>
-</dl>
+- `obj`
+  - : El objeto sobre el cual se define la propiedad.
+- `prop`
+  - : El nombre de la propiedad a ser definida o modificada.
+- `descriptor`
+  - : El descriptor de la propiedad que está siendo definida o modificada.
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p>Este método permite añadir o modificar una propiedad en un objeto.</p>
+Este método permite añadir o modificar una propiedad en un objeto.
 
-<p>La adición normal de una propiedad a través de la asignación crea propiedades que aparecen durante la enumeración de propiedades en el bucle ({{jsxref("Sentencias/for...in", "for...in")}} o el método {{jsxref("Object.keys")}}), cuyos valores pueden modificarse y pudiendo incluso eliminar la propiedad del objeto mediante el método {{jsxref("Operadores/delete", "delete")}}.</p>
+La adición normal de una propiedad a través de la asignación crea propiedades que aparecen durante la enumeración de propiedades en el bucle ({{jsxref("Sentencias/for...in", "for...in")}} o el método {{jsxref("Object.keys")}}), cuyos valores pueden modificarse y pudiendo incluso eliminar la propiedad del objeto mediante el método {{jsxref("Operadores/delete", "delete")}}.
 
-<p>Este método nos permite modificar el comportamiento por defecto de las propiedades. Es decir, nos permite definir una propiedad como no enumerable, no modificable o incluso evitar que pueda ser eliminada del objeto.</p>
+Este método nos permite modificar el comportamiento por defecto de las propiedades. Es decir, nos permite definir una propiedad como no enumerable, no modificable o incluso evitar que pueda ser eliminada del objeto.
 
-<p>Existen dos tipos de descriptores: De datos y de acceso.  Un <em><dfn>descriptor de datos</dfn></em> define una propiedad que tiene un valor, el cual puede ser o no modificado. Un descriptor de acceso define una propiedad mediante un par de funciones getter-setter que describe como se obtiene o se modifica el contenido de dicha propiedad. Un descriptor debe de ser de uno de estos dos tipos; no puede ser ambos.</p>
+Existen dos tipos de descriptores: De datos y de acceso. Un **descriptor de datos** define una propiedad que tiene un valor, el cual puede ser o no modificado. Un descriptor de acceso define una propiedad mediante un par de funciones getter-setter que describe como se obtiene o se modifica el contenido de dicha propiedad. Un descriptor debe de ser de uno de estos dos tipos; no puede ser ambos.
 
-<p>Ambos tipos de descriptores son objetos y comparten las siguientes claves opcionales:</p>
+Ambos tipos de descriptores son objetos y comparten las siguientes claves opcionales:
 
-<dl>
- <dt><code>configurable</code></dt>
- <dd><code>true</code> si y solo si el tipo de descriptor de propiedad puede modificarse y si la propiedad puede ser eliminada del correspondiente objeto.<br>
- <strong>Por defecto es <code>false</code>.</strong></dd>
- <dt><code>enumerable</code></dt>
- <dd><code>true</code> si y solo si dicha propiedad se muestra durante la enumeración de las propiedades del objeto correspondiente.<br>
- <strong>Por defecto es <code>false</code>.</strong></dd>
-</dl>
+- `configurable`
+  - : `true` si y solo si el tipo de descriptor de propiedad puede modificarse y si la propiedad puede ser eliminada del correspondiente objeto.
+    **Por defecto es `false`.**
+- `enumerable`
+  - : `true` si y solo si dicha propiedad se muestra durante la enumeración de las propiedades del objeto correspondiente.
+    **Por defecto es `false`.**
 
-<p>Un descriptor de datos tiene además las siguientes claves opcionales:</p>
+Un descriptor de datos tiene además las siguientes claves opcionales:
 
-<dl>
- <dt><code>value</code></dt>
- <dd>El valor asociado a la propiedad. Puede ser cualquier tipo valido de JavaScript  (number, object, function, etc).<br>
- <strong>Por defecto es {{jsxref("Objetos_Globales/undefined", "undefined")}}.</strong></dd>
- <dt><code>writable</code></dt>
- <dd><code>true</code> Indica si el valor de la propiedad puede modificarse con el  {{jsxref("Operators/Assignment_Operators", "operador de asignación", "", 1)}}.<br>
- <strong>Defaults to <code>false</code>.</strong></dd>
-</dl>
+- `value`
+  - : El valor asociado a la propiedad. Puede ser cualquier tipo valido de JavaScript (number, object, function, etc).
+    **Por defecto es {{jsxref("Objetos_Globales/undefined", "undefined")}}.**
+- `writable`
+  - : `true` Indica si el valor de la propiedad puede modificarse con el {{jsxref("Operators/Assignment_Operators", "operador de asignación", "", 1)}}.
+    **Defaults to `false`.**
 
-<p>Un descriptor de acceso además tiene las siguientes claves opcionales:</p>
+Un descriptor de acceso además tiene las siguientes claves opcionales:
 
-<dl>
- <dt><code>get</code></dt>
- <dd>Una función cuyo valor retornado será el que se use como valor de la propiedad.<br>
- <strong>Defaults to {{jsxref("Objetos_Globales/undefined", "undefined")}}.</strong></dd>
- <dt><code>set</code></dt>
- <dd>Una función que recibe como único argumento el nuevo valor que se desea asignar a la propiedad y que devuelve el valor que se almacenará finalmente en el objeto.<br>
- <strong>Defaults to {{jsxref("Objetos_Globales/undefined", "undefined")}}.</strong></dd>
-</dl>
+- `get`
+  - : Una función cuyo valor retornado será el que se use como valor de la propiedad.
+    **Defaults to {{jsxref("Objetos_Globales/undefined", "undefined")}}.**
+- `set`
+  - : Una función que recibe como único argumento el nuevo valor que se desea asignar a la propiedad y que devuelve el valor que se almacenará finalmente en el objeto.
+    **Defaults to {{jsxref("Objetos_Globales/undefined", "undefined")}}.**
 
-<p>Hay que tener en cuenta que estas opciones también pueden heredarse; es decir, las opciones de la propiedad se han podido establecer en el prototipo de una clase de la que hereda el objeto. De modo que si queremos asegurarnos unos valores por defecto tenemos tres opciones: fijar el {{jsxref("Object.prototype")}} con {{jsxref("Object.freeze")}}, definir todas las opciones explicitamente, o establecer a {{jsxref("Objetos_Globales/null", "null")}} la propiedad {{jsxref("Object.prototype.__proto__", "__proto__")}}.</p>
+Hay que tener en cuenta que estas opciones también pueden heredarse; es decir, las opciones de la propiedad se han podido establecer en el prototipo de una clase de la que hereda el objeto. De modo que si queremos asegurarnos unos valores por defecto tenemos tres opciones: fijar el {{jsxref("Object.prototype")}} con {{jsxref("Object.freeze")}}, definir todas las opciones explicitamente, o establecer a {{jsxref("Objetos_Globales/null", "null")}} la propiedad {{jsxref("Object.prototype.__proto__", "__proto__")}}.
 
-<pre class="brush: js">// Usando __proto__
+```js
+// Usando __proto__
 Object.defineProperty(obj, 'key', {
   __proto__: null, // no aceptar propiedades heredadas
   value: 'static'  // no enumerable
@@ -117,17 +108,18 @@ Object.defineProperty(obj, 'key', withValue('static'));
 //del prototipo del objeto las propiedades
 // (value, get, set, enumerable, writable, configurable)
 (Object.freeze || Object)(Object.prototype);
-</pre>
+```
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<p>Si quiere ver algunos ejemplos de utilización del método <code>Object.defineProperty</code> con una sintaxis tipo <em>binary-flags</em>, vea <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples">ejemplos adicionales</a>.</p>
+Si quiere ver algunos ejemplos de utilización del método `Object.defineProperty` con una sintaxis tipo _binary-flags_, vea [ejemplos adicionales](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples).
 
-<h3 id="Example:_Creating_a_property" name="Example:_Creating_a_property">Ejemplo: Creando una propiedad</h3>
+### Ejemplo: Creando una propiedad
 
-<p>Cuando la propiedad especificada no existe en el objeto<code>, Object.defineProperty()</code> crea una nueva. En el descriptor pueden omitirse campos, a los cuales se les asignará el valor por defecto. A todos los que sean de tipo Booleano se les asignará el valor falso. Los campos <code>value</code>, <code>get</code> y <code>set</code> se establecerán por defecto a {{jsxref("Objetos_Globales/undefined", "undefined")}}. Una propiedad definida sin indicar  <code>get</code>/<code>set</code>/<code>value</code>/<code>writable</code> es denominada “genérica” y  “tipificada” como un descriptor de datos.</p>
+Cuando la propiedad especificada no existe en el objeto`, Object.defineProperty()` crea una nueva. En el descriptor pueden omitirse campos, a los cuales se les asignará el valor por defecto. A todos los que sean de tipo Booleano se les asignará el valor falso. Los campos `value`, `get` y `set` se establecerán por defecto a {{jsxref("Objetos_Globales/undefined", "undefined")}}. Una propiedad definida sin indicar `get`/`set`/`value`/`writable` es denominada “genérica” y “tipificada” como un descriptor de datos.
 
-<pre class="brush: js">var o = {}; // Creates a new object
+```js
+var o = {}; // Creates a new object
 
 // Example of an object property added with defineProperty with a data property descriptor
 Object.defineProperty(o, 'a', {
@@ -156,21 +148,22 @@ Object.defineProperty(o, 'conflict', {
   get: function() { return 0xdeadbeef; }
 });
 // throws a TypeError: value appears only in data descriptors, get appears only in accessor descriptors
-</pre>
+```
 
-<h3 id="Example:_Modifying_a_property" name="Example:_Modifying_a_property">Ejemplo: Modificando una propiedad</h3>
+### Ejemplo: Modificando una propiedad
 
-<p>Cuando la propiedad realmente existe, <code>Object.defineProperty()</code> intenta modificar la propiedad de acuerdo a los valores en la descripción y la configuración actual del objeto. Si la descripción antigüa tenía su atributo de configuración establecido en <code>false</code> (la propiedad se dice "sin capacidad de configuración"), entonces ningún atributo además de los que tienen capacidad de escritura pueden ser cambiados. En ese caso, no es posible cambiar hacía atras o hacía delante entre datos y métodos de acceso de tipos de propiedades.</p>
+Cuando la propiedad realmente existe, `Object.defineProperty()` intenta modificar la propiedad de acuerdo a los valores en la descripción y la configuración actual del objeto. Si la descripción antigüa tenía su atributo de configuración establecido en `false` (la propiedad se dice "sin capacidad de configuración"), entonces ningún atributo además de los que tienen capacidad de escritura pueden ser cambiados. En ese caso, no es posible cambiar hacía atras o hacía delante entre datos y métodos de acceso de tipos de propiedades.
 
-<p>Si una propiedad no tiene capacidad de configuración, su atributo <code>writabble</code> solo puede ser cambiada to <code>false</code>.</p>
+Si una propiedad no tiene capacidad de configuración, su atributo `writabble` solo puede ser cambiada to `false`.
 
-<p>Un {{jsxref("Global_Objects/TypeError", "TypeError")}} es arrojado cuando se intenta cambiar las propiedades de atributos sin capacidad de configuración (adeḿas del atributo <code>writable</code>) a menos que el valor actual y el valor nuevo sean los mismos.</p>
+Un {{jsxref("Global_Objects/TypeError", "TypeError")}} es arrojado cuando se intenta cambiar las propiedades de atributos sin capacidad de configuración (adeḿas del atributo `writable`) a menos que el valor actual y el valor nuevo sean los mismos.
 
-<h4 id="Writable_attribute" name="Writable_attribute">Atributo writable</h4>
+#### Atributo writable
 
-<p>Cuando la propiedad de un atributo <code>writable</code> es establecido to <code>false</code>, la propiedad se dice esta "sin capacidad de escritura". No puede ser reasignada.</p>
+Cuando la propiedad de un atributo `writable` es establecido to `false`, la propiedad se dice esta "sin capacidad de escritura". No puede ser reasignada.
 
-<pre class="brush: js">var o = {}; // Crea un objeto nuevo
+```js
+var o = {}; // Crea un objeto nuevo
 
 Object.defineProperty(o, 'a', {
   value: 37,
@@ -180,15 +173,16 @@ Object.defineProperty(o, 'a', {
 console.log(o.a); // logs 37
 o.a = 25; // Ningún error arrojado (lo tiraría en modo estricto, aún si el valor fuera el mismo)
 console.log(o.a); // muestra 37. La asignación no funcionó
-</pre>
+```
 
-<p>Como es visto en el ejemplo anterior, intentar escribir en una propiedad "sin capacidad de  escritura" no la cambia pero sí arroja un error.</p>
+Como es visto en el ejemplo anterior, intentar escribir en una propiedad "sin capacidad de escritura" no la cambia pero sí arroja un error.
 
-<h4 id="Enumerable_attribute" name="Enumerable_attribute">Atributo enumerable</h4>
+#### Atributo enumerable
 
-<p>El atributo de la propiedad <code>enumerable</code> se define si la propiedad aparece en un ciclo {{jsxref("Statements/for...in", "for...in")}} y {{jsxref("Object.keys()")}} o no.</p>
+El atributo de la propiedad `enumerable` se define si la propiedad aparece en un ciclo {{jsxref("Statements/for...in", "for...in")}} y {{jsxref("Object.keys()")}} o no.
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 Object.defineProperty(o, 'a', { value: 1, enumerable: true });
 Object.defineProperty(o, 'b', { value: 2, enumerable: false });
 Object.defineProperty(o, 'c', { value: 3 }); // enumerable defaults to false
@@ -204,13 +198,14 @@ Object.keys(o); // ['a', 'd']
 o.propertyIsEnumerable('a'); // true
 o.propertyIsEnumerable('b'); // false
 o.propertyIsEnumerable('c'); // false
-</pre>
+```
 
-<h4 id="Configurable_attribute" name="Configurable_attribute">Atributo configurable</h4>
+#### Atributo configurable
 
-<p>El atributo <code>configurable</code> define si la propiedad puede ser eliminada del objeto, y si sus atributos (excepto <code>writable</code>) pueden ser modificados</p>
+El atributo `configurable` define si la propiedad puede ser eliminada del objeto, y si sus atributos (excepto `writable`) pueden ser modificados
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 Object.defineProperty(o, 'a', {
   get: function() { return 1; },
   configurable: false
@@ -225,15 +220,16 @@ Object.defineProperty(o, 'a', { value: 12 }); // arroja TypeError
 console.log(o.a); // logs 1
 delete o.a; // No hace nada
 console.log(o.a); // logs 1
-</pre>
+```
 
-<p>Si <code>o.a</code> tuviese <code>configurable</code>  a <code>true</code>, no se habrían arrojado errores y la propiedad habría sido eliminada. </p>
+Si `o.a` tuviese `configurable` a `true`, no se habrían arrojado errores y la propiedad habría sido eliminada.
 
-<h3 id="Example:_Adding_properties_and_default_values" name="Example:_Adding_properties_and_default_values">Ejemplo: Añadiendo propiedades y valores por defecto</h3>
+### Ejemplo: Añadiendo propiedades y valores por defecto
 
-<p>Es importante tener en cuenta la forma en la se aplican los valores por defecto de los atributos. Suele haber diferencias entre simplemente usar la notación con '.' y usar <code>Object.defineProperty()</code>, como se muestra en el siguiente ejemplo:</p>
+Es importante tener en cuenta la forma en la se aplican los valores por defecto de los atributos. Suele haber diferencias entre simplemente usar la notación con '.' y usar `Object.defineProperty()`, como se muestra en el siguiente ejemplo:
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 
 o.a = 1;
 // es equivalente a :
@@ -254,13 +250,14 @@ Object.defineProperty(o, 'a', {
   configurable: false,
   enumerable: false
 });
-</pre>
+```
 
-<h3 id="Example:_Custom_setters_and_getters" name="Example:_Custom_setters_and_getters">Ejemplo: Setters y Getters a medida</h3>
+### Ejemplo: Setters y Getters a medida
 
-<p>Example below shows how to implement a self-archiving object. When <code>temperature</code> property is set, the <code>archive</code> array gets a log entry.</p>
+Example below shows how to implement a self-archiving object. When `temperature` property is set, the `archive` array gets a log entry.
 
-<pre class="brush: js">function Archiver() {
+```js
+function Archiver() {
   var temperature = null;
   var archive = [];
 
@@ -283,68 +280,53 @@ arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
 arc.getArchive(); // [{ val: 11 }, { val: 13 }]
-</pre>
+```
 
-<p>or</p>
+or
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> pattern <span class="operator token">=</span> <span class="punctuation token">{</span>
-    <span class="keyword token">get</span><span class="punctuation token">:</span> <span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="keyword token">return</span> <span class="string token">'I always return this string, whatever you have assigned'</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">,</span>
-    <span class="keyword token">set</span><span class="punctuation token">:</span> <span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="keyword token">this</span><span class="punctuation token">.</span>myname <span class="operator token">=</span> <span class="string token">'this is my name string'</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
-
-
-<span class="keyword token">function</span> <span class="function token">TestDefineSetAndGet</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    Object<span class="punctuation token">.</span><span class="function token">defineProperty</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">,</span> <span class="string token">'myproperty'</span><span class="punctuation token">,</span> pattern<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```js
+var pattern = {
+    get: function () {
+        return 'I always return this string, whatever you have assigned';
+    },
+    set: function () {
+        this.myname = 'this is my name string';
+    }
+};
 
 
-<span class="keyword token">var</span> instance <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">TestDefineSetAndGet</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-instance<span class="punctuation token">.</span>myproperty <span class="operator token">=</span> <span class="string token">'test'</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>instance<span class="punctuation token">.</span>myproperty<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// I always return this string, whatever you have assigned</span>
+function TestDefineSetAndGet() {
+    Object.defineProperty(this, 'myproperty', pattern);
+}
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>instance<span class="punctuation token">.</span>myname<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// this is my name string</span></code></pre>
 
-<h2 id="Especificaciones">Especificaciones</h2>
+var instance = new TestDefineSetAndGet();
+instance.myproperty = 'test';
+console.log(instance.myproperty); // I always return this string, whatever you have assigned
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+console.log(instance.myname); // this is my name string
+```
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Especificaciones
+
+| Specification                                                                                        | Status                   | Comment                                              |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}                 | {{Spec2('ES5.1')}} | Initial definition. Implemented in JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}} | {{Spec2('ES6')}}     |                                                      |
+
+## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Object.defineProperty")}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li>{{jsxref("Object.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
- <li>{{jsxref("Object.prototype.watch()")}}</li>
- <li>{{jsxref("Object.prototype.unwatch()")}}</li>
- <li>{{jsxref("Operators/get", "get")}}</li>
- <li>{{jsxref("Operators/set", "set")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples">Additional <code>Object.defineProperty</code> examples</a></li>
-</ul>
+- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.defineProperties()")}}
+- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Object.prototype.watch()")}}
+- {{jsxref("Object.prototype.unwatch()")}}
+- {{jsxref("Operators/get", "get")}}
+- {{jsxref("Operators/set", "set")}}
+- {{jsxref("Object.create()")}}
+- [Additional `Object.defineProperty` examples](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples)

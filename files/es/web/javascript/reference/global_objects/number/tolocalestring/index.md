@@ -8,50 +8,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>toLocaleString()</code></strong> retorna una representacion localizada del número en forma de texto</p>
+El método **`toLocaleString()`** retorna una representacion localizada del número en forma de texto
 
-<div>{{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
 
+## Syntax
 
+    numObj.toLocaleString([locales [, options]])
 
-<h2 id="Syntax">Syntax</h2>
+### Parametros
 
-<pre class="syntaxbox notranslate"><code><em>numObj</em>.toLocaleString(</code><code>[locales [, options]])</code></pre>
+Los argumentos `locales` y `options` personalizan el comportamiento de la funcion y permite especificar el lenguaje cuyo formato deberá ser utilizado. En implementaciones, que ignoran los argumentos `locales` y `options` la localización utilizada y la forma del texto retornado es enteramente dependiente de la implementación.
 
-<h3 id="Parametros">Parametros</h3>
+Mira el [constructor Intl.NumberFormat()](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) para ver más detalles sobre los parámetros y como se utilizan.
 
-<p>Los argumentos <code>locales</code> y <code>options</code> personalizan el comportamiento de la funcion y permite especificar el lenguaje cuyo formato deberá ser utilizado. En implementaciones, que ignoran los argumentos <code>locales</code> y <code>options</code> la localización utilizada y la forma del texto retornado es enteramente dependiente de la implementación.</p>
+### Valor de retorno
 
-<div>Mira el  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat">constructor Intl.NumberFormat()</a> para ver más detalles sobre los parámetros y como se utilizan.</div>
+Un texto con una representación localizada del número dado.
 
+## Performance
 
+Cuando formateas una gran cantidad de números, es mejor crear un objeto {{jsxref("NumberFormat")}} y utilizar la función {{jsxref("NumberFormat.format")}}.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Ejemplos
 
-<p>Un texto con una representación localizada del número dado.</p>
+### Usando `toLocaleString`
 
-<h2 id="Performance">Performance</h2>
+Un uso básico sin especificar `locales`, retorna un texto formateado con el `locales` y `options` por defecto.
 
-<p>Cuando formateas una gran cantidad de números, es mejor crear un objeto {{jsxref("NumberFormat")}} y utilizar la función {{jsxref("NumberFormat.format")}}.</p>
-
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<h3 id="Usando_toLocaleString">Usando <code>toLocaleString</code></h3>
-
-<p>Un uso básico sin especificar <code>locales</code>, retorna un texto formateado con el <code>locales</code> y <code>options</code> por defecto.</p>
-
-<pre class="brush: js notranslate">var number = 3500;
+```js
+var number = 3500;
 
 console.log(number.toLocaleString()); // Muestra "3,500" si se está utilizando la localización U.S. English
-</pre>
+```
 
-<h3 id="Verificando_el_soporte_de_los_parámetros_locales_y_options">Verificando el soporte de los parámetros <code>locales</code> y <code>options</code></h3>
+### Verificando el soporte de los parámetros `locales` y `options`
 
-<p>Los parámetros <code>locales</code> y <code>options</code> no son soportados aún por todos los navegadores. Para verificar el soporte en ES5.1 y posteriores implementaciones, se puede utilizar el hecho que los tags inválidos en la localización son rechazados con una excepción {{jsxref("Global_Objects/RangeError", "RangeError")}}:</p>
+Los parámetros `locales` y `options` no son soportados aún por todos los navegadores. Para verificar el soporte en ES5.1 y posteriores implementaciones, se puede utilizar el hecho que los tags inválidos en la localización son rechazados con una excepción {{jsxref("Global_Objects/RangeError", "RangeError")}}:
 
-<pre class="brush: js notranslate">function toLocaleStringSupportsLocales() {
+```js
+function toLocaleStringSupportsLocales() {
   var number = 0;
   try {
     number.toLocaleString('i');
@@ -60,30 +58,32 @@ console.log(number.toLocaleString()); // Muestra "3,500" si se está utilizando 
   }
   return false;
 }
-</pre>
+```
 
-<p>Antes de ES5.1, las implementaciones no requieren devolver una exepción {{jsxref("Global_Objects/RangeError", "RangeError")}} cuando <code>toLocaleString </code>es llamado sin argumentos.</p>
+Antes de ES5.1, las implementaciones no requieren devolver una exepción {{jsxref("Global_Objects/RangeError", "RangeError")}} cuando `toLocaleString `es llamado sin argumentos.
 
-<p>Para verificar que funciona todos los navegadores, incluyendo aquellos que soportan ECMA-262, anterior a ES5.1, se puede verificar por las funcionalidades especificadas en ECMA-402 que requieren soportar opciones regionales para <code>Number.prototype.toLocaleString</code> directamente:</p>
+Para verificar que funciona todos los navegadores, incluyendo aquellos que soportan ECMA-262, anterior a ES5.1, se puede verificar por las funcionalidades especificadas en ECMA-402 que requieren soportar opciones regionales para `Number.prototype.toLocaleString` directamente:
 
-<pre class="brush: js notranslate">function toLocaleStringSupportsOptions() {
-  return !!(typeof Intl == 'object' &amp;&amp; Intl &amp;&amp; typeof Intl.NumberFormat == 'function');
+```js
+function toLocaleStringSupportsOptions() {
+  return !!(typeof Intl == 'object' && Intl && typeof Intl.NumberFormat == 'function');
 }
-</pre>
+```
 
-<p>Esta validación del objeto global <code>Intl</code> , verificar que no es <code>null</code> (nulo) y que tiene la propiedad <code>NumberFormat</code> que es una función.</p>
+Esta validación del objeto global `Intl` , verificar que no es `null` (nulo) y que tiene la propiedad `NumberFormat` que es una función.
 
-<h3 id="Utilizando_locales">Utilizando <code>locales</code></h3>
+### Utilizando `locales`
 
-<p>Este ejemplo muestra alguna de las variaciones en los formatos de números localizados. Para obtener el formato de la localización utilizada en la interfaz del usuario de tu aplicación, asegurate de especificar la localización (y de ser posible alguna localización de respaldo) utilizando el parámetro <code>locales</code>:</p>
+Este ejemplo muestra alguna de las variaciones en los formatos de números localizados. Para obtener el formato de la localización utilizada en la interfaz del usuario de tu aplicación, asegurate de especificar la localización (y de ser posible alguna localización de respaldo) utilizando el parámetro `locales`:
 
-<pre class="brush: js notranslate">var number = 123456.789;
+```js
+var number = 123456.789;
 
 // Aleman utiliza comas como separador decimal y puntos miles
 console.log(number.toLocaleString('de-DE'));
 // → 123.456,789
 
-// Arabe en la mayoría de países de habla Arabe utilizan numerales <a href="https://en.wikipedia.org/wiki/Eastern_Arabic_numerals">Eastern Arabic</a>
+// Arabe en la mayoría de países de habla Arabe utilizan numerales Eastern Arabic
 console.log(number.toLocaleString('ar-EG'));
 // → ١٢٣٤٥٦٫٧٨٩
 
@@ -99,13 +99,14 @@ console.log(number.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
 // Balinese, incluye un lenguaje de respaldo, en este caso Indonesio
 console.log(number.toLocaleString(['ban', 'id']));
 // → 123.456,789
-</pre>
+```
 
-<h3 id="Utilizando_options">Utilizando <code>options</code></h3>
+### Utilizando `options`
 
-<p>El resultado proveido por  <code>toLocaleString</code> puede ser personalizado utilizando el parámetro <code>options</code> :</p>
+El resultado proveido por `toLocaleString` puede ser personalizado utilizando el parámetro `options` :
 
-<pre class="brush: js notranslate">var number = 123456.789;
+```js
+var number = 123456.789;
 
 // solicitar un formato de moneda
 console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
@@ -125,30 +126,19 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
 // → "30,000.65" donde English es el lenguaje por defecto, o
 // → "30.000,65" donde Aleman es el lenguaje por defecto, o
 // → "30 000,65" donde French es el lenguaje por defecto
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sup-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     |
+| {{SpecName('ES Int Draft', '#sup-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}} |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<p>{{Compat("javascript.builtins.Number.toLocaleString")}}</p>
+{{Compat("javascript.builtins.Number.toLocaleString")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toString()")}}

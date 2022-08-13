@@ -3,60 +3,39 @@ title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 translation_of: Web/API/Node/isSameNode
 ---
-<div>{{APIRef("DOM")}} {{Obsolete_header}}</div>
+{{APIRef("DOM")}} {{Obsolete_header}}
 
-<p><code><strong>Node.isSameNode()</strong></code> comprueba si dos nodos son iguales, es decir si hacen referencia al mismo objecto.</p>
+**`Node.isSameNode()`** comprueba si dos nodos son iguales, es decir si hacen referencia al mismo objecto.
 
-<div class="note">
-<p><strong>Warning:</strong> This method is no longer implemented in recent browsers.</p>
+> **Nota:** **Warning:** This method is no longer implemented in recent browsers.```js
+> // Instead of using
+> node1.isSameNode(node2)
+>
+> // use
+> node1 === node2 // or
+> node1 == node2
+>
+> ```
+>
+> ```
 
-<pre class="brush:js">// Instead of using
-node1.isSameNode(node2)
+## Sintaxis
 
-// use
-node1 === node2 // or
-node1 == node2</pre>
-</div>
+    var isSameNode = node.isSameNode(other);
 
-<h2 id="Sintaxis">Sintaxis</h2>
+- `other` El nodo contra el cual se realiza la comparación.
 
-<pre class="syntaxbox">var <em>isSameNode</em> = <em>node</em>.isSameNode(<em>other</em>);
-</pre>
+## Especificaciones
 
-<ul>
- <li><code>other</code> El nodo contra el cual se realiza la comparación.</li>
-</ul>
+| Specification                                                                                        | Status                           | Comment                         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------- |
+| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                             | {{Spec2('DOM WHATWG')}} | Eliminado de la especificación. |
+| {{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}} | {{Spec2('DOM3 Core')}}     | Definición inicial              |
 
-<h2 id="Especificaciones">Especificaciones</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-node', 'Node')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Eliminado de la especificación.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
 {{Compat("api.Node.isSameNode")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>{{domxref("Node.isEqualNode()")}}</li>
-</ul>
+- {{domxref("Node.isEqualNode()")}}

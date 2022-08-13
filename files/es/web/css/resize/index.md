@@ -3,17 +3,18 @@ title: resize
 slug: Web/CSS/resize
 translation_of: Web/CSS/resize
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad resize de CSS permite controlar la capacidad de cambio de tamaño de un elemento.</p>
+La propiedad resize de CSS permite controlar la capacidad de cambio de tamaño de un elemento.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 resize: none;
 resize: both;
 resize: horizontal;
@@ -23,55 +24,57 @@ resize: vertical;
 resize: inherit;
 resize: initial;
 resize: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>none</code></dt>
- <dd>El elemento no efrece método para que el usuario controle el cambio de tamaño del elemento.</dd>
- <dt><code>both</code></dt>
- <dd>El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento el cual puede ser tanto horizontal como verticalmente.</dd>
- <dt><code>horizontal</code></dt>
- <dd>El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo horintalmente.</dd>
- <dt><code>vertical</code></dt>
- <dd>El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo verticalmente.</dd>
-</dl>
+- `none`
+  - : El elemento no efrece método para que el usuario controle el cambio de tamaño del elemento.
+- `both`
+  - : El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento el cual puede ser tanto horizontal como verticalmente.
+- `horizontal`
+  - : El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo horintalmente.
+- `vertical`
+  - : El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo verticalmente.
 
-<div class="note"><strong>Nota:</strong> <code>resize</code> no aplica abloques en los cuales la propiedad {{cssxref("overflow")}} es configurada como <code>visible</code>.</div>
+> **Nota:** `resize` no aplica abloques en los cuales la propiedad {{cssxref("overflow")}} es configurada como `visible`.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Deshabilitando_la_capacidad_de_cambio_de_tamaño_de_areas_de_texto">Deshabilitando la capacidad de cambio de tamaño de areas de texto</h3>
+### Deshabilitando la capacidad de cambio de tamaño de areas de texto
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>Por defecto, los elementos {{HTMLElement("textarea")}} permiten cambiar el tamaño en {{gecko("2.0")}} (Firefox 4). Se puede anular este comportamiento con el CSS mostrado abajo:</p>
+Por defecto, los elementos {{HTMLElement("textarea")}} permiten cambiar el tamaño en {{gecko("2.0")}} (Firefox 4). Se puede anular este comportamiento con el CSS mostrado abajo:
 
-<pre class="brush: css">textarea.example {
+```css
+textarea.example {
   resize: none; /* disables resizability */
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;textarea class="example"&gt;Type some text here.&lt;/textarea&gt;</pre>
+```html
+<textarea class="example">Type some text here.</textarea>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Deshabilitando_la_capacidad_de_cambio_de_tamaño_de_areas_de_texto","200","100")}}</p>
+{{EmbedLiveSample("Deshabilitando_la_capacidad_de_cambio_de_tamaño_de_areas_de_texto","200","100")}}
 
-<h3 id="Utilizando_resize_con_elementos_arbitrarios">Utilizando resize con elementos arbitrarios</h3>
+### Utilizando resize con elementos arbitrarios
 
-<p>Se puede utilizar la propiedad resize para permitir a cualquier elemento ofrecer el mecanismo para cambiar de tamaño. En el ejemplo de abajo, un bloque {{HTMLElement("div")}} contiene un parrafo (elemento {{HTMLElement("p")}}) que permite cambiar su tamaño:</p>
+Se puede utilizar la propiedad resize para permitir a cualquier elemento ofrecer el mecanismo para cambiar de tamaño. En el ejemplo de abajo, un bloque {{HTMLElement("div")}} contiene un parrafo (elemento {{HTMLElement("p")}}) que permite cambiar su tamaño:
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.resizable {
+```css
+.resizable {
   resize: both;
   overflow: scroll;
   border: 1px solid black;
@@ -86,47 +89,33 @@ p {
   height: 200px;
   width: 200px;
 }
-</pre>
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="resizable"&gt;
-  &lt;p class="resizable"&gt;
+```html
+<div class="resizable">
+  <p class="resizable">
     This paragraph is resizable, because the CSS resize property is set to 'both' on this
     element.
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
+  </p>
+</div>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Utilizando_resize_con_elementos_arbitrarios","450","450")}}</p>
+{{EmbedLiveSample("Utilizando_resize_con_elementos_arbitrarios","450","450")}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Espacificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#resize', 'resize')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Espacificación                                                       | Estado                               | Comentario |
+| -------------------------------------------------------------------- | ------------------------------------ | ---------- |
+| {{SpecName('CSS3 Basic UI', '#resize', 'resize')}} | {{Spec2('CSS3 Basic UI')}} |            |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de Navegador</h2>
+## Compatibilidad de Navegador
 
 {{Compat("css.properties.resize")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{HTMLElement("textarea")}}</li>
-</ul>
+- {{HTMLElement("textarea")}}

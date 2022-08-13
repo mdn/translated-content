@@ -3,11 +3,12 @@ title: border-end-end-radius
 slug: Web/CSS/border-end-end-radius
 translation_of: Web/CSS/border-end-end-radius
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a>  <strong><code>border-end-end-radius</code></strong> define un radio de borde lógico en un elemento, que se asigna a un radio de borde físico que depende de los elementos {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.</p>
+La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`border-end-end-radius`** define un radio de borde lógico en un elemento, que se asigna a un radio de borde físico que depende de los elementos {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 /* With one value the corner will be a circle */
 border-end-end-radius: 10px;
 border-end-end-radius: 1em;
@@ -19,35 +20,35 @@ border-end-end-radius: 1em 2em;
 border-end-end-radius: inherit;
 border-end-end-radius: initial;
 border-end-end-radius: unset;
-</pre>
+```
 
-<p>Por ejemplo, en un modo de escritura  <code>horizontal-tb</code>, esta propiedad corresponde a la propiedad {{CSSxRef("border-bottom-right-radius")}}.</p>
+Por ejemplo, en un modo de escritura `horizontal-tb`, esta propiedad corresponde a la propiedad {{CSSxRef("border-bottom-right-radius")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Indica el tamaño del radio del círculo o los ejes semi mayor y semi menor de la elipse. Como longitud absoluta, se puede expresar en cualquier unidad permitida por el tipo de datos CSS {{cssxref ("&lt;length&gt;")}}. Los porcentajes para el eje horizontal se refieren al ancho de la caja, los porcentajes para el eje vertical se refieren a la altura de la caja. Los valores negativos no son válidos.</dd>
-</dl>
+- `<length-percentage>`
+  - : Indica el tamaño del radio del círculo o los ejes semi mayor y semi menor de la elipse. Como longitud absoluta, se puede expresar en cualquier unidad permitida por el tipo de datos CSS {{cssxref ("&lt;length&gt;")}}. Los porcentajes para el eje horizontal se refieren al ancho de la caja, los porcentajes para el eje vertical se refieren a la altura de la caja. Los valores negativos no son válidos.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{CSSSyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example</p>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
@@ -59,40 +60,24 @@ border-end-end-radius: unset;
   padding: 10px;
   background-color: #fff;
   border-end-end-radius: 10px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
+{{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-end-end-radius", "border-end-end-radius")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                   | Estado                                           | Comentario          |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-border-end-end-radius", "border-end-end-radius")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
+{{Compat("css.properties.border-end-end-radius")}}
 
+## Mira también
 
-<p>{{Compat("css.properties.border-end-end-radius")}}</p>
-
-<h2 id="Mira_también">Mira también</h2>
-
-<ul>
- <li>La propiedad física asignada: {{CSSxRef("border-bottom-right-radius")}}</li>
- <li>{{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}</li>
-</ul>
+- La propiedad física asignada: {{CSSxRef("border-bottom-right-radius")}}
+- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

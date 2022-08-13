@@ -1,25 +1,23 @@
 ---
 title: ':-moz-broken'
-slug: 'Web/CSS/:-moz-broken'
+slug: Web/CSS/:-moz-broken
 tags:
   - CSS
   - NeedsCompatTable
   - NeedsExample
   - No estandar
   - Referencia CSS
-translation_of: 'Web/CSS/:-moz-broken'
+translation_of: Web/CSS/:-moz-broken
 ---
-<div>{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}</div>
+{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <a href="/es/docs/Web/CSS">CSS</a>  <code>:-moz-broken</code>  selecciona elementos con enlaces a imágenes no válidos</p>
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-broken` selecciona elementos con enlaces a imágenes no válidos
 
-<p>Este selector está pensado sobre todo para desarrolladores de temas.</p>
+Este selector está pensado sobre todo para desarrolladores de temas.
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>{{bug("11011")}}</li>
- <li>{{cssxref("-moz-alt-content")}}</li>
-</ul>
+- {{bug("11011")}}
+- {{cssxref("-moz-alt-content")}}

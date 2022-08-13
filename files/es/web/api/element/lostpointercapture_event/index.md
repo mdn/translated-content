@@ -12,26 +12,24 @@ translation_of: Web/API/GlobalEventHandlers/onlostpointercapture
 translation_of_original: Web/API/Element/onlostpointercapture
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p><code>onlostpointercapture</code> es una propiedad {{event("Event_handlers", "event handler")}} de la interfaz {{domxref("Element")}}  <span id="result_box" lang="es"><span>que devuelve</span> <span>el controlador de eventos</span> <span>(función</span><span>)</span> <span>para el evento tipo </span></span>{{event("lostpointercapture")}} .</p>
+`onlostpointercapture` es una propiedad {{event("Event_handlers", "event handler")}} de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo {{event("lostpointercapture")}} .
 
-<h2 id="Syntax" name="Syntax">Síntasix</h2>
+## Síntasix
 
-<pre class="eval">var lostCaptureHandler = target.onlostpointercpature;
-</pre>
+    var lostCaptureHandler = target.onlostpointercpature;
 
-<h3 id="Return_Value" name="Return_Value">Valor de Retorno</h3>
+### Valor de Retorno
 
-<dl>
- <dt><code>lostCaptureHandler</code></dt>
- <dd>El controlador de eventos  <em>lostpointercapture</em> para el elemento <code>target</code>.</dd>
-</dl>
+- `lostCaptureHandler`
+  - : El controlador de eventos _lostpointercapture_ para el elemento `target`.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function overHandler(ev) {
  // Determine the target event's lostpointercapture handler
  var lostCaptureHandler = ev.target.onlostpointercapture;
@@ -40,41 +38,24 @@ function init() {
  var el=document.getElementById("target");
  el.onpointerover = overHandler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#widl-Element-onlostpointercapture', 'onlostpointercapture')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Versión no estable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#widl-Element-onlostpointercapture', 'onlostpointercapture')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                               | Estado                                   | Comentario          |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName('Pointer Events 2','#widl-Element-onlostpointercapture', 'onlostpointercapture')}} | {{Spec2('Pointer Events 2')}} | Versión no estable. |
+| {{SpecName('Pointer Events', '#widl-Element-onlostpointercapture', 'onlostpointercapture')}} | {{Spec2('Pointer Events')}}     | Definición inicial. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad en los Navegadores</h2>
+## Compatibilidad en los Navegadores
 
 {{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{ event("lostpointercapture") }}</li>
-</ul>
+- {{ event("lostpointercapture") }}

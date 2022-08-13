@@ -9,87 +9,68 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/acosh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La función <strong><code>Math.acosh()</code></strong> retorna el arco coseno hiperbólico de un número que es: </p>
+La función **`Math.acosh()`** retorna el arco coseno hiperbólico de un número que es:
 
-<p><math display="block"><semantics><annotation encoding="TeX">Para todo x mayor ó igual a 1,se cumple que : la funcion Math.acosh(x) = arcosh(x) = al único y mayor ó igual a 0 ; tal que; cosh(y) = x</annotation></semantics></math></p>
+<math display="block"><semantics><annotation encoding="TeX">Para todo x mayor ó igual a 1,se cumple que : la funcion Math.acosh(x) = arcosh(x) = al único y mayor ó igual a 0 ; tal que; cosh(y) = x</annotation></semantics></math>
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>Math.acosh(<var>x</var>)</code></pre>
+    Math.acosh(x)
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Un número.</dd>
-</dl>
+- `x`
+  - : Un número.
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+### Valor retornado
 
-<p>El arco coseno hiperbólico del número dado. Si el número es menor que 1, {{jsxref("NaN")}}.</p>
+El arco coseno hiperbólico del número dado. Si el número es menor que 1, {{jsxref("NaN")}}.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Como <code>acosh()</code> es un método estático de <code>Math</code>, siempre debe ser usado como <code>Math.acosh()</code>, en vez de como un método de un objeto <code>Math</code> creado (<code>Math</code> no es constructor).</p>
+Como `acosh()` es un método estático de `Math`, siempre debe ser usado como `Math.acosh()`, en vez de como un método de un objeto `Math` creado (`Math` no es constructor).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Utilizando_Math.acosh()">Utilizando <code>Math.acosh()</code></h3>
+### Utilizando `Math.acosh()`
 
-<pre class="brush: js">Math.acosh(-1);  // NaN
+```js
+Math.acosh(-1);  // NaN
 Math.acosh(0);   // NaN
 Math.acosh(0.5); // NaN
 Math.acosh(1);   // 0
 Math.acosh(2);   // 1.3169578969248166
-</pre>
+```
 
-<p>Para valores menores que 1 <code>Math.acosh()</code> retorna {{jsxref("NaN")}}.</p>
+Para valores menores que 1 `Math.acosh()` retorna {{jsxref("NaN")}}.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Para todo <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x mayor ó igual a 1</annotation></semantics></math>, se tiene que el arcosh(x) <math><semantics><annotation encoding="TeX">= ln(x + la raiz cuadrada de(x cuadrado - 1)) </annotation></semantics></math> y esto puede ser emulado con la siguiente funcion:</p>
+Para todo <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x mayor ó igual a 1</annotation></semantics></math>, se tiene que el arcosh(x) <math><semantics><annotation encoding="TeX">= ln(x + la raiz cuadrada de(x cuadrado - 1)) </annotation></semantics></math> y esto puede ser emulado con la siguiente funcion:
 
-<pre class="brush: js">Math.acosh = Math.acosh || function(x) {
+```js
+Math.acosh = Math.acosh || function(x) {
   return Math.log(x + Math.sqrt(x * x - 1));
 };
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.acosh', 'Math.acosh')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                               | Status                       | Comentario          |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-math.acosh', 'Math.acosh')}}         | {{Spec2('ES6')}}         | Definición inicial. |
+| {{ SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+## Compatibilidad de navegador
 
+{{Compat("javascript.builtins.Math.acosh")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Math.acosh")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Math.asinh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.cosh()")}}</li>
- <li>{{jsxref("Math.sinh()")}}</li>
- <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.cosh()")}}
+- {{jsxref("Math.sinh()")}}
+- {{jsxref("Math.tanh()")}}

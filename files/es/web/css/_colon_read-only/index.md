@@ -1,19 +1,20 @@
 ---
 title: ':read-only'
-slug: 'Web/CSS/:read-only'
+slug: Web/CSS/:read-only
 tags:
   - CSS
   - Diseño
   - Pseudo-clase
   - Referencia
   - Web
-translation_of: 'Web/CSS/:read-only'
+translation_of: Web/CSS/:read-only
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/es/docs/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:read-only</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa un elemento que ya no es editable por el usuario (como un <a href="/es/docs/Web/HTML/Element/input">input</a>).</p>
+La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:read-only`** de [CSS](/es/docs/Web/CSS) representa un elemento que ya no es editable por el usuario (como un [input](/es/docs/Web/HTML/Element/input)).
 
-<pre class="brush: css no-line-numbers">/* Selecciona cualquier &lt;input&gt; que está en modo de solo lectura */
+```css
+/* Selecciona cualquier <input> que está en modo de solo lectura */
 /* Soportado en Firefox usando prefijo */
 input:-moz-read-only {
   background-color: #ccc;
@@ -25,76 +26,55 @@ p:read-only {
 }
 input:read-only {
   background-color: #ccc;
-}   </pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: El selector no solo selecciona {{htmlElement("input")}} marcados como  {{htmlattrxref("readonly", "input")}}; también selecccionará cualquier elemento que no pueda ser editar por el usuario.  Lea sobre el atributo <a href="/es/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a>.</p>
-</div>
+> **Nota:** El selector no solo selecciona {{htmlElement("input")}} marcados como {{htmlattrxref("readonly", "input")}}; también selecccionará cualquier elemento que no pueda ser editar por el usuario. Lea sobre el atributo [contenteditable](/es/docs/Web/HTML/Global_attributes/contenteditable).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">:read-only</pre>
+    :read-only
 
-<h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="text" value="Aquí puedes poner lo que quieras."&gt;
-&lt;input type="text" value="Campo de solo lectura." readonly&gt;
-&lt;p&gt;Este es un párrafo normal.&lt;/p&gt;
-&lt;p contenteditable="true"&gt;Puedes editar este párrafo, ¡inténtalo!&lt;/p&gt;</pre>
+```html
+<input type="text" value="Aquí puedes poner lo que quieras.">
+<input type="text" value="Campo de solo lectura." readonly>
+<p>Este es un párrafo normal.</p>
+<p contenteditable="true">Puedes editar este párrafo, ¡inténtalo!</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input { min-width: 25em; }
+```css
+input { min-width: 25em; }
 input:-moz-read-only { background: cyan; }
 input:read-only { background: cyan; }
 
 p:-moz-read-only { background: lightgray; }
 p:read-only { background: lightgray; }
 p[contenteditable="true"] { color: blue; }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Ejemplo")}}</p>
+{{EmbedLiveSample("Ejemplo")}}
 
-<h2 class="editable" id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', '#selector-read-only', ':read-only') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Ningún cambio.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', '#selector-read-only', ':read-only') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td>Define la semántica relacionada con HTML y de la validación de las restricciones.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-only') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Define la pseudoclase, pero no la semántica asociada.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                                   | Comentarios                                                                       |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', '#selector-read-only', ':read-only') }} | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                                                    |
+| {{ SpecName('HTML5 W3C', '#selector-read-only', ':read-only') }}     | {{ Spec2('HTML5 W3C') }}         | Define la semántica relacionada con HTML y de la validación de las restricciones. |
+| {{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-only') }}         | {{ Spec2('CSS4 Selectors') }} | Define la pseudoclase, pero no la semántica asociada.                             |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("css.selectors.read-only")}}</p>
+{{Compat("css.selectors.read-only")}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{cssxref(":read-write")}}</li>
- <li>Atributo HTML {{htmlattrxref("contenteditable")}}</li>
-</ul>
+- {{cssxref(":read-write")}}
+- Atributo HTML {{htmlattrxref("contenteditable")}}

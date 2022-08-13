@@ -3,36 +3,34 @@ title: Document.scripts
 slug: Web/API/Document/scripts
 translation_of: Web/API/Document/scripts
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Devuelve una lista de elementos {{HTMLElement("script")}} ubicados en el documento. El objeto devuelto es una colección {{domxref("HTMLCollection")}}.</p>
+Devuelve una lista de elementos {{HTMLElement("script")}} ubicados en el documento. El objeto devuelto es una colección {{domxref("HTMLCollection")}}.
 
-<h2 id="Syntax" name="Syntax">Sintáxis</h2>
+## Sintáxis
 
-<pre class="syntaxbox"><code>var <em>scriptList</em></code> = document.scripts;
-</pre>
+    var scriptList = document.scripts;
 
-<p>El objeto <code>scriptList</code> devuelto es una {{domxref("HTMLCollection")}}. Se puede utilizar como un array corriente para acceder a sus elementos.</p>
+El objeto `scriptList` devuelto es una {{domxref("HTMLCollection")}}. Se puede utilizar como un array corriente para acceder a sus elementos.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Este ejemplo busca demostrar la existencia de objetos {{HTMLElement("script")}} en el documento.</p>
+Este ejemplo busca demostrar la existencia de objetos {{HTMLElement("script")}} en el documento.
 
-<pre class="brush:js">var scripts = document.scripts;
+```js
+var scripts = document.scripts;
 
 if (scripts.length) {
   alert("This page has scripts!");
 }
-</pre>
+```
 
-<h2 id="Specification" name="Specification">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.Document.scripts")}}
 
-<h2 id="Specification" name="Specification"> </h2>
+##
 
-<h2 id="Specification" name="Specification">Especificaciones</h2>
+## Especificaciones
 
-<ul>
- <li>{{spec("http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-scripts", "DOM: document scripts")}}</li>
-</ul>
+- {{spec("http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-scripts", "DOM: document scripts")}}

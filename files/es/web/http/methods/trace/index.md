@@ -3,71 +3,34 @@ title: TRACE
 slug: Web/HTTP/Methods/TRACE
 translation_of: Web/HTTP/Methods/TRACE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El <strong>método HTTP <code>TRACE</code> </strong> efectúa una prueba de bucle de mensaje por el camino al recurso objetivo proporcionando un útil mecanismo de debugging.</p>
+El **método HTTP `TRACE` **efectúa una prueba de bucle de mensaje por el camino al recurso objetivo proporcionando un útil mecanismo de debugging.
 
-<p>El destino final de la petición debería devolver el mensaje recibido, excluyendo algunos de los campos descritos abajo, de vuelta al cliente como el mensaje body y una respuesta 200 (OK) con un {{httpheader("Content-Type")}} de  <code>message/http</code>. El destinatario final es o el servidor de origen o el primer servidor en recibir un {{httpheader("Max-Forwards")}} de valor 0 en la petición.</p>
+El destino final de la petición debería devolver el mensaje recibido, excluyendo algunos de los campos descritos abajo, de vuelta al cliente como el mensaje body y una respuesta 200 (OK) con un {{httpheader("Content-Type")}} de `message/http`. El destinatario final es o el servidor de origen o el primer servidor en recibir un {{httpheader("Max-Forwards")}} de valor 0 en la petición.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Request has body</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Successful response has body</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe")}}</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent")}}</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Allowed in HTML forms</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| Request has body                     | No  |
+| ------------------------------------ | --- |
+| Successful response has body         | No  |
+| {{Glossary("Safe")}}         | Yes |
+| {{Glossary("Idempotent")}} | Yes |
+| {{Glossary("Cacheable")}}     | No  |
+| Allowed in HTML forms                | No  |
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">TRACE /index.html
-</pre>
+    TRACE /index.html
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7231", "TRACE", "4.3.8")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Title                                                         |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "TRACE", "4.3.8")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilidad_con_Buscadores">Compatibilidad con Buscadores </h2>
+## Compatibilidad con Buscadores
 
-<p>{{Compat("http.methods.TRACE")}}</p>
+{{Compat("http.methods.TRACE")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP methods</a></li>
-</ul>
-
-<p> </p>
+- [HTTP methods](/es/docs/Web/HTTP/Methods)

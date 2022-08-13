@@ -8,53 +8,28 @@ tags:
 translation_of: Web/HTML/Global_attributes/hidden
 original_slug: Web/HTML/Atributos_Globales/hidden
 ---
-<p class="note">{{HTMLSidebar("Global_attributes")}}</p>
+> **Nota:** {{HTMLSidebar("Global_attributes")}}
 
-<p>El <a href="/es/docs/Web/HTML/Atributos_Globales/">atributo global</a> <strong>hidden</strong> es un atributo Booleano que indica que el elemento todavía no está , o ya no es relevante . Por ejemplo , puede ser usado para ocultar elelementos de la página que no pueden ser usados hasta que el proceso de login se haya completado . El explorador no dibujará dichos elementos .</p>
+El [atributo global](/es/docs/Web/HTML/Atributos_Globales/) **hidden** es un atributo Booleano que indica que el elemento todavía no está , o ya no es relevante . Por ejemplo , puede ser usado para ocultar elelementos de la página que no pueden ser usados hasta que el proceso de login se haya completado . El explorador no dibujará dichos elementos .
 
-<p>Esta atributo no debe de usarse para ocultar contenido que pudera ser legítimamente mostrado . Por ejemplo , no debe de ser usado para ocultar paneles de pestañas o una interfaz con pestañas , ya que esta es una decisión de estilo y otro estilo mostrandolos lo llevaría a una página perfectamente mostrada .</p>
+Esta atributo no debe de usarse para ocultar contenido que pudera ser legítimamente mostrado . Por ejemplo , no debe de ser usado para ocultar paneles de pestañas o una interfaz con pestañas , ya que esta es una decisión de estilo y otro estilo mostrandolos lo llevaría a una página perfectamente mostrada .
 
-<p>Los elementos ocultos no deben de ser vinculados desde elementos no ocultos y elementos que son descendientes de un elemento oculto todavía activo ;  lo que significa que los elementos del script pueden todavía ejecutarse y los elementos de formulario pueden todavía enviarse .</p>
+Los elementos ocultos no deben de ser vinculados desde elementos no ocultos y elementos que son descendientes de un elemento oculto todavía activo ; lo que significa que los elementos del script pueden todavía ejecutarse y los elementos de formulario pueden todavía enviarse .
 
-<div class="note">
-<p><strong>Nota:</strong>  Cambiando el valor de la propiedad CSS {{cssxref("display")}} de un elemento con el atributo <code>hidden</code>  sobrecarga el comportamiento . For ejemplo , un elemeneto diseñado <code>display : flex </code>será mostrado en la pantalla independientemente de que el atributo <code>hidden </code>esté presente .</p>
-</div>
+> **Nota:** Cambiando el valor de la propiedad CSS {{cssxref("display")}} de un elemento con el atributo `hidden` sobrecarga el comportamiento . For ejemplo , un elemeneto diseñado `display : flex `será mostrado en la pantalla independientemente de que el atributo `hidden `esté presente .
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>
-    <p>Define el dibujado por default sugerido del atributo hidden usando CSS</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estatus                          | Comentario                                                             |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}} | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}  |
+| {{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}     | {{Spec2('HTML WHATWG')}} | Define el dibujado por default sugerido del atributo hidden usando CSS |
+| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}             | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial   |
 
-<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores</h2>
+## Compatibilidad en exploradores
 
 {{Compat("html.global_attributes.hidden")}}
 
-<h2 id="Ver_también">Ver también </h2>
+## Ver también
 
-<ul>
- <li><a href="/es/docs/Web/HTML/Atributos_Globales/">atributos globales</a></li>
-</ul>
+- [atributos globales](/es/docs/Web/HTML/Atributos_Globales/)

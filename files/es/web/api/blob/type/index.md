@@ -10,23 +10,24 @@ tags:
   - Referencia
 translation_of: Web/API/Blob/type
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>La propiedad <strong><code>type</code></strong> de un objeto <code><a href="/en-US/docs/Web/API/Blob">Blob</a></code> proporciona el tipo MIME del archivo. Retorna una cadena vacía si el tipo no puede ser determinado.</p>
+La propiedad **`type`** de un objeto [`Blob`](/en-US/docs/Web/API/Blob) proporciona el tipo MIME del archivo. Retorna una cadena vacía si el tipo no puede ser determinado.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var tipo = <var>instanceOfFile</var>.type</pre>
+    var tipo = instanceOfFile.type
 
-<h2 id="Valor">Valor</h2>
+## Valor
 
-<p>Una cadena</p>
+Una cadena
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush:js">var i, fileInput, files, allowedFileTypes;
+```js
+var i, fileInput, files, allowedFileTypes;
 
-// fileInput es un HTMLInputElement: &lt;input type="file" multiple id="myfileinput"&gt;
+// fileInput es un HTMLInputElement: <input type="file" multiple id="myfileinput">
 fileInput = document.getElementById("myfileinput");
 
 // files es un objeto FileList (similar a NodeList)
@@ -35,37 +36,24 @@ files = fileInput.files;
 // nuestra aplicacion solo acepta imagenes *.png, *.jpeg y *.gif
 allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
 
-for (i = 0; i &lt; files.length; i++) {
+for (i = 0; i < files.length; i++) {
   // Prueba si file.type es un tipo de archivo permitido.
-  if (allowedFileTypes.indexOf(<strong>files[i].type</strong>) &gt; -1) {
+  if (allowedFileTypes.indexOf(files[i].type) > -1) {
     // El tipo de archivo es uno de los permitidos. Hacer algo aquí.
   }
 });
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Espeficicaciones</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#dfn-type', 'type')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Definicion inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Espeficicaciones                                             | Estado                       | Comentario          |
+| ------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('File API', '#dfn-type', 'type')}} | {{Spec2('File API')}} | Definicion inicial. |
 
-<h2 id="Compatibilidad_con_browsers">Compatibilidad con browsers</h2>
+## Compatibilidad con browsers
 
 {{Compat("api.Blob.type")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("Blob")}}</li>
-</ul>
+- {{domxref("Blob")}}

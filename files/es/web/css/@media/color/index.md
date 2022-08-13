@@ -6,27 +6,14 @@ tags:
   - Referencia
 translation_of: Web/CSS/@media/color
 ---
-<p><strong><code>color</code></strong> es una característica CSS relativa al medio de presentación cuyo valor es un  <a href="/en-US/docs/Web/CSS/integer"><code>&lt;integer&gt;</code></a> que contiene el número de bits por componente de color en el dispositivo de salida, o cero si el dispositivivo no es en color.</p>
+**`color`** es una característica CSS relativa al medio de presentación cuyo valor es un [`<integer>`](/es/docs/Web/CSS/integer) que contiene el número de bits por componente de color en el dispositivo de salida, o cero si el dispositivivo no es en color.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#color', 'color')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Definición Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                           | Estado                                   | Comentario         |
+| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Media Queries', '#color', 'color')}} | {{Spec2('CSS3 Media Queries')}} | Definición Inicial |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.at-rules.media.color")}}

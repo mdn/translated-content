@@ -1,63 +1,65 @@
 ---
 title: ':checked'
-slug: 'Web/CSS/:checked'
+slug: Web/CSS/:checked
 tags:
   - CSS
   - Diseño
   - Pseudo-clase
   - Referencia
   - Web
-translation_of: 'Web/CSS/:checked'
+translation_of: Web/CSS/:checked
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p>La <a href="es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <code style="font-style: normal;">:checked</code> de <a href="/es/docs/Web/CSS">CSS</a> representa cualquier <strong>radio </strong>(<a href="/es/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a>), <strong>checkbox </strong>(<a href="/es/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a>) u <strong>option</strong> ({{ HTMLElement("option") }} en un elemento {{ HTMLElement("select") }}) que está marcado o conmutado a un estado <code>on</code>.</p>
+La [pseudo-clase](es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/Web/CSS) representa cualquier **radio** ([\<input type="radio">](/es/docs/Web/HTML/Element/input/radio)), **checkbox** ([\<input type="checkbox">](/es/docs/Web/HTML/Element/input/checkbox)) u **option** ({{ HTMLElement("option") }} en un elemento {{ HTMLElement("select") }}) que está marcado o conmutado a un estado `on`.
 
-<pre class="brush: css"><code>/* Coincide con cualquier checked/selected radio, checkbox, u option */
+```css
+/* Coincide con cualquier checked/selected radio, checkbox, u option */
 :checked {
   margin-left: 25px;
   border: 1px solid blue;
-}</code></pre>
+}
+```
 
-<p>El usuario puede activar este estado marcando/seleccionando un elemento, o desactivándolo desmarcando/deseleccionando el elemento.</p>
+El usuario puede activar este estado marcando/seleccionando un elemento, o desactivándolo desmarcando/deseleccionando el elemento.
 
-<div class="note">
-<p><strong>Nota: </strong>Debido a que los navegadores a menudo tratan las <code>&lt;option&gt;</code> s como <a href="/es/docs/Web/CSS/Replaced_element">elementos reemplazados</a>, la medida en que se pueden diseñar con la pseudo-clase <code>:checked</code> varía de un navegador a otro.</p>
-</div>
+> **Nota:**Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/Replaced_element), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Ejemplo_básico">Ejemplo básico</h3>
+### Ejemplo básico
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;input type="radio" name="my-input" id="yes"&gt;
-  &lt;label for="yes"&gt;Yes&lt;/label&gt;
+```html
+<div>
+  <input type="radio" name="my-input" id="yes">
+  <label for="yes">Yes</label>
 
-  &lt;input type="radio" name="my-input" id="no"&gt;
-  &lt;label for="no"&gt;No&lt;/label&gt;
-&lt;/div&gt;
+  <input type="radio" name="my-input" id="no">
+  <label for="no">No</label>
+</div>
 
-&lt;div&gt;
-  &lt;input type="checkbox" name="my-checkbox" id="opt-in"&gt;
-  &lt;label for="opt-in"&gt;Check me!&lt;/label&gt;
-&lt;/div&gt;
+<div>
+  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <label for="opt-in">Check me!</label>
+</div>
 
-&lt;select name="my-select" id="fruit"&gt;
-  &lt;option value="opt1"&gt;Apples&lt;/option&gt;
-  &lt;option value="opt2"&gt;Grapes&lt;/option&gt;
-  &lt;option value="opt3"&gt;Pears&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select name="my-select" id="fruit">
+  <option value="opt1">Apples</option>
+  <option value="opt2">Grapes</option>
+  <option value="opt3">Pears</option>
+</select>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div,
+```css
+div,
 select {
   margin: 8px;
 }
@@ -81,38 +83,42 @@ input[type="checkbox"]:checked {
 option:checked {
   box-shadow: 0 0 0 3px lime;
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Ejemplo_básico")}}</p>
+{{EmbedLiveSample("Ejemplo_básico")}}
 
-<h3 id="Alternar_elementos_con_un_checkbox_oculto">Alternar elementos con un checkbox oculto</h3>
+### Alternar elementos con un checkbox oculto
 
-<p>Este ejemplo utiliza la pseudoclase <code>:checked</code> para permitir al usuario alternar contenido según el estado de un <em>checkbox</em>, todo sin usar <a href="/es/docs/Web/JavaScript">JavaScript</a>.</p>
+Este ejemplo utiliza la pseudoclase `:checked` para permitir al usuario alternar contenido según el estado de un _checkbox_, todo sin usar [JavaScript](/es/docs/Web/JavaScript).
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="checkbox" id="expand-toggle" /&gt;
+```html
+<input type="checkbox" id="expand-toggle" />
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;Columna #1&lt;/th&gt;&lt;th&gt;Columna #2&lt;/th&gt;&lt;th&gt;Columna #3&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr><th>Columna #1</th><th>Columna #2</th><th>Columna #3</th></tr>
+  </thead>
+  <tbody>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+  </tbody>
+</table>
 
-&lt;label for="expand-toggle" id="expand-btn"&gt;Toggle hidden rows&lt;/label&gt;</pre>
+<label for="expand-toggle" id="expand-btn">Toggle hidden rows</label>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Hide the toggle checkbox */
+```css
+/* Hide the toggle checkbox */
 #expand-toggle {
   display: none;
 }
@@ -141,57 +147,29 @@ option:checked {
 /* Style the button when the checkbox is checked */
 #expand-toggle:checked ~ #expand-btn {
   background-color: #ccc;
-}</pre>
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample("Alternar_elementos_con_un_checkbox_oculto", "auto", 220)}}</p>
+{{EmbedLiveSample("Alternar_elementos_con_un_checkbox_oculto", "auto", 220)}}
 
-<h3 id="Galería_de_imágenes">Galería de imágenes</h3>
+### Galería de imágenes
 
-<p>Puede usar la pseudoclase <code>:checked</code> para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el usuario hace clic en una miniatura. Vea <a href="/@api/deki/files/6268/=css-checked-gallery.zip">esta demostración</a>.</p>
+Puede usar la pseudoclase `:checked` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el usuario hace clic en una miniatura. Vea [esta demostración](/@api/deki/files/6268/=css-checked-gallery.zip).
 
-<div class="note"><strong>Nota:</strong> Para un efecto análogo, pero basado en la pseudoclase <a href="/es/docs/CSS/:hover" title="CSS/:hover"><code>:hover</code></a> y sin radioboxes ocultos, vea <a href="/@api/deki/files/6247/=css-gallery.zip">esta demostración</a>, tomada de la página de referencia <a href="/es/docs/CSS/:hover" title="CSS/:hover">:hover</a>.</div>
+> **Nota:** Para un efecto análogo, pero basado en la pseudoclase [`:hover`](/es/docs/CSS/:hover "CSS/:hover") y sin radioboxes ocultos, vea [esta demostración](/@api/deki/files/6247/=css-gallery.zip), tomada de la página de referencia [:hover](/es/docs/CSS/:hover "CSS/:hover").
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>Ningún cambio.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}</td>
-   <td>{{ Spec2('HTML5 W3C') }}</td>
-   <td>Define la semántica con respecto a HTML.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS4 Selectors', '#checked', ':checked') }}</td>
-   <td>{{ Spec2('CSS4 Selectors') }}</td>
-   <td>Ningún cambio.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 UI', '#pseudo-checked', ':checked') }}</td>
-   <td>{{ Spec2('CSS3 UI') }}</td>
-   <td>Enlace al Nivel 3 de Selectores.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Selectors', '#checked', ':checked') }}</td>
-   <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Define la pseudoclase, pero no la semántica asociada.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                                   | Comentarios                                           |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }} | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                        |
+| {{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}     | {{ Spec2('HTML5 W3C') }}         | Define la semántica con respecto a HTML.              |
+| {{ SpecName('CSS4 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.                                        |
+| {{ SpecName('CSS3 UI', '#pseudo-checked', ':checked') }}         | {{ Spec2('CSS3 UI') }}             | Enlace al Nivel 3 de Selectores.                      |
+| {{ SpecName('CSS3 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS3 Selectors') }} | Define la pseudoclase, pero no la semántica asociada. |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("css.selectors.checked")}}</p>
+{{Compat("css.selectors.checked")}}

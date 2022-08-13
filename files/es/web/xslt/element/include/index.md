@@ -7,34 +7,31 @@ tags:
 translation_of: Web/XSLT/Element/include
 original_slug: Web/XSLT/include
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- El elemento <code>&lt;xsl:include&gt;</code> une el contenido de una hoja de estilo con otra. A diferencia del elemento <code>&lt;xsl:import&gt;</code>, el contenido de la hoja de estilo incluida tiene exactamente la misma precedencia que el contenido de la hoja de estilo que la incluye.</p>
+El elemento `<xsl:include>` une el contenido de una hoja de estilo con otra. A diferencia del elemento `<xsl:import>`, el contenido de la hoja de estilo incluida tiene exactamente la misma precedencia que el contenido de la hoja de estilo que la incluye.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre>&lt;xsl:include href=URI /&gt;</pre>
+    <xsl:include href=URI />
 
-<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
+### Atributos requeridos
 
-<dl>
- <dt><code>href</code></dt>
- <dd>Indica el URI de la hoja de estilo a incluir.</dd>
-</dl>
+- `href`
+  - : Indica el URI de la hoja de estilo a incluir.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Elemento raíz, puede aparecer en cualquier orden siendo hijo del elemento <code>&lt;xsl:stylesheet&gt;</code> o el elemento <code>&lt;xsl:transform&gt;</code>.</p>
+Elemento raíz, puede aparecer en cualquier orden siendo hijo del elemento `<xsl:stylesheet>` o el elemento `<xsl:transform>`.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT, sección 2.6.1.</p>
+XSLT, sección 2.6.1.
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Soportado.</p>
+Soportado.

@@ -3,30 +3,29 @@ title: MediaQueryList.removeListener()
 slug: Web/API/MediaQueryList/removeListener
 translation_of: Web/API/MediaQueryList/removeListener
 ---
-<div>{{APIRef("CSSOM View")}}</div>
+{{APIRef("CSSOM View")}}
 
-<p>El método <code><strong>removeListener()</strong></code> de la interfaz {{domxref ("MediaQueryList")}} elimina un escucha de <code>MediaQueryListener</code>.</p>
+El método **`removeListener()`** de la interfaz {{domxref ("MediaQueryList")}} elimina un escucha de `MediaQueryListener`.
 
-<p>Esto es básicamente un alias para {{domxref("EventTarget.removeEventListener()")}}, para propósitos de compatibilidad con versiones anteriores: en los navegadores antiguos puede usar <code>removeEventListener()</code>.</p>
+Esto es básicamente un alias para {{domxref("EventTarget.removeEventListener()")}}, para propósitos de compatibilidad con versiones anteriores: en los navegadores antiguos puede usar `removeEventListener()`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>MediaQueryList.removeListener(func)</em></pre>
+    MediaQueryList.removeListener(func)
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt>func</dt>
- <dd>Una función o referencia de función que representa la función de devolución de llamada que desea eliminar. En la implementación original, la devolución de llamada era un objeto {{domxref ("MediaQueryListListener")}} no estándar. En la nueva implementación se utiliza el mecanismo de eventos estándar y la devolución de llamada es una función estándar.</dd>
-</dl>
+- func
+  - : Una función o referencia de función que representa la función de devolución de llamada que desea eliminar. En la implementación original, la devolución de llamada era un objeto {{domxref ("MediaQueryListListener")}} no estándar. En la nueva implementación se utiliza el mecanismo de eventos estándar y la devolución de llamada es una función estándar.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
+```js
+var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -44,35 +43,22 @@ mql.addListener(screenTest);
 
 // Later on, when it is no longer needed
 mql.removeListener(screenTest);
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificaciones</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-mediaquerylist-removelistener", "removeListener")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificaciones                                                                                             | Estado                           | Comentario         |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName("CSSOM View", "#dom-mediaquerylist-removelistener", "removeListener")}} | {{Spec2("CSSOM View")}} | Initial definition |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("api.MediaQueryList.removeListener")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
- <li>{{domxref("window.matchMedia()")}}</li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{domxref("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/es/docs/CSS/Media_queries)
+- [Using media queries from code](/es/docs/CSS/Using_media_queries_from_code)
+- {{domxref("window.matchMedia()")}}
+- {{domxref("MediaQueryList")}}
+- {{domxref("MediaQueryListEvent")}}

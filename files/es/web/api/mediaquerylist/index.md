@@ -10,50 +10,44 @@ tags:
   - Refetencia
 translation_of: Web/API/MediaQueryList
 ---
-<div>{{APIRef("CSSOM View")}}{{SeeCompatTable}}</div>
+{{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
-<p>Un objeto <code>MediaQueryList</code> almacena información en un <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a <code>true</code>).</p>
+Un objeto `MediaQueryList` almacena información en un [media query](/es/docs/Web/CSS/Media_Queries) aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a `true`).
 
-<p>Esto hace posible observar un documento para detectar cuando sus consultas de medios cambian, en lugar de sondear los valores periódicamente y le permite programar cambios en un documento basado en el estado de consulta de medios.</p>
+Esto hace posible observar un documento para detectar cuando sus consultas de medios cambian, en lugar de sondear los valores periódicamente y le permite programar cambios en un documento basado en el estado de consulta de medios.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<p>La nueva versión de la interfaz de <em><code>MediaQueryList</code> </em> hereda las propiedades de su interfaz principal, <em>{{domxref("EventTarget")}}.</em></p>
+La nueva versión de la interfaz de _`MediaQueryList` \_hereda las propiedades de su interfaz principal, _{{domxref("EventTarget")}}.\_
 
-<dl>
- <dt>{{domxref("MediaQueryList.matches")}} {{readonlyInline}}</dt>
- <dd> Un {{domxref("Boolean")}} que devuelve  <code>true</code> si el<br>
-  {{domxref("document")}} actualmente coincide con la lista de consultas de medios, o <code>false</code> si no.</dd>
- <dt>{{domxref("MediaQueryList.media")}} {{readonlyInline}}</dt>
- <dd> Un {{domxref("DOMString")}} representa una consulta de medios serializada.</dd>
-</dl>
+- {{domxref("MediaQueryList.matches")}} {{readonlyInline}}
+  - : Un {{domxref("Boolean")}} que devuelve `true` si el
+    {{domxref("document")}} actualmente coincide con la lista de consultas de medios, o `false` si no.
+- {{domxref("MediaQueryList.media")}} {{readonlyInline}}
+  - : Un {{domxref("DOMString")}} representa una consulta de medios serializada.
 
-<h3 id="Controladores_de_eventos">Controladores de eventos</h3>
+### Controladores de eventos
 
-<dl>
- <dt>{{domxref("MediaQueryList.onchange")}}</dt>
- <dd>Una propiedad de controlador de eventos que representa una función que se invoca cuando se desencadena el evento {{event("change")}}, es decir, cuando cambia el estado del soporte de consulta de medios. El objeto de evento es una instancia {{domxref("MediaQueryListEvent")}}, que se reconoce como una instancia de <code>MediaListQuery</code> en navegadores antiguos, para propósitos de compatibilidad con versiones anteriores.</dd>
-</dl>
+- {{domxref("MediaQueryList.onchange")}}
+  - : Una propiedad de controlador de eventos que representa una función que se invoca cuando se desencadena el evento {{event("change")}}, es decir, cuando cambia el estado del soporte de consulta de medios. El objeto de evento es una instancia {{domxref("MediaQueryListEvent")}}, que se reconoce como una instancia de `MediaListQuery` en navegadores antiguos, para propósitos de compatibilidad con versiones anteriores.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em>La nueva versión de la interfaz de <code>MediaQueryList</code> hereda métodos de su interfaz principal, {{domxref("EventTarget")}}.</em></p>
+_La nueva versión de la interfaz de `MediaQueryList` hereda métodos de su interfaz principal, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("MediaQueryList.addListener()")}}</dt>
- <dd> Agrega un escucha al <code>MediaQueryListener</code> que ejecutará una función de devolución de llamada personalizada en respuesta al cambio de estado de consulta de medios. Esto es básicamente un alias para {{domxref("EventTarget.addEventListener()")}}, para propósitos de compatibilidad con versiones anteriores. </dd>
- <dt>{{domxref("MediaQueryList.removeListener()")}}</dt>
- <dd> Elimina un escucha de <code>MediaQueryListener</code>. Esto es básicamente un alias para {{domxref ("EventTarget.removeEventListener ()")}}, para propósitos de compatibilidad con versiones anteriores.</dd>
-</dl>
+- {{domxref("MediaQueryList.addListener()")}}
+  - : Agrega un escucha al `MediaQueryListener` que ejecutará una función de devolución de llamada personalizada en respuesta al cambio de estado de consulta de medios. Esto es básicamente un alias para {{domxref("EventTarget.addEventListener()")}}, para propósitos de compatibilidad con versiones anteriores.
+- {{domxref("MediaQueryList.removeListener()")}}
+  - : Elimina un escucha de `MediaQueryListener`. Esto es básicamente un alias para {{domxref ("EventTarget.removeEventListener ()")}}, para propósitos de compatibilidad con versiones anteriores.
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Este ejemplo sencillo crea una <code>MediaQueryList</code> y, a continuación, establece un detector para detectar cuándo cambia el estado de la consulta de medios, ejecutando una función personalizada cuando cambia la apariencia de la página.</p>
+Este ejemplo sencillo crea una `MediaQueryList` y, a continuación, establece un detector para detectar cuándo cambia el estado de la consulta de medios, ejecutando una función personalizada cuando cambia la apariencia de la página.
 
-<pre class="brush: js">var para = document.querySelector('p');
+```js
+var para = document.querySelector('p');
 
 var mql = window.matchMedia('(max-width: 600px)');
 
@@ -69,39 +63,25 @@ function screenTest(e) {
   }
 }
 
-mql.addListener(screenTest);</pre>
+mql.addListener(screenTest);
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Puedes encontrar este ejemplo en GitHub (ver el <a href="https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html">codigo fuente</a>, y también verlo en <a href="https://mdn.github.io/dom-examples/mediaquerylist/index.html">ejecución</a>).</p>
-</div>
+> **Nota:** Puedes encontrar este ejemplo en GitHub (ver el [codigo fuente](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html), y también verlo en [ejecución](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificaciones</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#the-mediaquerylist-interface", "MediaQueryList")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Especificaciones                                                                                         | Estado                           | Comentario         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("CSSOM View", "#the-mediaquerylist-interface", "MediaQueryList")}} | {{Spec2("CSSOM View")}} | Initial definition |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("api.MediaQueryList")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Uso de media queries desde el código</a></li>
- <li>{{domxref("window.matchMedia()")}}</li>
- <li>{{domxref("MediaQueryListListener")}}</li>
- <li>{{domxref("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/es/docs/CSS/Media_queries)
+- [Uso de media queries desde el código](/es/docs/CSS/Using_media_queries_from_code)
+- {{domxref("window.matchMedia()")}}
+- {{domxref("MediaQueryListListener")}}
+- {{domxref("MediaQueryListEvent")}}

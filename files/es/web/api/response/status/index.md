@@ -11,25 +11,26 @@ tags:
   - status
 translation_of: Web/API/Response/status
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>La propiedad de solo lectura <strong><code>status</code></strong> de la interfaz {{domxref("Response")}} contiene el código de estado de la respuesta (ejm., <code>200</code> para un éxito).</p>
+La propiedad de solo lectura **`status`** de la interfaz {{domxref("Response")}} contiene el código de estado de la respuesta (ejm., `200` para un éxito).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <var>myStatus</var> = <var>response</var>.status;</pre>
+    var myStatus = response.status;
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Un número (para ser preciso, uno corto sin signo).</p>
+Un número (para ser preciso, uno corto sin signo).
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>En nuestro <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">ejemplo Fetch Response</a> (ver <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response en vivo</a>) nosotros creamos un nuevo objeto {{domxref("Request")}} usando el constructor {{domxref("Request.Request","Request()")}}, pasándole una ruta JPG. Luego buscamos esta solicitud usando  {{domxref("GlobalFetch.fetch","fetch()")}}, extraemos un blob de la respuesta usando {{domxref("Body.blob")}}, creamos un objeto URL fuera de ella usando {{domxref("URL.createObjectURL")}}, y mostramos esto en un {{htmlelement("img")}}.</p>
+En nuestro [ejemplo Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (ver [Fetch Response en vivo](http://mdn.github.io/fetch-examples/fetch-response/)) nosotros creamos un nuevo objeto {{domxref("Request")}} usando el constructor {{domxref("Request.Request","Request()")}}, pasándole una ruta JPG. Luego buscamos esta solicitud usando {{domxref("GlobalFetch.fetch","fetch()")}}, extraemos un blob de la respuesta usando {{domxref("Body.blob")}}, creamos un objeto URL fuera de ella usando {{domxref("URL.createObjectURL")}}, y mostramos esto en un {{htmlelement("img")}}.
 
-<p>Tenga en cuenta que en la parte superior del bloque  <code>fetch()</code> registramos el valor de la respuesta  <code>status</code> en la consola.</p>
+Tenga en cuenta que en la parte superior del bloque `fetch()` registramos el valor de la respuesta `status` en la consola.
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -39,35 +40,21 @@ fetch(myRequest).then(function(response) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});</pre>
+});
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-response-status','status')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                           | Estatus                  | Comentario         |
+| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| {{SpecName('Fetch','#dom-response-status','status')}} | {{Spec2('Fetch')}} | Definición inicial |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("api.Response.status")}}
 
+## Ver también
 
-<p>{{Compat("api.Response.status")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">API de Servicio Worker</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">Control de acceso HTTP (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [API de Servicio Worker](/es/docs/Web/API/ServiceWorker_API)
+- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/es/docs/Web/HTTP)

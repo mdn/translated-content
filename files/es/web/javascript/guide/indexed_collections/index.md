@@ -10,62 +10,64 @@ tags:
 translation_of: Web/JavaScript/Guide/Indexed_collections
 original_slug: Web/JavaScript/Guide/colecciones_indexadas
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}</div>
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
-<p class="summary">Este capítulo presenta colecciones de datos ordenados por un valor de índice. Esto incluye arreglos y construcciones similares a arreglos tal como objetos {{jsxref("Array")}} y objetos {{jsxref("TypedArray")}}.</p>
+Este capítulo presenta colecciones de datos ordenados por un valor de índice. Esto incluye arreglos y construcciones similares a arreglos tal como objetos {{jsxref("Array")}} y objetos {{jsxref("TypedArray")}}.
 
-<h2 id="El_objeto_Array">El objeto <code>Array</code></h2>
+## El objeto `Array`
 
-<p>Un <em><dfn>array</dfn></em> es una lista ordenada de valores a los que te refieres con un nombre y un índice.</p>
+Un **array** es una lista ordenada de valores a los que te refieres con un nombre y un índice.
 
-<p>Por ejemplo, considera un arreglo llamado <code>emp</code>, que contiene los nombres de los empleados indexados por su id de empleado numérico. De tal modo que <code>emp[0]</code> sería el empleado número cero, <code>emp[1]</code> el empleado número uno, y así sucesivamente.</p>
+Por ejemplo, considera un arreglo llamado `emp`, que contiene los nombres de los empleados indexados por su id de empleado numérico. De tal modo que `emp[0]` sería el empleado número cero, `emp[1]` el empleado número uno, y así sucesivamente.
 
-<p>JavaScript no tiene un tipo de dato <code>array</code> explícito. Sin embargo, puedes utilizar el objeto <code>Array</code> predefinido y sus métodos para trabajar con arreglos en tus aplicaciones. El objeto <code>Array</code> tiene métodos para manipular arreglos de varias formas, tal como unirlos, invertirlos y ordenarlos. Tiene una propiedad para determinar la longitud del arreglo y otras propiedades para usar con expresiones regulares.</p>
+JavaScript no tiene un tipo de dato `array` explícito. Sin embargo, puedes utilizar el objeto `Array` predefinido y sus métodos para trabajar con arreglos en tus aplicaciones. El objeto `Array` tiene métodos para manipular arreglos de varias formas, tal como unirlos, invertirlos y ordenarlos. Tiene una propiedad para determinar la longitud del arreglo y otras propiedades para usar con expresiones regulares.
 
-<h3 id="Crear_un_arreglo">Crear un arreglo</h3>
+### Crear un arreglo
 
-<p>Las siguientes declaraciones crean arreglos equivalentes:</p>
+Las siguientes declaraciones crean arreglos equivalentes:
 
-<pre class="brush: js notranslate">let arr = new Array(<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>)
-let arr = Array(<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>)
-let arr = [<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
-</pre>
+```js
+let arr = new Array(element0, element1, ..., elementN)
+let arr = Array(element0, element1, ..., elementN)
+let arr = [element0, element1, ..., elementN]
+```
 
-<p><code><var>element0</var>, <var>element1</var>, ..., <var>elementN</var></code> es una lista de valores para los elementos del arreglo. Cuando se especifican estos valores, el arreglo se inicia con ellos como elementos del arreglo. La propiedad <code>length</code> del arreglo se establece en el número de argumentos.</p>
+`element0, element1, ..., elementN` es una lista de valores para los elementos del arreglo. Cuando se especifican estos valores, el arreglo se inicia con ellos como elementos del arreglo. La propiedad `length` del arreglo se establece en el número de argumentos.
 
-<p>La sintaxis de corchetes se denomina "arreglo literal" o "iniciador de arreglo". Es más corto que otras formas de creación de arreglos, por lo que generalmente se prefiere. Consulta <a href="/es/docs/Web/JavaScript/Guide/Grammar_and_types#Arreglos_literales">Arreglos literales</a> para obtener más detalles.</p>
+La sintaxis de corchetes se denomina "arreglo literal" o "iniciador de arreglo". Es más corto que otras formas de creación de arreglos, por lo que generalmente se prefiere. Consulta [Arreglos literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Arreglos_literales) para obtener más detalles.
 
-<p>Para crear un arreglo con una longitud distinta de cero, pero sin ningún elemento, se puede utilizar cualquiera de las siguientes:</p>
+Para crear un arreglo con una longitud distinta de cero, pero sin ningún elemento, se puede utilizar cualquiera de las siguientes:
 
-<pre class="brush: js notranslate">// Esta...
-let arr = new Array(<var>arrayLength</var>)
+```js
+// Esta...
+let arr = new Array(arrayLength)
 
 // ...da como resultado el mismo arreglo que este
-let arr = Array(<var>arrayLength</var>)
+let arr = Array(arrayLength)
 
 
 // Esto tiene exactamente el mismo efecto
 let arr = []
-arr.length = <var>arrayLength</var>
-</pre>
+arr.length = arrayLength
+```
 
-<div class="note">
-<p><strong>Nota</strong>: En el código anterior, <code><var>arrayLength</var></code> debe ser un <code>Número</code>. De lo contrario, se creará un arreglo con un solo elemento (el valor proporcionado). Llamar a <code>arr.length</code> devolverá <code><var>arrayLength</var></code>, pero el arreglo no contiene ningún elemento. Un bucle {{jsxref("Statements/for...in", "for...in")}} no encontrarás ninguna propiedad en el arreglo.</p>
-</div>
+> **Nota:** En el código anterior, `arrayLength` debe ser un `Número`. De lo contrario, se creará un arreglo con un solo elemento (el valor proporcionado). Llamar a `arr.length` devolverá `arrayLength`, pero el arreglo no contiene ningún elemento. Un bucle {{jsxref("Statements/for...in", "for...in")}} no encontrarás ninguna propiedad en el arreglo.
 
-<p>Además de una variable recién definida como se muestra arriba, los arreglos también se pueden asignar como una propiedad a un objeto nuevo o existente:</p>
+Además de una variable recién definida como se muestra arriba, los arreglos también se pueden asignar como una propiedad a un objeto nuevo o existente:
 
-<pre class="brush: js notranslate">let obj = {}
+```js
+let obj = {}
 // ...
 obj.prop = [element0, element1, ..., elementN]
 
 // O
 let obj = {prop: [element0, element1, ...., elementN]}
-</pre>
+```
 
-<p>Si deseas iniciar un arreglo con un solo elemento, y el elemento resulta ser un <code>Número</code>, debes usar la sintaxis de corchetes. Cuando se pasa un solo valor <code>Number</code> al constructor o función <code>Array()</code>, se interpreta como un <code>arrayLength</code>, no como un solo elemento.</p>
+Si deseas iniciar un arreglo con un solo elemento, y el elemento resulta ser un `Número`, debes usar la sintaxis de corchetes. Cuando se pasa un solo valor `Number` al constructor o función `Array()`, se interpreta como un `arrayLength`, no como un solo elemento.
 
-<pre class="brush: js notranslate">let arr = [42]       // Crea un arreglo con un solo elemento:
+```js
+let arr = [42]       // Crea un arreglo con un solo elemento:
                      // el número 42.
 
 let arr = Array(42)  // Crea un arreglo sin elementos
@@ -74,82 +76,90 @@ let arr = Array(42)  // Crea un arreglo sin elementos
                      // Esto es equivalente a:
 let arr = []
 arr.length = 42
-</pre>
+```
 
-<p>Llamar a <code>Array(<var>N</var>)</code> da como resultado un <code>RangeError</code>, si <code><var>N</var></code> no es un número entero cuya porción fraccionaria no es cero. El siguiente ejemplo ilustra este comportamiento.</p>
+Llamar a `Array(N)` da como resultado un `RangeError`, si `N` no es un número entero cuya porción fraccionaria no es cero. El siguiente ejemplo ilustra este comportamiento.
 
-<pre class="brush: js notranslate">let arr = Array(9.3)   // RangeError: Longitud de arreglo no válida
-</pre>
+```js
+let arr = Array(9.3)   // RangeError: Longitud de arreglo no válida
+```
 
-<p>Si tu código necesita crear arreglos con elementos únicos de un tipo de dato arbitrario, es más seguro utilizar arreglos literales. Alternativamente, crea un arreglo vacío primero antes de agregarle el único elemento.</p>
+Si tu código necesita crear arreglos con elementos únicos de un tipo de dato arbitrario, es más seguro utilizar arreglos literales. Alternativamente, crea un arreglo vacío primero antes de agregarle el único elemento.
 
-<p>En ES2015, puedes utilizar el método estático {{jsxref("Array.of")}} para crear arreglos con un solo elemento.</p>
+En ES2015, puedes utilizar el método estático {{jsxref("Array.of")}} para crear arreglos con un solo elemento.
 
-<pre class="brush: js notranslate">let wisenArray = Array.of(9.3)   // wisenArray contiene solo un elemento 9.3</pre>
+```js
+let wisenArray = Array.of(9.3)   // wisenArray contiene solo un elemento 9.3
+```
 
-<h3 id="Refiriéndose_a_elementos_del_arreglo">Refiriéndose a elementos del arreglo</h3>
+### Refiriéndose a elementos del arreglo
 
-<p>Dado que los elementos también son propiedades, puedes acceder a ellos usando la <a href="/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors">propiedad <code>accessors</code></a>. Supongamos que defines el siguiente arreglo:</p>
+Dado que los elementos también son propiedades, puedes acceder a ellos usando la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors). Supongamos que defines el siguiente arreglo:
 
-<pre class="brush: js notranslate">let myArray = ['Wind', 'Rain', 'Fire']
-</pre>
+```js
+let myArray = ['Wind', 'Rain', 'Fire']
+```
 
-<p>Puedes referirte al primer elemento del arreglo como <code>myArray[0]</code>, al segundo elemento del arreglo como <code>myArray[1]</code>, etc<span class="st">…</span> El índice de los elementos comienza en cero.</p>
+Puedes referirte al primer elemento del arreglo como `myArray[0]`, al segundo elemento del arreglo como `myArray[1]`, etc… El índice de los elementos comienza en cero.
 
-<div class="note">
-<p><strong>Nota</strong>: También puedes utilizar la <a href="/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors">propiedad <code>accessors</code></a> para acceder a otras propiedades del arreglo, como con un objeto.</p>
+> **Nota:** **Nota**: También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para acceder a otras propiedades del arreglo, como con un objeto.```js
+> let arr = ['one', 'two', 'three']
+> arr[2] // three
+> arr['length'] // 3
+>
+> ```
+>
+> ```
 
-<pre class="brush: js notranslate">let arr = ['one', 'two', 'three']
-arr[2]          // three
-arr['length']   // 3
-</pre>
-</div>
+### Llenar un arreglo
 
-<h3 id="Llenar_un_arreglo">Llenar un arreglo</h3>
+Puedes llenar un arreglo asignando valores a sus elementos. Por ejemplo:
 
-<p>Puedes llenar un arreglo asignando valores a sus elementos. Por ejemplo:</p>
-
-<pre class="brush: js notranslate">let emp = []
+```js
+let emp = []
 emp[0] = 'Casey Jones'
 emp[1] = 'Phil Lesh'
 emp[2] = 'August West'
-</pre>
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Si proporcionas un valor no entero al operador <code>array</code> en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.</p>
+> **Nota:** **Nota**: Si proporcionas un valor no entero al operador `array` en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.```js
+> let arr = []
+> arr[3.4] = 'Oranges'
+> console.log(arr.length) // 0
+> console.log(arr.hasOwnProperty(3.4)) // true
+>
+> ```
+>
+> ```
 
-<pre class="brush: js notranslate">let arr = []
-arr[3.4] = 'Oranges'
-console.log(arr.length)                 // 0
-console.log(arr.hasOwnProperty(3.4))    // true
-</pre>
-</div>
+También puedes rellenar un arreglo cuando lo creas:
 
-<p>También puedes rellenar un arreglo cuando lo creas:</p>
-
-<pre class="brush: js notranslate">let myArray = new Array('Hello', myVar, 3.14159)
+```js
+let myArray = new Array('Hello', myVar, 3.14159)
 // OR
 let myArray = ['Mango', 'Apple', 'Orange']
-</pre>
+```
 
-<h3 id="Entendiendo_length">Entendiendo <code>length</code></h3>
+### Entendiendo `length`
 
-<p>A nivel de implementación, los arreglos de JavaScript almacenan sus elementos como propiedades de objeto estándar, utilizando el índice del arreglo como nombre de propiedad.</p>
+A nivel de implementación, los arreglos de JavaScript almacenan sus elementos como propiedades de objeto estándar, utilizando el índice del arreglo como nombre de propiedad.
 
-<p>La propiedad <code>length</code> es especial. Siempre devuelve el índice del último elemento más uno. (En el siguiente ejemplo, <code>'Dusty'</code> está indexado en <code>30</code>, por lo que <code>cats.length</code> devuelve <code>30 + 1</code>).</p>
+La propiedad `length` es especial. Siempre devuelve el índice del último elemento más uno. (En el siguiente ejemplo, `'Dusty'` está indexado en `30`, por lo que `cats.length` devuelve `30 + 1`).
 
-<p>Recuerda, los índices del Array JavaScript están basados en 0: comienzan en <code>0</code>, no en <code>1</code>. Esto significa que la propiedad <code>length</code> será uno más que el índice más alto almacenado en el arreglo:</p>
+Recuerda, los índices del Array JavaScript están basados en 0: comienzan en `0`, no en `1`. Esto significa que la propiedad `length` será uno más que el índice más alto almacenado en el arreglo:
 
-<pre class="brush: js notranslate">let cats = []
+```js
+let cats = []
 cats[30] = ['Dusty']
 console.log(cats.length) // 31
-</pre>
+```
 
-<p>También puedes asignar la propiedad <code>length</code>.</p>
+También puedes asignar la propiedad `length`.
 
-<p>Escribir un valor que sea más corto que el número de elementos almacenados trunca el arreglo. Escribir <code>0</code> lo vacía por completo:</p>
+Escribir un valor que sea más corto que el número de elementos almacenados trunca el arreglo. Escribir `0` lo vacía por completo:
 
-<pre class="brush: js notranslate">let cats = ['Dusty', 'Misty', 'Twiggy']
+```js
+let cats = ['Dusty', 'Misty', 'Twiggy']
 console.log(cats.length)  // 3
 
 cats.length = 2
@@ -159,54 +169,59 @@ cats.length = 0
 console.log(cats)  // logs []; el arreglo cats está vacío
 
 cats.length = 3
-console.log(cats)  // logs [ &lt;3 elementos vacíos&gt; ]
-</pre>
+console.log(cats)  // logs [ <3 elementos vacíos> ]
+```
 
-<h3 id="Iterando_sobre_arreglos">Iterando sobre arreglos</h3>
+### Iterando sobre arreglos
 
-<p>Una operación común es iterar sobre los valores de un arreglo, procesando cada uno de alguna manera. La forma más sencilla de hacerlo es la siguiente:</p>
+Una operación común es iterar sobre los valores de un arreglo, procesando cada uno de alguna manera. La forma más sencilla de hacerlo es la siguiente:
 
-<pre class="brush: js notranslate">let colors = ['red', 'green', 'blue']
-for (let i = 0; i &lt; colors.length; i++) {
+```js
+let colors = ['red', 'green', 'blue']
+for (let i = 0; i < colors.length; i++) {
   console.log(colors[i])
 }
-</pre>
+```
 
-<p>Si sabes que ninguno de los elementos de tu arreglo se evalúa como <code>false</code> en un contexto booleano, si tu arreglo consta solo de nodos <a href="/es/docs/DOM" title="/es/docs/DOM">DOM</a>, por ejemplo, puedes usar un lenguaje eficiente:</p>
+Si sabes que ninguno de los elementos de tu arreglo se evalúa como `false` en un contexto booleano, si tu arreglo consta solo de nodos [DOM](/es/docs/DOM), por ejemplo, puedes usar un lenguaje eficiente:
 
-<pre class="brush: js notranslate">let divs = document.getElementsByTagName('div')
+```js
+let divs = document.getElementsByTagName('div')
 for (let i = 0, div; div = divs[i]; i++) {
   /* Procesar div de alguna manera */
 }
-</pre>
+```
 
-<p>Esto evita la sobrecarga de verificar la longitud del arreglo y garantiza que la variable <code><var>div</var></code> se reasigne al elemento actual cada vez que se realiza el bucle para mayor comodidad.</p>
+Esto evita la sobrecarga de verificar la longitud del arreglo y garantiza que la variable `div` se reasigne al elemento actual cada vez que se realiza el bucle para mayor comodidad.
 
-<p>El método {{jsxref("Array.forEach", "forEach()")}} proporciona otra forma de iterar sobre un arreglo:</p>
+El método {{jsxref("Array.forEach", "forEach()")}} proporciona otra forma de iterar sobre un arreglo:
 
-<pre class="brush: js notranslate">let colors = ['red', 'green', 'blue']
+```js
+let colors = ['red', 'green', 'blue']
 colors.forEach(function(color) {
   console.log(color)
 })
 // red
 // green
 // blue
-</pre>
+```
 
-<p>Alternativamente, puedes acortar el código para el parámetro <code>forEach</code> con las funciones de flecha ES2015:</p>
+Alternativamente, puedes acortar el código para el parámetro `forEach` con las funciones de flecha ES2015:
 
-<pre class="brush: js notranslate">let colors = ['red', 'green', 'blue']
-colors.forEach(color =&gt; console.log(color))
+```js
+let colors = ['red', 'green', 'blue']
+colors.forEach(color => console.log(color))
 // red
 // green
 // blue
-</pre>
+```
 
-<p>La función pasada a <code>forEach</code> se ejecuta una vez por cada elemento del arreglo, con el elemento de arreglo pasado como argumento de la función. Los valores no asignados no se iteran en un bucle <code>forEach</code>.</p>
+La función pasada a `forEach` se ejecuta una vez por cada elemento del arreglo, con el elemento de arreglo pasado como argumento de la función. Los valores no asignados no se iteran en un bucle `forEach`.
 
-<p>Ten en cuenta que los elementos de un arreglo que se omiten cuando se define el arreglo no se enumeran cuando lo itera <code>forEach</code>, pero <em>se enumeran</em> cuando <code>undefined</code> se ha asignado manualmente al elemento:</p>
+Ten en cuenta que los elementos de un arreglo que se omiten cuando se define el arreglo no se enumeran cuando lo itera `forEach`, pero _se enumeran_ cuando `undefined` se ha asignado manualmente al elemento:
 
-<pre class="brush: js notranslate">let array = ['first', 'second', , 'fourth']
+```js
+let array = ['first', 'second', , 'fourth']
 
 array.forEach(function(element) {
   console.log(element)
@@ -228,164 +243,181 @@ array.forEach(function(element) {
 // second
 // undefined
 // fourth
-</pre>
+```
 
-<p>Dado que los elementos de JavaScript se guardan como propiedades de objeto estándar, no es recomendable iterar a través de arreglos de JavaScript usando bucles {{jsxref("Statements/for...in", "for...in")}}, porque se enumerarán los elementos normales y todas las propiedades enumerables.</p>
+Dado que los elementos de JavaScript se guardan como propiedades de objeto estándar, no es recomendable iterar a través de arreglos de JavaScript usando bucles {{jsxref("Statements/for...in", "for...in")}}, porque se enumerarán los elementos normales y todas las propiedades enumerables.
 
-<h3 id="Métodos_de_array">Métodos de array</h3>
+### Métodos de array
 
-<p>El objeto {{jsxref("Array")}} tiene los siguientes métodos:</p>
+El objeto {{jsxref("Array")}} tiene los siguientes métodos:
 
-<p>{{jsxref("Array.concat", "concat()")}} une dos o más arreglos y devuelve un nuevo arreglo.</p>
+{{jsxref("Array.concat", "concat()")}} une dos o más arreglos y devuelve un nuevo arreglo.
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3')
+```js
+let myArray = new Array('1', '2', '3')
 myArray = myArray.concat('a', 'b', 'c')
 // myArray is now ["1", "2", "3", "a", "b", "c"]
-</pre>
+```
 
-<p>{{jsxref("Array.join", "join(delimiter = ',')")}} une todos los elementos de un arreglo en una cadena.</p>
+{{jsxref("Array.join", "join(delimiter = ',')")}} une todos los elementos de un arreglo en una cadena.
 
-<pre class="brush: js notranslate">let myArray = new Array('Viento', 'Lluvia', 'Fuego')
+```js
+let myArray = new Array('Viento', 'Lluvia', 'Fuego')
 let list = myArray.join('-')   // la lista es "Viento - Lluvia - Fuego"
-</pre>
+```
 
-<p>{{jsxref("Array.push", "push()")}} agrega uno o más elementos al final de un arreglo y devuelve la <code>longitud</code> resultante del arreglo.</p>
+{{jsxref("Array.push", "push()")}} agrega uno o más elementos al final de un arreglo y devuelve la `longitud` resultante del arreglo.
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2')
+```js
+let myArray = new Array('1', '2')
 myArray.push('3') // myArray ahora es ["1", "2", "3"]
-</pre>
+```
 
-<p>{{jsxref("Array.pop", "pop()")}} elimina el último elemento de un arreglo y devuelve ese elemento.</p>
+{{jsxref("Array.pop", "pop()")}} elimina el último elemento de un arreglo y devuelve ese elemento.
 
-<pre class="brush: js notranslate">let myArray = new Array ('1', '2', '3')
+```js
+let myArray = new Array ('1', '2', '3')
 let last = myArray.pop()
 // myArray ahora es ["1", "2"], last = "3"
-</pre>
+```
 
-<p>{{jsxref("Array.shift", "shift()")}} elimina el primer elemento de un arreglo y devuelve ese elemento.</p>
+{{jsxref("Array.shift", "shift()")}} elimina el primer elemento de un arreglo y devuelve ese elemento.
 
-<pre class="brush: js notranslate">let myArray = new Array ('1', '2', '3')
+```js
+let myArray = new Array ('1', '2', '3')
 let first = myArray.shift()
 // myArray ahora es ["2", "3"], first es "1"
-</pre>
+```
 
-<p>{{jsxref("Array.unshift", "unshift()")}} agrega uno o más elementos al frente de un arreglo y devuelve la nueva longitud del arreglo.</p>
+{{jsxref("Array.unshift", "unshift()")}} agrega uno o más elementos al frente de un arreglo y devuelve la nueva longitud del arreglo.
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3')
+```js
+let myArray = new Array('1', '2', '3')
 myArray.unshift('4', '5')
 // myArray se convierte en ["4", "5", "1", "2", "3"]
-</pre>
+```
 
-<p>{{jsxref("Array.slice", "slice(start_index, upto_index)")}} extrae una sección de un arreglo y devuelve un nuevo arreglo.</p>
+{{jsxref("Array.slice", "slice(start_index, upto_index)")}} extrae una sección de un arreglo y devuelve un nuevo arreglo.
 
-<pre class="brush: js notranslate">let myArray = new Array('a', 'b', 'c', 'd', 'e')
+```js
+let myArray = new Array('a', 'b', 'c', 'd', 'e')
 myArray = myArray.slice(1, 4) // comienza en el índice 1 y extrae todos los elementos
                                // hasta el índice 3, devuelve ["b", "c", "d"]
-</pre>
+```
 
-<p>{{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} elimina elementos de un arreglo y (opcionalmente) los reemplaza. Devuelve los elementos que se eliminaron del arreglo.</p>
+{{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} elimina elementos de un arreglo y (opcionalmente) los reemplaza. Devuelve los elementos que se eliminaron del arreglo.
 
-<pre class="brush: js notranslate">let myArray = new Array('1', '2', '3', '4', '5')
+```js
+let myArray = new Array('1', '2', '3', '4', '5')
 myArray.splice(1, 3, 'a', 'b', 'c', 'd')
 // myArray ahora es ["1", "a", "b", "c", "d", "5"]
 // Este código comenzó en el índice uno (o donde estaba el "2"),
 // eliminó 3 elementos allí, y luego insertó todos los consecutivos
 // elementos en su lugar.
-</pre>
+```
 
-<p>{{jsxref("Array.reverse", "reverse()")}} transpone los elementos de un arreglo, en su lugar: el primer elemento del arreglo se convierte en el último y el último en el primero. Devuelve una referencia al arreglo.</p>
+{{jsxref("Array.reverse", "reverse()")}} transpone los elementos de un arreglo, en su lugar: el primer elemento del arreglo se convierte en el último y el último en el primero. Devuelve una referencia al arreglo.
 
-<pre class="brush: js notranslate">let myArray = new Array ('1', '2', '3')
+```js
+let myArray = new Array ('1', '2', '3')
 myArray.reverse()
 // transpone el arreglo para que myArray = ["3", "2", "1"]
-</pre>
+```
 
-<p>{{jsxref("Array.sort", "sort()")}} ordena los elementos de un arreglo en su lugar y devuelve una referencia al arreglo.</p>
+{{jsxref("Array.sort", "sort()")}} ordena los elementos de un arreglo en su lugar y devuelve una referencia al arreglo.
 
-<pre class="brush: js notranslate">let myArray = new Array('Viento', 'Lluvia', 'Fuego')
+```js
+let myArray = new Array('Viento', 'Lluvia', 'Fuego')
 myArray.sort()
 // ordena el arreglo para que myArray = ["Fuego", "Lluvia", "Viento"]
-</pre>
+```
 
-<p><code>sort()</code> también puede tomar una función retrollamada para determinar cómo se comparan los elementos del arreglo.</p>
+`sort()` también puede tomar una función retrollamada para determinar cómo se comparan los elementos del arreglo.
 
-<p>El método <code>sort</code> (y otros a continuación) que reciben una retrollamada se conocen como <em>métodos iterativos</em>, porque iteran sobre todo el arreglo de alguna manera. Cada uno toma un segundo argumento opcional llamado <code><var>thisObject</var></code>. Si se proporciona, <code><var>thisObject</var></code> se convierte en el valor de la palabra clave <code>this</code> dentro del cuerpo de la función retrollamada. Si no se proporciona, como en otros casos en los que se invoca una función fuera de un contexto de objeto explícito, <code>this</code> se referirá al objeto global (<a href="/es/docs/Web/API/Window" title="La interfaz &lt;code>Window&lt;/code> representa una ventana que contiene un documento DOM; la propiedad &lt;code>document&lt;/code> apunta al documento DOM cargado en esa ventana."><code>window</code></a>) cuando se usa la función de flecha como retrollamada, o <code>undefined</code> cuando se usa una función normal como retrollamada.</p>
+El método `sort` (y otros a continuación) que reciben una retrollamada se conocen como _métodos iterativos_, porque iteran sobre todo el arreglo de alguna manera. Cada uno toma un segundo argumento opcional llamado `thisObject`. Si se proporciona, `thisObject` se convierte en el valor de la palabra clave `this` dentro del cuerpo de la función retrollamada. Si no se proporciona, como en otros casos en los que se invoca una función fuera de un contexto de objeto explícito, `this` se referirá al objeto global ([`window`](/es/docs/Web/API/Window "La interfaz <code>Window</code> representa una ventana que contiene un documento DOM; la propiedad <code>document</code> apunta al documento DOM cargado en esa ventana.")) cuando se usa la función de flecha como retrollamada, o `undefined` cuando se usa una función normal como retrollamada.
 
-<p>La función retrollamada se invoca con dos argumentos, que son elementos del arreglo.</p>
+La función retrollamada se invoca con dos argumentos, que son elementos del arreglo.
 
-<p>La siguiente función compara dos valores y devuelve uno de tres valores:</p>
+La siguiente función compara dos valores y devuelve uno de tres valores:
 
-<p>Por ejemplo, lo siguiente se ordenará por la última letra de una cadena:</p>
+Por ejemplo, lo siguiente se ordenará por la última letra de una cadena:
 
-<pre class="brush: js notranslate">let sortFn = function(a, b) {
-  if (a[a.length - 1] &lt; b[b.length - 1]) return -1;
-  if (a[a.length - 1] &gt; b[b.length - 1]) return 1;
+```js
+let sortFn = function(a, b) {
+  if (a[a.length - 1] < b[b.length - 1]) return -1;
+  if (a[a.length - 1] > b[b.length - 1]) return 1;
   if (a[a.length - 1] == b[b.length - 1]) return 0;
 }
 myArray.sort(sortFn)
-// ordena el arreglo para que myArray = ["Viento", "Fuego", "Lluvia"]</pre>
+// ordena el arreglo para que myArray = ["Viento", "Fuego", "Lluvia"]
+```
 
-<ul>
- <li>si <code><var>a</var></code> es menor que <code><var>b</var></code> por el sistema de clasificación, devuelve <code>-1</code> ( o cualquier número negativo)</li>
- <li>si <code><var>a</var></code> es mayor que <code><var>b</var></code> por el sistema de clasificación, devuelve <code>1</code> (o cualquier número positivo)</li>
- <li>si <code><var>a</var></code> y <code><var>b</var></code> se consideran equivalentes, devuelve <code>0</code>.</li>
-</ul>
+- si `a` es menor que `b` por el sistema de clasificación, devuelve `-1` ( o cualquier número negativo)
+- si `a` es mayor que `b` por el sistema de clasificación, devuelve `1` (o cualquier número positivo)
+- si `a` y `b` se consideran equivalentes, devuelve `0`.
 
-<p>{{jsxref("Array.indexOf", "indexOf (searchElement[, fromIndex])")}} busca en el arreglo <code><var>searchElement</var></code> y devuelve el índice de la primera coincidencia.</p>
+{{jsxref("Array.indexOf", "indexOf (searchElement[, fromIndex])")}} busca en el arreglo `searchElement` y devuelve el índice de la primera coincidencia.
 
-<pre class="brush: js notranslate">let a = ['a', 'b', 'a', 'b', 'a']
+```js
+let a = ['a', 'b', 'a', 'b', 'a']
 console.log(a.indexOf('b')) // registros 1
 
 // Ahora inténtalo de nuevo, comenzando después de la última coincidencia
 console.log(a.indexOf('b', 2)) // registra 3
 console.log(a.indexOf('z')) // logs -1, porque no se encontró 'z'
-</pre>
+```
 
-<p>{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement [, fromIndex])")}} funciona como <code>indexOf</code>, pero comienza al final y busca hacia atrás.</p>
+{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement [, fromIndex])")}} funciona como `indexOf`, pero comienza al final y busca hacia atrás.
 
-<pre class="brush: js notranslate">let​a = ['a', 'b', 'c', 'd', 'a', 'b']
+```js
+let​a = ['a', 'b', 'c', 'd', 'a', 'b']
 console.log(a.lastIndexOf('b')) // registra 5
 
 // Ahora inténtalo de nuevo, comenzando desde antes de la última coincidencia
 console.log(a.lastIndexOf('b', 4)) // registra 1
 console.log(a.lastIndexOf('z'))    // registra -1
-</pre>
+```
 
-<p>{{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} ejecuta <code><var>callback</var></code> en cada elemento del arreglo y devuelve <code>undefined</code>.</p>
+{{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} ejecuta `callback` en cada elemento del arreglo y devuelve `undefined`.
 
-<pre class="brush: js notranslate">let​a = ['a', 'b', 'c']
+```js
+let​a = ['a', 'b', 'c']
 a.forEach(function(elemento) { console.log(elemento) })
 // registra cada elemento por turno
-</pre>
+```
 
-<p>{{jsxref("Array.map", "map(callback [, thisObject])")}} devuelve un nuevo arreglo del valor de retorno de ejecutar <code><var>callback</var></code> en cada elemento del arreglo.</p>
+{{jsxref("Array.map", "map(callback [, thisObject])")}} devuelve un nuevo arreglo del valor de retorno de ejecutar `callback` en cada elemento del arreglo.
 
-<pre class="brush: js notranslate">let a1 = ['a', 'b', 'c']
+```js
+let a1 = ['a', 'b', 'c']
 let a2 = a1.map(function(item) { return item.toUpperCase() })
 console.log(a2) // registra ['A', 'B', 'C']
-</pre>
+```
 
-<p>{{jsxref("Array.filter", "filter(callback [, thisObject])")}} devuelve un nuevo arreglo que contiene los elementos para los cuales <code><var>callback</var></code> devolvió <code>true</code>.</p>
+{{jsxref("Array.filter", "filter(callback [, thisObject])")}} devuelve un nuevo arreglo que contiene los elementos para los cuales `callback` devolvió `true`.
 
-<pre class="brush: js notranslate">let a1 = ['a', 10, 'b', 20, 'c', 30]
+```js
+let a1 = ['a', 10, 'b', 20, 'c', 30]
 let a2 = a1.filter(function(item) { return typeof item === 'number'; })
 console.log(a2)  // registra [10, 20, 30]
-</pre>
+```
 
-<p>{{jsxref("Array.every", "every(callback [, thisObject])")}} devuelve <code>true</code> si <code><var>callback</var></code> devuelve <code>true</code> para cada elemento del arreglo.</p>
+{{jsxref("Array.every", "every(callback [, thisObject])")}} devuelve `true` si `callback` devuelve `true` para cada elemento del arreglo.
 
-<pre class="brush: js notranslate">function isNumber(value) {
+```js
+function isNumber(value) {
   return typeof value === 'number'
 }
 let a1 = [1, 2, 3]
 console.log(a1.every(isNumber))  // registra true
 let a2 = [1, '2', 3]
 console.log(a2.every(isNumber))  // registra false
-</pre>
+```
 
-<p>{{jsxref("Array.some", "some(callback[, thisObject])")}} devuelve <code>true</code> si <code><var>callback</var></code> devuelve <code>true</code> para al menos un elemento del arreglo.</p>
+{{jsxref("Array.some", "some(callback[, thisObject])")}} devuelve `true` si `callback` devuelve `true` para al menos un elemento del arreglo.
 
-<pre class="brush: js notranslate">function isNumber(value) {
+```js
+function isNumber(value) {
   return typeof value === 'number'
 }
 let a1 = [1, 2, 3]
@@ -394,211 +426,127 @@ let a2 = [1, '2', 3]
 console.log(a2.some(isNumber))  // registra true
 let a3 = ['1', '2', '3']
 console.log(a3.some(isNumber))  // registra false
-</pre>
+```
 
-<p>{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} aplica <code><var>callback</var>(<var>acumulador</var>, <var>currentValue</var>[, <var>currentIndex</var>[,<var>array</var>]])</code> para cada valor en el arreglo con el fin de reducir la lista de elementos a un solo valor. La función <code>reduce</code> devuelve el valor final devuelto por la función <code><var>callback</var></code>. </p>
+{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} aplica `callback(acumulador, currentValue[, currentIndex[,array]])` para cada valor en el arreglo con el fin de reducir la lista de elementos a un solo valor. La función `reduce` devuelve el valor final devuelto por la función `callback`.
 
-<p>Si se especifica <code><var>initialValue</var></code>, entonces <code><var>callback</var></code> se llama con <code><var>initialValue</var></code> como primer valor de parámetro y el valor del primer elemento del arreglo como segundo valor de parámetro. </p>
+Si se especifica `initialValue`, entonces `callback` se llama con `initialValue` como primer valor de parámetro y el valor del primer elemento del arreglo como segundo valor de parámetro.
 
-<p>Si <code><var>initialValue</var></code> <em>no</em> es especificado, entonces <code><var>callback</var></code> los primeros dos valores de parámetro deberán ser el primer y segundo elemento del arreglo. En <em>cada</em> llamada subsiguiente, el valor del primer parámetro será el valor de <code><var>callback</var></code> devuelto en la llamada anterior, y el valor del segundo parámetro será el siguiente valor en el arreglo.</p>
+Si `initialValue` _no_ es especificado, entonces `callback` los primeros dos valores de parámetro deberán ser el primer y segundo elemento del arreglo. En _cada_ llamada subsiguiente, el valor del primer parámetro será el valor de `callback` devuelto en la llamada anterior, y el valor del segundo parámetro será el siguiente valor en el arreglo.
 
-<p>Si <code><var>callback</var></code> necesita acceso al índice del elemento que se está procesando, al acceder al arreglo completo, están disponibles como parámetros opcionales.</p>
+Si `callback` necesita acceso al índice del elemento que se está procesando, al acceder al arreglo completo, están disponibles como parámetros opcionales.
 
-<pre class="brush: js notranslate">let​a = [10, 20, 30]
+```js
+let​a = [10, 20, 30]
 let total = a.reduce(function(accumulator, currentValue) { return accumulator + currentValue }, 0)
 console.log(total) // Imprime 60
-</pre>
+```
 
-<p>{{jsxref("Array.reduceRight", "reduceRight(callback[, initialValue])")}} funciona como <code>reduce()</code>, pero comienza con el último elemento.</p>
+{{jsxref("Array.reduceRight", "reduceRight(callback[, initialValue])")}} funciona como `reduce()`, pero comienza con el último elemento.
 
-<p><code>reduce</code> y <code>reduceRight</code> son los menos obvios de los métodos de arreglo iterativos. Se deben utilizar para algoritmos que combinan dos valores de forma recursiva para reducir una secuencia a un solo valor.</p>
+`reduce` y `reduceRight` son los menos obvios de los métodos de arreglo iterativos. Se deben utilizar para algoritmos que combinan dos valores de forma recursiva para reducir una secuencia a un solo valor.
 
-<h3 id="Arreglos_multidimensionales">Arreglos multidimensionales</h3>
+### Arreglos multidimensionales
 
-<p>Los arreglos se pueden anidar, lo cual significa que un arreglo puede contener otro arreglo como elemento. Usando esta característica de los arreglos de JavaScript, se pueden crear arreglos multidimensionales.</p>
+Los arreglos se pueden anidar, lo cual significa que un arreglo puede contener otro arreglo como elemento. Usando esta característica de los arreglos de JavaScript, se pueden crear arreglos multidimensionales.
 
-<p>El siguiente código crea un arreglo bidimensional.</p>
+El siguiente código crea un arreglo bidimensional.
 
-<pre class="brush: js notranslate">let a = new Array(4)
-for (let i = 0; i &lt; 4; i++) {
+```js
+let a = new Array(4)
+for (let i = 0; i < 4; i++) {
   a[i] = new Array(4)
-  for (let j = 0; j &lt; 4; j++) {
+  for (let j = 0; j < 4; j++) {
     a[i][j] = '[' + i + ', ' + j + ']'
   }
 }
-</pre>
+```
 
-<p>Este ejemplo crea un arreglo con las siguientes filas:</p>
+Este ejemplo crea un arreglo con las siguientes filas:
 
-<pre class="notranslate">Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
-Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
-Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
-Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
-</pre>
+    Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
+    Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
+    Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
+    Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
 
-<h3 id="Usar_arreglos_para_almacenar_otras_propiedades">Usar arreglos para almacenar otras propiedades</h3>
+### Usar arreglos para almacenar otras propiedades
 
-<p>Los arreglos también se pueden utilizar como objetos para almacenar información relacionada.</p>
+Los arreglos también se pueden utilizar como objetos para almacenar información relacionada.
 
-<pre class="brush: js notranslate"><code>const arr = [1, 2, 3];
+```js
+const arr = [1, 2, 3];
 arr.property = "value";
-console.log(arr.property);  // Registra "value"</code>
-</pre>
+console.log(arr.property);  // Registra "value"
+```
 
-<h3 id="Arreglos_y_expresiones_regulares">Arreglos y expresiones regulares</h3>
+### Arreglos y expresiones regulares
 
-<p>Cuando un arreglo es el resultado de una coincidencia entre una expresión regular y una cadena, el arreglo devuelve propiedades y elementos que proporcionan información sobre la coincidencia. Un arreglo es el valor de retorno de {{jsxref("Global_Objects/RegExp/exec", "RegExp.exec()")}}, {{jsxref("Global_Objects/String/match", "String.match()")}} y {{jsxref("Global_Objects/String/split", "String.split()")}}. Para obtener información sobre el uso de arreglos con expresiones regulares, consulta <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions">Expresiones regulares</a>.</p>
+Cuando un arreglo es el resultado de una coincidencia entre una expresión regular y una cadena, el arreglo devuelve propiedades y elementos que proporcionan información sobre la coincidencia. Un arreglo es el valor de retorno de {{jsxref("Global_Objects/RegExp/exec", "RegExp.exec()")}}, {{jsxref("Global_Objects/String/match", "String.match()")}} y {{jsxref("Global_Objects/String/split", "String.split()")}}. Para obtener información sobre el uso de arreglos con expresiones regulares, consulta [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions).
 
-<h3 id="Trabajar_con_objetos_tipo_array">Trabajar con objetos tipo array</h3>
+### Trabajar con objetos tipo array
 
-<p>Algunos objetos JavaScript, como <a href="/es/docs/Web/API/NodeList" title="Los objetos &lt;code>NodeList&lt;/code> son colecciones de nodos, generalmente devueltos por propiedades como ↑Node.childNodes↓ y métodos como ↑document.querySelectorAll()↓."><code>NodeList</code></a> devueltos por <a href="/es/docs/Web/API/Document/getElementsByTagName" title="devuelve una &lt;code>HTMLCollection&lt;/code> de elementos con el nombre de etiqueta dado."><code>document.getElementsByTagName()</code></a> o un objeto {{jsxref("Functions/arguments", "arguments")}} disponible dentro del cuerpo de una función, se ven y se comportan como arreglos en la superficie pero no comparten todos sus métodos. El objeto <code>arguments</code> proporciona un atributo {{jsxref("Global_Objects/Function/length", "length")}} pero no implementa el método {{jsxref("Array.forEach", "forEach()")}}, por ejemplo.</p>
+Algunos objetos JavaScript, como [`NodeList`](/es/docs/Web/API/NodeList "Los objetos <code>NodeList</code> son colecciones de nodos, generalmente devueltos por propiedades como ↑Node.childNodes↓ y métodos como ↑document.querySelectorAll()↓.") devueltos por [`document.getElementsByTagName()`](/es/docs/Web/API/Document/getElementsByTagName "devuelve una <code>HTMLCollection</code> de elementos con el nombre de etiqueta dado.") o un objeto {{jsxref("Functions/arguments", "arguments")}} disponible dentro del cuerpo de una función, se ven y se comportan como arreglos en la superficie pero no comparten todos sus métodos. El objeto `arguments` proporciona un atributo {{jsxref("Global_Objects/Function/length", "length")}} pero no implementa el método {{jsxref("Array.forEach", "forEach()")}}, por ejemplo.
 
-<p>Los métodos de arreglo no se pueden llamar directamente en objetos similares a un arreglo.</p>
+Los métodos de arreglo no se pueden llamar directamente en objetos similares a un arreglo.
 
-<pre class="brush: js example-bad notranslate"><code>function printArguments() {
-  arguments.forEach(function(item) {// <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox-stackTrace reps-custom-format">TypeError: <span class="objectBox objectBox-string">arguments.forEach no es una función</span></span></span></span></span>
+```js example-bad
+function printArguments() {
+  arguments.forEach(function(item) {// TypeError: arguments.forEach no es una función
     console.log(item);
   });
-}</code>
-</pre>
+}
+```
 
-<p>Pero puedes llamarlos indirectamente usando {{jsxref("Global_Objects/Function/call", "Function.prototype.call()")}}.</p>
+Pero puedes llamarlos indirectamente usando {{jsxref("Global_Objects/Function/call", "Function.prototype.call()")}}.
 
-<pre class="brush: js example-good notranslate"><code>function printArguments() {
+```js example-good
+function printArguments() {
   Array.prototype.forEach.call(arguments, function(item) {
     console.log(item);
   });
-}</code>
-</pre>
+}
+```
 
-<p>Los métodos de prototipos de arreglos también se pueden utilizar en cadenas, ya que proporcionan acceso secuencial a sus caracteres de forma similar a los arreglos:</p>
+Los métodos de prototipos de arreglos también se pueden utilizar en cadenas, ya que proporcionan acceso secuencial a sus caracteres de forma similar a los arreglos:
 
-<pre class="brush: js notranslate">Array.prototype.forEach.call('a string', function(chr) {
+```js
+Array.prototype.forEach.call('a string', function(chr) {
   console.log(chr)
 })
-</pre>
+```
 
-<h2 id="Arrays_tipados">Arrays tipados</h2>
+## Arrays tipados
 
-<p><a href="/es/docs/Web/JavaScript/Typed_arrays">Los arreglos tipados en JavaScript</a> son objetos similares a arreglos y proporcionan un mecanismo para acceder a datos binarios sin procesar. Como ya sabes, los objetos {{jsxref("Array")}} crecen y se encogen dinámicamente y pueden tener cualquier valor de JavaScript. Los motores de JavaScript realizan optimizaciones para que estos arreglos sean rápidos. Sin embargo, a medida que las aplicaciones web se vuelven cada vez más poderosas, agregando características como manipulación de audio y video, acceso a datos sin procesar usando <a href="/es/docs/WebSockets">WebSockets</a>, y así sucesivamente, ha quedado claro que hay momentos en los que sería útil para que el código JavaScript pueda manipular rápida y fácilmente datos binarios sin procesar en arreglos tipados.</p>
+[Los arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Typed_arrays) son objetos similares a arreglos y proporcionan un mecanismo para acceder a datos binarios sin procesar. Como ya sabes, los objetos {{jsxref("Array")}} crecen y se encogen dinámicamente y pueden tener cualquier valor de JavaScript. Los motores de JavaScript realizan optimizaciones para que estos arreglos sean rápidos. Sin embargo, a medida que las aplicaciones web se vuelven cada vez más poderosas, agregando características como manipulación de audio y video, acceso a datos sin procesar usando [WebSockets](/es/docs/WebSockets), y así sucesivamente, ha quedado claro que hay momentos en los que sería útil para que el código JavaScript pueda manipular rápida y fácilmente datos binarios sin procesar en arreglos tipados.
 
-<h3 id="Búferes_y_vistas_arquitectura_de_los_arreglos_con_tipo">Búferes y vistas: arquitectura de los arreglos con tipo</h3>
+### Búferes y vistas: arquitectura de los arreglos con tipo
 
-<p>Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript dividen la implementación en <strong>búferes</strong> y <strong>vistas</strong>. Un búfer (implementado por el objeto {{jsxref("ArrayBuffer")}} es un objeto que representa una porción de datos; no tiene un formato del que hablar y no ofrece ningún mecanismo para acceder a su contenido. Para acceder a la memoria contenida en un búfer, necesitas usar una vista. Una vista proporciona un <strong>contexto </strong>, es decir, un tipo de datos, un desplazamiento inicial y un número de elementos, que convierte los datos en un arreglo con tipo real.</p>
+Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript dividen la implementación en **búferes** y **vistas**. Un búfer (implementado por el objeto {{jsxref("ArrayBuffer")}} es un objeto que representa una porción de datos; no tiene un formato del que hablar y no ofrece ningún mecanismo para acceder a su contenido. Para acceder a la memoria contenida en un búfer, necesitas usar una vista. Una vista proporciona un **contexto** , es decir, un tipo de datos, un desplazamiento inicial y un número de elementos, que convierte los datos en un arreglo con tipo real.
 
-<p><img alt="Arreglos tipados en un &lt;code>ArrayBuffer&lt;/code>" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png" style="height: 278px; width: 666px;"></p>
+![Arreglos tipados en un <code>ArrayBuffer</code>](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
 
-<h3 id="ArrayBuffer"><code>ArrayBuffer</code></h3>
+### `ArrayBuffer`
 
-<p>{{jsxref("ArrayBuffer")}} es un tipo de dato que se utiliza para representar un búfer de datos binarios genérico de longitud fija. No puedes manipular directamente el contenido de un <code>ArrayBuffer</code>; en su lugar, creas una vista de arreglo con tipo o un {{jsxref("DataView")}} que representa el búfer en un formato específico, y lo usa para leer y escribir el contenido del búfer.</p>
+{{jsxref("ArrayBuffer")}} es un tipo de dato que se utiliza para representar un búfer de datos binarios genérico de longitud fija. No puedes manipular directamente el contenido de un `ArrayBuffer`; en su lugar, creas una vista de arreglo con tipo o un {{jsxref("DataView")}} que representa el búfer en un formato específico, y lo usa para leer y escribir el contenido del búfer.
 
-<h3 id="Vistas_de_arreglos_tipados">Vistas de arreglos tipados</h3>
+### Vistas de arreglos tipados
 
-<p>Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vistas para todos los tipos numéricos habituales como <code>Int8</code>, <code>Uint32</code>, <code>Float64</code> y así sucesivamente. Hay una vista de arreglo con tipo especial, {jsxref("Uint8ClampedArray")}}, que fija los valores entre <code>0</code> y <code>255</code>. Esto es útil para <a href="/es/docs/Web/API/ImageData">procesamiento de datos de Canvas</a>, por ejemplo.</p>
+Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vistas para todos los tipos numéricos habituales como `Int8`, `Uint32`, `Float64` y así sucesivamente. Hay una vista de arreglo con tipo especial, {jsxref("Uint8ClampedArray")}}, que fija los valores entre `0` y `255`. Esto es útil para [procesamiento de datos de Canvas](/es/docs/Web/API/ImageData), por ejemplo.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th class="header" scope="col">Tipo</th>
-   <th class="header" scope="col">Rango de valores</th>
-   <th class="header" scope="col">Tamaño en bytes</th>
-   <th class="header" scope="col">Descripción</th>
-   <th class="header" scope="col">Tipo de IDL web</th>
-   <th class="header" scope="col">Tipo C equivalente</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{jsxref("Int8Array")}}</td>
-   <td><code>-128</code> a <code>127</code></td>
-   <td>1</td>
-   <td>Dos enteros complementarios de 8 bits con signo</td>
-   <td><code>byte</code></td>
-   <td><code>int8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint8Array")}}</td>
-   <td><code>0</code> a <code>255</code></td>
-   <td>1</td>
-   <td>Entero de 8-bit sin signo</td>
-   <td><code>octeto</code></td>
-   <td><code>uint8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint8ClampedArray")}}</td>
-   <td><code>0</code> a <code>255</code></td>
-   <td>1</td>
-   <td>Entero de 8 bits sin signo (sujeto)</td>
-   <td><code>octeto</code></td>
-   <td><code>uint8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Int16Array")}}</td>
-   <td><code>-32768</code> a <code>32767</code></td>
-   <td>2</td>
-   <td>Dos enteros complementarios de 16 bits con signo</td>
-   <td><code>short</code></td>
-   <td><code>int16_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint16Array")}}</td>
-   <td><code>0</code> a <code>65535</code></td>
-   <td>2</td>
-   <td>Entero de 16 bits sin signo</td>
-   <td><code>short sin signo</code></td>
-   <td><code>uint16_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Int32Array")}}</td>
-   <td><code>-2147483648</code> a <code>2147483647</code></td>
-   <td>4</td>
-   <td>dos enteros complementarios de 32 bits con signo</td>
-   <td><code>long</code></td>
-   <td><code>int32_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint32Array")}}</td>
-   <td><code>0</code> a <code>4294967295</code></td>
-   <td>4</td>
-   <td>Enteros de 32 bits sin signo</td>
-   <td><code>long sin signo</code></td>
-   <td><code>uint32_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code><span>×</span><code>10<sup>-38</sup></code> a <code>3.4</code><span>×</span><code>10<sup>38</sup></code></td>
-   <td>4</td>
-   <td>Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., <code>1.1234567</code>)</td>
-   <td><code>float sin restricciones</code></td>
-   <td><code>float</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code><span>×</span><code>10<sup>-324</sup></code> a <code>1.8</code><span>×</span><code>10<sup>308</sup></code></td>
-   <td>8</td>
-   <td>Número de coma flotante IEEE de 64 bits (16 dígitos significativos, por ejemplo,<code>1.123 ... 15</code>)</td>
-   <td><code>double sin restricciones</code></td>
-   <td><code>double</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("BigInt64Array")}}</td>
-   <td><code>-2<sup>63</sup></code> a <code>2<sup>63</sup>-1</code></td>
-   <td>8</td>
-   <td>Dos enteros complementarios de 64 bits con signo</td>
-   <td><code>bigint</code></td>
-   <td><code>int64_t (long long con signo)</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("BigUint64Array")}}</td>
-   <td><code>0</code> a <code>2<sup>64</sup>-1</code></td>
-   <td>8</td>
-   <td>Entero de 64 bits sin signo</td>
-   <td><code>bigint</code></td>
-   <td><code>uint64_t (long long sin signo)</code></td>
-  </tr>
- </tbody>
-</table>
+| Tipo                                     | Rango de valores               | Tamaño en bytes | Descripción                                                                                     | Tipo de IDL web            | Tipo C equivalente               |
+| ---------------------------------------- | ------------------------------ | --------------- | ----------------------------------------------------------------------------------------------- | -------------------------- | -------------------------------- |
+| {{jsxref("Int8Array")}}         | `-128` a `127`                 | 1               | Dos enteros complementarios de 8 bits con signo                                                 | `byte`                     | `int8_t`                         |
+| {{jsxref("Uint8Array")}}         | `0` a `255`                    | 1               | Entero de 8-bit sin signo                                                                       | `octeto`                   | `uint8_t`                        |
+| {{jsxref("Uint8ClampedArray")}} | `0` a `255`                    | 1               | Entero de 8 bits sin signo (sujeto)                                                             | `octeto`                   | `uint8_t`                        |
+| {{jsxref("Int16Array")}}         | `-32768` a `32767`             | 2               | Dos enteros complementarios de 16 bits con signo                                                | `short`                    | `int16_t`                        |
+| {{jsxref("Uint16Array")}}         | `0` a `65535`                  | 2               | Entero de 16 bits sin signo                                                                     | `short sin signo`          | `uint16_t`                       |
+| {{jsxref("Int32Array")}}         | `-2147483648` a `2147483647`   | 4               | dos enteros complementarios de 32 bits con signo                                                | `long`                     | `int32_t`                        |
+| {{jsxref("Uint32Array")}}         | `0` a `4294967295`             | 4               | Enteros de 32 bits sin signo                                                                    | `long sin signo`           | `uint32_t`                       |
+| {{jsxref("Float32Array")}}     | `1.2`×`10-38` a `3.4`×`1038`   | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)         | `float sin restricciones`  | `float`                          |
+| {{jsxref("Float64Array")}}     | `5.0`×`10-324` a `1.8`×`10308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, por ejemplo,`1.123 ... 15`) | `double sin restricciones` | `double`                         |
+| {{jsxref("BigInt64Array")}}     | `-263` a `263-1`               | 8               | Dos enteros complementarios de 64 bits con signo                                                | `bigint`                   | `int64_t (long long con signo)`  |
+| {{jsxref("BigUint64Array")}}     | `0` a `264-1`                  | 8               | Entero de 64 bits sin signo                                                                     | `bigint`                   | `uint64_t (long long sin signo)` |
 
-<p>Para obtener más información, consulta <a href="/es/docs/Web/JavaScript/Typed_arrays">Arreglos tipados en JavaScript</a> y la documentación de referencia para los diferentes objetos {{jsxref("TypedArray")}}.</p>
+Para obtener más información, consulta [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Typed_arrays) y la documentación de referencia para los diferentes objetos {{jsxref("TypedArray")}}.
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

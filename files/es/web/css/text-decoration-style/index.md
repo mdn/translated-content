@@ -6,19 +6,20 @@ tags:
   - Texto CSS
 translation_of: Web/CSS/text-decoration-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad CSS <strong><code>text-decoration-style</code></strong> define el estilo de las líneas especificadas por {{ cssxref("text-decoration-line") }}. El estilo aplica a todas las líneas, no hay manera de establecer diferentes estilos para cada línea definida por <code>text-decoration-line</code>.</p>
+La propiedad CSS **`text-decoration-style`** define el estilo de las líneas especificadas por {{ cssxref("text-decoration-line") }}. El estilo aplica a todas las líneas, no hay manera de establecer diferentes estilos para cada línea definida por `text-decoration-line`.
 
-<p>Si la decoración especificada tiene un significado semántico propio, como <em>line-through</em>, que significa que el texto ha sido removido, se recomienda a los autores denotar este significado usando una etiqueta HTML, como {{ HTMLElement("del") }} o {{ HTMLElement("s") }}. Siendo que los navegadores pueden deshabilitar estilos en algunos casos, el significado semántico no desaparecerá en dicha situación.</p>
+Si la decoración especificada tiene un significado semántico propio, como _line-through_, que significa que el texto ha sido removido, se recomienda a los autores denotar este significado usando una etiqueta HTML, como {{ HTMLElement("del") }} o {{ HTMLElement("s") }}. Siendo que los navegadores pueden deshabilitar estilos en algunos casos, el significado semántico no desaparecerá en dicha situación.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: css">/* Valores clave */
+```css
+/* Valores clave */
 text-decoration-style: solid;
 text-decoration-style: double;
 text-decoration-style: dotted;
@@ -29,105 +30,59 @@ text-decoration-style: wavy;
 text-decoration-style: inherit;
 text-decoration-style: initial;
 text-decoration-style: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>solid double dotted dashed wavy</code></dt>
- <dd>Es una de las siguientes palabras clave:
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col">Palabra clave</th>
-    <th scope="col">Descripción</th>
-    <th scope="col">Comentario</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>solid</code></td>
-    <td>Dibuja una línea simple</td>
-    <td> </td>
-   </tr>
-   <tr>
-    <td><code>double</code></td>
-    <td>Dibuja una línea doble</td>
-    <td> </td>
-   </tr>
-   <tr>
-    <td><code>dotted</code></td>
-    <td>Dibuja una línea punteada</td>
-    <td> </td>
-   </tr>
-   <tr>
-    <td><code>dashed</code></td>
-    <td>Dibuja una línea discontinua</td>
-    <td> </td>
-   </tr>
-   <tr>
-    <td><code>wavy</code></td>
-    <td>Dibuja una línea ondulada</td>
-    <td> </td>
-   </tr>
-   <tr>
-    <td><code>-moz-none</code>{{ non-standard_inline }}<code> </code></td>
-    <td>No dibuja una línea</td>
-    <td><strong>No usarse:</strong> usar {{ cssxref("text-decoration-line") }}<code>: none</code> en su lugar</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>inherit</code></dt>
- <dd>Es una palabra clave que indica que se reutilice el valor calculado del elemento padre.</dd>
-</dl>
+- `solid double dotted dashed wavy`
+  - | : Es una de las siguientes palabras clave:    | Palabra clave                | Descripción                                                                              | Comentario |
+    | --------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- | ---------- |
+    | `solid`                                       | Dibuja una línea simple      |                                                                                          |
+    | `double`                                      | Dibuja una línea doble       |                                                                                          |
+    | `dotted`                                      | Dibuja una línea punteada    |                                                                                          |
+    | `dashed`                                      | Dibuja una línea discontinua |                                                                                          |
+    | `wavy`                                        | Dibuja una línea ondulada    |                                                                                          |
+    | `-moz-none`{{ non-standard_inline }}`` | No dibuja una línea          | **No usarse:** usar {{ cssxref("text-decoration-line") }}`: none` en su lugar |
+- `inherit`
+  - : Es una palabra clave que indica que se reutilice el valor calculado del elemento padre.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: css" class="hidden">.example {
+```css
+.example {
        -moz-text-decoration-line: underline;
        -moz-text-decoration-style: wavy;
        -moz-text-decoration-color: red;
     -webkit-text-decoration-line: underline;
     -webkit-text-decoration-style: wavy;
     -webkit-text-decoration-color: red;
-}</pre>
+}
+```
 
-<pre class="brush: css">.example {
+```css
+.example {
     text-decoration-line: underline;
     text-decoration-style: wavy;
     text-decoration-color: red;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;p class="example"&gt;Así se ve el resultado.&lt;/p&gt;
-</pre>
+```html
+<p class="example">Así se ve el resultado.</p>
+```
 
-<p>{{ EmbedLiveSample('Ejemplos', '', '', '') }}</p>
+{{ EmbedLiveSample('Ejemplos', '', '', '') }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Text Decoration', '#text-decoration-style', 'text-decoration-style') }}</td>
-   <td>{{ Spec2('CSS3 Text Decoration') }}</td>
-   <td>Definición inicial. La propiedad {{cssxref("text-decoration")}} no era una forma reducida anteriormente.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                           | Estado                                           | Comentarios                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| {{ SpecName('CSS3 Text Decoration', '#text-decoration-style', 'text-decoration-style') }} | {{ Spec2('CSS3 Text Decoration') }} | Definición inicial. La propiedad {{cssxref("text-decoration")}} no era una forma reducida anteriormente. |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.text-decoration-style")}}

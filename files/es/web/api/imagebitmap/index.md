@@ -8,58 +8,35 @@ tags:
   - Referencia
 translation_of: Web/API/ImageBitmap
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The <code><strong>ImageBitmap</strong></code> interface represents a bitmap image which can be drawn to a {{HTMLElement("canvas")}} without undue latency. It can be created from a variety of source objects using the {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}} factory method. <code>ImageBitmap</code> provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL.</p>
+The **`ImageBitmap`** interface represents a bitmap image which can be drawn to a {{HTMLElement("canvas")}} without undue latency. It can be created from a variety of source objects using the {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}} factory method. `ImageBitmap` provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ImageBitmap.height")}} {{readonlyInline}}</dt>
- <dd>Is an <code>unsigned</code> <code>long</code> representing the height, in CSS pixels, of the <code>ImageData</code>.</dd>
- <dt>{{domxref("ImageBitmap.width")}} {{readonlyInline}}</dt>
- <dd>Is an <code>unsigned</code> <code>long</code> representing the width, in CSS pixels, of the <code>ImageData</code>.</dd>
-</dl>
+- {{domxref("ImageBitmap.height")}} {{readonlyInline}}
+  - : Is an `unsigned` `long` representing the height, in CSS pixels, of the `ImageData`.
+- {{domxref("ImageBitmap.width")}} {{readonlyInline}}
+  - : Is an `unsigned` `long` representing the width, in CSS pixels, of the `ImageData`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("ImageBitmap.close()")}}</dt>
- <dd>
- <p>Disposes of all graphical resources associated with an <code>ImageBitmap</code>.</p>
- </dd>
-</dl>
+- {{domxref("ImageBitmap.close()")}}
+  - : Disposes of all graphical resources associated with an `ImageBitmap`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "webappapis.html#imagebitmap", "ImageBitmap")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName('HTML WHATWG', "webappapis.html#imagebitmap", "ImageBitmap")}} | {{Spec2('HTML WHATWG')}} |         |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.ImageBitmap")}}
 
+## See also
 
-<p>{{Compat("api.ImageBitmap")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("ImageBitmapFactories.createImageBitmap()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.drawImage()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("OffScreenCanvas.transferToImageBitmap()")}}</li>
-</ul>
+- {{domxref("ImageBitmapFactories.createImageBitmap()")}}
+- {{domxref("CanvasRenderingContext2D.drawImage()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("OffScreenCanvas.transferToImageBitmap()")}}

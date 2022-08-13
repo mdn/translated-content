@@ -10,26 +10,24 @@ tags:
   - Reference
 translation_of: Web/API/Document/defaultView
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>En los navegadores devuelve el objeto <a href="/en-US/docs/DOM/window" title="DOM/window">window</a> asociado con el <code>document </code>o <code>null</code> si no está disponible.</p>
+En los navegadores devuelve el objeto [window](/es/docs/DOM/window "DOM/window") asociado con el `document `o `null` si no está disponible.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var win = document.defaultView;</pre>
+    var win = document.defaultView;
 
-<p>Esta propiedad es de solo lectura.</p>
+Esta propiedad es de solo lectura.
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>De acuerco con <a class="external" href="http://www.quirksmode.org/dom/w3c_html.html">quirksmode</a>, <code>defaultView</code> no está soportado en IE hasta su version 9.</p>
+De acuerco con [quirksmode](http://www.quirksmode.org/dom/w3c_html.html), `defaultView` no está soportado en IE hasta su version 9.
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<ul>
- <li><a href="/en-US/docs/HTML/HTML5" title="HTML/HTML5">HTML5: defaultView</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView">DOM Level 2 Views: defaultView</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Views/">DOM Level 3 Views</a> (Actualmente en desarrolo como "Working Group Note" en W3C y aún no está implementado)</li>
-</ul>
+- [HTML5: defaultView](/es/docs/HTML/HTML5 "HTML/HTML5")
+- [DOM Level 2 Views: defaultView](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
+- [DOM Level 3 Views](http://www.w3.org/TR/DOM-Level-3-Views/) (Actualmente en desarrolo como "Working Group Note" en W3C y aún no está implementado)

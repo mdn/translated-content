@@ -5,45 +5,37 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/getRangeAt
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Devuelve un objeto de rango representando uno de los rangos seleccionados.</p>
+Devuelve un objeto de rango representando uno de los rangos seleccionados.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><i>range</i> =
-<i>sel</i>.getRangeAt(
-<i>index</i>)
-</pre>
+    range =
+    sel.getRangeAt(
+    index)
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>
- <i><code>range</code></i>
- </dt>
- <dd>El objeto <a href="es/DOM/range">range</a> (rango) que será devuelto.</dd>
-</dl>
+- _`range`_
+  - : El objeto [range](es/DOM/range) (rango) que será devuelto.
 
-<dl>
- <dt>
- <i><code>index</code></i>
- </dt>
- <dd>El exponente (basado en cero) del rango a devolver. Un número negativo o un número mayor o igual a <a href="es/DOM/Selection/rangeCount">rangeCount</a> provocará un error.</dd>
-</dl>
+<!---->
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+- _`index`_
+  - : El exponente (basado en cero) del rango a devolver. Un número negativo o un número mayor o igual a [rangeCount](es/DOM/Selection/rangeCount) provocará un error.
 
-<pre class="eval">ranges = [];
-sel = window.getSelection();
-for(var i = 0; i &lt; sel.rangeCount; i++) {
- ranges[i] = sel.getRangeAt(i);
-}
-/* Cada artículo en el array de rangos ahora es
- * un objeto rango representando uno de los
- * rangos en la selección */
-</pre>
+### Ejemplos
 
-<p>{{ languages( { "en": "en/DOM/Selection/getRangeAt", "pl": "pl/DOM/Selection/getRangeAt" } ) }}</p>
+    ranges = [];
+    sel = window.getSelection();
+    for(var i = 0; i < sel.rangeCount; i++) {
+     ranges[i] = sel.getRangeAt(i);
+    }
+    /* Cada artículo en el array de rangos ahora es
+     * un objeto rango representando uno de los
+     * rangos en la selección */
+
+{{ languages( { "en": "en/DOM/Selection/getRangeAt", "pl": "pl/DOM/Selection/getRangeAt" } ) }}

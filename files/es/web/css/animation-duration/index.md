@@ -9,70 +9,53 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-duration
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p>{{ SeeCompatTable() }}</p>
+{{ SeeCompatTable() }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad CSS <code>animation-duration</code> indica la cantidad de tiempo que la animación tarda en completar un ciclo (duración).</p>
+La propiedad CSS `animation-duration` indica la cantidad de tiempo que la animación tarda en completar un ciclo (duración).
 
-<p>El valor por defecto es <code>0s</code>, que indica que la animación no debe producirse.</p>
+El valor por defecto es `0s`, que indica que la animación no debe producirse.
 
-<p>Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajustar todas las propiedades de animación a la vez</p>
+Es conveniente usar la propiedad abreviada {{ cssxref("animation") }} para ajustar todas las propiedades de animación a la vez
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="/en-US/docs/CSS/Value_definition_syntax">Gramatica formal</a>: {{csssyntax("animation-duration")}}
-</pre>
+    Gramatica formal: {{csssyntax("animation-duration")}}
 
-<pre>animation-duration: 6s
-animation-duration: 120ms
-animation-duration: 1s, 15s
-animation-duration: 10s, 30s, 230ms
-</pre>
+<!---->
 
-<h3 id="Valores">Valores</h3>
+    animation-duration: 6s
+    animation-duration: 120ms
+    animation-duration: 1s, 15s
+    animation-duration: 10s, 30s, 230ms
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>El tiempo que tarda la animación en terminar su secuencia. Podemos especificarlo en segundos (usando <code>s</code>) o milisegundos (usando <code>ms</code>). Si no especificamos la unidad, la sentencia no será válida.</dd>
-</dl>
+### Valores
 
-<div class="note"><strong>Nota:</strong> No acepta valores negativos, si los ponemos la sentencia se ignorará. Algunas implementaciones antiguas (con prefijos) pueden considerar los valores negativos como si fueran <code>0s</code>.</div>
+- `<time>`
+  - : El tiempo que tarda la animación en terminar su secuencia. Podemos especificarlo en segundos (usando `s`) o milisegundos (usando `ms`). Si no especificamos la unidad, la sentencia no será válida.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+> **Nota:** No acepta valores negativos, si los ponemos la sentencia se ignorará. Algunas implementaciones antiguas (con prefijos) pueden considerar los valores negativos como si fueran `0s`.
 
-<p>Visitar <a href="/es/CSS/Usando_animaciones_CSS" title="en/CSS/CSS_animations">CSS animations</a> para ver algunos ejemplos.</p>
+## Ejemplos
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+Visitar [CSS animations](/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations") para ver algunos ejemplos.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations', '#animation-duration', 'animation-duration') }}</td>
-   <td>{{ Spec2('CSS3 Animations') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Especificaciones
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad entre navegadores</h2>
+| Especificación                                                                                           | Estado                                   | Comentarios |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
+| {{ SpecName('CSS3 Animations', '#animation-duration', 'animation-duration') }} | {{ Spec2('CSS3 Animations') }} |             |
+
+## Compatibilidad entre navegadores
 
 {{Compat("css.properties.animation-duration")}}
 
-<h2 id="Consultar_también">Consultar también</h2>
+## Consultar también
 
-<ul>
- <li><a href="/es/docs/CSS/Usando_animaciones_CSS" title="Tutorial about CSS animations">Usando animaciones CSS</a></li>
- <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
-</ul>
+- [Usando animaciones CSS](/es/docs/CSS/Usando_animaciones_CSS "Tutorial about CSS animations")
+- {{ domxref("AnimationEvent", "AnimationEvent") }}

@@ -1,130 +1,127 @@
 ---
 title: ':nth-child'
-slug: 'Web/CSS/:nth-child'
+slug: Web/CSS/:nth-child
 tags:
   - CSS
   - Diseño
   - Pseudo-clase
   - Referencia
   - Web
-translation_of: 'Web/CSS/:nth-child'
+translation_of: Web/CSS/:nth-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/es/docs/Web/CSS">pseudo-clase</a> <strong><code>:nth-child()</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> coincide con uno o más elementos en función de su posición entre un grupo de hermanos.</p>
+La [pseudo-clase](/es/docs/Web/CSS) **`:nth-child()`** de [CSS](/es/docs/Web/CSS) coincide con uno o más elementos en función de su posición entre un grupo de hermanos.
 
-<pre class="brush: css no-line-numbers">/* Selecciona cada cuarto elemento entre
+```css
+/* Selecciona cada cuarto elemento entre
    cualquier grupo de hermanos */
 :nth-child(4n) {
   color: lime;
 }
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<p>La pseudo-clase <code>nth-child</code> se especifica con un único argumento, que representa el patrón para los elementos coincidentes.</p>
+La pseudo-clase `nth-child` se especifica con un único argumento, que representa el patrón para los elementos coincidentes.
 
-<h3 id="Valores_de_palabras_clave">Valores de palabras clave</h3>
+### Valores de palabras clave
 
-<dl>
- <dt><code>odd</code></dt>
- <dd>Representa elementos cuya posición numérica en una serie de hermanos es impar: 1, 3, 5, etc.</dd>
- <dt><code>even</code></dt>
- <dd>Representa elementos cuya posición numérica en una serie de hermanos es par: 2, 4, 6, etc.</dd>
-</dl>
+- `odd`
+  - : Representa elementos cuya posición numérica en una serie de hermanos es impar: 1, 3, 5, etc.
+- `even`
+  - : Representa elementos cuya posición numérica en una serie de hermanos es par: 2, 4, 6, etc.
 
-<h3 id="Notación_funcional">Notación funcional</h3>
+### Notación funcional
 
-<dl>
- <dt><code>&lt;An+B&gt;</code></dt>
- <dd>Representa elementos cuya posición numérica en una serie de hermanos coincide con el patrón <code>An+B</code>, para cada entero positivo o valor cero de <code>n</code>. El índice del primer elemento es <code>1</code>. Los valores <code>A</code> y <code>B</code> deben ser ambos {{cssxref("&lt;integer&gt;")}}.</dd>
-</dl>
+- `<An+B>`
+  - : Representa elementos cuya posición numérica en una serie de hermanos coincide con el patrón `An+B`, para cada entero positivo o valor cero de `n`. El índice del primer elemento es `1`. Los valores `A` y `B` deben ser ambos {{cssxref("&lt;integer&gt;")}}.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Example_selectors" name="Example_selectors">Selectores de ejemplo</h3>
+### Selectores de ejemplo
 
-<dl>
- <dt><code>tr:nth-child(odd)</code> o <code>tr:nth-child(2n+1)</code></dt>
- <dd>Representa las filas impares de una tabla HTML: 1, 3, 5, etc.</dd>
- <dt><code>tr:nth-child(even)</code> o <code>tr:nth-child(2n)</code></dt>
- <dd>Representa las filas pares de una tabla HTML: 2, 4, 6, etc.</dd>
- <dt><code>:nth-child(7)</code></dt>
- <dd>Representa el séptimo elemento.</dd>
- <dt><code>:nth-child(5n)</code></dt>
- <dd>Representa los elementos 5, 10, 15, etc.</dd>
- <dt><code>:nth-child(3n+4)</code></dt>
- <dd>Representa los elementos 4, 7, 10, 13, etc.</dd>
- <dt><code>:nth-child(-n+3)</code></dt>
- <dd>Representa los primeros tres elementos entre un grupo de hermanos.</dd>
- <dt><code>p:nth-child(n)</code></dt>
- <dd>Representa cada elemento <code>&lt;p&gt;</code> entre un grupo de hermanos. Esto es lo mismo que un simple selector <code>p</code>.</dd>
- <dt><code>p:nth-child(1)</code> o <code>p:nth-child(0n+1)</code></dt>
- <dd>Representa cada <code>&lt;p&gt;</code> que es el primer elemento entre un grupo de hermanos. Esto es lo mismo que el selector {{cssxref(":first-child")}}.</dd>
-</dl>
+- `tr:nth-child(odd)` o `tr:nth-child(2n+1)`
+  - : Representa las filas impares de una tabla HTML: 1, 3, 5, etc.
+- `tr:nth-child(even)` o `tr:nth-child(2n)`
+  - : Representa las filas pares de una tabla HTML: 2, 4, 6, etc.
+- `:nth-child(7)`
+  - : Representa el séptimo elemento.
+- `:nth-child(5n)`
+  - : Representa los elementos 5, 10, 15, etc.
+- `:nth-child(3n+4)`
+  - : Representa los elementos 4, 7, 10, 13, etc.
+- `:nth-child(-n+3)`
+  - : Representa los primeros tres elementos entre un grupo de hermanos.
+- `p:nth-child(n)`
+  - : Representa cada elemento `<p>` entre un grupo de hermanos. Esto es lo mismo que un simple selector `p`.
+- `p:nth-child(1)` o `p:nth-child(0n+1)`
+  - : Representa cada `<p>` que es el primer elemento entre un grupo de hermanos. Esto es lo mismo que el selector {{cssxref(":first-child")}}.
 
-<h3 id="Ejemplo_detallado">Ejemplo detallado</h3>
+### Ejemplo detallado
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;h3&gt;&lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;, SIN un
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; entre los hijos.&lt;/h3&gt;
-&lt;p&gt;Los hijos 1, 3, 5 y 7 son seleccionados.&lt;/p&gt;
-&lt;div class="first"&gt;
-  &lt;span&gt;Span 1!&lt;/span&gt;
-  &lt;span&gt;Span 2&lt;/span&gt;
-  &lt;span&gt;Span 3!&lt;/span&gt;
-  &lt;span&gt;Span 4&lt;/span&gt;
-  &lt;span&gt;Span 5!&lt;/span&gt;
-  &lt;span&gt;Span 6&lt;/span&gt;
-  &lt;span&gt;Span 7!&lt;/span&gt;
-&lt;/div&gt;
+```html
+<h3><code>span:nth-child(2n+1)</code>, SIN un
+   <code>&lt;em&gt;</code> entre los hijos.</h3>
+<p>Los hijos 1, 3, 5 y 7 son seleccionados.</p>
+<div class="first">
+  <span>Span 1!</span>
+  <span>Span 2</span>
+  <span>Span 3!</span>
+  <span>Span 4</span>
+  <span>Span 5!</span>
+  <span>Span 6</span>
+  <span>Span 7!</span>
+</div>
 
-&lt;br&gt;
+<br>
 
-&lt;h3&gt;&lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;, CON un
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; entre los hijos.&lt;/h3&gt;
-&lt;p&gt;Los hijos 1, 5 y 7 son seleccionados.&lt;br&gt;
+<h3><code>span:nth-child(2n+1)</code>, CON un
+   <code>&lt;em&gt;</code> entre los hijos.</h3>
+<p>Los hijos 1, 5 y 7 son seleccionados.<br>
    3 se usa en el conteo porque es un hijo, pero
-   no se selecciona porque no es un &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="second"&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;em&gt;Este es un `em`.&lt;/em&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-&lt;/div&gt;
+   no se selecciona porque no es un <code>&lt;span&gt;</code>.</p>
+<div class="second">
+  <span>Span!</span>
+  <span>Span</span>
+  <em>Este es un `em`.</em>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+</div>
 
-&lt;br&gt;
+<br>
 
-&lt;h3&gt;&lt;code&gt;span:nth-of-type(2n+1)&lt;/code&gt;, CON un
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; entre los hijos.&lt;/h3&gt;
-&lt;p&gt;Los hijos 1, 4, 6 y 8 son seleccionados.&lt;br&gt;
-   3 no se usa en el conteo ni se selecciona porque es un &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;,
-   no un &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;, y &lt;code&gt;nth-of-type&lt;/code&gt; solo selecciona
-   hijos de ese tipo. El &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; se omite por completo y se ignora.&lt;/p&gt;
-&lt;div class="third"&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;em&gt;Este es un `em`.&lt;/em&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+<h3><code>span:nth-of-type(2n+1)</code>, CON un
+   <code>&lt;em&gt;</code> entre los hijos.</h3>
+<p>Los hijos 1, 4, 6 y 8 son seleccionados.<br>
+   3 no se usa en el conteo ni se selecciona porque es un <code>&lt;em&gt;</code>,
+   no un <code>&lt;span&gt;</code>, y <code>nth-of-type</code> solo selecciona
+   hijos de ese tipo. El <code>&lt;em&gt;</code> se omite por completo y se ignora.</p>
+<div class="third">
+  <span>Span!</span>
+  <span>Span</span>
+  <em>Este es un `em`.</em>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -140,48 +137,24 @@ div em {
 .second span:nth-child(2n+1),
 .third span:nth-of-type(2n+1) {
   background-color: lime;
-}</pre>
+}
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Ejemplo_detallado', 550, 550)}}</p>
+{{EmbedLiveSample('Ejemplo_detallado', 550, 550)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>
-    <p>Agrega la sintaxis <code>of &lt;selector&gt;</code> y especifica que no se requiere que los elementos coincidentes tengan un padre.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Definición Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                               | Comentarios                                                                                                        |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS4 Selectors')}} | Agrega la sintaxis `of <selector>` y especifica que no se requiere que los elementos coincidentes tengan un padre. |
+| {{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                                                                                |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
+{{Compat("css.selectors.nth-child")}}
 
+## Ver también
 
-<p>{{Compat("css.selectors.nth-child")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">Ver también</h2>
-
-<ul>
- <li>{{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}</li>
-</ul>
+- {{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}

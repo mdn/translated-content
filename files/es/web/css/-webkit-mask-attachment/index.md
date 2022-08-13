@@ -8,39 +8,38 @@ tags:
   - Web
 translation_of: Web/CSS/-webkit-mask-attachment
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p id="Summary">Si se ha especificado una {{ Cssxref("-webkit-mask-image") }} , <code>-webkit-mask-attachment</code> determina si la posición de la imagen de la máscara es fija dentro de la ventana (viewport) , o se desplaza a lo largo del bloque que la contiene.</p>
+Si se ha especificado una {{ Cssxref("-webkit-mask-image") }} , `-webkit-mask-attachment` determina si la posición de la imagen de la máscara es fija dentro de la ventana (viewport) , o se desplaza a lo largo del bloque que la contiene.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
 {{csssyntax}}
 
-<h2 id="Valores">Valores</h2>
+## Valores
 
-<dl>
- <dt>scroll</dt>
- <dd>Si se ha especifiacod  <code>scroll</code> , la imagen de máscara se desplaza dentro de la ventana (viewport) junto con el bloque que contiene la máscara de imagen.</dd>
- <dt>fixed</dt>
- <dd>Si se ha especificado el valor <code>fixed</code> , la imagen de máscara no se desplaza junto con el elemento que la contienen, en vez de eso permanece es una posición fija dentro de la ventana (viewport).</dd>
-</dl>
+- scroll
+  - : Si se ha especifiacod `scroll` , la imagen de máscara se desplaza dentro de la ventana (viewport) junto con el bloque que contiene la máscara de imagen.
+- fixed
+  - : Si se ha especificado el valor `fixed` , la imagen de máscara no se desplaza junto con el elemento que la contienen, en vez de eso permanece es una posición fija dentro de la ventana (viewport).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: css">body {
+```css
+body {
     -webkit-mask-image: url('images/mask.png');
     -webkit-mask-attachment: fixed;
 }
-</pre>
+```
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.properties.-webkit-mask-attachment")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<p>{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-clip") }},  {{ cssxref("-webkit-mask-box-image") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}</p>
+{{ cssxref("-webkit-mask") }}, {{ cssxref("-webkit-mask-clip") }}, {{ cssxref("-webkit-mask-box-image") }}, {{ cssxref("-webkit-mask-origin") }}, {{ cssxref("-webkit-mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("-webkit-mask-repeat") }}

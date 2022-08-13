@@ -10,54 +10,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Assignment
 original_slug: Web/JavaScript/Referencia/Operadores/Asignacion
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>El operador de asignación (=) se utiliza para asignar un valor a una variable. La operación de asignación evalúa el valor asignado. Es posible encadenar el operador de asignación para asignar un solo valor a múltiples variables</p>
+El operador de asignación (=) se utiliza para asignar un valor a una variable. La operación de asignación evalúa el valor asignado. Es posible encadenar el operador de asignación para asignar un solo valor a múltiples variables
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
 
+## Sintaxis
 
+    Operador: x = y
 
+## Ejemplos
 
+### Asignación
 
-<h2 id="Sintaxis">Sintaxis</h2>
-
-<pre class="syntaxbox notranslate"><strong>Operador:</strong> x = y
-</pre>
-
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<h3 id="Asignación">Asignación</h3>
-
-<pre class="brush: js notranslate">// Asumimos las siguientes variables
+```js
+// Asumimos las siguientes variables
 //  x = 5
 //  n = 10
 //  z = 25
 
 x = n     // La variable x contiene el valor 10
-x = n = z // x = n (es decir 10) y z pisa el valor total remplazandolo por 25</pre>
+x = n = z // x = n (es decir 10) y z pisa el valor total remplazandolo por 25
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}} |
 
-<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
+## Compatibilidad con Navegadores
 
+{{Compat("javascript.operators.assignment")}}
 
+## Ver también
 
-<p>{{Compat("javascript.operators.assignment")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment operators in the JS guide</a></li>
-</ul>
+- [Assignment operators in the JS guide](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)

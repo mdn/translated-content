@@ -6,26 +6,24 @@ tags:
   - Referencia
 translation_of: Web/API/KeyboardEvent/metaKey
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>La propiedad <strong><code>KeyboardEvent.metaKey</code></strong>  es de solo lectura y regresa un valor {{jsxref("Boolean")}} que indica si la tecla <kbd>Meta</kbd> estaba presionada (true) o no (false) cuando el evento ocurrio.</p>
+La propiedad **`KeyboardEvent.metaKey`** es de solo lectura y regresa un valor {{jsxref("Boolean")}} que indica si la tecla <kbd>Meta</kbd> estaba presionada (true) o no (false) cuando el evento ocurrio.
 
-<div class="note">
-<p><strong>Nota:</strong> En teclados Macintosh es la tecla comando (<kbd>⌘</kbd>). En teclados Windows la tecla es lla tecla window (<kbd>⊞</kbd>).</p>
-</div>
+> **Nota:** En teclados Macintosh es la tecla comando (<kbd>⌘</kbd>). En teclados Windows la tecla es lla tecla window (<kbd>⊞</kbd>).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var metaKeyPressed = <em>instanceOfKeyboardEvent</em>.metaKey
-</pre>
+    var metaKeyPressed = instanceOfKeyboardEvent.metaKey
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>{{jsxref("Boolean")}}</p>
+{{jsxref("Boolean")}}
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js"> function goInput(e) {
+```js
+ function goInput(e) {
  // Revisa si estaba presionada la tecla meta y
    if (e.metaKey) {
         // realiza esto en caso de cierto
@@ -35,51 +33,38 @@ translation_of: Web/API/KeyboardEvent/metaKey
      doOutput(e);
    }
  }
-</pre>
+```
 
-<h2 id="metaKey" name="metaKey">metaKey</h2>
+## metaKey
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div id="example" onmousedown="ismetaKey(event);"&gt;¡Presiona la tecla meta y dame click!&lt;div&gt;
-</pre>
+```html
+<div id="example" onmousedown="ismetaKey(event);">¡Presiona la tecla meta y dame click!<div>
+```
 
-<h3 id="Contenido_Javascript">Contenido Javascript</h3>
+### Contenido Javascript
 
-<pre class="brush: js">function ismetaKey(e){
+```js
+function ismetaKey(e){
  var el=document.getElementById("example");//Toma el control del div example
  var mK=e.metaKey;//Obtiene el valor de metaKey y lo almacena
- el.innerHTML="¡Presiona la tecla meta y dame click!&lt;/br&gt;metaKey:"+mK;//Muestra el valor de metaKey
+ el.innerHTML="¡Presiona la tecla meta y dame click!</br>metaKey:"+mK;//Muestra el valor de metaKey
 }
-</pre>
+```
 
-<p> </p>
+{{ EmbedLiveSample('metaKey') }}
 
-<p>{{ EmbedLiveSample('metaKey') }}</p>
+## Especificaciones
 
-<h2 id="Especificaciones">Especificaciones</h2>
+| Especificación                                                                                               | Status                           | Comentario         |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('DOM3 Events','#widl-KeyboardEvent-metaKey','KeyboardEvent.metaKey')}} | {{Spec2('DOM3 Events')}} | Definición inicial |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-KeyboardEvent-metaKey','KeyboardEvent.metaKey')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat("api.KeyboardEvent.metaKey")}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{ domxref("KeyboardEvent") }}</li>
-</ul>
+- {{ domxref("KeyboardEvent") }}

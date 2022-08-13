@@ -6,19 +6,20 @@ tags:
   - Propiedad CSS
 translation_of: Web/CSS/outline-offset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad CSS <strong><code>outline-offset</code></strong> es usada para establecer el espacio entre un contorno {{ cssxref("outline") }} y el límite o borde de un elemento. Un contorno es una línea que se dibuja al rededor de los elementos, fuera de los límites de su borde.</p>
+La propiedad CSS **`outline-offset`** es usada para establecer el espacio entre un contorno {{ cssxref("outline") }} y el límite o borde de un elemento. Un contorno es una línea que se dibuja al rededor de los elementos, fuera de los límites de su borde.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>El espacio será transparente (el elemento padre determinará el fondo).</p>
+El espacio será transparente (el elemento padre determinará el fondo).
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush:css">/* Valores &lt;length&gt; */
+```css
+/* Valores <length> */
 outline-offset: 3px;
 outline-offset: 0.2em;
 
@@ -26,65 +27,49 @@ outline-offset: 0.2em;
 outline-offset: inherit;
 outline-offset: initial;
 outline-offset: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>La anchura del espacio. Ver {{cssxref("&lt;length&gt;")}} para unidades posibles. Valores negativos colocan el borde dentro del elemento.</dd>
-</dl>
+- `<length>`
+  - : La anchura del espacio. Ver {{cssxref("&lt;length&gt;")}} para unidades posibles. Valores negativos colocan el borde dentro del elemento.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: css">p {
+```css
+p {
   outline: dashed thin;
   /* Mueve el contorno 10px lejos del borde */
   outline-offset: 10px;
   border:1px solid black;
 }
-</pre>
+```
 
-<p>Html</p>
+Html
 
-<pre class="brush: html">&lt;p&gt;outline: offset 10px. Border is solid and outline is dashed&lt;/p&gt;</pre>
+```html
+<p>outline: offset 10px. Border is solid and outline is dashed</p>
+```
 
-<p>El código anterior producirá este efecto:</p>
+El código anterior producirá este efecto:
 
-<p>{{ EmbedLiveSample('Examples', '', '', '') }}</p>
+{{ EmbedLiveSample('Examples', '', '', '') }}
 
-<p>Otro ejemplo:</p>
+Otro ejemplo:
 
-<p><span style="outline-offset: 1px; outline: green solid 3px;"><span style="outline-offset: 1px; outline: blue solid 3px;">outline: multiple offsets;</span></span></p>
+outline: multiple offsets;
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'outline-offset') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Define <code>outline-offset</code> como propiedad que se puede animar.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Basic UI', '#outline-offset', 'outline-offset') }}</td>
-   <td>{{ Spec2('CSS3 Basic UI') }}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                                   | Comentarios                                                 |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------- |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'outline-offset') }} | {{ Spec2('CSS3 Transitions') }} | Define `outline-offset` como propiedad que se puede animar. |
+| {{ SpecName('CSS3 Basic UI', '#outline-offset', 'outline-offset') }}     | {{ Spec2('CSS3 Basic UI') }}     | Definición inicial                                          |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.outline-offset")}}

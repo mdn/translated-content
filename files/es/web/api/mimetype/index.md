@@ -8,40 +8,27 @@ tags:
   - Referencia
 translation_of: Web/API/MimeType
 ---
-<p>{{SeeCompatTable}}{{APIRef("HTML DOM")}}</p>
+{{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
-<p>La interfaz <strong><code>MimeType</code></strong> provee información acerca de un tipo MIME asociado con un plugin en particular. {{domxref("NavigatorPlugins.mimeTypes")}} retorna un arreglo de estos objetos.</p>
+La interfaz **`MimeType`** provee información acerca de un tipo MIME asociado con un plugin en particular. {{domxref("NavigatorPlugins.mimeTypes")}} retorna un arreglo de estos objetos.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<dl>
- <dt>{{domxref("MimeType.type")}}</dt>
- <dd>Retorna el tipo MIME del plugin asociado.</dd>
- <dt>{{domxref("MimeType.description")}}</dt>
- <dd>Retorna la descripción del plugin asociado o un string vacío en caso de no haberla.</dd>
- <dt>{{domxref("MimeType.suffixes")}}</dt>
- <dd>Un string que contiene las extensiones de archivo válidas para los datos mostrados por el plugin, o un string vacío si una extensión de archivo no es válida para el módulo en particular. Por ejemplo, un módulo de decriptación de contenido del navegador podría aparecer en la lista de plugins, pero soportar más extensiones de archivo de las que se pueden anticipar. Por lo tanto, podría retornar un string vacío.</dd>
- <dt>{{domxref("MimeType.enabledPlugin")}}</dt>
- <dd>Retorna una instancia de {{domxref("Plugin")}} que contiene la información acerca del plugin en sí mismo.</dd>
-</dl>
+- {{domxref("MimeType.type")}}
+  - : Retorna el tipo MIME del plugin asociado.
+- {{domxref("MimeType.description")}}
+  - : Retorna la descripción del plugin asociado o un string vacío en caso de no haberla.
+- {{domxref("MimeType.suffixes")}}
+  - : Un string que contiene las extensiones de archivo válidas para los datos mostrados por el plugin, o un string vacío si una extensión de archivo no es válida para el módulo en particular. Por ejemplo, un módulo de decriptación de contenido del navegador podría aparecer en la lista de plugins, pero soportar más extensiones de archivo de las que se pueden anticipar. Por lo tanto, podría retornar un string vacío.
+- {{domxref("MimeType.enabledPlugin")}}
+  - : Retorna una instancia de {{domxref("Plugin")}} que contiene la información acerca del plugin en sí mismo.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#mimetype','MimeType')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definición Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                       | Estado                           | Comentario          |
+| -------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{SpecName('HTML WHATWG','#mimetype','MimeType')}} | {{Spec2('HTML WHATWG')}} | Definición Inicial. |
 
-<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat("api.MimeType")}}

@@ -4,74 +4,54 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>add()</strong></code> añade un nuevo elemento con un valor específico al final del objeto <code>Set</code>.</p>
+El método **`add()`** añade un nuevo elemento con un valor específico al final del objeto `Set`.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><em>mySet</em>.add(value);</code></pre>
+    mySet.add(value);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>value</dt>
- <dd>Requerido. El valor del elemento a ser añadido al objeto <code>Set</code>.</dd>
-</dl>
+- value
+  - : Requerido. El valor del elemento a ser añadido al objeto `Set`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>El objeto <code>Set</code>.</p>
+El objeto `Set`.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_el_método_add">Usando el método add</h3>
+### Usando el método add
 
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 
 mySet.add(1);
 mySet.add(5).add("some text"); // chainable
 
 console.log(mySet);
 // Set [1, 5, "some text"]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-set.prototype.add', 'Set.prototype.add')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.add', 'Set.prototype.add')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                       | Comment             |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-set.prototype.add', 'Set.prototype.add')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| {{SpecName('ESDraft', '#sec-set.prototype.add', 'Set.prototype.add')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("javascript.builtins.Set.add")}}
 
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
+## Firefox-specific notes
 
-<ul>
- <li>Prior to Firefox 33 {{geckoRelease("33")}}, <code>Set.prototype.add</code> returned <code>undefined</code> and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well (<a href="https://code.google.com/p/v8/issues/detail?id=3410">issue</a>).</li>
-</ul>
+- Prior to Firefox 33 {{geckoRelease("33")}}, `Set.prototype.add` returned `undefined` and was not chainable. This has been fixed ({{bug(1031632)}}). The behavior can be found in Chrome/v8 as well ([issue](https://code.google.com/p/v8/issues/detail?id=3410)).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
- <li>{{jsxref("Set.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}
+- {{jsxref("Set.prototype.has()")}}

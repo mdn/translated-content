@@ -14,15 +14,16 @@ translation_of: Web/CSS/backdrop-filter
 ---
 {{CSSRef}}
 
-<p>La propiedad <a href="/es/docs/Web/CSS">CSS</a> de <strong><code>backdrop-filter</code></strong> le permite aplicar efectos gráficos como el desenfoque o el cambio de color al área detrás de un elemento. Debido a que se aplica a todo lo que está <em>detrás</em> del elemento, para ver el efecto debe hacer que el elemento o su fondo sean al menos parcialmente transparentes.</p>
+La propiedad [CSS](/es/docs/Web/CSS) de **`backdrop-filter`** le permite aplicar efectos gráficos como el desenfoque o el cambio de color al área detrás de un elemento. Debido a que se aplica a todo lo que está _detrás_ del elemento, para ver el efecto debe hacer que el elemento o su fondo sean al menos parcialmente transparentes.
 
-<pre class="brush: css no-line-numbers">/* Valor de palabra clave */
+```css
+/* Valor de palabra clave */
 backdrop-filter: none;
 
 /* URL al filtro SVG */
 backdrop-filter: url(commonfilters.svg#filter);
 
-/* valores &lt;filter-function&gt; */
+/* valores <filter-function> */
 backdrop-filter: blur(2px);
 backdrop-filter: brightness(60%);
 backdrop-filter: contrast(40%);
@@ -42,30 +43,29 @@ backdrop-filter: inherit;
 backdrop-filter: initial;
 backdrop-filter: revert;
 backdrop-filter: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>none</code></dt>
- <dd>No se aplica filtro al fondo.</dd>
- <dt><code>&lt;filter-function-list&gt;</code></dt>
- <dd>Una lista separada por espacios de {{cssxref("&lt;filter-function&gt;")}} o un <a href="/es/docs/Web/SVG/Element/filter">filtro SVG</a> que se aplicará al fondo.</dd>
-</dl>
+- `none`
+  - : No se aplica filtro al fondo.
+- `<filter-function-list>`
+  - : Una lista separada por espacios de {{cssxref("&lt;filter-function&gt;")}} o un [filtro SVG](/es/docs/Web/SVG/Element/filter) que se aplicará al fondo.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   font-family: sans-serif;
@@ -97,49 +97,33 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="box"&gt;
-    &lt;p&gt;backdrop-filter: blur(10px)&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="container">
+  <div class="box">
+    <p>backdrop-filter: blur(10px)</p>
+  </div>
+</div>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Ejemplo", 600, 400)}}</p>
+{{EmbedLiveSample("Ejemplo", 600, 400)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 2.0', '#BackdropFilterProperty', 'backdrop-filter')}}</td>
-   <td>{{Spec2('Filters 2.0')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                           | Comentario          |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('Filters 2.0', '#BackdropFilterProperty', 'backdrop-filter')}} | {{Spec2('Filters 2.0')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("css.properties.backdrop-filter")}}
 
+## Ver también
 
-<p>{{Compat("css.properties.backdrop-filter")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{cssxref("filter")}}</li>
-</ul>
-
+- {{cssxref("filter")}}

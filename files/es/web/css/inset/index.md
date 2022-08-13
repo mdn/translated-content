@@ -3,16 +3,17 @@ title: inset
 slug: Web/CSS/inset
 translation_of: Web/CSS/inset
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a>  <strong><code>inset</code></strong> define el bloque lógico y las compensaciones de inicio y finalización en línea de un elemento, que se asignan a las compensaciones físicas en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref ("top")}} y {{cssxref ("bottom")}}, o {{cssxref ("right")}} y {{cssxref ("left")}} dependiendo de las propiedades en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.</p>
+La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`inset`** define el bloque lógico y las compensaciones de inicio y finalización en línea de un elemento, que se asignan a las compensaciones físicas en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref ("top")}} y {{cssxref ("bottom")}}, o {{cssxref ("right")}} y {{cssxref ("left")}} dependiendo de las propiedades en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 inset: 3px 10px 3px 10px;
 inset: 2.4em 3em 3em 3em;
 inset: 10px; /* value applied to all edges */
 
-/* &lt;percentage&gt;s of the width or height of the containing block */
+/* <percentage>s of the width or height of the containing block */
 inset: 10% 5% 5% 5%;
 
 /* Keyword value */
@@ -22,33 +23,34 @@ inset: auto;
 inset: inherit;
 inset: initial;
 inset: unset;
+```
 
-</pre>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Valores
 
-<h3 id="Valores">Valores</h3>
+La propiedad `inset` toma los mismos valores de la propiedad {{cssxref("left")}}.
 
-<p>La propiedad <code>inset</code> toma los mismos valores de la propiedad {{cssxref("left")}}.</p>
-
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -59,38 +61,22 @@ inset: unset;
   position: relative;
   inset: 20px 50px 30px 10px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
+{{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-inset", "inset")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                                           | Comentario          |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-inset", "inset")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
+{{Compat("css.properties.inset")}}
 
+## Mira también
 
-<p>{{Compat("css.properties.inset")}}</p>
-
-<h2 id="Mira_también">Mira también</h2>
-
-<ul>
- <li>Las propiedades físicas mapeadas: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, y {{cssxref("left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Las propiedades físicas mapeadas: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, y {{cssxref("left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

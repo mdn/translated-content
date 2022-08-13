@@ -8,19 +8,20 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-box-reflect
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p><code>La propiedad </code><a href="/es/docs/Web/CSS">CSS </a><code>-webkit-box-reflect</code> permite reflejar el contenido del elemento en una dirección específica.</p>
+`La propiedad `[CSS ](/es/docs/Web/CSS)`-webkit-box-reflect` permite reflejar el contenido del elemento en una dirección específica.
 
-<div class="warning"><strong>Nota:</strong> Esta característica <strong>no está pensada para ser usada en páginas Web</strong> .Para conseguir reflexión en la Web, la forma estándar es usando la función CSS {{cssxref("element", "element()")}} .</div>
+> **Advertencia:** **Nota:** Esta característica **no está pensada para ser usada en páginas Web** .Para conseguir reflexión en la Web, la forma estándar es usando la función CSS {{cssxref("element", "element()")}} .
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush:css">/* Valores para la dirección */
+```css
+/* Valores para la dirección */
 -webkit-box-reflect: above;
 -webkit-box-reflect: below;
 -webkit-box-reflect: left;
@@ -36,35 +37,31 @@ translation_of: Web/CSS/-webkit-box-reflect
 -webkit-box-reflect: inherit;
 -webkit-box-reflect: initial;
 -webkit-box-reflect: unset;
-</pre>
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>above</code><em>, </em><code>below</code><em>, </em><code>right</code><em>, </em><code>left</code></dt>
- <dd>Son palabras clave que indican en qué dirección se realiza la reflexión.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Indica el tamaño de la reflexión.</dd>
- <dt><code>&lt;image&gt;</code></dt>
- <dd>Describe la máscara que se aplicará a la reflexión.</dd>
-</dl>
+- `above`_,_ `below`_,_ `right`_,_ `left`
+  - : Son palabras clave que indican en qué dirección se realiza la reflexión.
+- `<length>`
+  - : Indica el tamaño de la reflexión.
+- `<image>`
+  - : Describe la máscara que se aplicará a la reflexión.
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+### Síntaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>Esta propiedad no está entre los objetivos de la especificación estándar y no será parte de CSS. La manera estándar para conseguir reflexión en CSS es el uso de la función {{cssxref("element", "element()")}}.</p>
+Esta propiedad no está entre los objetivos de la especificación estándar y no será parte de CSS. La manera estándar para conseguir reflexión en CSS es el uso de la función {{cssxref("element", "element()")}}.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.properties.-webkit-box-reflect")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>La <a class="external" href="http://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16">documentación</a> de Apple.</li>
- <li>La <a href="https://www.webkit.org/blog/182/css-reflections/">especificación </a> de Webkit.</li>
- <li>El artículo de Lea Verou sobre reflexión usando  <a class="external" href="http://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/">característica CSS que están en el estándar</a>.</li>
-</ul>
+- La [documentación](http://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16) de Apple.
+- La [especificación ](https://www.webkit.org/blog/182/css-reflections/)de Webkit.
+- El artículo de Lea Verou sobre reflexión usando [característica CSS que están en el estándar](http://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/).

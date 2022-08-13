@@ -12,70 +12,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/trimEnd
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>trimEnd()</code></strong> elimina los espacios en blanco al final de una cadena de carácteres. <code>trimRight()</code> es el alias de este método.</p>
+El método **`trimEnd()`** elimina los espacios en blanco al final de una cadena de carácteres. `trimRight()` es el alias de este método.
 
-<div>{{EmbedInteractiveExample("pages/js/string-trimend.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
 
+## Sintaxis
 
+    str.trimEnd();
+    str.trimRight();
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Valor de retorno
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.trimEnd();
-<var>str</var>.trimRight();</code></pre>
+Una nueva cadena de texto que representa la cadena de texto llamada sin espacios en blanco de su extremo (derecho).
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Descripción
 
-<p>Una nueva cadena de texto que representa la cadena de texto llamada sin espacios en blanco de su extremo (derecho).</p>
+`trimEnd()` / `trimRight()` Los metodos devuelven una cadena de texto sin espacios en blanco desde su extremo derecho. `trimEnd()` ó `trimRight()` no afectan el valor de la cadena de texto en sí.
 
-<h2 id="Descripción">Descripción</h2>
+### Superposición
 
-<p><code>trimEnd()</code> / <code>trimRight()</code> Los metodos devuelven una cadena de texto sin espacios en blanco desde su extremo derecho. <code>trimEnd()</code> ó <code>trimRight()</code> no afectan el valor de la cadena de texto en sí.</p>
+Por coherencia de funciones como {{jsxref("String.prototype.padEnd")}} el nombre del método estandar es `trimEnd`. Sin embargo por compatibilidad web, `trimRight` permanece como un alias para `trimEnd`. En algunos motores esto significa:
 
-<h3 id="Superposición">Superposición</h3>
+```js
+String.prototype.trimRight.name === "trimEnd";
+```
 
-<p>Por coherencia de funciones como {{jsxref("String.prototype.padEnd")}} el nombre del método estandar es <code>trimEnd</code>. Sin embargo por compatibilidad web, <code>trimRight</code> permanece como un alias para <code>trimEnd</code>. En algunos motores esto significa: </p>
+## Ejemplo
 
-<pre class="brush: js notranslate">String.prototype.trimRight.name === "trimEnd";</pre>
+### Usando `trimEnd()`
 
-<h2 id="Ejemplo">Ejemplo</h2>
+El siguiente ejemplo muestra la cadena de texto en minusculas `' foo'`:
 
-<h3 id="Usando_trimEnd">Usando <code>trimEnd()</code></h3>
-
-<p>El siguiente ejemplo muestra la cadena de texto en minusculas <code>'   foo'</code>:</p>
-
-<pre class="brush: js; highlight: [5] notranslate">var str = '   foo  ';
+```js
+var str = '   foo  ';
 
 console.log(str.length); // 8
 
 str = str.trimEnd();
 console.log(str.length); // 6
 console.log(str);        // '   foo'
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.trimend', 'String.prototype.trimEnd')}}</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.trimend', 'String.prototype.trimEnd')}} |
 
-<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
+## Compatibilidad en Navegadores
 
-<p>{{Compat("javascript.builtins.String.trimEnd")}}</p>
+{{Compat("javascript.builtins.String.trimEnd")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("String.prototype.trim()")}}</li>
- <li>{{jsxref("String.prototype.trimStart()")}}</li>
-</ul>
+- {{jsxref("String.prototype.trim()")}}
+- {{jsxref("String.prototype.trimStart()")}}

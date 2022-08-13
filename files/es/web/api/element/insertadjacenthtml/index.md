@@ -13,87 +13,68 @@ tags:
   - metodo
 translation_of: Web/API/Element/insertAdjacentHTML
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>EL método <strong><code>insertAdjacentHTML()</code></strong> de la interfaz {{domxref("Element")}} analiza la cadena de texto introducida como cadena HTML o XML e inserta al árbol DOM los nodos resultantes de dicho análisis en la posición especificada. Este método no re-analiza el elemento sobre el cual se está invocando y por lo tanto no corrompe los elementos ya existentes dentro de dicho elemento. Esto evita el paso adicional de la serialización, haciéndolo mucho más rápido que la manipulación directa con {{domxref("Element.innerHTML", "innerHTML")}}.</p>
+EL método **`insertAdjacentHTML()`** de la interfaz {{domxref("Element")}} analiza la cadena de texto introducida como cadena HTML o XML e inserta al árbol DOM los nodos resultantes de dicho análisis en la posición especificada. Este método no re-analiza el elemento sobre el cual se está invocando y por lo tanto no corrompe los elementos ya existentes dentro de dicho elemento. Esto evita el paso adicional de la serialización, haciéndolo mucho más rápido que la manipulación directa con {{domxref("Element.innerHTML", "innerHTML")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>element</em>.insertAdjacentHTML(<em>posición</em>, <em>texto</em>);</pre>
+    element.insertAdjacentHTML(posición, texto);
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code><strong>posición</strong></code></dt>
- <dd>Un {{domxref("DOMString")}} que representa la posición relativa al <code>elemento</code>, y deberá ser una de las siguientes cadenas:
- <ul>
-  <li><code style="color: red;">'beforebegin'</code>: Antes que el propio <code>elemento</code>.</li>
-  <li><code style="color: green;">'afterbegin'</code>: Justo dentro del <code>elemento</code>, antes de su primer elemento hijo.</li>
-  <li><code style="color: blue;">'beforeend'</code>: Justo dentro del <code>elemento</code>, después de su último elemento hijo.</li>
-  <li><code style="color: magenta;">'afterend'</code>: Después del propio <code>elemento</code>.</li>
- </ul>
- </dd>
- <dt><code>texto</code></dt>
- <dd>Es la cadena a ser analizada como HTML o XML e insertada en el árbol.</dd>
-</dl>
+- **`posición`**
+  - : Un {{domxref("DOMString")}} que representa la posición relativa al `elemento`, y deberá ser una de las siguientes cadenas:\* `'beforebegin'`: Antes que el propio `elemento`.
+    - `'afterbegin'`: Justo dentro del `elemento`, antes de su primer elemento hijo.
+    - `'beforeend'`: Justo dentro del `elemento`, después de su último elemento hijo.
+    - `'afterend'`: Después del propio `elemento`.
+- `texto`
+  - : Es la cadena a ser analizada como HTML o XML e insertada en el árbol.
 
-<h3 id="Visualizacion_de_las_posiciones">Visualizacion de las posiciones</h3>
+### Visualizacion de las posiciones
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;p&gt;</code>
-  &lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
-  foo
-  &lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;/p&gt;</code>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
+    <!-- beforebegin -->
+    <p>
+      <!-- afterbegin -->
+      foo
+      <!-- beforeend -->
+    </p>
+    <!-- afterend -->
 
-<div class="note"><strong>Nota: </strong>Las posiciones <code>beforebegin</code> y <code>afterend</code> funcionan únicamente si el nodo se encuentra en el árbol DOM y tiene un elemento padre.</div>
+> **Nota:**Las posiciones `beforebegin` y `afterend` funcionan únicamente si el nodo se encuentra en el árbol DOM y tiene un elemento padre.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">// &lt;div id="one"&gt;one&lt;/div&gt;
+```js
+// <div id="one">one</div>
 var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
+d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 // En este punto, la nueva estructura es:
-// &lt;div id="one"&gt;one&lt;/div&gt;&lt;div id="two"&gt;two&lt;/div&gt;</pre>
+// <div id="one">one</div><div id="two">two</div>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<h3 id="Consideraciones_de_seguridad">Consideraciones de seguridad</h3>
+### Consideraciones de seguridad
 
-<p>Cuando se inserte texto HTML en una página usando <code>insertAdjacentHTML()</code> debe tener cuidado de no usar cadenas de texto que no contengan las secuencias de escape pertinentes según sea el caso.</p>
+Cuando se inserte texto HTML en una página usando `insertAdjacentHTML()` debe tener cuidado de no usar cadenas de texto que no contengan las secuencias de escape pertinentes según sea el caso.
 
-<p>Se recomienda no usar <code>insertAdjacentHTML()</code> cuando se pretende insertar texto plano; en su lugar, se debe utilizar la propiedad {{domxref("Node.textContent")}} o el método {{domxref("Element.insertAdjacentText()")}}. Este método no interpreta el contenido pasado como HTML, si no que lo inserta como texto plano.</p>
+Se recomienda no usar `insertAdjacentHTML()` cuando se pretende insertar texto plano; en su lugar, se debe utilizar la propiedad {{domxref("Node.textContent")}} o el método {{domxref("Element.insertAdjacentText()")}}. Este método no interpreta el contenido pasado como HTML, si no que lo inserta como texto plano.
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}}</td>
-   <td>{{ Spec2('DOM Parsing') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                                                                       | Estado                               | Comentario |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
+| {{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |            |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("api.Element.insertAdjacentHTML")}}</p>
+{{Compat("api.Element.insertAdjacentHTML")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("Element.insertAdjacentElement()")}}</li>
- <li>{{domxref("Element.insertAdjacentText()")}}</li>
- <li>{{domxref("XMLSerializer")}}: Contruir una representación del DOM de un texto XML</li>
- <li><a class="external" href="https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post</a><span class="external"> por Henri Sivonen incluye puntos de referencia mostrando que insertAdjacentHTML puede ser mucho más rápido en algunos casos.</span></li>
-</ul>
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("Element.insertAdjacentText()")}}
+- {{domxref("XMLSerializer")}}: Contruir una representación del DOM de un texto XML
+- [hacks.mozilla.org guest post](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) por Henri Sivonen incluye puntos de referencia mostrando que insertAdjacentHTML puede ser mucho más rápido en algunos casos.

@@ -7,62 +7,46 @@ tags:
   - Referencia
 translation_of: Web/API/Window/outerHeight
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">Sumario</h2>
+## Sumario
 
-<p><code>Window.outerHeight </code>obtiene la altura en pixeles de toda la ventana del navegador. Representa el alto de toda la ventana, incluyendo la barra de notificaciones (si se encuentra) y los bordes.</p>
+`Window.outerHeight `obtiene la altura en pixeles de toda la ventana del navegador. Representa el alto de toda la ventana, incluyendo la barra de notificaciones (si se encuentra) y los bordes.
 
-<p>Esta propiedad es de sólo lectura, no tiene valor por defecto</p>
+Esta propiedad es de sólo lectura, no tiene valor por defecto
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>outWindowHeight</var> = window.outerHeight;
-</pre>
+    outWindowHeight = window.outerHeight;
 
-<p>Al obtener, <code>outWindowHeight</code> contiene el alto de la ventana.</p>
+Al obtener, `outWindowHeight` contiene el alto de la ventana.
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Para cambiar el tamaño de una ventana, ver {{domxref("window.resizeBy()")}} y {{domxref("window.resizeTo()")}}.</p>
+Para cambiar el tamaño de una ventana, ver {{domxref("window.resizeBy()")}} y {{domxref("window.resizeTo()")}}.
 
-<p>Para obtener la altura interna de una ventana, por ejemplo, el alto de una página siendo desplegada, ver {{domxref("window.innerHeight")}}.</p>
+Para obtener la altura interna de una ventana, por ejemplo, el alto de una página siendo desplegada, ver {{domxref("window.innerHeight")}}.
 
-<h3 id="Graphical_example" name="Graphical_example">Ejemplo gráfico</h3>
+### Ejemplo gráfico
 
-<p>La siguiente figura muestra la diferencia entre <code>innerHeight </code>y <code>outerHeight</code>.</p>
+La siguiente figura muestra la diferencia entre `innerHeight `y `outerHeight`.
 
-<p><img alt="innerHeight vs outerHeight illustration" src="/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png"></p>
+![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("api.Window.outerHeight")}}
 
-<h2 id="Specification" name="Specification">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-outerheight', 'Window.outerHeight') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                           | Comentario |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{ SpecName('CSSOM View', '#dom-window-outerheight', 'Window.outerHeight') }} | {{ Spec2('CSSOM View') }} |            |
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("window.innerHeight")}}</li>
- <li>{{domxref("window.innerWidth")}}</li>
- <li>{{domxref("window.outerWidth")}}</li>
- <li>{{domxref("window.resizeBy()")}}</li>
- <li>{{domxref("window.resizeTo()")}}</li>
-</ul>
+- {{domxref("window.innerHeight")}}
+- {{domxref("window.innerWidth")}}
+- {{domxref("window.outerWidth")}}
+- {{domxref("window.resizeBy()")}}
+- {{domxref("window.resizeTo()")}}

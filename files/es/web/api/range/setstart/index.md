@@ -3,68 +3,49 @@ title: Range.setStart()
 slug: Web/API/Range/setStart
 translation_of: Web/API/Range/setStart
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>El método <strong><code>Range.setStart()</code></strong> establece la posición de inicio de un {{ domxref("Range") }}.</p>
+El método **`Range.setStart()`** establece la posición de inicio de un {{ domxref("Range") }}.
 
-<p>Si <code>startNode</code> es un {{ domxref("Node") }} de tipo <code>Text</code>, <code>Comment</code>, o <code>CDATASection</code>, entonces <code>startOffset</code> es el número de caracteres de partida de <code>startNode</code>. Para otros tiposde nodos, <code>startOffset</code> es el número de nodos hijos entre el inicio de los <code>startNode</code>.</p>
+Si `startNode` es un {{ domxref("Node") }} de tipo `Text`, `Comment`, o `CDATASection`, entonces `startOffset` es el número de caracteres de partida de `startNode`. Para otros tiposde nodos, `startOffset` es el número de nodos hijos entre el inicio de los `startNode`.
 
-<p>Setting the start point below (lower in the document) the end point will result in a collapsed range with the start and end points both set to the specified start position.</p>
+Setting the start point below (lower in the document) the end point will result in a collapsed range with the start and end points both set to the specified start position.
 
-<p>Definiendo el punto de partida abajo (más abajo en el documento) el punto final resultará en un rango colapsado con el punto tanto de inicio como de entrada establecidos a la posición de partida especificada.</p>
+Definiendo el punto de partida abajo (más abajo en el documento) el punto final resultará en un rango colapsado con el punto tanto de inicio como de entrada establecidos a la posición de partida especificada.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>range</em>.setStart(<em>startNode</em>, <em>startOffset</em>);
-</pre>
+    range.setStart(startNode, startOffset);
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><em>startNode</em></dt>
- <dd>El {{ domxref("Node") }} donde {{ domxref("Range") }} debe empezar.</dd>
- <dt><em>startOffset</em><code> </code></dt>
- <dd>Un entero mayor o igual a cero representando el offset o desplazamiento de caracteres para el inicio del {{ domxref("Range") }} desde el comienzo de <code>startNode</code>.</dd>
-</dl>
+- _startNode_
+  - : El {{ domxref("Node") }} donde {{ domxref("Range") }} debe empezar.
+- _startOffset_``
+  - : Un entero mayor o igual a cero representando el offset o desplazamiento de caracteres para el inicio del {{ domxref("Range") }} desde el comienzo de `startNode`.
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: js">var range = document.createRange();
+```js
+var range = document.createRange();
 var startNode = document.getElementsByTagName("p").item(2);
 var startOffset = 0;
 range.setStart(startNode,startOffset);
-</pre>
+```
 
-<h2 id="Specification" name="Specification">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-setstart', 'Range.setStart()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Sin cambio.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setStart', 'Range.setStart()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Especificación inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                       | Estatus                                      | Comentario              |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------- |
+| {{SpecName('DOM WHATWG', '#dom-range-setstart', 'Range.setStart()')}}                                         | {{Spec2('DOM WHATWG')}}             | Sin cambio.             |
+| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setStart', 'Range.setStart()')}} | {{Spec2('DOM2 Traversal_Range')}} | Especificación inicial. |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("api.Range.setStart")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/es/docs/DOM/DOM_Reference)

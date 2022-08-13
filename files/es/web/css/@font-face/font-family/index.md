@@ -6,88 +6,72 @@ tags:
   - font-family
 translation_of: Web/CSS/@font-face/font-family
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El descriptor CSS font-family CSS permite al autor especificar el tipo de fuente para un elemento.</p>
+El descriptor CSS font-family CSS permite al autor especificar el tipo de fuente para un elemento.
 
-<p>La propiedad font-family puede contener varias fuentes  a modo de sistema de "seguridad. Si el navegador no soporta la primera, probará con la siguiente y así sucesivamente.</p>
+La propiedad font-family puede contener varias fuentes a modo de sistema de "seguridad. Si el navegador no soporta la primera, probará con la siguiente y así sucesivamente.
 
-<p>hay dos tipos de nombres de familias de fuentes:</p>
+hay dos tipos de nombres de familias de fuentes:
 
-<ul>
- <li><strong>family-name</strong> - El nombre de la familia de fuentes, como  "times", "courier", "arial", etc.</li>
- <li><strong>generic-family</strong> - El nombre de la familia genérica , como "serif", "sans-serif", "cursive", "fantasy", "monospace".</li>
-</ul>
+- **family-name** - El nombre de la familia de fuentes, como "times", "courier", "arial", etc.
+- **generic-family** - El nombre de la familia genérica , como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-<p>Comienza con la fuente que quieras, y acaba siempre con una familia de fuente genérica para permitir al navegador elegir una fuente similar dentro de la familia genérica en caso de que no haya otras fuentes disponibles.</p>
+Comienza con la fuente que quieras, y acaba siempre con una familia de fuente genérica para permitir al navegador elegir una fuente similar dentro de la familia genérica en caso de que no haya otras fuentes disponibles.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre>font-family: <em>font</em>|initial|inherit;</pre>
+    font-family: font|initial|inherit;
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p><font face="Consolas, Liberation Mono, Courier, monospace"><strong>family-name<br>
- generic-family</strong></font><br>
- Un lista priorizada de nombre de familias de fuentes y/o de nombres de familias genéricas.</p>
+**family-name
+generic-family**
+Un lista priorizada de nombre de familias de fuentes y/o de nombres de familias genéricas.
 
-<p><strong><code>initial</code></strong><br>
- Establace el valor por defecto para esta propiedad.</p>
+**`initial`**
+Establace el valor por defecto para esta propiedad.
 
-<p><strong><code>inherit</code></strong><br>
- Hereda esta propiedad del elemento padre.</p>
+**`inherit`**
+Hereda esta propiedad del elemento padre.
 
-<p><strong>serif</strong><br>
- Fuente genérica con serif como, por ejemplo, el tipo de fuente Times.</p>
+**serif**
+Fuente genérica con serif como, por ejemplo, el tipo de fuente Times.
 
-<p><strong>sans-serif</strong><br>
- Fuente genérica sin serif como, por ejemplo, el tipo de fuente Arial.</p>
+**sans-serif**
+Fuente genérica sin serif como, por ejemplo, el tipo de fuente Arial.
 
-<p><strong>fantasy</strong><br>
- Fuente genérica Fantasy.</p>
+**fantasy**
+Fuente genérica Fantasy.
 
-<p><strong>monospace</strong><br>
- Fuente genérica Monospace, como por ejemplo Courier.</p>
+**monospace**
+Fuente genérica Monospace, como por ejemplo Courier.
 
-<p><strong>cursive</strong><br>
- Fuente genérica cursiva, como por ejemplo Script.</p>
+**cursive**
+Fuente genérica cursiva, como por ejemplo Script.
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+### Síntaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Como ejemplo , consideremos la familia de fuentes garamon, es su forma normal, obtendremos el siguiente resultado:</p>
+Como ejemplo , consideremos la familia de fuentes garamon, es su forma normal, obtendremos el siguiente resultado:
 
-<pre>p {
-    font-family: "Times New Roman", Georgia, Serif;
-}
-</pre>
+    p {
+        font-family: "Times New Roman", Georgia, Serif;
+    }
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                           | Comentario         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}} | {{Spec2('CSS3 Fonts')}} | Definición inicial |
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.at-rules.font-face.font-family")}}

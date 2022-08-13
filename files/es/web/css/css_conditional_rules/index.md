@@ -7,60 +7,43 @@ tags:
 translation_of: Web/CSS/CSS_Conditional_Rules
 original_slug: Web/CSS/CSS_Reglas_Condicionales
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Las<strong> Reglas Condicionales </strong>(At-rules) es un módulo de CSS que permite definir un conjunto de reglas que solo aplicarán con base en las capacidades del procesador o del documento al cual la hoja de estilos está siendo aplicada.</p>
+Las **Reglas Condicionales** (At-rules) es un módulo de CSS que permite definir un conjunto de reglas que solo aplicarán con base en las capacidades del procesador o del documento al cual la hoja de estilos está siendo aplicada.
 
-<h2 id="Referencia">Referencia</h2>
+## Referencia
 
-<h3 id="Reglas_condicionales">Reglas condicionales</h3>
+### Reglas condicionales
 
-<div class="index">
-<ul>
- <li>{{cssxref("@document")}}</li>
- <li>{{cssxref("@media")}}</li>
- <li>{{cssxref("@supports")}}</li>
- <li>{{cssxref("@import")}}</li>
-</ul>
-</div>
+- {{cssxref("@document")}}
+- {{cssxref("@media")}}
+- {{cssxref("@supports")}}
+- {{cssxref("@import")}}
 
-<h2 id="Guías">Guías</h2>
+## Guías
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td>Definición Inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                               | Estatus                                  | Comentario         |
+| -------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Conditional')}} | {{Spec2('CSS3 Conditional')}} | Definición Inicial |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<h3><code>@document</code> rule</h3>
+### `@document` rule
 
 {{Compat("css.at-rules.document")}}
 
-<h3><code>@import</code> rule</h3>
+### `@import` rule
 
 {{Compat("css.at-rules.import")}}
 
-<h3><code>@media</code> rule</h3>
+### `@media` rule
 
 {{Compat("css.at-rules.media")}}
 
-<h3><code>@supports</code> rule</h3>
+### `@supports` rule
 
 {{Compat("css.at-rules.supports")}}

@@ -3,25 +3,25 @@ title: Estabilidad
 slug: Web/API/URL/Host
 translation_of: Web/API/URL/host
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>host</code></strong> property of the {{domxref("URL")}} interface is a {{domxref("USVString")}} containing the host, that is the {{domxref("URL.hostname", "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a <code>':'</code>, followed by the {{domxref("URL.port", "port")}} of the URL.</p>
+The **`host`** property of the {{domxref("URL")}} interface is a {{domxref("USVString")}} containing the host, that is the {{domxref("URL.hostname", "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a `':'`, followed by the {{domxref("URL.port", "port")}} of the URL.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">const <em>host</em> = <em>url</em>.host
-<em>url.<code>host</code></em> = <em>newHost</em>
-</pre>
+    const host = url.host
+    url.host = newHost
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
+```js
+let url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
 console.log(url.host); // "developer.mozilla.org"
 
 url = new URL('https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host');
@@ -30,33 +30,18 @@ console.log(url.host); // "developer.mozilla.org"
 
 url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
 console.log(url.host); // "developer.mozilla.org:4097"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#dom-url-host', 'URL.host')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                    | Status               | Comment            |
+| ---------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('URL', '#dom-url-host', 'URL.host')}} | {{Spec2('URL')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.URL.host")}}
 
+## See also
 
-<p>{{Compat("api.URL.host")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

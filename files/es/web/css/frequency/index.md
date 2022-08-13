@@ -10,104 +10,44 @@ tags:
   - Web
 translation_of: Web/CSS/frequency
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p><span class="seoSummary">El tipo de dato <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <code>&lt;frequency&gt;</code> denota una dimensión en frecuencia, como el tono de una voz hablando.</span> Consisste en un valor {{cssxref("&lt;number&gt;")}} seguido inmediatamente por la unidad. Como en cualquier dimensión CSS, no hay espacio entre la unidad literal y el número.</p>
+El tipo de dato [CSS](/es/docs/Web/CSS "CSS") `<frequency>` denota una dimensión en frecuencia, como el tono de una voz hablando. Consisste en un valor {{cssxref("&lt;number&gt;")}} seguido inmediatamente por la unidad. Como en cualquier dimensión CSS, no hay espacio entre la unidad literal y el número.
 
-<p>Las siguientes unidades deben ser usadas:</p>
+Las siguientes unidades deben ser usadas:
 
-<ul>
- <li><code><a id="Hz">Hz</a></code>, que representa una frecuencia en Hertz. Ejemplos: <code>0Hz</code>, <code>1500Hz</code>, <code>10000Hz</code>.</li>
- <li><code><a id="kHz">kHz</a></code>, que representa una frecuencia en kilohertz. Ejemplos: <code>0kHz</code>, <code>1.5kHz</code>, <code>10kHz</code>.</li>
-</ul>
+- [`Hz`](), que representa una frecuencia en Hertz. Ejemplos: `0Hz`, `1500Hz`, `10000Hz`.
+- [`kHz`](), que representa una frecuencia en kilohertz. Ejemplos: `0kHz`, `1.5kHz`, `10kHz`.
 
-<p>Aunque todas las unidades representen la misma frecuencia para el valor <code>0</code>, la unidad no debe ser omitida en ese caso, puesto que no es un valor {{cssxref("length")}}: <code>0</code>, no es válido, y no representa <code>0Hz</code>, <code>0kHz</code>. Aunque las unidades sean insensibles a mayúsculas en CSS, es buena práctica usar una H mayúscula para <code>Hz</code> y <code>kHz</code>, como indica el <a class="external" href="https://es.wikipedia.org/wiki/Sistema_Internacional_de_Unidades">SI</a>, siendo <a class="external" href="http://en.wikipedia.org/wiki/Heinrich_Hertz">Hertz</a> un apellido.</p>
+Aunque todas las unidades representen la misma frecuencia para el valor `0`, la unidad no debe ser omitida en ese caso, puesto que no es un valor {{cssxref("length")}}: `0`, no es válido, y no representa `0Hz`, `0kHz`. Aunque las unidades sean insensibles a mayúsculas en CSS, es buena práctica usar una H mayúscula para `Hz` y `kHz`, como indica el [SI](https://es.wikipedia.org/wiki/Sistema_Internacional_de_Unidades), siendo [Hertz](http://en.wikipedia.org/wiki/Heinrich_Hertz) un apellido.
 
-<h2 id="Ejemplos"><span>Ejemplos</span></h2>
+## Ejemplos
 
-<table class="standard-table">
- <caption>Valores de frecuencia permitidos</caption>
- <thead>
-  <tr>
-   <th scope="col">Código</th>
-   <th scope="col">Significado</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>12Hz</code></td>
-   <td>Entero positivo.</td>
-  </tr>
-  <tr>
-   <td><code>-456kHz</code></td>
-   <td>Entero negativo.</td>
-  </tr>
-  <tr>
-   <td><code>4.3Hz</code></td>
-   <td>No entero.</td>
-  </tr>
-  <tr>
-   <td><code>14KhZ</code></td>
-   <td>La unidad es insensible al uso de mayúsculas, aunque no se recomienda una representación que no esté acorde al SI.</td>
-  </tr>
-  <tr>
-   <td><code>+0Hz</code></td>
-   <td>Cero, con un símbolo <code>+ y la unidad</code>.</td>
-  </tr>
-  <tr>
-   <td><code>-0kHz</code></td>
-   <td>Cero, con un símbolo <code>-</code> y la unidad (Aunque no sea común, es un valor permitido).</td>
-  </tr>
- </tbody>
-</table>
+| Código    | Significado                                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------------------------------ |
+| `12Hz`    | Entero positivo.                                                                                                   |
+| `-456kHz` | Entero negativo.                                                                                                   |
+| `4.3Hz`   | No entero.                                                                                                         |
+| `14KhZ`   | La unidad es insensible al uso de mayúsculas, aunque no se recomienda una representación que no esté acorde al SI. |
+| `+0Hz`    | Cero, con un símbolo `+ y la unidad`.                                                                              |
+| `-0kHz`   | Cero, con un símbolo `-` y la unidad (Aunque no sea común, es un valor permitido).                                 |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Código</th>
-   <th scope="col">Significado</th>
-  </tr>
- </thead>
- <caption>Valores de frecuencia no permitidos</caption>
- <tbody>
-  <tr>
-   <td><code>12.0</code></td>
-   <td>Éste es un tipo {{cssxref("&lt;number&gt;")}}, no un tipo &lt;frequency&gt;, debe tener una unidad.</td>
-  </tr>
-  <tr>
-   <td><code>7 Hz</code></td>
-   <td>No se permite espacio entre el número {{cssxref("&lt;number&gt;")}} y la unidad.</td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td>El valor cero puede ser escrito sin unidad solo para tipo {{cssxref("&lt;length&gt;")}}, no para &lt;frequency&gt;.</td>
-  </tr>
- </tbody>
-</table>
+| Código | Significado                                                                                                              |
+| ------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `12.0` | Éste es un tipo {{cssxref("&lt;number&gt;")}}, no un tipo <frequency>, debe tener una unidad.                 |
+| `7 Hz` | No se permite espacio entre el número {{cssxref("&lt;number&gt;")}} y la unidad.                              |
+| `0`    | El valor cero puede ser escrito sin unidad solo para tipo {{cssxref("&lt;length&gt;")}}, no para <frequency>. |
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#frequency', '&lt;frequency&gt;')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estatus                          | Comentarios        |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| {{SpecName('CSS3 Values', '#frequency', '&lt;frequency&gt;')}} | {{Spec2('CSS3 Values')}} | Definición inicial |
 
-<p>Este tipo de dato fue introducido inicialmente en <a class="external" href="http://www.w3.org/TR/CSS2/">CSS Nivel 2</a> para el ya obsoleto <a href="/en/CSS/Aural" title="aural">grupo de merios aural</a>, donde era usado para definir el tono de la voz. Dicho grupo fue descontinuado desde entonces, pero el tipo de datos <code>&lt;frequency&gt;</code> ha sido reintroducido en CSS3, aunque ninguna propiedad CSS lo usa por el momento.</p>
+Este tipo de dato fue introducido inicialmente en [CSS Nivel 2](http://www.w3.org/TR/CSS2/) para el ya obsoleto [grupo de merios aural](/en/CSS/Aural "aural"), donde era usado para definir el tono de la voz. Dicho grupo fue descontinuado desde entonces, pero el tipo de datos `<frequency>` ha sido reintroducido en CSS3, aunque ninguna propiedad CSS lo usa por el momento.
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.types.frequency")}}

@@ -11,111 +11,127 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/exec
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>exec()</code></strong> ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o {{jsxref("null")}}.</p>
+El método **`exec()`** ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o {{jsxref("null")}}.
 
-<p>Si está ejecutando una expresión regular solo para buscar si algo se cumple o no, usa el método {{jsxref("RegExp.prototype.test()")}} o el método {{jsxref("String.prototype.search()")}}.</p>
+Si está ejecutando una expresión regular solo para buscar si algo se cumple o no, usa el método {{jsxref("RegExp.prototype.test()")}} o el método {{jsxref("String.prototype.search()")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>regexObj</var>.exec(<em>cadena</em>)</pre>
+    regexObj.exec(cadena)
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>cadena</code></dt>
- <dd>Cadena sobre la cual se quiere aplicar la expresión regular</dd>
-</dl>
+- `cadena`
+  - : Cadena sobre la cual se quiere aplicar la expresión regular
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Si se encuentran coincidencial, el método <code>exec()</code> devuelve un array y actualiza las propiedades del objeto de la expresión regular. El array devuelto contiene los elementos encontrados en su primer elemento, y un elemento por cada parte de la expresión regular que se encuentra entre parentesis y se encuentra dentro del texto que fué capturado.</p>
+Si se encuentran coincidencial, el método `exec()` devuelve un array y actualiza las propiedades del objeto de la expresión regular. El array devuelto contiene los elementos encontrados en su primer elemento, y un elemento por cada parte de la expresión regular que se encuentra entre parentesis y se encuentra dentro del texto que fué capturado.
 
-<p>Si la busqueda falla, el método <code>exec()</code> devuelve {{jsxref("null")}}.</p>
+Si la busqueda falla, el método `exec()` devuelve {{jsxref("null")}}.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Considerando el siguiente ejemplo:</p>
+Considerando el siguiente ejemplo:
 
-<pre class="brush: js">// Busca "quick brown" seguido de "jumps", ignorando los caracteres que se
+```js
+// Busca "quick brown" seguido de "jumps", ignorando los caracteres que se
 // encuentren entre medias.
 // Recuerda "brown" y "jumps"
 // Ignora mayusculas y minusculas
 var re = /quick\s(brown).+?(jumps)/ig;
 var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
-</pre>
+```
 
-<p>La siguiente tabla muestra el resultado de este script:</p>
+La siguiente tabla muestra el resultado de este script:
 
 <table class="fullwidth-table">
- <tbody>
-  <tr>
-   <td class="header">Objeto</td>
-   <td class="header">Propiedad/Índice</td>
-   <td class="header">Descripción</td>
-   <td class="header">Ejemplo</td>
-  </tr>
-  <tr>
-   <td rowspan="4"><code>result</code></td>
-   <td><code>[0]</code></td>
-   <td>Todas las partes de la cadena que cumplen la expresión regular</td>
-   <td><code>Quick Brown Fox Jumps</code></td>
-  </tr>
-  <tr>
-   <td><code>[1],...[<em>n</em>]</code></td>
-   <td>
-    <p>Las subcadenas entre parentesis que han sido encontradas, si hay alguna. El número de subcadenas encontradas es ilimitado</p>
-   </td>
-   <td><code>[1] = Brown<br>
-    [2] = Jumps</code></td>
-  </tr>
-  <tr>
-   <td><code>index</code></td>
-   <td>El índice de base-0 del elemento encontrado en la cadena.</td>
-   <td><code>4</code></td>
-  </tr>
-  <tr>
-   <td><code>input</code></td>
-   <td>La cadena original.</td>
-   <td><code>The Quick Brown Fox Jumps Over The Lazy Dog</code></td>
-  </tr>
-  <tr>
-   <td rowspan="5"><code>re</code></td>
-   <td><code>lastIndex</code></td>
-   <td>El índice sobre el cual empieza la siguiente busqueda. Cuando no se usa g (busqueda global), esto va a ser siempre 0.</td>
-   <td><code>25</code></td>
-  </tr>
-  <tr>
-   <td><code>ignoreCase</code></td>
-   <td>Indica si la bandera "<code>i</code>" ha sido usada para ignorar mayusculas y minusculas.</td>
-   <td><code>true</code></td>
-  </tr>
-  <tr>
-   <td><code>global</code></td>
-   <td>Indica si la bandera "<code>g</code>" fue usada para hacer una busqueda global.</td>
-   <td><code>true</code></td>
-  </tr>
-  <tr>
-   <td><code>multiline</code></td>
-   <td>Indica si la bandera "<code>m"</code> fue usada para buscar en cadenas sobre multiples lineas</td>
-   <td><code>false</code></td>
-  </tr>
-  <tr>
-   <td><code>source</code></td>
-   <td>El texto del patrón de busqueda</td>
-   <td><code>quick\s(brown).+?(jumps)</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td class="header">Objeto</td>
+      <td class="header">Propiedad/Índice</td>
+      <td class="header">Descripción</td>
+      <td class="header">Ejemplo</td>
+    </tr>
+    <tr>
+      <td rowspan="4"><code>result</code></td>
+      <td><code>[0]</code></td>
+      <td>Todas las partes de la cadena que cumplen la expresión regular</td>
+      <td><code>Quick Brown Fox Jumps</code></td>
+    </tr>
+    <tr>
+      <td><code>[1],...[<em>n</em>]</code></td>
+      <td>
+        <p>
+          Las subcadenas entre parentesis que han sido encontradas, si hay
+          alguna. El número de subcadenas encontradas es ilimitado
+        </p>
+      </td>
+      <td>
+        <code>[1] = Brown<br />[2] = Jumps</code>
+      </td>
+    </tr>
+    <tr>
+      <td><code>index</code></td>
+      <td>El índice de base-0 del elemento encontrado en la cadena.</td>
+      <td><code>4</code></td>
+    </tr>
+    <tr>
+      <td><code>input</code></td>
+      <td>La cadena original.</td>
+      <td><code>The Quick Brown Fox Jumps Over The Lazy Dog</code></td>
+    </tr>
+    <tr>
+      <td rowspan="5"><code>re</code></td>
+      <td><code>lastIndex</code></td>
+      <td>
+        El índice sobre el cual empieza la siguiente busqueda. Cuando no se usa
+        g (busqueda global), esto va a ser siempre 0.
+      </td>
+      <td><code>25</code></td>
+    </tr>
+    <tr>
+      <td><code>ignoreCase</code></td>
+      <td>
+        Indica si la bandera "<code>i</code>" ha sido usada para ignorar
+        mayusculas y minusculas.
+      </td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>global</code></td>
+      <td>
+        Indica si la bandera "<code>g</code>" fue usada para hacer una busqueda
+        global.
+      </td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>multiline</code></td>
+      <td>
+        Indica si la bandera "<code>m"</code> fue usada para buscar en cadenas
+        sobre multiples lineas
+      </td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>source</code></td>
+      <td>El texto del patrón de busqueda</td>
+      <td><code>quick\s(brown).+?(jumps)</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Encontrando_coincidencias_sucesivas">Encontrando coincidencias sucesivas</h3>
+### Encontrando coincidencias sucesivas
 
-<p>Si tu expresión regular contiene la bandera "<code>g</code>", puedes usar el método <code>exec()</code> varias veces para encontrar coincidencias sucesivas en la misma cadena. Cuando lo haces, la busqueda empieza en la subcadena <code>str</code> especificada por la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} de la expresión regular ({{jsxref("RegExp.prototype.test()", "test()")}} también movera hacia adelante el indice de la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}}). Por ejemplo, asumiendo que tienes este script:</p>
+Si tu expresión regular contiene la bandera "`g`", puedes usar el método `exec()` varias veces para encontrar coincidencias sucesivas en la misma cadena. Cuando lo haces, la busqueda empieza en la subcadena `str` especificada por la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} de la expresión regular ({{jsxref("RegExp.prototype.test()", "test()")}} también movera hacia adelante el indice de la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}}). Por ejemplo, asumiendo que tienes este script:
 
-<pre class="brush: js">var myRe = /ab*/g;
+```js
+var myRe = /ab*/g;
 var str = 'abbcdefabh';
 var myArray;
 while ((myArray = myRe.exec(str)) !== null) {
@@ -123,65 +139,40 @@ while ((myArray = myRe.exec(str)) !== null) {
   msg += 'La siguiente coincidencia empieza en el indice ' + myRe.lastIndex;
   console.log(msg);
 }
-</pre>
+```
 
-<p>Este script muestra el siguiente texto:</p>
+Este script muestra el siguiente texto:
 
-<pre>Se ha encontrado abb. La siguiente coincidencia empieza en el indice 3
-Se ha encontrado ab. La siguiente coincidencia empieza en el indice 9
-</pre>
+    Se ha encontrado abb. La siguiente coincidencia empieza en el indice 3
+    Se ha encontrado ab. La siguiente coincidencia empieza en el indice 9
 
-<p>Nota: No uses la expresión regular literalmente (o el constructor {{jsxref("RegExp")}}) dentro de la condición del bucle while o se creará un bucle infinito si hay una coincidencia, por culpa de que la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} va a ser reiniciada por cada iteración del bucle. Además asegurate de que has usado la bandera de busqueda global "g" o se creará un bucle también.</p>
+Nota: No uses la expresión regular literalmente (o el constructor {{jsxref("RegExp")}}) dentro de la condición del bucle while o se creará un bucle infinito si hay una coincidencia, por culpa de que la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} va a ser reiniciada por cada iteración del bucle. Además asegurate de que has usado la bandera de busqueda global "g" o se creará un bucle también.
 
-<h3 id="Usando_exec()_con_RegExp_literales">Usando <code>exec()</code> con <code>RegExp</code> literales</h3>
+### Usando `exec()` con `RegExp` literales
 
-<p>También se puede usar <code>exec() sin crear un objeto de </code> {{jsxref("RegExp")}}:</p>
+También se puede usar `exec() sin crear un objeto de `{{jsxref("RegExp")}}:
 
-<pre class="brush: js">var matches = /(hola \S+)/.exec('Esto es un hola mundo!');
+```js
+var matches = /(hola \S+)/.exec('Esto es un hola mundo!');
 console.log(matches[1]);
-</pre>
+```
 
-<p>Esto logueará un mensaje que contiene 'hola mundo!'.</p>
+Esto logueará un mensaje que contiene 'hola mundo!'.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.10.6.21', 'RegExp.exec')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-regexp.prototype.exec', 'RegExp.exec')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp.prototype.exec', 'RegExp.exec')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Status                       | Comment                                             |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.10.6.21', 'RegExp.exec')}}                     | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-regexp.prototype.exec', 'RegExp.exec')}}         | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-regexp.prototype.exec', 'RegExp.exec')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatiblidad_con_navegadores">Compatiblidad con navegadores</h2>
+## Compatiblidad con navegadores
 
 {{Compat("javascript.builtins.RegExp.exec")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>Capítulo de <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Expresiones Regulares</a> en la <a href="/en-US/docs/Web/JavaScript/Guide">Guía de Javascript</a></li>
- <li>{{jsxref("RegExp")}}</li>
-</ul>
+- Capítulo de [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) en la [Guía de Javascript](/es/docs/Web/JavaScript/Guide)
+- {{jsxref("RegExp")}}

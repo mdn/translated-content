@@ -7,35 +7,31 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/difference
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- <code>set:difference()</code> devuelve la diferencia entre dos conjuntos de nodos. En otras palabras, devuelve un cojunto de nodos cuyos nodos están en uno de los conjuntos pero no en el otro.</p>
+`set:difference()` devuelve la diferencia entre dos conjuntos de nodos. En otras palabras, devuelve un cojunto de nodos cuyos nodos están en uno de los conjuntos pero no en el otro.
 
-<p>La versión de plantilla de <code>set:difference</code> aplica plantillas a estos nodos en el modo de <code>set:difference</code>, copiando los nodos de modo que se devuelva el fragmento de árbol resultante consistente en los nodos.</p>
+La versión de plantilla de `set:difference` aplica plantillas a estos nodos en el modo de `set:difference`, copiando los nodos de modo que se devuelva el fragmento de árbol resultante consistente en los nodos.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval">set:difference(<em>conjuntoNodos1</em>,<em>conjuntoNodos2</em>)
-</pre>
+    set:difference(conjuntoNodos1,conjuntoNodos2)
 
-<h3 id="Argumentos" name="Argumentos">Argumentos</h3>
+### Argumentos
 
-<dl>
- <dt><code><em>conjuntoNodos1</em></code></dt>
- <dd>El conjunto de nodos desde el cual se sustraen los nodos.</dd>
- <dt><code><em>conjuntoNodos2</em></code></dt>
- <dd>El conjunto de nodos a sustraer de<em>conjuntoNodos1</em>.</dd>
-</dl>
+- `conjuntoNodos1`
+  - : El conjunto de nodos desde el cual se sustraen los nodos.
+- `conjuntoNodos2`
+  - : El conjunto de nodos a sustraer de*conjuntoNodos1*.
 
-<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
+### Devuelve
 
-<p>Un conjunto de nodos que contiene los nodos que están en<em>conjuntoNodos1</em> pero no en<em>conjuntoNodos2</em>.</p>
+Un conjunto de nodos que contiene los nodos que están en*conjuntoNodos1* pero no en*conjuntoNodos2*.
 
-<h3 id="Definido_en" name="Definido_en">Definido en</h3>
+### Definido en
 
-<p><a class="external" href="http://www.exslt.org/set/functions/difference/index.html">EXSLT - SET:DIFFERENCE</a></p>
+[EXSLT - SET:DIFFERENCE](http://www.exslt.org/set/functions/difference/index.html)
 
-<h3 id="Implementaci.C3.B3n_en_Gecko" name="Implementaci.C3.B3n_en_Gecko">Implementación en Gecko</h3>
+### Implementación en Gecko
 
-<p>Implementado en Gecko 1.9 y posteriores.</p>
+Implementado en Gecko 1.9 y posteriores.

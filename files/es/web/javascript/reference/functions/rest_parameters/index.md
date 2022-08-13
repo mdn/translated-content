@@ -8,28 +8,30 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>La sintaxis de los <strong>parámetros rest </strong>nos permiten representar un número indefinido de argumentos como un array.</p>
+La sintaxis de los **parámetros rest** nos permiten representar un número indefinido de argumentos como un array.
 
-<p>{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}</p>
+{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
 
-<p>La fuente interactiva de este ejemplo es almacenado en un repositorio de GitHub. Si a ti te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona este repositorio <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos un pull-request.</p>
+La fuente interactiva de este ejemplo es almacenado en un repositorio de GitHub. Si a ti te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona este repositorio <https://github.com/mdn/interactive-examples> y envíanos un pull-request.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js notranslate">function(a, b, ...theArgs) {
+```js
+function(a, b, ...theArgs) {
   // ...
 }
-</pre>
+```
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p class="brush: js">El último parámetro de una función se puede prefijar con <code>...</code>, lo que hará que todos los argumentos restantes (suministrados por el usuario) se coloquen dentro de un array de javascript "estándar".</p>
+El último parámetro de una función se puede prefijar con `...`, lo que hará que todos los argumentos restantes (suministrados por el usuario) se coloquen dentro de un array de javascript "estándar".
 
-<p class="brush: js">Sólo el último parámetro puede ser un "parámetro rest".</p>
+Sólo el último parámetro puede ser un "parámetro rest".
 
-<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
+```js
+function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -41,23 +43,22 @@ myFun("one", "two", "three", "four", "five", "six");
 // a, one
 // b, two
 // manyMoreArgs, [three, four, five, six]
-</pre>
+```
 
-<h3 id="Diferencia_entre_los_parámetros_rest_y_el_objeto_arguments">Diferencia entre los parámetros rest y el objeto <code>arguments</code></h3>
+### Diferencia entre los parámetros rest y el objeto `arguments`
 
-<p>Hay tres principales diferencias entre los parámetros rest y el objeto <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments"><code>arguments</code></a>:</p>
+Hay tres principales diferencias entre los parámetros rest y el objeto [`arguments`](/es/docs/Web/JavaScript/Reference/Functions/arguments "arguments"):
 
-<ul>
- <li>los parámetros rest son sólo aquellos a los que no se les ha asignado un nombre, mientras que el objeto <code>arguments</code> contiene todos los argumentos que se le han pasado a la función;</li>
- <li>el objeto <code>arguments</code> no es un array real, mientras que los parámetros rest son instancias de  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> , lo que significa que lo los métodos como <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="Array sort method"><code>sort</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="Array map method"><code>map</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" title="Array forEach method"><code>forEach</code></a> o <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="Array pop method"><code>pop</code></a> pueden aplicarse directamente;</li>
- <li>el objeto <code>arguments</code> tiene una funcionalidad adicional específica para sí mismo (como la propiedad <code>callee</code>).</li>
-</ul>
+- los parámetros rest son sólo aquellos a los que no se les ha asignado un nombre, mientras que el objeto `arguments` contiene todos los argumentos que se le han pasado a la función;
+- el objeto `arguments` no es un array real, mientras que los parámetros rest son instancias de [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array "Array") , lo que significa que lo los métodos como [`sort`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort "Array sort method"), [`map`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map "Array map method"), [`forEach`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach "Array forEach method") o [`pop`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "Array pop method") pueden aplicarse directamente;
+- el objeto `arguments` tiene una funcionalidad adicional específica para sí mismo (como la propiedad `callee`).
 
-<h3 id="De_argumentos_a_array">De argumentos a array</h3>
+### De argumentos a array
 
-<p>Los parámetros rest han sido agregados para reducir el código repetitivo que se usaba en los parámetros.</p>
+Los parámetros rest han sido agregados para reducir el código repetitivo que se usaba en los parámetros.
 
-<pre class="brush: js notranslate">// Antes de los parámetros rest, "arguments" se podía convertir en un array usando:
+```js
+// Antes de los parámetros rest, "arguments" se podía convertir en un array usando:
 
 function f(a, b) {
 
@@ -76,29 +77,31 @@ function f(a, b) {
 function f(...args) {
   let normalArray = args
   let first = normalArray.shift() // OK, gives the first argument
-}</pre>
-
-<h3 id="Desestructuración_de_los_parametros_rest">Desestructuración de los parametros rest</h3>
-
-<p>Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a>.</p>
-
-<pre class="notranslate"><code>function f(...[a, b, c]) {
-  return a + b + c;
 }
+```
 
-f(1)          // NaN (b y c son indefinidos)
-f(1, 2, 3)    // 6
-f(1, 2, 3, 4) // 6 (el cuarto parámetro no está desestructurado)</code></pre>
+### Desestructuración de los parametros rest
 
-<h2 id="Ejemplos">Ejemplos</h2>
+Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
-<h3 id="Usando_parámetros_rest">Usando parámetros rest</h3>
+    function f(...[a, b, c]) {
+      return a + b + c;
+    }
 
-<p>En este ejemplo, el primer argumento es mapeado con 'a' y el segundo con 'b', entonces, esos argumentos nombrados, son usados normalmente</p>
+    f(1)          // NaN (b y c son indefinidos)
+    f(1, 2, 3)    // 6
+    f(1, 2, 3, 4) // 6 (el cuarto parámetro no está desestructurado)
 
-<p>De todas formas, el tercer argumento, <code>manyMoreArgs</code>, será un array que contendrá tantos argumentos como el usuario incluya (3er, 4to, 5to ...).</p>
+## Ejemplos
 
-<pre class="brush: js notranslate">function myFun(a, b, ...manyMoreArgs) {
+### Usando parámetros rest
+
+En este ejemplo, el primer argumento es mapeado con 'a' y el segundo con 'b', entonces, esos argumentos nombrados, son usados normalmente
+
+De todas formas, el tercer argumento, `manyMoreArgs`, será un array que contendrá tantos argumentos como el usuario incluya (3er, 4to, 5to ...).
+
+```js
+function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a)
   console.log("b", b)
   console.log("manyMoreArgs", manyMoreArgs)
@@ -108,45 +111,52 @@ myFun("one", "two", "three", "four", "five", "six")
 
 // a, one
 // b, two
-// manyMoreArgs, [three, four, five, six]</pre>
+// manyMoreArgs, [three, four, five, six]
+```
 
-<p>Debajo... incluso si hay solo un valor, el ultimo argumento seguirá siendo colocado dentro de un array.</p>
+Debajo... incluso si hay solo un valor, el ultimo argumento seguirá siendo colocado dentro de un array.
 
-<pre class="brush: js notranslate">// usando la misma definición de función del ejemplo anterior
+```js
+// usando la misma definición de función del ejemplo anterior
 myFun("one", "two", "three")
 
 // a, one
 // b, two
-// manyMoreArgs, [three]</pre>
+// manyMoreArgs, [three]
+```
 
-<p>Debajo, el tercer argumento no esta provisto, pero <code>manyMoreArgs</code> continúa siendo un array (aunque uno vacío).</p>
+Debajo, el tercer argumento no esta provisto, pero `manyMoreArgs` continúa siendo un array (aunque uno vacío).
 
-<pre class="brush: js notranslate">//usando la misma definición de función del ejemplo anterior
+```js
+//usando la misma definición de función del ejemplo anterior
 
 myFun("one", "two")
 
 // a, one
 // b, two
-// manyMoreArgs, []</pre>
+// manyMoreArgs, []
+```
 
-<h3 id="Argument_length">Argument length</h3>
+### Argument length
 
-<p>Puesto que <code>theArgs</code> es un array, su tamaño (un conteo de sus elementos) es dado por la propiedad <code>length</code> :</p>
+Puesto que `theArgs` es un array, su tamaño (un conteo de sus elementos) es dado por la propiedad `length` :
 
-<pre class="brush: js notranslate">function fun1(...theArgs) {
+```js
+function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
 fun1();  // 0
 fun1(5); // 1
 fun1(5, 6, 7); // 3
-</pre>
+```
 
-<h3 id="Ordinary_parameter_and_rest_parameters">Ordinary parameter and rest parameters</h3>
+### Ordinary parameter and rest parameters
 
-<p>En el siguiente ejemplo, se usa un parámetro rest para agrupar  dentro de un array a todos los argumentos despues del primero.  Luego cada uno es multiplicado por el primero y el arreglo es retornado:</p>
+En el siguiente ejemplo, se usa un parámetro rest para agrupar dentro de un array a todos los argumentos despues del primero. Luego cada uno es multiplicado por el primero y el arreglo es retornado:
 
-<pre class="brush: js notranslate">function multiply(multiplier, ...theArgs) {
+```js
+function multiply(multiplier, ...theArgs) {
   return theArgs.map(function (element) {
     return multiplier * element;
   });
@@ -154,11 +164,12 @@ fun1(5, 6, 7); // 3
 
 let arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]
-</pre>
+```
 
-<p>El siguiente ejemplo muestra que se puede usar los métodos de <code>Array</code> en los parámetros rest , pero no en el objeto <code>arguments</code>:</p>
+El siguiente ejemplo muestra que se puede usar los métodos de `Array` en los parámetros rest , pero no en el objeto `arguments`:
 
-<pre class="brush: js notranslate">function sortRestArgs(...theArgs) {
+```js
+function sortRestArgs(...theArgs) {
   var sortedArgs = theArgs.sort();
   return sortedArgs;
 }
@@ -172,44 +183,27 @@ function sortArguments() {
 
 // lanza un TypeError: arguments.sort is not a function
 console.log(sortArguments(5,3,7,1));
-</pre>
+```
 
-<p>Para poder usar los métodos de  <code>Array</code> en el objeto <code>arguments</code>, se debe convertir a un <code>Array</code> primero.</p>
+Para poder usar los métodos de `Array` en el objeto `arguments`, se debe convertir a un `Array` primero.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>definción inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado                       | Comentario         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}}     | {{Spec2('ES6')}}         | definción inicial. |
+| {{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
+## Compatibilidad en Navegadores
 
 {{Compat("javascript.functions.rest_parameters")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="spread operator">Spread Operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments">Arguments object</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Arreglos">Array</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="Functions and function scope">Functions</a></li>
- <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original proposal at ecmascript.org</a></li>
- <li><a class="external" href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript arguments object and beyond</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a></li>
-</ul>
+- [Spread Operator](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator "spread operator")
+- [Arguments object](/es/docs/Web/JavaScript/Reference/Functions/arguments "arguments")
+- [Array](/es/docs/Web/JavaScript/Reference/Global_Objects/Array "Arreglos")
+- [Functions](/es/docs/Web/JavaScript/Reference/Functions "Functions and function scope")
+- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
+- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

@@ -1,182 +1,153 @@
 ---
 title: '::after (:after)'
-slug: 'Web/CSS/::after'
+slug: Web/CSS/::after
 tags:
   - CSS
   - Presentación
   - Pseudo-elemento CSS
   - Referencia
   - Web
-translation_of: 'Web/CSS/::after'
+translation_of: Web/CSS/::after
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
+En CSS, **`::after`** crea un [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}.Es en linea (inline) de forma predeterminada.
 
+```css
+/* Añdade una flecha después de los enlaces */
+a::after {
+  content: "→";
+}
+```
 
-<div>
-<p><span class="seoSummary">En CSS, <strong><code>::after</code></strong> crea un <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}.</span>Es en linea (inline) de forma predeterminada.</p>
+> **Nota:** Los pseudo-elementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto no aplica a _[elementos reemplazados](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{HTMLElement("img")}}, o {{HTMLElement("br")}}.
 
-<pre class="brush: css no-line-numbers  language-css"><code class="language-css"><span class="comment token">/* Añdade una flecha después de los enlaces */</span>
-<span class="selector token">a<span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-  <span class="property token">content</span><span class="punctuation token">:</span> "</code>→<code class="language-css">"<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
-
-<div class="note">
-<p><strong>Nota:</strong> Los pseudo-elementos generados por  <code>::before</code> y <code>::after</code> son <a href="https://www.w3.org/TR/CSS2/generate.html#before-after-content">contenidos por la caja de formato del elemento</a>, y por lo tanto no aplica a <em><a href="/en-US/docs/Web/CSS/Replaced_element">elementos reemplazados</a></em> como los elementos {{HTMLElement("img")}}, o {{HTMLElement("br")}}.</p>
-</div>
-</div>
-
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
 {{CSSSyntax}}
 
-<div class="note">
-<p><strong>Nota:</strong> CSS3 introdujo la notación <code>::after</code> (con doble dos puntos) para distinguir <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-clases</a> de <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elementos</a>. Los navegadores también aceptan <code>:after</code>, añadido en CSS2.</p>
-</div>
+> **Nota:** CSS3 introdujo la notación `::after` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:after`, añadido en CSS2.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Uso_simple">Uso simple</h3>
+### Uso simple
 
-<p>Crearemos dos clases: una para párrafos aburridos y otra para párrafos interesantes. Después podremos resaltar cada párrafo añadiendo un pseudo-elemento al final del mismo.</p>
+Crearemos dos clases: una para párrafos aburridos y otra para párrafos interesantes. Después podremos resaltar cada párrafo añadiendo un pseudo-elemento al final del mismo.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>boring-text<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Here is some plain old boring text.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Here is some normal text that is neither boring nor exciting.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>exciting-text<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Contributing to MDN is easy and fun.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html
+<p class="boring-text">Here is some plain old boring text.</p>
+<p>Here is some normal text that is neither boring nor exciting.</p>
+<p class="exciting-text">Contributing to MDN is easy and fun.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token"><span class="class token">.exciting-text</span><span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-  <span class="property token">content</span><span class="punctuation token">:</span> <span class="string token">" &lt;- EXCITING!"</span><span class="punctuation token">;</span>
-  <span class="property token">color</span><span class="punctuation token">:</span> green<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```css
+.exciting-text::after {
+  content: " <- EXCITING!";
+  color: green;
+}
 
-<span class="selector token"><span class="class token">.boring-text</span><span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-  <span class="property token">content</span><span class="punctuation token">:</span> <span class="string token">" &lt;- BORING"</span><span class="punctuation token">;</span>
-  <span class="property token">color</span><span class="punctuation token">:</span> red<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+.boring-text::after {
+  content: " <- BORING";
+  color: red;
+}
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Uso_simple', 500, 150)}}</p>
+{{EmbedLiveSample('Uso_simple', 500, 150)}}
 
-<h3 id="Ejemplo_decorativo">Ejemplo decorativo</h3>
+### Ejemplo decorativo
 
-<p>Podemos estilizar el texto o imágenes de la propiedad {{cssxref("content")}} de casi cualquier forma que queramos.</p>
+Podemos estilizar el texto o imágenes de la propiedad {{cssxref("content")}} de casi cualquier forma que queramos.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>ribbon<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Look at the orange box after this text. <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html
+<span class="ribbon">Look at the orange box after this text. </span>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token"><span class="class token">.ribbon</span></span> <span class="punctuation token">{</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="hexcode token">#5BC8F7</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```css
+.ribbon {
+  background-color: #5BC8F7;
+}
 
-<span class="selector token"><span class="class token">.ribbon</span><span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-  <span class="property token">content</span><span class="punctuation token">:</span> <span class="string token">"This is a fancy orange box."</span><span class="punctuation token">;</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="hexcode token">#FFBA10</span><span class="punctuation token">;</span>
-  <span class="property token">border-color</span><span class="punctuation token">:</span> black<span class="punctuation token">;</span>
-  <span class="property token">border-style</span><span class="punctuation token">:</span> dotted<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+.ribbon::after {
+  content: "This is a fancy orange box.";
+  background-color: #FFBA10;
+  border-color: black;
+  border-style: dotted;
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Ejemplo_decorativo', 450, 20)}}</p>
+{{EmbedLiveSample('Ejemplo_decorativo', 450, 20)}}
 
-<h3 id="Tooltips">Tooltips</h3>
+### Tooltips
 
-<p>El siguiente ejemplo muestra el uso del <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> <code>::after</code> en conjunto con la expresión CSS <a href="/es/docs/Web/CSS/attr"><code>attr()</code></a> y el <a href="/es/docs/Web/HTML/Global_attributes#attr-dataset">atributo data personalizado</a> <code>data-descr</code> para crear un <em>tooltip</em> de tipo glosario, completamente en CSS. Mira la vista previa más abajo, o también puedes ver el ejemplo en una <a href="https://developer.mozilla.org/files/4591/css-only_tooltips.html">página separada.</a></p>
+El siguiente ejemplo muestra el uso del [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) `::after` en conjunto con la expresión CSS [`attr()`](/es/docs/Web/CSS/attr) y el [atributo data personalizado](/es/docs/Web/HTML/Global_attributes#attr-dataset) `data-descr` para crear un _tooltip_ de tipo glosario, completamente en CSS. Mira la vista previa más abajo, o también puedes ver el ejemplo en una [página separada.](https://developer.mozilla.org/files/4591/css-only_tooltips.html)
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Here we have some
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span> <span class="attr-name token">tabindex</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0<span class="punctuation token">"</span></span> <span class="attr-name token">data-descr</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>collection of words and punctuation<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span> with a few
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span> <span class="attr-name token">tabindex</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0<span class="punctuation token">"</span></span> <span class="attr-name token">data-descr</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>small popups that appear when hovering<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>tooltips<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span>.
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html
+<p>Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+</p>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css line-numbers language-css"><code class="language-css"><span class="selector token">span<span class="attribute token"><span class="punctuation token">[</span><span class="attribute token">data-descr</span><span class="punctuation token">]</span></span></span> <span class="punctuation token">{</span>
-  <span class="property token">position</span><span class="punctuation token">:</span> relative<span class="punctuation token">;</span>
-  <span class="property token">text-decoration</span><span class="punctuation token">:</span> underline<span class="punctuation token">;</span>
-  <span class="property token">color</span><span class="punctuation token">:</span> <span class="hexcode token">#00F</span><span class="punctuation token">;</span>
-  <span class="property token">cursor</span><span class="punctuation token">:</span> help<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```css
+span[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  color: #00F;
+  cursor: help;
+}
 
-<span class="selector token">span<span class="attribute token"><span class="punctuation token">[</span><span class="attribute token">data-descr</span><span class="punctuation token">]</span></span><span class="pseudo-class token">:hover</span><span class="pseudo-element token">::after</span>,
-span<span class="attribute token"><span class="punctuation token">[</span><span class="attribute token">data-descr</span><span class="punctuation token">]</span></span><span class="pseudo-class token">:focus</span><span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-  <span class="property token">content</span><span class="punctuation token">:</span> <span class="function token">attr</span><span class="punctuation token">(</span>data-descr<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="property token">position</span><span class="punctuation token">:</span> absolute<span class="punctuation token">;</span>
-  <span class="property token">left</span><span class="punctuation token">:</span> <span class="number token">0</span><span class="punctuation token">;</span>
-  <span class="property token">top</span><span class="punctuation token">:</span> <span class="number token">24</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">min-width</span><span class="punctuation token">:</span> <span class="number token">200</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">border</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="token unit">px</span> <span class="hexcode token">#aaaaaa</span> solid<span class="punctuation token">;</span>
-  <span class="property token">border-radius</span><span class="punctuation token">:</span> <span class="number token">10</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">background-color</span><span class="punctuation token">:</span> <span class="hexcode token">#ffffcc</span><span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">12</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">color</span><span class="punctuation token">:</span> <span class="hexcode token">#000000</span><span class="punctuation token">;</span>
-  <span class="property token">font-size</span><span class="punctuation token">:</span> <span class="number token">14</span><span class="token unit">px</span><span class="punctuation token">;</span>
-  <span class="property token">z-index</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}
+```
 
-<h4 id="Resultado_3">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Tooltips', 450, 120)}}</p>
+{{EmbedLiveSample('Tooltips', 450, 120)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#selectordef-after', '::after')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>Sin cambios significativos desde la especificación previa.</td>
-  </tr>
-  <tr>
-   <td>{{Specname("CSS3 Transitions", "#animatable-properties", "transitions on pseudo-element properties")}}</td>
-   <td>{{Spec2("CSS3 Transitions")}}</td>
-   <td>Permite transiciones en propiedades definidas en los pseudo-elementos.</td>
-  </tr>
-  <tr>
-   <td>{{Specname("CSS3 Animations", "", "animations on pseudo-element properties")}}</td>
-   <td>{{Spec2("CSS3 Animations")}}</td>
-   <td>Permite animaciones en propiedades definidas en los pseudo-elementos.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#gen-content', '::after')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Introduce la sintaxis de doble símbolo <code>:</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#before-after-content', '::after')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Definición inicial, usando sintáxis de un solo símbolo <code>:</code></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                           | Estatus                                      | Comentarios                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------- |
+| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-after', '::after')}}                                             | {{Spec2('CSS4 Pseudo-Elements')}} | Sin cambios significativos desde la especificación previa.             |
+| {{Specname("CSS3 Transitions", "#animatable-properties", "transitions on pseudo-element properties")}} | {{Spec2("CSS3 Transitions")}}     | Permite transiciones en propiedades definidas en los pseudo-elementos. |
+| {{Specname("CSS3 Animations", "", "animations on pseudo-element properties")}}                                 | {{Spec2("CSS3 Animations")}}         | Permite animaciones en propiedades definidas en los pseudo-elementos.  |
+| {{SpecName('CSS3 Selectors', '#gen-content', '::after')}}                                                             | {{Spec2('CSS3 Selectors')}}         | Introduce la sintaxis de doble símbolo `:`                             |
+| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::after')}}                                         | {{Spec2('CSS2.1')}}                     | Definición inicial, usando sintáxis de un solo símbolo `:`             |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<div>
+{{Compat("css.selectors.after")}}
 
+## Véase también
 
-<p>{{Compat("css.selectors.after")}}</p>
-</div>
-
-<h2 id="Véase_también">Véase también</h2>
-
-<ul>
- <li>{{Cssxref("::before")}}</li>
- <li>{{cssxref("content")}}</li>
-</ul>
+- {{Cssxref("::before")}}
+- {{cssxref("content")}}

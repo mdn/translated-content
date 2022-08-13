@@ -3,39 +3,24 @@ title: 201 Created
 slug: Web/HTTP/Status/201
 translation_of: Web/HTTP/Status/201
 ---
-<p><span lang="es">El código de respuesta de estado de éxito creado HTTP </span><strong><code>201 Created</code></strong><span lang="es"> indica que la solicitud ha tenido éxito y ha llevado a la creación de un recurso. El nuevo recurso se crea efectivamente antes de enviar esta respuesta. y el nuevo recurso se devuelve en el cuerpo del mensaje, su ubicación es la URL de la solicitud o el contenido del encabezado de </span>la Ubicacion</p>
+El código de respuesta de estado de éxito creado HTTP **`201 Created`** indica que la solicitud ha tenido éxito y ha llevado a la creación de un recurso. El nuevo recurso se crea efectivamente antes de enviar esta respuesta. y el nuevo recurso se devuelve en el cuerpo del mensaje, su ubicación es la URL de la solicitud o el contenido del encabezado de la Ubicacion
 
-<p><span lang="es">El caso de uso común de este código de estado es el resultado de una solicitud </span>metodo POST</p>
+El caso de uso común de este código de estado es el resultado de una solicitud metodo POST
 
-<p> </p>
+## Status
 
-<h2 id="Status">Status</h2>
+    201 Created
 
-<pre class="syntaxbox">201 Created</pre>
+## Especificaciones
 
-<h2 id="Especificaciones"><font><font>Especificaciones</font></font></h2>
+| Especificacion                                       | Titulo                                                                       |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------- |
+| {{RFC("7231", "201 Created" , "6.3.2")}} | Protocolo de transferencia de hipertexto (HTTP / 1.1): Semántica y contenido |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><font><font>Especificacion </font></font></th>
-   <th scope="col">Titulo</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "201 Created" , "6.3.2")}}</td>
-   <td>Protocolo de transferencia de hipertexto (HTTP / 1.1): Semántica y contenido</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidad entre navegadores
 
-<h2 id="Compatibilidad_entre_navegadores"><font><font>Compatibilidad entre navegadores</font></font></h2>
+{{Compat("http.status.201")}}
 
+## Ver también
 
-
-<p>{{Compat("http.status.201")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
-</ul>
+- [HTTP request methods](/es/docs/Web/HTTP/Methods)

@@ -7,63 +7,33 @@ tags:
   - Ficheros
 translation_of: Web/API/FileReader/result
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}La propiedad **`result`** de {{domxref("FileReader")}} retorna el contenido del archivo. Esta propiedad es válida únicamente después de que la operación de lectura del archivo es completada. El formato de la infomación devuelta depende de cuál de los métodos de lectura fue usado.
 
-<div> </div>
+## Sintaxis
 
-<div>La propiedad <code><strong>result</strong></code> de {{domxref("FileReader")}} retorna el contenido del archivo. Esta propiedad es válida únicamente después de que la operación de lectura del archivo es completada. El formato de la infomación devuelta depende de cuál de los métodos de lectura fue usado.</div>
+    var file = instanceOfFileReader.result
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Valor
 
-<pre class="syntaxbox">var <em>file</em> = <em>instanceOfFileReader</em>.result
-</pre>
+Una cadena de texto apropiada o un {{domxref("ArrayBuffer")}} dependiendo de cuál método de lectura haya provocado la operación de lectura. El valor es `null` si la lectura no se ha completado aún o no fue exitosa.
 
-<h3 id="Valor">Valor</h3>
+Los tipos de resultados son descritos a continuación.
 
-<p>Una cadena de texto apropiada o un {{domxref("ArrayBuffer")}} dependiendo de cuál método de lectura haya provocado la operación de lectura. El valor es <code>null</code> si la lectura no se ha completado aún o no fue exitosa.</p>
+| Método                                                                      | Descripción                                                                                                                                        |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer)   | `result` es un [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript que contiene la información binaria. |
+| [`readAsBinaryString()`](/en-US/docs/Web/API/FileReader/readAsBinaryString) | `result` contiene la información binaria del archivo en una cadena de texto.                                                                       |
+| [`readAsDataURL()`](/en-US/docs/Web/API/FileReader/readAsDataURL)           | `result` es una cadena de texto que representa una URL con la propiedad `data:` que contiene la información leída del archivo.                     |
+| [`readAsText()`](/en-US/docs/Web/API/FileReader/readAsText)                 | `result` es una cadena de texto con el contenido del archivo.                                                                                      |
 
-<p>Los tipos de resultados son descritos a continuación.</p>
+## Ejemplo
 
-<p> </p>
+Este ejemplo representa una función `read()`, que lee un archivo de un [file input](/es/docs/Web/HTML/Element/input/file). Funciona creando un objeto de {{domxref("FileReader")}} y creando un listener para los eventos [load](/es/docs/Web/Events/load) de tal manera que cuando el archivo es leído, la propiedad `result` es obtenida y pasada a la función callback proporcionada a `read()`.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Método</th>
-   <th scope="col">Descripción</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/API/FileReader/readAsArrayBuffer">readAsArrayBuffer()</a></code></td>
-   <td><code>result</code> es un <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> de JavaScript que contiene la información binaria.</td>
-  </tr>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/API/FileReader/readAsBinaryString">readAsBinaryString()</a></code></td>
-   <td>
-    <p><code>result</code> contiene la información binaria del archivo en una cadena de texto.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/API/FileReader/readAsDataURL">readAsDataURL()</a></code></td>
-   <td>
-    <p><code>result</code> es una cadena de texto que representa una URL con la propiedad <code>data:</code> que contiene la información leída del archivo.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/API/FileReader/readAsText">readAsText()</a></code></td>
-   <td><code>result</code> es una cadena de texto con el contenido del archivo.</td>
-  </tr>
- </tbody>
-</table>
+El contenido es manejado como texto.
 
-<h2 id="Ejemplo">Ejemplo</h2>
-
-<p>Este ejemplo representa una función <code>read()</code>, que lee un archivo de un <a href="/en-US/docs/Web/HTML/Element/input/file">file input</a>. Funciona creando un objeto de {{domxref("FileReader")}} y creando un listener para los eventos <a href="/en-US/docs/Web/Events/load">load</a> de tal manera que cuando el archivo es leído, la propiedad <code>result</code> es obtenida y pasada a la función callback proporcionada a <code>read()</code>.</p>
-
-<p>El contenido es manejado como texto.</p>
-
-<pre class="brush: js">var fileInput = document.querySelector('input[type="file"]');
+```js
+var fileInput = document.querySelector('input[type="file"]');
 
 function read(callback) {
   var file = fileInput.files.item(0);
@@ -75,33 +45,18 @@ function read(callback) {
 
   reader.readAsText(file);
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("File API", "#FileReader-interface", "FileReader")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estatus                      | Comentario         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Definición inicial |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("api.FileReader.result")}}
 
+## Ver también
 
-<p>{{Compat("api.FileReader.result")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

@@ -3,95 +3,67 @@ title: URL()
 slug: Web/API/URL/URL
 translation_of: Web/API/URL/URL
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">El constructor </span></font><strong>URL()</strong></code> devuelve un objeto {{domxref("URL")}} recién creado que representa la URL definida por los parámetros.</p>
+`El constructor URL()` devuelve un objeto {{domxref("URL")}} recién creado que representa la URL definida por los parámetros.
 
-<p>Si la URL base dada o la URL resultante no son URL válidas, se lanza un {{domxref("DOMException")}}  de tipo <code>SYNTAX_ERROR</code>.</p>
+Si la URL base dada o la URL resultante no son URL válidas, se lanza un {{domxref("DOMException")}} de tipo `SYNTAX_ERROR`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>url</em> = new URL(<em>url</em>, [<em>base</em>])
-</pre>
+    url = new URL(url, [base])
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>url</code></dt>
- <dd>Un {{domxref("USVString")}} que representa una URL absoluta o relativa. Si <em>url</em> es una URL relativa, se requiere <em>base</em>, y se usará como URL base. Si url es una URL absoluta, se ignorará una <em>base</em> determinada.</dd>
- <dt><code>base</code><em> </em>{{optional_inline}}</dt>
- <dd>Un {{domxref("USVString")}} representa la URL base a usar en caso de que la URL sea una URL relativa. Si no se especifica, el valor predeterminado es <code>''</code>.</dd>
-</dl>
+- `url`
+  - : Un {{domxref("USVString")}} que representa una URL absoluta o relativa. Si _url_ es una URL relativa, se requiere _base_, y se usará como URL base. Si url es una URL absoluta, se ignorará una _base_ determinada.
+- `base`\_ \_{{optional_inline}}
+  - : Un {{domxref("USVString")}} representa la URL base a usar en caso de que la URL sea una URL relativa. Si no se especifica, el valor predeterminado es `''`.
 
-<div class="note">
-<p><strong>Nota</strong>: Aún puede usar un objeto {{domxref("URL")}} existente para la base, que se enchufa al atributo  {{domxref("DOMString.href","href")}} del objeto.</p>
-</div>
+> **Nota:** Aún puede usar un objeto {{domxref("URL")}} existente para la base, que se enchufa al atributo {{domxref("DOMString.href","href")}} del objeto.
 
-<h3 id="Excepciones">Excepciones</h3>
+### Excepciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Excepción</th>
-   <th scope="col">Explicación</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>TypeError</code></td>
-   <td><em>url</em> (en el caso de URL absolutas) o <em>base</em> + <em>url</em> (en el caso de URL relativas) no es una URL válida.</td>
-  </tr>
- </tbody>
-</table>
+| Excepción   | Explicación                                                                                              |
+| ----------- | -------------------------------------------------------------------------------------------------------- |
+| `TypeError` | _url_ (en el caso de URL absolutas) o _base_ + _url_ (en el caso de URL relativas) no es una URL válida. |
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">// Urls base
+```js
+// Urls base
 var m = 'https://developer.mozilla.org';
-var a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
-var b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
+var a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
+var b = new URL(m);                                     // => 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // =&gt; 'https://developer.mozilla.org/en-US/docs'
-var d = new URL('/en-US/docs', b);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/en-US/docs'
+var d = new URL('/en-US/docs', b);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', d);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', a);                     // => 'https://developer.mozilla.org/en-US/docs'
 
         new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // =&gt; 'https://developer.mozilla.org/en-US/docs'
+                                                       // => 'https://developer.mozilla.org/en-US/docs'
 
         new URL('/en-US/docs', '');                    // Provoca una excepción TypeError ya que '' no es una URL válida
         new URL('/en-US/docs');                        // Provoca una excepción TypeError ya que '/en-US/docs' no es una URL válida
-        new URL('http://www.example.com', );           // =&gt; 'http://www.example.com/'
-        new URL('http://www.example.com', b);          // =&gt; 'http://www.example.com/'
+        new URL('http://www.example.com', );           // => 'http://www.example.com/'
+        new URL('http://www.example.com', b);          // => 'http://www.example.com/'
 
-        new URL("//foo.com", "https://example.com")    // =&gt; 'https://foo.com' (ver URL relativas)
-</pre>
+        new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (ver URL relativas)
+```
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#constructors', 'URL.URL()')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                   | Estado               | Comentario          |
+| ---------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('URL', '#constructors', 'URL.URL()')}} | {{Spec2('URL')}} | Initial definition. |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<p>{{Compat("api.URL.URL")}}</p>
+{{Compat("api.URL.URL")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>La interfaz a la que pertenece: {{domxref("URL")}}.</li>
-</ul>
+- La interfaz a la que pertenece: {{domxref("URL")}}.

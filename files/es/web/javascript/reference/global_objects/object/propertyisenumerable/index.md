@@ -9,56 +9,57 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/propertyIsEnumerable
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>propertyIsEnumerable()</strong></code> regresa un Boleano indicando si la propiedad especificada es enumerable.</p>
+El método **`propertyIsEnumerable()`** regresa un Boleano indicando si la propiedad especificada es enumerable.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</code></pre>
+    obj.propertyIsEnumerable(prop)
 
-<h3 id="Parametros">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>Nombre de la propiedad a probar.</dd>
-</dl>
+- `prop`
+  - : Nombre de la propiedad a probar.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Todos los objetos tienen un método <code>propertyIsEnumerable</code>. Este método puede determinar si la propiedad especificada en el objeto puede ser enumerada por un ciclo {{jsxref("Statements/for...in", "for...in")}}, con la excepción de propiedades heredadas a través de prototype. Si el objeto no tiene la propiedad especificada, este método regresa un valor <code>false</code>.</p>
+Todos los objetos tienen un método `propertyIsEnumerable`. Este método puede determinar si la propiedad especificada en el objeto puede ser enumerada por un ciclo {{jsxref("Statements/for...in", "for...in")}}, con la excepción de propiedades heredadas a través de prototype. Si el objeto no tiene la propiedad especificada, este método regresa un valor `false`.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Uso_básico_de_propertyIsEnumerable">Uso básico de <code>propertyIsEnumerable</code></h3>
+### Uso básico de `propertyIsEnumerable`
 
-<p>El siguiente ejemplo muestra el uso de <code>propertyIsEnumerable</code> en objetos y arrays:</p>
+El siguiente ejemplo muestra el uso de `propertyIsEnumerable` en objetos y arrays:
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 var a = [];
 o.prop = 'es enumerable';
 a[0] = 'es enumerable';
 
 o.propertyIsEnumerable('prop');   // regresa true
 a.propertyIsEnumerable(0);        // regresa true
-</pre>
+```
 
-<h3 id="Definidas_por_usuario_vs_predefinidas">Definidas por usuario vs predefinidas</h3>
+### Definidas por usuario vs predefinidas
 
-<p>El siguiente ejemplo demuestra la enumerabilidad de las propiedades definidas por el usuario contra las predefinidas:</p>
+El siguiente ejemplo demuestra la enumerabilidad de las propiedades definidas por el usuario contra las predefinidas:
 
-<pre class="brush: js">var a = ['es enumerable'];
+```js
+var a = ['es enumerable'];
 
 a.propertyIsEnumerable(0);          // regresa true
 a.propertyIsEnumerable('length');   // regresa false
 
 Math.propertyIsEnumerable('random');   // regresa false
 this.propertyIsEnumerable('Math');     // regresa false
-</pre>
+```
 
-<h3 id="Directa_vs_heredadas">Directa vs  heredadas</h3>
+### Directa vs heredadas
 
-<pre class="brush: js">var a = [];
+```js
+var a = [];
 a.propertyIsEnumerable('constructor');         // regresa false
 
 function primerConstructor() {
@@ -91,48 +92,27 @@ o.propertyIsEnumerable('propiedad');              // regresa true
 o.propertyIsEnumerable('prototype');   // regresa false (como en JS 1.8.1/FF3.6)
 o.propertyIsEnumerable('constructor'); // regresa false
 o.propertyIsEnumerable('firstMethod'); // regresa false
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                               | Estatus                  | Comentario          |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('ES3')}}                                                                                                                     | {{Spec2('ES3')}}     | Definición inicial. |
+| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                                     | {{Spec2('ES5.1')}} |                     |
+| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ES6')}}     |                     |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
 
-<h2 id="Notas_específicas_para_Gecko">Notas específicas para Gecko</h2>
+## Notas específicas para Gecko
 
-<p>Al inicio de JavaScript 1.8.1 (in Firefox 3.6), <code>propertyIsEnumerable('prototype')</code> regresa <code>false</code> en lugar de <code>true</code>; esto hace que el resultado cumpla con la especificación de ECMAScript 5.</p>
+Al inicio de JavaScript 1.8.1 (in Firefox 3.6), `propertyIsEnumerable('prototype')` regresa `false` en lugar de `true`; esto hace que el resultado cumpla con la especificación de ECMAScript 5.
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Statements/for...in", "for...in")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.defineProperty()")}}

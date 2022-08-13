@@ -3,71 +3,64 @@ title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 translation_of: Web/API/Document/createDocumentFragment
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
+Crea un nuevo [`DocumentFragment`](/en-US/docs/DOM/DocumentFragment "DOM/DocumentFragment") vacio, dentro del cual un nodo del DOM puede ser adicionado para construir un nuevo arbol DOM fuera de pantalla.
 
+## Sintaxis
 
-<p>Crea un nuevo <code><a href="/en-US/docs/DOM/DocumentFragment" title="DOM/DocumentFragment">DocumentFragment</a></code> vacio, dentro del cual un nodo del DOM puede ser adicionado para construir un nuevo arbol DOM fuera de pantalla.</p>
+    var fragment = document.createDocumentFragment();
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+Se crea un objeto[ DocumentFragment](/es/docs/DOM/DocumentFragment "DOM/DocumentFragment") vacio, el cual queda listo para que pueda insertarseles nodos en el.
 
-<pre class="syntaxbox notranslate">var fragment = document.createDocumentFragment();
-</pre>
+## Notas de uso
 
-<p>Se crea un objeto<a href="/en-US/docs/DOM/DocumentFragment" title="DOM/DocumentFragment"> DocumentFragment</a> vacio, el cual queda listo para que pueda insertarseles nodos en el.</p>
+[`DocumentFragment`](/es/docs/DOM/DocumentFragment "DOM/DocumentFragment") son Nodos del DOM que nunca forman parte del arbol DOM. El caso de uso mas comun es crear un _document fragment_, agregar elementos al _document fragment_ y luego agregar dicho _document fragment_ al arbol del DOM. En el arbol del DOM, el _document fragment_ es remplazado por todos sus hijos.
 
-<h2 id="Notas_de_uso">Notas de uso</h2>
+Dado que el _document fragment_ es generado en memoria y no como parte del arbol del DOM, agregar elementos al mismo no causan [reflow](http://code.google.com/speed/articles/reflow.html) (computo de la posicion y geometria de los elementos) en la pagina. Como consecuencia, usar _document fragments_ usualmente resultan en [mejor performance](http://ejohn.org/blog/dom-documentfragments/).
 
-<p><a href="/en-US/docs/DOM/DocumentFragment" title="DOM/DocumentFragment"><code>DocumentFragment</code></a> son Nodos del DOM que nunca forman parte del arbol DOM. El caso de uso mas comun es crear un <em>document fragment</em>, agregar elementos al <em>document fragment</em> y luego agregar dicho <em>document fragment</em> al arbol del DOM. En el arbol del DOM, el <em>document fragment</em> es remplazado por todos sus hijos.</p>
+Tambien puede utilizarse el constructor {{domxref("documentFragment")}} para crear un nuevo fragmento:
 
-<p>Dado que el <em>document fragment </em>es generado en memoria y no como parte del arbol del DOM, agregar elementos al mismo no causan <a href="http://code.google.com/speed/articles/reflow.html">reflow</a> (computo de la posicion y geometria de los elementos) en la pagina. Como consecuencia, usar <em>document fragments</em> usualmente resultan en <a href="http://ejohn.org/blog/dom-documentfragments/">mejor performance</a>.</p>
+    let fragment = new DocumentFragment();
 
-<p>Tambien puede utilizarse el constructor {{domxref("documentFragment")}} para crear un nuevo fragmento:</p>
+## Ejemplo
 
-<pre class="syntaxbox notranslate">let fragment = new DocumentFragment();</pre>
+Este ejemplo crea una lista de los principales navegadores web en un _DocumentFragment_, y luego adiciona el nuevo subarbol DOM al document para ser mostrado.
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+HTML
 
-<p>Este ejemplo crea una lista de los principales navegadores web en un <em>DocumentFragment</em>, y luego adiciona el nuevo subarbol DOM al document para ser mostrado.</p>
+    <ul id="ul">
+    </ul>
 
-<p>HTML</p>
+JavaScript
 
-<pre class="notranslate">&lt;ul id="ul"&gt;
-&lt;/ul&gt;</pre>
+    var element  = document.getElementById('ul'); // assuming ul exists
+    var fragment = document.createDocumentFragment();
+    var browsers = ['Firefox', 'Chrome', 'Opera',
+        'Safari', 'Internet Explorer'];
 
-<p>JavaScript</p>
+    browsers.forEach(function(browser) {
+        var li = document.createElement('li');
+        li.textContent = browser;
+        fragment.appendChild(li);
+    });
 
-<pre class="notranslate">var element  = document.getElementById('ul'); // assuming ul exists
-var fragment = document.createDocumentFragment();
-var browsers = ['Firefox', 'Chrome', 'Opera',
-    'Safari', 'Internet Explorer'];
+    element.appendChild(fragment);
 
-browsers.forEach(function(browser) {
-    var li = document.createElement('li');
-    li.textContent = browser;
-    fragment.appendChild(li);
-});
+Resultado
 
-element.appendChild(fragment);</pre>
+{{EmbedLiveSample("Example", 600, 140)}}
 
-<p>Resultado</p>
-
-<p>{{EmbedLiveSample("Example", 600, 140)}}</p>
-
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.Document.createDocumentFragment")}}
 
-<h2 id="Specification" name="Specification">Especificaciónes</h2>
+## Especificaciónes
 
-<ul>
- <li>DOM Level 2: <a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-35CB04B5">createDocumentFragment</a></li>
- <li>DOM Level 3: <a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-35CB04B5">createDocumentFragment</a></li>
-</ul>
+- DOM Level 2: [createDocumentFragment](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-35CB04B5)
+- DOM Level 3: [createDocumentFragment](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-35CB04B5)
 
-<h2 id="See_also" name="See_also">Vea También</h2>
+## Vea También
 
-<ul>
- <li>{{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}</li>
- <li>{{domxref("documentFragment")}}</li>
-</ul>
+- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
+- {{domxref("documentFragment")}}

@@ -10,36 +10,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isSealed
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>Object.isSealed()</strong></code> si el objeto está sellado.</p>
+El método **`Object.isSealed()`** si el objeto está sellado.
 
-<div>{{EmbedInteractiveExample("pages/js/object-issealed.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-issealed.html")}}
 
+## Syntax
 
+    Object.isSealed(obj)
 
-<h2 id="Syntax">Syntax</h2>
+### Parámetros
 
-<pre class="syntaxbox"><code>Object.isSealed(<var>obj</var>)</code></pre>
+- `obj`
+  - : El objeto que debe ser verificado.
 
-<h3 id="Parámetros">Parámetros</h3>
+### Valor devuelto
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>El objeto que debe ser verificado.</dd>
-</dl>
+Un {{jsxref("Boolean")}} indicando si el objeto dado está sellado.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+## Descripción
 
-<p>Un {{jsxref("Boolean")}} indicando si el objeto dado está sellado.</p>
+Devuelve `true` si el objeto está sellado, de lo contrario devuelve `false`. Un objeto está sellado si no es {{jsxref("Object.isExtensible", "extensible", "", 1)}} y si todas sus propiedades no se pueden configurar y por lo tanto no removibles (pero no necesariamente no modificables).
 
-<h2 id="Descripción">Descripción</h2>
+## Ejemplos
 
-<p>Devuelve <code>true</code> si el objeto está sellado, de lo contrario devuelve <code>false</code>. Un objeto está sellado si no es {{jsxref("Object.isExtensible", "extensible", "", 1)}} y si todas sus propiedades no se pueden configurar y por lo tanto no removibles (pero no necesariamente no modificables).</p>
-
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<pre class="brush: js">// Los objetos no están sellados por defecto
+```js
+// Los objetos no están sellados por defecto
 var empty = {};
 Object.isSealed(empty); // === false
 
@@ -82,60 +79,36 @@ Object.isFrozen(s2); // === false
 var s3 = Object.seal({ get p() { return 0; } });
 Object.isFrozen(s3); // === true
 // (solo la configurabilidad es importante para las propiedades de acceso)
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">En ES5, si el argumento de este método no es un objeto (primitivo), entonces causará un </span></font></code>{{jsxref("TypeError")}}. En ES2015, un argumento que no sea un objeto será tratado como si fuera un objeto sellado ordinario, simplemente devuelve <code>true</code>.</p>
+`En ES5, si el argumento de este método no es un objeto (primitivo), entonces causará un `{{jsxref("TypeError")}}. En ES2015, un argumento que no sea un objeto será tratado como si fuera un objeto sellado ordinario, simplemente devuelve `true`.
 
-<pre class="brush: js">Object.isSealed(1);
+```js
+Object.isSealed(1);
 // TypeError: 1 no es un objeto (ES5 code)
 
 Object.isSealed(1);
 // true                          (ES2015 code)
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.11', 'Object.isSealed')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definición inicial. Implementada en JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.issealed', 'Object.isSealed')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.issealed', 'Object.isSealed')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment                                               |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.11', 'Object.isSealed')}}             | {{Spec2('ES5.1')}}     | Definición inicial. Implementada en JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.issealed', 'Object.isSealed')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-object.issealed', 'Object.isSealed')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("javascript.builtins.Object.isSealed")}}
 
+## See also
 
-<p>{{Compat("javascript.builtins.Object.isSealed")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
-</ul>
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}

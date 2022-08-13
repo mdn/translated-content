@@ -10,26 +10,24 @@ tags:
 translation_of: Web/CSS/:-webkit-autofill
 original_slug: Web/CSS/:-webkit-autofill
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La  <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase </a>CSS <code>:-webkit-autofill</code> CSS selecciona un elemento {{HTMLElement("input")}} cuando su valor es rellenado automáticamente por el navegador.</p>
+La [pseudo-clase ](/es/docs/Web/CSS/Pseudo-classes)CSS `:-webkit-autofill` CSS selecciona un elemento {{HTMLElement("input")}} cuando su valor es rellenado automáticamente por el navegador.
 
-<p class="note"><strong>Nota:</strong> La hoja de estilos por defecto de muchos navegadores usan <code>!important</code> en sus declaraciones de estilo  <code>:-webkit-autofill</code> , haciendo que no puedan ser sobrescritos por páginas que no usen trucos JavaScript.</p>
+> **Nota:** La hoja de estilos por defecto de muchos navegadores usan `!important` en sus declaraciones de estilo `:-webkit-autofill` , haciendo que no puedan ser sobrescritos por páginas que no usen trucos JavaScript.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación.</p>
+No es parte de ninguna especificación.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.autofill")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li><a href="https://code.google.com/p/chromium/issues/detail?id=46543">Asunto Chromium 46543: El realce con fondo amarillo de los campos input de texto con valor automático no puede ser deshabilitados.</a></li>
- <li><a href="https://bugs.webkit.org/show_bug.cgi?id=66032">WebKit bug 66032: Permite a los autores sobrescribir los colores de los campos que se rellenan automáticamente.</a></li>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=740979">Mozilla bug 740979: implementar <code>la pseudo-clase :-moz-autofill</code> en elemento input con un valor de relleno automático.</a></li>
-</ul>
+- [Asunto Chromium 46543: El realce con fondo amarillo de los campos input de texto con valor automático no puede ser deshabilitados.](https://code.google.com/p/chromium/issues/detail?id=46543)
+- [WebKit bug 66032: Permite a los autores sobrescribir los colores de los campos que se rellenan automáticamente.](https://bugs.webkit.org/show_bug.cgi?id=66032)
+- [Mozilla bug 740979: implementar `la pseudo-clase :-moz-autofill` en elemento input con un valor de relleno automático.](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)

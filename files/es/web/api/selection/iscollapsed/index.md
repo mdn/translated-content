@@ -5,21 +5,18 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/isCollapsed
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Devuelve un valor boleano verdadero si los puntos de inicio y fin de la selección están en la misma posición.</p>
+Devuelve un valor boleano verdadero si los puntos de inicio y fin de la selección están en la misma posición.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><i>sel</i>.isCollapsed
-</pre>
+    sel.isCollapsed
 
-<h3 id="Notas" name="Notas">Notas</h3>
+### Notas
 
-<p>Incluso hasta una selección colapsada/plegada puede tener un rangeCount mayor que 0. <code>sel.getRangeAt(0)</code> puede retornar un rango que también esté colapsado/plegado.</p>
+Incluso hasta una selección colapsada/plegada puede tener un rangeCount mayor que 0. `sel.getRangeAt(0)` puede retornar un rango que también esté colapsado/plegado.
 
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "en": "en/DOM/Selection/isCollapsed", "it": "it/DOM/Selection/isCollapsed", "pl": "pl/DOM/Selection/isCollapsed" } ) }}</p>
+{{ languages( { "en": "en/DOM/Selection/isCollapsed", "it": "it/DOM/Selection/isCollapsed", "pl": "pl/DOM/Selection/isCollapsed" } ) }}

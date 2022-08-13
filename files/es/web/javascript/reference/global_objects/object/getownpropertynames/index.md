@@ -4,23 +4,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyNames
 ---
-<div>
- {{JSRef("Global_Objects", "Object")}}</div>
-<h2 id="Summary" name="Summary">Resumen</h2>
-<p>El método <code><strong>Object.getOwnPropertyNames()</strong></code> devuelve un array con todas las propiedades (numerables o no) encontradas en un objeto dado.</p>
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
-<pre class="syntaxbox"><code>Object.getOwnPropertyNames(<em>obj</em>)</code></pre>
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
-<dl>
- <dt>
-  obj</dt>
- <dd>
-  El objeto cuyas propiedades directas, numerables <em>y no-numerables</em>, serán devueltas.</dd>
-</dl>
-<h2 id="Description" name="Description">Descripción</h2>
-<p><code>Object.getOwnPropertyNames</code> devuelve un array cuyos elementos son <em>strings </em>correspondientes a cada una de las propiedades encontradas directamente en <code>obj</code>. El orden de las propiedades numerables en el array coincide con el expuesto para <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in loop</a> (o para {{jsxref("Object.keys")}}) con respecto a las propiedades del object. El orden de las propiedades no-numerables del array, y de éstas respecto a las numerables, no está definido.</p>
-<h2 id="Ejemplos">Ejemplos</h2>
-<pre class="brush: js">var arr = ["a", "b", "c"];
+{{JSRef("Global_Objects", "Object")}}
+
+## Resumen
+
+El método **`Object.getOwnPropertyNames()`** devuelve un array con todas las propiedades (numerables o no) encontradas en un objeto dado.
+
+## Sintaxis
+
+    Object.getOwnPropertyNames(obj)
+
+### Parámetros
+
+- obj
+  - : El objeto cuyas propiedades directas, numerables _y no-numerables_, serán devueltas.
+
+## Descripción
+
+`Object.getOwnPropertyNames` devuelve un array cuyos elementos son _strings_ correspondientes a cada una de las propiedades encontradas directamente en `obj`. El orden de las propiedades numerables en el array coincide con el expuesto para [for...in loop](/es/docs/Web/JavaScript/Reference/Statements/for...in) (o para {{jsxref("Object.keys")}}) con respecto a las propiedades del object. El orden de las propiedades no-numerables del array, y de éstas respecto a las numerables, no está definido.
+
+## Ejemplos
+
+```js
+var arr = ["a", "b", "c"];
 print(Object.getOwnPropertyNames(arr).sort()); // imprime "0,1,2,length"
 
 // Objeto similar a Array
@@ -29,22 +35,26 @@ print(Object.getOwnPropertyNames(obj).sort()); // imprime "0,1,2"
 
 // Imprime nombres de variables y valores usando Array.forEach
 Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
-  print(val + " -&gt; " + obj[val]);
+  print(val + " -> " + obj[val]);
 });
 // imprime
-// 0 -&gt; a
-// 1 -&gt; b
-// 2 -&gt; c
+// 0 -> a
+// 1 -> b
+// 2 -> c
 
 // propiedad no-numerable
 var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; }, enumerable: false } });
 my_obj.foo = 1;
 
 print(Object.getOwnPropertyNames(my_obj).sort()); // imprime "foo, getFoo"
-</pre>
-<p>Si se quiere solo las propiedades numerables, ver {{jsxref("Object.keys")}} o usar un <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in loop</a> (aunque esto devolvería propiedades numerables no directas del <span style="line-height: 1.5;">objeto pertenecientes a la cadena de <em>prototype</em> a la que pertenezca, a menos que finalmente se filtre con hasOwnProperty()).</span></p>
-<p>Items de la cadena <em>prototype</em> no se listan:</p>
-<pre class="brush: js">function ParentClass () {
+```
+
+Si se quiere solo las propiedades numerables, ver {{jsxref("Object.keys")}} o usar un [for...in loop](/es/docs/Web/JavaScript/Reference/Statements/for...in) (aunque esto devolvería propiedades numerables no directas del objeto pertenecientes a la cadena de _prototype_ a la que pertenezca, a menos que finalmente se filtre con hasOwnProperty()).
+
+Items de la cadena _prototype_ no se listan:
+
+```js
+function ParentClass () {
 }
 ParentClass.prototype.inheritedMethod = function () {
 };
@@ -62,10 +72,14 @@ alert(
     new ChildClass() // ["prop", "method"]
   )
 )
-</pre>
-<h3 id="Get_Non-Enumerable_Only">Get Non-Enumerable Only</h3>
-<p>Aquí se usa la función Array.prototype.filter para quitar las <em>keys</em> numerables (obtenidas con Object.keys) de una lista con todas las <em>keys</em> (obtenida con Object.getOwnPropertynames) dejando solo las no-numerables.</p>
-<pre class="brush: js">var target = myObject;
+```
+
+### Get Non-Enumerable Only
+
+Aquí se usa la función Array.prototype.filter para quitar las _keys_ numerables (obtenidas con Object.keys) de una lista con todas las _keys_ (obtenida con Object.getOwnPropertynames) dejando solo las no-numerables.
+
+```js
+var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
 var nonenum_only = enum_and_nonenum.filter(function(key) {
@@ -79,38 +93,24 @@ var nonenum_only = enum_and_nonenum.filter(function(key) {
 });
 
 console.log(nonenum_only);
-</pre>
-<h2 id="Especificaciones">Especificaciones</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.4', 'Object.getOwnPropertyNames')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition.<br>
-    Implemented in JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Compatibilidad_con_Navegadores"> Compatibilidad con Navegadores</h2>
-<div>
+```
+
+## Especificaciones
+
+| Especificación                                                                                                   | Status                   | Comentario                                          |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.4', 'Object.getOwnPropertyNames')}}                     | {{Spec2('ES5.1')}} | Initial definition. Implemented in JavaScript 1.8.5 |
+| {{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}} | {{Spec2('ES6')}}     |                                                     |
+
+## Compatibilidad con Navegadores
+
 {{Compat("javascript.builtins.Object.getOwnPropertyNames")}}
 
-<h2 id="See_also" name="See_also">Ver también</h2>
-<ul>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties" title="Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.prototype.hasOwnProperty")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable")}}</li>
- <li>{{jsxref("Object.create")}}</li>
- <li>{{jsxref("Object.keys")}}</li>
- <li>{{jsxref("Array.forEach()")}}</li>
-</ul>
+## Ver también
+
+- [Enumerability and ownership of properties](/es/docs/Enumerability_and_ownership_of_properties "Enumerability_and_ownership_of_properties")
+- {{jsxref("Object.prototype.hasOwnProperty")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable")}}
+- {{jsxref("Object.create")}}
+- {{jsxref("Object.keys")}}
+- {{jsxref("Array.forEach()")}}

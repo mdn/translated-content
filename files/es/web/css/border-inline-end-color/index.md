@@ -3,47 +3,46 @@ title: border-inline-end-color
 slug: Web/CSS/border-inline-end-color
 translation_of: Web/CSS/border-inline-end-color
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propiedad de <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a>  <strong><code>border-inline-end-color</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> property defines the color of the logical inline-end border of an element, que se asigna al estilo de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-color")}} y {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}, y {{cssxref("border-right-color")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.</p>
+La propiedad de [CSS](/es/docs/Web/CSS "CSS") **`border-inline-end-color`** [CSS](/es/docs/Web/CSS "CSS") property defines the color of the logical inline-end border of an element, que se asigna al estilo de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-color")}} y {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}, y {{cssxref("border-right-color")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-inline-end-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-inline-end-color.html")}}
 
+## Sintaxis
 
-
-<h2 id="Sintaxis">Sintaxis</h2>
-
-<pre class="brush:css no-line-numbers">border-inline-end-color: rebeccapurple;
+```css
+border-inline-end-color: rebeccapurple;
 border-inline-end-color: #663399;
-</pre>
+```
 
-<p>Propiedades relacionadas son {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, y {{cssxref("border-inline-start-color")}}, que definen los otros colores del borde del elemento.</p>
+Propiedades relacionadas son {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, y {{cssxref("border-inline-start-color")}}, que definen los otros colores del borde del elemento.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>El color del borde. Mira {{cssxref("color")}}.</dd>
-</dl>
+- `<'color'>`
+  - : El color del borde. Mira {{cssxref("color")}}.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="Contenido_HTML">Contenido HTML</h3>
+### Contenido HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="Contenido_CSS">Contenido CSS</h3>
+### Contenido CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -53,38 +52,22 @@ border-inline-end-color: #663399;
   writing-mode: vertical-lr;
   border: 10px solid blue;
   border-inline-end-color: red;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Ejemplo", 140, 140)}}</p>
+{{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-<h2 id="Especificación">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-end-color", "border-inline-end-color")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                           | Estado                                           | Comentario          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-border-inline-end-color", "border-inline-end-color")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
+{{Compat("css.properties.border-inline-end-color")}}
 
+## Mira también
 
-<p>{{Compat("css.properties.border-inline-end-color")}}</p>
-
-<h2 id="Mira_también">Mira también</h2>
-
-<ul>
- <li>Esta propiedad se asigna a una de las propiedades del borde físico: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}.</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Esta propiedad se asigna a una de las propiedades del borde físico: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}.
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

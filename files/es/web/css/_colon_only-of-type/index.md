@@ -1,96 +1,75 @@
 ---
 title: ':only-of-type'
-slug: 'Web/CSS/:only-of-type'
+slug: Web/CSS/:only-of-type
 tags:
   - CSS
   - Diseño
   - Pseudo-clase
   - Referencia
   - Web
-translation_of: 'Web/CSS/:only-of-type'
+translation_of: Web/CSS/:only-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:only-of-type</code></strong> <a href="/es/docs/Web/CSS">CSS</a> representa un elemento que no tiene hermanos del mismo tipo.</p>
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** [CSS](/es/docs/Web/CSS) representa un elemento que no tiene hermanos del mismo tipo.
 
-<pre class="brush: css no-line-numbers">/* Selecciona cada &lt;p&gt;, pero solo si es el único */
-/* elemento &lt;p&gt; dentro de su padre */
+```css
+/* Selecciona cada <p>, pero solo si es el único */
+/* elemento <p> dentro de su padre */
 p:only-of-type {
   background-color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.</p>
-</div>
+> **Nota:** Como se definió originalmente, el elemento seleccionado tenía que tener un padre. Comenzando con el Nivel 4 de Selectores, esto ya no es necesario.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
 {{csssyntax}}
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;div&gt;Soy un `div` #1.&lt;/div&gt;
-  &lt;p&gt;Yo soy el único `p` entre mis hermanos.&lt;/p&gt;
-  &lt;div&gt;Soy un `div` #2.&lt;/div&gt;
-  &lt;div&gt;Soy un `div` #3.
-    &lt;i&gt;Yo soy el único hijo `i`.&lt;/i&gt;
-    &lt;em&gt;Soy un `em` #1.&lt;/em&gt;
-    &lt;em&gt;Soy un `em` #2.&lt;/em&gt;
-  &lt;/div&gt;
-&lt;/main&gt;
-</pre>
+```html
+<main>
+  <div>Soy un `div` #1.</div>
+  <p>Yo soy el único `p` entre mis hermanos.</p>
+  <div>Soy un `div` #2.</div>
+  <div>Soy un `div` #3.
+    <i>Yo soy el único hijo `i`.</i>
+    <em>Soy un `em` #1.</em>
+    <em>Soy un `em` #2.</em>
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">main :only-of-type {
+```css
+main :only-of-type {
   color: red;
 }
-</pre>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Ejemplo','100%',180)}}</p>
+{{EmbedLiveSample('Ejemplo','100%',180)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#only-of-type-pseudo', ':only-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Los elementos coincidentes no requieren tener un padre.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#only-of-type-pseudo', ':only-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Definición Inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                               | Comentarios                                             |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
+| {{SpecName('CSS3 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
+{{Compat("css.selectors.only-of-type")}}
 
+## Ver también
 
-<p>{{Compat("css.selectors.only-of-type")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{Cssxref(":only-child")}}</li>
- <li>{{Cssxref(":first-of-type")}}</li>
- <li>{{Cssxref(":last-of-type")}}</li>
- <li>{{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":only-child")}}
+- {{Cssxref(":first-of-type")}}
+- {{Cssxref(":last-of-type")}}
+- {{Cssxref(":nth-of-type")}}

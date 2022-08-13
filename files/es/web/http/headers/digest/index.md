@@ -11,73 +11,63 @@ tags:
 translation_of: Web/HTTP/Headers/Digest
 original_slug: Web/API/SubtleCrypto/encrypt
 ---
-<div>{{APIRef("Web Crypto API")}}</div>
+{{APIRef("Web Crypto API")}}
 
-<p>El método <code><strong>digest()</strong></code> de la interfaz {{domxref("SubtleCrypto")}} genera un digest de los datos proveidos. Un {{domxref("digest")}} es un valor corto de longitud fija derivado de alguna entrada de longitud variable. Los digest criptográficos deben mostrar resistencia a colisiones, lo que significa que es difícil encontrar dos entradas diferentes que tengan el mismo valor de digest.</p>
+El método **`digest()`** de la interfaz {{domxref("SubtleCrypto")}} genera un digest de los datos proveidos. Un {{domxref("digest")}} es un valor corto de longitud fija derivado de alguna entrada de longitud variable. Los digest criptográficos deben mostrar resistencia a colisiones, lo que significa que es difícil encontrar dos entradas diferentes que tengan el mismo valor de digest.
 
-<p>Toma como argumento un identificador para el algoritmo digest a utilizar y los datos a codificar. Devuelve un <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> que se completará con el digest.</p>
+Toma como argumento un identificador para el algoritmo digest a utilizar y los datos a codificar. Devuelve un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.") que se completará con el digest.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">const digest = <em>crypto</em><code>.subtle.digest(<em>algorithm</em>, <em>data</em>)</code>;
-</pre>
+    const digest = crypto.subtle.digest(algorithm, data);
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<ul>
- <li><em><code>algorithm</code></em> es un {{domxref("DOMString")}} definiendo la función hash a utilizar. Los valores admitidos son:
+- _`algorithm`_ es un {{domxref("DOMString")}} definiendo la función hash a utilizar. Los valores admitidos son:
 
-  <ul>
-   <li><code>SHA-1</code> (pero no debe utilizarse en aplicaciones criptográficas)</li>
-   <li><code>SHA-256</code></li>
-   <li><code>SHA-384</code></li>
-   <li><code>SHA-512</code></li>
-  </ul>
- </li>
- <li><em><code>data</code></em> es un {{jsxref("ArrayBuffer")}} o {{domxref("ArrayBufferView")}} que contiene los datos a ser digitalizados.</li>
-</ul>
+  - `SHA-1` (pero no debe utilizarse en aplicaciones criptográficas)
+  - `SHA-256`
+  - `SHA-384`
+  - `SHA-512`
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+- _`data`_ es un {{jsxref("ArrayBuffer")}} o {{domxref("ArrayBufferView")}} que contiene los datos a ser digitalizados.
 
-<ul>
- <li><code><em>digest</em></code> es un <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value."><code>Promise</code></a> que se completa con un <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer."><code>ArrayBuffer</code></a> conteniendo el digest.</li>
-</ul>
+### Valor de retorno
 
-<h2 id="Algoritmos_soportados">Algoritmos soportados</h2>
+- `digest` es un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.") que se completa con un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer "The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.") conteniendo el digest.
 
-<p>Los argoritmos digest, también conocidos como <a href="/en-US/docs/Glossary/Cryptographic_hash_function">funciones criptográficas hash</a>, transforman un bloque de datos arbitrariamente grande en una salida de tamaño fijo, normalmente mucho más corta que la entrada. Tienen una variedad de aplicaciones en criptografía.</p>
+## Algoritmos soportados
 
-<h3 id="SHA-1">SHA-1</h3>
+Los argoritmos digest, también conocidos como [funciones criptográficas hash](/es/docs/Glossary/Cryptographic_hash_function), transforman un bloque de datos arbitrariamente grande en una salida de tamaño fijo, normalmente mucho más corta que la entrada. Tienen una variedad de aplicaciones en criptografía.
 
-<p>Este algoritmo se especifica en <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, sección 6.1, y produce una salida de 160 bits de largo.</p>
+### SHA-1
 
-<div class="blockIndicator warning">
-<p><strong>Advertencia</strong>: Este algoritmo se considera ahora vulnerable y no debe utilizarse para aplicaciones criptográficas.</p>
-</div>
+Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.1, y produce una salida de 160 bits de largo.
 
-<h3 id="SHA-256">SHA-256</h3>
+> **Advertencia:** Este algoritmo se considera ahora vulnerable y no debe utilizarse para aplicaciones criptográficas.
 
-<p>Este algoritmo se especifica en <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, sección 6.2, y produce una salida de 256 bits de largo.</p>
+### SHA-256
 
-<h3 id="SHA-384">SHA-384</h3>
+Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.2, y produce una salida de 256 bits de largo.
 
-<p>Este algoritmo se especifica en <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, sección 6.5, y produce una salida de 384 bits de largo.</p>
+### SHA-384
 
-<h3 id="SHA-512">SHA-512</h3>
+Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.5, y produce una salida de 384 bits de largo.
 
-<p>Este algoritmo se especifica en <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, sección 6.4, y produce una salida de 512 bits de largo.</p>
+### SHA-512
 
-<div class="blockIndicator note">
-<p>Sugerencia: Si estás buscando aquí cómo crear un código de autenticación de mensajes "keyed-hash" (<a href="/en-US/docs/Glossary/HMAC">HMAC</a>), necesitas usar <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">SubtleCrypto.sign()</a> en su lugar.</p>
-</div>
+Este algoritmo se especifica en [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), sección 6.4, y produce una salida de 512 bits de largo.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+> **Nota:** Sugerencia: Si estás buscando aquí cómo crear un código de autenticación de mensajes "keyed-hash" ([HMAC](/es/docs/Glossary/HMAC)), necesitas usar [SubtleCrypto.sign()](/es/docs/Web/API/SubtleCrypto/sign#HMAC) en su lugar.
 
-<h3 id="Ejemplo_básico">Ejemplo básico</h3>
+## Ejemplos
 
-<p>Este ejemplo codifica un mensaje, luego calcula su digest SHA-256 y muestra la longitud del mismo:</p>
+### Ejemplo básico
 
-<pre class="brush: js">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+Este ejemplo codifica un mensaje, luego calcula su digest SHA-256 y muestra la longitud del mismo:
+
+```js
+const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
@@ -88,56 +78,40 @@ async function digestMessage(message) {
 
 const digestBuffer = await digestMessage(text);
 console.log(digestBuffer.byteLength);
-</pre>
+```
 
-<h3 id="Convirtiendo_un_digest_a_una_cadena_hexadecimal">Convirtiendo un digest a una cadena hexadecimal</h3>
+### Convirtiendo un digest a una cadena hexadecimal
 
-<p>El resumen se devuelve como un <code>ArrayBuffer</code>, pero para la comparación y visualización los digests se representan a menudo como cadenas hexadecimales. Este ejemplo calcula un digest, y luego convierte el <code>ArrayBuffer</code> a un string hexadecimal:</p>
+El resumen se devuelve como un `ArrayBuffer`, pero para la comparación y visualización los digests se representan a menudo como cadenas hexadecimales. Este ejemplo calcula un digest, y luego convierte el `ArrayBuffer` a un string hexadecimal:
 
-<pre class="brush: js">const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+```js
+const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
 
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message);                           // encode as (utf-8) Uint8Array
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // hash the message
   const hashArray = Array.from(new Uint8Array(hashBuffer));                     // convert buffer to byte array
-  const hashHex = hashArray.map(b =&gt; b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
   return hashHex;
 }
 
 const digestHex = await digestMessage(text);
 console.log(digestHex);
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}}</td>
-   <td>{{Spec2('Web Crypto API')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                           | Estado                               | Comentario          |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("api.SubtleCrypto.digest")}}
 
+> **Nota:** En Chrome 60, se añadió una característica que deshabilita crypto.subtle para conexiones no TLS.
 
-<p>{{Compat("api.SubtleCrypto.digest")}}</p>
+## Ver también
 
-<div class="blockIndicator note">
-<p>En Chrome 60, se añadió una característica que deshabilita crypto.subtle para conexiones no TLS.</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features">Chromium especificación de origines seguro</a></li>
- <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf" rel="noopener">FIPS 180-4</a> especifica la familia de algoritmos de digest SHA.</li>
-</ul>
+- [Chromium especificación de origines seguro](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
+- [FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) especifica la familia de algoritmos de digest SHA.

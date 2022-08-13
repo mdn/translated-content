@@ -10,94 +10,72 @@ tags:
   - getImageData
 translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p> </p>
+El método CanvasRenderingContext2D.getImageData() de la API de Canvas 2D devuelve un objeto ImageData que representa los datos de píxeles subyacentes para el área del lienzo denotada por el rectángulo que comienza en (sx, sy) y tiene un ancho de sw y una altura de sh. Este método no se ve afectado por la matriz de transformación de la lona.
 
-<p>El método CanvasRenderingContext2D.getImageData() de la API de Canvas 2D devuelve un objeto ImageData que representa los datos de píxeles subyacentes para el área del lienzo denotada por el rectángulo que comienza en (sx, sy) y tiene un ancho de sw y una altura de sh. Este método no se ve afectado por la matriz de transformación de la lona.</p>
+Los píxeles fuera del área del lienzo están presentes como valores negros transparentes en los datos de imagen devueltos.
 
-<p>Los píxeles fuera del área del lienzo están presentes como valores negros transparentes en los datos de imagen devueltos.</p>
+## Sintaxis
 
-<p> </p>
+    ImageData ctx.getImageData(sx, sy, sw, sh);
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Parámetros
 
-<pre class="syntaxbox">ImageData <var><em>ctx</em>.getImageData(sx, sy, sw, sh);</var>
-</pre>
+- `sx`
+  - : La coordenada 'x' de la esquina superior izquierda del rectángulo del que se extraerán los datos de imagen.
+- `sy`
+  - : La coordenada 'y' de la esquina superior izquierda del rectángulo del que se extraerá el ImageData.
+- `sw`
+  - : El ancho del rectángulo del que se extraerán los datos de la imagen.
+- `sh`
+  - : La altura del rectángulo del que se extraerán los datos de la imagen.
 
-<h3 id="Parámetros">Parámetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>sx</code></dt>
- <dd>La coordenada 'x' de la esquina superior izquierda del rectángulo del que se extraerán los datos de imagen.</dd>
- <dt><code>sy</code></dt>
- <dd>La coordenada 'y' de la esquina superior izquierda del rectángulo del que se extraerá el ImageData.</dd>
- <dt><code>sw</code></dt>
- <dd>El ancho del rectángulo del que se extraerán los datos de la imagen.</dd>
- <dt><code>sh</code></dt>
- <dd>La altura del rectángulo del que se extraerán los datos de la imagen.</dd>
-</dl>
+An [`ImageData`](/es/docs/Web/API/ImageData "The ImageData interface represents the underlying pixel data of an area of a <canvas> element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData().") object containing the image data for the given rectangle of the canvas.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Errores cometidos
 
-<p>An <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData" title="The ImageData interface represents the underlying pixel data of an area of a &lt;canvas> element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData()."><code>ImageData</code></a> object containing the image data for the given rectangle of the canvas.</p>
+- IndexSizeError
+  - : Lanzado si cualquiera de los argumentos de anchura o altura es cero.
 
-<h3 id="Errores_cometidos">Errores cometidos</h3>
+## Ejemplos
 
-<dl>
- <dt>IndexSizeError</dt>
- <dd>Lanzado si cualquiera de los argumentos de anchura o altura es cero.</dd>
-</dl>
+### Usando el método getImageData
 
-<h2 id="Ejemplos">Ejemplos</h2>
+Esto es sólo un simple fragmento de código que utiliza el método getImageData. Para obtener más información, consulte [Manipulación de píxeles con Canvas](/es/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) y el objeto ImageData.
 
-<h3 id="Usando_el_método_getImageData">Usando el método getImageData</h3>
+#### HTML
 
-<p>Esto es sólo un simple fragmento de código que utiliza el método getImageData. Para obtener más información, consulte <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Manipulación de píxeles con Canvas</a> y el objeto ImageData.</p>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="HTML">HTML</h4>
+#### JavaScript
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
-
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 
 console.log(ctx.getImageData(50, 50, 100, 100));
 // ImageData { width: 100, height: 100, data: Uint8ClampedArray[40000] }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-getimagedata", "CanvasRenderingContext2D.getImageData")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                                           | Estado                           | Comentario |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-getimagedata", "CanvasRenderingContext2D.getImageData")}} | {{Spec2('HTML WHATWG')}} |            |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("api.CanvasRenderingContext2D.getImageData")}}
 
+## Véase también
 
-<p>{{Compat("api.CanvasRenderingContext2D.getImageData")}}</p>
-
-<h2 id="Véase_también">Véase también</h2>
-
-<ul>
- <li>La interfaz que lo define, {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("ImageData")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Manipulación de píxeles con Canvas</a></li>
-</ul>
+- La interfaz que lo define, {{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("ImageData")}}
+- [Manipulación de píxeles con Canvas](/es/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

@@ -9,77 +9,63 @@ tags:
   - encabezado
 translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El encabezado de respuesta HTTP <strong><code>X-XSS-Protection</code></strong> es una característica de Internet Explorer, Chrome y Safari que impide la carga de una página cuando detecta ataques del tipo Cross-Site ({{Glossary("XSS")}}). Esta protección ya no es necesaria en los navegadores modernos cuando el sitio implementa una fuerte {{HTTPHeader("Content-Security-Policy")}}  que deshabilita el uso de Javascript inline (<code>'unsafe-inline'</code>). Sin embargo da protección a los usuarios de navegadores más antiguos que no soportan  {{Glossary("CSP")}}</p>
+El encabezado de respuesta HTTP **`X-XSS-Protection`** es una característica de Internet Explorer, Chrome y Safari que impide la carga de una página cuando detecta ataques del tipo Cross-Site ({{Glossary("XSS")}}). Esta protección ya no es necesaria en los navegadores modernos cuando el sitio implementa una fuerte {{HTTPHeader("Content-Security-Policy")}} que deshabilita el uso de Javascript inline (`'unsafe-inline'`). Sin embargo da protección a los usuarios de navegadores más antiguos que no soportan {{Glossary("CSP")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Tipo de encabezado</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Nombre de encabezado prohibido")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
-</table>
+| Tipo de encabezado                                           | {{Glossary("Response header")}} |
+| ------------------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Nombre de encabezado prohibido")}} | no                                       |
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">X-XSS-Protection: 0
-X-XSS-Protection: 1
+    X-XSS-Protection: 0
+    X-XSS-Protection: 1
+    X-XSS-Protection: 1; mode=block
+    X-XSS-Protection: 1; report=<reporting-uri>
+
+- 0
+  - : Desativa el filtro XSS.
+- 1
+  - : Habilita el filtro XSS (generalmente está predeterminado en los navegadores). En caso de detección de un ataque cross-site scripting, el navegador sanitizará a página (eliminará las partes inseguras).
+- 1; mode=block
+  - : Habilita el filtrado XSS. En vez de sanitizar la página, el navegador evitará la visualización de la página en caso de que algún ataque sea detectado.
+- 1; report=\<reporting-URI> (Chromium solamente)
+  - : Habilita el filtro XSS. En caso de que algún ataque de cross-site scripting sea detectado, el navegador sanitizará la página e informará sobre la infracción. Utiliza la funcionalidad de la directiva CSP {{CSP("report-uri")}} para enviar um reporte.
+
+## Ejemplo
+
+Bloquea las páginas en las que se detecta un ataque XSS:
+
+```bash
 X-XSS-Protection: 1; mode=block
-X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
-</pre>
+```
 
-<dl>
- <dt>0</dt>
- <dd>Desativa el filtro XSS.</dd>
- <dt>1</dt>
- <dd>Habilita el filtro XSS (generalmente está predeterminado en los navegadores). En caso de detección de un ataque cross-site scripting, el navegador sanitizará a página (eliminará las partes inseguras).</dd>
- <dt>1; mode=block</dt>
- <dd>Habilita el filtrado XSS. En vez de sanitizar la página, el navegador evitará la visualización de la página en caso de que algún ataque sea detectado.</dd>
- <dt>1; report=&lt;reporting-URI&gt;  (Chromium solamente)</dt>
- <dd>Habilita el filtro XSS. En caso de que algún ataque de cross-site scripting sea detectado, el navegador sanitizará la página e informará sobre la infracción. Utiliza la funcionalidad de la directiva CSP {{CSP("report-uri")}} para enviar um reporte.</dd>
-</dl>
+PHP
 
-<h2 id="Ejemplo">Ejemplo</h2>
+```php
+header("X-XSS-Protection: 1; mode=block");
+```
 
-<p>Bloquea las páginas en las que se detecta un ataque XSS:</p>
+Apache (.htaccess)
 
-<p> </p>
-
-<pre class="brush: bash">X-XSS-Protection: 1; mode=block</pre>
-
-<p> </p>
-
-<p>PHP</p>
-
-<pre class="brush: php">header("X-XSS-Protection: 1; mode=block");</pre>
-
-<p>Apache (.htaccess)</p>
-
-<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
+```bash
+<IfModule mod_headers.c>
   Header set X-XSS-Protection "1; mode=block"
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No forma parte de ninguna especificación o borrador.</p>
+No forma parte de ninguna especificación o borrador.
 
-<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
+## Compatibilidad de los navegadores
 
-<p>{{Compat("http.headers.X-XSS-Protection")}}</p>
+{{Compat("http.headers.X-XSS-Protection")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/">Controlling the XSS Filter – Microsoft</a></li>
- <li><a href="https://www.virtuesecurity.com/blog/understanding-xss-auditor/">Understanding XSS Auditor – Virtue Security</a></li>
- <li>
-  <p><a href="http://blog.innerht.ml/the-misunderstood-x-xss-protection/">The misunderstood X-XSS-Protection – blog.innerht.ml</a></p>
- </li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [Controlling the XSS Filter – Microsoft](https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/)
+- [Understanding XSS Auditor – Virtue Security](https://www.virtuesecurity.com/blog/understanding-xss-auditor/)
+- [The misunderstood X-XSS-Protection – blog.innerht.ml](http://blog.innerht.ml/the-misunderstood-x-xss-protection/)

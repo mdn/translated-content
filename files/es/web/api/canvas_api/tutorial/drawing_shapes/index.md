@@ -12,48 +12,43 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
-<div class="summary">
-<p>Ahora que hemos preparado nuestro <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage">entorno canvas</a>, podemos entrar en detalles de como dibujar en el canvas. Al final de este artículo, habrás aprendido  como dibujar rectángulos, triángulos, líneas, arcos y curvas, dándote familiaridad con algunas figuras básicas. Trabajar con rutas es esencial cuando dibujamos objetos sobre el canvas y veremos como se puede hacer eso.</p>
-</div>
+Ahora que hemos preparado nuestro [entorno canvas](/es/docs/Web/API/Canvas_API/Tutorial/Basic_usage), podemos entrar en detalles de como dibujar en el canvas. Al final de este artículo, habrás aprendido como dibujar rectángulos, triángulos, líneas, arcos y curvas, dándote familiaridad con algunas figuras básicas. Trabajar con rutas es esencial cuando dibujamos objetos sobre el canvas y veremos como se puede hacer eso.
 
-<h2 id="La_cuadrícula">La cuadrícula</h2>
+## La cuadrícula
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Antes de que podamos empezar a dibujar, necesitamos hablar sobre la cuadrícula del canvas o el <strong>espacio de coordenadas</strong>. La plantilla HTML de la página anterior tenía un elemento canvas con un 'height' y un 'width' de 150 píxeles. A la derecha, puedes ver este canvas con la cuadrícula por defecto superpuesta. Normalmente una unidad en la cuadrícula corresponde a un píxel en el elemento canvas. El origen de esta cuadrícula está posicionado en la esquina superior izquierda (coordenada (0,0)). Todos los elementos estan posicionados de manera relativa a este punto, así que la posición de la esquina superior izquierda del cuadrado azul es de 'x' pixeles desde la izquierda y 'y' pixeles desde arriba (coordenada (x,y)). Mas tarde en este tutorial veremos como trasladar el punto de origen a una posicion diferente, girar la cuadrícula e incluso darle una escala diferente. Por ahora nos dedicaremos a lo mas común.</p>
+![](https://mdn.mozillademos.org/files/224/Canvas_default_grid.png)Antes de que podamos empezar a dibujar, necesitamos hablar sobre la cuadrícula del canvas o el **espacio de coordenadas**. La plantilla HTML de la página anterior tenía un elemento canvas con un 'height' y un 'width' de 150 píxeles. A la derecha, puedes ver este canvas con la cuadrícula por defecto superpuesta. Normalmente una unidad en la cuadrícula corresponde a un píxel en el elemento canvas. El origen de esta cuadrícula está posicionado en la esquina superior izquierda (coordenada (0,0)). Todos los elementos estan posicionados de manera relativa a este punto, así que la posición de la esquina superior izquierda del cuadrado azul es de 'x' pixeles desde la izquierda y 'y' pixeles desde arriba (coordenada (x,y)). Mas tarde en este tutorial veremos como trasladar el punto de origen a una posicion diferente, girar la cuadrícula e incluso darle una escala diferente. Por ahora nos dedicaremos a lo mas común.
 
-<h2 id="Dibujando_rectángulos">Dibujando rectángulos</h2>
+## Dibujando rectángulos
 
-<p>A diferencia de <a href="/en-US/docs/SVG" rel="internal" title="en/SVG">SVG</a>, {{HTMLElement("canvas")}} solo soporta una forma primitiva: rectangulos. Todas las otras formas deben ser creadas por la combinación de uno o más trazos, listas de puntos conectados por líneas. Afortunadamente, tenemos una variedad de funciones para dibujar trazos  que hacen posible componer formas muy complejas.</p>
+A diferencia de [SVG](/es/docs/SVG "en/SVG"), {{HTMLElement("canvas")}} solo soporta una forma primitiva: rectangulos. Todas las otras formas deben ser creadas por la combinación de uno o más trazos, listas de puntos conectados por líneas. Afortunadamente, tenemos una variedad de funciones para dibujar trazos que hacen posible componer formas muy complejas.
 
-<div id="section_3">
-<p>Primero veamos el rectángulo. Aquí hay tres funciones que podemos usar en el canvas para dibujarlos:</p>
+Primero veamos el rectángulo. Aquí hay tres funciones que podemos usar en el canvas para dibujarlos:
 
-<dl>
- <dt><code>fillRect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>)</code></dt>
- <dd>Dibuja un rectángulo relleno.</dd>
- <dt><code>strokeRect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>)</code></dt>
- <dd>Dibuja el contorno de un rectángulo.</dd>
- <dt><code>clearRect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>)</code></dt>
- <dd>Borra un área rectangular especificada, dejándola totalmente transparente.</dd>
-</dl>
+- `fillRect(x, y, width, height)`
+  - : Dibuja un rectángulo relleno.
+- `strokeRect(x, y, width, height)`
+  - : Dibuja el contorno de un rectángulo.
+- `clearRect(x, y, width, height)`
+  - : Borra un área rectangular especificada, dejándola totalmente transparente.
 
-<p>Cada una de estas tres funciones toma los mismos parámetros. X e Y especifican la posición del canvas (en relación con el origen) desde la esquina superior izquierda del rectángulo. Tambien especifica los parámetros de anchura y altura que proporcionan el tamaño del rectángulo.</p>
+Cada una de estas tres funciones toma los mismos parámetros. X e Y especifican la posición del canvas (en relación con el origen) desde la esquina superior izquierda del rectángulo. Tambien especifica los parámetros de anchura y altura que proporcionan el tamaño del rectángulo.
 
-<p>A continuación se muestra la función draw() de la página anterior, pero ahora haciendo uso de estas tres funciones.</p>
+A continuación se muestra la función draw() de la página anterior, pero ahora haciendo uso de estas tres funciones.
 
-<h3 id="Ejemplo_de_forma_rectangular">Ejemplo de forma rectangular</h3>
+### Ejemplo de forma rectangular
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -62,66 +57,63 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
     ctx.clearRect(45,45,60,60);
     ctx.strokeRect(50,50,50,50);
   }
-}</pre>
+}
+```
 
-<p>El resultado de este ejemplo se muestra a continuación.</p>
+El resultado de este ejemplo se muestra a continuación.
 
-<p>{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}</p>
+{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}
 
-<p>La función fillRect() dibuja un cuadrado grande negro de 100 píxeles en cada lado. La función clearRect() luego borra un cuadrado de 60x60 píxeles del centro, y luego strokeRect() es llamado para crear un contorno rectangular de 50x50 píxeles dentro del cuadrado borrado.</p>
+La función fillRect() dibuja un cuadrado grande negro de 100 píxeles en cada lado. La función clearRect() luego borra un cuadrado de 60x60 píxeles del centro, y luego strokeRect() es llamado para crear un contorno rectangular de 50x50 píxeles dentro del cuadrado borrado.
 
-<p>En las próximas páginas veremos dos métodos alternativos para clearRect(), y también veremos cómo cambiar el color y el trazo de diferentes formas.</p>
+En las próximas páginas veremos dos métodos alternativos para clearRect(), y también veremos cómo cambiar el color y el trazo de diferentes formas.
 
-<p>A diferencia de las funciones de trazo que veremos en la próxima sección, las tres funciones del rectángulo dibujan inmediatamente en el canvas.</p>
+A diferencia de las funciones de trazo que veremos en la próxima sección, las tres funciones del rectángulo dibujan inmediatamente en el canvas.
 
-<h2 id="Dibujando_trazos">Dibujando trazos</h2>
+## Dibujando trazos
 
-<p>Crear formas mediante trazos requiere algunos pasos adicionales.</p>
+Crear formas mediante trazos requiere algunos pasos adicionales.
 
-<ol>
- <li>Primero, se crea el trazo.</li>
- <li>A continuación, se usan <a href="/es/docs/Web/API/CanvasRenderingContext2D#Paths">comandos de dibujo</a> para dibujar dentro del trazo.</li>
- <li>Después, se cierra el trazo.</li>
- <li>Una vez el trazo ha sido creado, se le puede dar contorno o relleno para renderizarlo.</li>
-</ol>
+1.  Primero, se crea el trazo.
+2.  A continuación, se usan [comandos de dibujo](/es/docs/Web/API/CanvasRenderingContext2D#Paths) para dibujar dentro del trazo.
+3.  Después, se cierra el trazo.
+4.  Una vez el trazo ha sido creado, se le puede dar contorno o relleno para renderizarlo.
 
-<p>Estas son las funciones que se usan para llevar a cabo estos pasos:</p>
+Estas son las funciones que se usan para llevar a cabo estos pasos:
 
-<dl>
- <dt><code>beginPath()</code></dt>
- <dd>Crea un nuevo trazo. Una vez creado, los comandos de dibujo futuros son aplicados dentro del trazo y usados para construir el nuevo trazo hacia arriba.</dd>
- <dt><code>closePath()</code></dt>
- <dd>Cierra el trazo de tal forma que los comandos de dibujo futuros son, una vez más redireccionados al contexto.</dd>
- <dt><code>stroke()</code></dt>
- <dd>Dibuja el contorno de la forma.</dd>
- <dt><code>fill()</code></dt>
- <dd>Dibuja una forma solida rellenando el área del trazo.</dd>
-</dl>
+- `beginPath()`
+  - : Crea un nuevo trazo. Una vez creado, los comandos de dibujo futuros son aplicados dentro del trazo y usados para construir el nuevo trazo hacia arriba.
+- `closePath()`
+  - : Cierra el trazo de tal forma que los comandos de dibujo futuros son, una vez más redireccionados al contexto.
+- `stroke()`
+  - : Dibuja el contorno de la forma.
+- `fill()`
+  - : Dibuja una forma solida rellenando el área del trazo.
 
-<p>El primer paso para crear un trazo es llamar la función <code>beginPath()</code>. Internamente, los trazos son guardados como una lista de subtrazos (lineas, arcos, etc) los cuales juntos crean una forma. Todo tiempo que sea llamado este método la lista es reseteada y podemos empezar a dibujar nuevas formas.</p>
+El primer paso para crear un trazo es llamar la función `beginPath()`. Internamente, los trazos son guardados como una lista de subtrazos (lineas, arcos, etc) los cuales juntos crean una forma. Todo tiempo que sea llamado este método la lista es reseteada y podemos empezar a dibujar nuevas formas.
 
-<div class="note"><strong>Nota:</strong> Cuando el trazo actual este vacio, como aparece inmediatamente despues de llamar la función <code>beginPath()</code>, o en un canvas nuevo, el primer comando para la construcción del trazo es siempre tratada como un <code>moveTo()</code>, independientemente de cual es el trazo actual. Por esta razón casi siempre querrás específicamente setear tu posición de inicio despues de resetear un trazo.</div>
+> **Nota:** Cuando el trazo actual este vacio, como aparece inmediatamente despues de llamar la función `beginPath()`, o en un canvas nuevo, el primer comando para la construcción del trazo es siempre tratada como un `moveTo()`, independientemente de cual es el trazo actual. Por esta razón casi siempre querrás específicamente setear tu posición de inicio despues de resetear un trazo.
 
-<p>El segundo paso es llamar los métodos que específican los trazos a crear. Los veremos en seguida.</p>
+El segundo paso es llamar los métodos que específican los trazos a crear. Los veremos en seguida.
 
-<p>El tercero, y un paso opcional, es llamar a la función <code>closePath()</code>. Este método trata de cerrar la forma dibujando una linea recta desde el punto actual al inicio. Si la forma ya ha sido cerrada o hay solamente un punto en la lista, la función hace nada.</p>
+El tercero, y un paso opcional, es llamar a la función `closePath()`. Este método trata de cerrar la forma dibujando una linea recta desde el punto actual al inicio. Si la forma ya ha sido cerrada o hay solamente un punto en la lista, la función hace nada.
 
-<div class="note"><strong>Nota:</strong> Cuando llamas a la función <code>fill()</code>, cualquier forma abierta es cerrada automaticamente, de tal forma que no tendrás que llamar a la función <code>closePath()</code>. Este no es el caso cuando llamas a la función <code>stroke()</code>.</div>
+> **Nota:** Cuando llamas a la función `fill()`, cualquier forma abierta es cerrada automaticamente, de tal forma que no tendrás que llamar a la función `closePath()`. Este no es el caso cuando llamas a la función `stroke()`.
 
-<h3 id="Dibujando_un_triangulo">Dibujando un triangulo</h3>
+### Dibujando un triangulo
 
-<p>Por ejemplo, el código para dibujar un triangulo luciría como el siguiente:</p>
+Por ejemplo, el código para dibujar un triangulo luciría como el siguiente:
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -134,35 +126,33 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
     ctx.fill();
   }
 }
-</pre>
+```
 
-<p>El resultado lucirá así:</p>
+El resultado lucirá así:
 
-<p>{{EmbedLiveSample("Drawing_a_triangle", 160, 160)}}</p>
+{{EmbedLiveSample("Drawing_a_triangle", 160, 160)}}
 
-<h3 id="Moviendo_la_pluma">Moviendo la pluma</h3>
+### Moviendo la pluma
 
-<p>Una función muy útil, la cual realmente no dibuja algo pero convierte parte de la lista de trazos descrita arriba, es la función <code>moveTo()</code>. Puedes, probablemente, pensar mejor de esta como levantar el lápiz o la pluma de un punto en un pedazo de papel y ponerlo en el siguiente punto.</p>
+Una función muy útil, la cual realmente no dibuja algo pero convierte parte de la lista de trazos descrita arriba, es la función `moveTo()`. Puedes, probablemente, pensar mejor de esta como levantar el lápiz o la pluma de un punto en un pedazo de papel y ponerlo en el siguiente punto.
 
-<dl>
- <dt><code>moveTo(<em>x</em>, <em>y</em>)</code></dt>
- <dd>Mueve la pluma a las coordenadas específicadas por <code>x</code> e <code>y</code>.</dd>
-</dl>
+- `moveTo(x, y)`
+  - : Mueve la pluma a las coordenadas específicadas por `x` e `y`.
 
-<p>Cuando el canvas es inicializado ó la función <code>beginPath()</code> es llamada, querrás usar la función <code>moveTo()</code> para colocar el punto de inicio en alguna otra parte. Podríamos usar <code>moveTo()</code> para dibujar trazos sin conectar. Toma un vistazo a la cara sonriente de abajo. He marcado los lugares donde use el método <code>moveTo()</code> (las líneas rojas).</p>
+Cuando el canvas es inicializado ó la función `beginPath()` es llamada, querrás usar la función `moveTo()` para colocar el punto de inicio en alguna otra parte. Podríamos usar `moveTo()` para dibujar trazos sin conectar. Toma un vistazo a la cara sonriente de abajo. He marcado los lugares donde use el método `moveTo()` (las líneas rojas).
 
-<p>Para intentar esto por tí mismo, puedes usar el pequeño código de abajo. Solo pégalo dentro de la función <code>draw()</code> que vimos antes.</p>
+Para intentar esto por tí mismo, puedes usar el pequeño código de abajo. Solo pégalo dentro de la función `draw()` que vimos antes.
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -178,41 +168,37 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<p>El resultado luce así:</p>
+El resultado luce así:
 
-<p>{{EmbedLiveSample("Moving_the_pen", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}</p>
+{{EmbedLiveSample("Moving_the_pen", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}
 
-<p>Si quisieras ver las líneas conectadas, puedes remover las líneas de código que llaman <code>moveTo()</code>.</p>
+Si quisieras ver las líneas conectadas, puedes remover las líneas de código que llaman `moveTo()`.
 
-<div class="note">
-<p><strong>Nota:</strong> Para aprender más sobre la función <code>arc()</code>, vea los <a href="#arcs">Arcs</a> a continuación.</p>
-</div>
+> **Nota:** Para aprender más sobre la función `arc()`, vea los [Arcs](#arcs) a continuación.
 
-<h3 id="Líneas">Líneas</h3>
+### Líneas
 
-<p>Para dibujar lineas rectas usa el método <code>lineTo()</code>.</p>
+Para dibujar lineas rectas usa el método `lineTo()`.
 
-<dl>
- <dt><code>lineTo(<em>x</em>, <em>y</em>)</code></dt>
- <dd>Dibuja una línea desde la posición actual del dibujo a la posición específicada por <code>x</code> e <code>y</code>.</dd>
-</dl>
+- `lineTo(x, y)`
+  - : Dibuja una línea desde la posición actual del dibujo a la posición específicada por `x` e `y`.
 
-<p>Este método toma dos argumentos <code>x</code> e <code>y</code>, los cuales son las coordenadas del punto final de la linea. El punto de inicio es dependiente de los trazos previamente dibujados, donde el punto final del trazo anterior es el punto inicial para el siguiente, etc. El punto de inicio también puede ser cambiado usando el método <code>moveTo()</code>.</p>
+Este método toma dos argumentos `x` e `y`, los cuales son las coordenadas del punto final de la linea. El punto de inicio es dependiente de los trazos previamente dibujados, donde el punto final del trazo anterior es el punto inicial para el siguiente, etc. El punto de inicio también puede ser cambiado usando el método `moveTo()`.
 
-<p>El ejemplo siguiente dibuja dos triángulos, uno rellenado y el otro contorneado.</p>
+El ejemplo siguiente dibuja dos triángulos, uno rellenado y el otro contorneado.
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -233,53 +219,49 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<p>Esto comienza llamando a <code>beginPath()</code> para empezar una nueva forma. Entonces usamos el método <code>moveTo()</code> para mover el punto de inicio a la posición deseada. Debajo de esto dos líneas son dibujadas lo cual pinta dos lados del triángulo.</p>
+Esto comienza llamando a `beginPath()` para empezar una nueva forma. Entonces usamos el método `moveTo()` para mover el punto de inicio a la posición deseada. Debajo de esto dos líneas son dibujadas lo cual pinta dos lados del triángulo.
 
-<p>{{EmbedLiveSample("Lines", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}</p>
+{{EmbedLiveSample("Lines", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}
 
-<p>Te darás cuenta de la diferencia entre el triángulo rellenado y el contorneado. Esto es, como se menciona arriba, porque las formas son automáticamente cerradas cuando un trazo es rellenado, pero no cuando esta contorneado. Si sacamos el <code>closePath()</code> para el triángulo contorneado, solamente dos líneas serian dibujadas, no un triángulo completo.</p>
+Te darás cuenta de la diferencia entre el triángulo rellenado y el contorneado. Esto es, como se menciona arriba, porque las formas son automáticamente cerradas cuando un trazo es rellenado, pero no cuando esta contorneado. Si sacamos el `closePath()` para el triángulo contorneado, solamente dos líneas serian dibujadas, no un triángulo completo.
 
-<h3 id="Arcos">Arcos</h3>
+### Arcos
 
-<p>Para dibujar arcos o circulos usamos el método <code>arc()</code>. También puedes usar <code>arcTo()</code>, pero su implementación es un poco menos confiable, así que no lo cubriremos aquí.</p>
+Para dibujar arcos o circulos usamos el método `arc()`. También puedes usar `arcTo()`, pero su implementación es un poco menos confiable, así que no lo cubriremos aquí.
 
-<dl>
- <dt><code>arc(<em>x</em>, <em>y</em>, <em>radius</em>, <em>startAngle</em>, <em>endAngle</em>, <em>anticlockwise</em>)</code></dt>
- <dd>Dibuja un arco.</dd>
-</dl>
+- `arc(x, y, radius, startAngle, endAngle, anticlockwise)`
+  - : Dibuja un arco.
 
-<p>Este método toma cinco parámetros: <code>x</code> e <code>y</code> son las coordenadas del centro del círculo en el cual el arco debería ser dibujado. <code>radius</code> se explica por sí solo. Los parámetros <code>startAngle</code> y <code>endAngle</code> definen el punto de inicio y punto final del arco en radianes a lo largo de la curva del círculo. Estos son medidos desde el eje x. El parámetro <code>anticlockwise</code> es un valor Booleano el cual cuando es verdadero (<code>true</code>) dibuja el arco al contrario de las manecillas del reloj, de lo contrario el arco es dibujado al sentido de las manecillas del reloj.</p>
+Este método toma cinco parámetros: `x` e `y` son las coordenadas del centro del círculo en el cual el arco debería ser dibujado. `radius` se explica por sí solo. Los parámetros `startAngle` y `endAngle` definen el punto de inicio y punto final del arco en radianes a lo largo de la curva del círculo. Estos son medidos desde el eje x. El parámetro `anticlockwise` es un valor Booleano el cual cuando es verdadero (`true`) dibuja el arco al contrario de las manecillas del reloj, de lo contrario el arco es dibujado al sentido de las manecillas del reloj.
 
-<div class="note">
-<p><strong>Nota</strong>: Los ángulos en la función del arco (<code>arc</code>) son medidos en radianes, no en grados. Para convertir grados a radianes puedes usar la siguiente expresión en Javascript: <code>radians = (Math.PI/180)*degrees</code>.</p>
-</div>
+> **Nota:** Los ángulos en la función del arco (`arc`) son medidos en radianes, no en grados. Para convertir grados a radianes puedes usar la siguiente expresión en Javascript: `radians = (Math.PI/180)*degrees`.
 
-<p>El siguiente ejemplo es un poco más complejo que otros que hemos visto arriba. Esto dibuja 12 diferentes arcos, todos con diferentes ángulos y rellenos.</p>
+El siguiente ejemplo es un poco más complejo que otros que hemos visto arriba. Esto dibuja 12 diferentes arcos, todos con diferentes ángulos y rellenos.
 
-<p>Las dos sentencias <code>for</code> son para iterar a través de las filas y columnas de los arcos. Para cada arco, empezamos un nuevo trazo llamando <code>beginPath()</code>. En el código, cada uno de los parámetros para el arco estan en una variable para su entendimiento, pero no es necesario esto en la vida real.</p>
+Las dos sentencias `for` son para iterar a través de las filas y columnas de los arcos. Para cada arco, empezamos un nuevo trazo llamando `beginPath()`. En el código, cada uno de los parámetros para el arco estan en una variable para su entendimiento, pero no es necesario esto en la vida real.
 
-<p>Las coordenadas <code>x</code> e <code>y</code> deberían ser suficientemente claras. <code>radius</code> y <code>startAngle</code> estan arreglados. El <code>endAngle</code> inicia en 180 grados (la mitad de un círculo) en la primera columna y es incrementado por pasos de 90 grados, culminando en un círculo completo en la última columna.</p>
+Las coordenadas `x` e `y` deberían ser suficientemente claras. `radius` y `startAngle` estan arreglados. El `endAngle` inicia en 180 grados (la mitad de un círculo) en la primera columna y es incrementado por pasos de 90 grados, culminando en un círculo completo en la última columna.
 
-<p>El parámetro <code>clockwise</code> resulta, en la primera y tercera fila siendo dibujado como un arco al sentido de las manecillas de reloj y la segunda y cuarta fila como arcos al contrario de las manecillas de reloj. Finalmente, la estructura <code>if</code> hace los arcos contorneados a la mitad desde arriba y los arcos hacia abajorellenados a la mitad.</p>
+El parámetro `clockwise` resulta, en la primera y tercera fila siendo dibujado como un arco al sentido de las manecillas de reloj y la segunda y cuarta fila como arcos al contrario de las manecillas de reloj. Finalmente, la estructura `if` hace los arcos contorneados a la mitad desde arriba y los arcos hacia abajorellenados a la mitad.
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="200"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
 
-    for(var i=0;i&lt;4;i++){
-      for(var j=0;j&lt;3;j++){
+    for(var i=0;i<4;i++){
+      for(var j=0;j<3;j++){
         ctx.beginPath();
         var x              = 25+j*50;               // Coordenada x
         var y              = 25+i*50;               // Coordenada y
@@ -290,7 +272,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
 
         ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
-        if (i&gt;1){
+        if (i>1){
           ctx.fill();
         } else {
           ctx.stroke();
@@ -299,42 +281,41 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
     }
   }
 }
-</pre>
+```
+
 {{EmbedLiveSample("Arcs", 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png")}}
 
-<h3 id="Curvas_Bezier_curvas_cuadráticas">Curvas Bezier curvas cuadráticas</h3>
+### Curvas Bezier curvas cuadráticas
 
-<p>El siguiente tipo de trazos disponibles son las  <a class="external" href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve" rel="external">curvas Bézier</a>, en sus dos variantes, cúbicas y cuadráticas. Son usadas generalmente para dibujar complejas formas orgánicas.</p>
+El siguiente tipo de trazos disponibles son las [curvas Bézier](http://en.wikipedia.org/wiki/B%C3%A9zier_curve), en sus dos variantes, cúbicas y cuadráticas. Son usadas generalmente para dibujar complejas formas orgánicas.
 
-<dl>
- <dt><code>quadraticCurveTo(cp1x, cp1y, x, y)</code></dt>
- <dd><span id="result_box" lang="es"><span>Dibuja una curva cuadrática de Bézier desde la posición actual de la pluma hasta el punto final especificado por <code>x</code> e <code>y</code>, utilizando el punto de control especificado por <code>cp1x</code> y <code>cp1y</code>.</span></span></dd>
- <dt><code>bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)</code></dt>
- <dd>Dibuja una curva cúbica de Bézier desde la posición actual de la pluma hasta el punto final especificado por <code>x</code> e <code>y</code>, utilizando los puntos de control especificados por (<code>cp1x</code>, <code>cp1y</code>) y (<code>cp2x</code>, <code>cp2y</code>).</dd>
-</dl>
+- `quadraticCurveTo(cp1x, cp1y, x, y)`
+  - : Dibuja una curva cuadrática de Bézier desde la posición actual de la pluma hasta el punto final especificado por `x` e `y`, utilizando el punto de control especificado por `cp1x` y `cp1y`.
+- `bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)`
+  - : Dibuja una curva cúbica de Bézier desde la posición actual de la pluma hasta el punto final especificado por `x` e `y`, utilizando los puntos de control especificados por (`cp1x`, `cp1y`) y (`cp2x`, `cp2y`).
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/223/Canvas_curves.png" style="float: right; height: 190px; width: 190px;">La diferencia entre estos puede describirse mejor utilizando la imagen de la derecha. Una curva cuadrática de Bézier tiene un punto inicial y un punto final (puntos azules) y un solo <strong>punto de control</strong> (indicado por el punto rojo), mientras que una curva cúbica de Bézier utiliza dos puntos de control.</p>
+![](https://mdn.mozillademos.org/files/223/Canvas_curves.png)La diferencia entre estos puede describirse mejor utilizando la imagen de la derecha. Una curva cuadrática de Bézier tiene un punto inicial y un punto final (puntos azules) y un solo **punto de control** (indicado por el punto rojo), mientras que una curva cúbica de Bézier utiliza dos puntos de control.
 
-<p>Los parámetros <code>x</code> e <code>y</code> de ambos métodos son las coordenadas del punto final. <code>cp1x</code> y <code>cp1y</code> son las coordenadas del primer punto de control, y <code>cp2x</code> y <code>cp2y</code> son las coordenadas del segundo punto de control.</p>
+Los parámetros `x` e `y` de ambos métodos son las coordenadas del punto final. `cp1x` y `cp1y` son las coordenadas del primer punto de control, y `cp2x` y `cp2y` son las coordenadas del segundo punto de control.
 
-<p>El uso de curvas cuadráticas y cúbicas Bézier puede ser bastante difícil, ya que a diferencia del software de dibujo vectorial como Adobe Illustrator, no tenemos respuesta visual directa en cuanto a lo que estamos haciendo. Esto hace bastante difícil dibujar formas complejas. En el siguiente ejemplo, vamos a dibujar algunas formas orgánicas simples, pero si tienes el tiempo y, sobre todo, la paciencia, se pueden crear formas mucho más complejas.</p>
+El uso de curvas cuadráticas y cúbicas Bézier puede ser bastante difícil, ya que a diferencia del software de dibujo vectorial como Adobe Illustrator, no tenemos respuesta visual directa en cuanto a lo que estamos haciendo. Esto hace bastante difícil dibujar formas complejas. En el siguiente ejemplo, vamos a dibujar algunas formas orgánicas simples, pero si tienes el tiempo y, sobre todo, la paciencia, se pueden crear formas mucho más complejas.
 
-<p>No hay nada muy difícil en estos ejemplos. En ambos casos vemos una sucesión de curvas que se dibujan que finalmente dan lugar a una forma completa.</p>
+No hay nada muy difícil en estos ejemplos. En ambos casos vemos una sucesión de curvas que se dibujan que finalmente dan lugar a una forma completa.
 
-<h4 id="Curvas_de_Bezier_cuadraticas">Curvas de Bezier cuadraticas</h4>
+#### Curvas de Bezier cuadraticas
 
-<p>Este ejemplo usa multiples curvas cuadraticas de Bézier para renderizar un globo de voz.</p>
+Este ejemplo usa multiples curvas cuadraticas de Bézier para renderizar un globo de voz.
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -351,24 +332,24 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/243/Canvas_quadratic.png")}}</p>
+{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/243/Canvas_quadratic.png")}}
 
-<h4 id="Curvas_cúbicas_Bezier">Curvas cúbicas Bezier</h4>
+#### Curvas cúbicas Bezier
 
-<p>Este ejemplo dibuja un corazon usanco curvas cúbicas de Bézier.</p>
+Este ejemplo dibuja un corazon usanco curvas cúbicas de Bézier.
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -385,35 +366,33 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
     ctx.fill();
   }
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}</p>
+{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}
 
-<h3 id="Rectangles">Rectangles</h3>
+### Rectangles
 
-<p>In addition to the three methods we saw in <a href="#drawing_rectangles">Drawing rectangles</a>, which draw rectangular shapes directly to the canvas, there's also the <code>rect()</code> method, which adds a rectangular path to a currently open path.</p>
+In addition to the three methods we saw in [Drawing rectangles](#drawing_rectangles), which draw rectangular shapes directly to the canvas, there's also the `rect()` method, which adds a rectangular path to a currently open path.
 
-<dl>
- <dt><code>rect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>)</code></dt>
- <dd>Draws a rectangle whose top-left corner is specified by (<code>x</code>, <code>y</code>) with the specified <code>width</code> and <code>height</code>.</dd>
-</dl>
+- `rect(x, y, width, height)`
+  - : Draws a rectangle whose top-left corner is specified by (`x`, `y`) with the specified `width` and `height`.
 
-<p>When this method is executed, the <code>moveTo()</code> method is automatically called with the parameters (0,0). In other words, the current pen position is automatically reset to the default coordinates.</p>
+When this method is executed, the `moveTo()` method is automatically called with the parameters (0,0). In other words, the current pen position is automatically reset to the default coordinates.
 
-<h3 id="Making_combinations">Making combinations</h3>
+### Making combinations
 
-<p>So far, each example on this page has used only one type of path function per shape. However, there's no limitation to the number or types of paths you can use to create a shape. So in this final example, let's combine all of the path functions to make a set of very famous game characters.</p>
+So far, each example on this page has used only one type of path function per shape. However, there's no limitation to the number or types of paths you can use to create a shape. So in this final example, let's combine all of the path functions to make a set of very famous game characters.
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -430,15 +409,15 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Dibujando_formas
     ctx.lineTo(31,37);
     ctx.fill();
 
-    for(var i=0;i&lt;8;i++){
+    for(var i=0;i<8;i++){
       ctx.fillRect(51+i*16,35,4,4);
     }
 
-    for(i=0;i&lt;6;i++){
+    for(i=0;i<6;i++){
       ctx.fillRect(115,51+i*16,4,4);
     }
 
-    for(i=0;i&lt;8;i++){
+    for(i=0;i<8;i++){
       ctx.fillRect(51+i*16,99,4,4);
     }
 
@@ -496,19 +475,14 @@ function roundedRect(ctx,x,y,width,height,radius){
   ctx.quadraticCurveTo(x,y,x,y+radius);
   ctx.stroke();
 }
-</pre>
+```
 
-<div id="section_18">
-<p>The resulting image looks like this:</p>
+The resulting image looks like this:
 
-<p>{{EmbedLiveSample("Making_combinations", 160, 160)}}</p>
+{{EmbedLiveSample("Making_combinations", 160, 160)}}
 
-<p>We won't go over this in detail, since it's actually surprisingly simple. The most important things to note are the use of the <code>fillStyle</code> property on the drawing context, and the use of a utility function (in this case <code>roundedRect()</code>). Using utility functions for bits of drawing you do often can be very helpful and reduce the amount of code you need, as well as its complexity.</p>
+We won't go over this in detail, since it's actually surprisingly simple. The most important things to note are the use of the `fillStyle` property on the drawing context, and the use of a utility function (in this case `roundedRect()`). Using utility functions for bits of drawing you do often can be very helpful and reduce the amount of code you need, as well as its complexity.
 
-<p>We'll take another look at <code>fillStyle</code>, in more detail, later in this tutorial. Here, all we're doing is using it to change the fill color for paths from the default color of black to white, and then back again.</p>
+We'll take another look at `fillStyle`, in more detail, later in this tutorial. Here, all we're doing is using it to change the fill color for paths from the default color of black to white, and then back again.
 
-<p>{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_usage", "Web/Guide/HTML/Canvas_tutorial/Using_images")}}</p>
-</div>
-</div>
-
-<p> </p>
+{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_usage", "Web/Guide/HTML/Canvas_tutorial/Using_images")}}

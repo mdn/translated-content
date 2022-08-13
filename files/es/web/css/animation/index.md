@@ -9,70 +9,52 @@ tags:
   - Reference
 translation_of: Web/CSS/animation
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <code>animation</code> de <a href="/es/CSS" title="CSS">CSS</a> es una <a href="/en/CSS/Shorthand_properties" title="Shorthand properties">propiedad abreviada (shorthand property) </a>para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.</p>
+La propiedad `animation` de [CSS](/es/CSS "CSS") es una [propiedad abreviada (shorthand property) ](/en/CSS/Shorthand_properties "Shorthand properties")para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.
 
-<p>La <a href="/es/docs/CSS/Transiciones_de_CSS#Propiedades_que_pueden_ser_animadas" title="en/CSS/CSS_transitions#Properties_that_can_be_animated">lista de propiedades CSS que pueden ser animadas </a>está disponible; cabe señalar que estas son las mismas propiedades soportadas por <a href="/es/docs/CSS/Transiciones_de_CSS" title="en/CSS/CSS_transitions">CSS transitions</a>.</p>
+La [lista de propiedades CSS que pueden ser animadas ](/es/docs/CSS/Transiciones_de_CSS#Propiedades_que_pueden_ser_animadas "en/CSS/CSS_transitions#Properties_that_can_be_animated")está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/CSS/Transiciones_de_CSS "en/CSS/CSS_transitions").
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval syntaxbox">Formal grammar:  [ &lt;'animation-name'&gt; || &lt;'animation-duration'&gt; || <a href="/en/CSS/timing-function" title="en/CSS/timing-function">&lt;'animation-timing-function'&gt;</a> || &lt;'animation-delay'&gt; ||
-                   &lt;'animation-iteration-count'&gt; || &lt;'animation-direction'&gt; || &lt;'animation-fill-mode'&gt; ]
-                 [, [&lt;'animation-name'&gt; || &lt;'animation-duration'&gt; || <a href="/en/CSS/timing-function" title="en/CSS/timing-function">&lt;'animation-timing-function'&gt;</a> || &lt;'animation-delay'&gt; ||
-                     &lt;'animation-iteration-count'&gt; || &lt;'animation-direction'&gt; || &lt;'animation-fill-mode'&gt;] ]*
-</pre>
+    Formal grammar:  [ <'animation-name'> || <'animation-duration'> || <'animation-timing-function'> || <'animation-delay'> ||
+                       <'animation-iteration-count'> || <'animation-direction'> || <'animation-fill-mode'> ]
+                     [, [<'animation-name'> || <'animation-duration'> || <'animation-timing-function'> || <'animation-delay'> ||
+                         <'animation-iteration-count'> || <'animation-direction'> || <'animation-fill-mode'>] ]*
 
-<h2 id="Ejemplos"><nobr>Ejemplos</nobr></h2>
+## Ejemplos
 
-<p>Consulte <a href="/en/CSS/CSS_animations" title="en/CSS/CSS_animations">CSS animations</a> para ver los ejemplos.</p>
+Consulte [CSS animations](/en/CSS/CSS_animations "en/CSS/CSS_animations") para ver los ejemplos.
 
-<h2 id="Sobre_Accesibilidad">Sobre Accesibilidad</h2>
+## Sobre Accesibilidad
 
-<p>Las animaciones titilantes e intermitentes pueden causar dificultades a las personas con discapacidades cognitivas como Trastorno por Déficit de Atención con Hiperactividad (ADHD) además de causar ataques a personas con cinestosis, epilepsia, migranias o <span class="short_text" id="result_box" lang="es"><span>síndrome de sensibilidad escotópica</span></span>.</p>
+Las animaciones titilantes e intermitentes pueden causar dificultades a las personas con discapacidades cognitivas como Trastorno por Déficit de Atención con Hiperactividad (ADHD) además de causar ataques a personas con cinestosis, epilepsia, migranias o síndrome de sensibilidad escotópica.
 
-<p>Por favor, considerá ofrecer un mecanismo para pausar o deshabilitar las animaciones, como utilizando <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">Reduced Motion Media Query.</a></p>
+Por favor, considerá ofrecer un mecanismo para pausar o deshabilitar las animaciones, como utilizando [Reduced Motion Media Query.](/es/docs/Web/CSS/@media/prefers-reduced-motion)
 
-<p>Para más información (en inglés):</p>
+Para más información (en inglés):
 
-<ul>
- <li><a href="https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity">Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article </a></li>
- <li><a href="https://css-tricks.com/introduction-reduced-motion-media-query/">An Introduction to the Reduced Motion Media Query | CSS-Tricks</a></li>
- <li><a href="https://webkit.org/blog/7551/responsive-design-for-motion/">Responsive Design for Motion | WebKit</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content">MDN Understanding WCAG, Guideline 2.2 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html">Understanding Success Criterion 2.2.2  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
+- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
+- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations', '#animation', 'animation') }}</td>
-   <td>{{ Spec2('CSS3 Animations') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                   | Estado                                   | Comentario |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
+| {{ SpecName('CSS3 Animations', '#animation', 'animation') }} | {{ Spec2('CSS3 Animations') }} |            |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility"><nobr>Compatibilidad con navegadores</nobr></h2>
+## Compatibilidad con navegadores
 
 {{Compat("css.properties.animation")}}
 
-<h2 id="Consulte_también"><nobr>Consulte también</nobr></h2>
+## Consulte también
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_animations" title="en/CSS/CSS_animations">Usando animaciones CSS</a></li>
- <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
-</ul>
+- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations "en/CSS/CSS_animations")
+- {{ domxref("AnimationEvent", "AnimationEvent") }}

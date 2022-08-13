@@ -3,105 +3,60 @@ title: Media queries
 slug: Web/CSS/Media_Queries
 translation_of: Web/CSS/Media_Queries
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Las <strong>consultas de medios</strong> le permiten adaptar su sitio o aplicación dependiendo de la presencia o el valor de varias características y parámetros del dispositivo.</p>
+Las **consultas de medios** le permiten adaptar su sitio o aplicación dependiendo de la presencia o el valor de varias características y parámetros del dispositivo.
 
-<p>Son un componente clave del <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Responsive">responsive design</a>. Por ejemplo, una consulta de medios puede reducir el tamaño de la fuente en dispositivos pequeños, aumentar el relleno entre párrafos cuando se ve una página en modo vertical, o aumentar el tamaño de los botones en las pantallas táctiles.</p>
+Son un componente clave del [responsive design](/es/docs/Web/Apps/Progressive/Responsive). Por ejemplo, una consulta de medios puede reducir el tamaño de la fuente en dispositivos pequeños, aumentar el relleno entre párrafos cuando se ve una página en modo vertical, o aumentar el tamaño de los botones en las pantallas táctiles.
 
-<p>En <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>, use la {{cssxref ("@ media")}} <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rule</a> para aplicar condicionalmente parte de una hoja de estilo en función del resultado de una consulta de medios. Use {{cssxref ("@ import")}} para aplicar condicionalmente una hoja de estilo completa.</p>
+En [CSS](/es/docs/Web/CSS), use la {{cssxref ("@ media")}} [at-rule](/es/docs/Web/CSS/At-rule) para aplicar condicionalmente parte de una hoja de estilo en función del resultado de una consulta de medios. Use {{cssxref ("@ import")}} para aplicar condicionalmente una hoja de estilo completa.
 
-<p> </p>
+### Consultas de medios en HTML
 
-<h3 id="Consultas_de_medios_en_HTML">Consultas de medios en HTML</h3>
+En [HTML](/es/docs/Web/HTML), las consultas de medios se pueden aplicar a varios elementos:
 
-<p>En <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, las consultas de medios se pueden aplicar a varios elementos:</p>
+En el atributo {{HTMLElement ("link")}} {{htmlattrxref ("media", "link")}} del elemento, definen los medios a los que se debe aplicar un recurso vinculado (normalmente CSS).
+En el atributo {{HTMLElement ("source")}} {{htmlattrxref ("media", "source")}} del elemento, definen los medios a los que se debe aplicar esa fuente. (Esto solo es válido dentro de los elementos {{HTMLElement ("picture")}}.)
+En el atributo {{HTMLElement ("style")}} del elemento {{htmlattrxref ("media", "style")}}, definen los medios a los que se debe aplicar el estilo.
 
-<p>     En el atributo {{HTMLElement ("link")}} {{htmlattrxref ("media", "link")}} del elemento, definen los medios a los que se debe aplicar un recurso vinculado (normalmente CSS).<br>
-      En el atributo {{HTMLElement ("source")}} {{htmlattrxref ("media", "source")}} del elemento, definen los medios a los que se debe aplicar esa fuente. (Esto solo es válido dentro de los elementos {{HTMLElement ("picture")}}.)<br>
-      En el atributo {{HTMLElement ("style")}} del elemento {{htmlattrxref ("media", "style")}}, definen los medios a los que se debe aplicar el estilo.</p>
+### Consultas de medios en JavaScript
 
-<p> </p>
+En [JavaScript ](/es/docs/Web/JavaScript)puede usar el método {{domxref ("Window.matchMedia ()")}} para probar la ventana contra una consulta de medios. También puede usar {{domxref ("MediaQueryList.addListener ()")}} para recibir notificaciones cada vez que cambie el estado de una consulta. Con esta funcionalidad, su sitio o aplicación puede responder a los cambios en la configuración, orientación o estado del dispositivo.
 
-<h3 id="Consultas_de_medios_en_JavaScript">Consultas de medios en JavaScript</h3>
+Puede obtener más información sobre el uso programático de consultas de medios en [Pruebas de consultas de medios.](/es/docs/Web/CSS/Media_Queries/Testing_media_queries)
 
-<p> </p>
+## Referencias
 
-<p>En <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript </a>puede usar el método {{domxref ("Window.matchMedia ()")}} para probar la ventana contra una consulta de medios. También puede usar {{domxref ("MediaQueryList.addListener ()")}} para recibir notificaciones cada vez que cambie el estado de una consulta. Con esta funcionalidad, su sitio o aplicación puede responder a los cambios en la configuración, orientación o estado del dispositivo.</p>
+### At-rules
 
-<p>Puede obtener más información sobre el uso programático de consultas de medios en <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Pruebas de consultas de medios.</a></p>
+- {{cssxref("@import")}}
+- {{cssxref("@media")}}
 
-<h2 id="Referencias">Referencias</h2>
+## Guides
 
-<h3 id="At-rules">At-rules</h3>
+- [Usando consultas de medios](/es/docs/Web/CSS/Media_Queries/Using_media_queries)
+  - : Presenta las consultas de los medios, su sintaxis y los operadores y las funciones de los medios que se utilizan para construir expresiones de consulta de los medios.
+- [Probando las consultas de medios programáticamente](/es/docs/Web/CSS/Media_Queries/Testing_media_queries)
+  - : Describe cómo usar las consultas de medios en su código de JavaScript para determinar el estado de un dispositivo, y para configurar escuchas que notifican su código cuando cambian los resultados de las consultas de medios (como cuando el usuario gira la pantalla o cambia el tamaño del navegador).
+- [Usando consultas de medios en accesibilidad](/es/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
+  - : Conozca cómo Media Queries puede ayudar a los usuarios a comprender mejor su sitio web.
 
-<div class="index">
-<ul>
- <li>{{cssxref("@import")}}</li>
- <li>{{cssxref("@media")}}</li>
-</ul>
-</div>
+## Especificaciones
 
-<h2 id="Guides">Guides</h2>
+| Especificación                                   | Estado                                   | Comentario         |
+| ------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS5 Media Queries')}}     | {{Spec2('CSS5 Media Queries')}} |                    |
+| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}} |                    |
+| {{SpecName('CSS4 Media Queries')}}     | {{Spec2('CSS4 Media Queries')}} |                    |
+| {{SpecName('CSS3 Media Queries')}}     | {{Spec2('CSS3 Media Queries')}} |                    |
+| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}                 | Initial definition |
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Usando consultas de medios</a></dt>
- <dd>Presenta las consultas de los medios, su sintaxis y los operadores y las funciones de los medios que se utilizan para construir expresiones de consulta de los medios.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Probando las consultas de medios programáticamente</a></dt>
- <dd>Describe cómo usar las consultas de medios en su código de JavaScript para determinar el estado de un dispositivo, y para configurar escuchas que notifican su código cuando cambian los resultados de las consultas de medios (como cuando el usuario gira la pantalla o cambia el tamaño del navegador).</dd>
- <dt><a href="/en-US/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility">Usando consultas de medios en accesibilidad</a></dt>
- <dd>Conozca cómo Media Queries puede ayudar a los usuarios a comprender mejor su sitio web.</dd>
-</dl>
+## Compatibilidades con navegadores
 
-<h2 id="Especificaciones">Especificaciones</h2>
+### @media rule
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries')}}</td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'media.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("css.at-rules.media")}}
 
-<h2 id="Compatibilidades_con_navegadores">Compatibilidades con navegadores</h2>
+## Ver también
 
-<h3 id="media_rule">@media rule</h3>
-
-
-
-<p>{{Compat("css.at-rules.media")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>Use {{cssxref ("@ apoya")}} para aplicar estilos que dependen del soporte del navegador para varias tecnologías CSS.</li>
-</ul>
+- Use {{cssxref ("@ apoya")}} para aplicar estilos que dependen del soporte del navegador para varias tecnologías CSS.

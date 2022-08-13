@@ -5,40 +5,39 @@ tags:
   - metodo
 translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>El método <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rotate()</code></strong> de la API Canvas 2D añade una rotación a la matriz de transformación.</p>
+El método **`CanvasRenderingContext2D`\*\***`.rotate()`\*\* de la API Canvas 2D añade una rotación a la matriz de transformación.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">void <em>ctx</em>.rotate(<em>angulo</em>);
-</pre>
+    void ctx.rotate(angulo);
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png" style="float: right;"></p>
+![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>angulo</code></dt>
- <dd>El ángulo de rotación en radianes, en sentido horario. Se puede usar <em><code>grado</code></em><code><code>*</code> Math.PI / 180</code> si se quiere calcular a partir de un valor de grado sexagesimal.</dd>
-</dl>
+- `angulo`
+  - : El ángulo de rotación en radianes, en sentido horario. Se puede usar _`grado`_`* Math.PI / 180` si se quiere calcular a partir de un valor de grado sexagesimal.
 
-<p>El centro de rotación es siempre el orígen del canvas. Para cambiar el centro de rotación hay que mover el canvas mediante el método {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.</p>
+El centro de rotación es siempre el orígen del canvas. Para cambiar el centro de rotación hay que mover el canvas mediante el método {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Rotando_una_figura">Rotando una figura</h3>
+### Rotando una figura
 
-<p>En este ejemplo se rota un rectangulo 45º. Nótese que el centro de rotación es la esquina superior izquierda del canvas y no un punto cualquiera relativo a alguna figura.</p>
+En este ejemplo se rota un rectangulo 45º. Nótese que el centro de rotación es la esquina superior izquierda del canvas y no un punto cualquiera relativo a alguna figura.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[14]">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // origen del punto de transformación
@@ -57,34 +56,34 @@ ctx.fillRect(100, 0, 80, 20);
 
 // se reinicia la matriz de transformación a la matriz identidad
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>El <span style="color: blue;">centro de rotación es azul</span>. El <span style="color: gray;">rectángulo no rotado es gris</span>, y el <span style="color: red;">rectángulo rotado es rojo</span>.</p>
+El centro de rotación es azul. El rectángulo no rotado es gris, y el rectángulo rotado es rojo.
 
-<p>{{ EmbedLiveSample('Rotating_a_shape', 700, 180) }}</p>
+{{ EmbedLiveSample('Rotating_a_shape', 700, 180) }}
 
-<h3 id="Rotando_una_figura_por_su_centro">Rotando una figura por su centro</h3>
+### Rotando una figura por su centro
 
-<p>Este ejemplo rota una figura alrededor del punto central de ésta. Para realizarlo se aplican estos pasos a la matriz de transformación:</p>
+Este ejemplo rota una figura alrededor del punto central de ésta. Para realizarlo se aplican estos pasos a la matriz de transformación:
 
-<ol>
- <li>Primero, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} mueve el orígen de la matriz hacia el centro de la figura.</li>
- <li><code>rotate()</code> rota la matriz la cantidad deseada.</li>
- <li>Finalmente, <code>translate()</code> mueve el origen de la matriz de nuevo a su punto inicial. Esto se realiza utilizando los valores del centro de coordenadas de la figura en dirección negativa.</li>
-</ol>
+1.  Primero, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} mueve el orígen de la matriz hacia el centro de la figura.
+2.  `rotate()` rota la matriz la cantidad deseada.
+3.  Finalmente, `translate()` mueve el origen de la matriz de nuevo a su punto inicial. Esto se realiza utilizando los valores del centro de coordenadas de la figura en dirección negativa.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>La figura es un rectángulo con su esquina en (80, 60), un ancho de 140 y un alto de 30. El centro de la coordenada horizontal está en  (80 + 140 / 2) = 150. Su centro en la coordenada vertical será  (60 + 30 / 2) = 75. Por tanto, el punto central está en (150, 75).</p>
+La figura es un rectángulo con su esquina en (80, 60), un ancho de 140 y un alto de 30. El centro de la coordenada horizontal está en (80 + 140 / 2) = 150. Su centro en la coordenada vertical será (60 + 30 / 2) = 75. Por tanto, el punto central está en (150, 75).
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // rectángulo sin rotar
@@ -99,39 +98,24 @@ ctx.translate(-150, -75);
 // rectángulo rotado
 ctx.fillStyle = 'red';
 ctx.fillRect(80, 60, 140, 30);
-</pre>
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>El <span style="color: gray;">rectángulo no rotado es gris</span>, y el <span style="color: red;">rectángulo rotado es rojo</span>.</p>
+El rectángulo no rotado es gris, y el rectángulo rotado es rojo.
 
-<p>{{ EmbedLiveSample('Rotating_a_shape_around_its_center', 700, 180) }}</p>
+{{ EmbedLiveSample('Rotating_a_shape_around_its_center', 700, 180) }}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rotate", "CanvasRenderingContext2D.rotate")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                           | Status                           | Comentarios |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rotate", "CanvasRenderingContext2D.rotate")}} | {{Spec2('HTML WHATWG')}} |             |
 
-<h2 id="Compatibilidad_con_exploradores">Compatibilidad con exploradores</h2>
+## Compatibilidad con exploradores
 
+{{Compat("api.CanvasRenderingContext2D.rotate")}}
 
+## Véase también
 
-<p>{{Compat("api.CanvasRenderingContext2D.rotate")}}</p>
-
-<h2 id="Véase_también">Véase también</h2>
-
-<ul>
- <li>La interface donde se define este método: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- La interface donde se define este método: {{domxref("CanvasRenderingContext2D")}}

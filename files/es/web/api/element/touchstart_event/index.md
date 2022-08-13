@@ -4,34 +4,30 @@ slug: Web/API/Element/touchstart_event
 translation_of: Web/API/GlobalEventHandlers/ontouchstart
 original_slug: Web/API/GlobalEventHandlers/ontouchstart
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento {{event("touchstart")}}.</p>
+Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento {{event("touchstart")}}.
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<div class="note">
-<p><strong>Nota:</strong> Este atributo <em>no</em> ha sido estandarizado formalmente. Está especificado en la especificación {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} y no en {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. Este atributo no está totalmente implementado.</p>
-</div>
+> **Nota:** Este atributo _no_ ha sido estandarizado formalmente. Está especificado en la especificación {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} y no en {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. Este atributo no está totalmente implementado.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval">var startHandler = cualquierElemento.ontouchstart;
-</pre>
+    var startHandler = cualquierElemento.ontouchstart;
 
-<h3 id="Return_Value" name="Return_Value">Valor devuelto</h3>
+### Valor devuelto
 
-<dl>
- <dt><code>startHandler</code></dt>
- <dd>El manejador del evento <code>touchstart</code> para el elemento <code>cualquierElemento</code>.</dd>
-</dl>
+- `startHandler`
+  - : El manejador del evento `touchstart` para el elemento `cualquierElemento`.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Este ejemplo muestra dos formas de utilizar <code>ontouchstart</code> para establecer un manejador de evento <code>touchstart</code>.</p>
+Este ejemplo muestra dos formas de utilizar `ontouchstart` para establecer un manejador de evento `touchstart`.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function startTouch(ev) {
  // Procesar el evento
 }
@@ -39,37 +35,24 @@ function init() {
  var el=document.getElementById("target1");
  el.ontouchstart = startTouch;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target1"&gt; Tócame ... &lt;/div&gt;
-&lt;div id="target2" ontouchstart="startTouch(event)"&gt; Tócame ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target1"> Tócame ... </div>
+<div id="target2" ontouchstart="startTouch(event)"> Tócame ... </div>
+</body>
+</html>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events 2','#widl-GlobalEventHandlers-ontouchstart')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Versión no estable.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                   | Estado                               | Comentario          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
+| {{SpecName('Touch Events 2','#widl-GlobalEventHandlers-ontouchstart')}} | {{Spec2('Touch Events 2')}} | Versión no estable. |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("api.GlobalEventHandlers.ontouchstart")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{ event("touchstart") }}</li>
-</ul>
+- {{ event("touchstart") }}

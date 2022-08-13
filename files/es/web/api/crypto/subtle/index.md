@@ -10,42 +10,27 @@ tags:
   - Web Crypto API
 translation_of: Web/API/Crypto/subtle
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p>La propiedad de sólo lectura <strong><code>Crypto.subtle</code></strong> retorna un objeto {{domxref("SubtleCrypto")}} permitiendo realizar operaciones criptográficas.</p>
+La propiedad de sólo lectura **`Crypto.subtle`** retorna un objeto {{domxref("SubtleCrypto")}} permitiendo realizar operaciones criptográficas.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre>var <em>crypto</em> = crypto.subtle;</pre>
+    var crypto = crypto.subtle;
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-Crypto', 'Crypto.subtle') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                                   | Comentario          |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
+| {{ SpecName('Web Crypto API', '#dfn-Crypto', 'Crypto.subtle') }} | {{ Spec2('Web Crypto API') }} | Definición inicial. |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
+{{Compat("api.Crypto.subtle")}}
 
+## Ver también
 
-<p>{{Compat("api.Crypto.subtle")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{domxref("Crypto")}}.</li>
- <li>{{domxref("SubtleCrypto")}}.</li>
- <li><a href="https://vibornoff.github.io/webcrypto-examples/index.html">Compatibility test page</a>.</li>
- <li><a href="https://github.com/vibornoff/webcrypto-shim">Shim for IE11 and Safari</a>.</li>
-</ul>
+- {{domxref("Crypto")}}.
+- {{domxref("SubtleCrypto")}}.
+- [Compatibility test page](https://vibornoff.github.io/webcrypto-examples/index.html).
+- [Shim for IE11 and Safari](https://github.com/vibornoff/webcrypto-shim).

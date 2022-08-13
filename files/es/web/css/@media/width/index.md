@@ -3,23 +3,26 @@ title: width
 slug: Web/CSS/@media/width
 translation_of: Web/CSS/@media/width
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>El <strong><code>width</code></strong> <a href="/en-US/docs/CSS">CSS</a> {{cssxref("@media")}} media caracteristica puede ser usada para aplicar estilos basados en el ancho  de el  {{glossary("viewport")}} (o la caja de la pagina, para <a href="/en-US/docs/Web/CSS/Paged_media">paged media</a>).</p>
+El **`width`** [CSS](/es/docs/CSS) {{cssxref("@media")}} media caracteristica puede ser usada para aplicar estilos basados en el ancho de el {{glossary("viewport")}} (o la caja de la pagina, para [paged media](/es/docs/Web/CSS/Paged_media)).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>La característica <code>width</code> es especificada como {{cssxref("&lt;length&gt;")}} valor que representa el ancho de la ventana gráfica. Es una función de rango, lo que significa que también puede usar el prefijo <strong><code>min-width</code></strong> and <code><strong>max-width</strong></code> variantes para consultar valores mínimos y máximos, respectivamente.</p>
+La característica `width` es especificada como {{cssxref("&lt;length&gt;")}} valor que representa el ancho de la ventana gráfica. Es una función de rango, lo que significa que también puede usar el prefijo **`min-width`** and **`max-width`** variantes para consultar valores mínimos y máximos, respectivamente.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Watch this element as you resize your viewport's width.&lt;/div&gt;</pre>
+```html
+<div>Watch this element as you resize your viewport's width.</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Exact width */
+```css
+/* Exact width */
 @media (width: 360px) {
   div {
     color: red;
@@ -39,36 +42,19 @@ translation_of: Web/CSS/@media/width
     border: 2px solid blue;
   }
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example','90%')}}</p>
+{{EmbedLiveSample('Example','90%')}}
 
-<h2 id="Specificaciones">Specificaciones</h2>
+## Specificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#width', 'width')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>The value can now be negative, in which case it computes to false.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#width', 'width')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Initial definition. The value must be nonnegative.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                            | Status                                   | Comment                                                            |
+| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------ |
+| {{SpecName('CSS4 Media Queries', '#width', 'width')}} | {{Spec2('CSS4 Media Queries')}} | The value can now be negative, in which case it computes to false. |
+| {{SpecName('CSS3 Media Queries', '#width', 'width')}} | {{Spec2('CSS3 Media Queries')}} | Initial definition. The value must be nonnegative.                 |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Navegadores Compatibles</h2>
+## Navegadores Compatibles
 
 {{Compat("css.at-rules.media.width")}}

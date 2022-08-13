@@ -10,69 +10,52 @@ tags:
   - metodo
 translation_of: Web/API/Document/createTextNode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Crea un nuevo nodo de texto. Este método puede ser usado para escapar caracteres HTML.</p>
+Crea un nuevo nodo de texto. Este método puede ser usado para escapar caracteres HTML.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <var>text</var> = document.createTextNode(<var>data</var>);
-</pre>
+    var text = document.createTextNode(data);
 
-<ul>
- <li><var>text</var> es un nodo Text.</li>
- <li><var>data</var> es una cadena de texto <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> que contiene los datos a poner en el nodo de texto.</li>
-</ul>
+- _text_ es un nodo Text.
+- _data_ es una cadena de texto [string](/es/docs/Web/JavaScript/Reference/Global_Objects/String) que contiene los datos a poner en el nodo de texto.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;createTextNode example&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>createTextNode example</title>
+<script>
 function addTextNode(text) {
   var newtext = document.createTextNode(text),
       p1 = document.getElementById("p1");
 
   p1.appendChild(newtext);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-  &lt;button onclick="addTextNode('YES! ');"&gt;YES!&lt;/button&gt;
-  &lt;button onclick="addTextNode('NO! ');"&gt;NO!&lt;/button&gt;
-  &lt;button onclick="addTextNode('WE CAN! ');"&gt;WE CAN!&lt;/button&gt;
+<body>
+  <button onclick="addTextNode('YES! ');">YES!</button>
+  <button onclick="addTextNode('NO! ');">NO!</button>
+  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
 
-  &lt;hr /&gt;
+  <hr />
 
-  &lt;p id="p1"&gt;First line of paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  <p id="p1">First line of paragraph.</p>
+</body>
+</html>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createtextnode', 'Document: createTextNode')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                       | Estado                           | Comentario |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('DOM WHATWG', '#dom-document-createtextnode', 'Document: createTextNode')}} | {{Spec2('DOM WHATWG')}} |            |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-
-
-<p>{{Compat("api.Document.createTextNode")}}</p>
+{{Compat("api.Document.createTextNode")}}

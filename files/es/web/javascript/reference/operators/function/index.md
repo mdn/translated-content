@@ -9,66 +9,63 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/function
 original_slug: Web/JavaScript/Referencia/Operadores/function
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>El operador <code>function</code> define una función dentro de una expresión.</p>
+El operador `function` define una función dentro de una expresión.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval">function [<em>name</em>]([<em>param1</em>, <em>param2</em>, ..., <em>paramN</em>]) {
-   <em>statements</em>
-}
-</pre>
+    function [name]([param1, param2, ..., paramN]) {
+       statements
+    }
 
-<h2 id="Parameters" name="Parameters">Parámetros</h2>
+## Parámetros
 
-<dl>
- <dt><code>name</code></dt>
- <dd>El nombre de la función. Puede ser omitido, en cuyo caso la función es <em>anonymous</em>. El nombre sólo es local para el cuerpo de la función.</dd>
-</dl>
+- `name`
+  - : El nombre de la función. Puede ser omitido, en cuyo caso la función es _anonymous_. El nombre sólo es local para el cuerpo de la función.
 
-<dl>
- <dt><code>paramN</code></dt>
- <dd>El nombre de un argumento que será pasado a la función. Una función puede tener hasta 255 argumentos.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code>statements</code></dt>
- <dd>Las declaraciones que conforman el cuerpo de la función.</dd>
-</dl>
+- `paramN`
+  - : El nombre de un argumento que será pasado a la función. Una función puede tener hasta 255 argumentos.
 
-<h2 id="Description" name="Description">Descripción</h2>
+<!---->
 
-<p>La expresión de una función es muy similar y tiene casi la misma sintaxis que la declaración de una función (véase {{jsxref("Sentencias/function", "function")}} para más detalles). Véase <a href="/es/docs/Web/JavaScript/Referencia/Funciones">Funciones</a> para ver más información sobre las diferencias  entre declaraciones de funciones y expresiones de funciones.</p>
+- `statements`
+  - : Las declaraciones que conforman el cuerpo de la función.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Descripción
 
-<p>El siguiente ejemplo define una función sin nombre y se le asigna a la variable x. La función devuelve como resultado el cuadrado de su argumento:</p>
+La expresión de una función es muy similar y tiene casi la misma sintaxis que la declaración de una función (véase {{jsxref("Sentencias/function", "function")}} para más detalles). Véase [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones) para ver más información sobre las diferencias entre declaraciones de funciones y expresiones de funciones.
 
-<pre class="brush: js">var x = function(y) {
+## Ejemplos
+
+El siguiente ejemplo define una función sin nombre y se le asigna a la variable x. La función devuelve como resultado el cuadrado de su argumento:
+
+```js
+var x = function(y) {
    return y * y;
 };
-</pre>
+```
 
-<h3 id="Expresión_de_función_nombrada">Expresión de función nombrada</h3>
+### Expresión de función nombrada
 
-<p>Si quiere referirse a la función actual dentro del cuerpo de la función, debe crear una expresión de función nombrada. Luego, este nombre será local solo para el cuerpo de la función (alcance). Esto también evita usar la propiedad no estándar {{jsxref("Funciones/arguments/callee", "arguments.callee")}}.</p>
+Si quiere referirse a la función actual dentro del cuerpo de la función, debe crear una expresión de función nombrada. Luego, este nombre será local solo para el cuerpo de la función (alcance). Esto también evita usar la propiedad no estándar {{jsxref("Funciones/arguments/callee", "arguments.callee")}}.
 
-<pre class="brush: js">var math = {
+```js
+var math = {
   'factorial': function factorial(n) {
-    if (n &lt;= 1)
+    if (n <= 1)
       return 1;
     return n * factorial(n - 1);
   }
 };
-</pre>
+```
 
-<h2 id="See_also" name="See_also">Consulte también</h2>
+## Consulte también
 
-<ul>
- <li><a href="/es/docs/Web/JavaScript/Referencia/Funciones">Funciones</a></li>
- <li>{{jsxref("Function")}}</li>
- <li>Sentencias {{jsxref("Sentencias/function", "function")}}</li>
-</ul>
+- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- {{jsxref("Function")}}
+- Sentencias {{jsxref("Sentencias/function", "function")}}

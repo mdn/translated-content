@@ -8,40 +8,41 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensaje">Mensaje</h2>
+## Mensaje
 
-<pre class="syntaxbox">ReferenceError: reference to undefined property "x" (Firefox)
-</pre>
+    ReferenceError: reference to undefined property "x" (Firefox)
 
-<h2 id="Tipo_de_error">Tipo de error</h2>
+## Tipo de error
 
-<p>Advertencia {{jsxref("ReferenceError")}} únicamente en <a href="/es/docs/Web/JavaScript/Referencia/Modo_estricto">modo estricto</a>.</p>
+Advertencia {{jsxref("ReferenceError")}} únicamente en [modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto).
 
-<h2 id="¿Qué_salió_mal">¿Qué salió mal?</h2>
+## ¿Qué salió mal?
 
-<p>El script intentó acceder a una propiedad no definida en un objeto. Hay dos formas de acceder a las propiedades; vea la página <a href="/es/docs/Web/JavaScript/Referencia/Operadores/Miembros">operadores de miembros</a> para aprender más sobre ellas.</p>
+El script intentó acceder a una propiedad no definida en un objeto. Hay dos formas de acceder a las propiedades; vea la página [operadores de miembros](/es/docs/Web/JavaScript/Referencia/Operadores/Miembros) para aprender más sobre ellas.
 
-<p>Los errores sobre referencias a propiedades no definidas ocurren únicamente en el <a href="/es/docs/Web/JavaScript/Referencia/Modo_estricto">modo de código estricto</a>. En el modo no estricto, estos intentos de obtener propiedades no definidas son silenciosamente ignorados.</p>
+Los errores sobre referencias a propiedades no definidas ocurren únicamente en el [modo de código estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto). En el modo no estricto, estos intentos de obtener propiedades no definidas son silenciosamente ignorados.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Casos_inválidos">Casos inválidos</h3>
+### Casos inválidos
 
-<p>En este caso, la propiedad <code>bar</code> no está definida, produciéndose un <code>ReferenceError</code>.</p>
+En este caso, la propiedad `bar` no está definida, produciéndose un `ReferenceError`.
 
-<pre class="brush: js example-bad">'use strict';
+```js example-bad
+'use strict';
 
 var foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
-</pre>
+```
 
-<h3 id="Casos_válidos">Casos válidos</h3>
+### Casos válidos
 
-<p>Para evitar este error, es necesario ya sea definir la propiedad <code>bar</code> en el objeto o verificar su existencia antes de leerla; una manera de hacerlo es usar el método {{jsxref("Object.prototype.hasOwnProperty()")}}, como en el siguiente ejemplo:</p>
+Para evitar este error, es necesario ya sea definir la propiedad `bar` en el objeto o verificar su existencia antes de leerla; una manera de hacerlo es usar el método {{jsxref("Object.prototype.hasOwnProperty()")}}, como en el siguiente ejemplo:
 
-<pre class="brush: js example-good">'use strict';
+```js example-good
+'use strict';
 
 var foo = {};
 
@@ -54,10 +55,9 @@ console.log(foo.bar); // "luna"
 
 if (foo.hasOwnProperty('bar')) {
   console.log(foo.bar);
-}</pre>
+}
+```
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li><a href="/es/docs/Web/JavaScript/Referencia/Modo_estricto">Modo estricto</a></li>
-</ul>
+- [Modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto)

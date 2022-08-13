@@ -7,32 +7,31 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/yield*
 original_slug: Web/JavaScript/Referencia/Operadores/yield*
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><code>La expresión </code><strong><code>yield*</code></strong><strong> </strong>es usada para delegar a otro {{jsxref("Statements/function*", "generator")}} u objeto iterable.</p>
+`La expresión `**`yield*`\*\*** \*\*es usada para delegar a otro {{jsxref("Statements/function*", "generator")}} u objeto iterable.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"> yield* [[expression]];</pre>
+     yield* [[expression]];
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>La expresión que retorna un objeto iterable</dd>
-</dl>
+- `expression`
+  - : La expresión que retorna un objeto iterable
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>La expresión <code>yield*</code> itera sobre el operador realizando yield de cada valor retornado por este.</p>
+La expresión `yield*` itera sobre el operador realizando yield de cada valor retornado por este.
 
-<p>El valor de la expresion <code>yield*</code> es el valor retornado por el iterador en si mismo cuando es finalizado (ej., cuando <code>done</code> es true).</p>
+El valor de la expresion `yield*` es el valor retornado por el iterador en si mismo cuando es finalizado (ej., cuando `done` es true).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Delegando_a_otro_generator">Delegando a otro generator</h3>
+### Delegando a otro generator
 
-<p>En el siguiente código, los valores declarados con yield en <code>g1()</code> son devueltos por las llamadas a <code>next() al igual que en</code> <code>g2()</code>.</p>
+En el siguiente código, los valores declarados con yield en `g1()` son devueltos por las llamadas a `next() al igual que en` `g2()`.
 
-<pre class="brush: js">function* g1() {
+```js
+function* g1() {
   yield 2;
   yield 3;
   yield 4;
@@ -52,13 +51,14 @@ console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: 4, done: false }
 console.log(iterator.next()); // { value: 5, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
-</pre>
+```
 
-<h3 id="Otros_objetos_iterables">Otros objetos iterables</h3>
+### Otros objetos iterables
 
-<p>Además de los objetos generator, <code>yield*</code> también se puede usar <code>yield sobre otros tipos de iterables</code>, ej. arrays, strings u objetos arguments.</p>
+Además de los objetos generator, `yield*` también se puede usar `yield sobre otros tipos de iterables`, ej. arrays, strings u objetos arguments.
 
-<pre class="brush: js">function* g3() {
+```js
+function* g3() {
   yield* [1, 2];
   yield* "34";
   yield* Array.from(arguments);
@@ -73,13 +73,14 @@ console.log(iterator.next()); // { value: "4", done: false }
 console.log(iterator.next()); // { value: 5, done: false }
 console.log(iterator.next()); // { value: 6, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
-</pre>
+```
 
-<h3 id="El_valor_de_la_expresión_yield*">El valor de la expresión <code>yield*</code></h3>
+### El valor de la expresión `yield*`
 
-<p><code>yield*</code> es una expresión, no una declaración, por lo que se evalua como un valor.</p>
+`yield*` es una expresión, no una declaración, por lo que se evalua como un valor.
 
-<pre class="brush: js">function* g4() {
+```js
+function* g4() {
   yield* [1, 2, 3];
   return "foo";
 }
@@ -99,56 +100,35 @@ console.log(iterator.next()); // { value: undefined, done: true },
                               // g4() returned { value: "foo", done: true } at this point
 
 console.log(result);          // "foo"
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES6', '#', 'Yield')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inical.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#', 'Yield')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                   | Estado                       | Comentarios        |
+| ------------------------------------------------ | ---------------------------- | ------------------ |
+| {{SpecName('ES6', '#', 'Yield')}}     | {{Spec2('ES6')}}         | Definición inical. |
+| {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                    |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("javascript.operators.yield_star")}}
 
-<h2 id="Notas_específicas_de_Firefox">Notas específicas de Firefox</h2>
+## Notas específicas de Firefox
 
-<ul>
- <li>Iniciando con Gecko 33 {{geckoRelease(33)}}, el análisis del yield expression ha sido actualizado para cumplir con la última especificación ES6 ({{bug(981599)}}):
-  <ul>
-   <li>Ahora está implementada la restricción de salto de línea. No está permitido el salto de línea entre "yield" y "*". Código como el siguiente lanzará una {{jsxref("SyntaxError")}}:
-    <pre class="brush: js">function* foo() {
-  yield
-  *[];
-}</pre>
-   </li>
-  </ul>
- </li>
-</ul>
+- Iniciando con Gecko 33 {{geckoRelease(33)}}, el análisis del yield expression ha sido actualizado para cumplir con la última especificación ES6 ({{bug(981599)}}):
 
-<h2 id="Ver_también">Ver también</h2>
+  - Ahora está implementada la restricción de salto de línea. No está permitido el salto de línea entre "yield" y "\*". Código como el siguiente lanzará una {{jsxref("SyntaxError")}}:
 
-<ul>
- <li><a href="/es/docs/Web/JavaScript/Referencia/Iteration_protocols">Protocolos de iteración</a></li>
- <li>{{jsxref("Statements/function*", "function*")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
-</ul>
+    ```js
+    function* foo() {
+      yield
+      *[];
+    }
+    ```
+
+## Ver también
+
+- [Protocolos de iteración](/es/docs/Web/JavaScript/Referencia/Iteration_protocols)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("Operators/yield", "yield")}}

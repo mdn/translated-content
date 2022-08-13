@@ -7,38 +7,34 @@ tags:
 translation_of: Web/XSLT/Element/with-param
 original_slug: Web/XSLT/with-param
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p>El elemento <code>&lt;xsl:with-param&gt;</code> establece el valor de un parámetro que se pasará a una plantilla.</p>
+El elemento `<xsl:with-param>` establece el valor de un parámetro que se pasará a una plantilla.
 
-<h3 id="Syntax" name="Syntax">Syntax</h3>
+### Syntax
 
-<pre>&lt;xsl:with-param name=NOMBRE select=EXPRESIÓN&gt;
-	PLANTILLA
-&lt;/xsl:with-param&gt;</pre>
+    <xsl:with-param name=NOMBRE select=EXPRESIÓN>
+    	PLANTILLA
+    </xsl:with-param>
 
-<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
+### Atributos requeridos
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Dá a este parámetro un nombre.</dd>
-</dl>
+- `name`
+  - : Dá a este parámetro un nombre.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<dl>
- <dt><code>select</code></dt>
- <dd>Define el valor del parámtero a través de una expresión XPath. Si el elemento contiene una plantilla, se ignorará este atributo.</dd>
-</dl>
+- `select`
+  - : Define el valor del parámtero a través de una expresión XPath. Si el elemento contiene una plantilla, se ignorará este atributo.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Subinstrucción, siempre aparece dentro de un elemento <code>&lt;xsl:apply-templates&gt;</code> o <code>&lt;xsl:call-template&gt;</code>.</p>
+Subinstrucción, siempre aparece dentro de un elemento `<xsl:apply-templates>` o `<xsl:call-template>`.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT 11.6</p>
+XSLT 11.6
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Soportado.</p>
+Soportado.

@@ -10,104 +10,86 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/race
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>Promise.race(iterable)</strong></code> retorna una promesa que se cumplirá o no tan pronto como una de las promesas del argumento iterable se cumpla o se rechace, con el valor o razón de rechazo de ésta.</p>
+El método **`Promise.race(iterable)`** retorna una promesa que se cumplirá o no tan pronto como una de las promesas del argumento iterable se cumpla o se rechace, con el valor o razón de rechazo de ésta.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>Promise.race(iterable)</var>;</pre>
+    Promise.race(iterable);
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>iterable</dt>
- <dd>Un objeto iterable , como por ejemplo un {{jsxref("Array")}}. Vea <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>.</dd>
-</dl>
+- iterable
+  - : Un objeto iterable , como por ejemplo un {{jsxref("Array")}}. Vea [iterable](/es/docs/Web/JavaScript/Guide/iterable).
 
-<h3 id="Retorna">Retorna</h3>
+### Retorna
 
-<p>Una {{jsxref("Promise")}} que se cumple o se rechaza tan pronto como una de las promesas dadas en el argumento iterable se cumple o se rechaza.</p>
+Una {{jsxref("Promise")}} que se cumple o se rechaza tan pronto como una de las promesas dadas en el argumento iterable se cumple o se rechaza.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>La función <code>race</code> retorna una <code>Promise</code> que se comporta como tal. Se cumple o se rechaza, lo que suceda antes en alguno de sus argumentos (iterable).</p>
+La función `race` retorna una `Promise` que se comporta como tal. Se cumple o se rechaza, lo que suceda antes en alguno de sus argumentos (iterable).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_Promise.race_–_ejemplos_con_setTimeout">Usando <code>Promise.race</code> – ejemplos con <code>setTimeout</code></h3>
+### Usando `Promise.race` – ejemplos con `setTimeout`
 
-<pre class="brush: js">var p1 = new Promise( (resolve, reject) =&gt; {
+```js
+var p1 = new Promise( (resolve, reject) => {
     setTimeout(resolve, 500, "uno");
 });
-var p2 = new Promise( (resolve, reject) =&gt; {
+var p2 = new Promise( (resolve, reject) => {
     setTimeout(resolve, 100, "dos");
 });
 
-Promise.race([p1, p2]).then( value =&gt; {
+Promise.race([p1, p2]).then( value => {
   console.log(value); // "dos"
   // Ambas se resuelven, pero la p2 antes.
 });
 
   // Ejemplo con un resolve y un reject en el mismo método race.
-var p3 = new Promise( (resolve, reject) =&gt; {
+var p3 = new Promise( (resolve, reject) => {
     setTimeout(resolve, 100, "tres");
 });
-var p4 = new Promise( (resolve, reject) =&gt; {
+var p4 = new Promise( (resolve, reject) => {
     setTimeout(reject, 500, "cuatro");
 });
 
-Promise.race([p3, p4]).then( value =&gt; {
+Promise.race([p3, p4]).then( value => {
   console.log(value); // "tres"
   // p3 es mas rápida, así que se resuelve el race
-}, reason =&gt; {
+}, reason => {
   // No es llamado
 });
 
-var p5 = new Promise( (resolve, reject) =&gt; {
+var p5 = new Promise( (resolve, reject) => {
     setTimeout(resolve, 500, "cinco");
 });
-var p6 = new Promise( (resolve, reject) =&gt; {
+var p6 = new Promise( (resolve, reject) => {
     setTimeout(reject, 100, "seis");
 });
 
-Promise.race([p5, p6]).then( value =&gt; {
+Promise.race([p5, p6]).then( value => {
   // No es llamado
-}, reason =&gt; {
+}, reason => {
   console.log(reason); // "seis"
   // p6 es mas rápida, así que se rechaza
 });
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentar</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-promise.race', 'Promise.race')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition in an ECMA standard.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                   | Status                       | Comentar                                |
+| -------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------- |
+| {{SpecName('ES6', '#sec-promise.race', 'Promise.race')}}     | {{Spec2('ES6')}}         | Initial definition in an ECMA standard. |
+| {{SpecName('ESDraft', '#sec-promise.race', 'Promise.race')}} | {{Spec2('ESDraft')}} |                                         |
 
-<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+## Compatibilidad entre navegadores
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.all()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}

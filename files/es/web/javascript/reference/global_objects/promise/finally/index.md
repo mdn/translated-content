@@ -4,56 +4,50 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/finally
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>finally()</strong></code> devuelve una {{jsxref("Promise")}}. Cuando la promesa se resuelve, sea exitosa o rechazada, la función de callback específicada será ejecutada. Esto ofrece una forma de ejecutar código sin importar como se haya resuelto la promesa.</p>
+El método **`finally()`** devuelve una {{jsxref("Promise")}}. Cuando la promesa se resuelve, sea exitosa o rechazada, la función de callback específicada será ejecutada. Esto ofrece una forma de ejecutar código sin importar como se haya resuelto la promesa.
 
-<p>Esto ayuda a evitar tener código duplicado tanto en el {{jsxref("Promise.then", "then()")}} como en el {{jsxref("Promise.catch", "catch()")}}.</p>
+Esto ayuda a evitar tener código duplicado tanto en el {{jsxref("Promise.then", "then()")}} como en el {{jsxref("Promise.catch", "catch()")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>p.finally(alFinalizar)</var>;
+    p.finally(alFinalizar);
 
-p.finally(function() {
-   // finalizada (exitosa o rechazada)
-});
-</pre>
+    p.finally(function() {
+       // finalizada (exitosa o rechazada)
+    });
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>alFinalizar</code></dt>
- <dd>Una {{jsxref("Function")}} llamada cuando la <code>Promise</code> se resuelve con éxito o falla.</dd>
-</dl>
+- `alFinalizar`
+  - : Una {{jsxref("Function")}} llamada cuando la `Promise` se resuelve con éxito o falla.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Devuelve una {{jsxref("Promise")}} cuyo <code>finally</code> fue fijado a la función específicada en <code>alFinalizar</code>.</p>
+Devuelve una {{jsxref("Promise")}} cuyo `finally` fue fijado a la función específicada en `alFinalizar`.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El método <code>finally()</code> puede ser de utilidad si quieres hacer algún proceso o limpieza una vez que la promesa termina, sin importar su resultado.</p>
+El método `finally()` puede ser de utilidad si quieres hacer algún proceso o limpieza una vez que la promesa termina, sin importar su resultado.
 
-<p>Utilizar <code>finally()</code> es muy similar a llamar <code>.then(onFinally, onFinally)</code>, sin embargo tiene algunas diferencias:</p>
+Utilizar `finally()` es muy similar a llamar `.then(onFinally, onFinally)`, sin embargo tiene algunas diferencias:
 
-<ul>
- <li>Cuando usamos una función <code>inline</code>, se la puede pasar una sola vez, en vez de estar forzado a declararla dos veces, o guardarla en una variable.</li>
- <li>Un callback <code>finally</code> no recibe ningún argumento, ya que no hay una manera fehaciente de determinar si la promesa fue exitosa o fallida. Este caso de uso es precisamente para cuando <em>no nos importa</em> la razón por la que falló o el valor al que resuelve, y no hay necesidad de proveerlos.</li>
- <li>A diferencia de <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> (que va a resolver a <code>undefined</code>), <code>Promise.resolve(2).finally(() =&gt; {})</code> resolverá con un <code>2</code>.</li>
- <li>Del mismo modo, a diferencia de <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (que resolverá con <code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> será rechazada con un <code>3</code>.</li>
-</ul>
+- Cuando usamos una función `inline`, se la puede pasar una sola vez, en vez de estar forzado a declararla dos veces, o guardarla en una variable.
+- Un callback `finally` no recibe ningún argumento, ya que no hay una manera fehaciente de determinar si la promesa fue exitosa o fallida. Este caso de uso es precisamente para cuando _no nos importa_ la razón por la que falló o el valor al que resuelve, y no hay necesidad de proveerlos.
+- A diferencia de `Promise.resolve(2).then(() => {}, () => {})` (que va a resolver a `undefined`), `Promise.resolve(2).finally(() => {})` resolverá con un `2`.
+- Del mismo modo, a diferencia de `Promise.reject(3).then(() => {}, () => {})` (que resolverá con `undefined`), `Promise.reject(3).finally(() => {})` será rechazada con un `3`.
 
-<div class="note">
-<p><strong>Nota:</strong> Un <code>throw</code> (o retornar una promesa rechazada) en el callback <code>finally</code> va a rechazar la nueva promesa con la razón de rechazo especificada al llamar <code>throw()</code>.</p>
-</div>
+> **Nota:** Un `throw` (o retornar una promesa rechazada) en el callback `finally` va a rechazar la nueva promesa con la razón de rechazo especificada al llamar `throw()`.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">let isLoading = true;
+```js
+let isLoading = true;
 
 fetch(myRequest).then(function(response) {
     var contentType = response.headers.get("content-type");
-    if(contentType &amp;&amp; contentType.includes("application/json")) {
+    if(contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, no hemos obtenido un JSON!");
@@ -61,36 +55,20 @@ fetch(myRequest).then(function(response) {
   .then(function(json) { /* procesar el JSON */ })
   .catch(function(error) { console.log(error); /* esta línea podría arrojar error, e.g. cuando console = {} */ })
   .finally(function() { isLoading = false; });
+```
 
-</pre>
+## Especificaciones
 
-<h2 id="Especificaciones">Especificaciones</h2>
+| Especificación                                                                                                       | Estado                       | Comentario |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| {{SpecName('ESDraft', '#sec-promise.prototype.finally', 'Promise.prototype.finally')}} | {{Spec2('ESDraft')}} |            |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.prototype.finally', 'Promise.prototype.finally')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidad en navegador
 
-<h2 id="Compatibilidad_en_navegador">Compatibilidad en navegador</h2>
+{{Compat("javascript.builtins.Promise.finally")}}
 
+## Ver también
 
-
-<p>{{Compat("javascript.builtins.Promise.finally")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.then()")}}</li>
- <li>{{jsxref("Promise.prototype.catch()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.then()")}}
+- {{jsxref("Promise.prototype.catch()")}}

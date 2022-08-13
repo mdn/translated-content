@@ -1,48 +1,53 @@
 ---
 title: ':focus-within'
-slug: 'Web/CSS/:focus-within'
+slug: Web/CSS/:focus-within
 tags:
   - CSS
   - Diseño
   - Referencia
   - Web
   - pseudo-clases
-translation_of: 'Web/CSS/:focus-within'
+translation_of: Web/CSS/:focus-within
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <a href="/es/docs/Web/CSS">CSS</a> <strong><code>:focus-within</code></strong> representa un elemento que ha recibido el foco o que <em>contiene</em> un elemento que ha recibido el foco. En otras palabras, representa un elemento que en sí coincide con la pseudoclase {{cssxref(":focus")}} o tiene descendientes que coincidan con <code>:focus</code>. (Esto incluye descendientes en <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a>)</p>
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:focus-within`** representa un elemento que ha recibido el foco o que _contiene_ un elemento que ha recibido el foco. En otras palabras, representa un elemento que en sí coincide con la pseudoclase {{cssxref(":focus")}} o tiene descendientes que coincidan con `:focus`. (Esto incluye descendientes en [shadow DOM](/es/docs/Web/Web_Components/Shadow_DOM))
 
-<pre class="brush: css no-line-numbers notranslate">/* Selecciona un &lt;div&gt; cuando uno de sus descendientes recibe el foco*/
+```css
+/* Selecciona un <div> cuando uno de sus descendientes recibe el foco*/
 div:focus-within {
   background: cyan;
-}</pre>
+}
+```
 
-<p>Este selector es útil, por tomar un ejemplo común, para resaltar un contenedor {{HTMLElement("form")}} completo cuando el usuario enfoca sobre uno de sus elementos {{HTMLElement("input")}}.</p>
+Este selector es útil, por tomar un ejemplo común, para resaltar un contenedor {{HTMLElement("form")}} completo cuando el usuario enfoca sobre uno de sus elementos {{HTMLElement("input")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
 {{CSSSyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>En este ejemplo, el formulario recibirá estilos de color especiales cuando cualquiera de las entradas de texto reciba el foco.</p>
+En este ejemplo, el formulario recibirá estilos de color especiales cuando cualquiera de las entradas de texto reciba el foco.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Intenta escribir en este formulario.&lt;/p&gt;
+```html
+<p>Intenta escribir en este formulario.</p>
 
-&lt;form&gt;
-  &lt;label for="given_name"&gt;Nombre:&lt;/label&gt;
-  &lt;input id="given_name" type="text"&gt;
-  &lt;br&gt;
-  &lt;label for="family_name"&gt;Apellido:&lt;/label&gt;
-  &lt;input id="family_name" type="text"&gt;
-&lt;/form&gt;</pre>
+<form>
+  <label for="given_name">Nombre:</label>
+  <input id="given_name" type="text">
+  <br>
+  <label for="family_name">Apellido:</label>
+  <input id="family_name" type="text">
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css highlight[7] notranslate">form {
+```css
+form {
   border: 1px solid;
   color: gray;
   padding: 4px;
@@ -56,41 +61,24 @@ form:focus-within {
 input {
   margin: 4px;
 }
-</pre>
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Ejemplos", 500, 150)}}</p>
+{{EmbedLiveSample("Ejemplos", 500, 150)}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-focus-within-pseudo", ":focus-within")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estado                               | Comentario          |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName("CSS4 Selectors", "#the-focus-within-pseudo", ":focus-within")}} | {{Spec2("CSS4 Selectors")}} | Definición inicial. |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("css.selectors.focus-within")}}
 
+## Ver también
 
-<p>{{Compat("css.selectors.focus-within")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{cssxref(":focus")}}</li>
- <li>{{CSSxRef(":focus-visible")}} {{Experimental_Inline}}</li>
- <li><a href="https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4">Grab your user's attention with the focus-within selector</a></li>
-</ul>
+- {{cssxref(":focus")}}
+- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
+- [Grab your user's attention with the focus-within selector](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)

@@ -8,38 +8,27 @@ tags:
   - continue
 translation_of: Web/HTTP/Status/100
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El código de respuesta de estado informativo <strong><code>100 Continue</code></strong> indica que todo hasta ahora está bien y que el cliente debe continuar con la solicitud o ignorarlo si ya está terminado.</p>
+El código de respuesta de estado informativo **`100 Continue`** indica que todo hasta ahora está bien y que el cliente debe continuar con la solicitud o ignorarlo si ya está terminado.
 
-<p>Para que un servidor verifique los encabezados de la solicitud, un cliente debe enviar {{HTTPHeader("Expect")}}<code>: 100-continue</code> como encabezado en su solicitud inicial y recibe un código de estado <code>100 Continue</code> en respuesta antes de enviar el cuerpo.</p>
+Para que un servidor verifique los encabezados de la solicitud, un cliente debe enviar {{HTTPHeader("Expect")}}`: 100-continue` como encabezado en su solicitud inicial y recibe un código de estado `100 Continue` en respuesta antes de enviar el cuerpo.
 
-<h2 id="Estado">Estado</h2>
+## Estado
 
-<pre class="syntaxbox">100 Continue</pre>
+    100 Continue
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "100 Continue" , "6.2.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                           | Título                                                        |
+| -------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "100 Continue" , "6.2.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
-<p>{{Compat("http.status.100")}}</p>
+{{Compat("http.status.100")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{HTTPHeader("Expect")}}</li>
- <li>{{HTTPStatus(417)}}</li>
-</ul>
+- {{HTTPHeader("Expect")}}
+- {{HTTPStatus(417)}}

@@ -4,27 +4,28 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/shift
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>shift()</strong></code> elimina el <strong>primer</strong> elemento del array y lo retorna. Este método modifica la longitud del array.</p>
+El método **`shift()`** elimina el **primer** elemento del array y lo retorna. Este método modifica la longitud del array.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>.shift()</code></pre>
+    arr.shift()
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El método <code>shift</code> elimina el elemento en el índice cero y desplaza los valores consecutivos hacia abajo, devolviendo el valor eliminado. Si la propiedad {{jsxref("Array.length", "length")}} es 0, devuelve {{jsxref("undefined")}}.</p>
+El método `shift` elimina el elemento en el índice cero y desplaza los valores consecutivos hacia abajo, devolviendo el valor eliminado. Si la propiedad {{jsxref("Array.length", "length")}} es 0, devuelve {{jsxref("undefined")}}.
 
-<p><code>shift</code> es genérico; este método puede utilizarse con {{jsxref("Function.call", "call", "", 1)}} o {{jsxref("Function.apply", "apply", "", 1)}} a objetos simliares a arrays. Los objetos que no tengan una propiedad <code>length</code> que refleje el último elemento de una serie consecutiva de propiedades numéricas con índice base cero pueden no comportarse de manera significativa.</p>
+`shift` es genérico; este método puede utilizarse con {{jsxref("Function.call", "call", "", 1)}} o {{jsxref("Function.apply", "apply", "", 1)}} a objetos simliares a arrays. Los objetos que no tengan una propiedad `length` que refleje el último elemento de una serie consecutiva de propiedades numéricas con índice base cero pueden no comportarse de manera significativa.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Eliminando_un_elemento_de_un_array">Eliminando un elemento de un array</h3>
+### Eliminando un elemento de un array
 
-<p>El siguiente código muestra el contenido del array <code>miPescado</code> antes y después de eliminar el primer elemento. También muestra el elemento eliminado:</p>
+El siguiente código muestra el contenido del array `miPescado` antes y después de eliminar el primer elemento. También muestra el elemento eliminado:
 
-<pre class="brush: js notranslate">var miPescado = ['ángel', 'payaso', 'mandarín', 'cirujano'];
+```js
+var miPescado = ['ángel', 'payaso', 'mandarín', 'cirujano'];
 
 console.log('miPescado antes: ' + miPescado);
 // "miPescado antes: ángel,payaso,mandarín,cirujano"
@@ -35,43 +36,23 @@ console.log('miPescado después: ' + miPescado);
 // "miPescado after: payaso,mandarín,cirujano"
 
 console.log('Elemento eliminado: ' + eliminado);
-// "Elemento eliminado: ángel"</pre>
+// "Elemento eliminado: ángel"
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definición inicial. Implementado en Javascript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        | Status                   | Comment                                             |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}     | Definición inicial. Implementado en Javascript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}                 | {{Spec2('ES5.1')}} |                                                     |
+| {{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}} | {{Spec2('ES6')}}     |                                                     |
 
-<h2 id="Navegadores_compatibles">Navegadores compatibles</h2>
+## Navegadores compatibles
 
 {{Compat("javascript.builtins.Array.shift")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Array.prototype.push()")}}</li>
- <li>{{jsxref("Array.prototype.pop()")}}</li>
- <li>{{jsxref("Array.prototype.unshift()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.unshift()")}}

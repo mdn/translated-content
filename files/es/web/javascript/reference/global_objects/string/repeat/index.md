@@ -11,53 +11,50 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/repeat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>repeat()</code></strong> construye y devuelve una nueva cadena que contiene el número especificado de copias de la cadena en la cual fue llamada, concatenados.</p>
+El método **`repeat()`** construye y devuelve una nueva cadena que contiene el número especificado de copias de la cadena en la cual fue llamada, concatenados.
 
-<h2 id="Sintáxis">Sintáxis</h2>
+## Sintáxis
 
-<pre class="syntaxbox"><code><var>str</var>.repeat(<var>count</var>)</code></pre>
+    str.repeat(count)
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>count</code></dt>
- <dd>Un entero entre 0 y +∞: [0, +∞), indicando el número de veces a repetir la cadena en la nueva cadenada creada que será devuelta.</dd>
-</dl>
+- `count`
+  - : Un entero entre 0 y +∞: \[0, +∞), indicando el número de veces a repetir la cadena en la nueva cadenada creada que será devuelta.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>Un nuevo string que contiene el número especificado de copias del string original.</p>
+Un nuevo string que contiene el número especificado de copias del string original.
 
-<h3 id="Excepciones">Excepciones</h3>
+### Excepciones
 
-<ul>
- <li>{{jsxref("Errors/Negative_repetition_count", "RangeError")}}: El número de repeticiones no debe ser negativo.</li>
- <li>{{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: El número de repeticiones debe ser menor que infinito y no desbordar el tamaño máximo para un string.</li>
-</ul>
+- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: El número de repeticiones no debe ser negativo.
+- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: El número de repeticiones debe ser menor que infinito y no desbordar el tamaño máximo para un string.
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">'abc'.repeat(-1);   // RangeError
+```js
+'abc'.repeat(-1);   // RangeError
 'abc'.repeat(0);    // ''
 'abc'.repeat(1);    // 'abc'
 'abc'.repeat(2);    // 'abcabc'
 'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
 'abc'.repeat(1/0);  // RangeError
 
-({ toString: () =&gt; 'abc', repeat: String.prototype.repeat }).repeat(2);
+({ toString: () => 'abc', repeat: String.prototype.repeat }).repeat(2);
 // 'abcabc' (repeat() is a generic method)
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Este método ha sido añadido a la especificación ECMAScript 6 y tal vez aún no se encuentre disponible en todas las implementaciones de JavaScript. Sin embargo, usted puede establecer <code>String.prototype.repeat()</code> con el siguiente fragmento de código:</p>
+Este método ha sido añadido a la especificación ECMAScript 6 y tal vez aún no se encuentre disponible en todas las implementaciones de JavaScript. Sin embargo, usted puede establecer `String.prototype.repeat()` con el siguiente fragmento de código:
 
-<pre class="brush: js">if (!String.prototype.repeat) {
+```js
+if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
     if (this == null) {
@@ -68,7 +65,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/repeat
     if (count != count) {
       count = 0;
     }
-    if (count &lt; 0) {
+    if (count < 0) {
       throw new RangeError('repeat count must be non-negative');
     }
     if (count == Infinity) {
@@ -80,16 +77,16 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/repeat
     }
     // Ensuring count is a 31-bit integer allows us to heavily optimize the
     // main part. But anyway, most current (August 2014) browsers can't handle
-    // strings 1 &lt;&lt; 28 chars or longer, so:
-    if (str.length * count &gt;= 1 &lt;&lt; 28) {
+    // strings 1 << 28 chars or longer, so:
+    if (str.length * count >= 1 << 28) {
       throw new RangeError('repeat count must not overflow maximum string size');
     }
     var rpt = '';
     for (;;) {
-      if ((count &amp; 1) == 1) {
+      if ((count & 1) == 1) {
         rpt += str;
       }
-      count &gt;&gt;&gt;= 1;
+      count >>>= 1;
       if (count == 0) {
         break;
       }
@@ -98,32 +95,15 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/repeat
     return rpt;
   }
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                       | Comentarios         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
+## Compatibilidad en Navegadores
 
-<div>{{Compat("javascript.builtins.String.repeat")}}</div>
-
-<div id="compat-mobile"> </div>
+{{Compat("javascript.builtins.String.repeat")}}

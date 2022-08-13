@@ -1,19 +1,20 @@
 ---
 title: ':defined'
-slug: 'Web/CSS/:defined'
+slug: Web/CSS/:defined
 tags:
   - CSS
   - Diseño
   - Pseudo-clase
   - Referencia
   - Web
-translation_of: 'Web/CSS/:defined'
+translation_of: Web/CSS/:defined
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:defined</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa cualquier elemento que se haya definido.  Esto incluye cualquier elemento estándar integrado en el navegador y elementos personalizados que se hayan definido correctamente (es decir, con el método {{domxref("CustomElementRegistry.define()")}}).</p>
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:defined`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que se haya definido. Esto incluye cualquier elemento estándar integrado en el navegador y elementos personalizados que se hayan definido correctamente (es decir, con el método {{domxref("CustomElementRegistry.define()")}}).
 
-<pre class="brush: css no-line-numbers">/* Selecciona cualquier elemento definido */
+```css
+/* Selecciona cualquier elemento definido */
 :defined {
   font-style: italic;
 }
@@ -22,19 +23,20 @@ translation_of: 'Web/CSS/:defined'
 simple-custom:defined {
   display: block;
 }
-</pre>
+```
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Los siguientes fragmentos están tomados de nuestra demostración <a href="https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class">Pseudo-clase-definida</a> (<a href="https://mdn.github.io/web-components-examples/defined-pseudo-class/">ver también en directo</a>).</p>
+Los siguientes fragmentos están tomados de nuestra demostración [Pseudo-clase-definida](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) ([ver también en directo](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
 
-<p>En esta demostración, definimos un elemento personalizado trivial muy simple:</p>
+En esta demostración, definimos un elemento personalizado trivial muy simple:
 
-<pre class="brush: js">customElements.define('simple-custom',
+```js
+customElements.define('simple-custom',
   class extends HTMLElement {
     constructor() {
       super();
@@ -45,17 +47,21 @@ simple-custom:defined {
       let shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(divElem);
   }
-})</pre>
+})
+```
 
-<p>Luego inserta una copia de este elemento en el documento, junto con un <code>&lt;p&gt;</code> estándar:</p>
+Luego inserta una copia de este elemento en el documento, junto con un `<p>` estándar:
 
-<pre class="brush: html">&lt;simple-custom text="Texto de ejemplo del elemento personalizado"&gt;&lt;/simple-custom&gt;
+```html
+<simple-custom text="Texto de ejemplo del elemento personalizado"></simple-custom>
 
-&lt;p&gt;Texto de ejemplo de párrafo estándar&lt;/p&gt;</pre>
+<p>Texto de ejemplo de párrafo estándar</p>
+```
 
-<p>En el CSS primero incluimos las siguientes reglas:</p>
+En el CSS primero incluimos las siguientes reglas:
 
-<pre class="brush: css">/* Dar a los dos elementos fondos distintivos */
+```css
+/* Dar a los dos elementos fondos distintivos */
 p {
   background: yellow;
 }
@@ -67,49 +73,33 @@ simple-custom {
 /* Tanto el elemento personalizado como el incorporado tienen texto en cursiva */
 :defined {
   font-style: italic;
-}</pre>
+}
+```
 
-<p>A continuación, proporcione las dos reglas siguientes para ocultar las instancias de nuestro elemento personalizado que no están definidas y las instancias que se definen como elementos de nivel de bloque:</p>
+A continuación, proporcione las dos reglas siguientes para ocultar las instancias de nuestro elemento personalizado que no están definidas y las instancias que se definen como elementos de nivel de bloque:
 
-<pre class="brush: css">simple-custom:not(:defined) {
+```css
+simple-custom:not(:defined) {
   display: none;
 }
 
 simple-custom:defined {
   display: block;
-}</pre>
+}
+```
 
-<p>Esto es útil si tiene un elemento personalizado complejo que demora un tiempo en cargarse en la página — es posible que desee ocultar las instancias del elemento hasta que la definición esté completa, para que no terminen con feos destellos de elementos sin estilo en la página</p>
+Esto es útil si tiene un elemento personalizado complejo que demora un tiempo en cargarse en la página — es posible que desee ocultar las instancias del elemento hasta que la definición esté completa, para que no terminen con feos destellos de elementos sin estilo en la página
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'semantics-other.html#selector-defined', ':defined') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                               | Comentario |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
+| {{ SpecName('HTML WHATWG', 'semantics-other.html#selector-defined', ':defined') }} | {{ Spec2('HTML WHATWG') }} |            |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
+{{Compat("css.selectors.defined")}}
 
+## Ver también
 
-<p>{{Compat("css.selectors.defined")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components">Componentes web</a></li>
-</ul>
+- [Componentes web](/es/docs/Web/Web_Components)

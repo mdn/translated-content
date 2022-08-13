@@ -11,32 +11,30 @@ tags:
   - playbackRate
 translation_of: Web/API/Animation/playbackRate
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>La propiedad <code><strong>Animation</strong></code><strong><code>.playbackRate</code></strong> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve o  establece la velocidad de reproducción de la animación.</p>
+La propiedad **`Animation`\*\***`.playbackRate`\*\* de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve o establece la velocidad de reproducción de la animación.
 
-<p>Las animaciones tienen un <strong>playback rate</strong> que proporciona un factor de escala para el cambio de velocidad de la animación {{domxref("DocumentTimeline", "timeline")}} valores del estado actual de la linea de tiempo de la animación. La velocidad de reproducción inicial es <code>1</code>.</p>
+Las animaciones tienen un **playback rate** que proporciona un factor de escala para el cambio de velocidad de la animación {{domxref("DocumentTimeline", "timeline")}} valores del estado actual de la linea de tiempo de la animación. La velocidad de reproducción inicial es `1`.
 
-<h2 id="Sintaxis" style="line-height: 30px; font-size: 2.14285714285714rem;">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox" style="font-size: 14px;">var <em>currentPlaybackRate</em> = <em>Animation</em>.playbackRate;
+    var currentPlaybackRate = Animation.playbackRate;
 
-<em>Animation</em>.playbackRate = <em>newRate</em>;
-</pre>
+    Animation.playbackRate = newRate;
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p><span id="result_box" lang="es"><span>Toma un número que puede ser 0, negativo o positivo.</span> <span>Los valores negativos invierten la animación.</span> <span>El valor es un factor de escala, por lo que, por ejemplo, un valor de 2 duplicaría la velocidad de reproducción.</span></span></p>
+Toma un número que puede ser 0, negativo o positivo. Los valores negativos invierten la animación. El valor es un factor de escala, por lo que, por ejemplo, un valor de 2 duplicaría la velocidad de reproducción.
 
-<div class="note">
-<p>si establecemos el <code>playbackRate</code> a <code>0</code> pausa la animación de manera efectiva (sin embargo, su {{domxref("Animation.playstate", "playstate")}} no se convierte necesariamente en  <code>paused</code>).</p>
-</div>
+> **Nota:** si establecemos el `playbackRate` a `0` pausa la animación de manera efectiva (sin embargo, su {{domxref("Animation.playstate", "playstate")}} no se convierte necesariamente en `paused`).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia  (<code>aliceChange</code>) se invierta para reducirse:</p>
+En el ejemplo [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia (`aliceChange`) se invierta para reducirse:
 
-<pre class="brush: js">var shrinkAlice = function() {
+```js
+var shrinkAlice = function() {
   aliceChange.playbackRate = -1;
   aliceChange.play();
 }
@@ -44,11 +42,12 @@ translation_of: Web/API/Animation/playbackRate
 // Con un toque o un click, Alicia se encogerá.
 bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);
-</pre>
+```
 
-<p>Por el contrario, hacer click en el pastel hace que "crezca" reproduciendo <code>aliceChange</code> hacia adelante otra vez:</p>
+Por el contrario, hacer click en el pastel hace que "crezca" reproduciendo `aliceChange` hacia adelante otra vez:
 
-<pre class="brush: js">var growAlice = function() {
+```js
+var growAlice = function() {
   aliceChange.playbackRate = 1;
   aliceChange.play();
 }
@@ -56,55 +55,44 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 // Con un toque o un click, Alicia crecerá.
 cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);
-</pre>
+```
 
-<p>En otro ejemplo,  <a href="http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010">Red Queen's Race Game</a>, Alicia y La Reina Roja están ralentizandose constantemente:</p>
+En otro ejemplo, [Red Queen's Race Game](http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010), Alicia y La Reina Roja están ralentizandose constantemente:
 
-<pre class="brush: js">setInterval( function() {
+```js
+setInterval( function() {
 
-  // <span id="result_box" lang="es"><span>Asegúrate de que la velocidad de reproducción nunca descienda por debajo de .4</span></span>
+  // Asegúrate de que la velocidad de reproducción nunca descienda por debajo de .4
 
-  if (redQueen_alice.playbackRate &gt; .4) {
+  if (redQueen_alice.playbackRate > .4) {
     redQueen_alice.playbackRate *= .9;
   }
 
 }, 3000);
-</pre>
+```
 
-<p><span id="result_box" lang="es"><span>Pero hacer click o hacer tapping(pasar el puntero) sobre ellos hace que aceleren multiplicando su</span></span> <code>playbackRate</code>(velocidad de reproducción):</p>
+Pero hacer click o hacer tapping(pasar el puntero) sobre ellos hace que aceleren multiplicando su `playbackRate`(velocidad de reproducción):
 
-<pre class="brush: js">var goFaster = function() {
+```js
+var goFaster = function() {
   redQueen_alice.playbackRate *= 1.1;
 }
 
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);
-</pre>
+```
 
-<h2 id="Especificaciones"><span class="highlight-span">Especificaciones</span></h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-playbackrate', 'Animation.playbackRate')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                               | Comment |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Animations', '#dom-animation-playbackrate', 'Animation.playbackRate')}} | {{Spec2("Web Animations")}} |         |
 
-<h2 id="Compatibilidad_del_navegador"><span class="highlight-span">Compatibilidad del navegador</span></h2>
+## Compatibilidad del navegador
 
 {{Compat("api.Animation.playbackRate")}}
 
-<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

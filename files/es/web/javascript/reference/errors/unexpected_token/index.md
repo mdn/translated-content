@@ -7,44 +7,43 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Mensaje">Mensaje</h2>
+## Mensaje
 
-<pre class="syntaxbox">SyntaxError: expected expression, got "x"
-SyntaxError: expected property name, got "x"
-SyntaxError: expected target, got "x"
-SyntaxError: expected rest argument name, got "x"
-SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=&gt;' after argument list, got "x"
-</pre>
+    SyntaxError: expected expression, got "x"
+    SyntaxError: expected property name, got "x"
+    SyntaxError: expected target, got "x"
+    SyntaxError: expected rest argument name, got "x"
+    SyntaxError: expected closing parenthesis, got "x"
+    SyntaxError: expected '=>' after argument list, got "x"
 
-<h2 id="Tipo_de_error">Tipo de error</h2>
+## Tipo de error
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="¿Que_significa_el_error">¿Que significa el error?</h2>
+## ¿Que significa el error?
 
-<p>Se esperaba un constructor específico de JavaScript pero se recibió algo diferente. Puede ser un simple error de tipeo.</p>
+Se esperaba un constructor específico de JavaScript pero se recibió algo diferente. Puede ser un simple error de tipeo.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Se_espera_expresión">Se espera expresión</h3>
+### Se espera expresión
 
-<p>Cuando se llama a una función, no se permiten comas al final de los argumentos. JavaScript espera un argumento que puede ser en realidad cualquier tipo de expresión.</p>
+Cuando se llama a una función, no se permiten comas al final de los argumentos. JavaScript espera un argumento que puede ser en realidad cualquier tipo de expresión.
 
-<pre class="brush: js example-bad">Math.max(2, 42,);
+```js example-bad
+Math.max(2, 42,);
 // SyntaxError: expected expression, got ')'
-</pre>
+```
 
-<p>El error se corrije omitiendo la coma o agregando otro argumento:</p>
+El error se corrije omitiendo la coma o agregando otro argumento:
 
-<pre class="brush: js example-good">Math.max(2, 42);
+```js example-good
+Math.max(2, 42);
 Math.max(2, 42, 13 + 37);
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Math.max()")}}</li>
-</ul>
+- {{jsxref("Math.max()")}}

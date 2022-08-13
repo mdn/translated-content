@@ -3,34 +3,19 @@ title: Valor real
 slug: Web/CSS/actual_value
 translation_of: Web/CSS/actual_value
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El <strong>valor real</strong> (<strong>actual value</strong>) de una propiedad CSS es el valor usado una vez que se aplican todas las aproximaciones. Por ejemplo, tal vez un agente usuario solo puede renderizar bordes con un valor de píxel entero, y se vería forzado a calcular la aproximación de la anchura del borde.</p>
+El **valor real** (**actual value**) de una propiedad CSS es el valor usado una vez que se aplican todas las aproximaciones. Por ejemplo, tal vez un agente usuario solo puede renderizar bordes con un valor de píxel entero, y se vería forzado a calcular la aproximación de la anchura del borde.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estatus                  | Comentarios        |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}} | {{Spec2('CSS2.1')}} | Definición inicial |
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li><a href="/es/docs/Web/CSS/Referencia_CSS">Referencia CSS</a></li>
- <li>{{CSS_key_concepts}}</li>
-</ul>
+- [Referencia CSS](/es/docs/Web/CSS/Referencia_CSS)
+- {{CSS_key_concepts}}

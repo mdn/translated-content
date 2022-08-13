@@ -9,67 +9,36 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLDivElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<div> </div>
+La interfaz **`HTMLDivElement`** provee propiedades especiales (más allá de la interfaz regular {{domxref("HTMLElement")}} que también está disponible por herencia) para manipular elementos div.
 
-<p>La interfaz <strong><code>HTMLDivElement</code></strong> provee propiedades especiales (más allá de la interfaz regular {{domxref("HTMLElement")}} que también está disponible por herencia) para manipular elementos div.</p>
+{{InheritanceDiagram(600,120)}}
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+## Propiedades
 
-<h2 id="Propiedades">Propiedades</h2>
+_Hereda las propiedades de su padre, {{domxref("HTMLElement")}}._
 
-<p><em>Hereda las propiedades de su padre, {{domxref("HTMLElement")}}.</em></p>
+- {{domxref("HTMLDivElement.align")}} {{obsolete_inline}}
+  - : Es un {{domxref("DOMString")}} que representa una propiedad enumerada que indica la alineación de los contenidos del elemento con respecto al contexto circundante. Los posibles valores son `"left"`, `"right"`, `"justify"`, and `"center"`.
 
-<dl>
- <dt>{{domxref("HTMLDivElement.align")}} {{obsolete_inline}}</dt>
- <dd>Es un {{domxref("DOMString")}} que representa una propiedad enumerada que indica la alineación de los contenidos del elemento con respecto al contexto circundante. Los posibles valores son <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, and <code>"center"</code>.</dd>
-</dl>
+## Métodos
 
-<h2 id="Métodos">Métodos</h2>
+_No hay métodos específicos; hereda los métodos de su padre, {{domxref("HTMLElement")}}._
 
-<p><em>No hay métodos específicos; hereda los métodos de su padre, {{domxref("HTMLElement")}}.</em></p>
+## Especificaciones
 
-<h2 id="Especificaciones">Especificaciones</h2>
+| Especificación                                                                                                       | Estado                           | Comentario                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "grouping-content.html#the-div-element", "HTMLDivElement")}} | {{Spec2('HTML WHATWG')}} | No hay cambios de {{SpecName("HTML5 W3C")}}. |
+| {{SpecName('HTML5 W3C', "grouping-content.html#the-div-element", "HTMLDivElement")}}     | {{Spec2('HTML5 W3C')}}     | No hay cambios de {{SpecName("DOM2 HTML")}}. |
+| {{SpecName('DOM2 HTML', 'html.html#ID-22445964', 'HTMLDivElement')}}                         | {{Spec2('DOM2 HTML')}}     | No hay cambios de {{SpecName("DOM1")}}.     |
+| {{SpecName('DOM1', 'level-one-html.html#ID-22445964', 'HTMLDivElement')}}                     | {{Spec2('DOM1')}}         | Definición inicial.                                 |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "grouping-content.html#the-div-element", "HTMLDivElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No hay cambios de  {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "grouping-content.html#the-div-element", "HTMLDivElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>No hay cambios de {{SpecName("DOM2 HTML")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-22445964', 'HTMLDivElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No hay cambios de {{SpecName("DOM1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-22445964', 'HTMLDivElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.HTMLDivElement")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>El elemento HTML que implementa esta interfaz: {{ HTMLElement("div") }}.</li>
-</ul>
+- El elemento HTML que implementa esta interfaz: {{ HTMLElement("div") }}.

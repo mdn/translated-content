@@ -10,100 +10,75 @@ tags:
   - URL API
 translation_of: Web/API/URL
 ---
-<div>{{ApiRef("URL API")}} {{SeeCompatTable}}</div>
+{{ApiRef("URL API")}} {{SeeCompatTable}}
 
-<p>La interfaz <strong><code>URL</code></strong> representa a un objeto que provee métodos estáticos para crear objetos URL.</p>
+La interfaz **`URL`** representa a un objeto que provee métodos estáticos para crear objetos URL.
 
-<p>When using a user agent where no constructor has been implemented yet, it is possible to access such an object using the {{domxref("Window.URL")}} properties (prefixed with Webkit-based browser as <code>Window.webkitURL</code>).</p>
+When using a user agent where no constructor has been implemented yet, it is possible to access such an object using the {{domxref("Window.URL")}} properties (prefixed with Webkit-based browser as `Window.webkitURL`).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("URL.href")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the whole URL.</dd>
- <dt>{{domxref("URL.protocol")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the protocol scheme of the URL, including the final <code>':'</code>.</dd>
- <dt>{{domxref("URL.host")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the host, that is the <em>hostname</em>, a <code>':'</code>, and the <em>port</em> of the URL.</dd>
- <dt>{{domxref("URL.hostname")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the domain of the URL.</dd>
- <dt>{{domxref("URL.port")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the port number of the URL.</dd>
- <dt>{{domxref("URL.pathname")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing an initial <code>'/'</code> followed by the path of the URL.</dd>
- <dt>{{domxref("URL.search")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing a <code>'?'</code> followed by the parameters of the URL.</dd>
- <dt>{{domxref("URL.hash")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing a <code>'#'</code> followed by the fragment identifier of the URL.</dd>
- <dt>{{domxref("URL.username")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the username specified before the domain name.</dd>
- <dt>{{domxref("URL.password")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the password specified before the domain name.</dd>
- <dt>{{domxref("URL.origin")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the origin of the URL, that is its scheme, its domain and its port.</dd>
-</dl>
+- {{domxref("URL.href")}}
+  - : Is a {{domxref("DOMString")}} containing the whole URL.
+- {{domxref("URL.protocol")}}
+  - : Is a {{domxref("DOMString")}} containing the protocol scheme of the URL, including the final `':'`.
+- {{domxref("URL.host")}}
+  - : Is a {{domxref("DOMString")}} containing the host, that is the _hostname_, a `':'`, and the _port_ of the URL.
+- {{domxref("URL.hostname")}}
+  - : Is a {{domxref("DOMString")}} containing the domain of the URL.
+- {{domxref("URL.port")}}
+  - : Is a {{domxref("DOMString")}} containing the port number of the URL.
+- {{domxref("URL.pathname")}}
+  - : Is a {{domxref("DOMString")}} containing an initial `'/'` followed by the path of the URL.
+- {{domxref("URL.search")}}
+  - : Is a {{domxref("DOMString")}} containing a `'?'` followed by the parameters of the URL.
+- {{domxref("URL.hash")}}
+  - : Is a {{domxref("DOMString")}} containing a `'#'` followed by the fragment identifier of the URL.
+- {{domxref("URL.username")}}
+  - : Is a {{domxref("DOMString")}} containing the username specified before the domain name.
+- {{domxref("URL.password")}}
+  - : Is a {{domxref("DOMString")}} containing the password specified before the domain name.
+- {{domxref("URL.origin")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing the origin of the URL, that is its scheme, its domain and its port.
 
-<dl>
- <dt>{{domxref("URL.searchParams")}}</dt>
- <dd>Returns a {{domxref("URLSearchParams")}} object allowing to access the GET query arguments contained in the URL.</dd>
-</dl>
+<!---->
 
-<h2 id="Constructor">Constructor</h2>
+- {{domxref("URL.searchParams")}}
+  - : Returns a {{domxref("URLSearchParams")}} object allowing to access the GET query arguments contained in the URL.
 
-<dl>
- <dt>{{domxref("URL.URL", "URL()")}}</dt>
- <dd>Creates and return a <code>URL</code> object composed from the given parameters.</dd>
-</dl>
+## Constructor
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("URL.URL", "URL()")}}
+  - : Creates and return a `URL` object composed from the given parameters.
 
-<p><em>The <code>URL</code> interface implements methods defined in {{domxref("URLUtils")}}.</em></p>
+## Methods
 
-<dl>
- <dt>{{domxref("URLUtils.toString()")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the whole URL. It is a synonym for {{domxref("URLUtils.href")}}, though it can't be used to modify the value.</dd>
-</dl>
+_The `URL` interface implements methods defined in {{domxref("URLUtils")}}._
 
-<h2 id="Static_methods">Static methods</h2>
+- {{domxref("URLUtils.toString()")}}
+  - : Returns a {{domxref("DOMString")}} containing the whole URL. It is a synonym for {{domxref("URLUtils.href")}}, though it can't be used to modify the value.
 
-<dl>
- <dt>{{domxref("URL.createObjectURL()")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing a unique blob URL, that is a URL with <code>blob:</code> as its scheme, followed by an opaque string uniquely identifying the object in the browser.</dd>
- <dt>{{domxref("URL.revokeObjectURL()")}}</dt>
- <dd>Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.</dd>
-</dl>
+## Static methods
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("URL.createObjectURL()")}}
+  - : Returns a {{domxref("DOMString")}} containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
+- {{domxref("URL.revokeObjectURL()")}}
+  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#creating-revoking', 'URL')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Added the static methods <code>URL.createObjectURL()</code> and <code>URL.revokeObjectURL</code><code>()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#api', 'Node')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition (implements <code>URLUtils</code>).</td>
-  </tr>
- </tbody>
-</table>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Specification                                                            | Status                       | Comment                                                                           |
+| ------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------------------------------------- |
+| {{SpecName('File API', '#creating-revoking', 'URL')}} | {{Spec2('File API')}} | Added the static methods `URL.createObjectURL()` and ` URL.revokeObjectURL``() `. |
+| {{SpecName('URL', '#api', 'Node')}}                         | {{Spec2('URL')}}         | Initial definition (implements `URLUtils`).                                       |
+
+## Browser compatibility
 
 {{Compat("api.URL")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Property allowing to get such an object: {{domxref("Window.URL")}}.</li>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- Property allowing to get such an object: {{domxref("Window.URL")}}.
+- [Components.utils.importGlobalProperties](/es/docs/Components.utils.importGlobalProperties)

@@ -5,23 +5,18 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/focusOffset
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Devuelve el número de caracteres en que el foco de la selección es colocado dentro de <a href="es/DOM/Selection/focusNode">focusNode</a>.</p>
+Devuelve el número de caracteres en que el foco de la selección es colocado dentro de [focusNode](es/DOM/Selection/focusNode).
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><i>sel</i>.focusOffset
-</pre>
+    sel.focusOffset
 
-<h3 id="Notas" name="Notas">Notas</h3>
+### Notas
 
-<p>Este número está basado en cero. Si la selección termina con el primer carácter en <a href="es/DOM/Selection/focusNode">focusNode</a>, el número devuelto será 0.</p>
+Este número está basado en cero. Si la selección termina con el primer carácter en [focusNode](es/DOM/Selection/focusNode), el número devuelto será 0.
 
-<p> </p>
-
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "en": "en/DOM/Selection/focusOffset", "it": "it/DOM/Selection/focusOffset", "pl": "pl/DOM/Selection/focusOffset" } ) }}</p>
+{{ languages( { "en": "en/DOM/Selection/focusOffset", "it": "it/DOM/Selection/focusOffset", "pl": "pl/DOM/Selection/focusOffset" } ) }}

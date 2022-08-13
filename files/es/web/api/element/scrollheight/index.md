@@ -9,53 +9,50 @@ tags:
   - Vista CSSOM
 translation_of: Web/API/Element/scrollHeight
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><span id="result_box" lang="es"><span>El elemento </span><strong> <span>Element.scrollHeight</span></strong> <span>atributo unicamente de lectura</span> <span>es una medida de</span> <span>la altura del</span> <span>contenido de un elemento</span><span>,</span> <span>incluyendo el contenido</span> que <span>no es visible</span> <span>en la pantalla</span> <span>debido al desbordamiento</span><span>.</span> <span>El valor</span> </span><code>scrollHeight</code><span lang="es"> <span>es</span> <span>igual a la</span> <span>altura mínima (</span><span>donde la altura</span> <span>incluye el relleno</span> <span>, pero no incluye</span> <span>bordes y márgenes</span><span>)</span> <span>El elemento</span> <span>lo necesita</span> <span>con el fin de</span> <span>adaptarse a</span> <span>todos los contenidos</span> <span>en</span> <span>el punto de vista</span> <span>sin necesidad de utilizar</span> <span>una barra de desplazamiento</span> <span>vertical.</span> <span>Incluye</span> <span>el </span> <span>elemento</span> <span>relleno pero no</span> <span>su margen</span><span>.</span></span></p>
+El elemento **Element.scrollHeight** atributo unicamente de lectura es una medida de la altura del contenido de un elemento, incluyendo el contenido que no es visible en la pantalla debido al desbordamiento. El valor `scrollHeight` es igual a la altura mínima (donde la altura incluye el relleno , pero no incluye bordes y márgenes) El elemento lo necesita con el fin de adaptarse a todos los contenidos en el punto de vista sin necesidad de utilizar una barra de desplazamiento vertical. Incluye el elemento relleno pero no su margen.
 
-<div class="note">
-<p><span id="result_box" lang="es"><span>Esta propiedad</span> <span>redondea</span> <span>el valor a</span> <span>un número entero</span><span>.</span> <span>Si se necesita</span> <span>un valor fraccionario</span><span>,</span> <span>utilizar </span></span>{{domxref("Element.getBoundingClientRect()")}}.</p>
-</div>
+> **Nota:** Esta propiedad redondea el valor a un número entero. Si se necesita un valor fraccionario, utilizar {{domxref("Element.getBoundingClientRect()")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">var <em>intElemScrollHeight</em> = <em>element</em>.scrollHeight;</pre>
+    var intElemScrollHeight = element.scrollHeight;
 
-<p><em>intElemScrollHeight</em> es una variable que almacena un número entero correspondiente al valor  scrollHeight en pixels del elemento. scrollHeight es una propiedad unicamente de lectura.</p>
+_intElemScrollHeight_ es una variable que almacena un número entero correspondiente al valor scrollHeight en pixels del elemento. scrollHeight es una propiedad unicamente de lectura.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<div id="offsetContainer" style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
-<div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
-<p id="PaddingTopLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-top</p>
+padding-top
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<p id="PaddingBottomLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-bottom</p>
-</div>
-<strong>Left</strong> <strong>Top</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong> <strong style="color: blue; font-family: arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong> <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em></div>
+padding-bottom
 
-<p><img alt="Image:scrollHeight.png" class="internal" src="/@api/deki/files/840/=ScrollHeight.png"></p>
+**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-<h2 id="Problemas_y_Soluciones">Problemas y Soluciones</h2>
+![Image:scrollHeight.png](/@api/deki/files/840/=ScrollHeight.png)
 
-<h3 id="Determina_si_un_elemento_ha_sido_totalmente_desplazado"><span id="result_box" lang="es"><span>Determina</span> <span>si un elemento</span> <span>ha sido totalmente</span> <span>desplazado</span></span></h3>
+## Problemas y Soluciones
 
-<p>La siguiente equivalencia devuelve <code>true</code> si un elemento está al final de su desplazamiento, <code>false</code> si no es así.</p>
+### Determina si un elemento ha sido totalmente desplazado
 
-<pre class="syntaxbox notranslate">element.scrollHeight - element.scrollTop === element.clientHeight</pre>
+La siguiente equivalencia devuelve `true` si un elemento está al final de su desplazamiento, `false` si no es así.
 
-<h2 id="scrollHeight_Demo">scrollHeight Demo</h2>
+    element.scrollHeight - element.scrollTop === element.clientHeight
 
-<p>As<code>ociada al evento <a href="/en-US/docs/DOM/element.onscroll">onscroll</a></code> , esta equivalencia puede ser útil para determinar si un usuario ha leido un texto o no (ver también las propiedades de  <code><a href="/en-US/docs/DOM/element.scrollTop">element.scrollTop</a></code> y  <code><a href="/en-US/docs/DOM/element.clientHeight">element.clientHeight</a></code> ). Por ejemplo:</p>
+## scrollHeight Demo
 
-<h3 id="HTML">HTML</h3>
+As`ociada al evento onscroll` , esta equivalencia puede ser útil para determinar si un usuario ha leido un texto o no (ver también las propiedades de [`element.scrollTop`](/en-US/docs/DOM/element.scrollTop) y [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight) ). Por ejemplo:
 
-<pre class="brush: html notranslate">&lt;form name="registration"&gt;
-  &lt;p&gt;
-    &lt;textarea id="rules"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+### HTML
+
+```html
+<form name="registration">
+  <p>
+    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -77,18 +74,20 @@ ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maec
 interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
 laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
 nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    &lt;/textarea&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" id="agree" name="accept" /&gt;
-    &lt;label for="agree"&gt;I agree&lt;/label&gt;
-    &lt;input type="submit" id="nextstep" value="Next" /&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</pre>
+    </textarea>
+  </p>
+  <p>
+    <input type="checkbox" id="agree" name="accept" />
+    <label for="agree">I agree</label>
+    <input type="submit" id="nextstep" value="Next" />
+  </p>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">#notice {
+```css
+#notice {
   display: inline-block;
   margin-bottom: 12px;
   border-radius: 5px;
@@ -103,11 +102,13 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   padding: 5px;
   border: #2A9F00 solid 2px;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">function checkReading () {
+```js
+function checkReading () {
   if (checkReading.read) {
     return;
   }
@@ -125,36 +126,24 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('scrollHeight_Demo', '640', '400')}}</p>
+{{EmbedLiveSample('scrollHeight_Demo', '640', '400')}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Especificación</th>
-   <th>Estado</th>
-   <th>Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-element-scrollheight", "Element.scrollHeight")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Inicial definición</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                           | Estado                           | Comentario         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{SpecName("CSSOM View", "#dom-element-scrollheight", "Element.scrollHeight")}} | {{Spec2("CSSOM View")}} | Inicial definición |
 
-<h2 id="Compatibilidad_de_los_Navegadores">Compatibilidad de los Navegadores</h2>
+## Compatibilidad de los Navegadores
 
 {{Compat("api.Element.scrollHeight")}}
 
-<h2 id="Ver_También">Ver También</h2>
+## Ver También
 
-<ul>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9</a></li>
- <li>{{domxref("Element.clientHeight")}}</li>
- <li>{{domxref("HTMLElement.offsetHeight")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determinación de las dimensiones de los elementos</a></li>
-</ul>
+- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- {{domxref("Element.clientHeight")}}
+- {{domxref("HTMLElement.offsetHeight")}}
+- [Determinación de las dimensiones de los elementos](/es/docs/Determining_the_dimensions_of_elements)

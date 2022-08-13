@@ -9,69 +9,50 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-iteration-count
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}{{ SeeCompatTable() }}
 
-<div>{{ SeeCompatTable() }}</div>
+## Resumen
 
-<h2 id="Resumen">Resumen</h2>
+La propiedad [CSS](/en/CSS "CSS") `animation-iteration-count` define el numero de veces que un ciclo de animación debe ser ejecutado antes de detenerse.
 
-<p>La propiedad <a href="/en/CSS" title="CSS">CSS</a> <code style="font-style: normal;">animation-iteration-count</code> define el numero de veces que un ciclo de animación debe ser ejecutado antes de detenerse.</p>
+A menudo es conveniente utilizar la propiedad {{ cssxref("animation") }} para ajustar todas las propiedades de animación a la vez.
 
-<p>A menudo es conveniente utilizar la propiedad {{ cssxref("animation") }} para ajustar todas las propiedades de animación a la vez.</p>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Sintaxis
 
-<h2 id="Sintaxis">Sintaxis</h2>
+    Sintaxis formal: {{csssyntax("animation-iteration-count")}}
 
-<pre class="twopartsyntaxbox">Sintaxis formal: {{csssyntax("animation-iteration-count")}}
-</pre>
+<!---->
 
-<pre>animation-iteration-count: infinite;
-animation-iteration-count: 3;
-animation-iteration-count: 2.3;
+    animation-iteration-count: infinite;
+    animation-iteration-count: 3;
+    animation-iteration-count: 2.3;
 
-animation-iteration-count: 2, 0, infinite;
-</pre>
+    animation-iteration-count: 2, 0, infinite;
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>infinite</code></dt>
- <dd>La animación se repetirá siempre.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>El número de veces que la animación debe repetir: es 1 por defecto. Los valores negativos no son validos. Puede especificar valores no enteros para ejecutar parte de un ciclo de animación (por ejemplo 0.5 se ejecutara la mitad del ciclo de la animación).</dd>
-</dl>
+- `infinite`
+  - : La animación se repetirá siempre.
+- `<number>`
+  - : El número de veces que la animación debe repetir: es 1 por defecto. Los valores negativos no son validos. Puede especificar valores no enteros para ejecutar parte de un ciclo de animación (por ejemplo 0.5 se ejecutara la mitad del ciclo de la animación).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>Ver ejemplos <a href="/en-US/docs/CSS/Using_CSS_animations">CSS animations</a>.</p>
+Ver ejemplos [CSS animations](/es/docs/CSS/Using_CSS_animations).
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificaciones</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations', '#animation-iteration-count', 'animation-iteration-count') }}</td>
-   <td>{{ Spec2('CSS3 Animations') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificaciones                                                                                                             | Estado                                   | Comentario |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
+| {{ SpecName('CSS3 Animations', '#animation-iteration-count', 'animation-iteration-count') }} | {{ Spec2('CSS3 Animations') }} |            |
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("css.properties.animation-iteration-count")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations" title="Tutorial about CSS animations">Usando animaciones CSS</a></li>
- <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
-</ul>
+- [Usando animaciones CSS](/es/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
+- {{ domxref("AnimationEvent", "AnimationEvent") }}

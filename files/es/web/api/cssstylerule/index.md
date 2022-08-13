@@ -5,54 +5,35 @@ tags:
   - API
 translation_of: Web/API/CSSStyleRule
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><strong><code>CSSStyleRule</code></strong> representa una sola regla de estilos CSS. Implementa la interfaz {{domxref("CSSRule")}} with a type value of <code>1</code> (<code>CSSRule.STYLE_RULE</code>).</p>
+**`CSSStyleRule`** representa una sola regla de estilos CSS. Implementa la interfaz {{domxref("CSSRule")}} with a type value of `1` (`CSSRule.STYLE_RULE`).
 
-<h2 id="Properties" name="Properties">Sintaxis</h2>
+## Sintaxis
 
-<p>La sintaxis es descrita usando el formato <a class="external" href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a>.</p>
+La sintaxis es descrita usando el formato [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/).
 
-<pre>interface CSSStyleRule : CSSRule {
-    attribute DOMString selectorText;
-    readonly attribute CSSStyleDeclaration style;
-};</pre>
+    interface CSSStyleRule : CSSRule {
+        attribute DOMString selectorText;
+        readonly attribute CSSStyleDeclaration style;
+    };
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<dl>
- <dt id="selectorText">{{domxref("CSSStyleRule.selectorText")}}</dt>
- <dd>Obtiene la representación textual del selector para esta regla, e.g. <code>"h1,h2"</code>.</dd>
- <dt id="style">{{domxref("CSSStyleRule.style")}} {{readonlyinline}}</dt>
- <dd>Retorna el objeto {{domxref("CSSStyleDeclaration")}} para la regla. <strong>Sólo lectura.</strong></dd>
-</dl>
+- {{domxref("CSSStyleRule.selectorText")}}
+  - : Obtiene la representación textual del selector para esta regla, e.g. `"h1,h2"`.
+- {{domxref("CSSStyleRule.style")}} {{readonlyinline}}
+  - : Retorna el objeto {{domxref("CSSStyleDeclaration")}} para la regla. **Sólo lectura.**
 
-<h2 id="Specification" name="Specification">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM', '#the-cssstylerule-interface', 'CSSStyleRule') }}</td>
-   <td>{{ Spec2('CSSOM') }}</td>
-   <td>Sin cambios</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }}</td>
-   <td>{{ Spec2('DOM2 Style') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Estatus                          | Comentario  |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| {{ SpecName('CSSOM', '#the-cssstylerule-interface', 'CSSStyleRule') }} | {{ Spec2('CSSOM') }}     | Sin cambios |
+| {{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }} | {{ Spec2('DOM2 Style') }} |             |
 
-<h2 id="Compatibilidad_entre_Navegadores">Compatibilidad entre Navegadores</h2>
+## Compatibilidad entre Navegadores
 
-<p>Para obtener informacion de compatibilidad en los distintos navegadores, por favor consulta la tabla de compatibilidad de la interfaz asociada.</p>
+Para obtener informacion de compatibilidad en los distintos navegadores, por favor consulta la tabla de compatibilidad de la interfaz asociada.
 
 {{Compat("api.CSSStyleRule")}}

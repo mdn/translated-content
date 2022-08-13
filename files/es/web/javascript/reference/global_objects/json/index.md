@@ -10,173 +10,132 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON
 ---
-<div>{{JSRef("Objetos_globales", "JSON")}}</div>
+{{JSRef("Objetos_globales", "JSON")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>El objeto JSON contiene métodos para analizar <a class="external" href="http://json.org/">JavaScript Object Notation</a> (JSON) y convertir valores a JSON. No puede ser llamado o construído, y aparte de estas dos propiedades, no tiene funcionalidad interesante por sí mismo.</p>
+El objeto JSON contiene métodos para analizar [JavaScript Object Notation](http://json.org/) (JSON) y convertir valores a JSON. No puede ser llamado o construído, y aparte de estas dos propiedades, no tiene funcionalidad interesante por sí mismo.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<h3 id="JavaScript_Object_Notation">JavaScript Object Notation</h3>
+### JavaScript Object Notation
 
-<p>JSON es una sintaxis para serializar objetos, arreglos, números, cadenas, booleanos y nulos. Está basado sobre sintaxis JavaScript pero es diferente a ella: algo JavaScript no es JSON, y algo JSON no es JavaScript. Mira también: <a href="http://timelessrepo.com/json-isnt-a-javascript-subset">JSON: The JavaScript subset that isn't</a>.</p>
+JSON es una sintaxis para serializar objetos, arreglos, números, cadenas, booleanos y nulos. Está basado sobre sintaxis JavaScript pero es diferente a ella: algo JavaScript no es JSON, y algo JSON no es JavaScript. Mira también: [JSON: The JavaScript subset that isn't](http://timelessrepo.com/json-isnt-a-javascript-subset).
 
-<table>
- <caption>Diferencias entre JavaScript y JSON</caption>
- <thead>
-  <tr>
-   <th scope="col">Tipo JavaScript</th>
-   <th scope="col">Diferencia JSON</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Objetos y arreglos</td>
-   <td>
-    <p>Los nombres de las propiedades deben tener doble comilla; las comas finales están prohibidas.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>Números</td>
-   <td>Los ceros a la izquierda están prohibidos; <span id="result_box" lang="es"><span class="hps">un punto</span> <span class="hps">decimal</span> <span class="hps">debe ser seguido</span> <span class="hps">al menos por un dígito</span><span>.</span></span></td>
-  </tr>
-  <tr>
-   <td>Cadenas</td>
-   <td>
-    <p>Solo un limitado conjunto de caracteres pueden ser de escape; ciertos caracteres de control estan prohibidos; los caracteres de separador de linea Unicode (U+2028) y el separador de parrafo (U+2029) son permitidos; las cadenas deben estar entre comillas dobles. Mira el siguiente ejemplo donde {{jsxref("JSON.parse")}} funciona bien y un{{jsxref("SyntaxError")}} es generado cuando se evalua el codigo como JavaScript:</p>
+| Tipo JavaScript    | Diferencia JSON                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Objetos y arreglos | Los nombres de las propiedades deben tener doble comilla; las comas finales están prohibidas.                                                                                                                                                                                                                                                                                                                                                          |
+| Números            | Los ceros a la izquierda están prohibidos; un punto decimal debe ser seguido al menos por un dígito.                                                                                                                                                                                                                                                                                                                                                   |
+| Cadenas            | Solo un limitado conjunto de caracteres pueden ser de escape; ciertos caracteres de control estan prohibidos; los caracteres de separador de linea Unicode (U+2028) y el separador de parrafo (U+2029) son permitidos; las cadenas deben estar entre comillas dobles. Mira el siguiente ejemplo donde {{jsxref("JSON.parse")}} funciona bien y un{{jsxref("SyntaxError")}} es generado cuando se evalua el codigo como JavaScript:```js |
 
-    <pre class="brush: js notranslate" id="comment_text_1">
-var code = '"\u2028\u2029"';
-JSON.parse(code); // works fine
-eval(code); // fails</pre>
-   </td>
-  </tr>
- </tbody>
-</table>
+var code = '"\u2028\u2029"'; JSON.parse(code); // works fine eval(code); // fails
 
-<p>La sintaxis JSON completa es la siguiente:</p>
+````|
 
-<pre class="eval notranslate"><var>JSON</var> = <strong>null</strong>
-    <em>or</em> <strong>true</strong> <em>or</em> <strong>false</strong>
-    <em>or</em> <var>JSONNumber</var>
-    <em>or</em> <var>JSONString</var>
-    <em>or</em> <var>JSONObject</var>
-    <em>or</em> <var>JSONArray</var>
+La sintaxis JSON completa es la siguiente:
 
-<var>JSONNumber</var> = <strong>-</strong> <var>PositiveNumber</var>
-          <em>or</em> <var>PositiveNumber</var>
-<var>PositiveNumber</var> = DecimalNumber
-              or <var>DecimalNumber</var> <strong>.</strong> <var>Digits</var>
-              or <var>DecimalNumber</var> <strong>.</strong> <var>Digits</var> <var>ExponentPart</var>
-              or <var>DecimalNumber</var> <var>ExponentPart</var>
-<var>DecimalNumber</var> = <strong>0</strong>
-             <em>or</em> <var>OneToNine</var> <var>Digits</var>
-<var>ExponentPart</var> = <strong>e</strong> <var>Exponent</var>
-            <em>or</em> <strong>E</strong> <var>Exponent</var>
-<var>Exponent</var> = <var>Digits</var>
-        <em>or</em> <strong>+</strong> <var>Digits</var>
-        <em>or</em> <strong>-</strong> <var>Digits</var>
-<var>Digits</var> = <var>Digit</var>
-      <em>or</em> <var>Digits</var> <var>Digit</var>
-<var>Digit</var> = <strong>0</strong> through <strong>9</strong>
-<var>OneToNine</var> = <strong>1</strong> through <strong>9</strong>
+    JSON = null
+        or true or false
+        or JSONNumber
+        or JSONString
+        or JSONObject
+        or JSONArray
 
-<var>JSONString</var> = <strong>""</strong>
-          <em>or</em> <strong>"</strong> <var>StringCharacters</var> <strong>"</strong>
-<var>StringCharacters</var> = <var>StringCharacter</var>
-                <em>or</em> <var>StringCharacters</var> <var>StringCharacter</var>
-<var>StringCharacter</var> = any character
-                  <em>except</em> <strong>"</strong> <em>or</em> <strong>\</strong> <em>or</em> U+0000 through U+001F
-               <em>or</em> <var>EscapeSequence</var>
-<var>EscapeSequence</var> = <strong>\" </strong><em>or</em> <strong>\/ </strong><em>or</em> <strong>\\ </strong><em>or</em> <strong>\b </strong><em>or</em> <strong>\f </strong><em>or</em> <strong>\n </strong><em>or</em> <strong>\r </strong><em>or</em> <strong>\t</strong>
-              <em>or</em> <strong>\u</strong> <var>HexDigit</var> <var>HexDigit</var> <var>HexDigit</var> <var>HexDigit</var>
-<var>HexDigit</var> = <strong>0</strong> through <strong>9</strong>
-        <em>or</em> <strong>A</strong> through <strong>F</strong>
-        <em>or</em> <strong>a</strong> through <strong>f</strong>
+    JSONNumber = - PositiveNumber
+              or PositiveNumber
+    PositiveNumber = DecimalNumber
+                  or DecimalNumber . Digits
+                  or DecimalNumber . Digits ExponentPart
+                  or DecimalNumber ExponentPart
+    DecimalNumber = 0
+                 or OneToNine Digits
+    ExponentPart = e Exponent
+                or E Exponent
+    Exponent = Digits
+            or + Digits
+            or - Digits
+    Digits = Digit
+          or Digits Digit
+    Digit = 0 through 9
+    OneToNine = 1 through 9
 
-<var>JSONObject</var> = <strong>{</strong> <strong>}</strong>
-          <em>or</em> <strong>{</strong> <var>Members</var> <strong>}</strong>
-<var>Members</var> = <var>JSONString</var> <strong>:</strong> <var>JSON</var>
-       <em>or</em> <var>Members</var> <strong>,</strong> <var>JSONString</var> <strong>:</strong> <var>JSON</var>
+    JSONString = ""
+              or " StringCharacters "
+    StringCharacters = StringCharacter
+                    or StringCharacters StringCharacter
+    StringCharacter = any character
+                      except " or \ or U+0000 through U+001F
+                   or EscapeSequence
+    EscapeSequence = \" or \/ or \\ or \b or \f or \n or \r or \t
+                  or \u HexDigit HexDigit HexDigit HexDigit
+    HexDigit = 0 through 9
+            or A through F
+            or a through f
 
-<var>JSONArray</var> = <strong>[</strong> <strong>]</strong>
-         <em>or</em> <strong>[</strong> <var>ArrayElements</var> <strong>]</strong>
-<var>ArrayElements</var> = <var>JSON</var>
-             <em>or</em> <var>ArrayElements</var> <strong>,</strong> <var>JSON</var></pre>
+    JSONObject = { }
+              or { Members }
+    Members = JSONString : JSON
+           or Members , JSONString : JSON
 
-<p>Espacios en blanco insignificantes pueden estar presentes en cualquier lugar excepto en un <var>JSONNumber</var> (los números no deben contener ningún espacio) o en una <var>JSONString</var> (donde es interpretado como el caracter correspondiente en la cadena, o podría causar un error). Los caracteres de Tabulación (U+0009), de retorno de carro (U+000D), de nueva línea (U+000A), y de espacio (U+0020) son los únicos caracteres de espacios en blanco válidos.</p>
+    JSONArray = [ ]
+             or [ ArrayElements ]
+    ArrayElements = JSON
+                 or ArrayElements , JSON
 
-<h2 id="Methods" name="Methods">Métodos</h2>
+Espacios en blanco insignificantes pueden estar presentes en cualquier lugar excepto en un _JSONNumber_ (los números no deben contener ningún espacio) o en una _JSONString_ (donde es interpretado como el caracter correspondiente en la cadena, o podría causar un error). Los caracteres de Tabulación (U+0009), de retorno de carro (U+000D), de nueva línea (U+000A), y de espacio (U+0020) son los únicos caracteres de espacios en blanco válidos.
 
-<dl>
- <dt>{{jsxref("JSON.parse()")}}</dt>
- <dd>Analiza una cadena de texto JSON, opcionalmente transformando el valor producido y sus propiedades, retornando el valor.</dd>
- <dt>{{jsxref("JSON.stringify()")}}</dt>
- <dd>Devuelve un string JSON correspondiente al valor especificado, incluyendo opcionalmente ciertas propiedades o reemplazando valores de propiedades de la manera definida por el usuario.</dd>
-</dl>
+## Métodos
 
-<h2 id="Polyfill">Polyfill</h2>
+*   {{jsxref("JSON.parse()")}}
+    *   : Analiza una cadena de texto JSON, opcionalmente transformando el valor producido y sus propiedades, retornando el valor.
+*   {{jsxref("JSON.stringify()")}}
+    *   : Devuelve un string JSON correspondiente al valor especificado, incluyendo opcionalmente ciertas propiedades o reemplazando valores de propiedades de la manera definida por el usuario.
 
-<p>El objeto JSON no es soportado por navegadores antiguos. Se puede solucionar esto insertando el siguiente código al inicio del script, permitiendo usar el objeto JSON en navegadores que no soportan su implementación de forma nativa (por ejemplo en Internet Explorer 6).</p>
+## Polyfill
 
-<p>El siguiente algoritmo es una imitación del objeto JSON nativo:</p>
+El objeto JSON no es soportado por navegadores antiguos. Se puede solucionar esto insertando el siguiente código al inicio del script, permitiendo usar el objeto JSON en navegadores que no soportan su implementación de forma nativa (por ejemplo en Internet Explorer 6).
 
-<pre class="brush: js notranslate">if (!window.JSON) {
+El siguiente algoritmo es una imitación del objeto JSON nativo:
+
+```js
+if (!window.JSON) {
   window.JSON = {
     parse: function (sJSON) { return eval("(" + sJSON + ")"); },
     stringify: function (vContent) {
       if (vContent instanceof Object) {
         var sOutput = "";
         if (vContent.constructor === Array) {
-          for (var nId = 0; nId &lt; vContent.length; sOutput += this.stringify(vContent[nId]) + ",", nId++);
+          for (var nId = 0; nId < vContent.length; sOutput += this.stringify(vContent[nId]) + ",", nId++);
             return "[" + sOutput.substr(0, sOutput.length - 1) + "]";
         }
         if (vContent.toString !== Object.prototype.toString) {
-          return "\"" + vContent.toString().replace(/"/g, "\\$&amp;") + "\"";
+          return "\"" + vContent.toString().replace(/"/g, "\\$&") + "\"";
         }
         for (var sProp in vContent) {
-          sOutput += "\"" + sProp.replace(/"/g, "\\$&amp;") + "\":" + this.stringify(vContent[sProp]) + ",";
+          sOutput += "\"" + sProp.replace(/"/g, "\\$&") + "\":" + this.stringify(vContent[sProp]) + ",";
         }
         return "{" + sOutput.substr(0, sOutput.length - 1) + "}";
      }
-     return typeof vContent === "string" ? "\"" + vContent.replace(/"/g, "\\$&amp;") + "\"" : String(vContent);
+     return typeof vContent === "string" ? "\"" + vContent.replace(/"/g, "\\$&") + "\"" : String(vContent);
     }
   };
 }
-</pre>
+````
 
-<p>Los objectos <a class="link-https" href="https://github.com/douglascrockford/JSON-js" title="https://github.com/douglascrockford/JSON-js">JSON2</a> y <a class="external" href="http://bestiejs.github.com/json3" title="http://bestiejs.github.com/json3">JSON3</a> son mas complejos que el objeto JSON ya que manejan <a class="external" href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfills</a>.</p>
+Los objectos [JSON2](https://github.com/douglascrockford/JSON-js) y [JSON3](http://bestiejs.github.com/json3) son mas complejos que el objeto JSON ya que manejan [polyfills](http://remysharp.com/2010/10/08/what-is-a-polyfill/).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12', 'JSON')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json-object', 'JSON')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                   | Estado                   | Comentario |
+| ---------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('ES5.1', '#sec-15.12', 'JSON')}}         | {{Spec2('ES5.1')}} |            |
+| {{SpecName('ES6', '#sec-json-object', 'JSON')}} | {{Spec2('ES6')}}     |            |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.JSON")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_native_JSON">Using native JSON</a></li>
- <li>{{jsxref("Date.prototype.toJSON()")}}</li>
-</ul>
+- [Using native JSON](/es/docs/Web/JavaScript/Guide/Using_native_JSON)
+- {{jsxref("Date.prototype.toJSON()")}}

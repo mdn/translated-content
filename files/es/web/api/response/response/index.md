@@ -3,73 +3,50 @@ title: Response()
 slug: Web/API/Response/Response
 translation_of: Web/API/Response/Response
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>El constructor <code><strong>Response()</strong></code> crea un nuevo objeto {{domxref("Response")}}</p>
+El constructor **`Response()`** crea un nuevo objeto {{domxref("Response")}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <var>miRespuesta</var> = new Response(<var>cuerpo</var>,<em>opciones</em>);</pre>
+    var miRespuesta = new Response(cuerpo,opciones);
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><em>cuerpo</em> {{optional_inline}}</dt>
- <dd>Un objeto que define el cuerpo de la respuesta. Puede ser <code>null</code>, o uno de los siguientes elementos:
- <ul>
-  <li>{{domxref("Blob")}}</li>
-  <li>{{domxref("BufferSource")}}</li>
-  <li>{{domxref("FormData")}}</li>
-  <li>{{domxref("ReadableStream")}}</li>
-  <li>{{domxref("URLSearchParams")}}</li>
-  <li>{{domxref("USVString")}}</li>
- </ul>
- </dd>
- <dt><em>opciones</em> {{optional_inline}}</dt>
- <dd>Un objeto que contiene las opciones de personalización para la respuesta HTTP. Las opciones posibles son:
- <ul>
-  <li><code>status</code>: El código de estado HTTP, p.e.: <code>200</code>.</li>
-  <li><code>statusText</code>: El mensaje de estado asociado con el código de estado HTTP, p.e.: <code>OK</code>.</li>
-  <li><code>headers</code>: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{domxref("ByteString")}} pares claves/valor (ver <a href="/en-US/docs/Web/HTTP/Headers">Cabeceras HTTP</a> para más información).</li>
- </ul>
- </dd>
-</dl>
+- _cuerpo_ {{optional_inline}}
+  - : Un objeto que define el cuerpo de la respuesta. Puede ser `null`, o uno de los siguientes elementos:\* {{domxref("Blob")}}
+    - {{domxref("BufferSource")}}
+    - {{domxref("FormData")}}
+    - {{domxref("ReadableStream")}}
+    - {{domxref("URLSearchParams")}}
+    - {{domxref("USVString")}}
+- _opciones_ {{optional_inline}}
+  - : Un objeto que contiene las opciones de personalización para la respuesta HTTP. Las opciones posibles son:\* `status`: El código de estado HTTP, p.e.: `200`.
+    - `statusText`: El mensaje de estado asociado con el código de estado HTTP, p.e.: `OK`.
+    - `headers`: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{domxref("ByteString")}} pares claves/valor (ver [Cabeceras HTTP](/es/docs/Web/HTTP/Headers) para más información).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>En nuestro <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">ejemplo Fetch Response</a> (ver <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) creamos un nuevo objeto <code>Response</code> usando el constructor, pasándole un nuevo objeto {{domxref("Blob")}} como cuerpo, y un objeto con <code>status</code> y<code>statusText</code> como opciones:</p>
+En nuestro [ejemplo Fetch Response](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (ver [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) creamos un nuevo objeto `Response` usando el constructor, pasándole un nuevo objeto {{domxref("Blob")}} como cuerpo, y un objeto con `status` y`statusText` como opciones:
 
-<pre class="brush: js">var miBlob = new Blob();
+```js
+var miBlob = new Blob();
 var opciones = { "status" : 200 , "statusText" : "Flipante!" };
-var miRespuesta = new Response(miBlob,opciones);</pre>
+var miRespuesta = new Response(miBlob,opciones);
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-response','Response()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                       | Estado                   | Comentarios        |
+| -------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('Fetch','#dom-response','Response()')}} | {{Spec2('Fetch')}} | Definición inicial |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
+{{Compat("api.Response.Response")}}
 
+## Relacionado
 
-<p>{{Compat("api.Response.Response")}}</p>
-
-<h2 id="Relacionado">Relacionado</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/es/docs/Web/HTTP)

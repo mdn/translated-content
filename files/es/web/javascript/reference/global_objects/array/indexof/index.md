@@ -11,51 +11,50 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/indexOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong>indexOf()</strong> retorna el primer índice en el que se puede encontrar un elemento dado en el array, ó retorna -1 si el elemento no esta presente.</p>
+El método **indexOf()** retorna el primer índice en el que se puede encontrar un elemento dado en el array, ó retorna -1 si el elemento no esta presente.
 
-<div class="note">
-<p><strong>Nota:</strong> Para el método String, ver {{jsxref("String.prototype.indexOf()")}}.</p>
-</div>
+> **Nota:** Para el método String, ver {{jsxref("String.prototype.indexOf()")}}.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><em>array</em>.indexOf(<em>searchElement</em>[, <em>fromIndex</em>])</code></pre>
+    array.indexOf(searchElement[, fromIndex])
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>searchElement</code></dt>
- <dd>Elemento a encontrar en el array.</dd>
- <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>Indica el índice por el que se comienza la búsqueda. Por defecto es 0, por lo que se busca en todo el array. Si el índice es mayor o igual a la longitud del array, devuelve -1, ya que no se buscaría en el array. Si el valor es negativo, se toma restando posiciones desde el final del array. Hay que tener en cuenta que aunque el índice sea negativo, la búsqueda seguirá realizándose en un orden incremental. Si el índice calculado es menor de 0, la búsqueda se realizará por todo el array.</dd>
-</dl>
+- `searchElement`
+  - : Elemento a encontrar en el array.
+- `fromIndex` {{optional_inline}}
+  - : Indica el índice por el que se comienza la búsqueda. Por defecto es 0, por lo que se busca en todo el array. Si el índice es mayor o igual a la longitud del array, devuelve -1, ya que no se buscaría en el array. Si el valor es negativo, se toma restando posiciones desde el final del array. Hay que tener en cuenta que aunque el índice sea negativo, la búsqueda seguirá realizándose en un orden incremental. Si el índice calculado es menor de 0, la búsqueda se realizará por todo el array.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>El primer índice del elemento en la matriz; -1 si no se encuentra.</p>
+El primer índice del elemento en la matriz; -1 si no se encuentra.
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p><code>indexOf()</code> compara <code>searchElement</code> con los elementos del array usando <a href="/es/docs/Web/JavaScript/Referencia/Operadores/Comparison_Operators#Using_the_Equality_Operators" title="JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">igualdad estricta</a> (el mismo método que cuando se usa ===, o el operador igualdad-triple).</p>
+`indexOf()` compara `searchElement` con los elementos del array usando [igualdad estricta](/es/docs/Web/JavaScript/Referencia/Operadores/Comparison_Operators#Using_the_Equality_Operators "JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators") (el mismo método que cuando se usa ===, o el operador igualdad-triple).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_indexOf()">Usando <code>indexOf()</code></h3>
+### Usando `indexOf()`
 
-<p>El siguiente ejemplo usa <code>indexof()</code> para localizar valores en un array </p>
+El siguiente ejemplo usa `indexof()` para localizar valores en un array
 
-<pre class="brush: js">var array = [2, 9, 9];
+```js
+var array = [2, 9, 9];
 array.indexOf(2);     // 0
 array.indexOf(7);     // -1
 array.indexOf(9, 2);  // 2
 array.indexOf(2, -1); // -1
-array.indexOf(2, -3); // 0</pre>
+array.indexOf(2, -3); // 0
+```
 
-<h3 id="Encontrar_todas_las_apariciones_de_un_elemento">Encontrar todas las apariciones de un elemento</h3>
+### Encontrar todas las apariciones de un elemento
 
-<pre class="brush: js">var indices = [];
+```js
+var indices = [];
 var array = ['a', 'b', 'a', 'c', 'a', 'd'];
 var element = 'a';
 var idx = array.indexOf(element);
@@ -64,15 +63,17 @@ while (idx != -1) {
   idx = array.indexOf(element, idx + 1);
 }
 console.log(indices);
-// [0, 2, 4]</pre>
+// [0, 2, 4]
+```
 
-<h3 id="Encontrar_si_un_elemento_existe_en_la_matriz_o_no_y_actualizar_la_matriz">Encontrar si un elemento existe en la matriz o no y actualizar la matriz</h3>
+### Encontrar si un elemento existe en la matriz o no y actualizar la matriz
 
-<pre class="brush: js">function updateVegetablesCollection (veggies, veggie) {
+```js
+function updateVegetablesCollection (veggies, veggie) {
     if (veggies.indexOf(veggie) === -1) {
         veggies.push(veggie);
         console.log('La nueva colección de vegetales es: ' + veggies);
-    } else if (veggies.indexOf(veggie) &gt; -1) {
+    } else if (veggies.indexOf(veggie) > -1) {
         console.log(veggie + ' ya existe en la colección de verduras.');
     }
 }
@@ -82,16 +83,15 @@ var veggies = ['patata', 'tomate', 'chiles', 'pimientoverde'];
 updateVegetablesCollection(veggies, 'espinaca');
 // La nueva colección de verduras es : patata, tomate, chiles, pimientoverde, espinaca
 updateVegetablesCollection(veggies, 'espinaca');
-// La espinaca ya existe en la colección de verduras.</pre>
+// La espinaca ya existe en la colección de verduras.
+```
 
-<p> </p>
+## Polyfill
 
-<h2 id="Compatibility" name="Compatibility">Polyfill</h2>
+`indexOf()` se agregó al estándar ECMA-262 en la 5a edición; por tanto no está implementado en todos los navegadores. Puedes hacerlo funcionar insertando el siguiente código al comienzo de tus scripts, permitiendo usar `indexOf()` en implementaciones que no lo soporten de forma nativa. Este algoritmo es exáctamente el especificado en ECMA-262, 5ª edición, suponiendo que {{jsxref("Global_Objects/TypeError", "TypeError")}} y {{jsxref("Math.abs()")}} tienen sus valores originales.
 
-<p><code>indexOf()</code> se agregó al estándar ECMA-262 en la 5<sup>a</sup> edición; por tanto no está implementado en todos los navegadores. Puedes hacerlo funcionar insertando el siguiente código al comienzo de tus scripts, permitiendo usar  <code>indexOf()</code> en implementaciones que no lo soporten de forma nativa. Este algoritmo es exáctamente el especificado en ECMA-262, 5ª edición, suponiendo que {{jsxref("Global_Objects/TypeError", "TypeError")}} y {{jsxref("Math.abs()")}} tienen sus valores originales.</p>
-
-
-<pre class="brush: js">if (!Array.prototype.indexOf) {
+```js
+if (!Array.prototype.indexOf) {
   Array.prototype.indexOf = function indexOf(member, startFrom) {
     /*
     En el modo no estricto, si la variable `this` es null o indefinida, entonces se establece
@@ -107,11 +107,11 @@ updateVegetablesCollection(veggies, 'espinaca');
       that = this instanceof Object ? this : new Object(this),
       length = isFinite(that.length) ? Math.floor(that.length) : 0;
 
-    if (index &gt;= length) {
+    if (index >= length) {
       return -1;
     }
 
-    if (index &lt; 0) {
+    if (index < 0) {
       index = Math.max(length + index, 0);
     }
 
@@ -121,25 +121,27 @@ updateVegetablesCollection(veggies, 'espinaca');
         como `member` y, por lo tanto, es necesario verificarlas.
       */
       do {
-        if (index in that &amp;&amp; that[index] === undefined) {
+        if (index in that && that[index] === undefined) {
           return index;
         }
-      } while (++index &lt; length);
+      } while (++index < length);
     } else {
       do {
         if (that[index] === member) {
           return index;
         }
-      } while (++index &lt; length);
+      } while (++index < length);
     }
 
     return -1;
   };
-}</pre>
+}
+```
 
-<p>Sin embargo, si está más interesado en todos los pequeños trozos técnicos definidos por el estándar ECMA, y está menos preocupado por el rendimiento o la concisión, entonces usted puede encontrar esta polyfill más descriptivo que sea más útil.</p>
+Sin embargo, si está más interesado en todos los pequeños trozos técnicos definidos por el estándar ECMA, y está menos preocupado por el rendimiento o la concisión, entonces usted puede encontrar esta polyfill más descriptivo que sea más útil.
 
-<pre class="brush: js">// Pasos de producción de ECMA-262, Edición 5, 15.4.4.14
+```js
+// Pasos de producción de ECMA-262, Edición 5, 15.4.4.14
 // Referencia: http://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
   Array.prototype.indexOf = function(searchElement, fromIndex) {
@@ -157,7 +159,7 @@ if (!Array.prototype.indexOf) {
     // 2. Dejar que `lenValue` sea el resultado de llamar al método interno
     //    de `o` con el argumento "length".
     // 3. Dejar que len sea ToUint32(lenValue).
-    var len = o.length &gt;&gt;&gt; 0;
+    var len = o.length >>> 0;
 
     // 4. Si `len` es 0, devolver -1.
     if (len === 0) {
@@ -168,18 +170,18 @@ if (!Array.prototype.indexOf) {
     //    ToInteger(fromIndex); si no, que `n` sea 0.
     var n = fromIndex | 0;
 
-    // 6. Si n &gt;= len, devolver -1.
-    if (n &gt;= len) {
+    // 6. Si n >= len, devolver -1.
+    if (n >= len) {
       return -1;
     }
 
-    // 7. Si n &gt;= 0, entonces deja que `k` sea `n`.
-    // 8. Si no, n&lt;0, deja que `k` sea `len - abs(n)`.
+    // 7. Si n >= 0, entonces deja que `k` sea `n`.
+    // 8. Si no, n<0, deja que `k` sea `len - abs(n)`.
     //    Si `k` es menor que 0, entonces deja que `k` sea 0.
-    k = Math.max(n &gt;= 0 ? n : len - Math.abs(n), 0);
+    k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
 
-    // 9. Repite, mientras k &lt; len
-    while (k &lt; len) {
+    // 9. Repite, mientras k < len
+    while (k < len) {
       // a. Dejar que `Pk` sea ToString(k).
       //   Esto está implícito para los operandos LHS del operador in
       // b. Dejar que kPresent sea el resultado de llamar al método
@@ -192,58 +194,34 @@ if (!Array.prototype.indexOf) {
       //        Algoritmo de comparación de igualdad estricta a
       //        searchElement y elementK.
       //  iii.  Si `same` es true, devuelve `k`.
-      if (k in o &amp;&amp; o[k] === searchElement) {
+      if (k in o && o[k] === searchElement) {
         return k;
       }
       k++;
     }
     return -1;
   };
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                       | Comentario                                          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}                     | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.6. |
+| {{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("javascript.builtins.Array.indexOf")}}</p>
+{{Compat("javascript.builtins.Array.indexOf")}}
 
-<h2 id="Notas_de_compatibilidad">Notas de compatibilidad</h2>
+## Notas de compatibilidad
 
-<ul>
- <li>Comenzando con Firefox 47 {{geckoRelease(47)}}, este método ya no devolverá <code>-0</code>. Por ejemplo, <code>[0] .indexOf (0, -0)</code> siempre devolverá <code>+0</code> ({{bug(1242043)}}).</li>
-</ul>
+- Comenzando con Firefox 47 {{geckoRelease(47)}}, este método ya no devolverá `-0`. Por ejemplo, `[0] .indexOf (0, -0)` siempre devolverá `+0` ({{bug(1242043)}}).
 
-<div id="compat-mobile"> </div>
+## Ver también
 
-<h2 id="See_also" name="See_also">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("String.prototype.indexOf()")}}

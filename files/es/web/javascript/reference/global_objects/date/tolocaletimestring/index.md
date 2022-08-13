@@ -12,49 +12,49 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleTimeString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>toLocaleTimeString()</code></strong> devuelve una cadena con una representación de la parte del tiempo de esta fecha sensible al idioma. Los nuevos argumentos <code>locales</code> y <code>options</code> le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse y personalizan el comportamiento de esta función. En implementaciones antiguas que ignoran los argumentos <code>locales</code> y <code>options</code> la localidad usada y la forma de la cadena devuelta son completamente dependientes de la implementación.</p>
+El método **`toLocaleTimeString()`** devuelve una cadena con una representación de la parte del tiempo de esta fecha sensible al idioma. Los nuevos argumentos `locales` y `options` le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse y personalizan el comportamiento de esta función. En implementaciones antiguas que ignoran los argumentos `locales` y `options` la localidad usada y la forma de la cadena devuelta son completamente dependientes de la implementación.
 
-<div>{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
 
+## Sintaxis
 
+    dateObj.toLocaleTimeString([locales[, options]])
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Parámetros
 
-<pre class="syntaxbox"><code><var>dateObj</var>.toLocaleTimeString([<var>locales[, </var><var>options</var>]])</code></pre>
+Los argumentos `locales` y `options` personalizan el comportamiento de la función y le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse. En las implementaciones que ignoran los argumentos `locales` y `options`, la localidad y la forma de la cadena devuelta son dependientes por completo de la implementación.
 
-<h3 id="Parámetros">Parámetros</h3>
+Vea el [constructor `Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat) para los detalles de estos parámetros y sobre cómo usarlos.
 
-<p>Los argumentos <code>locales</code> y <code>options</code> personalizan el comportamiento de la función y le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse. En las implementaciones que ignoran los argumentos <code>locales</code> y <code>options</code>, la localidad y la forma de la cadena devuelta son dependientes por completo de la implementación.</p>
+El valor predeterminado de cada componente de fecha-hora es {{jsxref("undefined")}}, pero si las propiedades `weekday`, `year`, `month` y `day` son todas {{jsxref("undefined")}}, entonces `year`, `month` y `day` se asumen como `"numeric"`.
 
-<p>Vea el <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat">constructor <code>Intl.DateTimeFormat()</code></a> para los detalles de estos parámetros y sobre cómo usarlos.</p>
+### Valor devuelto
 
-<p>El valor predeterminado de cada componente de fecha-hora es {{jsxref("undefined")}}, pero si las propiedades <code>weekday</code>, <code>year</code>, <code>month</code> y <code>day</code> son todas {{jsxref("undefined")}}, entonces <code>year</code>, <code>month</code> y <code>day</code> se asumen como <code>"numeric"</code>.</p>
+Una cadena representando la porción de tiempo de la instancia {{jsxref("Global_Objects/Date", "Date")}} dada, conforme a las convenciones específicas del idioma.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+## Ejemplos
 
-<p>Una cadena representando la porción de tiempo de la instancia {{jsxref("Global_Objects/Date", "Date")}} dada, conforme a las convenciones específicas del idioma.</p>
+### Usando `toLocaleTimeString()`
 
-<h2 id="Ejemplos">Ejemplos</h2>
+En el uso básico sin especificar una localidad, una cadena con formato en la localidad y opciones predeterminadas es devuelta.
 
-<h3 id="Usando_toLocaleTimeString">Usando <code>toLocaleTimeString()</code></h3>
-
-<p>En el uso básico sin especificar una localidad, una cadena con formato en la localidad y opciones predeterminadas es devuelta.</p>
-
-<pre class="brush: js">var fecha = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+```js
+var fecha = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleTimeString() sin argumentos depende de la implementación,
 // la localidad y la zona horaria predeterminadas
 console.log(date.toLocaleTimeString());
 // → "21:00:00" si se ejecuta en la localidad es-MX con la zona horaria America/Mexico_City
-</pre>
+```
 
-<h3 id="Verificando_el_soporte_de_argumentos_locales_y_options">Verificando el soporte de argumentos <code>locales</code> y <code>options</code></h3>
+### Verificando el soporte de argumentos `locales` y `options`
 
-<p>Los argumentos <code>locales</code> y <code>options</code> aún no están soportados en todos los navegadores. Para verificar si alguna implementación ya los soporta, puede usar el requerimiento de que etiquetas inválidas son rechazadas con una excepción {{jsxref("RangeError")}}:</p>
+Los argumentos `locales` y `options` aún no están soportados en todos los navegadores. Para verificar si alguna implementación ya los soporta, puede usar el requerimiento de que etiquetas inválidas son rechazadas con una excepción {{jsxref("RangeError")}}:
 
-<pre class="brush: js">function toLocaleTimeStringSoportaLocales() {
+```js
+function toLocaleTimeStringSoportaLocales() {
   try {
     new Date().toLocaleTimeString('i');
   } catch (e) {
@@ -62,13 +62,14 @@ console.log(date.toLocaleTimeString());
   }
   return false;
 }
-</pre>
+```
 
-<h3 id="Usando_locales">Usando <code>locales</code></h3>
+### Usando `locales`
 
-<p>Este ejemplo muestra una de las variaciones en formatos de tiempo localizados. Para obtener el formato del idioma usado en la interfaz de su aplicación, asegúrese de especificar ese idioma (y posiblemente algunos de <em>fallback</em>) usando el argumento <code>locales</code>:</p>
+Este ejemplo muestra una de las variaciones en formatos de tiempo localizados. Para obtener el formato del idioma usado en la interfaz de su aplicación, asegúrese de especificar ese idioma (y posiblemente algunos de _fallback_) usando el argumento `locales`:
 
-<pre class="brush: js">var fecha = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js
+var fecha = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // los siguientes formatos asumen la zona horaria de la localidad;
 // America/Los_Angeles para los EEUU
@@ -87,19 +88,20 @@ console.log(date.toLocaleTimeString('ko-KR'));
 
 // En muchos países donde hablan árabe se usan dígitos árabes
 console.log(date.toLocaleTimeString('ar-EG'));
-// → "<span dir="rtl">٧:٠٠:٠٠ م</span>"
+// → "٧:٠٠:٠٠ م"
 
 // cuando se pide un idioma que puede no estar disponible, como
 // balinés, incluya un idioma de respaldo, como en este caso, indonesio
 console.log(date.toLocaleTimeString(['ban', 'id']));
 // → "11.00.00"
-</pre>
+```
 
-<h3 id="Usando_options">Usando <code>options</code></h3>
+### Usando `options`
 
-<p>Los resultados provistos por <code>toLocaleTimeString()</code> pueden ser personalizados usando el argumento <code>options</code>:</p>
+Los resultados provistos por `toLocaleTimeString()` pueden ser personalizados usando el argumento `options`:
 
-<pre class="brush: js">var fecha = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js
+var fecha = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // una aplicación puede querer usar UTC y visibilizarlo:
 var options = { timeZone: 'UTC', timeZoneName: 'short' };
@@ -113,39 +115,27 @@ console.log(date.toLocaleTimeString('en-US', { hour12: false }));
 // mostrar únicamente horas y minutos, use options con la localidad predeterminada - usar un arreglo vacío
 console.log(date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
 // → "20:01"
+```
 
-</pre>
+## Rendimiento
 
-<h2 id="Rendimiento">Rendimiento</h2>
+Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} y usar su método {{jsxref("DateTimeFormat.prototype.format", "format")}}.
 
-<p>Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} y usar su método {{jsxref("DateTimeFormat.prototype.format", "format")}}.</p>
+## Especificaciones
 
-<h2 id="Especificaciones">Especificaciones</h2>
+| Specification                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ESDraft', '#sec-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}}         |
+| {{SpecName('ES Int Draft', '#sup-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}} |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sup-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}}</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilidad con navegadores
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+{{Compat("javascript.builtins.Date.toLocaleTimeString")}}
 
-<p>{{Compat("javascript.builtins.Date.toLocaleTimeString")}}</p>
+## Ver también
 
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toString()")}}

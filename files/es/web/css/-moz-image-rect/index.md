@@ -8,46 +8,45 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-moz-image-rect
 ---
-<div>{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("2.0")}}</div>
+{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("2.0")}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>Este valor para la propiedad <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref("background-image")}} te permite usar una parte de una imagen de gran tamaño como fondo. Esto permitirá, por ejemplo, usar diferentes partes de una imagen grande como si fueran una sóla imagen grande usada como fondo de diferentes partes de tú contenido.</p>
+Este valor para la propiedad [CSS](/es/docs/Web/CSS) {{cssxref("background-image")}} te permite usar una parte de una imagen de gran tamaño como fondo. Esto permitirá, por ejemplo, usar diferentes partes de una imagen grande como si fueran una sóla imagen grande usada como fondo de diferentes partes de tú contenido.
 
-<p>Funciona de manera similar a la propiedad {{cssxref("-moz-image-region")}} , que se usa junto con la propiedad{{cssxref("list-style-image")}} para utilizar partes de imágnes como iconos de listas. Sin embargo puede ser usado para cualquier fondo CSS.</p>
+Funciona de manera similar a la propiedad {{cssxref("-moz-image-region")}} , que se usa junto con la propiedad{{cssxref("list-style-image")}} para utilizar partes de imágnes como iconos de listas. Sin embargo puede ser usado para cualquier fondo CSS.
 
-<p>La síntaxis para el rectánigulo es similar a la de la función <a href="/en-US/docs/Web/CSS/shape#Syntax"><code>rect()</code></a> y genera un tipo CSS {{cssxref("&lt;shape&gt;")}} . Los cuatro valores son relativos a la esquina superior izquierda de la imagen.</p>
+La síntaxis para el rectánigulo es similar a la de la función [`rect()`](/es/docs/Web/CSS/shape#Syntax) y genera un tipo CSS {{cssxref("&lt;shape&gt;")}} . Los cuatro valores son relativos a la esquina superior izquierda de la imagen.
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="syntaxbox">-moz-image-rect({{cssxref("&lt;uri&gt;")}}, <em>top</em>, <em>right</em>, <em>bottom</em>, <em>left</em>);</pre>
+    -moz-image-rect({{cssxref("&lt;uri&gt;")}}, top, right, bottom, left);
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>{{cssxref("&lt;uri&gt;")}}</dt>
- <dd>La URI de la imagen de la que se cogera una parte.</dd>
- <dt><code>top</code></dt>
- <dd>El borde superior, especificado como  {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.</dd>
- <dt><code>right</code></dt>
- <dd>El borde derecho, especificado como  {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.</dd>
- <dt><code>bottom</code></dt>
- <dd>El borde inferior, especificado como  {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.</dd>
- <dt><code>left</code></dt>
- <dd>El borde izquierdo, especificado como  {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.</dd>
-</dl>
+- {{cssxref("&lt;uri&gt;")}}
+  - : La URI de la imagen de la que se cogera una parte.
+- `top`
+  - : El borde superior, especificado como {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.
+- `right`
+  - : El borde derecho, especificado como {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.
+- `bottom`
+  - : El borde inferior, especificado como {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.
+- `left`
+  - : El borde izquierdo, especificado como {{cssxref("&lt;length&gt;")}}, de la subimagen dentro de la imagen seleccionada.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Este ejemplo carga una imagen y la usa en cuatro segmento para dibujar el logo de Firefox en cuatro bloques  {{HTMLElement("div")}} blocks. Si hacemos click en el contenedor los cuatro segmentos rotarán cmabiando los valores de la propiedad {{cssxref("background-image")}} entre estos cuatro bloques {{HTMLElement("div")}}.</p>
+Este ejemplo carga una imagen y la usa en cuatro segmento para dibujar el logo de Firefox en cuatro bloques {{HTMLElement("div")}} blocks. Si hacemos click en el contenedor los cuatro segmentos rotarán cmabiando los valores de la propiedad {{cssxref("background-image")}} entre estos cuatro bloques {{HTMLElement("div")}}.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>El CSS define un estilo para el contenedor y, posteriormente los estilos para las cuatro cajas que comprenden la imagen completa.</p>
+El CSS define un estilo para el contenedor y, posteriormente los estilos para las cuatro cajas que comprenden la imagen completa.
 
-<p>Para el contenedor:</p>
+Para el contenedor:
 
-<pre class="brush: css">#container {
+```css
+#container {
   width:267px;
   height:272px;
   top:100px;
@@ -56,33 +55,37 @@ translation_of: Web/CSS/-moz-image-rect
   font-size:16px;
   text-shadow:white 0px 0px 6px;
   text-align:center;
-}</pre>
+}
+```
 
-<p>posteriormente las cuatro caja se defines las cajas que especifican los segmentos de la imagen. La vamos a ver una por una.</p>
+posteriormente las cuatro caja se defines las cajas que especifican los segmentos de la imagen. La vamos a ver una por una.
 
-<pre class="brush: css">#box1 {
+```css
+#box1 {
   background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 50%, 50%, 0%);
   width:133px;
   height:136px;
   position:absolute;
 }
-</pre>
+```
 
-<p>Esta es la esquina superior izquierda de la imagen. Define un rectángulo que contiene el cuartil superior izquierda de la imagen <code>firefox.jpg</code>.</p>
+Esta es la esquina superior izquierda de la imagen. Define un rectángulo que contiene el cuartil superior izquierda de la imagen `firefox.jpg`.
 
-<pre class="brush: css">#box2 {
+```css
+#box2 {
   background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 100%, 50%, 50%);
   width:133px;
   height:136px;
   position:absolute;
 }
-</pre>
+```
 
-<p>Esto define la esquina superior derecha:</p>
+Esto define la esquina superior derecha:
 
-<p>Las otras dos siguen un patrón similar:</p>
+Las otras dos siguen un patrón similar:
 
-<pre class="brush: css">#box3 {
+```css
+#box3 {
   background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 50%, 50%, 100%, 0%);
   width:133px;
   height:136px;
@@ -94,32 +97,34 @@ translation_of: Web/CSS/-moz-image-rect
   height:136px;
   position:absolute;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>Es bastante simple:</p>
+Es bastante simple:
 
-<pre class="brush: html">&lt;div id="container" onclick="rotate()"&gt;
-  &lt;div id="box1" style="left:0px;top:0px;"&gt;Top left&lt;/div&gt;
-  &lt;div id="box2" style="left:133px;top:0px;"&gt;Top right&lt;/div&gt;
-  &lt;div id="box3" style="left:0px;top:136px;"&gt;Bottom left&lt;/div&gt;
-  &lt;div id="box4" style="left:133px;top:136px;"&gt;Bottom right&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="container" onclick="rotate()">
+  <div id="box1" style="left:0px;top:0px;">Top left</div>
+  <div id="box2" style="left:133px;top:0px;">Top right</div>
+  <div id="box3" style="left:0px;top:136px;">Bottom left</div>
+  <div id="box4" style="left:133px;top:136px;">Bottom right</div>
+</div>
+```
 
-<p>Sitúa los 4 segmentos de una imagen en un caja de 2x2 celdas. Estos cuatro elementos están dentro de un bloque {{HTMLElement("div")}} más grande cuya función es recibir eventos click y mandarlos al código JavaScript.</p>
+Sitúa los 4 segmentos de una imagen en un caja de 2x2 celdas. Estos cuatro elementos están dentro de un bloque {{HTMLElement("div")}} más grande cuya función es recibir eventos click y mandarlos al código JavaScript.
 
-<h3 id="El_codigo_javaScript">El codigo javaScript</h3>
+### El codigo javaScript
 
-<p>Gestiona el evento click cuando el contenedor recibe un click de ratón</p>
+Gestiona el evento click cuando el contenedor recibe un click de ratón
 
-<pre class="brush:js">function rotate() {
+```js
+function rotate() {
   var prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
 
   // Una vez hemos guardado la última, empezamos a rotar.
 
-  for (var i=1; i&lt;=4; i++) {
+  for (var i=1; i<=4; i++) {
     var curId = "box" + i;
 
     // Permuta las imágenes de fondo.
@@ -128,16 +133,15 @@ translation_of: Web/CSS/-moz-image-rect
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }
-}</pre>
+}
+```
 
-<p>Usa {{domxref("window.getComputedStyle()")}} para establecer el estilo de cada elemento, cambiándolo al elemento posterior. Destacar que, una vez se empieza se guarda una copia del estilo de la última caja ya que será sobreescrito por el tercer elemento. Simplemente copiando los valores de la propiedad {{cssxref("background-image")}} de un elemento al siguiente, cuando hacemos click de ratón, conseguiremos el efecto deseado.</p>
+Usa {{domxref("window.getComputedStyle()")}} para establecer el estilo de cada elemento, cambiándolo al elemento posterior. Destacar que, una vez se empieza se guarda una copia del estilo de la última caja ya que será sobreescrito por el tercer elemento. Simplemente copiando los valores de la propiedad {{cssxref("background-image")}} de un elemento al siguiente, cuando hacemos click de ratón, conseguiremos el efecto deseado.
 
-<h3 id="Como_queda">Como queda</h3>
+### Como queda
 
-<p>{{EmbedLiveSample("Example","400","400")}}</p>
+{{EmbedLiveSample("Example","400","400")}}
 
-<h3 id="Bugs">Bugs</h3>
+### Bugs
 
-<ul>
- <li>{{WebkitBug(32177)}}</li>
-</ul>
+- {{WebkitBug(32177)}}

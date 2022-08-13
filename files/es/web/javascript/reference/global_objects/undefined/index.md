@@ -6,73 +6,74 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 original_slug: Web/JavaScript/Referencia/Objetos_globales/undefined
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad global <strong>undefined</strong> representa el valor primitivo <code>{{Glossary("Undefined", "undefined")}}</code>. Es uno de los {{Glossary("Primitive", "valores primitivos")}} de JavaScript.</p>
+La propiedad global **undefined** representa el valor primitivo `{{Glossary("Undefined", "undefined")}}`. Es uno de los {{Glossary("Primitive", "valores primitivos")}} de JavaScript.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>undefined</code></pre>
+    undefined
 
-<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
+## Descripción
 
-<p><code>undefined</code> es una propiedad del <em>objeto global</em>, es decir, una variable de alcance global. El valor inicial de <code>undefined</code> es el valor primitivo <code>{{Glossary("Undefined", "undefined")}}</code>.<span class="comment">this needs clarification, but that would require explaining primitive values</span></p>
+`undefined` es una propiedad del _objeto global_, es decir, una variable de alcance global. El valor inicial de `undefined` es el valor primitivo `{{Glossary("Undefined", "undefined")}}`.this needs clarification, but that would require explaining primitive values
 
-<p>En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), <code>undefined </code>es una propiedad <em>no-configurable</em>, <em>no-grabable</em> según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.</p>
+En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined `es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
 
-<p>Una variable a la que no se le ha asignado valor, o no se ha declarado en absoluto (no se declara, no existe) son de tipo <code>undefined</code>. Un método o sentencia también devuelve <code>undefined</code> si la variable que se está evaluando no tiene asignado un valor. Una función devuelve <code>undefined</code> si no se ha {{jsxref("Sentencias/return", "devuelto")}} un valor.</p>
+Una variable a la que no se le ha asignado valor, o no se ha declarado en absoluto (no se declara, no existe) son de tipo `undefined`. Un método o sentencia también devuelve `undefined` si la variable que se está evaluando no tiene asignado un valor. Una función devuelve `undefined` si no se ha {{jsxref("Sentencias/return", "devuelto")}} un valor.
 
-<div class="blockIndicator note">
-<p>Ten en cuenta que si no se ha declarado una variable ni explícita ni implícitamente, no puedes compararla con <strong>undefined  </strong>ya que obtendrías un <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a>, </strong> pero puedes comparar su tipo con la cadena (<a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String">String</a>) "undefined". En el ejemplo más abajo se podrá ver cómo conseguir esto usando el operador <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/typeof">typeof</a>.</p>
-</div>
+> **Nota:** Ten en cuenta que si no se ha declarado una variable ni explícita ni implícitamente, no puedes compararla con **undefined** ya que obtendrías un **[ReferenceError](/es/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError),** pero puedes comparar su tipo con la cadena ([String](/es/docs/Web/JavaScript/Referencia/Objetos_globales/String)) "undefined". En el ejemplo más abajo se podrá ver cómo conseguir esto usando el operador [typeof](/es/docs/Web/JavaScript/Referencia/Operadores/typeof).
 
-<div class="warning">
-<p>Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque <code>undefined </code>no es una {{jsxref("Reserved_Words", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.</p>
+> **Advertencia:** Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined `no es una {{jsxref("Reserved_Words", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.```js
+> //NO HAGAS ESTO
+>
+> // registra "foo string"
+> (function(){ var undefined = 'foo'; console.log(undefined, typeof undefined); })()
+>
+> // registra "foo string"
+> (function(undefined){ console.log(undefined, typeof undefined); })('foo');
+>
+> ```
+>
+> ```
 
-<pre class="brush: js">//NO HAGAS ESTO
+## Ejemplos
 
-// registra "foo string"
-(function(){ var undefined = 'foo'; console.log(undefined, typeof undefined); })()
+### Igualdad estricta y `undefined`
 
-// registra "foo string"
-(function(undefined){ console.log(undefined, typeof undefined); })('foo');</pre>
-</div>
+Puedes usar `undefined` y los operadores de igualdad y desigualdad estricta para determinar si una variable tiene un valor asignado. En el siguiente ejemplo la variable `x` no está inicializada, y la sentencia `if` se evalúa como verdadera.
 
-<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Ejemplos</h2>
-
-<h3 id="Igualdad_estricta_y_undefined">Igualdad estricta y <code>undefined</code></h3>
-
-<p>Puedes usar <code>undefined</code> y los operadores de igualdad y desigualdad estricta para determinar si una variable tiene un valor asignado. En el siguiente ejemplo la variable <code>x</code> no está inicializada, y la sentencia <code>if</code> se evalúa como verdadera.</p>
-
-<pre class="brush: js">var x;
+```js
+var x;
 if (x === undefined) {
    // se ejecutan estas instrucciones
 }
 else {
    // estas instrucciones no se ejecutan
-}</pre>
+}
+```
 
-<div class="note">
-<p>Nota: Aquí se debe usar el operador de igualdad estricta en lugar del operador de igualdad estándar, ya que <code>x == undefined</code> también verifica si <code>x</code> es <code>null</code>, mientras que el de igualdad estricta no. <code>null</code> no es equivalente a <code>undefined</code>. Vea {{jsxref("Operadores/Comparison_Operators", "operadores de comparación")}} para más detalles.</p>
-</div>
+> **Nota:** Nota: Aquí se debe usar el operador de igualdad estricta en lugar del operador de igualdad estándar, ya que `x == undefined` también verifica si `x` es `null`, mientras que el de igualdad estricta no. `null` no es equivalente a `undefined`. Vea {{jsxref("Operadores/Comparison_Operators", "operadores de comparación")}} para más detalles.
 
-<h3 id="Typeof_operador_y_undefined">Typeof operador y <code>undefined</code></h3>
+### Typeof operador y `undefined`
 
-<p>Alternativamente se puede usar {{jsxref("Operadores/typeof","typeof")}}.  Recuerda que este siempre devolverá una cadena de texto con el tipo:</p>
+Alternativamente se puede usar {{jsxref("Operadores/typeof","typeof")}}. Recuerda que este siempre devolverá una cadena de texto con el tipo:
 
-<pre class="brush: js">var x;
+```js
+var x;
 if (typeof x === 'undefined') {
    // se ejecutan estas instrucciones
 }
-</pre>
+```
 
-<p>Una razón para usar {{jsxref("Operadores/typeof","typeof")}} es que no devuelve un error si la variable no fue declarada.</p>
+Una razón para usar {{jsxref("Operadores/typeof","typeof")}} es que no devuelve un error si la variable no fue declarada.
 
-<pre class="brush: js">// x no fue declarada antes
+```js
+// x no fue declarada antes
 if (typeof x === 'undefined') { // devuelve true
    //se ejecutan estas instrucciones
 }
@@ -80,15 +81,16 @@ if (typeof x === 'undefined') { // devuelve true
 if (x === undefined) { // lanza un ReferenceError
 
 }
-</pre>
+```
 
-<p>Sin embargo, este tipo de técnica debe evitarse. JavaScript es un lenguaje de ámbito estático, por lo que determinar si una variable se encuentra declarada puede ser definido al ver si está declarada en un contexto de inclusión. La única excepción es el ámbito global, pero el ámbito global está vinculado al objeto global, por lo que comprobar la existencia de una variable en el contexto global puede realizarse comprobando la existencia de una propiedad del <em>objeto global</em> (utilizando el operador {{jsxref("Operators/in", "in")}}, por ejemplo).</p>
+Sin embargo, este tipo de técnica debe evitarse. JavaScript es un lenguaje de ámbito estático, por lo que determinar si una variable se encuentra declarada puede ser definido al ver si está declarada en un contexto de inclusión. La única excepción es el ámbito global, pero el ámbito global está vinculado al objeto global, por lo que comprobar la existencia de una variable en el contexto global puede realizarse comprobando la existencia de una propiedad del _objeto global_ (utilizando el operador {{jsxref("Operators/in", "in")}}, por ejemplo).
 
-<h3 id="Operador_void_y_undefined">Operador void y <code>undefined</code></h3>
+### Operador void y `undefined`
 
-<p>El operador {{jsxref("Operadores/void", "void")}} es una tercer alternativa.</p>
+El operador {{jsxref("Operadores/void", "void")}} es una tercer alternativa.
 
-<pre class="brush: js">var x;
+```js
+var x;
 if (x === void 0) {
    // se ejecutan estas instrucciones
 }
@@ -97,40 +99,17 @@ if (x === void 0) {
 if (y === void 0) {
    // lanza un ReferenceError (a diferencia de  `typeof`)
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-4.3.9', 'undefined')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-undefined', 'undefined')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-undefined', 'undefined')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                           | Estado                       | Comentario                                          |
+| ------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES1', '#sec-4.3.9', 'undefined')}}             | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}     | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-undefined', 'undefined')}}     | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-undefined', 'undefined')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
+## Compatibilidad en Navegadores
 
 {{Compat("javascript.builtins.undefined")}}

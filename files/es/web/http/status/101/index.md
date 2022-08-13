@@ -11,46 +11,31 @@ tags:
   - WebSockets
 translation_of: Web/HTTP/Status/101
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}El código de respuesta **`101 Switching Protocols `**que el servidor está cambiando de protocolo al solicitado por un cliente que mandó un mensaje incluyendo la cabecera {{HTTPHeader("Upgrade")}}.
 
-<div>El código de respuesta <code><strong>101 Switching Protocols </strong></code> que el servidor está cambiando de protocolo al solicitado por un cliente que mandó un mensaje incluyendo la cabecera {{HTTPHeader("Upgrade")}}.</div>
+El servidor incluye en esta respuesta una cabecera {{HTTPHeader("Upgrade")}} para indicar a qué protocolo ha cambiado. El proceso se describe en detalle en el artículo[ Protocol upgrade mechanism](/es/docs/Web/HTTP/Protocol_upgrade_mechanism).
 
-<div> </div>
+## Estado
 
-<p>El servidor incluye en esta respuesta una cabecera {{HTTPHeader("Upgrade")}} para indicar a qué protocolo ha cambiado. El proceso se describe en detalle en el artículo<a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism"> Protocol upgrade mechanism</a>.</p>
+    101 Switching Protocols
 
-<h2 id="Estado">Estado</h2>
+## Ejemplos
 
-<pre class="syntaxbox">101 Switching Protocols</pre>
+El cambio de protocolos se podría usar con [WebSockets](/es/docs/Web/API/WebSockets_API).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+    HTTP/1.1 101 Switching Protocols
+    Upgrade: websocket
+    Connection: Upgrade
 
-<p>El cambio de protocolos se podría usar con <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>.</p>
+## Especificaciones
 
-<pre>HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade</pre>
+| Specification                                                        | Title                                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "101 Switching Protocol" , "6.2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Vea también
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "101 Switching Protocol" , "6.2.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Vea_también">Vea también</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</a></li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a></li>
- <li>{{HTTPHeader("Upgrade")}}</li>
- <li>{{HTTPStatus("426")}} <code>Upgrade Required</code></li>
-</ul>
+- [Protocol upgrade mechanism](/es/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [WebSockets](/es/docs/Web/API/WebSockets_API)
+- {{HTTPHeader("Upgrade")}}
+- {{HTTPStatus("426")}} `Upgrade Required`

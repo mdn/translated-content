@@ -3,99 +3,71 @@ title: border-width
 slug: Web/CSS/border-width
 tags:
   - CSS
-  - 'CSS:Referencias'
+  - CSS:Referencias
   - Todas_las_Categorías
 translation_of: Web/CSS/border-width
 ---
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>La propiedad <strong><code>border-width</code></strong> define el ancho del borde.</p>
+La propiedad **`border-width`** define el ancho del borde.
 
-<ul>
- <li>{{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("medium", "medio") }}</li>
- <li>Se aplica a: todos los elementos</li>
- <li>{{ Cssxref("inheritance", "Herencia") }}: no</li>
- <li>Porcentajes: N/A</li>
- <li>Medio: {{ Cssxref("Media:Visual", "visual") }}</li>
- <li>{{ Cssxref("computed value", "Valor calculado") }}: largo absoluto o '0' si el estilo del borde es <em>ninguno</em> ('none') o 'hidden'.</li>
-</ul>
+- {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("medium", "medio") }}
+- Se aplica a: todos los elementos
+- {{ Cssxref("inheritance", "Herencia") }}: no
+- Porcentajes: N/A
+- Medio: {{ Cssxref("Media:Visual", "visual") }}
+- {{ Cssxref("computed value", "Valor calculado") }}: largo absoluto o '0' si el estilo del borde es _ninguno_ ('none') o 'hidden'.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval notranslate"> border-width: &lt;border-width-value&gt; {1,4} | {{ Cssxref("inherit", "heredado") }}
-</pre>
+     border-width: <border-width-value> {1,4} | {{ Cssxref("inherit", "heredado") }}
 
-<h3 id="Valores" name="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><strong>&lt;border-width-value&gt;</strong></dt>
- <dd><code>thin | medium | thick | </code> {{ Cssxref("length", "largo") }}</dd>
- <dt>thin</dt>
- <dd>Un borde fino.</dd>
- <dt>medium</dt>
- <dd>Un borde mediano.</dd>
- <dt>thick</dt>
- <dd>Un borde grueso.</dd>
- <dt>&lt;length&gt;</dt>
- <dd>El grosor de un borde es un valor explícito por lo cual el ancho <strong>no</strong> puede ser nunca negativo.<br>
- Nota: Un valor <code>em</code> también es reconocido y soportado.</dd>
-</dl>
+- **\<border-width-value>**
+  - : `thin | medium | thick | `{{ Cssxref("length", "largo") }}
+- thin
+  - : Un borde fino.
+- medium
+  - : Un borde mediano.
+- thick
+  - : Un borde grueso.
+- \<length>
+  - : El grosor de un borde es un valor explícito por lo cual el ancho **no** puede ser nunca negativo.
+    Nota: Un valor `em` también es reconocido y soportado.
 
-<h3 id="Propiedades_relacionadas" name="Propiedades_relacionadas">Propiedades relacionadas</h3>
+### Propiedades relacionadas
 
-<ul>
- <li>{{ Cssxref("border-bottom-width") }}</li>
- <li>{{ Cssxref("border-left-width") }}</li>
- <li>{{ Cssxref("border-right-width") }}</li>
- <li>{{ Cssxref("border-top-width") }}</li>
-</ul>
+- {{ Cssxref("border-bottom-width") }}
+- {{ Cssxref("border-left-width") }}
+- {{ Cssxref("border-right-width") }}
+- {{ Cssxref("border-top-width") }}
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+### Ejemplos
 
-<p><a href="/samples/cssref/border.html">V</a>er el ejemplo en vivo</p>
+[V](/samples/cssref/border.html)er el ejemplo en vivo
 
-<pre class="notranslate">element {
-    border-width: thin;
-    border-style: solid;
-    border-color: #000;
-}
-</pre>
+    element {
+        border-width: thin;
+        border-style: solid;
+        border-color: #000;
+    }
 
-<h3 id="Especificaciones" name="Especificaciones">Especificaciones</h3>
+### Especificaciones
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS1#border-width">CSS 1</a></li>
- <li><a class="external" href="http://www.w3.org/TR/CSS21/box.html#border-width-properties">CSS 2.1</a></li>
- <li><a class="external" href="http://www.w3.org/TR/css3-background/#border-width">CSS 3</a></li>
-</ul>
+- [CSS 1](http://www.w3.org/TR/CSS1#border-width)
+- [CSS 2.1](http://www.w3.org/TR/CSS21/box.html#border-width-properties)
+- [CSS 3](http://www.w3.org/TR/css3-background/#border-width)
 
-<h3 id="Compatibilidad" name="Compatibilidad">Compatibilidad</h3>
+### Compatibilidad
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Navegador</th>
-   <th>Versión mínima</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>4.0</td>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>Netscape</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>3.5</td>
-  </tr>
- </tbody>
-</table>
+| Navegador         | Versión mínima |
+| ----------------- | -------------- |
+| Internet Explorer | 4.0            |
+| Firefox           | 1.0            |
+| Netscape          |                |
+| Opera             | 3.5            |
 
-<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
+### Ver también
 
-<p>{{ Cssxref("border") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-width") }}</p>
+{{ Cssxref("border") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-width") }}

@@ -4,34 +4,34 @@ slug: Web/JavaScript/Reference/Statements/class
 translation_of: Web/JavaScript/Reference/Statements/class
 original_slug: Web/JavaScript/Referencia/Sentencias/class
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>La<strong> declaración class</strong> crea una nueva clase con el nombre proporcionado utilizando la herencia basada en prototipos</p>
+La **declaración class** crea una nueva clase con el nombre proporcionado utilizando la herencia basada en prototipos
 
-<div class="noinclude">
-<p>También se puede definir una clase usando una {{jsxref("Operators/class", "expresión de clase", "", 1)}}. Pero a diferencia de las expresiones de clases, la declaración de clases no permite que una clase existente sea declarada de nuevo y en caso de hacerse, lanzará un error de tipo.</p>
-</div>
+También se puede definir una clase usando una {{jsxref("Operators/class", "expresión de clase", "", 1)}}. Pero a diferencia de las expresiones de clases, la declaración de clases no permite que una clase existente sea declarada de nuevo y en caso de hacerse, lanzará un error de tipo.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js">class <em>name</em> [extends] {
+```js
+class name [extends] {
   // Contenido de la clase
 }
-</pre>
+```
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>De la misma manera que con las expresiones de clase, el contenido de una clase se ejecuta en <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">modo estricto</a>.</p>
+De la misma manera que con las expresiones de clase, el contenido de una clase se ejecuta en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode).
 
-<p>Las declaraciones de clases no están {{Glossary("Hoisting", "izadas")}} (al contrario que las <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">declaraciones de funciones</a>).</p>
+Las declaraciones de clases no están {{Glossary("Hoisting", "izadas")}} (al contrario que las [declaraciones de funciones](/es/docs/Web/JavaScript/Reference/Statements/function)).
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Declaración_sencilla_de_una_clase">Declaración sencilla de una clase</h3>
+### Declaración sencilla de una clase
 
-<p>En el siguiente ejemplo, primero definimos la clase <code>Polygon</code>, luego extendemos de ella para crear la clase <code>Square</code>. Notar que <code>super()</code>, utilizado en el constructor, sólo puede ser llamado dentro del constructor y debe ser llamado antes de que la palabra clave <code>this</code> pueda ser usada.</p>
+En el siguiente ejemplo, primero definimos la clase `Polygon`, luego extendemos de ella para crear la clase `Square`. Notar que `super()`, utilizado en el constructor, sólo puede ser llamado dentro del constructor y debe ser llamado antes de que la palabra clave `this` pueda ser usada.
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(height, width) {
     this.name = 'Polygon';
     this.height = height;
@@ -44,38 +44,22 @@ class Square extends Polygon {
     super(length, length);
     this.name = 'Square';
   }
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Estado                       | Comentarios         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}         | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
 {{Compat("javascript.statements.class")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function"><code>declaración de funciones</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>expresión de clases</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Clases</a></li>
-</ul>
+- [`declaración de funciones`](/es/docs/Web/JavaScript/Reference/Statements/function)
+- [`expresión de clases`](/es/docs/Web/JavaScript/Reference/Operators/class)
+- [Clases](/es/docs/Web/JavaScript/Reference/Classes)

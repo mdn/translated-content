@@ -11,53 +11,34 @@ tags:
   - Position
 translation_of: Web/API/GeolocationPosition
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>La interfaz <strong><code>Position</code></strong> representa la posición del dispositivo en cuestión en un momento dado. La posición, representada por el objeto {{domxref("Coordinates")}}, comprende la posición en dos dimensiones del dispositivo en un esferoide representando la Tierra y además su altitud y velocidad.</p>
+La interfaz **`Position`** representa la posición del dispositivo en cuestión en un momento dado. La posición, representada por el objeto {{domxref("Coordinates")}}, comprende la posición en dos dimensiones del dispositivo en un esferoide representando la Tierra y además su altitud y velocidad.
 
-<h2 id="Propiedades">Propiedades</h2>
+## Propiedades
 
-<p><em>La interfaz <code>Position</code> no hereda ninguna propiedad.</em></p>
+_La interfaz `Position` no hereda ninguna propiedad._
 
-<dl>
- <dt>{{domxref("Position.coords")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Devuelve un objeto {{domxref("Coordinates")}} que indica la posición actual.</dd>
- <dt>{{domxref("Position.timestamp")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Devuelve un  {{domxref("DOMTimeStamp")}} indicando el momento en que la localización ha sido recuperada.</dd>
-</dl>
+- {{domxref("Position.coords")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Devuelve un objeto {{domxref("Coordinates")}} que indica la posición actual.
+- {{domxref("Position.timestamp")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Devuelve un {{domxref("DOMTimeStamp")}} indicando el momento en que la localización ha sido recuperada.
 
-<h2 id="Métodos">Métodos</h2>
+## Métodos
 
-<p><em><em>La interfaz <code>Position</code> no implementa ni hereda ningún método<em>.</em></em></em></p>
+**La interfaz `Position` no implementa ni hereda ningún método*.***
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation', '#position', 'Position')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Especificación inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                       | Estado                           | Comentario              |
+| -------------------------------------------------------------------- | -------------------------------- | ----------------------- |
+| {{SpecName('Geolocation', '#position', 'Position')}} | {{Spec2('Geolocation')}} | Especificación inicial. |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("api.Position")}}
 
+## Ver también
 
-<p>{{Compat("api.Position")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>La interfaz {{domxref("Geolocation")}} que la usa.</li>
-</ul>
+- [Using geolocation](/es/docs/WebAPI/Using_geolocation)
+- La interfaz {{domxref("Geolocation")}} que la usa.

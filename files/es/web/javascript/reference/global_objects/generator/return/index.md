@@ -11,32 +11,31 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/return
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>return()</strong></code> regresa el valor dado y finaliza al generador.</p>
+El método **`return()`** regresa el valor dado y finaliza al generador.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>gen</var>.return(valor)</code></pre>
+    gen.return(valor)
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>valor</code></dt>
- <dd>El valor a regresar.</dd>
-</dl>
+- `valor`
+  - : El valor a regresar.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>El valor dado como argumento.</p>
+El valor dado como argumento.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Utilizando_return()">Utilizando <code>return()</code></h3>
+### Utilizando `return()`
 
-<p>El siguiente ejemplo muestra un generador simple y su método <code>return</code>.</p>
+El siguiente ejemplo muestra un generador simple y su método `return`.
 
-<pre class="brush: js">function* gen() {
+```js
+function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -47,11 +46,12 @@ var g = gen();
 g.next();        // { value: 1, done: false }
 g.return('foo'); // { value: "foo", done: true }
 g.next();        // { value: undefined, done: true }
-</pre>
+```
 
-<p>Si <code>return(valor)</code> es invocado en un generador que ya está en su estado "completado", el generador permanecerá en estado "completado". Si no se da ningún argumento, el objeto regresado es el mismo a que si se invocara <code>.next()</code>. Si se da un argumento, éste se asignará como valor en la propiedad <code>value</code> del objeto regresado.</p>
+Si `return(valor)` es invocado en un generador que ya está en su estado "completado", el generador permanecerá en estado "completado". Si no se da ningún argumento, el objeto regresado es el mismo a que si se invocara `.next()`. Si se da un argumento, éste se asignará como valor en la propiedad `value` del objeto regresado.
 
-<pre class="brush: js">function* gen() {
+```js
+function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -64,40 +64,19 @@ g.next(); // { value: 3, done: false }
 g.next(); // { value: undefined, done: true }
 g.return(); // { value: undefined, done: true }
 g.return(1); // { value: 1, done: true }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-generator.prototype.return', 'Generator.prototype.return')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                       | Estado                       | Comentario          |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ES2015')}}     | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>
+{{Compat("javascript.builtins.Generator.return")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.Generator.return")}}</p>
-</div>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("Sentencias/function*","function*")}}</li>
-</ul>
+- {{jsxref("Sentencias/function*","function*")}}

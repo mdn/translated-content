@@ -10,79 +10,71 @@ tags:
   - localStorage
 translation_of: Web/API/Window/localStorage
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<p>La propiedad de sólo lectura <strong><code>localStorage</code></strong> te permite acceder al objeto local {{DOMxRef("Storage")}}; los datos persisten almacenados entre de las diferentes sesiones de navegación. localStorage es similar a <code><a href="/es/docs/Web/API/Window.sessionStorage">sessionStorage</a></code>. La única diferencia es que, mientras los datos almacenados en localStorage no tienen fecha de expiración, los datos almacenados en sessionStorage son eliminados cuando finaliza la sesion de navegación - lo cual ocurre cuando se cierra la página.</p>
+La propiedad de sólo lectura **`localStorage`** te permite acceder al objeto local {{DOMxRef("Storage")}}; los datos persisten almacenados entre de las diferentes sesiones de navegación. localStorage es similar a [`sessionStorage`](/es/docs/Web/API/Window.sessionStorage). La única diferencia es que, mientras los datos almacenados en localStorage no tienen fecha de expiración, los datos almacenados en sessionStorage son eliminados cuando finaliza la sesion de navegación - lo cual ocurre cuando se cierra la página.
 
-<p>Con <code><a href="/es/docs/Web/API/Window.sessionStorage">sessionStorage</a></code> los datos persisten sólo en la ventana/tab que los creó, mientras que con <code>localStorage</code> los datos persisten entre ventanas/tabs con el mismo origen.</p>
+Con [`sessionStorage`](/es/docs/Web/API/Window.sessionStorage) los datos persisten sólo en la ventana/tab que los creó, mientras que con `localStorage` los datos persisten entre ventanas/tabs con el mismo origen.
 
-<p>Debe tenerse en cuenta que los datos almacenados tanto en <code>localStorage</code> como en <code>sessionStorage</code> <strong>son específicos del protocolo de la página</strong>.</p>
+Debe tenerse en cuenta que los datos almacenados tanto en `localStorage` como en `sessionStorage` **son específicos del protocolo de la página**.
 
-<p>Las claves y los valores son <strong>siempre cadenas de texto</strong> (ten en cuenta que, al igual que con los objetos, las claves de enteros se convertirán automáticamente en cadenas de texto).</p>
+Las claves y los valores son **siempre cadenas de texto** (ten en cuenta que, al igual que con los objetos, las claves de enteros se convertirán automáticamente en cadenas de texto).
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="brush: js">miStorage = window.localStorage;</pre>
+```js
+miStorage = window.localStorage;
+```
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Un objeto {{DOMxRef("Storage")}} que se puede utilizar para acceder al espacio de almacenamiento local del origen actual.</p>
+Un objeto {{DOMxRef("Storage")}} que se puede utilizar para acceder al espacio de almacenamiento local del origen actual.
 
-<h3 id="Excepciones">Excepciones</h3>
+### Excepciones
 
-<dl>
- <dt><code>SecurityError</code></dt>
- <dd>La solicitud viola una decisión de política, o el origen no es <a href="https://developer.mozilla.org/es/docs/Web/Security/Same-origin_politica">una tupla válida de protocolo/host/puerto</a> (esto puede suceder si el origen usa el protocolo <code>file:</code> o <code>data:</code>, por ejemplo). Por ejemplo, el usuario puede tener su navegador configurado a fin de denegar el permiso para conservar datos al origen especificado.</dd>
-</dl>
+- `SecurityError`
+  - : La solicitud viola una decisión de política, o el origen no es [una tupla válida de protocolo/host/puerto](/es/docs/Web/Security/Same-origin_politica) (esto puede suceder si el origen usa el protocolo `file:` o `data:`, por ejemplo). Por ejemplo, el usuario puede tener su navegador configurado a fin de denegar el permiso para conservar datos al origen especificado.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>El siguiente código accede al objeto local {{DOMxRef("Storage")}} actual y agrega un ítem al mismo usando {{DOMxRef("Storage.setItem()")}}.</p>
+El siguiente código accede al objeto local {{DOMxRef("Storage")}} actual y agrega un ítem al mismo usando {{DOMxRef("Storage.setItem()")}}.
 
-<pre class="brush: js">localStorage.setItem('miGato', 'Juan');</pre>
+```js
+localStorage.setItem('miGato', 'Juan');
+```
 
-<div class="note">
-<p><strong>Nota</strong>: Por favor ver el articulo <a href="/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Usando la Web Storage API</a> para un ejemplo completo.</p>
-</div>
+> **Nota:** Por favor ver el articulo [Usando la Web Storage API](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para un ejemplo completo.
 
-<p>La sintaxis para leer el ítem almacenado en <code>localStorage</code> es la siguiente:</p>
+La sintaxis para leer el ítem almacenado en `localStorage` es la siguiente:
 
-<pre class="brush: js">var cat = localStorage.getItem('miGato');</pre>
+```js
+var cat = localStorage.getItem('miGato');
+```
 
-<p>La sintaxis para eliminar el ítem almacenado en <code>localStorage</code> es la siguiente:</p>
+La sintaxis para eliminar el ítem almacenado en `localStorage` es la siguiente:
 
-<pre class="brush: js">localStorage.removeItem('miGato');</pre>
+```js
+localStorage.removeItem('miGato');
+```
 
-<p>La sintaxis para eliminar todos los ítems almacenados en <code>localStorage</code> es la siguiente:</p>
+La sintaxis para eliminar todos los ítems almacenados en `localStorage` es la siguiente:
 
-<pre class="brush: js">// Elimina todos los elementos
+```js
+// Elimina todos los elementos
 localStorage.clear();
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación </th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#dom-localstorage', 'localStorage')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                           | Comentario |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| {{SpecName('Web Storage', '#dom-localstorage', 'localStorage')}} | {{Spec2('Web Storage')}} |            |
 
-<h2 id="Compatibiliad_de_Navegadores">Compatibilidad de Navegadores</h2>
+## Compatibilidad de Navegadores
 
 {{Compat("api.Window.localStorage")}}
 
-<h2 id="Ver_también">Ver  también</h2>
+## Ver también
 
-<ul>
- <li><a href="/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Usando la Web Storage API</a></li>
- <li><a href="/es/docs/Web/API/Window.sessionStorage">Window.sessionStorage</a></li>
-</ul>
+- [Usando la Web Storage API](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Window.sessionStorage](/es/docs/Web/API/Window.sessionStorage)

@@ -3,41 +3,24 @@ title: PushManager.supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings
 translation_of: Web/API/PushManager/supportedContentEncodings
 ---
-<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
+{{SeeCompatTable}}{{APIRef("Push API")}}
 
-<p>La propiedad<strong><code>supportedContentEncodings</code></strong> de solo lectura (read-only) de la interfaz {{domxref("PushManager")}} devuelve un array de los codigos de contenido que puede soportar y que pueden ser usados para encriptar los datos (payload) de un push-message.</p>
+La propiedad**`supportedContentEncodings`** de solo lectura (read-only) de la interfaz {{domxref("PushManager")}} devuelve un array de los codigos de contenido que puede soportar y que pueden ser usados para encriptar los datos (payload) de un push-message.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>encodings</em>[] = PushManager.<em>supportedContentEncodings</em></pre>
+    var encodings[] = PushManager.supportedContentEncodings
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Un <em>array </em>de <em>Strings</em></p>
+Un _array_ de _Strings_
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API','#dom-pushmanager-supportedcontentencodings','supportedContentEncodings')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                    | Status                       | Comment             |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('Push API','#dom-pushmanager-supportedcontentencodings','supportedContentEncodings')}} | {{Spec2('Push API')}} | Initial definition. |
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
-<div>
-<div>
-
-
-<p>{{Compat("api.PushManager.supportedContentEncodings")}}</p>
-</div>
-</div>
+{{Compat("api.PushManager.supportedContentEncodings")}}

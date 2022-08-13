@@ -4,69 +4,45 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getHours
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>getHours()</code></strong> retorna la hora de la fecha especificada, de acuerdo a la hora local.</p>
+El método **`getHours()`** retorna la hora de la fecha especificada, de acuerdo a la hora local.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getHours()</code></pre>
+    dateObj.getHours()
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+### Valor de retorno
 
-<p>Un número entero, entre 0 y 23, representando la hora de la fecha dada de acuerdo a la hora local.</p>
+Un número entero, entre 0 y 23, representando la hora de la fecha dada de acuerdo a la hora local.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_getHours()">Usando <code>getHours()</code></h3>
+### Usando `getHours()`
 
-<p>La segunda sentencia abajo asigna el valor 23 a la variable hours, basado en el valor del objeto {{jsxref("Global_Objects/Date", "Date")}} <code>Xmas95</code>.</p>
+La segunda sentencia abajo asigna el valor 23 a la variable hours, basado en el valor del objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
 
-<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
+```js
+var Xmas95 = new Date('December 25, 1995 23:15:30');
 var hours = Xmas95.getHours();
 
 console.log(hours); // 23
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definicion inicial. Implementado en JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.18', 'Date.prototype.getHours')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.gethours', 'Date.prototype.getHours')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.gethours', 'Date.prototype.getHours')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                       | Comentario                                          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Definicion inicial. Implementado en JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.18', 'Date.prototype.getHours')}}                     | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-date.prototype.gethours', 'Date.prototype.getHours')}}     | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-date.prototype.gethours', 'Date.prototype.getHours')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+## Compatibilidad de navegador
 
 {{Compat("javascript.builtins.Date.getHours")}}
 
-<h2 id="Ver_tambien">Ver tambien</h2>
+## Ver tambien
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCHours()")}}</li>
- <li>{{jsxref("Date.prototype.setHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCHours()")}}
+- {{jsxref("Date.prototype.setHours()")}}

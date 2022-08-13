@@ -7,24 +7,22 @@ tags:
 translation_of: Web/XPath/Functions/true
 original_slug: Web/XPath/Funciones/true
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- La función <code>true</code> devuelve un valor booleano de verdadero.</p>
+La función `true` devuelve un valor booleano de verdadero.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval">true()
-</pre>
+    true()
 
-<h3 id="Devuelve" name="Devuelve">Devuelve</h3>
+### Devuelve
 
-<p>El booleano <code>verdadero</code>.</p>
+El booleano `verdadero`.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p><a class="external" href="http://www.w3.org/TR/xpath#function-true">XPath 1.0 4.3</a></p>
+[XPath 1.0 4.3](http://www.w3.org/TR/xpath#function-true)
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Supported.</p>
+Supported.

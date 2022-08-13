@@ -3,120 +3,74 @@ title: FileReader
 slug: Web/API/FileReader
 translation_of: Web/API/FileReader
 ---
-<p>{{ APIRef("File API") }}</p>
+{{ APIRef("File API") }}
 
-<h2 id="Sumario">Sumario</h2>
+## Sumario
 
-<p> </p>
+El objeto FileReader permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona, usando los objetos {{domxref("File")}} o {{domxref("Blob")}} dependiendo de los datos que se pretenden leer.
 
-<p>El objeto FileReader permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona, usando los objetos {{domxref("File")}} o {{domxref("Blob")}} dependiendo de los datos que se pretenden leer.</p>
+El objeto File puede ser obtenido desde un objeto {{domxref("FileList")}} devuelto como resultado de la selección de archivos por parte del usuario en un elemento {{HTMLElement("input")}}, desde el objeto [`DataTransfer `](/es/docs/Web/API/DataTransfer)`producido por una operación de arrastre (drag and drop) o `desde la API mozGetAsFile () en un {{domxref("HTMLCanvasElement")}}.
 
-<p> </p>
+## Constructor
 
-<p>El objeto File puede ser obtenido desde un objeto {{domxref("FileList")}} devuelto como resultado de la selección de archivos por parte del usuario en un elemento {{HTMLElement("input")}}, desde el objeto <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"><code>DataTransfer </code></a><code>producido por una operación de arrastre (<em>drag and drop</em>) o </code>desde la API mozGetAsFile () en un {{domxref("HTMLCanvasElement")}}.</p>
+    FileReader FileReader();
 
-<h2 id="Constructor">Constructor</h2>
+Mira el artículo _[Using files from web applications](/es/docs/Using_files_from_web_applications)_ para más detalles y ejemplos.
 
-<pre class="syntaxbox">FileReader FileReader();</pre>
+## Propiedades
 
-<p>Mira el artículo <em><a href="https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications">Using files from web applications</a></em> para más detalles y ejemplos.</p>
+- {{domxref("FileReader.error")}} {{readonlyinline}}
+  - : Un {{domxref("DOMError")}} que representa el error que ocurrió al momento de leer el archivo.
+- {{domxref("FileReader.readyState")}} {{readonlyinline}}
+  - | : Devuelve un entero que indica el estado de FileReader. Puede ser uno de los siguientes: | `EMPTY` | `0`                                       | No ha sido leido ningún dato aún. |
+    | ----------------------------------------------------------------------------------------- | ------- | ----------------------------------------- | --------------------------------- |
+    | `LOADING`                                                                                 | `1`     | La información está siendo leída.         |
+    | `DONE`                                                                                    | `2`     | Se ha completado la solicitud de lectura. |
+- {{domxref("FileReader.result")}} {{readonlyinline}}
+  - : El contenido del fichero. Esta propieda es válida solo cuando la propiedad FileReader.readyState es 2, es decir, cuando la lectura ha finalizado. El formato de la información depende de los métodos usados al iniciar la operación de lectura.
 
-<h2 id="Propiedades">Propiedades</h2>
+### Controladores de eventos
 
-<dl>
- <dt>{{domxref("FileReader.error")}} {{readonlyinline}}</dt>
- <dd>Un {{domxref("DOMError")}} que representa el error que ocurrió al momento de leer el archivo.</dd>
- <dt>{{domxref("FileReader.readyState")}} {{readonlyinline}}</dt>
- <dd>Devuelve un entero que indica el estado de FileReader. Puede ser uno de los siguientes:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>EMPTY</code></td>
-    <td><code>0</code></td>
-    <td>No ha sido leido ningún dato aún.</td>
-   </tr>
-   <tr>
-    <td><code>LOADING</code></td>
-    <td><code>1</code></td>
-    <td>La información está siendo leída.</td>
-   </tr>
-   <tr>
-    <td><code>DONE</code></td>
-    <td><code>2</code></td>
-    <td>Se ha completado la solicitud de lectura.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("FileReader.result")}} {{readonlyinline}}</dt>
- <dd>El contenido del fichero. Esta propieda es válida solo cuando la propiedad FileReader.readyState es 2, es decir, cuando la lectura ha finalizado. El formato de la información depende de los métodos usados al iniciar la operación de lectura.</dd>
-</dl>
+- {{domxref("FileReader.onabort")}}
+  - : Un controlador para el evento {{event("abort")}}. Este evento se activa cada vez que se interrumpe la operación de lectura.
+- {{domxref("FileReader.onerror")}}
+  - : Un controlador para el evento {{event("error")}}. Este evento se activa cada vez que la operación de lectura encuentra un error.
+- {{domxref("FileReader.onload")}}
+  - : Un controlador para el evento {{event("load")}}. Este evento se activa cada vez que la operación de lectura se ha completado satisfactoriamente.
+- {{domxref("FileReader.onloadstart")}}
+  - : Un controlador para el evento {{event("loadstart")}}. Este evento se activa cada vez que comienza la lectura.
+- {{domxref("FileReader.onloadend")}}
+  - : Un controlador para el evento {{event("loadend")}}. Este evento se activa cada vez que la operación de lecura se ha completado (ya sea con éxito o fallo).
+- {{domxref("FileReader.onprogress")}}
+  - : Un controlador para el evento {{event("progress")}}. Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.
 
-<h3 id="Controladores_de_eventos">Controladores de eventos</h3>
+> **Nota:** Nota: Como `FileReader` hereda de {{domxref("EventTarget")}}, todos esos eventos también pueden ser escuchados usando el método {{domxref("EventTarget.addEventListener()","addEventListener")}}.
 
-<dl>
- <dt>{{domxref("FileReader.onabort")}}</dt>
- <dd>Un controlador para el evento {{event("abort")}}. Este evento se activa cada vez que se interrumpe la operación de lectura.</dd>
- <dt>{{domxref("FileReader.onerror")}}</dt>
- <dd>Un controlador para el evento {{event("error")}}. Este evento se activa cada vez que la operación de lectura encuentra un error.</dd>
- <dt>{{domxref("FileReader.onload")}}</dt>
- <dd>Un controlador para el evento {{event("load")}}. Este evento se activa cada vez que la operación de lectura se ha completado satisfactoriamente.</dd>
- <dt>{{domxref("FileReader.onloadstart")}}</dt>
- <dd>Un controlador para el evento {{event("loadstart")}}. Este evento se activa cada vez que comienza la lectura.</dd>
- <dt>{{domxref("FileReader.onloadend")}}</dt>
- <dd>Un controlador para el evento {{event("loadend")}}. Este evento se activa cada vez que  la operación de lecura se ha completado (ya sea con éxito o fallo).</dd>
- <dt>{{domxref("FileReader.onprogress")}}</dt>
- <dd>Un controlador para el evento {{event("progress")}}. Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.</dd>
-</dl>
+## Métodos
 
-<div class="note">
-<p>Nota: Como <code>FileReader</code> hereda de {{domxref("EventTarget")}}, todos esos eventos también pueden ser escuchados usando el método {{domxref("EventTarget.addEventListener()","addEventListener")}}.</p>
-</div>
+- {{domxref("FileReader.abort()")}}
+  - : Interrumpe la operación de lectura. A su regreso `readyState` será `DONE`.
+- {{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}
+  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo `result `contiene un {{domxref("ArrayBuffer")}} representando los datos del fichero.
+- {{domxref("FileReader.readAsBinaryString()")}}
+  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene los datos binarios en bruto del archivo como una cadena.
+- {{domxref("FileReader.readAsDataURL()")}}
+  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene un `data:` URL que representa los datos del fichero.
+- {{domxref("FileReader.readAsText()")}}
+  - : Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo `result` contiene el contenido del fichero como una cadena de texto.
 
-<p> </p>
+## Especificaciones
 
-<h2 id="Methods" name="Methods">Métodos</h2>
+| Especificación                                                                   | Estado                       | Comentario          |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('File API','#FileReader-interface','FileReader')}} | {{Spec2('File API')}} | Definición inicial. |
 
-<p> </p>
-
-<dl>
- <dt>{{domxref("FileReader.abort()")}}</dt>
- <dd>Interrumpe la operación de lectura. A su regreso <code>readyState</code> será <code>DONE</code>.</dd>
- <dt>{{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}</dt>
- <dd>Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo <code>result </code>contiene un  {{domxref("ArrayBuffer")}} representando los datos del fichero.</dd>
- <dt>{{domxref("FileReader.readAsBinaryString()")}}</dt>
- <dd>Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo <code>result</code> contiene los datos binarios en bruto del archivo como una cadena.</dd>
- <dt>{{domxref("FileReader.readAsDataURL()")}}</dt>
- <dd>Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo <code>result</code> contiene un <code>data:</code> URL que representa los datos del fichero.</dd>
- <dt>{{domxref("FileReader.readAsText()")}}</dt>
- <dd>Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo <code>result</code> contiene el contenido del fichero como una cadena de texto.</dd>
-</dl>
-
-<h2 id="Especificaciones">Especificaciones</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API','#FileReader-interface','FileReader')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">Soporte en los navegadores</h2>
+## Soporte en los navegadores
 
 {{Compat("api.FileReader")}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en/Using_files_from_web_applications" title="en/Using files from web applications">Usando archivos desde aplicaciónes web</a></li>
- <li>{{ domxref("File") }}</li>
- <li>{{ domxref("Blob") }}</li>
-</ul>
+- [Usando archivos desde aplicaciónes web](/en/Using_files_from_web_applications "en/Using files from web applications")
+- {{ domxref("File") }}
+- {{ domxref("Blob") }}

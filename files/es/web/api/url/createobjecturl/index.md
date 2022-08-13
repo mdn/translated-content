@@ -10,68 +10,47 @@ tags:
   - createObjectURL
 translation_of: Web/API/URL/createObjectURL
 ---
-<p>{{ApiRef("URL")}}{{SeeCompatTable}}</p>
+{{ApiRef("URL")}}{{SeeCompatTable}}
 
-<p>El método estático <strong><code>URL.createObjectURL()</code></strong> crea un {{domxref("DOMString")}} que contiene una URL que representa al objeto pasado como parámetro. La vida de la URL está ligado al {{domxref("document")}} de la ventana en la que fue creada. El nuevo objeto URL representa al objeto {{domxref("File")}} especificado o al objeto {{domxref("Blob")}}.</p>
+El método estático **`URL.createObjectURL()`** crea un {{domxref("DOMString")}} que contiene una URL que representa al objeto pasado como parámetro. La vida de la URL está ligado al {{domxref("document")}} de la ventana en la que fue creada. El nuevo objeto URL representa al objeto {{domxref("File")}} especificado o al objeto {{domxref("Blob")}}.
 
-<div class="note">
-<p>El uso de un objeto {{domxref("MediaStream")}} como entrada a este método está en proceso de ser obsoleto. Las discusiones están en curso sobre si o no debe ser quitado totalmente. Como tal, <em>se debe de evitar usar este método con  {{domxref("MediaStream")}}s, y se debería usar {{domxref("HTMLMediaElement.srcObject", "HTMLMediaElement.srcObject()")}}</em>.</p>
-</div>
+> **Nota:** El uso de un objeto {{domxref("MediaStream")}} como entrada a este método está en proceso de ser obsoleto. Las discusiones están en curso sobre si o no debe ser quitado totalmente. Como tal, _se debe de evitar usar este método con {{domxref("MediaStream")}}s, y se debería usar {{domxref("HTMLMediaElement.srcObject", "HTMLMediaElement.srcObject()")}}_.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><em>objectURL</em> = URL.createObjectURL(<em>object</em>);
-</pre>
+    objectURL = URL.createObjectURL(object);
 
-<h2 id="Parámetros">Parámetros</h2>
+## Parámetros
 
-<dl>
- <dt><code>object</code></dt>
- <dd>Un objeto {{domxref("File")}} o un objeto {{domxref("Blob")}} para el que se creará la URL.</dd>
-</dl>
+- `object`
+  - : Un objeto {{domxref("File")}} o un objeto {{domxref("Blob")}} para el que se creará la URL.
 
-<ul>
-</ul>
+<!---->
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Ver <a href="/en-US/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images" title="https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images">Usando objetos URL para representar imágenes</a>.</p>
+Ver [Usando objetos URL para representar imágenes](/es/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images "https://developer.mozilla.org/en/Using_files_from_web_applications#Example:_Using_object_URLs_to_display_images").
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Cada vez que se llama a <code>createObjectURL()</code>, un nuevo objeto URL es creado, incluso si ya creaste uno para el mismo objeto. Cada uno de estos objetos puede ser liberado usando {{domxref("URL.revokeObjectURL()")}} cuándo ya no lo necesitas. Los navegadores liberan estos objetos cuando el documento es cerrado; de todas formas, para obtener un rendimiento óptimo y un óptimo uso de memoria, si hay momentos seguros en los que puedes liberar estos objetos deberías hacerlo. Por ejemplo: No liberar los recursos cuando se ha creado una URL a partir de un {{domxref('MediaStream')}} puede dejar la luz de la cámara del navegador encendida más tiempo del necesario.</p>
+Cada vez que se llama a `createObjectURL()`, un nuevo objeto URL es creado, incluso si ya creaste uno para el mismo objeto. Cada uno de estos objetos puede ser liberado usando {{domxref("URL.revokeObjectURL()")}} cuándo ya no lo necesitas. Los navegadores liberan estos objetos cuando el documento es cerrado; de todas formas, para obtener un rendimiento óptimo y un óptimo uso de memoria, si hay momentos seguros en los que puedes liberar estos objetos deberías hacerlo. Por ejemplo: No liberar los recursos cuando se ha creado una URL a partir de un {{domxref('MediaStream')}} puede dejar la luz de la cámara del navegador encendida más tiempo del necesario.
 
-<div class="note">
-<p>Notese que no es necesario crear URLs a partir de un {{domxref('MediaStream')}}, ya que los objetos de streams deberían asignarse directamente a elementos de reproducción con {{domxref("HTMLMediaElement.srcObject")}}. La posibilidad de usar un <code>MediaStream</code> como valor de un objeto está obsoleta.</p>
-</div>
+> **Nota:** Notese que no es necesario crear URLs a partir de un {{domxref('MediaStream')}}, ya que los objetos de streams deberían asignarse directamente a elementos de reproducción con {{domxref("HTMLMediaElement.srcObject")}}. La posibilidad de usar un `MediaStream` como valor de un objeto está obsoleta.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File API', '#dfn-createObjectURL', 'URL')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                           | Estado                       | Comentario          |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('File API', '#dfn-createObjectURL', 'URL')}} | {{Spec2('File API')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.URL.createObjectURL")}}
 
-<h2 id="Mirar_también">Mirar también</h2>
+## Mirar también
 
-<ul>
- <li>{{domxref("URL.revokeObjectURL()")}}</li>
- <li>{{domxref("HTMLMediaElement.srcObject")}}</li>
- <li><a href="/en-US/docs/Using_files_from_web_applications" title="Using files from web applications">Usando archivos desde aplicaciones web</a></li>
-</ul>
+- {{domxref("URL.revokeObjectURL()")}}
+- {{domxref("HTMLMediaElement.srcObject")}}
+- [Usando archivos desde aplicaciones web](/es/docs/Using_files_from_web_applications "Using files from web applications")

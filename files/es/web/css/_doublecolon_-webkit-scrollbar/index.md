@@ -1,26 +1,25 @@
 ---
 title: '::-webkit-scrollbar'
-slug: 'Web/CSS/::-webkit-scrollbar'
+slug: Web/CSS/::-webkit-scrollbar
 tags:
   - CSS
   - NeedsCompatTable
   - Pseudo-elemento
   - Referencia
-translation_of: 'Web/CSS/::-webkit-scrollbar'
+translation_of: Web/CSS/::-webkit-scrollbar
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>El <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento</a> <a href="/es/docs/Web/CSS">CSS</a>  <font face="Consolas, Liberation Mono, Courier, monospace">::-webkit-scrollbar</font> afecta el estilo de la barra de desplazamiento asociada a un elemento.</p>
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) ::-webkit-scrollbar afecta el estilo de la barra de desplazamiento asociada a un elemento.
 
-<div class="note">
-<p><code>::-webkit-scrollbar</code> sólo está disponible en navegadores basados en  <a class="external external-icon" href="https://webkit.org">WebKit</a><span style="font-size: 85%;"> (p.e., Google Chrome)</span>.</p>
-</div>
+> **Nota:** `::-webkit-scrollbar` sólo está disponible en navegadores basados en [WebKit](https://webkit.org) (p.e., Google Chrome).
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush: css">.visible-scrollbar, .invisible-scrollbar {
+```css
+.visible-scrollbar, .invisible-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;
@@ -28,10 +27,11 @@ translation_of: 'Web/CSS/::-webkit-scrollbar'
 .invisible-scrollbar::-webkit-scrollbar {
   display: none;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="visible-scrollbar"&gt;Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;/div&gt;
-&lt;div class="invisible-scrollbar"&gt;Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;/div&gt;
-</pre>
+```html
+<div class="visible-scrollbar">Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword</div>
+<div class="invisible-scrollbar">Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword</div>
+```
 
-<p>{{EmbedLiveSample('Ejemplo')}}</p>
+{{EmbedLiveSample('Ejemplo')}}

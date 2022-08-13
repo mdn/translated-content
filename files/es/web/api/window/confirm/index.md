@@ -3,62 +3,44 @@ title: Window.confirm()
 slug: Web/API/Window/confirm
 translation_of: Web/API/Window/confirm
 ---
-<div>{{ApiRef("Window")}}</div>
+{{ApiRef("Window")}}
 
-<p>El método <code><strong>Window.confirm()</strong></code> muestra una ventana de diálogo con un mensaje opcional y dos botones, Aceptar y Cancelar.</p>
+El método **`Window.confirm()`** muestra una ventana de diálogo con un mensaje opcional y dos botones, Aceptar y Cancelar.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre><em>result</em> = window.confirm(<em>message</em>);
-</pre>
+    result = window.confirm(message);
 
-<ul>
- <li><code>message</code> es la cadena que se muestra opcionalmente en el diálogo.</li>
- <li><code>result</code> es un valor booleano indicando si se ha pulsado Aceptar o Cancelar (Aceptar devuelve true).</li>
-</ul>
+- `message` es la cadena que se muestra opcionalmente en el diálogo.
+- `result` es un valor booleano indicando si se ha pulsado Aceptar o Cancelar (Aceptar devuelve true).
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<pre>if (window.confirm("Do you really want to leave?")) {
-  window.open("exit.html", "Thanks for Visiting!");
-}
-</pre>
+    if (window.confirm("Do you really want to leave?")) {
+      window.open("exit.html", "Thanks for Visiting!");
+    }
 
-<p>Da como resultado:</p>
+Da como resultado:
 
-<p><img alt="firefox confirm" src="https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png" style="height: 119px; width: 354px;"><br>
-  </p>
+![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.alert</span> Las cajas de diálogo son ventanas modales - ello impide al usuario continuar accediendo al resto del interfaz del programa hasta que la ventana modal haya sido cerrada. Por esta razón no se debería usar en exceso funciones que creen cajas de diálogo (o ventanas modales). No obstante, hay muy buenas razones para <a href="http://alistapart.com/article/neveruseawarning">evitar el uso de cajas de diálogo para confirmaciones</a>.</p>
+The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert Las cajas de diálogo son ventanas modales - ello impide al usuario continuar accediendo al resto del interfaz del programa hasta que la ventana modal haya sido cerrada. Por esta razón no se debería usar en exceso funciones que creen cajas de diálogo (o ventanas modales). No obstante, hay muy buenas razones para [evitar el uso de cajas de diálogo para confirmaciones](http://alistapart.com/article/neveruseawarning).
 
-<p>Los usuarios de <a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> users (e.g. Firefox extensions) deberían usar métodos de <code>nsIPromptService</code> en vez de cajas de diálogo.</p>
+Los usuarios de [Mozilla Chrome](/en-US/Chrome "Chrome") users (e.g. Firefox extensions) deberían usar métodos de `nsIPromptService` en vez de cajas de diálogo.
 
-<p>A partir de la versión {{CompatChrome(46.0)}} de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor <code>allow-modal</code>.</p>
+A partir de la versión {{CompatChrome(46.0)}} de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor `allow-modal`.
 
-<p>{{gecko_minversion_inline("23.0")}} El argumento es opcional y no requerido por la especificación.</p>
+{{gecko_minversion_inline("23.0")}} El argumento es opcional y no requerido por la especificación.
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 Web application', '#dom-confirm', 'confirm()')}}</td>
-   <td>{{Spec2('HTML5 Web application')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                                       | Comentarios         |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
+| {{SpecName('HTML5 Web application', '#dom-confirm', 'confirm()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial. |
 
-<h2 id="See_also" name="See_also">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("window.alert","alert")}}</li>
- <li>{{domxref("window.prompt","prompt")}}</li>
-</ul>
+- {{domxref("window.alert","alert")}}
+- {{domxref("window.prompt","prompt")}}

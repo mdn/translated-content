@@ -13,72 +13,62 @@ tags:
   - waapi
 translation_of: Web/API/Animation/reverse
 ---
-<div>{{APIRef("Web Animations")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>El método <strong><code>Animation.reverse()</code></strong> de la interfaz {{ domxref("Animation") }} Interface invierte la dirección de reproducción, lo que significa que la animación termina al principio. Si se llama en una animación sin reproducir, toda la animación se reproduce al revés. Si se llama en una animación pausada, continúa a la inversa.</p>
+El método **`Animation.reverse()`** de la interfaz {{ domxref("Animation") }} Interface invierte la dirección de reproducción, lo que significa que la animación termina al principio. Si se llama en una animación sin reproducir, toda la animación se reproduce al revés. Si se llama en una animación pausada, continúa a la inversa.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">animation.reverse();
-</pre>
+    animation.reverse();
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p>None.</p>
+None.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia(<code>aliceChange</code>) sea reproducida al revés, lo que la hace más pequeña. Esto se hace estableciendo el {{ domxref("Animation.playbackRate") }} de <code>aliceChange</code>  en <code>-1</code> de esta forma:</p>
+En el ejemplo [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia(`aliceChange`) sea reproducida al revés, lo que la hace más pequeña. Esto se hace estableciendo el {{ domxref("Animation.playbackRate") }} de `aliceChange` en `-1` de esta forma:
 
-<pre class="brush: js">var shrinkAlice = function() {
+```js
+var shrinkAlice = function() {
   // reproduce la animación de Alicia al revés.
   aliceChange.playbackRate = -1;
   aliceChange.play();
 
   // reproduce la animación de la botella.
   drinking.play()
-}</pre>
+}
+```
 
-<p>Pero también se podría haber hecho lamando a <code>reverse()</code> en <code>aliceChange</code> así:</p>
+Pero también se podría haber hecho lamando a `reverse()` en `aliceChange` así:
 
-<pre class="brush: js">var shrinkAlice = function() {
+```js
+var shrinkAlice = function() {
   // reproduce la animación de Alicia al revés.
   aliceChange.reverse();
 
   // reproduce la animación de la botella.
   drinking.play()
-}</pre>
+}
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-reverse', 'reverse()')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
+| {{SpecName('Web Animations', '#dom-animation-reverse', 'reverse()')}} | {{Spec2("Web Animations")}} |         |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("api.Animation.reverse")}}
 
-<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} para otros métodos y propiedades que puedes usar para el control de animaciones en páginas web.</li>
- <li>{{domxref("Animation.pause()")}} para pausar una animación.</li>
- <li>{{domxref("Animation.play()")}} para reproducir una animación hacia adelante.</li>
-</ul>
+- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} para otros métodos y propiedades que puedes usar para el control de animaciones en páginas web.
+- {{domxref("Animation.pause()")}} para pausar una animación.
+- {{domxref("Animation.play()")}} para reproducir una animación hacia adelante.

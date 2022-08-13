@@ -13,78 +13,70 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 ---
-<h3 id="Descripción">Descripción</h3>
+### Descripción
 
-<div class="summary">
-<p>Esta técnica demuestra como usar el rol <code><a class="external" href="http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog">alertdialog</a></code>.</p>
+Esta técnica demuestra como usar el rol [`alertdialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog).
+
+El rol `alertdialog` es utilizado para notificar al usuario información urgente que demanden la atención inmediata del usuario. Como el nombre implica, `alertdialog` es un tipo de díalogo. Esto significa que la mayoría de las instrucciones proveidas en la técnica de ''[usando el rol `dialog`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role "Using the alert role")' son aplicables al rol `alertdialog` también:
+
+- El díalogo de alerta debe siempre recibir un nombre accesible (a través de `aria-labelledby` o `aria-label`), y en la mayoría de los casos el texto de alerta debe ser marcado como la descripción accesible del díalogo de alerta (utilizando `aria-describedby`).
+- A diferencia de alertas regulares, un díalogo de alerta debe tener al menos un control enfocable y el foco debe moverse a ese control cuando el díalogo de alerta aparece. Generalmente los díalogos de alerta tienen al menos un botón de Confirmación, Cerrar o Cancelar que pueder ser usado para moverl el foco. Adicionalmente, díalogos de alerta pueder tener otros controles interactivos tales como campos de texto, pestañas o checkboxes. El enfoque de control al que se debe desplazar depende del propósito del diálogo.
+- El orden de la pestaña dentro del díalogo de alerta debe ajustarse.
+
+La diferencia con díalogos normales es que el rol de `alertdialog` debe ser utilizado únicamente cuando una alerta, error, o advertencia ocurre. En otras palabras, cuando la información o controles de un díalogo requieren la inmediata atención del usuario debe usarse `alertdialog` en lugar de `dialog.` Sin embargo, depende del desarrollador hacer esta distinción.
+
+Debido a su carácter urgente los díalogos de alerta deben ser siempre modales.
+
+> **Nota:**Este rol solo debe ser usado para mensajes de alerta que tienen controles interactivos asociado. Si un díalogo de alerta solo contiene contenido estático y no tiene controles interactivos, `alertdialog` es probablemente el rol incorrecto para ser utilizado.. El rol `alert` debe ser usado en su lugar en éste caso (como se describe en la técnica de [Utilizando el rol `alert`](/en/ARIA/ARIA_Techniques/Using_the_alert_role "Using the alert role")).
+
+### Posibles efectos de agentes de usuario y tecnología de asistencia
+
+Cuando un rol `alertdialog` es utilizado, el agente de usuario debería hacer lo siguiente:
+
+- Exponer el elemento como un díalogo a la API de accesibilidad del sistema operativo.
+- Disparar un evento de alerta accesible usando la API de accesibilidad del sistema operativo si lo soporta.
+
+Cuando la aleta de díalogo aparece, los lectores de pantalla deberían anunciar la alerta.
+
+Cuando el díalogo de alerta es etiquetado correctamente y el foco es movido de un control a el interior del díalogo, los lectores de pantalla deberían anunciar el rol accesible del díalogo así como su nombre y su descriipción antes de anunciar el elemento enfocado.
+
+> **Nota:** Opiniones pueden diferir en como tecnología de asistencia debe manejar esta técnica. La información proveída arriba es una de éstas opiniones y por lo tanto no es normativa.
+
+### Ejemplos
+
+#### Ejemplos 1: Un díalogo de alerta básico
+
+El fragmento de código siguiente muestra como marcar un díalogo de alerta que solo provee un mensaje y un botón de OK.
+
+```html
+<div role="alertdialog" aria-labelledby="tituloDialogo1" aria-describedby="descrDialogo1">
+  <div role="document" tabindex="0">
+    <h2 id="tituloDialogo1">Tu sesión esta apunto de expirar</h2>
+    <p id="descrDialogo1">Para extender tu sesión de clic en el botón OK</p>
+    <button>OK</button>
+  </div>
 </div>
+```
 
-<p>El rol <code>alertdialog</code> es utilizado para notificar al usuario información urgente que demanden la atención inmediata del usuario. Como el nombre implica, <code>alertdialog</code> es un tipo de díalogo. Esto significa que la mayoría de las instrucciones proveidas en la técnica de ''<a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role" title="Using the alert role">usando el rol <code>dialog</code></a>' son aplicables al rol <code>alertdialog</code> también: </p>
+#### Ejemplos en funcionamiento:
 
-<ul>
- <li>El díalogo de alerta debe siempre recibir un nombre accesible (a través de <code>aria-labelledby</code> o <code>aria-label</code>), y en la mayoría de los casos el texto de alerta debe ser marcado como la descripción accesible del díalogo de alerta (utilizando <code>aria-describedby</code>).</li>
- <li>A diferencia de alertas regulares, un díalogo de alerta debe tener al menos un control enfocable y el foco debe moverse a ese control cuando el díalogo de alerta aparece. Generalmente los díalogos de alerta tienen al menos un botón de Confirmación, Cerrar o Cancelar que pueder ser usado para moverl el foco. Adicionalmente, díalogos de alerta pueder tener otros controles interactivos tales como campos de texto, pestañas o checkboxes. El enfoque de control al que se debe desplazar depende del propósito del diálogo.</li>
- <li>El orden de la pestaña dentro del díalogo de alerta debe ajustarse.</li>
-</ul>
+Pendiente
 
-<p>La diferencia con díalogos normales es que el rol de <code>alertdialog</code> debe ser utilizado únicamente cuando una alerta, error, o advertencia ocurre. En otras palabras, cuando la información o controles de un díalogo requieren la inmediata atención del usuario debe usarse <code>alertdialog</code> en lugar de <code>dialog.</code> Sin embargo, depende del desarrollador hacer esta distinción.</p>
+### Notas
 
-<p>Debido a su carácter urgente los díalogos de alerta deben ser siempre modales.</p>
+### Atributos ARIA utilizados
 
-<div class="note"><strong>Nota: </strong>Este rol solo debe ser usado para mensajes de alerta que tienen controles interactivos asociado. Si un díalogo de alerta solo contiene contenido estático y no tiene controles interactivos, <code>alertdialog</code> es probablemente el rol incorrecto para ser utilizado.. El rol <code>alert</code> debe ser usado en su lugar en éste caso (como se describe en la técnica de <a href="/en/ARIA/ARIA_Techniques/Using_the_alert_role" title="Using the alert role">Utilizando el rol <code>alert</code></a>).</div>
+- [alertdialog](https://www.w3.org/TR/wai-aria-1.1/#dialog)
+- [aria-labelledby](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby)
+- [aria-describedby](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby)
 
-<h3 id="Posibles_efectos_de_agentes_de_usuario_y_tecnología_de_asistencia">Posibles efectos de agentes de usuario y tecnología de asistencia</h3>
+### Técnicas ARIA relacionadas
 
-<p>Cuando un rol <code>alertdialog</code> es utilizado, el agente de usuario debería hacer lo siguiente:</p>
+- [usando el rol `dialog`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role "Using the dialog role")
+- [usando el rol `alert`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role "Using the alert role")
 
-<ul>
- <li>Exponer el elemento como un díalogo a la API de accesibilidad del sistema operativo.</li>
- <li>Disparar un evento de alerta accesible usando la API de accesibilidad del sistema operativo si lo soporta.</li>
-</ul>
+### Compatibilidad
 
-<p>Cuando la aleta de díalogo aparece, los lectores de pantalla deberían anunciar la alerta.</p>
+Pendiente: _Add support information for common UA and AT product combinations_
 
-<p>Cuando el díalogo de alerta es etiquetado correctamente y el foco es movido de un control a el interior del díalogo, los lectores de pantalla deberían anunciar el rol accesible del díalogo así como su nombre y su descriipción antes de anunciar el elemento enfocado. </p>
-
-<div class="note"><strong>Nota:</strong> Opiniones pueden diferir en como tecnología de asistencia debe manejar esta técnica. La información proveída arriba es una de éstas opiniones y por lo tanto no es normativa.</div>
-
-<h3 id="Ejemplos">Ejemplos</h3>
-
-<h4 id="Ejemplos_1_Un_díalogo_de_alerta_básico">Ejemplos 1: Un díalogo de alerta básico</h4>
-
-<p>El fragmento de código siguiente muestra como marcar un díalogo de alerta que solo provee un mensaje y un botón de OK.</p>
-
-<pre class="brush: html">&lt;div role="alertdialog" aria-labelledby="tituloDialogo1" aria-describedby="descrDialogo1"&gt;
-  &lt;div role="document" tabindex="0"&gt;
-    &lt;h2 id="tituloDialogo1"&gt;Tu sesión esta apunto de expirar&lt;/h2&gt;
-    &lt;p id="descrDialogo1"&gt;Para extender tu sesión de clic en el botón OK&lt;/p&gt;
-    &lt;button&gt;OK&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<h4 id="Ejemplos_en_funcionamiento">Ejemplos en funcionamiento:</h4>
-
-<p>Pendiente</p>
-
-<h3 id="Notas">Notas </h3>
-
-<h3 id="Atributos_ARIA_utilizados">Atributos ARIA utilizados</h3>
-
-<ul>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#dialog">alertdialog</a></li>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></li>
- <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></li>
-</ul>
-
-<h3 id="Técnicas_ARIA_relacionadas">Técnicas ARIA relacionadas</h3>
-
-<ul>
- <li> <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role" title="Using the dialog role">usando el rol <code>dialog</code></a></li>
- <li> <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role" title="Using the alert role">usando el rol <code>alert</code></a></li>
-</ul>
-
-<h3 id="Compatibilidad">Compatibilidad</h3>
-
-<p class="comment">Pendiente: <em>Add support information for common UA and AT product combinations</em></p>
-
-<h3 id="Recursos_adicionales">Recursos adicionales</h3>
+### Recursos adicionales

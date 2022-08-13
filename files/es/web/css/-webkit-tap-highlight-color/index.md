@@ -11,33 +11,34 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-tap-highlight-color
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p><strong><code>-webkit-tap-highlight-color</code></strong> es una propiedad CSS no estándar que fija el color que sirve para destacar un enlace cuando se golpea  sobre él (normalmente con el dedo en dispositivos táctiles). Ese color destacado indica que se ha presionado correctamente e indica el elemento sobre el cuál se ha golpeado.</p>
+**`-webkit-tap-highlight-color`** es una propiedad CSS no estándar que fija el color que sirve para destacar un enlace cuando se golpea sobre él (normalmente con el dedo en dispositivos táctiles). Ese color destacado indica que se ha presionado correctamente e indica el elemento sobre el cuál se ha golpeado.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush: css">-webkit-tap-highlight-color: red;
-</pre>
+```css
+-webkit-tap-highlight-color: red;
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>Un {{Cssxref("color value")}}.</p>
+Un {{Cssxref("color value")}}.
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+### Síntaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p><em>No es parte de ninguna especificación.</em> Apple tiene <a href="https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5">una descripción en la Guía Web de Contenidos sobre Safari</a>.</p>
+_No es parte de ninguna especificación._ Apple tiene [una descripción en la Guía Web de Contenidos sobre Safari](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5).
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
-<p>Soportado por WebKit/Safari, Blink/Chrome, y <a href="https://msdn.microsoft.com/es//library/dn806275(v=vs.85).aspx">y algunas versiones de Internet Explorer y Microsoft Edge.</a></p>
+Soportado por WebKit/Safari, Blink/Chrome, y [y algunas versiones de Internet Explorer y Microsoft Edge.](<https://msdn.microsoft.com/es//library/dn806275(v=vs.85).aspx>)

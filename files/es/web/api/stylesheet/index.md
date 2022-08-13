@@ -3,48 +3,44 @@ title: objeto Stylesheet
 slug: Web/API/StyleSheet
 translation_of: Web/API/StyleSheet
 ---
-<p>{{ ApiRef("CSSOM") }}</p>
+{{ ApiRef("CSSOM") }}
 
-<p>Esta sección describe el objeto <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet">CSSStyleSheet</a>, que representa una única hoja de estilos CSS.</p>
+Esta sección describe el objeto [CSSStyleSheet](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet), que representa una única hoja de estilos CSS.
 
-<p>Una hoja de estilos CSS consiste en reglas CSS que pueden, cada una de ellas, ser manipuladas a través del objeto <a href="/Es/DOM/CssRule" title="es/DOM/cssRule">CSSRule</a>. El objeto de la hoja de estilo en sí mismo, te permite examinar y modificar la hoja de estilos, incluyendo su lista de reglas.</p>
+Una hoja de estilos CSS consiste en reglas CSS que pueden, cada una de ellas, ser manipuladas a través del objeto [CSSRule](/Es/DOM/CssRule "es/DOM/cssRule"). El objeto de la hoja de estilo en sí mismo, te permite examinar y modificar la hoja de estilos, incluyendo su lista de reglas.
 
-<p>Puedes tomar la lista de estilos de un documento determinado mediante el uso de la propiedad <a href="/es/DOM/document.styleSheets" title="es/DOM/document.styleSheets">document.styleSheets</a>.</p>
+Puedes tomar la lista de estilos de un documento determinado mediante el uso de la propiedad [document.styleSheets](/es/DOM/document.styleSheets "es/DOM/document.styleSheets").
 
-<h3 id="Properties" name="Properties">Propiedades</h3>
+### Propiedades
 
-<dl>
- <dt><a href="/Es/DOM/Stylesheet.cssRules" title="es/DOM/stylesheet.cssRules">stylesheet.cssRules</a></dt>
- <dd>Devuelve todas las reglas CSS que hay en la hoja de estilo, en forma de arreglo.</dd>
- <dt><a href="/es/DOM/stylesheet.disabled" title="es/DOM/stylesheet.disabled">stylesheet.disabled</a></dt>
- <dd>Esta propiedad indica si se ha aplicado o no, la hoja de estilo actual.</dd>
- <dt><a href="/es/DOM/stylesheet.href" title="es/DOM/stylesheet.href">stylesheet.href</a></dt>
- <dd>Devuelve la localización de la hoja de estilo.</dd>
- <dt><a href="/es/DOM/stylesheet.media" title="es/DOM/stylesheet.media">stylesheet.media</a></dt>
- <dd>Especifica el medio al que se tiene intención de aplicar la hoja de estilo.</dd>
- <dt><a href="/es/DOM/stylesheet.ownerNode" title="es/DOM/stylesheet.ownerNode">stylesheet.ownerNode</a></dt>
- <dd>el nodo que asocia la hoja de estilo con el documento.</dd>
- <dt><a href="/es/DOM/stylesheet.ownerRule" title="es/DOM/stylesheet.ownerRule">stylesheet.ownerRule</a></dt>
- <dd>Si la hoja de estilo tiene una regla marcada con @import, la propiedad ownerRule contendrá la CSSImportRule.</dd>
- <dt><a href="/es/DOM/stylesheet.parentStyleSheet" title="es/DOM/stylesheet.parentStyleSheet">stylesheet.parentStyleSheet</a></dt>
- <dd>Devuelve la hoja de estilo que que está incluida en esta, si existe.</dd>
- <dt><a href="/es/DOM/stylesheet.title" title="es/DOM/stylesheet.title">stylesheet.title</a></dt>
- <dd>Devuelve el título de la hoja de estilo actual.</dd>
- <dt><a href="/es/DOM/stylesheet.type" title="es/DOM/stylesheet.type">stylesheet.type</a></dt>
- <dd>Especifica el lenguaje de la hoja de estilo.</dd>
-</dl>
+- [stylesheet.cssRules](/Es/DOM/Stylesheet.cssRules "es/DOM/stylesheet.cssRules")
+  - : Devuelve todas las reglas CSS que hay en la hoja de estilo, en forma de arreglo.
+- [stylesheet.disabled](/es/DOM/stylesheet.disabled "es/DOM/stylesheet.disabled")
+  - : Esta propiedad indica si se ha aplicado o no, la hoja de estilo actual.
+- [stylesheet.href](/es/DOM/stylesheet.href "es/DOM/stylesheet.href")
+  - : Devuelve la localización de la hoja de estilo.
+- [stylesheet.media](/es/DOM/stylesheet.media "es/DOM/stylesheet.media")
+  - : Especifica el medio al que se tiene intención de aplicar la hoja de estilo.
+- [stylesheet.ownerNode](/es/DOM/stylesheet.ownerNode "es/DOM/stylesheet.ownerNode")
+  - : el nodo que asocia la hoja de estilo con el documento.
+- [stylesheet.ownerRule](/es/DOM/stylesheet.ownerRule "es/DOM/stylesheet.ownerRule")
+  - : Si la hoja de estilo tiene una regla marcada con @import, la propiedad ownerRule contendrá la CSSImportRule.
+- [stylesheet.parentStyleSheet](/es/DOM/stylesheet.parentStyleSheet "es/DOM/stylesheet.parentStyleSheet")
+  - : Devuelve la hoja de estilo que que está incluida en esta, si existe.
+- [stylesheet.title](/es/DOM/stylesheet.title "es/DOM/stylesheet.title")
+  - : Devuelve el título de la hoja de estilo actual.
+- [stylesheet.type](/es/DOM/stylesheet.type "es/DOM/stylesheet.type")
+  - : Especifica el lenguaje de la hoja de estilo.
 
-<h3 id="Methods" name="Methods">Métodos</h3>
+### Métodos
 
-<dl>
- <dt><a href="/es/DOM/stylesheet.deleteRule" title="es/DOM/stylesheet.deleteRule">stylesheet.deleteRule</a></dt>
- <dd>Elimina una regla de la hoja de estilo.</dd>
- <dt><a href="/es/DOM/stylesheet.insertRule" title="es/DOM/stylesheet.insertRule">stylesheet.insertRule</a></dt>
- <dd>Agrega una nueva regla de estilo a la hoja de estilo actualmente usada.</dd>
-</dl>
+- [stylesheet.deleteRule](/es/DOM/stylesheet.deleteRule "es/DOM/stylesheet.deleteRule")
+  - : Elimina una regla de la hoja de estilo.
+- [stylesheet.insertRule](/es/DOM/stylesheet.insertRule "es/DOM/stylesheet.insertRule")
+  - : Agrega una nueva regla de estilo a la hoja de estilo actualmente usada.
 
-<h3 id="Specification" name="Specification">Especificación</h3>
+### Especificación
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet">DOM Level 2 Style Sheets: StyleSheet</a></p>
+[DOM Level 2 Style Sheets: StyleSheet](http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet)
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet">DOM Level 2 CSS: CSSStyleSheet</a></p>
+[DOM Level 2 CSS: CSSStyleSheet](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet)

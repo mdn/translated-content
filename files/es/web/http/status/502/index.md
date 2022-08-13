@@ -7,40 +7,27 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Status/502
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El código de respuesta de error del servidor de HTTP <code><strong>502 Bad Gateway</strong></code> indica que el servidor, mientras actuaba como una puerta de enlace o proxy, recibió una respuesta no válida del servidor ascendente.</p>
+El código de respuesta de error del servidor de HTTP **`502 Bad Gateway`** indica que el servidor, mientras actuaba como una puerta de enlace o proxy, recibió una respuesta no válida del servidor ascendente.
 
-<div class="note">
-<p><strong>Nota: </strong>Una {{interwiki("wikipedia", "Puerta_de_enlace", "puerta de enlace")}} puede referirse a cosas distintas en redes y un error 502 no es algo que normalmente puedas arreglar, ya que requiere correcciones por parte del servidor o los proxies a través de los que intentas acceder.</p>
-</div>
+> **Nota:**Una {{interwiki("wikipedia", "Puerta_de_enlace", "puerta de enlace")}} puede referirse a cosas distintas en redes y un error 502 no es algo que normalmente puedas arreglar, ya que requiere correcciones por parte del servidor o los proxies a través de los que intentas acceder.
 
-<h2 id="Estado">Estado</h2>
+## Estado
 
-<pre class="syntaxbox">502 Bad Gateway</pre>
+    502 Bad Gateway
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Título</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "502 Bad Gateway" , "6.6.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                               | Título                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "502 Bad Gateway" , "6.6.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<p>{{Compat("http.status.502")}}</p>
+{{Compat("http.status.502")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{HTTPStatus(504)}}</li>
- <li><a href="https://www.lucushost.com/blog/502-bad-gateway-solucionar-error-502-wordpress/">502 Bad Gateway</a></li>
-</ul>
+- {{HTTPStatus(504)}}
+- [502 Bad Gateway](https://www.lucushost.com/blog/502-bad-gateway-solucionar-error-502-wordpress/)

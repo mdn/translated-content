@@ -8,91 +8,83 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image
 ---
-<div>{{CSSRef("CSS Borders")}}</div>
+{{CSSRef("CSS Borders")}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad de CSS   <code>border-image</code> permite utilizar una imágen para definir los bordes de los elementos. Esto hace que dibujarlos sea más simple y elimina la necesidad de utilizar muchas cajas en algunos casos.</p>
+La propiedad de CSS `border-image` permite utilizar una imágen para definir los bordes de los elementos. Esto hace que dibujarlos sea más simple y elimina la necesidad de utilizar muchas cajas en algunos casos.
 
-<p>La propiedad <code>border-image</code> es usada en lugar de la sentencia {{cssxref("border-style")}}. Por eso es muy importante tener en cuenta el valor dado por la sentencia {{cssxref("border-image-source")}}, que se puede establecer ya sea por la propiedad <code>border-image-source</code> o la abreviatura <code>border-image</code>, en caso de que su valor sea nulo (none), o si la imágen no se puede visualizar, se utilizarán los estilos de borde.</p>
+La propiedad `border-image` es usada en lugar de la sentencia {{cssxref("border-style")}}. Por eso es muy importante tener en cuenta el valor dado por la sentencia {{cssxref("border-image-source")}}, que se puede establecer ya sea por la propiedad `border-image-source` o la abreviatura `border-image`, en caso de que su valor sea nulo (none), o si la imágen no se puede visualizar, se utilizarán los estilos de borde.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Etiquetado formal</a>: {{csssyntax("border-image")}}</pre>
+    Etiquetado formal: {{csssyntax("border-image")}}
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<p>A continuación vea las respectivas propiedades para los diferentes valores.</p>
+A continuación vea las respectivas propiedades para los diferentes valores.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Bitmap_repeated_(repeat)">Bitmap repeated (repeat)</h3>
+### Bitmap repeated (repeat)
 
-<p>La imágen es cortada para rellenar el area del borde, repitiendose si es necesario.</p>
+La imágen es cortada para rellenar el area del borde, repitiendose si es necesario.
 
-<pre class="brush:css">.example {
+```css
+.example {
   border: 30px solid transparent;
   -moz-border-image:url("/files/4127/border.png") 30 30 repeat; /* Old firefox */
   -webkit-border-image:url("/files/4127/border.png") 30 30 repeat; /* Safari */
   -o-border-image:url("/files/4127/border.png") 30 30 repeat; /* Opera */
   border-image:url("/files/4127/border.png") 30 30 repeat;
 }
-</pre>
+```
 
-<p>Resultado:<br>
- <img alt="border image repeat demo" src="/files/4129/repeat.png" style="height: 118px; width: 349px;"></p>
+Resultado:
+![border image repeat demo](/files/4129/repeat.png)
 
-<h3 id="Bitmap_repeated_(round)">Bitmap repeated (round)</h3>
+### Bitmap repeated (round)
 
-<p>La opción 'round' es una variación de la opción 'repeat', la cual distribuye las partes de tal manera que los extremos se conecten bién.</p>
+La opción 'round' es una variación de la opción 'repeat', la cual distribuye las partes de tal manera que los extremos se conecten bién.
 
-<pre class="brush: css">.example {
+```css
+.example {
   border: 30px solid transparent;
   -moz-border-image:url("/files/4127/border.png") 30 30 round; /* Old firefox */
   -webkit-border-image:url("/files/4127/border.png") 30 30 round; /* Safari */
   -o-border-image:url("/files/4127/border.png") 30 30 round; /* Opera */
   border-image:url("/files/4127/border.png") 30 30 round;
-}</pre>
+}
+```
 
-<p>Resultado:<br>
- <img alt="border image round demo" src="/files/4131/round.png" style="height: 155px; width: 349px;"></p>
+Resultado:
+![border image round demo](/files/4131/round.png)
 
-<h3 id="Bitmap_stretched">Bitmap stretched</h3>
+### Bitmap stretched
 
-<p>La opción 'stretch' estira la imágen para rellenar todo el borde del área</p>
+La opción 'stretch' estira la imágen para rellenar todo el borde del área
 
-<pre class="brush:css">.example {
+```css
+.example {
   border: 30px solid transparent;
   -moz-border-image:url("/files/4127/border.png") 30 30 stretch; /* Old firefox */
   -webkit-border-image:url("/files/4127/border.png") 30 30 stretch; /* Safari */
   -o-border-image:url("/files/4127/border.png") 30 30 stretch; /* Opera */
   border-image:url("/files/4127/border.png") 30 30 stretch;
-}</pre>
+}
+```
 
-<p>Resultado:<br>
- <img alt="border image stretch demo" src="/files/4133/stretch.png" style="height: 118px; width: 349px;"></p>
+Resultado:
+![border image stretch demo](/files/4133/stretch.png)
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#border-image', 'border-image')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                           | Estado                                   | Comentarios |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
+| {{SpecName('CSS3 Backgrounds', '#border-image', 'border-image')}} | {{Spec2('CSS3 Backgrounds')}} |             |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("css.properties.border-image")}}

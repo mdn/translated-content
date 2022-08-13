@@ -1,29 +1,30 @@
 ---
 title: ':-moz-window-inactive'
-slug: 'Web/CSS/:-moz-window-inactive'
+slug: Web/CSS/:-moz-window-inactive
 tags:
   - CSS
-  - 'CSS:Extensiones Mozilla'
+  - CSS:Extensiones Mozilla
   - NeedsMobileBrowserCompatibility
   - No estándar(2)
   - Referencia CSS
-translation_of: 'Web/CSS/:-moz-window-inactive'
+translation_of: Web/CSS/:-moz-window-inactive
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase </a><a href="/es/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes"> </a><code>:-moz-window-inactive</code> selecciona cualquier elemento mientras está en una ventana inactiva.</p>
+La [pseudo-clase ](/es/docs/Web/CSS/Pseudo-classes)[CSS](/es/docs/Web/CSS) [](/es/docs/Web/CSS/Pseudo-classes)`:-moz-window-inactive` selecciona cualquier elemento mientras está en una ventana inactiva.
 
-<div class="note"><strong>Nota:</strong> Antes de añadir esta pseudo-clase, dar  dieferentes estilos a las ventanas de fondo podría lograrse con el atributo (<code>active="true"</code>) en la venta del nivel superior XUL. Este atributo ya no se usa.</div>
+> **Nota:** Antes de añadir esta pseudo-clase, dar dieferentes estilos a las ventanas de fondo podría lograrse con el atributo (`active="true"`) en la venta del nivel superior XUL. Este atributo ya no se usa.
 
-<p><code>:-moz-window-inactive</code> funciona también en documentos de contenido HTML.</p>
+`:-moz-window-inactive` funciona también en documentos de contenido HTML.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<p>Este ejemplo modifica la apariencia del fondo de una caja dependiendo de si está o no en una ventana activa.</p>
+Este ejemplo modifica la apariencia del fondo de una caja dependiendo de si está o no en una ventana activa.
 
-<pre class="brush: html">&lt;style type="text/css"&gt;
+```html
+<style type="text/css">
 #mybox {
   background: linear-gradient(to bottom, blue, cyan);
 }
@@ -31,19 +32,19 @@ translation_of: 'Web/CSS/:-moz-window-inactive'
 #mybox:-moz-window-inactive {
   background: cyan;
 }
-&lt;/style&gt;
+</style>
 
-&lt;div id="mybox" style="width:200px; height:200px;"&gt;
-  &lt;p&gt;This is a box!&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+<div id="mybox" style="width:200px; height:200px;">
+  <p>This is a box!</p>
+</div>
+```
 
-<p>Puedes verlo aquí en un <a href="/samples/cssref/moz-window-inactive.html">ejemplo en directo</a>.</p>
+Puedes verlo aquí en un [ejemplo en directo](/samples/cssref/moz-window-inactive.html).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación.</p>
+No es parte de ninguna especificación.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.-moz-window-inactive")}}

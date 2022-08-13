@@ -5,318 +5,249 @@ tags:
   - Referencia_CSS
 translation_of: Web/CSS/cursor
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>La propiedad <a href="es/CSS/cursor">CSS:cursor</a> especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.</p>
+La propiedad [CSS:cursor](es/CSS/cursor) especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
 
-<ul>
- <li><a href="es/CSS/Valor_inicial">CSS:Valor_inicial</a>:<code> <a href="es/CSS/auto">CSS:auto</a></code></li>
- <li>Se aplica a: todos los elementos</li>
- <li><a href="es/CSS/inheritance">CSS:inheritance</a>: Si</li>
- <li>Porcentaje: N/A</li>
- <li>Media: <a href="es/CSS/Media/Visual">CSS:Media:Visual</a>, <a href="es/CSS/Media/Interactivo">CSS:Media:Interactivo</a></li>
- <li><a href="es/CSS/Valor_calculado">CSS:Valor_calculado</a>:como sea especificado con URLs relativos convertidos a URLs absolutos.</li>
-</ul>
+- [CSS:Valor_inicial](es/CSS/Valor_inicial):` CSS:auto`
+- Se aplica a: todos los elementos
+- [CSS:inheritance](es/CSS/inheritance): Si
+- Porcentaje: N/A
+- Media: [CSS:Media:Visual](es/CSS/Media/Visual), [CSS:Media:Interactivo](es/CSS/Media/Interactivo)
+- [CSS:Valor_calculado](es/CSS/Valor_calculado):como sea especificado con URLs relativos convertidos a URLs absolutos.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval">cursor: &lt;std-cursor-name&gt; | &lt;url&gt; [&lt;x&gt; &lt;y&gt;]? [, &lt;url&gt; [&lt;x&gt; &lt;y&gt;]?]* | <a href="es/CSS/inherit">CSS:inherit</a> ;
-</pre>
+    cursor: <std-cursor-name> | <url> [<x> <y>]? [, <url> [<x> <y>]?]* | CSS:inherit ;
 
-<pre class="eval">cursor: [&lt;url&gt; [&lt;x&gt; &lt;y&gt;]?,]*  &lt;std-cursor-name&gt; ;
-</pre>
+<!---->
 
-<h3 id="Values" name="Values">Values</h3>
+    cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
 
-<dl>
- <dt>&lt;url&gt; {{ mediawiki.external(' ') }}? </dt>
- <dd>URL del cursor seleccionado mas posición opcional. Mas de un URL puede provocar problemas, in caso de que algunos tipode de imágenes de cursor no puedan ser usados.vea <a href="es/Uso_de_URL_como_valor_de_la_propiedad_cursor">Uso_de_URL_como_valor_de_la_propiedad_cursor</a> para mas detalles.</dd>
- <dt>&lt;std-cursor-name&gt;</dt>
- <dd>Algunos nombres de cursores se encuentra en la siguiente tabla.</dd>
-</dl>
+### Values
 
-<h4 id="Supported_CSS_standard_values" name="Supported_CSS_standard_values">Supported CSS standard values</h4>
+- \<url> {{ mediawiki.external(' ') }}?
+  - : URL del cursor seleccionado mas posición opcional. Mas de un URL puede provocar problemas, in caso de que algunos tipode de imágenes de cursor no puedan ser usados.vea [Uso_de_URL_como_valor_de_la_propiedad_cursor](es/Uso_de_URL_como_valor_de_la_propiedad_cursor) para mas detalles.
+- \<std-cursor-name>
+  - : Algunos nombres de cursores se encuentra en la siguiente tabla.
+
+#### Supported CSS standard values
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Categoría</th>
-   <th>nombre de CSS</th>
-   <th>Descripción</th>
-  </tr>
-  <tr>
-   <td rowspan="3">General</td>
-   <td style="cursor: auto;"><code>auto</code></td>
-   <td>El browser (user agent) determina el cursor que mostrara basado en el contenido presente.<br>
-    E.g. equivalent to <code>text</code> when hovering text</td>
-  </tr>
-  <tr>
-   <td style="cursor: default;"><code>default</code></td>
-   <td>default cursor (typically an arrow)</td>
-  </tr>
-  <tr>
-   <td style="cursor: none;"><code>none</code></td>
-   <td>no cursor is rendered</td>
-  </tr>
-  <tr>
-   <td rowspan="5">Links &amp; status</td>
-   <td style="cursor: context-menu;"><code>context-menu</code></td>
-   <td>cursor indicating that a context menu is available under the cursor</td>
-  </tr>
-  <tr>
-   <td style="cursor: help;"><code>help</code></td>
-   <td>cursor indicating help is available</td>
-  </tr>
-  <tr>
-   <td style="cursor: pointer;"><code>pointer</code></td>
-   <td>cursor used when over links (typically a hand)</td>
-  </tr>
-  <tr>
-   <td style="cursor: progress;"><code>progress</code></td>
-   <td>cursor indicating that the program is busy in the background but the user can still interact with the interface (unlike for <code>wait</code>)</td>
-  </tr>
-  <tr>
-   <td style="cursor: wait;"><code>wait</code></td>
-   <td>cursor indicating the program is busy (sometimes an hourglass or a watch)</td>
-  </tr>
-  <tr>
-   <td rowspan="4">Selection</td>
-   <td style="cursor: cell;"><code>cell</code></td>
-   <td>cursor indicating that cells can be selected</td>
-  </tr>
-  <tr>
-   <td style="cursor: crosshair;"><code>crosshair</code></td>
-   <td>cross cursor, often used to indicate selection in a bitmap</td>
-  </tr>
-  <tr>
-   <td style="cursor: text;"><code>text</code></td>
-   <td>cursor indicating text can be selected (typically an I-beam)</td>
-  </tr>
-  <tr>
-   <td style="cursor: vertical-text;"><code>vertical-text</code></td>
-   <td>cursor indicating that vertical text can be selected (typically a sideways I-beam)</td>
-  </tr>
-  <tr>
-   <td rowspan="5">Drag and drop</td>
-   <td style="cursor: alias;"><code>alias</code></td>
-   <td>cursor indicating an alias or shortcut is to be created</td>
-  </tr>
-  <tr>
-   <td style="cursor: copy;"><code>copy</code></td>
-   <td>cursor indicating that something can be copied</td>
-  </tr>
-  <tr>
-   <td style="cursor: move;"><code>move</code></td>
-   <td>the hovered object may be moved</td>
-  </tr>
-  <tr>
-   <td style="cursor: no-drop;"><code>no-drop</code></td>
-   <td>cursor showing that a drop is not allowed at the current location</td>
-  </tr>
-  <tr>
-   <td style="cursor: not-allowed;"><code>not-allowed</code></td>
-   <td>cursor showing that something cannot be done</td>
-  </tr>
-  <tr>
-   <td rowspan="15">Resize &amp; scrolling</td>
-   <td style="cursor: all-scroll;"><code>all-scroll</code></td>
-   <td>cursor showing that something can be scrolled in any direction (panned)</td>
-  </tr>
-  <tr>
-   <td style="cursor: col-resize;"><code>col-resize</code></td>
-   <td>cursor for resizing columns horizontally</td>
-  </tr>
-  <tr>
-   <td style="cursor: e-resize;"><code>e-resize</code></td>
-   <td>cursor for resizing the right edge of a box</td>
-  </tr>
-  <tr>
-   <td style="cursor: ew-resize;"><code>ew-resize</code></td>
-   <td>cursor for resizing left or right</td>
-  </tr>
-  <tr>
-   <td style="cursor: n-resize;"><code>n-resize</code></td>
-   <td>cursor for resizing the top edge of a box</td>
-  </tr>
-  <tr>
-   <td style="cursor: ne-resize;"><code>ne-resize</code></td>
-   <td>cursor for resizing the top right corner of a box</td>
-  </tr>
-  <tr>
-   <td style="cursor: nesw-resize;"><code>nesw-resize</code></td>
-   <td>cursor for resizing in the top-right or bottom-left directions</td>
-  </tr>
-  <tr>
-   <td style="cursor: ns-resize;"><code>ns-resize</code></td>
-   <td>cursor for resizing up or down</td>
-  </tr>
-  <tr>
-   <td style="cursor: nw-resize;"><code>nw-resize</code></td>
-   <td>cursor for resizing the top left corner of a box</td>
-  </tr>
-  <tr>
-   <td style="cursor: nwse-resize;"><code>nwse-resize</code></td>
-   <td>cursor for resizing in the top-left or bottom-right directions</td>
-  </tr>
-  <tr>
-   <td style="cursor: row-resize;"><code>row-resize</code></td>
-   <td>cursor for resizing rows vertically</td>
-  </tr>
-  <tr>
-   <td style="cursor: s-resize;"><code>s-resize</code></td>
-   <td>cursor for resizing the bottom edge of a box</td>
-  </tr>
-  <tr>
-   <td style="cursor: se-resize;"><code>se-resize</code></td>
-   <td>cursor for resizing the bottom right corner of a box</td>
-  </tr>
-  <tr>
-   <td style="cursor: sw-resize;"><code>sw-resize</code></td>
-   <td>cursor for resizing the bottom left corner of a box</td>
-  </tr>
-  <tr>
-   <td style="cursor: w-resize;"><code>w-resize</code></td>
-   <td>cursor for resizing the left edge of a box</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Categoría</th>
+      <th>nombre de CSS</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td rowspan="3">General</td>
+      <td style="cursor: auto"><code>auto</code></td>
+      <td>
+        El browser (user agent) determina el cursor que mostrara basado en el
+        contenido presente.<br />E.g. equivalent to <code>text</code> when
+        hovering text
+      </td>
+    </tr>
+    <tr>
+      <td style="cursor: default"><code>default</code></td>
+      <td>default cursor (typically an arrow)</td>
+    </tr>
+    <tr>
+      <td style="cursor: none"><code>none</code></td>
+      <td>no cursor is rendered</td>
+    </tr>
+    <tr>
+      <td rowspan="5">Links &#x26; status</td>
+      <td style="cursor: context-menu"><code>context-menu</code></td>
+      <td>
+        cursor indicating that a context menu is available under the cursor
+      </td>
+    </tr>
+    <tr>
+      <td style="cursor: help"><code>help</code></td>
+      <td>cursor indicating help is available</td>
+    </tr>
+    <tr>
+      <td style="cursor: pointer"><code>pointer</code></td>
+      <td>cursor used when over links (typically a hand)</td>
+    </tr>
+    <tr>
+      <td style="cursor: progress"><code>progress</code></td>
+      <td>
+        cursor indicating that the program is busy in the background but the
+        user can still interact with the interface (unlike for
+        <code>wait</code>)
+      </td>
+    </tr>
+    <tr>
+      <td style="cursor: wait"><code>wait</code></td>
+      <td>
+        cursor indicating the program is busy (sometimes an hourglass or a
+        watch)
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="4">Selection</td>
+      <td style="cursor: cell"><code>cell</code></td>
+      <td>cursor indicating that cells can be selected</td>
+    </tr>
+    <tr>
+      <td style="cursor: crosshair"><code>crosshair</code></td>
+      <td>cross cursor, often used to indicate selection in a bitmap</td>
+    </tr>
+    <tr>
+      <td style="cursor: text"><code>text</code></td>
+      <td>cursor indicating text can be selected (typically an I-beam)</td>
+    </tr>
+    <tr>
+      <td style="cursor: vertical-text"><code>vertical-text</code></td>
+      <td>
+        cursor indicating that vertical text can be selected (typically a
+        sideways I-beam)
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="5">Drag and drop</td>
+      <td style="cursor: alias"><code>alias</code></td>
+      <td>cursor indicating an alias or shortcut is to be created</td>
+    </tr>
+    <tr>
+      <td style="cursor: copy"><code>copy</code></td>
+      <td>cursor indicating that something can be copied</td>
+    </tr>
+    <tr>
+      <td style="cursor: move"><code>move</code></td>
+      <td>the hovered object may be moved</td>
+    </tr>
+    <tr>
+      <td style="cursor: no-drop"><code>no-drop</code></td>
+      <td>cursor showing that a drop is not allowed at the current location</td>
+    </tr>
+    <tr>
+      <td style="cursor: not-allowed"><code>not-allowed</code></td>
+      <td>cursor showing that something cannot be done</td>
+    </tr>
+    <tr>
+      <td rowspan="15">Resize &#x26; scrolling</td>
+      <td style="cursor: all-scroll"><code>all-scroll</code></td>
+      <td>
+        cursor showing that something can be scrolled in any direction (panned)
+      </td>
+    </tr>
+    <tr>
+      <td style="cursor: col-resize"><code>col-resize</code></td>
+      <td>cursor for resizing columns horizontally</td>
+    </tr>
+    <tr>
+      <td style="cursor: e-resize"><code>e-resize</code></td>
+      <td>cursor for resizing the right edge of a box</td>
+    </tr>
+    <tr>
+      <td style="cursor: ew-resize"><code>ew-resize</code></td>
+      <td>cursor for resizing left or right</td>
+    </tr>
+    <tr>
+      <td style="cursor: n-resize"><code>n-resize</code></td>
+      <td>cursor for resizing the top edge of a box</td>
+    </tr>
+    <tr>
+      <td style="cursor: ne-resize"><code>ne-resize</code></td>
+      <td>cursor for resizing the top right corner of a box</td>
+    </tr>
+    <tr>
+      <td style="cursor: nesw-resize"><code>nesw-resize</code></td>
+      <td>cursor for resizing in the top-right or bottom-left directions</td>
+    </tr>
+    <tr>
+      <td style="cursor: ns-resize"><code>ns-resize</code></td>
+      <td>cursor for resizing up or down</td>
+    </tr>
+    <tr>
+      <td style="cursor: nw-resize"><code>nw-resize</code></td>
+      <td>cursor for resizing the top left corner of a box</td>
+    </tr>
+    <tr>
+      <td style="cursor: nwse-resize"><code>nwse-resize</code></td>
+      <td>cursor for resizing in the top-left or bottom-right directions</td>
+    </tr>
+    <tr>
+      <td style="cursor: row-resize"><code>row-resize</code></td>
+      <td>cursor for resizing rows vertically</td>
+    </tr>
+    <tr>
+      <td style="cursor: s-resize"><code>s-resize</code></td>
+      <td>cursor for resizing the bottom edge of a box</td>
+    </tr>
+    <tr>
+      <td style="cursor: se-resize"><code>se-resize</code></td>
+      <td>cursor for resizing the bottom right corner of a box</td>
+    </tr>
+    <tr>
+      <td style="cursor: sw-resize"><code>sw-resize</code></td>
+      <td>cursor for resizing the bottom left corner of a box</td>
+    </tr>
+    <tr>
+      <td style="cursor: w-resize"><code>w-resize</code></td>
+      <td>cursor for resizing the left edge of a box</td>
+    </tr>
+  </tbody>
 </table>
 
-<h4 id="Extended_Gecko_CSS_values" name="Extended_Gecko_CSS_values">Extended Gecko CSS values</h4>
+#### Extended Gecko CSS values
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>CSS name</th>
-   <th>Description</th>
-   <th>Deprecation</th>
-  </tr>
-  <tr>
-   <td style="cursor: -moz-alias;"><code><a href="es/CSS/-moz-alias">-moz-alias</a></code></td>
-   <td>replaced by standard value <code>alias</code> as described in the previous table</td>
-   <td>Gecko 1.8a6</td>
-  </tr>
-  <tr>
-   <td style="cursor: -moz-cell;"><code><a href="es/CSS/-moz-cell">-moz-cell</a></code></td>
-   <td>replaced by standard value <code>cell</code> as described in the previous table</td>
-   <td>Gecko 1.8a6</td>
-  </tr>
-  <tr>
-   <td style="cursor: -moz-context-menu;"><code><a href="es/CSS/-moz-context-menu">-moz-context-menu</a></code></td>
-   <td>replaced by standard value <code>context-menu</code> as described in the previous table</td>
-   <td>Gecko 1.8a6</td>
-  </tr>
-  <tr>
-   <td style="cursor: -moz-copy;"><code><a href="es/CSS/-moz-copy">-moz-copy</a></code></td>
-   <td>replaced by standard value <code>copy</code> as described in the previous table</td>
-   <td>Gecko 1.8a6</td>
-  </tr>
-  <tr>
-   <td style="cursor: -moz-grab;"><code><a href="es/CSS/-moz-grab">-moz-grab</a></code></td>
-   <td>a cursor value that should indicate that an element or an object in a webpage can be grabbed</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td style="cursor: -moz-grabbing;"><code><a href="es/CSS/-moz-grabbing">-moz-grabbing</a></code></td>
-   <td>a cursor value that should indicate that an element or an object is currently being grabbed</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td style="cursor: -moz-spinning;"><code><a href="es/CSS/-moz-spinning">-moz-spinning</a></code></td>
-   <td>replaced by standard value <code>progress</code> as described in the previous table</td>
-   <td>Gecko 1.7.1</td>
-  </tr>
-  <tr>
-   <td style="cursor: -moz-zoom-in;"><code><a href="es/CSS/-moz-zoom-in">-moz-zoom-in</a></code></td>
-   <td>used to indicate that an element or an object in a webpage is actually being resized, enlarged or is actually being magnified</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td style="cursor: -moz-zoom-out;"><code><a href="es/CSS/-moz-zoom-out">-moz-zoom-out</a></code></td>
-   <td>used to indicate that an element or an object in a webpage is actually being resized, reduced or is actually being zoomed out</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| CSS name                                        | Description                                                                                                                   | Deprecation |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [`-moz-alias`](es/CSS/-moz-alias)               | replaced by standard value `alias` as described in the previous table                                                         | Gecko 1.8a6 |
+| [`-moz-cell`](es/CSS/-moz-cell)                 | replaced by standard value `cell` as described in the previous table                                                          | Gecko 1.8a6 |
+| [`-moz-context-menu`](es/CSS/-moz-context-menu) | replaced by standard value `context-menu` as described in the previous table                                                  | Gecko 1.8a6 |
+| [`-moz-copy`](es/CSS/-moz-copy)                 | replaced by standard value `copy` as described in the previous table                                                          | Gecko 1.8a6 |
+| [`-moz-grab`](es/CSS/-moz-grab)                 | a cursor value that should indicate that an element or an object in a webpage can be grabbed                                  |             |
+| [`-moz-grabbing`](es/CSS/-moz-grabbing)         | a cursor value that should indicate that an element or an object is currently being grabbed                                   |             |
+| [`-moz-spinning`](es/CSS/-moz-spinning)         | replaced by standard value `progress` as described in the previous table                                                      | Gecko 1.7.1 |
+| [`-moz-zoom-in`](es/CSS/-moz-zoom-in)           | used to indicate that an element or an object in a webpage is actually being resized, enlarged or is actually being magnified |             |
+| [`-moz-zoom-out`](es/CSS/-moz-zoom-out)         | used to indicate that an element or an object in a webpage is actually being resized, reduced or is actually being zoomed out |             |
 
-<h3 id="Examples" name="Examples">Examples</h3>
+### Examples
 
-<p><a href="/samples/cssref/cursor.html">Ver El Ejemplo Vivo</a></p>
+[Ver El Ejemplo Vivo](/samples/cssref/cursor.html)
 
-<pre>Inline:
+    Inline:
 
-&lt;span style="cursor: crosshair"&gt;Some Text&lt;/span&gt;
+    <span style="cursor: crosshair">Some Text</span>
 
-External:
+    External:
 
-.pointer {
-	cursor: pointer;
-}
-.move {
-	cursor: move;
-}
+    .pointer {
+    	cursor: pointer;
+    }
+    .move {
+    	cursor: move;
+    }
 
-</pre>
+### Notes
 
-<h3 id="Notes" name="Notes">Notes</h3>
+While this property works on older browsers, not all values are fully supported.
 
-<p>While this property works on older browsers, not all values are fully supported.</p>
+### Specifications
 
-<h3 id="Specifications" name="Specifications">Specifications</h3>
+- [CSS 2.1](http://www.w3.org/TR/CSS21/ui.html#propdef-cursor)
+- [css3-ui](http://www.w3.org/TR/css3-ui/#cursor)
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS21/ui.html#propdef-cursor">CSS 2.1</a></li>
- <li><a class="external" href="http://www.w3.org/TR/css3-ui/#cursor">css3-ui</a></li>
-</ul>
+### Browser compatibility
 
-<h3 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h3>
+| Browser           | Lowest Version (`<std-cursor-name>`) | Lowest Version (`<url>`) |
+| ----------------- | ------------------------------------ | ------------------------ |
+| Internet Explorer | 4                                    | 6 (only `.cur` files)    |
+| Firefox           | 1.0                                  | 1.5                      |
+| Netscape          | 6                                    | 8                        |
+| Opera             | 7                                    | -                        |
+| Konqueror         | 3.1                                  | 3.1                      |
+| Safari            | 1.2                                  | 1.2                      |
+| Safari (Win)      | 3.0                                  | 3.0                      |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Browser</th>
-   <th>Lowest Version (<code>&lt;std-cursor-name&gt;</code>)</th>
-   <th>Lowest Version (<code>&lt;url&gt;</code>)</th>
-  </tr>
-  <tr>
-   <td>Internet Explorer</td>
-   <td>4</td>
-   <td>6 (only <code>.cur</code> files)</td>
-  </tr>
-  <tr>
-   <td>Firefox</td>
-   <td>1.0</td>
-   <td>1.5</td>
-  </tr>
-  <tr>
-   <td>Netscape</td>
-   <td>6</td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td>Opera</td>
-   <td>7</td>
-   <td>-</td>
-  </tr>
-  <tr>
-   <td>Konqueror</td>
-   <td>3.1</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Safari</td>
-   <td>1.2</td>
-   <td>1.2</td>
-  </tr>
-  <tr>
-   <td>Safari (Win)</td>
-   <td>3.0</td>
-   <td>3.0</td>
-  </tr>
- </tbody>
-</table>
+### See also
 
-<h3 id="See_also" name="See_also">See also</h3>
-
-<p>{{ languages( { "fr": "fr/CSS/cursor", "pl": "pl/CSS/cursor", "en": "en/CSS/cursor" } ) }}</p>
+{{ languages( { "fr": "fr/CSS/cursor", "pl": "pl/CSS/cursor", "en": "en/CSS/cursor" } ) }}

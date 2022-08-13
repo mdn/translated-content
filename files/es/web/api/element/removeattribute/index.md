@@ -8,34 +8,30 @@ tags:
   - Referencia
 translation_of: Web/API/Element/removeAttribute
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>removeAttribute</code> elimina un atributo del elemento especificado.</p>
+`removeAttribute` elimina un atributo del elemento especificado.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval"><em>element</em>.removeAttribute(<em>attrName</em>);
-</pre>
+    element.removeAttribute(attrName);
 
-<ul>
- <li><code>attrName</code> es una cadena que nombra el atributo a ser eliminado de <em>element</em>.</li>
-</ul>
+- `attrName` es una cadena que nombra el atributo a ser eliminado de _element_.
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<pre>// &lt;div id="div1" align="left" width="200px"&gt;
-document.getElementById("div1").removeAttribute("align");
-// ahora: &lt;div id="div1" width="200px"&gt;
-</pre>
+    // <div id="div1" align="left" width="200px">
+    document.getElementById("div1").removeAttribute("align");
+    // ahora: <div id="div1" width="200px">
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Debe usarse preferiblemente <code>removeAttribute</code> en lugar de establecer el valor del atributo a <code>null</code> usando <a href="/en/DOM/element.setAttribute" title="en/DOM/element.setAttribute">setAttribute</a>.</p>
+Debe usarse preferiblemente `removeAttribute` en lugar de establecer el valor del atributo a `null` usando [setAttribute](/en/DOM/element.setAttribute "en/DOM/element.setAttribute").
 
-<p>Intentar eliminar un atributo que no existe en el elemento no disparará una excepción.</p>
+Intentar eliminar un atributo que no existe en el elemento no disparará una excepción.
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9">DOM Level 2 Core: removeAttribute</a> (introducido en <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute">DOM Level 1 Core</a>)</p>
+[DOM Level 2 Core: removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) (introducido en [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute))

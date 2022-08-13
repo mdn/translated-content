@@ -7,56 +7,43 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Status/404
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El codigo de error HTTP <code><strong>404 Not Found</strong></code> (404 No Encontrado) de respuesta de cliente indica que el servidor no puede encontrar el recurso solicitado. Vinculos que conducen a una pagina 404 son normalmente llamados <em>vinculos rotos</em> o <em>vinculos muertos</em>, y pueden estar sujetos a <a href="https://es.wikipedia.org/wiki/Enlace_roto">Enlace Roto</a>.</p>
+El codigo de error HTTP **`404 Not Found`** (404 No Encontrado) de respuesta de cliente indica que el servidor no puede encontrar el recurso solicitado. Vinculos que conducen a una pagina 404 son normalmente llamados _vinculos rotos_ o _vinculos muertos_, y pueden estar sujetos a [Enlace Roto](https://es.wikipedia.org/wiki/Enlace_roto).
 
-<p>Un código de estado 404 no indica si el recurso está temporalmente o permanentemente ausente. Pero si un recurso es permanentemente eliminado, un {{HTTPStatus(410)}} (Gone) debe ser usado en lugar del estado 404.</p>
+Un código de estado 404 no indica si el recurso está temporalmente o permanentemente ausente. Pero si un recurso es permanentemente eliminado, un {{HTTPStatus(410)}} (Gone) debe ser usado en lugar del estado 404.
 
-<h2 id="Estado">Estado</h2>
+## Estado
 
-<pre class="syntaxbox">404 Not Found</pre>
+    404 Not Found
 
-<p>En español:</p>
+En español:
 
-<pre class="syntaxbox">404 No Encontrado</pre>
+    404 No Encontrado
 
-<h2 id="Paginas_de_error_personalizadas">Paginas de error personalizadas</h2>
+## Paginas de error personalizadas
 
-<p>Muchos sitios web personalizan la apariencia de la pagina 404 para que sea de utilidad al usuario y proveen una guia para saber qué hacer. Servidores Apache pueden ser configurados usando un archivo <code>.htaccess</code> con el siguiente codigo:</p>
+Muchos sitios web personalizan la apariencia de la pagina 404 para que sea de utilidad al usuario y proveen una guia para saber qué hacer. Servidores Apache pueden ser configurados usando un archivo `.htaccess` con el siguiente codigo:
 
-<pre class="brush: bash">ErrorDocument 404 /no-encontrado.html</pre>
+```bash
+ErrorDocument 404 /no-encontrado.html
+```
 
-<p>Para una pagina 404 de ejemplo, mire la pagina <a href="https://developer.mozilla.org/es/404">MDN 404</a>.</p>
+Para una pagina 404 de ejemplo, mire la pagina [MDN 404](https://developer.mozilla.org/es/404).
 
-<div class="note">
-<p>Diseños personalizados son buenos, si se usan de manera moderada. Siente libre de hacer tus paginas 404 humoristicas y humanas, pero no confundas a tus usuarios.</p>
-</div>
+> **Nota:** Diseños personalizados son buenos, si se usan de manera moderada. Siente libre de hacer tus paginas 404 humoristicas y humanas, pero no confundas a tus usuarios.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificacion</th>
-   <th scope="col">Titulo</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "404 Not Found" , "6.5.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semanticas y contenido</td>
-  </tr>
- </tbody>
-</table>
+| Especificacion                                           | Titulo                                                         |
+| -------------------------------------------------------- | -------------------------------------------------------------- |
+| {{RFC("7231", "404 Not Found" , "6.5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semanticas y contenido |
 
-<h2 id="Compatibilidad_con_Navegadores">Compatibilidad con Navegadores</h2>
+## Compatibilidad con Navegadores
 
-<p>{{Compat("http.status.404")}}</p>
+{{Compat("http.status.404")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{HTTPStatus(410)}}</li>
- <li>
-  <p>{{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}</p>
- </li>
-</ul>
+- {{HTTPStatus(410)}}
+- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}

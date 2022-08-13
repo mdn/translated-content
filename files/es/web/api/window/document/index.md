@@ -3,44 +3,41 @@ title: Window.document
 slug: Web/API/Window/document
 translation_of: Web/API/Window/document
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>Retorna una referencia al documento contenido en la ventana.</p>
+Retorna una referencia al documento contenido en la ventana.
 
-<div class="note"><strong>Nota:</strong> Firefox 3 altera la seguridad para los documentos entre ventanas, de modo que sólo el dominio desde el cual ha sido cargada una ventana puede acceder al documento. A pesar de que esto rompe el funcionamiento de algunos sitios existentes, es una modificación adoptada por Firefox 3 e Internet Explorer 7, que resulta en una mejora de seguridad.</div>
+> **Nota:** Firefox 3 altera la seguridad para los documentos entre ventanas, de modo que sólo el dominio desde el cual ha sido cargada una ventana puede acceder al documento. A pesar de que esto rompe el funcionamiento de algunos sitios existentes, es una modificación adoptada por Firefox 3 e Internet Explorer 7, que resulta en una mejora de seguridad.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>doc</var> = window.document
-</pre>
+    doc = window.document
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<ul>
- <li><code>doc</code> es una referencia al objeto del <a href="/en-US/docs/DOM/document" title="DOM/document">document</a>.</li>
-</ul>
+- `doc` es una referencia al objeto del [document](/es/docs/DOM/document "DOM/document").
 
-<h2 id="Example" name="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-   &lt;title&gt;Hola, Mundo!&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Hola, Mundo!</title>
+</head>
+<body>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
    var doc = window.document;
    console.log(doc.title); // Hola, Mundo!
-&lt;/script&gt;
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<ul>
- <li><a href="http://www.whatwg.org/html/#the-window-object">HTML</a></li>
-</ul>
+- [HTML](http://www.whatwg.org/html/#the-window-object)

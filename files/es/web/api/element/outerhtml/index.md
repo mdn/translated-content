@@ -3,95 +3,82 @@ title: Element.outerHTML
 slug: Web/API/Element/outerHTML
 translation_of: Web/API/Element/outerHTML
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>El atributo <code>outerHTML</code> del interfaz DOM {{ domxref("element") }} obtiene el fragmento HTML serializado que describe el elemento incluyendo sus descendientes. Puede ser asignado para reemplazar el elemento por los nodos resultantes de examinar de la cadena proporcionada.</p>
+El atributo `outerHTML` del interfaz DOM {{ domxref("element") }} obtiene el fragmento HTML serializado que describe el elemento incluyendo sus descendientes. Puede ser asignado para reemplazar el elemento por los nodos resultantes de examinar de la cadena proporcionada.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval"><em>var content</em> = <em>element</em>.outerHTML;
-</pre>
+    var content = element.outerHTML;
 
-<p>Al retorno, <code>content</code> contendrá el fragmento de HTML serializado que describe al elemento <code>element</code> y a sus descendientes.</p>
+Al retorno, `content` contendrá el fragmento de HTML serializado que describe al elemento `element` y a sus descendientes.
 
-<pre class="eval"><em>element</em>.outerHTML = content;
-</pre>
+    element.outerHTML = content;
 
-<p>Reemplaza el elemento por los nodos generados del análisis de la cadena <code>content</code> con el padre de <code>element</code> como el nodo de contexto para el algoritmo de procesado del fragmento.</p>
+Reemplaza el elemento por los nodos generados del análisis de la cadena `content` con el padre de `element` como el nodo de contexto para el algoritmo de procesado del fragmento.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<p>Ontener el valor de la propiedas <code>outerHTML</code> de un elemento:</p>
+Ontener el valor de la propiedas `outerHTML` de un elemento:
 
-<pre class="brush: js">// HTML:
-// &lt;div id="d"&gt;&lt;p&gt;Content&lt;/p&gt;&lt;p&gt;Further Elaborated&lt;/p&gt;&lt;/div&gt;
+```js
+// HTML:
+// <div id="d"><p>Content</p><p>Further Elaborated</p></div>
 
 d = document.getElementById("d");
 dump(d.outerHTML);
 
-// La cadena '&lt;div id="d"&gt;&lt;p&gt;Content&lt;/p&gt;&lt;p&gt;Further Elaborated&lt;/p&gt;&lt;/div&gt;'
+// La cadena '<div id="d"><p>Content</p><p>Further Elaborated</p></div>'
 // es volcada a la ventana de la consola.
-</pre>
+```
 
-<p>Reemplazar un nodo mediante la asignación de la propiedad <code>outerHTML</code>:</p>
+Reemplazar un nodo mediante la asignación de la propiedad `outerHTML`:
 
-<pre class="brush: js">// HTML:
-// &lt;div id="container"&gt;&lt;div id="d"&gt;This is a div.&lt;/div&gt;&lt;/div&gt;
+```js
+// HTML:
+// <div id="container"><div id="d">This is a div.</div></div>
 
 container = document.getElementById("container");
 d = document.getElementById("d");
 console.log(container.firstChild.nodeName); // logs "DIV"
 
-d.outerHTML = "&lt;p&gt;This paragraph replaced the original div.&lt;/p&gt;";
+d.outerHTML = "<p>This paragraph replaced the original div.</p>";
 console.log(container.firstChild.nodeName); // logs "P"
 
 // El div #d no será parte del árbol del documento,
 // el nuevo párrafo lo reemplazará.
-</pre>
+```
 
-<h2 id="Notas">Notas</h2>
+## Notas
 
-<p>Si el elemento no tiene elemento padre, esto es, si es el elemento raíz del documento, la asignación de su propiedad <code>outerHTML</code> lanzará una <code><a href="/en/DOM/DOMException" title="DOMException">DOMException</a></code> con el código de error <code>NO_MODIFICATION_ALLOWED_ERR</code>. Por ejemplo:</p>
+Si el elemento no tiene elemento padre, esto es, si es el elemento raíz del documento, la asignación de su propiedad `outerHTML` lanzará una [`DOMException`](/en/DOM/DOMException "DOMException") con el código de error `NO_MODIFICATION_ALLOWED_ERR`. Por ejemplo:
 
-<pre class="brush: js">document.documentElement.outerHTML = "test";  // lanza una DOMException
-</pre>
+```js
+document.documentElement.outerHTML = "test";  // lanza una DOMException
+```
 
-<p>Además, aunque el elemento es reemplazado en el documento, la variable cuya propiedad <code>outerHTML</code> fue asignada continuará conteniendo una referencia al elemento original:</p>
+Además, aunque el elemento es reemplazado en el documento, la variable cuya propiedad `outerHTML` fue asignada continuará conteniendo una referencia al elemento original:
 
-<pre class="brush: js">var p = document.getElementsByTagName("p")[0];
+```js
+var p = document.getElementsByTagName("p")[0];
 console.log(p.nodeName); // muestra: "P"
-p.outerHTML = "&lt;div&gt;This div replaced a paragraph.&lt;/div&gt;";
+p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // sigue mostrando: "P";
-</pre>
+```
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Observaciones</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}}</td>
-   <td>{{ Spec2('DOM Parsing') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                               | Observaciones |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
+| {{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}} | {{ Spec2('DOM Parsing') }} |               |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.Element.outerHTML")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("HTMLElement.outerText")}}</li>
- <li>MSDN: <a class="external" href="http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx">Propiedad outerHTML</a></li>
-</ul>
+- {{domxref("HTMLElement.outerText")}}
+- MSDN: [Propiedad outerHTML](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)

@@ -3,87 +3,83 @@ title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 translation_of: Web/API/Intersection_Observer_API
 ---
-<p>{{DefaultAPISidebar("Intersection Observer API")}}</p>
+{{DefaultAPISidebar("Intersection Observer API")}}
 
+La API Observador de Intersección provee una vía asíncrona para observar cambios en la intersección de un elemento con un elemento ancestro o con el {{Glossary("viewport")}} del documento de nivel superior.
 
+Históricamente, detectar la visibilidad de un elemento, o la visibilidad relativa de dos elementos, uno respecto del otro, ha sido una tarea difícil para la cual las soluciones no han sido muy fiables y propensas a causar que el navegador y los sitios a los que el usuario accede lleguen a ser lentos. A medida que la web ha madurado, la necesidad para este tipo de información ha ido en aumento. La información sobre intersección es necesaria por muchas razones, tales como:
 
-<p class="summary"><span class="seoSummary">La API Observador de Intersección provee una vía asíncrona para observar cambios en la intersección de un elemento con un elemento ancestro o con el {{Glossary("viewport")}} del documento de nivel superior.</span></p>
+- Carga en diferido de imágenes u otro contenido a medida que la página se desplaza.
+- Implementación del desplazamiento infinito en sitios web, donde más y más contenido se carga y muestra a medida que se desplaza la página, de forma que el usuario no tiene que pasar páginas.
+- Informes de visualizaciones de anuncios para calcular ingresos por publicidad.
+- Decidir si deben realizarse tareas o procesos de animación basados en si el usuario verá o no el resultado.
 
-<p>Históricamente, detectar la visibilidad de un elemento, o la visibilidad relativa de dos elementos, uno respecto del otro, ha sido una tarea difícil para la cual las soluciones no han sido muy fiables y propensas a causar que el navegador y los sitios a los que el usuario accede lleguen a ser lentos. A medida que la web ha madurado, la necesidad para este tipo de información ha ido en aumento. La información sobre intersección es necesaria por muchas razones, tales como:</p>
+Implementar la detección de intersecciones en el pasado implicaba manejadores de eventos y bucles llamando a métodos como {{domxref("Element.getBoundingClientRect()")}} para reunir la información necesaria para cada elemento afectado. Dado que todo este código corre sobre el hilo principal, incluso uno de estos puede causar problemas de rendimiento. Cuando un sitio es cargado con estos tests, las cosas pueden ponerse muy feas.
 
-<ul>
- <li>Carga en diferido de imágenes u otro contenido a medida que la página se desplaza.</li>
- <li>Implementación del desplazamiento infinito en sitios web, donde más y más contenido se carga y muestra a medida que se desplaza la página, de forma que el usuario no tiene que pasar páginas.</li>
- <li>Informes de visualizaciones de anuncios para calcular ingresos por publicidad.</li>
- <li>Decidir si deben realizarse tareas o procesos de animación basados en si el usuario verá o no el resultado.</li>
-</ul>
+Considere una página web que usa scroll infinito. Usa una librería de terceros para manejar los anuncios situados periódicamente en la página, que tiene gráficos animados aquí y allá, y usa una librería personalizada que muestra cajas de notificación y similares. Cada uno de estos tiene sus propias rutinas de detección de intersecciones, todas corriendo en el hilo principal. El autor del sitio web puede no darse cuenta de que esto está pasando, ya que están usando dos librerías de las que quizás conocen muy poco acerca de su funcionamiento interno. A medida que el usuario desplaza la página, estas rutinas de detección de intersecciones están disparando código constantemente durante el scroll, lo que resulta en una experiencia que deja al usuario frustrado con el navegador, el sitio web y su ordenador.
 
-<p>Implementar la detección de intersecciones en el pasado implicaba manejadores de eventos y bucles llamando a métodos como {{domxref("Element.getBoundingClientRect()")}} para reunir la información necesaria para cada elemento afectado. Dado que todo este código corre sobre el hilo principal, incluso uno de estos puede causar problemas de rendimiento. Cuando un sitio es cargado con estos tests, las cosas pueden ponerse muy feas.</p>
+El API Intersection Observer deja al código registrar una función callback que se ejecuta si un elemento que se desea monitorizar entra o sale de otro elemento (o del {{Glossary("viewport")}}), o cuando la cantidad por la que ambos elementos se intersecan cambia en una cantidad requerida. De esta manera, los sitios no necesitan hacer nada sobre el hilo principal para mirar este tipo de intersección entre elementos, y el navegador está libre para optimizar la gestión de intersecciones como le parezca conveniente.
 
-<p>Considere una página web que usa scroll infinito. Usa una librería de terceros para manejar los anuncios situados periódicamente en la página, que tiene gráficos animados aquí y allá, y usa una librería personalizada que muestra cajas de notificación y similares. Cada uno de estos tiene sus propias rutinas de detección de intersecciones, todas corriendo en el hilo principal. El autor del sitio web puede no darse cuenta de que esto está pasando, ya que están usando dos librerías de las que quizás conocen muy poco acerca de su funcionamiento interno. A medida que el usuario desplaza la página, estas rutinas de detección de intersecciones están disparando código constantemente durante el scroll, lo que resulta en una experiencia que deja al usuario frustrado con el navegador, el sitio web y su ordenador.</p>
+Una cosa que el API Intersection Observer no puede decirle es: el número exacto de pixels que se solapan o específicamente cuales son; sin embargo, cubre el caso de uso mucho más común de "Si se intersecan por algún lugar alrededor del _N_%, necesito hacer algo."
 
-<p>El API Intersection Observer deja al código registrar una función callback que se ejecuta si un elemento que se desea monitorizar entra o sale de otro elemento (o del {{Glossary("viewport")}}), o cuando la cantidad por la que ambos elementos se intersecan cambia en una cantidad requerida. De esta manera, los sitios no necesitan hacer nada sobre el hilo principal para mirar este tipo de intersección entre elementos, y el navegador está libre para optimizar la gestión de intersecciones como le parezca conveniente.</p>
+## Intersection observer conceptos y uso
 
-<p>Una cosa que el API Intersection Observer no puede decirle es: el número exacto de pixels que se solapan o específicamente cuales son; sin embargo, cubre el caso de uso mucho más común de "Si se intersecan por algún lugar alrededor del <em>N</em>%, necesito hacer algo."</p>
+La API Intersection Observer le permite configurar una función callback que es llamada cuando alguna de las siguientes circunstancias ocurren:
 
-<h2 id="Intersection_observer_conceptos_y_uso">Intersection observer conceptos y uso</h2>
+- Un elemento **target** intersecta ya sea al viewport del dispositivo o un elemento especificado. Ese elemento especificado es llamado el **elemento root** o **root** a los propósitos de la API Intersection Observer.
+- La primera vez que se pide inicialmente al observador que observe un elemento target.
 
-<p>La API Intersection Observer le permite configurar una función callback que es llamada cuando alguna de las siguientes circunstancias ocurren:</p>
+Típicamente, usted querrá observar los cambios en las intersecciones con respecto al ancestro scrollable más cercano al elemento, o, si el elemento no desciende de un ancestro scrollable, al viewport.
+Para observar la intersección relativa al elemento root, especifique null;
 
-<ul>
- <li>Un elemento <strong>target </strong>intersecta ya sea al viewport del dispositivo o un elemento especificado. Ese elemento especificado es llamado el <strong>elemento root</strong> o <strong>root</strong> a los propósitos de la API Intersection Observer.</li>
- <li>La primera vez que se pide inicialmente al observador que observe un elemento target.</li>
-</ul>
+Tanto si está usted usando el viewport o algún otro elemento como root, el API funciona de la misma manera, ejecutando una función callback que usted le proporciona cuando la visibilidad del elemento target cambia al cruzar en la cantidad de intersección deseada con el elemento root.
 
-<p>Típicamente, usted querrá observar los cambios en las intersecciones con respecto al ancestro scrollable más cercano al elemento, o, si el elemento no desciende de un ancestro scrollable, al viewport.<br>
- Para observar la intersección relativa al elemento root, especifique null;</p>
+El grado de intersección entre el elemento target y su elemento root es el **intersection ratio**. Esto es una representación del porcentaje del elemento target que es visible, indicado como un valor entre 0.0 y 1.0.
 
-<p>Tanto si está usted usando el viewport o algún otro elemento como root, el API funciona de la misma manera, ejecutando una función callback que usted le proporciona cuando la visibilidad del elemento target cambia al cruzar en la cantidad de intersección deseada con el elemento root.</p>
+### Creando un intersection observer
 
-<p>El grado de intersección entre el elemento target y su elemento root es el <strong>intersection ratio</strong>. Esto es una representación del porcentaje del elemento target que es visible, indicado como un valor entre 0.0 y 1.0.</p>
+Cree el intersection observer llamando a su constructor y pasándole una función callback para que se ejecute cuando se cruce un umbral (threshold) en una u otra dirección:
 
-<h3 id="Creando_un_intersection_observer">Creando un intersection observer</h3>
-
-<p>Cree el intersection observer llamando a su constructor y pasándole una función callback para que se ejecute cuando se cruce un umbral (threshold) en una u otra dirección:</p>
-
-<pre class="brush: js notranslate">let options = {
+```js
+let options = {
   root: document.querySelector('#scrollArea'),
   rootMargin: '0px',
   threshold: 1.0
 }
 
-let observer = new IntersectionObserver(callback, options);</pre>
+let observer = new IntersectionObserver(callback, options);
+```
 
-<p>Un umbral de 1.0 significa que cuando el 100% del elemento target está visible dentro del elemento especificado por la opción <code>root</code>, la función callback es invocada.</p>
+Un umbral de 1.0 significa que cuando el 100% del elemento target está visible dentro del elemento especificado por la opción `root`, la función callback es invocada.
 
-<h4 id="Opciones_de_Intersection_observer">Opciones de Intersection observer</h4>
+#### Opciones de Intersection observer
 
-<p>El objeto <code>options</code> pasado al constructor {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} le deja controlar las circunstancias bajo las cuales la función callback es invocada. Tiene los siguientes campos:</p>
+El objeto `options` pasado al constructor {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} le deja controlar las circunstancias bajo las cuales la función callback es invocada. Tiene los siguientes campos:
 
-<dl>
- <dt><code>root</code></dt>
- <dd>El elemento que es usado como viewport para comprobar la visibilidad de elemento target. Debe ser ancestro de target. Por defecto es el viewport del navegador si no se especifica o si es <code>null</code>.</dd>
- <dt><code>rootMargin</code>  </dt>
- <dd>Margen alrededor del elemento root. Puede tener valores similares a los de CSS {{cssxref("margin")}} property, e.g. "<code>10px 20px 30px 40px"</code> (top, right, bottom, left). Los valores pueden ser porcentajes. Este conjunto de valores sirve para aumentar o encoger cada lado del cuadro delimitador del elemento root antes de calcular las intersecciones. Por defecto son todos cero.</dd>
- <dt><code>threshold</code></dt>
- <dd>Es un número o un array de números que indican a que porcentaje de visibilidad del elemento target, la función callback del observer debería ser ejecutada. Si usted quiere que se detecte cuando la visibilidad pasa la marca del 50%, debería usar un valor de 0.5. Si quiere ejecutar la función callback cada vez que la visibilidad pase otro 25%, usted debería especificar el array [0, 0.25, 0.5, 0.75, 1]. El valor por defecto es 0 (lo que significa que tan pronto como un píxel sea visible, la función callback será ejecutada). Un valor de 1.0 significa que el umbral no se considera pasado hasta que todos los pixels son visibles.</dd>
-</dl>
+- `root`
+  - : El elemento que es usado como viewport para comprobar la visibilidad de elemento target. Debe ser ancestro de target. Por defecto es el viewport del navegador si no se especifica o si es `null`.
+- `rootMargin`
+  - : Margen alrededor del elemento root. Puede tener valores similares a los de CSS {{cssxref("margin")}} property, e.g. "`10px 20px 30px 40px"` (top, right, bottom, left). Los valores pueden ser porcentajes. Este conjunto de valores sirve para aumentar o encoger cada lado del cuadro delimitador del elemento root antes de calcular las intersecciones. Por defecto son todos cero.
+- `threshold`
+  - : Es un número o un array de números que indican a que porcentaje de visibilidad del elemento target, la función callback del observer debería ser ejecutada. Si usted quiere que se detecte cuando la visibilidad pasa la marca del 50%, debería usar un valor de 0.5. Si quiere ejecutar la función callback cada vez que la visibilidad pase otro 25%, usted debería especificar el array \[0, 0.25, 0.5, 0.75, 1]. El valor por defecto es 0 (lo que significa que tan pronto como un píxel sea visible, la función callback será ejecutada). Un valor de 1.0 significa que el umbral no se considera pasado hasta que todos los pixels son visibles.
 
-<h4 id="Determinando_un_elemento_para_ser_observado">Determinando un elemento para ser observado</h4>
+#### Determinando un elemento para ser observado
 
-<p>Una vez usted ha creado el observer, necesita darle un elemento target para observar:</p>
+Una vez usted ha creado el observer, necesita darle un elemento target para observar:
 
-<pre class="brush: js notranslate">var target = document.querySelector('#listItem');
+```js
+var target = document.querySelector('#listItem');
 observer.observe(target);
 
 // el callback que indicamos al observador será ejecutado ahora por primera vez
 // espera hasta que le asignemos un target a nuestro observador (aún si el target no está actualmente visible)
-</pre>
+```
 
-<p>Cuando el elemento target encuentra un threshold especificado por el <code>IntersectionObserver</code>, la función callback es invocada. La función callback recibe una lista de objetos {{domxref("IntersectionObserverEntry")}} y el observer:</p>
+Cuando el elemento target encuentra un threshold especificado por el `IntersectionObserver`, la función callback es invocada. La función callback recibe una lista de objetos {{domxref("IntersectionObserverEntry")}} y el observer:
 
-<pre class="brush: js notranslate">var callback = function(entries, observer) {
-  entries.forEach(entry =&gt; {
+```js
+var callback = function(entries, observer) {
+  entries.forEach(entry => {
     // Cada entry describe un cambio en la intersección para
     // un elemento observado
     //   entry.boundingClientRect
@@ -95,57 +91,57 @@ observer.observe(target);
     //   entry.time
   });
 };
-</pre>
+```
 
-<p>Asegúrese de que su función callback se ejecute sobre el hilo principal. Debería operar tan rápidamente como sea posible; si alguna cosa necesita  tiempo extra para ser realizada, use {{domxref("Window.requestIdleCallback()")}}.</p>
+Asegúrese de que su función callback se ejecute sobre el hilo principal. Debería operar tan rápidamente como sea posible; si alguna cosa necesita tiempo extra para ser realizada, use {{domxref("Window.requestIdleCallback()")}}.
 
-<p>También, note que si especifica la opción <code>root</code>, el elemento target debe ser un descendiente del elemento root.</p>
+También, note que si especifica la opción `root`, el elemento target debe ser un descendiente del elemento root.
 
-<h3 id="Cómo_se_calcula_la_intersección">Cómo se calcula la intersección</h3>
+### Cómo se calcula la intersección
 
-<p>Todas las áreas consideradas por la API de Intersection Observer son rectángulos; los elementos que su forma es irregular se considera que están ocupando el rectángulo más pequeño que encierra todas las partes del elemento. De forma similar, si la porción visible de un elemento no es un rectángulo, entonces el rectángulo de intersección del elemento se interpreta como el rectángulo más pequeño que contiene todas las partes visibles del elemento.</p>
+Todas las áreas consideradas por la API de Intersection Observer son rectángulos; los elementos que su forma es irregular se considera que están ocupando el rectángulo más pequeño que encierra todas las partes del elemento. De forma similar, si la porción visible de un elemento no es un rectángulo, entonces el rectángulo de intersección del elemento se interpreta como el rectángulo más pequeño que contiene todas las partes visibles del elemento.
 
-<p>Es útil entender un poco sobre cómo las diferentes propiedades proporcionadas por {{domxref("IntersectionObserverEntry")}} describe una intersección.</p>
+Es útil entender un poco sobre cómo las diferentes propiedades proporcionadas por {{domxref("IntersectionObserverEntry")}} describe una intersección.
 
-<h4 id="La_intersección_entre_el_elemento_root_y_su_margen">La intersección entre el elemento root y su margen</h4>
+#### La intersección entre el elemento root y su margen
 
-<p>Antes de poder realizar un seguimiento de la intersección de un elemento en un contenedor, necesitamos saber qué cuál es contendor. Este contenedor se le conoce como <strong>intersection root</strong>, o <strong>root element</strong>. Este puede ser un elemento del documento, que es ascendiente del elemento observado, o <code>null</code>, que usará el viewport del documento como contenedor.</p>
+Antes de poder realizar un seguimiento de la intersección de un elemento en un contenedor, necesitamos saber qué cuál es contendor. Este contenedor se le conoce como **intersection root**, o **root element**. Este puede ser un elemento del documento, que es ascendiente del elemento observado, o `null`, que usará el viewport del documento como contenedor.
 
-<p>El rectángulo usado como los límites de la intersección del intersection root pueden ser ajustados configurando la opción <strong>root margin</strong>, <code>rootMargin</code>, cuando creamos el {{domxref("IntersectionObserver")}}. Los valores en <code>rootMargin</code> define los espacios añadidos a cada lado del cuadro delimitador que sirve de contenedor, creando los límites definitivos del contenedor, o intersection root (los cuáles están explicados en {{domxref("IntersectionObserverEntry.rootBounds")}} cuando la función callback es ejecutada).</p>
+El rectángulo usado como los límites de la intersección del intersection root pueden ser ajustados configurando la opción **root margin**, `rootMargin`, cuando creamos el {{domxref("IntersectionObserver")}}. Los valores en `rootMargin` define los espacios añadidos a cada lado del cuadro delimitador que sirve de contenedor, creando los límites definitivos del contenedor, o intersection root (los cuáles están explicados en {{domxref("IntersectionObserverEntry.rootBounds")}} cuando la función callback es ejecutada).
 
-<h4 id="Umbrales">Umbrales</h4>
+#### Umbrales
 
-<p>En lugar de reportar cada mínimo cambio indicando cómo de visible es el elemento que observamos, la Intersection Observer API usa <strong>umbrales</strong>. Cuando creamos un observable, puedes proporcionar uno o más valores númericos representando, en porcentaje, cuán visible es el elemento observado. Entonces, la API reporta sólo los cambios de visibilidad que cruza este umbral.</p>
+En lugar de reportar cada mínimo cambio indicando cómo de visible es el elemento que observamos, la Intersection Observer API usa **umbrales**. Cuando creamos un observable, puedes proporcionar uno o más valores númericos representando, en porcentaje, cuán visible es el elemento observado. Entonces, la API reporta sólo los cambios de visibilidad que cruza este umbral.
 
-<p>Por ejemplo, si te gustaría ser informado cada vez que la visibilidad del elemento pasa, hacia delante o hacía atrás, una marca de un 25%, entonces puedes especificar el array [0, 0.25, 0.5, 0.75, 1] como una lista de umbrales a la hora de crear el observable. Puedes saber incluso en qué dirección la visibilidad ha cambiado (esto es, saber si el elemento ha pasado a ser más o menos visible) comprobando el valor de la propiedad {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} disponible en el {{domxref("IntersectionObserverEntry")}} que tienes disponible en la función callback cada vez que la visibilidad cambia. Si <code>isIntersecting</code> es <code>true</code>, el elemento se ha vuelto al menos tan visibile como el umbral que pasó. Si es <code>false</code>, el elemento entonces ha dejado de ser tan visible como el umbral que sobrepasó.</p>
+Por ejemplo, si te gustaría ser informado cada vez que la visibilidad del elemento pasa, hacia delante o hacía atrás, una marca de un 25%, entonces puedes especificar el array \[0, 0.25, 0.5, 0.75, 1] como una lista de umbrales a la hora de crear el observable. Puedes saber incluso en qué dirección la visibilidad ha cambiado (esto es, saber si el elemento ha pasado a ser más o menos visible) comprobando el valor de la propiedad {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} disponible en el {{domxref("IntersectionObserverEntry")}} que tienes disponible en la función callback cada vez que la visibilidad cambia. Si `isIntersecting` es `true`, el elemento se ha vuelto al menos tan visibile como el umbral que pasó. Si es `false`, el elemento entonces ha dejado de ser tan visible como el umbral que sobrepasó.
 
-<p>Para entender cómo funciona el concepto de umbral (threshold), pruebe a hacer scroll en el siguiente ejemplo. Cada caja coloreada muestra dentro de ella el porcentaje que tiene visible de cada una de las cuadro esquinas, de forma que podrá ver cómo cambian los porcentajes conforme va haciendo scroll. Cada caja tiene diferentes valores configurado de umbrales.</p>
+Para entender cómo funciona el concepto de umbral (threshold), pruebe a hacer scroll en el siguiente ejemplo. Cada caja coloreada muestra dentro de ella el porcentaje que tiene visible de cada una de las cuadro esquinas, de forma que podrá ver cómo cambian los porcentajes conforme va haciendo scroll. Cada caja tiene diferentes valores configurado de umbrales.
 
-<ul>
- <li>La primera caja tiene un umbral para cada punto del porcentaje de visibilidad posible en el array que se le pasa a {{domxref("IntersectionObserver.thresholds")}}, siendo su valor el array <code>[0.00, 0.01, 0.02, ..., 0.99, 1.00]</code>.</li>
- <li>La segunda caja sólo tiene un umbral que se marca en el 50%.</li>
- <li>La tercera caja tiene un umbral cada 10% de visibilidad (0%, 10%, 20%, etc.).</li>
- <li>La última tiene el umbral cada 25%.</li>
-</ul>
+- La primera caja tiene un umbral para cada punto del porcentaje de visibilidad posible en el array que se le pasa a {{domxref("IntersectionObserver.thresholds")}}, siendo su valor el array `[0.00, 0.01, 0.02, ..., 0.99, 1.00]`.
+- La segunda caja sólo tiene un umbral que se marca en el 50%.
+- La tercera caja tiene un umbral cada 10% de visibilidad (0%, 10%, 20%, etc.).
+- La última tiene el umbral cada 25%.
 
-<div class="hidden" id="threshold-example">
-<pre class="brush: html notranslate">&lt;template id="boxTemplate"&gt;
-  &lt;div class="sampleBox"&gt;
-    &lt;div class="label topLeft"&gt;&lt;/div&gt;
-    &lt;div class="label topRight"&gt;&lt;/div&gt;
-    &lt;div class="label bottomLeft"&gt;&lt;/div&gt;
-    &lt;div class="label bottomRight"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+```html hidden
+<template id="boxTemplate">
+  <div class="sampleBox">
+    <div class="label topLeft"></div>
+    <div class="label topRight"></div>
+    <div class="label bottomLeft"></div>
+    <div class="label bottomRight"></div>
+  </div>
+</template>
 
-&lt;main&gt;
-  &lt;div class="contents"&gt;
-    &lt;div class="wrapper"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+<main>
+  <div class="contents">
+    <div class="wrapper">
+    </div>
+  </div>
+</main>
+```
 
-<pre class="brush: css notranslate">.contents {
+```css hidden
+.contents {
   position: absolute;
   width: 700px;
   height: 1725px;
@@ -213,9 +209,10 @@ observer.observe(target);
   bottom: 2px;
   right: 2px;
 }
-</pre>
+```
 
-<pre class="brush: js notranslate">let observers = [];
+```js hidden
+let observers = [];
 
 startup();
 
@@ -241,12 +238,12 @@ function startup() {
     [0, 0.25, 0.5, 0.75, 1.0]
   ];
 
-  for (let i=0; i&lt;=1.0; i+= 0.01) {
+  for (let i=0; i<=1.0; i+= 0.01) {
     thresholdSets[0].push(i);
   }
 
   // Añadimos cada caja y creamos un observable para cada una
-  for (let i=0; i&lt;4; i++) {
+  for (let i=0; i<4; i++) {
     let template = document.querySelector("#boxTemplate").content.cloneNode(true);
     let boxID = "box" + (i+1);
     template.querySelector(".sampleBox").id = boxID;
@@ -276,73 +273,70 @@ function intersectionCallback(entries) {
     box.querySelector(".bottomRight").innerHTML = visiblePct;
   });
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("threshold-example", 500, 500)}}</p>
+{{EmbedLiveSample("threshold-example", 500, 500)}}
 
-<h4 id="Acotamiento_y_el_rectángulo_de_intersección">Acotamiento y el rectángulo de intersección</h4>
+#### Acotamiento y el rectángulo de intersección
 
-<p>El navegador computa el rectángulo de intersección final de la siguiente forma; la API hace todo esto por usted, pero puede ser útil entender estos pasos para comprender mejor cuando ocurrirán exactamente las intersecciones.</p>
+El navegador computa el rectángulo de intersección final de la siguiente forma; la API hace todo esto por usted, pero puede ser útil entender estos pasos para comprender mejor cuando ocurrirán exactamente las intersecciones.
 
-<ol>
- <li>El rectangulo delimitador del elemento target (el rectangulo mas pequeño, que encierra por completo los componentes que conforman el elemento) es obtenido llamando {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} en el target. Este es el rectangulo de intersección mas grande que puede ser. Los pasos restantes removeran las porciones que no intersectan.</li>
- <li>Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting <code>overflow</code> to anything but <code>visible</code> causes clipping to occur.</li>
- <li>If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}, the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an <code>&lt;iframe&gt;</code> is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.</li>
- <li>When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.</li>
- <li>The resulting rectangle is then updated by intersecting it with the <a href="/en-US/docs/Web/API/Intersection_Observer_API#root-intersection-rectangle">root intersection rectangle</a>.</li>
- <li>This rectangle is, finally, mapped to the coordinate space of the target's {{domxref("document")}}.</li>
-</ol>
+1.  El rectangulo delimitador del elemento target (el rectangulo mas pequeño, que encierra por completo los componentes que conforman el elemento) es obtenido llamando {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} en el target. Este es el rectangulo de intersección mas grande que puede ser. Los pasos restantes removeran las porciones que no intersectan.
+2.  Starting at the target's immediate parent block and moving outward, each containing block's clipping (if any) is applied to the intersection rectangle. A block's clipping is determined based on the intersection of the two blocks and the clipping mode (if any) specified by the {{cssxref("overflow")}} property. Setting `overflow` to anything but `visible` causes clipping to occur.
+3.  If one of the containing elements is the root of a nested browsing context (such as the document contained in an {{HTMLElement("iframe")}}, the intersection rectangle is clipped to the containing context's viewport, and recursion upward through the containers continues with the container's containing block. So if the top level of an `<iframe>` is reached, the intersection rectangle is clipped to the frame's viewport, then the frame's parent element is the next block recursed through toward the intersection root.
+4.  When recursion upward reaches the intersection root, the resulting rectangle is mapped to the intersection root's coordinate space.
+5.  The resulting rectangle is then updated by intersecting it with the [root intersection rectangle](/es/docs/Web/API/Intersection_Observer_API#root-intersection-rectangle).
+6.  This rectangle is, finally, mapped to the coordinate space of the target's {{domxref("document")}}.
 
-<h3 id="Callbacks_de_cambio_de_intersección">Callbacks de cambio de intersección</h3>
+### Callbacks de cambio de intersección
 
-<p>Cuando la cantidad del elemento target que es visible dentro del elemento root cruza uno de los umbrales de visibilidad, el callback del objeto {{domxref("IntersectionObserver")}} es ejecutado. El callback recibe como input un array de todos los objetos {{domxref("IntersectionObserverEntry")}}, uno por cada umbral que haya sido cruzado, y una referencia al objeto <code>IntersectionObserver</code> mismo.</p>
+Cuando la cantidad del elemento target que es visible dentro del elemento root cruza uno de los umbrales de visibilidad, el callback del objeto {{domxref("IntersectionObserver")}} es ejecutado. El callback recibe como input un array de todos los objetos {{domxref("IntersectionObserverEntry")}}, uno por cada umbral que haya sido cruzado, y una referencia al objeto `IntersectionObserver` mismo.
 
-<p>Cada entrada en la lista de  umbrales es un objeto {{domxref("IntersectionObserverEntry")}} que describe un umbral que ha sido cruzado; esto es, cada entrada describe qué porción de un elemento dado se está intersectando con el elemento root, sea que el elemento se considere en intersección o no, y la dirección en la cual ocurrió la transición.</p>
+Cada entrada en la lista de umbrales es un objeto {{domxref("IntersectionObserverEntry")}} que describe un umbral que ha sido cruzado; esto es, cada entrada describe qué porción de un elemento dado se está intersectando con el elemento root, sea que el elemento se considere en intersección o no, y la dirección en la cual ocurrió la transición.
 
-<p>The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called <a href="https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting">approximately</a> upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.</p>
+The code snippet below shows a callback which keeps a counter of how many times elements transition from not intersecting the root to intersecting by at least 75%. For a threshold value of 0.0 (default) the callback is called [approximately](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) upon transition of the boolean value of {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}}. The snippet thus first checks that the transition is a positive one, then determines whether {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is above 75%, in which case it increments the counter.
 
-<pre class="notranslate">intersectionCallback(entries) =&gt; {
-  entries.forEach(entry =&gt; {
-    if (entry.isIntersecting) {
-      let elem = entry.target;
+    intersectionCallback(entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          let elem = entry.target;
 
-      if (entry.intersectionRatio &gt;= 0.75) {
-        intersectionCounter++;
-      }
+          if (entry.intersectionRatio >= 0.75) {
+            intersectionCounter++;
+          }
+        }
+      });
     }
-  });
-}
-</pre>
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("IntersectionObserver")}}</dt>
- <dd>The primary interface for the Intersection Observer API. Provides methods for creating and managing an observer which can watch any number of target elements for the same intersection configuration. Each observer can asynchronously observe changes in the intersection between one or more target elements and a shared ancestor element or with their top-level {{domxref("Document")}}'s {{Glossary('viewport')}}. The ancestor or viewport is referred to as the <strong>root</strong>.</dd>
- <dt>{{domxref("IntersectionObserverEntry")}}</dt>
- <dd>Describes the intersection between the target element and its root container at a specific moment of transition. Objects of this type can only be obtained in two ways: as an input to your <code>IntersectionObserver</code> callback, or by calling {{domxref("IntersectionObserver.takeRecords()")}}.</dd>
-</dl>
+- {{domxref("IntersectionObserver")}}
+  - : The primary interface for the Intersection Observer API. Provides methods for creating and managing an observer which can watch any number of target elements for the same intersection configuration. Each observer can asynchronously observe changes in the intersection between one or more target elements and a shared ancestor element or with their top-level {{domxref("Document")}}'s {{Glossary('viewport')}}. The ancestor or viewport is referred to as the **root**.
+- {{domxref("IntersectionObserverEntry")}}
+  - : Describes the intersection between the target element and its root container at a specific moment of transition. Objects of this type can only be obtained in two ways: as an input to your `IntersectionObserver` callback, or by calling {{domxref("IntersectionObserver.takeRecords()")}}.
 
-<h2 id="Un_ejemplo_sencillo">Un ejemplo sencillo</h2>
+## Un ejemplo sencillo
 
-<p>Este ejemplo causa que el elemento que queremos observar cambia de color y transparencia conforme se va haciendo más o menos visible. En la página <a href="/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Timing element visibility with the Intersection Observer API</a>, puedes encontrar un ejemplo más extenso que muestra cómo calcular cuanto tiempo que una serie de elementos, como anuncios, son visibles para el usuario y reaccionar a esa información guardando estadísticas.</p>
+Este ejemplo causa que el elemento que queremos observar cambia de color y transparencia conforme se va haciendo más o menos visible. En la página [Timing element visibility with the Intersection Observer API](/es/docs/Web/API/Intersection_Observer_API/Timing_element_visibility), puedes encontrar un ejemplo más extenso que muestra cómo calcular cuanto tiempo que una serie de elementos, como anuncios, son visibles para el usuario y reaccionar a esa información guardando estadísticas.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>El HTML para este ejemplo es muy simple, con un elemento primario que será la caja que querremos observar (con la creativa ID de <code>"box"</code>) y algo de contenido para dentro de la caja.</p>
+El HTML para este ejemplo es muy simple, con un elemento primario que será la caja que querremos observar (con la creativa ID de `"box"`) y algo de contenido para dentro de la caja.
 
-<pre class="brush: html notranslate">&lt;div id="box"&gt;
-  &lt;div class="vertical"&gt;
-    Welcome to &lt;strong&gt;The Box!&lt;/strong&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="box">
+  <div class="vertical">
+    Welcome to <strong>The Box!</strong>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transitions</a>, los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.</p>
+El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pinta el elemento y establece que los atributos {{cssxref("background-color")}} y {{cssxref("border")}} puedan participar en las [CSS transitions](/es/docs/Web/CSS/CSS_Transitions), los cuáles usaremos para afectar los cambios al elemento conforme este es más o menos visible.
 
-<pre class="brush: css notranslate">#box {
+```css
+#box {
   background-color: rgba(40, 40, 190, 255);
   border: 4px solid rgb(20, 20, 120);
   transition: background-color 1s, border 1s;
@@ -366,17 +360,19 @@ function intersectionCallback(entries) {
   border: 4px solid rgb(20, 20, 120);
   text-align: center;
   padding: 20px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>Finalmente, vamos a mirar el código JavaScript que usa la API Intersection Observer API para hacer que las cosas ocurran.</p>
+Finalmente, vamos a mirar el código JavaScript que usa la API Intersection Observer API para hacer que las cosas ocurran.
 
-<h4 id="Preparación">Preparación</h4>
+#### Preparación
 
-<p>Primero, necesitamos preparar algunas variables e instalar el observador.</p>
+Primero, necesitamos preparar algunas variables e instalar el observador.
 
-<pre class="brush: js notranslate">var numSteps = 20.0;
+```js
+var numSteps = 20.0;
 
 var boxElement;
 var prevRatio = 0.0;
@@ -389,28 +385,28 @@ window.addEventListener("load", function(event) {
   boxElement = document.querySelector("#box");
 
   createObserver();
-}, false);</pre>
+}, false);
+```
 
-<p>Las constantes y variables que establecimos aquí son:</p>
+Las constantes y variables que establecimos aquí son:
 
-<dl>
- <dt><code>numSteps</code></dt>
- <dd>A constant which indicates how many thresholds we want to have between a visibility ratio of 0.0 and 1.0.</dd>
- <dt><code>prevRatio</code></dt>
- <dd>This variable will be used to record what the visibility ratio was the last time a threshold was crossed; this will let us figure out whether the target element is becoming more or less visible.</dd>
- <dt><code>increasingColor</code></dt>
- <dd>A string defining a color we'll apply to the target element when the visibility ratio is increasing. The word "ratio" in this string will be replaced with the target's current visibility ratio, so that the element not only changes color but also becomes increasingly opaque as it becomes less obscured.</dd>
- <dt><code>decreasingColor</code></dt>
- <dd>Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.</dd>
-</dl>
+- `numSteps`
+  - : A constant which indicates how many thresholds we want to have between a visibility ratio of 0.0 and 1.0.
+- `prevRatio`
+  - : This variable will be used to record what the visibility ratio was the last time a threshold was crossed; this will let us figure out whether the target element is becoming more or less visible.
+- `increasingColor`
+  - : A string defining a color we'll apply to the target element when the visibility ratio is increasing. The word "ratio" in this string will be replaced with the target's current visibility ratio, so that the element not only changes color but also becomes increasingly opaque as it becomes less obscured.
+- `decreasingColor`
+  - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-<p>We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID <code>"box"</code> using {{domxref("Document.querySelector", "querySelector()")}}, then call the <code>createObserver()</code> method we'll create in a moment to handle building and installing the intersection observer.</p>
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
-<h4 id="Creating_the_intersection_observer">Creating the intersection observer</h4>
+#### Creating the intersection observer
 
-<p>The <code>createObserver()</code> method is called once page load is complete to handle actually creating the new {{domxref("IntersectionObserver")}} and starting the process of observing the target element.</p>
+The `createObserver()` method is called once page load is complete to handle actually creating the new {{domxref("IntersectionObserver")}} and starting the process of observing the target element.
 
-<pre class="brush: js notranslate">function createObserver() {
+```js
+function createObserver() {
   var observer;
 
   var options = {
@@ -421,114 +417,60 @@ window.addEventListener("load", function(event) {
 
   observer = new IntersectionObserver(handleIntersect, options);
   observer.observe(boxElement);
-}</pre>
+}
+```
 
-<p>This begins by setting up an <code>options</code> object containing the settings for the observer. We want to watch for changes in visibility of the target element relative to the document's viewport, so <code>root</code> is <code>null</code>. We need no margin, so the margin offset, <code>rootMargin</code>, is specified as "0px". This causes the observer to watch for changes in the intersection between the target element's bounds and those of the viewport, without any added (or subtracted) space.</p>
+This begins by setting up an `options` object containing the settings for the observer. We want to watch for changes in visibility of the target element relative to the document's viewport, so `root` is `null`. We need no margin, so the margin offset, `rootMargin`, is specified as "0px". This causes the observer to watch for changes in the intersection between the target element's bounds and those of the viewport, without any added (or subtracted) space.
 
-<p>The list of visibility ratio thresholds, <code>threshold</code>, is constructed by the function <code>buildThresholdList()</code>. The threshold list is built programmatically in this example since there are a number of them and the number is intended to be adjustable.</p>
+The list of visibility ratio thresholds, `threshold`, is constructed by the function `buildThresholdList()`. The threshold list is built programmatically in this example since there are a number of them and the number is intended to be adjustable.
 
-<p>Once <code>options</code> is ready, we create the new observer, calling the {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor, specifying a function to be called when intersection crosses one of our thresholds, <code>handleIntersect()</code>, and our set of options. We then call {{domxref("IntersectionObserver.observe", "observe()")}} on the returned observer, passing into it the desired target element.</p>
+Once `options` is ready, we create the new observer, calling the {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor, specifying a function to be called when intersection crosses one of our thresholds, `handleIntersect()`, and our set of options. We then call {{domxref("IntersectionObserver.observe", "observe()")}} on the returned observer, passing into it the desired target element.
 
-<p>We could opt to monitor multiple elements for visibility intersection changes with respect to the viewport by calling <code>observer.observe()</code> for each of those elements, if we wanted to do so.</p>
+We could opt to monitor multiple elements for visibility intersection changes with respect to the viewport by calling `observer.observe()` for each of those elements, if we wanted to do so.
 
-<h4 id="Building_the_array_of_threshold_ratios">Building the array of threshold ratios</h4>
+#### Building the array of threshold ratios
 
-<p>The <code>buildThresholdList()</code> function, which builds the list of thresholds, looks like this:</p>
+The `buildThresholdList()` function, which builds the list of thresholds, looks like this:
 
-<pre class="brush: js notranslate">function buildThresholdList() {
+```js
+function buildThresholdList() {
   var thresholds = [];
 
-  for (var i=1.0; i&lt;=numSteps; i++) {
+  for (var i=1.0; i<=numSteps; i++) {
     var ratio = i/numSteps;
     thresholds.push(ratio);
   }
 
   thresholds.push(0);
   return thresholds;
-}</pre>
+}
+```
 
-<p>This builds the array of thresholds—each of which is a ratio between 0.0 and 1.0, by pushing the value <code>i/numSteps</code> onto the <code>thresholds</code> array for each integer <code>i</code> between 1 and <code>numSteps</code>. It also pushes 0 to include that value. The result, given the default value of <code>numSteps</code> (20), is the following list of thresholds:</p>
+This builds the array of thresholds—each of which is a ratio between 0.0 and 1.0, by pushing the value `i/numSteps` onto the `thresholds` array for each integer `i` between 1 and `numSteps`. It also pushes 0 to include that value. The result, given the default value of `numSteps` (20), is the following list of thresholds:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>#</th>
-   <th>Ratio</th>
-   <th>#</th>
-   <th>Ratio</th>
-  </tr>
-  <tr>
-   <th>1</th>
-   <td>0.05</td>
-   <th>11</th>
-   <td>0.55</td>
-  </tr>
-  <tr>
-   <th>2</th>
-   <td>0.1</td>
-   <th>12</th>
-   <td>0.6</td>
-  </tr>
-  <tr>
-   <th>3</th>
-   <td>0.15</td>
-   <th>13</th>
-   <td>0.65</td>
-  </tr>
-  <tr>
-   <th>4</th>
-   <td>0.2</td>
-   <th>14</th>
-   <td>0.7</td>
-  </tr>
-  <tr>
-   <th>5</th>
-   <td>0.25</td>
-   <th>15</th>
-   <td>0.75</td>
-  </tr>
-  <tr>
-   <th>6</th>
-   <td>0.3</td>
-   <th>16</th>
-   <td>0.8</td>
-  </tr>
-  <tr>
-   <th>7</th>
-   <td>0.35</td>
-   <th>17</th>
-   <td>0.85</td>
-  </tr>
-  <tr>
-   <th>8</th>
-   <td>0.4</td>
-   <th>18</th>
-   <td>0.9</td>
-  </tr>
-  <tr>
-   <th>9</th>
-   <td>0.45</td>
-   <th>19</th>
-   <td>0.95</td>
-  </tr>
-  <tr>
-   <th>10</th>
-   <td>0.5</td>
-   <th>20</th>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
+| #   | Ratio | #   | Ratio |
+| --- | ----- | --- | ----- |
+| 1   | 0.05  | 11  | 0.55  |
+| 2   | 0.1   | 12  | 0.6   |
+| 3   | 0.15  | 13  | 0.65  |
+| 4   | 0.2   | 14  | 0.7   |
+| 5   | 0.25  | 15  | 0.75  |
+| 6   | 0.3   | 16  | 0.8   |
+| 7   | 0.35  | 17  | 0.85  |
+| 8   | 0.4   | 18  | 0.9   |
+| 9   | 0.45  | 19  | 0.95  |
+| 10  | 0.5   | 20  | 1.0   |
 
-<p>We could, of course, hard-code the array of thresholds into our code, and often that's what you'll end up doing. But this example leaves room for adding configuration controls to adjust the granularity, for example.</p>
+We could, of course, hard-code the array of thresholds into our code, and often that's what you'll end up doing. But this example leaves room for adding configuration controls to adjust the granularity, for example.
 
-<h4 id="Handling_intersection_changes">Handling intersection changes</h4>
+#### Handling intersection changes
 
-<p>When the browser detects that the target element (in our case, the one with the ID <code>"box"</code>) has been unveiled or obscured such that its visibility ratio crosses one of the thresholds in our list, it calls our handler function, <code>handleIntersect()</code>:</p>
+When the browser detects that the target element (in our case, the one with the ID `"box"`) has been unveiled or obscured such that its visibility ratio crosses one of the thresholds in our list, it calls our handler function, `handleIntersect()`:
 
-<pre class="brush: js notranslate">function handleIntersect(entries, observer) {
+```js
+function handleIntersect(entries, observer) {
   entries.forEach(function(entry) {
-    if (entry.intersectionRatio &gt; prevRatio) {
+    if (entry.intersectionRatio > prevRatio) {
       entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
     } else {
       entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
@@ -536,47 +478,35 @@ window.addEventListener("load", function(event) {
 
     prevRatio = entry.intersectionRatio;
   });
-}</pre>
+}
+```
 
-<p>For each {{domxref("IntersectionObserverEntry")}} in the list <code>entries</code>, we look to see if the entry's {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is going up; if it is, we set the target's {{cssxref("background-color")}} to the string in <code>increasingColor</code> (remember, it's <code>"rgba(40, 40, 190, ratio)"</code>), replaces the word "ratio" with the entry's <code>intersectionRatio</code>. The result: not only does the color get changed, but the transparency of the target element changes, too; as the intersection ratio goes down, the background color's alpha value goes down with it, resulting in an element that's more transparent.</p>
+For each {{domxref("IntersectionObserverEntry")}} in the list `entries`, we look to see if the entry's {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is going up; if it is, we set the target's {{cssxref("background-color")}} to the string in `increasingColor` (remember, it's `"rgba(40, 40, 190, ratio)"`), replaces the word "ratio" with the entry's `intersectionRatio`. The result: not only does the color get changed, but the transparency of the target element changes, too; as the intersection ratio goes down, the background color's alpha value goes down with it, resulting in an element that's more transparent.
 
-<p>Similarly, if the <code>intersectionRatio</code> is going up, we use the string <code>decreasingColor</code> and replace the word "ratio" in that with the <code>intersectionRatio</code> before setting the target element's <code>background-color</code>.</p>
+Similarly, if the `intersectionRatio` is going up, we use the string `decreasingColor` and replace the word "ratio" in that with the `intersectionRatio` before setting the target element's `background-color`.
 
-<p>Finally, in order to track whether the intersection ratio is going up or down, we remember the current ratio in the variable <code>prevRatio</code>.</p>
+Finally, in order to track whether the intersection ratio is going up or down, we remember the current ratio in the variable `prevRatio`.
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>Abajo se encuentra el contenido resultante. Desplace ésta página hacia arriba y abajo y note como la apariencia de la caja cambia mientras lo hace.</p>
+Abajo se encuentra el contenido resultante. Desplace ésta página hacia arriba y abajo y note como la apariencia de la caja cambia mientras lo hace.
 
-<p>{{EmbedLiveSample('A_simple_example', 400, 400)}}</p>
+{{EmbedLiveSample('A_simple_example', 400, 400)}}
 
-<p>Hay un ejemplo aún más extensivo en <a href="/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Cronometrando la visibilidad de un elemento con la API Intersection Observer</a>.</p>
+Hay un ejemplo aún más extensivo en [Cronometrando la visibilidad de un elemento con la API Intersection Observer](/es/docs/Web/API/Intersection_Observer_API/Timing_element_visibility).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                   | Estado                                       | Comentario |
+| ------------------------------------------------ | -------------------------------------------- | ---------- |
+| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |            |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
 {{Compat("api.IntersectionObserver")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li><a href="https://github.com/w3c/IntersectionObserver">Intersection Observer polyfill</a></li>
- <li><a href="/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Timing element visibility with the Intersection Observer API</a></li>
- <li>{{domxref("IntersectionObserver")}} and {{domxref("IntersectionObserverEntry")}}</li>
-</ul>
+- [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver)
+- [Timing element visibility with the Intersection Observer API](/es/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
+- {{domxref("IntersectionObserver")}} and {{domxref("IntersectionObserverEntry")}}

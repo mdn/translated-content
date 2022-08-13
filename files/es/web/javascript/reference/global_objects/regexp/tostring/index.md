@@ -8,83 +8,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>toString()</code></strong> devuelve una cadena que representa el patrón de la expresión regular.</p>
+El método **`toString()`** devuelve una cadena que representa el patrón de la expresión regular.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>regexObj</var>.toString();</code></pre>
+    regexObj.toString();
 
-<h3 id="Valor_de_Retorno">Valor de Retorno</h3>
+### Valor de Retorno
 
-<p>Una cadena que representa el objeto dado.</p>
+Una cadena que representa el objeto dado.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>El objeto {{jsxref("RegExp")}} reemplaza el método <code>toString()</code> del objeto {{jsxref("Object")}}; no hereda de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("RegExp")}}, el método <code>toString()</code> retorna una cadena que representa el patrón de la expresión regular.</p>
+El objeto {{jsxref("RegExp")}} reemplaza el método `toString()` del objeto {{jsxref("Object")}}; no hereda de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("RegExp")}}, el método `toString()` retorna una cadena que representa el patrón de la expresión regular.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Usando_toString()">Usando <code>toString()</code></h3>
+### Usando `toString()`
 
-<p dir="ltr" id="tw-target-text">El siguiente ejemplo muestra la cadena de representación de un objeto {{jsxref("RegExp")}}:</p>
+El siguiente ejemplo muestra la cadena de representación de un objeto {{jsxref("RegExp")}}:
 
-<pre class="brush: js">var myExp = new RegExp('a+b+c');
+```js
+var myExp = new RegExp('a+b+c');
 console.log(myExp.toString());  // '/a+b+c/'
 
 var foo = new RegExp('bar', 'g');
 console.log(foo.toString());    // '/bar/g'
-</pre>
+```
 
-<h3 id="Expresiones_regulares_vacías_y_escapado">Expresiones regulares vacías y escapado</h3>
+### Expresiones regulares vacías y escapado
 
-<p>A partir de ECMAScript 5, una expresión regular vacía devuelve la cadena "/(?:)/" y los terminadores de línea tales como "\n" son escapados:</p>
+A partir de ECMAScript 5, una expresión regular vacía devuelve la cadena "/(?:)/" y los terminadores de línea tales como "\n" son escapados:
 
-<pre class="brush: js">new RegExp().toString(); // "/(?:)/"
+```js
+new RegExp().toString(); // "/(?:)/"
 
 new RegExp('\n').toString() === "/\n/";  // true, antes de ES5
 new RegExp('\n').toString() === "/\\n/"; // true, desde ES5
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table" style="color: #3b3c40; font-size: 14px; font-weight: normal;">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.2', 'RegExp.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Agregado de la definición para escapado de caracteres especiales y "(?:)" para expresiones regulares vacías.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                       | Estado                       | Comentario                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.1.                                                          |
+| {{SpecName('ES5.1', '#sec-15.9.5.2', 'RegExp.prototype.toString')}}                             | {{Spec2('ES5.1')}}     | Agregado de la definición para escapado de caracteres especiales y "(?:)" para expresiones regulares vacías. |
+| {{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                                                                              |
+| {{SpecName('ESDraft', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                              |
 
-<h2 id="Compatibilidad_en_Navegadores">Compatibilidad en Navegadores</h2>
+## Compatibilidad en Navegadores
 
 {{Compat("javascript.builtins.RegExp.toString")}}
 
-<h2 id="Vea_también">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

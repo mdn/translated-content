@@ -3,126 +3,68 @@ title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 translation_of: Web/API/MediaDevices/getUserMedia
 ---
-<div>{{APIRef("WebRTC")}}{{SeeCompatTable}}</div>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>El método <code><strong>MediaDevices.getUserMedia()</strong></code> solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto <code><a href="/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream">MediaStream</a></code>. Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con <code>PermissionDeniedError</code> o <code>NotFoundError</code> respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.</p>
+El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto [`MediaStream`](/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream). Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con `PermissionDeniedError` o `NotFoundError` respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>gumPromise</em> = <em>MediaDevices</em>.getUserMedia(<em>constraints</em>);</pre>
+    var gumPromise = MediaDevices.getUserMedia(constraints);
 
-<p>Generalmente, accederás al objeto singleton {{domxref("MediaDevices")}} usando {{domxref("navigator.mediaDevices")}}, de esta forma:</p>
+Generalmente, accederás al objeto singleton {{domxref("MediaDevices")}} usando {{domxref("navigator.mediaDevices")}}, de esta forma:
 
-<pre><code>navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
-  /* usar el flujo de datos */
-}).catch(function(err) {
-  /* manejar el error */
-});</code></pre>
+    navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
+      /* usar el flujo de datos */
+    }).catch(function(err) {
+      /* manejar el error */
+    });
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>constraints</code></dt>
- <dd>
- <p>Es un objeto {{domxref("MediaStreamConstraints")}} que especifica los tipos de recursos a solicitar, junto con cualquier requerimiento para cada tipo.</p>
+- `constraints`
+  - : Es un objeto {{domxref("MediaStreamConstraints")}} que especifica los tipos de recursos a solicitar, junto con cualquier requerimiento para cada tipo.El parámetro constraints es un objeto `MediaStreamConstaints` con dos miembros: `video` y `audio`, que describen los tipos de recurso solicitados. Debe especificarse uno o ambos. Si el navegador no puede encontrar todas las pistas de recursos con los tipos especificados que reúnan las restricciones dadas, entonces el promise retornado es rechazado con `NotFoundError`.Lo siguiente realiza la petición de tanto audio como vídeo sin requerimientos específicos:`js { audio: true, video: true } `Mientras que la información acerca de las cámaras y micrófonos de los usuarios se encuentran inaccesibles por razones de privacidad, una aplicación puede solicitar la cámara y las capacidades del micrófono que este requiera, usando restricciones adicionales. El siguiente código es para mosrtar una resolución de una cámara de 1280x720.`js { audio: true, video: { width: 1280, height: 720 } } `El navegador tratará de respetar esto, pero puede devolver otras resoluciones si una coincidencia exacta no está disponible o si el usuario la reemplaza.Para _conseguir_ otras resoluciones, puede utilizar las propiedaes `min`, `max`, or `exact` (también conocido como min == max). El siguiente ejemplo le muestra cómo solicitar una resolución mínima de 1280x720.`js { audio: true, video: { width: { min: 1280 }, height: { min: 720 } } } `Si no existe una cámara con una resolución mínima para trabajar, entonces la promesa devuelta será rechazada con NotFoundError, y no se le pedirá al usuario.La razón de esto es debido a que las propiedades `min`, `max`, y `exact `son inherentemente obligatorias, mientras que los valores planos y una propiedad llamada _ideal_ no lo son. He aquí un ejemplo más completo:`js { audio: true, video: { width: { min: 1024, ideal: 1280, max: 1920 }, height: { min: 776, ideal: 720, max: 1080 } } } `Un valor perteneciente a la propiedad `ideal, `cuando es usada, tiene gravedad, lo que significa que el navegador tratará de encontrar la configuración (una cámara, si tienes más de una), con la distancia de aptitud más pequeña ([fitness distance](http://w3c.github.io/mediacapture-main/#methods-5)) de los valores ideales dados.Los valores planos son inherentemente ideales, lo que significa que de los ejemplos mostrados anteriormente, podrían haberse escrito de la siguiente manera:`js { audio: true, video: { width: { ideal: 1280 }, height: { ideal: 720 } } } `No todas las restricciones son números. Por ejemplo, en dispositivos móviles, los siguientes preferirán la cámara frontal (si está disponible) sobre la posterior:`js { audio: true, video: { facingMode: "user" } } `Para _solicitar_ la cámara frontal, use:```js
+    { audio: true, video: { facingMode: { exact: "environment" } } }
+    ```
 
- <p>El parámetro constraints es un objeto <code>MediaStreamConstaints</code> con dos miembros: <code>video</code> y <code>audio</code>, que describen los tipos de recurso solicitados. Debe especificarse uno o ambos. Si el navegador no puede encontrar todas las pistas de recursos con los tipos especificados que reúnan las restricciones dadas, entonces el promise retornado es rechazado con <code>NotFoundError</code>.</p>
+    ```
 
- <p>Lo siguiente realiza la petición de tanto audio como vídeo sin requerimientos específicos:</p>
+### Valor de retorno
 
- <pre class="brush: js">{ audio: true, video: true }</pre>
+Un {{jsxref("Promise")}} que resuelve a un objeto {{domxref("MediaStream")}}.
 
- <p>Mientras que la información acerca de las cámaras y micrófonos de los usuarios se encuentran inaccesibles por razones de privacidad, una aplicación puede solicitar la cámara y las capacidades del micrófono que este requiera, usando restricciones adicionales. El siguiente código es para mosrtar una resolución de una cámara de 1280x720.</p>
+### Errores
 
- <pre class="brush: js">{
-  audio: true,
-  video: { width: 1280, height: 720 }
-}</pre>
+Los rechazos de la promesa devuelta se realizan con un objeto {{domxref ("MediaStreamError")}} que está modelado en {{domxref ("DOMException")}}. Los errores más relevantes son:
 
- <p>El navegador tratará de respetar esto, pero puede devolver otras resoluciones si una coincidencia exacta no está disponible o si el usuario la reemplaza.</p>
+- `SecurityError`
+  - : Permiso para usar un dispositivo fue denegado por el usuario o por el sistema.
+- `NotFoundError`
+  - : No se encontraron pistas multimedia del tipo especificado que satisfagan las restricciones especificadas.
 
- <p>Para <em>conseguir </em>otras resoluciones, puede utilizar las propiedaes <code>min</code>, <code>max</code>, or <code>exact</code> (también conocido como min == max). El siguiente ejemplo le muestra cómo solicitar una resolución mínima de 1280x720.</p>
+## Ejemplos
 
- <pre class="brush: js">{
-  audio: true,
-  video: {
-    width: { min: 1280 },
-    height: { min: 720 }
-  }
-}</pre>
+### Usando la Promesa (Promise)
 
- <p>Si no existe una cámara con una resolución mínima para trabajar, entonces la promesa devuelta será rechazada con NotFoundError, y no se le pedirá al usuario.</p>
+Este ejemplo asigna el objeto {{domxref("MediaStream")}} al elemento apropiado.
 
- <p>La razón de esto es debido a que las propiedades <code>min</code>, <code>max</code>, y <code>exact </code>son inherentemente obligatorias, mientras que los valores planos y una propiedad llamada <em>ideal </em>no lo son. He aquí un ejemplo más completo:</p>
+    var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
- <pre class="brush: js">{
-  audio: true,
-  video: {
-    width: { min: 1024, ideal: 1280, max: 1920 },
-    height: { min: 776, ideal: 720, max: 1080 }
-  }
-}</pre>
+    p.then(function(mediaStream) {
+      var video = document.querySelector('video');
+      video.src = window.URL.createObjectURL(mediaStream);
+      video.onloadedmetadata = function(e) {
+        // Do something with the video here.
+      };
+    });
 
- <p>Un valor perteneciente a la propiedad <code>ideal, </code>cuando es usada, tiene gravedad, lo que significa que el navegador tratará de encontrar la configuración (una cámara, si tienes más de una), con la distancia de aptitud más pequeña (<a href="http://w3c.github.io/mediacapture-main/#methods-5">fitness distance</a>) de los valores ideales dados.</p>
+    p.catch(function(err) { console.log(err.name); }); // always check for errors at the end.
 
- <p>Los valores planos son inherentemente ideales, lo que significa que de los ejemplos mostrados anteriormente, podrían haberse escrito de la siguiente manera:</p>
+### Ancho y alto
 
- <pre class="brush: js">{
-  audio: true,
-  video: {
-    width: { ideal: 1280 },
-    height: { ideal: 720 }
-  }
-}</pre>
+He aquí un ejemplo del uso de `mediaDevices.getUserMedia(), `incluyendo un polyfill para hacer frente a los navegadores más antiguos.
 
- <p>No todas las restricciones son números. Por ejemplo, en dispositivos móviles, los siguientes preferirán la cámara frontal (si está disponible) sobre la posterior:</p>
-
- <pre class="brush: js">{ audio: true, video: { facingMode: "user" } }</pre>
-
- <p>Para <em>solicitar </em>la cámara frontal, use:</p>
-
- <pre class="brush: js">{ audio: true, video: { facingMode: { exact: "environment" } } }</pre>
- </dd>
-</dl>
-
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
-
-<p>Un {{jsxref("Promise")}} que resuelve a un objeto {{domxref("MediaStream")}}.</p>
-
-<h3 id="Errores">Errores</h3>
-
-<p>Los rechazos de la promesa devuelta se realizan con un objeto {{domxref ("MediaStreamError")}} que está modelado en {{domxref ("DOMException")}}. Los errores más relevantes son:</p>
-
-<dl>
- <dt><code>SecurityError</code></dt>
- <dd>Permiso para usar un dispositivo fue denegado por el usuario o por el sistema.</dd>
- <dt><code>NotFoundError</code></dt>
- <dd>No se encontraron pistas multimedia del tipo especificado que satisfagan las restricciones especificadas.</dd>
-</dl>
-
-<h2 id="Ejemplos"><strong>Ejemplos</strong></h2>
-
-<h3 id="Usando_la_Promesa_(Promise)">Usando la Promesa (Promise)</h3>
-
-<p>Este ejemplo asigna el objeto {{domxref("MediaStream")}} al elemento apropiado.</p>
-
-<pre>var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-
-p.then(function(mediaStream) {
-  var video = document.querySelector('video');
-  video.src = window.URL.createObjectURL(mediaStream);
-  video.onloadedmetadata = function(e) {
-    // Do something with the video here.
-  };
-});
-
-p.catch(function(err) { console.log(err.name); }); // always check for errors at the end.</pre>
-
-<h3 id="Ancho_y_alto">Ancho y alto</h3>
-
-<p>He aquí un ejemplo del uso de <code>mediaDevices.getUserMedia(), </code>incluyendo un polyfill para hacer frente a los navegadores más antiguos.</p>
-
-<pre class="brush: js">var promisifiedOldGUM = function(constraints, successCallback, errorCallback) {
+```js
+var promisifiedOldGUM = function(constraints, successCallback, errorCallback) {
 
   // First get ahold of getUserMedia, if present
   var getUserMedia = (navigator.getUserMedia ||
@@ -169,67 +111,58 @@ navigator.mediaDevices.getUserMedia(constraints)
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
 });
-</pre>
+```
 
-<h3 id="Cuadros_por_segundo">Cuadros por segundo</h3>
+### Cuadros por segundo
 
-<p>Pocos frame-rates ó cuadros por segundo pueden ser deseables  en algunos casos, como transmisiones  WebRTC con restricciones de ancho de banda.</p>
+Pocos frame-rates ó cuadros por segundo pueden ser deseables en algunos casos, como transmisiones WebRTC con restricciones de ancho de banda.
 
-<pre class="brush: js">var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
-</pre>
+```js
+var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
+```
 
-<h3 id="Camara_frontal_y_camara_trasera">Camara frontal y camara trasera</h3>
+### Camara frontal y camara trasera
 
-<p>En telefonos moviles.</p>
+En telefonos moviles.
 
-<pre class="brush: js">var front = false;
+```js
+var front = false;
 document.getElementById('flip-button').onclick = function() { front = !front; };
 
 var constraints = { video: { facingMode: (front? "user" : "environment") } };
-</pre>
+```
 
-<h2 id="Permisos">Permisos</h2>
+## Permisos
 
-<p>Para usar <code>getUserMedia()</code> en una app instalable (por ejemplo, una <a href="/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial">Firefox OS app</a>), necesitas especificar uno o ambos de los siguientes campos dentro de tu archivo manifest:</p>
+Para usar `getUserMedia()` en una app instalable (por ejemplo, una [Firefox OS app](/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), necesitas especificar uno o ambos de los siguientes campos dentro de tu archivo manifest:
 
-<pre class="brush: js">"permissions": {
+```js
+"permissions": {
   "audio-capture": {
     "description": "Required to capture audio using getUserMedia()"
   },
   "video-capture": {
     "description": "Required to capture video using getUserMedia()"
   }
-}</pre>
+}
+```
 
-<p>Ver <a href="/en-US/Apps/Developing/App_permissions#audio-capture">permission: audio-capture</a> y  <a href="/en-US/Apps/Developing/App_permissions#video-capture">permission: video-capture</a> para más información.</p>
+Ver [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) y [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) para más información.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#dom-mediadevices-getusermedia', 'MediaDevices.getUserMedia()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                               | Comment            |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('Media Capture', '#dom-mediadevices-getusermedia', 'MediaDevices.getUserMedia()')}} | {{Spec2('Media Capture')}} | Initial definition |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("api.MediaDevices.getUserMedia")}}
 
-<h2 id="Ver_También">Ver También</h2>
+## Ver También
 
-<ul>
- <li>The older <a href="/en-US/docs/Web/API/Navigator/getUserMedia">navigator.getUserMedia</a> legacy API.</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices">navigator.enumerateDevices</a> - learn the types and number of devices the user has available.</li>
- <li><a href="/en-US/docs/WebRTC">WebRTC</a> - the introductory page to the API</li>
- <li><a href="/en-US/docs/WebRTC/MediaStream_API">MediaStream API</a> - the API for the media stream objects</li>
- <li><a href="/en-US/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a> - a tutorial on using <code>getUserMedia() for taking photos rather than video.</code></li>
-</ul>
+- The older [navigator.getUserMedia](/es/docs/Web/API/Navigator/getUserMedia) legacy API.
+- [navigator.enumerateDevices](/es/docs/Web/API/MediaDevices/enumerateDevices) - learn the types and number of devices the user has available.
+- [WebRTC](/es/docs/WebRTC) - the introductory page to the API
+- [MediaStream API](/es/docs/WebRTC/MediaStream_API) - the API for the media stream objects
+- [Taking webcam photos](/es/docs/WebRTC/taking_webcam_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`

@@ -8,51 +8,52 @@ tags:
   - Referencia
 translation_of: Web/CSS/-webkit-touch-callout
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La propiedad <a href="/es/docs/Web/CSS">CSS </a><code>-webkit-touch-callout</code> controla la visualización de la llamada predeterminada que se muestra cuando se mantiene pulsado un objetivo táctil .</p>
+La propiedad [CSS ](/es/docs/Web/CSS)`-webkit-touch-callout` controla la visualización de la llamada predeterminada que se muestra cuando se mantiene pulsado un objetivo táctil .
 
-<p>Cuando se toca y se mantiene la presión  en un objetivo en iPhone OS, Safari muestra un un cuadro con información sobre el enlace.  Esta propiedad permite deshabilitar este comportamiento.</p>
+Cuando se toca y se mantiene la presión en un objetivo en iPhone OS, Safari muestra un un cuadro con información sobre el enlace. Esta propiedad permite deshabilitar este comportamiento.
 
-<h2 id="Síntaxis">Síntaxis</h2>
+## Síntaxis
 
-<pre class="brush:css">/* Palabras clave valor */
+```css
+/* Palabras clave valor */
 -webkit-touch-callout: default;
 -webkit-touch-callout: none;
 
 /* Valores globales */
 -webkit-touch-callout: initial;
 -webkit-touch-callout: inherit;
--webkit-touch-callout: unset;</pre>
+-webkit-touch-callout: unset;
+```
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt><code>default</code></dt>
- <dd>Se muestra el cuadro de información por defecto.</dd>
- <dt><code>none</code></dt>
- <dd>El cuadro está deshabilitado</dd>
-</dl>
+- `default`
+  - : Se muestra el cuadro de información por defecto.
+- `none`
+  - : El cuadro está deshabilitado
 
-<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+### Síntaxis Formal
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: css">.example {
+```css
+.example {
   -webkit-touch-callout: none;
 }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación.</p>
+No es parte de ninguna especificación.
 
-<p>Apple tiene una <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout">descripcón en la Referencia CSS de Safari</a>.</p>
+Apple tiene una [descripcón en la Referencia CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.properties.-webkit-touch-callout")}}

@@ -3,116 +3,92 @@ title: overflow (excedente)
 slug: Web/CSS/overflow
 translation_of: Web/CSS/overflow
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Summary" name="Summary">Sumario</h2>
+## Sumario
 
-<p>La propiedad CSS <code>overflow</code>  especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.</p>
+La propiedad CSS `overflow` especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.
 
-<p>Usando la propiedad <code>overflow</code> con un valor distinto a <code>visible</code>, valor por defecto, creará un nuevo <a href="/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">contexto de formatos de bloques</a>. Esto es técnicamente necesario debido a que si un elemento flotante interceptara con otros forzaría a reajustar el contenido alrededor de los elementos que se interceden. El reajuste sucedería luego de cada desplazamiento, y llevaría a un desplazamiento demasiado lento.</p>
+Usando la propiedad `overflow` con un valor distinto a `visible`, valor por defecto, creará un nuevo [contexto de formatos de bloques](/es/docs/CSS/block_formatting_context "CSS/block_formatting_context"). Esto es técnicamente necesario debido a que si un elemento flotante interceptara con otros forzaría a reajustar el contenido alrededor de los elementos que se interceden. El reajuste sucedería luego de cada desplazamiento, y llevaría a un desplazamiento demasiado lento.
 
-<p>Nótese que, cambiando programáticamente el valor de <code>scrollTop</code> al elemento HTML relevante, incluso cuando <code>overflow</code> tenga el valor <code>hidden</code> un elemento podría necesitar ser desplazado.</p>
+Nótese que, cambiando programáticamente el valor de `scrollTop` al elemento HTML relevante, incluso cuando `overflow` tenga el valor `hidden` un elemento podría necesitar ser desplazado.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Sintáxis formal</a>: {{csssyntax("overflow")}}</pre>
+    Sintáxis formal: {{csssyntax("overflow")}}
 
-<pre>overflow: visible
-overflow: hidden
-overflow: scroll
-overflow: auto
+<!---->
 
-overflow: inherit
-</pre>
+    overflow: visible
+    overflow: hidden
+    overflow: scroll
+    overflow: auto
 
-<h3 id="Values" name="Values">Valores</h3>
+    overflow: inherit
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>Valor por defecto. El contenido no es recortado, podría ser dibujado fuera de la caja contenedora.</dd>
- <dt><code>hidden</code></dt>
- <dd>El contenido es recortado y no se muestran barras de posición.</dd>
- <dt><code>scroll</code></dt>
- <dd>El contenido es recortado y el navegador web usa las barras de desplazamiento, se haya recortado contenido o no. Esto previene cualquier problema con las barras de desplazamiento apareciendo o desapareciendo en un entorno dinámico. Puede que las impresoras impriman contenido excedente.</dd>
- <dt><code>auto</code></dt>
- <dd>Depende del agente de usuario. Navegadores de escritorio como Firefox proveen barras de desplazamiento si hay contenido excedente.</dd>
-</dl>
+### Valores
 
-<h4 id="Mozilla_Extensions" name="Mozilla_Extensions">Extensiones de Mozilla</h4>
+- `visible`
+  - : Valor por defecto. El contenido no es recortado, podría ser dibujado fuera de la caja contenedora.
+- `hidden`
+  - : El contenido es recortado y no se muestran barras de posición.
+- `scroll`
+  - : El contenido es recortado y el navegador web usa las barras de desplazamiento, se haya recortado contenido o no. Esto previene cualquier problema con las barras de desplazamiento apareciendo o desapareciendo en un entorno dinámico. Puede que las impresoras impriman contenido excedente.
+- `auto`
+  - : Depende del agente de usuario. Navegadores de escritorio como Firefox proveen barras de desplazamiento si hay contenido excedente.
 
-<dl>
- <dt><code>-moz-scrollbars-none </code>{{ obsolete_inline() }}</dt>
- <dd>Usar <code>overflow:hidden</code>.</dd>
- <dt><code>-moz-scrollbars-horizontal </code>{{ Deprecated_inline() }}</dt>
- <dd>Es preferible el uso de {{ Cssxref("overflow-x") }} y {{ Cssxref("overflow-y") }}.</dd>
- <dt><code>-moz-scrollbars-vertical </code>{{ Deprecated_inline() }}</dt>
- <dd>Es preferible el uso de {{ Cssxref("overflow-x") }} y {{ Cssxref("overflow-y") }}.</dd>
- <dt>-moz-hidden-unscrollable {{ non-standard_inline() }}</dt>
- <dd>Es usada principalmente para uso interno y por temas. Deshabilita el desplazamiento en elementos XML root y <code>&lt;html&gt;</code>, <code> &lt;body&gt;</code> usando las flechas del teclado o la rueda del ratón.</dd>
-</dl>
+#### Extensiones de Mozilla
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+- `-moz-scrollbars-none `{{ obsolete_inline() }}
+  - : Usar `overflow:hidden`.
+- `-moz-scrollbars-horizontal `{{ Deprecated_inline() }}
+  - : Es preferible el uso de {{ Cssxref("overflow-x") }} y {{ Cssxref("overflow-y") }}.
+- `-moz-scrollbars-vertical `{{ Deprecated_inline() }}
+  - : Es preferible el uso de {{ Cssxref("overflow-x") }} y {{ Cssxref("overflow-y") }}.
+- \-moz-hidden-unscrollable {{ non-standard_inline() }}
+  - : Es usada principalmente para uso interno y por temas. Deshabilita el desplazamiento en elementos XML root y `<html>`, `<body>` usando las flechas del teclado o la rueda del ratón.
 
-<pre class="brush: css">p {
+## Ejemplos
+
+```css
+p {
      width: 12em;
      border: dotted;
      overflow: visible;   /* dibuja barras si es necesario */
 }
-</pre>
+```
 
-<p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>visible</code> (por defecto)<br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`visible` (por defecto)
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<pre>p { overflow: hidden; /* no se dibujan barras */ }
-</pre>
+    p { overflow: hidden; /* no se dibujan barras */ }
 
-<p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: hidden</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`overflow: hidden`
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<pre>p { overflow: scroll; /* se dibujan ambas barras */ }
-</pre>
+    p { overflow: scroll; /* se dibujan ambas barras */ }
 
-<p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: scroll</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`overflow: scroll`
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<pre>p { overflow: auto; /* se dibujan barras según se necesite */ }
-</pre>
+    p { overflow: auto; /* se dibujan barras según se necesite */ }
 
-<p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+`overflow: auto`
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Box', '#overflow1', 'overflow') }}</td>
-   <td>{{ Spec2('CSS3 Box') }}</td>
-   <td>Sin cambios.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visufx.html#overflow', 'overflow') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                   | Estado                           | Comentario   |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{ SpecName('CSS3 Box', '#overflow1', 'overflow') }}             | {{ Spec2('CSS3 Box') }} | Sin cambios. |
+| {{ SpecName('CSS2.1', 'visufx.html#overflow', 'overflow') }} | {{ Spec2('CSS2.1') }}     |              |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad en navegadores</h2>
+## Compatibilidad en navegadores
 
-<p>{{Compat("css.properties.overflow")}}</p>
+{{Compat("css.properties.overflow")}}
 
-<h2 id="See_also" name="See_also">Véase también</h2>
+## Véase también
 
-<ul>
- <li>Propiedades CSS relacionadas: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("clip") }}, {{ Cssxref("display") }} (</li>
-</ul>
+- Propiedades CSS relacionadas: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("clip") }}, {{ Cssxref("display") }} (

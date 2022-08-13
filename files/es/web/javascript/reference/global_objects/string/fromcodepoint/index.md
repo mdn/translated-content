@@ -4,39 +4,36 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fromCodePoint
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>El método estatico <strong><code>String.fromCodePoint()</code></strong> devuelve una cadena creada por una secuencia de puntos de codigo.</p>
+El método estatico **`String.fromCodePoint()`** devuelve una cadena creada por una secuencia de puntos de codigo.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>String.fromCodePoint(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
+    String.fromCodePoint(num1[, ...[, numN]])
 
-<h3 id="Parameters" name="Parameters">Parametros</h3>
+### Parametros
 
-<dl>
- <dt><code>num1, ..., num<em>N</em></code></dt>
- <dd>Una secuencia de puntos de código.</dd>
-</dl>
+- `num1, ..., numN`
+  - : Una secuencia de puntos de código.
 
-<h3 id="Throws">Throws</h3>
+### Throws
 
-<dl>
- <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>A {{jsxref("Global_Objects/RangeError", "RangeError")}} is thrown if an invalid Unicode code point is given (e.g. "RangeError: NaN is not a valid code point").</dd>
-</dl>
+- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+  - : A {{jsxref("Global_Objects/RangeError", "RangeError")}} is thrown if an invalid Unicode code point is given (e.g. "RangeError: NaN is not a valid code point").
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p>Because <code>fromCodePoint()</code> is a static method of {{jsxref("Global_Objects/String", "String")}}, you always use it as <code>String.fromCodePoint()</code>, rather than as a method of a {{jsxref("Global_Objects/String", "String")}} object you created.</p>
+Because `fromCodePoint()` is a static method of {{jsxref("Global_Objects/String", "String")}}, you always use it as `String.fromCodePoint()`, rather than as a method of a {{jsxref("Global_Objects/String", "String")}} object you created.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Example:_Using_fromCharCode" name="Example:_Using_fromCharCode">Ejemplos: Usando <code>fromCodePoint()</code></h3>
+### Ejemplos: Usando `fromCodePoint()`
 
-<pre class="brush: js">String.fromCodePoint(42);       // "*"
+```js
+String.fromCodePoint(42);       // "*"
 String.fromCodePoint(65, 90);   // "AZ"
 String.fromCodePoint(0x404);    // "\u0404"
 String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
@@ -49,20 +46,22 @@ String.fromCodePoint(-1);       // RangeError
 String.fromCodePoint(3.14);     // RangeError
 String.fromCodePoint(3e-2);     // RangeError
 String.fromCodePoint(NaN);      // RangeError
-</pre>
+```
 
-<pre class="brush: js">// String.fromCharCode() alone cannot get the character at such a high code point
+```js
+// String.fromCharCode() alone cannot get the character at such a high code point
 // The following, on the other hand, can return a 4-byte character as well as the
 // usual 2-byte ones (i.e., it can return a single character which actually has
 // a string length of 2 instead of 1!)
 console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>The <code>String.fromCodePoint</code> method has been added to the ECMAScript standard in version 6 and may not be supported in all web browsers or environments yet. Use the code below for a polyfill:</p>
+The `String.fromCodePoint` method has been added to the ECMAScript standard in version 6 and may not be supported in all web browsers or environments yet. Use the code below for a polyfill:
 
-<pre class="brush: js">/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
+```js
+/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
 if (!String.fromCodePoint) {
   (function() {
     var defineProperty = (function() {
@@ -70,7 +69,7 @@ if (!String.fromCodePoint) {
       try {
         var object = {};
         var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) &amp;&amp; $defineProperty;
+        var result = $defineProperty(object, object, object) && $defineProperty;
       } catch(error) {}
       return result;
     }());
@@ -87,26 +86,26 @@ if (!String.fromCodePoint) {
         return '';
       }
       var result = '';
-      while (++index &lt; length) {
+      while (++index < length) {
         var codePoint = Number(arguments[index]);
         if (
           !isFinite(codePoint) ||       // `NaN`, `+Infinity`, or `-Infinity`
-          codePoint &lt; 0 ||              // not a valid Unicode code point
-          codePoint &gt; 0x10FFFF ||       // not a valid Unicode code point
+          codePoint < 0 ||              // not a valid Unicode code point
+          codePoint > 0x10FFFF ||       // not a valid Unicode code point
           floor(codePoint) != codePoint // not an integer
         ) {
           throw RangeError('Invalid code point: ' + codePoint);
         }
-        if (codePoint &lt;= 0xFFFF) { // BMP code point
+        if (codePoint <= 0xFFFF) { // BMP code point
           codeUnits.push(codePoint);
         } else { // Astral code point; split in surrogate halves
           // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           codePoint -= 0x10000;
-          highSurrogate = (codePoint &gt;&gt; 10) + 0xD800;
+          highSurrogate = (codePoint >> 10) + 0xD800;
           lowSurrogate = (codePoint % 0x400) + 0xDC00;
           codeUnits.push(highSurrogate, lowSurrogate);
         }
-        if (index + 1 == length || codeUnits.length &gt; MAX_SIZE) {
+        if (index + 1 == length || codeUnits.length > MAX_SIZE) {
           result += stringFromCharCode.apply(null, codeUnits);
           codeUnits.length = 0;
         }
@@ -124,34 +123,21 @@ if (!String.fromCodePoint) {
     }
   }());
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.fromcodepoint', 'String.fromCodePoint')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status               | Comment             |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-string.fromcodepoint', 'String.fromCodePoint')}} | {{Spec2('ES6')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("javascript.builtins.String.fromCodePoint")}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}

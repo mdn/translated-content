@@ -9,48 +9,39 @@ translation_of: Web/JavaScript/Reference/Global_Objects/InternalError/InternalEr
 original_slug: >-
   Web/JavaScript/Referencia/Objetos_globales/InternalError/Constructor_InternalError
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>El constructor <strong><code>InternalError()</code></strong> crea un error que indica un error que ocurrió internamente en el motor de JavaScript. Por ejemplo: <strong>"InternalError</strong>: demasiada recursividad".</p>
+El constructor **`InternalError()`** crea un error que indica un error que ocurrió internamente en el motor de JavaScript. Por ejemplo: **"InternalError**: demasiada recursividad".
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox notranslate">new InternalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+    new InternalError([message[, fileName[, lineNumber]]])
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Opcional. Una descripción del error legible para los humanos.</dd>
- <dt><code>fileName</code></dt>
- <dd>Opcional. El nombre del archivo que contiene el código que provocó la excepción.</dd>
- <dt><code>lineNumber</code></dt>
- <dd>Opcional. El número de línea del código que provocó la excepción.</dd>
-</dl>
+- `message`
+  - : Opcional. Una descripción del error legible para los humanos.
+- `fileName`
+  - : Opcional. El nombre del archivo que contiene el código que provocó la excepción.
+- `lineNumber`
+  - : Opcional. El número de línea del código que provocó la excepción.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Crear_un_nuevo_InternalError">Crear un nuevo <code>InternalError</code></h3>
+### Crear un nuevo `InternalError`
 
-<pre class="brush: js notranslate">new InternalError("Fallo del motor");
-</pre>
+```js
+new InternalError("Fallo del motor");
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p><span class="pl-s">No forma parte de ningún estándar.</span></p>
+No forma parte de ningún estándar.
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<div>
-<div>
+{{Compat("javascript.builtins.InternalError.InternalError")}}
 
+## Ve también
 
-<p>{{Compat("javascript.builtins.InternalError.InternalError")}}</p>
-</div>
-</div>
-
-<h2 id="Ve_también">Ve también</h2>
-
-<ul>
- <li>{{JSxRef("Error")}}</li>
-</ul>
+- {{JSxRef("Error")}}

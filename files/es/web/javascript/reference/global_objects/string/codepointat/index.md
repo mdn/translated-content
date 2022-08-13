@@ -4,46 +4,42 @@ slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/codePointAt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}El método **`codePointAt() `**`d`evuelve un entero no negativo que equivale al valor Unicode code point del carácter.
 
-<div> </div>
+## Sintaxis
 
-<div>El método <strong><code>codePointAt() </code></strong><code>d</code>evuelve un entero no negativo que equivale al valor Unicode code point del carácter.</div>
+    str.codePointAt(indice)
 
-<h2 id="Sintaxis">Sintaxis</h2>
+### Parámetros
 
-<pre class="syntaxbox"><code><var>str</var>.codePointAt(<var>indice</var>)</code></pre>
+- `indice`
+  - : Índice del carácter en la cadena del que se quiere obtener el valor del Unicode code point.
 
-<h3 id="Parámetros">Parámetros</h3>
+### Valor de retorno
 
-<dl>
- <dt><code>indice</code></dt>
- <dd>Índice del carácter en la cadena del que se quiere obtener el valor del Unicode code point.</dd>
-</dl>
+Un número que equivale al valor code point del carácter especificado en el índice de la cadena; devuelve {{jsxref("undefined")}} si no se encuentra carácter en la posición especifica.
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+## Description
 
-<p>Un número que equivale al valor code point del carácter especificado en el índice de la cadena; devuelve {{jsxref("undefined")}} si no se encuentra carácter en la posición especifica.</p>
+If there is no element at the specified position, {{jsxref("undefined")}} is returned. If no UTF-16 surrogate pair begins at `pos`, the code unit at `pos` is returned.
 
-<h2 id="Description">Description</h2>
+## Examples
 
-<p>If there is no element at the specified position, {{jsxref("undefined")}} is returned. If no UTF-16 surrogate pair begins at <code>pos</code>, the code unit at <code>pos</code> is returned.</p>
+### Using `codePointAt()`
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_codePointAt()">Using <code>codePointAt()</code></h3>
-
-<pre class="brush: js">'ABC'.codePointAt(1);          // 66
+```js
+'ABC'.codePointAt(1);          // 66
 '\uD800\uDC00'.codePointAt(0); // 65536
 
 'XYZ'.codePointAt(42); // undefined
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>The following extends Strings to include the <code>codePointAt()</code> function as specified in ECMAScript 2015 for browsers not supporting it natively.</p>
+The following extends Strings to include the `codePointAt()` function as specified in ECMAScript 2015 for browsers not supporting it natively.
 
-<pre class="brush: js">/*! http://mths.be/codepointat v0.1.0 by @mathias */
+```js
+/*! http://mths.be/codepointat v0.1.0 by @mathias */
 if (!String.prototype.codePointAt) {
   (function() {
     'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
@@ -59,18 +55,18 @@ if (!String.prototype.codePointAt) {
         index = 0;
       }
       // Account for out-of-bounds indices:
-      if (index &lt; 0 || index &gt;= size) {
+      if (index < 0 || index >= size) {
         return undefined;
       }
       // Get the first code unit
       var first = string.charCodeAt(index);
       var second;
       if ( // check if it’s the start of a surrogate pair
-        first &gt;= 0xD800 &amp;&amp; first &lt;= 0xDBFF &amp;&amp; // high surrogate
-        size &gt; index + 1 // there is a next code unit
+        first >= 0xD800 && first <= 0xDBFF && // high surrogate
+        size > index + 1 // there is a next code unit
       ) {
         second = string.charCodeAt(index + 1);
-        if (second &gt;= 0xDC00 &amp;&amp; second &lt;= 0xDFFF) { // low surrogate
+        if (second >= 0xDC00 && second <= 0xDFFF) { // low surrogate
           // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
         }
@@ -88,39 +84,22 @@ if (!String.prototype.codePointAt) {
     }
   }());
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                | Status                       | Comment             |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}}     | {{Spec2('ES2015')}}     | Initial definition. |
+| {{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.String.codePointAt")}}</p>
+{{Compat("javascript.builtins.String.codePointAt")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.charAt()")}}

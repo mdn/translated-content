@@ -7,33 +7,32 @@ tags:
 translation_of: Web/XSLT/Element/fallback
 original_slug: Web/XSLT/fallback
 ---
-<p>{{XsltRef}}</p>
+{{XsltRef}}
 
-<p><br>
- El elemento <code>&lt;xsl:fallback&gt;</code> indica la plantilla a usar en caso de que algun elemento extendido (o, eventualmente, una nueva versión) no esté soportado.</p>
+El elemento `<xsl:fallback>` indica la plantilla a usar en caso de que algun elemento extendido (o, eventualmente, una nueva versión) no esté soportado.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre>&lt;xsl:fallback&gt;
-	PLANTILLA
-&lt;/xsl:fallback&gt;</pre>
+    <xsl:fallback>
+    	PLANTILLA
+    </xsl:fallback>
 
-<h3 id="Atributos_requeridos" name="Atributos_requeridos">Atributos requeridos</h3>
+### Atributos requeridos
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Atributos_opcionales" name="Atributos_opcionales">Atributos opcionales</h3>
+### Atributos opcionales
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Tipo" name="Tipo">Tipo</h3>
+### Tipo
 
-<p>Instrucción, aparece dentro de una plantilla.</p>
+Instrucción, aparece dentro de una plantilla.
 
-<h3 id="Definido" name="Definido">Definido</h3>
+### Definido
 
-<p>XSLT, sección 15</p>
+XSLT, sección 15
 
-<h3 id="Soporte_en_Gecko" name="Soporte_en_Gecko">Soporte en Gecko</h3>
+### Soporte en Gecko
 
-<p>Sin soporte por el momento.</p>
+Sin soporte por el momento.

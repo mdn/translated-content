@@ -7,27 +7,14 @@ tags:
 translation_of: Web/CSS/@media/resolution
 original_slug: Web/CSS/@media/resolución
 ---
-<p><strong><code>resolución</code></strong><code> es una función de medios de CSS</code> cuyo valor es la densidad de píxeles del dispositivo de salida, como un CSS<a href="/en-US/docs/Web/CSS/resolution"><code>&lt;resolution&gt;</code></a>.</p>
+**`resolución`**` es una función de medios de CSS` cuyo valor es la densidad de píxeles del dispositivo de salida, como un CSS[`<resolution>`](/es/docs/Web/CSS/resolution).
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#resolution', 'resolution')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                                   | Comentario         |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
+| {{SpecName('CSS3 Media Queries', '#resolution', 'resolution')}} | {{Spec2('CSS3 Media Queries')}} | Definición inicial |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("css.at-rules.media.resolution")}}

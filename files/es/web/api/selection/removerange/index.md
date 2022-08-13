@@ -5,41 +5,31 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/Selection/removeRange
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Resumen" name="Resumen">Resumen</h3>
+### Resumen
 
-<p>Quita un rango de la selección.</p>
+Quita un rango de la selección.
 
-<h3 id="Sintaxis" name="Sintaxis">Sintaxis</h3>
+### Sintaxis
 
-<pre class="eval"><i>sel</i>.removeRange(
-<i>range</i>)
-</pre>
+    sel.removeRange(
+    range)
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt>
- <i><code>range</code></i>
- </dt>
- <dd>Un objeto rango que será eliminado de la selección.</dd>
-</dl>
+- _`range`_
+  - : Un objeto rango que será eliminado de la selección.
 
-<h3 id="Ejemplos" name="Ejemplos">Ejemplos</h3>
+### Ejemplos
 
-<pre class="eval">/* Programadamente, mas de un rango puede ser seleccionado.
- * Esto eliminará todos los rangos excepto el primero. */
-s = window.getSelection();
-if(s.rangeCount &gt; 1) {
- for(var i = 1; i &lt; s.rangeCount; i++) {
-  s.removeRange(s.getRangeAt(i));
- }
-}
-</pre>
+    /* Programadamente, mas de un rango puede ser seleccionado.
+     * Esto eliminará todos los rangos excepto el primero. */
+    s = window.getSelection();
+    if(s.rangeCount > 1) {
+     for(var i = 1; i < s.rangeCount; i++) {
+      s.removeRange(s.getRangeAt(i));
+     }
+    }
 
-<p> </p>
-
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "en": "en/DOM/Selection/removeRange", "it": "it/DOM/Selection/removeRange", "pl": "pl/DOM/Selection/removeRange" } ) }}</p>
+{{ languages( { "en": "en/DOM/Selection/removeRange", "it": "it/DOM/Selection/removeRange", "pl": "pl/DOM/Selection/removeRange" } ) }}

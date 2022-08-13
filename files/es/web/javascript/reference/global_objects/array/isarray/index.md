@@ -11,40 +11,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/isArray
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <code><strong>Array.isArray()</strong></code> determina si el valor pasado es un {{jsxref("Array")}}.</p>
+El método **`Array.isArray()`** determina si el valor pasado es un {{jsxref("Array")}}.
 
-<pre class="brush: js">Array.isArray([1, 2, 3]);  // true
+```js
+Array.isArray([1, 2, 3]);  // true
 Array.isArray({foo: 123}); // false
 Array.isArray('foobar');   // false
 Array.isArray(undefined);  // false
-</pre>
+```
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>Array.isArray(<var>obj</var>)</code></pre>
+    Array.isArray(obj)
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>El objeto a evaluar.</dd>
-</dl>
+- `obj`
+  - : El objeto a evaluar.
 
-<h3 id="Description" name="Description">Valor de retorno</h3>
+### Valor de retorno
 
-<p><code>true</code> si el objeto es un {{jsxref("Array")}}; en caso contrario, <code>false</code>.</p>
+`true` si el objeto es un {{jsxref("Array")}}; en caso contrario, `false`.
 
-<h2 id="Description" name="Description">Descripción</h2>
+## Descripción
 
-<p>Si el objeto es un {{jsxref("Array")}}, devuelve <code>true</code>; <code>false</code>, en cualquier otro caso.</p>
+Si el objeto es un {{jsxref("Array")}}, devuelve `true`; `false`, en cualquier otro caso.
 
-<p>Vea el artículo <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determining with absolute accuracy whether or not a JavaScript object is an array”</a> para más detalles.</p>
+Vea el artículo [“Determining with absolute accuracy whether or not a JavaScript object is an array”](http://web.mit.edu/jwalden/www/isArray.html) para más detalles.
 
-<h2 id="Examples" name="Examples">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: js">// las siguientes llamadas devuelven true
+```js
+// las siguientes llamadas devuelven true
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
@@ -63,13 +63,14 @@ Array.isArray('Array');
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray({ __proto__: Array.prototype });
-</pre>
+```
 
-<h3 id="instanceof_vs_isArray"><code>instanceof</code> vs <code>isArray</code></h3>
+### `instanceof` vs `isArray`
 
-<p>Al comprobar una instancia <code>Array</code>, <code>Array.isArray</code> es más recomendado que <code>instanceof</code> porque funciona a través de <code>iframes</code>.</p>
+Al comprobar una instancia `Array`, `Array.isArray` es más recomendado que `instanceof` porque funciona a través de `iframes`.
 
-<pre class="brush: js">var iframe = document.createElement('iframe');
+```js
+var iframe = document.createElement('iframe');
 document.body.appendChild(iframe);
 xArray = window.frames[window.frames.length - 1].Array;
 var arr = new xArray(1,2,3); // [1,2,3]
@@ -78,52 +79,32 @@ var arr = new xArray(1,2,3); // [1,2,3]
 Array.isArray(arr);  // true
 // Considerado peligroso, porque no funciona a través de iframes
 arr instanceof Array; // false
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Ejecutar el siguiente código antes de cualquier otro código creará un <code>Array.isArray()</code> si no está disponible de forma nativa.</p>
+Ejecutar el siguiente código antes de cualquier otro código creará un `Array.isArray()` si no está disponible de forma nativa.
 
-<pre class="brush: js">if (!Array.isArray) {
+```js
+if (!Array.isArray) {
   Array.isArray = function(arg) {
     return Object.prototype.toString.call(arg) === '[object Array]';
   };
 }
-</pre>
+```
 
-<h2 id="Especificaciones" name="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.isarray', 'Array.isArray')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                       | Estado                       | Comentario                                            |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}             | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
-<div>{{Compat("javascript.builtins.Array.isArray")}}</div>
+{{Compat("javascript.builtins.Array.isArray")}}
 
-<h2 id="See_also" name="See_also">Vea también</h2>
+## Vea también
 
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}

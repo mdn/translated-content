@@ -3,23 +3,21 @@ title: 'Reason: CORS request not HTTP'
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="Razón">Razón</h2>
+## Razón
 
-<pre class="syntaxbox notranslate">Reason: CORS request not HTTP</pre>
+    Reason: CORS request not HTTP
 
-<h2 id="¿Qué_está_mal">¿Qué está mal?</h2>
+## ¿Qué está mal?
 
-<p>{{Glossary("CORS")}} Las peticiones solo pueden usar el esquema de direcciones  HTTPS , pero la dirección especificada por la petición es de un tipo diferente. Esto a menudo ocurre si la petición especifica un archivo local, usando una dirección <code>file:///</code>.</p>
+{{Glossary("CORS")}} Las peticiones solo pueden usar el esquema de direcciones HTTPS , pero la dirección especificada por la petición es de un tipo diferente. Esto a menudo ocurre si la petición especifica un archivo local, usando una dirección `file:///`.
 
-<p>Para resolver este problema, simplemente asegúrate de usar direciones HTTPS cuando el emisor involucre CORS.</p>
+Para resolver este problema, simplemente asegúrate de usar direciones HTTPS cuando el emisor involucre CORS.
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>Errores de CORS</li>
- <li>Glosario: {{Glossary("CORS")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Introducción a CORS</a></li>
- <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">¿Qué es una direccion?</a></li>
-</ul>
+- Errores de CORS
+- Glosario: {{Glossary("CORS")}}
+- [Introducción a CORS](/es/docs/Web/HTTP/CORS)
+- [¿Qué es una direccion?](/es/docs/Learn/Common_questions/What_is_a_URL)

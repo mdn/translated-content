@@ -9,110 +9,65 @@ tags:
 translation_of: Web/CSS/CSS_Box_Model
 original_slug: Web/CSS/CSS_Modelo_Caja
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>El modelo de caja CSS </strong> es un módulo  CSS que define cajas rectangulares, incluyendo sus rellenos y márgenes, que son generadas para los elementos y que se disponen de acuerdo al modelo de formato visual.</p>
+**El modelo de caja CSS** es un módulo CSS que define cajas rectangulares, incluyendo sus rellenos y márgenes, que son generadas para los elementos y que se disponen de acuerdo al modelo de formato visual.
 
-<h2 id="Referencia">Referencia</h2>
+## Referencia
 
-<h3 id="Propiedades">Propiedades</h3>
+### Propiedades
 
-<h4 id="Propiedades_que_controlan_el_flujo_del_contenido_en_una_caja.">Propiedades que controlan el flujo del contenido en una caja.</h4>
+#### Propiedades que controlan el flujo del contenido en una caja.
 
-<div class="index">
-<ul>
- <li>{{cssxref("box-decoration-break")}}</li>
- <li>{{cssxref("box-sizing")}}</li>
- <li>{{cssxref("overflow")}}</li>
- <li>{{cssxref("overflow-x")}}</li>
- <li>{{cssxref("overflow-y")}}</li>
-</ul>
-</div>
+- {{cssxref("box-decoration-break")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("overflow")}}
+- {{cssxref("overflow-x")}}
+- {{cssxref("overflow-y")}}
 
-<h4 id="Propiedades_que_controlan_el_tamaño_de_una_caja.">Propiedades que controlan el tamaño de una caja.</h4>
+#### Propiedades que controlan el tamaño de una caja.
 
-<div class="index">
-<ul>
- <li>{{cssxref("height")}}</li>
- <li>{{cssxref("width")}}</li>
- <li>{{cssxref("max-height")}}</li>
- <li>{{cssxref("max-width")}}</li>
- <li>{{cssxref("min-height")}}</li>
- <li>{{cssxref("min-width")}}</li>
-</ul>
-</div>
+- {{cssxref("height")}}
+- {{cssxref("width")}}
+- {{cssxref("max-height")}}
+- {{cssxref("max-width")}}
+- {{cssxref("min-height")}}
+- {{cssxref("min-width")}}
 
-<h4 id="Propiedades_que_controlan_los_márgenes_de_una_caja.">Propiedades que controlan los márgenes de una caja.</h4>
+#### Propiedades que controlan los márgenes de una caja.
 
-<div class="index">
-<ul>
- <li>{{cssxref("margin")}}</li>
- <li>{{cssxref("margin-bottom")}}</li>
- <li>{{cssxref("margin-left")}}</li>
- <li>{{cssxref("margin-right")}}</li>
- <li>{{cssxref("margin-top")}}</li>
-</ul>
-</div>
+- {{cssxref("margin")}}
+- {{cssxref("margin-bottom")}}
+- {{cssxref("margin-left")}}
+- {{cssxref("margin-right")}}
+- {{cssxref("margin-top")}}
 
-<h4 id="Propiedades_que_controlan_los_rellenos_de_una_caja">Propiedades que controlan los rellenos de una caja</h4>
+#### Propiedades que controlan los rellenos de una caja
 
-<div class="index">
-<ul>
- <li>{{cssxref("padding")}}</li>
- <li>{{cssxref("padding-bottom")}}</li>
- <li>{{cssxref("padding-left")}}</li>
- <li>{{cssxref("padding-right")}}</li>
- <li>{{cssxref("padding-top")}}</li>
-</ul>
-</div>
+- {{cssxref("padding")}}
+- {{cssxref("padding-bottom")}}
+- {{cssxref("padding-left")}}
+- {{cssxref("padding-right")}}
+- {{cssxref("padding-top")}}
 
-<h4 id="Otras_propiedades">Otras propiedades</h4>
+#### Otras propiedades
 
-<div class="index">
-<ul>
- <li>{{cssxref("box-shadow")}}</li>
- <li>{{cssxref("visibility")}}</li>
-</ul>
-</div>
+- {{cssxref("box-shadow")}}
+- {{cssxref("visibility")}}
 
-<h2 id="Guías_y_Herramientas">Guías y Herramientas</h2>
+## Guías y Herramientas
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS box model</a></dt>
- <dd>Explica uno de los conceptos fundamentales de CSS, el modelo de caja: describe el significado del margen, del relleno, así como de las diferentes zonas de una caja.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Mastering margin collapsing</a></dt>
- <dd>En determinados casos dos márgenes adyacentes se convierten en uno. Este artículo explica cuando sucede esto y cómo controlarlo.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator">Box-shadow generator</a></dt>
- <dd>Una herramienta interactiva que permite crear sombras y proporciona la síntaxis necesaria para generar dichas sombras usando la propiedad {{cssxref("box-shadow")}}.</dd>
-</dl>
+- [Introduction to the CSS box model](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - : Explica uno de los conceptos fundamentales de CSS, el modelo de caja: describe el significado del margen, del relleno, así como de las diferentes zonas de una caja.
+- [Mastering margin collapsing](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - : En determinados casos dos márgenes adyacentes se convierten en uno. Este artículo explica cuando sucede esto y cómo controlarlo.
+- [Box-shadow generator](/es/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator)
+  - : Una herramienta interactiva que permite crear sombras y proporciona la síntaxis necesaria para generar dichas sombras usando la propiedad {{cssxref("box-shadow")}}.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box")}}</td>
-   <td>{{Spec2("CSS3 Box")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "box.html")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Definición Inicial</td>
-  </tr>
- </tbody>
-</table>
-
-
+| Especificación                               | Estado                       | Comentario         |
+| -------------------------------------------- | ---------------------------- | ------------------ |
+| {{SpecName("CSS3 Box")}}             | {{Spec2("CSS3 Box")}} |                    |
+| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}     |                    |
+| {{SpecName("CSS1")}}                 | {{Spec2("CSS1")}}     | Definición Inicial |

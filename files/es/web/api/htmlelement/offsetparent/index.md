@@ -9,44 +9,24 @@ tags:
   - Referencia
 translation_of: Web/API/HTMLElement/offsetParent
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>La propiedad de solo lectura <strong><code>HTMLElement.offsetParent</code></strong> retorna una referencia al objeto, el cual es el elemento contenedor posicionado más cercano (más cercano en la jerarquía contenedora). Si el elemento es no-posicionado, <code>td</code>, <code>th</code>, <code>table</code> o el <code>body</code> más cercano es retornado.</p>
+La propiedad de solo lectura **`HTMLElement.offsetParent`** retorna una referencia al objeto, el cual es el elemento contenedor posicionado más cercano (más cercano en la jerarquía contenedora). Si el elemento es no-posicionado, `td`, `th`, `table` o el `body` más cercano es retornado.
 
-<p><code>offsetParent</code> retorna <code>null</code> cuando el elemento <code>style.display</code> tiene asignado <code>none</code>. <code>offsetParent</code> es útil porque {{domxref("HTMLElement.offsetTop","offsetTop")}} y {{domxref("HTMLElement.offsetLeft","offsetLeft")}} son relativos a su borde de relleno.</p>
+`offsetParent` retorna `null` cuando el elemento `style.display` tiene asignado `none`. `offsetParent` es útil porque {{domxref("HTMLElement.offsetTop","offsetTop")}} y {{domxref("HTMLElement.offsetLeft","offsetLeft")}} son relativos a su borde de relleno.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><var>parentObj</var> = element.offsetParent;
-</pre>
+    parentObj = element.offsetParent;
 
-<ul>
- <li><var>parentObj</var> es una referencia de objeto al elemento en el cual el elemento actual es offset.</li>
-</ul>
+- _parentObj_ es una referencia de objeto al elemento en el cual el elemento actual es offset.
 
-<h2 id="Specification" name="Specification">Especificación</h2>
+## Especificación
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-htmlelement-offsetparent', 'offsetParent')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                       | Estatus                          | Comentario |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| {{SpecName('CSSOM View', '#dom-htmlelement-offsetparent', 'offsetParent')}} | {{Spec2('CSSOM View')}} |            |
 
-<h2 id="Compatibility" name="Compatibility">Compatibilidad de Browser</h2>
+## Compatibilidad de Browser
 
-
-
-<p>{{Compat("api.HTMLElement.offsetParent")}}</p>
+{{Compat("api.HTMLElement.offsetParent")}}

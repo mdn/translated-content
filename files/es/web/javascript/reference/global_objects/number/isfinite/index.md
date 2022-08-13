@@ -4,36 +4,33 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isFinite
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>Number.isFinite()</code></strong> determina si el valor pasado es un número finito.</p>
+El método **`Number.isFinite()`** determina si el valor pasado es un número finito.
 
-<div>{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
 
+## Syntax
 
+    Number.isFinite(valor)
 
-<h2 id="Syntax">Syntax</h2>
+### Parameters
 
-<pre class="syntaxbox">Number.isFinite(valor)</pre>
+- `valor`
+  - : El valor cuya finitud será probada.
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<dl>
- <dt><code>valor</code></dt>
- <dd>El valor cuya finitud será probada.</dd>
-</dl>
+Un {{jsxref("Boolean")}} indicando si el valor dado es finito o no.
 
-<h3 id="Return_value">Return value</h3>
+## Description
 
-<p>Un {{jsxref("Boolean")}} indicando si el valor dado es finito o no.</p>
+En comparación con la funcion global {{jsxref("isFinite", "isFinite()")}} , este método no convierte el parámetro forzádamente a un número. Esto significa que solo valores de tipo númerico, que también son finitos, retornan `true`.
 
-<h2 id="Description">Description</h2>
+## Ejemplos
 
-<p>En comparación con la funcion global {{jsxref("isFinite", "isFinite()")}} , este método no convierte el parámetro forzádamente a un número. Esto significa que solo valores de tipo númerico, que también son finitos, retornan <code>true</code>.</p>
-
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<pre class="brush: js">Number.isFinite(Infinity);  // false
+```js
+Number.isFinite(Infinity);  // false
 Number.isFinite(NaN);       // false
 Number.isFinite(-Infinity); // false
 
@@ -44,44 +41,28 @@ Number.isFinite('0');       // false, retornaría true con la función
                             // global isFinite('0')
 Number.isFinite(null);      // false, retornaría true con la función
                             // global isFinite(null)
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' &amp;&amp; isFinite(value);
+```js
+Number.isFinite = Number.isFinite || function(value) {
+    return typeof value === 'number' && isFinite(value);
 }
-</pre>
+```
 
-<h2 id="Specificaciones">Specificaciones</h2>
+## Specificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment             |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}         | Definición inicial. |
+| {{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+## Compatibilidad de navegador
 
-<p>{{Compat("javascript.builtins.Number.isFinite")}}</p>
+{{Compat("javascript.builtins.Number.isFinite")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>El objeto {{jsxref("Number")}} al que pertenece esta función.</li>
- <li>La función global {{jsxref("isFinite")}}.</li>
-</ul>
+- El objeto {{jsxref("Number")}} al que pertenece esta función.
+- La función global {{jsxref("isFinite")}}.

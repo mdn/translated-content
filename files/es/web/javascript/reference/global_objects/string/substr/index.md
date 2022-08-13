@@ -9,76 +9,67 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/substr
 ---
-<p>{{JSRef("Objetos_globales", "String")}}</p>
+{{JSRef("Objetos_globales", "String")}}
 
-<div class="warning">Advertencia: Aunque <code>String.prototype.substr(…) </code><span style="font-size: 1.125rem;">no está estrictamente obsoleto (como en "eliminado de los estándares web"), se define en el anexo B de la norma ECMA-262, cuya introducción establece:</span>
+> **Advertencia:** Advertencia: Aunque `String.prototype.substr(…) `no está estrictamente obsoleto (como en "eliminado de los estándares web"), se define en el anexo B de la norma ECMA-262, cuya introducción establece:> ... Todas las características y comportamientos del lenguaje especificados en este anexo tienen una o más características indeseables y, en ausencia de uso heredado, se eliminarían de esta especificación. ... ... Los programadores no deben usar ni asumir la existencia de estas características y comportamientos al escribir un nuevo código ECMAScript.
 
-<blockquote>... Todas las características y comportamientos del lenguaje especificados en este anexo tienen una o más características indeseables y, en ausencia de uso heredado, se eliminarían de esta especificación. ... ... Los programadores no deben usar ni asumir la existencia de estas características y comportamientos al escribir un nuevo código ECMAScript.</blockquote>
-</div>
+## Resumen
 
-<p> </p>
+El método **`substr()`** devuelve los caracteres de una cadena que comienzan en una localización especificada y de acuerdo al número de caracteres que se especifiquen.
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Sintaxis
 
-<p>El método <strong><code>substr()</code></strong> devuelve los caracteres de una cadena que comienzan en una localización especificada y de acuerdo al número de caracteres que se especifiquen.</p>
+    cadena.substr(inicio[, longitud])
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+### Parámetros
 
-<pre class="syntaxbox"><em>cadena</em>.substr(<em>inicio</em>[, <em>longitud</em>])</pre>
+- `inicio`
+  - : Localización en la cual se empiezan a extraer caracteres. Si se da un número negativo, se trata como `longCad + inicio` donde `longCad` es la longitud de la cadena (por ejemplo, si `inicio` es -3 se trata como `longCad - 3`).
 
-<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+<!---->
 
-<dl>
- <dt><code>inicio</code></dt>
- <dd>Localización en la cual se empiezan a extraer caracteres. Si se da un número negativo, se trata como <code>longCad + inicio</code> donde  <code>longCad</code> es la longitud de la cadena (por ejemplo, si <code>inicio</code> es -3 se trata como <code>longCad - 3</code>).</dd>
-</dl>
+- `longitud`
+  - : Opcional. El número de caracteres a extraer. Si este argumento es {{jsxref("undefined")}}, todos los caracteres desde `inicio` hasta el final de la cadena serán extraidos.
 
-<dl>
- <dt><code>longitud</code></dt>
- <dd>Opcional. El número de caracteres a extraer. Si este argumento es {{jsxref("undefined")}}, todos los caracteres desde <code><em>inicio</em></code> hasta el final de la cadena serán extraidos.</dd>
-</dl>
+### Valor retornado
 
-<h3 id="Valor_retornado">Valor retornado</h3>
+Una nueva cadena que contiende la sección extraída de la cadena dada. Sí la longitud es 0 o un número negativo, retorna la cadena vacía.
 
-<p>Una nueva cadena que contiende la sección extraída de la cadena dada. Sí la longitud es 0 o un número negativo, retorna la cadena vacía.</p>
+## Descripción
 
-<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
+`inicio` es el índice de un carácter. El índice del primer carácter es 0, y el índice del último carácter es la longitud de la cadena menos 1. `substr` comienza extrayendo caracteres a partir de `inicio` y recolecta `longitud` caracteres (a menos que se alcance primero el final de la cadena, en cuyo caso devuelve menos).
 
-<p><code>inicio</code> es el índice de un carácter. El índice del primer carácter es 0, y el índice del último carácter es la longitud de la cadena menos 1. <code>substr</code> comienza extrayendo caracteres a partir de <code>inicio</code> y recolecta <code>longitud</code>  caracteres (a menos que se alcance primero el final de la cadena, en cuyo caso devuelve menos).</p>
+Si `inicio` es positivo y es mayor o igual que la longitud de la cadena, `substr()` devuelve una cadena vacía.
 
-<p>Si <code>inicio</code> es positivo y es mayor o igual que la longitud de la cadena, <code>substr()</code> devuelve una cadena vacía.</p>
+Si `inicio` es negativo, `substr()` lo usa como un índice de carácter desde el final de la cadena. Si `inicio` es negativo y `abs(inicio)` es mayor que la longitud de la cadena, `substr` usa 0 como índice inical. Nota: el uso descrito de valores negativos del argumento `inicio` no es soportado por Microsoft JScript [.](http://msdn2.microsoft.com/en-us/library/0esxc5wy.aspx)
 
-<p>Si <code>inicio</code> es negativo, <code>substr()</code> lo usa como un índice de carácter desde el final de la cadena. Si <code>inicio</code> es negativo y <code>abs(inicio)</code> es mayor que la longitud de la cadena, <code>substr</code> usa 0 como índice inical. Nota: el uso descrito de valores negativos del argumento <code>inicio</code> no es soportado por Microsoft JScript <a class="external" href="http://msdn2.microsoft.com/en-us/library/0esxc5wy.aspx">. </a></p>
+Si `longitud` es 0 o negativa, `substr` devuelve una cadena vacía. Si se omite `longitud`, `inicio` extrae caracteres hasta el final de la cadena.
 
-<p>Si <code>longitud</code> es 0 o negativa, <code>substr</code> devuelve una cadena vacía. Si se omite <code>longitud</code>, <code>inicio</code> extrae caracteres hasta el final de la cadena.</p>
+## Ejemplos
 
-<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+### Ejemplo: Uso de `substr()`
 
-<h3 id="Ejemplo:_Usando_substr" name="Ejemplo:_Usando_substr">Ejemplo: Uso de <code>substr()</code></h3>
+```js
+var cadena = "abcdefghij";
 
-<pre class="brush: js">var cadena = "abcdefghij";
-
-console.log("(1,2): "    + cadena.substr(1,2));   <code>// '(1, 2): bc'</code>
-console.log("(-3,2): "   + cadena.substr(-3,2));  <code>// '(-3, 2): hi'</code>
+console.log("(1,2): "    + cadena.substr(1,2));   // '(1, 2): bc'
+console.log("(-3,2): "   + cadena.substr(-3,2));  // '(-3, 2): hi'
 console.log("(-3): "     + cadena.substr(-3));    // '(-3): hij'
 console.log("(1): "      + cadena.substr(1));     // '(1): bcdefghij'
 console.log("(-20, 2): " + cadena.substr(-20,2)); // '(-20, 2): ab'
 console.log("(20, 2): "  + cadena.substr(20,2));  // '(20, 2): '
-</pre>
+```
 
-<p>Este script muestra:</p>
+Este script muestra:
 
-<pre class="eval">(1,2): bc
-(-3,2): hi
-(-3): hij
-(1): bcdefghij
-(-20, 2): ab
-(20, 2):
-</pre>
+    (1,2): bc
+    (-3,2): hi
+    (-3): hij
+    (1): bcdefghij
+    (-20, 2): ab
+    (20, 2):
 
-<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
+## Vea También
 
-<ul>
- <li>{{jsxref("String.prototype.slice()")}}</li>
- <li>{{jsxref("String.prototype.substring()")}}</li>
-</ul>
+- {{jsxref("String.prototype.slice()")}}
+- {{jsxref("String.prototype.substring()")}}

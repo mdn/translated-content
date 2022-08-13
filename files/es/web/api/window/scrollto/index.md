@@ -3,48 +3,35 @@ title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
 translation_of: Web/API/Window/scrollTo
 ---
-<div>{{ APIRef }}</div>
+{{ APIRef }}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p>Desplaza el visor a un conjunto específico de coodenadas en el documento.</p>
+Desplaza el visor a un conjunto específico de coodenadas en el documento.
 
-<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code>window.scrollTo(<em>x-coord</em>, <em>y-coord</em>)</code></pre>
+    window.scrollTo(x-coord, y-coord)
 
-<h3 id="Parameters" name="Parameters">Parámetros</h3>
+### Parámetros
 
-<ul>
- <li><code>x-coord</code> es el pixel en el eje horizontal del documento que debe terminar posicionado en el extremo superior izquierdo.</li>
- <li><code>y-coord</code> es el pixel en el eje vertical del documento que debe terminar posicionado en el extremo superior izquierdo.</li>
-</ul>
+- `x-coord` es el pixel en el eje horizontal del documento que debe terminar posicionado en el extremo superior izquierdo.
+- `y-coord` es el pixel en el eje vertical del documento que debe terminar posicionado en el extremo superior izquierdo.
 
-<h2 id="Example" name="Example">Ejemplo</h2>
+## Ejemplo
 
-<pre class="brush:js">window.scrollTo( 0, 1000 );</pre>
+```js
+window.scrollTo( 0, 1000 );
+```
 
-<h2 id="Notes" name="Notes">Notas</h2>
+## Notas
 
-<p>Esta función es en efecto la misma que <a href="/en-US/docs/DOM/Window.scroll">window.scroll</a>. Para desplazamiento relativo, ver <a href="/en-US/docs/DOM/Window.scrollBy">window.scrollBy</a>, <a href="/en-US/docs/DOM/Window.scrollByLines">window.scrollByLines</a>, y <a href="/en-US/docs/DOM/Window.scrollByPages">window.scrollByPages</a>.</p>
+Esta función es en efecto la misma que [window.scroll](/es/docs/DOM/Window.scroll). Para desplazamiento relativo, ver [window.scrollBy](/es/docs/DOM/Window.scrollBy), [window.scrollByLines](/es/docs/DOM/Window.scrollByLines), y [window.scrollByPages](/es/docs/DOM/Window.scrollByPages).
 
-<p>Para desplazar el visor dentro de elementos, ver <a href="/en-US/docs/Web/API/Element/scrollTop">Element.scrollTop </a>and <a href="/en-US/docs/Web/API/Element/scrollLeft">Element.scrollLeft</a>.</p>
+Para desplazar el visor dentro de elementos, ver [Element.scrollTop ](/es/docs/Web/API/Element/scrollTop)and [Element.scrollLeft](/es/docs/Web/API/Element/scrollLeft).
 
-<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }}</td>
-   <td>{{ Spec2('CSSOM View') }}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                               | Estado                           | Comentario          |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
+| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Definición inicial. |

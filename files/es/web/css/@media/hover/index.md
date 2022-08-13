@@ -11,60 +11,47 @@ tags:
   - media feature
 translation_of: Web/CSS/@media/hover
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>La <a href="/en-US/docs/CSS">característica de medios CSS</a> <strong><code>hover</code></strong>, puede se utilizada para probar si el mecanismo de entrada primario de un usuario puede flotar sobre los elementos.</p>
+La [característica de medios CSS](/es/docs/CSS) **`hover`**, puede se utilizada para probar si el mecanismo de entrada primario de un usuario puede flotar sobre los elementos.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>La característica <font face="consolas, Liberation Mono, courier, monospace">hover</font> es especificada como un valor de palabra clave elegida de la siguiente lista.</p>
+La característica hover es especificada como un valor de palabra clave elegida de la siguiente lista.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>El mecanismo de entrada primario no puede flotar o no puede convenientemente flotar (es decir, algunos dispositivos mobiles emulan la flotación cuando el usuario presiona inconvenientemente por bastante rato la pantalla), o no hay mecanismo de puntero primario.</dd>
- <dt><code>hover</code></dt>
- <dd>El mecanismo de entrada primario puede convenientemente flotar sobre los elementos.</dd>
-</dl>
+- `none`
+  - : El mecanismo de entrada primario no puede flotar o no puede convenientemente flotar (es decir, algunos dispositivos mobiles emulan la flotación cuando el usuario presiona inconvenientemente por bastante rato la pantalla), o no hay mecanismo de puntero primario.
+- `hover`
+  - : El mecanismo de entrada primario puede convenientemente flotar sobre los elementos.
 
-<h2 id="Ejemplo">Ejemplo</h2>
+## Ejemplo
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;a href="#"&gt;Try hovering over me!&lt;/a&gt;</pre>
+```html
+<a href="#">Try hovering over me!</a>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@media (hover: hover) {
+```css
+@media (hover: hover) {
   a:hover {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h3 id="Resultado">Resultado</h3>
+### Resultado
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#hover', 'hover')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>Definición inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                           | Estado                                   | Comentario          |
+| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
+| {{SpecName('CSS4 Media Queries', '#hover', 'hover')}} | {{Spec2('CSS4 Media Queries')}} | Definición inicial. |
 
-<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
+## Compatibilidad de los navegadores
 
-
-
-<p>{{Compat("css.at-rules.media.hover")}}</p>
+{{Compat("css.at-rules.media.hover")}}

@@ -4,83 +4,57 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setFullYear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>setFullYear()</code></strong> fija el año completo para una fecha específica de acuerdo a la zona horaria local. Devuelve un nuevo valor de tipo timestamp.</p>
+El método **`setFullYear()`** fija el año completo para una fecha específica de acuerdo a la zona horaria local. Devuelve un nuevo valor de tipo timestamp.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setFullYear(<var>valorAño</var>[, <var>valorMes</var>[, <var>valorDia</var>]])</code></pre>
+    dateObj.setFullYear(valorAño[, valorMes[, valorDia]])
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<dl>
- <dt><code>valorAño</code></dt>
- <dd>Valor de tipo entero que contiene el valor numérico del año, por ejemplo, 1995.</dd>
- <dt><code>valorMes</code></dt>
- <dd>Opcional. Valor entero entre 0 y 11 que representa el mes de Enero a Diciembre.</dd>
- <dt><code>valorDia</code></dt>
- <dd>Opcional. Valor entero entre 1 y 31 que representa el día del mes. Si se especifica este parámetro debe incluirse también el parámetro <code>valorMes</code>.</dd>
-</dl>
+- `valorAño`
+  - : Valor de tipo entero que contiene el valor numérico del año, por ejemplo, 1995.
+- `valorMes`
+  - : Opcional. Valor entero entre 0 y 11 que representa el mes de Enero a Diciembre.
+- `valorDia`
+  - : Opcional. Valor entero entre 1 y 31 que representa el día del mes. Si se especifica este parámetro debe incluirse también el parámetro `valorMes`.
 
-<h3 id="Valor_devuelto">Valor devuelto</h3>
+### Valor devuelto
 
-<p>El número de milisegundos entre 1 Enero 1970 00:00:00 UTC y a la fecha actualizada con el valor del año.</p>
+El número de milisegundos entre 1 Enero 1970 00:00:00 UTC y a la fecha actualizada con el valor del año.
 
-<h2 id="Descripción">Descripción</h2>
+## Descripción
 
-<p>Si en la invocación al método no se especifican los parámetros <code>valorMes</code> y <code>valorDia, se emplean en su lugar los valores devueltos por </code> {{jsxref("Date.prototype.getMonth()", "getMonth()")}} y {{jsxref("Date.prototype.getDate()", "getDate()")}}.</p>
+Si en la invocación al método no se especifican los parámetros `valorMes` y `valorDia, se emplean en su lugar los valores devueltos por `{{jsxref("Date.prototype.getMonth()", "getMonth()")}} y {{jsxref("Date.prototype.getDate()", "getDate()")}}.
 
-<p>Si se especifica un parámetro con un valor fuera del rango esperado,  <code>setFullYear()</code> intenta actualizar el resto de parámetros y la informacion de fecha en el objeto {{jsxref("Date")}} de manera consistente. Por ejemplo, si se especifica el valor 15 para el parametro <code>valorMes</code>, el parámetro año se incrementa en 1  (<code>valorAño+ 1</code>), y se emplea  3 como valor para el parámetro mes.</p>
+Si se especifica un parámetro con un valor fuera del rango esperado, `setFullYear()` intenta actualizar el resto de parámetros y la informacion de fecha en el objeto {{jsxref("Date")}} de manera consistente. Por ejemplo, si se especifica el valor 15 para el parametro `valorMes`, el parámetro año se incrementa en 1 (`valorAño+ 1`), y se emplea 3 como valor para el parámetro mes.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Uso_de_setFullYear()">Uso de <code>setFullYear()</code></h3>
+### Uso de `setFullYear()`
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setFullYear(1997);
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.40', 'Date.prototype.setFullYear')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setfullyear', 'Date.prototype.setFullYear')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setfullyear', 'Date.prototype.setFullYear')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                        | Status                       | Comment                                             |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.40', 'Date.prototype.setFullYear')}}                         | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-date.prototype.setfullyear', 'Date.prototype.setFullYear')}}     | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-date.prototype.setfullyear', 'Date.prototype.setFullYear')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Date.setFullYear")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setUTCFullYear()")}}
+- {{jsxref("Date.prototype.setYear()")}}

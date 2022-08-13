@@ -1,23 +1,21 @@
 ---
 title: ':-moz-handler-disabled'
-slug: 'Web/CSS/:-moz-handler-disabled'
+slug: Web/CSS/:-moz-handler-disabled
 tags:
   - CSS
   - No estandar
   - Referencia CSS
-translation_of: 'Web/CSS/:-moz-handler-disabled'
+translation_of: Web/CSS/:-moz-handler-disabled
 ---
-<p>{{Non-standard_header}}{{ CSSRef() }}{{ gecko_minversion_header("1.9.1") }}</p>
+{{Non-standard_header}}{{ CSSRef() }}{{ gecko_minversion_header("1.9.1") }}
 
-<h2 id="Summary" name="Summary">Resumen</h2>
+## Resumen
 
-<p><code>:-moz-handler-disabled</code> selecciona elementos que no pueden ser mostrados porque sus manejadores han sido deshabilitados por el usuario.</p>
+`:-moz-handler-disabled` selecciona elementos que no pueden ser mostrados porque sus manejadores han sido deshabilitados por el usuario.
 
-<p>Es útil principalmente para desarrolladores de temas.</p>
+Es útil principalmente para desarrolladores de temas.
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<ul>
- <li>{{ cssxref(":-moz-handler-blocked") }}</li>
- <li>{{ cssxref(":-moz-handler-crashed") }}</li>
-</ul>
+- {{ cssxref(":-moz-handler-blocked") }}
+- {{ cssxref(":-moz-handler-crashed") }}

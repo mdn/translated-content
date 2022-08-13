@@ -1,71 +1,76 @@
 ---
 title: '::before (:before)'
-slug: 'Web/CSS/::before'
+slug: Web/CSS/::before
 tags:
   - CSS
   - Presentación
   - Pseudo-elemento CSS
   - Referencia
   - Web
-translation_of: 'Web/CSS/::before'
+translation_of: Web/CSS/::before
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">En CSS, <code>::before</code> crea un <a href="/es/docs/Web/CSS/Pseudo-elements">pseudoelemento</a> que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad {{cssxref("content")}}. Este elemento se muestra en línea con el texto de forma predeterminada.</span></p>
+En CSS, `::before` crea un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad {{cssxref("content")}}. Este elemento se muestra en línea con el texto de forma predeterminada.
 
-<pre class="brush: css  language-css notranslate"><code class="language-css"><span class="comment token">/* Añade un corazón antes de los enlaces */</span>
-<span class="selector token">a<span class="pseudo-element token">::before</span></span> <span class="punctuation token">{</span>
-  <span class="property token">content</span><span class="punctuation token">:</span> "</code>♥<code class="language-css">"<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+```css
+/* Añade un corazón antes de los enlaces */
+a::before {
+  content: "♥";
+}
+```
 
-<div class="note">
-<p><strong>Nota:</strong> Los pseudoelementos generados por <code>::before</code> y <code>::after</code> son <a href="https://www.w3.org/TR/CSS2/generate.html#before-after-content">contenidos por la caja de formato del elemento</a>, y por lo tanto, no aplica a <em><a href="/en-US/docs/Web/CSS/Replaced_element">elementos de reemplazo</a></em> como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.</p>
-</div>
+> **Nota:** Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
 {{csssyntax}}
 
-<div class="note">
-<p><strong>Nota:</strong> CSS3 introdujo la notación <code>::before</code> (con doble dos puntos) para diferenciar <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-clases</a> con <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elementos</a>. Los navegadores aceptan <code>:before</code>, añadido en CSS2.</p>
-</div>
+> **Nota:** CSS3 introdujo la notación `::before` (con doble dos puntos) para diferenciar [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) con [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores aceptan `:before`, añadido en CSS2.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Añadiendo_comillas">Añadiendo comillas</h3>
+### Añadiendo comillas
 
-<p>Un ejemplo simple del uso del pseudoelemento <code>::before</code> es el proporcionar comillas. Aquí, usamos <code>::before </code>y <code>{{Cssxref("::after")}}</code> para insertar caracteres de comillas.</p>
+Un ejemplo simple del uso del pseudoelemento `::before` es el proporcionar comillas. Aquí, usamos `::before `y `{{Cssxref("::after")}}` para insertar caracteres de comillas.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html notranslate">&lt;q&gt;Some quotes&lt;/q&gt;, he said, &lt;q&gt;are better than none&lt;/q&gt;.</pre>
+```html
+<q>Some quotes</q>, he said, <q>are better than none</q>.
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css notranslate">q::before {
+```css
+q::before {
   content: "«";
   color: blue;
 }
 q::after {
   content: "»";
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Resultado">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Añadiendo_comillas', '500', '50', '')}}</p>
+{{EmbedLiveSample('Añadiendo_comillas', '500', '50', '')}}
 
-<h3 id="Ejemplo_decorativo">Ejemplo decorativo</h3>
+### Ejemplo decorativo
 
-<p>Podemos estilizar el texto o imágenes en la propiedad {{cssxref("content")}} de casi cualquier forma que queramos.</p>
+Podemos estilizar el texto o imágenes en la propiedad {{cssxref("content")}} de casi cualquier forma que queramos.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;span class="ribbon"&gt;Notice where the orange box is.&lt;/span&gt;</pre>
+```html
+<span class="ribbon">Notice where the orange box is.</span>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.ribbon {
+```css
+.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -74,31 +79,34 @@ q::after {
   background-color: #FFBA10;
   border-color: black;
   border-style: dotted;
-}</pre>
+}
+```
 
-<h4 id="Resultado_2">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Ejemplo_decorativo', 450, 60)}}</p>
+{{EmbedLiveSample('Ejemplo_decorativo', 450, 60)}}
 
-<h3 id="Lista_de_tareas">Lista de tareas</h3>
+### Lista de tareas
 
-<p>En este ejemplo, creamos una lista de tareas simple usando pseudo-elementos. Este método puede ser usado comúnmente para añadir detalles a la interfaz y mejorar su experiencia de usuario.</p>
+En este ejemplo, creamos una lista de tareas simple usando pseudo-elementos. Este método puede ser usado comúnmente para añadir detalles a la interfaz y mejorar su experiencia de usuario.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;Buy milk&lt;/li&gt;
-  &lt;li&gt;Take the dog for a walk&lt;/li&gt;
-  &lt;li&gt;Exercise&lt;/li&gt;
-  &lt;li&gt;Write code&lt;/li&gt;
-  &lt;li&gt;Play music&lt;/li&gt;
-  &lt;li&gt;Relax&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+  <li>Buy milk</li>
+  <li>Take the dog for a walk</li>
+  <li>Exercise</li>
+  <li>Write code</li>
+  <li>Play music</li>
+  <li>Relax</li>
+</ul>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">li {
+```css
+li {
   list-style-type: none;
   position: relative;
   margin: 2px;
@@ -123,109 +131,78 @@ li.done::before {
   margin-top: -1em;
   transform: rotate(45deg);
   width: 0.5em;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">var list = document.querySelector('ul');
+```js
+var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if( ev.target.tagName === 'LI') {
      ev.target.classList.toggle('done');
   }
 }, false);
-</pre>
+```
 
-<p>Aquí se está ejecutando el ejemplo de arriba. Nótese que no se están usando íconos, y la marca de selección en realidad es el pseudoelemento <code>::before</code> que ha sido estilizado en CSS. Puedes interactuar con el ejemplo para ver los cambios.</p>
+Aquí se está ejecutando el ejemplo de arriba. Nótese que no se están usando íconos, y la marca de selección en realidad es el pseudoelemento `::before` que ha sido estilizado en CSS. Puedes interactuar con el ejemplo para ver los cambios.
 
-<h4 id="Resultado_3">Resultado</h4>
+#### Resultado
 
-<p>{{EmbedLiveSample('Lista_de_tareas', 400, 300)}}</p>
+{{EmbedLiveSample('Lista_de_tareas', 400, 300)}}
 
-<h3 id="Caracteres_especiales">Caracteres especiales</h3>
+### Caracteres especiales
 
-<p>Como esto es CSS y no HTML, <strong>no </strong>se pueden usar entidades de marcado en los valores del contenido. Si se necesita usar caracteres especiales, y no se puede ingresar literalmente en la cadena de contenido CSS, se utiliza una secuencia de escape unicode, consistiendo de una barra invertida seguida de un valor unicode hexadecimal.</p>
+Como esto es CSS y no HTML, **no** se pueden usar entidades de marcado en los valores del contenido. Si se necesita usar caracteres especiales, y no se puede ingresar literalmente en la cadena de contenido CSS, se utiliza una secuencia de escape unicode, consistiendo de una barra invertida seguida de un valor unicode hexadecimal.
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ol</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>Crack Eggs into bowl<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>Add Milk<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>Add Flour<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span> <span class="attr-name token">aria-current</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">'</span>step<span class="punctuation token">'</span></span><span class="punctuation token">&gt;</span></span>Mix thoroughly into a smooth batter<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>Pour a ladleful of batter onto a hot, greased, flat frying pan<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>Fry until the top of the pancake loses its gloss<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>Flip it over and fry for a couple more minutes<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>serve with your favorite topping<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>ol</span><span class="punctuation token">&gt;</span></span></code></pre>
+```html
+<ol>
+  <li>Crack Eggs into bowl</li>
+  <li>Add Milk</li>
+  <li>Add Flour</li>
+  <li aria-current='step'>Mix thoroughly into a smooth batter</li>
+  <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
+  <li>Fry until the top of the pancake loses its gloss</li>
+  <li>Flip it over and fry for a couple more minutes</li>
+  <li>serve with your favorite topping</li>
+</ol>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css language-css notranslate"><code class="language-css">
-<span class="selector token">li</span> <span class="punctuation token">{</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span><span class="number token">0.5</span><span class="token unit">em</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+```css
 
-<span class="selector token">li<span class="attribute token"><span class="punctuation token">[</span><span class="attribute token">aria-current</span><span class="operator token">=</span><span class="token value">'step'</span><span class="punctuation token">]</span></span></span> <span class="punctuation token">{</span>
-  <span class="property token">font-weight</span><span class="punctuation token">:</span>bold<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+li {
+  padding:0.5em;
+}
 
-<span class="selector token">li<span class="attribute token"><span class="punctuation token">[</span><span class="attribute token">aria-current</span><span class="operator token">=</span><span class="token value">'step'</span><span class="punctuation token">]</span></span><span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
-  <span class="property token">content</span><span class="punctuation token">:</span> <span class="string token">" \21E6"</span><span class="punctuation token">;</span> <span class="comment token">/* Hexadecimal for Unicode Leftwards white arrow*/</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> inline<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-</code>
-</pre>
+li[aria-current='step'] {
+  font-weight:bold;
+}
 
-<h2 id="Especificaciones">Especificaciones</h2>
+li[aria-current='step']::after {
+  content: " \21E6"; /* Hexadecimal for Unicode Leftwards white arrow*/
+  display: inline;
+}
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentarios</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>Sin cambios significativos desde la especificación previa.</td>
-  </tr>
-  <tr>
-   <td>{{Specname("CSS3 Transitions", "#animatable-properties", "")}}</td>
-   <td>{{Spec2("CSS3 Transitions")}}</td>
-   <td>Permite transiciones en propiedades definidas a los pseudo-elementos.</td>
-  </tr>
-  <tr>
-   <td>{{Specname("CSS3 Animations", "", "")}}</td>
-   <td>{{Spec2("CSS3 Animations")}}</td>
-   <td>Permite animaciones en propiedades definidas a los pseudo-elementos.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#gen-content', '::before')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Introduce la sintaxis de doble símbolo <code>:</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Definición inicial, usando la sintaxis de un símbolo <code>:</code></td>
-  </tr>
- </tbody>
-</table>
+## Especificaciones
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+| Especificación                                                                                   | Estatus                                      | Comentarios                                                           |
+| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
+| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Sin cambios significativos desde la especificación previa.            |
+| {{Specname("CSS3 Transitions", "#animatable-properties", "")}}             | {{Spec2("CSS3 Transitions")}}     | Permite transiciones en propiedades definidas a los pseudo-elementos. |
+| {{Specname("CSS3 Animations", "", "")}}                                             | {{Spec2("CSS3 Animations")}}         | Permite animaciones en propiedades definidas a los pseudo-elementos.  |
+| {{SpecName('CSS3 Selectors', '#gen-content', '::before')}}                     | {{Spec2('CSS3 Selectors')}}         | Introduce la sintaxis de doble símbolo `:`                            |
+| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}} | {{Spec2('CSS2.1')}}                     | Definición inicial, usando la sintaxis de un símbolo `:`              |
 
-<div>
+## Compatibilidad de navegadores
 
+{{Compat("css.selectors.before")}}
 
-<p>{{Compat("css.selectors.before")}}</p>
-</div>
+## Véase también
 
-<h2 id="Véase_también">Véase también</h2>
-
-<ul>
- <li>{{Cssxref("::after")}}</li>
- <li>{{cssxref("content")}}</li>
-</ul>
+- {{Cssxref("::after")}}
+- {{cssxref("content")}}

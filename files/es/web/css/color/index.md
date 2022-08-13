@@ -16,28 +16,29 @@ tags:
   - color
 translation_of: Web/CSS/color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">La propiedad de CSS <strong><code>color</code></strong> selecciona el <a href="/en-US/docs/Web/CSS/color_value">valor de color</a> de primer plano del contenido de elemento de texto y <a href="/en-US/docs/Web/CSS/text-decoration">decoraciones de texto</a>. Tambien establece el valor {{cssxref("currentcolor")}} </span> <span id="result_box" lang="es"><span>que se puede usar como un valor indirecto en otras propiedades, y es el valor predeterminado para otras propiedades de color, como</span></span> <span class="seoSummary"> {{cssxref("border-color")}}.</span></p>
+La propiedad de CSS **`color`** selecciona el [valor de color](/es/docs/Web/CSS/color_value) de primer plano del contenido de elemento de texto y [decoraciones de texto](/es/docs/Web/CSS/text-decoration). Tambien establece el valor {{cssxref("currentcolor")}} que se puede usar como un valor indirecto en otras propiedades, y es el valor predeterminado para otras propiedades de color, como {{cssxref("border-color")}}.
 
-<p><span id="result_box" lang="es"><span>Para obtener una descripción general del uso del color en HTML, consulte</span></span> <a href="/en-US/docs/Web/HTML/Applying_color">Aplicando color a los elementos HTML mediante CSS</a>.</p>
+Para obtener una descripción general del uso del color en HTML, consulte [Aplicando color a los elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color).
 
-<pre class="brush: css no-line-numbers">/* Valores de palabras clave */
+```css
+/* Valores de palabras clave */
 color: currentcolor;
 
-/* Valores &lt;named-color&gt; */
+/* Valores <named-color> */
 color: red;
 color: orange;
 color: tan;
 color: rebeccapurple;
 
-/* Valores &lt;hex-color&gt; */
+/* Valores <hex-color> */
 color: #090;
 color: #009900;
 color: #090a;
 color: #009900aa;
 
-/* Valores &lt;rgb()&gt; */
+/* Valores <rgb()> */
 color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
@@ -45,7 +46,7 @@ color: rgba(34 12 64 / 0.3);
 color: rgb(34.0 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
-/* Valores &lt;hsl()&gt; */
+/* Valores <hsl()> */
 color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
@@ -57,49 +58,51 @@ color: hsla(30.2 100% 50% / 60%);
 color: inherit;
 color: initial;
 color: unset;
-</pre>
+```
 
-<p><span class="short_text" id="result_box" lang="es"><span>Ten en cuenta que el valor debe ser un </span></span>{{cssxref("color")}} <span class="short_text" lang="es"><span>uniforme</span></span> . No puede ser un {{cssxref("&lt;gradient&gt;")}}, que es en realidad un tipo de {{cssxref("&lt;image&gt;")}}.</p>
+Ten en cuenta que el valor debe ser un {{cssxref("color")}} uniforme . No puede ser un {{cssxref("&lt;gradient&gt;")}}, que es en realidad un tipo de {{cssxref("&lt;image&gt;")}}.
 
-<div class="hidden" id="color">
-<pre class="brush: html">&lt;div class="grid"&gt;
-  &lt;div class="col"&gt;
-    &lt;div class="cell"&gt;
+```html hidden
+<div class="grid">
+  <div class="col">
+    <div class="cell">
       Keyword values
-      &lt;p class="c1"&gt;color: currentcolor&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &amp;lt;named-color&amp;gt; values
-      &lt;p class="c2"&gt;color: red&lt;/p&gt;
-      &lt;p class="c3"&gt;color: orange&lt;/p&gt;
-      &lt;p class="c4"&gt;color: tan&lt;/p&gt;
-      &lt;p class="c5"&gt;color: rebeccapurple&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &amp;lt;hex-color&amp;gt; values
-      &lt;p class="c6"&gt;color: #090&lt;/p&gt;
-      &lt;p class="c7"&gt;color: #009900&lt;/p&gt;
-      &lt;p class="c8"&gt;color: #090a&lt;/p&gt;
-      &lt;p class="c9"&gt;color: #009900aa&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &amp;lt;rgb()&amp;gt; values
-      &lt;p class="c10"&gt;color: rgb(34, 12, 64, 0.6)&lt;/p&gt;
-      &lt;p class="c11"&gt;color: rgba(34, 12, 64, 0.6)&lt;/p&gt;
-      &lt;p class="c12"&gt;color: rgb(34 12 64 / 0.6)&lt;/p&gt;
-      &lt;p class="c13"&gt;color: rgba(34 12 64 / 0.6)&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &amp;lt;hsl()&amp;gt; values
-      &lt;p class="c14"&gt;color: hsl(30, 100%, 50%, 0.6)&lt;/p&gt;
-      &lt;p class="c15"&gt;color: hsla(30, 100%, 50%, 0.6)&lt;/p&gt;
-      &lt;p class="c16"&gt;color: hsl(30 100% 50% / 0.6)&lt;/p&gt;
-      &lt;p class="c17"&gt;color: hsla(30 100% 50% / 0.6)&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <p class="c1">color: currentcolor</p>
+    </div>
+    <div class="cell">
+      &lt;named-color&gt; values
+      <p class="c2">color: red</p>
+      <p class="c3">color: orange</p>
+      <p class="c4">color: tan</p>
+      <p class="c5">color: rebeccapurple</p>
+    </div>
+    <div class="cell">
+      &lt;hex-color&gt; values
+      <p class="c6">color: #090</p>
+      <p class="c7">color: #009900</p>
+      <p class="c8">color: #090a</p>
+      <p class="c9">color: #009900aa</p>
+    </div>
+    <div class="cell">
+      &lt;rgb()&gt; values
+      <p class="c10">color: rgb(34, 12, 64, 0.6)</p>
+      <p class="c11">color: rgba(34, 12, 64, 0.6)</p>
+      <p class="c12">color: rgb(34 12 64 / 0.6)</p>
+      <p class="c13">color: rgba(34 12 64 / 0.6)</p>
+    </div>
+    <div class="cell">
+      &lt;hsl()&gt; values
+      <p class="c14">color: hsl(30, 100%, 50%, 0.6)</p>
+      <p class="c15">color: hsla(30, 100%, 50%, 0.6)</p>
+      <p class="c16">color: hsl(30 100% 50% / 0.6)</p>
+      <p class="c17">color: hsla(30 100% 50% / 0.6)</p>
+    </div>
+  </div>
+</div>
+```
 
-<pre class="brush: css">html,body {
+```css hidden
+html,body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -163,33 +166,32 @@ p:first-child {
 .c14 { color: hsl(30, 100%, 50%, 0.6); }
 .c15 { color: hsla(30, 100%, 50%, 0.6); }
 .c16 { color: hsl(30 100% 50% / 0.6); }
-.c17 { color: hsla(30 100% 50% / 0.6); }</pre>
-</div>
+.c17 { color: hsla(30 100% 50% / 0.6); }
+```
 
-<p>{{EmbedLiveSample("color", "100%", 630, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("color", "100%", 630, "", "", "example-outcome-frame")}}
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<p>La propiedad <code>color</code> esta especificada como un solo un valor de {{cssxref("&lt;color&gt;")}}</p>
+La propiedad `color` esta especificada como un solo un valor de {{cssxref("&lt;color&gt;")}}
 
-<h3 id="Valores">Valores</h3>
+### Valores
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd><span id="result_box" lang="es"><span>Establece el color de las partes textuales y decorativas del elemento.</span></span></dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : Establece el color de las partes textuales y decorativas del elemento.
 
-<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+### Sintaxis formal
 
 {{csssyntax}}
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p><span id="result_box" lang="es"><span>Las siguientes son todas las formas de hacer que el texto de un párrafo sea rojo:</span></span></p>
+Las siguientes son todas las formas de hacer que el texto de un párrafo sea rojo:
 
-<pre class="brush: css">p { color: red; }
+```css
+p { color: red; }
 p { color: #f00; }
 p { color: #ff0000; }
 p { color: rgb(255,0,0); }
@@ -199,62 +201,24 @@ p { color: hsl(0, 100%, 50%); }
 /* 50% translúcido */
 p { color: rgba(255, 0, 0, 0.5); }
 p { color: hsla(0, 100%, 50%, 0.5); }
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Colors', '#the-color-property', 'color')}}</td>
-   <td>{{Spec2('CSS4 Colors')}}</td>
-   <td>
-    <p><span class="short_text" id="result_box" lang="es"><span>Agrega sintaxis sin comas para las funciones</span></span> <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, y <code>hsla()</code>.  <span class="short_text" id="result_box" lang="es"><span>Permite valores alfa en</span></span> <code>rgb()</code> y <code>hsl()</code>, <span class="short_text" id="result_box" lang="es"><span>convirtiéndose</span></span> <code>rgba()</code> y <code>hsla()</code> <span class="short_text" id="result_box" lang="es"><span>en alias (obsoletos) para ellos.</span></span><br>
-     <span class="short_text" id="result_box" lang="es"><span>Agrega una palabra clave de color</span></span> <code>rebeccapurple</code>.<br>
-     <span id="result_box" lang="es"><span>Agrega valores de color hexadecimal de 4 y 8 dígitos, donde el último dígito representa el valor alfa.</span></span><br>
-     Añade las funciones <code>hwb()</code>, <code>device-cmyk()</code>, y <code>color()</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'color')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Define <code>color</code> como animable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Colors', '#color', 'color')}}</td>
-   <td>{{Spec2('CSS3 Colors')}}</td>
-   <td><span id="result_box" lang="es"><span>Desprecia los colores del sistema.</span> <span>Agrega colores SVG.</span></span> Agrega las funciones <code>rgba()</code>, <code>hsl()</code>, y <code>hsla()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#colors', 'color')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Añade el color <code>orange</code> y los colores del sistema.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#color', 'color')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Definicion inicial.</td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                   | Estado                                   | Comentario                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS4 Colors', '#the-color-property', 'color')}} | {{Spec2('CSS4 Colors')}}         | Agrega sintaxis sin comas para las funciones `rgb()`, `rgba()`, `hsl()`, y `hsla()`. Permite valores alfa en `rgb()` y `hsl()`, convirtiéndose `rgba()` y `hsla()` en alias (obsoletos) para ellos. Agrega una palabra clave de color `rebeccapurple`. Agrega valores de color hexadecimal de 4 y 8 dígitos, donde el último dígito representa el valor alfa. Añade las funciones `hwb()`, `device-cmyk()`, y `color()`. |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'color')}} | {{Spec2('CSS3 Transitions')}} | Define `color` como animable.                                                                                                                                                                                                                                                                                                                                                                                            |
+| {{SpecName('CSS3 Colors', '#color', 'color')}}                     | {{Spec2('CSS3 Colors')}}         | Desprecia los colores del sistema. Agrega colores SVG. Agrega las funciones `rgba()`, `hsl()`, y `hsla()`.                                                                                                                                                                                                                                                                                                               |
+| {{SpecName('CSS2.1', 'colors.html#colors', 'color')}}         | {{Spec2('CSS2.1')}}                 | Añade el color `orange` y los colores del sistema.                                                                                                                                                                                                                                                                                                                                                                       |
+| {{SpecName('CSS1', '#color', 'color')}}                             | {{Spec2('CSS1')}}                 | Definicion inicial.                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+## Compatibilidad de navegadores
 
+{{Compat("css.properties.color")}}
 
+## Ver también
 
-<p>{{Compat("css.properties.color")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li><span class="short_text" id="result_box" lang="es"><span>El tipo de datos de</span></span>  {{cssxref("&lt;color&gt;")}}</li>
- <li><span class="short_text" id="result_box" lang="es"><span>Otras propiedades relacionadas con el color:</span></span> {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, y {{cssxref("column-rule-color")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Aplicar color a elementos HTML usando CSS</a></li>
-</ul>
+- El tipo de datos de {{cssxref("&lt;color&gt;")}}
+- Otras propiedades relacionadas con el color: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, y {{cssxref("column-rule-color")}}
+- [Aplicar color a elementos HTML usando CSS](/es/docs/Web/HTML/Applying_color)

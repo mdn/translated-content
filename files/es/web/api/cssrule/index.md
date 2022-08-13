@@ -3,93 +3,54 @@ title: CssRule
 slug: Web/API/CSSRule
 translation_of: Web/API/CSSRule
 ---
-<p>{{ ApiRef("CSSOM") }}</p>
+{{ ApiRef("CSSOM") }}
 
-<p>El objeto <code>CSSRule </code>representa una única regla de estilo CSS. Puede ser parte de una lista <a href="/Es/DOM/Stylesheet.cssRules" title="es/DOM/stylesheet.cssRules">cssRules</a> de hojas de estilo (<a href="/Es/DOM/Stylesheet" title="es/DOM/stylesheet">stylesheet</a>).</p>
+El objeto `CSSRule `representa una única regla de estilo CSS. Puede ser parte de una lista [cssRules](/Es/DOM/Stylesheet.cssRules "es/DOM/stylesheet.cssRules") de hojas de estilo ([stylesheet](/Es/DOM/Stylesheet "es/DOM/stylesheet")).
 
-<p>Existen varias clases de reglas y todas ellas comparten unas cuantas propiedades comunes en el interface <a href="#cssrule">CSSRule</a> y la mayor parte de ellas son propiedades específicas de un tipo particular de reglas.</p>
+Existen varias clases de reglas y todas ellas comparten unas cuantas propiedades comunes en el interface [CSSRule](#cssrule) y la mayor parte de ellas son propiedades específicas de un tipo particular de reglas.
 
-<table class="fullwidth-table">
- <tbody>
-  <tr>
-   <th>Tipo</th>
-   <th>interface específico de la regla</th>
-   <th>Descripción</th>
-  </tr>
-  <tr>
-   <td><code>CSSRule.STYLE_RULE</code></td>
-   <td><a href="#cssstylerule">CSSStyleRule</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.MEDIA_RULE</code></td>
-   <td><a href="#cssmediarule">CSSMediaRule</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.FONT_FACE_RULE</code></td>
-   <td><a href="#cssfontfacerule">CSSFontFaceRule</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.PAGE_RULE</code></td>
-   <td><a href="#csspagerule">CSSPageRule</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.IMPORT_RULE</code></td>
-   <td><a href="#cssimportrule">CSSImportRule</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.CHARSET_RULE</code></td>
-   <td><a href="#csscharsetrule">CSSCharsetRule</a></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.UNKNOWN_RULE</code></td>
-   <td><a href="#cssunknownrule">CSSUnknownRule</a></td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Tipo                     | interface específico de la regla    | Descripción |
+| ------------------------ | ----------------------------------- | ----------- |
+| `CSSRule.STYLE_RULE`     | [CSSStyleRule](#cssstylerule)       |             |
+| `CSSRule.MEDIA_RULE`     | [CSSMediaRule](#cssmediarule)       |             |
+| `CSSRule.FONT_FACE_RULE` | [CSSFontFaceRule](#cssfontfacerule) |             |
+| `CSSRule.PAGE_RULE`      | [CSSPageRule](#csspagerule)         |             |
+| `CSSRule.IMPORT_RULE`    | [CSSImportRule](#cssimportrule)     |             |
+| `CSSRule.CHARSET_RULE`   | [CSSCharsetRule](#csscharsetrule)   |             |
+| `CSSRule.UNKNOWN_RULE`   | [CSSUnknownRule](#cssunknownrule)   |             |
 
-<h3 id="CSSRule" name="CSSRule">CSSRule</h3>
+### CSSRule
 
-<dl>
- <dt><a href="/Es/DOM/CssRule.cssText" title="es/DOM/cssRule.cssText">cssText</a></dt>
- <dd>Devuelve la representación en forma de texto, de la regla. Ejem.: "h1,h2 { font-size: 16pt }".</dd>
- <dt><a href="/es/DOM/cssRule.parentRule" title="es/DOM/cssRule.parentRule">parentRule</a></dt>
- <dd>Devuelve la regla contenedora, si existe. Ejem.: una regla de estilo dentro de un bloque @media.</dd>
- <dt><a href="/Es/DOM/CssRule.parentStyleSheet" title="es/DOM/cssRule.parentStyleSheet">parentStyleSheet</a></dt>
- <dd>Devuelve el objeto <a href="/Es/DOM/Stylesheet" title="es/DOM/stylesheet">stylesheet</a> del que esta regla es parte.</dd>
- <dt><a href="/es/DOM/cssRule.type" title="es/DOM/cssRule.type">type</a></dt>
- <dd>El tipo de regla. ejem.: <code>CSSRule.CHARSET_RULE</code> o <code>CSSRule.IMPORT_RULE</code>.</dd>
-</dl>
+- [cssText](/Es/DOM/CssRule.cssText "es/DOM/cssRule.cssText")
+  - : Devuelve la representación en forma de texto, de la regla. Ejem.: "h1,h2 { font-size: 16pt }".
+- [parentRule](/es/DOM/cssRule.parentRule "es/DOM/cssRule.parentRule")
+  - : Devuelve la regla contenedora, si existe. Ejem.: una regla de estilo dentro de un bloque @media.
+- [parentStyleSheet](/Es/DOM/CssRule.parentStyleSheet "es/DOM/cssRule.parentStyleSheet")
+  - : Devuelve el objeto [stylesheet](/Es/DOM/Stylesheet "es/DOM/stylesheet") del que esta regla es parte.
+- [type](/es/DOM/cssRule.type "es/DOM/cssRule.type")
+  - : El tipo de regla. ejem.: `CSSRule.CHARSET_RULE` o `CSSRule.IMPORT_RULE`.
 
-<h3 id="CSSStyleRule" name="CSSStyleRule">CSSStyleRule</h3>
+### CSSStyleRule
 
-<dl>
- <dt><a href="/Es/DOM/CssRule.selectorText" title="es/DOM/cssRule.selectorText">selectorText</a></dt>
- <dd>Recoje/Establece la representación en forma de texto, del selector de la regle. Ejem.: "h1,h2".</dd>
- <dt><a href="/Es/DOM/CssRule.style" title="es/DOM/cssRule.style">style</a></dt>
- <dd>Devuelve el objeto <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration">CSSStyleDeclaration</a> para el bloque <a class="external" href="http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> de la regla.</dd>
-</dl>
+- [selectorText](/Es/DOM/CssRule.selectorText "es/DOM/cssRule.selectorText")
+  - : Recoje/Establece la representación en forma de texto, del selector de la regle. Ejem.: "h1,h2".
+- [style](/Es/DOM/CssRule.style "es/DOM/cssRule.style")
+  - : Devuelve el objeto [CSSStyleDeclaration](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration) para el bloque [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) de la regla.
 
-<h3 id="CSSStyleRule_2" name="CSSStyleRule_2">CSSStyleRule</h3>
+### CSSStyleRule
 
-<h3 id="CSSMediaRule" name="CSSMediaRule">CSSMediaRule</h3>
+### CSSMediaRule
 
-<h3 id="CSSFontFaceRule" name="CSSFontFaceRule">CSSFontFaceRule</h3>
+### CSSFontFaceRule
 
-<h3 id="CSSPageRule" name="CSSPageRule">CSSPageRule</h3>
+### CSSPageRule
 
-<h3 id="CSSImportRule" name="CSSImportRule">CSSImportRule</h3>
+### CSSImportRule
 
-<h3 id="CSSCharsetRule" name="CSSCharsetRule">CSSCharsetRule</h3>
+### CSSCharsetRule
 
-<h3 id="CSSUnknownRule" name="CSSUnknownRule">CSSUnknownRule</h3>
+### CSSUnknownRule
 
-<h3 id="Specification" name="Specification">Specification</h3>
+### Specification
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule">DOM Level 2 CSS: CSSRule</a></p>
+[DOM Level 2 CSS: CSSRule](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)

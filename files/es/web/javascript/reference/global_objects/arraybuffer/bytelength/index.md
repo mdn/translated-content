@@ -9,63 +9,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 original_slug: Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/byteLength
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propiedad de acceso <code><strong>byteLength</strong></code> representa la longitud de {{jsxref("ArrayBuffer")}} en bytes.</p>
+La propiedad de acceso **`byteLength`** representa la longitud de {{jsxref("ArrayBuffer")}} en bytes.
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
 
+## Sintaxis
 
+    arraybuffer.byteLength
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Descripción
 
-<pre class="syntaxbox"><var>arr</var>aybuffer.byteLength</pre>
+La propiedad `byteLength` es una propiedad de acceso cuya función de acceso de conjunto es `undefined`, lo que significa que solo puede leer esta propiedad. El valor se establece cuando la matriz se construye y no se puede cambiar. Esta propiedad devuelve `0` si este `ArrayBuffer` ha sido separado.
 
-<h2 id="Descripción">Descripción</h2>
+## Ejemplos
 
-<p>La propiedad <code>byteLength</code> es una propiedad de acceso cuya función de acceso de conjunto es <code>undefined</code>, lo que significa que solo puede leer esta propiedad. El valor se establece cuando la matriz se construye y no se puede cambiar. Esta propiedad devuelve <code>0</code> si este <code>ArrayBuffer</code> ha sido separado.</p>
-
-<h2 id="Ejemplos">Ejemplos</h2>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 buffer.byteLength; // 8
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Reemplazado por ECMAScript 2015.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición inicial en un estándar ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                                                               | Estado                           | Comentario                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
+| {{SpecName('Typed Array')}}                                                                                                         | {{Spec2('Typed Array')}} | Reemplazado por ECMAScript 2015.        |
+| {{SpecName('ES2015', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}}     | {{Spec2('ES2015')}}         | Definición inicial en un estándar ECMA. |
+| {{SpecName('ESDraft', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}} | {{Spec2('ESDraft')}}     |                                         |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
+{{Compat("javascript.builtins.ArrayBuffer.byteLength")}}
 
+## Ver también
 
-<p>{{Compat("javascript.builtins.ArrayBuffer.byteLength")}}</p>
-
-<h2 id="Ver_también">Ver también</h2>
-
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}

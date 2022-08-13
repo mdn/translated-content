@@ -10,53 +10,40 @@ tags:
   - id
 translation_of: Web/API/Animation/id
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>La propiedad <code><strong>Animation</strong></code><strong><code>.id</code></strong> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve o establece una cadena(string) utilizado para identificar la animación.</p>
+La propiedad **`Animation`\*\***`.id`\*\* de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve o establece una cadena(string) utilizado para identificar la animación.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">var <em>animationsId</em> = <em>Animation</em>.id;
+    var animationsId = Animation.id;
 
-<em>Animation</em>.id = <em>newIdString</em>;
-</pre>
+    Animation.id = newIdString;
 
-<h3 id="Valor">Valor</h3>
+### Valor
 
-<p>Un {{domxref("DOMString")}} que se puede usar para identificar la animación, o <code>null</code> si la animación no tiene <code>id</code>.</p>
+Un {{domxref("DOMString")}} que se puede usar para identificar la animación, o `null` si la animación no tiene `id`.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/eJyWzm?editors=0010">Follow the White Rabbit </a>, puedes asignar  a <code>rabbitDownAnimation</code> un  <code>id</code> de esta manera:</p>
+En el ejemplo [Follow the White Rabbit ](http://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), puedes asignar a `rabbitDownAnimation` un `id` de esta manera:
 
-<pre class="brush: js">rabbitDownAnimation.effect.<em>id</em> = "rabbitGo";
-</pre>
+```js
+rabbitDownAnimation.effect.id = "rabbitGo";
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-id', 'Animation.id' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Editor's draft.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment         |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | --------------- |
+| {{SpecName('Web Animations', '#dom-animation-id', 'Animation.id' )}} | {{Spec2('Web Animations')}} | Editor's draft. |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
 {{Compat("api.Animation.id")}}
 
-<h2 id="Ver_también" style="line-height: 30px; font-size: 2.14285714285714rem;">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{domxref("KeyframeEffect")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- {{domxref("KeyframeEffect")}}
+- [Web Animations API](/es/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

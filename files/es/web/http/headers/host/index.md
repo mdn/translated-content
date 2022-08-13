@@ -7,67 +7,44 @@ tags:
   - Referencia
 translation_of: Web/HTTP/Headers/Host
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>El encabezado de solicitud <code><strong>Host</strong></code> especifica el nombre de dominio del servidor (para hosting virtual), y (opcionalmente) el número de puerto TCP en el que el servidor esta escuchando.</p>
+El encabezado de solicitud **`Host`** especifica el nombre de dominio del servidor (para hosting virtual), y (opcionalmente) el número de puerto TCP en el que el servidor esta escuchando.
 
-<p>Si no se provee un puerto, se usará el puerto por defecto para el servicio solicitado (e.j.: "80" para una URL HTTP).</p>
+Si no se provee un puerto, se usará el puerto por defecto para el servicio solicitado (e.j.: "80" para una URL HTTP).
 
-<p>El encabezado <code>Host</code> debe enviarse obligatoriamente en todas las solicitudes HTTP/1.1. Un código de error {{HTTPStatus("400")}} (Petición mala) debería enviarse a cualquier solicitud HTTP/1.1 que no contiene o contiene más de un encabezado <code>Host</code>.</p>
+El encabezado `Host` debe enviarse obligatoriamente en todas las solicitudes HTTP/1.1. Un código de error {{HTTPStatus("400")}} (Petición mala) debería enviarse a cualquier solicitud HTTP/1.1 que no contiene o contiene más de un encabezado `Host`.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>Encabezado de solicitud</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>sí</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | Encabezado de solicitud |
+| ------------------------------------------------ | ----------------------- |
+| {{Glossary("Forbidden header name")}} | sí                      |
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox">Host: &lt;host&gt;:&lt;puerto&gt;
-</pre>
+    Host: <host>:<puerto>
 
-<h2 id="Directivas">Directivas</h2>
+## Directivas
 
-<dl>
- <dt>&lt;host&gt;</dt>
- <dd>el nombre de dominio del servidor (pata hosting virtual).</dd>
- <dt>&lt;puerto&gt; {{optional_inline}}</dt>
- <dd>número de puerto TCP en el que el servidor está escuchando.</dd>
-</dl>
+- \<host>
+  - : el nombre de dominio del servidor (pata hosting virtual).
+- \<puerto> {{optional_inline}}
+  - : número de puerto TCP en el que el servidor está escuchando.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre>Host: developer.mozilla.org</pre>
+    Host: developer.mozilla.org
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "Host", "5.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
- </tbody>
-</table>
+| Specification                            | Title                                                              |
+| ---------------------------------------- | ------------------------------------------------------------------ |
+| {{RFC("7230", "Host", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
-<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+## Compatibilidad del navegador
 
-<p>{{Compat("http.headers.Host")}}</p>
+{{Compat("http.headers.Host")}}
 
-<h2 id="Véase_también">Véase también</h2>
+## Véase también
 
-<ul>
- <li>{{HTTPStatus("400")}}</li>
- <li>{{HTMLElement("base")}}</li>
-</ul>
+- {{HTTPStatus("400")}}
+- {{HTMLElement("base")}}

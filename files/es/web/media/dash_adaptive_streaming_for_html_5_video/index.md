@@ -4,75 +4,75 @@ slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 original_slug: Web/HTML/Transision_adaptativa_DASH
 ---
-<p><span class="seoSummary">La Transmisión Adaptable y Dinámica sobre HTTP (DASH - <em>Dynamic Adaptive Streaming over HTTP</em>) es un protocolo de transmisión adaptable.  Esto signfica que le permite a un flujo de vídeo cambiar entre diversas tazas de bits con base en el desempeño de la red, para mantener la reproducción de un vídeo.</span></p>
+La Transmisión Adaptable y Dinámica sobre HTTP (DASH - _Dynamic Adaptive Streaming over HTTP_) es un protocolo de transmisión adaptable. Esto signfica que le permite a un flujo de vídeo cambiar entre diversas tazas de bits con base en el desempeño de la red, para mantener la reproducción de un vídeo.
 
-<h2 id="Soporte_de_Navegadores">Soporte de Navegadores</h2>
+## Soporte de Navegadores
 
-<p>Firefox 21 incluye una implementación de DASH para video WebM con HTML5 que está desactivada por defecto. Se puede activar a través de "about:config" activando la opción "media.dash.enabled".</p>
+Firefox 21 incluye una implementación de DASH para video WebM con HTML5 que está desactivada por defecto. Se puede activar a través de "about:config" activando la opción "media.dash.enabled".
 
-<p>Firefox 23 eliminó el soporte para DASH para WebM con HTML 5.  Ésta será reemplazada por una implementación de la <a href="http://www.w3.org/TR/media-source/">Media Source Extensions API </a>que de soporte a DASH a través de javascript usando librerías como dash.js. Ver el bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=778617">778617</a> para más detalles.</p>
+Firefox 23 eliminó el soporte para DASH para WebM con HTML 5. Ésta será reemplazada por una implementación de la [Media Source Extensions API ](http://www.w3.org/TR/media-source/)que de soporte a DASH a través de javascript usando librerías como dash.js. Ver el bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) para más detalles.
 
-<h2 id="Usando_DASH_del_lado_del_servidor">Usando DASH del lado del servidor</h2>
+## Usando DASH del lado del servidor
 
-<p>Lo primero que necesitas es convertir tu video WebM en un manifiesto DASH con todos los archivos en los diferentes bitrates. Para comenzar necesitas:</p>
+Lo primero que necesitas es convertir tu video WebM en un manifiesto DASH con todos los archivos en los diferentes bitrates. Para comenzar necesitas:
 
-<ul>
- <li>ffpmeg - con libvpx y libvorbis activado para dar soporte al audio y video de WebM (<a href="http://www.ffmpeg.org/">ffmpeg.org</a>).</li>
- <li>libwebm - concretamente para la herramienta samplemuxer (<span style="text-align: -webkit-auto;"><span style="white-space: pre-wrap;">git clone <a href="https://gerrit.chromium.org/gerrit/p/webm/libwebm.git">https://gerrit.chromium.org/gerrit/p/webm/libwebm.git</a>)</span></span>.</li>
- <li>webm-tools - concretamente para la herramienta de creación de manifiestos, webm_dash_manifest (<span style="text-align: -webkit-auto;"><span style="white-space: pre-wrap;">git clone <a href="https://gerrit.chromium.org/gerrit/p/webm/webm-tools.git">https://gerrit.chromium.org/gerrit/p/webm/webm-tools.git</a>)</span></span>.</li>
-</ul>
+- ffpmeg - con libvpx y libvorbis activado para dar soporte al audio y video de WebM ([ffmpeg.org](http://www.ffmpeg.org/)).
+- libwebm - concretamente para la herramienta samplemuxer (git clone <https://gerrit.chromium.org/gerrit/p/webm/libwebm.git>).
+- webm-tools - concretamente para la herramienta de creación de manifiestos, webm_dash_manifest (git clone <https://gerrit.chromium.org/gerrit/p/webm/webm-tools.git>).
 
-<h3 id="1._Use_your_existing_WebM_file_to_create_one_audio_file_and_multiple_video_files.">1. Use your existing WebM file to create one audio file and multiple video files.</h3>
+### 1. Use your existing WebM file to create one audio file and multiple video files.
 
-<p>Por ejemplo:</p>
+Por ejemplo:
 
-<p>Creamos el archivo de audio usando:</p>
+Creamos el archivo de audio usando:
 
-<pre><code>ffmpeg -i my_master_file.webm -vn -acodec libvorbis -ab 128k my_audio.webm</code></pre>
+    ffmpeg -i my_master_file.webm -vn -acodec libvorbis -ab 128k my_audio.webm
 
-<p>Creamos los archivos de vídeo usando:</p>
+Creamos los archivos de vídeo usando:
 
-<pre><code>ffmpeg -i my_master_file.webm -vcodec libvpx -vb 250k -keyint_min 150 -g 150 -an my_video-250kbps.webm
-ffmpeg -i my_master_file.webm -vcodec libvpx -vb 100k -keyint_min 150 -g 150 -an my_video-100kbps.webm
-ffmpeg -i my_master_file.webm -vcodec libvpx -vb 50k -keyint_min 150 -g 150 -an my_video-50kbps.webm</code></pre>
+    ffmpeg -i my_master_file.webm -vcodec libvpx -vb 250k -keyint_min 150 -g 150 -an my_video-250kbps.webm
+    ffmpeg -i my_master_file.webm -vcodec libvpx -vb 100k -keyint_min 150 -g 150 -an my_video-100kbps.webm
+    ffmpeg -i my_master_file.webm -vcodec libvpx -vb 50k -keyint_min 150 -g 150 -an my_video-50kbps.webm
 
-<h3 id="2._Align_the_clusters_to_enable_switching_at_cluster_boundaries.">2. Align the clusters to enable switching at cluster boundaries.</h3>
+### 2. Align the clusters to enable switching at cluster boundaries.
 
-<p>For video:</p>
+For video:
 
-<pre><code>samplemuxer -i my_video-250kbps.webm -o my_video-250kbps-final.webm</code>
-<code>etc.</code></pre>
+    samplemuxer -i my_video-250kbps.webm -o my_video-250kbps-final.webm
+    etc.
 
-<p>Although we don't switch audio streams, it's still necessary to run it through samplemuxer to ensure a cues element is added. Note: to be compatible with playing on Chrome, it is suggested to change the track number to something other than the one in the video files, most likely 0.</p>
+Although we don't switch audio streams, it's still necessary to run it through samplemuxer to ensure a cues element is added. Note: to be compatible with playing on Chrome, it is suggested to change the track number to something other than the one in the video files, most likely 0.
 
-<pre><code>samplemuxer -i my_audio.webm -o my_audio-final.webm -output_cues 1 -cues_on_audio_track 1 -max_cluster_duration 2 -audio_track_number</code></pre>
+    samplemuxer -i my_audio.webm -o my_audio-final.webm -output_cues 1 -cues_on_audio_track 1 -max_cluster_duration 2 -audio_track_number
 
-<h3 id="3._Create_the_manifest_file">3. Create the manifest file:</h3>
+### 3. Create the manifest file:
 
-<pre><code>webm_dash_manifest -o my_video_manifest.mpd \
-  -as id=0,lang=eng \
-  -r id=0,file=my_video-250kbps-final.webm \
-  -r id=1,file=my_video-100kbps-final.webm \
-  -r id=2,file=my_video-50kbps-final.webm \
-  -as id=1,lang=eng \
-  -r id=4,file=my_audio-final.webm</code></pre>
+    webm_dash_manifest -o my_video_manifest.mpd \
+      -as id=0,lang=eng \
+      -r id=0,file=my_video-250kbps-final.webm \
+      -r id=1,file=my_video-100kbps-final.webm \
+      -r id=2,file=my_video-50kbps-final.webm \
+      -as id=1,lang=eng \
+      -r id=4,file=my_audio-final.webm
 
-<p>Put the manifest and the associated video files on your web server or CDN. DASH works via HTTP, so as long as your HTTP server supports byte range requests, and it's set up to serve .mpd files with mimetype="application/dash+xml", then you're all set.</p>
+Put the manifest and the associated video files on your web server or CDN. DASH works via HTTP, so as long as your HTTP server supports byte range requests, and it's set up to serve .mpd files with mimetype="application/dash+xml", then you're all set.
 
-<h2 id="Using_DASH_-_Client_Side">Using DASH - Client Side</h2>
+## Using DASH - Client Side
 
-<p>You'll want to modify your web page to point to the DASH manifest first, instead of directly to a particular video file:</p>
+You'll want to modify your web page to point to the DASH manifest first, instead of directly to a particular video file:
 
-<pre class="brush: html">&lt;video&gt;
-  &lt;source src="movie.<span class="ZmSearchResult" id="DWT648"><span class="ZmSearchResult" id="DWT650">mpd</span></span>"&gt;
-  &lt;source src="movie.webm"&gt;
+```html
+<video>
+  <source src="movie.mpd">
+  <source src="movie.webm">
   Your browser does not support the video tag.
-&lt;/video&gt;</pre>
+</video>
+```
 
-<p>That's it! If DASH is supported by the browser, your video will now stream adaptively.</p>
+That's it! If DASH is supported by the browser, your video will now stream adaptively.
 
-<h2 id="Links">Links</h2>
+## Links
 
-<p><a href="http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification">WebM DASH Specification at The WebM Project</a></p>
+[WebM DASH Specification at The WebM Project](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
 
-<p><a href="http://dashif.org/">DASH Industry Forum</a></p>
+[DASH Industry Forum](http://dashif.org/)

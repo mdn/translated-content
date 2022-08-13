@@ -8,55 +8,28 @@ tags:
 translation_of: Web/HTML/Global_attributes/tabindex
 original_slug: Web/HTML/Atributos_Globales/tabindex
 ---
-<p>{{HTMLSidebar("Global_attributes")}}</p>
+{{HTMLSidebar("Global_attributes")}}
 
-<p class="note">Nota: El valor máximo para tabindex no debe de exceder 32767 (<a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.11.1">sección 17.11.1 del W3C</a>). Si no se especifica, el valor asignado por defecto es -1.</p>
+> **Nota:** Nota: El valor máximo para tabindex no debe de exceder 32767 ([sección 17.11.1 del W3C](https://www.w3.org/TR/html401/interact/forms.html#h-17.11.1)). Si no se especifica, el valor asignado por defecto es -1.
 
-<p><a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.11.1">El </a><a href="/es/docs/Web/HTML/Atributos_Globales">atributo global</a> <strong>tabindex </strong>indica si su elemento puede ser enfocado, y si participa en la navegación secuencial del teclado (usualmente con la tecla <em>Tab</em>, de ahí el nombre). Acepta un entero como valor, con diferentes resultados que dependen de dicho valor:</p>
+[El ](https://www.w3.org/TR/html401/interact/forms.html#h-17.11.1)[atributo global](/es/docs/Web/HTML/Atributos_Globales) **tabindex** indica si su elemento puede ser enfocado, y si participa en la navegación secuencial del teclado (usualmente con la tecla _Tab_, de ahí el nombre). Acepta un entero como valor, con diferentes resultados que dependen de dicho valor:
 
-<ul>
- <li>un <em>valor negativo </em>(usualmente tabindex="-1")<em> </em>significa que el elemento debe ser enfocado, pero no debe de ser accesible a través de la navegación secuencial del teclado. Es útil para crear widgets accesibles con JavaScript.</li>
- <li>tabindex="0" significa que el elemento debe ser enfocado y ser accesible a través de la navegación secuencial del teclado, pero su orden relativo es definido por convención de la plataforma.</li>
- <li>un <em>valor positivo</em> significa que debe poder recoger el foco y alcanzable a través de la navegación secuencial del teclado; su orden relativo es definido por el valor del atributo: la secuencia sigue el aumento del número de <strong>tabindex</strong>. Si varios elementos comparten el mismo tabindex, su orden relativo sigue la posición relativa en el documento.</li>
- <li>Un elemento con valor 0, un valor inválido o sin valor de <strong>tabindex</strong>, debe de ser posicionado después de elementos con un <strong>tabindex </strong>postivo en el orden de navegación secuencial del teclado.</li>
-</ul>
+- un _valor negativo_ (usualmente tabindex="-1")\_ \_significa que el elemento debe ser enfocado, pero no debe de ser accesible a través de la navegación secuencial del teclado. Es útil para crear widgets accesibles con JavaScript.
+- tabindex="0" significa que el elemento debe ser enfocado y ser accesible a través de la navegación secuencial del teclado, pero su orden relativo es definido por convención de la plataforma.
+- un _valor positivo_ significa que debe poder recoger el foco y alcanzable a través de la navegación secuencial del teclado; su orden relativo es definido por el valor del atributo: la secuencia sigue el aumento del número de **tabindex**. Si varios elementos comparten el mismo tabindex, su orden relativo sigue la posición relativa en el documento.
+- Un elemento con valor 0, un valor inválido o sin valor de **tabindex**, debe de ser posicionado después de elementos con un **tabindex** postivo en el orden de navegación secuencial del teclado.
 
-<p>Puede consultar <a href="/en/Focus_management_in_HTML">este artículo </a>para ver una explicación compresiva de la administración de la recepción de foco.</p>
+Puede consultar [este artículo ](/en/Focus_management_in_HTML)para ver una explicación compresiva de la administración de la recepción de foco.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
+| Especificación                                                                                   | Estatus                          | Comentario                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "editing.html#attr-tabindex", "tabindex")}}     | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                           |
+| {{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, sin cambio desde {{SpecName('HTML5 W3C')}}                                                                                                                             |
+| {{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}         | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, el atributo es ahora soportado en todos los elementos (atributos globales).                                                           |
+| {{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}} | {{Spec2('HTML4.01')}}     | Solo soportado en {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, y {{HTMLElement("textarea")}}. |
 
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}, sin cambio desde {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#attr-tabindex", "tabindex")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}. Desde {{SpecName("HTML4.01")}}, el atributo es ahora soportado en todos los elementos  (atributos globales).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#adef-tabindex', 'tabindex')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Solo soportado en {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("button")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, y {{HTMLElement("textarea")}}.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores</h2>
+## Compatibilidad en exploradores
 
 {{Compat("html.global_attributes.tabindex")}}

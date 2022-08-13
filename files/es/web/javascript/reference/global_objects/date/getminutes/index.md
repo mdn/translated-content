@@ -4,68 +4,48 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMinutes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>El método <strong><code>getMinutes()</code></strong> devuelve los minutos de la fecha especificada en función de la hora local. </p>
+El método **`getMinutes()`** devuelve los minutos de la fecha especificada en función de la hora local.
 
-<h2 id="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getMinutes()</code></pre>
+    dateObj.getMinutes()
 
-<h3 id="Parámetros">Parámetros</h3>
+### Parámetros
 
-<p>Ninguno.</p>
+Ninguno.
 
-<h3 id="Devuelve">Devuelve</h3>
+### Devuelve
 
-<p>El valor devuelto por <code>getMinutes()</code> es un número entero entre 0 y 59.</p>
+El valor devuelto por `getMinutes()` es un número entero entre 0 y 59.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<h3 id="Uso_de_getMinutes()"><code>Uso de getMinutes()</code></h3>
+### `Uso de getMinutes()`
 
-<p>La segunda declaración del código mostrado a continuación le asigna el valor 15 a la variable <code>minutos</code>, basado en el valor del {{jsxref("Global_Objects/Date", "Date")}} <code>objeto Xmas95</code>.</p>
+La segunda declaración del código mostrado a continuación le asigna el valor 15 a la variable `minutos`, basado en el valor del {{jsxref("Global_Objects/Date", "Date")}} `objeto Xmas95`.
 
-<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
+```js
+var Xmas95 = new Date('December 25, 1995 23:15:30');
 var minutos = Xmas95.getMinutes();
 
 console.log(minutos); // 15
-</pre>
+```
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.20', 'Date.prototype.getMinutes')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getminutes', 'Date.prototype.getMinutes')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Especificación                                                                                               | Estado                   | Comentario                                          |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ | --------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Definición inicial. Implementado en JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.20', 'Date.prototype.getMinutes')}}                 | {{Spec2('ES5.1')}} |                                                     |
+| {{SpecName('ES6', '#sec-date.prototype.getminutes', 'Date.prototype.getMinutes')}} | {{Spec2('ES6')}}     |                                                     |
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+## Compatibilidad con navegadores
 
 {{Compat("javascript.builtins.Date.getMinutes")}}
 
-<h2 id="Ver_también">Ver también</h2>
+## Ver también
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMinutes()")}}</li>
- <li>{{jsxref("Date.prototype.setMinutes()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMinutes()")}}
+- {{jsxref("Date.prototype.setMinutes()")}}

@@ -9,82 +9,77 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/block
 original_slug: Web/JavaScript/Referencia/Sentencias/block
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<h2 id="Resumen" name="Resumen">Resumen</h2>
+## Resumen
 
-<p>Una sentencia block se utiliza para agrupar cero o más sentencias. Este grupo block se delimita por un par de llaves.</p>
+Una sentencia block se utiliza para agrupar cero o más sentencias. Este grupo block se delimita por un par de llaves.
 
-<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+## Sintaxis
 
-<pre class="eval">{<em> sentencia_1</em><em>; sentencia_2</em>; ...<em> sentencia_n</em>; }
-</pre>
+    { sentencia_1; sentencia_2; ... sentencia_n; }
 
-<dl>
- <dt><code>sentencia_1</code>, <code>sentencia_2</code>, <code>sentencia_n</code></dt>
- <dd>Sentencias agrupadas dentro de una sentencia block.</dd>
-</dl>
+- `sentencia_1`, `sentencia_2`, `sentencia_n`
+  - : Sentencias agrupadas dentro de una sentencia block.
 
-<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
+## Descripción
 
-<p>Esta sentencia se utiliza comúnmente para controlar sentencias de flujo (es decir <code>if</code>, <code>for</code>, <code>while</code>). Por ejemplo:</p>
+Esta sentencia se utiliza comúnmente para controlar sentencias de flujo (es decir `if`, `for`, `while`). Por ejemplo:
 
-<pre class="brush: js">while (x &lt; 10) {
+```js
+while (x < 10) {
    x++;
 }
-</pre>
+```
 
-<p><font><font>Las variables declaradas con </font></font><code>var</code> <strong><font><font>no</font></font></strong><font><font> tienen alcance de bloque(</font></font>block scope<font><font>)</font></font>. Las variables introducidas dentro de un grupo block tienen el alcance de la función que lo contiene o del script, y los efectos de su asignación persisten más allá del grupo block en sí mismo. En otras palabras, las sentencias block no incluyen ningún alcance. Aunque los grupos block "en solitario" (standalone) son una sintaxis válida, usted no querrá utilizar grupos block en solitario en JavaScript, ya que ellos no hacen lo que parecen, si piensa que funcionan de manera similar a los bloques en C o Java. Por ejemplo:</p>
+Las variables declaradas con `var` **no** tienen alcance de bloque(block scope). Las variables introducidas dentro de un grupo block tienen el alcance de la función que lo contiene o del script, y los efectos de su asignación persisten más allá del grupo block en sí mismo. En otras palabras, las sentencias block no incluyen ningún alcance. Aunque los grupos block "en solitario" (standalone) son una sintaxis válida, usted no querrá utilizar grupos block en solitario en JavaScript, ya que ellos no hacen lo que parecen, si piensa que funcionan de manera similar a los bloques en C o Java. Por ejemplo:
 
-<pre class="brush: js">var x = 1;
+```js
+var x = 1;
 {
    var x = 2;
 }
 alert(x); // resultado 2
-</pre>
+```
 
-<p>Este obtiene el resultado 2 ya que la sentencia <code>var x</code> dentro del grupo block tiene el mismo alcance que la sentencia <code>var x</code> antes del mismo. En C o Java, el código equivalente tendría como resultado 1.</p>
+Este obtiene el resultado 2 ya que la sentencia `var x` dentro del grupo block tiene el mismo alcance que la sentencia `var x` antes del mismo. En C o Java, el código equivalente tendría como resultado 1.
 
-<h4 id="Con_let_y_const"><font><font>Con </font></font><code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let">let</a> </code><font><font>y </font></font><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/const">const</a></h4>
+#### Con `let `y [const](/es/docs/Web/JavaScript/Referencia/Sentencias/const)
 
-<p>Por el contrario, las variables declaradas con <code>let</code> y <code>const</code> tienen alcance de bloque.</p>
+Por el contrario, las variables declaradas con `let` y `const` tienen alcance de bloque.
 
-<pre><code>let x = 1;
-{
-  let x = 2;
-}
-console.log(x); // logs 1</code>
-</pre>
+    let x = 1;
+    {
+      let x = 2;
+    }
+    console.log(x); // logs 1
 
-<p><font><font>El alcance </font></font><code>x = 2</code><font><font> es limitado solamente al bloque en el que está definido.</font></font></p>
+El alcance `x = 2` es limitado solamente al bloque en el que está definido.
 
-<p><font><font>Lo mismo para  </font></font><code>const</code><font><font>:</font></font></p>
+Lo mismo para `const`:
 
-<pre><code>const c = 1;
-{
-  const c = 2;
-}
-console.log(c); // logs 1 </code>y no lanza SyntaxError...
-</pre>
+    const c = 1;
+    {
+      const c = 2;
+    }
+    console.log(c); // logs 1 y no lanza SyntaxError...
 
-<p>Tenga en cuenta que la variable  <code>const c = 2 con alcance de bloque, </code><strong><em>no</em> lanza</strong> un  <code>SyntaxError: </code>El identificador 'c' ya ha sido declarado. Esto es porque <strong>se puede declarar de forma única</strong> dentro del bloque, sin interferir con la otra que tiene un  alcance global.</p>
+Tenga en cuenta que la variable `const c = 2 con alcance de bloque, `**_no_ lanza** un `SyntaxError: `El identificador 'c' ya ha sido declarado. Esto es porque **se puede declarar de forma única** dentro del bloque, sin interferir con la otra que tiene un alcance global.
 
-<h4 id="Con_function"><font><font>Con </font></font><code>function</code></h4>
+#### Con `function`
 
-<p>La <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">declaración de una función</a> también tiene un alcance limitado dentro del bloque donde se produce la declaración:</p>
+La [declaración de una función](/es/docs/Web/JavaScript/Reference/Statements/function) también tiene un alcance limitado dentro del bloque donde se produce la declaración:
 
-<pre class="brush: js">nacion('frances');  // TypeError: nacion no es una función
+```js
+nacion('frances');  // TypeError: nacion no es una función
 {
   function nacion(nacionalidad) {
    console.log('Yo soy ' + nacionalidad);
   }
 nacion('español'); // correcto. logs Yo soy español
-}</pre>
+}
+```
 
-<p> </p>
+## Vea También
 
-<h2 id="Vea_También">Vea También</h2>
-
-<ul>
- <li>{{jsxref("Sentencias/while", "while")}}</li>
-</ul>
+- {{jsxref("Sentencias/while", "while")}}

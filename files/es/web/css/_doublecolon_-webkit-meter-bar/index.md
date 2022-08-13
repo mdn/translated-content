@@ -1,28 +1,31 @@
 ---
 title: '::-webkit-meter-bar'
-slug: 'Web/CSS/::-webkit-meter-bar'
+slug: Web/CSS/::-webkit-meter-bar
 tags:
   - CSS
   - No estándar(2)
   - Pseudo-elemento
   - Referencia
-translation_of: 'Web/CSS/::-webkit-meter-bar'
+translation_of: Web/CSS/::-webkit-meter-bar
 ---
-<p>{{CSSRef}}{{Non-standard_header}}</p>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Resumen">Resumen</h2>
+## Resumen
 
-<p>La pseudo-clase <code>::-webkit-meter-bar</code> establece el estilo para el fondo del elemento meter que contiene el valor.</p>
+La pseudo-clase `::-webkit-meter-bar` establece el estilo para el fondo del elemento meter que contiene el valor.
 
-<h2 id="Especificaciones">Especificaciones</h2>
+## Especificaciones
 
-<p>No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.</p>
+No es parte de ninguna especificación. Es un elemento propietario y específico de WebKit/Blink.
 
-<h2 id="Ejemplos">Ejemplos</h2>
+## Ejemplos
 
-<pre class="brush: html">&lt;meter min="0" max="10" value="6"&gt;Puntuación sobre 10&lt;/meter&gt;</pre>
+```html
+<meter min="0" max="10" value="6">Puntuación sobre 10</meter>
+```
 
-<pre class="brush: css">meter {
+```css
+meter {
    /* Resetea a la apariencia por defecto */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -33,25 +36,22 @@ meter::-webkit-meter-bar  {
   background: #eee;
   box-shadow: 0 2px 3px rgba (0, 0, 0, 0.2) inset;
   border-radius: 3px;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Ejemplos', '100%', 50) }}</p>
+{{ EmbedLiveSample('Ejemplos', '100%', 50) }}
 
-<div class="note">
-<p><strong>Note</strong>: Sólo funciona en navegadores basados en Webkit/Blink.</p>
-</div>
+> **Nota:** Sólo funciona en navegadores basados en Webkit/Blink.
 
-<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+## Compatibilidad con los distintos navegadores
 
 {{Compat("css.selectors.-webkit-meter-bar")}}
 
-<h2 id="Ver_además">Ver además</h2>
+## Ver además
 
-<p>Los  pseudo-elementos usados en WebKit/Blink para dar estilos a otras partes del elemento {{htmlelement("meter")}} :</p>
+Los pseudo-elementos usados en WebKit/Blink para dar estilos a otras partes del elemento {{htmlelement("meter")}} :
 
-<ul>
- <li>{{cssxref("::-webkit-meter-inner-element")}}</li>
- <li>{{cssxref("::-webkit-meter-even-less-good-value")}}</li>
- <li>{{cssxref("::-webkit-meter-optimum-value")}}</li>
- <li>{{cssxref("::-webkit-meter-suboptimum-value")}}</li>
-</ul>
+- {{cssxref("::-webkit-meter-inner-element")}}
+- {{cssxref("::-webkit-meter-even-less-good-value")}}
+- {{cssxref("::-webkit-meter-optimum-value")}}
+- {{cssxref("::-webkit-meter-suboptimum-value")}}
