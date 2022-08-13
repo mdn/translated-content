@@ -3,12 +3,10 @@ title: IPv6
 slug: Glossary/IPv6
 translation_of: Glossary/IPv6
 ---
-<p id="Summary"><strong>IPv6</strong> 은 {{glossary("Internet", "인터넷")}} 기반 통신 {{glossary("protocol", "프로토콜")}}의 최신 버전이다. IPv6는 많은 다른 {{Glossary("IP address","IP 주소")}}를 허용하기 때문에 천천히 {{Glossary("IPv4")}}를 대체하고 있다.</p>
+**IPv6** 은 {{glossary("Internet", "인터넷")}} 기반 통신 {{glossary("protocol", "프로토콜")}}의 최신 버전이다. IPv6는 많은 다른 {{Glossary("IP address","IP 주소")}}를 허용하기 때문에 천천히 {{Glossary("IPv4")}}를 대체하고 있다.
 
-<h2 id="더_알아보기">더 알아보기</h2>
+## 더 알아보기
 
-<h3 id="일반적인_지식">일반적인 지식</h3>
+### 일반적인 지식
 
-<ul>
- <li>Wikipedia의 <a href="https://ko.wikipedia.org/wiki/IPv6">IPv6</a></li>
-</ul>
+- Wikipedia의 [IPv6](https://ko.wikipedia.org/wiki/IPv6)
