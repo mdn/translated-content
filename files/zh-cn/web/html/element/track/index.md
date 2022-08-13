@@ -3,15 +3,15 @@ title: <track>
 slug: Web/HTML/Element/track
 translation_of: Web/HTML/Element/track
 ---
-<p><strong>HTML <code>&lt;track&gt;</code> 元素</strong> 被当作媒体元素—{{HTMLElement("audio")}} 和 {{HTMLElement("video")}}的子元素来使用。它允许指定时序文本字幕（或者基于时间的数据），例如自动处理字幕。字幕格式有 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Video_Text_Tracks_Format">WebVTT 格式</a>（<code>.vtt</code>格式文件）— Web 视频文本字幕格式，以及指<a href="https://w3c.github.io/ttml2/index.html">时序文本标记语言（TTML）</a>格式。</p>
+**HTML `<track>` 元素** 被当作媒体元素—{{HTMLElement("audio")}} 和 {{HTMLElement("video")}}的子元素来使用。它允许指定时序文本字幕（或者基于时间的数据），例如自动处理字幕。字幕格式有 [WebVTT 格式](/zh-CN/docs/Web/API/Web_Video_Text_Tracks_Format)（`.vtt`格式文件）— Web 视频文本字幕格式，以及指[时序文本标记语言（TTML）](https://w3c.github.io/ttml2/index.html)格式。
 
-<p><code>track</code> 给媒体元素添加的数据的类型在 <code>kind</code> 属性中设置，属性值可以是 <code>subtitles</code>, <code>captions</code>, <code>descriptions</code>, <code>chapters</code> 或 <code>metadata</code>。该元素指向当用户请求额外的数据时浏览器公开的包含定时文本的源文件。</p>
+`track` 给媒体元素添加的数据的类型在 `kind` 属性中设置，属性值可以是 `subtitles`, `captions`, `descriptions`, `chapters` 或 `metadata`。该元素指向当用户请求额外的数据时浏览器公开的包含定时文本的源文件。
 
-<p>一个<code>media</code> 元素的任意两个 <code>track</code> 子元素不能有相同的 <code>kind</code>, <code>srclang</code>, 和 <code>label</code>属性。</p>
+一个`media` 元素的任意两个 `track` 子元素不能有相同的 `kind`, `srclang`, 和 `label`属性。
 
-<p>{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
 
-<h2 id="使用上下文">使用上下文</h2>
+## 使用上下文
 
 <table class="standard-table">
  <tbody>
@@ -29,7 +29,7 @@ translation_of: Web/HTML/Element/track
   </tr>
   <tr>
    <td><strong>允许的父元素</strong></td>
-   <td>媒体元素，<a href="/en-US/docs/HTML/Content_categories#Flow_content">流内容</a>之前。</td>
+   <td>媒体元素，<a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流内容</a>之前。</td>
   </tr>
   <tr>
    <td><strong>允许的 ARIA 角色</strong></td>
@@ -42,99 +42,90 @@ translation_of: Web/HTML/Element/track
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
+该元素包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("default")}}</dt>
- <dd>该属性定义了该 track 应该启用，除非用户首选项指定了更合适一个 track。每个媒体元素里面只有一个 <code>track</code> 元素可以有这个属性。</dd>
- <dt>{{htmlattrdef("kind")}}</dt>
- <dd>定义了 text track 应该如何使用。如果省略了该属性，默认的 kind 值就是 <code>subtitles</code>。下面是允许的关键字：
- <ul>
-  <li><code>subtitles</code>
-   <ul>
-    <li>字幕给观影者看不懂的内容提供了翻译。比如英文电影里非英文的对话框或者文字。</li>
-    <li>字幕可能包含额外的内容，通常有附加的背景信息。比如在电影星球大战开头的文字，或者某个场景的日期，时间，还有地点。</li>
-   </ul>
-  </li>
-  <li>captions
-   <ul>
-    <li>隐藏式字幕提供了音频的转录甚至是翻译。</li>
-    <li>可能包含重要的非言语的信息，比如音乐提示或者音效。可以指定提示音的源文件 (e.g. music, text, character).</li>
-    <li>适用于耳聋的用户或者当调成静音的时候。</li>
-   </ul>
-  </li>
-  <li><code>descriptions</code>
-   <ul>
-    <li>视频内容的文本描述。</li>
-    <li>适用于失明用户或者当视频不可见的场景。</li>
-   </ul>
-  </li>
-  <li><code>chapters</code>
-   <ul>
-    <li>章节标题用于用户浏览媒体资源的时候。</li>
-   </ul>
-  </li>
-  <li><code>metadata</code>
-   <ul>
-    <li>脚本使用的 track。 对用户不可见。</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("label")}}</dt>
- <dd>当列出可用的 text tracks 时，给浏览器使用的 text track 的标题，这种标题是用户可读的。</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>track 的地址。必须是合法的 URL。该属性必须定义。</dd>
- <dt>{{htmlattrdef("srclang")}}</dt>
- <dd>track 文本数据的语言。它必须是合法的 <a href="http://people.w3.org/rishida/utils/subtags/">BCP 47</a> 语言标签。如果 <code>kind</code> 属性被设为 <code>subtitles,</code> 那么<code>srclang</code> 必须定义。</dd>
-</dl>
+- {{htmlattrdef("default")}}
+  - : 该属性定义了该 track 应该启用，除非用户首选项指定了更合适一个 track。每个媒体元素里面只有一个 `track` 元素可以有这个属性。
+- {{htmlattrdef("kind")}}
 
-<h2 id="用法说明">用法说明</h2>
+  - : 定义了 text track 应该如何使用。如果省略了该属性，默认的 kind 值就是 `subtitles`。下面是允许的关键字：
+  
+    - `subtitles`
 
-<h3 id="轨道数据类型">轨道数据类型</h3>
+      - 字幕给观影者看不懂的内容提供了翻译。比如英文电影里非英文的对话框或者文字。
+      - 字幕可能包含额外的内容，通常有附加的背景信息。比如在电影星球大战开头的文字，或者某个场景的日期，时间，还有地点。
 
-<p><code>track</code> 给媒体元素添加的数据的类型在 <code>kind</code> 属性中设置，属性值可以是 <code>subtitles</code>, <code>captions</code>, <code>descriptions</code>, <code>chapters</code> 或 <code>metadata</code>。该元素指向当用户请求额外的数据时浏览器公开的包含定时文本的源文件。</p>
+    - captions
 
-<p>一个<code>media</code> 元素的任意两个 <code>track</code> 子元素不能有相同的 <code>kind</code>, <code>srclang</code>, 和 <code>label</code>属性。</p>
+      - 隐藏式字幕提供了音频的转录甚至是翻译。
+      - 可能包含重要的非言语的信息，比如音乐提示或者音效。可以指定提示音的源文件 (e.g. music, text, character).
+      - 适用于耳聋的用户或者当调成静音的时候。
 
-<h2 id="示例">示例</h2>
+    - `descriptions`
 
-<pre><code>&lt;video controls poster="/images/sample.gif"&gt;
-   &lt;source src="sample.mp4" type="video/mp4"&gt;
-   &lt;source src="sample.ogv" type="video/ogv"&gt;
-   &lt;track kind="captions" src="sampleCaptions.vtt" srclang="en"&gt;
-   &lt;track kind="descriptions"
-     src="sampleDescriptions.vtt" srclang="en"&gt;
-   &lt;track kind="chapters" src="sampleChapters.vtt" srclang="en"&gt;
-   &lt;track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de"&gt;
-   &lt;track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en"&gt;
-   &lt;track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja"&gt;
-   &lt;track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz"&gt;
-   &lt;track kind="metadata" src="keyStage1.vtt" srclang="en"
-     label="Key Stage 1"&gt;
-   &lt;track kind="metadata" src="keyStage2.vtt" srclang="en"
-     label="Key Stage 2"&gt;
-   &lt;track kind="metadata" src="keyStage3.vtt" srclang="en"
-     label="Key Stage 3"&gt;
-   &lt;!-- Fallback --&gt;
+      - 视频内容的文本描述。
+      - 适用于失明用户或者当视频不可见的场景。
+
+    - `chapters`
+
+      - 章节标题用于用户浏览媒体资源的时候。
+
+    - `metadata`
+
+      - 脚本使用的 track。 对用户不可见。
+
+- {{htmlattrdef("label")}}
+  - : 当列出可用的 text tracks 时，给浏览器使用的 text track 的标题，这种标题是用户可读的。
+- {{htmlattrdef("src")}}
+  - : track 的地址。必须是合法的 URL。该属性必须定义。
+- {{htmlattrdef("srclang")}}
+  - : track 文本数据的语言。它必须是合法的 [BCP 47](http://people.w3.org/rishida/utils/subtags/) 语言标签。如果 `kind` 属性被设为 `subtitles,` 那么`srclang` 必须定义。
+
+## 用法说明
+
+### 轨道数据类型
+
+`track` 给媒体元素添加的数据的类型在 `kind` 属性中设置，属性值可以是 `subtitles`, `captions`, `descriptions`, `chapters` 或 `metadata`。该元素指向当用户请求额外的数据时浏览器公开的包含定时文本的源文件。
+
+一个`media` 元素的任意两个 `track` 子元素不能有相同的 `kind`, `srclang`, 和 `label`属性。
+
+## 示例
+
+```plain
+<video controls poster="/images/sample.gif">
+   <source src="sample.mp4" type="video/mp4">
+   <source src="sample.ogv" type="video/ogv">
+   <track kind="captions" src="sampleCaptions.vtt" srclang="en">
+   <track kind="descriptions"
+     src="sampleDescriptions.vtt" srclang="en">
+   <track kind="chapters" src="sampleChapters.vtt" srclang="en">
+   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de">
+   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en">
+   <track kind="subtitles" src="sampleSubtitles_ja.vtt" srclang="ja">
+   <track kind="subtitles" src="sampleSubtitles_oz.vtt" srclang="oz">
+   <track kind="metadata" src="keyStage1.vtt" srclang="en"
+     label="Key Stage 1">
+   <track kind="metadata" src="keyStage2.vtt" srclang="en"
+     label="Key Stage 2">
+   <track kind="metadata" src="keyStage3.vtt" srclang="en"
+     label="Key Stage 3">
+   <!-- Fallback -->
    ...
-&lt;/video&gt;</code>
-</pre>
+</video>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li><a href="/en-US/docs/HTML/WebVTT">WebVTT text track format</a></li>
-</ul>
+- [WebVTT text track format](/zh-CN/docs/HTML/WebVTT)
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

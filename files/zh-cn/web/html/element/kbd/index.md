@@ -3,19 +3,19 @@ title: <kbd>
 slug: Web/HTML/Element/kbd
 translation_of: Web/HTML/Element/kbd
 ---
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p>HTML 键盘输入元素 (<strong>&lt;kbd&gt;</strong>) 用于表示用户输入，它将产生一个行内元素，以浏览器的默认 monospace 字体显示。</p>
+HTML 键盘输入元素 (**\<kbd>**) 用于表示用户输入，它将产生一个行内元素，以浏览器的默认 monospace 字体显示。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/kbd
   </tr>
   <tr>
    <th scope="row">Permitted parent elements</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>
@@ -32,49 +32,49 @@ translation_of: Web/HTML/Element/kbd
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素仅支持<a href="/en-US/docs/HTML/Global_attributes">全局属性</a>.</p>
+该元素仅支持[全局属性](/zh-CN/docs/HTML/Global_attributes).
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;p&gt;Type the following in the Run dialog: &lt;kbd&gt;cmd&lt;/kbd&gt;&lt;br /&gt;Then click the OK button.&lt;/p&gt;
-
-&lt;p&gt;Save the document by pressing &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;S&lt;/kbd&gt;&lt;/p&gt;</pre>
-
-<h3 id="结果">结果</h3>
-
-<p>Type the following in the Run dialog: <kbd>cmd</kbd><br>
- Then click the OK button.</p>
+```html
+<p>Type the following in the Run dialog: <kbd>cmd</kbd><br />Then click the OK button.</p>
 
 <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
+```
 
-<h4 id="结果说明：">结果说明：</h4>
+### 结果
 
-<p>此显示效果为 MDN 特殊显示效果，无法更改。具体显示效果请自行测试。</p>
+Type the following in the Run dialog: <kbd>cmd</kbd>
+Then click the OK button.
 
-<h2 id="注意">注意</h2>
+Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd>
 
-<p>通过定义 CSS 规则可以改变 kbd 的默认字体。用户首选项设置可能会比该 CSS 规则具有更高优先级。</p>
+#### 结果说明：
 
-<p>当&lt;kbd&gt;元素处于&lt;samp&gt;元素之中时，它代表着被系统回显的输入。</p>
+此显示效果为 MDN 特殊显示效果，无法更改。具体显示效果请自行测试。
 
-<p>当&lt;kbd&gt;元素中包含&lt;samp&gt;元素时，该输入是基于系统输出的，比如调用某个菜单项。</p>
+## 注意
 
-<p>当&lt;kbd&gt;元素处于另一个&lt;kbd&gt;元素之中时，它代表了一个实际的按键，或是该输入机制下的某个单位输入。</p>
+通过定义 CSS 规则可以改变 kbd 的默认字体。用户首选项设置可能会比该 CSS 规则具有更高优先级。
 
-<h2 id="Specifications">规范</h2>
+当\<kbd>元素处于\<samp>元素之中时，它代表着被系统回显的输入。
+
+当\<kbd>元素中包含\<samp>元素时，该输入是基于系统输出的，比如调用某个菜单项。
+
+当\<kbd>元素处于另一个\<kbd>元素之中时，它代表了一个实际的按键，或是该输入机制下的某个单位输入。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("html.elements.kbd")}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{htmlelement("code")}}</li>
-</ul>
+- {{htmlelement("code")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

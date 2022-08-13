@@ -9,24 +9,23 @@ tags:
   - 文本级语义
 translation_of: Web/HTML/Element/cite
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><em>HTML 引用（ Citation）标签</em> (<strong>&lt;cite&gt;</strong>) 表示一个作品的引用，且必须包含作品的标题。这个引用可能是一个根据适当的上下文约定关联引用的元数据的缩写。</p>
+_HTML 引用（ Citation）标签_ (**\<cite>**) 表示一个作品的引用，且必须包含作品的标题。这个引用可能是一个根据适当的上下文约定关联引用的元数据的缩写。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}</div>
-
+{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row" style="vertical-align: middle;">内容类别</th>
    <td>
-    <p><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">流内容（Flow Content）</a>，<a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>，可触及的内容（Palpable Content）。</p>
+    <p><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流内容（Flow Content）</a>，<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>，可触及的内容（Palpable Content）。</p>
    </td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a></td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -34,7 +33,7 @@ translation_of: Web/HTML/Element/cite
   </tr>
   <tr>
    <th scope="row">允许的父级元素</th>
-   <td>任何接受<a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>的元素。</td>
+   <td>任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">叙述内容（Phrasing Content）</a>的元素。</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -43,145 +42,73 @@ translation_of: Web/HTML/Element/cite
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素仅包含了 所有的<a href="/en-US/docs/HTML/Global_attributes">全局属性</a>.</p>
+这个元素仅包含了 所有的[全局属性](/zh-CN/docs/HTML/Global_attributes).
 
-<div class="note">
-<p><strong>使用说明：</strong></p>
+> **备注：** 适用场合可能包括一本书，一张纸，一篇散文，一首诗，一个分数，一首歌，一部电影，一个电视节目，一个游戏，一个雕塑，一幅画，戏剧制作，一个剧本，一个歌剧，一种音乐，一个展览 ，一个法律案件报告，一个计算机程序，一个网站，一个网页，博客或评论，论坛帖子或评论 ，鸣叫，或者书面或口头陈述，等等。
+>
+> - W3C 规范，对创造性的工作可能包括作者的名字，而 WHATWG 宣布，它可能不包括在任何情况下，一个人的名字。
+> - 在 blockquote 元素或者 q 元素上使用 cite 或者 blockquote 属性来标明参考的在线资源。
+> - 为了避免在使用 cite 元素时默认字体为斜体，可以使用 css 的 font-style 属性重新进行设置。
 
-<ul>
- <li>适用场合可能包括一本书，一张纸，一篇散文，一首诗，一个分数，一首歌，一部电影，一个电视节目，一个游戏，一个雕塑，一幅画，戏剧制作，一个剧本，一个歌剧，一种音乐，一个展览 ，一个法律案件报告，一个计算机程序，一个网站，一个网页，博客或评论，论坛帖子或评论 ，鸣叫，或者书面或口头陈述，等等。</li>
- <li>W3C 规范，对创造性的工作可能包括作者的名字，而 WHATWG 宣布，它可能不包括在任何情况下，一个人的名字。</li>
- <li>在 blockquote 元素或者 q 元素上使用 cite 或者 blockquote 属性来标明参考的在线资源。</li>
- <li>为了避免在使用 cite 元素时默认字体为斜体，可以使用 css 的 font-style 属性重新进行设置。</li>
-</ul>
+## 使用说明
 
+在 `<cite>` 标签中，可能引用的内容类型如下：
 
-</div>
+- A book
+- A research paper
+- An essay
+- A poem
+- A musical score
+- A song
+- A play or film script
+- A film
+- A television show
+- A game
+- A sculpture
+- A painting
+- A theatrical production
+- A play
+- An opera
+- A musical
+- An exhibition
+- A legal case report
+- A computer program
+- A web site
+- A web page
+- A blog post or comment
+- A forum post or comment
+- A tweet
+- A Facebook post
+- A written or oral statement
+- And so forth.
 
-<h2 id="使用说明">使用说明</h2>
+值得注意的是，W3C 标准允许在 `<cite>` 元素中包含引用内容的作者信息。然而 WHATWG 规范不允许在 `<cite>` 元素中出现人名。
 
-<p>在 <code>&lt;cite&gt;</code> 标签中，可能引用的内容类型如下：</p>
+要标明{{HTMLElement("blockquote")}} 或 {{HTMLElement("q")}}之中内容的引用来源，可以使用元素的{{htmlattrxref("cite", "blockquote")}}属性。
 
-<div class="threecolumns">
-<ul>
- <li>
-  <p>A book</p>
- </li>
- <li>
-  <p>A research paper</p>
- </li>
- <li>
-  <p>An essay</p>
- </li>
- <li>
-  <p>A poem</p>
- </li>
- <li>
-  <p>A musical score</p>
- </li>
- <li>
-  <p>A song</p>
- </li>
- <li>
-  <p>A play or film script</p>
- </li>
- <li>
-  <p>A film</p>
- </li>
- <li>
-  <p>A television show</p>
- </li>
- <li>
-  <p>A game</p>
- </li>
- <li>
-  <p>A sculpture</p>
- </li>
- <li>
-  <p>A painting</p>
- </li>
- <li>
-  <p>A theatrical production</p>
- </li>
- <li>
-  <p>A play</p>
- </li>
- <li>
-  <p>An opera</p>
- </li>
- <li>
-  <p>A musical</p>
- </li>
- <li>
-  <p>An exhibition</p>
- </li>
- <li>
-  <p>A legal case report</p>
- </li>
- <li>
-  <p>A computer program</p>
- </li>
- <li>
-  <p>A web site</p>
- </li>
- <li>
-  <p>A web page</p>
- </li>
- <li>
-  <p>A blog post or comment</p>
- </li>
- <li>
-  <p>A forum post or comment</p>
- </li>
- <li>
-  <p>A tweet</p>
- </li>
- <li>
-  <p>A Facebook post</p>
- </li>
- <li>
-  <p>A written or oral statement</p>
- </li>
- <li>
-  <p>And so forth.</p>
- </li>
-</ul>
-</div>
+通常，浏览器默认使用斜体来展示`<cite>`元素中的内容。可以通过指定`<cite>`元素的{{cssxref("font-style")}}样式来覆盖这种默认行为。
 
-<ul>
-</ul>
+## 示例
 
-<p>值得注意的是，W3C 标准允许在 <code>&lt;cite&gt;</code> 元素中包含引用内容的作者信息。然而 WHATWG 规范不允许在 <code>&lt;cite&gt;</code> 元素中出现人名。</p>
+```html
+More information can be found in <cite>[ISO-0000]</cite>.
+```
 
-<p>要标明{{HTMLElement("blockquote")}} 或 {{HTMLElement("q")}}之中内容的引用来源，可以使用元素的{{htmlattrxref("cite", "blockquote")}}属性。</p>
+该段代码的输出如下：
 
-<p>通常，浏览器默认使用斜体来展示<code>&lt;cite&gt;</code>元素中的内容。可以通过指定<code>&lt;cite&gt;</code>元素的{{cssxref("font-style")}}样式来覆盖这种默认行为。</p>
+{{EmbedLiveSample("Example", 640, 60)}}
 
-<h2 id="示例">示例</h2>
-
-<pre class="brush: html">More information can be found in &lt;cite&gt;[ISO-0000]&lt;/cite&gt;.</pre>
-
-<p>该段代码的输出如下：</p>
-
-<p>{{EmbedLiveSample("Example", 640, 60)}}</p>
-
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("html.elements.cite")}}</p>
-</div>
+{{Compat("html.elements.cite")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>适用于长引用的 {{HTMLElement("blockquote")}} 元素。</li>
- <li>适用于行内引用的 {{HTMLElement("q")}} 元素。</li>
-</ul>
-
-
+- 适用于长引用的 {{HTMLElement("blockquote")}} 元素。
+- 适用于行内引用的 {{HTMLElement("q")}} 元素。

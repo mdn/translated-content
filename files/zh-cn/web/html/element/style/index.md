@@ -6,145 +6,135 @@ tags:
   - 样式表
 translation_of: Web/HTML/Element/style
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><strong>HTML</strong> 的 <code>&lt;style&gt;</code> 元素包含文档的样式信息或者文档的部分内容。默认情况下，该标签的样式信息通常是<a href="/en-US/docs/Web/CSS">CSS</a>的格式。</p>
+**HTML** 的 `<style>` 元素包含文档的样式信息或者文档的部分内容。默认情况下，该标签的样式信息通常是[CSS](/zh-CN/docs/Web/CSS)的格式。
 
-<p>{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
 
-<ul>
- <li><dfn><a href="/zh_CN/docs/HTML/Content_categories">内容类别</a></dfn><a href="/zh-CN/docs/Web/HTML/Content_categories#Metadata_content">元数据内容</a>，如果指定了 <code>scoped</code> 属性：<a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流内容</a></li>
- <li><dfn>允许的内容</dfn>与 <code>type</code> 属性相匹配的文本内容，也就是 <code>text/css</code></li>
- <li><dfn>标签忽略</dfn> {{no_tag_omission}}</li>
- <li><dfn>允许的父元素</dfn> 任意接受<a href="/zh-CN/docs/Web/HTML/Content_categories#Metadata_content">元数据内容</a>的元素</li>
- <li><dfn>Permitted ARIA roles</dfn>None</li>
- <li><dfn>DOM 接口</dfn> {{domxref("HTMLStyleElement")}}</li>
-</ul>
+- _[内容类别](/zh-CN/docs/HTML/Content_categories)_[元数据内容](/zh-CN/docs/Web/HTML/Content_categories#Metadata_content)，如果指定了 `scoped` 属性：[流内容](/zh-CN/docs/Web/HTML/Content_categories#Flow_content)
+- *允许的内容*与 `type` 属性相匹配的文本内容，也就是 `text/css`
+- _标签忽略_ {{no_tag_omission}}
+- _允许的父元素_ 任意接受[元数据内容](/zh-CN/docs/Web/HTML/Content_categories#Metadata_content)的元素
+- \_Permitted ARIA roles_None
+- _DOM 接口_ {{domxref("HTMLStyleElement")}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素包含所有<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+该元素包含所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>该属性以 MIME 类型（不应该指定字符集）定义样式语言。如果该属性未指定，则默认为 <code>text/css</code>。</dd>
- <dt>{{htmlattrdef("media")}}</dt>
- <dd>该属性规定该样式适用于哪个媒体。属性的取值<a href="/zh-CN/docs/Web/Guide/CSS/Media_queries">CSS 媒体查询</a>，默认值为 <code>all</code>。</dd>
- <dt>{{htmlattrdef("nonce")}}</dt>
- <dd>一种加密的随机数（一次使用的数字），用于在<a href="/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src">style-src Content-Security-Policy</a>中将内联样式列入白名单。 服务器每次发送策略时都必须生成一个唯一的随机数值。 提供一个无法猜测的随机数非常重要，因为绕开资源策略是微不足道的。</dd>
- <dt>{{htmlattrdef("title")}}</dt>
- <dd>指定可选的样式表。</dd>
-</dl>
+- {{htmlattrdef("type")}}
+  - : 该属性以 MIME 类型（不应该指定字符集）定义样式语言。如果该属性未指定，则默认为 `text/css`。
+- {{htmlattrdef("media")}}
+  - : 该属性规定该样式适用于哪个媒体。属性的取值[CSS 媒体查询](/zh-CN/docs/Web/Guide/CSS/Media_queries)，默认值为 `all`。
+- {{htmlattrdef("nonce")}}
+  - : 一种加密的随机数（一次使用的数字），用于在[style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)中将内联样式列入白名单。 服务器每次发送策略时都必须生成一个唯一的随机数值。 提供一个无法猜测的随机数非常重要，因为绕开资源策略是微不足道的。
+- {{htmlattrdef("title")}}
+  - : 指定可选的样式表。
 
-<h3 id="已淘汰属性">已淘汰属性</h3>
+### 已淘汰属性
 
-<dl>
- <dt>{{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
+- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : 此属性指定样式仅适用于其父项和子项的元素。
+    > **备注：** 以后可能会根据<https://github.com/w3c/csswg-drafts/issues/3547>重新引入此属性。 如果要立即使用该属性，则可以使用[polyfill](https://github.com/samthor/scoped)。
 
- <dd>此属性指定样式仅适用于其父项和子项的元素。<br />
+## 示例
 
- <div class="blockIndicator note">
- <p>以后可能会根据<a href="https://github.com/w3c/csswg-drafts/issues/3547">https://github.com/w3c/csswg-drafts/issues/3547</a>重新引入此属性。 如果要立即使用该属性，则可以使用<a href="https://github.com/samthor/scoped">polyfill</a>。</p>
- </div>
- </dd>
-</dl>
+### 一个简单的样式表
 
-<h2 id="示例">示例</h2>
+在下面的例子中，我们将简单的样式应用到文档中：
 
-<h3 id="一个简单的样式表">一个简单的样式表</h3>
-
-<p>在下面的例子中，我们将简单的样式应用到文档中：</p>
-
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;style&gt;
+```html
+<!doctype html>
+<html>
+<head>
+  <style>
     p {
       color: red;
     }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;This is my paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+  </style>
+</head>
+<body>
+  <p>This is my paragraph.</p>
+</body>
+</html>
+```
 
-<p>{{EmbedLiveSample('A_simple_stylesheet', '100%', '60')}}</p>
+{{EmbedLiveSample('A_simple_stylesheet', '100%', '60')}}
 
-<h3 id="多种样式元素">多种样式元素</h3>
+### 多种样式元素
 
-<p>在这个例子中包含两种样式 <code>&lt;style&gt;</code> 元素</p>
+在这个例子中包含两种样式 `<style>` 元素
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;style&gt;
+```html
+<!doctype html>
+<html>
+<head>
+  <style>
     p {
       color: white;
       background-color: blue;
       padding: 5px;
       border: 1px solid black;
     }
-  &lt;/style&gt;
-  &lt;style&gt;
+  </style>
+  <style>
     p {
       color: blue;
       background-color: yellow;
     }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;This is my paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </style>
+</head>
+<body>
+  <p>This is my paragraph.</p>
+</body>
+</html>
+```
 
-<div>{{EmbedLiveSample('Multiple_style_elements', '100%', '60')}}</div>
+{{EmbedLiveSample('Multiple_style_elements', '100%', '60')}}
 
-<div>
-<h3 id="包含媒体media选择">包含媒体 (media) 选择</h3>
+### 包含媒体 (media) 选择
 
-<p>这个例子根据前一个例子构建，在第二个 <code>&lt;style&gt;</code> 中，视图宽度小于 500px 时生效</p>
+这个例子根据前一个例子构建，在第二个 `<style>` 中，视图宽度小于 500px 时生效
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;style&gt;
+```html
+<!doctype html>
+<html>
+<head>
+  <style>
     p {
       color: white;
       background-color: blue;
       padding: 5px;
       border: 1px solid black;
     }
-  &lt;/style&gt;
-  &lt;style media="all and (max-width: 500px)"&gt;
+  </style>
+  <style media="all and (max-width: 500px)">
     p {
       color: blue;
       background-color: yellow;
     }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;This is my paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+  </style>
+</head>
+<body>
+  <p>This is my paragraph.</p>
+</body>
+</html>
+```
 
-<p>{{EmbedLiveSample('Including_a_media_query', '100%', '60')}}</p>
-</div>
+{{EmbedLiveSample('Including_a_media_query', '100%', '60')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("html.elements.style")}}</p>
+{{Compat("html.elements.style")}}
 
-<h2 id="查看更多">查看更多</h2>
+## 查看更多
 
-<ul>
- <li>{{HTMLElement("link")}}元素允许使用外部的样式表。</li>
- <li><a href="/zh-CN/docs/Web/CSS/Alternative_style_sheets">Alternative Style Sheets</a></li>
-</ul>
+- {{HTMLElement("link")}}元素允许使用外部的样式表。
+- [Alternative Style Sheets](/zh-CN/docs/Web/CSS/Alternative_style_sheets)

@@ -9,41 +9,39 @@ tags:
   - Web
 translation_of: Web/HTML/Element/frameset
 ---
-<div>{{Deprecated_header}}</div>
+{{Deprecated_header}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><code>&lt;frameset&gt;</code> 是一个用于包含 {{HTMLElement("frame")}} 的 HTML 元素。</p>
+`<frameset>` 是一个用于包含 {{HTMLElement("frame")}} 的 HTML 元素。
 
-<div class="note"><strong>注意：</strong> 现在不鼓励使用 frame，而是用{{HTMLElement("iframe")}}。现今的网站一般都不使用 frame。</div>
+> **备注：** 现在不鼓励使用 frame，而是用{{HTMLElement("iframe")}}。现今的网站一般都不使用 frame。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>像所有其他的 HTML 元素一样，这个元素支持<a href="/en-US/HTML/Global_attributes">全局属性</a>。</p>
+像所有其他的 HTML 元素一样，这个元素支持[全局属性](/en-US/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("cols")}}</dt>
- <dd>这个属性指定一个框架集中列的数目和尺寸。</dd>
- <dt>{{htmlattrdef("rows")}}</dt>
- <dd>这个属性指定一个框架集中行的数目和尺寸。</dd>
-</dl>
+- {{htmlattrdef("cols")}}
+  - : 这个属性指定一个框架集中列的数目和尺寸。
+- {{htmlattrdef("rows")}}
+  - : 这个属性指定一个框架集中行的数目和尺寸。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush:html">&lt;frameset cols="50%,50%"&gt;
-  &lt;frame src="https://developer.mozilla.org/en/HTML/Element/frameset" /&gt;
-  &lt;frame src="https://developer.mozilla.org/en/HTML/Element/frame" /&gt;
-&lt;/frameset&gt;</pre>
+```html
+<frameset cols="50%,50%">
+  <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
+  <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
+</frameset>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("html.elements.frameset")}}</p>
+{{Compat("html.elements.frameset")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTMLElement("frame")}}</li>
- <li>{{HTMLElement("iframe")}}</li>
-</ul>
+- {{HTMLElement("frame")}}
+- {{HTMLElement("iframe")}}
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

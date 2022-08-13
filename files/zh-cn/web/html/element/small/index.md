@@ -6,22 +6,21 @@ tags:
   - 元素
 translation_of: Web/HTML/Element/small
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>HTML 中的&lt;small&gt;元素將使文本的字体变小一号。(例如从大变成中等，从中等变成小，从小变成超小)。在 HTML5 中，除了它的样式含义，这个元素被重新定义为表示边注释和附属细则，包括版权和法律文本。</p>
+HTML 中的\<small>元素將使文本的字体变小一号。(例如从大变成中等，从中等变成小，从小变成超小)。在 HTML5 中，除了它的样式含义，这个元素被重新定义为表示边注释和附属细则，包括版权和法律文本。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}</div>
-
+{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
 
 <table>
  <tbody>
   <tr>
    <th scope="row">内容分类</th>
-   <td><a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content">流式内容</a>， <a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>， <a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -29,7 +28,7 @@ translation_of: Web/HTML/Element/small
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>接受<a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content">短语内容</a>或者<a href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content">流式内容</a>的任何元素。</td>
+   <td>接受<a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>或者<a href="https://developer.mozilla.org/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>的任何元素。</td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
@@ -42,57 +41,53 @@ translation_of: Web/HTML/Element/small
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素只有全局属性。</p>
+这个元素只有全局属性。
 
-<h2 id="DOM_Interface">DOM 接口</h2>
+## DOM 接口
 
-<p>这个元素实现 {{domxref("HTMLElement")}}接口。</p>
+这个元素实现 {{domxref("HTMLElement")}}接口。
 
-<div class="note">
-<p><strong>接口实现注解：</strong>直到 Gecko 1.9.2，Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}}接口。</p>
-</div>
+> **备注：** 直到 Gecko 1.9.2，Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}}接口。
 
-<h2 id="Example_1">例子</h2>
+## 例子
 
-<h3 id="例子1">例子 1</h3>
+### 例子 1
 
-<pre class="brush: html">&lt;p&gt;This is the first sentence.  &lt;small&gt;This whole sentence is in small letters.&lt;/small&gt;&lt;/p&gt;
-</pre>
+```html
+<p>This is the first sentence.  <small>This whole sentence is in small letters.</small></p>
+```
 
-<h4 id="Result">结果</h4>
+#### 结果
 
-<p>This is the first sentence. <small>This whole sentence is in small letters.</small></p>
+This is the first sentence. This whole sentence is in small letters.
 
-<h3 id="Example_2">例子 2 (CSS 替代)</h3>
+### 例子 2 (CSS 替代)
 
-<pre class="brush: html">&lt;p&gt;This is the first sentence. &lt;span style="font-size:0.8em"&gt;This whole sentence is in small letters.&lt;/span&gt;&lt;/p&gt;
-</pre>
+```html
+<p>This is the first sentence. <span style="font-size:0.8em">This whole sentence is in small letters.</span></p>
+```
 
-<h4 id="Result_2">结果 </h4>
+#### 结果
 
-<p>This is the first sentence. This whole sentence is in small letters.</p>
+This is the first sentence. This whole sentence is in small letters.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Notes">注意事项</h2>
+## 注意事项
 
-<p>尽管 &lt;small&gt; 元素，&lt;b&gt; 元素和 &lt;i&gt; 元素被认为违反了结构和样式分离的原则，但是在 HTML5 中是允许使用这三个元素的。读者应该自行判断使用 &lt;small&gt; 还是 CSS。</p>
+尽管 \<small> 元素，\<b> 元素和 \<i> 元素被认为违反了结构和样式分离的原则，但是在 HTML5 中是允许使用这三个元素的。读者应该自行判断使用 \<small> 还是 CSS。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("html.elements.small")}}</p>
+{{Compat("html.elements.small")}}
 
+## 另请参考
 
-
-<h2 id="See_also">另请参考</h2>
-
-<ul>
- <li>{{ HTMLElement("b") }}</li>
- <li>{{ HTMLElement("font") }}</li>
- <li>{{ HTMLElement("style") }}</li>
- <li>HTML 4.01 规范： <a href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2">字体样式</a></li>
-</ul>
+- {{ HTMLElement("b") }}
+- {{ HTMLElement("font") }}
+- {{ HTMLElement("style") }}
+- HTML 4.01 规范： [字体样式](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)

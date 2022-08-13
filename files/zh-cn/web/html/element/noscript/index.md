@@ -5,24 +5,24 @@ tags:
   - <noscript>
 translation_of: Web/HTML/Element/noscript
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>如果页面上的脚本类型不受支持或者当前在浏览器中关闭了脚本，则在 <strong>HTML &lt;noscript&gt; 元素</strong>中定义脚本未被执行时的替代内容。</p>
+如果页面上的脚本类型不受支持或者当前在浏览器中关闭了脚本，则在 **HTML \<noscript> 元素**中定义脚本未被执行时的替代内容。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/en-US/docs/HTML/Content_categories#Flow_content">flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
    <td>
-    <p>当脚本被禁用并且它是 {{HTMLElement("head")}}元素的后代时：以下顺序任意，零个或者多个{{HTMLElement("link")}}元素，零个或者多个{{HTMLElement("style")}}元素，零个或者多个{{HTMLElement("meta")}}元素。</p>
+   <p>当脚本被禁用并且它是 {{HTMLElement("head")}}元素的后代时：以下顺序任意，零个或者多个{{HTMLElement("link")}}元素，零个或者多个{{HTMLElement("style")}}元素，零个或者多个{{HTMLElement("meta")}}元素。</p>
 
-    <p>当脚本被禁用并且它不是 {{HTMLElement("head")}} 元素的子元素时：任何 transparent content 都可以，但是在它的后代中必须没有 <code>&lt;noscript&gt;</code>元素。</p>
+   <p>当脚本被禁用并且它不是 {{HTMLElement("head")}} 元素的子元素时：任何 transparent content 都可以，但是在它的后代中必须没有 <code>&lt;noscript&gt;</code>元素。</p>
 
-    <p>否则：flow content 或 phrasing content 。</p>
+   <p>否则：flow content 或 phrasing content 。</p>
    </td>
   </tr>
   <tr>
@@ -34,7 +34,7 @@ translation_of: Web/HTML/Element/noscript
   <tr>
    <th scope="row">允许的父元素</th>
    <td>
-    <p>如果没有根元素 <code>&lt;noscript&gt;</code>，或者在{{HTMLElement("head")}}元素中（仅用于 HTML 文档）也没有根元素 <code>&lt;noscript&gt;</code>，允许任何 <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a> 元素。</p>
+    <p>如果没有根元素 <code>&lt;noscript&gt;</code>，或者在{{HTMLElement("head")}}元素中（仅用于 HTML 文档）也没有根元素 <code>&lt;noscript&gt;</code>，允许任何 <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a> 元素。</p>
    </td>
   </tr>
   <tr>
@@ -44,33 +44,34 @@ translation_of: Web/HTML/Element/noscript
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素只包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>.</p>
+该元素只包含 [全局属性](/zh-CN/docs/HTML/Global_attributes).
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;noscript&gt;
-  &lt;!-- anchor linking to external file --&gt;
-  &lt;a href="http://www.mozilla.com/"&gt;External Link&lt;/a&gt;
-&lt;/noscript&gt;
-&lt;p&gt;Rocks!&lt;/p&gt;
-</pre>
-
-<h3 id="允许脚本时的结果">允许脚本时的结果</h3>
-
+```html
+<noscript>
+  <!-- anchor linking to external file -->
+  <a href="http://www.mozilla.com/">External Link</a>
+</noscript>
 <p>Rocks!</p>
+```
 
-<h3 id="禁用脚本时的结果">禁用脚本时的结果</h3>
+### 允许脚本时的结果
 
-<p><a href="http://www.mozilla.com/">External Link</a></p>
+Rocks!
 
-<p>Rocks!</p>
+### 禁用脚本时的结果
 
-<h2 id="Specifications">规范</h2>
+[External Link](http://www.mozilla.com/)
+
+Rocks!
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("html.elements.noscript")}}</p>
+{{Compat("html.elements.noscript")}}

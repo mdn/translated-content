@@ -5,81 +5,73 @@ tags:
   - marquee
 translation_of: Web/HTML/Element/marquee
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}{{deprecated_header}}
 
-<div>{{deprecated_header}}</div>
+HTML marquee 元素（`<marquee>）` 用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。
 
-<p>HTML marquee 元素（<code>&lt;marquee&gt;）</code> 用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。</p>
+> **警告：** `<marquee>` 元素已经 **过时**，请不要再使用。尽管一些浏览器仍然支持它，但它不是必须的。此外，使用这个元素基本上是你可以对你的用户做最糟糕的事情之一，所以请不要这样做。
 
-<div class="warning">
-<p><code>&lt;marquee&gt;</code> 元素已经 <strong>过时</strong>，请不要再使用。尽管一些浏览器仍然支持它，但它不是必须的。此外，使用这个元素基本上是你可以对你的用户做最糟糕的事情之一，所以请不要这样做。</p>
-</div>
+## 属性
 
-<h2 id="属性">属性</h2>
+- {{htmlattrdef("behavior")}}
+  - : 设置文本在 marquee 元素内如何滚动。可选值有 ` scroll，``slide ` 和 `alternate。` 如果未指定值，默认值为 `scroll。`
+- {{htmlattrdef("bgcolor")}}
+  - : 通过颜色名称或十六进制值设置背景颜色。
+- {{htmlattrdef("direction")}}
+  - : 设置 marquee 内文本滚动的方向。可选值有 `left`, `right`, `up` and `down。`如果未指定值，默认值为 `left。`
+- {{htmlattrdef("height")}}
+  - : 以像素或百分比值设置高度。
+- {{htmlattrdef("hspace")}}
+  - : 设置水平边距。
+- {{htmlattrdef("loop")}}
+  - : 设置 marquee 滚动的次数。如果未指定值，默认值为 −1，表示 marquee 将连续滚动。
+- {{htmlattrdef("scrollamount")}}
+  - : 设置每次滚动时移动的长度（以像素为单位）。默认值为 6。
+- {{htmlattrdef("scrolldelay")}}
+  - : 设置每次滚动时的时间间隔（以毫秒为单位）。默认值为 85。请注意， 除非指定 truespeed 值，否则将忽略任何小于 60 的值，并改为使用 60。
+- {{htmlattrdef("truespeed")}}
+  - : 默认情况下，会忽略小于 60 的 scrolldelay 值。如果存在 truespeed，那些值不会被忽略。
+- {{htmlattrdef("vspace")}}
+  - : 以像素或百分比值设置垂直边距。
+- {{htmlattrdef("width")}}
+  - : 以像素或百分比值设置宽度。
 
-<dl>
- <dt>{{htmlattrdef("behavior")}}</dt>
- <dd>设置文本在 marquee 元素内如何滚动。可选值有 <code>scroll，</code><code>slide</code> 和 <code>alternate。</code> 如果未指定值，默认值为 <code>scroll。</code></dd>
- <dt>{{htmlattrdef("bgcolor")}}</dt>
- <dd>通过颜色名称或十六进制值设置背景颜色。</dd>
- <dt>{{htmlattrdef("direction")}}</dt>
- <dd>设置 marquee 内文本滚动的方向。可选值有 <code>left</code>, <code>right</code>, <code>up</code> and <code>down。</code>如果未指定值，默认值为 <code>left。</code></dd>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>以像素或百分比值设置高度。</dd>
- <dt>{{htmlattrdef("hspace")}}</dt>
- <dd>设置水平边距。</dd>
- <dt>{{htmlattrdef("loop")}}</dt>
- <dd>设置 marquee 滚动的次数。如果未指定值，默认值为 −1，表示 marquee 将连续滚动。</dd>
- <dt>{{htmlattrdef("scrollamount")}}</dt>
- <dd>设置每次滚动时移动的长度（以像素为单位）。默认值为 6。</dd>
- <dt>{{htmlattrdef("scrolldelay")}}</dt>
- <dd>设置每次滚动时的时间间隔（以毫秒为单位）。默认值为 85。请注意， 除非指定 truespeed 值，否则将忽略任何小于 60 的值，并改为使用 60。</dd>
- <dt>{{htmlattrdef("truespeed")}}</dt>
- <dd>默认情况下，会忽略小于 60 的 scrolldelay 值。如果存在 truespeed，那些值不会被忽略。</dd>
- <dt>{{htmlattrdef("vspace")}}</dt>
- <dd>以像素或百分比值设置垂直边距。</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>以像素或百分比值设置宽度。</dd>
-</dl>
+## 事件回调
 
-<h2 id="Event_handlers">事件回调</h2>
+- {{htmlattrdef("onbounce")}}
+  - : 当 marquee 滚动到结尾时触发。它只能在 behavior 属性设置为 alternate 时触发。
+- {{htmlattrdef("onfinish")}}
+  - : 当 marquee 完成 loop 属性设置的值时触发。它只能在 loop 属性设置为大于 0 的某个数字时触发。
+- {{htmlattrdef("onstart")}}
+  - : 当 marquee 开始滚动时触发。
 
-<dl>
- <dt>{{htmlattrdef("onbounce")}}</dt>
- <dd>当 marquee 滚动到结尾时触发。它只能在 behavior 属性设置为 alternate 时触发。</dd>
- <dt>{{htmlattrdef("onfinish")}}</dt>
- <dd>当 marquee 完成 loop 属性设置的值时触发。它只能在 loop 属性设置为大于 0 的某个数字时触发。</dd>
- <dt>{{htmlattrdef("onstart")}}</dt>
- <dd>当 marquee 开始滚动时触发。</dd>
-</dl>
+## 方法
 
-<h2 id="Methods">方法</h2>
+- start
+  - : 开始滚动 marquee。
+- stop
+  - : 停止滚动 marquee。
 
-<dl>
- <dt>start</dt>
- <dd>开始滚动 marquee。</dd>
- <dt>stop</dt>
- <dd>停止滚动 marquee。</dd>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
+```html
+<marquee>This text will scroll from right to left</marquee>
 
-<pre class="brush: html">&lt;marquee&gt;This text will scroll from right to left&lt;/marquee&gt;
+<marquee direction="up">This text will scroll from bottom to top</marquee>
 
-&lt;marquee direction="up"&gt;This text will scroll from bottom to top&lt;/marquee&gt;
-
-&lt;marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid"&gt;
-  &lt;marquee behavior="alternate"&gt;
+<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+  <marquee behavior="alternate">
     This text will bounce
-  &lt;/marquee&gt;
-&lt;/marquee&gt;</pre>
+  </marquee>
+</marquee>
+```
 
-<p>{{EmbedLiveSample("Examples", 600, 450)}}</p>
+{{EmbedLiveSample("Examples", 600, 450)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("html.elements.marquee")}}

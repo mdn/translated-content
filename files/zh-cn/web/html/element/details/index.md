@@ -8,47 +8,41 @@ tags:
   - 元素
 translation_of: Web/HTML/Element/details
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;details&gt;</code>元素</strong>可创建一个挂件，仅在被切换成展开状态时，它才会显示内含的信息。{{HTMLElement("summary")}} 元素可为该部件提供概要或者标签。</p>
+**HTML `<details>`元素**可创建一个挂件，仅在被切换成展开状态时，它才会显示内含的信息。{{HTMLElement("summary")}} 元素可为该部件提供概要或者标签。
 
-<p>A disclosure widget is typically presented onscreen using a small triangle which rotates (or twists) to indicate open/closed status, with a label next to the triangle. If the first child of the <code>&lt;details&gt;</code> element is a <code>&lt;summary&gt;</code>, the contents of the <code>&lt;summary&gt;</code> element are used as the label for the disclosure widget.</p>
+A disclosure widget is typically presented onscreen using a small triangle which rotates (or twists) to indicate open/closed status, with a label next to the triangle. If the first child of the `<details>` element is a `<summary>`, the contents of the `<summary>` element are used as the label for the disclosure widget.
 
-<div>{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}
 
+> **备注：** The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisties."
 
+同一个 `<details>` 组件只能处于两种状态之一。The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`). This might look like the following:
 
-<div class="note">
-<p><strong>Note:</strong> The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisties."</p>
-</div>
+![Screenshot of closed <details> widget. A black left-pointing triangle sits to the right of the text “System Requirements”.](https://mdn.mozillademos.org/files/15717/details-closed.png)
 
-<p>同一个 <code>&lt;details&gt;</code> 组件只能处于两种状态之一。The default <em>closed</em> state displays only the triangle and the label inside <code>&lt;summary&gt;</code> (or a {{Glossary("user agent")}}-defined default string if no <code>&lt;summary&gt;</code>). This might look like the following:</p>
+Here we see a standard disclosure widget with the label "System Requirements", in its default closed state. When the user clicks on the widget, or focuses it then presses the space bar, it "twists" open, revealing its contents:
 
-<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="Screenshot of closed &lt;details> widget. A black left-pointing triangle sits to the right of the text “System Requirements”." src="https://mdn.mozillademos.org/files/15717/details-closed.png" style="height: 26px; width: 191px;"></figure>
+![Screenshot of open <details> widget. The triangle now points downward, and a detailed description of what “System Requirements” means is shown.](https://mdn.mozillademos.org/files/15718/details-open.png)
 
-<p>Here we see a standard disclosure widget with the label "System Requirements", in its default closed state. When the user clicks on the widget, or focuses it then presses the space bar, it "twists" open, revealing its contents:</p>
+From there, you can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its {{htmlattrxref("open", "details")}} attribute.
 
-<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="Screenshot of open &lt;details> widget. The triangle now points downward, and a detailed description of what “System Requirements” means is shown." src="https://mdn.mozillademos.org/files/15718/details-open.png" style="height: 96px; width: 640px;"></figure>
+By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
 
-<p>From there, you can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its {{htmlattrxref("open", "details")}} attribute.</p>
+> **备注：** Unfortunately, at this time there's no built-in way to animate the transition between open and closed.
 
-<p>By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.</p>
-
-<div class="note">
-<p><strong>Note:</strong> Unfortunately, at this time there's no built-in way to animate the transition between open and closed.</p>
-</div>
-
-<p>Fully standards-compliant implementations automatically apply the CSS <code>{{cssxref("display")}}: list-item</code> to the {{HTMLElement("summary")}} element. You can use this to customize its appearance further. See <a href="#自定义自带部件的样式">Customizing the disclosure widget</a> for further details.</p>
+Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this to customize its appearance further. See [Customizing the disclosure widget](#自定义自带部件的样式) for further details.
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, sectioning root, interactive content, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, sectioning root, interactive content, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td>One {{HTMLElement("summary")}} element followed by <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>One {{HTMLElement("summary")}} element followed by <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -56,7 +50,7 @@ translation_of: Web/HTML/Element/details
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -69,90 +63,97 @@ translation_of: Web/HTML/Element/details
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>此元素仅包含<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("open")}}</dt>
- <dd>This Boolean attribute indicates whether or not the details — that is, the contents of the <code>&lt;details&gt;</code> element — are currently visible. The default, <code>false</code>, means the details are not visible.</dd>
-</dl>
+- {{htmlattrdef("open")}}
+  - : This Boolean attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently visible. The default, `false`, means the details are not visible.
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<p>In addition to the usual events supported by HTML elements, the <code>&lt;details&gt;</code> element supports the {{event("toggle")}} event, which is dispatched to the <code>&lt;details&gt;</code> element whenever its state changes between open and closed. It is sent <em>after</em> the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.</p>
+In addition to the usual events supported by HTML elements, the `<details>` element supports the {{event("toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
 
-<p>You can listen for the <code>toggle</code> event to detect when the widget changes state:</p>
+You can listen for the `toggle` event to detect when the widget changes state:
 
-<pre class="brush: js">details.addEventListener("toggle", event =&gt; {
+```js
+details.addEventListener("toggle", event => {
   if (details.open) {
     /* the element was toggled open */
   } else {
     /* the element was toggled closed */
   }
-});</pre>
+});
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="A_simple_disclosure_example">A simple disclosure example</h3>
+### A simple disclosure example
 
-<p>This example shows a <code>&lt;details&gt;</code> element with no provided summary.</p>
+This example shows a `<details>` element with no provided summary.
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<p>In this situation, the browser will use a default summary string (usually "Details"). Here's what your browser does with it:</p>
+In this situation, the browser will use a default summary string (usually "Details"). Here's what your browser does with it:
 
-<p>{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}</p>
+{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}
 
-<h3 id="Providing_a_summary">Providing a summary</h3>
+### Providing a summary
 
-<p>This example adds a summary to the above example by using the {{HTMLElement("summary")}} element inside <code>&lt;details&gt;</code>, like this:</p>
+This example adds a summary to the above example by using the {{HTMLElement("summary")}} element inside `<details>`, like this:
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<p>The result from this HTML is this:</p>
+The result from this HTML is this:
 
-<p>{{EmbedLiveSample("Providing_a_summary", 650, 150)}}</p>
+{{EmbedLiveSample("Providing_a_summary", 650, 150)}}
 
-<h3 id="Creating_an_open_disclosure_box">Creating an open disclosure box</h3>
+### Creating an open disclosure box
 
-<p>To start the <code>&lt;details&gt;</code> box in its open state, add the Boolean <code>open</code> attribute:</p>
+To start the `<details>` box in its open state, add the Boolean `open` attribute:
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details open>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<p>This results in:</p>
+This results in:
 
-<p>{{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}</p>
+{{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}
 
-<h3 id="Customizing_the_appearance">Customizing the appearance</h3>
+### Customizing the appearance
 
-<p>Now let's apply some CSS to customize the appearance of the disclosure box.</p>
+Now let's apply some CSS to customize the appearance of the disclosure box.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">details {
+```css
+details {
   font: 16px "Open Sans", "Arial", sans-serif;
   width: 620px;
 }
 
-details &gt; summary {
+details > summary {
   padding: 2px 6px;
   width: 15em;
   background-color: #ddd;
@@ -160,47 +161,50 @@ details &gt; summary {
   box-shadow: 3px 3px 4px black;
 }
 
-details &gt; p {
+details > p {
   border-radius: 0 0 10px 10px;
   background-color: #ddd;
   padding: 2px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
-</pre>
+```
 
-<p>This CSS creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents.</p>
+This CSS creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Customizing_the_appearance", 650, 150)}}</p>
+{{EmbedLiveSample("Customizing_the_appearance", 650, 150)}}
 
-<h3 id="自定义自带部件的样式">自定义自带部件的样式</h3>
+### 自定义自带部件的样式
 
-<p>自带的三角形可以自定义，但并没有得到广泛支持。由于该元素是标准化的，因此在实验性实施阶段，浏览器如何支持此自定义项有所不同，我们不得不暂时使用多种方法。</p>
+自带的三角形可以自定义，但并没有得到广泛支持。由于该元素是标准化的，因此在实验性实施阶段，浏览器如何支持此自定义项有所不同，我们不得不暂时使用多种方法。
 
-<p>{{HTMLElement("summary")}} 元素支持 {{cssxref("list-style")}}缩写属性或者完全属性，比如{{cssxref("list-style-type")}}，可以使用它们任意改变三角（通常是使用{{cssxref("list-style-image")}}）。例如，我们可以使用<code>list-style: none</code>移除三角形。</p>
+{{HTMLElement("summary")}} 元素支持 {{cssxref("list-style")}}缩写属性或者完全属性，比如{{cssxref("list-style-type")}}，可以使用它们任意改变三角（通常是使用{{cssxref("list-style-image")}}）。例如，我们可以使用`list-style: none`移除三角形。
 
-<p>Chrome 尚不支持此功能，因此我们还需要使用其非标准<code>::-webkit-details-marker</code><a href="/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a>来自定义。</p>
+Chrome 尚不支持此功能，因此我们还需要使用其非标准`::-webkit-details-marker`[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)来自定义。
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">details {
+```css
+details {
   font: 16px "Open Sans", "Arial", sans-serif;
   width: 620px;
 }
 
-details &gt; summary {
+details > summary {
   padding: 2px 6px;
   width: 15em;
   background-color: #ddd;
@@ -209,47 +213,45 @@ details &gt; summary {
   list-style: none;
 }
 
-details &gt; summary::-webkit-details-marker {
+details > summary::-webkit-details-marker {
   display: none;
 }
 
-details &gt; p {
+details > p {
   border-radius: 0 0 10px 10px;
   background-color: #ddd;
   padding: 2px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
-</pre>
+```
 
-<p>该 CSS 的外观类似于选项卡界面，在该界面中，激活选项卡将展开并打开它以显示其内容。</p>
+该 CSS 的外观类似于选项卡界面，在该界面中，激活选项卡将展开并打开它以显示其内容。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}</p>
+{{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("html.elements.details")}}
 
+## 参见
 
-<p>{{Compat("html.elements.details")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{HTMLElement("summary")}}</li>
-</ul>
+- {{HTMLElement("summary")}}

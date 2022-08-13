@@ -12,1112 +12,861 @@ tags:
   - Web
 translation_of: Web/HTML/Element/input
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;input&gt;</code> 元素</strong>用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent", "用户代理")}}。</p>
+**HTML `<input>` 元素**用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent", "用户代理")}}。
 
-<p>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
-   <td>流式元素；短语元素；交互元素（若 type 属性不处于隐藏 <code>hidden</code>状态）；表单相关内容、可列举的元素、可标签的元素、可提交的元素、可重置的元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>无，这是一个{{Glossary("empty element","空元素")}}。</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>
-    <p>必须有开始标签但不必有结束标签。</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">允许的祖先元素</th>
-   <td>任何元素都可以包含语句型元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的无障碍网络应用</th>
-   <td>
-    <ul>
-     <li><code>type=button</code>：{{ARIARole("link")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}</li>
-     <li><code>type=checkbox</code>：{{ARIARole("button")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("option")}}, {{ARIARole("switch")}}</li>
-     <li><code>type=image</code>：{{ARIARole("link")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}</li>
-     <li><code>type=radio</code>：{{ARIARole("menuitemradio")}}</li>
-     <li><code>type=color|date|datetime|datetime-local|email|file</code>：None</li>
-     <li><code>type=hidden|month|number|password|range|research</code>：None</li>
-     <li><code>type=search|submit|tel|text|url|week</code>：None</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLInputElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/HTML/Content_categories">内容分类</a>
+      </th>
+      <td>
+        流式元素；短语元素；交互元素（若 type 属性不处于隐藏
+        <code>hidden</code
+        >状态）；表单相关内容、可列举的元素、可标签的元素、可提交的元素、可重置的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        无，这是一个{{Glossary("empty element","空元素")}}。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td><p>必须有开始标签但不必有结束标签。</p></td>
+    </tr>
+    <tr>
+      <th scope="row">允许的祖先元素</th>
+      <td>任何元素都可以包含语句型元素。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的无障碍网络应用</th>
+      <td>
+        <ul>
+          <li>
+            <code>type=button</code>：{{ARIARole("link")}},
+            {{ARIARole("menuitem")}},
+            {{ARIARole("menuitemcheckbox")}},
+            {{ARIARole("menuitemradio")}},
+            {{ARIARole("radio")}}, {{ARIARole("switch")}},
+            {{ARIARole("tab")}}
+          </li>
+          <li>
+            <code>type=checkbox</code>：{{ARIARole("button")}},
+            {{ARIARole("menuitemcheckbox")}},
+            {{ARIARole("option")}}, {{ARIARole("switch")}}
+          </li>
+          <li>
+            <code>type=image</code>：{{ARIARole("link")}},
+            {{ARIARole("menuitem")}},
+            {{ARIARole("menuitemcheckbox")}},
+            {{ARIARole("menuitemradio")}},
+            {{ARIARole("radio")}}, {{ARIARole("switch")}}
+          </li>
+          <li>
+            <code>type=radio</code>：{{ARIARole("menuitemradio")}}
+          </li>
+          <li>
+            <code>type=color|date|datetime|datetime-local|email|file</code
+            >：None
+          </li>
+          <li>
+            <code>type=hidden|month|number|password|range|research</code>：None
+          </li>
+          <li><code>type=search|submit|tel|text|url|week</code>：None</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLInputElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="&lt;input>_types"><code>&lt;input&gt;</code> types</h2>
+## `<input>` types
 
-<p><code>&lt;input&gt;</code> 的工作方式相当程度上取决于 {{htmlattrxref("type", "input")}} 属性的值，不同的 type 值会在各自的参考页中进行介绍。如果未指定此属性，则采用的默认类型为 <code>text</code>。</p>
+`<input>` 的工作方式相当程度上取决于 {{htmlattrxref("type", "input")}} 属性的值，不同的 type 值会在各自的参考页中进行介绍。如果未指定此属性，则采用的默认类型为 `text`。
 
-<p>可用的值包括：</p>
+可用的值包括：
 
 <table class="standard-table">
- <colgroup>
-  <col>
-  <col style="width: 50%;">
-  <col>
- </colgroup>
- <thead>
-  <tr>
-   <th>Type</th>
-   <th>描述</th>
-   <th>基础例子</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{HTMLElement("input/button", "button")}}</td>
-   <td>没有默认行为的按钮，上面显示 <a href="#attr-value">value</a> 属性的值，默认为空。</td>
-   <td id="examplebutton">
-    <pre class="brush: html hidden">
-&lt;input type="button" name="button" /&gt;
-    </pre>
-    {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/checkbox", "checkbox")}}</td>
-   <td>复选框，可设为选中或未选中。</td>
-   <td id="examplecheckbox">
-    <pre class="brush: html hidden">
-&lt;input type="checkbox" name="checkbox"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/color", "color")}}</td>
-   <td>用于指定颜色的控件；在支持的浏览器中，激活时会打开取色器。</td>
-   <td id="examplecolor">
-    <pre class="brush: html hidden">
-&lt;input type="color" name="color"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/date", "date")}}</td>
-   <td>输入日期的控件（年、月、日，不包括时间）。在支持的浏览器激活时打开日期选择器或年月日的数字滚轮。</td>
-   <td id="exampledate">
-    <pre class="brush: html hidden">
-&lt;input type="date" name="date"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/datetime-local", "datetime-local")}}</td>
-   <td>输入日期和时间的控件，不包括时区。在支持的浏览器激活时打开日期选择器或年月日的数字滚轮。</td>
-   <td id="exampledtl">
-    <pre class="brush: html hidden">
-&lt;input type="datetime-local" name="datetime-local"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/email", "email")}}</td>
-   <td>编辑邮箱地址的区域。类似 <code>text</code> 输入，但在支持的浏览器和带有动态键盘的设备上会有确认参数和相应的键盘。</td>
-   <td id="exampleemail">
-    <pre class="brush: html hidden">
-&lt;input type="email" name="email"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampleemail",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/file", "file")}}</td>
-   <td>让用户选择文件的控件。使用 <a href="#attr-accept">accept</a> 属性规定控件能选择的文件类型。</td>
-   <td id="examplefile">
-    <pre class="brush: html hidden">
-&lt;input type="file" accept="image/*, text/*" name="file"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplefile",'100%',55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/hidden", "hidden")}}</td>
-   <td>不显示的控件，其值仍会提交到服务器。举个例子，右边就是一个隐形的控件。</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/image", "image")}}</td>
-   <td>带图像的 <code>submit</code> 按钮。显示的图像由 <code>src</code> 属性规定。如果 <a href="#attr-src">src</a> 缺失，<a href="#attr-alt">alt</a> 属性就会显示。</td>
-   <td id="exampleimage">
-    <pre class="brush: html hidden">
-&lt;input type="image" name="image" src="" alt="image input"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/month", "month")}}</td>
-   <td>输入年和月的控件，没有时区。</td>
-   <td id="examplemonth">
-    <pre class="brush: html hidden">
-&lt;input type="month" name="month"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/number", "number")}}</td>
-   <td>用于输入数字的控件。如果支持的话，会显示滚动按钮并提供缺省验证（即只能输入数字）。拥有动态键盘的设备上会显示数字键盘。</td>
-   <td id="examplenumber">
-    <pre class="brush: html hidden">
-&lt;input type="number" name="number"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}</td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/password", "password")}}</td>
-   <td>单行的文本区域，其值会被遮盖。如果站点不安全，会警告用户。</td>
-   <td id="examplepassword">
-    <pre class="brush: html hidden">
-&lt;input type="password" name="password"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/radio", "radio")}}</td>
-   <td>单选按钮，允许在多个拥有相同 <a href="#attr-name">name</a> 值的选项中选中其中一个。</td>
-   <td id="exampleradio">
-    <pre class="brush: html hidden">
-&lt;input type="radio" name="radio"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampleradio",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/range", "range")}}</td>
-   <td>此控件用于输入不需要精确的数字。控件是一个范围组件，默认值为正中间的值。同时使用 <a href="#attr-min">min</a> 和 <a href="#attr-max">max</a> 来规定值的范围。</td>
-   <td id="examplerange">
-    <pre class="brush: html hidden">
-&lt;input type="range" name="range" min="0" max="25"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/reset", "reset")}}</td>
-   <td>此按钮将表单的所有内容重置为默认值。不推荐。</td>
-   <td id="examplereset">
-    <pre class="brush: html hidden">
-&lt;input type="reset" name="reset"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/search", "search")}}</td>
-   <td>用于搜索字符串的单行文字区域。输入文本中的换行会被自动去除。在支持的浏览器中可能有一个删除按钮，用于清除整个区域。拥有动态键盘的设备上的回车图标会变成搜索图标。</td>
-   <td id="examplesearch">
-    <pre class="brush: html hidden">
-&lt;input type="search" name="search"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/submit", "submit")}}</td>
-   <td>用于提交表单的按钮。</td>
-   <td id="examplesubmit">
-    <pre class="brush: html hidden">
-&lt;input type="submit" name="submit"/&gt;
-    </pre>
-    {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/tel", "tel")}}</td>
-   <td>用于输入电话号码的控件。拥有动态键盘的设备上会显示电话数字键盘。</td>
-   <td id="exampletel">
-    <pre class="brush: html hidden">
-&lt;input type="tel" name="tel"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/text", "text")}}</td>
-   <td>默认值。单行的文本区域，输入中的换行会被自动去除。</td>
-   <td id="exampletext">
-    <pre class="brush: html hidden">
-&lt;input type="text" name="text"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampletext",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/time", "time")}}</td>
-   <td>用于输入时间的控件，不包括时区。</td>
-   <td id="exampletime">
-    <pre class="brush: html hidden">
-&lt;input type="time" name="time"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/url", "url")}}</td>
-   <td>
-    <p>用于输入 URL 的控件。类似 <code>text</code> 输入，但有验证参数，在支持动态键盘的设备上有相应的键盘。</p>
-   </td>
-   <td id="exampleurl">
-    <pre class="brush: html hidden">
-&lt;input type="url" name="url"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampleurl",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/week", "week")}}</td>
-   <td>用于输入以年和周数组成的日期，不带时区。</td>
-   <td id="exampleweek">
-    <pre class="brush: html hidden">
-&lt;input type="week" name="week"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}
-   </td>
-  </tr>
-  <tr>
-   <th colspan="3">废弃的值</th>
-  </tr>
-  <tr>
-   <td>{{HTMLElement("input/datetime", "datetime")}}</td>
-   <td>{{deprecated_inline}} 用于输入基于 UTC 时区的日期和时间（时、分、秒及秒的小数部分）。</td>
-   <td id="exampledatetime">
-    <pre class="brush: html hidden">
-&lt;input type="datetime" name="datetime"/&gt;
-    </pre>
-    {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}
-   </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="属性">属性</h2>
-
-<p><code>&lt;input&gt;</code> 元素由于拥有诸多属性而异常强大，其中前文举例说明的 {{htmlattrxref("type", "input")}} 属性尤其重要。由于所有 <code>&lt;input&gt;</code> 元素，无论是哪种 <code>type</code>，都基于 {{domxref("HTMLInputElement")}} 接口，所以理论上说，它们共享一套相同的属性。但实际上大部分属性只作用于特定一组 <code>type</code>。此外，一些属性作用于 <code>&lt;input&gt;</code> 的方式取决于 <code>&lt;input&gt;</code> 的 <code>type</code> 属性，不同的 <code>type</code> 有不同的效果。</p>
-
-<p>下面的表格列出了所有属性，每个属性都有简短的描述。表格后的列表更详细地描述了各个属性及它们与哪些 <code>&lt;input&gt;</code> <code>type</code> 相关。与大部分或者全部 <code>&lt;input&gt;</code> <code>type</code> 都相关的属性会讲述更多细节。一些针对特定 <code>&lt;input&gt;</code> <code>type</code> 的属性，或者所有 <code>&lt;input&gt;</code> <code>type</code> 都有，但在特定的 <code>&lt;input&gt;</code> <code>type</code> 上有特定表现的属性，会在相应的 <code>type</code> 页面中说明。这个元素包含全局属性，一些针对 <code>&lt;input&gt;</code> 元素有额外意义的全局属性也会特别说明。</p>
-
-<table>
- <caption>
- <p>{{htmlelement('input')}} 元素的属性包括<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局 HTML 属性</a>和以下属性：</p>
-
- <table>
+  <colgroup>
+    <col />
+    <col style="width: 50%" />
+    <col />
+  </colgroup>
   <thead>
-   <tr>
-    <th scope="col">属性</th>
-    <th scope="col">相关的 type</th>
-    <th scope="col">描述</th>
-   </tr>
+    <tr>
+      <th>Type</th>
+      <th>描述</th>
+      <th>基础例子</th>
+    </tr>
   </thead>
   <tbody>
-   <tr>
-    <td><a href="#attr-accept">accept</a></td>
-    <td>file</td>
-    <td>用于规定文件上传控件中期望的文件类型</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-alt">alt</a></td>
-    <td>image</td>
-    <td>image type 的 alt 属性，是可访问性的要求。</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-autocomplete">autocomplete</a></td>
-    <td>所有</td>
-    <td>用于表单的自动填充功能</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-autofocus">autofocus</a></td>
-    <td>所有</td>
-    <td>页面加载时自动聚焦到此表单控件</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-capture">capture</a></td>
-    <td>file</td>
-    <td>文件上传控件中媒体拍摄的方式</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-checked">checked</a></td>
-    <td>radio、checkbox</td>
-    <td>用于控制控件是否被选中</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-dirname">dirname</a></td>
-    <td>text、search</td>
-    <td>表单区域的一个名字，用于在提交表单时发送元素的方向性</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-disabled">disabled</a></td>
-    <td>所有</td>
-    <td>表单控件是否被禁用</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-form">form</a></td>
-    <td>所有</td>
-    <td>将控件和一个 form 元素联系在一起</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-formaction">formaction</a></td>
-    <td>image、submit</td>
-    <td>用于提交表单的 URL</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-formenctype">formenctype</a></td>
-    <td>image、submit</td>
-    <td>表单数据集的编码方式，用于表单提交</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-formmethod">formmethod</a></td>
-    <td>image、submit</td>
-    <td>用于表单提交的 HTTP 方法 </td>
-   </tr>
-   <tr>
-    <td><a href="#attr-formnovalidate">formnovalidate</a></td>
-    <td>image、submit</td>
-    <td>提交表单时绕过对表单控件的验证</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-formtarget">formtarget</a></td>
-    <td>image、submit</td>
-    <td>表单提交的浏览上下文</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-height">height</a></td>
-    <td>image</td>
-    <td>
-     <p>和 {{htmlelement('img')}} 的 <code>height</code> 属性相同；垂直方向</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#attr-list">list</a></td>
-    <td>绝大部分</td>
-    <td>自动填充选项的 {{htmlelement('datalist')}} 的 id 值</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-max">max</a></td>
-    <td>数字 type</td>
-    <td>最大值</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-maxlength">maxlength</a></td>
-    <td>password、search、tel、text、url</td>
-    <td><code>value</code> 的最大长度（最多字符数目）</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-min">min</a></td>
-    <td>数字 type</td>
-    <td>最小值</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-minlength">minlength</a></td>
-    <td>password、search、tel、text、url</td>
-    <td><code>value</code> 的最小长度（最少字符数目）</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-multiple">multiple</a></td>
-    <td>email、file</td>
-    <td>布尔值。是否允许多个值</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-name">name</a></td>
-    <td>所有</td>
-    <td>input 表单控件的名字。以名字/值对的形式随表单一起提交</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-pattern">pattern</a></td>
-    <td>password、text、tel</td>
-    <td>匹配有效 <code>value</code> 的模式（pattern）</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-placeholder">placeholder</a></td>
-    <td>password、search、tel、text、url</td>
-    <td>当表单控件为空时，控件中显示的内容</td>
-   </tr>
-   <tr>
-    <td><a href="/zh-CN/docs/Web/HTML/Attributes/readonly">readonly</a></td>
-    <td>绝大部分</td>
-    <td>布尔值。存在时表示控件的值不可编辑</td>
-   </tr>
-   <tr>
-    <td><a href="/zh-CN/docs/Web/HTML/Attributes/required">required</a></td>
-    <td>绝大部分</td>
-    <td>布尔值。表示此值为必填项或者提交表单前必须先检查该值</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-size">size</a></td>
-    <td>email、password、tel、text</td>
-    <td>控件的大小</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-src">src</a></td>
-    <td>image</td>
-    <td>和 {{htmlelement('img')}} 的 <code>src</code> 属性一样；图像资源的地址</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-step">step</a></td>
-    <td>数字 type</td>
-    <td>有效的递增值</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-type">type</a></td>
-    <td>所有</td>
-    <td>input 表单控件的 type</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-value">value</a></td>
-    <td>所有</td>
-    <td>表单控件的值。以名字/值对的形式随表单一起提交</td>
-   </tr>
-   <tr>
-    <td><a href="#attr-width">width</a></td>
-    <td>image</td>
-    <td>与 {{htmlelement('img')}} 的 <code>width</code> 属性一样</td>
-   </tr>
+    <tr>
+      <td>{{HTMLElement("input/button", "button")}}</td>
+      <td>
+        没有默认行为的按钮，上面显示
+        <a href="#attr-value">value</a> 属性的值，默认为空。
+      </td>
+      <td id="examplebutton">
+        <pre class="brush: html hidden">
+&#x3C;input type="button" name="button" />
+    </pre
+        >
+        {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/checkbox", "checkbox")}}</td>
+      <td>复选框，可设为选中或未选中。</td>
+      <td id="examplecheckbox">
+        <pre class="brush: html hidden">
+&#x3C;input type="checkbox" name="checkbox"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/color", "color")}}</td>
+      <td>用于指定颜色的控件；在支持的浏览器中，激活时会打开取色器。</td>
+      <td id="examplecolor">
+        <pre class="brush: html hidden">
+&#x3C;input type="color" name="color"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/date", "date")}}</td>
+      <td>
+        输入日期的控件（年、月、日，不包括时间）。在支持的浏览器激活时打开日期选择器或年月日的数字滚轮。
+      </td>
+      <td id="exampledate">
+        <pre class="brush: html hidden">
+&#x3C;input type="date" name="date"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{HTMLElement("input/datetime-local", "datetime-local")}}
+      </td>
+      <td>
+        输入日期和时间的控件，不包括时区。在支持的浏览器激活时打开日期选择器或年月日的数字滚轮。
+      </td>
+      <td id="exampledtl">
+        <pre class="brush: html hidden">
+&#x3C;input type="datetime-local" name="datetime-local"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/email", "email")}}</td>
+      <td>
+        编辑邮箱地址的区域。类似
+        <code>text</code>
+        输入，但在支持的浏览器和带有动态键盘的设备上会有确认参数和相应的键盘。
+      </td>
+      <td id="exampleemail">
+        <pre class="brush: html hidden">
+&#x3C;input type="email" name="email"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampleemail",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/file", "file")}}</td>
+      <td>
+        让用户选择文件的控件。使用
+        <a href="#attr-accept">accept</a> 属性规定控件能选择的文件类型。
+      </td>
+      <td id="examplefile">
+        <pre class="brush: html hidden">
+&#x3C;input type="file" accept="image/*, text/*" name="file"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplefile",'100%',55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/hidden", "hidden")}}</td>
+      <td>
+        不显示的控件，其值仍会提交到服务器。举个例子，右边就是一个隐形的控件。
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/image", "image")}}</td>
+      <td>
+        带图像的 <code>submit</code> 按钮。显示的图像由
+        <code>src</code> 属性规定。如果 <a href="#attr-src">src</a> 缺失，<a
+          href="#attr-alt"
+          >alt</a
+        >
+        属性就会显示。
+      </td>
+      <td id="exampleimage">
+        <pre class="brush: html hidden">
+&#x3C;input type="image" name="image" src="" alt="image input"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/month", "month")}}</td>
+      <td>输入年和月的控件，没有时区。</td>
+      <td id="examplemonth">
+        <pre class="brush: html hidden">
+&#x3C;input type="month" name="month"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/number", "number")}}</td>
+      <td>
+        用于输入数字的控件。如果支持的话，会显示滚动按钮并提供缺省验证（即只能输入数字）。拥有动态键盘的设备上会显示数字键盘。
+      </td>
+      <td id="examplenumber">
+        <pre class="brush: html hidden">
+&#x3C;input type="number" name="number"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/password", "password")}}</td>
+      <td>单行的文本区域，其值会被遮盖。如果站点不安全，会警告用户。</td>
+      <td id="examplepassword">
+        <pre class="brush: html hidden">
+&#x3C;input type="password" name="password"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/radio", "radio")}}</td>
+      <td>
+        单选按钮，允许在多个拥有相同
+        <a href="#attr-name">name</a> 值的选项中选中其中一个。
+      </td>
+      <td id="exampleradio">
+        <pre class="brush: html hidden">
+&#x3C;input type="radio" name="radio"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampleradio",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/range", "range")}}</td>
+      <td>
+        此控件用于输入不需要精确的数字。控件是一个范围组件，默认值为正中间的值。同时使用
+        <a href="#attr-min">min</a> 和
+        <a href="#attr-max">max</a> 来规定值的范围。
+      </td>
+      <td id="examplerange">
+        <pre class="brush: html hidden">
+&#x3C;input type="range" name="range" min="0" max="25"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/reset", "reset")}}</td>
+      <td>此按钮将表单的所有内容重置为默认值。不推荐。</td>
+      <td id="examplereset">
+        <pre class="brush: html hidden">
+&#x3C;input type="reset" name="reset"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/search", "search")}}</td>
+      <td>
+        用于搜索字符串的单行文字区域。输入文本中的换行会被自动去除。在支持的浏览器中可能有一个删除按钮，用于清除整个区域。拥有动态键盘的设备上的回车图标会变成搜索图标。
+      </td>
+      <td id="examplesearch">
+        <pre class="brush: html hidden">
+&#x3C;input type="search" name="search"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/submit", "submit")}}</td>
+      <td>用于提交表单的按钮。</td>
+      <td id="examplesubmit">
+        <pre class="brush: html hidden">
+&#x3C;input type="submit" name="submit"/>
+    </pre
+        >
+        {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/tel", "tel")}}</td>
+      <td>用于输入电话号码的控件。拥有动态键盘的设备上会显示电话数字键盘。</td>
+      <td id="exampletel">
+        <pre class="brush: html hidden">
+&#x3C;input type="tel" name="tel"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/text", "text")}}</td>
+      <td>默认值。单行的文本区域，输入中的换行会被自动去除。</td>
+      <td id="exampletext">
+        <pre class="brush: html hidden">
+&#x3C;input type="text" name="text"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampletext",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/time", "time")}}</td>
+      <td>用于输入时间的控件，不包括时区。</td>
+      <td id="exampletime">
+        <pre class="brush: html hidden">
+&#x3C;input type="time" name="time"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/url", "url")}}</td>
+      <td>
+        <p>
+          用于输入 URL 的控件。类似
+          <code>text</code>
+          输入，但有验证参数，在支持动态键盘的设备上有相应的键盘。
+        </p>
+      </td>
+      <td id="exampleurl">
+        <pre class="brush: html hidden">
+&#x3C;input type="url" name="url"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampleurl",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/week", "week")}}</td>
+      <td>用于输入以年和周数组成的日期，不带时区。</td>
+      <td id="exampleweek">
+        <pre class="brush: html hidden">
+&#x3C;input type="week" name="week"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}
+      </td>
+    </tr>
+    <tr>
+      <th colspan="3">废弃的值</th>
+    </tr>
+    <tr>
+      <td>{{HTMLElement("input/datetime", "datetime")}}</td>
+      <td>
+        {{deprecated_inline}} 用于输入基于 UTC
+        时区的日期和时间（时、分、秒及秒的小数部分）。
+      </td>
+      <td id="exampledatetime">
+        <pre class="brush: html hidden">
+&#x3C;input type="datetime" name="datetime"/>
+    </pre
+        >
+        {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}
+      </td>
+    </tr>
   </tbody>
- </table>
- </caption>
 </table>
 
-<p>一些额外的非标准属性会在标准属性后面列出。</p>
+## 属性
 
-<h3 id="属性各论">属性各论</h3>
+`<input>` 元素由于拥有诸多属性而异常强大，其中前文举例说明的 {{htmlattrxref("type", "input")}} 属性尤其重要。由于所有 `<input>` 元素，无论是哪种 `type`，都基于 {{domxref("HTMLInputElement")}} 接口，所以理论上说，它们共享一套相同的属性。但实际上大部分属性只作用于特定一组 `type`。此外，一些属性作用于 `<input>` 的方式取决于 `<input>` 的 `type` 属性，不同的 `type` 有不同的效果。
 
-<dl>
- <dt>{{ htmlattrdef("accept") }}</dt>
- <dd>如果该元素的 <strong>type</strong> 属性的值是 <code>file</code>，则该属性表明了服务器端可接受的文件类型；否则它将被忽略。该属性的值必须为一个逗号分割的列表，包含了多个唯一的内容类型声明：
- <ul>
-  <li>以 STOP 字符 (U+002E) 开始的文件扩展名。（例如：".jpg,.png,.doc"）</li>
-  <li>一个有效的 MIME 类型，但没有扩展名</li>
-  <li><code>audio/*</code> 表示音频文件</li>
-  <li><code>video/*</code> 表示视频文件</li>
-  <li><code>image/*</code> 表示图片文件</li>
- </ul>
- </dd>
- <dt>{{ htmlattrdef("accesskey") }} {{Deprecated_Inline}}</dt>
- <dd>用户按下后可以获得此控件焦点的单个字符。这是 HTML5 全局属性。</dd>
- <dt>{{ htmlattrdef("autocomplete") }}</dt>
- <dd>这个属性表示这个控件的值是否可被浏览器自动填充。如果 <strong>type</strong> 属性的值是 hidden、checkbox、radio、file，或为按钮类型（button、submit、reset、image），则本属性被忽略。可用的值是：
- <ul>
-  <li><code>off</code>：用户必须手动填值，或者该页面提供了自己的自动补全方法。浏览器不对此字段自动填充。</li>
-  <li><code>on</code>：浏览器可以根据用户先前的填表情况对此字段自动填值。</li>
-  <li><code>name</code>：完整的姓名</li>
-  <li><code>honorific-prefix</code>：Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle")</li>
-  <li><code>given-name</code>：名</li>
-  <li><code>additional-name</code></li>
-  <li><code>family-name</code>：姓</li>
-  <li><code>honorific-suffix</code>：Suffix (e.g. "Jr.", "B.Sc.", "MBASW", "II")</li>
-  <li><code>nickname</code></li>
-  <li><code>email</code></li>
-  <li><code>username</code></li>
-  <li><code>new-password</code>：新密码（如创建帐号或更改密码时使用）</li>
-  <li><code>current-password</code></li>
-  <li><code>organization-title</code>：Job title (e.g. "Software Engineer", "Senior Vice President", "Deputy Managing Director")</li>
-  <li><code>organization</code></li>
-  <li><code>street-address</code></li>
-  <li><code>address-line1</code>、<code>address-line2</code>、<code>address-line3</code>、<code>address-level4</code>、<code>address-level3</code>、<code>address-level2</code>、<code>address-level1</code></li>
-  <li><code>country</code></li>
-  <li><code>country-name</code></li>
-  <li><code>postal-code</code></li>
-  <li><code>cc-name</code>：Full name as given on the payment instrument</li>
-  <li><code>cc-given-name</code></li>
-  <li><code>cc-additional-name</code></li>
-  <li><code>cc-family-name</code></li>
-  <li><code>cc-number</code>：Code identifying the payment instrument (e.g. the credit card number)</li>
-  <li><code>cc-exp</code>：Expiration date of the payment instrument</li>
-  <li><code>cc-exp-month</code></li>
-  <li><code>cc-exp-year</code></li>
-  <li><code>cc-csc</code>：Security code for the payment instrument </li>
-  <li><code>cc-type</code>：Type of payment instrument (e.g. Visa)</li>
-  <li><code>transaction-currency</code></li>
-  <li><code>transaction-amount</code></li>
-  <li><code>language</code>：Preferred language; Valid BCP 47 language tag</li>
-  <li><code>bday</code></li>
-  <li><code>bday-day</code></li>
-  <li><code>bday-month</code></li>
-  <li><code>bday-year</code></li>
-  <li><code>sex</code>：Gender identity (e.g. Female, Fa'afafine); Free-form text, no newlines</li>
-  <li><code>tel</code></li>
-  <li><code>url</code>：Home page or other Web page corresponding to the company, person, address, or contact information in the other fields associated with this field</li>
-  <li><code>photo</code>：Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field</li>
-  <li>
-   <p>参考 <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">WHATWG 标准</a> 获取更多详细内容。</p>
-  </li>
- </ul>
+下面的表格列出了所有属性，每个属性都有简短的描述。表格后的列表更详细地描述了各个属性及它们与哪些 `<input>` `type` 相关。与大部分或者全部 `<input>` `type` 都相关的属性会讲述更多细节。一些针对特定 `<input>` `type` 的属性，或者所有 `<input>` `type` 都有，但在特定的 `<input>` `type` 上有特定表现的属性，会在相应的 `type` 页面中说明。这个元素包含全局属性，一些针对 `<input>` 元素有额外意义的全局属性也会特别说明。
 
- <p>如果 <code>&lt;input&gt;</code> 元素上没有 <strong>autocomplete</strong> 属性，浏览器可使用包含该 input 元素的表单（<code>&lt;form&gt;</code>）或通过 input 的 <strong>form</strong> 属性指定的表单的 <strong>autocomplete</strong> 属性值。更多信息请参见 {{ HTMLElement("form") }} 的 <code>autocomplete</code> 属性。</p>
+一些额外的非标准属性会在标准属性后面列出。
 
- <p>与其他浏览器不同，<strong>autocomplete</strong> 还控制着 Firefox 浏览器对 &lt;input&gt; 持久化动态禁用状态和（如果适用）跨页面加载的动态检查。持久化特性默认是开启的。设置 <strong>autocomplete</strong> 的值为 <strong>off</strong> 可以关闭该特性。即使 autocomplete 属性通常不应用于 &lt;input&gt; 的 type，它也可以工作。具体可以查看 {{bug(654072)}}。</p>
- </dd>
- <dt>{{ htmlattrdef("autofocus") }}</dt>
- <dd>这个布尔属性允许您指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。文档中只有一个表单元素可以具有 autofocus 属性，它是一个布尔值。 如果 type 属性设置为隐藏则不能应用（即您不能自动获得焦点的属性设置为隐藏的控件）。</dd>
- <dt>{{htmlattrdef("capture")}}</dt>
- <dd>
- <p>Introduced in the HTML Media Capture specification and valid for the <code>file</code> input type only, the <code>capture</code> attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with <code>file</code> upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.</p>
- </dd>
- <dt>{{ htmlattrdef("checked") }}</dt>
- <dd>如果该元素的 <strong>type</strong> 属性的值为 radio 或者 checkbox，则该布尔属性的存在与否表明了该控件是否是默认选择状态。
- <p>If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="/zh-CN/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
+### 属性各论
 
- <div class="note">
- <p><strong>Note:</strong> Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently <code>checked</code>. If they are, the name and the value(s) of the checked controls are submitted.</p>
+- {{ htmlattrdef("accept") }}
+  - : 如果该元素的 **type** 属性的值是 `file`，则该属性表明了服务器端可接受的文件类型；否则它将被忽略。该属性的值必须为一个逗号分割的列表，包含了多个唯一的内容类型声明：
 
- <p>For example, if a checkbox whose <code>name</code> is <code>fruit</code> has a <code>value</code> of <code>cherry</code>, and the checkbox is checked, the form data submitted will include <code>fruit=cherry</code>. If the checkbox isn't active, it isn't listed in the form data at all. The default <code>value</code> for checkboxes and radio buttons is <code>on</code>.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("dirname")}}</dt>
- <dd>
- <p>Valid for <code>text</code> and <code>search</code> input types only, the <code>dirname</code> attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the <a href="#attr-name">name</a> and <a href="#attr-value">value</a>, the second being the value of the <code>dirname</code> as the name with the value of <code>ltr</code> or <code>rtl</code> being set by the browser.</p>
+    - 以 STOP 字符 (U+002E) 开始的文件扩展名。（例如：".jpg,.png,.doc"）
+    - 一个有效的 MIME 类型，但没有扩展名
+    - `audio/*` 表示音频文件
+    - `video/*` 表示视频文件
+    - `image/*` 表示图片文件
+- {{ htmlattrdef("accesskey") }} {{Deprecated_Inline}}
+  - : 用户按下后可以获得此控件焦点的单个字符。这是 HTML5 全局属性。
+- {{ htmlattrdef("autocomplete") }}
+  - : 这个属性表示这个控件的值是否可被浏览器自动填充。如果 **type** 属性的值是 hidden、checkbox、radio、file，或为按钮类型（button、submit、reset、image），则本属性被忽略。可用的值是：
 
- <pre><code>&lt;form action="page.html" method="post"&gt;
-  &lt;label&gt;Fruit: &lt;input type="text" name="fruit" dirname="fruit.dir" value="cherry"&gt;&lt;/label&gt;
-  &lt;input type="submit"/&gt;
-&lt;/form&gt;
-&lt;!-- page.html?fruit=cherry&amp;fruit.dir=ltr --&gt;</code>
-</pre>
+    - `off`：用户必须手动填值，或者该页面提供了自己的自动补全方法。浏览器不对此字段自动填充。
+    - `on`：浏览器可以根据用户先前的填表情况对此字段自动填值。
+    - `name`：完整的姓名
+    - `honorific-prefix`：Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle")
+    - `given-name`：名
+    - `additional-name`
+    - `family-name`：姓
+    - `honorific-suffix`：Suffix (e.g. "Jr.", "B.Sc.", "MBASW", "II")
+    - `nickname`
+    - `email`
+    - `username`
+    - `new-password`：新密码（如创建帐号或更改密码时使用）
+    - `current-password`
+    - `organization-title`：Job title (e.g. "Software Engineer", "Senior Vice President", "Deputy Managing Director")
+    - `organization`
+    - `street-address`
+    - `address-line1`、`address-line2`、`address-line3`、`address-level4`、`address-level3`、`address-level2`、`address-level1`
+    - `country`
+    - `country-name`
+    - `postal-code`
+    - `cc-name`：Full name as given on the payment instrument
+    - `cc-given-name`
+    - `cc-additional-name`
+    - `cc-family-name`
+    - `cc-number`：Code identifying the payment instrument (e.g. the credit card number)
+    - `cc-exp`：Expiration date of the payment instrument
+    - `cc-exp-month`
+    - `cc-exp-year`
+    - `cc-csc`：Security code for the payment instrument
+    - `cc-type`：Type of payment instrument (e.g. Visa)
+    - `transaction-currency`
+    - `transaction-amount`
+    - `language`：Preferred language; Valid BCP 47 language tag
+    - `bday`
+    - `bday-day`
+    - `bday-month`
+    - `bday-year`
+    - `sex`：Gender identity (e.g. Female, Fa'afafine); Free-form text, no newlines
+    - `tel`
+    - `url`：Home page or other Web page corresponding to the company, person, address, or contact information in the other fields associated with this field
+    - `photo`：Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field
+    - 参考 [WHATWG 标准](https://html.spec.whatwg.org/multipage/forms.html#autofill) 获取更多详细内容。如果 `<input>` 元素上没有 **autocomplete** 属性，浏览器可使用包含该 input 元素的表单（`<form>`）或通过 input 的 **form** 属性指定的表单的 **autocomplete** 属性值。更多信息请参见 {{ HTMLElement("form") }} 的 `autocomplete` 属性。与其他浏览器不同，**autocomplete** 还控制着 Firefox 浏览器对 \<input> 持久化动态禁用状态和（如果适用）跨页面加载的动态检查。持久化特性默认是开启的。设置 **autocomplete** 的值为 **off** 可以关闭该特性。即使 autocomplete 属性通常不应用于 \<input> 的 type，它也可以工作。具体可以查看 {{bug(654072)}}。
+- {{ htmlattrdef("autofocus") }}
+  - : 这个布尔属性允许您指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。文档中只有一个表单元素可以具有 autofocus 属性，它是一个布尔值。 如果 type 属性设置为隐藏则不能应用（即您不能自动获得焦点的属性设置为隐藏的控件）。
+- {{htmlattrdef("capture")}}
+  - : Introduced in the HTML Media Capture specification and valid for the `file` input type only, the `capture` attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with `file` upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.
+- {{ htmlattrdef("checked") }}
+  - : 如果该元素的 **type** 属性的值为 radio 或者 checkbox，则该布尔属性的存在与否表明了该控件是否是默认选择状态。If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`’s `checked` IDL attribute](/zh-CN/docs/Web/API/HTMLInputElement) is updated.)
 
- <p>When the form above is submitted, the input cause both the <code>name</code> / <code>value</code> pair of <code>fruit=cherry</code> and the <code>dirname</code> / direction pair of <code>fruit.dir=ltr</code> to be sent.</p>
- </dd>
- <dt>{{ htmlattrdef("disabled") }}</dt>
- <dd>这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， <code>click</code> 事件 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls">将不会被分发</a> 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  hidden，此属性将被忽略。</dd>
-</dl>
+    > **备注：** Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.For example, if a checkbox whose `name` is `fruit` has a `value` of `cherry`, and the checkbox is checked, the form data submitted will include `fruit=cherry`. If the checkbox isn't active, it isn't listed in the form data at all. The default `value` for checkboxes and radio buttons is `on`.
+- {{htmlattrdef("dirname")}}
+  - : Valid for `text` and `search` input types only, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [name](#attr-name) and [value](#attr-value), the second being the value of the `dirname` as the name with the value of `ltr` or `rtl` being set by the browser.```plain
+    <form action="page.html" method="post">
+      <label>Fruit: <input type="text" name="fruit" dirname="fruit.dir" value="cherry"></label>
+      <input type="submit"/>
+    </form>
+    <!-- page.html?fruit=cherry&fruit.dir=ltr -->
+    ```When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
+- {{ htmlattrdef("disabled") }}
+  - : 这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， `click` 事件 [将不会被分发](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls) 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 **type** 属性为 hidden，此属性将被忽略。
 
-<div class="note"><strong>Note:</strong> Although not required by the specification, Firefox will by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</div>
+> **备注：** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
-<dl>
- <dt>{{ htmlattrdef("form") }}</dt>
- <dd>
- <p>A string specifying the {{HTMLElement("form")}} element with which the input is associated (that is, its <strong>form owner</strong>). This string's value, if present, must match the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> element in the same document. If this attribute isn't specified, the <code>&lt;input&gt;</code> element is associated with the nearest containing form, if any.</p>
+- {{ htmlattrdef("form") }}
+  - : A string specifying the {{HTMLElement("form")}} element with which the input is associated (that is, its **form owner**). This string's value, if present, must match the {{htmlattrxref("id")}} of a `<form>` element in the same document. If this attribute isn't specified, the `<input>` element is associated with the nearest containing form, if any.The `form` attribute lets you place an input anywhere in the document but have it included with a form elsewhere in the document.Note: An input can only be associated with one form.
+- {{htmlattrdef('formaction')}}
+  - : Valid for the `image` and `submit` input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.
+- {{htmlattrdef('formenctype')}}
+  - : Valid for the `image` and `submit` input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.
+- {{htmlattrdef('formmethod')}}
+  - : Valid for the `image` and `submit` input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.
+- {{htmlattrdef('formnovalidate')}}
+  - : Valid for the `image` and `submit` input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.
+- {{htmlattrdef('formtarget')}}
+  - : Valid for the `image` and `submit` input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.
+- {{ htmlattrdef("height") }}
+  - : 如果 **type** 属性的值是 image，这个属性定义了按钮图片的高度。
+- {{htmlattrdef("id")}}
+  - : Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s `for` attribute to link the label with the form control. See the [the label element](#labels) below.
+- {{htmlattrdef("inputmode")}}
+  - : Global value valid for all elements, it provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Values include none
+    `text`, `tel`, `url`, `email`, `numeric`, `decimal`, and `search`.
+- {{htmlattrdef("list")}}
+  - : The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The `<datalist>` provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
- <p>The <code>form</code> attribute lets you place an input anywhere in the document but have it included with a form elsewhere in the document.</p>
+```html
+<datalist id="colorsxx">
+  <option>#ff0000</option>
+  <option>#ee0000</option>
+  <option>#dd0000</option>
+  <option>#cc0000</option>
+  <option>#bb0000</option>
+</datalist>
+<datalist id="numbersxx">
+  <option>0</option>
+  <option>2</option>
+  <option>4</option>
+  <option>8</option>
+  <option>16</option>
+  <option>32</option>
+  <option>64</option>
+</datalist>
+<datalist id="fruitsxx">
+  <option>cherry</option>
+  <option>banana</option>
+  <option>mango</option>
+  <option>orange</option>
+  <option>blueberry</option>
+</datalist>
+<datalist id="urlsxx">
+  <option>https://developer.mozilla.org</option>
+  <option>https://caniuse.com/</option>
+  <option>https://mozilla.com</option>
+  <option>https://mdn.github.io</option>
+  <option>https://www.youtube.com/user/firefoxchannel</option>
+</datalist>
 
- <p>Note: An input can only be associated with one form.</p>
- </dd>
- <dt>{{htmlattrdef('formaction')}}</dt>
- <dd>
- <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
- </dd>
- <dt>{{htmlattrdef('formenctype')}}</dt>
- <dd>
- <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
- </dd>
- <dt>{{htmlattrdef('formmethod')}}</dt>
- <dd>
- <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
- </dd>
- <dt>{{htmlattrdef('formnovalidate')}}</dt>
- <dd>
- <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
- </dd>
- <dt>{{htmlattrdef('formtarget')}}</dt>
- <dd>
- <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
- </dd>
- <dt>{{ htmlattrdef("height") }}</dt>
- <dd>如果 <strong>type</strong> 属性的值是 image，这个属性定义了按钮图片的高度。</dd>
- <dt>{{htmlattrdef("id")}}</dt>
- <dd>
- <p>Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s <code>for</code> attribute to link the label with the form control. See the <a href="#labels">the label element</a> below.</p>
- </dd>
- <dt>{{htmlattrdef("inputmode")}}</dt>
- <dd>
- <p>Global value valid for all elements, it provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Values include none<br>
-  <code>text</code>, <code>tel</code>, <code>url</code>, <code>email</code>, <code>numeric</code>, <code>decimal</code>, and <code>search</code>.</p>
- </dd>
- <dt>{{htmlattrdef("list")}}</dt>
- <dd>
-  <p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The <code>&lt;datalist&gt;</code>  provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options.  The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
- </dd>
-</dl>
+<p>
+  <label for="textx">Text</label>
+  <input type="text" list="fruitsxx" id="textx"/>
+</p>
+<p>
+  <label for="colorx">Color</label>
+  <input type="color" list="colorsxx" id="colorx"/>
+</p>
+<p>
+  <label for="rangex">Range</label>
+  <input type="range" min="0" max="64" list="numbersxx" id="rangex"/>
+</p>
+<p>
+  <label for="numberx">Number</label>
+  <input type="number" min="0" max="64" list="numbersxx" id="numberx"/>
+</p>
+<p>
+  <label for="urlx">URL</label>
+  <input type="url" list="urlsxx" id="urlx"/>
+</p>
+```
 
+{{EmbedLiveSample("datalist",400,275,"","", "nobutton")}}
 
-<pre class="brush: html">
-&lt;datalist id="colorsxx"&gt;
-  &lt;option&gt;#ff0000&lt;/option&gt;
-  &lt;option&gt;#ee0000&lt;/option&gt;
-  &lt;option&gt;#dd0000&lt;/option&gt;
-  &lt;option&gt;#cc0000&lt;/option&gt;
-  &lt;option&gt;#bb0000&lt;/option&gt;
-&lt;/datalist&gt;
-&lt;datalist id="numbersxx"&gt;
-  &lt;option&gt;0&lt;/option&gt;
-  &lt;option&gt;2&lt;/option&gt;
-  &lt;option&gt;4&lt;/option&gt;
-  &lt;option&gt;8&lt;/option&gt;
-  &lt;option&gt;16&lt;/option&gt;
-  &lt;option&gt;32&lt;/option&gt;
-  &lt;option&gt;64&lt;/option&gt;
-&lt;/datalist&gt;
-&lt;datalist id="fruitsxx"&gt;
-  &lt;option&gt;cherry&lt;/option&gt;
-  &lt;option&gt;banana&lt;/option&gt;
-  &lt;option&gt;mango&lt;/option&gt;
-  &lt;option&gt;orange&lt;/option&gt;
-  &lt;option&gt;blueberry&lt;/option&gt;
-&lt;/datalist&gt;
-&lt;datalist id="urlsxx"&gt;
-  &lt;option&gt;https://developer.mozilla.org&lt;/option&gt;
-  &lt;option&gt;https://caniuse.com/&lt;/option&gt;
-  &lt;option&gt;https://mozilla.com&lt;/option&gt;
-  &lt;option&gt;https://mdn.github.io&lt;/option&gt;
-  &lt;option&gt;https://www.youtube.com/user/firefoxchannel&lt;/option&gt;
-&lt;/datalist&gt;
+It is valid on `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, and `color`.
 
-&lt;p&gt;
-  &lt;label for="textx"&gt;Text&lt;/label&gt;
-  &lt;input type="text" list="fruitsxx" id="textx"/&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;label for="colorx"&gt;Color&lt;/label&gt;
-  &lt;input type="color" list="colorsxx" id="colorx"/&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;label for="rangex"&gt;Range&lt;/label&gt;
-  &lt;input type="range" min="0" max="64" list="numbersxx" id="rangex"/&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;label for="numberx"&gt;Number&lt;/label&gt;
-  &lt;input type="number" min="0" max="64" list="numbersxx" id="numberx"/&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;label for="urlx"&gt;URL&lt;/label&gt;
-  &lt;input type="url" list="urlsxx" id="urlx"/&gt;
-&lt;/p&gt;
-</pre>
+Per the specifications, the `list` attribute is not supported by the `hidden`, `password`, `checkbox`, `radio`, `file`, or any of the button types.
 
-<p>{{EmbedLiveSample("datalist",400,275,"","", "nobutton")}}</p>
+Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even a input that opens like a select but allows for non-listed values. Check out the [browser compatibility table](/zh-CN/docs/Web/HTML/Element/datalist#Browser_compatibility) for the other input types.
 
-<p>It is valid on <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code>, and <code>color</code>. </p>
+See the {{htmlelement('datalist')}} element.
 
-<p>Per the specifications, the <code>list</code> attribute is not supported by the <code>hidden</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or any of the button types.</p>
+- {{ htmlattrdef("max") }}
+  - : 此项目的最大（数字或日期时间）值，且不得小于其最小值（**min** 属性值）。
+- {{ htmlattrdef("maxlength") }}
+  - : 如果 **type** 的值是 text、email、search、password、tel 或 url，那么这个属性指明了用户最多可以输入的字符个数（按照 Unicode 编码方式计数）；对于其他类型的输入框，该属性被忽略。它可以大于 **size** 属性的值。如果不指定这个属性，那么用户可以输入任意多的字符。如果指定为一个负值，那么元素表现出默认行为，即用户可以输入任意多的字符。本属性的约束规则，仅在元素的 value 属性发生变化时才会执行。译者注：ie10+
+- {{ htmlattrdef("min") }}
+  - : 此项目的最小（数字或日期时间）值，且不得大于其最大值（**max** 属性值）。
+- {{htmlattrdef("minlength")}}
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.The input will fail [constraint validation](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See [Client-side validation](#client-side_validation) for more information.
+- {{ htmlattrdef("multiple") }}
+  - : 这个 **Boolean** 属性指明了用户能否输入多个值，仅在 **type** 属性为 email 或 file 时生效，否则将被忽略。
+- {{ htmlattrdef("name") }}
+  - : 控件的名称，与表单数据一起提交。
+- {{ htmlattrdef("pattern") }}
+  - : 检查控件值的正则表达式。pattern 必须匹配整个值，而不仅仅是某些子集。使用 title 属性来描述帮助用户的模式。仅在 **type** 属性的值为 text、search、tel、url 或 email 时生效，否则将被忽略。译者注：ie10+
+- {{ htmlattrdef("placeholder") }}
+  - : 提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅在 **type** 属性为 text、search、tel、url 或 email 时生效，否则将被忽略。
 
-<p>Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even a input that opens like a select but allows for non-listed values. Check out the <a href="/zh-CN/docs/Web/HTML/Element/datalist#Browser_compatibility">browser compatibility table</a> for the other input types.</p>
+    > **备注：** 请不要用 `placeholder` 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同: {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而 `placeholder` 属性是提示用户内容的输入格式。某些情况下 `placeholder` 属性对用户不可见，所以当没有它时也需要保证 form 能被理解。
+- {{ htmlattrdef("readonly") }}
+  - : 这个布尔属性用于指明用户无法修改控件的值。如果控件的 **type** 属性为 hidden、range、color、checkbox、radio、file，此属性将被忽略。
+- {{ htmlattrdef("required") }}
+  - : 这个属性指定用户在提交表单之前必须为该元素填充值。当 type 属性是 hidden、image 或者按钮类型（submit、reset、button）时不可使用。 {{ cssxref(":optional") }} 和 {{ cssxref(":required") }} CSS 伪元素的样式将可以被该字段应用作外观。
+- {{ htmlattrdef("selectionDirection") }}
+  - : The direction in which selection occurred. This is "forward" if the selection was made from left-to-right in an LTR locale or right-to-left in an RTL locale, or "backward" if the selection was made in the opposite direction. This can be "none" if the selection direction is unknown.
+- {{ htmlattrdef("size") }}
+  - : 控件的初始大小。以像素为单位。但当 **type** 属性为 text 或 password 时，它表示输入的字符的长度。从 HTML5 开始，此属性仅在 **type** 属性为 text、search、tel、url、email 或 password 时生效，否则将被忽略。此外，它的值必须大于 0。如果未指定大小，则使用默认值 20。HTML5 概述 "用户代理应该确保至少大部分字符是可见的"，但是不同的字符的用不同的字体表示可能会导致宽度不同。在某些浏览器中，一串带有 x 的字符即使定义了到 x 的大小也将显示不完整。
+- {{ htmlattrdef("spellcheck") }}
+  - : 将此属性的值设置为 `true` 表示元素需要检查其拼写和语法。值为 `default` 表示该元素将根据默认行为进行操作，可能基于父元素自己的 `spellcheck` 值。值为 `false` 表示不应该检查元素
+- {{ htmlattrdef("src") }}
+  - : 如果 **type** 属性的值是 image，这个属性指定了按钮图片的路径; 否则将被忽视。
+- {{ htmlattrdef("step") }}
+  - : 使用 **min** 和 **max** 属性来限制可以设置数字或日期时间值的增量。它可以是任意字符串或是正浮点数。如果此属性未设置为任何，则控件仅接受大于最小步长值的倍数的值。
+- {{ htmlattrdef("tabindex") }}
+  - : 元素在当前文档的 Tab 导航顺序中的位置。
+- {{htmlattrdef('title')}}
+  - : Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a `for` attribute set to the form control's {{htmlattrdef('id')}} attribute. See [Labels](#labels) below.
+- {{ htmlattrdef("type") }}
+  - : 要呈现的控件类型。有关各个类型的信息，请参阅 [Form \<input> types](#<input>_types)，其中包含指向每个类型的更多信息的链接。
+- {{ htmlattrdef("usemap") }} {{Deprecated_Inline}}
+  - : 作为图像映射的 {{ HTMLElement("map") }} 元素的名称。
+- {{ htmlattrdef("value") }}
+  - : 控件的初始值。此属性是可选的，除非 **type** 属性是 `radio` 或 `checkbox`。注意，当重新加载页面时，如果在重新加载之前更改了值，[Gecko 和 IE 将忽略 HTML 源代码中指定的值](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186)。
+- {{ htmlattrdef("width") }}
+  - : 如果 **type** 属性的值是 image，这个属性定义了按钮图片的宽度。
+- ### 非标准 `<input>` 属性
 
-<p>See the {{htmlelement('datalist')}} element.</p>
+  {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
 
-<dl>
- <dt>{{ htmlattrdef("max") }}</dt>
- <dd>此项目的最大（数字或日期时间）值，且不得小于其最小值（<strong>min</strong> 属性值）。</dd>
- <dt>{{ htmlattrdef("maxlength") }}</dt>
- <dd>如果 <strong>type</strong> 的值是 text、email、search、password、tel 或 url，那么这个属性指明了用户最多可以输入的字符个数（按照 Unicode 编码方式计数）；对于其他类型的输入框，该属性被忽略。它可以大于 <strong>size</strong> 属性的值。如果不指定这个属性，那么用户可以输入任意多的字符。如果指定为一个负值，那么元素表现出默认行为，即用户可以输入任意多的字符。本属性的约束规则，仅在元素的 value 属性发生变化时才会执行。译者注：ie10+</dd>
- <dt>{{ htmlattrdef("min") }}</dt>
- <dd>此项目的最小（数字或日期时间）值，且不得大于其最大值（<strong>max</strong> 属性值）。</dd>
- <dt>{{htmlattrdef("minlength")}}</dt>
- <dd>
- <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the input has no minimum length.</p>
+  - : This is a non-standard attribute supported by Safari that is used to control whether autocorrection should be enabled when the user is entering/editing the text value of the `<input>`. Possible attribute values are:
 
- <p>The input will fail <a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See <a href="#client-side_validation">Client-side validation</a> for more information.</p>
- </dd>
- <dt>{{ htmlattrdef("multiple") }}</dt>
- <dd>这个 <strong>Boolean</strong> 属性指明了用户能否输入多个值，仅在 <strong>type</strong> 属性为 email 或 file 时生效，否则将被忽略。</dd>
- <dt>{{ htmlattrdef("name") }}</dt>
- <dd>控件的名称，与表单数据一起提交。</dd>
- <dt>{{ htmlattrdef("pattern") }}</dt>
- <dd>检查控件值的正则表达式。pattern 必须匹配整个值，而不仅仅是某些子集。使用 title 属性来描述帮助用户的模式。仅在 <strong>type</strong> 属性的值为 text、search、tel、url 或 email 时生效，否则将被忽略。译者注：ie10+</dd>
- <dt>{{ htmlattrdef("placeholder") }}</dt>
- <dd>提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅在 <strong>type</strong> 属性为 text、search、tel、url 或 email 时生效，否则将被忽略。
- <div class="note"><p><strong>备注</strong>：请不要用 <code>placeholder</code> 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同: {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而 <code>placeholder</code> 属性是提示用户内容的输入格式。某些情况下 <code>placeholder</code> 属性对用户不可见，所以当没有它时也需要保证 form 能被理解。</p></div>
- </dd>
- <dt>{{ htmlattrdef("readonly") }}</dt>
- <dd>这个布尔属性用于指明用户无法修改控件的值。
- <p>如果控件的 <strong>type</strong> 属性为 hidden、range、color、checkbox、radio、file，此属性将被忽略。</p>
- </dd>
- <dt>{{ htmlattrdef("required") }}</dt>
- <dd>这个属性指定用户在提交表单之前必须为该元素填充值。当 type 属性是 hidden、image 或者按钮类型（submit、reset、button）时不可使用。 {{ cssxref(":optional") }} 和 {{ cssxref(":required") }} CSS 伪元素的样式将可以被该字段应用作外观。</dd>
- <dt>{{ htmlattrdef("selectionDirection") }}</dt>
- <dd>The direction in which selection occurred. This is "forward" if the selection was made from left-to-right in an LTR locale or right-to-left in an RTL locale, or "backward" if the selection was made in the opposite direction. This can be "none" if the selection direction is unknown.</dd>
- <dt>{{ htmlattrdef("size") }}</dt>
- <dd>控件的初始大小。以像素为单位。但当 <strong>type</strong> 属性为 text 或 password 时，它表示输入的字符的长度。从 HTML5 开始，此属性仅在 <strong>type</strong> 属性为 text、search、tel、url、email 或 password 时生效，否则将被忽略。此外，它的值必须大于 0。如果未指定大小，则使用默认值 20。HTML5 概述 "用户代理应该确保至少大部分字符是可见的"，但是不同的字符的用不同的字体表示可能会导致宽度不同。在某些浏览器中，一串带有 x 的字符即使定义了到 x 的大小也将显示不完整。</dd>
- <dt>{{ htmlattrdef("spellcheck") }}</dt>
- <dd>将此属性的值设置为 <code>true</code> 表示元素需要检查其拼写和语法。值为 <code>default</code> 表示该元素将根据默认行为进行操作，可能基于父元素自己的 <code>spellcheck</code> 值。值为 <code>false</code> 表示不应该检查元素</dd>
- <dt>{{ htmlattrdef("src") }}</dt>
- <dd>如果 <strong>type</strong> 属性的值是 image，这个属性指定了按钮图片的路径; 否则将被忽视。</dd>
- <dt>{{ htmlattrdef("step") }}</dt>
- <dd>使用 <strong>min</strong> 和 <strong>max</strong> 属性来限制可以设置数字或日期时间值的增量。它可以是任意字符串或是正浮点数。如果此属性未设置为任何，则控件仅接受大于最小步长值的倍数的值。</dd>
- <dt>{{ htmlattrdef("tabindex") }}</dt>
- <dd>元素在当前文档的 Tab 导航顺序中的位置。</dd>
- <dt>{{htmlattrdef('title')}}</dt>
- <dd>
- <p>Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a <code>for</code> attribute set to the form control's {{htmlattrdef('id')}} attribute. See <a href="#labels">Labels</a> below.</p>
- </dd>
- <dt>{{ htmlattrdef("type") }}</dt>
- <dd>要呈现的控件类型。有关各个类型的信息，请参阅 <a href="#&lt;input&gt;_types">Form &lt;input&gt; types</a>，其中包含指向每个类型的更多信息的链接。</dd>
- <dt>{{ htmlattrdef("usemap") }} {{Deprecated_Inline}}</dt>
- <dd>作为图像映射的 {{ HTMLElement("map") }} 元素的名称。</dd>
- <dt>{{ htmlattrdef("value") }}</dt>
- <dd>控件的初始值。此属性是可选的，除非 <strong>type</strong> 属性是 <code>radio</code> 或 <code>checkbox</code>。注意，当重新加载页面时，如果在重新加载之前更改了值，<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko 和 IE 将忽略 HTML 源代码中指定的值</a>。</dd>
- <dt>{{ htmlattrdef("width") }} </dt>
- <dd>如果 <strong>type</strong> 属性的值是 image，这个属性定义了按钮图片的宽度。</dd>
- <dt>
- <h3 id="非标准_&lt;input>_属性">非标准 <code>&lt;input&gt;</code> 属性</h3>
- </dt>
- <dt>{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</dt>
- <dd>This is a non-standard attribute supported by Safari that is used to control whether autocorrection should be enabled when the user is entering/editing the text value of the <code>&lt;input&gt;</code>. Possible attribute values are:
- <ul>
-  <li><code>on</code>：Enable autocorrection.</li>
-  <li><code>off</code>：Disable autocorrection.</li>
- </ul>
- <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect"><code>autocorrect</code> documentation</a> in the Safari HTML Reference.</dd>
- <dt>{{ htmlattrdef("mozactionhint") }} {{ non-standard_inline() }}</dt>
- <dd>Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>; these automatically get mapped to the appropriate string (and are case-insensitive).</dd>
- <dt>{{htmlattrdef("autocapitalize")}} {{non-standard_inline}}</dt>
- <dd>This is a nonstandard attribute used by iOS Safari Mobile which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:
- <ul>
-  <li><code>none</code>：Completely disables automatic capitalization</li>
-  <li><code>sentences</code>：Automatically capitalize the first letter of sentences.</li>
-  <li><code>words</code>：Automatically capitalize the first letter of words.</li>
-  <li><code>characters</code>：Automatically capitalize all characters.</li>
-  <li><code>on</code>：{{deprecated_inline()}} Deprecated since iOS 5.</li>
-  <li><code>off</code>：{{deprecated_inline()}} Deprecated since iOS 5.</li>
- </ul>
- <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize"><code>autocapitalize</code> documentation in the Safari HTML Reference</a></dd>
- <dt>{{htmlattrdef("incremental")}} {{non-standard_inline}}</dt>
- <dd>This is a nonstandard attribute supported by WebKit (Safari) and Blink (Chrome) that only applies when the <strong>type</strong> is <code>search</code>. If the attribute is present, regardless of what its value is, the <code>&lt;input&gt;</code> fires <a href="https://developer.mozilla.org/en-US/docs/Web/Events/search"><code>search</code></a> events as the user edits the text value. The event is only fired after an implementation-defined timeout has elapsed since the most recent keystroke, and new keystrokes reset the timeout. In other words, the event firing is debounced. If the attribute is absent, the <a href="https://developer.mozilla.org/en-US/docs/Web/Events/search"><code>search</code></a> event is only fired when the user explicitly initiates a search (e.g. by pressing the Enter key while within field). <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-incremental"><code>incremental</code> documentation in the Safari HTML Reference</a></dd>
- <dt>{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</dt>
- <dd>Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. These automatically get mapped to the appropriate string and are case-insensitive.</dd>
- <dt>{{htmlattrdef("results")}} {{non-standard_inline}}</dt>
- <dd>This is a nonstandard attribute supported by Safari that only applies when the <strong>type</strong> is <code>search</code>. It is used to control the maximum number of entries that should be displayed in the <code>&lt;input&gt;</code>'s native dropdown list of past search queries. Its value should be a nonnegative decimal integer.</dd>
- <dt>{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</dt>
- <dd>This Boolean attribute indicates if the selector used when the <strong>type</strong> attribute is <code>file</code>has to allow for the selection of directories only.</dd>
- <dt>{{htmlattrdef("x-moz-errormessage")}} {{non-standard_inline}}</dt>
- <dd>This Mozilla extension allows you to specify the error message to display when a field doesn't successfully validate.</dd>
-</dl>
+    - `on`：Enable autocorrection.
+    - `off`：Disable autocorrection.[`autocorrect` documentation](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect) in the Safari HTML Reference.
 
-<h2 id="Methods">Methods</h2>
+- {{ htmlattrdef("mozactionhint") }} {{ non-standard_inline() }}
+  - : Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are `go`, `done`, `next`, `search`, and `send`; these automatically get mapped to the appropriate string (and are case-insensitive).
+- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
+  - : This is a nonstandard attribute used by iOS Safari Mobile which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:
 
-<p>The following methods are provided by the <a href="/en-US/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code></a> interface which represents <code>&lt;input&gt;</code> elements in the DOM. Also available are those methods specified by the parent interfaces, <a href="/en-US/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>, <a href="/en-US/docs/Web/API/Element"><code>Element</code></a>, <a href="/en-US/docs/Web/API/Node"><code>Node</code></a>, and <a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a>.</p>
+    - `none`：Completely disables automatic capitalization
+    - `sentences`：Automatically capitalize the first letter of sentences.
+    - `words`：Automatically capitalize the first letter of words.
+    - `characters`：Automatically capitalize all characters.
+    - `on`：{{deprecated_inline()}} Deprecated since iOS 5.
+    - `off`：{{deprecated_inline()}} Deprecated since iOS 5.[`autocapitalize` documentation in the Safari HTML Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize)
+- {{htmlattrdef("incremental")}} {{non-standard_inline}}
+  - : This is a nonstandard attribute supported by WebKit (Safari) and Blink (Chrome) that only applies when the **type** is `search`. If the attribute is present, regardless of what its value is, the `<input>` fires [`search`](/zh-CN/docs/Web/Events/search) events as the user edits the text value. The event is only fired after an implementation-defined timeout has elapsed since the most recent keystroke, and new keystrokes reset the timeout. In other words, the event firing is debounced. If the attribute is absent, the [`search`](/zh-CN/docs/Web/Events/search) event is only fired when the user explicitly initiates a search (e.g. by pressing the Enter key while within field). [`incremental` documentation in the Safari HTML Reference](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-incremental)
+- {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
+  - : Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are `go`, `done`, `next`, `search`, and `send`. These automatically get mapped to the appropriate string and are case-insensitive.
+- {{htmlattrdef("results")}} {{non-standard_inline}}
+  - : This is a nonstandard attribute supported by Safari that only applies when the **type** is `search`. It is used to control the maximum number of entries that should be displayed in the `<input>`'s native dropdown list of past search queries. Its value should be a nonnegative decimal integer.
+- {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
+  - : This Boolean attribute indicates if the selector used when the **type** attribute is `file`has to allow for the selection of directories only.
+- {{htmlattrdef("x-moz-errormessage")}} {{non-standard_inline}}
+  - : This Mozilla extension allows you to specify the error message to display when a field doesn't successfully validate.
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/HTMLInputElement/checkValidity"><code>checkValidity()</code></a></dt>
- <dd>Immediately runs the validity check on the element, triggering the document to fire the <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code></a> event at the element if the value isn't valid.</dd>
- <dt><a href="/en-US/docs/Web/API/HTMLFormElement/reportValidity"><code>reportValidity()</code></a></dt>
- <dd>Returns <code>true</code> if the element's value passes validity checks; otherwise, returns <code>false</code>.</dd>
- <dt><a href="/en-US/docs/Web/API/HTMLInputElement/select"><code>select()</code></a></dt>
- <dd>Selects the entire content of the <code>&lt;input&gt;</code> element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing.</dd>
- <dt><a href="/en-US/docs/Web/API/HTMLInputElement/setCustomValidity"><code>setCustomValidity()</code></a></dt>
- <dd>Sets a custom message to display if the input element's value isn't valid.</dd>
- <dt><a href="/en-US/docs/Web/API/HTMLInputElement/setRangeText"><code>setRangeText()</code></a></dt>
- <dd>Sets the contents of the specified range of characters in the input element to a given string. A <code>selectMode</code> parameter is available to allow controlling how the existing content is affected.</dd>
- <dt><a href="/en-US/docs/Web/API/HTMLInputElement/setSelectionRange"><code>setSelectionRange()</code></a></dt>
- <dd>Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields.</dd>
- <dt><a href="/en-US/docs/Web/API/HTMLInputElement/stepDown"><code>stepDown()</code></a></dt>
- <dd>Decrements the value of a numeric input by one, by default, or by the specified number of units.</dd>
- <dt><a href="/en-US/docs/Web/API/HTMLInputElement/stepUp"><code>stepUp()</code></a></dt>
- <dd>Increments the value of a numeric input by one or by the specified number of units.</dd>
-</dl>
+## Methods
 
-<h2 id="CSS">CSS</h2>
+The following methods are provided by the [`HTMLInputElement`](/zh-CN/docs/Web/API/HTMLInputElement) interface which represents `<input>` elements in the DOM. Also available are those methods specified by the parent interfaces, [`HTMLElement`](/zh-CN/docs/Web/API/HTMLElement), [`Element`](/zh-CN/docs/Web/API/Element), [`Node`](/zh-CN/docs/Web/API/Node), and [`EventTarget`](/zh-CN/docs/Web/API/EventTarget).
 
-<p>Inputs, being replaced elements, have a few features not applicable to non form elements. There are CSS selectors that can specification target form controls based on their UI features, also known as UI pseudo-classes. The input element can also be targeted by type with attribute selectors. There are some properties that are especially useful as well.</p>
+- [`checkValidity()`](/zh-CN/docs/Web/API/HTMLInputElement/checkValidity)
+  - : Immediately runs the validity check on the element, triggering the document to fire the [`invalid`](/zh-CN/docs/Web/API/HTMLInputElement/invalid_event) event at the element if the value isn't valid.
+- [`reportValidity()`](/zh-CN/docs/Web/API/HTMLFormElement/reportValidity)
+  - : Returns `true` if the element's value passes validity checks; otherwise, returns `false`.
+- [`select()`](/zh-CN/docs/Web/API/HTMLInputElement/select)
+  - : Selects the entire content of the `<input>` element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing.
+- [`setCustomValidity()`](/zh-CN/docs/Web/API/HTMLInputElement/setCustomValidity)
+  - : Sets a custom message to display if the input element's value isn't valid.
+- [`setRangeText()`](/zh-CN/docs/Web/API/HTMLInputElement/setRangeText)
+  - : Sets the contents of the specified range of characters in the input element to a given string. A `selectMode` parameter is available to allow controlling how the existing content is affected.
+- [`setSelectionRange()`](/zh-CN/docs/Web/API/HTMLInputElement/setSelectionRange)
+  - : Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields.
+- [`stepDown()`](/zh-CN/docs/Web/API/HTMLInputElement/stepDown)
+  - : Decrements the value of a numeric input by one, by default, or by the specified number of units.
+- [`stepUp()`](/zh-CN/docs/Web/API/HTMLInputElement/stepUp)
+  - : Increments the value of a numeric input by one or by the specified number of units.
 
-<h3 id="UI_pseudo-classes">UI pseudo-classes</h3>
+## CSS
 
-<table class="standard-table">
- <caption>Captions super relevant to the <a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> element:</caption>
- <thead>
-  <tr>
-   <th>Pseudo-class</th>
-   <th>Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:enabled"><code>:enabled</code></a></td>
-   <td>Any currently enabled element that can be activated (selected, clicked on, typed into, etc.) or accept focus and also has a disabled state, in which it can't be activated or accept focus.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:disabled"><code>:disabled</code></a></td>
-   <td>Any currently disabled element that has an enabled state, meaing it otherwise could be activated (selected, clicked on, typed into, etc.) or accept focus were it not disabled.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:read-only"><code>:read-only</code></a></td>
-   <td>Element not editable by the user</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:read-write"><code>:read-write</code></a></td>
-   <td>Element that is editable by the user.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:placeholder-shown"><code>:placeholder-shown</code></a></td>
-   <td>Element that is currently displaying <a href="/zh-CN/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>, including input elements with the <a href="#htmlattrdefplaceholder">placeholder</a> attribute present that has, as of yet, no value.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:default"><code>:default</code></a></td>
-   <td>Form elements that are the default in a group of related elements. Matches <a href="/en-US/docs/Web/HTML/Element/input/checkbox">checkbox</a> and <a href="/en-US/docs/Web/HTML/Element/input/radio">radio</a> input types that were checked on page load or render.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:checked"><code>:checked</code></a></td>
-   <td>Matches <a href="/en-US/docs/Web/HTML/Element/input/checkbox">checkbox</a> and <a href="/en-US/docs/Web/HTML/Element/input/radio">radio</a> input types that are currently checked (and the (<a href="/en-US/docs/Web/HTML/Element/option"><code>&lt;option&gt;</code></a> in a <a href="/en-US/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> that is currently selected).</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:indeterminate"><code>:indeterminate</code></a></td>
-   <td><a href="/en-US/docs/Web/HTML/Element/input/checkbox">checkbox</a> elements whose indeterminate property is set to true by JavaScript, <a href="/en-US/docs/Web/HTML/Element/input/radio">radio</a> elements, when all radio buttons with the same name value in the form are unchecked, and <a href="/en-US/docs/Web/HTML/Element/progress"><code>&lt;progress&gt;</code></a> elements in an indeterminate state</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:valid"><code>:valid</code></a></td>
-   <td>Form controls that can have constraint validation applied and are currently valid.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:invalid"><code>:invalid</code></a></td>
-   <td>Form controls that have constraint validation applied and are currently not valid. Matches a form control whose value doesn't match the constraints set on it by it's attributes, such as <a href="#htmlattrdefrequired">required</a>, <a href="#htmlattrdefpattern">pattern</a> , <a href="#htmlattrdefstep">step</a> and <a href="#htmlattrdefmax">max</a>.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:in-range"><code>:in-range</code></a></td>
-   <td>A non-empty input whose current value is within the range limits specified by the <a href="#htmlattrdefmin">min</a> and <a href="#htmlattrdefmax">max</a> attributes and the <a href="#htmlattrdefstep">step</a> .</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:out-of-range"><code>:out-of-range</code></a></td>
-   <td>A non-empty input whose current value is NOT within the range limits specified by the <a href="#htmlattrdefmin">min</a> and <a href="#htmlattrdefmax">max</a> attributes or does not adher to the <a href="#htmlattrdefstep">step</a> constraint.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:placeholder-shown"><code>:placeholder-shown</code></a></td>
-   <td>An <a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> or <a href="/en-US/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> element that is currently displaying placeholder text.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:required"><code>:required</code></a></td>
-   <td><a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>, <a href="/en-US/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a>, or <a href="/en-US/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> element that has the <code><a href="/en-US/docs/Web/HTML/Element/input#attr-required">required</a></code> attribute set on it. Only matches elements that can be required. The attribute included on a non-requirable element will not make for a match.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:optional"><code>:optional</code></a></td>
-   <td><a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>, <a href="/en-US/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a>, or <a href="/en-US/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> element that does NOT have the <code><a href="/en-US/docs/Web/HTML/Element/input#attr-required">required</a></code> attribute set on it. Does not match elements that can't be required.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:blank"><code>:blank</code></a></td>
-   <td><a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> and <a href="/en-US/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> elements that currently have no value.</td>
-  </tr>
-  <tr>
-   <td><a href="/en-US/docs/Web/CSS/:user-invalid"><code>:user-invalid</code></a></td>
-   <td>Similar to <code>:invalid</code>, but is activated on blur. Matches invalid input but only after the user interaction, such as by focusing on the control, leaving the control, or attempting to submit the form containing the invalid control.</td>
-  </tr>
- </tbody>
-</table>
+Inputs, being replaced elements, have a few features not applicable to non form elements. There are CSS selectors that can specification target form controls based on their UI features, also known as UI pseudo-classes. The input element can also be targeted by type with attribute selectors. There are some properties that are especially useful as well.
 
-<div id="checkbox_label">
-<h4 id="Examples">Examples</h4>
+### UI pseudo-classes
 
-<p>We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the <a href="/en-US/docs/Web/CSS/color"><code>color</code></a> and <a href="/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a> of the <a href="/en-US/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a> that comes immediately after a checked input. We haven't applied any styles if the <code>input</code> is not checked.</p>
+| Pseudo-class                                                   | Description                                                                                                                                                                                                                                                                                                                                                                                     |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`:enabled`](/zh-CN/docs/Web/CSS/:enabled)                     | Any currently enabled element that can be activated (selected, clicked on, typed into, etc.) or accept focus and also has a disabled state, in which it can't be activated or accept focus.                                                                                                                                                                                                     |
+| [`:disabled`](/zh-CN/docs/Web/CSS/:disabled)                   | Any currently disabled element that has an enabled state, meaing it otherwise could be activated (selected, clicked on, typed into, etc.) or accept focus were it not disabled.                                                                                                                                                                                                                 |
+| [`:read-only`](/zh-CN/docs/Web/CSS/:read-only)                 | Element not editable by the user                                                                                                                                                                                                                                                                                                                                                                |
+| [`:read-write`](/zh-CN/docs/Web/CSS/:read-write)               | Element that is editable by the user.                                                                                                                                                                                                                                                                                                                                                           |
+| [`:placeholder-shown`](/zh-CN/docs/Web/CSS/:placeholder-shown) | Element that is currently displaying [placeholder text](/zh-CN/docs/Web/HTML/Element/input#attr-placeholder), including input elements with the [placeholder](#htmlattrdefplaceholder) attribute present that has, as of yet, no value.                                                                                                                                                         |
+| [`:default`](/zh-CN/docs/Web/CSS/:default)                     | Form elements that are the default in a group of related elements. Matches [checkbox](/zh-CN/docs/Web/HTML/Element/input/checkbox) and [radio](/zh-CN/docs/Web/HTML/Element/input/radio) input types that were checked on page load or render.                                                                                                                                                  |
+| [`:checked`](/zh-CN/docs/Web/CSS/:checked)                     | Matches [checkbox](/zh-CN/docs/Web/HTML/Element/input/checkbox) and [radio](/zh-CN/docs/Web/HTML/Element/input/radio) input types that are currently checked (and the ([`<option>`](/zh-CN/docs/Web/HTML/Element/option) in a [`<select>`](/zh-CN/docs/Web/HTML/Element/select) that is currently selected).                                                                                    |
+| [`:indeterminate`](/zh-CN/docs/Web/CSS/:indeterminate)         | [checkbox](/zh-CN/docs/Web/HTML/Element/input/checkbox) elements whose indeterminate property is set to true by JavaScript, [radio](/zh-CN/docs/Web/HTML/Element/input/radio) elements, when all radio buttons with the same name value in the form are unchecked, and [`<progress>`](/zh-CN/docs/Web/HTML/Element/progress) elements in an indeterminate state                                 |
+| [`:valid`](/zh-CN/docs/Web/CSS/:valid)                         | Form controls that can have constraint validation applied and are currently valid.                                                                                                                                                                                                                                                                                                              |
+| [`:invalid`](/zh-CN/docs/Web/CSS/:invalid)                     | Form controls that have constraint validation applied and are currently not valid. Matches a form control whose value doesn't match the constraints set on it by it's attributes, such as [required](#htmlattrdefrequired), [pattern](#htmlattrdefpattern) , [step](#htmlattrdefstep) and [max](#htmlattrdefmax).                                                                               |
+| [`:in-range`](/zh-CN/docs/Web/CSS/:in-range)                   | A non-empty input whose current value is within the range limits specified by the [min](#htmlattrdefmin) and [max](#htmlattrdefmax) attributes and the [step](#htmlattrdefstep) .                                                                                                                                                                                                               |
+| [`:out-of-range`](/zh-CN/docs/Web/CSS/:out-of-range)           | A non-empty input whose current value is NOT within the range limits specified by the [min](#htmlattrdefmin) and [max](#htmlattrdefmax) attributes or does not adher to the [step](#htmlattrdefstep) constraint.                                                                                                                                                                                |
+| [`:placeholder-shown`](/zh-CN/docs/Web/CSS/:placeholder-shown) | An [`<input>`](/zh-CN/docs/Web/HTML/Element/input) or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) element that is currently displaying placeholder text.                                                                                                                                                                                                                              |
+| [`:required`](/zh-CN/docs/Web/CSS/:required)                   | [`<input>`](/zh-CN/docs/Web/HTML/Element/input), [`<select>`](/zh-CN/docs/Web/HTML/Element/select), or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) element that has the [`required`](/en-US/docs/Web/HTML/Element/input#attr-required) attribute set on it. Only matches elements that can be required. The attribute included on a non-requirable element will not make for a match. |
+| [`:optional`](/zh-CN/docs/Web/CSS/:optional)                   | [`<input>`](/zh-CN/docs/Web/HTML/Element/input), [`<select>`](/zh-CN/docs/Web/HTML/Element/select), or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) element that does NOT have the [`required`](/en-US/docs/Web/HTML/Element/input#attr-required) attribute set on it. Does not match elements that can't be required.                                                                 |
+| [`:blank`](/zh-CN/docs/Web/CSS/:blank)                         | [`<input>`](/zh-CN/docs/Web/HTML/Element/input) and [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) elements that currently have no value.                                                                                                                                                                                                                                                |
+| [`:user-invalid`](/zh-CN/docs/Web/CSS/:user-invalid)           | Similar to `:invalid`, but is activated on blur. Matches invalid input but only after the user interaction, such as by focusing on the control, leaving the control, or attempting to submit the form containing the invalid control.                                                                                                                                                           |
 
-<pre class="brush: html hidden">&lt;input id="checkboxInput" type="checkbox"&gt;
-&lt;label for="checkboxInput"&gt;Toggle the checkbox on and off&lt;/label&gt;
-</pre>
+#### Examples
 
-<pre class="brush: css">input:checked + label {
+We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the [`color`](/zh-CN/docs/Web/CSS/color) and [`font-weight`](/zh-CN/docs/Web/CSS/font-weight) of the [`<label>`](/zh-CN/docs/Web/HTML/Element/label) that comes immediately after a checked input. We haven't applied any styles if the `input` is not checked.
+
+```html hidden
+<input id="checkboxInput" type="checkbox">
+<label for="checkboxInput">Toggle the checkbox on and off</label>
+```
+
+```css
+input:checked + label {
   color: red;
   font-weight: bold;
 }
-</pre>
-</div>
+```
 
-<h3 id="Attribute_selectors">Attribute selectors</h3>
+### Attribute selectors
 
-<p>It is possible to target different types of form controls based on their <a href="#htmlattrdeftype">type</a> using <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">attribute selectors</a>. CSS attribute selectors match elements based on either just the presence of a attribute or the value of a given attribute.</p>
+It is possible to target different types of form controls based on their [type](#htmlattrdeftype) using [attribute selectors](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of a attribute or the value of a given attribute.
 
-<pre class="brush: css">/* matches a password input */
+```css
+/* matches a password input */
 input[type="password"] {}
 
 /* matches a form control whose valid values are limited to a range of values*/
 input[min][max] {}
 
 /* matches a form control with with a pattern attribute */
- input[pattern] {}</pre>
+ input[pattern] {}
+```
 
-<h3 id="placeholder">::placeholder</h3>
+### ::placeholder
 
-<p>By default, the appearance of placeholder text is a translucent or light gray. The <a href="/en-US/docs/Web/CSS/::placeholder"><code>::placeholder</code></a> pseudo-element is the input's <a href="/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">placeholder text</a>. It can be styled with a limited subset of CSS properties.</p>
+By default, the appearance of placeholder text is a translucent or light gray. The [`::placeholder`](/zh-CN/docs/Web/CSS/::placeholder) pseudo-element is the input's [placeholder text](/zh-CN/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute). It can be styled with a limited subset of CSS properties.
 
-<pre class="brush: css no-line-numbers">::placeholder {
+```css
+::placeholder {
   color: blue;
-}</pre>
+}
+```
 
-<p>Only the subset of CSS properties that apply to the <a href="/en-US/docs/Web/CSS/::first-line"><code>::first-line</code></a> pseudo-element can be used in a rule using <code>::placeholder</code> in its selector.</p>
+Only the subset of CSS properties that apply to the [`::first-line`](/zh-CN/docs/Web/CSS/::first-line) pseudo-element can be used in a rule using `::placeholder` in its selector.
 
-<h3 id="appearance"><a href="/en-US/docs/Web/CSS/appearance"><code>appearance</code></a></h3>
+### [`appearance`](/zh-CN/docs/Web/CSS/appearance)
 
-<p>The <a href="/en-US/docs/Web/CSS/appearance"><code>appearance</code></a> property enables the displaying of (almost) any element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the <code>none</code> value.</p>
+The [`appearance`](/zh-CN/docs/Web/CSS/appearance) property enables the displaying of (almost) any element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the `none` value.
 
-<p>You could make a <code>&lt;div&gt;</code> look like a radio button with <code>div {appearance: radio;} </code>or a radio look like a checkbox with <code>[type="checkbox] {appearance: checkbox;}</code>, but don't.</p>
+You could make a `<div>` look like a radio button with `div {appearance: radio;} `or a radio look like a checkbox with `[type="checkbox] {appearance: checkbox;}`, but don't.
 
-<p>Setting <code>appearance: none</code> removes platform native borders, but not functionality.</p>
+Setting `appearance: none` removes platform native borders, but not functionality.
 
-<h3 id="caret-color"><a href="/en-US/docs/Web/CSS/caret-color"><code>caret-color</code></a></h3>
+### [`caret-color`](/zh-CN/docs/Web/CSS/caret-color)
 
-<p>A property specific to text entry-related elements is the CSS <a href="/en-US/docs/Web/CSS/caret-color"><code>caret-color</code></a> property, which lets you set the color used to draw the text input caret:</p>
+A property specific to text entry-related elements is the CSS [`caret-color`](/zh-CN/docs/Web/CSS/caret-color) property, which lets you set the color used to draw the text input caret:
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;label for="textInput"&gt;Note the red caret:&lt;/label&gt;
-&lt;input id="textInput" class="custom" size="32"&gt;
-</pre>
+```html
+<label for="textInput">Note the red caret:</label>
+<input id="textInput" class="custom" size="32">
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">
+```css
 input.custom {
   caret-color: red;
   font: 16px "Helvetica", "Arial", "sans-serif"
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<h3 id="object-position_and_object-fit"><a href="/en-US/docs/Web/CSS/object-position"><code>object-position</code></a> and <a href="/en-US/docs/Web/CSS/object-fit"><code>object-fit</code></a></h3>
+### [`object-position`](/zh-CN/docs/Web/CSS/object-position) and [`object-fit`](/zh-CN/docs/Web/CSS/object-fit)
 
-<p>In certain cases (typically involving non-textual inputs and specialized interfaces), the <code>&lt;input&gt;</code> element is a <a href="/en-US/docs/Web/CSS/Replaced_element">replaced element</a>. When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS <a href="/en-US/docs/Web/CSS/object-position"><code>object-position</code></a> and <a href="/en-US/docs/Web/CSS/object-fit"><code>object-fit</code></a> properties</p>
+In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/zh-CN/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS [`object-position`](/zh-CN/docs/Web/CSS/object-position) and [`object-fit`](/zh-CN/docs/Web/CSS/object-fit) properties
 
-<h3 id="Styling">Styling</h3>
+### Styling
 
-<p>For more information about adding color to elements in HTML, see:</p>
+For more information about adding color to elements in HTML, see:
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a>.</li>
-</ul>
+- [Applying color to HTML elements using CSS](/zh-CN/docs/Web/HTML/Applying_color).
 
-<p>Also see:</p>
+Also see:
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms,</a> <a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">advanced styling for HTML forms</a>, and</li>
- <li>the<a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets"> compatibility table of CSS properties</a>.</li>
-</ul>
+- [Styling HTML forms,](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms) [advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms), and
+- the[ compatibility table of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets).
 
-<h2 id="Additional_Features">Additional Features</h2>
+## Additional Features
 
-<h3 id="Labels">Labels</h3>
+### Labels
 
-<p>Labels are needed to associate assistive text with an <code>&lt;input&gt;</code>. The <a href="/en-US/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a> element provides explanatory information about a form field that is <em>always</em> appropriate (aside from any layout concerns you have). It's never a bad idea to use a <code>&lt;label&gt;</code> to explain what should be entered into an <code>&lt;input&gt;</code> or <a href="/en-US/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a>.</p>
+Labels are needed to associate assistive text with an `<input>`. The [`<label>`](/zh-CN/docs/Web/HTML/Element/label) element provides explanatory information about a form field that is _always_ appropriate (aside from any layout concerns you have). It's never a bad idea to use a `<label>` to explain what should be entered into an `<input>` or [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea).
 
-<h4 id="Associated_labels">Associated labels</h4>
+#### Associated labels
 
-<p>The semantic pairing of <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> elements is useful for assistive technologies such as screen readers. By pairing them using the <code>&lt;label&gt;</code>'s <code><a href="/en-US/docs/Web/HTML/Element/label#attr-for">for</a></code> attribute, you bond the label to the input in a way that lets screen readers describe inputs to users more precisely.</p>
+The semantic pairing of `<input>` and `<label>` elements is useful for assistive technologies such as screen readers. By pairing them using the `<label>`'s [`for`](/en-US/docs/Web/HTML/Element/label#attr-for) attribute, you bond the label to the input in a way that lets screen readers describe inputs to users more precisely.
 
-<p>It does not suffice to have plain text adjacent to the <code>&lt;input&gt;</code> element,. Rather, usability and accessibility requires the inclusion of either implicit or explicit <a href="/en-US/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a>:</p>
+It does not suffice to have plain text adjacent to the `<input>` element,. Rather, usability and accessibility requires the inclusion of either implicit or explicit [`<label>`](/zh-CN/docs/Web/HTML/Element/label):
 
-<pre class="brush: html">&lt;!-- inaccessible --&gt;
-&lt;p&gt;Enter your name: &lt;input id="name" type="text" size="30"&gt;&lt;/p&gt;
+```html
+<!-- inaccessible -->
+<p>Enter your name: <input id="name" type="text" size="30"></p>
 
-&lt;!-- implicit label --&gt;
-&lt;p&gt;&lt;label&gt;Enter your name: &lt;input id="name" type="text" size="30"&gt;&lt;/label&gt;&lt;/p&gt;
+<!-- implicit label -->
+<p><label>Enter your name: <input id="name" type="text" size="30"></label></p>
 
-&lt;!-- explicit label --&gt;
-&lt;p&gt;&lt;label for="name"&gt;Enter your name: &lt;/label&gt;&lt;input id="name" type="text" size="30"&gt;&lt;/p&gt;</pre>
+<!-- explicit label -->
+<p><label for="name">Enter your name: </label><input id="name" type="text" size="30"></p>
+```
 
-<p>The first example is inaccessible: no relationship exists between the prompt and the <code>&lt;input&gt;</code> element.</p>
+The first example is inaccessible: no relationship exists between the prompt and the `<input>` element.
 
-<p>In addition to an accessible name, the label provides a larger 'hit' area for mouse and touch screen users to click on or touch. By pairing a <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code>, clicking on either one will focus the <code>&lt;input&gt;</code>. If you use plain text to "label" your input, this won't happen. Having the prompt part of the activation area for the input is helpful for people with motor control conditions.</p>
+In addition to an accessible name, the label provides a larger 'hit' area for mouse and touch screen users to click on or touch. By pairing a `<label>` with an `<input>`, clicking on either one will focus the `<input>`. If you use plain text to "label" your input, this won't happen. Having the prompt part of the activation area for the input is helpful for people with motor control conditions.
 
-<p>As web developers, it's important that we never assume that people will know all the things that we know. The diversity of people using the web—and by extension your web site—practically guarantees that some of your site's visitors will have some variation in thought processes and/or circumstances that leads them to interpret your forms very differently from you without clear and properly-presented labels.</p>
+As web developers, it's important that we never assume that people will know all the things that we know. The diversity of people using the web—and by extension your web site—practically guarantees that some of your site's visitors will have some variation in thought processes and/or circumstances that leads them to interpret your forms very differently from you without clear and properly-presented labels.
 
-<h4 id="Placeholders_are_not_accessible">Placeholders are not accessible</h4>
+#### Placeholders are not accessible
 
-<p>The <code><a href="/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder</a></code> attribute lets you specify a text that appears within the <code>&lt;input&gt;</code> element's content area itself when empty. The placeholder should never be required in order to understand your forms. It is not a label, and should not be used as a substitute, because it isn't. The placeholder is used to show an example input, not an explanation or prompt. Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, there is no placeholder. Browsers with automatic page translation features may skip over attributes when translating, meaning the <code>placeholder</code> may not get translated.</p>
+The [`placeholder`](/en-US/docs/Web/HTML/Element/input#attr-placeholder) attribute lets you specify a text that appears within the `<input>` element's content area itself when empty. The placeholder should never be required in order to understand your forms. It is not a label, and should not be used as a substitute, because it isn't. The placeholder is used to show an example input, not an explanation or prompt. Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, there is no placeholder. Browsers with automatic page translation features may skip over attributes when translating, meaning the `placeholder` may not get translated.
 
-<div class="blockIndicator note">
-<p>Don't use the <code><a href="/en-US/docs/Web/HTML/Element/input#attr-placeholder">placeholder</a></code> attribute if you can avoid it. If you need to label an <code>&lt;input&gt;</code> element, use the <a href="/en-US/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a> element</p>
-</div>
+> **备注：** Don't use the [`placeholder`](/en-US/docs/Web/HTML/Element/input#attr-placeholder) attribute if you can avoid it. If you need to label an `<input>` element, use the [`<label>`](/zh-CN/docs/Web/HTML/Element/label) element
 
-<h3 id="Client-side_validation">Client-side validation</h3>
+### Client-side validation
 
-<p>In addition to using CSS to style inputs based on the <a href="/en-US/docs/Web/CSS/:valid"><code>:valid</code></a> or <a href="/en-US/docs/Web/CSS/:invalid"><code>:invalid</code></a> UI states based on the current state of each input, as noted in the <a href="#UI_pseudo-classes">UI pseudo-classes</a> section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if their is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.</p>
+In addition to using CSS to style inputs based on the [`:valid`](/zh-CN/docs/Web/CSS/:valid) or [`:invalid`](/zh-CN/docs/Web/CSS/:invalid) UI states based on the current state of each input, as noted in the [UI pseudo-classes](#UI_pseudo-classes) section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if their is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.
 
-<p>Some input types and other attributes place limits on what values are valid for a given input. For example, <code>&lt;input type="number" min="2" max="10" step="2"&gt;</code> means only the number 2, 4, 6, 8, or 10 are valid. Several errors could occur, including a <code>rangeUnderflow</code> error if the value is less than 2, <code>rangeOverflow</code> if greater than 10, <code>stepMismatch</code> if the value is a number between 2 and 10, but not an even integer (does not match the requirements of the <code>step</code> attribute), or <code>typeMismatch</code> if the value is not a number.</p>
+Some input types and other attributes place limits on what values are valid for a given input. For example, `<input type="number" min="2" max="10" step="2">` means only the number 2, 4, 6, 8, or 10 are valid. Several errors could occur, including a `rangeUnderflow` error if the value is less than 2, `rangeOverflow` if greater than 10, `stepMismatch` if the value is a number between 2 and 10, but not an even integer (does not match the requirements of the `step` attribute), or `typeMismatch` if the value is not a number.
 
-<p>Specific attributes and their values can lead to specific error <a href="/en-US/docs/Web/API/ValidityState"><code>ValidityState</code></a></p>
+Specific attributes and their values can lead to specific error [`ValidityState`](/zh-CN/docs/Web/API/ValidityState)
 
-<table class="standard-table">
- <caption>Validity object errors depend on the <a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> attributes and their values:</caption>
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Relevent property</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="#htmlattrdefmax">max</a></td>
-   <td><a href="/en-US/docs/Web/API/ValidityState/rangeOverflow"><code>validityState.rangeOverflow</code></a></td>
-   <td>Occurs when the value is greater than the maximum value as defined by the <code>max</code> attribute</td>
-  </tr>
-  <tr>
-   <td><a href="#htmlattrdefmaxlength">maxlength</a></td>
-   <td><a href="/en-US/docs/Web/API/ValidityState/tooLong"><code>validityState.tooLong</code></a></td>
-   <td>Occurs when the number of characters is greater than the number allowed by the <code>maxlength</code> property</td>
-  </tr>
-  <tr>
-   <td><a href="#htmlattrdefmin">min</a></td>
-   <td><a href="/en-US/docs/Web/API/ValidityState/rangeUnderflow"><code>validityState.rangeUnderflow</code></a></td>
-   <td>Occurs when the value is less than the minimum value as defined by the <code>min</code> attribute</td>
-  </tr>
-  <tr>
-   <td><a href="#htmlattrdefminlength">minlength</a></td>
-   <td><a href="/en-US/docs/Web/API/ValidityState/tooShort"><code>validityState.tooShort</code></a></td>
-   <td>Occurs when the number of characters is less than the number required by the <code>minlength</code> property</td>
-  </tr>
-  <tr>
-   <td><a href="#htmlattrdefpattern">pattern</a></td>
-   <td><a href="/en-US/docs/Web/API/ValidityState/patternMismatch"><code>validityState.patternMismatch</code></a></td>
-   <td>Occurs when a pattern attribute is included with a valid regular expression and the <code>value</code> does not match it.</td>
-  </tr>
-  <tr>
-   <td><a href="#htmlattrdefrequired">required</a></td>
-   <td><a href="/en-US/docs/Web/API/ValidityState/valueMissing"><code>validityState.valueMissing</code></a></td>
-   <td>Occurs when the <code>required</code> attribute is present but the value is <code>null</code> or radio or checkbox is not checked.</td>
-  </tr>
-  <tr>
-   <td><a href="#htmlattrdefstep">step</a></td>
-   <td><a href="/en-US/docs/Web/API/ValidityState/stepMismatch"><code>validityState.stepMismatch</code></a></td>
-   <td>The value doesn't match the step increment. Increment default is <code>1</code>, so only integers are valid on<code> type="number"</code> is step is not included. <code>step="any"</code> will never throw this error.</td>
-  </tr>
-  <tr>
-   <td><a href="#htmlattrdeftyoe">type</a></td>
-   <td><a href="/en-US/docs/Web/API/ValidityState/typeMismatch"><code>validityState.typeMismatch</code></a></td>
-   <td>Occurs when the value is not of the correct type, for example a email does not contain an <code>@</code> or a url doesn't contain a protocol.</td>
-  </tr>
- </tbody>
-</table>
+| Attribute                          | Relevent property                                                                    | Description                                                                                                                                                                            |
+| ---------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [max](#htmlattrdefmax)             | [`validityState.rangeOverflow`](/zh-CN/docs/Web/API/ValidityState/rangeOverflow)     | Occurs when the value is greater than the maximum value as defined by the `max` attribute                                                                                              |
+| [maxlength](#htmlattrdefmaxlength) | [`validityState.tooLong`](/zh-CN/docs/Web/API/ValidityState/tooLong)                 | Occurs when the number of characters is greater than the number allowed by the `maxlength` property                                                                                    |
+| [min](#htmlattrdefmin)             | [`validityState.rangeUnderflow`](/zh-CN/docs/Web/API/ValidityState/rangeUnderflow)   | Occurs when the value is less than the minimum value as defined by the `min` attribute                                                                                                 |
+| [minlength](#htmlattrdefminlength) | [`validityState.tooShort`](/zh-CN/docs/Web/API/ValidityState/tooShort)               | Occurs when the number of characters is less than the number required by the `minlength` property                                                                                      |
+| [pattern](#htmlattrdefpattern)     | [`validityState.patternMismatch`](/zh-CN/docs/Web/API/ValidityState/patternMismatch) | Occurs when a pattern attribute is included with a valid regular expression and the `value` does not match it.                                                                         |
+| [required](#htmlattrdefrequired)   | [`validityState.valueMissing`](/zh-CN/docs/Web/API/ValidityState/valueMissing)       | Occurs when the `required` attribute is present but the value is `null` or radio or checkbox is not checked.                                                                           |
+| [step](#htmlattrdefstep)           | [`validityState.stepMismatch`](/zh-CN/docs/Web/API/ValidityState/stepMismatch)       | The value doesn't match the step increment. Increment default is `1`, so only integers are valid on` type="number"` is step is not included. `step="any"` will never throw this error. |
+| [type](#htmlattrdeftyoe)           | [`validityState.typeMismatch`](/zh-CN/docs/Web/API/ValidityState/typeMismatch)       | Occurs when the value is not of the correct type, for example a email does not contain an `@` or a url doesn't contain a protocol.                                                     |
 
-<p>If a form control doesn't have the required attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of <code>'required'</code>, and empty string will not lead to an error.</p>
+If a form control doesn't have the required attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of `'required'`, and empty string will not lead to an error.
 
-<p>We can set limits on what values we accept, and supporting browsers will natively validate these form values and alert the user if there is a mistake when the form is submitted.</p>
+We can set limits on what values we accept, and supporting browsers will natively validate these form values and alert the user if there is a mistake when the form is submitted.
 
-<p>In addition to the errors described in the table above, the <code>validityState</code> interface contains the <code>badInput</code>, <code>valid</code>, and <code>customError</code> boolean readonly properties. The validity object includes:</p>
+In addition to the errors described in the table above, the `validityState` interface contains the `badInput`, `valid`, and `customError` boolean readonly properties. The validity object includes:
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ValidityState/valueMissing"><code>validityState.valueMissing</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/typeMismatch"><code>validityState.typeMismatch</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/patternMismatch"><code>validityState.patternMismatch</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/tooLong"><code>validityState.tooLong</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/tooShort"><code>validityState.tooShort</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/rangeUnderflow"><code>validityState.rangeUnderflow</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/rangeOverflow"><code>validityState.rangeOverflow</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/stepMismatch"><code>validityState.stepMismatch</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/badInput"><code>validityState.badInput</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/valid"><code>validityState.valid</code></a></li>
- <li><a href="/en-US/docs/Web/API/ValidityState/customError"><code>validityState.customError</code></a></li>
-</ul>
+- [`validityState.valueMissing`](/zh-CN/docs/Web/API/ValidityState/valueMissing)
+- [`validityState.typeMismatch`](/zh-CN/docs/Web/API/ValidityState/typeMismatch)
+- [`validityState.patternMismatch`](/zh-CN/docs/Web/API/ValidityState/patternMismatch)
+- [`validityState.tooLong`](/zh-CN/docs/Web/API/ValidityState/tooLong)
+- [`validityState.tooShort`](/zh-CN/docs/Web/API/ValidityState/tooShort)
+- [`validityState.rangeUnderflow`](/zh-CN/docs/Web/API/ValidityState/rangeUnderflow)
+- [`validityState.rangeOverflow`](/zh-CN/docs/Web/API/ValidityState/rangeOverflow)
+- [`validityState.stepMismatch`](/zh-CN/docs/Web/API/ValidityState/stepMismatch)
+- [`validityState.badInput`](/zh-CN/docs/Web/API/ValidityState/badInput)
+- [`validityState.valid`](/zh-CN/docs/Web/API/ValidityState/valid)
+- [`validityState.customError`](/zh-CN/docs/Web/API/ValidityState/customError)
 
-<p>For each of these Boolean properties, a value of <code>true</code> indicates that the specified reason validation may have failed is true, with the exception of the <code>valid</code> property, which is <code>true</code> if the element's value obeys all constraints.</p>
+For each of these Boolean properties, a value of `true` indicates that the specified reason validation may have failed is true, with the exception of the `valid` property, which is `true` if the element's value obeys all constraints.
 
-<p>If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or <code>null</code>), the form will be be prevented from being submitted. If there is no custom error message, and none of the other properties return true, <code>valid</code> will be true, and the form can be submitted.</p>
+If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or `null`), the form will be be prevented from being submitted. If there is no custom error message, and none of the other properties return true, `valid` will be true, and the form can be submitted.
 
-<pre class="brush: js">function validate(input) {
+```js
+function validate(input) {
   let validityState_object = input.validity;
   if(validityState_object.valueMissing) {
      input.setCustomValidity('A value is required');
@@ -1128,147 +877,228 @@ input.custom {
   } else {
     input.setCustomValidity('');
   }
-}</pre>
+}
+```
 
-<p>The last line, setting the custom validity message to the error string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all of the values are valid, until the message is <code>null</code>.</p>
+The last line, setting the custom validity message to the error string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all of the values are valid, until the message is `null`.
 
-<h4 id="Example">Example</h4>
+#### Example
 
-<p>If you want to present a custom error message when a field fails to validate, you need to use the <a href="/en-US/docs/Web/API/Constraint_validation#Constraint_validation_interfaces">Constraint validation features</a> available on <code>&lt;input&gt;</code> (and related) elements. Take the following form:</p>
+If you want to present a custom error message when a field fails to validate, you need to use the [Constraint validation features](/zh-CN/docs/Web/API/Constraint_validation#Constraint_validation_interfaces) available on `<input>` (and related) elements. Take the following form:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="name"&gt;Enter username (upper and lowercase letters): &lt;/label&gt;
-  &lt;input type="text" name="name" id="name" required pattern="[A-Za-z]+"&gt;
-  &lt;button&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="name">Enter username (upper and lowercase letters): </label>
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <button>Submit</button>
+</form>
+```
 
-<p>The basic HTML form validation features will cause this to produce a default error message if you try to submit the form with either no valid filled in, or a value that does not match the <code>pattern</code>.</p>
+The basic HTML form validation features will cause this to produce a default error message if you try to submit the form with either no valid filled in, or a value that does not match the `pattern`.
 
-<p>If you wanted to instead display custom error messages, you could use JavaScript like the following:</p>
+If you wanted to instead display custom error messages, you could use JavaScript like the following:
 
-<pre class="brush: js">const nameInput = document.querySelector('input');
+```js
+const nameInput = document.querySelector('input');
 const form = document.querySelector('form');
 
-nameInput.addEventListener('input', () =&gt; {
+nameInput.addEventListener('input', () => {
   nameInput.setCustomValidity('');
   nameInput.checkValidity();
 });
 
-nameInput.addEventListener('invalid', () =&gt; {
+nameInput.addEventListener('invalid', () => {
   if(nameInput.value === '') {
     nameInput.setCustomValidity('Enter your username!');
   } else {
     nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
   }
-});</pre>
+});
+```
 
-<p>The example renders like so:</p>
+The example renders like so:
 
-<p>In brief:</p>
+In brief:
 
-<ul>
- <li>We check the valid state of the input element every time its value is changed by running the <code>checkValidity()</code> method via the <code>input</code> event handler.</li>
- <li>If the value is invalid, an <code>invalid</code> event is raised, and the <code>invalid</code> event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an <code>if()</code> block, and set a custom validity error message.</li>
- <li>As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.</li>
- <li>If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking <code>setCustomValidity()</code> with an empty string value. We therefore do this every time the <code>input</code> event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.</li>
-</ul>
+- We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
+- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if()` block, and set a custom validity error message.
+- As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
+- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the <em>server side</em>. Invalid values can still be sent by older browsers or by bad actors.</p>
-</div>
+> **备注：** Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>：Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513890">bug 1513890</a>).</p>
-</div>
+> **备注：** ：Firefox supported a proprietary error attribute — `x-moz-errormessage` — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see [bug 1513890](https://bugzilla.mozilla.org/show_bug.cgi?id=1513890)).
 
-<h3 id="Localization">Localization</h3>
+### Localization
 
-<p>The allowed inputs for certain <code>&lt;input&gt;</code> types depend on the locale. In some locales, 1,000.00 is a valid number, while in other locales the valid way to enter this number is 1.000,00.</p>
+The allowed inputs for certain `<input>` types depend on the locale. In some locales, 1,000.00 is a valid number, while in other locales the valid way to enter this number is 1.000,00.
 
-<p>Firefox uses the following heuristics to determine the locale to validate the user's input (at least for <code>type="number"</code>):</p>
+Firefox uses the following heuristics to determine the locale to validate the user's input (at least for `type="number"`):
 
-<ul>
- <li>Try the language specified by a <code>lang</code>/<code>xml:lang</code> attribute on the element or any of its parents.</li>
- <li>Try the language specified by any <code>Content-Language</code> HTTP header. Or,</li>
- <li>If none specified, use the browser's locale.</li>
-</ul>
+- Try the language specified by a `lang`/`xml:lang` attribute on the element or any of its parents.
+- Try the language specified by any `Content-Language` HTTP header. Or,
+- If none specified, use the browser's locale.
 
-<h3 id="Technical_summary">Technical summary</h3>
+### Technical summary
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, listed, submittable, resettable, form-associated element, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>. If the <code><a href="/en-US/docs/Web/HTML/Element/input#attr-type">type</a></code> is not <code>hidden</code>, then labelable element, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>None, it is an <a href="/en-US/docs/Glossary/empty_element">empty element</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>Must have a start tag and must not have an end tag.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>
-    <ul>
-     <li><code>type=button</code>：<code><a href="https://w3c.github.io/aria/#link">link</a></code>, <code><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code>, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code>, <code><a href="https://w3c.github.io/aria/#tab">tab</a></code></li>
-     <li><code>type=checkbox</code>：<code><a href="https://w3c.github.io/aria/#button">button</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#option">option</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code></li>
-     <li><code>type=image</code>：<code><a href="https://w3c.github.io/aria/#link">link</a></code>, <code><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code>, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code></li>
-     <li><code>type=radio</code>：<code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code></li>
-     <li><code>type=color|date|datetime|datetime-local|email|file</code>：None</li>
-     <li><code>type=hidden|month|number|password|range|reset</code>：None</li>
-     <li><code>type=search|submit|tel|text|url|week</code>：None</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td><a href="/en-US/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code></a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          >Flow content</a
+        >, listed, submittable, resettable, form-associated element,
+        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >phrasing content</a
+        >. If the
+        <code
+          ><a href="/en-US/docs/Web/HTML/Element/input#attr-type">type</a></code
+        >
+        is not <code>hidden</code>, then labelable element, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        None, it is an
+        <a href="/en-US/docs/Glossary/empty_element">empty element</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>Must have a start tag and must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>
+        <ul>
+          <li>
+            <code>type=button</code>：<code
+              ><a href="https://w3c.github.io/aria/#link">link</a></code
+            >,
+            <code
+              ><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code
+            >,
+            <code
+              ><a href="https://w3c.github.io/aria/#menuitemcheckbox"
+                >menuitemcheckbox</a
+              ></code
+            >,
+            <code
+              ><a href="https://w3c.github.io/aria/#menuitemradio"
+                >menuitemradio</a
+              ></code
+            >, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code
+            >,
+            <code><a href="https://w3c.github.io/aria/#switch">switch</a></code
+            >, <code><a href="https://w3c.github.io/aria/#tab">tab</a></code>
+          </li>
+          <li>
+            <code>type=checkbox</code>：<code
+              ><a href="https://w3c.github.io/aria/#button">button</a></code
+            >,
+            <code
+              ><a href="https://w3c.github.io/aria/#menuitemcheckbox"
+                >menuitemcheckbox</a
+              ></code
+            >,
+            <code><a href="https://w3c.github.io/aria/#option">option</a></code
+            >,
+            <code><a href="https://w3c.github.io/aria/#switch">switch</a></code>
+          </li>
+          <li>
+            <code>type=image</code>：<code
+              ><a href="https://w3c.github.io/aria/#link">link</a></code
+            >,
+            <code
+              ><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code
+            >,
+            <code
+              ><a href="https://w3c.github.io/aria/#menuitemcheckbox"
+                >menuitemcheckbox</a
+              ></code
+            >,
+            <code
+              ><a href="https://w3c.github.io/aria/#menuitemradio"
+                >menuitemradio</a
+              ></code
+            >, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code
+            >,
+            <code><a href="https://w3c.github.io/aria/#switch">switch</a></code>
+          </li>
+          <li>
+            <code>type=radio</code>：<code
+              ><a href="https://w3c.github.io/aria/#menuitemradio"
+                >menuitemradio</a
+              ></code
+            >
+          </li>
+          <li>
+            <code>type=color|date|datetime|datetime-local|email|file</code
+            >：None
+          </li>
+          <li>
+            <code>type=hidden|month|number|password|range|reset</code>：None
+          </li>
+          <li><code>type=search|submit|tel|text|url|week</code>：None</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>
+        <a href="/en-US/docs/Web/API/HTMLInputElement"
+          ><code>HTMLInputElement</code></a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<h3 id="Labels_2">Labels</h3>
+### Labels
 
-<p>When including inputs, it is an accessibilty requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. this is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see <a href="#Labels">Labels</a> .</p>
+When including inputs, it is an accessibilty requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. this is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#Labels) .
 
-<p>The following is an example of how to associate the <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code> element in the above style. You need to give the <code>&lt;input&gt;</code> an <code>id</code> attribute. The <code>&lt;label&gt;</code> then needs a <code>for</code> attribute whose value is the same as the input's <code>id</code>.</p>
+The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
 
-<pre>&lt;label for="peas"&gt;Do you like peas?&lt;/label&gt;
-&lt;input type="checkbox" name="peas" id="peas"&gt;
-</pre>
+```plain
+<label for="peas">Do you like peas?</label>
+<input type="checkbox" name="peas" id="peas">
+```
 
-<h3 id="Size">Size</h3>
+### Size
 
-<p>Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 <a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS pixels</a> is recommended.</p>
+Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
 
-<ul>
- <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1</a></li>
- <li><a href="http://adrianroselli.com/2019/06/target-size-and-2-5-5.html">Target Size and 2.5.5 | Adrian Roselli</a></li>
- <li><a href="https://a11yproject.com/posts/large-touch-targets/">Quick test: Large touch targets - The A11Y Project</a></li>
-</ul>
+- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5 | Adrian Roselli](http://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets - The A11Y Project](https://a11yproject.com/posts/large-touch-targets/)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</li>
- <li><a href="http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text">Cross-browser HTML5 placeholder text</a></li>
- <li>The CSS {{cssxref("caret-color")}} property</li>
- <li>In certain cases (typically involving non-textual inputs and specialized interfaces), the <code>&lt;input&gt;</code> element is a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">replaced element</a>. When it is, the position and size of the elemnt's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties</li>
-</ul>
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)
+- The CSS {{cssxref("caret-color")}} property
+- In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/zh-CN/docs/Web/CSS/Replaced_element). When it is, the position and size of the elemnt's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties

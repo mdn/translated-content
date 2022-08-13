@@ -10,21 +10,19 @@ tags:
   - 汉字
 translation_of: Web/HTML/Element/ruby
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;ruby&gt;</code> 元素 </strong>被用来展示东亚文字注音或字符注释。</p>
-
-
+**HTML `<ruby>` 元素** 被用来展示东亚文字注音或字符注释。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容范畴</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">流式内容</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容范畴</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流式内容</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许内容</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -41,40 +39,42 @@ translation_of: Web/HTML/Element/ruby
  </tbody>
 </table>
 
-<h2 id="Attributes"><strong>属性</strong></h2>
+## 属性
 
-<p>本元素支持 <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+本元素支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<h2 id="Examples"><strong>示例</strong></h2>
+## 示例
 
-<h3 id="示例1_字">示例 1: 字</h3>
+### 示例 1: 字
 
-<pre class="brush:html">&lt;ruby&gt;
-  汉 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;han&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;zi&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  汉 <rp>(</rp><rt>han</rt><rp>)</rp>
+  字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+</ruby>
+```
 
-<h3 id="示例2_词">示例 2: 词</h3>
+### 示例 2: 词
 
-<pre class="brush:html">&lt;ruby&gt;
-  明 日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ming ri&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  明 日 <rp>(</rp><rt>ming ri</rt><rp>)</rp>
+</ruby>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{HTMLElement("rt")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>{{HTMLElement("rtc")}}</li>
- <li>{{HTMLElement("rbc")}}</li>
- <li>{{CSSxRef("text-transform")}}: full-size-kana</li>
-</ul>
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}
+- {{HTMLElement("rbc")}}
+- {{CSSxRef("text-transform")}}: full-size-kana

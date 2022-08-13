@@ -9,9 +9,9 @@ tags:
   - del
 translation_of: Web/HTML/Element/del
 ---
-<p>HTML 的<strong><code>&lt;del&gt;</code></strong>标签表示一些被从文档中删除的文字内容。比如可以在需要显示修改记录或者源代码差异的情况使用这个标签。{{HTMLElement("ins")}}标签的作用恰恰于此相反：表示文档中添加的内容。</p>
+HTML 的**`<del>`**标签表示一些被从文档中删除的文字内容。比如可以在需要显示修改记录或者源代码差异的情况使用这个标签。{{HTMLElement("ins")}}标签的作用恰恰于此相反：表示文档中添加的内容。
 
-<p>这个标签通常（但不一定要）在文字上显示删除线。</p>
+这个标签通常（但不一定要）在文字上显示删除线。
 
 <table class="properties">
  <tbody>
@@ -42,41 +42,39 @@ translation_of: Web/HTML/Element/del
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个标签包含<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+这个标签包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>提供一个 URI，其中的资源解释作出修改的原因（比如：根据某次会议讨论）。</dd>
- <dt>{{htmlattrdef("datetime")}}</dt>
- <dd>这个属性说明修改的时间和日期，这里的时间和日期格式要符合<a href="https://html.spec.whatwg.org/multipage/infrastructure.html#valid-date-string-with-optional-time">规范</a>。如果设置的值不符合该规范，那么它将没有任何意义。</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : 提供一个 URI，其中的资源解释作出修改的原因（比如：根据某次会议讨论）。
+- {{htmlattrdef("datetime")}}
+  - : 这个属性说明修改的时间和日期，这里的时间和日期格式要符合[规范](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-date-string-with-optional-time)。如果设置的值不符合该规范，那么它将没有任何意义。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;p&gt;&lt;del&gt;This text has been deleted&lt;/del&gt;, here is the rest of the paragraph.&lt;/p&gt;
-&lt;del &gt;&lt;p &gt;This paragraph has been deleted.&lt;/p &gt;&lt;/del &gt;</pre>
-
-<h3 id="结果">结果</h3>
-
+```html
 <p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
+<del ><p >This paragraph has been deleted.</p ></del >
+```
 
-<p><del>This paragraph has been deleted.</del></p>
+### 结果
 
-<h2 id="Specifications">规范</h2>
+~~This text has been deleted~~, here is the rest of the paragraph.
+
+~~This paragraph has been deleted.~~
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("html.elements.del")}}</p>
+{{Compat("html.elements.del")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{HTMLElement("ins")}}  标签用来表示插入文本的内容</li>
- <li>{{HTMLElement("s")}}   标签用来显示删除线，代表内容被删除了</li>
-</ul>
+- {{HTMLElement("ins")}} 标签用来表示插入文本的内容
+- {{HTMLElement("s")}} 标签用来显示删除线，代表内容被删除了
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

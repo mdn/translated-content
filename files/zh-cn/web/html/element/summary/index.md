@@ -10,13 +10,13 @@ tags:
   - Web
 translation_of: Web/HTML/Element/summary
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><strong>HTML <code>&lt;summary&gt; </code>元素 </strong>用作 一个{{HTMLElement("details")}}元素的一个内容的摘要，标题或图例。</p>
+**HTML `<summary> `元素** 用作 一个{{HTMLElement("details")}}元素的一个内容的摘要，标题或图例。
 
-<div class="note"><strong>提示：</strong> 如果 <code>&lt;summary&gt;</code> 元素在浏览器内不能被正确解析和渲染，，则会展示&lt;details&gt;标签内的其他内容。</div>
+> **备注：** 如果 `<summary>` 元素在浏览器内不能被正确解析和渲染，，则会展示\<details>标签内的其他内容。
 
 <table class="properties">
  <tbody>
@@ -35,28 +35,26 @@ translation_of: Web/HTML/Element/summary
  </tbody>
 </table>
 
-<h2 id="属性"><strong>属性</strong></h2>
+## 属性
 
-<p>本元素仅支持<a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
+本元素仅支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>本元素支持 {{domxref("HTMLElement")}} 接口。</p>
+本元素支持 {{domxref("HTMLElement")}} 接口。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>请参考 {{ HTMLElement("details") }} 页面内有关 &lt;summary&gt;元素的示例。</p>
+请参考 {{ HTMLElement("details") }} 页面内有关 \<summary>元素的示例。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ HTMLElement("details") }}</li>
-</ul>
+- {{ HTMLElement("details") }}

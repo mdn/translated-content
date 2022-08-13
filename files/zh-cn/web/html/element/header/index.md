@@ -7,12 +7,11 @@ tags:
   - 元素
 translation_of: Web/HTML/Element/header
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;header&gt;</code> 元素</strong>用于展示介绍性内容，通常包含一组介绍性的或是辅助导航的实用元素。它可能包含一些标题元素，但也可能包含其他元素，比如 Logo、搜索框、作者名称，等等。</p>
+**HTML `<header>` 元素**用于展示介绍性内容，通常包含一组介绍性的或是辅助导航的实用元素。它可能包含一些标题元素，但也可能包含其他元素，比如 Logo、搜索框、作者名称，等等。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}</div>
-
+{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
 
 <table class="properties">
  <tbody>
@@ -43,48 +42,47 @@ translation_of: Web/HTML/Element/header
  </tbody>
 </table>
 
-<h2 id="使用提示">使用提示</h2>
+## 使用提示
 
-<p><code>&lt;header&gt;</code> 元素不是分段内容，因此不会往 <a href="/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">大纲</a> 中引入新的段落。也就是说，<code>&lt;header&gt;</code> 元素通常用于包含周围部分的标题（<code>h1</code> 至 <code>h6</code> 元素），但这<strong>不是</strong>必需的。</p>
+`<header>` 元素不是分段内容，因此不会往 [大纲](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document) 中引入新的段落。也就是说，`<header>` 元素通常用于包含周围部分的标题（`h1` 至 `h6` 元素），但这**不是**必需的。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>此元素仅拥有 <a href="/zh-CN/docs/HTML/Global_attributes"> 全局属性</a>。</p>
+此元素仅拥有 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="页面的_Header">页面的 Header</h3>
+### 页面的 Header
 
-<pre class="brush: html">&lt;header&gt;
-  &lt;h1&gt;主页标题&lt;/h1&gt;
-  &lt;img src="mdn-logo-sm.png" alt="MDN logo"&gt;
-&lt;/header&gt;
+```html
+<header>
+  <h1>主页标题</h1>
+  <img src="mdn-logo-sm.png" alt="MDN logo">
+</header>
+```
 
-</pre>
+### 文章的 Header
 
-<h3 id="文章的_Header">文章的 Header</h3>
+```html
+<article>
+  <header>
+    <h2>The Planet Earth</h2>
+    <p>Posted on Wednesday, 4 October 2017 by Jane Smith</p>
+  </header>
+  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
+  <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
+</article>
+```
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;header&gt;
-    &lt;h2&gt;The Planet Earth&lt;/h2&gt;
-    &lt;p&gt;Posted on Wednesday, 4 October 2017 by Jane Smith&lt;/p&gt;
-  &lt;/header&gt;
-  &lt;p&gt;We live on a planet that's blue and green, with so many things still unseen.&lt;/p&gt;
-  &lt;p&gt;&lt;a href="https://janesmith.com/the-planet-earth/"&gt;Continue reading....&lt;/a&gt;&lt;/p&gt;
-&lt;/article&gt;
-</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document">Sections and outlines of an HTML5 document</a>.</li>
-</ul>
+- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
+- [Sections and outlines of an HTML5 document](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).

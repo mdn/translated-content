@@ -3,17 +3,17 @@ title: <time>
 slug: Web/HTML/Element/time
 translation_of: Web/HTML/Element/time
 ---
-<h2 id="概述">概述</h2>
+## 概述
 
-<p> HTML <em>time</em> 标签 (<code>&lt;time&gt;</code>) 用来表示 24 小时制时间或者<a href="http://en.wikipedia.org/wiki/Gregorian_calendar">公历日期</a>，若表示日期则也可包含时间和时区。</p>
+HTML _time_ 标签 (`<time>`) 用来表示 24 小时制时间或者[公历日期](http://en.wikipedia.org/wiki/Gregorian_calendar)，若表示日期则也可包含时间和时区。
 
-<p>此元素意在以机器可读的格式表示日期和时间。 有安排日程表功能的应用可以利用这一点。</p>
+此元素意在以机器可读的格式表示日期和时间。 有安排日程表功能的应用可以利用这一点。
 
-<div class="note"><strong>用法提示： </strong>如果给定的日期不是正常日期或者在公历中最早的日期之前，请不要使用此元素。</div>
+> **备注：** 如果给定的日期不是正常日期或者在公历中最早的日期之前，请不要使用此元素。
 
-<div class="note"><strong>状态提示</strong>： 该元素仍在设计和讨论中 (<a href="http://blog.whatwg.org/weekly-time-data">http://blog.whatwg.org/weekly-time-data</a>)</div>
+> **备注：** 该元素仍在设计和讨论中 (<http://blog.whatwg.org/weekly-time-data>)
 
-<h3 id="使用场景">使用场景</h3>
+### 使用场景
 
 <table class="standard-table">
  <tbody>
@@ -40,54 +40,55 @@ translation_of: Web/HTML/Element/time
  </tbody>
 </table>
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<p>像所有其他元素一样，此元素拥有可以使用 <a href="/zh-cn/HTML/Global_attributes">通用属性</a>。</p>
+像所有其他元素一样，此元素拥有可以使用 [通用属性](/zh-cn/HTML/Global_attributes)。
 
-<dl>
- <dt>{{ htmlattrdef("datetime") }}</dt>
- <dd>该属性表示此元素的时间和日期，并且属性值必须是一个<a href="http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time">有效的日期格式，并可包含时间</a>。 如果此值不能被解析为日期，元素不会有一个关联的时间戳。</dd>
- <dt>{{ htmlattrdef("pubdate") }}</dt>
- <dd>(该属性仍在被 WHATWG 和 W3C 组织设计和讨论中.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor <a href="/zh-cn/HTML/Element/article">article</a> element). If true, the <code>time</code> element must have a corresponding date. Additionally, each <code>time</code> element indicating a publication date must be the only <code>time</code> element that does so for that document.</dd>
-</dl>
+- {{ htmlattrdef("datetime") }}
+  - : 该属性表示此元素的时间和日期，并且属性值必须是一个[有效的日期格式，并可包含时间](http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time)。 如果此值不能被解析为日期，元素不会有一个关联的时间戳。
+- {{ htmlattrdef("pubdate") }}
+  - : (该属性仍在被 WHATWG 和 W3C 组织设计和讨论中.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor [article](/zh-cn/HTML/Element/article) element). If true, the `time` element must have a corresponding date. Additionally, each `time` element indicating a publication date must be the only `time` element that does so for that document.
 
-<h3 id="DOM_接口">DOM 接口</h3>
+### DOM 接口
 
-<p>该元素实现了 <code><a href="/zh-cn/DOM/HTMLTimeElement">HTMLTimeElement</a></code> 接口。</p>
+该元素实现了 [`HTMLTimeElement`](/zh-cn/DOM/HTMLTimeElement) 接口。
 
-<h3 id="例子">例子</h3>
+### 例子
 
-<pre class="brush: html">&lt;p&gt;The concert starts at &lt;time&gt;20:00&lt;/time&gt;.&lt;/p&gt;
-</pre>
+```html
+<p>The concert starts at <time>20:00</time>.</p>
+```
 
-<p>上面的 HTML 会显示：</p>
+上面的 HTML 会显示：
 
-<p>The concert starts at 20:00.</p>
+The concert starts at 20:00.
 
-<h4 id="Pubdate_example"><code>pubdate</code> 示例</h4>
+#### `pubdate` 示例
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;p&gt;This article was created on &lt;time pubdate&gt;2011-01-28&lt;/time&gt;.&lt;/p&gt;
-&lt;/article&gt;
-</pre>
+```html
+<article>
+  <p>This article was created on <time pubdate>2011-01-28</time>.</p>
+</article>
+```
 
-<p>上面的 HTML 会显示：</p>
+上面的 HTML 会显示：
 
-<p>This article was created on 2011-01-28.</p>
+This article was created on 2011-01-28.
 
-<h4 id="Datetime_example"><code>datetime</code> 示例</h4>
+#### `datetime` 示例
 
-<pre class="brush: html">&lt;p&gt;The concert took place on &lt;time datetime="2001-05-15 19:00"&gt;May 15&lt;/time&gt;.&lt;/p&gt;
-</pre>
+```html
+<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+```
 
-<p>上面的 HTML 会显示：</p>
+上面的 HTML 会显示：
 
-<p>The concert took place on May 15.</p>
+The concert took place on May 15.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

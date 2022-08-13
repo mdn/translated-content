@@ -7,13 +7,13 @@ tags:
   - Web
 translation_of: Web/HTML/Element/output
 ---
-<p><strong>HTML <code>&lt;output&gt;</code> 标签</strong>表示计算或用户操作的结果。</p>
+**HTML `<output>` 标签**表示计算或用户操作的结果。
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式元素</a>，<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a>，<a href="/en-US/docs/HTML/Content_categories#Form_listed">listed</a>, <a href="/en-US/docs/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/en-US/docs/HTML/Content_categories#Form_resettable">resettable</a>  <a href="/en-US/docs/HTML/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式元素</a>，<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语元素</a>，<a href="/zh-CN/docs/HTML/Content_categories#Form_listed">listed</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_resettable">resettable</a>  <a href="/zh-CN/docs/HTML/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许元素</th>
@@ -38,40 +38,37 @@ translation_of: Web/HTML/Element/output
  </tbody>
 </table>
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>这个标签具有 <a href="/zh-CN/docs/HTML/Global_attributes">全局属性</a>。</p>
+这个标签具有 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("for")}}</dt>
- <dd>其它影响计算结果的标签的 ID，可以多个。</dd>
- <dt>{{htmlattrdef("form")}}</dt>
- <dd>与当前标签有关联的 form（从属的表单）。该属性的值必须是当前文档内的表单元素的 ID。如果未指明该属性，output 标签必须是一个 form 的后代标签。该属性的用处在于可以让 output 标签脱离 form 标签，存在于一个网页文档的任意位置。</dd>
- <dt>{{htmlattrdef("name")}}</dt>
- <dd>name 属性。</dd>
-</dl>
+- {{htmlattrdef("for")}}
+  - : 其它影响计算结果的标签的 ID，可以多个。
+- {{htmlattrdef("form")}}
+  - : 与当前标签有关联的 form（从属的表单）。该属性的值必须是当前文档内的表单元素的 ID。如果未指明该属性，output 标签必须是一个 form 的后代标签。该属性的用处在于可以让 output 标签脱离 form 标签，存在于一个网页文档的任意位置。
+- {{htmlattrdef("name")}}
+  - : name 属性。
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush:html">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
-    &lt;input type="range" name="b" value="50" /&gt; +
-    &lt;input type="number" name="a" value="10" /&gt; =
-    &lt;output name="result"&gt;&lt;/output&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" name="b" value="50" /> +
+    <input type="number" name="a" value="10" /> =
+    <output name="result"></output>
+</form>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li>Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</li>
-</ul>
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

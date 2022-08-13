@@ -3,27 +3,23 @@ title: '<bdo>: 双向文本替代元素'
 slug: Web/HTML/Element/bdo
 translation_of: Web/HTML/Element/bdo
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
+HTML 双向文本替代元素 (**`<bdo>`**) 改写了文本的方向性，使文本以不同的方向渲染呈现出来 (override 可以翻译很多意思，编程语言中多用覆盖，重载；这里采用了 Google 的整体翻译，取替代替换改写之意)
 
+{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
 
-<p>HTML 双向文本替代元素 (<strong><code>&lt;bdo&gt;</code></strong>) 改写了文本的方向性，使文本以不同的方向渲染呈现出来 (override 可以翻译很多意思，编程语言中多用覆盖，重载；这里采用了 Google 的整体翻译，取替代替换改写之意)</p>
-
-<div>{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}</div>
-
-
-
-<p>文本的字符是从给定方向的起始点绘制的; 各个字符的方向不受影响 (因此字符集不会向后拉， 例如).</p>
+文本的字符是从给定方向的起始点绘制的; 各个字符的方向不受影响 (因此字符集不会向后拉， 例如).
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row">内容分类</th>
-   <td><a href="zh-CN/docs/Web/Guide/HTML/Content_categories">流式元素</a>, <a href="zh-CN/docs/Web/Guide/HTML/Content_categories">短语元素</a>, 显式元素。</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">流式元素</a>, <a href="zh-CN/docs/Web/Guide/HTML/Content_categories">短语元素</a>, 显式元素。</td>
   </tr>
   <tr>
    <th scope="row">许可内容</th>
-   <td><a href="zh-CN/docs/Web/Guide/HTML/Content_categories">短语元素</a>.</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">短语元素</a>.</td>
   </tr>
   <tr>
    <th scope="row">标记省略</th>
@@ -31,7 +27,7 @@ translation_of: Web/HTML/Element/bdo
   </tr>
   <tr>
    <th scope="row">许可父级元素</th>
-   <td>接受<a href="zh-CN/docs/Web/Guide/HTML/Content_categories">短语元素</a>的任何元素</td>
+   <td>接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">短语元素</a>的任何元素</td>
   </tr>
   <tr>
    <th scope="row">隐式 ARIA 角色</th>
@@ -48,50 +44,41 @@ translation_of: Web/HTML/Element/bdo
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>元素属性包含<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a></p>
+元素属性包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
-<dl>
- <dt>{{htmlattrdef("dir")}}</dt>
- <dd>
- <p>    在此元素内容中呈现文本的方向。可能的值是：</p>
+- {{htmlattrdef("dir")}}
+  - : 在此元素内容中呈现文本的方向。可能的值是：
 
- <ul>
-  <li>ltr: 指示文本应从左到右的方向。</li>
-  <li>rtl: 指示文本应从右到左的方向。</li>
- </ul>
- </dd>
-</dl>
+    - ltr: 指示文本应从左到右的方向。
+    - rtl: 指示文本应从右到左的方向。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;!-- Switch text direction --&gt;
-&lt;p&gt;This text will go left to right.&lt;/p&gt;
-&lt;p&gt;&lt;bdo dir="rtl"&gt;This text will go right
-to left.&lt;/bdo&gt;&lt;/p&gt;
-</pre>
+```html
+<!-- Switch text direction -->
+<p>This text will go left to right.</p>
+<p><bdo dir="rtl">This text will go right
+to left.</bdo></p>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="注意">注意</h2>
+## 注意
 
-<p>HTML 4 规范未指定此元素的事件。 它们是在 XHTML 中添加的。 这很可能是疏忽。</p>
+HTML 4 规范未指定此元素的事件。 它们是在 XHTML 中添加的。 这很可能是疏忽。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("html.elements.bdo")}}
 
+## 另参见
 
-<p>{{Compat("html.elements.bdo")}}</p>
-
-<h2 id="另参见">另参见</h2>
-
-<ul>
- <li>相关 HTML: {{HTMLElement("bdi")}}</li>
-</ul>
+- 相关 HTML: {{HTMLElement("bdi")}}

@@ -11,20 +11,17 @@ tags:
   - 参考
 translation_of: Web/HTML/Element/input/number
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><code><strong>"number"</strong></code>类型的 {{HTMLElement("input")}} 元素用于让用户输入一个数字。其包括内置验证以拒绝非数字输入。浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。</p>
+**`"number"`**类型的 {{HTMLElement("input")}} 元素用于让用户输入一个数字。其包括内置验证以拒绝非数字输入。浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。
 
-<div class="note">
-<p><strong>注意：</strong>不支持 <code>"number"</code> 类型的浏览器会改用标准的 <code><a href="/en-US/docs/Web/HTML/Element/input/text">"text"</a></code> 输入框。</p>
-</div>
+> **备注：** 不支持 `"number"` 类型的浏览器会改用标准的 [`"text"`](/en-US/docs/Web/HTML/Element/input/text) 输入框。
 
-<div id="Basic_example">
-<pre class="brush: html">&lt;input id="number" type="number"&gt;
-</pre>
+```html
+<input id="number" type="number">
+```
 
-<p>{{ EmbedLiveSample('Basic_example', 600, 40) }}</p>
-</div>
+{{ EmbedLiveSample('Basic_example', 600, 40) }}
 
 <table class="properties">
  <tbody>
@@ -51,151 +48,164 @@ translation_of: Web/HTML/Element/input/number
  </tbody>
 </table>
 
-<h2 id="值">值</h2>
+## 值
 
-<p>填写到输入框中的数值文字的{{jsxref("Number")}}表示。你可以通过把一个数字放在{{htmlattrxref("value", "input")}} 属性中来设置输入框的默认值，如下：</p>
+填写到输入框中的数值文字的{{jsxref("Number")}}表示。你可以通过把一个数字放在{{htmlattrxref("value", "input")}} 属性中来设置输入框的默认值，如下：
 
-<pre class="brush: html">&lt;input id="number" type="number" value="42"&gt;</pre>
+```html
+<input id="number" type="number" value="42">
+```
 
-<p>{{ EmbedLiveSample('值', 600, 40) }}</p>
+{{ EmbedLiveSample('值', 600, 40) }}
 
-<h2 id="使用_number_输入框">使用 number 输入框</h2>
+## 使用 number 输入框
 
-<p><code>&lt;input type ="number"&gt;</code>元素可以帮助您在构建用户界面和将数字输入到表单中的逻辑时简化你的工作。 当你使用正确的 type 值 <code>"number"</code> 创建数字输入时，会自动验证你输入的文本是否为数字，通常是一组向上和向下按钮。</p>
+`<input type ="number">`元素可以帮助您在构建用户界面和将数字输入到表单中的逻辑时简化你的工作。 当你使用正确的 type 值 `"number"` 创建数字输入时，会自动验证你输入的文本是否为数字，通常是一组向上和向下按钮。
 
-<div class="note">
-<p><strong>注意：</strong>记住用户可以在幕后修改 HTML 是至关重要的，因此您的网站不得使用简单的客户端验证来实现任何安全目的。 您必须在服务器端验证所提供的值可能具有任何安全含义的任何事务。</p>
-</div>
+> **备注：** 记住用户可以在幕后修改 HTML 是至关重要的，因此您的网站不得使用简单的客户端验证来实现任何安全目的。 您必须在服务器端验证所提供的值可能具有任何安全含义的任何事务。
 
-<p>此外，移动浏览器通过在用户尝试输入值时显示更适合输入数字的特殊键盘，进一步帮助用户体验。 以下屏幕截图来自 Firefox for Android：</p>
+此外，移动浏览器通过在用户尝试输入值时显示更适合输入数字的特殊键盘，进一步帮助用户体验。 以下屏幕截图来自 Firefox for Android：
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14963/number-keyboard-fxa.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![](https://mdn.mozillademos.org/files/14963/number-keyboard-fxa.png)
 
-<h3 id="一个简单的_number_输入框">一个简单的 number 输入框</h3>
+### 一个简单的 number 输入框
 
-<p>在最基本的形式中，数字输入可以像这样实现：</p>
+在最基本的形式中，数字输入可以像这样实现：
 
-<pre class="brush: html">&lt;label for="ticketNum"&gt;Number of tickets you would like to buy:&lt;/label&gt;
-&lt;input id="ticketNum" type="number" name="ticketNum" value="0"&gt;</pre>
+```html
+<label for="ticketNum">Number of tickets you would like to buy:</label>
+<input id="ticketNum" type="number" name="ticketNum" value="0">
+```
 
-<p>{{ EmbedLiveSample('一个简单的_number_输入框', 600, 40) }}</p>
+{{ EmbedLiveSample('一个简单的_number_输入框', 600, 40) }}
 
-<p>数字输入在为空的时候以及输入单个数字时被认为是有效的，但是否则是无效的。 如果使用{{htmlattrxref("required","input")}}属性，则输入在空时不再被视为有效。</p>
+数字输入在为空的时候以及输入单个数字时被认为是有效的，但是否则是无效的。 如果使用{{htmlattrxref("required","input")}}属性，则输入在空时不再被视为有效。
 
-<div class="note">
-<p><strong>注：</strong>任何数字都是可接受的值，只要它是<a href="https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number">有效的浮点数</a>（即不是 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a> 或 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a>）。</p>
-</div>
+> **备注：** 任何数字都是可接受的值，只要它是[有效的浮点数](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number)（即不是 [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 或 [Infinity](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)）。
 
-<h3 id="占位符">占位符</h3>
+### 占位符
 
-<p>有时，提供一个如何输入表单数据的上下文提示是非常友好的。尤其当页面所有{{HTMLElement("input")}}  元素都没有说明标签时，会非常重要。这就是使用<strong>占位符</strong>的原因。占位符是一个通常用于说明一个输入框的 <code>value</code> 应该如何输入的提示值，当元素的 <code>value</code> 为  <code>""</code> 时，该提示将出现在编辑框里面。 一旦有数据输入到编辑框中，占位符就会消失；如果该框被清空，占位符将重新出现。</p>
+有时，提供一个如何输入表单数据的上下文提示是非常友好的。尤其当页面所有{{HTMLElement("input")}} 元素都没有说明标签时，会非常重要。这就是使用**占位符**的原因。占位符是一个通常用于说明一个输入框的 `value` 应该如何输入的提示值，当元素的 `value` 为 `""` 时，该提示将出现在编辑框里面。 一旦有数据输入到编辑框中，占位符就会消失；如果该框被清空，占位符将重新出现。
 
-<p>这里，我们有一个占位符为"Multiple of 10"的<code>"number"</code> 输入框。请注意当你在编辑字段内容时占位符是如何消失的又是如何重现的。</p>
+这里，我们有一个占位符为"Multiple of 10"的`"number"` 输入框。请注意当你在编辑字段内容时占位符是如何消失的又是如何重现的。
 
-<pre class="brush: html">&lt;input type="number" placeholder="Multiple of 10"&gt;</pre>
+```html
+<input type="number" placeholder="Multiple of 10">
+```
 
-<p>{{ EmbedLiveSample('占位符', 600, 40) }}</p>
+{{ EmbedLiveSample('占位符', 600, 40) }}
 
-<h3 id="控制步进大小">控制步进大小</h3>
+### 控制步进大小
 
-<p>默认情况下，向上和向下按钮可以将值增加或减小 1。您可以通过使用{{htmlattrxref("step","input")}} 属性来更改此步长值。 我们上面的例子中的占位符提示我们其值是 10 的倍数，所以设置 <code>step</code> 的值为 10 是合理的：</p>
+默认情况下，向上和向下按钮可以将值增加或减小 1。您可以通过使用{{htmlattrxref("step","input")}} 属性来更改此步长值。 我们上面的例子中的占位符提示我们其值是 10 的倍数，所以设置 `step` 的值为 10 是合理的：
 
-<pre class="brush: html">&lt;input type="number" placeholder="multiple of 10" step="10"&gt;</pre>
+```html
+<input type="number" placeholder="multiple of 10" step="10">
+```
 
-<p>{{ EmbedLiveSample('控制步进大小', 600, 40) }}</p>
+{{ EmbedLiveSample('控制步进大小', 600, 40) }}
 
-<p>在这个例子中，你会发现上下箭头每次会将其值增加和减少 10，而不是 1。你仍然可以手动输入一个不是 10 的倍数的数字，但它会被认为是无效的。</p>
+在这个例子中，你会发现上下箭头每次会将其值增加和减少 10，而不是 1。你仍然可以手动输入一个不是 10 的倍数的数字，但它会被认为是无效的。
 
-<h3 id="指定最小和最大值">指定最小和最大值</h3>
+### 指定最小和最大值
 
-<p>可以使用{{htmlattrxref("min","input")}} 和{{htmlattrxref("max","input")}} 属性指定该字段可以具有的最小值和最大值。 例如，给例子指定最小值为 0，最大值为 100：</p>
+可以使用{{htmlattrxref("min","input")}} 和{{htmlattrxref("max","input")}} 属性指定该字段可以具有的最小值和最大值。 例如，给例子指定最小值为 0，最大值为 100：
 
-<pre class="brush: html">&lt;input type="number" placeholder="multiple of 10" step="10" min="0" max="100"&gt;</pre>
+```html
+<input type="number" placeholder="multiple of 10" step="10" min="0" max="100">
+```
 
-<p>{{ EmbedLiveSample('指定最小和最大值', 600, 40) }}</p>
+{{ EmbedLiveSample('指定最小和最大值', 600, 40) }}
 
-<p>修改过后，你会发现点击上下按钮不会让你低于 0 或高于 100 . 可以在这些界限之外手动输入数字，但它将被视为无效。</p>
+修改过后，你会发现点击上下按钮不会让你低于 0 或高于 100 . 可以在这些界限之外手动输入数字，但它将被视为无效。
 
-<h3 id="允许小数值">允许小数值</h3>
+### 允许小数值
 
-<p>数字输入的一个问题是，步长默认为 1——如果你尝试输入带小数的数字，例如"1.0"，则它将被视为无效。 如果要输入一个需要小数的值，则需要修改 <code>step</code> 值（例如，<code>step="0.01"</code> 以允许 2 位小数）。 这里有一个简单的例子：</p>
+数字输入的一个问题是，步长默认为 1——如果你尝试输入带小数的数字，例如"1.0"，则它将被视为无效。 如果要输入一个需要小数的值，则需要修改 `step` 值（例如，`step="0.01"` 以允许 2 位小数）。 这里有一个简单的例子：
 
-<pre class="brush: html">&lt;input type="number" placeholder="1.0" step="0.01" min="0" max="10"&gt;</pre>
+```html
+<input type="number" placeholder="1.0" step="0.01" min="0" max="10">
+```
 
-<p>{{EmbedLiveSample("允许小数值", 600, 40)}}</p>
+{{EmbedLiveSample("允许小数值", 600, 40)}}
 
-<p>你可以看到这个例子允许 0.0 到 10.0 之间的任何值，小数点为 2 位。本例中，"9.52" 是有效的，但" 9.521" 无效。</p>
+你可以看到这个例子允许 0.0 到 10.0 之间的任何值，小数点为 2 位。本例中，"9.52" 是有效的，但" 9.521" 无效。
 
-<h3 id="控制输入框大小">控制输入框大小</h3>
+### 控制输入框大小
 
-<p>类型为<code>"number"</code> 的 {{HTMLElement("input")}} 元素不支持像 {{htmlattrxref("size", "input")}} 之类的调整大小属性。你必须通过借助 <a href="/en-US/docs/Web/CSS">CSS</a> 来改变它们的尺寸大小。</p>
+类型为`"number"` 的 {{HTMLElement("input")}} 元素不支持像 {{htmlattrxref("size", "input")}} 之类的调整大小属性。你必须通过借助 [CSS](/zh-CN/docs/Web/CSS) 来改变它们的尺寸大小。
 
-<p>例如，要调整输入框的宽度为仅可输入 3 位数字的宽度，我们可以在 HTML 中添加 一个 ID 并缩短很长的占位符文本，如下：</p>
+例如，要调整输入框的宽度为仅可输入 3 位数字的宽度，我们可以在 HTML 中添加 一个 ID 并缩短很长的占位符文本，如下：
 
-<pre class="brush: html">&lt;input type="number" placeholder="x10" step="10" min="0" max="100" id="number"&gt;</pre>
+```html
+<input type="number" placeholder="x10" step="10" min="0" max="100" id="number">
+```
 
-<p>然后我们添加一些 CSS 来缩小 id 为 <code>"number"</code> 的元素的宽度：</p>
+然后我们添加一些 CSS 来缩小 id 为 `"number"` 的元素的宽度：
 
-<pre class="brush: css">#number {
+```css
+#number {
   width: 3em;
-}</pre>
+}
+```
 
-<p>效果如下：</p>
+效果如下：
 
-<p>{{ EmbedLiveSample('控制输入框大小', 600, 40) }}</p>
+{{ EmbedLiveSample('控制输入框大小', 600, 40) }}
 
-<h3 id="提供建议值">提供建议值</h3>
+### 提供建议值
 
-<p>You can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute, which contains as its value the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the number entry box.</p>
+You can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute, which contains as its value the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the number entry box.
 
-<pre class="brush: html">&lt;input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers"&gt;
-&lt;span class="validity"&gt;&lt;/span&gt;
+```html
+<input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers">
+<span class="validity"></span>
 
-&lt;datalist id="defaultNumbers"&gt;
-  &lt;option value="10045678"&gt;
-  &lt;option value="103421"&gt;
-  &lt;option value="11111111"&gt;
-  &lt;option value="12345678"&gt;
-  &lt;option value="12999922"&gt;
-&lt;/datalist&gt;</pre>
+<datalist id="defaultNumbers">
+  <option value="10045678">
+  <option value="103421">
+  <option value="11111111">
+  <option value="12345678">
+  <option value="12999922">
+</datalist>
+```
 
-<p>{{EmbedLiveSample("提供建议值", 600, 40)}}</p>
+{{EmbedLiveSample("提供建议值", 600, 40)}}
 
-<div class="note">
-<p>并非所有浏览器都支持<code>"number"</code> 输入框的 {{htmlattrxref("list", "input")}} 属性。它在 Chrome 和 Opera 中有效，但在 Firefox 中无效。</p>
-</div>
+> **备注：** 并非所有浏览器都支持`"number"` 输入框的 {{htmlattrxref("list", "input")}} 属性。它在 Chrome 和 Opera 中有效，但在 Firefox 中无效。
 
-<h2 id="验证">验证</h2>
+## 验证
 
-<p>We have alread mentioned a number of validation features of number inputs, but let's review them now:</p>
+We have alread mentioned a number of validation features of number inputs, but let's review them now:
 
-<ul>
- <li><code>&lt;input type="number"&gt;</code> elements automatically invalidate any entry that isn't a number (or empty, unless <code>required</code> is specified).</li>
- <li>You can use the {{htmlattrxref("required", "input")}} attribute to make an empty entry invalid, i.e. the input has to be filled in.</li>
- <li>You can use the {{htmlattrxref("step", "input")}} attribute to constrain valid values to a certain set of steps (e.g. multiples of 10).</li>
- <li>You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to constrain valid values to lower and upper bounds.</li>
-</ul>
+- `<input type="number">` elements automatically invalidate any entry that isn't a number (or empty, unless `required` is specified).
+- You can use the {{htmlattrxref("required", "input")}} attribute to make an empty entry invalid, i.e. the input has to be filled in.
+- You can use the {{htmlattrxref("step", "input")}} attribute to constrain valid values to a certain set of steps (e.g. multiples of 10).
+- You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to constrain valid values to lower and upper bounds.
 
-<p>The following example exhibits all of the above features, as well as using some CSS to display valid and invalid icons when the input value is valid/invalid:</p>
+The following example exhibits all of the above features, as well as using some CSS to display valid and invalid icons when the input value is valid/invalid:
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="balloons"&gt;Number of balloons to order (multiples of 10):&lt;/label&gt;
-    &lt;input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;input type="submit"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <div>
+    <label for="balloons">Number of balloons to order (multiples of 10):</label>
+    <input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+```
 
-<p>{{EmbedLiveSample("验证", 600, 80)}}</p>
+{{EmbedLiveSample("验证", 600, 80)}}
 
-<p>Try submitting the form with different invalid values entered — e.g. no value, a value below 0 or above 100, a value that is not a multiple of 10, or a non-numerical value — and see how the error messages the browser gives you differ with different ones.</p>
+Try submitting the form with different invalid values entered — e.g. no value, a value below 0 or above 100, a value that is not a multiple of 10, or a non-numerical value — and see how the error messages the browser gives you differ with different ones.
 
-<p>The CSS applied to this example is as follows:</p>
+The CSS applied to this example is as follows:
 
-<pre class="brush: css">div {
+```css
+div {
   margin-bottom: 10px;
 }
 
@@ -207,55 +217,57 @@ input:invalid+span:after {
 input:valid+span:after {
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, indicating if the current value is valid. We put it on a separate <code>&lt;span&gt;</code> element for added flexibility; some browsers don't display generated content very effectively on some types of form inputs (read for example the section on <a href="/en-US/docs/Web/HTML/Element/input/date#Validation"><code>&lt;input type="date"&gt;</code> validation</a>).</p>
+Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, indicating if the current value is valid. We put it on a separate `<span>` element for added flexibility; some browsers don't display generated content very effectively on some types of form inputs (read for example the section on [`<input type="date">` validation](/zh-CN/docs/Web/HTML/Element/input/date#Validation)).
 
-<div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for server-side scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).</p>
-</div>
+> **警告：** HTML form validation is _not_ a substitute for server-side scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
 
-<h3 id="验证模式">验证模式</h3>
+### 验证模式
 
-<p><code>&lt;input type="number"&gt;</code> elements do not support use of the {{htmlattrxref("pattern", "input")}} attribute for making entered values conform to a specific regex pattern. The rationale for this is that number inputs can't contain anything except numbers, and you can constrain the minimum and maximum number of valid digits using the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes, as explained above.</p>
+`<input type="number">` elements do not support use of the {{htmlattrxref("pattern", "input")}} attribute for making entered values conform to a specific regex pattern. The rationale for this is that number inputs can't contain anything except numbers, and you can constrain the minimum and maximum number of valid digits using the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes, as explained above.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>We've already covered the fact that by default, the increment is 1, and you can use the {{htmlattrxref("step", "input")}} attribute to allow decimal inputs. Let's take a closer look. In the following example we've set up a form for entering the user's height; it defaults to accepting a height in meters, but you can click the relevant button to change the form to accept feet and inches instead. The input for the height in meters accepts decimals to two places.</p>
+We've already covered the fact that by default, the increment is 1, and you can use the {{htmlattrxref("step", "input")}} attribute to allow decimal inputs. Let's take a closer look. In the following example we've set up a form for entering the user's height; it defaults to accepting a height in meters, but you can click the relevant button to change the form to accept feet and inches instead. The input for the height in meters accepts decimals to two places.
 
-<p>{{EmbedLiveSample("示例", 600, 100)}}</p>
+{{EmbedLiveSample("示例", 600, 100)}}
 
-<p>The HTML looks like this:</p>
+The HTML looks like this:
 
-<pre class="brush: html">&lt;form&gt;
-    &lt;div class="metersInputGroup"&gt;
-        &lt;label for="meters"&gt;Enter your height — meters:&lt;/label&gt;
-        &lt;input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="e.g. 1.78" required&gt;
-        &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-        &lt;span&gt;Enter your height — &lt;/span&gt;
-        &lt;label for="feet"&gt;feet:&lt;/label&gt;
-        &lt;input id="feet" type="number" name="feet" min="0" step="1"&gt;
-        &lt;span class="validity"&gt;&lt;/span&gt;
-        &lt;label for="inches"&gt;inches:&lt;/label&gt;
-        &lt;input id="inches" type="number" name="inches" min="0" max="11" step="1"&gt;
-        &lt;span class="validity"&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;input type="button" class="meters" value="Enter height in feet and inches"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;input type="submit" value="Submit form"&gt;
-    &lt;/div&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+    <div class="metersInputGroup">
+        <label for="meters">Enter your height — meters:</label>
+        <input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="e.g. 1.78" required>
+        <span class="validity"></span>
+    </div>
+        <span>Enter your height — </span>
+        <label for="feet">feet:</label>
+        <input id="feet" type="number" name="feet" min="0" step="1">
+        <span class="validity"></span>
+        <label for="inches">inches:</label>
+        <input id="inches" type="number" name="inches" min="0" max="11" step="1">
+        <span class="validity"></span>
+    </div>
+    <div>
+      <input type="button" class="meters" value="Enter height in feet and inches">
+    </div>
+    <div>
+        <input type="submit" value="Submit form">
+    </div>
+</form>
+```
 
-<p>You'll see that we are using many of the attributes we've already looked at in the article earlier on. Since we want to accept a meter value in centimeters, we've set the <code>step</code> value to <code>0.01</code>, so that values like 1.78 are not seen as invalid. We've also provided a placeholder for that input.</p>
+You'll see that we are using many of the attributes we've already looked at in the article earlier on. Since we want to accept a meter value in centimeters, we've set the `step` value to `0.01`, so that values like 1.78 are not seen as invalid. We've also provided a placeholder for that input.
 
-<p>We've hidden the feet and inches inputs initially using <code>class="hidden"</code> so that meters is the default entry type.</p>
+We've hidden the feet and inches inputs initially using `class="hidden"` so that meters is the default entry type.
 
-<p>Now on to the CSS — this looks very similar to the validation styling we saw before; nothing remarkable here:</p>
+Now on to the CSS — this looks very similar to the validation styling we saw before; nothing remarkable here:
 
-<pre class="brush: css">div {
+```css
+div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -278,11 +290,13 @@ input:valid+span:after {
   position: absolute;
   content: '✓';
   padding-left: 5px;
-}</pre>
+}
+```
 
-<p>And finally, the JavaScript:</p>
+And finally, the JavaScript:
 
-<pre class="brush: js">var metersInputGroup = document.querySelector('.metersInputGroup');
+```js
+var metersInputGroup = document.querySelector('.metersInputGroup');
 var feetInputGroup = document.querySelector('.feetInputGroup');
 var metersInput = document.querySelector('#meters');
 var feetInput = document.querySelector('#feet');
@@ -316,26 +330,23 @@ switchBtn.addEventListener('click', function() {
     feetInput.value = '';
     inchesInput.value = '';
   }
-});</pre>
+});
+```
 
-<p>After declaring a few variables, we add an event listener to the button to control the switching mechanism. This is pretty simple, mostly involving changing over the button class and label, and updating the display values of the two sets of inputs when the button is pressed. Note that we're not converting back and forth between meters and feet/inches here, which a real-life web application would probably do.</p>
+After declaring a few variables, we add an event listener to the button to control the switching mechanism. This is pretty simple, mostly involving changing over the button class and label, and updating the display values of the two sets of inputs when the button is pressed. Note that we're not converting back and forth between meters and feet/inches here, which a real-life web application would probably do.
 
-<div class="note">
-<p>Note that when the user clicks the button, we remove the <code>required</code> attribute(s) from the input(s) we are hiding, and empty the <code>value</code> attribute(s). This is so that we can submit the form if both input sets aren't filled in, and won't submit data that we didn't mean to submit. If we didn't do this, you'd have to fill in both feet/inches <strong>and</strong> meters to submit the form!</p>
-</div>
+> **备注：** Note that when the user clicks the button, we remove the `required` attribute(s) from the input(s) we are hiding, and empty the `value` attribute(s). This is so that we can submit the form if both input sets aren't filled in, and won't submit data that we didn't mean to submit. If we didn't do this, you'd have to fill in both feet/inches **and** meters to submit the form!
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("html.elements.input.input-number")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms">HTML forms guide</a></li>
- <li>{{HTMLElement("input")}}</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/tel">&lt;input type="tel"&gt;</a></code></li>
-</ul>
+- [HTML forms guide](/zh-CN/docs/Learn/HTML/Forms)
+- {{HTMLElement("input")}}
+- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)

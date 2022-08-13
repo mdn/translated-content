@@ -9,16 +9,16 @@ tags:
   - 菜单
 translation_of: Web/HTML/Element/menuitem
 ---
-<p>{{HTMLRef}}{{Deprecated_Header("HTML5.2")}}</p>
+{{HTMLRef}}{{Deprecated_Header("HTML5.2")}}
 
-<p>用户可以通过<strong>HTML <code>&lt;menuitem&gt;</code> 元素</strong>生成一个弹出式菜单。这包括上下文菜单，以及按钮可能附带的菜单。</p>
+用户可以通过**HTML `<menuitem>` 元素**生成一个弹出式菜单。这包括上下文菜单，以及按钮可能附带的菜单。
 
-<p>这个标签可以被显式定义，带有文本标签和可选图标来描述其外观，或者作为一个<em>间接命令</em>，其行为由一个单独的元素定义。命令还可以选择包含复选框或分组共享单选按钮。（<code>&lt;input type="checkbox"&gt;</code> 和 <code>&lt;input type="radio"&gt;</code>）</p>
+这个标签可以被显式定义，带有文本标签和可选图标来描述其外观，或者作为一个*间接命令*，其行为由一个单独的元素定义。命令还可以选择包含复选框或分组共享单选按钮。（`<input type="checkbox">` 和 `<input type="radio">`）
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容类别</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容类别</a></th>
    <td>None.</td>
   </tr>
   <tr>
@@ -44,82 +44,78 @@ translation_of: Web/HTML/Element/menuitem
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该标签支持<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>；特别地， <code>title</code> 常常用来描述命令，或者提供有用的注释。</p>
+该标签支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)；特别地， `title` 常常用来描述命令，或者提供有用的注释。
 
-<dl>
- <dt>{{HTMLAttrDef("checked")}}</dt>
- <dd>布尔值，指示是否选择了命令。只能作为属性使用在 <code>checkbox</code> 或 <code>radio</code> 中。</dd>
- <dt>{{HTMLAttrDef("command")}}</dt>
- <dd>指定一个单独元素的 ID，指示要间接调用的命令。在包含属性的菜单项中也不能使用。<code>checked</code>、<code>disabled</code>、<code>icon</code>、<code>label</code>、<code>radiogroup</code> 或 <code>type</code>。</dd>
- <dt>{{HTMLAttrDef("default")}}</dt>
- <dd>布尔值，表示使用与菜单主题元素相同的命令。（如 <code>button</code> 或 <code>input</code>）。</dd>
- <dt>{{HTMLAttrDef("disabled")}}</dt>
- <dd>布尔值，表示命令在当前状态下不可用。请注意，禁用与隐藏不同；禁用的属性适用于任何环境变化可能导致命令相关的上下文中。</dd>
- <dt>{{HTMLAttrDef("icon")}}</dt>
- <dd>图片 URL，用于提供图片来表示命令。</dd>
- <dt>{{HTMLAttrDef("label")}}</dt>
- <dd>展示给用户一个命令的名字，当 <code>command</code> 属性不存在时是必须的。</dd>
- <dt>{{HTMLAttrDef("radiogroup")}}</dt>
- <dd>此属性指定要切换为单选按钮时，选定的一组命令的名称。只能作为 radio 的属性使用。</dd>
- <dt>{{HTMLAttrDef("type")}}</dt>
- <dd>这个属性指定命令的类型，可以为以下三个命令之一。
- <ul>
-  <li><code>command</code>：有关联动作的常规命令。这是缺少时的值默认值。</li>
-  <li><code>checkbox</code>：代表一个命令可以在两个不同状态之间的切换。</li>
-  <li><code>radio</code>：代表一组单选按钮，可切换为命令中的一个选择。</li>
- </ul>
- </dd>
-</dl>
+- {{HTMLAttrDef("checked")}}
+  - : 布尔值，指示是否选择了命令。只能作为属性使用在 `checkbox` 或 `radio` 中。
+- {{HTMLAttrDef("command")}}
+  - : 指定一个单独元素的 ID，指示要间接调用的命令。在包含属性的菜单项中也不能使用。`checked`、`disabled`、`icon`、`label`、`radiogroup` 或 `type`。
+- {{HTMLAttrDef("default")}}
+  - : 布尔值，表示使用与菜单主题元素相同的命令。（如 `button` 或 `input`）。
+- {{HTMLAttrDef("disabled")}}
+  - : 布尔值，表示命令在当前状态下不可用。请注意，禁用与隐藏不同；禁用的属性适用于任何环境变化可能导致命令相关的上下文中。
+- {{HTMLAttrDef("icon")}}
+  - : 图片 URL，用于提供图片来表示命令。
+- {{HTMLAttrDef("label")}}
+  - : 展示给用户一个命令的名字，当 `command` 属性不存在时是必须的。
+- {{HTMLAttrDef("radiogroup")}}
+  - : 此属性指定要切换为单选按钮时，选定的一组命令的名称。只能作为 radio 的属性使用。
+- {{HTMLAttrDef("type")}}
+  - : 这个属性指定命令的类型，可以为以下三个命令之一。
 
-<h2 id="例子">例子</h2>
+    - `command`：有关联动作的常规命令。这是缺少时的值默认值。
+    - `checkbox`：代表一个命令可以在两个不同状态之间的切换。
+    - `radio`：代表一组单选按钮，可切换为命令中的一个选择。
 
-<h3 id="HTML">HTML</h3>
+## 例子
 
-<pre class="brush: html;">&lt;!-- A &lt;div&gt; element with a context menu --&gt;
-&lt;div contextmenu="popup-menu"&gt;
+### HTML
+
+```html
+<!-- A <div> element with a context menu -->
+<div contextmenu="popup-menu">
   Right-click to see the adjusted context menu
-&lt;/div&gt;
+</div>
 
-&lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem type="checkbox" checked&gt;Checkbox&lt;/menuitem&gt;
-  &lt;hr&gt;
-  &lt;menuitem type="command" label="This command does nothing" icon="https://developer.mozilla.org/static/img/favicon144.png"&gt;
+<menu type="context" id="popup-menu">
+  <menuitem type="checkbox" checked>Checkbox</menuitem>
+  <hr>
+  <menuitem type="command" label="This command does nothing" icon="https://developer.mozilla.org/static/img/favicon144.png">
     Commands don't render their contents.
-  &lt;/menuitem&gt;
-  &lt;menuitem type="command" label="This command has javascript" onclick="alert('command clicked')"&gt;
+  </menuitem>
+  <menuitem type="command" label="This command has javascript" onclick="alert('command clicked')">
     Commands don't render their contents.
-  &lt;/menuitem&gt;
-  &lt;hr&gt;
-  &lt;menuitem type="radio" radiogroup="group1"&gt;Radio Button 1&lt;/menuitem&gt;
-  &lt;menuitem type="radio" radiogroup="group1"&gt;Radio Button 2&lt;/menuitem&gt;
-&lt;/menu&gt;
-</pre>
+  </menuitem>
+  <hr>
+  <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
+  <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
+</menu>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">div {
+```css
+div {
   width: 300px;
   height: 80px;
   background-color: lightgreen;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Example", '100%', 80)}}</p>
+{{EmbedLiveSample("Example", '100%', 80)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何现行的规范。</p>
+不属于任何现行的规范。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/">HTML5 context menus in Firefox (Screencast and Code)</a></li>
-</ul>
+- [HTML5 context menus in Firefox (Screencast and Code)](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/)

@@ -3,23 +3,21 @@ title: <content>
 slug: Web/HTML/Element/content
 translation_of: Web/HTML/Element/content
 ---
-<p>{{Deprecated_header}}</p>
+{{Deprecated_header}}
 
-<p><strong>HTML <code>&lt;content&gt;</code> 元素</strong>— <a href="/en-US/docs/Web/Web_Components">Web 组件</a> 的技术套件的废弃部分 — 用于 <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> 内部作为 {{glossary("insertion point")}}，并且不可用于任何正常的 HTML，现在已被 {{HTMLElement("slot")}} 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。 </p>
+**HTML `<content>` 元素**— [Web 组件](/zh-CN/docs/Web/Web_Components) 的技术套件的废弃部分 — 用于 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM) 内部作为 {{glossary("insertion point")}}，并且不可用于任何正常的 HTML，现在已被 {{HTMLElement("slot")}} 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。
 
-<div class="note">
-<p><strong>注</strong>：虽然在规范的草案中出现，并且在多个浏览器中实现，这个元素依然会在规范的之后版本中移除。</p>
-</div>
+> **备注：** 虽然在规范的草案中出现，并且在多个浏览器中实现，这个元素依然会在规范的之后版本中移除。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model">透明内容</a></td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Transparent_content_model">透明内容</a></td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">流式内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流式内容</a></td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -36,64 +34,59 @@ translation_of: Web/HTML/Element/content
  </tbody>
 </table>
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>这个元素包含 <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+这个元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt><code>select</code></dt>
- <dd>逗号分隔的选择器列表，它们和 CSS 选择器语法相同。它们选择要插入的内容，来替换为 <code>&lt;content&gt; </code>元素。</dd>
-</dl>
+- `select`
+  - : 逗号分隔的选择器列表，它们和 CSS 选择器语法相同。它们选择要插入的内容，来替换为 `<content> `元素。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这里是一个使用 <code>&lt;content&gt;</code> 元素的简单示例。它是个 HTML 文件，包含所有所需的东西。</p>
+这里是一个使用 `<content>` 元素的简单示例。它是个 HTML 文件，包含所有所需的东西。
 
-<div class="note">
-<p><strong>注</strong>：为了使这个代码有效，你使用的浏览器必须支持 Web 组件，请见 <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>。</p>
-</div>
+> **备注：** 为了使这个代码有效，你使用的浏览器必须支持 Web 组件，请见 [Enabling Web Components in Firefox](/zh-CN/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox)。
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;head&gt;&lt;/head&gt;
-  &lt;body&gt;
-  &lt;!-- The original content accessed by &lt;content&gt; --&gt;
-  &lt;div&gt;
-    &lt;h4&gt;My Content Heading&lt;/h4&gt;
-    &lt;p&gt;My content text&lt;/p&gt;
-  &lt;/div&gt;
+```html
+<html>
+  <head></head>
+  <body>
+  <!-- The original content accessed by <content> -->
+  <div>
+    <h4>My Content Heading</h4>
+    <p>My content text</p>
+  </div>
 
-  &lt;script&gt;
-  // Get the &lt;div&gt; above.
+  <script>
+  // Get the <div> above.
   var myContent = document.querySelector('div');
-  // Create a shadow DOM on the &lt;div&gt;
+  // Create a shadow DOM on the <div>
   var shadowroot = myContent.createShadowRoot();
   // Insert into the shadow DOM a new heading and
-  // part of the original content: the &lt;p&gt; tag.
+  // part of the original content: the <p> tag.
   shadowroot.innerHTML =
-   '&lt;h2&gt;Inserted Heading&lt;/h2&gt; &lt;content select="p"&gt;&lt;/content&gt;';
-  &lt;/script&gt;
+   '<h2>Inserted Heading</h2> <content select="p"></content>';
+  </script>
 
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </body>
+</html>
+```
 
-<p>如果你在 Web 浏览器中展示，它应该是这样。</p>
+如果你在 Web 浏览器中展示，它应该是这样。
 
-<p><img alt="content example" src="content-example.png"></p>
+![content example](content-example.png)
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何现行的规范。</p>
+不属于任何现行的规范。
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("html.elements.content")}}
 
-<h2 id="See_also">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components">Web 组件</a></li>
- <li>{{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}</li>
-</ul>
+- [Web 组件](/zh-CN/docs/Web/Web_Components)
+- {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

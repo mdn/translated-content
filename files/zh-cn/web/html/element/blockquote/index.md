@@ -8,21 +8,21 @@ tags:
   - 引用
 translation_of: Web/HTML/Element/blockquote
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（<a href="/zh-CN/docs/Web/HTML/Element/blockquote#Notes">注</a> 中说明了如何更改）。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上，若要以文本的形式告知读者引文的出处时，可以通过 {{HTMLElement("cite")}} 元素。</p>
+**HTML `<blockquote>` 元素**（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（[注](/zh-CN/docs/Web/HTML/Element/blockquote#Notes) 中说明了如何更改）。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上，若要以文本的形式告知读者引文的出处时，可以通过 {{HTMLElement("cite")}} 元素。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, sectioning root, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, sectioning root, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -30,7 +30,7 @@ translation_of: Web/HTML/Element/blockquote
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
@@ -43,30 +43,28 @@ translation_of: Web/HTML/Element/blockquote
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>此元素的属性包含 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+此元素的属性包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>是一个标注引用的信息的来源文档或者相关信息的 URL。通常用来描述能够解释引文的上下文或者引用的信息。</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : 是一个标注引用的信息的来源文档或者相关信息的 URL。通常用来描述能够解释引文的上下文或者引用的信息。
 
+## 使用备注
 
-<h2 id="使用备注">使用备注</h2>
+若要修改被引用内容的缩进距离，可以使用 {{Glossary("CSS")}} {{cssxref("margin-left")}} 和/或 {{cssxref("margin-right")}} 属性，或使用 {{cssxref("margin")}} 缩写属性。
 
-<p>若要修改被引用内容的缩进距离，可以使用 {{Glossary("CSS")}} {{cssxref("margin-left")}} 和/或 {{cssxref("margin-right")}} 属性，或使用 {{cssxref("margin")}} 缩写属性。</p>
+若想使用在行内引用较短的内容而非创建一个单独的引用块，可使用 {{HTMLElement("q")}}（Quotation）元素。
 
-<p>若想使用在行内引用较短的内容而非创建一个单独的引用块，可使用 {{HTMLElement("q")}}（Quotation）元素。</p>
+如果想要使用短引用（行间引用），可以使用{{HTMLElement("q")}} 标签。
 
-<p>如果想要使用短引用（行间引用），可以使用{{HTMLElement("q")}} 标签。</p>
+## 例子
 
-<h2 id="例子">例子</h2>
+下面的这个例子演示了使用 `<blockquote>` 元素引用一段来自 {{RFC(1149)}} 的内容，以禽类作为载体的 IP 数据包传输标准。
 
-<p>下面的这个例子演示了使用 <code>&lt;blockquote&gt;</code> 元素引用一段来自 {{RFC(1149)}} 的内容，<cite>以禽类作为载体的 IP 数据包传输标准。</cite></p>
-
-<pre class="brush: html">&lt;blockquote cite="https://tools.ietf.org/html/rfc1149"&gt;
-  &lt;p&gt;Avian carriers can provide high delay, low
+```html
+<blockquote cite="https://tools.ietf.org/html/rfc1149">
+  <p>Avian carriers can provide high delay, low
   throughput, and low altitude service.  The
   connection topology is limited to a single
   point-to-point path for each carrier, used with
@@ -76,27 +74,23 @@ translation_of: Web/HTML/Element/blockquote
   ether space available to the carriers, in contrast
   to the 1D ether used by IEEE802.3.  The carriers
   have an intrinsic collision avoidance system, which
-  increases availability.&lt;/p&gt;
-&lt;/blockquote&gt;
-</pre>
+  increases availability.</p>
+</blockquote>
+```
 
-<p>上面的 HTML 代码将会生成：</p>
+上面的 HTML 代码将会生成：
 
-<p>{{EmbedLiveSample("Example", 640, 180)}}</p>
+{{EmbedLiveSample("Example", 640, 180)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("html.elements.blockquote")}}
 
+## 参见
 
-<p>{{Compat("html.elements.blockquote")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>适用于行内引用的 {{HTMLElement("q")}} 元素。</li>
- <li>适用于来源引文的 {{HTMLElement("cite")}} 元素。</li>
-</ul>
+- 适用于行内引用的 {{HTMLElement("q")}} 元素。
+- 适用于来源引文的 {{HTMLElement("cite")}} 元素。

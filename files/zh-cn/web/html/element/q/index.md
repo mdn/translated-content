@@ -8,19 +8,19 @@ tags:
   - 标签
 translation_of: Web/HTML/Element/q
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><em>HTML 引用标签</em> (<strong>&lt;q&gt;</strong>) 表示一个封闭的并且是短的行内引用的文本。这个标签是用来引用短的文本，所以请不要引入换行符; 对于长的文本的引用请使用 {{HTMLElement("blockquote")}} 替代。</p>
+_HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用的文本。这个标签是用来引用短的文本，所以请不要引入换行符; 对于长的文本的引用请使用 {{HTMLElement("blockquote")}} 替代。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Tag omission</th>
@@ -28,7 +28,7 @@ translation_of: Web/HTML/Element/q
   </tr>
   <tr>
    <th scope="row">Permitted parent elements</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>
@@ -37,42 +37,38 @@ translation_of: Web/HTML/Element/q
  </tbody>
 </table>
 
-<div class="notecard note">
- <p><strong>备注：</strong>大多数现代浏览器，会为 &lt;q&gt; 文本添加引号。旧浏览器可能需要使用 CSS 添加引号。IE、Edge 与 Firefox、Chrome 引号样式略有不同。</p>
-</div>
+> **备注：** 大多数现代浏览器，会为 \<q> 文本添加引号。旧浏览器可能需要使用 CSS 添加引号。IE、Edge 与 Firefox、Chrome 引号样式略有不同。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>&lt;q&gt;标签拥有 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>.</p>
+\<q>标签拥有 [全局属性](/zh-CN/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>这个属性的值是 URL，意在指出被引用的文本的源文档或者源信息。这个属性重在解释这个引用的参考或者是上下文。</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : 这个属性的值是 URL，意在指出被引用的文本的源文档或者源信息。这个属性重在解释这个引用的参考或者是上下文。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML_内容">HTML 内容</h3>
+### HTML 内容
 
-<pre class="brush: html">&lt;p&gt;Everytime Kenny is killed, Stan will announce
-   &lt;q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact"&gt;
+```html
+<p>Everytime Kenny is killed, Stan will announce
+   <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
      Oh my God, you/they killed Kenny!
-   &lt;/q&gt;.
-&lt;/p&gt;</pre>
+   </q>.
+</p>
+```
 
-<p>{{ EmbedLiveSample('示例') }}</p>
+{{ EmbedLiveSample('示例') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("html.elements.q")}}</p>
+{{Compat("html.elements.q")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>The {{HTMLElement("blockquote")}} element for long quotations.</li>
- <li>The {{HTMLElement("cite")}} element for source citations.</li>
-</ul>
+- The {{HTMLElement("blockquote")}} element for long quotations.
+- The {{HTMLElement("cite")}} element for source citations.

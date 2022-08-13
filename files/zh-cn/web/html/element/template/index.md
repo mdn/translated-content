@@ -9,17 +9,17 @@ tags:
   - 元素
 translation_of: Web/HTML/Element/template
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><strong>HTML 内容模板（<code>&lt;template&gt;</code>）元素</strong>是一种用于保存客户端内容机制，该内容在加载页面时不会呈现，但随后可以 (原文为 may be) 在运行时使用 JavaScript 实例化。</p>
+**HTML 内容模板（`<template>`）元素**是一种用于保存客户端内容机制，该内容在加载页面时不会呈现，但随后可以 (原文为 may be) 在运行时使用 JavaScript 实例化。
 
-<p>将模板视为一个可存储在文档中以便后续使用的内容片段。虽然解析器在加载页面时确实会处理<strong><code>&lt;template&gt;</code></strong>元素的内容，但这样做只是为了确保这些内容有效；但元素内容不会被渲染。</p>
+将模板视为一个可存储在文档中以便后续使用的内容片段。虽然解析器在加载页面时确实会处理**`<template>`**元素的内容，但这样做只是为了确保这些内容有效；但元素内容不会被渲染。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, script-supporting element</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, script-supporting element</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -44,41 +44,43 @@ translation_of: Web/HTML/Element/template
  </tbody>
 </table>
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>此元素仅包含<a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<p>但， {{domxref("HTMLTemplateElement")}} 有个属性： {{domxref("HTMLTemplateElement.content", "content")}} , 这个属性是只读的{{domxref("DocumentFragment")}} 包含了模板所表示的 DOM 树。</p>
+但， {{domxref("HTMLTemplateElement")}} 有个属性： {{domxref("HTMLTemplateElement.content", "content")}} , 这个属性是只读的{{domxref("DocumentFragment")}} 包含了模板所表示的 DOM 树。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>首先我们从示例的 HTML 部分开始。</p>
+首先我们从示例的 HTML 部分开始。
 
-<pre class="brush: html">&lt;table id="producttable"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;td&gt;UPC_Code&lt;/td&gt;
-      &lt;td&gt;Product_Name&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;!-- 现有数据可以可选地包括在这里 --&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+```html
+<table id="producttable">
+  <thead>
+    <tr>
+      <td>UPC_Code</td>
+      <td>Product_Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 现有数据可以可选地包括在这里 -->
+  </tbody>
+</table>
 
-&lt;template id="productrow"&gt;
-  &lt;tr&gt;
-    &lt;td class="record"&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/template&gt;
-</pre>
+<template id="productrow">
+  <tr>
+    <td class="record"></td>
+    <td></td>
+  </tr>
+</template>
+```
 
-<p>首先，我们有一个表，稍后我们将使用 JavaScript 代码在其中插入内容。然后是模板，它描述了表示单个表行的 HTML 片段的结构。</p>
+首先，我们有一个表，稍后我们将使用 JavaScript 代码在其中插入内容。然后是模板，它描述了表示单个表行的 HTML 片段的结构。
 
-<p>既然已经创建了表并定义了模板，我们使用 JavaScript 将行插入到表中，每一行都是以模板为基础构建的。</p>
+既然已经创建了表并定义了模板，我们使用 JavaScript 将行插入到表中，每一行都是以模板为基础构建的。
 
-<pre class="brush:js;">// 通过检查来测试浏览器是否支持 HTML 模板元素
+```js
+// 通过检查来测试浏览器是否支持 HTML 模板元素
 // 用于保存模板元素的内容属性。
 if ('content' in document.createElement('template')) {
 
@@ -104,35 +106,30 @@ if ('content' in document.createElement('template')) {
 } else {
   // 找到另一种方法来添加行到表，因为不支持 HTML 模板元素。
 }
-</pre>
+```
 
-<p>结果是原始的 HTML 表格，通过 JavaScript 添加了两行新内容：</p>
+结果是原始的 HTML 表格，通过 JavaScript 添加了两行新内容：
 
-<div class="hidden">
-<pre class="brush: css">table {
+```css hidden
+table {
   background: #000;
 }
 table td {
   background: #fff;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("示例", 500, 120)}}</p>
+{{EmbedLiveSample("示例", 500, 120)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li>Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots">Using templates and slots</a></li>
-</ul>
-
-
+- Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
+- [Using templates and slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)

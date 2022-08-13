@@ -8,19 +8,17 @@ tags:
   - 嵌入
 translation_of: Web/HTML/Element/embed
 ---
-<p><strong>HTML <code>&lt;embed&gt;</code> 元素</strong>将外部内容嵌入文档中的指定位置。此内容由外部应用程序或其他交互式内容源（如浏览器插件）提供。</p>
+**HTML `<embed>` 元素**将外部内容嵌入文档中的指定位置。此内容由外部应用程序或其他交互式内容源（如浏览器插件）提供。
 
-<div class="note">
- <p><strong>备注：</strong>这篇文档仅定义该元素在 HTML5 中定义的部分，不包含该元素之前的声明内容和非标准的实现。</p>
-</div>
+> **备注：** 这篇文档仅定义该元素在 HTML5 中定义的部分，不包含该元素之前的声明内容和非标准的实现。
 
-<p>请记住，大多数现代浏览器已经弃用并取消了对浏览器插件的支持，所以如果您希望您的网站可以在普通用户的浏览器上运行，那么依靠 <code>&lt;embed&gt;</code> 通常是不明智的。</p>
+请记住，大多数现代浏览器已经弃用并取消了对浏览器插件的支持，所以如果您希望您的网站可以在普通用户的浏览器上运行，那么依靠 `<embed>` 通常是不明智的。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, embedded content, interactive content, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -45,44 +43,37 @@ translation_of: Web/HTML/Element/embed
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素的属性包括 <a href="/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
+这个元素的属性包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>资源显示的高度，in <a href="https://drafts.csswg.org/css-values/#px">CSS pixels</a>.  -- (Absolute values only.  <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes">NO percentages</a>)</dd>
- <dt>{{htmlattrdef("src")}}</dt>
- <dd>被嵌套的资源的 URL。</dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>用于选择插件实例化的 MIME 类型。</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>资源显示的宽度，in <a href="https://drafts.csswg.org/css-values/#px">CSS pixels</a>.  -- (Absolute values only.  <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes">NO percentages</a>)</dd>
-</dl>
+- {{htmlattrdef("height")}}
+  - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+- {{htmlattrdef("src")}}
+  - : 被嵌套的资源的 URL。
+- {{htmlattrdef("type")}}
+  - : 用于选择插件实例化的 MIME 类型。
+- {{htmlattrdef("width")}}
+  - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: html">&lt;embed type="video/quicktime" src="movie.mov" width="640" height="480"&gt;
-</pre>
+```html
+<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div class="note">
-<p><strong>注意</strong>: 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 {{Bug("730768")}}）。建议使用 &lt;object&gt; 或 &lt;iframe&gt; 元素。</p>
-</div>
+> **备注：** 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 {{Bug("730768")}}）。建议使用 \<object> 或 \<iframe> 元素。
 
+{{Compat("html.elements.embed")}}
 
+## 参见
 
-<p>{{Compat("html.elements.embed")}}</p>
+- 其他用于嵌入各种类型内容的元素还包括：{{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}} 和 {{HTMLElement("video")}}.
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>其他用于嵌入各种类型内容的元素还包括：{{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}} 和 {{HTMLElement("video")}}.</li>
-</ul>
-
-<p>{{ HTMLRef }}</p>
+{{ HTMLRef }}

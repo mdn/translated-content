@@ -3,9 +3,9 @@ title: <li>
 slug: Web/HTML/Element/li
 translation_of: Web/HTML/Element/li
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;li&gt;</code> 元素</strong> （或称 <em>HTML 列表条目元素）</em> 用于表示列表里的条目。它必须包含在一个父元素里：一个有序列表 ({{HTMLElement("ol")}})，一个无序列表 ({{HTMLElement("ul")}})，或者一个菜单 ({{HTMLElement("menu")}})。在菜单或者无序列表里，列表条目通常用点排列显示；在有序列表里，列表条目通常在左边显示按升序排列的计数，例如数字或者字母。</p>
+**HTML `<li>` 元素** （或称 _HTML 列表条目元素）_ 用于表示列表里的条目。它必须包含在一个父元素里：一个有序列表 ({{HTMLElement("ol")}})，一个无序列表 ({{HTMLElement("ul")}})，或者一个菜单 ({{HTMLElement("menu")}})。在菜单或者无序列表里，列表条目通常用点排列显示；在有序列表里，列表条目通常在左边显示按升序排列的计数，例如数字或者字母。
 
 <table class="properties">
  <tbody>
@@ -15,7 +15,7 @@ translation_of: Web/HTML/Element/li
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">流式内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流式内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -36,78 +36,70 @@ translation_of: Web/HTML/Element/li
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素拥有<a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+这个元素拥有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("value")}}</dt>
- <dd>这个整数型属性表明了本 {{HTMLElement("li")}} 元素在有序列表（由 {{HTMLElement("ol")}} 元素定义）中的序号。本属性值只能用数字，即使列表使用罗马数字或字母来展示。随后的列表条目会从设置的值开始计数。<strong>value</strong> 属性对于无序列表 ({{HTMLElement("ul")}}) 或者菜单 ({{HTMLElement("menu")}}) 无效。
- <div class="note"><strong>注：</strong> 这个属性在 HTML 4 中废弃，但是在 HTML 5 中重新引入。</div>
+- {{htmlattrdef("value")}}
+  - : 这个整数型属性表明了本 {{HTMLElement("li")}} 元素在有序列表（由 {{HTMLElement("ol")}} 元素定义）中的序号。本属性值只能用数字，即使列表使用罗马数字或字母来展示。随后的列表条目会从设置的值开始计数。**value** 属性对于无序列表 ({{HTMLElement("ul")}}) 或者菜单 ({{HTMLElement("menu")}}) 无效。
 
- <div class="note">
- <p><strong>注：</strong> 在 {{Gecko("9.0")}} 之前，负值会错误地转换为 0。{{Gecko("9.0")}} 开始，所有整数值都可以正确解析。</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("type")}} {{Deprecated_inline}}</dt>
- <dd>这个字符型属性表明了数字的类型：
- <ul>
-  <li><code>a</code>: 小写字母</li>
-  <li><code>A</code>: 大写字母</li>
-  <li><code>i</code>: 小写罗马数字</li>
-  <li><code>I</code>: 大写罗马数字</li>
-  <li><code>1</code>: 数字</li>
- </ul>
- 本属性值将覆盖 {{HTMLElement("ol")}} 元素中的同名属性值（若存在）。
+    > **备注：** 这个属性在 HTML 4 中废弃，但是在 HTML 5 中重新引入。
 
- <div class="note">本属性已废弃：使用 CSS {{cssxref("list-style-type")}} 属性来代替。</div>
- </dd>
-</dl>
+    > **备注：** 在 {{Gecko("9.0")}} 之前，负值会错误地转换为 0。{{Gecko("9.0")}} 开始，所有整数值都可以正确解析。
+- {{htmlattrdef("type")}} {{Deprecated_inline}}
+  - : 这个字符型属性表明了数字的类型：
 
-<h2 id="示例">示例</h2>
+    - `a`: 小写字母
+    - `A`: 大写字母
+    - `i`: 小写罗马数字
+    - `I`: 大写罗马数字
+    - `1`: 数字本属性值将覆盖 {{HTMLElement("ol")}} 元素中的同名属性值（若存在）。
 
-<h3>有序列表</h3>
+    > **备注：** 本属性已废弃：使用 CSS {{cssxref("list-style-type")}} 属性来代替。
 
-<pre class="brush: html">&lt;ol&gt;
-    &lt;li&gt;first item&lt;/li&gt;
-    &lt;li&gt;second item&lt;/li&gt;
-    &lt;li&gt;third item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+## 示例
 
-<p>上面的 HTML 会输出：</p>
+### 有序列表
+
+```html
+<ol>
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+</ol>
+```
+
+上面的 HTML 会输出：
 
 {{EmbedLiveSample("有序列表")}}
 
-<h3>无序列表</h3>
+### 无序列表
 
-<pre class="brush: html">&lt;ul&gt;
-    &lt;li&gt;first item&lt;/li&gt;
-    &lt;li&gt;second item&lt;/li&gt;
-    &lt;li&gt;third item&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+</ul>
+```
 
 {{EmbedLiveSample("无序列表")}}
 
-<p>更多具体示例请见 <a href="/en-US/docs/Web/HTML/Element/ol#Examples">&lt;ol&gt;</a> 和 <a href="/en-US/docs/Web/HTML/Element/ul#Examples">&lt;ul&gt;</a> 页面。</p>
+更多具体示例请见 [\<ol>](/zh-CN/docs/Web/HTML/Element/ol#Examples) 和 [\<ul>](/zh-CN/docs/Web/HTML/Element/ul#Examples) 页面。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览兼容性">浏览兼容性</h2>
+## 浏览兼容性
 
 {{Compat("html.elements.li")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>其它列表相关的 HTML 元素： {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}, 和过时的 {{HTMLElement("dir")}}；</li>
- <li>可能特定用于排版 <code>&lt;li&gt;</code> 元素的 CSS 属性：
-  <ul>
-   <li>{{cssxref("list-style")}} 属性，用于选择序号的展示方式，</li>
-   <li><a href="/Web/Guide/CSS/Counters">CSS 计数器</a>，用于处理复杂的嵌套列表，</li>
-   <li>{{cssxref("margin")}} 属性，用于控制列表条目的缩进。</li>
-  </ul>
- </li>
-</ul>
+- 其它列表相关的 HTML 元素： {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}, 和过时的 {{HTMLElement("dir")}}；
+- 可能特定用于排版 `<li>` 元素的 CSS 属性：
+
+  - {{cssxref("list-style")}} 属性，用于选择序号的展示方式，
+  - [CSS 计数器](/Web/Guide/CSS/Counters)，用于处理复杂的嵌套列表，
+  - {{cssxref("margin")}} 属性，用于控制列表条目的缩进。

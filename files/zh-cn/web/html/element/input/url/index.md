@@ -3,13 +3,13 @@ title: <input type="url">
 slug: Web/HTML/Element/Input/url
 translation_of: Web/HTML/Element/input/url
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>{{HTMLElement("input")}} 元素有一个 <code><strong>url</strong></code> 来让用户输入 URL{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}</p>
+{{HTMLElement("input")}} 元素有一个 **`url`** 来让用户输入 URL{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
 
-<p>The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.</p>
+The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.
 
-<p>On browsers that don't support inputs of type <code>url</code>, a <code>url</code> input falls back to being a standard {{HTMLElement("input/text", "text")}} input.</p>
+On browsers that don't support inputs of type `url`, a `url` input falls back to being a standard {{HTMLElement("input/text", "text")}} input.
 
 <table class="properties">
  <tbody>
@@ -36,267 +36,224 @@ translation_of: Web/HTML/Element/input/url
  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
-
-<p>The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:</p>
-
-<ol>
- <li>An empty string ("") indicating that the user did not enter a value or that the value was removed.</li>
- <li>A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means <code>urlscheme://restofurl</code>.</li>
-</ol>
-
-<p>See <a href="#validation">Validation</a> for details on how URLs are validated to ensure that they're formatted properly.</p>
-
-<h2 id="Additional_attributes">Additional attributes</h2>
-
-<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, <code>url</code> inputs support the following attributes:</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="#list">list</a></code></td>
-   <td>The id of the &lt;datalist&gt; element that contains the optional pre-defined autocomplete options</td>
-  </tr>
-  <tr>
-   <td><code><a href="#maxlength">maxlength</a></code></td>
-   <td>The maximum number of characters the input should accept</td>
-  </tr>
-  <tr>
-   <td><code><a href="#minlength">minlength</a></code></td>
-   <td>The minimum number of characters long the input can be and still be considered valid</td>
-  </tr>
-  <tr>
-   <td><code><a href="#pattern">pattern</a></code></td>
-   <td>A regular expression the input's contents must match in order to be valid</td>
-  </tr>
-  <tr>
-   <td><code><a href="#placeholder">placeholder</a></code></td>
-   <td>An exemplar value to display in the input field whenever it is empty</td>
-  </tr>
-  <tr>
-   <td><code><a href="#readonly">readonly</a></code></td>
-   <td>A Boolean attribute indicating whether or not the contents of the input should be read-only</td>
-  </tr>
-  <tr>
-   <td><code><a href="#size">size</a></code></td>
-   <td>A number indicating how many characters wide the input field should be</td>
-  </tr>
-  <tr>
-   <td><code><a href="#spellcheck">spellcheck</a></code></td>
-   <td>Controls whether or not to enable spell checking for the input field, or if the default spell checking configuration should be used</td>
-  </tr>
- </tbody>
-</table>
+## Value
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
+The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
-<h3 id="maxlength">maxlength</h3>
+1.  An empty string ("") indicating that the user did not enter a value or that the value was removed.
+2.  A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
 
-<p>The maximum number of characters (as UTF-16 code units) the user can enter into the <code>url</code> input. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the <code>url</code> input has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
+See [Validation](#validation) for details on how URLs are validated to ensure that they're formatted properly.
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+## Additional attributes
 
-<h3 id="minlength">minlength</h3>
+In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes:
 
-<p>The minimum number of characters (as UTF-16 code units) the user can enter into the <code>url</code> input. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the <code>url</code> input has no minimum length.</p>
+| Attribute                     | Description                                                                                                                         |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| [`list`](#list)               | The id of the <datalist> element that contains the optional pre-defined autocomplete options                                        |
+| [`maxlength`](#maxlength)     | The maximum number of characters the input should accept                                                                            |
+| [`minlength`](#minlength)     | The minimum number of characters long the input can be and still be considered valid                                                |
+| [`pattern`](#pattern)         | A regular expression the input's contents must match in order to be valid                                                           |
+| [`placeholder`](#placeholder) | An exemplar value to display in the input field whenever it is empty                                                                |
+| [`readonly`](#readonly)       | A Boolean attribute indicating whether or not the contents of the input should be read-only                                         |
+| [`size`](#size)               | A number indicating how many characters wide the input field should be                                                              |
+| [`spellcheck`](#spellcheck)   | Controls whether or not to enable spell checking for the input field, or if the default spell checking configuration should be used |
 
-<p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
 
-<h3 id="pattern">pattern</h3>
+### maxlength
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
+The maximum number of characters (as UTF-16 code units) the user can enter into the `url` input. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the `url` input has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-<p>See the section <a href="#pattern_validation">Pattern validation</a> for details and an example.</p>
+The input will fail [constraint validation](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text value of the field is greater than `maxlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
+### minlength
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
+The minimum number of characters (as UTF-16 code units) the user can enter into the `url` input. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `url` input has no minimum length.
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}</p>
+The input will fail [constraint validation](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck", 0, 1, 2)}}</p>
+### pattern
 
-<h2 id="Non-standard_attributes">Non-standard attributes</h2>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}
 
-<p>The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.</p>
+See the section [Pattern validation](#pattern_validation) for details and an example.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="#autocorrect">autocorrect</a></code></td>
-   <td>A string indicating whether or not autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong></td>
-  </tr>
-  <tr>
-   <td><code><a href="#mozactionhint">mozactionhint</a></code></td>
-   <td>A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. <strong>Firefox for Android only.</strong></td>
-  </tr>
- </tbody>
-</table>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect", 0, 1, 2)}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint", 0, 1, 2)}}</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}
 
-<h2 id="Using_URL_inputs">Using URL inputs</h2>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck", 0, 1, 2)}}
 
-<p>When you create a URL input with the proper <code>type</code> value, <code>url</code>, you get automatic validation that the entered text is at least in the correct form to potentially be a legitimate URL. This can help avoid cases in which the user mis-types their web site's address, or provides an invalid one.</p>
+## Non-standard attributes
 
-<p>It's important, however, to note that this is not enough to ensure that the specified text is a URL which actually exists, corresponds to the user of the site, or is acceptable in any other way. It simply ensures that the value of the field is properly formatted to be a URL.</p>
+The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.
 
-<div class="note">
-<p><strong>Note</strong>: It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site <em>must not</em> use this validation for any security purposes. You <em>must</em> verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.</p>
-</div>
+| Attribute                         | Description                                                                                                                                                                                                                                                             |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`autocorrect`](#autocorrect)     | A string indicating whether or not autocorrect is `on` or `off`. **Safari only.**                                                                                                                                                                                       |
+| [`mozactionhint`](#mozactionhint) | A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. **Firefox for Android only.** |
 
-<h3 id="A_simple_URL_input">A simple URL input</h3>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect", 0, 1, 2)}}
 
-<p>Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:</p>
+{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint", 0, 1, 2)}}
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"&gt;</pre>
+## Using URL inputs
 
-<p>{{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}</p>
+When you create a URL input with the proper `type` value, `url`, you get automatic validation that the entered text is at least in the correct form to potentially be a legitimate URL. This can help avoid cases in which the user mis-types their web site's address, or provides an invalid one.
 
-<p>Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the {{htmlattrxref("required", "input")}} attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.</p>
+It's important, however, to note that this is not enough to ensure that the specified text is a URL which actually exists, corresponds to the user of the site, or is acceptable in any other way. It simply ensures that the value of the field is properly formatted to be a URL.
 
-<p>There is nothing magical going on here. Submitting this form would cause the following data to be sent to the server: <code>myURL=http%3A%2F%2Fwww.example.com</code>. Note how characters are escaped as necessary.</p>
+> **备注：** It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use this validation for any security purposes. You _must_ verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.
 
-<h3 id="Placeholders">Placeholders</h3>
+### A simple URL input
 
-<p>Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where <strong>placeholders</strong> come in. A placeholder is a value that demonstrates the form the <code>value</code> should take by presenting an example of a valid value, which is displayed inside the edit box when the element's <code>value</code> is "". Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.</p>
+Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:
 
-<p>Here, we have a <code>url</code> input with the placeholder <code>http://www.example.com</code>. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.</p>
+```html
+<input id="myURL" name="myURL" type="url">
+```
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       placeholder="http://www.example.com"&gt;</pre>
+{{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}
 
-<p>{{ EmbedLiveSample('Placeholders', 600, 40) }}</p>
+Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the {{htmlattrxref("required", "input")}} attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
 
-<h3 id="Controlling_the_input_size">Controlling the input size</h3>
+There is nothing magical going on here. Submitting this form would cause the following data to be sent to the server: `myURL=http%3A%2F%2Fwww.example.com`. Note how characters are escaped as necessary.
 
-<p>You can control not only the physical length of the input box, but also the minimum and maximum lengths allowed for the input text itself.</p>
+### Placeholders
 
-<h4 id="Physical_input_element_size">Physical input element size</h4>
+Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where **placeholders** come in. A placeholder is a value that demonstrates the form the `value` should take by presenting an example of a valid value, which is displayed inside the edit box when the element's `value` is "". Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.
 
-<p>The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the <code>url</code> edit box is 30 characters wide:</p>
+Here, we have a `url` input with the placeholder `http://www.example.com`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       size="30"&gt;</pre>
+```html
+<input id="myURL" name="myURL" type="url"
+       placeholder="http://www.example.com">
+```
 
-<p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
+{{ EmbedLiveSample('Placeholders', 600, 40) }}
 
-<h4 id="Element_value_length">Element value length</h4>
+### Controlling the input size
 
-<p>The <code>size</code> is separate from the length limitation on the entered URL itself. You can specify a minimum length, in characters, for the entered URL using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered URL. If <code>maxLength</code> exceeds <code>size</code>, the input box's contents will scroll as needed to show the current selection or insertion point as the content is manipulated.</p>
+You can control not only the physical length of the input box, but also the minimum and maximum lengths allowed for the input text itself.
 
-<p>The example below creates a 30-character wide URL address entry box, requiring that the contents be no shorter than 10 characters and no longer than 80 characters.</p>
+#### Physical input element size
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       size="30" minlength="10" maxlength="80"&gt;
-</pre>
+The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `url` edit box is 30 characters wide:
 
-<p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
+```html
+<input id="myURL" name="myURL" type="url"
+       size="30">
+```
 
-<div class="note">
-<p><strong>Note</strong>: These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will simply refuse to let the user enter a value longer than the specified maximum length.</p>
-</div>
+{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
 
-<h3 id="Providing_default_options">Providing default options</h3>
+#### Element value length
 
-<p>As always, you can provide a default value for a <code>url</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
+The `size` is separate from the length limitation on the entered URL itself. You can specify a minimum length, in characters, for the entered URL using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered URL. If `maxLength` exceeds `size`, the input box's contents will scroll as needed to show the current selection or insertion point as the content is manipulated.
 
-<div id="Default_value">
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       value="http://www.example.com"&gt;</pre>
-</div>
+The example below creates a 30-character wide URL address entry box, requiring that the contents be no shorter than 10 characters and no longer than 80 characters.
 
-<p>{{EmbedLiveSample("Default_value", 600, 40)}}</p>
+```html
+<input id="myURL" name="myURL" type="url"
+       size="30" minlength="10" maxlength="80">
+```
 
-<h4 id="Offering_suggested_values">Offering suggested values</h4>
+{{EmbedLiveSample("Element_value_length", 600, 40) }}
 
-<p>Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the URL entry box.</p>
+> **备注：** These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will simply refuse to let the user enter a value longer than the specified maximum length.
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       list="defaultURLs"&gt;
+### Providing default options
 
-&lt;datalist id="defaultURLs"&gt;
-  &lt;option value="https://developer.mozilla.org/"&gt;
-  &lt;option value="http://www.google.com/"&gt;
-  &lt;option value="http://www.microsoft.com/"&gt;
-  &lt;option value="https://www.mozilla.org/"&gt;
-  &lt;option value="http://w3.org/"&gt;
-&lt;/datalist&gt;</pre>
+As always, you can provide a default value for a `url` input box by setting its {{htmlattrxref("value", "input")}} attribute:
 
-<p>{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}</p>
+```html
+<input id="myURL" name="myURL" type="url"
+       value="http://www.example.com">
+```
 
-<p>With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the URL; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested URLs. Then, as the user types, the list is adjusted to show only matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.</p>
+{{EmbedLiveSample("Default_value", 600, 40)}}
 
-<h4 id="Using_labels_for_suggested_values">Using labels for suggested values</h4>
+#### Offering suggested values
 
-<p>You can opt to include the {{htmlattrxref("label", "option")}} attribute on one or all of your <code>&lt;option&gt;</code> elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.</p>
+Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the URL entry box.
 
-<pre class="brush: html notranslate">&lt;input id="myURL" name="myURL" type="url"
-       list="defaultURLs"&gt;
+```html
+<input id="myURL" name="myURL" type="url"
+       list="defaultURLs">
 
-&lt;datalist id="defaultURLs"&gt;
-  &lt;option value="https://developer.mozilla.org/" label="MDN Web Docs"&gt;
-  &lt;option value="http://www.google.com/" label="Google"&gt;
-  &lt;option value="http://www.microsoft.com/" label="Microsoft"&gt;
-  &lt;option value="https://www.mozilla.org/" label="Mozilla"&gt;
-  &lt;option value="http://w3.org/" label="W3C"&gt;
-&lt;/datalist&gt;</pre>
+<datalist id="defaultURLs">
+  <option value="https://developer.mozilla.org/">
+  <option value="http://www.google.com/">
+  <option value="http://www.microsoft.com/">
+  <option value="https://www.mozilla.org/">
+  <option value="http://w3.org/">
+</datalist>
+```
 
-<p>{{EmbedLiveSample("Using_labels_for_suggested_values", 600, 40)}}</p>
+{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}
 
-<h2 id="Validation">Validation</h2>
+With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the URL; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested URLs. Then, as the user types, the list is adjusted to show only matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.
 
-<p>There are two levels of content validation available for <code>url</code> inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid URL. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.</p>
+#### Using labels for suggested values
 
-<div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
-</div>
+You can opt to include the {{htmlattrxref("label", "option")}} attribute on one or all of your `<option>` elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.
 
-<h3 id="Basic_validation">Basic validation</h3>
+```html
+<input id="myURL" name="myURL" type="url"
+       list="defaultURLs">
 
-<p>Browsers that support the <code>url</code> input type automatically provide validation to ensure that only text that matches the standard format for URLs is entered into the input box.</p>
+<datalist id="defaultURLs">
+  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
+  <option value="http://www.google.com/" label="Google">
+  <option value="http://www.microsoft.com/" label="Microsoft">
+  <option value="https://www.mozilla.org/" label="Mozilla">
+  <option value="http://w3.org/" label="W3C">
+</datalist>
+```
 
-<p>The syntax of a URL is fairly intricate. It's defined by WHATWG's <a href="https://url.spec.whatwg.org/">URL Living Standard</a> and is described for newcomers in our article <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">What is a URL?</a></p>
+{{EmbedLiveSample("Using_labels_for_suggested_values", 600, 40)}}
 
-<h3 id="Making_a_URL_required">Making a URL required</h3>
+## Validation
 
-<p>As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the {{htmlattrxref("required", "input")}} attribute on the input.</p>
+There are two levels of content validation available for `url` inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid URL. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.
 
-<div id="Default_value">
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;input id="myURL" name="myURL" type="url" required&gt;
-  &lt;button&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</pre>
-</div>
+> **警告：** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
-<p>{{EmbedLiveSample("Making_a_URL_required", 600, 40)}}</p>
+### Basic validation
 
-<p>Try submitting the above form with no value entered to see what happens.</p>
+Browsers that support the `url` input type automatically provide validation to ensure that only text that matches the standard format for URLs is entered into the input box.
 
-<h3 id="Pattern_validation">Pattern validation</h3>
+The syntax of a URL is fairly intricate. It's defined by WHATWG's [URL Living Standard](https://url.spec.whatwg.org/) and is described for newcomers in our article [What is a URL?](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)
 
-<p>If you need the entered URL to be restricted further than just "any string that looks like a URL," you can use the {{htmlattrxref("pattern", "input")}} attribute to specify a {{Glossary("regular expression")}} the value must match for the value to be valid.</p>
+### Making a URL required
 
-<p>For example, let's say you're building a support page for employees of Myco, Inc. which will let them contact their IT department for help if one of their pages has a problem. In our simplified form, the user needs to enter the URL of the page that has a problem, and a message describing what is wrong. But we want the URL to only successfully validate if the entered URL is in a Myco domain.</p>
+As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the {{htmlattrxref("required", "input")}} attribute on the input.
 
-<p>Since inputs of type <code>url</code> validate against both the standard URL validation <em>and</em> the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:</p>
+```html
+<form>
+  <input id="myURL" name="myURL" type="url" required>
+  <button>Submit</button>
+</form>
+```
 
-<div class="hidden">
-<pre class="brush: css notranslate">div {
+{{EmbedLiveSample("Making_a_URL_required", 600, 40)}}
+
+Try submitting the above form with no value entered to see what happens.
+
+### Pattern validation
+
+If you need the entered URL to be restricted further than just "any string that looks like a URL," you can use the {{htmlattrxref("pattern", "input")}} attribute to specify a {{Glossary("regular expression")}} the value must match for the value to be valid.
+
+For example, let's say you're building a support page for employees of Myco, Inc. which will let them contact their IT department for help if one of their pages has a problem. In our simplified form, the user needs to enter the URL of the page that has a problem, and a message describing what is wrong. But we want the URL to only successfully validate if the entered URL is in a Myco domain.
+
+Since inputs of type `url` validate against both the standard URL validation _and_ the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
+
+```css hidden
+div {
   margin-bottom: 10px;
   position: relative;
   }
@@ -318,65 +275,62 @@ translation_of: Web/HTML/Element/input/url
     position: absolute;
     content: '✓';
     padding-left: 5px;
-  }</pre>
-</div>
+  }
+```
 
-<pre class="brush: html notranslate">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="myURL"&gt;Enter the problem website address:&lt;/label&gt;
-    &lt;input id="myURL" name="myURL" type="url"
+```html
+<form>
+  <div>
+    <label for="myURL">Enter the problem website address:</label>
+    <input id="myURL" name="myURL" type="url"
            required pattern=".*\.myco\..*"
-           title="The URL must be in a Myco domain"&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="myComment"&gt;What is the problem?&lt;/label&gt;
-    &lt;input id="myComment" name="myComment" type="text"
-           required&gt;
-    &lt;span class="validity"&gt;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
+           title="The URL must be in a Myco domain">
+    <span class="validity"></span>
+  </div>
+  <div>
+    <label for="myComment">What is the problem?</label>
+    <input id="myComment" name="myComment" type="text"
+           required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+```
 
-<p>{{EmbedLiveSample("Pattern_validation", 700, 150)}}</p>
+{{EmbedLiveSample("Pattern_validation", 700, 150)}}
 
-<p>First of all, the {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid email address be provided.</p>
+First of all, the {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid email address be provided.
 
-<p>Second, in the <code>url</code> input we set <code>pattern</code> to <code>".*\.myco\..*"</code>. This simple regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter <em>and</em> our custom pattern against the specified text, we wind up with a validation which says "make sure this is a valid URL, and also in a Myco domain."</p>
+Second, in the `url` input we set `pattern` to `".*\.myco\..*"`. This simple regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation which says "make sure this is a valid URL, and also in a Myco domain."
 
-<p>This isn't perfect, but it is good enough for this simple demo's requirements.</p>
+This isn't perfect, but it is good enough for this simple demo's requirements.
 
-<p>It's advisable to use the {{htmlattrxref("title")}} attribute along with <code>pattern</code>. If you do, the <code>title</code> <em>must</em> describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the <code>title</code> may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified <code>title</code>. If your <code>title</code> is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.</p>
+It's advisable to use the {{htmlattrxref("title")}} attribute along with `pattern`. If you do, the `title` _must_ describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
 
-<p>That's why, instead, we specify the string "The URL must be in a myco domain". By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. The URL should be in a myco domain."</p>
+That's why, instead, we specify the string "The URL must be in a myco domain". By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. The URL should be in a myco domain."
 
-<div class="note">
-<p><strong>Note</strong>: If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.</p>
-</div>
+> **备注：** If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>There's not much else to say about <code>url</code> type inputs; check the <a href="#pattern_validation">Pattern validation</a> and <a href="#using_url_inputs">Using URL inputs</a> sections for numerous examples.</p>
+There's not much else to say about `url` type inputs; check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for numerous examples.
 
-<p>You can also find our <a href="https://github.com/mdn/learning-area/blob/master/html/forms/url-example/index.html">pattern validation example on GitHub</a> (see it <a href="https://mdn.github.io/learning-area/html/forms/url-example/">running live also</a>).</p>
+You can also find our [pattern validation example on GitHub](https://github.com/mdn/learning-area/blob/master/html/forms/url-example/index.html) (see it [running live also](https://mdn.github.io/learning-area/html/forms/url-example/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms">HTML forms guide</a></li>
- <li>{{HTMLElement("input")}}</li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/tel">&lt;input type="tel"&gt;</a></code></li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibility of CSS properties</a></li>
-</ul>
+- [HTML forms guide](/zh-CN/docs/Learn/HTML/Forms)
+- {{HTMLElement("input")}}
+- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
+- [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+- [Compatibility of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

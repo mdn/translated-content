@@ -3,14 +3,14 @@ title: <samp>
 slug: Web/HTML/Element/samp
 translation_of: Web/HTML/Element/samp
 ---
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>&lt;samp&gt; 元素用于标识计算机程序输出，通常使用浏览器缺省的 monotype 字体（例如 Lucida Console）。</p>
+\<samp> 元素用于标识计算机程序输出，通常使用浏览器缺省的 monotype 字体（例如 Lucida Console）。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
    <td><a href="/en/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
   </tr>
   <tr>
@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/samp
   </tr>
   <tr>
    <th scope="row">允许的父级元素</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -32,39 +32,36 @@ translation_of: Web/HTML/Element/samp
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素只包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
+该元素只包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了 <code><a href="/en/DOM/element">HTMLElement</a></code> 接口。</p>
+该元素实现了 [`HTMLElement`](/en/DOM/element) 接口。
 
-<div class="note">
-<p><strong>Implementation note: </strong>基于 Gecko 1.9.2 及以上，Firefox 还为该元素实现了<a href="/en/DOM/span">HTMLSpanElement</a> 接口。</p>
-</div>
+> **备注：** 基于 Gecko 1.9.2 及以上，Firefox 还为该元素实现了[HTMLSpanElement](/en/DOM/span) 接口。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;p&gt;Regular text. &lt;samp&gt;This is sample text.&lt;/samp&gt; Regular text.&lt;/p&gt;
-</pre>
-
-<h3 id="结果">结果</h3>
-
+```html
 <p>Regular text. <samp>This is sample text.</samp> Regular text.</p>
+```
 
-<h2 id="规范">规范</h2>
+### 结果
+
+Regular text. `This is sample text.` Regular text.
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="注意">注意</h2>
+## 注意
 
-<p>可以使用 CSS 选择器 <code>samp</code> 定义规则来覆盖浏览器的缺省字体。不过，用户设置的偏好可能会优先于指定的 CSS 使用。</p>
+可以使用 CSS 选择器 `samp` 定义规则来覆盖浏览器的缺省字体。不过，用户设置的偏好可能会优先于指定的 CSS 使用。
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li><a href="/en/HTML/Element/code">HTML Code Element</a></li>
-</ul>
+- [HTML Code Element](/en/HTML/Element/code)
 
-<div>{{ HTMLRef }}</div>
+{{ HTMLRef }}

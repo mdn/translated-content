@@ -3,17 +3,17 @@ title: <rtc>
 slug: Web/HTML/Element/rtc
 translation_of: Web/HTML/Element/rtc
 ---
-<p><strong>HTML <code>&lt;rtc&gt;</code> 元素</strong>包含文字的语义注解，它们在 {{HTMLElement("rb")}} 元素中展示。{{HTMLElement("rb")}} 元素可以拥有发音 ({{HTMLElement("rt")}}) 和语义 ({{HTMLElement("rtc")}}) 注解。</p>
+**HTML `<rtc>` 元素**包含文字的语义注解，它们在 {{HTMLElement("rb")}} 元素中展示。{{HTMLElement("rb")}} 元素可以拥有发音 ({{HTMLElement("rt")}}) 和语义 ({{HTMLElement("rtc")}}) 注解。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
    <td>无  </td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a> 或者 {{HTMLElement("rt")}} 元素</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a> 或者 {{HTMLElement("rt")}} 元素</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -34,40 +34,37 @@ translation_of: Web/HTML/Element/rtc
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素仅仅包含 <a href="/en-US/docs/HTML/Global_attributes">全局属性</a></p>
+该元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;ruby&gt;
-   &lt;rb&gt;旧&lt;/rb&gt;
-   &lt;rb&gt;金&lt;/rb&gt;
-   &lt;rb&gt;山&lt;/rb&gt;
-   &lt;rt&gt;jiù&lt;/rt&gt;
-   &lt;rt&gt;jīn&lt;/rt&gt;
-   &lt;rt&gt;shān&lt;/rt&gt;
-   &lt;rtc&gt;San Francisco&lt;/rtc&gt;
-&lt;/ruby&gt;
-</pre>
+```html
+<ruby>
+   <rb>旧</rb>
+   <rb>金</rb>
+   <rb>山</rb>
+   <rt>jiù</rt>
+   <rt>jīn</rt>
+   <rt>shān</rt>
+   <rtc>San Francisco</rtc>
+</ruby>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("html.elements.rtc")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{HTMLElement("ruby")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>
-  <p>{{HTMLElement("rt")}}</p>
- </li>
-</ul>
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rt")}}
 
-<p>{{ HTMLRef }}</p>
+{{ HTMLRef }}

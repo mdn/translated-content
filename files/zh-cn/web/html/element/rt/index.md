@@ -3,17 +3,17 @@ title: <rt>
 slug: Web/HTML/Element/rt
 translation_of: Web/HTML/Element/rt
 ---
-<p><strong>HTML Ruby 文本 (<code>&lt;rt&gt;</code>) 元素</strong>包含字符的发音，字符在 ruby 注解中出现，它用于描述东亚字符的发音。这个元素始终在 {{ HTMLElement("ruby") }} 元素中使用。</p>
+**HTML Ruby 文本 (`<rt>`) 元素**包含字符的发音，字符在 ruby 注解中出现，它用于描述东亚字符的发音。这个元素始终在 {{ HTMLElement("ruby") }} 元素中使用。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
    <td>无  </td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -34,35 +34,32 @@ translation_of: Web/HTML/Element/rt
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素仅仅包含 <a href="/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
+该元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;ruby&gt;
-  汉 &lt;rt&gt;Hàn&lt;/rt&gt;
-  字 &lt;rt&gt;Zì&lt;/rt&gt;
-&lt;/ruby&gt;
-</pre>
+```html
+<ruby>
+  汉 <rt>Hàn</rt>
+  字 <rt>Zì</rt>
+</ruby>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("html.elements.rt")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{HTMLElement("ruby")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>
-  <p>{{HTMLElement("rtc")}}</p>
- </li>
-</ul>
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}
 
-<p>{{ HTMLRef }}</p>
+{{ HTMLRef }}

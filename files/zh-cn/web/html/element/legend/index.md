@@ -10,11 +10,11 @@ tags:
   - 表单
 translation_of: Web/HTML/Element/legend
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><strong>HTML &lt;legend&gt;</strong> 元素用于表示其父元素 {{HTMLElement("fieldset")}} 的内容标题。</p>
+**HTML \<legend>** 元素用于表示其父元素 {{HTMLElement("fieldset")}} 的内容标题。
 
-<p>{{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}</p>
+{{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
 
 <table class="properties">
  <tbody>
@@ -49,26 +49,23 @@ translation_of: Web/HTML/Element/legend
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><br>
- 这个元素只有<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
+这个元素只有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在 {{HTMLElement("form")}} 中查看关于 <code>&lt;legend&gt;</code> 元素的示例。</p>
+在 {{HTMLElement("form")}} 中查看关于 `<legend>` 元素的示例。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>其他与表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role">ARIA: Form role</a></li>
-</ul>
+- 其他与表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
+- [ARIA: Form role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Form_Role)

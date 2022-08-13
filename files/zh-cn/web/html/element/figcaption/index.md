@@ -7,19 +7,19 @@ tags:
   - HTML grouping content
 translation_of: Web/HTML/Element/figcaption
 ---
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;figcaption&gt;</code> 元素</strong> 是与其相关联的图片的说明/标题，用？于描述其父节点 {{HTMLElement("figure")}} 元素里的其他数据。这意味着 <code>&lt;figcaption&gt;</code> 在{{HTMLElement("figure")}} 块里是第一个或最后一个。同时 HTML Figcaption 元素是可选的；如果没有该元素，这个父节点的图片只是会没有说明/标题。</p>
+**HTML `<figcaption>` 元素** 是与其相关联的图片的说明/标题，用？于描述其父节点 {{HTMLElement("figure")}} 元素里的其他数据。这意味着 `<figcaption>` 在{{HTMLElement("figure")}} 块里是第一个或最后一个。同时 HTML Figcaption 元素是可选的；如果没有该元素，这个父节点的图片只是会没有说明/标题。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
    <td>无</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">流式内容</a></td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -36,24 +36,22 @@ translation_of: Web/HTML/Element/figcaption
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>仅仅包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a></p>
+仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p><code>&lt;figcaption&gt;</code> 的示例，请查看 {{HTMLElement("figure")}} 页面。</p>
+`<figcaption>` 的示例，请查看 {{HTMLElement("figure")}} 页面。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("html.elements.figcaption")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{HTMLElement("figure")}} 元素。</li>
-</ul>
+- {{HTMLElement("figure")}} 元素。

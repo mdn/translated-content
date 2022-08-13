@@ -8,95 +8,90 @@ tags:
   - 指南
 translation_of: Web/HTML/Block-level_elements
 ---
-<p>HTML（超文本标记语言）中元素大多数都是“块级”元素或<a href="/zh-CN/docs/Web/HTML/Inline_elements">行内元素</a>。块级元素占据其父元素（容器）的整个水平空间，垂直空间等于其内容高度，因此创建了一个“块”。这篇文章帮助解释这个概念。</p>
+HTML（超文本标记语言）中元素大多数都是“块级”元素或[行内元素](/zh-CN/docs/Web/HTML/Inline_elements)。块级元素占据其父元素（容器）的整个水平空间，垂直空间等于其内容高度，因此创建了一个“块”。这篇文章帮助解释这个概念。
 
-<p>通常浏览器会在块级元素前后另起一个新行。下面的例子表明了块级元素的作用：</p>
+通常浏览器会在块级元素前后另起一个新行。下面的例子表明了块级元素的作用：
 
-<h2 id="Block-level_Example">块级元素示例</h2>
+## 块级元素示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.&lt;/p&gt;</pre>
+```html
+<p>This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p { background-color: #8ABB55; }
-</pre>
+```css
+p { background-color: #8ABB55; }
+```
 
-<p>{{ EmbedLiveSample('Block-level_Example') }}</p>
+{{ EmbedLiveSample('Block-level_Example') }}
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<ul>
- <li>块级元素只能出现在 {{ HTMLElement("body") }} 元素内。</li>
-</ul>
+- 块级元素只能出现在 {{ HTMLElement("body") }} 元素内。
 
-<h2 id="块级元素与行内元素">块级元素与行内元素</h2>
+## 块级元素与行内元素
 
-<p>块级元素与行内元素有几个关键区别：</p>
+块级元素与行内元素有几个关键区别：
 
-<dl>
- <dt>格式</dt>
- <dd>默认情况下，块级元素会新起一行。</dd>
- <dt>内容模型</dt>
- <dd>一般块级元素可以包含行内元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比行内元素更”大型“的结构。</dd>
-</dl>
+- 格式
+  - : 默认情况下，块级元素会新起一行。
+- 内容模型
+  - : 一般块级元素可以包含行内元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比行内元素更”大型“的结构。
 
-<p>HTML 标准中块级元素和行内元素的区别至高出现在 4.01 标准中。在 HTML5，这种区别被一个更复杂的<a href="/zh-CN/docs/HTML/Content_categories">内容类别</a>代替。”块级“类别大致相当于 HTML5 中的<a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流内容</a>类别，而”行内“类别相当于 HTML5 中的<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">措辞内容</a>类别，不过除了这两个还有其他类别。</p>
+HTML 标准中块级元素和行内元素的区别至高出现在 4.01 标准中。在 HTML5，这种区别被一个更复杂的[内容类别](/zh-CN/docs/HTML/Content_categories)代替。”块级“类别大致相当于 HTML5 中的[流内容](/zh-CN/docs/HTML/Content_categories#Flow_content)类别，而”行内“类别相当于 HTML5 中的[措辞内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)类别，不过除了这两个还有其他类别。
 
-<h2 id="元素列表">元素列表</h2>
+## 元素列表
 
-<p>以下是 HTML 中所有的块级元素列表（虽然”块级“在新的 HTML5 元素中没有明确定义）</p>
+以下是 HTML 中所有的块级元素列表（虽然”块级“在新的 HTML5 元素中没有明确定义）
 
-<dl>
- <dt>{{ HTMLElement("address") }}</dt>
- <dd>联系方式信息。</dd>
- <dt>{{ HTMLElement("article") }}</dt>
- <dd>文章内容。</dd>
- <dt>{{ HTMLElement("aside") }}</dt>
- <dd>伴随内容。</dd>
- <dt>{{ HTMLElement("blockquote") }}</dt>
- <dd>块引用。</dd>
- <dt>{{ HTMLElement("dd") }}</dt>
- <dd>定义列表中定义条目描述。</dd>
- <dt>{{ HTMLElement("div") }}</dt>
- <dd>文档分区。</dd>
- <dt>{{ HTMLElement("dl") }}</dt>
- <dd>定义列表。</dd>
- <dt>{{ HTMLElement("fieldset") }}</dt>
- <dd>表单元素分组。</dd>
- <dt>{{ HTMLElement("figcaption") }}</dt>
- <dd>图文信息组标题</dd>
- <dt>{{ HTMLElement("figure") }}</dt>
- <dd>图文信息组 (参照 {{ HTMLElement("figcaption") }})。</dd>
- <dt>{{ HTMLElement("footer") }}</dt>
- <dd>区段尾或页尾。</dd>
- <dt>{{ HTMLElement("form") }}</dt>
- <dd>表单。</dd>
- <dt>{{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}</dt>
- <dd>标题级别 1-6.</dd>
- <dt>{{ HTMLElement("header") }}</dt>
- <dd>区段头或页头。</dd>
- <dt>{{ HTMLElement("hgroup") }}</dt>
- <dd>标题组。</dd>
- <dt>{{ HTMLElement("hr") }}</dt>
- <dd>水平分割线。</dd>
- <dt>{{ HTMLElement("ol") }}</dt>
- <dd>有序列表。</dd>
- <dt>{{ HTMLElement("p") }}</dt>
- <dd>行。</dd>
- <dt>{{ HTMLElement("pre") }}</dt>
- <dd>预格式化文本。</dd>
- <dt>{{ HTMLElement("section") }}</dt>
- <dd>一个页面区段。</dd>
- <dt>{{ HTMLElement("table") }}</dt>
- <dd>表格。</dd>
- <dt>{{ HTMLElement("ul") }}</dt>
- <dd>无序列表。</dd>
-</dl>
+- {{ HTMLElement("address") }}
+  - : 联系方式信息。
+- {{ HTMLElement("article") }}
+  - : 文章内容。
+- {{ HTMLElement("aside") }}
+  - : 伴随内容。
+- {{ HTMLElement("blockquote") }}
+  - : 块引用。
+- {{ HTMLElement("dd") }}
+  - : 定义列表中定义条目描述。
+- {{ HTMLElement("div") }}
+  - : 文档分区。
+- {{ HTMLElement("dl") }}
+  - : 定义列表。
+- {{ HTMLElement("fieldset") }}
+  - : 表单元素分组。
+- {{ HTMLElement("figcaption") }}
+  - : 图文信息组标题
+- {{ HTMLElement("figure") }}
+  - : 图文信息组 (参照 {{ HTMLElement("figcaption") }})。
+- {{ HTMLElement("footer") }}
+  - : 区段尾或页尾。
+- {{ HTMLElement("form") }}
+  - : 表单。
+- {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
+  - : 标题级别 1-6.
+- {{ HTMLElement("header") }}
+  - : 区段头或页头。
+- {{ HTMLElement("hgroup") }}
+  - : 标题组。
+- {{ HTMLElement("hr") }}
+  - : 水平分割线。
+- {{ HTMLElement("ol") }}
+  - : 有序列表。
+- {{ HTMLElement("p") }}
+  - : 行。
+- {{ HTMLElement("pre") }}
+  - : 预格式化文本。
+- {{ HTMLElement("section") }}
+  - : 一个页面区段。
+- {{ HTMLElement("table") }}
+  - : 表格。
+- {{ HTMLElement("ul") }}
+  - : 无序列表。
 
-<h3 id="See_also">另请参阅</h3>
+### 另请参阅
 
-<ul>
- <li><a href="/zh-CN/docs/Web/HTML/Inline_elements">行内元素</a></li>
-</ul>
+- [行内元素](/zh-CN/docs/Web/HTML/Inline_elements)

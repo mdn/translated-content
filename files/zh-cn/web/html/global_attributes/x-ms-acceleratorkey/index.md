@@ -9,34 +9,46 @@ tags:
 translation_of: Web/HTML/Global_attributes/x-ms-acceleratorkey
 original_slug: Web/HTML/Global_attributes/x-ms-加速装置键
 ---
-<div>{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}</div>
+{{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
-<p> <code><strong>x-ms-acceleratorkey</strong></code> 属性声明 <a href="https://docs.microsoft.com/en-us/windows/uwp/design/input/keyboard-accelerators">accelerator key</a> 已经分配给一个元素：当按下键盘上的键时，通过 JavaScript 激活该元素。</p>
+**`x-ms-acceleratorkey`** 属性声明 [accelerator key](https://docs.microsoft.com/en-us/windows/uwp/design/input/keyboard-accelerators) 已经分配给一个元素：当按下键盘上的键时，通过 JavaScript 激活该元素。
 
-<p>{{Non-standard_Inline}} 此专有属性是特定于 Internet Explorer 和 Microsoft Edge 的。</p>
+{{Non-standard_Inline}} 此专有属性是特定于 Internet Explorer 和 Microsoft Edge 的。
 
-<p>对于屏幕阅读器和其他辅助技术，<code>x-ms-acceleratorkey</code>  在可访问性树中公开一个通知，即该元素存在一个加速器键。此属性不提供加速器键行为。必须提供 JavaScript 事件处理程序，如<code>onkeypress</code>, <code>onkeydown</code>, 或者 <code>onkeyup</code>, 来侦听声明的加速器键并相应地激活元素。</p>
+对于屏幕阅读器和其他辅助技术，`x-ms-acceleratorkey` 在可访问性树中公开一个通知，即该元素存在一个加速器键。此属性不提供加速器键行为。必须提供 JavaScript 事件处理程序，如`onkeypress`, `onkeydown`, 或者 `onkeyup`, 来侦听声明的加速器键并相应地激活元素。
 
-<p>为下列元素提供键盘快捷方式：不需要 JavaScript 的，请使用 <a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">the <code>accesskey</code> 属性</a>。</p>
+为下列元素提供键盘快捷方式：不需要 JavaScript 的，请使用 [the `accesskey` 属性](/zh-CN/docs/Web/HTML/Global_attributes/accesskey)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: html">&lt;button x-ms-acceleratorkey="[explanation of key combination]"&gt;…&lt;/button&gt;</pre>
+```html
+<button x-ms-acceleratorkey="[explanation of key combination]">…</button>
+```
 
-<h2 id="价值">价值</h2>
+## 价值
 
-<p>加速器键组合。例如：</p>
+加速器键组合。例如：
 
-<ul>
- <li><code>"Ctrl+B"</code> 的组合 <kbd>Ctrl</kbd> 和 <kbd>B</kbd> 秘钥。</li>
- <li><code>"J"</code> 只是为了 <kbd>J</kbd> 钥匙。</li>
- <li><code>"Ctrl+; then K"</code> 的快捷方式，类似于 <a href="https://help.manuscript.com/7558/fogbugz-keyboard-shortcuts#For_Your_Server_or_non-Ocelot_Keyboard_Shortcuts">FogBugz 的就键盘模式</a>。这种方法比较复杂，但不覆盖用户浏览器或操作系统提供的现有键盘快捷键。 </li>
-</ul>
+- `"Ctrl+B"` 的组合
 
-<h2 id="另请参阅">另请参阅</h2>
+  <kbd>Ctrl</kbd>
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">全球 <code>accesskey</code> 属性</a></li>
- <li><a href="/en-US/docs/Web/CSS/-ms-accelerator">这个 <code>-ms-accelerator</code> CSS 属性</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_API_extensions">Microsoft API 扩展</a></li>
-</ul>
+  和
+
+  <kbd>B</kbd>
+
+  秘钥。
+
+- `"J"` 只是为了
+
+  <kbd>J</kbd>
+
+  钥匙。
+
+- `"Ctrl+; then K"` 的快捷方式，类似于 [FogBugz 的就键盘模式](https://help.manuscript.com/7558/fogbugz-keyboard-shortcuts#For_Your_Server_or_non-Ocelot_Keyboard_Shortcuts)。这种方法比较复杂，但不覆盖用户浏览器或操作系统提供的现有键盘快捷键。
+
+## 另请参阅
+
+- [全球 `accesskey` 属性](/zh-CN/docs/Web/HTML/Global_attributes/accesskey)
+- [这个 `-ms-accelerator` CSS 属性](/zh-CN/docs/Web/CSS/-ms-accelerator)
+- [Microsoft API 扩展](/zh-CN/docs/Web/API/Microsoft_API_extensions)

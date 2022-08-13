@@ -3,29 +3,25 @@ title: <u>
 slug: Web/HTML/Element/u
 translation_of: Web/HTML/Element/u
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<div>
-<p><strong>HTML <code>&lt;u&gt;</code> 元素（表意不清标注元素）</strong>表示一个需要标注为非文本化（non-textual）的内联文本域。默认情况下渲染为一个实线下划线，可以用 CSS 替换。</p>
-</div>
+**HTML `<u>` 元素（表意不清标注元素）**表示一个需要标注为非文本化（non-textual）的内联文本域。默认情况下渲染为一个实线下划线，可以用 CSS 替换。
 
-<div class="warning">
-<p>此元素以前在旧版本的 HTML 中称为 “下划线” 元素，但有时仍会以这种方式被滥用。要为文本加下划线，您应该应用包含 CSS {{cssxref("text-decoration")}}属性设置为 <code>underline</code> 的样式。</p>
-</div>
+> **警告：** 此元素以前在旧版本的 HTML 中称为 “下划线” 元素，但有时仍会以这种方式被滥用。要为文本加下划线，您应该应用包含 CSS {{cssxref("text-decoration")}}属性设置为 `underline` 的样式。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
-<p>有关何时适合使用 <code>&lt;u&gt;</code> 以及何时不使用 <code>&lt;u&gt;</code> 的详细信息，请参阅<a href="#使用说明">使用说明</a>部分。</p>
+有关何时适合使用 `<u>` 以及何时不使用 `<u>` 的详细信息，请参阅[使用说明](#使用说明)部分。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容类别</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">流式内容</a>，<a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a>，palpable 内容。</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容类别</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流式内容</a>，<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a>，palpable 内容。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -33,7 +29,7 @@ translation_of: Web/HTML/Element/u
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>任何接受<a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a>的元素。</td>
+   <td>任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a>的元素。</td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
@@ -46,126 +42,132 @@ translation_of: Web/HTML/Element/u
  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个元素仅包含<a href="/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
+这个元素仅包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-<h2 id="使用说明">使用说明</h2>
+## 使用说明
 
-<p>就像所有排版元素那样， {{ HTMLElement("u") }} 在 HTML 4 中废弃，但是在 HTML 5 中恢复了一个新的语义，意思是：将文本标记为应用了某种形式的非文本注释。</p>
+就像所有排版元素那样， {{ HTMLElement("u") }} 在 HTML 4 中废弃，但是在 HTML 5 中恢复了一个新的语义，意思是：将文本标记为应用了某种形式的非文本注释。
 
-<div class="blockIndicator note">
-<p><strong>提示：</strong> 在可能和超链接混淆的地方，避免使用 {{ HTMLElement("u") }}。</p>
-</div>
+> **备注：** 在可能和超链接混淆的地方，避免使用 {{ HTMLElement("u") }}。
 
-<h3 id="用例">用例</h3>
+### 用例
 
-<p><code>&lt;u&gt;</code>元素的有效用例包括注释拼写错误，应用 <a href="https://zh.wikipedia.org/wiki/proper_name_mark">proper name mark</a> 来表示中文文本中的专有名称以及其他形式的注释。</p>
+`<u>`元素的有效用例包括注释拼写错误，应用 [proper name mark](https://zh.wikipedia.org/wiki/proper_name_mark) 来表示中文文本中的专有名称以及其他形式的注释。
 
-<p>您不应该使用<code>&lt;u&gt;</code>简单地为文字加下划线，或者表示书籍的标题。</p>
+您不应该使用`<u>`简单地为文字加下划线，或者表示书籍的标题。
 
-<h3 id="要考虑使用的其他要素">要考虑使用的其他要素</h3>
+### 要考虑使用的其他要素
 
-<p>在大多数情况下，您应该使用&lt;u&gt;以外的元素，例如：</p>
+在大多数情况下，您应该使用\<u>以外的元素，例如：
 
-<ul>
- <li>{{HTMLElement("em")}} 表示强调重点</li>
- <li>{{HTMLElement("b")}} 提示注意文字</li>
- <li>{{HTMLElement("mark")}} 标记关键词或短语</li>
- <li>{{HTMLElement("strong")}} 表明文本具有重要意义</li>
- <li>{{HTMLElement("cite")}} 标记书籍或其他出版物的标题</li>
- <li>{{HTMLElement("i")}} 表示西方文本中的技术术语，音译，思想或船名</li>
-</ul>
+- {{HTMLElement("em")}} 表示强调重点
+- {{HTMLElement("b")}} 提示注意文字
+- {{HTMLElement("mark")}} 标记关键词或短语
+- {{HTMLElement("strong")}} 表明文本具有重要意义
+- {{HTMLElement("cite")}} 标记书籍或其他出版物的标题
+- {{HTMLElement("i")}} 表示西方文本中的技术术语，音译，思想或船名
 
-<p>要提供文本注释（与使用<code>&lt;u&gt;</code>创建的非文本注释相对），请使用 {{HTMLElement("ruby")}} 元素。</p>
+要提供文本注释（与使用`<u>`创建的非文本注释相对），请使用 {{HTMLElement("ruby")}} 元素。
 
-<p>要应用带下划线的外观而没有任何语义含义，请使用 {{cssxref("text-decoration")}} 属性的值 <code>underline</code>。</p>
+要应用带下划线的外观而没有任何语义含义，请使用 {{cssxref("text-decoration")}} 属性的值 `underline`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="表示拼写错误">表示拼写错误</h3>
+### 表示拼写错误
 
-<p>此示例使用<code>&lt;u&gt;</code>元素和一些 CSS 来显示包含拼写错误的段落，其中错误以红色波浪下划线样式表示，这种情况通常用于此目的。</p>
+此示例使用`<u>`元素和一些 CSS 来显示包含拼写错误的段落，其中错误以红色波浪下划线样式表示，这种情况通常用于此目的。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate"><code>&lt;p&gt;This paragraph includes a &lt;u class="spelling"&gt;wrnogly&lt;/u&gt;
-spelled word.&lt;/p&gt;</code></pre>
+```html
+<p>This paragraph includes a <u class="spelling">wrnogly</u>
+spelled word.</p>
+```
 
-<p>在 HTML 中，我们看到 <code>&lt;u&gt;</code> 使用了一个类 <code>spelling</code>，用于表示 “wrongly” 一词的拼写错误。</p>
+在 HTML 中，我们看到 `<u>` 使用了一个类 `spelling`，用于表示 “wrongly” 一词的拼写错误。
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate"><code>u.spelling {
+```css
+u.spelling {
   text-decoration: red wavy underline;
-}</code></pre>
+}
+```
 
-<p>这个 CSS 表示当 <code>&lt;u&gt;</code> 元素使用类 <code>spelling</code> 进行样式化时，它的文本下面应该有一个红色的波浪下划线。这是拼写错误的常见样式。也可以使用另一种常见样式  <code>red dashed underline</code>.。</p>
+这个 CSS 表示当 `<u>` 元素使用类 `spelling` 进行样式化时，它的文本下面应该有一个红色的波浪下划线。这是拼写错误的常见样式。也可以使用另一种常见样式 `red dashed underline`.。
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>任何使用过今天比较流行的文字处理器的人都应该熟悉结果。</p>
+任何使用过今天比较流行的文字处理器的人都应该熟悉结果。
 
-<p>{{EmbedLiveSample("Indicating_a_spelling_error", 650, 80)}}</p>
+{{EmbedLiveSample("Indicating_a_spelling_error", 650, 80)}}
 
-<h3 id="避免使用_&lt;u>">避免使用 &lt;u&gt;</h3>
+### 避免使用 \<u>
 
-<p>大多数情况下，您实际上不想使用 <code>&lt;u&gt;</code>。以下是一些示例，显示在几种情况下您应该做什么。</p>
+大多数情况下，您实际上不想使用 `<u>`。以下是一些示例，显示在几种情况下您应该做什么。
 
-<h4 id="非语义下划线">非语义下划线</h4>
+#### 非语义下划线
 
-<p>要在不暗示任何语义含义的情况下为文本加下划线，请使用 {{HTMLElement("span")}} 元素并将 {{cssxref("text-decoration")}} 属性设置为 <code>"underline"</code>，如下所示。</p>
+要在不暗示任何语义含义的情况下为文本加下划线，请使用 {{HTMLElement("span")}} 元素并将 {{cssxref("text-decoration")}} 属性设置为 `"underline"`，如下所示。
 
-<h5 id="HTML_2">HTML</h5>
+##### HTML
 
-<pre class="notranslate"><code>&lt;span class="underline"&gt;Today's Special&lt;/span&gt;
-&lt;br&gt;
-Chicken Noodle Soup With Carrots</code></pre>
+```plain
+<span class="underline">Today's Special</span>
+<br>
+Chicken Noodle Soup With Carrots
+```
 
-<h5 id="CSS_2">CSS</h5>
+##### CSS
 
-<pre class="notranslate"><code>.underline {
+```plain
+.underline {
   text-decoration: underline;
-}</code></pre>
+}
+```
 
-<h5 id="结果_2">结果</h5>
+##### 结果
 
-<p>{{EmbedLiveSample("Non-semantic_underlines", 650, 80)}}</p>
+{{EmbedLiveSample("Non-semantic_underlines", 650, 80)}}
 
-<h4 id="表示书名">表示书名</h4>
+#### 表示书名
 
-<p>书籍标题应使用 {{HTMLElement("cite")}} 元素而不是 <code>&lt;u&gt;</code> 甚至 <code>&lt;i&gt;</code> 来呈现。</p>
+书籍标题应使用 {{HTMLElement("cite")}} 元素而不是 `<u>` 甚至 `<i>` 来呈现。
 
-<h5 id="HTML_3">HTML</h5>
+##### HTML
 
-<pre class="notranslate"><code>&lt;p&gt;The class read &lt;cite&gt;Moby Dick&lt;/cite&gt; in the first term.&lt;/p&gt;</code></pre>
+```plain
+<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+```
 
-<h5 id="默认样式的结果">默认样式的结果</h5>
+##### 默认样式的结果
 
-<p>{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}</p>
+{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}
 
-<p>请注意， <code>&lt;cite&gt;</code> 元素的默认样式会以斜体显示文本。如果您愿意，可以使用 CSS 覆盖它：</p>
+请注意， `<cite>` 元素的默认样式会以斜体显示文本。如果您愿意，可以使用 CSS 覆盖它：
 
-<pre class="notranslate"><code>cite {
+```plain
+cite {
   font-style: normal;
   text-decoration: underline;
-}</code></pre>
+}
+```
 
-<h5 id="定制样式的结果">定制样式的结果</h5>
+##### 定制样式的结果
 
-<p>{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}</p>
+{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ HTMLElement("span") }}，{{ HTMLElement("i") }}，{{ HTMLElement("em") }}，和 {{ HTMLElement("cite") }} 元素，取决于情况，可以替代使用。</li>
- <li>CSS {{ cssxref("text-decoration") }} 属性可以用于完成 {{ HTMLElement("u") }} 元素的前面的视觉效果。</li>
-</ul>
+- {{ HTMLElement("span") }}，{{ HTMLElement("i") }}，{{ HTMLElement("em") }}，和 {{ HTMLElement("cite") }} 元素，取决于情况，可以替代使用。
+- CSS {{ cssxref("text-decoration") }} 属性可以用于完成 {{ HTMLElement("u") }} 元素的前面的视觉效果。
