@@ -15,22 +15,24 @@ tags:
   - 理由
 translation_of: Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-## 理由
+<h2 id="Reason" name="Reason">理由</h2>
 
-    Reason: CORS request external redirect not allowed
+<pre class="syntaxbox">Reason: CORS request external redirect not allowed</pre>
 
-## 何が悪いのか
+<h2 id="What_went_wrong" name="What_went_wrong">何が悪いのか</h2>
 
-{{Glossary("CORS")}} リクエストに対して、サーバーが元のリクエストとは異なるオリジンの URL へのリダイレクトを返答しましたが、これは CORS リクエストでは許可されていません。
+<p>{{Glossary("CORS")}} リクエストに対して、サーバーが元のリクエストとは異なるオリジンの URL へのリダイレクトを返答しましたが、これは CORS リクエストでは許可されていません。</p>
 
-例えば、 `https://service.tld/fetchdata` のページがリクエストされ、 HTTP レスポンスが "301 Moved Permanently" 又は "307 Temporary Redirect" 又は "308 Permanent Redirect" で、 `Location` が `https://anotherservice.net/getdata` であった場合、この理由で CORS リクエストが失敗します。
+<p>例えば、 <code>https://service.tld/fetchdata</code> のページがリクエストされ、 HTTP レスポンスが "301 Moved Permanently" 又は "307 Temporary Redirect" 又は "308 Permanent Redirect" で、 <code>Location</code> が <code>https://anotherservice.net/getdata</code> であった場合、この理由で CORS リクエストが失敗します。</p>
 
-問題を修正するには、リダイレクトによって報告された新しい URL を使用するようにコードを更新し、リダイレクトを回避します。
+<p>問題を修正するには、リダイレクトによって報告された新しい URL を使用するようにコードを更新し、リダイレクトを回避します。</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+<ul>
+ <li><a href="/ja/docs/Web/HTTP/CORS/Errors">CORS のエラー</a></li>
+ <li>用語集: {{Glossary("CORS")}}</li>
+ <li><a href="/ja/docs/Web/HTTP/CORS">CORS 入門</a></li>
+</ul>

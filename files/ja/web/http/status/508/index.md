@@ -10,18 +10,29 @@ tags:
   - ステータスコード
 translation_of: Web/HTTP/Status/508
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-The HyperText Transfer Protocol (HTTP) の **`508 Loop Detected`** レスポンスステータスコードは、 Web Distributed Authoring and Versioning (WebDAV) プロトコルの文脈で発生する可能性があります。
+<p>The HyperText Transfer Protocol (HTTP) の <code><strong>508 Loop Detected</strong></code> レスポンスステータスコードは、 Web Distributed Authoring and Versioning (WebDAV) プロトコルの文脈で発生する可能性があります。</p>
 
-これは "Depth: infinity" がついたリクエストを処理する際に無限ループに陥ったために、サーバーが操作を終了させたことを示します。このステータスは操作全体が失敗したことを示します。
+<p>これは "Depth: infinity" がついたリクエストを処理する際に無限ループに陥ったために、サーバーが操作を終了させたことを示します。このステータスは操作全体が失敗したことを示します。</p>
 
-## ステータス
+<h2 id="Status" name="Status">ステータス</h2>
 
-    508 Loop Detected
+<pre class="syntaxbox">508 Loop Detected</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                       | 題名                                     |
-| ------------------------------------------------------------ | ---------------------------------------- |
-| {{RFC("5842", "508 Loop Detected" , "7.2")}} | Web Distributed Authoring and Versioning |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("5842", "508 Loop Detected" , "7.2")}}</td>
+   <td>Web Distributed Authoring and Versioning</td>
+  </tr>
+ </tbody>
+</table>

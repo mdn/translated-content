@@ -1,5 +1,5 @@
 ---
-title: <xsl:text>
+title: '<xsl:text>'
 slug: Web/XSLT/Element/text
 tags:
   - Text
@@ -8,33 +8,35 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/text
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`<xsl:text>` 要素はリテラルテキストを出力ツリーに書き込みます。 `#PCDATA`、リテラルテキスト、およびエンティティ参照を含むことがあります。
+<p><code>&lt;xsl:text&gt;</code> 要素はリテラルテキストを出力ツリーに書き込みます。 <code>#PCDATA</code>、リテラルテキスト、およびエンティティ参照を含むことがあります。</p>
 
-### 構文
+<h3 id="Syntax" name="Syntax">構文</h3>
 
-    <xsl:text disable-output-escaping="yes" | "no">
-    	TEXT
-    </xsl:text>
+<pre>&lt;xsl:text disable-output-escaping="yes" | "no"&gt;
+	TEXT
+&lt;/xsl:text&gt; </pre>
 
-### 必須属性
+<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
 
-なし
+<p>なし</p>
 
-### 任意属性
+<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
 
-- `disable-output-escaping` (Netscape は変換の結果 - 下の「出力」 - を直列化しませんので、この属性は本質的に文脈上は無関係です。html エンティティを出力するには、代わりに数値を使用します (例: `&nbsp`の `&#160`) )
-  - : 出力に書き込まれたときに特殊文字をエスケープするかどうかを指定します。使用可能な値は "`yes`" または "`no`" です。たとえば "`yes`" が設定されている場合、文字>は `>` ではなく"`&gt`" として出力されます。
+<dl>
+ <dt><code>disable-output-escaping</code> (Netscape は変換の結果 - 下の「出力」 - を直列化しませんので、この属性は本質的に文脈上は無関係です。htmlエンティティを出力するには、代わりに数値を使用します (例: <code>&amp;nbsp</code>の <code>&amp;#160</code>) )</dt>
+ <dd>出力に書き込まれたときに特殊文字をエスケープするかどうかを指定します。使用可能な値は "<code>yes</code>" または "<code>no</code>" です。たとえば "<code>yes</code>" が設定されている場合、文字&gt;は <code>&gt;</code> ではなく"<code>&amp;gt</code>" として出力されます。</dd>
+</dl>
 
-### タイプ
+<h3 id="Type" name="Type">タイプ</h3>
 
-命令は、テンプレート内に表示されます。
+<p>命令は、テンプレート内に表示されます。</p>
 
-### 定義
+<h3 id="Defined" name="Defined">定義</h3>
 
-XSLT, section 7.2
+<p>XSLT, section 7.2</p>
 
-### Gecko のサポート
+<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
 
-注意してサポートされています。
+<p>注意してサポートされています。</p>

@@ -7,30 +7,45 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Accept-CH-Lifetime
 ---
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
 
-**`Accept-CH-Lifetime`** ヘッダーは、クライアントが後続のリクエストにどの[クライアントヒント](/ja/docs/Glossary/Client_hints)のヘッダーを含める必要があるかを指定する {{HTTPHeader("Accept-CH")}} ヘッダーの値の永続性を指定するためにサーバーによって設定されます。
+<p><span class="seoSummary"><strong><code>Accept-CH-Lifetime</code></strong> ヘッダーは、クライアントが後続のリクエストにどの<a href="/ja/docs/Glossary/Client_hints">クライアントヒント</a>のヘッダーを含める必要があるかを指定する {{HTTPHeader("Accept-CH")}} ヘッダーの値の永続性を指定するためにサーバーによって設定されます。</span></p>
 
-| ヘッダー種別                                                                     | {{Glossary("Response header","レスポンスヘッダー")}} |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name","禁止ヘッダー名")}} | ?                                                                                |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Response header","レスポンスヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name","禁止ヘッダー名")}}</th>
+   <td>?</td>
+  </tr>
+ </tbody>
+</table>
 
-> **Note:** **注**: クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して永続化する必要があります。
+<div class="blockIndicator note">
+<p><strong>注</strong>: クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して永続化する必要があります。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Accept-CH-Lifetime: <age>
+<pre class="syntaxbox notranslate">Accept-CH-Lifetime: &lt;age&gt;
+</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-    Accept-CH: Viewport-Width, DPR
-    Accept-CH-Lifetime: 86400
+<pre class="notranslate">Accept-CH: Viewport-Width, DPR
+Accept-CH-Lifetime: 86400
+</pre>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Accept-CH-Lifetime")}}
+<p>{{Compat("http.headers.Accept-CH-Lifetime")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("Accept-CH")}}
-- {{HTTPHeader("Vary")}}
+<ul>
+ <li>{{HTTPHeader("Accept-CH")}}</li>
+ <li>{{HTTPHeader("Vary")}}</li>
+</ul>

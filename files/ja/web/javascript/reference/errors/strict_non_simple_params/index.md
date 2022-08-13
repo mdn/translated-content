@@ -7,106 +7,105 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-## メッセージ
+<h2 id="メッセージ">メッセージ</h2>
 
-    Firefox:
-    SyntaxError: "use strict" not allowed in function with default parameter
-    SyntaxError: "use strict" not allowed in function with rest parameter
-    SyntaxError: "use strict" not allowed in function with destructuring parameter
+<pre class="syntaxbox">Firefox:
+SyntaxError: "use strict" not allowed in function with default parameter
+SyntaxError: "use strict" not allowed in function with rest parameter
+SyntaxError: "use strict" not allowed in function with destructuring parameter
 
-    Chrome:
-    SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+Chrome:
+SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("SyntaxError")}}。
+<p>{{jsxref("SyntaxError")}}。</p>
 
-## 何がうまくいかなかったのか？
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
 
-次の引数のうちいずれかを持つ関数の先頭に `"use strict"` ディレクティブが書かれています:
+<p>次の引数のうちいずれかを持つ関数の先頭に <code>"use strict"</code> ディレクティブが書かれています:</p>
 
-- {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+<ul>
+ <li>{{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}</li>
+ <li>{{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}</li>
+ <li>{{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}</li>
+</ul>
 
-ECMAScript 仕様に則って、このような関数の先頭では `"use strict"` を使用できません。
+<p>ECMAScript 仕様に則って、このような関数の先頭では <code>"use strict"</code> を使用できません。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-### Function ステートメント
+<h3 id="Function_ステートメント">Function ステートメント</h3>
 
-このケースでは、関数 `sum` は既定値を持つ引数 `a=1` と `b=2` を持っています:
+<p>このケースでは、関数 <code>sum</code> は既定値を持つ引数 <code>a=1</code> と <code>b=2</code> を持っています:</p>
 
-```js example-bad
-function sum(a=1, b=2) {
+<pre class="brush: js example-bad">function sum(a=1, b=2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
   "use strict";
   return a + b;
 }
-```
+</pre>
 
-関数を [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)にしたい、かつスクリプト全体、またはエンクロージャー関数が strict モードになってもよいなら、`"use strict"` ディレクティブを関数の外側に移動できます:
+<p>関数を <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>にしたい、かつスクリプト全体、またはエンクロージャー関数が strict モードになってもよいなら、<code>"use strict"</code> ディレクティブを関数の外側に移動できます:</p>
 
-```js example-good
-"use strict";
+<pre class="brush: js example-good">"use strict";
 function sum(a=1, b=2) {
   return a + b;
 }
-```
+</pre>
 
-### Function 式
+<h3 id="Function_式">Function 式</h3>
 
-function 式では、別の回避策をとることができます:
+<p>function 式では、別の回避策をとることができます:</p>
 
-```js example-bad
-var sum = function sum([a, b]) {
+<pre class="brush: js example-bad">var sum = function sum([a, b]) {
   // SyntaxError: "use strict" not allowed in function with destructuring parameter
   "use strict";
   return a + b;
 };
-```
+</pre>
 
-これは、次の式に変換できます:
+<p>これは、次の式に変換できます:</p>
 
-```js example-good
-var sum = (function() {
+<pre class="brush: js example-good">var sum = (function() {
   "use strict";
   return function sum([a, b]) {
     return a + b;
   };
 })();
-```
+</pre>
 
-### アロー関数
+<h3 id="アロー関数">アロー関数</h3>
 
-アロー関数が `this` 変数にアクセスする必要がある場合、アロー関数をエンクロージャー関数として使用できます:
+<p>アロー関数が <code>this</code> 変数にアクセスする必要がある場合、アロー関数をエンクロージャー関数として使用できます:</p>
 
-```js example-bad
-var callback = (...args) => {
+<pre class="brush: js example-bad">var callback = (...args) =&gt; {
   // SyntaxError: "use strict" not allowed in function with rest parameter
   "use strict";
   return this.run(args);
 };
-```
+</pre>
 
-これは、次の式に変換できます:
+<p>これは、次の式に変換できます:</p>
 
-```js example-good
-var callback = (() => {
+<pre class="brush: js example-good">var callback = (() =&gt; {
   "use strict";
-  return (...args) => {
+  return (...args) =&gt; {
     return this.run(args);
   };
 })();
-```
+</pre>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- {{jsxref("Strict_mode", "Strict mode", "", 1)}}
-- {{jsxref("Statements/function", "function statement", "", 1)}}
-- {{jsxref("Operators/function", "function expression", "", 1)}}
-- {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
-- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
+<ul>
+ <li>{{jsxref("Strict_mode", "Strict mode", "", 1)}}</li>
+ <li>{{jsxref("Statements/function", "function statement", "", 1)}}</li>
+ <li>{{jsxref("Operators/function", "function expression", "", 1)}}</li>
+ <li>{{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}</li>
+ <li>{{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}</li>
+ <li>{{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}</li>
+</ul>

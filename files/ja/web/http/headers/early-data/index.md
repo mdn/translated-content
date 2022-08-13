@@ -8,32 +8,53 @@ tags:
   - リクエスト
 translation_of: Web/HTTP/Headers/Early-Data
 ---
-{{SeeCompatTable}}{{HTTPSidebar}}
+<div>{{SeeCompatTable}}{{HTTPSidebar}}</div>
 
-**`Early-Data`** ヘッダーは中間者により設定され、リクエストが [TLS 早期データ](/ja/docs/Web/Security/Transport_Layer_Security#TLS_1.3)で伝えられたこと、そして中間者が {{HTTPStatus("425", "425 (Too Early)")}} ステータスコードを理解していることを示します。
+<p><span class="seoSummary"><code><strong>Early-Data</strong></code> ヘッダーは中間者により設定され、リクエストが <a href="/ja/docs/Web/Security/Transport_Layer_Security#TLS_1.3">TLS 早期データ</a>で伝えられたこと、そして中間者が {{HTTPStatus("425", "425 (Too Early)")}} ステータスコードを理解していることを示します。</span></p>
 
-**`Early-Data`** ヘッダーはリクエストの発信者 (つまり、ブラウザー) によって設定されることはありません。
+<p><code><strong>Early-Data</strong></code> ヘッダーはリクエストの発信者 (つまり、ブラウザー) によって設定されることはありません。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Request header", "リクエストヘッダー")}} |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | いいえ                                                                           |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>いいえ</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Early-Data: 1
+<pre class="syntaxbox">Early-Data: 1
+</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-    GET /resource HTTP/1.0
-    Host: example.com
-    Early-Data: 1
+<pre>GET /resource HTTP/1.0
+Host: example.com
+Early-Data: 1</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                   | 題名                     |
-| ------------------------------------------------------------------------ | ------------------------ |
-| {{RFC("8470", "The Early-Data Header Field", "5.1")}} | Using Early Data in HTTP |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("8470", "The Early-Data Header Field", "5.1")}}</td>
+   <td>Using Early Data in HTTP</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Early-Data")}}
+<p>{{Compat("http.headers.Early-Data")}}</p>

@@ -8,97 +8,110 @@ tags:
   - samesite
 translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-{{HTTPHeader("Set-Cookie")}} HTTP レスポンスヘッダーの **`SameSite`** 属性を使用すると、Cookie をファーストパーティまたは同じサイトのコンテキストに制限するかどうかを宣言できます。
+<p><span class="seoSummary">{{HTTPHeader("Set-Cookie")}} HTTP レスポンスヘッダーの <strong><code>SameSite</code></strong> 属性を使用すると、Cookie をファーストパーティまたは同じサイトのコンテキストに制限するかどうかを宣言できます。</span></p>
 
-## 値
+<h2 id="値">値</h2>
 
-`SameSite` 属性は 3 つの値をとります。
+<p><code>SameSite</code> 属性は3つの値をとります。</p>
 
-### `Lax`
+<h3 id="Lax"><code>Lax</code></h3>
 
-Cookie はトップレベルナビゲーションで送信することが許可されており、サードパーティの Web サイトによって開始された GET リクエストとともに送信されます。これは、モダンブラウザのデフォルト値です。
+<p>Cookie はトップレベルナビゲーションで送信することが許可されており、サードパーティの Web サイトによって開始された GET リクエストとともに送信されます。これは、モダンブラウザのデフォルト値です。</p>
 
-### `Strict`
+<h3 id="Strict"><code>Strict</code></h3>
 
-Cookie はファーストパーティのコンテキストでのみ送信され、サードパーティの Web サイトによって開始されたリクエストと一緒に送信されることはありません。
+<p>Cookie はファーストパーティのコンテキストでのみ送信され、サードパーティの Web サイトによって開始されたリクエストと一緒に送信されることはありません。</p>
 
-### `None`
+<h3 id="None"><code>None</code></h3>
 
-Cookie はすべてのコンテキストで送信されます。つまり、クロスオリジンの送信が許可されます。
+<p>Cookie はすべてのコンテキストで送信されます。つまり、クロスオリジンの送信が許可されます。</p>
 
-`None` はデフォルト値でしたが、最近のブラウザバージョンでは、`Lax` をデフォルト値にして、クロスサイトリクエストフォージェリ ({{Glossary("CSRF")}}) 攻撃のクラスに対して適度に堅牢な防御を提供しました。
+<p><code>None</code> はデフォルト値でしたが、最近のブラウザバージョンでは、<code>Lax</code> をデフォルト値にして、クロスサイトリクエストフォージェリ ({{Glossary("CSRF")}}) 攻撃のクラスに対して適度に堅牢な防御を提供しました。</p>
 
-`None` では、最新バージョンのブラウザで [`Secure`](#Secure) 属性が必要です。詳細については、以下を参照してください。
+<p><code>None</code> では、最新バージョンのブラウザで <a href="#Secure"><code>Secure</code></a> 属性が必要です。詳細については、以下を参照してください。</p>
 
-## 一般的な警告の修正
+<h2 id="一般的な警告の修正">一般的な警告の修正</h2>
 
-### `SameSite=None` requires `Secure`
+<h3 id="SameSiteNone_requires_Secure"><code>SameSite=None</code> requires <code>Secure</code></h3>
 
-次の警告がコンソールに表示される場合があります。
+<p>次の警告がコンソールに表示される場合があります。</p>
 
-> Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.
-> Cookie “_myCookie_” rejected because it has the “sameSite=none” attribute but is missing the “secure” attribute.
+<blockquote>
+<p>Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.<br>
+ Cookie “<em>myCookie</em>” rejected because it has the “sameSite=none” attribute but is missing the “secure” attribute.</p>
+</blockquote>
 
-`SameSite=None` を要求するが `Secure` とマークされていない Cookie は拒否されるため、警告が表示されます。
+<p><code>SameSite=None</code> を要求するが <code>Secure</code> とマークされていない Cookie は拒否されるため、警告が表示されます。</p>
 
-```plain example-bad
-Set-Cookie: flavor=choco; SameSite=None
-```
+<pre class="example-bad notranslate">Set-Cookie: flavor=choco; SameSite=None</pre>
 
-これを修正するには、`SameSite=None` Cookie に `Secure` 属性を追加する必要があります。
+<p>これを修正するには、<code>SameSite=None</code> Cookie に <code>Secure</code> 属性を追加する必要があります。</p>
 
-```plain example-good
-Set-Cookie: flavor=choco; SameSite=None; Secure
-```
+<pre class="example-good notranslate">Set-Cookie: flavor=choco; SameSite=None; <strong>Secure</strong></pre>
 
-[`Secure`](#Secure) Cookie は、HTTPS プロトコルを介した暗号化されたリクエストでのみサーバーに送信されます。安全でないサイト (`http:`) は `Secure` ディレクティブで Cookie を設定できないことに注意してください。
+<p><a href="#Secure"><code>Secure</code></a> Cookie は、HTTPS プロトコルを介した暗号化されたリクエストでのみサーバーに送信されます。安全でないサイト (<code>http:</code>) は <code>Secure</code> ディレクティブで Cookie を設定できないことに注意してください。</p>
 
-### Cookies without `SameSite` default to `SameSite=Lax`
+<h3 id="Cookies_without_SameSite_default_to_SameSiteLax">Cookies without <code>SameSite</code> default to <code>SameSite=Lax</code></h3>
 
-モダンブラウザの最近のバージョンでは、デフォルトで `SameSite` がより安全に Cookie に提供されているため、次のメッセージがコンソールに表示される場合があります。
+<p>モダンブラウザの最近のバージョンでは、デフォルトで <code>SameSite</code> がより安全に Cookie に提供されているため、次のメッセージがコンソールに表示される場合があります。</p>
 
-> Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.
-> Cookie “_myCookie_” has “sameSite” policy set to “lax” because it is missing a “sameSite” attribute, and “sameSite=lax” is the default value for this attribute.
+<blockquote>
+<p>Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.<br>
+ Cookie “<em>myCookie</em>” has “sameSite” policy set to “lax” because it is missing a “sameSite” attribute, and “sameSite=lax” is the default value for this attribute.</p>
+</blockquote>
 
-Cookie の `SameSite` ポリシーが明示的に指定されていないため、警告が表示されます。
+<p>Cookie の <code>SameSite</code> ポリシーが明示的に指定されていないため、警告が表示されます。</p>
 
-```plain example-bad
-Set-Cookie: flavor=choco
-```
+<pre class="example-bad notranslate">Set-Cookie: flavor=choco</pre>
 
-モダンブラウザを使用して `SameSite=Lax` を自動的に適用することもできますが、明示的に指定して、Cookie に適用される `SameSite` ポリシーの意図を明確に伝える必要があります。すべてのブラウザのデフォルトがまだ `Lax` であるわけではないため、これによりブラウザ全体のエクスペリエンスも向上します。
+<p>モダンブラウザを使用して <code>SameSite=Lax</code> を自動的に適用することもできますが、明示的に指定して、Cookie に適用される <code>SameSite</code> ポリシーの意図を明確に伝える必要があります。すべてのブラウザのデフォルトがまだ <code>Lax</code> であるわけではないため、これによりブラウザ全体のエクスペリエンスも向上します。</p>
 
-```plain example-good
-Set-Cookie: flavor=choco; SameSite=Lax
-```
+<pre class="example-good notranslate">Set-Cookie: flavor=choco; <strong>SameSite=Lax</strong></pre>
 
-## 例:
+<h2 id="例"><strong>例:</strong></h2>
 
-    RewriteEngine on
-    RewriteBase "/"
-    RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
-    RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
-    RewriteRule "^(.*)\.ht$"         "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:01:https://www.example.org:30/:SameSite=None:Secure]
-    RewriteRule "^(.*)\.htm$"        "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:02:https://www.example.org:30/:SameSite=None:Secure]
-    RewriteRule "^(.*)\.html$"       "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:03:https://www.example.org:30/:SameSite=None:Secure]
-    [...]
-    RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:09:https://www.example.org:30/:SameSite=Strict:Secure]
+<pre class="notranslate">RewriteEngine on
+RewriteBase "/"
+RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
+RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
+RewriteRule "^(.*)\.ht$"         "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:01:https://www.example.org:30/:SameSite=None:Secure]
+RewriteRule "^(.*)\.htm$"        "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:02:https://www.example.org:30/:SameSite=None:Secure]
+RewriteRule "^(.*)\.html$"       "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:03:https://www.example.org:30/:SameSite=None:Secure]
+[...]
+RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:09:https://www.example.org:30/:SameSite=Strict:Secure]
+</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                           | タイトル                                                              |
-| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                                                 | HTTP 状態管理メカニズム                                               |
-| [draft-ietf-httpbis-rfc6265bis-05](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05) | Cookie プレフィックス、同一サイト Cookie、および厳格なセキュア Cookie |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">タイトル</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("6265", "Set-Cookie", "4.1")}}</td>
+   <td>HTTP 状態管理メカニズム</td>
+  </tr>
+  <tr>
+   <td><a href="https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05">draft-ietf-httpbis-rfc6265bis-05</a></td>
+   <td>Cookie プレフィックス、同一サイト Cookie、および厳格なセキュア Cookie</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("http.headers.Set-Cookie", 5)}}
+<p>{{Compat("http.headers.Set-Cookie", 5)}}</p>
 
-## あわせて参照
+<h2 id="あわせて参照">あわせて参照</h2>
 
-- [HTTP cookies](/ja/docs/Web/HTTP/Cookies)
-- {{HTTPHeader("Cookie")}}
-- {{domxref("Document.cookie")}}
+<ul>
+ <li><a href="/ja/docs/Web/HTTP/Cookies">HTTP cookies</a></li>
+ <li>{{HTTPHeader("Cookie")}}</li>
+ <li>{{domxref("Document.cookie")}}</li>
+</ul>

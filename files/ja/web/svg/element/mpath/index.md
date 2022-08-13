@@ -7,78 +7,102 @@ tags:
   - 要素
 translation_of: Web/SVG/Element/mpath
 ---
-{{SVGRef}}
+<div>{{SVGRef}}</div>
 
-## 概要
+<h2 id="概要">概要</h2>
 
-{{ SVGElement("animateMotion") }}要素の mpath サブ要素は、外部の {{ SVGElement("path") }}要素をモーションパスの定義として参照する機能を提供します。
+<p>{{ SVGElement("animateMotion") }}要素のmpath サブ要素は、外部の {{ SVGElement("path") }}要素をモーションパスの定義として参照する機能を提供します。</p>
 
-## 利用可能な場所
+<h2 id="利用可能な場所">利用可能な場所</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## 例
+<h2 id="例">例</h2>
 
-```html
-<svg width="100%" height="100%"  viewBox="0 0 500 300"
+<pre class="brush: html">&lt;svg width="100%" height="100%"  viewBox="0 0 500 300"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink" >
+     xmlns:xlink="http://www.w3.org/1999/xlink" &gt;
 
-  <rect x="1" y="1" width="498" height="298"
-        fill="none" stroke="blue" stroke-width="2" />
+  &lt;rect x="1" y="1" width="498" height="298"
+        fill="none" stroke="blue" stroke-width="2" /&gt;
 
-  <!-- Draw the outline of the motion path in blue, along
-          with three small circles at the start, middle and end. -->
-  <path id="path1" d="M100,250 C 100,50 400,50 400,250"
-        fill="none" stroke="blue" stroke-width="7.06"  />
-  <circle cx="100" cy="250" r="17.64" fill="blue"  />
-  <circle cx="250" cy="100" r="17.64" fill="blue"  />
-  <circle cx="400" cy="250" r="17.64" fill="blue"  />
+  &lt;!-- Draw the outline of the motion path in blue, along
+          with three small circles at the start, middle and end. --&gt;
+  &lt;path id="path1" d="M100,250 C 100,50 400,50 400,250"
+        fill="none" stroke="blue" stroke-width="7.06"  /&gt;
+  &lt;circle cx="100" cy="250" r="17.64" fill="blue"  /&gt;
+  &lt;circle cx="250" cy="100" r="17.64" fill="blue"  /&gt;
+  &lt;circle cx="400" cy="250" r="17.64" fill="blue"  /&gt;
 
-  <!-- Here is a triangle which will be moved about the motion path.
+  &lt;!-- Here is a triangle which will be moved about the motion path.
        It is defined with an upright orientation with the base of
-       the triangle centered horizontally just above the origin. -->
-  <path d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
-        fill="yellow" stroke="red" stroke-width="7.06"  >
-    <!-- Define the motion path animation -->
-    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto" >
-       <mpath xlink:href="#path1"/>
-    </animateMotion>
-  </path>
-</svg>
-```
+       the triangle centered horizontally just above the origin. --&gt;
+  &lt;path d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
+        fill="yellow" stroke="red" stroke-width="7.06"  &gt;
+    &lt;!-- Define the motion path animation --&gt;
+    &lt;animateMotion dur="6s" repeatCount="indefinite" rotate="auto" &gt;
+       &lt;mpath xlink:href="#path1"/&gt;
+    &lt;/animateMotion&gt;
+  &lt;/path&gt;
+&lt;/svg&gt;
+</pre>
 
-出力結果:
+<p>出力結果:</p>
 
-{{EmbedLiveSample("Example",250,165)}}
+<p>{{EmbedLiveSample("Example",250,165)}}</p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-### グローバル属性
+<h3 id="グローバル属性">グローバル属性</h3>
 
-- [Core attributes](/ja/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Xlink attributes](/ja/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
-- {{ SVGAttr("externalResourcesRequired") }}
+<ul>
+ <li><a href="/ja/SVG/Attribute#Core" title="en/SVG/Attribute#Core">Core attributes</a> »</li>
+ <li><a href="/ja/SVG/Attribute#XLink" title="en/SVG/Attribute#XLink">Xlink attributes</a> »</li>
+ <li>{{ SVGAttr("externalResourcesRequired") }}</li>
+</ul>
 
-### 専用属性
+<h3 id="専用属性">専用属性</h3>
 
-- {{ SVGAttr("xlink:href") }}
+<ul>
+ <li>{{ SVGAttr("xlink:href") }}</li>
+</ul>
 
-## DOM インターフェイス
+<h2 id="DOM_インターフェイス">DOM インターフェイス</h2>
 
-この要素は [`SVGMPathElement`](/ja/DOM/SVGMPathElement "en/DOM/SVGMPathElement") インターフェイスを提供します。
+<p>この要素は <code><a href="/ja/DOM/SVGMPathElement" title="en/DOM/SVGMPathElement">SVGMPathElement</a></code> インターフェイスを提供します。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                         | 状態                                     | コメント   |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{SpecName("SVG Animations 2", "#MPathElement", "&lt;mpath&gt;")}}     | {{Spec2("SVG Animations 2")}} | 変更なし   |
-| {{SpecName("SVG1.1", "animate.html#MPathElement", "&lt;mpath&gt;")}} | {{Spec2("SVG1.1")}}                 | 最初の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("SVG Animations 2", "#MPathElement", "&lt;mpath&gt;")}}</td>
+   <td>{{Spec2("SVG Animations 2")}}</td>
+   <td>変更なし</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "animate.html#MPathElement", "&lt;mpath&gt;")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>最初の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("svg.elements.mpath")}}
 
-## 関連情報
 
-- {{ SVGElement("animateMotion") }}
+<p>{{Compat("svg.elements.mpath")}}</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{ SVGElement("animateMotion") }}</li>
+</ul>

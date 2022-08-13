@@ -7,63 +7,65 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`Object.getOwnPropertyDescriptors()`** メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。
+<p><code><strong>Object.getOwnPropertyDescriptors()</strong></code> メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。</p>
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}
+<div>{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Object.getOwnPropertyDescriptors(obj)
+<pre class="syntaxbox notranslate">Object.getOwnPropertyDescriptors(<var>obj</var>)</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `obj`
-  - : すべてのプロパティディスクリプタを取得するオブジェクト。
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>すべてのプロパティディスクリプタを取得するオブジェクト。</dd>
+</dl>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-オブジェクトのすべてのプロパティ記述子を含むオブジェクト。プロパティがない場合、空オブジェクトの可能性がある。
+<p>オブジェクトのすべてのプロパティ記述子を含むオブジェクト。プロパティがない場合、空オブジェクトの可能性がある。</p>
 
-## 説明
+<h2 id="Description" name="Description">説明</h2>
 
-このメソッドは、オブジェクトのすべての独自のプロパティの正確な記述の検査を可能にします。 JavaScript では、*プロパティ*は文字列値による名前または {{jsxref("Symbol")}} とプロパティ記述子で構成されています。プロパティ記述子の型と属性についての詳細情報は、{{jsxref("Object.defineProperty()")}} で確認してください。
+<p>このメソッドは、オブジェクトのすべての独自のプロパティの正確な記述の検査を可能にします。 JavaScript では、<dfn>プロパティ</dfn>は文字列値による名前または {{jsxref("Symbol")}} とプロパティ記述子で構成されています。プロパティ記述子の型と属性についての詳細情報は、{{jsxref("Object.defineProperty()")}} で確認してください。</p>
 
-_プロパティディスクリプタ_ は、次の属性のいくつかを持ちます。
+<p><dfn>プロパティディスクリプタ</dfn> は、次の属性のいくつかを持ちます。</p>
 
-- `value`
-  - : プロパティに関連づけられた値です (データディスクリプタのみ)。
-- `writable`
-  - : `true` である場合、プロパティに関連づけられた値は変更することができます (データ記述子のみ)。
-- `get`
-  - : プロパティのゲッターとして提供する関数、あるいはゲッターがない場合は {{jsxref("undefined")}} です (アクセサ記述子のみ)。
-- `set`
-  - : プロパティのセッターとして提供する関数、あるいはセッターがない場合は {{jsxref("undefined")}} です (アクセサ記述子のみ)。
-- `configurable`
-  - : `true` である場合、この種の記述子を変更することや、対応するオブジェクトからプロパティを削除することができます。
-- `enumerable`
-  - : `true` である場合、このプロパティは対応するオブジェクトでのプロパティ列挙に現れます。
+<dl>
+ <dt><code>value</code></dt>
+ <dd>プロパティに関連づけられた値です (データディスクリプタのみ)。</dd>
+ <dt><code>writable</code></dt>
+ <dd><code>true</code> である場合、プロパティに関連づけられた値は変更することができます (データ記述子のみ)。</dd>
+ <dt><code>get</code></dt>
+ <dd>プロパティのゲッターとして提供する関数、あるいはゲッターがない場合は {{jsxref("undefined")}} です (アクセサ記述子のみ)。</dd>
+ <dt><code>set</code></dt>
+ <dd>プロパティのセッターとして提供する関数、あるいはセッターがない場合は {{jsxref("undefined")}} です (アクセサ記述子のみ)。</dd>
+ <dt><code>configurable</code></dt>
+ <dd><code>true</code> である場合、この種の記述子を変更することや、対応するオブジェクトからプロパティを削除することができます。</dd>
+ <dt><code>enumerable</code></dt>
+ <dd><code>true</code> である場合、このプロパティは対応するオブジェクトでのプロパティ列挙に現れます。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 浅いコピーの生成
+<h3 id="Creating_a_shallow_clone" name="Creating_a_shallow_clone">浅いコピーの生成</h3>
 
-{{jsxref("Object.assign()")}} メソッドは、ソースオブジェクトから対象のオブジェクトに対して enumerable とプロパティのみコピーできる一方、2 つの未知のオブジェクト間の浅いコピーのために、このメソッドと {{jsxref("Object.create()")}} を使用できます：
+<p>{{jsxref("Object.assign()")}} メソッドは、ソースオブジェクトから対象のオブジェクトに対して enumerable とプロパティのみコピーできる一方、2 つの未知のオブジェクト間の浅いコピーのために、このメソッドと {{jsxref("Object.create()")}} を使用できます：</p>
 
-```js
-Object.create(
+<pre class="brush: js notranslate">Object.create(
   Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj)
 );
-```
+</pre>
 
-### サブクラスの作成
+<h3 id="Creating_a_subclass" name="Creating_a_subclass">サブクラスの作成</h3>
 
-サブクラスを作成する通常の方法は、サブクラスを定義し、そのプロトタイプをスーパークラスのインスタンスに設定し、そのインスタンスにプロパティを定義することです。これは特にセッターやゲッターが無骨になることがあります。代わりに、プロトタイプを設定するためにこのコードを使用することもできます。
+<p>サブクラスを作成する通常の方法は、サブクラスを定義し、そのプロトタイプをスーパークラスのインスタンスに設定し、そのインスタンスにプロパティを定義することです。これは特にセッターやゲッターが無骨になることがあります。代わりに、プロトタイプを設定するためにこのコードを使用することもできます。</p>
 
-```js
-function superclass() {}
+<pre class="brush: js notranslate">function superclass() {}
 superclass.prototype = {
   // Define your methods and properties here
 };
@@ -74,20 +76,33 @@ subclass.prototype = Object.create(
     // Define your methods and properties here
   }
 );
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}
+<div>
+<p>{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Object.defineProperty()")}}
-- [Polyfill](https://github.com/tc39/proposal-object-getownpropertydescriptors)
+<ul>
+ <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
+ <li>{{jsxref("Object.defineProperty()")}}</li>
+ <li><a href="https://github.com/tc39/proposal-object-getownpropertydescriptors">Polyfill</a></li>
+</ul>

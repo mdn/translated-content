@@ -5,49 +5,51 @@ tags:
   - MDC Project
   - NeedsContent
   - SVG
-  - SVG:Tutorial
+  - 'SVG:Tutorial'
 translation_of: Web/SVG/Tutorial
 ---
-**変倍ベクタ図形** (Scalable Vector Graphics; [SVG](/ja/docs/SVG "SVG")) は図形をタグ付けする W3C の XML 派生言語です。SVG は，Firefox、Opera、WebKit ブラウザ、Internet Explorer 及び他のブラウザにおいて部分的に実装されています。
+<p><strong>変倍ベクタ図形</strong> (Scalable Vector Graphics; <a href="/ja/docs/SVG" title="SVG">SVG</a>) は図形をタグ付けするW3CのXML派生言語です。SVGは，Firefox、Opera、WebKitブラウザ、Internet Explorer及び他のブラウザにおいて部分的に実装されています。</p>
 
-本教本は SVG の内部構造の説明を目的としており，また技術的詳細が目白押しです。美しい画像を描きたいだけなら，より有用な資料は[Inkscape の文書郡](https://inkscape.org/learn/)にて見付かるでしょう。他に，W3C の[SVG 入門](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)も，良い SVG 概説を提供しています。
+<p>本教本はSVGの内部構造の説明を目的としており，また技術的詳細が目白押しです。美しい画像を描きたいだけなら，より有用な資料は<a href="https://inkscape.org/learn/">Inkscapeの文書郡</a>にて見付かるでしょう。他に，W3Cの<a href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html">SVG入門</a>も，良いSVG概説を提供しています。</p>
 
-> **Note:** このチュートリアルは執筆の非常に早い段階にあります。もしあなたが可能なら、力を貸し、1 つまたは 2 つのパラグラフを書いて手助けしてください。ページ全体を書いていただければ、なお良いです。
+<div class="note">このチュートリアルは執筆の非常に早い段階にあります。もしあなたが可能なら、力を貸し、1 つまたは 2 つのパラグラフを書いて手助けしてください。ページ全体を書いていただければ、なお良いです。</div>
 
-##### ゼロから始める SVG の紹介
+<h5 id="ゼロから始める_SVG_の紹介">ゼロから始める SVG の紹介</h5>
 
-- [概要](/ja/docs/SVG/Tutorial/Introduction "SVG/Tutorial/Introduction")
-- [始めましょう](/ja/docs/SVG/Tutorial/Getting_Started "SVG/Tutorial/Getting_Started")
-- [配置](/ja/docs/SVG/Tutorial/Positions "SVG/Tutorial/Positions")
-- [基本的な図形](/ja/docs/SVG/Tutorial/Basic_Shapes "SVG/Tutorial/Basic_Shapes")
-- [パス](/ja/docs/SVG/Tutorial/Paths "SVG/Tutorial/Paths")
-- [塗りつぶしとストローク](/ja/docs/SVG/Tutorial/Fills_and_Strokes "SVG/Tutorial/Fills_and_Strokes")
-- [階調](/ja/docs/SVG/Tutorial/Gradients "SVG/Tutorial/Gradients")
-- [模様](/ja/docs/SVG/Tutorial/Patterns "SVG/Tutorial/Patterns")
-- [テキスト](/ja/docs/SVG/Tutorial/Texts "SVG/Tutorial/Texts")
-- [基本的なトランスフォーム](/ja/docs/SVG/Tutorial/Basic_Transformations "SVG/Tutorial/Basic_Transformations")
-- [クリッピングとマスキング](/ja/docs/SVG/Tutorial/Clipping_and_masking "SVG/Tutorial/Clipping_and_masking")
-- [他の SVG コンテンツ](/ja/docs/SVG/Tutorial/Other_content_in_SVG "SVG/Tutorial/Other content in SVG")
-- [フィルタ効果](/ja/docs/SVG/Tutorial/Filter_effects "SVG/Tutorial/Filter effects")
-- [SVG フォント](/ja/docs/SVG/Tutorial/SVG_Fonts "SVG/Tutorial/SVG fonts")
-- [SVG image 要素](/ja/docs/SVG/Tutorial/SVG_Image_Tag "SVG/Tutorial/SVG Image Tag")
-- [SVG のツール](/ja/docs/SVG/Tutorial/Tools_for_SVG "SVG/Tutorial/Tools_for_SVG")
-- [他のチュートリアル](/ja/docs/SVG/Tutorial/Other_Tutorials "SVG/Tutorial/Other_Tutorials")
+<ul>
+ <li><a href="/ja/docs/SVG/Tutorial/Introduction" title="SVG/Tutorial/Introduction">概要</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Getting_Started" title="SVG/Tutorial/Getting_Started">始めましょう</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Positions" title="SVG/Tutorial/Positions">配置</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Basic_Shapes" title="SVG/Tutorial/Basic_Shapes">基本的な図形</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Paths" title="SVG/Tutorial/Paths">パス</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Fills_and_Strokes" title="SVG/Tutorial/Fills_and_Strokes">塗りつぶしとストローク</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Gradients" title="SVG/Tutorial/Gradients">階調</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Patterns" title="SVG/Tutorial/Patterns">模様</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Texts" title="SVG/Tutorial/Texts">テキスト</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Basic_Transformations" title="SVG/Tutorial/Basic_Transformations">基本的なトランスフォーム</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Clipping_and_masking" title="SVG/Tutorial/Clipping_and_masking">クリッピングとマスキング</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Other_content_in_SVG" title="SVG/Tutorial/Other content in SVG">他の SVG コンテンツ</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Filter_effects" title="SVG/Tutorial/Filter effects">フィルタ効果</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/SVG_Fonts" title="SVG/Tutorial/SVG fonts">SVG フォント</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/SVG_Image_Tag" title="SVG/Tutorial/SVG Image Tag">SVG image 要素</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Tools_for_SVG" title="SVG/Tutorial/Tools_for_SVG">SVG のツール</a></li>
+ <li><a href="/ja/docs/SVG/Tutorial/Other_Tutorials" title="SVG/Tutorial/Other_Tutorials">他のチュートリアル</a></li>
+</ul>
 
-続く話題はより発展的であり、従って各々自身の教本を習得すべきです。
+<p>続く話題はより発展的であり、従って各々自身の教本を習得すべきです。</p>
 
-##### JavaScript による SVG のスクリプティング
+<h5 id="JavaScript_による_SVG_のスクリプティング">JavaScript による SVG のスクリプティング</h5>
 
-未定
+<p>未定</p>
 
-##### SVG フィルタのチュートリアル
+<h5 id="SVG_フィルタのチュートリアル">SVG フィルタのチュートリアル</h5>
 
-未定
+<p>未定</p>
 
-##### SMIL を用いた SVG のアニメーション
+<h5 id="SMIL_を用いた_SVG_のアニメーション">SMIL を用いた SVG のアニメーション</h5>
 
-未定
+<p>未定</p>
 
-##### SVG によるフォント作成
+<h5 id="SVG_によるフォント作成">SVG によるフォント作成</h5>
 
-未定
+<p>未定</p>

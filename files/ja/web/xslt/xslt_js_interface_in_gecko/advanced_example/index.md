@@ -5,31 +5,30 @@ tags:
   - XSLT
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 ---
-## 高度な例
+<h2 id="Advanced_Example" name="Advanced_Example">高度な例</h2>
 
-高度な例では、コンテンツに基づいていくつかの div をソートします。この例では、昇順ソートと降順ソートの間で交互にコンテンツをソートすることができます。JavaScript は最初に.xsl ファイルのみをロードし、ファイルのロードが完了すると`xslloaded`変数を true に設定します。{{domxref("XSLTProcessor.getParameter()")}}メソッドを使用すると、コードは昇順または降順に並べ替えることができます。パラメータが空の場合（ソートが初めて発生したとき、XSLT ファイルに値がないため）はデフォルトで昇順になります。ソート値は{{domxref("XSLTProcessor.setParameter()")}}を使用して設定されます。
+<p>高度な例では、コンテンツに基づいていくつかのdivをソートします。この例では、昇順ソートと降順ソートの間で交互にコンテンツをソートすることができます。JavaScriptは最初に.xslファイルのみをロードし、ファイルのロードが完了すると<code>xslloaded</code>変数をtrueに設定します。{{domxref("XSLTProcessor.getParameter()")}}メソッドを使用すると、コードは昇順または降順に並べ替えることができます。パラメータが空の場合（ソートが初めて発生したとき、XSLTファイルに値がないため）はデフォルトで昇順になります。ソート値は{{domxref("XSLTProcessor.setParameter()")}}を使用して設定されます。</p>
 
-XSLT ファイルには、JavaScript がソート方法を変更するために設定する`myOrder`というパラメータがあります。`xsl:sort`要素の order 属性は、`$myOrder`を使用してパラメータの値にアクセスできます。ただし、その値は文字列ではなく XPATH 式である必要があるため、`{$myOrder}`が使用されます。{} を使用すると、コンテンツが XPath 式として評価されます。
+<p>XSLTファイルには、JavaScriptがソート方法を変更するために設定する<code>myOrder</code>というパラメータがあります。<code>xsl:sort</code>要素のorder属性は、<code>$myOrder</code>を使用してパラメータの値にアクセスできます。ただし、その値は文字列ではなくXPATH式である必要があるため、<code>{$myOrder}</code>が使用されます。{} を使用すると、コンテンツがXPath式として評価されます。</p>
 
-変換が完了すると、この例に示すように、結果がドキュメントに追加されます。
+<p>変換が完了すると、この例に示すように、結果がドキュメントに追加されます。</p>
 
-**サンプル 7 : div コンテンツを元にソートする**
+<p><small><strong>サンプル 7 : div コンテンツを元にソートする</strong></small></p>
 
-```js
-// XHTML Fragment:
+<pre class="brush: js">// XHTML Fragment:
 
-<div id="example">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>10</div>
-</div>
+&lt;div id="example"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+  &lt;div&gt;4&lt;/div&gt;
+  &lt;div&gt;5&lt;/div&gt;
+  &lt;div&gt;6&lt;/div&gt;
+  &lt;div&gt;7&lt;/div&gt;
+  &lt;div&gt;8&lt;/div&gt;
+  &lt;div&gt;9&lt;/div&gt;
+  &lt;div&gt;10&lt;/div&gt;
+&lt;/div&gt;
 
 // JavaScript
 
@@ -83,21 +82,21 @@ function sort() {
 
 // XSL Stylesheet:
 
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="html" indent="yes" />
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+  &lt;xsl:output method="html" indent="yes" /&gt;
 
-  <xsl:param name="myOrder" />
+  &lt;xsl:param name="myOrder" /&gt;
 
-  <xsl:template match="/">
+  &lt;xsl:template match="/"&gt;
 
-    <xsl:apply-templates select="/div//div">
-      <xsl:sort select="." data-type="number" order="{$myOrder}" />
-    </xsl:apply-templates>
-  </xsl:template>
+    &lt;xsl:apply-templates select="/div//div"&gt;
+      &lt;xsl:sort select="." data-type="number" order="{$myOrder}" /&gt;
+    &lt;/xsl:apply-templates&gt;
+  &lt;/xsl:template&gt;
 
-  <xsl:template match="div">
-    <xsl:copy-of select="." />
-  </xsl:template>
-</xsl:stylesheet>
-```
+  &lt;xsl:template match="div"&gt;
+    &lt;xsl:copy-of select="." /&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+</pre>

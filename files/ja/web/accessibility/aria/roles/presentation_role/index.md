@@ -8,32 +8,47 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role
 ---
-このテクニックは、[`presentation`](https://www.w3.org/TR/wai-aria/#presentation) ロールの使い方を示し、ブラウザーや支援技術への影響について説明します。
+<p class="summary" id="Description"><span class="seoSummary">このテクニックは、<code><a href="https://www.w3.org/TR/wai-aria/#presentation">presentation</a></code> ロールの使い方を示し、ブラウザーや支援技術への影響について説明します。</span></p>
 
-`presentation` ロールは、要素とそれに関連する子要素の意味論的意味を取り除くために使用されます。 例えば、レイアウト目的で使用される表は、表要素に `presentation` ロールを適用して、表要素およびその表に関連する子要素（表のヘッダーや表のデータの要素など）から意味論的意味を取り除けます。 しかし、表に関係のない要素は、その意味論的意味を保持するべきです。
+<p><code>presentation</code> ロールは、要素とそれに関連する子要素の意味論的意味を取り除くために使用されます。 例えば、レイアウト目的で使用される表は、表要素に <code>presentation</code> ロールを適用して、表要素およびその表に関連する子要素（表のヘッダーや表のデータの要素など）から意味論的意味を取り除けます。 しかし、表に関係のない要素は、その意味論的意味を保持するべきです。</p>
 
-## ユーザーエージェントと支援技術への影響
+<h2 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h2>
 
-> **Note:** **注**: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+<p> </p>
 
-## 例
+<div class="note"><strong>注</strong>: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
 
-### Example 1:
+<h2 id="Examples" name="Examples">例</h2>
 
-```html
-Code
-```
+<h3 id="Example_1" name="Example_1">Example 1: </h3>
 
-#### 動作する例
+<p> </p>
 
-## 注
+<pre class="brush: html">Code </pre>
 
-## 使用された ARIA 属性
+<h4 id="Working_Examples" name="Working_Examples">動作する例</h4>
 
-## 関連する ARIA 技術
+<ul>
+</ul>
 
-## 互換性
+<h2 id="Notes" name="Notes">注</h2>
 
-TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
+<p> </p>
 
-## その他のリソース
+<h2 id="ARIA_attributes_used" name="ARIA_attributes_used">使用された ARIA 属性</h2>
+
+<p> </p>
+
+<h2 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術</h2>
+
+<p> </p>
+
+<h2 id="Compatibility" name="Compatibility">互換性</h2>
+
+<p> </p>
+
+<p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
+
+<h2 id="Additional_resources" name="Additional_resources">その他のリソース</h2>
+
+<p> </p>

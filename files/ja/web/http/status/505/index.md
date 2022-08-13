@@ -8,20 +8,31 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Status/505
 ---
-{{HTTPSidebar}}
+<p>{{HTTPSidebar}}</p>
 
-HyperText Transfer Protocol (HTTP) **`505 HTTP Version Not Supported`** レスポンスステータスコードは、リクエストで使用されている HTTP バージョンがサーバーによってサポートされていないことを示します。
+<p>HyperText Transfer Protocol (HTTP) <code><strong>505 HTTP Version Not Supported</strong></code> レスポンスステータスコードは、リクエストで使用されている HTTP バージョンがサーバーによってサポートされていないことを示します。</p>
 
-## ステータス
+<h2 id="ステータス">ステータス</h2>
 
-    505 HTTP Version Not Supported
+<pre class="syntaxbox">505 HTTP Version Not Supported</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                           | タイトル                                                      |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "505 HTTP Version Not Supported" , "6.6.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">タイトル</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7231", "505 HTTP Version Not Supported" , "6.6.6")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-- {{HTTPHeader("Upgrade")}}
+<ul>
+ <li>{{HTTPHeader("Upgrade")}}</li>
+</ul>

@@ -9,66 +9,77 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`Math.tanh()`** 関数は、引数として与えた数のハイパーボリックタンジェントを返します。すなわち
+<p><strong><code>Math.tanh()</code></strong> 関数は、引数として与えた数のハイパーボリックタンジェントを返します。すなわち</p>
 
-<math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
+<p><math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math></p>
 
-{{EmbedInteractiveExample("pages/js/math-tanh.html")}}
+<div>{{EmbedInteractiveExample("pages/js/math-tanh.html")}}</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Math.tanh(x)
+<pre class="syntaxbox notranslate">Math.tanh(<var>x</var>)</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `x`
-  - : 数値。
+<dl>
+ <dt><code><var>x</var></code></dt>
+ <dd>数値。</dd>
+</dl>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-指定された数値のハイパーボリックタンジェントです。
+<p>指定された数値のハイパーボリックタンジェントです。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-`tanh()` は `Math` の静的メソッドであるため、生成した `Math` オブジェクトのメソッドとしてではなく、常に `Math.tanh()` として使用するようにしてください (`Math` はコンストラクターではありません)。
+<p><code>tanh()</code> は <code>Math</code> の静的メソッドであるため、生成した <code>Math</code> オブジェクトのメソッドとしてではなく、常に <code>Math.tanh()</code> として使用するようにしてください (<code>Math</code> はコンストラクターではありません)。</p>
 
-## ポリフィル
+<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
 
-{{jsxref("Math.exp()")}} 関数の助けを借りて、エミュレートできます。:
+<p>{{jsxref("Math.exp()")}} 関数の助けを借りて、エミュレートできます。:</p>
 
-```js
-Math.tanh = Math.tanh || function(x){
+<pre class="brush: js notranslate">Math.tanh = Math.tanh || function(x){
     var a = Math.exp(+x), b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
 }
-```
+</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### Math.tanh() の使用
+<h3 id="Using_Math.tanh" name="Using_Math.tanh">Math.tanh() の使用</h3>
 
-```js
-Math.tanh(0);        // 0
+<pre class="brush: js notranslate">Math.tanh(0);        // 0
 Math.tanh(Infinity); // 1
 Math.tanh(1);        // 0.7615941559557649
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Math.tanh")}}
+<p>{{Compat("javascript.builtins.Math.tanh")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
+<ul>
+ <li>{{jsxref("Math.acosh()")}}</li>
+ <li>{{jsxref("Math.asinh()")}}</li>
+ <li>{{jsxref("Math.atanh()")}}</li>
+ <li>{{jsxref("Math.cosh()")}}</li>
+ <li>{{jsxref("Math.sinh()")}}</li>
+</ul>

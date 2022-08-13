@@ -7,17 +7,17 @@ tags:
   - Link
   - Link types
   - Reference
-translation_of: Web/HTML/Link_types/dns-prefetch
 browser-compat: html.elements.link.rel.dns-prefetch
+translation_of: Web/HTML/Link_types/dns-prefetch
 ---
-**`dns-prefetch`** キーワードを {{HTMLElement("link")}} 要素の {{HTMLAttrxRef("rel", "link")}} 属性に指定すると、ユーザーがターゲットリソースのオリジンにあるリソースを必要としている可能性が高く、したがってブラウザーがそのオリジンの DNS 解決を先取りして実行することでユーザーの使い勝手が向上する可能性が高いというヒントをブラウザーに与えます。
+<p><span class="seoSummary"><strong><code>dns-prefetch</code></strong> キーワードを {{HTMLElement("link")}} 要素の {{HTMLAttrxRef("rel", "link")}} 属性に指定すると、ユーザーがターゲットリソースのオリジンにあるリソースを必要としている可能性が高く、したがってブラウザーがそのオリジンの DNS 解決を先取りして実行することでユーザーの使い勝手が向上する可能性が高いというヒントをブラウザーに与えます。</span></p>
 
-詳しくは [dns-prefetch の使用](/ja/docs/Web/Performance/dns-prefetch)を参照してください。
+<p>詳しくは <a href="/ja/docs/Web/Performance/dns-prefetch">dns-prefetch の使用</a>を参照してください。</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

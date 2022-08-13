@@ -8,46 +8,55 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`Map[@@species]`** アクセサープロパティは、 `Map` コンストラクターを返します。
+<p><strong><code>Map[@@species]</code></strong> アクセサープロパティは、 <code>Map</code> コンストラクターを返します。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-species アクセサープロパティは `Map` オブジェクトのデフォルトコンストラクターを返します。サブクラスのコンストラクターは、コンストラクターに代入して変更することによりオーバーライドすることができます。
+<p>species アクセサープロパティは <code>Map</code> オブジェクトのデフォルトコンストラクターを返します。サブクラスのコンストラクターは、コンストラクターに代入して変更することによりオーバーライドすることができます。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 通常のオブジェクトの species
+<h3 id="Species_in_ordinary_objects" name="Species_in_ordinary_objects">通常のオブジェクトの species</h3>
 
-species プロパティはデフォルトコンストラクター関数を返しますので、 `Map` オブジェクトには `Map` コンストラクターを返します。
+<p>species プロパティはデフォルトコンストラクター関数を返しますので、 <code>Map</code> オブジェクトには <code>Map</code> コンストラクターを返します。</p>
 
-```js
-Map[Symbol.species]; // function Map()
-```
+<pre class="brush: js notranslate">Map[Symbol.species]; // function Map()</pre>
 
-### 派生オブジェクトの species
+<h3 id="Species_in_derived_objects" name="Species_in_derived_objects">派生オブジェクトの species</h3>
 
-派生したコレクションオブジェクトの中では (例えばカスタムマップである `MyMap`)、 `MyMap` の species は `MyMap` コンストラクターになっています。しかし、これをオーバーライドして、派生クラスのメソッド内で親の `Map` オブジェクトを返したい場合があります。
+<p>派生したコレクションオブジェクトの中では (例えばカスタムマップである <code>MyMap</code>)、 <code>MyMap</code> の species は <code>MyMap</code> コンストラクターになっています。しかし、これをオーバーライドして、派生クラスのメソッド内で親の <code>Map</code> オブジェクトを返したい場合があります。</p>
 
-```js
-class MyMap extends Map {
+<pre class="brush: js notranslate">class MyMap extends Map {
   // Overwrite MyMap species to the parent Map constructor
   static get [Symbol.species]() { return Map; }
-}
-```
+}</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-map-@@species', 'get Map [ @@species ]')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-get-map-@@species', 'get Map [ @@species ]')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Map.@@species")}}
+<div>
+<p>{{Compat("javascript.builtins.Map.@@species")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Map")}}
-- {{jsxref("Symbol.species")}}
+<ul>
+ <li>{{jsxref("Map")}}</li>
+ <li>{{jsxref("Symbol.species")}}</li>
+</ul>

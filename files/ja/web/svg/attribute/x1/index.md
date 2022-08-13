@@ -17,99 +17,144 @@ tags:
   - 直線
 translation_of: Web/SVG/Attribute/x1
 ---
-{{SVGRef}}
+<div>{{SVGRef}}</div>
 
-**`x1`** 属性は、二つ以上の座標を必要とする SVG 要素を描画するための一つ目の x 座標を指定するのに使います。一つしか座標を必要としない要素は、これの代わりに {{SVGAttr("x")}} 属性を使います。
+<p><strong><code>x1</code></strong> 属性は、二つ以上の座標を必要とする SVG 要素を描画するための一つ目の x 座標を指定するのに使います。一つしか座標を必要としない要素は、これの代わりに {{SVGAttr("x")}} 属性を使います。</p>
 
-二つの要素がこの属性を使っています。つまり、{{ SVGElement("line") }} と {{ SVGElement("linearGradient") }} です。
+<p>二つの要素がこの属性を使っています。つまり、{{ SVGElement("line") }} と {{ SVGElement("linearGradient") }} です。</p>
 
-```css hidden
-html,body,svg { height:100% }
-```
+<div id="topExample">
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
 
-```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="5" y1="1" y2="9" stroke="red" />
-  <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="9" x2="5" y1="1" y2="9" stroke="blue" />
-</svg>
-```
+<pre class="brush: html">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;line x1="1" x2="5" y1="1" y2="9" stroke="red" /&gt;
+  &lt;line x1="5" x2="5" y1="1" y2="9" stroke="green" /&gt;
+  &lt;line x1="9" x2="5" y1="1" y2="9" stroke="blue" /&gt;
+&lt;/svg&gt;</pre>
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
+</div>
 
-## line
+<h2 id="line">line</h2>
 
-{{SVGElement('line')}} に関しては、`x1` は、その直線の開始点の x 座標を定めます。
+<p>{{SVGElement('line')}} に関しては、<code>x1</code> は、その直線の開始点の x 座標を定めます。</p>
 
-| 値                 | **[<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| デフォルト値       | `0`                                                                                                                  |
-| アニメーション可能 | Yes                                                                                                                  |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">値</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/ja/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">デフォルト値</th>
+   <td><code>0</code></td>
+  </tr>
+  <tr>
+   <th scope="row">アニメーション可能</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
 
-### 例
+<h3 id="Example" name="Example">例</h3>
 
-```css hidden
-html,body,svg { height:100% }
-```
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
 
-```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="5" y1="1" y2="9" stroke="red"   />
-  <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="9" x2="5" y1="1" y2="9" stroke="blue"  />
-</svg>
-```
+<pre class="brush: html">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;line x1="1" x2="5" y1="1" y2="9" stroke="red"   /&gt;
+  &lt;line x1="5" x2="5" y1="1" y2="9" stroke="green" /&gt;
+  &lt;line x1="9" x2="5" y1="1" y2="9" stroke="blue"  /&gt;
+&lt;/svg&gt;</pre>
 
-{{EmbedLiveSample('line', '100%', 200)}}
+<p>{{EmbedLiveSample('line', '100%', 200)}}</p>
 
-## linearGradient
+<h2 id="linearGradient">linearGradient</h2>
 
-{{SVGElement('linearGradient')}} に関しては、`x1` は、グラデーションのストップ値をマッピングするのに使われる*グラデーション・ベクトル* (_gradient vector)_ の開始点の x 座標を定めます。この属性の正確な振る舞いは、{{SVGAttr('gradientUnits')}} 属性の影響を受けます。
+<p>{{SVGElement('linearGradient')}} に関しては、<code>x1</code> は、グラデーションのストップ値をマッピングするのに使われる<em>グラデーション・ベクトル</em> (<em>gradient vector)</em> の開始点の x 座標を定めます。この属性の正確な振る舞いは、{{SVGAttr('gradientUnits')}} 属性の影響を受けます。</p>
 
-| 値                 | **[<length>](/ja/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/ja/docs/Web/SVG/Content_type#Percentage)** |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| デフォルト値       | `0%`                                                                                                                 |
-| アニメーション可能 | Yes                                                                                                                  |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">値</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/ja/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">デフォルト値</th>
+   <td><code>0%</code></td>
+  </tr>
+  <tr>
+   <th scope="row">アニメーション可能</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
 
-### 例
+<h3 id="Example_2" name="Example_2">例</h3>
 
-```css hidden
-html,body,svg { height:100% }
-```
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
 
-```html
-<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
-  <!--
+<pre class="brush: html">&lt;svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;!--
   デフォルトでは、グラデーション・ベクトルは、適用先の形状を囲う境界の
   左端から始まります。
-  -->
-  <linearGradient x1="0%" id="g0">
-    <stop offset="0"    stop-color="black"  />
-    <stop offset="100%" stop-color="red" />
-  </linearGradient>
+  --&gt;
+  &lt;linearGradient x1="0%" id="g0"&gt;
+    &lt;stop offset="0"    stop-color="black"  /&gt;
+    &lt;stop offset="100%" stop-color="red" /&gt;
+  &lt;/linearGradient&gt;
 
-  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
+  &lt;rect x="1"  y="1" width="8" height="8" fill="url(#g0)" /&gt;
 
-  <!--
+  &lt;!--
   ここでは、グラデーション・ベクトルは、適用先の形状を囲う境界の
   左端から 80% のところから始まります。
-  -->
-  <linearGradient x1="80%" id="g1">
-    <stop offset="0"    stop-color="black"  />
-    <stop offset="100%" stop-color="red" />
-  </linearGradient>
+  --&gt;
+  &lt;linearGradient x1="80%" id="g1"&gt;
+    &lt;stop offset="0"    stop-color="black"  /&gt;
+    &lt;stop offset="100%" stop-color="red" /&gt;
+  &lt;/linearGradient&gt;
 
-  <rect x="11" y="1" width="8" height="8" fill="url(#g1)" />
-</svg>
-```
+  &lt;rect x="11" y="1" width="8" height="8" fill="url(#g1)" /&gt;
+&lt;/svg&gt;</pre>
 
-{{EmbedLiveSample('linearGradient', '100%', 200)}}
+<p>{{EmbedLiveSample('linearGradient', '100%', 200)}}</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                                     | 状態                     | 備考                                      |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------- |
-| {{SpecName("SVG2", "shapes.html#LineElementX1Attribute", "x1")}}                     | {{Spec2("SVG2")}} | Definition for `<line>`                   |
-| {{SpecName("SVG2", "pservers.html#LinearGradientElementX1Attribute", "x1")}}     | {{Spec2("SVG2")}} | Definition for `<linearGradient>`         |
-| {{SpecName("SVG1.1", "shapes.html#LineElementX1Attribute", "x1")}}                 | {{Spec2("SVG1.1")}} | Initial definition for `<line>`           |
-| {{SpecName("SVG1.1", "pservers.html#LinearGradientElementX1Attribute", "x1")}} | {{Spec2("SVG1.1")}} | Initial definition for `<linearGradient>` |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("SVG2", "shapes.html#LineElementX1Attribute", "x1")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>Definition for <code>&lt;line&gt;</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG2", "pservers.html#LinearGradientElementX1Attribute", "x1")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>Definition for <code>&lt;linearGradient&gt;</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "shapes.html#LineElementX1Attribute", "x1")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;line&gt;</code></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "pservers.html#LinearGradientElementX1Attribute", "x1")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for <code>&lt;linearGradient&gt;</code></td>
+  </tr>
+ </tbody>
+</table>

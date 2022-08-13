@@ -6,19 +6,44 @@ tags:
   - XPath
 translation_of: Web/XPath/Axes/child
 ---
-`child` 軸はコンテキストノードの子を示します。XPath 式が軸を指定していない場合、`child` 軸はデフォルトで認識されます。ルートノードまたは要素ノードだけが子を持つため、他の用途では何も選択されません。
+<p><code>child</code> 軸はコンテキストノードの子を示します。XPath 式が軸を指定していない場合、<code>child</code> 軸はデフォルトで認識されます。ルートノードまたは要素ノードだけが子を持つため、他の用途では何も選択されません。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                 | ステータス                   | コメント   |
-| ---------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName("XPath3.1","#axes","child")}} | {{Spec2("XPath3.1")}} |            |
-| {{SpecName("XPath3","#axes","child")}} | {{Spec2("XPath3")}}     |            |
-| {{SpecName("XPath2","#axes","child")}} | {{Spec2("XPath2")}}     |            |
-| {{SpecName("XPath1","#axes","child")}} | {{Spec2("XPath1")}}     | 初期の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("XPath3.1","#axes","child")}}</td>
+   <td>{{Spec2("XPath3.1")}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("XPath3","#axes","child")}}</td>
+   <td>{{Spec2("XPath3")}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("XPath2","#axes","child")}}</td>
+   <td>{{Spec2("XPath2")}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("XPath1","#axes","child")}}</td>
+   <td>{{Spec2("XPath1")}}</td>
+   <td>初期の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("xpath.axes.child")}}
+<p>{{Compat("xpath.axes.child")}}</p>
 
-{{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}
+<p>{{QuickLinksWithSubpages("/ja/docs/Web/XPath")}}</p>

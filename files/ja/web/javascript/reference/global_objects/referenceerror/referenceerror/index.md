@@ -8,29 +8,30 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`ReferenceError`** オブジェクトは、存在しない変数が参照されたときのエラーを表します。
+<p><strong><code>ReferenceError</code></strong> オブジェクトは、存在しない変数が参照されたときのエラーを表します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    new ReferenceError([message[, fileName[, lineNumber]]])
+<pre class="syntaxbox notranslate">new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `message` {{optional_inline}}
-  - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
-  - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
-  - : 例外が発生したコードの行番号です。
+<dl>
+ <dt><code><var>message</var></code> {{optional_inline}}</dt>
+ <dd>人間が読むためのエラーの説明です。</dd>
+ <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
+ <dd>例外が発生したコードを含むファイルの名前です。</dd>
+ <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
+ <dd>例外が発生したコードの行番号です。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### ReferenceError の捕捉
+<h3 id="Catching_a_ReferenceError" name="Catching_a_ReferenceError">ReferenceError の捕捉</h3>
 
-```js
-try {
+<pre class="brush: js notranslate">try {
   let a = undefinedVariable
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -41,12 +42,11 @@ try {
   console.log(e.columnNumber)               // 6
   console.log(e.stack)                      // "@Scratchpad/2:2:7\n"
 }
-```
+</pre>
 
-### ReferenceError の生成
+<h3 id="Creating_a_ReferenceError" name="Creating_a_ReferenceError">ReferenceError の生成</h3>
 
-```js
-try {
+<pre class="brush: js notranslate">try {
   throw new ReferenceError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof ReferenceError)  // true
@@ -57,18 +57,31 @@ try {
   console.log(e.columnNumber)               // 0
   console.log(e.stack)                      // "@Scratchpad/2:2:9\n"
 }
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.ReferenceError.ReferenceError")}}
+<div>
+<p>{{Compat("javascript.builtins.ReferenceError.ReferenceError")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Error")}}
+<ul>
+ <li>{{jsxref("Error")}}</li>
+</ul>

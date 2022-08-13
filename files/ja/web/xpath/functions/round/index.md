@@ -6,31 +6,36 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/round
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`round` 関数は、与えられた数値に最も近い整数を返します。
+<p><code>round</code> 関数は、与えられた数値に最も近い整数を返します。</p>
 
-### 構文
+<h3 id="Syntax">構文</h3>
 
-    round(decimal )
+<pre class="eval">round(<em>decimal</em> )
+</pre>
 
-### 引数
+<h3 id="Arguments">引数</h3>
 
-- _`decimal`_
-  - : 丸められる小数。
+<dl>
+ <dt><em><code>decimal</code></em></dt>
+ <dd>丸められる小数。</dd>
+</dl>
 
-### 返値
+<h3 id="Returns">返値</h3>
 
-*`decimal`*よりも小さいか、大きいか、等しい、最も近い整数。
+<p><em><code>decimal</code></em>よりも小さいか、大きいか、等しい、最も近い整数。</p>
 
-### 注
+<h3 id="Notes">注</h3>
 
-- \-0.5 は負のゼロに丸められます。 0.4 は正のゼロに丸められます。
+<ul>
+ <li>-0.5 は負のゼロに丸められます。 0.4 は正のゼロに丸められます。</li>
+</ul>
 
-### 定義
+<h3 id="Defined">定義</h3>
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-round)
+<p><a href="https://www.w3.org/TR/xpath#function-round">XPath 1.0 4.4</a></p>
 
-### Gecko での対応
+<h3 id="Gecko_support">Gecko での対応</h3>
 
-対応済み。
+<p>対応済み。</p>

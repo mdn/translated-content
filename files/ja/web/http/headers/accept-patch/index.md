@@ -6,51 +6,81 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers/Accept-Patch
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**`Accept-Patch`** は HTTP のレスポンスヘッダーで、サーバーが認識できるメディアタイプを伝えます。
+<p><strong><code>Accept-Patch</code></strong> は HTTP のレスポンスヘッダーで、サーバーが認識できるメディアタイプを伝えます。</p>
 
-任意のメソッドに応答する**`Accept-Patch`**は、Request-URI で識別されるリソースで、 {{HTTPMethod("PATCH")}} が許可されることを意味します。 2 つの一般的なケースがこれにつながります。
+<p>任意のメソッドに応答する<strong><code>Accept-Patch</code></strong>は、Request-URIで識別されるリソースで、 {{HTTPMethod("PATCH")}} が許可されることを意味します。 2つの一般的なケースがこれにつながります。</p>
 
-サポートされていないメディアタイプの {{HTTPMethod("PATCH")}} リクエストを受信したサーバーは、{{HTTPStatus("415")}} `Unsupported Media Type`と、1 つ以上のサポートされているメディアタイプを参照する Accept-Patch ヘッダーで応答する可能性があります。
+<p>サポートされていないメディアタイプの {{HTTPMethod("PATCH")}} リクエストを受信したサーバーは、{{HTTPStatus("415")}} <code>Unsupported Media Type</code>と、1つ以上のサポートされているメディアタイプを参照するAccept-Patchヘッダーで応答する可能性があります。</p>
 
-> **Note:** **注:\*** IANA レジストリは、[公式コンテンツエンコーディングの完全なリスト](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)を保持しています。
->
-> - 標準ではありませんが、他の 2 つのコンテンツエンコーディング `bzip`と`bzip2`が時々使用されます。 これらは、これら 2 つの UNIX プログラムで使用されるアルゴリズムを実装しています。 最初のものは、特許ライセンスの問題のために中止されたことに注意してください。
+<div class="note"><strong>注:</strong>
 
-| ヘッダー種別                                                                         | {{Glossary("Response header", "レスポンスヘッダー")}} |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | はい                                                                                 |
+<ul>
+ <li>
+  <p>IANA レジストリは、<a href="https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">公式コンテンツエンコーディングの完全なリスト</a>を保持しています。</p>
+ </li>
+ <li>標準ではありませんが、他の2つのコンテンツエンコーディング <code>bzip</code>と<code>bzip2</code>が時々使用されます。 これらは、これら2つのUNIXプログラムで使用されるアルゴリズムを実装しています。 最初のものは、特許ライセンスの問題のために中止されたことに注意してください。</li>
+</ul>
+</div>
 
-## 構文
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>はい</td>
+  </tr>
+ </tbody>
+</table>
 
-    Accept-Patch: application/example, text/example
-    Accept-Patch: text/example;charset=utf-8
-    Accept-Patch: application/merge-patch+json
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-## ディレクティブ
+<pre class="syntaxbox notranslate">Accept-Patch: application/example, text/example
+Accept-Patch: text/example;charset=utf-8
+Accept-Patch: application/merge-patch+json
+</pre>
 
-なし
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
 
-## 例
+<p>なし</p>
 
-    Accept-Patch: application/example, text/example
+<h2 id="Examples" name="Examples">例</h2>
 
-    Accept-Patch: text/example;charset=utf-8
+<pre class="syntaxbox notranslate">Accept-Patch: application/example, text/example
 
-    Accept-Patch: application/merge-patch+json
+Accept-Patch: text/example;charset=utf-8
 
-## 仕様書
+Accept-Patch: application/merge-patch+json
+</pre>
 
-| 仕様書                                               | 題名       |
-| ---------------------------------------------------- | ---------- |
-| {{RFC("5789", "Accept-Patch", "3.1")}} | HTTP PATCH |
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-## ブラウザーの互換性
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("5789", "Accept-Patch", "3.1")}}</td>
+   <td>HTTP PATCH</td>
+  </tr>
+ </tbody>
+</table>
 
-{{Compat("http.headers.Accept-Patch")}}
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-## 関連情報
+<p>{{Compat("http.headers.Accept-Patch")}}</p>
 
-- Http method {{HTTPMethod("PATCH")}}
-- HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>Http method {{HTTPMethod("PATCH")}}</li>
+ <li>HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}</li>
+</ul>

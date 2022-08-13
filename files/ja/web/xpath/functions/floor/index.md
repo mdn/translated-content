@@ -6,27 +6,30 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/floor
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`floor` 関数は小数を評価し、その小数以下の最も大きい整数を返します。
+<p><code>floor</code> 関数は小数を評価し、その小数以下の最も大きい整数を返します。</p>
 
-### 構文
+<h3 id="Syntax">構文</h3>
 
-    floor( number )
+<pre class="eval">floor( <em>number</em> )
+</pre>
 
-### 引数
+<h3 id="Arguments">引数</h3>
 
-- `number`
-  - : 評価する小数。
+<dl>
+ <dt><code><em>number</em></code></dt>
+ <dd>評価する小数。</dd>
+</dl>
 
-### 返値
+<h3 id="Returns">返値</h3>
 
-`number` 以下の最も近い整数。
+<p><code><em>number</em></code> 以下の最も近い整数。</p>
 
-### 定義
+<h3 id="Defined">定義</h3>
 
-[XPath 1.0 4.4](https://www.w3.org/TR/xpath#function-floor)
+<p><a href="https://www.w3.org/TR/xpath#function-floor">XPath 1.0 4.4</a></p>
 
-### Gecko での対応
+<h3 id="Gecko_support">Gecko での対応</h3>
 
-対応済み。
+<p>対応済み。</p>

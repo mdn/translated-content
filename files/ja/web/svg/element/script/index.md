@@ -7,23 +7,22 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/script
 ---
-SVG `script` 要素は、HTML の [`script`](/ja/HTML/Element/Script) 要素と同じく、 スクリプト（例えば ECMAScript）を設置するための場所です。
+<p>SVG <code>script</code> 要素は、HTML の <a href="/ja/HTML/Element/Script"><code>script</code></a> 要素と同じく、 スクリプト（例えば ECMAScript）を設置するための場所です。</p>
 
-すべての `script` 要素内で定義されたすべての関数は、現在のドキュメント全体でグローバルスコープを持っています。
+<p>すべての <code>script</code> 要素内で定義されたすべての関数は、現在のドキュメント全体でグローバルスコープを持っています。</p>
 
-## 利用可能な場所
+<h2 id="利用可能な場所">利用可能な場所</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## 例
+<h2 id="例">例</h2>
 
-次のコードスニペットは、SVG の `script` タグの使用方法を示します。このコードでは、SVG {{SVGElement("circle")}} 要素の半径を変更するために JavaScript を使用します。
+<p>次のコードスニペットは、SVG の <code>script</code> タグの使用方法を示します。このコードでは、SVG {{SVGElement("circle")}} 要素の半径を変更するために JavaScript を使用します。</p>
 
-```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
-  <script type="text/javascript">
-    // <![CDATA[
+<pre class="brush: html notranslate">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;script type="text/javascript"&gt;
+    // &lt;![CDATA[
     function change(evt) {
       var target = evt.target;
       var radius = target.getAttribute("r");
@@ -36,48 +35,73 @@ SVG `script` 要素は、HTML の [`script`](/ja/HTML/Element/Script) 要素と�
 
       target.setAttribute("r",radius);
    }
-   // ]]>
-  </script>
+   // ]]&gt;
+  &lt;/script&gt;
 
-  <circle cx="50" cy="50" r="45" fill="green"
-          onclick="change(evt)" />
-</svg>
-```
+  &lt;circle cx="50" cy="50" r="45" fill="green"
+          onclick="change(evt)" /&gt;
+&lt;/svg&gt;
+</pre>
 
-結果:
+<p>結果:</p>
 
-{{EmbedLiveSample("Example",150,165)}}
+<p>{{EmbedLiveSample("Example",150,165)}}</p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-### グローバル属性
+<h3 id="グローバル属性">グローバル属性</h3>
 
-- [コア属性](/ja/SVG/Attribute#Core) »
-- [Xlink 属性](/ja/SVG/Attribute#XLink) »
-- {{SVGAttr("externalResourcesRequired")}}
+<ul>
+ <li><a href="/ja/SVG/Attribute#Core">コア属性</a> »</li>
+ <li><a href="/ja/SVG/Attribute#XLink">Xlink 属性</a> »</li>
+ <li>{{SVGAttr("externalResourcesRequired")}}</li>
+</ul>
 
-### 専用属性
+<h3 id="専用属性">専用属性</h3>
 
-- {{SVGAttr("type")}}
-- {{SVGAttr("xlink:href")}}
+<ul>
+ <li>{{SVGAttr("type")}}</li>
+ <li>{{SVGAttr("xlink:href")}}</li>
+</ul>
 
-## DOM インターフェイス
+<h2 id="DOM_インターフェイス">DOM インターフェイス</h2>
 
-この要素は [`SVGScriptElement`](/ja/DOM/SVGScriptElement) インターフェイスを実装します。
+<p>この要素は <code><a href="/ja/DOM/SVGScriptElement">SVGScriptElement</a></code> インターフェイスを実装します。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                         | 状態                     | コメント   |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'interact.html#ScriptElement', '&lt;script&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'script.html#ScriptElement', '&lt;script&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('SVG2', 'interact.html#ScriptElement', '&lt;script&gt;')}}</td>
+   <td>{{Spec2('SVG2')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('SVG1.1', 'script.html#ScriptElement', '&lt;script&gt;')}}</td>
+   <td>{{Spec2('SVG1.1')}}</td>
+   <td>初期の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー互換性
+<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
 
-{{Compat("svg.elements.script")}}
 
-## 関連情報
 
-- HTML の [`script` 要素](/ja/HTML/Element/Script)
+<p>{{Compat("svg.elements.script")}}</p>
 
-{{SVGRef}}
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>HTML の <a href="/ja/HTML/Element/Script"><code>script</code> 要素</a></li>
+</ul>
+
+<p>{{SVGRef}}</p>

@@ -7,37 +7,58 @@ tags:
   - SVG Descriptive
 translation_of: Web/SVG/Element/metadata
 ---
-{{SVGRef}}
+<div>{{SVGRef}}</div>
 
-メタデータはデータに関する構造化データです。SVG コンテンツに含まれているメタデータは、 `metadata` 要素で指定する必要があります。 `metadata` 要素の内容は RDF,FOAF などの他の XML 名前空間からの要素でなければなりません。
+<p>メタデータはデータに関する構造化データです。SVGコンテンツに含まれているメタデータは、 <code>metadata</code> 要素で指定する必要があります。  <code>metadata</code> 要素の内容はRDF,FOAFなどの他のXML名前空間からの要素でなければなりません。</p>
 
-## 使用可能な場所
+<h2 id="使用可能な場所">使用可能な場所</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## 例
+<h2 id="例">例</h2>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-### グローバル属性
+<h3 id="グローバル属性">グローバル属性</h3>
 
-- [コア属性](/ja/Web/SVG/Attribute#Core) »
+<ul>
+ <li><a href="/ja/Web/SVG/Attribute#Core">コア属性</a> »</li>
+</ul>
 
-### 専用属性
+<h3 id="専用属性">専用属性</h3>
 
-_この要素には専用属性はありません。_
+<p><em>この要素には専用属性はありません。</em></p>
 
-## DOM インターフェース
+<h2 id="DOM_インターフェース">DOM インターフェース</h2>
 
-この要素は [`SVGMetadataElement`](/ja/DOM/SVGMetadataElement "en/DOM/SVGMetadataElement") インターフェースを提供します。
+<p>この要素は <code><a href="/ja/DOM/SVGMetadataElement" title="en/DOM/SVGMetadataElement">SVGMetadataElement</a></code> インターフェースを提供します。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                 | 状態                     | コメント                       |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------ |
-| {{SpecName('SVG2', 'struct.html#MetadataElement', '&lt;metadata&gt;')}}     | {{Spec2('SVG2')}} | グローバルイベント属性を許可。 |
-| {{SpecName('SVG1.1', 'metadata.html#MetadataElement', '&lt;metadata&gt;')}} | {{Spec2('SVG1.1')}} | 最初の定義                     |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('SVG2', 'struct.html#MetadataElement', '&lt;metadata&gt;')}}</td>
+   <td>{{Spec2('SVG2')}}</td>
+   <td>グローバルイベント属性を許可。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('SVG1.1', 'metadata.html#MetadataElement', '&lt;metadata&gt;')}}</td>
+   <td>{{Spec2('SVG1.1')}}</td>
+   <td>最初の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ実装状況
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-{{Compat("svg.elements.metadata")}}
+
+
+<p>{{Compat("svg.elements.metadata")}}</p>

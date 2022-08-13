@@ -8,67 +8,64 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript のエラー "unterminated string literal" は、どこかに終了していない[文字列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)があった場合に発生します。文字列リテラルは単一引用符 (`'`) または二重引用符 (`"`) で囲む必要があります。
+<p>JavaScript のエラー "unterminated string literal" は、どこかに終了していない<a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">文字列リテラル</a>があった場合に発生します。文字列リテラルは単一引用符 (<code>'</code>) または二重引用符 (<code>"</code>) で囲む必要があります。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-SyntaxError: Unterminated string constant (Edge)
+<pre class="brush: js">SyntaxError: Unterminated string constant (Edge)
 SyntaxError: unterminated string literal (Firefox)
-```
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("SyntaxError")}}
+<p>{{jsxref("SyntaxError")}}</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-どこかに終端されていない[文字列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)があります。文字列リテラルは単一引用符 (`'`) または二重引用符 (`"`) で囲む必要があります。JavaScript は、単一引用符の文字列と二重引用符の文字列を区別しません。[エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) は単一引用符と二重引用符、どちらの文字列でも動作します。このエラーを修正するためには、次の点をチェックしてください。
+<p>どこかに終端されていない<a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">文字列リテラル</a>があります。文字列リテラルは単一引用符 (<code>'</code>) または二重引用符 (<code>"</code>) で囲む必要があります。JavaScript は、単一引用符の文字列と二重引用符の文字列を区別しません。<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation">エスケープシーケンス</a> は単一引用符と二重引用符、どちらの文字列でも動作します。このエラーを修正するためには、次の点をチェックしてください。</p>
 
-- 文字列リテラルのために、単一引用符または二重引用符の開始と終了を行っている。
-- 文字列リテラルを正しくエスケープしている。
-- 文字列リテラルが複数行に分けられていない。
+<ul>
+ <li>文字列リテラルのために、単一引用符または二重引用符の開始と終了を行っている。</li>
+ <li>文字列リテラルを正しくエスケープしている。</li>
+ <li>文字列リテラルが複数行に分けられていない。</li>
+</ul>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### 複数行
+<h3 id="Multiple_lines">複数行</h3>
 
-JavaScript では、次のように複数行にまたがる文字列を分割できません。
+<p>JavaScript では、次のように複数行にまたがる文字列を分割できません。</p>
 
-```js example-bad
-var longString = 'This is a very long string which needs
+<pre class="brush: js example-bad">var longString = 'This is a very long string which needs
                   to wrap across multiple lines because
                   otherwise my code is unreadable.';
-// SyntaxError: unterminated string literal
-```
+// SyntaxError: unterminated string literal</pre>
 
-代わりに、[+ 演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition) かバックスラッシュ、[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals) を使用します。`+` 演算子の場合、次のようになります。
+<p>代わりに、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Addition">+ 演算子</a> かバックスラッシュ、<a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a> を使用します。<code>+</code> 演算子の場合、次のようになります。</p>
 
-```js example-good
-var longString = 'This is a very long string which needs ' +
+<pre class="brush: js example-good">var longString = 'This is a very long string which needs ' +
                  'to wrap across multiple lines because ' +
                  'otherwise my code is unreadable.';
-```
+</pre>
 
-または、文字列が次のように続くことを示すために、各行の終わりにバックスラッシュ文字（"\\"）を使用することもできます。バックスラッシュの後に、 (改行を除いて) スペースや文字、インデントを入れないようにしてください。そうしないと動作しません。バックスラッシュの場合、次のようになります。
+<p>または、文字列が次のように続くことを示すために、各行の終わりにバックスラッシュ文字（"\"）を使用することもできます。バックスラッシュの後に、 (改行を除いて) スペースや文字、インデントを入れないようにしてください。そうしないと動作しません。バックスラッシュの場合、次のようになります。</p>
 
-```js example-good
-var longString = 'This is a very long string which needs \
+<pre class="brush: js example-good">var longString = 'This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable.';
-```
+</pre>
 
-ECMAScript 2015 環境でサポートされている[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)を使っても改行可能です。
+<p>ECMAScript 2015 環境でサポートされている<a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a>を使っても改行可能です。</p>
 
-```js example-good
-var longString = `This is a very long string which needs
+<pre class="brush: js example-good">var longString = `This is a very long string which needs
                   to wrap across multiple lines because
-                  otherwise my code is unreadable.`;
-```
+                  otherwise my code is unreadable.`;</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [文字列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)
-- [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)
+<ul>
+  <li><a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">文字列リテラル</a></li>
+  <li><a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a></li>
+</ul>

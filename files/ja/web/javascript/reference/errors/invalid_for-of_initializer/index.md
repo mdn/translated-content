@@ -9,47 +9,43 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "a declaration in the head of a for-of loop can't have an initializer" は、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループの先頭に |`for (var i = 0 of iterable)`| のように初期化子が含まれている場合に発生します。これは for-of ループでは許可されていません。
+<p>JavaScript の例外 "a declaration in the head of a for-of loop can't have an initializer" は、 <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> ループの先頭に |<code>for (var i = 0 of iterable)</code>| のように初期化子が含まれている場合に発生します。これは for-of ループでは許可されていません。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-SyntaxError: for-of loop head declarations cannot have an initializer (Edge)
+<pre class="brush: js">SyntaxError: for-of loop head declarations cannot have an initializer (Edge)
 SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
 SyntaxError: for-of loop variable declaration may not have an initializer. (Chrome)
-```
+</pre>
 
-## エラータイプ
+<h2 id="エラータイプ">エラータイプ</h2>
 
-{{jsxref("SyntaxError")}}
+<p>{{jsxref("SyntaxError")}}</p>
 
-## 何がうまくいかなかったのか？
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
 
-[for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループの先頭に初期化式が含まれています。つまり、 |`for (var i = 0 of iterable)`| のように変数が宣言され、値が代入されています。これは、 for-of ループでは許可されていません。初期化できる [`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) ループを使用した方が良いかもしれません。
+<p><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a> ループの先頭に初期化式が含まれています。つまり、 |<code>for (var i = 0 of iterable)</code>| のように変数が宣言され、値が代入されています。これは、 for-of ループでは許可されていません。初期化できる <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for">for</a></code> ループを使用した方が良いかもしれません。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-### 不正な `for-of` ループ
+<h3 id="Invalid_for-of_loop">不正な <code>for-of</code> ループ</h3>
 
-```js example-bad
-let iterable = [10, 20, 30];
+<pre class="brush: js example-bad">let iterable = [10, 20, 30];
 
 for (let value = 50 of iterable) {
   console.log(value);
 }
 
 // SyntaxError: a declaration in the head of a for-of loop can't
-// have an initializer
-```
+// have an initializer</pre>
 
-### 有効な `for-of` ループ
+<h3 id="Valid_for-of_loop">有効な <code>for-of</code> ループ</h3>
 
-`for-of` ループのヘッダーから初期化子 (`value = 50`) を取り除く必要があります。おそらく、50 をオフセット値にしようとしているのでしょうから、たとえばループのボディー内で 50 を加えられます。
+<p><code>for-of</code> ループのヘッダーから初期化子 (<code>value = 50</code>) を取り除く必要があります。おそらく、50 をオフセット値にしようとしているのでしょうから、たとえばループのボディー内で 50 を加えられます。</p>
 
-```js example-good
-let iterable = [10, 20, 30];
+<pre class="brush: js example-good">let iterable = [10, 20, 30];
 
 for (let value of iterable) {
   value += 50;
@@ -58,10 +54,12 @@ for (let value of iterable) {
 // 60
 // 70
 // 80
-```
+</pre>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) – strict モードでは同様に初期化できない ([SyntaxError: for-in loop head declarations may not have initializers](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) – 反復時に初期化子を許可している
+<ul>
+ <li><code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code></li>
+ <li><code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> – strict モードでは同様に初期化できない (<a href="/ja/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">SyntaxError: for-in loop head declarations may not have initializers</a>)</li>
+ <li><code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for">for</a></code> – 反復時に初期化子を許可している</li>
+</ul>

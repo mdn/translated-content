@@ -7,58 +7,83 @@ tags:
   - SVG Gradient
 translation_of: Web/SVG/Element/linearGradient
 ---
-{{SVGRef}}
+<div>{{SVGRef}}</div>
 
-## 概要
+<h2 id="概要">概要</h2>
 
-`linearGradient`要素はグラフィック要素の塗りまたは線への線形グラデーションを定義します。
+<p><code>linearGradient</code>要素はグラフィック要素の塗りまたは線への線形グラデーションを定義します。</p>
 
-## 使用可能な場所
+<h2 id="使用可能な場所">使用可能な場所</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## 例
+<h2 id="例">例</h2>
 
-» [linearGradient.svg](/files/3265/linearGradient.svg "https://developer.mozilla.org/files/3265/linearGradient.svg")
+<p>» <a href="/files/3265/linearGradient.svg" title="https://developer.mozilla.org/files/3265/linearGradient.svg">linearGradient.svg</a></p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-### グローバル属性
+<h3 id="グローバル属性">グローバル属性</h3>
 
-- [コア属性](/ja/Web/SVG/Attribute#Core) »
-- [プレゼンテーション属性](/ja/Web/SVG/Attribute#Presentation) »
-- [Xlink 属性](/ja/Web/SVG/Attribute#XLink) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
+<ul>
+ <li><a href="/ja/Web/SVG/Attribute#Core">コア属性</a> »</li>
+ <li><a href="/ja/Web/SVG/Attribute#Presentation">プレゼンテーション属性</a> »</li>
+ <li><a href="/ja/Web/SVG/Attribute#XLink">Xlink属性</a> »</li>
+ <li>{{ SVGAttr("class") }}</li>
+ <li>{{ SVGAttr("style") }}</li>
+ <li>{{ SVGAttr("externalResourcesRequired") }}</li>
+</ul>
 
-### 専用属性
+<h3 id="専用属性">専用属性</h3>
 
-- {{ SVGAttr("gradientUnits") }}
-- {{ SVGAttr("gradientTransform") }}
-- {{ SVGAttr("x1") }}
-- {{ SVGAttr("y1") }}
-- {{ SVGAttr("x2") }}
-- {{ SVGAttr("y2") }}
-- {{ SVGAttr("spreadMethod") }}
-- {{ SVGAttr("xlink:href") }}
+<ul>
+ <li>{{ SVGAttr("gradientUnits") }}</li>
+ <li>{{ SVGAttr("gradientTransform") }}</li>
+ <li>{{ SVGAttr("x1") }}</li>
+ <li>{{ SVGAttr("y1") }}</li>
+ <li>{{ SVGAttr("x2") }}</li>
+ <li>{{ SVGAttr("y2") }}</li>
+ <li>{{ SVGAttr("spreadMethod") }}</li>
+ <li>{{ SVGAttr("xlink:href") }}</li>
+</ul>
 
-## DOM インターフェース
+<h2 id="DOM_インターフェース">DOM インターフェース</h2>
 
-この要素は [`SVGLinearGradientElement`](/ja/DOM/SVGLinearGradientElement "en/DOM/SVGLinearGradientElement") インターフェースを提供します。
+<p>この要素は <code><a href="/ja/DOM/SVGLinearGradientElement" title="en/DOM/SVGLinearGradientElement">SVGLinearGradientElement</a></code> インターフェースを提供します。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                             | 状態                     | コメント   |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'pservers.html#LinearGradientElement', '&lt;linearGradient&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'pservers.html#LinearGradients', '&lt;linearGradient&gt;')}}     | {{Spec2('SVG1.1')}} | 最初の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('SVG2', 'pservers.html#LinearGradientElement', '&lt;linearGradient&gt;')}}</td>
+   <td>{{Spec2('SVG2')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('SVG1.1', 'pservers.html#LinearGradients', '&lt;linearGradient&gt;')}}</td>
+   <td>{{Spec2('SVG1.1')}}</td>
+   <td>最初の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー互換性
+<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
 
-{{Compat("svg.elements.linearGradient")}}
 
-## 関連情報
 
-- {{ SVGElement("radialGradient") }}
-- {{ SVGElement("stop") }}
+<p>{{Compat("svg.elements.linearGradient")}}</p>
+
+<h2 id="関連情報">関連情報</h2>
+
+<ul>
+ <li>{{ SVGElement("radialGradient") }}</li>
+ <li>{{ SVGElement("stop") }}</li>
+</ul>

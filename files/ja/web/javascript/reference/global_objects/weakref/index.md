@@ -10,59 +10,70 @@ tags:
   - WeakRef
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`WeakRef`** オブジェクトにより、ガベージコレクションが行われることを妨げない他のオブジェクトへの弱い参照を保持します。
+<p><strong><code>WeakRef</code></strong> オブジェクトにより、ガベージコレクションが行われることを妨げない他のオブジェクトへの弱い参照を保持します。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-`WeakRef` オブジェクトはオブジェクトへの弱い参照を含み、これは*ターゲット*または*リファレント*と呼ばれます。オブジェクトへの弱い参照は、ガベージコレクターによるオブジェクトの回収を妨げない参照です。対照的に、通常の (または*強い*) 参照はオブジェクトをメモリに保持します。オブジェクトが強い参照を持たなくなった場合、 JavaScript エンジンのガベージコレクターはオブジェクトを破棄してメモリを再取得することがあります。そうなると、弱い参照からオブジェクトを取得することはできなくなります。
+<p><code>WeakRef</code> オブジェクトはオブジェクトへの弱い参照を含み、これは<em>ターゲット</em>または<em>リファレント</em>と呼ばれます。オブジェクトへの弱い参照は、ガベージコレクターによるオブジェクトの回収を妨げない参照です。対照的に、通常の (または<em>強い</em>) 参照はオブジェクトをメモリに保持します。オブジェクトが強い参照を持たなくなった場合、 JavaScript エンジンのガベージコレクターはオブジェクトを破棄してメモリを再取得することがあります。そうなると、弱い参照からオブジェクトを取得することはできなくなります。</p>
 
-> **Note:** **注:** 下記の[できる限り避ける](#Avoid_where_possible)の節をご覧ください。正しい `WeakRef` の使用は注意深く考える必要があり、可能であれば避けるのが最良です。
+<div class="note">
+<p><strong>注:</strong> 下記の<a href="#Avoid_where_possible">できる限り避ける</a>の節をご覧ください。正しい <code>WeakRef</code> の使用は注意深く考える必要があり、可能であれば避けるのが最良です。</p>
+</div>
 
-## コンストラクター
+<h2 id="Constructor" name="Constructor">コンストラクター</h2>
 
-- {{jsxref("WeakRef/WeakRef", "WeakRef()")}}
-  - : 新しい `WeakRef` オブジェクトを生成します。
+<dl>
+ <dt>{{jsxref("WeakRef/WeakRef", "WeakRef()")}}</dt>
+ <dd>新しい <code>WeakRef</code> オブジェクトを生成します。</dd>
+</dl>
 
-## インスタンスメソッド
+<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
 
-- {{jsxref("WeakRef.deref", "WeakRef.prototype.deref()")}}
-  - : `WeakRef` オブジェクトの対象オブジェクトを返すか、対象オブジェクトが既に回収されている場合は `undefined` を返します。
+<dl>
+ <dt>{{jsxref("WeakRef.deref", "WeakRef.prototype.deref()")}}</dt>
+ <dd><code>WeakRef</code> オブジェクトの対象オブジェクトを返すか、対象オブジェクトが既に回収されている場合は <code>undefined</code> を返します。</dd>
+</dl>
 
-## 可能な限り避ける
+<h2 id="Avoid_where_possible" name="Avoid_where_possible">可能な限り避ける</h2>
 
-`WeakRef` の正しい使用には慎重な検討が必要であり、可能であれば避けた方が良いでしょう。また、仕様で保証されていない特定の動作に依存しないことも重要です。ガベージコレクションがいつ、どのように、そしてどのように発生するかは、使用している JavaScript エンジンの実装に依存します。あるエンジンで観察した動作が、別のエンジン、同じエンジンの別のバージョン、あるいは同じエンジンの同じバージョンでも少し違う状況では異なる可能性があります。ガベージコレクションは、 JavaScript エンジンの実装者が常に解決策を改良している難しい問題です。
+<p><code>WeakRef</code> の正しい使用には慎重な検討が必要であり、可能であれば避けた方が良いでしょう。また、仕様で保証されていない特定の動作に依存しないことも重要です。ガベージコレクションがいつ、どのように、そしてどのように発生するかは、使用している JavaScript エンジンの実装に依存します。あるエンジンで観察した動作が、別のエンジン、同じエンジンの別のバージョン、あるいは同じエンジンの同じバージョンでも少し違う状況では異なる可能性があります。ガベージコレクションは、 JavaScript エンジンの実装者が常に解決策を改良している難しい問題です。</p>
 
-ここでは、 WeakRef の提案の著者がその[説明文書](https://github.com/tc39/proposal-weakrefs/blob/master/README.md)に盛り込んだ具体的なポイントをいくつか紹介します。
+<p>ここでは、 WeakRef の提案の著者がその<a href="https://github.com/tc39/proposal-weakrefs/blob/master/README.md">説明文書</a>に盛り込んだ具体的なポイントをいくつか紹介します。</p>
 
-> [ガベージコレクション](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3)は複雑です。アプリケーションもしくはライブラリが WeakRef のガベージコレクションの解放処理か、即時にファイナライザ (解放処理のコールバック) の呼出処理に依存している場合は、予想した動作とは異なる動作を行うかもしれません。解放処理は予想よりもかなり後に行われるか、もしくは行われないからです。以下に挙げた様々な原因が考えられます。
->
-> - One object might be garbage-collected much sooner than another object, even if they become unreachable at the same time, e.g., due to generational collection.
-> - Garbage collection work can be split up over time using incremental and concurrent techniques.
-> - Various runtime heuristics can be used to balance memory usage, responsiveness.
-> - The JavaScript engine may hold references to things which look like they are unreachable (e.g., in closures, or inline caches).
-> - Different JavaScript engines may do these things differently, or the same engine may change its algorithms across versions.
-> - Complex factors may lead to objects being held alive for unexpected amounts of time, such as use with certain APIs.
+<blockquote>
+<p><a href="https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">ガベージコレクション</a>は複雑です。アプリケーションもしくはライブラリが WeakRef のガベージコレクションの解放処理か、即時にファイナライザ (解放処理のコールバック) の呼出処理に依存している場合は、予想した動作とは異なる動作を行うかもしれません。解放処理は予想よりもかなり後に行われるか、もしくは行われないからです。以下に挙げた様々な原因が考えられます。</p>
 
-## WeakRef における注意
+<ul>
+ <li>One object might be garbage-collected much sooner than another object, even if they become unreachable at the same time, e.g., due to generational collection.</li>
+ <li>Garbage collection work can be split up over time using incremental and concurrent techniques.</li>
+ <li>Various runtime heuristics can be used to balance memory usage, responsiveness.</li>
+ <li>The JavaScript engine may hold references to things which look like they are unreachable (e.g., in closures, or inline caches).</li>
+ <li>Different JavaScript engines may do these things differently, or the same engine may change its algorithms across versions.</li>
+ <li>Complex factors may lead to objects being held alive for unexpected amounts of time, such as use with certain APIs.</li>
+</ul>
+</blockquote>
 
-Some notes on `WeakRef`s:
+<h2 id="Notes_on_WeakRefs" name="Notes_on_WeakRefs">WeakRef における注意</h2>
 
-- If your code has just created a `WeakRef` for a target object, or has gotten a target object from a `WeakRef`'s `deref` method, that target object will not be reclaimed until the end of the current JavaScript [job](https://tc39.es/ecma262/#job) (including any promise reaction jobs that run at the end of a script job). That is, you can only "see" an object get reclaimed between turns of the event loop. This is primarily to avoid making the behavior of any given JavaScript engine's garbage collector apparent in code — because if it were, people would write code relying on that behavior, which would break when the garbage collector's behavior changed. (Garbage collection is a hard problem; JavaScript engine implementers are constantly refining and improving how it works.)
-- If multiple `WeakRef`s have the same target, they're consistent with one another. The result of calling `deref` on one of them will match the result of calling `deref` on another of them (in the same job), you won't get the target object from one of them but `undefined` from another.
-- If the target of a `WeakRef` is also in a {{jsxref("FinalizationRegistry")}}, the `WeakRef`'s target is cleared at the same time or before any cleanup callback associated with the registry is called; if your cleanup callback calls `deref` on a `WeakRef` for the object, it will receive `undefined`.
-- You cannot change the target of a `WeakRef`, it will always only ever be the original target object or `undefined` when that target has been reclaimed.
-- A `WeakRef` might never return `undefined` from `deref`, even if nothing strongly holds the target, because the garbage collector may never decide to reclaim the object.
+<p>Some notes on <code>WeakRef</code>s:</p>
 
-## 例
+<ul>
+ <li>If your code has just created a <code>WeakRef</code> for a target object, or has gotten a target object from a <code>WeakRef</code>'s <code>deref</code> method, that target object will not be reclaimed until the end of the current JavaScript <a href="https://tc39.es/ecma262/#job">job</a> (including any promise reaction jobs that run at the end of a script job). That is, you can only "see" an object get reclaimed between turns of the event loop. This is primarily to avoid making the behavior of any given JavaScript engine's garbage collector apparent in code — because if it were, people would write code relying on that behavior, which would break when the garbage collector's behavior changed. (Garbage collection is a hard problem; JavaScript engine implementers are constantly refining and improving how it works.)</li>
+ <li>If multiple <code>WeakRef</code>s have the same target, they're consistent with one another. The result of calling <code>deref</code> on one of them will match the result of calling <code>deref</code> on another of them (in the same job), you won't get the target object from one of them but <code>undefined</code> from another.</li>
+ <li>If the target of a <code>WeakRef</code> is also in a {{jsxref("FinalizationRegistry")}}, the <code>WeakRef</code>'s target is cleared at the same time or before any cleanup callback associated with the registry is called; if your cleanup callback calls <code>deref</code> on a <code>WeakRef</code> for the object, it will receive <code>undefined</code>.</li>
+ <li>You cannot change the target of a <code>WeakRef</code>, it will always only ever be the original target object or <code>undefined</code> when that target has been reclaimed.</li>
+ <li>A <code>WeakRef</code> might never return <code>undefined</code> from <code>deref</code>, even if nothing strongly holds the target, because the garbage collector may never decide to reclaim the object.</li>
+</ul>
 
-### WeakRef オブジェクトの使用
+<h2 id="Example" name="Example">例</h2>
 
-This example starts a counter shown in a DOM element, stopping when the element doesn't exist anymore:
+<h3 id="Using_a_WeakRef_object" name="Using_a_WeakRef_object">WeakRef オブジェクトの使用</h3>
 
-```js
-class Counter {
+<p>This example starts a counter shown in a DOM element, stopping when the element doesn't exist anymore:</p>
+
+<pre class="brush: js notranslate">class Counter {
   constructor(element) {
     // Remember a weak reference to the DOM element
     this.ref = new WeakRef(element);
@@ -76,7 +87,7 @@ class Counter {
 
     this.count = 0;
 
-    const tick = () => {
+    const tick = () =&gt; {
       // Get the element from the weak reference, if it still exists
       const element = this.ref.deref();
       if (element) {
@@ -103,23 +114,34 @@ class Counter {
 
 const counter = new Counter(document.getElementById("counter"));
 counter.start();
-setTimeout(() => {
+setTimeout(() =&gt; {
   document.getElementById("counter").remove();
 }, 5000);
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-weak-ref-objects', 'WeakRef')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('WeakRefs', '#sec-weak-ref-objects', 'WeakRef')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.WeakMap")}}
+<p>{{Compat("javascript.builtins.WeakMap")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("FinalizationRegistry")}}
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakMap")}}
+<ul>
+ <li>{{jsxref("FinalizationRegistry")}}</li>
+ <li>{{jsxref("WeakSet")}}</li>
+ <li>{{jsxref("WeakMap")}}</li>
+</ul>

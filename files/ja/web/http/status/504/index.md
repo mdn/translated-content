@@ -9,29 +9,44 @@ tags:
   - ステータスコード
 translation_of: Web/HTTP/Status/504
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-HyperText Transfer Protocol (HTTP) **`504 Gateway Timeout`** サーバーエラーレスポンスコードは、サーバーがゲートウェイまたはプロキシとして機能しているときに、リクエストを完了するために必要な上流のサーバーからのレスポンスが時間内に得られなかったことを示します。
+<p>HyperText Transfer Protocol (HTTP) <code><strong>504 Gateway Timeout</strong></code> サーバーエラーレスポンスコードは、サーバーがゲートウェイまたはプロキシとして機能しているときに、リクエストを完了するために必要な上流のサーバーからのレスポンスが時間内に得られなかったことを示します。</p>
 
-> **Note:** **メモ**: {{interwiki("wikipedia", "Gateway_(telecommunications)", "ゲートウェイ")}}はネットワーク内の様々なものを指す可能性があり、 504 エラーはふつう、自分で修正できるものではありませんが、アクセスしようとしているウェブサーバーやプロキシで修正する必要があります。
+<div class="note">
+<p><strong>メモ</strong>: {{interwiki("wikipedia", "Gateway_(telecommunications)", "ゲートウェイ")}}はネットワーク内の様々なものを指す可能性があり、 504 エラーはふつう、自分で修正できるものではありませんが、アクセスしようとしているウェブサーバーやプロキシで修正する必要があります。</p>
+</div>
 
-## ステータス
+<h2 id="Status" name="Status">ステータス</h2>
 
-    504 Gateway Timeout
+<pre class="syntaxbox notranslate">504 Gateway Timeout</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                           | 題名                                                          |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "504 Gateway Timeout" , "6.6.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "504 Gateway Timeout" , "6.6.5")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
+<p>以下に示す情報は、 MDN の GitHub から取得したものです。 (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
 
-{{Compat("http.status.504")}}
+<p>{{Compat("http.status.504")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- {{HTTPStatus(502)}}
+<ul>
+ <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="noopener">HTTP/1.1: Status Code Definitions</a></li>
+ <li>{{HTTPStatus(502)}}</li>
+</ul>

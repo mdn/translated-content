@@ -8,39 +8,44 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
 ---
-{{JSRef}} {{non-standard_header}}
+<div>{{JSRef}} {{non-standard_header}}</div>
 
-**`InternalError()`** コンストラクターは、 JavaScript エンジンで内部的に発生したエラーを示すエラーを生成します。例えば、 "**InternalError**: too much recursion" などです。
+<p><strong><code>InternalError()</code></strong> コンストラクターは、 JavaScript エンジンで内部的に発生したエラーを示すエラーを生成します。例えば、 "<strong>InternalError</strong>: too much recursion" などです。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    new InternalError([message[, fileName[, lineNumber]]])
+<pre class="syntaxbox notranslate">new InternalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `message` {{optional_inline}}
-  - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
-  - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
-  - : 例外が発生したコードの行番号です。
+<dl>
+ <dt><code><var>message</var></code> {{optional_inline}}</dt>
+ <dd>人間が読むためのエラーの説明です。</dd>
+ <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
+ <dd>例外が発生したコードを含むファイルの名前です。</dd>
+ <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
+ <dd>例外が発生したコードの行番号です。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 新しい InternalError の生成
+<h3 id="Creating_a_new_InternalError" name="Creating_a_new_InternalError">新しい InternalError の生成</h3>
 
-```js
-new InternalError("Engine failure");
-```
+<pre class="brush: js notranslate">new InternalError("Engine failure");
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-標準の一部ではありません。
+<p>標準の一部ではありません。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.InternalError.InternalError")}}
+<div>
+<p>{{Compat("javascript.builtins.InternalError.InternalError")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Error")}}
+<ul>
+ <li>{{jsxref("Error")}}</li>
+</ul>

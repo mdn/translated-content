@@ -3,58 +3,82 @@ title: <msup>
 slug: Web/MathML/Element/msup
 translation_of: Web/MathML/Element/msup
 ---
-{{MathMLRef()}}
+<p>{{MathMLRef()}}</p>
 
-MathML `の <msup>` 要素は，式に上付きを付けるために用います。
-構文は `<msup> base superscript </msup>` となります。
+<p>MathML <code>の &lt;msup&gt;</code> 要素は，式に上付きを付けるために用います。<br>
+ 構文は <code>&lt;msup&gt; <em>base superscript</em> &lt;/msup&gt;</code> となります。</p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-- class, id, style
-  - : Provided for use with [stylesheets](/ja/docs/CSS).
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/CSS/color_value#Color_Keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/CSS/color_value#Color_Keywords).
-- superscriptshift
-  - : 上付き部分を本体のベースラインから持ち上げる最小の量を [length value.](/ja/docs/MathML/Attributes/Values#Lengths) で指定します。
+<dl>
+ <dt id="attr-class-id-style">class, id, style</dt>
+ <dd>Provided for use with <a href="/ja/docs/CSS">stylesheets</a>.</dd>
+ <dt id="attr-href">href</dt>
+ <dd>Used to set a hyperlink to a specified URI.</dd>
+ <dt id="attr-mathbackground">mathbackground</dt>
+ <dd>The background color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/ja/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
+ <dt id="attr-mathcolor">mathcolor</dt>
+ <dd>The text color. You can use <code>#rgb</code>, <code>#rrggbb</code> and <a href="/ja/docs/CSS/color_value#Color_Keywords">HTML color names</a>.</dd>
+ <dt id="attr-superscriptshift">superscriptshift</dt>
+ <dd>上付き部分を本体のベースラインから持ち上げる最小の量を <a href="/ja/docs/MathML/Attributes/Values#Lengths">length value.</a> で指定します。</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-Sample rendering: ![x1](/files/3203/msup.png)
+<p>Sample rendering: <img alt="x1" src="/files/3203/msup.png" style="margin-left: 10px; vertical-align: middle;"></p>
 
-Rendering in your browser: <math><msup><mi>X</mi> <mn>2</mn></msup></math>
+<p>Rendering in your browser: <math> <msup> <mi>X</mi> <mn>2</mn> </msup> </math></p>
 
-```html
-<math>
+<pre class="brush: html">&lt;math&gt;
 
-  <msup>
-    <mi>X</mi>
-    <mn>2</mn>
-  </msup>
+  &lt;msup&gt;
+    &lt;mi&gt;X&lt;/mi&gt;
+    &lt;mn&gt;2&lt;/mn&gt;
+  &lt;/msup&gt;
 
-</math>
-```
+&lt;/math&gt;
+</pre>
 
-## ブラウザ毎の互換性
+<h2 id="ブラウザ毎の互換性">ブラウザ毎の互換性</h2>
 
-{{Compat("mathml.elements.msup")}}
 
-### Gecko-specific notes
 
-- Starting with Gecko 26.0 {{geckoRelease("26")}} it is no longer possible to use `<none />` as a child element. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msub")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application of` the superscriptshift` attribute has been fixed (see {{bug("827713")}} for details).
+<p>{{Compat("mathml.elements.msup")}}</p>
 
-## 仕様
+<h3 id="Specifications" name="Specifications">Gecko-specific notes</h3>
 
-| Specification                                                                    | Status                       | Comment               |
-| -------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.msup', 'msup') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.msup', 'msup') }} | {{ Spec2('MathML2') }} | Initial specification |
+<ul>
+ <li>Starting with Gecko 26.0 {{geckoRelease("26")}} it is no longer possible to use <code>&lt;none /&gt;</code> as a child element. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msub")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application of<code> the superscriptshift</code> attribute has been fixed (see {{bug("827713")}} for details).</li>
+</ul>
 
-## See also
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-- {{ MathMLElement("msub") }} (Subscript)
-- {{ MathMLElement("msubsup") }} (Subscript-superscript pair)
-- {{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('MathML3', 'chapter3.html#presm.msup', 'msup') }}</td>
+   <td>{{ Spec2('MathML3') }}</td>
+   <td>Current specification</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('MathML2', 'chapter3.html#presm.msup', 'msup') }}</td>
+   <td>{{ Spec2('MathML2') }}</td>
+   <td>Initial specification</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{ MathMLElement("msub") }} (Subscript)</li>
+ <li>{{ MathMLElement("msubsup") }} (Subscript-superscript pair)</li>
+ <li>{{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)</li>
+</ul>

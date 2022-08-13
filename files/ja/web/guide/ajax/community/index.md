@@ -5,15 +5,17 @@ tags:
   - AJAX
 translation_of: Web/Guide/AJAX/Community
 ---
-AJAX に関する有用なメーリングリスト、ニュースグループ、フォーラム、その他のコミュニティを御存知の場合は、リンクを追加してください。
+<p>AJAX に関する有用なメーリングリスト、ニュースグループ、フォーラム、その他のコミュニティを御存知の場合は、リンクを追加してください。</p>
 
-## AJAX リソース
+<h2 id="Ajax_Resources">AJAX リソース</h2>
 
-## AJAX ワークショップとコース
+<h2 id="Ajax_Workshops_&amp;_Courses">AJAX ワークショップとコース</h2>
 
-- [skillsmatter.com](https://skillsmatter.com/go/ajax-ria): Courses and events on JavaScript, Ajax, and Reverse Ajax technologies
-- [telerik.com](https://www.telerik.com/forums/aspnet-ajax): An active community forum for Ajax
-- [community.tableau.com](https://community.tableau.com/search.jspa?q=ajax): Community support forum and courses available for Ajax
-- [codementor.io](https://www.codementor.io/community/search?q=ajax): Social platform with Ajax forums and tutorials
-- [lynda.com](https://www.lynda.com/search?q=ajax): Tutorials available for learning the fundamentals of Ajax
-- [Ajax Interview Questions and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/)[ and answer](https://www.onlineinterviewquestions.com/ajax-interview-questions/)Interwiki links
+<ul>
+ <li><a href="https://skillsmatter.com/go/ajax-ria">skillsmatter.com</a>: Courses and events on JavaScript, Ajax, and Reverse Ajax technologies</li>
+ <li><a href="https://www.telerik.com/forums/aspnet-ajax" rel="noopener">telerik.com</a>: An active community forum for Ajax</li>
+ <li><a href="https://community.tableau.com/search.jspa?q=ajax" rel="noopener">community.tableau.com</a>: Community support forum and courses available for Ajax</li>
+ <li><a href="https://www.codementor.io/community/search?q=ajax" rel="noopener">codementor.io</a>: Social platform with Ajax forums and tutorials</li>
+ <li><a href="https://www.lynda.com/search?q=ajax" rel="noopener">lynda.com</a>: Tutorials available for learning the fundamentals of Ajax</li>
+ <li><a href="https://www.onlineinterviewquestions.com/ajax-interview-questions/" rel="bookmark">Ajax Interview Questions and answer</a><a href="https://www.onlineinterviewquestions.com/ajax-interview-questions/"> and answer</a><span class="comment">Interwiki links</span></li>
+</ul>

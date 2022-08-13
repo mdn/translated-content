@@ -9,90 +9,115 @@ tags:
   - Web
 translation_of: Web/SVG/Element/svg
 ---
-{{SVGRef}}
+<p>{{SVGRef}}</p>
 
-`svg` 要素は、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Attribute/viewBox)を定義するコンテナです。これは SVG ドキュメントの最も外側の要素として使用されますが、SVG または HTML ドキュメントの中に SVG フラグメントを埋め込むためにも使用できます。
+<p><code>svg</code> 要素は、新しい座標系と<a href="/ja/docs/Web/SVG/Attribute/viewBox">ビューポート</a>を定義するコンテナです。これは SVG ドキュメントの最も外側の要素として使用されますが、SVG または HTML ドキュメントの中に SVG フラグメントを埋め込むためにも使用できます。</p>
 
-> **Note:** **注意:** `xmlns` 属性は *SVG ドキュメント*の最も外側の `svg` 要素にのみ必要です。内部の `svg` 要素や HTML 文書の内部には不要です。
+<div class="note">
+<p><strong>注意:</strong> <code>xmlns</code> 属性は <em>SVG ドキュメント</em>の最も外側の <code>svg</code> 要素にのみ必要です。内部の <code>svg</code> 要素や HTML 文書の内部には不要です。</p>
+</div>
 
-```css hidden
-html,body,svg { height:100% }
-```
+<div id="Exeemple">
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
-  <circle cx="50" cy="50" r="40" />
-  <circle cx="150" cy="50" r="4" />
+<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey"&gt;
+  &lt;circle cx="50" cy="50" r="40" /&gt;
+  &lt;circle cx="150" cy="50" r="4" /&gt;
 
-  <svg viewBox="0 0 10 10" x="200" width="100">
-    <circle cx="5" cy="5" r="4" />
-  </svg>
-</svg>
-```
+  &lt;svg viewBox="0 0 10 10" x="200" width="100"&gt;
+    &lt;circle cx="5" cy="5" r="4" /&gt;
+  &lt;/svg&gt;
+&lt;/svg&gt;</pre>
 
-{{EmbedLiveSample('Exeemple', 150, '100%')}}
+<p>{{EmbedLiveSample('Exeemple', 150, '100%')}}</p>
+</div>
 
-## 属性
+<h2 id="Atributes" name="Atributes">属性</h2>
 
-- {{SVGAttr("baseProfile")}} {{deprecated_inline('svg2')}}
-  - : 文書が要求する最小の SVG 言語プロファイル
-    _値の型_: **\<string>** ; _初期値_: none; _Animatable_: **no**
-- {{SVGAttr("contentScriptType")}} {{deprecated_inline('svg2')}}
-  - : SVG フラグメントで用いられる初期記述言語
-    _値の型_: **\<string>** ; _初期値_: `application/ecmascript`; _アニメーション可否_: **no**
-- {{SVGAttr("contentStyleType")}} {{deprecated_inline('svg2')}}
-  - : SVG フラグメントで用いられる初期のスタイルシート言語
-    _値の型_: **\<string>** ; _初期値_: `text/css`; _アニメーション可否_: **no**
-- {{SVGAttr("height")}}
-  - : 矩形ビューポートで表示される高さ (それ自身の座標系の高さではありません)
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _初期値_: `auto`; _アニメーション可否_: **yes**
-- {{SVGAttr("preserveAspectRatio")}}
-  - : 異なるアスペクト比での表示時に、`svg`フラグメントがどう変形されるか
-    _値の型_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _初期値_: `xMidYMid meet`; _アニメーション可否_: **yes**
-- {{SVGAttr("version")}} {{deprecated_inline('svg2')}}
-  - : 要素内の内容にどのバージョンの SVG が用いられるか
-    _値の型_: **[\<number>](/ja/docs/Web/SVG/Content_type#Number)** ; _初期値_: none; _アニメーション可否_: **no**
-- {{SVGAttr("viewBox")}}
-  - : The SVG viewport coordinates for the current SVG fragment.
-    _値の型_: **[\<list-of-numbers>](/ja/docs/Web/SVG/Content_type#List-of-Ts)** ; _初期値_: none; _アニメーション可否_: **yes**
-- {{SVGAttr("width")}}
-  - : 矩形ビューポートで表示される幅 (それ自身の座標系の幅ではありません)
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _初期値_: `auto`; _アニメーション可否_: **yes**
-- {{SVGAttr("x")}}
-  - : SVG コンテナが表示される x 座標。最も外側の`SVG`要素では効果ありません。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _初期値_: `0`; _アニメーション可否_: **yes**
-- {{SVGAttr("y")}}
-  - : SVG コンテナが表示される y 座標。最も外側の`SVG`要素では効果ありません。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#Percentage) ; _初期値_: `0`; _Animatable_: **yes**
+<dl>
+ <dt>{{SVGAttr("baseProfile")}} {{deprecated_inline('svg2')}}</dt>
+ <dd>文書が要求する最小のSVG言語プロファイル<br>
+ <small><em>値の型</em>: <strong>&lt;string&gt;</strong> ; <em>初期値</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
+ <dt>{{SVGAttr("contentScriptType")}} {{deprecated_inline('svg2')}}</dt>
+ <dd>SVGフラグメントで用いられる初期記述言語<br>
+ <small><em>値の型</em>: <strong>&lt;string&gt;</strong> ; <em>初期値</em>: <code>application/ecmascript</code>; <em>アニメーション可否</em>: <strong>no</strong></small></dd>
+ <dt>{{SVGAttr("contentStyleType")}} {{deprecated_inline('svg2')}}</dt>
+ <dd>SVGフラグメントで用いられる初期のスタイルシート言語<br>
+ <small><em>値の型</em>: <strong>&lt;string&gt;</strong> ; <em>初期値</em>: <code>text/css</code>; <em>アニメーション可否</em>: <strong>no</strong></small></dd>
+ <dt>{{SVGAttr("height")}}</dt>
+ <dd>矩形ビューポートで表示される高さ (それ自身の座標系の高さではありません)<br>
+ <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>初期値</em>: <code>auto</code>; <em>アニメーション可否</em>: <strong>yes</strong></small></dd>
+ <dt>{{SVGAttr("preserveAspectRatio")}}</dt>
+ <dd>異なるアスペクト比での表示時に、<code>svg</code>フラグメントがどう変形されるか<br>
+ <small><em>値の型</em>: (<code>none</code>| <code>xMinYMin</code>| <code>xMidYMin</code>| <code>xMaxYMin</code>| <code>xMinYMid</code>| <code>xMidYMid</code>| <code>xMaxYMid</code>| <code>xMinYMax</code>| <code>xMidYMax</code>| <code>xMaxYMax</code>) (<code>meet</code>|<code>slice</code>)? ; <em>初期値</em>: <code>xMidYMid meet</code>; <em>アニメーション可否</em>: <strong>yes</strong></small></dd>
+ <dt>{{SVGAttr("version")}} {{deprecated_inline('svg2')}}</dt>
+ <dd>要素内の内容にどのバージョンのSVGが用いられるか<br>
+ <small><em>値の型</em>: <strong><a href="/ja/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></strong> ; <em>初期値</em>: none; <em>アニメーション可否</em>: <strong>no</strong></small></dd>
+ <dt>{{SVGAttr("viewBox")}}</dt>
+ <dd>The SVG viewport coordinates for the current SVG fragment.<br>
+ <small><em>値の型</em>: <strong><a href="/ja/docs/Web/SVG/Content_type#List-of-Ts">&lt;list-of-numbers&gt;</a></strong> ; <em>初期値</em>: none; <em>アニメーション可否</em>: <strong>yes</strong></small></dd>
+ <dt>{{SVGAttr("width")}}</dt>
+ <dd>矩形ビューポートで表示される幅 (それ自身の座標系の幅ではありません)<br>
+ <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>初期値</em>: <code>auto</code>; <em>アニメーション可否</em>: <strong>yes</strong></small></dd>
+ <dt>{{SVGAttr("x")}}</dt>
+ <dd>SVGコンテナが表示されるx座標。最も外側の<code>SVG</code>要素では効果ありません。<br>
+ <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>初期値</em>: <code>0</code>; <em>アニメーション可否</em>: <strong>yes</strong></small></dd>
+ <dt>{{SVGAttr("y")}}</dt>
+ <dd>SVGコンテナが表示されるy座標。最も外側の<code>SVG</code>要素では効果ありません。<br>
+ <small><em>値の型</em>: <a href="/ja/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/ja/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>初期値</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
+</dl>
 
-> **Note:** **注意:** SVG2 で開始する場合には、`x`, `y`, `width`, `height` は、*ジオメトリプロパティ*です。これは、これらの属性が CSS プロパティとして用いられることを意味します。
+<div class="note">
+<p><strong>注意:</strong> SVG2で開始する場合には、<code>x</code>, <code>y</code>, <code>width</code>, <code>height</code> は、<em>ジオメトリプロパティ</em>です。これは、これらの属性がCSSプロパティとして用いられることを意味します。</p>
+</div>
 
-### グローバル属性
+<h3 id="グローバル属性">グローバル属性</h3>
 
-- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
-  - : 特に: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [スタイル属性](/ja/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
-  - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes), [文書イベント属性](/ja/docs/Web/SVG/Attribute/Events#Document_Event_Attributes), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
-  - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- Aria 属性
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+<dl>
+ <dt><a href="/ja/docs/Web/SVG/Attribute/Core">コア属性</a></dt>
+ <dd><small>特に: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
+ <dt><a href="/ja/docs/Web/SVG/Attribute/Styling">スタイル属性</a></dt>
+ <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
+ <dt><a href="/ja/docs/Web/SVG/Attribute/Conditional_Processing">条件処理属性</a></dt>
+ <dd><small>特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
+ <dt>イベント属性</dt>
+ <dd><small><a href="/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">グローバルイベント属性</a>, <a href="/ja/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes">グラフィカルイベント属性</a>, <a href="/ja/docs/Web/SVG/Attribute/Events#Document_Event_Attributes">文書イベント属性</a>, <a href="/ja/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes">文書要素イベント属性</a></small></dd>
+ <dt><a href="/ja/docs/Web/SVG/Attribute/Presentation">プレゼンテーション属性</a></dt>
+ <dd><small>特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
+ <dt>Aria属性</dt>
+ <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
+</dl>
 
-## 使用上の注意
+<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様                                                                                 | 状態                     | コメント   |
-| ------------------------------------------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}}</td>
+   <td>{{Spec2('SVG2')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}}</td>
+   <td>{{Spec2('SVG1.1')}}</td>
+   <td>初期の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの実装状況
+<h2 id="ブラウザの実装状況">ブラウザの実装状況</h2>
 
-{{Compat("svg.elements.svg")}}
+<p>{{Compat("svg.elements.svg")}}</p>

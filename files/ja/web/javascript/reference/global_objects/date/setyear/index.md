@@ -10,54 +10,66 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
-{{JSRef}} {{deprecated_header}}
+<div>{{JSRef}} {{deprecated_header}}</div>
 
-**`setYear()`** メソッドは、地方時に基づき、指定された日付の「年」を設定します。 `setYear()` は完全な桁数の値を設定しないため (いわゆる 2000 年問題)、使用されなくなり、{{jsxref("Date.prototype.setFullYear", "setFullYear()")}} メソッドに置き換えられました。
+<p><strong><code>setYear()</code></strong> メソッドは、地方時に基づき、指定された日付の「年」を設定します。 <code>setYear()</code> は完全な桁数の値を設定しないため (いわゆる 2000 年問題)、使用されなくなり、{{jsxref("Date.prototype.setFullYear", "setFullYear()")}} メソッドに置き換えられました。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    dateObj.setYear(yearValue)
+<pre class="syntaxbox notranslate"><var>dateObj</var>.setYear(<var>yearValue</var>)</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `yearValue`
-  - : 整数値。
+<dl>
+ <dt><code><var>yearValue</var></code></dt>
+ <dd>整数値。</dd>
+</dl>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
+<p>協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-`yearValue` が 0 から 99 までの値の場合、`dateObj` の「年」には `1900 + yearValue` が設定されます。そうでない場合、`dateObj` の「年」には `yearValue` が設定されます。
+<p><code>yearValue</code> が 0 から 99 までの値の場合、<code>dateObj</code> の「年」には <code>1900 + yearValue</code> が設定されます。そうでない場合、<code>dateObj</code> の「年」には <code>yearValue</code> が設定されます。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### setYear() の使用
+<h3 id="Using_setYear" name="Using_setYear">setYear() の使用</h3>
 
-最初の 2 行は「年」を 1996 に設定します。3 行目は、「年」を 2000 に設定します。
+<p>最初の 2 行は「年」を 1996 に設定します。3 行目は、「年」を 2000 に設定します。</p>
 
-```js
-var theBigDay = new Date();
+<pre class="brush: js notranslate">var theBigDay = new Date();
 
 theBigDay.setYear(96);
 theBigDay.setYear(1996);
 theBigDay.setYear(2000);
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.setyear', 'Date.prototype.setYear')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-date.prototype.setyear', 'Date.prototype.setYear')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Date.setYear")}}
+<p>{{Compat("javascript.builtins.Date.setYear")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
-- {{jsxref("Date.prototype.setUTCFullYear()")}}
+<ul>
+ <li>{{jsxref("Date.prototype.getFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
+ <li>{{jsxref("Date.prototype.setUTCFullYear()")}}</li>
+</ul>

@@ -9,33 +9,46 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Status/426
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-HTTP の **`426 Upgrade Required`** クライアントエラーレスポンスコードは、サーバーが現在のプロトコルを使用してリクエストを実行することを拒否していることを示しますが、クライアントが別のプロトコルにアップグレードした後に発生する可能性があります。
+<p>HTTP の <code><strong>426 Upgrade Required</strong></code> クライアントエラーレスポンスコードは、サーバーが現在のプロトコルを使用してリクエストを実行することを拒否していることを示しますが、クライアントが別のプロトコルにアップグレードした後に発生する可能性があります。</p>
 
-サーバーはこのレスポンスとともに {{HTTPHeader("Upgrade")}} ヘッダーを送信し、必要なプロトコルを示します。
+<p>サーバーはこのレスポンスとともに {{HTTPHeader("Upgrade")}} ヘッダーを送信し、必要なプロトコルを示します。</p>
 
-## ステータス
+<h2 id="Status" name="Status">ステータス</h2>
 
-    426 Upgrade Required
+<pre class="syntaxbox">426 Upgrade Required</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-    HTTP/1.1 426 Upgrade Required
-    Upgrade: HTTP/2.0
-    Connection: Upgrade
-    Content-Length: 53
-    Content-Type: text/plain
+<pre>HTTP/1.1 426 Upgrade Required
+Upgrade: HTTP/2.0
+Connection: Upgrade
+Content-Length: 53
+Content-Type: text/plain
 
-    This service requires use of the HTTP/2.0 protocol
+This service requires use of the HTTP/2.0 protocol</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                               | 題名                                                          |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "426 Upgrade Required" , "6.5.15")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "426 Upgrade Required" , "6.5.15")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("Upgrade")}}
-- {{HTTPStatus("101")}} `Switching Protocol`
+<ul>
+ <li>{{HTTPHeader("Upgrade")}}</li>
+ <li>{{HTTPStatus("101")}} <code>Switching Protocol</code></li>
+</ul>

@@ -10,58 +10,86 @@ tags:
   - リクエストヘッダー
 translation_of: Web/HTTP/Headers/Range
 ---
-{{HTTPSidebar}}
+<p>{{HTTPSidebar}}</p>
 
-**`Range`** は HTTP のリクエストヘッダーで、サーバーが返すべき文書の部分を示します。1 つの `Range` ヘッダーで複数の部分を一度にリクエストすることができ、サーバーはこれらの範囲をマルチパートの文書で返すことができます。サーバーが範囲を送り返す場合、サーバーはレスポンスに {{HTTPStatus("206")}}` Partial Content` を使用します。範囲が無効な場合、サーバは {{HTTPStatus("416")}}` Range Not Satisfiable` エラーを返します。サーバーは `Range` ヘッダ－を無視して、文書全体を {{HTTPStatus("200")}} のステータスコードで返すこともできます。
+<p><strong><code>Range</code></strong> は HTTP のリクエストヘッダーで、サーバーが返すべき文書の部分を示します。1 つの <code>Range</code> ヘッダーで複数の部分を一度にリクエストすることができ、サーバーはこれらの範囲をマルチパートの文書で返すことができます。サーバーが範囲を送り返す場合、サーバーはレスポンスに {{HTTPStatus("206")}}<code> Partial Content</code> を使用します。範囲が無効な場合、サーバは {{HTTPStatus("416")}}<code> Range Not Satisfiable</code> エラーを返します。サーバーは <code>Range</code> ヘッダ－を無視して、文書全体を {{HTTPStatus("200")}} のステータスコードで返すこともできます。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Request header", "リクエストヘッダー")}} |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | いいえ                                                                           |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>いいえ</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Range: <unit>=<range-start>-
-    Range: <unit>=<range-start>-<range-end>
-    Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>
-    Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>, <range-start>-<range-end>
-    Range: <unit>=-<suffix-length>
+<pre class="syntaxbox notranslate">Range: &lt;unit&gt;=&lt;range-start&gt;-
+Range: &lt;unit&gt;=&lt;range-start&gt;-&lt;range-end&gt;
+Range: &lt;unit&gt;=&lt;range-start&gt;-&lt;range-end&gt;, &lt;range-start&gt;-&lt;range-end&gt;
+Range: &lt;unit&gt;=&lt;range-start&gt;-&lt;range-end&gt;, &lt;range-start&gt;-&lt;range-end&gt;, &lt;range-start&gt;-&lt;range-end&gt;
+Range: &lt;unit&gt;=-&lt;suffix-length&gt;</pre>
 
-## ディレクティブ
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
 
-- \<unit>
-  - : 範囲を指定する単位です。これはふつう `bytes` です。
+<dl>
+ <dt>&lt;unit&gt;</dt>
+ <dd>範囲を指定する単位です。これはふつう <code>bytes</code> です。</dd>
+</dl>
 
-- \<range-start>
-  - : 整数値で、リクエストする範囲の先頭を指定した単位で示します。
-- \<range-end>
-  - : 整数値で、リクエストする範囲の末尾を指定した単位で示します。この値は省略可能で、省略時は文書の末尾が範囲の末尾として扱われます。
-- \<suffix-length>
-  - : 整数値で、返す長さを位でファイルの末尾からの個数を示します。
+<dl>
+ <dt>&lt;range-start&gt;</dt>
+ <dd>整数値で、リクエストする範囲の先頭を指定した単位で示します。</dd>
+ <dt>&lt;range-end&gt;</dt>
+ <dd>整数値で、リクエストする範囲の末尾を指定した単位で示します。この値は省略可能で、省略時は文書の末尾が範囲の末尾として扱われます。</dd>
+ <dt>&lt;suffix-length&gt;</dt>
+ <dd>整数値で、返す長さを位でファイルの末尾からの個数を示します。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-ファイルから 3 つの範囲をリクエストします。
+<p>ファイルから3つの範囲をリクエストします。</p>
 
-    Range: bytes=200-1000, 2000-6576, 19000-
+<pre class="notranslate">Range: bytes=200-1000, 2000-6576, 19000-
+</pre>
 
-ファイルの先頭の 500 バイトと末尾の 500 バイトをリクエストします。範囲が重複した場合はサーバーがリクエストを拒否することがあります。
+<p>ファイルの先頭の500バイトと末尾の500バイトをリクエストします。範囲が重複した場合はサーバーがリクエストを拒否することがあります。</p>
 
-    Range: bytes=0-499, -500
+<pre class="notranslate">Range: bytes=0-499, -500
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                   | 状態                                                   |
-| ---------------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "Range", "3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7233", "Range", "3.1")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Range")}}
+<p>{{Compat("http.headers.Range")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Content-Range")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPStatus("206")}}` Partial Content`
-- {{HTTPStatus("416")}}` Range Not Satisfiable`
+<ul>
+ <li>{{HTTPHeader("If-Range")}}</li>
+ <li>{{HTTPHeader("Content-Range")}}</li>
+ <li>{{HTTPHeader("Content-Type")}}</li>
+ <li>{{HTTPStatus("206")}}<code> Partial Content</code></li>
+ <li>{{HTTPStatus("416")}}<code> Range Not Satisfiable</code></li>
+</ul>

@@ -9,32 +9,46 @@ tags:
   - ステータスコード
 translation_of: Web/HTTP/Status/403
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-HTTP の **`403 Forbidden`** クライアントエラーレスポンスコードは、サーバーがリクエストを理解したものの、認証が拒否されたことを示します。
+<p>HTTP の <strong><code>403 Forbidden</code></strong> クライアントエラーレスポンスコードは、サーバーがリクエストを理解したものの、認証が拒否されたことを示します。</p>
 
-このステータスは {{HTTPStatus("401")}} に似ていますが、この場合は再認証しても結果は変わりません。アクセスは恒久的に禁止されており、リソースにアクセスする権限が不足しているなど、アプリケーションのロジックに結びついたものです。
+<p>このステータスは {{HTTPStatus("401")}} に似ていますが、この場合は再認証しても結果は変わりません。アクセスは恒久的に禁止されており、リソースにアクセスする権限が不足しているなど、アプリケーションのロジックに結びついたものです。</p>
 
-## ステータス
+<h2 id="Status" name="Status">ステータス</h2>
 
-    403 Forbidden
+<pre class="syntaxbox notranslate">403 Forbidden</pre>
 
-## レスポンスの例
+<h2 id="Example_response" name="Example_response">レスポンスの例</h2>
 
-    HTTP/1.1 403 Forbidden
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
+<pre class="notranslate">HTTP/1.1 403 Forbidden
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                   | 題名                            |
-| -------------------------------------------------------- | ------------------------------- |
-| {{RFC("7231", "403 Forbidden" , "6.5.3")}} | HTTP/1.1: Semantics and Content |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "403 Forbidden" , "6.5.3")}}</td>
+   <td>HTTP/1.1: Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.status.403")}}
+<p>{{Compat("http.status.403")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPStatus("401")}}
-- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+<ul>
+ <li>{{HTTPStatus("401")}}</li>
+ <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" rel="noopener">HTTP/1.1: Status Code Definitions</a></li>
+</ul>

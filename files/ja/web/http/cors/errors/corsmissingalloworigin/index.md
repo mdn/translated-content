@@ -15,40 +15,44 @@ tags:
   - troubleshooting
 translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-## 理由
+<h2 id="Reason" name="Reason">理由</h2>
 
-    Reason: CORS header 'Access-Control-Allow-Origin' missing
+<pre class="syntaxbox notranslate">Reason: CORS header 'Access-Control-Allow-Origin' missing</pre>
 
-## 何が悪いのか
+<h2 id="What_went_wrong" name="What_went_wrong">何が悪いのか</h2>
 
-{{Glossary("CORS")}} リクエストへのレスポンスが、リソースが現在のオリジン内で操作しているコンテンツによってアクセスできるかどうかを判断するために使われる、必須の {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーを欠いています。
+<p>{{Glossary("CORS")}} リクエストへのレスポンスが、リソースが現在のオリジン内で操作しているコンテンツによってアクセスできるかどうかを判断するために使われる、必須の {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーを欠いています。</p>
 
-サーバーを自分で制御できる場合は、要求しているサイトのオリジンを `Access-Control-Allow-Origin` ヘッダーの値に追加して、アクセスが許可されているドメインの一覧に追加してください。
+<p>サーバーを自分で制御できる場合は、要求しているサイトのオリジンを <code>Access-Control-Allow-Origin</code> ヘッダーの値に追加して、アクセスが許可されているドメインの一覧に追加してください。</p>
 
-例えば、 https\://amazing.site のサイトが CORS を使用したリソースにアクセスできるよう許可するためには、ヘッダーを以下のようにしてください。
+<p>例えば、 https://amazing.site のサイトが CORS を使用したリソースにアクセスできるよう許可するためには、ヘッダーを以下のようにしてください。</p>
 
-    Access-Control-Allow-Origin: https://amazing.site
+<pre class="notranslate">Access-Control-Allow-Origin: https://amazing.site</pre>
 
-`*` を使用することで、あらゆるサイトにアクセスを許可するようサイトを構成することもできます。これは公開 API にのみ使用してください。非公開の API には `*` を使用するべきではなく、代わりに具体的なドメインやドメインの一覧を設定してください。加えて、ワイルドカードは {{htmlattrxref("crossorigin")}} 属性が `anonymous` に設定された要求にのみ動作し、リクエストでは Cookie のような資格情報の送信を抑制します。
+<p><code>*</code> を使用することで、あらゆるサイトにアクセスを許可するようサイトを構成することもできます。これは公開 API にのみ使用してください。非公開の API には <code>*</code> を使用するべきではなく、代わりに具体的なドメインやドメインの一覧を設定してください。加えて、ワイルドカードは {{htmlattrxref("crossorigin")}} 属性が <code>anonymous</code> に設定された要求にのみ動作し、リクエストでは Cookie のような資格情報の送信を抑制します。</p>
 
-    Access-Control-Allow-Origin: *
+<pre class="notranslate">Access-Control-Allow-Origin: *</pre>
 
-> **Warning:** **警告:** ワイルドカードを使用して、非公開の API へのアクセスをすべてのサイトに許可することは、悪い考えです。
+<div class="warning">
+<p><strong>警告:</strong> ワイルドカードを使用して、非公開の API へのアクセスをすべてのサイトに許可することは、悪い考えです。</p>
+</div>
 
-何らかのサイトが CORS リクエストを `*` ワイルドカードを使用すること*なく* (たとえば資格情報を有効にする場合) 利用できるようにするには、サーバーにリクエストの `Origin` ヘッダーの値を読み取り、その値を `Access-Control-Allow-Origin` に設定することに加えて、一部のヘッダーがオリジンに応じて動的に設定されることを示すために `Vary: Origin` ヘッダーを設定する必要があります。
+<p>何らかのサイトが CORS リクエストを <code>*</code> ワイルドカードを使用すること<em>なく</em> (たとえば資格情報を有効にする場合) 利用できるようにするには、サーバーにリクエストの <code>Origin</code> ヘッダーの値を読み取り、その値を <code>Access-Control-Allow-Origin</code> に設定することに加えて、一部のヘッダーがオリジンに応じて動的に設定されることを示すために <code>Vary: Origin</code> ヘッダーを設定する必要があります。</p>
 
-例えば Apache では、サーバー構成 (の中の `<Directory>`, `<Location>`, `<Files>`, `<VirtualHost>` のうち適切な節) に次のような行を追加してください。構成はふつう、 `.conf` ファイル又は (一般的な名前は `httpd.conf` や `apache.conf`) 又は `.htaccess` ファイルにあります。
+<p>例えば Apache では、サーバー構成 (の中の <code>&lt;Directory&gt;</code>, <code>&lt;Location&gt;</code>, <code>&lt;Files&gt;</code>, <code>&lt;VirtualHost&gt;</code> のうち適切な節) に次のような行を追加してください。構成はふつう、 <code>.conf</code> ファイル又は (一般的な名前は <code>httpd.conf</code> や <code>apache.conf</code>) 又は <code>.htaccess</code> ファイルにあります。</p>
 
-    Header set Access-Control-Allow-Origin 'origin-list'
+<pre class="notranslate">Header set Access-Control-Allow-Origin '<em>origin-list</em>'</pre>
 
-Nginx では、このヘッダーを設定するコマンドは次の通りです。
+<p>Nginx では、このヘッダーを設定するコマンドは次の通りです。</p>
 
-    add_header 'Access-Control-Allow-Origin' 'origin-list'
+<pre class="notranslate">add_header 'Access-Control-Allow-Origin' '<em>origin-list</em>'</pre>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+<ul>
+ <li><a href="/ja/docs/Web/HTTP/CORS/Errors">CORS のエラー</a></li>
+ <li>用語集: {{Glossary("CORS")}}</li>
+ <li><a href="/ja/docs/Web/HTTP/CORS">CORS 入門</a></li>
+</ul>

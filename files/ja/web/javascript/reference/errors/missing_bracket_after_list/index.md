@@ -2,36 +2,34 @@
 title: 'SyntaxError: missing ] after element list'
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+- Error
+- Errors
+- JavaScript
+- SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "missing ] after element list" は、配列の初期化構文のどこかにエラーがあった場合に発生します。閉じ括弧 ("`]`") やカンマ ("`,`") が抜けている可能性があります。
+<p>JavaScript の例外 "missing ] after element list" は、配列の初期化構文のどこかにエラーがあった場合に発生します。閉じ括弧 ("<code>]</code>") やカンマ ("<code>,</code>") が抜けている可能性があります。</p>
 
-## メッセージ
+<h2 id="Message">メッセージ</h2>
 
-```js
-SyntaxError: missing ] after element list
-```
+<pre class="brush: js">SyntaxError: missing ] after element list
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("SyntaxError")}}。
+<p>{{jsxref("SyntaxError")}}。</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-どこかに配列初期化構文のエラーがあります。閉じ括弧 ("`]`") かカンマ ("`,`") が不足している可能性があります。
+<p>どこかに配列初期化構文のエラーがあります。閉じ括弧 ("<code>]</code>") かカンマ ("<code>,</code>") が不足している可能性があります。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### 不完全な配列の初期化
+<h3 id="Incomplete_array_initializer">不完全な配列の初期化</h3>
 
-```js example-bad
-var list = [1, 2,
+<pre class="brush: js example-bad">var list = [1, 2,
 
 var instruments = [
   'Ukulele',
@@ -40,12 +38,11 @@ var instruments = [
 };
 
 var data = [{foo: 'bar'} {bar: 'foo'}];
-```
+</pre>
 
-修正すると次のようになります。
+<p>修正すると次のようになります。</p>
 
-```js example-good
-var list = [1, 2];
+<pre class="brush: js example-good">var list = [1, 2];
 
 var instruments = [
  'Ukulele',
@@ -53,9 +50,10 @@ var instruments = [
  'Piano'
 ];
 
-var data = [{foo: 'bar'}, {bar: 'foo'}];
-```
+var data = [{foo: 'bar'}, {bar: 'foo'}];</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{jsxref("Array")}}
+<ul>
+  <li>{{jsxref("Array")}}</li>
+</ul>

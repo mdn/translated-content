@@ -8,44 +8,46 @@ tags:
   - 警告
 translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の警告 "unreachable code after return statement" は、 {{jsxref("Statements/return", "return")}} 文の後で式を使用したり、セミコロンのない return 文を使用して、その直後に式を置いたりした場合に発生します。
+<p>JavaScript の警告 "unreachable code after return statement" は、 {{jsxref("Statements/return", "return")}} 文の後で式を使用したり、セミコロンのない return 文を使用して、その直後に式を置いたりした場合に発生します。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-Warning: unreachable code after return statement (Firefox)
-```
+<pre class="brush: js">Warning: unreachable code after return statement (Firefox)
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-警告
+<p>警告</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-unreachable code after a return statement は、以下のような場合に発生することがあります。
+<p>unreachable code after a return statement は、以下のような場合に発生することがあります。</p>
 
-- {{jsxref("Statements/return", "return")}} 文の後で式を使用している場合
-- セミコロンがない return 文の直後に式を置いている場合
+<ul>
+ <li>{{jsxref("Statements/return", "return")}} 文の後で式を使用している場合</li>
+ <li>セミコロンがない return 文の直後に式を置いている場合</li>
+</ul>
 
-有効な `return` 文の後に式がある場合、警告は `return` 文の後のコードには到達しない、つまり決して実行されないことを表します。
+<p>有効な <code>return</code> 文の後に式がある場合、警告は <code>return</code> 文の後のコードには到達しない、つまり決して実行されないことを表します。</p>
 
-`return` 文の後にセミコロンをつけるべきなのはなぜでしょうか。セミコロンがない `return` 文の場合、開発者が次の行にある文を返そうとしているのか、処理を停止して戻ろうとしているのかが不明確になってしまいます。この警告は、 `return` 文の書かれ方にあいまいさがあることを示しています。
+<p><code>return</code> 文の後にセミコロンをつけるべきなのはなぜでしょうか。セミコロンがない <code>return</code> 文の場合、開発者が次の行にある文を返そうとしているのか、処理を停止して戻ろうとしているのかが不明確になってしまいます。この警告は、 <code>return</code> 文の書かれ方にあいまいさがあることを示しています。</p>
 
-以下の文の場合、セミコロンがない場合の return の警告は表示されません。
+<p>以下の文の場合、セミコロンがない場合の return の警告は表示されません。</p>
 
-- {{jsxref("Statements/throw", "throw")}}
-- {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/var", "var")}}
-- {{jsxref("Statements/function", "function")}}
+<ul>
+  <li>{{jsxref("Statements/throw", "throw")}}</li>
+  <li>{{jsxref("Statements/break", "break")}}</li>
+  <li>{{jsxref("Statements/var", "var")}}</li>
+  <li>{{jsxref("Statements/function", "function")}}</li>
+</ul>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### 無効な場合
+<h3 id="Invalid_cases">無効な場合</h3>
 
-```js example-bad
-function f() {
+<pre class="brush: js example-bad">function f() {
   var x = 3;
   x += 4;
   return x;   // return は直ちに関数を終了します。
@@ -56,12 +58,11 @@ function f() {
   return     // これは `return;` のように扱われます。
     3 + 4;   // そのため、関数を抜け出し、この行には決して到達しません。
 }
-```
+</pre>
 
-### 妥当な場合
+<h3 id="Valid_cases">妥当な場合</h3>
 
-```js example-good
-function f() {
+<pre class="brush: js example-good">function f() {
   var x = 3;
   x += 4;
   x -= 3;
@@ -71,8 +72,10 @@ function f() {
 function f() {
   return 3 + 4  // OK: 同じ行に式があるセミコロンなしの return です。
 }
-```
+</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{jsxref("Statements/return", "自動セミコロン挿入", "#Automatic_Semicolon_Insertion", 1)}}
+<ul>
+  <li>{{jsxref("Statements/return", "自動セミコロン挿入", "#Automatic_Semicolon_Insertion", 1)}}</li>
+</ul>

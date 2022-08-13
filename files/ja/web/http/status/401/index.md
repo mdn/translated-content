@@ -7,39 +7,50 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/401
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-HTTP **`401 Unauthorized`** は、有効な認証資格が不足していることによりリクエストが適用されないことを示すクライアントエラーのレスポンスコードです。
+<p>HTTP <strong><code>401 Unauthorized</code></strong> は、有効な認証資格が不足していることによりリクエストが適用されないことを示すクライアントエラーのレスポンスコードです。</p>
 
-このステータスは、正しい認証方法を含む {{HTTPHeader("WWW-Authenticate")}} ヘッダーとともに送信されます。
+<p>このステータスは、正しい認証方法を含む {{HTTPHeader("WWW-Authenticate")}} ヘッダーとともに送信されます。</p>
 
-このステータスは {{HTTPStatus("403")}} に似ていますが、この場合は再認証が可能です。
+<p>このステータスは {{HTTPStatus("403")}} に似ていますが、この場合は再認証が可能です。</p>
 
-## ステータス
+<h2 id="ステータス">ステータス</h2>
 
-    401 Unauthorized
+<pre class="syntaxbox">401 Unauthorized</pre>
 
-## 例
+<h2 id="例">例</h2>
 
-    HTTP/1.1 401 Unauthorized
-    Date: Wed, 21 Oct 2015 07:28:00 GMT
-    WWW-Authenticate: Basic realm="Access to staging site"
+<pre>HTTP/1.1 401 Unauthorized
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+WWW-Authenticate: Basic realm="Access to staging site"</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                     | タイトル                 |
-| -------------------------------------------------------- | ------------------------ |
-| {{RFC("7235", "401 Unauthorized" , "3.1")}} | HTTP/1.1: Authentication |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">タイトル</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7235", "401 Unauthorized" , "3.1")}}</td>
+   <td>HTTP/1.1: Authentication</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー互換性
+<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
 
-{{Compat("http.status.401")}}
+<p>{{Compat("http.status.401")}}</p>
 
-## 参照
+<h2 id="参照">参照</h2>
 
-- [HTTP authentication](/ja/docs/Web/HTTP/Authentication)
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+<ul>
+ <li><a href="/ja/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
+ <li>{{HTTPHeader("WWW-Authenticate")}}</li>
+ <li>{{HTTPHeader("Authorization")}}</li>
+ <li>{{HTTPHeader("Proxy-Authorization")}}</li>
+ <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
+ <li>{{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
+</ul>

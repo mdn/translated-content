@@ -4,174 +4,176 @@ slug: Web/MathML/Element/mo
 tags:
   - MathML
   - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
+  - 'MathML:Element'
+  - 'MathML:Token Elements'
 translation_of: Web/MathML/Element/mo
 ---
-{{MathMLRef()}}
+<p>{{MathMLRef()}}</p>
 
-MathML の `<mo>` 要素は広い意味の演算子を表します。厳密に数学的な意味の演算子のほかに、括弧類やカンマ・セミコロンといった区切り記号、絶対値の縦棒などの「演算子」も含みます。
+<p class="summary">MathML の <code>&lt;mo&gt;</code> 要素は広い意味の演算子を表します。厳密に数学的な意味の演算子のほかに、括弧類やカンマ・セミコロンといった区切り記号、絶対値の縦棒などの「演算子」も含みます。</p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-- accent
-  - : 演算子が上下に付ける記号（[underscript](/ja/docs/MathML/Element/munder) または [overscript](/ja/docs/MathML/Element/mover)）として使われる場合、この属性は演算子がアクセント記号として扱われるべきかどうかを指定します。
-    取り得る値は `true` または `false です。`
-- class, id, style
-  - : [スタイルシート](/ja/docs/CSS)と一緒に用いて提供されます。
-- dir
-  - : 数式全体の書字方向。値として `ltr` （左から右へ）と `rtl` （右から左へ） が指定可能です。
-- fence
-  - : この属性は視覚的効果を持ちませんが、演算子が括弧類などの囲み記号であるかどうかを指定します。
-    取り得る値は `true` または `false` です。
-- form
-  - : 囲んだ式における演算子の役割を指定します。これは、スペーシングや他のデフォルトプロパティに影響を与えます。通常の演算子（`+`, `-` など）の場合、明示的にこの属性を指定する必要はありません。
-    取り得る値は次の通りです:\* `prefix` を指定すると開き括弧類（opening fences）になります。（演算子が一つ以上の子要素を持つ {{ MathMLElement("mrow") }} 要素の最初の子要素の場合はこれが既定値です。）
-    - `infix` を指定するとセパレーターになります。（演算子が {{ MathMLElement("mrow") }} 要素に含まれていない場合はこれが既定値です。)
-    - `postfix` を指定すると閉じ括弧類（closing fences）になります。（演算子が一つ以上の子要素を持つ {{ MathMLElement("mrow") }} 要素の最後の子要素の場合はこれが既定値です。）
-- href
-  - : 指定された URI へのハイパーリンクの設定に使用されます。
-- largeop
-  - : `displaystyle="true"` と設定されるときに演算子が通常よりも大きく表示されるべきかどうかを指定します。取り得る値は `true` または `false` です。
-- lspace
-  - : 演算子の前の空き量（値と単位については [length](/ja/docs/MathML/Attributes/Values#Lengths) を参照）。定数 `thickmathspace`（5/18em）が既定値です。
-- mathbackground
-  - : 背景色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
-- mathcolor
-  - : 文字色。`#rgb`、`#rrggbb`および[HTML 色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
-- mathsize
-  - : The size of the content. Possible values are:\* `small:` Font is rendered smaller than the current font size.
-    - `normal:` Equivalent to 100% or 1em.
-    - `big:` Font is rendered larger than the current font size.
-    - a custom [length](/ja/docs/MathML/Attributes/Values#Lengths).
-    - or a unitless value which multiplies the default.
-- mathvariant
+<dl>
+ <dt id="attr-accent">accent</dt>
+ <dd>演算子が上下に付ける記号（<a href="/ja/docs/MathML/Element/munder">underscript</a> または <a href="/ja/docs/MathML/Element/mover">overscript</a>）として使われる場合、この属性は演算子がアクセント記号として扱われるべきかどうかを指定します。<br>
+ 取り得る値は <code>true</code> または <code>false です。</code></dd>
+ <dt id="attr-class-id-style">class, id, style</dt>
+ <dd><a href="/ja/docs/CSS">スタイルシート</a>と一緒に用いて提供されます。</dd>
+ <dt id="attr-dir">dir</dt>
+ <dd>数式全体の書字方向。値として <code>ltr</code> （左から右へ）と <code>rtl</code> （右から左へ） が指定可能です。</dd>
+ <dt id="attr-fence">fence</dt>
+ <dd>この属性は視覚的効果を持ちませんが、演算子が括弧類などの囲み記号であるかどうかを指定します。<br>
+ 取り得る値は <code>true</code> または <code>false</code> です。</dd>
+ <dt id="attr-form">form</dt>
+ <dd>囲んだ式における演算子の役割を指定します。これは、スペーシングや他のデフォルトプロパティに影響を与えます。通常の演算子（<code>+</code>, <code>-</code> など）の場合、明示的にこの属性を指定する必要はありません。<br>
+ 取り得る値は次の通りです:
+ <ul>
+  <li><code>prefix</code> を指定すると開き括弧類（opening fences）になります。（演算子が一つ以上の子要素を持つ {{ MathMLElement("mrow") }} 要素の最初の子要素の場合はこれが既定値です。）</li>
+  <li><code>infix</code> を指定するとセパレーターになります。（演算子が {{ MathMLElement("mrow") }} 要素に含まれていない場合はこれが既定値です。)</li>
+  <li><code>postfix</code> を指定すると閉じ括弧類（closing fences）になります。（演算子が一つ以上の子要素を持つ {{ MathMLElement("mrow") }} 要素の最後の子要素の場合はこれが既定値です。）</li>
+ </ul>
+ </dd>
+ <dt id="attr-href">href</dt>
+ <dd>指定された URI へのハイパーリンクの設定に使用されます。</dd>
+ <dt id="attr-largeop">largeop</dt>
+ <dd><code>displaystyle="true"</code> と設定されるときに演算子が通常よりも大きく表示されるべきかどうかを指定します。取り得る値は <code>true</code> または <code>false</code> です。</dd>
+ <dt id="attr-lspace">lspace</dt>
+ <dd>演算子の前の空き量（値と単位については <a href="/ja/docs/MathML/Attributes/Values#Lengths">length</a> を参照）。定数 <code>thickmathspace</code>（5/18em）が既定値です。</dd>
+ <dt id="attr-mathbackground">mathbackground</dt>
+ <dd>背景色。<code>#rgb</code>、<code>#rrggbb</code>および<a href="/ja/docs/CSS/color_value#Color_Keywords">HTML色名</a>を使用できます。</dd>
+ <dt id="attr-mathcolor">mathcolor</dt>
+ <dd>文字色。<code>#rgb</code>、<code>#rrggbb</code>および<a href="/ja/docs/CSS/color_value#Color_Keywords">HTML色名</a>を使用できます。</dd>
+ <dt id="attr-mathsize">mathsize</dt>
+ <dd>The size of the content. Possible values are:
+ <ul>
+  <li><code>small:</code> Font is rendered smaller than the current font size.</li>
+  <li><code>normal:</code> Equivalent to 100% or 1em.</li>
+  <li><code>big:</code> Font is rendered larger than the current font size.</li>
+  <li>a custom <a href="/ja/docs/MathML/Attributes/Values#Lengths">length</a>.</li>
+  <li>or a unitless value which multiplies the default.</li>
+ </ul>
+ </dd>
+ <dt id="attr-mathvariant">mathvariant</dt>
+ <dd>This attribute specifies the logical class of the operator which varies in typography. That is, although the names suggest the typographic style for the class, semantically, items with the same class are treated "the same" within an expression, which might or might not involve displaying them with the named typography. The following values are allowed:
+ <ul>
+  <li><code>normal</code> (Default value) ; <math><mo mathvariant="normal">Example</mo></math></li>
+  <li><code>bold</code> ; <math><mo mathvariant="bold">Example</mo></math></li>
+  <li><code>italic</code> ; <math><mo mathvariant="italic">Example</mo></math></li>
+  <li><code>bold-italic</code> ; <math><mo mathvariant="bold-italic">Example</mo></math></li>
+ </ul>
 
-  - : This attribute specifies the logical class of the operator which varies in typography. That is, although the names suggest the typographic style for the class, semantically, items with the same class are treated "the same" within an expression, which might or might not involve displaying them with the named typography. The following values are allowed:\* `normal` (Default value) ;
+ <ul>
+  <li><code>double-struck</code> ; <math><mo mathvariant="double-struck">Example</mo></math></li>
+  <li><code>bold-fraktur</code> ; <math><mo mathvariant="bold-fraktur">Example</mo></math></li>
+  <li><code>script</code> ; <math><mo mathvariant="script">Example</mo></math></li>
+  <li><code>bold-script</code> ; <math><mo mathvariant="bold-script">Example</mo></math></li>
+  <li><code>fraktur</code> ; <math><mo mathvariant="fraktur">Example</mo></math></li>
+ </ul>
 
-        <math><mo mathvariant="normal">Example</mo></math>
+ <ul>
+  <li><code>sans-serif</code> ; <math><mo mathvariant="sans-serif">Example</mo></math></li>
+  <li><code>bold-sans-serif</code> ; <math><mo mathvariant="bold-sans-serif">Example</mo></math></li>
+  <li><code>sans-serif-italic</code> ; <math><mo mathvariant="sans-serif-italic">Example</mo></math></li>
+  <li><code>sans-serif-bold-italic</code> ; <math><mo mathvariant="sans-serif-bold-italic">Example</mo></math></li>
+  <li><code>monospace</code> ; <math><mo mathvariant="monospace">Example</mo></math></li>
+ </ul>
 
-    - `bold` ;
+ <ul>
+  <li><code>initial</code> ; <math><mo mathvariant="initial">مثال</mo></math></li>
+  <li><code>tailed</code> ; <math><mo mathvariant="tailed">مثال</mo></math></li>
+  <li><code>looped</code> ; <math><mo mathvariant="looped">مثال</mo></math></li>
+  <li><code>stretched</code> ; <math><mo mathvariant="stretched">مثال</mo></math></li>
+ </ul>
+ </dd>
+ <dt id="attr-maxsize">maxsize</dt>
+ <dd>If <code>stretchy</code> is <code>true</code>, this attribute specifies the maximum size of the operator. Allowed values are:
+ <ul>
+  <li><code>infinity</code></li>
+  <li>an arbitrary <a href="/ja/docs/MathML/Attributes/Values#Lengths">length</a></li>
+ </ul>
+ </dd>
+ <dt id="attr-minsize">minsize</dt>
+ <dd>If <code>stretchy</code> is <code>true</code>, this attribute specifies the minimum size of the operator. Allowed values are:
+ <ul>
+  <li><code>infinity</code></li>
+  <li>an arbitrary <a href="/ja/docs/MathML/Attributes/Values#Lengths">length</a></li>
+ </ul>
+ </dd>
+ <dt id="attr-movablelimits">movablelimits</dt>
+ <dd><strong>displaystyle</strong> が <code>false</code> の場合に、上下に付ける記号（overscript，underscript）が上付き・下付き（superscript，subscript）の位置に移動するかどうかを指定します。<br>
+ 取り得る値は <code>true</code> または <code>false です。</code></dd>
+ <dt id="attr-rspace">rspace</dt>
+ <dd>演算子の後の空き量（値と単位については <a href="/ja/docs/MathML/Attributes/Values#Lengths">length</a> を参照）。定数 <code>thickmathspace</code>（5/18em）が既定値です。</dd>
+ <dt id="attr-separator">separator</dt>
+ <dd>この属性は視覚的効果を持ちませんが、演算子がカンマなどの区切り記号であるかどうかを指定します。<br>
+ 取り得る値は <code>true</code> または <code>false</code> です。</dd>
+ <dt id="attr-stretchy">stretchy</dt>
+ <dd>Specifies whether the operator stretches to the size of the adjacent element.<br>
+ Allowed values are <code>true</code> or <code>false</code>.</dd>
+ <dt id="attr-symmetric">symmetric</dt>
+ <dd><strong>stretchy</strong> が <code>true</code> の場合、演算子が仮想数式軸（imaginary math axis，分数線の高さの水平軸）のまわりに上下対称であるべきかどうかを指定します。<br>
+ 既定値は、<strong>stretchy</strong> が <code>true</code> セットされるならば <code>true</code> となり、そうでなければ <code>false</code> です。 取り得る値は <code>true</code> または <code>false</code> です。</dd>
+</dl>
 
-      <math><mo mathvariant="bold">Example</mo></math>
+<h2 id="例">例</h2>
 
-    - `italic` ;
+<pre class="brush: html">&lt;math&gt;
 
-      <math><mo mathvariant="italic">Example</mo></math>
+&lt;mrow&gt;
+  &lt;mn&gt;5&lt;/mn&gt;
+  &lt;mo&gt;+&lt;/mo&gt;
+  &lt;mn&gt;5&lt;/mn&gt;
+&lt;/mrow&gt;
 
-    - `bold-italic` ;
+&lt;mrow&gt;
+  &lt;mo&gt; [ &lt;/mo&gt; &lt;!-- default form value: prefix --&gt;
+  &lt;mrow&gt;
+    &lt;mn&gt; 0 &lt;/mn&gt;
+    &lt;mo&gt; ; &lt;/mo&gt; &lt;!-- default form value: infix --&gt;
+    &lt;mn&gt; 1 &lt;/mn&gt;
+  &lt;/mrow&gt;
+  &lt;mo&gt; ) &lt;/mo&gt; &lt;!-- default form value: postfix --&gt;
+&lt;/mrow&gt;
 
-      <math><mo mathvariant="bold-italic">Example</mo></math>\* `double-struck` ;
+&lt;/math&gt;
+</pre>
 
-      <math><mo mathvariant="double-struck">Example</mo></math>
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-    - `bold-fraktur` ;
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('MathML3', 'chapter3.html#presm.mo', 'mo') }}</td>
+   <td>{{ Spec2('MathML3') }}</td>
+   <td>Current specification</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('MathML2', 'chapter3.html#presm.mo', 'mo') }}</td>
+   <td>{{ Spec2('MathML2') }}</td>
+   <td>初期の仕様</td>
+  </tr>
+ </tbody>
+</table>
 
-      <math><mo mathvariant="bold-fraktur">Example</mo></math>
+<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-    - `script` ;
 
-      <math><mo mathvariant="script">Example</mo></math>
 
-    - `bold-script` ;
+<p>{{Compat("mathml.elements.mo")}}</p>
 
-      <math><mo mathvariant="bold-script">Example</mo></math>
+<h2 id="Gecko_固有の注記">Gecko 固有の注記</h2>
 
-    - `fraktur` ;
-
-      <math><mo mathvariant="fraktur">Example</mo></math>\* `sans-serif` ;
-
-      <math><mo mathvariant="sans-serif">Example</mo></math>
-
-    - `bold-sans-serif` ;
-
-      <math><mo mathvariant="bold-sans-serif">Example</mo></math>
-
-    - `sans-serif-italic` ;
-
-      <math><mo mathvariant="sans-serif-italic">Example</mo></math>
-
-    - `sans-serif-bold-italic` ;
-
-      <math><mo mathvariant="sans-serif-bold-italic">Example</mo></math>
-
-    - `monospace` ;
-
-      <math><mo mathvariant="monospace">Example</mo></math>\* `initial` ;
-
-      <math><mo mathvariant="initial">مثال</mo></math>
-
-    - `tailed` ;
-
-      <math><mo mathvariant="tailed">مثال</mo></math>
-
-    - `looped` ;
-
-      <math><mo mathvariant="looped">مثال</mo></math>
-
-    - `stretched` ;
-
-      <math><mo mathvariant="stretched">مثال</mo></math>
-
-- maxsize
-  - : If `stretchy` is `true`, this attribute specifies the maximum size of the operator. Allowed values are:\* `infinity`
-    - an arbitrary [length](/ja/docs/MathML/Attributes/Values#Lengths)
-- minsize
-  - : If `stretchy` is `true`, this attribute specifies the minimum size of the operator. Allowed values are:\* `infinity`
-    - an arbitrary [length](/ja/docs/MathML/Attributes/Values#Lengths)
-- movablelimits
-  - : **displaystyle** が `false` の場合に、上下に付ける記号（overscript，underscript）が上付き・下付き（superscript，subscript）の位置に移動するかどうかを指定します。
-    取り得る値は `true` または `false です。`
-- rspace
-  - : 演算子の後の空き量（値と単位については [length](/ja/docs/MathML/Attributes/Values#Lengths) を参照）。定数 `thickmathspace`（5/18em）が既定値です。
-- separator
-  - : この属性は視覚的効果を持ちませんが、演算子がカンマなどの区切り記号であるかどうかを指定します。
-    取り得る値は `true` または `false` です。
-- stretchy
-  - : Specifies whether the operator stretches to the size of the adjacent element.
-    Allowed values are `true` or `false`.
-- symmetric
-  - : **stretchy** が `true` の場合、演算子が仮想数式軸（imaginary math axis，分数線の高さの水平軸）のまわりに上下対称であるべきかどうかを指定します。
-    既定値は、**stretchy** が `true` セットされるならば `true` となり、そうでなければ `false` です。 取り得る値は `true` または `false` です。
-
-## 例
-
-```html
-<math>
-
-<mrow>
-  <mn>5</mn>
-  <mo>+</mo>
-  <mn>5</mn>
-</mrow>
-
-<mrow>
-  <mo> [ </mo> <!-- default form value: prefix -->
-  <mrow>
-    <mn> 0 </mn>
-    <mo> ; </mo> <!-- default form value: infix -->
-    <mn> 1 </mn>
-  </mrow>
-  <mo> ) </mo> <!-- default form value: postfix -->
-</mrow>
-
-</math>
-```
-
-## 仕様
-
-| 仕様                                                                         | 状態                         | コメント              |
-| ---------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mo', 'mo') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mo', 'mo') }} | {{ Spec2('MathML2') }} | 初期の仕様            |
-
-## ブラウザ実装状況
-
-{{Compat("mathml.elements.mo")}}
-
-## Gecko 固有の注記
-
-- Starting with Gecko 16.0 {{ geckoRelease("16.0") }} the default values for `lspace` and `rspace` have been corrected to match the MathML3 specification. They now default to the constant `thickmathspace` (5/18em).
-- Starting with Gecko 20.0 {{geckoRelease("20.0")}} a unitless value for `mathsize` is allowed.
-- Some `mathvariant` values are only implemented starting with Gecko 28.0 (Firefox 28.0 / Thunderbird 28.0 / SeaMonkey 2.25) and require appropriate [math fonts](/ja/docs/Mozilla/MathML_Project/Fonts).
-- Any [linebreaking](http://www.w3.org/TR/MathML3/chapter3.html#presm.lbattrs) or [indentation attributes](http://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs) are not implemented yet. See {{ bug("534962") }}.
+<ul>
+ <li>Starting with Gecko 16.0 {{ geckoRelease("16.0") }} the default values for <code>lspace</code> and <code>rspace</code> have been corrected to match the MathML3 specification. They now default to the constant <code>thickmathspace</code> (5/18em).</li>
+ <li>Starting with Gecko 20.0 {{geckoRelease("20.0")}} a unitless value for <code>mathsize</code> is allowed.</li>
+ <li>Some <code>mathvariant</code> values are only implemented starting with Gecko 28.0 (Firefox 28.0 / Thunderbird 28.0 / SeaMonkey 2.25) and require appropriate <a href="/ja/docs/Mozilla/MathML_Project/Fonts">math fonts</a>.</li>
+ <li>Any <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.lbattrs">linebreaking</a> or <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs">indentation attributes</a> are not implemented yet. See {{ bug("534962") }}.</li>
+</ul>

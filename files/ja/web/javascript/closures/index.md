@@ -10,16 +10,16 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Closures
 ---
-{{jsSidebar("Intermediate")}}
+<div>{{jsSidebar("Intermediate")}}</div>
 
-**クロージャ**は、組み合わされた（囲まれた）関数と、その周囲の状態（**レキシカル環境**）への参照の組み合わせです。言い換えれば、クロージャは内側の関数から外側の関数スコープへのアクセスを提供します。JavaScript では、関数が作成されるたびにクロージャが作成されます。
+<p><strong>クロージャ</strong>は、組み合わされた（囲まれた）関数と、その周囲の状態（<strong>レキシカル環境</strong>）への参照の組み合わせです。言い換えれば、クロージャは内側の関数から外側の関数スコープへのアクセスを提供します。JavaScript では、関数が作成されるたびにクロージャが作成されます。</p>
 
-## レキシカルスコープ
+<h2 id="Lexical_scoping" name="Lexical_scoping">レキシカルスコープ</h2>
 
-次のような関数を考えます。
+<p>次のような関数を考えます。</p>
 
-```js
-function init() {
+<div>
+<pre class="brush:js notranslate">function init() {
   var name = 'Mozilla'; // name は、init が作成するローカル変数
 
   function displayName() { // displayName() は内部に閉じた関数
@@ -27,19 +27,18 @@ function init() {
   }
   displayName();
 }
-init();
-```
+init();</pre>
+</div>
 
-`init()` 関数はローカル変数 `name` を作成し、それから関数 `displayName()` を定義しています。`displayName()` は `init()` の中で定義されている内部関数で、その関数本体の内部でしか利用できません。`displayName()` 自体はローカル変数を持っていませんが、外側の関数で宣言された変数にアクセスできるので、`displayName()` では親関数 `init()` で宣言された変数 `name` を使用できます。しかし、 `displayName()` に同じローカル変数があればそれが使われます。
+<p><code>init()</code> 関数はローカル変数 <code>name</code> を作成し、それから関数 <code>displayName()</code> を定義しています。<code>displayName()</code> は <code>init()</code> の中で定義されている内部関数で、その関数本体の内部でしか利用できません。<code>displayName()</code> 自体はローカル変数を持っていませんが、外側の関数で宣言された変数にアクセスできるので、<code>displayName()</code> では親関数 <code>init()</code> で宣言された変数 <code>name</code> を使用できます。しかし、 <code>displayName()</code> に同じローカル変数があればそれが使われます。</p>
 
-コードを [JSFiddle で実行](http://jsfiddle.net/xAFs9/3/)して、`displayName()` 関数の `alert()` 文が、親関数で定義された `name` 変数の値を表示するのを確認してください。これは*レキシカルスコープ*、つまり関数がネストされている時にパーサーが変数名を解決する方法を示す例です。*レキシカル*という言葉の触れるところは、変数のスコープはソースコード内の位置によって決定され、ネストされた関数は外側のスコープで宣言された変数にアクセスすることができます。
+<p>コードを <a href="http://jsfiddle.net/xAFs9/3/">JSFiddle で実行</a>して、<code>displayName()</code> 関数の <code>alert()</code> 文が、親関数で定義された <code>name</code> 変数の値を表示するのを確認してください。これは<em>レキシカルスコープ</em>、つまり関数がネストされている時にパーサーが変数名を解決する方法を示す例です。<em>レキシカル</em>という言葉の触れるところは、変数のスコープはソースコード内の位置によって決定され、ネストされた関数は外側のスコープで宣言された変数にアクセスすることができます。</p>
 
-## クロージャ
+<h2 id="Closure" name="Closure">クロージャ</h2>
 
-今度は次のような例を考えます。
+<p>今度は次のような例を考えます。</p>
 
-```js
-function makeFunc() {
+<pre class="brush: js notranslate">function makeFunc() {
   var name = 'Mozilla';
   function displayName() {
     alert(name);
@@ -49,18 +48,17 @@ function makeFunc() {
 
 var myFunc = makeFunc();
 myFunc();
-```
+</pre>
 
-このコードを実行すると、前の `init()` の例と全く同じように文字列 "Mozilla" が JavaScript の警告ボックスに表示されます。前の例とは異なる、興味深い点は、内部関数 `displayName()` がそれが実行される前に外側の関数から返されているという事です。
+<p>このコードを実行すると、前の <code>init()</code> の例と全く同じように文字列 "Mozilla" が JavaScript の警告ボックスに表示されます。前の例とは異なる、興味深い点は、内部関数 <code>displayName()</code> がそれが実行される前に外側の関数から返されているという事です。</p>
 
-このコードが動作するということは直感的に理解できないかもしれません。いくつかのプログラミング言語では、関数内部のローカル変数はその関数が実行されている間だけ存在します。一旦 `makeFunc()` の実行が完了したら、name 変数はもう必要とされなくなると考えた方が筋は通っています。ただこのコードが期待したとおりに動くという事は、これは明らかに JavaScript にはあてはまりません。
+<p>このコードが動作するということは直感的に理解できないかもしれません。いくつかのプログラミング言語では、関数内部のローカル変数はその関数が実行されている間だけ存在します。一旦 <code>makeFunc()</code> の実行が完了したら、name 変数はもう必要とされなくなると考えた方が筋は通っています。ただこのコードが期待したとおりに動くという事は、これは明らかに JavaScript にはあてはまりません。</p>
 
-この理由は、JavaScript の関数は*クロージャとなるためで*す。クロージャは関数とその関数が作られた環境という 2 つのものの組み合わせです。この環境は、クロージャが作られた時点でスコープ内部にあったあらゆる変数によって構成されています。この場合、`myFunc` は `makeFunc` が実行された時に作られた `displayName` 関数のインスタンスへの参照です。`displayName` のインスタンスはレキシカル環境への参照を保持し、そこに `name` 変数が存在します。このため、`makeFunc` が実行された時に、`name` 変数が残っていて "Mozilla" が `alert` に渡されます。
+<p>この理由は、JavaScript の関数は<em>クロージャとなるためで</em>す。クロージャは関数とその関数が作られた環境という 2 つのものの組み合わせです。この環境は、クロージャが作られた時点でスコープ内部にあったあらゆる変数によって構成されています。この場合、<code>myFunc</code> は <code>makeFunc</code> が実行された時に作られた <code>displayName</code> 関数のインスタンスへの参照です。<code>displayName</code> のインスタンスはレキシカル環境への参照を保持し、そこに <code>name</code> 変数が存在します。このため、<code>makeFunc</code> が実行された時に、<code>name</code> 変数が残っていて "Mozilla" が <code>alert</code> に渡されます。</p>
 
-ここにもう少し面白い例があります。`makeAdder` 関数です。
+<p>ここにもう少し面白い例があります。<code>makeAdder</code> 関数です。</p>
 
-```js
-function makeAdder(x) {
+<pre class="brush:js notranslate">function makeAdder(x) {
   return function(y) {
     return x + y;
   };
@@ -71,26 +69,25 @@ var add10 = makeAdder(10);
 
 console.log(add5(2)); // 7 と表示される
 console.log(add10(2)); // 12 と表示される
-```
+</pre>
 
-この例では、1 つの引数 `x` を取り、新しい関数を返す `makeAdder(x)` 関数を定義しています。返される関数は 1 つの引数 `y` を取り、`x` と `y` の和を返します。
+<p>この例では、1 つの引数 <code>x</code> を取り、新しい関数を返す <code>makeAdder(x)</code> 関数を定義しています。返される関数は 1 つの引数 <code>y</code> を取り、<code>x</code> と <code>y</code> の和を返します。</p>
 
-要するに、`makeAdder` は関数ファクトリです。これは与えられた引数に特定の値を足す関数を作ります。上の例では関数ファクトリを使って 2 つの新しい関数を作成しています。1 つは引数に 5 を加えるもので、もう 1 つは 10 を加えるものです。
+<p>要するに、<code>makeAdder</code> は関数ファクトリです。これは与えられた引数に特定の値を足す関数を作ります。上の例では関数ファクトリを使って 2 つの新しい関数を作成しています。1 つは引数に 5 を加えるもので、もう 1 つは 10 を加えるものです。</p>
 
-`add5` と `add10` は両方ともクロージャです。両者は同じ関数本体の定義を共有していますが、保有している環境は異なります。`add5` の環境では `x` は 5 で、`add10` の環境では `x` は 10 です。
+<p><code>add5</code> と <code>add10</code> は両方ともクロージャです。両者は同じ関数本体の定義を共有していますが、保有している環境は異なります。<code>add5</code> の環境では <code>x</code> は 5 で、<code>add10</code> の環境では <code>x</code> は 10 です。</p>
 
-## 実用的なクロージャ
+<h2 id="Practical_closures" name="Practical_closures">実用的なクロージャ</h2>
 
-理論はこれぐらいにしておくとして、クロージャは実際の役に立つのでしょうか? クロージャの実用上の意義を考えてみましょう。クロージャを使うと、データ (環境) をそれを操作する関数と結びつける事が出来ます。これはオブジェクトを使ってデータ (オブジェクトのプロパティ) を 1 つかそれ以上のメソッドと結びつける事が出来るオブジェクト指向プログラミングと明らかに類似しています。
+<p>理論はこれぐらいにしておくとして、クロージャは実際の役に立つのでしょうか? クロージャの実用上の意義を考えてみましょう。クロージャを使うと、データ (環境) をそれを操作する関数と結びつける事が出来ます。これはオブジェクトを使ってデータ (オブジェクトのプロパティ) を 1 つかそれ以上のメソッドと結びつける事が出来るオブジェクト指向プログラミングと明らかに類似しています。</p>
 
-したがって、メソッドを 1 つだけ持つオブジェクトを使いたくなるような状況ならば、どんな時でもクロージャを使う事ができます。
+<p>したがって、メソッドを 1 つだけ持つオブジェクトを使いたくなるような状況ならば、どんな時でもクロージャを使う事ができます。</p>
 
-ウェブではこのような状況はよくあります。私たちが書く JavaScript のコードは大半がイベントベースです。つまり、ある動作を定義し、それを click や keypress といったユーザーによって引き起こされるイベントに取り付けます。私たちのコードの多くはコールバック、すなわちイベントに反応して実行される単独の関数として取り付けられます。
+<p>ウェブではこのような状況はよくあります。私たちが書く JavaScript のコードは大半がイベントベースです。つまり、ある動作を定義し、それを click や keypress といったユーザーによって引き起こされるイベントに取り付けます。私たちのコードの多くはコールバック、すなわちイベントに反応して実行される単独の関数として取り付けられます。</p>
 
-実例を挙げましょう。あるページにそのページのテキストの大きさを調整するためのボタンを追加しようとしているとします。1 つの方法として、まず `body` 要素の font-size をピクセル数で指定して、そのページ内の (見出しなどの) 他の要素のサイズを相対単位 `em` で設定します。
+<p>実例を挙げましょう。あるページにそのページのテキストの大きさを調整するためのボタンを追加しようとしているとします。1 つの方法として、まず <code>body</code> 要素の font-size をピクセル数で指定して、そのページ内の (見出しなどの) 他の要素のサイズを相対単位 <code>em</code> で設定します。</p>
 
-```css
-body {
+<pre class="brush:css notranslate">body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
@@ -102,14 +99,13 @@ h1 {
 h2 {
  font-size: 1.2em;
 }
-```
+</pre>
 
-これから作る対話式のテキストサイズ調整ボタンは、`body` 要素の `font-size` プロパティを変更し、その変更は相対単位によってページ上のほかの要素にも適用されます。
+<p>これから作る対話式のテキストサイズ調整ボタンは、<code>body</code> 要素の <code>font-size</code> プロパティを変更し、その変更は相対単位によってページ上のほかの要素にも適用されます。</p>
 
-JavaScript のコード:
+<p>JavaScript のコード:</p>
 
-```js
-function makeSizer(size) {
+<pre class="brush:js notranslate">function makeSizer(size) {
   return function() {
     document.body.style.fontSize = size + 'px';
   };
@@ -117,35 +113,30 @@ function makeSizer(size) {
 
 var size12 = makeSizer(12);
 var size14 = makeSizer(14);
-var size16 = makeSizer(16);
-```
+var size16 = makeSizer(16);</pre>
 
-`size12`、`size14`、`size16` はそれぞれ body のテキストサイズを 12、14、16 px に変更する関数になっています。これらは以下のようにしてボタン (この場合はリンク) に取り付けられます。
+<p><code>size12</code>、<code>size14</code>、<code>size16</code> はそれぞれ body のテキストサイズを 12、14、16 px に変更する関数になっています。これらは以下のようにしてボタン (この場合はリンク) に取り付けられます。</p>
 
-```js
-document.getElementById('size-12').onclick = size12;
+<pre class="brush:js notranslate">document.getElementById('size-12').onclick = size12;
 document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
-```
+document.getElementById('size-16').onclick = size16;</pre>
 
-```html
-<a href="#" id="size-12">12</a>
-<a href="#" id="size-14">14</a>
-<a href="#" id="size-16">16</a>
-```
+<pre class="brush:html notranslate">&lt;a href="#" id="size-12"&gt;12&lt;/a&gt;
+&lt;a href="#" id="size-14"&gt;14&lt;/a&gt;
+&lt;a href="#" id="size-16"&gt;16&lt;/a&gt;
+</pre>
 
-[JSFiddle](https://jsfiddle.net/vnkuZ/7726/) でコードを実行します。
+<p><a href="https://jsfiddle.net/vnkuZ/7726/">JSFiddle</a> でコードを実行します。</p>
 
-## クロージャでプライベートメソッドを模倣する
+<h2 id="Emulating_private_methods_with_closures" name="Emulating_private_methods_with_closures">クロージャでプライベートメソッドを模倣する</h2>
 
-Java などの言語ではプライベートなメソッドを宣言することが出来ます。これは同じクラス内にあるほかのメソッドからのみ呼び出せるメソッドのことです。
+<p>Java などの言語ではプライベートなメソッドを宣言することが出来ます。これは同じクラス内にあるほかのメソッドからのみ呼び出せるメソッドのことです。</p>
 
-JavaScript にはこういった機能は組み込まれていませんが、クロージャを使うとプライベートメソッドを模倣する事ができます。プライベートメソッドはコードへのアクセスを制限するのに役立つだけではなく、コードのパブリックインターフェイスが不要なメソッドでいっぱいになるのを防ぐため、グローバル名前空間を管理するのに非常に有効です。
+<p>JavaScript にはこういった機能は組み込まれていませんが、クロージャを使うとプライベートメソッドを模倣する事ができます。プライベートメソッドはコードへのアクセスを制限するのに役立つだけではなく、コードのパブリックインターフェイスが不要なメソッドでいっぱいになるのを防ぐため、グローバル名前空間を管理するのに非常に有効です。</p>
 
-[モジュールパターン](http://www.google.com/search?q=javascript+module+pattern)としても知られる、クロージャを使って、プライベートな関数と変数にアクセスできるパブリック関数を定義するにはこのようにします。
+<p><a href="http://www.google.com/search?q=javascript+module+pattern">モジュールパターン</a>としても知られる、クロージャを使って、プライベートな関数と変数にアクセスできるパブリック関数を定義するにはこのようにします。</p>
 
-```js
-var counter = (function() {
+<pre class="brush: js notranslate">var counter = (function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -174,18 +165,19 @@ console.log(counter.value());  // 2.
 
 counter.decrement();
 console.log(counter.value());  // 1.
-```
+</pre>
 
-ここでは色々な事が行われています。前の例ではクロージャがそれぞれ独自の環境を持っていましたが、この例では環境が 1 つだけ作成され、その環境は `counter.increment`, `counter.decrement`, `counter.value` という 3 つの関数によって共有されています。
+<p>ここでは色々な事が行われています。前の例ではクロージャがそれぞれ独自の環境を持っていましたが、この例では環境が 1 つだけ作成され、その環境は <code>counter.increment</code>, <code>counter.decrement</code>, <code>counter.value</code> という 3 つの関数によって共有されています。</p>
 
-この共有レキシカル環境は、_定義されるとすぐに実行される_（IIFE とも呼ばれます）無名関数の本文で作成されています。この環境は変数 `privateCounter` と関数 `changeBy` という 2 つのプライベートアイテムを含んでいます。これらはどちらも無名関数の外側からは直接アクセス出来ません。その代わり、この無名ラッパ関数から返される 3 つのパブリック関数からはアクセスできます。
+<p>この共有レキシカル環境は、<em>定義されるとすぐに実行される</em>（IIFE とも呼ばれます）無名関数の本文で作成されています。この環境は変数 <code>privateCounter</code> と関数 <code>changeBy</code> という 2 つのプライベートアイテムを含んでいます。これらはどちらも無名関数の外側からは直接アクセス出来ません。その代わり、この無名ラッパ関数から返される 3 つのパブリック関数からはアクセスできます。</p>
 
-これら 3 つのパブリック関数は同じ環境を共有するクロージャです。JavaScript のレキシカルスコープにより、これらの関数はそれぞれが変数 `privateCounter` と関数 `changeBy` にアクセスできます。
+<p>これら 3 つのパブリック関数は同じ環境を共有するクロージャです。JavaScript のレキシカルスコープにより、これらの関数はそれぞれが変数 <code>privateCounter</code> と関数 <code>changeBy</code> にアクセスできます。</p>
 
-> **Note:** カウンターを作成する無名関数を定義して、それをすぐに呼び出して結果を `counter` 変数に代入していることに注目してください。この関数を別の変数 `makeCounter` に格納し、複数のカウンターを作成するために使用することができます。
+<div class="note">
+<p>カウンターを作成する無名関数を定義して、それをすぐに呼び出して結果を <code>counter</code> 変数に代入していることに注目してください。この関数を別の変数 <code>makeCounter</code> に格納し、複数のカウンターを作成するために使用することができます。</p>
+</div>
 
-```js
-var makeCounter = function() {
+<pre class="brush: js notranslate">var makeCounter = function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -217,24 +209,27 @@ alert(counter1.value()); // 2.
 counter1.decrement();
 alert(counter1.value()); // 1.
 alert(counter2.value()); // 0.
-```
+</pre>
 
-2 つのカウンターが互いに独立した状態を維持していることに注目してください。各クロージャは、独自のクロージャを介して異なるバージョンの `privateCounter` 変数を参照しています。カウンターのいずれかが呼び出されるたびに、この変数の値を変更することで、そのレキシカル環境が変化します。あるクロージャで変数値を変更しても、もう一方のクロージャの値には影響しません。
+<p>2 つのカウンターが互いに独立した状態を維持していることに注目してください。各クロージャは、独自のクロージャを介して異なるバージョンの <code>privateCounter</code> 変数を参照しています。カウンターのいずれかが呼び出されるたびに、この変数の値を変更することで、そのレキシカル環境が変化します。あるクロージャで変数値を変更しても、もう一方のクロージャの値には影響しません。</p>
 
-> **Note:** このようにしてクロージャを使うと、普通はオブジェクト指向プログラミングに付き物のいくつかの利点、具体的には*データの隠蔽*や*カプセル化*が利用できるようになります。
+<div class="note">
+<p>このようにしてクロージャを使うと、普通はオブジェクト指向プログラミングに付き物のいくつかの利点、具体的には<em>データの隠蔽</em>や<em>カプセル化</em>が利用できるようになります。</p>
+</div>
 
-## クロージャのスコープチェーン
+<h2 id="Closure_Scope_Chain" name="Closure_Scope_Chain">クロージャのスコープチェーン</h2>
 
-すべてのクロージャには 3 つのスコープがあります。
+<p>すべてのクロージャには 3 つのスコープがあります。</p>
 
-- ローカルスコープ（独自のスコープ）
-- 外側の関数スコープ
-- グローバルスコープ
+<ul>
+ <li>ローカルスコープ（独自のスコープ）</li>
+ <li>外側の関数スコープ</li>
+ <li>グローバルスコープ</li>
+</ul>
 
-よくある間違いは、外側の関数がネストされた関数である場合、外側の関数スコープへのアクセスにはさらに外側の関数スコープが含まれており。実質的にスコープチェーンが生じていることに気づかないことです。次のコードの例を考えてみましょう。
+<p>よくある間違いは、外側の関数がネストされた関数である場合、外側の関数スコープへのアクセスにはさらに外側の関数スコープが含まれており。実質的にスコープチェーンが生じていることに気づかないことです。次のコードの例を考えてみましょう。</p>
 
-```js
-// グローバルスコープ
+<pre class="brush: js notranslate">// グローバルスコープ
 var e = 10;
 function sum(a){
   return function(b){
@@ -271,23 +266,21 @@ var s1 = s(2);
 var s2 = s1(3);
 var s3 = s2(4);
 console.log(s3) //log 20
-```
+</pre>
 
-上記の例では、一連のネストされた関数があり、それらはすべて外側の関数スコープにアクセスできます。この文脈では、クロージャは*すべて*の外側の関数スコープにアクセスできると言えます。
+<p>上記の例では、一連のネストされた関数があり、それらはすべて外側の関数スコープにアクセスできます。この文脈では、クロージャは<em>すべて</em>の外側の関数スコープにアクセスできると言えます。</p>
 
-## よくある間違い: ループ内でクロージャを作成する
+<h2 id="Creating_closures_in_loops_A_common_mistake" name="Creating_closures_in_loops_A_common_mistake">よくある間違い: ループ内でクロージャを作成する</h2>
 
-ECMAScript 2015 で [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let "let") キーワードが導入される前までは、ループの内部でクロージャが作成された時にある問題がよく起こっていました。次のような例を考えてみます。
+<p>ECMAScript 2015 で <a href="/ja/docs/Web/JavaScript/Reference/Statements/let" title="let"><code>let</code></a> キーワードが導入される前までは、ループの内部でクロージャが作成された時にある問題がよく起こっていました。次のような例を考えてみます。</p>
 
-```html
-<p id="help">ここにヘルプが表示されます</p>
-<p>E メール: <input type="text" id="email" name="email"></p>
-<p>名前: <input type="text" id="name" name="name"></p>
-<p>年齢: <input type="text" id="age" name="age"></p>
-```
+<pre class="brush:html notranslate">&lt;p id="help"&gt;ここにヘルプが表示されます&lt;/p&gt;
+&lt;p&gt;E メール: &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;
+&lt;p&gt;名前: &lt;input type="text" id="name" name="name"&gt;&lt;/p&gt;
+&lt;p&gt;年齢: &lt;input type="text" id="age" name="age"&gt;&lt;/p&gt;
+</pre>
 
-```js
-function showHelp(help) {
+<pre class="brush: js notranslate">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -298,7 +291,7 @@ function setupHelp() {
     {'id': 'age', 'help': 'あなたの年齢 (17 歳以上)'}
   ];
 
-  for (var i = 0; i < helpText.length; i++) {
+  for (var i = 0; i &lt; helpText.length; i++) {
     var item = helpText[i];
     document.getElementById(item.id).onfocus = function() {
       showHelp(item.help);
@@ -307,20 +300,19 @@ function setupHelp() {
 }
 
 setupHelp();
-```
+</pre>
 
-[JSFiddle](https://jsfiddle.net/v7gjv/8164/) でコードを実行します。
+<p><a href="https://jsfiddle.net/v7gjv/8164/">JSFiddle</a> でコードを実行します。</p>
 
-配列 `helpText` は 3 つのヘルプを定義しており、それぞれがドキュメント内の入力フィールドの ID と関連付けられています。ループがこれらの定義を巡回して、それぞれの入力フィールドの onfocus イベントをそれに関連付けられたヘルプを表示するメソッドと結び付けています。
+<p>配列 <code>helpText</code> は 3 つのヘルプを定義しており、それぞれがドキュメント内の入力フィールドの ID と関連付けられています。ループがこれらの定義を巡回して、それぞれの入力フィールドの onfocus イベントをそれに関連付けられたヘルプを表示するメソッドと結び付けています。</p>
 
-このコードを実行してみると、期待したとおりには動かないのが判ります。どのフィールドにフォーカスしても、表示されるのは年齢についてのメッセージです。
+<p>このコードを実行してみると、期待したとおりには動かないのが判ります。どのフィールドにフォーカスしても、表示されるのは年齢についてのメッセージです。</p>
 
-こうなる理由は、`onfocus` に代入された関数がクロージャだからです。このクロージャは、関数定義と、`setupHelp` 関数スコープから捕捉された環境から成っています。クロージャは 3 つ作られましたが、これらはみな 1 つの同じ環境を共有しています。`onfocus` コールバックが実行される時にはループはすべて終了しており、変数 item (3 つのクロージャ全てに共有されている) は `helpText` リストの最後の項目を示したままにされています。
+<p>こうなる理由は、<code>onfocus</code> に代入された関数がクロージャだからです。このクロージャは、関数定義と、<code>setupHelp</code> 関数スコープから捕捉された環境から成っています。クロージャは 3 つ作られましたが、これらはみな 1 つの同じ環境を共有しています。<code>onfocus</code> コールバックが実行される時にはループはすべて終了しており、変数 item (3 つのクロージャ全てに共有されている) は <code>helpText</code> リストの最後の項目を示したままにされています。</p>
 
-こういった場合の解決策の 1 つとして、より多くのクロージャを使う方法があります。具体的には、前に述べたような関数ファクトリを使います。
+<p>こういった場合の解決策の 1 つとして、より多くのクロージャを使う方法があります。具体的には、前に述べたような関数ファクトリを使います。</p>
 
-```js
-function showHelp(help) {
+<pre class="brush:js notranslate">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -337,23 +329,22 @@ function setupHelp() {
       {'id': 'age', 'help': '年齢 (17歳以上)'}
     ];
 
-  for (var i = 0; i < helpText.length; i++) {
+  for (var i = 0; i &lt; helpText.length; i++) {
     var item = helpText[i];
     document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
   }
 }
 
 setupHelp();
-```
+</pre>
 
-[JSFiddle](https://jsfiddle.net/v7gjv/9573/) でコードを実行します。
+<p><a href="https://jsfiddle.net/v7gjv/9573/">JSFiddle</a> でコードを実行します。</p>
 
-これは期待通り動きます。全てのコールバックが 1 つの環境を共有するのではなく、`makeHelpCallback` 関数がそれぞれに対して*新しいレキシカル環境*を作っており、そこでは `help` が配列 `helpText` の対応する文字列を参照しています。
+<p>これは期待通り動きます。全てのコールバックが 1 つの環境を共有するのではなく、<code>makeHelpCallback</code> 関数がそれぞれに対して<em>新しいレキシカル環境</em>を作っており、そこでは <code>help</code> が配列 <code>helpText</code> の対応する文字列を参照しています。</p>
 
-上のものを匿名クロージャを使って書く、他の方法もあります:
+<p>上のものを匿名クロージャを使って書く、他の方法もあります:</p>
 
-```js
-function showHelp(help) {
+<pre class="brush: js notranslate">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -364,7 +355,7 @@ function setupHelp() {
       {'id': 'age', 'help': '年齢 (17歳以上)'}
     ];
 
-  for (var i = 0; i < helpText.length; i++) {
+  for (var i = 0; i &lt; helpText.length; i++) {
     (function() {
        var item = helpText[i];
        document.getElementById(item.id).onfocus = function() {
@@ -374,13 +365,11 @@ function setupHelp() {
   }
 }
 
-setupHelp();
-```
+setupHelp();</pre>
 
-これ以上クロージャを使いたくない場合、ES2015 で導入された [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) キーワードも使用できます:
+<p>これ以上クロージャを使いたくない場合、ES2015 で導入された <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code> キーワードも使用できます:</p>
 
-```js
-function showHelp(help) {
+<pre class="brush: js notranslate">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -391,7 +380,7 @@ function setupHelp() {
       {'id': 'age', 'help': '年齢 (17歳以上)'}
     ];
 
-  for (var i = 0; i < helpText.length; i++) {
+  for (var i = 0; i &lt; helpText.length; i++) {
     let item = helpText[i];
     document.getElementById(item.id).onfocus = function() {
       showHelp(item.help);
@@ -399,15 +388,13 @@ function setupHelp() {
   }
 }
 
-setupHelp();
-```
+setupHelp();</pre>
 
-この例では `var` の代わりに `let` を使っているため、すべてのクロージャがブロックスコープの変数をバインドしており、つまり追加のクロージャは要求されません。
+<p>この例では <code>var</code> の代わりに <code>let</code> を使っているため、すべてのクロージャがブロックスコープの変数をバインドしており、つまり追加のクロージャは要求されません。</p>
 
-他の方法として、以下のように `forEach()` を使用して配列 `helpText` を操作し、それぞれの {{htmlelement("div")}} にリスナーを割り当てることができます。
+<p>他の方法として、以下のように <code>forEach()</code> を使用して配列 <code>helpText</code> を操作し、それぞれの {{htmlelement("div")}} にリスナーを割り当てることができます。</p>
 
-```js
-function showHelp(help) {
+<pre class="brush: js notranslate">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -425,19 +412,17 @@ function setupHelp() {
   });
 }
 
-setupHelp();
-```
+setupHelp();</pre>
 
-## パフォーマンスへの配慮
+<h2 id="Performance_considerations" name="Performance_considerations">パフォーマンスへの配慮</h2>
 
-あるタスクを実行する時、クロージャが必要とされていないのにいたずらに関数を他の関数の中に作成するのは、スクリプトのパフォーマンスに悪影響を及ぼすのであまり賢いやり方ではありません。
+<p>あるタスクを実行する時、クロージャが必要とされていないのにいたずらに関数を他の関数の中に作成するのは、スクリプトのパフォーマンスに悪影響を及ぼすのであまり賢いやり方ではありません。</p>
 
-例えば、新しくオブジェクト/クラスを作成する時、一般的にメソッドはオブジェクトのコンストラクタの中で定義するのではなく、オブジェクトのプロトタイプに結びつけるべきです。コンストラクタの中で定義してしまうと、コンストラクタが呼び出されるたびに (つまりオブジェクトが作成されるたびに) メソッドが再代入されてしまうことになるからです。
+<p>例えば、新しくオブジェクト/クラスを作成する時、一般的にメソッドはオブジェクトのコンストラクタの中で定義するのではなく、オブジェクトのプロトタイプに結びつけるべきです。コンストラクタの中で定義してしまうと、コンストラクタが呼び出されるたびに (つまりオブジェクトが作成されるたびに) メソッドが再代入されてしまうことになるからです。</p>
 
-次の実践的ではない例証のためのケースを考えます。
+<p>次の実践的ではない例証のためのケースを考えます。</p>
 
-```js
-function MyObject(name, message) {
+<pre class="brush: js notranslate">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
   this.getName = function() {
@@ -448,12 +433,11 @@ function MyObject(name, message) {
     return this.message;
   };
 }
-```
+</pre>
 
-上のコードではクロージャを使う事によって得るものが何もないので、再構成するべきです。
+<p>上のコードではクロージャを使う事によって得るものが何もないので、再構成するべきです。</p>
 
-```js
-function MyObject(name, message) {
+<pre class="brush: js notranslate">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
@@ -465,12 +449,11 @@ MyObject.prototype = {
     return this.message;
   }
 };
-```
+</pre>
 
-ただし、プロトタイプの再定義は推奨されません。以下の例のように既存のプロトタイプに追加するのがより好ましい方法です。
+<p>ただし、プロトタイプの再定義は推奨されません。以下の例のように既存のプロトタイプに追加するのがより好ましい方法です。</p>
 
-```js
-function MyObject(name, message) {
+<pre class="brush: js notranslate">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
@@ -480,6 +463,6 @@ MyObject.prototype.getName = function() {
 MyObject.prototype.getMessage = function() {
   return this.message;
 };
-```
+</pre>
 
-上の 2 つの例では、プロトタイプが継承されて全てのオブジェクトによって共有されるため、オブジェクトが作成されるたびにメソッドが定義されずに済みます。詳しくは[オブジェクトモデルの詳細](/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model) を参照して下さい。
+<p>上の 2 つの例では、プロトタイプが継承されて全てのオブジェクトによって共有されるため、オブジェクトが作成されるたびにメソッドが定義されずに済みます。詳しくは<a href="/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">オブジェクトモデルの詳細</a> を参照して下さい。</p>

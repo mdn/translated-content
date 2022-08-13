@@ -9,48 +9,58 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`valueOf()`** メソッドは、{{jsxref("Date")}} オブジェクトのプリミティブ値を返します。
+<p><strong><code>valueOf()</code></strong> メソッドは、{{jsxref("Date")}} オブジェクトのプリミティブ値を返します。</p>
 
-{{EmbedInteractiveExample("pages/js/date-valueof.html")}}
+<div>{{EmbedInteractiveExample("pages/js/date-valueof.html")}}</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    dateObj.valueOf()
+<pre class="syntaxbox notranslate"><var>dateObj</var>.valueOf()</pre>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から指定された日時までの間のミリ秒単位の数値。
+<p>協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から指定された日時までの間のミリ秒単位の数値。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-`valueOf()` メソッドは、{{jsxref("Date")}} オブジェクトのプリミティブ値を数値型で返します。これは、1970 年 1 月 1 日 00:00:00 (UTC) からのミリ秒単位の数値です。
+<p><code>valueOf()</code> メソッドは、{{jsxref("Date")}} オブジェクトのプリミティブ値を数値型で返します。これは、1970 年 1 月 1 日 00:00:00 (UTC) からのミリ秒単位の数値です。</p>
 
-このメソッドは、{{jsxref("Date.prototype.getTime()")}} メソッドと機能的に同等です。
+<p>このメソッドは、{{jsxref("Date.prototype.getTime()")}} メソッドと機能的に同等です。</p>
 
-このメソッドは、JavaScript によって内部的に呼ばれ、コード内で明示的に呼ばれることはありません。
+<p>このメソッドは、JavaScript によって内部的に呼ばれ、コード内で明示的に呼ばれることはありません。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### valueOf() の使用
+<h3 id="Using_valueOf" name="Using_valueOf">valueOf() の使用</h3>
 
-```js
-var x = new Date(56, 6, 17);
+<pre class="brush: js notranslate">var x = new Date(56, 6, 17);
 var myVar = x.valueOf();      // myVar に -424713600000 を代入
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.valueof', 'Date.prototype.valueOf')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-date.prototype.valueof', 'Date.prototype.valueOf')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Date.valueOf")}}
+<p>{{Compat("javascript.builtins.Date.valueOf")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Object.prototype.valueOf()")}}
-- {{jsxref("Date.prototype.getTime()")}}
+<ul>
+ <li>{{jsxref("Object.prototype.valueOf()")}}</li>
+ <li>{{jsxref("Date.prototype.getTime()")}}</li>
+</ul>

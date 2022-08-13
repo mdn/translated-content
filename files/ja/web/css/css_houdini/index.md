@@ -10,70 +10,74 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Houdini
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-**CSS Houdini** は、 CSS エンジンの一部を公開する一連の API です。これにより、開発者は CSS の拡張機能を簡単に作成することができます。これらの拡張機能は、ブラウザーでまだ利用できない機能を代替したり、レイアウトの新しい方法を試したり、クリエイティブな境界線やその他の効果を追加したりするものです。
+<p><strong>CSS Houdini</strong> は、 CSS エンジンの一部を公開する一連の API です。これにより、開発者は CSS の拡張機能を簡単に作成することができます。これらの拡張機能は、ブラウザーでまだ利用できない機能を代替したり、レイアウトの新しい方法を試したり、クリエイティブな境界線やその他の効果を追加したりするものです。</p>
 
-多くの Houdini の例では、 API の創造的な可能性が紹介されていますが、実用的な使用例もたくさんあります。例えば、 Houdini を使って、型のチェックや既定値を持つ高度なカスタムプロパティを作成することができます。
+<p>多くの Houdini の例では、 API の創造的な可能性が紹介されていますが、実用的な使用例もたくさんあります。例えば、 Houdini を使って、型のチェックや既定値を持つ高度なカスタムプロパティを作成することができます。</p>
 
-## 基本的な例
+<h2 id="Basic_example">基本的な例</h2>
 
-通常の [CSS カスタムプロパティ](/ja/docs/Web/CSS/--*)は、プロパティの名前と値から成ります。したがって、 `--background-color` というカスタムプロパティを生成し、色の値を取るようにするとします。この値は、 CSS 内で色の値であるかのように扱われます。
+<p>通常の <a href="/ja/docs/Web/CSS/--*">CSS カスタムプロパティ</a>は、プロパティの名前と値から成ります。したがって、 <code>--background-color</code> というカスタムプロパティを生成し、色の値を取るようにするとします。この値は、 CSS 内で色の値であるかのように扱われます。</p>
 
-```css
-:root {
+<pre class="brush:css">:root {
   --background-color: blue;
 }
 
 .box {
   background-color: var(--background-color);
-}
-```
+}</pre>
 
-しかし、上記の例では、このプロパティに他の値を使用したり、長さを設定することを止めることはできません。そうすると、 `background-color: 12px` は有効ではないので、このプロパティが使用されている場所には背景色が設定されません。ブラウザーは、有効でないと認識した CSS に出会うと、その行を捨ててしまうからです。
+<p>しかし、上記の例では、このプロパティに他の値を使用したり、長さを設定することを止めることはできません。そうすると、 <code>background-color: 12px</code> は有効ではないので、このプロパティが使用されている場所には背景色が設定されません。ブラウザーは、有効でないと認識した CSS に出会うと、その行を捨ててしまうからです。</p>
 
-しかし {{cssxref("@property")}} を使用すると、 {{CSSxRef("@property/syntax","syntax")}} に `<color>` を指定してカスタムプロパティを設定することができます。これは、このプロパティが有効な色である値を持つ必要があることを示します。
+<p>しかし {{cssxref("@property")}} を使用すると、 {{CSSxRef("@property/syntax","syntax")}} に <code>&lt;color&gt;</code> を指定してカスタムプロパティを設定することができます。これは、このプロパティが有効な色である値を持つ必要があることを示します。</p>
 
-```css
-@property --background-color {
-  syntax: '<color>';
+<pre class="brush:css">@property --background-color {
+  syntax: '&lt;color&gt;';
   inherits: false;
   initial-value: blue;
-}
-```
+}</pre>
 
-## Houdini ワークレット
+<h2 id="Houdini_worklets">Houdini ワークレット</h2>
 
-Houdini の機能の一つにワークレット ({{domxref("Worklet")}}) があります。ワークレットとは JavaScript で書かれたモジュールで、 Houdini の API の一つを使って CSS を拡張するものです。ワークレットの例は {{domxref("PaintWorklet.registerPaint()")}} のページで見ることができます。いったんワークレットが登録されると、他の値と同様に CSS で使用することができます。つまり、 JavaScript の開発者でなくても、他の人が作成したワークレットを使って Houdini API にアクセスすることができます。
+<p>Houdini の機能の一つにワークレット ({{domxref("Worklet")}}) があります。ワークレットとは JavaScriptで書かれたモジュールで、 Houdini の API の一つを使って CSS を拡張するものです。ワークレットの例は {{domxref("PaintWorklet.registerPaint()")}} のページで見ることができます。いったんワークレットが登録されると、他の値と同様に CSS で使用することができます。つまり、 JavaScript の開発者でなくても、他の人が作成したワークレットを使って Houdini API にアクセスすることができます。</p>
 
-[Houdini.how](https://houdini.how/) のウェブサイトには、自分のサイトで試すことができるたくさんのワークレットがあります。
+<p><a href="https://houdini.how/">Houdini.how</a> のウェブサイトには、自分のサイトで試すことができるたくさんのワークレットがあります。</p>
 
-## リファレンス
+<h2 id="Reference">リファレンス</h2>
 
-### CSS アット規則と記述子
+<h3 id="CSS_at_rule">CSS アット規則と記述子</h3>
 
-{{CSSxRef("@property")}} アット規則で高度なカスタムプロパティを登録することができます。
+<p>{{CSSxRef("@property")}} アット規則で高度なカスタムプロパティを登録することができます。</p>
 
-- {{CSSxRef("@property")}}
-- {{CSSxRef("@property/inherits","inherits")}}
-- {{CSSxRef("@property/initial-value","initial-value")}}
-- {{CSSxRef("@property/syntax","syntax")}}
+<ul>
+ <li>{{CSSxRef("@property")}}</li>
+ <li>{{CSSxRef("@property/inherits","inherits")}}</li>
+ <li>{{CSSxRef("@property/initial-value","initial-value")}}</li>
+ <li>{{CSSxRef("@property/syntax","syntax")}}</li>
+</ul>
 
-### Houdini API リファレンス
+<h3 id="Houdini_API_references">Houdini API リファレンス</h3>
 
-- {{domxref("CSS_Properties_and_Values_API")}}
-- {{domxref("CSS_Typed_OM_API")}}
-- {{domxref("CSS_Painting_API")}}
-- {{domxref("Worklet")}} のリファレンス
+<ul>
+  <li>{{domxref("CSS_Properties_and_Values_API")}}</li>
+  <li>{{domxref("CSS_Typed_OM_API")}}</li>
+  <li>{{domxref("CSS_Painting_API")}}</li>
+  <li>{{domxref("Worklet")}} のリファレンス</li>
+</ul>
 
-### Houdini ガイド
+<h3 id="Houdini_guides">Houdini ガイド</h3>
 
-- [プロパティと値 API ガイド](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
-- [型付き OM API ガイド](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS Painting API の使用](/ja/docs/Web/API/CSS_Painting_API/Guide)
+<ul>
+  <li><a href="/ja/docs/Web/API/CSS_Properties_and_Values_API/guide">プロパティと値 API ガイド</a></li>
+  <li><a href="/ja/docs/Web/API/CSS_Typed_OM_API/Guide">型付き OM API ガイド</a></li>
+  <li><a href="/ja/docs/Web/API/CSS_Painting_API/Guide">CSS Painting API の使用</a></li>
+</ul>
 
-## 外部リソース
+<h2 id="External_resources">外部リソース</h2>
 
-- [Interactive introduction to Houdini](http://houdini.glitch.me/)
-- [A Practical Overview of CSS Houdini](https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/)
-- [Smarter custom properties with Houdini's new API](https://web.dev/css-props-and-vals/)
+<ul>
+ <li><a href="http://houdini.glitch.me/">Interactive introduction to Houdini</a></li>
+ <li><a href="https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/">A Practical Overview of CSS Houdini</a></li>
+ <li><a href="https://web.dev/css-props-and-vals/">Smarter custom properties with Houdini's new API</a></li>
+</ul>

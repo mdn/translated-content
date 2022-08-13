@@ -7,19 +7,18 @@ tags:
   - Link
   - Link types
   - Reference
-translation_of: Web/HTML/Link_types/preconnect
 browser-compat: html.elements.link.rel.preconnect
+translation_of: Web/HTML/Link_types/preconnect
 ---
-**`preconnect`** キーワードを {{HTMLElement("link")}} 要素の {{HTMLAttrxRef("rel", "link")}} 属性に使用すると、ユーザーがターゲットリソースのオリジンからのリソースを必要とする可能性が高いことをブラウザーに示唆します。そのため、ブラウザーはそのオリジンへの接続を事前に開始することでユーザーの操作性を向上させることができる可能性があります。
+<p><span class="seoSummary"><strong><code>preconnect</code></strong> キーワードを {{HTMLElement("link")}} 要素の {{HTMLAttrxRef("rel", "link")}} 属性に使用すると、ユーザーがターゲットリソースのオリジンからのリソースを必要とする可能性が高いことをブラウザーに示唆します。そのため、ブラウザーはそのオリジンへの接続を事前に開始することでユーザーの操作性を向上させることができる可能性があります。</span></p>
 
-```html
-<link rel="preconnect" href="https://example.com">
-```
+<pre class="brush: html">&lt;link rel="preconnect" href="https://example.com"&gt;
+</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

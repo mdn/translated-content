@@ -9,31 +9,33 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`toLocaleString()`** メソッドは、配列の要素を表す文字列を返します。配列の要素は、それぞれの `toLocaleString` メソッドを使い、ロケール固有の文字列に変換されます (例えばカンマ “,”など)。
+<p><strong><code>toLocaleString()</code></strong> メソッドは、配列の要素を表す文字列を返します。配列の要素は、それぞれの <code>toLocaleString</code> メソッドを使い、ロケール固有の文字列に変換されます (例えばカンマ “,”など)。</p>
 
-{{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}
+<div>{{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    arr.toLocaleString([locales[, options]]);
+<pre class="syntaxbox notranslate"><var>arr</var>.toLocaleString([<var>locales[</var>, <var>options]]</var>);
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列か、その配列です。`locales` 引数の一般的な形式と解釈については {{jsxref("Intl")}} ページを参照してください。
-- `options` {{optional_inline}}
-  - : 設定プロパティのオブジェクトです。数値に関しては {{jsxref("Number.prototype.toLocaleString()")}} を、日付に関しては {{jsxref("Date.prototype.toLocaleString()")}} を見てください。
+<dl>
+ <dt><code>locales</code> {{optional_inline}}</dt>
+ <dd>BCP 47 言語タグの文字列か、その配列です。<code>locales</code> 引数の一般的な形式と解釈については {{jsxref("Intl")}} ページを参照してください。</dd>
+ <dt><code>options</code> {{optional_inline}}</dt>
+ <dd>設定プロパティのオブジェクトです。数値に関しては {{jsxref("Number.prototype.toLocaleString()")}} を、日付に関しては {{jsxref("Date.prototype.toLocaleString()")}} を見てください。</dd>
+</dl>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-配列の要素を表す文字列です。
+<p>配列の要素を表す文字列です。</p>
 
-## ポリフィル
+<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
 
-```js
-// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
+<pre class="brush: js notranslate">// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
   Object.defineProperty(Array.prototype, 'toLocaleString', {
     value: function(locales, options) {
@@ -45,7 +47,7 @@ if (!Array.prototype.toLocaleString) {
       var a = Object(this);
 
       // 2. Let len be ? ToLength(? Get(A, "length")).
-      var len = a.length >>> 0;
+      var len = a.length &gt;&gt;&gt; 0;
 
       // 3. Let separator be the String value for the
       //    list-separator String appropriate for the
@@ -78,8 +80,8 @@ if (!Array.prototype.toLocaleString) {
       // 8. Let k be 1.
       var k = 1;
 
-      // 9. Repeat, while k < len
-      while (k < len) {
+      // 9. Repeat, while k &lt; len
+      while (k &lt; len) {
         // a. Let S be a String value produced by
         //   concatenating R and separator.
         var s = r + separator;
@@ -114,46 +116,62 @@ if (!Array.prototype.toLocaleString) {
     }
   });
 }
-```
+</pre>
 
-[`Object.defineProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) が利用できないとても古い JavaScript エンジンをサポートする必要がある場合、`Array.prototype` のメソッドを polyfill するのは避けたほうがよいでしょう。それらを列挙不可にすることができないからです。
+<p><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code> が利用できないとても古い JavaScript エンジンをサポートする必要がある場合、<code>Array.prototype</code> のメソッドを polyfill するのは避けたほうがよいでしょう。それらを列挙不可にすることができないからです。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### locales と options の使用
+<h3 id="Using_locales_and_options" name="Using_locales_and_options">locales と options の使用</h3>
 
-配列の要素は、その `toLocaleString` メソッドを使用して文字列に変換されます。
+<p>配列の要素は、その <code>toLocaleString</code> メソッドを使用して文字列に変換されます。</p>
 
-- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
-- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
-- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
+<ul>
+ <li><code>Object</code>: {{jsxref("Object.prototype.toLocaleString()")}}</li>
+ <li><code>Number</code>: {{jsxref("Number.prototype.toLocaleString()")}}</li>
+ <li><code>Date</code>: {{jsxref("Date.prototype.toLocaleString()")}}</li>
+</ul>
 
-`prices` 配列内の文字列と数値の通貨を常に表示します。
+<p><code>prices</code> 配列内の文字列と数値の通貨を常に表示します。</p>
 
-```js
-var prices = ['￥7', 500, 8123, 12];
+<pre class="brush: js notranslate">var prices = ['￥7', 500, 8123, 12];
 prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 // "￥7,￥500,￥8,123,￥12"
-```
+</pre>
 
-さらに多くの例を知りたいなら、 {{jsxref("Intl")}} や {{jsxref("NumberFormat")}}、{{jsxref("DateTimeFormat")}} ページを見てください。
+<p>さらに多くの例を知りたいなら、 {{jsxref("Intl")}} や {{jsxref("NumberFormat")}}、{{jsxref("DateTimeFormat")}} ページを見てください。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}         |
-| {{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Array.toLocaleString")}}
+<div>
+<p>{{Compat("javascript.builtins.Array.toLocaleString")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Array.prototype.toString()")}}
-- {{jsxref("Intl")}}
-- {{jsxref("Object.prototype.toLocaleString()")}}
-- {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
+<ul>
+ <li>{{jsxref("Array.prototype.toString()")}}</li>
+ <li>{{jsxref("Intl")}}</li>
+ <li>{{jsxref("Object.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+</ul>

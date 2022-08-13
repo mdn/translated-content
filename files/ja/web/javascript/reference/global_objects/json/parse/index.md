@@ -2,47 +2,49 @@
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 tags:
-  - ECMAScript 5
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
+- ECMAScript 5
+- JSON
+- JavaScript
+- Method
+- Reference
+- メソッド
 browser-compat: javascript.builtins.JSON.parse
+translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`JSON.parse()`** メソッドは文字列を JSON として解析し、文字列によって記述されている JavaScript の値やオブジェクトを構築します。任意の **reviver** 関数で、生成されたオブジェクトが返される前に変換を実行することができます。
+<p><span class="seoSummary"><strong><code>JSON.parse()</code></strong> メソッドは文字列を JSON として解析し、文字列によって記述されている JavaScript の値やオブジェクトを構築します。任意の <strong>reviver</strong> 関数で、生成されたオブジェクトが返される前に変換を実行することができます。</span></p>
 
-{{EmbedInteractiveExample("pages/js/json-parse.html")}}
+<div>{{EmbedInteractiveExample("pages/js/json-parse.html")}}</div>
 
-## 構文
 
-```js
+<h2 id="Syntax">構文</h2>
+
+<pre class="brush: js">
 JSON.parse(text)
 JSON.parse(text, reviver)
-```
+</pre>
 
-### 引数
+<h3 id="Parameters">引数</h3>
 
-- `text`
-  - : JSON として解析する文字列。JSON の構文の説明は {{jsxref("JSON")}} オブジェクトを参照してください。
-- `reviver` {{optional_inline}}
-  - : もし関数である場合、解析により作り出された元の値を、オブジェクトを返す前に変換する方法を指示します。
+<dl>
+  <dt><code><var>text</var></code></dt>
+  <dd>JSON として解析する文字列。JSON の構文の説明は {{jsxref("JSON")}} オブジェクトを参照してください。</dd>
+  <dt><code><var>reviver</var></code> {{optional_inline}}</dt>
+  <dd>もし関数である場合、解析により作り出された元の値を、オブジェクトを返す前に変換する方法を指示します。</dd>
+</dl>
 
-### 返値
+<h3 id="Return_value">返値</h3>
 
-{{jsxref("Object")}}, {{jsxref("Array")}}, 文字列, 数値, 論理値, null 値のいずれかで、指定された JSON の `text` に対応する値です。
+<p>{{jsxref("Object")}}, {{jsxref("Array")}}, 文字列, 数値, 論理値, null 値のいずれかで、指定された JSON の <code><var>text</var></code> に対応する値です。</p>
 
-### 例外
+<h3 id="Exceptions">例外</h3>
 
-解析する文字列が有効な JSON でない場合、{{jsxref("SyntaxError")}} 例外が発生します。
+<p>解析する文字列が有効な JSON でない場合、{{jsxref("SyntaxError")}} 例外が発生します。</p>
 
-## ポリフィル
+<h2 id="Polyfill">ポリフィル</h2>
 
-```js
-// From https://github.com/douglascrockford/JSON-js/blob/master/json2.js
+<pre class="brush: js">// From https://github.com/douglascrockford/JSON-js/blob/master/json2.js
 if (typeof JSON.parse !== "function") {
     var rx_one = /^[\],:{}\s]*$/;
     var rx_two = /\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g;
@@ -64,7 +66,7 @@ if (typeof JSON.parse !== "function") {
             var k;
             var v;
             var value = holder[key];
-            if (value && typeof value === "object") {
+            if (value &amp;&amp; typeof value === "object") {
                 for (k in value) {
                     if (Object.prototype.hasOwnProperty.call(value, k)) {
                         v = walk(value, k);
@@ -137,29 +139,26 @@ if (typeof JSON.parse !== "function") {
 
         throw new SyntaxError("JSON.parse");
     };
-}
-```
+}</pre>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### JSON.parse() の使用
+<h3 id="Using_JSON.parse">JSON.parse() の使用</h3>
 
-```js
-JSON.parse('{}');              // {}
+<pre class="brush: js">JSON.parse('{}');              // {}
 JSON.parse('true');            // true
 JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
-```
+</pre>
 
-### reviver 引数の使用
+<h3 id="Using_the_reviver_parameter">reviver 引数の使用</h3>
 
-`reviver` が指定された場合、解析によって計算された値は、返却される前に*変換*されます。具体的には、計算された値とそのすべてのプロパティ (最も深いプロパティから始まり、元の値自身に至るまで) は、個別に `reviver` を通して変換されます。そして、処理されるプロパティを含むオブジェクトを `this` とし、プロパティ名を文字列、プロパティ値を引数にして、これが呼び出されます。もし `reviver` 関数が {{jsxref("undefined")}} を返した場合 (または、値を返さなかった場合、例えば関数の途中で実行が中断された場合など)、そのプロパティはオブジェクトから削除されます。そうでなければそのプロパティは返値として再定義されます。
+<p><code><var>reviver</var></code> が指定された場合、解析によって計算された値は、返却される前に<em>変換</em>されます。具体的には、計算された値とそのすべてのプロパティ (最も深いプロパティから始まり、元の値自身に至るまで) は、個別に <code><var>reviver</var></code> を通して変換されます。そして、処理されるプロパティを含むオブジェクトを <code>this</code> とし、プロパティ名を文字列、プロパティ値を引数にして、これが呼び出されます。もし <code><var>reviver</var></code> 関数が {{jsxref("undefined")}} を返した場合 (または、値を返さなかった場合、例えば関数の途中で実行が中断された場合など)、そのプロパティはオブジェクトから削除されます。そうでなければそのプロパティは返値として再定義されます。</p>
 
-もし `reviver` が一部の値だけを変換して他を変換しないのであれば、必ずすべての変換されない値をそのまま返すようにしてください。そうしなければ、結果として得られるオブジェクトから削除されてしまいます。
+<p>もし <code><var>reviver</var></code> が一部の値だけを変換して他を変換しないのであれば、必ずすべての変換されない値をそのまま返すようにしてください。そうしなければ、結果として得られるオブジェクトから削除されてしまいます。</p>
 
-```js
-JSON.parse('{"p": 5}', (key, value) =>
+<pre class="brush: js">JSON.parse('{"p": 5}', (key, value) =&gt;
   typeof value === 'number'
     ? value * 2 // 数値ならば値の2倍を返す
     : value     // それ以外ならば変更しない
@@ -167,7 +166,7 @@ JSON.parse('{"p": 5}', (key, value) =>
 
 // { p: 10 }
 
-JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
+JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) =&gt; {
   console.log(key); // 現在のプロパティ名を出力する。最後は ""。
   return value;     // 変更されていないプロパティの値を返す。
 });
@@ -179,31 +178,31 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 // 5
 // 3
 // ""
-```
+</pre>
 
-### JSON.parse() は末尾のカンマを許容しない
+<h3 id="JSON.parse_does_not_allow_trailing_commas">JSON.parse() は末尾のカンマを許容しない</h3>
 
-```js example-bad
-// 両方とも SyntaxError が発生
+<pre class="brush: js example-bad">// 両方とも SyntaxError が発生
 JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
-```
+</pre>
 
-### JSON.parse() は単一引用符を許容しない
+<h3 id="JSON.parse_does_not_allow_single_quotes">JSON.parse() は単一引用符を許容しない</h3>
 
-```js example-bad example-bad
-// SyntaxError が発生
+<pre class="example-bad brush: js example-bad notranslate">// SyntaxError が発生
 JSON.parse("{'foo': 1}");
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{jsxref("JSON.stringify()")}}
+<ul>
+  <li>{{jsxref("JSON.stringify()")}}</li>
+</ul>

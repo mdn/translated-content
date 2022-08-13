@@ -8,21 +8,22 @@ tags:
   - Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-`Proxy` オブジェクトにより別なオブジェクトのプロキシを作成することができ、そのオブジェクトの基本的な操作を傍受したり再定義したりすることができます。
+<p><code>Proxy</code> オブジェクトにより別なオブジェクトのプロキシを作成することができ、そのオブジェクトの基本的な操作を傍受したり再定義したりすることができます。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-`Proxy` は二つの引数で作成されます。
+<p><code>Proxy</code> は二つの引数で作成されます。</p>
 
-- `target`: プロキシを設定する元のオブジェクトです。
-- `handler`: どの操作を傍受するか、また傍受された操作をどのように再定義するかを定義するオブジェクトです。
+<ul>
+ <li><code>target</code>: プロキシを設定する元のオブジェクトです。</li>
+ <li><code>handler</code>: どの操作を傍受するか、また傍受された操作をどのように再定義するかを定義するオブジェクトです。</li>
+</ul>
 
-例えばこのコードでは、二つのプロパティだけを持つシンプルなターゲットと、プロパティを持たないよりシンプルなハンドラーを定義しています。
+<p>例えばこのコードでは、二つのプロパティだけを持つシンプルなターゲットと、プロパティを持たないよりシンプルなハンドラーを定義しています。</p>
 
-```js
-const target = {
+<pre class="brush: js notranslate">const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -30,19 +31,17 @@ const target = {
 const handler1 = {};
 
 const proxy1 = new Proxy(target, handler1);
-```
+</pre>
 
-ハンドラーは空なので、このプロキシは元のターゲットと同様に動作します。
+<p>ハンドラーは空なので、このプロキシは元のターゲットと同様に動作します。</p>
 
-```js
-console.log(proxy1.message1); // hello
+<pre class="brush: js notranslate">console.log(proxy1.message1); // hello
 console.log(proxy1.message2); // everyone
-```
+</pre>
 
-プロキシをカスタマイズするには、ハンドラーオブジェクトに関数を定義します。
+<p>プロキシをカスタマイズするには、ハンドラーオブジェクトに関数を定義します。</p>
 
-```js
-const target = {
+<pre class="brush: js notranslate">const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -53,22 +52,18 @@ const handler2 = {
   }
 };
 
-const proxy2 = new Proxy(target, handler2);
-```
+const proxy2 = new Proxy(target, handler2);</pre>
 
-ここで {{jsxref("Global_Objects/Proxy/handler/get", "get()")}} ハンドラーを実装し、ターゲットのプロパティへのアクセスを傍受します。
+<p>ここで {{jsxref("Global_Objects/Proxy/handler/get", "get()")}} ハンドラーを実装し、ターゲットのプロパティへのアクセスを傍受します。</p>
 
-ハンドラー関数は*トラップ*と呼ばれることがありますが、これはおそらくターゲットオブジェクトへの呼び出しをトラップするからでしょう。上記の `handler2` のとても単純なトラップは、すべてのプロパティアクセサーを再定義します。
+<p>ハンドラー関数は<em>トラップ</em>と呼ばれることがありますが、これはおそらくターゲットオブジェクトへの呼び出しをトラップするからでしょう。上記の <code>handler2</code> のとても単純なトラップは、すべてのプロパティアクセサーを再定義します。</p>
 
-```js
-console.log(proxy2.message1); // world
-console.log(proxy2.message2); // world
-```
+<pre class="brush: js notranslate">console.log(proxy2.message1); // world
+console.log(proxy2.message2); // world</pre>
 
-{{jsxref("Reflect")}} クラスの助けを借りて、いくつかのアクセサーに元の動作を与えたり、ほかのアクセサーを再定義したりすることができます。
+<p>{{jsxref("Reflect")}} クラスの助けを借りて、いくつかのアクセサーに元の動作を与えたり、ほかのアクセサーを再定義したりすることができます。</p>
 
-```js
-const target = {
+<pre class="brush: js notranslate">const target = {
   message1: "hello",
   message2: "everyone"
 };
@@ -85,27 +80,29 @@ const handler3 = {
 const proxy3 = new Proxy(target, handler3);
 
 console.log(proxy3.message1); // hello
-console.log(proxy3.message2); // world
-```
+console.log(proxy3.message2); // world</pre>
 
-## コンストラクター
+<h2 id="Constructor" name="Constructor">コンストラクター</h2>
 
-- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
-  - : 新しい `Proxy` オブジェクトを生成します。
+<dl>
+ <dt>{{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}</dt>
+ <dd>新しい <code>Proxy</code> オブジェクトを生成します。</dd>
+</dl>
 
-## 静的メソッド
+<h2 id="Static_methods" name="Static_methods">静的メソッド</h2>
 
-- {{jsxref("Proxy.revocable()")}}
-  - : 取り消し可能な `Proxy` オブジェクトを生成します。
+<dl>
+ <dt>{{jsxref("Proxy.revocable()")}}</dt>
+ <dd>取り消し可能な <code>Proxy</code> オブジェクトを生成します。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 基本的な例
+<h3 id="Basic_example" name="Basic_example">基本的な例</h3>
 
-この例では、与えられたプロパティ名がオブジェクトに存在しない場合、既定値である `37` を返します。ここでは {{jsxref("Global_Objects/Proxy/handler/get", "get")}} ハンドラーを使用しています。
+<p>この例では、与えられたプロパティ名がオブジェクトに存在しない場合、既定値である <code>37</code> を返します。ここでは {{jsxref("Global_Objects/Proxy/handler/get", "get")}} ハンドラーを使用しています。</p>
 
-```js
-const handler = {
+<pre class="brush: js notranslate">const handler = {
   get: function(obj, prop) {
     return prop in obj ?
       obj[prop] :
@@ -122,14 +119,13 @@ console.log(p.a, p.b);
 
 console.log('c' in p, p.c);
 //  false, 37
-```
+</pre>
 
-### 何もしない転送プロキシ
+<h3 id="No-op_forwarding_proxy" name="No-op_forwarding_proxy">何もしない転送プロキシ</h3>
 
-この例では、プロキシが、それに対して適用されるすべての操作を転送する先に、ネイティブの JavaScript オブジェクトを使っています。
+<p>この例では、プロキシが、それに対して適用されるすべての操作を転送する先に、ネイティブの JavaScript オブジェクトを使っています。</p>
 
-```js
-const target = {};
+<pre class="brush: js notranslate">const target = {};
 const p = new Proxy(target, {});
 
 p.a = 37;
@@ -138,22 +134,21 @@ p.a = 37;
 console.log(target.a);
 // 37 が出力されます。
 // 操作は正しく転送されました
-```
+</pre>
 
-上記のコードは JavaScript オブジェクトでは動作しますが、 DOM 要素などのネイティブのブラウザーオブジェクトでは動作しないことに注意してください。
+<p>上記のコードは JavaScript オブジェクトでは動作しますが、 DOM 要素などのネイティブのブラウザーオブジェクトでは動作しないことに注意してください。</p>
 
-### 検証
+<h3 id="Validation" name="Validation">検証</h3>
 
-`Proxy` を使うと、オブジェクトに渡された値を簡単に検証できます。この例では {{jsxref("Global_Objects/Proxy/handler/set", "set")}} ハンドラーを使用しています。
+<p><code>Proxy</code> を使うと、オブジェクトに渡された値を簡単に検証できます。この例では {{jsxref("Global_Objects/Proxy/handler/set", "set")}} ハンドラーを使用しています。</p>
 
-```js
-let validator = {
+<pre class="brush: js notranslate">let validator = {
   set: function(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
         throw new TypeError('年齢が整数ではありません');
       }
-      if (value > 200) {
+      if (value &gt; 200) {
         throw new RangeError('年齢が不正なようです');
       }
     }
@@ -172,14 +167,13 @@ person.age = 100;
 console.log(person.age); // 100
 person.age = 'young';   // 例外が発生する
 person.age = 300;       // 例外が発生する
-```
+</pre>
 
-### コンストラクターを拡張する
+<h3 id="Extending_constructor" name="Extending_constructor">コンストラクターを拡張する</h3>
 
-関数の Proxy で、コンストラクターを新たなコンストラクターへ簡単に拡張できます。この例では {{jsxref("Global_Objects/Proxy/handler/construct", "construct")}} および {{jsxref("Global_Objects/Proxy/handler/apply", "apply")}} ハンドラーを使用しています。
+<p>関数の Proxy で、コンストラクターを新たなコンストラクターへ簡単に拡張できます。この例では {{jsxref("Global_Objects/Proxy/handler/construct", "construct")}} および {{jsxref("Global_Objects/Proxy/handler/apply", "apply")}} ハンドラーを使用しています。</p>
 
-```js
-function extend(sup, base) {
+<pre class="brush: js notranslate">function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
     base.prototype, 'constructor'
   );
@@ -215,15 +209,13 @@ var Peter = new Boy('Peter', 13);
 
 console.log(Peter.gender);  // "M"
 console.log(Peter.name);    // "Peter"
-console.log(Peter.age);     // 13
-```
+console.log(Peter.age);     // 13</pre>
 
-### DOM ノードの操作
+<h3 id="Manipulating_DOM_nodes" name="Manipulating_DOM_nodes">DOM ノードの操作</h3>
 
-2 つの異なる要素の属性やクラス名を切り替えたい場合があります。それを実現する方法を紹介しましょう。
+<p>2 つの異なる要素の属性やクラス名を切り替えたい場合があります。それを実現する方法を紹介しましょう。</p>
 
-```js
-let view = new Proxy({
+<pre class="brush: js notranslate">let view = new Proxy({
   selected: null
 },
 {
@@ -258,14 +250,13 @@ console.log(i1.getAttribute('aria-selected'));
 console.log(i2.getAttribute('aria-selected'));
 //  'true'
 Note: even if selected: !null, then giving oldval.setAttribute is not a function
-```
+</pre>
 
-### 値補正と追加プロパティ
+<h3 id="Value_correction_and_an_extra_property" name="Value_correction_and_an_extra_property">値補正と追加プロパティ</h3>
 
-この `products` プロキシオブジェクトは、渡された値を評価し、必要であれば配列に変換します。また、 `latestBrowser` という追加プロパティをゲッターとセッターの両方でサポートしています。
+<p>この <code>products</code> プロキシオブジェクトは、渡された値を評価し、必要であれば配列に変換します。また、 <code>latestBrowser</code> という追加プロパティをゲッターとセッターの両方でサポートしています。</p>
 
-```js
-let products = new Proxy({
+<pre class="brush: js notranslate">let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 },
 {
@@ -305,7 +296,7 @@ products.browsers = 'Firefox';
 //  (間違えて) 文字列を渡す
 
 console.log(products.browsers);
-//  ['Firefox'] <- 問題ありません、値は配列になっています
+//  ['Firefox'] &lt;- 問題ありません、値は配列になっています
 
 products.latestBrowser = 'Chrome';
 
@@ -313,15 +304,13 @@ console.log(products.browsers);
 //  ['Firefox', 'Chrome']
 
 console.log(products.latestBrowser);
-//  'Chrome'
-```
+//  'Chrome'</pre>
 
-### 配列要素のオブジェクトをそのプロパティから検索
+<h3 id="Finding_an_array_item_object_by_its_property" name="Finding_an_array_item_object_by_its_property">配列要素のオブジェクトをそのプロパティから検索</h3>
 
-このプロキシは配列をいくつかの実用機能で拡張しています。見ての通り、 {{jsxref("Object.defineProperties", "Object.defineProperties")}} を使わなくても柔軟にプロパティを「定義」できます。この例は、テーブルの列をそのセルから検索するようなコードに応用できます。その場合、ターゲットは {{domxref("HTMLTableElement.rows", "table.rows")}} となります。
+<p>このプロキシは配列をいくつかの実用機能で拡張しています。見ての通り、 {{jsxref("Object.defineProperties", "Object.defineProperties")}} を使わなくても柔軟にプロパティを「定義」できます。この例は、テーブルの列をそのセルから検索するようなコードに応用できます。その場合、ターゲットは {{domxref("HTMLTableElement.rows", "table.rows")}} となります。</p>
 
-```js
-let products = new Proxy([
+<pre class="brush: js notranslate">let products = new Proxy([
   { name: 'Firefox', type: 'browser' },
   { name: 'SeaMonkey', type: 'browser' },
   { name: 'Thunderbird', type: 'mailer' }
@@ -376,14 +365,13 @@ console.log(products['Chrome']);   // undefined
 console.log(products.browser);     // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
 console.log(products.types);       // ['browser', 'mailer']
 console.log(products.number);      // 3
-```
+</pre>
 
-### 完全な `traps` リストの例
+<h3 id="A_complete_traps_list_example" name="A_complete_traps_list_example">完全な <code>traps</code> リストの例</h3>
 
-教育用に `traps` リストの完全なサンプルを作成するため、そのような操作が特に適している*非ネイティブ*オブジェクトを Proxy 化します。[`document.cookie` のページにある "リトルフレームワーク"](/ja/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support) で生成される `docCookies` グローバルオブジェクトです。
+<p>教育用に <code>traps</code> リストの完全なサンプルを作成するため、そのような操作が特に適している<em>非ネイティブ</em>オブジェクトを Proxy 化します。<a href="/ja/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support"><code>document.cookie</code> のページにある "リトルフレームワーク"</a> で生成される <code>docCookies</code> グローバルオブジェクトです。</p>
 
-```js
-/*
+<pre class="brush: js notranslate">/*
   var docCookies = ... get the "docCookies" object here:
   https://developer.mozilla.org/ja/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
@@ -410,7 +398,7 @@ var docCookies = new Proxy(docCookies, {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
   defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc && 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
+    if (oDesc &amp;&amp; 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
     return oTarget;
   },
   getOwnPropertyDescriptor: function (oTarget, sKey) {
@@ -430,24 +418,34 @@ console.log(docCookies.my_cookie1 = 'First value');
 console.log(docCookies.getItem('my_cookie1'));
 
 docCookies.setItem('my_cookie1', 'Changed value');
-console.log(docCookies.my_cookie1);
-```
+console.log(docCookies.my_cookie1);</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-proxy-objects', 'Proxy')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-proxy-objects', 'Proxy')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Proxy", 2)}}
+<p>{{Compat("javascript.builtins.Proxy", 2)}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- ["Proxies are awesome" Brendan Eich の JSConf でのプレゼンテーション](https://www.youtube.com/watch?v=sClk6aB_CPk) ([スライド](http://www.slideshare.net/BrendanEich/metaprog-5303821))
-- [ECMAScript Harmony の Proxy 提案ページ](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) と [ECMAScript Harmony の Proxy 動作ページ](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
-- [プロキシチュートリアル](http://web.archive.org/web/20171007221059/http://soft.vub.ac.be/~tvcutsem/proxies/)
-- [旧 Proxy API ページ](/ja/docs/JavaScript/Old_Proxy_API)
-- {{jsxref("Object.watch()")}} は非標準の機能ですが、 Gecko が長期間サポートしてきました。
-- [Observable data structures using Proxy](https://github.com/indiejs/structures)
+<ul>
+ <li><a class="external" href="https://www.youtube.com/watch?v=sClk6aB_CPk">"Proxies are awesome" Brendan Eich の JSConf でのプレゼンテーション</a> (<a class="external" href="http://www.slideshare.net/BrendanEich/metaprog-5303821">スライド</a>)</li>
+ <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">ECMAScript Harmony の Proxy 提案ページ</a> と <a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics">ECMAScript Harmony の Proxy 動作ページ</a></li>
+ <li><a class="external" href="http://web.archive.org/web/20171007221059/http://soft.vub.ac.be/~tvcutsem/proxies/">プロキシチュートリアル</a></li>
+ <li><a href="/ja/docs/JavaScript/Old_Proxy_API">旧 Proxy API ページ</a></li>
+ <li>{{jsxref("Object.watch()")}} は非標準の機能ですが、 Gecko が長期間サポートしてきました。</li>
+ <li><a class="external" href="https://github.com/indiejs/structures">Observable data structures using Proxy</a></li>
+</ul>

@@ -9,45 +9,57 @@ tags:
   - コンストラクター
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`WeakRef`** コンストラクターは、指定された対象オブジェクトを参照する {{jsxref("WeakRef")}} オブジェクトを生成します。
+<p><strong><code>WeakRef</code></strong> コンストラクターは、指定された対象オブジェクトを参照する {{jsxref("WeakRef")}} オブジェクトを生成します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    new WeakRef(targetObject);
+<pre class="syntaxbox notranslate">new WeakRef(<var>targetObject</var>);
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `targetObject`
-  - : WeakRef が参照する対象オブジェクト (_referent_ とも呼ばれます)。
+<dl>
+ <dt><code><var>targetObject</var></code></dt>
+ <dd>WeakRef が参照する対象オブジェクト (<em>referent</em> とも呼ばれます)。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-### 新しい WeakRef オブジェクトの生成
+<h3 id="Creating_a_new_WeakRef_object" name="Creating_a_new_WeakRef_object">新しい WeakRef オブジェクトの生成</h3>
 
-完全な例は中心となる [`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Examples) ページを参照してください。
+<p>完全な例は中心となる <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Examples"><code>WeakRef</code></a> ページを参照してください。</p>
 
-```js
-class Counter {
+<pre class="brush: js notranslate">class Counter {
   constructor(element) {
     // DOM 要素への弱い参照を覚える
     this.ref = new WeakRef(element);
     this.start();
   }
-}
-```
+}</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-weak-ref-constructor', 'WeakRef constructor')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('WeakRefs', '#sec-weak-ref-constructor', 'WeakRef constructor')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.WeakRef.WeakRef")}}
+<p>{{Compat("javascript.builtins.WeakRef.WeakRef")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("WeakRef")}}
+<ul>
+ <li>{{jsxref("WeakRef")}}</li>
+</ul>

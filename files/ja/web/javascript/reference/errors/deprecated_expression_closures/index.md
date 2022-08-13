@@ -8,78 +8,75 @@ tags:
   - 警告
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の警告 "expression closures are deprecated" は、標準外の[式クロージャ](/ja/docs/Web/JavaScript/Reference/Operators/Expression_closures)構文 (略記関数構文) が使用されたときに発生します。
+<p>JavaScript の警告 "expression closures are deprecated" は、標準外の<a href="/ja/docs/Web/JavaScript/Reference/Operators/Expression_closures">式クロージャ</a>構文 (略記関数構文) が使用されたときに発生します。</p>
 
-## メッセージ
+<h2 id="Message" name="Message">メッセージ</h2>
 
-    Warning: expression closures are deprecated
+<pre class="syntaxbox">Warning: expression closures are deprecated
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-警告。 JavaScript の実行は中断されません。
+<p>警告。 JavaScript の実行は中断されません。</p>
 
-## 原因
+<h2 id="What_went_wrong" name="What_went_wrong">原因</h2>
 
-標準外の[式クロージャ](/ja/docs/Web/JavaScript/Reference/Operators/Expression_closures)構文 (略記関数構文) は非推奨のため、使用すべきではありません。この構文は [bug 1083458](https://bugzilla.mozilla.org/show_bug.cgi?id=1083458) で削除予定であり、削除された後は {{jsxref("SyntaxError")}} が発生します。
+<p>標準外の<a href="/ja/docs/Web/JavaScript/Reference/Operators/Expression_closures">式クロージャ</a>構文 (略記関数構文) は非推奨のため、使用すべきではありません。この構文は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1083458">bug 1083458</a> で削除予定であり、削除された後は {{jsxref("SyntaxError")}} が発生します。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 非推奨の構文
+<h3 id="Deprecated_syntax" name="Deprecated_syntax">非推奨の構文</h3>
 
-式クロージャで、中括弧を省略したり、関数宣言やメソッド定義で return 文を省略したりすることです。
+<p>式クロージャで、中括弧を省略したり、関数宣言やメソッド定義で return 文を省略したりすることです。</p>
 
-```js example-bad
-var x = function() 1;
+<pre class="brush: js example-bad">var x = function() 1;
 
 var obj = {
   count: function() 1
 };
-```
+</pre>
 
-### 標準の構文
+<h3 id="Standard_syntax" name="Standard_syntax">標準の構文</h3>
 
-標準外の式クロージャ構文から標準の ECMAScript 構文に変換するためには、波括弧と return ステートメントを追加します。
+<p>標準外の式クロージャ構文から標準の ECMAScript 構文に変換するためには、波括弧と return ステートメントを追加します。</p>
 
-```js example-good
-var x = function() { return 1; }
+<pre class="brush: js example-good">var x = function() { return 1; }
 
 var obj = {
   count: function() { return 1; }
 };
-```
+</pre>
 
-### アロー関数を使用した標準の構文
+<h3 id="Standard_syntax_using_arrow_functions" name="Standard_syntax_using_arrow_functions">アロー関数を使用した標準の構文</h3>
 
-代わりに[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用することもできます。
+<p>代わりに<a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a>を使用することもできます。</p>
 
-```js example-good
-var x = () => 1;
-```
+<pre class="brush: js example-good">var x = () =&gt; 1;</pre>
 
-### 略記メソッド構文を使用した標準構文
+<h3 id="Standard_syntax_using_shorthand_method_syntax" name="Standard_syntax_using_shorthand_method_syntax">略記メソッド構文を使用した標準構文</h3>
 
-次のように、式クロージャがゲッターとセッターにも見られることがあります。
+<p>次のように、式クロージャがゲッターとセッターにも見られることがあります。</p>
 
-```js example-bad
-var obj = {
+<pre class="brush: js example-bad">var obj = {
   get x() 1,
   set x(v) this.v = v
 };
-```
+</pre>
 
-ES2015 の[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で、次のように変換することができます。
+<p>ES2015 の<a href="/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions">メソッド定義</a>で、次のように変換することができます。</p>
 
-```js example-good
-var obj = {
+<pre class="brush: js example-good">var obj = {
   get x() { return 1 },
   set x(v) { this.v = v }
 };
-```
+</pre>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [式クロージャ](/ja/docs/Web/JavaScript/Reference/Operators/Expression_closures)
-- [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Expression_closures">式クロージャ</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions">メソッド定義</a></li>
+</ul>

@@ -8,30 +8,28 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "invalid assignment left-hand side" は、どこかで予想外の代入が行われたときに発生します。例えば、単一の "`=`" の記号が "`==`" や "`===`" の代わりに使用された場合です。
+<p>JavaScript の例外 "invalid assignment left-hand side" は、どこかで予想外の代入が行われたときに発生します。例えば、単一の "<code>=</code>" の記号が "<code>==</code>" や "<code>===</code>" の代わりに使用された場合です。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-ReferenceError: invalid assignment left-hand side
-```
+<pre class="brush: js">ReferenceError: invalid assignment left-hand side
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("ReferenceError")}}。
+<p>{{jsxref("ReferenceError")}}。</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-どこかに予想外の代入があります。たとえば、[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators#assignment_operators)と[等価演算子](/ja/docs/Web/JavaScript/Reference/Operators#equality_operators)が合っていないからかもしれません。 "`=`" 記号が 1 つの場合は変数に値を割り当てる一方、"`==`" か "`===`" 演算子は値を比較します。
+<p>どこかに予想外の代入があります。たとえば、<a href="/ja/docs/Web/JavaScript/Reference/Operators#assignment_operators">代入演算子</a>と<a href="/ja/docs/Web/JavaScript/Reference/Operators#equality_operators">等価演算子</a>が合っていないからかもしれません。 "<code>=</code>" 記号が 1 つの場合は変数に値を割り当てる一方、"<code>==</code>" か "<code>===</code>" 演算子は値を比較します。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### よくある無効な代入
+<h3 id="Typical_invalid_assignments">よくある無効な代入</h3>
 
-```js example-bad
-if (Math.PI = 3 || Math.PI = 4) {
+<pre class="brush: js example-bad">if (Math.PI = 3 || Math.PI = 4) {
   console.log('no way!');
 }
 // ReferenceError: invalid assignment left-hand side
@@ -40,21 +38,22 @@ var str = 'Hello, '
 += 'is it me '
 += 'you\'re looking for?';
 // ReferenceError: invalid assignment left-hand side
-```
+</pre>
 
-`if` 文では、等価演算子 ("==") が必要ですし、文字連結にはプラス ("+") 演算子が必要です。
+<p><code>if</code> 文では、等価演算子 ("==") が必要ですし、文字連結にはプラス ("+") 演算子が必要です。</p>
 
-```js example-good
-if (Math.PI == 3 || Math.PI == 4) {
+<pre class="brush: js example-good">if (Math.PI == 3 || Math.PI == 4) {
   console.log('no way!');
 }
 
 var str = 'Hello, '
 + 'from the '
 + 'other side!';
-```
+</pre>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [代入演算子](/ja/docs/Web/JavaScript/Reference/Operators#assignment_operators)
-- [等価演算子](/ja/docs/Web/JavaScript/Reference/Operators#equality_operators)
+<ul>
+  <li><a href="/ja/docs/Web/JavaScript/Reference/Operators#assignment_operators">代入演算子</a></li>
+  <li><a href="/ja/docs/Web/JavaScript/Reference/Operators#equality_operators">等価演算子</a></li>
+</ul>

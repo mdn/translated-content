@@ -2,92 +2,90 @@
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+- Error
+- Errors
+- JavaScript
+- TypeError
 translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "is not a function" は、値を関数として呼び出そうとしたが、その値が実際には関数ではなかった場合に発生します。
+<p>JavaScript の例外 "is not a function" は、値を関数として呼び出そうとしたが、その値が実際には関数ではなかった場合に発生します。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-TypeError: Object doesn't support property or method {x} (Edge)
+<pre class="brush: js">TypeError: Object doesn't support property or method {x} (Edge)
 TypeError: "x" is not a function
-```
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("TypeError")}}
+<p>{{jsxref("TypeError")}}</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-関数でないものを、関数呼び出ししようとした際に発生するエラーです。また適切な関数が定義されていることを期待されているが、定義されていない場合も発生します。
+<p>関数でないものを、関数呼び出ししようとした際に発生するエラーです。また適切な関数が定義されていることを期待されているが、定義されていない場合も発生します。</p>
 
-関数名のタイプミスをしていないか確認してみましょう。また、呼び出そうとしてるオブジェクトがそのメソッドを持っているかどうかも確認してみてください。配列オブジェクトが持っている `map` 関数を、それを持たない通常のオブジェクトに対して呼び出そうとしている場合が、後者の例になります。
+<p>関数名のタイプミスをしていないか確認してみましょう。また、呼び出そうとしてるオブジェクトがそのメソッドを持っているかどうかも確認してみてください。配列オブジェクトが持っている <code>map</code> 関数を、それを持たない通常のオブジェクトに対して呼び出そうとしている場合が、後者の例になります。</p>
 
-多くの組み込み関数はコールバック関数を必要とします。これらのメソッドを正しく呼び出すためには、関数を引数に指定する必要があります。
+<p>多くの組み込み関数はコールバック関数を必要とします。これらのメソッドを正しく呼び出すためには、関数を引数に指定する必要があります。</p>
 
-- {{jsxref("Array")}} もしくは {{jsxref("TypedArray")}} オブジェクトを操作する場合:
+<ul>
+  <li>{{jsxref("Array")}} もしくは {{jsxref("TypedArray")}} オブジェクトを操作する場合:
+    <ul>
+      <li>{{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}</li>
+    </ul>
+  </li>
+  <li> {{jsxref("Map")}} もしくは {{jsxref("Set")}} を操作する場合:
+    <ul>
+      <li>{{jsxref("Map.prototype.forEach()")}}, {{jsxref("Set.prototype.forEach()")}}</li>
+    </ul>
+  </li>
+</ul>
 
-  - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
+<h2 id="Examples">例</h2>
 
-- {{jsxref("Map")}} もしくは {{jsxref("Set")}} を操作する場合:
+<h3 id="A_typo_in_the_function_name">関数名のタイプミス</h3>
 
-  - {{jsxref("Map.prototype.forEach()")}}, {{jsxref("Set.prototype.forEach()")}}
+<p>次のように関数名を間違えている場合に発生します。なおこのミスは非常に多く発生します。</p>
 
-## 例
-
-### 関数名のタイプミス
-
-次のように関数名を間違えている場合に発生します。なおこのミスは非常に多く発生します。
-
-```js example-bad
-let x = document.getElementByID('foo');
+<pre class="brush: js example-bad">let x = document.getElementByID('foo');
 // TypeError: document.getElementByID is not a function
-```
+</pre>
 
-正しい関数名は `getElementById` です。
+<p>正しい関数名は <code>getElementById</code> です。</p>
 
-```js example-good
-let x = document.getElementById('foo');
-```
+<pre class="brush: js example-good">let x = document.getElementById('foo');
+</pre>
 
-### 間違ったオブジェクトに対する関数呼び出し
+<h3 id="Function_called_on_the_wrong_object">間違ったオブジェクトに対する関数呼び出し</h3>
 
-いくつかのメソッドは、引数に関数が指定されていることを期待していて、しかも特定のオブジェクトの上でのみ正しく動作するものがあります。この典型例が {{jsxref("Array.prototype.map()")}} で、これは {{jsxref("Array")}} オブジェクトでのみ正しく動作します。
+<p>いくつかのメソッドは、引数に関数が指定されていることを期待していて、しかも特定のオブジェクトの上でのみ正しく動作するものがあります。この典型例が {{jsxref("Array.prototype.map()")}} で、これは {{jsxref("Array")}} オブジェクトでのみ正しく動作します。</p>
 
-```js example-bad
-let obj = {a: 13, b: 37, c: 42};
+<pre class="brush: js example-bad">let obj = {a: 13, b: 37, c: 42};
 
 obj.map(function(num) {
   return num * 2;
 });
 
-// TypeError: obj.map is not a function
-```
+// TypeError: obj.map is not a function</pre>
 
-オブジェクトではなく、配列を利用しましょう。
+<p>オブジェクトではなく、配列を利用しましょう。</p>
 
-```js example-good
-let numbers = [1, 4, 9];
+<pre class="brush: js example-good">let numbers = [1, 4, 9];
 
 numbers.map(function(num) {
   return num * 2;
 });
 
 // Array [2, 8, 18]
-```
+</pre>
 
-### すでに存在するプロパティと名前を共有する関数
+<h3 id="Function_shares_a_name_with_a_pre-existing_property">すでに存在するプロパティと名前を共有する関数</h3>
 
-クラスを作るとき、プロパティと関数が同じ名前になることがあります。関数を呼び出すと、コンパイラーは関数が存在するのをやめたように考えます。
+<p>クラスを作るとき、プロパティと関数が同じ名前になることがあります。関数を呼び出すと、コンパイラーは関数が存在するのをやめたように考えます。</p>
 
-```js example-bad
-var Dog = function () {
+<pre class="brush: js example-bad">var Dog = function () {
  this.age = 11;
  this.color = "black";
  this.name = "Ralph";
@@ -101,12 +99,11 @@ Dog.prototype.name = function(name) {
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
-```
+</pre>
 
-代わりに異なるプロパティ名を使ってください。
+<p>代わりに異なるプロパティ名を使ってください。</p>
 
-```js example-good
-var Dog = function () {
+<pre class="brush: js example-good">var Dog = function () {
  this.age = 11;
  this.color = "black";
  this.dogName = "Ralph"; //Using this.dogName instead of .name
@@ -120,36 +117,32 @@ Dog.prototype.name = function(name) {
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
-```
+</pre>
 
-### 乗算での括弧の使用
+<h3 id="Using_brackets_for_multiplication">乗算での括弧の使用</h3>
 
-数学では、 2 × (3 + 5) を 2\*(3 + 5) または単に 2(3 + 5) と書くことができます。
+<p>数学では、 2 × (3 + 5) を 2*(3 + 5) または単に 2(3 + 5) と書くことができます。</p>
 
-後者を使用するとエラーが発生します。
+<p>後者を使用するとエラーが発生します。</p>
 
-```js example-bad
-const sixteen = 2(3 + 5);
+<pre class="js example-bad">const sixteen = 2(3 + 5);
 alert('2 x (3 + 5) is ' + String(sixteen));
-//Uncaught TypeError: 2 is not a function
-```
+//Uncaught TypeError: 2 is not a function</pre>
 
-このコードは `*` 演算子を追加すると修正できます。
+<p>このコードは <code>*</code> 演算子を追加すると修正できます。</p>
 
-```js example-good
-const sixteen = 2 * (3 + 5);
+<pre class="js example-good">const sixteen = 2 * (3 + 5);
 alert('2 x (3 + 5) is ' + String(sixteen));
 //2 x (3 + 5) is 16
-```
+</pre>
 
-### 正しくエクスポートされたモジュールをインポートする
+<h3 id="Import_the_exported_module_correctly">正しくエクスポートされたモジュールをインポートする</h3>
 
-正しくモジュールをインポートしていることを確認してください。
+<p>正しくモジュールをインポートしていることを確認してください。</p>
 
-helpers ライブラリーの例 (`helpers.js`)
+<p>helpers ライブラリーの例 (<code>helpers.js</code>)</p>
 
-```js
-let helpers = function () { };
+<pre class="brush: js">let helpers = function () { };
 
 helpers.groupBy = function (objectArray, property) {
   return objectArray.reduce(function (acc, obj) {
@@ -164,12 +157,14 @@ helpers.groupBy = function (objectArray, property) {
 }
 
 export default helpers;
-```
+</pre>
 
-正しい import の使い方 (`App.js`):
+<p>正しい import の使い方 (<code>App.js</code>):</p>
 
-    import helpers from './helpers'
+<pre>import helpers from './helpers'</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Functions">関数</a></li>
+</ul>

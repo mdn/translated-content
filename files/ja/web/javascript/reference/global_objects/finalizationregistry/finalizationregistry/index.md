@@ -11,41 +11,54 @@ tags:
 translation_of: >-
   Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`FinalizationRegistry`** コンストラクターは、指定されたコールバックを使用する {{jsxref("FinalizationRegistry")}} オブジェクトを生成します。
+<p><strong><code>FinalizationRegistry</code></strong> コンストラクターは、指定されたコールバックを使用する {{jsxref("FinalizationRegistry")}} オブジェクトを生成します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    new FinalizationRegistry([callback]);
+<pre class="syntaxbox notranslate">new FinalizationRegistry([<var>callback</var>]);
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `callback` {{optional_inline}}
-  - : レジストリが使用するコールバック関数です。指定された場合、関数である必要があります。
+<dl>
+ <dt><code><var>callback</var></code> {{optional_inline}}</dt>
+ <dd>レジストリが使用するコールバック関数です。指定された場合、関数である必要があります。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 新しいレジストリの生成
+<h3 id="Creating_a_new_registry" name="Creating_a_new_registry">新しいレジストリの生成</h3>
 
-コールバックを渡してレジストリを生成します。
+<p>コールバックを渡してレジストリを生成します。</p>
 
-```js
-const registry = new FinalizationRegistry(heldValue => {
+<pre class="brush: js notranslate">const registry = new FinalizationRegistry(heldValue =&gt; {
   // ....
 });
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-finalization-registry-constructor', 'FinalizationRegistry constructor')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('WeakRefs', '#sec-finalization-registry-constructor', 'FinalizationRegistry constructor')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.FinalizationRegistry.FinalizationRegistry")}}
+<p>{{Compat("javascript.builtins.FinalizationRegistry.FinalizationRegistry")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("FinalizationRegistry")}}
+<ul>
+ <li>{{jsxref("FinalizationRegistry")}}</li>
+</ul>

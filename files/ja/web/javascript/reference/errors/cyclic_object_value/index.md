@@ -8,51 +8,49 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "cyclic object value" は、 [JSON](https://www.json.org/) の中にオブジェクトの参照が見つかったときに発生します。 {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。
+<p>JavaScript の例外 "cyclic object value" は、 <a href="https://www.json.org/">JSON</a> の中にオブジェクトの参照が見つかったときに発生します。 {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。</p>
 
-## メッセージ
+<h2 id="Message" name="Message">メッセージ</h2>
 
-    TypeError: cyclic object value (Firefox)
-    TypeError: Converting circular structure to JSON (Chrome and Opera)
-    TypeError: Circular reference in value argument not supported (Edge)
+<pre class="syntaxbox notranslate">TypeError: cyclic object value (Firefox)
+TypeError: Converting circular structure to JSON (Chrome and Opera)
+TypeError: Circular reference in value argument not supported (Edge)
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("TypeError")}}
+<p>{{jsxref("TypeError")}}</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-[JSON 形式](https://www.json.org/)はオブジェクト参照に対応していません ([IETF の草案はありますが](http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03))。したがって {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。
+<p><a href="https://www.json.org/">JSON 形式</a>はオブジェクト参照に対応していません (<a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">IETF の草案はありますが</a>)。したがって {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 循環参照
+<h3 id="Circular_references" name="Circular_references">循環参照</h3>
 
-次のような循環構造体では、
+<p>次のような循環構造体では、</p>
 
-```js
-var circularReference = {otherData: 123};
+<pre class="brush: js notranslate">var circularReference = {otherData: 123};
 circularReference.myself = circularReference;
-```
+</pre>
 
-{{jsxref("JSON.stringify()")}} は失敗します。
+<p>{{jsxref("JSON.stringify()")}} は失敗します。</p>
 
-```js example-bad
-JSON.stringify(circularReference);
+<pre class="brush: js example-bad notranslate">JSON.stringify(circularReference);
 // TypeError: cyclic object value
-```
+</pre>
 
-循環参照をシリアライズするには、それに対応したライブラリ (例えば [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)) を使用したり、自分自身で循環参照を探してシリアライズ可能な値に置き換える (または削除する) ことを求める解決策を実装することもできます。
+<p>循環参照をシリアライズするには、それに対応したライブラリ (例えば <a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a>) を使用したり、自分自身で循環参照を探してシリアライズ可能な値に置き換える (または削除する) ことを求める解決策を実装することもできます。</p>
 
-次のスニペットは、 {{jsxref("JSON.stringify()")}} の `replacer` 引数を使用して循環参照を検索してフィルタリングする方法を示しています (これによりデータ損失が発生します)。
+<p>次のスニペットは、 {{jsxref("JSON.stringify()")}} の <code>replacer</code> 引数を使用して循環参照を検索してフィルタリングする方法を示しています (これによりデータ損失が発生します)。</p>
 
-```js
-const getCircularReplacer = () => {
+<pre class="brush: js notranslate">const getCircularReplacer = () =&gt; {
   const seen = new WeakSet();
-  return (key, value) => {
-    if (typeof value === "object" && value !== null) {
+  return (key, value) =&gt; {
+    if (typeof value === "object" &amp;&amp; value !== null) {
       if (seen.has(value)) {
         return;
       }
@@ -64,9 +62,11 @@ const getCircularReplacer = () => {
 
 JSON.stringify(circularReference, getCircularReplacer());
 // {"otherData":123}
-```
+</pre>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("JSON.stringify")}}
-- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) – `JSON.decycle` と `JSON.retrocycle` という 2 つの関数を導入し、循環構造と dag を JSON でエンコードしてからリカバリーできます。
+<ul>
+ <li>{{jsxref("JSON.stringify")}}</li>
+ <li><a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> – <code>JSON.decycle</code> と <code> JSON.retrocycle</code> という 2 つの関数を導入し、循環構造と dag を JSON でエンコードしてからリカバリーできます。</li>
+</ul>

@@ -11,40 +11,64 @@ tags:
   - 禁止ヘッダー名
 translation_of: Web/HTTP/Headers/Cookie
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**`Cookie`** は HTTP のリクエストヘッダーで、以前サーバーが {{HTTPHeader("Set-Cookie")}} ヘッダーで送信し、保存された [HTTP クッキー](/ja/docs/Web/HTTP/Cookies)を含みます。
+<p><strong><code>Cookie</code></strong> は HTTP のリクエストヘッダーで、以前サーバーが {{HTTPHeader("Set-Cookie")}} ヘッダーで送信し、保存された <a href="/ja/docs/Web/HTTP/Cookies">HTTP クッキー</a>を含みます。</p>
 
-`Cookie` ヘッダーは任意であり、例えば、ブラウザーのプライバシー設定でクッキーをブロックしている場合などは省略できます。
+<p><code>Cookie</code> ヘッダーは任意であり、例えば、ブラウザーのプライバシー設定でクッキーをブロックしている場合などは省略できます。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Request header", "リクエストヘッダー")}} |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | はい                                                                             |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>はい</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Cookie: <cookie-list>
-    Cookie: name=value
-    Cookie: name=value; name2=value2; name3=value3
+<pre class="syntaxbox notranslate">Cookie: &lt;cookie-list&gt;
+Cookie: name=value
+Cookie: name=value; name2=value2; name3=value3</pre>
 
-- \<cookie-list>
-  - : 名前と値のリストを `<cookie-name>=<cookie-value>` の形で表したものです。リストの組はセミコロンと空白 (`'; '`) で区切られます。
+<dl>
+ <dt>&lt;cookie-list&gt;</dt>
+ <dd>名前と値のリストを <code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code> の形で表したものです。リストの組はセミコロンと空白 (<code>'; '</code>) で区切られます。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-    Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
+<pre class="notranslate">Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                       | 題名                            |
-| -------------------------------------------- | ------------------------------- |
-| {{RFC("6265", "Cookie", "5.4")}} | HTTP State Management Mechanism |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("6265", "Cookie", "5.4")}}</td>
+   <td>HTTP State Management Mechanism</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Cookie")}}
+<p>{{Compat("http.headers.Cookie")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("Set-Cookie")}}
-- {{domxref("Document.cookie")}}
+<ul>
+ <li>{{HTTPHeader("Set-Cookie")}}</li>
+ <li>{{domxref("Document.cookie")}}</li>
+</ul>

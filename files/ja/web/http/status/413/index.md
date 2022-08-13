@@ -9,21 +9,34 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/413
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-HTTP **`413 Payload Too Large`** レスポンスステータスコードは、リクエストエンティティがサーバーによって定義された制限よりも大きいことを示します。サーバーは接続を閉じるか {{HTTPHeader("Retry-After")}} ヘッダーフィールドを返します。
+<p>HTTP <code><strong>413 Payload Too Large</strong></code> レスポンスステータスコードは、リクエストエンティティがサーバーによって定義された制限よりも大きいことを示します。サーバーは接続を閉じるか {{HTTPHeader("Retry-After")}} ヘッダーフィールドを返します。</p>
 
-## ステータス
+<h2 id="Status" name="Status">ステータス</h2>
 
-    413 Payload Too Large
+<pre class="syntaxbox notranslate">413 Payload Too Large</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                               | 題名                                                          |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "413 Payload Too Large" , "6.5.11")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "413 Payload Too Large" , "6.5.11")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("Connection")}}
-- {{HTTPHeader("Retry-After")}}
+<ul>
+ <li>{{HTTPHeader("Connection")}}</li>
+ <li>{{HTTPHeader("Retry-After")}}</li>
+</ul>

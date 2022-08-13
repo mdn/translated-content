@@ -2,67 +2,67 @@
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/big
+- Deprecated
+- HTML wrapper methods
+- JavaScript
+- Method
+- Prototype
+- Reference
+- String
+- Polyfill
 browser-compat: javascript.builtins.String.big
+translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 ---
-{{JSRef}} {{deprecated_header}}
+<div>{{JSRef}} {{deprecated_header}}</div>
 
-**`big()`** メソッドは、文字列が大きなフォントで表示されるように HTML の {{HTMLElement("big")}} 要素を生成します。
+<p><strong><code>big()</code></strong> メソッドは、文字列が大きなフォントで表示されるように HTML の {{HTMLElement("big")}} 要素を生成します。</p>
 
-> **Note:** **注:** \<big> 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
+<div class="note">
+  <p><strong>注:</strong> &lt;big&gt; 要素は <a href="/ja/docs/Glossary/HTML5">HTML5</a> で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は <a href="/ja/docs/Web/CSS">CSS</a> プロパティを使用してください。</p>
+</div>
 
-## 構文
+<h2 id="Syntax">構文</h2>
 
-```js
-big()
-```
+<pre class="brush: js">big()</pre>
 
-### 返値
+<h3 id="Return_value">返値</h3>
 
-HTML の {{HTMLElement("big")}} 要素を含む文字列です。
+<p>HTML の {{HTMLElement("big")}} 要素を含む文字列です。</p>
 
-## 解説
+<h2 id="Description">解説</h2>
 
-`big()` メソッドは、文字列を `<big>` 要素の中に、 "`<big>str</big>`" のように埋め込みます。
+<p><code>big()</code> メソッドは、文字列を <code>&lt;big&gt;</code> 要素の中に、 "<code>&lt;big&gt;str&lt;/big&gt;</code>" のように埋め込みます。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### big() の使用
+<h3 id="Using_big">big() の使用</h3>
 
-以下の例では文字列のメソッドを使用して、文字列の大きさを変更しています。
+<p>以下の例では文字列のメソッドを使用して、文字列の大きさを変更しています。</p>
 
-```js
-var worldString = 'Hello, world';
+<pre class="brush: js">var worldString = 'Hello, world';
 
-console.log(worldString.small());     // <small>Hello, world</small>
-console.log(worldString.big());       // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <fontsize=7>Hello, world</fontsize>
-```
+console.log(worldString.small());     // &lt;small&gt;Hello, world&lt;/small&gt;
+console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
+console.log(worldString.fontsize(7)); // &lt;fontsize=7&gt;Hello, world&lt;/fontsize&gt;
+</pre>
 
-{{domxref("HTMLElement/style", "element.style")}} オブジェクトを使用すると、要素の `style` 属性を使用して、次のようにもっと汎用的に操作することができます。
+<p>{{domxref("HTMLElement/style", "element.style")}} オブジェクトを使用すると、要素の <code>style</code> 属性を使用して、次のようにもっと汎用的に操作することができます。</p>
 
-```js
-document.getElementById('yourElemId').style.fontSize = '2em';
-```
+<pre class="brush: js">document.getElementById('yourElemId').style.fontSize = '2em';
+</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
 {{Specifications}}
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- `String.prototype.big` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) から利用できます
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.small()")}}
+<ul>
+  <li><code>String.prototype.big</code> のポリフィルは <a href="https://github.com/zloirock/core-js#ecmascript-string-and-regexp"><code>core-js</code></a> から利用できます</li>
+  <li>{{jsxref("String.prototype.fontsize()")}}</li>
+  <li>{{jsxref("String.prototype.small()")}}</li>
+</ul>

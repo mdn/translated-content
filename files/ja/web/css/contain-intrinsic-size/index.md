@@ -3,31 +3,47 @@ title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
 translation_of: Web/CSS/contain-intrinsic-size
 ---
-{{CSSRef}}
+<p>{{CSSRef}}</p>
 
-`contains-intrinsic-size` CSS プロパティは、[`content-visibility`](/ja/docs/Web/CSS/content-visibility)で指定された要素の自然なサイズを制御します。
+<p><code>contains-intrinsic-size</code> CSSプロパティは、<a href="/ja/docs/Web/CSS/content-visibility"><code>content-visibility</code></a>で指定された要素の自然なサイズを制御します。</p>
 
-## Syntax
+<h2 id="Syntax" name="Syntax">Syntax</h2>
 
-```css
-/* <length> values */
+<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; values */
 contain-intrinsic-size: 1000px;
 contain-intrinsic-size: 10rem;
 
-/* <percentage> value */
+/* &lt;percentage&gt; value */
 contain-intrinsic-size: 10%;
-```
+</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Sizing', '#propdef-contain-intrinsic-size')}} | {{Spec2('CSS4 Sizing')}} | Initial definition |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Sizing', '#propdef-contain-intrinsic-size')}}</td>
+   <td>{{Spec2('CSS4 Sizing')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
 
-## Browser compatibility
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("css.properties.contain-intrinsic-size")}}
 
-## See Also
 
-- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) (web.dev)
+<p>{{Compat("css.properties.contain-intrinsic-size")}}</p>
+
+<h2 id="See_Also">See Also</h2>
+
+<ul>
+ <li><a href="https://web.dev/content-visibility/">content-visibility: the new CSS property that boosts your rendering performance</a> (web.dev)</li>
+</ul>

@@ -7,34 +7,51 @@ tags:
   - HTTP Header
 translation_of: Web/HTTP/Headers/Accept-CH
 ---
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
 
-**`Accept-CH`** ヘッダーはサーバーによって設定され、クライアントが後続のリクエストに含める{{glossary("Client Hints", "クライアントヒント")}}ヘッダーを指定します。
+<p><code><strong>Accept-CH</strong></code> ヘッダーはサーバーによって設定され、クライアントが後続のリクエストに含める{{glossary("Client Hints", "クライアントヒント")}}ヘッダーを指定します。</p>
 
-| ヘッダー種別                                                                     | {{Glossary("Response header","レスポンスヘッダー")}} |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name","禁止ヘッダー名")}} | ?                                                                                |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Response header","レスポンスヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name","禁止ヘッダー名")}}</th>
+   <td>?</td>
+  </tr>
+ </tbody>
+</table>
 
-> **Note:** **注:** クライアントヒントには、安全なオリジン (TLS 経由) でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して保持する必要があります。
+<div class="blockIndicator note">
+<p><strong>注:</strong> クライアントヒントには、安全なオリジン (TLS 経由) でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して保持する必要があります。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Accept-CH: <list of client hints>
+<pre class="syntaxbox notranslate">Accept-CH: &lt;list of client hints&gt;
+</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-    Accept-CH: DPR, Viewport-Width
-    Accept-CH: Width
-    Accept-CH-Lifetime: 86400
-    Vary: DPR, Viewport-Width, Width
+<pre class="notranslate">Accept-CH: DPR, Viewport-Width
+Accept-CH: Width
+Accept-CH-Lifetime: 86400
+Vary: DPR, Viewport-Width, Width
+</pre>
 
-> **Note:** **注:** 受け入れられたクライアントのヒントに基づいて、[レスポンスを変更](/ja/docs/Glossary/Client_hints#Varying_Client_Hints)することを忘れないでください。
+<div class="blockIndicator note">
+<p><strong>注:</strong> 受け入れられたクライアントのヒントに基づいて、<a href="/ja/docs/Glossary/Client_hints#Varying_Client_Hints">レスポンスを変更</a>することを忘れないでください。</p>
+</div>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Accept-CH")}}
+<p>{{Compat("http.headers.Accept-CH")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("Accept-CH-Lifetime")}}
-- {{HTTPHeader("Vary")}}
+<ul>
+ <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
+ <li>{{HTTPHeader("Vary")}}</li>
+</ul>

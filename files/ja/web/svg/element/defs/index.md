@@ -6,60 +6,80 @@ tags:
   - SVG Container
 translation_of: Web/SVG/Element/defs
 ---
-{{SVGRef}}
+<div>{{SVGRef}}</div>
 
-SVG では、後で再利用できるよう描画オブジェクトを定義します。参照される要素は、可能なかぎり`defs`要素内で定義されることが推奨されています。`defs`要素内でこれらの要素を定義することは、SVG の要素の可読性を向上させ、ひいては操作性をも向上させます。`defs`要素の描画要素は、そのままでは描画されません。ビューポート上で描画したい場所へそれらの要素を描画するために、{{ SVGElement("use") }}要素を使用します。
+<p>SVGでは、後で再利用できるよう描画オブジェクトを定義します。参照される要素は、可能なかぎり<code>defs</code>要素内で定義されることが推奨されています。<code>defs</code>要素内でこれらの要素を定義することは、SVGの要素の可読性を向上させ、ひいては操作性をも向上させます。<code>defs</code>要素の描画要素は、そのままでは描画されません。ビューポート上で描画したい場所へそれらの要素を描画するために、{{ SVGElement("use") }}要素を使用します。</p>
 
-## 利用コンテキスト
+<h2 id="利用コンテキスト">利用コンテキスト</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## 例
+<h2 id="例">例</h2>
 
-```xml
-<svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg">
+<pre class="brush: xml">&lt;svg width="80px" height="30px" viewBox="0 0 80 30"
+     xmlns="http://www.w3.org/2000/svg"&gt;
 
-  <defs>
-    <linearGradient id="Gradient01">
-      <stop offset="20%" stop-color="#39F" />
-      <stop offset="90%" stop-color="#F3F" />
-    </linearGradient>
-  </defs>
+  &lt;defs&gt;
+    &lt;linearGradient id="Gradient01"&gt;
+      &lt;stop offset="20%" stop-color="#39F" /&gt;
+      &lt;stop offset="90%" stop-color="#F3F" /&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
 
-  <rect x="10" y="10" width="60" height="10"
-        fill="url(#Gradient01)"  />
-</svg>
-```
+  &lt;rect x="10" y="10" width="60" height="10"
+        fill="url(#Gradient01)"  /&gt;
+&lt;/svg&gt;
+</pre>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-### グローバル属性
+<h3 id="グローバル属性">グローバル属性</h3>
 
-- [条件的処理属性（コンディショナルプロセッシング属性）](/ja/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [コア属性](/ja/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [描画イベント属性](/ja/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [プレゼンテーション属性](/ja/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+<ul>
+ <li><a href="/ja/SVG/Attribute#ConditionalProccessing" title="en/SVG/Attribute#ConditionalProccessing">条件的処理属性（コンディショナルプロセッシング属性）</a> »</li>
+ <li><a href="/ja/SVG/Attribute#Core" title="en/SVG/Attribute#Core">コア属性</a> »</li>
+ <li><a href="/ja/SVG/Attribute#GraphicalEvent" title="en/SVG/Attribute#GraphicalEvent">描画イベント属性</a> »</li>
+ <li><a href="/ja/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">プレゼンテーション属性</a> »</li>
+ <li>{{ SVGAttr("class") }}</li>
+ <li>{{ SVGAttr("style") }}</li>
+ <li>{{ SVGAttr("externalResourcesRequired") }}</li>
+ <li>{{ SVGAttr("transform") }}</li>
+</ul>
 
-### スペシフィック属性
+<h3 id="スペシフィック属性">スペシフィック属性</h3>
 
-_スペシフィック属性はありません_
+<p><em>スペシフィック属性はありません</em></p>
 
-## DOM インタフェース
+<h2 id="DOM_インタフェース">DOM インタフェース</h2>
 
-この要素は [`SVGDefsElement`](/ja/DOM/SVGDefsElement "en/DOM/SVGDefsElement") インタフェースを実装しています。
+<p>この要素は <code><a href="/ja/DOM/SVGDefsElement" title="en/DOM/SVGDefsElement">SVGDefsElement</a></code> インタフェースを実装しています。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                         | 状態                     | コメント   |
-| ---------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName("SVG2", "struct.html#Head", "&lt;defs&gt;")}} | {{Spec2("SVG2")}} | 変更なし   |
-| {{SpecName("SVG1.1", "struct.html#Head", "&lt;defs&gt;")}} | {{Spec2("SVG1.1")}} | 最初の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("SVG2", "struct.html#Head", "&lt;defs&gt;")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>変更なし</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "struct.html#Head", "&lt;defs&gt;")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>最初の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザ互換性
+<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
 
-{{Compat("svg.elements.defs")}}
+
+
+<p>{{Compat("svg.elements.defs")}}</p>

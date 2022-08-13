@@ -8,78 +8,75 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
-{{JSRef}} {{deprecated_header}}
+<div>{{JSRef}} {{deprecated_header}}</div>
 
-**`function.caller`** プロパティは、指定した関数の呼び出し元の関数を返します。厳格モード、非同期関数、ジェネレーター関数の呼び出し元については `null` を返します。
+<p><strong><code><var>function</var>.caller</code></strong> プロパティは、指定した関数の呼び出し元の関数を返します。厳格モード、非同期関数、ジェネレーター関数の呼び出し元については <code>null</code> を返します。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-関数 `f` が最上位のコードで呼び出された場合、 `f.caller` の値は {{jsxref("null")}} に、それ以外の場合の値は `f` を呼び出した関数になります。厳格モード、非同期関数、ジェネレーター関数の呼び出し元についても `null` を返します。
+<p>関数 <code>f</code> が最上位のコードで呼び出された場合、 <code>f.caller</code> の値は {{jsxref("null")}} に、それ以外の場合の値は <code>f</code> を呼び出した関数になります。厳格モード、非同期関数、ジェネレーター関数の呼び出し元についても <code>null</code> を返します。</p>
 
-このプロパティは、廃止された {{jsxref("Functions/arguments", "arguments")}} オブジェクトの {{jsxref("Functions/arguments/caller", "arguments.caller")}} プロパティを置き換えます。
+<p>このプロパティは、廃止された {{jsxref("Functions/arguments", "arguments")}} オブジェクトの {{jsxref("Functions/arguments/caller", "arguments.caller")}} プロパティを置き換えます。</p>
 
-特殊プロパティである `__caller__` は呼び出し元の activation オブジェクトを返し、スタックの再現に利用できましたが、セキュリティ上の理由により削除されました。
+<p>特殊プロパティである <code>__caller__</code> は呼び出し元の activation オブジェクトを返し、スタックの再現に利用できましたが、セキュリティ上の理由により削除されました。</p>
 
-### 注
+<h3 id="Notes" name="Notes">注</h3>
 
-再帰呼び出しの場合、このプロパティを用いてコールスタックを再現することはできません。以下について考えてみましょう。
+<p>再帰呼び出しの場合、このプロパティを用いてコールスタックを再現することはできません。以下について考えてみましょう。</p>
 
-```js
-function f(n) { g(n - 1); }
-function g(n) { if (n > 0) { f(n); } else { stop(); } }
+<pre class="brush: js notranslate">function f(n) { g(n - 1); }
+function g(n) { if (n &gt; 0) { f(n); } else { stop(); } }
 f(2);
-```
+</pre>
 
-`stop()` が呼び出された時点のコールスタックは以下のようになるでしょう。
+<p><code>stop()</code> が呼び出された時点のコールスタックは以下のようになるでしょう。</p>
 
-```js
-f(2) -> g(1) -> f(1) -> g(0) -> stop()
-```
+<pre class="brush: js notranslate">f(2) -&gt; g(1) -&gt; f(1) -&gt; g(0) -&gt; stop()
+</pre>
 
-以下は真になります。
+<p>以下は真になります。</p>
 
-```js
-stop.caller === g && f.caller === g && g.caller === f
-```
+<pre class="brush: js notranslate">stop.caller === g &amp;&amp; f.caller === g &amp;&amp; g.caller === f
+</pre>
 
-従って、`stop()` 関数のスタックトレースを以下のようにして取得するとします。
+<p>従って、<code>stop()</code> 関数のスタックトレースを以下のようにして取得するとします。</p>
 
-```js
-var f = stop;
+<pre class="brush: js notranslate">var f = stop;
 var stack = 'Stack trace:';
 while (f) {
   stack += '\n' + f.name;
   f = f.caller;
 }
-```
+</pre>
 
-これは無限ループになります。
+<p>これは無限ループになります。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 関数の caller プロパティの値を確認する
+<h3 id="Checking_the_value_of_a_functions_caller_property" name="Checking_the_value_of_a_functions_caller_property">関数の caller プロパティの値を確認する</h3>
 
-以下のコードは、関数の `caller` プロパティの値を確認します。
+<p>以下のコードは、関数の <code>caller</code> プロパティの値を確認します。</p>
 
-```js
-function myFunc() {
+<pre class="brush: js notranslate">function myFunc() {
   if (myFunc.caller == null) {
     return 'The function was called from the top!';
   } else {
     return 'This function\'s caller was ' + myFunc.caller;
   }
 }
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-いずれの標準仕様でも定義されていません。
+<p>いずれの標準仕様でも定義されていません。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Function.caller")}}
+<p>{{Compat("javascript.builtins.Function.caller")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Function.name", "Function.name")}}
-- {{jsxref("Functions/arguments", "arguments")}}
+<ul>
+ <li>{{jsxref("Function.name", "Function.name")}}</li>
+ <li>{{jsxref("Functions/arguments", "arguments")}}</li>
+</ul>

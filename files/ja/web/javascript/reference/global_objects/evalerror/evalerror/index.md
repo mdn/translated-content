@@ -7,31 +7,32 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`EvalError`** コンストラクターは、グローバルの {{jsxref("Global_Objects/eval", "eval()")}} 関数に関する新しいエラーを生成します。この例外はもう JavaScript からは使用されていませんが、 `EvalError` オブジェクトは互換性のために残っています。object
+<p><strong><code>EvalError</code></strong> コンストラクターは、グローバルの {{jsxref("Global_Objects/eval", "eval()")}} 関数に関する新しいエラーを生成します。この例外はもう JavaScript からは使用されていませんが、 <code>EvalError</code> オブジェクトは互換性のために残っています。object</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    new EvalError([message[, fileName[, lineNumber]]])
+<pre class="syntaxbox notranslate">new EvalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `message` {{optional_inline}}
-  - : 人間が読むためのエラーの説明です。
-- `fileName` {{optional_inline}}
-  - : 例外が発生したコードを含むファイルの名前です。
-- `lineNumber` {{optional_inline}}
-  - : 例外が発生したコードの行番号です。
+<dl>
+ <dt><code><var>message</var></code> {{optional_inline}}</dt>
+ <dd>人間が読むためのエラーの説明です。</dd>
+ <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
+ <dd>例外が発生したコードを含むファイルの名前です。</dd>
+ <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
+ <dd>例外が発生したコードの行番号です。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-`EvalError` は現在の ECMAScript 仕様書では使用されておらず、ランタイムから発生することもありません。しかし、このオブジェクト自身は仕様書の以前のバージョンとの後方互換性のために残っています。
+<p><code>EvalError</code> は現在の ECMAScript 仕様書では使用されておらず、ランタイムから発生することもありません。しかし、このオブジェクト自身は仕様書の以前のバージョンとの後方互換性のために残っています。</p>
 
-### EvalError の生成
+<h3 id="Creating_an_EvalError" name="Creating_an_EvalError">EvalError の生成</h3>
 
-```js
-try {
+<pre class="brush: js notranslate">try {
   throw new EvalError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
@@ -42,19 +43,32 @@ try {
   console.log(e.columnNumber);         // 0
   console.log(e.stack);                // "@Scratchpad/2:2:9\n"
 }
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.EvalError.EvalError")}}
+<div>
+<p>{{Compat("javascript.builtins.EvalError.EvalError")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Error")}}
-- {{jsxref("Global_Objects/eval", "eval()")}}
+<ul>
+ <li>{{jsxref("Error")}}</li>
+ <li>{{jsxref("Global_Objects/eval", "eval()")}}</li>
+</ul>

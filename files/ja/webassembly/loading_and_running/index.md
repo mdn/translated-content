@@ -9,67 +9,64 @@ tags:
   - バイトコード
 translation_of: WebAssembly/Loading_and_running
 ---
-{{WebAssemblySidebar}}
+<div>{{WebAssemblySidebar}}</div>
 
-JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。
+<p class="summary">JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。</p>
 
-## どんな方法があるの?
+<h2 id="What_are_the_options">どんな方法があるの?</h2>
 
-WebAssembly は `<script type='module'>` または ES2015 の `import` 文とまだ統合されていないため、インポートを使用してブラウザでモジュールをフェッチする組み込みの方法はありません。
+<p>WebAssemblyは <code>&lt;script type='module'&gt;</code> または ES2015 の  <code>import</code> 文とまだ統合されていないため、インポートを使用してブラウザでモジュールをフェッチする組み込みの方法はありません。</p>
 
-以前の {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} メソッドでは、生のバイトをフェッチした後 WebAssembly モジュールのバイナリを含む {{domxref("ArrayBuffer")}} を作成し、コンパイル/インスタンス化する必要があります。これは文字列(JavaScript ソースコード) をバイトの配列バッファ (WebAssembly ソースコード)で置き換えることを除いて、`new Function(string)` に似ています。
+<p>以前の {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} メソッドでは、生のバイトをフェッチした後 WebAssembly モジュールのバイナリを含む {{domxref("ArrayBuffer")}} を作成し、コンパイル/インスタンス化する必要があります。これは文字列(JavaScript ソースコード) をバイトの配列バッファ (WebAssembly ソースコード)で置き換えることを除いて、<code>new Function(string)</code> に似ています。</p>
 
-新しい {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}} メソッドは、より効率的です。ネットワークからの生のバイトストリームに対して直接アクションを実行し、 {{domxref("ArrayBuffer")}} ステップの必要性がなくなりました。
+<p>新しい {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}}  メソッドは、より効率的です。ネットワークからの生のバイトストリームに対して直接アクションを実行し、 {{domxref("ArrayBuffer")}} ステップの必要性がなくなりました。</p>
 
-では、どのようにバイト列を配列バッファに読み込んでコンパイルするのでしょうか? 次の章で説明します。
+<p>では、どのようにバイト列を配列バッファに読み込んでコンパイルするのでしょうか? 次の章で説明します。</p>
 
-## Fetch を使用する
+<h2 id="Using_Fetch">Fetchを使用する</h2>
 
-[Fetch](/ja/docs/Web/API/Fetch_API) はネットワークリソースを取得するための便利でモダンな API です。
+<p><a href="/ja/docs/Web/API/Fetch_API">Fetch</a> はネットワークリソースを取得するための便利でモダンな API です。</p>
 
-wasm モジュールをフェッチする最も簡単で効率的な方法は、新しい {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用することです。このメソッドは最初の引数として `fetch()` を呼び出すことができ、1 つのステップでフェッチ、モジュールをインスタンス化し、サーバからストリームされる生のバイトコードにアクセスします。
+<p>wasm モジュールをフェッチする最も簡単で効率的な方法は、新しい {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用することです。このメソッドは最初の引数として <code>fetch()</code> を呼び出すことができ、1つのステップでフェッチ、モジュールをインスタンス化し、サーバからストリームされる生のバイトコードにアクセスします。</p>
 
-```js
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(results => {
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
+.then(results =&gt; {
   // Do something with the results!
-});
-```
+});</pre>
 
-直接ストリームでは動作しない古い {{jsxref("WebAssembly.instantiate()")}} メソッドを使用した場合、フェッチされたバイトコードを {{domxref("ArrayBuffer")}} に変換する必要があります。次のようにです：
+<p>直接ストリームでは動作しない古い {{jsxref("WebAssembly.instantiate()")}} メソッドを使用した場合、フェッチされたバイトコードを {{domxref("ArrayBuffer")}} に変換する必要があります。次のようにです：</p>
 
-```js
-fetch('module.wasm').then(response =>
+<pre class="brush: js">fetch('module.wasm').then(response =&gt;
   response.arrayBuffer()
-).then(bytes =>
+).then(bytes =&gt;
   WebAssembly.instantiate(bytes, importObject)
-).then(results => {
+).then(results =&gt; {
   // コンパイルされた結果(results)で何かする!
-});
-```
+});</pre>
 
-### 余談: instantiate() のオーバーロード
+<h3 id="Aside_on_instantiate_overloads">余談: instantiate() のオーバーロード</h3>
 
-{{jsxref("WebAssembly.instantiate()")}} 関数は 2 つのオーバーロードを持ちます — 1 つ目 (上の例を参照)はバイトコードを受け取ってプロミスを返します。解決されたプロミスでコンパイルされたモジュールと、それをインスタンス化したものを含むオブジェクトとして受け取ります。オブジェクトの構造は以下のようになります:
+<p>{{jsxref("WebAssembly.instantiate()")}} 関数は2つのオーバーロードを持ちます — 1つ目 (上の例を参照)はバイトコードを受け取ってプロミスを返します。解決されたプロミスでコンパイルされたモジュールと、それをインスタンス化したものを含むオブジェクトとして受け取ります。オブジェクトの構造は以下のようになります:</p>
 
-```js
-{
+<pre class="brush: js">{
   module : Module // コンパイルされた WebAssembly.Module オブジェクト,
   instance : Instance // モジュールオブジェクトから生成された WebAssembly.Instance
-}
-```
+}</pre>
 
-> **Note:** **注**: 通常はインスタンスのみを気にしますが、キャッシュする場合や、[`postMessage()`](/ja/docs/Web/API/MessagePort/postMessage) を使用して別のワーカーやウィンドウと共有する場合や、インスタンスをさらに作成したい場合に備えて、モジュールを用意すると便利です。
+<div class="note">
+<p><strong>注</strong>: 通常はインスタンスのみを気にしますが、キャッシュする場合や、<code><a href="/ja/docs/Web/API/MessagePort/postMessage">postMessage()</a></code> を使用して別のワーカーやウィンドウと共有する場合や、インスタンスをさらに作成したい場合に備えて、モジュールを用意すると便利です。</p>
+</div>
 
-> **Note:** **注**: 2 番目のオーバーロードフォームは {{jsxref("WebAssembly.Module")}} オブジェクトを引数としてとり、結果としてインスタンスオブジェクトを直接含む Promise を返します。[2 番目のオーバーロードの例](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example)を参照してください。
+<div class="note">
+<p><strong>注</strong>: 2番目のオーバーロードフォームは {{jsxref("WebAssembly.Module")}} オブジェクトを引数としてとり、結果としてインスタンスオブジェクトを直接含む Promise を返します。<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example">2番目のオーバーロードの例</a>を参照してください。</p>
+</div>
 
-### WebAssembly コードを実行する
+<h3 id="Running_your_WebAssembly_code">WebAssembly コードを実行する</h3>
 
-JavaScript 内で WebAssembly インスタンスが 有効になったら {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} プロパティを通してエクスポートされた機能を使い始める事ができます。コードは以下のようになるでしょう:
+<p>JavaScript 内で WebAssembly インスタンスが 有効になったら {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} プロパティを通してエクスポートされた機能を使い始める事ができます。コードは以下のようになるでしょう:</p>
 
-```js
-WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
-.then(obj => {
+<pre class="brush: js">WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
+.then(obj =&gt; {
   // Call an exported function:
   obj.instance.exports.exported_func();
 
@@ -79,34 +76,37 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
   // or access the elements of an exported table:
   var table = obj.instance.exports.table;
   console.log(table.get(0)());
-})
-```
+})</pre>
 
-> **Note:** **注**: WebAssembly モジュールからのエクスポートの仕組みの詳細については [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API) と [WebAssembly テキストフォーマットを理解する](/ja/docs/WebAssembly/Understanding_the_text_format) を参照してください。
+<div class="note">
+<p><strong>注</strong>: WebAssembly モジュールからのエクスポートの仕組みの詳細については <a href="/ja/docs/WebAssembly/Using_the_JavaScript_API">WebAssembly JavaScript API の使用</a> と <a href="/ja/docs/WebAssembly/Understanding_the_text_format">WebAssemblyテキストフォーマットを理解する</a> を参照してください。</p>
+</div>
 
-## XMLHttpRequest を使用する
+<h2 id="Using_XMLHttpRequest">XMLHttpRequest を使用する</h2>
 
-[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) は Fetch よりやや古いですが、引き続き型付き配列を取得するために適切に使用することができます。繰り返しますが、モジュール名は `simple.wasm` とします:
+<p><code><a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> は Fetch よりやや古いですが、引き続き型付き配列を取得するために適切に使用することができます。繰り返しますが、モジュール名は <code>simple.wasm</code> とします:</p>
 
-1.  {{domxref("XMLHttpRequest()")}} インスタンスを生成して、{{domxref("XMLHttpRequest.open","open()")}} メソッドでリクエストをオープン、リクエストメソッドを `GET` に設定し、フェッチするためのパスを宣言します。
-2.  キーは {{domxref("XMLHttpRequest.responseType","responseType")}} を使用してレスポンスタイプを `'arraybuffer'` にすることです。
-3.  次に {{domxref("XMLHttpRequest.send()")}} を使用してリクエストします。
-4.  そのあと、ダウンロードが終了したときに {{domxref("XMLHttpRequest.onload", "onload")}} イベントハンドラから関数を実行します — この関数内で {{domxref("XMLHttpRequest.response", "response")}} プロパティから array buffer を取得し、Fetch で行ったように {{jsxref("WebAssembly.instantiate()")}} メソッドに渡します。
+<ol>
+ <li>{{domxref("XMLHttpRequest()")}} インスタンスを生成して、{{domxref("XMLHttpRequest.open","open()")}} メソッドでリクエストをオープン、リクエストメソッドを <code>GET</code> に設定し、フェッチするためのパスを宣言します。</li>
+ <li>キーは {{domxref("XMLHttpRequest.responseType","responseType")}} を使用してレスポンスタイプを <code>'arraybuffer'</code> にすることです。</li>
+ <li>次に {{domxref("XMLHttpRequest.send()")}} を使用してリクエストします。</li>
+ <li>そのあと、ダウンロードが終了したときに {{domxref("XMLHttpRequest.onload", "onload")}} イベントハンドラから関数を実行します — この関数内で {{domxref("XMLHttpRequest.response", "response")}} プロパティから array buffer を取得し、Fetchで行ったように {{jsxref("WebAssembly.instantiate()")}} メソッドに渡します。</li>
+</ol>
 
-最終的なコードは以下のようになります:
+<p>最終的なコードは以下のようになります:</p>
 
-```js
-request = new XMLHttpRequest();
+<pre class="brush: js">request = new XMLHttpRequest();
 request.open('GET', 'simple.wasm');
 request.responseType = 'arraybuffer';
 request.send();
 
 request.onload = function() {
   var bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then(results => {
+  WebAssembly.instantiate(bytes, importObject).then(results =&gt; {
     results.instance.exports.exported_func();
   });
-};
-```
+};</pre>
 
-> **Note:** **注**: 動作例は [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html) を参照してください。
+<div class="note">
+<p><strong>注</strong>: 動作例は <a href="https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html">xhr-wasm.html</a> を参照してください。</p>
+</div>

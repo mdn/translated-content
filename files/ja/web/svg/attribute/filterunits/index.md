@@ -3,29 +3,48 @@ title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
 translation_of: Web/SVG/Attribute/filterUnits
 ---
-« [SVG Attribute reference home](/ja/SVG/Attribute "en/SVG/Attribute")
+<p>« <a href="/ja/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
 
-`filterUnits`属性は、 {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} そして {{ SVGAttr("height") }} の座標系を定義します。
+<p><code>filterUnits</code>属性は、 {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} そして {{ SVGAttr("height") }} の座標系を定義します。</p>
 
-もし`filterUnits`属性が指定されていない場合、`objectBoundingBox`が指定されているのと同じになります。
+<p>もし<code>filterUnits</code>属性が指定されていない場合、<code>objectBoundingBox</code>が指定されているのと同じになります。</p>
 
-## Usage context
+<h2 id="Usage_context">Usage context</h2>
 
-| Categories         | _None_                                                                                             |
-| ------------------ | -------------------------------------------------------------------------------------------------- |
-| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                        |
-| Animatable         | Yes                                                                                                |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#FilterElementFilterUnitsAttribute) |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Categories</th>
+   <td><em>None</em></td>
+  </tr>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>userSpaceOnUse</code> | <code><strong>objectBoundingBox</strong></code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <th scope="row">Normative document</th>
+   <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#FilterElementFilterUnitsAttribute">SVG 1.1 (2nd Edition)</a></td>
+  </tr>
+ </tbody>
+</table>
 
-- userSpaceOnUse
-  - : {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }} represent values in the current coordinate system that results from taking the current user coordinate system in place at the time when the {{ SVGElement("filter") }} element is referenced (i.e., the user coordinate system for the element referencing the {{ SVGElement("filter") }} element via a {{ SVGAttr("filter") }} attribute).
-- objectBoundingBox
-  - : In that case, {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }} represent fractions or percentages of the bounding box on the referencing element.
+<dl>
+ <dt>userSpaceOnUse</dt>
+ <dd>{{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }} represent values in the current coordinate system that results from taking the current user coordinate system in place at the time when the {{ SVGElement("filter") }} element is referenced (i.e., the user coordinate system for the element referencing the {{ SVGElement("filter") }} element via a {{ SVGAttr("filter") }} attribute).</dd>
+ <dt>objectBoundingBox</dt>
+ <dd>In that case, {{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }} represent fractions or percentages of the bounding box on the referencing element.</dd>
+</dl>
 
-## Examples
+<h2 id="Examples">Examples</h2>
 
-## Elements
+<h2 id="Elements">Elements</h2>
 
-The following elements can use the `filterUnits` attribute:
+<p>The following elements can use the <code>filterUnits</code> attribute:</p>
 
-- {{ SVGElement("filter") }}
+<ul>
+ <li>{{ SVGElement("filter") }}</li>
+</ul>

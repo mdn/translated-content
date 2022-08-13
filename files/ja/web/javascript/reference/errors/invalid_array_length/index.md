@@ -2,51 +2,54 @@
 title: 'RangeError: invalid array length'
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
+- Error
+- Errors
+- JavaScript
+- RangeError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "Invalid array length" は、配列の長さが負の数か、プラットフォームで対応している最大値を超える値に設定しようとしたとき (すなわち、 {{jsxref("Array")}} または {{jsxref("ArrayBuffer")}} を生成しようとしたとき、または {{jsxref("Array.length")}} を設定しようとしたとき) に発生します。
+<p>JavaScript の例外 "Invalid array length" は、配列の長さが負の数か、プラットフォームで対応している最大値を超える値に設定しようとしたとき (すなわち、 {{jsxref("Array")}} または {{jsxref("ArrayBuffer")}} を生成しようとしたとき、または {{jsxref("Array.length")}} を設定しようとしたとき) に発生します。</p>
 
-配列の長さに許されている最大値は、プラットフォームとブラウザーとそのバージョンに依存します。 {{jsxref("Array")}} については、最大長は 2GB-1 (2^32-1) です。 {{jsxref("ArrayBuffer")}} については、最大値は 32 ビットシステムで 2GB-1 (2^32-1) です。 Firefox バージョン 89 から、 {{jsxref("ArrayBuffer")}} の最大値は 64 ビットシステムでは 8GB (2^33) です。
+<p>配列の長さに許されている最大値は、プラットフォームとブラウザーとそのバージョンに依存します。 {{jsxref("Array")}} については、最大長は 2GB-1 (2^32-1) です。 {{jsxref("ArrayBuffer")}} については、最大値は 32 ビットシステムで 2GB-1 (2^32-1) です。 Firefox バージョン 89 から、 {{jsxref("ArrayBuffer")}} の最大値は 64 ビットシステムでは 8GB (2^33) です。</p>
 
-> **Note:** **補足:** `Array` と `ArrayBuffer` は別個のデータ構造です (一方の実装がもう一方には影響しません)。
+<div class="notecard note">
+  <p><strong>補足:</strong> <code>Array</code> と <code>ArrayBuffer</code> は別個のデータ構造です (一方の実装がもう一方には影響しません)。</p>
+</div>
 
-## メッセージ
+<h2 id="Message">メッセージ</h2>
 
-```js
-RangeError: invalid array length (Firefox)
+<pre class="brush: js">RangeError: invalid array length (Firefox)
 RangeError: Invalid array length (Chromium-based)
 RangeError: Array buffer allocation failed (Chromium-based)
-```
+</pre>
 
-## エラーの種類
 
-{{jsxref("RangeError")}}
+<h2 id="Error_type">エラーの種類</h2>
 
-## エラーの原因
+<p>{{jsxref("RangeError")}}</p>
 
-配列の長さが不正になるのは、以下のような場合です。
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-- {{jsxref("Array")}} や {{jsxref("ArrayBuffer")}} を、負の数の長さで生成しようとしたか、 {{jsxref("Array.length")}} プロパティに負の数を設定しようとした。
-- 2GB-1 (2^32-1) よりも大きな {{jsxref("Array")}} を生成しようとしたか、 {{jsxref("Array.length")}} プロパティに設定しようとした。
-- 32 ビットシステムで 2GB-1 (2^32-1)、 64 ビットシステムで 8GB (2^33) を超える {{jsxref("ArrayBuffer")}} を生成しようとした。
-- Firefox 89 以前: 2GB-1 (2^32-1) より大きな {{jsxref("ArrayBuffer")}} を生成しようとした。
+<p>配列の長さが不正になるのは、以下のような場合です。</p>
 
-コンストラクターを使用して `Array` を生成すると、最初の引数が `Array` の長さとして解釈されるので、代わりにリテラル表記を使った方が良いかもしれません。
+<ul>
+  <li>{{jsxref("Array")}} や {{jsxref("ArrayBuffer")}} を、負の数の長さで生成しようとしたか、 {{jsxref("Array.length")}} プロパティに負の数を設定しようとした。</li>
+  <li>2GB-1 (2^32-1) よりも大きな {{jsxref("Array")}} を生成しようとしたか、 {{jsxref("Array.length")}} プロパティに設定しようとした。</li>
+  <li>32 ビットシステムで 2GB-1 (2^32-1)、 64 ビットシステムで 8GB (2^33) を超える {{jsxref("ArrayBuffer")}} を生成しようとした。</li>
+  <li>Firefox 89 以前: 2GB-1 (2^32-1) より大きな {{jsxref("ArrayBuffer")}} を生成しようとした。</li>
+</ul>
 
-そうでない場合は、 length プロパティを設定する前、またはコンストラクターの引数として使用する前に、長さを制限しておくとよいでしょう。
+<p>コンストラクターを使用して <code>Array</code> を生成すると、最初の引数が <code>Array</code> の長さとして解釈されるので、代わりにリテラル表記を使った方が良いかもしれません。</p>
 
-## 例
+<p>そうでない場合は、 length プロパティを設定する前、またはコンストラクターの引数として使用する前に、長さを制限しておくとよいでしょう。</p>
 
-### 不正なケース
+<h2 id="Examples">例</h2>
 
-```js example-bad
-new Array(Math.pow(2, 40))
+<h3 id="Invalid_cases">不正なケース</h3>
+
+<pre class="brush: js example-bad">new Array(Math.pow(2, 40))
 new Array(-1)
 new ArrayBuffer(Math.pow(2, 32)) //32 ビットシステム
 new ArrayBuffer(-1)
@@ -56,12 +59,11 @@ a.length = a.length - 1;         // length プロパティに -1 を設定
 
 let b = new Array(Math.pow(2, 32) - 1);
 b.length = b.length + 1;         // length プロパティに 2^32 を設定
-```
+</pre>
 
-### 有効な場合
+<h3 id="Valid_cases">有効な場合</h3>
 
-```js example-good
-[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
+<pre class="brush: js example-good">[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
 [ -1 ]                                  // [ -1 ]
 new ArrayBuffer(Math.pow(2, 32) - 1)
 new ArrayBuffer(Math.pow(2, 33))  // 64 ビットシステム、 Firefox 89 以降
@@ -74,11 +76,13 @@ let b = new Array(Math.pow(2, 32) - 1);
 b.length = Math.min(0xffffffff, b.length + 1);
 
 // 0xffffffff は 2^32 - 1 の 16 進表記です。
-// (-1 >>> 0) と書くこともできます。
-```
+// (-1 &gt;&gt;&gt; 0) と書くこともできます。
+</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{jsxref("Array")}}
-- {{jsxref("Array.length")}}
-- {{jsxref("ArrayBuffer")}}
+<ul>
+  <li>{{jsxref("Array")}}</li>
+  <li>{{jsxref("Array.length")}}</li>
+  <li>{{jsxref("ArrayBuffer")}}</li>
+</ul>

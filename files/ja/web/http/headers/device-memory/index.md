@@ -8,47 +8,76 @@ tags:
   - HTTP Header
 translation_of: Web/HTTP/Headers/Device-Memory
 ---
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+<div>{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}</div>
 
-**`Device-Memory`** ヘッダーは、[クライアントヒント](/ja/docs/Glossary/Client_hints)のヘッダーのように機能する [Device Memory API](/ja/docs/Web/API/Device_Memory_API) のヘッダーで、クライアントデバイスの RAM の概算量を表します。
+<p><strong><code>Device-Memory</code></strong> ヘッダーは、<a href="/ja/docs/Glossary/Client_hints">クライアントヒント</a>のヘッダーのように機能する <a href="/ja/docs/Web/API/Device_Memory_API">Device Memory API</a> のヘッダーで、クライアントデバイスの RAM の概算量を表します。</p>
 
-| ヘッダー種別                                                                     | {{Glossary("Request header","リクエストヘッダー")}} |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name","禁止ヘッダー名")}} | ?                                                                                |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Request header","リクエストヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name","禁止ヘッダー名")}}</th>
+   <td>?</td>
+  </tr>
+ </tbody>
+</table>
 
-> **Note:** **注**: クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから `Device-Memory` ヘッダーを受信することを選択する必要があります。
+<div class="blockIndicator note">
+<p><strong>注</strong>: クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 サーバーは、{{HTTPHeader("Accept-CH")}} および {{HTTPHeader("Accept-CH-Lifetime")}} のレスポンスヘッダーを送信することによって、クライアントから <code>Device-Memory</code> ヘッダーを受信することを選択する必要があります。</p>
+</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-デバイス RAM の量は、フィンガープリント変数として使用できるため、ヘッダーでの値は、誤用の可能性を減らすために意図的に粗くなっています。 ヘッダーは次の値を取ります: `0.25`、`0.5`、`1`、`2`、`4`、`8`。
+<p>デバイス RAM の量は、フィンガープリント変数として使用できるため、ヘッダーでの値は、誤用の可能性を減らすために意図的に粗くなっています。 ヘッダーは次の値を取ります: <code>0.25</code>、<code>0.5</code>、<code>1</code>、<code>2</code>、<code>4</code>、<code>8</code>。</p>
 
-    Device-Memory: <number>
+<pre class="syntaxbox notranslate">Device-Memory: &lt;number&gt;
+</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-サーバーはまず、レスポンスヘッダーとして `Device-Memory` を含む {{HTTPHeader("Accept-CH")}} と {{HTTPHeader("Accept-CH-Lifetime")}} を送信することによって、`Device-Memory` ヘッダーを受信するように選択する必要があります。
+<p>サーバーはまず、レスポンスヘッダーとして <code>Device-Memory</code> を含む {{HTTPHeader("Accept-CH")}} と {{HTTPHeader("Accept-CH-Lifetime")}} を送信することによって、<code>Device-Memory</code> ヘッダーを受信するように選択する必要があります。</p>
 
-    Accept-CH: Device-Memory
-    Accept-CH-Lifetime: 86400
+<pre class="notranslate">Accept-CH: Device-Memory
+Accept-CH-Lifetime: 86400
+</pre>
 
-次に、後続のリクエストでクライアントは、次のように `Device-Memory` ヘッダーを送り返す場合があります。
+<p>次に、後続のリクエストでクライアントは、次のように <code>Device-Memory</code> ヘッダーを送り返す場合があります。</p>
 
-    Device-Memory: 1
+<pre class="notranslate">Device-Memory: 1
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                           | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName("Device Memory","#sec-device-memory-client-hint-header","Device-Memory")}} | {{Spec2('Device Memory')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("Device Memory","#sec-device-memory-client-hint-header","Device-Memory")}}</td>
+   <td>{{Spec2('Device Memory')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Device-Memory")}}
+<p>{{Compat("http.headers.Device-Memory")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Device Memory API](/ja/docs/Web/API/Device_Memory_API)
-- {{HTTPHeader("Accept-CH")}}
-- {{HTTPHeader("Accept-CH-Lifetime")}}
-- {{HTTPHeader("Vary")}}
-- {{DOMxRef("Navigator.deviceMemory")}}
+<ul>
+ <li><a href="/ja/docs/Web/API/Device_Memory_API">Device Memory API</a></li>
+ <li>{{HTTPHeader("Accept-CH")}}</li>
+ <li>{{HTTPHeader("Accept-CH-Lifetime")}}</li>
+ <li>{{HTTPHeader("Vary")}}</li>
+ <li>{{DOMxRef("Navigator.deviceMemory")}}</li>
+</ul>

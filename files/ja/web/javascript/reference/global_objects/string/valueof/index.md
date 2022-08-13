@@ -9,46 +9,54 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`valueOf()`** メソッドは、{{jsxref("String")}} オブジェクトのプリミティブ値を返します。
+<p><strong><code>valueOf()</code></strong> メソッドは、{{jsxref("String")}} オブジェクトのプリミティブ値を返します。</p>
 
-{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
+<div>{{EmbedInteractiveExample("pages/js/string-valueof.html")}}</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    str.valueOf()
+<pre class="syntaxbox notranslate"><code><var>str</var>.valueOf()</code></pre>
 
-### 戻り値
+<h3 id="Return_value" name="Return_value">戻り値</h3>
 
-与えられた {{jsxref("String")}} オブジェクトのプリミティブ値を表す文字列。
+<p>与えられた {{jsxref("String")}} オブジェクトのプリミティブ値を表す文字列。</p>
 
-## 詳細
+<h2 id="Description" name="Description">詳細</h2>
 
-{{jsxref("String")}} オブジェクトの `valueOf()` メソッドは、{{jsxref("String")}} オブジェクトの文字列型としてのプリミティブ値を返します。この値は、{{jsxref("String.prototype.toString()")}} の戻り値と等価です。
+<p>{{jsxref("String")}} オブジェクトの <code>valueOf()</code> メソッドは、{{jsxref("String")}} オブジェクトの文字列型としてのプリミティブ値を返します。この値は、{{jsxref("String.prototype.toString()")}} の戻り値と等価です。</p>
 
-このメソッドは通常、JavaScript によって内部的に呼ばれ、コード中で明示的に呼ばれることはありません。
+<p>このメソッドは通常、JavaScript によって内部的に呼ばれ、コード中で明示的に呼ばれることはありません。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### `valueOf()` メソッドの使用
+<h3 id="Using_valueOf" name="Using_valueOf()"><code>valueOf()</code> メソッドの使用</h3>
 
-```js
-var x = new String('Hello world');
+<pre class="brush: js notranslate">var x = new String('Hello world');
 console.log(x.valueOf()); // "Hello world" を表示します
-```
+</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー実装状況
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
 
-{{Compat("javascript.builtins.String.valueOf")}}
+<p>{{Compat("javascript.builtins.String.valueOf")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("String.prototype.toString()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+<ul>
+ <li>{{jsxref("String.prototype.toString()")}}</li>
+ <li>{{jsxref("Object.prototype.valueOf()")}}</li>
+</ul>

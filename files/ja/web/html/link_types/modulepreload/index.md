@@ -7,15 +7,15 @@ tags:
   - Link
   - Link types
   - Reference
-translation_of: Web/HTML/Link_types/modulepreload
 browser-compat: html.elements.link.rel.modulepreload
+translation_of: Web/HTML/Link_types/modulepreload
 ---
-**`modulepreload`** キーワードを {{HTMLElement("link")}} 要素の {{HTMLAttrxRef("rel", "link")}} 属性に指定すると、[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)とその依存関係を先取りして取得し、後で評価するために文書のモジュールマップに保存するための宣言的な方法を提供します。
+<p><span class="seoSummary"><strong><code>modulepreload</code></strong> キーワードを {{HTMLElement("link")}} 要素の {{HTMLAttrxRef("rel", "link")}} 属性に指定すると、<a href="/ja/docs/Web/JavaScript/Guide/Modules">モジュールスクリプト</a>とその依存関係を先取りして取得し、後で評価するために文書のモジュールマップに保存するための宣言的な方法を提供します。</span></p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

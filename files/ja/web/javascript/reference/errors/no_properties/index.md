@@ -2,45 +2,45 @@
 title: 'TypeError: "x" has no properties'
 slug: Web/JavaScript/Reference/Errors/No_properties
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+- Error
+- Errors
+- JavaScript
+- TypeError
 translation_of: Web/JavaScript/Reference/Errors/No_properties
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "null (or undefined) has no properties" は、 {{jsxref("null")}} および {{jsxref("undefined")}} のプロパティにアクセスしようとしたときに発生します。これらには何もありません。They
+<p>JavaScript の例外 "null (or undefined) has no properties" は、 {{jsxref("null")}} および {{jsxref("undefined")}} のプロパティにアクセスしようとしたときに発生します。これらには何もありません。They</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
+<pre class="brush: js">TypeError: Unable to get property {x} of undefined or null reference (Edge)
 TypeError: null has no properties (Firefox)
 TypeError: undefined has no properties (Firefox)
-```
+</pre>
 
-## エラータイプ
+<h2 id="エラータイプ">エラータイプ</h2>
 
-{{jsxref("TypeError")}}
+<p>{{jsxref("TypeError")}}</p>
 
-## 何がうまくいかなかったのか？
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
 
-{{jsxref("null")}} と {{jsxref("undefined")}} に、アクセス可能なプロパティはありません。
+<p>{{jsxref("null")}} と {{jsxref("undefined")}} に、アクセス可能なプロパティはありません。</p>
 
-## 例
+<h2 id="例">例</h2>
 
-### null と undefined にはプロパティがない
+<h3 id="null_and_undefined_have_no_properties">null と undefined にはプロパティがない</h3>
 
-```js example-bad
-null.foo;
+<pre class="brush: js example-bad">null.foo;
 // TypeError: null has no properties
 
 undefined.bar;
 // TypeError: undefined has no properties
-```
+</pre>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- {{jsxref("null")}}
-- {{jsxref("undefined")}}
+<ul>
+  <li>{{jsxref("null")}}</li>
+  <li>{{jsxref("undefined")}}</li>
+</ul>

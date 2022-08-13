@@ -9,162 +9,208 @@ tags:
   - TopicStub
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 ---
-## ロール
+<h2 id="Roles" name="Roles">ロール</h2>
 
-### ウィジェットロール
 
-- [Button](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role)
-- [Checkbox](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role)
-- [Dialog](/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [Gridcell](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_Gridcell_Role)
-- [Link](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role)
-- Menuitem
-- Menuitemcheckbox
-- Menuitemradio
-- Option
-- [Progressbar](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role)
-- [Radio](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role)
-- Scrollbar
-- Searchbox
-- Separator（フォーカス可能な場合）
-- [Slider](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role)
-- Spinbutton
-- [Switch](/ja/docs/Web/Accessibility/ARIA/Roles/Switch_role)
-- [Tab](/ja/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
-- [Tabpanel](/ja/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)
-- [Textbox](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-- Treeitem
 
-### 複合ロール
+<h3 id="Widget_roles" name="Widget_roles">ウィジェットロール</h3>
 
-以下のテクニックでは、それぞれの複合ロールとその必須および任意の子ロールについて説明します。
+<div class="index">
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role">Button</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role">Checkbox</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role">Dialog</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_Gridcell_Role">Gridcell</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role">Link</a></li>
+ <li>Menuitem</li>
+ <li>Menuitemcheckbox </li>
+ <li>Menuitemradio</li>
+ <li>Option</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role">Progressbar</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role">Radio</a></li>
+ <li>Scrollbar</li>
+ <li>Searchbox</li>
+ <li>Separator（フォーカス可能な場合）</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role">Slider</a></li>
+ <li>Spinbutton</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Switch_role">Switch</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Tab_Role">Tab</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role">Tabpanel</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">Textbox</a></li>
+ <li>Treeitem</li>
+</ul>
+</div>
 
-- Combobox
-- [Grid](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role) （[row](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role), [gridcell](/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role), rowheader, columnheader ロールを含む）
-- [Listbox ](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role)（option ロールを含む）
-- Menu
-- Menubar
-- [Radiogroup （radio ロールを参照）](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role)
-- [Tablist](/ja/docs/Web/Accessibility/ARIA/Roles/Tablist_Role) （[tab](/ja/docs/Web/Accessibility/ARIA/Roles/Tab_Role), [tabpanel](/ja/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role) ロールを含む）
-- Tree
-- Treegrid
+<h3 id="Composite_roles" name="Composite_roles">複合ロール</h3>
 
-### 文書構造ロール
+<p>以下のテクニックでは、それぞれの複合ロールとその必須および任意の子ロールについて説明します。</p>
 
-- [Application](/ja/docs/Web/Accessibility/ARIA/Roles/Application_Role)
-- [Article](/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role)
-- [Cell](/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role)
-- Columnheader
-- Definition
-- Directory
-- [Document](/ja/docs/Web/Accessibility/ARIA/Roles/Document_Role)
-- [Feed](/ja/docs/Web/Accessibility/ARIA/Roles/Feed_Role)
-- [Figure](/ja/docs/Web/Accessibility/ARIA/Roles/Figure_Role)
-- [Group](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role)
-- [Grid](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
-- [Heading](/ja/docs/Web/Accessibility/ARIA/Roles/heading_role)
-- [Img](/ja/docs/Web/Accessibility/ARIA/Roles/Role_Img)
-- [List](/ja/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [Listitem](/ja/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
-- Math
-- [None（presentation ロールと同義）](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
-- Note
-- [Presentation](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
-- [Row](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)
-- [Rowgroup](/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
-- Rowheader
-- Separator
-- [Table](/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role)
-- Term
-- [Textbox](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-- Tooltip
-- [Toolbar](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role)
+<div class="index">
+<ul>
+ <li>Combobox</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role">Grid</a> （<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">gridcell</a>, rowheader, columnheader ロールを含む）</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">Listbox </a> （option ロールを含む）</li>
+ <li>Menu</li>
+ <li>Menubar</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role">Radiogroup （radio ロールを参照）</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Tablist_Role">Tablist</a> （<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Tab_Role">tab</a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role">tabpanel</a> ロールを含む）</li>
+ <li>Tree</li>
+ <li>Treegrid</li>
+</ul>
+</div>
 
-### ランドマークロール
+<h3 id="Document_structure_roles" name="Document_structure_roles">文書構造ロール</h3>
 
-- [Banner](/ja/docs/Web/Accessibility/ARIA/Roles/Banner_role)
-- [Complementary](/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
-- [Contentinfo](/ja/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
-- [Form](/ja/docs/Web/Accessibility/ARIA/Roles/Form_Role)
-- [Main](/ja/docs/Web/Accessibility/ARIA/Roles/Main_role)
-- [Navigation](/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
-- [Region](/ja/docs/Web/Accessibility/ARIA/Roles/Region_role)
-- [Search](/ja/docs/Web/Accessibility/ARIA/Roles/Search_role)
+<div class="index">
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Application_Role">Application</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role">Article</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role">Cell</a></li>
+ <li>Columnheader</li>
+ <li>Definition</li>
+ <li>Directory</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Document_Role">Document</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Feed_Role">Feed</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Figure_Role">Figure</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role">Group</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role">Grid</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/heading_role">Heading</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Role_Img">Img</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">List</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Listitem_role">Listitem</a></li>
+ <li>Math</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role">None（presentation ロールと同義）</a></li>
+ <li>Note</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role">Presentation</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">Row</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">Rowgroup</a></li>
+ <li>Rowheader</li>
+ <li>Separator</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role">Table</a></li>
+ <li>Term</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">Textbox</a></li>
+ <li>Tooltip</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role">Toolbar</a></li>
+</ul>
+</div>
 
-### ライブリージョンロール
+<h3 id="Landmark_roles" name="Landmark_roles">ランドマークロール</h3>
 
-- [Alert](/ja/docs/Web/Accessibility/ARIA/Roles/Alert_Role)
-- [Log](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role)
-- Marquee
-- [Status](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role)
-- Timer
+<div class="index">
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Banner_role">Banner</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role">Complementary</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">Contentinfo</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Form_Role">Form</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role">Main</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">Navigation</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role">Region</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Search_role">Search</a></li>
+</ul>
+</div>
 
-### ウィンドウロール
+<h3 id="Live_Region_Roles" name="Live_Region_Roles">ライブリージョンロール</h3>
 
-- [Alertdialog](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
-- [Dialog](/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+<div class="index">
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Alert_Role">Alert</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role">Log</a></li>
+ <li>Marquee</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role">Status</a></li>
+ <li>Timer</li>
+</ul>
+</div>
 
-## ステートとプロパティ
+<h3 id="Window_Roles" name="Window_Roles">ウィンドウロール</h3>
 
-### ウィジェット属性
+<div class="index">
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">Alertdialog</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role">Dialog</a></li>
+</ul>
+</div>
 
-- aria-autocomplete
-- aria-checked
-- aria-current
-- aria-disabled
-- aria-errormessage
-- aria-expanded
-- aria-haspopup
-- aria-hidden
-- [aria-invalid](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute)
-- [aria-label](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
-- aria-level
-- aria-modal
-- aria-multiline
-- aria-multiselectable
-- [aria-orientation](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute)
-- aria-placeholder
-- aria-pressed
-- aria-readonly
-- [aria-required](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute)
-- aria-selected
-- aria-sort
-- [aria-valuemax](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute)
-- [aria-valuemin](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute)
-- [aria-valuenow](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute)
-- [aria-valuetext](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute)
+<h2 id="States_and_properties" name="States_and_properties">ステートとプロパティ</h2>
 
-### ライブリージョン属性
+<h3 id="Widget_attributes" name="Widget_attributes">ウィジェット属性</h3>
 
-- aria-live
-- [aria-relevant](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
-- aria-atomic
-- aria-busy
+<div class="index">
+<ul>
+ <li>aria-autocomplete</li>
+ <li>aria-checked</li>
+ <li>aria-current</li>
+ <li>aria-disabled</li>
+ <li>aria-errormessage</li>
+ <li>aria-expanded</li>
+ <li>aria-haspopup</li>
+ <li>aria-hidden</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute">aria-invalid</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></li>
+ <li>aria-level</li>
+ <li>aria-modal</li>
+ <li>aria-multiline</li>
+ <li>aria-multiselectable</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute">aria-orientation</a></li>
+ <li>aria-placeholder</li>
+ <li>aria-pressed</li>
+ <li>aria-readonly</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute">aria-required</a></li>
+ <li>aria-selected</li>
+ <li>aria-sort</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute">aria-valuemax</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute">aria-valuemin</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute">aria-valuenow</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute">aria-valuetext</a></li>
+</ul>
+</div>
 
-### ドラッグ＆ドロップ属性
+<h3 id="Live_region_attributes" name="Live_region_attributes">ライブリージョン属性</h3>
 
-- aria-dropeffect
-- aria-dragged
+<div class="index">
+<ul>
+ <li>aria-live</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute">aria-relevant</a></li>
+ <li>aria-atomic</li>
+ <li>aria-busy</li>
+</ul>
+</div>
 
-### 関係属性
+<h3 id="Drag_drop_attributes" name="Drag_drop_attributes">ドラッグ＆ドロップ属性</h3>
 
-- [aria-activedescendant](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute)
-- aria-colcount
-- aria-colindex
-- aria-colspan
-- aria-controls
-- [aria-describedby](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)
-- aria-details
-- aria-errormessage
-- aria-flowto
-- [aria-labelledby](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
-- aria-owns
-- aria-posinset
-- aria-rowcount
-- aria-rowindex
-- aria-rowspan
-- aria-setsize
+<div class="index">
+<ul>
+ <li>aria-dropeffect</li>
+ <li>aria-dragged</li>
+</ul>
+</div>
 
-### MicrosoftEdge 固有のプロパティ
+<h3 id="Relationship_attributes" name="Relationship_attributes">関係属性</h3>
 
-- [x-ms-aria-flowfrom](/ja/docs/Web/API/x-ms-aria-flowfrom) {{Non-standard_Inline}}
+<div class="index">
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute">aria-activedescendant</a></li>
+ <li>aria-colcount</li>
+ <li>aria-colindex</li>
+ <li>aria-colspan</li>
+ <li>aria-controls</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></li>
+ <li>aria-details</li>
+ <li>aria-errormessage</li>
+ <li>aria-flowto</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></li>
+ <li>aria-owns</li>
+ <li>aria-posinset</li>
+ <li>aria-rowcount</li>
+ <li>aria-rowindex</li>
+ <li>aria-rowspan</li>
+ <li>aria-setsize</li>
+</ul>
+</div>
+
+<h3 id="MicrosoftEdge-specific_properties" name="MicrosoftEdge-specific_properties">MicrosoftEdge 固有のプロパティ</h3>
+
+<div class="index">
+<ul>
+ <li><a href="/ja/docs/Web/API/x-ms-aria-flowfrom">x-ms-aria-flowfrom</a> {{Non-standard_Inline}}</li>
+</ul>
+</div>

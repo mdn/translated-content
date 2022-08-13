@@ -5,72 +5,91 @@ tags:
   - MathML
 translation_of: Web/MathML/Element/mfenced
 ---
-{{MathMLRef}}
+<div>{{MathMLRef}}</div>
 
-MathML `<mfenced>` 要素は、独自の括弧類 (角括弧など) や区切り記号 (カンマやセミコロンなど) を数式に追加する機能を提供します。
+<p class="summary">MathML <code>&lt;mfenced&gt;</code> 要素は、独自の括弧類 (角括弧など) や区切り記号 (カンマやセミコロンなど) を数式に追加する機能を提供します。</p>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-- class, id, style
-  - : [スタイルシート](/ja/docs/CSS)で使用するために用意されます。
-- close
-  - : 閉じ記号の文字列を与えます。既定値は ")" です。空白文字はすべて無くされます。
-- href
-  - : 指定された URI へのハイパーリンクを設定するために使用されます。
-- mathbackground
-  - : 背景色。#`#rgb`、`#rrggbb`、および[HTML の色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
-- mathcolor
-  - : テキストの色と分数数線の色。 `#rgb`、`#rrggbb`、および[HTML の色名](/ja/docs/CSS/color_value#Color_Keywords)を使用できます。
-- open
-  - : 開き記号の文字列を与えます。既定値は "(" です。空白文字はすべて無くされます。
-- separators
-  - : 区切り記号を表すゼロ個以上の文字の列を与えます。空白で区切っても構いません。空白は無視されます。既定値は "," です。複数指定することにより，各子要素間に別個の区切り記号を当てることが出来ます。余分に指定した分は無視されます。少なく指定した場合は，最後のものが繰り返されます。
+<dl>
+ <dt id="attr-class-id-style">class, id, style</dt>
+ <dd><a href="/ja/docs/CSS">スタイルシート</a>で使用するために用意されます。</dd>
+ <dt id="attr-close">close</dt>
+ <dd>閉じ記号の文字列を与えます。既定値は ")" です。空白文字はすべて無くされます。</dd>
+ <dt id="attr-href">href</dt>
+ <dd>指定されたURIへのハイパーリンクを設定するために使用されます。</dd>
+ <dt id="attr-mathbackground">mathbackground</dt>
+ <dd>背景色。#<code>#rgb</code>、<code>#rrggbb</code>、および<a href="/ja/docs/CSS/color_value#Color_Keywords">HTMLの色名</a>を使用できます。</dd>
+ <dt id="attr-mathcolor">mathcolor</dt>
+ <dd>テキストの色と分数数線の色。 <code>#rgb</code>、<code>#rrggbb</code>、および<a href="/ja/docs/CSS/color_value#Color_Keywords">HTMLの色名</a>を使用できます。</dd>
+ <dt id="attr-open">open</dt>
+ <dd>開き記号の文字列を与えます。既定値は "(" です。空白文字はすべて無くされます。</dd>
+ <dt id="attr-separators">separators</dt>
+ <dd>区切り記号を表すゼロ個以上の文字の列を与えます。空白で区切っても構いません。空白は無視されます。既定値は  "," です。複数指定することにより，各子要素間に別個の区切り記号を当てることが出来ます。余分に指定した分は無視されます。少なく指定した場合は，最後のものが繰り返されます。</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-### 最後の区切り記号（`,`）は繰り返される
+<h3 id="最後の区切り記号（）は繰り返される">最後の区切り記号（<code>,</code>）は繰り返される</h3>
 
-サンプルレンダリング: ![{a;b;c,d,e}](/files/3193/mfenced01.png)
+<p>サンプルレンダリング: <img alt="{a;b;c,d,e}" src="/files/3193/mfenced01.png"></p>
 
-ブラウザーでのレンダリング: <math><mfenced close="}" open separators=";;,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
+<p>ブラウザーでのレンダリング: <math> <mfenced close="}" open="{" separators=";;,"> <mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi> </mfenced> </math></p>
 
-```html
-<math>
-  <mfenced open="{" close="}" separators=";;,">
-    <mi>a</mi>
-    <mi>b</mi>
-    <mi>c</mi>
-    <mi>d</mi>
-    <mi>e</mi>
-  </mfenced>
-</math>
-```
+<pre class="brush: html">&lt;math&gt;
+  &lt;mfenced open="{" close="}" separators=";;,"&gt;
+    &lt;mi&gt;a&lt;/mi&gt;
+    &lt;mi&gt;b&lt;/mi&gt;
+    &lt;mi&gt;c&lt;/mi&gt;
+    &lt;mi&gt;d&lt;/mi&gt;
+    &lt;mi&gt;e&lt;/mi&gt;
+  &lt;/mfenced&gt;
+&lt;/math&gt;
+</pre>
 
-### 余分な区切り記号（`,`）は無視される
+<h3 id="余分な区切り記号（）は無視される">余分な区切り記号（<code>,</code>）は無視される</h3>
 
-サンプルレンダリング: ![[a|b|c|d|e]](/files/3195/mfenced02.png)
+<p>サンプルレンダリング: <img alt="[a|b|c|d|e]" src="/files/3195/mfenced02.png"></p>
 
-ブラウザーでのレンダリング: <math><mfenced close="]" open separators="||||,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
+<p>ブラウザーでのレンダリング: <math> <mfenced close="]" open="[" separators="||||,"> <mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi> </mfenced> </math></p>
 
-```html
-<math>
-  <mfenced open="[" close="]" separators="||||,">
-    <mi>a</mi>
-    <mi>b</mi>
-    <mi>c</mi>
-    <mi>d</mi>
-    <mi>e</mi>
-  </mfenced>
-</math>
-```
+<pre class="brush: html">&lt;math&gt;
+  &lt;mfenced open="[" close="]" separators="||||,"&gt;
+    &lt;mi&gt;a&lt;/mi&gt;
+    &lt;mi&gt;b&lt;/mi&gt;
+    &lt;mi&gt;c&lt;/mi&gt;
+    &lt;mi&gt;d&lt;/mi&gt;
+    &lt;mi&gt;e&lt;/mi&gt;
+  &lt;/mfenced&gt;
+&lt;/math&gt;
+</pre>
 
-## Specifications
+<h2 id="Specifications">Specifications</h2>
 
-| Specification                                                                            | Status                       | Comment               |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mfenced', 'mfenced') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mfenced', 'mfenced') }} | {{ Spec2('MathML2') }} | Initial specification |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('MathML3', 'chapter3.html#presm.mfenced', 'mfenced') }}</td>
+   <td>{{ Spec2('MathML3') }}</td>
+   <td>Current specification</td>
+  </tr>
+  <tr>
+   <td>{{ SpecName('MathML2', 'chapter3.html#presm.mfenced', 'mfenced') }}</td>
+   <td>{{ Spec2('MathML2') }}</td>
+   <td>Initial specification</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー互換性
+<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
 
-{{Compat("mathml.elements.mfenced")}}
+
+
+<p>{{Compat("mathml.elements.mfenced")}}</p>

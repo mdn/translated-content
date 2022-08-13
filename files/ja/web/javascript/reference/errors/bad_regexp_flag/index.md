@@ -7,86 +7,106 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "invalid regular expression flag" は、正規表現リテラルにおいて 2 番目のスラッシュの後に定義されたフラグが、 `g`, `i`, `m`, `s`, `u`, `y` のどれでもないときに発生します。
+<p>JavaScript の例外 "invalid regular expression flag" は、正規表現リテラルにおいて 2 番目のスラッシュの後に定義されたフラグが、 <code>g</code>, <code>i</code>, <code>m</code>, <code>s</code>, <code>u</code>, <code>y</code> のどれでもないときに発生します。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-SyntaxError: Syntax error in regular expression (Edge)
+<pre class="brush: js">SyntaxError: Syntax error in regular expression (Edge)
 SyntaxError: invalid regular expression flag "x" (Firefox)
 SyntaxError: Invalid regular expression flags (Chrome)
-```
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("SyntaxError")}}
+<p>{{jsxref("SyntaxError")}}</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-コード内に、不正な正規表現フラグがあります。スラッシュで囲まれたパターンで構成される正規表現リテラルでは、フラグは 2 番目のフラグの後に定義されます。 {{jsxref("RegExp")}} オブジェクトのコンストラクター関数 (2 つ目の引数) で定義することもできます。正規表現フラグは個別に使うこともできれば、好きな順序で複数使うこともできますが、 ECMAScript では 6 つしかありません。
+<p>コード内に、不正な正規表現フラグがあります。スラッシュで囲まれたパターンで構成される正規表現リテラルでは、フラグは 2 番目のフラグの後に定義されます。 {{jsxref("RegExp")}} オブジェクトのコンストラクター関数 (2 つ目の引数) で定義することもできます。正規表現フラグは個別に使うこともできれば、好きな順序で複数使うこともできますが、 ECMAScript では 6 つしかありません。</p>
 
-正規表現にフラグを含めるには、次の構文を使用します。
+<p>正規表現にフラグを含めるには、次の構文を使用します。</p>
 
-```js
-var re = /pattern/flags;
-```
+<pre class="brush: js">var re = /pattern/flags;
+</pre>
 
-または、
+<p>または、</p>
 
-```js
-var re = new RegExp('pattern', 'flags');
-```
+<pre class="brush: js">var re = new RegExp('pattern', 'flags');</pre>
 
-| フラグ | 説明                                                                                                                     |
-| ------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `g`    | グローバル検索                                                                                                           |
-| i      | 大文字小文字を区別した検索                                                                                               |
-| m      | 複数行検索                                                                                                               |
-| s      | `.` で改行文字に一致できるようにする (ECMAScript 2018 で追加)                                                            |
-| u      | Unicode。パターンを Unicode コードポイントの並びとして扱う。                                                             |
-| y      | 対象の文字列の現在の位置から一致を探す "sticky" 検索。 {{jsxref("RegExp.sticky", "sticky")}} を見てください。 |
+<table class="standard-table">
+  <caption>正規表現フラグ</caption>
+  <thead>
+    <tr>
+      <th scope="col">フラグ</th>
+      <th scope="col">説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>g</code></td>
+      <td>グローバル検索</td>
+    </tr>
+    <tr>
+      <td>i</td>
+      <td>大文字小文字を区別した検索</td>
+    </tr>
+    <tr>
+      <td>m</td>
+      <td>複数行検索</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td><code>.</code> で改行文字に一致できるようにする (ECMAScript 2018 で追加)</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>Unicode。パターンを Unicode コードポイントの並びとして扱う。</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>対象の文字列の現在の位置から一致を探す "sticky" 検索。 {{jsxref("RegExp.sticky", "sticky")}} を見てください。</td>
+    </tr>
+  </tbody>
+</table>
 
-## 例
+<h2 id="Examples">例</h2>
 
-有効な正規表現フラグは 6 つしかありません。
+<p>有効な正規表現フラグは 6 つしかありません。</p>
 
-```js example-bad
-/foo/bar;
+<pre class="brush: js example-bad">/foo/bar;
 
 // SyntaxError: invalid regular expression flag "b"
-```
+</pre>
 
-正規表現を生成するつもりでなくても、 2 つのスラッシュを含む式は正規表現リテラルとして解釈されます。
+<p>正規表現を生成するつもりでなくても、 2 つのスラッシュを含む式は正規表現リテラルとして解釈されます。</p>
 
-```js example-bad
-let obj = {
+<pre class="brush: js example-bad">let obj = {
   url: /docs/Web
 };
 
 // SyntaxError: invalid regular expression flag "W"
-```
+</pre>
 
-文字列を生成する場合、文字列リテラルを生成するためには単一引用符、または二重引用符を追加します。
+<p>文字列を生成する場合、文字列リテラルを生成するためには単一引用符、または二重引用符を追加します。</p>
 
-```js example-good
-let obj = {
+<pre class="brush: js example-good">let obj = {
   url: '/docs/Web'
-};
-```
+};</pre>
 
-### 有効な正規表現フラグ
+<h3 id="Valid_regular_expression_flags">有効な正規表現フラグ</h3>
 
-JavaScript で使用できる 6 つの正規表現フラグについては、上述の表を見てください。
+<p>JavaScript で使用できる 6 つの正規表現フラグについては、上述の表を見てください。</p>
 
-```js example-good
-/foo/g;
+<pre class="brush: js example-good">/foo/g;
 /foo/gims;
 /foo/uy;
-```
+</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [XRegEx flags](https://xregexp.com/flags/) – regular expression library that provides four new flags (`n`, `s`, `x`, `A`)
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a></li>
+ <li><a href="https://xregexp.com/flags/">XRegEx flags</a> – regular expression library that provides four new flags (<code>n</code>, <code>s</code>, <code>x</code>, <code>A</code>)</li>
+</ul>

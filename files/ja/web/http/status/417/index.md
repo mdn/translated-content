@@ -9,22 +9,33 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Status/417
 ---
-{{HTTPSidebar}}
+<p>{{HTTPSidebar}}</p>
 
-HTTP **`417 Expectation Failed`** クライアントエラーレスポンスコードは、リクエストの {{HTTPHeader("Expect")}} ヘッダーに期待された値が設定されていなかったことを示します。
+<p>HTTP <strong><code>417 Expectation Failed</code></strong> クライアントエラーレスポンスコードは、リクエストの {{HTTPHeader("Expect")}} ヘッダーに期待された値が設定されていなかったことを示します。</p>
 
-詳細は {{HTTPHeader("Expect")}} ヘッダーを参照してください。
+<p>詳細は {{HTTPHeader("Expect")}} ヘッダーを参照してください。</p>
 
-## ステータス
+<h2 id="ステータス">ステータス</h2>
 
-    417 Expectation Failed
+<pre class="syntaxbox">417 Expectation Failed</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                               | タイトル                                                      |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "417 Expectation Failed" , "6.5.14")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">タイトル</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7231", "417 Expectation Failed" , "6.5.14")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-- {{HTTPHeader("Expect")}}
+<ul>
+ <li>{{HTTPHeader("Expect")}}</li>
+</ul>

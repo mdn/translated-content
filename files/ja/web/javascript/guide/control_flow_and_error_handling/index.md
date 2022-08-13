@@ -10,136 +10,154 @@ tags:
   - JavaScript
   - Logic
   - control
-  - l10n:priority
+  - 'l10n:priority'
   - statements
 translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
+<p class="summary">{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}</p>
 
-JavaScript は、特に制御フロー文についてはコンパクトな文のセットに対応しており、アプリケーションに多様な対話的機能を組み込むために利用することができます。この節ではこれらの文の概要を説明します。
+<p class="summary">JavaScript は、特に制御フロー文についてはコンパクトな文のセットに対応しており、アプリケーションに多様な対話的機能を組み込むために利用することができます。この節ではこれらの文の概要を説明します。</p>
 
-[JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference/Statements)には、この章で紹介する文についての完全な詳細が載っています。また、JavaScript のコードではセミコロン (`;`) 文字で文を区切ります。
+<p><a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript リファレンス</a>には、この章で紹介する文についての完全な詳細が載っています。また、JavaScript のコードではセミコロン (<code>;</code>) 文字で文を区切ります。</p>
 
-あらゆる JavaScript の式は、文でもあります。式に関する詳細については[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)を参照ください。
+<p>あらゆる JavaScript の式は、文でもあります。式に関する詳細については<a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators">式と演算子</a>を参照ください。</p>
 
-## ブロック文
+<h2 id="Block_statement" name="Block_statement">ブロック文</h2>
 
-最も基本的な文は*ブロック文*で、文のグループ化に使います。ブロックは、一組の波括弧で区切られます。
+<p>最も基本的な文は<dfn>ブロック文</dfn>で、文のグループ化に使います。ブロックは、一組の波括弧で区切られます。</p>
 
-    {
-      statement_1;
-      statement_2;
-      ⋮
-      statement_n;
-    }
+<pre class="syntaxbox notranslate">{
+  <var>statement_1</var>;
+  <var>statement_2</var>;
+  ⋮
+  <var>statement_n</var>;
+}
+</pre>
 
-### 例
+<h3 id="Example" name="Example">例</h3>
 
-ブロック文は一般に制御フロー文 (`if`, `for`, `while`) で用いられます。
+<p>ブロック文は一般に制御フロー文 (<code>if</code>, <code>for</code>, <code>while</code>) で用いられます。</p>
 
-```js
-while (x < 10) {
+<pre class="brush: js notranslate">while (x &lt; 10) {
   x++;
 }
-```
+</pre>
 
-ここでは `{ x++; }` がブロック文となります。
+<p>ここでは <code>{ x++; }</code> がブロック文となります。</p>
 
-> **Note:** **重要**: ECMAScript 2015 (6th edition) より前の JavaScript にはブロックスコープが**ありません**。古い JavaScript では、ブロック内で導入された変数のスコープは、そのブロックがある関数やスクリプトになり、それらの変数を設定した影響は、そのブロックを越えて持続します。つまり、*ブロック文はスコープを定義しない*ということです。「単独の」ブロックも正しい構文ですが、C や Java のブロックで提供されるものとは異なる結果をもたらします。例えば、`js var x = 1; { var x = 2; } console.log(x); // 2 を出力 `ここで `2` が出力されるのは、ブロック内の `var x` 文がブロックの前の `var x` 文と同じスコープ内にあるためです。(C や Java では、同様のコードで `1` が出力されます。)**ECMAScript 2015 から**は、`let` 文や `const` による変数宣言はブロックスコープとなります。詳しくは {{jsxref("Statements/let", "let")}} 文や {{jsxref("Statements/const", "const")}} のリファレンスページをご覧ください。
+<div class="blockIndicator note">
+<p><strong>重要</strong>: ECMAScript 2015 (6<sup>th</sup> edition) より前の JavaScript にはブロックスコープが<strong>ありません</strong>。古い JavaScript では、ブロック内で導入された変数のスコープは、そのブロックがある関数やスクリプトになり、それらの変数を設定した影響は、そのブロックを越えて持続します。つまり、<em>ブロック文はスコープを定義しない</em>ということです。</p>
 
-## 条件文
+<p>「単独の」ブロックも正しい構文ですが、C や Java のブロックで提供されるものとは異なる結果をもたらします。例えば、</p>
 
-条件文は、指定した条件が true の場合に実行する命令の集まりです。JavaScript は `if...else` と `switch` の 2 つの条件文に対応しています。
+<pre class="brush: js notranslate">var x = 1;
+{
+  var x = 2;
+}
+console.log(x); // 2 を出力
+</pre>
 
-### `if...else` 文
+<p>ここで <code>2</code> が出力されるのは、ブロック内の <code>var x</code> 文がブロックの前の <code>var x</code> 文と同じスコープ内にあるためです。(C や Java では、同様のコードで <code>1</code> が出力されます。)</p>
 
-`if` を使用すると、論理条件が `true` の場合に文を実行することができます。任意の `else` 節を使用すると、条件が `false` の場合にも文を実行することができます。
+<p><strong>ECMAScript 2015 から</strong>は、<code>let</code> 文や <code>const</code> による変数宣言はブロックスコープとなります。詳しくは {{jsxref("Statements/let", "let")}} 文や {{jsxref("Statements/const", "const")}} のリファレンスページをご覧ください。</p>
+</div>
 
-`if` 文は次のように使用します。
+<h2 id="Conditional_statements" name="Conditional_statements">条件文</h2>
 
-    if (condition) {
-      statement_1;
-    } else {
-      statement_2;
-    }
+<p>条件文は、指定した条件が true の場合に実行する命令の集まりです。JavaScript は <code>if...else</code> と <code>switch</code> の 2 つの条件文に対応しています。</p>
 
-条件は、`true` または `false` と評価される任意の式にすることができます。（`true` と `false` の評価の説明については、[Boolean](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description) を参照してください。）
+<h3 id="if...else_statement" name="if...else_statement"><code>if...else</code> 文</h3>
 
-条件が `true` と評価された場合、`statement_1` が実行されます。そうでなければ、`statement_2` が実行されます。`statement_1` と `statement_2` は、入れ子になった `if` 文も含めて、任意の文にすることができます。
+<p><code>if</code> を使用すると、論理条件が <code>true</code> の場合に文を実行することができます。任意の <code>else</code> 節を使用すると、条件が <code>false</code> の場合にも文を実行することができます。</p>
 
-以下のように、`else if` を使用した文を組み合わせて、複数の条件を順番にテストすることもできます。
+<p><code>if</code> 文は次のように使用します。</p>
 
-    if (condition_1) {
-      statement_1;
-    } else if (condition_2) {
-      statement_2;
-    } else if (condition_n) {
-      statement_n;
-    } else {
-      statement_last;
-    }
+<pre class="syntaxbox notranslate">if (<var>condition</var>) {
+  <var>statement_1</var>;
+} else {
+  <var>statement_2</var>;
+}</pre>
 
-複数の条件がある場合、`true` と評価された最初の論理条件のみが実行されます。複数の文を実行するには、ブロックステートメント (`{ … }`) 内にグループ化します。
+<p>条件は、<code>true</code> または <code>false</code> と評価される任意の式にすることができます。（<code>true</code> と <code>false</code> の評価の説明については、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description">Boolean</a> を参照してください。）</p>
 
-#### ベストプラクティス
+<p>条件が <code>true</code> と評価された場合、<code><var>statement_1</var></code> が実行されます。そうでなければ、<code><var>statement_2</var></code> が実行されます。<code><var>statement_1</var></code> と <code><var>statement_2</var></code> は、入れ子になった <code>if</code> 文も含めて、任意の文にすることができます。</p>
 
-一般的に、常にブロック文を使用するのが優れた方法です。_特に_ `if` 文を入れ子にしたコードで有効です。
+<p>以下のように、<code>else if</code> を使用した文を組み合わせて、複数の条件を順番にテストすることもできます。</p>
 
-    if (condition) {
-      statement_1_runs_if_condition_is_true;
-      statement_2_runs_if_condition_is_true;
-    } else {
-      statement_3_runs_if_condition_is_false;
-      statement_4_runs_if_condition_is_false;
-    }
+<pre class="syntaxbox notranslate">if (<var>condition_1</var>) {
+  <var>statement_1</var>;
+} else if (<var>condition_2</var>) {
+  <var>statement_2</var>;
+} else if (<var>condition_n</var>) {
+  <var>statement_n</var>;
+} else {
+  <var>statement_last</var>;
+}
+</pre>
 
-条件式内で単純な代入を行わないでください。コードを一見した際に、代入を等値条件と見間違えるおそれがあるためです。
+<p>複数の条件がある場合、<code>true</code> と評価された最初の論理条件のみが実行されます。複数の文を実行するには、ブロックステートメント (<code>{ … }</code>) 内にグループ化します。</p>
 
-例えば、このようにはコードを*書かない*でください。
+<h4 id="Best_practice" name="Best_practice">ベストプラクティス</h4>
 
-```js example-bad
-// "x == y" と読み間違えるおそれがある。
+<p>一般的に、常にブロック文を使用するのが優れた方法です。<em>特に</em> <code>if</code> 文を入れ子にしたコードで有効です。</p>
+
+<pre class="syntaxbox notranslate">if (<var>condition</var>) {
+  <var>statement_1_runs_if_condition_is_true</var>;
+  <var>statement_2_runs_if_condition_is_true</var>;
+} else {
+  <var>statement_3_runs_if_condition_is_false</var>;
+  <var>statement_4_runs_if_condition_is_false</var>;
+}
+</pre>
+
+<p>条件式内で単純な代入を行わないでください。コードを一見した際に、代入を等値条件と見間違えるおそれがあるためです。</p>
+
+<p>例えば、このようにはコードを<em>書かない</em>でください。</p>
+
+<pre class="example-bad brush: js notranslate">// "x == y" と読み間違えるおそれがある。
 if (x = y) {
   /* ここに文が来る */
 }
-```
+</pre>
 
-条件式で代入を行う必要がある場合、一般的な方法は次のように、代入式をさらに丸括弧でくくることです。
+<p>条件式で代入を行う必要がある場合、一般的な方法は次のように、代入式をさらに丸括弧でくくることです。</p>
 
-```js example-good
-if ((x = y)) {
+<pre class="example-good brush: js notranslate">if ((x = y)) {
   /* ここに文が来る */
 }
-```
+</pre>
 
-#### false と評価される値
+<h4 id="Falsy_values" name="Falsy_values">false と評価される値</h4>
 
-以下の値は `false` と評価されます (また、{{Glossary("Falsy")}} な値と呼ばれています)。
+<p>以下の値は <code>false</code> と評価されます (また、{{Glossary("Falsy")}} な値と呼ばれています)。</p>
 
-- `false`
-- `undefined`
-- `null`
-- `0`
-- `NaN`
-- 空の文字列 (`""`)
+<ul>
+ <li><code>false</code></li>
+ <li><code>undefined</code></li>
+ <li><code>null</code></li>
+ <li><code>0</code></li>
+ <li><code>NaN</code></li>
+ <li>空の文字列 (<code>""</code>)</li>
+</ul>
 
-上記以外の—オブジェクトを含む—すべての値は、条件文に渡されると `true` と評価されます。
+<p>上記以外の—オブジェクトを含む—すべての値は、条件文に渡されると <code>true</code> と評価されます。</p>
 
-> **Note:** **注意:** プリミティブな真偽値の `true` と `false` を、{{jsxref("Boolean")}} オブジェクトの true や false という値と混同しないでください。例:```js
-> var b = new Boolean(false);
-> if (b) // この条件は true に評価される
-> if (b == true) // この条件は false に評価される
->
-> ```
->
-> ```
+<div class="blockIndicator note">
+<p><strong>注意:</strong> プリミティブな真偽値の <code>true</code> と <code>false</code> を、{{jsxref("Boolean")}} オブジェクトの true や false という値と混同しないでください。</p>
 
-#### 例
+<p>例:</p>
 
-次の例で、関数 `checkData` は `Text` オブジェクトに含まれている文字数が 3 である場合に `true` を返し、そうでない場合はアラートを表示して `false` を返します。
+<pre class="brush: js notranslate">var b = new Boolean(false);
+if (b)         // この条件は true に評価される
+if (b == true) // この条件は false に評価される
+</pre>
+</div>
 
-```js
-function checkData() {
+<h4 id="Example_2" name="Example_2">例</h4>
+
+<p>次の例で、関数 <code>checkData</code> は <code>Text</code> オブジェクトに含まれている文字数が 3 である場合に <code>true</code> を返し、そうでない場合はアラートを表示して <code>false</code> を返します。</p>
+
+<pre class="brush: js notranslate">function checkData() {
   if (document.form1.threeChar.value.length == 3) {
     return true;
   } else {
@@ -149,46 +167,50 @@ function checkData() {
     return false;
   }
 }
-```
+</pre>
 
-### `switch` 文
+<h3 id="switch_statement" name="switch_statement"><code>switch</code> 文</h3>
 
-`switch` 文を使うと、プログラムは式を評価し、その式の値を `case` ラベルと照合します。一致すると、プログラムはそのラベルに関連付けられた文を実行します。
+<p><code>switch</code> 文を使うと、プログラムは式を評価し、その式の値を <code>case</code> ラベルと照合します。一致すると、プログラムはそのラベルに関連付けられた文を実行します。</p>
 
-`switch` 文は次のようになります。
+<p><code>switch</code> 文は次のようになります。</p>
 
-    switch (expression) {
-      case label_1:
-        statements_1
-        [break;]
-      case label_2:
-        statements_2
-        [break;]
-        …
-      default:
-        statements_def
-        [break;]
-    }
+<pre class="syntaxbox notranslate">switch (<var>expression</var>) {
+  case <var>label_1</var>:
+    <var>statements_1</var>
+    [break;]
+  case <var>label_2</var>:
+    <var>statements_2</var>
+    [break;]
+    …
+  default:
+    <var>statements_def</var>
+    [break;]
+}
+</pre>
 
-JavaScript は上記の switch 文を次のように評価します。
+<p>JavaScript は上記の switch 文を次のように評価します。</p>
 
-- プログラムは最初に、式の値に一致するラベルを持つ `case` 節を探し、関連付けられた文を実行します。
-- 一致するラベルがない場合、プログラムはオプションの `default` 節を探します。
+<ul>
+ <li>プログラムは最初に、式の値に一致するラベルを持つ <code>case</code> 節を探し、関連付けられた文を実行します。</li>
+ <li>一致するラベルがない場合、プログラムはオプションの <code>default</code> 節を探します。
+  <ul>
+   <li>存在する場合は <code>default</code> 節に制御を移し、関連付けられた文を実行します。</li>
+   <li><code>default</code> 節が見つからない場合、プログラムは <code>switch</code> 文の末尾の後に続く文から実行を再開します。</li>
+   <li>(慣例により、<code>default</code> 節は最後の節に置きますが、そうしなければいけないわけではありません。)</li>
+  </ul>
+ </li>
+</ul>
 
-  - 存在する場合は `default` 節に制御を移し、関連付けられた文を実行します。
-  - `default` 節が見つからない場合、プログラムは `switch` 文の末尾の後に続く文から実行を再開します。
-  - (慣例により、`default` 節は最後の節に置きますが、そうしなければいけないわけではありません。)
+<h4 id="break_statements" name="break_statements">break 文</h4>
 
-#### break 文
+<p>オプションの <code>break</code> 文は、それぞれの <code>case</code> 節と関連付けられ、該当する文が実行されるとプログラムが <code>switch</code> から抜け出し、<code>switch</code> の次の文から実行が継続されることを保証します。<code>break</code> が省略されると、プログラムは <code>switch</code> 文の内部の実行を続けます (そして、次の <code>case</code> を順番に評価します)。</p>
 
-オプションの `break` 文は、それぞれの `case` 節と関連付けられ、該当する文が実行されるとプログラムが `switch` から抜け出し、`switch` の次の文から実行が継続されることを保証します。`break` が省略されると、プログラムは `switch` 文の内部の実行を続けます (そして、次の `case` を順番に評価します)。
+<h4 id="Example_3" name="Example_3">例</h4>
 
-#### 例
+<p>次の例では、<code><var>fruittype</var></code> が '<code>Bananas</code>' と評価された場合、case '<code>Bananas</code>' に一致して、それに関連付けら <span class="seoSummary">cv</span> れた文を実行します。<code>break</code> 文に出くわすとプログラムは <code>switch</code> から抜けて、<code>switch</code> の後に続く文を実行します。<code>break</code> を省略すると、<code>case 'Cherries'</code> の文も実行されます。</p>
 
-次の例では、`fruittype` が '`Bananas`' と評価された場合、case '`Bananas`' に一致して、それに関連付けら cv れた文を実行します。`break` 文に出くわすとプログラムは `switch` から抜けて、`switch` の後に続く文を実行します。`break` を省略すると、`case 'Cherries'` の文も実行されます。
-
-```js
-switch (fruittype) {
+<pre class="brush: js notranslate">switch (<var>fruittype</var>) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -210,42 +232,46 @@ switch (fruittype) {
   default:
    console.log(`Sorry, we are out of ${fruittype}.`);
 }
-console.log("Is there anything else you'd like?");
-```
+console.log("Is there anything else you'd like?");</pre>
 
-## 例外処理文
+<h2 id="Exception_handling_statements" name="Exception_handling_statements">例外処理文</h2>
 
-`throw` 文を使用して例外を発生させ、`try...catch` 文を使用して例外を処理することができます。
+<p><code>throw</code> 文を使用して例外を発生させ、<code>try...catch</code> 文を使用して例外を処理することができます。</p>
 
-- [`throw` 文](#throw_statement)
-- [`try...catch` 文](#try...catch_statement)
+<ul>
+ <li><a href="#throw_statement"><code>throw</code> 文</a></li>
+ <li><a href="#try...catch_statement"><code>try...catch</code> 文</a></li>
+</ul>
 
-### 例外の型
+<h3 id="Exception_types" name="Exception_types">例外の型</h3>
 
-JavaScript では、ほぼどのようなオブジェクトでも例外として投げることができます。とはいえ、必ずしも投げられるオブジェクトすべてが同等に作られているわけではありません。数値や文字列をエラーとして投げる方法がよく用いられますが、こうした用途のために特別に作られた例外データ型を使用した方がより効率的な場合もあります。
+<p>JavaScript では、ほぼどのようなオブジェクトでも例外として投げることができます。とはいえ、必ずしも投げられるオブジェクトすべてが同等に作られているわけではありません。数値や文字列をエラーとして投げる方法がよく用いられますが、こうした用途のために特別に作られた例外データ型を使用した方がより効率的な場合もあります。</p>
 
-- [ECMAScript 例外](/ja/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects)
-- {{domxref("DOMException")}} と {{domxref("DOMError")}}
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects">ECMAScript 例外</a></li>
+ <li>{{domxref("DOMException")}} と {{domxref("DOMError")}}</li>
+</ul>
 
-### `throw` 文
+<h3 id="throw_statement" name="throw_statement"><code>throw</code> 文</h3>
 
-`throw` 文は、例外を投げるために使用します。例外を投げるには、投げたい値を含む式を指定してください。
+<p><code>throw</code> 文は、例外を投げるために使用します。例外を投げるには、投げたい値を含む式を指定してください。</p>
 
-    throw expression;
+<pre class="syntaxbox notranslate">throw <var>expression</var>;
+</pre>
 
-特定の型の式だけではなく、あらゆる式を投げることができます。下記のコードでは、さまざまな型の例外を投げています。
+<p>特定の型の式だけではなく、あらゆる式を投げることができます。下記のコードでは、さまざまな型の例外を投げています。</p>
 
-```js
-throw 'Error2';   // 文字列型
+<pre class="brush: js notranslate">throw 'Error2';   // 文字列型
 throw 42;         // 数値型
 throw true;       // 論理型
 throw {toString: function() { return "これはオブジェクトです！"; } };
-```
+</pre>
 
-> **Note:** **メモ:** 例外を投げる際にオブジェクトを指定することができます。そして、`catch` ブロックでそのオブジェクトのプロパティを参照することができます。
+<div class="note">
+<p><strong>メモ:</strong> 例外を投げる際にオブジェクトを指定することができます。そして、<code>catch</code> ブロックでそのオブジェクトのプロパティを参照することができます。</p>
+</div>
 
-```js
-// UserException というオブジェクト型を作成
+<pre class="brush: js notranslate">// UserException というオブジェクト型を作成
 function UserException(message) {
   this.message = message;
   this.name = 'UserException';
@@ -258,21 +284,19 @@ UserException.prototype.toString = function() {
 }
 
 // UserException のインスタンスを作成し、それを投げる
-throw new UserException('Value too high');
-```
+throw new UserException('Value too high');</pre>
 
-### `try...catch` 文
+<h3 id="try...catch_statement" name="try...catch_statement"><code>try...catch</code> 文</h3>
 
-`try...catch` 文はテストしたい文のブロックを指定し、さらに投げられる例外に対する 1 つ以上の対処方法を指定します。例外が投げられると、`try...catch` 文がそれを受け取ります。
+<p><code>try...catch</code> 文はテストしたい文のブロックを指定し、さらに投げられる例外に対する 1 つ以上の対処方法を指定します。例外が投げられると、<code>try...catch</code> 文がそれを受け取ります。</p>
 
-`try...catch` 文は 1 つの `try` ブロックと 0 個以上の `catch` ブロックで構成されます。`try` ブロックは 1 つ以上の文を含み、`catch` ブロックは `try` ブロックで例外が投げられた場合の処理を指定する文が含まれます。
+<p><code>try...catch</code> 文は 1 つの <code>try</code> ブロックと 0 個以上の <code>catch</code> ブロックで構成されます。<code>try</code> ブロックは 1 つ以上の文を含み、<code>catch</code> ブロックは <code>try</code> ブロックで例外が投げられた場合の処理を指定する文が含まれます。</p>
 
-要するに、成功した場合に実行したい `try` ブロックと、失敗した場合に制御を移行させたい `catch` ブロックで構成されています。`try` ブロック内（もしくは `try` ブロック内から呼び出された関数内）のいずれかの文が例外を投げると、制御は*すぐに* `catch` ブロックに移ります。`try` ブロックで例外が投げられなかった場合、`catch` ブロックはスキップされます。`finally` ブロックは `try` および `catch` ブロックを実行した後に実行しますが、`try...catch` 文の後に続く文より先に実行されます。
+<p>要するに、成功した場合に実行したい <code>try</code> ブロックと、失敗した場合に制御を移行させたい <code>catch</code> ブロックで構成されています。<code>try</code> ブロック内（もしくは <code>try</code> ブロック内から呼び出された関数内）のいずれかの文が例外を投げると、制御は<em>すぐに</em> <code>catch</code> ブロックに移ります。<code>try</code> ブロックで例外が投げられなかった場合、<code>catch</code> ブロックはスキップされます。<code>finally</code> ブロックは <code>try</code> および <code>catch</code> ブロックを実行した後に実行しますが、<code>try...catch</code> 文の後に続く文より先に実行されます。</p>
 
-次の例では `try...catch` 文を使用しています。この例では渡された値に基づいて、配列から月の名前を取り出す関数を実行します。値に対応する月の数字 (`1`–`12`) が無い場合は `"InvalidMonthNo"` という値を持つ例外が投げられ、`catch` ブロックの中の文は `monthName` という変数に `'unknown'` という値をセットします。
+<p>次の例では <code>try...catch</code> 文を使用しています。この例では渡された値に基づいて、配列から月の名前を取り出す関数を実行します。値に対応する月の数字 (<code>1</code>–<code>12</code>) が無い場合は <code>"InvalidMonthNo"</code> という値を持つ例外が投げられ、<code>catch</code> ブロックの中の文は <code><var>monthName</var></code> という変数に <code>'unknown'</code> という値をセットします。</p>
 
-```js
-function getMonthName(mo) {
+<pre class="brush: js notranslate">function getMonthName(mo) {
   mo = mo - 1; // 月の数字を配列のインデックスに合わせる (1 = Jan, 12 = Dec)
   let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
                 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -290,46 +314,47 @@ catch (e) {
   monthName = 'unknown';
   logMyErrors(e); // 例外オブジェクトをエラーハンドラーに渡す
 }
-```
+</pre>
 
-#### `catch` ブロック
+<h4 id="The_catch_Block" name="The_catch_Block"><code>catch</code> ブロック</h4>
 
-`catch` ブロックを用いることで、`try` ブロックで生じうるすべての例外を扱うことができます。
+<p><code>catch</code> ブロックを用いることで、<code>try</code> ブロックで生じうるすべての例外を扱うことができます。</p>
 
-    catch (catchID) {
-      statements
-    }
+<pre class="syntaxbox notranslate">catch (<var>catchID</var>) {
+  <var>statements</var>
+}
+</pre>
 
-`catch` ブロックには、`throw` 文で指定される値を保持しておく識別子 (上記の構文における `catchID`) を指定します。投げられた例外についての情報を得るのに、この識別子を使います。
+<p><code>catch</code> ブロックには、<code>throw</code> 文で指定される値を保持しておく識別子 (上記の構文における <code><var>catchID</var></code>) を指定します。投げられた例外についての情報を得るのに、この識別子を使います。</p>
 
-JavaScript は `catch` ブロックに入るときにこの識別子を作成します。識別子は `catch` ブロックの区間だけ存続します。つまり、`catch` ブロックの実行が終わると、その識別子はもう使えなくなります。
+<p>JavaScript は <code>catch</code> ブロックに入るときにこの識別子を作成します。識別子は <code>catch</code> ブロックの区間だけ存続します。つまり、<code>catch</code> ブロックの実行が終わると、その識別子はもう使えなくなります。</p>
 
-例えば、次のコードは例外を投げます。例外が生じると、制御が `catch` ブロックに移ります。
+<p>例えば、次のコードは例外を投げます。例外が生じると、制御が <code>catch</code> ブロックに移ります。</p>
 
-```js
-try {
+<pre class="brush: js notranslate">try {
   throw 'myException'; // 例外を生成
 }
 catch (err) {
   // ここには例外を扱う文が入る
   logMyErrors(err);    // 例外オブジェクトをエラーハンドラに渡す
 }
-```
+</pre>
 
-> **Note:** **ベストプラクティス:** `catch` ブロック内でコンソールにエラーをログ出力する場合は、`console.log()` よりも `console.error()` がデバッグ目的では推奨されています。これはメッセージをエラーとして書式化し、ページによって生成されたエラーメッセージの一覧に追加します。
+<div class="blockIndicator note">
+<p><strong>ベストプラクティス:</strong> <code>catch</code> ブロック内でコンソールにエラーをログ出力する場合は、<code>console.log()</code> よりも <code>console.error()</code> がデバッグ目的では推奨されています。これはメッセージをエラーとして書式化し、ページによって生成されたエラーメッセージの一覧に追加します。</p>
+</div>
 
-#### `finally` ブロック
+<h4 id="The_finally_block" name="The_finally_block"><code>finally</code> ブロック</h4>
 
-`finally` ブロックは、`try` および `catch` ブロックの実行*後*に実行される文が入ります。また、`finally` ブロックの中のコードは `try…catch…finally` に続く分が実行される*前*に実行されます。
+<p><code>finally</code> ブロックは、<code>try</code> および <code>catch</code> ブロックの実行<em>後</em>に実行される文が入ります。また、<code>finally</code> ブロックの中のコードは <code>try…catch…finally</code> に続く分が実行される<em>前</em>に実行されます。</p>
 
-また、`finally` ブロックは例外が発生する*かどうかにかかわらず*実行されるということに注意することも大切です。また、例外が発生したら、`finally` ブロック内の文は発生した例外が `catch` ブロックで処理されなくても実行されます。
+<p>また、<code>finally</code> ブロックは例外が発生する<em>かどうかにかかわらず</em>実行されるということに注意することも大切です。また、例外が発生したら、<code>finally</code> ブロック内の文は発生した例外が <code>catch</code> ブロックで処理されなくても実行されます。</p>
 
-`finally` ブロックを使用することで、例外発生時に適切にスクリプトを停止させることができます。例えば、スクリプトで使用していたリソースを解放しなければならない場合などです。
+<p><code>finally</code> ブロックを使用することで、例外発生時に適切にスクリプトを停止させることができます。例えば、スクリプトで使用していたリソースを解放しなければならない場合などです。</p>
 
-次の例ではファイルを開き、そのファイルを使用する文を実行します (サーバー側 JavaScript ではファイルにアクセスできます)。ファイルを開いている間に発生すると、スクリプトが停止する前に `finally` ブロックでそのファイルを閉じます。ここで `finally` を使用することで、エラーが発生した場合であってもファイルが開かれたままにならないことを*保証*します。
+<p>次の例ではファイルを開き、そのファイルを使用する文を実行します (サーバー側 JavaScript ではファイルにアクセスできます)。ファイルを開いている間に発生すると、スクリプトが停止する前に <code>finally</code> ブロックでそのファイルを閉じます。ここで <code>finally</code> を使用することで、エラーが発生した場合であってもファイルが開かれたままにならないことを<em>保証</em>します。</p>
 
-```js
-openMyFile();
+<pre class="brush: js notranslate">openMyFile();
 try {
   writeMyFile(theData); // ここでエラーが投げられる可能性がある
 } catch(e) {
@@ -337,12 +362,11 @@ try {
 } finally {
   closeMyFile(); // 常にリソースが閉じられる
 }
-```
+</pre>
 
-`finally` ブロックが値を返す場合、その値は `try` および `catch` ブロックの `return` 文にかかわらず `try…catch…finally` 全体が生成する返値になります。
+<p><code>finally</code> ブロックが値を返す場合、その値は <code>try</code> および <code>catch</code> ブロックの <code>return</code> 文にかかわらず <code>try…catch…finally</code> 全体が生成する返値になります。</p>
 
-```js
-function f() {
+<pre class="brush: js notranslate">function f() {
   try {
     console.log(0);
     throw 'bogus';
@@ -360,12 +384,11 @@ function f() {
   console.log(5);   // ここまで到達しない
 }
 console.log(f()); // 0, 1, 3, false
-```
+</pre>
 
-`finally` ブロックによる返値の上書きは、`catch` ブロック内で発生した、または再発生した例外にも適用されます。
+<p><code>finally</code> ブロックによる返値の上書きは、<code>catch</code> ブロック内で発生した、または再発生した例外にも適用されます。</p>
 
-```js
-function f() {
+<pre class="brush: js notranslate">function f() {
   try {
     throw 'bogus';
   } catch(e) {
@@ -389,32 +412,32 @@ try {
 
 // OUTPUT
 // caught inner "bogus"
-// false
-```
+// false</pre>
 
-#### try...catch 文の入れ子
+<h4 id="Nesting_try...catch_Statements" name="Nesting_try...catch_Statements">try...catch 文の入れ子</h4>
 
-1 つ以上の `try...catch` 文を入れ子にすることができます。
+<p>1 つ以上の <code>try...catch</code> 文を入れ子にすることができます。</p>
 
-内側の `try...catch` 文に `catch` ブロックが*ない*場合は次のようになります。
+<p>内側の <code>try...catch</code> 文に <code>catch</code> ブロックが<em>ない</em>場合は次のようになります。</p>
 
-1.  `finally` ブロックを含む必要があります。そして、
-2.  囲んでいる `try...catch` 文の `catch` ブロックがエラーの照合先としてチェックされます。
+<ol>
+ <li><code>finally</code> ブロックを含む必要があります。そして、</li>
+ <li>囲んでいる <code>try...catch</code> 文の <code>catch</code> ブロックがエラーの照合先としてチェックされます。</li>
+</ol>
 
-詳しくは、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) の中の [nested try-blocks](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks) を参照してください。
+<p>詳しくは、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> の中の <a href="/ja/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks">nested try-blocks</a> を参照してください。</p>
 
-### Error オブジェクトの活用
+<h3 id="Utilizing_Error_objects" name="Utilizing_Error_objects">Error オブジェクトの活用</h3>
 
-エラーの種類に応じて、`name` や `message` プロパティを使ってより詳細なメッセージが得られるようにすることができます。
+<p>エラーの種類に応じて、<code>name</code> や <code>message</code> プロパティを使ってより詳細なメッセージが得られるようにすることができます。</p>
 
-`name` は `Error` のクラス全般 (例えば `DOMException` や `Error`) を表し、一方 `message` は通常、エラーオブジェクトを文字列に変換したものより簡潔なメッセージを表します。
+<p><code>name</code> は <code>Error</code> のクラス全般 (例えば <code>DOMException</code> や <code>Error</code>) を表し、一方 <code>message</code> は通常、エラーオブジェクトを文字列に変換したものより簡潔なメッセージを表します。</p>
 
-独自の例外を発生させて、これらのプロパティを有効に活用したい場合 (`catch` ブロックで独自の例外とシステムの例外とを区別したくない場合など)、`Error` コンストラクターが使えます。
+<p>独自の例外を発生させて、これらのプロパティを有効に活用したい場合 (<code>catch</code> ブロックで独自の例外とシステムの例外とを区別したくない場合など)、<code>Error</code> コンストラクターが使えます。</p>
 
-例えば、次のようにします。
+<p>例えば、次のようにします。</p>
 
-```js
-function doSomethingErrorProne() {
+<pre class="brush: js notranslate">function doSomethingErrorProne() {
   if (ourCodeMakesAMistake()) {
     throw (new Error('The message'));
   } else {
@@ -428,6 +451,7 @@ try {
   console.error(e.name);    // 'Error' をログ出力
   console.error(e.message); // 'The message'、または JavaScript のエラーメッセージをログ出力
 }
-```
 
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
+</pre>
+
+<p>{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}</p>

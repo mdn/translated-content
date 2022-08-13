@@ -8,78 +8,104 @@ tags:
   - レスポンスヘッダー
 translation_of: Web/HTTP/Headers/Transfer-Encoding
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**`Transfer-Encoding`** ヘッダーは、{{Glossary("Payload body","ペイロード本文")}}をユーザーに安全に転送するために使われる符号化方式を指定します。
+<p><strong><code>Transfer-Encoding</code></strong> ヘッダーは、{{Glossary("Payload body","ペイロード本文")}}をユーザーに安全に転送するために使われる符号化方式を指定します。</p>
 
-> **Note:** [HTTP/2](https://wikipedia.org/wiki/HTTP/2) は HTTP 1.1 のチャンク化した転送エンコードの仕組みに対応しておらず、新規にもっと効率的な、データストリーミングの仕組みを提供しています。
+<div class="note"><a href="https://wikipedia.org/wiki/HTTP/2">HTTP/2</a> は HTTP 1.1 のチャンク化した転送エンコードの仕組みに対応しておらず、新規にもっと効率的な、データストリーミングの仕組みを提供しています。</div>
 
-`Transfer-Encoding` は[ホップバイホップヘッダー](/ja/docs/Web/HTTP/Headers#hbh)であり、リソース自体ではなく、二つのノード間のメッセージに適用されます。複数ノードコネクションのそれぞれの区間は、異なる `Transfer-Encoding` の値を使用することがあります。コネクション全体を通してデータを圧縮したい場合は、代わりにエンドトゥエンドの {{HTTPHeader("Content-Encoding")}} ヘッダーを使用してください。
+<p><code>Transfer-Encoding</code> は<a href="/ja/docs/Web/HTTP/Headers#hbh">ホップバイホップヘッダー</a>であり、リソース自体ではなく、二つのノード間のメッセージに適用されます。複数ノードコネクションのそれぞれの区間は、異なる <code>Transfer-Encoding</code> の値を使用することがあります。コネクション全体を通してデータを圧縮したい場合は、代わりにエンドトゥエンドの {{HTTPHeader("Content-Encoding")}} ヘッダーを使用してください。</p>
 
-本文のない {{HTTPMethod("HEAD")}} リクエストに対するレスポンスで使われたときは、対応する {{HTTPMethod("GET")}} メッセージに適用されるであろう値を示します。
+<p>本文のない {{HTTPMethod("HEAD")}} リクエストに対するレスポンスで使われたときは、対応する {{HTTPMethod("GET")}} メッセージに適用されるであろう値を示します。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Response header", "レスポンスヘッダー")}} |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | はい                                                                                 |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>はい</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Transfer-Encoding: chunked
-    Transfer-Encoding: compress
-    Transfer-Encoding: deflate
-    Transfer-Encoding: gzip
-    Transfer-Encoding: identity
+<pre class="syntaxbox">Transfer-Encoding: chunked
+Transfer-Encoding: compress
+Transfer-Encoding: deflate
+Transfer-Encoding: gzip
+Transfer-Encoding: identity
 
-    // コンマで区切って複数の値を並べることができます
-    Transfer-Encoding: gzip, chunked
+<em>// コンマで区切って複数の値を並べることができます</em>
+Transfer-Encoding: gzip, chunked</pre>
 
-## ディレクティブ
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
 
-- `chunked`
-  - : データはチャンク (塊) の連続で送られます。この場合は {{HTTPHeader("Content-Length")}} ヘッダーが省略されます。それぞれのチャンクの先頭に現在のチャンクの長さを 16 進数の形式で追加し、その後で '`\r\n`' が続き、チャンク自体ももう一つの '`\r\n`' が続きます。最後のチャンクは通常のチャンクですが、長さが 0 であるという点が異なります。この後に、一連のエンティティのヘッダーフィールド (おそらく空) から成るトレイラーが続きます。
-- `compress`
-  - : [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW) アルゴリズムを使用した形式です。この値の名前はこのアルゴリズムを実装している UNIX の _compress_ プログラムから採られました。
-    特許問題 (2003 年に期限切れ) の影響もあり、多くの UNIX ディストリビューションから compress プログラムが消滅したように、今日ではこのコンテンツ符号化方式を使用しているブラウザーはほとんどありません。
-- `deflate`
-  - : [zlib](http://en.wikipedia.org/wiki/Zlib) 構造体 ([RFC 1950](http://tools.ietf.org/html/rfc1950) で定義) と [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) 圧縮アルゴリズム ([RFC 1951](http://tools.ietf.org/html/rfc1952) で定義) を使用します。
-- `gzip`
-  - : [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77) と 32 ビット CRC を使用する形式です。これは元は UNIX の _gzip_ プログラムの形式です。 HTTP/1.1 標準は、互換性のために、このコンテンツ符号化方式の別名として`x-gzip` を解釈することにサーバーが対応することを推奨しています。
-- `identity`
-  - : 恒等写像 (つまり、圧縮なし、変更なし) であることを示します。このトークンは、特に明示された場合は、常に受け付けられるとみなされます。
+<dl>
+ <dt><code>chunked</code></dt>
+ <dd>データはチャンク (塊) の連続で送られます。この場合は {{HTTPHeader("Content-Length")}} ヘッダーが省略されます。それぞれのチャンクの先頭に現在のチャンクの長さを16進数の形式で追加し、その後で '<code>\r\n</code>' が続き、チャンク自体ももう一つの '<code>\r\n</code>' が続きます。最後のチャンクは通常のチャンクですが、長さが0であるという点が異なります。この後に、一連のエンティティのヘッダーフィールド (おそらく空) から成るトレイラーが続きます。</dd>
+ <dt><code>compress</code></dt>
+ <dd><a class="external" href="http://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW) アルゴリズムを使用した形式です。この値の名前はこのアルゴリズムを実装している UNIX の <em>compress</em> プログラムから採られました。<br>
+ 特許問題 (2003年に期限切れ) の影響もあり、多くの UNIX ディストリビューションから compress プログラムが消滅したように、今日ではこのコンテンツ符号化方式を使用しているブラウザーはほとんどありません。</dd>
+ <dt><code>deflate</code></dt>
+ <dd><a class="external" href="http://en.wikipedia.org/wiki/Zlib">zlib</a> 構造体 (<a class="external" href="http://tools.ietf.org/html/rfc1950">RFC 1950</a> で定義) と <a class="external" href="http://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> 圧縮アルゴリズム (<a class="external" href="http://tools.ietf.org/html/rfc1952">RFC 1951</a> で定義) を使用します。</dd>
+ <dt><code>gzip</code></dt>
+ <dd><a class="external" href="http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a> (LZ77) と32ビット CRC を使用する形式です。これは元は UNIX の <em>gzip</em> プログラムの形式です。 HTTP/1.1 標準は、互換性のために、このコンテンツ符号化方式の別名として<code>x-gzip</code> を解釈することにサーバーが対応することを推奨しています。</dd>
+ <dt><code>identity</code></dt>
+ <dd>恒等写像 (つまり、圧縮なし、変更なし) であることを示します。このトークンは、特に明示された場合は、常に受け付けられるとみなされます。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### チャンク化の符号化
+<h3 id="Chunked_encoding" name="Chunked_encoding">チャンク化の符号化</h3>
 
-チャンク化の符号化は、大量のデータをクライアントに送り、リクエストが完了するまでレスポンスの合計の長さが分からない場合に便利です。例えば、巨大な HTML の表をデータベースのクエリの結果として作成したり、大きな画像を転送したりする場合などです。チャンク化されたレスポンスは以下のようになります。
+<p>チャンク化の符号化は、大量のデータをクライアントに送り、リクエストが完了するまでレスポンスの合計の長さが分からない場合に便利です。例えば、巨大な HTML の表をデータベースのクエリの結果として作成したり、大きな画像を転送したりする場合などです。チャンク化されたレスポンスは以下のようになります。</p>
 
-    HTTP/1.1 200 OK
-    Content-Type: text/plain
-    Transfer-Encoding: chunked
+<pre>HTTP/1.1 200 OK
+Content-Type: text/plain
+Transfer-Encoding: chunked
 
-    7\r\n
-    Mozilla\r\n
-    9\r\n
-    Developer\r\n
-    7\r\n
-    Network\r\n
-    0\r\n
-    \r\n
+7\r\n
+Mozilla\r\n
+9\r\n
+Developer\r\n
+7\r\n
+Network\r\n
+0\r\n
+\r\n</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                       | 題名                                                               |
-| ------------------------------------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Transfer-Encoding", "3.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7230", "Transfer-Encoding", "3.3.1")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Transfer-Encoding")}}
+<p>{{Compat("http.headers.Transfer-Encoding")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("Accept-Encoding")}}
-- {{HTTPHeader("Content-Encoding")}}
-- {{HTTPHeader("Content-Length")}}
-- トレイラーの使用を制御するヘッダーフィールド: {{HTTPHeader("TE")}} (リクエスト) および {{HTTPHeader("Trailer")}} (レスポンス)
-- [チャンク化された転送エンコーディング](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)
+<ul>
+ <li>{{HTTPHeader("Accept-Encoding")}}</li>
+ <li>{{HTTPHeader("Content-Encoding")}}</li>
+ <li>{{HTTPHeader("Content-Length")}}</li>
+ <li>トレイラーの使用を制御するヘッダーフィールド: {{HTTPHeader("TE")}} (リクエスト) および {{HTTPHeader("Trailer")}} (レスポンス)</li>
+ <li>
+  <p><a href="https://en.wikipedia.org/wiki/Chunked_transfer_encoding">チャンク化された転送エンコーディング</a></p>
+ </li>
+</ul>

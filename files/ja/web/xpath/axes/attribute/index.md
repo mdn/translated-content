@@ -6,4 +6,4 @@ tags:
   - XPath
 translation_of: Web/XPath/Axes/attribute
 ---
-`attribute`の軸は、コンテキストノードの属性を示します。要素だけが属性を持ちます。この軸は、アットマーク (`@`) で省略することができます。
+<p><code>attribute</code>の軸は、コンテキストノードの属性を示します。要素だけが属性を持ちます。この軸は、アットマーク (<code>@</code>) で省略することができます。</p>

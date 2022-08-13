@@ -2,20 +2,19 @@
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+- Error
+- Errors
+- JavaScript
+- TypeError
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "_x_ is (not) _y_" は、予期しない型があったときに発生します。よくあるのは、予期せず {{jsxref("undefined")}} または {{jsxref("null")}} の値があった場合です。
+<p>JavaScript の例外 "<em>x</em> is (not) <em>y</em>" は、予期しない型があったときに発生します。よくあるのは、予期せず {{jsxref("undefined")}} または {{jsxref("null")}} の値があった場合です。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
+<pre class="brush: js">TypeError: Unable to get property {x} of undefined or null reference (Edge)
 TypeError: "x" is (not) "y" (Firefox)
 
 例:
@@ -24,24 +23,23 @@ TypeError: "x" is null
 TypeError: "undefined" is not an object
 TypeError: "x" is not an object or null
 TypeError: "x" is not a symbol
-```
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("TypeError")}}
+<p>{{jsxref("TypeError")}}</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-予期しない型がありました。これは {{jsxref("undefined")}} または {{jsxref("null")}} の値でしばしば発生します。
+<p>予期しない型がありました。これは {{jsxref("undefined")}} または {{jsxref("null")}} の値でしばしば発生します。</p>
 
-また、{{jsxref("Object.create()")}} や {{jsxref("Symbol.keyFor()")}} のようなある種のメソッドは、特定の型を要求し、それを提供する必要があります。
+<p>また、{{jsxref("Object.create()")}} や {{jsxref("Symbol.keyFor()")}} のようなある種のメソッドは、特定の型を要求し、それを提供する必要があります。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### 無効な場合
+<h3 id="Invalid_cases" >無効な場合</h3>
 
-```js example-bad
-// undefined と null の場合、substring メソッドは動作しません。
+<pre class="brush: js example-bad notranslate">// undefined と null の場合、substring メソッドは動作しません。
 var foo = undefined;
 foo.substring(1); // TypeError: foo is undefined
 
@@ -54,14 +52,13 @@ Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
 var foo = 'bar'
 Object.create(foo); // TypeError: "foo" is not an object or null
-```
+</pre>
 
-### 問題の修正
+<h3 id="Fixing_the_issue">問題の修正</h3>
 
-null ポインターを `undefined` 値に修正するには、次のように [typeof](/ja/docs/Web/JavaScript/Reference/Operators/typeof) 演算子を用いて行うことができます。
+<p>null ポインターを <code>undefined</code> 値に修正するには、次のように <a href="/ja/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> 演算子を用いて行うことができます。</p>
 
-```js
-if (foo !== undefined) {
+<pre class="brush: js">if (foo !== undefined) {
   // これで、 foo が定義されていることがわかるので、実行することができます。
 }
 
@@ -69,9 +66,11 @@ if (typeof foo !== 'undefined') {
   // 同じというのは良い考えですが、この実装を使わないでください。 - 本当の
   // undefined の値と未宣言の変数が混同されて問題が発生する可能性があります。
 }
-```
+</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{jsxref("undefined")}}
-- {{jsxref("null")}}
+<ul>
+  <li>{{jsxref("undefined")}}</li>
+  <li>{{jsxref("null")}}</li>
+</ul>

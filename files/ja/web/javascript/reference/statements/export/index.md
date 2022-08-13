@@ -11,70 +11,72 @@ tags:
   - export
 translation_of: Web/JavaScript/Reference/Statements/export
 ---
-{{jsSidebar("Statements")}}
+<div>{{jsSidebar("Statements")}}</div>
 
-**`export`** 文は JavaScript モジュールを作成するときに使用され、モジュールから関数、オブジェクト、またはプリミティブ値へのライブバインディングのエクスポートを行い、{{jsxref("Statements/import", "import")}} 文を使用した他のプログラムが使用できるようにします。インポートされたモジュールは読み取り専用で、エクスポートされたモジュールが変更されるたびに値が更新されます。
+<p><strong><code>export</code></strong> 文は JavaScript モジュールを作成するときに使用され、モジュールから関数、オブジェクト、またはプリミティブ値へのライブバインディングのエクスポートを行い、{{jsxref("Statements/import", "import")}} 文を使用した他のプログラムが使用できるようにします。インポートされたモジュールは読み取り専用で、エクスポートされたモジュールが変更されるたびに値が更新されます。</p>
 
-エクスポートされたモジュールは、宣言のあるなしにかかわらず {{jsxref("Strict_mode","Strict モード", "", 1)}}で動作します。export 文は、埋め込みスクリプトでは使えません。
+<p>エクスポートされたモジュールは、宣言のあるなしにかかわらず {{jsxref("Strict_mode","Strict モード", "", 1)}}で動作します。export 文は、埋め込みスクリプトでは使えません。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-2 種類のエクスポート方法があります。
+<p>2種類のエクスポート方法があります。</p>
 
-1.  名前付きエクスポート (モジュールごとに 0 以上のエクスポート)
-2.  デフォルトエクスポート (モジュールごとに 1 つのエクスポート)
+<ol>
+ <li>名前付きエクスポート (モジュールごとに 0 以上のエクスポート)</li>
+ <li>デフォルトエクスポート (モジュールごとに 1 つのエクスポート)</li>
+</ol>
 
-    // 個々の機能をエクスポート
-    export let name1, name2, …, nameN; // var, const も
-    export let name1 = …, name2 = …, …, nameN; // var, const も
-    export function functionName(){...}
-    export class ClassName {...}
+<pre class="syntaxbox notranslate">// 個々の機能をエクスポート
+export let <var>name1</var>, <var>name2</var>, …, <var>nameN</var>; // var, const も
+export let <var>name1</var> = …, <var>name2</var> = …, …, <var>nameN</var>; // var, const も
+export function functionName(){...}
+export class ClassName {...}
 
-    // リストでエクスポート
-    export { name1, name2, …, nameN };
+// リストでエクスポート
+export { <var>name1</var>, <var>name2</var>, …, <var>nameN</var> };
 
-    // 名前を変更してエクスポート
-    export { variable1 as name1, variable2 as name2, …, nameN };
+// 名前を変更してエクスポート
+export { <var>variable1</var> as <var>name1</var>, <var>variable2</var> as <var>name2</var>, …, <var>nameN</var> };
 
-    // 分割代入してエクスポート
-    export const { name1, name2: bar } = o;
+// 分割代入してエクスポート
+export const { <var>name1</var>, <var>name2: bar</var> } = o;
 
-    // デフォルトエクスポート
-    export default expression;
-    export default function (…) { … } // class, function* も使用可
-    export default function name1(…) { … } // class, function* も使用可
-    export { name1 as default, … };
+// デフォルトエクスポート
+export default <em>expression</em>;
+export default function (…) { … } // class, function* も使用可
+export default function name1(…) { … } // class, function* も使用可
+export { <var>name1</var> as default, … };
 
-    // モジュールの集約
-    export * from …; // デフォルトエクスポートを設定しません
-    export * as name1 from …; // ECMAScript® 2O21 の草案
-    export { name1, name2, …, nameN } from …;
-    export { import1 as name1, import2 as name2, …, nameN } from …;
-    export { default } from …;
+// モジュールの集約
+export * from …; // デフォルトエクスポートを設定しません
+export * as name1 from …; // ECMAScript® 2O21 の草案
+export { <var>name1</var>, <var>name2</var>, …, <var>nameN</var> } from …;
+export { <var>import1</var> as <var>name1</var>, <var>import2</var> as <var>name2</var>, …, <var>nameN</var> } from …;
+export { default } from …;</pre>
 
-- `nameN`
-  - : エクスポートする識別子です。(別のスクリプトが {{jsxref("Statements/import", "import")}} を使用してインポート可能になります。)
+<dl>
+ <dt><code><var>nameN</var></code></dt>
+ <dd>エクスポートする識別子です。(別のスクリプトが {{jsxref("Statements/import", "import")}} を使用してインポート可能になります。) </dd>
+</dl>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-エクスポート方法は、**名前付き**と**デフォルト**の 2 種類あります。名前付きエクスポートはモジュールごとに複数持てますが、デフォルトエクスポートは 1 つに限ります。それぞれのエクスポート方法は、上記の構文のひとつに対応します。
+<p>エクスポート方法は、<strong>名前付き</strong>と<strong>デフォルト</strong>の 2 種類あります。名前付きエクスポートはモジュールごとに複数持てますが、デフォルトエクスポートは 1 つに限ります。それぞれのエクスポート方法は、上記の構文のひとつに対応します。</p>
 
-名前付きエクスポート:
+<p>名前付きエクスポート:</p>
 
-```js
-// 事前に宣言された機能のエクスポート
+<pre class="brush: js notranslate">// 事前に宣言された機能のエクスポート
 export { myFunction, myVariable };
 
 // 個別の機能のエクスポート
 // (var, let, const, function, class がエクスポート可能)
 export let myVariable = Math.sqrt(2);
 export function myFunction() { ... };
-```
+</pre>
 
-デフォルトエクスポート:
+<p>デフォルトエクスポート:</p>
 
-```js
-// デフォルトとして事前に定義された機能のエクスポート
+<pre class="brush: js notranslate">// デフォルトとして事前に定義された機能のエクスポート
 export { myFunction as default };
 
 // 個別の機能をデフォルトとしてエクスポート
@@ -82,75 +84,66 @@ export default function () { ... }
 export default class { .. }
 
 // 各エクスポートは前のエクスポートを上書きします
-```
+</pre>
 
-名前付きエクスポートは、さまざまな値をエクスポートするのに役立ちます。インポートするときは、対応するオブジェクトと同じ名前を使用しなければなりません。
+<p>名前付きエクスポートは、さまざまな値をエクスポートするのに役立ちます。インポートするときは、対応するオブジェクトと同じ名前を使用しなければなりません。</p>
 
-一方、デフォルトエクスポートは以下のように任意の名前を使用できます。
+<p>一方、デフォルトエクスポートは以下のように任意の名前を使用できます。</p>
 
-```js
-// ファイル test.js
+<pre class="brush: js notranslate">// ファイル test.js
 let k; export default k = 12;
-```
+</pre>
 
-```js
-// 他のファイル
+<pre class="brush: js notranslate">// 他のファイル
 import m from './test'; // k がデフォルトエクスポートなので、インポートする k の代わりに m を使用することができる点に注意してください
 console.log(m);        // log 12 になる
-```
+</pre>
 
-名前の競合を防ぐために、名前付きエクスポートの名前を変更することもできます。
+<p>名前の競合を防ぐために、名前付きエクスポートの名前を変更することもできます。</p>
 
-```js
-export { myFunction as function1,
-         myVariable as variable };
-```
+<pre class="brush: js notranslate">export { <var>myFunction</var> as <var>function1</var>,<var>
+         myVariable</var> as variable };</pre>
 
-### 再エクスポート / 集約
+<h3 id="Re-exporting_Aggregating" name="Re-exporting_Aggregating">再エクスポート / 集約</h3>
 
-また、親モジュール内の異なるモジュールから「インポート/エクスポート」して、そのモジュールからインポートできるようにすることも可能です。言い換えれば、様々なモジュールからの様々なエクスポートを集約した 1 つのモジュールを作成することができます。
+<p>また、親モジュール内の異なるモジュールから「インポート/エクスポート」して、そのモジュールからインポートできるようにすることも可能です。言い換えれば、様々なモジュールからの様々なエクスポートを集約した 1 つのモジュールを作成することができます。</p>
 
-これは "export from" 構文で実現できます。
+<p>これは "export from" 構文で実現できます。</p>
 
-```js
-export { default as function1,
+<pre class="brush: js notranslate">export { default as function1,
          function2 } from 'bar.js';
-```
+</pre>
 
-これは、インポートとエクスポートの組み合わせに相当します。
+<p>これは、インポートとエクスポートの組み合わせに相当します。</p>
 
-```js
-import { default as function1,
+<pre class="brush: js notranslate">import { default as function1,
          function2 } from 'bar.js';
 export { function1, function2 };
-```
+</pre>
 
-現在のモジュール内で `function1` と `function2` が利用できない場合。
+<p>現在のモジュール内で <code>function1</code> と <code>function2</code> が利用できない場合。</p>
 
-> **Note:** **メモ:** 以下は、インポートに相当するにもかかわらず、構文的に無効です。
+<div class="blockIndicator note">
+<p><strong>メモ:</strong> 以下は、インポートに相当するにもかかわらず、構文的に無効です。</p>
+</div>
 
-```js
-import DefaultExport from 'bar.js'; // 有効
-```
+<pre class="brush: js notranslate">import DefaultExport from 'bar.js'; // 有効
+</pre>
 
-```js
-export DefaultExport from 'bar.js'; // 無効
-```
+<pre class="brush: js notranslate">export DefaultExport from 'bar.js'; // 無効</pre>
 
-これを行う正しい方法は、エクスポートの名前を変更することです。
+<p>これを行う正しい方法は、エクスポートの名前を変更することです。</p>
 
-```js
-export { default as DefaultExport } from 'bar.js';
-```
+<pre class="brush: js notranslate">export { default as DefaultExport } from 'bar.js';
+</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 名前付きエクスポートの使用
+<h3 id="Using_named_exports" name="Using_named_exports">名前付きエクスポートの使用</h3>
 
-`my-module.js` モジュールの中で、以下のコードを含めることができます。
+<p><code>my-module.js</code> モジュールの中で、以下のコードを含めることができます。</p>
 
-```js
-// "my-module.js" モジュール
+<pre class="brush: js notranslate">// "my-module.js" モジュール
 function cube(x) {
   return x * x * x;
 }
@@ -168,12 +161,11 @@ var graph = {
 }
 
 export { cube, foo, graph };
-```
+</pre>
 
-HTML ページの中に含まれる最上位モジュールの中では、次のようにすることができます。
+<p>HTML ページの中に含まれる最上位モジュールの中では、次のようにすることができます。</p>
 
-```js
-import { cube, foo, graph } from './my-module.js';
+<pre class="brush: js notranslate">import { cube, foo, graph } from './my-module.js';
 
 graph.options = {
     color:'blue',
@@ -182,86 +174,93 @@ graph.options = {
 
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
-```
+console.log(foo);    // 4.555806215962888</pre>
 
-以下の点に注意することが重要です。
+<p>以下の点に注意することが重要です。</p>
 
-- このスクリプトを HTML の {{htmlelement("script")}} 要素で type="module" を指定したものに入れる必要があり、そうすれば適切にモジュールとして認識され、扱われます。
-- `file://` の URL で JavaScript モジュールを実行することはできません。— [CORS](/ja/docs/Web/HTTP/CORS) エラーになります。HTTP サーバーを通して実行する必要があります。
+<ul>
+ <li>このスクリプトを HTML の {{htmlelement("script")}} 要素で type="module" を指定したものに入れる必要があり、そうすれば適切にモジュールとして認識され、扱われます。</li>
+ <li><code>file://</code> の URL で JavaScript モジュールを実行することはできません。— <a href="/ja/docs/Web/HTTP/CORS">CORS</a> エラーになります。HTTP サーバーを通して実行する必要があります。</li>
+</ul>
 
-### デフォルトエクスポートの使用
+<h3 id="Using_the_default_export" name="Using_the_default_export">デフォルトエクスポートの使用</h3>
 
-値をひとつエクスポートしたい、あるいはモジュールでフォールバック先の値を持ちたい場合は、デフォルトエクスポートを使用するとよいでしょう。
+<p>値をひとつエクスポートしたい、あるいはモジュールでフォールバック先の値を持ちたい場合は、デフォルトエクスポートを使用するとよいでしょう。</p>
 
-```js
-// module "my-module.js"
+<pre class="brush: js notranslate">// module "my-module.js"
 
 export default function cube(x) {
   return x * x * x;
 }
-```
+</pre>
 
-別のスクリプトからの、デフォルトエクスポートのインポートは簡単です。
+<p>別のスクリプトからの、デフォルトエクスポートのインポートは簡単です。</p>
 
-```js
-import cube from './my-module.js';
+<pre class="brush: js notranslate">import cube from './my-module.js';
 console.log(cube(3)); // 27
-```
+</pre>
 
-### export from の使用
+<h3 id="Using_export_from" name="Using_export_from">export from の使用</h3>
 
-以下のような階層がある場合を例に考えてみましょう。
+<p>以下のような階層がある場合を例に考えてみましょう。</p>
 
-- `childModule1.js`: `myFunction` および `myVariable` をエクスポート
-- `childModule2.js`: `myClass` をエクスポート
-- `parentModule.js`: 集約元として動作する (他には何もしない)
-- 最上位モジュール: `parentModule.js` のエクスポートを利用する
+<ul>
+ <li><code>childModule1.js</code>: <code>myFunction</code> および <code>myVariable</code> をエクスポート</li>
+ <li><code>childModule2.js</code>: <code>myClass</code> をエクスポート</li>
+ <li><code>parentModule.js</code>: 集約元として動作する (他には何もしない)</li>
+ <li>最上位モジュール: <code>parentModule.js</code> のエクスポートを利用する</li>
+</ul>
 
-コードスニペットを使うとこのような感じになります。
+<p>コードスニペットを使うとこのような感じになります。</p>
 
-```js
-// childModule1.js
+<pre class="brush: js notranslate">// childModule1.js
 let myFunction = ...; // myFunction に役立つものを割り当てる
 let myVariable = ...; // myVariablemy に役立つものを割り当てる
 export {myFunction, myVariable};
-```
+</pre>
 
-```js
-// childModule2.js
+<pre class="brush: js notranslate">// childModule2.js
 let myClass = ...; // myClass に役立つものを代入する
 export myClass;
-```
+</pre>
 
-```js
-// parentModule.js
+<pre class="brush: js notranslate">// parentModule.js
 // childModule1 と childModule2 からのエクスポートを
 // 集約して再エクスポートする
 export { myFunction, myVariable } from 'childModule1.js';
 export { myClass } from 'childModule2.js';
-```
+</pre>
 
-```js
-// 最上位モジュール
+<pre class="brush: js notranslate">// 最上位モジュール
 // parentModule にモジュールが集約しているので、
 // 単一のモジュールからエクスポートを利用できます。
-import { myFunction, myVariable, myClass } from 'parentModule.js'
-```
+import { myFunction, myVariable, myClass } from 'parentModule.js'</pre>
 
-## 仕様
+<h2 id="Specifications" name="Specifications">仕様</h2>
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-exports', 'Exports')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.statements.export")}}
+<p>{{Compat("javascript.statements.export")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Statements/import", "import")}}
-- [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) Jason Orendorff のブログ記事
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) Lin Clark のブログ記事
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+<ul>
+ <li>{{jsxref("Statements/import", "import")}}</li>
+ <li><a href="/ja/docs/Web/JavaScript/Guide/Modules">JavaScript モジュール</a></li>
+ <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a> Jason Orendorff のブログ記事</li>
+ <li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a> Lin Clark のブログ記事</li>
+ <li><a href="http://exploringjs.com/es6/ch_modules.html">Axel Rauschmayer's book: "Exploring JS: Modules"</a></li>
+</ul>

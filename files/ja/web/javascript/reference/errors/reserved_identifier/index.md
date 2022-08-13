@@ -8,72 +8,73 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-## メッセージ
+<h2 id="メッセージ">メッセージ</h2>
 
-    SyntaxError: "x" is a reserved identifier (Firefox)
-    SyntaxError: Unexpected reserved word (Chrome)
+<pre class="syntaxbox">SyntaxError: "x" is a reserved identifier (Firefox)
+SyntaxError: Unexpected reserved word (Chrome)</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("SyntaxError")}}
+<p>{{jsxref("SyntaxError")}}</p>
 
-## 何がうまくいかなかったのか？
+<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
 
-[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#キーワード)を識別子として使用した場合、エラーをスローします。これらは strict モードと通常モードの双方で予約されています:
+<p><a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#キーワード">予約語</a>を識別子として使用した場合、エラーをスローします。これらは strict モードと通常モードの双方で予約されています:</p>
 
-- `enum`
+<ul>
+ <li><code>enum</code></li>
+</ul>
 
-次のものは strict モードのコードでのみ予約されています:
+<p>次のものは strict モードのコードでのみ予約されています:</p>
 
-- `implements`
-- `interface`
-- {{jsxref("Statements/let", "let")}}
-- `package`
-- `private`
-- `protected`
-- `public`
-- `static`
+<ul class="threecolumns">
+ <li><code>implements</code></li>
+ <li><code>interface</code></li>
+ <li>{{jsxref("Statements/let", "let")}}</li>
+ <li><code>package</code></li>
+ <li><code>private</code></li>
+ <li><code>protected</code></li>
+ <li><code>public</code></li>
+ <li><code>static</code></li>
+</ul>
 
-## 例
+<h2 id="例">例</h2>
 
-### Strict モードと 非 Strict モードで予約されているキーワード
+<h3 id="Strict_モードと_非_Strict_モードで予約されているキーワード">Strict モードと 非 Strict モードで予約されているキーワード</h3>
 
-`enum` 識別子は全般的に予約されています。
+<p><code>enum</code> 識別子は全般的に予約されています。</p>
 
-```js example-bad
-var enum = { RED: 0, GREEN: 1, BLUE: 2 };
+<pre class="brush: js example-bad">var enum = { RED: 0, GREEN: 1, BLUE: 2 };
 // SyntaxError: enum is a reserved identifier
-```
+</pre>
 
-strict モードのコードでは、より多くの識別子が予約されています。
+<p>strict モードのコードでは、より多くの識別子が予約されています。</p>
 
-```js example-bad
-"use strict";
+<pre class="brush: js example-bad">"use strict";
 var package = ["potatoes", "rice", "fries"];
 // SyntaxError: package is a reserved identifier
-```
+</pre>
 
-これらの変数名を変更する必要があります。
+<p>これらの変数名を変更する必要があります。</p>
 
-```js example-good
-var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
-var list = ["potatoes", "rice", "fries"];
-```
+<pre class="brush: js example-good">var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
+var list = ["potatoes", "rice", "fries"];</pre>
 
-### 古いブラウザーを更新する
+<h3 id="古いブラウザーを更新する">古いブラウザーを更新する</h3>
 
-たとえば、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) や [`class`](/ja/docs/Web/JavaScript/Reference/Statements/class) をまだ実装していない古いブラウザーを使用している場合、それらの新しい言語機能をサポートしているより新しいブラウザーにアップデートすべきです。
+<p>たとえば、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code> や <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/class">class</a></code> をまだ実装していない古いブラウザーを使用している場合、それらの新しい言語機能をサポートしているより新しいブラウザーにアップデートすべきです。</p>
 
-```js
-"use strict";
+<pre class="brush: js">"use strict";
 class DocArchiver {}
 
 // SyntaxError: class is a reserved identifier
 // (たとえば、Firefox 44 以前の古いブラウザーはエラーをスローします)
-```
+</pre>
 
-## 関連項目
+<h2 id="関連項目">関連項目</h2>
 
-- [Good variable names](http://wiki.c2.com/?GoodVariableNames)
+<ul>
+ <li><a href="http://wiki.c2.com/?GoodVariableNames">Good variable names</a></li>
+</ul>

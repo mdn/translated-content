@@ -8,51 +8,50 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の strict モードの例外 "can't assign to property" は、[プリミティブ](/ja/docs/Glossary/Primitive)値、例えば[シンボル](/ja/docs/Glossary/Symbol)、[文字列](/ja/docs/Glossary/String)、[数値](/ja/docs/Glossary/Number)、[論理値](/ja/docs/Glossary/Boolean)などにプロパティを作成しようとしたときに発生します。[プリミティブ](/ja/docs/Glossary/Primitive)値はいかなる[プロパティ](/ja/docs/Glossary/property/JavaScript)を持つこともできません。
+<p>JavaScript の strict モードの例外 "can't assign to property" は、<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値、例えば<a href="/ja/docs/Glossary/Symbol">シンボル</a>、<a href="/ja/docs/Glossary/String">文字列</a>、<a href="/ja/docs/Glossary/Number">数値</a>、<a href="/ja/docs/Glossary/Boolean">論理値</a>などにプロパティを作成しようとしたときに発生します。<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値はいかなる<a href="/ja/docs/Glossary/property/JavaScript">プロパティ</a>を持つこともできません。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-TypeError: can't assign to property "x" on {y}: not an object (Firefox)
+<pre class="brush: js">TypeError: can't assign to property &quot;x&quot; on {y}: not an object (Firefox)
 TypeError: Cannot create property 'x' on {y} (Chrome)
-```
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("TypeError")}}
+<p>{{jsxref("TypeError")}}</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-{{jsxref("Strict_mode", "Strict モード", "", 1)}}では、 {{jsxref("TypeError")}} は[プリミティブ](/ja/docs/Glossary/Primitive)値、例えば[シンボル](/ja/docs/Glossary/Symbol)、[文字列](/ja/docs/Glossary/String)、[数値](/ja/docs/Glossary/Number)、[論理値](/ja/docs/Glossary/Boolean)などにプロパティを作成しようとしたときに発生します。[プリミティブ](/ja/docs/Glossary/Primitive)値はいかなる[プロパティ](/ja/docs/Glossary/property/JavaScript)を持つこともできません。
+<p>{{jsxref("Strict_mode", "Strict モード", "", 1)}}では、 {{jsxref("TypeError")}} は<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値、例えば<a href="/ja/docs/Glossary/Symbol">シンボル</a>、<a href="/ja/docs/Glossary/String">文字列</a>、<a href="/ja/docs/Glossary/Number">数値</a>、<a href="/ja/docs/Glossary/Boolean">論理値</a>などにプロパティを作成しようとしたときに発生します。<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値はいかなる<a href="/ja/docs/Glossary/property/JavaScript">プロパティ</a>を持つこともできません。</p>
 
-想定外の場所に想定外の値が流れてきたり、 {{jsxref("String")}} や {{jsxref("Number")}} のオブジェクトバリアントが想定されていたりすることが問題となることがあります。
+<p>想定外の場所に想定外の値が流れてきたり、 {{jsxref("String")}} や {{jsxref("Number")}} のオブジェクトバリアントが想定されていたりすることが問題となることがあります。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### 無効な場合
+<h3 id="Invalid_cases">無効な場合</h3>
 
-```js example-bad
-'use strict';
+<pre class="brush: js example-bad">'use strict';
 
 var foo = "my string";
 // 次の行は strict モードでない場合は何もしません。
 foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
-```
+</pre>
 
-### 問題の修正
+<h3 id="Fixing_the_issue">問題の修正</h3>
 
-このような場所で[プリミティブ](/ja/docs/Glossary/Primitive)値を使用しないようにコードを修正するか、 {{jsxref("Object")}} と同等のオブジェクトを生成して問題を修正するかします。
+<p>このような場所で<a href="/ja/docs/Glossary/Primitive">プリミティブ</a>値を使用しないようにコードを修正するか、 {{jsxref("Object")}} と同等のオブジェクトを生成して問題を修正するかします。</p>
 
-```js example-good
-'use strict';
+<pre class="brush: js example-good">'use strict';
 
 var foo = new String("my string");
 foo.bar = {};
-```
+</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{jsxref("Strict_mode", "Strict モード", "", 1)}}
-- [プリミティブ](/ja/docs/Glossary/Primitive)
+<ul>
+  <li>{{jsxref("Strict_mode", "Strict モード", "", 1)}}</li>
+  <li><a href="/ja/docs/Glossary/Primitive">プリミティブ</a></li>
+</ul>

@@ -7,70 +7,66 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "_variable_ is not defined" は、どこかで参照している変数が存在しない場合に発生します。
+<p>JavaScript の例外 "<em>variable</em> is not defined" は、どこかで参照している変数が存在しない場合に発生します。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-ReferenceError: "x" is not defined
-```
+<pre class="brush: js">ReferenceError: "x" is not defined
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("ReferenceError")}}.
+<p>{{jsxref("ReferenceError")}}.</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-どこかで存在しない変数を参照しています。この変数を宣言しておくか、現在のスクリプトまたは[スコープ](/ja/docs/Glossary/Scope)で利用可能であることを確認する必要があります。
+<p>どこかで存在しない変数を参照しています。この変数を宣言しておくか、現在のスクリプトまたは<a href="/ja/docs/Glossary/Scope">スコープ</a>で利用可能であることを確認する必要があります。</p>
 
-> **Note:** **注:** ライブラリ (jQuery など) を読み込むとき、ライブラリの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリを読み込む {{HTMLElement("script")}} 要素は、それを使用するコードよりも前に置いてください。
+<div class="note">
+<p><strong>注:</strong> ライブラリ (jQuery など) を読み込むとき、ライブラリの変数、例えば "$" にアクセスする前に読み込みが行われるかを確認してください。ライブラリを読み込む {{HTMLElement("script")}} 要素は、それを使用するコードよりも前に置いてください。</p>
+</div>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### 宣言されていない変数
+<h3 id="Variable_not_declared">宣言されていない変数</h3>
 
-```js example-bad
-foo.substring(1); // ReferenceError: foo is not defined
-```
+<pre class="brush: js example-bad">foo.substring(1); // ReferenceError: foo is not defined
+</pre>
 
-"foo" と言う変数はどこにも宣言されていません。これは文字列である必要があり、それならば {{jsxref("String.prototype.substring()")}} メソッドが動作します。
+<p>"foo" と言う変数はどこにも宣言されていません。これは文字列である必要があり、それならば {{jsxref("String.prototype.substring()")}} メソッドが動作します。</p>
 
-```js example-good
-var foo = 'bar';
-foo.substring(1); // "ar"
-```
+<pre class="brush: js example-good">var foo = 'bar';
+foo.substring(1); // "ar"</pre>
 
-### スコープの間違い
+<h3 id="Wrong_scope">スコープの間違い</h3>
 
-変数は現在の実行コンテキストで利用可能である必要があります。[関数](/ja/docs/Web/JavaScript/Reference/Functions)の中で定義された変数は、その関数のスコープ内でしか定義されていないので、関数の外のどこからもアクセスできません。
+<p>変数は現在の実行コンテキストで利用可能である必要があります。<a href="/ja/docs/Web/JavaScript/Reference/Functions">関数</a>の中で定義された変数は、その関数のスコープ内でしか定義されていないので、関数の外のどこからもアクセスできません。</p>
 
-```js example-bad
-function numbers() {
+<pre class="brush: js example-bad">function numbers() {
   var num1 = 2,
       num2 = 3;
   return num1 + num2;
 }
 
-console.log(num1); // ReferenceError num1 is not defined.
-```
+console.log(num1); // ReferenceError num1 is not defined.</pre>
 
-しかし、関数はそれが定義されたスコープ内で定義されたすべての変数と関数にアクセスすることができます。言い換えれば、グローバルスコープで定義された関数は、グローバルスコープ内で定義されたすべての変数にアクセスすることができます。/p>
+<p>しかし、関数はそれが定義されたスコープ内で定義されたすべての変数と関数にアクセスすることができます。言い換えれば、グローバルスコープで定義された関数は、グローバルスコープ内で定義されたすべての変数にアクセスすることができます。/p&gt;</p>
 
-```js example-good
-var num1 = 2,
+<pre class="brush: js example-good">var num1 = 2,
     num2 = 3;
 
 function numbers() {
   return num1 + num2;
 }
 
-console.log(numbers()); // 5
-```
+console.log(numbers()); // 5</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [スコープ](/ja/docs/Glossary/Scope)
-- [変数の宣言 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
-- [関数のスコープ (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Functions#function_scope/en-us/docs/)
+<ul>
+ <li><a href="/ja/docs/Glossary/Scope">スコープ</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables">変数の宣言 (JavaScript ガイド)</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Guide/Functions#function_scope/en-us/docs/">関数のスコープ (JavaScript ガイド)</a></li>
+</ul>

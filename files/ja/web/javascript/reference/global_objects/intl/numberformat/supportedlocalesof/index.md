@@ -8,55 +8,77 @@ tags:
   - NumberFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 ---
-{{JSRef}}
+<p>{{JSRef}}</p>
 
-**`Intl.ListFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく数値の書式で対応されているものを含む配列を返します。
+<p><strong><code>Intl.ListFormat.supportedLocalesOf()</code></strong> メソッドは、ランタイムの既定のロケールで代替する必要なく数値の書式で対応されているものを含む配列を返します。</p>
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-supportedlocalesof.html","shorter")}}
+<div>{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-supportedlocalesof.html","shorter")}}</div>
 
-## 構文
 
-    Intl.NumberFormat.supportedLocalesOf(locales[, options])
 
-### 引数
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-- `locales`
-  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
-- `options`
-  - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。_ `localeMatcher`
-    _ : 使用するロケールの一致アルゴリズムです。指定可能な値は `lookup` および `best fit` で、既定値は `best fit` です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。
+<pre class="syntaxbox notranslate">Intl.NumberFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</pre>
 
-### 返値
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-指定したロケールタグのサブセットを表す文字列の配列で、ランタイムの既定のロケールで代替する必要なく数値の書式で対応されているものを含みます。
+<dl>
+ <dt><code><var>locales</var></code></dt>
+ <dd>BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 <code>locales</code> 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。</dd>
+ <dt><code><var>options</var></code></dt>
+ <dd>
+ <p>省略可能です。以下のプロパティを持つことがあるオブジェクトです。</p>
 
-## 解説
+ <dl>
+  <dt><code>localeMatcher</code></dt>
+  <dd>使用するロケールの一致アルゴリズムです。指定可能な値は <code>lookup</code> および <code>best fit</code> で、既定値は <code>best fit</code> です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。</dd>
+ </dl>
+ </dd>
+</dl>
 
-`locales` で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが数値のロケールに対応しているもので、使用しているロケール照合アルゴリズムで一致しているとみなされているものです。
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-## 例
+<p>指定したロケールタグのサブセットを表す文字列の配列で、ランタイムの既定のロケールで代替する必要なく数値の書式で対応されているものを含みます。</p>
 
-### supportedLocalesOf() の使用
+<h2 id="Description" name="Description">解説</h2>
 
-数値の書式でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 `pinyin` の照合は数値の書式には関係なく、インドネシア語でも使用されません。ここでの `lookup` アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 `best fit` のマッチャーはインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。
+<p><code>locales</code> で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが数値のロケールに対応しているもので、使用しているロケール照合アルゴリズムで一致しているとみなされているものです。</p>
 
-```js
-var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Using_supportedLocalesOf" name="Using_supportedLocalesOf">supportedLocalesOf() の使用</h3>
+
+<p>数値の書式でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 <code>supportedLocalesOf</code> はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 <code>pinyin</code> の照合は数値の書式には関係なく、インドネシア語でも使用されません。ここでの <code>lookup</code> アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 <code>best fit</code> のマッチャーはインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。</p>
+
+<pre class="brush: js notranslate">var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 var options = { localeMatcher: 'lookup' };
 console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(', '));
 // → "id-u-co-pinyin, de-ID"
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES Int Draft', '#sec-intl.numberformat.supportedlocalesof', 'Intl.NumberFormat.supportedLocalesOf')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ES Int Draft', '#sec-intl.numberformat.supportedlocalesof', 'Intl.NumberFormat.supportedLocalesOf')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Intl.NumberFormat.supportedLocalesOf")}}
+<div>
+<p>{{Compat("javascript.builtins.Intl.NumberFormat.supportedLocalesOf")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+<ul>
+ <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
+</ul>

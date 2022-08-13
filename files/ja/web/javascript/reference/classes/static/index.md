@@ -2,38 +2,39 @@
 title: static
 slug: Web/JavaScript/Reference/Classes/static
 tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Static
+- Classes
+- ECMAScript 2015
+- JavaScript
+- Language feature
+- Static
 translation_of: Web/JavaScript/Reference/Classes/static
 ---
-{{jsSidebar("Classes")}}
+<div>{{jsSidebar("Classes")}}</div>
 
-**`static`** キーワードは、クラスに静的メソッドや静的プロパティを定義します。静的メソッドも静的プロパティもクラスのインスタンスからは呼び出されません。その代わりに、クラスそのものから呼び出されます。静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。
+<p><span class="seoSummary"><code><strong>static</strong></code> キーワードは、クラスに静的メソッドや静的プロパティを定義します。静的メソッドも静的プロパティもクラスのインスタンスからは呼び出されません。その代わりに、クラスそのものから呼び出されます。</span>静的メソッドは多くの場合、オブジェクトの生成や複製を行う関数などのユーティリティ関数です。静的プロパティはキャッシュ、固定的な構成、その他の各インスタンスに複製する必要のないデータです。</p>
 
-{{EmbedInteractiveExample("pages/js/classes-static.html")}}
+<div>{{EmbedInteractiveExample("pages/js/classes-static.html")}}</div>
 
-## 構文
 
-```js
-static methodName() { ... }
-static propertyName [= value];
-```
+<h2 id="Syntax">構文</h2>
 
-## 例
+<pre class="brush: js">static <var>methodName</var>() { ... }
+static <var>propertyName </var>[= <var>value</var>];
+</pre>
 
-### クラスでの静的メンバーの使用
+<h2 id="Examples">例</h2>
 
-次の例はいくつかのことを説明しています。
+<h3 id="Using_static_members_in_classes">クラスでの静的メンバーの使用</h3>
 
-1.  静的メンバー (メソッドまたはプロパティ) がクラスでどのように定義されるか
-2.  静的メンバーを持つクラスがサブクラスを作れるか
-3.  静的メンバーがどう呼び出せて、どう呼び出せないか
+<p>次の例はいくつかのことを説明しています。</p>
 
-```js
-class Triple {
+<ol>
+ <li>静的メンバー (メソッドまたはプロパティ) がクラスでどのように定義されるか</li>
+ <li>静的メンバーを持つクラスがサブクラスを作れるか</li>
+ <li>静的メンバーがどう呼び出せて、どう呼び出せないか</li>
+</ol>
+
+<pre class="brush: js">class Triple {
   static customName = 'Tripler';
   static description = 'I triple any number you provide';
   static calculate(n = 1) {
@@ -62,14 +63,13 @@ console.log(SquaredTriple.customName);      // 'Tripler'
 
 // This throws because calculate() is a static member, not an instance member.
 console.log(tp.calculate());                // 'tp.calculate is not a function'
-```
+</pre>
 
-### 静的メンバーの別な静的メソッドからの呼び出し
+<h3 id="Calling_static_members_from_another_static_method">静的メンバーの別な静的メソッドからの呼び出し</h3>
 
-同じクラス内の静的メソッドまたはプロパティを静的メソッドから呼び出すには、 [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) キーワードを使います。
+<p>同じクラス内の静的メソッドまたはプロパティを静的メソッドから呼び出すには、 <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/this">this</a></code> キーワードを使います。</p>
 
-```js
-class StaticMethodCall {
+<pre class="brush: js">class StaticMethodCall {
   static staticProperty = 'static property';
   static staticMethod() {
     return 'Static method and ' + this.staticProperty + ' has been called';
@@ -82,15 +82,13 @@ StaticMethodCall.staticMethod();
 // 'Static method and static property has been called'
 
 StaticMethodCall.anotherStaticMethod();
-// 'Static method and static property has been called from another static method'
-```
+// 'Static method and static property has been called from another static method'</pre>
 
-### クラスのコンストラクターや他のメソッドからの静的メソッドの呼び出し
+<h3 id="Calling_static_members_from_a_class_constructor_and_other_methods">クラスのコンストラクターや他のメソッドからの静的メソッドの呼び出し</h3>
 
-静的メソッドは静的ではないメソッドの {{JSxRef("Operators/this", "this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して `クラス名.静的メソッド名()` / `クラス名.静的プロパティ名` のようにするか、 `constructor` プロパティのメソッドとして `this.constructor.静的メソッド名() `/ `this.constructor.静的プロパティ名` のようにしてください。
+<p>静的メソッドは静的ではないメソッドの {{JSxRef("Operators/this", "this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して <code>クラス名.静的メソッド名()</code> / <code>クラス名.静的プロパティ名</code> のようにするか、 <code>constructor</code> プロパティのメソッドとして <code>this.constructor.静的メソッド名() </code> / <code>this.constructor.静的プロパティ名</code> のようにしてください。</p>
 
-```js
-class StaticMethodCall {
+<pre class="brush: js">class StaticMethodCall {
   constructor() {
     console.log(StaticMethodCall.staticProperty); // 'static property'
     console.log(this.constructor.staticProperty); // 'static property'
@@ -102,21 +100,31 @@ class StaticMethodCall {
   static staticMethod() {
     return 'static method has been called.';
   }
-}
-```
+}</pre>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} |
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">仕様書</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
+    </tr>
+  </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.classes.static")}}
+<p>{{Compat("javascript.classes.static")}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [`class` 式](/ja/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)
-- [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> 式</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> 宣言</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Classes">クラス</a></li>
+</ul>

@@ -6,31 +6,36 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/local-name
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`local-name` 関数は、与えられたノード集合内の最初のノードのローカル名 (local name) を表す文字列を返します。
+<p><code>local-name</code> 関数は、与えられたノード集合内の最初のノードのローカル名 (local name) を表す文字列を返します。</p>
 
-### 構文
+<h3 id="Syntax">構文</h3>
 
-    local-name( [node-set] )
+<pre class="eval">local-name( [<em>node-set</em>] )
+</pre>
 
-### 引数
+<h3 id="Arguments">引数</h3>
 
-- `node-set` (省略可)
-  - : このノード集合内の最初のノードのローカル名が返されます。引数を省略すると、現在のコンテキストノードが使用されます。
+<dl>
+ <dt><code><em>node-set</em></code> (省略可)</dt>
+ <dd>このノード集合内の最初のノードのローカル名が返されます。引数を省略すると、現在のコンテキストノードが使用されます。</dd>
+</dl>
 
-### 返値
+<h3 id="Returns">返値</h3>
 
-文字列。
+<p>文字列。</p>
 
-### 注
+<h3 id="Notes">注</h3>
 
-- ローカル名は展開名 ([expanded-name](https://www.w3.org/TR/xpath#dt-expanded-name)) のローカル部分です。
+<ul>
+ <li>ローカル名は展開名 (<a href="https://www.w3.org/TR/xpath#dt-expanded-name">expanded-name</a>) のローカル部分です。</li>
+</ul>
 
-### 定義
+<h3 id="Defined">定義</h3>
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
+<p><a href="https://www.w3.org/TR/xpath#function-local-name">XPath 1.0 4.1</a></p>
 
-### Gecko での対応
+<h3 id="Gecko_support">Gecko での対応</h3>
 
-対応済み。
+<p>対応済み。</p>

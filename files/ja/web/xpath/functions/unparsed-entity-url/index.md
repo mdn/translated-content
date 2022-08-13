@@ -6,26 +6,27 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/unparsed-entity-url
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`unparsed-entity-url()`関数は、指定された名前を持つ解析されていないエンティティの URI を返します。これは、ソース文書の DTD で参照される非 XML データです。
+<p><code>unparsed-entity-url()</code>関数は、指定された名前を持つ解析されていないエンティティのURIを返します。これは、ソース文書のDTDで参照される非XMLデータです。</p>
 
-### 構文
+<h3 id="Syntax" name="Syntax">構文</h3>
 
-    string unparsed-entity-url(string)
+<pre class="eval notranslate">string unparsed-entity-url(string)
+</pre>
 
-### 引数
+<h3 id="Arguments" name="Arguments">引数</h3>
 
-解析されていないエンティティの名前。引数が文字列でない場合は、 string() 関数の規則を使用して変換されます。名前は XML 名でなければなりません。
+<p>解析されていないエンティティの名前。引数が文字列でない場合は、 string() 関数の規則を使用して変換されます。名前は XML 名でなければなりません。</p>
 
-### 返値
+<h3 id="Returns" name="Returns">返値</h3>
 
-存在する場合、 DTD から取り出された未解析エンティティの URI。それ以外の場合は空の文字列です。
+<p>存在する場合、 DTD から取り出された未解析エンティティの URI。それ以外の場合は空の文字列です。</p>
 
-### 定義
+<h3 id="Defined" name="Defined">定義</h3>
 
-[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-unparsed-entity-uri)
+<p><a class="external" href="http://www.w3.org/TR/xslt#function-unparsed-entity-uri">XSLT 1.0 12.4</a></p>
 
-### Gecko の対応状況
+<h3 id="Gecko_support" name="Gecko_support">Gecko の対応状況</h3>
 
-未対応
+<p>未対応</p>

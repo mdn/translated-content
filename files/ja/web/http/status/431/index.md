@@ -9,28 +9,43 @@ tags:
   - ステータスコード
 translation_of: Web/HTTP/Status/431
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-HTTP の **`431 Request Header Fields Too Large`** レスポンスステータスコードは、リクエストの [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)が長すぎるためにサーバーがリクエストの処理を拒否したことを示します。ヘッダーフィールドを縮小した上で、リクエストを再送信する*ことができます*。
+<p><span class="seoSummary">HTTP の <code><strong>431 Request Header Fields Too Large</strong></code> レスポンスステータスコードは、リクエストの <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a>が長すぎるためにサーバーがリクエストの処理を拒否したことを示します。</span>ヘッダーフィールドを縮小した上で、リクエストを再送信する<em>ことができます</em>。</p>
 
-431 はリクエストヘッダーの**全体の大きさ**が大きすぎる場合や、**単一の**ヘッダーフィールドが長すぎる場合に使用することができます。このエラーが発生した場合は、レスポンス本文でこの二つの問題のどちらであるかを示すと役立ちます。 — できれば、どのヘッダーが長すぎるのかも含めたほうがよいでしょう。これによってユーザーが、クッキーを消去するなど、問題の解決を試みることができます。
+<p>431 はリクエストヘッダーの<strong>全体の大きさ</strong>が大きすぎる場合や、<strong>単一の</strong>ヘッダーフィールドが長すぎる場合に使用することができます。このエラーが発生した場合は、レスポンス本文でこの二つの問題のどちらであるかを示すと役立ちます。 — できれば、どのヘッダーが長すぎるのかも含めたほうがよいでしょう。これによってユーザーが、クッキーを消去するなど、問題の解決を試みることができます。</p>
 
-サーバーは次のような場合に、よくこのステータスを生成します。
+<p>サーバーは次のような場合に、よくこのステータスを生成します。</p>
 
-- {{ httpheader("Referer") }} の URL が長すぎる場合
-- そのリクエストで送られた [Cookie](/ja/docs/Web/HTTP/Cookies) が多すぎる場合
+<ul>
+ <li>{{ httpheader("Referer") }} の URL が長すぎる場合</li>
+ <li>そのリクエストで送られた <a href="/ja/docs/Web/HTTP/Cookies">Cookie</a> が多すぎる場合</li>
+</ul>
 
-## ステータス
+<h2 id="Status" name="Status">ステータス</h2>
 
-    431 Request Header Fields Too Large
+<pre class="syntaxbox">431 Request Header Fields Too Large</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                           | 題名                         |
-| -------------------------------------------------------------------------------- | ---------------------------- |
-| {{RFC("6585", "431 Request Header Fields Too Large" , "5")}} | Additional HTTP Status Codes |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("6585", "431 Request Header Fields Too Large" , "5")}}</td>
+   <td>Additional HTTP Status Codes</td>
+  </tr>
+ </tbody>
+</table>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPStatus(414, "414 URI Too Long")}}
-- {{Glossary("Request header")}}
+<ul>
+ <li>{{HTTPStatus(414, "414 URI Too Long")}}</li>
+ <li>{{Glossary("Request header")}}</li>
+</ul>

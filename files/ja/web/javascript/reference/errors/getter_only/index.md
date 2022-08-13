@@ -2,41 +2,39 @@
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - TypeError
+- Error
+- Errors
+- JavaScript
+- Strict Mode
+- TypeError
 translation_of: Web/JavaScript/Reference/Errors/Getter_only
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)専用の例外 "setting getter-only property" は、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)のみが定義されているプロパティに新しい値を設定しようとした時に発生します。
+<p>JavaScript の <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>専用の例外 "setting getter-only property" は、<a href="/ja/docs/Web/JavaScript/Reference/Functions/get">ゲッター</a>のみが定義されているプロパティに新しい値を設定しようとした時に発生します。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+<pre class="brush: js">TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
 TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
-```
+TypeError: Cannot set property "prop" of #&lt;Object&gt; which has only a getter (Chrome)
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ、{{jsxref("TypeError")}}。
+<p><a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>でのみ、{{jsxref("TypeError")}}。</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)のみが定義されているプロパティに、新しい値を設定しようとしています。非 strict モードでは暗黙裡に無視されるだけですが、 [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では {{jsxref("TypeError")}} が発生します。
+<p><a href="/ja/docs/Web/JavaScript/Reference/Functions/get">ゲッター</a>のみが定義されているプロパティに、新しい値を設定しようとしています。非 strict モードでは暗黙裡に無視されるだけですが、 <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>では {{jsxref("TypeError")}} が発生します。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### セッターのないプロパティ
+<h3 id="Property_with_no_setter">セッターのないプロパティ</h3>
 
-下記の例では、プロパティのゲッターの設定方法を示しています。[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を指定していないため、 `temperature` プロパティに `30` を設定しようとすると、`TypeError` が発生します。詳細は {{jsxref("Object.defineProperty()")}} ページを見てください。
+<p>下記の例では、プロパティのゲッターの設定方法を示しています。<a href="/ja/docs/Web/JavaScript/Reference/Functions/set">セッター</a>を指定していないため、 <code>temperature</code> プロパティに <code>30</code> を設定しようとすると、<code>TypeError</code> が発生します。詳細は {{jsxref("Object.defineProperty()")}} ページを見てください。</p>
 
-```js example-bad
-"use strict";
+<pre class="brush: js example-bad">"use strict";
 
 function Archiver() {
   var temperature = null;
@@ -52,13 +50,11 @@ var arc = new Archiver();
 arc.temperature; // 'get!'
 
 arc.temperature = 30;
-// TypeError: setting getter-only property "temperature"
-```
+// TypeError: setting getter-only property "temperature"</pre>
 
-このエラーを修正するには、 temperature プロパティに値を設定しようとしている 16 行目を取り除くか、次のように[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を実装します。
+<p>このエラーを修正するには、 temperature プロパティに値を設定しようとしている 16 行目を取り除くか、次のように<a href="/ja/docs/Web/JavaScript/Reference/Functions/set">セッター</a>を実装します。</p>
 
-```js example-good
-"use strict";
+<pre class="brush: js example-good highlight[12]">"use strict";
 
 function Archiver() {
   var temperature = null;
@@ -82,10 +78,11 @@ var arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
-arc.getArchive(); // [{ val: 11 }, { val: 13 }]
-```
+arc.getArchive(); // [{ val: 11 }, { val: 13 }]</pre>
 
-## 関連項目
+<h2 id="See_also">関連項目</h2>
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineProperties()")}}
+<ul>
+  <li>{{jsxref("Object.defineProperty()")}}</li>
+  <li>{{jsxref("Object.defineProperties()")}}</li>
+</ul>

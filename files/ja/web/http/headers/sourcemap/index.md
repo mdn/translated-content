@@ -9,38 +9,61 @@ tags:
   - レスポンスヘッダー
 translation_of: Web/HTTP/Headers/SourceMap
 ---
-{{HTTPSidebar}}
+<p>{{HTTPSidebar}}</p>
 
-**`SourceMap`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーは、生成されたコードを[ソースマップ](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)にリンクし、ブラウザが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。
+<p><strong><code>SourceMap</code></strong> <a href="/ja/docs/Web/HTTP">HTTP</a> レスポンスヘッダーは、生成されたコードを<a href="/ja/docs/Tools/Debugger/How_to/Use_a_source_map">ソースマップ</a>にリンクし、ブラウザが元のソースを再構成し、再構成されたオリジナルをデバッガに提示できるようにします。</p>
 
-| ヘッダータイプ                                   | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | いいえ                                   |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダータイプ</th>
+   <td>{{Glossary("Response header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <td>いいえ</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    SourceMap: <url>
-    X-SourceMap: <url> (deprecated)
+<pre class="syntaxbox">SourceMap: &lt;url&gt;
+X-SourceMap: &lt;url&gt; (deprecated)
+</pre>
 
-### ディレクティブ
+<h3 id="ディレクティブ">ディレクティブ</h3>
 
-- `<url>`
-  - : (リクエスト URL に対する) 相対パスまたはソースマップファイルを指す絶対 URL
+<dl>
+ <dt><code>&lt;url&gt;</code></dt>
+ <dd>(リクエスト URL に対する) 相対パスまたはソースマップファイルを指す絶対 URL</dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-    SourceMap: /path/to/file.js.map
+<pre>SourceMap: /path/to/file.js.map</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                                                            | タイトル                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------ |
-| [Draft document](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k) | Source Map Revision 3 Proposal |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">タイトル</th>
+  </tr>
+  <tr>
+   <td><a href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k">Draft document</a></td>
+   <td>Source Map Revision 3 Proposal</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("http.headers.SourceMap")}}
+<p>{{Compat("http.headers.SourceMap")}}</p>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-- [Firefox Developer Tools: using a source map](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)
+<ul>
+ <li><a href="/ja/docs/Tools/Debugger/How_to/Use_a_source_map">Firefox Developer Tools: using a source map</a></li>
+</ul>

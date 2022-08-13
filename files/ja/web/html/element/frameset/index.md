@@ -9,35 +9,37 @@ tags:
   - Web
 translation_of: Web/HTML/Element/frameset
 ---
-{{HTMLRef}}{{Deprecated_header}}
+<div>{{HTMLRef}}{{Deprecated_header}}</div>
 
-**HTML の `<frameset>` 要素**は、 {{HTMLElement("frame")}} 要素を包含するために使用する HTML 要素です。
+<p><strong>HTML の <code>&lt;frameset&gt;</code> 要素</strong>は、 {{HTMLElement("frame")}} 要素を包含するために使用する HTML 要素です。</p>
 
-> **Note:** **メモ:** {{HTMLElement("iframe")}} の使用が支持されたことからフレームの使用は好ましくないため、一般的に現行のウェブサイトではこの要素を使用しません。
+<div class="note"><strong>メモ:</strong> {{HTMLElement("iframe")}} の使用が支持されたことからフレームの使用は好ましくないため、一般的に現行のウェブサイトではこの要素を使用しません。</div>
 
-## 属性
+<h2 id="Attributes" name="Attributes">属性</h2>
 
-他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
+<p>他のすべての HTML 要素と同様に、この要素は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>に対応しています。</p>
 
-- {{htmlattrdef("cols")}}
-  - : この属性は、フレームセット内の水平方向の領域の数と寸法を指定します。
-- {{htmlattrdef("rows")}}
-  - : この属性は、フレームセット内の垂直方向の領域の数と寸法を指定します。
+<dl>
+ <dt>{{htmlattrdef("cols")}}</dt>
+ <dd>この属性は、フレームセット内の水平方向の領域の数と寸法を指定します。</dd>
+ <dt>{{htmlattrdef("rows")}}</dt>
+ <dd>この属性は、フレームセット内の垂直方向の領域の数と寸法を指定します。</dd>
+</dl>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-```html
-<frameset cols="50%,50%">
-  <frame src="https://developer.mozilla.org/ja/docs/Web/HTML/Element/frameset" />
-  <frame src="https://developer.mozilla.org/ja/docs/Web/HTML/Element/frame" />
-</frameset>
-```
+<pre class="brush: html">&lt;frameset cols="50%,50%"&gt;
+  &lt;frame src="https://developer.mozilla.org/ja/docs/Web/HTML/Element/frameset" /&gt;
+  &lt;frame src="https://developer.mozilla.org/ja/docs/Web/HTML/Element/frame" /&gt;
+&lt;/frameset&gt;</pre>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("html.elements.frameset")}}
+<p>{{Compat("html.elements.frameset")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTMLElement("frame")}}
-- {{HTMLElement("iframe")}}
+<ul>
+ <li>{{HTMLElement("frame")}}</li>
+ <li>{{HTMLElement("iframe")}}</li>
+</ul>

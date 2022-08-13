@@ -6,15 +6,15 @@ tags:
   - HTML
   - Link types
   - Reference
-translation_of: Web/HTML/Link_types/noreferrer
 browser-compat: html.elements.a.rel.noreferrer
+translation_of: Web/HTML/Link_types/noreferrer
 ---
-**`noreferrer`** キーワードを {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}} の各要素の [`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性に指定すると、ターゲットリソースへ移動する際、 {{HTTPHeader("Referer")}} ヘッダーを省略してリファラー情報が漏洩しないようにブラウザーに指示します。それに加えて、 [`noopener`](/ja/docs/Web/HTML/Link_types/noopener) キーワードを設定しているかのように動作します。
+<p><span class="seoSummary"><strong><code>noreferrer</code></strong> キーワードを  {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}} の各要素の <code><a href="/ja/docs/Web/HTML/Attributes/rel">rel</a></code> 属性に指定すると、ターゲットリソースへ移動する際、 {{HTTPHeader("Referer")}} ヘッダーを省略してリファラー情報が漏洩しないようにブラウザーに指示します。それに加えて、 <code><a href="/ja/docs/Web/HTML/Link_types/noopener">noopener</a></code> キーワードを設定しているかのように動作します。</span></p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

@@ -1,5 +1,5 @@
 ---
-title: <xsl:call-template>
+title: '<xsl:call-template>'
 slug: Web/XSLT/Element/call-template
 tags:
   - XSLT
@@ -8,33 +8,35 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/call-template
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`<xsl:call-template>` 要素は名前付きテンプレートを呼び出します。
+<p><code>&lt;xsl:call-template&gt;</code> 要素は名前付きテンプレートを呼び出します。</p>
 
-### 構文
+<h3 id="Syntax" name="Syntax">構文</h3>
 
-    <xsl:call-template name=NAME>
-    	<xsl:with-param> [optional]
-    </xsl:call-template>
+<pre>&lt;xsl:call-template name=NAME&gt;
+	&lt;xsl:with-param&gt; [optional]
+&lt;/xsl:call-template&gt; </pre>
 
-### 必須属性
+<h3 id="Required_Attribute" name="Required_Attribute">必須属性</h3>
 
-- `name`
-  - : 呼び出すテンプレートの名前を指定します。
+<dl>
+ <dt><code>name</code></dt>
+ <dd>呼び出すテンプレートの名前を指定します。</dd>
+</dl>
 
-### 任意属性
+<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
 
-なし
+<p>なし</p>
 
-### タイプ
+<h3 id="Type" name="Type">タイプ</h3>
 
-命令は、テンプレート内に表示されます。
+<p>命令は、テンプレート内に表示されます。</p>
 
-### 定義
+<h3 id="Defined" name="Defined">定義</h3>
 
-XSLT, section 6.
+<p>XSLT, section 6.</p>
 
-### Gecko のサポート
+<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
 
-サポート済み
+<p>サポート済み</p>

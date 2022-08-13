@@ -8,86 +8,78 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "missing ; before statement" は、どこかでセミコロンが欠けており、 [自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) によって追加できない場合に発生します。 JavaScript がソースコードを正しく解釈するためには、セミコロンを置く必要があります。
+<p>JavaScript の例外 "missing ; before statement" は、どこかでセミコロンが欠けており、 <a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">自動セミコロン挿入 (ASI)</a> によって追加できない場合に発生します。 JavaScript がソースコードを正しく解釈するためには、セミコロンを置く必要があります。</p>
 
-## メッセージ
+<h2 id="Message">メッセージ</h2>
 
-```js
-SyntaxError: Expected ';' (Edge)
+<pre class="brush: js">SyntaxError: Expected ';' (Edge)
 SyntaxError: missing ; before statement (Firefox)
-```
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("SyntaxError")}}
+<p>{{jsxref("SyntaxError")}}</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-どこかでセミコロン (`;`) を忘れています。[JavaScript の文](/ja/docs/Web/JavaScript/Reference/Statements)はセミコロンで終えなければなりません。一部は、[自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) の影響を受けますが、この場合に JavaScript がソースコードを正確に解釈するためには、セミコロンを置く必要があります。
+<p>どこかでセミコロン (<code>;</code>) を忘れています。<a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript の文</a>はセミコロンで終えなければなりません。一部は、<a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">自動セミコロン挿入 (ASI)</a> の影響を受けますが、この場合に JavaScript がソースコードを正確に解釈するためには、セミコロンを置く必要があります。</p>
 
-しかし、多くの場合、このエラーは、文字列の不適切なエスケープや `var` の誤った使用など、その他のエラーの結果として発生します。また、どこかで括弧が多すぎるかもしれません。このエラーが発生した場合は、注意深く構文をチェックしてください。
+<p>しかし、多くの場合、このエラーは、文字列の不適切なエスケープや <code>var</code> の誤った使用など、その他のエラーの結果として発生します。また、どこかで括弧が多すぎるかもしれません。このエラーが発生した場合は、注意深く構文をチェックしてください。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### エスケープされていない文字列
+<h3 id="Unescaped_strings">エスケープされていない文字列</h3>
 
-このエラーは、次のように、適切に文字列をエスケープしておらず、文字列がすでに終了していると JavaScript エンジンが予測したときによく発生します。
+<p>このエラーは、次のように、適切に文字列をエスケープしておらず、文字列がすでに終了していると JavaScript エンジンが予測したときによく発生します。</p>
 
-```js example-bad
-var foo = 'Tom's bar';
-// SyntaxError: missing ; before statement
-```
+<pre class="brush: js example-bad">var foo = 'Tom's bar';
+// SyntaxError: missing ; before statement</pre>
 
-二重引用符を使用するか、アポストロフィをエスケープするかしてください。
+<p>二重引用符を使用するか、アポストロフィをエスケープするかしてください。</p>
 
-```js example-good
-var foo = "Tom's bar";
+<pre class="brush: js example-good">var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
-```
+</pre>
 
-### var を使用したプロパティ宣言
+<h3 id="Declaring_properties_with_var">var を使用したプロパティ宣言</h3>
 
-オブジェクトや配列のプロパティを `var` を使って宣言することは**できません**。
+<p>オブジェクトや配列のプロパティを <code>var</code> を使って宣言することは<strong>できません</strong>。</p>
 
-```js example-bad
-var obj = {};
+<pre class="brush: js example-bad">var obj = {};
 var obj.foo = 'hi'; // SyntaxError missing ; before statement
 
 var array = [];
 var array[0] = 'there'; // SyntaxError missing ; before statement
-```
+</pre>
 
-`var` キーワードを省略してください。
+<p><code>var</code> キーワードを省略してください。</p>
 
-```js example-good
-var obj = {};
+<pre class="brush: js example-good">var obj = {};
 obj.foo = 'hi';
 
 var array = [];
 array[0] = 'there';
-```
+</pre>
 
-### 誤ったキーワード
+<h3 id="Bad_keywords">誤ったキーワード</h3>
 
-他のプログラミング言語から来た人は、 JavaScript では同じ意味を持たない、あるいはまったく意味を持たないキーワードを使ってしまうこともよくあります。
+<p>他のプログラミング言語から来た人は、 JavaScript では同じ意味を持たない、あるいはまったく意味を持たないキーワードを使ってしまうこともよくあります。</p>
 
-```js example-bad
-def print(info){
+<pre class="brush: js example-bad">def print(info){
   console.log(info);
-}; // SyntaxError missing ; before statement
-```
+}; // SyntaxError missing ; before statement</pre>
 
-`function` を `def` の代わりに使用してください。
+<p><code>function</code> を <code>def</code> の代わりに使用してください。</p>
 
-```js example-good
-function print(info){
+<pre class="brush: js example-good">function print(info){
   console.log(info);
-};
-```
+};</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
-- [JavaScript 文](/ja/docs/Web/JavaScript/Reference/Statements)
+<ul>
+  <li><a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">自動セミコロン挿入 (ASI)</a></li>
+  <li><a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript 文</a></li>
+</ul>

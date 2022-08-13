@@ -7,18 +7,29 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/506
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-The HyperText Transfer Protocol (HTTP) **`506 Variant Also Negotiates`** レスポンスステータスコードは、透過的コンテンツネゴシエーション (**transparent content negotiation**) のコンテキストで提供される場合があります (参照 [RFC 2295](https://tools.ietf.org/html/rfc2295))。このプロトコルは、サーバーが複数のバリアントに対応している場合に、クライアントが与えられたリソースの最良のバリアントを取得することを可能にします。
+<p>The HyperText Transfer Protocol (HTTP) <code><strong>506 Variant Also Negotiates</strong></code> レスポンスステータスコードは、透過的コンテンツネゴシエーション (<strong>transparent content negotiation</strong>) のコンテキストで提供される場合があります (参照 <a href="https://tools.ietf.org/html/rfc2295">RFC 2295</a>)。このプロトコルは、サーバーが複数のバリアントに対応している場合に、クライアントが与えられたリソースの最良のバリアントを取得することを可能にします。</p>
 
-**`Variant Also Negotiates`** ステータスコードは、選択されたバリアント自体がコンテンツネゴシエーションに関与するように構成されているため、適切なネゴシエーションエンドポイントではない内部サーバー構成エラーを示します。
+<p><code><strong>Variant Also Negotiates</strong></code> ステータスコードは、選択されたバリアント自体がコンテンツネゴシエーションに関与するように構成されているため、適切なネゴシエーションエンドポイントではない内部サーバー構成エラーを示します。</p>
 
-## ステータス
+<h2 id="Status" name="Status">ステータス</h2>
 
-    506 Variant Also Negotiates
+<pre class="syntaxbox notranslate">506 Variant Also Negotiates</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                   | 題名                                    |
-| ------------------------------------------------------------------------ | --------------------------------------- |
-| {{RFC("2295", "506 Variant Also Negotiates" , "8.1")}} | Transparent Content Negotiation in HTTP |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("2295", "506 Variant Also Negotiates" , "8.1")}}</td>
+   <td>Transparent Content Negotiation in HTTP</td>
+  </tr>
+ </tbody>
+</table>

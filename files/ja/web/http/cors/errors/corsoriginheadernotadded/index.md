@@ -15,20 +15,22 @@ tags:
   - 理由
 translation_of: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-## 理由
+<h2 id="Reason" name="Reason">理由</h2>
 
-    Reason: CORS header ‘Origin’ cannot be added
+<pre class="syntaxbox">Reason: CORS header ‘Origin’ cannot be added</pre>
 
-## 何が悪いのか
+<h2 id="What_went_wrong" name="What_went_wrong">何が悪いのか</h2>
 
-{{Glossary("user agent", "ユーザーエージェント")}}が必要な {{HTTPHeader("Origin")}} を {{Glossary("HTTP")}} リクエストに追加することができませんでした。すべての CORS リクエストは `Origin` ヘッダーを含んでいなければなりません。
+<p>{{Glossary("user agent", "ユーザーエージェント")}}が必要な {{HTTPHeader("Origin")}} を {{Glossary("HTTP")}} リクエストに追加することができませんでした。すべての CORS リクエストは <code>Origin</code> ヘッダーを含んでいなければなりません。</p>
 
-これは例えば、 JavaScript のコードが複数のドメインのコンテンツにアクセスできるよう高い権限で実行されている場合などに起こることがあります。
+<p>これは例えば、 JavaScript のコードが複数のドメインのコンテンツにアクセスできるよう高い権限で実行されている場合などに起こることがあります。</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+<ul>
+ <li><a href="/ja/docs/Web/HTTP/CORS/Errors">CORS のエラー</a></li>
+ <li>用語集: {{Glossary("CORS")}}</li>
+ <li><a href="/ja/docs/Web/HTTP/CORS">CORS 入門</a></li>
+</ul>

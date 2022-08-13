@@ -10,52 +10,79 @@ tags:
   - レスポンスヘッダー
 translation_of: Web/HTTP/Headers/Vary
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**`Vary`** HTTP レスポンスヘッダーは、オリジンのサーバーから新しく要求するのではなく、キャッシュされたレスポンスを使用できるかどうかを決定するために将来のリクエストヘッダーをどのように一致させるかを決定します。これは、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)アルゴリズムでリソースの表現を選択するときにどのヘッダーを使用したかを示すためにサーバーによって使用されます。
+<p><strong><code>Vary</code></strong> HTTP レスポンスヘッダーは、オリジンのサーバーから新しく要求するのではなく、キャッシュされたレスポンスを使用できるかどうかを決定するために将来のリクエストヘッダーをどのように一致させるかを決定します。これは、<a href="/ja/docs/Web/HTTP/Content_negotiation">コンテンツネゴシエーション</a>アルゴリズムでリソースの表現を選択するときにどのヘッダーを使用したかを示すためにサーバーによって使用されます。</p>
 
-`Vary` ヘッダーは {{HTTPStatus("200")}} `OK` レスポンスに設定されるのと同様に、 {{HTTPStatus("304")}} `Not Modified` にも設定されます。
+<p><code>Vary</code> ヘッダーは {{HTTPStatus("200")}} <code>OK</code> レスポンスに設定されるのと同様に、 {{HTTPStatus("304")}} <code>Not Modified</code> にも設定されます。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Response header", "レスポンスヘッダー")}} |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | いいえ                                                                               |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>いいえ</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Vary: *
-    Vary: <header-name>, <header-name>, ...
+<pre class="syntaxbox">Vary: *
+Vary: &lt;header-name&gt;, &lt;header-name&gt;, ...
+</pre>
 
-## ディレクティブ
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
 
-- \*
-  - : URL のための各リクエストは、固有でキャッシュ不可能なリクエストとして扱われると仮定されます。これを示すのには {{HTTPHeader("Cache-Control")}}: `no-store` を使用したほうが良く、こちらはより明確に読むことができ、オブジェクトが保存されないことを示します。
-- \<header-name>
-  - : コンマ区切りで、キャッシュされたレスポンスが使用されるかどうかを決定する際に関わるヘッダー名のリストです。
+<dl>
+ <dt>*</dt>
+ <dd>URL のための各リクエストは、固有でキャッシュ不可能なリクエストとして扱われると仮定されます。これを示すのには {{HTTPHeader("Cache-Control")}}: <code>no-store</code> を使用したほうが良く、こちらはより明確に読むことができ、オブジェクトが保存されないことを示します。</dd>
+ <dt>&lt;header-name&gt;</dt>
+ <dd>コンマ区切りで、キャッシュされたレスポンスが使用されるかどうかを決定する際に関わるヘッダー名のリストです。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 動的な提供
+<h3 id="Dynamic_serving" name="Dynamic_serving">動的な提供</h3>
 
-`Vary: User-Agent` ヘッダーが使用されたとき、キャッシュサーバーはキャッシュからページを提供するかどうかを決定する際にユーザーエージェントを考慮するべきです。例えば、モバイルユーザーに対して異なるコンテンツを提供しているのであれば、誤ってサイトのデスクトップ版のサイトをモバイルユーザーに対して提供してしまうことを防ぐのに役立ちます。これは Google 等の検索エンジンがページのモバイル版を発見するのに役立ち、 [Cloaking](https://en.wikipedia.org/wiki/Cloaking) を求めずに区別することができる可能性があります。
+<p><code>Vary: User-Agent</code> ヘッダーが使用されたとき、キャッシュサーバーはキャッシュからページを提供するかどうかを決定する際にユーザーエージェントを考慮するべきです。例えば、モバイルユーザーに対して異なるコンテンツを提供しているのであれば、誤ってサイトのデスクトップ版のサイトをモバイルユーザーに対して提供してしまうことを防ぐのに役立ちます。これは Google 等の検索エンジンがページのモバイル版を発見するのに役立ち、 <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> を求めずに区別することができる可能性があります。</p>
 
-    Vary: User-Agent
+<pre>Vary: User-Agent</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                       | 題名                                                          |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "Vary", "7.1.4")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Vary")}}
+<p>{{Compat("http.headers.Vary")}}</p>
 
-## 互換性メモ
+<h2 id="Compatibility_notes" name="Compatibility_notes">互換性メモ</h2>
 
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+<ul>
+ <li><a href="https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/">Vary with care – Vary header problems in IE6-9</a></li>
+</ul>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
-- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Content negotiation](/ja/docs/Web/HTTP/Content_negotiation)
+<ul>
+ <li><a href="https://www.smashingmagazine.com/2017/11/understanding-vary-header/">Understanding The Vary Header - Smashing Magazine</a></li>
+ <li><a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">Best Practices for Using the Vary Header – fastly.com</a></li>
+ <li><a href="/ja/docs/Web/HTTP/Content_negotiation">Content negotiation</a></li>
+</ul>

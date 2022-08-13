@@ -6,38 +6,45 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/position
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`position` 関数は、式評価コンテキストのコンテキスト位置に等しい数値を返します。
+<p><code>position</code> 関数は、式評価コンテキストのコンテキスト位置に等しい数値を返します。</p>
 
-### 構文
+<h3 id="Syntax">構文</h3>
 
-    position()
+<pre class="eval">position()
+</pre>
 
-### 返値
+<h3 id="Returns">返値</h3>
 
-式評価コンテキストのコンテキスト位置に等しい整数。
+<p>式評価コンテキストのコンテキスト位置に等しい整数。</p>
 
-### 注
+<h3 id="Notes">注</h3>
 
-- コンテキストにおけるノードの位置はゼロ起点ではないことに注意してください。最初のノードの位置は 1 です。
+<ul>
+ <li>コンテキストにおけるノードの位置はゼロ起点ではないことに注意してください。最初のノードの位置は 1 です。</li>
+</ul>
 
-- コンテキストはパスのほかの部分によって決定します。
+<ul>
+ <li>コンテキストはパスのほかの部分によって決定します。</li>
+</ul>
 
-    <xsl:template match="//a[position() = 5]">
-     <!-- このテンプレートは文書内のあらゆる位置にある
-             5 番目の a 要素にマッチする -->
-    </xsl:template>
+<pre class="eval">&lt;xsl:template match="//a[position() = 5]"&gt;
+ &lt;!-- このテンプレートは文書内のあらゆる位置にある
+         5 番目の a 要素にマッチする --&gt;
+&lt;/xsl:template&gt;
+</pre>
 
-    <xsl:template match="//div[@class='foo']/bar[position() = 1]">
-     <!-- このテンプレートは class 属性が "foo" に等しい div 要素の子である
-          1 番目の bar 要素にマッチする -->
-    </xsl:template>
+<pre class="eval">&lt;xsl:template match="//div[@class='foo']/bar[position() = 1]"&gt;
+ &lt;!-- このテンプレートは class 属性が "foo" に等しい div 要素の子である
+      1 番目の bar 要素にマッチする --&gt;
+&lt;/xsl:template&gt;
+</pre>
 
-### 定義
+<h3 id="Defined">定義</h3>
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-position)
+<p><a href="https://www.w3.org/TR/xpath#function-position">XPath 1.0 4.1</a></p>
 
-### Gecko での対応
+<h3 id="Gecko_support">Gecko での対応</h3>
 
-対応済み。
+<p>対応済み。</p>

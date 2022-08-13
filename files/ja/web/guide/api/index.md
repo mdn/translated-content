@@ -9,15 +9,17 @@ tags:
   - ガイド
 translation_of: Web/Guide/API
 ---
-ウェブには幅広い API があり、どんどん強力になって、もっと色々なことができるアプリケーションを作るために JavaScript から使用されます。それはウェブやローカルや、 [Node.js](https://nodejs.org/) などの技術を通じてサーバー上でも実行されます。このページではウェブ技術スタックで提供される API の完全な一覧を見ることができます。
+<p>ウェブには幅広い API があり、どんどん強力になって、もっと色々なことができるアプリケーションを作るために JavaScript から使用されます。それはウェブやローカルや、 <a href="https://nodejs.org/">Node.js</a> などの技術を通じてサーバー上でも実行されます。このページではウェブ技術スタックで提供される API の完全な一覧を見ることができます。</p>
 
-## アルファベット順の Web API
+<h2 id="Web_APIs_from_A_to_Z" name="Web_APIs_from_A_to_Z">アルファベット順の Web API</h2>
 
-{{ListGroups}}
+<p>{{ListGroups}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Web API インターフェイスリファレンス](/ja/docs/Web/API) (これらすべての API を含むすべてのインターフェイスの索引)
-- [ドキュメントオブジェクトモデル](/ja/docs/Web/API/Document_Object_Model) (DOM)
-- [Web API イベントリファレンス](/ja/docs/Web/Events)
-- [ウェブ開発を学ぶ](/ja/docs/Learn)
+<ul>
+ <li><a href="/ja/docs/Web/API">Web API インターフェイスリファレンス</a> (これらすべての API を含むすべてのインターフェイスの索引)</li>
+ <li><a href="/ja/docs/Web/API/Document_Object_Model">ドキュメントオブジェクトモデル</a> (DOM)</li>
+ <li><a href="/ja/docs/Web/Events">Web API イベントリファレンス</a></li>
+ <li><a href="/ja/docs/Learn">ウェブ開発を学ぶ</a></li>
+</ul>

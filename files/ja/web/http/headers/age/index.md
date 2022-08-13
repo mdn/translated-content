@@ -8,40 +8,65 @@ tags:
   - レスポンス
 translation_of: Web/HTTP/Headers/Age
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**`Age`** ヘッダーには、プロキシーのキャッシュに入ってからの経過時間（秒）が含まれています。
+<p><code><strong>Age</strong></code> ヘッダーには、プロキシーのキャッシュに入ってからの経過時間（秒）が含まれています。</p>
 
-`Age` ヘッダーは通常０に近い値となっています。もし `Age: 0` であるなら、 おそらくオリジンサーバーからフェッチされただけでしょう。 それ以外の場合は、一般的にプロキシーの現在の日時と HTTP レスポンスに含まれていた{{HTTPHeader("Date")}} ヘッダーとの差分から算出されます。
+<p><code>Age</code> ヘッダーは通常０に近い値となっています。もし <code>Age: 0</code> であるなら、 おそらくオリジンサーバーからフェッチされただけでしょう。 それ以外の場合は、一般的にプロキシーの現在の日時とHTTPレスポンスに含まれていた{{HTTPHeader("Date")}} ヘッダーとの差分から算出されます。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Response header","レスポンスヘッダー")}} |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | いいえ                                                                           |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Response header","レスポンスヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>いいえ</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="構文">構文</h2>
 
-    Age: <delta-seconds>
+<pre class="syntaxbox">Age: &lt;delta-seconds&gt;
+</pre>
 
-## ディレクティブ
+<h2 id="ディレクティブ">ディレクティブ</h2>
 
-- \<delta-seconds>
-  - : オブジェクトがプロキシキャッシュに入っていた時間 (秒単位) を表す負でない整数。
+<dl>
+ <dt>&lt;delta-seconds&gt;</dt>
+ <dd>
+ <p>オブジェクトがプロキシキャッシュに入っていた時間 (秒単位) を表す負でない整数。</p>
+ </dd>
+</dl>
 
-## 例
+<h2 id="例">例</h2>
 
-    Age: 24
+<pre>Age: 24</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                   | タイトル                                        |
-| ---------------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Age", "5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">タイトル</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7234", "Age", "5.1")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Caching</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザの互換性
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
 
-{{Compat("http.headers.Age")}}
+<p>{{Compat("http.headers.Age")}}</p>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+<ul>
+ <li>{{HTTPHeader("Cache-Control")}}</li>
+ <li>{{HTTPHeader("Expires")}}</li>
+</ul>

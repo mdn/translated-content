@@ -8,25 +8,26 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`WeakSet`** コンストラクターで、 `WeakSet` オブジェクトを生成し、これに弱い参照で*オブジェクト*をコレクションで保持することができます。
+<p><strong><code>WeakSet</code></strong> コンストラクターで、 <code>WeakSet</code> オブジェクトを生成し、これに弱い参照で<em>オブジェクト</em>をコレクションで保持することができます。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    new WeakSet([iterable]);
+<pre class="syntaxbox notranslate">new WeakSet([<var>iterable</var>]);</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- _iterable_
-  - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Statements/for...of)が渡された場合、すべての要素が新しい `WeakSet` に追加されます。 null は undefined として扱われます。
+<dl>
+ <dt><var>iterable</var></dt>
+ <dd><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of">反復可能オブジェクト</a>が渡された場合、すべての要素が新しい <code>WeakSet</code> に追加されます。 null は undefined として扱われます。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### WeakSet オブジェクトの使用
+<h3 id="Using_the_WeakSet_object" name="Using_the_WeakSet_object">WeakSet オブジェクトの使用</h3>
 
-```js
-var ws = new WeakSet();
+<pre class="brush: js notranslate">var ws = new WeakSet();
 var foo = {};
 var bar = {};
 
@@ -38,21 +39,31 @@ ws.has(bar);    // true
 
 ws.delete(foo); // foo を set から削除
 ws.has(foo);    // false, foo は削除済み
-ws.has(bar);    // true, bar は残っている
-```
+ws.has(bar);    // true, bar は残っている</pre>
 
-`foo !== bar` であることに注意してください。これらは似たオブジェクトですが、_**まったく同じオブジェクト**ではありません_。したがって、両方のオブジェクトが set に追加されます。
+<p><code>foo !== bar</code> であることに注意してください。これらは似たオブジェクトですが、<em><strong>まったく同じオブジェクト</strong>ではありません</em>。したがって、両方のオブジェクトが set に追加されます。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset-constructor', 'WeakSet constructor')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-weakset-constructor', 'WeakSet constructor')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.WeakSet.WeakSet")}}
+<p>{{Compat("javascript.builtins.WeakSet.WeakSet")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("WeakSet")}}
+<ul>
+ <li>{{jsxref("WeakSet")}}</li>
+</ul>

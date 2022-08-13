@@ -4,113 +4,145 @@ slug: Web/Demos
 translation_of: Web/Demos_of_open_web_technologies
 original_slug: Web/Demos_of_open_web_technologies
 ---
-Mozilla は、幅広い既存の Web テクノロジーをサポートし、それらを使用することを奨励しています。このページは、[かつて](https://blog.mozilla.org/community/2015/12/18/saying-goodbye-to-demo-studio/) Demo Studio で人気のあったものも含め、技術のデモンストレーションを提供します。オープン Web テクノロジーのデモンストレーションやアプリケーションを知っている場合、適切なセクションにリンクを追加してください。
+<p>Mozilla は、幅広い既存の Web テクノロジーをサポートし、それらを使用することを奨励しています。このページは、<a href="https://blog.mozilla.org/community/2015/12/18/saying-goodbye-to-demo-studio/">かつて</a> Demo Studio で人気のあったものも含め、技術のデモンストレーションを提供します。オープン Web テクノロジーのデモンストレーションやアプリケーションを知っている場合、適切なセクションにリンクを追加してください。</p>
 
-## 2D Graphics
+<h2 id="2D_Graphics">2D Graphics</h2>
 
-### APNG
+<h3 id="APNG" name="APNG">APNG</h3>
 
-- [Justin's demo](http://people.mozilla.com/~dolske/apng/demo.html) (ローカルに保存すると動作します)
+<ul>
+ <li><a class="external" href="http://people.mozilla.com/~dolske/apng/demo.html">Justin's demo</a> (ローカルに保存すると動作します)</li>
+</ul>
 
-### Canvas
+<h3 id="SVG" name="SVG">Canvas</h3>
 
-- [An interactive blob using javascript and canvas (fun)](http://www.blobsallad.se/)
-- [Blob's demos](http://blobsallad.se/article/)
-- [Canvas Animation Kit Experiment (CAKE)](http://glimr.rubyforge.org/cake/canvas.html)
-- [Canvas3D & Flickr](http://www.xs4all.nl/~peterned/3d/)
-- [Playing with Canvas](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
-- [Using the Canvas Html element5](http://langexplr.blogspot.com/2008/11/using-canvas-html-element.html)
-- [RayCaster](/samples/raycaster/RayCaster.html "https://developer.mozilla.org/editor/fckeditor/core/editor/samples/raycaster/RayCaster.html")
-- [MSX Emulator](http://jsmsxdemo.googlepages.com/jsmsx.html)
-- [processing.js](http://processingjs.org/exhibition/)
-- [Missile fleet](http://glimr.rubyforge.org/cake/missile_fleet.html)
-- [FireWorks](http://glimr.rubyforge.org/cake/demos/fireworks2.6rt.html)
-- [Canvas ash1](http://glimr.rubyforge.org/cake/demos/canvas_ash.html)
-- [Canvas ash2](http://glimr.rubyforge.org/cake/demos/canvas_ash2.html)
-- [Canvas ash8](http://glimr.rubyforge.org/cake/demos/canvas_ash8.html)
-- [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
-- [miniPaint - Image editor ](http://viliusle.github.io/miniPaint/)([ソースコード](https://github.com/viliusle/miniPaint))
+<ul>
+ <li><a class="external" href="http://www.blobsallad.se/">An interactive blob using javascript and canvas (fun)</a></li>
+ <li><a class="external" href="http://blobsallad.se/article/">Blob's demos</a></li>
+ <li><a class="external" href="http://glimr.rubyforge.org/cake/canvas.html">Canvas Animation Kit Experiment (CAKE)</a></li>
+ <li><a class="external" href="http://www.xs4all.nl/~peterned/3d/">Canvas3D &amp; Flickr</a></li>
+ <li><a class="external" href="http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html">Playing with Canvas</a></li>
+ <li><a class="external" href="http://langexplr.blogspot.com/2008/11/using-canvas-html-element.html">Using the Canvas Html element5</a></li>
+ <li><a class="external" href="/samples/raycaster/RayCaster.html" title="https://developer.mozilla.org/editor/fckeditor/core/editor/samples/raycaster/RayCaster.html">RayCaster</a></li>
+ <li><a class="external" href="http://jsmsxdemo.googlepages.com/jsmsx.html">MSX Emulator</a></li>
+ <li><a class="external" href="http://processingjs.org/exhibition/">processing.js</a></li>
+ <li><a class="external" href="http://glimr.rubyforge.org/cake/missile_fleet.html">Missile fleet</a></li>
+ <li><a class="external" href="http://glimr.rubyforge.org/cake/demos/fireworks2.6rt.html">FireWorks</a></li>
+ <li><a class="external" href="http://glimr.rubyforge.org/cake/demos/canvas_ash.html">Canvas ash1</a></li>
+ <li><a class="external" href="http://glimr.rubyforge.org/cake/demos/canvas_ash2.html">Canvas ash2</a></li>
+ <li><a class="external" href="http://glimr.rubyforge.org/cake/demos/canvas_ash8.html">Canvas ash8</a></li>
+ <li><a class="external" href="http://gyu.que.jp/jscloth/">3D on 2D Canvas</a></li>
+ <li><a href="http://viliusle.github.io/miniPaint/">miniPaint - Image editor </a>(<a href="https://github.com/viliusle/miniPaint">ソースコード</a>)</li>
+</ul>
 
-### SVG
+<h3 id="SVG" name="SVG">SVG</h3>
 
-- [Gearflowers image](http://www.kde-look.org/CONTENT/content-files/19524-gearflowers.svg.gz) 忘れずにズームインしてください (ローカルに保存すると動作します)
-- [SVG photo demo](http://people.mozilla.com/~vladimir/demos/photos.svg) (ビジュアル効果とインタラクション)
-- [Bubblemenu](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml) (ビジュアル効果とインタラクション)
-- [HTML transformations](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/) `foreignObject` を使用 (ビジュアル効果とインタラクション)
-- [Phonetics Guide](http://svg-whiz.com/svg/linguistics/theCreepyMouth.svg) (インタラクティブ)
-- [3D objects demo](http://www.lutanho.net/svgvml3d/platonic.html) (インタラクティブ)
-- [Blobular](http://www.themaninblue.com/experiment/Blobular/) (インタラクティブ)
-- [Video embedded in SVG](http://www.double.co.nz/video_test/video.svg) (または [ローカルにダウンロード](http://www.double.co.nz/video_test/video_svg.tar.bz2))
-- [Summer HTML image map creator](http://summerstyle.github.io/summer/) ([ソースコード](https://github.com/summerstyle/summer))
+<ul>
+ <li><a class="external" href="http://www.kde-look.org/CONTENT/content-files/19524-gearflowers.svg.gz">Gearflowers image</a> 忘れずにズームインしてください (ローカルに保存すると動作します)</li>
+ <li><a class="external" href="http://people.mozilla.com/~vladimir/demos/photos.svg">SVG photo demo</a> (ビジュアル効果とインタラクション)</li>
+ <li><a class="external" href="http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml">Bubblemenu</a> (ビジュアル効果とインタラクション)</li>
+ <li><a class="external" href="http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/">HTML transformations</a> <code>foreignObject</code> を使用 (ビジュアル効果とインタラクション)</li>
+ <li><a class="external" href="http://svg-whiz.com/svg/linguistics/theCreepyMouth.svg">Phonetics Guide</a> (インタラクティブ)</li>
+ <li><a class="external" href="http://www.lutanho.net/svgvml3d/platonic.html">3D objects demo</a> (インタラクティブ)</li>
+ <li><a class="external" href="http://www.themaninblue.com/experiment/Blobular/">Blobular</a> (インタラクティブ)</li>
+ <li><a class="external" href="http://www.double.co.nz/video_test/video.svg">Video embedded in SVG</a> (または <a class="external" href="http://www.double.co.nz/video_test/video_svg.tar.bz2">ローカルにダウンロード</a>)</li>
+ <li><a href="http://summerstyle.github.io/summer/">Summer HTML image map creator</a> (<a href="https://github.com/summerstyle/summer">ソースコード</a>)</li>
+</ul>
 
-### Video
+<h3 id="Video" name="Video">Video</h3>
 
-- [Streaming Anime, Movie Trailer and Interview](http://www.double.co.nz/video_test/test1.html)
-- [Billy's Browser Firefox Flick](http://www.double.co.nz/video_test/test2.html)
-- [Virtual Barber Shop](http://www.double.co.nz/video_test/test3.html)
-- [Transformers Movie Trailer](http://www.double.co.nz/video_test/test4.html)
-- [A Scanner Darkly Movie Trailer](http://www.double.co.nz/video_test/test5.html) (組み込みコントロールを使用)
-- [Events firing and volume control](http://www.double.co.nz/video_test/events.html)
-- [Dragable and sizable videos](http://www.double.co.nz/video_test/video.svg)
+<ul>
+ <li><a class="external" href="http://www.double.co.nz/video_test/test1.html">Streaming Anime, Movie Trailer and Interview</a></li>
+ <li><a class="external" href="http://www.double.co.nz/video_test/test2.html">Billy's Browser Firefox Flick</a></li>
+ <li><a class="external" href="http://www.double.co.nz/video_test/test3.html">Virtual Barber Shop</a></li>
+ <li><a class="external" href="http://www.double.co.nz/video_test/test4.html">Transformers Movie Trailer</a></li>
+ <li><a class="external" href="http://www.double.co.nz/video_test/test5.html">A Scanner Darkly Movie Trailer</a> (組み込みコントロールを使用)</li>
+ <li><a class="external" href="http://www.double.co.nz/video_test/events.html">Events firing and volume control</a></li>
+ <li><a class="external" href="http://www.double.co.nz/video_test/video.svg">Dragable and sizable videos</a></li>
+</ul>
 
-## 3D Graphics
+<h2 id="3D_Graphics">3D Graphics</h2>
 
-### WebGL
+<h3 id="WebGL">WebGL</h3>
 
-- [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)
-- [IoQuake3](https://dl.dropboxusercontent.com/u/62064441/ioquake3.js/ioquake3.html) ([ソースコード](https://github.com/klaussilveira/ioquake3.js))
-- [Escher puzzle](http://micah.tech/demoscene/) ([ソースコード](https://github.com/micahbolen/demoscene))
-- [Kai 'Opua](http://collinhover.github.io/kaiopua/) ([ソースコード](https://github.com/collinhover/kaiopua))
+<ul>
+ <li><a href="http://ondras.github.io/fireworks-webgl/">Web Audio Fireworks</a></li>
+ <li><a href="https://dl.dropboxusercontent.com/u/62064441/ioquake3.js/ioquake3.html">IoQuake3</a> (<a href="https://github.com/klaussilveira/ioquake3.js">ソースコード</a>)</li>
+ <li><a href="http://micah.tech/demoscene/">Escher puzzle</a> (<a href="https://github.com/micahbolen/demoscene">ソースコード</a>)</li>
+ <li><a href="http://collinhover.github.io/kaiopua/">Kai 'Opua</a> (<a href="https://github.com/collinhover/kaiopua">ソースコード</a>)</li>
+</ul>
 
-### Virtual Reality
+<h3 id="Virtual_Reality">Virtual Reality</h3>
 
-- [The Polar Sea](http://mozvr.com/demos/polarsea/) ([ソースコード](https://github.com/MozVR/polarsea))
-- [Sechelt fly-through](http://mozvr.github.io/sechelt/) ([ソースコード](https://github.com/mozvr/sechelt))
+<ul>
+ <li><a href="http://mozvr.com/demos/polarsea/">The Polar Sea</a> (<a href="https://github.com/MozVR/polarsea">ソースコード</a>)</li>
+ <li><a href="http://mozvr.github.io/sechelt/">Sechelt fly-through</a> (<a href="https://github.com/mozvr/sechelt">ソースコード</a>)</li>
+</ul>
 
-## CSS
+<h2 id="CSS">CSS</h2>
 
-- [Responsive Contact Form](http://webdeveloperbareilly.in/blog/html5/responsive-contact-form-bootstrap.php)
-- [Paperfold](http://felixniklas.com/paperfold/)
-- [CSS Blockout](http://ondras.zarovi.cz/games/blockout/)
-- [Rubik's cube](http://ondras.zarovi.cz/demos/rubik/)
-- [Pure CSS Slides](http://ondras.zarovi.cz/demos/nojs/)
-- Planetarium ([ソースコード](https://github.com/littleworkshop/planetarium))
-- [CSS Paralax Forest](http://www.lesmoffat.co.uk/folio/forest/forest.html)
-- [Awesome Login Page](http://webdeveloperbareilly.in/blog/css3/awesome-login-form.html)
-- [CSS3 One Page Scroll](http://webdeveloperbareilly.in/blog/css3/onepage-scroll-template.html)
+<ul>
+ <li><a href="http://webdeveloperbareilly.in/blog/html5/responsive-contact-form-bootstrap.php">Responsive Contact Form</a></li>
+ <li><a href="http://felixniklas.com/paperfold/">Paperfold</a></li>
+ <li><a href="http://ondras.zarovi.cz/games/blockout/">CSS Blockout</a></li>
+ <li><a href="http://ondras.zarovi.cz/demos/rubik/">Rubik's cube</a></li>
+ <li><a href="http://ondras.zarovi.cz/demos/nojs/">Pure CSS Slides</a></li>
+ <li>Planetarium (<a href="https://github.com/littleworkshop/planetarium">ソースコード</a>)</li>
+ <li><a href="http://www.lesmoffat.co.uk/folio/forest/forest.html">CSS Paralax Forest</a></li>
+ <li><a href="http://webdeveloperbareilly.in/blog/css3/awesome-login-form.html">Awesome Login Page</a></li>
+ <li><a href="http://webdeveloperbareilly.in/blog/css3/onepage-scroll-template.html">CSS3 One Page Scroll</a></li>
+</ul>
 
-### Transformations
+<h3 id="Transformations">Transformations</h3>
 
-- [Impress.js](http://impress.github.io/impress.js) ([ソースコード](https://github.com/impress/impress.js))
+<ul>
+ <li><a href="http://impress.github.io/impress.js">Impress.js</a> (<a href="https://github.com/impress/impress.js">ソースコード</a>)</li>
+</ul>
 
-## Games
+<h2 id="Games">Games</h2>
 
-- [IoQuake3](https://dl.dropboxusercontent.com/u/62064441/ioquake3.js/ioquake3.html) ([ソースコード](https://github.com/klaussilveira/ioquake3.js))
-- [Kai 'Opua](http://collinhover.github.io/kaiopua/) ([ソースコード](https://github.com/collinhover/kaiopua))
+<ul>
+ <li><a href="https://dl.dropboxusercontent.com/u/62064441/ioquake3.js/ioquake3.html">IoQuake3</a> (<a href="https://github.com/klaussilveira/ioquake3.js">ソースコード</a>)</li>
+ <li><a href="http://collinhover.github.io/kaiopua/">Kai 'Opua</a> (<a href="https://github.com/collinhover/kaiopua">ソースコード</a>)</li>
+</ul>
 
-## HTML
+<h2 id="HTML">HTML</h2>
 
-- [Zen Photon Garden ](http://zenphoton.com)([ソースコード](https://github.com/scanlime/zenphoton))
-- [HTML Meta Tags For SMO](http://webdeveloperbareilly.in/blog/smo/html-meta-tags-for-social-media-optimization.html)
+<ul>
+ <li> <a href="http://zenphoton.com">Zen Photon Garden </a>(<a href="https://github.com/scanlime/zenphoton">ソースコード</a>)</li>
+ <li><a href="http://webdeveloperbareilly.in/blog/smo/html-meta-tags-for-social-media-optimization.html">HTML Meta Tags For SMO</a></li>
+</ul>
 
-## Web APIs
+<h2 id="Web_APIs">Web APIs</h2>
 
-### Notifications API
+<ul>
+</ul>
 
-- HTML5 通知 ([ソースコード](https://github.com/elfoxero/html5notifications))
+<h3 id="Notifications_API">Notifications API</h3>
 
-### Web Audio API
+<ul>
+ <li>HTML5 通知 (<a href="https://github.com/elfoxero/html5notifications">ソースコード</a>)</li>
+</ul>
 
-- [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)
-- [oscope.js - JavaScript oscilloscope](http://ondras.github.io/oscope/)
-- [Audio Buffer demo](http://mdn.github.io/audio-buffer/) ([ソースコード](http://mdn.github.io/audio-buffer/))
-- [HTML5 Web Audio Showcase](http://nipe-systems.de/webapps/html5-web-audio/) ([ソースコード](https://github.com/NIPE-SYSTEMS/html5-web-audio-showcase))
-- [HTML5 Audio Visualizer](http://wayou.github.io/HTML5_Audio_Visualizer/) ([ソースコード](https://github.com/Wayou/HTML5_Audio_Visualizer))
-- [Graphical Filter Editor and Visualizer](http://carlosrafaelgn.com.br/GraphicalFilterEditor/) ([ソースコード](https://github.com/carlosrafaelgn/GraphicalFilterEditor))
+<ul>
+</ul>
 
-### Web Workers
+<h3 id="Web_Audio_API">Web Audio API</h3>
 
-- [Web Worker Fractals](http://ondras.zarovi.cz/demos/fractal/)
-- [Photo editor](http://ondras.zarovi.cz/demos/photo/)
-- [Coral generator](http://ondras.zarovi.cz/demos/coral/)
-- [Raytracer](http://nerget.com/rayjs-mt/rayjs.html)
+<ul>
+ <li><a href="http://ondras.github.io/fireworks-webgl/">Web Audio Fireworks</a></li>
+ <li><a href="http://ondras.github.io/oscope/">oscope.js - JavaScript oscilloscope</a></li>
+ <li><a href="http://mdn.github.io/audio-buffer/">Audio Buffer demo</a> (<a href="http://mdn.github.io/audio-buffer/">ソースコード</a>)</li>
+ <li><a href="http://nipe-systems.de/webapps/html5-web-audio/">HTML5 Web Audio Showcase</a> (<a href="https://github.com/NIPE-SYSTEMS/html5-web-audio-showcase">ソースコード</a>)</li>
+ <li><a href="http://wayou.github.io/HTML5_Audio_Visualizer/">HTML5 Audio Visualizer</a> (<a href="https://github.com/Wayou/HTML5_Audio_Visualizer">ソースコード</a>)</li>
+ <li><a href="http://carlosrafaelgn.com.br/GraphicalFilterEditor/">Graphical Filter Editor and Visualizer</a> (<a href="https://github.com/carlosrafaelgn/GraphicalFilterEditor">ソースコード</a>)</li>
+</ul>
+
+<h3 id="Unclassified" name="Unclassified">Web Workers</h3>
+
+<ul>
+ <li><a href="http://ondras.zarovi.cz/demos/fractal/">Web Worker Fractals</a></li>
+ <li><a href="http://ondras.zarovi.cz/demos/photo/">Photo editor</a></li>
+ <li><a href="http://ondras.zarovi.cz/demos/coral/">Coral generator</a></li>
+ <li><a class="external" href="http://nerget.com/rayjs-mt/rayjs.html">Raytracer</a></li>
+</ul>

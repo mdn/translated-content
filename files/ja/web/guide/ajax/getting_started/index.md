@@ -10,122 +10,120 @@ tags:
   - XMLHttpRequest
 translation_of: Web/Guide/AJAX/Getting_Started
 ---
-この記事は AJAX の基礎の概観と、入門のための二つの実践的なサンプルを示します。
+<p class="summary">この記事は AJAX の基礎の概観と、入門のための二つの実践的なサンプルを示します。</p>
 
-### AJAX とは?
+<h3 id="Whats_AJAX" name="What's_AJAX">AJAX とは?</h3>
 
-AJAX は **A**synchronous **J**avaScript **A**nd **X**ML の頭文字を取ったものです。これは一言で言えば、 [`XMLHttpRequest`](/ja/docs/XMLHttpRequest) オブジェクトを使ってサーバーと通信することです。 AJAX は JSON, XML, HTML, テキストファイルなど、様々な形式の情報で送受信することができます。 AJAX の最も魅力的な特徴は「非同期」であること、つまり、サーバーとの通信、データの交換、ページの更新を、ページの再読み込みなしに行うことができる点です。
+<p>AJAX は <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML の頭文字を取ったものです。これは一言で言えば、 <code><a href="/ja/docs/XMLHttpRequest">XMLHttpRequest</a></code> オブジェクトを使ってサーバーと通信することです。 AJAX は JSON, XML, HTML, テキストファイルなど、様々な形式の情報で送受信することができます。 AJAX の最も魅力的な特徴は「非同期」であること、つまり、サーバーとの通信、データの交換、ページの更新を、ページの再読み込みなしに行うことができる点です。</p>
 
-AJAX でできることには、二つの重要な特徴があります。
+<p>AJAX でできることには、二つの重要な特徴があります。</p>
 
-- ページを再読み込みすることなくサーバーに要求を送る
-- サーバーからデータを受け取って処理する
+<ul>
+ <li>ページを再読み込みすることなくサーバーに要求を送る</li>
+ <li>サーバーからデータを受け取って処理する</li>
+</ul>
 
-### Step 1 – HTTP リクエストの送り方
+<h3 id="Step_1_–_How_to_make_an_HTTP_request" name="Step_1_–_How_to_make_an_HTTP_request">Step 1 –  HTTP リクエストの送り方</h3>
 
-JavaScript からサーバーに [HTTP](/ja/HTTP) リクエストを送るためには、この機能を提供するオブジェクトのインスタンスが必要になります。これが `XMLHttpRequest` の登場する場所です。このクラスは、もともとは Internet Explorer で `XMLHTTP` と呼ばれる ActiveX オブジェクトとして導入されたものです。その後、 Mozilla や Safari やその他のブラウザがこれに追随し、 Microsoft 独自の ActiveX オブジェクトのメソッドやプロパティに対応する `XMLHttpRequest` オブジェクトを実装しました。いっぽう、 Microsoft も同様に XMLHttpRequest を実装しました。
+<p>JavaScript からサーバーに <a href="/ja/HTTP">HTTP</a> リクエストを送るためには、この機能を提供するオブジェクトのインスタンスが必要になります。これが <code>XMLHttpRequest</code> の登場する場所です。このクラスは、もともとは Internet Explorer で <code>XMLHTTP</code> と呼ばれる ActiveX オブジェクトとして導入されたものです。その後、 Mozilla や Safari やその他のブラウザがこれに追随し、 Microsoft 独自の ActiveX オブジェクトのメソッドやプロパティに対応する <code>XMLHttpRequest</code> オブジェクトを実装しました。いっぽう、 Microsoft も同様に XMLHttpRequest を実装しました。</p>
 
-```js
-// 古い互換コードで、もう必要ありません。
+<pre class="brush:js notranslate">// 古い互換コードで、もう必要ありません。
 if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
     httpRequest = new XMLHttpRequest();
 } else if (window.ActiveXObject) { // IE 6 以前
     httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
 }
-```
+</pre>
 
-> **Note:** **メモ:** 説明のために、このコードは実際に XMLHttp インスタンスを作成するのに使用するコードよりも多少簡単にしています。より実際に近いサンプルは、この記事の step 3 を見てください。
+<div class="note"><strong>メモ:</strong> 説明のために、このコードは実際に XMLHttp インスタンスを作成するのに使用するコードよりも多少簡単にしています。より実際に近いサンプルは、この記事の step 3 を見てください。</div>
 
-リクエストを送ったら、応答を受け取った後に何をするかを決めなければなりません。この段階で行う必要があるのは、どの JavaScript 関数に応答を処理させるかを XMLHttp リクエストオブジェクトに教えることだけです。これは、オブジェクトの `onreadystatechange` プロパティに、使おうとしている JavaScript 関数の名前をこのように設定することで行えます。
+<p>リクエストを送ったら、応答を受け取った後に何をするかを決めなければなりません。この段階で行う必要があるのは、どの JavaScript 関数に応答を処理させるかを XMLHttp リクエストオブジェクトに教えることだけです。これは、オブジェクトの <code>onreadystatechange</code> プロパティに、使おうとしている JavaScript 関数の名前をこのように設定することで行えます。</p>
 
-```js
-httpRequest.onreadystatechange = nameOfTheFunction;
-```
+<pre class="brush: js notranslate"><code>httpRequest.onreadystatechange = nameOfTheFunction;</code></pre>
 
-このとき、関数名の後に括弧や引数がないことに注意してください。それは、実際にそれを呼ぶのではなく単純に関数の参照を渡しているからです。また、関数名を設定するのではなく、以下のように関数や応答を処理する動作をその場で定義するという JavaScript の機能 (「無名関数」と呼ばれる) を利用することもできます。
+<p>このとき、関数名の後に括弧や引数がないことに注意してください。それは、実際にそれを呼ぶのではなく単純に関数の参照を渡しているからです。また、関数名を設定するのではなく、以下のように関数や応答を処理する動作をその場で定義するという JavaScript の機能 (「無名関数」と呼ばれる) を利用することもできます。</p>
 
-```js
-httpRequest.onreadystatechange = function(){
+<pre class="brush: js notranslate">httpRequest.onreadystatechange = function(){
     // ここでサーバーからの応答を処理します。
 };
-```
+</pre>
 
-次に、応答を受け取った後に何をするかを宣言したら、以下のように HTTP 要求オブジェクトの `open()` と `send()` 呼び出して、要求を作成する必要があります。
+<p>次に、応答を受け取った後に何をするかを宣言したら、以下のように HTTP 要求オブジェクトの <code>open()</code> と <code>send()</code> 呼び出して、要求を作成する必要があります。</p>
 
-```js
-httpRequest.open('GET', 'http://www.example.org/some.file', true);
+<pre class="brush: js notranslate">httpRequest.open('GET', 'http://www.example.org/some.file', true);
 httpRequest.send();
-```
+</pre>
 
-- `open()` の最初の引数は、サーバーが対応している HTTP リクエストメソッド、つまり、GET、POST、HEAD やその他のメソッドになります。 HTTP 標準に準拠するためにメソッド名はすべて大文字にしてください。そうでなければ、いくつかのブラウザ (Firefox など) ではリクエストを送信しません。利用可能な HTTP リクエストメソッドに関しての詳細情報については [W3C の仕様書](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)を参照してください。
-- 第二引数は、リクエストを送信するページの URL です。セキュリティ上の問題から、他のドメインのページを読むことはできません。つまり、すべてのページに対して同一のドメイン名を利用しないと、 `open()` を呼び出したときに「権限エラー」を受け取ることになるということです。よくある落とし穴は、サイトに `domain.tld` でアクセスしながら、`www.domain.tld` でページを読み込もうとすることです。本当に他のドメインにリクエストを送信する必要がある場合は、 [HTTP アクセス制御](/ja/docs/Web/HTTP/HTTP_access_control)を参照してください。
-- 第三引数は、リクエストを非同期に送るかどうかを示します。 `true` (既定値) であれば、 JavaScript の実行が継続され、サーバーの応答が届くまでの間もユーザーがページを操作することができます。これが、 AJAX の最初の A です。
+<ul>
+ <li><code>open()</code> の最初の引数は、サーバーが対応している HTTP リクエストメソッド、つまり、GET、POST、HEAD やその他のメソッドになります。 HTTP 標準に準拠するためにメソッド名はすべて大文字にしてください。そうでなければ、いくつかのブラウザ (Firefox など) ではリクエストを送信しません。利用可能な HTTP リクエストメソッドに関しての詳細情報については <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">W3C の仕様書</a>を参照してください。</li>
+ <li>第二引数は、リクエストを送信するページの URL です。セキュリティ上の問題から、他のドメインのページを読むことはできません。つまり、すべてのページに対して同一のドメイン名を利用しないと、 <code>open()</code> を呼び出したときに「権限エラー」を受け取ることになるということです。よくある落とし穴は、サイトに <code>domain.tld</code> でアクセスしながら、<code>www.domain.tld</code> でページを読み込もうとすることです。本当に他のドメインにリクエストを送信する必要がある場合は、 <a href="/ja/docs/Web/HTTP/HTTP_access_control">HTTP アクセス制御</a>を参照してください。</li>
+ <li>第三引数は、リクエストを非同期に送るかどうかを示します。 <code>true</code> (既定値) であれば、 JavaScript の実行が継続され、サーバーの応答が届くまでの間もユーザーがページを操作することができます。これが、 AJAX の最初の A です。</li>
+</ul>
 
-`send()` メソッドの引数は、要求を `POST` するときにサーバーに送信したい任意のデータです。フォームデータはサーバーが解釈できる形式、例えばクエリ文字列のような形式、
+<p><code>send()</code> メソッドの引数は、要求を <code>POST</code> するときにサーバーに送信したい任意のデータです。フォームデータはサーバーが解釈できる形式、例えばクエリ文字列のような形式、</p>
 
-    "name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
+<pre class="notranslate"><code>"name=value&amp;anothername="+encodeURIComponent(myVar)+"&amp;so=on"</code></pre>
 
-又は、 `multipart/form-data`, JSON, XML など形式にしてください。
+<p>又は、 <code>multipart/form-data</code>, JSON, XML など形式にしてください。</p>
 
-なお、データを `POST` する場合、要求の MIME タイプを設定する必要がある場合があります。例えば、フォームデータをクエリ文字列として `send()` を呼び出して送る前に、次の文を使用してください。
+<p>なお、データを <code>POST</code> する場合、要求の MIME タイプを設定する必要がある場合があります。例えば、フォームデータをクエリ文字列として <code>send()</code> を呼び出して送る前に、次の文を使用してください。</p>
 
-```js
-httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-```
+<pre class="brush: js notranslate">httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+</pre>
 
-### Step 2 – サーバー応答の扱い
+<h3 id="Step_2_–_Handling_the_server_response" name="Step_2_–_Handling_the_server_response">Step 2 – サーバー応答の扱い</h3>
 
-要求を送った時に、応答を扱う JavaScript 関数の名前を設定しました。
+<p>要求を送った時に、応答を扱う JavaScript 関数の名前を設定しました。</p>
 
-```js
-httpRequest.onreadystatechange = nameOfTheFunction;
-```
+<pre class="brush: js notranslate">httpRequest.onreadystatechange = nameOfTheFunction;
+</pre>
 
-この関数では何を行うべきでしょうか。最初に、この関数ではリクエストの状態を調べる必要があります。ステータス値が `XMLHttpRequest.DONE` (4 に対応) であるなら、サーバーからの応答が完了しており、処理を進められることを意味します。
+<p>この関数では何を行うべきでしょうか。最初に、この関数ではリクエストの状態を調べる必要があります。ステータス値が <code>XMLHttpRequest.DONE</code> (4 に対応) であるなら、サーバーからの応答が完了しており、処理を進められることを意味します。</p>
 
-```js
-if (httpRequest.readyState === XMLHttpRequest.DONE) {
+<pre class="brush: js notranslate">if (httpRequest.readyState === XMLHttpRequest.DONE) {
     // 全てが問題ない状態で、応答も返ってきています
 } else {
     // まだ準備ができていません
 }
-```
+</pre>
 
-`readyState` の値のリストは [XMLHTTPRequest.readyState](/ja/docs/Web/API/XMLHttpRequest/readyState) で文書化されていて、以下のようになっています。
+<p><code>readyState</code> の値のリストは <a href="/ja/docs/Web/API/XMLHttpRequest/readyState">XMLHTTPRequest.readyState</a> で文書化されていて、以下のようになっています。</p>
 
-- 0 (初期化前) 又は (**要求が初期化されていません**)
-- 1 (読み込み中) 又は (**サーバーへの接続が確立されました**)
-- 2 (読み込み完了) 又は (**要求を受信しました**)
-- 3 (対話中) 又は (**要求を処理中です**)
-- 4 (完了) 又は (**要求が完了して応答の準備ができました**)
+<ul>
+ <li>0 (初期化前) 又は (<strong>要求が初期化されていません</strong>)</li>
+ <li>1 (読み込み中) 又は (<strong>サーバーへの接続が確立されました</strong>)</li>
+ <li>2 (読み込み完了) 又は (<strong>要求を受信しました</strong>)</li>
+ <li>3 (対話中) 又は (<strong>要求を処理中です</strong>)</li>
+ <li>4 (完了) 又は (<strong>要求が完了して応答の準備ができました</strong>)</li>
+</ul>
 
-次に、 HTTP 応答の [応答コード](/ja/docs/Web/HTTP/#HTTP_Response_Codes)を調べます。返ってくる可能性があるコードは [W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) でリスト化されています。以下の例では、 AJAX 呼び出しが成功したか失敗したかを {{HTTPStatus("200", "200 OK")}} 応答コードをチェックすることで判別します。
+<p>次に、 HTTP 応答の <a href="/ja/docs/Web/HTTP/#HTTP_Response_Codes">応答コード</a>を調べます。返ってくる可能性があるコードは <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a> でリスト化されています。以下の例では、 AJAX 呼び出しが成功したか失敗したかを {{HTTPStatus("200", "200 OK")}} 応答コードをチェックすることで判別します。</p>
 
-```js
-if (httpRequest.status === 200) {
+<pre class="brush: js notranslate">if (httpRequest.status === 200) {
     // 完璧です！
 } else {
     // 何らかの問題が発生しています。
     // たとえば、応答に 404 (Not Found) や
     // 500 (Internal Server Error) 応答コードが返っているなど。
 }
-```
+</pre>
 
-要求の状態と応答の HTTP 状態コードをチェックした後、サーバーが送信したデータを使って好きなことが何でもできます。データにアクセスするには二つの選択肢があります。
+<p>要求の状態と応答の HTTP 状態コードをチェックした後、サーバーが送信したデータを使って好きなことが何でもできます。データにアクセスするには二つの選択肢があります。</p>
 
-- `httpRequest.responseText` – サーバーの応答をテキスト文字列として返します
-- `httpRequest.responseXML` – サーバーの応答を JavaScript DOM 関数で扱える `XMLDocument` オブジェクトとして返します
+<ul>
+ <li><code>httpRequest.responseText</code> – サーバーの応答をテキスト文字列として返します</li>
+ <li><code>httpRequest.responseXML</code> – サーバーの応答を JavaScript DOM 関数で扱える <code>XMLDocument</code> オブジェクトとして返します</li>
+</ul>
 
-なお、上記の段階は非同期要求を使用した場合 (`open()` の第三引数が未指定か `true` に設定されていた場合) のみ有効です。**同期**要求を使用した場合は関数を指定する必要はありませんが、これはユーザーの使い勝手をひどく損なうので、避けるべきです。
+<p>なお、上記の段階は非同期要求を使用した場合 (<code>open()</code> の第三引数が未指定か <code>true</code> に設定されていた場合) のみ有効です。<strong>同期</strong>要求を使用した場合は関数を指定する必要はありませんが、これはユーザーの使い勝手をひどく損なうので、避けるべきです。</p>
 
-### Step 3 – 簡単な例
+<h3 id="Step_3_–_A_Simple_Example" name="Step_3_–_A_Simple_Example">Step 3 –  簡単な例</h3>
 
-さて、ここまでに紹介した方法を使って簡単な HTTP リクエストを実行してみましょう。われわれの JavaScript では `test.html` という名前の、 "これはテストです" と書かれた HTML 文書を要求し、その内容を `alert()` で表示します。注意として、この例では vanilla JavaScript を使っています — jQuery は入っていません。また HTML, XML, PHP ファイルは同一ディレクトリに置かれています。
+<p>さて、ここまでに紹介した方法を使って簡単な HTTP リクエストを実行してみましょう。われわれの JavaScript では <code>test.html</code> という名前の、 "これはテストです" と書かれた HTML 文書を要求し、その内容を <code>alert()</code> で表示します。注意として、この例では vanilla JavaScript を使っています — jQuery は入っていません。また HTML, XML, PHP ファイルは同一ディレクトリに置かれています。</p>
 
-```html
-<button id="ajaxButton" type="button">要求を実行</button>
+<pre class="brush: html notranslate">&lt;button id="ajaxButton" type="button"&gt;要求を実行&lt;/button&gt;
 
-<script>
+&lt;script&gt;
 (function() {
   var httpRequest;
   document.getElementById("ajaxButton").addEventListener('click', makeRequest);
@@ -152,26 +150,27 @@ if (httpRequest.status === 200) {
     }
   }
 })();
-</script>
-```
+&lt;/script&gt;
+</pre>
 
-このサンプルでは以下のことを行います。
+<p>このサンプルでは以下のことを行います。</p>
 
-- ユーザーがブラウザーで「要求を実行」をクリックする。
-- イベントハンドラーから `makeRequest()` 関数が呼び出される。
-- 要求が作成され、(`onreadystatechange`) により `alertContents()` への処理引継ぎが設定される。
-- `alertContents()` では、応答が返ってきていて問題無いかを確認した後、`test.html` ファイルの中身を `alert()` で表示する。
+<ul>
+ <li>ユーザーがブラウザーで「要求を実行」をクリックする。</li>
+ <li>イベントハンドラーから <code>makeRequest()</code> 関数が呼び出される。</li>
+ <li>要求が作成され、(<code>onreadystatechange</code>) により <code>alertContents()</code> への処理引継ぎが設定される。</li>
+ <li><code>alertContents()</code> では、応答が返ってきていて問題無いかを確認した後、<code>test.html</code> ファイルの中身を <code>alert()</code> で表示する。</li>
+</ul>
 
-> **Note:** **メモ**: 要求を送信する先が静的な HTML ファイルではなく、 XML を返すコードである場合、 Internet Explorer に応答ヘッダーを設定しなければなりません。`Content-Type: application/xml` というヘッダーを設定しなければ、XML 要素にアクセスしようとしている行で IE が "Object Expected" という Javascript エラーを投げるでしょう。
+<div class="note"><strong>メモ</strong>: 要求を送信する先が静的な HTML ファイルではなく、 XML を返すコードである場合、 Internet Explorer に応答ヘッダーを設定しなければなりません。<code>Content-Type: application/xml</code> というヘッダーを設定しなければ、XML 要素にアクセスしようとしている行で IE が "Object Expected" という Javascript エラーを投げるでしょう。</div>
 
-> **Note:** **メモ 2**: `Cache-Control: no-cache` というヘッダーを設定しなければ、ブラウザーが応答をキャッシュして要求を再送信しなくなるため、デバッグが難しくなるでしょう。 GET 引数に、タイムスタンプやランダムな数字のような、常に異なるものを追加する方法もあります ([キャッシュをバイパスする](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)をご覧ください)
+<div class="note"><strong>メモ 2</strong>: <code>Cache-Control: no-cache</code> というヘッダーを設定しなければ、ブラウザーが応答をキャッシュして要求を再送信しなくなるため、デバッグが難しくなるでしょう。 GET 引数に、タイムスタンプやランダムな数字のような、常に異なるものを追加する方法もあります (<a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache">キャッシュをバイパスする</a>をご覧ください)</div>
 
-> **Note:** **メモ 3**: `httpRequest` 変数をグローバルに使用すると、関数の呼び出しが競合して `makeRequest()` が互いに上書きし合うため、競合状態が発生します。 `httpRequest` 変数を、 AJAX 関数を含んでいる[クロージャ](/ja/docs/Web/JavaScript/Closures)のローカルで宣言することでこれを防ぐことができます。
+<div class="note"><strong>メモ 3</strong>: <code>httpRequest</code> 変数をグローバルに使用すると、関数の呼び出しが競合して <code>makeRequest()</code> が互いに上書きし合うため、競合状態が発生します。 <code>httpRequest</code> 変数を、 AJAX 関数を含んでいる<a href="/ja/docs/Web/JavaScript/Closures">クロージャ</a>のローカルで宣言することでこれを防ぐことができます。</div>
 
-通信エラーのイベント (サーバーがダウンしたなど) では、応答状態にアクセスする時に `onreadystatechange` メソッドの中で例外が発生します。この問題を防ぐため、 `if...then` 文は必ず `try...catch` で囲むようにしてください。
+<p>通信エラーのイベント (サーバーがダウンしたなど) では、応答状態にアクセスする時に <code>onreadystatechange</code> メソッドの中で例外が発生します。この問題を防ぐため、 <code>if...then</code> 文は必ず <code>try...catch</code> で囲むようにしてください。</p>
 
-```js
-function alertContents() {
+<pre class="brush: js notranslate">function alertContents() {
   try {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
@@ -185,67 +184,60 @@ function alertContents() {
     alert('例外を捕捉: ' + e.description);
   }
 }
-```
+</pre>
 
-### Step 4 – 「X-ファイル」 もしくは XML レスポンスの扱い方
+<h3 id="Step_4_–_Working_with_the_XML_response" name="Step_4_–_Working_with_the_XML_response">Step 4 – 「X-ファイル」 もしくは XML レスポンスの扱い方</h3>
 
-前の例では、 HTTP リクエストへの応答を受け取った後、要求オブジェクトの `responseText` プロパティを用いて、それに含まれている test.html の中身を取得しました。では、次に `responseXML` プロパティのほうを試してみましょう。
+<p>前の例では、 HTTP リクエストへの応答を受け取った後、要求オブジェクトの <code>responseText</code> プロパティを用いて、それに含まれている test.html の中身を取得しました。では、次に <code>responseXML</code> プロパティのほうを試してみましょう。</p>
 
-はじめに、あとでサーバーに要求する妥当な XML 文書を作成します。 test.xml ファイルの中身は以下のようなものです。
+<p>はじめに、あとでサーバーに要求する妥当な XML 文書を作成します。 test.xml ファイルの中身は以下のようなものです。</p>
 
-```html
-<?xml version="1.0" ?>
-<root>
+<pre class="brush: html notranslate">&lt;?xml version="1.0" ?&gt;
+&lt;root&gt;
     I'm a test.
-</root>
-```
+&lt;/root&gt;
+</pre>
 
-スクリプトでは、リクエスト送出を以下のように変更します。
+<p>スクリプトでは、リクエスト送出を以下のように変更します。</p>
 
-```html
+<pre class="brush: html notranslate">...
+onclick="makeRequest('test.xml')"&gt;
 ...
-onclick="makeRequest('test.xml')">
-...
-```
+</pre>
 
-そして、 `alertContents()` では、 `alert(httpRequest.responseText);` としている行を以下のように変更します。
+<p>そして、 <code>alertContents()</code> では、 <code>alert(httpRequest.responseText);</code> としている行を以下のように変更します。</p>
 
-```js
-var xmldoc = httpRequest.responseXML;
+<pre class="brush: js notranslate">var xmldoc = httpRequest.responseXML;
 var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
-```
+</pre>
 
-このコードでは、 `responseXML` から `XMLDocument` オブジェクトを取得し、 DOM メソッドを利用して XML 文書に含まれるデータにアクセスしています。 この`test.xml` ファイルは[ここ](http://www.w3clubs.com/mozdev/test.xml)で、変更されたスクリプトは[ここ](http://www.w3clubs.com/mozdev/httprequest_test_xml.html)で見ることができます。
+<p>このコードでは、 <code>responseXML</code> から <code>XMLDocument</code> オブジェクトを取得し、 DOM メソッドを利用して XML 文書に含まれるデータにアクセスしています。 この<code>test.xml</code> ファイルは<a href="http://www.w3clubs.com/mozdev/test.xml">ここ</a>で、変更されたスクリプトは<a href="http://www.w3clubs.com/mozdev/httprequest_test_xml.html">ここ</a>で見ることができます。</p>
 
-### Step 5 – データを処理する
+<h3 id="Step_5_–_Working_with_data" name="Step_5_–_Working_with_data">Step 5 – データを処理する</h3>
 
-最後に、データをサーバーに送って応答を受けましょう。 JavaScript はここで動的なページ `test.php` に要求し、このページは送ったデータを受けて「計算した」文字 - "Hello, \[user data]!" - を返し、これを `alert()` します。
+<p>最後に、データをサーバーに送って応答を受けましょう。 JavaScript はここで動的なページ <code>test.php</code> に要求し、このページは送ったデータを受けて「計算した」文字 - "Hello, [user data]!" - を返し、これを <code>alert()</code> します。</p>
 
-まずは HTML にテキストボックスを追加してユーザーが名前を入れられるようにします:
+<p>まずは HTML にテキストボックスを追加してユーザーが名前を入れられるようにします:</p>
 
-```html
-<label>Your name:
-  <input type="text" id="ajaxTextbox" />
-</label>
-<span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
+<pre class="brush: html notranslate">&lt;label&gt;Your name:
+  &lt;input type="text" id="ajaxTextbox" /&gt;
+&lt;/label&gt;
+&lt;span id="ajaxButton" style="cursor: pointer; text-decoration: underline"&gt;
   Make a request
-</span>
-```
+&lt;/span&gt;</pre>
 
-イベントハンドラーに、テキストボックスからユーザーデータを取得してサーバーサイドスクリプトの URL と一緒に `makeRequest()` に送るような行も追加します。
+<p>イベントハンドラーに、テキストボックスからユーザーデータを取得してサーバーサイドスクリプトの URL と一緒に <code>makeRequest()</code> に送るような行も追加します。</p>
 
-```js
-  document.getElementById("ajaxButton").onclick = function() {
+<pre class="brush: js notranslate">  document.getElementById("ajaxButton").onclick = function() {
       var userName = document.getElementById("ajaxTextbox").value;
       makeRequest('test.php',userName);
   };
-```
+</pre>
 
-`makeRequest()` を編集してユーザーデータを受け取ってサーバーに渡すようにします。リクエストメソッドは `GET` から `POST` に変更し、データを `httpRequest.send()` 呼び出しのパラメーターとして入れます:
+<p><code>makeRequest()</code> を編集してユーザーデータを受け取ってサーバーに渡すようにします。リクエストメソッドは <code>GET</code> から <code>POST</code> に変更し、データを <code>httpRequest.send()</code> 呼び出しのパラメーターとして入れます:</p>
 
-```js
-  function makeRequest(url, userName) {
+<pre class="brush: js notranslate">  function makeRequest(url, userName) {
 
     ...
 
@@ -254,16 +246,15 @@ alert(root_node.firstChild.data);
     httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     httpRequest.send('userName=' + encodeURIComponent(userName));
   }
-```
+</pre>
 
-`alertContents()` 関数はステップ 3 と同じように書かれて、サーバーが計算された文字列を返していたら、 alert するようにします。しかし、サーバーが計算された文字列とオリジナルのユーザーデータの両方を返していたらどうでしょう？ユーザーがテキストボックスに "Jane" とタイプしていたら、サーバーの応答はこのようになります:
+<p><code>alertContents()</code> 関数はステップ 3 と同じように書かれて、サーバーが計算された文字列を返していたら、 alert するようにします。しかし、サーバーが計算された文字列とオリジナルのユーザーデータの両方を返していたらどうでしょう？ユーザーがテキストボックスに "Jane" とタイプしていたら、サーバーの応答はこのようになります:</p>
 
-`{"userData":"Jane","computedString":"Hi, Jane!"}`
+<p><code>{"userData":"Jane","computedString":"Hi, Jane!"}</code></p>
 
-このデータを `alertContents()`,内で使うには、単に `responseText` を alert することはできず、これを parse して、求めるプロパティの `computedString` を alert します:
+<p>このデータを <code>alertContents()</code>,内で使うには、単に <code>responseText</code> をalert することはできず、これを parse して、求めるプロパティの <code>computedString</code> をalertします:</p>
 
-```js
-function alertContents() {
+<pre class="brush: js notranslate">function alertContents() {
   if (httpRequest.readyState === XMLHttpRequest.DONE) {
     if (httpRequest.status === 200) {
       var response = JSON.parse(httpRequest.responseText);
@@ -272,16 +263,13 @@ function alertContents() {
       alert('There was a problem with the request.');
     }
   }
-}
-```
+}</pre>
 
-`test.php` には以下のようなものが入ります。
+<p><code>test.php</code> には以下のようなものが入ります。</p>
 
-```php
-$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
+<pre class="brush: php notranslate"><code>$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'no name';
 $computedString = "Hi, " . $name;
-$array = ['userName' => $name, 'computedString' => $computedString];
-echo json_encode($array);
-```
+$array = ['userName' =&gt; $name, 'computedString' =&gt; $computedString];
+echo json_encode($array);</code></pre>
 
-DOM メソッドについてより詳しくは、[Mozilla での DOM の実装](/ja/docs/dom/)の文書を参照してください。
+<p>DOM メソッドについてより詳しくは、<a href="/ja/docs/dom/">Mozilla での DOM の実装</a>の文書を参照してください。</p>

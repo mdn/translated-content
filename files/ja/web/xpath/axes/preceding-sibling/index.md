@@ -6,4 +6,4 @@ tags:
   - XPath
 translation_of: Web/XPath/Axes/preceding-sibling
 ---
-`preceding-sibling`軸は、コンテキストノードと同じ親を持ち、ソースドキュメントのコンテキストノードの前に現れるすべてのノードを示します。
+<p><code>preceding-sibling</code>軸は、コンテキストノードと同じ親を持ち、ソースドキュメントのコンテキストノードの前に現れるすべてのノードを示します。</p>

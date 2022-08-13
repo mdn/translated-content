@@ -3,156 +3,175 @@ title: C/C++からWebAssemblyにコンパイルする
 slug: WebAssembly/C_to_wasm
 translation_of: WebAssembly/C_to_wasm
 ---
-{{WebAssemblySidebar}}
+<div>{{WebAssemblySidebar}}</div>
 
-C / C ++のような言語でコードを書いたら、[Emscripten](/ja/docs/Mozilla/Projects/Emscripten) のようなツールを使って WebAssembly にコンパイルすることができます。 どのように動作するかを見てみましょう。
+<p class="summary">C / C ++のような言語でコードを書いたら、<a href="/ja/docs/Mozilla/Projects/Emscripten">Emscripten</a> のようなツールを使って WebAssembly にコンパイルすることができます。 どのように動作するかを見てみましょう。</p>
 
-## Emscripten の環境設定
+<h2 id="Emscripten_の環境設定">Emscripten の環境設定</h2>
 
-まず、必要な開発環境をセットアップしましょう。
+<p>まず、必要な開発環境をセットアップしましょう。</p>
 
-### 準備
+<h3 id="準備">準備</h3>
 
-Emscripten SDK を取得します。以下の指示にしたがってください。<https://emscripten.org/docs/getting_started/downloads.html>
+<p>Emscripten SDKを取得します。以下の指示にしたがってください。<a href="https://emscripten.org/docs/getting_started/downloads.html">https://emscripten.org/docs/getting_started/downloads.html</a></p>
 
-## サンプルコードをコンパイルする
+<h2 id="サンプルコードをコンパイルする">サンプルコードをコンパイルする</h2>
 
-環境を設定した後は、C のサンプルコードを Emscripten にコンパイルする方法を見てみましょう。 Emscripten でコンパイルするときにはいくつかのオプションがありますが、この記事でカバーする主な 2 つのシナリオは次のとおりです:
+<p>環境を設定した後は、C のサンプルコードを Emscripten にコンパイルする方法を見てみましょう。 Emscripten でコンパイルするときにはいくつかのオプションがありますが、この記事でカバーする主な2つのシナリオは次のとおりです:</p>
 
-- wasm にコンパイルし、コードを実行するための HTML とウェブ環境上で wasm を実行するための全ての JavaScript グルーコードを生成する。
-- wasm にコンパイルと JavaScript の生成だけ行う。
+<ul>
+ <li>wasm にコンパイルし、コードを実行するための HTML とウェブ環境上で wasm を実行するための全ての JavaScript グルーコードを生成する。</li>
+ <li>wasm にコンパイルと JavaScript の生成だけ行う。</li>
+</ul>
 
-2 つについて見てみましょう。
+<p>2つについて見てみましょう。</p>
 
-### HTML と JavaScript を生成する
+<h3 id="HTML_と_JavaScript_を生成する">HTML と JavaScript を生成する</h3>
 
-最も簡単なケースを見てみましょう。コードを WebAssembly としてブラウザで実行するための全てを Emscripten で生成するようにします。
+<p>最も簡単なケースを見てみましょう。コードを WebAssembly としてブラウザで実行するための全てを Emscripten で生成するようにします。</p>
 
-1.  まずはコンパイルするためのサンプルコードを用意します。以下の C のサンプルコードをコピーして `hello.c` としてローカルドライブの新しいディレクトリに保存してください:
+<ol>
+ <li>まずはコンパイルするためのサンプルコードを用意します。以下のCのサンプルコードをコピーして <code>hello.c</code> としてローカルドライブの新しいディレクトリに保存してください:
 
-    ```cpp
-    #include <stdio.h>
+  <pre class="brush: cpp notranslate">#include &lt;stdio.h&gt;
 
-    int main(int argc, char ** argv) {
-      printf("Hello World\n");
-    }
-    ```
+int main(int argc, char ** argv) {
+  printf("Hello World\n");
+}</pre>
+ </li>
+ <li>Emscripten コンパイラ環境を導入したターミナルウィンドウを使用して、<code>hello.c</code> ファイルと同じディレクトリに移動して、次のコマンドを実行します:
+  <pre class="brush: bash notranslate">emcc hello.c -s WASM=1 -o hello.html</pre>
+ </li>
+</ol>
 
-2.  Emscripten コンパイラ環境を導入したターミナルウィンドウを使用して、`hello.c` ファイルと同じディレクトリに移動して、次のコマンドを実行します:
+<p>このコマンドで渡されたオプションは次のとおりです:</p>
 
-    ```bash
-    emcc hello.c -s WASM=1 -o hello.html
-    ```
+<ul>
+ <li><code>-s WASM=1</code> — 出力を wasm に指定します。指定しない場合、Emscripten はデフォルトでは <a href="http://asmjs.org/">asm.js</a> として出力します。</li>
+ <li><code>-o hello.html</code> — コードを実行するための HTML ページを指定します。wasm モジュールとそれをウェブ環境で使用できるようにコンパイル、インスタンス化するための JavaScript グルーコードも出力に含まれます。</li>
+</ul>
 
-このコマンドで渡されたオプションは次のとおりです:
+<p>この時点でソースディレクトリに以下のファイルが出力されているはずです:</p>
 
-- `-s WASM=1` — 出力を wasm に指定します。指定しない場合、Emscripten はデフォルトでは [asm.js](http://asmjs.org/) として出力します。
-- `-o hello.html` — コードを実行するための HTML ページを指定します。wasm モジュールとそれをウェブ環境で使用できるようにコンパイル、インスタンス化するための JavaScript グルーコードも出力に含まれます。
+<ul>
+ <li>バイナリの wasm モジュールコード (<code>hello.wasm</code>)</li>
+ <li>ネイティブの C の関数と JavaScript/wasm の間で変換を行う JavaScript ファイル (<code>hello.js</code>)</li>
+ <li>wasm コードをロード、コンパイル、インスタンス化し、ブラウザに出力するための HTML ファイル (<code>hello.html</code>)</li>
+</ul>
 
-この時点でソースディレクトリに以下のファイルが出力されているはずです:
+<h3 id="サンプルコードを実行する">サンプルコードを実行する</h3>
 
-- バイナリの wasm モジュールコード (`hello.wasm`)
-- ネイティブの C の関数と JavaScript/wasm の間で変換を行う JavaScript ファイル (`hello.js`)
-- wasm コードをロード、コンパイル、インスタンス化し、ブラウザに出力するための HTML ファイル (`hello.html`)
+<p>WebAssembly をサポートしているブラウザで <code>hello.html</code> をロードするだけです。WebAssembly は Firefox 52+ と Chrome 57+/最新の Opera でデフォルトで有効になっています (Firefox 47+では <em>about:config</em> で <code>javascript.options.wasm</code> flag を有効にすることで、Chrome (51+) と Opera (38+) では <em>chrome://flags</em> に飛んで <em>Experimental WebAssembly</em> フラグを有効にすることで wasm コードを実行することができます) 。</p>
 
-### サンプルコードを実行する
+<p>全てが計画通りに機能していれば、ウェブページ上の Emscripten コンソールに "Hello world" の出力が表示されるはずです。おめでとうございます、ようやくCを WebAssembly にコンパイルしてブラウザで実行することができました!</p>
 
-WebAssembly をサポートしているブラウザで `hello.html` をロードするだけです。WebAssembly は Firefox 52+ と Chrome 57+/最新の Opera でデフォルトで有効になっています (Firefox 47+では _about:config_ で `javascript.options.wasm` flag を有効にすることで、Chrome (51+) と Opera (38+) では _chrome://flags_ に飛んで _Experimental WebAssembly_ フラグを有効にすることで wasm コードを実行することができます) 。
+<h3 id="カスタム_HTML_テンプレートを使う">カスタム HTML テンプレートを使う</h3>
 
-全てが計画通りに機能していれば、ウェブページ上の Emscripten コンソールに "Hello world" の出力が表示されるはずです。おめでとうございます、ようやく C を WebAssembly にコンパイルしてブラウザで実行することができました!
+<p>場合によっては、カスタム HTML テンプレートを使用することもできます。 どうやってできるかを見てみましょう。</p>
 
-### カスタム HTML テンプレートを使う
+<ol>
+ <li>
+  <p>まず、次の C のコードを <code>hello2.c</code> として新しいディレクトリに保存します:</p>
 
-場合によっては、カスタム HTML テンプレートを使用することもできます。 どうやってできるかを見てみましょう。
+  <pre class="brush: cpp notranslate">#include &lt;stdio.h&gt;
 
-1.  まず、次の C のコードを `hello2.c` として新しいディレクトリに保存します:
+int main(int argc, char ** argv) {
+    printf("Hello World\n");
 
-    ```cpp
-    #include <stdio.h>
+}</pre>
+ </li>
+ <li>
+  <p><code>shell_minimal.html</code> をあなたの emsdk レポジトリから探します。先程作成した新しいディレクトリに <code>html_template</code> というサブディレクトリを作って、そこにコピーします。</p>
+ </li>
+ <li>
+  <p>新しいディレクトリに移動して (Emscripten コンパイラ環境があるターミナルウィンドウで) 、次のコマンドを実行します:</p>
 
-    int main(int argc, char ** argv) {
-        printf("Hello World\n");
+  <pre class="brush: bash notranslate">emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html</pre>
 
-    }
-    ```
+  <p>今回渡したオプションは少しだけ異なります:</p>
 
-2.  `shell_minimal.html` をあなたの emsdk レポジトリから探します。先程作成した新しいディレクトリに `html_template` というサブディレクトリを作って、そこにコピーします。
-3.  新しいディレクトリに移動して (Emscripten コンパイラ環境があるターミナルウィンドウで) 、次のコマンドを実行します:
+  <ul>
+   <li><code>-o hello2.html</code> と指定したことで、今回コンパイラは JavaScript グルーコードと <code>.html</code> を出力します。</li>
+   <li>さらに <code>--shell-file html_template/shell_minimal.html</code> と指定しました — これは例を実行する HTML を生成するための、HTML テンプレートパスです。</li>
+  </ul>
+ </li>
+ <li>
+  <p>この例を実行してみましょう。上記のコマンドで hello2.html が生成されます。これは生成された wasm コードに対してロード、実行などを行うグルーコードを含むテンプレートと同じ内容を持ちます。ブラウザを開いて最後の例と同じ出力であることを確認してください。</p>
+ </li>
+</ol>
 
-    ```bash
-    emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html
-    ```
+<div class="note">
+<p><strong>注</strong>: 例えば、 <code>emcc -o hello2.js hello2.c -O3 -s WASM=1</code> のように <code>-o</code> フラグにHTMLファイルの代わりに .js ファイルを渡すことで JavaScript で出力することを指定できます。そのあとに、スクラッチで独自のカスタム HTML を作ることができます。しかし、これはおすすめできません — Emscripten はメモリ割り当て、メモリリークやその他の問題を扱うための JavaScript グルーコードが多数必要になります。これは提供されたテンプレートにすでに含まれています。全てをあなた自身で書くよりも簡単に使用できます。していること全てに習熟してきたら、必要に応じて独自のカスタマイズバージョンを作りましょう。</p>
+</div>
 
-    今回渡したオプションは少しだけ異なります:
+<h3 id="C_で定義されたカスタム関数を呼び出す">C で定義されたカスタム関数を呼び出す</h3>
 
-    - `-o hello2.html` と指定したことで、今回コンパイラは JavaScript グルーコードと `.html` を出力します。
-    - さらに `--shell-file html_template/shell_minimal.html` と指定しました — これは例を実行する HTML を生成するための、HTML テンプレートパスです。
+<p>C で定義された関数があって、それを JavaScript から呼び出したい場合、Emscripten の <code>ccall()</code> 関数と <code>EMSCRIPTEN_KEEPALIVE</code> 宣言 (対象の関数をエクスポートする関数リストに加えるものです (<a href="https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process">Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?</a> を参照してください)) を使用します。これがどのように働くか見てみましょう。</p>
 
-4.  この例を実行してみましょう。上記のコマンドで hello2.html が生成されます。これは生成された wasm コードに対してロード、実行などを行うグルーコードを含むテンプレートと同じ内容を持ちます。ブラウザを開いて最後の例と同じ出力であることを確認してください。
+<ol>
+ <li>
+  <p>はじめに、次のコードを <code>hello3.c</code> として新しいディレクトリに保存します:</p>
 
-> **Note:** **注**: 例えば、 `emcc -o hello2.js hello2.c -O3 -s WASM=1` のように `-o` フラグに HTML ファイルの代わりに .js ファイルを渡すことで JavaScript で出力することを指定できます。そのあとに、スクラッチで独自のカスタム HTML を作ることができます。しかし、これはおすすめできません — Emscripten はメモリ割り当て、メモリリークやその他の問題を扱うための JavaScript グルーコードが多数必要になります。これは提供されたテンプレートにすでに含まれています。全てをあなた自身で書くよりも簡単に使用できます。していること全てに習熟してきたら、必要に応じて独自のカスタマイズバージョンを作りましょう。
+  <pre class="brush: cpp notranslate">#include &lt;stdio.h&gt;
+#include &lt;emscripten/emscripten.h&gt;
 
-### C で定義されたカスタム関数を呼び出す
+int main(int argc, char ** argv) {
+    printf("Hello World\n");
+}
 
-C で定義された関数があって、それを JavaScript から呼び出したい場合、Emscripten の `ccall()` 関数と `EMSCRIPTEN_KEEPALIVE` 宣言 (対象の関数をエクスポートする関数リストに加えるものです ([Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process) を参照してください)) を使用します。これがどのように働くか見てみましょう。
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-1.  はじめに、次のコードを `hello3.c` として新しいディレクトリに保存します:
+void EMSCRIPTEN_KEEPALIVE myFunction(int argc, char ** argv) {
+  printf("MyFunction Called\n");
+}
 
-    ```cpp
-    #include <stdio.h>
-    #include <emscripten/emscripten.h>
+#ifdef __cplusplus
+}
+#endif</pre>
 
-    int main(int argc, char ** argv) {
-        printf("Hello World\n");
-    }
+  <p>デフォルトでは、Emscripten が生成したコードは常に <code>main()</code> を呼び出し、他のデッドコードは削除されます。関数名の前に <code>EMSCRIPTEN_KEEPALIVE</code> を置くことによって、これが起こらなくなります。また、<code>EMSCRIPTEN_KEEPALIVE</code> を使用するために <code>emscripten.h</code> をインポートする必要があります。</p>
 
-    #ifdef __cplusplus
-    extern "C" {
-    #endif
+  <div class="note">
+  <p><strong>注</strong>: <code>#ifdef</code> ブロックを加えたことによって、C++ のコードからこの例をインクルードしようとしても動作するでしょう。 C と C++ の間でのマングリング規則によって、他の場合では壊れることもありますが、ここでは C++ を使用している場合に、外部の C の関数として扱うように設定しています。</p>
+  </div>
+ </li>
+ <li>
+  <p>便宜上、この新しいディレクトリに <code>html_template/shell_minimal.html</code> (もちろん、このファイルはあなたの実際の開発環境に置きます)を加えます。</p>
+ </li>
+ <li>
+  <p>さて、再びコンパイル手順を実行しましょう。あなたの最新のディレクトリの中 (そして、Emscripten コンパイラ環境の入っているターミナルウィンドウ) で、このように C のコードをコンパイルします (NO_EXIT_RUNTIMEオプションを付与してコンパイルする必要があることに注意してください。そうしない場合、 main() 関数が終了したときにランタイムもシャットダウンされてしまい、コンパイルされたコードが正しく呼ばれなくなる可能性があります - 例えば、atexitの呼び出しなどの適切なCのエミュレーションに必要です):</p>
 
-    void EMSCRIPTEN_KEEPALIVE myFunction(int argc, char ** argv) {
-      printf("MyFunction Called\n");
-    }
+  <pre class="brush: bash notranslate">emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html <code>-s NO_EXIT_RUNTIME=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"</code></pre>
+ </li>
+ <li>
+  <p>例をブラウザでロードしたら、前と同じものが見られるでしょう。</p>
+ </li>
+ <li>
+  <p>JavaScript から新しい <code>myFunction()</code> 関数を呼び出す必要があります。まずは、 以下のような{{htmlelement("button")}} を最初の <code>&lt;script type='text/javascript'&gt;</code> タグの上に加えましょう。</p>
 
-    #ifdef __cplusplus
-    }
-    #endif
-    ```
+  <pre class="brush: html notranslate">&lt;button class="mybutton"&gt;Run myFunction&lt;/button&gt;</pre>
+ </li>
+ <li>
+  <p>そして、{{htmlelement("script")}} 要素内の最後に次のコードを追加します ( <code>&lt;/script&gt;</code> タグの直前):</p>
 
-    デフォルトでは、Emscripten が生成したコードは常に `main()` を呼び出し、他のデッドコードは削除されます。関数名の前に `EMSCRIPTEN_KEEPALIVE` を置くことによって、これが起こらなくなります。また、`EMSCRIPTEN_KEEPALIVE` を使用するために `emscripten.h` をインポートする必要があります。
+  <pre class="brush: js notranslate">document.querySelector('.mybutton').addEventListener('click', function(){
+  alert('check console');
+  var result = Module.ccall('myFunction', // name of C function
+                             null, // return type
+                             null, // argument types
+                             null); // arguments
+});</pre>
+ </li>
+</ol>
 
-    > **Note:** **注**: `#ifdef` ブロックを加えたことによって、C++ のコードからこの例をインクルードしようとしても動作するでしょう。 C と C++ の間でのマングリング規則によって、他の場合では壊れることもありますが、ここでは C++ を使用している場合に、外部の C の関数として扱うように設定しています。
+<p>これはエクスポートされた関数をどのようにして <code>ccall()</code> を使用して呼び出すかを示しています。</p>
 
-2.  便宜上、この新しいディレクトリに `html_template/shell_minimal.html` (もちろん、このファイルはあなたの実際の開発環境に置きます)を加えます。
-3.  さて、再びコンパイル手順を実行しましょう。あなたの最新のディレクトリの中 (そして、Emscripten コンパイラ環境の入っているターミナルウィンドウ) で、このように C のコードをコンパイルします (NO_EXIT_RUNTIME オプションを付与してコンパイルする必要があることに注意してください。そうしない場合、 main() 関数が終了したときにランタイムもシャットダウンされてしまい、コンパイルされたコードが正しく呼ばれなくなる可能性があります - 例えば、atexit の呼び出しなどの適切な C のエミュレーションに必要です):
+<h2 id="関連情報">関連情報</h2>
 
-    ```bash
-    emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"
-    ```
-
-4.  例をブラウザでロードしたら、前と同じものが見られるでしょう。
-5.  JavaScript から新しい `myFunction()` 関数を呼び出す必要があります。まずは、 以下のような{{htmlelement("button")}} を最初の `<script type='text/javascript'>` タグの上に加えましょう。
-
-    ```html
-    <button class="mybutton">Run myFunction</button>
-    ```
-
-6.  そして、{{htmlelement("script")}} 要素内の最後に次のコードを追加します ( `</script>` タグの直前):
-
-    ```js
-    document.querySelector('.mybutton').addEventListener('click', function(){
-      alert('check console');
-      var result = Module.ccall('myFunction', // name of C function
-                                 null, // return type
-                                 null, // argument types
-                                 null); // arguments
-    });
-    ```
-
-これはエクスポートされた関数をどのようにして `ccall()` を使用して呼び出すかを示しています。
-
-## 関連情報
-
-- [emscripten.org](http://emscripten.org/) — Emscripten とそれの多種多様なオプションについての詳細を確認してください。
-- [Calling compiled C functions from JavaScript using ccall/cwrap](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
-- [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
+<ul>
+ <li><a href="http://emscripten.org/">emscripten.org</a> — Emscriptenとそれの多種多様なオプションについての詳細を確認してください。</li>
+ <li><a href="https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap">Calling compiled C functions from JavaScript using ccall/cwrap</a></li>
+ <li><a href="https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process">Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?</a></li>
+</ul>

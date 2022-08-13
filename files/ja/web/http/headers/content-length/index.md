@@ -9,33 +9,58 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Headers/Content-Length
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**`Content-Length`** エンティティヘッダーは、受信者に送信されるエンティティ本文の長さをバイト単位で示します。
+<p><strong><code>Content-Length</code></strong> エンティティヘッダーは、受信者に送信されるエンティティ本文の長さをバイト単位で示します。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Entity header", "エンティティヘッダー")}} |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | はい                                                                                 |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Entity header", "エンティティヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>はい</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Content-Length: <length>
+<pre class="syntaxbox">Content-Length: &lt;length&gt;
+</pre>
 
-## ディレクティブ
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
 
-- \<length>
-  - : オクテット列の長さの 10 進数表記。
+<dl>
+ <dt>&lt;length&gt;</dt>
+ <dd>オクテット列の長さの10進数表記。</dd>
+</dl>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                   | 題名                                                               |
-| -------------------------------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7230", "Content-Length", "3.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7230", "Content-Length", "3.3.2")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの対応
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-{{Compat("http.headers.Content-Length")}}
+<p>{{Compat("http.headers.Content-Length")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("Transfer-Encoding")}}
+<ul>
+ <li>{{HTTPHeader("Transfer-Encoding")}}</li>
+</ul>

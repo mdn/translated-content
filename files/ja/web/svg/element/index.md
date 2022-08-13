@@ -9,254 +9,292 @@ tags:
   - SVG Reference
   - SVG リファレンス
   - Vector Graphics
-  - l10n:priority
+  - 'l10n:priority'
   - ベクターグラフィック
   - レスポンシブデザイン
   - 描画
   - 要素
 translation_of: Web/SVG/Element
 ---
-« [SVG](/ja/docs/SVG) / [SVG 属性リファレンス](/ja/docs/SVG/Attribute) »
+<p>« <a href="/ja/docs/SVG">SVG</a> / <a href="/ja/docs/SVG/Attribute">SVG 属性リファレンス</a> »</p>
+
+<p><span class="seoSummary">SVG の描画と画像は、構築、描画、ベクター画像や図のレイアウトのための広範にわたる要素を使用して作成されます。ここではそれぞれの SVG 要素のリファレンス文書が見つかります。</span></p>
+
+<h2 id="SVG_elements_A_to_Z" name="SVG_elements_A_to_Z">SVG 要素 A - Z</h2>
+
+<div class="index">
+<h3 id="A">A</h3>
+
+<ul>
+ <li>{{SVGElement("a")}}</li>
+ <li>{{SVGElement("animate")}}</li>
+ <li>{{SVGElement("animateMotion")}}</li>
+ <li>{{SVGElement("animateTransform")}}</li>
+</ul>
+
+<h3 id="C">C</h3>
+
+<ul>
+ <li>{{SVGElement("circle")}}</li>
+ <li>{{SVGElement("clipPath")}}</li>
+ <li>{{SVGElement("color-profile")}}</li>
+</ul>
+
+<h3 id="D">D</h3>
+
+<ul>
+ <li>{{SVGElement("defs")}}</li>
+ <li>{{SVGElement("desc")}}</li>
+ <li>{{SVGElement("discard")}}</li>
+</ul>
+
+<h3 id="E">E</h3>
+
+<ul>
+ <li>{{SVGElement("ellipse")}}</li>
+</ul>
+
+<h3 id="F">F</h3>
+
+<ul>
+ <li>{{SVGElement("feBlend")}}</li>
+ <li>{{SVGElement("feColorMatrix")}}</li>
+ <li>{{SVGElement("feComponentTransfer")}}</li>
+ <li>{{SVGElement("feComposite")}}</li>
+ <li>{{SVGElement("feConvolveMatrix")}}</li>
+ <li>{{SVGElement("feDiffuseLighting")}}</li>
+ <li>{{SVGElement("feDisplacementMap")}}</li>
+ <li>{{SVGElement("feDistantLight")}}</li>
+ <li>{{SVGElement("feDropShadow")}}</li>
+ <li>{{SVGElement("feFlood")}}</li>
+ <li>{{SVGElement("feFuncA")}}</li>
+ <li>{{SVGElement("feFuncB")}}</li>
+ <li>{{SVGElement("feFuncG")}}</li>
+ <li>{{SVGElement("feFuncR")}}</li>
+ <li>{{SVGElement("feGaussianBlur")}}</li>
+ <li>{{SVGElement("feImage")}}</li>
+ <li>{{SVGElement("feMerge")}}</li>
+ <li>{{SVGElement("feMergeNode")}}</li>
+ <li>{{SVGElement("feMorphology")}}</li>
+ <li>{{SVGElement("feOffset")}}</li>
+ <li>{{SVGElement("fePointLight")}}</li>
+ <li>{{SVGElement("feSpecularLighting")}}</li>
+ <li>{{SVGElement("feSpotLight")}}</li>
+ <li>{{SVGElement("feTile")}}</li>
+ <li>{{SVGElement("feTurbulence")}}</li>
+ <li>{{SVGElement("filter")}}</li>
+ <li>{{SVGElement("foreignObject")}}</li>
+</ul>
+
+<h3 id="G">G</h3>
+
+<ul>
+ <li>{{SVGElement("g")}}</li>
+</ul>
+
+<h3 id="H">H</h3>
+
+<ul>
+ <li>{{SVGElement("hatch")}}</li>
+ <li>{{SVGElement("hatchpath")}}</li>
+</ul>
+
+<h3 id="I">I</h3>
 
-SVG の描画と画像は、構築、描画、ベクター画像や図のレイアウトのための広範にわたる要素を使用して作成されます。ここではそれぞれの SVG 要素のリファレンス文書が見つかります。
+<ul>
+ <li>{{SVGElement("image")}}</li>
+</ul>
 
-## SVG 要素 A - Z
+<h3 id="L">L</h3>
 
-### A
+<ul>
+ <li>{{SVGElement("line")}}</li>
+ <li>{{SVGElement("linearGradient")}}</li>
+</ul>
 
-- {{SVGElement("a")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("animateMotion")}}
-- {{SVGElement("animateTransform")}}
+<h3 id="M">M</h3>
 
-### C
+<ul>
+ <li>{{SVGElement("marker")}}</li>
+ <li>{{SVGElement("mask")}}</li>
+ <li>{{SVGElement("mesh")}}</li>
+ <li>{{SVGElement("meshgradient")}}</li>
+ <li>{{SVGElement("meshpatch")}}</li>
+ <li>{{SVGElement("meshrow")}}</li>
+ <li>{{SVGElement("metadata")}}</li>
+ <li>{{SVGElement("mpath")}}</li>
+</ul>
 
-- {{SVGElement("circle")}}
-- {{SVGElement("clipPath")}}
-- {{SVGElement("color-profile")}}
+<h3 id="P">P</h3>
 
-### D
+<ul>
+ <li>{{SVGElement("path")}}</li>
+ <li>{{SVGElement("pattern")}}</li>
+ <li>{{SVGElement("polygon")}}</li>
+ <li>{{SVGElement("polyline")}}</li>
+</ul>
 
-- {{SVGElement("defs")}}
-- {{SVGElement("desc")}}
-- {{SVGElement("discard")}}
+<h3 id="R">R</h3>
 
-### E
+<ul>
+ <li>{{SVGElement("radialGradient")}}</li>
+ <li>{{SVGElement("rect")}}</li>
+</ul>
 
-- {{SVGElement("ellipse")}}
+<h3 id="S">S</h3>
 
-### F
+<ul>
+ <li>{{SVGElement("script")}}</li>
+ <li>{{SVGElement("set")}}</li>
+ <li>{{SVGElement("solidcolor")}}</li>
+ <li>{{SVGElement("stop")}}</li>
+ <li>{{SVGElement("style")}}</li>
+ <li>{{SVGElement("svg")}}</li>
+ <li>{{SVGElement("switch")}}</li>
+ <li>{{SVGElement("symbol")}}</li>
+</ul>
 
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDistantLight")}}
-- {{SVGElement("feDropShadow")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMergeNode")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("foreignObject")}}
+<h3 id="T">T</h3>
 
-### G
+<ul>
+ <li>{{SVGElement("text")}}</li>
+ <li>{{SVGElement("textPath")}}</li>
+ <li>{{SVGElement("title")}}</li>
+ <li>{{SVGElement("tspan")}}</li>
+</ul>
 
-- {{SVGElement("g")}}
+<h3 id="U">U</h3>
 
-### H
+<ul>
+ <li>{{SVGElement("unknown")}}</li>
+ <li>{{SVGElement("use")}}</li>
+</ul>
 
-- {{SVGElement("hatch")}}
-- {{SVGElement("hatchpath")}}
+<h3 id="V">V</h3>
 
-### I
+<ul>
+ <li>{{SVGElement("view")}}</li>
+</ul>
+</div>
 
-- {{SVGElement("image")}}
+<h2 id="SVG_elements_by_category" name="SVG_elements_by_category">SVG 要素一覧 (カテゴリー別)</h2>
 
-### L
+<h3 id="Animation_elements" name="Animation_elements">アニメーション要素</h3>
 
-- {{SVGElement("line")}}
-- {{SVGElement("linearGradient")}}
+<p>{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}</p>
 
-### M
+<h3 id="Basic_shapes" name="Basic_shapes">基本シェイプ</h3>
 
-- {{SVGElement("marker")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("mesh")}}
-- {{SVGElement("meshgradient")}}
-- {{SVGElement("meshpatch")}}
-- {{SVGElement("meshrow")}}
-- {{SVGElement("metadata")}}
-- {{SVGElement("mpath")}}
+<p>{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}</p>
 
-### P
+<h3 id="Container_elements" name="Container_elements">コンテナー要素</h3>
 
-- {{SVGElement("path")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("polygon")}}
-- {{SVGElement("polyline")}}
+<p>{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("unknown")}}</p>
 
-### R
+<h3 id="Descriptive_elements" name="Descriptive_elements">説明的要素</h3>
 
-- {{SVGElement("radialGradient")}}
-- {{SVGElement("rect")}}
+<p>{{SVGElement("desc")}}, {{SVGElement("metadata")}}, {{SVGElement("title")}}</p>
 
-### S
+<h3 id="Filter_primitive_elements" name="Filter_primitive_elements">フィルター構成要素</h3>
 
-- {{SVGElement("script")}}
-- {{SVGElement("set")}}
-- {{SVGElement("solidcolor")}}
-- {{SVGElement("stop")}}
-- {{SVGElement("style")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("switch")}}
-- {{SVGElement("symbol")}}
+<p>{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}</p>
 
-### T
+<h3 id="Font_elements" name="Font_elements">フォント要素</h3>
 
-- {{SVGElement("text")}}
-- {{SVGElement("textPath")}}
-- {{SVGElement("title")}}
-- {{SVGElement("tspan")}}
+<p>{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}</p>
 
-### U
+<h3 id="Gradient_elements" name="Gradient_elements">グラデーション要素</h3>
 
-- {{SVGElement("unknown")}}
-- {{SVGElement("use")}}
+<p>{{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}</p>
 
-### V
+<h3 id="Graphics_elements" name="Graphics_elements">グラフィック要素</h3>
 
-- {{SVGElement("view")}}
+<p>{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}</p>
 
-## SVG 要素一覧 (カテゴリー別)
+<h3 id="Graphics_referencing_elements" name="Graphics_referencing_elements">グラフィック参照要素</h3>
 
-### アニメーション要素
+<p>{{SVGElement("mesh")}}, {{SVGElement("use")}}</p>
 
-{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
+<h3 id="Light_source_elements" name="Light_source_elements">光源要素</h3>
 
-### 基本シェイプ
+<p>{{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}</p>
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+<h3 id="Never-rendered_elements" name="Never-rendered_elements">描画されない要素</h3>
 
-### コンテナー要素
+<p>{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("meshgradient")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}</p>
 
-{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("unknown")}}
+<h3 id="Paint_server_elements" name="Paint_server_elements">ペイントサーバー要素</h3>
 
-### 説明的要素
+<p>{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}</p>
 
-{{SVGElement("desc")}}, {{SVGElement("metadata")}}, {{SVGElement("title")}}
+<h3 id="Renderable_elements" name="Renderable_elements">描画可能要素</h3>
 
-### フィルター構成要素
+<p>{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("unknown")}}, {{SVGElement("use")}}</p>
 
-{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
+<h3 id="Shape_elements" name="Shape_elements">図形要素</h3>
 
-### フォント要素
+<p>{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}</p>
 
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}
+<h3 id="Structural_elements" name="Structural_elements">構造的要素</h3>
 
-### グラデーション要素
+<p>{{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}</p>
 
-{{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
+<h3 id="Text_content_elements" name="Text_content_elements">テキストコンテンツ要素</h3>
 
-### グラフィック要素
+<p>{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}</p>
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
+<h3 id="Text_content_child_elements" name="Text_content_child_elements">テキストコンテンツの子要素</h3>
 
-### グラフィック参照要素
+<p>{{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}</p>
 
-{{SVGElement("mesh")}}, {{SVGElement("use")}}
+<h3 id="Uncategorized_elements" name="Uncategorized_elements">未分類の要素</h3>
 
-### 光源要素
+<p>{{SVGElement("clipPath")}}, {{SVGElement("color-profile")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("meshpatch")}}, {{SVGElement("meshrow")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}</p>
 
-{{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}
+<h2 id="Obsolete_and_deprecated_elements" name="Obsolete_and_deprecated_elements">廃止および非推奨の要素</h2>
 
-### 描画されない要素
+<div class="blockIndicator warning">
+<p><strong>警告:</strong> 以下のものは非推奨の古い SVG 要素であり、使用するべきではありません。<strong>新しいプロジェクトでは決して使用せず、古いプロジェクトでもできるだけ早く置き換えてください。</strong>ここに掲載しているのは情報提供だけの目的です。</p>
+</div>
 
-{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("meshgradient")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
+<h3 id="A_2">A</h3>
 
-### ペイントサーバー要素
+<p>{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("animateColor")}}</p>
 
-{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
+<h3 id="C_2">C</h3>
 
-### 描画可能要素
+<p>{{SVGElement("cursor")}}</p>
 
-{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("unknown")}}, {{SVGElement("use")}}
+<h3 id="F_2">F</h3>
 
-### 図形要素
+<p>{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}</p>
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+<h3 id="G_2">G</h3>
 
-### 構造的要素
+<p>{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}</p>
 
-{{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
+<h3 id="H_2">H</h3>
 
-### テキストコンテンツ要素
+<p>{{SVGElement("hkern")}}</p>
 
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+<h3 id="M_2">M</h3>
 
-### テキストコンテンツの子要素
+<p>{{SVGElement("missing-glyph")}}</p>
 
-{{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+<h3 id="T_2">T</h3>
 
-### 未分類の要素
+<p>{{SVGElement("tref")}}</p>
 
-{{SVGElement("clipPath")}}, {{SVGElement("color-profile")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("meshpatch")}}, {{SVGElement("meshrow")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
+<h3 id="V_2">V</h3>
 
-## 廃止および非推奨の要素
+<p>{{SVGElement("vkern")}}</p>
 
-> **Warning:** **警告:** 以下のものは非推奨の古い SVG 要素であり、使用するべきではありません。**新しいプロジェクトでは決して使用せず、古いプロジェクトでもできるだけ早く置き換えてください。**ここに掲載しているのは情報提供だけの目的です。
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-### A
+<ul>
+ <li><a href="/ja/docs/Web/SVG/Attribute">SVG 属性リファレンス</a></li>
+ <li><a href="/ja/docs/Web/SVG/Tutorial">SVG チュートリアル</a></li>
+ <li><a href="/ja/docs/Web/API/Document_Object_Model#SVG_interfaces">SVG インターフェイスリファレンス</a></li>
+</ul>
 
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("animateColor")}}
-
-### C
-
-{{SVGElement("cursor")}}
-
-### F
-
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}
-
-### G
-
-{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}
-
-### H
-
-{{SVGElement("hkern")}}
-
-### M
-
-{{SVGElement("missing-glyph")}}
-
-### T
-
-{{SVGElement("tref")}}
-
-### V
-
-{{SVGElement("vkern")}}
-
-## 関連情報
-
-- [SVG 属性リファレンス](/ja/docs/Web/SVG/Attribute)
-- [SVG チュートリアル](/ja/docs/Web/SVG/Tutorial)
-- [SVG インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#SVG_interfaces)
-
-{{SVGRef}}
+<p>{{SVGRef}}</p>

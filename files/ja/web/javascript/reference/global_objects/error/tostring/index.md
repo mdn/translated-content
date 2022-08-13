@@ -9,24 +9,23 @@ tags:
   - メソッド
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`toString()`** メソッドは、指定した {{jsxref("Error")}} オブジェクトを表す文字列を返します。
+<p><code><strong>toString()</strong></code> メソッドは、指定した {{jsxref("Error")}} オブジェクトを表す文字列を返します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    e.toString()
+<pre class="syntaxbox"><code><var>e</var>.toString()</code></pre>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-指定した {{jsxref("Error")}} オブジェクトを表す文字列です。
+<p>指定した {{jsxref("Error")}} オブジェクトを表す文字列です。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-{{jsxref("Error")}} オブジェクトは、すべてのオブジェクトに継承される {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。その意味は、次のようなものです ({{jsxref("Object")}} と {{jsxref("String")}} は元の値を持つと仮定します)。
+<p>{{jsxref("Error")}} オブジェクトは、すべてのオブジェクトに継承される {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。その意味は、次のようなものです ({{jsxref("Object")}} と {{jsxref("String")}} は元の値を持つと仮定します)。</p>
 
-```js
-Error.prototype.toString = function() {
+<pre class="brush: js">Error.prototype.toString = function() {
   'use strict';
 
   var obj = Object(this);
@@ -49,14 +48,13 @@ Error.prototype.toString = function() {
 
   return name + ': ' + msg;
 };
-```
+</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### toString() の使用
+<h3 id="Using_toString" name="Using_toString">toString() の使用</h3>
 
-```js
-var e = new Error('fatal error');
+<pre class="brush: js">var e = new Error('fatal error');
 console.log(e.toString()); // 'Error: fatal error'
 
 e.name = undefined;
@@ -70,18 +68,31 @@ console.log(e.toString()); // ''
 
 e.name = 'hello';
 console.log(e.toString()); // 'hello'
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Error.toString")}}
+<div>
+<p>{{Compat("javascript.builtins.Error.toString")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Error.prototype.toSource()")}}
+<ul>
+ <li>{{jsxref("Error.prototype.toSource()")}}</li>
+</ul>

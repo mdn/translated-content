@@ -6,22 +6,24 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/true
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`true` 関数は true の論理値を返します。
+<p><br>
+ <code>true</code> 関数は true の論理値を返します。</p>
 
-### 構文
+<h3 id="Syntax">構文</h3>
 
-    true()
+<pre class="eval">true()
+</pre>
 
-### 返値
+<h3 id="Returns">返値</h3>
 
-論理値 `true` です。
+<p>論理値 <code>true</code> です。</p>
 
-### 定義
+<h3 id="Defined">定義</h3>
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-true)
+<p><a href="https://www.w3.org/TR/xpath#function-true">XPath 1.0 4.3</a></p>
 
-### Gecko の対応
+<h3 id="Gecko_support">Gecko の対応</h3>
 
-対応済み。
+<p>対応済み。</p>

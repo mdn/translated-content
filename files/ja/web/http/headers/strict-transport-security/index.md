@@ -10,83 +10,112 @@ tags:
   - レスポンスヘッダー
 translation_of: Web/HTTP/Headers/Strict-Transport-Security
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-HTTP の **`Strict-Transport-Security`** レスポンスヘッダー (しばしば {{Glossary("HSTS")}} と略されます) は、ウェブサイトがブラウザーに HTTP の代わりに HTTPS を用いて通信を行うよう指示するためのものです。
+<p>HTTP の <strong><code>Strict-Transport-Security</code></strong> レスポンスヘッダー (しばしば {{Glossary("HSTS")}} と略されます) は、ウェブサイトがブラウザーに HTTP の代わりに HTTPS を用いて通信を行うよう指示するためのものです。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Response header", "レスポンスヘッダー")}} |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | いいえ                                                                               |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>いいえ</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Strict-Transport-Security: max-age=<expire-time>
-    Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
-    Strict-Transport-Security: max-age=<expire-time>; preload
+<pre class="syntaxbox notranslate">Strict-Transport-Security: max-age=&lt;expire-time&gt;
+Strict-Transport-Security: max-age=&lt;expire-time&gt;; includeSubDomains
+Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
+</pre>
 
-## ディレクティブ
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
 
-- `max-age=<expire-time>`
-  - : 秒単位で、そのサイトに HTTPS だけで接続することをブラウザーが記憶する時間です。
-- `includeSubDomains` {{optional_inline}}
-  - : 省略可能で、この引数が指定されると、この規則がサイトのすべてのサブドメインにも適用されます。
-- `preload` {{optional_inline}}
-  - : 詳しくは [Strict Transport Security のプリロード](#preloading_strict_transport_security) を参照してください。仕様書で定義されているものではありません。
+<dl>
+ <dt><code>max-age=&lt;expire-time&gt;</code></dt>
+ <dd>秒単位で、そのサイトに HTTPS だけで接続することをブラウザーが記憶する時間です。</dd>
+ <dt><code>includeSubDomains</code> {{optional_inline}}</dt>
+ <dd>省略可能で、この引数が指定されると、この規則がサイトのすべてのサブドメインにも適用されます。</dd>
+ <dt><code>preload</code> {{optional_inline}}</dt>
+ <dd>詳しくは <a href="#preloading_strict_transport_security">Strict Transport Security のプリロード</a> を参照してください。仕様書で定義されているものではありません。</dd>
+</dl>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-もし、訪問者が http\://www\.foo.com/ または単に foo.com と入力したとき、ウェブサイトが接続を HTTP で受け付け、 HTTPS にリダイレクトするようになっていると、訪問者はリダイレクトされる前にまず、暗号化されないバージョンのサイトと通信する可能性があります。これは中間者攻撃の機会を作ってしまいます。リダイレクトは訪問者を、本来のサイトの安全なバージョンではなく、悪意のあるサイトに導くために利用される可能性があるからです。
+<p>もし、訪問者が http://www.foo.com/ または単に foo.com と入力したとき、ウェブサイトが接続を HTTP で受け付け、 HTTPS にリダイレクトするようになっていると、訪問者はリダイレクトされる前にまず、暗号化されないバージョンのサイトと通信する可能性があります。これは中間者攻撃の機会を作ってしまいます。リダイレクトは訪問者を、本来のサイトの安全なバージョンではなく、悪意のあるサイトに導くために利用される可能性があるからです。</p>
 
-HTTP の Strict Transport Security ヘッダーは、ブラウザーに対してサイトを HTTP を使用して読み込まず、サイトへのすべてのアクセスを、自動的に HTTP から HTTPS リクエストに変換するよう指示することができます。
+<p>HTTP の Strict Transport Security ヘッダーは、ブラウザーに対してサイトを HTTP を使用して読み込まず、サイトへのすべてのアクセスを、自動的に HTTP から HTTPS リクエストに変換するよう指示することができます。</p>
 
-> **Note:** **メモ:** サイトに HTTP を使用してアクセスしたとき、ブラウザーは `Strict-Transport-Security` ヘッダーを無視します。これは攻撃者が HTTP 接続に介入して、ヘッダーを挿入したり削除したりするかもしれないからです。ウェブサイトに HTTPS でアクセスして、証明書のエラーがない場合、ブラウザーはサイトが HTTPS でアクセスできることを知り、 `Strict-Transport-Security` ヘッダーを信用します。
+<div class="note"><strong>メモ:</strong> サイトに HTTP を使用してアクセスしたとき、ブラウザーは <code>Strict-Transport-Security</code> ヘッダーを無視します。これは攻撃者が HTTP 接続に介入して、ヘッダーを挿入したり削除したりするかもしれないからです。ウェブサイトに HTTPS でアクセスして、証明書のエラーがない場合、ブラウザーはサイトが HTTPS でアクセスできることを知り、 <code>Strict-Transport-Security</code> ヘッダーを信用します。</div>
 
-### 事例
+<h3 id="An_example_scenario" name="An_example_scenario">事例</h3>
 
-あなたが、空港で無料の Wi-Fi アクセスポイントにログインしてウェブの利用を開始し、オンラインバンキングサービスで残高の確認や取引を行ったとします。しかし不運にも、あなたが使用したアクセスポイントはハッカーのノートパソコンであり、そのハッカーはあなたの HTTP リクエストを傍受して、本物の銀行のサイトではなく偽のサイトへリダイレクトしたとします。こうなると、あなたの個人情報はハッカーにさらされてしまいます。
+<p>あなたが、空港で無料の Wi-Fi アクセスポイントにログインしてウェブの利用を開始し、オンラインバンキングサービスで残高の確認や取引を行ったとします。しかし不運にも、あなたが使用したアクセスポイントはハッカーのノートパソコンであり、そのハッカーはあなたの HTTP リクエストを傍受して、本物の銀行のサイトではなく偽のサイトへリダイレクトしたとします。こうなると、あなたの個人情報はハッカーにさらされてしまいます。</p>
 
-Strict Transport Security はこの問題を解決します。いったん銀行のウェブサイトへ HTTPS でアクセスすれば、そして銀行のウェブサイトが Strict Transport Security を利用していれば、ブラウザーは自動的に HTTPS のみを用いるよう理解して、ハッカーによるこの種の中間者攻撃の実行を防ぎます。
+<p>Strict Transport Security はこの問題を解決します。いったん銀行のウェブサイトへ HTTPS でアクセスすれば、そして銀行のウェブサイトが Strict Transport Security を利用していれば、ブラウザーは自動的に HTTPS のみを用いるよう理解して、ハッカーによるこの種の中間者攻撃の実行を防ぎます。</p>
 
-### ブラウザーでの扱い
+<h3 id="How_the_browser_handles_it" name="How_the_browser_handles_it">ブラウザーでの扱い</h3>
 
-最初にサイトに HTTPS でアクセスして `Strict-Transport-Security` ヘッダーが返されると、ブラウザーはこの情報を記録し、以降は HTTP を使用してサイトを読み込みもうとすると、自動的に HTTPS を使用するようになります。
+<p>最初にサイトに HTTPS でアクセスして <code>Strict-Transport-Security</code> ヘッダーが返されると、ブラウザーはこの情報を記録し、以降は HTTP を使用してサイトを読み込みもうとすると、自動的に HTTPS を使用するようになります。</p>
 
-Strict-Transport-Security ヘッダーで指定された有効期限が経過すると、次回は自動的に HTTPS を使用するのではなく、通常通りに HTTP でサイトを読み込もうとします。
+<p>Strict-Transport-Security ヘッダーで指定された有効期限が経過すると、次回は自動的に HTTPS を使用するのではなく、通常通りに HTTP でサイトを読み込もうとします。</p>
 
-なお、 Strict-Transport-Security ヘッダーがブラウザーへ送られるたびに、そのウェブサイトに対する有効期限が更新されるので、サイトはこの情報を更新して期限切れを防ぐことができます。 Strict-Transport-Security を無効にする必要がある場合は、 HTTPS 通信時に max-age の値を 0 に設定することで `Strict-Transport-Security` ヘッダーが失効し、ブラウザーからの HTTP 接続が許されるようになります。
+<p>なお、 Strict-Transport-Security ヘッダーがブラウザーへ送られるたびに、そのウェブサイトに対する有効期限が更新されるので、サイトはこの情報を更新して期限切れを防ぐことができます。 Strict-Transport-Security を無効にする必要がある場合は、 HTTPS 通信時に max-age の値を 0 に設定することで <code>Strict-Transport-Security</code> ヘッダーが失効し、ブラウザーからの HTTP 接続が許されるようになります。</p>
 
-## Strict Transport Security のプリロード
+<h2 id="Preloading_Strict_Transport_Security" name="Preloading_Strict_Transport_Security">Strict Transport Security のプリロード</h2>
 
-Google は [HSTS 先読みサービス](https://hstspreload.org/) を行っています。ガイドラインに従ってドメインを登録すれば、ブラウザーはドメインに安全ではない接続を行わないようになります。サービスは Google によって運営されており、すべてのブラウザーが先読みリストを使用する意志を示しています (または既に使用を始めています)。但し、これは HSTS 仕様書にあるものではなく、公式なものとして扱うべきではありません。
+<p>Google は <a href="https://hstspreload.org/">HSTS 先読みサービス</a> を行っています。ガイドラインに従ってドメインを登録すれば、ブラウザーはドメインに安全ではない接続を行わないようになります。サービスは Google によって運営されており、すべてのブラウザーが先読みリストを使用する意志を示しています (または既に使用を始めています)。但し、これは HSTS 仕様書にあるものではなく、公式なものとして扱うべきではありません。</p>
 
-- Chrome が実装している HSTS 先読みリストに関する情報 : <https://www.chromium.org/hsts>
-- Firefox が実装している HSTS 先読みリストに関する参照 : [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
+<ul>
+ <li>Chrome が実装している HSTS 先読みリストに関する情報 : <a href="https://www.chromium.org/hsts">https://www.chromium.org/hsts</a></li>
+ <li>Firefox が実装している HSTS 先読みリストに関する参照 : <a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc">nsSTSPreloadList.inc</a></li>
+</ul>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-既存および将来のすべてのサブドメインで、1 年間を期限として HTTPS を使用する設定です。これは HTTP のみで提供できるページやサブドメインへのアクセスをブロックします。
+<p>既存および将来のすべてのサブドメインで、1年間を期限として HTTPS を使用する設定です。これは HTTP のみで提供できるページやサブドメインへのアクセスをブロックします。</p>
 
-    Strict-Transport-Security: max-age=31536000; includeSubDomains
+<pre class="notranslate">Strict-Transport-Security: max-age=31536000; includeSubDomains</pre>
 
-以下の例では、 `max-age` は前回の 1 年間を期限とする `max-age` を延長して 2 年間に設定します。なお、1 年間はブラウザーの HSTS 先読みリストに含まれるドメインで有効です。しかし、2 年間は <https://hstspreload.org> で説明されているとおり、ウェブサイトの最終的な HSTS 設定のゴールとして推奨されています。また、最後の `preload` は Chromium, Edge, Firefox などの主要なブラウザーの HSTS 先読みリストで必要です。
+<p>以下の例では、 <code>max-age</code> は前回の1年間を期限とする <code>max-age</code> を延長して2年間に設定します。なお、1年間はブラウザーの HSTS 先読みリストに含まれるドメインで有効です。しかし、2年間は <a href="https://hstspreload.org">https://hstspreload.org</a> で説明されているとおり、ウェブサイトの最終的な HSTS 設定のゴールとして推奨されています。また、最後の <code>preload</code> は Chromium, Edge, Firefox などの主要なブラウザーの HSTS 先読みリストで必要です。</p>
 
-    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+<pre class="notranslate">Strict-Transport-Security: max-age=63072000; includeSubDomains; preload</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                       | 状態                     | 備考     |
-| ---------------------------- | ------------------------ | -------- |
-| {{SpecName('HSTS')}} | {{Spec2('HSTS')}} | 初回定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HSTS')}}</td>
+   <td>{{Spec2('HSTS')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Strict-Transport-Security")}}
+<p>{{Compat("http.headers.Strict-Transport-Security")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- ブログ記事: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- ブログ記事: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
-- OWASP の記事: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
-- Wikipedia: {{interwiki("wikipedia", "HTTP Strict Transport Security")}}
-- ブラウザー試験サイト: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
-- [安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+<ul>
+ <li>ブログ記事: <a class="external" href="http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html">HTTP Strict Transport Security has landed!</a></li>
+ <li>ブログ記事: <a class="external" href="http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/">HTTP Strict Transport Security (force HTTPS)</a></li>
+ <li>OWASP の記事: <a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">HTTP Strict Transport Security</a></li>
+ <li>Wikipedia: {{interwiki("wikipedia", "HTTP Strict Transport Security")}}</li>
+ <li>ブラウザー試験サイト: <a href="https://projects.dm.id.lv/Public-Key-Pins_test">HSTS and HPKP test</a></li>
+ <li><a href="/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">安全なコンテキストに制限されている機能</a></li>
+</ul>

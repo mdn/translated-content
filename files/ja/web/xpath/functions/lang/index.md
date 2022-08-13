@@ -6,53 +6,62 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/lang
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`lang` 関数は、コンテキストノードの言語が渡された言語に一致するかどうかを判定し、真偽値 true または false を返します。
+<p><code>lang</code> 関数は、コンテキストノードの言語が渡された言語に一致するかどうかを判定し、真偽値 true または false を返します。</p>
 
-### 構文
+<h3 id="Syntax">構文</h3>
 
-    lang(string )
+<pre class="eval">lang(<em>string</em> )
+</pre>
 
-### 引数
+<h3 id="Arguments">引数</h3>
 
-- `string`
-  - : マッチさせる言語コードまたはローカライゼーション (言語と国) コード。
+<dl>
+ <dt><code><em>string</em></code></dt>
+ <dd>マッチさせる言語コードまたはローカライゼーション (言語と国) コード。</dd>
+</dl>
 
-### 返値
+<h3 id="Returns">返値</h3>
 
-コンテキストノードが与えられた言語に一致すれば `true`。そうでなければ `false`。
+<p>コンテキストノードが与えられた言語に一致すれば <code>true</code>。そうでなければ <code>false</code>。</p>
 
-### 注
+<h3 id="Notes">注</h3>
 
-- ノードの言語はそのノードの `xml:lang` 属性で決定されます。 現在のノードが `xml:lang` 属性を持たなければ、 `xml:lang` 属性を持つ直近の祖先の `xml:lang` 属性の値が現在のノードの言語を決定します。言語を判定することができなければ (どの祖先も `xml:lang` 属性を持たなければ)、この関数は false を返します。
+<ul>
+ <li>ノードの言語はそのノードの <code>xml:lang</code> 属性で決定されます。 現在のノードが <code>xml:lang</code> 属性を持たなければ、 <code>xml:lang</code> 属性を持つ直近の祖先の <code>xml:lang</code> 属性の値が現在のノードの言語を決定します。言語を判定することができなければ (どの祖先も <code>xml:lang</code> 属性を持たなければ)、この関数は false を返します。</li>
+</ul>
 
-- 与えられた `string` に国コードが指定されていなければ、国コードにかかわらずその言語のどのノードにもマッチします。その逆は真ではありません。
+<ul>
+ <li>与えられた <code><em>string</em></code> に国コードが指定されていなければ、国コードにかかわらずその言語のどのノードにもマッチします。その逆は真ではありません。</li>
+</ul>
 
-このような XML の断片と、
+<p>このような XML の断片と、</p>
 
-    <p xml:lang="en">I went up a floor.</p>
-    <p xml:lang="en-GB">I took the lift.</p>
-    <p xml:lang="en-US">I rode the elevator.</p>
+<pre>&lt;p xml:lang="en"&gt;I went up a floor.&lt;/p&gt;
+&lt;p xml:lang="en-GB"&gt;I took the lift.&lt;/p&gt;
+&lt;p xml:lang="en-US"&gt;I rode the elevator.&lt;/p&gt;</pre>
 
-このような XSL テンプレートの一部があったとすると、
+<p>このような XSL テンプレートの一部があったとすると、</p>
 
-    <xsl:value-of select="count(//p[lang('en')])" />
-    <xsl:value-of select="count(//p[lang('en-GB')])" />
-    <xsl:value-of select="count(//p[lang('en-US')])" />
-    <xsl:value-of select="count(//p[lang('de')])" />
+<pre class="eval">&lt;xsl:value-of select="count(//p[lang('en')])" /&gt;
+&lt;xsl:value-of select="count(//p[lang('en-GB')])" /&gt;
+&lt;xsl:value-of select="count(//p[lang('en-US')])" /&gt;
+&lt;xsl:value-of select="count(//p[lang('de')])" /&gt;
+</pre>
 
-出力は次のようになるでしょう。
+<p>出力は次のようになるでしょう。</p>
 
-    3
-    1
-    1
-    0
+<pre class="eval">3
+1
+1
+0
+</pre>
 
-### 定義
+<h3 id="Defined">定義</h3>
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-lang)
+<p><a href="https://www.w3.org/TR/xpath#function-lang">XPath 1.0 4.3</a></p>
 
-### Gecko での対応
+<h3 id="Gecko_support">Gecko での対応</h3>
 
-対応済み。
+<p>対応済み。</p>

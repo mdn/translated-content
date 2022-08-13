@@ -3,233 +3,454 @@ title: fill
 slug: Web/SVG/Attribute/fill
 translation_of: Web/SVG/Attribute/fill
 ---
-{{SVGRef}}
+<div>{{SVGRef}}</div>
 
-**`fill`** 属性には使われ方により 2 つの意味があります. 1 つは図形やテキストに使われた場合で，その要素を塗りつぶす色を意味します．もう 1 つはアニメーションに使われた場合で，そのアニメーションの最終状態を定義します．
+<p><strong><code>fill</code></strong> 属性には使われ方により2つの意味があります.  1つは図形やテキストに使われた場合で，その要素を塗りつぶす色を意味します．もう1つはアニメーションに使われた場合で，そのアニメーションの最終状態を定義します．</p>
 
-呈示属性(presentation attribute)として全ての要素に適用可能ですが，実際に影響があるのは次の 11 の要素です: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}.
+<p>呈示属性(presentation attribute)として全ての要素に適用可能ですが，実際に影響があるのは次の11の要素です: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}.</p>
 
-アニメーションとしては次の 5 つの要素で使われています: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
+<p>アニメーションとしては次の5つの要素で使われています: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.</p>
 
-```css hidden
-html,body,svg { height:100% }
-```
+<div id="topExample">
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple color fill -->
-  <circle cx="50" cy="50" r="40" fill="pink" />
-
-
-  <!-- Fill circle with a gradient -->
-  <defs>
-    <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
-      <stop offset="100%" stop-color="black" />
-    </radialGradient>
-  </defs>
-
-  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
+<pre class="brush: html">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;!-- Simple color fill --&gt;
+  &lt;circle cx="50" cy="50" r="40" fill="pink" /&gt;
 
 
-  <!--
+  &lt;!-- Fill circle with a gradient --&gt;
+  &lt;defs&gt;
+    &lt;radialGradient id="myGradient"&gt;
+      &lt;stop offset="0%"   stop-color="pink" /&gt;
+      &lt;stop offset="100%" stop-color="black" /&gt;
+    &lt;/radialGradient&gt;
+  &lt;/defs&gt;
+
+  &lt;circle cx="150" cy="50" r="40" fill="url(#myGradient)" /&gt;
+
+
+  &lt;!--
   Keeping the final state of an animated circle
   which is a circle with a radius of 40.
-  -->
-  <circle cx="250" cy="50" r="20">
-    <animate attributeType="XML"
+  --&gt;
+  &lt;circle cx="250" cy="50" r="20"&gt;
+    &lt;animate attributeType="XML"
              attributeName="r"
              from="0" to="40" dur="5s"
-             fill="freeze" />
-  </circle>
-</svg>
-```
-
-{{EmbedLiveSample('topExample', '100%', 200)}}
-
-## altGlyph
-
-> **Warning:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('altGlyph')}}, `fill` is a presentation attribute that defines the color of the glyph.
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## animate
-
-For {{SVGElement('animate')}}, `fill` defines the final state of the animation.
-
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
-
-## animateColor
-
-> **Warning:** As of SVG Animation 2 {{SVGElement('animateColor')}} is deprecated and shouldn't be used. Use {{SVGElement('animate')}} instead.
-
-For {{SVGElement('animateColor')}}, `fill` defines the final state of the animation.
-
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
-
-## animateMotion
-
-For {{SVGElement('animateMotion')}}, `fill` defines the final state of the animation.
-
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
-
-## animateTransform
-
-For {{SVGElement('animateTransform')}}, `fill` defines the final state of the animation.
-
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
-
-## circle
-
-For {{SVGElement('circle')}}, `fill` is a presentation attribute that defines the color of the circle.
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## ellipse
-
-For {{SVGElement('ellipse')}}, `fill` is a presentation attribute that defines the color of the ellipse.
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## path
-
-For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## polygon
-
-For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## polyline
-
-For {{SVGElement('polyline')}}, `fill` is a presentation attribute that defines tthe color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## rect
-
-For {{SVGElement('rect')}}, `fill` is a presentation attribute that defines the color of the rectangle.
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## set
-
-For {{SVGElement('set')}}, `fill` defines the final state of the animation.
-
-| Value         | `freeze` (_Keep the state of the last animation frame_) \| `remove` (_Keep the state of the first animation frame_) |
-| ------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Default value | `remove`                                                                                                            |
-| Animatable    | No                                                                                                                  |
-
-## text
-
-For {{SVGElement('text')}}, `fill` is a presentation attribute that defines what the color of the text.
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## textPath
-
-For {{SVGElement('textPath')}}, `fill` is a presentation attribute that defines the color of the text.
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## tref
-
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('tref')}}, `fill` is a presentation attribute that defines the color of the text.
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## tspan
-
-For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the color of the text.
-
-| Value         | **[<paint>](/ja/docs/Web/SVG/Content_type#Paint)** |
-| ------------- | -------------------------------------------------- |
-| Default value | `black`                                            |
-| Animatable    | Yes                                                |
-
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
-
-## Specifications
-
-| Specification                                                                        | Status                                   | Comment                                                                    |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------------------------- |
-| {{SpecName("SVG Animations 2", "#FillAttribute", "transform")}} | {{Spec2("SVG Animations 2")}} | Definition for animations                                                  |
-| {{SpecName("SVG2", "painting.html#FillProperty", "fill")}}         | {{Spec2("SVG2")}}                 | Definition for shapes and texts. Adds `context-fill` and `context-stroke`. |
-| {{SpecName("SVG1.1", "animate.html#FillAttribute", "fill")}}     | {{Spec2("SVG1.1")}}                 | Initial definition for animations                                          |
-| {{SpecName("SVG1.1", "painting.html#FillProperty", "fill")}}     | {{Spec2("SVG1.1")}}                 | Initial definition for shapes and texts                                    |
-
-## Browser compatibility
-
-{{Compat("svg.attributes.presentation.fill")}}
-
-> **Note:** For information on using the `context-fill` (and `context-stroke`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.
+             fill="freeze" /&gt;
+  &lt;/circle&gt;
+&lt;/svg&gt;
+</pre>
+
+<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
+</div>
+
+<h2 id="altGlyph">altGlyph</h2>
+
+<p class="warning"><strong>Warning:</strong> As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.</p>
+
+<p>For {{SVGElement('altGlyph')}}, <code>fill</code> is a presentation attribute that defines the color of the glyph.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="animate">animate</h2>
+
+<p>For {{SVGElement('animate')}}, <code>fill</code> defines the final state of the animation.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>freeze</code> (<em>Keep the state of the last animation frame</em>) | <code>remove</code> (<em>Keep the state of the first animation frame</em>)</td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>remove</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="animateColor">animateColor</h2>
+
+<p class="warning"><strong>Warning:</strong> As of SVG Animation 2 {{SVGElement('animateColor')}} is deprecated and shouldn't be used. Use {{SVGElement('animate')}} instead.</p>
+
+<p>For {{SVGElement('animateColor')}}, <code>fill</code> defines the final state of the animation.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>freeze</code> (<em>Keep the state of the last animation frame</em>) | <code>remove</code> (<em>Keep the state of the first animation frame</em>)</td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>remove</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="animateMotion">animateMotion</h2>
+
+<p>For {{SVGElement('animateMotion')}}, <code>fill</code> defines the final state of the animation.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>freeze</code> (<em>Keep the state of the last animation frame</em>) | <code>remove</code> (<em>Keep the state of the first animation frame</em>)</td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>remove</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="animateTransform">animateTransform</h2>
+
+<p>For {{SVGElement('animateTransform')}}, <code>fill</code> defines the final state of the animation.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>freeze</code> (<em>Keep the state of the last animation frame</em>) | <code>remove</code> (<em>Keep the state of the first animation frame</em>)</td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>remove</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="circle">circle</h2>
+
+<p>For {{SVGElement('circle')}}, <code>fill</code> is a presentation attribute that defines the color of the circle.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="ellipse">ellipse</h2>
+
+<p>For {{SVGElement('ellipse')}}, <code>fill</code> is a presentation attribute that defines the color of the ellipse.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="path">path</h2>
+
+<p>For {{SVGElement('path')}}, <code>fill</code> is a presentation attribute that defines the color of the interior of the shape. (<em>Interior is define by the {{SVGAttr('fill-rule')}} attribute</em>)</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="polygon">polygon</h2>
+
+<p>For {{SVGElement('polygon')}}, <code>fill</code> is a presentation attribute that defines the color of the interior of the shape. (<em>Interior is define by the {{SVGAttr('fill-rule')}} attribute</em>)</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="polyline">polyline</h2>
+
+<p>For {{SVGElement('polyline')}}, <code>fill</code> is a presentation attribute that defines tthe color of the interior of the shape. (<em>Interior is define by the {{SVGAttr('fill-rule')}} attribute</em>)</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="rect">rect</h2>
+
+<p>For {{SVGElement('rect')}}, <code>fill</code> is a presentation attribute that defines the color of the rectangle.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="set">set</h2>
+
+<p>For {{SVGElement('set')}}, <code>fill</code> defines the final state of the animation.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>freeze</code> (<em>Keep the state of the last animation frame</em>) | <code>remove</code> (<em>Keep the state of the first animation frame</em>)</td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>remove</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="text">text</h2>
+
+<p>For {{SVGElement('text')}}, <code>fill</code> is a presentation attribute that defines what the color of the text.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="textPath">textPath</h2>
+
+<p>For {{SVGElement('textPath')}}, <code>fill</code> is a presentation attribute that defines the color of the text.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="tref">tref</h2>
+
+<p class="warning"><strong>Warning:</strong> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.</p>
+
+<p>For {{SVGElement('tref')}}, <code>fill</code> is a presentation attribute that defines the color of the text.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="tspan">tspan</h2>
+
+<p>For {{SVGElement('tspan')}}, <code>fill</code> is a presentation attribute that defines the color of the text.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><strong><a href="/ja/docs/Web/SVG/Content_type#Paint">&lt;paint&gt;</a></strong></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>black</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill</code> can be used as a CSS property.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("SVG Animations 2", "#FillAttribute", "transform")}}</td>
+   <td>{{Spec2("SVG Animations 2")}}</td>
+   <td>Definition for animations</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG2", "painting.html#FillProperty", "fill")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td>Definition for shapes and texts.<br>
+    Adds <code style="white-space: nowrap;">context-fill</code> and <code style="white-space: nowrap;">context-stroke</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "animate.html#FillAttribute", "fill")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for animations</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "painting.html#FillProperty", "fill")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>Initial definition for shapes and texts</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("svg.attributes.presentation.fill")}}</p>
+
+<p class="note"><strong>Note:</strong> For information on using the <code style="white-space: nowrap;">context-fill</code> (and <code style="white-space: nowrap;">context-stroke</code>) values from HTML documents, see the documentation for the non-standard <span style="white-space: nowrap;">{{cssxref("-moz-context-properties")}}</span> property.</p>

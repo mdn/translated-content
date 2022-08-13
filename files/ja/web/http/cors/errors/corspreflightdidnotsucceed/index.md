@@ -15,21 +15,25 @@ tags:
   - 理由
 translation_of: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-## 理由
+<h2 id="Reason" name="Reason">理由</h2>
 
-    Reason: CORS preflight channel did not succeed
+<pre class="syntaxbox">Reason: CORS preflight channel did not succeed</pre>
 
-## 何に失敗したか
+<h2 id="What_went_wrong" name="What_went_wrong">何に失敗したか</h2>
 
-{{Glossary("CORS")}} の要求がプリフライトを必要としていますが、プリフライトが実行できませんでした。プロフライトが失敗したと理由として考えられることは複数あります。
+<p>{{Glossary("CORS")}} の要求がプリフライトを必要としていますが、プリフライトが実行できませんでした。プロフライトが失敗したと理由として考えられることは複数あります。</p>
 
-- すでにサイト間の要求でプリフライトが行われており、プリフライトを再び行うことが許可されていない。コードを確認して、一つのコネクションで一度だけプリフライトを行うようにしてください。
-- プリフライト要求は単に通常のネットワークエラーの類で失敗した。
+<ul>
+ <li>すでにサイト間の要求でプリフライトが行われており、プリフライトを再び行うことが許可されていない。コードを確認して、一つのコネクションで一度だけプリフライトを行うようにしてください。</li>
+ <li>プリフライト要求は単に通常のネットワークエラーの類で失敗した。</li>
+</ul>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
-- 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+<ul>
+ <li><a href="/ja/docs/Web/HTTP/CORS/Errors">CORS のエラー</a></li>
+ <li>用語集: {{Glossary("CORS")}}</li>
+ <li><a href="/ja/docs/Web/HTTP/CORS">CORS 入門</a></li>
+</ul>

@@ -9,39 +9,44 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`Object.setPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) を、別のオブジェクトまたは {{jsxref("null")}} に設定します。
+<p><code><strong>Object.setPrototypeOf()</strong></code> メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の <code>[[Prototype]]</code> プロパティ) を、別のオブジェクトまたは {{jsxref("null")}} に設定します。</p>
 
-> **Warning:** **警告:** オブジェクトの `[[Prototype]]` を変更すると、 [最近の JavaScript エンジンがプロパティへのアクセスを最適化する方法](https://mathiasbynens.be/notes/prototypes)の特質上、すべてのブラウザーや JavaScript エンジンで、操作がとても低速になります。さらに、プロトタイプを変更することの性能への影響は細かく広範囲にわたり、 `Object.setPrototypeOf(...)` 文に費やされる時間だけではなく、 `[[Prototype]]` が変更されたすべてのオブジェクトへのアクセスを持つ**_すべて_**のコードに影響する可能性があります。この機能は言語の一部であるため、その機能の実装による負荷は (理念上は) エンジンの開発者によります。エンジンの開発者がこの問題に対処するまでの間、性能が気になる場合は、オブジェクトの `[[Prototype]]` を変更することは避けるべきです。代わりに、 {{jsxref("Object.create()")}} を使用して必要な `[[Prototype]]` をもつオブジェクトを生成してください。
+<div class="warning">
+<p><strong>警告:</strong> オブジェクトの <code>[[Prototype]]</code> を変更すると、 <a href="https://mathiasbynens.be/notes/prototypes">最近の JavaScript エンジンがプロパティへのアクセスを最適化する方法</a>の特質上、すべてのブラウザーや JavaScript エンジンで、操作がとても低速になります。さらに、プロトタイプを変更することの性能への影響は細かく広範囲にわたり、 <code>Object.setPrototypeOf(...)</code> 文に費やされる時間だけではなく、 <code>[[Prototype]]</code> が変更されたすべてのオブジェクトへのアクセスを持つ<strong><em>すべて</em></strong>のコードに影響する可能性があります。</p>
 
-## 構文
+<p>この機能は言語の一部であるため、その機能の実装による負荷は (理念上は) エンジンの開発者によります。エンジンの開発者がこの問題に対処するまでの間、性能が気になる場合は、オブジェクトの <code>[[Prototype]]</code> を変更することは避けるべきです。代わりに、 {{jsxref("Object.create()")}} を使用して必要な <code>[[Prototype]]</code> をもつオブジェクトを生成してください。</p>
+</div>
 
-    Object.setPrototypeOf(obj, prototype)
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-### 引数
+<pre class="syntaxbox notranslate">Object.setPrototypeOf(<var>obj</var>, <var>prototype</var>)</pre>
 
-- `obj`
-  - : プロトタイプを設定するオブジェクト。
-- `prototype`
-  - : オブジェクトの新しいプロトタイプ (オブジェクトまたは {{jsxref("null")}})。
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-### 返値
+<dl>
+ <dt><code><var>obj</var></code></dt>
+ <dd>プロトタイプを設定するオブジェクト。</dd>
+ <dt><code><var>prototype</var></code></dt>
+ <dd>オブジェクトの新しいプロトタイプ (オブジェクトまたは {{jsxref("null")}})。</dd>
+</dl>
 
-指定されたオブジェクト。
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-## 解説
+<p>指定されたオブジェクト。</p>
 
-`[[Prototype]]` が変更されるオブジェクトが {{jsxref("Object.isExtensible()")}} に応じて拡張不可の場合、 {{jsxref("Global_Objects/TypeError", "TypeError")}} 例外を投げます。`prototype` 引数がオブジェクトまたは {{jsxref("null")}} ではない場合(つまり、数値、文字列、boolean、 {{jsxref("undefined")}} のいずれか)、何もしません。さもなければ、このメソッドは `obj` の `[[Prototype]]` を新しい値に変更します。
+<h2 id="Description" name="Description">解説</h2>
 
-`Object.setPrototypeOf()` は、 ECMAScript 2015 仕様書にあります。一般的には、オブジェクトのプロトタイプを設定するための適切な方法と考えられています。もっと物議を醸す{{jsxref("Object.prototype.__proto__")}} プロパティがあります。
+<p><code>[[Prototype]]</code> が変更されるオブジェクトが {{jsxref("Object.isExtensible()")}} に応じて拡張不可の場合、 {{jsxref("Global_Objects/TypeError", "TypeError")}} 例外を投げます。<code>prototype</code> 引数がオブジェクトまたは {{jsxref("null")}} ではない場合(つまり、数値、文字列、boolean、 {{jsxref("undefined")}} のいずれか)、何もしません。さもなければ、このメソッドは <code>obj</code> の <code>[[Prototype]]</code> を新しい値に変更します。</p>
 
-## プロトタイプチェーンの追加
+<p><code>Object.setPrototypeOf()</code> は、 ECMAScript 2015 仕様書にあります。一般的には、オブジェクトのプロトタイプを設定するための適切な方法と考えられています。もっと物議を醸す{{jsxref("Object.prototype.__proto__")}} プロパティがあります。</p>
 
-`Object.getPrototypeOf()` と {{jsxref("Object.proto", "Object.prototype.__proto__")}} の組み合わせによってプロトタイプチェーン全体を新しいプロトタイプオブジェクトに追加できます。
+<h2 id="Appending_Prototype_Chains" name="Appending_Prototype_Chains">プロトタイプチェーンの追加</h2>
 
-```js
-/**
+<p><code>Object.getPrototypeOf()</code> と {{jsxref("Object.proto", "Object.prototype.__proto__")}} の組み合わせによってプロトタイプチェーン全体を新しいプロトタイプオブジェクトに追加できます。</p>
+
+<pre class="brush: js notranslate">/**
 *** Object.appendChain(@object, @prototype)
 *
 * Appends the first non-native prototype of a chain to a new prototype.
@@ -57,10 +62,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 **/
 
 Object.appendChain = function(oChain, oProto) {
-  if (arguments.length < 2) {
+  if (arguments.length &lt; 2) {
     throw new TypeError('Object.appendChain - 引数が足りません');
   }
-  if (typeof oProto !== 'object' && typeof oProto !== 'string') {
+  if (typeof oProto !== 'object' &amp;&amp; typeof oProto !== 'string') {
     throw new TypeError('Object.appendChain の第二引数は object か string でなければなりません');
   }
 
@@ -68,7 +73,7 @@ Object.appendChain = function(oChain, oProto) {
       oReturn = o2nd = oLast = oChain instanceof this ? oChain : new oChain.constructor(oChain);
 
   for (var o1st = this.getPrototypeOf(o2nd);
-    o1st !== Object.prototype && o1st !== Function.prototype;
+    o1st !== Object.prototype &amp;&amp; o1st !== Function.prototype;
     o1st = this.getPrototypeOf(o2nd)
   ) {
     o2nd = o1st;
@@ -83,14 +88,13 @@ Object.appendChain = function(oChain, oProto) {
   this.setPrototypeOf(o2nd, oNewProto);
   return oReturn;
 }
-```
+</pre>
 
-### 使い方
+<h3 id="Usage" name="Usage">使い方</h3>
 
-#### 最初の例: チェーンをプロトタイプに追加する
+<h4 id="First_example_Appending_a_chain_to_a_prototype" name="First_example_Appending_a_chain_to_a_prototype">最初の例: チェーンをプロトタイプに追加する</h4>
 
-```js
-function Mammal() {
+<pre class="brush: js notranslate">function Mammal() {
   this.isMammal = 'yes';
 }
 
@@ -112,12 +116,11 @@ function Animal() {
 Object.appendChain(oCat, new Animal());
 
 console.log(oCat.breathing); // 'yes'
-```
+</pre>
 
-#### 二番目の例: そのコンストラクタのインスタンスにプリミティブ値を変換し、プロトタイプにそのチェーンを追加する
+<h4 id="Second_example_Transforming_a_primitive_value_into_an_instance_of_its_constructor_and_append_its_chain_to_a_prototype" name="Second_example_Transforming_a_primitive_value_into_an_instance_of_its_constructor_and_append_its_chain_to_a_prototype">二番目の例: そのコンストラクタのインスタンスにプリミティブ値を変換し、プロトタイプにそのチェーンを追加する</h4>
 
-```js
-function MySymbol() {
+<pre class="brush: js notranslate">function MySymbol() {
   this.isSymbol = 'yes';
 }
 
@@ -130,12 +133,11 @@ var oPrime = Object.appendChain(nPrime, new MySymbol());
 console.log(oPrime); // '17'
 console.log(oPrime.isSymbol); // 'yes'
 console.log(typeof oPrime); // 'object'
-```
+</pre>
 
-#### 三番目の例: チェーンを Function.prototype オブジェクトに追加し、新しい関数をそのチェーンに追加する
+<h4 id="Third_example_Appending_a_chain_to_the_Function.prototype_object_and_appending_a_new_function_to_that_chain" name="Third_example_Appending_a_chain_to_the_Function.prototype_object_and_appending_a_new_function_to_that_chain">三番目の例: チェーンを Function.prototype オブジェクトに追加し、新しい関数をそのチェーンに追加する</h4>
 
-```js
-function Person(sName) {
+<pre class="brush: js notranslate">function Person(sName) {
   this.identity = sName;
 }
 
@@ -144,22 +146,20 @@ var george = Object.appendChain(new Person('George'),
 
 console.log(george.identity); // 'George'
 george(); // 'Hello guys!!'
-```
+</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### Object.setPrototypeOf の使用
+<h3 id="Using_Object.setPrototypeOf" name="Using_Object.setPrototypeOf">Object.setPrototypeOf の使用</h3>
 
-```js
-var dict = Object.setPrototypeOf({}, null);
-```
+<pre class="brush: js notranslate">var dict = Object.setPrototypeOf({}, null);
+</pre>
 
-## ポリフィル
+<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
 
-`Object.setPrototypeOf` が利用できない場合、より古い {{jsxref("Object.prototype.__proto__")}} プロパティを使って、簡単に定義することができます。
+<p><code>Object.setPrototypeOf</code> が利用できない場合、より古い {{jsxref("Object.prototype.__proto__")}} プロパティを使って、簡単に定義することができます。</p>
 
-```js
-if (!Object.setPrototypeOf) {
+<pre class="brush: js notranslate">if (!Object.setPrototypeOf) {
     // Chrome および FireFox で動作しますが、 IE では動作しません
      Object.prototype.setPrototypeOf = function(obj, proto) {
          if(obj.__proto__) {
@@ -178,22 +178,34 @@ if (!Object.setPrototypeOf) {
              return new Fn();
          }
      }
-}
-```
+}</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Object.setPrototypeOf")}}
+<div>
+<p>{{Compat("javascript.builtins.Object.setPrototypeOf")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Reflect.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+<ul>
+ <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
+ <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
+ <li>{{jsxref("Object.getPrototypeOf()")}}</li>
+ <li>{{jsxref("Object.prototype.__proto__")}}</li>
+</ul>

@@ -6,43 +6,86 @@ tags:
   - HTML
   - HTML grouping content
   - Reference
-translation_of: Web/HTML/Element/figcaption
 browser-compat: html.elements.figcaption
+translation_of: Web/HTML/Element/figcaption
 ---
-{{HTMLRef}}
+<div>{{HTMLRef}}</div>
 
-**HTML の `<figcaption>` 要素または図キャプション要素**は、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
+<p><span class="seoSummary"><strong>HTML の <code>&lt;figcaption&gt;</code> 要素または図キャプション要素</strong>は、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。</span></p>
 
-{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+<div>{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}</div>
 
-| [コンテンツカテゴリー](/ja/docs/Web/Guide/HTML/Content_categories) | なし                                                                                                      |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| 許可されている内容                                                 | [フローコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ)                           |
-| タグの省略                                                         | {{no_tag_omission}}                                                                                  |
-| 許可されている親要素                                               | {{HTMLElement("figure")}} 要素。 `<figcaption>` 要素は最初または最後の子要素でなければなりません。 |
-| 暗黙の ARIA ロール                                                 | [対応するロールなし](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                          |
-| 許可されている ARIA ロール                                         | {{ARIARole("group")}}, {{ARIARole("none")}}, {{ARIARole("presentation")}}          |
-| DOM インターフェイス                                               | {{domxref("HTMLElement")}}                                                                      |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
+   <td>なし</td>
+  </tr>
+  <tr>
+   <th scope="row">許可されている内容</th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
+  </tr>
+  <tr>
+   <th scope="row">タグの省略</th>
+   <td>{{no_tag_omission}}</td>
+  </tr>
+  <tr>
+   <th scope="row">許可されている親要素</th>
+   <td>{{HTMLElement("figure")}} 要素。 <code>&lt;figcaption&gt;</code> 要素は最初または最後の子要素でなければなりません。</td>
+  </tr>
+  <tr>
+   <th scope="row">暗黙の ARIA ロール</th>
+   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
+  </tr>
+  <tr>
+   <th scope="row">許可されている ARIA ロール</th>
+   <td>{{ARIARole("group")}}, {{ARIARole("none")}}, {{ARIARole("presentation")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">DOM インターフェイス</th>
+   <td>{{domxref("HTMLElement")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## 属性
+<h2 id="Attributes">属性</h2>
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes" rel="internal">グローバル属性</a>のみがあります。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-`<figcaption>` の例については、 {{HTMLElement("figure")}} のページを参照して下さい。
+<p><code>&lt;figcaption&gt;</code> の例については、 {{HTMLElement("figure")}} のページを参照して下さい。</p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-figcaption-element', '&lt;figcaption&gt;')}}         | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-figcaption-element', '&lt;figcaption&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- {{HTMLElement("figure")}} 要素
+<ul>
+ <li>{{HTMLElement("figure")}} 要素</li>
+</ul>

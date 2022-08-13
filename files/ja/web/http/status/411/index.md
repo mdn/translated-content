@@ -9,23 +9,36 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Status/411
 ---
-{{HTTPSidebar}}
+<p>{{HTTPSidebar}}</p>
 
-HyperText Transfer Protocol (HTTP) **`411 Length Required`** クライアントエラーレスポンスコードは、サーバーが定義された {{HTTPHeader("Content-Length")}} ヘッダーのないリクエストの受け入れを拒否することを示します。
+<p>HyperText Transfer Protocol (HTTP) <code><strong>411 Length Required</strong></code> クライアントエラーレスポンスコードは、サーバーが定義された {{HTTPHeader("Content-Length")}} ヘッダーのないリクエストの受け入れを拒否することを示します。</p>
 
-> **Note:** **メモ:** 仕様によっては、一連のチャンクでデータを送信する場合 `Content-Length` ヘッダは省略され、各チャンクの先頭に、現在のチャンクの長さを 16 進形式で追加する必要があります。詳細は {{HTTPHeader("Transfer-Encoding")}} を参照してください。
+<div class="note">
+<p><strong>メモ: </strong>仕様によっては、一連のチャンクでデータを送信する場合 <code>Content-Length</code> ヘッダは省略され、各チャンクの先頭に、現在のチャンクの長さを16進形式で追加する必要があります。詳細は {{HTTPHeader("Transfer-Encoding")}} を参照してください。</p>
+</div>
 
-## ステータス
+<h2 id="ステータス">ステータス</h2>
 
-    411 Length Required
+<pre class="syntaxbox">411 Length Required</pre>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様書                                                           | タイトル                                                      |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "411 Length Required" , "6.5.10")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">タイトル</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7231", "411 Length Required" , "6.5.10")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## 関連情報
+<h2 id="関連情報">関連情報</h2>
 
-- {{HTTPHeader("Content-Length")}}
-- {{HTTPHeader("Transfer-Encoding")}}
+<ul>
+ <li>{{HTTPHeader("Content-Length")}}</li>
+ <li>{{HTTPHeader("Transfer-Encoding")}}</li>
+</ul>

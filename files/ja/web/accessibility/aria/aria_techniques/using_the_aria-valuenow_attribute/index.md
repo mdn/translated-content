@@ -6,53 +6,60 @@ tags:
   - Accessibility
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute
 ---
-[aria-valuenow](http://www.w3.org/TR/wai-aria/#aria-valuenow) 属性は、スライダー、スピンボタン、プログレスバーなどの範囲ウィジェットの現在の値を定義するために使用されます。 現在の値がわからない場合は、`aria-valuenow` 属性を設定しないでください。 `aria-valuenow` に既知の最小値と最大値がある場合、作成者は [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute) 属性と [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute) 属性を設定するべきです。
+<p><span class="seoSummary"><a class="external" href="http://www.w3.org/TR/wai-aria/#aria-valuenow" rel="external">aria-valuenow</a> 属性は、スライダー、スピンボタン、プログレスバーなどの範囲ウィジェットの現在の値を定義するために使用されます。 現在の値がわからない場合は、<code>aria-valuenow</code> 属性を設定しないでください。 <code>aria-valuenow</code> に既知の最小値と最大値がある場合、作成者は <code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute">aria-valuemin</a></code> 属性と <code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute">aria-valuemax</a></code> 属性を設定するべきです。</span></p>
 
-レンダリングされた値を数値として正確に表現できない場合、作成者は [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute) 属性を `aria-valuenow` と組み合わせて使用して、範囲の現在の値の使いやすい表現を提供する**べき**です（SHOULD）。 たとえば、スライダーのレンダリング値が`小`、`中`、`大`の場合があります。 この場合、`aria-valuenow` の値は 1 〜 3 の範囲で値空間内の各値の位置を示しますが、`aria-valuetext` は、`小`、`中`、`大`のいずれかの文字列になります。
+<p>レンダリングされた値を数値として正確に表現できない場合、作成者は <code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute">aria-valuetext</a></code> 属性を <code>aria-valuenow</code> と組み合わせて使用して、範囲の現在の値の使いやすい表現を提供する<strong>べき</strong>です（SHOULD）。 たとえば、スライダーのレンダリング値が<code>小</code>、<code>中</code>、<code>大</code>の場合があります。 この場合、<code>aria-valuenow</code> の値は 1 〜 3 の範囲で値空間内の各値の位置を示しますが、<code>aria-valuetext</code> は、<code>小</code>、<code>中</code>、<code>大</code>のいずれかの文字列になります。</p>
 
-`aria-valuenow` は[スライダー](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role)、[スクロールバー](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role)、[スピンボタン](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role)のロールの**必須**属性です。
+<p><code>aria-valuenow</code> は<a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role">スライダー</a>、<a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role">スクロールバー</a>、<a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role">スピンボタン</a>のロールの<strong>必須</strong>属性です。</p>
 
-### 値
+<h3 id="Value" name="Value">値</h3>
 
-数値の文字列表現
+<p>数値の文字列表現</p>
 
-### ユーザーエージェントと支援技術への影響
+<h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
 
-[プログレスバー](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role)と[スクロールバー](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role)のロールを持つ要素の場合、支援技術は、[`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute) から [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute) までの範囲の位置として計算された実際の値をパーセンテージとしてレンダリングする**べき**です（SHOULD）。
+<p><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role">プログレスバー</a>と<a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role">スクロールバー</a>のロールを持つ要素の場合、支援技術は、<span class="seoSummary"><code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute">aria-valuemin</a></code></span> から <span class="seoSummary"><code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute">aria-valuemax</a></code></span> までの範囲の位置として計算された実際の値をパーセンテージとしてレンダリングする<strong>べき</strong>です（SHOULD）。</p>
 
-[スライダー](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role)と[スピンボタン](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role)のロールを持つ要素の場合、支援技術は実際の値をユーザーにレンダリングする**べき**です（SHOULD）。
+<p><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role">スライダー</a>と<a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role">スピンボタン</a>のロールを持つ要素の場合、支援技術は実際の値をユーザーにレンダリングする<strong>べき</strong>です（SHOULD）。</p>
 
-> **Note:** **注**: 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+<div class="note"><strong>注</strong>: 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
 
-### 例
+<h3 id="Examples" name="Examples">例</h3>
 
-#### 例 1:
+<h4 id="Example_1.3A" name="Example_1.3A">例 1:</h4>
 
-下のスニペットは、現在の値が 4 の単純なスライダーを示しています。
+<p>下のスニペットは、現在の値が 4 の単純なスライダーを示しています。</p>
 
-```html
-<div role="slider" aria-valuenow="4" aria-valuemin="1" aria-valuemax="10">
-```
+<pre class="brush: html"><span class="tag">&lt;div role=<span class="str">"slider"</span> aria-valuenow=<span class="str">"4"</span> aria-valuemin=<span class="str">"1"</span> aria-valuemax=<span class="str">"10"</span>&gt;</span>
+</pre>
 
-### 注
+<h3 id="Notes" name="Notes">注 </h3>
 
-### ARIA ロールで使用
+<h3 id="Used_With_ARIA_Roles" name="Used_With_ARIA_Roles">ARIA ロールで使用</h3>
 
-- [progressbar](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role "Using_the_progressbar_role")
-- scrollbar
-- [slider](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role "Using the slider role")
-- spinbutton
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role" title="Using_the_progressbar_role">progressbar</a></li>
+ <li>scrollbar</li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role" title="Using the slider role">slider</a></li>
+ <li>spinbutton</li>
+</ul>
 
-### 関連する ARIA 技術
+<h3 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術 </h3>
 
-- [aria-valuemax](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute "Using_the_aria-valuemax_attribute")
-- [aria-valuemin](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute "Using_the_aria-valuemin_attribute")
-- [aria-valuetext](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute "Using the aria-valuetext attribute")
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute" title="Using_the_aria-valuemax_attribute">aria-valuemax</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="Using_the_aria-valuemin_attribute">aria-valuemin</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute" title="Using the aria-valuetext attribute">aria-valuetext</a></li>
+</ul>
 
-### 互換性
+<h3 id="Compatibility" name="Compatibility">互換性</h3>
 
-TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
+<p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
 
-### その他のリソース
+<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>
 
-- [aria-valuenow の WAI-ARIA 仕様](http://www.w3.org/TR/wai-aria/#aria-valuenow)（英語）
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/wai-aria/#aria-valuenow">aria-valuenow の WAI-ARIA 仕様</a>（英語）</li>
+</ul>
+
+<p> </p>

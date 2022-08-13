@@ -6,30 +6,32 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/false
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`false` 関数は真偽値 false を返します。
+<p><code>false</code> 関数は真偽値 false を返します。</p>
 
-### 構文
+<h3 id="Syntax">構文</h3>
 
-    false()
+<pre class="eval">false()
+</pre>
 
-### 返値
+<h3 id="Returns">返値</h3>
 
-真偽値 `false` です。
+<p>真偽値 <code>false</code> です。</p>
 
-### 注
+<h3 id="Notes">注</h3>
 
-この関数は比較の一部として役立ちます。
+<p>この関数は比較の一部として役立ちます。</p>
 
-    <xsl:if test="boolean((1 &gt; 2) = false())">
-     The expression evaluates as true
-    </xsl:if>
+<pre class="eval">&lt;xsl:if test="boolean((1 &amp;gt; 2) = false())"&gt;
+ The expression evaluates as true
+&lt;/xsl:if&gt;
+</pre>
 
-### 定義
+<h3 id="Defined">定義</h3>
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-false)
+<p><a href="https://www.w3.org/TR/xpath#function-false">XPath 1.0 4.3</a></p>
 
-### Gecko での対応
+<h3 id="Gecko_support">Gecko での対応</h3>
 
-対応済み。
+<p>対応済み。</p>

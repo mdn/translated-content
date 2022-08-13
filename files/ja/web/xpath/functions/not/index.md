@@ -6,38 +6,44 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/not
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`not` 関数は式を真偽値として評価し、その逆の値を返します。
+<p><code>not</code> 関数は式を真偽値として評価し、その逆の値を返します。</p>
 
-### 構文
+<h3 id="Syntax">構文</h3>
 
-    not(expression )
+<pre class="eval">not(<em>expression</em> )
+</pre>
 
-### 引数
+<h3 id="Arguments">引数</h3>
 
-- `expression`
-  - : この式は [boolean()](/ja/docs/Web/XPath/Functions/boolean) 関数の引数として渡された場合とまったく同じように評価されます。
+<dl>
+ <dt><code><em>expression</em></code></dt>
+ <dd>この式は <a href="/ja/docs/Web/XPath/Functions/boolean">boolean()</a> 関数の引数として渡された場合とまったく同じように評価されます。</dd>
+</dl>
 
-### 返値
+<h3 id="Returns">返値</h3>
 
-false と評価できる式に対しては true を返し、true と評価できる式に対しては false を返します。
+<p>false と評価できる式に対しては true を返し、true と評価できる式に対しては false を返します。</p>
 
-### 注
+<h3 id="Notes">注</h3>
 
-- この関数は [boolean()](/ja/docs/Web/XPath/Functions/boolean) 関数と同様のふるまいをしますが、返される値はその逆です。
-- 要素に一部の属性がないことを検査することができます。
+<ul>
+ <li>この関数は <a href="/ja/docs/Web/XPath/Functions/boolean">boolean()</a> 関数と同様のふるまいをしますが、返される値はその逆です。</li>
+ <li>要素に一部の属性がないことを検査することができます。</li>
+</ul>
 
-    <xsl:for-each match="//a[not(@name and @name = 'badname')]">
-      <!-- iterates over any <a> element in the document, that
-           either has no 'name' attribute at all, or it has one,
-           but its value is not "badname". -->
-    </xsl:template>
+<pre class="eval">&lt;xsl:for-each match="//a[not(@name and @name = 'badname')]"&gt;
+  &lt;!-- iterates over any &lt;a&gt; element in the document, that
+       either has no 'name' attribute at all, or it has one,
+       but its value is not "badname". --&gt;
+&lt;/xsl:template&gt;
+</pre>
 
-### 定義
+<h3 id="Defined">定義</h3>
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-not)
+<p><a href="https://www.w3.org/TR/xpath#function-not">XPath 1.0 4.3</a></p>
 
-### Gecko での対応
+<h3 id="Gecko_support">Gecko での対応</h3>
 
-対応済み。
+<p>対応済み。</p>

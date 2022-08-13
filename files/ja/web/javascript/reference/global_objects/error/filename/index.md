@@ -8,34 +8,37 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ---
-{{JSRef}} {{non-standard_header}}
+<div>{{JSRef}} {{non-standard_header}}</div>
 
-**`fileName`** プロパティは、このエラーを起こしたファイルへのパスを含みます。
+<p><code><strong>fileName</strong></code> プロパティは、このエラーを起こしたファイルへのパスを含みます。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-この標準外のプロパティは、このエラーを起こしたファイルへのパスが入ります。デバッガーのコンテキストから呼び出された場合、例えば Firefox 開発ツールでは、"debugger eval code" が返されます。
+<p>この標準外のプロパティは、このエラーを起こしたファイルへのパスが入ります。デバッガーのコンテキストから呼び出された場合、例えば Firefox 開発ツールでは、"debugger eval code" が返されます。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### fileName の使用
+<h3 id="Using_fileName" name="Using_fileName">fileName の使用</h3>
 
-```js
-var e = new Error('Could not parse input');
+<pre class="brush: js notranslate">var e = new Error('Could not parse input');
 throw e;
 // e.fileName could look like "file:///C:/example.html"
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-仕様の一部ではありません。
+<p>仕様の一部ではありません。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Error.fileName")}}
+<div>
+<p>{{Compat("javascript.builtins.Error.fileName")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("Error.prototype.stack")}}
-- {{jsxref("Error.prototype.columnNumber")}}
-- {{jsxref("Error.prototype.fileName")}}
+<ul>
+ <li>{{jsxref("Error.prototype.stack")}}</li>
+ <li>{{jsxref("Error.prototype.columnNumber")}}</li>
+ <li>{{jsxref("Error.prototype.fileName")}}</li>
+</ul>

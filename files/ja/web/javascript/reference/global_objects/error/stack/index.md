@@ -9,32 +9,31 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 ---
-{{JSRef}} {{non-standard_header}}
+<div>{{JSRef}} {{non-standard_header}}</div>
 
-{{jsxref("Error")}} オブジェクトの標準外の **`stack`** プロパティは、呼び出された関数のトレース、つまり、その呼び出し順、呼び出したファイルの行番号、呼び出した関数の引数を提供します。スタック文字列は、最後の呼び出しから最初の呼び出しへ進み、元のグローバルスコープの呼び出しまで遡ります。
+<p>{{jsxref("Error")}} オブジェクトの標準外の <strong><code>stack</code></strong> プロパティは、呼び出された関数のトレース、つまり、その呼び出し順、呼び出したファイルの行番号、呼び出した関数の引数を提供します。スタック文字列は、最後の呼び出しから最初の呼び出しへ進み、元のグローバルスコープの呼び出しまで遡ります。</p>
 
-## 解説
+<h2 id="Description" name="Description">解説</h2>
 
-各ステップは改行で区切られ、行の先頭は関数名 (グローバルスコープからの呼び出しでない場合)、次に `@` 記号、ファイルの場所 (エラーが投げられている時に関数がエラーコンストラクターである場合を除く)、コロン記号、ファイルの場所がある場合は行番号の順に続きます。(ただし、{{jsxref("Error")}} オブジェクトも、投げられたエラーから取り戻すため `fileName` および `lineNumber`、`columnNumber` プロパティを所有することに注意してください。これはエラーのみであり、そのトレースではありません。)
+<p>各ステップは改行で区切られ、行の先頭は関数名 (グローバルスコープからの呼び出しでない場合)、次に <code>@</code> 記号、ファイルの場所 (エラーが投げられている時に関数がエラーコンストラクターである場合を除く)、コロン記号、ファイルの場所がある場合は行番号の順に続きます。(ただし、{{jsxref("Error")}} オブジェクトも、投げられたエラーから取り戻すため <code>fileName</code> および <code>lineNumber</code>、<code>columnNumber</code> プロパティを所有することに注意してください。これはエラーのみであり、そのトレースではありません。)</p>
 
-これは Firefox だけで使用される書式であることに注意してください。スタックトレースに標準の書式はありません。しかし、Safari 6 以降と Opera 12 以前ではとてもよく似た書式を使用します。一方で、V8 JavaScript エンジンを搭載したブラウザー (Chrome、Opera 15 以降、Android Browser など) や IE 10 以降のブラウザーは異なる書式を使用します ([アーカイブされた MSDN の error.stack ドキュメント](https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx)を参照)。
+<p>これは Firefox だけで使用される書式であることに注意してください。スタックトレースに標準の書式はありません。しかし、Safari 6 以降と Opera 12 以前ではとてもよく似た書式を使用します。一方で、V8 JavaScript エンジンを搭載したブラウザー (Chrome、Opera 15 以降、Android Browser など) や IE 10 以降のブラウザーは異なる書式を使用します (<a href="https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">アーカイブされたMSDN の error.stack ドキュメント</a>を参照)。</p>
 
-**スタック上の引数の値**: Firefox 14 以前 ({{bug("744842")}}) で、関数名は、文字列に変換され括弧で囲まれた引数の値に続き、`@` 記号の直前に置かれます。オブジェクト (または配列等) は変換された形式 `"[object Object]"` で現れるため、これが実際のオブジェクトに戻され評価されることはありません。スカラー値を受け取ります (それにも関わらず、少なくとも Firefox 14 では可能です。`arguments.callee.caller.arguments` を使用し、`arguments.callee.caller.name` により、簡単に関数名を取り戻すことが可能です)。`"undefined"` は、`"(void 0)"` として記録されます。ただし、`"@"`、`"("`, `")"` (または、これらがファイル名に含まれる場合) を伴う文字列引数が渡された場合、行がそのコンポーネント部分で分かれてしまうため、これらに安易に頼ることができません。従って、Firefox 14 以降では、これが少なからず問題になります。
+<p><strong>スタック上の引数の値</strong>: Firefox 14 以前 ({{bug("744842")}}) で、関数名は、文字列に変換され括弧で囲まれた引数の値に続き、<code>@</code> 記号の直前に置かれます。オブジェクト (または配列等) は変換された形式 <code>"[object Object]"</code> で現れるため、これが実際のオブジェクトに戻され評価されることはありません。スカラー値を受け取ります (それにも関わらず、少なくとも Firefox 14 では可能です。<code>arguments.callee.caller.arguments</code> を使用し、<code>arguments.callee.caller.name</code> により、簡単に関数名を取り戻すことが可能です)。<code>"undefined"</code> は、<code>"(void 0)"</code> として記録されます。ただし、<code>"@"</code>、<code>"("</code>, <code>")"</code> (または、これらがファイル名に含まれる場合) を伴う文字列引数が渡された場合、行がそのコンポーネント部分で分かれてしまうため、これらに安易に頼ることができません。従って、Firefox 14 以降では、これが少なからず問題になります。</p>
 
-ブラウザによって値を設定するタイミングが異なります。例えば Firefox は、これを {{jsxref("Error")}} オブジェクトが作成された時に設定し、PhantomJS は、{{jsxref("Error")}} が投げられた時にのみ設定します。[アーカイブされた MSDN のドキュメント](https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) によれば、PhantomJS の実装とも一致するようです。
+<p>ブラウザによって値を設定するタイミングが異なります。例えば Firefox は、これを {{jsxref("Error")}} オブジェクトが作成された時に設定し、PhantomJS は、{{jsxref("Error")}} が投げられた時にのみ設定します。<a href="https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">アーカイブされた MSDN のドキュメント</a> によれば、PhantomJS の実装とも一致するようです。</p>
 
-## 例
+<h2 id="Example" name="Example">例</h2>
 
-### stack プロパティの使用
+<h3 id="Using_the_stack_property" name="Using_the_stack_property">stack プロパティの使用</h3>
 
-次の HTML マークアップは、`stack` プロパティの使用を実演します。
+<p>次の HTML マークアップは、<code>stack</code> プロパティの使用を実演します。</p>
 
-```html
-<!DOCTYPE HTML>
-<meta charset="UTF-8">
-<title>Stack Trace Example</title>
-<body>
-<script>
+<pre class="brush: html notranslate">&lt;!DOCTYPE HTML&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Stack Trace Example&lt;/title&gt;
+&lt;body&gt;
+&lt;script&gt;
 function trace() {
   try {
     throw new Error('myError');
@@ -50,45 +49,44 @@ function a() {
   b(3, 4, '\n\n', undefined, {});
 }
 a('first call, firstarg');
-</script>
-```
+&lt;/script&gt;
+</pre>
 
-上記のマークアップは、Windows ファイルシステム上の `C:\example.html` に保存されているものと仮定します。これは、次のテキストを含む警告メッセージを生成します:
+<p>上記のマークアップは、Windows ファイルシステム上の <code>C:\example.html</code> に保存されているものと仮定します。これは、次のテキストを含む警告メッセージを生成します:</p>
 
-Firefox 30 以降では、列番号が含まれます。
+<p>Firefox 30 以降では、列番号が含まれます。</p>
 
-    trace@file:///C:/example.html:9:17
-    b@file:///C:/example.html:16:13
-    a@file:///C:/example.html:19:13
-    @file:///C:/example.html:21:9
+<pre class="notranslate"><samp>trace@file:///C:/example.html:9:17
+b@file:///C:/example.html:16:13
+a@file:///C:/example.html:19:13
+@file:///C:/example.html:21:9</samp></pre>
 
-Firefox 14 から Firefox 29 まで:
+<p>Firefox 14 から Firefox 29 まで:</p>
 
-    trace@file:///C:/example.html:9
-    b@file:///C:/example.html:16
-    a@file:///C:/example.html:19
-    @file:///C:/example.html:21
+<pre class="notranslate"><samp>trace@file:///C:/example.html:9
+b@file:///C:/example.html:16
+a@file:///C:/example.html:19
+@file:///C:/example.html:21</samp></pre>
 
-Firefox 13 以前は、代わりに次のテキストが生成されます。
+<p>Firefox 13 以前は、代わりに次のテキストが生成されます。</p>
 
-    Error("myError")@:0
-    trace()@file:///C:/example.html:9
-    b(3,4,"\n\n",(void 0),[object Object])@file:///C:/example.html:16
-    a("first call, firstarg")@file:///C:/example.html:19
-    @file:///C:/example.html:21
+<pre class="notranslate"><samp>Error("myError")@:0
+trace()@file:///C:/example.html:9
+b(3,4,"\n\n",(void 0),[object Object])@file:///C:/example.html:16
+a("first call, firstarg")@file:///C:/example.html:19
+@file:///C:/example.html:21</samp></pre>
 
-### eval によるコードのスタック
+<h3 id="Stack_of_evaled_code" name="Stack_of_evaled_code">eval によるコードのスタック</h3>
 
-Firefox 30 {{geckoRelease("30")}} 以降、`Function()` および `eval()` 呼び出し内のコードのエラースタックは、各呼び出しに、行番号と列番号についての詳細情報を含むスタックを生成するようになりました。関数呼び出しは、`"> Function"` で示され、eval 呼び出しは、`"> eval"` で示されます。{{bug("332176")}} を参照してください。
+<p>Firefox 30 {{geckoRelease("30")}} 以降、<code>Function()</code> および <code>eval()</code> 呼び出し内のコードのエラースタックは、各呼び出しに、行番号と列番号についての詳細情報を含むスタックを生成するようになりました。関数呼び出しは、<code>"&gt; Function"</code> で示され、eval 呼び出しは、<code>"&gt; eval"</code> で示されます。{{bug("332176")}} を参照してください。</p>
 
-```js
-try {
+<pre class="brush: js notranslate">try {
   new Function('throw new Error()')();
 } catch (e) {
   console.log(e.stack);
 }
 
-// anonymous@file:///C:/example.html line 7 > Function:1:1
+// anonymous@file:///C:/example.html line 7 &gt; Function:1:1
 // @file:///C:/example.html:7:6
 
 
@@ -98,24 +96,28 @@ try {
   console.log(x.stack);
 }
 
-// @file:///C:/example.html line 7 > eval line 1 > eval:1:1
-// @file:///C:/example.html line 7 > eval:1:1
+// @file:///C:/example.html line 7 &gt; eval line 1 &gt; eval:1:1
+// @file:///C:/example.html line 7 &gt; eval:1:1
 // @file:///C:/example.html:7:6
-```
+</pre>
 
-`//# sourceURL` ディレクティブを使用して eval ソースに名前を付けることもできます。 [Debugger](/ja/docs/Tools/Debugger) ドキュメント内の [eval ソースのデバッグ](/ja/docs/Tools/Debugger/How_to/Debug_eval_sources) と [ブログ記事](http://fitzgeraldnick.com/weblog/59/ "Naming `eval` Scripts with the `//# sourceURL` Directive") も参照してください。
+<p><code>//# sourceURL</code> ディレクティブを使用して eval ソースに名前を付けることもできます。 <a href="/ja/docs/Tools/Debugger">Debugger</a> ドキュメント内の <a href="/ja/docs/Tools/Debugger/How_to/Debug_eval_sources">eval ソースのデバッグ</a> と <a href="http://fitzgeraldnick.com/weblog/59/" title="Naming `eval` Scripts with the `//# sourceURL` Directive">ブログ記事</a> も参照してください。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-仕様の一部ではありません。
+<p>仕様の一部ではありません。</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Error.stack")}}
+<div>
+<p>{{Compat("javascript.builtins.Error.stack")}}</p>
+</div>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [Components.stack](/ja/docs/Components.stack)
-- 外部プロジェクト: [TraceKit](https://github.com/csnover/TraceKit/) および [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)
-- MSDN: [error.stack](https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) のドキュメントのアーカイブ
-- [Overview of the V8 JavaScript stack trace API](https://github.com/v8/v8/wiki/Stack%20Trace%20API)
+<ul>
+ <li><a href="/ja/docs/Components.stack">Components.stack</a></li>
+ <li>外部プロジェクト: <a class="link-https" href="https://github.com/csnover/TraceKit/">TraceKit</a> および <a class="link-https" href="https://github.com/eriwen/javascript-stacktrace">javascript-stacktrace</a></li>
+ <li>MSDN: <a class="external" href="https://web.archive.org/web/20140210004225/http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">error.stack</a> のドキュメントのアーカイブ</li>
+ <li><a href="https://github.com/v8/v8/wiki/Stack%20Trace%20API">Overview of the V8 JavaScript stack trace API</a></li>
+</ul>

@@ -7,15 +7,15 @@ tags:
   - Link
   - Link types
   - Reference
-translation_of: Web/HTML/Link_types/prerender
 browser-compat: html.elements.link.rel.prerender
+translation_of: Web/HTML/Link_types/prerender
 ---
-**`prerender`** キーワードを {{HTMLElement("link")}} 要素の {{HTMLAttrxRef("rel", "link")}} 属性に設定すると、ユーザーが次の操作でターゲットとなるリソースを必要とする可能性があることをブラウザーに示唆します。したがって、ブラウザーはリソースの取得や処理を先取りすることで、ユーザーの操作性を向上させることができる可能性があります。
+<p><span class="seoSummary"><strong><code>prerender</code></strong> キーワードを {{HTMLElement("link")}} 要素の {{HTMLAttrxRef("rel", "link")}} 属性に設定すると、ユーザーが次の操作でターゲットとなるリソースを必要とする可能性があることをブラウザーに示唆します。したがって、ブラウザーはリソースの取得や処理を先取りすることで、ユーザーの操作性を向上させることができる可能性があります。</span></p>
 
-## 仕様書
+<h2 id="Specifications">仕様書</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>

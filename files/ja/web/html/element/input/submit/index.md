@@ -17,203 +17,268 @@ tags:
   - submit button
 translation_of: Web/HTML/Element/input/submit
 ---
-{{HTMLRef("Input_types")}}
+<div>{{HTMLRef("Input_types")}}</div>
+
+<p><span class="seoSummary">{{HTMLElement("input")}} 要素の <strong><code>submit</code></strong> 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき (ふつうはユーザーがボタンをクリックしたとき)、{{Glossary("user agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。</span></p>
+
+<div id="summary-example2">
+<pre class="brush: html notranslate">&lt;input type="submit" value="リクエストを送信"&gt;</pre>
+</div>
+
+<p>{{EmbedLiveSample("summary-example2", 650, 30)}}</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <td><strong><a href="#value">値</a></strong></td>
+   <td>ボタンのラベルとして使用する {{domxref("DOMString")}}</td>
+  </tr>
+  <tr>
+   <td><strong>イベント</strong></td>
+   <td>{{domxref("Element/click_event", "click")}}</td>
+  </tr>
+  <tr>
+   <td><strong>対応している共通属性</strong></td>
+   <td>{{htmlattrxref("type", "input")}} および {{htmlattrxref("value", "input")}}</td>
+  </tr>
+  <tr>
+   <td><strong>IDL 属性</strong></td>
+   <td><code>value</code></td>
+  </tr>
+  <tr>
+   <td><strong>メソッド</strong></td>
+   <td>なし</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Value" name="Value">値</h2>
+
+<p><code>&lt;input type="submit"&gt;</code> 要素の {{htmlattrxref("value", "input")}} 属性は、ボタンのラベルとして表示される {{domxref("DOMString")}} を示します。ボタンはその他の真の値を持ちません。</p>
+
+<div id="summary-example3">
+<pre class="brush: html notranslate">&lt;input type="submit" value="Send Request"&gt;</pre>
+</div>
+
+<p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
+
+<p><code>value</code> を指定しなかった場合、ボタンにはユーザーエージェントによって選ばれた既定のラベルが表示されます。このラベルは「送信」または「クエリを送信」などのものです。次のものはこのブラウザーにおける送信ボタンの既定のラベルです。</p>
+
+<div id="summary-example1">
+<pre class="brush: html notranslate">&lt;input type="submit"&gt;</pre>
+</div>
+
+<p>{{EmbedLiveSample("summary-example1", 650, 30)}}</p>
+
+<h2 id="Additional_attributes" name="Additional_attributes">追加の属性</h2>
+
+<p>すべての {{HTMLElement("input")}} 型で共通する属性に加え、 <code>submit</code> 型の入力欄は次の属性にも対応しています。</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">属性</th>
+   <th scope="col">説明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code><a href="#formaction">formaction</a></code></td>
+   <td>フォームのデータの送信先の URL。もしあれば、フォームの {{htmlattrxref("action", "form")}} 属性を上書きする</td>
+  </tr>
+  <tr>
+   <td><code><a href="#formenctype">formenctype</a></code></td>
+   <td>文字列で、フォームのデータに使用するエンコーディング型を指定</td>
+  </tr>
+  <tr>
+   <td><code><a href="#formmethod">formmethod</a></code></td>
+   <td>フォームを送信する際に使用する HTTP メソッド ({{HTTPMethod("get")}} または {{HTTPMethod("post")}})</td>
+  </tr>
+  <tr>
+   <td><code><a href="#formnovalidate">formnovalidate</a></code></td>
+   <td>論理属性で、存在する場合、サーバーにデータを送信する前にフォームのフィールドに<a href="/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation">制約検証</a>をしないことを示す</td>
+  </tr>
+  <tr>
+   <td><code><a href="#formtarget">formtarget</a></code></td>
+   <td>フォームを送信した後で、サーバーから返されるレスポンスを読み込む先の{{Glossary("browsing context", "閲覧コンテキスト")}}</td>
+  </tr>
+ </tbody>
+</table>
 
-{{HTMLElement("input")}} 要素の **`submit`** 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき (ふつうはユーザーがボタンをクリックしたとき)、{{Glossary("user agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。
+<h3 id="htmlattrdefformaction">{{htmlattrdef("formaction")}}</h3>
 
-```html
-<input type="submit" value="リクエストを送信">
-```
+<p>文字列で、データの送信先の URL を示します。これはこの {{HTMLElement("input")}} が属する {{HTMLElement("form")}} 要素の {{htmlattrxref("action", "form")}} 属性より優先します。</p>
 
-{{EmbedLiveSample("summary-example2", 650, 30)}}
+<p>この属性は <code><a href="/ja/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> および {{HTMLElement("button")}} 要素でも使用できます。</p>
 
-| **[値](#value)**         | ボタンのラベルとして使用する {{domxref("DOMString")}}                                    |
-| ------------------------ | ------------------------------------------------------------------------------------------------ |
-| **イベント**             | {{domxref("Element/click_event", "click")}}                                         |
-| **対応している共通属性** | {{htmlattrxref("type", "input")}} および {{htmlattrxref("value", "input")}} |
-| **IDL 属性**             | `value`                                                                                          |
-| **メソッド**             | なし                                                                                             |
+<h3 id="htmlattrdefformenctype">{{htmlattrdef("formenctype")}}</h3>
 
-## 値
+<p>文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は3つです。</p>
+
+<dl>
+ <dt><code>application/x-www-form-urlencoded</code></dt>
+ <dd>これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って URL エンコーディングした後で送信します。</dd>
+ <dt><code>multipart/form-data</code></dt>
+ <dd>データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の {{htmlattrxref("type", "input")}}<code>=file</code> (<code><a href="/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code>) が含まれている場合は、このエンコーディング型を<em>使わなければなりません</em>。</dd>
+ <dt><code>text/plain</code></dt>
+ <dd>プレーンテキストです。ほとんどデバッグでしか役に立ちませんが、送信されたデータを簡単に見ることができます。</dd>
+</dl>
 
-`<input type="submit">` 要素の {{htmlattrxref("value", "input")}} 属性は、ボタンのラベルとして表示される {{domxref("DOMString")}} を示します。ボタンはその他の真の値を持ちません。
+<p><code>formenctype</code> 属性が指定された場合、所属するフォームの {{htmlattrxref("action", "form")}} 属性を上書きします。</p>
 
-```html
-<input type="submit" value="Send Request">
-```
+<p>この属性は <code><a href="/ja/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> および {{HTMLElement("button")}} 要素でも使用できます。</p>
 
-{{EmbedLiveSample("summary-example3", 650, 30)}}
+<h3 id="htmlattrdefformmethod">{{htmlattrdef("formmethod")}}</h3>
 
-`value` を指定しなかった場合、ボタンにはユーザーエージェントによって選ばれた既定のラベルが表示されます。このラベルは「送信」または「クエリを送信」などのものです。次のものはこのブラウザーにおける送信ボタンの既定のラベルです。
+<p>文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの {{htmlattrxref("method", "form")}} を上書きします。許可されている値は次の通りです。</p>
 
-```html
-<input type="submit">
-```
+<dl>
+ <dt><code>get</code></dt>
+ <dd>URL は <code>formaction</code> または {{htmlattrxref("action", "form")}} 属性で指定された URL に疑問符 ("?") を追加し、 <code>formenctype</code> または {{htmlattrxref("enctype", "form")}} 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("get")}} リクエストを用いてサーバーに送信されます。このメソッドは ASCII 文字のみを含む単純なフォームでうまく動作し、副作用はありません。これが既定値です。</dd>
+ <dt><code>post</code></dt>
+ <dd>フォームのデータは、 <code>formaction</code> または {{htmlattrxref("action", "form")}} で指定された URL に HTTP の {{HTTPMethod("post")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。</dd>
+ <dt><code>dialog</code></dt>
+ <dd>このメソッドは、入力欄が関連付けられたダイアログを閉じるだけで、フォームのデータをまったく送信しない場合ことを表すために使用します。</dd>
+</dl>
 
-{{EmbedLiveSample("summary-example1", 650, 30)}}
+<p>この属性は <code><a href="/ja/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> および {{HTMLElement("button")}} 要素でも使用できます。</p>
 
-## 追加の属性
+<h3 id="htmlattrdefformnovalidate">{{htmlattrdef("formnovalidate")}}</h3>
 
-すべての {{HTMLElement("input")}} 型で共通する属性に加え、 `submit` 型の入力欄は次の属性にも対応しています。
+<p>A Boolean attribute which, if present, specifies that the form should not be validated before submission to the server. This overrides the value of the {{htmlattrxref("novalidate", "form")}} attribute on the element's owning form.</p>
 
-| 属性                                | 説明                                                                                                                                                            |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`formaction`](#formaction)         | フォームのデータの送信先の URL。もしあれば、フォームの {{htmlattrxref("action", "form")}} 属性を上書きする                                            |
-| [`formenctype`](#formenctype)       | 文字列で、フォームのデータに使用するエンコーディング型を指定                                                                                                    |
-| [`formmethod`](#formmethod)         | フォームを送信する際に使用する HTTP メソッド ({{HTTPMethod("get")}} または {{HTTPMethod("post")}})                                                 |
-| [`formnovalidate`](#formnovalidate) | 論理属性で、存在する場合、サーバーにデータを送信する前にフォームのフィールドに[制約検証](/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation)をしないことを示す |
-| [`formtarget`](#formtarget)         | フォームを送信した後で、サーバーから返されるレスポンスを読み込む先の{{Glossary("browsing context", "閲覧コンテキスト")}}            |
+<p>この属性は <code><a href="/ja/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> および {{HTMLElement("button")}} 要素でも使用できます。</p>
 
-### {{htmlattrdef("formaction")}}
+<h3 id="htmlattrdefformtarget">{{htmlattrdef("formtarget")}}</h3>
 
-文字列で、データの送信先の URL を示します。これはこの {{HTMLElement("input")}} が属する {{HTMLElement("form")}} 要素の {{htmlattrxref("action", "form")}} 属性より優先します。
+<p>A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a <strong>browsing context</strong> (that is, a tab, window, or {{HTMLElement("iframe")}}. A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.</p>
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+<p>In addition to the actual names of tabs, windows, or inline frames, there are a few special keywords that can be used:</p>
 
-### {{htmlattrdef("formenctype")}}
+<dl>
+ <dt><code>_self</code></dt>
+ <dd>Loads the response into the same browsing context as the one that contains the form. This will replace the current document with the received data. This is the default value used if none is specified.</dd>
+ <dt><code>_blank</code></dt>
+ <dd>Loads the response into a new, unnamed, browsing context. This is typically a new tab in the same window as the current document, but may differ depending on the configuration of the {{Glossary("user agent")}}.</dd>
+ <dt><code>_parent</code></dt>
+ <dd>Loads the response into the parent browsing context of the current one. If there is no parent context, this behaves the same as <code>_self</code>.</dd>
+ <dt><code>_top</code></dt>
+ <dd>Loads the response into the top-level browsing context; this is the browsing context that is the topmost ancestor of the current context. If the current context is the topmost context, this behaves the same as <code>_self</code>.</dd>
+</dl>
 
-文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
+<p>この属性は <code><a href="/ja/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> および {{HTMLElement("button")}} 要素でも使用できます。</p>
 
-- `application/x-www-form-urlencoded`
-  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って URL エンコーディングした後で送信します。
-- `multipart/form-data`
-  - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の {{htmlattrxref("type", "input")}}`=file` ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
-- `text/plain`
-  - : プレーンテキストです。ほとんどデバッグでしか役に立ちませんが、送信されたデータを簡単に見ることができます。
+<h2 id="Using_submit_buttons" name="Using_submit_buttons">submit ボタンの使用</h2>
 
-`formenctype` 属性が指定された場合、所属するフォームの {{htmlattrxref("action", "form")}} 属性を上書きします。
+<p><code>&lt;input type="submit"&gt;</code> buttons are used to submit forms. If you want to create a custom button and then customize the behavior using JavaScript, you need to use <code><a href="/ja/docs/Web/HTML/Element/input/button">&lt;input type="button"&gt;</a></code>, or better still, a {{htmlelement("button")}} element.</p>
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+<p>If you choose to use <code>&lt;button&gt;</code> elements to create the buttons in your form, keep this in mind: if there's only one <code>&lt;button&gt;</code> inside the {{HTMLElement("form")}}, that button will be treated as the "submit" button. So you should be in the habit of expressly specifying which button is the submit button.</p>
 
-### {{htmlattrdef("formmethod")}}
+<h3 id="A_simple_submit_button">A simple submit button</h3>
 
-文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの {{htmlattrxref("method", "form")}} を上書きします。許可されている値は次の通りです。
+<p>We'll begin by creating a form with a simple submit button:</p>
 
-- `get`
-  - : URL は `formaction` または {{htmlattrxref("action", "form")}} 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または {{htmlattrxref("enctype", "form")}} 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("get")}} リクエストを用いてサーバーに送信されます。このメソッドは ASCII 文字のみを含む単純なフォームでうまく動作し、副作用はありません。これが既定値です。
-- `post`
-  - : フォームのデータは、 `formaction` または {{htmlattrxref("action", "form")}} で指定された URL に HTTP の {{HTTPMethod("post")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。
-- `dialog`
-  - : このメソッドは、入力欄が関連付けられたダイアログを閉じるだけで、フォームのデータをまったく送信しない場合ことを表すために使用します。
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;div&gt;
+    &lt;label for="example"&gt;Let's submit some text&lt;/label&gt;
+    &lt;input id="example" type="text" name="text"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type="submit" value="送信"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+<p>次のように表示されます。</p>
 
-### {{htmlattrdef("formnovalidate")}}
+<p>{{EmbedLiveSample("A_simple_submit_button", 650, 100)}}</p>
 
-A Boolean attribute which, if present, specifies that the form should not be validated before submission to the server. This overrides the value of the {{htmlattrxref("novalidate", "form")}} attribute on the element's owning form.
+<p>テキストフィールドにいくらかテキストを入力してから、送信ボタンを押してみてください。</p>
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+<p>Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be <code>text=<em>usertext</em></code>, where "usertext" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the <code>&lt;form&gt;</code>; see <a href="/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a> for more details.</p>
 
-### {{htmlattrdef("formtarget")}}
+<h3 id="Adding_a_submit_keyboard_shortcut">Adding a submit keyboard shortcut</h3>
 
-A string which specifies a name or keyword that indicates where to display the response received after submitting the form. The string must be the name of a **browsing context** (that is, a tab, window, or {{HTMLElement("iframe")}}. A value specified here overrides any target given by the {{htmlattrxref("target", "form")}} attribute on the {{HTMLElement("form")}} that owns this input.
+<p>Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a submit button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.</p>
 
-In addition to the actual names of tabs, windows, or inline frames, there are a few special keywords that can be used:
+<p>In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination. In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See {{htmlattrxref("accesskey")}} for further details.</p>
 
-- `_self`
-  - : Loads the response into the same browsing context as the one that contains the form. This will replace the current document with the received data. This is the default value used if none is specified.
-- `_blank`
-  - : Loads the response into a new, unnamed, browsing context. This is typically a new tab in the same window as the current document, but may differ depending on the configuration of the {{Glossary("user agent")}}.
-- `_parent`
-  - : Loads the response into the parent browsing context of the current one. If there is no parent context, this behaves the same as `_self`.
-- `_top`
-  - : Loads the response into the top-level browsing context; this is the browsing context that is the topmost ancestor of the current context. If the current context is the topmost context, this behaves the same as `_self`.
+<p>Here's the previous example with the <kbd>s</kbd> access key added:</p>
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;div&gt;
+    &lt;label for="example"&gt;Let's submit some text&lt;/label&gt;
+    &lt;input id="example" type="text" name="text"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type="submit" value="Send"
+     accesskey="s"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
 
-## submit ボタンの使用
+<p>For example, in Firefox for Mac, pressing <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> triggers the Send button, while Chrome on Windows uses <kbd>Alt</kbd>+<kbd>S</kbd>.</p>
 
-`<input type="submit">` buttons are used to submit forms. If you want to create a custom button and then customize the behavior using JavaScript, you need to use [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button), or better still, a {{htmlelement("button")}} element.
+<p>{{EmbedLiveSample("Adding_a_submit_keyboard_shortcut", 650, 100)}}</p>
 
-If you choose to use `<button>` elements to create the buttons in your form, keep this in mind: if there's only one `<button>` inside the {{HTMLElement("form")}}, that button will be treated as the "submit" button. So you should be in the habit of expressly specifying which button is the submit button.
+<p>The problem with the above example is that the user will not know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the {{htmlattrxref("title")}} attribute) can also help, although it's not a complete solution for accessibility purposes.</p>
 
-### A simple submit button
+<h3 id="Disabling_and_enabling_a_submit_button">Disabling and enabling a submit button</h3>
 
-We'll begin by creating a form with a simple submit button:
+<p>To disable a submit button, simply specify the {{htmlattrxref("disabled")}} global attribute on it, like so:</p>
 
-```html
-<form>
-  <div>
-    <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
-  </div>
-  <div>
-    <input type="submit" value="送信">
-  </div>
-</form>
-```
+<div id="disable-example1">
+<pre class="brush: html notranslate">&lt;input type="submit" value="Disabled" disabled&gt;</pre>
+</div>
 
-次のように表示されます。
+<p>You can enable and disable buttons at run time by simply setting <code>disabled</code> to <code>true</code> or <code>false</code>; in JavaScript this looks like <code>btn.disabled = true</code> or <code>btn.disabled = false</code>.</p>
 
-{{EmbedLiveSample("A_simple_submit_button", 650, 100)}}
+<div class="note">
+<p>See the <code><a href="/ja/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button">&lt;input type="button"&gt;</a></code> page for more ideas about enabling and disabling buttons.</p>
+</div>
 
-テキストフィールドにいくらかテキストを入力してから、送信ボタンを押してみてください。
+<h2 id="Validation" name="Validation">検証</h2>
 
-Upon submitting, the data name/value pair gets sent to the server. In this instance, the string will be `text=usertext`, where "usertext" is the text entered by the user, encoded to preserve special characters. Where and how the data is submitted depends on the configuration of the `<form>`; see [Sending form data](/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) for more details.
+<p>送信ボタンは制約の検証には参加しません。制約を受ける実際の値を持っていません。</p>
 
-### Adding a submit keyboard shortcut
+<h2 id="Examples" name="Examples">例</h2>
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a submit button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
+<p>We've included simple examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."</p>
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination. In order to avoid conflicts with the user agent's own keyboard shortcuts, different modifier keys are used for access keys than for other shortcuts on the host computer. See {{htmlattrxref("accesskey")}} for further details.
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-Here's the previous example with the <kbd>s</kbd> access key added:
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'forms.html#submit-button-state-(type=submit)', '&lt;input type="submit"&gt;')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', 'forms.html#submit-button-state-(type=submit)', '&lt;input type="submit"&gt;')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-```html
-<form>
-  <div>
-    <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
-  </div>
-  <div>
-    <input type="submit" value="Send"
-     accesskey="s">
-  </div>
-</form>
-```
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-For example, in Firefox for Mac, pressing <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> triggers the Send button, while Chrome on Windows uses <kbd>Alt</kbd>+<kbd>S</kbd>.
+<p>{{Compat("html.elements.input.input-submit")}}</p>
 
-{{EmbedLiveSample("Adding_a_submit_keyboard_shortcut", 650, 100)}}
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-The problem with the above example is that the user will not know what the access key is! This is especially true since the modifiers are typically non-standard to avoid conflicts. When building a site, be sure to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are). Adding a tooltip to the button (using the {{htmlattrxref("title")}} attribute) can also help, although it's not a complete solution for accessibility purposes.
-
-### Disabling and enabling a submit button
-
-To disable a submit button, simply specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
-
-```html
-<input type="submit" value="Disabled" disabled>
-```
-
-You can enable and disable buttons at run time by simply setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.
-
-> **Note:** See the [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
-
-## 検証
-
-送信ボタンは制約の検証には参加しません。制約を受ける実際の値を持っていません。
-
-## 例
-
-We've included simple examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
-
-## 仕様書
-
-| 仕様書                                                                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'forms.html#submit-button-state-(type=submit)', '&lt;input type="submit"&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'forms.html#submit-button-state-(type=submit)', '&lt;input type="submit"&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-
-## ブラウザーの互換性
-
-{{Compat("html.elements.input.input-submit")}}
-
-## 関連情報
-
-- {{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス
-- [フォームとボタン](/ja/docs/Learn/Forms/Basic_native_form_controls#Actual_buttons)
-- [フォーム (アクセシビリティ)](/ja/docs/Web/Accessibility/ARIA/forms)
-- [HTML フォーム](/ja/docs/Learn/HTML/Forms)
-- {{HTMLElement("button")}} 要素
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+<ul>
+ <li>{{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス</li>
+ <li><a href="/ja/docs/Learn/Forms/Basic_native_form_controls#Actual_buttons">フォームとボタン</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/forms">フォーム (アクセシビリティ)</a></li>
+ <li><a href="/ja/docs/Learn/HTML/Forms">HTML フォーム</a></li>
+ <li>{{HTMLElement("button")}} 要素</li>
+ <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls">CSS プロパティの互換性</a></li>
+</ul>

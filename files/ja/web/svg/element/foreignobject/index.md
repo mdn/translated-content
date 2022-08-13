@@ -7,85 +7,107 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/foreignObject
 ---
-{{SVGRef}}
+<div>{{SVGRef}}</div>
 
-**`<foreignObject>`** [SVG](/ja/docs/Web/SVG) 要素は、異なるユーザーエージェントによって描画されるグラフィックコンテンツを持つ外部 XML 名前空間を含めることを可能にします。含まれた外部グラフィックコンテンツは、SVG 変換や合成の対象となります。
+<p><strong><code>&lt;foreignObject&gt;</code></strong> <a href="/ja/docs/Web/SVG">SVG</a> 要素は、異なるユーザーエージェントによって描画されるグラフィックコンテンツを持つ外部XML名前空間を含めることを可能にします。含まれた外部グラフィックコンテンツは、SVG 変換や合成の対象となります。</p>
 
-The contents of `foreignObject` are assumed to be from a different namespace. Any SVG elements within a `foreignObject` will not be drawn, except in the situation where a properly defined SVG subdocument with a proper `xmlns` attribute specification is embedded recursively. One situation where this can occur is when an SVG document fragment is embedded within another non-SVG document fragment, which in turn is embedded within an SVG document fragment (e.g., an SVG document fragment contains an XHTML document fragment which in turn contains yet another SVG document fragment).
+<p>The contents of <code>foreignObject</code> are assumed to be from a different namespace. Any SVG elements within a <code>foreignObject</code> will not be drawn, except in the situation where a properly defined SVG subdocument with a proper <code>xmlns</code> attribute specification is embedded recursively. One situation where this can occur is when an SVG document fragment is embedded within another non-SVG document fragment, which in turn is embedded within an SVG document fragment (e.g., an SVG document fragment contains an XHTML document fragment which in turn contains yet another SVG document fragment).</p>
 
-Usually, a `foreignObject` will be used in conjunction with the {{SVGElement("switch")}} element and the {{SVGAttr("requiredExtensions")}} attribute to provide proper checking for user agent support and provide an alternate rendering in case user agent support is not available.
+<p>Usually, a <code>foreignObject</code> will be used in conjunction with the {{SVGElement("switch")}} element and the {{SVGAttr("requiredExtensions")}} attribute to provide proper checking for user agent support and provide an alternate rendering in case user agent support is not available.</p>
 
-## 利用可能な場所
+<h2 id="利用可能な場所">利用可能な場所</h2>
 
-{{svginfo}}
+<p>{{svginfo}}</p>
 
-## 例
+<h2 id="例">例</h2>
 
-```xml
-<svg width="400px" height="300px" viewBox="0 0 400 300"
-     xmlns="http://www.w3.org/2000/svg">
-  <desc>This example uses the 'switch' element to provide a
+<pre class="brush: xml">&lt;svg width="400px" height="300px" viewBox="0 0 400 300"
+     xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;desc&gt;This example uses the 'switch' element to provide a
         fallback graphical representation of a paragraph, if
-        XHTML is not supported.</desc>
+        XHTML is not supported.&lt;/desc&gt;
 
-  <!-- The 'switch' element will process the first child element
-       whose testing attributes evaluate to true.-->
-  <switch>
+  &lt;!-- The 'switch' element will process the first child element
+       whose testing attributes evaluate to true.--&gt;
+  &lt;switch&gt;
 
-    <!-- Process the embedded XHTML if the requiredExtensions attribute
+    &lt;!-- Process the embedded XHTML if the requiredExtensions attribute
          evaluates to true (i.e., the user agent supports XHTML
-         embedded within SVG). -->
-    <foreignObject width="100" height="50"
-                   requiredExtensions="http://www.w3.org/1999/xhtml">
-      <!-- XHTML content goes here -->
-      <body xmlns="http://www.w3.org/1999/xhtml">
-        <p>Here is a paragraph that requires word wrap</p>
-      </body>
-    </foreignObject>
+         embedded within SVG). --&gt;
+    &lt;foreignObject width="100" height="50"
+                   requiredExtensions="http://www.w3.org/1999/xhtml"&gt;
+      &lt;!-- XHTML content goes here --&gt;
+      &lt;body xmlns="http://www.w3.org/1999/xhtml"&gt;
+        &lt;p&gt;Here is a paragraph that requires word wrap&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/foreignObject&gt;
 
-    <!-- Else, process the following alternate SVG.
+    &lt;!-- Else, process the following alternate SVG.
          Note that there are no testing attributes on the 'text' element.
          If no testing attributes are provided, it is as if there
-         were testing attributes and they evaluated to true.-->
-    <text font-size="10" font-family="Verdana">
-      <tspan x="10" y="10">Here is a paragraph that</tspan>
-      <tspan x="10" y="20">requires word wrap.</tspan>
-    </text>
-  </switch>
-</svg>
-```
+         were testing attributes and they evaluated to true.--&gt;
+    &lt;text font-size="10" font-family="Verdana"&gt;
+      &lt;tspan x="10" y="10"&gt;Here is a paragraph that&lt;/tspan&gt;
+      &lt;tspan x="10" y="20"&gt;requires word wrap.&lt;/tspan&gt;
+    &lt;/text&gt;
+  &lt;/switch&gt;
+&lt;/svg&gt;
+</pre>
 
-## 属性
+<h2 id="属性">属性</h2>
 
-### グローバル属性
+<h3 id="グローバル属性">グローバル属性</h3>
 
-- [条件処理属性](/ja/docs/Web/SVG/Attribute#Conditional_processing_attributes)
-- [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
-- [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute#Graphical_event_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#Presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+<ul>
+ <li><a href="/ja/docs/Web/SVG/Attribute#Conditional_processing_attributes">条件処理属性</a></li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#Core_attributes">コア属性</a></li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#Graphical_event_attributes">グラフィカルイベント属性</a></li>
+ <li><a href="/ja/docs/Web/SVG/Attribute#Presentation_attributes">プレゼンテーション属性</a></li>
+ <li>{{SVGAttr("class")}}</li>
+ <li>{{SVGAttr("style")}}</li>
+ <li>{{SVGAttr("externalResourcesRequired")}}</li>
+ <li>{{SVGAttr("transform")}}</li>
+</ul>
 
-### 専用属性
+<h3 id="専用属性">専用属性</h3>
 
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("width")}}
-- {{SVGAttr("height")}}
+<ul>
+ <li>{{SVGAttr("x")}}</li>
+ <li>{{SVGAttr("y")}}</li>
+ <li>{{SVGAttr("width")}}</li>
+ <li>{{SVGAttr("height")}}</li>
+</ul>
 
-## DOM インターフェイス
+<h2 id="DOM_インターフェイス">DOM インターフェイス</h2>
 
-この要素は {{domxref("SVGForeignObjectElement")}} インターフェイスを実装します。
+<p>この要素は {{domxref("SVGForeignObjectElement")}} インターフェイスを実装します。</p>
 
-## 仕様
+<h2 id="仕様">仕様</h2>
 
-| 仕様                                                                                                             | 状態                     | コメント   |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'extend.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}}</td>
+   <td>{{Spec2('SVG2')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('SVG1.1', 'extend.html#ForeignObjectElement', '&lt;foreignObject&gt;')}}</td>
+   <td>{{Spec2('SVG1.1')}}</td>
+   <td>初期の定義</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザー互換性
+<h2 id="ブラウザー互換性">ブラウザー互換性</h2>
 
-{{Compat("svg.elements.foreignObject")}}
+
+
+<p>{{Compat("svg.elements.foreignObject")}}</p>

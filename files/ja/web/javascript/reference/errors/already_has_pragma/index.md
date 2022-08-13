@@ -9,43 +9,39 @@ tags:
   - Warning
 translation_of: Web/JavaScript/Reference/Errors/Already_has_pragma
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の警告 "-file- is being assigned a //# sourceMappingURL, but already has one." は、ある JavaScript ソースに対してソースマップが 2 回以上指定されている場合に発生します。
+<p>JavaScript の警告 "-file- is being assigned a //# sourceMappingURL, but already has one." は、ある JavaScript ソースに対してソースマップが 2 回以上指定されている場合に発生します。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```html
-Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
-```
+<pre class="brush: html">Warning: -file- is being assigned a //# sourceMappingURL, but already has one.</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-警告です。 JavaScript の実行が停止されることはありません。
+<p>警告です。 JavaScript の実行が停止されることはありません。</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-JavaScript ソースに対して、ソースマップが複数回指定されています。
+<p>JavaScript ソースに対して、ソースマップが複数回指定されています。</p>
 
-より効率的にサーバから配信するため、しばしば JavaScript ソースの結合や縮小が行われます。 [ソースマップ](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)を使用すると、デバッガーは実行されているコードと元のソースファイルを対応付けできます。ソースマップを割り当てるには、コメントを使用するか JavaScript ファイルにヘッダーを設定するかの 2 つの方法があります。
+<p>より効率的にサーバから配信するため、しばしば JavaScript ソースの結合や縮小が行われます。 <a href="https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">ソースマップ</a>を使用すると、デバッガーは実行されているコードと元のソースファイルを対応付けできます。ソースマップを割り当てるには、コメントを使用するか JavaScript ファイルにヘッダーを設定するかの 2 つの方法があります。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-### ソースマップの設定
+<h3 id="Setting_source_maps">ソースマップの設定</h3>
 
-ファイル内でコメントを使用してソースマップを設定します。
+<p>ファイル内でコメントを使用してソースマップを設定します。</p>
 
-```js example-good
-//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
-```
+<pre class="brush: js example-good">//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map</pre>
 
-あるいは、JavaScript ファイルにヘッダーを設定することもできます。
+<p>あるいは、JavaScript ファイルにヘッダーを設定することもできます。</p>
 
-```js example-good
-X-SourceMap: /path/to/file.js.map
-```
+<pre class="brush: js example-good">X-SourceMap: /path/to/file.js.map</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [ソースマップを使用する – Firefox ツールドキュメント](/ja/docs/Tools/Debugger/How_to/Use_a_source_map)
-- [Introduction to source maps – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+<ul>
+ <li><a href="/ja/docs/Tools/Debugger/How_to/Use_a_source_map">ソースマップを使用する – Firefox ツールドキュメント</a></li>
+ <li><a href="https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">Introduction to source maps – HTML5 rocks</a></li>
+</ul>

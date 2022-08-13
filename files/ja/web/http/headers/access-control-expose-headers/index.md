@@ -9,68 +9,97 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**`Access-Control-Expose-Headers`** レスポンスヘッダーは、レスポンスの一部としてどのヘッダーを公開するかを、その名前を列挙して示します。
+<p><strong><code>Access-Control-Expose-Headers</code></strong> レスポンスヘッダーは、レスポンスの一部としてどのヘッダーを公開するかを、その名前を列挙して示します。</p>
 
-既定では、公開される {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}は 7 つだけです。
+<p>既定では、公開される {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}は7つだけです。</p>
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Content-Language")}}
-- {{HTTPHeader("Content-Length")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Expires")}}
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("Pragma")}}
+<ul>
+ <li>{{HTTPHeader("Cache-Control")}}</li>
+ <li>{{HTTPHeader("Content-Language")}}</li>
+ <li>{{HTTPHeader("Content-Length")}}</li>
+ <li>{{HTTPHeader("Content-Type")}}</li>
+ <li>{{HTTPHeader("Expires")}}</li>
+ <li>{{HTTPHeader("Last-Modified")}}</li>
+ <li>{{HTTPHeader("Pragma")}}</li>
+</ul>
 
-クライアントが他のヘッダーにアクセスできるようにするには、 `Access-Control-Expose-Headers` ヘッダーを使用してヘッダーを列挙する必要があります。
+<p>クライアントが他のヘッダーにアクセスできるようにするには、 <code>Access-Control-Expose-Headers</code> ヘッダーを使用してヘッダーを列挙する必要があります。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Response header", "レスポンスヘッダー")}} |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | いいえ                                                                               |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>いいえ</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Access-Control-Expose-Headers: <header-name>, <header-name>, ...
-    Access-Control-Expose-Headers: *
+<pre class="syntaxbox">Access-Control-Expose-Headers: &lt;header-name&gt;, &lt;header-name&gt;, ...
+Access-Control-Expose-Headers: *
+</pre>
 
-## ディレクティブ
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
 
-- \<header-name>
-  - : ゼロ個以上の[ヘッダー名](/ja/docs/Web/HTTP/Headers)の一覧で、 {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}に含まれないものであり、リソースが使用する可能性があり、公開される可能性があるものです。
-- `*` (ワイルドカード)
-  - : "`*`" の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Cookies) や HTTP の資格情報のないリクエスト) の特殊なワイルドカード値です。資格情報付きのリクエストでは、特別な意味のない "`*`" というヘッダー名として扱われます。
-    なお、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。
+<dl>
+ <dt>&lt;header-name&gt;</dt>
+ <dd>ゼロ個以上の<a href="/ja/docs/Web/HTTP/Headers">ヘッダー名</a>の一覧で、 {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}に含まれないものであり、リソースが使用する可能性があり、公開される可能性があるものです。</dd>
+ <dt><code>*</code> (ワイルドカード)</dt>
+ <dd>"<code>*</code>" の値は、資格情報のないリクエスト (<a href="/ja/docs/Web/HTTP/Cookies">HTTP Cookie</a> や HTTP の資格情報のないリクエスト) の特殊なワイルドカード値です。資格情報付きのリクエストでは、特別な意味のない "<code>*</code>" というヘッダー名として扱われます。<br>
+ なお、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-CORS セーフリストにないレスポンスヘッダーを公開するには、次のように指定します。
+<p>CORS セーフリストにないレスポンスヘッダーを公開するには、次のように指定します。</p>
 
-    Access-Control-Expose-Headers: Content-Length
+<pre>Access-Control-Expose-Headers: Content-Length</pre>
 
-`X-Kuma-Revision` のようなカスタムヘッダーをさらに公開するには、複数のヘッダーをカンマで区切って指定することができます。
+<p><code>X-Kuma-Revision</code> のようなカスタムヘッダーをさらに公開するには、複数のヘッダーをカンマで区切って指定することができます。</p>
 
-    Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision
+<pre>Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision</pre>
 
-資格情報のないリクエストでは、ワイルドカード値を使うこともできます。
+<p>資格情報のないリクエストでは、ワイルドカード値を使うこともできます。</p>
 
-    Access-Control-Expose-Headers: *
+<pre>Access-Control-Expose-Headers: *</pre>
 
-但し、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードの対象にならないので、明示的に列挙する必要があります。
+<p>但し、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードの対象にならないので、明示的に列挙する必要があります。</p>
 
-    Access-Control-Expose-Headers: *, Authorization
+<pre>Access-Control-Expose-Headers: *, Authorization</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                       | 状態                     | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---- |
-| {{SpecName('Fetch','#http-access-control-expose-headers', 'Access-Control-Expose-Headers')}} | {{Spec2("Fetch")}} |      |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Fetch','#http-access-control-expose-headers', 'Access-Control-Expose-Headers')}}</td>
+   <td>{{Spec2("Fetch")}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Access-Control-Expose-Headers")}}
+<p>{{Compat("http.headers.Access-Control-Expose-Headers")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
+<ul>
+ <li>{{HTTPHeader("Access-Control-Allow-Headers")}}</li>
+ <li>{{HTTPHeader("Access-Control-Allow-Origin")}}</li>
+</ul>

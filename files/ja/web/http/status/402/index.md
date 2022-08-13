@@ -10,33 +10,45 @@ tags:
   - ステータスコード
 translation_of: Web/HTTP/Status/402
 ---
-{{HTTPSidebar}}{{SeeCompatTable}}
+<p>{{HTTPSidebar}}{{SeeCompatTable}}</p>
 
-HTTP の **`402 Payment Required`** は、将来使用するために予約されている標準外のクライアントエラーステータスレスポンスコードです。
+<p>HTTP の <strong><code>402 Payment Required</code></strong> は、将来使用するために予約されている標準外のクライアントエラーステータスレスポンスコードです。</p>
 
-このコードは、クライアントが支払いをするまでリクエストを処理できないことを示している場合があります。もともとは電子マネーまたは (マイクロ) ペイメントシステムを有効にするために作成されたもので、リクエストされたコンテンツがクライアントが支払いをするまで利用できないことを示していました。しかしながら、標準的な慣例は存在せず、様々なエンティティが様々な場面で使用しています。
+<p>このコードは、クライアントが支払いをするまでリクエストを処理できないことを示している場合があります。もともとは電子マネーまたは (マイクロ) ペイメントシステムを有効にするために作成されたもので、リクエストされたコンテンツがクライアントが支払いをするまで利用できないことを示していました。しかしながら、標準的な慣例は存在せず、様々なエンティティが様々な場面で使用しています。</p>
 
-## ステータス
+<h2 id="Status" name="Status">ステータス</h2>
 
-    402 Payment Required
+<pre class="syntaxbox notranslate">402 Payment Required</pre>
 
-## レスポンスの例
+<h2 id="Example_response" name="Example_response">レスポンスの例</h2>
 
-```bash
-HTTP/1.1 402 Payment Required
+<pre class="brush: bash notranslate">HTTP/1.1 402 Payment Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                           | 題名                            |
-| ---------------------------------------------------------------- | ------------------------------- |
-| {{RFC("7231", "402 Payment Required" , "6.5.2")}} | HTTP/1.1: Semantics and Content |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "402 Payment Required" , "6.5.2")}}</td>
+   <td>HTTP/1.1: Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.status.402")}}
+<p>{{Compat("http.status.402")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- [HTTP authentication](/ja/docs/Web/HTTP/Authentication)
+<ul>
+ <li><a href="/ja/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
+</ul>

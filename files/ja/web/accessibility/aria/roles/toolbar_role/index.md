@@ -8,34 +8,39 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role
 ---
-### 説明
+<h3 id="Description" name="Description">説明</h3>
 
-このテクニックは、[`toolbar`](https://www.w3.org/TR/wai-aria-1.1/#toolbar) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。
+<p>このテクニックは、<code><a href="https://www.w3.org/TR/wai-aria-1.1/#toolbar" rel="noopener">toolbar</a></code> ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。</p>
 
-### ユーザーエージェントと支援技術への影響
+<h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
 
-> **Note:** **注**: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+<p> </p>
 
-### 例
+<div class="note"><strong>注</strong>: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
 
-#### Example 1:
+<h3 id="Examples" name="Examples">例</h3>
 
-```html
-Code
-```
+<h4 id="Example_1" name="Example_1">Example 1: </h4>
 
-#### 動作する例
+<p> </p>
 
-[W3C toolbar example](https://www.w3.org/TR/wai-aria-practices/examples/toolbar/toolbar.html)
+<pre class="brush: html">Code </pre>
 
-### 注
+<h4 id="Working_Examples" name="Working_Examples">動作する例</h4>
 
-### 使用された ARIA 属性
+<p><a href="https://www.w3.org/TR/wai-aria-practices/examples/toolbar/toolbar.html">W3C toolbar example</a></p>
 
-### 関連する ARIA 技術
+<ul>
+</ul>
 
-### 互換性
+<h3 id="Notes" name="Notes">注</h3>
 
-TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
+<h3 id="ARIA_attributes_used" name="ARIA_attributes_used">使用された ARIA 属性</h3>
 
-### その他のリソース
+<h3 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術</h3>
+
+<h3 id="Compatibility" name="Compatibility">互換性</h3>
+
+<p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
+
+<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>

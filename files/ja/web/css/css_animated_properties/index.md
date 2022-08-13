@@ -12,10 +12,10 @@ tags:
   - ガイド
 translation_of: Web/CSS/CSS_animated_properties
 ---
-{{CSSRef}}
+<div>{{CSSRef}}</div>
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)または [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)を使用すると、**特定の CSS プロパティをアニメーションさせることができます**。*アニメーション*とは、それらの値を所定の時間をかけて徐々に変化させることができることを意味します。
+<p><a href="/ja/docs/Web/CSS/CSS_Animations">CSS アニメーション</a>または <a href="/ja/docs/Web/CSS/CSS_Transitions">CSS トランジション</a>を使用すると、<strong>特定の CSS プロパティをアニメーションさせることができます</strong>。<em>アニメーション</em>とは、それらの値を所定の時間をかけて徐々に変化させることができることを意味します。</p>
 
-アニメーション可能なプロパティは次の通りです。
+<p>アニメーション可能なプロパティは次の通りです。</p>
 
-{{CSSAnimatedProperties}}
+<p>{{CSSAnimatedProperties}}</p>

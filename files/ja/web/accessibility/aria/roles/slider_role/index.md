@@ -8,33 +8,53 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 ---
-このテクニックは、[`slider`](http://www.w3.org/TR/wai-aria/#slider) ロールの使い方を示し、ブラウザーと支援技術に及ぼす影響について説明します。
+<p id="Description"> </p>
 
-`slider` ロールは、ユーザーが所定の範囲内から値を選択できるマークアップに使用されます。 `slider` ロールは、値を変更するために調節するコントロールである「つまみ」に割り当てられます。 ユーザーがつまみとやり取りするとき、アプリケーションはスライダーの `aria-valuenow`（および可能なら `aria-valuetext`）属性をプログラムで調整して現在の値を反映する必要があります。 詳細については、下記の[例](#examples)のセクションを参照してください。
+<p class="summary"><span class="seoSummary">このテクニックは、<code><a href="http://www.w3.org/TR/wai-aria/#slider">slider</a></code> ロールの使い方を示し、ブラウザーと支援技術に及ぼす影響について説明します。</span></p>
 
-### キーボードとフォーカス
+<p><code>slider</code> ロールは、ユーザーが所定の範囲内から値を選択できるマークアップに使用されます。 <code>slider</code> ロールは、値を変更するために調節するコントロールである「つまみ」に割り当てられます。 ユーザーがつまみとやり取りするとき、アプリケーションはスライダーの <code>aria-valuenow</code>（および可能なら <code>aria-valuetext</code>）属性をプログラムで調整して現在の値を反映する必要があります。 詳細については、下記の<a href="#examples">例</a>のセクションを参照してください。</p>
 
-スライダーはキーボードでフォーカス可能で操作可能であるべきです。 ユーザーがタブキーでスライダーにフォーカスを合わせると、フォーカスはつまみに当たるべきです。 つまみはマウスのユーザーがドラッグするコントロールです。 矢印キーは、次のように操作する必要があります（右から左の言語のローカライゼーションは矢印の方向を逆にする必要があります）。
+<h3 id="Keyboard_And_Focus" name="Keyboard_And_Focus">キーボードとフォーカス</h3>
 
-| キー                       | 動作                                                                            |
-| -------------------------- | ------------------------------------------------------------------------------- |
-| 右矢印と上矢印             | 選択した値を増やす                                                              |
-| 左矢印と下矢印             | 選択した値を減らす                                                              |
-| ページアップとページダウン | オプションで、設定した量だけ値を増減します（例えば、0 ～ 100 の範囲で 10 ずつ） |
+<p>スライダーはキーボードでフォーカス可能で操作可能であるべきです。 ユーザーがタブキーでスライダーにフォーカスを合わせると、フォーカスはつまみに当たるべきです。 つまみはマウスのユーザーがドラッグするコントロールです。 矢印キーは、次のように操作する必要があります（右から左の言語のローカライゼーションは矢印の方向を逆にする必要があります）。</p>
 
-## ユーザーエージェントと支援技術への影響
+<table style="width: 70%;">
+ <thead>
+  <tr>
+   <th scope="col">キー</th>
+   <th scope="col">動作</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>右矢印と上矢印</td>
+   <td>選択した値を増やす</td>
+  </tr>
+  <tr>
+   <td>左矢印と下矢印</td>
+   <td>選択した値を減らす</td>
+  </tr>
+  <tr>
+   <td>ページアップとページダウン</td>
+   <td>オプションで、設定した量だけ値を増減します（例えば、0 ～ 100 の範囲で 10 ずつ）</td>
+  </tr>
+ </tbody>
+</table>
 
-> **Note:** **注**: 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+<h2 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h2>
 
-## 例
+<p> </p>
 
-### 例 1: 単純な数値範囲
+<div class="note"><strong>注</strong>: 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
 
-次の例では、単純なスライダーを使用して 1 ～ 100 の値を選択しています。 現在のボリュームは 50 です。 アプリケーションは、ユーザーの入力に応じてプログラムで `aria-valuenow` の値を更新します。
+<h2 id="Examples" name="Examples">例</h2>
 
-```html
-<label for="fader">ボリューム</label>
-<input type="range"
+<h3 id="Example_1_Simple_Numerical_Range" name="Example_1_Simple_Numerical_Range">例 1: 単純な数値範囲</h3>
+
+<p>次の例では、単純なスライダーを使用して 1 ～ 100 の値を選択しています。 現在のボリュームは 50 です。 アプリケーションは、ユーザーの入力に応じてプログラムで <code>aria-valuenow</code> の値を更新します。</p>
+
+<pre class="brush: html">&lt;label for="fader"&gt;ボリューム&lt;/label&gt;
+&lt;input type="range"
   id="fader"
   min="1"
   max="100"
@@ -43,59 +63,68 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
   aria-valuemin="1"
   aria-valuemax="100"
   aria-valuenow="50"
-  oninput="outputUpdate(value)">
-<output for="fader" id="volume">50</output>
-```
+  oninput="outputUpdate(value)"&gt;
+&lt;output for="fader" id="volume"&gt;50&lt;/output&gt;
+</pre>
 
-次のコードスニペットを使用すると、ユーザー入力によって更新された出力を返すことができます。
+<p>次のコードスニペットを使用すると、ユーザー入力によって更新された出力を返すことができます。</p>
 
-    function outputUpdate(vol) {
-      document.querySelector('#volume').value = vol;
-    }
+<pre>function outputUpdate(vol) {
+  document.querySelector('#volume').value = vol;
+}
+</pre>
 
-### 例 2: テキスト値
+<h3 id="Example_2_Text_Values" name="Example_2_Text_Values">例 2: テキスト値</h3>
 
-時には、意味的には数字ではない値を選択するためにスライダーが使用されることがあります。 このような場合、`aria-valuetext` 属性を使用して、現在選択されている値に対して適切なテキスト名を指定します。 次の例では、スライダーを使用して曜日を選択しています。
+<p>時には、意味的には数字ではない値を選択するためにスライダーが使用されることがあります。 このような場合、<code>aria-valuetext</code> 属性を使用して、現在選択されている値に対して適切なテキスト名を指定します。 次の例では、スライダーを使用して曜日を選択しています。</p>
 
-```html
-<label id="day-label">曜日</label>
-<div class="day-slider">
-  <div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-label"
+<pre class="brush: html">&lt;label id="day-label"&gt;曜日&lt;/label&gt;
+&lt;div class="day-slider"&gt;
+  &lt;div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-label"
      aria-valuemin="1"
      aria-valuemax="7"
      aria-valuenow="2
-     aria-valuetext="月曜日">
- </div>
-</div>
-```
+     aria-valuetext="月曜日"&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-以下のコードスニペットは、ユーザーの入力に応答して `aria-valuenow` および `aria-valuetext` 属性を更新する関数を示しています。
+<p>以下のコードスニペットは、ユーザーの入力に応答して <code>aria-valuenow</code> および <code>aria-valuetext</code> 属性を更新する関数を示しています。</p>
 
-```js
-var dayNames = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
+<pre class="brush: js">var dayNames = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
 var updateSlider = function (newValue) {
     var handle = document.getElementById("day-handle");
-    handle.setAttribute("aria-valuenow", newValue.toString());
+    handle<span>.setAttribute(<span class="string">"aria-valuenow"</span><span>, </span><span class="string">newValue.toString()</span><span>);</span></span>
     handle.setAttribute("aria-valuetext", dayNames[newValue]);
 };
-```
+</pre>
 
-## 注
+<h2 id="Notes" name="Notes">注</h2>
 
-## 使用された ARIA 属性
+<p> </p>
 
-- [aria-valuemin](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute")
-- [aria-valuemax](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute")
-- [aria-valuenow](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute "Using the aria-label attribute")
-- [aria-valuetext](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute "Using the aria-required attribute")
-- [aria-orientation](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute "en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute")
+<p> </p>
 
-## 関連する ARIA 技術
+<h2 id="ARIA_attributes_used" name="ARIA_attributes_used">使用された ARIA 属性</h2>
 
-## 互換性
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute">aria-valuemin</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute">aria-valuemax</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute" title="Using the aria-label attribute">aria-valuenow</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute" title="Using the aria-required attribute">aria-valuetext</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute">aria-orientation</a></li>
+</ul>
 
-TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する
+<h2 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術</h2>
 
-## その他のリソース
+<p> </p>
 
-- [slider ロールの WAI-ARIA 仕様](https://www.w3.org/TR/wai-aria-1.1/#slider)（英語）
+<h2 id="Compatibility" name="Compatibility">互換性</h2>
+
+<p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
+
+<h2 id="Additional_resources" name="Additional_resources">その他のリソース</h2>
+
+<ul>
+ <li><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#slider">slider ロールの WAI-ARIA 仕様</a>（英語）</li>
+</ul>

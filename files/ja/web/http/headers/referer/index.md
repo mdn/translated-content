@@ -11,49 +11,79 @@ tags:
   - リファラー
 translation_of: Web/HTTP/Headers/Referer
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**`Referer`** リクエストヘッダーには、現在リクエストされているページへのリンク先を持った直前のウェブページのアドレスが含まれています。 `Referer` ヘッダーにより、サーバーは人々がどこから訪問しに来たかを識別し、分析、ログ、キャッシュの最適化などに利用することができます。
+<p><code><strong>Referer</strong></code> リクエストヘッダーには、現在リクエストされているページへのリンク先を持った直前のウェブページのアドレスが含まれています。 <code>Referer</code> ヘッダーにより、サーバーは人々がどこから訪問しに来たかを識別し、分析、ログ、キャッシュの最適化などに利用することができます。</p>
 
-> **Warning:** **重要**: このヘッダーには無害な用途が多数ありますが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。 詳細情報と緩和策については [Referer header: privacy and security concerns](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns) を参照してください。
+<div class="warning">
+<p><strong>重要</strong>: このヘッダーには無害な用途が多数ありますが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。 詳細情報と緩和策については <a href="/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns">Referer header: privacy and security concerns</a> を参照してください。</p>
+</div>
 
-なお、 referer は実際には "referrer" という単語のスペルミスです。詳しくは {{interwiki("wikipedia", "HTTPリファラ", "Wikipedia の HTTP リファラ")}}を参照してください。
+<p>なお、 referer は実際には "referrer" という単語のスペルミスです。詳しくは {{interwiki("wikipedia", "HTTPリファラ", "Wikipedia の HTTP リファラ")}}を参照してください。</p>
 
-次のような場合は、ブラウザーは `Referer` ヘッダーを送信しません。
+<p>次のような場合は、ブラウザーは <code>Referer</code> ヘッダーを送信しません。</p>
 
-- 参照していたリソースがローカルの "file" または "data" の URI の場合
-- 安全ではない HTTP リクエストが使用されており、それを参照しているページが安全なプロトコル (HTTPS) で受信された場合
+<ul>
+ <li>参照していたリソースがローカルの "file" または "data" の URI の場合</li>
+ <li>安全ではない HTTP リクエストが使用されており、それを参照しているページが安全なプロトコル (HTTPS) で受信された場合</li>
+</ul>
 
-| ヘッダー種別                                                                         | {{Glossary("Request header", "リクエストヘッダー")}} |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | はい                                                                             |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>はい</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Referer: <url>
+<pre class="syntaxbox">Referer: &lt;url&gt;
+</pre>
 
-## ディレクティブ
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
 
-- \<url>
-  - : 現在リクエスト中のページにつながるリンクがある直前のページの、絶対または相対アドレスです。 URL フラグメント (つまり "#section") およびユーザー情報 ("https\://username:password\@example.com/foo/bar/" の "username:password" の部分) は含まれません。リファラーポリシーによっては、オリジン、パス、クエリ文字列が含まれる場合があります。
+<dl>
+ <dt>&lt;url&gt;</dt>
+ <dd>現在リクエスト中のページにつながるリンクがある直前のページの、絶対または相対アドレスです。 URL フラグメント (つまり "#section") およびユーザー情報 ("https://username:password@example.com/foo/bar/" の "username:password" の部分) は含まれません。リファラーポリシーによっては、オリジン、パス、クエリ文字列が含まれる場合があります。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-    Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-    Referer: https://example.com/page?q=123
-    Referer: https://example.com/
+<pre>Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://example.com/page?q=123
+Referer: https://example.com/
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                           | 題名                                                          |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Referer", "5.5.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "Referer", "5.5.2")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Referer")}}
+<p>{{Compat("http.headers.Referer")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
-- {{HTTPHeader("Referrer-Policy")}}
+<ul>
+ <li>{{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}</li>
+ <li>{{HTTPHeader("Referrer-Policy")}}</li>
+</ul>

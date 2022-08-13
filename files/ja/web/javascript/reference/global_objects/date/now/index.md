@@ -9,41 +9,39 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-**`Date.now()`** メソッドは、UTC (協定世界時) での 1970 年 1 月 1 日 0 時 0 分 0 秒 から現在までの経過時間をミリ秒単位で返します。
+<p><strong><code>Date.now()</code></strong> メソッドは、UTC (協定世界時) での 1970 年 1 月 1 日 0 時 0 分 0 秒 から現在までの経過時間をミリ秒単位で返します。</p>
 
-{{EmbedInteractiveExample("pages/js/date-now.html")}}
+<div>{{EmbedInteractiveExample("pages/js/date-now.html")}}</div>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    var timeInMs = Date.now();
+<pre class="syntaxbox notranslate">var <var>timeInMs</var> = Date.now();</pre>
 
-### Return value
+<h3 id="Return_value">Return value</h3>
 
-UNIX 元期からの経過時間をミリ秒単位で表す{{jsxref("Number", "数値")}}。
+<p>UNIX 元期からの経過時間をミリ秒単位で表す{{jsxref("Number", "数値")}}。</p>
 
-## Polyfill
+<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
 
-このメソッドは ECMA-262 第 5 版で標準化されました。このメソッドに対応するよう更新されていないエンジンでは、次の互換コードを使用することにより、実装の欠落を補うことができます。
+<p>このメソッドは ECMA-262 第 5 版で標準化されました。このメソッドに対応するよう更新されていないエンジンでは、次の互換コードを使用することにより、実装の欠落を補うことができます。</p>
 
-```js
-if (!Date.now) {
+<pre class="brush: js notranslate">if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
 }
-```
+</pre>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### 時刻の低精度化
+<h3 id="Reduced_time_precision" name="Reduced_time_precision">時刻の低精度化</h3>
 
-ブラウザーの設定によっては、タイミング攻撃と Fingerprinting に対する保護を提供するために `new Date().getTime()` の精度が落とされていることがあります。
-Firefox では、`privacy.reduceTimerPrecision` が既定で有効になっています。既定値は Firefox 59 では 20 マイクロ秒で、 Firefox 60 では 2 ミリ秒です。
+<p>ブラウザーの設定によっては、タイミング攻撃と Fingerprinting に対する保護を提供するために <code>new Date().getTime()</code> の精度が落とされていることがあります。<br>
+ Firefox では、<code>privacy.reduceTimerPrecision</code> が既定で有効になっています。既定値は Firefox 59 では 20 マイクロ秒で、 Firefox 60 では 2 ミリ秒です。</p>
 
-```js
-// Firefox 60 での時刻の精度の低下（2 ミリ秒）
+<pre class="brush: js notranslate">// Firefox 60 での時刻の精度の低下（2 ミリ秒）
 Date.now()
 // 1519211809934
 // 1519211810362
@@ -57,21 +55,30 @@ Date.now();
 // 1519129858900
 // 1519129864400
 // ...
-```
+</pre>
 
-Firefox では、 `privacy.resistFingerprinting` も有効にできます。この場合、精度は 100 ミリ秒と `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 値のうち大きい方になります。
+<p>Firefox では、 <code>privacy.resistFingerprinting</code> も有効にできます。この場合、精度は 100 ミリ秒と <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code> 値のうち大きい方になります。</p>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.now', 'Date.now')}} |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-date.now', 'Date.now')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.Date.now")}}
+<p>{{Compat("javascript.builtins.Date.now")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{domxref("Performance.now()")}} — ウェブページのパフォーマンス測定のための、ミリ秒以下の分解能を持つタイムスタンプを提供
-- {{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}
+<ul>
+ <li>{{domxref("Performance.now()")}} — ウェブページのパフォーマンス測定のための、ミリ秒以下の分解能を持つタイムスタンプを提供</li>
+ <li>{{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}</li>
+</ul>

@@ -1,5 +1,5 @@
 ---
-title: <xsl:processing-instruction>
+title: '<xsl:processing-instruction>'
 slug: Web/XSLT/Element/processing-instruction
 tags:
   - XSLT
@@ -8,31 +8,33 @@ tags:
   - 要素
 translation_of: Web/XSLT/Element/processing-instruction
 ---
-{{ XsltRef() }}
+<p>{{ XsltRef() }}</p>
 
-`<xsl:processing-instruction>` 要素は処理命令を出力文書に書き込みます。
+<p><code>&lt;xsl:processing-instruction&gt;</code> 要素は処理命令を出力文書に書き込みます。</p>
 
-### 構文
+<h3 id="Syntax" name="Syntax">構文</h3>
 
-    <xsl:processing-instruction name=NAME> TEMPLATE </xsl:processing-instruction>
+<pre>&lt;xsl:processing-instruction name=NAME&gt; TEMPLATE &lt;/xsl:processing-instruction&gt;</pre>
 
-### 必須属性
+<h3 id="Required_Attributes" name="Required_Attributes">必須属性</h3>
 
-- `name`
-  - : この処理命令の名前を指定します。
+<dl>
+ <dt><code>name</code></dt>
+ <dd>この処理命令の名前を指定します。</dd>
+</dl>
 
-### 任意属性
+<h3 id="Optional_Attributes" name="Optional_Attributes">任意属性</h3>
 
-なし
+<p>なし</p>
 
-### タイプ
+<h3 id="Type" name="Type">タイプ</h3>
 
-命令は、テンプレート内に表示されます。
+<p>命令は、テンプレート内に表示されます。</p>
 
-### 定義
+<h3 id="Defined" name="Defined">定義</h3>
 
-XSLT, section 7.3
+<p>XSLT, section 7.3</p>
 
-### Gecko のサポート
+<h3 id="Gecko_support" name="Gecko_support">Gecko のサポート</h3>
 
-サポート済み
+<p>サポート済み</p>

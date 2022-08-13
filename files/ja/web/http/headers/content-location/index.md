@@ -9,108 +9,152 @@ tags:
   - リファレンス
 translation_of: Web/HTTP/Headers/Content-Location
 ---
-{{HTTPSidebar}}
+<div>{{HTTPSidebar}}</div>
 
-**`Content-Location`** ヘッダーは、返されるデータの代替場所を示します。主な用途は[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)の結果として送信されたリソースの URL を示すことです。
+<p><strong><code>Content-Location</code></strong> ヘッダーは、返されるデータの代替場所を示します。主な用途は<a href="/ja/docs/Web/HTTP/Content_negotiation">コンテンツネゴシエーション</a>の結果として送信されたリソースの URL を示すことです。</p>
 
-{{HTTPHeader("Location")}} と `Content-Location` は異なります。`Location` はリダイレクトの URL を示し、`Content-Location` は今後のコンテンツネゴシエーションなしでリソースへのアクセスに使用する直接 URL を示します。 `Location` はレスポンスに関連付けられたヘッダーで、 `Content-Location` は返されたデータに関連付けられます。この区別は[例](#Examples)がないと抽象的に見えるかもしれません。
+<p>{{HTTPHeader("Location")}} と <code>Content-Location</code> は異なります。<code>Location</code> はリダイレクトの URL を示し、<code>Content-Location</code> は今後のコンテンツネゴシエーションなしでリソースへのアクセスに使用する直接 URL を示します。 <code>Location</code> はレスポンスに関連付けられたヘッダーで、 <code>Content-Location</code> は返されたデータに関連付けられます。この区別は<a href="#Examples">例</a>がないと抽象的に見えるかもしれません。</p>
 
-| ヘッダー種別                                                                         | {{Glossary("Entity header", "エンティティヘッダー")}} |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| {{Glossary("Forbidden header name", "禁止ヘッダー名")}} | いいえ                                                                               |
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">ヘッダー種別</th>
+   <td>{{Glossary("Entity header", "エンティティヘッダー")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+   <td>いいえ</td>
+  </tr>
+ </tbody>
+</table>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    Content-Location: <url>
+<pre class="syntaxbox">Content-Location: &lt;url&gt;
+</pre>
 
-## ディレクティブ
+<h2 id="Directives" name="Directives">ディレクティブ</h2>
 
-- \<url>
-  - : (リクエスト URL に対する) [相対](/ja/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs) URL または[絶対](/ja/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs) URL。
+<dl>
+ <dt>&lt;url&gt;</dt>
+ <dd>(リクエスト URL に対する) <a href="/ja/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs">相対</a> URL または<a href="/ja/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs">絶対</a> URL。</dd>
+</dl>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### サーバーからのデータのリクエストを様々な形式で行う
+<h3 id="Requesting_data_from_a_server_in_different_formats" name="Requesting_data_from_a_server_in_different_formats">サーバーからのデータのリクエストを様々な形式で行う</h3>
 
-たとえば、サイトの API が {{glossary("JSON")}}, {{glossary("XML")}}, または [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) 形式でデータを返すとします。特定の文書の URL が `https://example.com/documents/foo` である場合、サイトはリクエストの {{HTTPHeader("Accept")}} ヘッダーに応じて `Content-Location` 用に異なる URL を返すことができます。
+<p>たとえば、サイトの API が {{glossary("JSON")}}, {{glossary("XML")}}, または <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> 形式でデータを返すとします。特定の文書の URL が <code>https://example.com/documents/foo</code> である場合、サイトはリクエストの {{HTTPHeader("Accept")}} ヘッダーに応じて <code>Content-Location</code> 用に異なる URL を返すことができます。</p>
 
-| リクエストヘッダー                    | レスポンスヘッダー                      |
-| ------------------------------------- | --------------------------------------- |
-| `Accept: application/json, text/json` | `Content-Location: /documents/foo.json` |
-| `Accept: application/xml, text/xml`   | `Content-Location: /documents/foo.xml`  |
-| `Accept: text/plain, text/*`          | `Content-Location: /documents/foo.txt`  |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">リクエストヘッダー</th>
+   <th scope="col">レスポンスヘッダー</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>Accept: application/json, text/json</code></td>
+   <td><code>Content-Location: /documents/foo.json</code></td>
+  </tr>
+  <tr>
+   <td><code>Accept: application/xml, text/xml</code></td>
+   <td><code>Content-Location: /documents/foo.xml</code></td>
+  </tr>
+  <tr>
+   <td><code>Accept: text/plain, text/*</code></td>
+   <td><code>Content-Location: /documents/foo.txt</code></td>
+  </tr>
+ </tbody>
+</table>
 
-これらの URL は例です。サイトではクエリ文字列パラメータ：`/documents/foo?format=json`、`/documents/foo?format=xml` など、任意の URL パターンでさまざまなファイルタイプを提供できます。
+<p>これらの URL は例です。サイトではクエリ文字列パラメータ：<code>/documents/foo?format=json</code>、<code>/documents/foo?format=xml</code> など、任意の URL パターンでさまざまなファイルタイプを提供できます。</p>
 
-その後クライアントはその特定の URL で JSON バージョンが利用可能であることを覚えて、次に文書を要求するときにコンテンツのネゴシエーションをスキップします。
+<p>その後クライアントはその特定の URL で JSON バージョンが利用可能であることを覚えて、次に文書を要求するときにコンテンツのネゴシエーションをスキップします。</p>
 
-サーバーは {{HTTPHeader("Accept-Language")}} のような他の[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)ヘッダーを考慮することもできます。
+<p>サーバーは {{HTTPHeader("Accept-Language")}} のような他の<a href="/ja/docs/Web/HTTP/Content_negotiation">コンテンツネゴシエーション</a>ヘッダーを考慮することもできます。</p>
 
-### 新しい文書を指す (HTTP 201 Created)
+<h3 id="Pointing_to_a_new_document_HTTP_201_Created" name="Pointing_to_a_new_document_HTTP_201_Created">新しい文書を指す (HTTP 201 Created)</h3>
 
-サイトの API を通じて新しいブログ投稿を作成しているとします。
+<p>サイトの API を通じて新しいブログ投稿を作成しているとします。</p>
 
-    PUT /new/post
-    Host: example.com
-    Content-Type: text/markdown
+<pre>PUT /new/post
+Host: example.com
+Content-Type: text/markdown
 
-    # My first blog post!
+# My first blog post!
 
-    I made this through `example.com`'s API. I hope it worked.
+I made this through `example.com`'s API. I hope it worked.
+</pre>
 
-サイトは投稿が公開されたことを確認する一般的な成功メッセージを返します。サーバーは `Content-Location` を使用して新しい投稿がどこにあるかを指定します。
+<p>サイトは投稿が公開されたことを確認する一般的な成功メッセージを返します。サーバーは <code>Content-Location</code> を使用して新しい投稿がどこにあるかを指定します。</p>
 
-    HTTP/1.1 201 Created
-    Content-Type: text/plain; charset=utf-8
-    Content-Location: /my-first-blog-post
+<pre>HTTP/1.1 201 Created
+Content-Type: text/plain; charset=utf-8
+Content-Location: /my-first-blog-post
 
-    ✅ Success!
+✅ Success!
+</pre>
 
-### トランザクションの結果の URL を示す
+<h3 id="Indicating_the_URL_of_a_transactions_result" name="Indicating_the_URL_of_a_transactions_result">トランザクションの結果の URL を示す</h3>
 
-サイトの別のユーザーに送金するための [`<form>`](/ja/docs/Web/HTML/Element/form) があるとします。
+<p>サイトの別のユーザーに送金するための <code><a href="/ja/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> があるとします。</p>
 
-```html
-<form action="/send-payment" method="post">
-  <p>
-    <label>Who do you want to send the money to?
-      <input type="text" name="recipient">
-    </label>
-  </p>
+<pre class="brush: html">&lt;form action="/send-payment" method="post"&gt;
+  &lt;p&gt;
+    &lt;label&gt;Who do you want to send the money to?
+      &lt;input type="text" name="recipient"&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
 
-  <p>
-    <label>How much?
-      <input type="number" name="amount">
-    </label>
-  </p>
+  &lt;p&gt;
+    &lt;label&gt;How much?
+      &lt;input type="number" name="amount"&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
 
-  <button type="submit">Send Money</button>
-</form>
-```
+  &lt;button type="submit"&gt;Send Money&lt;/button&gt;
+&lt;/form&gt;
+</pre>
 
-フォームが送信されると、サイトは取引の領収書を生成します。サーバーは `Content-Location` を使用して、将来のアクセスのために領収書の URL を示すことができます。
+<p>フォームが送信されると、サイトは取引の領収書を生成します。サーバーは <code>Content-Location</code> を使用して、将来のアクセスのために領収書の URL を示すことができます。</p>
 
-    HTTP/1.1 200 OK
-    Content-Type: text/html; charset=utf-8
-    Content-Location: /my-receipts/38
+<pre>HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Location: /my-receipts/38
 
-    <!doctype html>
-    (Lots of HTML…)
+&lt;!doctype html&gt;
+<em>(Lots of HTML…)</em>
 
-    <p>You sent $38.00 to ExampleUser.</p>
+&lt;p&gt;You sent $38.00 to ExampleUser.&lt;/p&gt;
 
-    (Lots more HTML…)
+<em>(Lots more HTML…)</em>
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                       | 題名                                                          |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7231", "Content-Location", "3.1.4.2")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("http.headers.Content-Location")}}
+<p>{{Compat("http.headers.Content-Location")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{HTTPHeader("Location")}}
+<ul>
+ <li>{{HTTPHeader("Location")}}</li>
+</ul>

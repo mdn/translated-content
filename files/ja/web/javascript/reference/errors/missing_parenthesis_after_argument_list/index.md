@@ -2,61 +2,56 @@
 title: 'SyntaxError: missing ) after argument list'
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+- Error
+- Errors
+- JavaScript
+- SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
-{{jsSidebar("Errors")}}
+<div>{{jsSidebar("Errors")}}</div>
 
-JavaScript の例外 "missing ) after argument list" は、関数の呼び出し方にエラーがあった場合に発生します。これは入力ミス、演算子の欠落、文字列のエスケープ忘れなどの可能性があります。
+<p>JavaScript の例外 "missing ) after argument list" は、関数の呼び出し方にエラーがあった場合に発生します。これは入力ミス、演算子の欠落、文字列のエスケープ忘れなどの可能性があります。</p>
 
-## エラーメッセージ
+<h2 id="Message">エラーメッセージ</h2>
 
-```js
-SyntaxError: Expected ')' (Edge)
+<pre class="brush: js">SyntaxError: Expected ')' (Edge)
 SyntaxError: missing ) after argument list (Firefox)
-```
+</pre>
 
-## エラーの種類
+<h2 id="Error_type">エラーの種類</h2>
 
-{{jsxref("SyntaxError")}}
+<p>{{jsxref("SyntaxError")}}</p>
 
-## エラーの原因
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-関数の呼び出し方にエラーがあります。たとえば、入力ミスや演算子の記述忘れ、文字列のエスケープ忘れの可能性が考えられます。
+<p>関数の呼び出し方にエラーがあります。たとえば、入力ミスや演算子の記述忘れ、文字列のエスケープ忘れの可能性が考えられます。</p>
 
-## 例
+<h2 id="Examples">例</h2>
 
-文字列を連結する "+" 演算子がないため、JavaScript は `log` 関数の引数として、 `"PI: "` だけを想定します。この場合、閉じ括弧で終了する必要があります。
+<p>文字列を連結する "+" 演算子がないため、JavaScript は <code>log</code> 関数の引数として、 <code>"PI: "</code> だけを想定します。この場合、閉じ括弧で終了する必要があります。</p>
 
-```js example-bad
-console.log('PI: ' Math.PI);
+<pre class="brush: js example-bad">console.log('PI: ' Math.PI);
 // SyntaxError: missing ) after argument list
-```
+</pre>
 
-"`+`" 演算子を追加することで、`log` の呼び出しを修正できます。
+<p>"<code>+</code>" 演算子を追加することで、<code>log</code> の呼び出しを修正できます。</p>
 
-```js example-good
-console.log('PI: ' + Math.PI);
-// "PI: 3.141592653589793"
-```
+<pre class="brush: js example-good">console.log('PI: ' + Math.PI);
+// "PI: 3.141592653589793"</pre>
 
-### 終了していない文字列
+<h3 id="Unterminated_strings">終了していない文字列</h3>
 
-```js example-bad
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
-// SyntaxError: missing ) after argument list
-```
+<pre class="brush: js example-bad">console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
+// SyntaxError: missing ) after argument list</pre>
 
-ここで、 JavaScript は `);` が文字列の中にあると誤解して無視し、結局、 `);` が `console.log` の末尾に入っていることを知らないままになってしまいます。これを修正するには、 `'` を "Script" の文字列の後に入れます。
+<p>ここで、 JavaScript は <code>);</code> が文字列の中にあると誤解して無視し、結局、 <code>);</code> が <code>console.log</code> の末尾に入っていることを知らないままになってしまいます。これを修正するには、 <code>'</code> を "Script" の文字列の後に入れます。</p>
 
-```js example-good
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\"');
+<pre class="brush: js example-good">console.log('"Java" + "Script" = \"' + 'Java' + 'Script\"');
 // '"Java" + "Script" = "JavaScript"'
-```
+</pre>
 
-## 関連情報
+<h2 id="See_also">関連情報</h2>
 
-- [関数](/ja/docs/Web/JavaScript/Guide/Functions)
+<ul>
+ <li><a href="/ja/docs/Web/JavaScript/Guide/Functions">関数</a></li>
+</ul>

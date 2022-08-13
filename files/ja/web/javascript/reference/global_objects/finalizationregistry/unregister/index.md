@@ -10,36 +10,38 @@ tags:
   - メソッド
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
 ---
-{{JSRef}}
+<div>{{JSRef}}</div>
 
-`unregister` は対象のオブジェクトを {{jsxref("FinalizationRegistry")}} インスタンスから登録解除します。
+<p><code>unregister</code> は対象のオブジェクトを {{jsxref("FinalizationRegistry")}} インスタンスから登録解除します。</p>
 
-## 構文
+<h2 id="Syntax" name="Syntax">構文</h2>
 
-    registry.unregister(unregisterToken);
+<pre class="syntaxbox notranslate"><code><var>registry</var>.unregister(<var>unregisterToken</var>);</code>
+</pre>
 
-### 引数
+<h3 id="Parameters" name="Parameters">引数</h3>
 
-- `unregisterToken`
-  - : 対象オブジェクトを登録したときに {{jsxref("FinalizationRegistry.prototype.register", "register")}} メソッドで使用したトークンです。
+<dl>
+ <dt><code><var>unregisterToken</var></code></dt>
+ <dd>対象オブジェクトを登録したときに {{jsxref("FinalizationRegistry.prototype.register", "register")}} メソッドで使用したトークンです。</dd>
+</dl>
 
-### 返値
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-`undefined` です。
+<p><code>undefined</code> です。</p>
 
-## 注
+<h2 id="Notes" name="Notes">注</h2>
 
-対象オブジェクトの回収が完了すると、レジストリに登録された状態ではなくなります。クリーンアップコールバックですべてに `unregister` を行う必要はありません。クリーンアップコールバックを受信しておらず、クリーンアップコールバックを受信する必要がなくなった場合にのみ `unregister` を呼び出してください。
+<p>対象オブジェクトの回収が完了すると、レジストリに登録された状態ではなくなります。クリーンアップコールバックですべてに <code>unregister</code> を行う必要はありません。クリーンアップコールバックを受信しておらず、クリーンアップコールバックを受信する必要がなくなった場合にのみ <code>unregister</code> を呼び出してください。</p>
 
-## 例
+<h2 id="Examples" name="Examples">例</h2>
 
-### unregister の使用
+<h3 id="Using_unregister" name="Using_unregister">unregister の使用</h3>
 
-この例では、登録解除トークンとして同じオブジェクトを使用して対象のオブジェクトを登録し、その後、 `unregister` を介して対象のオブジェクトの登録を解除します。
+<p>この例では、登録解除トークンとして同じオブジェクトを使用して対象のオブジェクトを登録し、その後、 <code>unregister</code> を介して対象のオブジェクトの登録を解除します。</p>
 
-```js
-class Thingy {
-    #cleanup = label => {
+<pre class="brush: js notranslate">class Thingy {
+    #cleanup = label =&gt; {
     //         ^^^^^−−−−− held value
         console.error(
             `The \`release\` method was never called for the object with the label "${label}"`
@@ -66,12 +68,11 @@ class Thingy {
         //                        ^^^^−−−−− unregister token
     }
 }
-```
+</pre>
 
-この例では、登録解除トークンとして別のオブジェクトを使用して対象のオブジェクトを登録しています。
+<p>この例では、登録解除トークンとして別のオブジェクトを使用して対象のオブジェクトを登録しています。</p>
 
-```js
- {
+<pre class="brush: js notranslate"> {
     //         ^^^^−−−−− held value
         console.error(
             `The \`release\` method was never called for the \`Thingy\` for the file "${file.name}"`
@@ -103,18 +104,29 @@ class Thingy {
         }
     }
 }
-```
+</pre>
 
-## 仕様書
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
-| 仕様書                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-finalization-registry.prototype.unregister', 'FinalizationRegistry.prototype.unregister')}} |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('WeakRefs', '#sec-finalization-registry.prototype.unregister', 'FinalizationRegistry.prototype.unregister')}}</td>
+  </tr>
+ </tbody>
+</table>
 
-## ブラウザーの互換性
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-{{Compat("javascript.builtins.FinalizationRegistry.unregister")}}
+<p>{{Compat("javascript.builtins.FinalizationRegistry.unregister")}}</p>
 
-## 関連情報
+<h2 id="See_also" name="See_also">関連情報</h2>
 
-- {{jsxref("FinalizationRegistry")}}
+<ul>
+ <li>{{jsxref("FinalizationRegistry")}}</li>
+</ul>
