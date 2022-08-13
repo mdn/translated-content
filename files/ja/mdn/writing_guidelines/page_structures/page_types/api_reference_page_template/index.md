@@ -1,146 +1,155 @@
 ---
-title: API reference page template
+title: API リファレンスページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
+page-type: mdn-writing-guide
 tags:
-  - API
-  - Template
-  - reference page
-translation_of: MDN/Structures/Page_types/API_reference_page_template
+  - meta
+  - writing-guide
+browser-compat: path.to.feature.インターフェイス名
+translation_of: MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template
 original_slug: MDN/Structures/Page_types/API_reference_page_template
+l10n:
+  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
-<p>{{MDNSidebar}}</p>
+{{MDNSidebar}}
 
-<div class="notecard note">
-<h2 id="Remove_before_publishing">公開前に削除してください</h2>
+## ページの先頭部分
 
-<h3 id="Title_and_slug">タイトルとスラッグ</h3>
+MDN Web Docs のページにおけるページの先頭部分は、以下の一覧と記述した YAML ヘッダーで構成されます。ページの先頭にあるこの YAML コンテンツは、「ページフロントマター」または「ページメタデータ」を定義するために使用されます。特定のインターフェイスを記述する際には、その値を適切に更新する必要があります。
 
-<p>API リファレンスページでは、<em>そのページで説明しているインターフェイスの名前</em>を<em>タイトル</em>にしてください。例えば、 <a href="/ja/docs/Web/API/Request">Request</a> インターフェイスのページでは、<em>タイトル</em> を <em>Request</em> にしてください。</p>
+> **Note:** _この説明文全体を削除してから公開してください_
+>
+>
+> ```plain
+> ---
+> title: インターフェイス名
+> slug: Web/API/インターフェイス名
+> page-type: web-api-interface
+> tags:
+>   - API
+>   - インターフェイス名
+>   - API 名
+>   - Reference
+>   - Experimental
+>
+> browser-compat: path.to.feature.NameOfTheInterface
+> ---
+> ```
+>
+> - **title**
+>   - : タイトルの見出しは、ページの最上部に表示されます。これはインターフェイスの名前だけです。例えば、 [Request](/ja/docs/Web/API/Request) インターフェイスのページには _Request_ というタイトルを付けます。
+> - **slug**
+>   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/API/インターフェイス名` のような形式になります。例えば、 [Request](/ja/docs/Web/API/Request) のスラッグは "Web/API/Request" になります。
+> - **page-type**
+>   - : `page-type` キーは、 Web/API のインターフェイスでは常に `web-api-interface` です。
+> - **tags**
+>   - : **API**, **Reference**, **Interface**, _API 名_ (**WebVR** など), _インターフェイス名_ (**IDBIndex** など)、 **Experimental** （この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)）である場合、**Secure context** （安全なコンテキストでのみ利用可能な場合）、**Deprecated** （[非推奨](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨と廃止)である場合） のタグを含めてください。
+>     任意で、その技術に関する情報を探すときに検索される可能性のある用語を表す他のタグを記載することができます。例えば、 WebVR インターフェイスのページでは、 **VR** と **Virtual reality** を含めています。
+> - **browser-compat**
+>   - : プレースホルダーの値 `path.to.feature.NameOfTheMethod` を [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data) にあるこのメソッドのクエリー文字列に置き換えてください。
+>     ツールチェインが自動的に互換性セクションと仕様書セクションのためにキーを使用します（`\{{Compat}}` と `\{{Specifications}}` マクロを置き換えます）。
+>
+>     なお、先に[ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data)に API メソッドのエントリーを作成/更新する必要があり、このエントリーに仕様書を入れておくことが必要です。
+>     [これを行うためのガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)を参照してください。
 
-<p><em>スラッグ</em> (URL の最後の部分) も、<em>そのページで説明しているインターフェイスの名前</em>にしてください。したがって、 <code>Request</code> のスラッグは <em>Request</em> です。これはふつう、自動的に設定されます。</p>
+## ページ先頭のマクロ
 
-<h3 id="Top_macros">先頭で使用するマクロ</h3>
+既定では、テンプレートの先頭に 5 つのマクロ呼び出しがあります。以下のアドバイスに従って、これらを更新または削除する必要があります。
+> **Note:** _この説明文全体を削除してから公開してください_
+>
+>
+> - `\{{APIRef("<em>GroupDataName</em>")}}` — これは、左側に現在のページに関連するリンクをすばやく参照できるように表示する、リファレンスサイドバーを生成します。 例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、これは API の他のページを指しています。API に適したサイドバーを生成するには、弊社の KumaScript GitHub リポジトリーに GroupData の項目を追加し、_GroupDataName_ の代わりにマクロ呼び出し内にその項目の名前を記載する必要があります。この方法については、 [API リファレンスのサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) ガイドを参照してください。
+> - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。もし、あなたが文書化している技術が実験的なものでないなら、これを削除すべきです。実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのためのエントリーを記入する必要があります。
+> - `\{{SecureContext_Header}}` — これは **安全なコンテキスト** バナーを生成し、この技術が[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。もしそうでないなら、マクロの呼び出しを削除してください。そうである場合は、[安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
+> - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#廃止と非推奨)であることを示します。そうではない場合は、マクロ呼び出しを削除してください。
+> - `\{{Interface_Overview("<em>GroupDataName</em>")}} {{Experimental_Inline}}` — このページ本文（コンストラクタ、プロパティ、メソッド、イベント）を生成します。
 
-<p>既定では、テンプレートの先頭に 4 つのマクロ呼び出しがあります。以下のアドバイスに従って、更新や削除をしてください。</p>
+{{APIRef("GroupDataName")}}{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}
 
-<ul>
- <li>\{{APIRef("<em>グループデータ名</em>")}} — これは左端にあるサイドバーを生成し、現在のページに関連するクイックリファレンスのリンクを表示します。例えば、 <a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の中の各ページは同じサイドバーを持ち、この API 内の他のページを指します。 API で正しいサイドバーを生成するには、 KumaScript の GitHub リポジトリにグループデータの項目を追加し、マクロ呼び出しの中で<em>グループデータ名</em>のところに項目名を入れる必要があります。これを行う方法についてのガイドは <a href="/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API リファレンスサイドバー</a>を参照してください。</li>
- <li>\{{SeeCompatTable}} — これは、 <strong>This is an experimental technology</strong> バナーを生成して、技術が<a href="/ja/docs/MDN/Guidelines/Conventions_definitions#experimental">実験的</a>であることを示します。文書化しようとしている技術が実験的でない場合は、これを削除することができます。実験的な技術であり、その技術が Firefox のプレハブに隠されている場合は、 <a href="/ja/docs/Mozilla/Firefox/Experimental_features">Firefox における試験的機能</a>のページにそのための項目を記入する必要があります。</li>
- <li>\{{SecureContext_Header}} — これは <strong>Secure context</strong> バナーを生成し、その技術が<a href="/ja/docs/Web/Security/Secure_Contexts">安全なコンテキスト</a>でのみ利用可能であることを示します。そうでない場合、マクロ呼び出しを削除することができます。存在する場合は、<a href="/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">安全なコンテキストに制限されている機能</a>ページにも項目を記入してください。</li>
- <li>\{{Deprecated_Header}} — これは <strong>Deprecated</strong> バナーを生成し、その技術が<a href="/ja/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">非推奨</a>であることを示します。そうでない場合は、このマクロを削除することができます。</li>
- <li>\{{Interface_Overview("<em>GroupDataName</em>")}} {{Experimental_Inline}} — これはページの本文 (コンストラクター、プロパティ、メソッド、イベント) を生成します。</li>
-</ul>
+概要の段落 - まず、インターフェイスの名前、それがどのインターフェイスに属しているか、そしてそれが何をするものなのかを述べます。これはできれば 1、2 の短い文にすべきです。対応する API ランディングページのインターフェイスの概要から、この大部分をコピーすることができます。
 
-<h3 id="Tags">タグ</h3>
+{{InheritanceDiagram}}
 
-<p>In an API reference page, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>API</strong>, <strong>Reference</strong>, <strong>Interface</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), the name of the interface (e.g. <strong>Request</strong>), <strong>Experimental</strong> (if the technology is <a href="/ja/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only), and <strong>Deprecated</strong> (if it is <a href="/ja/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
+## コンストラクター
 
-<p>Optionally, you can elect to include some other tags that effective represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p>
+- {{DOMxRef("NameOfTheInterface.NameOfTheInterface", "NameOfTheInterface()")}}
+  - : {{DOMxRef("NameOfTheInterface")}} オブジェクトのインスタンスを生成します。
 
-<h3 id="Browser_compatibility">ブラウザーの互換性</h3>
+## プロパティ
 
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/ja/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
+_親インターフェイスである {{DOMxRef("NameOfParentInterface")}} から継承しているプロパティもあります。_ （注: このインターフェイスが他のインターフェイスを継承していない場合は、この行全体を削除してください）。
 
-<p>Once that is done, you can show the compat data for the interface with a \{{Compat(…)}} macro call.</p>
-</div>
+- {{DOMxRef("NameOfTheInterface.property1")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : ここには、プロパティの簡単な説明と、それが何をするものかを記載してください。各プロパティについて、1つの用語と定義を記載します。プロパティが読み取り専用/実験的/非推奨でない場合、関連するマクロの呼び出しを削除してください。
+- {{DOMxRef("NameOfTheInterface.property2")}}
+  - : etc.
 
-<p>{{APIRef("GroupDataName")}}{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}</p>
+## メソッド
 
-<p class="summary">The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be 1 or 2 short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.</p>
+_親インターフェイスである {{DOMxRef("NameOfParentInterface")}} から継承しているメソッドもあります。_ （注: このインターフェイスが他のインターフェイスを継承していない場合は、この行全体を削除してください）。
 
-<p>{{InheritanceDiagram}}</p>
+- {{DOMxRef("NameOfTheInterface.method1()")}} {{Experimental_Inline}} {{Deprecated_Inline}}
+  - : ここにメソッドの簡単な説明と何をするものかを記載してください。各メソッドについて、1つの用語と定義を記載してください。メソッドが実験的/非推奨でない場合、関連するマクロの呼び出しを削除してください。
+- {{DOMxRef("NameOfTheInterface.method2()")}}
+  - : etc.
 
-<h2 id="Constructor">コンストラクター</h2>
+## イベント
 
-<dl>
- <dt>{{DOMxRef("NameOfTheInterface.NameOfTheInterface")}}</dt>
- <dd>Creates a new instance of the {{DOMxRef("NameOfTheInterface")}} object.</dd>
-</dl>
+これらのイベントは [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナーを割り当てることで待ち受けることができます。
 
-<h2 id="Properties">プロパティ</h2>
+- [`eventname1`](#)
+  - : ～時に発生します（イベントがいつ発行されるかの説明を記載する）。
+    `oneventname1` プロパティからも利用できます。
+- [`eventname2`](#)
+  - : ～時に発生します _(イベントがいつ発行されるかの説明を記載する)_.
+    `oneventname1` プロパティからも利用できます。
+- etc.
+  - : ～時に発生します…
 
-<p><em>Also inherits properties from its parent interface, {{DOMxRef("NameOfParentInterface")}}.</em> (Note: If the interface doesn't inherit from another interface, remove this whole line.)</p>
+## 例
 
-<dl>
- <dt>{{DOMxRef("NameOfTheInterface.property1")}}{{ReadOnlyInline}} {{Deprecated_Inline}}</dt>
- <dd>Include a brief description of the property and what it does here. Include one term and definition for each property. If the property is not readonly/experimental/deprecated, remove the relevant macro calls.</dd>
- <dt>{{DOMxRef("NameOfTheInterface.property2")}}</dt>
- <dd>etc.</dd>
-</dl>
+### 説明的な見出し
 
-<h2 id="Methods">メソッド</h2>
+それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
 
-<p><em>Also inherits methods from its parent interface, {{DOMxRef("NameOfParentInterface")}}.</em> (Note: If the interface doesn't inherit from another interface, remove this whole line.)</p>
+詳しくは、[コード例](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
-<dl>
- <dt>{{DOMxRef("NameOfTheInterface.method1()")}} {{Experimental_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Include a brief description of the method and what it does here. Include one term and definition for each method. If the method is not experimental/deprecated, remove the relevant macro calls.</dd>
- <dt>{{DOMxRef("NameOfTheInterface.method2()")}}</dt>
- <dd>etc.</dd>
-</dl>
+> **Note:** 他のページで紹介されている例にリンクしたい場合もあるでしょう。
+>
+> **シナリオ 1:** このページにいくつかの例があり、別のページにさらにいくつかの例がある場合。
+>
+> このページのそれぞれの例に H3 見出し (`###`) を記載し、最後に H3 見出し (`###`) に「その他の例」というテキストを入れ、その下に他のページの例へのリンクを貼ることができます。例えば次のようにします。
+>
+>  ```md
+>  ## 例
+>
+>  ### Fetch API の使用
+>  Fetch の例
+>
+>  ### その他の例
+>  他のページにある他の例へのリンク
+>  ```
+>
+> **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
+>
+> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+>
+>  ```md
+>   ## 例
+>
+>   この API の例については、[Fetch() ページ](https://example.org)を参照してください。
+>
 
-<h2 id="Events">イベント</h2>
+## 仕様書
 
-<p>Listen to these events using <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+{{Specifications}}
 
-<dl>
- <dt><code><a href="#">eventname1</a></code></dt>
- <dd>Fired when ... include description of when event fires<br>
- Also available via the <code><a href="#">oneventname1</a></code> property.</dd>
- <dt><code><a href="#">eventname2</a></code></dt>
- <dd>Fired when ... include description of when event fires<br>
- Also available via the <code><a href="#">oneventname2</a></code> property.</dd>
- <dt>etc.</dt>
- <dd>Fired when ...</dd>
-</dl>
+## ブラウザーの互換性
 
-<h2 id="Examples">例</h2>
+{{Compat}}
 
-<p>Fill in a simple example that nicely shows a typical usage of the interfaces, then perhaps some more complex examples (see our guide on how to add <a href="/ja/docs/MDN/Structures/Code_examples">code examples</a> for more information).</p>
+## 関連情報
 
-<pre class="brush: js">my code block</pre>
-
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
-
-<ul>
- <li>x</li>
- <li>y</li>
- <li>z</li>
-</ul>
-
-<h2 id="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("NameOfOtherSpecification", "#document-fragment-linking-directly-to-feature-definition", "NameOfTheFeature")}}</td>
-   <td>{{Spec2("NameOfOtherSpecification")}}</td>
-   <td>Defines blah blah feature. If no other specs define specific subfeatures of this interface, you can delete this table row.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("NameOfSpecification", "#document-fragment-linking-directly-to-interface-definition", "NameOfTheInterface")}}</td>
-   <td>{{Spec2("NameOfSpecification")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility_2">ブラウザーの互換性</h2>
-
-<p>{{Compat("path.to.feature.NameOfTheInterface")}}</p>
-
-<h2 id="See_also">関連情報</h2>
-
-<ul>
- <li>Include list of</li>
- <li>other links related to</li>
- <li>this API that might</li>
- <li>be useful</li>
-</ul>
+- この API に関連する
+- 有用と思われるリンクの
+- リストを記載してください

@@ -1,14 +1,14 @@
 ---
 title: ページの種類
 slug: MDN/Writing_guidelines/Page_structures/Page_types
+page-type: mdn-writing-guide
 tags:
-  - ドキュメント
-  - ガイド
-  - MDN メタ
-  - 構造
-  - テンプレート
+  - meta
+  - writing-guide
 translation_of: MDN/Writing_guidelines/Page_structures/Page_types
 original_slug: MDN/Structures/Page_types
+l10n:
+  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
 {{MDNSidebar}}
 
@@ -49,7 +49,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 - その情報はどの程度古いか、どの程度品質が低いか
 - その特集はどの程度人気があるか？その情報はどの程度求められているか？
 
-もし、チームを結成して更新作業を行いたい場合、または単に更新が必要なコンテンツを報告または議論したい場合は、お気軽に[コンテンツの問題を報告](https://github.com/mdn/content/issues)または[助けを求める](/ja/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)までお問い合わせください。
+もし、チームを結成して更新作業を行いたい場合、または単に更新が必要なコンテンツを報告または議論したい場合は、お気軽に[コンテンツの問題を報告](https://github.com/mdn/content/issues)または[助けを求める](/ja/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)までお問い合わせください。
 
 ## API ランディングページ
 
@@ -68,7 +68,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ### テンプレート
 
-- [API ランディングページテンプレート](/ja/docs/MDN/Structures/Page_types/API_landing_page_template)
+- [API ランディングページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template)
 
 ## API リファレンスページ
 
@@ -84,7 +84,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ### テンプレート
 
-- [API リファレンスページテンプレート](/ja/docs/MDN/Structures/Page_types/API_reference_page_template)
+- [API リファレンスページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_reference_page_template)
 
 ## API リファレンスサブページ
 
@@ -100,10 +100,10 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ### テンプレート
 
-- [API メソッドサブページテンプレート](/ja/docs/MDN/Structures/Page_types/API_method_subpage_template)
-- [API プロパティサブページテンプレート](/ja/docs/MDN/Structures/Page_types/API_property_subpage_template)
-- [API コンストラクターサブページテンプレート](/ja/docs/MDN/Structures/Page_types/API_constructor_subpage_template)
-- [API イベントサブページテンプレート](/ja/docs/MDN/Structures/Page_types/API_event_subpage_template)
+- [API メソッドサブページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template)
+- [API プロパティサブページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template)
+- [API コンストラクターサブページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template)
+- [API イベントサブページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template)
 
 ## HTML 要素リファレンスページ
 
@@ -115,7 +115,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ### テンプレート
 
-- [HTML 要素ページテンプレート](/ja/docs/MDN/Structures/Page_types/HTML_element_page_template)
+- [HTML 要素ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template)
 
 ## SVG 要素リファレンスページ
 
@@ -127,7 +127,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ### テンプレート
 
-- [SVG 要素ページテンプレート](/ja/docs/MDN/Structures/Page_types/SVG_element_page_template)
+- [SVG 要素ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template)
 
 ## CSS 機能リファレンスページ
 
@@ -141,8 +141,8 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ### テンプレート
 
-- [CSS プロパティページテンプレート](/ja/docs/MDN/Structures/Page_types/CSS_property_page_template)
-- [CSS セレクターページテンプレート](/ja/docs/MDN/Structures/Page_types/CSS_selector_page_template)
+- [CSS プロパティページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)
+- [CSS セレクターページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template)
 
 ## HTTP ヘッダーリファレンスページ
 
@@ -155,7 +155,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ### テンプレート
 
-- [HTTP ヘッダーページテンプレート](/ja/docs/MDN/Structures/Page_types/HTTP_header_page_template)
+- [HTTP ヘッダーページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template)
 
 ## 概念ページ
 
@@ -174,7 +174,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 **用語集ページ**は、用語、トピック、概念の簡単な説明を含んでいます。
 最初の段落は、その用語の簡単で自己完結した説明であるべきで、 2 文以下でなければなりません。
 その後に、さらに詳しい情報へのリンクを **関連情報** セクションに記述することができます。
-ページが画面いっぱいになるほど大きくなる場合は、長すぎるので、概念ページに変換する必要があります。詳しくは、[用語集の項目の書き方と参照方法](/ja/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary)を参照してください。
+ページが画面いっぱいになるほど大きくなる場合は、長すぎるので、概念ページに変換する必要があります。詳しくは、[用語集の項目の書き方と参照方法](/ja/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)を参照してください。
 
 ### 例
 
@@ -184,7 +184,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ### テンプレート
 
-- [用語集ページテンプレート](/ja/docs/MDN/Structures/Page_types/Glossary_page_template)
+- [用語集ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/Glossary_page_template)
 
 ## ランディングページ
 
@@ -192,7 +192,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 ランディングページのレイアウトは、通常、特定のトピックに関するページのツリーのルートページに使用されます。
 トピックの簡単な要約で始まり、サブページへのリンクの構造化されたリストが表示され、オプションとして読者に役立つ追加資料が表示されます。
 
-サブページのリストは、テンプレート [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs), [`SubpageMenuByCategories`](https://github.com/mdn/yari/tree/main/kumascript/macros/SubpageMenuByCategories.ejs), [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) を使用して自動的に生成することができます。
+サブページのリストは、テンプレート [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs), [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) を使用して自動的に生成することができます。
 しかし、より複雑なケースでは、リストを手作業で作成する必要があるかもしれません（そして、メンテナンスも必要です）。
 
 ### 例

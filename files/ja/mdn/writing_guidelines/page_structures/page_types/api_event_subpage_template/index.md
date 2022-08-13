@@ -1,119 +1,194 @@
 ---
 title: API イベントサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
+page-type: mdn-writing-guide
 tags:
-  - API
-  - Event
-  - Event subpage
-  - Template
-  - reference page
-translation_of: MDN/Structures/Page_types/API_event_subpage_template
+  - meta
+  - writing-guide
+browser-compat: path.to.feature.NameOfTheEvent_event
+translation_of: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 original_slug: MDN/Structures/Page_types/API_event_subpage_template
+l10n:
+  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<div class="note">
-<h2 id="Remove_before_publishing" name="Remove_before_publishing">公開前に削除してください</h2>
+> **Note:** _この説明文全体を削除してから公開してください_
+>
+> ---
+>
+> **ページの先頭部分:**
+>
+> ページ上部の先頭部分は、「ページのメタデータ」を定義するために使用します。
+> 値は、個々のイベントに応じて適切に書き換える必要があります。
+>
+> ```md
+> ---
+> title: 'インターフェイス名: <イベント名> イベント'
+> slug: Web/API/インターフェイス名/イベント名_event
+> page-type: web-api-event
+> tags:
+>   - イベント名
+>   - API
+>   - Event
+>   - Reference
+>   - Experimental
+>   - Non-standard
+> browser-compat: path.to.feature.NameOfTheEvent_event
+> ---
+> ```
+>
+> - **title**
+>   - : タイトルの見出しは、ページの最上部に表示されます。
+>     形式は "_インターフェイス名_**:** _イベント名_ **イベント**" です。
+>     例えば、 [Element](/ja/docs/Web/API/Element) インターフェイスの [animationcancel](/ja/docs/Web/API/Element/animationcancel_event) イベントには  `Window: animationcancel イベント` というタイトルを付けます。
+> - **slug**
+>   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
+>     これは `Web/API/インターフェイス名/イベント名_event` のような形式になります。
+> - **page-type**
+>   - : `page-type` キーは、 Web/API イベントでは常に `web-api-event` です。
+> - **tags**
+>   - : 常に **API**, **Reference**, **Event**,  _イベント名_, _インターフェイス名_ （**Window** など）のタグを含めてください。
+>
+>     必要に応じて以下のタグを入れてください。
+>     - 技術状態: **Experimental** （この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)である場合）、 **Deprecated** （[非推奨](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨と廃止)である場合）、 **Non-standard** （標準化過程にない場合）
+>     - 特別な要件: **Secure context** （安全なコンテキストでのみ利用可能な場合）
+>     - その他、技術に関連して検索されそうな言葉を表すタグ。
+>       例えば、 WebVR インターフェイスのページでは、 **VR** と **Virtual reality** を入れています。
+> - **browser-compat**
+>   - : プレースホルダーの値 `path.to.feature.NameOfTheEvent_event` を [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data) にあるイベントのクエリー文字列に置き換えてください。
+>     ツールチェインが自動的に互換性セクションと仕様書セクションのためにキーを使用します（`\{{Compat}}` と `\{Specifications}}` マクロを置き換えます）。
+>
+>     なお、先に[ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data)にイベントのエントリーを作成/更新する必要があり、このエントリーに仕様書の情報を入れておくことが必要です。
+>     [これを行うためのガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)を参照してください。
+>
+> ---
+>
+> **ページ先頭のマクロ**
+>
+> コンテンツセクションの上部（ページの先頭部分のすぐ下）には、いくつかのマクロ呼び出しが現れます。
+> 以下のアドバイスに従って、更新または削除してください。
+>
+> - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
+>   もし、あなたが文書化している技術が実験的なものでないなら、これを削除すべきです。
+>   実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのためのエントリーを記入する必要があります。
+> - `\{{Deprecated_Header}}` — これは **非推奨** バナーを生成し、この技術の使用を[避けるべき](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#廃止と非推奨)であることを示します。
+>   そうではない場合は、マクロ呼び出すを削除することができます。
+> - `\{{SecureContext_Header}}` — これは **安全なコンテキスト** バナーを生成し、この技術が[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。
+>   そうではない場合は、マクロ呼び出すを削除することができます。
+>   そうである場合は、[安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
+> - `\{{APIRef("GroupDataName")}}` — これをクリックすると、現在のページに関連するすばやく参照できるリンクを表示する左側のリファレンスサイドバーが生成されます。
+>   例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) の中の各ページは同じサイドバーを持ち、そこでこの API の別なページにアクセスできます。
+>   API に適したサイドバーを生成するには、GitHub リポジトリーに `GroupData` エントリーを追加し、マクロ呼び出しの中で _GroupDataName_ の代わりにそのエントリーの名前を記載する必要があります。
+>   この方法については、 [API リファレンスのサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)ガイドを参照してください。
+> - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
+>
+> ---
+>
+> **親オブジェクトのリンク**
+>
+> 親オブジェクトの「イベント」セクションから、この新しいページへのリンクを追加してください。
+> 例えば [Element: wheel イベント](/ja/docs/Web/API/Element/wheel_event)は [`Element` > Events](/ja/docs/Web/API/Element#イベント) からリンクされます。
+>
+> 親オブジェクトに「イベント」セクションがない場合は、追加してください。
+> これが新しい「クラス」のイベントであれば、[イベントリファレンス](/ja/docs/Web/Events)から親のこの節へのリンクを追加する必要があります。
+>
+> _公開する前に、この説明文全体を削除することを忘れないでください_
 
-<h3 id="Title_and_slug" name="Title_and_slug">タイトルとスラッグ</h3>
+{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}{{APIRef("GroupDataName")}}
 
-<p>API イベントサブページの<em>タイトル</em>は、 <em>所属するインターフェイス名 + ": " + イベント名 + " イベント"</em>としてください。例えば、 <a href="/ja/docs/Web/API/Window/vrdisplaypresentchange_event">vrdisplaypresentchange</a> イベントが <a href="/ja/docs/Web/API/Window">Window</a> インターフェイスに所属している場合は、<em>タイトル</em>は <em>Window: vrdisplaypresentchange イベント</em>となります。</p>
+概要の段落 - まず、イベントの名前、それがどのインターフェイスに属しているか、そしてそれが何をするものなのかを述べます。
+これはできれば 1、2 の短い文にすべきです。
+対応する API リファレンスページのプロパティの概要から、この大部分をコピーすることができます。
 
-<p><em>スラッグ</em> (URL の最後の部分) は、<em>イベント名 + "_event"</em> としてください。したがって、 <code>vrdisplaypresentchange</code> のスラッグは <em>vrdisplaypresentchange_event</em> です。</p>
+## 構文
 
-<h3 id="Top_macros" name="Top_macros">先頭で使用するマクロ</h3>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<p>既定では、テンプレートの先頭に4つのマクロ呼び出しがあります。以下のアドバイスに従って、更新や削除をしてください。</p>
+```js
+addEventListener('NameOfTheEvent', (event) => {});
 
-<ul>
- <li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/ja/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/ja/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
- <li>\{{securecontext_header}} — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/ja/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
- <li>\{{deprecated_header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/ja/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
- <li>
-  <div>\{{APIRef("<em>GroupDataName</em>")}} — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/ja/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars">API reference sidebars</a> guide for information on how to do this.</div>
- </li>
-</ul>
+onNameOfTheEvent = (event) => { };
+```
 
-<h3 id="Tags" name="Tags">タグ</h3>
+## イベント型
 
-<p>In an API event subpage, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>API</strong>, <strong>Reference</strong>, <strong>Event</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), the name of the parent interface (e.g. <strong>Window</strong>), <strong>Experimental</strong> (if the technology is <a href="/ja/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only), and <strong>Deprecated</strong> (if it is <a href="/ja/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>).</p>
+イベントが特殊な型で ある場合、その継承性についても言及してください。そうでない場合は、一般的なイベントであることを示します。
 
-<p>Optionally, you can elect to include some other tags that effective represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p>
+_一般的な {{domxref("Event")}} です。_
 
-<h3 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h3>
+または、例えば、
 
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/ja/docs/MDN/Contribute/Structures/Compatibility_tables#The_new_way_The_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
+_{{domxref("XRSessionEvent")}} です。 {{domxref("Event")}} から継承しています。_
 
-<p>Once that is done, you can show the compat data for the method with a \{{Compat()}} macro call.</p>
-</div>
+{{InheritanceDiagram("XRSessionEvent")}}
 
-<div>{{SeeCompatTable}}{{securecontext_header}}{{deprecated_header}}{{APIRef("GroupDataName")}}</div>
+## イベントのプロパティ
 
-<p class="summary">The summary paragraph — start by naming the event, saying what interface it is part of, and saying what it does. This should ideally be 1 or 2 short sentences. You could copy most of this from the property's summary on the corresponding API reference page.</p>
+イベントが単なる一般的な {{domxref("Event") }} でない場合、そのイベントが持つ追加のプロパティを挙げてください。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり/なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>可/不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>イベントが発生する親インターフェイスへのリンクです。例えば {{domxref("VRDisplayEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>イベントに対応するイベントハンドラープロパティへのリンクです。例えば {{domxref("Window/onvrdisplaypresentchange", "onvrdisplaypresentchange")}}</td>
-  </tr>
- </tbody>
-</table>
+_以下の一覧のプロパティに加え、親インターフェースである {{domxref("Event")}} のプロパティも使用可能です。_
 
-<h2 id="Examples" name="Examples">例</h2>
+- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
+  - : このイベントが参照する {{domxref("XRSession")}} です。
 
-<p>Fill in a simple example that nicely shows a typical usage of the event, then perhaps some more complex examples (see our guide on how to add <a href="/ja/docs/MDN/Contribute/Structures/Code_examples">code examples</a> for more information).</p>
+## 解説
 
-<pre class="brush: js notranslate">my code block</pre>
+（概要には長すぎて）追加のテキストを提供したい場合、解説セクションを追加してください。
+追加の情報を提供するために、
 
-<p>And/or include a list of links to useful code samples that live elsewhere:</p>
+### イベントの発生
 
-<ul>
- <li>x</li>
- <li>y</li>
- <li>z</li>
-</ul>
+および
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### 用途
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("NameOfSpecificationfromSpecName","#document-fragment-linking-directly-to-event-definition","NameOfTheEvent")}}</td>
-   <td>{{Spec2('NameOfSpecificationFromSpec2')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+のヘッダーを入れることができます。
 
-<h2 id="Browser_compatibility_2" name="Browser_compatibility_2">ブラウザーの互換性</h2>
+## 例
 
-<p>{{Compat("path.to.feature.NameOfTheEvent_event")}}</p>
+### 説明的な見出し
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
 
-<ul>
- <li>Include list of</li>
- <li>other links related to</li>
- <li>this API that might</li>
- <li>be useful</li>
-</ul>
+詳しくは、[コード例](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
+
+> **Note:** 他のページで紹介されている例にリンクしたい場合もあるでしょう。
+>
+> **シナリオ 1:** このページにいくつかの例があり、別のページにさらにいくつかの例がある場合。
+>
+> このページのそれぞれの例に H3 見出し (`###`) を記載し、最後に H3 見出し (`###`) に「その他の例」というテキストを入れ、その下に他のページの例へのリンクを貼ることができます。例えば次のようにします。
+>
+>  ```md
+>  ## 例
+>
+>  ### Fetch API の使用
+>  Fetch の例
+>
+>  ### その他の例
+>  他のページにある他の例へのリンク
+>  ```
+>
+> **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
+>
+> H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
+>
+>  ```md
+>   ## 例
+>
+>   この API の例については、[Fetch() ページ](https://example.org)を参照してください。
+>
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- この API に関連する
+- 有用と思われるリンクの
+- リストを記載してください

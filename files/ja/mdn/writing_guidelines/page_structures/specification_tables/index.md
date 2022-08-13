@@ -1,26 +1,28 @@
 ---
 title: 仕様書一覧表
-slug: >-
-  MDN/Writing_guidelines/Page_structures/Specification_tables
+slug: MDN/Writing_guidelines/Page_structures/Specification_tables
+page-type: mdn-writing-guide
 tags:
-  - ガイド
-  - MDN メタ
-  - 構造
+  - meta
+  - writing-guide
 translation_of: MDN/Writing_guidelines/Page_structures/Specification_tables
 original_slug: MDN/Structures/Specification_tables
+l10n:
+  sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
+
 {{MDNSidebar}}
 
 MDN 上のすべてのリファレンスページでは、 API または技術が定義されている仕様書に関する情報を提供するようにしてください。この記事ではこれらの表の外見を示し、構築方法を説明します。
 
-この表は[互換性一覧表](/ja/docs/MDN/Structures/Compatibility_tables)と似ており、ふつうは両方ともリファレンスページの中にあります。
+この表は[互換性一覧表](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)と似ており、ふつうは両方ともリファレンスページの中にあります。
 
 ## 標準の仕様書一覧表
 
 標準の仕様書の節は次のようになります。
 
-```html
-<h2 id="仕様書">仕様書</h2>
+```md
+## 仕様書
 
 \{{Specifications}}
 ```

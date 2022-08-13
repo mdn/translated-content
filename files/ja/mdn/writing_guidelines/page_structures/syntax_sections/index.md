@@ -1,17 +1,14 @@
 ---
 title: 構文の節
-slug: >-
-  MDN/Writing_guidelines/Page_structures/Syntax_sections
+slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
+page-type: mdn-writing-guide
 tags:
-  - API
-  - CSS
-  - HTML
-  - MDN メタ
-  - 構造
-  - 構文
-  - 進行中
+  - meta
+  - writing-guide
 translation_of: MDN/Writing_guidelines/Page_structures/Syntax_sections
 original_slug: MDN/Structures/Syntax_sections
+l10n:
+  sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
 {{MDNSidebar}}
 
@@ -48,7 +45,7 @@ slice(start, end)
   //responseStr = element.querySelector(selector);
 
   new IntersectionObserver(callback, options)
-  // var observer = new IntersectionObserver(callback, options);
+  // const observer = new IntersectionObserver(callback, options);
   ```
 
 ### コンストラクターやメソッドの場合
@@ -134,19 +131,19 @@ match(request, options)
 
 ```js
 // アロー関数
-filter((currentValue) => { /* ... */ } )
-filter((currentValue, index) => { /* ... */ } )
-filter((currentValue, index, array) => { /* ... */ } )
+filter((currentValue) => { /* … */ } )
+filter((currentValue, index) => { /* … */ } )
+filter((currentValue, index, array) => { /* … */ } )
 
 // コールバック関数
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // インラインコールバック関数
-filter(function(currentValue) { /* ... */ })
-filter(function(currentValue, index) { /* ... */ })
-filter(function(currentValue, index, array){ /* ... */ })
-filter(function(currentValue, index, array) { /* ... */ }, thisArg)
+filter(function(currentValue) { /* … */ })
+filter(function(currentValue, index) { /* … */ })
+filter(function(currentValue, index, array){ /* … */ })
+filter(function(currentValue, index, array) { /* … */ }, thisArg)
 ```
 
 ##### 任意の数の引数を取る構文
@@ -156,12 +153,12 @@ filter(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```js
 unshift(element0)
 unshift(element0, element1)
-unshift(element0, element1, /* ... ,*/ elementN)
+unshift(element0, element1, /* … ,*/ elementN)
 ```
 
 #### 引数の項
 
-次に、「引数」の項を設置して、それぞれの引数が何であるべきかを説明リストの形で説明してください。複数のメンバーを含むことができるオブジェクトの引数は、入れ子の説明リストで記述し、その中にそれぞれのメンバーが何であるべきかを記述してください。省略可能な引数は、説明する用語の名前の隣に \{{optional_inline}} マクロでマークしてください。
+次に、「引数」の項を設置して、それぞれの引数が何であるべきかを説明リストの形で説明してください。複数のメンバーを含むことができるオブジェクトの引数は、入れ子の説明リストで記述し、その中にそれぞれのメンバーが何であるべきかを記述してください。省略可能な引数は、説明する用語の名前の隣に  \{{optional_inline}} マクロでマークしてください。
 
 リスト内の各引数の名前は {{HTMLElement("code")}} ブロックの中に含めてください。
 
@@ -226,7 +223,7 @@ CSS プロパティによってはそれ自体が説明的であり、それ以�
 
 唯一の問題は、必要なデータが存在することを確認することです。 [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) ファイルに、文書化しているプロパティの項目が含まれている必要があり、 [types.json](https://github.com/mdn/data/blob/main/css/types.json) ファイルには、プロパティの値で使用されるすべての値の型の項目が含まれている必要があります。
 
-これを行うには、 [MDN data リポジトリー](https://github.com/mdn/data)をフォークし、フォークをローカルにクローンし、新しいブランチに変更を行い、上流のリポジトリーに向けてプルリクエストを送信してください。 [Git の使用についての詳細はこちらにあります](/ja/docs/MDN/Structures/Compatibility_tables#データを追加する準備)。
+これを行うには、 [MDN data リポジトリー](https://github.com/mdn/data)をフォークし、フォークをローカルにクローンし、新しいブランチに変更を行い、上流のリポジトリーに向けてプルリクエストを送信してください。 [Git の使用についての詳細はこちらにあります](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#データを追加する準備)。
 
 ### セレクター
 
@@ -236,7 +233,7 @@ CSS プロパティによってはそれ自体が説明的であり、それ以�
 
 唯一の問題は、必要なデータが存在することを確認することです。 [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json) ファイルに、文書化しているセレクターの項目が含まれている必要があります。
 
-これを行うには、 [MDN data リポジトリー](https://github.com/mdn/data)をフォークし、フォークをローカルにクローンし、新しいブランチに変更を行い、上流のリポジトリーに向けてプルリクエストを送信してください。 [Git の使用についての詳細はこちらにあります](/ja/docs/MDN/Structures/Compatibility_tables#データを追加する準備)。
+これを行うには、 [MDN data リポジトリー](https://github.com/mdn/data)をフォークし、フォークをローカルにクローンし、新しいブランチに変更を行い、上流のリポジトリーに向けてプルリクエストを送信してください。 [Git の使用についての詳細はこちらにあります](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#データを追加する準備)。
 
 ## HTML リファレンスの構文
 
