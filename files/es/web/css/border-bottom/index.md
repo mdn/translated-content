@@ -85,3 +85,5 @@ Como el valor por defecto de {{ Cssxref("border-bottom-style") }} es `none`, el 
 Categorías
 
 Interwiki Languages
+
+{{ languages( { "de": "de/CSS/border-bottom", "en": "en/CSS/border-bottom", "fr": "fr/CSS/border-bottom", "ja": "ja/CSS/border-bottom", "pl": "pl/CSS/border-bottom" } ) }}

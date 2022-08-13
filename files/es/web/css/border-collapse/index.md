@@ -66,3 +66,5 @@ CSS 2 especifica que el valor inicial para esta propiedad es `collapse`, pero CS
 Categorías
 
 Interwiki Languages
+
+{{ languages( { "en": "en/CSS/border-collapse", "fr": "fr/CSS/border-collapse", "pl": "pl/CSS/border-collapse" } ) }}

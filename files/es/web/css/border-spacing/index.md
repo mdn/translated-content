@@ -65,3 +65,5 @@ El espaciado de borde también se utiliza en los bordes exteriores de las tablas
 Categorías
 
 Interwiki Languages
+
+{{ languages( { "fr": "fr/CSS/border-spacing", "pl": "pl/CSS/border-spacing", "en": "en/CSS/border-spacing" } ) }}

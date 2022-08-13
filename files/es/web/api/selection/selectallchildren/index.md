@@ -30,3 +30,5 @@ Añadirá todos los "hijos" del nodo especificado a la selección. La selección
     footer = document.getElementById("footer");
     window.getSelection().selectAllChildren(footer);
     /* Todo el contendio del pie de página ahora está seleccionado */
+
+{{ languages( { "en": "en/DOM/Selection/selectAllChildren", "it": "it/DOM/Selection/selectAllChildren", "pl": "pl/DOM/Selection/selectAllChildren" } ) }}

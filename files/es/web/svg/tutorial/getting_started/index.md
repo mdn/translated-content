@@ -84,3 +84,5 @@ You can check that your server is sending the correct HTTP headers with your SVG
 Server misconfiguration is a very common reason for SVG failing to load, so make sure you check yours. If your server is not configured to send the correct headers with the SVG files it serves, then Firefox will most likely show the markup of the files as text or encoded garbage, or even ask the viewer to choose an application to open them.
 
 {{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+
+{{ languages( { "fr": "fr/SVG/Tutoriel/Premiers_pas", "ja": "ja/SVG/Tutorial/Getting_Started" } ) }}

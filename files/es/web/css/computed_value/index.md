@@ -30,3 +30,5 @@ La API DOM [getComputedStyle](es/DOM/window.getComputedStyle) devuelve [used val
 ### Ver también
 
 [specified value](es/CSS/specified_value), [used value](es/CSS/used_value), [actual value](es/CSS/actual_value)
+
+{{ languages( { "en": "en/CSS/computed_value", "fr": "fr/CSS/Valeur_calcul\u00e9e", "ja": "ja/CSS/computed_value", "pl": "pl/CSS/warto\u015b\u0107\_wyliczona" } ) }}

@@ -29,3 +29,5 @@ El valor por defecto para media es "screen."
 ### Especificación
 
 DOM Level 2 Styles - STYLESHEET
+
+{{ languages( { "pl": "pl/DOM/stylesheet.media" } ) }}

@@ -32,3 +32,5 @@ Una vez que se ha creado un objeto `Rango`, se necesita configurar sus puntos l√
 ### Especificaci√≥n
 
 [DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)
+
+{{ languages( { "en": "en/DOM/document.createRange", "pl": "pl/DOM/document.createRange" } ) }}

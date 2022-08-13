@@ -33,3 +33,5 @@ Para obtener más detalles sobre cómo usar las caracterísitcas de transmisión
 
 - [Introducción a la extensión de la API de sonido](/en/Introducing_the_Audio_API_Extension "en/Introducing the Audio API Extension")
 - {{ HTMLElement("audio") }}
+
+{{ languages( { "en": "en/DOM/HTMLAudioElement" } ) }}

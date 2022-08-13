@@ -87,3 +87,5 @@ Las columnas CSS3 son un nuevo método básico de disposición que ayudará a lo
 Categorías
 
 interwiki links
+
+{{ languages( { "en": "en/CSS3\_Columns", "fr": "fr/Colonnes_CSS3", "it": "it/Le_Colonne_nei_CSS3", "ja": "ja/CSS3\_Columns", "ko": "ko/CSS3\_Columns", "pl": "pl/Kolumny_CSS3" } ) }}

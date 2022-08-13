@@ -31,3 +31,5 @@ La función `contains` determina si la primera cadena del argumento contiene la 
 ### Soporte en Gecko
 
 Soportado.
+
+{{ languages( { "en": "en/XPath/Functions/contains", "fr": "fr/XPath/Fonctions/contains", "ja": "ja/XPath/Functions/contains", "pl": "pl/XPath/Funkcje/contains" } ) }}

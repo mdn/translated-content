@@ -27,3 +27,5 @@ Para cancelar un evento, llama al método [preventDefault](es/DOM/event.preventD
 ### Especificación
 
 [DOM Level 2 Events: cancelable](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-canCancel)
+
+{{ languages( { "en": "en/DOM/event.cancelable", "ja": "ja/DOM/event.cancelable", "pl": "pl/DOM/event.cancelable" } ) }}

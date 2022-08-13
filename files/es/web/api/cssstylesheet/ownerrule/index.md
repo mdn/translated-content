@@ -23,3 +23,5 @@ Ten en cuenta que si el valor de la propiedad ownerNode en el elemento [STYLE](/
 ### Specification
 
 [ownerRule](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-ownerRule)
+
+{{ languages( { "pl": "pl/DOM/stylesheet.ownerRule" } ) }}

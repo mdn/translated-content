@@ -75,3 +75,5 @@ translation_of: Web/CSS/border-bottom-width
 Categorías
 
 Interwiki Languages
+
+{{ languages( { "de": "de/CSS/border-bottom-width", "en": "en/CSS/border-bottom-width", "pl": "pl/CSS/border-bottom-width", "fr": "fr/CSS/border-bottom-width", "ja": "ja/CSS/border-bottom-width" } ) }}

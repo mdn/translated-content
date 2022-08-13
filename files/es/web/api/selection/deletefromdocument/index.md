@@ -22,3 +22,5 @@ Ninguno.
 ### Ejemplos
 
 Un usuario selecciona el texto (imaginario) "jos tienen do" del texto "Los conejos tienen dos orejas." en una página web. Después el usuario da click en un botón que ejecuta la acción cortar de JavaScript `window.getSelection().deleteFromDocument()`. El texto del documento quedaría como "Los cones orejas."
+
+{{ languages( { "en": "en/DOM/Selection/deleteFromDocument", "it": "it/DOM/Selection/deleteFromDocument", "pl": "pl/DOM/Selection/deleteFromDocument" } ) }}

@@ -49,3 +49,5 @@ original_slug: Web/XPath/Funciones
 - [translate()](/en/XPath/Functions/translate "en/XPath/Functions/translate")
 - [true()](/en/XPath/Functions/true "en/XPath/Functions/true")
 - [unparsed-entity-url()](/en/XPath/Functions/unparsed-entity-url "en/XPath/Functions/unparsed-entity-url") _Específico de XSLT (no soportado)_
+
+{{ languages( { "fr": "fr/XPath/Fonctions", "ja": "ja/XPath/Functions", "zh-cn": "cn/XPath/Functions", "pl": "pl/XPath/Funkcje" , "ko": "ko/XPath/Functions"} ) }}

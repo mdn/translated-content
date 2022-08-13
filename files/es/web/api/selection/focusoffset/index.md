@@ -18,3 +18,5 @@ Devuelve el número de caracteres en que el foco de la selección es colocado de
 ### Notas
 
 Este número está basado en cero. Si la selección termina con el primer carácter en [focusNode](es/DOM/Selection/focusNode), el número devuelto será 0.
+
+{{ languages( { "en": "en/DOM/Selection/focusOffset", "it": "it/DOM/Selection/focusOffset", "pl": "pl/DOM/Selection/focusOffset" } ) }}

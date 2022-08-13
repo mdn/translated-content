@@ -82,3 +82,5 @@ A menos que un valor {{ Cssxref("border-style") }} sea definido, el borde no apa
 Categorías
 
 Interwiki Languages
+
+{{ languages( { "de": "de/CSS/border-bottom-style", "en": "en/CSS/border-bottom-style", "fr": "fr/CSS/border-bottom-style", "ja": "ja/CSS/border-bottom-style", "pl": "pl/CSS/border-bottom-style" } ) }}

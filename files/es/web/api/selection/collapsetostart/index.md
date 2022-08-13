@@ -18,3 +18,5 @@ Traslada el foco de la selección al mismo punto que el ancla. El ancla no se mu
 ### Parámetros
 
 Ninguno.
+
+{{ languages( { "en": "en/DOM/Selection/collapseToStart", "it": "it/DOM/Selection/collapseToStart", "pl": "pl/DOM/Selection/collapseToStart" } ) }}

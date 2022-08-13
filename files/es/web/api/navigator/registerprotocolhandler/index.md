@@ -31,3 +31,5 @@ Esto crea un nuevo manejador que permite a los enlaces de tipo "mailto:" dirigir
 ### Especificación
 
 Especificado en el documento del WHATWG: [Web Applications 1.0 working draft](http://whatwg.org/specs/web-apps/current-work/#custom-handlers).
+
+{{ languages( { "en": "en/DOM/window\.navigator.registerProtocolHandler", "fr": "fr/DOM/window\.navigator.registerProtocolHandler", "ja": "ja/DOM/window\.navigator.registerProtocolHandler", "ko": "ko/DOM/window\.navigator.registerProtocolHandler", "pl": "pl/DOM/window\.navigator.registerProtocolHandler" } ) }}

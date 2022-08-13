@@ -64,3 +64,5 @@ ul {
 ### Ver también
 
 {{ Cssxref("list-style") }}, {{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-position") }}
+
+{{ languages( { "fr": "fr/CSS/list-style-image", "pl": "pl/CSS/list-style-image", "en": "en/CSS/list-style-image" } ) }}

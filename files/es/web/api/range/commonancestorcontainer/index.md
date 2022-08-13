@@ -29,3 +29,5 @@ Esta propiedad es de sólo lectura. Para cambiar el contenedor ancestro de un no
 ### Especificación
 
 [commonAncestorContainer](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-commonParent)
+
+{{ languages( { "en": "en/DOM/range.commonAncestorContainer" } ) }}

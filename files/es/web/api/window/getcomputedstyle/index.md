@@ -31,3 +31,5 @@ El primer argumento debe ser un Element, no un nodo (como en #texto Node).
 ### Especificación
 
 [DOM Level 2 Style: getComputedStyle](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
+
+{{ languages( { "ja": "ja/DOM/window\.getComputedStyle" } ) }}

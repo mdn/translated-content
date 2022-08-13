@@ -5,3 +5,5 @@ translation_of: Web/XPath/Axes/preceding
 original_slug: Web/XPath/Ejes/preceding
 ---
 El eje `preceding` indica todos los nodos que preceden al nodo de contexto en el documento excepto cualquier nodo `ancestor`, `attribute` y `namespace`.
+
+{{ languages( { "en": "en/XPath/Axes/preceding", "fr": "fr/XPath/Axes/preceding", "pl": "pl/XPath/Osie/preceding" } ) }}

@@ -141,3 +141,5 @@ Adicionalmente se puede hacer uso de los DOM trees para modelar los datos que no
 - [E4X (ECMAScript for XML)](/en/E4X "en/E4X")
 - [Parsing and serializing XML](/en/Parsing_and_serializing_XML "en/Parsing_and_serializing_XML")
 - [XMLHttpRequest](/en/DOM/XMLHttpRequest "en/XMLHttpRequest")
+
+{{ languages( { "fr": "fr/Comment_cr\u00e9er_un_arbre_DOM", "ja": "ja/How_to_create_a_DOM_tree", "zh-cn": "zh-cn/How_to_create_a_DOM_tree" } ) }}

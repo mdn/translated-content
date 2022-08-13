@@ -35,3 +35,5 @@ resultados:
     antes: 0
     después: 0
     después: 1
+
+{{ languages( { "en": "en/Core_JavaScript\_1.5\_Reference/Global_Objects/Function/arguments", "pl": "pl/Dokumentacja_j\u0119zyka_JavaScript\_1.5/Obiekty/Function/arguments" } ) }}

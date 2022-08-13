@@ -16,3 +16,5 @@ El título es a menudo especificado en el [ownerNode](/es/DOM/stylesheet.ownerNo
 ### Especificación
 
 [title](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-title)
+
+{{ languages( { "pl": "pl/DOM/stylesheet.title" } ) }}

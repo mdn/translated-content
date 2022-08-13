@@ -31,3 +31,5 @@ Quita un rango de la selección.
       s.removeRange(s.getRangeAt(i));
      }
     }
+
+{{ languages( { "en": "en/DOM/Selection/removeRange", "it": "it/DOM/Selection/removeRange", "pl": "pl/DOM/Selection/removeRange" } ) }}

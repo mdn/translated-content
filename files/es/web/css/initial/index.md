@@ -45,3 +45,5 @@ Sólo algunas especificaciones son soportadas en Firefox (las cuales se incremen
 Categorías
 
 Interwiki Languages Links
+
+{{ languages( { "fr": "fr/CSS/initial", "en": "en/CSS/initial" } ) }}

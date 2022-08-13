@@ -26,3 +26,5 @@ Traslada el foco de la selección a un punto especificado. El ancla de la selecc
   - : El número de caracteres que habrá desde el principio del texto
     _`parentNode`_
     hasta donde el foco se colocará.
+
+{{ languages( { "en": "en/DOM/Selection/extend", "it": "it/DOM/Selection/extend", "pl": "pl/DOM/Selection/extend" } ) }}

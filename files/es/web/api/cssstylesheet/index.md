@@ -44,3 +44,5 @@ You can get the list of stylesheets for a given document using the [document.sty
 [DOM Level 2 Style Sheets: StyleSheet](http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet)
 
 [DOM Level 2 CSS: CSSStyleSheet](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet)
+
+{{ languages( { "pl": "pl/DOM/stylesheet" } ) }}

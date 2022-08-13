@@ -84,6 +84,8 @@ Por razones de retrocompatibilidad, el conjunto de anclas devuelto sólo contien
 
 [DOM Level 2 HTML: anchors](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272)
 
+{{ languages( { "en": "en/DOM/document.anchors", "pl": "pl/DOM/document.anchors", "ja": "ja/DOM/document.anchors" } ) }}
+
 ## Compatibilidad de navegadores
 
 {{Compat("api.Document.anchors")}}

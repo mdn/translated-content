@@ -83,3 +83,5 @@ Otros términos claves usados en esta parte.
 ### Enlaces externos
 
 - [IDL definition in Mozilla cross-reference](http://lxr.mozilla.org/mozilla/source/content/base/public/nsISelection.idl)
+
+{{ languages( { "en": "en/DOM/Selection", "fr": "fr/DOM/selection", "it": "it/DOM/Selection", "ja": "ja/DOM/selection", "pl": "pl/DOM/Selection" } ) }}
