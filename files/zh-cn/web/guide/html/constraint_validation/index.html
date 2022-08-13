@@ -205,7 +205,7 @@ tags:
 
 <p>This displays the following form: </p>
 
-<p><label>Postal Code: </label><input> <label>Country: </label><select><option value="ch">Switzerland</option><option value="fr">France</option><option value="de">Germany</option><option value="nl">The Netherlands</option></select></p>
+{{EmbedLiveSample("Constraint combining several fields: Postal code validation")}}
 
 <p>First, we write a function checking the constraint itself:</p>
 
@@ -263,9 +263,7 @@ tags:
 
 <p>This displays:</p>
 
-<p><label>Select a file smaller than 75 kB : </label> <input></p>
-
-
+{{EmbedLiveSample("Limiting the size of a file before its upload")}}
 
 <p>The JavaScript reads the file selected, uses the File.size() method to get its size, compares it to the (hard coded) limit, and calls the Constraint API to inform the browser if there is a violation:</p>
 
