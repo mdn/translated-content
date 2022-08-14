@@ -19,9 +19,9 @@ IndexedDB ist eine low-level API für die clientseitige Speicherung großer Meng
 
 {{AvailableInWorkers}}
 
-> **Hinweis:** Die IndexedDB API ist leistungsfähig, kann aber für einfache Anwendungen zu kompliziert erscheinen. Wenn Du eine einfachere API bevorzugst, versuche Sammlungen wie [localForage](https://localforage.github.io/localForage/) und [dexie.js](http://www.dexie.org/). Diese machen IndexedDB benutzerfreundlicher.
+> **Note:** **Anmerkung**: Die IndexedDB API ist leistungsfähig, kann aber für einfache Anwendungen zu kompliziert erscheinen. Wenn Du eine einfachere API bevorzugst, versuche Sammlungen wie [localForage](https://localforage.github.io/localForage/) und [dexie.js](http://www.dexie.org/). Diese machen IndexedDB benutzerfreundlicher.
 
-> **Hinweis:** Manche älteren Browser unterstützen IndexedDB nicht aber sie unterstützen [WebSQL](http://caniuse.com/sql-storage). Eine Möglichkeit dieses Problem zu umgehen ist es, mittels polyfill auf [WebSQL](http://www.w3.org/TR/webdatabase/) oder auch auf [localStorage](/de/docs/Web/Guide/API/DOM/Storage#localStorage) für nicht unterstützende Browser zurückzugreifen. Das beste erhältiche polyfill ist derzeit [localForage](https://localforage.github.io/localForage/).
+> **Note:** **Anmerkung**: Manche älteren Browser unterstützen IndexedDB nicht aber sie unterstützen [WebSQL](http://caniuse.com/sql-storage). Eine Möglichkeit dieses Problem zu umgehen ist es, mittels polyfill auf [WebSQL](http://www.w3.org/TR/webdatabase/) oder auch auf [localStorage](/de/docs/Web/Guide/API/DOM/Storage#localStorage) für nicht unterstützende Browser zurückzugreifen. Das beste erhältiche polyfill ist derzeit [localForage](https://localforage.github.io/localForage/).
 
 ## Schlüsselkonzepte und Gebrauch
 
@@ -31,7 +31,7 @@ IndexedDB ist ein direktes Datenbank System, wie ein SQL-basiertes RDMS; währen
 - Nutze IndexedDB asynchron, indem du die Grundlagen mit unserer [IndexedDB Anleitung](/de/docs/Web/API/IndexedDB_API/Using_IndexedDB) erlernst.
 - Finde Entwickler Empfehlungen, um Web Apps offline arbeiten zu lassen auf unserer [Offline Apps](/en-US/Apps/Build/Offline) Seite
 
-> **Hinweis:** wie die meisten Web Speicher Lösungen folgt IndexedDB einem [gleicher-Ursprung Grundsatz](http://www.w3.org/Security/wiki/Same_Origin_Policy). Deshalb ist es nicht möglich auf Daten anderer Domänen zuzugreifen, während man auf gespeicherte Daten innerhalb einer Domäne zugreift.
+> **Note:** **Anmerkung**: wie die meisten Web Speicher Lösungen folgt IndexedDB einem [gleicher-Ursprung Grundsatz](http://www.w3.org/Security/wiki/Same_Origin_Policy). Deshalb ist es nicht möglich auf Daten anderer Domänen zuzugreifen, während man auf gespeicherte Daten innerhalb einer Domäne zugreift.
 
 ### Synchron und asynchron
 

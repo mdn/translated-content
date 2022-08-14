@@ -15,7 +15,7 @@ Der HTTP-Statuscode **`503 Service Unavailable`** zeigt an, dass der Server nich
 
 Übliche Gründe dafür sind, dass ein Server wegen Wartungsarbeiten abgeschaltet oder dass er überlastet ist. Dieser Code sollte für vorübergehende Zustände benutzt werden, und der HTTP-Header {{HTTPHeader("Retry-After")}} sollte möglichst angeben, ab wann damit zu rechnen ist, dass der Dienst wieder funktioniert.
 
-> **Hinweis:** Zusammen mit einer solchen Antwort sollte eine benutzerfreundliche Seite ausgeliefert werden, die das Problem erklärt.
+> **Note:** **Anmerkung:** Zusammen mit einer solchen Antwort sollte eine benutzerfreundliche Seite ausgeliefert werden, die das Problem erklärt.
 
 Werden mit einer solchen Antwort Header verschickt, die das Caching betreffen, sollten diese beachtet werden, da der Status 503 oft einen vorübergehenden Zustand betrifft und die Antwort daher normalerweise nicht in einem Cache gespeichert werden sollte.
 

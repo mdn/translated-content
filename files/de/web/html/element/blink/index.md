@@ -16,7 +16,7 @@ translation_of: Web/HTML/Element/blink
 
 Das HTML Blink Element (`<blink>`) ist kein Standard-Element und bewirkt, dass der vom Element umschlossene Text blinkt.
 
-> **Warnung:** Dieses Element sollte nicht verwendet werden, da es nicht zum Standard gehört und **veraltet** ist. Blinkender Text wird von diversen Zugriffstandards missbilligt und die CSS-Spezifikation erlaubt Browsern, das \<blink>-Element zu ignorieren.
+> **Warning:** **Warnung:** Dieses Element sollte nicht verwendet werden, da es nicht zum Standard gehört und **veraltet** ist. Blinkender Text wird von diversen Zugriffstandards missbilligt und die CSS-Spezifikation erlaubt Browsern, das \<blink>-Element zu ignorieren.
 
 ## DOM Schnittstelle
 

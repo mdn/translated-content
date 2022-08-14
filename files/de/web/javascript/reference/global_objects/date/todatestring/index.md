@@ -40,7 +40,7 @@ console.log(d.toString());     // logs Wed Jun 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // logs Wed Jun 28 1993
 ```
 
-> **Hinweis:** Der Monat ist 0-basiert wenn er als Argument in {{jsxref("Date")}} benutzt wird (0 entspricht Januar und 11 entspricht Dezember).
+> **Note:** **Anmerkung:** Der Monat ist 0-basiert wenn er als Argument in {{jsxref("Date")}} benutzt wird (0 entspricht Januar und 11 entspricht Dezember).
 
 ## Spezifikationen
 

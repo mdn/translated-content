@@ -14,7 +14,7 @@ translation_of: Web/CSS/image-orientation
 
 Mit der [CSS](/de/docs/CSS) Eigenschaft `image-orientation` kann die Ausrichtung eines Bildes geändert werden.
 
-> **Hinweis:** Diese Eigenschaft ist nicht dazu gedacht Bilder beliebig zu drehen sondern eine fehlerhaften Ausrichtung zu korrigieren. Deshalb wird zur nächsten Vierteldrehung gerundet.
+> **Note:** **Hinweis:\*** Diese Eigenschaft ist nicht dazu gedacht Bilder beliebig zu drehen sondern eine fehlerhaften Ausrichtung zu korrigieren. Deshalb wird zur nächsten Vierteldrehung gerundet.
 >
 > - Ebenso ist diese Eigenschaft nicht dazu vorgesehen das Layout zu verändern, da sich `image-orientation` nur auf Bilder auswirkt.
 

@@ -19,7 +19,7 @@ Bis jetzt haben wir nur Methoden im unmittelbaren Zusammenhang mit dem Zeichnen 
 
 `color` steht entweder für einen CSS {{cssxref("&lt;color&gt;")}} Farbwert, ein Gradienten-Objekt, oder ein Muster-Objekt. Auf letztere gehen wir später noch ein. Standardmäßig sind Strich- und Füllfarbe auf Schwarz eingestellt (CSS-Farbwert #000000).
 
-> **Hinweis:** Nach dem Setzen von `strokeStyle` und/oder `fillStyle` wird der neue Wert zum Standardwert für alle nachfolgend gezeichneten Formen. Für jede in einer abweichenden Farbe gewünschte Form müssen `fillStyle` bzw. `strokeStyle` neu definiert werden.
+> **Note:** **Anmerkung:** Nach dem Setzen von `strokeStyle` und/oder `fillStyle` wird der neue Wert zum Standardwert für alle nachfolgend gezeichneten Formen. Für jede in einer abweichenden Farbe gewünschte Form müssen `fillStyle` bzw. `strokeStyle` neu definiert werden.
 
 Der String `color` sollte, entsprechend der Spezifikation, ein gültiger CSS {{cssxref("&lt;color&gt;")}} -Wert sein. Alle folgenden Beispiele definieren die selbe Farbe.
 
@@ -247,7 +247,7 @@ Stellen wir uns jetzt einen Pfad von (3,1) nach (3,5) mit einer Linienbreite von
 
 Um das zu korrigieren muss man bei der Definition der Verbindungsstrecke besonders genau sein. Mit dem Wissen, dass eine Linie der Breite 1.0 sich jeweils zur Hälfte auf beide Seiten ausdehnt, kann man die Strecke von (3.5,1) bis (3.5,5) legen und erhält die Situation im dritten Bild - die eine Einheit breite Linie füllt exakt eine Pixelreihe.
 
-> **Hinweis:** Bitte beachten Sie, dass in dem Beispiel der vertikalen Linie die Y-Position sich immer noch auf eine ganzzahlige Position bezieht - andernfalls würden an den Endpunkten die Pixel nur halb gedeckt.(Beachten Sie aber auch, dass dieses Verhalten zusätzlich vom `lineCap`-Stil abhängt, der standardmäßig auf `butt` eingestellt ist. Möchten Sie einheitliche Striche mit Koordinaten in halben Pixeln für ungerade Liniendicken berechnen, können Sie dafür den `lineCap`-Sti auf `square` setzten, wodurch der Aussenrand des Strichs am Endpunkt automatisch über den ganzen Pixel ausgedehnt wird.)Beachten Sie auch, dass nur der Start- und Zielpunkt einer Strecke betroffen ist. Bei einer mit `closePath()`geschlossenen Strecke git es keinen solchen Start- bzw. Zielpunkt, stattdessen werden alle Endpunkte mit den vorhergehenden und nachfolgenden Segmenten entsprechend dem aktuellen `lineJoin`-Stil verbunden; dessen Standardwert ist `miter`, was eine automatische Ausweitung der äußeren Linienränder bis zu ihrem Schnittpunkt bewirkt, so dass der gezeichnete Strich an jedem Endpunkt exakt volle Pixel abdeckt, wenn die verbundenen Segmente horizontal und/oder vertikal verlaufen. Die folgenden zwei Abschnitte demonstrieren das Verhalten dieser zusätzlichen Linien-Stile.
+> **Note:** **Anmerkung:** Bitte beachten Sie, dass in dem Beispiel der vertikalen Linie die Y-Position sich immer noch auf eine ganzzahlige Position bezieht - andernfalls würden an den Endpunkten die Pixel nur halb gedeckt.(Beachten Sie aber auch, dass dieses Verhalten zusätzlich vom `lineCap`-Stil abhängt, der standardmäßig auf `butt` eingestellt ist. Möchten Sie einheitliche Striche mit Koordinaten in halben Pixeln für ungerade Liniendicken berechnen, können Sie dafür den `lineCap`-Sti auf `square` setzten, wodurch der Aussenrand des Strichs am Endpunkt automatisch über den ganzen Pixel ausgedehnt wird.)Beachten Sie auch, dass nur der Start- und Zielpunkt einer Strecke betroffen ist. Bei einer mit `closePath()`geschlossenen Strecke git es keinen solchen Start- bzw. Zielpunkt, stattdessen werden alle Endpunkte mit den vorhergehenden und nachfolgenden Segmenten entsprechend dem aktuellen `lineJoin`-Stil verbunden; dessen Standardwert ist `miter`, was eine automatische Ausweitung der äußeren Linienränder bis zu ihrem Schnittpunkt bewirkt, so dass der gezeichnete Strich an jedem Endpunkt exakt volle Pixel abdeckt, wenn die verbundenen Segmente horizontal und/oder vertikal verlaufen. Die folgenden zwei Abschnitte demonstrieren das Verhalten dieser zusätzlichen Linien-Stile.
 
 Für scharfe Ränder bei geradzahligen Linienbreiten definieren wir den Pfad zwischen den Pixeln (z.B. (3,1) bis (3,5)), so dass jede Hälfte des Strichs einer ganzzahligen Anzahl von Pixeln entspricht.
 
@@ -616,7 +616,7 @@ img.src = 'someimage.png';
 var ptrn = ctx.createPattern(img,'repeat');
 ```
 
-> **Hinweis:** Wie bei `drawImage()` müssen Sie auch hier sicherstellen, dass das Bild vollständig geladen wurde bevor Sie die Methode aufrufen; andernfalls kann das Muster inkorrekt dargestellt werden.
+> **Note:** **Anmerkung:** Wie bei `drawImage()` müssen Sie auch hier sicherstellen, dass das Bild vollständig geladen wurde bevor Sie die Methode aufrufen; andernfalls kann das Muster inkorrekt dargestellt werden.
 
 ### Beispiel für `createPattern`
 

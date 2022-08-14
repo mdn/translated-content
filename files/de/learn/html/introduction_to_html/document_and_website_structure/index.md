@@ -221,7 +221,7 @@ In diesem Fall soll der Hinweis für den Editor nur Extra-Informationen für den
 
 Dies ist nicht wirklich Inhalt für `<aside>`, da es nicht notwendigerweise mit dem Inhalt der Hauptseite im Zusammenhang steht (man soll es ja überall sehen können). Auch `<section>` scheint ungeeignet, da es nicht Teil des Hauptinhaltes ist. Deswegen kann man hier `<div>` benutzen. Es wurde eine Überschrift hinzugefügt, so das auch Benutzer mit Screenreadern den Einkaufswagen finden.
 
-> **Warnung:** Divs sind leicht zu benutzen, man sollte aber darauf achten, das man nicht zu viele davon einsetzt, da sie keinerleit semantischen Wert haben. Man sollte sie wirklich nur benutzen, wenn es keine anderen semantischen Elemente gibt. Wenn man zuviele divs benutzt, dann wird es schwierig den Code zu updaten und später damit wieder zu arbeiten.
+> **Warning:** **Warnung**: Divs sind leicht zu benutzen, man sollte aber darauf achten, das man nicht zu viele davon einsetzt, da sie keinerleit semantischen Wert haben. Man sollte sie wirklich nur benutzen, wenn es keine anderen semantischen Elemente gibt. Wenn man zuviele divs benutzt, dann wird es schwierig den Code zu updaten und später damit wieder zu arbeiten.
 
 ### Zeilenumbruch und Horizontale Linien
 

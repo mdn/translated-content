@@ -15,7 +15,7 @@ translation_of: Web/CSS/clip
 
 Die `clip` CSS Eigenschaft definiert, welcher Teil eines Elements sichtbar ist. Sie gilt nur für Elemente mit {{cssxref("position","position:absolute")}}.
 
-> **Warnung:** Diese Eigenschaft ist veraltet. Es sollte stattdessen {{cssxref("clip-path")}} verwendet werden.
+> **Warning:** **Warnung:** Diese Eigenschaft ist veraltet. Es sollte stattdessen {{cssxref("clip-path")}} verwendet werden.
 
 {{cssinfo}}
 

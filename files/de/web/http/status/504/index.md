@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Status/504
 
 Der HTTP-Statuscode **`504 Gateway Timeout`** zeigt an, dass der Server, der als Gateway oder Proxy fungiert, keine rechtzeitige Antwort von einem vorgelagerten Serverserver bekommen hat, die nötig gewesen wäre, um die Anfrage vollständig auszuführen.
 
-> **Hinweis:** Es gibt verschiedene Dinge, die man in der Netzwerktechnik als {{interwiki("wikipedia", "Gateway_(telecommunications)", "Gateway")}} bezeichnet. Bei einer 504-Fehlermeldung können Sie meist nichts tun, um das Problem zu beheben, sondern dies muss auf dem Zielserver oder auf den Proxies, über die Sie den Zugriff versucht haben, geschehen.
+> **Note:** **Anmerkung**: Es gibt verschiedene Dinge, die man in der Netzwerktechnik als {{interwiki("wikipedia", "Gateway_(telecommunications)", "Gateway")}} bezeichnet. Bei einer 504-Fehlermeldung können Sie meist nichts tun, um das Problem zu beheben, sondern dies muss auf dem Zielserver oder auf den Proxies, über die Sie den Zugriff versucht haben, geschehen.
 
 ## Status
 

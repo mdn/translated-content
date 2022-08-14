@@ -30,7 +30,7 @@ Um mit diesem Lernmodul zu beginnen, brauchen Sie keinerlei Vorwissen in Sachen 
 - [Einführung in HTML](/de/docs/Learn/HTML/Introduction_to_HTML).
 - [Einführung in CSS](/de/docs/Learn/CSS/Introduction_to_CSS).
 
-> **Hinweis:** Falls Sie auf einem Computer, einem Tablet oder sonstigem Gerät arbeiten, auf dem Sie keine eigenen Dateien anlegen können, können Sie die Codebeispiele meist auch in einer Online-Coding-Umgebung wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/) ausprobieren.
+> **Note:** **Anmerkung**: Falls Sie auf einem Computer, einem Tablet oder sonstigem Gerät arbeiten, auf dem Sie keine eigenen Dateien anlegen können, können Sie die Codebeispiele meist auch in einer Online-Coding-Umgebung wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/) ausprobieren.
 
 ## Anleitungen
 

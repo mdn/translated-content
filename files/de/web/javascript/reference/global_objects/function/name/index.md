@@ -119,7 +119,7 @@ var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
 ```
 
-> **Warnung:** Der Skriptinterpreter wird die eingebaute `Function.name` Eigenschaft nur setzen, wenn eine Funktion keine eigene Eigenschaft mit dem Namen _name_ hat (siehe Kapitel [9.2.11 der ECMAScript2015 Sprachdefinition](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Jedoch spezifiziert ES2015 das _static_ Schlüsselwort so, dass statische Methoden als eigene Eigenschaft des Klassenkonstruktorfunktion gesetzt wird (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
+> **Warning:** **Warnung:** Der Skriptinterpreter wird die eingebaute `Function.name` Eigenschaft nur setzen, wenn eine Funktion keine eigene Eigenschaft mit dem Namen _name_ hat (siehe Kapitel [9.2.11 der ECMAScript2015 Sprachdefinition](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Jedoch spezifiziert ES2015 das _static_ Schlüsselwort so, dass statische Methoden als eigene Eigenschaft des Klassenkonstruktorfunktion gesetzt wird (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)).
 
 Aus diesem Grund kann der Klassenname für jede Klasse mit einer statischen Methodeneigenschaft `name()` nicht bestimmt werden:
 
@@ -172,7 +172,7 @@ o[sym2].name; // ""
 
 ## JavaScript-Kompressoren und -Minimierer
 
-> **Warnung:** Beim der Benutzung von `Function.name` ist Vorsicht geboten, wenn Codetransformtionen, wie JavaScript Kompressoren (Minimierer) oder Obfuscators, zum Einsatz kommen. Diese Werkzeuge werden häufig im Zuge von Werkzeugketten zum Bauen von JavaScript-Programmen eingesetzt um die Größe eines Programms zu für den Produktivbetrieb zu minimieren. Solche Werkzeuge ändern die Funktionsnamen häufig beim Erstellen.
+> **Warning:** **Warnung:** Beim der Benutzung von `Function.name` ist Vorsicht geboten, wenn Codetransformtionen, wie JavaScript Kompressoren (Minimierer) oder Obfuscators, zum Einsatz kommen. Diese Werkzeuge werden häufig im Zuge von Werkzeugketten zum Bauen von JavaScript-Programmen eingesetzt um die Größe eines Programms zu für den Produktivbetrieb zu minimieren. Solche Werkzeuge ändern die Funktionsnamen häufig beim Erstellen.
 
 Quelltext wie dieser:
 

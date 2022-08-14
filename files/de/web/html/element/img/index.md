@@ -51,9 +51,7 @@ Dieses Element unterstützt die [globalen Attribute](/de/docs/HTML/Global_attrib
 - {{htmlattrdef("hspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
   - : Breite des Innenabstands links und rechts der Grafik. Benutzen Sie stattdessen die CSS-Eigenschaften {{cssxref('padding-left')}} und {{cssxref('padding-right')}} bzw. {{cssxref('padding')}}.
 - {{htmlattrdef("ismap")}}
-  - : Serverseitig verweissensitive Grafik. Ist dieses Attribut gesetzt, werden bei jedem Klick die betreffenden Mauskoordinaten an den Server gesendet.
-
-  > **Hinweis:** Dieses Attribut ist nur bei `<img>`-Elementen erlaubt, die sich innerhalb eines {{htmlelement("a")}}-Elements mit einem gültigen {{htmlattrxref("href","a")}}-Attribut befinden.
+  - : Serverseitig verweissensitive Grafik. Ist dieses Attribut gesetzt, werden bei jedem Klick die betreffenden Mauskoordinaten an den Server gesendet.> **Hinweis:** Dieses Attribut ist nur bei `<img>`-Elementen erlaubt, die sich innerhalb eines {{htmlelement("a")}}-Elements mit einem gültigen {{htmlattrxref("href","a")}}-Attribut befinden.
 - {{htmlattrdef("longdesc")}}
   - : URL einer längeren Beschreibung des Bildes, die als Ergänzung zum **alt**-Text dient.
 - {{htmlattrdef("name")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
@@ -65,9 +63,7 @@ Dieses Element unterstützt die [globalen Attribute](/de/docs/HTML/Global_attrib
     - `"origin"`: Es wird der Ursprung des Dokuments gesendet, üblicherweise das Protokoll, die Domain und gegebenenfalls der Port (zum Beispiel `http://example.com:88`).
     - "`origin-when-cross-origin`": Wie `origin`, jedoch nur, falls die Grafik von einem anderen Server abgerufen wird. Ist der Server der gleiche, wird die vollständige URL des Dokuments, einschließlich Pfad, gesendet.
     - `"unsafe-url"`: Es wird immer die vollständige verweisende URL gesendet (jedoch ohne Fragmentbezeichner, Benutzername und Passwort).
-      Dies ist unsicher, da zuvor über gesicherte Verbindungen abgerufene Informationen (die URL des Dokuments) auch über nichtgesicherte gesendet werden könnten (als verweisende URL beim Abruf der Grafik).
-
-  > **Hinweis:** In älteren Versionen hieß dieses Attribut `referrer`.
+      Dies ist unsicher, da zuvor über gesicherte Verbindungen abgerufene Informationen (die URL des Dokuments) auch über nichtgesicherte gesendet werden könnten (als verweisende URL beim Abruf der Grafik).> **Hinweis:** In älteren Versionen hieß dieses Attribut `referrer`.
 - {{htmlattrdef("sizes")}}{{HTMLVersionInline(5)}}
   - : Mit dem `sizes`-Attribut wird die Anzeigegröße der Grafik in Abhängigkeit von der Größe des Anzeigegeräts festgelegt. Es enthält mehrere, durch Kommata getrennte Einträge, jeweils bestehend aus:1. einer CSS-Medienbedingung, zum Beispiel `(max-width: 480px)`. Diese Angabe entfällt für den letzten Eintrag. 2. einer CSS-Größenangabe.Anhand dieser Einträge wählt der Browser eine der in `srcset` gebenenen Grafikquellen, sofern diese mit Breitenangaben ('`w`') versehen sind.
     Fehlt das `srcset`-Attribut oder enthält es keine Breitenangaben, wird `sizes` ignoriert.
@@ -86,9 +82,7 @@ Dieses Element unterstützt die [globalen Attribute](/de/docs/HTML/Global_attrib
 - {{htmlattrdef("width")}}
   - : Breite der Grafik in {{HTMLVersionInline(5)}} CSS-Pixeln, {{HTMLVersionInline(4)}} Bildschirmpixeln oder als prozentuale Angabe.
 - {{htmlattrdef("usemap")}}
-  - : Verweissensitive Grafik; das usemap-Attribut enthält das URL-Fragment (beginnend mit '#') der zugehörigen [Karte](/de/docs/HTML/Element/map "HTML/Element/Map").
-
-  > **Hinweis:** `usemap` kann nicht benutzt werden, falls sich das `<img>`-Element in einem {{htmlelement("a")}}- oder {{HTMLElement("button")}}-Element befindet. Die Verwendung würde mit `ismap` kollidieren.
+  - : Verweissensitive Grafik; das usemap-Attribut enthält das URL-Fragment (beginnend mit '#') der zugehörigen [Karte](/de/docs/HTML/Element/map "HTML/Element/Map").> **Hinweis:** `usemap` kann nicht benutzt werden, falls sich das `<img>`-Element in einem {{htmlelement("a")}}- oder {{HTMLElement("button")}}-Element befindet. Die Verwendung würde mit `ismap` kollidieren.
 - {{htmlattrdef("vspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
   - : Breite des Innenabstands über und unter der Grafik. Benutzen Sie stattdessen die CSS-Eigenschaften {{cssxref('padding-top')}} und {{cssxref('padding-bottom')}} bzw. {{cssxref('padding')}}.
 

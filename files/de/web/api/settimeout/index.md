@@ -24,7 +24,7 @@ Die Funktion **`setTimeout()`** der {{domxref("WindowOrWorkerGlobalScope")}}-Sch
 - `parameter1, ..., parameterN` {{optional_inline}}
   - : Diese Parameter werden an die `funktion` oder den `code` übergeben.
 
-> **Hinweis:** Der Internet Explorer unterstützt bis einschließlich Version 9 die Übergabe von zusätzlichen Parametern nicht.
+> **Note:** **Anmerkung:** Der Internet Explorer unterstützt bis einschließlich Version 9 die Übergabe von zusätzlichen Parametern nicht.
 
 ### Rückgabewert
 

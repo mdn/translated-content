@@ -28,9 +28,7 @@ Dieses Element berücksichtigt die [globalen Attribute](/de/docs/Web/HTML/Global
 - {{htmlattrdef("disabled")}}
   - : Dieser boolesche Wert kennzeichnet diesen Eintrag als nicht auswählbar. Im Regelfall werden nicht auswählbare Einträge in der Darstellung ausgegraut und erhalten keine Benachrichtigungen über Mausclicks, Fokus etc. mehr vom Browser. Ein Element kann darüber hinaus auch deshalb nicht auswählbar sein, weil ein ihm übergeordnetes {{HTMLElement("optgroup")}} Element inaktiviert ist.
 - {{htmlattrdef("label")}}
-  - : Dieses Attribut kann eine kurze erläuternde Informationen zur Bedeutung der jeweiligen Auswahl enthalten. Wurde dem **`label`** Attribut kein Inhalt explizit zugewiesen, enthält es den Textinhalt des Auswahlpunktes selbst.
-
-  > **Note:** _Hinweis zur Nutzung:_ Ein **`label`** Attribut sollte lediglich eine kurze Erläuterung enthalten, wie sie z.B. im Rahmen eines Auswahlmenüs sinnvoll ist. Für längere Beschreibungen, z.B. den neben Radiobuttons und Auswahlschaltflächen angezeigten Text, wurde das **`value`** Attribut vorgesehen.
+  - : Dieses Attribut kann eine kurze erläuternde Informationen zur Bedeutung der jeweiligen Auswahl enthalten. Wurde dem **`label`** Attribut kein Inhalt explizit zugewiesen, enthält es den Textinhalt des Auswahlpunktes selbst.> **Note:** _Hinweis zur Nutzung:_ Ein **`label`** Attribut sollte lediglich eine kurze Erläuterung enthalten, wie sie z.B. im Rahmen eines Auswahlmenüs sinnvoll ist. Für längere Beschreibungen, z.B. den neben Radiobuttons und Auswahlschaltflächen angezeigten Text, wurde das **`value`** Attribut vorgesehen.
 - {{htmlattrdef("selected")}}
   - : Wenn angegeben, kennzeichnet dieser boolesche Wert, ob die betreffende Auswahl initial bereits als angewählt gekennzeichnet ist. Wenn das betreffende `<option>` Element einem {{HTMLElement("select")}} Element untergeordnet ist, dessen Attribut für Mehrfachauswahl {{htmlattrxref("multiple", "select")}} nicht gesetzt ist, darf nur ein einziges `<option>` Element des beinhaltenden {{HTMLElement("select")}} über ein **selected** Attribut verfügen.
 - {{htmlattrdef("value")}}

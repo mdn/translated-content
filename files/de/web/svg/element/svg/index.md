@@ -13,7 +13,7 @@ translation_of: Web/SVG/Element/svg
 
 Das `svg` Element ist ein Container, der ein neues Koordinatensystem und ein [Darstellungsfeld](/de/docs/Web/SVG/Attribute/viewBox) definiert. Es wird als das äußerste Element jedes SVG Dokuments verwendet, aber kann auch dazu dienen SVG Fragmente innerhalb von einem anderen SVG oder einem HTML Dokument einzubetten.
 
-> **Hinweis:** Das `xmlns` Attribute wird nur benötigt wenn das `svg`-Element das äußerste Element eines _SVG Dokuments_ ist.
+> **Note:** **Anmerkung:** Das `xmlns` Attribute wird nur benötigt wenn das `svg`-Element das äußerste Element eines _SVG Dokuments_ ist.
 
 ```css hidden
 html,body,svg { height:100% }

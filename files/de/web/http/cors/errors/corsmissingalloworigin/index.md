@@ -39,7 +39,7 @@ Mithilfe der `"*"`-Wildcard kann man eine Seite so konfigureren, dass Sie jeder 
 
     Access-Control-Allow-Origin: *
 
-> **Warnung:** Die Wildcard dazu zu benutzen, um allen Websites Zugriff auf eine private API zu geben, ist - aus wohl offensichtlichen Gründen - keine gute Idee.
+> **Warning:** **Warnung:** Die Wildcard dazu zu benutzen, um allen Websites Zugriff auf eine private API zu geben, ist - aus wohl offensichtlichen Gründen - keine gute Idee.
 
 Fügen Sie z.B. in Apache eine Zeile wie die Folgende zur Konfiguration des Servers hinzu (im zugehörigen `<Directory>`, `<Location>`, `<Files>`, oder `<VirtualHost>`-Abschnitt). Die Konfigurationseinstellungen findet man üblicherweise in einer `.conf`-Datei (`httpd.conf` und `apache.conf` sind übliche Namen dafür), oder in einer `.htaccess`-Datei.
 

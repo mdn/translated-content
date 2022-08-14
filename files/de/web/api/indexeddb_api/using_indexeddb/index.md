@@ -322,7 +322,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-> **Warnung:** Die folgende Funktion ist nicht Teil des IndexedDB Standards.
+> **Warning:** **Warnung:** Die folgende Funktion ist nicht Teil des IndexedDB Standards.
 
 Mozilla has also implemented `getAll()` to handle this case. It isn't part of the IndexedDB standard, so it may disappear in the future. We've included it because we think it's useful. The following code does precisely the same thing as above:
 

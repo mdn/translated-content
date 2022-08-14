@@ -50,9 +50,7 @@ Dieses Element besitzt die globalen Attribute [globalen Attribute](/de/docs/HTML
   - : Ein Hinweis zum Medium, für welches die verlinkte Ressource ausgelegt ist (zum Beispiel: `print und screen`.). Wenn es ausgelassen wird, wird der Standardwert `all` angenommen. Dieses Attribut sollte nur zusammen mit einem **href** Attribut verwendet werden.
 
 - {{htmlattrdef("nohref")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}
-  - : Gibt an, dass auf diesem Bereich kein Hyperlink hinterlegt ist. Es muss entweder dieses Attribut oder das **href** Attribut in diesem Element verwendet werden.
-
-  > **Hinweis:** Dieses Attribut ist seit HTML5 veraltet. Stattdessen ist das Auslassen des **href** Attributs ausreichend.
+  - : Gibt an, dass auf diesem Bereich kein Hyperlink hinterlegt ist. Es muss entweder dieses Attribut oder das **href** Attribut in diesem Element verwendet werden.> **Note:** **Verwendungshinweis:** Dieses Attribut ist seit HTML5 veraltet. Stattdessen ist das Auslassen des **href** Attributs ausreichend.
 
 - {{htmlattrdef("rel")}} {{HTMLVersionInline("5")}}
   - : Dieses Attribut spezifiziert für Anker im **href** Attribut die Beziehung zwischen dem Zielobjekt und dem Linkobjekt. Der Wert ist eine kommaseparierte Liste von [Linktypen](/de/docs/Web/HTML/Link_types). Die Werte und deren Semantik werden von Autorität eingetragen, welche die entsprechenden Rechte am Dokument besitzt. Der Standardwert ist void, wenn kein anderer Wert angegeben ist. Dieses Attribut sollte nur zusammen mit einem **href** Attribut verwendet werden.

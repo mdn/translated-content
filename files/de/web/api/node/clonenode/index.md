@@ -37,7 +37,7 @@ Der mit `cloneNode()` duplizierte Knoten ist noch nicht Teil des Dokuments und h
 
 Wenn `deep` auf `false` gesetzt ist, werden die Kindknoten nicht mitkopiert. Dies schließt ebenfalls alle Textelemente mit ein, da diese in einem oder mehreren Kindknoten enthalten sind.
 
-> **Warnung:** Die Verwendung von `cloneNode()` kann dazu führen, dass die selbe ID im Dokument mehrmals existiert.
+> **Warning:** **Warnung:** Die Verwendung von `cloneNode()` kann dazu führen, dass die selbe ID im Dokument mehrmals existiert.
 
 Wenn der Originalknoten eine ID hat, sollte diese im dupliziertem Knoten geändert oder gelöscht werden, um Probleme zu vermeiden. Dies sollte auch für das `name` Attribut überlegt werden.
 

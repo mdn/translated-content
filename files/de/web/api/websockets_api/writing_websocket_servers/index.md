@@ -22,7 +22,7 @@ Ein WebSocket-Server wird hier auf sehr niedriger Ebene erklärt. WebSocket-Serv
 
 Zunächst muss der Server mithilfe eines Standard-TCP-Sockets auf eingehende Socket-Verbindungen warten. Abhängig von Ihrer Plattform kann dies automatisch für Sie erledigt werden. Angenommen, Ihr Server überwacht example.com, Port 8000, und Ihr Socket-Server antwortet auf {{HTTPMethod ("GET")}} -Anfragen unter example.com/chat.
 
-> **Warnung:** Der Server überwacht möglicherweise jeden von ihm ausgewählten Port. Wenn er jedoch einen anderen Port als 80 oder 443 auswählt, kann es zu Problemen mit Firewalls und / oder Proxys kommen. Browser benötigen im Allgemeinen eine sichere Verbindung für WebSockets, obwohl sie möglicherweise eine Ausnahme für lokale Geräte bieten.
+> **Warning:** **Warnung**: Der Server überwacht möglicherweise jeden von ihm ausgewählten Port. Wenn er jedoch einen anderen Port als 80 oder 443 auswählt, kann es zu Problemen mit Firewalls und / oder Proxys kommen. Browser benötigen im Allgemeinen eine sichere Verbindung für WebSockets, obwohl sie möglicherweise eine Ausnahme für lokale Geräte bieten.
 
 Der Handshake ist das "Web" in WebSockets. Es ist die Brücke von HTTP zu WebSockets. Beim Handshake werden Details der Verbindung ausgehandelt, und jede Partei kann vor Abschluss zurücktreten, wenn die Bedingungen ungünstig sind. Der Server muss darauf achten, alles zu verstehen, was der Client verlangt, da sonst Sicherheitsprobleme auftreten können.
 

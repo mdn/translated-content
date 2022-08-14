@@ -23,9 +23,7 @@ Die folgenden Einheiten können verwendet werden:
 - [`deg`]()
   - : definiert einen Winkel in [Grad](<https://de.wikipedia.org/wiki/Grad_(Winkel)>). Ein voller Kreis hat `360deg`.
 - [`grad`]()
-  - : definiert einen Winkel in [Gon](https://de.wikipedia.org/wiki/Gon). Ein voller Kreis hat `400grad`.
-
-  > **Warnung:** Nicht zu verwechseln mit [Grad (siehe `deg`)](/de/docs/Web/CSS/angle#deg).
+  - : definiert einen Winkel in [Gon](https://de.wikipedia.org/wiki/Gon). Ein voller Kreis hat `400grad`.> **Warning:** **Achtung:** Nicht zu verwechseln mit [Grad (siehe `deg`)](/de/docs/Web/CSS/angle#deg).
 - [`rad`]()
   - : definiert einen Winkel in [Radiant](https://de.wikipedia.org/wiki/Radiant_%28Einheit%29)en. Ein voller Kreis hat 2π Radianten, das entspricht etwa `6.2832rad`. `1rad` entspricht 180/π Grad.
 - [`turn`]()

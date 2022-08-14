@@ -16,7 +16,7 @@ translation_of: Web/CSS/font-feature-settings
 
 Die Eigenschaft `font-feature-settings` ermöglicht die Kontrolle von erweiterten typografischen Eigenschaften in OpenType-Schriftarten.
 
-> **Hinweis:** Wenn möglich sollte die Eigenschaft {{cssxref("font-variant")}} genutzt werden. Diese Eigenschaft wurde speziell für Fälle entwickelt, in denen es nicht möglich ist, eine OpenType-Eigenschaft zu aktivieren oder zu nutzen.
+> **Note:** **Anmerkung:** Wenn möglich sollte die Eigenschaft {{cssxref("font-variant")}} genutzt werden. Diese Eigenschaft wurde speziell für Fälle entwickelt, in denen es nicht möglich ist, eine OpenType-Eigenschaft zu aktivieren oder zu nutzen.
 >
 > Diese Eigenschaft sollte insbesondere nicht genutzt werden, um Kapitälchen zu aktivieren.
 
