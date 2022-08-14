@@ -564,7 +564,7 @@ daySelect.onchange = () => {
 }
 ```
 
-> **备注：** 请记住某些年份有 53 个星期（见[**每年的周数**](ttps://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。
+> **备注：** 请记住某些年份有 53 个星期（见[**每年的周数**](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。
 
 ## 规范
 
@@ -574,8 +574,8 @@ daySelect.onchange = () => {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 通用 {{HTMLElement("input")}} 元素以及操作它的接口 {{domxref("HTMLInputElement")}}
-- [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date) and [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time)
+- [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date) 和 [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time)
 - [日期和时间选择器教程](/zh-CN/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
