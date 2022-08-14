@@ -31,7 +31,7 @@ Um die Konsolenausgabe in eine Datei umzuleiten, muss Firefox _ohne_ den Paramet
 
     firefox > console.txt 2>&1
 
-`dump` steht auch in JavaScript geschriebenen XPCOM Komponenten zur verfügbar, obwohl [`window`](/en-US/docs/DOM/window "DOM/window") nicht das globale Objekt in Komponenten ist. Allerdings wird diese Verwendung von `dump` nicht durch die oben genannte Einstellung beeinflusst -- die Ausgabe findet immer statt. Deshalb ist es anzuraten, diese Einstellung selbst zu prüfen oder eine eigene Debug-Einstellung zu erzeugen. Damit sichergestellt ist, dass nicht unnötig viele Debug-Daten in die Konsole des Benutzers geschrieben werden, wenn dieser überhaupt nicht an diesen interessiert ist. Achtung, die Ausgabe von `dump` von XPCOM Komponenten wird zu `stderr` geleitet, während ein Aufruf von `dump`an andere Stelle auf `stdout` ausgibt.
+`dump` steht auch in JavaScript geschriebenen XPCOM Komponenten zur verfügbar, obwohl [`window`](/en-US/docs/DOM/window "DOM/window") nicht das globale Objekt in Komponenten ist. Allerdings wird diese Verwendung von `dump` nicht durch die oben genannte Einstellung beeinflusst -- die Ausgabe findet immer statt. Deshalb ist es anzuraten, diese Einstellung selbst zu prüfen oder eine eigene Debug-Einstellung zu erzeugen. Damit sichergestellt ist, dass nicht unnötig viele Debug-Daten in die Konsole des Benutzers geschrieben werden, wenn dieser überhaupt nicht an diesen interessiert ist. Achtung, die Ausgabe von `dump` von XPCOM Komponenten wird zu `stderr` geleitet, während ein Aufruf von `dump `an andere Stelle auf `stdout` ausgibt.
 
 ## Spezifikation
 

@@ -25,6 +25,6 @@ Seit zehn Jahren dokumentiert die MDN Gemeinschaft bereits das offene Web. Von d
 
 ## Subnav
 
-1. [10 Jahre MDN](/de/docs/MDN_at_ten/)
-2. [Die Geschichte des MDN](/de/MDN_at_ten/History_of_MDN)
-3. [Zum MDN beitragen](/docs/MDN_at_ten/Contributing_to_MDN)
+1.  [10 Jahre MDN](/de/docs/MDN_at_ten/)
+2.  [Die Geschichte des MDN](/de/MDN_at_ten/History_of_MDN)
+3.  [Zum MDN beitragen](/docs/MDN_at_ten/Contributing_to_MDN)

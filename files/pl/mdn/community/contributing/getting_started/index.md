@@ -14,13 +14,13 @@ original_slug: MDN/Contribute/Getting_started
 ---
 {{MDNSidebar}}
 
-Jesteśmy otwartą społecznością deweloperów, pracujących nad stworzeniem lepszej sieci, niezależnej od platformy, przeglądarki czy konkretnej marki. Każdy może pomóc nam osiągnąć ten cel. Razem możemy dalej zmieniać oblicze sieci i dostarczać nasze innowacyjne rozwiązania wszystkim. Ta przygoda rozpoczyna się tutaj, z tobą.
+Jesteśmy otwartą społecznością deweloperów, pracujących nad stworzeniem lepszej sieci, niezależnej od platformy, przeglądarki czy konkretnej marki. Każdy może pomóc nam osiągnąć ten cel. Razem możemy dalej zmieniać oblicze sieci i dostarczać nasze innowacyjne rozwiązania wszystkim. Ta przygoda rozpoczyna się tutaj, z tobą.
 
 Każda część MDN (dokumenty, dema, oraz same strony) tworzone są przez naszą społeczność deweloperów. Dołącz do nas!
 
 ## 3 proste kroki do MDN
 
-MDN to wiki, gdzie **każdy** może dodać i edytować treść. Nie musisz być programistą czy ekspertem od nowych technologii. Mamy parę zadań, którymi trzebaby się zająć; od prostych czynności (sprawdzanie i korektowanie błędów w tekście) po bardziej złożone (jak pisanie dokumentacji do API).
+MDN to wiki, gdzie **każdy** może dodać i edytować treść. Nie musisz być programistą czy ekspertem od nowych technologii. Mamy parę zadań, którymi trzebaby się zająć; od prostych czynności (sprawdzanie i korektowanie błędów w tekście) po bardziej złożone (jak pisanie dokumentacji do API).
 
 Współpraca z nami jest łatwa i bezpieczna. Nawet jeśli zrobisz błąd, łatwo go będzie naprawić. Jeśli nie za bardzo wiesz jak rzeczy powinny wyglądać bądź nie czujesz się mistrzem gramatyki, nie przejmuj się! Zawsze znajdzie się wśród nas ktoś, kto poprawi błędy po tobie.
 
@@ -36,7 +36,7 @@ Teraz, kiedy jesteś już zalogowany, przeczytaj opis zadań poniżej i zdecyduj
 
 Kiedy już zdecydujesz czym mógłbyś się zająć, znajdź stronę czy kod i po prostu zacznij!
 
-To co zrobisz nie musi być perfekcyjne, inni, przeglądając twoją pracę, na pewno poprawią błędy, które zauważą. Jeśli chcesz poeksperymentować zanim coś zrobisz, możesz wyedytować stronę [Sandbox](/pl/docs/Sandbox). Jakieś pytania w trakcie pracy? Na stronie [Społeczność](/pl/docs/MDN/Community) znajdziesz informacje, listy mailingowe i kanały do czatowania, gdzie znajdziesz potrzebną pomoc.
+To co zrobisz nie musi być perfekcyjne, inni, przeglądając twoją pracę, na pewno poprawią błędy, które zauważą. Jeśli chcesz poeksperymentować zanim coś zrobisz, możesz wyedytować stronę [Sandbox](/pl/docs/Sandbox). Jakieś pytania w trakcie pracy? Na stronie [Społeczność](/pl/docs/MDN/Community) znajdziesz informacje, listy mailingowe i kanały do czatowania, gdzie znajdziesz potrzebną pomoc.
 
 Kiedy skończysz, zacznij kolejne zadanie lub zajrzyj na stronę [inne rzeczy, które mógłbyś zrobić na MDN](#Other_things_you_can_do_on_MDN).
 
@@ -69,7 +69,7 @@ Potrzebujemy więcej próbek kodu! Możesz pomóc nam przy naszej platformie [Ku
 Niektóre zadania wymagają umiejętności zarówno technicznych jak i językowych. Możesz pisać nowe artykuły, sprawdzać treść artykułów pod względem technicznym bądź dostosowywać dokumenty.
 
 - [Tagowanie stron JavaScript](/pl/docs/Project:MDN/Contributing/How_to/Tag_JavaScript_pages) (5 minut)
-- [Promowanie MDN na własnej stronie](/pl/docs/MDN/Promote) (5 minut)
+- [Promowanie MDN na własnej stronie](/pl/docs/MDN/Promote) (5 minut)
 - [Sprawdzanie treści artykułów pod względem technicznym](/pl/docs/Project:MDN/Contributing/How_to/Do_a_technical_review) (30 minut)
 - [Uzupełnianie API i layoutu strony](/pl/docs/Project:MDN/Contributing/How_to/Update_API_page_layout) (30 minut)
 - [Pisanie nowych artykułów na temat jednego z interesujących cię tematów](/pl/docs/MDN/Contribute/Creating_and_editing_pages#Creating_a_new_page) (1 godzina, bądź więcej)
@@ -83,7 +83,7 @@ Wszystkie tłumaczenia i lokalizacje są robione przez nas, społeczność MDN.
 
 ### Opcja 5: Znalazłem błąd, ale nie wiem jak go naprawić
 
-Zgłoś go nam [uzupełniając formularz błędu](https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla%20Developer%20Network). (5 minut)
+Zgłoś go nam [uzupełniając formularz błędu](https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla%20Developer%20Network). (5 minut)
 
 Use these field values:
 

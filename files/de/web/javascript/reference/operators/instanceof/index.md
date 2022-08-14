@@ -25,6 +25,8 @@ Der **`instanceof` Operator** prüft, ob ein Objekt die prototype Eigenschaft ei
 - `object`
   - : Das zu prüfende Objekt.
 
+<!---->
+
 - `constructor`
   - : Gegen die zu testende Funktion.
 
@@ -67,14 +69,14 @@ Zu beachten ist, dass sich das Ergebnis des `instanceof` Tests ändern kann, wen
 
 ### `instanceof` und verschiedene Kontexte (z. B. Frames oder Windows)
 
-Verschiedene Scopes haben verschiedene Ausführungsumgebungen. Das bedeutet, sie haben verschiedene Standardobjekte (verschiedene globale Objekte, verschiedene Konstruktoren, etc.). Das kann zu unerwarteten Resultaten führt. Zum Beispiel gibt `[] instanceof window.frames[0].Array` `false` zurück, weil `Array.prototype !== ``window.frames[0].Array` ist und Arrays vom Ersteren erben.
+Verschiedene Scopes haben verschiedene Ausführungsumgebungen. Das bedeutet, sie haben verschiedene Standardobjekte (verschiedene globale Objekte, verschiedene Konstruktoren, etc.). Das kann zu unerwarteten Resultaten führt. Zum Beispiel gibt `[] instanceof window.frames[0].Array` `false` zurück, weil ` Array.prototype !== ``window.frames[0].Array` ist und Arrays vom Ersteren erben.
 
 Auf den ersten Blick ergibt das nicht viel Sinn, fängt man jedoch an Objekte zwischen verschiedenen Frames oder Windows zwischen Kontexten auszutauschen, wäre das valide und ein großes Problem. Zum Beispiel kann man mit sicher testen ob ein Objekt ein Array ist, indem man `Array.isArray(myObj)` benutzt.
 
 Zur Prüfung ob ein [Node](/de/docs/Web/API/Node) ein SVGElement ist kann `myNode instanceof myNode.ownerDocument.defaultView.SVGElement` genutzt werden.
 
 > **Note:** **Hinweis for Mozilla Entwickler:**
-> In Code mit XPCOM, hat `instanceof` einen speziellen Effekt: `obj instanceof`_`xpcomInterface`_ (z. B. `Components.interfaces.nsIFile`) ruft `obj.QueryInterface(xpcomInterface)` auf und gibt `true` zurück, wenn QueryInterface erfolgreich war. Ein Seiteneffekt ist, dass Eigenschaften von _`xpcomInterface`_ auf `obj` aufgerufen werden können, wenn erfolgreich mit `instanceof` getestet wurde. Im Gegensatz zu JavaScripts Standardobjekten, funktioniert `obj instanceof xpcomInterface` wie erwartet, auch wenn `obj` aus ein anderen Scope stammt.
+> In Code mit XPCOM, hat `instanceof` einen speziellen Effekt: `obj instanceof `_`xpcomInterface`_ (z. B. `Components.interfaces.nsIFile`) ruft `obj.QueryInterface(xpcomInterface)` auf und gibt `true` zurück, wenn QueryInterface erfolgreich war. Ein Seiteneffekt ist, dass Eigenschaften von _`xpcomInterface`_ auf `obj` aufgerufen werden können, wenn erfolgreich mit `instanceof` getestet wurde. Im Gegensatz zu JavaScripts Standardobjekten, funktioniert `obj instanceof xpcomInterface` wie erwartet, auch wenn `obj` aus ein anderen Scope stammt.
 
 ## Beispiele
 
@@ -108,7 +110,7 @@ myDate instanceof Object;   // gibt true zurück
 myDate instanceof String;   // gibt false zurück
 ```
 
-### Demonstration, dass `mycar` vom Typ `Car` und vom Typ`Object` ist
+### Demonstration, dass `mycar` vom Typ `Car` und vom Typ` Object` ist
 
 Der folgende Quelltext erstellt ein Objekttyp `Car` und einen Instanz dieses Typen, `mycar`. Der `instanceof` Operator demonstriert, dass das `mycar` Objekt vom Typ `Car` und `Object` ist.
 

@@ -23,6 +23,8 @@ Zwraca liczbę `podstawa` podniesioną do potęgi o wykładniku `wykładnik`, tj
 - `podstawa`
   - : liczba podnoszona do potęgi.
 
+<!---->
+
 - `wykładnik`
   - : wykładnik potęgi, do której podnoszona jest liczba `podstawa`.
 

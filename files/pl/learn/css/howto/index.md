@@ -35,7 +35,7 @@ The following links provide solutions to common problems you can solve with CSS.
 - [How to control overflowing content](/en-US/Learn/CSS/Introduction_to_CSS/Box_model#Overflow)
 - [How to control the part of a CSS box that the background is drawn under](/en-US/Learn/CSS/Introduction_to_CSS/Box_model#Background_clip)
 - [How do I define inline, block, and inline-block?](/en-US/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)
-- [How to create fancy boxes](/pl/docs/Learn/CSS/Howto/create_fancy_boxes) (also see the [Styling boxes](/pl/docs/Learn/CSS/Styling_boxes) module, generally).
+- [How to create fancy boxes](/pl/docs/Learn/CSS/Howto/create_fancy_boxes) (also see the [Styling boxes](/pl/docs/Learn/CSS/Styling_boxes) module, generally).
 - [How to use `background-clip` to control how much of the box your background image covers](/en-US/Learn/CSS/Introduction_to_CSS/Box_model#Background_clip).
 - [How to change the box model completely using `box-sizing`](/en-US/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely)
 - [How to control backgrounds](/en-US/Learn/CSS/Styling_boxes/Backgrounds)

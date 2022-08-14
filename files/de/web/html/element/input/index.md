@@ -160,6 +160,8 @@ Dieser Abschnitt beschreibt die für alle Arten des `input`-Elements verfügbare
 - `video/*` für Video-Dateien {{HTMLVersionInline("5")}}
 - `image/*` für Bild-dateien {{HTMLVersionInline("5")}}
 
+<!---->
+
 - {{htmlattrdef("type")}}
   - : Die Art des Bedienelements. Siehe [Arten des \<input>-Elements](#arten_des_<input>-elements) für die einzelnen Typen.
 - {{htmlattrdef("accept")}}
@@ -267,11 +269,11 @@ Dieser Abschnitt beschreibt die für alle Arten des `input`-Elements verfügbare
 - {{htmlattrdef("max")}} {{HTMLVersionInline("5")}}
   - : The maximum (numeric or date-time) value for this item, which must not be less than its minimum (**min** attribute) value.
 - {{htmlattrdef("maxlength")}}
-  - : If the value of the **type** attribute is `text`, `email`,`search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters (in Unicode code points) that the user can enter; for other control types, it is ignored. It can exceed the value of the **size** attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior; that is, the user can enter an unlimited number of characters. The constraint is evaluated only when the value of the attribute has been changed.
+  - : If the value of the **type** attribute is `text`, `email`,` search`, `password`, `tel`, or `url`, this attribute specifies the maximum number of characters (in Unicode code points) that the user can enter; for other control types, it is ignored. It can exceed the value of the **size** attribute. If it is not specified, the user can enter an unlimited number of characters. Specifying a negative number results in the default behavior; that is, the user can enter an unlimited number of characters. The constraint is evaluated only when the value of the attribute has been changed.
 - {{htmlattrdef("min")}} {{HTMLVersionInline("5")}}
   - : The minimum (numeric or date-time) value for this item, which must not be greater than its maximum (**max** attribute) value.
 - {{htmlattrdef("minlength")}} {{HTMLVersionInline("5")}}
-  - : If the value of the **type** attribute is `text`, `email`,`search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter; for other control types, it is ignored.
+  - : If the value of the **type** attribute is `text`, `email`,` search`, `password`, `tel`, or `url`, this attribute specifies the minimum number of characters (in Unicode code points) that the user can enter; for other control types, it is ignored.
 - {{htmlattrdef("multiple")}} {{HTMLVersionInline("5")}}
   - : This Boolean attribute indicates whether the user can enter more than one value. This attribute applies when the **type** attribute is set to `email` or `file`; otherwise it is ignored.
 - {{htmlattrdef("name")}}

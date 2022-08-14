@@ -75,7 +75,7 @@ var foo = 'bar';​
 // SyntaxError: illegal character
 ```
 
-Wenn man den Code in einem Editor wie Vim anschaut, bemerkt man, dass ein[breitenloses Leerzeichen (ZWSP) (U+200B)](https://de.wikipedia.org/wiki/Breitenloses_Leerzeichen) benutzt wird.
+Wenn man den Code in einem Editor wie Vim anschaut, bemerkt man, dass ein[ breitenloses Leerzeichen (ZWSP) (U+200B)](https://de.wikipedia.org/wiki/Breitenloses_Leerzeichen) benutzt wird.
 
 ```js
 var foo = 'bar';​<200b>

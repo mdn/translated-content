@@ -63,6 +63,8 @@ Pour plus de détails concernant ces fonctionnalités, voir [Using the Web Speec
 - {{domxref("SpeechSynthesisUtterance")}}
   - : Répresente une requête de synthèse vocale. Il contient le contenu que l'outil de synthèse vocale devrait vocaliser et les informations sur comment le vocaliser (e.g. langue, ton et volume).
 
+<!---->
+
 - {{domxref("SpeechSynthesisVoice")}}
   - : Représente une voix qui est supportée par le système. Chaque `SpeechSynthesisVoice` a son propre outil de synthèse vocale incluant les informations concernant la langue, le nom et l'URI.
 - {{domxref("Window.speechSynthesis")}}

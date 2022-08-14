@@ -22,8 +22,12 @@ Funkcja `translate` ocenia ciąg i zbiór znaków do przetłumaczenia i zwraca p
 - _`string`_
   - : Oceniany łańcuch znaków.
 
+<!---->
+
 - _`abc`_
   - : Ciąg znaków, które zostaną zastąpione.
+
+<!---->
 
 - _`XYZ`_
   - : Ciąg znaków, które użyte zostaną do zastąpienia. Pierwszy znak w _`XYZ`_ zastąpi każde wystąpienie pierwszego znaku w _`abc`_, które pojawi się w*` `\_\_`string`* .

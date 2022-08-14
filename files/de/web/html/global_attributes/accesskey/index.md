@@ -12,7 +12,7 @@ original_slug: Web/HTML/Globale_Attribute/accesskey
 
 Das [globale Attribut](/de/docs/Web/HTML/Globale_Attribute) **accesskey** definiert ein Tastaturkürzel für das aktuelle Element. Der Attributwert muss aus einem einzelnen, druckbarem Zeichen bestehen (dies beinhaltet Zeichen mit Umlauten und andere Zeichen, die über die Tastatur eingegeben werden können).
 
-> **Hinweis:** Die WHATWG-Spezifikation besagt, dass mehrere mit Leerzeichen voneinander getrennte Zeichen angegeben werden können und der Browser davon das erste unterstützte verwenden wird. Das funktioniert jedoch in den meisten Browsern nicht. In Internet Explorer und Edge wird das erste unterstützte Zeichen jedoch ohne Probleme verwendet, sofern es keine Konflikte mit anderen Befehlen gibt.
+> **Note:** **Hinweis**: Die WHATWG-Spezifikation besagt, dass mehrere mit Leerzeichen voneinander getrennte Zeichen angegeben werden können und der Browser davon das erste unterstützte verwenden wird. Das funktioniert jedoch in den meisten Browsern nicht. In Internet Explorer und Edge wird das erste unterstützte Zeichen jedoch ohne Probleme verwendet, sofern es keine Konflikte mit anderen Befehlen gibt.
 
 Je nach Browser und Betriebssystem unterscheidet sich die Tastaturkombination zur Ansteuerung des **accesskey**.
 

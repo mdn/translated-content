@@ -8,7 +8,7 @@ tags:
   - Wszystkie_kategorie
 translation_of: Web/API/Element/className
 ---
-{{APIRef}} Podsumowanie
+{{APIRef}} Podsumowanie
 
 **className** pobiera/ustawia wartość atrybutu `class` bieżącego elementu.
 

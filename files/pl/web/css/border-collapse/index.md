@@ -16,7 +16,7 @@ Własność border-collapse jest używana do stworzenia połączonych obramowań
 
 - {{ Xref_cssinitial() }}: {{ Cssxref("separate") }}
 - {{ Xref_cssinherited() }}: Tak
-- Media : {{ Xref_cssvisual() }}
+- Media : {{ Xref_cssvisual() }}
 - {{ Xref_csscomputed() }}:
 
 ### Składnia
@@ -25,15 +25,17 @@ Własność border-collapse jest używana do stworzenia połączonych obramowań
 
 ### Wartości
 
-- **inherit** : Ustawia wprost wartość tej własności na wartość rodzica.
-- **separate** : Używa modelu wyświetlania "rozdzielonych obramowań".
-- **collapse** : Używa modelu wyświetlania "połączonych obramowań".
+- **inherit** : Ustawia wprost wartość tej własności na wartość rodzica.
+- **separate** : Używa modelu wyświetlania "rozdzielonych obramowań".
+- **collapse** : Używa modelu wyświetlania "połączonych obramowań".
 
 ### Przykłady
 
 [Zobacz przykład](/samples/cssref/border-collapse.html)
 
     <table border="1" style="border-collapse: collapse" bordercolor="#111111" width="500">
+
+<!---->
 
     <table border="1" style="border-collapse: separate" bordercolor="#111111" width="500">
 

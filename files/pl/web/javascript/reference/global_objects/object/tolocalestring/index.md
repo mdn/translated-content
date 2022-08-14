@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Object/toLocaleString
 
 ## Podsumowanie
 
-Zwraca łańcuch znaków reprezentujący obiekt. Ta metoda najczęściej jest przysłonięta przez pochodne obiekty.
+Zwraca łańcuch znaków reprezentujący obiekt. Ta metoda najczęściej jest przysłonięta przez pochodne obiekty.
 
 ## Składnia
 
@@ -27,7 +27,7 @@ Brak.
 
 `Object` `toLocaleString` zwraca rezultat, który nazywamy {{jsxref("Object.toString", "toString()")}}.
 
-Ta metoda jest dostarczona dając obiektom generującą metodę `toLocaleString()`, nawet mimo to nie wszystkie go używają. Aktualnie, tylko `Array`, `Number` i `Date` nadpisują `toLocaleString`.
+Ta metoda jest dostarczona dając obiektom generującą metodę `toLocaleString()`, nawet mimo to nie wszystkie go używają. Aktualnie, tylko `Array`, `Number` i `Date` nadpisują `toLocaleString`.
 
 ## Zobacz także
 

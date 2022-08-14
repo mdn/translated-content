@@ -49,7 +49,7 @@ fetch('simple.wasm').then(response =>
 );
 ```
 
-> **Hinweis:** Du wirst wahrscheinlich in den meisten Fällen {{jsxref("WebAssembly.compileStreaming()")}} verwenden wollen, da es effizienter als `compile()` arbeitet.
+> **Note:** **Hinweis**: Du wirst wahrscheinlich in den meisten Fällen {{jsxref("WebAssembly.compileStreaming()")}} verwenden wollen, da es effizienter als `compile()` arbeitet.
 
 ## Spezifikationen
 

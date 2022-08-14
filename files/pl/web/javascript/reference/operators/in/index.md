@@ -34,6 +34,8 @@ Operator `in` zwraca wartość `true` (prawda), jeśli określona własność je
 - `propNameOrNumber`
   - : Łańcuch znaków lub wartość liczbowa reprezentujące nazwę własności lub indeks tablicy.
 
+<!---->
+
 - `objectName`
   - : Nazwa obiektu.
 

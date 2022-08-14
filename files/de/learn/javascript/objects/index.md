@@ -24,7 +24,7 @@ Bevor du mit diesem Lernmodul beginnst, solltest du dich mit HTML und CSS vertra
 
 Auch solltest du dich vorher mit den Grundlagen von JavaScript vertraut gemacht haben, sie dazu bitte in folgenden Modulen nach: [JavaScript: Erste Schritte](/de/docs/Learn/JavaScript/First_steps) und [JavaScript: Elementare Grundlagen](/de/docs/Learn/JavaScript/Building_blocks).
 
-> **Hinweis:** Solltest du an einem Computer arbeiten, der dir das Erstellen und Bearbeiten von Dateien nicht erlaubt, so kannst du Dienste wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/) für diesen Kurs nutzen.
+> **Note:** **Hinweis**: Solltest du an einem Computer arbeiten, der dir das Erstellen und Bearbeiten von Dateien nicht erlaubt, so kannst du Dienste wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/) für diesen Kurs nutzen.
 
 ## Guides
 

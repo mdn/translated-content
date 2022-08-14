@@ -60,7 +60,7 @@ Seit ECMAScript2015 sind `let` und `const` Variablendeklarationen, die an den Bl
 
 Ein bedingtes Statement ist eine Menge von Befehlen, die ausgeführt werden, wenn eine Bedingung wahr ist. JavaScript unterstützt zwei bedingte Statements: `if...else` und `switch`.
 
-### `if...else`Anweisungen
+### `if...else `Anweisungen
 
 `if` wird eingesetzt um Statements auszuführen, wenn eine logische Bedingung wahr wird. Mit der optionalen `else-`Klausel werden Statements ausgeführt, wenn die Bedingung falsch ist. Ein `if`-Block sieht folgendermaßen aus:
 
@@ -170,7 +170,7 @@ Das optionale `break` Statement, welches in jeder `case`-Klausel eingesetzt ist,
 
 #### Beispiel
 
-Im folgenden Beispiel wird der `case` "Bananas" ausgeführt, wenn `fruittype` zu "Bananas" ausgewertet wird. Die `break` Statements bewirken, dass das `switch` beendet wird und das nach `switch` stehende Statement ausgeführt wird. Wird `break` im `case`"Bananas" weggelassen, so wird der `case` "Cherries" mit ausgeführt.
+Im folgenden Beispiel wird der `case` "Bananas" ausgeführt, wenn `fruittype` zu "Bananas" ausgewertet wird. Die `break` Statements bewirken, dass das `switch` beendet wird und das nach `switch` stehende Statement ausgeführt wird. Wird `break` im `case `"Bananas" weggelassen, so wird der `case` "Cherries" mit ausgeführt.
 
 ```js
 switch (fruittype) {

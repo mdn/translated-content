@@ -12,9 +12,9 @@ translation_of: Web/CSS/hyphens
 
 ## Übersicht
 
-Die `hyphens`Eigenschaft regelt die automatische Silbentrennung. Dazu ist das HTML Attribut `lang`, bzw. xml:lang unter XML, zwingend notwendig.
+Die `hyphens `Eigenschaft regelt die automatische Silbentrennung. Dazu ist das HTML Attribut `lang`, bzw. xml:lang unter XML, zwingend notwendig.
 
-> **Hinweis:** Wie die Silbentrennung umgesetzt wird kann von Browser zu Browser, bzw. von Sprache zu Sprache, variieren.
+> **Note:** **Hinweis:** Wie die Silbentrennung umgesetzt wird kann von Browser zu Browser, bzw. von Sprache zu Sprache, variieren.
 
 {{cssinfo}}
 

@@ -16,11 +16,11 @@ Die zwei Mechanismen innerhalb des Web Storage sind wie folgt:
 
 Diese Mechanismen stehen durch die Eigenschaften {{domxref("Window.sessionStorage")}} und {{domxref("Window.localStorage")}} zur Verfügung (um dies näher zu beschreiben: Zur Unterstützung der Browser implementiert das `Window` Objekt die Objekte `WindowLocalStorage` und `WindowSessionStorage`, welche von `localStorage` und `sessionStorage` bereitgestellt werden) — durch deren Aufruf wird eine Instanz des {{domxref("Storage")}} Objekts erstellt, durch welches Daten gespeichert, abgerufen und gelöscht werden können. Ein anderes Speicherelement wird für das `sessionStorage` und `localStorage` jedes Ausgangspunktes verwendet — beide arbeiten getrennt und werden auch getrennt gesteuert.
 
-> **Hinweis:** Ab Firefox 45 aufwärts wird die Datenspeicherung pro Ausgangspunkt auf 10MB begrenzt, um Speicherprobleme durch übermäßige Verwendung des Web storage zu vermeiden.
+> **Note:** **Hinweis**: Ab Firefox 45 aufwärts wird die Datenspeicherung pro Ausgangspunkt auf 10MB begrenzt, um Speicherprobleme durch übermäßige Verwendung des Web storage zu vermeiden.
 
-> **Hinweis:** Zugang zum Web Storage von IFrames Ditter wird verweigert, wenn der Anwender [Cookies Dritter deaktiviert](https://support.mozilla.org/de/kb/disable-third-party-cookies) hat (Firefox implementiert dieses Verhalten ab der [version 43](/de/docs/Mozilla/Firefox/Releases/43) aufwärts.)
+> **Note:** **Hinweis**: Zugang zum Web Storage von IFrames Ditter wird verweigert, wenn der Anwender [Cookies Dritter deaktiviert](https://support.mozilla.org/de/kb/disable-third-party-cookies) hat (Firefox implementiert dieses Verhalten ab der [version 43](/de/docs/Mozilla/Firefox/Releases/43) aufwärts.)
 
-> **Hinweis:** Web Storage ist nicht dasselbe wie [mozStorage](/de/docs/Storage "Storage") (Mozillas XPCOM Schnittstelle zu SQLite) oder die [Session store API](/de/docs/Session_store_API "Session_store_API") (ein [XPCOM](/de/docs/XPCOM "XPCOM") Speicherprogramm, welches von Erweiterungen verwendet wird).
+> **Note:** **Hinweis:** Web Storage ist nicht dasselbe wie [mozStorage](/de/docs/Storage "Storage") (Mozillas XPCOM Schnittstelle zu SQLite) oder die [Session store API](/de/docs/Session_store_API "Session_store_API") (ein [XPCOM](/de/docs/XPCOM "XPCOM") Speicherprogramm, welches von Erweiterungen verwendet wird).
 
 ## Web Storage Schnittstellen
 
@@ -49,7 +49,7 @@ Zudem besteht eine [Ereignis-Ausgabeseite](https://mdn.github.io/dom-examples/we
 
 Alle Browser haben variiernde Kapazitäten sowohl für das localStorage und auch das sessionStorage. Hier ist ein [detailierter Ablauf aller Speicherkapazitäten verschiedener Browser](http://dev-test.nemikor.com/web-storage/support-test/) zu finden.
 
-> **Hinweis:** Seit iOS 5.1, speichert Safari Mobile localStorage-Daten in den cache-Ordner, welcher gelegentlichen Speicherbereinigungen durch das OS ausgesetzt ist, welche typischerweise bei knappem Speicher auftreten.
+> **Note:** **Hinweis:** Seit iOS 5.1, speichert Safari Mobile localStorage-Daten in den cache-Ordner, welcher gelegentlichen Speicherbereinigungen durch das OS ausgesetzt ist, welche typischerweise bei knappem Speicher auftreten.
 
 ## Privates Surfen / Inkognito-Modus
 

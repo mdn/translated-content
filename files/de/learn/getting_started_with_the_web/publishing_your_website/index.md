@@ -43,7 +43,7 @@ Zusätzlich benötigen Sie ein {{Glossary("FTP", "File Transfer Protocol (FTP)")
 
 Es gibt Tools mit denen Sie Webseiten veröffentlichen können:
 
-- [GitHub](https://github.com/)ist eine Seite, auf der man zusammen mit anderen an Code arbeiten kann. Es erlaubt das Hochladen von Projektarchiven, um diese in dem [Git](http://git-scm.com/) **Versionskontrollsystem** zu speichern. Diese Projektarchive sind online von anderen einsehbar und können bearbeitet werden. Das System ist Open-Source, das heißt, jeder in der Welt kann in Ihre Projektarchive auf GitHub schauen, Ihren Code finden, diesen Benutzen, von Ihrem Code lernen und ihn verbessern. GitHub hat eine Funktion namens [GitHub Pages](https://pages.github.com/), mit der man Webseiten-Code live ins Web schalten kann.
+- [GitHub ](https://github.com/)ist eine Seite, auf der man zusammen mit anderen an Code arbeiten kann. Es erlaubt das Hochladen von Projektarchiven, um diese in dem [Git](http://git-scm.com/) **Versionskontrollsystem** zu speichern. Diese Projektarchive sind online von anderen einsehbar und können bearbeitet werden. Das System ist Open-Source, das heißt, jeder in der Welt kann in Ihre Projektarchive auf GitHub schauen, Ihren Code finden, diesen Benutzen, von Ihrem Code lernen und ihn verbessern. GitHub hat eine Funktion namens [GitHub Pages](https://pages.github.com/), mit der man Webseiten-Code live ins Web schalten kann.
 - [Google App Engine](https://cloud.google.com/appengine/ "App Engine - Build Scalable Web & Mobile Backends in Any Language  |  Google Cloud Platform") ist eine mächtige Plattform mit Google's Infrastruktur, auf der Sie Apps erstellen und laufen lassen können. Ob Sie eine große Web Applikation aufbauen wollen oder eine statische Webseite hosten möchten. Mehr dazu finden Sie hier auf Englisch: [How do you host your website on Google App Engine?](/de/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
 
 Im Gegensatz zu anderen Anbietern sind diese Tools meist kostenlos, allerdings auch limitierend.
@@ -64,15 +64,15 @@ Schauen Sie sich einige dieser Beispiele an und finden Sie heraus was für Sie f
 
 Wir werden nun gemeinsam Ihre Webseite im Internet veröffentlichen. Hier nutzen wir dafür GitHub Pages.
 
-1. Als erstes, [melden Sie sich bei GitHub](https://github.com/)an und verifizieren Sie Ihe Email Adresse.
-2. Als nächstes erstellen Sie ein[repository](https://github.com/new) (Datenarchiv) in welches Ihre Dateien von der Webseite gehen werden.
-3. Auf dieser Seite geben Sie in die _Repository name_ Box _username_.github.io ein, wobei _username_ Ihr Username ist. Zum Beispiel würde maxmustermann hier _maxmustermann.github.io_ eingeben.
+1.  Als erstes, [melden Sie sich bei GitHub ](https://github.com/)an und verifizieren Sie Ihe Email Adresse.
+2.  Als nächstes erstellen Sie ein[ repository](https://github.com/new) (Datenarchiv) in welches Ihre Dateien von der Webseite gehen werden.
+3.  Auf dieser Seite geben Sie in die _Repository name_ Box _username_.github.io ein, wobei _username_ Ihr Username ist. Zum Beispiel würde maxmustermann hier _maxmustermann.github.io_ eingeben.
     Aktivieren Sie auch _Initialize this repository with a README_ und klicken dann auf _Create repository_.![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
-4. Danach können Sie Inhalte einfach mit der Maus in Ihr Datenarchiv ziehen und dann auf _Commit changes_ klicken.
+4.  Danach können Sie Inhalte einfach mit der Maus in Ihr Datenarchiv ziehen und dann auf _Commit changes_ klicken.
 
     > **Note:** **Notiz**: Gehen Sie sicher das Ihr Ordner eine _index.html_ Datei hat.
 
-5. Jetzt gehen Sie in einem neuen Fenster in Ihrem Browser _username_.github.io um Ihre Webseite online anzusehen. Als Beispiel können Sie auf folgende GitHub Webseite gehen: [chrisdavidmills.github.io](http://chrisdavidmills.github.io/).
+5.  Jetzt gehen Sie in einem neuen Fenster in Ihrem Browser _username_.github.io um Ihre Webseite online anzusehen. Als Beispiel können Sie auf folgende GitHub Webseite gehen: [chrisdavidmills.github.io](http://chrisdavidmills.github.io/).
 
     > **Note:** **Notiz**: Es dauert eventuell ein paar Minuten bis Ihre Webseite live geschaltet ist. Wenn sie diese nicht sofort sehen, warten Sie ein wenig und probieren es nach einiger Zeit noch einmal.
 

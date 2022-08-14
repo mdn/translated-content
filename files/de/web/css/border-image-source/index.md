@@ -14,7 +14,7 @@ translation_of: Web/CSS/border-image-source
 
 Die `border-image-source` [CSS](/de/docs/Web/CSS) Eigenschaft definiert den {{cssxref("&lt;image&gt;")}} Wert, der anstatt dem Stil des Randes verwendet wird. Falls diese Eigenschaft auf `none` gesetzt wird, wird der Stil verwendet, der durch {{cssxref("border-style")}} definiert wird.
 
-> **Hinweis:** Obwohl jeder {{cssxref("&lt;image&gt;")}} Wert innerhalb dieser CSS Eigenschaft verwendet werden kann, ist die Browserunterstützung bisher noch begrenzt und einige Browser unterstützen nur Bilder, die über die `url()` Funktion angegeben werden.
+> **Note:** **Hinweis:** Obwohl jeder {{cssxref("&lt;image&gt;")}} Wert innerhalb dieser CSS Eigenschaft verwendet werden kann, ist die Browserunterstützung bisher noch begrenzt und einige Browser unterstützen nur Bilder, die über die `url()` Funktion angegeben werden.
 
 {{cssinfo}}
 

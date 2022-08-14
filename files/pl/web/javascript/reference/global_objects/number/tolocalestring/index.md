@@ -6,9 +6,9 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Number/toLocaleString
 ---
 {{JSRef}}
 
-Metoda **`toLocaleString()`** zwraca łańcuch znaków przedstawiający dany numer w formacie wybranej lokalizacji.
+Metoda **`toLocaleString()`** zwraca łańcuch znaków przedstawiający dany numer w formacie wybranej lokalizacji.
 
-Nowe argumenty - `lokalizacje` i `opcje` - pozwalają na wybranie lokalizacji w jakiej ma zostać przedstawiona liczba. Starsza implementacja, która nie posiadała tych argumentów, zwracała łańcuch znaków zależny od implementacji danego środowiska.
+Nowe argumenty - `lokalizacje` i `opcje` - pozwalają na wybranie lokalizacji w jakiej ma zostać przedstawiona liczba. Starsza implementacja, która nie posiadała tych argumentów, zwracała łańcuch znaków zależny od implementacji danego środowiska.
 
 ## Składnia
 
@@ -16,9 +16,9 @@ Nowe argumenty - `lokalizacje` i `opcje` - pozwalają na wybranie lokalizacji w 
 
 ### Parametry
 
-W sekcji [kompatybilności](#Browser_compatibility) możesz sprawdzić, które przeglądarki obsługują argumenty `lokalizacji` i `opcji` . W sekcji [Przykład: Sprawdzanie obsługi argumentów `lokalizacji` i `opcji` ](#Checking_for_support_for_locales_and_options_arguments)rozpisane są sposoby na przetestowanie obsługiwanych przez przeglądarkę argumentów tej metody.
+W sekcji [kompatybilności](#Browser_compatibility) możesz sprawdzić, które przeglądarki obsługują argumenty `lokalizacji` i `opcji` . W sekcji [Przykład: Sprawdzanie obsługi argumentów `lokalizacji` i `opcji` ](#Checking_for_support_for_locales_and_options_arguments)rozpisane są sposoby na przetestowanie obsługiwanych przez przeglądarkę argumentów tej metody.
 
-> **Note:** **Info:** ECMAScript Internationalization API, zaimplementowane w Firefoxie 29, dodaje obsługę parametry`lokalizacje` do metody`Number.toLocaleString()`. Jeśli argument nie zostanie podany ({{jsxref("undefined")}}) metoda przyjmię lokalizację systemu operacyjnego. Poprzednie wersje Firefoxa zwracały liczby z lokalizacji [Western Arabic](https://en.wikipedia.org/wiki/Arabic_numerals). Zmiana zostala zgłoszona jako regresja rzutująca na wsteczną kompatybilność metody, i wkrótce zostanie naprawiona. ({{bug(999003)}})
+> **Note:** **Info:** ECMAScript Internationalization API, zaimplementowane w Firefoxie 29, dodaje obsługę parametry`lokalizacje` do metody`Number.toLocaleString()`. Jeśli argument nie zostanie podany ({{jsxref("undefined")}}) metoda przyjmię lokalizację systemu operacyjnego. Poprzednie wersje Firefoxa zwracały liczby z lokalizacji [Western Arabic](https://en.wikipedia.org/wiki/Arabic_numerals). Zmiana zostala zgłoszona jako regresja rzutująca na wsteczną kompatybilność metody, i wkrótce zostanie naprawiona. ({{bug(999003)}})
 
 {{page('/pl-PL/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parameters')}}
 
@@ -28,9 +28,9 @@ W sekcji [kompatybilności](#Browser_compatibility) możesz sprawdzić, które p
 
 ## Przykłady
 
-### Przykłady użycia metody `toLocaleString`
+### Przykłady użycia metody `toLocaleString`
 
-Podstawowy sposób użycia, bez podanych argumentów, zwróci nam łańcuch znaków w domyślnej lokalizacji i z domyślnymi opcjami.
+Podstawowy sposób użycia, bez podanych argumentów, zwróci nam łańcuch znaków w domyślnej lokalizacji i z domyślnymi opcjami.
 
 ```js
 var liczba = 3500;
@@ -38,25 +38,25 @@ var liczba = 3500;
 console.log(liczba.toLocaleString()); // Wyświetli "3 500", jeśli twoją lokalizacją jest „pl-PL”
 ```
 
-### Sprawdzanie dostępności argumentów `lokalizacji` i `opcji`
+### Sprawdzanie dostępności argumentów `lokalizacji` i `opcji`
 
-Nie wszystkie przeglądarki obsługuję argumenty `lokalizacji` i `opcji`. Aby to sprawdzić w wersji języka ES5.1 i późniejszych możemy użyć wyjątku {{jsxref("Global_Objects/RangeError", "RangeError")}}, który zostanie rzucony gdy niepoprawna nazwa lokalizacji zostanie użyta:
+Nie wszystkie przeglądarki obsługuję argumenty `lokalizacji` i `opcji`. Aby to sprawdzić w wersji języka ES5.1 i późniejszych możemy użyć wyjątku {{jsxref("Global_Objects/RangeError", "RangeError")}}, który zostanie rzucony gdy niepoprawna nazwa lokalizacji zostanie użyta:
 
 ```js
 function toLocaleStringSupportsLocales() {
-  var liczba = 0;
-  try {
-    liczba.toLocaleString('i');
-  } catch (e) {
-    return e.name === 'RangeError';
+  var liczba = 0;
+  try {
+    liczba.toLocaleString('i');
+  } catch (e) {
+    return e.name === 'RangeError';
   }
   return false;
 }
 ```
 
-W wersjach przed ES5.1 nie było obowiązku wyrzucania wyjątku Range Error jeśli metoda `toLocaleString` została wywołana z argumentami.
+W wersjach przed ES5.1 nie było obowiązku wyrzucania wyjątku Range Error jeśli metoda `toLocaleString` została wywołana z argumentami.
 
-Sprawdzenie działające na wszystkich wersjach języka przed 5.1 polega na użyciu funkcjonalności niezbędnych do działania tych argumentów bezpośrednio na `Number.prototype.toLocaleString`:
+Sprawdzenie działające na wszystkich wersjach języka przed 5.1 polega na użyciu funkcjonalności niezbędnych do działania tych argumentów bezpośrednio na `Number.prototype.toLocaleString`:
 
 ```js
 function toLocaleStringSupportsOptions() {
@@ -64,9 +64,9 @@ function toLocaleStringSupportsOptions() {
 }
 ```
 
-Sprawdzamy tutaj czy istnieje globalny obiekt `Intl`, czy nie jest `nullem`, a także czy posiada właściwość `NumberFormat`, która jest funkcją.
+Sprawdzamy tutaj czy istnieje globalny obiekt `Intl`, czy nie jest `nullem`, a także czy posiada właściwość `NumberFormat`, która jest funkcją.
 
-### Przykłady użycia `lokalizacji`
+### Przykłady użycia `lokalizacji`
 
 Przykład ten pokazuje kilka różnych lokalizacji. Aby uzyskać foramt języka interfejsu użytkownika upewnij się, że podajesz tę lokalizację (i dla pewności kilka innych jako fallbacki) przy pomocy aargumentu `localizacji`:
 
@@ -95,16 +95,16 @@ console.log(liczba.toLocaleString(['ban', 'id']));
 // → 123.456,789
 ```
 
-### Przykłady użycia `opcji`
+### Przykłady użycia `opcji`
 
-Rezultaty metody`toLocaleString`  mogą być dostosowywane przy pomocy argumentu `opcje`:
+Rezultaty metody`toLocaleString`  mogą być dostosowywane przy pomocy argumentu `opcje`:
 
 ```js
 var liczba = 123456.789;
 
 // format walutowy
 console.log(liczba.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // Japoński yen
 console.log(liczba.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
@@ -124,19 +124,19 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
 
 ## Wydajność
 
-Jeśli zamierzasz formatować wiele liczb, lepiej użyć obiektu {{jsxref("NumberFormat")}} i formatować przy pomocy metody {{jsxref("NumberFormat.format")}}.
+Jeśli zamierzasz formatować wiele liczb, lepiej użyć obiektu {{jsxref("NumberFormat")}} i formatować przy pomocy metody {{jsxref("NumberFormat.format")}}.
 
 ## Specyfikacje
 
 | Specification                                                                                                                            | Status                           | Comment                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
 | {{SpecName('ES3')}}                                                                                                                 | {{Spec2('ES3')}}             | Pierwsza definicja. Zaimplementowane w JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}                                         | {{Spec2('ES5.1')}}         |                                                        |
-| {{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}             | {{Spec2('ES6')}}             |                                                        |
-| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     | {{Spec2('ESDraft')}}     |                                                        |
-| {{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 1.0')}} |                                                        |
-| {{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 2.0')}} |                                                        |
-| {{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                        |
+| {{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}                                         | {{Spec2('ES5.1')}}         |                                                        |
+| {{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}             | {{Spec2('ES6')}}             |                                                        |
+| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     | {{Spec2('ESDraft')}}     |                                                        |
+| {{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 1.0')}} |                                                        |
+| {{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 2.0')}} |                                                        |
+| {{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                        |
 
 ## Kompatybilność
 

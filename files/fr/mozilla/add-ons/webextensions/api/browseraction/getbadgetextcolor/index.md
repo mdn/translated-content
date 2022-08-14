@@ -32,6 +32,8 @@ browser.browserAction.getBadgeTextColor(
     - `windowId`{{optional_inline}}
       - : `integer`. Spécifie la fenêtre à partir de laquelle obtenir la couleur du texte du badge.
 
+<!---->
+
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue.
 - SI `windowId` et `tabId` sont tous deux omis, la couleur globale du texte du badge est retournée.
 

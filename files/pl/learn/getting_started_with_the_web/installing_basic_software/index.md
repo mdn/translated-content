@@ -48,7 +48,7 @@ Na razie zainstalujemy kilka przeglądarek internetowych, aby przetestować nasz
 
 Zanim przejdziesz dalej, należy zainstalować co najmniej dwie z tych przeglądarek i mieć je gotowe do testów.
 
-> **Uwaga:** Internet Explorer nie jest kompatybilny z niektórymi nowoczesnymi funkcjami sieciowymi i może nie być w stanie uruchomić twojego projektu. Zazwyczaj nie musisz się martwić o to, aby twoje projekty były z nim kompatybilne, ponieważ bardzo niewiele osób nadal z niego korzysta - na pewno nie martw się o niego zbytnio podczas nauki. Czasami możesz natknąć się na projekt, który wymaga wsparcia.
+> **Note:** **Uwaga**: Internet Explorer nie jest kompatybilny z niektórymi nowoczesnymi funkcjami sieciowymi i może nie być w stanie uruchomić twojego projektu. Zazwyczaj nie musisz się martwić o to, aby twoje projekty były z nim kompatybilne, ponieważ bardzo niewiele osób nadal z niego korzysta - na pewno nie martw się o niego zbytnio podczas nauki. Czasami możesz natknąć się na projekt, który wymaga wsparcia.
 
 ### Instalacja lokalnego serwera sieciowego
 

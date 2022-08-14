@@ -17,6 +17,8 @@ Element `<li>` ("list item") jest używany do wskazywania punktu listy, zawartej
 - value {{ Deprecated_inline() }}
   - : Wskazuje aktualny numer pozycji w liście uporządkowanej, zdefiniowanej przez element [\<ol>](pl/HTML/Element/ol). Bez względu na wartość `type`, używaną do ustawienia liczb rzymskich lub liter, jedyną dozwolona wartością tego atrybutu jest liczba. Pozycje listy, które następują dalej, kontynuują numerację od ustawionej wartości. Atrybut `value` nie ma znaczenia w listach nieuporządkowanych.
 
+<!---->
+
 - type {{ Deprecated_inline() }}
   - : Wskazuje typ liczenia: `a` wskazuje małe litery, `A` wskazuje wielkie litery, `i` wskazuje małe cyfry rzymskie, `I` wskazuje wielkie cyfry rzymskie. Atrybut `type` ustawiony w elemencie [\<ol>](pl/HTML/Element/ol) jest używany dla wewnętrznej listy, chyba że atrybut `type` jest użyty wewnątrz zamkniętego elementu `<li>`. Ten atrybut jest wycofywany, użyj zamiast niego własności [CSS](pl/CSS) [list-style-type](pl/CSS/list-style-type).
 
@@ -24,9 +26,9 @@ Element `<li>` ("list item") jest używany do wskazywania punktu listy, zawartej
 
 ```html
 <ol>
-    <li>pierwszy element</li>
-    <li>drugi element</li>
-    <li>trzeci element</li>
+    <li>pierwszy element</li>
+    <li>drugi element</li>
+    <li>trzeci element</li>
 </ol>
 ```
 
@@ -38,9 +40,9 @@ Powyższy kod HTML zostanie wyświetlony:
 
 ```html
 <ul>
-    <li>pierwszy element</li>
-    <li>drugi element</li>
-    <li>trzeci element</li>
+    <li>pierwszy element</li>
+    <li>drugi element</li>
+    <li>trzeci element</li>
 </ul>
 ```
 

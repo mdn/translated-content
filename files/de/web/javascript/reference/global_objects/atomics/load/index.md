@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/load
 ---
 {{JSRef}}
 
-Die statische **`Atomics.load()`** Methode gibt den Wert an einer gegebenen Position in einem Array zurück.
+Die statische **`Atomics`\*\***`.load()`\*\* Methode gibt den Wert an einer gegebenen Position in einem Array zurück.
 
 {{EmbedInteractiveExample("pages/js/atomics-load.html")}}
 

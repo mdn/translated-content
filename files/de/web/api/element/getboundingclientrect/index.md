@@ -23,11 +23,11 @@ Leere Borderboxen werden vollständig ignoriert. Sind sämtliche Borderboxen ein
 
 Ein Rechteck mit Breiten- und Höhenwerten von Null wird stattdessen zurückgegeben, und wo `top` und `left` den top-left Werten der Border-Box der ersten CSS-Box (in Reihenfolge des Inhaltes) entsprechen.
 
-Bei der Berechnung des Rechtecks werden sowohl scrollbare Elemente sowie Scrolling an sich (wie viel bereits gescrollt wurde) einbezogen. Das bedeutet, dass die `top` und `left` Eigenschaften ihre Werte verändern, sobald sich deren Scrollposition verändert (d.h. ihre Werte sind `relativ`zum `Viewport` und nicht absolut).
+Bei der Berechnung des Rechtecks werden sowohl scrollbare Elemente sowie Scrolling an sich (wie viel bereits gescrollt wurde) einbezogen. Das bedeutet, dass die `top` und `left` Eigenschaften ihre Werte verändern, sobald sich deren Scrollposition verändert (d.h. ihre Werte sind `relativ `zum `Viewport` und nicht absolut).
 
-Will man die Position des Rechtecks in Bezug auf die Linke/Obere Ecke des `Dokumentes`haben, was der `absoluten` Position des Rechteckes entspricht, muss man zu den `top` und `left` Positionen, die Werte von `window.scrollX` und`window.scrollY`, addieren.
+Will man die Position des Rechtecks in Bezug auf die Linke/Obere Ecke des `Dokumentes `haben, was der `absoluten` Position des Rechteckes entspricht, muss man zu den `top` und `left` Positionen, die Werte von `window.scrollX` und` window.scrollY`, addieren.
 
-Um Browserkompabilität zu gewährleisten, nutzen Sie `window.pageXOffset` und `window.pageYOffset` statt`window.scrollY` und `window.scrollX`. Sollten `window.pageXOffset`, `window.pageYOffset`, `window.`scrollX and `window.`scrollY undefined sein, nutzen Sie `(((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.ScrollLeft == 'number' ? t : document.body).ScrollLeft` and `(((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop`.
+Um Browserkompabilität zu gewährleisten, nutzen Sie `window.pageXOffset` und `window.pageYOffset` statt` window.scrollY` und `window.scrollX`. Sollten `window.pageXOffset`, `window.pageYOffset`, `window.`scrollX and `window.`scrollY undefined sein, nutzen Sie `(((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.ScrollLeft == 'number' ? t : document.body).ScrollLeft` and `(((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop`.
 
 ## Beispiel
 
@@ -48,7 +48,7 @@ var rect = obj.getBoundingClientRect();
 
 `getBoundingClientRect()` wurde erstmals im DHTML Objektmodell von MS IE implementiert.
 
-Der Rückgabewert von `getBoundingClientRect()`ist [konstant](/de/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze), es können keine weiteren Eigenschaften hinzugefügt werden.
+Der Rückgabewert von `getBoundingClientRect() `ist [konstant](/de/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze), es können keine weiteren Eigenschaften hinzugefügt werden.
 
 ## See also
 

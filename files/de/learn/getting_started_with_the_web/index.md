@@ -30,7 +30,7 @@ Es gibt eine große Auswahl an Werkzeugen für das Erstellen von Webseiten. Wenn
 
 ### [Wie wird Ihre erste Webseite aussehen?](/de/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
 
-Bevor Sie mit dem Schreiben von Code für die Webseite beginnen, planen Sie Ihre Webseite. Welche Informationen möchten Sie zeigen? Welche Schriftarten und Farben möchten Sie nutzen? [Wie wird Ihre erste Webseite aussehen?](/de/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like)Wir zeigen Ihnen eine einfache Methode, um Inhalt und Design Ihrer Seite zu planen.
+Bevor Sie mit dem Schreiben von Code für die Webseite beginnen, planen Sie Ihre Webseite. Welche Informationen möchten Sie zeigen? Welche Schriftarten und Farben möchten Sie nutzen? [Wie wird Ihre erste Webseite aussehen? ](/de/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like)Wir zeigen Ihnen eine einfache Methode, um Inhalt und Design Ihrer Seite zu planen.
 
 ### [Dateien nutzen](/de/Learn/Getting_started_with_the_web/dateien_nutzen)
 
@@ -38,7 +38,7 @@ Eine Website besteht aus vielen Dateien: Textinhalt, Code, Stylesheets, Medien u
 
 ### [HTML-Grundlagen](/de/Learn/Getting_started_with_the_web/HTML_basics)
 
-Hypertext Markup Language (HTML) ist der Code, den Sie nutzen werden, um eine Webseite zu strukturieren und ihr Bedeutung und einen Zweck zu geben. Zum Beispiel: Ist mein Text ein Listenpunkt oder ein Absatz? Füge ich Bilder auf meine Webseite ein? Stelle ich Daten in Form einer Tabelle übersichtlich dar? Die [HTML-Grundlagen](/de/Learn/Getting_started_with_the_web/HTML_basics)geben Ihnen[](/en-US/Learn/Getting_started_with_the_web/HTML_basics)genug Informationen, um sich mit HTML vertraut zu machen.
+Hypertext Markup Language (HTML) ist der Code, den Sie nutzen werden, um eine Webseite zu strukturieren und ihr Bedeutung und einen Zweck zu geben. Zum Beispiel: Ist mein Text ein Listenpunkt oder ein Absatz? Füge ich Bilder auf meine Webseite ein? Stelle ich Daten in Form einer Tabelle übersichtlich dar? Die [HTML-Grundlagen ](/de/Learn/Getting_started_with_the_web/HTML_basics)geben Ihnen[ ](/en-US/Learn/Getting_started_with_the_web/HTML_basics)genug Informationen, um sich mit HTML vertraut zu machen.
 
 ### [CSS-Grundlagen](/de/Learn/Getting_started_with_the_web/CSS_basics)
 
@@ -50,7 +50,7 @@ JavaScript ist die Programmiersprache, mit welcher Sie Webinhalte interaktiv mac
 
 ### [Ihre Webseite veröffentlichen](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
 
-Wenn Sie Ihren Code geschrieben haben und die Dateien Ihrer neuen Webseite organisiert haben, dann können Sie Ihre Webseite online stellen, sodass andere Menschen sie finden können. [Ihre Webseite veröffentlichen](/de/docs/Learn/Getting_started_with_the_web/Publishing_your_website)zeigt, wie Sie diese im Internet zugänglich machen.
+Wenn Sie Ihren Code geschrieben haben und die Dateien Ihrer neuen Webseite organisiert haben, dann können Sie Ihre Webseite online stellen, sodass andere Menschen sie finden können. [Ihre Webseite veröffentlichen ](/de/docs/Learn/Getting_started_with_the_web/Publishing_your_website)zeigt, wie Sie diese im Internet zugänglich machen.
 
 ### [Wie das Web funktioniert](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)
 

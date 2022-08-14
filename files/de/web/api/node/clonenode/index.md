@@ -20,7 +20,7 @@ Gibt ein Duplikat des Knotens, auf dem diese Methode aufgerufen wurde, zurück.
 - `deep`
   - : `true` wenn die Kindknoten des Knotens ebenfalls dupliziert werden sollen, `false` wenn nur der Knoten dupliziert werden soll.
 
-> **Hinweis:** In der DOM4 Spezifikation (implementiert in Gecko 13.0 {{geckoRelease(13)}}), ist das Argument `deep` optional. Es ist dann laut Spezifikation **`true`**.Leider wurde dies in der letzten Spezifikation geändert, sodass der Standardwert nun **`false`** ist. Auch wenn es immer noch optional ist, sollte man das Argument `deep` aus diesen Kompatibilitätsgründen setzen. Ab Gecko 28.0 {{geckoRelease(28)}} warnt die Konsole den Entwickler, wenn das Argument nicht gesetzt ist.
+> **Note:** **Hinweis:** In der DOM4 Spezifikation (implementiert in Gecko 13.0 {{geckoRelease(13)}}), ist das Argument `deep` optional. Es ist dann laut Spezifikation **`true`**.Leider wurde dies in der letzten Spezifikation geändert, sodass der Standardwert nun **`false`** ist. Auch wenn es immer noch optional ist, sollte man das Argument `deep` aus diesen Kompatibilitätsgründen setzen. Ab Gecko 28.0 {{geckoRelease(28)}} warnt die Konsole den Entwickler, wenn das Argument nicht gesetzt ist.
 
 ## Beispiel
 

@@ -18,7 +18,7 @@ In HTML wird ein Element über das Start-Tag definiert und wenn das Element weit
 
 Die Elemente, die mit dem [![This element has been added in HTML5](https://developer.mozilla.org/files/3843/HTML5_Badge_32.png "This element has been added in HTML5")](/de/docs/HTML/HTML5) Symbol gekennzeichnet sind, wurden in HTML5 eingeführt. Einige hier gelistete Elemente wurden in der HTML5 Spezifikation erweitert oder modifiziert. Elemente, die veraltet oder keine Standardelemente sind, sind ausgegraut. Es wird davon abgeraten diese Elemente in neuen Webseiten zu benutzen und sie sollten von existierenden Seiten entfernt werden, um unerwünschtes Verhalten zu vermeiden.
 
-Das Symbol kennzeichnet die Elemente, die in [Web Components collection of specifications](http://www.w3.org/TR/components-intro/)definiert wurden.
+Das Symbol kennzeichnet die Elemente, die in [Web Components collection of specifications ](http://www.w3.org/TR/components-intro/)definiert wurden.
 
 A
 

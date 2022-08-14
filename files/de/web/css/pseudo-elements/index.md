@@ -27,7 +27,7 @@ Wie auch {{ Cssxref("pseudo-classes") }} können Pseudoelemente einem Selektor h
 
 Pseudoelemente sind sowohl mit zwei Doppelpunkten (::), als auch mit nur einem (:) anzutreffen. In der CSS3 Spezifikation wurde darin der Unterschied zwischen Pseudoelement und Pseudoklasse festgelegt. Die meisten Browser unterstützten aber beide Varianten.
 
-> **Hinweis:** `::selection` muss zwingend mit zwei Doppelpunkten (::) geschrieben werden.
+> **Note:** **Hinweis:** `::selection` muss zwingend mit zwei Doppelpunkten (::) geschrieben werden.
 
 > **Note:** Es ist immer nur ein Pseudoelement pro Selektor möglich.
 

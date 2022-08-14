@@ -36,7 +36,7 @@ Kierunek układu zależy od orientacji elementu: poziomej lub pionowej.
 - end
   - : Pudełko wpakowuje zawartość na końcu, zostawiając dodatkową wolną przestrzeń na początku.
 - justify
-  - :  ?
+  - :  ?
 
 ## Przykłady
 
@@ -48,7 +48,7 @@ Kierunek układu zależy od orientacji elementu: poziomej lub pionowej.
 
 Krawędź pudełka, określona jako*start* dla celów wpakowywania, zależy od orientacji i kierunku pudełka.
 
-|             | **Normalna** | **Odwrócona** |
+|             | **Normalna** | **Odwrócona** |
 | ----------- | ------------ | ------------- |
 | **Poziomo** | lewa         | prawa         |
 | **Pionowo** | góra         | dół           |

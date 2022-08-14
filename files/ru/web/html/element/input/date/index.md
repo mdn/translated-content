@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/input/date
 
 ![Datepicker UI in firefox](https://mdn.mozillademos.org/files/15644/firefox_datepicker.png)
 
-| **[Value](#value)**         | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку**                                                                                                         |
+| **[Value](#value)**         | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**,\*\* **или **пустую строку\*\*                                                                                                         |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **События**                 | {{event("change")}} и {{event("input")}}                                                                                                                                                                  |
 | **Поддерживаемые атрибуты** | {{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("step", "input")}}           |

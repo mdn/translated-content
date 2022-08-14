@@ -8,9 +8,9 @@ tags:
   - SGML
 translation_of: Glossary/SGML
 ---
-_Standard Generalized Markup Language_ (**SGML**) jest specyfikacją {{Glossary("ISO")}} służącą do definiowania deklaratywnych języków znaczników.
+_Standard Generalized Markup Language_ (**SGML**) jest specyfikacją {{Glossary("ISO")}} służącą do definiowania deklaratywnych języków znaczników.
 
-W sieci, {{Glossary("HTML")}} 4, {{Glossary("XHTML")}} i {{Glossary("XML")}} są popularnymi językami opartymi na SGML. Warto zauważyć, że od piątej edycji HTML nie jest już oparty na SGML i ma własne reguły parsowania.
+W sieci, {{Glossary("HTML")}} 4, {{Glossary("XHTML")}} i {{Glossary("XML")}} są popularnymi językami opartymi na SGML. Warto zauważyć, że od piątej edycji HTML nie jest już oparty na SGML i ma własne reguły parsowania.
 
 ## Dowiedz się więcej
 

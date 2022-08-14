@@ -20,6 +20,8 @@ Die **`parseInt()`** Methode liest ein String-Argument ein und gibt eine ganze Z
 - `string`
   - : Umzuwandelnder Wert. Wenn `string` kein String ist, wird er zu einem String konvertiert (durch die abstrakte Operation [`ToString`](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring)). Führende Leerzeichen im String werden ignoriert.
 
+<!---->
+
 - `radix`
   - : Eine ganze Zahl zwischen 2 und 36, die die Basis eines mathematischen Zahlensystems ist, in der der String geschrieben ist. 10 steht für das gebräuchliche Dezimalsystem.
 

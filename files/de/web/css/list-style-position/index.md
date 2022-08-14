@@ -23,6 +23,8 @@ Es ist oft einfacher, die Kurzform Eigenschaft {{cssxref("list-style")}} zu verw
 
     Formale Syntax: {{csssyntax("list-style-position")}}
 
+<!---->
+
     list-style-position: inside
     list-style-position: outside
 

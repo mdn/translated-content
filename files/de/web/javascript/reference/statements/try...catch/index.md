@@ -26,14 +26,22 @@ Die **try...catch**-Anweisung (sinngemäß: testen und verarbeiten) rahmt einen 
 - `try_Anweisungen`
   - : Die auszuführenden Anweisungen.
 
+<!---->
+
 - `catch_Anweisungen_1`, `catch_Anweisungen_2`
   - : Anweisungen, die ausgeführt werden, wenn bei den `try`-Anweisungen ein Fehler auftritt.
+
+<!---->
 
 - `Fehler_var_1`, `Fehler_var_2`
   - : Ein Bezeichner der das Fehlerobjekt des zugehörigen `catch`-Abschnitts enthält.
 
+<!---->
+
 - `Bedingung_1`
   - : Ein Bedingungsausdruck.
+
+<!---->
 
 - `finally_Anweisungen`
   - : Die Schlussanweisungen werden nach den `try`-Anweisungen ausgeführt. Die Anweisungen werden immer ausgeführt, auch wenn ein Fehler ausgegeben wurde.
@@ -42,9 +50,9 @@ Die **try...catch**-Anweisung (sinngemäß: testen und verarbeiten) rahmt einen 
 
 Der _try_-Block besteht aus einer oder mehreren Anweisungen (der Absschnitt steht – auch bei nur einer Zeile – immer in geschweiften Klammern {}), mindestens einem _catch_- oder einem _finally_-Abschnitt oder beiden. Es gibt also drei Arten von _try_-Anweisungen:
 
-1. `try...catch`
-2. `try...finally`
-3. `try...catch...finally`
+1.  `try...catch`
+2.  `try...finally`
+3.  `try...catch...finally`
 
 Der `catch`-Abschnitt enthält Anweisungen, die ausgeführt werden, wenn im `try`-Abschnitt ein Fehler auftritt. Bei einer fehlerhaften Anweisung im Block im `try`-Abschnitt – oder in Funktionen, die von dort aufgerufen werden – geht die Kontrolle sofort an den `catch`-Abschnitt über. Wird kein Fehler gemeldet wird der `catch`-Abschnitt nicht ausgeführt.
 

@@ -9,7 +9,7 @@ original_slug: Web/CSS/-moz-box-flex
 ---
 {{ CSSRef() }}
 
-{{ warning("This is a property for controlling parts of the XUL box model.  It does not match either the old CSS Flexible Box Layout Module drafts for '<code>box-flex</code>' (which were based on this property) or the behavior of '<code>-webkit-box-flex</code>' (which is based on those drafts).") }}
+{{ warning("This is a property for controlling parts of the XUL box model.  It does not match either the old CSS Flexible Box Layout Module drafts for '<code>box-flex</code>' (which were based on this property) or the behavior of '<code>-webkit-box-flex</code>' (which is based on those drafts).") }}
 
 ## Podsumowanie
 

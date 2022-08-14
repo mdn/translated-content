@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/DataView
 ---
 {{JSRef}}
 
-**`DataView`**  udostępnia niskopoziowy interfejs do zapisu i odczytu typów numerycznych w formie {{jsxref("ArrayBuffer")}} niezależnie od kodowania platformy.
+**`DataView`**  udostępnia niskopoziowy interfejs do zapisu i odczytu typów numerycznych w formie {{jsxref("ArrayBuffer")}} niezależnie od kodowania platformy.
 
 ## Składnia
 
@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/DataView
 ### Parametry
 
 - `buffer`
-  - : Istniejący {{jsxref("ArrayBuffer")}} lub {{jsxref("SharedArrayBuffer")}} {{experimental_inline}} używany jako pamięć dla  obiektu  `DataView` .
+  - : Istniejący {{jsxref("ArrayBuffer")}} lub {{jsxref("SharedArrayBuffer")}} {{experimental_inline}} używany jako pamięć dla  obiektu  `DataView` .
 - `byteOffset` {{optional_inline}}
   - : The offset, in bytes, to the first byte in the specified buffer for the new view to reference. If not specified, the view of the buffer will start with the first byte.
 - `byteLength` {{optional_inline}}
@@ -34,7 +34,7 @@ A new `DataView` object representing the specified data buffer.
 
 ### Endianness
 
-Multi-byte number formats are represented in memory differently depending on machine architecture, see {{Glossary("Endianness")}} for an explanation. DataView accessors provide explicit control of how data will be accessed irrespective of the platform architecture's endianness.
+Multi-byte number formats are represented in memory differently depending on machine architecture, see {{Glossary("Endianness")}} for an explanation. DataView accessors provide explicit control of how data will be accessed irrespective of the platform architecture's endianness.
 
 ```js
 var littleEndian = (function() {
@@ -72,7 +72,7 @@ dv.getInt16(1); //42
 | ------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------- |
 | {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Superseded by ECMAScript 6             |
 | {{SpecName('ES6', '#sec-dataview-constructor', 'DataView')}}     | {{Spec2('ES6')}}             | Initial definition in an ECMA standard |
-| {{SpecName('ESDraft', '#sec-dataview-constructor', 'DataView')}} | {{Spec2('ESDraft')}}     |                                        |
+| {{SpecName('ESDraft', '#sec-dataview-constructor', 'DataView')}} | {{Spec2('ESDraft')}}     |                                        |
 
 ## Browser compatibility
 

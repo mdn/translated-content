@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Functions/Funkcje_strzalkowe
 ---
 {{jsSidebar("Functions")}}
 
-**Funkcja strzałkowa** ma krótszą składnię niż [zwykłe wyrażenie funkcji](/pl/docs/Web/JavaScript/Reference/Operators/function) oraz nie posiada własnego [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [argumentów](/pl/docs/Web/JavaScript/Reference/Functions/arguments), [super](/pl/docs/Web/JavaScript/Reference/Operators/super), tudzież właściwości [new.target](/pl/docs/Web/JavaScript/Reference/Operators/new.target). Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.
+**Funkcja strzałkowa** ma krótszą składnię niż [zwykłe wyrażenie funkcji](/pl/docs/Web/JavaScript/Reference/Operators/function) oraz nie posiada własnego [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [argumentów](/pl/docs/Web/JavaScript/Reference/Functions/arguments), [super](/pl/docs/Web/JavaScript/Reference/Operators/super), tudzież właściwości [new.target](/pl/docs/Web/JavaScript/Reference/Operators/new.target). Taki sposób wyrażenia funkcji najlepiej wykorzystać przy tworzeniu funkcji bez metod, ponadto nie mogą zostać one użyte jako konstruktory.
 
 ## Składnia
 
@@ -43,7 +43,7 @@ original_slug: Web/JavaScript/Reference/Functions/Funkcje_strzalkowe
 
 Zobacz również ["ES6 In Depth: Arrow functions" na hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/).
 
-Dwa czynniki, które wpłynęły na wprowadzenie funkcji strzałkowych: krótszy zapis funkcji i brak wiązania `this`.
+Dwa czynniki, które wpłynęły na wprowadzenie funkcji strzałkowych: krótszy zapis funkcji i brak wiązania `this`.
 
 ### Krótsze funkcje
 
@@ -70,7 +70,7 @@ materials.map(({ length }) => length); // [8, 6, 7, 9]
 
 ### Brak oddzielnego `this`
 
-Przed wprowadzeniem funkcji strzałkowych każda nowa funkcja deniniowała swoją własną wartość [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) (nowy obiekt w przypadku konstruktora, undefined w wywołaniach funkcji [strict mode](/pl/docs/Web/JavaScript/Reference/Strict_mode), obiekt bazowy jeśli funkcja jest wywoływana jako "metoda obiektowa", itp.). Okazało się to niekorzystne przy obiektowym stylu programowania.
+Przed wprowadzeniem funkcji strzałkowych każda nowa funkcja deniniowała swoją własną wartość [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) (nowy obiekt w przypadku konstruktora, undefined w wywołaniach funkcji [strict mode](/pl/docs/Web/JavaScript/Reference/Strict_mode), obiekt bazowy jeśli funkcja jest wywoływana jako "metoda obiektowa", itp.). Okazało się to niekorzystne przy obiektowym stylu programowania.
 
 ```js
 function Person() {
@@ -88,7 +88,7 @@ function Person() {
 var p = new Person();
 ```
 
-W ECMAScript 3/5, problem z `this` można było rozwiązać przez przydzielenie wartości `this` do zmiennej, która wygląda bardzo podobnie.
+W ECMAScript 3/5, problem z `this` można było rozwiązać przez przydzielenie wartości `this` do zmiennej, która wygląda bardzo podobnie.
 
 ```js
 function Person() {
@@ -103,9 +103,9 @@ function Person() {
 }
 ```
 
-Można było również stworzyć [funkcję bound](/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), co pozwoliło nadać wstępnie przypisaną wartość `this` do powiązanej funkcji docelowej (funkcja `growUp()` w przykładzie powyżej).
+Można było również stworzyć [funkcję bound](/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), co pozwoliło nadać wstępnie przypisaną wartość `this` do powiązanej funkcji docelowej (funkcja `growUp()` w przykładzie powyżej).
 
-Funkcja strzałkowa nie posiada własnego `this`; używana jest wartość `this` kontekstu wykonania. W związku z tym, w poniższym kodzie, `this` użyty w funkcji, który jest przekazywany do `setInterval`, ma taką samą wartość jak `this` w funkcji otaczającej:
+Funkcja strzałkowa nie posiada własnego `this`; używana jest wartość `this` kontekstu wykonania. W związku z tym, w poniższym kodzie, `this` użyty w funkcji, który jest przekazywany do `setInterval`, ma taką samą wartość jak `this` w funkcji otaczającej:
 
 ```js
 function Person(){
@@ -121,7 +121,7 @@ var p = new Person();
 
 #### Relation with strict mode
 
-Given that `this` comes from the surrounding lexical context, [strict mode](/pl/docs/Web/JavaScript/Reference/Strict_mode) rules with regard to `this` are ignored.
+Given that `this` comes from the surrounding lexical context, [strict mode](/pl/docs/Web/JavaScript/Reference/Strict_mode) rules with regard to `this` are ignored.
 
 ```js
 var f = () => { 'use strict'; return this; };
@@ -132,7 +132,7 @@ All other strict mode rules apply normally.
 
 #### Invoked through call or apply
 
-Since arrow functions do not have their own `this`, the methods `call()` or `apply()` can only pass in parameters. `thisArg` is ignored.
+Since arrow functions do not have their own `this`, the methods `call()` or `apply()` can only pass in parameters. `thisArg` is ignored.
 
 ```js
 var adder = {
@@ -203,7 +203,7 @@ obj.b(); // prints undefined, Window {...} (or the global object)
 obj.c(); // prints 10, Object {...}
 ```
 
-Arrow functions do not have their own `this`. Another example involving {{jsxref("Object.defineProperty()")}}:
+Arrow functions do not have their own `this`. Another example involving {{jsxref("Object.defineProperty()")}}:
 
 ```js
 'use strict';
@@ -245,7 +245,7 @@ The [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) keyword may 
 
 Arrow functions can have either a "concise body" or the usual "block body".
 
-In a concise body, only an expression is specified, which becomes the explicit return value. In a block body, you must use an explicit `return` statement.
+In a concise body, only an expression is specified, which becomes the explicit return value. In a block body, you must use an explicit `return` statement.
 
 ```js
 var func = x => x * x;
@@ -352,7 +352,7 @@ setTimeout( () => {
 | Specification                                                                                                        | Status                       | Comment             |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Browser compatibility
 

@@ -25,7 +25,7 @@ Zwraca łańcuch znaków reprezentujący wersję językową przeglądarki.
 
 ### Przykład
 
-    if ( window.navigator.language != "pl" ) {
+    if ( window.navigator.language != "pl" ) {
      doLangSelect(window.navigator.language);
     }
 

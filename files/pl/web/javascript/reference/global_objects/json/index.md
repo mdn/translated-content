@@ -16,7 +16,7 @@ Obiekt **`JSON`** zawiera metody do analizy składniowej [JavaScript Object Nota
 
 Format JSON jest składnią do serializowania obiektów, tablic, liczb, napisów, wartości logicznych oraz {{jsxref("null")}}. Bazuje na składni języka JavaScript, ale różni się od niego: _nie każdy_ JavaScript to JSON.
 
-**Obiekty i tablice**: Nazwy właściwości muszą znajdować się w podwójnym cudzysłowie;  przecinki na końcach ([trailing commas](/pl/docs/Web/JavaScript/Reference/Trailing_commas)) nie są dozwolone.
+**Obiekty i tablice**: Nazwy właściwości muszą znajdować się w podwójnym cudzysłowie;  przecinki na końcach ([trailing commas](/pl/docs/Web/JavaScript/Reference/Trailing_commas)) nie są dozwolone.
 
 **Liczby**: Zera nieznaczące są zakazane. Po przecinku musi się znaleźć co najmniej jedna liczba. Wartości NaN i Infinity nie są wspierane.
 

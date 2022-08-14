@@ -77,9 +77,13 @@ Również czcionki systemowe mogą być określone przy użyciu własności {{ C
     Ustawia rodzinę czcionek na bezszeryfowe */
     p { font: 12pt/14pt sans-serif }
 
+<!---->
+
     /* Ustawia rozmiar czcionki na 80% rozmiaru znacznika-rodzica lub wartości domyślnej
     (jeśli nie ma obecnego znacznika-rodzica) oraz ustawia rodzinę czcionek na bezszeryfowe */
     p { font: 80% sans-serif }
+
+<!---->
 
     /* Ustawia wagę (grubość) czcionki na pogrubioną, styl czcionki na kursywę,
     rozmiar na duży i rodzinę czcionek na szeryfowe */

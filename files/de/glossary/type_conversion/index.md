@@ -22,11 +22,11 @@ Gegeben sein die folgende Anweisungen:
 
 (b) Der String `0x11` wird explizit in die Ganzzahl `17` umgewandelt.
 
-1. [Glossar](/de/docs/Glossary)
+1.  [Glossar](/de/docs/Glossary)
 
-    1. [Typ](/de/docs/Glossary/Typ)
-    2. {{Glossary("Type coercion")}}
+    1.  [Typ](/de/docs/Glossary/Typ)
+    2.  {{Glossary("Type coercion")}}
 
-2. Wikipedia Artikel
+2.  Wikipedia Artikel
 
-    1. {{Interwiki("wikipedia", "Typumwandlung")}}
+    1.  {{Interwiki("wikipedia", "Typumwandlung")}}

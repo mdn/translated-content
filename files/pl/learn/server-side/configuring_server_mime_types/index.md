@@ -76,9 +76,9 @@ Fundamentalną kwestią jest konfiguracja Twojego serwera w taki sposób, by wys
 - Jesli używasz do generowania treści używasz skryptu działającego po stronie serwera, możesz po prostu dodać jedną linijkę praktycznie na samej górze Twojego skryptu. Możesz obsługiwać zawartość inną, niż HTML, właściwą dla Perla, PHP, ASP czy Javy - tylko zmień odpowiednio typ MIME.
 
   - W przypadku Pearl CGI zadbaj o zapis `print "Content-Type: text/html\n\n";` przed jakimkolwiek pozostałym outputem. Jeśli używasz modułu CGI to możesz zamiast tego użyć linii `print $cgi->header('text/html');`, gdzie `$cgi` to Twoja referencja do instancji CGI.
-  - W przypadku PHP zadbaj o zapis `header('Content-Type: text/html');` przed jakimkolwiek pozostałym outputem.
-  - W przypadku ASP zadbaj o zapis `response.ContentType = "text/html";` przed jakimkolwiek pozostałym outputem.
-  - W przypadku servletu Javy zadbaj o zapis `response.setContentType("text/html");` na górze Twojej metody `doGet` lub `doPost`, gdzie `response` to referencja do `HttpServletResponse`.
+  - W przypadku PHP zadbaj o zapis `header('Content-Type: text/html');` przed jakimkolwiek pozostałym outputem.
+  - W przypadku ASP zadbaj o zapis `response.ContentType = "text/html";` przed jakimkolwiek pozostałym outputem.
+  - W przypadku servletu Javy zadbaj o zapis `response.setContentType("text/html");` na górze Twojej metody `doGet` lub `doPost`, gdzie `response` to referencja do `HttpServletResponse`.
 
 ### Powiązane linki
 

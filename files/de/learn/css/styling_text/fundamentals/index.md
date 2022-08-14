@@ -90,21 +90,21 @@ Wenn Sie nicht von den installierten Schriftarten auf dem System des Benutzers a
 
 Für ein einfaches Dokument können sie eine Schrift auf dem {{ HTMLElement("body") }} Element angeben und der Rest des Dokuments erbt diese Regel.
 
-1. Bearbeiten Sie Ihre CSS Datei.
-2. Fügen sie die folgendene Regel hinzu, um die Schrift im gesamten Dokument zu bestimmen. Der Anfang der CSS Datei ist eine logische Stelle dafür, aber es hat auch an anderen Stellen in der Datei denselben Effekt:
+1.  Bearbeiten Sie Ihre CSS Datei.
+2.  Fügen sie die folgendene Regel hinzu, um die Schrift im gesamten Dokument zu bestimmen. Der Anfang der CSS Datei ist eine logische Stelle dafür, aber es hat auch an anderen Stellen in der Datei denselben Effekt:
 
         body {
           font: 16px "Comic Sans MS", cursive;
         }
 
-3. Kommentieren sie Regel und fügen Sie nach Ihrem Geschmak Zeilenumbrüche und Leerzeichen hinzu.
-4. Speichern Sie die Datei und aktualisieren Sie Ihren Webbrowser um die Änderung zu sehen. Wenn Sie die Schrift Comic Sans MS oder eine andere Schrift, welche kursiv nicht unterstützt, auf Ihren Computer haben, wählt Ihr Webbrowser eine andere Schriftart für den kursiven Text in der ersten Zeile aus:
+3.  Kommentieren sie Regel und fügen Sie nach Ihrem Geschmak Zeilenumbrüche und Leerzeichen hinzu.
+4.  Speichern Sie die Datei und aktualisieren Sie Ihren Webbrowser um die Änderung zu sehen. Wenn Sie die Schrift Comic Sans MS oder eine andere Schrift, welche kursiv nicht unterstützt, auf Ihren Computer haben, wählt Ihr Webbrowser eine andere Schriftart für den kursiven Text in der ersten Zeile aus:
 
     | **C**ascading **S**tyle **S**heets |
     | ---------------------------------- |
     | **C**ascading **S**tyle **S**heets |
 
-5. Wählen Sie **Ansicht > Schirftgröße > Vergrößern** (oder **Ansicht > Zoom > Vergrößern**) im Menü Ihres Webbrowsers aus. Obwohl Sie 16 Pixel im Sil angegeben haben, kann der Benutzer die Schriftgröße in der Ansicht ändern.
+5.  Wählen Sie **Ansicht > Schirftgröße > Vergrößern** (oder **Ansicht > Zoom > Vergrößern**) im Menü Ihres Webbrowsers aus. Obwohl Sie 16 Pixel im Sil angegeben haben, kann der Benutzer die Schriftgröße in der Ansicht ändern.
 
 Herausforderung
 

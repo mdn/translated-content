@@ -23,7 +23,7 @@ Zwraca referencję do elementu, do którego zdarzenie zostało pierwotnie wysła
 ### Przykład
 
      d = document.getElementById("d1");
-     if e.target != d
+     if e.target != d
         resetGame();
      // nie nasze zdarzenie
 

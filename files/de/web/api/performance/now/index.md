@@ -18,6 +18,8 @@ Der zurückgegebene Wert stellt die Zeit dar, die seit **time origin** (der {{do
 - In dedizierten web workern, die im {{domxref("Window")}}-Kontext erstellt wurden, wird der Wert kleiner sein, als `performance.now()` in dem Browserfenster, aus dem der worker hervorging. Ehemals gleich `t0` dem Hauptkontext wurde dies in der Vergangenheit auf das heutige Verhalten geändert.
 - In geteilten Worker oder Service Workern kann es passieren, dass der Wert im Worker größer ist als der des Hauptkontextes, da das Fenster nach den Workern erschaffen werden kann.
 
+<!---->
+
     t = performance.now();
 
 ## Beispiel
@@ -31,7 +33,7 @@ console.log("Der Aufruf von machEtwas dauerte " + (zeit1 - zeit0) + " Millisekun
 
 Anders als andere Zeitmessungsdaten, die in JavaScript verfügbar sind (beispielsweise [`Date.now`](/de/docs/JavaScript/Reference/Global_Objects/Date/now)), sind die Zeitstempel, die von `Performance.now()` zurückgegeben werden nicht auf eine Auflösung von einer Millisekunde beschränkt. Stattdessen repräsentieren sie Zeit als Fließkommazahl mit einer Präzision von bis zu einer Mikrosekunde.
 
-Ebenso anders als `Date.now()`, wachsen die Werte, die von `Performance.now()`zurückgegeben werden immer in einem konstanten Tempo, unabhängig von der Systemuhr (die manuell eingestellt oder durch Software wie NTP ungenau geworden sein kann). Ansonsten wird `performance.timing.navigationStart + performance.now()` annähernd ähnlich zu `Date.now() sein`.
+Ebenso anders als `Date.now()`, wachsen die Werte, die von `Performance.now() `zurückgegeben werden immer in einem konstanten Tempo, unabhängig von der Systemuhr (die manuell eingestellt oder durch Software wie NTP ungenau geworden sein kann). Ansonsten wird `performance.timing.navigationStart + performance.now()` annähernd ähnlich zu `Date.now() sein`.
 
 ## Spezifkationen
 
@@ -48,4 +50,4 @@ Ebenso anders als `Date.now()`, wachsen die Werte, die von `Performance.now()`zu
 
 ## Siehe auch
 
-- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)bei HTML5 Rocks.
+- [When milliseconds are not enough: performance.now() ](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)bei HTML5 Rocks.

@@ -25,7 +25,7 @@ Das **`ArrayBuffer`** Objekt repräsentiert einen generischen Buffer mit fester 
 
 ### Rückgabewert
 
-Ein neues `ArrayBuffer`Objekt der angegebenen Länge. Der Inhalt wird auf 0 initialisiert.
+Ein neues `ArrayBuffer `Objekt der angegebenen Länge. Der Inhalt wird auf 0 initialisiert.
 
 ### Ausnahmen
 
@@ -33,7 +33,7 @@ Ein {{jsxref("RangeError")}} wird erhoben wenn die Länge größer als {{jsxref(
 
 ## Beschreibung
 
-Der `ArrayBuffer` Konstruktor erstellt einen neuen `ArrayBuffer`der angegebenen Länge in Bytes.
+Der `ArrayBuffer` Konstruktor erstellt einen neuen `ArrayBuffer `der angegebenen Länge in Bytes.
 
 ### Einen ArrayBuffer von existierenden Daten erstellen
 
@@ -47,12 +47,12 @@ Der `ArrayBuffer` Konstruktor erstellt einen neuen `ArrayBuffer`der angegebenen 
 - {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
   - : Die Konstruktor-Funktion um abgeleitete Objekte zu erstellen.
 - {{jsxref("ArrayBuffer.prototype")}}
-  - : Erlaubt das Hinzufügen von Eigenschaften zu allen `ArrayBuffer`Objekten.
+  - : Erlaubt das Hinzufügen von Eigenschaften zu allen `ArrayBuffer `Objekten.
 
 ## Methoden
 
 - {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}
-  - : Gibt `true` zurück wenn `arg` eines der Views des `ArrayBuffers`ist, wie zum Beispiel die [typisierten Array-Objekt](/de/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)e oder ein {{jsxref("DataView")}}. Ansonsten wird `false` zurückgegeben.
+  - : Gibt `true` zurück wenn `arg` eines der Views des `ArrayBuffers `ist, wie zum Beispiel die [typisierten Array-Objekt](/de/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)e oder ein {{jsxref("DataView")}}. Ansonsten wird `false` zurückgegeben.
 - {{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}
   - : Gibt einen neuen `ArrayBuffer` zurück, dessen Inhalt von den Daten des `oldBuffer`s genommen wird und dann entweder abgeschnitten oder mit Null auf `newByteLength` erweitert wird.
 

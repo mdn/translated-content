@@ -37,7 +37,7 @@ Object.getPrototypeOf(function*(){}).constructor
 
 Alle Argumente, die der Funktion übergeben werden, werden als Namen der Bezeichner behandelt und werden als Parameter der Funktion übergen. Die Reihenfolge ist die angegebene Reihenfolge.
 
-> **Hinweis:** {{jsxref("Statements/function*", "Generator Function")}}, die mit dem `GeneratorFunction` Konstruktor erstellt werden erstellen keine Closures im Erstellungskontext. Sie werden immer im globalen Sichtbarkeitsbereich erstellt. Wenn diese ausgeführt werden, haben sie nur Zugriff auf eigene lokale Variablen und globale Variablen, jedoch nicht auf Variablen des Scopes, in der `GeneratorFunction` Konstruktor aufgerufen wird. Dieses unterscheidet diese Methode von {{jsxref("Global_Objects/eval", "eval")}} mit dem Quelltext einer Generatorfunktion.
+> **Note:** **Hinweis:** {{jsxref("Statements/function*", "Generator Function")}}, die mit dem `GeneratorFunction` Konstruktor erstellt werden erstellen keine Closures im Erstellungskontext. Sie werden immer im globalen Sichtbarkeitsbereich erstellt. Wenn diese ausgeführt werden, haben sie nur Zugriff auf eigene lokale Variablen und globale Variablen, jedoch nicht auf Variablen des Scopes, in der `GeneratorFunction` Konstruktor aufgerufen wird. Dieses unterscheidet diese Methode von {{jsxref("Global_Objects/eval", "eval")}} mit dem Quelltext einer Generatorfunktion.
 
 Das Aufrufen des `GeneratorFunction` Konstruktors als Funktion (ohne Einsatz des `new` Operator) hat den selben Effekt wie beim Aufruf als Konstruktor.
 
@@ -56,7 +56,7 @@ Das Aufrufen des `GeneratorFunction` Konstruktors als Funktion (ohne Einsatz des
 
 ## `GeneratorFunction` Instanzen
 
-`GeneratorFunction` Instanzen erben Methoden und Eigenschaften von {{jsxref("GeneratorFunction.prototype")}}. Wie bei allen Konstruktoren, kann man das Konstruktor Prototyp Objekt ändern, um diese für alle`GeneratorFunction` Instanzen zu übernehmen.
+`GeneratorFunction` Instanzen erben Methoden und Eigenschaften von {{jsxref("GeneratorFunction.prototype")}}. Wie bei allen Konstruktoren, kann man das Konstruktor Prototyp Objekt ändern, um diese für alle` GeneratorFunction` Instanzen zu übernehmen.
 
 ## Beispiele
 

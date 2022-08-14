@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Proxy/handler/apply
 ---
 {{JSRef}}
 
-Metoda **`handler.apply()`** jest pułapką na wywołanie funkcji.
+Metoda **`handler.apply()`** jest pułapką na wywołanie funkcji.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
 
@@ -26,22 +26,22 @@ var p = new Proxy(target, {
 
 ### Parametry
 
-Następujące parametry są przekazywane do metody `apply`. Wartością `this` jest handler.
+Następujące parametry są przekazywane do metody `apply`. Wartością `this` jest handler.
 
 - `target`
   - : Obiekt, na którym została wywołana metoda.
 - `thisArg`
-  - : Obiekt, który jest `this` w metodzie.
+  - : Obiekt, który jest `this` w metodzie.
 - `argumentsList`
   - : Lista argumentów, które zostały przekazane do metody.
 
 ### Zwracana wartość
 
-Metoda `apply` może zwrócić dowolną wartość.
+Metoda `apply` może zwrócić dowolną wartość.
 
 ## Opis
 
-Metoda **`handler.apply`** jest pułapką na wywołanie funkcji.
+Metoda **`handler.apply`** jest pułapką na wywołanie funkcji.
 
 ### Przechwycenia
 
@@ -55,7 +55,7 @@ Ta pułapka może przechwycić poniższe operacje:
 
 Jeśli poniższe zmiemienniki są naruszone, poxy rzuci wyjątek TypeError:
 
-`target` musi być obiektem, który da się wywołać. To znaczy, że musi być obiektem funkcyjnym.
+`target` musi być obiektem, który da się wywołać. To znaczy, że musi być obiektem funkcyjnym.
 
 ## Przykłady
 
@@ -78,7 +78,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 | Specification                                                                                                                                                        | Status                       | Comment               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
 | {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}} | {{Spec2('ES2015')}}     | Początkowa definicja. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}} | {{Spec2('ESDraft')}} |                       |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}} | {{Spec2('ESDraft')}} |                       |
 
 ## Kompatybilność przeglądarek
 

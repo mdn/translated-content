@@ -84,7 +84,7 @@ Folgendes ist nicht erlaubt (der [Promise Konstruktor](/de/docs/Mozilla/JavaScri
 return new Promise.resolve(true);
 ```
 
-Verwenden Sie stattdessen[Promise.resolve()](/de/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) oder die [statische Methode Promise.reject()](/de/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject):
+Verwenden Sie stattdessen[ Promise.resolve()](/de/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) oder die [statische Methode Promise.reject()](/de/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject):
 
 ```js
 // Das ist erlaubt, aber unnötig lang:

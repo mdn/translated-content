@@ -42,7 +42,7 @@ height: unset;
   - : Siehe {{cssxref("&lt;length&gt;")}} für mögliche Einheiten.
 - `<percentage>`
   - : Definiert als eine {{cssxref("&lt;percentage&gt;")}} der Höhe des beinhaltenden Blocks.
-- `border-box`{{experimental_inline}}
+- `border-box `{{experimental_inline}}
   - : Falls angegeben, wird die vorhergehende {{cssxref("&lt;length&gt;")}} oder {{cssxref("&lt;percentage&gt;")}} auf die Rahmenbox des Elements angewendet.
 - `content-box` {{experimental_inline}}
   - : Falls angegeben, wird die vorhergehende {{cssxref("&lt;length&gt;")}} oder {{cssxref("&lt;percentage&gt;")}} auf die Inhaltsbox des Elements angewendet.

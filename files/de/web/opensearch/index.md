@@ -40,25 +40,33 @@ Die XML Datei, die eine Suchmaschine beschreibt, ist sehr einfach aufgebaut. Ein
 
     **Einschränkungen:** Der Wert muss 16 oder weniger Zeichen enthalten und darf kein HTML oder sonstiges Markup enthalten.
 
+<!---->
+
 - **Description**
 
   - : Eine kurze Beschreibung der Suchmaschine.
 
     **Einschränkungen:** Der Wert muss 1024 oder weniger Zeichen enthalten und darf kein HTML oder sonstiges Markup enthalten.
 
+<!---->
+
 - **InputEncoding**
   - : Das Encoding, welches für die eingegeben Daten verwendet werden soll. Beispiel: `<InputEncoding>UTF-8</InputEncoding>`.
+
+<!---->
 
 - **Image**
   - : URI zu einem Icon, welches die Suchmaschine repräsentiert. Nach Möglichkeit sollten Suchmaschinen ein 16x16 großes Bild des Typs "image/x-icon" und ein 64x64 großes Bild des Typs "image/jpeg" oder "image/png" bereitstellten. Der Link kann auch das [data: URI scheme](http://en.wikipedia.org/wiki/Data:_URI_scheme) verwenden. Ein hilfreiches Tool zum Erstellen der data URIs lässt sich hier finden: [The data: URI kitchen](http://software.hixie.ch/utilities/cgi/data/data). <Image height="16" width="16" type="image/x-icon">http://example.com/favicon.ico</Image>
     Oder
     <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA ... DAAA=</Image>Firefox speichert das Icon als eine base64 data: URI im Cache (Such-Plugins werden im "searchplugins" Ordner im Profil gespeichert). http: URIs werden auf data: URIs umgewandelt, wenn diese vorhanden sind.
 
+<!---->
+
 - **Url**
 
   - : Gibt die URL oder die URLs an, die zur Suche verwendet werden sollen. Das `method` Attribut gibt an, ob eine `GET` oder `POST` Anfrage verwendet wird. Das `template` Attribut gibt die Basis-URL für die Suchanfrage an.
 
-    > **Hinweis:** Der Internet Explorer 7 unterstützt keine `POST` Anfragen.
+    > **Note:** **Hinweis:** Der Internet Explorer 7 unterstützt keine `POST` Anfragen.
 
 <dl><dd>Es gibt zwei URL-Typen, die Firefox unterstützt:</dd></dl>
 
@@ -75,13 +83,15 @@ Die XML Datei, die eine Suchmaschine beschreibt, ist sehr einfach aufgebaut. Ein
 
   - : Die Parameter, die durch die Suchanfrage laufen müssen, als Schlüssel/Wert Paare. Wenn Werte festgelegt werden, können Sie `{searchTerms}` verwenden, um den Suchausdruck vom Benutzer in der Suchleiste einzufügen.
 
-    > **Hinweis:** Der Internet Explorer 7 unterstützt dieses Element nicht.
+    > **Note:** **Hinweis:** Der Internet Explorer 7 unterstützt dieses Element nicht.
+
+<!---->
 
 - **SearchForm**
 
   - : Die URL zur der Suchseite auf der Seite, für die das Plugin erstellt wurde. Das bietet einen Weg für den Benutzer an, die Seite direkt zu besuchen, auf der er suchen möchte.
 
-    > **Hinweis:** Da dieses Element Firefox-spezifisch ist und nicht Teil der OpenSearch Spezifikation ist, verwenden wir das "`moz:`" XML Namespace Präfix im Beispiel oben, um sicher zu stellen, dass andere Browser dieses Element ignorieren.
+    > **Note:** **Hinweis:** Da dieses Element Firefox-spezifisch ist und nicht Teil der OpenSearch Spezifikation ist, verwenden wir das "`moz:`" XML Namespace Präfix im Beispiel oben, um sicher zu stellen, dass andere Browser dieses Element ignorieren.
 
 ## Automatische Erkennung von Such-Plugins
 
@@ -95,6 +105,8 @@ Ersetzen Sie die kursiven Einträge, wie unten erklärt:
 
 - **searchTitle**
   - : Der Name der Suche, etwa "MDC Suche" oder "Yahoo! Suche". Dieser Wert sollte mit dem ShortName Ihres Plugins übereinstimmen.
+
+<!---->
 
 - **pluginURL**
   - : Die URL zum XML Such-Plugin, von welchem der Browser das Plugin herunterladen kann.

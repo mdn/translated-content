@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
 {{JSRef}}
 
-Die **`toLocaleString()`** Methode gibt einen sprachsensitiven String mit dem Zeitpunkt zurück. Die neuen Argumente `locales` und `options` können eingesetzt werden, um die Sprache (und damit die Formatierung) einzustellen oder benutzerdefinierte Formatierungen vorzunehmen. In älteren Implementierungen, die `locales` und `options` ignorieren, ist die Formatierung des String implementierungsabhängig.
+Die **`toLocaleString`\*\***`()`\*\* Methode gibt einen sprachsensitiven String mit dem Zeitpunkt zurück. Die neuen Argumente `locales` und `options` können eingesetzt werden, um die Sprache (und damit die Formatierung) einzustellen oder benutzerdefinierte Formatierungen vorzunehmen. In älteren Implementierungen, die `locales` und `options` ignorieren, ist die Formatierung des String implementierungsabhängig.
 
 {{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
 

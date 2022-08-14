@@ -15,7 +15,7 @@ tags:
   - realtime
 translation_of: Glossary/WebSockets
 ---
-**WebSocket** ist ein {{Glossary("protocol", "Protokoll")}}, welches eine persistente {{Glossary("TCP")}} Verbindung zwischen {{Glossary("Server", "Server")}} und {{Glossary("client", "Client")}} herstellt, um jederzeit Daten austauschen zu können.
+**WebSocket**\_ \_ist ein {{Glossary("protocol", "Protokoll")}}, welches eine persistente {{Glossary("TCP")}} Verbindung zwischen {{Glossary("Server", "Server")}} und {{Glossary("client", "Client")}} herstellt, um jederzeit Daten austauschen zu können.
 
 Jede Client- oder Serveranwendung kann WebSockets verwenden, jedoch prinzipiell Web-Browser und Web-Server. Durch WebSocket kann ein Server Daten an einen Client übertragen ohne eine vorherige Anfrage von diesem erhalten zu haben. Dies ermöglicht dynamisches Aktualisieren von Inhalten.
 

@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Klassen/constructor
 ---
 {{jsSidebar("Classes")}}
 
-Die `constructor` Methode ist eine spezielle Methode für das erzeugen und initialisieren von Objekten, die mit dem Schlüsselwort `class`erzeugt wurden.
+Die `constructor` Methode ist eine spezielle Methode für das erzeugen und initialisieren von Objekten, die mit dem Schlüsselwort `class `erzeugt wurden.
 
 ## Syntax
 
@@ -20,9 +20,9 @@ Die `constructor` Methode ist eine spezielle Methode für das erzeugen und initi
 
 In einer Klasse kann es nur eine Methode mit dem Namen "constructor" geben. Eine {{jsxref("SyntaxError")}} Fehlermeldung wird geworfen, wenn in einer Klasse die `constructor` Methode mehr als einmal vorhanden ist.
 
-Die `constructor`Methode kann mit dem Schlüsselwort `super`die `constructor`Methode der Eltern-Klasse aufrufen.
+Die `constructor `Methode kann mit dem Schlüsselwort `super `die `constructor `Methode der Eltern-Klasse aufrufen.
 
-Wenn man keine `constructor`Methode erzeugt, wird eine Standardkonstruktor verwendet.
+Wenn man keine `constructor `Methode erzeugt, wird eine Standardkonstruktor verwendet.
 
 ## Beispiele
 
@@ -53,7 +53,7 @@ class Square extends Polygon {
 
 ### Standardkonstruktoren
 
-Wenn man keine `constructor`Methode anlegt, wird eine Standardkonstruktor verwendet. Für Basis Klassen ist der Standard Konstruktor:
+Wenn man keine `constructor `Methode anlegt, wird eine Standardkonstruktor verwendet. Für Basis Klassen ist der Standard Konstruktor:
 
 ```js
 constructor() {}

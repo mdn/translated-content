@@ -37,32 +37,52 @@ Brak.
 - `name`
   - : Określa nazwę formatu.
 
+<!---->
+
 - `decimal-separator`
   - : Określa punktowy znak dziesiętny. Domyślną wartością jest (`.`).
+
+<!---->
 
 - `grouping-separator`
   - : Określa separator tysięczny. Domyślną wartością jest (`,`).
 
+<!---->
+
 - `infinity`
   - : Określa łańcuch znakowy używany do przedstawienia nieskończoności. Domyślną wartością jest łańcuch "`Infinity`".
+
+<!---->
 
 - `minus-sign`
   - : Określa znak minusa. Domyślną wartością jest łącznik (`-`).
 
+<!---->
+
 - `NaN`
   - : Określa łańcuch znaków, używany gdy wartość nie jest liczbą. Domyślnie jest to łańcuch "`NaN`".
+
+<!---->
 
 - `percent`
   - : Określa znak procenta. Domyślną wartością jest (`%`).
 
+<!---->
+
 - `per-mille`
   - : Określa znak promila. Domyślną wartością jest (`‰`).
+
+<!---->
 
 - `zero-digit`
   - : Określa znak cyfry zero. Domyślną wartością jest (`0`).
 
+<!---->
+
 - `digit`
   - : Określa znak, które we wzorze formatu reprezentuje cyfrę. Domyślną wartością jest (`#`).
+
+<!---->
 
 - `pattern-separator`
   - : Określa znak rozdzielający dodatnie i ujemne podwzorce we wzorze formatu. Domyślną wartością jest średnik (`;`).

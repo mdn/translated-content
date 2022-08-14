@@ -36,7 +36,7 @@ Diese Eigenschaft wird [vererbt](/de/docs/Web/Guide/CSS/Getting_started/Kaskadie
 
 \[1] Chrome druckt keine Hintergründe des {{HTMLElement("body")}} Elements. Falls diese Eigenschaft für das `<body>` Element auf `exact` gesetzt ist, wird sie nur auf dessen Unterknoten angewendet.
 
-Wenn Hintergrundbilder zugeschnitten sind (zum Beispiel wenn Sprites als Hintergrundbilder verwendet werden), werden sie wegen[Chromium Bug 131054](http://code.google.com/p/chromium/issues/detail?id=131054) verzerrt dargestellt, wenn sie im Chrome Browser mit `-webkit-print-color-adjust: exact` gedruckt werden. Einfarbige Hintergründe und Hintergrundbilder, die nicht zugeschnitten sind (d. h. sie haben eine kleinere Breite und Höhe als das Element, auf das sie angewendet werden), werden korrekt gedruckt.
+Wenn Hintergrundbilder zugeschnitten sind (zum Beispiel wenn Sprites als Hintergrundbilder verwendet werden), werden sie wegen[ Chromium Bug 131054](http://code.google.com/p/chromium/issues/detail?id=131054) verzerrt dargestellt, wenn sie im Chrome Browser mit `-webkit-print-color-adjust: exact` gedruckt werden. Einfarbige Hintergründe und Hintergrundbilder, die nicht zugeschnitten sind (d. h. sie haben eine kleinere Breite und Höhe als das Element, auf das sie angewendet werden), werden korrekt gedruckt.
 
 \[2] Safari druckt keine Hintergründe des {{HTMLElement("body")}} Elements. Falls diese Eigenschaft für das `<body>` Element auf `exact` gesetzt ist, wird sie nur auf dessen Unterknoten angewendet.
 

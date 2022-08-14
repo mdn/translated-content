@@ -13,7 +13,7 @@ translation_of: Web/HTML/Element/li
 
 ## Übersicht
 
-Das HTML Element _list item_ `<li>`wird verwendet, um einen Listeneintrag innerhalb einer geordneten Liste ({{HTMLElement("ol")}}) oder einer ungeordneten Liste ({{HTMLElement("ul")}}) oder einem Menü ({{HTMLElement("menu")}}) auszuzeichnen. In Menüs und ungeordneten Listen werden Listeneinträge normalerweise mit Aufzählungszeichen dargestellt. In geordneten Listen werden sie normalerweise mit einem aufsteigendem Zähler wie einer Nummer oder einem Buchstaben auf der linken Seite dargestellt.
+Das HTML Element _list item_ `<li> `wird verwendet, um einen Listeneintrag innerhalb einer geordneten Liste ({{HTMLElement("ol")}}) oder einer ungeordneten Liste ({{HTMLElement("ul")}}) oder einem Menü ({{HTMLElement("menu")}}) auszuzeichnen. In Menüs und ungeordneten Listen werden Listeneinträge normalerweise mit Aufzählungszeichen dargestellt. In geordneten Listen werden sie normalerweise mit einem aufsteigendem Zähler wie einer Nummer oder einem Buchstaben auf der linken Seite dargestellt.
 
 | [Inhaltskategorien](/de/docs/Web/Guide/HTML/Inhaltskategorien) | Keine                                                                                                                                                                                                                                                                      |
 | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,7 +30,9 @@ Dieses Element enthält die [globalen Attribute](/de/docs/Web/HTML/Globale_Attri
 
   - : Legt die Zahl fest, mit der die Nummerierung in einem {{HTMLElement("ol")}} Element beginnen soll. Dies geschieht unabhängig vom Typ der Nummerierung. Römische Zahlen und Buchstaben können allerdings nicht als Wert angegeben werden, der einzig akzeptierte Wert ist eine Zahl. Listeneinträge, die dem Eintrag mit dem `value` Attribut folgen, werden die Nummerierung fortführen, die festgelegt wurde. Das `value` Attribut hat für eine ungeordnete Liste keine Bedeutung.
 
-    {{Note("Dieses Attribut wurde in HTML4 missbilligt, jedoch in HTML5 neu eingeführt.")}}> **Hinweis:** Vor {{Gecko("9.0")}} wurden negative Werte fälschlicherweise zu 0 konvertiert. Seit {{Gecko("9.0")}} werden alle Ganzzahlwerte korrekt interpretiert.
+    {{Note("Dieses Attribut wurde in HTML4 missbilligt, jedoch in HTML5 neu eingeführt.")}}> **Note:** **Hinweis:** Vor {{Gecko("9.0")}} wurden negative Werte fälschlicherweise zu 0 konvertiert. Seit {{Gecko("9.0")}} werden alle Ganzzahlwerte korrekt interpretiert.
+
+<!---->
 
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
 
@@ -42,7 +44,7 @@ Dieses Element enthält die [globalen Attribute](/de/docs/Web/HTML/Globale_Attri
     - `I`: großgeschriebene römische Nummerierung
     - `1`: ZahlenDie Festlegung eines Typs in einem {{HTMLElement("ol")}} Element wird für das ganze Element verwendet, wenn nicht innerhalb eines `<li>` Elements etwas anderes angegeben wird.
 
-> **Hinweis:** Dieses Attribut ist veraltet. Es sollte stattdessen die CSS {{cssxref("list-style-type")}} Eigenschaft verwendet werden.
+> **Note:** **Hinweis:** Dieses Attribut ist veraltet. Es sollte stattdessen die CSS {{cssxref("list-style-type")}} Eigenschaft verwendet werden.
 
 ## Beispiele
 

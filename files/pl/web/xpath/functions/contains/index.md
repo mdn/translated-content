@@ -22,6 +22,8 @@ Funkcja `contains` określa, czy w pierwszym argumencie ciągu jest zawarty drug
 - `stóg siana`
   - : Ciąg przeszukiwany
 
+<!---->
+
 - `igła`
   - : Ciąg szukany jako podciąg `stóg siana`
 

@@ -21,6 +21,8 @@ Die CSS-Eigenschaft `font-variant` erlaubt die Darstellung der Schrift in Kapit√
 
     Formal syntax: {{csssyntax("font-variant")}}
 
+<!---->
+
     font-variant: normal;
     font-variant: small-caps;
     font-variant: common-ligatures small-caps;

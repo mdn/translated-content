@@ -29,14 +29,14 @@ Dieses Element unterstützt die [globalen Attribute](/de/docs/HTML/Global_attrib
 
     Reine Dekorationselemente sollten hingegen mit einem leeren Attribut (`alt=""`) eingefügt werden; Alternativtexte wie "Roter Punkt" sind unbedingt zu vermeiden!
 
-    > **Hinweis:** Eine aussagekräftige Beschreibung des Bildes ist vor allem für die Barrierefreiheit von elementarer Bedeutung!
+    > **Note:** **Hinweis:** Eine aussagekräftige Beschreibung des Bildes ist vor allem für die Barrierefreiheit von elementarer Bedeutung!
     > Dies gilt auch für das leere Attribut `alt=""`. Browser können die (Ersatz-) Darstellung des img-Elements in diesem Fall ganz überspringen, was merklich der Übersichtlichkeit dient – niemand möchte einen Text vorgelesen bekommen, ständig von nutzlosen Hinweisen wie "Roter Punkt" unterbrochen.
 
 - {{htmlattrdef("border")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
   - : Breite des Rahmens um die Grafik. Benutzen Sie stattdessen die CSS-Eigenschaft {{cssxref('border')}}.
 - {{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}
 
-  - : Ist dieses Attribut gesetzt, wird die betreffende Grafik mittels [CORS](/de/docs/CORS_Enabled_Image "CORS_Enabled_Image")(Cross-Origin Resource Sharing) abgerufen, wahlweise ohne den Benutzer zu authentifizieren oder mit:_ `"anonymous"`
+  - : Ist dieses Attribut gesetzt, wird die betreffende Grafik mittels [CORS ](/de/docs/CORS_Enabled_Image "CORS_Enabled_Image")(Cross-Origin Resource Sharing) abgerufen, wahlweise ohne den Benutzer zu authentifizieren oder mit:_ `"anonymous"`
     _ : Es wird eine CORS-basierte Anfrage durchgeführt, jedoch wird keine Benutzerauthentifizierung mitgesendet (Cookies, X.509-Zertifikat, HTTP-Authentifizierung).
 
     - `"use-credentials"` \* : Es wird eine CORS-basierte Anfrage durchgeführt, gegebenenfalls mit Benutzerauthentifizierung (Cookies, X.509-Zertifikat, HTTP-Authentifizierung).Hat das Attribut einen ungültigen Wert, wird stattdessen die Einstellung **anonymous** angenommen.
@@ -51,7 +51,7 @@ Dieses Element unterstützt die [globalen Attribute](/de/docs/HTML/Global_attrib
 - {{htmlattrdef("hspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
   - : Breite des Innenabstands links und rechts der Grafik. Benutzen Sie stattdessen die CSS-Eigenschaften {{cssxref('padding-left')}} und {{cssxref('padding-right')}} bzw. {{cssxref('padding')}}.
 - {{htmlattrdef("ismap")}}
-  - : Serverseitig verweissensitive Grafik. Ist dieses Attribut gesetzt, werden bei jedem Klick die betreffenden Mauskoordinaten an den Server gesendet.> **Hinweis:** Dieses Attribut ist nur bei `<img>`-Elementen erlaubt, die sich innerhalb eines {{htmlelement("a")}}-Elements mit einem gültigen {{htmlattrxref("href","a")}}-Attribut befinden.
+  - : Serverseitig verweissensitive Grafik. Ist dieses Attribut gesetzt, werden bei jedem Klick die betreffenden Mauskoordinaten an den Server gesendet.> **Note:** **Hinweis:** Dieses Attribut ist nur bei `<img>`-Elementen erlaubt, die sich innerhalb eines {{htmlelement("a")}}-Elements mit einem gültigen {{htmlattrxref("href","a")}}-Attribut befinden.
 - {{htmlattrdef("longdesc")}}
   - : URL einer längeren Beschreibung des Bildes, die als Ergänzung zum **alt**-Text dient.
 - {{htmlattrdef("name")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
@@ -63,7 +63,7 @@ Dieses Element unterstützt die [globalen Attribute](/de/docs/HTML/Global_attrib
     - `"origin"`: Es wird der Ursprung des Dokuments gesendet, üblicherweise das Protokoll, die Domain und gegebenenfalls der Port (zum Beispiel `http://example.com:88`).
     - "`origin-when-cross-origin`": Wie `origin`, jedoch nur, falls die Grafik von einem anderen Server abgerufen wird. Ist der Server der gleiche, wird die vollständige URL des Dokuments, einschließlich Pfad, gesendet.
     - `"unsafe-url"`: Es wird immer die vollständige verweisende URL gesendet (jedoch ohne Fragmentbezeichner, Benutzername und Passwort).
-      Dies ist unsicher, da zuvor über gesicherte Verbindungen abgerufene Informationen (die URL des Dokuments) auch über nichtgesicherte gesendet werden könnten (als verweisende URL beim Abruf der Grafik).> **Hinweis:** In älteren Versionen hieß dieses Attribut `referrer`.
+      Dies ist unsicher, da zuvor über gesicherte Verbindungen abgerufene Informationen (die URL des Dokuments) auch über nichtgesicherte gesendet werden könnten (als verweisende URL beim Abruf der Grafik).> **Note:** **Hinweis:** In älteren Versionen hieß dieses Attribut `referrer`.
 - {{htmlattrdef("sizes")}}{{HTMLVersionInline(5)}}
   - : Mit dem `sizes`-Attribut wird die Anzeigegröße der Grafik in Abhängigkeit von der Größe des Anzeigegeräts festgelegt. Es enthält mehrere, durch Kommata getrennte Einträge, jeweils bestehend aus:1. einer CSS-Medienbedingung, zum Beispiel `(max-width: 480px)`. Diese Angabe entfällt für den letzten Eintrag. 2. einer CSS-Größenangabe.Anhand dieser Einträge wählt der Browser eine der in `srcset` gebenenen Grafikquellen, sofern diese mit Breitenangaben ('`w`') versehen sind.
     Fehlt das `srcset`-Attribut oder enthält es keine Breitenangaben, wird `sizes` ignoriert.
@@ -82,7 +82,7 @@ Dieses Element unterstützt die [globalen Attribute](/de/docs/HTML/Global_attrib
 - {{htmlattrdef("width")}}
   - : Breite der Grafik in {{HTMLVersionInline(5)}} CSS-Pixeln, {{HTMLVersionInline(4)}} Bildschirmpixeln oder als prozentuale Angabe.
 - {{htmlattrdef("usemap")}}
-  - : Verweissensitive Grafik; das usemap-Attribut enthält das URL-Fragment (beginnend mit '#') der zugehörigen [Karte](/de/docs/HTML/Element/map "HTML/Element/Map").> **Hinweis:** `usemap` kann nicht benutzt werden, falls sich das `<img>`-Element in einem {{htmlelement("a")}}- oder {{HTMLElement("button")}}-Element befindet. Die Verwendung würde mit `ismap` kollidieren.
+  - : Verweissensitive Grafik; das usemap-Attribut enthält das URL-Fragment (beginnend mit '#') der zugehörigen [Karte](/de/docs/HTML/Element/map "HTML/Element/Map").> **Note:** **Hinweis:** `usemap` kann nicht benutzt werden, falls sich das `<img>`-Element in einem {{htmlelement("a")}}- oder {{HTMLElement("button")}}-Element befindet. Die Verwendung würde mit `ismap` kollidieren.
 - {{htmlattrdef("vspace")}} {{deprecatedGeneric('inline','HTML4.01')}}, {{obsoleteGeneric('inline','HTML5')}}
   - : Breite des Innenabstands über und unter der Grafik. Benutzen Sie stattdessen die CSS-Eigenschaften {{cssxref('padding-top')}} und {{cssxref('padding-bottom')}} bzw. {{cssxref('padding')}}.
 
@@ -101,7 +101,7 @@ Gecko unterstützt die folgenden Formate:
 - [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 - [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29) {{gecko_minversion_inline("9.0")}}
 
-> **Hinweis:** Das [XBM](http://en.wikipedia.org/wiki/X_BitMap)-Format wird seit Gecko 1.9.2 nicht mehr unterstützt.
+> **Note:** **Hinweis:** Das [XBM](http://en.wikipedia.org/wiki/X_BitMap)-Format wird seit Gecko 1.9.2 nicht mehr unterstützt.
 
 ## Beeinflussung durch CSS
 

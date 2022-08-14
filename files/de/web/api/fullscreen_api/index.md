@@ -59,7 +59,7 @@ Wenn der Vollbild-Modus erfolgreich gestartet wird, erhält das `document`, welc
 
 Es ist nicht garantiert, dass der Wechsel in den Vollbild-Modus möglich ist. {{ HTMLElement("iframe") }}-Elements etwa haben das {{ HTMLAttrXRef("allowfullscreen", "iframe") }}-Attribut, um ihrem Inhalt zu erlauben, in den Vollbild-Modus zu wechseln. Zusätzlich gibt es bestimmte Arten von Inhalten, wie etwa windowed plug-ins, welche nicht im Vollbild-Modus angezeigt werden können. Wenn versucht wird, ein Element, welches nicht im Vollbild-Modus dargestellt werden kann (oder ein Eltern- bzw. Kind-Knoten eines solchen Elements), wird dies nicht funktionieren. Stattdessen wird das Element, welches den Vollbild-Modus angefragt hat, ein `mozfullscreenerror`-Event erhalten. Wenn eine Vollbild-Anfrage scheitert, wird Firefox eine Fehlermeldung auf der Web-Konsole ausgeben, welche erklärt, warum die Anfrage fehlgeschlagen ist. In Chrome und neueren Versionen von Opera werden allerdings keine solchen Warnungen produziert.
 
-> **Hinweis:** Vollbild-Anfragen müssen aus einem Event-Handler heraus gestellt werden oder die Anfrage wird abgelehnt.
+> **Note:** **Hinweis:** Vollbild-Anfragen müssen aus einem Event-Handler heraus gestellt werden oder die Anfrage wird abgelehnt.
 
 ## Verlassen des Vollbildmodus
 
@@ -114,7 +114,7 @@ function toggleFullScreen() {
 }
 ```
 
-This starts by looking at the value of the `fullscreenElement` attribute on the {{ domxref("document") }} (checking it prefixed with both `moz`,`ms`, or `webkit`). If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{ domxref("element.requestFullscreen()") }}.
+This starts by looking at the value of the `fullscreenElement` attribute on the {{ domxref("document") }} (checking it prefixed with both `moz`,` ms`, or `webkit`). If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{ domxref("element.requestFullscreen()") }}.
 
 If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{ domxref("document.exitFullscreen()") }}.
 

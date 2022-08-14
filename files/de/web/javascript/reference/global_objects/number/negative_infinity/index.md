@@ -39,7 +39,7 @@ Man kann `Number.NEGATIVE_INFINITY` nutzen, um einen Fehlerfall zu signalisieren
 
 ### Einsatz von `NEGATIVE_INFINITY`
 
-Im folgenden Beispiel wird der Variablen`smallNumber` ein kleinerer Wert als der minimale Wert zugewiesen. Wenn das {{jsxref("Statements/if...else", "if")}}-Statement ausgeführt wird, hat `smallNumber` den Wert `-Infinity`. In diesem Fall wird der Variablen ein endlicher Wert zugewiesen, um mit dem Wert besser umgehen zu können.
+Im folgenden Beispiel wird der Variablen` smallNumber` ein kleinerer Wert als der minimale Wert zugewiesen. Wenn das {{jsxref("Statements/if...else", "if")}}-Statement ausgeführt wird, hat `smallNumber` den Wert `-Infinity`. In diesem Fall wird der Variablen ein endlicher Wert zugewiesen, um mit dem Wert besser umgehen zu können.
 
 ```js
 var smallNumber = (-Number.MAX_VALUE) * 2;

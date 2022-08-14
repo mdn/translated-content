@@ -42,7 +42,7 @@ _Keine Änderungen._
 - Die Eigenschaft {{domxref("Gamepad.displayId")}} wurde implementiert ({{bug(1375816)}}).
 - Die Methode {{domxref("CanvasRenderingContext2D.drawImage()")}} wurde aktualisiert, so dass so dass die Glättung beim Downscaling erfolgt, auch wenn `imageSmoothingEnabled` ist `false`. Dies ist nicht obligatorisch wie pro Spezifikation, sondern folgt Chromes Verhalten. Siehe {{bug(1360415)}}.
 - Die Eigenschaft {{domxref("PerformanceTiming.secureConnectionStart")}} wurde implementiert ({{bug(772589)}}).
-- Firefox verwendet`iso-2022-jp-2`, um Sequenzen zu nehmen, wenn ein iso-2022-jp {{domxref ("TextDecoder.TextDecoder", "TextDecoder ()")}} instanziiert wurde. Dies wurde nun entfernt, um die API zu vereinfachen, da keine anderen Browser oder Webseiten es unterstützen. ({{bug(715833)}}).
+- Firefox verwendet` iso-2022-jp-2`, um Sequenzen zu nehmen, wenn ein iso-2022-jp {{domxref ("TextDecoder.TextDecoder", "TextDecoder ()")}} instanziiert wurde. Dies wurde nun entfernt, um die API zu vereinfachen, da keine anderen Browser oder Webseiten es unterstützen. ({{bug(715833)}}).
 - Das 4ms- Klemmeverhalten von {{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}} und {{domxref("WindowOrWorkerGlobalScope.setInterval","setInterval()")}} wurde aktualisiert, um besser in Einklang mit anderen Browsern, wie in [Timeouts throttled to >=4ms](/de/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Timeouts_throttled_to_%3E4ms) zu sein. ({{bug(1378586)}}).
 - Der [Page Visibility API's](/de/docs/Web/API/Page_Visibility_API) {{domxref("Document.onvisibilitychange")}} handler wurde hinzugefügt ({{bug("1333912")}}).
 

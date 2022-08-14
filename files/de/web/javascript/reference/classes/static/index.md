@@ -69,9 +69,9 @@ class StaticMethodCall{
 
 Das folgende Beispiel demonstriert mehrere Dinge:
 
-1. Wie eine statische Methode in einer Klasse implementiert wird.
-2. Das von einer Klasse mit statischen Eigenschaften geerbt werden kann.
-3. Wie eine statische Methode aufgerufen werden kann und wie nicht.
+1.  Wie eine statische Methode in einer Klasse implementiert wird.
+2.  Das von einer Klasse mit statischen Eigenschaften geerbt werden kann.
+3.  Wie eine statische Methode aufgerufen werden kann und wie nicht.
 
 ```js
 class Triple {

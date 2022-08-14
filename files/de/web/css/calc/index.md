@@ -46,7 +46,7 @@ Das Setzen von Klammern ist ebenfalls möglich.
 
 `calc()`-Funktionen können ineinander verschachtelt werden.
 
-> **Hinweis:** Die Operatoren + und - erfordern zwingend ein Leerzeichen zwischen dem Operator und den Werten. Zum Beispiel würde `calc(50% -8px)` als Prozentwert, gefolgt von einer negativen Pixel-Länge interpretiert. Eine korrekte Subtraktion ergibt sich nur mit einem Leerzeichen zwischen - und 8px: `calc(50% - 8px)`
+> **Note:** **Hinweis:** Die Operatoren + und - erfordern zwingend ein Leerzeichen zwischen dem Operator und den Werten. Zum Beispiel würde `calc(50% -8px)` als Prozentwert, gefolgt von einer negativen Pixel-Länge interpretiert. Eine korrekte Subtraktion ergibt sich nur mit einem Leerzeichen zwischen - und 8px: `calc(50% - 8px)`
 > Bei einer Multiplikation oder Division spielen Leerzeichen keine Rolle, sind aber der Lesbarkeit wegen empfohlen.
 
 > **Note:** Berechnungen für die Breite oder Höhe von Tabellenspalten und -spaltengruppen sowie Tabellenzeilen und -zeilengruppen, sowie Tabellenzellen _können_ vom Browser als Wert `auto` behandelt werden. Dies gilt für Tabellen mit dem Typ auto oder fixed.

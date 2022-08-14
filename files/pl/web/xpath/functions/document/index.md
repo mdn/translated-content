@@ -22,6 +22,8 @@ original_slug: Web/XPath/Funkcje/document
 - `URI`
   - : Bezwzględny lub relatywny adres URI dokumentu do pobrania. URI może także zawierać identyfikator fragmentu.
 
+<!---->
+
 - `zbiór_wierzchołków` (opcjonalny)
   - : Wyrażenie wskazujące zbiór wierzchołków zewnętrznego dokumentu, który powinien zostać zwrócony.
 
@@ -33,9 +35,15 @@ Zbiór wierzchołków.
 
 - Jeśli URI zawiera identyfikator fragmentu i fragment ten może zostać zidentyfikowany w dokumencie zewnętrznym, będzie on uważany za główny w wyrażeniu argumentu `zbiór_wierzchołków`. Jeśli argument `zbiór_wierzchołków` jest pominięty, zwrócony zostanie cały fragment.
 
+<!---->
+
 - Jeśli argument `URI` jest zbiorem wierzchołków i obecny jest drugi argument, każdy wierzchołek w zbiorze wierzchołków zostanie przetworzony jako oddzielny adres URI, a zwrócony zbiór wierzchołków będzie taki, jak gdyby funkcja `document` została wywołana wielokrotnie, przy czym wynikowe zbiory wierzchołków zostaną połączone w pojedynczy zbiór wierzchołków.
 
+<!---->
+
 - Pozostałe specyficzne warunki istnieją wraz z określonymi zachowaniami. Zobacz dokumentację XSLT 1.0, aby uzyskać szczegóły.
+
+<!---->
 
 - Gdy adres URI jest względny wobec dokumentu XSL, `document("")` zwróci wierzchołek główny aktualnego dokumentu.
 

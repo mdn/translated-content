@@ -16,11 +16,11 @@ Die Eigenschaft hat nur dann Auswirkungen, wenn [`border-collapse: separate`](/d
 
 {{EmbedInteractiveExample("pages/css/border-spacing.html")}}
 
-Der Wert für `border-spacing`wird auch entlang der Außenkante der Tabelle verwendet, wobei der Abstand zwischen dem Rand der Tabelle und den Zellen in der ersten/letzten Spalte oder Zeile die Summe des relevanten Randabstands (horizontalen oder vertikalen) `border-spacing` und des relevanten (oben, rechts, unten oder links) {{cssxref("padding")}} in der Tabelle ist.
+Der Wert für `border-spacing `wird auch entlang der Außenkante der Tabelle verwendet, wobei der Abstand zwischen dem Rand der Tabelle und den Zellen in der ersten/letzten Spalte oder Zeile die Summe des relevanten Randabstands (horizontalen oder vertikalen) `border-spacing` und des relevanten (oben, rechts, unten oder links) {{cssxref("padding")}} in der Tabelle ist.
 
 value is also used along the outside edge of the table, where the distance between the table's border and the cells in the first/last column or row is the sum of the relevant (horizontal or vertical) `border-spacing` and the relevant (top, right, bottom, or left) {{cssxref("padding")}} on the table.
 
-> **Hinweis:** Die `border-spacing` Eigenschaft entspricht demveraltetem `<table>` Attribut `cellspacing`, mit der Ausnahme, dass es einen optionalen zweiten Wert hat, mit dem unterschiedliche horizontale und vertikale Abstände eingestellt werden können.
+> **Note:** **Hinweis:** Die `border-spacing` Eigenschaft entspricht demveraltetem `<table>` Attribut `cellspacing`, mit der Ausnahme, dass es einen optionalen zweiten Wert hat, mit dem unterschiedliche horizontale und vertikale Abstände eingestellt werden können.
 
 ## Syntax
 

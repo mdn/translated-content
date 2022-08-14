@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 Die **`every()`** Methode testet ob alle Elemente in einem Array einen Test bestehen, welcher mittels einer implementierten Funktion bereitgestellt wird.
 
-> **Hinweis:** Diese Methode gibt `true` für jede Bedingung bei einem leeren Array zurück.
+> **Note:** Hinweis: Diese Methode gibt `true` für jede Bedingung bei einem leeren Array zurück.
 
 {{EmbedInteractiveExample("pages/js/array-every.html")}}
 
@@ -32,7 +32,7 @@ Die **`every()`** Methode testet ob alle Elemente in einem Array einen Test best
     - `array`{{Optional_inline}}
       - : Das Array auf welchem `every` aufgerufen wurde.
 - `thisArg`{{Optional_inline}}
-  - : Optional. Wert welcher als `this` in der `callback`Funktion benutzt wird.
+  - : Optional. Wert welcher als `this` in der `callback `Funktion benutzt wird.
 
 ### Rückgabewert
 
@@ -40,7 +40,7 @@ Die **`every()`** Methode testet ob alle Elemente in einem Array einen Test best
 
 ## Beschreibung
 
-Die `every` Methode führt die übergebene `callback` Funktion für jedes Element in dem Array aus, solange die `callback` Funktion keinen {{Glossary("falsy")}} Wert zurückgibt. Wenn ein solches Element gefunden wird gibt die `every` Methode `false` zurück. Anderfalls, wenn`callback` für jedes Element einen {{Glossary("truthy")}} Wert zurück gibt, gibt die Funktion `every` `true` zurück. Die `callback` Funktion wird nur für Indizes im Array aufgerufen, denen ein Wert zugewiesen wurde; sie wird nicht aufgerufen für Indizes, die gelöscht wurden, oder welche, die nie beschrieben wurden.
+Die `every` Methode führt die übergebene `callback` Funktion für jedes Element in dem Array aus, solange die `callback` Funktion keinen {{Glossary("falsy")}} Wert zurückgibt. Wenn ein solches Element gefunden wird gibt die `every` Methode `false` zurück. Anderfalls, wenn` callback` für jedes Element einen {{Glossary("truthy")}} Wert zurück gibt, gibt die Funktion `every` `true` zurück. Die `callback` Funktion wird nur für Indizes im Array aufgerufen, denen ein Wert zugewiesen wurde; sie wird nicht aufgerufen für Indizes, die gelöscht wurden, oder welche, die nie beschrieben wurden.
 
 Die `callback` Funktion wird mit drei Argumenten aufgerufen: Der Wert eines Elements, der Index des Elements und Array auf dem `every` aufgerufen wurde.
 

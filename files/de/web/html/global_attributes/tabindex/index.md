@@ -36,7 +36,7 @@ Es akzeptiert einen Integer als Wert der zu unterschiedlichen Ergebnissen führt
 
 Wenn das `tabindex`-Attribut für ein {{htmlelement ("div")}} festgelegt wird, kann der untergeordnete Inhalt nicht mit den Pfeiltasten gescrollt werden. Außer, der `tabindex` wurde für den Inhalt festgelegt. [Folgendes fiddle hilft beim Verstehen der Scrolleffekte des `tabindex`](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
 
-> **Hinweis:** Der maximale Wert für `tabindex` ist 32767. Wenn er nicht spezifiziert ist, wird der Standardwert von 0 angenommen.
+> **Note:** **Hinweis:** Der maximale Wert für `tabindex` ist 32767. Wenn er nicht spezifiziert ist, wird der Standardwert von 0 angenommen.
 
 ## Bedenken zur Barrierefreiheit
 

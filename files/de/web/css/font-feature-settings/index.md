@@ -26,6 +26,8 @@ Die Eigenschaft `font-feature-settings` ermöglicht die Kontrolle von erweiterte
 
     Formale Syntax: {{csssyntax("font-feature-settings")}}
 
+<!---->
+
     font-feature-settings: normal
     font-feature-settings: "smcp"
     font-feature-settings: "smcp" on

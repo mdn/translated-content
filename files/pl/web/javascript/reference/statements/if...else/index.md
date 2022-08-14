@@ -43,6 +43,8 @@ Wykonuje blok poleceń, jeśli dany warunek jest spełniony. Jeśli warunek nie 
 - `warunek`
   - : może być dowolnym wyrażeniem JavaScriptu przyjmującym wartości logiczne (true, false) lub mogącym być na wartości logiczne przekonwertowane. Warunek musi być ujęty w nawiasach. Jeśli warunek jest spełniony (ma wartość true), wykonywane są polecenia w bloku `polecenia1`.
 
+<!---->
+
 - `polecenia1`, `polecenia2`
   - : mogą być dowolnymi poleceniami JavaScriptu, w tym zagnieżdżonymi poleceniami `if...else`. Bloki wielu poleceń muszą być ujęte w nawiasy klamrowe.
 

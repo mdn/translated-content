@@ -104,7 +104,7 @@ _Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{do
   - : Retrievse the node representation of the named attribute from the current node and returns it as an {{ domxref("Attr") }}.
 - {{ domxref("Element.getAttributeNodeNS()") }} {{obsolete_inline}}
   - : Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{ domxref("Attr") }}.
-- {{ domxref("Element.getBoundingClientRect()") }}``{{experimental_inline}}
+- {{ domxref("Element.getBoundingClientRect()") }}` `{{experimental_inline}}
   - : ...
 - {{ domxref("Element.getClientRects()") }} {{experimental_inline}} TYPE of returnvalue????
   - : Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.
@@ -122,7 +122,7 @@ _Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{do
   - : Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute, in the specified namespace, or not.
 - {{ domxref("Element.insertAdjacentHTML") }} {{experimental_inline}}
   - : Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.
-- {{ domxref("Element.matches()") }}``{{experimental_inline}}
+- {{ domxref("Element.matches()") }}` `{{experimental_inline}}
   - : Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.
 - {{ domxref("Element.querySelector()") }}
   - : Returns {{ domxref("Node") }}...
@@ -144,6 +144,8 @@ _Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{do
   - : Asynchronously asks the browser to make the element full-screen.
 - {{ domxref("Element.requestPointerLock()")}} {{experimental_inline}}
   - : Allows to asynchronously ask for the pointer to be locked on the given element.
+
+<!---->
 
 - {{ domxref("Element.scrollIntoView()") }} {{experimental_inline}}
   - : Scrolls the page until the element gets into the view.
@@ -167,7 +169,7 @@ _Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{do
 | {{SpecName("Web Animations", '', '')}}                                                         | {{Spec2("Web Animations")}}         | Added the `getAnimationPlayers()` method.                                                                                                                                                                                                                                                                     |
 | {{SpecName('Undo Manager', '', 'Element')}}                                                     | {{Spec2('Undo Manager')}}             | Added the `undoScope` and `undoManager` properties.                                                                                                                                                                                                                                                           |
 | {{SpecName('Pointer Events', '#extensions-to-the-element-interface', 'Element')}} | {{Spec2('Pointer Events')}}         | Added the following event handlers: `ongotpointercapture` and `onlostpointercapture`. Added the following methods: `setPointerCapture()` and `releasePointerCapture()`.                                                                                                                                       |
-| {{SpecName('Selectors API Level 2', '#interface-definitions', 'Element')}}         | {{Spec2('Selectors API Level 2')}} | Added the following methods:`matches()` (implemented as `mozMatchesSelector()`), `find()`, `findAll()`.                                                                                                                                                                                                      |
+| {{SpecName('Selectors API Level 2', '#interface-definitions', 'Element')}}         | {{Spec2('Selectors API Level 2')}} | Added the following methods:` matches()` (implemented as `mozMatchesSelector()`), `find()`, `findAll()`.                                                                                                                                                                                                      |
 | {{SpecName('Selectors API Level 1', '#interface-definitions', 'Element')}}         | {{Spec2('Selectors API Level 1')}} | Added the following methods: `querySelector()` and `querySelectorAll()`.                                                                                                                                                                                                                                      |
 | {{SpecName('Pointer Lock', 'index.html#element-interface', 'Element')}}             | {{Spec2('Pointer Lock')}}             | Added the `requestPointerLock()` method.                                                                                                                                                                                                                                                                      |
 | {{SpecName('Fullscreen', '#api', 'Element')}}                                                 | {{Spec2('Fullscreen')}}             | Added the `requestFullscreen()` method.                                                                                                                                                                                                                                                                       |

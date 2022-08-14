@@ -50,7 +50,7 @@ _Keine Veränderungen._
 
   - This includes [getter](/de/docs/Web/JavaScript/Reference/Functions/get) and [setter](/de/docs/Web/JavaScript/Reference/Functions/set) method names as well ({{bug(1048384)}}) and can also be used with [destructuring](/de/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Computed_object_property_names_and_destructuring).
 
-- The ES6[shorthand syntax for defining methods](/de/docs/Web/JavaScript/Reference/Functions/Method_definitions) on objects has been implemented ({{bug(924672)}}).
+- The ES6[ shorthand syntax for defining methods](/de/docs/Web/JavaScript/Reference/Functions/Method_definitions) on objects has been implemented ({{bug(924672)}}).
 - The ES6 `Object` method {{jsxref("Object.assign", "Object.assign()")}} has been implemented ({{bug(937855)}}).
 - ES6 [template strings](/de/docs/Web/JavaScript/Reference/template_strings) and the {{jsxref("String.raw()")}} method are now supported ({{bug(1038259)}}, {{bug(1039774)}}).
 - A new ES6 object {{jsxref("WeakSet")}} has been added ({{bug(792439)}}).

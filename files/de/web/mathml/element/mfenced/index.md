@@ -9,7 +9,7 @@ translation_of: Web/MathML/Element/mfenced
 ---
 {{MathMLRef}}
 
-Mit dem`<mfenced>`-Element kann in MathML eine Aufzählung mit öffnenenden und schließenden Zeichen (Klammern) und mit Trennzeichen (Kommas, Semikolons) versehen werden. (engl. to fence = umklammern)
+Mit dem` <mfenced>`-Element kann in MathML eine Aufzählung mit öffnenenden und schließenden Zeichen (Klammern) und mit Trennzeichen (Kommas, Semikolons) versehen werden. (engl. to fence = umklammern)
 
 ## Attribute
 

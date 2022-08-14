@@ -14,7 +14,7 @@ translation_of: Web/API/Document/registerElement
 
 Die **`document.registerElement()`**-Methode registriert ein neues [benutzerdefiniertes Element](/de/docs/Web/Web_Components/Custom_Elements) im Browser und gibt einen Konstruktor für das neue Element zurück.
 
-> **Hinweis:** Dies ist eine experimentelle Technologie. Der Browser, der sie benutzen soll, muss Web Components unterstützen. Siehe [Web Components in Firefox erlauben](/de/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox).
+> **Note:** **Hinweis:** Dies ist eine experimentelle Technologie. Der Browser, der sie benutzen soll, muss Web Components unterstützen. Siehe [Web Components in Firefox erlauben](/de/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox).
 
 ## Syntax
 

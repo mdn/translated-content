@@ -33,6 +33,8 @@ Reprezentację wartości `number` w postaci łańcucha znaków, która nie stosu
 - {{jsxref("Obiekty/RangeError", "RangeError")}}
   - : Jeśli wartość parametru `digits` jest za duża lub za mała. Wartości z zakresu od 0 do 20 włącznie nie spowodują wystąpienia {{jsxref("Obiekty/RangeError", "RangeError")}}. Dopuszcza się na obsługę mniejszych lub większych wartości przez różne implementacje.
 
+<!---->
+
 - {{jsxref("Obiekty/TypeError", "TypeError")}}
   - : Jeśli ta metoda jest przywołana w obiekcie, który nie jest obiektem {{jsxref("Number")}}.
 

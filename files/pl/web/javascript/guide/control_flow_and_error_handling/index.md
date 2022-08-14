@@ -9,11 +9,11 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
-JavaScript jest językiem zawierającym w sobie szeroki wachlarz instrukcji. Część z nich odnosi się do sterowania przepływem programu *(\_\_ang. control flow)* i może być pomyślnie użyta w celu nadania Twojej aplikacji kolejnych poziomów interaktywności. W rozdziale tym omówimy te instrukcje.
+JavaScript jest językiem zawierającym w sobie szeroki wachlarz instrukcji. Część z nich odnosi się do sterowania przepływem programu *(\_\_ang. control flow)* i może być pomyślnie użyta w celu nadania Twojej aplikacji kolejnych poziomów interaktywności. W rozdziale tym omówimy te instrukcje.
 
-[JavaScript reference](/pl/docs/Web/JavaScript/Reference/Statements) zawiera wyczerpujący opis instrukcji wymienionych w tym artykule. Średnik (;) jest używany do oddzielenia od siebie kolejnych poleceń w języku JavaScript. Chodź w większości przypadków brak średnika na końcu instrukcji nie powoduje błędu, by kod był jak najbardziej semantyczny, należy go tam umieszczać.
+[JavaScript reference](/pl/docs/Web/JavaScript/Reference/Statements) zawiera wyczerpujący opis instrukcji wymienionych w tym artykule. Średnik (;) jest używany do oddzielenia od siebie kolejnych poleceń w języku JavaScript. Chodź w większości przypadków brak średnika na końcu instrukcji nie powoduje błędu, by kod był jak najbardziej semantyczny, należy go tam umieszczać.
 
-Każde wyrażenie w języku JavaScript jest również instrukcją. [Expressions and operators](/pl/docs/Web/JavaScript/Guide/Expressions_and_Operators) zawiera kompletny opis wyrażeń.
+Każde wyrażenie w języku JavaScript jest również instrukcją. [Expressions and operators](/pl/docs/Web/JavaScript/Guide/Expressions_and_Operators) zawiera kompletny opis wyrażeń.
 
 ## Instrukcja blokowa
 
@@ -33,7 +33,7 @@ while (x < 10) {
 
 W tym przypadku, { x++; } jest instrukcją blokową.
 
-**Ważne**: Blok w JavaScript w wersji do ECMAScript6 nie posiada własnego scope (zasięgu zmiennych). Zmienne zadeklarowane wewnątrz takiego bloku bowiem mają scope (zasięg zmiennych) związany z funkcją lub skryptem, w którym blok się bezpośrednio znajduje. Efektem tego jest to, że każda zmienna zadeklarowana w bloku istnieje również i poza nim. W innych słowach - instrukcje blokowe nie definują nowego scope (zasięgu zmiennych). Samodzielne bloki w JavaScript mogą wyprodukować zupełnie inne wyniki od tych, których moglibyśmy się spodziewać w językach takich jak C czy Java. Przykład:
+**Ważne**: Blok w JavaScript w wersji do ECMAScript6 nie posiada własnego scope (zasięgu zmiennych). Zmienne zadeklarowane wewnątrz takiego bloku bowiem mają scope (zasięg zmiennych) związany z funkcją lub skryptem, w którym blok się bezpośrednio znajduje. Efektem tego jest to, że każda zmienna zadeklarowana w bloku istnieje również i poza nim. W innych słowach - instrukcje blokowe nie definują nowego scope (zasięgu zmiennych). Samodzielne bloki w JavaScript mogą wyprodukować zupełnie inne wyniki od tych, których moglibyśmy się spodziewać w językach takich jak C czy Java. Przykład:
 
 ```js
 var x = 1;
@@ -45,15 +45,15 @@ console.log(x); // wypisze 2
 
 Wypisane zostanie 2 ponieważ wyrażenie var x wewnątrz bloku dzieli scope (zasięg zmiennych) z wyrażeniem var x na zewnątrz bloku. W C lub Javie, równoważny kod wypisałby 1.
 
-Począwszy od specyfikacji ECMAScript 6, za pomocą słowa kluczowego `let` mamy mozliwość tworzenia zmiennych o zasięgu blokowym.
+Począwszy od specyfikacji ECMAScript 6, za pomocą słowa kluczowego `let` mamy mozliwość tworzenia zmiennych o zasięgu blokowym.
 
 ## Instrukcje warunkowe
 
-Instrukcje warunkowe są zbiorem instrukcji, które pozwalają na wykonywanie danej porcji kodu gdy warunki (parametry instrukcji) zwracają wartość true. JavaScript wspiera dwa rodzaje instrukcji warunkowych:\*\* **`if . . . else`  oraz `switch`**.\*\*
+Instrukcje warunkowe są zbiorem instrukcji, które pozwalają na wykonywanie danej porcji kodu gdy warunki (parametry instrukcji) zwracają wartość true. JavaScript wspiera dwa rodzaje instrukcji warunkowych:\*\* **`if . . . else`  oraz `switch`**.\*\*
 
 ### Instrukcje `if...else`
 
-Instrukcja `if`\*\* **wykonuje blok instrukcji jeżeli jej warunki zwrócą wartość `true`. Aby obsłużyć sytuacje gdy warunki nie zostały spełnione i zwracają `false`, można posłużyć się np. instrukcją `else`**:\*\*
+Instrukcja `if`\*\* **wykonuje blok instrukcji jeżeli jej warunki zwrócą wartość `true`. Aby obsłużyć sytuacje gdy warunki nie zostały spełnione i zwracają `false`, można posłużyć się np. instrukcją `else`**:\*\*
 
     if (warunki) {
       intrukcja_1;
@@ -62,29 +62,29 @@ Instrukcja `if`\*\* **wykonuje blok instrukcji jeżeli jej warunki zwrócą wart
       instrukcja_2;
     }
 
-Warunkami mogą być wszystkie twierdzania które można przekształcić do typu boolean (`true` lub `false`). W powyższym przykładzie `instrukcja_1` wykona się jeśli warunki zwrócą `true`, w przeciwnym wypadku wykonana zostanie `instrukcja_2`.
+Warunkami mogą być wszystkie twierdzania które można przekształcić do typu boolean (`true` lub `false`). W powyższym przykładzie `instrukcja_1` wykona się jeśli warunki zwrócą `true`, w przeciwnym wypadku wykonana zostanie `instrukcja_2`.
 
-Za pomocą `else if`\*\* \*\*można tworzyć złożone sekwencyjnie testowe oparte na wielu instrukcjach warunkowych. Jeśli `warunek_1` nie zostanie spełniony, skrypt sprawdza kolejne warianty:
+Za pomocą `else if`\*\* \*\*można tworzyć złożone sekwencyjnie testowe oparte na wielu instrukcjach warunkowych. Jeśli `warunek_1` nie zostanie spełniony, skrypt sprawdza kolejne warianty:
 
     if (warunek_1) { instrukcja_1; }
     else if (warunek_2) { instrukcja_2; }
-    else if (warunek_n) { instrukcja_n; }
+    else if (warunek_n) { instrukcja_n; }
     else { ostatnia_instrukcja; }
 
-Aby wykonać wiele instrukcji można je zgrupować za pomocą deklaracji bloku (`{ ... }`). Mimo, że nie jest wymagane by pojedyncze instrukcje byly zawierane w bloku, warto stosować to rozwiązanie dla lepszej czytelności kodu:
+Aby wykonać wiele instrukcji można je zgrupować za pomocą deklaracji bloku (`{ ... }`). Mimo, że nie jest wymagane by pojedyncze instrukcje byly zawierane w bloku, warto stosować to rozwiązanie dla lepszej czytelności kodu:
 
     if (warunek_1) {
       instrukcja_1;
-      instrukcja_2;
+      instrukcja_2;
     }
     else if (warunek_2) {
       instrukcja_3;
     }
     else
-       instrukcja_4;
-       // Pojedyńcze instrukcje nie wymagają zawierania ich w nawiasy.
+       instrukcja_4;
+       // Pojedyńcze instrukcje nie wymagają zawierania ich w nawiasy.
 
-Wskazane jest, by nie używać przypisywania w wyrażeniu warunków:
+Wskazane jest, by nie używać przypisywania w wyrażeniu warunków:
 
 
 
@@ -104,7 +104,7 @@ if ((x = y)) {
 
 #### Wartości false
 
-Poniższe wartości użyte w wyrażeniu warunku zostaną przekształcone w wartość `false`:
+Poniższe wartości użyte w wyrażeniu warunku zostaną przekształcone w wartość `false`:
 
 - `false`, zmienna typu Boolean
 - `undefined`
@@ -115,7 +115,7 @@ Poniższe wartości użyte w wyrażeniu warunku zostaną przekształcone w warto
 
 Wszystkie inne wartości, włączając w to wszystkie obiekty, zostają przekształcone do wartości `true`.
 
-Nie należy mylić pierwotnych wartości `true` i `false` z wartościami `true` i `false` obiektu {{jsxref("Boolean")}}:
+Nie należy mylić pierwotnych wartości `true` i `false` z wartościami `true` i `false` obiektu {{jsxref("Boolean")}}:
 
 ```js
 var b = new Boolean(false);
@@ -189,20 +189,20 @@ console.log("Is there anything else you'd like?");
 
 ## Instrukcje obsługi wyjątków
 
-Możliwe jest wywoływanie wyjątków za pomocą `throw` i ich późniejsza obsługa za pomocą instrukcji `try...catch.`
+Możliwe jest wywoływanie wyjątków za pomocą `throw` i ich późniejsza obsługa za pomocą instrukcji `try...catch.`
 
 - [`throw` statement](#throw_statement)
 - [`try...catch` statement](#try_catch_statement)
 
 ### Typy wyjątków
 
-Praktycznie każda wartość czy obiekt może posłużyć do wygenerowania wyjątku w JavaScript. Nie mniej jednak  bardziej efektywne jest skorzystanie z już wbudowanych, specjalnie do tego przygotowanych typów jak np.
+Praktycznie każda wartość czy obiekt może posłużyć do wygenerowania wyjątku w JavaScript. Nie mniej jednak  bardziej efektywne jest skorzystanie z już wbudowanych, specjalnie do tego przygotowanych typów jak np.
 
 - [Error](/pl/docs/Web/JavaScript/Referencje/Obiekty/Error)
 
 ### Instrukcja `throw`
 
-`throw` tworzy wyjątek. Kiedy wywołujesz wyjątek, musisz podać w danym wyrażeniu wartość, którą ma ten wyjątek zwrócić:
+`throw` tworzy wyjątek. Kiedy wywołujesz wyjątek, musisz podać w danym wyrażeniu wartość, którą ma ten wyjątek zwrócić:
 
     throw wyrażenie;
 
@@ -215,7 +215,7 @@ throw true;       // Wartość Boolean
 throw {toString: function() { return "I'm an object!"; } };
 ```
 
-> **Note:** **Notatka:** Za pomocą instrukcji throw możesz zwrócić rówież obiekt. Możliwe jest osniesienie wartości objektu do właściwości bloku `catch`. Poniższy przykład tworzy obiekt `myUserException` typu `UserException` i używa go w instrukcji throw.
+> **Note:** **Notatka:** Za pomocą instrukcji throw możesz zwrócić rówież obiekt. Możliwe jest osniesienie wartości objektu do właściwości bloku `catch`. Poniższy przykład tworzy obiekt `myUserException` typu `UserException` i używa go w instrukcji throw.
 
 ```js
 // Create an object type UserException
@@ -236,9 +236,9 @@ throw new UserException("Value too high");
 
 ### Instrukcja `try...catch`
 
-`try...catch `jest instrukcją wykonującą pewien blok kodu i wyłąpującą w nim ewentualne wyjątki i błędy, które mogą zostać odpowiednio obsłużone.
+`try...catch `jest instrukcją wykonującą pewien blok kodu i wyłąpującą w nim ewentualne wyjątki i błędy, które mogą zostać odpowiednio obsłużone.
 
-Instrukcja `try...catch `zawiera blok `try`, w którym znajduje się jedna bądź więcej instrukcji i zero lub więcej bloków `catch` określających zachowanie programu w przypadku napotkania w bloku `try` jakiegoś wyjątku. Blok `try` testuje nie tylko bezpośrednio wywołane instrukcje, ale cały stos wywołań użytych funkcji.
+Instrukcja `try...catch `zawiera blok `try`, w którym znajduje się jedna bądź więcej instrukcji i zero lub więcej bloków `catch` określających zachowanie programu w przypadku napotkania w bloku `try` jakiegoś wyjątku. Blok `try` testuje nie tylko bezpośrednio wywołane instrukcje, ale cały stos wywołań użytych funkcji.
 
 ```js
 function test1() {
@@ -246,11 +246,11 @@ function test1() {
 };
 
 function test2() {
-   console.log(name);
+   console.log(name);
 };
 
 try{
-   test1();
+   test1();
 }
 catch(e){
    console.error(e); //ReferenceError: name is not defined
@@ -286,11 +286,11 @@ Możesz użyć bloku `catch` do obsługi wszystkich wyjątków jakie wystąpią 
       instrukcje
     }
 
-Blok `catch` przyjmuje parametr catchID, który jest po prostu wartością wyrzuconą przez wyjątek.
+Blok `catch` przyjmuje parametr catchID, który jest po prostu wartością wyrzuconą przez wyjątek.
 
 #### Blok **`finally`**
 
-Możliwe jest dodanie bloku `finally`, który wykona się niezależnie od tego czy kod w bloku `try` rzucił jakimś wyjątkiem czy nie.
+Możliwe jest dodanie bloku `finally`, który wykona się niezależnie od tego czy kod w bloku `try` rzucił jakimś wyjątkiem czy nie.
 
 ```js
 function test1(){
@@ -298,11 +298,11 @@ function test1(){
 };
 
 function test2(){
-   console.log(name)
+   console.log(name)
 };
 
 try{
-   test1();
+   test1();
 }
 catch(e){
    console.error(e) //ReferenceError: name is not defined
@@ -349,7 +349,7 @@ Obietnica może znajdować się w jednym z następujących stanów:
 - _oczekiwanie_: stan początkowy, obietnica nie jest ani spełniona ani odrzucona.
 - _spełnienie_: operacja zakończona sukcesem.
 - _odrzucenie_: operacja zakończona niepowodzeniem.
-- _rozliczenie_: obietnica została spełniona lub odrzucona i nie jest już w stanie oczekiwania.
+- _rozliczenie_: obietnica została spełniona lub odrzucona i nie jest już w stanie oczekiwania.
 
 ![](https://mdn.mozillademos.org/files/8633/promises.png)
 
@@ -379,6 +379,6 @@ function imgLoad(url) {
 }
 ```
 
-Aby dowiedzieć się więcej, sprawdź {{jsxref("Promise")}}.
+Aby dowiedzieć się więcej, sprawdź {{jsxref("Promise")}}.
 
 {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

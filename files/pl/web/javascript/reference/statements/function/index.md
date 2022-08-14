@@ -48,8 +48,12 @@ Możesz również zdefiniować funkcję używając konstruktora [`Function`](pl/
 - `nazwa`
   - : Nazwa funkcji.
 
+<!---->
+
 - `argument`
   - : Nazwa argumentu, który ma zostać przekazany do funkcji. Funkcja może posiadać do 255 argumentów.
+
+<!---->
 
 - `instrukcje`
   - : Instrukcje, które stanowią ciało funkcji.

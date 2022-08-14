@@ -19,7 +19,7 @@ Klienci i serwery komunikują się poprzez wymianę pojedynczych komunikatów (w
 
 ![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](https://mdn.mozillademos.org/files/13673/HTTP%20&%20layers.png)Zaprojektowany na początku lat 90. HTTP jest protokołem elastycznym, który wyewoluował na przetrzeni czasu. Jest to protokół warstwy aplikacji, który jest wysyłany nad {{Glossary("TCP")}} lub nad połączeniem TCP zaszyfrowanym w {{Glossary("TLS")}}, chociaż dowolny, godny zaufania protokół transportu mógłby zostać teoretycznie użyty. Z powodu swojej rozszerzalności używany jest nie tylko do przechwytywania dokumentów hipertekstowych, ale również do obrazów i video, bądź do dodawania treści na serwery, jak dane wprowadzane do formularzy HTML. HTTP może być również używany do przechwytywania części dokumentów, aby na żądanie aktualizować strony WWW.
 
-## Komponenty systemów opartych o HTTP 
+## Komponenty systemów opartych o HTTP 
 
 HTTP to protokół klient-serwer: żądania są wysyłane przez jedną jednostkę, agenta użytkownika (lub proxy w jego imieniu). Przeważnie użytkownika jest jednoznaczny z przeglądarką, ale tak naprawdę może być wszystkim, np. robotem przemierzającym sieć, by rozpowszechnić i utrzymywać indeks wyszukiwarki.
 

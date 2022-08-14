@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 ---
 {{JSRef}}
 
-Die statische **`Atomics.compareExchange()`** Methode ersetzt einen Wert an einer gegebenen Position im einem Array mit einem gegebene Wert aus, wenn ein gegebenen Wert gleich dem alten Wert ist. Es wird der alte Wert an der Position zurückgegeben, egal ob der abzugleichende Wert gleich oder nicht ist. Die atomare Operation garantiert, dass kein anderer Schreibprozess während der Operation durchgeführt wird.
+Die statische **`Atomics`\*\***`.compareExchange()`\*\* Methode ersetzt einen Wert an einer gegebenen Position im einem Array mit einem gegebene Wert aus, wenn ein gegebenen Wert gleich dem alten Wert ist. Es wird der alte Wert an der Position zurückgegeben, egal ob der abzugleichende Wert gleich oder nicht ist. Die atomare Operation garantiert, dass kein anderer Schreibprozess während der Operation durchgeführt wird.
 
 {{EmbedInteractiveExample("pages/js/atomics-compareexchange.html")}}
 

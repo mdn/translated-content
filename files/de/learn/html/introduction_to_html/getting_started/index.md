@@ -69,10 +69,10 @@ Schauen wir uns den Aufbau unseres Paragraphen-Elements ein wenig genauer an.
 
 Die Hauptteile unseres Elements sind:
 
-1. **Das öffnende Tag:** Diese besteht aus dem Namen des Elements (in diesem Fall ein `p` für paragraph (engl.:Absatz)), welcher zwischen zwei spitzen Klammern eingesetzt ist. Dies zeigt an, wo das Element beginnt — in diesem Fall am Anfang unseres Absatzes.
-2. **Der Inhalt:** Dies ist der Inhalt des Elements, in diesem Fall einfach nur Text.
-3. **Das schließende Tag:** Dieses sieht genauso aus wie das öffnende Tag bis auf den zusätzlichen Schrägstrich (slash) vor dem Namen des Elements. Dieser Tag kommt an das Ende des Elementes — in diesem Fall am Ende des Absatzes.
-4. **Das Element:** Das öffnende Tag, der Inhalt und das schließende Tag gemeinsam ergeben zusammen das Element.
+1.  **Das öffnende Tag:** Diese besteht aus dem Namen des Elements (in diesem Fall ein `p` für paragraph (engl.:Absatz)), welcher zwischen zwei spitzen Klammern eingesetzt ist. Dies zeigt an, wo das Element beginnt — in diesem Fall am Anfang unseres Absatzes.
+2.  **Der Inhalt:** Dies ist der Inhalt des Elements, in diesem Fall einfach nur Text.
+3.  **Das schließende Tag:** Dieses sieht genauso aus wie das öffnende Tag bis auf den zusätzlichen Schrägstrich (slash) vor dem Namen des Elements. Dieser Tag kommt an das Ende des Elementes — in diesem Fall am Ende des Absatzes.
+4.  **Das Element:** Das öffnende Tag, der Inhalt und das schließende Tag gemeinsam ergeben zusammen das Element.
 
 ### Aktives Lernen: Erstellen Sie Ihr erstes HTML-Element
 
@@ -245,9 +245,9 @@ In unserem Beispiel ist der _Name_ des Attributes `class` und `editor-note` ist 
 
 Ein Attribut sollte immer haben:
 
-1. Einen Abstand zwischen ihm und dem Elementnamen (oder dem vorherigen Attribut, wenn es mehrere sind).
-2. Den Attributnamen, gefolgt von Gleichheitszeichen
-3. Anführungs- und Schlusszeichen um den Wert. (bsp. ` "``editor-note" `)
+1.  Einen Abstand zwischen ihm und dem Elementnamen (oder dem vorherigen Attribut, wenn es mehrere sind).
+2.  Den Attributnamen, gefolgt von Gleichheitszeichen
+3.  Anführungs- und Schlusszeichen um den Wert. (bsp. ` "``editor-note" `)
 
 ### Aktives Lernen: Hinzufügen von Attributen zu einem Element
 
@@ -376,7 +376,7 @@ Wenn Sie eine Sorte Anführungszeichen benutzen, können Sie die andere Sorte in
 <a href="http://www.example.com" title="Ist's nicht lustig?">Ein Link als Beispiel.</a>
 ```
 
-Wenn Sie die selbe Sorte Anführungszeichen innerhalb benutzen wollen, dann müssen Sie[HTML entities](/de/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_including_special_characters_in_HTML) nutzen.
+Wenn Sie die selbe Sorte Anführungszeichen innerhalb benutzen wollen, dann müssen Sie[ HTML entities](/de/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_including_special_characters_in_HTML) nutzen.
 
 ### Aufbau eines HTML-Dokumentes
 
@@ -408,10 +408,10 @@ Hier haben wir:
 
 Wenn Sie lokal, auf Ihrem Computer, das Beispiel ausprobieren möchten, dann tun Sie folgendes:
 
-1. Kopieren Sie das obige HTML-Dokument.
-2. Erstellen Sie eine neue leere Datei in Ihrem Texteditor.
-3. Fügen Sie den Code in die leere Datei ein.
-4. Speichern Sie die Datei unter dem Namen index.html.
+1.  Kopieren Sie das obige HTML-Dokument.
+2.  Erstellen Sie eine neue leere Datei in Ihrem Texteditor.
+3.  Fügen Sie den Code in die leere Datei ein.
+4.  Speichern Sie die Datei unter dem Namen index.html.
 
 > **Note:** **Notiz**: Sie können dieses HTML-Grundgerüst auch im [MDN Learning Area Github repository](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) finden.
 
@@ -555,6 +555,6 @@ Wie Sie unten erkennen können, wird der erste Absatz dargestellt, der zweite ab
 
 Sie haben das Ende des Artikels erreicht und wir hoffen es hat Ihnen etwas Spaß gemacht bei uns die Grundlagen von HTML zu erlernen! An diesem Punkt sollten Sie verstehen, wie diese Sprache aussieht, wie sie funktioniert und in der Lage sein einige Elemente und Attribute zu benutzen. In weiterfürhenden Artikeln aus diesem Modul werden wir einige der Dinge, die Sie hier gelernt haben wieder aufgreifen und uns im Detail anschauen, aber auch neue Möglichkeiten dieser Sprache entdecken. Bleiben Sie dabei!
 
-> **Note:** **Notiz**: Nun, da Sie dabei sind mehr über HTML zu lernen, möchten Sie vielleicht auch schon einmal in die Grundlagen von Cascading Style Sheets, kurz [CSS](/de/docs/Learn/CSS)hineinstöbern. CSS ist die Sprache mit der wir unseren Webseiten einen bestimmten Stil geben. Zum Beispiel lassen sich mit CSS die Farben auf der Webseite ändern. HTML und CSS arbeiten Hand in Hand, wie Sie bald entdecken werden.
+> **Note:** **Notiz**: Nun, da Sie dabei sind mehr über HTML zu lernen, möchten Sie vielleicht auch schon einmal in die Grundlagen von Cascading Style Sheets, kurz [CSS ](/de/docs/Learn/CSS)hineinstöbern. CSS ist die Sprache mit der wir unseren Webseiten einen bestimmten Stil geben. Zum Beispiel lassen sich mit CSS die Farben auf der Webseite ändern. HTML und CSS arbeiten Hand in Hand, wie Sie bald entdecken werden.
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}

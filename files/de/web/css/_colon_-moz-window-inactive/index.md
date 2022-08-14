@@ -17,7 +17,7 @@ translation_of: Web/CSS/:-moz-window-inactive
 
 Die `:-moz-window-inactive` [CSS](/de/docs/Web/CSS) [Pseudoklasse](/de/docs/Web/CSS/Pseudo-classes) matcht jedes Element während es sich in einem inaktivem Fenster befindet.
 
-> **Hinweis:** Vor der Einführung dieser Pseudoklasse konnten andere Stile für Hintergrundfenster durch das Setzen eines Attributs (`active="true"`) für das Toplevel XUL Chromefenster erreicht werden. Dieses Attribut wird nicht mehr verwendet.
+> **Note:** **Hinweis:** Vor der Einführung dieser Pseudoklasse konnten andere Stile für Hintergrundfenster durch das Setzen eines Attributs (`active="true"`) für das Toplevel XUL Chromefenster erreicht werden. Dieses Attribut wird nicht mehr verwendet.
 
 `:-moz-window-inactive` funktioniert auch in Inhalten von HTML Dokumenten.
 

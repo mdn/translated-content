@@ -32,11 +32,17 @@ Aucun.
 - `match`
   - : Définit le motif qui détermine les éléments auxquels ce modèle doit être appliqué. Il devient attribut obligatoire si l'attribut `name` n'est pas présent.
 
+<!---->
+
 - `name`
   - : Définit un nom pour ce modèle, par lequel il sera invoqué à l'aide de l'élément `<xsl:call-template>`.
 
+<!---->
+
 - `mode`
   - : Définit un mode particulier pour ce modèle, qui peut correspondre à un attribut de l'élément `<xsl:apply-templates>`. Utile pour traiter la même information de différentes façons.
+
+<!---->
 
 - `priority`
   - : Définit une priorité pour ce modèle, sous forme d'un nombre quelconque, à l'eception de `Infinity` (infini). Le processeur utilise ce nombre lorsque plusieurs modèles s'appliquent au même nœud.

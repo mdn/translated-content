@@ -23,6 +23,8 @@ Zwraca obiekt zakresu reprezentujący jeden z obecnie zaznaczonych zakresów.
 - _`range`_
   - : Obiekt [zakresu](pl/DOM/range), który zostanie zwrócony.
 
+<!---->
+
 - _`index`_
   - : Wartość liczbowa liczona od zera. Wartość ujemna, równa albo większa od [rangeCount](pl/DOM/Selection/rangeCount) spowoduje wystąpienie błędu.
 

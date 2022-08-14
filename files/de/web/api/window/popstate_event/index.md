@@ -10,9 +10,9 @@ original_slug: Web/API/WindowEventHandlers/onpopstate
 
 Hier geht es um die Ereignisbehandlungsroutine, üblicherweise _event handler_ genannt, für das `popstate` Ereignis (_event_) des `window` Objekts.
 
-Ein `popstate` Ereignis wird an `window` übermittelt, wann immer der aktive `history` Eintrag zwischen zwei Einträgen für dasselbe Dokument wechselt. Falls der zu aktivierende history Eintrag erzeugt wurde durch den Aufruf von `history.pushState()` oder beeinflusst wurde durch Aufruf von `history.replaceState(),`dann enthält die `state` Eigenschaft des `popstate` Ereignisses eine Kopie des `state` Objekts des `history` Eintrags.``
+Ein `popstate` Ereignis wird an `window` übermittelt, wann immer der aktive `history` Eintrag zwischen zwei Einträgen für dasselbe Dokument wechselt. Falls der zu aktivierende history Eintrag erzeugt wurde durch den Aufruf von `history.pushState()` oder beeinflusst wurde durch Aufruf von `history.replaceState(), `dann enthält die `state` Eigenschaft des `popstate` Ereignisses eine Kopie des `state` Objekts des `history` Eintrags.``
 
-Es gilt zu beachten, dass der bloße Aufruf von `history.pushState()` oder `history.replaceState()` kein `popstate` Ereignis auslöst. Das `popstate` Ereignis wird allein durch Anklicken des Zurück-Buttons (oder den Aufruf von `history.back()` per Javascript) ausgelöst. Auch wird das Ereignis nur ausgelöst, wenn sich der Anwender zwischen zwei `history`Einträgen für dasselbe Dokument bewegt.
+Es gilt zu beachten, dass der bloße Aufruf von `history.pushState()` oder `history.replaceState()` kein `popstate` Ereignis auslöst. Das `popstate` Ereignis wird allein durch Anklicken des Zurück-Buttons (oder den Aufruf von `history.back()` per Javascript) ausgelöst. Auch wird das Ereignis nur ausgelöst, wenn sich der Anwender zwischen zwei `history `Einträgen für dasselbe Dokument bewegt.
 
 Browser behandeln den `popstate` Zustand nach initialem Laden einer Seite (`onload`) auf verschiedene Weise. Chrome (vor Version 34) und Safari senden immer ein `popstate` Ereignis, Firefox hingegen nicht.
 

@@ -6,16 +6,16 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Proxy
 ---
 {{JSRef}}
 
-Obiekt **Proxy** jest używany w celu definiowania specyficznego zachowania dla podstawowych operacji (n.p. wyszukiwanie atrybutu, przypisanie, wyliczanie, wywołanie funkcji, etc).
+Obiekt **Proxy** jest używany w celu definiowania specyficznego zachowania dla podstawowych operacji (n.p. wyszukiwanie atrybutu, przypisanie, wyliczanie, wywołanie funkcji, etc).
 
 ## Terminologia
 
 - [handler](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
-  - : Zastępczy obiekt zawierający pułapki (traps).
+  - : Zastępczy obiekt zawierający pułapki (traps).
 - traps
   - : Metody zapewniające dostęp do atrybutów. Pojęcie to jest analogiczne do pułapek w systemie operacyjnym.
 - target
-  - : Obiekt wirtualizowany przez proxy. Często jest używany aby magazyować dane obiektu proxy. Niezmienniki (wartości które pozostają niezmienione) dotyczące nierozszerzalności obiektu lub niekonfigurowalnnych atrybutów są weryfikowane w oparciu o **target**.
+  - : Obiekt wirtualizowany przez proxy. Często jest używany aby magazyować dane obiektu proxy. Niezmienniki (wartości które pozostają niezmienione) dotyczące nierozszerzalności obiektu lub niekonfigurowalnnych atrybutów są weryfikowane w oparciu o **target**.
 
 ## Składnia
 
@@ -24,18 +24,18 @@ Obiekt **Proxy** jest używany w celu definiowania specyficznego zachowania dla 
 ### Parametry
 
 - `target`
-  - : Docelowy obiekt (może być obiektem dowolnego typu, włącznie z wbudowanymi tablicami, funkcjami, a nawet innyi obiektami proxy) przeznaczony do opakowania przez `Proxy`.
+  - : Docelowy obiekt (może być obiektem dowolnego typu, włącznie z wbudowanymi tablicami, funkcjami, a nawet innyi obiektami proxy) przeznaczony do opakowania przez `Proxy`.
 - `handler`
   - : Obiekt obsługujący którego atrybuty są funkcjami definiującymi zachowanie proxy podczas wykonania na nim operacji.
 
 ## Metody
 
 - {{jsxref("Proxy.revocable()")}}
-  - : Tworzy odwracalny obiekt `Proxy`.
+  - : Tworzy odwracalny obiekt `Proxy`.
 
 ## Metody obiektu obsługującego
 
-Obiekt obsługujący jest obiektem zastępczym zawierającym pułapki dla obieku `Proxy`.
+Obiekt obsługujący jest obiektem zastępczym zawierającym pułapki dla obieku `Proxy`.
 
 {{page('/pl/docs/Web/JavaScript/Referencje/Obiekty/Proxy/handler', 'Metody') }}
 
@@ -43,7 +43,7 @@ Obiekt obsługujący jest obiektem zastępczym zawierającym pułapki dla obieku
 
 ### Podstawowy przykład
 
-W tym prostym przykładzie liczba `37` jest zwracana jako domyślna wartość kiedy nazwa atrybutu nie istnieje w obiekcie. W tym celu użyty jest handler [`get`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get).
+W tym prostym przykładzie liczba `37` jest zwracana jako domyślna wartość kiedy nazwa atrybutu nie istnieje w obiekcie. W tym celu użyty jest handler [`get`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get).
 
 ```js
 var handler = {
@@ -79,7 +79,7 @@ Zwróć uwagę, że ten przykład działa dla obiektów JavaScript jednak nie sp
 
 ### Walidacja
 
-Używając `Proxy`, łatwo możesz zwalidować wartości przekazywane do obiektu. Poniższy przykład używa metody obsługującej [`set`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set).
+Używając `Proxy`, łatwo możesz zwalidować wartości przekazywane do obiektu. Poniższy przykład używa metody obsługującej [`set`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set).
 
 ```js
 let validator = {
@@ -111,7 +111,7 @@ person.age = 300; // rzuca wyjątek
 
 ### Rozszerzanie konstruktora
 
-Funkcja proxy może w łatwy sposób rozszerzyć konstruktor innym konstruktorem. W tym przykładzie użyto funkcje obsługujące [`construct`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct) oraz [`apply`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply).
+Funkcja proxy może w łatwy sposób rozszerzyć konstruktor innym konstruktorem. W tym przykładzie użyto funkcje obsługujące [`construct`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct) oraz [`apply`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply).
 
 ```js
 function extend(sup, base) {
@@ -154,7 +154,7 @@ console.log(Peter.age);  // 13
 
 ### Manipulacja węzłami DOM
 
-Czasami konieczne jest przełączenie atrybutu lub nazwy klasy dwóch innych elementów. Poniższy przykład pokazuje wykonanie funkcją obsługującą [`set`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set).
+Czasami konieczne jest przełączenie atrybutu lub nazwy klasy dwóch innych elementów. Poniższy przykład pokazuje wykonanie funkcją obsługującą [`set`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set).
 
 ```js
 let view = new Proxy({
@@ -191,7 +191,7 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 ### Korekcja wartości i dodatkowych atrybutów
 
-Obiekt proxy `products` wylicza przekazaną wartość i konwertuje to tablicy w razie potrzeby. Obiekt dodatkowo obsługuje dodatkowy atrybut `latestBrowser` zarówno jako getter i setter.
+Obiekt proxy `products` wylicza przekazaną wartość i konwertuje to tablicy w razie potrzeby. Obiekt dodatkowo obsługuje dodatkowy atrybut `latestBrowser` zarówno jako getter i setter.
 
 ```js
 let products = new Proxy({
@@ -238,7 +238,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 ### Wyszukiwanie elementu tablicy po jego właściwości
 
-Poniższe proxy rozszerza tablicę o różne użyteczne funkcjonalności. Jak widać, można elastycznie "definiować" właściwości bez użycia [`Object.defineProperties`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Ten przykład może być użyty aby znaleźć wiersz tabeli po jego komórce. W takim przypadku, celem będzie [`table.rows`](/pl/docs/DOM/table.rows).
+Poniższe proxy rozszerza tablicę o różne użyteczne funkcjonalności. Jak widać, można elastycznie "definiować" właściwości bez użycia [`Object.defineProperties`](/pl/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Ten przykład może być użyty aby znaleźć wiersz tabeli po jego komórce. W takim przypadku, celem będzie [`table.rows`](/pl/docs/DOM/table.rows).
 
 ```js
 let products = new Proxy([
@@ -298,9 +298,9 @@ console.log(products.types); // ['browser', 'mailer']
 console.log(products.number); // 3
 ```
 
-### Pełna lista przykładów `pułapek`
+### Pełna lista przykładów `pułapek`
 
-W celu stworzenia pełnej listy przykładów `pułapek`, w celach dydaktycznych, spróbujemy zastosować proxy na*nie natywnym obiekcie* który się szczególnie nadaje do tego typu operacji: globalny obiekt `docCookies` stworzony przez ["mały framework" opublikowany na stronie `document.cookie`](/pl/docs/Web/API/Document/cookie/Simple_document.cookie_framework "https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support").
+W celu stworzenia pełnej listy przykładów `pułapek`, w celach dydaktycznych, spróbujemy zastosować proxy na*nie natywnym obiekcie* który się szczególnie nadaje do tego typu operacji: globalny obiekt `docCookies` stworzony przez ["mały framework" opublikowany na stronie `document.cookie`](/pl/docs/Web/API/Document/cookie/Simple_document.cookie_framework "https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support").
 
 ```js
 /*
@@ -358,9 +358,9 @@ console.log(docCookies.my_cookie1);
 | Specification                                                            | Status                       | Comment             |
 | ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ES2016', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ES2016')}}     |                     |
-| {{SpecName('ES2017', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ES2017')}}     |                     |
-| {{SpecName('ESDraft', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ES2016', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ES2016')}}     |                     |
+| {{SpecName('ES2017', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ES2017')}}     |                     |
+| {{SpecName('ESDraft', '#sec-proxy-objects', 'Proxy')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Kompatybilność przeglądarek
 

@@ -19,7 +19,7 @@ Eine sichere ganze Zahl ist
 - eine Zahl, die exakt als IEEE-754 double precision Zahl repräsentiert werden kann, und
 - eine Zahl, deren IEEE-754 Repräsentation nicht das Ergebnis von Rundungen anderer ganzer Zahlen sein kann.
 
-Zum Beispiel ist `253 - 1` eine sichere ganze Zahle: sie kann exakt repräsentiert werden und keine andere ganze Zahl wird in jedem IEEE-754 Rundungsmodus zu ihr gerundet. Im gegensatz dazu ist `253` keine sichere ganze Zahl: Sie kann in IEEE-754 exakt repräsentiert werden, jedoch wird die ganze Zahl `253 + 1` kann nicht exakt repräsentiert werden und wird zu `253`in den Modus _zum nächsten Runden_ und _zu null runden_ gerundet. Die sicheren ganzen Zahlen sind alle ganzen Zahlen im Bereich von `-(253 - 1)` inklusiv und `253 - 1` inklusiv.
+Zum Beispiel ist `253 - 1` eine sichere ganze Zahle: sie kann exakt repräsentiert werden und keine andere ganze Zahl wird in jedem IEEE-754 Rundungsmodus zu ihr gerundet. Im gegensatz dazu ist `253` keine sichere ganze Zahl: Sie kann in IEEE-754 exakt repräsentiert werden, jedoch wird die ganze Zahl `253 + 1` kann nicht exakt repräsentiert werden und wird zu `253 `in den Modus _zum nächsten Runden_ und _zu null runden_ gerundet. Die sicheren ganzen Zahlen sind alle ganzen Zahlen im Bereich von `-(253 - 1)` inklusiv und `253 - 1` inklusiv.
 
 Der Einsatz von Zahlen größer \~9 Biliarden oder kleiner \~-9 Biliarder mit voller Präzision benötigen eine [Langzahlarythmetik Bibliothek](https://de.wikipedia.org/wiki/Langzahlarithmetik). Mehr Informationen über die Repräsentation von Gleitkommazahlen gibt es in dem Artikel [What Every Programmer Needs to Know about Floating Point Arithmetic](http://floating-point-gui.de/).
 

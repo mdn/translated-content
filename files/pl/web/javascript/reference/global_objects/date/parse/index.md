@@ -41,7 +41,7 @@ Ponieważ `parse` jest metodą statyczną obiektu `Date`, używamy jej jako `Dat
 Jeśli `IPOdate` jest istniejącym obiektem `Date`, możemy przypisać mu wartość 9 sierpnia 1995 (czasu lokalnego) w następujący sposób:
 
 ```js
-IPOdate.setTime(Date.parse("Aug 9, 1995")) ;
+IPOdate.setTime(Date.parse("Aug 9, 1995")) ;
 ```
 
 Kilka innych przykładów:

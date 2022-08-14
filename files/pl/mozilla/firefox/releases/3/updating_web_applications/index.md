@@ -63,7 +63,7 @@ Mimo to, istnieje możliwość odbezpieczania innych miejsc chrome poprzez rozsz
 
 Ta opcja nie powinna być zbyt często potrzebna, ale jest dostępna w rzadkich, wymagających jej wypadkach. Zauważ, że Firefox może zaalarmować użytkownika, jeśli twoje rozszerzenie używa flagi `contentaccessible`, z powodu ewentualnego zagrożenia bezpieczeństwa.
 
-> **Uwaga:** Ponieważ Firefox 2 ignoruje linie z flagą `contentaccessible`, jeśli chcesz by twoja wtyczka była kompatybilna z Firefox 2 i Firefox 3, muisz napisać: content mypackage location/
+> **Note:** **Uwaga:** Ponieważ Firefox 2 ignoruje linie z flagą `contentaccessible`, jeśli chcesz by twoja wtyczka była kompatybilna z Firefox 2 i Firefox 3, muisz napisać: content mypackage location/
 > content mypackage location/ contentaccessible=yes
 
 #### Pola wrzucania plików

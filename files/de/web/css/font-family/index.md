@@ -20,7 +20,7 @@ Webautoren sollten einer Schriftfamilienliste immer mindestens eine generische F
 
 Es ist oft vorteilhaft, die Kurzform Eigenschaft {{cssxref("font")}} zu verwenden, um `font-size` und andere Schrift bezogene Eigenschaften auf einmal zu setzen.
 
-> **Hinweis:** Die `font-family` Eigenschaft definiert eine Liste von Schriftarten, von der höchsten zur niedrigsten Priorität. Die Auswahl der Schriftart stoppt **nicht** einfach bei der ersten Schriftart in der Liste, die auf dem System des Benutzers installiert ist. Vielmehr findet die Auswahl der Schriftart **pro Zeichen** statt, so dass, falls eine verfügbare Schriftart ein bestimmtes Schriftzeichen nicht definiert, in den übrigen Schriftarten nach diesem Zeichen gesucht wird. Dies funktioniert jedoch nicht im Internet Explorer 6 oder früheren Versionen.
+> **Note:** **Hinweis:** Die `font-family` Eigenschaft definiert eine Liste von Schriftarten, von der höchsten zur niedrigsten Priorität. Die Auswahl der Schriftart stoppt **nicht** einfach bei der ersten Schriftart in der Liste, die auf dem System des Benutzers installiert ist. Vielmehr findet die Auswahl der Schriftart **pro Zeichen** statt, so dass, falls eine verfügbare Schriftart ein bestimmtes Schriftzeichen nicht definiert, in den übrigen Schriftarten nach diesem Zeichen gesucht wird. Dies funktioniert jedoch nicht im Internet Explorer 6 oder früheren Versionen.
 >
 > Falls eine Schrift nur in bestimmten [Stilen](/de/docs/Web/CSS/font-style "CSS/font-style"), [Varianten](/de/docs/Web/CSS/font-variant "CSS/font-variant") oder [Größen](/de/docs/Web/CSS/font-size "CSS/font-size") verfügbar ist, können diese Eigenschaften auch beeinflussen, welche Schriftart ausgewählt wird.
 

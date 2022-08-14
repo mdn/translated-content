@@ -24,7 +24,7 @@ Die **`includes()`** Methode prüft, ob ein Array ein bestimmtes Element enthäl
 
 - `searchElement`
   - : Das zu suchende Element.
-- `fromIndex`{{optional_inline}}
+- `fromIndex `{{optional_inline}}
   - : Die Position im Array, ab welcher die Suche nach `searchElement` beginnt. Bei einem negativen Wert fängt die Suche beim Index `array.length - fromIndex` an. Default ist 0.
 
 ### Rückgabewert

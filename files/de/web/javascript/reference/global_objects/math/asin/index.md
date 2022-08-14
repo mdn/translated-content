@@ -31,7 +31,7 @@ Der Arkussinus (im Radiantenmaß) der übergebenen Zahl, die zwischen **-1** und
 
 ## Beschreibung
 
-Die `Math.asin()`Methode gibt einen numerischen Wert zwischen <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> und <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> im Radiantenmaß für x Werte zwischen -1 und 1 zurück. Wenn der übergebene Wert außerhalb dieses Bereiches liegt, wird {{jsxref("NaN")}} zurückgegeben.
+Die `Math.asin() `Methode gibt einen numerischen Wert zwischen <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> und <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> im Radiantenmaß für x Werte zwischen -1 und 1 zurück. Wenn der übergebene Wert außerhalb dieses Bereiches liegt, wird {{jsxref("NaN")}} zurückgegeben.
 
 `Weil asin()` eine statische Methode von `Math` ist, muss diese immer mit `Math.asin()` genutzt werden, ohne dass ein Objekt von `Math` erstellt wird (`Math` ist kein Konstruktor).
 
@@ -48,7 +48,7 @@ Math.asin(1);   // 1.5707963267948966 (pi/2)
 Math.asin(2);   // NaN
 ```
 
-Für Werte kleiner -1 oder größer als 1 gibt `Math.asin()`{{jsxref("NaN")}} zurück.
+Für Werte kleiner -1 oder größer als 1 gibt `Math.asin() `{{jsxref("NaN")}} zurück.
 
 ## Spezifikationen
 

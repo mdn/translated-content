@@ -14,9 +14,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/name
 
 ````|
 
-Nazwa rozszerzenia. Jest używana do zidentyfikowania rozszerzenia w przeglądarce użytkownika i na takich serwisach jak np. addons.mozilla.org.
+Nazwa rozszerzenia. Jest używana do zidentyfikowania rozszerzenia w przeglądarce użytkownika i na takich serwisach jak np. addons.mozilla.org.
 
-Jest to ["właściwość zlokalizowana"](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Jest to ["właściwość zlokalizowana"](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
 ## Przykład
 

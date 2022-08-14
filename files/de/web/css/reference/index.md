@@ -45,7 +45,7 @@ _Da die Struktur von @-Regeln stark variiert, schaue bitte bei [@-Regel](/de/doc
 
 ## _Index_
 
-> **Hinweis:** Die Bezeichnungen der Eigenschaften enthalten **nicht** die [JavaScript-Namen](/de/docs/Web/CSS/CSS_Properties_Reference), wenn sie sich von den CSS-Standardbezeichnern unterscheiden.
+> **Note:** **Hinweis:** Die Bezeichnungen der Eigenschaften enthalten **nicht** die [JavaScript-Namen](/de/docs/Web/CSS/CSS_Properties_Reference), wenn sie sich von den CSS-Standardbezeichnern unterscheiden.
 
 _{{CSS_Ref}}_
 

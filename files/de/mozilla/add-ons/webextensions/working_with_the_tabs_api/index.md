@@ -20,13 +20,13 @@ In diesem "how-to"-Artikel schauen wir uns an:
 
 Wir schließen dann mit Blick auf einige andere, andere Funktionen, die von der API angeboten werden.
 
-> **Hinweis:** Es gibt einige Tab-API-Funktionen, die an anderer Stelle abgedeckt sind. Dies sind die Methoden, die Sie verwenden können, um den Inhalt der Registerkarten mit Skripten zu manipulieren ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}} und {{WebExtAPIRef("tabs.executeScript")}}). Wenn Sie mehr Informationen über diese Methoden wünschen, lesen Sie die [Artikelinhaltskripte](/de/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) Concepts und die Anleitung ändern Sie[eine Webseite](/de/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
+> **Note:** **Hinweis:** Es gibt einige Tab-API-Funktionen, die an anderer Stelle abgedeckt sind. Dies sind die Methoden, die Sie verwenden können, um den Inhalt der Registerkarten mit Skripten zu manipulieren ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}} und {{WebExtAPIRef("tabs.executeScript")}}). Wenn Sie mehr Informationen über diese Methoden wünschen, lesen Sie die [Artikelinhaltskripte](/de/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) Concepts und die Anleitung ändern Sie[eine Webseite](/de/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
 
 **Berechtigungen und die Tabs API**
 
 Für die meisten Tabs API-Funktionen benötigen Sie keine Berechtigungen; Es gibt jedoch einige Ausnahmen:
 
-- Für den Zugriff auf die Eigenschaften `Tab.url`, `Tab.title`und `Tab.favIconUrl` des Tab-Objekts ist die Erlaubnis "Tabs" erforderlich. In Firefox benötigen Sie auch "Tabs", um eine [Abfrage](/de/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) per URL durchzuführen.
+- Für den Zugriff auf die Eigenschaften `Tab.url`, `Tab.title `und `Tab.favIconUrl` des Tab-Objekts ist die Erlaubnis "Tabs" erforderlich. In Firefox benötigen Sie auch "Tabs", um eine [Abfrage](/de/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) per URL durchzuführen.
 - [Die Host-Berechtigung](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) ist für die {{WebExtAPIRef("tabs.executeScript")}} oder {{WebExtAPIRef("tabs.insertCSS")}}. erforderlich.
 
 Im Folgenden können Sie in der manifest.json-Datei Ihrer Erweiterung die Erlaubnis "Tabs " beantragen :
@@ -59,7 +59,7 @@ Wenn Sie nur Informationen über den aktuellen Reiter wünschen, können Sie ein
 
 ### Wie man mit dem Beispiel geht
 
-Um zu sehen, wie {{WebExtAPIRef("tabs.query")}} und {{WebExtAPIRef("tabs.Tab")}} werden verwendet, lassen Sie uns durch, wie das [Tabs-Tabs-Tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs)Beispiel fügt die Liste von" Schalter auf Tabs "zu seiner Toolbar-Taste Popup.
+Um zu sehen, wie {{WebExtAPIRef("tabs.query")}} und {{WebExtAPIRef("tabs.Tab")}} werden verwendet, lassen Sie uns durch, wie das [Tabs-Tabs-Tabs ](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs)Beispiel fügt die Liste von" Schalter auf Tabs "zu seiner Toolbar-Taste Popup.
 
 [![](https://mdn.mozillademos.org/files/15723/Switch_to_tab.png)](https://mdn.mozillademos.org/files/15723/Switch_to_tab.png)
 
@@ -85,7 +85,7 @@ Hier ist das [manifest.json](https://github.com/mdn/webextensions-examples/blob/
 }
 ```
 
-> **Hinweis:** **Tabs.html wird als Standard Popup in** browser **action** definiert. Es wird angezeigt, wenn der Benutzer auf das Symbollei-Symbol der Erweiterung klickt.
+> **Note:** Hinweis:\* **Tabs.html wird als Standard** **\_ Popup in** browser **\_** **action\*\***definiert.\*\*Es wird angezeigt, wenn der Benutzer auf das Symbollei-Symbol der Erweiterung klickt.
 >
 > - **Die Berechtigungen beinhalten Registerkarten.** Dies ist notwendig, um die Tabelliste zu unterstützen, da die Erweiterung den Titel der Registerkarten für die Anzeige im Popup liest.
 
@@ -136,9 +136,9 @@ Define the other menu items
 
 Hier ist eine Zusammenfassung der oben genannten tut:
 
-1. Die Menüpunkte werden deklariert.
-2. Ein leerer `Div`mit der ID-`Tabs-Liste` wird deklariert, um die Liste der Tabs zu enthalten.
-3. Tabs.js heißt.
+1.  Die Menüpunkte werden deklariert.
+2.  Ein leerer `Div `mit der ID-`Tabs-Liste` wird deklariert, um die Liste der Tabs zu enthalten.
+3.  Tabs.js heißt.
 
 ### Tabs.js
 
@@ -162,10 +162,10 @@ Jetzt ist `listTabs()` bereit , den Inhalt für das Popup zu erstellen.
 
 Zunächst:
 
-1. Schnappen Sie sich die `tabs-list div`.
-2. Erstellen Sie ein Dokumentenfragment (in das die Liste eingebaut wird).
-3. Setzen Sie Zähler.
-4. Klären Sie den Inhalt der `Tabs-Liste div`.
+1.  Schnappen Sie sich die `tabs-list div`.
+2.  Erstellen Sie ein Dokumentenfragment (in das die Liste eingebaut wird).
+3.  Setzen Sie Zähler.
+4.  Klären Sie den Inhalt der `Tabs-Liste div`.
 
 ```js
 function listTabs() {
@@ -180,8 +180,8 @@ function listTabs() {
 
 Als nächstes werden wir die Links für jeden Tab erstellen:
 
-1. Schleifen Sie sich durch die ersten 5 Elemente aus der {{WebExtAPIRef("tabs.Tab")}} Objekt.
-2. Fügen Sie für jeden Artikel einen Hyperlink zum Dokumentenfragment hinzu.
+1.  Schleifen Sie sich durch die ersten 5 Elemente aus der {{WebExtAPIRef("tabs.Tab")}} Objekt.
+2.  Fügen Sie für jeden Artikel einen Hyperlink zum Dokumentenfragment hinzu.
 
     - Das Etikett des Links — das heißt, sein Text — wird mit dem Titel des Tab gesetzt (oder mit der ID, wenn er keinen Titel hat).
     - Die Adresse des Links wird mit der Personalausweis des Tabs gesetzt.
@@ -227,7 +227,7 @@ Ein weiteres verwandtes Beispielmerkmal ist die Info-Option "Alert active tab", 
  }
 ```
 
-Wobei `callOnActiveTab()`das aktive Tab-Objekt findet, indem man sich durch die Registerkarten {{WebExtAPIRef("tabs.Tab")}} schlodert. Tab ")} Objekte, die nach dem Gegenstand mit aktivem Satz suchen:
+Wobei `callOnActiveTab() `das aktive Tab-Objekt findet, indem man sich durch die Registerkarten {{WebExtAPIRef("tabs.Tab")}} schlodert. Tab ")} Objekte, die nach dem Gegenstand mit aktivem Satz suchen:
 
 ```js
 document.addEventListener("click", function(e) {

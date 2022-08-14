@@ -26,13 +26,13 @@ Die Verwendung von `z-index` erscheint extrem einfach: eine einzelne Eigenschaft
 
 Dieser Artikel wird versuchen, diese Regeln zu erklären, mit einigen Vereinfachungen und mehreren Beispielen.
 
-1. [Stapeln ohne die Eigenschaft z-index](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): Die Stapelungsregeln, die gelten, wenn `z-index` nicht verwendet wird.
-2. [Stapeln mit schwebenden Blöcken](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): Wie schwebende Elemente beim Stapeln behandelt werden.
-3. [Verwenden von z-index](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): Wie Sie `z-index` verwenden, um die Standardstapelung zu ändern.
-4. [Der S](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)[tapelungskontext](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): Hinweise zum Stacking-Kontext.
-5. [Stapelungskontext-Beispiel 1](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2-stufige HTML-Hierarchie, `z-index` auf der letzten Stufe
-6. [Sta](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2)[pelungsk](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1)[ontext-Beispiel 2](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-stufige HTML-Hierarchie, `z-index` auf allen Ebenen
-7. [Sta](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3)[pelungsk](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1)[ontext-Beispiel 3](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-stufige HTML-Hierarchie, `z-index` auf der zweiten Ebene
+1.  [Stapeln ohne die Eigenschaft z-index](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): Die Stapelungsregeln, die gelten, wenn `z-index` nicht verwendet wird.
+2.  [Stapeln mit schwebenden Blöcken](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): Wie schwebende Elemente beim Stapeln behandelt werden.
+3.  [Verwenden von z-index](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): Wie Sie `z-index` verwenden, um die Standardstapelung zu ändern.
+4.  [Der S](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)[tapelungskontext](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): Hinweise zum Stacking-Kontext.
+5.  [Stapelungskontext-Beispiel 1](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2-stufige HTML-Hierarchie, `z-index` auf der letzten Stufe
+6.  [Sta](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2)[pelungsk](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1)[ontext-Beispiel 2](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-stufige HTML-Hierarchie, `z-index` auf allen Ebenen
+7.  [Sta](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3)[pelungsk](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1)[ontext-Beispiel 3](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3): 3-stufige HTML-Hierarchie, `z-index` auf der zweiten Ebene
 
 ## Original Dokumenteninformation
 

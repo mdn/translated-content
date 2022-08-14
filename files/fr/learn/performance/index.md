@@ -41,6 +41,8 @@ Cette rubrique contient les guides suivants. Voici un ordre suggéré pour les p
 - [Comment les utilisateurs perçoivent-ils les performances&nbsp;?](/fr/docs/Learn/Performance/Perceived_performance)
   - : La vitesse à laquelle vos utilisateurs perçoivent votre site est plus importante que la vitesse de votre site Web en millisecondes. Ces perceptions sont affectées par le temps de chargement réel de la page, l'inactivité, la réactivité à l'interaction de l'utilisateur et la fluidité du défilement et d'autres animations. Dans cet article, nous discutons des différentes métriques de chargement, de l'animation et de la réactivité, ainsi que des meilleures pratiques pour améliorer la perception de l'utilisateur, sinon les timings réels.
 
+<!---->
+
 - [Mesurer les performances](/fr/docs/Learn/Performance/Measuring_performance)
   - : Maintenant que vous comprenez quelques métriques de performance, nous nous penchons plus en profondeur sur les outils de performance, les métriques et les API et comment nous pouvons intégrer les performances dans le flux de travail de développement Web.
 - [Multimédia: images](/fr/docs/Learn/Performance/Multimedia)
@@ -55,6 +57,8 @@ Cette rubrique contient les guides suivants. Voici un ordre suggéré pour les p
   - : Le CSS peut être un objectif d'optimisation moins important pour améliorer les performances, mais certaines fonctionnalités CSS ont un impact plus important sur les performances que d'autres. Dans cet article, nous examinons certaines propriétés CSS qui ont un impact sur les performances et suggérons des méthodes de gestion des styles pour garantir que les performances ne sont pas affectées négativement.
 - [Polices et performances](/fr/docs/Learn/Performance/Fonts)
   - : Examinez si vous devez inclure des polices externes et, le cas échéant, comment inclure les polices dont votre conception a besoin avec le moins d'impact sur les performances de vos sites.
+
+<!---->
 
 - [Performances mobiles](/fr/docs/Learn/Performance/Mobile)
   - : L'accès Web sur les appareils mobiles étant si populaire et toutes les plates-formes mobiles ayant des navigateurs Web à part entière, mais éventuellement une bande passante, un processeur et une autonomie de batterie limités, il est important de prendre en compte les performances de votre contenu Web sur ces plates-formes. Cet article examine les considérations de performances spécifiques aux mobiles.

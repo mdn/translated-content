@@ -18,7 +18,7 @@ Die **`Math.LN2`** Eigenschaft repräsentiert den natürlichen Logarithmus von 2
 
 ## Beschreibung
 
-Weil `LN2` eine statische Eigenschaft von Math ist, kann diese immer mit `Math.LN2` erreicht werden, ohne dass ein Objekt von Math erstellt werden muss (`Math`ist kein Konstruktor).
+Weil `LN2` eine statische Eigenschaft von Math ist, kann diese immer mit `Math.LN2` erreicht werden, ohne dass ein Objekt von Math erstellt werden muss (`Math `ist kein Konstruktor).
 
 ## Beispiele
 

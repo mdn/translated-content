@@ -28,8 +28,12 @@ Ustawia minuty dla określonej daty stosownie do czasu lokalnego.
 - `minutesValue`
   - : Liczba całkowita pomiędzy 0 i 59, reprezentująca minuty.
 
+<!---->
+
 - `secondsValue`
   - : Liczba całkowita pomiędzy 0 i 59, reprezentująca sekundy. Jeśli określisz parametr `secondsValue`, musisz także określić `minutesValue`.
+
+<!---->
 
 - `msValue`
   - : Liczba pomiędzy 0 i 999, reprezentująca milisekundy. Jeśli określisz parametr `msValue`, musisz także określić `minutesValue` i `secondsValue`.

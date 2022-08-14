@@ -12,7 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
 {{JSRef}}
-Die **`replace()`**-Methode gibt eine neue Zeichenkette zurück, in der einige oder alle Übereinstimmungen mit einem `Muster` durch einen `Ersatz` ausgetauscht wurden. Das `Muster` kann eine Zeichenkette oder eine RegExp sein, als `Ersatz`dienen eine Zeichenkette oder eine Funktion, welche für jede Übereinstimmung aufgerufen wird.
+Die **`replace()`**-Methode gibt eine neue Zeichenkette zurück, in der einige oder alle Übereinstimmungen mit einem `Muster` durch einen `Ersatz` ausgetauscht wurden. Das `Muster` kann eine Zeichenkette oder eine RegExp sein, als `Ersatz `dienen eine Zeichenkette oder eine Funktion, welche für jede Übereinstimmung aufgerufen wird.
 
 ## Syntax
 
@@ -23,11 +23,17 @@ Die **`replace()`**-Methode gibt eine neue Zeichenkette zurück, in der einige o
 - `regexp`
   - : Ein {{jsxref("Global_Objects/RegExp", "RegExp")}}-Objekt. Die Übereinstimmung wird durch den Rückgabewert aus Parameter #2 ersetzt.
 
+<!---->
+
 - `substr`
   - : Eine {{jsxref("Global_Objects/String", "Zeichenkette")}}, welche durch `newSubStr` ersetzt werden soll. Nur das erste Vorkommen wird ersetzt.
 
+<!---->
+
 - `newSubStr`
   - : Die {{jsxref("Global_Objects/String", "Zeichenkette")}}, welche den Substring aus Parameter #1 ersetzt. Eine Anzahl spezieller Ersetzungsmuster wird unterstützt, siehe den "[Eine Zeichenkette als Parameter angeben](#Eine_Zeichenkette_als_Parameter_angeben)"-Abschnitt weiter unten.
+
+<!---->
 
 - `function`
   - : Eine Funktion, welche aufgerufen wird, um den neuen Substring zu erzeugen, der an Stelle des gefundenen Substrings aus Parameter #1 stehen soll. Die Argumente für diese Funktion werden im "[Eine Funktion als Parameter angeben](#Eine_Funktion_als_Parameter_angeben)"-Abschnitt unten erläutert.
@@ -63,13 +69,13 @@ Die Argumente dieser Funktion lauten wie folgt:
 | Möglicher Name | Gelieferter Wert                                                                                                                                                                                                                                    |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `match`        | Der gefundene Substring. (Entspricht $& oben.)                                                                                                                                                                                                      |
-| `p1, p2, ...`  | Der \_n_th eingeklammerte Submatch-String, fall im ersten Argument ein `RegExp-Objekt` angegeben wurde. (Entspricht $1, $2, etc. oben.) Wurde zum Beispiel `/(\a+)(\b+)/ angegeben, so ist` `p1` die Übereinstimmung für`\a+`, und `p2` für `\b+`. |
+| `p1, p2, ...`  | Der \_n_th eingeklammerte Submatch-String, fall im ersten Argument ein `RegExp-Objekt` angegeben wurde. (Entspricht $1, $2, etc. oben.) Wurde zum Beispiel `/(\a+)(\b+)/ angegeben, so ist` `p1` die Übereinstimmung für` \a+`, und `p2` für `\b+`. |
 | `offset`       | Die Position, an welcher der gefundene Substring innerhalb der gesamten Zeichenkette gefunden wurde. War zum Beispiel die gesamte Zeichenkette `"abcd"` und der gefundene Substring `"bc"`, dann wäre das Argument `1`.)                            |
 | `string`       | Die gesamte Zeichenkette, welche durchsucht wird.                                                                                                                                                                                                   |
 
 (Die genaue Anzahl der Argumente hängt davon ab, ob das erste Argument eine `RegExp` war und wieviele eingeklammerte Submatches in diesem Fall angegeben wurden.)
 
-Das folgende Beispiel wird `newString`auf `"abc - 12345 - #$*%"` setzen:
+Das folgende Beispiel wird `newString `auf `"abc - 12345 - #$*%"` setzen:
 
 ```js
 function replacer(match, p1, p2, p3, offset, string){
@@ -148,7 +154,7 @@ Dieses ist weil `'$&'.toLowerCase()` ausgeführt wird, bevor der String als Patt
 
 Das folgende Beispiel ersetzt einen Wert in Grad Fahrenheit durch den entsprechenden Celsius-Wert. Der Fahrenheitwert sollte eine Nummer sein, die mit einem F endet. Die Funktion gibt eine Celsius-Temperatur mit der Endung C aus. Ist zum Beispiel der Eingabewert 212F, so gibt die Funktion 100C zurück. Ist die Nummer 0F, so wird -17,77777777777778C zurück gegeben.
 
-Der reguläre Ausdruck `test` prüft jede Nummer, die mit F endet. Die Nummer in Grad Fahrenheit ist durch den zweiten Funktionsparameter, `p1`, ansprechbar. Die Funktion setzt den Celsiuswert basierend auf dem Fahrenheitwert in einer Zeichenkette in der `f2c`-Funktion. `f2c gibt dann den Celsiuswert zurück. Diese Funktion`ähnelt dem s///e-Flag in Perl.
+Der reguläre Ausdruck `test` prüft jede Nummer, die mit F endet. Die Nummer in Grad Fahrenheit ist durch den zweiten Funktionsparameter, `p1`, ansprechbar. Die Funktion setzt den Celsiuswert basierend auf dem Fahrenheitwert in einer Zeichenkette in der `f2c`-Funktion. `f2c gibt dann den Celsiuswert zurück. Diese Funktion `ähnelt dem s///e-Flag in Perl.
 
 ```js
 function f2c(x) {

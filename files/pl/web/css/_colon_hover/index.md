@@ -7,7 +7,7 @@ translation_of: Web/CSS/:hover
 
 ## Pseudo klasa:hover
 
-Właściwość **`:hover`** [CSS](/pl/docs/Web/CSS) [pseudo-class](/pl/docs/Web/CSS/Pseudo-classes "Pseudo-classes") jest używana gdy użytkownik wchodzi w interakcję z elementem za pomocą urządzenia wskazującego, ale niekoniecznie go aktywuje. Generalnie wyzwalanie następuje gdy użytkownik wskaże element kursorem, np. wskaźnikiem myszy.
+Właściwość **`:hover`** [CSS](/pl/docs/Web/CSS) [pseudo-class](/pl/docs/Web/CSS/Pseudo-classes "Pseudo-classes") jest używana gdy użytkownik wchodzi w interakcję z elementem za pomocą urządzenia wskazującego, ale niekoniecznie go aktywuje. Generalnie wyzwalanie następuje gdy użytkownik wskaże element kursorem, np. wskaźnikiem myszy.
 
 ```css
 /* Wybierz każdy element <a>, który zostanie najechany kursorem */
@@ -16,9 +16,9 @@ a:hover {
 }
 ```
 
-Style zdefiniowane przez pseudo-klasę `:active` będą nadpisywane przez każdą kolejną powiązaną pseudo-klasę ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, lub {{ cssxref(":active") }}) która ma conajmniej taką samą specyfikację. Aby dopasować odpowiednio linki umieść `:hover` za `:link` i `:visited` ale przed `:active` zgodnie z zasadą *LVHA* : `:link` — `:visited` — `:hover` — `:active`.
+Style zdefiniowane przez pseudo-klasę `:active` będą nadpisywane przez każdą kolejną powiązaną pseudo-klasę ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, lub {{ cssxref(":active") }}) która ma conajmniej taką samą specyfikację. Aby dopasować odpowiednio linki umieść `:hover` za `:link` i `:visited` ale przed `:active` zgodnie z zasadą *LVHA* : `:link` — `:visited` — `:hover` — `:active`.
 
-> **Note:** **Notatka**: Pseudo-klasa `:hover` wykazuje problem na ekranach dotykowych. W zależności od przeglądarki `:hover` może nigdy nie być  zgodna, może zmienić styl na czas wskazania elementu lub zmienić go do czasu oznaczenia innego elementu. Web developerzy powinni zadbać o to aby elementy działy również na urządzeniach z ograniczeniami obługi funkcji.
+> **Note:** **Notatka**: Pseudo-klasa `:hover` wykazuje problem na ekranach dotykowych. W zależności od przeglądarki `:hover` może nigdy nie być  zgodna, może zmienić styl na czas wskazania elementu lub zmienić go do czasu oznaczenia innego elementu. Web developerzy powinni zadbać o to aby elementy działy również na urządzeniach z ograniczeniami obługi funkcji.
 
 ## Składnia
 
@@ -51,15 +51,15 @@ a:hover {
 
 ### Galeria obrazów
 
-Możesz użyć pseudo-klasy `:hover` do utworzenia galerii obrazów, gdzie pełnowymiarowe obrazy będą wyświetlae wtedy, gdy kursor przesunie się nad miniaturą. Zobacz [demo](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip") takiego rozwiązania.
+Możesz użyć pseudo-klasy `:hover` do utworzenia galerii obrazów, gdzie pełnowymiarowe obrazy będą wyświetlae wtedy, gdy kursor przesunie się nad miniaturą. Zobacz [demo](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip") takiego rozwiązania.
 
-> **Note:** **Notatka:** Dla analogicznego efektu, ale opartego o pseudo-klasę [`:checked`](/pl/docs/Web/CSS/%3Achecked) (zastostosowane dla ukrytych radio-box'ów), zobacz[ demo](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip"), zaczerpnięte z strony dotyczącej [:checked](/pl/docs/Web/CSS/:checked).
+> **Note:** **Notatka:** Dla analogicznego efektu, ale opartego o pseudo-klasę [`:checked`](/pl/docs/Web/CSS/%3Achecked) (zastostosowane dla ukrytych radio-box'ów), zobacz[ demo](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip"), zaczerpnięte z strony dotyczącej [:checked](/pl/docs/Web/CSS/:checked).
 
 ## Specyfikacja
 
 | Specyfikacja                                                                                                         | Status                                   | Komentarz                                            |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'scripting.html#selector-hover', ':hover') }}                     | {{ Spec2('HTML WHATWG') }}     |                                                      |
+| {{ SpecName('HTML WHATWG', 'scripting.html#selector-hover', ':hover') }}                     | {{ Spec2('HTML WHATWG') }}     |                                                      |
 | {{ SpecName('CSS4 Selectors', '#the-hover-pseudo', ':hover') }}                                 | {{ Spec2('CSS4 Selectors') }} | Allows `:hover` to be applied to any pseudo-element. |
 | {{ SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover') }} | {{ Spec2('CSS3 Selectors') }} | No significant change.                               |
 | {{ SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover') }}                 | {{ Spec2('CSS2.1') }}             | Initial definition.                                  |

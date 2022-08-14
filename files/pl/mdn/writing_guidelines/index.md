@@ -14,6 +14,6 @@ original_slug: MDN/Guidelines
 ---
 {{MDNSidebar}}
 
-Te przewodniki dostarczają szczegółowych informacji o tym jak dokumentacja MDN powinna być napisana i sformatowana. Również, jak powinna wyglądać prezentacja przykładowego kodu oraz innych treści użytych na stronach dokumentacji. Sprawdzając poszczególne samouczki, możesz być pewny, że treści tworzone zgodnie z nimi, będą przejrzyste i czytelne, a co najważniejsze łatwe w użytkowaniu.
+Te przewodniki dostarczają szczegółowych informacji o tym jak dokumentacja MDN powinna być napisana i sformatowana. Również, jak powinna wyglądać prezentacja przykładowego kodu oraz innych treści użytych na stronach dokumentacji. Sprawdzając poszczególne samouczki, możesz być pewny, że treści tworzone zgodnie z nimi, będą przejrzyste i czytelne, a co najważniejsze łatwe w użytkowaniu.
 
 {{LandingPageListSubpages}}

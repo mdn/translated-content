@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Operators/Spread_syntax
 translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 original_slug: Web/JavaScript/Referencje/Operatory/Składnia_rozwinięcia
 ---
-{{jsSidebar("Operators")}}**Składnia rozwinięcia** (ang. _spread syntax_) pozwala na rozwinięcie iterowalnego wyrażenia, takiego jak wyrażenie tablicowe lub ciąg znaków, tam gdzie oczekiwanych jest zero lub więcej argumentów (dla wywołań funkcji) lub elementów (dla literałów tablicowych). Pozwala również na rozwinięcie wyrażeń obiektowych w miejscach, gdzie oczekiwanych jest zero lub więcej par klucz-wartość (dla literałów obiektowych). {{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
+{{jsSidebar("Operators")}}**Składnia rozwinięcia** (ang. _spread syntax_) pozwala na rozwinięcie iterowalnego wyrażenia, takiego jak wyrażenie tablicowe lub ciąg znaków, tam gdzie oczekiwanych jest zero lub więcej argumentów (dla wywołań funkcji) lub elementów (dla literałów tablicowych). Pozwala również na rozwinięcie wyrażeń obiektowych w miejscach, gdzie oczekiwanych jest zero lub więcej par klucz-wartość (dla literałów obiektowych). {{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
 ## Składnia
 
@@ -52,7 +52,7 @@ mojaFunkcja(-1, ...argumenty, 2, ...[3]);
 
 #### Apply for new
 
-When calling a constructor with `new`, it's not possible to **directly** use an array and `apply` (`apply` does a `[[Call]]` and not a `[[Construct]]`). However, an array can be easily used with `new` thanks to spread syntax:
+When calling a constructor with `new`, it's not possible to **directly** use an array and `apply` (`apply` does a `[[Call]]` and not a `[[Construct]]`). However, an array can be easily used with `new` thanks to spread syntax:
 
 ```js
 var dateFields = [1970, 0, 1];  // 1 Jan 1970
@@ -63,21 +63,21 @@ To use new with an array of parameters without spread syntax, you would have to 
 
 ```js
 function applyAndNew(constructor, args) {
-   function partial () {
-      return constructor.apply(this, args);
-   };
-   if (typeof constructor.prototype === "object") {
-      partial.prototype = Object.create(constructor.prototype);
-   }
-   return partial;
+   function partial () {
+      return constructor.apply(this, args);
+   };
+   if (typeof constructor.prototype === "object") {
+      partial.prototype = Object.create(constructor.prototype);
+   }
+   return partial;
 }
 
 
 function myConstructor () {
-   console.log("arguments.length: " + arguments.length);
-   console.log(arguments);
-   this.prop1="val1";
-   this.prop2="val2";
+   console.log("arguments.length: " + arguments.length);
+   console.log(arguments);
+   this.prop1="val1";
+   this.prop2="val2";
 };
 
 var myArguments = ["hi", "how", "are", "you", "mr", null];
@@ -114,7 +114,7 @@ tab2.push(4);
 // tab pozostaje niezmieniona
 ```
 
-**Uwaga:** Składnia rozwinięcia skutecznie sięga tylko na jeden poziom wgłąb przy kopiowaniu tablicy. W związku z tym takie podejście może być nieodpowiednie przy kopiowaniu tablic wielowymiarowych, jak pokazuje poniższy przykład (tak samo jest z {{jsxref("Object.assign()")}}  i kładnią rozwinięcia).
+**Uwaga:** Składnia rozwinięcia skutecznie sięga tylko na jeden poziom wgłąb przy kopiowaniu tablicy. W związku z tym takie podejście może być nieodpowiednie przy kopiowaniu tablic wielowymiarowych, jak pokazuje poniższy przykład (tak samo jest z {{jsxref("Object.assign()")}}  i kładnią rozwinięcia).
 
 ```js
 var a = [[1], [2], [3]];
@@ -176,9 +176,9 @@ var mergedObj = { ...obj1, ...obj2 };
 // Object { foo: "baz", x: 42, y: 13 }
 ```
 
-Note that {{jsxref("Object.assign()")}} triggers [setters](/pl/docs/Web/JavaScript/Reference/Functions/set) whereas spread syntax doesn't.
+Note that {{jsxref("Object.assign()")}} triggers [setters](/pl/docs/Web/JavaScript/Reference/Functions/set) whereas spread syntax doesn't.
 
-Note that you cannot replace nor mimic the {{jsxref("Object.assign()")}} function:
+Note that you cannot replace nor mimic the {{jsxref("Object.assign()")}} function:
 
 ```js
 var obj1 = { foo: 'bar', x: 42 };
@@ -192,7 +192,7 @@ var mergedObj = merge ( {}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
-In the above example, the spread syntax does not work as one might expect: it spreads an *array* of arguments into the object literal, due to the rest parameter.
+In the above example, the spread syntax does not work as one might expect: it spreads an *array* of arguments into the object literal, due to the rest parameter.
 
 ### Tylko dla obiektów iterowalnych
 
@@ -227,4 +227,4 @@ Składnia reszty ang. _rest syntax_) wygląda dokładnie jak składnia rozwinię
 ## Zobacz też
 
 - [Rest parameters](/pl/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (również ‘`...`’)
-- [fn.apply](/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (również ‘`...`’)
+- [fn.apply](/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (również ‘`...`’)

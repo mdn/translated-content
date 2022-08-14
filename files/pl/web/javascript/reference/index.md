@@ -26,7 +26,7 @@ W tym rozdziale udokumentowano wszystkie [standardowe wbudowane obiekty JavaScri
 
 ## Instrukcje
 
-Rozdział ten dokumentuje wszystkie  [deklaracje i instrukcje JavaScript](/pl/docs/Web/JavaScript/Reference/Statements).
+Rozdział ten dokumentuje wszystkie  [deklaracje i instrukcje JavaScript](/pl/docs/Web/JavaScript/Reference/Statements).
 
 {{page('/en-US/docs/Web/JavaScript/Reference/Statements', 'Statements_and_declarations_by_category')}}
 
@@ -42,7 +42,7 @@ Udokumentowano tu wszystkie [wyrażenie i operatory JavaScript](/pl/docs/Web/Jav
 
 ## Funkcje
 
-W tym rozdziale opisano pracę z [funkcjami JavaScript](/pl/docs/Web/JavaScript/Reference/Functions) przy tworzeniu aplikacji.
+W tym rozdziale opisano pracę z [funkcjami JavaScript](/pl/docs/Web/JavaScript/Reference/Functions) przy tworzeniu aplikacji.
 
 - [`argumenty`](/pl/docs/Web/JavaScript/Reference/Functions/arguments)
 - [funkcje strzałkowe](/pl/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

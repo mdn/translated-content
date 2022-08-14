@@ -31,7 +31,7 @@ Ein {{domxref("Boolean")}}, welches `true` ist, falls das Event durch die DOM-Hi
 }
 ```
 
-> **Hinweis:** Nur bestimmte Events können weiter nach oben propagiert werden. Die Events, die dazu in der Lage sind, haben den Wert _true,_ für die hier beschriebene Eigenschaft.
+> **Note:** **Hinweis**: Nur bestimmte Events können weiter nach oben propagiert werden. Die Events, die dazu in der Lage sind, haben den Wert _true,_ für die hier beschriebene Eigenschaft.
 
 ## Specifications
 

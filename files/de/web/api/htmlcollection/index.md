@@ -27,7 +27,7 @@ Eine `HTMLCollection` in der HTML DOM ist live; sie wird automatisch aktualisier
 
 ## Verwendung in JavaScript
 
-`HTMLCollection` setzt auch seine Member direkt als Eigenschaften von `name` und `index`. HTML IDs können Doppelpunkte und Punkte als gültige Zeichen beinhalten, was das Verwenden von Klammern für den Zugriff auf Eigenschaften erfordert. Derzeit erkennt `HTMLCollections`rein numerische IDs nicht, da sie einen Konflikt mit dem Array-ähnlichen Zugriff verursachen würden, obwohl HTML5 dies erlaubt.
+`HTMLCollection` setzt auch seine Member direkt als Eigenschaften von `name` und `index`. HTML IDs können Doppelpunkte und Punkte als gültige Zeichen beinhalten, was das Verwenden von Klammern für den Zugriff auf Eigenschaften erfordert. Derzeit erkennt `HTMLCollections `rein numerische IDs nicht, da sie einen Konflikt mit dem Array-ähnlichen Zugriff verursachen würden, obwohl HTML5 dies erlaubt.
 
 Zum Beispiel, unter der Annahme, dass es ein `<form>` Element im Dokument und die `id` `"myForm"` ist:
 

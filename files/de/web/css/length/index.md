@@ -82,7 +82,7 @@ Aufgrund dieser eher ungenauen Definition können in `mm`, `cm` oder `in` gegebe
 
 Bei Geräten mit hoher Auflösung hingegen entsprechen die Einheiten `mm`, `cm` und `in` ihren tatsächlichen Maßen, mithin den Einheiten Millimeter, Zentimeter und Zoll (Englisch: Inch). Von ihnen abhängig ist die Einheit `px`, sie ist definiert als 1/96 eines Zolls.
 
-> **Hinweis:** Viele Benutzer erhöhen die Standardschriftgröße ihres Browsers zur besseren Lesbarkeit. Absolute Schriftgrößen können Probleme mit der Barrierefreiheit verursachen, weil sie nicht von den Benutzereinstellungen der Schriftgröße abhängen. Es wird deshalb empfohlen, relative Schriftgrößen wie `em` und `rem` zu benutzen, selbst für allgemeine Schriftgrößendefinitionen auf `p`- oder `body`-Ebene.
+> **Note:** **Hinweis:** Viele Benutzer erhöhen die Standardschriftgröße ihres Browsers zur besseren Lesbarkeit. Absolute Schriftgrößen können Probleme mit der Barrierefreiheit verursachen, weil sie nicht von den Benutzereinstellungen der Schriftgröße abhängen. Es wird deshalb empfohlen, relative Schriftgrößen wie `em` und `rem` zu benutzen, selbst für allgemeine Schriftgrößendefinitionen auf `p`- oder `body`-Ebene.
 
 - `px`
   - : Pixel, abhängig vom Anzeigegerät. Auf herkömmlichen Bildschirmen entspricht `1px` in der Regel einem physischen Pixel des Bildschirms.

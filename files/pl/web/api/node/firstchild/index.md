@@ -13,7 +13,7 @@ original_slug: Web/API/Element/firstChild
 
 ### Podsumowanie
 
-**firstChild** jest właściwością tylko do odczytu, która zwraca pierwszego potomka węzła lub wartość null, jeżeli węzeł nie ma potomków. Jeżeli węzeł jest elementem Document, wtedy zwraca pierwszy węzeł z listy swoich bezpośrednich dzieci.
+**firstChild** jest właściwością tylko do odczytu, która zwraca pierwszego potomka węzła lub wartość null, jeżeli węzeł nie ma potomków. Jeżeli węzeł jest elementem Document, wtedy zwraca pierwszy węzeł z listy swoich bezpośrednich dzieci.
 
 ### Składnia i wartości
 

@@ -15,7 +15,7 @@ translation_of: Web/API/DocumentFragment
 
 Das **`DocumentFragment`** interface stellt ein einfaches Objekt dar, welches ohne Bezug zu einem parent erstellt und verwendet werden kann. Es kann somit verstanden werden als eine leichtgewichtige Variante des {{domxref("Document")}}, die einen Ausschnitt einer Dokumentstruktur aus Element-Knoten abbildet. Der zentrale Unterschied dabei ist jedoch, dass das Fragment nicht Bestandteil der aktiven Seitenstruktur und des DOM-Baums ist. Dadurch haben Änderungen an dem Fragment keine Auswirkungen auf das aktive Dokument, wodurch unerwünschte Seiteneffekte von DOM-Änderungen wie {{Glossary("reflow")}} oder Performanceeinbußen verhindert werden können.
 
-Üblicherweise wird das `DocumentFragment` dazu verwendet, um einen neuen DOM-Teilbaum für eine Seite zu erzeugen und darin beliebig Fragmente und Knoten vorbereiten zu können, diese über das {{domxref("Node")}} interface mittels Methoden wie {{domxref("Node.appendChild", "appendChild()")}} und {{domxref("Node.insertBefore", "insertBefore()")}} hinzuzufügen. Wenn das Frament schließlich in die aktive Dokumentstruktur und deren DOM eingefügt wird, bleibt ein leeres `DocumentFragment`zurück. Da alle Knoten auf einmal in das aktive Dokument hinzugefügt werden, wird lediglich ein einzelner reflow und render Prozess ausgelöst, anstelle von potentiell unzähligen für jeden einzelnen, separat eingefügten Knoten.
+Üblicherweise wird das `DocumentFragment` dazu verwendet, um einen neuen DOM-Teilbaum für eine Seite zu erzeugen und darin beliebig Fragmente und Knoten vorbereiten zu können, diese über das {{domxref("Node")}} interface mittels Methoden wie {{domxref("Node.appendChild", "appendChild()")}} und {{domxref("Node.insertBefore", "insertBefore()")}} hinzuzufügen. Wenn das Frament schließlich in die aktive Dokumentstruktur und deren DOM eingefügt wird, bleibt ein leeres `DocumentFragment `zurück. Da alle Knoten auf einmal in das aktive Dokument hinzugefügt werden, wird lediglich ein einzelner reflow und render Prozess ausgelöst, anstelle von potentiell unzähligen für jeden einzelnen, separat eingefügten Knoten.
 
 Das interface wird ebenso bei Web components verwendet: {{HTMLElement("template")}}-Elemente beinhalten ein `DocumentFragment` in ihrer {{domxref("HTMLTemplateElement.content")}} Eigenschaft.
 
@@ -34,7 +34,7 @@ _Das interface hat keine spezifischen Eigenschaften, erhält jedoch über Vererb
 - {{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}
   - : Stellt das {{domxref("Element")}} bereit, welches aktuell das letzte Kind des `DocumentFragment` ist. `null` falls es keines gibt.
 - {{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}
-  - : Stellt als `unsigned long` die Anzahl der Kindelemente des `DocumentFragment`bereit.
+  - : Stellt als `unsigned long` die Anzahl der Kindelemente des `DocumentFragment `bereit.
 
 ## Constructor
 
@@ -53,6 +53,8 @@ _Das interface erbt die Methoden von {{domxref("Node")}}_, u*nd implementiert da
   - : Liefert den {{domxref("Element")}} Knoten im `DocumentFragment`, der in der Reihenfolge im document als erstes zu dem Selektor passt.
 - {{domxref("DocumentFragment.querySelectorAll()")}}
   - : Liefert eine {{domxref("NodeList")}} mit allen {{domxref("Element")}} Knoden im `DocumentFragment`, die zu dem angegebenen Selektor passen.
+
+<!---->
 
 - {{domxref("DocumentFragment.getElementById()")}}
   - : Liefert den ersten {{domxref("Element")}} Knoten im `DocumentFragment`, dem in der document Reihenfolge zuerst die angegebene ID zugeordnet ist.

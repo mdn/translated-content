@@ -72,8 +72,12 @@ HTTP Client Hints befinden sich noch in der Entwicklung. Dokumentation hierzu be
 - {{HTTPHeader("Width")}} {{experimental_inline}}
   - : Das `Width` Anfrage-Header-Feld ist eine Zahl, die die gewünschte Ressourcenbreite in physischen Pixeln angibt (d. h. eigentliche Größe eines Bildes). Der gegebene physikalische Pixel Wert ist eine Zahl, die auf die kleinste folgende Ganzzahl (d. h. den Höchstwert) gerundet ist.Wenn die gewünschte Ressourcenbreite zum Zeitpunkt der Anforderung nicht bekannt ist oder die Ressource keine Anzeigebreite aufweist, kann das Header-Feld `Width` weggelassen werden. Wenn `Width` mehr als einmal in einer Nachricht vorkommt, dann überschreibt der letzte Wert alle vorherigen.
 
+<!---->
+
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
   - : Server können Support für Client Hints bekanntgeben, indem das Accept-CH Header-Feld oder das entsprechende HTML {{htmlelement("meta")}} Element mit http-equiv Attribut benutzt wird ([\[HTML5\]](https://httpwg.org/http-extensions/client-hints.html#HTML5)).
+
+<!---->
 
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}
   - : Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server’s origin ([\[RFC6454\]](https://httpwg.org/http-extensions/client-hints.html#RFC6454)).
@@ -155,6 +159,8 @@ _Erfahren Sie [hier](/de/docs/Web/HTTP/CORS) mehr zu Cross-origin Resource Shari
   - : Wird bei der Ausgabe einer Vor-Anfrage verwendet, um dem Server mitzuteilen, welche [HTTP-Methode](/de/docs/Web/HTTP/Methods) bei der tatsächlichen Anforderung verwendet wird.
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}
   - : Der Header [Cross-Origin-Resource-Policy](https://fetch.spec.whatwg.org/#cross-origin-resource-policy-header) verhindert, dass andere Domänen die Ressourcen laden.
+
+<!---->
 
 - {{HTTPHeader("Origin")}}
   - : Gibt an, woher ein Abruf stammt.
@@ -248,21 +254,31 @@ _Erfahren Sie [hier](/de/docs/Web/HTTP/CORS) mehr zu Cross-origin Resource Shari
 - {{HTTPHeader("Feature-Policy")}}
   - : Stellt einen Mechanismus bereit, um die Verwendung von Browserfunktionen in seinem eigenen Frame und in eingebetteten iFrames zuzulassen und zu verbieten.
 
+<!---->
+
 - {{HTTPHeader("Public-Key-Pins")}} ({{Glossary("HPKP")}})
   - : Ordnet einen bestimmten kryptografischen öffentlichen Schlüssel einem bestimmten Webserver zu, um das Risiko von {{Glossary("MITM", "Man-in-the-Middle")}}-Angriffen mit gefälschten Zertifikaten zu verringern.
 - {{HTTPHeader("Public-Key-Pins-Report-Only")}}
   - : Sendet Berichte an die im Header angegebene URI zur Protokollierung, während Clients weiterhin eine Verbindung zum Server herstellen können, selbst wenn gegen das Pinning verstoßen wurde.
+
+<!---->
 
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Erzwingt die Kommunikation über HTTPS statt HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
   - : Sendet ein Signal an den Server, dass der Client eine verschlüsselte und authentifizierte Antwort bevorzugt und dass die Anweisung {{CSP("upgrade-insecure-request")}} erfolgreich verarbeitet werden kann.
 
+<!---->
+
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Deaktiviert das Erraten des MIME-Types durch den Browser und zwingt ihn den MIME-Type im Header {{HTTPHeader("Content-Type")}} zu benutzen.
 
+<!---->
+
 - {{HTTPHeader("X-Download-Options")}}
   - : Gibt an, dass der Browser (Internet Explorer) nicht die Option zum "Öffnen" einer aus einer Anwendung heruntergeladenen Datei anzeigen sollte, um Phishing-Angriffe zu verhindern, da die Datei sonst im Kontext der Anwendung ausgeführt werden kann.
+
+<!---->
 
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Gibt an, ob es einem Browser erlaubt wird eine Seite in einem {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} oder {{HTMLElement("object")}} Element darzustellen.
@@ -322,6 +338,8 @@ _Erfahren Sie [hier](/de/docs/Web/HTTP/CORS) mehr zu Cross-origin Resource Shari
   - : Das [`Link`](https://tools.ietf.org/html/rfc5988#section-5) Entitäten-Header-Feld bietet eine Möglichkeit, eine oder mehrere Links in HTTP-Headern zu serialisieren. Es entspricht semantisch dem HTML Element {{HTMLElement("link")}}.
 - {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
   - : Eine [`Push-Policy`](https://tools.ietf.org/html/draft-ruellan-http-accept-push-policy-00#section-3.2) definiert das Serververhalten bezüglich Push bei der Verarbeitung einer Anfrage.
+
+<!---->
 
 - {{HTTPHeader("Retry-After")}}
   - : Gibt an, wie lange der Benutzer-Agent warten soll, bevor eine Folgeanfrage gesendet wird.

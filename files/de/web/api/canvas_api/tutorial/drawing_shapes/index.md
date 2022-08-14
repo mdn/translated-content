@@ -71,7 +71,7 @@ Um andere Formen mithilfe von Pfaden zu zeichnen, benötigt man einige weitere S
 
 Zuerst wird also die `beginPath()`-Methode ausgeführt. Danach kommen weitere Pfadanweisung wie Linien oder Kurven. Ein weiterer Aufruf der Methode `beginPath()` oder ein Aufruf der Methode `closePath()` löscht die Pfadanweisungen. Optional kann nun `closePath()` ausgeführt werden.
 
-> **Hinweis:** Wenn `fill()` ausgeführt wird, wird automatisch der Pfad beendet, sodass `closePath()` nicht mehr ausgeführt werden muss. Da ist **nicht** der Fall wenn `stroke()` ausgeführt wird.
+> **Note:** **Hinweis:** Wenn `fill()` ausgeführt wird, wird automatisch der Pfad beendet, sodass `closePath()` nicht mehr ausgeführt werden muss. Da ist **nicht** der Fall wenn `stroke()` ausgeführt wird.
 
 ### Ein Dreieck zeichnen
 
@@ -140,7 +140,7 @@ Demo:
 
 {{EmbedLiveSample("Stift_bewegen", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}
 
-> **Hinweis:** `arc()` zeichnet einen Kreisbogen. Mehr dazu: [Kreisbögen](#kreisbögen).
+> **Note:** **Hinweis:** `arc()` zeichnet einen Kreisbogen. Mehr dazu: [Kreisbögen](#kreisbögen).
 
 ### Linien
 
@@ -196,7 +196,7 @@ Um Kreise oder Kreisbögen zu zeichnen, benutzt man die `arc()`-Methode.
 
 Diese Methode benötigt sechs Parameter: `x` und `y` sind die Koordinaten des Mittelpunktes des Kreisbogens. `radius` ist der Radius des Kreisbogens. `startWinkel` und `endWinkel` definieren die Punkte auf dem Kreis in rad. Der `uhrzeigersinn`-Parameter ist `true`, wenn der Kreisbogen gegen den Uhrzeigersinn und `false` wenn er im Uhrzeigersinn gezeichnet werden soll.
 
-> **Hinweis:** Die Winkelzahlen werden in rad angegeben, nicht in deg. Die Umrechnungsformel lautet: `rad = (Math.PI / 180) * deg`.
+> **Note:** **Hinweis**: Die Winkelzahlen werden in rad angegeben, nicht in deg. Die Umrechnungsformel lautet: `rad = (Math.PI / 180) * deg`.
 
 Dieses Beispiel zeigt Kreisbügen mit den unterschiedlichsten Parametern:
 

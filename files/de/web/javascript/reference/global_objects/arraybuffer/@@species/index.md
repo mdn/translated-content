@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 ---
 {{JSRef}}
 
-Die **`ArrayBuffer[@@species]`** Zugriffseigenschaft gibt den Konstruktor des `ArrayBuffer`zurück.
+Die **`ArrayBuffer[@@species]`** Zugriffseigenschaft gibt den Konstruktor des `ArrayBuffer `zurück.
 
 ## Syntax
 

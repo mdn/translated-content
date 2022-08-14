@@ -17,7 +17,9 @@ Das HTML Element _unordered list_ \<ul> wird verwendet um eine ungeordnete Liste
 ## Attribute
 
 - type {{ Deprecated_inline() }}
-  - : Wird verwendet, um das Aufzählungszeichen der Liste festzulegen. Die Werte sind in der [HTML3.2](/de/HTML3.2 "de/HTML3.2") Spezifikation festgelegt und in der „transitional “ Version von [HTML 4.0/4.01](/de/HTML4.01 "de/HTML4.01") sind `circle`, `disc`, und `square` aufgeführt. Der Browser kann über unterschiedliche Zeichen entscheiden, abhängig vom Grad der Verschachtelung, wenn das type Attribut nicht verwendet wird. Das WebTV Interface unterstützt auch ein `triangle` Zeichen. Dieses Attribut ist veraltet, es sollte die [CSS](/de/CSS "de/CSS") [list-style-type](/de/CSS/list-style-type "de/CSS/list-style-type") Eigenschaft stattdessen verwendet werden.
+  - : Wird verwendet, um das Aufzählungszeichen der Liste festzulegen. Die Werte sind in der [HTML3.2](/de/HTML3.2 "de/HTML3.2") Spezifikation festgelegt und in der „transitional“ Version von [HTML 4.0/4.01](/de/HTML4.01 "de/HTML4.01") sind `circle`, `disc`, und `square` aufgeführt. Der Browser kann über unterschiedliche Zeichen entscheiden, abhängig vom Grad der Verschachtelung, wenn das type Attribut nicht verwendet wird. Das WebTV Interface unterstützt auch ein `triangle` Zeichen. Dieses Attribut ist veraltet, es sollte die [CSS](/de/CSS "de/CSS") [list-style-type](/de/CSS/list-style-type "de/CSS/list-style-type") Eigenschaft stattdessen verwendet werden.
+
+<!---->
 
 - compact {{ Deprecated_inline() }}
   - : Gibt an, dass die Liste in einer kompakten Form gerendert werden soll. Die Interpretation dieses Attributs hängt vom Browser ab.
@@ -82,9 +84,9 @@ Dieses HTML gibt das Folgende aus:
 - Erster Eintrag
 - Zweiter Eintrag
 
-  1. Zweiter Eintrag erster Untereintrag
-  2. Zweiter Eintrag zweiter Untereintrag
-  3. Zweiter Eintrag dritter Untereintrag
+  1.  Zweiter Eintrag erster Untereintrag
+  2.  Zweiter Eintrag zweiter Untereintrag
+  3.  Zweiter Eintrag dritter Untereintrag
 
 - Dritter Eintrag
 

@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 ---
 {{JSRef}}
 
-Die statische **`Atomics.exchange()`** Methode ersetzt einen Wert an einer gegebenen Position im einem Array mit einem gegebene Wert aus. Die atomare Operation garantiert, dass kein anderer Schreibprozess während der Operation durchgeführt wird.
+Die statische **`Atomics`\*\***`.exchange()`\*\* Methode ersetzt einen Wert an einer gegebenen Position im einem Array mit einem gegebene Wert aus. Die atomare Operation garantiert, dass kein anderer Schreibprozess während der Operation durchgeführt wird.
 
 {{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
 

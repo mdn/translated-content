@@ -29,8 +29,8 @@ Alle Begrenzungen eines Elements sind ein möglicher Brechpunkt. Dieser wird von
 
 Um zu ermitteln, ob ein Umbruch erfolgen muss, werden folgende Regeln angewendet:
 
-1. Besitzt eine der drei Eigenschaften einen _forced break value_ (`always`, `left`, `right`, `page`, `column`, oder `region`), so hat sie Vorrang. Wenn mehrere Eigenschaften einen _forced break value_ besitzen, gewinnt das Element, welches als letztes im Flow auftritt. Das heißt: `break-before` überwiegt `break-after`, welches wiederum `break-inside` überwiegt.
-2. Besitzt eine der drei Eigenschaften einen _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), so erfolgt kein Umbruch.
+1.  Besitzt eine der drei Eigenschaften einen _forced break value_ (`always`, `left`, `right`, `page`, `column`, oder `region`), so hat sie Vorrang. Wenn mehrere Eigenschaften einen _forced break value_ besitzen, gewinnt das Element, welches als letztes im Flow auftritt. Das heißt: `break-before` überwiegt `break-after`, welches wiederum `break-inside` überwiegt.
+2.  Besitzt eine der drei Eigenschaften einen _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), so erfolgt kein Umbruch.
 
 Nachdem erzwungene Umbrüche gemacht wurden, werden bei Bedarf weiche Umbrüche hinzugefügt. Davon ausgenommen sind Elementbegrenzungen, für die der Wert `avoid` gilt.
 

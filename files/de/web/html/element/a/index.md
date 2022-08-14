@@ -30,20 +30,14 @@ Dieses Element besitzt die [globalen Attribute](/de/docs/Web/HTML/Globale_Attrib
 
 - {{htmlattrdef("download")}} {{HTMLVersionInline(5)}}
   - : Dieses Attribut zeigt, dass der Autor möchte, dass der Hyperlink verwendet wird, um eine Datei herunterzuladen. Also soll der Browser, wenn der Benutzer auf den Link klickt, diesen fragen, wo die Datei lokal gespeichert werden soll. Falls dem Attribut ein Wert zugewiesen ist, wird dieser Wert als Dateiname zum Abspeichern vorgeschlagen (der Benutzer kann diesen Namen natürlich ändern). Es gibt keine Einschränkungen für erlaubte Werte (obgleich `/` und `\` in Unterstriche konvertiert werden, um Verwechslungen mit Dateipfaden zu vermeiden). Dennoch sollten Sie beachten, dass die meisten Dateisysteme Einschränkungen bezüglich der unterstützten Interpunktion in Dateinamen haben, sowie die Browser die Dateinamen anpassen könnten.> **Note:** **Hinweis:\*** Dies kann mit [`blob:`-URLs](/de/docs/Web/API/URL.createObjectURL "/en-US/docs/Web/API/URL.createObjectURL") und `data:`-URLs verwendet werden, um es für Benutzer leichter zu machen, Inhalte herunterzuladen, die durch JavaScript generiert wurden (z. B. ein Bild, welches online über eine Zeichen-Anwendung erstellt wurde).
-    >
     > - Falls der HTTP-Header `Content-Disposition:` angegeben wird und einen anderen Dateinamen vorschlägt als dieses Attribut, hat der HTTP-Header Vorrang vor diesem Attribut.
     > - Falls das Attribut angegeben wird und `Content-Disposition:` den Wert `inline` hat, gibt Firefox `Content-Disposition` eine größere Wichtigkeit, wie im Fall des Dateinamens, während Chrome dem `download`-Attribut mehr Priorität gibt.
     > - Im [Firefox 20](/de/docs/Firefox_20_for_developers "/en-US/docs/Firefox_20_for_developers") wird dieses Attribut nur für Links auf Dateien desselben Ursprungs angewendet.
-    >
 - {{htmlattrdef("href")}}
-  - : Dieses war das einzige erforderliche Attribut für Anker, die einen Hyperlink definieren, aber es ist nicht länger erforderlich in HTML5. Wird dieses Attribut weggelassen, wird ein Platzhalter-Link erzeugt. Das `href`-Attribut zeigt das Ziel des Links an, entweder eine URL oder ein URL-Fragment. Ein URL-Fragment ist ein Name dem ein Doppelkreuz (`#`) vorausgeht, welches ein internes Ziel im aktuellen Dokument (eine [ID](/de/docs/HTML/Global_attributes#attr-id "Global attributes#attr-id")) festlegt. URLs sind nicht auf Web-(HTTP-)Dokumente beschränkt. Sie können ein beliebiges Protokoll verwenden, das von Browser unterstützt wird. Zum Beispiel `file`, `ftp` und `mailto` funktionieren in den meisten Browsern.
-
-  > **Hinweis:** Sie können das spezielle Fragment „top“ verwenden, um Links zu erzeugen, die zurück zum Anfang der Seite springen. Zum Beispiel: `<a href="#top">Return to top</a>`. [Dieses Verhalten ist in HTML5 festgelegt](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid).
+  - : Dieses war das einzige erforderliche Attribut für Anker, die einen Hyperlink definieren, aber es ist nicht länger erforderlich in HTML5. Wird dieses Attribut weggelassen, wird ein Platzhalter-Link erzeugt. Das `href`-Attribut zeigt das Ziel des Links an, entweder eine URL oder ein URL-Fragment. Ein URL-Fragment ist ein Name dem ein Doppelkreuz (`#`) vorausgeht, welches ein internes Ziel im aktuellen Dokument (eine [ID](/de/docs/HTML/Global_attributes#attr-id "Global attributes#attr-id")) festlegt. URLs sind nicht auf Web-(HTTP-)Dokumente beschränkt. Sie können ein beliebiges Protokoll verwenden, das von Browser unterstützt wird. Zum Beispiel `file`, `ftp` und `mailto` funktionieren in den meisten Browsern.> **Note:** **Hinweis:** Sie können das spezielle Fragment „top“ verwenden, um Links zu erzeugen, die zurück zum Anfang der Seite springen. Zum Beispiel: `<a href="#top">Return to top</a>`. [Dieses Verhalten ist in HTML5 festgelegt](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid).
 - {{htmlattrdef("media")}} {{HTMLVersionInline(5)}}
   - : Dieses Attribut legt das Medium fest, zu welchem die verlinkte Seite gehört. Der Wert muss ein [Media Query](/de/docs/CSS/Media_queries "CSS/Media queries") sein. Das Attribut ist sinnvoll, wenn auf externe Stylesheets verlinkt wird, während dem Browser erlaubt wird, das passende für das Gerät auszuwählen.> **Note:** \* In HTML 4 ist nur eine einfache durch Leerzeichen getrennte Liste von [Media Types und Media Groups](/de/docs/CSS/@media "https://developer.mozilla.org/en-US/docs/CSS/@media") definiert worden und als Werte für dieses Attribut erlaubt, z. B. `print`, `screen`, `aural`, `braille`, … HTML 5 hat dies auf beliebige [Media Queries](/de/docs/CSS/Media_queries "CSS/Media queries") erweitert, die eine Obermenge der erlaubten Werte von HTML 4 sind.
-    >
     > - Browser, welche die [CSS3 Media Queries](/de/docs/CSS/Media_queries "CSS/Media queries") nicht unterstützen, werden nicht notwendigerweise den passenden Link erkennen. Vergessen Sie also nicht Fallback-Links auf die beschränkten Werte von HTML 4 zu definieren.
-    >
 - {{htmlattrdef("ping")}} {{HTMLVersionInline(5)}}
   - : Falls das Attribut `ping` vorhanden ist, wird den URLs der Zielseiten eine Benachrichtigung gesendet, wenn der Benutzer dem Hyperlink folgt.
 - {{htmlattrdef("rel")}}
@@ -58,9 +52,7 @@ Dieses Element besitzt die [globalen Attribute](/de/docs/Web/HTML/Globale_Attrib
 - {{htmlattrdef("coords")}} nur {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline","HTML5")}}
   - : Bei der Verwendung mit dem `shape`-Attribut gibt dieses Attribut als durch Komma getrennte Liste von Zahlen die Koordinaten des Objekts auf der Seite an.
 - {{htmlattrdef("datafld")}} {{Non-standard_inline}}
-  - : Dieses Attribut legt den Spaltennamen des Datenquellenobjekts fest, das die Daten zur Verfügung stellt, die mit diesem Element verknüpft sind.
-
-  > **Hinweis:** Dieses Attribut ist nicht standardisiert und **s**ollte nicht verwendet werden. Um denselben Effekt zu erhalten, verwenden Sie Scripting und einen Mechanismus wie [XMLHttpRequest](/de/docs/nsIXMLHttpRequest "XMLHttpRequest"), um die Seite dynamisch zu verändern.<table class="fullwidth-table">
+  - : Dieses Attribut legt den Spaltennamen des Datenquellenobjekts fest, das die Daten zur Verfügung stellt, die mit diesem Element verknüpft sind.> **Note:** **Hinweis:** Dieses Attribut ist nicht standardisiert und **s**ollte nicht verwendet werden\*\*\*\*. Um denselben Effekt zu erhalten, verwenden Sie Scripting und einen Mechanismus wie [XMLHttpRequest](/de/docs/nsIXMLHttpRequest "XMLHttpRequest"), um die Seite dynamisch zu verändern.<table class="fullwidth-table">
       <tbody>
         <tr>
           <td rowspan="2">Unterstützung</td>
@@ -88,11 +80,7 @@ Dieses Element besitzt die [globalen Attribute](/de/docs/Web/HTML/Globale_Attrib
       </tbody>
     </table>
 - {{htmlattrdef("datasrc")}} {{Non-standard_inline}}
-  - : Dieses Attribut zeigt die ID des Datenquellenobjekts an, das die Daten zur Verfügung stellt, die mit diesem Element verknüpft sind.
-
-  > **Note:** **Verwendungshinweis:** Dieses Attribut ist nicht standardisiert und **s**ollte nicht verwendet werden. Um denselben Effekt zu erhalten, verwenden Sie Scripting und einen Mechanismus wie [XMLHttpRequest](/de/docs/nsIXMLHttpRequest "XMLHttpRequest"), um die Seite dynamisch zu verändern.
-
-  <table class="fullwidth-table">
+  - : Dieses Attribut zeigt die ID des Datenquellenobjekts an, das die Daten zur Verfügung stellt, die mit diesem Element verknüpft sind.> **Note:** **Verwendungshinweis:** Dieses Attribut ist nicht standardisiert und **s**ollte nicht verwendet werden\*\*\*\*. Um denselben Effekt zu erhalten, verwenden Sie Scripting und einen Mechanismus wie [XMLHttpRequest](/de/docs/nsIXMLHttpRequest "XMLHttpRequest"), um die Seite dynamisch zu verändern.<table class="fullwidth-table">
       <tbody>
         <tr>
           <td rowspan="2">Unterstützung</td>
@@ -128,10 +116,10 @@ Dieses Element besitzt die [globalen Attribute](/de/docs/Web/HTML/Globale_Attrib
 - {{htmlattrdef("rev")}} nur {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline","HTML5")}}
   - : Dieses Attribut legt einen umgekehrten Link fest und ist das inverse Verhältnis zum **rel**-Attribut. Es ist nützlich, um anzuzeigen, woher ein Objekt kam, sowie den Autor eines Dokuments.
 
-- {{htmlattrdef("shape")}} nur {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline","HTML5")}}
-  - : Dieses Attribut wird verwendet, um eine auswählbare Region für Hyperlinks festzulegen, die mit einer Abbildung verbunden sind, um eine Bildkarte zu erstellen. Die Werte für das Attribut sind `circle`, `default`, `polygon` und `rect`. Das Format des **coords**-Attributes hängt vom Wert jenes Attributs **shape** ab. Für `circle` ist der Wert `x,y,r`, wobei `x` und `y` die Pixelkoordinaten für den Mittelpunkt des Kreises sind und `r` der Radius in Pixeln ist. Für `rect` sollte das **coords**-Attribut `x,y,w,h` sein. Die Werte `x,y` legen das obere linke Eck des Rechtecks fest, während `w` und `h` die Breite bzw. Höhe festlegen. Der Wert `polygon` für **shape** verlangt Werte `x1,y1,x2,y2,...` für **coords**. Jedes der `x,y`-Paare definiert einen Punkt des Polygons, wobei aufeinander folgende Punkte sowie der letzte Punkt mit dem ersten mit geraden Linien verbunden werden. Der Wert `default` für **shape** verlangt, dass die gesamte beigefügte Fläche, üblicherweise ein Bild, verwendet wird.
+<!---->
 
-  > **Hinweis:** Es ist ratsam, das **usemap**-Attribut für das {{HTMLElement("img")}}-Element und das verbundene {{HTMLElement("map")}}-Element zu verwenden, um Hotspots anstatt des **shape**-Attributes zu definieren.
+- {{htmlattrdef("shape")}} nur {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline","HTML5")}}
+  - : Dieses Attribut wird verwendet, um eine auswählbare Region für Hyperlinks festzulegen, die mit einer Abbildung verbunden sind, um eine Bildkarte zu erstellen. Die Werte für das Attribut sind `circle`, `default`, `polygon` und `rect`. Das Format des **coords**-Attributes hängt vom Wert jenes Attributs **shape** ab. Für `circle` ist der Wert `x,y,r`, wobei `x` und `y` die Pixelkoordinaten für den Mittelpunkt des Kreises sind und `r` der Radius in Pixeln ist. Für `rect` sollte das **coords**-Attribut `x,y,w,h` sein. Die Werte `x,y` legen das obere linke Eck des Rechtecks fest, während `w` und `h` die Breite bzw. Höhe festlegen. Der Wert `polygon` für **shape** verlangt Werte `x1,y1,x2,y2,...` für **coords**. Jedes der `x,y`-Paare definiert einen Punkt des Polygons, wobei aufeinander folgende Punkte sowie der letzte Punkt mit dem ersten mit geraden Linien verbunden werden. Der Wert `default` für **shape** verlangt, dass die gesamte beigefügte Fläche, üblicherweise ein Bild, verwendet wird.> **Note:** **Hinweis:** Es ist ratsam, das **usemap**-Attribut für das {{HTMLElement("img")}}-Element und das verbundene {{HTMLElement("map")}}-Element zu verwenden, um Hotspots anstatt des **shape**-Attributes zu definieren.
 - {{htmlattrdef("type")}}
   - : Dieses Attribut legt den Medientyp in der Form eines MIME-Types für das Linkziel fest. Im Allgemeinen ist dies nur als hilfreiche Information verfügbar, aber in Zukunft könnte ein Browser ein kleines Icon für Multimedia-Typen hinzufügen. Beispielweise könnte ein Browser ein kleines Lautsrechersymbol anzeigen, wenn **type** auf `audio/wav` gesetzt ist. Für eine komplette Liste von erkannten MIME-Typen siehe <http://www.w3.org/TR/html4/references.html#ref-MIMETYPES>. Verwenden Sie dieses Attribut nur, wenn ein `href`-Attribut vorhanden ist.
 - {{htmlattrdef("urn")}} {{Non-standard_inline}}

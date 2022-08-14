@@ -18,8 +18,8 @@ Für einen positionierte Box (d.h. eine mit einer `{{cssxref("position")}}` ande
 
 Für eine positionierte Box (d. h. eine mit einer anderen als der statischen Position) gibt die Eigenschaft `z-index` an:
 
-1. Die Stapelebene der Box im aktuellen [Stapel-Zusammenhang](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
-2. Ob die Box einen lokalen Stapel-Zusammenhang herstellt.
+1.  Die Stapelebene der Box im aktuellen [Stapel-Zusammenhang](/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+2.  Ob die Box einen lokalen Stapel-Zusammenhang herstellt.
 
 ## Syntax
 

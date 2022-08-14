@@ -30,6 +30,8 @@ _Erbt Eigenschaften von dem Parent {{domxref("EventTarget")}} und implementiert 
 - {{domxref("SharedWorker.port")}} {{readonlyInline}}
   - : Returnt ein {{domxref("MessagePort")}} Objekt, welches zum Kommunizieren und Kontrollieren des Shared Workers verwendet wird.
 
+<!---->
+
 ## Methoden
 
 _Erbt Methoden von dem Parent {{domxref("EventTarget")}} und implementiert Methoden von {{domxref("AbstractWorker")}}._

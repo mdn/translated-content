@@ -52,4 +52,4 @@ user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
 user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
 ```
 
-[How to interact with the content](/en/Midas "en/Midas")(old IE style API) and [here](/en/Rich-Text_Editing_in_Mozilla "en/rich-text editing in mozilla")
+[How to interact with the content ](/en/Midas "en/Midas")(old IE style API) and [here](/en/Rich-Text_Editing_in_Mozilla "en/rich-text editing in mozilla")

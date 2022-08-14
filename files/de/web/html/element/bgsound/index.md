@@ -18,6 +18,8 @@ Das HTML Hintergrund Sound-Element (\<bgsound>) ist ein Internet Explorer-Elemen
 - {{htmlattrdef("loop")}}
   - : Dieses Attribut gibt die Nummer der Anzahl an, wie oft ein Sound abgespielt werden soll. Du kannst entweder eine Nummer angeben oder "infinite" schreiben, damit der Sound unendlich angespielt wird.
 
+<!---->
+
 - {{htmlattrdef("src")}}
   - : Dieses Attribut gibt die URL von dem Sound an, der gespielt werden soll. Die Datei muss eines dieser Formate haben: .wav, .au oder .mid.
 - {{htmlattrdef("volume")}}

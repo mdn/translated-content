@@ -27,6 +27,8 @@ Obiekt `table` pozwala na dostęp do interfejsu [`HTMLTableElement`](http://www.
 - {{domxref("HTMLTableElement.tBodies")}} {{readonlyInline}}
   - : 'ciała' tabeli (tbody).
 
+<!---->
+
 - {{domxref("HTMLTableElement.align")}} {{obsolete_inline}}
   - : ustawia/pobiera wyrównanie tabeli.
 - {{domxref("HTMLTableElement.bgColor")}} {{obsolete_inline}}

@@ -12,7 +12,7 @@ translation_of: Web/API/Window/navigator
 ---
 {{APIRef}}
 
-Die Schreibgeschützte`Window.navigator` Eigenschaft liefert eine Referenz des {{domxref("Navigator")}} Objekts, das Informationen über die Anwendung die das Skript ausführt liefern kann.
+Die Schreibgeschützte` Window.navigator` Eigenschaft liefert eine Referenz des {{domxref("Navigator")}} Objekts, das Informationen über die Anwendung die das Skript ausführt liefern kann.
 
 ## Syntax
 

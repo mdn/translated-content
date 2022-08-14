@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Array/entries
 ---
 {{JSRef}}
 
-Metoda **`entries()`** zwraca obiekt **`Iteratora`** który zawiera parę klucz/wartość dla każdej pozycji w tablicy.
+Metoda **`entries()`** zwraca obiekt **`Iteratora`** który zawiera parę klucz/wartość dla każdej pozycji w tablicy.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
@@ -16,11 +16,11 @@ Metoda **`entries()`** zwraca obiekt **`Iteratora`** który zawiera parę klucz/
 
 ### Zwracana wartość
 
-Nowy iterator {{jsxref("Tablicy")}}.
+Nowy iterator {{jsxref("Tablicy")}}.
 
 ## Przykłady
 
-### Użycie w pętli [for…of](/pl/docs/Web/JavaScript/Reference/Statements/for...of)
+### Użycie w pętli [for…of](/pl/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
 var a = ['a', 'b', 'c'];
@@ -39,7 +39,7 @@ for (let e of iterator) {
 | Specyfikacja                                                                                                 | Status                       | Komentarz           |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Kompatybilność w przeglądarkach
 

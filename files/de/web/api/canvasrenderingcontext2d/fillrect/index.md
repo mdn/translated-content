@@ -13,7 +13,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
 {{APIRef}}
 
-Die Methode **`CanvasRenderingContext2D.fillRect()`** der Canvas 2D API zeichnet ein ausgefülltes Rechteck an der Position _(`x`, `y`)_. Die Größe wird über die Parameter `width` und `height` bestimmt. Die Füllfarbe wird über das Attribut `fillStyle` des Context-Objekts festgelegt.
+Die Methode **`CanvasRenderingContext2D`\*\***`.fillRect()`\*\* der Canvas 2D API zeichnet ein ausgefülltes Rechteck an der Position _(`x`, `y`)_. Die Größe wird über die Parameter `width` und `height` bestimmt. Die Füllfarbe wird über das Attribut `fillStyle` des Context-Objekts festgelegt.
 
 ## Syntax
 

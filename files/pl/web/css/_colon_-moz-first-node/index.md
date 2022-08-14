@@ -33,6 +33,8 @@ Pseudoklasa `:first-node` sprawia iż własności stosowane są do elementu tylk
       </body>
     </html>
 
+<!---->
+
     span:first-node { font-weight: bold; }
 
 Powyższy zapis pogrubi czcionkę wewnątrz wszystkich elementów `span`, które są pierwszymi dziećmi swoich rodziców. Zostanie tutaj pogrubione tylko jedno słowo "**pierwszy**", ponieważ span o id `first` nie jest pierwszym dzieckiem elementu `body`. Pierwszym dzieckiem elementu `body` jest węzeł tekstowy.

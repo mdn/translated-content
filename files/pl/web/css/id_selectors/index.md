@@ -9,7 +9,7 @@ tags:
 translation_of: Web/CSS/ID_selectors
 ---
 {{CSSRef("Selectors")}}
-**Selektor ID** wyszukuje każdy element z atrybutem {{htmlattrxref("ID")}} o takiej samej nazwie w dokumencie HTML.
+**Selektor ID** wyszukuje każdy element z atrybutem {{htmlattrxref("ID")}} o takiej samej nazwie w dokumencie HTML.
 
 ## Składnia
 

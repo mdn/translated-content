@@ -86,11 +86,11 @@ Lasse uns zuerst einen Blick auf `http://demozilla.examplehostingprovider.net/` 
 
 Um deinen SFTP-Klienten mit dem Remoteserver zu verbinden, folge diesen Schritten:
 
-1. Wähle _File > Site Manager..._ vom Hauptmenü.
-2. Im _Site Manager_ Fenster, klicke auf die _New Site_ Schaltfläche, dann fülle den Seitennamen als **demozilla** im angegebenen Feld aus.
-3. Fülle den SFTP-Server, welcher dein Host bereitgestellt hat in das _Host:_ Feld.
-4. In dem _Logon Type:_ Drop-down-Menü, wähle _Normal_, dann fülle deinen angegebenen Nutzernamen und Passwort in die entsprechenden Felder.
-5. Fülle den korrent Port aus und andere Informationen.
+1.  Wähle _File > Site Manager..._ vom Hauptmenü.
+2.  Im _Site Manager_ Fenster, klicke auf die _New Site_ Schaltfläche, dann fülle den Seitennamen als **demozilla** im angegebenen Feld aus.
+3.  Fülle den SFTP-Server, welcher dein Host bereitgestellt hat in das _Host:_ Feld.
+4.  In dem _Logon Type:_ Drop-down-Menü, wähle _Normal_, dann fülle deinen angegebenen Nutzernamen und Passwort in die entsprechenden Felder.
+5.  Fülle den korrent Port aus und andere Informationen.
 
 Dein Fenster sollte nun in etwa so aussehen:
 

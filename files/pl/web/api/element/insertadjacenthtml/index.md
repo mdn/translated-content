@@ -5,7 +5,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 ---
 {{APIRef("DOM")}}
 
-**`insertAdjacentHTML()`** metoda z {{domxref("Element")}} interfejsu analizuje specyficzny tekst jak HTML albo XML, wstawia wynik w drzewo DOM w określonej pozycji. to nie naprawia elementu jest użyty na a zatem nie jest zepsuty istniejący element w środku elementu. To unika ekstra kroków z serializacją, zrobienie tego jest wiele szybsze niż bezpośredni {{domxref("Element.innerHTML", "innerHTML")}} manipulation.
+**`insertAdjacentHTML()`** metoda z {{domxref("Element")}} interfejsu analizuje specyficzny tekst jak HTML albo XML, wstawia wynik w drzewo DOM w określonej pozycji. to nie naprawia elementu jest użyty na a zatem nie jest zepsuty istniejący element w środku elementu. To unika ekstra kroków z serializacją, zrobienie tego jest wiele szybsze niż bezpośredni {{domxref("Element.innerHTML", "innerHTML")}} manipulation.
 
 ## Syntax
 
@@ -14,12 +14,12 @@ translation_of: Web/API/Element/insertAdjacentHTML
 ### Parametry
 
 - `position`
-  - : A {{domxref("DOMString")}} reprezentuje pozycję relatywną element-u musi być must be jeden z następujących ciągów:\* `'beforebegin'`: przed `element` -em.
-    - `'afterbegin'`: W środku `element`-u przed jego pierwszym dzieckiem.
+  - : A {{domxref("DOMString")}} reprezentuje pozycję relatywną element-u musi być must be jeden z następujących ciągów:\* `'beforebegin'`: przed `element` -em.
+    - `'afterbegin'`: W środku `element`-u przed jego pierwszym dzieckiem.
     - `'beforeend'`: W środku elementu po jego ostatnim dziecku.
-    - `'afterend'`: Po `element`-cie
+    - `'afterend'`: Po `element`-cie
 - `text`
-  - : string analizuje HTML albo XML i włącza w drzewo.
+  - : string analizuje HTML albo XML i włącza w drzewo.
 
 ### Visualization of position names
 
@@ -31,7 +31,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
     </p>
     <!-- afterend -->
 
-> **Note:**`beforebegin` i `afterend` pozycja działa tylko jeśli node jest w drzewie DOM i ma rodzica elementu.
+> **Note:**`beforebegin` i `afterend` pozycja działa tylko jeśli node jest w drzewie DOM i ma rodzica elementu.
 
 ## Przykład:
 
@@ -56,7 +56,7 @@ It is not recommended you use `insertAdjacentHTML()` when inserting plain text; 
 
 | Specification                                                                                                                                                                        | Status                               | Comment |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |         |
+| {{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |         |
 
 ## Browser compatibility
 

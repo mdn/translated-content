@@ -18,12 +18,12 @@ Die CSS-Eigenschaft `list-style-type` bestimmt, wie die Einträge einer Liste au
 - Erster Eintrag
 - Zweiter Eintrag
 
-1. Numerierte Einträge
-2. Numerierte Einträge
+1.  Numerierte Einträge
+2.  Numerierte Einträge
 
 Meist wird diese Eigenschaft mit dem {{HTMLElement("li")}}-Element in Verbindung gebracht. Tatsächlich kann es sich jedoch um jedes beliebige Element handeln, dessen {{cssxref("display")}}-Eigenschaft `list-item` ist.
 
-> **Hinweis:** `list-style-type` ist eine Eigenschaft von Listenelementen, nicht von Listen. Da sie vererbt wird, kann sie jedoch statt beim Listenelement selbst auch bei seinem Elternelement gesetzt werden (in der Regel {{HTMLElement("ol")}} or {{HTMLElement("ul")}}).
+> **Note:** **Hinweis:** `list-style-type` ist eine Eigenschaft von Listenelementen, nicht von Listen. Da sie vererbt wird, kann sie jedoch statt beim Listenelement selbst auch bei seinem Elternelement gesetzt werden (in der Regel {{HTMLElement("ol")}} or {{HTMLElement("ul")}}).
 
 {{cssinfo}}
 
@@ -40,6 +40,8 @@ Meist wird diese Eigenschaft mit dem {{HTMLElement("li")}}-Element in Verbindung
     Da diese Aufzählungsweise im Gegensatz zu per @counter-style definierten keinen Namen hat, wird sie auch als "anonym" bezeichnet.
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : Ein Bezeichner, der dem Wert einer {{cssxref("@counter-style")}}-Regel entspricht oder einem der folgenden Stile:
+
+<!---->
 
 - `disc`
   - : \* Ein gefüllter Kreis (Standardwert)

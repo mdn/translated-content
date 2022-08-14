@@ -54,11 +54,11 @@ Quick syntax example for manifest.json:
 
   "commands": {
     "toggle-feature": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "linux": "Ctrl+Shift+U"
-      },
-      "description": "Send a 'toggle-feature' event"
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "linux": "Ctrl+Shift+U"
+      },
+      "description": "Send a 'toggle-feature' event"
     }
   },
 

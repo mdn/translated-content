@@ -127,7 +127,7 @@ Assoziiert einen Key mit einer oder zwei Accessor-Funktionen (get und set), um e
 | [[Enumerable]]   | Boolean                        | `true`, wenn die Eigenschaft in [for...in](/de/docs/Web/JavaScript/Reference/Statements/for...in) Schleifen aufgelistet wird.                                                                                                                     | false        |
 | [[Configurable]] | Boolean                        | `false`, wenn die Eigenschaft nicht gelöscht und nicht zu einer Dateneigenschaft verändert werden kann.                                                                                                                                           | false        |
 
-> **Hinweis:** Attribut wird normalerweise von der JavaScript-Umgebung genutzt und man kann nicht direkt zugreifen (mehr darüber: [Object.defineProperty()](/de/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)). Deswegen sind die Attribute in doppelten eckigen Klammern statt in einfachen.
+> **Note:** **Hinweis:** Attribut wird normalerweise von der JavaScript-Umgebung genutzt und man kann nicht direkt zugreifen (mehr darüber: [Object.defineProperty()](/de/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)). Deswegen sind die Attribute in doppelten eckigen Klammern statt in einfachen.
 
 ### "Normale" Objekte und Funktionen
 

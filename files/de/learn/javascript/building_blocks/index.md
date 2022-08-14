@@ -12,7 +12,7 @@ In diesem Modul betrachten wir weiterhin JavaScripts Kernfunktionen. Wir betrach
 
 Bevor du mit diesem Modul anfängst, solltest du mit den Grundlagen von [HTML](/de/docs/Learn/HTML/Introduction_to_HTML) und [CSS](/de/docs/Learn/CSS/Introduction_to_CSS) vertraut sein und das vorherige Modul, [Erste Schritte mit JavaScript](/de/docs/Learn/JavaScript/First_steps), abgeschlossen haben.
 
-> **Hinweis:** Falls du auf einem Computer/Tablet/anderem Gerät arbeitest, auf dem du keine Dateien erstellen kannst, kannst du die (meisten) Code Beispiele online, zum Beispiel mit [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/), ausprobieren.
+> **Note:** **Hinweis**: Falls du auf einem Computer/Tablet/anderem Gerät arbeitest, auf dem du keine Dateien erstellen kannst, kannst du die (meisten) Code Beispiele online, zum Beispiel mit [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/), ausprobieren.
 
 ## Anleitungen
 

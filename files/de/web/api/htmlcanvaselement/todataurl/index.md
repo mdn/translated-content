@@ -28,7 +28,7 @@ Die **`HTMLCanvasElement.toDataURL()`**-Methode gibt eine Repräsentation des Bi
 - `type` {{optional_inline}}
   - : Ein Parameter vom Typ {{domxref("DOMString")}} bestimmt das Bild-Format. Der Standard type ist `image/png`.
 - `encoderOptions` {{optional_inline}}
-  - : Ein Parameter vom Typ {{jsxref("Number")}} zwischen `0` und `1` gibt die Bildqualität an, wenn der Anfragetyp `image/jpeg`oder `image/webp ist`.
+  - : Ein Parameter vom Typ {{jsxref("Number")}} zwischen `0` und `1` gibt die Bildqualität an, wenn der Anfragetyp `image/jpeg `oder `image/webp ist`.
     Wenn das Argument irgend etwas anderes enthält, wird der Standardwert für die Bildqualität verwendet. Der Standardwert liegt bei `0.92`. Andere Argumente werden ignoriert.
 
 ### Rückgabewerte

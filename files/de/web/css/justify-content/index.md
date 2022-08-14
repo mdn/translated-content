@@ -17,7 +17,7 @@ translation_of: Web/CSS/justify-content
 
 Die `justify-content` [CSS](/de/docs/Web/CSS "CSS") Eigenschaft definiert, wie ein Browser verfügbaren Platz zwischen und um Elemente verteilt, wenn Flexelemente an der Hauptachse der aktuellen Zeile ausgerichtet werden sollen. Die Ausrichtung wird berechnet, nachdem die Längen und automatischen Abstände angewendet wurden, was bedeutet, dass falls es mindestens ein flexibles Element gibt mit {{cssxref("flex-grow")}} ungleich `0`, hat diese Eigenschaft keine Auswirkung, da es keinen verfügbaren Platz gibt.
 
-> **Hinweis:** Es sollte nicht angenommen werden, dass diese Eigenschaft ausschließlich auf Flexcontainer angewandt wird. Daher sollte sie nicht einfach durch Setzen eines anderen {{cssxref("display")}} Wertes versteckt werden. Die CSSWG arbeitet daran, [deren Verwendung auf alle Blockelemente auszuweiten](http://dev.w3.org/csswg/css3-align/#justify-content). Diese Entwurfsspezifikation ist bisher noch in einer frühen Entwicklungsphase und bisher noch nicht implementiert.
+> **Note:** **Hinweis:** Es sollte nicht angenommen werden, dass diese Eigenschaft ausschließlich auf Flexcontainer angewandt wird. Daher sollte sie nicht einfach durch Setzen eines anderen {{cssxref("display")}} Wertes versteckt werden. Die CSSWG arbeitet daran, [deren Verwendung auf alle Blockelemente auszuweiten](http://dev.w3.org/csswg/css3-align/#justify-content). Diese Entwurfsspezifikation ist bisher noch in einer frühen Entwicklungsphase und bisher noch nicht implementiert.
 
 {{cssinfo}}
 

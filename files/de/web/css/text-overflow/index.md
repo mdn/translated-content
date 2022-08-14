@@ -52,7 +52,7 @@ text-overflow: unset;
 - `ellipsis`
   - : Dieses Schlüsselwort führt dazu, dass ein Auslassungszeichen (`'…'`, `U+2026 Horizontal Ellipsis`) an der Schnittstelle angezeigt wird, um abgeschnittenen Text zu repräsentieren. Das Auslassungszeichen wird innerhalb des [Inhaltsbereichs angezeigt, wodurch die Menge des angezeigten Texts verringert wird. Wenn nicht genug Platz für das Auslassungszeichen selbst zur Verfügung steht, wird es abgeschnitten.](/de/docs/Web/CSS/Boxmodell)
 - [`<string>` {{experimental_inline}}](/de/docs/Web/CSS/Boxmodell)
-  - : [Der](/de/docs/Web/CSS/Boxmodell){{cssxref("&lt;string&gt;")}}[, welcher zur Anzeige des abgeschnittenen Texts genutzt werden soll. Diese Zeichenfolge wird innerhalb des Inhaltsbereichs](/de/docs/Web/CSS/Boxmodell) angezeigt und führt dazu, dass die Menge des angezeigten Texts verringert wird. Wenn nicht genug Platz für die Zeichenfolge selbst zur Verfügung steht, wird sie abgeschnitten.
+  - : [Der ](/de/docs/Web/CSS/Boxmodell){{cssxref("&lt;string&gt;")}}[, welcher zur Anzeige des abgeschnittenen Texts genutzt werden soll. Diese Zeichenfolge wird innerhalb des Inhaltsbereichs](/de/docs/Web/CSS/Boxmodell) angezeigt und führt dazu, dass die Menge des angezeigten Texts verringert wird. Wenn nicht genug Platz für die Zeichenfolge selbst zur Verfügung steht, wird sie abgeschnitten.
 
 ### Formale Syntax
 

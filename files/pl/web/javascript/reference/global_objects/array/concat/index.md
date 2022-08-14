@@ -30,7 +30,9 @@ Zwraca nową tablicę złożoną z tablicy, na której wywołano tę metodę, po
 
 - referencje do obiektów (a nie faktyczne obiekty): `concat` kopiuje referencje do obiektów do nowej tablicy. Zarówno pierwotna, jak i nowa tablica odnoszą się więc do tych samych obiektów. Oznacza to, że jeżeli wskazany obiekt jest modyfikowany, zmiany są widoczne w obydwu tablicach (nowej i starej).
 
-- Łańcuchy znaków i liczby (ale nie obiekty {{jsxref("String")}} i {{jsxref("Number")}} ): `concat` kopiuje wartości łańcuchów znaków i liczb do nowej tablicy.
+<!---->
+
+- Łańcuchy znaków i liczby (ale nie obiekty {{jsxref("String")}} i {{jsxref("Number")}} ): `concat` kopiuje wartości łańcuchów znaków i liczb do nowej tablicy.
 
 Operacje wykonywane na nowej tablicy nie wpłyną w żaden sposób na oryginalną tablicę i na odwrót.
 

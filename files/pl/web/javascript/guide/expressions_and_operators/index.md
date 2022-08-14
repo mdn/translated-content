@@ -44,18 +44,18 @@ Uzupełniając, JavaScript posiada potrójny operator, jakim jest operator warun
 | Typ operatora                       | Indywidualny operator                    |
 | ----------------------------------- | ---------------------------------------- |
 | przecinek                           | ,                                        |
-| przypisania                         | = += -= \*= /= %= <<= >>= >>>= &= ^= \|= |
+| przypisania                         | = += -= \*= /= %= <<= >>= >>>= &= ^= \|= |
 | warunkowy                           | ?:                                       |
 | logiczne "LUB"                      | \|\|                                     |
 | logiczne "I"                        | &&                                       |
 | bitowe "LUB"                        | \|                                       |
 | bitowe "XOR"                        | ^                                        |
 | bitowe "I"                          | &                                        |
-| porównanie                          | == != === !==                            |
+| porównanie                          | == != === !==                            |
 | relacji                             | < <= > >= in instanceof                  |
 | przesunięcie bitowe                 | << >> >>>                                |
 | dodawanie/odejmowanie               | + -                                      |
-| mnożenie/dzielenie/modulo           | \* / %                                   |
+| mnożenie/dzielenie/modulo           | \* / %                                   |
 | negacja/inkrementacja/dekrementacja | ! ~ - + ++ -- typeof void delete         |
 | nazwa / tworzenie przykładu         | () new                                   |
 | pamięci                             | . []                                     |

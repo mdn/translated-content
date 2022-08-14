@@ -11,7 +11,7 @@ translation_of: Web/CSS/:link
 
 ## Podsumowanie
 
-Pseudo-klasa :link pozwala wybrać linki wewnątrz elementów. Dzięki niej możesz wybrać każdy link, który nie został jeszcze odwiedzony, nawet taki, który ma już nadane wartości za pomocą innych pseudo-klas, takich jak: {{ cssxref(":hover") }}, {{ cssxref(":active") }} lub {{ cssxref(":visited") }}. W celu odpowiedniej stylizacji linków musisz wstawić pseudo-klasę :link na początku, według kolejności LVHA:` :link` — `:visited` — `:hover` — `:active`. Pseudo-klasa {{ cssxref(":focus") }} jest zazwyczaj ustawiana przed lub po pseudo-klasie `:hover` (w zależności od oczekiwanego efektu).
+Pseudo-klasa :link pozwala wybrać linki wewnątrz elementów. Dzięki niej możesz wybrać każdy link, który nie został jeszcze odwiedzony, nawet taki, który ma już nadane wartości za pomocą innych pseudo-klas, takich jak: {{ cssxref(":hover") }}, {{ cssxref(":active") }} lub {{ cssxref(":visited") }}. W celu odpowiedniej stylizacji linków musisz wstawić pseudo-klasę :link na początku, według kolejności LVHA:` :link` — `:visited` — `:hover` — `:active`. Pseudo-klasa {{ cssxref(":focus") }} jest zazwyczaj ustawiana przed lub po pseudo-klasie `:hover` (w zależności od oczekiwanego efektu).
 
 ## Składnia
 

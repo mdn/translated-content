@@ -19,7 +19,7 @@ Gibt eine statische [`NodeList`](/de/docs/DOM/NodeList "DOM/NodeList") aller Ele
 wobei:
 
 - `elementList`
-  - : ist statische Node Liste \[`NodeList[elements]` `] mit` [element](/de/docs/DOM/element "DOM/Element") Objekten.
+  - : ist statische Node Liste \[` NodeList[elements]` `] mit` [element](/de/docs/DOM/element "DOM/Element") Objekten.
 - `baseElement`
   - : ist ein [element](/de/docs/DOM/element "DOM/element") Objekt.
 - `selectors`
@@ -67,7 +67,7 @@ x.length; //return the size of x
 x[i_item]; //where i_item has a value between 0 and x.length-1. The operator "[]" return as in an array the element at index "i_item"
 ```
 
-We could iterate inside a NodeList with the construct `for(....) {...}`as in the following code:
+We could iterate inside a NodeList with the construct `for(....) {...} `as in the following code:
 
 ```js
  let x = document.body.querySelectorAll('.highlighted');
@@ -99,7 +99,7 @@ inner.length; // 1, not 0!
 ```
 
 In this example, when selecting `.outer .inner` in the context of `.select`, .`inner` is still found, even though `.outer` is not a descendant of the baseElement (`.select`).
-`querySelectorAll()`only verifies that the last element in the selector is within the baseElement.
+`querySelectorAll() `only verifies that the last element in the selector is within the baseElement.
 
 The [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class restores the expected behavior, only matching selectors on descendants of the baseElement:
 

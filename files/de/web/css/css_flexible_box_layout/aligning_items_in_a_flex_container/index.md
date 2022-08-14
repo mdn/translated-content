@@ -28,7 +28,7 @@ Die Eigenschaften, die wir in diesem Handbuch betrachten werden, sind wie folgt.
 
 Wir werden auch herausfinden, wie automatische Ränder für die Ausrichtung in der Flexbox verwendet werden können.
 
-> **Hinweis:** Die Ausrichtungseigenschaften in Flexbox wurden in eine eigene Spezifikation eingefügt - [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/) . Es wird erwartet, dass diese Spezifikation letztendlich die in Flexbox Level One definierten Eigenschaften ersetzt.
+> **Note:** **Hinweis:** Die Ausrichtungseigenschaften in Flexbox wurden in eine eigene Spezifikation eingefügt - [CSS Box Alignment Level 3](https://www.w3.org/TR/css-align-3/) . Es wird erwartet, dass diese Spezifikation letztendlich die in Flexbox Level One definierten Eigenschaften ersetzt.
 
 ## Die Querachse
 

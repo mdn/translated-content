@@ -21,7 +21,7 @@ Die **`length`** Eigenschaft repräsentiert die Länge eines Strings.
 
 Die **`length`** Eigenschaft gibt die Anzahl der Codeteile des Strings zurück. Javascript verwendet {{interwiki("wikipedia", "UTF-16")}}. , also einen 16-Bit Code zur Kodierung der meisten Zeichen, aber zur Darstellung weniger verbreiteter Zeichen werden 2 Codes benötigt. Es ist also durchaus möglich, dass der zurückgegebene Wert nicht der Anzahl der Zeichen in einem String entspricht.
 
-ECMAScript 2016 (ed. 7) Spezifikation definiert eine maximale Länge von `253 - 1`Elementen.
+ECMAScript 2016 (ed. 7) Spezifikation definiert eine maximale Länge von `253 - 1 `Elementen.
 Vor dieser Spezifikation war keine maximale Länge an Elementen definiert.
 
 Ein leerer String hat die Länge 0.

@@ -18,7 +18,7 @@ Logarytm o podstawie 10 z E, w przybliżeniu 0.434.
 
 {{js_property_attributes(0, 0, 0)}}
 
-##  
+##  
 
 ### Opis
 

@@ -592,7 +592,7 @@ div {-moz-appearance: none; -webkit-appearance: none; color: black;}
 
 ```css
 .exampleone {
- -moz-appearance: toolbarbutton;
+	-moz-appearance: toolbarbutton;
 }
 ```
 

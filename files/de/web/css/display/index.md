@@ -117,14 +117,14 @@ display: unset;
 ### Flexbox model values ([CSS3](/de/docs/CSS/CSS3 "CSS3"))
 
 - `flex`
-  - : Es wird ein Flexbox Container als `block`Element erzeugt.
+  - : Es wird ein Flexbox Container als `block `Element erzeugt.
 - `inline-flex`
-  - : Es wird ein Flexbox Container als `inline`Element erzeugt.
+  - : Es wird ein Flexbox Container als `inline `Element erzeugt.
 
 ### Grid box model values ([CSS3](/de/docs/CSS/CSS3 "CSS3")) {{experimental_inline}}
 
 - `grid`
-  - : Es wird ein Grid Container als `block`Element erzeugt.
+  - : Es wird ein Grid Container als `block `Element erzeugt.
 - `inline-grid`
   - : Es wird ein Grid Container als `inline` Element erzeugt.
 

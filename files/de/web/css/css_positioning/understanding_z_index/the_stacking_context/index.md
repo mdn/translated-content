@@ -39,7 +39,7 @@ Ein Stapelkontext wird an beliebiger Stelle im Dokument durch ein beliebiges Ele
 - Ein Element mit einem {{cssxref("will-change")}} Wert, der irgendeine Eigenschaft angibt, die einen Stapelkontext auf einem nicht initialen Wert erzeugen würde (siehe auch [this post](http://dev.opera.com/articles/css-will-change-property/)).
 - Ein Element mit einem {{cssxref("contain")}} Wert `layout` oder `paint` oder einen zusammengesetzten Wert, der einen von beiden enthält (d.h. `contain: strict`, `contain: content`).
 
-Innerhalb eines Stapelkontext werden die untergeordneten Elemente nach den gleichen Regeln gestapelt, die zuvor erläutert wurden. Wichtig ist, dass die `z-index`Werte der untergeordneten Stapelkontexte nur in diesem übergeordneten Kontext eine Bedeutung haben. Stapelkontexte werden im übergeordneten Stapelkontext atomar als eine einzige Einheit behandelt.
+Innerhalb eines Stapelkontext werden die untergeordneten Elemente nach den gleichen Regeln gestapelt, die zuvor erläutert wurden. Wichtig ist, dass die `z-index `Werte der untergeordneten Stapelkontexte nur in diesem übergeordneten Kontext eine Bedeutung haben. Stapelkontexte werden im übergeordneten Stapelkontext atomar als eine einzige Einheit behandelt.
 
 Zusammengefasst:
 
@@ -47,7 +47,7 @@ Zusammengefasst:
 - Jeder Stapelkontext ist völlig unabhängig von seinen Geschwistern: Bei der Verarbeitung des Stapels werden nur nachkommende Elemente berücksichtigt.
 - Jeder Stapelkontext ist in sich geschlossen: Nachdem der Inhalt des Elements gestapelt wurde, wird das gesamte Element in der Stapelreihenfolge des übergeordneten Stapelkontextes betrachtet.
 
-> **Hinweis:** Die Hierarchie der Stapelkontexte ist eine Teilmenge der Hierarchie der HTML-Elemente, da nur bestimmte Elemente Stapelkontexte erzeugen. Man kann sagen, dass Elemente, die keinen eigenen Stapelkontext bilden, vom übergeordneten Stapelkontext _assimiliert_ werden.
+> **Note:** **Hinweis:** Die Hierarchie der Stapelkontexte ist eine Teilmenge der Hierarchie der HTML-Elemente, da nur bestimmte Elemente Stapelkontexte erzeugen. Man kann sagen, dass Elemente, die keinen eigenen Stapelkontext bilden, vom übergeordneten Stapelkontext _assimiliert_ werden.
 
 ## Das Beispiel
 

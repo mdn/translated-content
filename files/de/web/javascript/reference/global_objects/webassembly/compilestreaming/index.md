@@ -32,7 +32,7 @@ Ein `Promise` das sich in ein {{jsxref("WebAssembly.Module")}} Objekt auflöst, 
 
 ### Ausnahmen
 
-- Wenn `bufferSource` kein [typisiertes Array](/de/docs/Web/JavaScript/Typed_arrays)ist, wird ein {{jsxref("TypeError")}} geworfen.
+- Wenn `bufferSource` kein [typisiertes Array ](/de/docs/Web/JavaScript/Typed_arrays)ist, wird ein {{jsxref("TypeError")}} geworfen.
 - Schlägt die Kompilierung fehl, wird das Promise mit einem {{jsxref("WebAssembly.CompileError")}} verworfen.
 
 ## Beispiele

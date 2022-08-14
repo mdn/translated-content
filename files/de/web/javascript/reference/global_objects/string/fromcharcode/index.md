@@ -24,7 +24,7 @@ Ein String, der die den Unicode-Werten zugeordneten Zeichen enthält.
 
 Diese Methode gibt einen String zurück und kein {{jsxref("String")}} Objekt.
 
-Da `fromCharCode()` eine statische Methode von {{jsxref("String")}} ist, wird sie immer als `String.fromCharCode()`angewandt und nicht als Methode eines {{jsxref("String")}} Objekts, das erstellt wurde.
+Da `fromCharCode()` eine statische Methode von {{jsxref("String")}} ist, wird sie immer als `String.fromCharCode() `angewandt und nicht als Methode eines {{jsxref("String")}} Objekts, das erstellt wurde.
 
 ## Beispiele
 

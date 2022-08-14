@@ -7,7 +7,7 @@ translation_of: Web/API/Worker
 
 Das **`Worker`** Interface der [Web Workers API](/de/docs/Web/API/Web_Workers_API) beschreibt eine im Hintergrund ausgeführte Programmlogik, die leicht erstellt werden kann und Nachrichten mit dem Ersteller austauschen. Einen Worker erzeugen erfolgt einfach über den Aufruf des `Worker()` Konstruktors unter Angabe eines Scripts, welches in dem Worker Thread ausgeführt werden soll.
 
-Worker selbst können zudem weitere (sog. "verschachtelte") Worker erzeugen, solange diese in demselben [origin](/de/docs/Web/Security/Same-origin_policy) wie die übergeordnete Seite liegen (Achtung: verschachtelte Worker sind [aktuell nicht in Blink implementiert](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). Zusätzlich können Worker das [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") nutzen, um auf Netzwerk I/O zuzugreifen, unter der Voraussetzung, dass die Attribute `responseXML` und `channel` des `XMLHttpRequest` immer den Wert `null`zurück liefern.
+Worker selbst können zudem weitere (sog. "verschachtelte") Worker erzeugen, solange diese in demselben [origin](/de/docs/Web/Security/Same-origin_policy) wie die übergeordnete Seite liegen (Achtung: verschachtelte Worker sind [aktuell nicht in Blink implementiert](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). Zusätzlich können Worker das [`XMLHttpRequest`](/en/DOM/XMLHttpRequest "En/XMLHttpRequest") nutzen, um auf Netzwerk I/O zuzugreifen, unter der Voraussetzung, dass die Attribute `responseXML` und `channel` des `XMLHttpRequest` immer den Wert `null `zurück liefern.
 
 [Nicht alle Interfaces und Funktionen sind verfügbar](/En/DOM/Worker/Functions_available_to_workers "En/DOM/Worker/Functions available to workers") für das mit dem `Worker` assoziierte Script.
 
@@ -30,6 +30,8 @@ _Erbt die Eigenschaften seines parents, {{domxref("EventTarget")}}, und implemen
   - : Ein {{ domxref("EventListener") }}, welcher jedesmal dann aufgerufen wird, wenn ein {{domxref("MessageEvent")}} des Typs `message` den Worker erreicht — d.h. der Worker erhält eine Nachricht von seinem übergeordneten document via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Diese Nachricht wird innerhalb des Events in der {{domxref("MessageEvent.data", "data")}} Eigenschaft gespeichert.
 - {{domxref("Worker.onmessageerror")}}
   - : Der {{event("Event_handlers", "event handler")}}, dessen Code aufgerufen werden soll, wenn es zu einem {{event("messageerror")}} Event kommt.
+
+<!---->
 
 ## Methods
 

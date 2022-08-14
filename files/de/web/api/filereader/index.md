@@ -39,7 +39,7 @@ Im Kapitel [Zugriff auf Dateien von Webapplikationen](/de/docs/Zugriff_auf_Datei
 - {{domxref("FileReader.onprogress")}}
   - : Ein Handler für das {{event("progress")}}-Event. Dieser Event wird gefeuert, während ein {{domxref("Blob")}}-Inhalt gelesen wird.
 
-> **Hinweis:** Da`FileReader` von {{domxref("EventTarget")}} erbt, kann auf alle diese Events auch mit der {{domxref("EventTarget.addEventListener()","addEventListener")}} Methode gehört werden.
+> **Note:** Hinweis: Da`FileReader` von {{domxref("EventTarget")}} erbt, kann auf alle diese Events auch mit der {{domxref("EventTarget.addEventListener()","addEventListener")}} Methode gehört werden.
 
 ### Status-Konstanten
 

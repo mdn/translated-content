@@ -55,7 +55,7 @@ Wie Sie in den folgenden Abschnitten sehen werden, erleichtert Flexbox viele Lay
 
 ## Ein einfaches Beispiel
 
-In diesem Artikel werden Sie eine Reihe von Übungen durcharbeiten, um zu verstehen, wie Flexbox funktioniert. Zuerst sollten Sie eine lokale Kopie der ersten Startdatei - [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html)aus unserem Github-Repo - erstellen, sie in einen modernen Browser (wie Firefox oder Chrome) laden und den Code in Ihrem Code-Editor anzeigen. Sie können es auch [hier live sehen](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
+In diesem Artikel werden Sie eine Reihe von Übungen durcharbeiten, um zu verstehen, wie Flexbox funktioniert. Zuerst sollten Sie eine lokale Kopie der ersten Startdatei - [flexbox0.html ](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html)aus unserem Github-Repo - erstellen, sie in einen modernen Browser (wie Firefox oder Chrome) laden und den Code in Ihrem Code-Editor anzeigen. Sie können es auch [hier live sehen](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
 
 Sie werden sehen, dass wir ein {{htmlelement ("header")}} Element mit einer Überschrift der obersten Ebene und ein {{htmlelement ("section")}} Element mit drei {{htmlelement ("article") }} haben. Wir werden damit ein standardmäßiges dreispaltiges Layout erstellen.
 
@@ -104,7 +104,7 @@ flex-direction: column;
 
 Sie sehen, dass die Elemente dadurch wieder in ein Spaltenlayout versetzt werden, ähnlich wie vor dem Hinzufügen von CSS. Bevor Sie fortfahren, löschen Sie diese Deklaration aus Ihrem Beispiel.
 
-> **Hinweis:** Sie können Flex-Elemente auch in umgekehrter Richtung auslegen, indem Sie die Werte `row-reverse` für Zeilenumkehr und `column-reverse` für Spaltenumkehr verwenden. Experimentieren Sie auch mit diesen Werten!
+> **Note:** **Hinweis:** Sie können Flex-Elemente auch in umgekehrter Richtung auslegen, indem Sie die Werte `row-reverse` für Zeilenumkehr und `column-reverse` für Spaltenumkehr verwenden. Experimentieren Sie auch mit diesen Werten!
 
 ## Umbruch
 
@@ -149,7 +149,7 @@ flex-flow: row wrap;
 
 ## Flexible Dimensionierung von flex-Artikeln
 
-Kehren wir nun zu unserem ersten Beispiel zurück und schauen wir uns an, wie wir steuern können, welchen Anteil der Space-Flex-Elemente im Vergleich zu den anderen Flex-Elementen einnehmen. Starten Sie Ihre lokale Kopie von [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html)oder nehmen Sie eine Kopie von [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) als neuen Ausgangspunkt ([hier auch live](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+Kehren wir nun zu unserem ersten Beispiel zurück und schauen wir uns an, wie wir steuern können, welchen Anteil der Space-Flex-Elemente im Vergleich zu den anderen Flex-Elementen einnehmen. Starten Sie Ihre lokale Kopie von [flexbox0.html ](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html)oder nehmen Sie eine Kopie von [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) als neuen Ausgangspunkt ([hier auch live](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
 
 Fügen Sie zunächst die folgende Regel am Ende Ihres CSS hinzu:
 

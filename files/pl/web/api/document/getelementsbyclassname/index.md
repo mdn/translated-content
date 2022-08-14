@@ -10,9 +10,9 @@ translation_of: Web/API/Document/getElementsByClassName
 ---
 {{APIRef("DOM")}}
 
-Zwraca obiekt podobny do tablicy, zawierający wszystkie elementy, które mają przypisaną daną klasę. Kiedy użyjemy tej funkcji w odniesieniu do elementu document, cały dokument jest przeszukiwany - na wszystkich poziomach.
+Zwraca obiekt podobny do tablicy, zawierający wszystkie elementy, które mają przypisaną daną klasę. Kiedy użyjemy tej funkcji w odniesieniu do elementu document, cały dokument jest przeszukiwany - na wszystkich poziomach.
 
-Możesz również użyć funkcji {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} na dowolnym elemencie; wtedy zwróci jedynie elementy zawierające daną klasę, które zawierają się w obrębie elementu wskazanego przez nas.
+Możesz również użyć funkcji {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} na dowolnym elemencie; wtedy zwróci jedynie elementy zawierające daną klasę, które zawierają się w obrębie elementu wskazanego przez nas.
 
 ## Składnia
 
@@ -20,30 +20,30 @@ Możesz również użyć funkcji {{domxref("Element.getElementsByClassName", "ge
     var elements = rootElement.getElementsByClassName(names);
 
 - _elements_ jest bieżącym zbiorem znalezionych elementów.
-- *names* jest łańcuchem reprezentującym listę szukanych przez nas nazw klas (nazwy klas są oddzielone od siebie spacjami)
+- *names* jest łańcuchem reprezentującym listę szukanych przez nas nazw klas (nazwy klas są oddzielone od siebie spacjami)
 - getElementsByClassName może być użyta na dowolnym elemencie - nie tylko w całym dokumencie.
 
 ## Przykłady
 
-Szukamy wszystkich elementów posiadających klasę 'test':
+Szukamy wszystkich elementów posiadających klasę 'test':
 
 ```js
 document.getElementsByClassName('test');
 ```
 
-Szukamy elementów, które posiadają jednocześnie klasę 'red' oraz 'test':
+Szukamy elementów, które posiadają jednocześnie klasę 'red' oraz 'test':
 
 ```js
 document.getElementsByClassName('red test');
 ```
 
-Szukamy elementów posiadających klasę 'test', w obrębie elementu o ID 'main':
+Szukamy elementów posiadających klasę 'test', w obrębie elementu o ID 'main':
 
 ```js
 document.getElementById('main').getElementsByClassName('test');
 ```
 
-Możemy też użyć metody Array.prototype. W ten sposób znajdziemy wszystkie elementy div posiadające klasę 'test':
+Możemy też użyć metody Array.prototype. W ten sposób znajdziemy wszystkie elementy div posiadające klasę 'test':
 
 ```js
 var testElements = document.getElementsByClassName('test');

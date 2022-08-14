@@ -22,7 +22,7 @@ original_slug: Web/JavaScript/Reference/Fehler/Not_defined
 
 Es gibt eine Referenz auf eine Variable, die nicht existiert. Diese Variable muss deklariert werden; oder man muss sicherstellen, dass sie im Skript zugänglich ist; oder sich im aktuellen {{Glossary("scope")}} befindet.
 
-> **Hinweis:** Wenn Sie eine Bibliothek nutzen (wie z.B. jQuery), stellen Sie sicher, dass diese tatsächlich geladen ist, bevor Sie auf dessen Variablen (z. B. "$") zugreifen. Schreiben Sie das {{HTMLElement("script")}} Element, welches die Bibliothek lädt vor den Code, der die Bibliothek verwendet.
+> **Note:** **Hinweis:** Wenn Sie eine Bibliothek nutzen (wie z.B. jQuery), stellen Sie sicher, dass diese tatsächlich geladen ist, bevor Sie auf dessen Variablen (z. B. "$") zugreifen. Schreiben Sie das {{HTMLElement("script")}} Element, welches die Bibliothek lädt vor den Code, der die Bibliothek verwendet.
 
 ## Beispiele
 

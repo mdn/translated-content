@@ -27,8 +27,8 @@ Für unsere Zwecke vereinfachen wir das Beleuchtungsmodell, indem wir nur gerich
 
 Wenn Sie die Konzepte der Punktbeleuchtung und des Glanzlichtes hinter sich gelassen haben, gibt es dennoch zwei kleine Informationen, die Sie benötigen werden, wenn wir unser gerichtetes Licht implementieren:
 
-1. Wir müssen die **Oberflächennormale** mit jedem Vertex verbinden. Das ist ein Vektor, der senkrecht zur Oberfläche des Vertex ist.
-2. Wir müssen die Richtung in welche das Licht strahlt wissen. Diese wird durch den **Richtungsvektor** angegeben.
+1.  Wir müssen die **Oberflächennormale** mit jedem Vertex verbinden. Das ist ein Vektor, der senkrecht zur Oberfläche des Vertex ist.
+2.  Wir müssen die Richtung in welche das Licht strahlt wissen. Diese wird durch den **Richtungsvektor** angegeben.
 
 Dann aktualisieren wir den Vertex-Shader, um die Farbe jedes Vertices, unter Berücksichtigung des Umgebungslichts und dem Effekt des gerichteten Lichts (sowie dessen Winkel mit dem es auf die Oberfläche trifft), einzustellen. Wir werden sehen, wie genau wir das machen, wenn wir einen Blick auf den Code für den Shader werfen.
 

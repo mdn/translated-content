@@ -7,7 +7,7 @@ tags:
   - HTML Referenz
 translation_of: Web/HTML/Element/strong
 ---
-> **Hinweis:** Dieser Artikel ist nicht vollständig.
+> **Note:** **Hinweis:** Dieser Artikel ist nicht vollständig.
 
 Das HTML `<strong>` Element gibt dem Text eine starke Betonung. Typischerweise wird dieser dann in Fettdruck dargestellt.
 

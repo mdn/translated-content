@@ -16,7 +16,7 @@ Zarówno statyczne, jak i instancyjne pola publiczne są właściwościami zapis
 ## Składnia
 
     class ClassWithInstanceField {
-      instanceField = 'instance field'
+      instanceField = 'instance field'
     }
 
     class ClassWithStaticField {
@@ -24,9 +24,9 @@ Zarówno statyczne, jak i instancyjne pola publiczne są właściwościami zapis
     }
 
     class ClassWithPublicInstanceMethod {
-      publicMethod() {
-        return 'hello world'
-      }
+      publicMethod() {
+        return 'hello world'
+      }
     }
 
 ## Przykłady
@@ -39,7 +39,7 @@ Publiczne pola statyczne są deklarowane z użyciem słowa kluczowego `static`. 
 
 ```js
 class ClassWithStaticField {
-  static staticField = 'static field'
+  static staticField = 'static field'
 }
 
 console.log(ClassWithStaticField.staticField)
@@ -50,7 +50,7 @@ Pola bez inicjalizatorów są ustawiane na `undefined`.
 
 ```js
 class ClassWithStaticField {
-  static staticField
+  static staticField
 }
 
 console.assert(ClassWithStaticField.hasOwnProperty('staticField'))
@@ -62,11 +62,11 @@ Publiczne pola statyczne nie są inicjalizowane ponownie w podklasach, ale możn
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base field'
+  static baseStaticField = 'base field'
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field'
+  static subStaticField = 'sub class field'
 }
 
 console.log(SubClassWithStaticField.subStaticField)
@@ -76,18 +76,18 @@ console.log(SubClassWithStaticField.baseStaticField)
 // expected output: "base field"
 ```
 
-Przy inicjalizacji pól, `this` odnosi się do konstruktora klasy. Można się również odwołać przez nazwę i użyć `super` do otrzymania konstruktora klasy nadrzędnej (jeżeli istnieje).
+Przy inicjalizacji pól, `this` odnosi się do konstruktora klasy. Można się również odwołać przez nazwę i użyć `super` do otrzymania konstruktora klasy nadrzędnej (jeżeli istnieje).
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base static field'
-  static anotherBaseStaticField = this.baseStaticField
+  static baseStaticField = 'base static field'
+  static anotherBaseStaticField = this.baseStaticField
 
-  static baseStaticMethod() { return 'base static method output' }
+  static baseStaticMethod() { return 'base static method output' }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod()
+  static subStaticField = super.baseStaticMethod()
 }
 
 console.log(ClassWithStaticField.anotherBaseStaticField)
@@ -117,7 +117,7 @@ Pola bez inicjalizatorów są ustawiane na `undefined`.
 
 ```js
 class ClassWithInstanceField {
-  instanceField
+  instanceField
 }
 
 const instance = new ClassWithInstanceField()
@@ -132,7 +132,7 @@ Podobnie jak właściwości, nazwy pól mogą być obliczane.
 const PREFIX = 'prefix'
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field'
+    [`${PREFIX}Field`] = 'prefixed field'
 }
 
 const instance = new ClassWithComputedFieldName()
@@ -144,13 +144,13 @@ Przy inicjalizacji pól `this` odnosi się do instancji klasy. Tak jak w publicz
 
 ```js
 class ClassWithInstanceField {
-  baseInstanceField = 'base field'
-  anotherBaseInstanceField = this.baseInstanceField
-  baseInstanceMethod() { return 'base method output' }
+  baseInstanceField = 'base field'
+  anotherBaseInstanceField = this.baseInstanceField
+  baseInstanceMethod() { return 'base method output' }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod()
+  subInstanceField = super.baseInstanceMethod()
 }
 
 const base = new ClassWithInstanceField()
@@ -214,16 +214,16 @@ Wewnątrz metod instancji, `this` odnosi się do samej instancji. W podklasach m
 
 ```js
 class BaseClass {
-  msg = 'hello world'
-  basePublicMethod() {
-    return this.msg
-  }
+  msg = 'hello world'
+  basePublicMethod() {
+    return this.msg
+  }
 }
 
 class SubClass extends BaseClass {
-  subPublicMethod() {
-    return super.basePublicMethod()
-  }
+  subPublicMethod() {
+    return super.basePublicMethod()
+  }
 }
 
 const instance = new SubClass()
@@ -235,13 +235,13 @@ Getter'y i setter'y to specjalne metody, które wiążą się z właściwością
 
 ```js
 class ClassWithGetSet {
-  #msg = 'hello world'
-  get msg() {
-    return this.#msg
-  }
-  set msg(x) {
-    this.#msg = `hello ${x}`
-  }
+  #msg = 'hello world'
+  get msg() {
+    return this.#msg
+  }
+  set msg(x) {
+    this.#msg = `hello ${x}`
+  }
 }
 
 const instance = new ClassWithGetSet()

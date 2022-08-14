@@ -19,3 +19,5 @@ original_slug: Glossaire/UDP
 ### Référence technique
 
 - [Spécification](http://tools.ietf.org/html/rfc768)
+
+<!---->

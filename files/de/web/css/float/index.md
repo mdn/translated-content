@@ -38,7 +38,7 @@ Da `float` die Verwendung des Blocklayouts impliziert, ändert es in einigen Fä
 | `inline-grid`        | `grid`           |
 | _other_              | _unchanged_      |
 
-> **Hinweis:** Wenn Sie diese Eigenschaft von JavaScript als Mitglied des {{domxref("HTMLElement.style")}} Objektsreferenzieren, unterstützen moderne Browser `float`, aber in älteren Browsern müssen Sie es als `cssFloat` buchstabieren, wobei Internet Explorer ab Version 8 und älter `styleFloat` verwenden. Dies war eine Ausnahme von der Regel, dass der Name des DOM-Mitglieds der in camel case (Binnenmajuskel) geschriebene Name des durch Bindestriche getrennten CSS-Namens ist (aufgrund der Tatsache, dass "float" ein reserviertes Wort in JavaScript ist, was sich in der Notwendigkeit zeigt, "class" als "className" und \<label>'s "for" als "htmlFor" zu maskieren).
+> **Note:** **Hinweis:** Wenn Sie diese Eigenschaft von JavaScript als Mitglied des {{domxref("HTMLElement.style")}} Objektsreferenzieren, unterstützen moderne Browser `float`, aber in älteren Browsern müssen Sie es als `cssFloat` buchstabieren, wobei Internet Explorer ab Version 8 und älter `styleFloat` verwenden. Dies war eine Ausnahme von der Regel, dass der Name des DOM-Mitglieds der in camel case (Binnenmajuskel) geschriebene Name des durch Bindestriche getrennten CSS-Namens ist (aufgrund der Tatsache, dass "float" ein reserviertes Wort in JavaScript ist, was sich in der Notwendigkeit zeigt, "class" als "className" und \<label>'s "for" als "htmlFor" zu maskieren).
 
 ## Syntax
 

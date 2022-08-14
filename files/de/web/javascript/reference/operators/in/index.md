@@ -22,6 +22,8 @@ Der **in operator** gibt true zurück, falls die gegebene Eigenschaft im gegeben
 - `prop`
   - : Ein String oder Symbol welches einen Namen einer Eigenschaft oder einen Arrayindex (nicht Symbole werden in einen String konvertiert).
 
+<!---->
+
 - `object`
   - : Objekt, bei welchem überprüft wird, ob eine Eigenschaft mit spezifiziertem Namen enthalten ist (oder in der Prototypenkette enthalten ist).
 

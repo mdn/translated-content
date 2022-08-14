@@ -76,7 +76,7 @@ Dieses Element beinhaltet die [Globalen Attribute](/de/docs/Web/HTML/Global_attr
 - {{htmlattrdef("alink")}} {{obsolete_inline}}
   - : Textfarbe für selektierte Links. _Diese Methode ist fehlerhaft, benutzen Sie stattdessen das CSS {{cssxref("color")}} Objekt in Verbindung mit der {{cssxref(":active")}} Pseudoklasse._
 - {{htmlattrdef("background")}} {{obsolete_inline}}
-  - : URI eines Bilds, das als Hintergrundbild gesetzt wird. _Diese Methode ist fehlerhaft, benutzen Sie stattdessen das CSS_ _{{cssxref("background")}} Objekt auf dem Element._> **Hinweis:** Seit Gecko 7.0 {{geckoRelease("7.0")}} wird `background` nicht länger als eine URI aufgelöst; stattdessen wird es als einfacher String behandelt.
+  - : URI eines Bilds, das als Hintergrundbild gesetzt wird. _Diese Methode ist fehlerhaft, benutzen Sie stattdessen das CSS_ _{{cssxref("background")}} Objekt auf dem Element._> **Note:** **Hinweis:** Seit Gecko 7.0 {{geckoRelease("7.0")}} wird `background` nicht länger als eine URI aufgelöst; stattdessen wird es als einfacher String behandelt.
 - {{htmlattrdef("bgcolor")}} {{obsolete_inline}}
   - : Hintergrundfarbe eines Dokumentes. _Diese Methode ist fehlerhaft, benutzen Sie stattdessen das CSS {{cssxref("background-color")}} Objekt auf dem Element._
 - {{htmlattrdef("bottommargin")}} {{obsolete_inline}}
@@ -135,7 +135,7 @@ Dieses Element beinhaltet die [Globalen Attribute](/de/docs/Web/HTML/Global_attr
 | Spezifikation                                                                                            | Status                           | Anmerkung                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{SpecName('HTML WHATWG', 'sections.html#the-body-element', '&lt;body&gt;')}} | {{Spec2('HTML WHATWG')}} | Veränderte die Liste der fehlerhaften Features.                                                                                                                                                  |
-| {{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Überholt die ehemaligen veralteten Attribute. Definiert das Verhalten der fehlerhaften und niemals standartisierten **margintop**, **marginleft**, **marginright** und **marginbottom**. |
+| {{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Überholt die ehemaligen veralteten Attribute. Definiert das Verhalten der fehlerhaften und niemals standartisierten **margintop**, **marginleft**, **marginright** und **marginbottom\*\***.\*\* |
 | {{SpecName('HTML4.01', 'struct/global.html#h-7.5.1', '&lt;body&gt;')}}             | {{Spec2('HTML4.01')}}     | Überholt die **alink**, **background**, **bgcolor**, **link**, **text** und **vlink** Attribute.                                                                                                 |
 
 ## Browser compatibility

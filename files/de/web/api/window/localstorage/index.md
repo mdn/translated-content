@@ -52,7 +52,7 @@ Die Syntax um alle Einträge zu löschen lautet:
 localStorage.clear();
 ```
 
-> **Hinweis:** Ausführliche Beispiele sind im Artikel [Using the Web Storage API](/de/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) nachzulesen.
+> **Note:** **Hinweis**: Ausführliche Beispiele sind im Artikel [Using the Web Storage API](/de/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) nachzulesen.
 
 ## Spezifikationen
 

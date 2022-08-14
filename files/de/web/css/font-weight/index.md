@@ -15,6 +15,8 @@ Die [CSS](/de/docs/CSS "CSS")-Eigenschaft {{Cssxref("font-weight")}} definiert d
 
     Formal syntax: {{csssyntax("font-weight")}}
 
+<!---->
+
     font-weight: normal
     font-weight: bold
 
@@ -56,9 +58,9 @@ Ist die gewählte Stärke nicht verfügbar, bestimmen die nachfolgenden Schritte
 
 - Liegt die gewünschte Stärke zwischen 400 und 500 (einschließlich):
 
-  1. Verwende die erste Stärke, die größer als die gewünschte, aber kleiner als 500 ist.
-  2. Ist keine verfügbar, verwende die erste Stärke die kleiner als die gewünschte ist.
-  3. Ist keine verfügbar, verwende die erste Stärke größer als 500.
+  1.  Verwende die erste Stärke, die größer als die gewünschte, aber kleiner als 500 ist.
+  2.  Ist keine verfügbar, verwende die erste Stärke die kleiner als die gewünschte ist.
+  3.  Ist keine verfügbar, verwende die erste Stärke größer als 500.
 
 - Liegt die gewünschte Stärke unter 400, verwende die erste Stärke kleiner als die gewünschte. Ist keine verfügbar, verwende die erste Stärke größer als die gewünschte.
 - Liegt die gewünschte Stärke über 500, verwende die erste Stärke größer als die gewünschte. Ist keine verfügbar, verwende die erste Stärke kleiner als die gewünschte.

@@ -5,7 +5,7 @@ tags:
   - CSS
 translation_of: Web/CSS/CSS_Grid_Layout
 ---
-**CSS Grid Layout** jest najlepszą metodą aby podzielić strone na części lub definiowanie relacji takich jak rozmiar, pozycja i warstwa, pomiędzy podstawowymi elementami HTML.
+**CSS Grid Layout** jest najlepszą metodą aby podzielić strone na części lub definiowanie relacji takich jak rozmiar, pozycja i warstwa, pomiędzy podstawowymi elementami HTML.
 
 Podobnie do tabel (ang. "tables"), rozmieszczenie grid _(ang. "siatka")_ pozwala autorowi wyrównać elementy w kolumny i wiersze. Jednakowoż grid pozwala na wiele więcej ułożeń niż tabele. Na przykład kontener grid potrafi spozycjonować elementy wewnątrz siebie w taki sposób aby na siebie nachodziły oraz używały warstw, podobnie jak elementy pozycjonowane przy użyciu CSS.
 

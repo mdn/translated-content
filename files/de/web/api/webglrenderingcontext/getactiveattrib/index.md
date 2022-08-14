@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/getActiveAttrib
 ---
 {{APIRef("WebGL")}}
 
-Die **`WebGLRenderingContext.getActiveAttrib()`**Methode der [WebGL API](/de/docs/Web/API/WebGL_API) gibt ein {{domxref("WebGLActiveInfo")}} Objekt zurück, welches die Größe, den Typ und den Namen eines Vertex-Attributes an der gegebenen Position in einem {{domxref("WebGLProgram")}} enthält.
+Die **`WebGLRenderingContext.getActiveAttrib() `**Methode der [WebGL API](/de/docs/Web/API/WebGL_API) gibt ein {{domxref("WebGLActiveInfo")}} Objekt zurück, welches die Größe, den Typ und den Namen eines Vertex-Attributes an der gegebenen Position in einem {{domxref("WebGLProgram")}} enthält.
 
 ## Syntax
 

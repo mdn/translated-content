@@ -34,7 +34,7 @@ Die Nutzung von `deny` unterbindet nicht nur die Frame-Einbindung von fremden Se
 
 ## Beispiele
 
-> **Hinweis:** Die Nutzung des `meta tag` innerhalb des Webseiten-Contents hat keinen Effekt! Beispielsweise die Deklaration `<meta http-equiv="X-Frame-Options" content="deny">` führt zu keiner Verhaltensänderung. Ausschließlich die Nutzung der HTTP Header (siehe Beispiele) führt zu einer Verhaltensänderung des Browser.
+> **Note:** **Hinweis:** Die Nutzung des `meta tag` innerhalb des Webseiten-Contents hat keinen Effekt! Beispielsweise die Deklaration `<meta http-equiv="X-Frame-Options" content="deny">` führt zu keiner Verhaltensänderung. Ausschließlich die Nutzung der HTTP Header (siehe Beispiele) führt zu einer Verhaltensänderung des Browser.
 
 ### Apache Konfiguration
 

@@ -52,7 +52,7 @@ Ziehen Sie es **drittens** in Betracht `dns-prefetch` mit dem `preconnect` Hinwe
 <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
 ```
 
-> **Hinweis:** Wenn eine Seite Verbindungen zu vielen Drittanbieter-Domains herstellen muss, ist es kontraproduktiv, sie alle im Vorhinein zu verbinden. Der `preconnect` Hinweis wird am besten nur für die kritischsten Verbindungen verwendet. Für die anderen verwenden Sie einfach `<link rel="dns-prefetch">` um Zeit beim ersten Schritt — dem DNS-Lookup — zu sparen.
+> **Note:** **Hinweis:** Wenn eine Seite Verbindungen zu vielen Drittanbieter-Domains herstellen muss, ist es kontraproduktiv, sie alle im Vorhinein zu verbinden. Der `preconnect` Hinweis wird am besten nur für die kritischsten Verbindungen verwendet. Für die anderen verwenden Sie einfach `<link rel="dns-prefetch">` um Zeit beim ersten Schritt — dem DNS-Lookup — zu sparen.
 
 Die Logik hinter der Verknüpfung dieser Hinweise liegt darin, dass die Unterstützung für dns-prefetch weiter verbreitet ist, als die Unterstützung für preconnect. Browser, die preconnect nicht unterstützen, erhalten trotzdem einen zusätzlichen Vorteil, indem sie auf dns-prefetch zurückgreifen. Da es sich hierbei um eine HTML-Funktion handelt, ist sie sehr fehlertolerant. Wenn ein nicht-unterstützter Browser auf einen dns-prefetch-Hinweis—oder einen anderen Ressourcen-Hinweis—stößt, wird Ihre Website nicht beschädigt. Sie werden nur nicht die Vorteile erfahren, die sie bietet.
 
@@ -65,4 +65,4 @@ Einige Ressourcen, wie z.B. Schriftarten, werden im anonymen Modus geladen. In s
 - [crossorigin](/de/docs/Web/HTML/CORS_settings_attributes)
 - [Cross-Origin Resource Sharing (CORS)](/de/docs/Web/HTTP/CORS)
 - [HTTP headers](/de/docs/Web/HTTP/Headers)
-- [HTTP header](/de/docs/Web/HTTP/Headers/Link)[Link](/de/docs/Web/HTTP/Headers/Link "The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.")
+- [HTTP header ](/de/docs/Web/HTTP/Headers/Link)[Link](/de/docs/Web/HTTP/Headers/Link "The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.")

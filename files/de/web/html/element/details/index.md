@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/details
 ---
 ## Übersicht
 
-Das **HTML `<details>`Element** wird genutzt für Auskünfte, damit Benutzer zusätzliche Informationen erhalten können.
+Das **HTML `<details> `Element** wird genutzt für Auskünfte, damit Benutzer zusätzliche Informationen erhalten können.
 
 | [Inhaltskategorien](/de/docs/Web/HTML/Content_categories) | [Fließender Inhalt](/de/docs/Web/HTML/Content_categories#Flow_content), Sektionsursprung, interaktiver Inhalt, greifbarer Inhalt.    |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |

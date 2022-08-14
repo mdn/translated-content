@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
-Za pomocą pętli możemy w łatwy sposób powtarzać pewne czynności. Ten rodział [JavaScript Guide](/pl/docs/Web/JavaScript/Guide) zapoznaje z różnymi rodzajami pętli, dostępnymi w JavaScript.
+Za pomocą pętli możemy w łatwy sposób powtarzać pewne czynności. Ten rodział [JavaScript Guide](/pl/docs/Web/JavaScript/Guide) zapoznaje z różnymi rodzajami pętli, dostępnymi w JavaScript.
 
 Możesz myśleć o pętli jak o skomputeryzowanej wersji gry w której mówisz komuś, żeby zrobił X kroków w jedym kierunku a następnie Y kroków w innym; przykład "Zrób 5 kroków na zachód" może być wyrażone za pomocą pętli w ten sposób:
 
@@ -17,7 +17,7 @@ for (step = 0; step < 5; step++) {
 }
 ```
 
-Jest wiele różnych rodzajów pętli, lecz zwykle wszystkie robią to samo: powtarzają zadaną akcję pewną ilość razy (liczba powtórzeń może także wynosić 0).  Różne mechanizmy pętli oferują różne sposoby określania początku i końca pętli. W różnych sytuacjach łatwiej jest użyć danego typu pętli niż innego.
+Jest wiele różnych rodzajów pętli, lecz zwykle wszystkie robią to samo: powtarzają zadaną akcję pewną ilość razy (liczba powtórzeń może także wynosić 0).  Różne mechanizmy pętli oferują różne sposoby określania początku i końca pętli. W różnych sytuacjach łatwiej jest użyć danego typu pętli niż innego.
 
 Wyrażenia dla pętli obsługiwane w JavaScript:
 
@@ -32,37 +32,37 @@ Wyrażenia dla pętli obsługiwane w JavaScript:
 
 ## `for`
 
-Pętla [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) powtarza wykonie instrukcji, dopóki dostarczony warunek nie zwraca false. Pętla for w JavaScript jest podobna do tej z języków Java czy C. Składnia tej pętli wygląda następująco:
+Pętla [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) powtarza wykonie instrukcji, dopóki dostarczony warunek nie zwraca false. Pętla for w JavaScript jest podobna do tej z języków Java czy C. Składnia tej pętli wygląda następująco:
 
     for ([wyrażenieInicjalizacji]; [warunek]; [wyrażenieInkrementacji])
       Instrukcja
 
 Podczas wykonywania się pętli for, mają miejsce następujące operacje:
 
-1.  Wykonywane jest wyrażenie `wyrażenieInicjalizacji`, o ile takie istnieje. Zazwyczaj w tym miejscu inicjalizuje się zmienne, które posłużą później jako liczniki dla pętli.
-2.  Sprawdzana jest wartość zwracana przez wyrażenie `warunek`, jeśli jest to true, pętla będzie wykonywać się dalej. Jeśli z kolei będzie to false, pętla zostanie przerwana. W przypadku nie podania żadnego wyrażenia warunkowego, pętla będzie traktować to jako true.
-3.  Wykonuje się `Instrukcja`.  W celu wykonania wielu instrukcji w jednym przebiegu pętli, należy je zgrupować i umieścić w bloku ( `{ ... }` ).
+1.  Wykonywane jest wyrażenie `wyrażenieInicjalizacji`, o ile takie istnieje. Zazwyczaj w tym miejscu inicjalizuje się zmienne, które posłużą później jako liczniki dla pętli.
+2.  Sprawdzana jest wartość zwracana przez wyrażenie `warunek`, jeśli jest to true, pętla będzie wykonywać się dalej. Jeśli z kolei będzie to false, pętla zostanie przerwana. W przypadku nie podania żadnego wyrażenia warunkowego, pętla będzie traktować to jako true.
+3.  Wykonuje się `Instrukcja`.  W celu wykonania wielu instrukcji w jednym przebiegu pętli, należy je zgrupować i umieścić w bloku ( `{ ... }` ).
 4.  Wykonywane zostaje `wyrażenie inkrementacji`, o ile istnieje. W tym miejscu powiększamy wartość licznika pętli.
 5.  Zarządzanie pętlą wraca do kroku 2.
 
 ### Przykład
 
-Następująca funkcja zawiera pętle `for`, która zlicza elementy \<option> w rozwijalnej liście \<select>. W pętli zostaje zadeklarowana zmienna `i` z wartością 0. Sprawdza czy `i` jest mniejsze niż liczba elementów \<option>, wykonuje kod wewnątrz i zwiększa wartość `i `po każdym przebiegu.
+Następująca funkcja zawiera pętle `for`, która zlicza elementy \<option> w rozwijalnej liście \<select>. W pętli zostaje zadeklarowana zmienna `i` z wartością 0. Sprawdza czy `i` jest mniejsze niż liczba elementów \<option>, wykonuje kod wewnątrz i zwiększa wartość `i `po każdym przebiegu.
 
 ```html
 <form name="selectForm">
-  <p>
-    <label for="musicTypes">Choose some music types, then click the button below:</label>
-    <select id="musicTypes" name="musicTypes" multiple="multiple">
-      <option selected="selected">R&B</option>
-      <option>Jazz</option>
-      <option>Blues</option>
-      <option>New Age</option>
-      <option>Classical</option>
-      <option>Opera</option>
-    </select>
-  </p>
-  <p><input id="btn" type="button" value="How many are selected?" /></p>
+  <p>
+    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <select id="musicTypes" name="musicTypes" multiple="multiple">
+      <option selected="selected">R&B</option>
+      <option>Jazz</option>
+      <option>Blues</option>
+      <option>New Age</option>
+      <option>Classical</option>
+      <option>Opera</option>
+    </select>
+  </p>
+  <p><input id="btn" type="button" value="How many are selected?" /></p>
 </form>
 
 <script>
@@ -85,17 +85,17 @@ btn.addEventListener("click", function(){
 
 ## `do...while`
 
-`Pętla do...while` powtarza `instrukcje` wewnątrz, dopóki `warunek` nie zwróci false. Wygląda to następująco:
+`Pętla do...while` powtarza `instrukcje` wewnątrz, dopóki `warunek` nie zwróci false. Wygląda to następująco:
 
     do
       instrukcja
     while (warunek);
 
-Możemy skorzystać z wyrażenia bloku (`{ ... }`), by zgrupować wiele instrukcji. Na końcu wykonywania instrukcji sprawdzany jest warunek. Jeśli zwróci on true, Pętla wykonan się po raz kolejny, z kolei false przerwie pętle. Warto zwrócić uwagę, że ze względu na miejsce umieszczenia warunku, zawsze wykona się ona przynajmniej raz.
+Możemy skorzystać z wyrażenia bloku (`{ ... }`), by zgrupować wiele instrukcji. Na końcu wykonywania instrukcji sprawdzany jest warunek. Jeśli zwróci on true, Pętla wykonan się po raz kolejny, z kolei false przerwie pętle. Warto zwrócić uwagę, że ze względu na miejsce umieszczenia warunku, zawsze wykona się ona przynajmniej raz.
 
 ### Przykład
 
-W tym przykładzie pętla będzie iterawoć do momentu kiedy licznik `i` nie będzie większy od 5.
+W tym przykładzie pętla będzie iterawoć do momentu kiedy licznik `i` nie będzie większy od 5.
 
 ```js
 do {
@@ -106,7 +106,7 @@ do {
 
 ## `while`
 
-Pętla [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) wykonuje się dopóki podany warunek zwraca true. Składnia jest następująca:
+Pętla [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) wykonuje się dopóki podany warunek zwraca true. Składnia jest następująca:
 
     while (warunek)
       instrukcja
@@ -117,7 +117,7 @@ W tym przypadku również możemy zgrupować instrukcje za pomocą (`{ ... }`).
 
 ### Przykład 1
 
-Następująca pętla `while` iteruje tak długo aż n jest mniejszy od 3:
+Następująca pętla `while` iteruje tak długo aż n jest mniejszy od 3:
 
 ```js
 n = 0;
@@ -306,7 +306,7 @@ Although it may be tempting to use this as a way to iterate over {{jsxref("Array
 
 ## `for...of` statement
 
-The [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement creates a loop Iterating over [iterable objects](/pl/docs/Web/JavaScript/Guide/iterable) (including {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [arguments](/pl/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) object and so on), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+The [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) statement creates a loop Iterating over [iterable objects](/pl/docs/Web/JavaScript/Guide/iterable) (including {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [arguments](/pl/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) object and so on), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 
     for (variable of object) {
       statement

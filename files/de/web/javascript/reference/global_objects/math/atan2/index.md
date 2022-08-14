@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
 {{JSRef}}
 
-`Die Funktion`**`Math.atan2()`** gibt den Arkustangens (im Radiantenmaß) des Quotienten der Parameter zurück.
+`Die Funktion `**`Math.atan2()`** gibt den Arkustangens (im Radiantenmaß) des Quotienten der Parameter zurück.
 
 {{EmbedInteractiveExample("pages/js/math-atan2.html")}}
 

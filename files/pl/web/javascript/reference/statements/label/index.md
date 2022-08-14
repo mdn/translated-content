@@ -33,13 +33,15 @@ Przykładowo, można zastosować etykietę do oznaczenia pętli, a następnie u�
 
 ### Składnia
 
-    etykieta :
+    etykieta :
        polecenie
 
 ### Parametry
 
 - `etykieta`
   - : Dowolny identyfikator języka JavaScript, który nie jest słowem zarezerwowanym.
+
+<!---->
 
 - `polecenie`
   - : Polecenia. Polecenie `break` może być użyte z dowolnym poleceniem oznaczonym etykietą, a `continue` można użyć z zapętlonymi poleceniami oznaczonymi etykietami.

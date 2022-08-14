@@ -23,7 +23,7 @@ Mehrere Hintergründe festzulegen ist einfach:
 }
 ```
 
-Du kannst dies mit beiden Varianten, der verkürzten {{cssxref("background")}} Eigenschaft und dem Einzel-Eigenschafts-Selektor davon ausser {{cssxref("background-color")}}. Die folgenden Hintergrund Eigenschaften können als Liste festgelegt werden, eine pro Hintergrund: {{cssxref("background")}}, {{cssxref("background-attachment")}}, {{cssxref("background-clip")}},``{{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}.
+Du kannst dies mit beiden Varianten, der verkürzten {{cssxref("background")}} Eigenschaft und dem Einzel-Eigenschafts-Selektor davon ausser {{cssxref("background-color")}}. Die folgenden Hintergrund Eigenschaften können als Liste festgelegt werden, eine pro Hintergrund: {{cssxref("background")}}, {{cssxref("background-attachment")}}, {{cssxref("background-clip")}},` `{{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}.
 
 ## Beispiel
 

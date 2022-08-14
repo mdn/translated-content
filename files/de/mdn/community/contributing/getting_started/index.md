@@ -52,7 +52,7 @@ Sie können uns bei der Durchsicht und beim Bearbeiten bestehender Dokumentation
 - [Aktualisieren Sie einen bestehenden Artikel mit neuen Informationen](/de/docs/MDN/User_guide/Writing#Editing_an_existing_page) (5 Minuten - 1 Stunde)
 - [Schreiben Sie einen Artikel über eine neue Technologie oder API](/de/docs/MDN/User_guide/Writing#Adding_a_new_page) (30 Minuten - 2 Stunden)
 
-> **Hinweis:** Wenn Sie Artikel rezensieren oder neue Artikel verfassen, bitten wir Sie den [Style Guide](/de/docs/Project:MDN/Style_guide) einzusehen. Somit wird gewährleistet, dass alle Artikel einheitlich bleiben.
+> **Note:** **Hinweis:** Wenn Sie Artikel rezensieren oder neue Artikel verfassen, bitten wir Sie den [Style Guide](/de/docs/Project:MDN/Style_guide) einzusehen. Somit wird gewährleistet, dass alle Artikel einheitlich bleiben.
 
 ### Option 2: Ich mag Code
 
@@ -61,7 +61,7 @@ Wir brauchen mehr Code Beispiele! Außerdem können Sie uns beim Aufbau unserer 
 - [Wandeln Sie Code Beispiele in “live Code” um](/de/docs/Project:MDN/Contributing/How_to/Convert_code_samples_to_be_live_) (30 Minuten)
 - [Richten Sie eine Kuma Build Umgebung ein](https://kuma.readthedocs.org/en/latest/installation-vagrant.html) (1 Stunde)
 - [Senden Sie Ihren Code Patch an die Kuma Codebase](https://github.com/mozilla/kuma#readme) (1 Stunde)
-- [Reichen Sie eine neue Demo ein](https://developer.mozilla.org/de/demos/submit)[](https://developer.mozilla.org/en-US/demos/submit)(1 Stunde)
+- [Reichen Sie eine neue Demo ein](https://developer.mozilla.org/de/demos/submit)[ ](https://developer.mozilla.org/en-US/demos/submit)(1 Stunde)
 
 ### Option 3: Ich mag sowohl Worte als auch Code
 

@@ -14,7 +14,7 @@ translation_of: Web/CSS/:focus
 
 ## Übersicht
 
-Die [CSS](/de/docs/Web/CSS)[Pseudoklasse](/de/docs/Web/CSS/Pseudo-classes "Pseudo-classes") `:focus` steht für Elemente, welche mit einem Eingabegerät, wie z. B. der Tastatur, fokusiert wurden.
+Die [CSS ](/de/docs/Web/CSS)[Pseudoklasse](/de/docs/Web/CSS/Pseudo-classes "Pseudo-classes") `:focus` steht für Elemente, welche mit einem Eingabegerät, wie z. B. der Tastatur, fokusiert wurden.
 
 ## Syntax
 

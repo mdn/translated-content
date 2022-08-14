@@ -168,7 +168,7 @@ Jednakże, l_func wywołuje również metodę obiektu zdarzenia [event.stopPropa
         t2.innerHTML = "hej";
          // this ought to keep t-daddy from getting the click.
         e.stopPropagation();
-        alert("propagowanie zdarzeń zatrzymane.");
+        alert("propagowanie zdarzeń zatrzymane.");
       }
       function load() {
         el = document.getElementById("t");
@@ -286,7 +286,7 @@ Przykład pokazuje jak używając DOM można stworzyć tabele zawierającą zar�
 
       for (var p in e) {
         row = tbody.insertRow(-1);
-        row.className = (row.rowIndex % 2)? 'odd':'even';
+        row.className = (row.rowIndex % 2)? 'odd':'even';
         addCell(row, row.rowIndex);
         addCell(row, p);
         addCell(row, e[p]);

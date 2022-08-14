@@ -12,8 +12,8 @@ In der Vergangenheit konnten Änderungen bei Webseiten nur so von einem Screenre
 
 Dynamische Inhalte, die ohne das Neuladen einer Webseite nachgeladen werden, sind im Allgemeinen entweder eine Region oder eine Komponente. Einfache Inhaltsänderungen, die nicht interaktiv sind, sollten als Live-Regionen gekennzeichnet werden. In der folgenden Liste werden die unterschiedlichen Eigenschaften für ARIA-Live-Regionen mit einer Beschreibung aufgeführt.
 
-1. **aria-live:** Mit aria-live=POLITENESS_SETTING wird die Priorität für die Behandlung von Aktualisierungen von Live-Regionen festgelegt - die möglichen Werte für diese Einstellung sind: off/polite/assertive, wobei "off" der Default-Wert ist. Diese Eigenschaft ist mit Abstand die Wichtigste.
-2. **aria-controls**: Mit aria-controls=\[IDLIST] wird ein Steuerungselement mit der Region verknüpft, die es kontrollieren soll. Regionen werden ähnlich wie div-Elemente anhand einer ID identifiziert. Wenn mehrere Regionen mit einer Steuerung verknüpft werden sollen, können diese einfach getrennt durch ein Leerzeichen angegeben werden, z.B. aria-controls="myRegionID1 myRegionsID2".
+1.  **aria-live:** Mit aria-live=POLITENESS_SETTING wird die Priorität für die Behandlung von Aktualisierungen von Live-Regionen festgelegt - die möglichen Werte für diese Einstellung sind: off/polite/assertive, wobei "off" der Default-Wert ist. Diese Eigenschaft ist mit Abstand die Wichtigste.
+2.  **aria-controls**: Mit aria-controls=\[IDLIST] wird ein Steuerungselement mit der Region verknüpft, die es kontrollieren soll. Regionen werden ähnlich wie div-Elemente anhand einer ID identifiziert. Wenn mehrere Regionen mit einer Steuerung verknüpft werden sollen, können diese einfach getrennt durch ein Leerzeichen angegeben werden, z.B. aria-controls="myRegionID1 myRegionsID2".
 
     > **Warning:** Not known if the aria-controls aspect of live regions is implemented in current ATs, or which. Needs research.
 
@@ -48,17 +48,17 @@ Für die folgenden bekannten vordefinierten Situationen sollte bevorzugt eine en
 
 (TBD: what is supported where?)
 
-1. **aria-atomic:** Das Attribut aria-atomic=BOOLEAN wird eingesetzt, um festzulegen, ob der Screenreader die Live-Regionen als Ganzes präsentieren soll, auch wenn sich nur ein Teil dieser Region ändert. Die möglichen Werte sind false oder true, wobei false der Default-Wert ist.
-2. **aria-relevant:** Mit aria-relevant=\[LIST_OF_CHANGES] wird bestimmt, welche Art von Veränderungen relevant für eine Live-Region sind - die möglichen Werte sind additions/removals/text/all. Der Default-Wert ist "additions text".
-3. **aria-labelledby**: Mit aria-labelledby=\[IDLIST] wird eine Region mit seinen Labels verknüpft. Die Technik ist dieselbe wie bei aria-controls, nur dass hier Labels statt Steuerungselemente mit der Region verknüpft werden. Mehrere Bezeichner können durch Leerzeichen getrennt angegeben werden.
-4. **aria-describedby:** Das Attribut aria-describedby=\[IDLIST] wird verwendet, um eine Region mit einer Beschreibung zu verknüpfen. Auch hier ist die Technik dieselbe, wie bei aria-controls, nur dass eine Beschreibung statt einer Steuerung verknüpft wird. Mehrere Bezeichner für Beschreibungen können durch Leerzeichen getrennt angegeben werden.
+1.  **aria-atomic:** Das Attribut aria-atomic=BOOLEAN wird eingesetzt, um festzulegen, ob der Screenreader die Live-Regionen als Ganzes präsentieren soll, auch wenn sich nur ein Teil dieser Region ändert. Die möglichen Werte sind false oder true, wobei false der Default-Wert ist.
+2.  **aria-relevant:** Mit aria-relevant=\[LIST_OF_CHANGES] wird bestimmt, welche Art von Veränderungen relevant für eine Live-Region sind - die möglichen Werte sind additions/removals/text/all. Der Default-Wert ist "additions text".
+3.  **aria-labelledby**: Mit aria-labelledby=\[IDLIST] wird eine Region mit seinen Labels verknüpft. Die Technik ist dieselbe wie bei aria-controls, nur dass hier Labels statt Steuerungselemente mit der Region verknüpft werden. Mehrere Bezeichner können durch Leerzeichen getrennt angegeben werden.
+4.  **aria-describedby:** Das Attribut aria-describedby=\[IDLIST] wird verwendet, um eine Region mit einer Beschreibung zu verknüpfen. Auch hier ist die Technik dieselbe, wie bei aria-controls, nur dass eine Beschreibung statt einer Steuerung verknüpft wird. Mehrere Bezeichner für Beschreibungen können durch Leerzeichen getrennt angegeben werden.
 
 ### Fortgeschrittenes Einsatzszenario: Roster
 
 Auf einer Chat-Webseite soll eine Liste von Benutzern angezeigt werden, die zum aktuellen Zeitpunkt eingeloggt sind. Der Status der Benutzer soll dabei dynamisch (ohne Aktualisierung der Webseite) auf dem neusten Stand gehalten werden.
 
     <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-     <!-- Hier wird JavaScript zum Hinzufügen und Entfernen von Benutzern eingesetzt -->
+    	<!-- Hier wird JavaScript zum Hinzufügen und Entfernen von Benutzern eingesetzt -->
     </ul>
 
 Zusammenfassende Beschreibung von ARIA-Live-Eigenschaften:

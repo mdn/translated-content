@@ -40,6 +40,8 @@ Tworzy pętlę, która wylicza wyrażenie `i`, jeśli jest ono prawdą, wykonuje
 - `warunek`
   - : Wyliczany przed każdym wejściem w blok poleceń. Jeśli warunek jest prawdą, polecenia w bloku są wykonywane. Jeśli nie jest, sterowanie przepływa do pierwszego polecenia za pętlą.
 
+<!---->
+
 - `polecenia`
   - : Blok poleceń wykonywanych póki warunek jest spełniony. Dobrą praktyką jest stosowanie w tym miejscu wcięć (indentacji), zwiększających czytelność kodu.
 

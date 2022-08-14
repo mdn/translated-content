@@ -34,7 +34,7 @@ Der Wert von `yield*` Ausdrücken selbst ist der Wert der vom Iterator zurückge
 
 ### Zu einem anderen Generator delegieren
 
-Im folgenden Code werden Werte von `g1()` und `g2()` beim Aufruf von `next()`zurückgegeben.
+Im folgenden Code werden Werte von `g1()` und `g2()` beim Aufruf von `next() `zurückgegeben.
 
 ```js
 function* g1() {

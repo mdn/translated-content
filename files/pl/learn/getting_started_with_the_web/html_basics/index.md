@@ -44,7 +44,7 @@ Atrybut zawsze powinien mieć:
 2.  Nazwę atrybutu oraz znak równości.
 3.  Wartość podaną w cudzysłowie.
 
-> **Uwaga:** Proste wartości atrybutów, które nie zawierają białych znaków ASCII (ani żadnego ze znaków `"` `'` `` ` `` `=` `<` `>` ) mogą pozostać bez cudzysłowów, ale zaleca się używać cudysłowów dla wszystkich wartości atrybutów, ponieważ czyni to kod bardziej spójnym i zrozumiałym.
+> **Note:** **Uwaga**: Proste wartości atrybutów, które nie zawierają białych znaków ASCII (ani żadnego ze znaków `"` `'` `` ` `` `=` `<` `>` ) mogą pozostać bez cudzysłowów, ale zaleca się używać cudysłowów dla wszystkich wartości atrybutów, ponieważ czyni to kod bardziej spójnym i zrozumiałym.
 
 ### Zagnieżdżanie elementów
 
@@ -96,7 +96,7 @@ Mamy tutaj:
 - `<head></head>` — element {{htmlelement("head")}} to tzw. nagłówek strony. Ten element działa jak kontener dla wszystkich elementów, które chcesz umieścić na stronie HTML, ale nie w treści, które wyświetlasz przeglądającym twoją stronę. Obejmuje to takie rzeczy jak {Glossary("keyword", "keywords")}} i opis strony, który ma się pojawiać w wynikach wyszukiwania, styl CSS, stylowanie naszej treści, deklaracje zestawu znaków, użytych skryptow i inne.
 - `<body></body>` — element {{htmlelement("body")}}. Zawiera _całą_ zawartość, która ma być wyświetlana użytkownikom internetowym podczas odwiedzania Twojej strony, niezależnie od tego, czy chodzi o tekst, obrazy, wideo, gry, odtwarzalne ścieżki dźwiękowe czy cokolwiek innego.
 - `<meta charset="utf-8">` — ten element ustawia zestaw znaków, którego twój dokument powinien używać do wyświetlenia treści strony. W tym wypadku jest to UTF-8, który zawiera większość znaków z większości ludzkich języków pisanych. Zasadniczo jest w stanie obsłużyć dowolne treści tekstowe, które można na nim umieścić. Nie ma powodu, aby tego nie ustawiać, a to pomoże uniknąć późniejszych problemów.
-- `<title></title>` — element {{htmlelement("title")}}.  Ustawia tytuł strony, który jest tytułem wyświetlanym na karcie przeglądarki, do której wczytywana jest strona. Służy ona również do opisu strony po dodaniu jej do zakładek ulubionych, a także pokazuje tutuł strony w wynikach wyszukiwania.
+- `<title></title>` — element {{htmlelement("title")}}.  Ustawia tytuł strony, który jest tytułem wyświetlanym na karcie przeglądarki, do której wczytywana jest strona. Służy ona również do opisu strony po dodaniu jej do zakładek ulubionych, a także pokazuje tutuł strony w wynikach wyszukiwania.
 
 ## Obrazy
 
@@ -119,7 +119,7 @@ Kluczowe dla atrybutu `alt` jest użycie dobrego opisu obrazka. Piszący tekst a
 
 Teraz spróbuj wymyślić dobre teksty alternatywne dla swojego obrazka.
 
-> **Uwaga:** Dowiedz się więcej na temat dostępności na stronie [MDN's Accessibility landing page](/pl/docs/Web/Accessibility).
+> **Note:** **Uwaga**: Dowiedz się więcej na temat dostępności na stronie [MDN's Accessibility landing page](/pl/docs/Web/Accessibility).
 
 ## Tagowanie tekstu
 
@@ -204,7 +204,7 @@ Odnośniki są bardzo ważne — są tym co sprawia, że Sieć jest Siecią! Aby
     <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
     ```
 
-Możesz otrzymać nieoczekiwany rezultat jeśli w adresie pominiesz część `https://` lub `http://`, zwana  _protokołem._ Po dodaniu linku przetestuj stronę czy odnośnik prowadzi tam gdzie chciałeś.
+Możesz otrzymać nieoczekiwany rezultat jeśli w adresie pominiesz część `https://` lub `http://`, zwana  _protokołem._ Po dodaniu linku przetestuj stronę czy odnośnik prowadzi tam gdzie chciałeś.
 
 > **Note:** `href` może się wydawać niejasnym wyborem dla nazwy atrybutu. Jeśli masz problem z zapamiętaniem go, pamietaj że oznacza on hipertekstową referencję _(\_ang._ **h**ypertext **ref**erence\_)
 
@@ -216,7 +216,7 @@ Jeśli podążałeś za instrukcjami zawartymi w tym artykule, obecnie twoja str
 
 ![A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text](https://mdn.mozillademos.org/files/9351/finished-test-page-small.png)
 
-Jeśli gdzieś po drodze utknąłeś, zawsze możesz porównać swój kod z  GitHub [ukończonymi przykładami](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) na GitHubie.
+Jeśli gdzieś po drodze utknąłeś, zawsze możesz porównać swój kod z  GitHub [ukończonymi przykładami](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) na GitHubie.
 
 Tutaj jedynie prześlizgnęliśmy się po powierzchni HTMLa. Aby dowiedzieć się więcej przejdź do strony [Nauka HTMLa ](/en-US/Learn/HTML).
 

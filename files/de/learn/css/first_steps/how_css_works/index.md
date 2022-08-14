@@ -71,10 +71,10 @@ Für korrekte Definitionen der CSS-Terminologie sehen Sie unter [Definitions](ht
 
 {{ LiveSampleLink('Action_Ein_Dokument_erstellen', 'Schauen Sie sich die Demo an') }}
 
-1. Erstellen Sie einen neuen Ordner irgendwo auf Ihrem Computer, um die Übungen für dieses Tutorial abzuspeichern.
-2. Öffnen Sie einen Texteditor und erstellen Sie eine neue Textdatei. Diese Datei wird das Dokument für die nächsten Übungen enthalten.
-3. Kopieren Sie den folgenden HTML-Code in Ihre Datei, und speichern Sie diese unter dem Namen `doc1.html`
-4. Öffnen Sie in Ihrem Browser ein neues Fenster oder einen neuen Tab und dann öffnen Sie darin die Datei, die Sie gerade gespeichert haben. Sie sollten dann folgenden Text mit fetten Anfangsbuchstaben sehen:
+1.  Erstellen Sie einen neuen Ordner irgendwo auf Ihrem Computer, um die Übungen für dieses Tutorial abzuspeichern.
+2.  Öffnen Sie einen Texteditor und erstellen Sie eine neue Textdatei. Diese Datei wird das Dokument für die nächsten Übungen enthalten.
+3.  Kopieren Sie den folgenden HTML-Code in Ihre Datei, und speichern Sie diese unter dem Namen `doc1.html`
+4.  Öffnen Sie in Ihrem Browser ein neues Fenster oder einen neuen Tab und dann öffnen Sie darin die Datei, die Sie gerade gespeichert haben. Sie sollten dann folgenden Text mit fetten Anfangsbuchstaben sehen:
 
 | **C**ascading **S**tyle **S**heets |
 | ---------------------------------- |

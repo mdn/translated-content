@@ -13,7 +13,7 @@ translation_of: Web/CSS/:invalid
 
 ## Übersicht
 
-Die [Pseudoklasse](/de/CSS/Pseudo-classes "Pseudoklassen") `:invalid`entspricht jedem {{ HTMLElement("input") }}- oder {{ HTMLElement("form") }}-Element, dessen Inhalt nicht gemäß der Eigenschaften des Eingabeelements [validiert](/en/HTML/HTML5/Constraint_validation "en/HTML/HTML5/Constraint_validation") werden kann. Dadurch kann die Darstellung ungültiger Felder auf einfache Weise angepasst werden, damit Benutzer\*innen fehlerhafte Eingaben gut identifizieren und korrigieren können.
+Die [Pseudoklasse](/de/CSS/Pseudo-classes "Pseudoklassen") `:invalid `entspricht jedem {{ HTMLElement("input") }}- oder {{ HTMLElement("form") }}-Element, dessen Inhalt nicht gemäß der Eigenschaften des Eingabeelements [validiert](/en/HTML/HTML5/Constraint_validation "en/HTML/HTML5/Constraint_validation") werden kann. Dadurch kann die Darstellung ungültiger Felder auf einfache Weise angepasst werden, damit Benutzer\*innen fehlerhafte Eingaben gut identifizieren und korrigieren können.
 
 Standardmäßig wendet Gecko keinen Stil auf die Pseudoklasse `:invalid` an. Jedoch wendet es einen Stil (ein rotes "Leuchten" mithilfe der Eigenschaft {{ Cssxref("box-shadow") }}) auf die Pseudoklasse {{ Cssxref(":-moz-ui-invalid") }} an, der einen Teil der Fälle für `:invalid` betrifft.
 

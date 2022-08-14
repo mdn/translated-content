@@ -113,9 +113,9 @@ Der `replacer` Parameter kann entweder eine Funktion oder ein Array sein. Als Fu
 - Wenn ein anderes Objekt zurückgegeben wird, wird dieses Objekt wiederum rekursiv in ein JSON-String konvertiert, was bedeutet, dass für jede Eigenschaft auch die `replacer` Funktion wieder aufgerufen wird. Eine Ausnahme ist, wenn das zurückgegebene Objekt eine Funktion ist, dann wird nichts zum JSON hinzugefügt.
 - Wenn `undefined` zurückgegeben wird, wird die Eigenschaft nicht in das JSON hinzugefügt.
 
-> **Hinweis:** Man kann eine `replacer` Funktion nicht nutzen, um Werte von Arrays zu entfernen. Wenn man `undefined` oder eine function zurückgibt, wird `null` zum JSON hinzugefügt.
+> **Note:** **Hinweis:** Man kann eine `replacer` Funktion nicht nutzen, um Werte von Arrays zu entfernen. Wenn man `undefined` oder eine function zurückgibt, wird `null` zum JSON hinzugefügt.
 
-> **Hinweis:** Wenn man möchten, dass der Replacer ein initiales Objekt von einem Schlüssel mit einer leeren String-Eigenschaft unterscheidet (da beide den leeren String als Schlüssel und möglicherweise ein Objekt als Wert angeben würden), muss man den Anzahl der Iterationen verfolgen (wenn er jenseits der ersten Iteration ist, ist es ein echter leerer String-Schlüssel).
+> **Note:** **Hinweis:** Wenn man möchten, dass der Replacer ein initiales Objekt von einem Schlüssel mit einer leeren String-Eigenschaft unterscheidet (da beide den leeren String als Schlüssel und möglicherweise ein Objekt als Wert angeben würden), muss man den Anzahl der Iterationen verfolgen (wenn er jenseits der ersten Iteration ist, ist es ein echter leerer String-Schlüssel).
 
 #### Beispiel mit einer Funktion
 

@@ -250,7 +250,7 @@ IE9 verwendet `"Scroll"` für `"ScrollLock"` und `"Win"` für `"OS"`.
 
 ## `"Accel"` virtueller Modifikator
 
-> **Hinweis:** Der virtuelle Modifikator `"Accel"` ist in den aktuellen Entwürfen der DOM3 Events-Spezifikation praktisch **veraltet**.
+> **Note:** **Notiz\*\***:** Der virtuelle Modifikator `"Accel"` ist in den aktuellen Entwürfen der DOM3 Events-Spezifikation praktisch **veraltet\*\*.
 
 `getModifierState()` also accepts a deprecated virtual modifier named `"Accel"`. `event.getModifierState("Accel")` returns `true` when at least one of {{domxref("KeyboardEvent.ctrlKey")}} or {{domxref("KeyboardEvent.metaKey")}} is `true`.
 

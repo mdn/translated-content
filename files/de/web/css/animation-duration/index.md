@@ -36,7 +36,7 @@ animation-duration: 10s, 30s, 230ms;
 - `<time>`
   - : Die Ablaufdauer der Animation wird in Sekunden (`s`) oder Millisekunden (`ms`) angegeben. Ohne Angabe einer Masseinheit ist der Wert ungültig. Negative Werte sind nicht zulässig.
 
-> **Hinweis:** Einige ältere Implementierungen mit Präfix interpretieren negative Werte als `0s`.
+> **Note:** **Hinweis:** Einige ältere Implementierungen mit Präfix interpretieren negative Werte als `0s`.
 
 ### Formale Syntax
 

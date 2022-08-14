@@ -26,8 +26,8 @@ border-spacing: \<length> | \<length> \<length> | inherit
 
 ### Wartości
 
-- **\<length>** : Jednakowa odległość w pionie i poziomie.
-- **\<length> \<length>** : Pierwsza wartość podaje poziomą odległość (przestrzeń pomiędzy komórką i sąsiednimi kolumnami), druga odległość pionową (pomiędzy komórką i sąsiadującymi z nią wierszami).
+- **\<length>** : Jednakowa odległość w pionie i poziomie.
+- **\<length> \<length>** : Pierwsza wartość podaje poziomą odległość (przestrzeń pomiędzy komórką i sąsiednimi kolumnami), druga odległość pionową (pomiędzy komórką i sąsiadującymi z nią wierszami).
 
 ### Przykłady
 

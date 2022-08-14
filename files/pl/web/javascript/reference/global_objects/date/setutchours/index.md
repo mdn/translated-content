@@ -24,11 +24,17 @@ Ustawia godzinę dla określonej daty stosownie do czasu uniwersalnego.
 - `hoursValue`
   - : Liczba całkowita pomiędzy 0 a 23, reprezentująca godzinę.
 
+<!---->
+
 - `minutesValue`
   - : Liczba całkowita pomiędzy 0 a 59, reprezentująca minutami.
 
+<!---->
+
 - `secondsValue`
   - : Liczba całkowita pomiędzy 0 a 59, reprezentująca sekundy. Jeśli określisz parametr `secondsValue`, to musisz także określić parametr `minutesValue`.
+
+<!---->
 
 - `msValue`
   - : Liczba pomiędzy 0 a 999, reprezentująca milisekundy. Jeśli określisz parametr `msValue`, to musisz także określić parametry `minutesValue` i `secondsValue`.

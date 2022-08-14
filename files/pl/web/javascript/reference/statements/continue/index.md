@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencje/Polecenia/continue
 ---
 {{jsSidebar("Statements")}}
 
-**Polecenie continue** zatrzymuje wykonanie pętli w obecnej iteracji, w obecnej lub wskazanej pętli i kontynuuje wykonanie pętli w kolejnej jej iteracji.
+**Polecenie continue** zatrzymuje wykonanie pętli w obecnej iteracji, w obecnej lub wskazanej pętli i kontynuuje wykonanie pętli w kolejnej jej iteracji.
 
 {{EmbedInteractiveExample("pages/js/statement-continue.html")}}
 
@@ -26,6 +26,8 @@ original_slug: Web/JavaScript/Referencje/Polecenia/continue
 W przeciwieństwie do instrukcji {{jsxref("Statements/break", "break")}}, `continue` nie zatrzymuje całkowicie wykonania pętli, natomiast:
 
 - w pętli {{jsxref("Statements/while", "while")}} powoduje przejście do warunku pętli,
+
+<!---->
 
 - w pętli {{jsxref("Statements/for", "for")}}, powoduje przejście do wyrażenia aktualizującego pętlę.
 

@@ -24,6 +24,8 @@ Die **GlobalEventHandlers.onresize** Property enthält einen {{event("Event_hand
 
     window.onresize = doFunc;
 
+<!---->
+
     <html>
     <head>
 

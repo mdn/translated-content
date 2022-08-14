@@ -29,7 +29,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 ## Value
 
-Ein {{domxref("DOMString")}} der den Wert der checkbox repräsentiert. Dies findet man nicht clientseitig, aber auf Servern ist dies der Wert (**`value`**), der beim Übermitteln der Daten mit dem Checkbox-**`name`**übergeben wird. Sehen wir uns folgendes Beispiel an:
+Ein {{domxref("DOMString")}} der den Wert der checkbox repräsentiert. Dies findet man nicht clientseitig, aber auf Servern ist dies der Wert (**`value`**), der beim Übermitteln der Daten mit dem Checkbox-**`name `**übergeben wird. Sehen wir uns folgendes Beispiel an:
 
 ```html
 <form>
@@ -59,7 +59,7 @@ Zusätzlich zu den allgemeinen Attributen, die von allen {{HTMLElement("input")}
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [`checked`](#checked)   | Boolean; wenn vorhanden, wird die Checkbox standardmäßig auf `on` gestellt.                                                      |
 | [`readonly`](#readonly) | Boolean; wenn vorhanden, wird das Erscheinungsbild abgeändert, so dass angezeigt wird, dass der Wert nicht geändert werden kann. |
-| [`value`](#value)       | Der String, der beim Übertragen der Form benutzt wird, wenn die Checkbox den Wert `on`hat.                                      |
+| [`value`](#value)       | Der String, der beim Übertragen der Form benutzt wird, wenn die Checkbox den Wert `on `hat.                                      |
 
 ### {{htmlattrdef("checked")}}
 
@@ -67,7 +67,7 @@ Ein Boolean-Attribut, das angibt, ob die Checkbox standardmäßig `checked` ist 
 
 > **Note:** **Anmerkung:** Anders als andere Eingabe-Steuerelemente ist eine Checkbox nur dann in den übermittelten Daten vorhanden, wenn die Checkbox angeklickt (`checked`) ist. Wenn das der Fall ist, wird der Wert der Checkbox (`value`) als die Eingabe übermittelt.
 
-Anders als andere Browser, [speichert](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)Firefox standardmäßig den dynamischen Status von `<input>` zwischen mehreren Seitenaufrufen. Benutzen Sie das {{htmlattrxref("autocomplete","input")}}-Attribut, um dieses Feature zu steuern.
+Anders als andere Browser, [speichert ](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)Firefox standardmäßig den dynamischen Status von `<input>` zwischen mehreren Seitenaufrufen. Benutzen Sie das {{htmlattrxref("autocomplete","input")}}-Attribut, um dieses Feature zu steuern.
 
 ### {{htmlattrdef("readonly")}}
 
@@ -133,7 +133,7 @@ Neben der Benutzbarkeit ist dies ein guter Grund, die `<label>`-Elemente in der 
 
 ### Checkboxen mit unbestimmbarem Wert
 
-Zusätzlich zu den Status-Werten `checked`und `unchecked`gibt es einen dritten Status, den eine Checkbox annehmen kann: **indeterminate**. Dies ist ein Status, bei dem man nich sagen kann, ob das Element `on` oder `off` ist. Dies wird gesetzt durch die {{domxref("HTMLInputElement")}} object's `indeterminate` Eigenschaft via JavaScript (es kann nicht durch HTML gesetzt werden):
+Zusätzlich zu den Status-Werten `checked `und `unchecked `gibt es einen dritten Status, den eine Checkbox annehmen kann: **indeterminate**. Dies ist ein Status, bei dem man nich sagen kann, ob das Element `on` oder `off` ist. Dies wird gesetzt durch die {{domxref("HTMLInputElement")}} object's `indeterminate` Eigenschaft via JavaScript (es kann nicht durch HTML gesetzt werden):
 
 ```js
 inputInstance.indeterminate = true;

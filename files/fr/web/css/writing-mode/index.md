@@ -40,6 +40,8 @@ writing-mode: unset;
 - `sideways-rl`{{experimental_inline}}
   - : Le contenu coule verticalement du haut vers le bas et tous les glyphes, y compris pour les systèmes d'écriture verticaux sont tournés sur le côté, vers la droite.
 
+<!---->
+
 - `sideways-lr`{{experimental_inline}}
   - : Le contenu coule verticalement du haut vers le bas et tous les glyphes, y compris pour les systèmes d'écriture verticaux sont tournés sur le côté, vers la gauche.
 - `lr` {{deprecated_inline}}

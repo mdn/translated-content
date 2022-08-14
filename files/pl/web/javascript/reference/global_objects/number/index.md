@@ -29,6 +29,8 @@ Obiekt `Number` jest głównie stosowany do:
 
 - Uzyskania dostępu do jego stałych własnościach, które reprezentują najmniejszą i największa możliwą (przestawialną) liczbę, dodatnią lub ujemną nieskończoność i wartość nieliczbową (_Not-a-Number_ ).
 
+<!---->
+
 - Aby stworzyć obiekty liczbowe do których możesz dodać własności. Najprawdopodobniej rzadko, kiedy będziesz musiał stworzyć obiekt typu `Number`.
 
 Własności `Number` są własnościami jego klasy, nieindywidualnymi własnościami obiektu.

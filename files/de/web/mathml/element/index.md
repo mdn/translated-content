@@ -8,7 +8,7 @@ translation_of: Web/MathML/Element
 ---
 Dies ist eine alphabetische Liste aller MathML**-Darstellungselemente** (engl. presentation markup). Damit können innerhalb einer html-Umgebung mathematische Terme und Gleichungen dargestellt werden.
 
-> **Hinweis:** Damit nicht zu verwechseln ist die inhaltliche Beschreibung eines mathematischen Terms oder einer Gleichung (engl. content markup). Die inhaltliche Beschreibung ist nicht dafür gedacht, unmittelbar vom MathML-Parser innerhalb von html-Seiten dargestellt zu werden. (siehe {{ bug(276028) }}). Wenn Du mehr über das content markup lernen möchtest, dann besuche [Kapitel 4](http://www.w3.org/TR/MathML3/chapter4.html) der [MathML 3-Spezifikation](http://www.w3.org/TR/MathML3/).
+> **Note:** Hinweis: Damit nicht zu verwechseln ist die inhaltliche Beschreibung eines mathematischen Terms oder einer Gleichung (engl. content markup). Die inhaltliche Beschreibung ist nicht dafür gedacht, unmittelbar vom MathML-Parser innerhalb von html-Seiten dargestellt zu werden. (siehe {{ bug(276028) }}). Wenn Du mehr über das content markup lernen möchtest, dann besuche [Kapitel 4](http://www.w3.org/TR/MathML3/chapter4.html) der [MathML 3-Spezifikation](http://www.w3.org/TR/MathML3/).
 
 ### math
 

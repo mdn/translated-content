@@ -76,6 +76,8 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 - `nsIBrowserHistory`
   - : La méthode `hidePage()` n'a jamais été implémentée, et a été entièrement supprimée dans cette version. La méthode `addPageWithDetails()` a également été supprimée dans le cadre des travaux pour faire une API [Places](/fr/docs/Places) asynchrone ; à la place, utilisez plutôt `mozIAsyncHistory.updatePlaces()`. De plus, l'attribut `count` a été retiré, il ne renvoyé pas un comptage réel à certain moment (à la place, il indiqué simplement si les entrées existées). Vous pouvez utiliser à la place `nsINavHistoryService.hasHistoryEntries`.
 
+<!---->
+
 - `inIDOMUtils`
   - : La méthode `parseStyleSheet()` permet d'ajouter et d'analyser des feuilles de style.
 

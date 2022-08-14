@@ -32,7 +32,7 @@ In Bezug auf die Stapelkontexte werden DIV #1 und DIV #3 einfach in das Wurzelel
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 
-> **Hinweis:** DIV #1 und DIV #3 sind nicht lichtdurchlässig. Es ist wichtig, sich daran zu erinnern, dass das Zuweisen einer Deckkraft von weniger als 1 zu einem positionierten Element implizit einen Stapelkontext erzeugt, genau wie das Hinzufügen eines `z-index` Wertes. Und dieses Beispiel zeigt, was passiert, wenn ein übergeordnetes Element keinen Stapelkontext erzeugt.
+> **Note:** **Hinweis:** DIV #1 und DIV #3 sind nicht lichtdurchlässig. Es ist wichtig, sich daran zu erinnern, dass das Zuweisen einer Deckkraft von weniger als 1 zu einem positionierten Element implizit einen Stapelkontext erzeugt, genau wie das Hinzufügen eines `z-index` Wertes. Und dieses Beispiel zeigt, was passiert, wenn ein übergeordnetes Element keinen Stapelkontext erzeugt.
 
 ## Beispiel
 

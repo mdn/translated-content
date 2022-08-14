@@ -26,7 +26,6 @@ Für das eingebaute {{jsxref("Object")}} Objekt, `liefert toSource() den folgend
       [native code]
   }
   ```
-
 - Für instanzen von {{jsxref("Object")}}, liefert `toSource()` einen String der den Sourcecode representiert.
 
 `toSource()` kann während der Entwicklung aufgerufen werden um die Inhalte eines Objekts zu inspizieren.

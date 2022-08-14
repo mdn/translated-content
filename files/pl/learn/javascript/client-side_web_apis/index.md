@@ -5,15 +5,15 @@ translation_of: Learn/JavaScript/Client-side_web_APIs
 ---
 {{LearnSidebar}}
 
-Pisząc skrypty JavaScript po stronie klienta dla stron internetowych lub aplikacji szybko napotkamy Interfejsy Programowania Aplikacji (ang. **Application Programming Interface** - **API**). API to są funkcje programistyczne do manipulowania różnymi aspektami przeglądarki i systemu operacyjnego, na którym działa strona, lub manipulowania danymi z innych stron lub serwisów. W tym module dowiemy się czym są interfejsy API i jak korzystać z najbardziej popularnych interfejsów API, które często można napotkać w swoich pracach rozwojowych.
+Pisząc skrypty JavaScript po stronie klienta dla stron internetowych lub aplikacji szybko napotkamy Interfejsy Programowania Aplikacji (ang. **Application Programming Interface** - **API**). API to są funkcje programistyczne do manipulowania różnymi aspektami przeglądarki i systemu operacyjnego, na którym działa strona, lub manipulowania danymi z innych stron lub serwisów. W tym module dowiemy się czym są interfejsy API i jak korzystać z najbardziej popularnych interfejsów API, które często można napotkać w swoich pracach rozwojowych.
 
-## Wymagania wstępne
+## Wymagania wstępne
 
-By w pełni skorzystać z tego modułu, powinno się przejść przez poprzednie moduły JavaScript z tej serii ([Pierwsze kroki w JavaScript](/pl/docs/Learn/JavaScript/Pierwsze_kroki), [Klocki JavaScript](pl/docs/Learn/JavaScript/Building_blocks), i [Wprowadzenie do obiektów JavaScript](pl/docs/Learn/JavaScript/Obiekty)). Moduły te, tak czy inaczej wymagają wielokrotnego użycia prostego API ponieważ trudno jest napisać przykłady JavaScriptu po stronie klienta, które wykonują bez nich coś uzytecznego! Wchodzimy tutaj na wyższy poziom, zkaładając znajomość podstawowego języka JavaScript i zgłębiając często używane interfejsy webowe API trochę bardziej szczegółowo.
+By w pełni skorzystać z tego modułu, powinno się przejść przez poprzednie moduły JavaScript z tej serii ([Pierwsze kroki w JavaScript](/pl/docs/Learn/JavaScript/Pierwsze_kroki), [Klocki JavaScript](pl/docs/Learn/JavaScript/Building_blocks), i [Wprowadzenie do obiektów JavaScript](pl/docs/Learn/JavaScript/Obiekty)). Moduły te, tak czy inaczej wymagają wielokrotnego użycia prostego API ponieważ trudno jest napisać przykłady JavaScriptu po stronie klienta, które wykonują bez nich coś uzytecznego! Wchodzimy tutaj na wyższy poziom, zkaładając znajomość podstawowego języka JavaScript i zgłębiając często używane interfejsy webowe API trochę bardziej szczegółowo.
 
-Podstawowa wiedza o [HTML](/pl/docs/Learn/HTML) i [CSS](/pl/docs/Learn/CSS) będzie również użyteczna.
+Podstawowa wiedza o [HTML](/pl/docs/Learn/HTML) i [CSS](/pl/docs/Learn/CSS) będzie również użyteczna.
 
-> **Uwaga:** Jeśli pracujesz na urządzeniu, którym nie masz możliwości tworzenia swoich plików, możesz wypróbować przykłady kodu (większość z nich) w internetowych programach kodujących takich jak [JSBin](http://jsbin.com/) lub [Thimble](https://thimble.mozilla.org/).
+> **Note:** **Uwaga**: Jeśli pracujesz na urządzeniu, którym nie masz możliwości tworzenia swoich plików, możesz wypróbować przykłady kodu (większość z nich) w internetowych programach kodujących takich jak [JSBin](http://jsbin.com/) lub [Thimble](https://thimble.mozilla.org/).
 
 ## Przewodnik
 

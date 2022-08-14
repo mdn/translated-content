@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
 {{JSRef}}
 
-Die**`Date.now()`** Methode gibt die Anzahl der Millisekunden, die seit dem 01.01.1970 00:00:00 UTC vergangen sind zurück.
+Die**` Date.now()`** Methode gibt die Anzahl der Millisekunden, die seit dem 01.01.1970 00:00:00 UTC vergangen sind zurück.
 
 {{EmbedInteractiveExample("pages/js/date-now.html")}}
 

@@ -41,6 +41,8 @@ _Il hérite de propriétés de son parent, {{domxref("EventTarget")}}, et implé
 - {{domxref("Worker.onmessageerror")}}
   - : Un {{event("Event_handlers", "event handler")}} qui indique le code à appeler quand un message {{event("messageerror")}} arrive.
 
+<!---->
+
 ## Méthodes
 
 _Il hérite de son parent,_ _{{domxref("EventTarget")}},_ et implémente les propriétés de _{{domxref("AbstractWorker")}}._
@@ -56,6 +58,8 @@ _Il hérite de son parent,_ _{{domxref("EventTarget")}},_ et implémente les pro
   - : Lorsque le worker parent reçoit un message venant du worker. On peut aussi y accéder via la propriété {{domxref("Worker.onmessage")}}.
 - [`messageerror`](/fr/docs/Web/API/Worker/messageerror_event)
   - : Lorsque le worker reçois un message qu'il ne peut [désérialiser](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Aussi disponible à travers la propriété {{domxref("Worker.onmessageerror")}}.
+
+<!---->
 
 - [`rejectionhandled`](/fr/docs/Web/API/Window/rejectionhandled_event)
   - : Levé à chaque fois qu'une {{jsxref("Promise")}} est rejeté, avec ou sans gestionnaire pour intercepter l'exception. Aussi disponible à travers le gestionnaire [`onrejectionhandled`](/fr/docs/Web/API/WindowEventHandlers/onrejectionhandled).

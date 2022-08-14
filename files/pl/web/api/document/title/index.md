@@ -20,6 +20,8 @@ Pobiera lub ustawia tytuł dokumentu.
 
 - `tytul` jest łańcuchem znaków zawierającym tytuł dokumentu. Jeśli tytuł został nadpisany poprzez ustawienie `document.title`, zwraca tę wartość. W przeciwnym wypadku zwraca tytuł określony w znaczniku (zobacz poniższe [Uwagi](#uwagi)).
 
+<!---->
+
     document.title =nowyTytul;
 
 - `nowyTytul` jest nowym tytułem dokumentu. Przypisanie to ma wpływ na wartość zwracaną przez `document.title` oraz wyświetlany tytuł dokumentu (np. w pasku tytułowym okna), ale nie wpływa na DOM dokumentu (np. zawartość elementu `<title>` w dokumencie HTML).

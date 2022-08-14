@@ -83,7 +83,7 @@ console.info("My first car was a", car, ". The object is: ", someObject);
 
 This output will look like this:
 
-    [09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
+    [09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
 
 #### Using string substitutions
 
@@ -99,7 +99,7 @@ Gecko 9.0 {{geckoRelease("9.0")}} introduced support for string substitutions. W
 Each of these pulls the next argument after the format string off the parameter list. For example:
 
     for (var i=0; i<5; i++) {
-      console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+      console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
     }
 
 The output looks like this:
@@ -170,10 +170,10 @@ The console object also supports outputting a stack trace; this will show you th
     foo();
 
     function foo() {
-      function bar() {
-        console.trace();
-      }
-      bar();
+      function bar() {
+        console.trace();
+      }
+      bar();
     }
 
 The output in the console looks something like this:

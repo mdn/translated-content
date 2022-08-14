@@ -21,7 +21,7 @@ Die folgende Tabelle beschreibt das Verhalten von `tabindex` in modernen Browser
 | Nicht vorhanden                | Folgt der Festlegung für das Element für die Plattform ("Ja" bei Formularsteuerungen, Links, etc.). | Folgt der Festlegung für das Element für die Plattform.                                                                                                                                                                                                                                                                                                                              |
 | Negativ (z.B. `tabindex="-1"`) | Ja                                                                                                  | Nein; Entwickler muss auf Tasteneingaben reagieren und das Element über [`focus()`](../../../../En/DOM/Element.focus "https://developer.mozilla.org/En/DOM/Element.focus") fokussieren.                                                                                                                                                                                              |
 | Null (z.B. `tabindex="0"`)     | Ja                                                                                                  | In der Tab-Ordnung relativ zur Position des Elements im Dokument.                                                                                                                                                                                                                                                                                                                    |
-| Positiv (z.B. `tabindex="33"`) | Ja                                                                                                  | Wert von `tabindex` bestimmt die Position des Elements in der Tab-Ordnung: Im Allgemeinen werden Elemente vor solchen positioniert, bei denen `tabindex="0"` gesetzt ist oder die von Natur aus per Tab steuerbar sind; Elemente mit kleinere Werten werden vor solchen mit größeren Werten positioniert (ein Element mit `tabindex="7"` wird z.B. vor `tabindex="11"`positioniert) |
+| Positiv (z.B. `tabindex="33"`) | Ja                                                                                                  | Wert von `tabindex` bestimmt die Position des Elements in der Tab-Ordnung: Im Allgemeinen werden Elemente vor solchen positioniert, bei denen `tabindex="0"` gesetzt ist oder die von Natur aus per Tab steuerbar sind; Elemente mit kleinere Werten werden vor solchen mit größeren Werten positioniert (ein Element mit `tabindex="7"` wird z.B. vor `tabindex="11" `positioniert) |
 
 #### Einfache Steuerungen
 
@@ -95,8 +95,8 @@ Wenn Sie ein Steuerelement deaktivieren, sollte dieses aus der Tab-Ordnung entfe
 
 Wenn ein Benutzer den Fokus per Tab von einem Element wegbewegt, sollte der Fokus zu dem Element, das zuvor fokussiert war - z.B. einer Baumkomponente oder Gridzelle - zurückkehren. Es existieren zwei verschiedene Techniken, um dies zu bewirken:
 
-1. Verschiebung von `tabindex`: Programmatische Bewegung des Fokus
-2. `aria-activedescendent`: Verwaltung eines "virtuellen" Fokus
+1.  Verschiebung von `tabindex`: Programmatische Bewegung des Fokus
+2.  `aria-activedescendent`: Verwaltung eines "virtuellen" Fokus
 
 #### Technik 1: Verschiebung von tabindex
 
@@ -104,9 +104,9 @@ Setzt man tabindex für das fokussierte Element auf "0", wird das ausgewählte E
 
 Jeweils ein keydown-Hander wird mit einem Element der Gruppe verknüpft. Wenn der Benutzer eine Pfeiltaste drückt, um ein anderes Element anzusteuern, passiert Folgendes:
 
-1. Das neue Element wird codegesteuert fokussiert.
-2. Der `tabindex` des fokussierten Elements wird auf "0" gesetzt.
-3. Der `tabindex` des zuvor fokussierte Elements wird auf "-1" gesetzt.
+1.  Das neue Element wird codegesteuert fokussiert.
+2.  Der `tabindex` des fokussierten Elements wird auf "0" gesetzt.
+3.  Der `tabindex` des zuvor fokussierte Elements wird auf "-1" gesetzt.
 
 ##### Tipps
 

@@ -23,6 +23,8 @@ Beispiele:
 - HTML Tags innerhalb eines Makro Aufrufs
   - : Makros werden oft durch Textformatiertungen zerstört. `So kann z. B. das Tag </code>` in den Quellcode des Makros geraten. Die Quellcode Ansicht (source view) zeigt die zu beseitigenden Formatierungselemente.
 
+<!---->
+
 ## TemplateLoadingError
 
 `TemplateLoadingError` Fehler treten auf, wenn KumaScript nicht weiß, welches [Makro](/de/docs/MDN/Contribute/Content/Macros) in die Seite geladen soll.

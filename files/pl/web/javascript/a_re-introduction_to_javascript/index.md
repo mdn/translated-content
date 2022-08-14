@@ -4,15 +4,15 @@ slug: Web/JavaScript/A_re-introduction_to_JavaScript
 translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/Ponowne_wprowadzenie_do_JavaScript
 ---
-{{jsSidebar}}Po co ponowne wprowadzanie? Ponieważ {{Glossary("JavaScript")}} osławiony jest jako [najbardziej niezrozumiany język świata](http://crockford.com/javascript/). Często wyśmiewany jest jako bycie zabawką, jednak pod warstwą jego prosoty czekają potężne funkcje. Obecnie JavaScript używany jest w niewiarygodnie dużej ilości wysokoprofilowych aplikacji, pokazując, że dogłębne zrozumienie tej technologii jest ważną umiejętnością dla każdego, webowego jak i mobilnego, dewelopera.Warto rozpocząć od zaznajomienia się z historią tego języka. JavaScript został stworzony w 1995 roku przez Brendah Eich, który w tym czasie był inżynierem w Netscape. Pierwszy raz JavaScript został wydany z Netscape 2 początkiem 1996 roku. Pierwotnie miał on być nazywany LiveScript, został jednak przemianowany za sprawą feralnej decyzji marketingowej, która miała na celu wykorzystanie popularności języka Java Sun Microsystem - pomijając znikome części wspólne. Od tego czasu jest to źrodłem wielu nieporozumień.  Kilka miesięcy poźniej Microsoft wydał JScript razem z Internet Explorer 3. Był to w większości kompatybilny i podobny w pracy do JavaScript. Kilka miesięcy po tym, Netscape zgłosił JavaScript do [Ecma International](http://www.ecma-international.org/), europejskiego stowarzyszenia standaryzującego, czego rezultatem było wydanie pierwszej edycji {{Glossary("ECMAScript")}}. Standard otrzymał znaczącą aktualizację jako [ECMAScript edition 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm) w 1999 roku i od tego czasu został prawie niezmieniony. Czwarta edycja została porzucona z powodu różnic politycznych dotyczących złożoności języka. Wiele części czwartej edycji uformowało podstawy dla piątej ECMAScript - opublikowanej w grudniu 2009 roku, oraz szóstej, której publikacja wypadła w czerwcu 2015 roku.
+{{jsSidebar}}Po co ponowne wprowadzanie? Ponieważ {{Glossary("JavaScript")}} osławiony jest jako [najbardziej niezrozumiany język świata](http://crockford.com/javascript/). Często wyśmiewany jest jako bycie zabawką, jednak pod warstwą jego prosoty czekają potężne funkcje. Obecnie JavaScript używany jest w niewiarygodnie dużej ilości wysokoprofilowych aplikacji, pokazując, że dogłębne zrozumienie tej technologii jest ważną umiejętnością dla każdego, webowego jak i mobilnego, dewelopera.Warto rozpocząć od zaznajomienia się z historią tego języka. JavaScript został stworzony w 1995 roku przez Brendah Eich, który w tym czasie był inżynierem w Netscape. Pierwszy raz JavaScript został wydany z Netscape 2 początkiem 1996 roku. Pierwotnie miał on być nazywany LiveScript, został jednak przemianowany za sprawą feralnej decyzji marketingowej, która miała na celu wykorzystanie popularności języka Java Sun Microsystem - pomijając znikome części wspólne. Od tego czasu jest to źrodłem wielu nieporozumień.  Kilka miesięcy poźniej Microsoft wydał JScript razem z Internet Explorer 3. Był to w większości kompatybilny i podobny w pracy do JavaScript. Kilka miesięcy po tym, Netscape zgłosił JavaScript do [Ecma International](http://www.ecma-international.org/), europejskiego stowarzyszenia standaryzującego, czego rezultatem było wydanie pierwszej edycji {{Glossary("ECMAScript")}}. Standard otrzymał znaczącą aktualizację jako [ECMAScript edition 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm) w 1999 roku i od tego czasu został prawie niezmieniony. Czwarta edycja została porzucona z powodu różnic politycznych dotyczących złożoności języka. Wiele części czwartej edycji uformowało podstawy dla piątej ECMAScript - opublikowanej w grudniu 2009 roku, oraz szóstej, której publikacja wypadła w czerwcu 2015 roku.
 
-> **Note:** Od tej pory określenie "JavaScript" będzie używane w odniesieniu do ECMAScript, ponieważ określenie to jest bardziej rozpoznawalne.
+> **Note:** Od tej pory określenie "JavaScript" będzie używane w odniesieniu do ECMAScript, ponieważ określenie to jest bardziej rozpoznawalne.
 
-W odróżnieniu od innych języków programowania, JavaScript nie posiada koncepcji wejścia ani wyjścia. Zaprojektowany został do działania jako język skryptowy działający w środowisku hosta i do tego środowiska nalezy zapewnienie mechanizmów komunikacji ze światem. Najbardziej pospolitym środowiskiem jest przeglądarka, jednak interpretatory JavaScript można znaleźć również w wielu innych miejscach włączając w to Adobe Acrobat, Adobe Photoshop, obrazy SVG, silnik wigetów Yahoo, w środowiskach uruchomieniowych takich jak [Node.js](http://nodejs.org/), bazach danych NoSQL - [Apache CouchDB](http://couchdb.apache.org/), systemach wbudowanych czy kompletnych środowiskach graficznych takich jak [GNOME ](http://www.gnome.org/)( jeden z najpopularniejszych GUI dla systemów operacyjnych GNU/Linux ).
+W odróżnieniu od innych języków programowania, JavaScript nie posiada koncepcji wejścia ani wyjścia. Zaprojektowany został do działania jako język skryptowy działający w środowisku hosta i do tego środowiska nalezy zapewnienie mechanizmów komunikacji ze światem. Najbardziej pospolitym środowiskiem jest przeglądarka, jednak interpretatory JavaScript można znaleźć również w wielu innych miejscach włączając w to Adobe Acrobat, Adobe Photoshop, obrazy SVG, silnik wigetów Yahoo, w środowiskach uruchomieniowych takich jak [Node.js](http://nodejs.org/), bazach danych NoSQL - [Apache CouchDB](http://couchdb.apache.org/), systemach wbudowanych czy kompletnych środowiskach graficznych takich jak [GNOME ](http://www.gnome.org/)( jeden z najpopularniejszych GUI dla systemów operacyjnych GNU/Linux ).
 
 ## Przegląd
 
-JavaScript jest wieloparadygmatowym, dynamicznym językiem z typami i operatorami, standardowymi wbudowanymi obiektami oraz metodami. Jego składnia opiera się na językach Java i C - wiele struktur tych języków również zostało wprowadzonych do JavaScript-u. JavaScript wspiera programowanie obiektowe z prototypami obiektów zamiast klas ( zobacz więcej [dziedziczenie prototypowe](/pl/docs/Web/JavaScript/dziedziczenie_lancuch_prototypow) oraz [ES2015 klasy](/pl/docs/Web/JavaScript/Reference/Classes) (ang.)). Dodatkowo JavaScript wspiera programowanie funkcyjne - funkcje są obiektami, nadanie funkcjom możliwości przechowywania kodu wykonawczego i przekazywaniu go jak każdemu innemu obiektowi.
+JavaScript jest wieloparadygmatowym, dynamicznym językiem z typami i operatorami, standardowymi wbudowanymi obiektami oraz metodami. Jego składnia opiera się na językach Java i C - wiele struktur tych języków również zostało wprowadzonych do JavaScript-u. JavaScript wspiera programowanie obiektowe z prototypami obiektów zamiast klas ( zobacz więcej [dziedziczenie prototypowe](/pl/docs/Web/JavaScript/dziedziczenie_lancuch_prototypow) oraz [ES2015 klasy](/pl/docs/Web/JavaScript/Reference/Classes) (ang.)). Dodatkowo JavaScript wspiera programowanie funkcyjne - funkcje są obiektami, nadanie funkcjom możliwości przechowywania kodu wykonawczego i przekazywaniu go jak każdemu innemu obiektowi.
 
 Zacznijmy od spojrzenia na budulec każdego języka: typy. Programy JavaScript manipulują wartościami, a wszystkie te wartości należą do typu. W JavaScript wyróżniamy typy:
 
@@ -23,7 +23,7 @@ Zacznijmy od spojrzenia na budulec każdego języka: typy. Programy JavaScript m
 - {{jsxref("Object")}}
 - {{jsxref("Symbol")}} (new in ES2015)
 
-...oraz {{jsxref("undefined")}} i {{jsxref("null")}}, które są nieco dziwne. Obiekty posiadają specjalne rodzaje, więc aby być technicznie poprawnym powyższa lista powinna wyglądać następująco:
+...oraz {{jsxref("undefined")}} i {{jsxref("null")}}, które są nieco dziwne. Obiekty posiadają specjalne rodzaje, więc aby być technicznie poprawnym powyższa lista powinna wyglądać następująco:
 
 - {{jsxref("Number")}}
 - {{jsxref("String")}}
@@ -39,11 +39,11 @@ Zacznijmy od spojrzenia na budulec każdego języka: typy. Programy JavaScript m
 - {{jsxref("null")}}
 - {{jsxref("undefined")}}
 
-Istnieją także wbudowane typy {{jsxref("Error")}}. Będzie prościej jeśli będziemy trzymać się pierwszej listy, a więc omówione zostaną wymienione tam typy.
+Istnieją także wbudowane typy {{jsxref("Error")}}. Będzie prościej jeśli będziemy trzymać się pierwszej listy, a więc omówione zostaną wymienione tam typy.
 
 ## Liczby
 
-Zgodnie ze specyfikacją numery w JavaScript są "wartościami podwójnie precyzyjnymi 64-bitowego formatu IEEE 754". Ma to pewne interesujące konsekwencje. W JavaScript nie ma rzeczy takiej jak liczba całkowita, należy więc być dość ostrożnym z artmetyką jeśli jesteś przyzywczajony do matematyki w języku C lub Java.
+Zgodnie ze specyfikacją numery w JavaScript są "wartościami podwójnie precyzyjnymi 64-bitowego formatu IEEE 754". Ma to pewne interesujące konsekwencje. W JavaScript nie ma rzeczy takiej jak liczba całkowita, należy więc być dość ostrożnym z artmetyką jeśli jesteś przyzywczajony do matematyki w języku C lub Java.
 
 Dodatkowo, zwracaj uwagę na rzeczy takie jak:
 
@@ -51,30 +51,30 @@ Dodatkowo, zwracaj uwagę na rzeczy takie jak:
 0.1 + 0.2 == 0.30000000000000004;
 ```
 
-W praktyce, liczby całkowite są traktowane jako 32-bitowe jednostki, a niektóre implementacje przechowują je w ten sposób dopóki nie zostaną poproszone o wykonanie instrukcji, która jest poprawna dla liczby, ale nie dla 32-bitowej liczby całkowitej. Może to być istotne dla operacji bitowych.
+W praktyce, liczby całkowite są traktowane jako 32-bitowe jednostki, a niektóre implementacje przechowują je w ten sposób dopóki nie zostaną poproszone o wykonanie instrukcji, która jest poprawna dla liczby, ale nie dla 32-bitowej liczby całkowitej. Może to być istotne dla operacji bitowych.
 
-Standardowe[ operatory arytmetyczne](/pl/docs/Web/JavaScript/Reference/Operators#Arithmetic_operators) są wspierane, wliczając w to dodawanie, odejmowanie, modulo i tak dalej. Istnieje też wbudowany obiekt, o którym zapomnieliśmy wspomnieć, {{jsxref("Math")}}, który zapewnia zaawansowane funkcje i stałe matematyczne:
+Standardowe[ operatory arytmetyczne](/pl/docs/Web/JavaScript/Reference/Operators#Arithmetic_operators) są wspierane, wliczając w to dodawanie, odejmowanie, modulo i tak dalej. Istnieje też wbudowany obiekt, o którym zapomnieliśmy wspomnieć, {{jsxref("Math")}}, który zapewnia zaawansowane funkcje i stałe matematyczne:
 
 ```js
 Math.sin(3.5);
 var circumference = 2 * Math.PI * r;
 ```
 
-Możesz zamienić String na liczbę całkowitą używając wbudowanej funkcji {{jsxref("Global_Objects/parseInt", "parseInt()")}}. Funkcja ta przyjmuje podstawę do konwersji jako opcjonalny drugi argument, który zawsze należy podawać:
+Możesz zamienić String na liczbę całkowitą używając wbudowanej funkcji {{jsxref("Global_Objects/parseInt", "parseInt()")}}. Funkcja ta przyjmuje podstawę do konwersji jako opcjonalny drugi argument, który zawsze należy podawać:
 
 ```js
 parseInt('123', 10); // 123
 parseInt('010', 10); // 10
 ```
 
-W starszych przeglądarkach, String-i zaczynające się od "0" przyjmowane są w formacie ósemkowym (podstawa 8), jednak od 2013 roku nie stanowiło to problemu. Chyba, że jesteś pewien formatu String-a, mogą zaskoczyć Cię wyniki w starszych przeglądarkach:
+W starszych przeglądarkach, String-i zaczynające się od "0" przyjmowane są w formacie ósemkowym (podstawa 8), jednak od 2013 roku nie stanowiło to problemu. Chyba, że jesteś pewien formatu String-a, mogą zaskoczyć Cię wyniki w starszych przeglądarkach:
 
 ```js
 parseInt('010');  //  8
 parseInt('0x10'); // 16
 ```
 
-Widzimy tu, że funkcja {{jsxref("Global_Objects/parseInt", "parseInt()")}} traktuje pierwszego Stringa w systemie ósemkowym przez 0 na przodzie, drugi String natomiast traktowny jest w systemie szesnastowym przez "0x" z przodu. _Zapis szesnastkowy nadal istnieje_; tylko ósemkowy został usunięty.
+Widzimy tu, że funkcja {{jsxref("Global_Objects/parseInt", "parseInt()")}} traktuje pierwszego Stringa w systemie ósemkowym przez 0 na przodzie, drugi String natomiast traktowny jest w systemie szesnastowym przez "0x" z przodu. _Zapis szesnastkowy nadal istnieje_; tylko ósemkowy został usunięty.
 
 Jeśli chcesz zmenić liczbę binarną na całkowitą, wystarczy zmienić podstawę:
 
@@ -82,9 +82,9 @@ Jeśli chcesz zmenić liczbę binarną na całkowitą, wystarczy zmienić podsta
 parseInt('11', 2); // 3
 ```
 
-Podobnie możemy przekształcić liczbę zmiennoprzecinkową używając wbudowanej funckcji {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}.  W odróżnieniu do {{jsxref("Global_Objects/parseInt", "parseInt()")}}, `parseFloat()` zawsze uzywa 10 jako podstawy.
+Podobnie możemy przekształcić liczbę zmiennoprzecinkową używając wbudowanej funckcji {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}.  W odróżnieniu do {{jsxref("Global_Objects/parseInt", "parseInt()")}}, `parseFloat()` zawsze uzywa 10 jako podstawy.
 
-Możesz użyć działania jednoargumentowego `+`, aby zamienić wartości na liczby:
+Możesz użyć działania jednoargumentowego `+`, aby zamienić wartości na liczby:
 
 ```js
 + '42';   // 42
@@ -92,32 +92,32 @@ Możesz użyć działania jednoargumentowego `+`, aby zamienić wartości na lic
 + '0x10'; // 16
 ```
 
-Specjalna wartość {{jsxref("NaN")}} ( skrót od "Not a Number" ( ang. nie numer )) zostaje zwrócona jeśli String nie jest liczbowy:
+Specjalna wartość {{jsxref("NaN")}} ( skrót od "Not a Number" ( ang. nie numer )) zostaje zwrócona jeśli String nie jest liczbowy:
 
 ```js
 parseInt('hello', 10); // NaN
 ```
 
-`NaN` jest toksyczny: jesli podasz go jako argument operacji matematycznej jej wynikiem również będzie `NaN`:
+`NaN` jest toksyczny: jesli podasz go jako argument operacji matematycznej jej wynikiem również będzie `NaN`:
 
 ```js
 NaN + 5; // NaN
 ```
 
-Możesz wykorzystać `NaN` do testów używając wbudowanej funkcji {{jsxref("Global_Objects/isNaN", "isNaN()")}}:
+Możesz wykorzystać `NaN` do testów używając wbudowanej funkcji {{jsxref("Global_Objects/isNaN", "isNaN()")}}:
 
 ```js
 isNaN(NaN); // true
 ```
 
-JavaScript dostarcza również specjalną wartość {{jsxref("Infinity")}} oraz `-Infinity`:
+JavaScript dostarcza również specjalną wartość {{jsxref("Infinity")}} oraz `-Infinity`:
 
 ```js
  1 / 0; //  Infinity
 -1 / 0; // -Infinity
 ```
 
-`Infinity`, `-Infinity` oraz `NaN `wykorzystane mogą być do testów za pomocą wbudowanej funkcji {{jsxref("Global_Objects/isFinite", "isFinite()")}}:
+`Infinity`, `-Infinity` oraz `NaN `wykorzystane mogą być do testów za pomocą wbudowanej funkcji {{jsxref("Global_Objects/isFinite", "isFinite()")}}:
 
 ```js
 isFinite(1 / 0); // false
@@ -125,11 +125,11 @@ isFinite(-Infinity); // false
 isFinite(NaN); // false
 ```
 
-> **Note:** Funkcje {{jsxref("Global_Objects/parseInt", "parseInt()")}} i {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} przekształcają String dopóki nie napotkają znaku, który nie spełnia wymagań formatu liczbowego, po napotkaniu takiego znaku zwrócona zostanie liczba przekształcona do tego momentu. Jednak operator "+" zwyczajnie zwróci `NaN` jeśli w przekształcanym Stringu znajduje się niepoprawny znak. Spróbuj przekształcić String "10.2abc" używając przedstawionych metod, aby lepiej zrozumieć ich rożnice.
+> **Note:** Funkcje {{jsxref("Global_Objects/parseInt", "parseInt()")}} i {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} przekształcają String dopóki nie napotkają znaku, który nie spełnia wymagań formatu liczbowego, po napotkaniu takiego znaku zwrócona zostanie liczba przekształcona do tego momentu. Jednak operator "+" zwyczajnie zwróci `NaN` jeśli w przekształcanym Stringu znajduje się niepoprawny znak. Spróbuj przekształcić String "10.2abc" używając przedstawionych metod, aby lepiej zrozumieć ich rożnice.
 
 ## Strings
 
-String-ami w JavaScript są sekwencje [znaków Unicode](/pl/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode).  To powinna być dobra wiadomość dla każdego kto miał do czynienia z internacjonalizacją. Dokładniej, są to sekwencje jednostek kodowych UTF-16; każda jednostka kodowa jest reprezentowana przez 16-bitową liczbę. Każdy znak Unicode reprezentowany jest przez 1 lub 2 jednostki kodu.
+String-ami w JavaScript są sekwencje [znaków Unicode](/pl/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode).  To powinna być dobra wiadomość dla każdego kto miał do czynienia z internacjonalizacją. Dokładniej, są to sekwencje jednostek kodowych UTF-16; każda jednostka kodowa jest reprezentowana przez 16-bitową liczbę. Każdy znak Unicode reprezentowany jest przez 1 lub 2 jednostki kodu.
 
 Jeśli chcesz przekazać jeden znak, musisz poprostu użyć String-a składającego się z tego pojedyńczego znaku.
 
@@ -139,7 +139,7 @@ Aby sprawdzić długość String-a (w jednostkach kodu), użyj właściwości [l
 'hello'.length; // 5
 ```
 
-To było nasza pierwsza styczność z obiektami JavaScript! Wspominaliśmy, że możesz traktować String-i jak {{jsxref("Object", "obiekty", "", 1)}}? Też posiadają one {{jsxref("String", "metody", "#Methods", 1)}}, które pozwalają nimi manipulować i uzyskiwać informacje na ich temat:
+To było nasza pierwsza styczność z obiektami JavaScript! Wspominaliśmy, że możesz traktować String-i jak {{jsxref("Object", "obiekty", "", 1)}}? Też posiadają one {{jsxref("String", "metody", "#Methods", 1)}}, które pozwalają nimi manipulować i uzyskiwać informacje na ich temat:
 
 ```js
 'hello'.charAt(0); // "h"
@@ -149,36 +149,36 @@ To było nasza pierwsza styczność z obiektami JavaScript! Wspominaliśmy, że 
 
 ## Inne typy
 
-JavaScript odróżnia {{jsxref("null")}}, który jest wartością wskazujacą na umyślny brak wartości ( dostęp do nich tylko za pomocą słowa kluczowego `null` ), od {{jsxref("undefined")}}, która jest wartością typu `undefinded`, wskazującą na niezainicjowaną wartość - oznacza to, że wartość nie została jeszcze przypisana. Zmienne zostaną omówione później, narazie wystarczy nam wiedza, że w JavaScripcie możliwe jest zdeklarowanie zmiennej bez przypisania do niej wartości. Jeśli to zrobimy zmienna będzie typu `undefinded`. `undefinded` jest w rzeczywistości stałą.
+JavaScript odróżnia {{jsxref("null")}}, który jest wartością wskazujacą na umyślny brak wartości ( dostęp do nich tylko za pomocą słowa kluczowego `null` ), od {{jsxref("undefined")}}, która jest wartością typu `undefinded`, wskazującą na niezainicjowaną wartość - oznacza to, że wartość nie została jeszcze przypisana. Zmienne zostaną omówione później, narazie wystarczy nam wiedza, że w JavaScripcie możliwe jest zdeklarowanie zmiennej bez przypisania do niej wartości. Jeśli to zrobimy zmienna będzie typu `undefinded`. `undefinded` jest w rzeczywistości stałą.
 
-JavaScript posiada boolean (logiczny typ danych) z możliwymi wartościami `true` lub `false` (obie są słowami kluczowymi). Każda wartość może zostać przekonwertowana na typ logiczny zgodnie z zasadami:
+JavaScript posiada boolean (logiczny typ danych) z możliwymi wartościami `true` lub `false` (obie są słowami kluczowymi). Każda wartość może zostać przekonwertowana na typ logiczny zgodnie z zasadami:
 
-1.  `false`, `0`, pusty string (`""`), `NaN`, `null`, oraz `undefined` wszystkie odpowiadają `false`.
-2.  Wszystkie inne odpowiadają `true`.
+1.  `false`, `0`, pusty string (`""`), `NaN`, `null`, oraz `undefined` wszystkie odpowiadają `false`.
+2.  Wszystkie inne odpowiadają `true`.
 
-Możesz wykonać jawną konwersję używając wbudowanej funkcji `Boolean()`:
+Możesz wykonać jawną konwersję używając wbudowanej funkcji `Boolean()`:
 
 ```js
 Boolean('');  // false
 Boolean(234); // true
 ```
 
-Jednak, tego typu zamiana jest rzadko potrzeba, ponieważ JavaScript automatycznie wykona konwersję, kiedy oczekiwać będzie typu logicznego jak na przykład w przypadku instrukcji warunkowej `if` (zobacz niżej). Z tego powodu czasami mówi się o "wartościach prawdziwych" (_true values_) i "wartościach fałszywych" (_false value_), które oznaczają wartości, które po konwersji na typ logiczny stają się, odpowienio, prawdziwe lub fałszywe. Alternatywnie wartości te nazywane mogą być "truthy" lub "falsy".
+Jednak, tego typu zamiana jest rzadko potrzeba, ponieważ JavaScript automatycznie wykona konwersję, kiedy oczekiwać będzie typu logicznego jak na przykład w przypadku instrukcji warunkowej `if` (zobacz niżej). Z tego powodu czasami mówi się o "wartościach prawdziwych" (_true values_) i "wartościach fałszywych" (_false value_), które oznaczają wartości, które po konwersji na typ logiczny stają się, odpowienio, prawdziwe lub fałszywe. Alternatywnie wartości te nazywane mogą być "truthy" lub "falsy".
 
-Operatory logiczne takie jak `&&`( i *)*, `||`( lub ) oraz `!`( negacja ) są wspierane; zobacz niżej.
+Operatory logiczne takie jak `&&`( i *)*, `||`( lub ) oraz `!`( negacja ) są wspierane; zobacz niżej.
 
 ## Zmienne
 
-Do deklaracji nowej zmiennej w JavaScript używamy jednego z trzech słów kluczowych: [let](/pl/docs/Web/JavaScript/Reference/Statements/let), [const](/pl/docs/Web/JavaScript/Reference/Statements/const) lub [var](/pl/docs/Web/JavaScript/Reference/Statements/var).
+Do deklaracji nowej zmiennej w JavaScript używamy jednego z trzech słów kluczowych: [let](/pl/docs/Web/JavaScript/Reference/Statements/let), [const](/pl/docs/Web/JavaScript/Reference/Statements/const) lub [var](/pl/docs/Web/JavaScript/Reference/Statements/var).
 
-**`let`\*\*** \*\*pozwala na deklarację zmiennej blokowej. Zadeklarowana zmienna dostępna jest z poziomu *bloku,* w którym została zadeklarowana.
+**`let`\*\*** \*\*pozwala na deklarację zmiennej blokowej. Zadeklarowana zmienna dostępna jest z poziomu *bloku,* w którym została zadeklarowana.
 
 ```js
 let a;
 let name = 'Simon';
 ```
 
-Poniżej znajduje się przykład zakresu ze zmienną zadeklarowaną za pomocą **`let`**:
+Poniżej znajduje się przykład zakresu ze zmienną zadeklarowaną za pomocą **`let`**:
 
 ```js
 // mojaZmiennaLet *nie* jest tutaj widoczna
@@ -190,21 +190,21 @@ for (let mojaZmiennaLet = 0; mojaZmiennaLet < 5; mojaZmiennaLet++) {
 // mojaZmiennaLet *nie* jest tutaj widoczna
 ```
 
-**`const`\*\*** \*\*pozwala zadeklarować zmienne, których wartości z założenia są stałe. Zmienna dostępna jest z *bloku,* w którym została zadeklarowana.
+**`const`\*\*** \*\*pozwala zadeklarować zmienne, których wartości z założenia są stałe. Zmienna dostępna jest z *bloku,* w którym została zadeklarowana.
 
 ```js
 const Pi = 3.14; // deklaruje zmienną Pi
 Pi = 1; // zwrócony zostanie błąd ponieważ nie można zmieniać zmiennej const
 ```
 
-**`var` **jest najczęściej deklarowaną zmienną. W odróżnieniu do dwóch pozostałych zmiennych nie posiada ograniczeń. Jest tak dlatego, że tradycyjnie był to jedeny sposób deklarowania zmiennych w JavaScript. Zmienna zadeklarowana przy użyciu **`var`** dostepna jest z *funkcji,* w której została zadeklarowana.
+**`var` **jest najczęściej deklarowaną zmienną. W odróżnieniu do dwóch pozostałych zmiennych nie posiada ograniczeń. Jest tak dlatego, że tradycyjnie był to jedeny sposób deklarowania zmiennych w JavaScript. Zmienna zadeklarowana przy użyciu **`var`** dostepna jest z *funkcji,* w której została zadeklarowana.
 
 ```js
 var a;
 var name = 'Simon';
 ```
 
-Przykład zakresu zmiennej zadeklarowanej za pomocą **`var`:**
+Przykład zakresu zmiennej zadeklarowanej za pomocą **`var`:**
 
 ```js
 // mojaZmiennaVar *jest* tutaj widoczna
@@ -216,18 +216,18 @@ for (var mojaZmiennaVar = 0; mojaZmiennaVar < 5; mojaZmiennaVar++) {
 // mojaZmiennaVar *jest* tutaj widoczna
 ```
 
-Jesli zadeklarujesz zmienną bez przypisania do niej wartości, jej typ stanie się `undefinded`.
+Jesli zadeklarujesz zmienną bez przypisania do niej wartości, jej typ stanie się `undefinded`.
 
-Ważną różnicą między JavaScript i innymi językami, jak Java, jest fakt, że w JavaScript bloki nie mają zasiegu; tylko funkcje posiadają zasięg. Więc jeśli zmienna zostanie zadeklarowana przy użyciu `var` w złożonej deklaracji (na przykład wewnątrz instrukcji warunkowej `if`), będzie ona widoczna dla całej funkcji. Jednak, korzystając ze składni ECMAScript 2015, deklaracje [let](/pl/docs/Web/JavaScript/Reference/Statements/let) i [const](/pl/docs/Web/JavaScript/Reference/Statements/const) pozwalają na tworzenie zmiennych o **zasięgu blokowym**.
+Ważną różnicą między JavaScript i innymi językami, jak Java, jest fakt, że w JavaScript bloki nie mają zasiegu; tylko funkcje posiadają zasięg. Więc jeśli zmienna zostanie zadeklarowana przy użyciu `var` w złożonej deklaracji (na przykład wewnątrz instrukcji warunkowej `if`), będzie ona widoczna dla całej funkcji. Jednak, korzystając ze składni ECMAScript 2015, deklaracje [let](/pl/docs/Web/JavaScript/Reference/Statements/let) i [const](/pl/docs/Web/JavaScript/Reference/Statements/const) pozwalają na tworzenie zmiennych o **zasięgu blokowym**.
 
 ## Operatory
 
-Operatory liczbowe w JavaScript to `+`, `-`, `*`, `/` oraz `%`, który jest operatorem reszty ([co nie jest tym samym co modulo](/pl/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29)). Do przypisania wartości używamy =, istnieje także przypisanie złożone jak na przykład += i -=. Ich rozwinięcie to `x = x operator y`
+Operatory liczbowe w JavaScript to `+`, `-`, `*`, `/` oraz `%`, który jest operatorem reszty ([co nie jest tym samym co modulo](/pl/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29)). Do przypisania wartości używamy =, istnieje także przypisanie złożone jak na przykład += i -=. Ich rozwinięcie to `x = x operator y`
 
 x += 5;
 x = x + 5;
 
-Możesz użyć operatorów `++` aby inkrementować oraz `--` aby dekrementować. Mogą one być używane zarówno jako operatory prefiksowe lub  przyrostkowe.
+Możesz użyć operatorów `++` aby inkrementować oraz `--` aby dekrementować. Mogą one być używane zarówno jako operatory prefiksowe lub  przyrostkowe.
 
 [Operator +](/pl/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition) dodatkowo używany jest do łączenia string-ów.
 
@@ -244,7 +244,7 @@ Jeśli dodasz string do numeru (lub innej wartości) wszystko zostanie przekszta
 
 Dodanie do czegoś pustego string-a jest przydatnym sposobem na zamiane tego w string.
 
-[Porówniania](/pl/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) w JavaScript wykonywane są za pomocą `<`, `>`, `<=` oraz >=. Działają one zarówno ze string-ami jak i numerami. Równość jest trochę mniej prosta. Podwójny operator równości wykonuje przymusowe sprawdzenie kiedy podane zostały wartości o dwóch różnych typach, co czasami może dawać interesujące wyniki:
+[Porówniania](/pl/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) w JavaScript wykonywane są za pomocą `<`, `>`, `<=` oraz >=. Działają one zarówno ze string-ami jak i numerami. Równość jest trochę mniej prosta. Podwójny operator równości wykonuje przymusowe sprawdzenie kiedy podane zostały wartości o dwóch różnych typach, co czasami może dawać interesujące wyniki:
 
 ```js
 123 == '123'; // true
@@ -258,13 +258,13 @@ Aby uniknąć przymusowego sprawdzenia, użyj potrójnego operatora równości:
 1 === true;    // false
 ```
 
-Dodatkowo występują operatory `!=` oraz `!==`.
+Dodatkowo występują operatory `!=` oraz `!==`.
 
 JavaScript posiada również [operacje bitowe](/pl/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators).
 
 ## Struktury kontroli
 
-JavaScript posiada podobny zestaw struktur kontorli do innych języków rodziny C. Instrukcje warunkowe są wspierane przez `if` oraz `else`; jeśli chcesz możesz je ze sobą łączyć:
+JavaScript posiada podobny zestaw struktur kontorli do innych języków rodziny C. Instrukcje warunkowe są wspierane przez `if` oraz `else`; jeśli chcesz możesz je ze sobą łączyć:
 
 ```js
 var name = 'kotki';
@@ -278,7 +278,7 @@ if (name == 'pieski') {
 name == 'kotki miau';
 ```
 
-JavaScript ma pętle `while` i `do-while`. Pierwsza jest dobra do prostych pętli; druga, jeśli chcesz mieć pewność, że funkcja zostanie wykonana przynajmniej raz:
+JavaScript ma pętle `while` i `do-while`. Pierwsza jest dobra do prostych pętli; druga, jeśli chcesz mieć pewność, że funkcja zostanie wykonana przynajmniej raz:
 
 ```js
 while (true) {
@@ -291,7 +291,7 @@ do {
 } while (inputIsNotValid(input));
 ```
 
-W JavaScript pętla `for` działa w taki sam sposób jak w C i Java: pozwala na zapewnienie informacji dla pętli w jednej lini.
+W JavaScript pętla `for` działa w taki sam sposób jak w C i Java: pozwala na zapewnienie informacji dla pętli w jednej lini.
 
 ```js
 for (var i = 0; i < 5; i++) {
@@ -299,7 +299,7 @@ for (var i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript dodatkowo posiada dwie inne znaczące pętle for: [for...of](/pl/docs/Web/JavaScript/Reference/Statements/for...of)
+JavaScript dodatkowo posiada dwie inne znaczące pętle for: [for...of](/pl/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
 for (let value of array) {
@@ -307,7 +307,7 @@ for (let value of array) {
 }
 ```
 
-oraz [`for`...`in`](/pl/docs/Web/JavaScript/Reference/Statements/for...in):
+oraz [`for`...`in`](/pl/docs/Web/JavaScript/Reference/Statements/for...in):
 
 ```js
 for (let własność in obiekt) {
@@ -315,7 +315,7 @@ for (let własność in obiekt) {
 }
 ```
 
-Operatory `&&` oraz |`|` w których wykonanie drugiego operanda zależne jest od pierwszego. Przydatne do sprawdzania istnienia obiektu przed przypisaniem do niego atrybutów:
+Operatory `&&` oraz |`|` w których wykonanie drugiego operanda zależne jest od pierwszego. Przydatne do sprawdzania istnienia obiektu przed przypisaniem do niego atrybutów:
 
 ```js
 var name = o && o.getName();
@@ -333,7 +333,7 @@ JavaScript posiada potrójny operator dla wyrażeń warunkowych:
 var allowed = (age > 18) ? 'yes' : 'no';
 ```
 
-Warunek `switch` może być używany dla wielu odgałęzień na podstawie liczby lub ciągu znaków:
+Warunek `switch` może być używany dla wielu odgałęzień na podstawie liczby lub ciągu znaków:
 
 ```js
 switch (action) {
@@ -348,7 +348,7 @@ switch (action) {
 }
 ```
 
-Jeśli nie dodasz warunku `break`, wykonanie "przeskoczy" do następnego warunku. Takie działanie jest bardzo rzadko pożądane - w rzeczywistości warto opisać celowy "przeskok" w komentarzu w celu ułatwienia debugowania:
+Jeśli nie dodasz warunku `break`, wykonanie "przeskoczy" do następnego warunku. Takie działanie jest bardzo rzadko pożądane - w rzeczywistości warto opisać celowy "przeskok" w komentarzu w celu ułatwienia debugowania:
 
 ```js
 switch (a) {
@@ -361,7 +361,7 @@ switch (a) {
 }
 ```
 
-Domyślny (`default`) warunek jest opcjonalny. Możesz mieć wyrażenia zarówno w części przełącznika (`switch`), jak i w przypadku (`case`); porównania między nimi odbywają się przy pomocy operatora `===`:
+Domyślny (`default`) warunek jest opcjonalny. Możesz mieć wyrażenia zarówno w części przełącznika (`switch`), jak i w przypadku (`case`); porównania między nimi odbywają się przy pomocy operatora `===`:
 
 ```js
 switch (1 + 3) {
@@ -377,13 +377,13 @@ switch (1 + 3) {
 
 Obiekty w JavaScript można opisać jako prostą kolekcję par nazwa-wartość. Jako takie podobne są do:
 
-- Słowniki w Pythonie.
-- Tablic asocjacyjnych w Perl i Ruby.
-- Tablic asocjacyjnych w C i C++.
-- Map w Javie.
-- Tablic asocjacyjnych w PHP.
+- Słowniki w Pythonie.
+- Tablic asocjacyjnych w Perl i Ruby.
+- Tablic asocjacyjnych w C i C++.
+- Map w Javie.
+- Tablic asocjacyjnych w PHP.
 
-Ze względu na popularność tej struktury danych są one świadectwem wszechstronności. Ponieważ wszystko (poza typami prostymi) jest traktowane w JavaScript jak obiekt, każdy program JavaScript naturalnie objemuje dużą ilość wyszukiwań w tablicach mieszających. Dobrze, że są one takie szybkie!
+Ze względu na popularność tej struktury danych są one świadectwem wszechstronności. Ponieważ wszystko (poza typami prostymi) jest traktowane w JavaScript jak obiekt, każdy program JavaScript naturalnie objemuje dużą ilość wyszukiwań w tablicach mieszających. Dobrze, że są one takie szybkie!
 
 Część "nazwa" jest stringiem, natomiast wartość może być każdą wartością JavaScript- nawet kolejnym obiektem. Pozwala to na budowanie struktur danych o dowolnej złożoności.
 
@@ -423,9 +423,9 @@ obj.detale.kolor; // grafitowy
 obj['detale']['konieMechaniczne']; // 96
 ```
 
-The following example creates an object prototype, `Person` and an instance of that prototype, `you`.
+The following example creates an object prototype, `Person` and an instance of that prototype, `you`.
 
-Poniższy przykład tworzy prototyp obiektu `Person` i jego instancję, `marek`.
+Poniższy przykład tworzy prototyp obiektu `Person` i jego instancję, `marek`.
 
 ```js
 function Person(imie, wiek) {
@@ -459,7 +459,7 @@ var user = prompt('what is your key?')
 obj[user] = prompt('what is its value?')
 ```
 
-Te notacje także są semantycznie jednakowe. Druga metoda ma tę zaletę, że nazwa własności podawana jest jako string, dzięki czemu obliczana jest w czasie wykonywania. Jednak użycie tej metody zapobiega zastosowaniu niektórych mechanizmów JavaScript i procesów minifikacji. Może też być używany do ustawiania i pobierania własności z nazwami wykorzystującymi [słowa zastrzeżone](/pl/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords):
+Te notacje także są semantycznie jednakowe. Druga metoda ma tę zaletę, że nazwa własności podawana jest jako string, dzięki czemu obliczana jest w czasie wykonywania. Jednak użycie tej metody zapobiega zastosowaniu niektórych mechanizmów JavaScript i procesów minifikacji. Może też być używany do ustawiania i pobierania własności z nazwami wykorzystującymi [słowa zastrzeżone](/pl/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords):
 
 ```js
 obj.for = 'Simon'; // Syntax error, ponieważ 'for' jest zastrzeżone
@@ -474,7 +474,7 @@ Po więcej informacji na temat obiektów i prototypów zobacz [Object.prototype]
 
 ## Tablice
 
-Tablice w JavaScript są specialnym typem obiektu. Działają bardzo podobnie do zwykłych obiektów, jednak posiadają jedną magiczną właściwość `'length'`. Jest ona zawsze o jeden więcej niż najwyższy index w tablicy.
+Tablice w JavaScript są specialnym typem obiektu. Działają bardzo podobnie do zwykłych obiektów, jednak posiadają jedną magiczną właściwość `'length'`. Jest ona zawsze o jeden więcej niż najwyższy index w tablicy.
 
 Poniżej jeden z sposób tworzenia tablcy:
 
@@ -503,7 +503,7 @@ a.length; // 101
 
 Pamiętaj - długość tablicy jest o jeden większa niż najwyższy indeks.
 
-If you query a non-existent array index, you'll get a value of `undefined` in return:
+If you query a non-existent array index, you'll get a value of `undefined` in return:
 
 ```js
 typeof a[90]; // undefined
@@ -525,7 +525,7 @@ for (const currentValue of a) {
 }
 ```
 
-You could also iterate over an array using a [`for`...`in`](/pl/docs/Web/JavaScript/Reference/Statements/for...in "/en/JavaScript/Reference/Statements/for...in") loop, however this does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to `Array.prototype`, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.
+You could also iterate over an array using a [`for`...`in`](/pl/docs/Web/JavaScript/Reference/Statements/for...in "/en/JavaScript/Reference/Statements/for...in") loop, however this does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to `Array.prototype`, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.
 
 Another way of iterating over an array that was added with ECMAScript 5 is [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach):
 
@@ -629,7 +629,7 @@ avg(2, 3, 4, 5); // 3.5
 
 > **Note:** In the above code, the variable **args** holds all the values that were passed into the function.
 >
-> It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments _after_ its declaration, but not before. _i.e. function_ _avg(_**firstValue,** _...args)_\*\* **will store the first value passed into the function in the **firstValue** variable and the remaining arguments in **args\*\*. That's another useful language feature but it does lead us to a new problem. The `avg()` function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:
+> It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments _after_ its declaration, but not before. _i.e. function_ _avg(_**firstValue,** _...args)_\*\* **will store the first value passed into the function in the **firstValue** variable and the remaining arguments in **args\*\*. That's another useful language feature but it does lead us to a new problem. The `avg()` function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:
 
 ```js
 function avgArray(arr) {
@@ -921,7 +921,7 @@ function parentFunc() {
 
   function nestedFunc() {
     var b = 4; // parentFunc can't use this
-    return a + b;
+    return a + b;
   }
   return nestedFunc(); // 5
 }
@@ -949,7 +949,7 @@ y(7); // ?
 
 The name of the `makeAdder()` function should give it away: it creates new 'adder' functions, each of which, when called with one argument, adds it to the argument that it was created with.
 
-What's happening here is pretty much the same as was happening with the inner functions earlier on: a function defined inside another function has access to the outer function's variables. The only difference here is that the outer function has returned, and hence common sense would seem to dictate that its local variables no longer exist. But they _do_ still exist — otherwise, the adder functions would be unable to work. What's more, there are two different "copies" of `makeAdder()`'s local variables — one in which `a` is 5 and the other one where `a` is 20. So the result of that function calls is as follows:
+What's happening here is pretty much the same as was happening with the inner functions earlier on: a function defined inside another function has access to the outer function's variables. The only difference here is that the outer function has returned, and hence common sense would seem to dictate that its local variables no longer exist. But they _do_ still exist — otherwise, the adder functions would be unable to work. What's more, there are two different "copies" of `makeAdder()`'s local variables — one in which `a` is 5 and the other one where `a` is 20. So the result of that function calls is as follows:
 
 ```js
 x(6); // returns 11

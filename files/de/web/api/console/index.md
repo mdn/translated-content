@@ -34,7 +34,7 @@ Diese Seite dokumentiert die [Methoden](#methods), die für das `Console` Objekt
 - {{domxref("Console.countReset()")}}
   - : Setzt den Wert des Zählers mit der angegebenen Bezeichnung zurück.
 - {{domxref("Console.debug()")}}
-  - : Gibt eine Nachricht mit der Protokollebene `"debug"` in der Konsole aus.> **Hinweis:** Ab Chromium 58 wird diese Methode nur in Chromium-Browserkonsolen angezeigt, wenn die Stufe "Verbose" ausgewählt ist.
+  - : Gibt eine Nachricht mit der Protokollebene `"debug"` in der Konsole aus.> **Note:** **Hinweis:** Ab Chromium 58 wird diese Methode nur in Chromium-Browserkonsolen angezeigt, wenn die Stufe "Verbose" ausgewählt ist.
 - {{domxref("Console.dir()")}}
   - : Zeigt eine interaktive Auflistung der Eigenschaften eines angegebenen JavaScript-Objekts an. In dieser Auflistung können Sie Offenlegungsdreiecke verwenden, um den Inhalt untergeordneter Objekte zu untersuchen.
 - {{domxref("Console.dirxml()")}}
@@ -118,7 +118,7 @@ Wenn Sie einen String an eine der Methoden des Konsolenobjekts übergeben, die e
 | %s           | Gibt einen String aus.                                                                                                                                                            |
 | %f           | Gibt einen Gleitkommawert aus. Die Formatierung wird unterstützt, zum Beispiel gibt `console.log("Foo %.2f", 1.1)` die Zahl mit 2 Dezimalstellen aus: `Foo 1.10`                  |
 
-> **Hinweis:** Die Präzisionsformatierung funktioniert in Chrome nicht
+> **Note:** **Hinweis:** Die Präzisionsformatierung funktioniert in Chrome nicht
 
 Jedes dieser Elemente zieht das nächste Argument nach dem Formatstring aus der Parameterliste. Zum Beispiel:
 
@@ -144,11 +144,11 @@ console.log("This is %cMy stylish message", "color: yellow; font-style: italic; 
 
 Der Text vor der Direktive wird nicht beeinflusst. Der Text nach der Direktive wird jedoch mit den CSS-Deklarationen im Parameter formatiert.![](https://mdn.mozillademos.org/files/12527/CSS-styling.png)
 
-> **Hinweis:** Es werden etliche CSS-Eigenschaften von diesem Stil unterstützt. Sie sollten experimentieren und sehen, welche sich als nützlich erweisen.
+> **Note:** **Hinweis:** Es werden etliche CSS-Eigenschaften von diesem Stil unterstützt. Sie sollten experimentieren und sehen, welche sich als nützlich erweisen.
 
 Sie können verschachtelte Gruppen verwenden, um Ihre Ausgabe zu organisieren, indem Sie verwandtes Material visuell kombinieren. Um einen neuen verschachtelten Block zu erstellen, rufen Sie `console.group()` auf. Die Methode `console.groupCollapsed()` ist ähnlich, erstellt den neuen Block jedoch zusammengeklappt und erfordert die Verwendung einer Schaltfläche zum Öffnen.
 
-> **Hinweis:** Minimierte Gruppen werden in Gecko noch nicht unterstützt. Die Methode `groupCollapsed()` ist zu diesem Zeitpunkt die gleiche wie `group()`.
+> **Note:** **Hinweis:** Minimierte Gruppen werden in Gecko noch nicht unterstützt. Die Methode `groupCollapsed()` ist zu diesem Zeitpunkt die gleiche wie `group()`.
 
 Um die aktuelle Gruppe zu verlassen, rufen Sie einfach `console.groupEnd()` auf. Zum Beispiel mit diesem Code:
 
@@ -187,7 +187,7 @@ Protokolliert die Zeit, die der Benutzer zum Deaktivieren des Alert-Felds benöt
 
 Beachten Sie, dass der Name des Timers sowohl beim Start als auch beim Stoppen des Timers angezeigt wird.
 
-> **Hinweis:** Es ist wichtig zu beachten, dass der Timer die Gesamtzeit für die Transaktion angibt, wenn Sie das Timing für den Netzwerkverkehr protokollieren. Die im Netzwerkbereich aufgeführte Zeit ist nur die Zeit, die der Header benötigt. Wenn Sie die Antwort-Body-Protokollierung aktiviert haben, sollte die angegebene Zeit für den Antwortheader und den Nachrichtentext der Anzeige in der Konsolenausgabe entsprechen.
+> **Note:** **Hinweis:** Es ist wichtig zu beachten, dass der Timer die Gesamtzeit für die Transaktion angibt, wenn Sie das Timing für den Netzwerkverkehr protokollieren. Die im Netzwerkbereich aufgeführte Zeit ist nur die Zeit, die der Header benötigt. Wenn Sie die Antwort-Body-Protokollierung aktiviert haben, sollte die angegebene Zeit für den Antwortheader und den Nachrichtentext der Anzeige in der Konsolenausgabe entsprechen.
 
 ### Stapelverfolgung (Strack Traces)
 

@@ -67,6 +67,8 @@ Oto _niektóre_ z około 100 [elementów](/pl/docs/Web/HTML/Element) semantyczny
 - [Using HTML sections and outlines](/pl/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Problems_solved_by_HTML5) on MDN
 - {{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia
 
+<!---->
+
 - [MDN Web Docs Glossary](/pl/docs/Glossary)
 
   - {{Glossary("SEO")}}

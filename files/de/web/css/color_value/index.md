@@ -26,7 +26,7 @@ In Verbindung mit einer Farbe im sRGB Raum besteht ein `<color>`-Wert auch aus e
 
 Obwohl CSS Farbwerte genau definiert sind, können sie auf verschiedenen Ausgabegeräten unterschiedlich dargestellt werden. Die meisten davon sind nicht kalibriert und manche Browser unterstützen nicht das [Farbprofil](https://de.wikipedia.org/wiki/ICC-Profil) des Ausgabegeräts. Ohne diese kann die Farbdarstellung stark variieren.
 
-> **Hinweis:** Die [WCAG 2.0](http://www.w3.org/TR/WCAG/#visual-audio-contrast) Empfehlung des W3C rät Webauthoren ausdrücklich dazu, _Farben_ nicht als einziges Mittel zur Vermittlung einer bestimmten Information, Aktion oder einem Ergebnis zu verwenden. Manche Benutzer haben Probleme, Farben zu unterscheiden, was das Verständnis der übermittelten Information verhindert. Natürlich verhindert das nicht die Benutzung von Farbe, nur deren Benutzung als einziges Mittel eine Information zu beschreiben.
+> **Note:** **Hinweis:** Die [WCAG 2.0](http://www.w3.org/TR/WCAG/#visual-audio-contrast) Empfehlung des W3C rät Webauthoren ausdrücklich dazu, _Farben_ nicht als einziges Mittel zur Vermittlung einer bestimmten Information, Aktion oder einem Ergebnis zu verwenden. Manche Benutzer haben Probleme, Farben zu unterscheiden, was das Verständnis der übermittelten Information verhindert. Natürlich verhindert das nicht die Benutzung von Farbe, nur deren Benutzung als einziges Mittel eine Information zu beschreiben.
 
 ## Interpolation
 
@@ -1011,6 +1011,8 @@ Farben können durch das Rot-Grün-Blau-Modell (RGB-Modell) auf zwei Weisen defi
 - Funktionelle Notation `rgb(R,G,B)`
   - : "`rgb`", gefolgt von drei {{cssxref("&lt;integer&gt;")}} oder drei {{cssxref("&lt;percentage&gt;")}} Werten.
     Die Ganzzahl 255 entspricht 100% und F oder FF in der hexadezimalen Schreibweise.
+
+<!---->
 
     /* Diese Beispiele definieren alle dieselbe RGB-Farbe: */
 

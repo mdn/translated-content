@@ -19,7 +19,7 @@ Jest to właściwość statyczna. Nie musisz tworzyć obiektu {{jsxref("Number")
 
 ## Opis
 
-Wartość właściwości `EPSILON` to w przybliżeniu  `2.2204460492503130808472633361816E-16` lub `2-52`.
+Wartość właściwości `EPSILON` to w przybliżeniu  `2.2204460492503130808472633361816E-16` lub `2-52`.
 
 ## Przykłady
 

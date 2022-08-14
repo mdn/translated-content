@@ -54,7 +54,7 @@ Poniższa tabela pokazuje rezultaty wygenerowane przez skrypt:
     </tr>
     <tr>
       <td rowspan="5"><code>myArray</code></td>
-      <td><code> </code></td>
+      <td><code> </code></td>
       <td>Zawartość <code>myArray</code>.</td>
       <td><code>[ \"dbBd\", \"bB\", \"d\"') ]</code></td>
     </tr>
@@ -120,7 +120,7 @@ Poniższa tabela pokazuje rezultaty wygenerowane przez skrypt:
   </tbody>
 </table>
 
-Jeżeli twoje wyrażenie regularne korzysta z flagi "g", możesz wielokrotnie używać metody exec() aby porównać je z tym samym ciągiem znaków. W takim wypadku porównywanie rozpoczyna się od elementu zdefiniowanego jako `lastIndex. `Na przykład:
+Jeżeli twoje wyrażenie regularne korzysta z flagi "g", możesz wielokrotnie używać metody exec() aby porównać je z tym samym ciągiem znaków. W takim wypadku porównywanie rozpoczyna się od elementu zdefiniowanego jako `lastIndex. `Na przykład:
 
 ```js
 var myRe = /ab*/g;

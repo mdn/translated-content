@@ -10,7 +10,7 @@ Verwenden Sie die Ausführungsbefehle der Benutzer, die Sie mit Hilfe des [`Schl
 ## Typen
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : Objekt, das einen Befehl repräsentiert. Es enthält die für den Befehl im [`Schlüssel commands der`manifest.json](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands) festgelegten Informationen.
+  - : Objekt, das einen Befehl repräsentiert. Es enthält die für den Befehl im [`Schlüssel commands der `manifest.json](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands) festgelegten Informationen.
 
 ## Funktionen
 

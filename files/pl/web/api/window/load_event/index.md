@@ -30,6 +30,8 @@ Uchwyt zdarzenia dla zdarzenia wczytywania okna ([window](/pl/DOM/window "pl/DOM
       doSomethingElse();
     };
 
+<!---->
+
     <html>
     <head>
 

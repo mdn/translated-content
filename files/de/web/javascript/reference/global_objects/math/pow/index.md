@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
 {{JSRef}}
 
-Die Funktion **`Math.pow()`** gibt die Potenz der `Basis` mit dem `Exponenten` an``(`BasisExponent`)
+Die Funktion **`Math.pow()`** gibt die Potenz der `Basis` mit dem `Exponenten` an` `(`BasisExponent`)
 
 {{EmbedInteractiveExample("pages/js/math-pow.html")}}
 

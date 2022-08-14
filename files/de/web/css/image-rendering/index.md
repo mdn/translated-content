@@ -34,6 +34,10 @@ Das `image-rendering` [CSS](/de/docs/CSS "CSS") Property schlägt dem user agent
 - **`auto`**
   - : Default value, the image should be scaled with an algorithm that maximizes the appearance of the image. In particular, scaling algorithms that "smooth" colors are acceptable, such as bilinear interpolation. This is intended for images such as photos. Since version 1.9 (Firefox 3.0), Gecko uses _bilinear_ resampling (high quality).
 
+<!---->
+
+<!---->
+
 - **`crisp-edges`**
   - : The image must be scaled with an algorithm that preserves contrast and edges in the image, and which does not smooth colors or introduce blur to the image in the process. This is intended for images such as pixel art.
 - **`pixelated`**

@@ -16,8 +16,8 @@ SDK Libraries für AWS sind beispielsweise Wrapper.
 
 {{Interwiki("wikipedia", "Wrapper function")}} on Wikipedia
 
-1. [MDN Web Docs Glossary](/de/docs/Glossary)
+1.  [MDN Web Docs Glossary](/de/docs/Glossary)
 
-    1. {{Glossary("API")}}
-    2. {{Glossary("Class")}}
-    3. {{Glossary("Function")}}
+    1.  {{Glossary("API")}}
+    2.  {{Glossary("Class")}}
+    3.  {{Glossary("Function")}}

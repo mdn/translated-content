@@ -25,7 +25,7 @@ Własność ustawia bazowy kierunek tekstu elementów blokowych oraz kierunek os
 
 ### Składnia
 
-    direction: [ 'ltr' | 'rtl' | inherit ] ;
+    direction: [ 'ltr' | 'rtl' | inherit ] ;
 
 ### Wartości
 
@@ -39,7 +39,7 @@ Aby własność `direction` miała jakiś efekt w elementach inline, wartością
 ### Przykłady
 
     blockquote {
-      direction : rtl ;
+      direction : rtl ;
     }
 
 ### Notatki

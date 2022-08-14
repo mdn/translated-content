@@ -128,7 +128,7 @@ In [Firefox 3.5](http://www.firefox.com) wurde eine nicht geringe Zahl an neuen 
     - Das [`level`](/de/XUL/Attribute/Panel.level) Attribut wurde zum [`panel`](/de/XUL/panel) Element hinzugefügt. Dieses Attribut legt fest, ob das Panel überhalb anderer Anwendungen steht oder einfach überhalb des Fensters indem sich das Panel befindet.
     - XUL-Elemente unterstützen nun die `clientHeight, clientWidth, scrollHeight`und `scrollWidth`Eigenschaften.
     - [`keyset`](/de/XUL/keyset)s beinhalteten nun ein `disabled`-Attribut.
-    - Außerdem können[`keyset`](/de/XUL/keyset)s nun dank der [`removeChild()`](/de/DOM/Node.removeChild) Methode des Knotens entfernt werden.
+    - Außerdem können[` keyset`](/de/XUL/keyset)s nun dank der [`removeChild()`](/de/DOM/Node.removeChild) Methode des Knotens entfernt werden.
     - Die `initialize()`-Methode aus [`mozIStorageStatement`](de/mozIStorageStatement) wurde entfernt. An ihrer Stelle sollte nun [`createStatement()`](de/mozIStorageConnection#createStatement) benutzt werde.
     - Die [Storage](/de/Storage) API unterstützt nun asynchrone Requests.
     - Die [`nsICookie2`](/de/nsICookie2)-Schnittstelle besitzt nun das neue `creationTime` Attribut. Damit lässt sich der Erstellungszeitpunkt eines Cookies feststellen.

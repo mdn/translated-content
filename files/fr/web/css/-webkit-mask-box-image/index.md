@@ -42,6 +42,8 @@ Où :
 - `none`
   - : Ce mot-clé indique que la boîte de bordure n'a pas de masque.
 
+<!---->
+
 - `<length>`
   - : Le décalage à appliquer à l'image de masque (cf. {{cssxref("&lt;length&gt;")}} pour les unités possibles).
 - `<percentage>`

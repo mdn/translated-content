@@ -11,22 +11,22 @@ original_slug: Web/JavaScript/Referencje/Operatory
 
 This chapter documents all the JavaScript language operators, expressions and keywords.
 
-## Wyrażenia i operatory w podziale na  kategorie
+## Wyrażenia i operatory w podziale na  kategorie
 
-##  
+##  
 
-## Lista operatorów w kolejności alfabetycznej znajduje sie w pasku bocznym po lewej stronie.
+## Lista operatorów w kolejności alfabetycznej znajduje sie w pasku bocznym po lewej stronie.
 
 ### Wyrażenia podstawowe
 
-Podstawowe słowa kluczowe i wyrażenia w  JavaScript.
+Podstawowe słowa kluczowe i wyrażenia w  JavaScript.
 
 - {{jsxref("Operator/this", "this")}}
   - : Słowo `this` odnosi się do kontekstu wywołania.
 - {{jsxref("Operator/function", "function")}}
-  - : Słowo `function` umożliwia zdefniowanie wyrażenia funkcji .
+  - : Słowo `function` umożliwia zdefniowanie wyrażenia funkcji .
 - {{experimental_inline}} {{jsxref("Operatory/class", "class")}}
-  - : Słowo `class` definiuje wyrażenie klasy.
+  - : Słowo `class` definiuje wyrażenie klasy.
 - {{experimental_inline}} {{jsxref("Operatory/function*", "function*")}}
   - : The `function*` keyword defines a generator function expression.
 - {{experimental_inline}} {{jsxref("Operatory/yield", "yield")}}
@@ -109,12 +109,12 @@ A unary operation is operation with only one operand.
 
 ### Operatory porównania
 
-Operator porównania, jak nazwa wskazuje, porównuje operandy  i zwraca wartość logiczną zależną od tego, czy wartość porównania jest prawdziwa.
+Operator porównania, jak nazwa wskazuje, porównuje operandy  i zwraca wartość logiczną zależną od tego, czy wartość porównania jest prawdziwa.
 
 - {{jsxref("Operatory/in", "in")}}
-  - : Operator `in` ustala, czy obiekt posiada daną właściwość.
+  - : Operator `in` ustala, czy obiekt posiada daną właściwość.
 - {{jsxref("Operatory/instanceof", "instanceof")}}
-  - : Operator `instanceof` ustala czy obiekt jest instancją innego obiektu.
+  - : Operator `instanceof` ustala czy obiekt jest instancją innego obiektu.
 - {{jsxref("Operatory/Comparison_Operators", "&lt;", "#Less_than_operator")}}
   - : Less than operator.
 - {{jsxref("Operatory/Comparison_Operators", "&gt;", "#Greater_than_operator")}}
@@ -222,7 +222,7 @@ An assignment operator assigns a value to its left operand based on the value of
 | Specification                                                                                                                    | Status                   | Comment                                                                                                         |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | ECMAScript 1st Edition.                                                                                                          | Standard                 | Initial definition.                                                                                             |
-| {{SpecName('ES5.1', '#sec-11', 'Expressions')}}                                                                 | {{Spec2('ES5.1')}} |                                                                                                                 |
+| {{SpecName('ES5.1', '#sec-11', 'Expressions')}}                                                                 | {{Spec2('ES5.1')}} |                                                                                                                 |
 | {{SpecName('ES6', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}} | {{Spec2('ES6')}}     | New: Spread operator, destructuring assignment, `super` keyword, Array comprehensions, Generator comprehensions |
 
 ## See also

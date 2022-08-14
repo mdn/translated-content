@@ -32,9 +32,9 @@ Wenn gefunden, wird `separator` aus dem String entfernt und die Teilstrings werd
 
 Wenn `separator` ein regulärer Ausdruck ist, der runde Klammern enthält, werden die Ergebnisse (einschließlich etwaiger undefinierter Ergebnisse) der Klammern bei jeder Übereinstimmung von `separator` in das ausgegebene Array eingefügt.
 
-> **Hinweis:** Wenn `separator` ein Array ist, wird das Array in einen String umgewandelt und als Trennzeichen verwendet.
+> **Note:** **Hinweis:** Wenn `separator` ein Array ist, wird das Array in einen String umgewandelt und als Trennzeichen verwendet.
 
-> **Hinweis:** Wenn der String leer ist, gibt `split()` ein Array zurück, das einen leeren String anstelle eines leeren Arrays enthält. Wenn sowohl der String als auch das Trennzeichen leere Zeichenfolgen sind, wird ein leeres Array zurückgegeben.
+> **Note:** **Hinweis:** Wenn der String leer ist, gibt `split()` ein Array zurück, das einen leeren String anstelle eines leeren Arrays enthält. Wenn sowohl der String als auch das Trennzeichen leere Zeichenfolgen sind, wird ein leeres Array zurückgegeben.
 
 ## Beispiele
 
@@ -148,7 +148,7 @@ console.log(splits);  //["c", "c,", "c", "c", "c"]
 
 ### Einen String mit `split()` umkehren
 
-> **Warning:** Dies ist keine robuste Art einen String umzukehren.`js var str = 'asdfghjkl'; var strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa' // split() returns an array on which reverse() and join() can be applied`Das funktioniert nicht, wenn der String Graphem-Cluster enthält, selbst wenn ein Unicode-fähiger Split verwendet wird (verwenden Sie stattdessen bspw. [esrever](https://github.com/mathiasbynens/esrever)).```js
+> **Warning:** Dies ist keine robuste Art einen String umzukehren.`js var str = 'asdfghjkl'; var strReverse = str.split('').reverse().join(''); // 'lkjhgfdsa' // split() returns an array on which reverse() and join() can be applied `Das funktioniert nicht, wenn der String Graphem-Cluster enthält, selbst wenn ein Unicode-fähiger Split verwendet wird (verwenden Sie stattdessen bspw. [esrever](https://github.com/mathiasbynens/esrever)).```js
 > var str = 'résumé';
 > var strReverse = str.split(/(?:)/u).reverse().join('');
 > // => "́emuśer"

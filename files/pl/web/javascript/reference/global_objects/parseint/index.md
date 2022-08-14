@@ -23,6 +23,8 @@ _integer_
 - `string`
   - : Łańcuch znaków zawierający wartość do przetworzenia.
 
+<!---->
+
 - `radix`
   - : Liczba typu
     _integer_

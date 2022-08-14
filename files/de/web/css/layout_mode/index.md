@@ -14,7 +14,7 @@ Ein [CSS](/de/docs/Web/CSS) **Layoutmodus**, manchmal als _Layout_ abgekürzt, i
 - Das [_Flexboxlayout_](/de/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes), designt, um komplexe Seiten darzustellen, die problemlos in der Größe geändert werden können. {{experimental_inline}}
 - Das _Rasterlayout_, designt, um Elemente relativ zu einem festen Raster darzustellen. {{experimental_inline}}
 
-> **Hinweis:** Nicht alle [CSS Eigenschaften](/de/docs/Web/CSS/Referenz) gelten für alle _Layoutmodi_. Die meisten von ihnen gelten für einen oder zwei davon und haben keinen Effekt, falls sie für ein Element gesetzt werden, das in einem anderen Layoutmodus dargestellt wird.
+> **Note:** **Hinweis:** Nicht alle [CSS Eigenschaften](/de/docs/Web/CSS/Referenz) gelten für alle _Layoutmodi_. Die meisten von ihnen gelten für einen oder zwei davon und haben keinen Effekt, falls sie für ein Element gesetzt werden, das in einem anderen Layoutmodus dargestellt wird.
 
 ## Siehe auch
 

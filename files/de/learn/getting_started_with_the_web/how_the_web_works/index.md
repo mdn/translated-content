@@ -54,10 +54,10 @@ Auf dem Weg von Ihrem Haus zum Shop müssen Sie an einigen anderen Stellen vorbe
 
 Wenn Sie eine Internetadresse in Ihren Browser eintippen (wie wenn Sie zu dem Laden gehen):
 
-1. Der Browser kontaktiert den DNS Server und findet die echte Adresse von derm Server auf dem die Webseite liegt (Sie finden die Adresse des Ladens).
-2. Der Browser sendet eine HTTP-Anfrage an den Server und fragt nach einer Kopie der Webseite für den Client (Sie gehen zu dem Laden und bestellen Ihre Waren). Diese Nachricht und alle anderen Daten, welche zwischen Client und Server gesendet werden, nutzen Ihre Internetverbindung und nutzen TCP/IP für die Übertragung.
-3. Wenn der Server die Anfrage entgegennimmt, sendet dieser an den Client eine "200 OK" Nachricht, welche soviel bedeutet wie "Natürlich können Sie sich die Webseite anschauen! Hier ist sie." Danach sendet der Server die Dateien der Webseite, in kleinen Datenpaketen, an den Browser. (Im Laden bekommen Sie Ihre Waren und bringen diese nach Hause)
-4. Im Browser werden die kleinen Datenpakete zusammengesetzt und zeigt Ihnen die komplette Webseite. (die Waren kommen bei Ihnen daheim an)
+1.  Der Browser kontaktiert den DNS Server und findet die echte Adresse von derm Server auf dem die Webseite liegt (Sie finden die Adresse des Ladens).
+2.  Der Browser sendet eine HTTP-Anfrage an den Server und fragt nach einer Kopie der Webseite für den Client (Sie gehen zu dem Laden und bestellen Ihre Waren). Diese Nachricht und alle anderen Daten, welche zwischen Client und Server gesendet werden, nutzen Ihre Internetverbindung und nutzen TCP/IP für die Übertragung.
+3.  Wenn der Server die Anfrage entgegennimmt, sendet dieser an den Client eine "200 OK" Nachricht, welche soviel bedeutet wie "Natürlich können Sie sich die Webseite anschauen! Hier ist sie." Danach sendet der Server die Dateien der Webseite, in kleinen Datenpaketen, an den Browser. (Im Laden bekommen Sie Ihre Waren und bringen diese nach Hause)
+4.  Im Browser werden die kleinen Datenpakete zusammengesetzt und zeigt Ihnen die komplette Webseite. (die Waren kommen bei Ihnen daheim an)
 
 ## DNS erklärt
 

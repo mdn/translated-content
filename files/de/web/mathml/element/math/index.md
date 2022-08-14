@@ -108,7 +108,7 @@ Zusätzlich zu den folgenden Attributen akzeptiert das `<math>`-Element auch all
 </html>
 ```
 
-**Hinweis**: XHTML-Dokumente mit MathML müssen vom Server als `application/xhtml+xml` ausgliefert werden. Das kannst Du einfach erreichen, indem Du Deinen lokalen Dateien die Endung `.xhtml` gibst. Beim Apache-Webserver kannst Du entsprechend die[`.htaccess-Datei konfigurieren`](http://httpd.apache.org/docs/current/mod/mod_mime.html#addtype), so dass die Dateiendung dem korrekten Mime type zugeordnet wird. Achte in diesem Fall auch darauf, dass die XML-Datei wohlgeformt ist, d.h. den grundsätzlichen Anforderungen an die Formatierung einer XML-Datei genügt.
+**Hinweis**: XHTML-Dokumente mit MathML müssen vom Server als `application/xhtml+xml` ausgliefert werden. Das kannst Du einfach erreichen, indem Du Deinen lokalen Dateien die Endung `.xhtml` gibst. Beim Apache-Webserver kannst Du entsprechend die[ `.htaccess-Datei konfigurieren`](http://httpd.apache.org/docs/current/mod/mod_mime.html#addtype), so dass die Dateiendung dem korrekten Mime type zugeordnet wird. Achte in diesem Fall auch darauf, dass die XML-Datei wohlgeformt ist, d.h. den grundsätzlichen Anforderungen an die Formatierung einer XML-Datei genügt.
 
 ## Spezifikationen
 

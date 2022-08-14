@@ -16,9 +16,9 @@ Die [CSS](/de/docs/Web/CSS) Eigenschaft `border-collapse` bestimmt, ob die Zelle
 
 {{EmbedInteractiveExample("pages/css/border-collapse.html")}}
 
-> **Hinweis:** Wenn der Wert auf collapsed gesetzt ist, so verhält sich der Wert `inset` für {{cssxref("border-style")}} wie der Wert `groove` und der Wert `outset` wie `ridge`.
+> **Note:** **Hinweis:** Wenn der Wert auf collapsed gesetzt ist, so verhält sich der Wert `inset` für {{cssxref("border-style")}} wie der Wert `groove` und der Wert `outset` wie `ridge`.
 
-> **Hinweis:** When cells are separated, the distance between cells is defined by the {{cssxref("border-spacing")}} property.
+> **Note:** **Hinweis:** When cells are separated, the distance between cells is defined by the {{cssxref("border-spacing")}} property.
 
 ## Syntax
 

@@ -29,36 +29,56 @@ Dieses Element besitzt die globalen Attribute [globalen Attribute](/de/docs/HTML
 - {{htmlattrdef("accesskey")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}
   - : Spezifiziert einen Tastatur-Shortcut für dieses Element. Eine Tastenkombination mit ALT oder einer ähnlichen Taste in Verbindung mit dem angegebenen Zeichen selektiert die damit assoziierte From Control. Dabei sollten keine von Webbrowsern vorbelegten Tastenkombinationen verwendet werden. Dieses Attribut ist seit HTML5 global.
 
+<!---->
+
 - {{htmlattrdef("alt")}}
   - : Ein alternativer Text zum Einblenden, wenn der Webbrowser keine Bilder darstellt. Der Text soll dem Benutzer den Inhalt des Bildes beschreiben. In HTML4 ist dieses Attribut verpflichtend aber es kann ein leerer Text ("") angegeben werden. In HTML5 ist dieses Attribute nur verpflichtend, wenn das **href** Attribut vewendet wird.
+
+<!---->
 
 - {{htmlattrdef("coords")}}
   - : Eine Menge von Werten, welche die Koordinaten des Hot-Spot Bereichs angeben. Die Anzahl und die Bedeutung der Werte hängt von dem Wert des **shape** Attributs ab. Für `rect` (rechteckige Form) beinhaltet der Wert von **coords** zwei x,y Pare: left, top, right und bottom. Für `circle` (kreisförmige Form) besteht der Wert aus `x,y,r`. Dabei sind `x,y` ein Paar, dass die Position des Kreismittelpunkt angibt und `r` ist der Radius. Für `poly` (Polygon) beinhaltet der Wert mehrere x,y Paare, wobei jedes Paar für einen Punkt im Polygon steht: `x1,y1,x2,y2,x3,y3,` usw. In HTML4 sind die Werte die Anzahl Pixel oder Prozente, wenn ein Prozentzeichen (%) angehängt wird. In HTML5 sind die Werte die Anzahl von CSS Pixel.
 - {{htmlattrdef("download")}} {{HTMLVersionInline("5")}}
   - : Dieses Attribut gibt an, sofern es verwendet wird, dass der Autor den Hyperlink zum Dowload einer Ressource verwendet. Siehe {{HTMLElement("a")}} für eine vollständige Beschreibung des {{htmlattrxref("download", "a")}} Attributs.
 
+<!---->
+
 - {{htmlattrdef("href")}}
   - : Das Ziel des Hyperlinks für diesen Bereich. Der Wert muss eine gültige URL sein. In HTML4 muss entweder dieses Attribut oder das **nohref** Attribut im Element sein. In HTML5 kann dieses Attribut ausgelassen werden. In diesem Fall repräsentiert das area Element keinen Hyperlink.
+
+<!---->
 
 - {{htmlattrdef("hreflang")}} {{HTMLVersionInline("5")}}
   - : Gibt die Sprache der verlinkten Ressource an. Erlaubte Werte sind in [BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt) bestimmt worden. Dieses Attribut sollte nur zusammen mit einem **href** Attribut verwendet werden.
 
+<!---->
+
 - {{htmlattrdef("name")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}
   - : Definiert einen Namen für den anklickbaren Bereich, damit er von älternen Webbrowserns mittels Scripting verwendet werden kann.
+
+<!---->
 
 - {{htmlattrdef("media")}} {{HTMLVersionInline("5")}}
   - : Ein Hinweis zum Medium, für welches die verlinkte Ressource ausgelegt ist (zum Beispiel: `print und screen`.). Wenn es ausgelassen wird, wird der Standardwert `all` angenommen. Dieses Attribut sollte nur zusammen mit einem **href** Attribut verwendet werden.
 
+<!---->
+
 - {{htmlattrdef("nohref")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}
   - : Gibt an, dass auf diesem Bereich kein Hyperlink hinterlegt ist. Es muss entweder dieses Attribut oder das **href** Attribut in diesem Element verwendet werden.> **Note:** **Verwendungshinweis:** Dieses Attribut ist seit HTML5 veraltet. Stattdessen ist das Auslassen des **href** Attributs ausreichend.
+
+<!---->
 
 - {{htmlattrdef("rel")}} {{HTMLVersionInline("5")}}
   - : Dieses Attribut spezifiziert für Anker im **href** Attribut die Beziehung zwischen dem Zielobjekt und dem Linkobjekt. Der Wert ist eine kommaseparierte Liste von [Linktypen](/de/docs/Web/HTML/Link_types). Die Werte und deren Semantik werden von Autorität eingetragen, welche die entsprechenden Rechte am Dokument besitzt. Der Standardwert ist void, wenn kein anderer Wert angegeben ist. Dieses Attribut sollte nur zusammen mit einem **href** Attribut verwendet werden.
 - {{htmlattrdef("shape")}}
   - : Die Form vom Hot-Spot. Die Spezifikationen für HTML 5 und HTML 4 definieren die Werte `rect` (rechteckiger Bereich), `circle` (kreisförmiger Bereich), `poly` (für ein Polygon) und `default` (für den ganzen Bereich außerhalb der definierten Bereiche). Viele Webbrowser, insbesonders Internet Explorer 4 und höher, unterstützen `circ`, `polygon` und `rectangle` als gültige Werte für **shape**, welche nicht spezifiziert sind {{Non-standard_inline}}.
 
+<!---->
+
 - {{htmlattrdef("tabindex")}} {{HTMLVersionInline("4")}} only, {{obsolete_inline("5.0")}}
   - : Ein numerischer Wert, der die Position in der Reihenfolge des Tabbing im Webbrowser definiert. Dieses Attribut ist in HTML5 global.
+
+<!---->
 
 - {{htmlattrdef("target")}}
   - : Dieses Attribut gibt an, wo die verlinkte Ressource dargestellt werden soll. In HTML4 ist das der Name oder ein Schlüssenwort für einen Frame. In HTML5 ist es der Name oder ein Schlüsselwort für einen _browsing context_ (zum Beispiel: tab, window oder inline frame). Die folgenden Schlüsselwörter haben eine spezielle Bedeutung:\* `_self`: Lädt die Antwort in denselben HTML4 Frame (oder HTML5 browsing context) wie der aktuelle. Das ist der Standardwert, wenn das Attribut nicht angegeben wird.

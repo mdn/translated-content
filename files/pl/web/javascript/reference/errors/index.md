@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Errors
 ---
 {{jsSidebar("Errors")}}
 
-Poniżej znajduje się lista błędów JavaScript wyświetlanych w konsoli. Takie błędy mogą być dla Ciebie pomocne w debugowaniu skryptu, natomiast wyświetlany komunikat dotyczący danego błędu nie zawsze jest zrozumiały. Poniższe odnośniki przekierowują Cię na strony, których zawartość szczegółowo opisuje dany problem. Każdy błąd jest traktowany jako obiekt {{jsxref("Error")}}, posiada `name` oraz `message`.
+Poniżej znajduje się lista błędów JavaScript wyświetlanych w konsoli. Takie błędy mogą być dla Ciebie pomocne w debugowaniu skryptu, natomiast wyświetlany komunikat dotyczący danego błędu nie zawsze jest zrozumiały. Poniższe odnośniki przekierowują Cię na strony, których zawartość szczegółowo opisuje dany problem. Każdy błąd jest traktowany jako obiekt {{jsxref("Error")}}, posiada `name` oraz `message`.
 
 Błędy wyświetlane w konsoli www mogą zawierać łącza do odpowiedniej strony poniżej, aby pomóc Ci szybko zrozumieć problem, który pojawił się w kodzie.
 

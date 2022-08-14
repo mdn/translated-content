@@ -109,7 +109,7 @@ Die folgenden Eigenschaften bestimmen, wie Text dargestellt wird.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
   - : Ausrichtungseinstellung zur Basislinie. Mögliche Werte: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
-  - : Direktionalität. Mögliche Werte: `ltr, rtl, ``inherit` (default).
+  - : Direktionalität. Mögliche Werte: ` ltr, rtl, ``inherit` (default).
 
 ### Füll- und Linienfarbe
 
@@ -305,6 +305,8 @@ Die meisten dieser APIs sind [veraltet und wurden kurz nach Chrome 36 entfernt](
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
   - : Intended for HD backing stores, but removed from canvas specifications.
 
+<!---->
+
 ### Gecko only
 
 - {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
@@ -359,7 +361,7 @@ Die meisten dieser APIs sind [veraltet und wurden kurz nach Chrome 36 entfernt](
 
 {{Compat("api.CanvasRenderingContext2D")}}
 
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate(), ``scale(),` `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
+- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, ` rotate(), ``scale(),` `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
 
 ## See also
 

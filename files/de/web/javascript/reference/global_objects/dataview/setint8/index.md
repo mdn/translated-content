@@ -24,6 +24,8 @@ Die **`setInt8()`** Methode speichert eine ganze 8-Bit Zahl mit Vorzeichen (Byte
 - byteOffset
   - : Das Offset, in Bytes, vom Start der View, an dem die Daten gespeichert werden sollen.
 
+<!---->
+
 - value
   - : Der Wert, der gespeichert werden soll.
 

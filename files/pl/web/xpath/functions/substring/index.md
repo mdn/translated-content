@@ -22,8 +22,12 @@ Funkcja `substring` zwraca część podanego łańcucha znaków.
 - _`ciąg`_
   - : Łańcuch znaków do oceny.
 
+<!---->
+
 - _`start`_
   - : Pozycja wewnątrz _`łańcuch`_, gdzie rozpoczyna się podciąg
+
+<!---->
 
 - _`długość`_ (opcjonalny)
   - : Długość podciągu. Jeśli pominięty, zwrócony łańcuch znaków będzie zawierał każdy znak z zakresu od pozycji startowej do końca łańcucha.

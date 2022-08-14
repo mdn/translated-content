@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argume
 ---
 {{jsSidebar("Errors")}}
 
-Wyjątek JavaScript  „missing ) after argument list” (brakujący „)” po liście argumentów) występuje, gdy pojawia się błąd przy próbie wywołania funkcji. Może być on spowodowany literówką, brakującym operatorem lubciągiem znaków, w którym nie został zastosowany znak ucieczki tam, gdzie był potrzebny.
+Wyjątek JavaScript  „missing ) after argument list” (brakujący „)” po liście argumentów) występuje, gdy pojawia się błąd przy próbie wywołania funkcji. Może być on spowodowany literówką, brakującym operatorem lubciągiem znaków, w którym nie został zastosowany znak ucieczki tam, gdzie był potrzebny.
 
 ## Wiadomość
 

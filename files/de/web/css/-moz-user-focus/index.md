@@ -21,7 +21,7 @@ Durch Setzen ihres Wertes auf `ignore` kann die Fokussierung des Elements deakti
 
 {{cssinfo}}
 
-> **Hinweis:** Diese Eigenschaft funktioniert nicht bei XUL {{XULElem("textbox")}} Elementen, weil die `textbox` selbst nie fokussiert werden kann. Stattdessen erzeugt XBL ein anonymes HTML {{HTMLElement("input")}} Element innerhalb der `textbox` und dieses Element ist dasjenige, das den Fokus erhält. Die `textbox` kann auch daran gehindert werden, den Tastaturfokus zu erhalten, indem sein Tabindex auf `-1` gesetzt wird und daran, den Mausfokus zu erhalten, indem die Standardaktion des `mousedown` Ereignisses verhindert wird.
+> **Note:** **Hinweis:** Diese Eigenschaft funktioniert nicht bei XUL {{XULElem("textbox")}} Elementen, weil die `textbox` selbst nie fokussiert werden kann. Stattdessen erzeugt XBL ein anonymes HTML {{HTMLElement("input")}} Element innerhalb der `textbox` und dieses Element ist dasjenige, das den Fokus erhält. Die `textbox` kann auch daran gehindert werden, den Tastaturfokus zu erhalten, indem sein Tabindex auf `-1` gesetzt wird und daran, den Mausfokus zu erhalten, indem die Standardaktion des `mousedown` Ereignisses verhindert wird.
 
 ## Syntax
 

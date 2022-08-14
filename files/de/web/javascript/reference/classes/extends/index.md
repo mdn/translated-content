@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Klassen/extends
 ---
 {{jsSidebar("Classes")}}
 
-Das **`extends`** Schlüsselwort wird in einer [Klassendeklaration](/de/docs/Web/JavaScript/Reference/Statements/class)oder in einem [Klassenausdruck](/de/docs/Web/JavaScript/Reference/Operators/class)verwendet, um eine, von einer anderen Klasse, abgeleitete Klasse zu erzeugen.
+Das **`extends`** Schlüsselwort wird in einer [Klassendeklaration ](/de/docs/Web/JavaScript/Reference/Statements/class)oder in einem [Klassenausdruck ](/de/docs/Web/JavaScript/Reference/Operators/class)verwendet, um eine, von einer anderen Klasse, abgeleitete Klasse zu erzeugen.
 
 ## Syntax
 

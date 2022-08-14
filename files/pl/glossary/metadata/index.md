@@ -8,7 +8,7 @@ tags:
   - metadata
 translation_of: Glossary/Metadata
 ---
-**Metadane** to — w swojej najprostszej definicji — dane opisujące dane. Na przykład dokument {{glossary("HTML")}} to dane, ale HTML może również zawierać metadane w swoim elemencie {{htmlelement("head")}} opisującym dokument — np. kto go napisał i jego podsumowanie.
+**Metadane** to — w swojej najprostszej definicji — dane opisujące dane. Na przykład dokument {{glossary("HTML")}} to dane, ale HTML może również zawierać metadane w swoim elemencie {{htmlelement("head")}} opisującym dokument — np. kto go napisał i jego podsumowanie.
 
 ## Dowiedz się więcej
 
@@ -18,4 +18,4 @@ translation_of: Glossary/Metadata
 
 ### Metadane HTML
 
-- Element {{htmlelement("meta")}} na MDN
+- Element {{htmlelement("meta")}} na MDN

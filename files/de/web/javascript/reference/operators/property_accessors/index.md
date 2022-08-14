@@ -77,7 +77,7 @@ document ['createElement']('pre');
 
 ### Eigenschaftensnamen
 
-Eigenschaftsnamen müssen Strings sein. Das bedeutet dass Objekte, die kein String sind, nicht als Schlüssel in einem Objekt verwendet werden können. Jedes Objekt das keine String ist, inklusive Zahlen, wird mittels [toString](/de/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)in einen String umgewandelt.
+Eigenschaftsnamen müssen Strings sein. Das bedeutet dass Objekte, die kein String sind, nicht als Schlüssel in einem Objekt verwendet werden können. Jedes Objekt das keine String ist, inklusive Zahlen, wird mittels [toString ](/de/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)in einen String umgewandelt.
 
 ```js
 var object = {};
@@ -101,7 +101,7 @@ Eine Methode ist nicht an ein Objekt gebunden zu dem sie gehört. Vor allem `thi
 
 ### Hinweis zu `eval`
 
-JavaScript-Anfänger machen oft den Fehler [eval](/de/docs/Web/JavaScript/Reference/Global_Objects/eval)zu nutzen wo die Klammernotation verwendet werden kann. Zum Beispiel sieht man folgende Syntax häufig in vielen Skripten.
+JavaScript-Anfänger machen oft den Fehler [eval ](/de/docs/Web/JavaScript/Reference/Global_Objects/eval)zu nutzen wo die Klammernotation verwendet werden kann. Zum Beispiel sieht man folgende Syntax häufig in vielen Skripten.
 
 ```js
 x = eval('document.forms.form_name.elements.' + strFormControl + '.value');

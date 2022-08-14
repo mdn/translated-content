@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 Die **`apply()`** Methode ruft eine Funktion mit gegebenem `this` Wert und `arguments` als Array (oder einem [Array ähnlichem Objekt](/de/docs/Web/JavaScript/Guide/Indexed_collections#Mit_Array-ähnlichen_Objekten_arbeiten)).
 
-> **Hinweis:** Die Syntax dieser Funktion ist größtenteils identisch zu der Funktion {{jsxref("Function.call", "call()")}}. Der fundamentale Unterschied ist, dass `call()` **eine Liste von Argumenten** und `apply()` **ein Array mit Argumenten** übergeben bekommt.
+> **Note:** **Hinweis:** Die Syntax dieser Funktion ist größtenteils identisch zu der Funktion {{jsxref("Function.call", "call()")}}. Der fundamentale Unterschied ist, dass `call()` **eine Liste von Argumenten** und `apply()` **ein Array mit Argumenten** übergeben bekommt.
 
 {{EmbedInteractiveExample("pages/js/function-apply.html")}}
 
@@ -118,7 +118,7 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-> **Hinweis:** Die oben eingesetzte `Object.create()` Methode ist relativ neu. Alternativ kann eine der folgenden Ansätze verwendet werden:Einsatz von {{jsxref("Object/__proto__", "Object.__proto__")}}:`js Function.prototype.construct = function (aArgs) { var oNew = {}; oNew.__proto__ = this.prototype; this.apply(oNew, aArgs); return oNew; };`Einsatz von [Closures](/de/docs/Web/JavaScript/Closures):`js Function.prototype.construct = function(aArgs) { var fConstructor = this, fNewConstr = function() { fConstructor.apply(this, aArgs); }; fNewConstr.prototype = fConstructor.prototype; return new fNewConstr(); };`Einsatz von {{jsxref("Function")}} Konstruktoren:```js
+> **Note:** **Hinweis:** Die oben eingesetzte `Object.create()` Methode ist relativ neu. Alternativ kann eine der folgenden Ansätze verwendet werden:Einsatz von {{jsxref("Object/__proto__", "Object.__proto__")}}:`js Function.prototype.construct = function (aArgs) { var oNew = {}; oNew.__proto__ = this.prototype; this.apply(oNew, aArgs); return oNew; }; `Einsatz von [Closures](/de/docs/Web/JavaScript/Closures):`js Function.prototype.construct = function(aArgs) { var fConstructor = this, fNewConstr = function() { fConstructor.apply(this, aArgs); }; fNewConstr.prototype = fConstructor.prototype; return new fNewConstr(); }; `Einsatz von {{jsxref("Function")}} Konstruktoren:```js
 > Function.prototype.construct = function (aArgs) {
 > var fNewConstr = new Function("");
 > fNewConstr.prototype = this.prototype;
@@ -148,7 +148,7 @@ console.log(myInstance instanceof MyConstructor); // logs 'true'
 console.log(myInstance.constructor);              // logs 'MyConstructor'
 ```
 
-> **Hinweis:** Diese nicht native `Function.construct` Methode funktioniert nicht mit einigen nativen Konstruktoren (mit {{jsxref("Date")}} zum Beispiel). In diesem Fall muss man die {{jsxref("Function.prototype.bind")}} Methode (hat man zum Beispiel ein Array ähnliches Objekt wie folgt, um mit dem {{jsxref("Global_Objects/Date", "Date")}} Konstruktor `[2012, 11, 4]` einzusetzen; in diesem Fall muss folgendes geschrieben werden: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — Jedoch ist das nicht die beste Art und Weise Probleme zu Lösen, weshalb diese Lösung nicht Praxistauglich ist).
+> **Note:** **Hinweis:** Diese nicht native `Function.construct` Methode funktioniert nicht mit einigen nativen Konstruktoren (mit {{jsxref("Date")}} zum Beispiel). In diesem Fall muss man die {{jsxref("Function.prototype.bind")}} Methode (hat man zum Beispiel ein Array ähnliches Objekt wie folgt, um mit dem {{jsxref("Global_Objects/Date", "Date")}} Konstruktor `[2012, 11, 4]` einzusetzen; in diesem Fall muss folgendes geschrieben werden: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — Jedoch ist das nicht die beste Art und Weise Probleme zu Lösen, weshalb diese Lösung nicht Praxistauglich ist).
 
 ## Spezifikationen
 

@@ -17,6 +17,8 @@ Mit dem Schlüsselwort **`var` **deklariert man Variablen und initialisiert dies
 - `varnameN`
   - : Variablenname. Jeder legale Bezeichner ist erlaubt.
 
+<!---->
+
 - `wertN`
   - : Initialwert der Variablen. Jeder legale Ausdruck ist erlaubt.
 
@@ -66,7 +68,7 @@ console.log(a, b); // erzeugt einen ReferenceError.
 // Das 'b' Attribut wurde gelöscht und existiert nicht länger.
 ```
 
-Wegen dieser drei Unterschiede führt das Fehlen der Variablendeklaration zu unerwarteten Ergebnissen. **Deswegen ist es empfohlen immer Variablen zu deklarieren, unabhängig davon, ob sie sich in einer Funktion oder im globalen Kontext befinden.** Zudem wird im ECMAScript 5 `{{jsxref("</code>Functions_and_function_scope/Strict_mode<code>", "strict mode")}}`ein Fehler erzeugt, wenn einer nicht deklarierten Variablen ein Wert zugewiesen wird.
+Wegen dieser drei Unterschiede führt das Fehlen der Variablendeklaration zu unerwarteten Ergebnissen. **Deswegen ist es empfohlen immer Variablen zu deklarieren, unabhängig davon, ob sie sich in einer Funktion oder im globalen Kontext befinden.** Zudem wird im ECMAScript 5 `{{jsxref("</code>Functions_and_function_scope/Strict_mode<code>", "strict mode")}} `ein Fehler erzeugt, wenn einer nicht deklarierten Variablen ein Wert zugewiesen wird.
 
 ### var hoisting
 
@@ -109,7 +111,7 @@ var x = y, y = 'A';
 console.log(x + y); // undefinedA
 ```
 
-`x`und `y`werden deklariert bevor Programmcode ausgeführt wird. Die Zuweisungen geschehen später. Wenn "`x = y`" ausgeführt wird, existiert `y`schon mit dem Wert `undefined`, weshalb kein Fehler erzeugt wird. `x`wird der Wert `undefined` zugewiesen. Dann wird `y`der Wert 'A' zugewiesen. Nach dieser einen Zeile ist demnach das Resultat `x === undefined && y === 'A'`.
+`x `und `y `werden deklariert bevor Programmcode ausgeführt wird. Die Zuweisungen geschehen später. Wenn "`x = y`" ausgeführt wird, existiert `y `schon mit dem Wert `undefined`, weshalb kein Fehler erzeugt wird. `x `wird der Wert `undefined` zugewiesen. Dann wird `y `der Wert 'A' zugewiesen. Nach dieser einen Zeile ist demnach das Resultat `x === undefined && y === 'A'`.
 
 ### Initialisierung mehrerer Variablen
 

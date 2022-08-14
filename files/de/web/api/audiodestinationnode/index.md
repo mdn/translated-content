@@ -5,7 +5,7 @@ translation_of: Web/API/AudioDestinationNode
 ---
 {{APIRef("Web Audio API")}}
 
-Die `AudioDestinationNode` Schnittstelle repräsentiert das Ziel bzw. den Ausgang eines Audiographen in einem gegebenen Kontext — in der Regel die Lautsprecher. Es könnte aber auch ein Knoten _(Node)_ sein, der Audiodaten in einem `OfflineAudioContext`aufzeichnet.
+Die `AudioDestinationNode` Schnittstelle repräsentiert das Ziel bzw. den Ausgang eines Audiographen in einem gegebenen Kontext — in der Regel die Lautsprecher. Es könnte aber auch ein Knoten _(Node)_ sein, der Audiodaten in einem `OfflineAudioContext `aufzeichnet.
 
 `AudioDestinationNode` hat einen Eingang und keinen Ausgang (denn er ist der Ausgang, kein weiterer Audio Node kann verlinkt werden). Die Anzahl der Kanäle des Eingangs muss zwischen null und dem Wert von `maxChannelCount` liegen, sonst wird eine _Exception_ ausgelöst.
 
@@ -31,7 +31,7 @@ _Keine spezifischen Methoden; erbt die Methoden der Elternklasse,_ _{{domxref("A
 
 ## Beispiel
 
-Das Benutzen des`AudioDestinationNode` ist per Design einfach gehalten — es repräsentiert den Ausgang des physikalischen Geräts (Lautsprecher), so dass man dieses mit ein paar Zeilen Code mit einem Audiographen verbinden kann:
+Das Benutzen des` AudioDestinationNode` ist per Design einfach gehalten — es repräsentiert den Ausgang des physikalischen Geräts (Lautsprecher), so dass man dieses mit ein paar Zeilen Code mit einem Audiographen verbinden kann:
 
 ```js
 var audioCtx = new AudioContext();

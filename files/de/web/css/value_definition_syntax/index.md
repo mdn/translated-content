@@ -101,7 +101,7 @@ Aber nicht:
 - `bold`, da beide Komponenten im Wert vorkommen müssen.
 - `bold 1em bold`, da beide Komponenten nur einmal vorkommen dürfen.
 
-> **Hinweis:** Juxtaposition hat Vorrang gegenüber dem doppelten Und-Zeichen, was bedeutet, dass `bold thin && <length>` gleichbedeutend ist mit `[ ``bold thin ] && <length>`. Dies beschreibt `bold thin <length>` oder `<length>`` bold thin`, aber nicht `bold <length>`` thin`.
+> **Note:** **Hinweis:** Juxtaposition hat Vorrang gegenüber dem doppelten Und-Zeichen, was bedeutet, dass `bold thin && <length>` gleichbedeutend ist mit ` [ ``bold thin ] && <length>`. Dies beschreibt `bold thin <length>` oder ` <length>`` bold thin  `, aber nicht ` bold <length>`` thin  `.
 
 ### Doppelter Balken
 
@@ -120,7 +120,7 @@ Aber nicht:
 - `blue yellow`, da eine Komponente nur einmal vorkommen darf.
 - `bold`, da es kein erlaubtes Schlüsselwort als Wert für irgendeine Entität ist.
 
-> **Hinweis:** Das doppelte Und-Zeichen hat Vorrang gegenüber dem doppelten Balken, was bedeutet, dass `bold || thin && <length>` gleichbedeutend ist mit `bold || [ thin && <length> ]`. Dies beschreibt `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, oder `thin <length> bold`, aber nicht `bold <length>`` bold thin`, da `bold`, falls nicht weggelassen, vor oder nach der gesamten `thin && <length>` Komponente platziert werden muss.
+> **Note:** **Hinweis:** Das doppelte Und-Zeichen hat Vorrang gegenüber dem doppelten Balken, was bedeutet, dass `bold || thin && <length>` gleichbedeutend ist mit `bold || [ thin && <length> ]`. Dies beschreibt `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, oder `thin <length> bold`, aber nicht ` bold <length>`` bold thin  `, da `bold`, falls nicht weggelassen, vor oder nach der gesamten `thin && <length>` Komponente platziert werden muss.
 
 ### Einfacher Balken
 
@@ -144,7 +144,7 @@ Aber nicht:
 - `center 3%`, da nur eine der Komponenten angegeben werden darf.
 - `3em 4.5em`, da eine Komponente nur einmal vorkommen darf.
 
-> **Hinweis:** Der doppelte Balken hat Vorrang gegenüber dem einfachen Balken, was bedeutet, dass `bold | thin || <length>` gleichbedeutend ist mit `bold | [ thin || <length> ]`. Dies beschreibt `bold`, `thin`, `<length>`, `<length> thin`, oder `thin <length>`, aber nicht `bold <length>`, da nur eine Entität jeder Seite des `|` Kombinators vorkommen darf.
+> **Note:** **Hinweis:** Der doppelte Balken hat Vorrang gegenüber dem einfachen Balken, was bedeutet, dass `bold | thin || <length>` gleichbedeutend ist mit `bold | [ thin || <length> ]`. Dies beschreibt `bold`, `thin`, `<length>`, `<length> thin`, oder `thin <length>`, aber nicht `bold <length>`, da nur eine Entität jeder Seite des `|` Kombinators vorkommen darf.
 
 ## Komponentenwert Multiplikatoren
 

@@ -39,7 +39,7 @@ function gruessen(gruss, name) {
 gruessen(sagHallo, "JavaScript!");
 ```
 
-Wir übergeben unsere `sagHallo()` Funktion als ein Argument an die `gruessen()`Funktion. Auf diese Art behandeln wir die Funktion als `Wert`.
+Wir übergeben unsere `sagHallo()` Funktion als ein Argument an die `gruessen() `Funktion. Auf diese Art behandeln wir die Funktion als `Wert`.
 
 > **Note:** Die Funktion, die wir als Argument einer anderen Funktion übergeben wird als **[Callback function](/de/docs/Glossary/Callback_function) **bezeichnet. sagHallo() ist eine _Callback function._
 

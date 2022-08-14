@@ -17,7 +17,7 @@ var formData = new FormData(form)
 
 ### Parameter
 
-- `form`{{optional_inline}}
+- `form `{{optional_inline}}
   - : Ein HTML {{HTMLElement("form")}}-Element — wenn angegeben, wird das neue {{domxref("FormData")}}-Objekt mit den aktuellen Schlüssel/Wert-Paaren des form's gefüllt, wobei "name" der Schlüssel und "value" der Wert. Mitgeschickte Dateien werden ebenfalls codiert.
 
 ## Example

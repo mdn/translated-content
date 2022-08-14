@@ -21,3 +21,5 @@ original_slug: Glossaire/TURN
 
 - [Spécification](http://www.ietf.org/rfc/rfc5766.txt)
 - [Spécification actualisée pour IPv6](http://www.ietf.org/rfc/rfc6156.txt)
+
+<!---->

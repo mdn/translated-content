@@ -6,9 +6,9 @@ original_slug: Web/JavaScript/Referencje/Operatory/super
 ---
 {{jsSidebar("Operators")}}
 
-Słowo kluczowe **super** jest wykorzystywane do udostępniania i korzystania z funkcji klasy po której nasz obiekt dziedziczy.
+Słowo kluczowe **super** jest wykorzystywane do udostępniania i korzystania z funkcji klasy po której nasz obiekt dziedziczy.
 
-Wyrażenia `super.prop` i `super[expr]` są poprawne w każdej definicji metody zarówno w [klasach](/pl/docs/Web/JavaScript/Reference/Classes) i [literałach obiektowych](/pl/docs/Web/JavaScript/Referencje/Operatory/Object_initializer).
+Wyrażenia `super.prop` i `super[expr]` są poprawne w każdej definicji metody zarówno w [klasach](/pl/docs/Web/JavaScript/Reference/Classes) i [literałach obiektowych](/pl/docs/Web/JavaScript/Referencje/Operatory/Object_initializer).
 
 ## Składnia
 
@@ -17,13 +17,13 @@ Wyrażenia `super.prop` i `super[expr]` są poprawne w każdej definicji metody 
 
 ## Opis
 
-W przypadku użycia w konstruktorze, słowo kluczowe `super` pojawia się samodzielnie i musi zostać użyte przed użyciem słowa kluczowego `this` . Słowo kluczowe `super`  można również wykorzystać do wywoływania funkcji które nasz obiekt odziedziczył po swoim rodzicu.
+W przypadku użycia w konstruktorze, słowo kluczowe `super` pojawia się samodzielnie i musi zostać użyte przed użyciem słowa kluczowego `this` . Słowo kluczowe `super`  można również wykorzystać do wywoływania funkcji które nasz obiekt odziedziczył po swoim rodzicu.
 
 ## Przykład
 
-### Użycie `super` w klasach
+### Użycie `super` w klasach
 
-Poniższy snippet został pobrany z [próbki klasy](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) (live demo). W tym przykładzie, super() jest wywoływane w celu uniknięcia powielania tych części konstruktora, które są wspólne zarówno dla `Rectangle` (trójkąta) jak i `Square` (kwadratu).
+Poniższy snippet został pobrany z [próbki klasy](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) (live demo). W tym przykładzie, super() jest wywoływane w celu uniknięcia powielania tych części konstruktora, które są wspólne zarówno dla `Rectangle` (trójkąta) jak i `Square` (kwadratu).
 
 ```js
 class Rectangle {
@@ -59,7 +59,7 @@ class Square extends Rectangle {
 
 ### Super-wywołanie metod statycznych
 
-Za pomocą `super` jesteś w stanie także wywołać metody statyczne.
+Za pomocą `super` jesteś w stanie także wywołać metody statyczne.
 
 ```js
 class Rectangle {
@@ -80,7 +80,7 @@ Square.logDescription(); // 'I have 4 sides which are all equal'
 
 ### Usuwanie właściwości z super wyrzuci błąd
 
-Nie możesz użyć [operatora usuwania](/pl/docs/Web/JavaScript/Referencje/Operatory/Operator_delete) oraz `super.prop` bądź `super[expr]` w celu usunięcia właściwości klasy rodzica ponieważ zostanie zwrócony błąd {{jsxref("ReferenceError")}}.
+Nie możesz użyć [operatora usuwania](/pl/docs/Web/JavaScript/Referencje/Operatory/Operator_delete) oraz `super.prop` bądź `super[expr]` w celu usunięcia właściwości klasy rodzica ponieważ zostanie zwrócony błąd {{jsxref("ReferenceError")}}.
 
 ```js
 class Base {
@@ -97,9 +97,9 @@ class Derived extends Base {
 new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
 ```
 
-### `super.prop` nie może nadpisać właściwości typu non-writable 
+### `super.prop` nie może nadpisać właściwości typu non-writable 
 
-Definiując właściwości non-writable (niezapisywalne) np. {{jsxref("Object.defineProperty")}}, pamiętaj, że `super` nie może nadpisać takiej wartości.
+Definiując właściwości non-writable (niezapisywalne) np. {{jsxref("Object.defineProperty")}}, pamiętaj, że `super` nie może nadpisać takiej wartości.
 
 ```js
 class X {
@@ -126,11 +126,11 @@ y.foo(); // TypeError: "prop" is read-only
 console.log(y.prop); // 1
 ```
 
-### Używanie `super.prop` w literałach obiektowych
+### Używanie `super.prop` w literałach obiektowych
 
-`super` może być także wykorzystane [inicjalizatorze / literale obiektu](/pl/docs/Web/JavaScript/Referencje/Operatory/Object_initializer).
+`super` może być także wykorzystane [inicjalizatorze / literale obiektu](/pl/docs/Web/JavaScript/Referencje/Operatory/Object_initializer).
 
-W tym przykładzie dwa obiekty definiują swoją metodę. W drugim obiekcie, `super` wywołuje metodę obiektu pierwszego. To działa dzięki {{jsxref("Object.setPrototypeOf()")}} z czym jesteśmy w stanie ustawić prototyp obiektu `obj2` na `obj1`, tak aby `super` było w stanie znaleźć metodę `method1` w obiekcie `obj1`.
+W tym przykładzie dwa obiekty definiują swoją metodę. W drugim obiekcie, `super` wywołuje metodę obiektu pierwszego. To działa dzięki {{jsxref("Object.setPrototypeOf()")}} z czym jesteśmy w stanie ustawić prototyp obiektu `obj2` na `obj1`, tak aby `super` było w stanie znaleźć metodę `method1` w obiekcie `obj1`.
 
 ```js
 var obj1 = {

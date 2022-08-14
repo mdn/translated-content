@@ -37,6 +37,8 @@ _listaWęzłów_ to zmienna przechowująca listę węzłów. Lista taka ma typ [
        };
      };
 
+<!---->
+
     // sposób na usunięcie wszystkich dzieci węzła
     // box to referencja do obiektu elementu, który ma dzieci
     while (box.firstChild)

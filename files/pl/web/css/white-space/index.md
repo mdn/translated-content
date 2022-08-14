@@ -18,7 +18,7 @@ Własność CSS `white-space` jest używana do opisu sposobu, w jaki białe znak
 
 ## Składnia
 
-    white-space: normal | pre | nowrap | pre-wrap | -moz-pre-wrap | pre-line | inherit ;
+    white-space: normal | pre | nowrap | pre-wrap | -moz-pre-wrap | pre-line | inherit ;
 
 ### Wartości
 

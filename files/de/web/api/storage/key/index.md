@@ -45,7 +45,7 @@ for (var i = 0; i < localStorage.length; i++) {
 }
 ```
 
-> **Hinweis:** Weitere Beispiele sind in der [Web-Storage-Demo](https://mdn.github.io/dom-examples/web-storage/) zu finden.
+> **Note:** **Hinweis**: Weitere Beispiele sind in der [Web-Storage-Demo](https://mdn.github.io/dom-examples/web-storage/) zu finden.
 
 ## Spezifikationen
 

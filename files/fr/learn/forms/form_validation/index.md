@@ -57,6 +57,10 @@ Vous rencontrerez différents types de validation de formulaires sur le Web :
   - la validation JavaScript, codée en JavaScript, entièrement personnalisable.
   - la validation de formulaire intégrée avec les fonctions de validation de formulaire HTML5. Elle ne nécessite généralement pas de JavaScript, a de meilleures performances, mais elle n'est pas aussi personnalisable.
 
+<!---->
+
+<!---->
+
 - La validation côté serveur est la validation opérée sur le serveur, après que les données ont été soumises — le code côté serveur est utilisé pour valider les données avant de les mettre dans la base de données. Si elles sont erronées, une réponse est envoyée au client pour dire à l'utilisateur ce qui a mal tourné. La validation côté serveur n'est pas aussi conviviale que la validation côté client, car elle nécessite un aller-retour vers le serveur, mais c'est la dernière ligne de défense de votre application contre les mauvaises données (c'est-à-dire les données incorrectes, voire malveillantes). Tous les modèles de canevas de vérification courants côté serveur ont des fonctions de validation et de nettoyage des données (ce qui les sécurise).
 
 Dans le monde réel, les développeurs ont tendance à utiliser une combinaison de validations côté client et côté serveur, pour être du côté sûr.

@@ -107,7 +107,7 @@ Argumentom mogą być również przypisywane wartości:
 
     arguments[1] = 'nowa wartosc';
 
-> **Uwaga:** silnik JavaScript [SpiderMonkey](pl/SpiderMonkey) posiada [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=292215), w którym nie można do `arguments{{ mediawiki.external('n') }}` przypisać wartości, jeśli `n` jest większe niż liczba formalnych lub rzeczywistych parametrów.
+> **Note:** **Uwaga:** silnik JavaScript [SpiderMonkey](pl/SpiderMonkey) posiada [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=292215), w którym nie można do `arguments{{ mediawiki.external('n') }}` przypisać wartości, jeśli `n` jest większe niż liczba formalnych lub rzeczywistych parametrów.
 > Błąd ten został usunięty w silniku JavaScript 1.6.
 
 Obiekt `arguments` nie jest tablicą. Jest do niej podobny, lecz nie posiada żadnej z własności tablicy poza [`length`](pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Funkcje/arguments/length). Przykładowo nie posiada on metody [`pop`](pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Obiekty/Array/pop). Może być on jednak skonwertowany do prawdziwej tablicy:
@@ -125,8 +125,12 @@ Aby określić liczbę argumentów przekazywanych do funkcji można użyć włas
 - [`arguments.callee`](pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Funkcje/arguments/callee)
   - : Określa ciało funkcji aktualnie wykonywanej funkcji.
 
+<!---->
+
 - [`arguments.caller`](pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Funkcje/arguments/caller) {{ Deprecated_inline() }}
   - : Określa nazwę funkcji, która wywołała aktualnie wykonywaną funkcję.
+
+<!---->
 
 - [`arguments.length`](pl/Dokumentacja_j%c4%99zyka_JavaScript_1.5/Funkcje/arguments/length)
   - : Określa liczbę argumentów przekazywanych do funkcji.
@@ -146,6 +150,8 @@ Oprócz dostępności jako zmienna lokalna, obiekt `arguments` jest również w�
 Następujące cechy dostępne w JavaScripcie 1.1 i JavaScripcie 1.2 zostały usunięte:
 
 - Każda zmienna lokalna funkcji jest własnością obiektu `arguments`. Na przykład, jeśli funkcja `myFunc` posiada zmienną lokalną nazwaną `myLocalVar`, możesz odwołać się do zmiennej jako `arguments.myLocalVar`.
+
+<!---->
 
 - Każdy argument formalny funkcji jest własnością obiektu `arguments`. Na przykład, jeżeli funkcja `myFunc` posiada dwa argumenty o nazwie `arg1` i `arg2`, możesz odwołać się do nich jako `arguments.arg1` i `arguments.arg2` (możesz także odwołać się do tych argumentów poprzez `arguments{{ mediawiki.external(0) }}` i `arguments{{ mediawiki.external(1) }}`).
 

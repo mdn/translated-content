@@ -33,11 +33,11 @@ Alle Einheiten können auch den Wert `0` (oder `0deg`, `0grad`, `0rad`, `0turn`)
 
 ## Beispiele
 
-| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | Ein rechter Winkel (nach rechts, im Uhrzeigersinn): `90deg = 100grad = 0.25turn` `≈`` 1.5708rad`           |
+| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | Ein rechter Winkel (nach rechts, im Uhrzeigersinn): `90deg = 100grad = 0.25turn` ` ≈`` 1.5708rad  `           |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | Ein flacher Winkel: `180deg = 200grad = 0.5turn`` ``≈`` 3.1416rad`                                         |
-| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | Ein rechter Winkel (nach links, gegen den Uhrzeigersinn): `-90deg = -100grad = -0.25turn` `≈`` -1.5708rad` |
-| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | Ein Nullwinkel: `0 = 0deg = 0grad = 0turn`` ``=`` 0rad`                                                    |
+| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | Ein flacher Winkel: ` 180deg = 200grad = 0.5turn`` ``≈`` 3.1416rad  `                                         |
+| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | Ein rechter Winkel (nach links, gegen den Uhrzeigersinn): `-90deg = -100grad = -0.25turn` ` ≈`` -1.5708rad  ` |
+| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | Ein Nullwinkel: ` 0 = 0deg = 0grad = 0turn`` ``=`` 0rad  `                                                    |
 
 ## Spezifikation
 

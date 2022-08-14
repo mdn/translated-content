@@ -33,11 +33,17 @@ Brak.
 - `match`
   - : Określa wzór, który warunkuje elementy, dla których szablon ten powinien zostać użyty. Jest to wymagany atrybut, gdy nie został zdefiniowany atrybut `name`.
 
+<!---->
+
 - `name`
   - : Określa dla szablonu nazwę, za pomocą której może on być wywołany przez element `<xsl:call-template>`.
 
+<!---->
+
 - `mode`
   - : Określa dla szablonu konkretny tryb, który może być dobrany przez atrybut elementu `<xsl:apply-templates>`. Jest to użyteczne przy przetwarzaniu tej samej informacji na różne sposoby.
+
+<!---->
 
 - `priority`
   - : Określa numeryczny priorytet dla tego szablonu. Może to być dowolna liczba różna od `Infinity`. Procesor używa tej liczby, gdy więcej niż jeden szablon dobiera ten sam węzeł.

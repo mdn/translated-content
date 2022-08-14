@@ -15,11 +15,11 @@ translation_of: Web/API/Cache/addAll
 
 Die **addAll()** Methode der {{domxref("Cache")}} Schnittstelle nimmt ein Array von URLS, ruft diese ab und fügt die daraus resultierenden Antwortobjekte zum jeweiligen Cache hinzu. Die Antwortobjekte, welche während des Abrufens erzeugt werden, werden zu Schlüsselwerten für die gespeicherten Antwortoperationen.
 
-> **Hinweis:** `addAll()` überschreibt jegliche Schlüsselwertpaare im Cache, die der Anfrage entsprechen wird aber scheitern, wenn eine resultierende put() Operation einen früheren Cache-Eintrag, der durch die gleiche addAll() Methode erzeugt wurde, überschreiben würde.
+> **Note:** **Hinweis**: `addAll()` überschreibt jegliche Schlüsselwertpaare im Cache, die der Anfrage entsprechen wird aber scheitern, wenn eine resultierende put() Operation einen früheren Cache-Eintrag, der durch die gleiche addAll() Methode erzeugt wurde, überschreiben würde.
 
-> **Hinweis:** Ursprüngliche Cache Implementationen (sowohl in Blink als auch in Gecko) lösen {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, und {{domxref("Cache.put")}} Promises auf, wenn die jeweilige Antwort vollständig in den Speicher geschrieben wurde. Neuere Spezifikationsversionen haben aktualisierte Informationen, welche aussagen, dass der Browser den Promise bereits auflösen kann, wenn der Eintrag in die Datenbank erfolgt, auch wenn die Antwort zu diesem Zeitpunkt noch nicht vollständig geschrieben wurde (sprich der Datenstrom in den Speicher ist noch nicht beendet).
+> **Note:** **Hinweis**: Ursprüngliche Cache Implementationen (sowohl in Blink als auch in Gecko) lösen {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, und {{domxref("Cache.put")}} Promises auf, wenn die jeweilige Antwort vollständig in den Speicher geschrieben wurde. Neuere Spezifikationsversionen haben aktualisierte Informationen, welche aussagen, dass der Browser den Promise bereits auflösen kann, wenn der Eintrag in die Datenbank erfolgt, auch wenn die Antwort zu diesem Zeitpunkt noch nicht vollständig geschrieben wurde (sprich der Datenstrom in den Speicher ist noch nicht beendet).
 
-> **Hinweis:** Zum Stand von Chrome 46 wird die Cache API nur Anfragen von sicheren Quellen speichern, also solche die via HTTPS angeboten werden.
+> **Note:** **Hinweis:** Zum Stand von Chrome 46 wird die Cache API nur Anfragen von sicheren Quellen speichern, also solche die via HTTPS angeboten werden.
 
 ## Syntax
 

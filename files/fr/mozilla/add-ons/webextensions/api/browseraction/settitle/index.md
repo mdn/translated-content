@@ -48,6 +48,8 @@ browser.browserAction.setTitle(
     - `windowId`{{Optional_Inline}}
       - : `integer`. Définit le titre de la fenêtre donnée.
 
+<!---->
+
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et le titre n'est pas défini.
 - Si `windowId` et `tabId` sont tous les deux omis, le titre global est défini.
 

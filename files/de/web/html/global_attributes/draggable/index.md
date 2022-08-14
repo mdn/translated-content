@@ -20,7 +20,7 @@ Wurde das Attribut nicht gesetzt, wird als Wert `auto` angenommen. Das Drag-Verh
 
 Bei diesem Attribut handelt es sich nicht um einen _booleschen_ Wert, `true` oder `false` muss explizit angegeben werden. Eine Kurzform wie beispielsweise `<label draggable>Beispiel Label</label>` ist nicht zulässig. Die korrekte Verwendung ist `<label draggable="true">Beispiel Label</label>`.
 
-Nativ kann das Attribut **draggable** nur für Textauswahl, Bilder und Links verwendet werden. Bei allen anderen Elementen muss das **{{domxref('GlobalEventHandlers.ondragstart','ondragstart')}}** - Event gesetzt werden, um Drag & Drop Mechanismen verwendet zu können. [Dieses Beispiel](/de/docs/DragDrop/Drag_Operations) (englisch) enthält eine ausführlichere Beschreibung der Drag & Drop API und deren Verwendung.
+Nativ kann das Attribut **draggable** nur für Textauswahl, Bilder und Links verwendet werden. Bei allen anderen Elementen muss das **{{domxref('GlobalEventHandlers.ondragstart','ondragstart')}}\*\***`-`\*\*Event gesetzt werden, um Drag & Drop Mechanismen verwendet zu können. [Dieses Beispiel](/de/docs/DragDrop/Drag_Operations) (englisch) enthält eine ausführlichere Beschreibung der Drag & Drop API und deren Verwendung.
 
 ## Spezifikationen
 

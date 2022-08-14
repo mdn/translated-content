@@ -25,7 +25,7 @@ Zwraca wartość logiczną wskazującą czy przeglądarka jest w trybie online, 
 
 ### Przykład
 
-    alert(navigator.onLine ? "Jesteś online" : "Jesteś offline");
+    alert(navigator.onLine ? "Jesteś online" : "Jesteś offline");
 
 ### Uwagi
 

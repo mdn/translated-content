@@ -61,12 +61,12 @@ console.log(new Pies('Joe').toSource()); // ---> new  Pies("Joe")
 
 ## Zobacz także
 
-- {{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Array", "Array")}} Object method.
-- {{jsxref("Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Boolean", "Boolean")}} Object method.
-- {{jsxref("Date.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Date", "Date")}} Object method.
-- {{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Function", "Function")}} Object method.
-- {{jsxref("Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Number", "Number")}} Object method.
-- {{jsxref("Regexp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/RegExp", "RegExp")}} Object method.
-- {{jsxref("String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/String", "String")}} Object method.
-- {{jsxref("Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Symbol", "Symbol")}} Object method.
-- `Math.toSource()` — Returns the String "Math".
+- {{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Array", "Array")}} Object method.
+- {{jsxref("Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Boolean", "Boolean")}} Object method.
+- {{jsxref("Date.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Date", "Date")}} Object method.
+- {{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Function", "Function")}} Object method.
+- {{jsxref("Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Number", "Number")}} Object method.
+- {{jsxref("Regexp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/RegExp", "RegExp")}} Object method.
+- {{jsxref("String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/String", "String")}} Object method.
+- {{jsxref("Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Symbol", "Symbol")}} Object method.
+- `Math.toSource()` — Returns the String "Math".

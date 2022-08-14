@@ -100,7 +100,7 @@ Es ist durchaus üblich ein Objekt unter Verwendung eines Objektliterals zu erze
 
 ## Punktnotation
 
-Oben haben Sie auf die Eigenschaften und Methoden des Objektes mittels Punktnotation zugegriffen. **Der Objektbezeichner `person` dient als **Namensraum** - dieser muss zuerst angegeben werden, um auf etwas zuzugreifen, das innerhalb des Objektes **eingekapselt** ist. Als nächstes folgt der Punkt und anschließend der Bestandteil, auf den Sie zugreifen wollen - dies kann der Name einer einfachen Eigenschaft sein, ein Element einer Arrayeigenschaft oder der Aufruf einer der **Objektmethoden**, zum Beispiel:
+Oben haben Sie auf die Eigenschaften und Methoden des Objektes mittels Punktnotation zugegriffen.\*\* **Der Objektbezeichner `person` dient als **Namensraum** - dieser muss zuerst angegeben werden, um auf etwas zuzugreifen, das innerhalb des Objektes **eingekapselt** ist. Als nächstes folgt der Punkt und anschließend der Bestandteil, auf den Sie zugreifen wollen - dies kann der Name einer einfachen Eigenschaft sein, ein Element einer Arrayeigenschaft oder der Aufruf einer der **Objektmethoden\*\*, zum Beispiel:
 
 ```js
 person.age

@@ -18,7 +18,7 @@ W aplikacjach Mozilli `-moz-outline-radius` może być używane do nadania kontu
 
 ## Składnia
 
-    -moz-outline-radius:<outline-radius>{1,4} | inherit ;
+    -moz-outline-radius:<outline-radius>{1,4} | inherit ;
 
 ### Wartości
 

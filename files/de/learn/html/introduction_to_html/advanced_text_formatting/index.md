@@ -159,7 +159,7 @@ window.addEventListener("load", drawOutput);
 
 Mit HTML lassen sich auch Zitate als solche Kennzeichnen. Sie können entweder Blockzitate verwenden oder aber im Fließtext direkt Zitate einbinden.
 
-> **Hinweis:** Zitat kann ins Englische sowohl als "quote" als auch als "citation" übersetzt werden. Beide englischen Wörter werden in HTML parallel genutzt, als "quote" für `blockquote` und `q` und die Abkürzung für "citation" `cite`.
+> **Note:** **Hinweis:** Zitat kann ins Englische sowohl als "quote" als auch als "citation" übersetzt werden. Beide englischen Wörter werden in HTML parallel genutzt, als "quote" für `blockquote` und `q` und die Abkürzung für "citation" `cite`.
 
 ### \<blockquote> - Blockzitate
 
@@ -218,9 +218,9 @@ Die `cite`-Elemente werden standardmäßig in kursiver Schrift angezeigt. Sie k�
 
 Es ist Zeit für eine weitere Übung! Bitte lösen Sie die folgenden Aufgaben:
 
-1. Ändern Sie den mittleren Absatz in ein Blockzitat, weches ein `cite`-Attribut besitzt.
-2. Ändern Sie einen Teil des dritten Absatzes in ein Inline Zitat, welches ebenfalls ein `cite`-Attribut besitzt.
-3. Fügen Sie jedem Link ein `<cite>`-Element hinzu.
+1.  Ändern Sie den mittleren Absatz in ein Blockzitat, weches ein `cite`-Attribut besitzt.
+2.  Ändern Sie einen Teil des dritten Absatzes in ein Inline Zitat, welches ebenfalls ein `cite`-Attribut besitzt.
+3.  Fügen Sie jedem Link ein `<cite>`-Element hinzu.
 
 Suchen Sie selbst online nach den richtigen Quellen für diese Zitate.
 
@@ -300,7 +300,7 @@ Wir nutzen HTML, um ein Webdokument zu strukturieren.
 
 Ich denke Dr. Green war in der Küche mit der Kettensäge.
 
-> **Hinweis:** Es gibt ein weiteres Element, {{htmlelement("acronym")}}, welches das selbe tut wie `<abbr>`, nur das es Acronyme kennzeichnen sollte. Es wird aber kaum genutzt und von Browsern wird es nicht so gut unterstüzt. Es ist also besser nur noch `<abbr>` zu nutzen.
+> **Note:** **Hinweis**: Es gibt ein weiteres Element, {{htmlelement("acronym")}}, welches das selbe tut wie `<abbr>`, nur das es Acronyme kennzeichnen sollte. Es wird aber kaum genutzt und von Browsern wird es nicht so gut unterstüzt. Es ist also besser nur noch `<abbr>` zu nutzen.
 
 ### Aktives lernen: Eine Abkürzung kennzeichnen
 

@@ -27,7 +27,7 @@ Sprawdza, czy argument nie ma wartości NaN ("nie-liczba").
 
 Funkcje `parseFloat` i `parseInt` zwracają `NaN`, kiedy wyliczą wartość, która nie jest liczbą. `isNaN` zwraca `true`, jeśli przekazano jej `NaN`, a `false` w przeciwnym wypadku.
 
-Funkcja ta jest o tyle przydatna, że wartości {{jsxref("NaN", "NaN")}} nie można skutecznie sprawdzać przy użyciu operatorów równości. `x == NaN` i `x === NaN` mają zawsze wartość `false`, bez względu na to, jaką wartość ma `x`, nawet jeśli `x` to `NaN`. Na przykład, zarówno `1 == NaN`, jak i `NaN == NaN` zwracają `false`.
+Funkcja ta jest o tyle przydatna, że wartości {{jsxref("NaN", "NaN")}} nie można skutecznie sprawdzać przy użyciu operatorów równości. `x == NaN` i `x === NaN` mają zawsze wartość `false`, bez względu na to, jaką wartość ma `x`, nawet jeśli `x` to `NaN`. Na przykład, zarówno `1 == NaN`, jak i `NaN == NaN` zwracają `false`.
 
 ## Przykłady
 

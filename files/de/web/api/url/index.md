@@ -42,6 +42,8 @@ _Implements properties defined in {{domxref("URLUtils")}}._
 - {{domxref("URLUtils.origin")}} {{readonlyInline}}
   - : Returns a {{domxref("DOMString")}} containing the origin of the URL, that is its scheme, its domain and its port.
 
+<!---->
+
 - {{domxref("URLUtils.searchParams")}}
   - : Returns a {{domxref("URLSearchParams")}} object allowing to access the GET query arguments contained in the URL.
 

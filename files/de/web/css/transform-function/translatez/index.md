@@ -21,7 +21,7 @@ Diese Transformation wird durch einen {{cssxref("&lt;length&gt;")}}-Wert definie
 
 In den obigen interaktiven Beispielen wurden die Werte [`perspective: 550px;`](/de/docs/Web/CSS/perspective) gesetzt, um einen 3D-Raum zu erzeugen, und [`transform-style: preserve-3d;`](/de/docs/Web/CSS/transform-style), damit die Kinder-elemente, die 6 Seiten des Würfels, auch im 3D-Raum positioniert werden, auf den Würfel gesetzt.
 
-> **Hinweis:** `translateZ(tz)` ist gleichzusetzen mit `translate3d(0, 0, tz)`.
+> **Note:** **Hinweis:** `translateZ(tz)` ist gleichzusetzen mit `translate3d(0, 0, tz)`.
 
 ## Syntax
 

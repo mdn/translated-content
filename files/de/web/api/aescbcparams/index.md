@@ -5,7 +5,7 @@ translation_of: Web/API/AesCbcParams
 ---
 {{ APIRef("Web Crypto API") }}
 
-Das **`AesCbcParams`** Verzeichnis (dictionary) der [Web Crypto API](/de/docs/Web/API/Web_Crypto_API)wird als `algorithm` Parameter an die Funktionen {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}} und {{domxref("SubtleCrypto.unwrapKey()")}} übergeben, wenn der Algorithmus [AES-CBC](/de/docs/Web/API/SubtleCrypto/encrypt#AES-CBC) verwendet wird.
+Das **`AesCbcParams`** Verzeichnis (dictionary) der [Web Crypto API ](/de/docs/Web/API/Web_Crypto_API)wird als `algorithm` Parameter an die Funktionen {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}} und {{domxref("SubtleCrypto.unwrapKey()")}} übergeben, wenn der Algorithmus [AES-CBC](/de/docs/Web/API/SubtleCrypto/encrypt#AES-CBC) verwendet wird.
 
 ## Eigenschaften
 

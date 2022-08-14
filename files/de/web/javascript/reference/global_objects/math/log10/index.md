@@ -9,7 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
 ---
-{{JSRef}}Die **`Math.log10()`** Funktion gibt den Logarithmus zur Basis`10` zurück. Das bedeutet
+{{JSRef}}Die **`Math.log10()`** Funktion gibt den Logarithmus zur Basis` 10` zurück. Das bedeutet
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log10</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext></mtext><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>so das</mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log10}(x)} = \log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
 

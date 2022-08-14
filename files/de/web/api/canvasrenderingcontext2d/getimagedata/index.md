@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
 {{APIRef}}
 
-Die **`CanvasRenderingContext2D.getImageData()`** Methode der Canvas 2D API gibt ein Objekt des Types {{domxref("ImageData")}} zurück. Dieses Objekt repräsentiert die jeweiligen Pixel-Daten im Bereich des Rechtecks mit den Startkoordinaten _(**sx**,**sy**)_ und den Dimensionen _sw_ in der Breite und _sy_ in der Höhe.
+Die **`CanvasRenderingContext2D`\*\***`.getImageData()`\*\* Methode der Canvas 2D API gibt ein Objekt des Types {{domxref("ImageData")}} zurück. Dieses Objekt repräsentiert die jeweiligen Pixel-Daten im Bereich des Rechtecks mit den Startkoordinaten _(**sx**,**sy**)_ und den Dimensionen _sw_ in der Breite und _sy_ in der Höhe.
 
 ## Syntax
 

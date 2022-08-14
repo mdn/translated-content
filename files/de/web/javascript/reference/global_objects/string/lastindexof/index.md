@@ -18,7 +18,7 @@ Die **`lastIndexOf()`** Methode gibt den Index des letzten Vorkommnisses des ang
 - `searchValue`
   - : Ein String mit dem Wert, nach dem gesucht werden soll.
 - `fromIndex`
-  - : Optional. Die Position im aufrufenden String, ab der gesucht rückwärts werden soll. The Position wird gezählt von links nach rechts. Gesucht wird von dieser Position ab nach links. Diese kann jeden Integerwert annehmen. Der Standartwert ist `str.length`. Wenn der Wert negativ ist, wird 0 verwendet. Wenn `fromIndex > str.length`, wird `str.length`statt `fromIndex` benutzt.
+  - : Optional. Die Position im aufrufenden String, ab der gesucht rückwärts werden soll. The Position wird gezählt von links nach rechts. Gesucht wird von dieser Position ab nach links. Diese kann jeden Integerwert annehmen. Der Standartwert ist `str.length`. Wenn der Wert negativ ist, wird 0 verwendet. Wenn `fromIndex > str.length`, wird `str.length `statt `fromIndex` benutzt.
 
 ## Beschreibung
 
@@ -33,7 +33,7 @@ Zeichen in einem String werden von links nach rechts gezählt. Der Index des ers
 
 ### Groß- und Kleinschreibung
 
-Die `lastIndexOf()`Methode unterscheidet zwischen Groß- und Kleinschreibung. Der folgende Ausdruck gibt zum Beispiel `-1` zurück.
+Die `lastIndexOf() `Methode unterscheidet zwischen Groß- und Kleinschreibung. Der folgende Ausdruck gibt zum Beispiel `-1` zurück.
 
 ```js
 'Blue Whale, Killer Whale'.lastIndexOf('blue'); // returns -1

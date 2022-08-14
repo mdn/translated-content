@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Referencje/Operatory/Operator_przecinkowy
 
 ###
 
-Operator przecinkowy wykonuje wszystkie argumenty i zwraca wynik ostatniego argumentu.
+Operator przecinkowy wykonuje wszystkie argumenty i zwraca wynik ostatniego argumentu.
 
 ## Składnia
 

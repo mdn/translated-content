@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/scale
 ---
 {{APIRef}}
 
-Die Methode **`CanvasRenderingContext2D.scale()`** der Canvas 2D API skaliert das Canvas-Element um den Faktor x horizontal und um den Faktor y vertikal.
+Die Methode **`CanvasRenderingContext2D`\*\***`.scale()`\*\* der Canvas 2D API skaliert das Canvas-Element um den Faktor x horizontal und um den Faktor y vertikal.
 
 Normalerweise ist eine Einheit auf dem Canvas genau ein Pixel. Wenn wir zum Beispiel einen Skalierungsfaktor von 0,5 Pixeln anwenden, ist eine Einheit 0,5 Pixel und alle Objekte werden mit der halben Größe gezeichnet. Analog dazu vergößert der Skalierungsfaktor 2,0 die Längeneinheit auf zwei Pixel. Die Objekte werden dann doppelt so groß gezeichnet.
 

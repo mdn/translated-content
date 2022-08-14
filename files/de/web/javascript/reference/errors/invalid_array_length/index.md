@@ -27,7 +27,7 @@ entweder:
 - ein {{jsxref("Array")}} oder ein {{jsxref("ArrayBuffer")}} wurde mit einer negativen oder einer Zahl größer gleich 232 erzeugt, oder
 - die {{jsxref("Array.length")}} Eigenschaft wurde auf eine negative oder eine Zahl größer gleich 232 gesetzt.
 
-Warum ist die Länge von Array and `ArrayBuffer` limitiert? Die `length` Eigenschaft von `Array`und `ArrayBuffer`ist mit einem vorzeichenlosen 32-bit Integer definiert, sodass nur Werte von 0 bis 232-1 gültig sind.
+Warum ist die Länge von Array and `ArrayBuffer` limitiert? Die `length` Eigenschaft von `Array `und `ArrayBuffer `ist mit einem vorzeichenlosen 32-bit Integer definiert, sodass nur Werte von 0 bis 232-1 gültig sind.
 
 Wenn man ein Array mit dem Konstruktor erzeugen möchte, statt mit der Literalnotation, sollte man aufpassem, dass das erste Argument als Länge des Arrays interpretiert wird.
 

@@ -29,6 +29,8 @@ Aktualny wierzchołek jest zawsze taki sam jak wierzchołek kontekstowy. Następ
 
     <xsl:value-of select="current()"/>
 
+<!---->
+
     <xsl:value-of select="."/>
 
 ### Definicja

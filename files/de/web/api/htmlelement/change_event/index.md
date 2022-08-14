@@ -40,7 +40,7 @@ Das `change` Event wird abhängig vom Form-Element, welches verändert wird, und
 
 Verschiedene Webbbrowser unterscheiden sich darin, ob das `change` Event bei bestimmten Interaktionen ausgelöst werden soll oder nicht. Tastaturnavigation in {{HTMLElement("select")}} Elementen zum Beispiel lösen das `change` event in Gecko nie aus bis der Benutzer die Enter-Taste drückt oder den Fokus vom `<select>` (see {{bug("126379")}}) Element nimmt.
 
-Die HTML Spezifikation listet[die `<input>` Typen, welche das `change` Event auslösen können](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#do-not-apply).
+Die HTML Spezifikation listet[ die `<input>` Typen, welche das `change` Event auslösen können](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#do-not-apply).
 
 ## Beispiele
 

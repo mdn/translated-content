@@ -66,9 +66,9 @@ _Diese Schnittstelle erbt auch Methoden seiner Eltern {{domxref("UIEvent")}} und
 
 Es gibt `keydown`, `keypress`, and `keyup` Events. Für die meisten Tasten versendet Gecko eine Sequenz von Key-Events wie folgt:
 
-1. Wenn die Taste gedrückt wird, wird ein `keydown` Event gesendet.
-2. Falls die Taste keine Hilfstaste ist, wird das `keypress` Event gesendet.
-3. Wenn der Nutzer die Taste loslässt, wird das `keyup` Event gesendet.
+1.  Wenn die Taste gedrückt wird, wird ein `keydown` Event gesendet.
+2.  Falls die Taste keine Hilfstaste ist, wird das `keypress` Event gesendet.
+3.  Wenn der Nutzer die Taste loslässt, wird das `keyup` Event gesendet.
 
 ### Sonderfälle
 
@@ -82,12 +82,12 @@ Jedoch sorgen die Einschränkungen des Mac OS X Event-Modells dafür, dass Caps 
 
 Wenn eine Taste gedrückt und gehalten wird, beginnt sie die automatische Wiederholung (sog. _auto-repeat_). Das Resultat ist das Versenden einer Reihe von Events ähnlich der folgenden:
 
-1. `keydown`
-2. `keypress`
-3. `keydown`
-4. `keypress`
-5. <\<wiederholt sich bis der Nutzer die Taste loslässt>>
-6. `keyup`
+1.  `keydown`
+2.  `keypress`
+3.  `keydown`
+4.  `keypress`
+5.  <\<wiederholt sich bis der Nutzer die Taste loslässt>>
+6.  `keyup`
 
 Das sollte laut DOM Level 3 Spezifikation passieren. Allerdings gibt es einige Ausnahmen, wie unten beschrieben.
 
@@ -95,14 +95,14 @@ Das sollte laut DOM Level 3 Spezifikation passieren. Allerdings gibt es einige A
 
 In einigen GTK-basierten Umgebungen versendet auto-repeat automatisch ein natives Key-Up Event während der automatischen Wiederholung und es ist für Gecko deshalb nicht möglich zwischen wiederholten Tastendrücken und einem auto-repeat unterscheiden zu können. Auf diesen Platformen wird eine Auto-Repeat Taste also die folgende Reihe von Events erzeugen:
 
-1. `keydown`
-2. `keypress`
-3. `keyup`
-4. `keydown`
-5. `keypress`
-6. `keyup`
-7. <\<wiederholt sich bis der Nutzer die Taste loslässt>>
-8. `keyup`
+1.  `keydown`
+2.  `keypress`
+3.  `keyup`
+4.  `keydown`
+5.  `keypress`
+6.  `keyup`
+7.  <\<wiederholt sich bis der Nutzer die Taste loslässt>>
+8.  `keyup`
 
 Innerhalb dieser Umgebungen gibt es leider keine Möglichkeit für Webinhalte den Unterschied zwischen selbst-wiederholenden Tasten und Tasten die wiederholt gedrückt werden herauszufinden.
 
@@ -169,7 +169,7 @@ document.addEventListener('keyup', (event) => {
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
 | {{SpecName('DOM3 Events', '#interface-keyboardevent', 'KeyboardEvent')}} | {{Spec2('DOM3 Events')}} | Initiale Definition |
 
-Die `KeyboardEvent` Schnittstelle lief durch eine Vielzahl von Entwurfsversionen, erst unter DOM Events Level 2, wo sie verworfen wurde als kein Konsens entstand, danach unter DOM Events Level 3. Dies führte zu einer Implementation von nicht standardisierten Initialisationsmethoden, der frühen DOM Events Level 2 Version``{{domxref("KeyboardEvent.initKeyEvent()")}} durch Gecko Browser und die frühe DOM Events Level 3 Version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} durch Andere. Beide wurden durch den modernen Einsatz eines Konstruktors ersetzt: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+Die `KeyboardEvent` Schnittstelle lief durch eine Vielzahl von Entwurfsversionen, erst unter DOM Events Level 2, wo sie verworfen wurde als kein Konsens entstand, danach unter DOM Events Level 3. Dies führte zu einer Implementation von nicht standardisierten Initialisationsmethoden, der frühen DOM Events Level 2 Version` `{{domxref("KeyboardEvent.initKeyEvent()")}} durch Gecko Browser und die frühe DOM Events Level 3 Version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} durch Andere. Beide wurden durch den modernen Einsatz eines Konstruktors ersetzt: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
 
 ## Browserkompatibilität
 

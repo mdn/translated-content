@@ -61,7 +61,7 @@ Beachten Sie, dass Sie überall im Code des Dialogs auf diese Eigenschaft zugrei
 
 Weil `window.close()` alle Eigenschaften des Dialogfensters löscht (d.h. die Variablen vom JavaScript des Dialogs), ist es nicht möglich, mit globalen Variablen (oder anderen Konstrukten) nach dem Schliessen Werte zurückzugeben.
 
-Um Werte zum Aufrufer zurückzugeben, müssen Sie ein Objekt mit den zusätzlichen Parametern übergeben. Sie können im Code des Dialogs auf dieses Objekt zugreiffen und Eigenschaften setzen, welche die Werte enthalten, die Sie zurückgeben wollen oder die Sie auch nach `window.close()`behalten wollen.
+Um Werte zum Aufrufer zurückzugeben, müssen Sie ein Objekt mit den zusätzlichen Parametern übergeben. Sie können im Code des Dialogs auf dieses Objekt zugreiffen und Eigenschaften setzen, welche die Werte enthalten, die Sie zurückgeben wollen oder die Sie auch nach `window.close() `behalten wollen.
 
     var retVals = { address: null, delivery: null };
     openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);

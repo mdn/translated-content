@@ -20,6 +20,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 - byteOffset
   - : Das Offset, in Bytes, vom Start der View, an dem die Daten gespeichert werden sollen.
 
+<!---->
+
 - value
   - : Der Wert, der gespeichert werden soll.
 

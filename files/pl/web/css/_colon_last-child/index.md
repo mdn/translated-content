@@ -32,6 +32,8 @@ Pseudoklasa `:last-child` sprawia iż własności stosowane są do elementu tylk
       </body>
     </html>
 
+<!---->
+
     span:last-child { font-weight: bold; }
 
 Powyższy zapis pogrubi czcionkę wewnątrz wszystkich elementów `span`, które są ostatnimi dziećmi swoich rodziców. Zostaną tutaj pogrubione słowa "**drugi**":

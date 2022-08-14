@@ -104,11 +104,11 @@ Um Daten in tieferen hierarchischen Ebenen abrufen zu können, müssen die benö
 superHeroes['members'][1]['powers'][2]
 ```
 
-1. Zuerst haben wir den Variablennamen — `superHeroes`.
-2. Darin wollen wir die `members` Eigenschaft abrufen, also benutzen wir`["members"]`.
-3. `members` beinhaltet ein Array mit Objekten. Wir wollen das zweite Objekt innerhalb des Arrays abrufen, also benutzen wir `[1]`.
-4. Innerhalb des Objekts wollen wir die `powers` Eigenschaft abrufen, demnach benutzen wir `["powers"]`.
-5. Die `powers` Eigenschaft ist ein Array, welches die gewählten `superpowers` der `heroe`s hält. Wir wollen die dritte `superpower`, also `[2]`.
+1.  Zuerst haben wir den Variablennamen — `superHeroes`.
+2.  Darin wollen wir die `members` Eigenschaft abrufen, also benutzen wir`["members"]`.
+3.  `members` beinhaltet ein Array mit Objekten. Wir wollen das zweite Objekt innerhalb des Arrays abrufen, also benutzen wir `[1]`.
+4.  Innerhalb des Objekts wollen wir die `powers` Eigenschaft abrufen, demnach benutzen wir `["powers"]`.
+5.  Die `powers` Eigenschaft ist ein Array, welches die gewählten `superpowers` der `heroe`s hält. Wir wollen die dritte `superpower`, also `[2]`.
 
 > **Note:** Wir haben euch das zuvor erwähnte JSON in einer Variable in unserem [JSONTest.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) Beispiel (siehe [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)) zur Verfügung gestellt. Versuche es hochzuladen und die Daten in der Variable mittels der JavaScript Konsole deines Browser's abzurufen.
 
@@ -148,8 +148,8 @@ Dieses Arrays ist komplett gültges JSON. Die Array Elemente müssen lediglich b
 - JSON ist ein reines Datenformat — es beinhaltet nur Eigenschaften, keine Methoden.
 - JSON benötigt **immer** doppelte Anführungszeichen - also `" "` - bei Strings und Eigenschaftsnamen. Einfache Anführungszeichen - also `' '` - sind nicht zulässig (invalid).
 - Ein einziges deplaziertes Kommata oder ähnliches lässt eine JSON Datei korrupieren und fehlschlagen. Du solltest alle Daten mit denen du arbeitest oder die du verarbeiten möchtest gründlich überprüfen (wobei computer-generiertes JSON bei korrekt funktionierenden JSON generatoren eher nicht fehleranfällig ist). Um dein JSON zu überprüfen, kannst du zum Beispiel eine Anwendung wie [JSONLint](http://jsonlint.com/) benutzen.
-- JSON kann jeden Datentyp der zur Einbindung in JSON geeignet ist annehmen, nicht nur Arrays oder Objekte. So kann zum Beispiel ein einfacher `String`oder eine `number` ein gültiges JSON Objekt sein.
-- Im Gegensatz zu JavaScript Code in dem Objekt Eigenschaften Anführungszeichen nicht zwingend benötigen, dürfen in JSON nur `strings`in Anführungszeichen als Objekt Eigenschaften genutzt werden.
+- JSON kann jeden Datentyp der zur Einbindung in JSON geeignet ist annehmen, nicht nur Arrays oder Objekte. So kann zum Beispiel ein einfacher `String `oder eine `number` ein gültiges JSON Objekt sein.
+- Im Gegensatz zu JavaScript Code in dem Objekt Eigenschaften Anführungszeichen nicht zwingend benötigen, dürfen in JSON nur `strings `in Anführungszeichen als Objekt Eigenschaften genutzt werden.
 
 ## Aktives Lernen: Arbeiten mithilfe eines JSON Beispiels
 
@@ -157,7 +157,7 @@ Lasst uns durch ein Beispiel durcharbeiten um zu veranschaulichen wie wir mit JS
 
 ### Los Geht's
 
-Anfangs, mache lokale Kopien unserer [heroes.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html) und [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css) Dateien. Letztere enthält ein paar einfache CSS Elemente um unsere Seite ein wenig zu stylen, während die Erste einen einfachen HTML `body`enthält:
+Anfangs, mache lokale Kopien unserer [heroes.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html) und [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css) Dateien. Letztere enthält ein paar einfache CSS Elemente um unsere Seite ein wenig zu stylen, während die Erste einen einfachen HTML `body `enthält:
 
 ```html
 <header>
@@ -184,19 +184,19 @@ Wir laden es in unsere Seite und benutzen geschickt die DOM Manipulation um es s
 
 Um JSON zu erhalten, werden wir unsere API, genannt {{domxref("XMLHttpRequest")}} (oft **XHR** genannt), benutzen. Es handelt sich um ein sehr nützliches JavaScript Objekt, das es uns erlaubt, Netzwerkabfragen auszuführen um Ressourcen eines Servers via JavaScript (e.g. Bilder, Text, JSON, sogar HTML snippets) zu erhalten. So können wir kleine Sektionen mit Inhalt aktualisieren ohne die komplette Seite neuzuladen. Das führt zu responsiveren Webseiten und klingt ziemlich spannend. Allerdings fällt es außerhalb des hier behandelten Themas um es ausführlicher zu erklären.
 
-1. Zuerst werden wir die JSON URL die wir abrufen möchten in einer Variable speichern. Füge Folgendes zum Ende deines JavaScript Codes hinzu:
+1.  Zuerst werden wir die JSON URL die wir abrufen möchten in einer Variable speichern. Füge Folgendes zum Ende deines JavaScript Codes hinzu:
 
     ```js
     var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
     ```
 
-2. Um eine Abfrage zu erstellen, müssen wir eine neue Objekt-Abfrage-Instanz des `XMLHttpRequest` constructors mit dem Keyword `new`erstellen. Füge Folgenden Code hinzu:
+2.  Um eine Abfrage zu erstellen, müssen wir eine neue Objekt-Abfrage-Instanz des `XMLHttpRequest` constructors mit dem Keyword `new `erstellen. Füge Folgenden Code hinzu:
 
     ```js
     var request = new XMLHttpRequest();
     ```
 
-3. Nun müssen wir eine neue Abfrage mit der [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) Methode eröffnen. Füge Folgenden Code hinzu:
+3.  Nun müssen wir eine neue Abfrage mit der [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) Methode eröffnen. Füge Folgenden Code hinzu:
 
     ```js
     request.open('GET', requestURL);
@@ -204,17 +204,17 @@ Um JSON zu erhalten, werden wir unsere API, genannt {{domxref("XMLHttpRequest")}
 
     Die Methode braucht mindestens zwei Parameter — wobei es weitere optionale Parameter gibt. Für dieses Beispiel werden wir uns jedoch nur den einfachen, zwingend erforderlichen Parametern widmen :
 
-    - Die HTTP Methode die für die Netzwerkabfrage erforderlich ist. In diesem Fall reicht `GET`aus, da wir ja nur simple Daten erhalten wollen .
+    - Die HTTP Methode die für die Netzwerkabfrage erforderlich ist. In diesem Fall reicht `GET `aus, da wir ja nur simple Daten erhalten wollen .
     - Die Ziel-URL — Die JSON URL die wir zuvor in der `requestURL` Variable gespeichert haben.
 
-4. Füge als Nächstes folgende Zeilen hinzu — hier setzen wir den [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) auf JSON, sodass XHR weiß, dass der Server JSON zurückgeben und im Hintergrund in ein JavaScript Objekt konvertiert werden soll. Anschließend versenden wir die Abfrage mit der [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) Methode:
+4.  Füge als Nächstes folgende Zeilen hinzu — hier setzen wir den [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) auf JSON, sodass XHR weiß, dass der Server JSON zurückgeben und im Hintergrund in ein JavaScript Objekt konvertiert werden soll. Anschließend versenden wir die Abfrage mit der [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) Methode:
 
     ```js
     request.responseType = 'json';
     request.send();
     ```
 
-5. Zu guter Letzt müssen wir auf die Antwort des Servers (response) warten und sie anschließend weiterverarbeiten. Füge folgenden Code hinter deinem bisherigen Code hinzu:
+5.  Zu guter Letzt müssen wir auf die Antwort des Servers (response) warten und sie anschließend weiterverarbeiten. Füge folgenden Code hinter deinem bisherigen Code hinzu:
 
     ```js
     request.onload = function() {
@@ -226,7 +226,7 @@ Um JSON zu erhalten, werden wir unsere API, genannt {{domxref("XMLHttpRequest")}
 
 Hier speichern wir die Response zu unserer Abfrage (verfügbar in der [`response`](/en-US/docs/Web/API/XMLHttpRequest/response) Eigenschaft) in einer Variable namens: `superHeroes`; Diese Variable enthält nun das JavaScript Objekt basieren auf dem JSON! Nun geben wir das Objekt an zwei Funktionsaufrufe weiter— der erste wird den <`header>` mit korrekte Daten füllen, während der zweite einen Informationssteckbrief eines jeden Helden im Team erstellt und es in die `<section>`einfügt.
 
-Wir packen den Code in einen Eventhandler der ausgeführt wird, sobald das `load`event auf das Request Objekt angestoßen wird (siehe [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) — das passiert, da das `load`Event angestoßen wird sobald die `response`erfolgreich zurückgegeben wurde. Das garantiert, dass `request.response` definitiv verfügbar sein wird, wenn wir damit etwas machen wollen.
+Wir packen den Code in einen Eventhandler der ausgeführt wird, sobald das `load `event auf das Request Objekt angestoßen wird (siehe [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) — das passiert, da das `load `Event angestoßen wird sobald die `response `erfolgreich zurückgegeben wurde. Das garantiert, dass `request.response` definitiv verfügbar sein wird, wenn wir damit etwas machen wollen.
 
 ### Populating the header
 
@@ -244,7 +244,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-Wir haben den Parameter `jsonObj`aufgerufen, um uns daran zu erinnern, dass das JavaScript Objekt seinen Ursprung in JSON hat. Wir erstellen zunächst ein {{HTMLElement("h1")}} element with [`createElement()`](/en-US/docs/Web/API/Document/createElement), set its [`textContent`](/en-US/docs/Web/API/Node/textContent) to equal the `squadName` property of the object, then append it to the header using [`appendChild()`](/en-US/docs/Web/API/Node/appendChild). We then do a very similar operation with a paragraph: create it, set its text content and append it to the header. The only difference is that its text is set to a concatenated string containing both the `homeTown` and `formed` properties of the object.
+Wir haben den Parameter `jsonObj `aufgerufen, um uns daran zu erinnern, dass das JavaScript Objekt seinen Ursprung in JSON hat. Wir erstellen zunächst ein {{HTMLElement("h1")}} element with [`createElement()`](/en-US/docs/Web/API/Document/createElement), set its [`textContent`](/en-US/docs/Web/API/Node/textContent) to equal the `squadName` property of the object, then append it to the header using [`appendChild()`](/en-US/docs/Web/API/Node/appendChild). We then do a very similar operation with a paragraph: create it, set its text content and append it to the header. The only difference is that its text is set to a concatenated string containing both the `homeTown` and `formed` properties of the object.
 
 ### Creating the hero information cards
 
@@ -289,12 +289,12 @@ To start with, we store the `members` property of the JavaScript object in a new
 
 Next, we use a [for loop](/de/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop) to loop through each object in the array. For each one, we:
 
-1. Create several new elements: an `<article>`, an `<h2>`, three `<p>`s, and a `<ul>`.
-2. Set the \<h2> to contain the current hero's `name`.
-3. Fill the three paragraphs with their `secretIdentity`, `age`, and a line saying "Superpowers:" to introduce the information in the list.
-4. Store the `powers` property in another new variable called `superPowers` — this contains an array that lists the current hero's superpowers.
-5. Use another `for` loop to loop through the current hero's superpowers — for each one we create a `<li>` element, put the superpower inside it, then put the `listItem` inside the `<ul>` element (`myList`) using `appendChild()`.
-6. The very last thing we do is to append the `<h2>`, `<p>`s, and `<ul>` inside the `<article>` (`myArticle`), then append the `<article>` inside the `<section>`. The order in which things are appended is important, as this is the order they will be displayed inside the HTML.
+1.  Create several new elements: an `<article>`, an `<h2>`, three `<p>`s, and a `<ul>`.
+2.  Set the \<h2> to contain the current hero's `name`.
+3.  Fill the three paragraphs with their `secretIdentity`, `age`, and a line saying "Superpowers:" to introduce the information in the list.
+4.  Store the `powers` property in another new variable called `superPowers` — this contains an array that lists the current hero's superpowers.
+5.  Use another `for` loop to loop through the current hero's superpowers — for each one we create a `<li>` element, put the superpower inside it, then put the `listItem` inside the `<ul>` element (`myList`) using `appendChild()`.
+6.  The very last thing we do is to append the `<h2>`, `<p>`s, and `<ul>` inside the `<article>` (`myArticle`), then append the `<article>` inside the `<section>`. The order in which things are appended is important, as this is the order they will be displayed inside the HTML.
 
 > **Note:** If you are having trouble getting the example to work, try referring to our [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) source code (see it [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) also.)
 

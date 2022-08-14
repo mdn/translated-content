@@ -46,13 +46,13 @@ Die Eigenschaft `caption-side` property wird als einer der unten aufgeführten S
 
   - : Die Überschriftenbox soll links von der Tabelle positioniert werden.
 
-    > **Hinweis:** Dieser Wert wurde für CSS 2 vorgeschlagen, aber aus der endgültigen CSS 2.1-Spezifikation entfernt. Er ist nicht standardisiert.
+    > **Note:** **Hinweis:** Dieser Wert wurde für CSS 2 vorgeschlagen, aber aus der endgültigen CSS 2.1-Spezifikation entfernt. Er ist nicht standardisiert.
 
 - `right` {{ non-standard_inline() }}
 
   - : Die Überschriftenbox soll rechts von der Tabelle positioniert werden.
 
-    > **Hinweis:** Dieser Wert wurde für CSS 2 vorgeschlagen, aber aus der endgültigen CSS 2.1-Spezifikation entfernt. Er ist nicht standardisiert.
+    > **Note:** **Hinweis:** Dieser Wert wurde für CSS 2 vorgeschlagen, aber aus der endgültigen CSS 2.1-Spezifikation entfernt. Er ist nicht standardisiert.
 
 - `top-outside` {{non-standard_inline}}
 

@@ -12,7 +12,7 @@ translation_of: Web/CSS/content
 
 ### Podsumowanie
 
-Własność **content** określa, co jest wyświetlane wewnątrz pseudoelementów  :before i :after.
+Własność **content** określa, co jest wyświetlane wewnątrz pseudoelementów  :before i :after.
 
 - {{ Xref_cssinitial() }}: {{ Cssxref("normal") }}
 - Stosowana do: pseudoelementów {{ Cssxref(":before") }} i {{ Cssxref(":after") }}
@@ -23,10 +23,12 @@ Własność **content** określa, co jest wyświetlane wewnątrz pseudoelementó
 
 ### Składnia
 
-    content : normal | none | inherit | no-open-quote | no-close-quote ;
+    content : normal | none | inherit | no-open-quote | no-close-quote ;
 
-    content : [ <string> | <counter> | attr(<identifier>) | <uri>
-                         | open-quote | close-quote]+ ;
+<!---->
+
+    content : [ <string> | <counter> | attr(<identifier>) | <uri>
+                         | open-quote | close-quote]+ ;
 
 ### Wartości
 
@@ -56,6 +58,8 @@ Własność **content** określa, co jest wyświetlane wewnątrz pseudoelementó
     q:lang { quotes: '"' '"' "'" "'" }
     q:before { content: open-quote }
     q:after  { content: close-quote }
+
+<!---->
 
     h1:before {
       content: "Chapter: ";

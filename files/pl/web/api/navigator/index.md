@@ -48,7 +48,7 @@ _Doesn't inherit any property, but implements those defined in {{domxref("Naviga
 - {{domxref("NavigatorID.userAgent")}} {{readonlyInline}}
   - : Returns the user agent string for the current browser.
 - {{domxref("Navigator.serviceWorker")}} {{readonlyInline}}
-  - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
+  - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 
 ### Non-standard
 

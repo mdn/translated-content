@@ -38,8 +38,12 @@ Pseudoatrybut wymagany do identyfikacji dokumentu jako arkusza XSLT. Zazwyczaj j
 - `id `(Obsługiwany od wersji 7.0 tylko wtedy, gdy jednoznacznie wywołany poprzez liniowe DTD.)
   - : Określa `id` dla tego arkusza. Jest on używany najczęściej wtedy, gdy arkusz jest osadzony w innym dokumencie XML.
 
+<!---->
+
 - extension-element-prefixes (Nieobsługiwany.)
   - : Określa listę oddzielonych spacjami prefiksów przestrzeni nazw dla elementów rozszerzenia wewnątrz tego dokumentu.
+
+<!---->
 
 - exclude-result-prefixes
   - : Określa dowolną przestrzeń nazw użytą w tym dokumencie, która nie powinna zostać wysłana do dokumentu wyjściowego. Lista jest oddzielona za pomocą białych znaków.

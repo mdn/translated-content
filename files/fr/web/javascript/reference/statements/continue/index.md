@@ -29,6 +29,8 @@ Contrairement à {{jsxref("Instructions/break", "break")}}, `continue` ne termin
 
 - au sein d'une boucle {{jsxref("Instructions/while", "while")}}, elle repart à la phase de la condition.
 
+<!---->
+
 - au sein d'une boucle {{jsxref("Instructions/for", "for")}}, elle repart à l'expression de mise à jour de la boucle.
 
 L'instruction `continue` peut éventuellement contenir une étiquette (_label_) qui permet de tirer parti des instructions de boucles étiquetées (plutôt que de ne traiter que la boucle courante). Dans le cas où l'étiquette est utilisée, il faut que l'instruction `continue` soit imbriquée dans l'instruction étiquetée.

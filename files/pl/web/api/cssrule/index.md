@@ -16,13 +16,13 @@ Jest tu kilka rodzajów reguł. Wszystkie one dzielą kilka wspólnych własnoś
 
 | Typ                      | Interfejs związany z regułą         | Opis |
 | ------------------------ | ----------------------------------- | ---- |
-| `CSSRule.STYLE_RULE`     | [CSSStyleRule](#cssstylerule)       |      |
-| `CSSRule.MEDIA_RULE`     | [CSSMediaRule](#cssmediarule)       |      |
-| `CSSRule.FONT_FACE_RULE` | [CSSFontFaceRule](#cssfontfacerule) |      |
-| `CSSRule.PAGE_RULE`      | [CSSPageRule](#csspagerule)         |      |
-| `CSSRule.IMPORT_RULE`    | [CSSImportRule](#cssimportrule)     |      |
-| `CSSRule.CHARSET_RULE`   | [CSSCharsetRule](#csscharsetrule)   |      |
-| `CSSRule.UNKNOWN_RULE`   | [CSSUnknownRule](#cssunknownrule)   |      |
+| `CSSRule.STYLE_RULE`     | [CSSStyleRule](#cssstylerule)       |      |
+| `CSSRule.MEDIA_RULE`     | [CSSMediaRule](#cssmediarule)       |      |
+| `CSSRule.FONT_FACE_RULE` | [CSSFontFaceRule](#cssfontfacerule) |      |
+| `CSSRule.PAGE_RULE`      | [CSSPageRule](#csspagerule)         |      |
+| `CSSRule.IMPORT_RULE`    | [CSSImportRule](#cssimportrule)     |      |
+| `CSSRule.CHARSET_RULE`   | [CSSCharsetRule](#csscharsetrule)   |      |
+| `CSSRule.UNKNOWN_RULE`   | [CSSUnknownRule](#cssunknownrule)   |      |
 
 ### CSSRule
 

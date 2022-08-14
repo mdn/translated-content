@@ -19,6 +19,8 @@ contains( meule , aiguille )
 - `meule`
   - : La chaîne dans laquelle chercher.
 
+<!---->
+
 - `aiguille`
   - : La chaîne à rechercher dans `meule`
 

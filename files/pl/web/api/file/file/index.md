@@ -7,7 +7,7 @@ translation_of: Web/API/File/File
 ---
 {{APIRef("File")}}
 
-Konstruktor **`File()`** tworzy nową instancję obiektu {{domxref("File")}}.
+Konstruktor **`File()`** tworzy nową instancję obiektu {{domxref("File")}}.
 
 ## Składnia
 
@@ -16,12 +16,12 @@ Konstruktor **`File()`** tworzy nową instancję obiektu {{domxref("File")}}.
 ### Parameters
 
 - _bity_
-  - : {{jsxref("Array")}} (Tablica) obiektów {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}} lub {{domxref("DOMString")}} — albo miks takich obiektów. Zawartość pliku jest zakodowana w UTF-8.
+  - : {{jsxref("Array")}} (Tablica) obiektów {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}} lub {{domxref("DOMString")}} — albo miks takich obiektów. Zawartość pliku jest zakodowana w UTF-8.
 - _nazwa_
   - : Obiekt {domxref("USVString")}} reprezentujący nazwę pliku albo ścieżkę do niego.
-- *opcje* {{optional_inline}}
-  - : Obiekt opcji, który zawiera opcjonalne atrybuty pliku. Dostępne są następujące możliwości:\* `type`: (typ) - Obiekt {{domxref("DOMString")}} reprezentujący typ MIME zawartości pliku. Domyślnie `"".`
-    - `lastModified`: (ostatnio modyfikowany) Liczba reprezentująca liczbę milisekund pomiędzy Unix time epoch i datą ostatniej modyfikacji pliku. Domyślnie - wartość {{jsxref("Date.now()")}}.
+- *opcje* {{optional_inline}}
+  - : Obiekt opcji, który zawiera opcjonalne atrybuty pliku. Dostępne są następujące możliwości:\* `type`: (typ) - Obiekt {{domxref("DOMString")}} reprezentujący typ MIME zawartości pliku. Domyślnie `"".`
+    - `lastModified`: (ostatnio modyfikowany) Liczba reprezentująca liczbę milisekund pomiędzy Unix time epoch i datą ostatniej modyfikacji pliku. Domyślnie - wartość {{jsxref("Date.now()")}}.
 
 ## Przykład
 

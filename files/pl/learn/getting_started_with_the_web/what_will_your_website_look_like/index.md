@@ -31,7 +31,7 @@ Na początek, musisz odpowiedzieć sobie na te pytania:
 2.  **Jakie informacje prezentujesz na ten temat?** Napisz tytuł i kilka akapitów i pomyśl o obrazku, który chcesz pokazać na swojej stronie.
 3.  **Jak wygląda twoja strona internetowa**, w prostych, ogólnych założeniach. Jaki jest kolor tła? Jaka czcionka jest odpowiednia: formalna, kreskówkowa, pogrubiona i donośna, subtelna?
 
-> **Uwaga:** Złożone projekty wymagają dokładnych wytycznych, które zagłębiają się we wszystkie szczegóły dotyczące kolorów, czcionek, odstępów między elementami na stronie, odpowiedniego stylu pisania itd. Nazywa się to czasem przewodnikiem projektanta, systemem projektowania lub księgą marki, a przykład można zobaczyć w systemie projektowania [Firefox Photon Design System](https://design.firefox.com/photon/).
+> **Note:** **Uwaga**: Złożone projekty wymagają dokładnych wytycznych, które zagłębiają się we wszystkie szczegóły dotyczące kolorów, czcionek, odstępów między elementami na stronie, odpowiedniego stylu pisania itd. Nazywa się to czasem przewodnikiem projektanta, systemem projektowania lub księgą marki, a przykład można zobaczyć w systemie projektowania [Firefox Photon Design System](https://design.firefox.com/photon/).
 
 ---
 
@@ -41,7 +41,7 @@ Następnie złap za ołówek i papier i naszkicuj z grubsza, jak chcesz, aby two
 
 ![](https://mdn.mozillademos.org/files/9239/website-drawing-scan.png)
 
-> **Uwaga:** Nawet przy prawdziwych, skomplikowanych stronach internetowych, zespoły projektowe zazwyczaj rozpoczynają od szkiców wstępnych na papierze, a następnie budują cyfrowe makiety przy użyciu edytora graficznego lub technologii sieciowych.W skład zespołów webowych często wchodzi zarówno grafik, jak i projektant {{Glossary("UX", "doświadczeń użytkownika")}} (UX). Graficy przygotowują wizualizacje strony internetowej. Projektanci UX mają nieco bardziej abstrakcyjną rolę w zajmowaniu się tym, jak użytkownicy będą doświadczać i wchodzić w interakcję ze stroną internetową.
+> **Note:** **Uwaga**: Nawet przy prawdziwych, skomplikowanych stronach internetowych, zespoły projektowe zazwyczaj rozpoczynają od szkiców wstępnych na papierze, a następnie budują cyfrowe makiety przy użyciu edytora graficznego lub technologii sieciowych.W skład zespołów webowych często wchodzi zarówno grafik, jak i projektant {{Glossary("UX", "doświadczeń użytkownika")}} (UX). Graficy przygotowują wizualizacje strony internetowej. Projektanci UX mają nieco bardziej abstrakcyjną rolę w zajmowaniu się tym, jak użytkownicy będą doświadczać i wchodzić w interakcję ze stroną internetową.
 
 ---
 

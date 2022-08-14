@@ -20,7 +20,7 @@ Ten moduł składa się z poniższych artykułów, które wprowadzą Cię w pods
 - [Rozgrzewanie silników HTML](/pl/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
   - : Zajmuje się absolutnymi podstawani HTML - definiujemy elementy, atrybuty i inne ważne pojęcia, a także pokazuje jaką funkcję spełniają one w języku. Pokazuje w jaki sposób jest zbudowana typowa strona w HTML, wraz z budową samych elementów, a także wyjaśnia inne, podstawowe cechy języka. Podczas nauki zainteresujemy Cię HTML poprzez zabawę!
 - [Co jest w głowie (headzie)? Metadata w HTML](/pl/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-  - : Znacznik [head](/pl/docs/Glossary/Head) i jego zawartość w dokumencie HTML **nie jest** wyświetlany kiedy strona zostaje załadowana. Zawiera on informacje takie jak {{htmlelement("title")}} (tytuł strony),  linki do {{glossary("CSS")}} (Jeżeli chcesz dodać stylowanie do zawartości html), linki do własnych faviconów, a także metadane (dane o stronie, takie jak autor i słowa, które opisują dokument).
+  - : Znacznik [head](/pl/docs/Glossary/Head) i jego zawartość w dokumencie HTML **nie jest** wyświetlany kiedy strona zostaje załadowana. Zawiera on informacje takie jak {{htmlelement("title")}} (tytuł strony),  linki do {{glossary("CSS")}} (Jeżeli chcesz dodać stylowanie do zawartości html), linki do własnych faviconów, a także metadane (dane o stronie, takie jak autor i słowa, które opisują dokument).
 - [Podstawy tekstu w HTML](/pl/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
   - : Głównym zadaniem HTML jest nadanie znaczenia tekstowi (także znane jako [semantyka](/pl/docs/Glossary/Semantics)), w taki sposób, aby przeglądarka wiedziała, jak wyświetlić go w prawidłowy sposób. Ten artykuł zajmuje się użyciem HTML w taki sposób, aby podzielić tekst na logiczne structury nagłówków i paragrafów, nadać większe znaczenie niektórym słowom, stworzyć listy, a także wiele innych.
 - [Tworzenie hiperłączy](/pl/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
@@ -39,11 +39,11 @@ Poniższe zadania mają na celu przetetowanie Twojej znajomości podstaw HTML, k
 - [Dodawanie stylów do listu](/pl/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
   - : Prędzej czy później każdy z nas uczy się, w jaki sposób napisać list. Może to zostać wykorzystane do przetestowania naszych zdolności formatowania tekstu - w tym zadaniu masz za zadanie dodanie formatowania do listu.
 - [Dodanie struktury strony](/pl/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
-  - : To zadanie testuje twoje umiejętności używania HTML  to dodania struktury strony, która zawiera nagłówek, stopkę, menu nawigacyjne, główną zawartość i pasek boczny.
+  - : To zadanie testuje twoje umiejętności używania HTML  to dodania struktury strony, która zawiera nagłówek, stopkę, menu nawigacyjne, główną zawartość i pasek boczny.
 
 ## Zobacz także
 
 - [Test zdolności w sieci 1](https://teach.mozilla.org/activities/web-lit-basics/)
   - : Doskonały kurs fundacji Mozilla, który przedstawia i testuje wiele umiejętności, o których mowa jest we _Wprowadzeniu do HTML._ Zainteresowani zaznajamiają sie w tym sześcioczęsciowym kursie z: czytaniem, pisaniem i byciem członkiem sieci Internet. Odkryj podstawy Internetu poprzez produkcję i współpracę.
 
-> **Note:** ##   FeedbackPomóż nam doskonalić nasze poradniki takie jak ten poprzez wypełnienie [naszej ankiety](https://www.surveygizmo.com/s3/4871248/MDN-Guides-Survey).(Ankieta w języku angielskim)
+> **Note:** ##   FeedbackPomóż nam doskonalić nasze poradniki takie jak ten poprzez wypełnienie [naszej ankiety](https://www.surveygizmo.com/s3/4871248/MDN-Guides-Survey).(Ankieta w języku angielskim)

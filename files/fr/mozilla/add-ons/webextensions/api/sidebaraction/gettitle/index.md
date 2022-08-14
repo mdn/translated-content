@@ -39,6 +39,8 @@ var gettingTitle = browser.sidebarAction.getTitle(
     - `windowId` {{optional_inline}}
       - : `integer`. Obtenir le titre de la barre latérale spécifique à la fenêtre donnée.
 
+<!---->
+
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
 - SI `windowId` et `tabId` sont tous les deux omis, le titre global est renvoyé.
 

@@ -15,7 +15,7 @@ translation_of: Web/CSS/transition-property
 
 Die CSS Eigenschaft `transition-property` wird verwendet, um den [Übergangseffekte](/de/docs/Web/Guide/CSS/Using_CSS_transitions) auf bestimmte CSS Eigenschaften anzuwenden.
 
-> **Hinweis:** Die Eigenschaften, die animiert werden können, könnten sich unter Umständen ändern. Eigenschaften, die bis jetzt noch nicht animierbar sind, sollten nicht angegeben werden, da sie vielleicht eines Tages animierbar sein werden, und es dann unerwartete Auswirkungen haben könnte.
+> **Note:** **Hinweis:** Die Eigenschaften, die animiert werden können, könnten sich unter Umständen ändern. Eigenschaften, die bis jetzt noch nicht animierbar sind, sollten nicht angegeben werden, da sie vielleicht eines Tages animierbar sein werden, und es dann unerwartete Auswirkungen haben könnte.
 
 Wird eine Kurzform einer CSS Eigenschaft (zum Beispiel {{cssxref("background")}}) angegeben, so werden alle Untereigenschaften (zum Beispiel {{cssxref("background-color")}}), wenn diese animierbar sind, ebenfalls animiert.
 

@@ -31,13 +31,13 @@ Mit folgendem Code kann der Name des Geschwisterelements der DIV-Box ermittelt w
 
 ```js
 // Diese Variable speichert eine Referenz auf das Erste Element, das <body> enthält, also die DIV-Box
- var element = document.body.children[0];
+	var element = document.body.children[0];
 
- // Nun ermitteln wir das folgende Element
- var folgeElement = element.nextSibling;
+	// Nun ermitteln wir das folgende Element
+	var folgeElement = element.nextSibling;
 
- // Ausgabe des nodeNames
- alert(folgeElement.nodeName);
+	// Ausgabe des nodeNames
+	alert(folgeElement.nodeName);
 ```
 
 **Erläuterung:**

@@ -25,8 +25,12 @@ Eine **`async function`** kann auch durch den {{jsxref("Operators/async_function
 - `name`
   - : Der Name der Funktion.
 
+<!---->
+
 - `param`
   - : Der Name eines Arguments, welches der Funktion übergeben wird.
+
+<!---->
 
 - `statements`
   - : Die Ausdrücke, aus denen der Funktionskörper besteht.

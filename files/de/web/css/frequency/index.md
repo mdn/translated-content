@@ -16,7 +16,7 @@ Die folgenden Einheiten können gewählt werden:
 - [`kHz`]()
   - : Für eine Frequenz in Kilohertz.
 
-Alle Einheiten können auch den Wert `0` (`0kHz` oder `0Hz`` )`annehmen, welcher unabhängig der Einheit immer dasselbe Ergebnis erzielt. Ein Wert ohne angabe einer Einheit (`0`) ist nicht zulässig.
+Alle Einheiten können auch den Wert `0` (`0kHz` oder ` 0Hz`` )  `annehmen, welcher unabhängig der Einheit immer dasselbe Ergebnis erzielt. Ein Wert ohne angabe einer Einheit (`0`) ist nicht zulässig.
 
 ## Beispiele
 

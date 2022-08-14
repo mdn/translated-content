@@ -21,11 +21,11 @@ Tworzy kopię węzła z zewnętrznego dokumentu, która może być umieszczona w
 
 - `node`
   - : Zaimportowany węzeł
-    Własność [`parentNode`](/pl/docs/Web/API/Element/parentNode) jest ustawiona na null, ponieważ nie został jeszcze wstawiony do drzewa dokumentu
+    Własność [`parentNode`](/pl/docs/Web/API/Element/parentNode) jest ustawiona na null, ponieważ nie został jeszcze wstawiony do drzewa dokumentu
 - `externalNode`
-  - : Węzeł, bądź `DocumentFragment` przeznaczony do zaimportowania do bieżącego dokumentu.
+  - : Węzeł, bądź `DocumentFragment` przeznaczony do zaimportowania do bieżącego dokumentu.
 - `deep`
-  - : Boolean mówiący, czy importować potomki `externalNode`
+  - : Boolean mówiący, czy importować potomki `externalNode`
 
 ### Przykład
 

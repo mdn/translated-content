@@ -37,10 +37,10 @@ Schauen wir uns den Aufbau unseres Paragraphen-Elements ein wenig genauer an.
 
 Die Hauptteile unseres Elements sind:
 
-1. **Das öffnende Tag:** Diese besteht aus dem Namen des Elements (in diesem Fall ein `p` für paragraph (engl.: Absatz)), welcher zwischen zwei spitzen Klammern eingesetzt ist. Dies zeigt an, wo das Element beginnt — in diesem Fall am Anfang unseres Absatzes.
-2. **Der Inhalt:** Dies ist der Inhalt des Elements, in diesem Fall einfach nur Text.
-3. **Das schließende Tag:** Dieses sieht genauso aus wie das öffnende Tag bis auf den zusätzlichen Schrägstrich (slash) vor dem Namen des Elements. Dieser Tag kommt an das Ende des Elementes — in diesem Fall am Ende des Absatzes.
-4. **Das Element:** Das öffnende Tag, der Inhalt und das schließende Tag gemeinsam ergeben zusammen das Element.
+1.  **Das öffnende Tag:** Diese besteht aus dem Namen des Elements (in diesem Fall ein `p` für paragraph (engl.: Absatz)), welcher zwischen zwei spitzen Klammern eingesetzt ist. Dies zeigt an, wo das Element beginnt — in diesem Fall am Anfang unseres Absatzes.
+2.  **Der Inhalt:** Dies ist der Inhalt des Elements, in diesem Fall einfach nur Text.
+3.  **Das schließende Tag:** Dieses sieht genauso aus wie das öffnende Tag bis auf den zusätzlichen Schrägstrich (slash) vor dem Namen des Elements. Dieser Tag kommt an das Ende des Elementes — in diesem Fall am Ende des Absatzes.
+4.  **Das Element:** Das öffnende Tag, der Inhalt und das schließende Tag gemeinsam ergeben zusammen das Element.
 
 Elemente können auch Attribute enthalten, das sieht dann so aus:
 
@@ -52,9 +52,9 @@ In unserem Beispiel ist der _Name_ des Attributes `class` und `editor-note` ist 
 
 Ein Attribut sollte immer haben:
 
-1. Einen Abstand zwischen ihm und dem Elementnamen (oder dem vorherigen Attribut, wenn es mehrere sind).
-2. Den Attributnamen, gefolgt von Gleichheitszeichen
-3. Anführungs- und Schlusszeichen um den Wert. (bsp. `"editor-note"`)
+1.  Einen Abstand zwischen ihm und dem Elementnamen (oder dem vorherigen Attribut, wenn es mehrere sind).
+2.  Den Attributnamen, gefolgt von Gleichheitszeichen
+3.  Anführungs- und Schlusszeichen um den Wert. (bsp. `"editor-note"`)
 
 ### Verschachtelte Elemente
 
@@ -120,8 +120,8 @@ Wie wir vorher gesagt haben, ist ein Bild an der Stelle unserer Seite eingebette
 
 Aber wir haben auch einen `{{htmlattrdef("alt")}}` (alternative) Befehl, welcher einen Text anzeigt, falls das Bild nicht angezeitg werden kann. Dies ist nützlich für:
 
-1. Sehbehinderte. Diese haben häufig Programme, welche ihnen den alternativen Text vorlesen.
-2. Wenn es einen Fehler im Code gibt, was bedeutet, dass das Bild nicht angezeigt werden kann. Verändern Sie beispielsweise den Code bei `{{htmlattrdef("src")}}` und speichern ihn ab. Öffnen Sie das Dokument dann mit dem Browser. Jetzt sollte statt dem Bild folgende Meldung angezeigt werden:
+1.  Sehbehinderte. Diese haben häufig Programme, welche ihnen den alternativen Text vorlesen.
+2.  Wenn es einen Fehler im Code gibt, was bedeutet, dass das Bild nicht angezeigt werden kann. Verändern Sie beispielsweise den Code bei `{{htmlattrdef("src")}}` und speichern ihn ab. Öffnen Sie das Dokument dann mit dem Browser. Jetzt sollte statt dem Bild folgende Meldung angezeigt werden:
 
 ![](<Ein Kleiner Test>)
 
@@ -129,7 +129,7 @@ Dieser alternative Satz sollte dem Leser eine Informationen geben, damit er sich
 
 **Schreiben Sie jetzt einen besseren Alternativtext für Ihr Bild.**
 
-> **Hinweis:** Finden Sie mehr über Zugänglichkeit unter [MDN's Accessibility landing page](/de/docs/Web/Accessibility) heraus.
+> **Note:** **Hinweis**: Finden Sie mehr über Zugänglichkeit unter [MDN's Accessibility landing page](/de/docs/Web/Accessibility) heraus.
 
 ## Textdarstellung
 
@@ -164,8 +164,8 @@ Wie oben erklärt benutzt man {{htmlelement("p")}}, Elemente um Absätze zu erst
 
 Viele Webseiten enthalten Listen , deshalb hält HTML dafür Elemente bereit. Die Kennzeichnung von Listen besteht immer aus zwei Elementen. Man unterscheidet geordnete und ungeordnete Listen.
 
-1. **Ungeordnete Listen** sind Listen, bei denen die Reihenfolge der Gegenstände keine Rolle spielt, wie eine Einkaufsliste. Diese werden eingehüllt von einem {{htmlelement("ul")}} Element.
-2. **Geordnete Listen** werden verwendet, wenn die Reihenfolge der Bestandteile wichtig ist, wie bei einem Rezept. Diese werden eingehüllt von einem {{htmlelement("ol")}} Element.
+1.  **Ungeordnete Listen** sind Listen, bei denen die Reihenfolge der Gegenstände keine Rolle spielt, wie eine Einkaufsliste. Diese werden eingehüllt von einem {{htmlelement("ul")}} Element.
+2.  **Geordnete Listen** werden verwendet, wenn die Reihenfolge der Bestandteile wichtig ist, wie bei einem Rezept. Diese werden eingehüllt von einem {{htmlelement("ol")}} Element.
 
 Jeder Gegenstand der Liste wird einzeln in ein {{htmlelement("li")}} Listen-Element gepackt.
 
@@ -196,20 +196,20 @@ Könnten wir das so machen:
 
 Links sind sehr wichtig — sie sind, was das Internet EIN NETZ macht. Um einen Link zu implementieren, müssen wir ein einfaches Element — {{htmlelement("a")}} — verwenden. Das _a_ ist die Kurzform für "Anker" (engl. "anchor"). Um einen Text innerhalb des Absatzes in einen Link zu verwandeln, führen Sie folgenden Schritte durch:
 
-1. Suchen Sie einen Text aus. Wir benutzen in unserem Beispiel "Mozilla Manifesto".
-2. Betten Sie den Text in ein `<a>`-Element ein:
+1.  Suchen Sie einen Text aus. Wir benutzen in unserem Beispiel "Mozilla Manifesto".
+2.  Betten Sie den Text in ein `<a>`-Element ein:
 
     ```html
     <a>Mozilla Manifesto</a>
     ```
 
-3. Geben Sie dem `<a>`-Element ein `href`-Attribut:
+3.  Geben Sie dem `<a>`-Element ein `href`-Attribut:
 
     ```html
     <a href="">Mozilla Manifesto</a>
     ```
 
-4. Füllen Sie für den Wert des Attributs die Internetadresse ein, auf die Sie verlinken wollen:
+4.  Füllen Sie für den Wert des Attributs die Internetadresse ein, auf die Sie verlinken wollen:
 
     ```html
     <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>

@@ -51,7 +51,7 @@ Im folgenden Beispiel haben wir ein dreispaltiges und zweireihiges Grid mit 20-P
 
 In Bezug auf die Gridgröße verhalten sich die Zwischenräume (gaps) wie eine normale Spalte oder Reihe, jedoch kann nichts darin platziert werden. Der Abstand wirkt so, als ob die Gitterlinie an dieser Stelle eine zusätzlichen Platz bekommen hätte, so dass jedes nach dieser Linie platzierte Grid-Element am Ende des Abstandes beginnt.
 
-Die Grid-Gap-Eigenschaften sind nicht das Einzige, was dazu führen kann, dass Reihen oder Spalten überlaufen. Margins, Padding oder die Verwendung der Raumverteilungseigenschaften im [Box Alignment](/de/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)können alle zum sichtbaren Spalt beitragen - daher sollten die Grid-Gap-Eigenschaften nicht gleich "der Rastergröße" gesehen werden, es sei denn, Sie wissen, dass Ihr Entwurf nicht mit einer dieser Methoden zusätzlichen Raum geschaffen hat.
+Die Grid-Gap-Eigenschaften sind nicht das Einzige, was dazu führen kann, dass Reihen oder Spalten überlaufen. Margins, Padding oder die Verwendung der Raumverteilungseigenschaften im [Box Alignment ](/de/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)können alle zum sichtbaren Spalt beitragen - daher sollten die Grid-Gap-Eigenschaften nicht gleich "der Rastergröße" gesehen werden, es sei denn, Sie wissen, dass Ihr Entwurf nicht mit einer dieser Methoden zusätzlichen Raum geschaffen hat.
 
 ## Erfahren Sie mehr
 

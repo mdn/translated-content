@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
 ---
 {{JSRef}}
 
-Die statische **`Atomics.or()`** Methode berechnet eine bitweises ODER mit einem gegebenen Wert auf einem Wert an einer gegebenen Position im Array und gibt den alten Wert an der Position zurück. Die atomare Operation garantiert, dass kein anderer Schreibprozess während der Operation durchgeführt wird.
+Die statische **`Atomics`\*\***`.or()`\*\* Methode berechnet eine bitweises ODER mit einem gegebenen Wert auf einem Wert an einer gegebenen Position im Array und gibt den alten Wert an der Position zurück. Die atomare Operation garantiert, dass kein anderer Schreibprozess während der Operation durchgeführt wird.
 
 {{EmbedInteractiveExample("pages/js/atomics-or.html")}}
 

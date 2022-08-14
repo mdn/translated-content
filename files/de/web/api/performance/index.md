@@ -31,6 +31,8 @@ _The `Performance` interface doesn't inherit any properties._
 - {{domxref("Performance.memory", "performance.memory")}} {{Non-standard_inline}}
   - : A _non-standard_ extension added in Chrome, this property provides an object with basic memory usage information. _You **should not use** this non-standard API._
 
+<!---->
+
 - ### Event handlers
 
   {{domxref("Performance.onresourcetimingbufferfull")}}

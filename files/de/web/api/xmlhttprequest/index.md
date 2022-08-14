@@ -491,9 +491,9 @@ Liefert den String mit dem Text des angegebenen Headers, oder `null` falls die A
 
 ### open()
 
-Initialisiert eine Anfrage. Diese Methode ist nur zur Verwendung in JavaScript Code; um eine Anfrage aus nativem Code zu initialisieren, ist stattdessen``[`openRequest()`](</de/docs/nsIXMLHttpRequest#openRequest()> "XMLHttpRequest#openRequest()") zu benutzen.
+Initialisiert eine Anfrage. Diese Methode ist nur zur Verwendung in JavaScript Code; um eine Anfrage aus nativem Code zu initialisieren, ist stattdessen` `[`openRequest()`](</de/docs/nsIXMLHttpRequest#openRequest()> "XMLHttpRequest#openRequest()") zu benutzen.
 
-> **Note:** **Anmerkung:** Der Aufruf dieser Methode für eine bereits aktive Anfrage (eine, für die `open()`oder `openRequest()`schon ausgeführt wurde) ist gleichwertig mit dem Aufruf von `abort()`.
+> **Note:** **Anmerkung:** Der Aufruf dieser Methode für eine bereits aktive Anfrage (eine, für die `open()`oder `openRequest() `schon ausgeführt wurde) ist gleichwertig mit dem Aufruf von `abort()`.
 
     void open(
        DOMString method,
@@ -641,7 +641,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 Seither wurden einige zusätzliche Event Handler in verschiedenen Browsern implementiert (`onload`, `onerror`, `onprogress`, etc.). Diese werden in Firefox unterstützt. Für Genaueres, siehe `nsIXMLHttpRequestEventTarget` und [Using XMLHttpRequest](/de/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "XMLHttpRequest/Using_XMLHttpRequest").
 
-Neuere Browser, inklusive Firefox, unterstützen das 'Horchen' nach `XMLHttpRequest`Ereignissen mittels der Standard [`addEventListener`](/en-US/docs/DOM/element.addEventListener "element.addEventListener") APIs zusätzlich zum Setzen von `on*` Eigenschaften auf eine Handler Funktion.
+Neuere Browser, inklusive Firefox, unterstützen das 'Horchen' nach `XMLHttpRequest `Ereignissen mittels der Standard [`addEventListener`](/en-US/docs/DOM/element.addEventListener "element.addEventListener") APIs zusätzlich zum Setzen von `on*` Eigenschaften auf eine Handler Funktion.
 
 ## Browser Kompatibilität
 

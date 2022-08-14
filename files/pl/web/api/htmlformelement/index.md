@@ -82,26 +82,42 @@ Z kolei poniższy dokument HTML przedstawia jak wydobyć informacje z formularza
 - [form.elements](pl/DOM/form.elements)
   - : Zwraca kolekcję wszystkich kontrolek zawartych w elemencie `FORM`.
 
+<!---->
+
 - [form.length](pl/DOM/form.length)
   - : Zwraca ilość kontrolek w elemencie `FORM`.
+
+<!---->
 
 - [form.name](pl/DOM/form.name)
   - : Zwraca ciąg z nazwą bieżącego elementu `FORM`.
 
+<!---->
+
 - [form.acceptCharset](pl/DOM/form.acceptCharset)
   - : Zwraca listę obsługiwanych przez formularz zestawów znaków.
+
+<!---->
 
 - [form.action](pl/DOM/form.action)
   - : Pobiera/ustawia akcję dla elementu `FORM`.
 
+<!---->
+
 - [form.enctype](pl/DOM/form.enctype)
   - : Pobiera/ustawia typ zawartości wysyłanej przez formularz.
+
+<!---->
 
 - [form.encoding](pl/DOM/form.encoding)
   - : Pobiera/ustawia typ zawartości wysyłanej przez formularz.
 
+<!---->
+
 - [form.method](pl/DOM/form.method)
   - : Pobiera/ustawia metodę HTTP używaną do wysłania formularza.
+
+<!---->
 
 - [form.target](pl/DOM/form.target)
   - : Pobiera/ustawia okno docelowe akcji formularza (np. ramka, w której zostanie wyrenderowana zwrócona strona).
@@ -110,6 +126,8 @@ Z kolei poniższy dokument HTML przedstawia jak wydobyć informacje z formularza
 
 - [form.submit](pl/DOM/form.submit)
   - : Wysyła formularz
+
+<!---->
 
 - [form.reset](pl/DOM/form.reset)
   - : Przywraca formularz do jego stanu początkowego

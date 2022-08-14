@@ -18,7 +18,7 @@ fetch(url).then(function(response) {
 
 Für komplexere Operationen müssen Sie {{domxref("Cache.put","Cache.put()")}} direkt verwenden.
 
-> **Hinweis:** `add()` wird alle zuvor im Cache gespeicherten Schlüssel-Wert-Paare die der Request gleichen überschreiben.
+> **Note:** **Hinweis**: `add()` wird alle zuvor im Cache gespeicherten Schlüssel-Wert-Paare die der Request gleichen überschreiben.
 
 ## Syntax
 

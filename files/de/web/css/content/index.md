@@ -43,7 +43,7 @@ Die `content` CSS Eigenschaft wird mit {{ cssxref("::before") }} und {{ cssxref(
   - : Berechnet auf `none` für `:before` und `:after` Pseudo-elemente.
 - \<string>
   - : Text Inhalt.
-- \<uri>`url()`
+- \<uri>` url()`
   - : Der Wert ist ein URI, die eine externe Ressource bezeichnet (beispielsweise ein Bild). Wenn die Ressource oder das Bild nicht angezeigt werden kann, wird es entweder ignoriert oder ein Platzhalter wird angezeigt.
 - \<counter>
   - : Die Zähler (Counters) können mit zwei verschiedenen Funktionen angegeben werden: 'counter()' oder 'counters()'. Ersteres hat zwei Formen: 'counter(name) "oder" counter(name, style). Der erzeugte Text ist der Wert des counter innersten, im Scope dieses Pseudoelements; es wird in der angegebenen Art ('dezimal' als Standard) formatiert. Die letztere Funktion hat auch zwei Formen: "counter(name, string) 'oder' counters(name, string, style) '. Der erzeugte Text ist der Wert aller Zähler mit dem angegebenen Namen im Scope dieses Pseudoelements, von außen nach innen, durch den angegebenen String getrennt. Die counter werden in der angegebenen Art ('dezimal' als Standard) wiedergegeben. Siehe den Abschnitt über automatische Counter und Nummerierung für weitere Informationen. Der Name darf nicht "none", "inherit" oder "initial" sein. Ein solcher Name bewirkt, dass die Deklaration ignoriert wird.

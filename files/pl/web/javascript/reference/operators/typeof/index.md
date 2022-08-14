@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencje/Operatory/Operator_typeof
 ---
 ### Podsumowanie
 
-Operator `typeof` używa się na jeden z poniższych sposobów:
+Operator `typeof` używa się na jeden z poniższych sposobów:
 
 1.  `typeof operand`
 2.  `typeof (operand )`

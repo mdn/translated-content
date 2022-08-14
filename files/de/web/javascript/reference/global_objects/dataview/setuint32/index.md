@@ -24,8 +24,12 @@ Die **`setInt32()`** Methode speichert eine ganze vorzeichenlose 32-Bit Zahl (Un
 - byteOffset
   - : Das Offset, in Bytes, vom Start der View, an dem die Daten gespeichert werden sollen.
 
+<!---->
+
 - value
   - : Der Wert, der gespeichert werden soll.
+
+<!---->
 
 - littleEndian
   - : {{optional_inline}} Gibt an, ob die 32 Bit Zahl als {{Glossary("Endianness", "little- oder big-Endian")}} abgespeichert wird. Wenn false oder undefined angegewen ist, wird ein big-Endian gelesen.

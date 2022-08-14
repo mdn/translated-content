@@ -22,7 +22,7 @@ Pozwala zidentyfikować obecnie zarejestrowany element docelowy zdarzenia.
 
 ### Przykład
 
-     if e.currentTarget != t_el
+     if e.currentTarget != t_el
         resetEventEngine();
 
 ### Specyfikacja

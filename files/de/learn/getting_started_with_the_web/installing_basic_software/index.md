@@ -38,7 +38,7 @@ Die Liste an möglichen Werkzeugen wirkt einschüchternd, aber glücklicherweise
 
 Sie haben vermutlich schon einen Texteditor auf Ihrem Computer. Windows hat [Notepad](http://en.wikipedia.org/wiki/Notepad_%28software%29), Mac OS X kommt mit [TextEdit](http://en.wikipedia.org/wiki/TextEdit). Linux-Distributionen haben verschiedene Editoren; Ubuntu hat z.B. [gedit](http://en.wikipedia.org/wiki/Gedit) vorinstalliert.
 
-Für die Webentwicklung gibt es bessere Editoren als Notepad oder TextEdit. Auf Windows ist [Notepad++](http://notepad-plus-plus.org/)sehr beliebt. Unter allen größeren Betriebssystemen laufen [Brackets](http://brackets.io/) und [Atom](https://atom.io/). Diese Editoren sind frei verfügbar und helfen Ihnen beim Schreiben von Code besser als die Standard-Texteditoren.
+Für die Webentwicklung gibt es bessere Editoren als Notepad oder TextEdit. Auf Windows ist [Notepad++ ](http://notepad-plus-plus.org/)sehr beliebt. Unter allen größeren Betriebssystemen laufen [Brackets](http://brackets.io/) und [Atom](https://atom.io/). Diese Editoren sind frei verfügbar und helfen Ihnen beim Schreiben von Code besser als die Standard-Texteditoren.
 
 ### Installieren von modernen Browsern
 

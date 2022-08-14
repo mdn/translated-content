@@ -21,7 +21,7 @@ Vertikale Ränder (`margins`) zwischen zwei fließenden Elementen hingegen kolla
 
 Die relevanen fließenden Elemente, deren Fließeigenschaft beendet werden soll, sind die früheren fließenden Elemente mit der selben [Blockformatierungskontexts](/de/docs/Web/Guide/CSS/Block_formatting_context) .
 
-> **Hinweis:** Wenn ein Element nur fließenden ([float](/de/docs/Web/CSS/float)) Elemente enthält, kollabiert seine Höhe zu null. Wenn Sie möchten, dass es immer in der Lage ist, seine Größe zu ändern, so dass es in seinem Inneren schwebende Elemente enthält, müssen Sie das `float` für seine Kinder selbst beenden. Dies wird **clearfix** genannt, und eine Weg, besteht darin, ein `clear` zu einem ersetzten {{cssxref("::after")}} [Pseudoelement](/de/docs/Web/CSS/Pseudo-elements) hinzuzufügen.```html
+> **Note:** **Hinweis:** Wenn ein Element nur fließenden ([float](/de/docs/Web/CSS/float)) Elemente enthält, kollabiert seine Höhe zu null. Wenn Sie möchten, dass es immer in der Lage ist, seine Größe zu ändern, so dass es in seinem Inneren schwebende Elemente enthält, müssen Sie das `float` für seine Kinder selbst beenden. Dies wird **clearfix** genannt, und eine Weg, besteht darin, ein `clear` zu einem ersetzten {{cssxref("::after")}} [Pseudoelement](/de/docs/Web/CSS/Pseudo-elements) hinzuzufügen.```html
 > #container:after {
 > content: "";
 > display: block;

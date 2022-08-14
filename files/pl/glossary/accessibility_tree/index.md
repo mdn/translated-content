@@ -11,7 +11,7 @@ translation_of: Glossary/Accessibility_tree
 ---
 **Drzewo dostępności**, lub **model dostępności obiektu** (**AOM**), zawiera {{Glossary("accessibility")}}-informacje związane z dostępnością dla większości elementów HTML.
 
-Przeglądarki konwertują znaczniki HTML w wewnętrzną reprezentacje zwaną* \_\_[drzewem DOM](/pl/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree)*.  Drzewo DOM zawiera obiekty dla wszytskich elementów, atrybutów i węzłów tekstowych danego znacznika HTML. Na podstawie drzewa DOM, przeglądarki tworzą drzewo dostępności, które następnie jest używane przez, konkretne dla danej platformy, API** **dostępności do technologi wspomagających, takich jak czytniki ekranu.
+Przeglądarki konwertują znaczniki HTML w wewnętrzną reprezentacje zwaną* \_\_[drzewem DOM](/pl/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree)*.  Drzewo DOM zawiera obiekty dla wszytskich elementów, atrybutów i węzłów tekstowych danego znacznika HTML. Na podstawie drzewa DOM, przeglądarki tworzą drzewo dostępności, które następnie jest używane przez, konkretne dla danej platformy, API**\_ \_**dostępności do technologi wspomagających, takich jak czytniki ekranu.
 
 Istnieją cztery składniki w obiekcie drzewa dostępności:
 

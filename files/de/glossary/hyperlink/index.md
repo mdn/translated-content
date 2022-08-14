@@ -19,10 +19,10 @@ Hyperlinks verbinden Webseiten oder Datenelemente miteinander. In HTML definiere
 
 ### Technische Referenz
 
-- [Links in HTML-Documenten - W3C](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)(Englisch)
-- [HTML5 a - hyperlink - W3C](https://w3c.github.io/html-reference/a.html)(Englisch)
+- [Links in HTML-Documenten - W3C ](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)(Englisch)
+- [HTML5 a - hyperlink - W3C ](https://w3c.github.io/html-reference/a.html)(Englisch)
 
 ### Learn about it
 
 - [`<a>` auf MDN](/de/docs/Web/HTML/Element/a)
-- [`<link>` auf MDN](/de/docs/Web/HTML/Element/link)(Englisch)
+- [`<link>` auf MDN ](/de/docs/Web/HTML/Element/link)(Englisch)

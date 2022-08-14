@@ -29,7 +29,7 @@ Die **`isNaN()`** Methode prüft, ob ein Wert {{jsxref("NaN")}} ist. Bemerkung: 
 
 ### Die notwendigkeit einer `isNaN Methode`
 
-Anders als bei allen anderen Werten in JavaScript, ist es nicht möglich mit den Gleichheitsoperatoren ({{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} and {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}) zu prüfen, ob ein Wert {{jsxref("NaN")}} ist oder nicht. `NaN == NaN` und `NaN === NaN` werden zu `false`ausgewertet. Aus diesem Grund wird eine `isNaN` Methode benötigt.
+Anders als bei allen anderen Werten in JavaScript, ist es nicht möglich mit den Gleichheitsoperatoren ({{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} and {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}) zu prüfen, ob ein Wert {{jsxref("NaN")}} ist oder nicht. `NaN == NaN` und `NaN === NaN` werden zu `false `ausgewertet. Aus diesem Grund wird eine `isNaN` Methode benötigt.
 
 ### Ursprünge des `NaNWertes`
 
@@ -41,7 +41,7 @@ Beispielsweise ist das Ergebnis einer Division von null durch null `NaN`. Jedoch
 
 Schon seit den frühesten Versionen der `isNaN` Methodendefinition ist das Verhalten für nicht numerische Typen nicht trivial. Wenn der zu überprüfende Wert nicht vom Typ [Number](http://es5.github.com/#x8.5) ist, so wird dieser Wert zuerst in den Typ [Number](http://es5.github.com/#x8.5) konvertiert. Erst dann wird geprüft, ob der Wert {{jsxref("NaN")}} ist. Weil einige nicht numerischen Werte trotzdem als Zahlen interpretiert werden können (leere Strings und Werte vom Typ boolean können als Nullen und Einsen dargestellt werden) ist das `false`-Resultat der Funktion manchmal unerwartet. Der leere String ist ein Beispiel dafür, weil dieser definitiv keine Nummer ist. Das verwirrende ist jedoch dass "not a number" eine spezielle Repräsentation in den IEEE-754 Gleitkommazahlen besitzt. Aus diesem Grund kann die Methode so interpretiert werden, dass sie die Antwort auf die Frage gibt, ob ein Wert, der als Nummer interpretiert wird, eine IEEE-754 'Not a number' ist.
 
-Die aktuelle Version von ECMAScript (ES2015) enthält die Methode {{jsxref("Number.isNaN()")}}. `Number.isNaN(x)` wird eine zuverlässige Möglichkeit sein um zu testen ob `x` den Wert `NaN` entspricht oder nicht. Mit `Number.isNaN` wird exakt abgefragt, ob es sich um eine Nummer handelt. Eine Alternative zu testen ob eine Variable `NaN` ist, ist die Abfrage `(x != x)`. Diese wird im Normalfall zu `false`ausgewertet, außer wenn der wert `NaN ist.`
+Die aktuelle Version von ECMAScript (ES2015) enthält die Methode {{jsxref("Number.isNaN()")}}. `Number.isNaN(x)` wird eine zuverlässige Möglichkeit sein um zu testen ob `x` den Wert `NaN` entspricht oder nicht. Mit `Number.isNaN` wird exakt abgefragt, ob es sich um eine Nummer handelt. Eine Alternative zu testen ob eine Variable `NaN` ist, ist die Abfrage `(x != x)`. Diese wird im Normalfall zu `false `ausgewertet, außer wenn der wert `NaN ist.`
 
 Ein Polyfill für `isNaN` ist folgender (der Polyfill nutzt die einzigartigen Eigenschaften von `NaN`, dass dieses niemals gleichwertig mit `NaN` ist):
 

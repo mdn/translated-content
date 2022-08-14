@@ -13,15 +13,15 @@ translation_of: Web/JavaScript/Reference/Classes
 ---
 {{JsSidebar("Classes")}}
 
-Klasy w Javascript zostały wprowadzone w ECMAScript 2015 jako lukier składniowy\*\* **(ang. _syntactic sugar_) dla istniejącego, opartego na prototypach modelu dziedziczenia. Składnia klas **nie\*\* wprowadza nowego zorientowanego obiektowo modelu dziedziczenia. Klasy wprowadzają znacznie prostszą i bardziej czytelną składnię do tworzenia obiektów i dziedziczenia.
+Klasy w Javascript zostały wprowadzone w ECMAScript 2015 jako lukier składniowy\*\* **(ang. _syntactic sugar_) dla istniejącego, opartego na prototypach modelu dziedziczenia. Składnia klas **nie\*\* wprowadza nowego zorientowanego obiektowo modelu dziedziczenia. Klasy wprowadzają znacznie prostszą i bardziej czytelną składnię do tworzenia obiektów i dziedziczenia.
 
 ## Definiowanie klas
 
-Klasy są w zasadzie "szczególnymi [funkcjami](/pl/docs/Web/JavaScript/Reference/Functions)". Podobnie jak w funkcji można definiować [wyrażenie `function`](/pl/docs/Web/JavaScript/Referencje/Operatory/Operator_function) i [deklaracje funkcji](/pl/docs/Web/JavaScript/Reference/Statements/function), tak składnia klasy posiada dwa komponenty: [wyrażenie `class`](/pl/docs/Web/JavaScript/Reference/Operators/class) i [deklaracje klasy](/pl/docs/Web/JavaScript/Reference/Statements/class).
+Klasy są w zasadzie "szczególnymi [funkcjami](/pl/docs/Web/JavaScript/Reference/Functions)". Podobnie jak w funkcji można definiować [wyrażenie `function`](/pl/docs/Web/JavaScript/Referencje/Operatory/Operator_function) i [deklaracje funkcji](/pl/docs/Web/JavaScript/Reference/Statements/function), tak składnia klasy posiada dwa komponenty: [wyrażenie `class`](/pl/docs/Web/JavaScript/Reference/Operators/class) i [deklaracje klasy](/pl/docs/Web/JavaScript/Reference/Statements/class).
 
 ### Deklaracje klas
 
-Jednym ze sposobów definiowania klas jest **deklaracja klasy**. Aby zadeklarować klasę, należy użyć słowa kluczowego `class` wraz z nazwą klasy (w tym przypadku "Prostokat").
+Jednym ze sposobów definiowania klas jest **deklaracja klasy**. Aby zadeklarować klasę, należy użyć słowa kluczowego `class` wraz z nazwą klasy (w tym przypadku "Prostokat").
 
 ```js
 class Prostokat {
@@ -34,7 +34,7 @@ class Prostokat {
 
 #### Hoisting
 
-Ważną różnicą pomiędzy **deklaracją funkcji** a **deklaracją klasy** jest to, że deklaracje funkcji są przenoszone na początek ({{Glossary("Hoisting")}}) a klas nie. Najpierw musisz zadeklarować swoją klasę, by mieć do niej dostęp, w przeciwnym razie kod, jak ten poniżej, wygeneruje błąd {{jsxref("ReferenceError")}}:
+Ważną różnicą pomiędzy **deklaracją funkcji** a **deklaracją klasy** jest to, że deklaracje funkcji są przenoszone na początek ({{Glossary("Hoisting")}}) a klas nie. Najpierw musisz zadeklarować swoją klasę, by mieć do niej dostęp, w przeciwnym razie kod, jak ten poniżej, wygeneruje błąd {{jsxref("ReferenceError")}}:
 
 ```js example-bad
 var p = new Prostokat(); // ReferenceError
@@ -42,49 +42,49 @@ var p = new Prostokat(); // ReferenceError
 class Prostokat {}
 ```
 
-### Wyrażenie `class`
+### Wyrażenie `class`
 
-**Wyrażenie `class`** jest kolejnym sposobem definiowania klasy. Wyrażenia `class` mogą być nazwane lub nienazwane. Nazwa przypisana nazwanemu wyrażeniu `class` jest lokalna dla ciała klasy. (można ją odczytać z właściwości {{jsxref("Function.name", "name")}} klasy)
+**Wyrażenie `class`** jest kolejnym sposobem definiowania klasy. Wyrażenia `class` mogą być nazwane lub nienazwane. Nazwa przypisana nazwanemu wyrażeniu `class` jest lokalna dla ciała klasy. (można ją odczytać z właściwości {{jsxref("Function.name", "name")}} klasy)
 
 ```js
 // nienazwane
 var Prostokat = class {
   constructor(wysokosc, szerokosc) {
-    this.wysokosc = wysokosc;
-    this.szerokosc = szerokosc;
+    this.wysokosc = wysokosc;
+    this.szerokosc = szerokosc;
   }
 };
 console.log(Prostokat.name); // Prostokat
 
 // nazwane
 var Prostokat = class Prostokat2 {
-  constructor(wysokosc, szerokosc) {
-    this.wysokosc = wysokosc;
-    this.szerokosc = szerokosc;
-  }
+  constructor(wysokosc, szerokosc) {
+    this.wysokosc = wysokosc;
+    this.szerokosc = szerokosc;
+  }
 };
 console.log(Prostokat.name); // Prostokat2
 ```
 
-> **Uwaga:** **Wyrażenia** `class` dotykają te same kwestie związane z przenoszeniem na początek (ang. hoisting) co wspomnianych **deklaracji** klas.
+> **Note:** **Uwaga**: **Wyrażenia** `class` dotykają te same kwestie związane z przenoszeniem na początek (ang. hoisting) co wspomnianych **deklaracji** klas.
 
 ## Ciało klasy i definicje metod
 
-Ciało klasy jest umieszczane w nawiasach klamrowych `{}`. To tam definiuje się metody, czy konstruktory.
+Ciało klasy jest umieszczane w nawiasach klamrowych `{}`. To tam definiuje się metody, czy konstruktory.
 
 ### Tryb ścisły
 
-Ciało klasy jest wykonywane w [trybie ścisłym](/pl/docs/Web/JavaScript/Reference/Strict_mode) (ang. _strict mode_). W celu poprawienia wydajności, kod wykorzystywany tutaj podlega ścisłej składni; nie pozwala to na ukrycie niektórych wyjątków, a pewne słowa kluczowe są rezerwowane dla przyszłych wersji ECMAScript.
+Ciało klasy jest wykonywane w [trybie ścisłym](/pl/docs/Web/JavaScript/Reference/Strict_mode) (ang. _strict mode_). W celu poprawienia wydajności, kod wykorzystywany tutaj podlega ścisłej składni; nie pozwala to na ukrycie niektórych wyjątków, a pewne słowa kluczowe są rezerwowane dla przyszłych wersji ECMAScript.
 
 ### Konstruktor
 
-[`Constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym `class`. Dozwolony jest tylko jeden konstruktor w danej klasie. Jeśli klasa posiada więcej niż jedno wystąpienie metody `constructor`, wygenerowany zostanie błąd {{jsxref("SyntaxError")}}.
+[`Constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) jest szczególną metodą, która służy tworzeniu i inicjalizowaniu obiektu zdefiniowanego słowem kluczowym `class`. Dozwolony jest tylko jeden konstruktor w danej klasie. Jeśli klasa posiada więcej niż jedno wystąpienie metody `constructor`, wygenerowany zostanie błąd {{jsxref("SyntaxError")}}.
 
-Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego `super`.
+Aby wywołać konstruktor klasy bazowej, należy użyć słowa kluczowego `super`.
 
 ### Metody
 
-Zobacz też [definiowanie metod](/pl/docs/Web/JavaScript/Reference/Functions/Method_definitions).
+Zobacz też [definiowanie metod](/pl/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 
 ```js
 class Prostokat {
@@ -93,13 +93,13 @@ class Prostokat {
     this.szerokosc = szerokosc;
   }
   // Getter
-  get pole() {
+  get pole() {
     return this.liczPole();
-  }
+  }
   // Method
-  liczPole() {
-    return this.wysokosc * this.szerokosc;
-  }
+  liczPole() {
+    return this.wysokosc * this.szerokosc;
+  }
 }
 
 const kwadrat = new Prostokat(10, 10);
@@ -109,7 +109,7 @@ console.log(kwadrat.pole); // 100
 
 ### Metody i właściwości statyczne
 
-Słowo kluczowe [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) definiuje metodę kub właściwość statyczną w klasie. Statyczne metody i właściwości są wywoływane bez [inicjalizowania](/pl/docs/Learn/JavaScript/Obiekty 'An example of class instance is "var john = new Person();"') ich klas i **nie mogą** być wywołane przez instancję klasy.
+Słowo kluczowe [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) definiuje metodę kub właściwość statyczną w klasie. Statyczne metody i właściwości są wywoływane bez [inicjalizowania](/pl/docs/Learn/JavaScript/Obiekty 'An example of class instance is "var john = new Person();"') ich klas i **nie mogą** być wywołane przez instancję klasy.
 
 ```js
 class Punkt {
@@ -140,16 +140,16 @@ console.log(Punkt.odleglosc(p1, p2)); // 7.0710678118654755
 
 ### Powiązanie `this` z metodami niestatycznymi i statycznymi
 
-Kiedy metoda typu `static` lub `prototype` jest wywoływana bez `this` (na przykład poprzez przypisanie metody do zmiennej), wtedy `this` będzie `undefined` w środku metody. Takie zachowanie będzie takie same, nawet jeżeli dyrektywa `"use strict"` nie będzie obecna, ponieważ kod w obrębie metody danej klasy zawsze będzie wykonywał się jako `strict mode`.
+Kiedy metoda typu `static` lub `prototype` jest wywoływana bez `this` (na przykład poprzez przypisanie metody do zmiennej), wtedy `this`\_ \_będzie `undefined` w środku metody. Takie zachowanie będzie takie same, nawet jeżeli dyrektywa `"use strict"` nie będzie obecna, ponieważ kod w obrębie metody danej klasy zawsze będzie wykonywał się jako `strict mode`.
 
 ```js
 class Animal {
-  speak() {
-    return this;
-  }
-  static eat() {
-    return this;
-  }
+  speak() {
+    return this;
+  }
+  static eat() {
+    return this;
+  }
 }
 
 let obj = new Animal();
@@ -253,17 +253,17 @@ Po więcej informacji zobacz [private class fields](/pl/docs/Web/JavaScript/Refe
 
 ## Podklasy z `extends`
 
-Słowo kluczowe [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) jest używane w _deklaracjach klas_ lub _wyrażeniach klas_ do tworzenia klasy jako elementu potomnego innej klasy.
+Słowo kluczowe [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) jest używane w _deklaracjach klas_ lub _wyrażeniach klas_ do tworzenia klasy jako elementu potomnego innej klasy.
 
 ```js
 class Animal {
   constructor(name) {
-    this.name = name;
-  }
+    this.name = name;
+  }
 
-  speak() {
+  speak() {
     console.log(this.name + ' makes a noise.');
-  }
+  }
 }
 
 class Dog extends Animal {
@@ -272,7 +272,7 @@ class Dog extends Animal {
   }
   speak() {
     console.log(this.name + ' barks.');
-  }
+  }
 }
 
 let d = new Dog('Mitzie');
@@ -281,7 +281,7 @@ d.speak(); // Mitzie barks.
 
 Jeśli w podklasie znajduje się konstruktor, musi najpierw wywołać super() przed użyciem "this".
 
-Można również rozszerzyć tradycyjne klasy oparte na funkcjach:
+Można również rozszerzyć tradycyjne klasy oparte na funkcjach:
 
 ```js
 function Animal (name) {
@@ -344,7 +344,7 @@ console.log(mapped instanceof Array);   // true
 
 ## Słowo kluczowe `super`
 
-Słowo kluczowe **super** jest wykorzystywane do udostępniania i korzystania z funkcji klasy, po której nasz obiekt dziedziczy.
+Słowo kluczowe **super** jest wykorzystywane do udostępniania i korzystania z funkcji klasy, po której nasz obiekt dziedziczy.
 
 ```js
 class Cat {

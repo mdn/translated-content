@@ -14,12 +14,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version
 
 ````|
 
-Wersja rozszerzenia, sformatowana jako liczby i znaki ASCII oddzielone kropkami. Szczegółowe informacje na temat formatu wersji znajdują się na stronie [Format Wersji](/pl/docs/Toolkit_version_format).
+Wersja rozszerzenia, sformatowana jako liczby i znaki ASCII oddzielone kropkami. Szczegółowe informacje na temat formatu wersji znajdują się na stronie [Format Wersji](/pl/docs/Toolkit_version_format).
 
-Pamiętaj, że [składnia zdefiniowana dla `version` w Chromie](https://developer.chrome.com/extensions/manifest/version) jest bardziej restrykcyjna niż ta używana w  przeglądarce Firefox:
+Pamiętaj, że [składnia zdefiniowana dla `version` w Chromie](https://developer.chrome.com/extensions/manifest/version) jest bardziej restrykcyjna niż ta używana w  przeglądarce Firefox:
 
-*   wartości `version` ważne w Chrome zawsze będą ważne w Firefox
-*   wartości `version` ważne w Firefox mogą nie być ważne w Chrome
+*   wartości `version` ważne w Chrome zawsze będą ważne w Firefox
+*   wartości `version` ważne w Firefox mogą nie być ważne w Chrome
 
 ## Przykład
 

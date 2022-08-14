@@ -18,7 +18,7 @@ class nazwa [extends] {
 
 ## Opis
 
-Ciało klasy w deklaracji klasy jest wykonywane w  [trybie ścisłym](/pl/docs/Web/JavaScript/Reference/Strict_mode). Konstruktor jest opcjonalny.
+Ciało klasy w deklaracji klasy jest wykonywane w  [trybie ścisłym](/pl/docs/Web/JavaScript/Reference/Strict_mode). Konstruktor jest opcjonalny.
 
 Deklaracje klas nie są {{Glossary("Hoisting", "hoisted")}} (w odróżnieniu od [deklaracji funkcji](/pl/docs/Web/JavaScript/Reference/Statements/function)).
 
@@ -40,7 +40,7 @@ class Polygon {
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = 'Square';
   }
 }
 ```

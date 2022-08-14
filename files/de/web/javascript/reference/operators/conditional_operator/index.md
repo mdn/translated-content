@@ -21,6 +21,8 @@ Der **bedingte (ternäre) Operator** ist der einzige Operator in JavaScript, der
 - `Bedingung (oder Bedingungen)`
   - : Ein Ausdruck, der zu `true` oder `false` ausgewertet wird.
 
+<!---->
+
 - `Ausdruck1`, `Ausdruck2`
   - : Ausdrücke mit Werten eines beliebigen Typs.
 

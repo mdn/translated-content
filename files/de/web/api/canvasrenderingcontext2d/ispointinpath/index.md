@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/isPointInPath
 ---
 {{APIRef}}
 
-Die Methode **`CanvasRenderingContext2D.isPointInPath()`** der Canvas 2D API entscheidet darüber, ob ein Punkt in einem gegeben Pfad enthalten ist.
+Die Methode **`CanvasRenderingContext2D`\*\***`.isPointInPath()`\*\* der Canvas 2D API entscheidet darüber, ob ein Punkt in einem gegeben Pfad enthalten ist.
 
 ## Syntax
 

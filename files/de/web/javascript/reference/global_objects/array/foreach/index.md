@@ -50,9 +50,9 @@ Die **`forEach()`** Methode führt eine übergebene Funktion für jedes Element 
 
 `callback` wird mit drei Argumenten aufgerufen:
 
-1. Der Wert des Elements
-2. Der Index des Elements
-3. Das Array-Objekt, das durchlaufen wird
+1.  Der Wert des Elements
+2.  Der Index des Elements
+3.  Das Array-Objekt, das durchlaufen wird
 
 Falls der Parameter `thisArg` an `forEach()` übergeben wird, wird er als Wert für `this` innerhalb von `callback` verwendet. Andernfalls hat `this` den Wert {{jsxref("undefined")}}. Welchen Wert `callback` letztendlich in `this` sieht wird gemäß [der üblichen Regeln bestimmt, nach denen `this` für eine Funktion ermittelt wird](/de/docs/Web/JavaScript/Reference/Operators/this).
 
@@ -91,7 +91,7 @@ items.forEach(function(item){
 
 ### Inhalte eines Arrays ausgeben
 
-> **Hinweis:** Um den Inhalt eines Arrays vorformatiert auf der Konsole auszugeben können Sie auch {{jsxref("console.table()")}} verwenden. Dieses Beispiel zeigt eine weitere Möglichkeit mittels `forEach()`.
+> **Note:** **Hinweis:** Um den Inhalt eines Arrays vorformatiert auf der Konsole auszugeben können Sie auch {{jsxref("console.table()")}} verwenden. Dieses Beispiel zeigt eine weitere Möglichkeit mittels `forEach()`.
 
 Der folgende Code gibt eine Zeile pro Element des Arrays aus:
 

@@ -120,7 +120,7 @@ W IE 8 i niższych należy użyć `attachEvent` zamiast standardowego `addEventL
 
 Ta metoda zastępuje istniejącą obsługę zdarzenia `onclick` na elemencie jeśli jest jakakolwiek. Podobnie do innych zdarzeń 'on' takich jak `onblur`, `onkeypress`, i tak dalej.
 
-Ponieważ była to istotna część DOM 0, ta metoda jest bardzo szeroko wspierana i nie wymaga specjalnych kodów do różnych przeglądarek; stąd też jest to normalnie używana do dynamicznego zaczepienia obsługi zdarzenia jeśli nie potrzeba dodatkowych możliwości  `addEventListener()`.
+Ponieważ była to istotna część DOM 0, ta metoda jest bardzo szeroko wspierana i nie wymaga specjalnych kodów do różnych przeglądarek; stąd też jest to normalnie używana do dynamicznego zaczepienia obsługi zdarzenia jeśli nie potrzeba dodatkowych możliwości  `addEventListener()`.
 
 ### Specyfikacja
 

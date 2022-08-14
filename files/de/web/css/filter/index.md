@@ -24,7 +24,7 @@ Die `filter` CSS Eigenschaft erlaubt es, Effekte wie Unschärfe oder Farbverschi
 
 Im CSS Standard inbegriffen sind mehrere Funktionen, die vordefinierte Effekte ermöglichen. Es können auch Filter verwendet werden, die über SVG mit Hilfe des [SVG Filter Elements](/de/docs/Web/SVG/Element/filter "/en/SVG/Element/filter") angegeben wurden.
 
-> **Hinweis:** Ältere Versionen (4.0 bis einschließlich 9.0) des Internet Explorers unterstützten eine nicht standardisierte ["filter"](<http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx>) Eigenschaft, die mittlerweile missbilligt wird.
+> **Note:** **Hinweis:** Ältere Versionen (4.0 bis einschließlich 9.0) des Internet Explorers unterstützten eine nicht standardisierte ["filter"](<http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx>) Eigenschaft, die mittlerweile missbilligt wird.
 
 {{cssinfo}}
 

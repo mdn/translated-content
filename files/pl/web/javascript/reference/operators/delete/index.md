@@ -14,6 +14,8 @@ Operator delete usuwa obiekt, własność obiektu lub element w określonym inde
 
     delete  nazwaObiektu
 
+<!---->
+
     delete nazwaObiektu.własność
     delete nazwaObiektu['własność']
 
@@ -21,6 +23,8 @@ Operator delete usuwa obiekt, własność obiektu lub element w określonym inde
 
 - `nazwaObiektu`
   - : Nazwa obiektu.
+
+<!---->
 
 - `własność`
   - : Własność do usunięcia.

@@ -28,9 +28,9 @@ Korzystanie z obiektu `XMLHttpRequest` jest bardzo proste. Należy utworzyć ins
     if(req.status == 200)
       dump(req.responseText);
 
-> **Uwaga:** W tym przykładzie dane pobierane są w sposób synchroniczny — wykonanie powyższego kodu JavaScript spowoduje zablokowanie interfejsu użytkownika do momentu zakończenia pobierania. Nie należy wykorzystywać podanego kodu w praktyce.
+> **Note:** **Uwaga:** W tym przykładzie dane pobierane są w sposób synchroniczny — wykonanie powyższego kodu JavaScript spowoduje zablokowanie interfejsu użytkownika do momentu zakończenia pobierania. Nie należy wykorzystywać podanego kodu w praktyce.
 
-> **Uwaga:** W żądaniach synchronicznych nie należy korzystać z funkcji `onreadystatechange` — w przeciwnym przypadku w wersjach Firefoksa starszych niż wersja 3 zostanie ona wywołana. Program [Firefox 3](pl/Firefox_3) jest zablokowany do momentu ukończenia procesu obsługi żądania (tak jak w powyższym przykładzie). Program Firefox 2 działa w ten sam sposób, jeżeli tylko funkcja `onreadystatechange` nie zostanie zaimplementowana.
+> **Note:** **Uwaga:** W żądaniach synchronicznych nie należy korzystać z funkcji `onreadystatechange` — w przeciwnym przypadku w wersjach Firefoksa starszych niż wersja 3 zostanie ona wywołana. Program [Firefox 3](pl/Firefox_3) jest zablokowany do momentu ukończenia procesu obsługi żądania (tak jak w powyższym przykładzie). Program Firefox 2 działa w ten sam sposób, jeżeli tylko funkcja `onreadystatechange` nie zostanie zaimplementowana.
 
 #### Przykład dla protokołu innego niż HTTP
 
@@ -40,7 +40,7 @@ Korzystanie z obiektu `XMLHttpRequest` jest bardzo proste. Należy utworzyć ins
     if(req.status == 0)
       dump(req.responseText);
 
-> **Uwaga:** protokoły [`file:///`]() i [`ftp://`](ftp://) nie zwracają kodu stanu HTTP, stąd w ich przypadku własność `status` zwraca wartość zero, a własność `statusText` zawiera pusty ciąg znaków. Aby uzyskać więcej informacji, patrz {{ Bug(331610) }}.
+> **Note:** **Uwaga:** protokoły [`file:///`]() i [`ftp://`](ftp://) nie zwracają kodu stanu HTTP, stąd w ich przypadku własność `status` zwraca wartość zero, a własność `statusText` zawiera pusty ciąg znaków. Aby uzyskać więcej informacji, patrz {{ Bug(331610) }}.
 
 ### Zastosowanie asynchroniczne
 
@@ -90,7 +90,7 @@ Atrybuty zdarzenia `onprogress`, `position` i `totalSize`, wskazują odpowiednio
 
 Dla wszystkich zdarzeń atrybut `target` wskazuje powiązany obiekt `XMLHttpRequest`.
 
-> **Uwaga:** przy korzystaniu z funkcji obsługi zdarzeń w dokumentach XML reprezentowanych przez obiekt `XMLDocument` program [Firefox 3](pl/Firefox_3) sprawdza, czy wartości własności `target`, `currentTarget` i `this` obiektu zdarzenia wskazują na właściwe obiekty. Aby uzyskać szczegółowe informacje, patrz {{ Bug(198595) }}.
+> **Note:** **Uwaga:** przy korzystaniu z funkcji obsługi zdarzeń w dokumentach XML reprezentowanych przez obiekt `XMLDocument` program [Firefox 3](pl/Firefox_3) sprawdza, czy wartości własności `target`, `currentTarget` i `this` obiektu zdarzenia wskazują na właściwe obiekty. Aby uzyskać szczegółowe informacje, patrz {{ Bug(198595) }}.
 
 ### Inne własności i metody
 
@@ -104,7 +104,7 @@ Jeżeli ładowany jest dokument [XML](pl/XML), własność `responseXML` zawiera
 
 Za pomocą tej metody można wymusić sposób obsługi dokumentu, wskazując określony typ danych. Metoda ta przydaje się w sytuacji, gdy do przetwarzania otrzymanych danych ma być użyta własność `responseXML`, serwer wysyła dane w formacie [XML](pl/XML), ale nie jest wysyłany poprawny nagłówek Content-Type.
 
-> **Uwaga:** metodę tę należy wywołać przed użyciem metody `send()`.
+> **Note:** **Uwaga:** metodę tę należy wywołać przed użyciem metody `send()`.
 
     var req = new XMLHttpRequest();
     req.open('GET', 'http://www.mozilla.org/', true);
@@ -115,7 +115,7 @@ Za pomocą tej metody można wymusić sposób obsługi dokumentu, wskazując okr
 
 Za pomocą tej metody można ustawić dowolny nagłówek HTTP żądania przed wysłaniem go.
 
-> **Uwaga:** Przed wywołaniem tej metody należy użyć metody `open()`.
+> **Note:** **Uwaga:** Przed wywołaniem tej metody należy użyć metody `open()`.
 
     var req = new XMLHttpRequest();
     req.open('GET', 'http://www.mozilla.org/', true);
@@ -151,7 +151,7 @@ Za pomocą tej własności można wyłączyć okna dialogowe uwierzytelniania i 
 
 ### Zastosowanie w komponentach XPCOM
 
-> **Uwaga:** W przypadku korzystania z obiektów XMLHttpRequest w komponentach JavaScript XPCOM wymagane są pewne zmiany.
+> **Note:** **Uwaga:** W przypadku korzystania z obiektów XMLHttpRequest w komponentach JavaScript XPCOM wymagane są pewne zmiany.
 
 W komponentach JavaScript XPCOM niemożliwe jest utworzenie obiektów XMLHttpRequest za pomocą konstruktora `XMLHttpRequest()` — nie jest on zdefiniowany wewnątrz komponentów i jego wywołanie powoduje wystąpienie błędu. W celu utworzenia i użycia obiektu należy skorzystać z innej składni.
 
@@ -193,7 +193,7 @@ Chociaż wysyłanie i odbieranie danych tekstowych jest najbardziej popularnym z
       //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
       req.overrideMimeType('text/plain; charset=x-user-defined');
       req.send(null);
-      if (req.status != 200) return '';
+      if (req.status != 200) return '';
       return req.responseText;
     }
 
@@ -248,10 +248,10 @@ Obiekt `XMLHttpRequest` próbuje z reguły pobrać zawartość z lokalnej pamię
 Istnieje także alternatywny sposób pomijania pamięci podręcznej, opisany [tutaj](http://mozdev.org/pipermail/project_owners/2006-August/008353.html):
 
      var req = new XMLHttpRequest();
-     req.open("GET", url += (url.match(/\?/) == null ? "?" : "&") + (new Date()).getTime(), false);
+     req.open("GET", url += (url.match(/\?/) == null ? "?" : "&") + (new Date()).getTime(), false);
      req.send(null);
 
-Do adresu URL dodawany jest parametr zawierający znacznik czasu (odpowiednio wstawiane są znaki ? i &). Na przykład adres <http://foo.com/bar.html> jest przekształcany na <http://foo.com/bar.html?12345>, a <http://foo.com/bar.html?foobar=baz> zostaje zamieniany na <http://foo.com/bar.html?foobar=baz&12345>. Lokalna pamięć podręczna jest indeksowana przy użyciu adresów URL; tymczasem, ponieważ każdy adres URL w obiekcie XMLHttpRequest jest niepowtarzalny, pamięć podręczna jest zawsze pomijana.
+Do adresu URL dodawany jest parametr zawierający znacznik czasu (odpowiednio wstawiane są znaki ? i &). Na przykład adres <http://foo.com/bar.html> jest przekształcany na <http://foo.com/bar.html?12345>, a <http://foo.com/bar.html?foobar=baz> zostaje zamieniany na <http://foo.com/bar.html?foobar=baz&12345>. Lokalna pamięć podręczna jest indeksowana przy użyciu adresów URL; tymczasem, ponieważ każdy adres URL w obiekcie XMLHttpRequest jest niepowtarzalny, pamięć podręczna jest zawsze pomijana.
 
 ### Pobieranie kodu JSON i JavaScript w rozszerzeniach
 

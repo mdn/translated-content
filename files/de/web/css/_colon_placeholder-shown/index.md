@@ -12,9 +12,9 @@ translation_of: Web/CSS/:placeholder-shown
 translation_of_original: Web/CSS/:-moz-placeholder
 original_slug: Web/CSS/:-moz-placeholder
 ---
-> **Hinweis:** Die :-moz-placeholder Pseudoklasse ist in Firefox 19 als veraltet markiert zugunsten des {{cssxref('::-moz-placeholder')}} Pseudoelements.
+> **Note:** **Hinweis:** Die :-moz-placeholder Pseudoklasse ist in Firefox 19 als veraltet markiert zugunsten des {{cssxref('::-moz-placeholder')}} Pseudoelements.
 
-> **Hinweis:**Die CSSWG hat beschlossen, `:placeholder-shown` einzuführen. Diese Funktionalität wird in Gecko irgendwann in der Zukunft wieder eingeführt, ohne Präfix und unter dem neuen Namen. {{bug("1069012")}}
+> **Note:** **Hinweis:**Die CSSWG hat beschlossen, `:placeholder-shown` einzuführen. Diese Funktionalität wird in Gecko irgendwann in der Zukunft wieder eingeführt, ohne Präfix und unter dem neuen Namen. {{bug("1069012")}}
 
 {{deprecated_header}}{{Non-standard_header}}{{CSSRef}}
 

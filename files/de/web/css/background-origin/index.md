@@ -14,7 +14,7 @@ Die `background-origin` Eigenschaft legt den Bereich des Hintergrundbildes fest 
 
 Die Eigenschaft `-moz-background-origin` wird bis einschließlich Gecko 1.9.2 (Firefox 3.6) unterstützt.
 
-> **Hinweis:** Um ältere und neuere Versionen von Gecko (Firefox) zu unterstützen, sollten Sie beide Eigenschaften (mit und ohne `-moz-`) im Stylesheet notieren. Siehe [Beispiele](/de/CSS/background-origin#Beispiele "de/CSS/background-origin#Beispiele").
+> **Note:** **Hinweis**: Um ältere und neuere Versionen von Gecko (Firefox) zu unterstützen, sollten Sie beide Eigenschaften (mit und ohne `-moz-`) im Stylesheet notieren. Siehe [Beispiele](/de/CSS/background-origin#Beispiele "de/CSS/background-origin#Beispiele").
 
 Der Wert dieser Eigenschaft wird durch die Kurzformeigenschaft [`background`](/de/CSS/background "de/CSS/background") auf den Standardwert (`padding-box`) zurückgesetzt.
 

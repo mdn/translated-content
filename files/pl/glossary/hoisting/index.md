@@ -3,9 +3,9 @@ title: Hoisting
 slug: Glossary/Hoisting
 translation_of: Glossary/Hoisting
 ---
-W języku {{Glossary("JavaScript")}}, {{Glossary("Function", "funkcje")}} oraz {{Glossary("Variable", "zmienne")}} są **windowane**. Windowanie (hoisting) w JavaScripcie oznacza przeniesienie deklaracji na samą górę (do globalnego {{Glossary("scope", "zasięgu")}} lub do zasięgu funkcji).
+W języku {{Glossary("JavaScript")}}, {{Glossary("Function", "funkcje")}} oraz {{Glossary("Variable", "zmienne")}} są **windowane**. Windowanie (hoisting) w JavaScripcie oznacza przeniesienie deklaracji na samą górę (do globalnego {{Glossary("scope", "zasięgu")}} lub do zasięgu funkcji).
 
-Oznacza to, że możesz użyć funkcji lub zmiennej przed jej zadeklarowaniem lub innymi słowy: funkcje lub zmienne mogę być deklarowane po ich użyciu.
+Oznacza to, że możesz użyć funkcji lub zmiennej przed jej zadeklarowaniem lub innymi słowy: funkcje lub zmienne mogę być deklarowane po ich użyciu.
 
 ## Naucz się więcej
 

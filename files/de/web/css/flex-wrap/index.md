@@ -23,6 +23,8 @@ Siehe die [CSS flexible Boxen verwenden](/de/docs/Web/Guide/CSS/CSS_flexible_Box
 
     Formale Syntax: {{csssyntax("flex-wrap")}}
 
+<!---->
+
     flex-wrap: nowrap
     flex-wrap: wrap
     flex-wrap: wrap-reverse

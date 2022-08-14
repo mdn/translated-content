@@ -25,8 +25,8 @@ If the CORS configuration isn't setup correctly, the browser console will presen
 
 To understand the underlying issue with the CORS configuration, you need to find out which request is at fault and why. These steps may help you do so:
 
-1. Navigate to the web site or web app in question and open the [Developer Tools](/de/docs/Tools).
-2. Now try to reproduce the failing transaction and check the [console](/de/docs/Tools/Web_Console) if you are seeing a CORS violation error message. It will probably look like this:
+1.  Navigate to the web site or web app in question and open the [Developer Tools](/de/docs/Tools).
+2.  Now try to reproduce the failing transaction and check the [console](/de/docs/Tools/Web_Console) if you are seeing a CORS violation error message. It will probably look like this:
 
 ![Firefox console showing CORS error](https://mdn.mozillademos.org/files/16050/cors-error2.png)
 

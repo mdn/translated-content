@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Status/410
 ---
 {{HTTPSidebar}}
 
-Der HTTP-Statuscode **`410 Gone`** zeigt an, dass der Zugriff auf die Zielressource über den Server nicht länger möglich ist und dieser Zustand wahrscheinlich permanent sein wird.
+Der HTTP-Statuscode **`410`\*\***` Gone`\*\* zeigt an, dass der Zugriff auf die Zielressource über den Server nicht länger möglich ist und dieser Zustand wahrscheinlich permanent sein wird.
 
 Wenn Sie sich nicht sicher sind, ob es sich um einen temporären oder permanenten Zustand handeln wird, sollte ein {{HTTPStatus(404)}}-Statuscode verwendet werden.
 

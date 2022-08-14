@@ -12,7 +12,7 @@ translation_of: Web/CSS/border-style
 
 Die **`border-style`** [CSS](/de/docs/Web/CSS) Eigenschaft ist eine Kurzschreibweise zum Setzen des Linienstils für alle vier Seiten des Elementrands.
 
-> **Hinweis:** Der Standardwert von `border-style` ist `none`. Das bedeutet, falls die {{cssxref("border-width")}} und die {{cssxref("border-color")}} geändert werden, wird der Rand nicht angezeigt, solange diese Eigenschaft nicht auf etwas anderes als `none` oder `hidden` gesetzt wird.
+> **Note:** **Hinweis:** Der Standardwert von `border-style` ist `none`. Das bedeutet, falls die {{cssxref("border-width")}} und die {{cssxref("border-color")}} geändert werden, wird der Rand nicht angezeigt, solange diese Eigenschaft nicht auf etwas anderes als `none` oder `hidden` gesetzt wird.
 
 {{cssinfo}}
 

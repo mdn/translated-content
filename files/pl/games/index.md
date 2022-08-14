@@ -10,25 +10,25 @@ Granie w gry od lat należy do naszych najczęstszych aktywności komputerowych.
 
 {{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
 
-## Twórz gry przeglądarkowe.
+## Twórz gry przeglądarkowe.
 
-Witaj w strefie rozwoju gier MDN. W tej części strony możesz znaleźć informacje, które pozwolą ci poznać narzędzia i techniki wykorzystywane do produkcji gier przeglądakrowych.
+Witaj w strefie rozwoju gier MDN. W tej części strony możesz znaleźć informacje, które pozwolą ci poznać narzędzia i techniki wykorzystywane do produkcji gier przeglądakrowych.
 
-> **Note:** **Notka**: Tworzenie gier bazuje na kilku głównych technologiach internetowych takich jak HTML, CSS i JavaScript. [Learning Area](/pl/docs/Learn) jest doskonałym miejscem do poznania ich podstaw.
+> **Note:** **Notka**: Tworzenie gier bazuje na kilku głównych technologiach internetowych takich jak HTML, CSS i JavaScript. [Learning Area](/pl/docs/Learn) jest doskonałym miejscem do poznania ich podstaw.
 
-## Przenieś natywne gry do internetu.
+## Przenieś natywne gry do internetu.
 
-Jeśli jesteś programistą aplikacji natywnych (na przykład tworzysz gry w C++) i zastanawiasz się jak przenieść swoje aplikacje do internetu, powinieneś zapoznać się z narzędziem [Emscripten](http://kripken.github.io/emscripten-site/index.html) — kompilatorem LLVM do JavaScript, który który kompiluje kod bajtowy do kodu [asm.js](/pl/docs/Games/Tools/asm.js).
+Jeśli jesteś programistą aplikacji natywnych (na przykład tworzysz gry w C++) i zastanawiasz się jak przenieść swoje aplikacje do internetu, powinieneś zapoznać się z narzędziem [Emscripten](http://kripken.github.io/emscripten-site/index.html) — kompilatorem LLVM do JavaScript, który który kompiluje kod bajtowy do kodu [asm.js](/pl/docs/Games/Tools/asm.js).
 
 Na początek sprawdź:
 
-- [Wprowadzenie do Emscripten](http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html) zawierające przydatne szczegóły.
-- [Instalacja narzędzi](http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) niezbędnych do używania Emscipten.
-- [Tutorial Emscripten](http://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html), dzięki któremu dowiesz się jak zacząć.
+- [Wprowadzenie do Emscripten](http://kripken.github.io/emscripten-site/docs/introducing_emscripten/about_emscripten.html) zawierające przydatne szczegóły.
+- [Instalacja narzędzi](http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) niezbędnych do używania Emscipten.
+- [Tutorial Emscripten](http://kripken.github.io/emscripten-site/docs/getting_started/Tutorial.html), dzięki któremu dowiesz się jak zacząć.
 
 ## Przykłady
 
-Zapraszamy do zapoznania się z [przykładami](/pl/docs/Games/Examples). Więcej informacji i przykładów najdziesz na [openwebgames.com](http://www.openwebgames.com/).
+Zapraszamy do zapoznania się z [przykładami](/pl/docs/Games/Examples). Więcej informacji i przykładów najdziesz na [openwebgames.com](http://www.openwebgames.com/).
 
 [![](https://mdn.mozillademos.org/files/12790/owg-logo-dark.svg)](http://www.openwebgames.com)
 
@@ -41,9 +41,11 @@ Zapraszamy do zapoznania się z [przykładami](/pl/docs/Games/Examples). Więcej
 - [Game programming patterns](http://gameprogrammingpatterns.com/)
   - : Książka internetowa napisana przez Bob 'a Nystrom'a, w której autor omawia programistyczne wzorce projektowe w oparciu o rozwój gier internetowych.
 - [Gamedev.js Weekly](http://gamedevjsweekly.com/)
-  - : Tygodniowy biuletyn na temat tworzenia gier w HTML5, rozsyłany w każdy piątek. Zawiera najnowsze informacje, artykuły i poradniki.
+  - : Tygodniowy biuletyn na temat tworzenia gier w HTML5, rozsyłany w każdy piątek. Zawiera najnowsze informacje, artykuły i poradniki.
 - [HTML5 Game Devs Forum](http://www.html5gamedevs.com/)
   - : Forum dla programistów zajmujących się rozwojem gier internetowych.
+
+<!---->
 
 - [HTML5 Game Engine](http://html5gameengine.com/)
   - : Lista najpopularniejszych platform programistycznych do rozwoju gier w HTML5 wraz z opisami, ocenami oraz przykładami.
@@ -56,4 +58,4 @@ Zapraszamy do zapoznania się z [przykładami](/pl/docs/Games/Examples). Więcej
 - [js13kGames](http://js13kgames.com/)
   - : Zawody w tworzeniu gier HTML5 o rozmiarze do 13 KB. Na stornie wiele przykładowych gier.
 - [Mozilla Hacks blog](https://hacks.mozilla.org/category/games/)
-  - : Strefa gier na Mozilla Hacks blog zawierająca przydatne artykuły.
+  - : Strefa gier na Mozilla Hacks blog zawierająca przydatne artykuły.

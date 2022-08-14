@@ -35,7 +35,7 @@ Dieses Modul zeigt, wie wir HTML einsetzen können, um Multimediainhalte in unse
 
 Bevor Sie dieses Modul beginnen, sollten Sie über zuverlässiges HTML-Grundlagenwissen verfügen, wie es zuvor in [Einführung in HTML](/de/docs/Learn/HTML/Einf%C3%BChrung_in_HTML) behandelt wurde. Falls Sie dieses Modul noch nicht bearbeitet haben (und auch nichts ähnliches), beginnen Sie am besten damit und kommen Sie später wieder!
 
-> **Note:** **Anmerkung**:Wenn Sie an einem Computer/Tablet/Gerät arbeiten, auf welchem Sie nicht die Möglichkeit haben, eigene Dateien zu erstellen, können Sie die meisten Code-Beispiele in einem Online-Editor wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/)ausprobieren.
+> **Note:** **Anmerkung**:Wenn Sie an einem Computer/Tablet/Gerät arbeiten, auf welchem Sie nicht die Möglichkeit haben, eigene Dateien zu erstellen, können Sie die meisten Code-Beispiele in einem Online-Editor wie [JSBin](http://jsbin.com/) oder [Thimble ](https://thimble.mozilla.org/)ausprobieren.
 
 ## Einführung
 

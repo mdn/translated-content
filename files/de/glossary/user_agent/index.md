@@ -30,10 +30,10 @@ Die User-Agent-Kennung kann im Browser mit {{Glossary("JavaScript")}} über die 
 - [Browser detection using the user agent](/de/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "14.43")}}: The `User-Agent` header
 
-1. [MDN Web Docs Glossary](/de/docs/Glossary)
+1.  [MDN Web Docs Glossary](/de/docs/Glossary)
 
-    1. {{Glossary("Browser")}}
+    1.  {{Glossary("Browser")}}
 
-2. HTTP Headers
+2.  HTTP Headers
 
-    1. {{HTTPHeader("User-agent")}}
+    1.  {{HTTPHeader("User-agent")}}

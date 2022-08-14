@@ -24,7 +24,7 @@ Operator mnożenia ("`*`") ma wyższe pierwszeństwo niż operator dodawania ("`
 
     a OP b OP c
 
-Jeżeli  `OP1` and `OP2 `mają różne poziomy pierwszeństwa operatorów (patrz tabela poniżej), operator z wyższym poziomem pierwszeństwa zostanie wykonany jako pierwszy, a kolejność zapisu nie ma znaczenia. Zwróćmy uwagę na w poniższym przykładzie, że mnożenie ma wyższy poziom pierwszeństwa i tym samym zostanie wykonane jako pierwsze, pomimo tego, że to dodawanie jest zapisane w kodzie jako pierwsze.
+Jeżeli  `OP1` and `OP2 `mają różne poziomy pierwszeństwa operatorów (patrz tabela poniżej), operator z wyższym poziomem pierwszeństwa zostanie wykonany jako pierwszy, a kolejność zapisu nie ma znaczenia. Zwróćmy uwagę na w poniższym przykładzie, że mnożenie ma wyższy poziom pierwszeństwa i tym samym zostanie wykonane jako pierwsze, pomimo tego, że to dodawanie jest zapisane w kodzie jako pierwsze.
 
     console.log(3 + 10 * 2);   // wynik 23
     console.log(3 + (10 * 2)); // wynik 23 ponieważ nawiasy tutaj nie mają znaczenia
@@ -104,7 +104,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… ( <var>… </var>)</code></td>
+      <td><code>… ( <var>… </var>)</code></td>
     </tr>
     <tr>
       <td>
@@ -112,7 +112,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"
           title="JavaScript/Reference/Operators/Special_Operators/new_Operator"
           >new</a
-        > (bez listy argumentów)
+        > (bez listy argumentów)
       </td>
       <td>right-to-left</td>
       <td><code>new …</code></td>
@@ -250,7 +250,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… * …</code></td>
+      <td><code>… * …</code></td>
     </tr>
     <tr>
       <td>
@@ -261,7 +261,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… / …</code></td>
+      <td><code>… / …</code></td>
     </tr>
     <tr>
       <td>
@@ -272,7 +272,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… % …</code></td>
+      <td><code>… % …</code></td>
     </tr>
     <tr>
       <td rowspan="2">13</td>
@@ -284,7 +284,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… + …</code></td>
+      <td><code>… + …</code></td>
     </tr>
     <tr>
       <td>
@@ -295,7 +295,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… - …</code></td>
+      <td><code>… - …</code></td>
     </tr>
     <tr>
       <td rowspan="3">12</td>
@@ -307,7 +307,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… &#x3C;&#x3C; …</code></td>
+      <td><code>… &#x3C;&#x3C; …</code></td>
     </tr>
     <tr>
       <td>
@@ -318,7 +318,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… >> …</code></td>
+      <td><code>… >> …</code></td>
     </tr>
     <tr>
       <td>
@@ -329,7 +329,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… >>> …</code></td>
+      <td><code>… >>> …</code></td>
     </tr>
     <tr>
       <td rowspan="6">11</td>
@@ -341,7 +341,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… &#x3C; …</code></td>
+      <td><code>… &#x3C; …</code></td>
     </tr>
     <tr>
       <td>
@@ -352,7 +352,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… &#x3C;= …</code></td>
+      <td><code>… &#x3C;= …</code></td>
     </tr>
     <tr>
       <td>
@@ -363,7 +363,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… > …</code></td>
+      <td><code>… > …</code></td>
     </tr>
     <tr>
       <td>
@@ -374,7 +374,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… >= …</code></td>
+      <td><code>… >= …</code></td>
     </tr>
     <tr>
       <td>
@@ -385,7 +385,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… in …</code></td>
+      <td><code>… in …</code></td>
     </tr>
     <tr>
       <td>
@@ -396,7 +396,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… instanceof …</code></td>
+      <td><code>… instanceof …</code></td>
     </tr>
     <tr>
       <td rowspan="4">10</td>
@@ -408,7 +408,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… == …</code></td>
+      <td><code>… == …</code></td>
     </tr>
     <tr>
       <td>
@@ -419,7 +419,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… != …</code></td>
+      <td><code>… != …</code></td>
     </tr>
     <tr>
       <td>
@@ -430,7 +430,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… === …</code></td>
+      <td><code>… === …</code></td>
     </tr>
     <tr>
       <td>
@@ -441,7 +441,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… !== …</code></td>
+      <td><code>… !== …</code></td>
     </tr>
     <tr>
       <td>9</td>
@@ -453,7 +453,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… &#x26; …</code></td>
+      <td><code>… &#x26; …</code></td>
     </tr>
     <tr>
       <td>8</td>
@@ -465,7 +465,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… ^ …</code></td>
+      <td><code>… ^ …</code></td>
     </tr>
     <tr>
       <td>7</td>
@@ -477,7 +477,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… | …</code></td>
+      <td><code>… | …</code></td>
     </tr>
     <tr>
       <td>6</td>
@@ -489,7 +489,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… &#x26;&#x26; …</code></td>
+      <td><code>… &#x26;&#x26; …</code></td>
     </tr>
     <tr>
       <td>5</td>
@@ -501,7 +501,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… || …</code></td>
+      <td><code>… || …</code></td>
     </tr>
     <tr>
       <td>4</td>
@@ -525,40 +525,40 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td rowspan="12">right-to-left</td>
-      <td><code>… = …</code></td>
+      <td><code>… = …</code></td>
     </tr>
     <tr>
-      <td><code>… += …</code></td>
+      <td><code>… += …</code></td>
     </tr>
     <tr>
-      <td><code>… -= …</code></td>
+      <td><code>… -= …</code></td>
     </tr>
     <tr>
-      <td><code>… *= …</code></td>
+      <td><code>… *= …</code></td>
     </tr>
     <tr>
-      <td><code>… /= …</code></td>
+      <td><code>… /= …</code></td>
     </tr>
     <tr>
-      <td><code>… %= …</code></td>
+      <td><code>… %= …</code></td>
     </tr>
     <tr>
-      <td><code>… &#x3C;&#x3C;= …</code></td>
+      <td><code>… &#x3C;&#x3C;= …</code></td>
     </tr>
     <tr>
-      <td><code>… >>= …</code></td>
+      <td><code>… >>= …</code></td>
     </tr>
     <tr>
-      <td><code>… >>>= …</code></td>
+      <td><code>… >>>= …</code></td>
     </tr>
     <tr>
-      <td><code>… &#x26;= …</code></td>
+      <td><code>… &#x26;= …</code></td>
     </tr>
     <tr>
-      <td><code>… ^= …</code></td>
+      <td><code>… ^= …</code></td>
     </tr>
     <tr>
-      <td><code>… |= …</code></td>
+      <td><code>… |= …</code></td>
     </tr>
     <tr>
       <td>2</td>
@@ -570,7 +570,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>right-to-left</td>
-      <td><code>yield …</code></td>
+      <td><code>yield …</code></td>
     </tr>
     <tr>
       <td>1</td>
@@ -582,7 +582,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>n/a</td>
-      <td><code>...</code> …</td>
+      <td><code>...</code> …</td>
     </tr>
     <tr>
       <td>0</td>
@@ -594,7 +594,7 @@ Poniższa tabela uporządkowana jest od najwyższego (19) do najniższego (0) pi
         >
       </td>
       <td>left-to-right</td>
-      <td><code>… , …</code></td>
+      <td><code>… , …</code></td>
     </tr>
   </tbody>
 </table>

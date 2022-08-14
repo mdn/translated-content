@@ -28,7 +28,7 @@ Metoda **removeChild** usuwa węzeł potomny elementu.
 ### Przykład
 
     // <div id="nadrzedny" align="center">
-    //   <div id="zagniezdzony"></div>
+    //   <div id="zagniezdzony"></div>
     // </div>
     d = document.getElementById("nadrzedny");
     d_zagniezdzony = document.getElementById("zagniezdzony");

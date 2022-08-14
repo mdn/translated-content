@@ -19,8 +19,8 @@ Jeder mögliche Brechpunkt, das sind alle Begrenzungen des Elements, ist unter d
 
 Um zu ermitteln ob ein Umbruch erfolgen muss, werden folgende Regeln angwendet:
 
-1. Wenn einer der drei Betroffenen Werte ein _forced break value_ ist (das sind `always`, `left`, `right`, `page`, `column` oder `region`), hat er Vorrang. Wenn mehrere der betroffenen Werte solch ein Umbruch sind, wird der Wert des Elements, welches als letztes im Flow auftritt, verwendet (der {{cssxref("break-before")}} hat Vorrang gegenüber dem `break-after` Wert, welches wiederum Vorrang gegebüber dem {{cssxref("break-inside")}} Wert hat).
-2. Wenn einer der drei betroffenen Werte ein _avoid break value_ ist (das sind `avoid`, `avoid-page`, `avoid-region` oder `avoid-column`), wird kein Umbruch gemacht.
+1.  Wenn einer der drei Betroffenen Werte ein _forced break value_ ist (das sind `always`, `left`, `right`, `page`, `column` oder `region`), hat er Vorrang. Wenn mehrere der betroffenen Werte solch ein Umbruch sind, wird der Wert des Elements, welches als letztes im Flow auftritt, verwendet (der {{cssxref("break-before")}} hat Vorrang gegenüber dem `break-after` Wert, welches wiederum Vorrang gegebüber dem {{cssxref("break-inside")}} Wert hat).
+2.  Wenn einer der drei betroffenen Werte ein _avoid break value_ ist (das sind `avoid`, `avoid-page`, `avoid-region` oder `avoid-column`), wird kein Umbruch gemacht.
 
 Wenn einmal ein gezwungener Umbruch gemacht worden ist, werden bei Bedarf weiche Umbrüche hinzugefügt. Aber nicht auf Elementbegrenzungen, welche zu einem entsprechenden avoid Wert führen.
 
@@ -60,17 +60,17 @@ break-after: avoid-region;
   - : Erzwingt immer einen Seitenumbruch direkt nach der hauptsächlichen Box.
 - `column`
   - : Erzwingt immer einen Spaltenumbruch direkt nach der hauptsächlichen Box.
-- `region`{{experimental_inline}}
+- `region `{{experimental_inline}}
   - : Erzwing immer einen Abschnittsumbruch direkt nach der hauptsächlichen Box.
 - `recto` {{experimental_inline}}
   - : Erzwingt einen oder zwei Seitenumbrüche direkt nach der hauptsächlichen Box, damit die nächste Seite als eine recto Seite (eine rechte Seite in einer links-nach-rechts Ausdehnung oder eine linke Seite in einer rechts-nach-links Ausdehnung) formatiert wird.
-- `verso`{{experimental_inline}}
+- `verso `{{experimental_inline}}
   - : Erzwingt einen oder zwei Seitenumbrüche direkt nach der hauptsächlichen Box, damit die nächste Seite als eine verso Seite (eine linke Seite in einer links-nach-rechts Ausdehnung oder eine rechte Seite in einer rechts-nach-links Ausdehnung) formatiert wird.
 - `avoid-page`
   - : Verhindert jeden Seitenumbruch direkt nach der hauptsächlichen Box.
 - `avoid-column`
   - : Verhindert jeden Spaltenumbruch direkt nach der hauptsächlichen Box.
-- `avoid-region`{{experimental_inline}}
+- `avoid-region `{{experimental_inline}}
   - : Verhindert jeden Anschnittsumbruch direkt nach der hauptsächlichen Box.
 
 ### Formale Syntax

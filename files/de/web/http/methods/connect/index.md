@@ -9,7 +9,7 @@ Die **Methode HTTP `CONNECT`** startet die bidirektionale Kommunikation mit der 
 
 Beispielsweise kann die CONNECT-Methode verwendet werden, um auf Websites zuzugreifen, die {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) verwenden. Der Client fordert einen HTTP-Proxy-Server auf, die TCP-Verbindung zum gewünschten Ziel zu tunneln. Der Server fährt dann fort, die Verbindung im Namen des Clients herzustellen. Sobald die Verbindung vom Server hergestellt wurde, fährt der Proxy-Server mit dem Proxy des TCP-Streams zum und vom Client fort.
 
-`CONNECT`ist eine Hop-by-Hop-Methode.
+`CONNECT `ist eine Hop-by-Hop-Methode.
 
 | Request hat einen Inhalt                               | Nein |
 | ------------------------------------------------------ | ---- |

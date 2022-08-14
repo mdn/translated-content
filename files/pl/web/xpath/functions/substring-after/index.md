@@ -22,6 +22,8 @@ Funkcja `substring-after` zwraca łańcuch znaków będący resztą podanego ła
 - _`stóg siana`_
   - : Oceniany łańcuch znaków. Zostanie zwrócona część tego łańcucha.
 
+<!---->
+
 - _`igła`_
   - : Szukany podciąg. Zostanie zwrócone wszystko po pierwszym wystąpieniu _`igła`_ w łańcuchu _`stóg siana`_.
 

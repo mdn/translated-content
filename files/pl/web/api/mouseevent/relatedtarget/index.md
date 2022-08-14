@@ -25,7 +25,7 @@ Wskazuje na drugi cel zdarzenia.
 ### Przykład
 
     var rel = event.relatedTarget;
-    // dump("LEAVING " + (rel ? rel.localName : "null") + "\n");
+    // dump("LEAVING " + (rel ? rel.localName : "null") + "\n");
     // relatedTarget is null when the titletip is first shown:
     // a mouseout event fires because the mouse is exiting
     // the main window and entering the titletip "window".
@@ -48,7 +48,7 @@ Wskazuje na drugi cel zdarzenia.
     }
     // if the entered node is not a descendant of ours, hide
     // the tooltip
-    if (rel != this && this._isMouseOver) {
+    if (rel != this && this._isMouseOver) {
       this.hidePopup();
     }
 

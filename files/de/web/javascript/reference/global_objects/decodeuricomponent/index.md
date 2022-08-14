@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
 {{jsSidebar("Objects")}}
 
-Die Funktion `decodeURIComponent() dekodiert eine URI-Komponente die zuvor durch`{{jsxref("encodeURIComponent")}} (oder einer ähnlichen Funktion) kodiert wurden.
+Die Funktion `decodeURIComponent() dekodiert eine URI-Komponente die zuvor durch `{{jsxref("encodeURIComponent")}} (oder einer ähnlichen Funktion) kodiert wurden.
 
 ## Syntax
 

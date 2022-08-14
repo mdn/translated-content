@@ -44,7 +44,7 @@ Der Kopf (engl.: head) eines HTML Dokumentes, ist der obere Teil innerhalb des \
 
 ## Was ist der HTML-Kopf?
 
-Lassen Sie uns nochmal einen Blick auf das einfache HTML Dokument werfen,[mit welchem wir uns im vorherigen Artikel beschäftigt haben](/de/Learn/HTML/Introduction_to_HTML/Lerne_HTML_kennen):
+Lassen Sie uns nochmal einen Blick auf das einfache HTML Dokument werfen,[ mit welchem wir uns im vorherigen Artikel beschäftigt haben](/de/Learn/HTML/Introduction_to_HTML/Lerne_HTML_kennen):
 
 ```html
 <!DOCTYPE html>
@@ -79,16 +79,16 @@ Wir haben das {{htmlelement("title")}}-Element schon in Aktion gesehen - es kann
 
 ### Aktives Lernen: Beispiel anschauen
 
-1. Als erstes möchten wir das Sie zu unserem GitHub Repositorium gehen und eine Kopie von [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) herunterladen. Um das zu tun, können Sie entweder
+1.  Als erstes möchten wir das Sie zu unserem GitHub Repositorium gehen und eine Kopie von [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) herunterladen. Um das zu tun, können Sie entweder
 
-    1. Den Code direkt von der Seite kopieren und diesen in eine neue Textdatei in Ihrem Code-Editor einfügen. Vergessen Sie nicht die Datei zu speichern.
-    2. Drücken Sie auf den "Raw" Button auf der Seite, welcher den Code in einem neuen Browserfenster anzeigen lässt. Wählen Sie nun in Ihrem Browsermenu _Datei > Speichere Seite unter..._ und speichern die Datei auf Ihrem Computer.
+    1.  Den Code direkt von der Seite kopieren und diesen in eine neue Textdatei in Ihrem Code-Editor einfügen. Vergessen Sie nicht die Datei zu speichern.
+    2.  Drücken Sie auf den "Raw" Button auf der Seite, welcher den Code in einem neuen Browserfenster anzeigen lässt. Wählen Sie nun in Ihrem Browsermenu _Datei > Speichere Seite unter..._ und speichern die Datei auf Ihrem Computer.
 
-2. Öffnen Sie diese Datei in Ihrem Browser. Sie sollten folgendes sehen:
+2.  Öffnen Sie diese Datei in Ihrem Browser. Sie sollten folgendes sehen:
 
     ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Es sollte hier klar werden, wo das `<h1>`-Element erscheint und wo das `<html>`-Element zu sehen ist!
 
-3. Sie sollten auch versuchen, den Code in Ihrem Code-Editor zu öffnen. Ändern Sie den Inhalt der Elemente, speichern Sie die Datei und aktualisieren Sie die Seite im Browser. Probieren Sie ein bisschen herum.
+3.  Sie sollten auch versuchen, den Code in Ihrem Code-Editor zu öffnen. Ändern Sie den Inhalt der Elemente, speichern Sie die Datei und aktualisieren Sie die Seite im Browser. Probieren Sie ein bisschen herum.
 
 Der Inhalt des `<title>`-Elements wird auch auf andere Weise genutzt. Wenn Sie zum Beispiel die Seite zu Ihren Lesezeichen hinzufügen (_Lesezeichen > Lesezeichen hinzufügen_ oder die Schaltfläche mit dem Stern in der Adresszeile in Firefox), werden Sie sehen, dass der Inhalt des `<title>`-Elements als Name für das Lesezeichen vorgeschlagen wird.
 
@@ -148,14 +148,14 @@ Eine Beschreibung welche zum Inhalt der Seite passende Stichwörter enthält, is
 
 Die Beschreibung wird von Suchmaschinen auch auf der Ergebnisseite genutzt. Schauen wir uns das mal genauer an - in einer Übung.
 
-1. Gehen Sie zu der[Startseite von dem Mozilla Developer Network](https://developer.mozilla.org/).
-2. Schauen Sie sich den Quellcode der Webseite an (Rechts/
+1.  Gehen Sie zu der[ Startseite von dem Mozilla Developer Network](https://developer.mozilla.org/).
+2.  Schauen Sie sich den Quellcode der Webseite an (Rechts/
 
     <kbd>Ctrl</kbd>
 
     \+ klick auf die Seite, wählen Sie _Quellcode anzeigen_ von dem Kontextmenü oder schreiben Sie `view-source:` vor die Webadresse in der Adresszeile).
 
-3. Finden Sie das description `<meta>`-Tag. Es sollte so aussehen:
+3.  Finden Sie das description `<meta>`-Tag. Es sollte so aussehen:
 
     ```html
     <meta name="description" content="The Mozilla Developer Network (MDN) provides
@@ -163,11 +163,11 @@ Die Beschreibung wird von Suchmaschinen auch auf der Ergebnisseite genutzt. Scha
     Web sites and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
     ```
 
-4. Suchen Sie nun nach "Mozilla Developer Network" in einer beliebigen Suchmaschine (Wir haben Yahoo benutzt.) Sie werden bemerken das die Inhalte vom description `<meta>`-Tag und vom `<title>` hier erscheinen - es ist also sehr sinnvoll, diese beiden zu ntuzen! ![A Yahoo search result for "Mozilla Developer Network"](https://mdn.mozillademos.org/files/12347/search-result.png)
+4.  Suchen Sie nun nach "Mozilla Developer Network" in einer beliebigen Suchmaschine (Wir haben Yahoo benutzt.) Sie werden bemerken das die Inhalte vom description `<meta>`-Tag und vom `<title>` hier erscheinen - es ist also sehr sinnvoll, diese beiden zu ntuzen! ![A Yahoo search result for "Mozilla Developer Network"](https://mdn.mozillademos.org/files/12347/search-result.png)
 
-> **Hinweis:** Wenn Sie mit Google suchen, werden Sie einige Unterseiten von MDN sehen, direkt unter dem Link zur Hauptseite von MDN. Dies sind sogenannte Sitelinks und Sie können mit den [Google's webmaster tools](http://www.google.com/webmasters/tools/) bearbeitet werden.
+> **Note:** **Hinweis**: Wenn Sie mit Google suchen, werden Sie einige Unterseiten von MDN sehen, direkt unter dem Link zur Hauptseite von MDN. Dies sind sogenannte Sitelinks und Sie können mit den [Google's webmaster tools](http://www.google.com/webmasters/tools/) bearbeitet werden.
 
-> **Hinweis:** Viele `<meta>`-Elemente sind nicht mehr so wichtig, wie sie einmal waren. Ein Beispiel ist das keyword `<meta>`-Element (`<meta name="keywords" content="fill, in, your, keywords, here">`). Dieses sollte Schlagwörter für Suchmaschinen bereithalten , damit diese anhand der Schlagwörter Suchergebnisse zusammen stellen können. Mittlerweile wird dieses `<meta>`-Tag von vielen Suchmaschinen ignoriert, weil Sprammer die Stichwortliste mit hunderten von Stichwörtern gefüllt haben, womit die Suchergebnisse manipuliert werden konnten.
+> **Note:** Hinweis: Viele `<meta>`-Elemente sind nicht mehr so wichtig, wie sie einmal waren. Ein Beispiel ist das keyword `<meta>`-Element (`<meta name="keywords" content="fill, in, your, keywords, here">`). Dieses sollte Schlagwörter für Suchmaschinen bereithalten , damit diese anhand der Schlagwörter Suchergebnisse zusammen stellen können. Mittlerweile wird dieses `<meta>`-Tag von vielen Suchmaschinen ignoriert, weil Sprammer die Stichwortliste mit hunderten von Stichwörtern gefüllt haben, womit die Suchergebnisse manipuliert werden konnten.
 
 ### Andere Typen von Metadaten
 
@@ -199,8 +199,8 @@ Das Favicon, welches es schon seit vielen Jahren gibt, ist das erste Icon seiner
 
 Ein Favicon fügen Sie Ihrer Webseite wie folgt hinzu:
 
-1. Speichern Sie das Favicon mit der Endung `.ico` in dem selben Ordner, in dem auch Ihre `index.html` Datei ist. Die meisten Browser würden auch `.gif` und `.png` Format akzeptieren, mit dem ICO Format gehen Sie aber sicher, das auch ältere Browser das Favicon anzeigen.
-2. Fügen Sie die folgende Zeile in den `<head>`-Bereich Ihrer HTML-Datei ein, um eine Referenz zu dem Favicon zu erzeugen:
+1.  Speichern Sie das Favicon mit der Endung `.ico` in dem selben Ordner, in dem auch Ihre `index.html` Datei ist. Die meisten Browser würden auch `.gif` und `.png` Format akzeptieren, mit dem ICO Format gehen Sie aber sicher, das auch ältere Browser das Favicon anzeigen.
+2.  Fügen Sie die folgende Zeile in den `<head>`-Bereich Ihrer HTML-Datei ein, um eine Referenz zu dem Favicon zu erzeugen:
 
     ```html
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -249,9 +249,9 @@ Fast alle modernen Webseiten benutzen {{glossary("CSS")}}, um diese gut aussehen
 
 ### Aktives Lernen: Binden Sie CSS und JavaScript in eine Seite ein
 
-1. Holen Sie sich jeweils eine Kopie von unseren [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) und [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css)-Dateien und speichern diese lokal auf ihrem Computer in demselben Ordner ab. Gehen Sie sicher das die Dateien mit den richtigen Namen und Dateiendungen gespeichert sind.
-2. Öffnen Sie die HTML-Datei sowohl in Ihrem Browser, als auch in einem Texteditor.
-3. Fügen Sie nun ein {{htmlelement("link")}}-Element hinzu, welches auf die CSS-Datei verweist und ein {{htmlelement("script")}}-Element, welches die JavaScript-Datei einbindet, wie Sie es in diesem Artikel gelernt haben.
+1.  Holen Sie sich jeweils eine Kopie von unseren [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) und [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css)-Dateien und speichern diese lokal auf ihrem Computer in demselben Ordner ab. Gehen Sie sicher das die Dateien mit den richtigen Namen und Dateiendungen gespeichert sind.
+2.  Öffnen Sie die HTML-Datei sowohl in Ihrem Browser, als auch in einem Texteditor.
+3.  Fügen Sie nun ein {{htmlelement("link")}}-Element hinzu, welches auf die CSS-Datei verweist und ein {{htmlelement("script")}}-Element, welches die JavaScript-Datei einbindet, wie Sie es in diesem Artikel gelernt haben.
 
 Wenn Sie nun das HTML-Dokument speichern und im Browser neu laden, dann sollten Sie folgende Änderungen an der Webseite sehen:
 
@@ -260,7 +260,7 @@ Wenn Sie nun das HTML-Dokument speichern und im Browser neu laden, dann sollten 
 - Der JavaScript-Code hat der Seite eine leere Liste hinzugefügt. Wenn Sie nun irgendwo auf die Liste klicken, dann öffnet sich eine Dialog-Box, in welcher Sie Text eingeben können, der nach drücken auf "OK" als neuer Listenpunkt erscheint. Wenn Sie auf einen existierenden Listeneintrag klicken können Sie, über die Dialog-Box, diesen Eintrag ändern.
 - Die eingebundene CSS-Datei hat dafür gesorgt, dass der Hintergrund grün ist und der Text größer ist. Es wurde auch der Inhalt gestylet, welcher durch den JavaScript-Code der Webseite hinzugefügt wurde, nämlich der rote Hintergrund und ein schwarzer Rahmen um die Liste herum.
 
-> **Hinweis:** Falls Sie an dieser Übung hängen bleiben und die externen Dateien nicht korrekt eingebunden bekommen, dann schauen Sie sich unsere [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) Beispiel Webseite an.
+> **Note:** **Hinweis:** Falls Sie an dieser Übung hängen bleiben und die externen Dateien nicht korrekt eingebunden bekommen, dann schauen Sie sich unsere [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) Beispiel Webseite an.
 
 ## Die genutzte Sprache der Webseite angeben
 

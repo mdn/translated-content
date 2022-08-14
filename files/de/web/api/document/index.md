@@ -30,7 +30,7 @@ In der Zukunft, alle diese Interfaces werden zusammengefasst zum `Document` Inte
 
 ## Eigenschaften
 
-> **Hinweis:** Das `Document` Interface erbt auch vom {{domxref("Node")}} und {{domxref("EventTarget")}} Interface.
+> **Note:** **Hinweis:** Das `Document` Interface erbt auch vom {{domxref("Node")}} und {{domxref("EventTarget")}} Interface.
 
 - {{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}
   - : Provides access to all elements with an id. This is a legacy non-standard interface, you should use the {{domxref("Document.getElementById()")}} method instead.
@@ -159,7 +159,7 @@ Das `Document` Interface für HTML Dokumente erbt vom {{domxref("HTMLDocument")}
 
 ## Methoden
 
-> **Hinweis:** Das `Document` Interface erbt auch vom {{domxref("Node")}} und {{domxref("EventTarget")}} Interface.
+> **Note:** **Hinweis:** Das `Document` Interface erbt auch vom {{domxref("Node")}} und {{domxref("EventTarget")}} Interface.
 
 - {{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}
   - : Adopt node from an external document.

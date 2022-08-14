@@ -32,7 +32,7 @@ Die folgende Tabelle fasst die möglichen Rückgabewerte von `typeof` zusammen. 
 | Typ                                                    | Rückgabewert               |
 | ------------------------------------------------------ | -------------------------- |
 | Undefined                                              | `"undefined"`              |
-| Null                                                   | `"object"`(see below)     |
+| Null                                                   | `"object" `(see below)     |
 | Boole'scher Wert                                       | `"boolean"`                |
 | Zahl                                                   | `"number"`                 |
 | Zeichenkette                                           | `"string"`                 |

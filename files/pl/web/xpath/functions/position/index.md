@@ -26,10 +26,14 @@ Liczbę całkowitą równą pozycji kontekstu z kontekstu oceny wyrażenia.
 - Należy zauważyć, że pozycja węzła w kontekście nie zaczyna się od zera. Pierwszy węzeł ma pozycję 1.
 - Kontekst jest określony przez resztę ścieżki.
 
+<!---->
+
     <xsl:template match="//a[position() = 5]">
      <!-- ten szablon odpowiada piątemu elementowi 'a' gdziekolwiek
           w dokumencie. -->
     </xsl:template>
+
+<!---->
 
     <xsl:template match="//div[@class='foo']/bar[position() = 1]">
      <!-- ten szablon odpowiada pierwszemu elementowi 'bar' będącemu

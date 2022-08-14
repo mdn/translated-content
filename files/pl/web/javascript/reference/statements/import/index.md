@@ -38,6 +38,8 @@ Tej cechy nie ma w 3 edycji ECMA 262.
 - `objectName`
   - : Nazwa obiektu, który przyjmie zaimportowane nazwy.
 
+<!---->
+
 - `nameN`
   - : Własność, funkcja lub obiekt do zaimportowania.
 

@@ -15,9 +15,9 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z
 
 Wenn die [CSS](/de/docs/Web/CSS/)-Eigenschaft {{cssxref("z-index")}} bei keinem Element angegeben ist, werden die Elemente in der folgenden Reihenfolge gestapelt (von unten nach oben):
 
-1. Der Hintergrund und die Ränder des Wurzelelements
-2. Nachfolgende [nicht positionierte](/de/docs/Web/CSS/position) Blöcke, in der Reihenfolge ihres Erscheinens im HTML
-3. Nachfolgende [positionierte](/de/docs/Web/CSS/position) Elemente, in der Reihenfolge ihres Erscheinens in der HTML-Datei
+1.  Der Hintergrund und die Ränder des Wurzelelements
+2.  Nachfolgende [nicht positionierte](/de/docs/Web/CSS/position) Blöcke, in der Reihenfolge ihres Erscheinens im HTML
+3.  Nachfolgende [positionierte](/de/docs/Web/CSS/position) Elemente, in der Reihenfolge ihres Erscheinens in der HTML-Datei
 
 Beachten Sie, dass die CSS-Eigenschaft {{cssxref("order")}}, wenn sie das Rendering von der "Reihenfolge des Erscheinens im HTML" innerhalb von {{cssxref("flex")}}-Containern ändert, auch die Reihenfolge für den Stapelkontext beeinflusst.
 

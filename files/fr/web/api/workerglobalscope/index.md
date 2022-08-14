@@ -49,6 +49,8 @@ Cette interface hérite des gestionnaires d'événements de l'interface {{domxre
 - {{domxref("WorkerGlobalScope.onlanguagechange")}}
   - : Un {{domxref ("EventHandler")}} déclenché sur l'objet de portée global / worker lorsque les langues préférées de l'utilisateur changent.
 
+<!---->
+
 - {{domxref("WorkerGlobalScope.onclose")}} {{Non-standard_inline}}
   - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement {{event ("close")}} est déclenché.
 

@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons
 ---
 {{AddonSidebar}}**\_**Ändern und Erweitern von Mozilla-Anwendungen**\_**
 
-Add-ons fügen neue Funktionalitäten zu [Gecko](/de/docs/Mozilla/Gecko)-basierten Anwendungen wie zum Beispiel Firefox, SeaMonkey und Thunderbird hinzu. Es gibt zwei Arten von Add-ons: [Erweiterungen](#Extensions) fügen neue Funktionen zur Anwendung hinzu, während [Themes](#Themes) nur die Oberfläche verändern.
+Add-ons fügen neue Funktionalitäten zu [Gecko](/de/docs/Mozilla/Gecko)-basierten Anwendungen wie zum Beispiel Firefox, SeaMonkey und Thunderbird hinzu.\*\* \*\*Es gibt zwei Arten von Add-ons: [Erweiterungen](#Extensions) fügen neue Funktionen zur Anwendung hinzu, während [Themes](#Themes) nur die Oberfläche verändern.
 
 Für Erweiterungen und Themes betreibt Mozilla ein Repository auf [addons.mozilla.org](https://addons.mozilla.org), auch bekannt als AMO. Wenn Sie [Add-ons bei AMO einreichen](/de/docs/Mozilla/Add-ons/Submitting_an_add-on_to_AMO) werden diese überprüft und erst nach bestandener Prüfung veröffentlicht. Allerdings ist es nicht zwingend erforderlich, dass Add-ons nur über AMO veröffentlicht werden, aber durch die Überprüfung gewinnen Anwender an Vertrauen und im Gegenzug können Sie von AMO als einer zentralen Plattform, auf der viele hilfreiche Add-ons zu finden sind, nur profitieren.
 
@@ -71,7 +71,7 @@ Themen sind Add-ons, die Benutzeroberfläche der Anwendung anpassen. Es gibt zwe
 
 [Leichte Themen](https://addons.mozilla.org/de/developers/docs/themes) sind viel einfacher zu implementieren als komplette Themen, aber sie bieten sehr begrenzte Anpassungs möglichkeiten .
 
-Mit [kompletten Themes](/de/docs/Themes)machen Sie viel tieferen Änderungen an der Benutzeroberfläche der Anwendung. Die Dokumentation für komplette Themes ist veraltet, aber ist hier als eine mögliche Grundlage für aktualisierte Dokumentation verbunden.
+Mit [kompletten Themes ](/de/docs/Themes)machen Sie viel tieferen Änderungen an der Benutzeroberfläche der Anwendung. Die Dokumentation für komplette Themes ist veraltet, aber ist hier als eine mögliche Grundlage für aktualisierte Dokumentation verbunden.
 
 ## Andere Arten von Add-ons
 
@@ -79,21 +79,21 @@ Mit [kompletten Themes](/de/docs/Themes)machen Sie viel tieferen Änderungen an 
 
 ## Inhalt
 
-1. [Overlay Erweiterung](/de/Add-ons/Overlay_Extensions "Overlay extensions")
-2. [Restartless Erweiterung](/de/Add-ons/Bootstrapped_extensions "Restartless extensions")
-3. [Add-on SDK](/de/Add-ons/SDK)
-4. Erweiterung Bewährte
+1.  [Overlay Erweiterung](/de/Add-ons/Overlay_Extensions "Overlay extensions")
+2.  [Restartless Erweiterung](/de/Add-ons/Bootstrapped_extensions "Restartless extensions")
+3.  [Add-on SDK](/de/Add-ons/SDK)
+4.  Erweiterung Bewährte
 
-    1. [Leistung](/de/Add-ons/Performance_best_practices_in_extensions "Performance")
-    2. [Sicherheit](/de/Add-ons/Security_best_practices_in_extensions "Security")
-    3. [Etikette](/de/Add-ons/Extension_etiquette "Etiquette")
+    1.  [Leistung](/de/Add-ons/Performance_best_practices_in_extensions "Performance")
+    2.  [Sicherheit](/de/Add-ons/Security_best_practices_in_extensions "Security")
+    3.  [Etikette](/de/Add-ons/Extension_etiquette "Etiquette")
 
-5. Themes
+5.  Themes
 
-    1. [Leichte Themes](https://addons.mozilla.org/de/developers/docs/themes "Lightweight themes")
-    2. [Komplete Themes](/de/docs/Themes "Complete themes")
+    1.  [Leichte Themes](https://addons.mozilla.org/de/developers/docs/themes "Lightweight themes")
+    2.  [Komplete Themes](/de/docs/Themes "Complete themes")
 
-6. Veröffentlichung Add-ons
+6.  Veröffentlichung Add-ons
 
-    1. [addons.mozilla.org](https://addons.mozilla.org/ "addons.mozilla.org")
-    2. [Add-on Richtlinien](/de/docs/Mozilla/Add-ons/Add-on_guidelines)
+    1.  [addons.mozilla.org](https://addons.mozilla.org/ "addons.mozilla.org")
+    2.  [Add-on Richtlinien](/de/docs/Mozilla/Add-ons/Add-on_guidelines)

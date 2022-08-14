@@ -30,7 +30,7 @@ Nachdem Sie etwas über die Theorie von JavaScript gelernt haben und was Sie dam
 
 Es ist nicht nötig, dass Sie den gesamten Code sofort im Detail verstehen - wir wollen Ihnen nur grob die Konzepte vorab vorstellen und Ihnen eine Vorstellung davon vermitteln, wie JavaScript (und andere Programmiersprachen) funktionieren. In den folgenden Artikeln werden wir alle diese Funktionen noch einmal im Detail besprechen!
 
-> **Hinweis:** Viele der Befehle und Konstrukte, die Sie in JavaScript sehen werden, sind die gleichen wie in anderen Programmiersprachen - Funktionen, Schleifen, etc. Die Syntax sieht anders aus, aber die Konzepte sind immer noch weitgehend die gleichen.
+> **Note:** Hinweis: Viele der Befehle und Konstrukte, die Sie in JavaScript sehen werden, sind die gleichen wie in anderen Programmiersprachen - Funktionen, Schleifen, etc. Die Syntax sieht anders aus, aber die Konzepte sind immer noch weitgehend die gleichen.
 
 ## Denken wie ein Programmierer
 
@@ -163,30 +163,30 @@ Stellen wir uns vor, Ihr Chef hat Ihnen den folgenden Auftrag für die Erstellun
 
 Wenn wir uns diesen Anweisungen ansehen, können wir zunächst damit beginnen, ihn in einfache, umsetzbare Aufgaben aufzuteilen, und zwar aus der Sicht eines Programmierers:
 
-1. Generiere eine zufällige Zahl zwischen 1 und 100.
-2. Speichere die Anzahl der getätigten Rateversuche, setze den Wert anfangs auf 1.
-3. Ermögliche dem Spieler, einen Tipp abzugeben.
-4. Sobald ein Tip abgegeben wurde, speichere sie damit der Spieler seine vorherigen Eingaben sehen kann.
-5. Als Nächstes überprüfe, ob es sich um die richtige Zahl handelt.
-6. Wenn sie richtig ist:
+1.  Generiere eine zufällige Zahl zwischen 1 und 100.
+2.  Speichere die Anzahl der getätigten Rateversuche, setze den Wert anfangs auf 1.
+3.  Ermögliche dem Spieler, einen Tipp abzugeben.
+4.  Sobald ein Tip abgegeben wurde, speichere sie damit der Spieler seine vorherigen Eingaben sehen kann.
+5.  Als Nächstes überprüfe, ob es sich um die richtige Zahl handelt.
+6.  Wenn sie richtig ist:
 
-    1. Zeige Glückwunsch Nachricht.
-    2. Verhindere weiter Eingaben, da das Spiel zu Ende ist.
-    3. Biete eine Möglichkeit, das Spiel neu zu starten.
+    1.  Zeige Glückwunsch Nachricht.
+    2.  Verhindere weiter Eingaben, da das Spiel zu Ende ist.
+    3.  Biete eine Möglichkeit, das Spiel neu zu starten.
 
-7. Wenn sie falsch ist und noch Versuche übrig sind:
+7.  Wenn sie falsch ist und noch Versuche übrig sind:
 
-    1. Dem Spieler mitteilen, dass die Zahl noch nicht erraten ist.
-    2. Die Eingabe einer weiteren Zahl ermöglichen.
-    3. Die Anzahl der Rateversuche um 1 erhöhen.
+    1.  Dem Spieler mitteilen, dass die Zahl noch nicht erraten ist.
+    2.  Die Eingabe einer weiteren Zahl ermöglichen.
+    3.  Die Anzahl der Rateversuche um 1 erhöhen.
 
-8. Wenn die Zahl falsch ist und keine Versuche mehr übrig sind:
+8.  Wenn die Zahl falsch ist und keine Versuche mehr übrig sind:
 
-    1. Dem Spieler mitteilen, dass das Spiel zu Ende ist.
-    2. Keine weiteren Eingaben mehr zulassen.
-    3. Ein Steuerelement zum Neustart des Spiels anzeigen.
+    1.  Dem Spieler mitteilen, dass das Spiel zu Ende ist.
+    2.  Keine weiteren Eingaben mehr zulassen.
+    3.  Ein Steuerelement zum Neustart des Spiels anzeigen.
 
-9. Wenn das Spiel neu startet, sicherstellen dass Logik und Benutzeroberfläche zurückgesetzt werden. Danach zurück zum 1. Schritt.
+9.  Wenn das Spiel neu startet, sicherstellen dass Logik und Benutzeroberfläche zurückgesetzt werden. Danach zurück zum 1. Schritt.
 
 Lassen Sie uns nun fortfahren und schauen, wie wir diese Punkte in Code umwandeln können, das Beispiel aufbauen und die JavaScript-Funktionen während der Arbeit erforschen.
 
@@ -376,7 +376,7 @@ This is a lot of code — phew! Let's go through each section and explain what i
   guessCount === 1
   ```
 
-  If it is, we make the guesses paragraph's text content equal to "`Previous guesses:`". If not, we don't.
+  If it is, we make the guesses paragraph's text content equal to "`Previous guesses: `". If not, we don't.
 
 - Line 6 appends the current `userGuess` value onto the end of the `guesses` paragraph, plus a blank space so there will be a space between each guess shown.
 - The next block (lines 8–24 above) does a few checks:
@@ -469,9 +469,9 @@ for (let i = 1 ; i < 21 ; i++) { console.log(i) }
 
 What happened? The numbers `1` to `20` were printed out in your console. This is because of the loop. A `for` loop takes three input values (arguments):
 
-1. **A starting value**: In this case we are starting a count at 1, but this could be any number you like. You could replace the letter `i` with any name you like too, but `i` is used as a convention because it's short and easy to remember.
-2. **An exit condition**: Here we have specified `i < 21` — the loop will keep going until `i` is no longer less than 21. When `i` reaches 21, the loop will no longer run.
-3. **An incrementor**: We have specified `i++`, which means "add 1 to i". The loop will run once for every value of `i`, until `i` reaches a value of 21 (as discussed above). In this case, we are simply printing the value of `i` out to the console on every iteration using {{domxref("Console.log", "console.log()")}}.
+1.  **A starting value**: In this case we are starting a count at 1, but this could be any number you like. You could replace the letter `i` with any name you like too, but `i` is used as a convention because it's short and easy to remember.
+2.  **An exit condition**: Here we have specified `i < 21` — the loop will keep going until `i` is no longer less than 21. When `i` reaches 21, the loop will no longer run.
+3.  **An incrementor**: We have specified `i++`, which means "add 1 to i". The loop will run once for every value of `i`, until `i` reaches a value of 21 (as discussed above). In this case, we are simply printing the value of `i` out to the console on every iteration using {{domxref("Console.log", "console.log()")}}.
 
 Now let's look at the loop in our number guessing game — the following can be found inside the `resetGame()` function:
 
@@ -516,10 +516,10 @@ Variables that don't contain references to form elements won't have `focus()` av
 
 Let's play with some browser objects a bit.
 
-1. First of all, open up your program in a browser.
-2. Next, open your [browser developer tools](/de/docs/Learn/Common_questions/What_are_browser_developer_tools), and make sure the JavaScript console tab is open.
-3. Type in `guessField` and the console will show you that the variable contains an {{htmlelement("input")}} element. You'll also notice that the console autocompletes the names of objects that exist inside the execution environment, including your variables!
-4. Now type in the following:
+1.  First of all, open up your program in a browser.
+2.  Next, open your [browser developer tools](/de/docs/Learn/Common_questions/What_are_browser_developer_tools), and make sure the JavaScript console tab is open.
+3.  Type in `guessField` and the console will show you that the variable contains an {{htmlelement("input")}} element. You'll also notice that the console autocompletes the names of objects that exist inside the execution environment, including your variables!
+4.  Now type in the following:
 
     ```js
     guessField.value = 'Hello';
@@ -527,8 +527,8 @@ Let's play with some browser objects a bit.
 
     The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
 
-5. Now try typing in `guesses` and pressing return. The console will show you that the variable contains a {{htmlelement("p")}} element.
-6. Now try entering the following line:
+5.  Now try typing in `guesses` and pressing return. The console will show you that the variable contains a {{htmlelement("p")}} element.
+6.  Now try entering the following line:
 
     ```js
     guesses.value
@@ -536,13 +536,13 @@ Let's play with some browser objects a bit.
 
     The browser will return `undefined`, because paragraphs don't have the `value` property.
 
-7. To change the text inside a paragraph, you need the {{domxref("Node.textContent", "textContent")}} property instead. Try this:
+7.  To change the text inside a paragraph, you need the {{domxref("Node.textContent", "textContent")}} property instead. Try this:
 
     ```js
     guesses.textContent = 'Where is my paragraph?';
     ```
 
-8. Now for some fun stuff. Try entering the below lines, one by one:
+8.  Now for some fun stuff. Try entering the below lines, one by one:
 
     ```js
     guesses.style.backgroundColor = 'yellow';

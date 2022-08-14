@@ -51,9 +51,9 @@ Falls diese Liste so wie sie ist in ein Dokument eingebunden würde, gäbe es ke
 
 Um dies zu vermeiden und eine Einrückung zu erhalten, gibt es nur drei Möglichkeiten für Browserhersteller.
 
-1. Gib jedem `<li>` Element einen linken Außenabstand.
-2. Gib dem `<ul>` Element einen linken Außenabstand.
-3. Gib dem `<ul>` Element einen linken Innenabstand.
+1.  Gib jedem `<li>` Element einen linken Außenabstand.
+2.  Gib dem `<ul>` Element einen linken Außenabstand.
+3.  Gib dem `<ul>` Element einen linken Innenabstand.
 
 Wie sich herausstellt, hat niemand auf die erste Option zurückgegriffen. Die zweite Option wurde von Internet Explorer für Windows und Macintosh und Opera gewählt. Die dritte wird von Gecko und allen darauf basierenden Browsern verwendet.
 

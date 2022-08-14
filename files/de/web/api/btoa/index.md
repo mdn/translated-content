@@ -27,7 +27,7 @@ var decodedData = window.atob(encodedData); // Zeichenkette dekodieren
 
 ## Hinweise
 
-Diese Methode kann verwendet werden, um Daten zu kodieren, übertragen, und mittels`{{domxref("WindowBase64.atob","window.atob()")}}` wieder zu dekodieren, welche andernfalls Übertragungsprobleme bereiten würden. Beispielsweise ist es möglich, die Steuerzeichen mit den ASCII-Werten 0 bis 31 zu kodieren.
+Diese Methode kann verwendet werden, um Daten zu kodieren, übertragen, und mittels` {{domxref("WindowBase64.atob","window.atob()")}}` wieder zu dekodieren, welche andernfalls Übertragungsprobleme bereiten würden. Beispielsweise ist es möglich, die Steuerzeichen mit den ASCII-Werten 0 bis 31 zu kodieren.
 
 `btoa()` steht auch in JavaScript implementierten XPCOM-Komponenten zur Verfügung, auch wenn [`window`](/de/docs/DOM/window "DOM/window") in solchen Komponenten nicht das globale Objekt ist.
 

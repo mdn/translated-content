@@ -159,34 +159,34 @@ Das folgende Beispiel zeigt ein dreispaltiges Raster mit neuen Zeilen, die mit m
 | ------------------------------------ | -------------------------------- | ------------------- |
 | {{ SpecName('CSS3 Grid') }} | {{ Spec2('CSS3 Grid') }} | Initial definition. |
 
-1. [**CSS**](/de/docs/Web/CSS)
-2. [**CSS Reference**](/de/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/de/docs/Web/CSS/CSS_Grid_Layout)
-4. **Guides**
+1.  [**CSS**](/de/docs/Web/CSS)
+2.  [**CSS Reference**](/de/docs/Web/CSS/Reference)
+3.  [CSS Grid Layout](/de/docs/Web/CSS/CSS_Grid_Layout)
+4.  **Guides**
 
-    1. [Basics concepts of grid layout](/de/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [Relationship to other layout methods](/de/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [Line-based placement](/de/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [Grid template areas](/de/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [Layout using named grid lines](/de/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [Auto-placement in grid layout](/de/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/de/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values and writing modes](/de/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/de/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    1.  [Basics concepts of grid layout](/de/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2.  [Relationship to other layout methods](/de/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3.  [Line-based placement](/de/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4.  [Grid template areas](/de/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5.  [Layout using named grid lines](/de/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6.  [Auto-placement in grid layout](/de/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7.  [Box alignment in grid layout](/de/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8.  [Grids, logical values and writing modes](/de/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9.  [CSS Grid Layout and Accessibility](/de/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
     10. [CSS Grid Layout and Progressive Enhancement](/de/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
     11. [Realizing common layouts using grids](/de/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-5. **Properties**
+5.  **Properties**
 
-    1. [grid](/de/docs/Web/CSS/grid)
-    2. [grid-area](/de/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/de/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/de/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/de/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/de/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/de/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/de/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/de/docs/Web/CSS/grid-column-start)
+    1.  [grid](/de/docs/Web/CSS/grid)
+    2.  [grid-area](/de/docs/Web/CSS/grid-area)
+    3.  [grid-auto-columns](/de/docs/Web/CSS/grid-auto-columns)
+    4.  [grid-auto-flow](/de/docs/Web/CSS/grid-auto-flow)
+    5.  [grid-auto-rows](/de/docs/Web/CSS/grid-auto-rows)
+    6.  [grid-column](/de/docs/Web/CSS/grid-column)
+    7.  [grid-column-end](/de/docs/Web/CSS/grid-column-end)
+    8.  [grid-column-gap](/de/docs/Web/CSS/grid-column-gap)
+    9.  [grid-column-start](/de/docs/Web/CSS/grid-column-start)
     10. [grid-gap](/de/docs/Web/CSS/grid-gap)
     11. [grid-row](/de/docs/Web/CSS/grid-row)
     12. [grid-row-end](/de/docs/Web/CSS/grid-row-end)
@@ -197,14 +197,14 @@ Das folgende Beispiel zeigt ein dreispaltiges Raster mit neuen Zeilen, die mit m
     17. [grid-template-columns](/de/docs/Web/CSS/grid-template-columns)
     18. [grid-template-rows](/de/docs/Web/CSS/grid-template-rows)
 
-6. **Glossary**
+6.  **Glossary**
 
-    1. [Grid](/de/docs/Glossary/Grid)
-    2. [Grid lines](/de/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/de/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/de/docs/Glossary/Grid_cell)
-    5. [Grid areas](/de/docs/Glossary/Grid_areas)
-    6. [Gutters](/de/docs/Glossary/Gutters)
-    7. [Grid Axis](/de/docs/Glossary/Grid_Axis)
-    8. [Grid row](/de/docs/Glossary/Grid_rows)
-    9. [Grid column](/de/docs/Glossary/Grid_column)
+    1.  [Grid](/de/docs/Glossary/Grid)
+    2.  [Grid lines](/de/docs/Glossary/Grid_lines)
+    3.  [Grid tracks](/de/docs/Glossary/Grid_tracks)
+    4.  [Grid cell](/de/docs/Glossary/Grid_cell)
+    5.  [Grid areas](/de/docs/Glossary/Grid_areas)
+    6.  [Gutters](/de/docs/Glossary/Gutters)
+    7.  [Grid Axis](/de/docs/Glossary/Grid_Axis)
+    8.  [Grid row](/de/docs/Glossary/Grid_rows)
+    9.  [Grid column](/de/docs/Glossary/Grid_column)

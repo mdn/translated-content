@@ -11,7 +11,7 @@ tags:
   - TopicStub
 translation_of: Web/API/GlobalEventHandlers
 ---
-{{ApiRef("HTML DOM")}}Der **`GlobalEventHandlers`**Mixin beschreibt die Ereignisbehandler, die mehreren Interfaces gemeinsam sind, wie z.B. {{domxref("HTMLElement")}}, {{domxref("Document")}}, oder {{domxref("Window")}}. Jedes dieser Interfaces kann weitere Ereignisbehandler implementieren.
+{{ApiRef("HTML DOM")}}Der **`GlobalEventHandlers `**Mixin beschreibt die Ereignisbehandler, die mehreren Interfaces gemeinsam sind, wie z.B. {{domxref("HTMLElement")}}, {{domxref("Document")}}, oder {{domxref("Window")}}. Jedes dieser Interfaces kann weitere Ereignisbehandler implementieren.
 
 `GlobalEventHandlers` ist ein Mixin und kein Interface und es kann kein Objekt dieses Typs angelegt werden.
 

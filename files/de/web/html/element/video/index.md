@@ -60,9 +60,7 @@ Wie jedes andere HTML Element unterstützt diese Element die [globalen Attribute
     - metadata: der Autor meint, dass das Laden der Metadaten (z.B. Länge) vertretbar ist, auch wenn der Benutzer das Video nicht anfragen wird
     - auto: die Bedürfnisse des Benutzers haben Priorität; bei Bedarf kann das gesamte Video heruntergeladen werden, auch wenn es der Benutzer womöglich nicht vollständig ansieht
     - ein _leerer String_: ein Synonym für den Wert autoWenn diese Attribut nicht gesetzt ist, wird der Standardwert vom Webbrowser verwendet. Jeder Webbrowser kann seinen eigenen Standardwert auswählen, obwohl die Spezifikation den Wert metadata empfiehlt.> **Note:** **Verwendungshinweise:\*** Das `autoplay`-Attribut hat Vorrang gegenüber diesem Attribute, denn wenn das Video automatisch abgespielt werden soll, muss der Webbrowser es laden. Das Setzen der Attribute `autoplay` und `preload` wird von der Spezifikation erlaubt.
-      >
       > - Der Webbrowser wird von der Spezifikation nicht gezwungen den Wert zu befolgen. Es ist ein reiner Hinweis.
-      >
 - {{htmlattrdef("poster")}}
   - : Die URL eines Vorschaubildes, das dargestellt wird bis der Benutzer das Video abspielt oder spult. Wenn diese Attribut nicht angegeben wird, wird nichts dargestellt bis der erste Frame des Videos verfügbar ist. Der erste Frame wird dann als Vorschaubild dargestellt.
 - {{htmlattrdef("src")}}

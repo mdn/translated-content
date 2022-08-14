@@ -14,7 +14,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Optymalizacja_canvas
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 
-{{HTMLElement("canvas")}}  to jeden z najczęściej używanych standardów do renderowania grafiki 2D w przeglądarce. Zazwyczaj stosuje się go do tworzenia gier i skomplikowanych wizualizacji, które nierzadko starają się wycinąć z „płótna" maksimum jego możliwości. Niestety, równie często prowadzi to do spadków wydajności. W tym artykule przygotowaliśmy dla was kilka wskazówek jak zoptymalizować element canvas, aby poprawić działanie waszych stron i aplikacji.
+{{HTMLElement("canvas")}}  to jeden z najczęściej używanych standardów do renderowania grafiki 2D w przeglądarce. Zazwyczaj stosuje się go do tworzenia gier i skomplikowanych wizualizacji, które nierzadko starają się wycinąć z „płótna" maksimum jego możliwości. Niestety, równie często prowadzi to do spadków wydajności. W tym artykule przygotowaliśmy dla was kilka wskazówek jak zoptymalizować element canvas, aby poprawić działanie waszych stron i aplikacji.
 
 ## Wskazówki dot. wydajności
 
@@ -109,7 +109,7 @@ var ctx = canvas.getContext('2d', { alpha: false });
 - Unikaj {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} kiedy to możliwe.
 - Unikaj wyświetlania tekstu, kiedy to możliwe.
 - Wykorzystuj różne sposoby na wyczyszczenie canvasu: ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}, {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} lub zmiana rozmiaru canvasu).
-- Do tworzenie animacji skorzystaj z  {{domxref("window.requestAnimationFrame()")}} zamiast {{domxref("window.setInterval()")}} .
+- Do tworzenie animacji skorzystaj z  {{domxref("window.requestAnimationFrame()")}} zamiast {{domxref("window.setInterval()")}} .
 - Ostrożnie używaj dużych bibliotek do obliczania fizyki.
 
 ## Zobacz również:

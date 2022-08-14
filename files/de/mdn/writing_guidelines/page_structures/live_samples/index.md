@@ -13,9 +13,9 @@ Live-Beispiele, die dir direkt die Ausgabe anzeigen, machen Dokumentationen dyna
 - Beispielabhängige Fähigkeiten in HTML, CSS und JavaScript
 - Fähigkeit [KumaScript](/de/docs/MDN/Contribute/Tools/KumaScript) in Artikeln zu nutzen
 
-1. Wähle einen Artikel mit dem Tag "[NeedsLiveSample](/de/docs/tag/NeedsLiveSample)" aus
-2. Konvertiere das Codebeispiels
-3. Lösche alle Bilder oder Texte, auf denen die Ausgabe gezeigt wird
+1.  Wähle einen Artikel mit dem Tag "[NeedsLiveSample](/de/docs/tag/NeedsLiveSample)" aus
+2.  Konvertiere das Codebeispiels
+3.  Lösche alle Bilder oder Texte, auf denen die Ausgabe gezeigt wird
 
 <dl><dt><strong>Wo muss dies gemacht werden?</strong></dt><dd>Bei Artikeln mit dem Tag "<a href="/en-US/docs/tag/NeedsLiveSample">NeedsLiveSample</a>".</dd><dt><strong>Was musst du können um diese Aufgabe zu erledigen?</strong></dt><dt><strong>Welche Schritte müssen unternommen werden?</strong></dt></dl>
 

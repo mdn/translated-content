@@ -10,7 +10,7 @@ original_slug: Glossary/Hipertekst
 ---
 Hipertekst to tekst, który zawiera odnośniki do innych tekstów, w przeciwieństwie do pojedynczego przepływu liniowego jak w powieści.
 
-Termin ten został wymyślony przez Teda Nelsona około 1965 roku.
+Termin ten został wymyślony przez Teda Nelsona około 1965 roku.
 
 ## Dowiedz się więcej
 

@@ -23,6 +23,8 @@ Zawęża aktualne zaznaczenie w pojedynczy punkt. Dokument nie jest modyfikowany
 - _`parentNode`_
   - : Kursor znajdzie się w tym węźle.
 
+<!---->
+
 - _`offset`_
   - : Kursor zostanie umieszczony w tej odległości od początku węzła tekstowego
     _`parentNode`_

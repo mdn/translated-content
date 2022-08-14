@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
 {{JSRef}}
 
-Die statische **`Atomics.add()`** Methode addiert eine gegebenen Wert an einer gegebenen Position im Array und gibt den alten Wert zurück. Diese atomare Operation garantiert, dass keine andere Schreiboperation während der Operation durchgeführt werden kann.
+Die statische **`Atomics`\*\***`.add()`\*\* Methode addiert eine gegebenen Wert an einer gegebenen Position im Array und gibt den alten Wert zurück. Diese atomare Operation garantiert, dass keine andere Schreiboperation während der Operation durchgeführt werden kann.
 
 {{EmbedInteractiveExample("pages/js/atomics-add.html")}}
 

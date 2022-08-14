@@ -43,8 +43,8 @@ if (!Array.prototype.indexOf)
 
     var from = Number(arguments[1]) || 0;
     from = (from < 0)
-         ? Math.ceil(from)
-         : Math.floor(from);
+         ? Math.ceil(from)
+         : Math.floor(from);
     if (from < 0)
       from += len;
 
@@ -82,7 +82,7 @@ Poniższy przykład używa `indexOf` do znalezienia wszystkich wystąpień eleme
 ```js
 indices = [];
 idx = array.indexOf(element)
-while (idx != -1) {
+while (idx != -1) {
    indices.push(idx);
    idx = array.indexOf(element, idx + 1);
 }

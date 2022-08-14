@@ -60,7 +60,7 @@ Die Syntax der einzelnen Schichten ist wie folgt:
 - Der Wert [`<box>`](/de/docs/Web/CSS/background$edit#<box>) kann Null, eins oder zwei Mal eingeschlossen werden. Wenn er einmal eingeschlossen wird, setzt er sowohl {{cssxref("background-origin")}} als auch {{cssxref("background-clip")}}. Bei zweimaligem Einschließen setzt das erste Vorkommen {{cssxref("background-origin")}} und das zweite Vorkommen {{cssxref("background-clip")}}.
 - Der Wert [`<background-color>`](/de/docs/Web/CSS/background$edit#<background-color>) darf nur in der zuletzt angegebenen Ebene enthalten sein.
 
-> **Hinweis:** Die {{cssxref("background-color")}} kann nur für den letzten Hintergrund definiert werden, da es nur eine Hintergrundfarbe für das gesamte Element gibt.
+> **Note:** **Hinweis:** Die {{cssxref("background-color")}} kann nur für den letzten Hintergrund definiert werden, da es nur eine Hintergrundfarbe für das gesamte Element gibt.
 
 ### Werte
 

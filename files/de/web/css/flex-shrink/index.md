@@ -23,6 +23,8 @@ Siehe die [Verwendung von CSS Flexible Boxes](/de/docs/Web/Guide/CSS/Flexible_bo
 
     Formale Syntax: {{csssyntax("flex-shrink")}}
 
+<!---->
+
     flex-shrink: 2
 
     flex-shrink: inherit

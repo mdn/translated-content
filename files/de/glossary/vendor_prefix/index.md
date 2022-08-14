@@ -25,7 +25,7 @@ Browserhersteller fügen manchmal Präfixe zu experimentellen oder nichtstandard
 Die führenden Browser nutzen folgende Präfixe:
 
 - `-webkit- (`Chrome, Safari, neuere Versionen von Opera, fast alle iOS-Broswer - einschließlich Firefox für iOS; im Grunde genommen jeder auf WebKit basierende Browser)
-- `-moz-`(Firefox)
+- `-moz- `(Firefox)
 - `-o-` (Alte Versionen von Opera aus der Zeit vor WebKit)
 - `-ms-` (Internet Explorer und Microsoft Edge)
 
@@ -38,7 +38,7 @@ Historisch gesehen haben Hersteller Präfixe auch in experimentellen APIs verwen
 Präfixe für Schnittstellennamen werden groß geschrieben:
 
 - `Webkit (`Chrome, Safari, neuere Versionen von Opera, fast alle iOS-Broswer - einschließlich Firefox für iOS; im Grunde genommen jeder auf WebKit basierende Browser)
-- `Moz`(Firefox)
+- `Moz `(Firefox)
 - `O` (Alte Versionen von Opera aus der Zeit vor WebKit)
 - `MS` (Internet Explorer und Microsoft Edge)
 
@@ -47,7 +47,7 @@ Präfixe für Schnittstellennamen werden groß geschrieben:
 Präfixe für Eigenschaften und Methoden werden klein geschrieben:
 
 - `webkit (`Chrome, Safari, neuere Versionen von Opera, fast alle iOS-Broswer - einschließlich Firefox für iOS; im Grunde genommen jeder auf WebKit basierende Browser)
-- `moz`(Firefox)
+- `moz `(Firefox)
 - o (Alte Versionen von Opera aus der Zeit vor WebKit)
 - ms (Internet Explorer und Microsoft Edge)
 

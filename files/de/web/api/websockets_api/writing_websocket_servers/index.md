@@ -8,7 +8,7 @@ original_slug: WebSockets/Writing_WebSocket_servers
 
 Ein WebSocket-Server ist nichts anderes als eine Anwendung, die einen Port eines TCP-Servers überwacht, der einem bestimmten Protokoll folgt. Die Aufgabe, einen benutzerdefinierten Server zu erstellen, macht den Leuten Angst. Es kann jedoch unkompliziert sein, einen einfachen WebSocket-Server auf einer Plattform Ihrer Wahl zu implementieren.
 
-Ein WebSocket-Server kann in jeder serverseitigen Programmiersprache geschrieben werden, die dazu in der Lage ist: [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), siehe auch C(++), Python, [PHP](/de/docs/PHP), oder Serverseitiges[JavaScript](/de/docs/Web/JavaScript/Server-Side_JavaScript).
+Ein WebSocket-Server kann in jeder serverseitigen Programmiersprache geschrieben werden, die dazu in der Lage ist: [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), siehe auch C(++), Python, [PHP](/de/docs/PHP), oder Serverseitiges[ JavaScript](/de/docs/Web/JavaScript/Server-Side_JavaScript).
 
 Dies ist kein Tutorial in einer bestimmten Sprache, sondern dient als Leitfaden, um das Schreiben Ihres eigenen Servers zu erleichtern.
 
@@ -47,7 +47,7 @@ Wenn ein Header nicht verstanden wird oder einen falschen Wert hat, sollte der S
 
 Der interessanteste Header hier ist {{HTTPHeader ("Sec-WebSocket-Key")}}. Schauen wir uns das also als nächstes an.
 
-> **Hinweis:** Normale HTTP-Statuscodes können nur vor dem Handshake verwendet werden. Nach erfolgreichem Handshake müssen Sie einen anderen Satz von Codes verwenden (definiert in Abschnitt 7.4 der Spezifikation).
+> **Note:** **Hinweis**: Normale HTTP-Statuscodes können nur vor dem Handshake verwendet werden. Nach erfolgreichem Handshake müssen Sie einen anderen Satz von Codes verwenden (definiert in Abschnitt 7.4 der Spezifikation).
 
 ### Server handshake Antwort
 
@@ -60,11 +60,11 @@ Wenn der Server die Handshake-Anforderung empfängt, sollte er eine spezielle An
 
 Darüber hinaus kann der Server hier über Erweiterungs- / Unterprotokollanforderungen entscheiden. Einzelheiten finden Sie unter Sonstiges. Der Sec-WebSocket-Accept-Header ist wichtig, da der Server ihn von dem {{HTTPHeader ("Sec-WebSocket-Key")}} ableiten muss, den der Client an ihn gesendet hat. Verketten Sie dazu den Sec-WebSocket-Key des Clients und die Zeichenfolge "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" (es handelt sich um eine "magische Zeichenfolge"), nehmen Sie den SHA-1-Hash des Ergebnisses und geben Sie den base64 zurück Codierung dieses Hashs.
 
-> **Hinweis:** Dieser scheinbar überkomplizierte Prozess ist vorhanden, sodass für den Client offensichtlich ist, ob der Server WebSockets unterstützt. Dies ist wichtig, da Sicherheitsprobleme auftreten können, wenn der Server eine WebSockets-Verbindung akzeptiert, die Daten jedoch als HTTP-Anforderung interpretiert.
+> **Note:** \***\*Hinweis\*\***: Dieser scheinbar überkomplizierte Prozess ist vorhanden, sodass für den Client offensichtlich ist, ob der Server WebSockets unterstützt. Dies ist wichtig, da Sicherheitsprobleme auftreten können, wenn der Server eine WebSockets-Verbindung akzeptiert, die Daten jedoch als HTTP-Anforderung interpretiert.
 
 Wenn der Schlüssel also "dGhlIHNhbXBsZSBub25jZQ ==" war, lautet der Wert des Sec-WebSocket-Accept-Headers "s3pPLMBiTxaQ9kYGzzhZRbK + xOo =". Sobald der Server diese Header sendet, ist der Handshake abgeschlossen und Sie können mit dem Datenaustausch beginnen !
 
-> **Hinweis:** Der Server kann andere Header wie {{HTTPHeader ("Set-Cookie")}} senden oder über andere Statuscodes nach Authentifizierung oder Weiterleitung fragen, bevor er den Antwort-Handshake sendet.
+> **Note:** \***\*Hinweis\*\***: Der Server kann andere Header wie {{HTTPHeader ("Set-Cookie")}} senden oder über andere Statuscodes nach Authentifizierung oder Weiterleitung fragen, bevor er den Antwort-Handshake sendet.
 
 ### Clients im Auge behalten
 
@@ -111,9 +111,9 @@ The FIN bit tells whether this is the last message in a series. If it's 0, then 
 
 To read the payload data, you must know when to stop reading. That's why the payload length is important to know. Unfortunately, this is somewhat complicated. To read it, follow these steps:
 
-1. Read bits 9-15 (inclusive) and interpret that as an unsigned integer. If it's 125 or less, then that's the length; you're **done**. If it's 126, go to step 2. If it's 127, go to step 3.
-2. Read the next 16 bits and interpret those as an unsigned integer. You're **done**.
-3. Read the next 64 bits and interpret those as an unsigned integer. (The most significant bit _must_ be 0.) You're **done**.
+1.  Read bits 9-15 (inclusive) and interpret that as an unsigned integer. If it's 125 or less, then that's the length; you're **done**. If it's 126, go to step 2. If it's 127, go to step 3.
+2.  Read the next 16 bits and interpret those as an unsigned integer. You're **done**.
+3.  Read the next 64 bits and interpret those as an unsigned integer. (The most significant bit _must_ be 0.) You're **done**.
 
 ### Reading and Unmasking the Data
 

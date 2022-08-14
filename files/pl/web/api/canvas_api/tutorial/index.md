@@ -13,15 +13,15 @@ translation_of: Web/API/Canvas_API/Tutorial
 ---
 {{CanvasSidebar}}[![](https://mdn.mozillademos.org/files/257/Canvas_tut_examples.jpg)](/pl/docs/HTML/Canvas "HTML/Canvas")
 
-[**`<canvas>`**](/pl/docs/Web/HTML/Element/canvas "HTML/Canvas") jest elementem [HTML](/pl/docs/Web/HTML "HTML"), który może być użyty do rysowania grafik używając skryptów (często [JavaScript](/pl/docs/Glossary/JavaScript "JavaScript")'u). To może zostać użyte do  na przykład rysowania wykresów, tworzenia kompozycji zdjęcia lub prostych (i [i nie prostych](/pl/docs/Web/API/Canvas_API/A_basic_ray-caster)) animacji. Obrazy na tej strone pokazują przykłady implementacji **[`<canvas>`](/en-US/docs/Web/HTML/Element/canvas "HTML/Canvas")**, które będą stworzone w tym poradniku.
+[**`<canvas>`**](/pl/docs/Web/HTML/Element/canvas "HTML/Canvas") jest elementem [HTML](/pl/docs/Web/HTML "HTML"), który może być użyty do rysowania grafik używając skryptów (często [JavaScript](/pl/docs/Glossary/JavaScript "JavaScript")'u). To może zostać użyte do  na przykład rysowania wykresów, tworzenia kompozycji zdjęcia lub prostych (i [i nie prostych](/pl/docs/Web/API/Canvas_API/A_basic_ray-caster)) animacji. Obrazy na tej strone pokazują przykłady implementacji **[`<canvas>`](/en-US/docs/Web/HTML/Element/canvas "HTML/Canvas")**, które będą stworzone w tym poradniku.
 
-Ten poradnik opisuje jak używać elementu `<canvas>` do rysowania grafik 2D, rozpoczynając od podstaw. Zawarte przykłady powinny dać Ci kilka czystych pomysłów co możesz zrobić z kanwą i zapewnią przykłady kodu, które mogą ci pomóc w budowaniu własnej zawartości.
+Ten poradnik opisuje jak używać elementu `<canvas>` do rysowania grafik 2D, rozpoczynając od podstaw. Zawarte przykłady powinny dać Ci kilka czystych pomysłów co możesz zrobić z kanwą i zapewnią przykłady kodu, które mogą ci pomóc w budowaniu własnej zawartości.
 
-Wprowadzono ją jako pierwszą w WebKit przez Apple dla OS X Dashboard, `<canvas>` od tego momentu została wprowadzona do przeglądarek. Dziś wszystkie poważne przeglądarki wspierają kanwę.
+Wprowadzono ją jako pierwszą w WebKit przez Apple dla OS X Dashboard, `<canvas>` od tego momentu została wprowadzona do przeglądarek. Dziś wszystkie poważne przeglądarki wspierają kanwę.
 
 ## Zanim zaczniesz
 
-Używanie elementu `<canvas>` nie jest trudne, ale potrzebujesz podstawowego zrozumienia [HTML](/pl/docs/Web/HTML "HTML") i [JavaScript](/pl/docs/Web/JavaScript "JavaScript"). Element `<canvas>` nie jest wspierany w kilku starszych przeglądarkach, ale ma wsparcie ze strony nowych wersji poważnych przeglądarek. Domyślnym rozmiarem kanwy jest 300 px × 150 px (szerokość × wysokość). Ale własne rozmiary mogą zostać zdefiniowane za pomocą własności HTML `height` i `width`. W celu narysowania grafik na kanwie używamy obiektu kontekstu w JavaScript, który tworzy grafiki w locie.
+Używanie elementu `<canvas>` nie jest trudne, ale potrzebujesz podstawowego zrozumienia [HTML](/pl/docs/Web/HTML "HTML") i [JavaScript](/pl/docs/Web/JavaScript "JavaScript"). Element `<canvas>` nie jest wspierany w kilku starszych przeglądarkach, ale ma wsparcie ze strony nowych wersji poważnych przeglądarek. Domyślnym rozmiarem kanwy jest 300 px × 150 px (szerokość × wysokość). Ale własne rozmiary mogą zostać zdefiniowane za pomocą własności HTML `height` i `width`. W celu narysowania grafik na kanwie używamy obiektu kontekstu w JavaScript, który tworzy grafiki w locie.
 
 ## W tym poradniku
 

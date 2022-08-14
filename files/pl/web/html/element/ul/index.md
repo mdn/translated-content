@@ -17,6 +17,8 @@ Element `<ul>` (Unordered list) jest używany do wskazania listy nieuporządkowa
 - type {{ Deprecated_inline() }}
   - : Używany do ustawienia typu znaku wypunktowania dla listy. Wartościami zdefiniowanymi w [HTML3.2](pl/HTML3.2) i wersji [HTML 4.0/4.01](pl/HTML4.01) Transitional są `circle`, `disc` oraz `square`. Program użytkownika może zdecydować o wyborze innego wypunktowania, zależnie od poziomu zagnieżdżenia listy, chyba że jest użyty atrybut `type`. Interfejs WebTV wspiera również wypunktowanie `triangle`. Ten atrybut jest wycofywany, użyj zamiast niego własności [CSS](pl/CSS) [list-style-type](pl/CSS/list-style-type).
 
+<!---->
+
 - compact {{ Deprecated_inline() }}
   - : Określa, że lista powinna być wyświetlona w zwartej formie. Interpretacja tego atrybutu zależy od programu użytkownika.
 

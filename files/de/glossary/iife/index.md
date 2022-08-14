@@ -13,8 +13,8 @@ Eine IIFE (Immediately Invoked Function Expression) ist eine JavaScript-Funktion
 
 Es handelt sich um ein Entwurfsmuster, das auch als selbstausführende anonyme Funktion bekannt ist und aus zwei Hauptteilen besteht:
 
-1. Die erste ist die anonyme Funktion mit lexikalischem Umfang, die innerhalb des {{jsxref("Operators/Grouping", "Grouping Operator")}} `()` eingeschlossen ist. Dies verhindert sowohl den Zugriff auf Variablen innerhalb des IIFE-Idioms als auch die Beeinträchtigung des globalen Geltungsbereichs.
-2. Der zweite Teil erzeugt den unmittelbar aufgerufenen Funktionsausdruck `()`, durch den die JavaScript-Engine die Funktion direkt interpretiert.
+1.  Die erste ist die anonyme Funktion mit lexikalischem Umfang, die innerhalb des {{jsxref("Operators/Grouping", "Grouping Operator")}} `()` eingeschlossen ist. Dies verhindert sowohl den Zugriff auf Variablen innerhalb des IIFE-Idioms als auch die Beeinträchtigung des globalen Geltungsbereichs.
+2.  Der zweite Teil erzeugt den unmittelbar aufgerufenen Funktionsausdruck `()`, durch den die JavaScript-Engine die Funktion direkt interpretiert.
 
 ## Beispiele
 
@@ -39,15 +39,15 @@ var result = (function () {
 result; // "Barry"
 ```
 
-1. Mehr darüber erfahren
+1.  Mehr darüber erfahren
 
-    1. [Quick example](/de/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (at the end of the "Functions" section, right before "Custom objects")
+    1.  [Quick example](/de/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (at the end of the "Functions" section, right before "Custom objects")
 
-2. Wikipedia Artikel
+2.  Wikipedia Artikel
 
-    1. {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}}
+    1.  {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}}
 
-3. [Glossar](/de/docs/Glossary)
+3.  [Glossar](/de/docs/Glossary)
 
-    1. {{Glossary("Function")}}
-    2. {{Glossary("Self-Executing Anonymous Function")}}
+    1.  {{Glossary("Function")}}
+    2.  {{Glossary("Self-Executing Anonymous Function")}}

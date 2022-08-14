@@ -13,7 +13,7 @@ translation_of: Web/API/Document/write
 
 Schreibt eine Zeichenfolge in einen Dokument-Stream, der zuvor mittels [document.open()](/de/docs/Web/API/document.open) geöffnet wurde.
 
-> **Hinweis:** da `document.write` in einen Dokument-**Stream** schreibt, wird beim Aufruf von `document.write` auf ein geschlossenes (fertig geladenes) Dokument dieses automatisch wieder mittels `document.open` geöffnet, [wodurch das Dokument geleert wird](/de/docs/Web/API/document.open#Notes).
+> **Note:** Hinweis: da `document.write` in einen Dokument-**Stream** schreibt, wird beim Aufruf von `document.write` auf ein geschlossenes (fertig geladenes) Dokument dieses automatisch wieder mittels `document.open` geöffnet, [wodurch das Dokument geleert wird](/de/docs/Web/API/document.open#Notes).
 
 ## Syntax
 
@@ -63,9 +63,9 @@ Wird der `document.write()` Aufruf in ein im HTML eingeschlossenes `<script>` Ta
 </script>
 ```
 
-> **Hinweis:** `document.write` und `document.writeln` [funktionieren nicht in XHTML Documenten](/de/docs/Archive/Web/Writing_JavaScript_for_HTML) (Sie erhalten einen "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] Fehler in der Fehlerkonsole). Dies tritt auf, sobald Sie eine lokale Datei mit der Erweiterung .xhtml laden oder eine Datei öffnen, die mit dem `application/xhtml+xml`-[MIME-Typ](/de/docs/Glossary/MIME_type) vom Server gesendet wurde. Weitere Informationen erhalten Sie in der [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+> **Note:** **Hinweis:** `document.write` und `document.writeln` [funktionieren nicht in XHTML Documenten](/de/docs/Archive/Web/Writing_JavaScript_for_HTML) (Sie erhalten einen "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] Fehler in der Fehlerkonsole). Dies tritt auf, sobald Sie eine lokale Datei mit der Erweiterung .xhtml laden oder eine Datei öffnen, die mit dem `application/xhtml+xml`-[MIME-Typ](/de/docs/Glossary/MIME_type) vom Server gesendet wurde. Weitere Informationen erhalten Sie in der [W3C XHTML FAQ](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-> **Hinweis:** `document.write` in [verzögert geladenen](/de/docs/Web/HTML/Element/script#attr-defer) oder [asynchronen](/de/docs/Web/HTML/Element/script#attr-async) Scripten wird ignoriert und Sie erhalten eine Nachricht ähnlich dieser in der Fehlerkonsole: "A call to `document.write()` from an asynchronously-loaded external script was ignored".
+> **Note:** **Hinweis:** `document.write` in [verzögert geladenen](/de/docs/Web/HTML/Element/script#attr-defer) oder [asynchronen](/de/docs/Web/HTML/Element/script#attr-async) Scripten wird ignoriert und Sie erhalten eine Nachricht ähnlich dieser in der Fehlerkonsole: "A call to `document.write()` from an asynchronously-loaded external script was ignored".
 
 > **Note:** **Hinweis** (Nur Microsoft Edge): ein wiederholter Aufruf von`document.write` in einem `<iframe>` erzeugt den Fehler "SCRIPT70: Permission denied".
 

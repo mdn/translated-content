@@ -14,6 +14,8 @@ translation_of: Glossary/webp
 
 - {{interwiki("wikipedia", "WebP")}} auf Wikipedia
 
+<!---->
+
 - [Glossar](/de/docs/Glossary)
 
   - {{Glossary("GIF")}}

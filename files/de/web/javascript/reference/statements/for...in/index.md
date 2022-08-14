@@ -49,7 +49,7 @@ Es gibt keine Garantie, dass eine hinzugefügte Eigenschaft von der Schleife noc
 
 ### Array und for…in
 
-> **Hinweis:** **`for…in` sollte nicht für den Durchlauf eines {{jsxref("Array", "Arrays")}} verwendet werden, bei dem die Indexreihenfolge wichtig ist.**
+> **Note:** **Hinweis:** **`for…in` sollte nicht für den Durchlauf eines {{jsxref("Array", "Arrays")}} verwendet werden, bei dem die Indexreihenfolge wichtig ist.**
 
 Anders als vielleicht von vielen anderen Programmiersprachen gewohnt sind bei Javascript die Indizes eines Feldes normale Objekt-Eigenschaften mit Ganzzahlen als Namen.
 

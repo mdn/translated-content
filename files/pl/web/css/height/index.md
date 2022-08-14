@@ -27,9 +27,9 @@ Własność `height` definiuje w elemencie wysokość obszaru zawartości. Obsza
 
 ### Wartości
 
-- **length** : może być w jednostkach px, cm, in
-- **percentage** : % określone jako procenty wysokości zawierającego bloku
-- **auto** : przeglądarka obliczy i wybierze wysokość dla określonego elementu
+- **length** : może być w jednostkach px, cm, in
+- **percentage** : % określone jako procenty wysokości zawierającego bloku
+- **auto** : przeglądarka obliczy i wybierze wysokość dla określonego elementu
 
 ### Przykłady
 

@@ -115,7 +115,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 {{Compat}}
 
-\[1] Feuert das {{event("visibilitychange")}} Event nicht, wenn das Browserfenster minimiert wird. Ebenso wird `hidden` nicht auf `true`gesetzt.
+\[1] Feuert das {{event("visibilitychange")}} Event nicht, wenn das Browserfenster minimiert wird. Ebenso wird `hidden` nicht auf `true `gesetzt.
 
 \[2] In den Versionen Firefox 10 bis Firefox 51 einschließlich, konnte diese Eigenschaft verwendet werden mit Vendor-Prefix `-moz-`.
 

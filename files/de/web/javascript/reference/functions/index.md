@@ -73,8 +73,12 @@ Es gibt eine spezielle Syntax für das Deklarieren von Funktionen (siehe [Funkti
 - `name`
   - : Der Funktionsname.
 
+<!---->
+
 - `param`
   - : Der Name eines Arguments, welches der Funktion übergeben wird. Eine Funktion kann bis zu 255 Argumente haben.
+
+<!---->
 
 - `statements`
   - : Die Statements, welche den Funktionskörper der Funktion bilden.
@@ -89,6 +93,8 @@ Ein Funktionsausdruck ist ähnlich wie eine Funktionsdeklaration und hat die sel
 
 - `name`
   - : Der Funktionsname. Kann weggelassen werden, wodurch die Funktion eine sogenannte anonyme Funktion ist.
+
+<!---->
 
 - `param`
   - : Der Name eines Arguments, welches der Funktion übergeben wird. Eine Funktion kann bis zu 255 Argumente haben.
@@ -136,8 +142,12 @@ Es gibt eine spezielle Syntax für die Deklaration von Generatorfunktionen (sieh
 - `name`
   - : Der Funktionsname.
 
+<!---->
+
 - `param`
   - : Der Name eines Arguments, welches der Funktion übergeben wird. Eine Funktion kann bis zu 255 Argumente haben.
+
+<!---->
 
 - `statements`
   - : Die Statements, welche den Funktionskörper der Funktion bilden.
@@ -152,6 +162,8 @@ Ein Generatorfunktionsausdruck ist ähnlich wie eine Generatorfunktionsdeklarati
 
 - `name`
   - : Der Funktionsname. Kann weggelassen werden, wodurch die Funktion eine sogenannte anonyme Funktion ist.
+
+<!---->
 
 - `param`
   - : Der Name eines Arguments, welches der Funktion übergeben wird. Eine Funktion kann bis zu 255 Argumente haben.
@@ -175,7 +187,7 @@ Eine Pfeilfunktionsausdruck hat eine kürzere Syntax und der `this` Wert ist lex
 
 ### Der `Function` Konstruktor
 
-> **Hinweis:** Der Einsatz des `Function` Konstruktors, um eine Funktion zu erstellen wird nicht empfohlen, weil der Funktionskörper als String übergeben wird, welcher von einigen JS Engines nicht optimiert werden kann und zu Problemen führen kann.
+> **Note:** **Hinweis:** Der Einsatz des `Function` Konstruktors, um eine Funktion zu erstellen wird nicht empfohlen, weil der Funktionskörper als String übergeben wird, welcher von einigen JS Engines nicht optimiert werden kann und zu Problemen führen kann.
 
 Wie alle anderen Objekte, können {{jsxref("Function")}} Objekte mit dem `new` Operator erstellt werden:
 
@@ -184,6 +196,8 @@ Wie alle anderen Objekte, können {{jsxref("Function")}} Objekte mit dem `new` O
 - `arg1, arg2, ... argN`
   - : Null oder mehr Namen, welche von der Funktion als formale Parameter benutzt werden. Jeder muss ein valider JavaScript Bezeichner sein.
 
+<!---->
+
 - `functionBody`
   - : Ein String, der die JavaScript Statements enthält, die den Funktionskörper formen.
 
@@ -191,9 +205,9 @@ Das Ausführen des `Function` Konstruktors als Funktion (ohne den Einsatz des `n
 
 ### Der `GeneratorFunction` Konstruktor
 
-> **Hinweis:** `GeneratorFunction` ist kein globales Objekt, kann aber von Generatorfunktionsinstanzen erhalten werden (siehe {{jsxref("GeneratorFunction")}} für mehr Details).
+> **Note:** **Hinweis:** `GeneratorFunction` ist kein globales Objekt, kann aber von Generatorfunktionsinstanzen erhalten werden (siehe {{jsxref("GeneratorFunction")}} für mehr Details).
 
-> **Hinweis:** Der Einsatz des `GeneratorFunction` Konstruktors, um eine Funktion zu erstellen wird nicht empfohlen, weil der Funktionskörper als String übergeben wird, welcher von einigen JS Engines nicht optimiert werden kann und zu Problemen führen kann.
+> **Note:** **Hinweis:** Der Einsatz des `GeneratorFunction` Konstruktors, um eine Funktion zu erstellen wird nicht empfohlen, weil der Funktionskörper als String übergeben wird, welcher von einigen JS Engines nicht optimiert werden kann und zu Problemen führen kann.
 
 Wie alle anderen Objekte, können {{jsxref("GeneratorFunction")}} Objekte mit dem `new` Operator erstellt werden:
 
@@ -202,10 +216,12 @@ Wie alle anderen Objekte, können {{jsxref("GeneratorFunction")}} Objekte mit de
 - `arg1, arg2, ... argN`
   - : Null oder mehr Namen, welche von der Funktion als formale Parameter benutzt werden. Jeder muss ein valider JavaScript Bezeichner sein oder eine Liste solcher Strings mit Komma getrennt. Zum Beispiel "`x`", "`theValue`", or "`a,b`".
 
+<!---->
+
 - `functionBody`
   - : Ein String, der die JavaScript Statements enthält, die den Funktionskörper formen.
 
-Das Ausführen des `GeneratorFunction`Konstruktors als Funktion (ohne den Einsatz des `new` Operators) hat den selben Effekt wie das Aufrufen als Konstruktor.
+Das Ausführen des `GeneratorFunction `Konstruktors als Funktion (ohne den Einsatz des `new` Operators) hat den selben Effekt wie das Aufrufen als Konstruktor.
 
 ## Funktionsparameter
 

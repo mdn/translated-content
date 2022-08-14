@@ -29,13 +29,13 @@ Probieren Sie es aus: Kopieren Sie diese drei Zeilen CSS in eine neue Datei in e
 
 Aber wir müssen das CSS noch im HTML-Dokument verknüpfen, sonst würde die CSS-Datei von dem Browser nicht berücksichtigt. (Wenn Sie unserem Projekt nicht von Anfang an gefolgt sind, lesen Sie erst [Dateien nutzen](https://developer.mozilla.org/de/Learn/Getting_started_with_the_web/dateien_nutzen) und [HTML-Grundlagen](https://developer.mozilla.org/de/Learn/Getting_started_with_the_web/HTML_basics), um zu erfahren, was Sie davor tun müssen.)
 
-1. Öffnen Sie die Datei `index.html` und fügen die folgende Zeile irgendwo in den Kopf (zwischen die `<head>`- und `</head>`-Tags) ein:
+1.  Öffnen Sie die Datei `index.html` und fügen die folgende Zeile irgendwo in den Kopf (zwischen die `<head>`- und `</head>`-Tags) ein:
 
     ```html
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     ```
 
-2. Speichern Sie die Datei `index.html` und öffnen Sie diese in einem Browser. Es sollte wie in diesem Beispiel aussehen:
+2.  Speichern Sie die Datei `index.html` und öffnen Sie diese in einem Browser. Es sollte wie in diesem Beispiel aussehen:
 
 ![Das Mozilla-Logo und ein paar Absätze. Der Text in den Absätzen ist rot gefärbt durch CSS.](https://mdn.mozillademos.org/files/15471/beginner-css1-de.jpg)Wenn der Absatz jetzt rot ist: Herzlichen Glückwunsch! Sie haben nun zum ersten Mal Ihre eigene CSS-Datei geschrieben und eingebunden!
 
@@ -94,7 +94,7 @@ Es gibt viele verschiedene Arten von Selektoren. Bisher haben wir nur **Element-
 | ID-Selektor                                             | Element mit der entsprechenden ID wird ausgewählt. (Eine ID kann immer nur einem einzigen Element innerhalb eines Dokuments zugeordnet werden) | `#my-id` Wählt `<p id="my-id">` oder `<a id="my-id"> aus.`                   |
 | Klassen-Selektor                                        | Element(e) mit der entprechenden Klasse werden ausgewählt. (Klassen können mehreren Elementen innerhalb eines Dokuments zugeordnet werden)     | `.my-class` Wählt `<p class="my-class">` und `<a class="my-class"> aus.`     |
 | Attribut-Selektor                                       | Element(e) mit entsprechendem Attribut werden ausgewählt.                                                                                      | `img[src]` Wählt `<img src="myimage.png">` , aber nicht `<img> aus.`         |
-| Pseudoklassen-Selektoren                                | Element(e) eines bestimmten Typs, welche sich in einem bestimmten Zustand befinden (z.B.: Mauszeiger ist über dem Element)                     | `a:hover` Wählt `<a>`nur dann aus, wenn der Mauszeiger darüber bewegt wird. |
+| Pseudoklassen-Selektoren                                | Element(e) eines bestimmten Typs, welche sich in einem bestimmten Zustand befinden (z.B.: Mauszeiger ist über dem Element)                     | `a:hover` Wählt `<a> `nur dann aus, wenn der Mauszeiger darüber bewegt wird. |
 
 Es gibt viele weitere Selektoren. Sie können alle in folgender Liste finden: [Selektoren](/de/docs/Web/Guide/CSS/Getting_started/Selectors).
 
@@ -102,14 +102,14 @@ Es gibt viele weitere Selektoren. Sie können alle in folgender Liste finden: [S
 
 Jetzt, da wir uns einige CSS-Grundlagen angeschaut haben, lassen Sie uns damit anfangen, mehr Regelsätze und Eigenschaften zu unserer `style.css`-Datei hinzuzufügen. Zuerst ändern wir die Schrift, damit unser Text besser aussieht`.`
 
-1. In einem vorherigen Artikel haben Sie schon eine Schriftart von [Google Fonts](/de/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Schriftart) ausgewählt, den zugehörigen Code sollten Sie schon irgendwo gespeichert haben. Fügen Sie das `<link ... >` Element in den Kopf Ihrer index.html Datei ein (zwischen den `<head>` und `</head>` Tags). Das `<link>` Element sollte wie folgt aussehen:
+1.  In einem vorherigen Artikel haben Sie schon eine Schriftart von [Google Fonts](/de/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Schriftart) ausgewählt, den zugehörigen Code sollten Sie schon irgendwo gespeichert haben. Fügen Sie das `<link ... >` Element in den Kopf Ihrer index.html Datei ein (zwischen den `<head>` und `</head>` Tags). Das `<link>` Element sollte wie folgt aussehen:
 
     ```html
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     ```
 
-2. Löschen Sie die existierende Regel in Ihrer `style.css`-Datei. Es war ein guter Test, aber roter Text sieht doch nicht so schön aus.
-3. Fügen Sie stattdessen die folgenden Zeilen in die CSS-Datei ein. Ersetzen Sie 'Platzhalter' mit der Schriftart, welche Sie auf Google Fonts ausgewählt haben (`font-family` bedeutet soviel wie "Schriftfamilie" und deutet auf die Schriftarten, welche Sie benutzen möchten). Diese Regel setzt eine globale Schriftart (`font-family`) und Schriftgröße(`font-size`) für die ganze Webseite, da im `<html>`-Element alle anderen Elemente enthalten sind. Die Eigenschaften `font-family` und `font-size` werden an die Elemente innerhalb eines Elements weiter vererbt:
+2.  Löschen Sie die existierende Regel in Ihrer `style.css`-Datei. Es war ein guter Test, aber roter Text sieht doch nicht so schön aus.
+3.  Fügen Sie stattdessen die folgenden Zeilen in die CSS-Datei ein. Ersetzen Sie 'Platzhalter' mit der Schriftart, welche Sie auf Google Fonts ausgewählt haben (`font-family` bedeutet soviel wie "Schriftfamilie" und deutet auf die Schriftarten, welche Sie benutzen möchten). Diese Regel setzt eine globale Schriftart (`font-family`) und Schriftgröße(`font-size`) für die ganze Webseite, da im `<html>`-Element alle anderen Elemente enthalten sind. Die Eigenschaften `font-family` und `font-size` werden an die Elemente innerhalb eines Elements weiter vererbt:
 
     ```css
     html {
@@ -118,9 +118,9 @@ Jetzt, da wir uns einige CSS-Grundlagen angeschaut haben, lassen Sie uns damit a
     }
     ```
 
-    > **Hinweis:** In einem Kommentar wurde hinzugefügt, was "px" bedeutet. Alles in einem CSS-Dokument, was zwischen `/*` und `*/` steht, ist ein **CSS-Kommentar**, welchen der Browser ignoriert. Kommentare sind für Sie selbst gedacht, hier können Sie für sich hilfreiche Notizen machen.
+    > **Note:** **Hinweis:** In einem Kommentar wurde hinzugefügt, was "px" bedeutet. Alles in einem CSS-Dokument, was zwischen `/*` und `*/` steht, ist ein **CSS-Kommentar**, welchen der Browser ignoriert. Kommentare sind für Sie selbst gedacht, hier können Sie für sich hilfreiche Notizen machen.
 
-4. Nun setzen wir die Schriftgröße für die textbeinhaltenden HTML-Elemente {{htmlelement("h1")}}, {{htmlelement("li")}} und {{htmlelement("p")}} fest. Wir zentrieren auch den Text von unseren Überschriften mit `text-align: center;` und ändern die Linienhöhe (`line-height`) und den Buchstabenabstand (`letter-spacing`), um den Text der `p` und `li` Elemente etwas lesbarer zu machen:
+4.  Nun setzen wir die Schriftgröße für die textbeinhaltenden HTML-Elemente {{htmlelement("h1")}}, {{htmlelement("li")}} und {{htmlelement("p")}} fest. Wir zentrieren auch den Text von unseren Überschriften mit `text-align: center;` und ändern die Linienhöhe (`line-height`) und den Buchstabenabstand (`letter-spacing`), um den Text der `p` und `li` Elemente etwas lesbarer zu machen:
 
     ```css
     h1 {
@@ -171,7 +171,7 @@ html {
 }
 ```
 
-Dieser Regelsatz ändert die Hintergrundfarbe auf der ganzen Seite. Ändern Sie die Hintergrundfarbe in die, welche Sie sich ausgesucht haben,[als Sie Ihre Webseite geplant haben.](/de/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Hauptfarbe)
+Dieser Regelsatz ändert die Hintergrundfarbe auf der ganzen Seite. Ändern Sie die Hintergrundfarbe in die, welche Sie sich ausgesucht haben,[ als Sie Ihre Webseite geplant haben.](/de/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Hauptfarbe)
 
 ### Dem body Form geben
 
@@ -228,7 +228,7 @@ img {
 
 Zuletzt werden wir das Bild auf unserer Seite zentrieren. Wir können das wieder mit `margin: 0 auto;` erreichen, allerdings müssen wir noch etwas anderes tun, damit dies funktioniert. Das `<body>`-Element ist ein Block bzw. eine Box, weswegen es ein `margin` und `padding` hat. Das `<img>`-Element ist ein **Inline-Element**, es wird nicht als Box angezeigt und hat kein `margin` oder `padding`. Um das Bild in ein **Block-Element** umzuwandeln, geben wir ihm einfach die folgende Deklaration: `display: block;`.
 
-> **Hinweis:** Wenn Sie `diplay: block;` jetzt noch nicht ganz verstehen, ist das nicht schlimm. Wenn Sie CSS mehr studieren, dann werden Sie auch den Unterschied zwischen Inline-Elementen und Block-Elementen verstehen. Mehr zu den Möglichen `display` Werten können Sie in unserer [Display Referenz](/de/docs/Web/CSS/display) lesen.
+> **Note:** **Hinweis:** Wenn Sie `diplay: block;` jetzt noch nicht ganz verstehen, ist das nicht schlimm. Wenn Sie CSS mehr studieren, dann werden Sie auch den Unterschied zwischen Inline-Elementen und Block-Elementen verstehen. Mehr zu den Möglichen `display` Werten können Sie in unserer [Display Referenz](/de/docs/Web/CSS/display) lesen.
 
 ## Zusammenfassung
 

@@ -6,7 +6,7 @@ original_slug: Web/CSS/Prywatnosc_i_znacznik_:visited
 ---
 {{cssref}}
 
-Przed mniej więcej rokiem 2010, [CSS](/pl/docs/Web/CSS)-owy znacznik {{ cssxref(":visited") }} pozwalał stronom WWW na ujawnianie historii przeglądania użytkownika i które ze stron odwiedził. Było to możliwe przez {{domxref("window.getComputedStyle")}} i inne techniki. Proces ten działał błyskawicznie i pozwalał nie tylko na ujawnienie, co użytkownik robił w sieci, ale również pozwalał na dowiedzenie się wielu informacji o jego tożsamości.
+Przed mniej więcej rokiem 2010, [CSS](/pl/docs/Web/CSS)-owy znacznik {{ cssxref(":visited") }} pozwalał stronom WWW na ujawnianie historii przeglądania użytkownika i które ze stron odwiedził. Było to możliwe przez {{domxref("window.getComputedStyle")}} i inne techniki. Proces ten działał błyskawicznie i pozwalał nie tylko na ujawnienie, co użytkownik robił w sieci, ale również pozwalał na dowiedzenie się wielu informacji o jego tożsamości.
 
 By załagodzić ten problem, w {{ Gecko("2") }} zaimplementowano aktualizacje dot. prywatności celem ograniczenia ilości informacji zbieranych przez odwiedzone linki. W przypadku innych przeglądarek dokonano podobnych zmian.
 

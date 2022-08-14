@@ -28,7 +28,7 @@ Ein String, der das Zeichen an der angegebenen `index`-Stelle wiedergibt. Wenn `
 
 ## Beschreibung
 
-Zeichen in einem String werden von links nach rechts indexiert. Der Index des ersten Zeichens ist 0, der Index des letzten Zeichens eines Strings namens `stringName` ist`stringName.length - 1`.
+Zeichen in einem String werden von links nach rechts indexiert. Der Index des ersten Zeichens ist 0, der Index des letzten Zeichens eines Strings namens `stringName` ist` stringName.length - 1`.
 
 Wenn kein Index bereitgestellt wird, ist dieser standardmäßig 0.
 

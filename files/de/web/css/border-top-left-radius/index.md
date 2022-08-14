@@ -43,6 +43,8 @@ Seit Gecko 1.9.1 (Firefox 3.5) wird ein zweiter, optionaler Wert unterstützt, w
                border-top-left-radius: 20px;  /* Firefox 4; Browser mit CSS3 Unterstützung */
     }
 
+<!---->
+
     /* Elliptische Ecke (unterstützt seit Firefox 3.5 [Gecko 1.9.1]) */
 
     div { -moz-border-radius-topleft:   20px;       /* Runde Ecke, Fallback für Firefox 1-3.0 */

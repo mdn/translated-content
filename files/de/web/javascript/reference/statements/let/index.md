@@ -315,6 +315,6 @@ Die Erklärung, daß **let** von englisch "to let sth. be sth." abgeleitet ist u
 
 - [`var`](/de/docs/Web/JavaScript/Reference/Statements/var)
 - [`const`](/de/docs/Web/JavaScript/Reference/Statements/const)
-- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)[(englisch)](http://stackoverflow.com/questions/37916940/js-why-let-have-this-name)
-- [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)[(englisch)](http://stackoverflow.com/questions/37916940/js-why-let-have-this-name)
-- [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md)[(englisch)](http://stackoverflow.com/questions/37916940/js-why-let-have-this-name)
+- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)[ (englisch)](http://stackoverflow.com/questions/37916940/js-why-let-have-this-name)
+- [Breaking changes in `let` and `const` in Firefox 44 ](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)[(englisch)](http://stackoverflow.com/questions/37916940/js-why-let-have-this-name)
+- [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope ](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md)[(englisch)](http://stackoverflow.com/questions/37916940/js-why-let-have-this-name)

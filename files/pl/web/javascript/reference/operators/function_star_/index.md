@@ -50,7 +50,7 @@ var x = function*(y) {
 | Specyfikacja                                                                                         | Status                       | Komentarz             |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
 | {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2015')}}     | Definicja początkowa. |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                       |
+| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                       |
 
 ## Wsparcie przeglądarek
 

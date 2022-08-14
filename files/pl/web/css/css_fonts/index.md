@@ -15,8 +15,12 @@ Element `<basefont>` ustanawia domyślny rozmiar czcionki dla dokumentu. Rozmiar
 - color
   - : Ten atrybut ustawia kolor tekstu przy użyciu nazwanego koloru lub koloru określonego w formacie szesnastkowym #RRGGBB.
 
+<!---->
+
 - face
   - : Ten atrybut zawiera listę jednej lub wielu nazw czcionek. Tekst dokumentu w domyślnym stylu jest wyświetlany w pierwszym rodzaju czcionki, który wspiera przeglądarka użytkownika. Jeśli żadna z czcionek podanych w liście nie jest zainstalowana w lokalnym systemie, przeglądarka zwykle wybierze domyślną dla tego systemu czcionkę proporcjonalną lub o stałej szerokości.
+
+<!---->
 
 - size
   - : Ten atrybut określa rozmiar czcionki w wartościach numerycznych lub względnych. Wartości numeryczne zawierają się w zakresie od 1 do 7, gdzie 1 jest wartością najmniejszą, zaś 3 domyślną.

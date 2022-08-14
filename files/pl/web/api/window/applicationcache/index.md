@@ -7,7 +7,7 @@ translation_of: Web/API/Window/applicationCache
 
 ## Podsumowanie
 
-Zwraca referencję do obiektu przetrzymującego `cache` aplikacji.
+Zwraca referencję do obiektu przetrzymującego `cache` aplikacji.
 
 ## Składnia
 
@@ -15,7 +15,7 @@ Zwraca referencję do obiektu przetrzymującego `cache` aplikacji.
 
 ### Parametry
 
-- `cache` jest obiektem mającym referencję do {{domxref("OfflineResourceList")}}.
+- `cache` jest obiektem mającym referencję do {{domxref("OfflineResourceList")}}.
 
 ## Specyfikacja
 

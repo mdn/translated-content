@@ -13,11 +13,11 @@ CSS (Cascading Style Sheets) wird zum Stylen und Layouten von Webseiten verwende
 
 Bevor Sie mit diesem Lernmodul beginnen, sollten Sie:
 
-1. grundsätzlich mit Computern umgehen und das Internet passiv nutzen (d.h. im Internet surfen und Inhalte konsumieren) können.
-2. sich bereits eine einfache Arbeitsumgebung eingerichtet haben (wie in [Notwendige Software installieren](/de/docs/Learn/Getting_started_with_the_web/Installing_basic_software) beschrieben) und wissen, wie Sie Dateien erstellen und ordnen (wie in [Dateien nutzen](/de/docs/Learn/Getting_started_with_the_web/dateien_nutzen) erklärt).
-3. über grundlegende HTML-Kenntnisse (entsprechend dem Lernmodul [Einführung in HTML](/de/docs/Learn/HTML/Einf%C3%BChrung_in_HTML)) verfügen.
+1.  grundsätzlich mit Computern umgehen und das Internet passiv nutzen (d.h. im Internet surfen und Inhalte konsumieren) können.
+2.  sich bereits eine einfache Arbeitsumgebung eingerichtet haben (wie in [Notwendige Software installieren](/de/docs/Learn/Getting_started_with_the_web/Installing_basic_software) beschrieben) und wissen, wie Sie Dateien erstellen und ordnen (wie in [Dateien nutzen](/de/docs/Learn/Getting_started_with_the_web/dateien_nutzen) erklärt).
+3.  über grundlegende HTML-Kenntnisse (entsprechend dem Lernmodul [Einführung in HTML](/de/docs/Learn/HTML/Einf%C3%BChrung_in_HTML)) verfügen.
 
-> **Hinweis:** Wenn Sie an einem Computer/Tablet/Gerät arbeiten, auf dem Sie nicht die Möglichkeit haben, eigene Dateien zu erstellen, können Sie die meisten Code-Beispiele in einem Online-Editor wie [JSBin](http://jsbin.com/) oder [Thimble](https://thimble.mozilla.org/)ausprobieren.
+> **Note:** **Hinweis**: Wenn Sie an einem Computer/Tablet/Gerät arbeiten, auf dem Sie nicht die Möglichkeit haben, eigene Dateien zu erstellen, können Sie die meisten Code-Beispiele in einem Online-Editor wie [JSBin](http://jsbin.com/) oder [Thimble ](https://thimble.mozilla.org/)ausprobieren.
 
 ## Lerneinheiten
 

@@ -10,8 +10,8 @@ Natürlich können auch Bilder gezeichnet werden. Diese können die unterschiedl
 
 Um Bilder zu importieren bedarf es bloß zwei Schritte:
 
-1. Ein {{domxref("HTMLImageElement")}} Objekt erzeugen oder das HTML Element selektieren.
-2. Das Bild mithilfe der `drawImage()` Funktion zeichnen.
+1.  Ein {{domxref("HTMLImageElement")}} Objekt erzeugen oder das HTML Element selektieren.
+2.  Das Bild mithilfe der `drawImage()` Funktion zeichnen.
 
 ## Bilder importieren
 

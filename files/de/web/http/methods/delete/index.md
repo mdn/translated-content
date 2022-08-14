@@ -33,6 +33,8 @@ Bei erfolgreicher Anwendung einer `DELETE`-Methode sind mehrere Antwortzustandsc
 - Einen {{HTTPStatus("204")}} (`Kein Inhalt`) Statuscode, wenn die Aktion durchgeführt wurde und keine weiteren Informationen zu liefern sind.
 - Einen {{HTTPStatus("200")}} (`OK`) Statuscode, wenn die Aktion ausgeführt wurde und die Antwortnachricht eine Darstellung enthält, die den Status beschreibt.
 
+<!---->
+
     HTTP/1.1 200 OK
     Date: Wed, 21 Oct 2015 07:28:00 GMT
 

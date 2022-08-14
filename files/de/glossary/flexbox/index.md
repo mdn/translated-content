@@ -40,24 +40,24 @@ Learn more
 - CSS Flexbox Guide: _[Mastering wrapping of flex items](/de/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
 - CSS Flexbox Guide: _[Typical use cases of flexbox](/de/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)_
 
-1. [MDN Web Docs Glossary](/de/docs/Glossary)
+1.  [MDN Web Docs Glossary](/de/docs/Glossary)
 
-    1. {{Glossary("Flex")}}
-    2. {{Glossary("Flex Container")}}
-    3. {{Glossary("Flex Item")}}
-    4. {{Glossary("Grid")}}
+    1.  {{Glossary("Flex")}}
+    2.  {{Glossary("Flex Container")}}
+    3.  {{Glossary("Flex Item")}}
+    4.  {{Glossary("Grid")}}
 
-2. Related CSS Properties
+2.  Related CSS Properties
 
-    1. {{cssxref("align-content")}}
-    2. {{cssxref("align-items")}}
-    3. {{cssxref("align-self")}}
-    4. {{cssxref("flex")}}
-    5. {{cssxref("flex-basis")}}
-    6. {{cssxref("flex-direction")}}
-    7. {{cssxref("flex-flow")}}
-    8. {{cssxref("flex-grow")}}
-    9. {{cssxref("flex-shrink")}}
+    1.  {{cssxref("align-content")}}
+    2.  {{cssxref("align-items")}}
+    3.  {{cssxref("align-self")}}
+    4.  {{cssxref("flex")}}
+    5.  {{cssxref("flex-basis")}}
+    6.  {{cssxref("flex-direction")}}
+    7.  {{cssxref("flex-flow")}}
+    8.  {{cssxref("flex-grow")}}
+    9.  {{cssxref("flex-shrink")}}
     10. {{cssxref("flex-wrap")}}
     11. {{cssxref("justify-content")}}
     12. {{cssxref("order")}}
