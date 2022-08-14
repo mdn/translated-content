@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 
 <dl>
  <dt><code>separator</code> {{optional_inline}}</dt>
- <dd>Ein String, der die Punkte angibt, an denen jede Aufteilung erfolgen soll. <code>separator</code> wird als Zeichenfolge oder als {{jsxref("Global_Objects/RegExp", "regulärer Ausdruck", "", 1)}} behandelt. Wenn ein Nur-Text <code>separator</code> mehr als ein Zeichen enthält, muss der gesamte String gefunden werden, damit eine Trennung erfolgt. Wenn <code>separator</code> nicht angegeben wird oder in <code>str</code> nicht vorkommt, enthält das zurückgegebene Array ein Element, das den gesamten String enthält. Wenn <code>separator</code> ein leerer String ist, wird jedes Zeichen von <code>str</code> in ein Array-Element umgewandelt.</dd>
+ <dd>Ein String, der die Punkte angibt, an denen jede Aufteilung erfolgen soll. <code>separator</code> wird als Zeichenfolge oder als {{jsxref("Global_Objects/RegExp", "regulärer Ausdruck", "", 1)}} behandelt. Wenn ein Nur-Text <code>separator</code> mehr als ein Zeichen enthält, muss der gesamte String gefunden werden, damit eine Trennung erfolgt. Wenn <code>separator</code> nicht angegeben wird oder in <code>str</code> nicht vorkommt, enthält das zurückgegebene Array ein Element, das den gesamten String enthält. Wenn <code>separator</code> ein leerer String ist, wird jedes Zeichen von <code>str</code> in ein Array-Element umgewandelt.</dd>
  <dt><code>limit</code> {{optional_inline}}</dt>
  <dd>Ganzzahl, die ein Limit für die Anzahl der zu findenden Splits angibt. Wenn dieser Parameter angegeben wird, teilt die <code>split()</code> Methode die Zeichenfolge bei jedem Vorkommen des angegebenen <code>separator</code> auf, stoppt jedoch, nachdem die Anzahl von <code>limit</code> erreicht wurde. Es können immer noch weniger Einträge als <code>limit</code> enthalten sein, wenn das Ende des Strings erreicht wurde, bevor das angegebene Limit erreicht wird. Der übrig gebliebene Text wird im neuen Array nicht enthalten sein.</dd>
 </dl>
@@ -128,11 +128,11 @@ console.log(splits);</pre>
 
 <pre class="brush: js">[ "Hello ", "1", " word. Sentence number ", "2", "." ]</pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Teilen_mit_einem_Array_als_Trennzeichen">Teilen mit einem Array als Trennzeichen</h3>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">var myString = 'this|is|a|Test';
 var splits = myString.split(['|']);
@@ -183,17 +183,17 @@ var strReverse = str.split(/(?:)/u).reverse().join('');
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.5.4.14', 'String.prototype.split')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-string.prototype.split', 'String.prototype.split')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

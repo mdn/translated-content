@@ -2492,7 +2492,6 @@
 /zh-CN/docs/Web/SVG/Element/圆	/zh-CN/docs/Web/SVG/Element/circle
 /zh-CN/docs/Web/SVG/Element/多边形	/zh-CN/docs/Web/SVG/Element/polygon
 /zh-CN/docs/Web/SVG/Element/线性渐变	/zh-CN/docs/Web/SVG/Element/linearGradient
-/zh-CN/docs/Web/SVG/Firefox对SVG_1.1的支持	/zh-CN/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /zh-CN/docs/Web/SVG/Tutorial/渐变	/zh-CN/docs/Web/SVG/Tutorial/Gradients
 /zh-CN/docs/Web/Security/CSP/Using_Content_Security_Policy	/zh-CN/docs/Web/HTTP/CSP
 /zh-CN/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types

@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 
 <p>Wenn der <code>dayValue</code> Parameter nicht gesetzt wird, bekommt er den Rückgabewert der {{jsxref("Date.prototype.getDate()", "getDate()")}} Methode.</p>
 
-<p>Wenn ein Parameter mit einem Wert außerhalb seiner Grenzen übergebn wird, berücksichtigt die  <code>setMonth()</code> Methode diese Information in dem {{jsxref("Date")}} Objekt. Wird zum Beispiel der Wert 15 für den <code>monthValue</code> Parameter übergeben, so wird das Jahr um 1 inkrementiert und der Monat auf dem Wert 3 gesetzt.</p>
+<p>Wenn ein Parameter mit einem Wert außerhalb seiner Grenzen übergebn wird, berücksichtigt die  <code>setMonth()</code> Methode diese Information in dem {{jsxref("Date")}} Objekt. Wird zum Beispiel der Wert 15 für den <code>monthValue</code> Parameter übergeben, so wird das Jahr um 1 inkrementiert und der Monat auf dem Wert 3 gesetzt.</p>
 
 <p>Der aktuelle Tag des Monats hat einen Einfluss auf diese Methode. Konzeptionell wird die Anzahl der Tage des aktuellen Monats hinzugefügt, um zum 1. des neuen Monats zu bekommen. Wird zum Beispiel auf dem 31. August 2016 setMonth mit dem Wert 1 aufgerufen, so wird der 2. März 2016 zurückgegeben. Dieses liegt daran, dass der Februar im Jahr 2016 nur 29 Tage hat.</p>
 
@@ -74,17 +74,17 @@ console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.9.5.38', 'Date.prototype.setMonth')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

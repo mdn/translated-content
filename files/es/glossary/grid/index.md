@@ -14,23 +14,21 @@ Si colocas contenido fuera de esta cuadrícula explícita, o si confías en la u
 
 En el siguiente ejemplo, he creado una _grilla explícita_ de tres columnas y dos filas. La _tercera_ fila en la cuadrícula es una pista de la fila de la _grilla implícita_, formada debido a que son más de seis los elementos que llenan las pistas explícitas.
 
-## Ejemplo
-
 ```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
-border: 2px solid #f76707;
-border-radius: 5px;
-background-color: #fff4e6;
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
 }
 
 .wrapper > div {
-border: 2px solid #ffa94d;
-border-radius: 5px;
-background-color: #ffd8a8;
-padding: 1em;
-color: #d9480f;
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
 }
 ```
 
@@ -55,7 +53,7 @@ color: #d9480f;
 </div>
 ```
 
-{{ EmbedLiveSample('ejemplo', '500', '330') }}
+{{ EmbedLiveSample('example', '500', '330') }}
 
 ## Aprende Más
 
@@ -66,6 +64,6 @@ color: #d9480f;
 - {{cssxref("grid")}}
 - {{cssxref("grid-template")}}
 
-### <span class="short_text" id="result_box" lang="es"><span>Otras lecturas</span></span>
+### Otras lecturas
 
-- Guía de diseño CSS Grid: _[Conceptos Básicos de Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Guía de diseño CSS Grid: _[Conceptos Básicos de Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_

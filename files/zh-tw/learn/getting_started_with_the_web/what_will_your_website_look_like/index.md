@@ -13,9 +13,9 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 開始之前，請你先回答下列問題：
 
-1.  **你網站的主題為何？**你喜歡貓貓狗狗？想寫城市遊記？或你愛打電動呢？
-2.  **你對某個主題所提供的資訊到哪種程度？**寫個標題加上幾段文字，或是在網頁上加個圖片。
-3.  簡單的問：**你網站的外觀為何？**背景顏色？哪種字型比較合適？一般字型？卡通化的字型？又粗又大的字體？還是要纖細淡化的文字呢？
+1. **你網站的主題為何？**你喜歡貓貓狗狗？想寫城市遊記？或你愛打電動呢？
+2. **你對某個主題所提供的資訊到哪種程度？**寫個標題加上幾段文字，或是在網頁上加個圖片。
+3. 簡單的問：**你網站的外觀為何？**背景顏色？哪種字型比較合適？一般字型？卡通化的字型？又粗又大的字體？還是要纖細淡化的文字呢？
 
 > **備註：** 複雜專案就需要更詳細的建構指南，包含所用的顏色、字型、物件之間的留白空間、適合的書寫風格，等等。這些要素有時會統整為設計指南或品牌手冊，你可參閱〈[Firefox OS Guidelines](https://www.mozilla.org/en-US/styleguide/products/firefox-os/)〉進一步了解。
 
@@ -47,9 +47,9 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 可透過 [Google 的圖片搜尋](https://www.google.com/imghp?gws_rd=ssl)找到適合的圖片。
 
-1.  找到你想要的圖片時，點選該圖片。
-2.  按下「查看圖片」按鈕。
-3.  接著在圖片上點擊滑鼠右鍵 (Mac 則是 Ctrl + click)，選擇「將圖片另存新檔...」，將圖片儲存到你熟悉的位置。或是可複製瀏覽器網址列中的網址，以待往後使用。
+1. 找到你想要的圖片時，點選該圖片。
+2. 按下「查看圖片」按鈕。
+3. 接著在圖片上點擊滑鼠右鍵 (Mac 則是 Ctrl + click)，選擇「將圖片另存新檔...」，將圖片儲存到你熟悉的位置。或是可複製瀏覽器網址列中的網址，以待往後使用。
 
 ![](updated-google-images.png)
 
@@ -61,10 +61,10 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 選用自己喜歡的字型：
 
-1.  到 [Google Fonts](http://www.google.com/fonts) 上捲動清單，直找到你喜歡的字型。你也可以使用左邊的控制功能先行篩選。
-2.  點擊你想要的字型旁邊「Add to collection」按鈕。
-3.  點擊頁面底端的「使用 (Use)」按鈕。
-4.  進入下一頁，捲動到區塊 3 與區塊 4，將 Google 顯示的程式碼複製到你的文字編輯器中，儲存以待稍後利用。
+1. 到 [Google Fonts](http://www.google.com/fonts) 上捲動清單，直找到你喜歡的字型。你也可以使用左邊的控制功能先行篩選。
+2. 點擊你想要的字型旁邊「Add to collection」按鈕。
+3. 點擊頁面底端的「使用 (Use)」按鈕。
+4. 進入下一頁，捲動到區塊 3 與區塊 4，將 Google 顯示的程式碼複製到你的文字編輯器中，儲存以待稍後利用。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 

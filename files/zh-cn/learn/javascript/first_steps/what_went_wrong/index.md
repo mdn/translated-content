@@ -41,8 +41,8 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 让我们重回猜数字游戏，这次我们将故意引入一些错误。请到 Github 下载一份 [number-game-errors.html](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) （或 [在线运行](https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)）。
 
-1.  请分别在你的文本编辑器和浏览器中打开刚下载的文件。
-2.  先试玩游戏，你会发现在点击“确定”按钮时，游戏并没有响应。
+1. 请分别在你的文本编辑器和浏览器中打开刚下载的文件。
+2. 先试玩游戏，你会发现在点击“确定”按钮时，游戏并没有响应。
 
 > **备注：** 你可能还在为修复你自己版本的游戏头疼，但我们仍然希望你先用我们的版本来完成这一节，这样你才能学到本节中的技术。然后再去修复自己的游戏也不晚。
 
@@ -52,11 +52,11 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 以前的课程中，你学会了在 [开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 中输入一些简单的 JavaScript 命令。（如果你忘记了如何在浏览器中打开它，可以直接打开上面的链接）。更实用的是，当 JavaScript 代码进入浏览器的 JavaScript 引擎时，如果存在语法错误，控制台会提供出错信息。现在我们去看一看。
 
-1.  打开 `number-game-errors.html` 所在的标签页，然后打开 JavaScript 控制台。你将看到以下出错信息：
+1. 打开 `number-game-errors.html` 所在的标签页，然后打开 JavaScript 控制台。你将看到以下出错信息：
 
     ![不是函数](https://mdn.mozillademos.org/files/16256/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-17_20.27.08.png)
 
-2.  这个错误很容易跟踪，浏览器为你提供了几条有用的信息（截图来自 Firefox，其他浏览器也提供类似信息）。从左到右依次为：
+2. 这个错误很容易跟踪，浏览器为你提供了几条有用的信息（截图来自 Firefox，其他浏览器也提供类似信息）。从左到右依次为：
 
     - 红色“!”表示这是一个错误。
     - 一条出错信息，表示问题出在哪儿：“TypeError：**guessSubmit**.addeventListener is not a function”（类型错误：**guessSubmit**.addeventListener 不是函数）
@@ -64,40 +64,40 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
     - JavaScript 文件名，点击将跳转到开发者工具的“调试器”标签页。如果你按照这个链接，你会看到错误突出显示的确切行。
     - 出错的行，以及导致错误的首个字符号。这里错误来自 86 行，第 3 个字符。
 
-3.  我们在代码编辑器中找到第 86 行：
+3. 我们在代码编辑器中找到第 86 行：
 
     ```js
     guessSubmit.addeventListener('click', checkGuess);
     ```
 
-4.  出错信息显示“guessSubmit.addeventListener 不是一个函数”，说明这里可能存在拼写错误。如果你不确定某语法的拼写是否正确，可以到 MDN 上去查找，目前最简便的方法就是去你喜欢的搜索引擎搜索“MDN + 语言*特性”。就本文当前内容你可以点击*：[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)。
-5.  因此这里错误显然是我们把函数名写错造成的。请记住，JavaScript 区分大小写，所以任何轻微的不同或大小写问题都会导致出错。将 `addeventListener` 改为 `addEventListener` 便可解决。
+4. 出错信息显示“guessSubmit.addeventListener 不是一个函数”，说明这里可能存在拼写错误。如果你不确定某语法的拼写是否正确，可以到 MDN 上去查找，目前最简便的方法就是去你喜欢的搜索引擎搜索“MDN + 语言*特性”。就本文当前内容你可以点击*：[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)。
+5. 因此这里错误显然是我们把函数名写错造成的。请记住，JavaScript 区分大小写，所以任何轻微的不同或大小写问题都会导致出错。将 `addeventListener` 改为 `addEventListener` 便可解决。
 
 > **备注：** 更多信息请参考 [类型错误：“x”不是一个函数](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_a_function)。
 
 ### 语法错误：第二轮
 
-1.  保存页面并刷新，可以看到出错信息不见了。
-2.  现在，如果尝试输入一个数字并按确定按钮，你会看到...另一个错误！ ![](https://mdn.mozillademos.org/files/16264/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-17_21.56.00.png)
-3.  此次出错信息为“TypeError：lowOrHi is null”（“类型错误：lowOrHi 为 null”），在第 78 行。
+1. 保存页面并刷新，可以看到出错信息不见了。
+2. 现在，如果尝试输入一个数字并按确定按钮，你会看到...另一个错误！ ![](https://mdn.mozillademos.org/files/16264/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-17_21.56.00.png)
+3. 此次出错信息为“TypeError：lowOrHi is null”（“类型错误：lowOrHi 为 null”），在第 78 行。
 
     > **备注：** [`Null`](/zh-CN/docs/Glossary/Null)是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 `lowOrHi` 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。
 
     > **备注：** 这条错误没有在页面加载时立即发生，是因为它发生在函数内部（`checkGuess() { ... }`块中）。函数内部的代码运行于一个外部代码相互独立的域内，后面函数的文章中将更详细地讲解。此时此刻，只有当代码运行至 86 行并调用 `checkGuess()` 函数时，代码才会抛出出错信息。
 
-4.  请观察第 78 行代码：
+4. 请观察第 78 行代码：
 
     ```js
     lowOrHi.textContent = '你猜高了！';
     ```
 
-5.  该行试图将 `lowOrHi` 变量中的` textContent` 属性设置为一个字符串，但是失败了，这是因为 `lowOrHi` 并不包含预期的内容。为了一探究竟，你可以在代码中查找一下该变量的的其他实例。`lowOrHi` 最早出现于第 48 行：
+5. 该行试图将 `lowOrHi` 变量中的 `textContent` 属性设置为一个字符串，但是失败了，这是因为 `lowOrHi` 并不包含预期的内容。为了一探究竟，你可以在代码中查找一下该变量的的其他实例。`lowOrHi` 最早出现于第 48 行：
 
     ```js
     const lowOrHi = document.querySelector('lowOrHi');
     ```
 
-6.  此处，我们试图让该变量包含一个指向文档 HTML 中特定元素的引用。我们来检查一下在该行代码执行后变量的值是否为 `null`。在第 49 行添加以下代码：
+6. 此处，我们试图让该变量包含一个指向文档 HTML 中特定元素的引用。我们来检查一下在该行代码执行后变量的值是否为 `null`。在第 49 行添加以下代码：
 
     ```js
     console.log(lowOrHi);
@@ -105,23 +105,23 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
     > **备注：** [`console.log()`](/zh-CN/docs/Web/API/Console/log) 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 `lowOrHi` 的值打印至控制台。
 
-7.  保存并刷新，你将在控制台看到 `console.log()` 的执行结果：![](https://mdn.mozillademos.org/files/16275/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-18_16.43.40.png) 显然，此处 `lowOrHi` 的值为 `null`，所以第 48 行肯定有问题。
-8.  我们来思考问题有哪些可能。第 48 行使用 [`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector) 方法和一个 CSS 选择器来取得一个元素的引用。进一步查看我们的文件，我们可以找到有问题的段落：
+7. 保存并刷新，你将在控制台看到 `console.log()` 的执行结果：![](https://mdn.mozillademos.org/files/16275/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7_2018-10-18_16.43.40.png) 显然，此处 `lowOrHi` 的值为 `null`，所以第 48 行肯定有问题。
+8. 我们来思考问题有哪些可能。第 48 行使用 [`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector) 方法和一个 CSS 选择器来取得一个元素的引用。进一步查看我们的文件，我们可以找到有问题的段落：
 
     ```js
     <p class="lowOrHi"></p>
     ```
 
-9.  这里我们需要一个类选择器，它应以一个点开头（`.`），但被传递到第 48 行的`querySelector()`方法中的选择器没有点。这可能是问题所在！尝试将第 48 行中的` lowOrHi` 改成 `.lowOrHi`。
+9. 这里我们需要一个类选择器，它应以一个点开头（`.`），但被传递到第 48 行的`querySelector()`方法中的选择器没有点。这可能是问题所在！尝试将第 48 行中的 `lowOrHi` 改成 `.lowOrHi`。
 10. 再次保存并刷新，此时 `console.log()` 语句应该返回我们想要的 `<p>` 元素。终于把错误搞定了！此时你可以把 `console.log()` 一行删除，或保留它以便随后参考。选择权在你。
 
 > **备注：** 此错误的更多详细信息请参阅：[类型错误：“x”（不）是“y”](/zh-CN/docs/Web/JavaScript/Reference/Errors/Unexpected_type)。
 
 ### 语法错误：第三轮
 
-1.  现在，如果你再次试玩，你离成功更进了一步。游戏过程按部就班，直到猜测正确或机会用完，游戏结束。
-2.  此时如果点击“开始新游戏”，游戏将再次出错，抛出与开始时同样的错误——“TypeError：resetButton.addeventListener is not a function”！这次它来自第 94 行。
-3.  查看第 94 行，很容易看到我们犯了同样的错误。我们只需要再次将 `addeventListener `改为 `addEventListener`。现在就改吧。
+1. 现在，如果你再次试玩，你离成功更进了一步。游戏过程按部就班，直到猜测正确或机会用完，游戏结束。
+2. 此时如果点击“开始新游戏”，游戏将再次出错，抛出与开始时同样的错误——“TypeError：resetButton.addeventListener is not a function”！这次它来自第 94 行。
+3. 查看第 94 行，很容易看到我们犯了同样的错误。我们只需要再次将 `addeventListener` 改为 `addEventListener`。现在就改吧。
 
 ## 逻辑错误
 
@@ -129,7 +129,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 游戏的逻辑肯定是哪里出现了问题，因为游戏并没有返回错误，只是不能正确运行。
 
-1.  寻找` randomNumber` 变量和首次设定随机数的代码。保存着游戏开始时玩家要猜的随机数的实例大约在 44 行：
+1. 寻找 `randomNumber` 变量和首次设定随机数的代码。保存着游戏开始时玩家要猜的随机数的实例大约在 44 行：
 
     ```js
     let randomNumber = Math.floor(Math.random()) + 1;
@@ -141,13 +141,13 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
     randomNumber = Math.floor(Math.random()) + 1;
     ```
 
-2.  为了检查问题是否来自这两行，我们要再次转到我们的朋友 - 控制台：在两行代码之后各插入下面的代码：
+2. 为了检查问题是否来自这两行，我们要再次转到我们的朋友 - 控制台：在两行代码之后各插入下面的代码：
 
     ```js
     console.log(randomNumber);
     ```
 
-3.  保存并刷新，然后试玩，你会看到在控制台显示的随机数总是等于 1。
+3. 保存并刷新，然后试玩，你会看到在控制台显示的随机数总是等于 1。
 
 ### 修正逻辑错误
 
@@ -260,7 +260,7 @@ function checkGuess( {
 ## 另请参阅
 
 - 许多错误不能一一的在这里列出来，我们正在编写一个参考文档来详细说明它们的含义。请参阅 [JavaScript 出错信息参考](/zh-CN/docs/Web/JavaScript/Reference/Errors).
-- 如果你在阅读了本文之后遇到了一些错误但不知如何解决，你能够得到别人的帮助！可以到[ 学习区](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) 或者 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) 聊天室来提问。告诉我们你遇到的错误是什么，我们会尽量帮助你。附加一段你的代码也是很有用的。
+- 如果你在阅读了本文之后遇到了一些错误但不知如何解决，你能够得到别人的帮助！可以到 [学习区](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) 或者 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) 聊天室来提问。告诉我们你遇到的错误是什么，我们会尽量帮助你。附加一段你的代码也是很有用的。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 

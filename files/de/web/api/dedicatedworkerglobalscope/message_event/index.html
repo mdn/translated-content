@@ -5,7 +5,7 @@ translation_of: Web/API/DedicatedWorkerGlobalScope/message_event
 ---
 <div>{{APIRef}}</div>
 
-<p><font><font>Das </font></font><code>message</code><font><font>Ereignis wird auf ein </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope"><code>DedicatedWorkerGlobalScope</code></a><font><font>Objekt </font><font>ausgelöst, </font><font>wenn der Worker eine Nachricht von seinem übergeordneten Objekt empfängt (dh wenn der übergeordnete Benutzer eine Nachricht sendet mit </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage()</a></code><font><font>).</font></font></p>
+<p><font><font>Das </font></font><code>message</code><font><font>Ereignis wird auf ein </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope"><code>DedicatedWorkerGlobalScope</code></a><font><font>Objekt </font><font>ausgelöst, </font><font>wenn der Worker eine Nachricht von seinem übergeordneten Objekt empfängt (dh wenn der übergeordnete Benutzer eine Nachricht sendet mit </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage()</a></code><font><font>).</font></font></p>
 
 <table class="properties">
  <tbody>
@@ -38,20 +38,20 @@ worker.addEventListener('message', (event) =&gt; {
     console.log(`Received message from worker: ${event.data}`)
 });</pre>
 
-<p>Der Worker kann auf diese Nachricht warten, indem er <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> verwendet:</p>
+<p>Der Worker kann auf diese Nachricht warten, indem er <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> verwendet:</p>
 
 <pre class="brush: js notranslate">// inside static/scripts/worker.js
 
 self.addEventListener('message', (event) =&gt; {
-    console.log(`Received message from parent: ${event.data}`);
+    console.log(`Received message from parent: ${event.data}`);
 });</pre>
 
-<p>Alternativ könnte er es mit der <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage">onmessage</a></code> <font>Event-Handler-Eigenschaft </font><font>abhören</font>:</p>
+<p>Alternativ könnte er es mit der <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage">onmessage</a></code> <font>Event-Handler-Eigenschaft </font><font>abhören</font>:</p>
 
 <pre class="brush: js notranslate">// static/scripts/worker.js
 
 self.onmessage = (event) =&gt; {
-    console.log(`Received message from parent: ${event.data}`);
+    console.log(`Received message from parent: ${event.data}`);
 };</pre>
 
 <h2 id="Specifications">Specifications</h2>

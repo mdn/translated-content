@@ -3,7 +3,7 @@ title: Grid Areas
 slug: Glossary/Grid_Areas
 translation_of: Glossary/Grid_Areas
 ---
-Un **grid area** es una o más {{glossary("grid cell", "grid cells")}} que forman un área rectangular en la cuadrícula. Los grid areas se crean cuando se coloca un ítem usando [disposición basada en líneas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) o cuando se definen áreas usando [grid areas con nombre](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas).
+Un **grid area** es una o más {{glossary("grid cell", "grid cells")}} que forman un área rectangular en la cuadrícula. Los grid areas se crean cuando se coloca un ítem usando [disposición basada en líneas](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) o cuando se definen áreas usando [grid areas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas).
 
 ![Image showing a highlighted grid area](https://mdn.mozillademos.org/files/14771/1_Grid_Area.png)
 
@@ -11,23 +11,21 @@ Las Grid areas _deben_ ser de naturaleza rectangular; no es posible crear, por e
 
 En el siguiente ejemplo, tengo un contenedor de cuadrícula con dos ítems. Los he nombrado con la propiedad {{cssxref ("grid-area")}} y luego los he distribuido en la cuadrícula usando {{cssxref ("grid-template-areas")}}. Esto crea dos áreas de cuadrícula, una que cubre cuatro celdas de la cuadrícula, la otra dos.
 
-## Ejemplo
-
 ```css hidden
 * {box-sizing: border-box;}
 
 .wrapper {
-border: 2px solid #f76707;
-border-radius: 5px;
-background-color: #fff4e6;
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
 }
 
 .wrapper > div {
-border: 2px solid #ffa94d;
-border-radius: 5px;
-background-color: #ffd8a8;
-padding: 1em;
-color: #d9480f;
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
 }
 ```
 
@@ -55,7 +53,7 @@ color: #d9480f;
 </div>
 ```
 
-{{ EmbedLiveSample('ejemplo', '300', '280') }}
+{{ EmbedLiveSample('example_1', '300', '280') }}
 
 ## Aprenda más
 
@@ -70,6 +68,6 @@ color: #d9480f;
 
 ### Otras lecturas
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- CSS Grid Layout Guide: _[Grid template areas](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS Grid Layout Guide: _[Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
 - [Definition of Grid Areas in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)

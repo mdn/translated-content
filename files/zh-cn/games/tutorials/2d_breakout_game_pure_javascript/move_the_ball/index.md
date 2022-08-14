@@ -52,7 +52,7 @@ var x = canvas.width/2;
 var y = canvas.height-30;
 ```
 
-接下来更新 `draw()` 函数，在 `arc() `方法中使用 `x` 和 `y` 变量，如下面高亮行所示：
+接下来更新 `draw()` 函数，在 `arc()` 方法中使用 `x` 和 `y` 变量，如下面高亮行所示：
 
 ```js
 function draw() {

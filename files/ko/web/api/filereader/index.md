@@ -22,7 +22,7 @@ File 객체는 {{ HTMLElement("input") }} 태그를 이용하여 유저가 선�
 - {{domxref("FileReader.FileReader", "FileReader()")}}
   - : Returns a newly constructed `FileReader`.
 
-See [Using files from web applications](https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications) for details and examples.
+See [Using files from web applications](/ko/docs/Using_files_from_web_applications) for details and examples.
 
 ## 속성
 
@@ -32,9 +32,9 @@ See [Using files from web applications](https://developer.mozilla.org/en-US/docs
 
   - : FileReader의 상태를 나타내는 숫자입니다.
 
-    - `EMPTY ` : `0` : 아직 데이터가 로드 되지 않았음.
+    - `EMPTY` : `0` : 아직 데이터가 로드 되지 않았음.
     - `LOADING` : `1` : 데이터가 로딩 중.
-    - `DONE `: `2` : 모든 읽기 요청이 완료됨.
+    - `DONE` : `2` : 모든 읽기 요청이 완료됨.
 
 - {{domxref("FileReader.result")}} {{readonlyinline}}
   - : 파일의 컨텐츠입니다. 이 속성은 읽기 작업이 완료되고 읽기 작업의 초기화에 사용한 방식으로 결정된 데이터의 포맷이 정해진 후에 유효합니다.
@@ -82,4 +82,4 @@ See [Using files from web applications](https://developer.mozilla.org/en-US/docs
 - [Using files from web applications](/en/Using_files_from_web_applications 'en/Using files from web applications')
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}
-- [nsIDOMFileReader \[en-US\]](/en-US/docs/nsIDOMFileReader) - For addons/privelaged scope
+- [nsIDOMFileReader \[en-US\]](/ko/docs/nsIDOMFileReader) - For addons/privelaged scope

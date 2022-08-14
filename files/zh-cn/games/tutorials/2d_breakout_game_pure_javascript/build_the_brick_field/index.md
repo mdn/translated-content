@@ -68,7 +68,7 @@ var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
 var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 ```
 
-每个`brickX`位置是` brickWidth + brickPadding`，乘以列数`C`，再加上`brickOffsetLeft`；对于砖`brickY`的逻辑相同，除了名称不同，使用行数`R`，`brickHeight`，和`brickOffsetTop`。现在，每一块砖都可以放在正确的地方，排成一排，每一块砖之间都有填充物，从左上角和顶部的帆布边缘偏移。
+每个`brickX`位置是 `brickWidth + brickPadding`，乘以列数`C`，再加上`brickOffsetLeft`；对于砖`brickY`的逻辑相同，除了名称不同，使用行数`R`，`brickHeight`，和`brickOffsetTop`。现在，每一块砖都可以放在正确的地方，排成一排，每一块砖之间都有填充物，从左上角和顶部的帆布边缘偏移。
 
 在设置`brickX`和`brickY`作为对应砖的坐标之后，形成了 `drawBricks()`函数的最终版本。将以下代码加在`drawPaddle()`函数后面：
 

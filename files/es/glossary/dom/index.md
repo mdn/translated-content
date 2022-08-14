@@ -22,5 +22,5 @@ El DOM surgió a partir de la implementación de [JavaScript](/es/docs/Glossary/
 
 ### Información Técnica
 
-- [The DOM documentation on MDN](/en-US/docs/DOM)
+- [The DOM documentation on MDN](/es/docs/DOM)
 - [The various DOM specifications at W3C](http://www.w3.org/DOM/DOMTR)

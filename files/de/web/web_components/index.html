@@ -20,7 +20,7 @@ translation_of: Web/Web_Components
 <div>{{DefaultAPISidebar("Webkomponenten")}}</div>
 
 <div class="summary">
-<p>Webkomponenten sind eine Gruppe von Web-Technologien, die es ermöglichen, benutzerdefinierte, wiederverwendbare HTML Elemente zu erstellen, deren Funktionalität gekapselt ist und damit vollständig getrennt von anderem Code.</p>
+<p>Webkomponenten sind eine Gruppe von Web-Technologien, die es ermöglichen, benutzerdefinierte, wiederverwendbare HTML Elemente zu erstellen, deren Funktionalität gekapselt ist und damit vollständig getrennt von anderem Code.</p>
 
 <h2 id="Konzept_und_Anwendung">Konzept und Anwendung</h2>
 </div>
@@ -107,7 +107,7 @@ translation_of: Web/Web_Components
  </ul>
  </dd>
  <dt>Wichtige {{domxref("Node")}}-Erweiterungen</dt>
- <dd>Erweiterung zur <code>Node</code>-Schnittstelle, die sich auf das <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOM</a> beziehen:
+ <dd>Erweiterung zur <code>Node</code>-Schnittstelle, die sich auf das <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOM</a> beziehen:
  <ul>
   <li>Die {{domxref("Node.getRootNode()")}}-Methode liefert die Wurzel-Node des Kontextobjekts, die optional auch die Wurzel-Node des <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOM</a>-Baums enthält, sofern verfügbar.</li>
   <li>Die {{domxref("Node.isConnected")}}-Eigenschaft liefert einen booleschen Wert, der angibt, ob eine Node (direkt oder indirekt) mit dem Kontextobjekt verbunden ist oder nicht. Dies ist beispielsweise das {{domxref("Document")}}-Objekt im Falle eines normalen DOMs bzw. das {{domxref("ShadowRoot")}}-Objekt im Falle eines <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOMs</a>.</li>
@@ -117,7 +117,7 @@ translation_of: Web/Web_Components
  <dd>Erweiterungen der <code>Event</code>-Schnittstelle, die sich auf das <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOM</a> beziehen:
  <ul>
   <li>{{domxref("Event.composed")}}: Liefert einen booleschen Wert, der angibt, ob ein Ereignis sich vom <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOM</a> in das normale DOM fortsetzt (<code>true</code>), oder nicht (<code>false</code>).</li>
-  <li>{{domxref("Event.composedPath")}}: Liefert den Pfad des Ereignisses (Objekte, deren Ereignisbehandlungsroutinen aufgerufen werden). Ausgeschlossen hiervon sind Nodes in <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOM</a>-Bäumen, wenn die Wurzel-Node des <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOM</a>-Baums mit <code>{{domxref("ShadowRoot.mode")}} = "closed"</code> erstellt wurde.</li>
+  <li>{{domxref("Event.composedPath")}}: Liefert den Pfad des Ereignisses (Objekte, deren Ereignisbehandlungsroutinen aufgerufen werden). Ausgeschlossen hiervon sind Nodes in <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOM</a>-Bäumen, wenn die Wurzel-Node des <a href="/de-DE/docs/Web/Web_Components/Using_shadow_DOM">Schatten-DOM</a>-Baums mit <code>{{domxref("ShadowRoot.mode")}} = "closed"</code> erstellt wurde.</li>
  </ul>
  </dd>
 </dl>
@@ -214,9 +214,9 @@ translation_of: Web/Web_Components
 
 <ul>
  <li><a href="https://www.webcomponents.org/">webcomponents.org</a> — Website, die Beispiele, Übungen und weiterführende Informationen zu Webkomponenten bietet.</li>
- <li><a href="https://github.com/hybridsjs/hybrids">Hybrids</a> — Open-Source Webkomponenten-Bibliothek, die simple Objekte und reine Funktionen der <code>class</code> und <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> Syntax vorzieht. Die Bibliothek bietet eine einfache, funktionale API, um benutzerdefinierte Elemente zu erzeugen.</li>
+ <li><a href="https://github.com/hybridsjs/hybrids">Hybrids</a> — Open-Source Webkomponenten-Bibliothek, die simple Objekte und reine Funktionen der <code>class</code> und <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">this</span></font> Syntax vorzieht. Die Bibliothek bietet eine einfache, funktionale API, um benutzerdefinierte Elemente zu erzeugen.</li>
  <li><a href="https://www.polymer-project.org/">Polymer</a> — Googles Webkomponenten-Framework — eine Sammlung von Polyfills, Erweiterungen und Beispielen. Dieses Framework ist aktuell der einfachste Weg, Webkomponenten browserübergreifend einzusetzen.</li>
  <li><a href="https://github.com/devpunks/snuggsi#readme">Snuggsi.es</a> — Einfacher Zugriff auf Webkomponenten in ~1kB, <em>inklusive Polyfill</em> — Alles, was Sie benötigen, ist ein Browser und ein grundsätzliches Verständnis von HTML, CSS und JavaScript Klassen, um zu starten.</li>
  <li><a href="https://github.com/slimjs/slim.js">Slim.js</a> — Open-Source Webkomponenten-Bibliothek — eine hochperformante Bibliothek, um schnell und einfach Komponenten zu erstellen. Durch Plug-ins erweiterbar und Cross-Framework-kompatibel.</li>
- <li><a href="https://www.htmlelements.com/">Smart.js</a> — Webkomponenten-Bibliothek mit einer einfachen API, um browserübergreifend benutzerdefinierte Elemente zu erstellen. </li>
+ <li><a href="https://www.htmlelements.com/">Smart.js</a> — Webkomponenten-Bibliothek mit einer einfachen API, um browserübergreifend benutzerdefinierte Elemente zu erstellen. </li>
 </ul>

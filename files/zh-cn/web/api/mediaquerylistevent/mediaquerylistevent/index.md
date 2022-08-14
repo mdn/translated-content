@@ -1,14 +1,6 @@
 ---
 title: MediaQueryListEvent()
 slug: Web/API/MediaQueryListEvent/MediaQueryListEvent
-page-type: web-api-constructor
-tags:
-  - API
-  - CSSOM View
-  - Constructor
-  - Media Queries
-  - MediaQueryListEvent
-  - Reference
 ---
 {{APIRef("CSSOM")}}
 

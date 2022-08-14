@@ -1,19 +1,6 @@
 ---
 title: HTMLFormElement.requestSubmit()
 slug: Web/API/HTMLFormElement/requestSubmit
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLFormElement
-  - Input
-  - Method
-  - button
-  - form
-  - requestSubmit
-  - submit
-translation_of: Web/api/HTMLFormElement/requestSubmit
 ---
 {{APIRef("HTML DOM")}}
 

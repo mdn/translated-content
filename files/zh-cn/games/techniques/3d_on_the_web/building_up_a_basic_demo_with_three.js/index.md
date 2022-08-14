@@ -15,8 +15,8 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Thr
 
 - 确保使用的支持 [WebGL](/en-US/docs/Web/API/WebGL_API) 的现代浏览器，例如最新版的 Firefox 或 Chrome.
 - 创建一个目录保存例子。
-- 复制最新的压缩版[ Three.js](http://threejs.org/build/three.min.js) 到你的目录。
-- 用单独的浏览器 tab 打开 [Three.js ](http://threejs.org/docs/)文档 — 对应参考很有用。
+- 复制最新的压缩版 [Three.js](http://threejs.org/build/three.min.js) 到你的目录。
+- 用单独的浏览器 tab 打开 [Three.js](http://threejs.org/docs/) 文档 — 对应参考很有用。
 
 ## HTML 结构
 
@@ -26,19 +26,19 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Thr
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>MDN Games: Three.js demo</title>
-	<style>
-		body { margin: 0; padding: 0; }
-		canvas { width: 100%; height: 100%; }
-	</style>
+  meta charset="utf-8">
+  <title>MDN Games: Three.js demo</title>
+  <style>
+    body { margin: 0; padding: 0; }
+    canvas { width: 100%; height: 100%; }
+  </style>
 </head>
 <body>
 <script src="three.min.js"></script>
 <script>
-	var WIDTH = window.innerWidth;
-	var HEIGHT = window.innerHeight;
-	/* all our JavaScript code goes here */
+  var WIDTH = window.innerWidth;
+  var HEIGHT = window.innerHeight;
+  /* all our JavaScript code goes here */
 </script>
 </body>
 </html>
@@ -101,8 +101,8 @@ Everything is ready, but we still can't see anything. Although we set the render
 
 ```js
 function render() {
-	requestAnimationFrame(render);
-	renderer.render(scene, camera);
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
 }
 render();
 ```

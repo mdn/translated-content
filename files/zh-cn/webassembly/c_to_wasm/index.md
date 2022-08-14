@@ -84,7 +84,7 @@ emsdk_env.bat
 
 我们先来看一个最简单的例子，通过这个，你可以使用 Emscripten 来将任何代码生成到 WebAssembly，然后在浏览器上运行。
 
-1.  首先我们需要编译一段样例代码。将下方的 C 代码复制一份然后命名为 hello.c 保存在一个新的文件夹内。
+1. 首先我们需要编译一段样例代码。将下方的 C 代码复制一份然后命名为 hello.c 保存在一个新的文件夹内。
 
     ```cpp
     #include <stdio.h>
@@ -94,7 +94,7 @@ emsdk_env.bat
     }
     ```
 
-2.  现在，转到一个已经配置过 Emscripten 编译环境的终端窗口中，进入刚刚保存 hello.c 文件的文件夹中，然后运行下列命令：
+2. 现在，转到一个已经配置过 Emscripten 编译环境的终端窗口中，进入刚刚保存 hello.c 文件的文件夹中，然后运行下列命令：
 
     ```bash
     emcc hello.c -s WASM=1 -o hello.html
@@ -125,7 +125,7 @@ emsdk_env.bat
 
 有些时候你可能想要使用一个自定义的 HTML 模板。让我们看看怎么实现。
 
-1.  首先，在一个新文件夹中保存以下 C 代码到 hello2.c 中：
+1. 首先，在一个新文件夹中保存以下 C 代码到 hello2.c 中：
 
     ```cpp
     #include <stdio.h>
@@ -135,14 +135,14 @@ emsdk_env.bat
     }
     ```
 
-2.  在 emsdk 中搜索一个叫做 `shell_minimal.html` 的文件，然后复制它到刚刚创建的目录下的 `html_template` 文件夹。
+2. 在 emsdk 中搜索一个叫做 `shell_minimal.html` 的文件，然后复制它到刚刚创建的目录下的 `html_template` 文件夹。
 
     ```bash
     mkdir html_template
     cp ~/emsdk/emscripten/1.38.15/src/shell_minimal.html html_template
     ```
 
-3.  现在使用你的 Emscripten 编译器环境的终端窗口进入你的新目录，然后运行下面的命令：
+3. 现在使用你的 Emscripten 编译器环境的终端窗口进入你的新目录，然后运行下面的命令：
 
     ```bash
     emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html
@@ -153,7 +153,7 @@ emsdk_env.bat
     - 我们使用了 `-o hello2.html`，这意味编译器将仍然输出 js 胶水代码 和 html 文件。
     - 我们还使用了 `--shell-file html_template/shell_minimal.html`，这指定了您要运行的例子使用 HTML 页面模板。
 
-4.  下面让我们来运行这个例子。上面的命令已经生成了 hello2.html，内容和我们使用的模板非常相像，只不过多加了一些 js 胶水和加载 wasm 文件的代码。 在浏览器中打开它，你会看到与上一个例子相同的输出。
+4. 下面让我们来运行这个例子。上面的命令已经生成了 hello2.html，内容和我们使用的模板非常相像，只不过多加了一些 js 胶水和加载 wasm 文件的代码。 在浏览器中打开它，你会看到与上一个例子相同的输出。
 
 > **备注：** 通过用.js 取代.htm(l) 作为文件后缀名，你就可以得到只有 JavaScript 的输出文件，而不再是完整的 HTML 文件。例如：`emcc -o hello2.js hello2.c -O3 -s WASM=1`. 你可以完全从零开始创建你自己的 HTML 文件。尽管如此，不推荐这样做。因为 Emscripten 需要大量的 JavaScript“胶水”代码从而能够 处理内存分配、内存泄漏以及大量的其他问题。这些问题都已经在提供的模板中得到了处理。使用模板要比自己编写模板要容易得多。不过，当对模板所做的事情越来越熟悉的时候，你就能够按照自己的需要创建定制化的模板了。
 
@@ -163,7 +163,7 @@ emsdk_env.bat
 
 接下来让我们看看这是怎么实现的。
 
-1.  首先，将以下代码在新目录中保存为 `hello3.c` ：
+1. 首先，将以下代码在新目录中保存为 `hello3.c` ：
 
     ```cpp
     #include <stdio.h>
@@ -190,21 +190,21 @@ emsdk_env.bat
 
     > **备注：** 为了保证万一你想在 C++ 代码中引用这些代码时代码可以正常工作，我们添加了 `#ifdef` 代码块。由于 C 与 C++ 中名字修饰规则的差异，添加的代码块有可能产生问题，但目前我们设置了这一额外的代码块以保证你使用 C++ 时，这些代码会被视为外部 C 语言函数。
 
-2.  为了方便起见，现在将 `html_template/shell_minimal.html` 也添加到这一目录（但在实际开发环境中你肯定需要将其放到某一特定位置）。
-3.  运行以下命令编译：(注意由于使用 ccall 函数，需要添加指定参数)
+2. 为了方便起见，现在将 `html_template/shell_minimal.html` 也添加到这一目录（但在实际开发环境中你肯定需要将其放到某一特定位置）。
+3. 运行以下命令编译：(注意由于使用 ccall 函数，需要添加指定参数)
 
     ```bash
     emcc -o hello3.html hello3.c -O3 -s WASM=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']" --shell-file html_template/shell_minimal.html
     ```
 
-4.  如果你在浏览器中在此加载实例，你将看到和之前相同的结果。
-5.  现在我们需要运行新的 `myFunction()` JavaScript 函数。首先，按照以下实例添加一个 {{htmlelement("button")}} ，就在 `<script type='text/javascript'>` 开头标签之前。
+4. 如果你在浏览器中在此加载实例，你将看到和之前相同的结果。
+5. 现在我们需要运行新的 `myFunction()` JavaScript 函数。首先，按照以下实例添加一个 {{htmlelement("button")}} ，就在 `<script type='text/javascript'>` 开头标签之前。
 
     ```html
     <button class="mybutton">运行我的函数</button>
     ```
 
-6.  现在在最后一个 {{htmlelement("script")}} 元素（就在 `</script>` 关闭标签之前）中添加以下代码：
+6. 现在在最后一个 {{htmlelement("script")}} 元素（就在 `</script>` 关闭标签之前）中添加以下代码：
 
     ```js
     document.querySelector('.mybutton').addEventListener('click', function(){

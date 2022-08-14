@@ -190,7 +190,7 @@ class Team(models.Model):
 
 <p>장고 모델은 데이터베이스를 간단히 탐색하기 위한 쿼리 API를 제공합니다. 이 API는 다양한 조건을 통해 수 많은 필드를 빠르게 매칭시킵니다. (예를 들어, 정확하게 일치(exact), 대소문자 구분없이(case-insensitive), 해당 숫자보다 큰(greater than) 등이 있습니다.) 그리고 복잡한 쿼리문을 지원합니다. 예를 들어, 당신은 팀의 이름이 "Fr"로 시작하거나 "al"로 끝나는 U11 레벨의 팀만을 지정할 수 있습니다.</p>
 
-<p>굵게 표시된 줄은 모델 쿼리 API를 사용하여 <code>team_level</code> 필드의 텍트스가 정확히 'U09'인 모든 레코드를 필터링하는 방법을 보여줍니다 (이 기준이 필드 이름의 인수로 <code>filter()</code> 함수에 전달되는 방법에 유의하십시오. 일치 유형은 <strong><code>team_level__exact</code></strong>와 같이 이중 밑줄로 구분됩니다).</p>
+<p>굵게 표시된 줄은 모델 쿼리 API를 사용하여 <code>team_level</code> 필드의 텍스트가 정확히 'U09'인 모든 레코드를 필터링하는 방법을 보여줍니다 (이 기준이 필드 이름의 인수로 <code>filter()</code> 함수에 전달되는 방법에 유의하십시오. 일치 유형은 <strong><code>team_level__exact</code></strong>와 같이 이중 밑줄로 구분됩니다).</p>
 
 <pre class="brush: python notranslate">## filename: views.py
 

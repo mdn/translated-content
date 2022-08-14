@@ -13,7 +13,7 @@ _La accesibilidad web_ (**A11Y**) hace referencia a las buenas prácticas para m
 
 ### Conocimiento general
 
-- [Accessibility resources at MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+- [Accessibility resources at MDN](/es/docs/Web/Accessibility)
 - {{Interwiki("wikipedia", "Web accessibility")}} on Wikipedia
 
 ### Aprende accesibilidad web
@@ -22,6 +22,6 @@ _La accesibilidad web_ (**A11Y**) hace referencia a las buenas prácticas para m
 
 ### Referencias técnicas
 
-- [The ARIA documentation on MDN](/en-US/docs/Web/Accessibility/ARIA)
+- [The ARIA documentation on MDN](/es/docs/Web/Accessibility/ARIA)
 - [The Web Accessibility Initiative homepage](http://www.w3.org/WAI/)
 - [The WAI-ARIA recommendation](http://www.w3.org/TR/wai-aria/)

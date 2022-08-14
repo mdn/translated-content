@@ -80,7 +80,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 #### Cross-origin access 跨域請求
 
-當後台腳本擁有[host permissions ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)時，便能像任何主機發送 XHR 請求。
+當後台腳本擁有[host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 時，便能像任何主機發送 XHR 請求。
 
 #### Web content 網頁內容
 

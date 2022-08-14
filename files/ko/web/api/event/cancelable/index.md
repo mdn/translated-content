@@ -16,7 +16,7 @@ translation_of: Web/API/Event/cancelable
 
 취소 가능한 브라우저 내장 이벤트는 대부분 사용자가 페이지와 상호작용해서 발생하는 이벤트입니다. 예컨대 {{event("click")}}, {{event("scroll")}}, {{event("beforeunload")}} 이벤트를 취소하게 되면, 각각 사용자가 어떤 요소를 클릭하는 것, 페이지를 스크롤하는 것, 페이지에서 나가는 것을 막게 됩니다.
 
-사용자 JavaScript 코드에서 생성하는 [합성 이벤트](/en-US/docs/Web/API/Event/Event)의 경우, 이벤트를 초기화할 때 취소 가능 여부를 지정할 수 있습니다.
+사용자 JavaScript 코드에서 생성하는 [합성 이벤트](/ko/docs/Web/API/Event/Event)의 경우, 이벤트를 초기화할 때 취소 가능 여부를 지정할 수 있습니다.
 
 이벤트를 취소하려면 이벤트의 {{domxref("Event.preventDefault()", "preventDefault()")}} 메서드를 호출하세요. 해당 이벤트에 대한 기본 동작을 실행하지 않게 됩니다.
 

@@ -10,13 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
 <div>{{JSRef}}</div>
 
-<p>Die <code><strong>Promise.all(iterable)</strong></code> Methode gibt einen {{jsxref("Promise")}} zurück, welcher erfüllt(<em>resolved)</em> wird, wenn alle Promises in dem <em>iterable </em>- Argument erfüllt wurden oder wenn das <em>iterable</em> - Argument keine Promises enthält. Eine Ablehnung (<em>reject</em>) erfolgt mit dem Grund des ersten Promises, das abgelehnt wurde, oder mit dem Error der von dem ersten Argument, wenn das innerhalb eines try/catch/throw blocks gefangen wurde.</p>
+<p>Die <code><strong>Promise.all(iterable)</strong></code> Methode gibt einen {{jsxref("Promise")}} zurück, welcher erfüllt(<em>resolved)</em> wird, wenn alle Promises in dem <em>iterable </em>- Argument erfüllt wurden oder wenn das <em>iterable</em> - Argument keine Promises enthält. Eine Ablehnung (<em>reject</em>) erfolgt mit dem Grund des ersten Promises, das abgelehnt wurde, oder mit dem Error der von dem ersten Argument, wenn das innerhalb eines try/catch/throw blocks gefangen wurde.</p>
 
 <p>Es wird typischerweise für mehrere asynchrone Aufgaben die parallel laufen und die Promises als Ergebnisse haben, so das eines warten kann, bis alle anderen Aufgaben abgeschlossen sind.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-all.html")}}</div>
-
-<p class="hidden">Die Quellen für diese interaktive Demo sind in einem GitHub Repository gespeichert. Wenn Du etwas zum interaktiven Demo Projekt beitragen willst, klone das Repository  <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> und schicke uns einen pull request.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 <dl>
  <dt>iterable</dt>
- <dd>Ein <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterierbares</a> Objekt, z.B. ein {{jsxref("Array")}} oder ein {{jsxref("String")}}.</dd>
+ <dd>Ein <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterierbares</a> Objekt, z.B. ein {{jsxref("Array")}} oder ein {{jsxref("String")}}.</dd>
 </dl>
 
 <h3 id="Rückgabe-Wert">Rückgabe-Wert</h3>
@@ -41,8 +39,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 <p>Diese Methode dient dem Bündeln von mehreren Promises.</p>
 
-<p>Erfüllt: <br>
- Wenn alle Promises erfolgreich erfüllt werden, oder keine Promises sind, wird <code>Promise.all</code> mit einem Array, welches die Rückgabewerte der einzelnen Promises (aber auch die nicht-Promise Werte) enthält, erfüllt. Wenn ein leeres Array übergeben wird, wird  <code>Promise.all</code> (synchron) sofort erfüllt. </p>
+<p>Erfüllt: <br>
+ Wenn alle Promises erfolgreich erfüllt werden, oder keine Promises sind, wird <code>Promise.all</code> mit einem Array, welches die Rückgabewerte der einzelnen Promises (aber auch die nicht-Promise Werte) enthält, erfüllt. Wenn ein leeres Array übergeben wird, wird  <code>Promise.all</code> (synchron) sofort erfüllt. </p>
 
 <p>Abgelehnt:<br>
  Wenn eines der übergebenen Promises abgelehnt wird, wird <code>Promise.all</code> asynchron mit dem Wert des fehlgeschlagenen Promise abgelehnt, ganz egal, ob die anderen Promises erfolgreich waren oder nicht.</p>

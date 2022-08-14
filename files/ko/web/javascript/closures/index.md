@@ -280,7 +280,7 @@ original_slug: Web/JavaScript/Guide/Closures
 
 ## 루프에서 클로저 생성하기: 일반적인 실수
 
-ECMAScript 2015의 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let "방해") 키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때 발생한다.다음 예제를 보자.
+ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let "방해") 키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때 발생한다.다음 예제를 보자.
 
 ```html
     <p id="help">Helpful notes will appear here</p>
@@ -380,7 +380,7 @@ ECMAScript 2015의 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let "
     setupHelp();
 ```
 
-더 많은 클로저를 사용하는 것이 싫다면 ES2015의 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 키워드를 사용할 수 있다.
+더 많은 클로저를 사용하는 것이 싫다면 ES2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 키워드를 사용할 수 있다.
 
 ```js
     function showHelp(help) {
@@ -407,7 +407,7 @@ ECMAScript 2015의 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let "
 
 위의 경우 `var` 대신 `let`을 사용하여 모든 클로저가 블록 범위 변수를 바인딩할 것이므로 추가적인 클로저를 사용하지 않아도 완벽하게 동작할 것이다.
 
-Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input), as shown:
+Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/ko/docs/Web/HTML/Element/input), as shown:
 
 ```js
 function showHelp(help) {
@@ -502,5 +502,5 @@ setupHelp();
     }).call(MyObject.prototype);
 ```
 
-앞의 두 가지 예제에서 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메소드 정의는 모든 객체 생성시 발생할 필요가 없다. [객체 모델의 세부 사항](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)을
+앞의 두 가지 예제에서 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메소드 정의는 모든 객체 생성시 발생할 필요가 없다. [객체 모델의 세부 사항](/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)을
 참고하라.

@@ -37,7 +37,7 @@ el.addEventListener("touchcancel", handleCancel);
 
 这个实现了移动端触摸的[little demo](https://github.com/end3r/JavaScript-Game-Controls/)代码已经放到了 GibHub 上，我们下载这个示例就可以实现在移动端屏幕上移动飞船。
 
-我们将两种事件：`touchstart `和`touchmove` 放到一个方法里处理。为什么呢？ `touchHandler` 方法定义的飞船位置变量适合下面两种情况下：当玩家触摸时，但不移动它（`touchstart`）和当手指在屏幕上开始移动（`touchmove`）：
+我们将两种事件：`touchstart` 和`touchmove` 放到一个方法里处理。为什么呢？ `touchHandler` 方法定义的飞船位置变量适合下面两种情况下：当玩家触摸时，但不移动它（`touchstart`）和当手指在屏幕上开始移动（`touchmove`）：
 
 ```js
 document.addEventListener("touchstart", touchHandler);

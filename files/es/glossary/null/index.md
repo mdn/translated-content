@@ -13,9 +13,9 @@ En {{Glossary("JavaScript")}}, null es uno de los {{Glossary("Primitivo", "valor
 
 ### Referencia técnica
 
-- [Tipos de datos y estructuras de datos en JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+- [Tipos de datos y estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
 - {{jsxref("null", "Referencia JavaScript para los valores null")}}
 
 ### Conocimientos generales
 
-- [Puntero Null en Wikipedia](https://es.wikipedia.org/wiki/Puntero_%28inform%C3%A1tica%29#Puntero_nulo)
+- [Puntero Null en Wikipedia](https://es.wikipedia.org/wiki/Puntero_%28inform%C3%A1tica%29#Puntero_nulo) 

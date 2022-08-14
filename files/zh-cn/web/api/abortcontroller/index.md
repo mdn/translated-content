@@ -1,13 +1,6 @@
 ---
 title: AbortController
 slug: Web/API/AbortController
-tags:
-  - API
-  - AbortController
-  - Fetch
-  - how to cancel a fetch request
-translation_of: Web/API/AbortController
-original_slug: Web/API/FetchController
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 

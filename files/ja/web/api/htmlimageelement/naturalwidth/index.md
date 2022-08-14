@@ -18,7 +18,7 @@ browser-compat: api.HTMLImageElement.naturalWidth
 ---
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} インターフェイスの 
+{{domxref("HTMLImageElement")}} インターフェイスの
 **`naturalWidth`** プロパティは読み取り専用で、画像の本来の（自然な）密度補正された幅を{{Glossary("CSS pixel", "CSS ピクセル数")}}で返します。
 
 これは，何も制約を受けずに描画した場合の画像の幅です。画像の幅を指定しなかった場合、または画像の幅を制限するか明示するコンテナー内に画像を配置する場合、この値は画像の幅を CSS で指定されたピクセル数で表します。

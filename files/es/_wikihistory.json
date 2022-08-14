@@ -665,6 +665,14 @@
       "velizluisma"
     ]
   },
+  "Glossary/DHTML": {
+    "modified": "2019-03-23T23:44:54.880Z",
+    "contributors": [
+      "Mgjbot",
+      "Jorolo",
+      "Jos"
+    ]
+  },
   "Glossary/DOM": {
     "modified": "2019-03-18T21:10:52.251Z",
     "contributors": [
@@ -1046,6 +1054,19 @@
     "modified": "2019-03-18T21:43:48.377Z",
     "contributors": [
       "ferlopezcarr"
+    ]
+  },
+  "Glossary/Localization": {
+    "modified": "2019-01-16T13:31:36.167Z",
+    "contributors": [
+      "DirkS",
+      "RickieesES",
+      "Mgjbot",
+      "Verruckt",
+      "Jorolo",
+      "Takenbot",
+      "Nukeador",
+      "Radigar"
     ]
   },
   "Glossary/Long_task": {

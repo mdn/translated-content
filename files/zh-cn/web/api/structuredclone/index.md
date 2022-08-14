@@ -1,15 +1,6 @@
 ---
 title: structuredClone()
 slug: web/api/structuredClone
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsCompatTable
-  - Reference
-  - structuredClone
-  - Polyfill
-browser-compat: api.structuredClone
 ---
 {{APIRef("HTML DOM")}}
 

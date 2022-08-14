@@ -24,7 +24,7 @@ Concebido como un lenguaje de lado del servidor por Brendan Eich (entonces emple
 
 En noviembre de 1996, Netscape comenzó a trabajar con ECMA International para hacer de JavaScript un estándar de la industria. Desde entonces, el JavaScript estandarizado se llama ECMAScript y se especifica en ECMA-262, cuya última edición (décima, ES2019) está disponible a partir de junio de 2019.
 
-Recientemente, la popularidad de JavaScript se ha expandido aún más gracias a la exitosa plataforma [Node.js](https://nodejs.org/), el entorno de ejecución de JavaScript multiplataforma más popular fuera de el navegador. Node.js, creado con el [motor de JavaScript V8 de Chrome](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) — permite a los desarrolladores utilizar JavaScript como lenguaje de programación para automatizar las cosas en una computadora y crear servidores {{Glossary("HTTP")}} y {{Glossary("Web Sockets")}} completamente funcionales.
+Recientemente, la popularidad de JavaScript se ha expandido aún más gracias a la exitosa plataforma [Node.js](https://nodejs.org/), el entorno de ejecución de JavaScript multiplataforma más popular fuera de el navegador. Node.js, creado con el [motor de JavaScript V8 de Chrome](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) — permite a los desarrolladores utilizar JavaScript como lenguaje de programación para automatizar las cosas en una computadora y crear servidores {{Glossary("HTTP")}} y {{Glossary("Web Sockets")}} completamente funcionales.
 
 ## Aprende más
 

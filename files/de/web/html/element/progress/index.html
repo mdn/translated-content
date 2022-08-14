@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/progress
 ---
 <h2 id="Übersicht">Übersicht</h2>
 
-<p>Das <strong>HTML<em> </em><code>&lt;progress&gt;</code> Element</strong> wird benutzt, um den Fortschritt einer Aufgabe zu visualisieren. Während die Einzelheiten dem Browser überlassen werden, wird es üblicherweise als Fortschrittsanzeige angezeigt. Javascript kann den Wert der Fortschrittsanzeige manipulieren.</p>
+<p>Das <strong>HTML <code>&lt;progress&gt;</code> Element</strong> wird benutzt, um den Fortschritt einer Aufgabe zu visualisieren. Während die Einzelheiten dem Browser überlassen werden, wird es üblicherweise als Fortschrittsanzeige angezeigt. Javascript kann den Wert der Fortschrittsanzeige manipulieren.</p>
 
 <table class="properties">
  <tbody>
@@ -47,7 +47,7 @@ translation_of: Web/HTML/Element/progress
  <dt>{{ htmlattrdef("max") }}</dt>
  <dd>Das Attribut beschreibt, wie viel Arbeit die Aufgabe, angezeigt bei dem <code>progress</code> Element, benötigt. Das <code>max</code> Attribut, wenn vorhanden, muss größer als Null sein und eine gültige Zahl binnen floating point number sein.</dd>
  <dt>{{ htmlattrdef("value") }}</dt>
- <dd>Das Atttribut gibt an, wie viel Arbeit der gesamten Aufgabe schon verrichtet wurde. Es muss eine gültige Zahl binnen floating point number zwischen 0 und <code>max</code> oder zwischen 0 und 1, falls <code>max</code> wegfällt, sein. Falls kein <code>value</code> (Wert) Attribut gegeben ist, ist die Fortschrittsanzeige unbestimmt; dies zeigt an, dass eine Aktivität ohne eine festgelegte ungefähre Restdauer fortläuft.</dd>
+ <dd>Das Atttribut gibt an, wie viel Arbeit der gesamten Aufgabe schon verrichtet wurde. Es muss eine gültige Zahl binnen floating point number zwischen 0 und <code>max</code> oder zwischen 0 und 1, falls <code>max</code> wegfällt, sein. Falls kein <code>value</code> (Wert) Attribut gegeben ist, ist die Fortschrittsanzeige unbestimmt; dies zeigt an, dass eine Aktivität ohne eine festgelegte ungefähre Restdauer fortläuft.</dd>
 </dl>
 
 <p>Sie können die {{ cssxref("-moz-orient") }} Eigenschaft nutzen, um festzulegen, ob die Fortschrittsanzeige horizontal (der Standard) oder vertikal gerendert werden soll. Die {{ cssxref(":indeterminate") }} Pseudo-Klasse kann benutzt werden, um unbestimmte Fortschrittsanzeigen zuzuorden.</p>
@@ -102,62 +102,14 @@ translation_of: Web/HTML/Element/progress
 
 <h2 id="Browser_Kompatibilität">Browser Kompatibilität</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funktion</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basis Unterstützung</td>
-   <td>6.0</td>
-   <td>{{ CompatGeckoMobile("6.0") }} [1]<br>
-    {{ CompatGeckoMobile("14.0")}} [2]</td>
-   <td>10</td>
-   <td>11.0</td>
-   <td>5.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funktion</th>
-   <th>Android</th>
-   <th>Firefox Mobil (Gecko)</th>
-   <th>IE Mobil</th>
-   <th>Opera Mobil</th>
-   <th>Safari Mobil</th>
-  </tr>
-  <tr>
-   <td>Basis Unterstützung</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatGeckoMobile("6.0") }} [1]<br>
-    {{ CompatGeckoMobile("14.0")}} [2]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>11.0</td>
-   <td>7 [3]</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Gecko liefert das {{ cssxref("::-moz-progress-bar") }} Pseudo-Element, welches Sie das Aussehen des Inneren der Fortschrittsanzeige verändern lässt, wie groß der Fortschritt schon ist.<br>
- Vor Gecko 14.0 {{ geckoRelease("14.0") }} wurde das <code>&lt;progress&gt;</code> Element inkorrekterweise als ein Formularelement klassifiziert und hatte daher ein <code>form</code> Attribut. Dieser Fehler wurde jedoch behoben.</p>
+ Vor Gecko 14.0 {{ geckoRelease("14.0") }} wurde das <code>&lt;progress&gt;</code> Element inkorrekterweise als ein Formularelement klassifiziert und hatte daher ein <code>form</code> Attribut. Dieser Fehler wurde jedoch behoben.</p>
 
 <p>[2] Gecko liefert das {{ cssxref("::-moz-progress-bar") }} Pseudo-element, welches Sie das Aussehen des Inneren der Fortschrittsanzeige verändern lässt, wie groß der Fortschritt schon ist.</p>
 
-<p>[3] Safari auf iOS unterstützt die unbestimmte Fortschrittsanzeige nicht. (Stattdessen wird 0% Fortschritt angezeigt).</p>
+<p>[3] Safari auf iOS unterstützt die unbestimmte Fortschrittsanzeige nicht. (Stattdessen wird 0% Fortschritt angezeigt).</p>
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

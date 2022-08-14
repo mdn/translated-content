@@ -84,5 +84,5 @@ whiteNoiseNode.connect(audioContext.destination)
 
 ## 같이 보기
 
-- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Web Audio API 사용하기](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/ko/docs/Web/API/Web_Audio_API)
+- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

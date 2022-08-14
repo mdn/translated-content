@@ -110,11 +110,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 要这样调用消息字符串，你需要用的方式为：
 
-1.  两个下划线，接着是
-2.  字符串 "MSG"，接着是
-3.  一个下划线，接着是
-4.  你想调用的在 `messages.json` 中定义的消息名称，接着是
-5.  两个下划线
+1. 两个下划线，接着是
+2. 字符串 "MSG"，接着是
+3. 一个下划线，接着是
+4. 你想调用的在 `messages.json` 中定义的消息名称，接着是
+5. 两个下划线
 
     __MSG_ + messageName + __
 
@@ -170,19 +170,23 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 }
 ```
 
-`"placeholders"` 这个成员定义了所有的占位符，以及它们所检索的来源。`"url"` 这个占位符指定了其内容取自 $1，它就是`  getMessage() 第二个参数里的第一个值。由于占位符就叫做 ` `"url"，我们就在实际的消息字符串中用` `$URL$` 调用它（`"name"` 用`  $NAME$ `调用也是一样的，以此类推）。对于多个占位符，你可以将其置于数组内，并作为第二个参数传递到 {{WebExtAPIRef("i18n.getMessage()")}} —`[a, b, c]`可替换为`$1`, `$2`, and `$3，以此类推，并置于` `messages.json` 内。
+`"placeholders"` 这个成员定义了所有的占位符，以及它们所检索的来源。`"url"` 这个占位符指定了其内容取自 $1，它就是 `getMessage()` 第二个参数里的第一个值。由于占位符就叫做 `"url"`，我们就在实际的消息字符串中用 `$URL$` 调用它（`"name"` 用 `$NAME$` 调用也是一样的，以此类推）。对于多个占位符，你可以将其置于数组内，并作为第二个参数传递到 {{WebExtAPIRef("i18n.getMessage()")}} —`[a, b, c]`可替换为`$1`, `$2`, and `$3，以此类推，并置于` `messages.json` 内。
 
 接下来我们看一个例子：在 `en/messages.json 文件中`原始的 `notificationContent` 消息字符串如下：in the `en/messages.json` file is
 
-    您点击了 $URL$。
+```
+您点击了 $URL$。
+```
 
 我们可以看到链接点击后会打开 `https://developer.mozilla.org。`在 {{WebExtAPIRef("i18n.getMessage()")}} 调用后，第二个参数的内容就变成了 messages.json 里的 `$1`，并替换定义在 `"url" 占位符里的` `$URL$` 这个占位符。所以最后的消息字符串就变成了：
 
-    您点击了 https://developer.mozilla.org。
+```
+您点击了 https://developer.mozilla.org。
+```
 
 ### 直接占位符的使用
 
-你可以直接将变量`（$1`, `$2`, `$3` 等）插入消息字符串，例如我们可以将上述的` "notificationContent"` 成员重写为：
+你可以直接将变量`（$1`, `$2`, `$3` 等）插入消息字符串，例如我们可以将上述的 `"notificationContent"` 成员重写为：
 
 ```json
 "notificationContent": {
@@ -217,10 +221,10 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 语言区域可以仅使用语言代码指定，例如 `fr` 或 `en`，也可以进一步限定区域代码，例如 `en_US` 或 `en_GB`，其描述了使用相同基础语言的区域变体。当您向 i18n 系统询问一个字符串时，它将使用以下算法选择一个字符串：
 
-1.  如果有精确匹配当前语言区域的 `messages.json` 文件，并且它包含该字符串，则返回它。
-2.  否则，如果当前语言区域有合格区域（例如 `en_US`）并且有一个无区域限定的 `messages.json` 文件（例如 `en`）且包含该字符串，则返回它。
-3.  否则，如果 `manifest.json 里包含` `default_locale` 所对应的 `messages.json` 文件且包含该字符串，则返回它。
-4.  否则，返回一个空字符串。
+1. 如果有精确匹配当前语言区域的 `messages.json` 文件，并且它包含该字符串，则返回它。
+2. 否则，如果当前语言区域有合格区域（例如 `en_US`）并且有一个无区域限定的 `messages.json` 文件（例如 `en`）且包含该字符串，则返回它。
+3. 否则，如果 `manifest.json 里包含` `default_locale` 所对应的 `messages.json` 文件且包含该字符串，则返回它。
+4. 否则，返回一个空字符串。
 
 参见下列示例：
 
@@ -255,11 +259,15 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 i18n 模块为我们提供了一些预定义的消息，我们可以用之前在 [在 manifests 中检索本地化的字符串](#在_manifests_中检索本地化的字符串) 中看到的相同的方式调用。例如：
 
-    __MSG_extensionName__
+```
+__MSG_extensionName__
+```
 
 预定义的消息使用完全相同的语法，例如在消息名称之前使用 `@@`
 
-    __MSG_@@ui_locale__
+```
+__MSG_@@ui_locale__
+```
 
 下表显示了各个可用的预定义消息。
 
@@ -374,9 +382,9 @@ padding-left: 1.5em;
 
 接下来，将 Firefox 的语言区域更改为你想测试的扩展支持的某个语言区域。
 
-1.  在 Firefox 中打开 "about:config"，找到 `general.useragent.locale` 首选项。
-2.  双击该首选项（或按回车）以选择它，输入你想测试的语言环境的语言代码，然后点击“确定”（或按回车）。我们的示例扩展支持“en”（英语）、“de”德语（）、“nl”（荷兰语）和“ja”日语。
-3.  重启你的浏览器以完成更改。
+1. 在 Firefox 中打开 "about:config"，找到 `general.useragent.locale` 首选项。
+2. 双击该首选项（或按回车）以选择它，输入你想测试的语言环境的语言代码，然后点击“确定”（或按回车）。我们的示例扩展支持“en”（英语）、“de”德语（）、“nl”（荷兰语）和“ja”日语。
+3. 重启你的浏览器以完成更改。
 
 > **备注：** 这个方法可以用来修改浏览器的语言区域，即使你未安装过该语言区域对应的[语言包](https://addons.mozilla.org/en-US/firefox/language-tools/)。这样的话你就可以将浏览器用户界面调整显示为你的默认语言。
 

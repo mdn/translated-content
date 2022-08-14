@@ -58,7 +58,7 @@ console.log(canDrinkAlcohol); // "True, 21 or older"
 
 console.log(access); // logt "Access granted"</pre>
 
-<p>Man kann ihn auch wie ein If Statement mit mehreren Bedingungen verwenden</p>
+<p>Man kann ihn auch wie ein If Statement mit mehreren Bedingungen verwenden</p>
 
 <pre class="brush: js">var condition1 = true,
     condition2 = false,
@@ -75,7 +75,7 @@ console.log(access); // logt "true false"</pre>
 age &gt; 18 ? location.assign("continue.html") : stop = true;
 </pre>
 
-<p>Man kann auch mehr als eine Operation pro Fall ausführen, indem die Operationen mit einem Komma getrennt und geklammert werden:</p>
+<p>Man kann auch mehr als eine Operation pro Fall ausführen, indem die Operationen mit einem Komma getrennt und geklammert werden:</p>
 
 <pre class="brush: js">var stop = false, age = 23;
 
@@ -88,7 +88,7 @@ age &gt; 18 ? (
 );
 </pre>
 
-<p>Man kann auch mehrere Operationen während einer Zuweisung durchführen. <em><strong>In diesem Fall wird der letzte von Kommas getrennte Wert als Zuweisungswert benutzt.</strong></em></p>
+<p>Man kann auch mehrere Operationen während einer Zuweisung durchführen. <em><strong>In diesem Fall wird der letzte von Kommas getrennte Wert als Zuweisungswert benutzt.</strong></em></p>
 
 <pre class="brush: js">var age = 16;
 
@@ -106,9 +106,9 @@ var url = age &gt; 18 ? (
 
 location.assign(url); // "stop.html"</pre>
 
-<h3 id="Rückgabe_durch_ternäre_Statements">Rückgabe durch ternäre Statements</h3>
+<h3 id="Rückgabe_durch_ternäre_Statements">Rückgabe durch ternäre Statements</h3>
 
-<p>Der ternäre Operator ist nützlich für Funktionen, die einen Rückgabewert abhängig von einem <code>if/else</code> Statement zurückgeben.</p>
+<p>Der ternäre Operator ist nützlich für Funktionen, die einen Rückgabewert abhängig von einem <code>if/else</code> Statement zurückgeben.</p>
 
 <pre class="brush: js">var func1 = function ( .. ) {
   if (condition1) { return value1; }
@@ -129,7 +129,7 @@ console.log(output); // "True, over 21"</pre>
 
 <p>Ein guter Weg, um herauszufinden, ob der ternäre Operator ein guter Ersatz für ein <code>if/else</code> Statement ist, ist wenn das <code>return</code> Schlüsselwort mehrfach eingesetzt wird und in jedem Block der einzige Ausdruck ist.</p>
 
-<p>Beim Aufteilen des ternären Operators in mehrere Zeilen und extra Leerzeichen, kann dieser ein sehr sauberer Ersatz für eine längere Serie von <code>if/else</code> Statements sein. Dadurch wird ein leichter Weg für logisch gleiche Ausdrücke geschaffen:</p>
+<p>Beim Aufteilen des ternären Operators in mehrere Zeilen und extra Leerzeichen, kann dieser ein sehr sauberer Ersatz für eine längere Serie von <code>if/else</code> Statements sein. Dadurch wird ein leichter Weg für logisch gleiche Ausdrücke geschaffen:</p>
 
 <pre class="brush: js">var func1 = function ( .. ) {
   if (condition1) { return value1; }

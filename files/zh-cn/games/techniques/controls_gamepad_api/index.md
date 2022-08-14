@@ -203,10 +203,12 @@ if(gamepadAPI.turbo) {
 
 控制器放在一边不活动时轴值也可能有一定波动 (get dusty) ，这也就是说通过判断等于绝对的 -1 或 1 来可能是会有问题的。因此对此最好是给轴值设定一个阈值来触发生效。比如说，“冰箱坦克”仅会在 `X` 值大于 `0.5` 的时候向右转：
 
-    if(gamepadAPI.axesStatus[0].x > 0.5) {
-      this.player.angle += 3;
-      this.turret.angle += 3;
-    }
+```js
+if(gamepadAPI.axesStatus[0].x > 0.5) {
+  this.player.angle += 3;
+  this.turret.angle += 3;
+}
+```
 
 即使我们稍微误推摇杆或者摇杆没有弹回原始位置，“冰箱坦克”也不会意外转向。
 
@@ -222,10 +224,12 @@ if(gamepadAPI.turbo) {
 
 布局类型现在是一个可枚举的对象而不是字符串：
 
-    enum GamepadMappingType {
-        "",
-        "standard"
-    };
+```
+enum GamepadMappingType {
+    "",
+    "standard"
+};
+```
 
 此枚举中定义了已知的控制器映射集。目前只有 `standard` 布局可用，但是未来可能会有新的布局。如果布局未知，那么将会是空字符串。
 

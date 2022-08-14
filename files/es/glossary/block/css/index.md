@@ -11,4 +11,4 @@ Usando la propiedad {{cssxref("display")}} puedes cambiar si un elemento se mues
 
 ### Conocimiento general
 
-- [Modelo de formato visual](/en-US/docs/Web/Guide/CSS/Visual_formatting_model)
+- [Modelo de formato visual](/es/docs/Web/Guide/CSS/Visual_formatting_model)
