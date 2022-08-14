@@ -169,14 +169,14 @@ section {
 ```html
 <div class="blue"></div>
 <div class="red-outer">
-  <div class="red-inner">red inner</div>
+  <div class="orange-inner">orange inner</div>
 </div>
 ```
 
 #### CSS
 
 ```css
-.blue, .red-inner {
+.blue, .orange-inner {
   height: 50px;
   margin: 10px 0;
 }
@@ -188,6 +188,7 @@ section {
 .red-outer {
   overflow: hidden;
   background: red;
+  margin-top: 10px;
 }
 ```
 
