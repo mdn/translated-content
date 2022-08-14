@@ -3,39 +3,35 @@ title: 간단한 색깔 애니메이션
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
 translation_of: Web/API/WebGL_API/By_example/Simple_color_animation
 ---
-<div>{{IncludeSubnav("/en-US/Learn")}}</div>
+{{IncludeSubnav("/en-US/Learn")}}
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
 
-<div id="simple-color-animation">
-<div class="summary">
-<p>{{Glossary("WebGL")}} 를 청소함으로써 매 초 마다 랜덤 색이 버퍼에 그려지는 매우 기본적인 색깔 애니메이션.</p>
-</div>
+{{Glossary("WebGL")}} 를 청소함으로써 매 초 마다 랜덤 색이 버퍼에 그려지는 매우 기본적인 색깔 애니메이션.
 
-<p>{{EmbedLiveSample("simple-color-animation-source",660,425)}}</p>
+{{EmbedLiveSample("simple-color-animation-source",660,425)}}
 
-<div id="simple-color-animation-intro">
-<h3 id="청소_컬러_애니메이션">청소 &amp; 컬러 애니메이션</h3>
+### 청소 & 컬러 애니메이션
 
-<p>이 예시는 유저 인터페이스 뿐만 아니라, {{Glossary("WebGL")}}와 함께 간단한 컬러 애니메이션 설명을 제공합니다. 유저는 버튼을 클릭함으로써, 애니메이션을 시작하고, 종료하고, 다시시작할 수 있습니다.</p>
+이 예시는 유저 인터페이스 뿐만 아니라, {{Glossary("WebGL")}}와 함께 간단한 컬러 애니메이션 설명을 제공합니다. 유저는 버튼을 클릭함으로써, 애니메이션을 시작하고, 종료하고, 다시시작할 수 있습니다.
 
-<p>이번에 우리는 이벤트 핸들로 내부에서 {{Glossary("WebGL")}} 함수 콜을 넣을 것입니다. 클릭 이벤트 핸들러는 추가적으로 시작하고 멈추는 기본적인 유저 상호작용을 가능하게 합니다. 타이머와 타이머 핸들러 기능은 애니메이션 반복을 구축합니다. 애니메이션 반복은 일정한 주기로 실행되는 그리기 명령의 집합입니다.(일반적으로 모든 프레임; 이 경우 초당 1번)</p>
-</div>
+이번에 우리는 이벤트 핸들로 내부에서 {{Glossary("WebGL")}} 함수 콜을 넣을 것입니다. 클릭 이벤트 핸들러는 추가적으로 시작하고 멈추는 기본적인 유저 상호작용을 가능하게 합니다. 타이머와 타이머 핸들러 기능은 애니메이션 반복을 구축합니다. 애니메이션 반복은 일정한 주기로 실행되는 그리기 명령의 집합입니다.(일반적으로 모든 프레임; 이 경우 초당 1번)
 
-<div id="simple-color-animation-source">
-<pre class="brush: html">&lt;p&gt;A simple WebGL program that shows color animation.&lt;/p&gt;
-&lt;p&gt;You can click the button below to toggle the
-    color animation on or off.&lt;/p&gt;
-&lt;canvas id="canvas-view"&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-&lt;button id="animation-onoff"&gt;
+```html
+<p>A simple WebGL program that shows color animation.</p>
+<p>You can click the button below to toggle the
+    color animation on or off.</p>
+<canvas id="canvas-view">Your browser does not seem to support
+    HTML5 canvas.</canvas>
+<button id="animation-onoff">
   Press here to
-&lt;strong&gt;[verb goes here]&lt;/strong&gt;
+<strong>[verb goes here]</strong>
   the animation
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -53,9 +49,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js" id="livesample-js">window.addEventListener("load", function setupAnimation (evt) {
+```js
+window.addEventListener("load", function setupAnimation (evt) {
   "use strict"
   window.removeEventListener(evt.type, setupAnimation, false);
 
@@ -116,10 +113,8 @@ button {
     return [Math.random(), Math.random(), Math.random()];
   }
 }, false);
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation">GitHub</a>.</p>
-</div>
-</div>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}

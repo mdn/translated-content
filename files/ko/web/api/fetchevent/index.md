@@ -13,48 +13,41 @@ tags:
   - Workers
 translation_of: Web/API/FetchEvent
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">This is the event type for <code>fetch</code> events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope", "", 1)}}. It contains information about the fetch, including the request and how the receiver will treat the response. It provides the {{domxref("FetchEvent.respondWith", "event.respondWith()")}} method, which allows us to provide a response to this fetch.</span></p>
+This is the event type for `fetch` events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope", "", 1)}}. It contains information about the fetch, including the request and how the receiver will treat the response. It provides the {{domxref("FetchEvent.respondWith", "event.respondWith()")}} method, which allows us to provide a response to this fetch.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}</dt>
- <dd>Creates a new <code>FetchEvent</code> object. This constructor is not typically used. The browser creates these objects itself and provides them to <code>fetch</code> event callbacks.</dd>
-</dl>
+- {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
+  - : Creates a new `FetchEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to `fetch` event callbacks.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor, {{domxref("Event")}}</em>.</p>
+_Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("fetchEvent.clientId")}} {{readonlyInline}}</dt>
- <dd>The {{domxref("Client.id", "id")}} of the same-origin {{domxref("Client", "client")}} that initiated the fetch.</dd>
- <dt>{{domxref("fetchEvent.preloadResponse")}} {{readonlyinline}}</dt>
- <dd>A {{jsxref("Promise")}} for a {{domxref("Response")}}, or void if this is not a navigation, or {{domxref("NavigationPreloadManager", "navigation preload", "", 1)}} is not enabled.</dd>
- <dt>{{domxref("fetchEvent.request")}} {{readonlyInline}}</dt>
- <dd>The {{domxref("Request")}} the browser intends to make.</dd>
-</dl>
+- {{domxref("fetchEvent.clientId")}} {{readonlyInline}}
+  - : The {{domxref("Client.id", "id")}} of the same-origin {{domxref("Client", "client")}} that initiated the fetch.
+- {{domxref("fetchEvent.preloadResponse")}} {{readonlyinline}}
+  - : A {{jsxref("Promise")}} for a {{domxref("Response")}}, or void if this is not a navigation, or {{domxref("NavigationPreloadManager", "navigation preload", "", 1)}} is not enabled.
+- {{domxref("fetchEvent.request")}} {{readonlyInline}}
+  - : The {{domxref("Request")}} the browser intends to make.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, </em><em>{{domxref("ExtendableEvent")}}</em>.</p>
+_Inherits methods from its parent,_ _{{domxref("ExtendableEvent")}}_.
 
-<dl>
- <dt>{{domxref("fetchEvent.respondWith()")}}</dt>
- <dd>Prevent the browser's default fetch handling, and provide (a promise for) a response yourself.</dd>
- <dt>{{domxref("extendableEvent.waitUntil()")}}</dt>
- <dd>
- <p>Extends the lifetime of the event. Used to notify the browser of tasks that extend beyond the returning of a response, such as streaming and caching.</p>
- </dd>
-</dl>
+- {{domxref("fetchEvent.respondWith()")}}
+  - : Prevent the browser's default fetch handling, and provide (a promise for) a response yourself.
+- {{domxref("extendableEvent.waitUntil()")}}
+  - : Extends the lifetime of the event. Used to notify the browser of tasks that extend beyond the returning of a response, such as streaming and caching.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This fetch event uses the browser default for non-GET requests. For GET requests it tries to return a match in the cache, and falls back to the network. If it finds a match in the cache, it asynchronously updates the cache for next time.</p>
+This fetch event uses the browser default for non-GET requests. For GET requests it tries to return a match in the cache, and falls back to the network. If it finds a match in the cache, it asynchronously updates the cache for next time.
 
-<pre class="brush: js">addEventListener('fetch', event =&gt; {
+```js
+addEventListener('fetch', event => {
   // Let the browser do its default thing
   // for non-GET requests.
   if (event.request.method != 'GET') return;
@@ -75,19 +68,18 @@ translation_of: Web/API/FetchEvent
     // If we didn't find a match in the cache, use the network.
     return fetch(event.request);
   }());
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.FetchEvent")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [Fetch API](/ko/docs/Web/API/Fetch_API)

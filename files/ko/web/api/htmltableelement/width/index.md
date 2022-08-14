@@ -7,18 +7,23 @@ tags:
   - Gecko DOM Reference
 translation_of: Web/API/HTMLTableElement/width
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id=".EC.9A.94.EC.95.BD" name=".EC.9A.94.EC.95.BD">요약</h3>
-<p><b>width</b>는 바라는 테이블의 너비를 지정합니다.</p>
-<h3 id=".EA.B5.AC.EB.AC.B8" name=".EA.B5.AC.EB.AC.B8">구문</h3>
-<pre class="eval"><i>HTMLTableElement</i>.width =<i>width</i>;
-var<i>width</i> =<i>HTMLTableElement</i>.width;
-</pre>
-<p><code><a class="external" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-width-TABLE">width</a></code>가 픽셀수나 퍼센트 값으로 너비를 나타내는 문자열인 곳.</p>
-<h3 id=".EC.98.88.EC.A0.9C" name=".EC.98.88.EC.A0.9C">예제</h3>
-<pre class="eval">mytable.width = "75%";
-</pre>
+{{ ApiRef() }}
 
-<h2 id="Specifications">명세서</h2>
+### 요약
+
+**width**는 바라는 테이블의 너비를 지정합니다.
+
+### 구문
+
+    HTMLTableElement.width =width;
+    varwidth =HTMLTableElement.width;
+
+[`width`](http://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-width-TABLE)가 픽셀수나 퍼센트 값으로 너비를 나타내는 문자열인 곳.
+
+### 예제
+
+    mytable.width = "75%";
+
+## 명세서
 
 {{Specifications}}

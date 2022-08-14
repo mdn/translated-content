@@ -10,50 +10,47 @@ tags:
   - Stylesheets
 translation_of: Web/API/Document/styleSheetSets
 ---
-<div>{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}</div>
+{{APIRef("DOM")}}{{gecko_minversion_header("1.9")}}
 
-<p><code><strong>styleSheetSets</strong></code>의 읽기 전용 속성은 현재 사용 가능한 모든 스타일 시트 세트의 live 리스트를 반환합니다.</p>
+**`styleSheetSets`**의 읽기 전용 속성은 현재 사용 가능한 모든 스타일 시트 세트의 live 리스트를 반환합니다.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox notranslate">var <var>sets</var> = <var>document</var>.styleSheetSets;
-</pre>
+    var sets = document.styleSheetSets;
 
-<p> 반환시, <code>sets</code>는 사용할 수 있는 스타일 시트 세트의 리스트.</p>
+반환시, `sets`는 사용할 수 있는 스타일 시트 세트의 리스트.
 
-<h2 id="예시">예시</h2>
+## 예시
 
-<p>ID가 "sheetList"인 {{HTMLElement("ul")}} (list) 요소가 주어지면, 사용 가능한 모든 스타일 시트 세트의 이름으로 아래와 같은 코드로 채울 수 있습니다.</p>
+ID가 "sheetList"인 {{HTMLElement("ul")}} (list) 요소가 주어지면, 사용 가능한 모든 스타일 시트 세트의 이름으로 아래와 같은 코드로 채울 수 있습니다.
 
-<pre class="brush:js notranslate">let list = document.getElementById('sheetList');
+```js
+let list = document.getElementById('sheetList');
 let sheets = document.styleSheetSets;
 
 list.innerHTML = '';
 
-for (let i = 0; i &lt; sheets.length; i++) {
+for (let i = 0; i < sheets.length; i++) {
   let item = document.createElement('li');
 
   item.innerHTML = sheets[i];
   list.appendChild(item);
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>사용 가능한 스타일 시트 세트 리스트는 문서에 사용 가능한 모든 스타일 시트를 열거하여 구성되고, {{domxref("document.styleSheets")}} 속성에 나열된 순서대로, 리스트에 제목을 가진 각각의 스타일 시트 <code>title</code>을 추가합니다. 중복 항목이 리스트에서 삭제됨. (대소문자 구분 비교 사용).</p>
+사용 가능한 스타일 시트 세트 리스트는 문서에 사용 가능한 모든 스타일 시트를 열거하여 구성되고, {{domxref("document.styleSheets")}} 속성에 나열된 순서대로, 리스트에 제목을 가진 각각의 스타일 시트 `title`을 추가합니다. 중복 항목이 리스트에서 삭제됨. (대소문자 구분 비교 사용).
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
+{{Compat}}
 
+## 더보기
 
-<p>{{Compat("api.Document.styleSheetSets")}}</p>
-
-<h2 id="더보기">더보기</h2>
-
-<ul>
- <li>{{domxref("Stylesheet")}}</li>
- <li>{{domxref("document.styleSheets")}}</li>
- <li>{{domxref("document.lastStyleSheetSet")}}</li>
- <li>{{domxref("document.preferredStyleSheetSet")}}</li>
- <li>{{domxref("document.selectedStyleSheetSet")}}</li>
- <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("Stylesheet")}}
+- {{domxref("document.styleSheets")}}
+- {{domxref("document.lastStyleSheetSet")}}
+- {{domxref("document.preferredStyleSheetSet")}}
+- {{domxref("document.selectedStyleSheetSet")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}

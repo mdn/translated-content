@@ -3,48 +3,41 @@ title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
 translation_of: Web/API/HTMLCollection/item
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary">{{domxref("HTMLCollection")}} 의 메소드 <code>item()</code> 은 컬렉션 안의 특정 인덱스에 위치한 노드를 반환합니다.</span></p>
+{{domxref("HTMLCollection")}} 의 메소드 `item()` 은 컬렉션 안의 특정 인덱스에 위치한 노드를 반환합니다.
 
-<div class="note">
-<p><strong>Note: </strong><code>HTMLCollection</code>은 실시간이기 때문에, DOM을 변경하면 컬렉션 내의 노드도 변경됩니다. 따라서, 한 노드의 인덱스 값이 항상 일정하지는 않습니다. </p>
-</div>
+> **참고:**`HTMLCollection`은 실시간이기 때문에, DOM을 변경하면 컬렉션 내의 노드도 변경됩니다. 따라서, 한 노드의 인덱스 값이 항상 일정하지는 않습니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>element</em> = <em>HTMLCollection</em>.item(<em>index</em>)</pre>
+    var element = HTMLCollection.item(index)
 
-<h3 id="파라미터">파라미터</h3>
+### 파라미터
 
-<dl>
- <dt><code>index</code></dt>
- <dd>반환받을 {{domxref("Node")}}의 위치. <code>HTMLCollection</code>에 들어있는 요소들은 도큐먼트에 나타나는 순서와 동일합니다.</dd>
-</dl>
+- `index`
+  - : 반환받을 {{domxref("Node")}}의 위치. `HTMLCollection`에 들어있는 요소들은 도큐먼트에 나타나는 순서와 동일합니다.
 
-<h3 id="반환값">반환값</h3>
+### 반환값
 
-<p>주어진 인덱스의 {{domxref("Node")}}. <code>index</code>가 0보다 작거나 length 속성보다 크다면 <code>null</code>을 반환합니다.</p>
+주어진 인덱스의 {{domxref("Node")}}. `index`가 0보다 작거나 length 속성보다 크다면 `null`을 반환합니다.
 
-<h2 id="참고사항">참고사항</h2>
+## 참고사항
 
-<p><code>item()</code> 메소드는 <code>HTMLCollection</code>으로부터 순서가 매겨진 하나의 요소를 반환합니다. 자바스크립트에서, <code>HTMLCollection</code>을 배열처럼 다루는건 아주 쉽습니다. 아래의 <a href="#example">예시</a>를 보세요.</p>
+`item()` 메소드는 `HTMLCollection`으로부터 순서가 매겨진 하나의 요소를 반환합니다. 자바스크립트에서, `HTMLCollection`을 배열처럼 다루는건 아주 쉽습니다. 아래의 [예시](#example)를 보세요.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var c = document.images;  // HTMLCollection입니다
+```js
+var c = document.images;  // HTMLCollection입니다
 var img0 = c.item(0);     // 이렇게 item() 메소드를 이용할 수 있지만
 var img1 = c[1];          // 이렇게 표기하는게 쉽고 더 보편적입니다
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat("api.HTMLCollection.item")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("NodeList.item()")}}</li>
-</ul>
+- {{domxref("NodeList.item()")}}

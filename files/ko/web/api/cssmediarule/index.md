@@ -8,36 +8,33 @@ tags:
   - Reference
 translation_of: Web/API/CSSMediaRule
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p><span class="seoSummary"><strong><code>CSSMediaRule</code></strong> 인터페이스는 하나의 CSS {{cssxref("@media")}} 규칙을 나타냅니다.</span> {{domxref("CSSConditionRule")}} 인터페이스를 구현하므로, {{domxref("CSSGroupingRule")}}과 {{domxref("CSSRule")}} 인터페이스도 유형값 <code>4</code> (<code>CSSRule.MEDIA_RULE</code>)로 구현합니다.</p>
+**`CSSMediaRule`** 인터페이스는 하나의 CSS {{cssxref("@media")}} 규칙을 나타냅니다. {{domxref("CSSConditionRule")}} 인터페이스를 구현하므로, {{domxref("CSSGroupingRule")}}과 {{domxref("CSSRule")}} 인터페이스도 유형값 `4` (`CSSRule.MEDIA_RULE`)로 구현합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<p><a href="https://heycam.github.io/webidl/">WebIDL</a> 형식을 사용해 서술합니다.</p>
+[WebIDL](https://heycam.github.io/webidl/) 형식을 사용해 서술합니다.
 
-<pre class="syntaxbox">interface CSSMediaRule : CSSConditionRule {
-    readonly attribute MediaList media;
-}
-</pre>
+    interface CSSMediaRule : CSSConditionRule {
+        readonly attribute MediaList media;
+    }
 
-<h2 id="속성">속성</h2>
+## 속성
 
-<p><code>CSSMediaRule</code>은 {{domxref("CSSConditionRule")}}, 그리고 {{domxref("CSSGroupingRule")}}와 {{domxref("CSSRule")}}로서 해당 인터페이스의 속성을 구현합니다. 다음과 같은 자체 속성을 가집니다.</p>
+`CSSMediaRule`은 {{domxref("CSSConditionRule")}}, 그리고 {{domxref("CSSGroupingRule")}}와 {{domxref("CSSRule")}}로서 해당 인터페이스의 속성을 구현합니다. 다음과 같은 자체 속성을 가집니다.
 
-<dl>
- <dt>{{domxref("CSSMediaRule.media")}} {{readonlyinline}}</dt>
- <dd>스타일 정보를 적용할 매체 정보를 나타내는 {{domxref("MediaList")}}입니다.</dd>
-</dl>
+- {{domxref("CSSMediaRule.media")}} {{readonlyinline}}
+  - : 스타일 정보를 적용할 매체 정보를 나타내는 {{domxref("MediaList")}}입니다.
 
-<h2 id="메서드">메서드</h2>
+## 메서드
 
-<p><code>CSSMediaRule</code>은 {{domxref("CSSConditionRule")}}, 그리고 {{domxref("CSSGroupingRule")}}와 {{domxref("CSSRule")}}로서 해당 인터페이스의 메서드를 구현합니다. 자체 메서드는 가지지 않습니다.</p>
+`CSSMediaRule`은 {{domxref("CSSConditionRule")}}, 그리고 {{domxref("CSSGroupingRule")}}와 {{domxref("CSSRule")}}로서 해당 인터페이스의 메서드를 구현합니다. 자체 메서드는 가지지 않습니다.
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.CSSMediaRule")}}</p>
+{{Compat}}

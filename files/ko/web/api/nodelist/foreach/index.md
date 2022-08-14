@@ -3,44 +3,38 @@ title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
 translation_of: Web/API/NodeList/forEach
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("NodeList")}} 인터페이스의 <strong><code>forEach()</code></strong> 메서드는 리스트 내의 각각의 값 쌍에 대해 매개 변수에 지정된 콜백을 삽입 순서로 호출합니다.</p>
+{{domxref("NodeList")}} 인터페이스의 **`forEach()`** 메서드는 리스트 내의 각각의 값 쌍에 대해 매개 변수에 지정된 콜백을 삽입 순서로 호출합니다.
 
-<h2 id="문법Syntax">문법Syntax</h2>
+## 문법Syntax
 
-<pre class="syntaxbox"><em>NodeList.</em>forEach<em>(callback[, thisArg]);</em>
-</pre>
+    NodeList.forEach(callback[, thisArg]);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>각각의 요소에 대해 실행하는 함수로, 3개의 인수(arguments)를 갖습니다:
- <dl>
-  <dt><em><code>currentValue</code></em></dt>
-  <dd>NodeList에서 처리중인 현재 요소(element)입니다.</dd>
-  <dt><code><em>currentIndex</em></code></dt>
-  <dd>NodeList에서 처리중인 현재 요소의 인덱스입니다.</dd>
-  <dt><em><code>listObj</code></em></dt>
-  <dd><code>forEach()</code> 가 적용되고 있는 NodeList 객체입니다. </dd>
- </dl>
- </dd>
- <dt><code>thisArg</code><code> {{Optional_inline}}</code></dt>
- <dd><code>callback</code> 을 실행할 때 {{jsxref("this")}} 에 대입할 값입니다.</dd>
-</dl>
+- `callback`
+  - : 각각의 요소에 대해 실행하는 함수로, 3개의 인수(arguments)를 갖습니다:_ *`currentValue`*
+    _ : NodeList에서 처리중인 현재 요소(element)입니다.
+    - `currentIndex`
+      - : NodeList에서 처리중인 현재 요소의 인덱스입니다.
+    - _`listObj`_
+      - : `forEach()` 가 적용되고 있는 NodeList 객체입니다.
+- ` thisArg`` {{Optional_inline}}  `
+  - : `callback` 을 실행할 때 {{jsxref("this")}} 에 대입할 값입니다.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}.</p>
+{{jsxref('undefined')}}.
 
-<h2 id="Exceptions">Exceptions</h2>
+## Exceptions
 
-<p><em>None</em>.</p>
+_None_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;highlight:[6]">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -56,46 +50,49 @@ list.forEach(
     console.log(currentValue + ', ' + currentIndex + ', ' + this);
   },
   'myThisArg'
-);</pre>
+);
+```
 
-<p>결과는 다음과 같습니다.</p>
+결과는 다음과 같습니다.
 
-<pre>[object HTMLParagraphElement], 0, myThisArg
-[object Text], 1, myThisArg
-[object HTMLSpanElement], 2, myThisArg</pre>
+    [object HTMLParagraphElement], 0, myThisArg
+    [object Text], 1, myThisArg
+    [object HTMLSpanElement], 2, myThisArg
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>이 {{Glossary("Polyfill","polyfill")}} 은 <a href="https://caniuse.com/#search=es5">ES5</a> 를 지원하는 모든 브라우저에서 동작합니다:</p>
+이 {{Glossary("Polyfill","polyfill")}} 은 [ES5](https://caniuse.com/#search=es5) 를 지원하는 모든 브라우저에서 동작합니다:
 
-<pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
+```js
+if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
         thisArg = thisArg || window;
-        for (var i = 0; i &lt; this.length; i++) {
+        for (var i = 0; i < this.length; i++) {
             callback.call(thisArg, this[i], i, this);
         }
     };
-}</pre>
+}
+```
 
-<p>또는</p>
+또는
 
-<pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
+```js
+if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
-}</pre>
+}
+```
 
-<p>The above behavior is how many browsers actually implement NodeList.prototype.forEach (Chrome, for example).</p>
+The above behavior is how many browsers actually implement NodeList.prototype.forEach (Chrome, for example).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
-<p>{{Compat("api.NodeList.forEach")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

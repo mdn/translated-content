@@ -8,21 +8,23 @@ tags:
   - Reference
 translation_of: Web/API/Document/hidden
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p><code><strong>Document.hidden</strong></code> 읽기 전용 속성은 페이지가 숨겨졌는지 여부를 {{jsxref("Boolean")}} 값으로 나타냅니다.</p>
+**`Document.hidden`** 읽기 전용 속성은 페이지가 숨겨졌는지 여부를 {{jsxref("Boolean")}} 값으로 나타냅니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush:js;">document.addEventListener("visibilitychange", function() {
+```js
+document.addEventListener("visibilitychange", function() {
   console.log(document.hidden);
   // 숨김 여부가 변했을 때의 행동
-});</pre>
+});
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Document.hidden")}}</p>
+{{Compat}}

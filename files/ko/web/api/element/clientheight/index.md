@@ -3,39 +3,35 @@ title: Element.clientHeight
 slug: Web/API/Element/clientHeight
 translation_of: Web/API/Element/clientHeight
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<p><code>읽기 전용 속성인<strong> Element.clientHeight</strong>은</code> 엘리먼트의 내부 높이를 픽셀로 반환합니다. 이 내부 높이라는 것은 내부 여백(padding)을 포함하지만, 수평 스크롤바의 높이, 경계선, 또는 외부 여백(margin)은 포함하지 않습니다.</p>
+`읽기 전용 속성인 Element.clientHeight은` 엘리먼트의 내부 높이를 픽셀로 반환합니다. 이 내부 높이라는 것은 내부 여백(padding)을 포함하지만, 수평 스크롤바의 높이, 경계선, 또는 외부 여백(margin)은 포함하지 않습니다.
 
-<p><code>clientHeight는 CSS상의 높이 + CSS상의 내부 여백 - 수평 스크롤바의 높이(존재하는 경우에만)로 </code> 계산됩니다.</p>
+`clientHeight는 CSS상의 높이 + CSS상의 내부 여백 - 수평 스크롤바의 높이(존재하는 경우에만)로 `계산됩니다.
 
-<div class="note">
-<p><strong>Note:</strong> 이 속성은 integer로 반올림됩니다. 소수점이 포함된 값이 필요하다면, {{ domxref("element.getBoundingClientRect()") }}을 사용하시기 바랍니다.</p>
-</div>
+> **참고:** 이 속성은 integer로 반올림됩니다. 소수점이 포함된 값이 필요하다면, {{ domxref("element.getBoundingClientRect()") }}을 사용하시기 바랍니다.
 
-<h2 id="Syntax_and_values" name="Syntax_and_values">구문</h2>
+## 구문
 
-<pre class="syntaxbox">var <var>h</var> = <var>element</var>.clientHeight;</pre>
+    var h = element.clientHeight;
 
-<p><code><var>h는</var></code> 엘리먼트의 높이를 나타내는 픽셀 단위의 integer입니다.</p>
+`h는` 엘리먼트의 높이를 나타내는 픽셀 단위의 integer입니다.
 
-<h2 id="Example" name="Example">예</h2>
+## 예
 
-<p><img alt="Image:Dimensions-client.png" src="https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png"/></p>
+![Image:Dimensions-client.png](https://developer.mozilla.org/@api/deki/files/185/=Dimensions-client.png)
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h3 id="Notes" name="Notes">주의</h3>
+### 주의
 
-<p><code>clientHeight는 </code>Internet Explorer의 객체 모델에서 소개된 속성입니다.</p>
+`clientHeight는 `Internet Explorer의 객체 모델에서 소개된 속성입니다.
 
-<h2 id="See_Also" name="See_Also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{domxref("Element.offsetHeight")}}</li>
- <li>{{domxref("Element.scrollHeight")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Determining_the_dimensions_of_elements">MSDN Determining the dimensions of elements</a></li>
-</ul>
+- {{domxref("Element.offsetHeight")}}
+- {{domxref("Element.scrollHeight")}}
+- [Determining the dimensions of elements](/ko/docs/Determining_the_dimensions_of_elements)
+- [MSDN Determining the dimensions of elements](/ko/docs/Determining_the_dimensions_of_elements)

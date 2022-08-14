@@ -9,28 +9,25 @@ tags:
   - Reference
 translation_of: Web/API/Location/reload
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><span class="seoSummary"><code><strong>Location.reload()</strong></code> 메서드는 새로고침 버튼처럼 현재 리소스를 다시 불러옵니다.</span></p>
+**`Location.reload()`** 메서드는 새로고침 버튼처럼 현재 리소스를 다시 불러옵니다.
 
-<p>새로고침은 <code>SECURITY_ERROR</code> {{domxref("DOMException")}}과 함께 거부당할 수 있습니다. 이는 <code>location.reload()</code>를 호출한 스크립트의 {{glossary("origin", "출처")}}와 {{domxref("Location")}} 객체를 소유한 문서의 출처가 다를 때 발생합니다. 더 자세한 정보는 <a href="/ko/docs/Web/Security/Same-origin_policy">동일 출처 정책</a> 문서를 참고하세요.</p>
+새로고침은 `SECURITY_ERROR` {{domxref("DOMException")}}과 함께 거부당할 수 있습니다. 이는 `location.reload()`를 호출한 스크립트의 {{glossary("origin", "출처")}}와 {{domxref("Location")}} 객체를 소유한 문서의 출처가 다를 때 발생합니다. 더 자세한 정보는 [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy) 문서를 참고하세요.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><em>location</em>.reload();
-</pre>
+    location.reload();
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Location.reload")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>메서드가 속한 {{domxref("Location")}} 인터페이스.</li>
- <li>비슷한 메서드: {{domxref("Location.assign()")}}, {{domxref("Location.replace()")}}.</li>
-</ul>
+- 메서드가 속한 {{domxref("Location")}} 인터페이스.
+- 비슷한 메서드: {{domxref("Location.assign()")}}, {{domxref("Location.replace()")}}.

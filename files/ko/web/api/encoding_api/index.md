@@ -8,40 +8,31 @@ tags:
   - 인코딩
 translation_of: Web/API/Encoding_API
 ---
-<p>{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
 
-<p><strong>인코딩 API</strong>는 {{Glossary("문자 인코딩", "character encodings")}}, {{Glossary("UTF-8")}}이 아닌 레거시 인코딩을 포함한 다양한 문자열을 제어할 수 있는 매커니즘을 제공한다.</p>
+**인코딩 API**는 {{Glossary("문자 인코딩", "character encodings")}}, {{Glossary("UTF-8")}}이 아닌 레거시 인코딩을 포함한 다양한 문자열을 제어할 수 있는 매커니즘을 제공한다.
 
-<p>인코딩 API는 4가지 인터페이스를 제공한다. {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}}, {{domxref("TextEncoderStream")}} 등 이다.</p>
+인코딩 API는 4가지 인터페이스를 제공한다. {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}}, {{domxref("TextEncoderStream")}} 등 이다.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<div class="index">
-<ul>
- <li>{{DOMxRef("TextDecoder")}}</li>
- <li>{{DOMxRef("TextEncoder")}}</li>
- <li>{{DOMxRef("TextDecoderStream")}}</li>
- <li>{{DOMxRef("TextEncoderStream")}}</li>
-</ul>
-</div>
+<div class="index"><ul><li>{{DOMxRef("TextDecoder")}}</li><li>{{DOMxRef("TextEncoder")}}</li><li>{{DOMxRef("TextDecoderStream")}}</li><li>{{DOMxRef("TextEncoderStream")}}</li></ul></div>
 
-<h2 id="Tutorials_tools">Tutorials &amp; tools</h2>
+## Tutorials & tools
 
-<ul>
- <li>A <a href="http://code.google.com/p/stringencoding/">shim</a> allowing to use this interface in browsers that don't support it.</li>
- <li><a href="/en-US/Add-ons/Code_snippets/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code></a> – a C-like representation of strings based on typed arrays.</li>
-</ul>
+- A [shim](http://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
+- [`StringView`](/en-US/Add-ons/Code_snippets/StringView "/en-US/docs/Web/JavaScript/Typed_arrays/StringView") – a C-like representation of strings based on typed arrays.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="TextDecoder"><code>TextDecoder</code></h3>
+### `TextDecoder`
 
-<p>{{Compat("api.TextDecoder")}}</p>
+{{Compat("api.TextDecoder")}}
 
-<h3 id="TextEncoder"><code>TextEncoder</code></h3>
+### `TextEncoder`
 
-<p>{{Compat("api.TextEncoder")}}</p>
+{{Compat}}

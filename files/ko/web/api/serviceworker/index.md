@@ -13,41 +13,38 @@ tags:
   - 워커
 translation_of: Web/API/ServiceWorker
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><a href="/ko/docs/Web/API/Service_Worker_API">Service Worker API</a>의 <strong><code>ServiceWorker</code></strong> 인터페이스는 서비스 워커로의 참조를 제공합니다. 다수의 {{glossary("browsing context", "브라우징 맥락")}}(e.g. 페이지, 다른 워커, 등등)는 고유한<code> ServiceWorker</code> 객체를 통해 동일한 서비스 워커와 연결할 수 있습니다.</p>
+[Service Worker API](/ko/docs/Web/API/Service_Worker_API)의 **`ServiceWorker`** 인터페이스는 서비스 워커로의 참조를 제공합니다. 다수의 {{glossary("browsing context", "브라우징 맥락")}}(e.g. 페이지, 다른 워커, 등등)는 고유한` ServiceWorker` 객체를 통해 동일한 서비스 워커와 연결할 수 있습니다.
 
-<p><code>ServiceWorker</code> 객체는 {{domxref("ServiceWorkerRegistration.active")}} 속성과 {{domxref("ServiceWorkerContainer.controller")}} 속성으로 접근할 수 있습니다. <code>controller</code>는 활성화되어 페이지를 통제 중인 서비스 워커입니다.</p>
+`ServiceWorker` 객체는 {{domxref("ServiceWorkerRegistration.active")}} 속성과 {{domxref("ServiceWorkerContainer.controller")}} 속성으로 접근할 수 있습니다. `controller`는 활성화되어 페이지를 통제 중인 서비스 워커입니다.
 
-<p><code>ServiceWorker</code> 인터페이스에서는 일련의 생명주기 이벤트(<code>install</code>, <code>activate</code>)와 기능 이벤트(<code>fetch</code>)가 발생합니다. <code>ServiceWorker</code> 객체의 생명주기는 {{domxref("ServiceWorker.state")}} 속성이 담고 있습니다.</p>
+`ServiceWorker` 인터페이스에서는 일련의 생명주기 이벤트(`install`, `activate`)와 기능 이벤트(`fetch`)가 발생합니다. `ServiceWorker` 객체의 생명주기는 {{domxref("ServiceWorker.state")}} 속성이 담고 있습니다.
 
-<h2 id="속성">속성</h2>
+## 속성
 
-<p><code>ServiceWorker</code> 인터페이스는 부모 {{domxref("Worker")}}에서 속성을 상속합니다.</p>
+`ServiceWorker` 인터페이스는 부모 {{domxref("Worker")}}에서 속성을 상속합니다.
 
-<dl>
- <dt>{{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}</dt>
- <dd>Returns the <code>ServiceWorker</code> serialized script URL defined as part of {{domxref("ServiceWorkerRegistration")}}. The URL must be on the same origin as the document that registers the <code>ServiceWorker</code>.</dd>
- <dt>{{domxref("ServiceWorker.state")}} {{readonlyinline}}</dt>
- <dd>Returns the state of the service worker. It returns one of the following values: <code>installing</code>, <code>installed,</code> <code>activating</code>, <code>activated</code>, or <code>redundant</code>.</dd>
-</dl>
+- {{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}
+  - : Returns the `ServiceWorker` serialized script URL defined as part of {{domxref("ServiceWorkerRegistration")}}. The URL must be on the same origin as the document that registers the `ServiceWorker`.
+- {{domxref("ServiceWorker.state")}} {{readonlyinline}}
+  - : Returns the state of the service worker. It returns one of the following values: `installing`, `installed,` `activating`, `activated`, or `redundant`.
 
-<h3 id="이벤트_처리기">이벤트 처리기</h3>
+### 이벤트 처리기
 
-<dl>
- <dt>{{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}</dt>
- <dd>An {{domxref("EventListener")}} property called whenever an event of type <code>statechange</code> is fired; it is basically fired anytime the {{domxref("ServiceWorker.state")}} changes.</dd>
-</dl>
+- {{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}
+  - : An {{domxref("EventListener")}} property called whenever an event of type `statechange` is fired; it is basically fired anytime the {{domxref("ServiceWorker.state")}} changes.
 
-<h2 id="메서드">메서드</h2>
+## 메서드
 
-<p><code>ServiceWorker</code> 인터페이스는 부모 {{domxref("Worker")}}에서 메서드를 상속합니다. 단, {{domxref("Worker.terminate()")}}는 예외이며 서비스 워커에서 접근할 수 없습니다.</p>
+`ServiceWorker` 인터페이스는 부모 {{domxref("Worker")}}에서 메서드를 상속합니다. 단, {{domxref("Worker.terminate()")}}는 예외이며 서비스 워커에서 접근할 수 없습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.</p>
+This code snippet is from the [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
     }).then(function (registration) {
@@ -74,23 +71,22 @@ translation_of: Web/API/ServiceWorker
     });
 } else {
     // The current browser doesn't support service workers.
-}</pre>
+}
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-{{Compat("api.ServiceWorker")}}
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service worker basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [Using Service Workers](/ko/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service worker basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)

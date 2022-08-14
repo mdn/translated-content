@@ -4,61 +4,52 @@ slug: Web/API/HTMLInputElement/select_event
 translation_of: Web/API/Element/select_event
 original_slug: Web/API/Element/select_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>select</code></strong> 이벤트는 어떤 텍스트가 선택되었을 때 발생됩니다.</p>
+**`select`** 이벤트는 어떤 텍스트가 선택되었을 때 발생됩니다.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>유저 인터페이스로부터 발생된 경우 {{domxref("UIEvent")}}, 아니라면 {{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onselect", "onselect")}}</td>
-  </tr>
- </tbody>
-</table>
+| Bubbles                | Yes                                                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------- |
+| Cancelable             | No                                                                                                    |
+| Interface              | 유저 인터페이스로부터 발생된 경우 {{domxref("UIEvent")}}, 아니라면 {{domxref("Event")}} |
+| Event handler property | {{domxref("GlobalEventHandlers.onselect", "onselect")}}                              |
 
-<p>The event is not available for all elements in all languages. For example, in HTML, <code>select</code> events can be dispatched only on form <code>{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}</code> and {{HtmlElement("textarea")}} elements.</p>
+The event is not available for all elements in all languages. For example, in HTML, `select` events can be dispatched only on form `{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}` and {{HtmlElement("textarea")}} elements.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Selection_logger">Selection logger</h3>
+### Selection logger
 
-<pre class="brush: html notranslate">&lt;input value="Try selecting some text in this element."&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input value="Try selecting some text in this element.">
+<p id="log"></p>
+```
 
-<pre class="brush: js notranslate">function logSelection(event) {
+```js
+function logSelection(event) {
   const log = document.getElementById('log');
   const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
   log.textContent = `You selected: ${selection}`;
 }
 
 const input = document.querySelector('input');
-input.addEventListener('select', logSelection);</pre>
+input.addEventListener('select', logSelection);
+```
 
-<p>{{EmbedLiveSample("Selection_logger")}}</p>
+{{EmbedLiveSample("Selection_logger")}}
 
-<h3 id="onselect_equivalent">onselect equivalent</h3>
+### onselect equivalent
 
-<p>You can also set up the event handler using the {{domxref("GlobalEventHandlers.onselect", "onselect")}} property:</p>
+You can also set up the event handler using the {{domxref("GlobalEventHandlers.onselect", "onselect")}} property:
 
-<pre class="brush: js notranslate">input.onselect = logSelection;</pre>
+```js
+input.onselect = logSelection;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Element.select_event")}}</p>
+{{Compat}}

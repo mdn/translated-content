@@ -9,26 +9,24 @@ tags:
   - Reference
 translation_of: Web/API/MediaStreamTrack/getSettings
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><span class="seoSummary">{{domxref("MediaStreamTrack")}} 인터페이스의 <strong><code>getSettings()</code></strong> 메서드는 트랙의 각 제약 속성에 지금 적용된 값을 담은 {{domxref("MediaTrackSettings")}} 객체를 반환합니다.</span> <a href="/ko/docs/Web/API/Media_Streams_API/Constraints">기능, 제약, 설정</a> 문서에서 제약 속성 사용법에 대해 자세히 알아보세요.</p>
+{{domxref("MediaStreamTrack")}} 인터페이스의 **`getSettings()`** 메서드는 트랙의 각 제약 속성에 지금 적용된 값을 담은 {{domxref("MediaTrackSettings")}} 객체를 반환합니다. [기능, 제약, 설정](/ko/docs/Web/API/Media_Streams_API/Constraints) 문서에서 제약 속성 사용법에 대해 자세히 알아보세요.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">const <em>settings</em> = <em>track</em>.getSettings()</pre>
+    const settings = track.getSettings()
 
-<h3 id="반환_값"><span style="font-size: 1.714rem; letter-spacing: -0.021em; line-height: 1;">반환 값</span></h3>
+### 반환 값
 
-<p>트랙의 현재 제약 속성 설정을 설명하는 {{domxref("MediaTrackSettings")}} 객체.</p>
+트랙의 현재 제약 속성 설정을 설명하는 {{domxref("MediaTrackSettings")}} 객체.
 
-<div class="note">
-<p><strong>참고:</strong> 반환하는 객체는 모든 제약 속성을 포함하며, 사이트 코드에서 수정하지 않은 플랫폼 기본값 역시 들어있습니다. 사이트 코드에서 제일 최근에 적용한 제약 속성만 필요한 경우, {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} 메서드를 사용하세요.</p>
-</div>
+> **참고:** 반환하는 객체는 모든 제약 속성을 포함하며, 사이트 코드에서 수정하지 않은 플랫폼 기본값 역시 들어있습니다. 사이트 코드에서 제일 최근에 적용한 제약 속성만 필요한 경우, {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} 메서드를 사용하세요.
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.MediaStreamTrack.getSettings")}}</p>
+{{Compat}}

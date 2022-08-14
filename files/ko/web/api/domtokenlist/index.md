@@ -9,90 +9,92 @@ tags:
   - Reference
 translation_of: Web/API/DOMTokenList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DOMTokenList</strong></code> interface represents a set of space-separated tokens. Such a set is returned by {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}}, {{domxref("HTMLAreaElement.relList")}}, {{domxref("HTMLIframeElement.sandbox")}}, or {{domxref("HTMLOutputElement.htmlFor")}}. It is indexed beginning with <code>0</code> as with JavaScript {{jsxref("Array")}} objects. <code>DOMTokenList</code> is always case-sensitive.</p>
+The **`DOMTokenList`** interface represents a set of space-separated tokens. Such a set is returned by {{domxref("Element.classList")}}, {{domxref("HTMLLinkElement.relList")}}, {{domxref("HTMLAnchorElement.relList")}}, {{domxref("HTMLAreaElement.relList")}}, {{domxref("HTMLIframeElement.sandbox")}}, or {{domxref("HTMLOutputElement.htmlFor")}}. It is indexed beginning with `0` as with JavaScript {{jsxref("Array")}} objects. `DOMTokenList` is always case-sensitive.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}</dt>
- <dd>Is an <code>integer</code> representing the number of objects stored in the object.</dd>
- <dt>{{domxref("DOMTokenList.value")}}</dt>
- <dd>The value of the list as a {{domxref("DOMString")}}.</dd>
-</dl>
+- {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
+  - : Is an `integer` representing the number of objects stored in the object.
+- {{domxref("DOMTokenList.value")}}
+  - : The value of the list as a {{domxref("DOMString")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("DOMTokenList.item()")}}</dt>
- <dd>Returns an item in the list by its index (returns <code>undefined</code> if the number is greater than or equal to the length of the list).</dd>
- <dt>{{domxref("DOMTokenList.contains()")}}</dt>
- <dd>Returns <code>true</code> if the list contains the given <em>token</em>, otherwise <code>false</code>.</dd>
- <dt>{{domxref("DOMTokenList.add()")}}</dt>
- <dd>Adds the given <em>token</em> to the list.</dd>
- <dt>{{domxref("DOMTokenList.remove()")}}</dt>
- <dd>Removes the specified <em>token</em> from the list.</dd>
- <dt>{{domxref("DOMTokenList.replace()")}}</dt>
- <dd>Replaces an existing <em>token</em> with a new token.</dd>
- <dt>{{domxref("DOMTokenList.supports()")}}</dt>
- <dd>Returns <code>true</code> if a given <em>token</em> is in the associated attribute's supported tokens.</dd>
- <dt>{{domxref("DOMTokenList.toggle()")}}</dt>
- <dd>Removes a given <em>token</em> from the list and returns <code>false</code>. If <em>token</em> doesn't exist it's added and the function returns <code>true</code>.</dd>
- <dt>{{domxref("DOMTokenList.entries()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols","iterator")}} allowing you to go through all key/value pairs contained in this object.</dd>
- <dt>{{domxref("DOMTokenList.forEach()")}}</dt>
- <dd>Executes a provided function once per <code>DOMTokenList</code> element.</dd>
- <dt>{{domxref("DOMTokenList.keys()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing you to go through all keys of the key/value pairs contained in this object.</dd>
- <dt>{{domxref("DOMTokenList.values()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing you to go through all values of the key/value pairs contained in this object.</dd>
-</dl>
+- {{domxref("DOMTokenList.item()")}}
+  - : Returns an item in the list by its index (returns `undefined` if the number is greater than or equal to the length of the list).
+- {{domxref("DOMTokenList.contains()")}}
+  - : Returns `true` if the list contains the given _token_, otherwise `false`.
+- {{domxref("DOMTokenList.add()")}}
+  - : Adds the given _token_ to the list.
+- {{domxref("DOMTokenList.remove()")}}
+  - : Removes the specified _token_ from the list.
+- {{domxref("DOMTokenList.replace()")}}
+  - : Replaces an existing _token_ with a new token.
+- {{domxref("DOMTokenList.supports()")}}
+  - : Returns `true` if a given _token_ is in the associated attribute's supported tokens.
+- {{domxref("DOMTokenList.toggle()")}}
+  - : Removes a given _token_ from the list and returns `false`. If _token_ doesn't exist it's added and the function returns `true`.
+- {{domxref("DOMTokenList.entries()")}}
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing you to go through all key/value pairs contained in this object.
+- {{domxref("DOMTokenList.forEach()")}}
+  - : Executes a provided function once per `DOMTokenList` element.
+- {{domxref("DOMTokenList.keys()")}}
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing you to go through all keys of the key/value pairs contained in this object.
+- {{domxref("DOMTokenList.values()")}}
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing you to go through all values of the key/value pairs contained in this object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following simple example we retrieve the list of classes set on a {{htmlelement("p")}} element as a <code>DOMTokenList</code> using {{domxref("Element.classList")}}, add a class using {{domxref("DOMTokenList.add()")}}, and then update the {{domxref("Node.textContent")}} of the <code>&lt;p&gt;</code> to equal the <code>DOMTokenList</code>.</p>
+In the following simple example we retrieve the list of classes set on a {{htmlelement("p")}} element as a `DOMTokenList` using {{domxref("Element.classList")}}, add a class using {{domxref("DOMTokenList.add()")}}, and then update the {{domxref("Node.textContent")}} of the `<p>` to equal the `DOMTokenList`.
 
-<p>First, the HTML:</p>
+First, the HTML:
 
-<pre class="brush: html">&lt;p class="a b c"&gt;&lt;/p&gt;</pre>
+```html
+<p class="a b c"></p>
+```
 
-<p>Now the JavaScript:</p>
+Now the JavaScript:
 
-<pre class="brush: js">var para = document.querySelector("p");
+```js
+var para = document.querySelector("p");
 var classes = para.classList;
 para.classList.add("d");
-para.textContent = 'paragraph classList is "' + classes + '"';</pre>
+para.textContent = 'paragraph classList is "' + classes + '"';
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Trimming_of_whitespace_and_removal_of_duplicates">Trimming of whitespace and removal of duplicates</h2>
+## Trimming of whitespace and removal of duplicates
 
-<p>Methods that modify the <code>DOMTokenList</code> (such as {{domxref("DOMTokenList.add()")}}) automatically trim any excess {{Glossary("Whitespace")}} and remove duplicate values from the list. For example:</p>
+Methods that modify the `DOMTokenList` (such as {{domxref("DOMTokenList.add()")}}) automatically trim any excess {{Glossary("Whitespace")}} and remove duplicate values from the list. For example:
 
-<pre class="brush: html">&lt;span class="    d   d e f"&gt;&lt;/span&gt;</pre>
+```html
+<span class="    d   d e f"></span>
+```
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 span.classList.add("x");
-span.textContent = 'span classList is "' + classes + '"';</pre>
+span.textContent = 'span classList is "' + classes + '"';
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Trimming_of_whitespace_and_removal_of_duplicates', '100%', 60) }}</p>
+{{ EmbedLiveSample('Trimming_of_whitespace_and_removal_of_duplicates', '100%', 60) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.DOMTokenList")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("DOMSettableTokenList")}} (object that extends <code>DOMTokenList</code> with settable <em>.value</em> property)</li>
-</ul>
+- {{domxref("DOMSettableTokenList")}} (object that extends `DOMTokenList` with settable _.value_ property)

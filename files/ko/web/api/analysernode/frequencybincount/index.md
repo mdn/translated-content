@@ -10,26 +10,28 @@ tags:
   - frequencyBinCount
 browser-compat: api.AnalyserNode.frequencyBinCount
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p class="summary">{{domxref("AnalyserNode")}} 인터페이스의 <strong><code>frequencyBinCount</code></strong> 읽기 전용 속성은 {{domxref("AnalyserNode.fftSize")}} 값의 절반인 unsigned 정수입니다. 이것은 일반적으로 시각화를 위해 사용할 데이터 값의 수와 동일시됩니다.</p>
+{{domxref("AnalyserNode")}} 인터페이스의 **`frequencyBinCount`** 읽기 전용 속성은 {{domxref("AnalyserNode.fftSize")}} 값의 절반인 unsigned 정수입니다. 이것은 일반적으로 시각화를 위해 사용할 데이터 값의 수와 동일시됩니다.
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: js">var <em>arrayLength</em> = <em>analyserNode</em>.frequencyBinCount;
-</pre>
+```js
+var arrayLength = analyserNode.frequencyBinCount;
+```
 
-<h3 id="Value">값</h3>
+### 값
 
-<p>{{domxref("AnalyserNode.getByteFrequencyData()")}}와 {{domxref("AnalyserNode.getFloatFrequencyData()")}}가 제공된 <code>TypedArray</code>내로 복사하는 값의 수와 동일한 unsigned 정수.</p>
+{{domxref("AnalyserNode.getByteFrequencyData()")}}와 {{domxref("AnalyserNode.getFloatFrequencyData()")}}가 제공된 `TypedArray`내로 복사하는 값의 수와 동일한 unsigned 정수.
 
-<p><a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">고속 푸리에 변환</a>이 정의된 방법에 관계된 기술적인 이유로, 이것은 언제나 {{domxref("AnalyserNode.fftSize")}} 값의 절반입니다. 그러므로, 이것은 다음 중 하나입니다: <code>16</code>, <code>32</code>, <code>64</code>, <code>128</code>, <code>256</code>, <code>512</code>, <code>1024</code>, <code>2048</code>, <code>4096</code>, <code>8192</code>, 그리고 <code>16384</code>.</p>
+[고속 푸리에 변환](https://en.wikipedia.org/wiki/Fast_Fourier_transform)이 정의된 방법에 관계된 기술적인 이유로, 이것은 언제나 {{domxref("AnalyserNode.fftSize")}} 값의 절반입니다. 그러므로, 이것은 다음 중 하나입니다: `16`, `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, 그리고 `16384`.
 
-<h2 id="Example">예제</h2>
+## 예제
 
-<p>다음의 예제는 <code>AnalyserNode</code>를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 주파수 데이터를 수집하고 현재 오디오 입력의 "winamp 막대그래프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 데모를 확인하세요 (관련된 코드를 보려면 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 라인 128–205</a>를 참고하세요).</p>
+다음의 예제는 `AnalyserNode`를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 주파수 데이터를 수집하고 현재 오디오 입력의 "winamp 막대그래프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)를 참고하세요).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
@@ -55,7 +57,7 @@ function draw() {
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -65,18 +67,17 @@ function draw() {
   }
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API 사용하기</a></li>
-</ul>
+- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

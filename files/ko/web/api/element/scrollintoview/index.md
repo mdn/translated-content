@@ -3,73 +3,66 @@ title: element.scrollIntoView
 slug: Web/API/Element/scrollIntoView
 translation_of: Web/API/Element/scrollIntoView
 ---
-<div>
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
+{{domxref("Element")}} 인터페이스의 **`scrollIntoView()`** 메소드는 `scrollIntoView()`가 호출 된 요소가 사용자에게 표시되도록 요소의 상위 컨테이너를 스크롤합니다.
 
+## 문법
 
-<p>{{domxref("Element")}} 인터페이스의 <strong><code>scrollIntoView()</code></strong> 메소드는 <code>scrollIntoView()</code>가 호출 된 요소가 사용자에게 표시되도록 요소의 상위 컨테이너를 스크롤합니다.</p>
-</div>
+    element.scrollIntoView();
+    element.scrollIntoView(alignToTop); // Boolean parameter
+    element.scrollIntoView(scrollIntoViewOptions); // Object parameter
 
-<h2 id="Syntax" name="Syntax">문법</h2>
+- `alignToTop` {{optional_inline}}
 
-<pre><em>element</em>.scrollIntoView();
-<em>element</em>.scrollIntoView(<var>alignToTop</var>); // Boolean parameter
-<em>element</em>.scrollIntoView(<var>scrollIntoViewOptions</var>); // Object parameter</pre>
+  - : A boolean value:
 
-<dl>
- <dt>
- <h3 id="Parameters">Parameters</h3>
- </dt>
- <dt><code>alignToTop</code> {{optional_inline}}</dt>
- <dd>{{jsxref("Boolean")}} 값:
- <ul>
-  <li><code>true</code>일때, the top of the element will be aligned to the top of the visible area of the scrollable ancestor. Corresponds to <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. This is the default value.</li>
-  <li><code>false</code>일때, the bottom of the element will be aligned to the bottom of the visible area of the scrollable ancestor. Corresponds to <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code>.</li>
- </ul>
- </dd>
- <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
- <dd>다음의 프로퍼티를 가지는 객체</dd>
- <dd>
- <dl>
-  <dt><code>behavior</code> {{optional_inline}}</dt>
-  <dd>전환에니메이션을 정의.<br>
-  <code>"auto"</code>, <code>"smooth"</code>중 하나 선택. 기본값은 <code>"auto"</code>.</dd>
-  <dt><code>block</code> {{optional_inline}}</dt>
-  <dd>수직 정렬을 정의<br>
-  <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, <code>"nearest"</code>중 하나 선택. 기본값은 <code>"start"</code>.</dd>
-  <dt><code>inline</code> {{optional_inline}}</dt>
-  <dd>수평 정렬을 정함<br>
-  One of <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, <code>"nearest"</code>중 하나 선택. 기본값은 <code>"nearest"</code>.</dd>
- </dl>
- </dd>
-</dl>
+    - If `true`, the top of the element will be aligned to the top of the
+      visible area of the scrollable ancestor. Corresponds to
+      `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. This is
+      the default value.
+    - If `false`, the bottom of the element will be aligned to the bottom
+      of the visible area of the scrollable ancestor. Corresponds to
+      `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
 
-<h2 id="Example" name="Example">예제</h2>
+- `scrollIntoViewOptions` {{optional_inline}}
+  {{experimental_inline}}
 
-<pre><code>var element = document.getElementById("box");
+  - : An Object with the following properties:
 
-element.scrollIntoView();
-element.scrollIntoView(false);
-element.scrollIntoView({block: "end"});
-element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});</code></pre>
+    - `behavior` {{optional_inline}}
+      - : Defines the transition animation.
+        One of `auto` or `smooth`. Defaults to `auto`.
+    - `block` {{optional_inline}}
+      - : Defines vertical alignment.
+        One of `start`, `center`, `end`, or
+        `nearest`. Defaults to `start`.
+    - `inline` {{optional_inline}}
+      - : Defines horizontal alignment.
+        One of `start`, `center`, `end`, or
+        `nearest`. Defaults to `nearest`.
 
-<h2 id="Notes">Notes</h2>
+## 예제
 
+    var element = document.getElementById("box");
 
+    element.scrollIntoView();
+    element.scrollIntoView(false);
+    element.scrollIntoView({block: "end"});
+    element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
-<p>다른 요소의 레이아웃에 따라 위쪽 또는 아래쪽으로 완전히 스크롤되지 않을 수 있습니다.</p>
+## Notes
 
-<h2 id="Specifications">Specifications</h2>
+다른 요소의 레이아웃에 따라 위쪽 또는 아래쪽으로 완전히 스크롤되지 않을 수 있습니다.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Element.scrollIntoView")}}</p>
+{{Compat}}
 
-<h2 id="더보기">더보기</h2>
+## 더보기
 
-<ul>
- <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}<a class="external" href="http://dev.w3.org/csswg/cssom-view/#dom-element-scrollintoview"> </a></li>
-</ul>
+- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/ko/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}[](http://dev.w3.org/csswg/cssom-view/#dom-element-scrollintoview)

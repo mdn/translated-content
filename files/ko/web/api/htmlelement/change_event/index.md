@@ -10,29 +10,29 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onchange
 original_slug: Web/API/GlobalEventHandlers/onchange
 ---
-<div>
-<div>{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{ ApiRef("HTML DOM") }}
 
-<p><strong><code>onchange</code></strong> 속성은 {{event("change")}} 이벤트의 이벤트 핸들러를 설정하고 반환합니다.</p>
+**`onchange`** 속성은 {{event("change")}} 이벤트의 이벤트 핸들러를 설정하고 반환합니다.
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><em><var>target</var></em>.onchange = <em>functionRef</em>;
-</pre>
+    target.onchange = functionRef;
 
-<p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">functionRef</span></font>는 <code>null</code> 또는 이벤트 핸들러를 지정하는 <a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="/en-US/docs/JavaScript/Reference/Functions_and_function_scope">JavaScript function</a> 함수 중 하나여야 합니다.</p>
+functionRef는 `null` 또는 이벤트 핸들러를 지정하는 [JavaScript function](/ko/docs/Web/JavaScript/Reference/Functions "/en-US/docs/JavaScript/Reference/Functions_and_function_scope") 함수 중 하나여야 합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html"><code>&lt;input type="text" placeholder="Type something here, then click outside of the field." size="50"&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</code></pre>
+```html
+<input type="text" placeholder="Type something here, then click outside of the field." size="50">
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js"><code>let input = document.querySelector('input');
+```js
+let input = document.querySelector('input');
 let log = document.getElementById('log');
 
 input.onchange = handleChange;
@@ -40,22 +40,21 @@ input.onchange = handleChange;
 function handleChange(e) {
   log.textContent = `The field's value is
       ${e.target.value.length} character(s) long.`;
-}</code></pre>
+}
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample("예제")}}</p>
+{{EmbedLiveSample("예제")}}
 
-<h2 id="Specification">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.GlobalEventHandlers.onchange")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{event("change")}} 이벤트</li>
-</ul>
+- {{event("change")}} 이벤트

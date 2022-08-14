@@ -9,37 +9,39 @@ tags:
   - Reference
 translation_of: Web/API/Document/URL
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Document")}} 인터페이스의 <code><strong>URL</strong></code> 읽기 전용 속성은 문서의 주소를 문자열로 반환합니다.</p>
+{{domxref("Document")}} 인터페이스의 **`URL`** 읽기 전용 속성은 문서의 주소를 문자열로 반환합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById("url").textContent = document.URL;</pre>
+```js
+document.getElementById("url").textContent = document.URL;
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="urlText"&gt;
-  URL:&lt;br/&gt;
-  &lt;span id="url"&gt;URL이 여기 보입니다&lt;/span&gt;
-&lt;/p&gt;</pre>
+```html
+<p id="urlText">
+  URL:<br/>
+  <span id="url">URL이 여기 보입니다</span>
+</p>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample("예제", "100%", 100)}}</p>
+{{EmbedLiveSample("예제", "100%", 100)}}
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Document.URL")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{domxref("HTMLDocument")}}</li>
-</ul>
+- {{domxref("HTMLDocument")}}

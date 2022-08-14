@@ -8,47 +8,40 @@ tags:
   - Web Performance
 translation_of: Web/API/Performance/mark
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p><strong><code>mark()</code></strong> 메소드는 브라우저의 <em>performance entry buffer</em>에 주어진 이름으로 {{domxref("DOMHighResTimeStamp","timestamp")}}를 생성합니다. timestamp가 정의된 응용프로그램은 {{domxref("Performance")}} 인터페이스의 <code>getEntries*()</code> 메소드들을 통해 불러올 수 있습니다. ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}}, {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).</p>
+**`mark()`** 메소드는 브라우저의 *performance entry buffer*에 주어진 이름으로 {{domxref("DOMHighResTimeStamp","timestamp")}}를 생성합니다. timestamp가 정의된 응용프로그램은 {{domxref("Performance")}} 인터페이스의 `getEntries*()` 메소드들을 통해 불러올 수 있습니다. ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}}, {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p><code>mark</code>의 {{domxref("PerformanceEntry","performance entry")}}는 다음 속성값을 갖습니다:</p>
+`mark`의 {{domxref("PerformanceEntry","performance entry")}}는 다음 속성값을 갖습니다:
 
-<ul>
- <li>{{domxref("PerformanceEntry.entryType","entryType")}} - "<code>mark</code>"로 설정됩니다.</li>
- <li>{{domxref("PerformanceEntry.name","name")}} - mark가 생성될 때 주어진 "<code>name</code>"으로 설정됩니다.</li>
- <li>{{domxref("PerformanceEntry.startTime","startTime")}} - <code>mark()</code>가 호출되었을 때의 {{domxref("DOMHighResTimeStamp","timestamp")}}가 설정됩니다.</li>
- <li>{{domxref("PerformanceEntry.duration","duration")}} - "<code>0</code>"으로 설정됩니다. (<em>duration</em>이 없는 mark).</li>
-</ul>
+- {{domxref("PerformanceEntry.entryType","entryType")}} - "`mark`"로 설정됩니다.
+- {{domxref("PerformanceEntry.name","name")}} - mark가 생성될 때 주어진 "`name`"으로 설정됩니다.
+- {{domxref("PerformanceEntry.startTime","startTime")}} - `mark()`가 호출되었을 때의 {{domxref("DOMHighResTimeStamp","timestamp")}}가 설정됩니다.
+- {{domxref("PerformanceEntry.duration","duration")}} - "`0`"으로 설정됩니다. (*duration*이 없는 mark).
 
-<p>만약 메서드에 주어진 <code>name</code>이 이미 {{domxref("PerformanceTiming")}} 인터페이스 상에 존재한다면 {{jsxref("SyntaxError")}}를 throw 합니다.</p>
+만약 메서드에 주어진 `name`이 이미 {{domxref("PerformanceTiming")}} 인터페이스 상에 존재한다면 {{jsxref("SyntaxError")}}를 throw 합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>performance</em>.mark(name);
-</pre>
+    performance.mark(name);
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
- <dt>name</dt>
- <dd>mark의 이름을 나타내는 {{domxref("DOMString")}}.</dd>
-</dl>
+- name
+  - : mark의 이름을 나타내는 {{domxref("DOMString")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
- <dt>void</dt>
- <dd></dd>
-</dl>
+void
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>다음 예시는 mark()를 사용하여 {{domxref("PerformanceMark")}}를 생성하고 불러오는 방법을 보여줍니다.</p>
+다음 예시는 mark()를 사용하여 {{domxref("PerformanceMark")}}를 생성하고 불러오는 방법을 보여줍니다.
 
-<pre class="brush:js">// Create a bunch of marks.
+```js
+// Create a bunch of marks.
 performance.mark("squirrel");
 performance.mark("squirrel");
 performance.mark("monkey");
@@ -68,12 +61,12 @@ console.log(monkeyEntries.length);
 
 // Clear out all of the marks.
 performance.clearMarks();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Performance.mark")}}</p>
+{{Compat}}

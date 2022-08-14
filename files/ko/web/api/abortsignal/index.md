@@ -10,41 +10,38 @@ tags:
   - 인터페이스
 translation_of: Web/API/AbortSignal
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p><strong><code>AbortSignal</code></strong> 인터페이스는 DOM 요청(Fetch와 같은)과 통신하고 필요한 경우 {{domxref("AbortController")}} 객체를 통해 취소할 수 있게 해주는 신호 객체를 나타냅니다.</p>
+**`AbortSignal`** 인터페이스는 DOM 요청(Fetch와 같은)과 통신하고 필요한 경우 {{domxref("AbortController")}} 객체를 통해 취소할 수 있게 해주는 신호 객체를 나타냅니다.
 
-<h2 id="프로퍼티">프로퍼티</h2>
+## 프로퍼티
 
-<p><em>AbortSignal 인터페이스는 또한 부모 인터페이스 {{domxref("EventTarget")}}으로부터 프로퍼티를 상속받습니다.</em></p>
+_AbortSignal 인터페이스는 또한 부모 인터페이스 {{domxref("EventTarget")}}으로부터 프로퍼티를 상속받습니다._
 
-<dl>
- <dt>{{domxref("AbortSignal.aborted")}} {{readonlyInline}}</dt>
- <dd>신호가 통신하는 요청이 취소되었는지(<code>true</code>) 그렇지 않은지(<code>false</code>)를 나타내는 {{domxref("Boolean")}}입니다.</dd>
-</dl>
+- {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
+  - : 신호가 통신하는 요청이 취소되었는지(`true`) 그렇지 않은지(`false`)를 나타내는 {{domxref("Boolean")}}입니다.
 
-<h2 id="이벤트">이벤트</h2>
+## 이벤트
 
-<p><code><a href="/ko/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>를 사용하거나 이 인터페이스의 <code>on<em>eventname</em></code> 프로퍼티로 이벤트 리스너를 할당하여 이벤트를 리슨합니다.</p>
+[`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용하거나 이 인터페이스의 `oneventname` 프로퍼티로 이벤트 리스너를 할당하여 이벤트를 리슨합니다.
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/AbortSignal/abort_event">abort</a></code></dt>
- <dd>신호가 통신하는 요청이 취소되었을 때 호출됩니다. <code><a href="/ko/docs/Web/API/AbortSignal/onabort">onabort</a></code> 프로퍼티를 통해서도 사용이 가능합니다.</dd>
-</dl>
+- [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event)
+  - : 신호가 통신하는 요청이 취소되었을 때 호출됩니다. [`onabort`](/ko/docs/Web/API/AbortSignal/onabort) 프로퍼티를 통해서도 사용이 가능합니다.
 
-<h2 id="메소드">메소드</h2>
+## 메소드
 
-<p><em>AbortSignal 인터페이스는 부모인 {{domxref("EventTarget")}}로부터 메소드를 상속받습니다.</em></p>
+_AbortSignal 인터페이스는 부모인 {{domxref("EventTarget")}}로부터 메소드를 상속받습니다._
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음 스니펫에서는 <a href="/ko/docs/Web/API/Fetch_API">Fetch API</a>를 사용해 비디오를 다운로드하는 것을 목표로 합니다.</p>
+다음 스니펫에서는 [Fetch API](/ko/docs/Web/API/Fetch_API)를 사용해 비디오를 다운로드하는 것을 목표로 합니다.
 
-<p>먼저 {{domxref("AbortController.AbortController","AbortController()")}} 생성자를 사용해 컨트롤러를 {{domxref("AbortController.signal")}} 프로퍼티를 사용해 {{domxref("AbortSignal")}} 객체와 관계된 참조를 얻습니다.</p>
+먼저 {{domxref("AbortController.AbortController","AbortController()")}} 생성자를 사용해 컨트롤러를 {{domxref("AbortController.signal")}} 프로퍼티를 사용해 {{domxref("AbortSignal")}} 객체와 관계된 참조를 얻습니다.
 
-<p><a href="/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch">Fetch 요청</a>을 시작할 때, 요청의 옵션 객체 내부에 <code>AbortSignal</code> 옵션을 전달합니다(아래의 <code>{signal}</code> 참고). 이것은 신호와 컨트롤러를 fetch 요청과 관계짓고, 아래의 두 번째 이벤트 리스너에서 보여주듯이 {{domxref("AbortController.abort()")}}를 호출하여 이를 취소할 수 있게 합니다.</p>
+[Fetch 요청](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch)을 시작할 때, 요청의 옵션 객체 내부에 `AbortSignal` 옵션을 전달합니다(아래의 `{signal}` 참고). 이것은 신호와 컨트롤러를 fetch 요청과 관계짓고, 아래의 두 번째 이벤트 리스너에서 보여주듯이 {{domxref("AbortController.abort()")}}를 호출하여 이를 취소할 수 있게 합니다.
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -64,29 +61,24 @@ function fetchVideo() {
   }).catch(function(e) {
     reports.textContent = 'Download error: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>노트</strong>: <code>abort()</code>가 호출되면, <code>fetch()</code> promise는 <code dir="ltr">AbortError</code>과 함께 reject됩니다.</p>
-</div>
+> **참고:** **노트**: `abort()`가 호출되면, `fetch()` promise는 <code dir="ltr">AbortError</code>과 함께 reject됩니다.
 
-<div class="warning">
-<p>현재 버전의 Firefox는 <code>DOMException</code>으로 promise를 reject합니다.</p>
-</div>
+> **경고:** 현재 버전의 Firefox는 `DOMException`으로 promise를 reject합니다.
 
-<p>동작하는 완전한 예제는 GitHub에서 확인 할 수 있습니다 — <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> 참고(<a href="https://mdn.github.io/dom-examples/abort-api/">라이브 실행도 확인할 수 있습니다</a>).</p>
+동작하는 완전한 예제는 GitHub에서 확인 할 수 있습니다 — [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) 참고([라이브 실행도 확인할 수 있습니다](https://mdn.github.io/dom-examples/abort-api/)).
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.AbortSignal")}}</p>
+{{Compat}}
 
-<h2 id="함께_보기">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="https://developers.google.com/web/updates/2017/09/abortable-fetch">Abortable Fetch</a> by Jake Archibald</li>
-</ul>
+- [Fetch API](/ko/docs/Web/API/Fetch_API)
+- [Abortable Fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch) by Jake Archibald

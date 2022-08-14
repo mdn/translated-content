@@ -3,34 +3,33 @@ title: PushMessageData
 slug: Web/API/PushMessageData
 translation_of: Web/API/PushMessageData
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>The <code><strong>PushMessageData</strong></code> interface of the <a href="/en-US/docs/Web/API/Push_API">Push API</a> provides methods which let you retrieve the push data sent by a server in various formats.</p>
+The **`PushMessageData`** interface of the [Push API](/ko/docs/Web/API/Push_API) provides methods which let you retrieve the push data sent by a server in various formats.
 
-<p>Unlike the similar methods in the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>, which only allow the method to be invoked once, these methods can be called multiple times.</p>
+Unlike the similar methods in the [Fetch API](/ko/docs/Web/API/Fetch_API), which only allow the method to be invoked once, these methods can be called multiple times.
 
-<p>Messages received through the Push API are sent encrypted by push services and then automatically decrypted by browsers before they are made accessible through the methods of the <code>PushMessageData</code> interface.</p>
+Messages received through the Push API are sent encrypted by push services and then automatically decrypted by browsers before they are made accessible through the methods of the `PushMessageData` interface.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("PushMessageData.arrayBuffer()")}}</dt>
- <dd>Extracts the data as an {{domxref("ArrayBuffer")}} object.</dd>
- <dt>{{domxref("PushMessageData.blob()")}}</dt>
- <dd>Extracts the data as a {{domxref("Blob")}} object.</dd>
- <dt>{{domxref("PushMessageData.json()")}}</dt>
- <dd>Extracts the data as a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object.</dd>
- <dt>{{domxref("PushMessageData.text()")}}</dt>
- <dd>Extracts the data as a plain text string.</dd>
-</dl>
+- {{domxref("PushMessageData.arrayBuffer()")}}
+  - : Extracts the data as an {{domxref("ArrayBuffer")}} object.
+- {{domxref("PushMessageData.blob()")}}
+  - : Extracts the data as a {{domxref("Blob")}} object.
+- {{domxref("PushMessageData.json()")}}
+  - : Extracts the data as a [JSON](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
+- {{domxref("PushMessageData.text()")}}
+  - : Extracts the data as a plain text string.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
+```js
+self.addEventListener('push', function(event) {
   var obj = event.data.json();
 
   if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
@@ -39,12 +38,13 @@ translation_of: Web/API/PushMessageData
   } else if(obj.action === 'init' || obj.action === 'chatMsg') {
     port.postMessage(obj);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.PushMessageData")}}</p>
+{{Compat}}

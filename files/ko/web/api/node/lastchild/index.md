@@ -7,20 +7,27 @@ tags:
   - Gecko DOM Reference
 translation_of: Web/API/Node/lastChild
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id=".EC.9A.94.EC.95.BD" name=".EC.9A.94.EC.95.BD">요약</h3>
-<p><b>lastChild</b>는 노드의 마지막 자식을 반환합니다.</p>
-<h3 id=".EA.B5.AC.EB.AC.B8.EA.B3.BC_.EA.B0.92" name=".EA.B5.AC.EB.AC.B8.EA.B3.BC_.EA.B0.92">구문과 값</h3>
-<pre class="eval"><i>last_child</i> = element.lastChild
-</pre>
-<p>반환되는 <code>last_child</code>는 노드입니다. 노드의 부모가 요소이면, 자식은 보통 요소 노드, 텍스트 노드, 주석 노드입니다.</p>
-<h3 id=".EC.98.88" name=".EC.98.88">예</h3>
-<pre>var tr = document.getElementById("row1");
-corner_td = tr.lastChild;
-</pre>
-<h3 id=".EC.A3.BC.EC.9D.98" name=".EC.A3.BC.EC.9D.98">주의</h3>
-<p>자식 요소가 없으면 <code>null</code>을 반환합니다.</p>
+{{ ApiRef() }}
 
-<h3 id="명세">명세</h3>
+### 요약
+
+**lastChild**는 노드의 마지막 자식을 반환합니다.
+
+### 구문과 값
+
+    last_child = element.lastChild
+
+반환되는 `last_child`는 노드입니다. 노드의 부모가 요소이면, 자식은 보통 요소 노드, 텍스트 노드, 주석 노드입니다.
+
+### 예
+
+    var tr = document.getElementById("row1");
+    corner_td = tr.lastChild;
+
+### 주의
+
+자식 요소가 없으면 `null`을 반환합니다.
+
+### 명세
 
 {{Specifications}}

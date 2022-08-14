@@ -9,42 +9,42 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getByteFrequencyData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{ domxref("AnalyserNode") }} 인터페이스의 <strong><code>getByteFrequencyData()</code></strong> 메서드는 전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 주파수 데이터를 복사합니다.</p>
+{{ domxref("AnalyserNode") }} 인터페이스의 **`getByteFrequencyData()`** 메서드는 전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 주파수 데이터를 복사합니다.
 
-<p>주파수 데이터는 0에서 255 스케일의 정수로 구성되어 있습니다.</p>
+주파수 데이터는 0에서 255 스케일의 정수로 구성되어 있습니다.
 
-<p>배열 내의 각 원소는 특정한 주파수에 대한 데시벨 값을 나타냅니다. 주파수들은 0에서 샘플 레이트의 1/2까지 선형적으로 퍼져 있습니다. 예를 들자면, <code>48000</code> 샘플 레이트에 대해서, 배열의 마지막 원소는 <code>24000</code> Hz에 대한 데시벨 값을 나타냅니다.</p>
+배열 내의 각 원소는 특정한 주파수에 대한 데시벨 값을 나타냅니다. 주파수들은 0에서 샘플 레이트의 1/2까지 선형적으로 퍼져 있습니다. 예를 들자면, `48000` 샘플 레이트에 대해서, 배열의 마지막 원소는 `24000` Hz에 대한 데시벨 값을 나타냅니다.
 
-<p>만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.</p>
+만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array는 frequencyBinCount와 같은 길이여야만 합니다
 
-void <em>analyser</em>.getByteFrequencyData(dataArray); // getByteFrequencyData()로부터 반환된 데이터로 Uint8Array를 채웁니다
-</pre>
+void analyser.getByteFrequencyData(dataArray); // getByteFrequencyData()로부터 반환된 데이터로 Uint8Array를 채웁니다
+```
 
-<h3 id="Parameters">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>array</code></dt>
- <dd>주파수 영역 데이터가 복사될 {{domxref("Uint8Array")}}. 소리가 없는 모든 샘플에 대해서, 값은 <code>-<a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>입니다.<br>
- 만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.</dd>
-</dl>
+- `array`
+  - : 주파수 영역 데이터가 복사될 {{domxref("Uint8Array")}}. 소리가 없는 모든 샘플에 대해서, 값은 `-Infinity`입니다.
+    만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.
 
-<h3 id="Return_value">반환 값</h3>
+### 반환 값
 
-<p>없음.</p>
+없음.
 
-<h2 id="Example">예제</h2>
+## 예제
 
-<p>다음의 예제는 <code>AnalyserNode</code>를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 주파수 데이터를 수집하고 현재 오디오 입력의 "winamp 막대그래프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 데모를 확인하세요 (관련된 코드를 보려면 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 라인 128–205</a>를 참고하세요).</p>
+다음의 예제는 `AnalyserNode`를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 주파수 데이터를 수집하고 현재 오디오 입력의 "winamp 막대그래프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)를 참고하세요).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -68,7 +68,7 @@ function draw() {
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -78,18 +78,17 @@ function draw() {
   }
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API 사용하기</a></li>
-</ul>
+- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

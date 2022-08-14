@@ -9,78 +9,74 @@ tags:
   - Reference
 translation_of: Web/API/Document/hasFocus
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p><code><strong>Document.hasFocus()</strong></code> 메소드는 문서 또는 문서 내의 요소(element) 중 어느 하나라도 포커스(focus)를 갖고 있으면 <code>true, </code>그렇지 않으면<code> false</code>인 {{jsxref("Boolean")}} 값을 반환한다. 이 메소드를 사용하여 문서내 활성화된(active) 요소가 포커스를 갖고 있는지 판단할 수 있다.</p>
+**`Document.hasFocus()`** 메소드는 문서 또는 문서 내의 요소(element) 중 어느 하나라도 포커스(focus)를 갖고 있으면 `true, `그렇지 않으면` false`인 {{jsxref("Boolean")}} 값을 반환한다. 이 메소드를 사용하여 문서내 활성화된(active) 요소가 포커스를 갖고 있는지 판단할 수 있다.
 
-<div class="note">
-<p>문서를 볼 때, 포커스를 가진 요소는 언제나 문서상의 활성화된 요소이다. 반면에 활성화된 요소는 꼭 포커스를 갖지 않을 수 도 있다. 예를 들면 전면에 나와있지 않은(not a foreground) 팝업창 내의 활성화된 요소는 포커스를 갖고 있지 않다.</p>
-</div>
+> **참고:** 문서를 볼 때, 포커스를 가진 요소는 언제나 문서상의 활성화된 요소이다. 반면에 활성화된 요소는 꼭 포커스를 갖지 않을 수 도 있다. 예를 들면 전면에 나와있지 않은(not a foreground) 팝업창 내의 활성화된 요소는 포커스를 갖고 있지 않다.
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+## 구문
 
-<pre>focused = document.hasFocus();</pre>
+    focused = document.hasFocus();
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>문서 내의 활성화된 요소가 포커스를 갖고 있지 않으면 <code>false</code>를 반환, 포커스를 갖고 있다면 <code>true</code>를 반환</p>
+문서 내의 활성화된 요소가 포커스를 갖고 있지 않으면 `false`를 반환, 포커스를 갖고 있다면 `true`를 반환
 
-<h2 id="Example" name="Example">예제</h2>
+## 예제
 
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;TEST&lt;/title&gt;
-&lt;style&gt;
-#message { font-weight: bold; }
-&lt;/style&gt;
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <title>TEST</title>
+    <style>
+    #message { font-weight: bold; }
+    </style>
 
-&lt;script&gt;
+    <script>
 
-setInterval( CheckPageFocus, 200 );
+    setInterval( CheckPageFocus, 200 );
 
-function CheckPageFocus() {
-  var info = document.getElementById("message");
+    function CheckPageFocus() {
+      var info = document.getElementById("message");
 
-  if ( document.hasFocus() ) {
-    info.innerHTML = "The document has the focus.";
-  } else {
-    info.innerHTML = "The document doesn't have the focus.";
-  }
-}
+      if ( document.hasFocus() ) {
+        info.innerHTML = "The document has the focus.";
+      } else {
+        info.innerHTML = "The document doesn't have the focus.";
+      }
+    }
 
-function OpenWindow() {
-  window.open (
-    "http://developer.mozilla.org/",
-    "mozdev",
-    width=640,
-    height=300,
-    left=150,
-    top=260
-  );
-}
+    function OpenWindow() {
+      window.open (
+        "http://developer.mozilla.org/",
+        "mozdev",
+        width=640,
+        height=300,
+        left=150,
+        top=260
+      );
+    }
 
-&lt;/script&gt;
-&lt;/head&gt;
+    </script>
+    </head>
 
-&lt;body&gt;
-  &lt;h1&gt;JavaScript hasFocus example&lt;/h1&gt;
-  &lt;div id="message"&gt;Waiting for user action&lt;/div&gt;
-  &lt;div&gt;&lt;button onclick="OpenWindow()"&gt;Open a new window&lt;/button&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    <body>
+      <h1>JavaScript hasFocus example</h1>
+      <div id="message">Waiting for user action</div>
+      <div><button onclick="OpenWindow()">Open a new window</button></div>
+    </body>
+    </html>
 
-<h2 id="Specification" name="Specification">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Document.hasFocus")}}</p>
+{{Compat}}
 
-<h2 id="관련_참고">관련 참고</h2>
+## 관련 참고
 
-<ul>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API">페이지 가시성 API 사용하기</a></li>
-</ul>
+- [페이지 가시성 API 사용하기](/ko/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API)

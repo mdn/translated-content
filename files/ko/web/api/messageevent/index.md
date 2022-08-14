@@ -3,54 +3,46 @@ title: MessageEvent
 slug: Web/API/MessageEvent
 translation_of: Web/API/MessageEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>MessageEvent</strong></code> 는 {{domxref("WebSocket")}} 또는 WebRTC {{domxref("RTCDataChannel")}} 으로 된 타겟으로 부터 전달받은 메시지를 보여주는 interface 입니다.</p>
+**`MessageEvent`** 는 {{domxref("WebSocket")}} 또는 WebRTC {{domxref("RTCDataChannel")}} 으로 된 타겟으로 부터 전달받은 메시지를 보여주는 interface 입니다.
 
-<p>이 이벤트는 {{domxref("WebSocket.onmessage")}} 또는 {{domxref("RTCDataChannel.onmessage")}} 으로 설정된 이벤트 핸들러를 통해 실행이 되게 됩니다. </p>
+이 이벤트는 {{domxref("WebSocket.onmessage")}} 또는 {{domxref("RTCDataChannel.onmessage")}} 으로 설정된 이벤트 핸들러를 통해 실행이 되게 됩니다.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="생성자">생성자</h2>
+## 생성자
 
-<dl>
- <dt>{{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}</dt>
- <dd>새로운 <code>MessageEvent를 생성합니다.</code></dd>
-</dl>
+- {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}
+  - : 새로운 `MessageEvent를 생성합니다.`
 
-<h2 id="속성">속성</h2>
+## 속성
 
-<p><em>이 interface는 부모 객체인 {{domxref("Event")}}의 속성을 상속받습니다.</em></p>
+_이 interface는 부모 객체인 {{domxref("Event")}}의 속성을 상속받습니다._
 
-<dl>
- <dt>{{domxref("MessageEvent.data")}} {{ReadonlyInline}}</dt>
- <dd>emitter에 의해 보내진 데이터인 {{domxref("DOMString")}}, {{domxref("Blob")}} 또는 {{domxref("ArrayBuffer")}}를 포함합니다. </dd>
- <dt>{{domxref("MessageEvent.origin")}}</dt>
- <dd>{{domxref("DOMString")}} 입니다.…</dd>
- <dt>{{domxref("MessageEvent.ports")}}</dt>
- <dd>…</dd>
- <dt>{{domxref("MessageEvent.source")}}</dt>
- <dd>…</dd>
-</dl>
+- {{domxref("MessageEvent.data")}} {{ReadonlyInline}}
+  - : emitter에 의해 보내진 데이터인 {{domxref("DOMString")}}, {{domxref("Blob")}} 또는 {{domxref("ArrayBuffer")}}를 포함합니다.
+- {{domxref("MessageEvent.origin")}}
+  - : {{domxref("DOMString")}} 입니다.…
+- {{domxref("MessageEvent.ports")}}
+  - : …
+- {{domxref("MessageEvent.source")}}
+  - : …
 
-<h2 id="메서드">메서드</h2>
+## 메서드
 
-<p><em>이 interface는 부모 객체인 {{domxref("Event")}}의 메서드를 상속받습니다.</em></p>
+_이 interface는 부모 객체인 {{domxref("Event")}}의 메서드를 상속받습니다._
 
-<dl>
- <dt>{{domxref("MessageEvent.initMessageEvent()")}} {{deprecated_inline}}</dt>
- <dd>… <strong>더 이상 사용하지 마십시오</strong><br>
- : {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} 생성자를 대신 사용하십시오.</dd>
-</dl>
+- {{domxref("MessageEvent.initMessageEvent()")}} {{deprecated_inline}}
+  - : … **더 이상 사용하지 마십시오**
+    : {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} 생성자를 대신 사용하십시오.
 
-<h2 id="Browser_호환성">Browser 호환성</h2>
+## Browser 호환성
 
-<p>{{Compat("api.MessageEvent")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("ExtendableMessageEvent")}}, 와 유사한 interface이며, 개발자에게 더 유연성을 제공하기 위해 사용되는 interface 입니다.</li>
- <li><a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-</ul>
+- {{domxref("ExtendableMessageEvent")}}, 와 유사한 interface이며, 개발자에게 더 유연성을 제공하기 위해 사용되는 interface 입니다.
+- [WebSocket API](/ko/docs/Web/API/WebSocket_API)
+- [WebRTC API](/ko/docs/Web/API/WebRTC_API)

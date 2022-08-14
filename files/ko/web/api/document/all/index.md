@@ -11,24 +11,22 @@ tags:
   - all
 translation_of: Web/API/Document/all
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>{{DOMxRef("Document")}} 인터페이스의 read-only <strong><code>all</code></strong> 요소는 document node에 위치한{{DOMxRef("HTMLAllCollection")}} 반환한다. 간단하게 말하면 read-only <strong><code>all</code></strong> 요소는 페이지의 모든 contents를 반환 해준다.</p>
+{{DOMxRef("Document")}} 인터페이스의 read-only **`all`** 요소는 document node에 위치한{{DOMxRef("HTMLAllCollection")}} 반환한다. 간단하게 말하면 read-only **`all`** 요소는 페이지의 모든 contents를 반환 해준다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>htmlAllCollection</var> = document.all;</pre>
+    var htmlAllCollection = document.all;
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{DOMxRef("HTMLAllCollection")}}는 문서 내에서 모든 node를 담고 있다.</p>
+{{DOMxRef("HTMLAllCollection")}}는 문서 내에서 모든 node를 담고 있다.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.Document.all")}}</p>
+{{Compat}}

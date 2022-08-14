@@ -3,60 +3,46 @@ title: Element.tagName
 slug: Web/API/Element/tagName
 translation_of: Web/API/Element/tagName
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p><span class="seoSummary">{{domxref("Element")}} 인터페이스의 <strong><code>tagName</code></strong> 읽기 전용 속성은 요소에 호출된 태그 명을 가져온다.</span> 예를 들면, 만약 {{HTMLElement("img")}} 요소일 경우, 해당 요소의 <code>tagName</code> 속성의 내용은 <code>"IMG"</code> 가 된다 (이것은 HTML인 경우에 대한 내용이고, XML/XHTML 문서에서는 대소문자가 다르게 나올 수 있다).</p>
+{{domxref("Element")}} 인터페이스의 **`tagName`** 읽기 전용 속성은 요소에 호출된 태그 명을 가져온다. 예를 들면, 만약 {{HTMLElement("img")}} 요소일 경우, 해당 요소의 `tagName` 속성의 내용은 `"IMG"` 가 된다 (이것은 HTML인 경우에 대한 내용이고, XML/XHTML 문서에서는 대소문자가 다르게 나올 수 있다).
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><em>elementName</em> = <em>Element</em>.tagName;
-</pre>
+    elementName = Element.tagName;
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>태그 명이 명시된 문자열을 가져온다, 이 때, 아래 경우에 따라 대소문자가 달라질 수 있다.</p>
+태그 명이 명시된 문자열을 가져온다, 이 때, 아래 경우에 따라 대소문자가 달라질 수 있다.
 
-<ul>
- <li>HTML 문서에 설계된 DOM 구조에서 가져온 요소는 항시 대소문자로만 이루어진 값을 가져오게 된다.예를 들면, {{HTMLElement("div")}} 객체로 생성한 요소의 <code>tagName</code>  값은 <code>"DIV"</code>가 된다.</li>
- <li>XML 문서에 설계된 요소 구조의 경우 문서에 작성된 태그 명을 그대로 가져오게 된다. <code>"&lt;SomeTag&gt;"</code> 이라는 명칭으로 태그를 작성하였을 경우, <code>tagName</code> 속성 값은 <code>"SomeTag"</code>이 된다.</li>
-</ul>
+- HTML 문서에 설계된 DOM 구조에서 가져온 요소는 항시 대소문자로만 이루어진 값을 가져오게 된다.예를 들면, {{HTMLElement("div")}} 객체로 생성한 요소의 `tagName` 값은 `"DIV"`가 된다.
+- XML 문서에 설계된 요소 구조의 경우 문서에 작성된 태그 명을 그대로 가져오게 된다. `"<SomeTag>"` 이라는 명칭으로 태그를 작성하였을 경우, `tagName` 속성 값은 `"SomeTag"`이 된다.
 
-<p>{{domxref("Element")}} 객체에서 사용하는 <code>tagName</code> 속성의 값은 {{domxref("Node")}} 객체의 {{domxref("Node.nodeName", "nodeName")}} 속성과 동일한 값을 가져온다.</p>
+{{domxref("Element")}} 객체에서 사용하는 `tagName` 속성의 값은 {{domxref("Node")}} 객체의 {{domxref("Node.nodeName", "nodeName")}} 속성과 동일한 값을 가져온다.
 
-<h2 id="예시">예시</h2>
+## 예시
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span id="born"&gt;내가 어렸을 적...&lt;/span&gt;
-</pre>
+```html
+<span id="born">내가 어렸을 적...</span>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var span = document.getElementById("born");
+```js
+var span = document.getElementById("born");
 console.log(span.tagName);
-</pre>
+```
 
-<p>XHTML (또는 여느 XML 방식) 문서의 경우, 정의한 태그 명 그대로 가져오기 때문에, <code>"span"</code>  같은 소문자 태그명을 가져오게 될 것이다.그에 반해 HTML 문서에서는, 원본 문서에 정의된 태그명과 달리 대소문자를 무시하면서 대문자로만 이루어진 <code>"SPAN"</code> 값을 가져오게 된다.</p>
+XHTML (또는 여느 XML 방식) 문서의 경우, 정의한 태그 명 그대로 가져오기 때문에, `"span"` 같은 소문자 태그명을 가져오게 될 것이다.그에 반해 HTML 문서에서는, 원본 문서에 정의된 태그명과 달리 대소문자를 무시하면서 대문자로만 이루어진 `"SPAN"` 값을 가져오게 된다.
 
-<h2 id="규격">규격</h2>
+## 규격
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-tagname', 'Element: tagName')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| {{SpecName('DOM WHATWG', '#dom-element-tagname', 'Element: tagName')}} | {{Spec2('DOM WHATWG')}} |         |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-
-
-<p>{{Compat("api.Element.tagName")}}</p>
+{{Compat}}

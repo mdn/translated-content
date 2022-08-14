@@ -4,22 +4,22 @@ slug: Web/API/RTCPeerConnection/connectionstatechange_event
 translation_of: Web/API/RTCPeerConnection/onconnectionstatechange
 original_slug: Web/API/RTCPeerConnection/onconnectionstatechange
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p><span class="seoSummary"><strong><code>RTCPeerConnection.onconnectionstatechange</code></strong> 속성에 {{domxref("RTCPeerConnection")}} 인스턴스에서 발생하는 {{event("connectionstatechange")}} 이벤트를 처리하기 위해 호출되는 {{event("Event_handlers", "event handler")}}를 정의하게됩니다. 이 이벤트는  연결의 상태 집합체가 변할 때마다 발생합니다. 이 상태 집합체는 연결에 의해 사용되는 각각의 네트워크 전송 상태들의 묶음입니다.</span></p>
+**`RTCPeerConnection.onconnectionstatechange`** 속성에 {{domxref("RTCPeerConnection")}} 인스턴스에서 발생하는 {{event("connectionstatechange")}} 이벤트를 처리하기 위해 호출되는 {{event("Event_handlers", "event handler")}}를 정의하게됩니다. 이 이벤트는 연결의 상태 집합체가 변할 때마다 발생합니다. 이 상태 집합체는 연결에 의해 사용되는 각각의 네트워크 전송 상태들의 묶음입니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>RTCPeerConnection</em>.onconnectionstatechange = <em>eventHandler</em>;
-</pre>
+    RTCPeerConnection.onconnectionstatechange = eventHandler;
 
-<h3 id="값">값</h3>
+### 값
 
-<p>{{domxref("RTCPeerConnection")}}에서 {{event("connectionstatechange")}} 이벤트가 생길 때, 브라우저에 의해 호출되는 함수입니다. 이 함수는 {{domxref("Event")}} 타입의 객체인 단일 패러미터를 입력인자로 받습니다. 해당 이벤트 객체는 특별한 정보를 담고 있지는 않습니다. 새로운 상태를 확인하려면 피어 연결의 {{domxref("RTCPeerConnection.connectionState", "connectionState")}}에 해당하는 값을 살펴보십시오. </p>
+{{domxref("RTCPeerConnection")}}에서 {{event("connectionstatechange")}} 이벤트가 생길 때, 브라우저에 의해 호출되는 함수입니다. 이 함수는 {{domxref("Event")}} 타입의 객체인 단일 패러미터를 입력인자로 받습니다. 해당 이벤트 객체는 특별한 정보를 담고 있지는 않습니다. 새로운 상태를 확인하려면 피어 연결의 {{domxref("RTCPeerConnection.connectionState", "connectionState")}}에 해당하는 값을 살펴보십시오.
 
-<h2 id="예시">예시</h2>
+## 예시
 
-<pre class="brush: js">pc.onconnectionstatechange = function(event) {
+```js
+pc.onconnectionstatechange = function(event) {
   switch(pc.connectionState) {
     case "connected":
       // The connection has become fully connected
@@ -32,18 +32,17 @@ original_slug: Web/API/RTCPeerConnection/onconnectionstatechange
       // The connection has been closed
       break;
   }
-}</pre>
+}
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.RTCPeerConnection.onconnectionstatechange")}}</p>
+{{Compat}}
 
-<h2 id="참조">참조</h2>
+## 참조
 
-<ul>
- <li>{{event("connectionstatechange")}} 이벤트와 이 이벤트의 타입인 {{domxref("Event")}}을 참조하십시오.</li>
-</ul>
+- {{event("connectionstatechange")}} 이벤트와 이 이벤트의 타입인 {{domxref("Event")}}을 참조하십시오.

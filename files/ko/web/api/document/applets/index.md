@@ -6,23 +6,21 @@ tags:
   - Gecko
 translation_of: Web/API/Document/applets
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Summary" name="Summary">요약</h3>
+### 요약
 
-<p><code>applets</code> document 내의 정렬된 애플릿 목록을 리턴합니다.</p>
+`applets` document 내의 정렬된 애플릿 목록을 리턴합니다.
 
-<h3 id="Syntax" name="Syntax">문법</h3>
+### 문법
 
-<pre class="eval"><em>nodeList</em> = document.applets
-</pre>
+    nodeList = document.applets
 
-<h3 id="Example" name="Example">예제</h3>
+### 예제
 
-<pre class="eval">// ( 여러분이 원하는 두 번째 애플릿을 알고 있을 때 )
-my_java_app = document.applets[1];
-</pre>
+    // ( 여러분이 원하는 두 번째 애플릿을 알고 있을 때 )
+    my_java_app = document.applets[1];
 
-<h3 id="Specification">명세</h3>
+### 명세
 
 {{Specifications}}

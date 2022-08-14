@@ -3,28 +3,26 @@ title: Screen.orientation
 slug: Web/API/Screen/orientation
 translation_of: Web/API/Screen/orientation
 ---
-<p>{{APIRef("CSSOM View")}} {{SeeCompatTable}}</p>
+{{APIRef("CSSOM View")}} {{SeeCompatTable}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p><code>orientation</code> 속성은 화면의 현재 방향을 알려 준다.</p>
+`orientation` 속성은 화면의 현재 방향을 알려 준다.
 
-<div class="note">
-<p><strong>Note:</strong> 이 함수는 설치된 웹앱 또는 <a href="/ko/docs/Web/Guide/DOM/Using_full_screen_mode" style="line-height: 1.5em;" title="/ko/docs/Web/Guide/DOM/Using_full_screen_mode">full-screen mode</a> <span style="line-height: 1.5em;">의 웹페이지에서 동작한다.</span></p>
-</div>
+> **참고:** 이 함수는 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/Guide/DOM/Using_full_screen_mode) 의 웹페이지에서 동작한다.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">var orientation = window.screen.orientation;
-</pre>
+    var orientation = window.screen.orientation;
 
-<h2 id="Example" name="Example">Return value</h2>
+## Return value
 
-<p>리턴값은 화면의 방향을 표현하는 문자열이다. portrait-primary, portrait-secondary, landscape-primary, landscape-secondary 가 될 수 있다. (각 값들에 대해 좀 더 많은 정보를 구하려면 {{domxref("window.screen.lockOrientation","lockOrientation")}} 를 보라.).</p>
+리턴값은 화면의 방향을 표현하는 문자열이다. portrait-primary, portrait-secondary, landscape-primary, landscape-secondary 가 될 수 있다. (각 값들에 대해 좀 더 많은 정보를 구하려면 {{domxref("window.screen.lockOrientation","lockOrientation")}} 를 보라.).
 
-<h2 id="Example" name="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var orientation = screen.mozOrientation;
+```js
+var orientation = screen.mozOrientation;
 
 if (orientation === "landscape-primary") {
   console.log("That looks good.");
@@ -33,21 +31,19 @@ if (orientation === "landscape-primary") {
 } else if (orientation === "portrait-secondary" || orientation === "portrait-secondary") {
   console.log("Mmmh... you should rotate your device");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Screen.orientation")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("window.screen.orientation")}}</li>
- <li>{{domxref("window.screen.unlockOrientation()")}}</li>
- <li>{{domxref("window.screen.onorientationchange")}}</li>
- <li><a href="/ko/docs/Managing_screen_orientation" title="/ko/docs/Managing_screen_orientation">Managing screen orientation</a></li>
-</ul>
+- {{domxref("window.screen.orientation")}}
+- {{domxref("window.screen.unlockOrientation()")}}
+- {{domxref("window.screen.onorientationchange")}}
+- [Managing screen orientation](/ko/docs/Managing_screen_orientation)

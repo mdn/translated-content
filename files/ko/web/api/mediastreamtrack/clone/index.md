@@ -10,22 +10,22 @@ tags:
   - Reference
 translation_of: Web/API/MediaStreamTrack/clone
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>{{domxref("MediaStreamTrack")}} 인터페이스의 <strong><code>clone()</code></strong> 메서드는 <code>MediaStreamTrack</code> 객체의 사본을 반환합니다. 사본은 새로운 {{domxref("MediaStreamTrack.id", "id")}}를 제외하면 모든 값이 원본과 동일합니다.</p>
+{{domxref("MediaStreamTrack")}} 인터페이스의 **`clone()`** 메서드는 `MediaStreamTrack` 객체의 사본을 반환합니다. 사본은 새로운 {{domxref("MediaStreamTrack.id", "id")}}를 제외하면 모든 값이 원본과 동일합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">const <em>newTrack</em> = <em>track</em>.clone()</pre>
+    const newTrack = track.clone()
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p><code>clone()</code>을 호출한 {{domxref("MediaStreamTrack")}}에서 {{domxref("MediaStreamTrack.id", "id")}}를 제외하면 똑같은 새로운 <code>MediaStreamTrack</code>.</p>
+`clone()`을 호출한 {{domxref("MediaStreamTrack")}}에서 {{domxref("MediaStreamTrack.id", "id")}}를 제외하면 똑같은 새로운 `MediaStreamTrack`.
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.MediaStreamTrack.clone")}}</p>
+{{Compat}}

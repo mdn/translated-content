@@ -3,37 +3,34 @@ title: ServiceWorkerRegistration.installing
 slug: Web/API/ServiceWorkerRegistration/installing
 translation_of: Web/API/ServiceWorkerRegistration/installing
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>{{domxref("ServiceWorkerRegistration")}} 인터페이스의 <strong><code>installing</code></strong> 속성은 {{domxref("ServiceWorker.state")}} 가 <code style="font-style: normal;">installing</code> 인 서비스 워커를 반환한다. 이 속성은 <code style="font-style: normal;">null</code> 로 초기 설정되어 있다.</p>
+{{domxref("ServiceWorkerRegistration")}} 인터페이스의 **`installing`** 속성은 {{domxref("ServiceWorker.state")}} 가 `installing` 인 서비스 워커를 반환한다. 이 속성은 `null` 로 초기 설정되어 있다.
 
-<div class="note">
-<p><strong>Note</strong>: 이 기능은 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 에서 사용 가능하다.</p>
-</div>
+> **참고:** 이 기능은 [Web Workers](/ko/docs/Web/API/Web_Workers_API) 에서 사용 가능하다.
 
-<h2 id="Syntax" name="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox" style="font-size: 14px;">sw = ServiceWorker.installing
-</pre>
+```js
+sw = ServiceWorker.installing
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>현재 <code>installing</code> 상태에 있다면, {{domxref("ServiceWorker")}} 객체</p>
+현재 `installing` 상태에 있다면, {{domxref("ServiceWorker")}} 객체
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.ServiceWorkerRegistration.installing")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/ko/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/ko/docs/Web/Guide/Performance/Using_web_workers)

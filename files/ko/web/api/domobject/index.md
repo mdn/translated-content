@@ -11,10 +11,10 @@ tags:
   - 사용되지않음
 translation_of: Web/API/DOMObject
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary">더 이상 사용되지 않는 <code><strong>DOMObject</strong></code> 인터페이스는 객체 데이터 타입을 위한 기본 클래스로서 DOM 명세의 초기 버전에 사용되었습니다. </span>명세는 이제 간단히 JavaScript {{jsxref("Object")}} 타입을 사용합니다.</p>
+더 이상 사용되지 않는 **`DOMObject`** 인터페이스는 객체 데이터 타입을 위한 기본 클래스로서 DOM 명세의 초기 버전에 사용되었습니다. 명세는 이제 간단히 JavaScript {{jsxref("Object")}} 타입을 사용합니다.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}

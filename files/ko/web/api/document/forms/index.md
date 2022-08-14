@@ -5,53 +5,53 @@ tags:
   - Forms
 translation_of: Web/API/Document/forms
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code>forms</code>는 현재 document에 존재하는 {{HTMLElement("form")}} element 들이 담긴 collection (an {{domxref("HTMLCollection")}})을 반환합니다.</p>
+`forms`는 현재 document에 존재하는 {{HTMLElement("form")}} element 들이 담긴 collection (an {{domxref("HTMLCollection")}})을 반환합니다.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>collection</var> = document.forms;</pre>
+    collection = document.forms;
 
-<h2 id="Example" name="Example">Example: Getting form information</h2>
+## Example: Getting form information
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-&lt;head&gt;
-&lt;title&gt;document.forms example&lt;/title&gt;
-&lt;/head&gt;
+<head>
+<title>document.forms example</title>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;form id="robby"&gt;
-  &lt;input type="button" onclick="alert(document.forms[0].id);" value="robby's form" /&gt;
-&lt;/form&gt;
+<form id="robby">
+  <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
+</form>
 
-&lt;form id="dave"&gt;
-  &lt;input type="button" onclick="alert(document.forms[1].id);" value="dave's form" /&gt;
-&lt;/form&gt;
+<form id="dave">
+  <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
+</form>
 
-&lt;form id="paul"&gt;
-  &lt;input type="button" onclick="alert(document.forms[2].id);" value="paul's form" /&gt;
-&lt;/form&gt;
+<form id="paul">
+  <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Example_2Getting_an_element_from_within_a_form">Example 2:Getting an element from within a form</h2>
+## Example 2:Getting an element from within a form
 
-<pre class="brush: js">var selectForm = document.forms[index];
+```js
+var selectForm = document.forms[index];
 var selectFormElement = document.forms[index].elements[index];
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="See_Also" name="See_Also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLFormElement")}}</li>
-</ul>
+- {{domxref("HTMLFormElement")}}

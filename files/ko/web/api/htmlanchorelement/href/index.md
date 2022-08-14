@@ -11,27 +11,26 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/href
 original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p><strong><code>HTMLHyperlinkElementUtils.href</code></strong> 속성은 온전한 URL을 값으로 가지는 {{domxref("USVString")}}입니다.</p>
+**`HTMLHyperlinkElementUtils.href`** 속성은 온전한 URL을 값으로 가지는 {{domxref("USVString")}}입니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: js">// Lets imagine an &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href"&gt; element is in the document
+```js
+// Lets imagine an <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href"> element is in the document
 var anchor = document.getElementById("myAnchor");
 var result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href'
-</pre>
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.HTMLHyperlinkElementUtils.href")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{domxref("HTMLHyperlinkElementUtils")}}</li>
-</ul>
+- {{domxref("HTMLHyperlinkElementUtils")}}

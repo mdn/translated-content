@@ -10,37 +10,35 @@ tags:
   - URL API
 translation_of: Web/API/URL/origin
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p><span class="seoSummary">{{domxref("URL")}} 인터페이스의 <strong><code>origin</code></strong> 읽기 전용 속성은 표현 중인 URL의 출처를 유니코드로 직렬화한 {{domxref("USVString")}}을 반환합니다.</span> 정확한 구조는 URL의 유형에 따라 다릅니다.</p>
+{{domxref("URL")}} 인터페이스의 **`origin`** 읽기 전용 속성은 표현 중인 URL의 출처를 유니코드로 직렬화한 {{domxref("USVString")}}을 반환합니다. 정확한 구조는 URL의 유형에 따라 다릅니다.
 
-<ul>
- <li><code>http</code> 또는 <code>https</code> URL은 스킴 뒤 <code>'://'</code>, 도메인, <code>':'</code>, 마지막으로 포트(명시적으로 지정한 경우)로 구성됩니다.</li>
- <li><code>file:</code> URL은 브라우저마다 다릅니다.</li>
- <li><code>blob:</code> URL은 <code>blob:</code> 뒤의 URL 출처를 반환합니다. 예를 들어, <code>"blob:https://mozilla.org"</code>인 경우 <code>"https://mozilla.org"</code>를 반환합니다.</li>
-</ul>
+- `http` 또는 `https` URL은 스킴 뒤 `'://'`, 도메인, `':'`, 마지막으로 포트(명시적으로 지정한 경우)로 구성됩니다.
+- `file:` URL은 브라우저마다 다릅니다.
+- `blob:` URL은 `blob:` 뒤의 URL 출처를 반환합니다. 예를 들어, `"blob:https://mozilla.org"`인 경우 `"https://mozilla.org"`를 반환합니다.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">const <em>originString</em> = <em>url</em>.origin
-</pre>
+    const originString = url.origin
 
-<h3 id="값">값</h3>
+### 값
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: js">const url = new URL("blob:https://mozilla.org:443/")
+```js
+const url = new URL("blob:https://mozilla.org:443/")
 console.log(url.origin); // Logs 'https://mozilla.org'
-</pre>
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.URL.origin")}}</p>
+{{Compat}}

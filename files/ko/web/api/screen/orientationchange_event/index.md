@@ -4,25 +4,29 @@ slug: Web/API/Screen/orientationchange_event
 translation_of: Web/API/Screen/onorientationchange
 original_slug: Web/API/Screen/onorientationchange
 ---
-<p>{{ ApiRef() }}</p>
-<p>{{SeeCompatTable}}</p>
-<h2 id="Summary" name="Summary">Summary</h2>
-<p>{{ event("orientationchange")}} 이벤트를 화면 객체로 보내는 이벤트 핸들러이다.</p>
-<h2 id="Syntax" name="Syntax">Syntax</h2>
-<pre>screen.onorientationchange = <em>funcRef</em>;
-</pre>
-<p><code>funcRef</code> 는 함수로의 참조 이다.</p>
+{{ ApiRef() }}
 
-<h2 id="Specifications">Specifications</h2>
+{{SeeCompatTable}}
+
+## Summary
+
+{{ event("orientationchange")}} 이벤트를 화면 객체로 보내는 이벤트 핸들러이다.
+
+## Syntax
+
+    screen.onorientationchange = funcRef;
+
+`funcRef` 는 함수로의 참조 이다.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Screen.onorientationchange")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
-<ul>
- <li>{{ event("orientationchange") }}</li>
- <li><a href="/ko/docs/Managing_screen_orientation" title="/ko/docs/Managing_screen_orientation">Managing screen orientation</a></li>
-</ul>
+## See also
+
+- {{ event("orientationchange") }}
+- [Managing screen orientation](/ko/docs/Managing_screen_orientation)

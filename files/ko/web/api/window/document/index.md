@@ -9,19 +9,20 @@ tags:
   - Window
 translation_of: Web/API/Window/document
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>window.document</code></strong> 속성은 창이 포함한 <a href="/ko/docs/Web/API/Document">문서</a>의 참조를 반환합니다.</span></p>
+**`window.document`** 속성은 창이 포함한 [문서](/ko/docs/Web/API/Document)의 참조를 반환합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: js">console.log(window.document.title);
-</pre>
+```js
+console.log(window.document.title);
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Window.document")}}</p>
+{{Compat}}

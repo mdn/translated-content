@@ -9,48 +9,41 @@ tags:
   - 메소드
 translation_of: Web/API/Document/adoptNode
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<div> </div>
+외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 [`ownerDocument`](/en-US/docs/DOM/Node.ownerDocument "DOM/Node.ownerDocument") 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다.
 
-<p>외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 <code><a href="/en-US/docs/DOM/Node.ownerDocument" title="DOM/Node.ownerDocument">ownerDocument</a></code> 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다.</p>
+**Gecko 1.9 (Firefox 3)부터 지원**
 
-<p><strong>Gecko 1.9 (Firefox 3)부터 지원</strong></p>
+## 문법
 
-<h2 id="Syntax" name="Syntax">문법</h2>
+    node = document.adoptNode(externalNode);
 
-<pre class="syntaxbox"><var>node</var> = <em>document</em>.adoptNode(<var>externalNode</var>);
-</pre>
+- `node`
+  - : 는 현재 문서에 삽입될 노드를 의미. 아직 해당 문서에 삽입되기 전이기 때문에 새로운 노드의 [`parentNode`](/ko/docs/DOM/Node.parentNode)는 `null이다.`<span class="hidden"></span><span class="hidden"></span><span class="hidden"></span>
+- `externalNode`
+  - : 는 노드를 가져오기 위한 외부 문서에 있는 노드를 의미.
 
-<dl>
- <dt><code><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span>node</code></dt>
- <dd>는 현재 문서에 삽입될 노드를 의미. 아직 해당 문서에 삽입되기 전이기 때문에 새로운 노드의 <a href="/en-US/docs/DOM/Node.parentNode"><code>parentNode</code></a>는 <code>null이다.</code><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span></dd>
- <dt><code>externalNode</code></dt>
- <dd>는 노드를 가져오기 위한 외부 문서에 있는 노드를 의미.</dd>
-</dl>
+## 예제
 
-<h2 id="Example" name="Example">예제</h2>
+{{todo}}
 
-<p>{{todo}}</p>
+## 알아두기
 
-<h2 id="Notes" name="Notes">알아두기</h2>
+보통 `adoptNode` 호출은 다른 방식으로 구현된 곳에서 노드를 불러오기 때문에 실패하는 경우가 많다. 하지만 브라우저로 인한 문제인 경우는 문제가 된다.
 
-<p>보통 <code>adoptNode</code> 호출은 다른 방식으로 구현된 곳에서 노드를 불러오기 때문에 실패하는 경우가 많다. 하지만 브라우저로 인한 문제인 경우는 문제가 된다.</p>
+Nodes from external documents should be cloned using [`document.importNode()`](/ko/docs/Web/API/Document/importNode "현재 문서가 아닌 외부 문서의 노드를 복사하여 현재 문서에 넣을 수 있도록 해줍니다.") (or adopted using [`document.adoptNode()`](/ko/docs/Web/API/Document/adoptNode "외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 ownerDocument 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다.")) before they
+can be inserted into the current document. For more on the [`Node.ownerDocument`](/ko/docs/Web/API/Node/ownerDocument "Node.ownerDocument 읽기 전용 속성은 이 node 의 최상위 document 객체를 반환합니다.") issues, see the
+[W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
 
-<p>Nodes from external documents should be cloned using <a href="/ko/docs/Web/API/Document/importNode" title="현재 문서가 아닌 외부 문서의 노드를 복사하여 현재 문서에 넣을 수 있도록 해줍니다."><code>document.importNode()</code></a> (or adopted using <a href="/ko/docs/Web/API/Document/adoptNode" title="외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 ownerDocument 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다."><code>document.adoptNode()</code></a>) before they
-    can be inserted into the current document. For more on the <a href="/ko/docs/Web/API/Node/ownerDocument" title="Node.ownerDocument 읽기 전용 속성은 이 node 의 최상위 document 객체를 반환합니다."><code>Node.ownerDocument</code></a> issues, see the
-    <a class="external" href="http://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a>.</p>
+Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
+sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for
+improved future compatibility.
 
-    <p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
-    sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for
-    improved future compatibility.</p>
-
-<h2 id="Specification" name="Specification">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="더_보기">더 보기</h2>
+## 더 보기
 
-<ul>
- <li><a href="/en-US/docs/DOM/document.importNode">document.importNode</a></li>
-</ul>
+- [document.importNode](/ko/docs/DOM/document.importNode)

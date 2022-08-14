@@ -9,86 +9,59 @@ tags:
   - Overview
 translation_of: Web/API/Gamepad_API
 ---
-<div>{{DefaultAPISidebar("Gamepad API")}}</div>
+{{DefaultAPISidebar("Gamepad API")}}
 
-<p><strong>게임패드 API</strong>는 게임패드와 다른 게임 제어장치의 신호에 쉬운 일관된 방식으로 접근하고 응답하는 개발자들을 위한 수단이다. 게임패드 API는 세 가지 인터페이스와연결, 연결 해제되고 게임 패드 자체에 대한 다른 정보에 접근하고 어떤 버튼과 다른 조작 장치들이 현재 눌린 것에 응답하는 두 가지 이벤트 그리고 한 가지 특수 기능이 포함되어 있다. </p>
+**게임패드 API**는 게임패드와 다른 게임 제어장치의 신호에 쉬운 일관된 방식으로 접근하고 응답하는 개발자들을 위한 수단이다. 게임패드 API는 세 가지 인터페이스와연결, 연결 해제되고 게임 패드 자체에 대한 다른 정보에 접근하고 어떤 버튼과 다른 조작 장치들이 현재 눌린 것에 응답하는 두 가지 이벤트 그리고 한 가지 특수 기능이 포함되어 있다.
 
-<h2 id="인터페이스">인터페이스</h2>
+## 인터페이스
 
-<dl>
- <dt>{{domxref("Gamepad")}}</dt>
- <dd>컴퓨터에 연결된 게임패드나 조작장치를 표현한다.</dd>
- <dt>{{domxref("GamepadButton")}}</dt>
- <dd>연결된 조작장치들 중 하나에 있는 버튼을 표현한다.</dd>
- <dt>{{domxref("GamepadEvent")}}</dt>
- <dd>게임 패드와 연관된 이벤트를 나타내는 이벤트 객체이다.</dd>
-</dl>
+- {{domxref("Gamepad")}}
+  - : 컴퓨터에 연결된 게임패드나 조작장치를 표현한다.
+- {{domxref("GamepadButton")}}
+  - : 연결된 조작장치들 중 하나에 있는 버튼을 표현한다.
+- {{domxref("GamepadEvent")}}
+  - : 게임 패드와 연관된 이벤트를 나타내는 이벤트 객체이다.
 
-<h3 id="게임패드_확장기능_실험">게임패드 확장기능 실험</h3>
+### 게임패드 확장기능 실험
 
-<dl>
- <dt>{{domxref("GamepadHapticActuator")}}</dt>
- <dd>Represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.</dd>
- <dt>{{domxref("GamepadPose")}}</dt>
- <dd>Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a <a href="/en-US/docs/Web/API/WebVR_API">WebVR</a> controller.</dd>
-</dl>
+- {{domxref("GamepadHapticActuator")}}
+  - : Represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
+- {{domxref("GamepadPose")}}
+  - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/ko/docs/Web/API/WebVR_API) controller.
 
-<p>다음 정보를엑세스할 수 있는 <a href="/en-US/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad">게임패드 인터페이스 확장기능</a> 더보기</p>
+다음 정보를엑세스할 수 있는 [게임패드 인터페이스 확장기능](/ko/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad) 더보기
 
-<h3 id="다른_인터페이스로_확장">다른 인터페이스로 확장</h3>
+### 다른 인터페이스로 확장
 
-<h4 id="Navigator">Navigator</h4>
+#### Navigator
 
-<dl>
- <dt>{{domxref("Navigator.getGamepads()")}}</dt>
- <dd>An extension to the {{domxref("Navigator")}} object that returns an array of {{domxref("Gamepad")}} objects, one for each connected gamepad.</dd>
-</dl>
+- {{domxref("Navigator.getGamepads()")}}
+  - : An extension to the {{domxref("Navigator")}} object that returns an array of {{domxref("Gamepad")}} objects, one for each connected gamepad.
 
-<h4 id="Window_events">Window events</h4>
+#### Window events
 
-<dl>
- <dt>{{domxref("Window.ongamepadconnected")}}</dt>
- <dd>Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).</dd>
- <dt>{{domxref("Window.ongamepaddisconnected")}}</dt>
- <dd>Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).</dd>
-</dl>
+- {{domxref("Window.ongamepadconnected")}}
+  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
+- {{domxref("Window.ongamepaddisconnected")}}
+  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
 
-<h2 id="튜토리얼과_가이드">튜토리얼과 가이드</h2>
+## 튜토리얼과 가이드
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></li>
- <li><a href="/en-US/docs/Games/Techniques/Controls_Gamepad_API">Implementing controls using the Gamepad API</a></li>
-</ul>
+- [Using the Gamepad API](/ko/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [Implementing controls using the Gamepad API](/ko/docs/Games/Techniques/Controls_Gamepad_API)
 
-<h2 id="사양">사양</h2>
+## 사양
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("GamepadExtensions")}}</td>
-   <td>{{Spec2("GamepadExtensions")}}</td>
-   <td>Defines the <a href="#experimental_gamepad_extensions">Experimental Gamepad extensions</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Gamepad", "", "The Gamepad API specification")}}</td>
-   <td>{{Spec2("Gamepad")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                                   | Comment                                                                          |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
+| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
+| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                               |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Gamepad")}}</p>
+{{Compat}}
 
-<h2 id="더보기">더보기</h2>
+## 더보기
 
-<ul>
- <li><a class="external text" href="https://hacks.mozilla.org/2013/12/the-gamepad-api/" rel="nofollow">The Gamepad API</a> by Ted Mielczarek and Robert Nyman</li>
- <li><a href="http://luser.github.io/gamepadtest/">Simple API demo page</a> (<a href="https://github.com/luser/gamepadtest">source</a>)</li>
-</ul>
+- [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) by Ted Mielczarek and Robert Nyman
+- [Simple API demo page](http://luser.github.io/gamepadtest/) ([source](https://github.com/luser/gamepadtest))

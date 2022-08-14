@@ -3,36 +3,22 @@ title: 'ServiceWorkerGlobalScope: notificationclick event'
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 translation_of: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>notificationclick</code> 이벤트는 <span style="line-height: 19.0909080505371px;">{{domxref("ServiceWorkerRegistration.showNotification()")}} 에 의해 발생한 시스템 notification 이 클릭되었음을 나타내기 위해 </span>발생된다.</p>
+`notificationclick` 이벤트는 {{domxref("ServiceWorkerRegistration.showNotification()")}} 에 의해 발생한 시스템 notification 이 클릭되었음을 나타내기 위해 발생된다.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"></th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("NotificationEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td><code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick">onnotificationclick</a></code></td>
-  </tr>
- </tbody>
-</table>
+|               | No                                                                                        |
+| ------------- | ----------------------------------------------------------------------------------------- |
+| Cancelable    | No                                                                                        |
+| Interface     | {{domxref("NotificationEvent")}}                                              |
+| Event handler | [`onnotificationclick`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick) |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> 메소드 내에서 <code>notificationclick</code> 이벤트를 사용할 수 있다:</p>
+[`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) 메소드 내에서 `notificationclick` 이벤트를 사용할 수 있다:
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -41,20 +27,21 @@ translation_of: Web/API/ServiceWorkerGlobalScope/notificationclick_event
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
 });
-</pre>
+```
 
-<p>또는 <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick">onnotificationclick</a></code> 이벤트 핸들러 속성을 사용할 수 있다:</p>
+또는 [`onnotificationclick`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick) 이벤트 핸들러 속성을 사용할 수 있다:
 
-<pre class="brush: js">self.onnotificationclick = function(event) {
+```js
+self.onnotificationclick = function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -63,27 +50,26 @@ translation_of: Web/API/ServiceWorkerGlobalScope/notificationclick_event
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client)
+      if (client.url == '/' && 'focus' in client)
         return client.focus();
     }
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.ServiceWorkerGlobalScope.notificationclick_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
- <li><a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a></li>
-</ul>
+- [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
+- [Notifications API](/ko/docs/Web/API/Notifications_API)

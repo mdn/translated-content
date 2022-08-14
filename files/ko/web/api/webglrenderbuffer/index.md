@@ -6,44 +6,41 @@ tags:
   - 웹지엘
 translation_of: Web/API/WebGLRenderbuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WebGLRenderbuffer</strong> 인터페이스는 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 의 부분입니다. 그리고 이미지를 담거나 렌더링 연산의 소스나 타겟이 될 수 있는 버퍼를 말합니다. </p>
+**WebGLRenderbuffer** 인터페이스는 [WebGL API](/ko/docs/Web/API/WebGL_API) 의 부분입니다. 그리고 이미지를 담거나 렌더링 연산의 소스나 타겟이 될 수 있는 버퍼를 말합니다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>WebGLRenderbuffer</code> 오브젝트는 메소드나 프로퍼티를 정의 하지 않으며 직접적으로 접근할 수 없습니다.  When working with <code>WebGLRenderbuffer</code> 오브젝트와 작업하려면 다음의 {{domxref("WebGLRenderingContext")}} 메소드가 도움이 될 것입니다. </p>
+`WebGLRenderbuffer` 오브젝트는 메소드나 프로퍼티를 정의 하지 않으며 직접적으로 접근할 수 없습니다. When working with `WebGLRenderbuffer` 오브젝트와 작업하려면 다음의 {{domxref("WebGLRenderingContext")}} 메소드가 도움이 될 것입니다.
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
 
-<h2 id="예">예</h2>
+## 예
 
-<h3 id="렌더_버퍼_만들기">렌더 버퍼 만들기</h3>
+### 렌더 버퍼 만들기
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createRenderbuffer();
-</pre>
+```
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.WebGLRenderbuffer")}}</p>
+{{Compat("api.WebGLRenderbuffer")}}
 
-<h2 id="함께_보기">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</li>
- <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}

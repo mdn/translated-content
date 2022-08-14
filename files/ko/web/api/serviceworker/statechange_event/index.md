@@ -4,20 +4,21 @@ slug: Web/API/ServiceWorker/statechange_event
 translation_of: Web/API/ServiceWorker/onstatechange
 original_slug: Web/API/ServiceWorker/onstatechange
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p><code>statechange</code> 타입의 이벤트가 발생될 때마다 호출되는 {{domxref("EventListener")}} 속성. 기본적으로 {{domxref("ServiceWorker.state")}}가 변경되는 시점에 발생한다.</p>
+`statechange` 타입의 이벤트가 발생될 때마다 호출되는 {{domxref("EventListener")}} 속성. 기본적으로 {{domxref("ServiceWorker.state")}}가 변경되는 시점에 발생한다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">ServiceWorker.onstatechange = function(statechangeevent) { ... }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )</pre>
+    ServiceWorker.onstatechange = function(statechangeevent) { ... }
+    ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>이 코드 조각은 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>) 으로부터 가져온 것이다. 이 코드는 {{domxref("ServiceWorker.state")}}의 모든 변경 사항을 수신하고 그 값을 반환한다.</p>
+이 코드 조각은 [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)) 으로부터 가져온 것이다. 이 코드는 {{domxref("ServiceWorker.state")}}의 모든 변경 사항을 수신하고 그 값을 반환한다.
 
-<pre class="brush: js">var serviceWorker;
+```js
+var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installing';
@@ -34,23 +35,26 @@ if (serviceWorker) {
   serviceWorker.addEventListener('statechange', function(e) {
   logState(e.target.state);
   });
-}</pre>
+}
+```
 
-<p><code>statechange</code> 가 발생할 때, 서비스워커의 참조들이 변화할 수 있으므로 주의하라. 예시:</p>
+`statechange` 가 발생할 때, 서비스워커의 참조들이 변화할 수 있으므로 주의하라. 예시:
 
-<pre class="brush: js">navigator.serviceWorker.register(..).then(function(swr) {
+```js
+navigator.serviceWorker.register(..).then(function(swr) {
   swr.installing.state == "installing"
   swr.installing.onstatechange = function() {
     swr.installing == null;
     // 이 시점에서, swr.waiting 또는 swr.active는 true일 것이다. 이것은 statechange 이벤트가 대기 상태이기 때문이며,
     // 그동안 잠재 상태의 워커가 waiting 상태가 될 수도 있으며 가능한 경우에는 즉시 activated 될 것이다.
   }
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.ServiceWorker.onstatechange")}}</p>
+{{Compat}}

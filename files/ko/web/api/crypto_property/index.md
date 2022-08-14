@@ -10,52 +10,53 @@ tags:
 translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>Window.crypto</code></strong>속성은 전역 객체인 {{domxref("Crypto")}} 객체를 반환합니다. <code>Crypto</code> 객체는 웹 페이지가 특정 암호학적 서비스에 접근할 수 있는 경로입니다.</span> <code>crypto</code> 속성 자체는 읽기 전용이지만, 모든 메서드(와 자식 객체 {{domxref("SubtleCrypto")}})의 메서드)는 읽기 전용이 아니므로 {{glossary("polyfill", "폴리필")}}을 통한 공격에 취약합니다.</p>
+**`Window.crypto`**속성은 전역 객체인 {{domxref("Crypto")}} 객체를 반환합니다. `Crypto` 객체는 웹 페이지가 특정 암호학적 서비스에 접근할 수 있는 경로입니다. `crypto` 속성 자체는 읽기 전용이지만, 모든 메서드(와 자식 객체 {{domxref("SubtleCrypto")}})의 메서드)는 읽기 전용이 아니므로 {{glossary("polyfill", "폴리필")}}을 통한 공격에 취약합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">var <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
-</pre>
+    var cryptoObj = window.crypto || window.msCrypto; // for IE 11
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p id="Using_the_domxrefWindow.crypto_property_to_access_the_getRandomValues_method.">다음 예제는 {{domxref("Window.crypto")}} 속성을 통해 {{domxref("Crypto.getRandomValues", "getRandomValues()")}} 메서드에 접근합니다.</p>
+다음 예제는 {{domxref("Window.crypto")}} 속성을 통해 {{domxref("Crypto.getRandomValues", "getRandomValues()")}} 메서드에 접근합니다.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">genRandomNumbers = function getRandomNumbers() {
+```js
+genRandomNumbers = function getRandomNumbers() {
   var array = new Uint32Array(10);
   window.crypto.getRandomValues(array);
 
   var randText = document.getElementById("myRandText");
   randText.innerHTML = "The random numbers are: "
-  for (var i = 0; i &lt; array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     randText.innerHTML += array[i] + " ";
   }
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="myRandText"&gt;The random numbers are: &lt;/p&gt;
-&lt;button type="button" onClick='genRandomNumbers()'&gt;Generate 10 random numbers&lt;/button&gt;</pre>
+```html
+<p id="myRandText">The random numbers are: </p>
+<button type="button" onClick='genRandomNumbers()'>Generate 10 random numbers</button>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample('예제')}}</p>
+{{EmbedLiveSample('예제')}}
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Window.crypto")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{domxref("Window")}} 전역 객체</li>
- <li>{{domxref("Crypto")}} 인터페이스</li>
-</ul>
+- {{domxref("Window")}} 전역 객체
+- {{domxref("Crypto")}} 인터페이스

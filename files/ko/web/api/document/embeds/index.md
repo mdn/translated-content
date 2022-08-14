@@ -5,17 +5,16 @@ tags:
   - embeds
 translation_of: Web/API/Document/embeds
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Summary" name="Summary">Summary</h3>
+### Summary
 
-<p><code>embeds </code>는 현재 document 에 embed되어 있는 OBJECT 들의 list 를 반환합니다.</p>
+`embeds `는 현재 document 에 embed되어 있는 OBJECT 들의 list 를 반환합니다.
 
-<h3 id="Syntax" name="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="eval"><em>nodeList</em> = document.embeds
-</pre>
+    nodeList = document.embeds
 
-<h3 id="Specifications" name="Specifications">Specifications</h3>
+### Specifications
 
 {{Specifications}}

@@ -10,20 +10,18 @@ tags:
   - 메소드
 translation_of: Web/API/Node/normalize
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.normalize()</strong></code> 메소드는 지정된 노드와 하위 트리의 모든 노드를 "정규화된" 형태로 놓습니다. 정규화된 하위 트리의 텍스트 노드는 비어있지 않으며 인접한 텍스트 노드도 존재하지 않습니다.</p>
+**`Node.normalize()`** 메소드는 지정된 노드와 하위 트리의 모든 노드를 "정규화된" 형태로 놓습니다. 정규화된 하위 트리의 텍스트 노드는 비어있지 않으며 인접한 텍스트 노드도 존재하지 않습니다.
 
-<h2 id="Syntax" name="Syntax">문법</h2>
+## 문법
 
-<pre class="syntaxbox"><em>element</em>.normalize();
-</pre>
+    element.normalize();
 
-<h2 id="Example" name="Example">예제</h2>
+## 예제
 
-<pre class="brush:js">var wrapper = document.createElement("div");
+```js
+var wrapper = document.createElement("div");
 
 wrapper.appendChild( document.createTextNode("Part 1 ") );
 wrapper.appendChild( document.createTextNode("Part 2 ") );
@@ -35,18 +33,17 @@ wrapper.appendChild( document.createTextNode("Part 2 ") );
 wrapper.normalize();
 
 // 이제, wrapper.childNodes.length === 1
-// wrapper.childNodes[0].textContent === "Part 1 Part 2 "</pre>
+// wrapper.childNodes[0].textContent === "Part 1 Part 2 "
+```
 
-<h2 id="Specification">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Node.normalize")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Text/splitText" title="DOM/Text.splitText"><code>Text.splitText</code></a></li>
-</ul>
+- [`Text.splitText`](/ko/docs/Web/API/Text/splitText "DOM/Text.splitText")

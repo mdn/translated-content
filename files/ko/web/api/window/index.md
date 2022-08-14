@@ -10,689 +10,601 @@ tags:
   - Window
 translation_of: Web/API/Window
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary"><strong><code>Window</code></strong> 인터페이스는 {{glossary("DOM")}} 문서를 담은 창을 나타냅니다.</span> <code>document</code> 속성이 창에 불러온 <a href="/ko/docs/Web/API/Document">DOM 문서</a>를 가리킵니다. 반대로, 주어진 문서의 창은 {{domxref("document.defaultView")}}를 사용해 접근할 수 있습니다.</p>
+**`Window`** 인터페이스는 {{glossary("DOM")}} 문서를 담은 창을 나타냅니다. `document` 속성이 창에 불러온 [DOM 문서](/ko/docs/Web/API/Document)를 가리킵니다. 반대로, 주어진 문서의 창은 {{domxref("document.defaultView")}}를 사용해 접근할 수 있습니다.
 
-<p>JavaScript 코드에 노출된 전역 변수 <code>window</code>는 현재 스크립트가 작동 중인 창을 나타냅니다.</p>
+JavaScript 코드에 노출된 전역 변수 `window`는 현재 스크립트가 작동 중인 창을 나타냅니다.
 
-<p><code>Window</code> 인터페이스는 다양한 함수, 이름공간, 객체, 생성자가 머무는 장소입니다. 그 중엔 사용자 인터페이스로서의 창 개념과는 직접 관련되지 않은 것도 존재하며, 대신 전역적으로 접근할 수 있어야 하는 항목에 적합합니다. 많은 수의 항목이 <a href="/ko/docs/Web/JavaScript/Reference">JavaScript 참고서</a>와 <a href="/ko/docs/Web/API/Document_Object_Model">DOM 참고서</a>에 문서화되어 있습니다.</p>
+`Window` 인터페이스는 다양한 함수, 이름공간, 객체, 생성자가 머무는 장소입니다. 그 중엔 사용자 인터페이스로서의 창 개념과는 직접 관련되지 않은 것도 존재하며, 대신 전역적으로 접근할 수 있어야 하는 항목에 적합합니다. 많은 수의 항목이 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference)와 [DOM 참고서](/ko/docs/Web/API/Document_Object_Model)에 문서화되어 있습니다.
 
-<p>탭 기능이 있는 브라우저에서는 각각의 탭을 각각의 <code>Window</code> 객체로 나타냅니다. 주어진 탭에서 동작 중인 JavaScript 코드의 전역 <code>window</code> 객체는 항상 자신의 탭을 나타냅니다. 그렇지만 {{domxref("Window.resizeTo", "resizeTo()")}}와 {{domxref("Window.innerHeight", "innerHeight")}}처럼, 일부 속성과 메서드는 탭이 아닌 창 전체에 적용됩니다. 보통 탭과 합리적으로는 연관 지을 수 없는 경우 창에 속합니다.</p>
+탭 기능이 있는 브라우저에서는 각각의 탭을 각각의 `Window` 객체로 나타냅니다. 주어진 탭에서 동작 중인 JavaScript 코드의 전역 `window` 객체는 항상 자신의 탭을 나타냅니다. 그렇지만 {{domxref("Window.resizeTo", "resizeTo()")}}와 {{domxref("Window.innerHeight", "innerHeight")}}처럼, 일부 속성과 메서드는 탭이 아닌 창 전체에 적용됩니다. 보통 탭과 합리적으로는 연관 지을 수 없는 경우 창에 속합니다.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="생성자">생성자</h2>
+## 생성자
 
-<p><a href="/ko/docs/Web/API/Document_Object_Model#DOM_인터페이스" title="/en-US/docs/DOM/DOM_Reference">DOM 인터페이스</a>도 참고하세요.</p>
+[DOM 인터페이스](/ko/docs/Web/API/Document_Object_Model#DOM_인터페이스 "/en-US/docs/DOM/DOM_Reference")도 참고하세요.
 
-<dl>
- <dt>{{domxref("DOMParser")}}</dt>
- <dd><code>DOMParser</code>는 문자열에 저장한 XML 또는 HTML 소스 코드를 DOM {{domxref("Document")}}로 구문 분석할 수 있습니다. <code>DOMParser</code>는 <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization</a> 명세의 일부입니다.</dd>
- <dt>{{domxref("Image")}}</dt>
- <dd>{{domxref("HTMLImageElement")}}를 생성할 때 사용합니다.</dd>
- <dt>{{domxref("Option")}}</dt>
- <dd>{{domxref("HTMLOptionElement")}}를 생성할 때 사용합니다.</dd>
- <dt>{{domxref("Window.StaticRange")}} {{experimental_inline}} {{readonlyinline}}</dt>
- <dd>{{domxref('StaticRange')}} 객체를 생성하는 {{domxref('StaticRange.StaticRange','StaticRange()')}} 생성자를 반환합니다.</dd>
- <dt>{{domxref("Worker")}}</dt>
- <dd><a href="/ko/docs/Web/API/Web_Workers_API/Using_web_workers">Web Worker</a> 생성에 사용합니다.</dd>
- <dt>{{domxref("Window.XMLSerializer")}}</dt>
- <dd>DOM 트리를 XML 또는 HTML 소스로 변환합니다.</dd>
-</dl>
+- {{domxref("DOMParser")}}
+  - : `DOMParser`는 문자열에 저장한 XML 또는 HTML 소스 코드를 DOM {{domxref("Document")}}로 구문 분석할 수 있습니다. `DOMParser`는 [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/) 명세의 일부입니다.
+- {{domxref("Image")}}
+  - : {{domxref("HTMLImageElement")}}를 생성할 때 사용합니다.
+- {{domxref("Option")}}
+  - : {{domxref("HTMLOptionElement")}}를 생성할 때 사용합니다.
+- {{domxref("Window.StaticRange")}} {{experimental_inline}} {{readonlyinline}}
+  - : {{domxref('StaticRange')}} 객체를 생성하는 {{domxref('StaticRange.StaticRange','StaticRange()')}} 생성자를 반환합니다.
+- {{domxref("Worker")}}
+  - : [Web Worker](/ko/docs/Web/API/Web_Workers_API/Using_web_workers) 생성에 사용합니다.
+- {{domxref("Window.XMLSerializer")}}
+  - : DOM 트리를 XML 또는 HTML 소스로 변환합니다.
 
-<h2 id="속성">속성</h2>
+## 속성
 
-<p>{{domxref("EventTarget")}}의 속성을 상속하고, {{domxref("WindowOrWorkerGlobalScope")}}와 {{domxref("WindowEventHandlers")}} 믹스인의 속성을 구현합니다.</p>
+{{domxref("EventTarget")}}의 속성을 상속하고, {{domxref("WindowOrWorkerGlobalScope")}}와 {{domxref("WindowEventHandlers")}} 믹스인의 속성을 구현합니다.
 
-<dl>
- <dt>{{domxref("Window.closed")}} {{readOnlyInline}}</dt>
- <dd>현재 창이 닫혔는지 나타냅니다.</dd>
- <dt>{{domxref("Window.console")}} {{readOnlyInline}}</dt>
- <dd>브라우저 디버깅 콘솔에 접근할 수 있는 콘솔 객체를 반환합니다.</dd>
- <dt>{{domxref("Window.controllers")}} {{ReadOnlyInline}} {{non-standard_inline}}</dt>
- <dd>현재 크롬 창의 XUL 컨트롤러 객체를 반환합니다.</dd>
- <dt>{{domxref("Window.customElements")}} {{ReadOnlyInline}}</dt>
- <dd>새로운 사용자 지정 요소를 등록하거나, 이전에 등록한 요소에 대한 정보를 얻을 수 있는 {{domxref("CustomElementRegistry")}} 객체를 반환합니다.</dd>
- <dt>{{domxref("Window.crypto")}} {{readOnlyInline}}</dt>
- <dd>브라우저 암호화 객체를 반환합니다.</dd>
- <dt>{{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}</dt>
- <dd>현재 화면에서의 물리적 픽셀과 CSS 픽셀의 비율을 반환합니다.</dd>
- <dt>{{domxref("Window.document")}} {{ReadOnlyInline}}</dt>
- <dd>창이 포함하는 문서로의 참조를 반환합니다.</dd>
- <dt>{{domxref("Window.DOMMatrix")}} {{readOnlyInline}} {{experimental_inline}}</dt>
- <dd>Returns a reference to a {{domxref("DOMMatrix")}} object, which represents 4x4 matrices, suitable for 2D and 3D operations.</dd>
- <dt>{{domxref("Window.DOMMatrixReadOnly")}} {{readOnlyInline}} {{experimental_inline}}</dt>
- <dd>Returns a reference to a {{domxref("DOMMatrixReadOnly")}} object, which represents 4x4 matrices, suitable for 2D and 3D operations.</dd>
- <dt>{{domxref("Window.DOMPoint")}} {{readOnlyInline}} {{experimental_inline}}</dt>
- <dd>Returns a reference to a {{domxref("DOMPoint")}} object, which represents a 2D or 3D point in a coordinate system.</dd>
- <dt>{{domxref("Window.DOMPointReadOnly")}} {{readOnlyInline}} {{experimental_inline}}</dt>
- <dd>Returns a reference to a {{domxref("DOMPointReadOnly")}} object, which represents a 2D or 3D point in a coordinate system.</dd>
- <dt>{{domxref("Window.DOMQuad")}} {{readOnlyInline}} {{experimental_inline}}</dt>
- <dd>Returns a reference to a {{domxref("DOMQuad")}} object, which provides represents a quadrilaterial object, that is one having four corners and four sides.</dd>
- <dt>{{domxref("Window.DOMRect")}} {{readOnlyInline}} {{experimental_inline}}</dt>
- <dd>Returns a reference to a {{domxref("DOMRect")}} object, which represents a rectangle.</dd>
- <dt>{{domxref("Window.DOMRectReadOnly")}} {{readOnlyInline}} {{experimental_inline}}</dt>
- <dd>Returns a reference to a {{domxref("DOMRectReadOnly")}} object, which represents a rectangle.</dd>
- <dt>{{domxref("Window.event")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the <strong>current event</strong>, which is the event currently being handled by the JavaScript code's context, or <code>undefined</code> if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.</dd>
- <dt>{{domxref("Window.frameElement")}} {{readOnlyInline}}</dt>
- <dd>이 창을 삽입했을 때 사용한 요소를 반환합니다. 창이 문서 내에 삽입된 것이 아니면 {{jsxref("null")}}을 반환합니다.</dd>
- <dt>{{domxref("Window.frames")}} {{readOnlyInline}}</dt>
- <dd>현재 창의 하위 프레임을 배열로 반환합니다.</dd>
- <dt>{{domxref("Window.fullScreen")}}</dt>
- <dd>현재 창을 전체 화면으로 보여주고 있는지 나타냅니다.</dd>
- <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
- <dd>Returns a reference to the history object.</dd>
- <dt>{{domxref("Window.innerHeight")}} {{readOnlyInline}}</dt>
- <dd>Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.</dd>
- <dt>{{domxref("Window.innerWidth")}} {{readOnlyInline}}</dt>
- <dd>Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.</dd>
- <dt>{{domxref("Window.isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Indicates whether a context is capable of using features that require secure contexts.</dd>
- <dt>{{domxref("Window.length")}} {{readOnlyInline}}</dt>
- <dd>Returns the number of frames in the window. See also {{domxref("window.frames")}}.</dd>
- <dt>{{domxref("Window.location")}}</dt>
- <dd>Gets/sets the location, or current URL, of the window object.</dd>
- <dt>{{domxref("Window.locationbar")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the locationbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.localStorage")}} {{readOnlyInline}}</dt>
- <dd>Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.</dd>
- <dt>{{domxref("Window.menubar")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the menubar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.messageManager")}}</dt>
- <dd>Returns the <a href="/en-US/docs/The_message_manager">message manager</a> object for this window.</dd>
- <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{non-standard_inline}}</dt>
- <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in <code>nsIDOMWindowUtils</code> for a conversion factor to adapt to screen pixels if needed.</dd>
- <dt>{{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}</dt>
- <dd>Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> for a conversion factor to adapt to screen pixels if needed.</dd>
- <dt>{{domxref("Window.name")}}</dt>
- <dd>Gets/sets the name of the window.</dd>
- <dt>{{domxref("Window.navigator")}} {{readOnlyInline}}</dt>
- <dd>Returns a reference to the navigator object.</dd>
- <dt>{{domxref("Window.opener")}}</dt>
- <dd>현재 창을 열었던 다른 창의 참조를 반환합니다.</dd>
- <dt>{{domxref("Window.outerHeight")}} {{readOnlyInline}}</dt>
- <dd>브라우저 창 외곽 높이를 반환합니다.</dd>
- <dt>{{domxref("Window.outerWidth")}} {{readOnlyInline}}</dt>
- <dd>브라우저 창 외곽 너비를 반환합니다.</dd>
- <dt>{{domxref("Window.scrollX","Window.pageXOffset")}} {{readOnlyInline}}</dt>
- <dd>An alias for {{domxref("window.scrollX")}}.</dd>
- <dt>{{domxref("Window.scrollY","Window.pageYOffset")}} {{readOnlyInline}}</dt>
- <dd>An alias for {{domxref("window.scrollY")}}</dd>
- <dt>{{domxref("Window.parent")}} {{readOnlyInline}}</dt>
- <dd>Returns a reference to the parent of the current window or subframe.</dd>
- <dt>{{domxref("Window.performance")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing <a href="/en-US/docs/Navigation_timing">performance-related</a> data. See also <a href="/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing">Using Navigation Timing</a> for additional information and examples.</dd>
- <dt>{{domxref("Window.personalbar")}} {{readOnlyInline}}</dt>
- <dd>Returns the personalbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.screen")}} {{readOnlyInline}}</dt>
- <dd>Returns a reference to the screen object associated with the window.</dd>
- <dt>{{domxref("Window.screenX")}} and {{domxref("Window.screenLeft")}} {{readOnlyInline}}</dt>
- <dd>Both properties return the horizontal distance from the left border of the user's browser viewport to the left side of the screen.</dd>
- <dt>{{domxref("Window.screenY")}} and {{domxref("Window.screenTop")}} {{readOnlyInline}}</dt>
- <dd>Both properties return the vertical distance from the top border of the user's browser viewport to the top side of the screen.</dd>
- <dt>{{domxref("Window.scrollbars")}} {{readOnlyInline}}</dt>
- <dd>Returns the scrollbars object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.scrollMaxX")}} {{non-standard_inline}} {{ReadOnlyInline}}</dt>
- <dd>The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.</dd>
- <dt>{{domxref("Window.scrollMaxY")}} {{non-standard_inline}} {{ReadOnlyInline}}</dt>
- <dd>The maximum offset that the window can be scrolled to vertically (i.e., the document height minus the viewport height).</dd>
- <dt>{{domxref("Window.scrollX")}} {{readOnlyInline}}</dt>
- <dd>Returns the number of pixels that the document has already been scrolled horizontally.</dd>
- <dt>{{domxref("Window.scrollY")}} {{readOnlyInline}}</dt>
- <dd>Returns the number of pixels that the document has already been scrolled vertically.</dd>
- <dt>{{domxref("Window.self")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an object reference to the window object itself.</dd>
- <dt>{{domxref("Window.sessionStorage")}}</dt>
- <dd>Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.</dd>
- <dt>{{domxref("Window.sidebar")}} {{non-standard_inline}} {{ReadOnlyInline}}</dt>
- <dd>Returns a reference to the window object of the sidebar.</dd>
- <dt>{{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}</dt>
- <dd>Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> speech synthesis functionality.</dd>
- <dt>{{domxref("Window.status")}}</dt>
- <dd>Gets/sets the text in the statusbar at the bottom of the browser.</dd>
- <dt>{{domxref("Window.statusbar")}} {{readOnlyInline}}</dt>
- <dd>Returns the statusbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.toolbar")}} {{readOnlyInline}}</dt>
- <dd>Returns the toolbar object, whose visibility can be toggled in the window.</dd>
- <dt>{{domxref("Window.top")}} {{readOnlyInline}}</dt>
- <dd>Returns a reference to the topmost window in the window hierarchy. This property is read only.</dd>
- <dt>{{domxref("Window.visualViewport")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("VisualViewport")}} object which represents the visual viewport for a given window.</dd>
- <dt>{{domxref("Window.window")}} {{ReadOnlyInline}}</dt>
- <dd>Returns a reference to the current window.</dd>
- <dt><code>window[0]</code>, <code>window[1]</code>, etc.</dt>
- <dd>Returns a reference to the <code>window</code> object in the frames. See {{domxref("Window.frames")}} for more details.</dd>
-</dl>
+- {{domxref("Window.closed")}} {{readOnlyInline}}
+  - : 현재 창이 닫혔는지 나타냅니다.
+- {{domxref("Window.console")}} {{readOnlyInline}}
+  - : 브라우저 디버깅 콘솔에 접근할 수 있는 콘솔 객체를 반환합니다.
+- {{domxref("Window.controllers")}} {{ReadOnlyInline}} {{non-standard_inline}}
+  - : 현재 크롬 창의 XUL 컨트롤러 객체를 반환합니다.
+- {{domxref("Window.customElements")}} {{ReadOnlyInline}}
+  - : 새로운 사용자 지정 요소를 등록하거나, 이전에 등록한 요소에 대한 정보를 얻을 수 있는 {{domxref("CustomElementRegistry")}} 객체를 반환합니다.
+- {{domxref("Window.crypto")}} {{readOnlyInline}}
+  - : 브라우저 암호화 객체를 반환합니다.
+- {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
+  - : 현재 화면에서의 물리적 픽셀과 CSS 픽셀의 비율을 반환합니다.
+- {{domxref("Window.document")}} {{ReadOnlyInline}}
+  - : 창이 포함하는 문서로의 참조를 반환합니다.
+- {{domxref("Window.DOMMatrix")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to a {{domxref("DOMMatrix")}} object, which represents 4x4 matrices, suitable for 2D and 3D operations.
+- {{domxref("Window.DOMMatrixReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to a {{domxref("DOMMatrixReadOnly")}} object, which represents 4x4 matrices, suitable for 2D and 3D operations.
+- {{domxref("Window.DOMPoint")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to a {{domxref("DOMPoint")}} object, which represents a 2D or 3D point in a coordinate system.
+- {{domxref("Window.DOMPointReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to a {{domxref("DOMPointReadOnly")}} object, which represents a 2D or 3D point in a coordinate system.
+- {{domxref("Window.DOMQuad")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to a {{domxref("DOMQuad")}} object, which provides represents a quadrilaterial object, that is one having four corners and four sides.
+- {{domxref("Window.DOMRect")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to a {{domxref("DOMRect")}} object, which represents a rectangle.
+- {{domxref("Window.DOMRectReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to a {{domxref("DOMRectReadOnly")}} object, which represents a rectangle.
+- {{domxref("Window.event")}} {{ReadOnlyInline}}
+  - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
+- {{domxref("Window.frameElement")}} {{readOnlyInline}}
+  - : 이 창을 삽입했을 때 사용한 요소를 반환합니다. 창이 문서 내에 삽입된 것이 아니면 {{jsxref("null")}}을 반환합니다.
+- {{domxref("Window.frames")}} {{readOnlyInline}}
+  - : 현재 창의 하위 프레임을 배열로 반환합니다.
+- {{domxref("Window.fullScreen")}}
+  - : 현재 창을 전체 화면으로 보여주고 있는지 나타냅니다.
+- {{domxref("Window.history")}} {{ReadOnlyInline}}
+  - : Returns a reference to the history object.
+- {{domxref("Window.innerHeight")}} {{readOnlyInline}}
+  - : Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.
+- {{domxref("Window.innerWidth")}} {{readOnlyInline}}
+  - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
+- {{domxref("Window.isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}
+  - : Indicates whether a context is capable of using features that require secure contexts.
+- {{domxref("Window.length")}} {{readOnlyInline}}
+  - : Returns the number of frames in the window. See also {{domxref("window.frames")}}.
+- {{domxref("Window.location")}}
+  - : Gets/sets the location, or current URL, of the window object.
+- {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
+  - : Returns the locationbar object, whose visibility can be toggled in the window.
+- {{domxref("Window.localStorage")}} {{readOnlyInline}}
+  - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
+- {{domxref("Window.menubar")}} {{ReadOnlyInline}}
+  - : Returns the menubar object, whose visibility can be toggled in the window.
+- {{domxref("Window.messageManager")}}
+  - : Returns the [message manager](/ko/docs/The_message_manager) object for this window.
+- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{non-standard_inline}}
+  - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in `nsIDOMWindowUtils` for a conversion factor to adapt to screen pixels if needed.
+- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
+  - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
+- {{domxref("Window.name")}}
+  - : Gets/sets the name of the window.
+- {{domxref("Window.navigator")}} {{readOnlyInline}}
+  - : Returns a reference to the navigator object.
+- {{domxref("Window.opener")}}
+  - : 현재 창을 열었던 다른 창의 참조를 반환합니다.
+- {{domxref("Window.outerHeight")}} {{readOnlyInline}}
+  - : 브라우저 창 외곽 높이를 반환합니다.
+- {{domxref("Window.outerWidth")}} {{readOnlyInline}}
+  - : 브라우저 창 외곽 너비를 반환합니다.
+- {{domxref("Window.scrollX","Window.pageXOffset")}} {{readOnlyInline}}
+  - : An alias for {{domxref("window.scrollX")}}.
+- {{domxref("Window.scrollY","Window.pageYOffset")}} {{readOnlyInline}}
+  - : An alias for {{domxref("window.scrollY")}}
+- {{domxref("Window.parent")}} {{readOnlyInline}}
+  - : Returns a reference to the parent of the current window or subframe.
+- {{domxref("Window.performance")}} {{readOnlyInline}}
+  - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/ko/docs/Navigation_timing) data. See also [Using Navigation Timing](/ko/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) for additional information and examples.
+- {{domxref("Window.personalbar")}} {{readOnlyInline}}
+  - : Returns the personalbar object, whose visibility can be toggled in the window.
+- {{domxref("Window.screen")}} {{readOnlyInline}}
+  - : Returns a reference to the screen object associated with the window.
+- {{domxref("Window.screenX")}} and {{domxref("Window.screenLeft")}} {{readOnlyInline}}
+  - : Both properties return the horizontal distance from the left border of the user's browser viewport to the left side of the screen.
+- {{domxref("Window.screenY")}} and {{domxref("Window.screenTop")}} {{readOnlyInline}}
+  - : Both properties return the vertical distance from the top border of the user's browser viewport to the top side of the screen.
+- {{domxref("Window.scrollbars")}} {{readOnlyInline}}
+  - : Returns the scrollbars object, whose visibility can be toggled in the window.
+- {{domxref("Window.scrollMaxX")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.
+- {{domxref("Window.scrollMaxY")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : The maximum offset that the window can be scrolled to vertically (i.e., the document height minus the viewport height).
+- {{domxref("Window.scrollX")}} {{readOnlyInline}}
+  - : Returns the number of pixels that the document has already been scrolled horizontally.
+- {{domxref("Window.scrollY")}} {{readOnlyInline}}
+  - : Returns the number of pixels that the document has already been scrolled vertically.
+- {{domxref("Window.self")}} {{ReadOnlyInline}}
+  - : Returns an object reference to the window object itself.
+- {{domxref("Window.sessionStorage")}}
+  - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
+- {{domxref("Window.sidebar")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : Returns a reference to the window object of the sidebar.
+- {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/ko/docs/Web/API/Web_Speech_API) speech synthesis functionality.
+- {{domxref("Window.status")}}
+  - : Gets/sets the text in the statusbar at the bottom of the browser.
+- {{domxref("Window.statusbar")}} {{readOnlyInline}}
+  - : Returns the statusbar object, whose visibility can be toggled in the window.
+- {{domxref("Window.toolbar")}} {{readOnlyInline}}
+  - : Returns the toolbar object, whose visibility can be toggled in the window.
+- {{domxref("Window.top")}} {{readOnlyInline}}
+  - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
+- {{domxref("Window.visualViewport")}} {{readOnlyInline}}
+  - : Returns a {{domxref("VisualViewport")}} object which represents the visual viewport for a given window.
+- {{domxref("Window.window")}} {{ReadOnlyInline}}
+  - : Returns a reference to the current window.
+- `window[0]`, `window[1]`, etc.
+  - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 
-<h3 id="Properties_implemented_from_elsewhere">Properties implemented from elsewhere</h3>
+### Properties implemented from elsewhere
 
-<dl>
- <dt>{{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}</dt>
- <dd>Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}</dt>
- <dd>Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}</dt>
- <dd>Returns a boolean indicating whether the current context is secure (<code>true</code>) or not (<code>false</code>).</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}</dt>
- <dd>Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)</dd>
-</dl>
+- {{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}
+  - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+- {{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}
+  - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
+- {{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}
+  - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
+- {{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}
+  - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
 
-<div class="hidden">
-<h3 id="Deprecated_properties">Deprecated properties</h3>
+<div class="hidden"><h3 id="Deprecated_properties">Deprecated properties</h3><dl><dt>{{domxref("Window.content")}} and <code>Window._content</code> {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}</dt><dd>Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.</dd><dt>{{domxref("Window.defaultStatus")}} {{deprecated_inline}}</dt><dd>Gets/sets the status bar text for the given window.</dd><dt>{{domxref("Window.directories")}} {{deprecated_inline}}</dt><dd>Synonym of {{domxref("window.personalbar")}}</dd><dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>Multiple storage objects that were used for storing data across multiple pages.</dd><dt>{{domxref("Window.mozAnimationStartTime")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>The time in milliseconds since epoch at which the current animation cycle began. Use {{domxref("Animation.startTime")}} instead.</dd><dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}</dt><dd>Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.</dd><dt>{{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}</dt><dd>Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.</dd><dt>{{domxref("Window.pkcs11")}} {{deprecated_inline}}</dt><dd>Formerly provided access to install and remove PKCS11 modules.</dd><dt>{{domxref("Window.returnValue")}} {{deprecated_inline}}</dt><dd>The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.</dd></dl></div>
 
-<dl>
- <dt>{{domxref("Window.content")}} and <code>Window._content</code> {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}</dt>
- <dd>Returns a reference to the content element in the current window. Since Firefox 57 (initially Nightly-only), both versions are only available from chrome (privileged) code, and not available to the web anymore.</dd>
- <dt>{{domxref("Window.defaultStatus")}} {{deprecated_inline}}</dt>
- <dd>Gets/sets the status bar text for the given window.</dd>
- <dt>{{domxref("Window.directories")}} {{deprecated_inline}}</dt>
- <dd>Synonym of {{domxref("window.personalbar")}}</dd>
- <dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Multiple storage objects that were used for storing data across multiple pages.</dd>
- <dt>{{domxref("Window.mozAnimationStartTime")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>The time in milliseconds since epoch at which the current animation cycle began. Use {{domxref("Animation.startTime")}} instead.</dd>
- <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.</dd>
- <dt>{{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.</dd>
- <dt>{{domxref("Window.pkcs11")}} {{deprecated_inline}}</dt>
- <dd>Formerly provided access to install and remove PKCS11 modules.</dd>
- <dt>{{domxref("Window.returnValue")}} {{deprecated_inline}}</dt>
- <dd>The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.</dd>
-</dl>
-</div>
+## 메서드
 
-<h2 id="메서드">메서드</h2>
+{{domxref("EventTarget")}}의 메서드를 상속하고, {{domxref("WindowOrWorkerGlobalScope")}}와 {{domxref("WindowEventHandlers")}} 믹스인의 메서드를 구현합니다.
 
-<p>{{domxref("EventTarget")}}의 메서드를 상속하고, {{domxref("WindowOrWorkerGlobalScope")}}와 {{domxref("WindowEventHandlers")}} 믹스인의 메서드를 구현합니다.</p>
+- {{domxref("Window.alert()")}}
+  - : 경고 대화 상자를 표시합니다.
+- {{domxref("Window.blur()")}}
+  - : Sets focus away from the window.
+- {{domxref("Window.cancelAnimationFrame()")}} {{experimental_inline}}
+  - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
+- {{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}
+  - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
+- {{domxref("Window.clearImmediate()")}}
+  - : Cancels the repeated execution set using `setImmediate`.
+- {{domxref("Window.close()")}}
+  - : Closes the current window.
+- {{domxref("Window.confirm()")}}
+  - : Displays a dialog with a message that the user needs to respond to.
+- {{domxref("Window.dispatchEvent()")}}
+  - : Used to trigger an event.
+- {{domxref("Window.dump()")}} {{Non-standard_inline}}
+  - : Writes a message to the console.
+- {{domxref("Window.find()")}}
+  - : Searches for a given string in a window.
+- {{domxref("Window.focus()")}}
+  - : Sets focus on the current window.
+- {{domxref("Window.getComputedStyle()")}}
+  - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
+- {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_inline}}
+  - : Gets default computed style for the specified element, ignoring author stylesheets.
+- {{domxref("Window.getSelection()")}}
+  - : Returns the selection object representing the selected item(s).
+- {{domxref("Window.matchMedia()")}}
+  - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
+- {{domxref("Window.maximize()")}}
+  - : {{todo("NeedsContents")}}
+- {{domxref("Window.minimize()")}} (top-level XUL windows only)
+  - : Minimizes the window.
+- {{domxref("Window.moveBy()")}}
+  - : Moves the current window by a specified amount.
+- {{domxref("Window.moveTo()")}}
+  - : Moves the window to the specified coordinates.
+- {{domxref("Window.open()")}}
+  - : Opens a new window.
+- {{domxref("Window.postMessage()")}}
+  - : Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first.
+- {{domxref("Window.print()")}}
+  - : Opens the Print Dialog to print the current document.
+- {{domxref("Window.prompt()")}}
+  - : Returns the text entered by the user in a prompt dialog.
+- {{domxref("Window.requestAnimationFrame()")}}
+  - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
+- {{domxref("Window.requestIdleCallback()")}} {{experimental_inline}}
+  - : Enables the scheduling of tasks during a browser's idle periods.
+- {{domxref("Window.resizeBy()")}}
+  - : Resizes the current window by a certain amount.
+- {{domxref("Window.resizeTo()")}}
+  - : Dynamically resizes window.
+- {{domxref("Window.scroll()")}}
+  - : Scrolls the window to a particular place in the document.
+- {{domxref("Window.scrollBy()")}}
+  - : Scrolls the document in the window by the given amount.
+- {{domxref("Window.scrollByLines()")}} {{Non-standard_inline}}
+  - : Scrolls the document by the given number of lines.
+- {{domxref("Window.scrollByPages()")}} {{Non-standard_inline}}
+  - : Scrolls the current document by the specified number of pages.
+- {{domxref("Window.scrollTo()")}}
+  - : Scrolls to a particular set of coordinates in the document.
+- {{domxref("Window.setCursor()")}} {{Non-standard_inline}} (top-level XUL windows only)
+  - : Changes the cursor for the current window
+- {{domxref("Window.setImmediate()")}}
+  - : Executes a function after the browser has finished other heavy tasks
+- {{domxref("Window.setResizable()")}} {{Non-standard_inline}}
+  - : Toggles a user's ability to resize a window.
+- {{domxref("Window.sizeToContent()")}} {{Non-standard_inline}}
+  - : Sizes the window according to its content.
+- {{domxref("Window.stop()")}}
+  - : This method stops window loading.
+- {{domxref("Window.updateCommands()")}} {{Non-standard_inline}}
+  - : Updates the state of commands of the current chrome window (UI).
 
-<dl>
- <dt>{{domxref("Window.alert()")}}</dt>
- <dd>경고 대화 상자를 표시합니다.</dd>
- <dt>{{domxref("Window.blur()")}}</dt>
- <dd>Sets focus away from the window.</dd>
- <dt>{{domxref("Window.cancelAnimationFrame()")}} {{experimental_inline}}</dt>
- <dd>Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.</dd>
- <dt>{{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}</dt>
- <dd>Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.</dd>
- <dt>{{domxref("Window.clearImmediate()")}}</dt>
- <dd>Cancels the repeated execution set using <code>setImmediate</code>.</dd>
- <dt>{{domxref("Window.close()")}}</dt>
- <dd>Closes the current window.</dd>
- <dt>{{domxref("Window.confirm()")}}</dt>
- <dd>Displays a dialog with a message that the user needs to respond to.</dd>
- <dt>{{domxref("Window.dispatchEvent()")}}</dt>
- <dd>Used to trigger an event.</dd>
- <dt>{{domxref("Window.dump()")}} {{Non-standard_inline}}</dt>
- <dd>Writes a message to the console.</dd>
- <dt>{{domxref("Window.find()")}}</dt>
- <dd>Searches for a given string in a window.</dd>
- <dt>{{domxref("Window.focus()")}}</dt>
- <dd>Sets focus on the current window.</dd>
- <dt>{{domxref("Window.getComputedStyle()")}}</dt>
- <dd>Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.</dd>
- <dt>{{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_inline}}</dt>
- <dd>Gets default computed style for the specified element, ignoring author stylesheets.</dd>
- <dt>{{domxref("Window.getSelection()")}}</dt>
- <dd>Returns the selection object representing the selected item(s).</dd>
- <dt>{{domxref("Window.matchMedia()")}}</dt>
- <dd>Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.</dd>
- <dt>{{domxref("Window.maximize()")}}</dt>
- <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.minimize()")}} (top-level XUL windows only)</dt>
- <dd>Minimizes the window.</dd>
- <dt>{{domxref("Window.moveBy()")}}</dt>
- <dd>Moves the current window by a specified amount.</dd>
- <dt>{{domxref("Window.moveTo()")}}</dt>
- <dd>Moves the window to the specified coordinates.</dd>
- <dt>{{domxref("Window.open()")}}</dt>
- <dd>Opens a new window.</dd>
- <dt>{{domxref("Window.postMessage()")}}</dt>
- <dd>Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first.</dd>
- <dt>{{domxref("Window.print()")}}</dt>
- <dd>Opens the Print Dialog to print the current document.</dd>
- <dt>{{domxref("Window.prompt()")}}</dt>
- <dd>Returns the text entered by the user in a prompt dialog.</dd>
- <dt>{{domxref("Window.requestAnimationFrame()")}}</dt>
- <dd>Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.</dd>
- <dt>{{domxref("Window.requestIdleCallback()")}} {{experimental_inline}}</dt>
- <dd>Enables the scheduling of tasks during a browser's idle periods.</dd>
- <dt>{{domxref("Window.resizeBy()")}}</dt>
- <dd>Resizes the current window by a certain amount.</dd>
- <dt>{{domxref("Window.resizeTo()")}}</dt>
- <dd>Dynamically resizes window.</dd>
- <dt>{{domxref("Window.scroll()")}}</dt>
- <dd>Scrolls the window to a particular place in the document.</dd>
- <dt>{{domxref("Window.scrollBy()")}}</dt>
- <dd>Scrolls the document in the window by the given amount.</dd>
- <dt>{{domxref("Window.scrollByLines()")}} {{Non-standard_inline}}</dt>
- <dd>Scrolls the document by the given number of lines.</dd>
- <dt>{{domxref("Window.scrollByPages()")}} {{Non-standard_inline}}</dt>
- <dd>Scrolls the current document by the specified number of pages.</dd>
- <dt>{{domxref("Window.scrollTo()")}}</dt>
- <dd>Scrolls to a particular set of coordinates in the document.</dd>
- <dt>{{domxref("Window.setCursor()")}} {{Non-standard_inline}} (top-level XUL windows only)</dt>
- <dd>Changes the cursor for the current window</dd>
- <dt>{{domxref("Window.setImmediate()")}}</dt>
- <dd>Executes a function after the browser has finished other heavy tasks</dd>
- <dt>{{domxref("Window.setResizable()")}} {{Non-standard_inline}}</dt>
- <dd>Toggles a user's ability to resize a window.</dd>
- <dt>{{domxref("Window.sizeToContent()")}} {{Non-standard_inline}}</dt>
- <dd>Sizes the window according to its content.</dd>
- <dt>{{domxref("Window.stop()")}}</dt>
- <dd>This method stops window loading.</dd>
- <dt>{{domxref("Window.updateCommands()")}} {{Non-standard_inline}}</dt>
- <dd>Updates the state of commands of the current chrome window (UI).</dd>
-</dl>
+### Methods implemented from elsewhere
 
-<h3 id="Methods_implemented_from_elsewhere">Methods implemented from elsewhere</h3>
+- {{domxref("EventTarget.addEventListener()")}}
+  - : Register an event handler to a specific event type on the window.
+- {{domxref("WindowOrWorkerGlobalScope.atob()")}}
+  - : Decodes a string of data which has been encoded using base-64 encoding.
+- {{domxref("WindowOrWorkerGlobalScope.btoa()")}}
+  - : Creates a base-64 encoded ASCII string from a string of binary data.
+- {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.
+- {{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}
+  - : Cancels the delayed execution set using {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.
+- {{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}
+  - : Accepts a variety of different image sources, and returns a {{domxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
+- {{domxref("WindowOrWorkerGlobalScope.fetch()")}}
+  - : Starts the process of fetching a resource from the network.
+- {{domxref("EventTarget.removeEventListener")}}
+  - : Removes an event listener from the window.
+- {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
+  - : Schedules a function to execute every time a given number of milliseconds elapses.
+- {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}
+  - : Schedules a function to execute in a given amount of time.
 
-<dl>
- <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
- <dd>Register an event handler to a specific event type on the window.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.atob()")}}</dt>
- <dd>Decodes a string of data which has been encoded using base-64 encoding.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.btoa()")}}</dt>
- <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}</dt>
- <dd>Cancels the delayed execution set using {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}</dt>
- <dd>Accepts a variety of different image sources, and returns a {{domxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at <em>(sx, sy)</em> with width sw, and height sh.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.fetch()")}}</dt>
- <dd>Starts the process of fetching a resource from the network.</dd>
- <dt>{{domxref("EventTarget.removeEventListener")}}</dt>
- <dd>Removes an event listener from the window.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setInterval()")}}</dt>
- <dd>Schedules a function to execute every time a given number of milliseconds elapses.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</dt>
- <dd>Schedules a function to execute in a given amount of time.</dd>
-</dl>
+<div class="hidden"><h3 id="deprecated_methods">deprecated methods</h3><dl><dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>Moves back one in the window history. This method is deprecated; you should instead use {{domxref("History.back", "window.history.back()")}}.</dd><dt>{{domxref("Window.captureEvents()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>Registers the window to capture all events of the specified type.</dd><dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "window.history.forward()")}}.</dd><dt>{{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>Flashes the application icon.</dd><dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>Returns the browser to the home page.</dd><dt>{{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>Opens a new dialog window.</dd><dt>{{domxref("Window.releaseEvents()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>Releases the window from trapping events of a specific type.</dd><dt>{{domxref("Window.showModalDialog()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt><dd>Displays a modal dialog.</dd></dl></div>
 
-<div class="hidden">
-<h3 id="deprecated_methods">deprecated methods</h3>
+## 이벤트 처리기
 
-<dl>
- <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Moves back one in the window history. This method is deprecated; you should instead use {{domxref("History.back", "window.history.back()")}}.</dd>
- <dt>{{domxref("Window.captureEvents()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Registers the window to capture all events of the specified type.</dd>
- <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Moves the window one document forward in the history. This method is deprecated; you should instead use {{domxref("History.forward", "window.history.forward()")}}.</dd>
- <dt>{{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Flashes the application icon.</dd>
- <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Returns the browser to the home page.</dd>
- <dt>{{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Opens a new dialog window.</dd>
- <dt>{{domxref("Window.releaseEvents()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Releases the window from trapping events of a specific type.</dd>
- <dt>{{domxref("Window.showModalDialog()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Displays a modal dialog.</dd>
-</dl>
-</div>
+These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.
 
-<h2 id="이벤트_처리기">이벤트 처리기</h2>
+_This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}._
 
-<p>These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.</p>
+- {{domxref("Window.onappinstalled")}}
+  - : Called when the page is installed as a webapp. See {{event('appinstalled')}} event.
+- {{domxref("Window.onbeforeinstallprompt")}}
+  - : An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.
+- {{domxref("Window.ondevicelight")}}
+  - : An event handler property for any ambient light levels changes
+- {{domxref("Window.ondevicemotion")}}
+  - : Called if accelerometer detects a change (For mobile devices)
+- {{domxref("Window.ondeviceorientation")}}
+  - : Called when the orientation is changed (For mobile devices)
+- {{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}}
+  - : An event handler property for any device orientation changes.
+- {{domxref("Window.ondeviceproximity")}}
+  - : An event handler property for device proximity event
+- {{domxref("Window.ongamepadconnected")}}
+  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
+- {{domxref("Window.ongamepaddisconnected")}}
+  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
+- {{domxref("Window.onmozbeforepaint")}}
+  - : An event handler property for the `MozBeforePaint` event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.
+- {{domxref("Window.onpaint")}}
+  - : An event handler property for paint events on the window.
+- {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}
+  - : An event handler for handled {{jsxref("Promise")}} rejection events.
+- {{domxref("Window.onuserproximity")}}
+  - : An event handler property for user proximity events.
+- {{domxref("Window.onvrdisplayconnect")}}
+  - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the {{event("vrdisplayconnected")}} event fires).
+- {{domxref("Window.onvrdisplaydisconnect")}}
+  - : Represents an event handler that will run when a compatible VR device has been disconnected from the computer (when the {{event("vrdisplaydisconnected")}} event fires).
+- {{domxref("Window.onvrdisplayactivate")}}
+  - : Represents an event handler that will run when a display is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
+- {{domxref("Window.onvrdisplaydeactivate")}}
+  - : Represents an event handler that will run when a display can no longer be presented to (when the {{event("vrdisplaydeactivate")}} event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
+- {{domxref("Window.onvrdisplayblur")}}
+  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the {{event("vrdisplayblur")}} event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
+- {{domxref("Window.onvrdisplayfocus")}}
+  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the {{event("vrdisplayfocus")}} event fires).
+- {{domxref("Window.onvrdisplaypresentchange")}}
+  - : represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the {{event("vrdisplaypresentchange")}} event fires).
 
-<p><em>This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}.</em></p>
+### Event handlers implemented from elsewhere
 
-<dl>
- <dt>{{domxref("Window.onappinstalled")}}</dt>
- <dd>Called when the page is installed as a webapp. See {{event('appinstalled')}} event.</dd>
- <dt>{{domxref("Window.onbeforeinstallprompt")}}</dt>
- <dd>An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.</dd>
- <dt>{{domxref("Window.ondevicelight")}}</dt>
- <dd>An event handler property for any ambient light levels changes</dd>
- <dt>{{domxref("Window.ondevicemotion")}}</dt>
- <dd>Called if accelerometer detects a change (For mobile devices)</dd>
- <dt>{{domxref("Window.ondeviceorientation")}}</dt>
- <dd>Called when the orientation is changed (For mobile devices)</dd>
- <dt>{{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}}</dt>
- <dd>An event handler property for any device orientation changes.</dd>
- <dt>{{domxref("Window.ondeviceproximity")}}</dt>
- <dd>An event handler property for device proximity event</dd>
- <dt>{{domxref("Window.ongamepadconnected")}}</dt>
- <dd>Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).</dd>
- <dt>{{domxref("Window.ongamepaddisconnected")}}</dt>
- <dd>Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).</dd>
- <dt>{{domxref("Window.onmozbeforepaint")}}</dt>
- <dd>An event handler property for the <code>MozBeforePaint</code> event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.</dd>
- <dt>{{domxref("Window.onpaint")}}</dt>
- <dd>An event handler property for paint events on the window.</dd>
- <dt>{{domxref("Window.onrejectionhandled")}} {{experimental_inline}}</dt>
- <dd>An event handler for handled {{jsxref("Promise")}} rejection events.</dd>
- <dt>{{domxref("Window.onuserproximity")}}</dt>
- <dd>An event handler property for user proximity events.</dd>
- <dt>{{domxref("Window.onvrdisplayconnect")}}</dt>
- <dd>Represents an event handler that will run when a compatible VR device has been connected to the computer (when the {{event("vrdisplayconnected")}} event fires).</dd>
- <dt>{{domxref("Window.onvrdisplaydisconnect")}}</dt>
- <dd>Represents an event handler that will run when a compatible VR device has been disconnected from the computer (when the {{event("vrdisplaydisconnected")}} event fires).</dd>
- <dt>{{domxref("Window.onvrdisplayactivate")}}</dt>
- <dd>Represents an event handler that will run when a display is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.</dd>
- <dt>{{domxref("Window.onvrdisplaydeactivate")}}</dt>
- <dd>Represents an event handler that will run when a display can no longer be presented to (when the {{event("vrdisplaydeactivate")}} event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.</dd>
- <dt>{{domxref("Window.onvrdisplayblur")}}</dt>
- <dd>Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the {{event("vrdisplayblur")}} event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.</dd>
- <dt>{{domxref("Window.onvrdisplayfocus")}}</dt>
- <dd>Represents an event handler that will run when presentation to a display has resumed after being blurred (when the {{event("vrdisplayfocus")}} event fires).</dd>
- <dt>{{domxref("Window.onvrdisplaypresentchange")}}</dt>
- <dd>represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the {{event("vrdisplaypresentchange")}} event fires).</dd>
-</dl>
+- {{domxref("GlobalEventHandlers.onabort")}}
+  - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
+- {{domxref("WindowEventHandlers.onafterprint")}}
+  - : Called when the print dialog box is closed. See {{event("afterprint")}} event.
+- {{domxref("WindowEventHandlers.onbeforeprint")}}
+  - : Called when the print dialog box is opened. See {{event("beforeprint")}} event.
+- {{domxref("WindowEventHandlers.onbeforeunload")}}
+  - : An event handler property for before-unload events on the window.
+- {{domxref("GlobalEventHandlers.onblur")}}
+  - : Called after the window loses focus, such as due to a popup.
+- {{domxref("GlobalEventHandlers.onchange")}}
+  - : An event handler property for change events on the window.
+- {{domxref("GlobalEventHandlers.onclick")}}
+  - : Called after the ANY mouse button is pressed & released
+- {{domxref("GlobalEventHandlers.ondblclick")}}
+  - : Called when a double click is made with ANY mouse button.
+- {{domxref("GlobalEventHandlers.onclose")}}
+  - : Called after the window is closed
+- {{domxref("GlobalEventHandlers.oncontextmenu")}}
+  - : Called when the RIGHT mouse button is pressed
+- {{domxref("GlobalEventHandlers.onerror")}}
+  - : Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.
+- {{domxref("GlobalEventHandlers.onfocus")}}
+  - : Called after the window receives or regains focus. See {{event("focus")}} events.
+- {{domxref("WindowEventHandlers.onhashchange")}}
+  - : An event handler property for {{event('hashchange')}} events on the window; called when the part of the URL after the hash mark ("#") changes.
+- {{domxref("GlobalEventHandlers.oninput")}}
+  - : Called when the value of an \<input> element changes
+- {{domxref("GlobalEventHandlers.onkeydown")}}
+  - : Called when you begin pressing ANY key. See {{event("keydown")}} event.
+- {{domxref("GlobalEventHandlers.onkeypress")}}
+  - : Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{event("keypress")}} event.
+- {{domxref("GlobalEventHandlers.onkeyup")}}
+  - : Called when you finish releasing ANY key. See {{event("keyup")}} event.
+- {{domxref("WindowEventHandlers.onlanguagechange")}}
+  - : An event handler property for {{event("languagechange")}} events on the window.
+- {{domxref("GlobalEventHandlers.onload")}}
+  - : Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.
+- {{domxref("WindowEventHandlers.onmessage")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised.
+- {{domxref("GlobalEventHandlers.onmousedown")}}
+  - : Called when ANY mouse button is pressed.
+- {{domxref("GlobalEventHandlers.onmousemove")}}
+  - : Called continously when the mouse is moved inside the window.
+- {{domxref("GlobalEventHandlers.onmouseout")}}
+  - : Called when the pointer leaves the window.
+- {{domxref("GlobalEventHandlers.onmouseover")}}
+  - : Called when the pointer enters the window
+- {{domxref("GlobalEventHandlers.onmouseup")}}
+  - : Called when ANY mouse button is released
+- {{domxref("WindowEventHandlers.onoffline")}}
+  - : Called when network connection is lost. See {{event("offline")}} event.
+- {{domxref("WindowEventHandlers.ononline")}}
+  - : Called when network connection is established. See {{event("online")}} event.
+- {{domxref("WindowEventHandlers.onpagehide")}}
+  - : Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.
+- {{domxref("WindowEventHandlers.onpageshow")}}
+  - : Called after all resources and the DOM are fully loaded. See {{event("pageshow")}} event.
+- {{domxref("WindowEventHandlers.onpopstate")}}
+  - : Called when a back button is pressed.
+- {{domxref("GlobalEventHandlers.onreset")}}
+  - : Called when a form is reset
+- {{domxref("GlobalEventHandlers.onresize")}}
+  - : Called continuously as you are resizing the window.
+- {{domxref("GlobalEventHandlers.onscroll")}}
+  - : Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked
+- {{domxref("GlobalEventHandlers.onwheel")}}
+  - : Called when the mouse wheel is rotated around any axis
+- {{domxref("GlobalEventHandlers.onselect")}}
+  - : Called after text in an input field is selected
+- {{domxref("GlobalEventHandlers.onselectionchange")}}
+  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.
+- {{domxref("WindowEventHandlers.onstorage")}}
+  - : Called when there is a change in session storage or local storage. See {{event("storage")}} event
+- {{domxref("GlobalEventHandlers.onsubmit")}}
+  - : Called when a form is submitted
+- {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
+  - : An event handler for unhandled {{jsxref("Promise")}} rejection events.
+- {{domxref("WindowEventHandlers.onunload")}}
+  - : Called when the user navigates away from the page.
 
-<h3 id="Event_handlers_implemented_from_elsewhere">Event handlers implemented from elsewhere</h3>
+## 이벤트
 
-<dl>
- <dt>{{domxref("GlobalEventHandlers.onabort")}}</dt>
- <dd>Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress</dd>
- <dt>{{domxref("WindowEventHandlers.onafterprint")}}</dt>
- <dd>Called when the print dialog box is closed. See {{event("afterprint")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeprint")}}</dt>
- <dd>Called when the print dialog box is opened. See {{event("beforeprint")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.onbeforeunload")}}</dt>
- <dd>An event handler property for before-unload events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onblur")}}</dt>
- <dd>Called after the window loses focus, such as due to a popup.</dd>
- <dt>{{domxref("GlobalEventHandlers.onchange")}}</dt>
- <dd>An event handler property for change events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onclick")}}</dt>
- <dd>Called after the ANY mouse button is pressed &amp; released</dd>
- <dt>{{domxref("GlobalEventHandlers.ondblclick")}}</dt>
- <dd>Called when a double click is made with ANY mouse button.</dd>
- <dt>{{domxref("GlobalEventHandlers.onclose")}}</dt>
- <dd>Called after the window is closed</dd>
- <dt>{{domxref("GlobalEventHandlers.oncontextmenu")}}</dt>
- <dd>Called when the RIGHT mouse button is pressed</dd>
- <dt>{{domxref("GlobalEventHandlers.onerror")}}</dt>
- <dd>Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.</dd>
- <dt>{{domxref("GlobalEventHandlers.onfocus")}}</dt>
- <dd>Called after the window receives or regains focus. See {{event("focus")}} events.</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
- <dd>An event handler property for {{event('hashchange')}} events on the window; called when the part of the URL after the hash mark ("#") changes.</dd>
- <dt>{{domxref("GlobalEventHandlers.oninput")}}</dt>
- <dd>Called when the value of an &lt;input&gt; element changes</dd>
- <dt>{{domxref("GlobalEventHandlers.onkeydown")}}</dt>
- <dd>Called when you begin pressing ANY key. See {{event("keydown")}} event.</dd>
- <dt>{{domxref("GlobalEventHandlers.onkeypress")}}</dt>
- <dd>Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See {{event("keypress")}} event.</dd>
- <dt>{{domxref("GlobalEventHandlers.onkeyup")}}</dt>
- <dd>Called when you finish releasing ANY key. See {{event("keyup")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.onlanguagechange")}}</dt>
- <dd>An event handler property for {{event("languagechange")}} events on the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onload")}}</dt>
- <dd>Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.</dd>
- <dt>{{domxref("WindowEventHandlers.onmessage")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmousedown")}}</dt>
- <dd>Called when ANY mouse button is pressed.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmousemove")}}</dt>
- <dd>Called continously when the mouse is moved inside the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseout")}}</dt>
- <dd>Called when the pointer leaves the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseover")}}</dt>
- <dd>Called when the pointer enters the window</dd>
- <dt>{{domxref("GlobalEventHandlers.onmouseup")}}</dt>
- <dd>Called when ANY mouse button is released</dd>
- <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
- <dd>Called when network connection is lost. See {{event("offline")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
- <dd>Called when network connection is established. See {{event("online")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
- <dd>Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
- <dd>Called after all resources and the DOM are fully loaded. See {{event("pageshow")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
- <dd>Called when a back button is pressed.</dd>
- <dt>{{domxref("GlobalEventHandlers.onreset")}}</dt>
- <dd>Called when a form is reset</dd>
- <dt>{{domxref("GlobalEventHandlers.onresize")}}</dt>
- <dd>Called continuously as you are resizing the window.</dd>
- <dt>{{domxref("GlobalEventHandlers.onscroll")}}</dt>
- <dd>Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked</dd>
- <dt>{{domxref("GlobalEventHandlers.onwheel")}}</dt>
- <dd>Called when the mouse wheel is rotated around any axis</dd>
- <dt>{{domxref("GlobalEventHandlers.onselect")}}</dt>
- <dd>Called after text in an input field is selected</dd>
- <dt>{{domxref("GlobalEventHandlers.onselectionchange")}}</dt>
- <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.</dd>
- <dt>{{domxref("WindowEventHandlers.onstorage")}}</dt>
- <dd>Called when there is a change in session storage or local storage. See {{event("storage")}} event</dd>
- <dt>{{domxref("GlobalEventHandlers.onsubmit")}}</dt>
- <dd>Called when a form is submitted</dd>
- <dt>{{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}</dt>
- <dd>An event handler for unhandled {{jsxref("Promise")}} rejection events.</dd>
- <dt>{{domxref("WindowEventHandlers.onunload")}}</dt>
- <dd>Called when the user navigates away from the page.</dd>
-</dl>
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-<h2 id="이벤트">이벤트</h2>
+- {{domxref("Window/error_event", "error")}}
+  - : Fired when when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+    Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} property.
+- {{domxref("Window/languagechange_event", "languagechange")}}
+  - : Fired at the global scope object when the user's preferred language changes.
+    Also available via the [`onlanguagechange`](/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange) property.
+- {{domxref("Window/orientationchange_event", "orientationchange")}}
+  - : Fired when the orientation of the device has changed.
+    Also available via the [`onorientationchange`](/en-US/docs/Web/API/Window/onorientationchange) property.
+- {{domxref("Window/devicemotion_event", "devicemotion")}}
+  - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
+- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
+  - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
+- {{domxref("Document/defaultView/resize_event", "resize")}}
+  - : Fired when the window has been resized.
+    Also available via the [`onresize`](/en-US/docs/Web/API/GlobalEventHandlers/onresize) property.
+- {{domxref("Document/defaultView/storage_event", "storage")}}
+  - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
+    Also available via the [`onstorage`](/en-US/docs/Web/API/WindowEventHandlers/onstorage) property.
 
-<p>Listen to these events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+### Animation events
 
-<dl>
- <dt>{{domxref("Window/error_event", "error")}}</dt>
- <dd>Fired when when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.<br>
- Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} property.</dd>
- <dt>{{domxref("Window/languagechange_event", "languagechange")}}</dt>
- <dd>Fired at the global scope object when the user's preferred language changes.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange">onlanguagechange</a></code> property.</dd>
- <dt>{{domxref("Window/orientationchange_event", "orientationchange")}}</dt>
- <dd>Fired when the orientation of the device has changed.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/Window/onorientationchange">onorientationchange</a></code> property.</dd>
- <dt>{{domxref("Window/devicemotion_event", "devicemotion")}}</dt>
- <dd>Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.</dd>
- <dt>{{domxref("Window/deviceorientation_event", "deviceorientation")}}</dt>
- <dd>Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.</dd>
- <dt>{{domxref("Document/defaultView/resize_event", "resize")}}</dt>
- <dd>Fired when the window has been resized.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onresize">onresize</a></code> property.</dd>
- <dt>{{domxref("Document/defaultView/storage_event", "storage")}}</dt>
- <dd>Fired when a storage area (<code>localStorage</code> or <code>sessionStorage</code>) has been modified in the context of another document.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onstorage">onstorage</a></code> property.</dd>
-</dl>
+- {{domxref("Window/animationcancel_event", "animationcancel")}}
+  - : Fired when an animation unexpectedly aborts.
+    Also available via the [`onanimationcancel`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel) property.
+- {{domxref("Window/animationend_event", "animationend")}}
+  - : Fired when an animation has completed normally.
+    Also available via the [`onanimationend`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationend) property.
+- {{domxref("Window/animationiteration_event", "animationiteration")}}
+  - : Fired when an animation iteration has completed.
+    Also available via the [`onanimationiteration`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration) property.
+- {{domxref("Window/animationstart_event", "animationstart")}}
+  - : Fired when an animation starts.
+    Also available via the [`onanimationstart`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart) property.
 
-<h3 id="Animation_events">Animation events</h3>
+### Clipboard events
 
-<dl>
- <dt>{{domxref("Window/animationcancel_event", "animationcancel")}}</dt>
- <dd>Fired when an animation unexpectedly aborts.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">onanimationcancel</a></code> property.</dd>
- <dt>{{domxref("Window/animationend_event", "animationend")}}</dt>
- <dd>Fired when an animation has completed normally.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationend">onanimationend</a></code> property.</dd>
- <dt>{{domxref("Window/animationiteration_event", "animationiteration")}}</dt>
- <dd>Fired when an animation iteration has completed.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">onanimationiteration</a></code> property.</dd>
- <dt>{{domxref("Window/animationstart_event", "animationstart")}}</dt>
- <dd>Fired when an animation starts.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart">onanimationstart</a></code> property.</dd>
-</dl>
+- {{domxref("Window/clipboardchange_event", "clipboardchange")}}
+  - : Fired when the system clipboard content changes.
+- {{domxref("Window/copy_event", "copy")}}
+  - : Fired when the user initiates a copy action through the browser's user interface.
+    Also available via the [`oncopy`](/ko/docs/Web/API/HTMLElement/oncopy) property.
+- {{domxref("Window/cut_event", "cut")}}
+  - : Fired when the user initiates a cut action through the browser's user interface.
+    Also available via the [`oncut`](/ko/docs/Web/API/HTMLElement/oncut) property.
+- {{domxref("Window/paste_event", "paste")}}
+  - : Fired when the user initiates a paste action through the browser's user interface.
+    Also available via the [`onpaste`](/ko/docs/Web/API/HTMLElement/onpaste) property.
 
-<h3 id="Clipboard_events">Clipboard events</h3>
+### Connection events
 
-<dl>
- <dt>{{domxref("Window/clipboardchange_event", "clipboardchange")}}</dt>
- <dd>Fired when the system clipboard content changes.</dd>
- <dt>{{domxref("Window/copy_event", "copy")}}</dt>
- <dd>Fired when the user initiates a copy action through the browser's user interface.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncopy"><code>oncopy</code></a> property.</dd>
- <dt>{{domxref("Window/cut_event", "cut")}}</dt>
- <dd>Fired when the user initiates a cut action through the browser's user interface.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncut"><code>oncut</code></a> property.</dd>
- <dt>{{domxref("Window/paste_event", "paste")}}</dt>
- <dd>Fired when the user initiates a paste action through the browser's user interface.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onpaste"><code>onpaste</code></a> property.</dd>
-</dl>
+- {{domxref("Window/offline_event", "offline")}}
+  - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
+    Also available via the {{domxref("WindowEventHandlers.onoffline", "onoffline")}} property.
+- {{domxref("Window/online_event", "online ")}}[``](/en-US/docs/Web/API/Window/online_event)
+  - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
+    Also available via the {{domxref("WindowEventHandlers.ononline", "ononline")}} property.
 
-<h3 id="Connection_events">Connection events</h3>
+### Focus events
 
-<dl>
- <dt>{{domxref("Window/offline_event", "offline")}}</dt>
- <dd>Fired when the browser has lost access to the network and the value of <code>navigator.onLine</code> has switched to <code>false</code>.<br>
- Also available via the {{domxref("WindowEventHandlers.onoffline", "onoffline")}} property.</dd>
- <dt>{{domxref("Window/online_event", "online ")}}<code><a href="/en-US/docs/Web/API/Window/online_event"> </a></code></dt>
- <dd>Fired when the browser has gained access to the network and the value of <code>navigator.onLine</code> has switched to <code>true</code>.<br>
- Also available via the {{domxref("WindowEventHandlers.ononline", "ononline")}} property.</dd>
-</dl>
+- {{domxref("Window/blur_event", "blur")}}
+  - : Fired when an element has lost focus.
+    Also available via the [`onblur`](/ko/docs/Web/API/GlobalEventHandlers/onblur) property.
+- {{domxref("Window/focus_event", "focus")}}
+  - : Fired when an element has gained focus.
+    Also available via the [`onfocus`](/ko/docs/Web/API/GlobalEventHandlers/onfocus) property
 
-<h3 id="Focus_events">Focus events</h3>
+### Gamepad events
 
-<dl>
- <dt>{{domxref("Window/blur_event", "blur")}}</dt>
- <dd>Fired when an element has lost focus.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur"><code>onblur</code></a> property.</dd>
- <dt>{{domxref("Window/focus_event", "focus")}}</dt>
- <dd>Fired when an element has gained focus.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onfocus"><code>onfocus</code></a> property</dd>
-</dl>
+- {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}
+  - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
+    Also available via the [`ongamepadconnected`](/en-US/docs/Web/API/Window/ongamepadconnected) property.
+- {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}}
+  - : Fired when the browser detects that a gamepad has been disconnected.
+    Also available via the [`ongamepaddisconnected`](/en-US/docs/Web/API/Window/ongamepaddisconnected) property
 
-<h3 id="Gamepad_events">Gamepad events</h3>
+### History events
 
-<dl>
- <dt>{{domxref("Window/gamepadconnected_event", "gamepadconnected")}}</dt>
- <dd>Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/Window/ongamepadconnected">ongamepadconnected</a></code> property.</dd>
- <dt>{{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}}</dt>
- <dd>Fired when the browser detects that a gamepad has been disconnected.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/Window/ongamepaddisconnected">ongamepaddisconnected</a></code> property</dd>
-</dl>
+- {{domxref("Window/hashchange_event", "hashchange")}}
+  - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
+    Also available via the [`onhashchange`](/en-US/docs/Web/API/WindowEventHandlers/onhashchange) property.
+- {{domxref("Window/pagehide_event", "pagehide")}}
+  - : Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
+    Also available through the [`onpagehide`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpagehide) event handler property.
+- {{domxref("Window/pageshow_event", "pageshow")}}
+  - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
+    Also available using the [`onpageshow`](/en-US/docs/Mozilla/Tech/XUL/Attribute/onpageshow) event handler property.
+- {{domxref("Window/popstate_event", "popstate")}}
+  - : Fired when the active history entry changes.
+    Also available using the [`onpopstate`](/en-US/docs/Web/API/WindowEventHandlers/onpopstate) event handler property.
 
-<h3 id="History_events">History events</h3>
+### Load & unload events
 
-<dl>
- <dt>{{domxref("Window/hashchange_event", "hashchange")}}</dt>
- <dd>Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the <code>#</code> symbol).<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onhashchange">onhashchange</a></code> property.</dd>
- <dt>{{domxref("Window/pagehide_event", "pagehide")}}</dt>
- <dd>Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.<br>
- Also available through the <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/onpagehide">onpagehide</a></code> event handler property.</dd>
- <dt>{{domxref("Window/pageshow_event", "pageshow")}}</dt>
- <dd>Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.<br>
- Also available using the <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/onpageshow">onpageshow</a></code> event handler property.</dd>
- <dt>{{domxref("Window/popstate_event", "popstate")}}</dt>
- <dd>Fired when the active history entry changes.<br>
- Also available using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onpopstate">onpopstate</a></code> event handler property.</dd>
-</dl>
+- {{domxref("Window/beforeunload_event", "beforeunload")}}
+  - : Fired when the window, the document and its resources are about to be unloaded.
+    Also available via the {{domxref("WindowEventHandlers/onbeforeunload", "onbeforeunload")}} property.
+- {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+- {{domxref("Window/load_event", "load")}}
+  - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
+    Also available via the {{domxref("GlobalEventHandlers/onload", "onload")}} property.
+- {{domxref("Window/unload_event", "unload")}}
+  - : Fired when the document or a child resource is being unloaded.
+    Also available via the {{domxref("WindowEventHandlers/onunload", "onunload")}} property.
 
-<h3 id="Load_unload_events">Load &amp; unload events</h3>
+### Manifest events
 
-<dl>
- <dt>{{domxref("Window/beforeunload_event", "beforeunload")}}</dt>
- <dd>Fired when the window, the document and its resources are about to be unloaded.<br>
- Also available via the {{domxref("WindowEventHandlers/onbeforeunload", "onbeforeunload")}} property.</dd>
- <dt>{{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}</dt>
- <dd>Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.</dd>
- <dt>{{domxref("Window/load_event", "load")}}</dt>
- <dd>Fired when the whole page has loaded, including all dependent resources such as stylesheets images.<br>
- Also available via the {{domxref("GlobalEventHandlers/onload", "onload")}} property.</dd>
- <dt>{{domxref("Window/unload_event", "unload")}}</dt>
- <dd>Fired when the document or a child resource is being unloaded.<br>
- Also available via the {{domxref("WindowEventHandlers/onunload", "onunload")}} property.</dd>
-</dl>
+- {{domxref("Window/appinstalled_event", "appinstalled")}}
+  - : Fired when the browser has successfully installed a page as an application.
+    Also available via the {{domxref("Window/onappinstalled", "onappinstalled")}} property.
+- {{domxref("Window/beforeinstallprompt_event", "beforeinstallprompt")}}
+  - : Fired when a user is about to be prompted to install a web application.
+    Also available via the {{domxref("Window/onbeforeinstallprompt", "onbeforeinstallprompt")}} property.
 
-<h3 id="Manifest_events">Manifest events</h3>
+### Messaging events
 
-<dl>
- <dt>{{domxref("Window/appinstalled_event", "appinstalled")}}</dt>
- <dd>Fired when the browser has successfully installed a page as an application.<br>
- Also available via the {{domxref("Window/onappinstalled", "onappinstalled")}} property.</dd>
- <dt>{{domxref("Window/beforeinstallprompt_event", "beforeinstallprompt")}}</dt>
- <dd>Fired when a user is about to be prompted to install a web application.<br>
- Also available via the {{domxref("Window/onbeforeinstallprompt", "onbeforeinstallprompt")}} property.</dd>
-</dl>
+- {{domxref("Window/message_event", "message")}}
+  - : Fired when the window receives a message, for example from a call to {{domxref("Window/postMessage", "Window.postMessage()")}} from another browsing context.
+    Also available via the {{domxref("WindowEventHandlers/onmessage", "onmessage")}} property.
+- {{domxref("Window/messageerror_event", "messageerror")}}
+  - : Fired when a `Window` object receives a message that can't be deserialized.
+    Also available via the {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} property.
 
-<h3 id="Messaging_events">Messaging events</h3>
+### Print events
 
-<dl>
- <dt>{{domxref("Window/message_event", "message")}}</dt>
- <dd>Fired when the window receives a message, for example from a call to {{domxref("Window/postMessage", "Window.postMessage()")}} from another browsing context.<br>
- Also available via the {{domxref("WindowEventHandlers/onmessage", "onmessage")}} property.</dd>
- <dt>{{domxref("Window/messageerror_event", "messageerror")}}</dt>
- <dd>Fired when a <code>Window</code> object receives a message that can't be deserialized.<br>
- Also available via the {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} property.</dd>
-</dl>
+- {{domxref("Window/afterprint_event", "afterprint")}}
+  - : Fired after the associated document has started printing or the print preview has been closed.
+    Also available via the {{domxref("WindowEventHandlers/onafterprint", "onafterprint")}} property.
+- {{domxref("Window/beforeprint_event", "beforeprint")}}
+  - : Fired when the associated document is about to be printed or previewed for printing.
+    Also available via the {{domxref("WindowEventHandlers/onbeforeprint", "onbeforeprint")}} property.
 
-<h3 id="Print_events">Print events</h3>
+### Promise rejection events
 
-<dl>
- <dt>{{domxref("Window/afterprint_event", "afterprint")}}</dt>
- <dd>Fired after the associated document has started printing or the print preview has been closed.<br>
- Also available via the {{domxref("WindowEventHandlers/onafterprint", "onafterprint")}} property.</dd>
- <dt>{{domxref("Window/beforeprint_event", "beforeprint")}}</dt>
- <dd>Fired when the associated document is about to be printed or previewed for printing.<br>
- Also available via the {{domxref("WindowEventHandlers/onbeforeprint", "onbeforeprint")}} property.</dd>
-</dl>
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
+  - : Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.
+    Also available through the [`onrejectionhandled`](/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled) event handler property.
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
+  - : Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.
+    Also available using the [`onunhandledrejection`](/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection) event handler property.
 
-<h3 id="Promise_rejection_events">Promise rejection events</h3>
+### Transition events
 
-<dl>
- <dt>{{domxref("Window/rejectionhandled_event", "rejectionhandled")}}</dt>
- <dd>Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.<br>
- Also available through the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled">onrejectionhandled</a></code> event handler property.</dd>
- <dt>{{domxref("Window/unhandledrejection_event", "unhandledrejection")}}</dt>
- <dd>Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.<br>
- Also available using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">onunhandledrejection</a></code> event handler property.</dd>
-</dl>
+- {{domxref("Window/transitioncancel_event", "transitioncancel")}}
+  - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) is canceled.
+    Also available via the [`ontransitioncancel`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel) property.
+- {{domxref("Window/transitionend_event", "transitionend")}}
+  - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) has completed.
+    Also available via the [`ontransitionend`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend) property.
+- {{domxref("Window/transitionrun_event", "transitionrun")}}
+  - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) is first created.
+    Also available via the [`ontransitionrun`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun) property.
+- {{domxref("Window/transitionstart_event", "transitionstart")}}
+  - : Fired when a [CSS transition](/ko/docs/CSS/Using_CSS_transitions) has actually started.
+    Also available via the [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart) property.
 
-<h3 id="Transition_events">Transition events</h3>
+### WebVR events
 
-<dl>
- <dt>{{domxref("Window/transitioncancel_event", "transitioncancel")}}</dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is canceled.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">ontransitioncancel</a></code> property.</dd>
- <dt>{{domxref("Window/transitionend_event", "transitionend")}}</dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has completed.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">ontransitionend</a></code> property.</dd>
- <dt>{{domxref("Window/transitionrun_event", "transitionrun")}}</dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is first created.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun">ontransitionrun</a></code> property.</dd>
- <dt>{{domxref("Window/transitionstart_event", "transitionstart")}}</dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has actually started.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart">ontransitionstart</a></code> property.</dd>
-</dl>
+- {{domxref("Window/vrdisplayactivate_event", "vrdisplayactivate")}}
+  - : Fired when a VR display becomes available to be presented to, for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
+    Also available via the {{domxref("Window/onvrdisplayactivate", "onvrdisplayactivate")}} property.
+- {{domxref("Window/vrdisplayblur_event", "vrdisplayblur")}}
+  - : Fired when presentation to a VR display has been paused for some reason by the browser, OS, or VR hardware.
+    Also available via the {{domxref("Window/onvrdisplayblur", "onvrdisplayblur")}} property.
+- {{domxref("Window/vrdisplayconnect_event", "vrdisplayconnect")}}
+  - : Fired when a compatible VR display is connected to the computer.
+    Also available via the {{domxref("Window/onvrdisplayconnect", "onvrdisplayconnect")}} property.
+- {{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}}
+  - : Fired when a VR display can no longer be presented to, for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
+    Also available via the {{domxref("Window/onvrdisplaydeactivate", "onvrdisplaydeactivate")}} property.
+- {{domxref("Window/vrdisplaydisconnect_event", "vrdisplaydisconnect")}}
+  - : Fired when a compatible VR display is disconnected from the computer.
+    Also available via the {{domxref("Window/onvrdisplaydisconnect", "onvrdisplaydisconnect")}} property.
+- {{domxref("Window/vrdisplayfocus_event", "vrdisplayfocus")}}
+  - : Fired when presentation to a VR display has resumed after being blurred.
+    Also available via the {{domxref("Window/onvrdisplayfocus", "onvrdisplayfocus")}} property.
+- {{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}}
+  - : Fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
+    Also available via the {{domxref("Window/onvrdisplaypresentchange", "onvrdisplaypresentchange")}} property.
+- {{domxref("Window/vrdisplaypointerrestricted_event", "vrdisplaypointerrestricted")}}
+  - : Fired when the VR display's pointer input is restricted to consumption via a [pointerlocked element](/ko/docs/Web/API/Pointer_Lock_API).
+    Also available via the {{domxref("Window/onvrdisplaypointerrestricted", "onvrdisplaypointerrestricted")}} property.
+- {{domxref("Window/vrdisplaypointerunrestricted_event", "vrdisplaypointerunrestricted")}}
+  - : Fired when the VR display's pointer input is no longer restricted to consumption via a [pointerlocked element](/ko/docs/Web/API/Pointer_Lock_API).
+    Also available via the {{domxref("Window/onvrdisplaypointerunrestricted", "onvrdisplaypointerunrestricted")}} property.
 
-<h3 id="WebVR_events">WebVR events</h3>
+## 인터페이스
 
-<dl>
- <dt>{{domxref("Window/vrdisplayactivate_event", "vrdisplayactivate")}}</dt>
- <dd>Fired when a VR display becomes available to be presented to, for example if an HMD has been moved to bring it out of standby, or woken up by being put on.<br>
- Also available via the {{domxref("Window/onvrdisplayactivate", "onvrdisplayactivate")}} property.</dd>
- <dt>{{domxref("Window/vrdisplayblur_event", "vrdisplayblur")}}</dt>
- <dd>Fired when presentation to a VR display has been paused for some reason by the browser, OS, or VR hardware.<br>
- Also available via the {{domxref("Window/onvrdisplayblur", "onvrdisplayblur")}} property.</dd>
- <dt>{{domxref("Window/vrdisplayconnect_event", "vrdisplayconnect")}}</dt>
- <dd>Fired when a compatible VR display is connected to the computer.<br>
- Also available via the {{domxref("Window/onvrdisplayconnect", "onvrdisplayconnect")}} property.</dd>
- <dt>{{domxref("Window/vrdisplaydeactivate_event", "vrdisplaydeactivate")}}</dt>
- <dd>Fired when a VR display can no longer be presented to, for example if an HMD has gone into standby or sleep mode due to a period of inactivity.<br>
- Also available via the {{domxref("Window/onvrdisplaydeactivate", "onvrdisplaydeactivate")}} property.</dd>
- <dt>{{domxref("Window/vrdisplaydisconnect_event", "vrdisplaydisconnect")}}</dt>
- <dd>Fired when a compatible VR display is disconnected from the computer.<br>
- Also available via the {{domxref("Window/onvrdisplaydisconnect", "onvrdisplaydisconnect")}} property.</dd>
- <dt>{{domxref("Window/vrdisplayfocus_event", "vrdisplayfocus")}}</dt>
- <dd>Fired when presentation to a VR display has resumed after being blurred.<br>
- Also available via the {{domxref("Window/onvrdisplayfocus", "onvrdisplayfocus")}} property.</dd>
- <dt>{{domxref("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}}</dt>
- <dd>Fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.<br>
- Also available via the {{domxref("Window/onvrdisplaypresentchange", "onvrdisplaypresentchange")}} property.</dd>
- <dt>{{domxref("Window/vrdisplaypointerrestricted_event", "vrdisplaypointerrestricted")}}</dt>
- <dd>Fired when the VR display's pointer input is restricted to consumption via a <a href="/en-US/docs/Web/API/Pointer_Lock_API">pointerlocked element</a>.<br>
- Also available via the {{domxref("Window/onvrdisplaypointerrestricted", "onvrdisplaypointerrestricted")}} property.</dd>
- <dt>{{domxref("Window/vrdisplaypointerunrestricted_event", "vrdisplaypointerunrestricted")}}</dt>
- <dd>Fired when the VR display's pointer input is no longer restricted to consumption via a <a href="/en-US/docs/Web/API/Pointer_Lock_API">pointerlocked element</a>.<br>
- Also available via the {{domxref("Window/onvrdisplaypointerunrestricted", "onvrdisplaypointerunrestricted")}} property.</dd>
-</dl>
+[DOM 인터페이스](/ko/docs/Web/API/Document_Object_Model#DOM_인터페이스 "/en-US/docs/DOM/DOM_Reference")를 참고하세요.
 
-<h2 id="인터페이스">인터페이스</h2>
+## 브라우저 호환성
 
-<p><a href="/ko/docs/Web/API/Document_Object_Model#DOM_인터페이스" title="/en-US/docs/DOM/DOM_Reference">DOM 인터페이스</a>를 참고하세요.</p>
-
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
-
-<p>{{Compat("api.Window")}}</p>
+{{Compat}}

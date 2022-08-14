@@ -9,37 +9,37 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getByteTimeDomainData
 ---
-<p>{{ APIRef("Mountain View APIRef Project") }}</p>
+{{ APIRef("Mountain View APIRef Project") }}
 
-<p>{{ domxref("AnalyserNode") }} 인터페이스의 <strong><code>getByteTimeDomainData()</code></strong> 메서드는 전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.</p>
+{{ domxref("AnalyserNode") }} 인터페이스의 **`getByteTimeDomainData()`** 메서드는 전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.
 
-<p>만약 배열이 {{domxref("AnalyserNode.fftSize")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.</p>
+만약 배열이 {{domxref("AnalyserNode.fftSize")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: js">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 const dataArray = new Uint8Array(analyser.fftSize); // Uint8Array는 fftSize와 같은 길이여야만 합니다
 analyser.getByteTimeDomainData(dataArray); // getByteTimeDomainData()로부터 반환된 데이터로 Uint8Array를 채웁니다
-</pre>
+```
 
-<h3 id="Parameters">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>array</code></dt>
- <dd>시간 영역 데이터가 복사될 {{domxref("Uint8Array")}}.<br>
- 만약 배열이 {{domxref("AnalyserNode.fftSize")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.</dd>
-</dl>
+- `array`
+  - : 시간 영역 데이터가 복사될 {{domxref("Uint8Array")}}.
+    만약 배열이 {{domxref("AnalyserNode.fftSize")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.
 
-<h3 id="Return_value">반환 값</h3>
+### 반환 값
 
-<p><strong><code>void</code></strong> | 없음</p>
+**`void`** | 없음
 
-<h2 id="Example">예제</h2>
+## 예제
 
-<p>다음의 예제는 <code>AnalyserNode</code>를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 시간 영역 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 데모를 확인하세요 (관련된 코드를 보려면 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 라인 128–205</a>를 참고하세요).</p>
+다음의 예제는 `AnalyserNode`를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 시간 영역 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)를 참고하세요).
 
-<pre class="brush: js">const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioCtx.createAnalyser();
 
   ...
@@ -64,7 +64,7 @@ function draw() {
   let x = 0;
 
   canvasCtx.beginPath();
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     const v = dataArray[i]/128.0;
     const y = v * HEIGHT/2;
 
@@ -81,18 +81,16 @@ function draw() {
 };
 
 draw();
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API 사용하기</a></li>
-</ul>
+- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
