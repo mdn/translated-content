@@ -46421,15 +46421,6 @@
       "Vincent.Yu"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
-    "modified": "2020-10-15T21:21:06.880Z",
-    "contributors": [
-      "fscholz",
-      "badfl",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {
     "modified": "2020-10-15T21:37:49.333Z",
     "contributors": [
