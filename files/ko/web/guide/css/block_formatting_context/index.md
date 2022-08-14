@@ -9,86 +9,84 @@ tags:
   - Web
 translation_of: Web/Guide/CSS/Block_formatting_context
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><strong>블록 서식 맥락</strong>(block format context)은 웹 페이지를 렌더링하는 시각적 CSS의 일부로서, 블록 박스의 레이아웃이 발생하는 지점과 플로팅 요소의 상호작용 범위를 결정하는 범위입니다.</p>
+**블록 서식 맥락**(block format context)은 웹 페이지를 렌더링하는 시각적 CSS의 일부로서, 블록 박스의 레이아웃이 발생하는 지점과 플로팅 요소의 상호작용 범위를 결정하는 범위입니다.
 
-<p>블록 서식 맥락은 다음과 같은 경우에 생성됩니다.</p>
+블록 서식 맥락은 다음과 같은 경우에 생성됩니다.
 
-<ul>
- <li>문서의 루트 요소({{htmlelement("html")}}).</li>
- <li>플로팅 요소({{cssxref("float")}}이 <code>none</code>이 아님).</li>
- <li>절대 위치를 지정한 요소({{cssxref("position")}}이 <code>absolute</code> 또는 <code>fixed</code>).</li>
- <li>인라인 블록({{cssxref("display")}}가 <code>inline-block</code>).</li>
- <li>표 칸({{cssxref("display")}}가 <code>table-cell</code>, HTML 표 칸의 기본값).</li>
- <li>표 주석({{cssxref("display")}}가 <code>table-caption</code>, HTML 표 주석의 기본값).</li>
- <li>{{cssxref("display")}}가 <code>table</code>, <code>table-row</code>, <code>table-row-group</code>, <code>table-header-group</code>, <code>table-footer-group</code> (HTML 표에서, 각각 표 전체, 행, 본문, 헤더, 푸터의 기본값) 또는 <code>inline-table</code>인 요소가 암시적으로 생성한 무명 칸.</li>
- <li>{{cssxref("overflow")}}가 <code>visible</code>이 아닌 블록 요소.</li>
- <li>{{cssxref("display")}}가 <code>flow-root</code>.</li>
- <li>{{cssxref("contain")}}이 <code>layout</code>, <code>content</code>, <code>paint</code>.</li>
- <li>스스로 플렉스, 그리드, 테이블 컨테이너가 아닌 경우의 플렉스 항목({{cssxref("display")}}가 <code>flex</code> 또는 <code>inline-flex</code>인 요소의 바로 아래 자식)</li>
- <li>스스로 플렉스, 그리드, 테이블 컨테이너가 아닌 경우의 그리드 항목({{cssxref("display")}}가 <code>grid</code> 또는 <code>inline-grid</code>인 요소의 바로 아래 자식)</li>
- <li>다열 컨테이너({{cssxref("column-count")}} 또는 ({{cssxref("column-width")}}가 <code>auto</code>가 아닌 경우. <code>column-count: 1</code> 포함).</li>
- <li>{{cssxref("column-span")}}이 <code>all</code>인 경우. 해당하는 요소가 다열 컨테이너 안에 위치하지 않아도 항상 새로운 블록 서식 맥락을 생성해야 합니다. (<a href="https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51">명세 변경</a>, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=709362">Chrome 버그</a>)</li>
-</ul>
+- 문서의 루트 요소({{htmlelement("html")}}).
+- 플로팅 요소({{cssxref("float")}}이 `none`이 아님).
+- 절대 위치를 지정한 요소({{cssxref("position")}}이 `absolute` 또는 `fixed`).
+- 인라인 블록({{cssxref("display")}}가 `inline-block`).
+- 표 칸({{cssxref("display")}}가 `table-cell`, HTML 표 칸의 기본값).
+- 표 주석({{cssxref("display")}}가 `table-caption`, HTML 표 주석의 기본값).
+- {{cssxref("display")}}가 `table`, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (HTML 표에서, 각각 표 전체, 행, 본문, 헤더, 푸터의 기본값) 또는 `inline-table`인 요소가 암시적으로 생성한 무명 칸.
+- {{cssxref("overflow")}}가 `visible`이 아닌 블록 요소.
+- {{cssxref("display")}}가 `flow-root`.
+- {{cssxref("contain")}}이 `layout`, `content`, `paint`.
+- 스스로 플렉스, 그리드, 테이블 컨테이너가 아닌 경우의 플렉스 항목({{cssxref("display")}}가 `flex` 또는 `inline-flex`인 요소의 바로 아래 자식)
+- 스스로 플렉스, 그리드, 테이블 컨테이너가 아닌 경우의 그리드 항목({{cssxref("display")}}가 `grid` 또는 `inline-grid`인 요소의 바로 아래 자식)
+- 다열 컨테이너({{cssxref("column-count")}} 또는 ({{cssxref("column-width")}}가 `auto`가 아닌 경우. `column-count: 1` 포함).
+- {{cssxref("column-span")}}이 `all`인 경우. 해당하는 요소가 다열 컨테이너 안에 위치하지 않아도 항상 새로운 블록 서식 맥락을 생성해야 합니다. ([명세 변경](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome 버그](https://bugs.chromium.org/p/chromium/issues/detail?id=709362))
 
-<p>블록 서식 맥락은 레이아웃에 영향을 주지만, 보통 맥락을 생성하는 요소는 아래와 같은 작용을 하기 때문에 위치 설정과 플로팅 해제를 위해 더 많이 사용합니다.</p>
+블록 서식 맥락은 레이아웃에 영향을 주지만, 보통 맥락을 생성하는 요소는 아래와 같은 작용을 하기 때문에 위치 설정과 플로팅 해제를 위해 더 많이 사용합니다.
 
-<ul>
- <li>내부 플로팅 가두기</li>
- <li>외부 플로팅 제외하기</li>
- <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">여백 상쇄</a> 제거</li>
-</ul>
+- 내부 플로팅 가두기
+- 외부 플로팅 제외하기
+- [여백 상쇄](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) 제거
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="내부_플로팅_가두기">내부 플로팅 가두기</h3>
+### 내부 플로팅 가두기
 
-<div id="example1">
-<p>Make float content and alongside content the same height.</p>
+Make float content and alongside content the same height.
 
-<p>Let's have a look at a couple of these in order to see the effect creating a new <abbr title="Block Formatting Context">BFC</abbr>.</p>
+Let's have a look at a couple of these in order to see the effect creating a new BFC.
 
-<p>In the following example, we have a floated element inside a <code>&lt;div&gt;</code> with a <code>border</code> applied. The content of that <code>&lt;div&gt;</code> has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the <code>&lt;div&gt;</code> now runs through the float. As explained in the <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">guide to in-flow and out of flow elements</a>, the float has been taken out of flow so the <code>background</code> and <code>border</code> of the <code>&lt;div&gt;</code> only contain the content and not the float.</p>
+In the following example, we have a floated element inside a `<div>` with a `border` applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in-flow and out of flow elements](/ko/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow), the float has been taken out of flow so the `background` and `border` of the `<div>` only contain the content and not the float.
 
-<p><strong>using <code>overflow: auto</code></strong></p>
+**using `overflow: auto`**
 
-<p>Setting <code>overflow: auto</code> or set other values than the initial value of <code>overflow: visible</code> created a new <abbr title="Block Formatting Context">BFC</abbr> containing the float. Our <code>&lt;div&gt;</code> now becomes a mini-layout inside our layout. Any child element will be contained inside it.</p>
+Setting `overflow: auto` or set other values than the initial value of `overflow: visible` created a new BFC containing the float. Our `<div>` now becomes a mini-layout inside our layout. Any child element will be contained inside it.
 
-<p>The problem with using <code>overflow</code> to create a new <abbr title="Block Formatting Context">BFC</abbr> is that the <code>overflow</code> property is meant for telling the browser how you want to deal with overflowing content. There are some occasions in which you will find you get unwanted scrollbars or clipped shadows when you use this property purely to create a <abbr title="Block Formatting Context">BFC</abbr>. In addition, it is potentially not readable for a future developer, as it might not be obvious why you used <code>overflow</code> for this purpose. If you use <code>overflow</code>, it is a good idea to comment the code to explain.</p>
+The problem with using `overflow` to create a new BFC is that the `overflow` property is meant for telling the browser how you want to deal with overflowing content. There are some occasions in which you will find you get unwanted scrollbars or clipped shadows when you use this property purely to create a BFC. In addition, it is potentially not readable for a future developer, as it might not be obvious why you used `overflow` for this purpose. If you use `overflow`, it is a good idea to comment the code to explain.
 
-<p><strong>using <code>display: flow-root</code></strong></p>
+**using `display: flow-root`**
 
-<p>A newer value of <code>display</code> lets us create a new <abbr title="Block Formatting Context">BFC</abbr> without any other potentially problematic side-effects. Using <code>display: flow-root</code> on the containing block creates a new <abbr title="Block Formatting Context">BFC</abbr> .</p>
+A newer value of `display` lets us create a new BFC without any other potentially problematic side-effects. Using `display: flow-root` on the containing block creates a new BFC .
 
-<p>With <code>display: flow-root;</code> on the <code>&lt;div&gt;</code>, everything inside that container participates in the block formatting context of that container, and floats will not poke out of the bottom of the element.</p>
+With `display: flow-root;` on the `<div>`, everything inside that container participates in the block formatting context of that container, and floats will not poke out of the bottom of the element.
 
-<p>The value name of <code>flow-root</code> makes sense when you understand you are creating something that acts like the <code>root</code> element (<code>&lt;html&gt;</code> element in browser) in terms of how it creates a new context for the flow layout inside it.</p>
+The value name of `flow-root` makes sense when you understand you are creating something that acts like the `root` element (`<html>` element in browser) in terms of how it creates a new context for the flow layout inside it.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;section&gt;
-    &lt;div class="box"&gt;
-        &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
-        &lt;p&gt;I am content inside the container.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;div class="box" style="overflow:auto"&gt;
-        &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
-        &lt;p&gt;I am content inside the &lt;code&gt;overflow:auto&lt;/code&gt; container.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-&lt;section&gt;
-    &lt;div class="box" style="display:flow-root"&gt;
-        &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
-        &lt;p&gt;I am content inside the &lt;code&gt;display:flow-root&lt;/code&gt; container.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/section&gt;</pre>
+```html
+<section>
+    <div class="box">
+        <div class="float">I am a floated box!</div>
+        <p>I am content inside the container.</p>
+    </div>
+</section>
+<section>
+    <div class="box" style="overflow:auto">
+        <div class="float">I am a floated box!</div>
+        <p>I am content inside the <code>overflow:auto</code> container.</p>
+    </div>
+</section>
+<section>
+    <div class="box" style="display:flow-root">
+        <div class="float">I am a floated box!</div>
+        <p>I am content inside the <code>display:flow-root</code> container.</p>
+    </div>
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">section {
+```css
+section {
     height:150px;
 }
 .box {
@@ -106,29 +104,32 @@ translation_of: Web/Guide/CSS/Block_formatting_context
     background-color: rgba(255, 255, 255, .5);
     border:1px solid black;
     padding: 10px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("example1", 200, 450)}}</p>
+{{EmbedLiveSample("example1", 200, 450)}}
 
-<h3 id="Exclude_external_floats">Exclude external floats</h3>
+### Exclude external floats
 
-<div id="example2">
-<p>In the following example, we are using <code>display:flow-root</code> and floats to implement double columns layout, beacuse an element in the normal flow that establishes a new <abbr title="Block Formatting Context">BFC</abbr> must not overlap the margin box of any floats in the same block formatting context as the element itself.</p>
+In the following example, we are using `display:flow-root` and floats to implement double columns layout, beacuse an element in the normal flow that establishes a new BFC must not overlap the margin box of any floats in the same block formatting context as the element itself.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;section&gt;
-  &lt;div class="float"&gt;Try to resize this outer float&lt;/div&gt;
-  &lt;div class="box"&gt;&lt;p&gt;Normal&lt;/p&gt;&lt;/div&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;div class="float"&gt;Try to resize this outer float&lt;/div&gt;
-  &lt;div class="box" style="display:flow-root"&gt;&lt;p&gt;&lt;code&gt;display:flow-root&lt;/code&gt;&lt;p&gt;&lt;/div&gt;
-&lt;/section&gt;</pre>
+```html
+<section>
+  <div class="float">Try to resize this outer float</div>
+  <div class="box"><p>Normal</p></div>
+</section>
+<section>
+  <div class="float">Try to resize this outer float</div>
+  <div class="box" style="display:flow-root"><p><code>display:flow-root</code><p></div>
+</section>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">section {
+```css
+section {
     height:150px;
 }
 .box {
@@ -150,30 +151,31 @@ translation_of: Web/Guide/CSS/Block_formatting_context
     border: 1px solid black;
     padding: 10px;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("example2", 200, 300)}}</p>
+{{EmbedLiveSample("example2", 200, 300)}}
 
-<p>Rather than inline-blocks with width:&lt;percentage&gt;, in this case we don't have to specify the width of the right div.</p>
+Rather than inline-blocks with width:\<percentage>, in this case we don't have to specify the width of the right div.
 
-<p>Note that flexbox is a more efficient way to implement muti columns layout in morden CSS.</p>
+Note that flexbox is a more efficient way to implement muti columns layout in morden CSS.
+
+### 여백 상쇄
+
+Creating a new BFC to avoid the [margin collapsing](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) between two neighbor div:
+
+#### HTML
+
+```html
+<div class="blue"></div>
+<div class="red-outer">
+  <div class="red-inner">red inner</div>
 </div>
+```
 
-<h3 id="여백_상쇄">여백 상쇄</h3>
+#### CSS
 
-<p>Creating a new BFC to avoid the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">margin collapsing</a> between two neighbor div:</p>
-
-<h4 id="HTML_3">HTML</h4>
-
-<pre class="brush: html notranslate">&lt;div class="blue"&gt;&lt;/div&gt;
-&lt;div class="red-outer"&gt;
-  &lt;div class="red-inner"&gt;red inner&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<h4 id="CSS_3">CSS</h4>
-
-<pre class="brush: css notranslate">.blue, .red-inner {
+```css
+.blue, .red-inner {
   height: 50px;
   margin: 10px 0;
 }
@@ -186,13 +188,10 @@ translation_of: Web/Guide/CSS/Block_formatting_context
   overflow: hidden;
   background: red;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("여백_상쇄", 120, 120)}}</p>
-</div>
+{{EmbedLiveSample("여백_상쇄", 120, 120)}}
 
-<h2 id="See_Also" name="See_Also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{ cssxref("float") }}, {{ cssxref("clear") }}</li>
-</ul>
+- {{ cssxref("float") }}, {{ cssxref("clear") }}

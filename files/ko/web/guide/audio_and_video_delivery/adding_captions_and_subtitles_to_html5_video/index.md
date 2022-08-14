@@ -5,92 +5,91 @@ slug: >-
 translation_of: >-
   Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
-<div class="summary">
-<p><span class="seoSummary">우리는 다른 글에서 {{ domxref("HTMLMediaElement") }}과(와) {{ domxref("Window.fullScreen") }} API를 활용하여 <a href="/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">다양한 브라우저에서 호환되는 영상 플레이어를 제작하는 방법</a>과 <a href="/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics">플레이어에 스타일을 적용하는 방법</a>을 살펴보았습니다. 이번 글에서는 위에서 제작했던 플레이어를 활용하여 {{ domxref("Web_Video_Text_Tracks_Format","WebVTT 포맷 파일") }}과(와) {{ htmlelement("track") }} 엘리먼트를 이용해 캡션과 자막을 붙이는 방법을 살펴보려고 합니다.</span></p>
+우리는 다른 글에서 {{ domxref("HTMLMediaElement") }}과(와) {{ domxref("Window.fullScreen") }} API를 활용하여 [다양한 브라우저에서 호환되는 영상 플레이어를 제작하는 방법](/en-US/Apps/Build/Manipulating_media/cross_browser_video_player)과 [플레이어에 스타일을 적용하는 방법](/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics)을 살펴보았습니다. 이번 글에서는 위에서 제작했던 플레이어를 활용하여 {{ domxref("Web_Video_Text_Tracks_Format","WebVTT 포맷 파일") }}과(와) {{ htmlelement("track") }} 엘리먼트를 이용해 캡션과 자막을 붙이는 방법을 살펴보려고 합니다.
+
+## 캡션이 포함된 영상 예제
+
+캡션이 포함된 영상 플레이어를 예시로 설명하기 위하여 [Blender Foundation](http://www.blender.org/foundation/)에서 만든 [Sintel open movie](http://www.sintel.org/)를 발췌하여 사용할 것입니다.
+
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+
+> **참고:** [소스코드](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)는 Github 에서 받을 수 있으며 [데모](http://iandevlin.github.io/mdn/video-player-with-captions/) 또한 확인해보실 수 있습니다.
+
+## HTML5와 영상 캡션
+
+영상에 캡션을 붙이는 법을 살펴보기 전에, 몇가지 짚고 넢어가야 할 것들이 있습니다.
+
+### 캡션 vs 자막
+
+[캡션과 자막은 다른 개념입니다](http://web.archive.org/web/20160117160743/http://screenfont.ca/learn/): 이 두가지는 명백히 다른 개념이며 서로 다른 정보를 전달합니다. 이 두가지에 대해 명확하게 이해하고 있지 않다면 두 개념의 차이를 먼저 이해하고 오는 것이 좋습니다. 개념적으로는 다르더라도 기술적으로는 같은 방식을 따르기 때문에, 이 글에서 설명하는 것은 두 개념 모두에 적용됩니다.
+
+이 글에서는 화면에 보여지는 텍스트를 자막으로 간주하고 설명하고 있습니다. 여기서 자막은 영상의 언어를 이해하기 어려운 사람들을 위한 텍스트를 의미하며, 듣는 능력에 장애가 있는 사람들을 위한 텍스트를 의미하는 것은 아닙니다.
+
+### \<track> 엘리먼트
+
+HTML5에서는 {{ htmlelement("track") }}를 이용하여 자막을 특정해서 보여줄 수 있습니다. 엘리먼트에서 제공하는 다양한 속성을 이용하여 추가하려는 컨텐트 유형, 언어, 자막 파일 등을 지정할 수 있습니다.
+
+### WebVTT
+
+자막 데이터를 담고있는 파일은 특정한 파일 포맷을 따르는데, 이 글에서는 [Web Video Text Tracks](/ko/docs/HTML/WebVTT) (WebVTT)를 이용합니다. [WebVTT 스펙](http://dev.w3.org/html5/webvtt/) 은 아직 개발 단계에 있지만 대부분 주요 기능은 안정화 단계에 있기 떄문에 지금도 충분히 사용 가능합니다.
+
+영상 제공자([Blender Foundation](http://www.blender.org/foundation/)같은)들은 영상과 함께 캡션과 자막을 텍스트 파일로 제공하는데 보통 SubRip Text(SRT) 포맷을 사용합니다. SRT 파일은 온라인에서 쉽게 찾을 수 있는 [srt2vtt](https://atelier.u-sub.net/srt2vtt/)같은 변환기를 이용해 WebVTT로 변환할 수 있습니다.
+
+## HTML과 CSS 수정
+
+이번 섹션에서는 영상에 자막을 추가하기 위하여 이전 글에서 작성했던 코드의 마크업을 수정해볼 것입니다. 혹시 이번 섹션은 별로 관심이 없거나 바로 JavaScript 혹은 직접적인 CSS를 수정하는데에 더 관심이 있다면, [Subtitle implementation](#subtitle_implementation) 섹션으로 건너뛰어도 무방합니다.
+
+이번 예제에서는 [Sintel](http://www.sintel.org/)이라는 다른 영상을 사용해보겠습니다. 이 영상은 연설하는 내용을 담고있기 떄문에 자막이 동작하는 것을 이해하는데 훨씬 더 적합할 것입니다.
+
+### HTML 마크업
+
+위에서 언급한대로, 자막 파일을 HTML5 영상에 추가하기 위해서는 새로운 HTML5 `<track>` 엘리먼트를 활용해야 합니다. 우리는 지금 3가지 다른 언어의 자막— 영어, 독일어, 스페인어 —을 가지고 있기 때문에 HTML5 `<video>` 엘리먼트 안에 `<track>` 엘리먼트를 추가하여 3가지 언어에 대응하는 VTT 파일을 지정해주어야 합니다.:
+
+```html
+<video id="video" controls preload="metadata">
+   <source src="video/sintel-short.mp4" type="video/mp4">
+   <source src="video/sintel-short.webm" type="video/webm">
+   <track label="English" kind="subtitles" srclang="en" src="captions/vtt/sintel-en.vtt" default>
+   <track label="Deutsch" kind="subtitles" srclang="de" src="captions/vtt/sintel-de.vtt">
+   <track label="Español" kind="subtitles" srclang="es" src="captions/vtt/sintel-es.vtt">
+</video>
+```
+
+위 코드에서 보듯, 각각의 `<track>` 엘리먼트는 다음의 속성 세트를 갖습니다:
+
+- `subtitles`값을 갖고 있는 `kind` 는 해당 파일이 가지고 있는 내용의 유형을 가리킵니다.
+- `label` 은 자막 세트가 갖는 언어를 상징하는 값입니다. — 예를 들어 `English` 혹은 `Deutsch` — 이 값들은 UI 상에서 사용자가 쉽게 원하는 자막을 선택할 수 있도록 보여지는데 사용됩니다.
+- `src` 은 각 자막에 해당하는 WebVTT 파일 URL입니다.
+- `srclang` 각 자막 파일의 언어 값을 가리킵니다.
+- English `<track>` 엘리먼트에 지정되어있는 `default` 속성은 브라우저로 하여금 기본 자막 파일이라고 알려주는 역할을 합니다. 자막 설정은 켜져있고 사용자가 아무런 선택도 하지 않을 경우 기본으로 보여질 자막을 의미합니다.
+
+In addition to adding the `<track>` elements, we have also added a new button to control the subtitles menu that we will build. As a consequence, the video controls now look as follows:
+
+```js
+<div id="video-controls" class="controls" data-state="hidden">
+   <button id="playpause" type="button" data-state="play">Play/Pause</button>
+   <button id="stop" type="button" data-state="stop">Stop</button>
+   <div class="progress">
+      <progress id="progress" value="0" min="0">
+         <span id="progress-bar"></span>
+      </progress>
+   </div>
+   <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+   <button id="volinc" type="button" data-state="volup">Vol+</button>
+   <button id="voldec" type="button" data-state="voldown">Vol-</button>
+   <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
+   <button id="subtitles" type="button" data-state="subtitles">CC</button>
 </div>
+```
 
-<h2 id="캡션이_포함된_영상_예제">캡션이 포함된 영상 예제</h2>
+### CSS Changes
 
-<p>캡션이 포함된 영상 플레이어를 예시로 설명하기 위하여 <a href="http://www.blender.org/foundation/">Blender Foundation</a>에서 만든 <a href="http://www.sintel.org/">Sintel open movie</a>를 발췌하여 사용할 것입니다.</p>
+The video controls have undergone some minor changes in order to make space for the extra button, but these are relatively straightforward.
 
-<p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
+No image is used for the captions button, so it is simply styled as:
 
-<div class="note">
-<p><strong>Note</strong>: <a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">소스코드</a>는 Github 에서 받을 수 있으며 <a href="http://iandevlin.github.io/mdn/video-player-with-captions/">데모</a> 또한 확인해보실 수 있습니다.</p>
-</div>
-
-<h2 id="HTML5와_영상_캡션">HTML5와 영상 캡션</h2>
-
-<p>영상에 캡션을 붙이는 법을 살펴보기 전에, 몇가지 짚고 넢어가야 할 것들이 있습니다.</p>
-
-<h3 id="캡션_vs_자막">캡션 vs 자막</h3>
-
-<p><a href="http://web.archive.org/web/20160117160743/http://screenfont.ca/learn/">캡션과 자막은 다른 개념입니다</a>: 이 두가지는 명백히 다른 개념이며 서로 다른 정보를 전달합니다. 이 두가지에 대해 명확하게 이해하고 있지 않다면 두 개념의 차이를 먼저 이해하고 오는 것이 좋습니다. 개념적으로는 다르더라도 기술적으로는 같은 방식을 따르기 때문에, 이 글에서 설명하는 것은 두 개념 모두에 적용됩니다.</p>
-
-<p>이 글에서는 화면에 보여지는 텍스트를 자막으로 간주하고 설명하고 있습니다. 여기서 자막은 영상의 언어를 이해하기 어려운 사람들을 위한 텍스트를 의미하며, 듣는 능력에 장애가 있는 사람들을 위한 텍스트를 의미하는 것은 아닙니다.</p>
-
-<h3 id="&lt;track>_엘리먼트">&lt;track&gt; 엘리먼트</h3>
-
-<p>HTML5에서는 {{ htmlelement("track") }}를 이용하여 자막을 특정해서 보여줄 수 있습니다. 엘리먼트에서 제공하는 다양한 속성을 이용하여 추가하려는 컨텐트 유형, 언어, 자막 파일 등을 지정할 수 있습니다.</p>
-
-<h3 id="WebVTT">WebVTT</h3>
-
-<p>자막 데이터를 담고있는 파일은 특정한 파일 포맷을 따르는데, 이 글에서는 <a href="/en-US/docs/HTML/WebVTT">Web Video Text Tracks</a> (WebVTT)를 이용합니다. <a href="http://dev.w3.org/html5/webvtt/">WebVTT 스펙</a> 은 아직 개발 단계에 있지만 대부분 주요 기능은 안정화 단계에 있기 떄문에 지금도 충분히 사용 가능합니다.</p>
-
-<p>영상 제공자(<a href="http://www.blender.org/foundation/">Blender Foundation</a>같은)들은 영상과 함께 캡션과 자막을 텍스트 파일로 제공하는데 보통 SubRip Text(SRT) 포맷을 사용합니다. SRT 파일은 온라인에서 쉽게 찾을 수 있는 <a href="https://atelier.u-sub.net/srt2vtt/">srt2vtt</a>같은 변환기를 이용해 WebVTT로 변환할 수 있습니다.</p>
-
-<h2 id="HTML과_CSS_수정">HTML과 CSS 수정</h2>
-
-<p>이번 섹션에서는 영상에 자막을 추가하기 위하여 이전 글에서 작성했던 코드의 마크업을 수정해볼 것입니다. 혹시 이번 섹션은 별로 관심이 없거나 바로 JavaScript 혹은 직접적인 CSS를 수정하는데에 더 관심이 있다면, <a href="#subtitle_implementation">Subtitle implementation</a> 섹션으로 건너뛰어도 무방합니다.<br>
- <br>
- 이번 예제에서는 <a href="http://www.sintel.org/">Sintel</a>이라는 다른 영상을 사용해보겠습니다. 이 영상은 연설하는 내용을 담고있기 떄문에 자막이 동작하는 것을 이해하는데 훨씬 더 적합할 것입니다.</p>
-
-<h3 id="HTML_마크업">HTML 마크업</h3>
-
-<p>위에서 언급한대로, 자막 파일을 HTML5 영상에 추가하기 위해서는 새로운 HTML5 <code>&lt;track&gt;</code> 엘리먼트를 활용해야 합니다. 우리는 지금 3가지 다른 언어의 자막— 영어, 독일어, 스페인어 —을 가지고 있기 때문에 HTML5 <code>&lt;video&gt;</code> 엘리먼트 안에 <code>&lt;track&gt;</code> 엘리먼트를 추가하여 3가지 언어에 대응하는 VTT 파일을 지정해주어야 합니다.:</p>
-
-<pre class="brush: html">&lt;video id="video" controls preload="metadata"&gt;
-   &lt;source src="video/sintel-short.mp4" type="video/mp4"&gt;
-   &lt;source src="video/sintel-short.webm" type="video/webm"&gt;
-   &lt;track label="English" kind="subtitles" srclang="en" src="captions/vtt/sintel-en.vtt" default&gt;
-   &lt;track label="Deutsch" kind="subtitles" srclang="de" src="captions/vtt/sintel-de.vtt"&gt;
-   &lt;track label="Español" kind="subtitles" srclang="es" src="captions/vtt/sintel-es.vtt"&gt;
-&lt;/video&gt;</pre>
-
-<p>위 코드에서 보듯, 각각의 <code>&lt;track&gt;</code> 엘리먼트는 다음의 속성 세트를 갖습니다:</p>
-
-<ul>
- <li><code>subtitles</code>값을 갖고 있는 <code>kind</code> 는 해당 파일이 가지고 있는 내용의 유형을 가리킵니다.</li>
- <li><code>label</code> 은 자막 세트가 갖는 언어를 상징하는 값입니다. — 예를 들어 <code>English</code> 혹은 <code>Deutsch</code> — 이 값들은 UI 상에서 사용자가 쉽게 원하는 자막을 선택할 수 있도록 보여지는데 사용됩니다.</li>
- <li><code>src</code> 은 각 자막에 해당하는 WebVTT 파일 URL입니다.</li>
- <li><code>srclang</code> 각 자막 파일의 언어 값을 가리킵니다.</li>
- <li>English <code>&lt;track&gt;</code> 엘리먼트에 지정되어있는 <code>default</code> 속성은 브라우저로 하여금 기본 자막 파일이라고 알려주는 역할을 합니다. 자막 설정은 켜져있고 사용자가 아무런 선택도 하지 않을 경우 기본으로 보여질 자막을 의미합니다.</li>
-</ul>
-
-<p>In addition to adding the <code>&lt;track&gt;</code> elements, we have also added a new button to control the subtitles menu that we will build. As a consequence, the video controls now look as follows:</p>
-
-<pre class="brush: html;highlight[13]">&lt;div id="video-controls" class="controls" data-state="hidden"&gt;
-   &lt;button id="playpause" type="button" data-state="play"&gt;Play/Pause&lt;/button&gt;
-   &lt;button id="stop" type="button" data-state="stop"&gt;Stop&lt;/button&gt;
-   &lt;div class="progress"&gt;
-      &lt;progress id="progress" value="0" min="0"&gt;
-         &lt;span id="progress-bar"&gt;&lt;/span&gt;
-      &lt;/progress&gt;
-   &lt;/div&gt;
-   &lt;button id="mute" type="button" data-state="mute"&gt;Mute/Unmute&lt;/button&gt;
-   &lt;button id="volinc" type="button" data-state="volup"&gt;Vol+&lt;/button&gt;
-   &lt;button id="voldec" type="button" data-state="voldown"&gt;Vol-&lt;/button&gt;
-   &lt;button id="fs" type="button" data-state="go-fullscreen"&gt;Fullscreen&lt;/button&gt;
-   &lt;button id="subtitles" type="button" data-state="subtitles"&gt;CC&lt;/button&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="CSS_Changes">CSS Changes</h3>
-
-<p>The video controls have undergone some minor changes in order to make space for the extra button, but these are relatively straightforward.<br>
- <br>
- No image is used for the captions button, so it is simply styled as:</p>
-
-<pre class="brush: css">.controls button[data-state="subtitles"] {
+```css
+.controls button[data-state="subtitles"] {
     height:85%;
     text-indent:0;
     font-size:16px;
@@ -99,63 +98,71 @@ translation_of: >-
     color:#666;
     background:#000;
     border-radius:2px;
-}</pre>
+}
+```
 
-<p>There are also other CSS changes that are specific to some extra JavaScript implementation, but these will be mentioned at the appropriate place below.</p>
+There are also other CSS changes that are specific to some extra JavaScript implementation, but these will be mentioned at the appropriate place below.
 
-<h2 id="Subtitle_implementation">Subtitle implementation</h2>
+## Subtitle implementation
 
-<p>A lot of what we do to access the video subtitles revolves around JavaScript. Similar to the video controls, if a browser supports HTML5 video subtitles, there will be a button provided within the native control set to access them. However, since we have defined our own video controls, this button is hidden, and we need to define our own.</p>
+A lot of what we do to access the video subtitles revolves around JavaScript. Similar to the video controls, if a browser supports HTML5 video subtitles, there will be a button provided within the native control set to access them. However, since we have defined our own video controls, this button is hidden, and we need to define our own.
 
-<p>Browsers do vary as to what they support, so we will be attempting to bring a more unified UI to each browser where possible. There's more on browser compatibility issues later on.</p>
+Browsers do vary as to what they support, so we will be attempting to bring a more unified UI to each browser where possible. There's more on browser compatibility issues later on.
 
-<h3 id="Initial_setup">Initial setup</h3>
+### Initial setup
 
-<p>As with all the other buttons, one of the first things we need to do is store a handle to the subtitles' button:</p>
+As with all the other buttons, one of the first things we need to do is store a handle to the subtitles' button:
 
-<pre class="brush: js">var subtitles = document.getElementById('subtitles');</pre>
+```js
+var subtitles = document.getElementById('subtitles');
+```
 
-<p>We also initially turn off all subtitles, in case the browser turns any of them on by default:</p>
+We also initially turn off all subtitles, in case the browser turns any of them on by default:
 
-<pre class="brush: js">for (var i = 0; i &lt; video.textTracks.length; i++) {
+```js
+for (var i = 0; i < video.textTracks.length; i++) {
    video.textTracks[i].mode = 'hidden';
-}</pre>
+}
+```
 
-<p>The <code>video.textTracks</code> property contains an array of all the text tracks attached to the video. We loop through each one and set its <code>mode</code> to <code>hidden</code>.</p>
+The `video.textTracks` property contains an array of all the text tracks attached to the video. We loop through each one and set its `mode` to `hidden`.
 
-<p>Note: The <a href="http://dev.w3.org/html5/webvtt/#api">WebVTT API</a> gives us access to all the text tracks that are defined for an HTML5 video using the <code>&lt;track&gt;</code> element.</p>
+Note: The [WebVTT API](http://dev.w3.org/html5/webvtt/#api) gives us access to all the text tracks that are defined for an HTML5 video using the `<track>` element.
 
-<h3 id="Building_a_caption_menu">Building a caption menu</h3>
+### Building a caption menu
 
-<p>Our aim is to use the <code>subtitles</code> button we added earlier to display a menu that allows users to choose which language they want the subtitles displayed in, or to turn them off entirely.<br>
- <br>
- We have added the button, but before we make it do anything, we need to build the menu that goes with it. This menu is built dynamically, so that languages can be added or removed later by simply editing the <code>&lt;track&gt;</code> elements within the video's markup.</p>
+Our aim is to use the `subtitles` button we added earlier to display a menu that allows users to choose which language they want the subtitles displayed in, or to turn them off entirely.
 
-<p>All we need to do is to go through the video's <code>textTracks</code>, reading their properties and building the menu up from there:</p>
+We have added the button, but before we make it do anything, we need to build the menu that goes with it. This menu is built dynamically, so that languages can be added or removed later by simply editing the `<track>` elements within the video's markup.
 
-<pre class="brush: js">var subtitlesMenu;
+All we need to do is to go through the video's `textTracks`, reading their properties and building the menu up from there:
+
+```js
+var subtitlesMenu;
 if (video.textTracks) {
    var df = document.createDocumentFragment();
    var subtitlesMenu = df.appendChild(document.createElement('ul'));
    subtitlesMenu.className = 'subtitles-menu';
    subtitlesMenu.appendChild(createMenuItem('subtitles-off', '', 'Off'));
-   for (var i = 0; i &lt; video.textTracks.length; i++) {
+   for (var i = 0; i < video.textTracks.length; i++) {
       subtitlesMenu.appendChild(createMenuItem('subtitles-' + video.textTracks[i].language, video.textTracks[i].language, video.textTracks[i].label));
    }
    videoContainer.appendChild(subtitlesMenu);
-}</pre>
+}
+```
 
-<p>This code creates a {{ domxref("documentFragment") }}, which is used to hold an unordered list containing our subtitles menu. First of all an option is added to allow the user to switch all subtitles off, and then buttons are added for each text track, reading the language and label from each one.</p>
+This code creates a {{ domxref("documentFragment") }}, which is used to hold an unordered list containing our subtitles menu. First of all an option is added to allow the user to switch all subtitles off, and then buttons are added for each text track, reading the language and label from each one.
 
-<p>The creation of each list item and button is done by the <code>createMenuItem()</code> function, which is defined as follows:</p>
+The creation of each list item and button is done by the `createMenuItem()` function, which is defined as follows:
 
-<pre class="brush: js">var subtitleMenuButtons = [];
+```js
+var subtitleMenuButtons = [];
 var createMenuItem = function(id, lang, label) {
    var listItem = document.createElement('li');
    var button = listItem.appendChild(document.createElement('button'));
    button.setAttribute('id', id);
    button.className = 'subtitles-button';
-   if (lang.length &gt; 0) button.setAttribute('lang', lang);
+   if (lang.length > 0) button.setAttribute('lang', lang);
    button.value = label;
    button.setAttribute('data-state', 'inactive');
    button.appendChild(document.createTextNode(label));
@@ -166,7 +173,7 @@ var createMenuItem = function(id, lang, label) {
       });
       // Find the language to activate
       var lang = this.getAttribute('lang');
-      for (var i = 0; i &lt; video.textTracks.length; i++) {
+      for (var i = 0; i < video.textTracks.length; i++) {
          // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
          if (video.textTracks[i].language == lang) {
             video.textTracks[i].mode = 'showing';
@@ -180,25 +187,29 @@ var createMenuItem = function(id, lang, label) {
    });
    subtitleMenuButtons.push(button);
    return listItem;
-}</pre>
+}
+```
 
-<p>This function builds the required {{ htmlelement("li") }} and {{ htmlelement("button") }} elements, and returns them so they can be added to the subtitles menu list. It also sets up the required event listeners on the button to toggle the relevant subtitle set on or off. This is done by simply setting the required subtlte's <code>mode</code> attribute to <code>showing</code>, and setting the others to <code>hidden</code>.</p>
+This function builds the required {{ htmlelement("li") }} and {{ htmlelement("button") }} elements, and returns them so they can be added to the subtitles menu list. It also sets up the required event listeners on the button to toggle the relevant subtitle set on or off. This is done by simply setting the required subtlte's `mode` attribute to `showing`, and setting the others to `hidden`.
 
-<p>Once the menu is built, it is then inserted into the DOM at the bottom of the videoContainer.<br>
- <br>
- Initially the menu is hidden by default, so an event listener needs to be added to our subtitles button to toggle it:</p>
+Once the menu is built, it is then inserted into the DOM at the bottom of the videoContainer.
 
-<pre class="brush: js">subtitles.addEventListener('click', function(e) {
+Initially the menu is hidden by default, so an event listener needs to be added to our subtitles button to toggle it:
+
+```js
+subtitles.addEventListener('click', function(e) {
    if (subtitlesMenu) {
       subtitlesMenu.style.display = (subtitlesMenu.style.display == 'block' ? 'none' : 'block');
    }
-});</pre>
+});
+```
 
-<h3 id="Subtitle_menu_CSS">Subtitle menu CSS</h3>
+### Subtitle menu CSS
 
-<p>We also added some rudimentary styling for the newly created subtitles menu:</p>
+We also added some rudimentary styling for the newly created subtitles menu:
 
-<pre class="brush: css">.subtitles-menu {
+```css
+.subtitles-menu {
     display:none;
     position:absolute;
     bottom:14.8%;
@@ -224,98 +235,93 @@ var createMenuItem = function(id, lang, label) {
     width:90%;
     padding:2px 5px;
     border-radius:2px;
-}</pre>
+}
+```
 
-<h2 id="Styling_the_displayed_subtitles">Styling the displayed subtitles</h2>
+## Styling the displayed subtitles
 
-<p>One of the less well known about and supported features of WebVTT is the ability to style the individual subtitles (something called text cues) via <a href="http://dev.w3.org/html5/webvtt/#css-extensions">CSS Extensions</a>.</p>
+One of the less well known about and supported features of WebVTT is the ability to style the individual subtitles (something called text cues) via [CSS Extensions](http://dev.w3.org/html5/webvtt/#css-extensions).
 
-<p>The <code>::cue</code> pseudo-element is the key to targetting individual text track cues for styling, as it matches any defined cue. There are only a handful of CSS properties that can be applied to a text cue:</p>
+The `::cue` pseudo-element is the key to targetting individual text track cues for styling, as it matches any defined cue. There are only a handful of CSS properties that can be applied to a text cue:
 
-<ul>
- <li>{{ cssxref("color") }}</li>
- <li>{{ cssxref("opacity") }}</li>
- <li>{{ cssxref("visibility") }}</li>
- <li>{{ cssxref("text-decoration") }}</li>
- <li>{{ cssxref("text-shadow") }}</li>
- <li>{{ cssxref("background") }} shorthand properties</li>
- <li>{{ cssxref("outline") }} shorthand properties</li>
- <li>{{ cssxref("font") }} shorthand properties, including {{ cssxref("line-height") }}</li>
- <li>{{ cssxref("white-space") }}</li>
-</ul>
+- {{ cssxref("color") }}
+- {{ cssxref("opacity") }}
+- {{ cssxref("visibility") }}
+- {{ cssxref("text-decoration") }}
+- {{ cssxref("text-shadow") }}
+- {{ cssxref("background") }} shorthand properties
+- {{ cssxref("outline") }} shorthand properties
+- {{ cssxref("font") }} shorthand properties, including {{ cssxref("line-height") }}
+- {{ cssxref("white-space") }}
 
-<p>For example, to change the text colour of the text track cues you can write:</p>
+For example, to change the text colour of the text track cues you can write:
 
-<pre class="brush: css">::cue {
+```css
+::cue {
    color:#ccc;
-}</pre>
+}
+```
 
-<p>If the WebVTT file uses <a href="http://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-voice-span">voice spans</a>, which allow cues to be defined as having a particular "voice":</p>
+If the WebVTT file uses [voice spans](http://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-voice-span), which allow cues to be defined as having a particular "voice":
 
-<pre>0
-00:00:00.000 --&gt; 00:00:12.000
-&lt;v Test&gt;[Test]&lt;/v&gt;</pre>
+    0
+    00:00:00.000 --> 00:00:12.000
+    <v Test>[Test]</v>
 
-<p>Then this specific 'voice' will be stylable like so:</p>
+Then this specific 'voice' will be stylable like so:
 
-<pre class="brush: css">::cue(v[voice='Test']) {
+```css
+::cue(v[voice='Test']) {
    color:#fff;
    background:#0095dd;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.</p>
-</div>
+> **참고:** Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
-<p><a href="http://caniuse.com/webvtt">Browser support for WebVTT and the <code>&lt;track&gt;</code> element</a> is fairly good, although some browsers differ slightly in their implementation.</p>
+[Browser support for WebVTT and the `<track>` element](http://caniuse.com/webvtt) is fairly good, although some browsers differ slightly in their implementation.
 
-<h3 id="Internet_Explorer">Internet Explorer</h3>
+### Internet Explorer
 
-<p>Internet Explorer 10+ subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built. The <code>default</code> attribute is also supported.</p>
+Internet Explorer 10+ subtitles are enabled by default, and the default controls contain a button and a menu that offers the same functionality as the menu we just built. The `default` attribute is also supported.
 
-<div class="note">
-<p><strong>Note</strong>: IE will completely ignore WebVTT files unless you define the MIME type. This can easily be done by adding an <code>.htaccess</code> file to an appropriate directory that contains <code>AddType text/vtt .vtt</code>.</p>
-</div>
+> **참고:** IE will completely ignore WebVTT files unless you define the MIME type. This can easily be done by adding an `.htaccess` file to an appropriate directory that contains `AddType text/vtt .vtt`.
 
-<h3 id="Safari">Safari</h3>
+### Safari
 
-<p>Safari 6.1+ has similar support to Internet Explorer 10+, displaying a menu with the different available options, with the addition of an "Auto" option, which allows the browser to choose.</p>
+Safari 6.1+ has similar support to Internet Explorer 10+, displaying a menu with the different available options, with the addition of an "Auto" option, which allows the browser to choose.
 
-<h3 id="Chrome_and_Opera">Chrome and Opera</h3>
+### Chrome and Opera
 
-<p>These browsers have similar implementations again: subtitles are enabled by default and the default control set contains a 'cc' button that turns subtitles on and off. Chrome and Opera ignore the <code>default</code> attribute on the <code>&lt;track&gt;</code> element and will instead try to match the browser's language to the subtitle's language.</p>
+These browsers have similar implementations again: subtitles are enabled by default and the default control set contains a 'cc' button that turns subtitles on and off. Chrome and Opera ignore the `default` attribute on the `<track>` element and will instead try to match the browser's language to the subtitle's language.
 
-<h3 id="Firefox">Firefox</h3>
+### Firefox
 
-<p>Firefox's implementation was completely broken due to a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=981280">bug</a>, leading to Mozilla turning off WebVTT support by default (you can turn it on via the <code>media.webvtt.enabled</code> flag.) However, <s>this bug looks to have been fixed and WebVTT support re-enabled as of Gecko 31, so this will not be a problem for Firefox final release users for much longer (on Gecko 29 as of the time of this writing)</s> this has been fixed as of Firefox 31, and everything works as it should.</p>
+Firefox's implementation was completely broken due to a [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=981280), leading to Mozilla turning off WebVTT support by default (you can turn it on via the `media.webvtt.enabled` flag.) However, ~~this bug looks to have been fixed and WebVTT support re-enabled as of Gecko 31, so this will not be a problem for Firefox final release users for much longer (on Gecko 29 as of the time of this writing)~~ this has been fixed as of Firefox 31, and everything works as it should.
 
-<h2 id="Plugins">Plugins</h2>
+## Plugins
 
-<p>If, after reading through this article you decide that you can't be bothered to do all of this and want someone else to do it for you, there are plenty of plugins out there that offer caption and subtitle support that you can use.</p>
+If, after reading through this article you decide that you can't be bothered to do all of this and want someone else to do it for you, there are plenty of plugins out there that offer caption and subtitle support that you can use.
 
-<dl>
- <dt><a href="http://plyr.io">plyr.io </a></dt>
- <dd>This modern video player implements subtitles in both SRT and WebVTT file formats.</dd>
- <dt><a href="http://www.delphiki.com/html5/playr/">playr</a></dt>
- <dd>This small plugin implements subtitles, captions, and chapters as well as both WebVTT and SRT file formats.</dd>
- <dt><a href="https://flowplayer.org/player/">Flowplayer</a></dt>
- <dd>HTML5 player supporting WebVTT.</dd>
- <dt><a href="http://www.jwplayer.com/">jwplayer</a></dt>
- <dd>This video player is very extensive and does a lot more than simply support video captions. It supports the WebVTT, SRT and DFXP formats.</dd>
- <dt><a href="http://mediaelementjs.com/">MediaElement.js</a></dt>
- <dd>Another complete video player that also support video captions, albeit only in SRT format.</dd>
- <dt><a href="http://www.leanbackplayer.com/">LeanBack Player</a></dt>
- <dd>Yet another video player that supports WebVTT captions as well as providing other standard player functionality.</dd>
- <dt><a href="http://sublimevideo.net">SublimeVideo</a></dt>
- <dd>This player also supports captions through WebVTT and SRT files.</dd>
- <dt><a href="http://www.videojs.com/">Video.js</a></dt>
- <dd>Supports WebVTT video subtitles.</dd>
- <dt><a href="https://www.radiantmediaplayer.com">Radiant Media Player</a></dt>
- <dd>Supports multi-languages WebVTT closed captions</dd>
-</dl>
+- [plyr.io](http://plyr.io)
+  - : This modern video player implements subtitles in both SRT and WebVTT file formats.
+- [playr](http://www.delphiki.com/html5/playr/)
+  - : This small plugin implements subtitles, captions, and chapters as well as both WebVTT and SRT file formats.
+- [Flowplayer](https://flowplayer.org/player/)
+  - : HTML5 player supporting WebVTT.
+- [jwplayer](http://www.jwplayer.com/)
+  - : This video player is very extensive and does a lot more than simply support video captions. It supports the WebVTT, SRT and DFXP formats.
+- [MediaElement.js](http://mediaelementjs.com/)
+  - : Another complete video player that also support video captions, albeit only in SRT format.
+- [LeanBack Player](http://www.leanbackplayer.com/)
+  - : Yet another video player that supports WebVTT captions as well as providing other standard player functionality.
+- [SublimeVideo](http://sublimevideo.net)
+  - : This player also supports captions through WebVTT and SRT files.
+- [Video.js](http://www.videojs.com/)
+  - : Supports WebVTT video subtitles.
+- [Radiant Media Player](https://www.radiantmediaplayer.com)
+  - : Supports multi-languages WebVTT closed captions
 
-<div class="note">
-<p><strong>Note</strong>: You can find an excellent list of HTML5 Video Players and their current "state" at <a href="http://praegnanz.de/html5video/">HTML5 Video Player Comparison</a>.</p>
-</div>
+> **참고:** You can find an excellent list of HTML5 Video Players and their current "state" at [HTML5 Video Player Comparison](http://praegnanz.de/html5video/).
