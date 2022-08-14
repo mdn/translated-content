@@ -1,0 +1,39 @@
+---
+title: window.navigator.product
+slug: orphaned/Web/API/NavigatorID/product
+tags:
+  - DOM
+  - Dokumentacja_Gecko_DOM
+  - Gecko
+  - Wszystkie_kategorie
+translation_of: Web/API/NavigatorID/product
+original_slug: Web/API/NavigatorID/product
+---
+<p>{{ ApiRef() }}</p>
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+<p>Własność ta zwraca nazwę produktu bieżącej przeglądarki.</p>
+<h3 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h3>
+<pre class="eval"><i>productName</i> = window.navigator.product
+</pre>
+<h3 id="Parametry" name="Parametry">Parametry</h3>
+<ul>
+ <li><code>productName</code> jest łańcuchem znaków.</li>
+</ul>
+<h3 id="Przyk.C5.82ad" name="Przyk.C5.82ad">Przykład</h3>
+<pre>&lt;script&gt;
+function prod() {
+  dt = document.getElementById("d");
+  dt.innerHTML = window.navigator.product;
+}
+&lt;/script&gt;
+&lt;button onclick="prod();"&gt;produkt&lt;/button&gt;
+&lt;div id="d"&gt; &lt;/div&gt;
+// zwraca "Gecko"
+</pre>
+<h3 id="Uwagi" name="Uwagi">Uwagi</h3>
+<p>Produkt jest tą częścią pełnego łańcucha identyfikatora przeglądarki, która następuje bezpośrednio po platformie. Na przykład, w identyfikatorze przeglądarki dla Netscape 6.1 produktem jest "Gecko", a pełny ciąg identyfikatora przeglądarki jest następujący: Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1</p>
+<h3 id="Specyfikacja" name="Specyfikacja">Specyfikacja</h3>
+<p>DOM Level 0. Nie jest częścią specyfikacji.</p>
+<div class="noinclude">
+  </div>
+<p>{{ languages( { "en": "en/DOM/window.navigator.product", "ja": "ja/DOM/window.navigator.product" } ) }}</p>
