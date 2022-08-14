@@ -1,10 +1,11 @@
 ---
 title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
+page-type: mdn-community-guide
 tags:
-  - Localization
-  - MDN Meta
-  - l10n
+  - meta
+  - community-guidelines
+  - governance
 translation_of: MDN/Contribute/Localize
 original_slug: MDN/Contribute/Localize
 l10n:
