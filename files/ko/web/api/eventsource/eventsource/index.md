@@ -9,30 +9,25 @@ tags:
   - 서버 전송 이벤트
 translation_of: Web/API/EventSource/EventSource
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p><code><strong>EventSource</strong></code><strong><code>()</code></strong> 생성자는 원격 자원을 나타내는 새롭게 생성된 {{domxref("EventSource")}} 를 반환합니다.</p>
+**`EventSource`\*\***`()`\*\* 생성자는 원격 자원을 나타내는 새롭게 생성된 {{domxref("EventSource")}} 를 반환합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">eventSource = new EventSource(<em>url</em>, <em>configuration</em>);</pre>
+    eventSource = new EventSource(url, configuration);
 
-<h3 class="syntaxbox" id="파라미터">파라미터</h3>
+### 파라미터
 
-<dl>
- <dt><code>url</code></dt>
- <dd>이벤트/메시지를 제공하는 원격 자원의 위치를 나타내는 {{domxref("USVString")}} 입니다.</dd>
- <dt><code>configuration</code> {{optional_inline}}</dt>
- <dd>새 연결 구성을 위한 옵션을 제공합니다. 가능한 항목은 다음과 같습니다.
- <ul>
-  <li><code>withCredentials</code>. 기본값은 <code>false</code> 이며, CORS 가 자격을 <code>포함</code>하도록 설정되어야하는지를 나타냅니다.</li>
- </ul>
- </dd>
-</dl>
+- `url`
+  - : 이벤트/메시지를 제공하는 원격 자원의 위치를 나타내는 {{domxref("USVString")}} 입니다.
+- `configuration` {{optional_inline}}
+  - : 새 연결 구성을 위한 옵션을 제공합니다. 가능한 항목은 다음과 같습니다.\* `withCredentials`. 기본값은 `false` 이며, CORS 가 자격을 `포함`하도록 설정되어야하는지를 나타냅니다.
 
-<h2 id="예시">예시</h2>
+## 예시
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
+```js
+var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.onmessage = function(e) {
@@ -40,22 +35,19 @@ evtSource.onmessage = function(e) {
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>노트</strong>: GitHub 에서 전체 예시를 확인할 수 있습니다 — <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP를 사용하는 간단한 SSE 데모</a>를 보세요.</p>
-</div>
+> **참고:** **노트**: GitHub 에서 전체 예시를 확인할 수 있습니다 — [Simple SSE demo using PHP를 사용하는 간단한 SSE 데모](https://github.com/mdn/dom-examples/tree/master/server-sent-events)를 보세요.
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.EventSource.EventSource")}}</p>
+{{Compat}}
 
-<h2 id="함께_보기">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

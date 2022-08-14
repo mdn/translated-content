@@ -13,38 +13,38 @@ original_slug: Web/API/WindowEventHandlers/onstorage
 ---
 <div class="syntaxbox">{{APIRef}}</div>
 
-<p>{{domxref("WindowEventHandlers")}} 믹스인의 <strong><code>onstorage</code></strong> 속성은 <code><a href="/ko/docs/Web/API/Window/storage_event">storage</a></code> 이벤트를 처리하는 {{event("Event_handlers", "event handler")}}입니다.</p>
+{{domxref("WindowEventHandlers")}} 믹스인의 **`onstorage`** 속성은 [`storage`](/ko/docs/Web/API/Window/storage_event) 이벤트를 처리하는 {{event("Event_handlers", "event handler")}}입니다.
 
-<p><code>storage</code> 이벤트는 다른 문서에서 저장소를 변경했을 때 발생합니다.</p>
+`storage` 이벤트는 다른 문서에서 저장소를 변경했을 때 발생합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox notranslate"><em> </em><em>window</em>.onstorage = <em>functionRef</em>;</pre>
+     window.onstorage = functionRef;
 
-<h3 id="값">값</h3>
+### 값
 
-<p><code>functionRef</code>는 함수 이름 혹은 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">함수 표현식</a>으로, 단일 매개변수로써 {{domxref("StorageEvent")}}를 받습니다.</p>
+`functionRef`는 함수 이름 혹은 [함수 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function)으로, 단일 매개변수로써 {{domxref("StorageEvent")}}를 받습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음 예제는 다른 문서에서 저장소 키를 바꿀 때마다 메시지를 기록합니다.</p>
+다음 예제는 다른 문서에서 저장소 키를 바꿀 때마다 메시지를 기록합니다.
 
-<pre class="brush: js notranslate">window.onstorage = function(e) {
+```js
+window.onstorage = function(e) {
   console.log('The ' + e.key +
     ' key has been changed from ' + e.oldValue +
     ' to ' + e.newValue + '.');
-};</pre>
+};
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.WindowEventHandlers.onstorage")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Window/storage_event">Window: <code>storage</code> 이벤트</a></li>
-</ul>
+- [Window: `storage` 이벤트](/ko/docs/Web/API/Window/storage_event)

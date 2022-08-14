@@ -3,45 +3,45 @@ title: History.state
 slug: Web/API/History/state
 translation_of: Web/API/History/state
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p><span class="seoSummary"><strong><code>History.state</code></strong> 속성은 현 history에 해당하는 state값을 나타냅니다.</span></p>
+**`History.state`** 속성은 현 history에 해당하는 state값을 나타냅니다.
 
-<p>{{event("popstate")}} 이벤트가 트리거될때가 아닌 상태에서 state값을 볼 수 있는 방법입니다.</p>
+{{event("popstate")}} 이벤트가 트리거될때가 아닌 상태에서 state값을 볼 수 있는 방법입니다.
 
-<h2 id="syntax">구문</h2>
+## 구문
 
-<pre class="syntaxbox">const <em>currentState</em> = history.state</pre>
+    const currentState = history.state
 
-<h3 id="value">값</h3>
+### 값
 
-<p>현 history에 위치한 값입니다. 이 값은 {{domxref("History.pushState","pushState()")}} 또는 {{domxref("History.replaceState","replaceState()")}}을 사용할때까지 {{jsxref("null")}} 값을 가집니다.</p>
+현 history에 위치한 값입니다. 이 값은 {{domxref("History.pushState","pushState()")}} 또는 {{domxref("History.replaceState","replaceState()")}}을 사용할때까지 {{jsxref("null")}} 값을 가집니다.
 
-<h2 id="examples">예제</h2>
+## 예제
 
-<p><code>history.state</code> 로 초기값을 보여준 후 {{domxref("History.pushState","pushState()")}}를 사용하여 State를 푸시합니다.</p>
+`history.state` 로 초기값을 보여준 후 {{domxref("History.pushState","pushState()")}}를 사용하여 State를 푸시합니다.
 
-<p>다음 코드 줄은 <code>history.state</code> 를 사용하여 콘솔에다 값이 푸시되었음을 보여줍니다.</p>
+다음 코드 줄은 `history.state` 를 사용하여 콘솔에다 값이 푸시되었음을 보여줍니다.
 
-<pre class="brush: js">// Should be null because we haven't modified the history stack yet
+```js
+// Should be null because we haven't modified the history stack yet
 console.log(`History.state before pushState: ${history.state}`);
 
 // Now push something on the stack
 history.pushState({name: 'Example'}, "pushState example", 'page3.html');
 
 // Now state has a value.
-console.log(`History.state after pushState: ${history.state}`);</pre>
+console.log(`History.state after pushState: ${history.state}`);
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.History.state")}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
-</ul>
+- [Working with the History API](/ko/docs/Web/API/History_API/Working_with_the_History_API)

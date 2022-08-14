@@ -3,34 +3,30 @@ title: 코드에서의 텍스쳐
 slug: Web/API/WebGL_API/By_example/Textures_from_code
 translation_of: Web/API/WebGL_API/By_example/Textures_from_code
 ---
-<div> {{IncludeSubnav("/en-US/Learn")}}</div>
+{{IncludeSubnav("/en-US/Learn")}}
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
 
-<div id="textures-from-code">
-<div class="summary">
-<p id="textures-from-code-summary">단편화된 쉐이더들과 함께 순차적으로 보여주는 간단한 데모</p>
-</div>
+단편화된 쉐이더들과 함께 순차적으로 보여주는 간단한 데모
 
-<p>{{EmbedLiveSample("textures-from-code-source",660,425)}}</p>
+{{EmbedLiveSample("textures-from-code-source",660,425)}}
 
-<div id="textures-from-code-intro">
-<h3 id="코드를_이용해_텍스쳐를_그리기">코드를 이용해 텍스쳐를 그리기</h3>
+### 코드를 이용해 텍스쳐를 그리기
 
-<p>Texturing a point sprite with calculations done per-pixel in the fragment shader.</p>
-</div>
+Texturing a point sprite with calculations done per-pixel in the fragment shader.
 
-<div id="textures-from-code-source">
-<div class="hidden">
-<pre class="brush: html">&lt;p&gt;Texture from code. Simple demonstration
-    of procedural texturing&lt;/p&gt;
-</pre>
+```html hidden
+<p>Texture from code. Simple demonstration
+    of procedural texturing</p>
+```
 
-<pre class="brush: html">&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html hidden
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -47,10 +43,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-vertex" id="vertex-shader"&gt;
+```html
+<script type="x-shader/x-vertex" id="vertex-shader">
 #version 100
 precision highp float;
 
@@ -60,10 +56,11 @@ void main() {
   gl_Position = vec4(position, 0.0, 1.0);
   gl_PointSize = 128.0;
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-fragment" id="fragment-shader"&gt;
+```html
+<script type="x-shader/x-fragment" id="fragment-shader">
 #version 100
 precision mediump float;
 void main() {
@@ -75,15 +72,15 @@ void main() {
     0.1/distanceSqrd,
     0.0, 1.0 );
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<div class="hidden">
-<pre class="brush: js">;(function(){
-</pre>
-</div>
+```js hidden
+;(function(){
+```
 
-<pre class="brush: js" id="livesample-js">"use strict"
+```js
+"use strict"
 window.addEventListener("load", setupWebGL, false);
 var gl,
   program;
@@ -138,10 +135,10 @@ if (buffer)
 if (program)
   gl.deleteProgram(program);
 }
-</pre>
+```
 
-<div class="hidden">
-<pre class="brush: js">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -159,16 +156,12 @@ if (program)
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
-</div>
+```
 
-<div class="hidden">
-<pre class="brush: js">})();
-</pre>
-</div>
+```js hidden
+})();
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code">GitHub</a>.</p>
-</div>
-</div>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}

@@ -3,43 +3,37 @@ title: Selection.toString()
 slug: Web/API/Selection/toString
 translation_of: Web/API/Selection/toString
 ---
-<div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p><strong><code>Selection.toString()</code></strong> 메소드는 selection 객체가 현재 나타내는 문자열을 반환합니다. 즉, 현재 선택된 텍스트의 문자열.</p>
+**`Selection.toString()`** 메소드는 selection 객체가 현재 나타내는 문자열을 반환합니다. 즉, 현재 선택된 텍스트의 문자열.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>str</em> =<em> sel</em>.toString()
-</pre>
+    str = sel.toString()
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string representing the selection.</p>
+A string representing the selection.
 
-<h2 id="Description" name="Description">Description</h2>
+## Description
 
-<p>This method returns the currently selected text.</p>
+This method returns the currently selected text.
 
-<p>In <a href="en/JavaScript">JavaScript</a>, this method is called automatically when a function the selection object is passed to requires a string:</p>
+In [JavaScript](en/JavaScript), this method is called automatically when a function the selection object is passed to requires a string:
 
-<pre class="brush: js">alert(window.getSelection()) // What is called
+```js
+alert(window.getSelection()) // What is called
 alert(window.getSelection().toString())  // What is actually being effectively called.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat("api.Selection.toString")}}</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

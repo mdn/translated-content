@@ -3,29 +3,29 @@ title: Document.createRange()
 slug: Web/API/Document/createRange
 translation_of: Web/API/Document/createRange
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>새 {{domxref("Range")}} 객체를 리턴합니다.</p>
+새 {{domxref("Range")}} 객체를 리턴합니다.
 
-<h2 id="Syntax" name="Syntax">문법</h2>
+## 문법
 
-<pre class="syntaxbox">range = document.createRange();
-</pre>
+    range = document.createRange();
 
-<p><code>range</code> 는 생성된 {{domxref("Range")}} 객체입니다.</p>
+`range` 는 생성된 {{domxref("Range")}} 객체입니다.
 
-<h2 id="Example" name="Example">예제</h2>
+## 예제
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
-</pre>
+```
 
-<h2 id="Notes" name="Notes">노트</h2>
+## 노트
 
-<p>Range 객체의 대부분의 메소드들은 Range 객체가 생성 된 후, 바운더리 포인트를 지정해야 사용할 수 있습니다.</p>
+Range 객체의 대부분의 메소드들은 Range 객체가 생성 된 후, 바운더리 포인트를 지정해야 사용할 수 있습니다.
 
-<h2 id="Specification">명세</h2>
+## 명세
 
 {{Specifications}}

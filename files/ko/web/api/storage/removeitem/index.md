@@ -8,62 +8,49 @@ tags:
   - 참고
 translation_of: Web/API/Storage/removeItem
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>{{domxref("Storage")}} 인터페이스의 removeItem() 메소드에 키 이름을 파라미터로 전달하면 스토리지에서 해당 키를 삭제합니다.</p>
+{{domxref("Storage")}} 인터페이스의 removeItem() 메소드에 키 이름을 파라미터로 전달하면 스토리지에서 해당 키를 삭제합니다.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox"><em>storage</em>.removeItem(<em>keyName</em>);</pre>
+    storage.removeItem(keyName);
 
-<h3 id="파라미터">파라미터</h3>
+### 파라미터
 
-<dl>
- <dt><em><u>keyName</u></em></dt>
- <dd>삭제하고자 하는 키 이름({{domxref("DOMString")}}).</dd>
-</dl>
+- _**keyName**_
+  - : 삭제하고자 하는 키 이름({{domxref("DOMString")}}).
 
-<h3 id="반환값">반환값</h3>
+### 반환값
 
-<p><em>반환값 없음.</em></p>
+_반환값 없음._
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>아래의 함수는 로컬 스토리지에 3 개의 데이터 아이템을 생성한 후 그 중 하나를 삭제합니다.</p>
+아래의 함수는 로컬 스토리지에 3 개의 데이터 아이템을 생성한 후 그 중 하나를 삭제합니다.
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
 
   localStorage.removeItem('image');
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>주</strong>: 실 사용 예제는 <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>를 참고하시기 바랍니다.</p>
-</div>
+> **참고:** **주**: 실 사용 예제는 [Web Storage Demo](https://github.com/mdn/web-storage-demo)를 참고하시기 바랍니다.
 
-<h2 id="사양">사양</h2>
+## 사양
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">사양</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#dom-storage-removeitem', 'removeItem()')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 사양                                                                                         | 상태                             | 비고 |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
+| {{SpecName('Web Storage', '#dom-storage-removeitem', 'removeItem()')}} | {{Spec2('Web Storage')}} |      |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Storage.removeItem")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Web Storage API 사용하기</a></p>
+[Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

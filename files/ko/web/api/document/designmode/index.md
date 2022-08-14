@@ -3,35 +3,34 @@ title: Document.designMode
 slug: Web/API/Document/designMode
 translation_of: Web/API/Document/designMode
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p><code>document.designMode</code>는 전체 document의 편집 가능 여부를 제어합니다. 유효한 값은 <code>"on"</code> 과 <code>"off"</code> 입니다. 명세에 따르면, 이 속성은 기본적으로 <code>"off"</code>로 설정되어 있습니다. Firefox는 이 표준 명세를 따릅니다. Chrome과 IE의 초기 버전들에서는 <code>"inherit"</code> 로 설정되어 있습니다. IE6-10 브라우저에서는, 값이 대문자로 표기됩니다.</p>
+`document.designMode`는 전체 document의 편집 가능 여부를 제어합니다. 유효한 값은 `"on"` 과 `"off"` 입니다. 명세에 따르면, 이 속성은 기본적으로 `"off"`로 설정되어 있습니다. Firefox는 이 표준 명세를 따릅니다. Chrome과 IE의 초기 버전들에서는 `"inherit"` 로 설정되어 있습니다. IE6-10 브라우저에서는, 값이 대문자로 표기됩니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var mode = document.designMode;
+```js
+var mode = document.designMode;
 document.designMode = "on";
-document.designMode = "off";</pre>
+document.designMode = "off";
+```
 
-<h2 id="Example" name="Example">Example</h2>
+## Example
 
-<p>{{HTMLElement("iframe")}}의 document를 편집 가능하게 설정합니다.</p>
+{{HTMLElement("iframe")}}의 document를 편집 가능하게 설정합니다.
 
-<pre>iframeNode.contentDocument.designMode = "on";
-</pre>
+    iframeNode.contentDocument.designMode = "on";
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" style="font-size: 2.14285714285714rem;">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Document.designMode")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>
- <li>{{domxref("HTMLElement.contentEditable")}}</li>
- <li><a href="https://msdn.microsoft.com/en-us/library/ms533720(v=vs.85).aspx">designMode property</a> on MSDN</li>
-</ul>
+- [Rich-Text Editing in Mozilla](/ko/docs/Rich-Text_Editing_in_Mozilla)
+- {{domxref("HTMLElement.contentEditable")}}
+- [designMode property](<https://msdn.microsoft.com/en-us/library/ms533720(v=vs.85).aspx>) on MSDN

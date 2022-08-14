@@ -9,54 +9,55 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getFloatFrequencyData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{domxref("AnalyserNode")}} 인터페이스의 <strong><code>getFloatFrequencyData()</code></strong> 메서드는 전달된 {{domxref("Float32Array")}} 배열 내로 현재 주파수 데이터를 복사합니다.</p>
+{{domxref("AnalyserNode")}} 인터페이스의 **`getFloatFrequencyData()`** 메서드는 전달된 {{domxref("Float32Array")}} 배열 내로 현재 주파수 데이터를 복사합니다.
 
-<p>배열 내의 각 원소는 특정한 주파수에 대한 데시벨 값을 나타냅니다. 주파수들은 0에서 샘플 레이트의 1/2까지 선형적으로 퍼져 있습니다. 예를 들자면, <code>48000</code> Hz 샘플 레이트에 대해서, 배열의 마지막 원소는 <code>24000</code> Hz에 대한 데시벨 값을 나타냅니다.</p>
+배열 내의 각 원소는 특정한 주파수에 대한 데시벨 값을 나타냅니다. 주파수들은 0에서 샘플 레이트의 1/2까지 선형적으로 퍼져 있습니다. 예를 들자면, `48000` Hz 샘플 레이트에 대해서, 배열의 마지막 원소는 `24000` Hz에 대한 데시벨 값을 나타냅니다.
 
-<p>만약 여러분이 더 높은 성능을 원하고 정밀성에 대해서는 상관하지 않는다면, {{domxref("AnalyserNode.getByteFrequencyData()")}}을 대신 사용할 수 있는데, 이는 {{domxref("Uint8Array")}}에서 동작합니다.</p>
+만약 여러분이 더 높은 성능을 원하고 정밀성에 대해서는 상관하지 않는다면, {{domxref("AnalyserNode.getByteFrequencyData()")}}을 대신 사용할 수 있는데, 이는 {{domxref("Uint8Array")}}에서 동작합니다.
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Float32Array(analyser.frequencyBinCount); // Float32Array는 frequencyBinCount와 같은 길이여야만 합니다
 
-void <em>analyser</em>.getFloatFrequencyData(dataArray); // getFloatFrequencyData()로부터 반환된 데이터로 Float32Array를 채웁니다
-</pre>
+void analyser.getFloatFrequencyData(dataArray); // getFloatFrequencyData()로부터 반환된 데이터로 Float32Array를 채웁니다
+```
 
-<h3 id="Parameters">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>array</code></dt>
- <dd>주파수 영역 데이터가 복사될 {{domxref("Float32Array")}}. 소리가 없는 모든 샘플에 대해서, 값은 <code>-<a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>입니다.<br>
- 만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.</dd>
-</dl>
+- `array`
+  - : 주파수 영역 데이터가 복사될 {{domxref("Float32Array")}}. 소리가 없는 모든 샘플에 대해서, 값은 `-Infinity`입니다.
+    만약 배열이 {{domxref("AnalyserNode.frequencyBinCount")}}보다 더 적은 요소를 가지고 있다면, 초과한 요소는 탈락됩니다. 만약 이것이 필요한 것보다 더 많은 요소를 가지고 있다면, 초과한 요소는 무시됩니다.
 
-<h3 id="Return_value">반환 값</h3>
+### 반환 값
 
-<p>없음.</p>
+없음.
 
-<h2 id="Example">예제</h2>
+## 예제
 
-<pre class="brush: js">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 // Float32Array는 frequencyBinCount와 같은 길이여야만 합니다
 const myDataArray = new Float32Array(analyser.frequencyBinCount);
 // getFloatFrequencyData()로부터 반환된 데이터로 Float32Array를 채웁니다
 analyser.getFloatFrequencyData(myDataArray);
-</pre>
+```
 
-<h3 id="Drawing_a_spectrum">스펙트럼 그리기</h3>
+### 스펙트럼 그리기
 
-<p>다음의 예제는 {{domxref("MediaElementAudioSourceNode")}}를 <code>AnalyserNode</code>에 연결하기 위한 {{domxref("AudioContext")}}의 기본 사용을 보여줍니다. 오디오가 재생되는 동안, 우리는 {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}}로 주파수 데이터를 반복적으로 수집하고 "winamp 막대그래프 스타일"을 {{htmlelement("canvas")}} 요소에 그립니다.</p>
+다음의 예제는 {{domxref("MediaElementAudioSourceNode")}}를 `AnalyserNode`에 연결하기 위한 {{domxref("AudioContext")}}의 기본 사용을 보여줍니다. 오디오가 재생되는 동안, 우리는 {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}}로 주파수 데이터를 반복적으로 수집하고 "winamp 막대그래프 스타일"을 {{htmlelement("canvas")}} 요소에 그립니다.
 
-<p>더 완벽한 응용 예제/정보를 보려면 <a href="https://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> 데모를 확인하세요 (<a href="https://github.com/mdn/voice-change-o-matic-float-data">소스 코드</a>도 보세요).</p>
+더 완벽한 응용 예제/정보를 보려면 [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) 데모를 확인하세요 ([소스 코드](https://github.com/mdn/voice-change-o-matic-float-data)도 보세요).
 
-<pre class="brush: html, highlight:[15, 17, 18, 41]">&lt;!doctype html&gt;
-&lt;body&gt;
-&lt;script&gt;
+```html
+<!doctype html>
+<body>
+<script>
 const audioCtx = new AudioContext();
 
 //오디오 소스를 생성합니다
@@ -102,7 +103,7 @@ function draw() {
   //스펙트럼을 그립니다
   const barWidth = (canvas.width / bufferLength) * 2.5;
   let posX = 0;
-  for (let i = 0; i &lt; bufferLength; i++) {
+  for (let i = 0; i &#x3C; bufferLength; i++) {
     const barHeight = (dataArray[i] + 140) * 2;
     canvasCtx.fillStyle = 'rgb(' + Math.floor(barHeight + 100) + ', 50, 50)';
     canvasCtx.fillRect(posX, canvas.height - barHeight / 2, barWidth, barHeight / 2);
@@ -111,19 +112,18 @@ function draw() {
 };
 
 draw();
-&lt;/script&gt;
-&lt;/body&gt;</pre>
+</script>
+</body>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API 사용하기</a></li>
-</ul>
+- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

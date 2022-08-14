@@ -8,63 +8,50 @@ tags:
   - 참조
 translation_of: Web/API/BatteryManager/chargingTime
 ---
-<p>{{APIRef("Battery API")}}</p>
+{{APIRef("Battery API")}}
 
-<p>몇 초 단위로, 배터리가 완전히 충전될 때까지 남은 시간량을 가리킵니다.</p>
+몇 초 단위로, 배터리가 완전히 충전될 때까지 남은 시간량을 가리킵니다.
 
-<div class="note">
-<p>반환되는 시간이 정확하더라도, 개인정보보호 정책 사유로 브라우저들이 더 큰 간격(대개 15분)으로 시간량을 반올림합니다.</p>
-</div>
+> **참고:** 반환되는 시간이 정확하더라도, 개인정보보호 정책 사유로 브라우저들이 더 큰 간격(대개 15분)으로 시간량을 반올림합니다.
 
-<pre class="syntaxbox notranslate">var <em>time</em> = battery.chargingTime</pre>
+```js
+    var time = battery.chargingTime
+```
 
-<p>반환되는 중에, 건전지가 완전히 충전될 때까지 또는 이미 완전히 충전되어 있다면 0이 될 때까지  <code>time</code> 은 몇 초 뒤에 남게 되는 시간입니다. 이는 {{domxref("BatteryManager")}} object (객체),입니다. 배터리의 전류가 방전되어 있다면, 이 값은 <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>, 즉 무한 값이 됩니다.</p>
+반환되는 중에, 건전지가 완전히 충전될 때까지 또는 이미 완전히 충전되어 있다면 0이 될 때까지 `time` 은 몇 초 뒤에 남게 되는 시간입니다. 이는 {{domxref("BatteryManager")}} object (객체),입니다. 배터리의 전류가 방전되어 있다면, 이 값은 [`Infinity`](/en-US/docs/JavaScript/Reference/Global_Objects/Infinity), 즉 무한 값이 됩니다.
 
-<h2 id="Example" name="Example">예제</h2>
+## 예제
 
-<h3 id="HTML_콘텐츠">HTML 콘텐츠</h3>
+### HTML 콘텐츠
 
-<pre class="brush: html notranslate">&lt;div id="chargingTime"&gt;(charging time unknown)&lt;/div&gt;
-</pre>
+```html
+<div id="chargingTime">(charging time unknown)</div>
+```
 
-<h3 id="자바언어_콘텐츠">자바언어 콘텐츠</h3>
+### 자바언어 콘텐츠
 
-<pre class="brush: js; highlight:[3] notranslate">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
 
    var time = battery.chargingTime;
 
    document.querySelector('#chargingTime').textContent = battery.chargingTime;
 });
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', 30) }}</p>
+{{ EmbedLiveSample('Example', '100%', 30) }}
 
-<h2 id="설명서">설명서</h2>
+## 설명서
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">사양 (설명)</th>
-   <th scope="col">상태 (설명)</th>
-   <th scope="col">관련 (설명)</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Battery API")}}</td>
-   <td>{{Spec2("Battery API")}}</td>
-   <td>최초 정의</td>
-  </tr>
- </tbody>
-</table>
+| 사양 (설명)                          | 상태 (설명)                      | 관련 (설명) |
+| ------------------------------------ | -------------------------------- | ----------- |
+| {{SpecName("Battery API")}} | {{Spec2("Battery API")}} | 최초 정의   |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.BatteryManager.chargingTime")}}</p>
+{{Compat}}
 
-<h2 id="같이_보세요">같이 보세요</h2>
+## 같이 보세요
 
-<ul>
- <li>{{domxref("BatteryManager")}}</li>
- <li>{{domxref("Navigator.getBattery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.getBattery")}}

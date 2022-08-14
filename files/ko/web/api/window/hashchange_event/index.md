@@ -9,103 +9,78 @@ tags:
 translation_of: Web/API/WindowEventHandlers/onhashchange
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}{{domxref("WindowEventHandlers")}} 믹스인의 **WindowEventHandlers.onhashchange** 속성은
 
-<div>{{domxref("WindowEventHandlers")}} 믹스인의 <strong>WindowEventHandlers.onhashchange</strong> 속성은 </div>
-</div>
+**hashchange** 이벤트를 처리하기 위한 {{event("Event_handlers", "event handler")}} 입니다.
 
-<p><strong>hashchange </strong>이벤트를 처리하기 위한 {{event("Event_handlers", "event handler")}} 입니다.</p>
+hashchange 이벤트는 윈도우의 해시가 변경되면 시작됩니다. ( {{domxref("Window.location")}} 및 {{domxref("HTMLHyperlinkElementUtils.hash")}} 참조)
 
-<p>hashchange 이벤트는 윈도우의 해시가 변경되면 시작됩니다. ( {{domxref("Window.location")}} 및 {{domxref("HTMLHyperlinkElementUtils.hash")}} 참조)</p>
+## 문법
 
-<h2 id="문법">문법</h2>
+**event handler:**
 
-<p><strong>event handler:</strong></p>
+    window.onhashchange = funcRef;
 
-<pre class="syntaxbox">window.onhashchange = funcRef;
-</pre>
+**HTML event handler:**
 
-<p><strong>HTML event handler:</strong></p>
+    <body onhashchange="funcRef();">
 
-<pre class="syntaxbox">&lt;body onhashchange="funcRef();"&gt;
-</pre>
+**event listener:**
 
-<p><strong>event listener:</strong></p>
+{{domxref("EventTarget.addEventListener()", "addEventListener()")}}를 사용하여 이벤트 리스너 추가하기
 
-<p>{{domxref("EventTarget.addEventListener()", "addEventListener()")}}를 사용하여 이벤트 리스너 추가하기</p>
+    window.addEventListener("hashchange", funcRef, false);
 
-<pre class="syntaxbox">window.addEventListener("hashchange", funcRef, false);
-</pre>
+### 매개변수
 
-<h3 id="매개변수">매개변수</h3>
+- `funcRef`
+  - : 함수에 대한 참조.
 
-<dl>
- <dt><code>funcRef</code></dt>
- <dd>함수에 대한 참조.</dd>
-</dl>
+## 예제
 
-<h2 id="예제">예제</h2>
+### event handler 사용하기
 
-<h3 id="event_handler_사용하기">event handler 사용하기</h3>
+This example uses an event handler (`window.onhashchange`) to check the new hash value whenever it changes. If it equals `#cool-feature`, the script logs a message to the console.
 
-<p>This example uses an event handler (<code>window.onhashchange</code>) to check the new hash value whenever it changes. If it equals <code>#cool-feature</code>, the script logs a message to the console.</p>
+    function locationHashChanged() {
+      if (location.hash === '#cool-feature') {
+        console.log("You're visiting a cool feature!");
+      }
+    }
 
-<pre><code>function locationHashChanged() {
-  if (location.hash === '#cool-feature') {
-    console.log("You're visiting a cool feature!");
-  }
-}
+    window.onhashchange = locationHashChanged;
 
-window.onhashchange = locationHashChanged;</code>
-</pre>
+### Using an event listener
 
-<h3 id="Using_an_event_listener">Using an event listener</h3>
+이 예제는 이벤트 리스너를 사용하여 해시가 변경 될 때마다 콘솔에 알림표시합니다.
 
-<p>이 예제는 이벤트 리스너를 사용하여 해시가 변경 될 때마다 콘솔에 알림표시합니다.</p>
+    function hashHandler() {
+      console.log('The hash has changed!');
+    }
 
-<pre><code>function hashHandler() {
-  console.log('The hash has changed!');
-}
+    window.addEventListener('hashchange', hashHandler, false);
 
-window.addEventListener('hashchange', hashHandler, false);</code></pre>
+### Overriding the hash
 
-<h3 id="Overriding_the_hash">Overriding the hash</h3>
+이 함수는 새로운 해시를 동적으로 설정하여 임의로 두 값 중 하나로 설정합니다.
 
-<p>이 함수는 새로운 해시를 동적으로 설정하여 임의로 두 값 중 하나로 설정합니다.</p>
+    function changeHash() {
+      location.hash = (Math.random() > 0.5) ? 'location1' : 'location2';
+    }
 
-<pre><code>function changeHash() {
-  location.hash = (Math.random() &gt; 0.5) ? 'location1' : 'location2';
-}</code>
-</pre>
+## hashchange 이벤트
 
-<h2 id="hashchange_이벤트">hashchange 이벤트</h2>
+`hashchange` 이벤트에는 다음과 같은 필드가 있습니다:
 
-<p><code>hashchange</code> 이벤트에는 다음과 같은 필드가 있습니다:</p>
+| Field                                                 | Type        | Description                |
+| ----------------------------------------------------- | ----------- | -------------------------- |
+| `newURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | 탐색할 새로운 URL입니다.   |
+| `oldURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | 탐색했던 이전의 URL입니다. |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">Field</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>newURL</code> {{gecko_minversion_inline("6.0")}}</td>
-   <td><code>DOMString</code></td>
-   <td>탐색할 새로운 URL입니다.</td>
-  </tr>
-  <tr>
-   <td><code>oldURL</code> {{gecko_minversion_inline("6.0")}}</td>
-   <td><code>DOMString</code></td>
-   <td>탐색했던 이전의 URL입니다.</td>
-  </tr>
- </tbody>
-</table>
+### 제2의 해결책을 위한 event.newURL 와 event.oldURL
 
-<h3 id="제2의_해결책을_위한_event.newURL_와_event.oldURL">제2의 해결책을 위한 event.newURL 와 event.oldURL</h3>
-
-<pre class="brush:js">//let this snippet run before your hashchange event binding code
+```js
+//let this snippet run before your hashchange event binding code
 if(!window.HashChangeEvent)(function(){
 	var lastURL=document.URL;
 	window.addEventListener("hashchange",function(event){
@@ -114,22 +89,20 @@ if(!window.HashChangeEvent)(function(){
 		lastURL=document.URL;
 	});
 }());
-</pre>
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.WindowEventHandlers.onhashchange")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event">hashchange</a></code> event</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/DOM/Manipulating_the_browser_history" title="DOM/Manipulating the browser history">Manipulating the browser history</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/DOM/window.history" title="DOM/window.history"><code>history.pushState()</code> and <code>history.replaceState()</code></a> methods</li>
- <li>{{domxref("WindowEventHandlers.onpopstate")}}</li>
- <li>{{domxref("HTMLHyperlinkElementUtils.hash")}}</li>
-</ul>
+- [`hashchange`](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event) event
+- [Manipulating the browser history](/ko/docs/DOM/Manipulating_the_browser_history "DOM/Manipulating the browser history")
+- [`history.pushState()` and `history.replaceState()`](/ko/docs/DOM/window.history "DOM/window.history") methods
+- {{domxref("WindowEventHandlers.onpopstate")}}
+- {{domxref("HTMLHyperlinkElementUtils.hash")}}

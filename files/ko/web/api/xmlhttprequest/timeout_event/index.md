@@ -4,54 +4,37 @@ slug: Web/API/XMLHttpRequest/timeout_event
 translation_of: Web/API/XMLHttpRequest/timeout_event
 original_slug: Web/API/XMLHttpRequest/timeout
 ---
-<div>
-<p><code><strong>timeout</strong></code> 이벤트는 미리 설정한 시간이 만료되어 진행이 종료되면 시작합니다.</p>
-</div>
+**`timeout`** 이벤트는 미리 설정한 시간이 만료되어 진행이 종료되면 시작합니다.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <td>Bubbles</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td>Cancelable</td>
-   <td>No</td>
-  </tr>
-  <tr>
-   <td>Target objects</td>
-   <td>{{domxref("XMLHttpRequest")}}</td>
-  </tr>
-  <tr>
-   <td>Interface</td>
-   <td>{{domxref("ProgressEvent")}}</td>
-  </tr>
- </tbody>
-</table>
+| Bubbles        | No                                       |
+| -------------- | ---------------------------------------- |
+| Cancelable     | No                                       |
+| Target objects | {{domxref("XMLHttpRequest")}} |
+| Interface      | {{domxref("ProgressEvent")}}     |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var client <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">XMLHttpRequest</span><span class="punctuation token">(</span><span class="punctuation token">);</span>
-client<span class="punctuation token">.</span><span class="function token">open</span><span class="punctuation token">(</span><span class="string token">"GET"</span><span class="punctuation token">,</span> <span class="string token">"http://www.example.org/example.txt"</span><span class="punctuation token">);</span>
-client<span class="punctuation token">.</span>ontimeout <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+```js
+var client = new XMLHttpRequest();
+client.open("GET", "http://www.example.org/example.txt");
+client.ontimeout = function(e) {
   console.error("Timeout!!");
-<span class="punctuation token">}</span>
-client<span class="punctuation token">.</span><span class="function token">send</span><span class="punctuation token">(</span><span class="punctuation token">);</span></code></pre>
+}
+client.send();
+```
 
-<h2 id="Inheritance">Inheritance</h2>
+## Inheritance
 
-<p><code>timeout</code> 이벤트는 {{domxref("Event")}}에서 상속받은 {{domxref("ProgressEvent")}} 인터페이스를 구현합니다. 이 인터페이스에 선언된 속성(property)과 메서드를 사용할 수 있습니다.</p>
+`timeout` 이벤트는 {{domxref("Event")}}에서 상속받은 {{domxref("ProgressEvent")}} 인터페이스를 구현합니다. 이 인터페이스에 선언된 속성(property)과 메서드를 사용할 수 있습니다.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.XMLHttpRequest.timeout_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHttpRequest")}}</li>
-</ul>
+- {{domxref("XMLHttpRequest")}}

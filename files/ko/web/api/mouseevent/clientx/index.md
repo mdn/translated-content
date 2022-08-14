@@ -3,55 +3,57 @@ title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
 translation_of: Web/API/MouseEvent/clientX
 ---
-<div>{{{APIRef("DOM 이벤트")}}<br>
-{{domxref("MouseEvent")}}} 인터페이스의 clientX 읽기 전용 속성은 이벤트가 발생한 애플리케이션 {{glossary("viewport")}}}} 내에 수평 좌표를 제공한다(페이지 내의 좌표와는 반대).<br>
-<br>
-예를 들어 뷰포트의 왼쪽 가장자리를 클릭하면 페이지가 수평으로 스크롤되는지 여부에 관계없이 항상 clientX 값이 0인 마우스 이벤트가 발생한다.</div>
+{{{APIRef("DOM 이벤트")}}
+{{domxref("MouseEvent")}}} 인터페이스의 clientX 읽기 전용 속성은 이벤트가 발생한 애플리케이션 {{glossary("viewport")}}}} 내에 수평 좌표를 제공한다(페이지 내의 좌표와는 반대).
 
-<h2 id="Syntax">Syntax</h2>
+예를 들어 뷰포트의 왼쪽 가장자리를 클릭하면 페이지가 수평으로 스크롤되는지 여부에 관계없이 항상 clientX 값이 0인 마우스 이벤트가 발생한다.
 
-<pre class="syntaxbox notranslate">var <em>x</em> = <em>instanceOfMouseEvent</em>.clientX
-</pre>
+## Syntax
 
-<h3 id="Return_value">Return value</h3>
+    var x = instanceOfMouseEvent.clientX
 
-<p>CSSOM 뷰 모듈에 의해 재정의된 이중 부동 소수점 값. 원래 이 속성은 긴 정수로 정의되었다. 자세한 내용은 "브라우저 호환성" 섹션을 참조하십시오.</p>
+### Return value
 
-<h2 id="Example">Example</h2>
+CSSOM 뷰 모듈에 의해 재정의된 이중 부동 소수점 값. 원래 이 속성은 긴 정수로 정의되었다. 자세한 내용은 "브라우저 호환성" 섹션을 참조하십시오.
 
-<p>이 예에서는 {{Event("mousemove")}}} 이벤트를 트리거할 때마다 마우스 좌표를 표시한다.</p>
+## Example
 
-<h3 id="HTML">HTML</h3>
+이 예에서는 {{Event("mousemove")}}} 이벤트를 트리거할 때마다 마우스 좌표를 표시한다.
 
-<pre class="brush: html notranslate">&lt;p&gt;위치를 보려면 마우스를 이동하십시오..&lt;/p&gt;
-&lt;p id="screen-log"&gt;&lt;/p&gt;</pre>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+```html
+<p>위치를 보려면 마우스를 이동하십시오..</p>
+<p id="screen-log"></p>
+```
 
-<pre class="brush: js notranslate">let screenLog = document.querySelector('#screen-log');
+### JavaScript
+
+```js
+let screenLog = document.querySelector('#screen-log');
 document.addEventListener('mousemove', logKey);
 
 function logKey(e) {
   screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
-{{호환("api')MouseEvent.clientX")}}</div>
+## 브라우저 호환성
 
-<h2 id="참고_항목">참고 항목</h2>
+{{Compat}}
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
- <li>{{domxref("MouseEvent.clientY","clientY")}}</li>
- <li>{{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}</li>
-</ul>
+## 참고 항목
+
+- {{ domxref("MouseEvent") }}
+- {{domxref("MouseEvent.clientY","clientY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}

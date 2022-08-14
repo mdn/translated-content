@@ -3,34 +3,33 @@ title: Node.contains()
 slug: Web/API/Node/contains
 translation_of: Web/API/Node/contains
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Node.contains()</code></strong> 메소드는 주어진 인자가 node 의 자손인지, 아닌지에 대한 {{jsxref("Boolean")}} 값을 리턴합니다.</p>
+**`Node.contains()`** 메소드는 주어진 인자가 node 의 자손인지, 아닌지에 대한 {{jsxref("Boolean")}} 값을 리턴합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">node.contains( otherNode )
-</pre>
+    node.contains( otherNode )
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>이 함수는 요소가 페이지의 body 안에 있는지 검사합니다.  <code>contains</code> 는 포괄적이므로 node 가 body 자기 자신일 경우에도 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">true</span></font> 가 반환됩니다. 만약 이걸 원하지 않는 경우에는 node 가 body 자기 자신인지 검사하여  <code>false</code> 를 반환하여 버리면 됩니다.</p>
+이 함수는 요소가 페이지의 body 안에 있는지 검사합니다. `contains` 는 포괄적이므로 node 가 body 자기 자신일 경우에도 true 가 반환됩니다. 만약 이걸 원하지 않는 경우에는 node 가 body 자기 자신인지 검사하여 `false` 를 반환하여 버리면 됩니다.
 
-<pre class="brush:js">function isInPage(node) {
+```js
+function isInPage(node) {
   return (node === document.body) ? false : document.body.contains(node);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Node.contains")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Node.compareDocumentPosition")}}</li>
- <li>{{domxref("Node.hasChildNodes")}}</li>
-</ul>
+- {{domxref("Node.compareDocumentPosition")}}
+- {{domxref("Node.hasChildNodes")}}

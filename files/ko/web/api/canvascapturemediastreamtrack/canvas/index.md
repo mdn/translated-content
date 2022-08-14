@@ -6,22 +6,22 @@ tags:
   - 캔버스
 translation_of: Web/API/CanvasCaptureMediaStreamTrack/canvas
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The {{domxref("CanvasCaptureMediaStreamTrack")}} <strong><code>canvas</code></strong>읽기 전용 속성은 프레임이 캡쳐되는{{domxref("HTMLCanvasElement")}} 를 반환한다.</p>
+The {{domxref("CanvasCaptureMediaStreamTrack")}} **`canvas`**읽기 전용 속성은 프레임이 캡쳐되는{{domxref("HTMLCanvasElement")}} 를 반환한다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox notranslate">var <var>elt</var> = <var>stream</var>.canvas;
-</pre>
+    var elt = stream.canvas;
 
-<h3 id="값">값</h3>
+### 값
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">캡처되는 프레임의 원본인 canvas를 나타내는 </span></font>HTMLCanvasElement</code> .</p>
+`캡처되는 프레임의 원본인 canvas를 나타내는 HTMLCanvasElement` .
 
-<h2 id="예시">예시</h2>
+## 예시
 
-<pre class="brush: js notranslate">// 캡처할 canvas 요소 찾기
+```js
+// 캡처할 canvas 요소 찾기
 var canvasElt = document.getElementsByTagName("canvas")[0];
 
 // stream 얻기
@@ -32,21 +32,17 @@ var stream = canvasElt.captureStream(25); // 25 FPS
 
 // stream과 연결된 canvas 가져오기
 var canvas = stream.canvas;
-</pre>
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>
-<p>{{Compat("api.CanvasCaptureMediaStreamTrack.canvas")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="더_보기">더 보기</h2>
+## 더 보기
 
-<ul>
- <li>{{domxref("HTMLCanvasElement.captureStream()")}} to create a stream to capture a given canvas element.</li>
- <li>{{HTMLElement("canvas")}}</li>
-</ul>
+- {{domxref("HTMLCanvasElement.captureStream()")}} to create a stream to capture a given canvas element.
+- {{HTMLElement("canvas")}}

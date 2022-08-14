@@ -3,35 +3,32 @@ title: Worker.postMessage()
 slug: Web/API/Worker/postMessage
 translation_of: Web/API/Worker/postMessage
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>{{domxref("Worker")}} interface의 메서드, <code><strong>postMessage()</strong></code>는 <code>Worker</code> 자신의 내부 영역으로 메시지를 전달합니다. 이 메서드는 <code>Worker</code> 자신에게 보낼 하나의 매개변수를 받습니다. 매개변수로 들어갈 데이터는 순환 참조를 포함하는 <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#transferable">structured clone</a> algorithm에 의해 다루어지는 JavaScript 객체를 포함에 어떤 값이든 들어갈 수 있습니다.</p>
+{{domxref("Worker")}} interface의 메서드, **`postMessage()`**는 `Worker` 자신의 내부 영역으로 메시지를 전달합니다. 이 메서드는 `Worker` 자신에게 보낼 하나의 매개변수를 받습니다. 매개변수로 들어갈 데이터는 순환 참조를 포함하는 [structured clone](/ko/docs/Web/Guide/DOM/The_structured_clone_algorithm "http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#transferable") algorithm에 의해 다루어지는 JavaScript 객체를 포함에 어떤 값이든 들어갈 수 있습니다.
 
-<p> <code>Worker</code>는 정보를 다시 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 메서드를 사용해 받은 정보를 산란시키는 스레드로 전달해줄 수 있다.</p>
+`Worker`는 정보를 다시 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 메서드를 사용해 받은 정보를 산란시키는 스레드로 전달해줄 수 있다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">myWorker.postMessage(aMessage, transferList);</pre>
+```js
+myWorker.postMessage(aMessage, transferList);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>aMessage</em></dt>
- <dd>worker로 전해 줄 객체;  이 매개변수는 {{domxref("DedicatedWorkerGlobalScope.onmessage")}} 이벤트 핸들러로 전해질 이벤트의 데이터 필드에 들어갈 것이다. 순환 참조를 포함하는 <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#transferable">structured clone</a> 알고리즘에 의해 다루어지는 JavaScript 객체 혹은 어떤 값이라도 이 매개변수에 들어갈 수 있다.</dd>
- <dt><em>transferList</em> {{optional_inline}}</dt>
- <dd>An optional <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable (<em>neutered</em>) in the context it was sent from and becomes available only to the worker it was sent to.</dd>
- <dd>Transferable objects are instances of classes like {{domxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects can be transferred. <code>null</code> is not an acceptable value for the <code>transferList</code>.</dd>
-</dl>
+<dl><dt><em>aMessage</em></dt><dd>worker로 전해 줄 객체; 이 매개변수는 {{domxref("DedicatedWorkerGlobalScope.onmessage")}} 이벤트 핸들러로 전해질 이벤트의 데이터 필드에 들어갈 것이다. 순환 참조를 포함하는 <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#transferable">structured clone</a> 알고리즘에 의해 다루어지는 JavaScript 객체 혹은 어떤 값이라도 이 매개변수에 들어갈 수 있다.</dd><dt><em>transferList</em> {{optional_inline}}</dt><dd>An optional <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of {{domxref("Transferable")}} objects to transfer ownership of. If the ownership of an object is transferred, it becomes unusable (<em>neutered</em>) in the context it was sent from and becomes available only to the worker it was sent to.</dd><dd>Transferable objects are instances of classes like {{domxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects can be transferred. <code>null</code> is not an acceptable value for the <code>transferList</code>.</dd></dl>
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (<code>first</code> and <code>second</code>) have their values changed, {{event("change")}} events invoke <code>postMessage()</code> to send the value of both inputs to the current worker.</p>
+The following code snippet shows the creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. When either of two form inputs (`first` and `second`) have their values changed, {{event("change")}} events invoke `postMessage()` to send the value of both inputs to the current worker.
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
+```js
+var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
@@ -42,21 +39,20 @@ second.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
-</pre>
+```
 
-<p>For a full example, see our<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 
-<div class="note">
-<p><strong>Note</strong>: <code>postMessage()</code> can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.</p>
-</div>
+> **참고:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 
-<h3 id="Transfer_Example">Transfer Example</h3>
+### Transfer Example
 
-<p>This example shows a Firefox add-on that transfers an <code>ArrayBuffer</code> from the main thread to the <code>ChromeWorker</code>, and then the <code>ChromeWorker</code> transfers it back to the main thread.</p>
+This example shows a Firefox add-on that transfers an `ArrayBuffer` from the main thread to the `ChromeWorker`, and then the `ChromeWorker` transfers it back to the main thread.
 
-<h4 id="Main_thread_code">Main thread code:</h4>
+#### Main thread code:
 
-<pre class="brush: js">var myWorker = new ChromeWorker(self.path + 'myWorker.js');
+```js
+var myWorker = new ChromeWorker(self.path + 'myWorker.js');
 
 function handleMessageFromWorker(msg) {
     console.log('incoming message from worker, msg:', msg);
@@ -86,11 +82,12 @@ myWorker.postMessage(
 );
 
 console.info('arrBuf.byteLength post transfer:', arrBuf.byteLength);
-</pre>
+```
 
-<h4 id="Worker_code">Worker code</h4>
+#### Worker code
 
-<pre class="brush: js">self.onmessage = function (msg) {
+```js
+self.onmessage = function (msg) {
     switch (msg.data.aTopic) {
         case 'do_sendWorkerArrBuff':
                 sendWorkerArrBuff(msg.data.aBuf)
@@ -107,32 +104,30 @@ function sendWorkerArrBuff(aBuf) {
 
     console.info('from worker, POST send back aBuf.byteLength:', aBuf.byteLength);
 }
-</pre>
+```
 
-<h4 id="Output_logged">Output logged</h4>
+#### Output logged
 
-<pre>arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
-arrBuf.byteLength post transfer: 0                             bootstrap.js:42
+    arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
+    arrBuf.byteLength post transfer: 0                             bootstrap.js:42
 
-from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2
+    from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2
 
-incoming message from worker, msg: message { ... }             bootstrap.js:20
-got back buf in main thread, aBuf.byteLength: 8                bootstrap.js:12
+    incoming message from worker, msg: message { ... }             bootstrap.js:20
+    got back buf in main thread, aBuf.byteLength: 8                bootstrap.js:12
 
-from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2</pre>
+    from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2
 
-<p><code>byteLength</code> goes to 0 as it is transferred. To see a full working example of this Firefox demo add-on see here: <a href="https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b">GitHub :: ChromeWorker - demo-transfer-arraybuffer</a></p>
+`byteLength` goes to 0 as it is transferred. To see a full working example of this Firefox demo add-on see here: [GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Worker.postMessage")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Worker")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("Worker")}} interface it belongs to.

@@ -9,48 +9,33 @@ tags:
   - href
 translation_of: Web/API/Document/links
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>links </code>속성은 document 내에서 <a href="/en-US/docs/Web/API/URLUtils.href">href</a> attribute 를 가지는 모든 {{HTMLElement("area")}} 과 {{HTMLElement("a")}} element 들의 collection 을 반환한다.</p>
+`links `속성은 document 내에서 [href](/ko/docs/Web/API/URLUtils.href) attribute 를 가지는 모든 {{HTMLElement("area")}} 과 {{HTMLElement("a")}} element 들의 collection 을 반환한다.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>nodeList</em> = document.links
-</pre>
+    nodeList = document.links
 
-<h2 id="Example" name="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var links = document.links;
-for(var i = 0; i &lt; links.length; i++) {
+```js
+var links = document.links;
+for(var i = 0; i < links.length; i++) {
   var linkHref = document.createTextNode(links[i].href);
   var lineBreak = document.createElement("br");
   document.body.appendChild(linkHref);
   document.body.appendChild(lineBreak);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-document-links', 'Document.links')}}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-7068919", "document.links")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                               | Comment            |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
+| {{SpecName('HTML WHATWG', '#dom-document-links', 'Document.links')}} | {{ Spec2('HTML WHATWG') }} |                    |
+| {{SpecName("DOM2 HTML", "html.html#ID-7068919", "document.links")}}     | {{Spec2("DOM2 HTML")}}         | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Document.links")}}</p>
+{{Compat}}

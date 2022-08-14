@@ -7,53 +7,53 @@ tags:
   - 웹 스토리지
 translation_of: Web/API/Storage/key
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>{{domxref("Storage")}} 인터페이스의 <code>key()</code> 메서드는 숫자 <code>n</code>이 전달되면 Storage의 <code>n</code>번째 key 이름을 반환합니다. key의 순서는 user-agent에 의해 정의되므로 이 순서에 의존성이 있어서는 안됩니다.</p>
+{{domxref("Storage")}} 인터페이스의 `key()` 메서드는 숫자 `n`이 전달되면 Storage의 `n`번째 key 이름을 반환합니다. key의 순서는 user-agent에 의해 정의되므로 이 순서에 의존성이 있어서는 안됩니다.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">var <em>aKeyName</em> = <em>storage</em>.key(<em>index</em>);</pre>
+    var aKeyName = storage.key(index);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>index</em></dt>
- <dd>반환받으려하는 key의 번호를 나타내는 정수. 이 정수는 0부터 시작하는 인덱스입니다.</dd>
-</dl>
+- _index_
+  - : 반환받으려하는 key의 번호를 나타내는 정수. 이 정수는 0부터 시작하는 인덱스입니다.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>key 이름을 포함한 {{domxref("DOMString")}} 입니다.</p>
+key 이름을 포함한 {{domxref("DOMString")}} 입니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음 함수는 localStorage 의 key들을 반복합니다.</p>
+다음 함수는 localStorage 의 key들을 반복합니다.
 
-<pre class="brush: js">function forEachKey(callback) {
-  for (var i = 0; i &lt; localStorage.length; i++) {
+```js
+function forEachKey(callback) {
+  for (var i = 0; i < localStorage.length; i++) {
     callback(localStorage.key(i));
   }
-}</pre>
+}
+```
 
-<p>다음 함수는 localStorage 의 key들을 반복하고 각 key에 설정된 값들을 가져옵니다.</p>
+다음 함수는 localStorage 의 key들을 반복하고 각 key에 설정된 값들을 가져옵니다.
 
-<pre class="brush: js">for(var i =0; i &lt; localStorage.length; i++){
+```js
+for(var i =0; i < localStorage.length; i++){
    console.log(localStorage.getItem(localStorage.key(i)));
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: 실제로 쓰이는 예제를 보려면 우리의 <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a> 를 참조하세요.</p>
-</div>
+> **참고:** 실제로 쓰이는 예제를 보려면 우리의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) 를 참조하세요.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Storage.key")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></p>
+[Using the Web Storage API](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

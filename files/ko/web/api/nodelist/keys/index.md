@@ -3,21 +3,22 @@ title: NodeList.keys()
 slug: Web/API/NodeList/keys
 translation_of: Web/API/NodeList/keys
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>NodeList.keys()</strong></code> 메서드는 이 객체에 포함된 모든 키를 통과할 수 있는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 이 키는 부호없는 정수형(<code>unsigned integer</code>) 입니다.</p>
+**`NodeList.keys()`** 메서드는 이 객체에 포함된 모든 키를 통과할 수 있는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 이 키는 부호없는 정수형(`unsigned integer`) 입니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">nodeList.keys();</pre>
+    nodeList.keys();
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("Iteration_protocols","iterator")}}를 반환합니다.</p>
+{{jsxref("Iteration_protocols","iterator")}}를 반환합니다.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;highlight:[13]">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -32,26 +33,23 @@ var list = node.childNodes;
 for(var key of list.keys()) {
    console.log(key);
 }
-</pre>
+```
 
-<p>결과는 다음과 같습니다 :</p>
+결과는 다음과 같습니다 :
 
-<pre>0
-1
-2
-</pre>
+    0
+    1
+    2
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.NodeList.keys")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

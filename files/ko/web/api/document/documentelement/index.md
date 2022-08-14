@@ -10,34 +10,35 @@ tags:
   - ㅈ
 translation_of: Web/API/Document/documentElement
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p><code><strong>Document.documentElement</strong></code> 읽기 전용 속성은 <a href="/ko/docs/Web/API/Document">문서</a>의 루트 요소를 나타내는 {{domxref("Element")}}를 반환합니다. HTML 문서를 예로 들면 {{htmlelement("html")}} 요소를 반환합니다.</p>
+**`Document.documentElement`** 읽기 전용 속성은 [문서](/ko/docs/Web/API/Document)의 루트 요소를 나타내는 {{domxref("Element")}}를 반환합니다. HTML 문서를 예로 들면 {{htmlelement("html")}} 요소를 반환합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">const <em>element</em> = document.documentElement
-</pre>
+    const element = document.documentElement
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush:js">const rootElement = document.documentElement;
+```js
+const rootElement = document.documentElement;
 const firstTier = rootElement.childNodes;
 // firstTier is a NodeList of the direct children of the root element
-// such as &lt;head&gt; and &lt;body&gt;
+// such as <head> and <body>
 
 for (const child of firstTier) {
    // do something with each direct child of the root element
-}</pre>
+}
+```
 
-<h2 id="참고">참고</h2>
+## 참고
 
-<p>모든 비어있지 않은 HTML 문서의 <code>documentElement</code>는 항상 {{htmlelement("html")}} 요소를 가리킵니다. 모든 비어있지 않은 XML 문서의 <code>documentElement</code>는 종류불문하고 해당 문서의 루트 요소를 가리킵니다.</p>
+모든 비어있지 않은 HTML 문서의 `documentElement`는 항상 {{htmlelement("html")}} 요소를 가리킵니다. 모든 비어있지 않은 XML 문서의 `documentElement`는 종류불문하고 해당 문서의 루트 요소를 가리킵니다.
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Document.documentElement")}}</p>
+{{Compat}}

@@ -10,35 +10,35 @@ tags:
   - smoothingTimeConstant
 browser-compat: api.AnalyserNode.smoothingTimeConstant
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p class="summary">{{ domxref("AnalyserNode") }} 인터페이스의 <strong><code>smoothingTimeConstant</code></strong> 속성은 마지막 분석 프레임의 에버리징(averaging) 상수를 나타내는 double 값입니다. 이것은 기본적으로 현재 버퍼와 <code>AnalyserNode</code>가 처리한 마지막 버퍼 사이의 평균이고, 더욱 매끄러운 시간에 대한 값 변화의 집합을 결과로 낳습니다.</p>
+{{ domxref("AnalyserNode") }} 인터페이스의 **`smoothingTimeConstant`** 속성은 마지막 분석 프레임의 에버리징(averaging) 상수를 나타내는 double 값입니다. 이것은 기본적으로 현재 버퍼와 `AnalyserNode`가 처리한 마지막 버퍼 사이의 평균이고, 더욱 매끄러운 시간에 대한 값 변화의 집합을 결과로 낳습니다.
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: js">var <em>smoothValue</em> = <em>analyserNode</em>.smoothingTimeConstant;
-<em>analyserNode</em>.smoothingTimeConstant = <em>newValue</em>;
-</pre>
+```js
+var smoothValue = analyserNode.smoothingTimeConstant;
+analyserNode.smoothingTimeConstant = newValue;
+```
 
-<h3 id="Value">값</h3>
+### 값
 
-<p><code>0</code>에서 <code>1</code>까지의 범위 내의 double (<code>0</code>은 시간 에버리징이 없음을 의미). 기본값은 <code>0.8</code>입니다.</p>
+`0`에서 `1`까지의 범위 내의 double (`0`은 시간 에버리징이 없음을 의미). 기본값은 `0.8`입니다.
 
-<p>만약 0이 설정된다면, 완료된 에버리징이 없는 것이지만, 1의 값은 "값을 계산하는 동안 이전과 현재 버퍼를 많이 겹치기"를 의미하는데, 이는 근본적으로 {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} 호출에 걸쳐 변화들을 매끄럽게 합니다.</p>
+만약 0이 설정된다면, 완료된 에버리징이 없는 것이지만, 1의 값은 "값을 계산하는 동안 이전과 현재 버퍼를 많이 겹치기"를 의미하는데, 이는 근본적으로 {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} 호출에 걸쳐 변화들을 매끄럽게 합니다.
 
-<p>기술적인 측면에서, 우리는 <a href="https://webaudio.github.io/web-audio-api/#blackman-window">Blackman window</a>를 적용했고 값들을 시간에 대해 매끄럽게 합니다. 기본값은 대부분의 경우에 적합합니다.</p>
+기술적인 측면에서, 우리는 [Blackman window](https://webaudio.github.io/web-audio-api/#blackman-window)를 적용했고 값들을 시간에 대해 매끄럽게 합니다. 기본값은 대부분의 경우에 적합합니다.
 
-<div class="note">
-<p><strong>참고</strong>: 만약 범위 0-1 바깥의 값이 설정된다면, <code>INDEX_SIZE_ERR</code> 예외가 발생합니다.</p>
-</div>
+> **참고:** 만약 범위 0-1 바깥의 값이 설정된다면, `INDEX_SIZE_ERR` 예외가 발생합니다.
 
-<h2 id="Example">예제</h2>
+## 예제
 
-<p>다음의 예제는 <code>AnalyserNode</code>를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 주파수 데이터를 수집하고 현재 오디오 입력의 "winamp 막대그래프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 데모를 확인하세요 (관련된 코드를 보려면 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 라인 128–205</a>를 참고하세요).</p>
+다음의 예제는 `AnalyserNode`를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 주파수 데이터를 수집하고 현재 오디오 입력의 "winamp 막대그래프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)를 참고하세요).
 
-<p>만약 여러분이 <code>smoothingTimeConstant()</code>이 가진 영향에 대해 궁금하다면, 위의 예제를 복사해서 <code>analyser.smoothingTimeConstant = 0;</code>을 대신 설정해 보세요. 값 변화가 더욱 삐걱거리는 것을 인지하실 것입니다.</p>
+만약 여러분이 `smoothingTimeConstant()`이 가진 영향에 대해 궁금하다면, 위의 예제를 복사해서 `analyser.smoothingTimeConstant = 0;`을 대신 설정해 보세요. 값 변화가 더욱 삐걱거리는 것을 인지하실 것입니다.
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
@@ -65,7 +65,7 @@ function draw() {
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -75,18 +75,17 @@ function draw() {
   }
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API 사용하기</a></li>
-</ul>
+- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -8,50 +8,34 @@ tags:
   - Web
 translation_of: Web/API/Document/visibilitychange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>visibilitychange</code> 이벤트는 브라우저 탭의 컨텐츠가 visible 또는 hidden 상태로 변화할 때 발생된다.</p>
+`visibilitychange` 이벤트는 브라우저 탭의 컨텐츠가 visible 또는 hidden 상태로 변화할 때 발생된다.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Document.onvisibilitychange", "onvisibilitychange")}}</td>
-  </tr>
- </tbody>
-</table>
+| Bubbles                | Yes                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------ |
+| Cancelable             | No                                                                                   |
+| Interface              | {{domxref("event")}}                                                         |
+| Event handler property | {{domxref("Document.onvisibilitychange", "onvisibilitychange")}} |
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush:js;">document.addEventListener("visibilitychange", function() {
+```js
+document.addEventListener("visibilitychange", function() {
   console.log( document.visibilityState );
 });
-</pre>
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Document.visibilitychange")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/DOM/Using_the_Page_Visibility_API" title="DOM/Using_the_Page_Visibility_API">Using the Page Visibility API</a></li>
- <li>{{domxref("Document.visibilityState")}}</li>
-</ul>
+- [Page Visibility API](/ko/docs/Web/API/Page_Visibility_API)
+- [Using the Page Visibility API](/ko/docs/DOM/Using_the_Page_Visibility_API "DOM/Using_the_Page_Visibility_API")
+- {{domxref("Document.visibilityState")}}

@@ -3,22 +3,20 @@ title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
 translation_of: Web/API/HTMLElement/accessKeyLabel
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLElement.accessKeyLabel</code></strong> 읽기 전용 속성은 엘리먼트의 할당된 접근키를 나타내는 {{jsxref("String")}} 를 반환합니다. 존재하지 않는 경우 빈 문자열을 반환합니다.</p>
+**`HTMLElement.accessKeyLabel`** 읽기 전용 속성은 엘리먼트의 할당된 접근키를 나타내는 {{jsxref("String")}} 를 반환합니다. 존재하지 않는 경우 빈 문자열을 반환합니다.
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><em>label</em> = <em>element</em>.accessKeyLabel
-</pre>
+    label = element.accessKeyLabel
 
-<h2 id="Example" name="Example">예시</h2>
+## 예시
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var node = document.getElementById('btn1');
+```js
+var node = document.getElementById('btn1');
 if (node.accessKeyLabel) {
   node.title += ' [' + node.accessKeyLabel + ']';
 } else {
@@ -30,28 +28,27 @@ node.onclick = function () {
   p.textContent = 'Clicked!';
   node.parentNode.appendChild(p);
 };
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button accesskey="h" title="Caption" id="btn1"&gt;Hover me&lt;/button&gt;
-</pre>
+```html
+<button accesskey="h" title="Caption" id="btn1">Hover me</button>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.HTMLElement.accessKeyLabel")}}</p>
+{{Compat}}
 
-<h2 id="함께_보기">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li>{{domxref("element.accessKey")}}</li>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/HTML/Global_attributes/accesskey">accesskey</a> 전역 속성.</li>
-</ul>
+- {{domxref("element.accessKey")}}
+- [accesskey](/ko/docs/Web/HTML/Global_attributes/accesskey) 전역 속성.

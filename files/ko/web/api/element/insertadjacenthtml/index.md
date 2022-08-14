@@ -3,62 +3,60 @@ title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
 translation_of: Web/API/Element/insertAdjacentHTML
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>insertAdjacentHTML()</code></strong> 메서드는 HTML or XML 같은 특정 텍스트를 파싱하고, 특정 위치에 DOM tree 안에 원하는 node들을 추가 한다.  이미 사용중인 element 는 다시 파싱하지 않는다. 그러므로 element 안에 존재하는 element를 건드리지 않는다. (innerHtml과는 좀 다름). innerHtml보다 작업이 덜 드므로 빠르다.</p>
+**`insertAdjacentHTML()`** 메서드는 HTML or XML 같은 특정 텍스트를 파싱하고, 특정 위치에 DOM tree 안에 원하는 node들을 추가 한다. 이미 사용중인 element 는 다시 파싱하지 않는다. 그러므로 element 안에 존재하는 element를 건드리지 않는다. (innerHtml과는 좀 다름). innerHtml보다 작업이 덜 드므로 빠르다.
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+## 구문
 
-<pre><em>element</em>.insertAdjacentHTML(<em>position</em>, <em>text</em>);</pre>
+    element.insertAdjacentHTML(position, text);
 
-<p><font face="Courier, Andale Mono, monospace">position은 아래 있는 단어만 사용 가능하다.</font></p>
+position은 아래 있는 단어만 사용 가능하다.
 
-<dl>
- <dt><code style="color: red;">'beforebegin'</code></dt>
- <dd>element 앞에 </dd>
- <dt><code style="color: green;">'afterbegin'</code></dt>
- <dd>element 안에 가장 첫번째 child</dd>
- <dt><code style="color: blue;">'beforeend'</code></dt>
- <dd>element 안에 가장 마지막 child</dd>
- <dt><code style="color: magenta;">'afterend'</code></dt>
- <dd>element 뒤에</dd>
-</dl>
+- `'beforebegin'`
+  - : element 앞에
+- `'afterbegin'`
+  - : element 안에 가장 첫번째 child
+- `'beforeend'`
+  - : element 안에 가장 마지막 child
+- `'afterend'`
+  - : element 뒤에
 
-<p><code>text(인자)는 HTML 또는 XML로 해석될 수 있는 문자열이고(html code), (DOM) tree에 삽입할 수 있다.</code></p>
+`text(인자)는 HTML 또는 XML로 해석될 수 있는 문자열이고(html code), (DOM) tree에 삽입할 수 있다.`
 
-<h3 id="position_의_예시_그림">position 의 예시 그림</h3>
+### position 의 예시 그림
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;p&gt;</code>
-&lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
-foo
-&lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;/p&gt;</code>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
+    <!-- beforebegin -->
+    <p>
+    <!-- afterbegin -->
+    foo
+    <!-- beforeend -->
+    </p>
+    <!-- afterend -->
 
-<div class="note"><strong>Note:</strong>  <code>beforebegin</code> , <code>afterend position은 element의 부모가 존재해야 하고, node가 tree 안에 있어야 한다.</code></div>
+> **참고:** `beforebegin` , `afterend position은 element의 부모가 존재해야 하고, node가 tree 안에 있어야 한다.`
 
-<h2 id="Example" name="Example">예시</h2>
+## 예시
 
-<pre class="brush: js">// &lt;div id="one"&gt;one&lt;/div&gt;
+```js
+// <div id="one">one</div>
 var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
+d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 // At this point, the new structure is:
-// &lt;div id="one"&gt;one&lt;/div&gt;&lt;div id="two"&gt;two&lt;/div&gt;</pre>
+// <div id="one">one</div><div id="two">two</div>
+```
 
-<h2 id="Specification">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Element.insertAdjacentHTML")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("Node.appendChild()")}} ((position)beforeend 와 같은 효과를 갖는다.)</li>
- <li><a class="external" href="http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post</a><span class="external"> by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.</span></li>
-</ul>
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.appendChild()")}} ((position)beforeend 와 같은 효과를 갖는다.)
+- [hacks.mozilla.org guest post](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.

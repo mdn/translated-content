@@ -3,53 +3,51 @@ title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
 translation_of: Web/API/Document/createElementNS
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>지정된 네임스페이스 URI와 적합한 이름으로 엘리먼트를 만든다.</p>
+지정된 네임스페이스 URI와 적합한 이름으로 엘리먼트를 만든다.
 
-<p>네임스페이스 URI를 지정하지 않고 엘리먼트를 만들려면 <a href="createElement" title="createElement">createElement</a>메소드를 사용하라.</p>
+네임스페이스 URI를 지정하지 않고 엘리먼트를 만들려면 [createElement](createElement)메소드를 사용하라.
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>var element</var> = <var>document</var>.createElementNS(<var>namespaceURI</var>, <var>qualifiedName</var>[, options]);
-</pre>
+```js
+var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>namespaceURI</code></dt>
- <dd>A string that specifies the <a class="external" href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI">namespace URI</a> to associate with the element. The <a href="/en-US/docs/DOM/element.namespaceURI">namespaceURI</a> property of the created element is initialized with the value of <code>namespaceURI</code>. See <a href="#Valid Namespace URIs">Valid Namespace URIs</a>.</dd>
- <dt><code>qualifiedName</code></dt>
- <dd>A string that specifies the type of element to be created. The <a href="/en-US/docs/DOM/element.nodeName">nodeName</a> property of the created element is initialized with the value of <code>qualifiedName</code>.</dd>
- <dt><code>options</code><span class="inlineIndicator optional optionalInline">Optional</span></dt>
- <dd>An optional <code>ElementCreationOptions</code> object containing a single property named <code>is</code>, whose value is the tag name for a custom element previously defined using <code>customElements.define()</code>. For backwards compatibility with previous versions of the <a class="external external-icon" href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>, some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name. See <a class="external external-icon" href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> for more information on how to use this parameter.</dd>
- <dd>The new element will be given an <code>is</code> attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.</dd>
-</dl>
+- `tagName`
+  - : A string that specifies the type of element to be created. The {{domxref("Node.nodeName", "nodeName")}} of the created element is initialized with the value of _tagName_. Don't use qualified names (like "html:a") with this method. When called on an HTML document, `createElement()` converts _tagName_ to lower case before creating the element. In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
+- `options` {{optional_inline}}
+  - : An object with the following properties:
+    - `is`
+      - : The tag name of a custom element previously defined via `customElements.define()`.
+        See [Web component example](#web_component_example) for more details.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The new <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" title="The Element interface represents an object of a Document. This interface describes methods and properties common to all kinds of elements. Specific behaviors are described in interfaces which inherit from Element but add additional functionality."><code>Element</code></a>.</p>
+The new [`Element`](/ko/docs/Web/API/Element "The Element interface represents an object of a Document. This interface describes methods and properties common to all kinds of elements. Specific behaviors are described in interfaces which inherit from Element but add additional functionality.").
 
-<h2 id="Example" name="Example"><a id="Valid Namespace URIs" name="Valid Namespace URIs">Valid Namespace URIs</a></h2>
+## Valid Namespace URIs
 
-<ul>
- <li>HTML - Use <code>http://www.w3.org/1999/xhtml</code></li>
- <li>SVG - Use <code>http://www.w3.org/2000/svg</code></li>
- <li>XBL - Use <code>http://www.mozilla.org/xbl</code></li>
- <li>XUL - Use <code>http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</code></li>
-</ul>
+- HTML - Use `http://www.w3.org/1999/xhtml`
+- SVG - Use `http://www.w3.org/2000/svg`
+- XBL - Use `http://www.mozilla.org/xbl`
+- XUL - Use `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
 
-<h2 id="Example" name="Example">Example</h2>
+## Example
 
-<p>This creates a new &lt;div&gt; element in the <a href="/en-US/docs/XHTML" title="XHTML">XHTML</a> namespace and appends it to the vbox element. Although this is not an extremely useful <a href="/en-US/docs/XUL" title="XUL">XUL</a> document, it does demonstrate the use of elements from two different namespaces within a single document:</p>
+This creates a new `<div>` element in the [XHTML](/ko/docs/XHTML "XHTML") namespace and appends it to the vbox element. Although this is not an extremely useful [XUL](/ko/docs/XUL "XUL") document, it does demonstrate the use of elements from two different namespaces within a single document:
 
-<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
-&lt;page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+```xml
+<?xml version="1.0"?>
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
       xmlns:html="http://www.w3.org/1999/xhtml"
       title="||Working with elements||"
-      onload="init()"&gt;
+      onload="init()">
 
-&lt;script type="text/javascript"&gt;&lt;![CDATA[
+<script type="text/javascript"><![CDATA[
  var container;
  var newdiv;
  var txtnode;
@@ -62,34 +60,30 @@ translation_of: Web/API/Document/createElementNS
    container.appendChild(newdiv);
  }
 
-]]&gt;&lt;/script&gt;
+]]></script>
 
- &lt;vbox id='ContainerBox' flex='1'&gt;
-  &lt;html:div&gt;
+ <vbox id='ContainerBox' flex='1'>
+  <html:div>
    The script on this page will add dynamic content below:
-  &lt;/html:div&gt;
- &lt;/vbox&gt;
+  </html:div>
+ </vbox>
 
-&lt;/page&gt;
-</pre>
+</page>
+```
 
-<div class="note">
-<p>The example given above uses inline script which is not recommended in XHTML documents. This particular example is actually an XUL document with embedded XHTML, however, the recommendation still applies.</p>
-</div>
+> **참고:** The example given above uses inline script which is not recommended in XHTML documents. This particular example is actually an XUL document with embedded XHTML, however, the recommendation still applies.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Document.createElementNS")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="createElement">document.createElement</a></li>
- <li><a href="createTextNode">document.createTextNode</a></li>
- <li><a href="../Node/namespaceURI">Node.namespaceURI</a></li>
- <li><a class="external" href="http://www.w3.org/TR/1999/REC-xml-names-19990114">Namespaces in XML</a></li>
-</ul>
+- [document.createElement](createElement)
+- [document.createTextNode](createTextNode)
+- [Node.namespaceURI](../Node/namespaceURI)
+- [Namespaces in XML](http://www.w3.org/TR/1999/REC-xml-names-19990114)

@@ -9,50 +9,44 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onsubmit
 original_slug: Web/API/GlobalEventHandlers/onsubmit
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p> </p>
+현재 창에서 폼을 제출하는 이벤트를 다루는 이벤트 핸들러
 
-<p>현재 창에서 폼을 제출하는 이벤트를 다루는 이벤트 핸들러</p>
+## 문법
 
-<h2 id="문법">문법</h2>
+    window.onsubmit = funcRef;
 
-<pre class="eval">window.onsubmit = <em>funcRef</em>;
-</pre>
+### 매개 변수
 
-<h3 id="매개_변수">매개 변수</h3>
+- `funcRef` 는 함수를 참조하는 변수이다.
 
-<ul>
- <li><code>funcRef</code> 는 함수를 참조하는 변수이다.</li>
-</ul>
+## 예제
 
-<h2 id="예제">예제</h2>
+    <html>
+    <script>
+    function reg() {
+      window.captureEvents(Event.SUBMIT);
+      window.onsubmit = hit;
+    }
 
-<pre class="eval">&lt;html&gt;
-&lt;script&gt;
-function reg() {
-  window.captureEvents(Event.SUBMIT);
-  window.onsubmit = hit;
-}
+    function hit() {
+      console.log('hit');
+    }
+    </script>
 
-function hit() {
-  console.log('hit');
-}
-&lt;/script&gt;
+    <body onload="reg();">
+    <form>
+      <input type="submit" value="submit" />
+    </form>
+    <div id="d"> </div>
+    </body>
+    </html>
 
-&lt;body onload="reg();"&gt;
-&lt;form&gt;
-  &lt;input type="submit" value="submit" /&gt;
-&lt;/form&gt;
-&lt;div id="d"&gt; &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+## 알아두기
 
-<h2 id="알아두기">알아두기</h2>
+제출 이벤트는 사용자가 폼 내부에 있는 제출 버튼(`<input type="submit"/>`)을 눌렀을 때 발생한다.
 
-<p>제출 이벤트는 사용자가 폼 내부에 있는 제출 버튼(<code>&lt;input type="submit"/&gt;</code>)을 눌렀을 때 발생한다.</p>
-
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}

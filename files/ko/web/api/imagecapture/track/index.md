@@ -11,22 +11,22 @@ tags:
   - Reference
 translation_of: Web/API/ImageCapture/track
 ---
-<div>{{APIRef("MediaStream Image")}}</div>
+{{APIRef("MediaStream Image")}}
 
-<p>{{domxref("ImageCapture")}} 인터페이스의 <strong><code>track</code></strong> 읽기 전용 속성은 {{domxref("ImageCapture.ImageCapture","ImageCapture()")}} 생성자에 제공한 {{domxref("MediaStreamTrack")}}의 참조를 반환합니다.</p>
+{{domxref("ImageCapture")}} 인터페이스의 **`track`** 읽기 전용 속성은 {{domxref("ImageCapture.ImageCapture","ImageCapture()")}} 생성자에 제공한 {{domxref("MediaStreamTrack")}}의 참조를 반환합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">const <em>mediaStreamTrack</em> = <em>imageCaptureObj</em>.track</pre>
+    const mediaStreamTrack = imageCaptureObj.track
 
-<h3 id="값">값</h3>
+### 값
 
-<p>{{domxref("MediaStreamTrack")}} 객체.</p>
+{{domxref("MediaStreamTrack")}} 객체.
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-{{Compat("api.ImageCapture.track")}}
+{{Compat}}

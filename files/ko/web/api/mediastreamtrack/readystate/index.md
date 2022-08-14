@@ -10,34 +10,30 @@ tags:
   - Reference
 translation_of: Web/API/MediaStreamTrack/readyState
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><code><strong>MediaStreamTrack.readyState</strong></code> 읽기 전용 속성은 트랙의 상태를 나타내는 열거형 값을 반환합니다.</p>
+**`MediaStreamTrack.readyState`** 읽기 전용 속성은 트랙의 상태를 나타내는 열거형 값을 반환합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">const <em>state</em> = <em>track</em>.readyState</pre>
+    const state = track.readyState
 
-<h3 id="값">값</h3>
+### 값
 
-<p>다음의 두 값 중 하나입니다.</p>
+다음의 두 값 중 하나입니다.
 
-<ul>
- <li><code>"live"</code>는 입력이 연결됐으며 트랙이 실시간 데이터를 받는 중임을 나타냅니다. 이 때, 데이터 출력은 {{domxref("MediaStreamTrack.enabled")}} 속성을 사용해 켜거나 끌 수 있습니다.</li>
- <li><code>"ended"</code>는 입력이 더 이상 데이터를 제공하지 않으며 앞으로도 새로운 데이터를 제공하지 않을 것임을 나타냅니다.</li>
-</ul>
+- `"live"`는 입력이 연결됐으며 트랙이 실시간 데이터를 받는 중임을 나타냅니다. 이 때, 데이터 출력은 {{domxref("MediaStreamTrack.enabled")}} 속성을 사용해 켜거나 끌 수 있습니다.
+- `"ended"`는 입력이 더 이상 데이터를 제공하지 않으며 앞으로도 새로운 데이터를 제공하지 않을 것임을 나타냅니다.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.MediaStreamTrack.readyState")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a></li>
- <li>{{domxref("MediaStreamTrack.onended")}}</li>
-</ul>
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)
+- {{domxref("MediaStreamTrack.onended")}}

@@ -3,44 +3,48 @@ title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
 translation_of: Web/API/BatteryManager/charging
 ---
-<div>{{APIRef("Battery API")}}</div>
+{{APIRef("Battery API")}}
 
-<p>현재 배터리가 충전중인지를 나타내는 Boolean 값 입니다.</p>
+현재 배터리가 충전중인지를 나타내는 Boolean 값 입니다.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">var <em>charging</em> = battery.charging</pre>
+```js
+    var charging = battery.charging
+```
 
-<p><code>charging</code> 변수는 배터리가 충전 중인지의 여부를 가져옵니다. 충전중일경우<code> </code><code>true</code>. 이외에는 <code>false </code>를 가리킵니다.</p>
+`charging` 변수는 배터리가 충전 중인지의 여부를 가져옵니다. 충전중일경우` ``true`. 이외에는 `false `를 가리킵니다.
 
-<h2 id="Example" name="Example">예제</h2>
+## 예제
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div id="charging"&gt;(charging state unknown)&lt;/div&gt;</pre>
+```html
+<div id="charging">(charging state unknown)</div>
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js; highlight:[3]">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
 
     var charging = battery.charging;
 
     document.querySelector('#charging').textContent = charging ;
-});</pre>
+});
+```
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.BatteryManager.charging")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{domxref("BatteryManager")}}</li>
- <li>{{domxref("Navigator.getBattery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.getBattery")}}

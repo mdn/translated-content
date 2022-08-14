@@ -3,36 +3,32 @@ title: 클릭을 통한 청소
 slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
 translation_of: Web/API/WebGL_API/By_example/Clearing_by_clicking
 ---
-<div>{{IncludeSubnav("/en-US/Learn")}}</div>
+{{IncludeSubnav("/en-US/Learn")}}
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}
 
-<div id="clearing-by-clicking">
-<div class="summary">
-<p>어떻게 유저와 그래픽 기능들과의 상호작용을 결합시킬까. 유저가 클릭을 할 때 랜덤의 색을 가진 랜더링 컨텍스트를 청소하는 것.</p>
-</div>
+어떻게 유저와 그래픽 기능들과의 상호작용을 결합시킬까. 유저가 클릭을 할 때 랜덤의 색을 가진 랜더링 컨텍스트를 청소하는 것.
 
-<p>{{EmbedLiveSample("clearing-by-clicking-source",660,425)}}</p>
+{{EmbedLiveSample("clearing-by-clicking-source",660,425)}}
 
-<div id="clearing-by-clicking-intro">
-<h3 id="랜덤_색을_가진_랜더링_컨텍스트를_청소">랜덤 색을 가진 랜더링 컨텍스트를 청소</h3>
+### 랜덤 색을 가진 랜더링 컨텍스트를 청소
 
-<p>이 간단한 예시는 어떻게 유저 인터페이스와 {{Glossary("WebGL")}}를 결합할지에 대한 설명을 제공합니다. 유저가 캔버스 혹은 버튼을 클릭할 때 마다, 캔버스는 랜덤으로 선택된 색으로 초기화됩니다.</p>
+이 간단한 예시는 어떻게 유저 인터페이스와 {{Glossary("WebGL")}}를 결합할지에 대한 설명을 제공합니다. 유저가 캔버스 혹은 버튼을 클릭할 때 마다, 캔버스는 랜덤으로 선택된 색으로 초기화됩니다.
 
-<p>어떻게 내장된 {{Glossary("WebGL")}} 기능이 이벤트 핸들러의 내부를 부르는 지를 주목하세요. </p>
-</div>
+어떻게 내장된 {{Glossary("WebGL")}} 기능이 이벤트 핸들러의 내부를 부르는 지를 주목하세요.
 
-<div id="clearing-by-clicking-source">
-<pre class="brush: html">&lt;p&gt;A very simple WebGL program that still shows some color and
-    user interaction.&lt;/p&gt;
-&lt;p&gt;You can repeatedly click the empty canvas or the button below
-    to change color.&lt;/p&gt;
-&lt;canvas id="canvas-view"&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-&lt;button id="color-switcher"&gt;Press here to switch color&lt;/button&gt;
-</pre>
+```html
+<p>A very simple WebGL program that still shows some color and
+    user interaction.</p>
+<p>You can repeatedly click the empty canvas or the button below
+    to change color.</p>
+<canvas id="canvas-view">Your browser does not seem to support
+    HTML5 canvas.</canvas>
+<button id="color-switcher">Press here to switch color</button>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -50,9 +46,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js">window.addEventListener("load", function setupWebGL (evt) {
+```js
+window.addEventListener("load", function setupWebGL (evt) {
   "use strict"
 
   // Cleaning after ourselves. The event handler removes
@@ -101,10 +98,8 @@ button {
   }
 
 }, false);
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking">GitHub</a>.</p>
-</div>
-</div>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Clearing_with_colors","Learn/WebGL/By_example/Simple_color_animation")}}

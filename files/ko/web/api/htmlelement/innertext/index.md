@@ -10,65 +10,64 @@ tags:
 translation_of: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary">{{domxref("HTMLElement")}} 인터페이스의 <code><strong>innerText</strong></code> 속성은 요소와 그 자손의 렌더링 된 텍스트 콘텐츠를 나타냅니다.</span> <code>innerText</code>는 사용자가 커서를 이용해 요소의 콘텐츠를 선택하고 클립보드에 복사했을 때 얻을 수 있는 텍스트의 근삿값을 제공합니다.</p>
+{{domxref("HTMLElement")}} 인터페이스의 **`innerText`** 속성은 요소와 그 자손의 렌더링 된 텍스트 콘텐츠를 나타냅니다. `innerText`는 사용자가 커서를 이용해 요소의 콘텐츠를 선택하고 클립보드에 복사했을 때 얻을 수 있는 텍스트의 근삿값을 제공합니다.
 
-<div class="blockIndicator note">
-<p><strong>참고:</strong> <code>innerText</code>는 {{domxref("Node.textContent")}}와 혼동하기 쉬우나 중요한 차이점을 가지고 있습니다. 기본적으로, <code>innerText</code>는 텍스트의 렌더링 후 모습을 인식할 수 있지만 <code>textContent</code>는 그렇지 않습니다.</p>
-</div>
+> **참고:** `innerText`는 {{domxref("Node.textContent")}}와 혼동하기 쉬우나 중요한 차이점을 가지고 있습니다. 기본적으로, `innerText`는 텍스트의 렌더링 후 모습을 인식할 수 있지만 `textContent`는 그렇지 않습니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre>const renderedText = <em>htmlElement</em>.innerText
-<em>htmlElement</em>.innerText = <em>string</em>
-</pre>
+    const renderedText = htmlElement.innerText
+    htmlElement.innerText = string
 
-<h3 id="값">값</h3>
+### 값
 
-<p>요소의 렌더링 된 텍스트 콘텐츠를 나타내는 {{domxref("DOMString")}}. 요소 자체가 <a href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">렌더링 중</a>이 아니라면 {{domxref("Node.textContent")}} 속성의 값과 동일합니다.</p>
+요소의 렌더링 된 텍스트 콘텐츠를 나타내는 {{domxref("DOMString")}}. 요소 자체가 [렌더링 중](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)이 아니라면 {{domxref("Node.textContent")}} 속성의 값과 동일합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음 예제는 <code>innerText</code>와 {{domxref("Node.textContent")}}를 비교합니다. <code>innerText</code>가 {{htmlElement("br")}} 태그를 인식하고, 숨겨진 요소를 무시하는 점에 주목하세요.</p>
+다음 예제는 `innerText`와 {{domxref("Node.textContent")}}를 비교합니다. `innerText`가 {{htmlElement("br")}} 태그를 인식하고, 숨겨진 요소를 무시하는 점에 주목하세요.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h3&gt;원본 요소:&lt;/h3&gt;
-&lt;p id="source"&gt;
-  &lt;style&gt;#source { color: red; }&lt;/style&gt;
-아래에서&lt;br&gt;이 글을&lt;br&gt;어떻게 인식하는지 살펴보세요.
-  &lt;span style="display:none"&gt;숨겨진 글&lt;/span&gt;
-&lt;/p&gt;
-&lt;h3&gt;textContent 결과:&lt;/h3&gt;
-&lt;textarea id="textContentOutput" rows="6" cols="30" readonly&gt;...&lt;/textarea&gt;
-&lt;h3&gt;innerText 결과:&lt;/h3&gt;
-&lt;textarea id="innerTextOutput" rows="6" cols="30" readonly&gt;...&lt;/textarea&gt;</pre>
+```html
+<h3>원본 요소:</h3>
+<p id="source">
+  <style>#source { color: red; }</style>
+아래에서<br>이 글을<br>어떻게 인식하는지 살펴보세요.
+  <span style="display:none">숨겨진 글</span>
+</p>
+<h3>textContent 결과:</h3>
+<textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
+<h3>innerText 결과:</h3>
+<textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const source = document.getElementById('source');
+```js
+const source = document.getElementById('source');
 const textContentOutput = document.getElementById('textContentOutput');
 const innerTextOutput = document.getElementById('innerTextOutput');
 
 textContentOutput.innerHTML = source.textContent;
-innerTextOutput.innerHTML = source.innerText;</pre>
+innerTextOutput.innerHTML = source.innerText;
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample("예제", 700, 450)}}</p>
+{{EmbedLiveSample("예제", 700, 450)}}
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.HTMLElement.innerText")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{domxref("HTMLElement.outerText")}}</li>
- <li>{{domxref("Element.innerHTML")}}</li>
-</ul>
+- {{domxref("HTMLElement.outerText")}}
+- {{domxref("Element.innerHTML")}}

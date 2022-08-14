@@ -4,100 +4,69 @@ slug: Web/API/Element/blur_event
 translation_of: Web/API/Element/blur_event
 original_slug: Web/Events/blur
 ---
-<p><code>blur</code> 이벤트는 엘리먼트의 포커스가 해제되었을때 발생합니다. 이 이벤트와 <code><a href="/en-US/docs/Mozilla_event_reference/focusout">focusout</a></code> 이벤트의 가장 다른점은 <code><a href="/en-US/docs/Mozilla_event_reference/focusout">focusout</a></code> 은 이벤트 버블링이 발생합니다.</p>
+`blur` 이벤트는 엘리먼트의 포커스가 해제되었을때 발생합니다. 이 이벤트와 [`focusout`](/en-US/docs/Mozilla_event_reference/focusout) 이벤트의 가장 다른점은 [`focusout`](/en-US/docs/Mozilla_event_reference/focusout) 은 이벤트 버블링이 발생합니다.
 
-<h2 id="General_info">General info</h2>
+## General info
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Specification</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur">DOM L3</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("FocusEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Bubbles</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cancelable</dt>
- <dd style="margin: 0 0 0 120px;">No</dd>
- <dt style="float: left; text-align: right; width: 120px;">Target</dt>
- <dd style="margin: 0 0 0 120px;">Element</dd>
- <dt style="float: left; text-align: right; width: 120px;">Default Action</dt>
- <dd style="margin: 0 0 0 120px;">None.</dd>
-</dl>
+- Specification
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
+- Interface
+  - : {{domxref("FocusEvent")}}
+- Bubbles
+  - : No
+- Cancelable
+  - : No
+- Target
+  - : Element
+- Default Action
+  - : None.
 
-<div class="notecard note">
-  <p>이 이벤트가 처리될때 {{domxref("Document.activeElement")}}의 값이 브라우저마다 다릅니다 ({{bug(452307)}}): IE10은 이 값을 포커스가 옮겨가는 엘리먼트에 추가하지만, 파이어폭스와 크롬은 도큐먼트의 <code>body</code>에 추가합니다.</p>
-</div>
+<div class="notecard note"><p>이 이벤트가 처리될때 {{domxref("Document.activeElement")}}의 값이 브라우저마다 다릅니다 ({{bug(452307)}}): IE10은 이 값을 포커스가 옮겨가는 엘리먼트에 추가하지만, 파이어폭스와 크롬은 도큐먼트의 <code>body</code>에 추가합니다.</p></div>
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>Event target (DOM element)</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}} (DOM element)</td>
-   <td>null</td>
-  </tr>
- </tbody>
-</table>
+| Property                                 | Type                                               | Description                                |
+| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
 
-<h2 id="이벤트_위임">이벤트 위임</h2>
+## 이벤트 위임
 
-<p>이 이벤트에 이벤트 위임을 적용하는 방법은 두가지가 있습니다 : 브라우저가 지원한다면 <code>focusout</code> 이벤트를 사용하거나,   <code><a href="/en-US/docs/DOM/element.addEventListener">addEventListener</a></code>의 "useCapture" 파라미터를 <code>true</code>로 설정하세요:</p>
+이 이벤트에 이벤트 위임을 적용하는 방법은 두가지가 있습니다 : 브라우저가 지원한다면 `focusout` 이벤트를 사용하거나, [`addEventListener`](/en-US/docs/DOM/element.addEventListener)의 "useCapture" 파라미터를 `true`로 설정하세요:
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush:html;">&lt;form id="form"&gt;
-  &lt;input type="text" placeholder="text input"&gt;
-  &lt;input type="password" placeholder="password"&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="form">
+  <input type="text" placeholder="text input">
+  <input type="password" placeholder="password">
+</form>
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js">var form = document.getElementById("form");
+```js
+var form = document.getElementById("form");
 form.addEventListener("focus", function( event ) {
   event.target.style.background = "pink";
 }, true);
 form.addEventListener("blur", function( event ) {
   event.target.style.background = "";
-}, true);</pre>
+}, true);
+```
 
-<p>{{EmbedLiveSample('Event_delegation')}}</p>
+{{EmbedLiveSample('Event_delegation')}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Window.blur_event")}}</p>
+{{Compat}}
 
-<h2 id="Related_Events">Related Events</h2>
+## Related Events
 
-<ul>
- <li>{{event("focus")}}</li>
- <li>{{event("blur")}}</li>
- <li>{{event("focusin")}}</li>
- <li>{{event("focusout")}}</li>
-</ul>
+- {{event("focus")}}
+- {{event("blur")}}
+- {{event("focusin")}}
+- {{event("focusout")}}

@@ -11,31 +11,34 @@ tags:
   - 실험적
 translation_of: Web/API/AbortController/abort
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>{{domxref("AbortController")}} 인터페이스의 <strong><code>abort()</code></strong> 메소드는 DOM 요청(Fetch 요청과 같은)이 완료되기 전에 취소한다. 이를 통해 <a href="/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch 요청</a>, 모든 응답 {{domxref("Body")}} 소비, 스트림을 취소할 수 있다.</p>
+{{domxref("AbortController")}} 인터페이스의 **`abort()`** 메소드는 DOM 요청(Fetch 요청과 같은)이 완료되기 전에 취소한다. 이를 통해 [fetch 요청](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch), 모든 응답 {{domxref("Body")}} 소비, 스트림을 취소할 수 있다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="brush: js">controller.abort();</pre>
+```js
+controller.abort();
+```
 
-<h3 id="파라미터">파라미터</h3>
+### 파라미터
 
-<p>없음.</p>
+없음.
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>Void.</p>
+Void.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음 스니펫에서는 <a href="/ko/docs/Web/API/Fetch_API">Fetch API</a>를 사용해 비디오를 다운로드하는 것을 목표로 한다.</p>
+다음 스니펫에서는 [Fetch API](/ko/docs/Web/API/Fetch_API)를 사용해 비디오를 다운로드하는 것을 목표로 한다.
 
-<p>먼저 {{domxref("AbortController.AbortController","AbortController()")}} 생성자를 사용해 컨트롤러를 {{domxref("AbortController.signal")}} 프로퍼티를 사용해 {{domxref("AbortSignal")}} 객체와 관계된 참조를 얻는다.</p>
+먼저 {{domxref("AbortController.AbortController","AbortController()")}} 생성자를 사용해 컨트롤러를 {{domxref("AbortController.signal")}} 프로퍼티를 사용해 {{domxref("AbortSignal")}} 객체와 관계된 참조를 얻는다.
 
-<p><a href="/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch">Fetch 요청</a>을 시작할 때, 요청의 옵션 객체 내부에 <code>AbortSignal</code> 옵션을 전달한다(아래의 <code>{signal}</code> 참고). 이것은 신호와 컨트롤러를 fetch 요청과 관계짓고, 아래의 두 번째 이벤트 리스너에서 보여주듯이 {{domxref("AbortController.abort()")}}를 호출하여 이를 취소할 수 있게한다.</p>
+[Fetch 요청](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch)을 시작할 때, 요청의 옵션 객체 내부에 `AbortSignal` 옵션을 전달한다(아래의 `{signal}` 참고). 이것은 신호와 컨트롤러를 fetch 요청과 관계짓고, 아래의 두 번째 이벤트 리스너에서 보여주듯이 {{domxref("AbortController.abort()")}}를 호출하여 이를 취소할 수 있게한다.
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -55,24 +58,21 @@ function fetchVideo() {
   }).catch(function(e) {
     reports.textContent = 'Download error: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>노트</strong>: <code>abort()</code>가 호출되면, <code>fetch()</code> promise는 <code dir="ltr">AbortError</code>과 함께 reject된다.</p>
-</div>
+> **참고:** **노트**: `abort()`가 호출되면, `fetch()` promise는 <code dir="ltr">AbortError</code>과 함께 reject된다.
 
-<p>동작하는 완전한 예제는 GitHub에서 확인 할 수 있다 — <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> 참고(<a href="https://mdn.github.io/dom-examples/abort-api/">라이브 실행도 확인할 수 있다</a>).</p>
+동작하는 완전한 예제는 GitHub에서 확인 할 수 있다 — [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) 참고([라이브 실행도 확인할 수 있다](https://mdn.github.io/dom-examples/abort-api/)).
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.AbortController.abort")}}</p>
+{{Compat}}
 
-<h2 id="함께_보기">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Fetch API](/ko/docs/Web/API/Fetch_API)

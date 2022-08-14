@@ -3,21 +3,22 @@ title: NodeList.entries()
 slug: Web/API/NodeList/entries
 translation_of: Web/API/NodeList/entries
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>NodeList.entries()</strong></code> 메서드는 이 객체에 포함된 모든 key/value 쌍을 통과하는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 이 값(value)은 {{domxref("Node")}} 객체입니다.</p>
+**`NodeList.entries()`** 메서드는 이 객체에 포함된 모든 key/value 쌍을 통과하는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 이 값(value)은 {{domxref("Node")}} 객체입니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">list.entries();</pre>
+    list.entries();
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("Iteration_protocols","iterator")}} 를 반환합니다.</p>
+{{jsxref("Iteration_protocols","iterator")}} 를 반환합니다.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;highlight:[12]">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -31,25 +32,23 @@ var list = node.childNodes;
 for(var entry of list.entries()) {
   console.log(entry);
 }
-</pre>
+```
 
-<p>결과는 다음과 같습니다:</p>
+결과는 다음과 같습니다:
 
-<pre>Array [ 0, &lt;p&gt; ]
-Array [ 1, #text "hey" ]
-Array [ 2, &lt;span&gt; ]</pre>
+    Array [ 0, <p> ]
+    Array [ 1, #text "hey" ]
+    Array [ 2, <span> ]
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.NodeList.entries")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

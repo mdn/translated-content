@@ -3,34 +3,30 @@ title: Hello vertex attributes
 slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 translation_of: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 ---
-<div>{{IncludeSubnav("/en-US/Learn")}}</div>
+{{IncludeSubnav("/en-US/Learn")}}
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
 
-<div id="hello-vertex-attributes">
-<div class="summary">
-<p id="hello-vertex-attributes-summary">쉐이더 프로그래밍과 유저 인터페이스를 정점 속성을 이용하여 합치기.</p>
-</div>
+쉐이더 프로그래밍과 유저 인터페이스를 정점 속성을 이용하여 합치기.
 
-<p>{{EmbedLiveSample("hello-vertex-attributes-source",660,425)}}</p>
+{{EmbedLiveSample("hello-vertex-attributes-source",660,425)}}
 
-<div id="hello-vertex-attributes-intro">
-<h3 id="Hello_World_program_in_GLSL">Hello World program in GLSL</h3>
+### Hello World program in GLSL
 
-<p>어떻게 GPU 메모리에 데이터를 저장함으로써 쉐이더 프로그램에 입력 값을 넣을 수 있을까? </p>
-</div>
+어떻게 GPU 메모리에 데이터를 저장함으로써 쉐이더 프로그램에 입력 값을 넣을 수 있을까?
 
-<div id="hello-vertex-attributes-source">
-<div class="hidden">
-<pre class="brush: html">&lt;p&gt;First encounter with attributes and sending data to GPU. Click
-on the canvas to change the horizontal position of the square.&lt;/p&gt;
-</pre>
+```html hidden
+<p>First encounter with attributes and sending data to GPU. Click
+on the canvas to change the horizontal position of the square.</p>
+```
 
-<pre class="brush: html">&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html hidden
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -47,10 +43,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-vertex" id="vertex-shader"&gt;
+```html
+<script type="x-shader/x-vertex" id="vertex-shader">
 #version 100
 precision highp float;
 
@@ -60,22 +56,22 @@ void main() {
   gl_Position = vec4(position, 0.0, 0.0, 1.0);
   gl_PointSize = 64.0;
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-fragment" id="fragment-shader"&gt;
+```html
+<script type="x-shader/x-fragment" id="fragment-shader">
 #version 100
 precision mediump float;
 void main() {
   gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<div class="hidden">
-<pre class="brush: js">;(function(){
-</pre>
-</div>
+```js hidden
+;(function(){
+```
 
 <pre class="brush: js" id="livesample-js">"use strict"
 window.addEventListener("load", setupWebGL, false);
@@ -147,8 +143,8 @@ function cleanup() {
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: js">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -166,16 +162,12 @@ function cleanup() {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
-</div>
+```
 
-<div class="hidden">
-<pre class="brush: js">})();
-</pre>
-</div>
+```js hidden
+})();
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/hello-vertex-attributes">GitHub</a>.</p>
-</div>
-</div>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-vertex-attributes).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}

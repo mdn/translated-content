@@ -3,135 +3,90 @@ title: MutationObserver
 slug: Web/API/MutationObserver
 translation_of: Web/API/MutationObserver
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code>MutationObserver</code> 는 개발자들에게 <a href="/en-US/docs/DOM">DOM</a> 변경 감시를 제공합니다. DOM3 이벤트 기술 설명서에 정의된 <a href="/en-US/docs/DOM/Mutation_events">Mutation Events</a> 를 대체합니다.</p>
+`MutationObserver` 는 개발자들에게 [DOM](/ko/docs/DOM) 변경 감시를 제공합니다. DOM3 이벤트 기술 설명서에 정의된 [Mutation Events](/ko/docs/DOM/Mutation_events) 를 대체합니다.
 
-<h2 id="생성자">생성자</h2>
+## 생성자
 
-<h3 id="MutationObserver"><code>MutationObserver()</code></h3>
+### `MutationObserver()`
 
-<p>새 DOM 변경 감시자의 인스턴스화에 대한 생성자.</p>
+새 DOM 변경 감시자의 인스턴스화에 대한 생성자.
 
-<pre class="syntaxbox">new MutationObserver(
-  function callback
-);
-</pre>
+    new MutationObserver(
+      function callback
+    );
 
 <h6 id="Parameters">Parameters</h6>
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>콜백 함수는 각 DOM 변경시 마다 호출될 것입니다. 감시자는 두 인자와 함께 이 함수를 호출할 것입니다. 첫째 인자는 오브젝트들의 배열이며, 오브젝트의 각 형식은 {{domxref("MutationRecord")}} 입니다. 둘째 인자는 이 <code>MutationObserver</code> 인스턴스 입니다.</dd>
-</dl>
+- `callback`
+  - : 콜백 함수는 각 DOM 변경시 마다 호출될 것입니다. 감시자는 두 인자와 함께 이 함수를 호출할 것입니다. 첫째 인자는 오브젝트들의 배열이며, 오브젝트의 각 형식은 {{domxref("MutationRecord")}} 입니다. 둘째 인자는 이 `MutationObserver` 인스턴스 입니다.
 
-<h2 id="인스턴스_함수들">인스턴스 함수들</h2>
+## 인스턴스 함수들
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#observe()">observe</a>( {{domxref("Node")}} target, <a href="#MutationObserverInit">MutationObserverInit</a> options );</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#disconnect()">disconnect</a>();</code></td>
-  </tr>
-  <tr>
-   <td><code>Array <a href="#takeRecords()">takeRecords</a>();</code></td>
-  </tr>
- </tbody>
-</table>
+| `void observe( {{domxref("Node")}} target, MutationObserverInit options );` |
+| -------------------------------------------------------------------------------- |
+| `void disconnect();`                                                             |
+| `Array takeRecords();`                                                           |
 
-<div class="note">
-<p><strong>주</strong>: {{domxref("Node")}}의 대상은 <a href="https://nodejs.org/en/">NodeJS</a> 와 혼동되지 말아야 합니다.</p>
-</div>
+> **참고:** **주**: {{domxref("Node")}}의 대상은 [NodeJS](https://nodejs.org/en/) 와 혼동되지 말아야 합니다.
 
-<h3 id="observe"><code>observe()</code></h3>
+### `observe()`
 
-<p>특정 노드에서 DOM 변경의 알림을 받을 수 있도록 <code>MutationObserver</code> 인스턴스를 등록.</p>
+특정 노드에서 DOM 변경의 알림을 받을 수 있도록 `MutationObserver` 인스턴스를 등록.
 
-<pre class="syntaxbox">void observe(
-  {{domxref("Node")}} target,
-  <a href="#MutationObserverInit"><code>MutationObserverInit</code></a> options
-);
-</pre>
+    void observe(
+      {{domxref("Node")}} target,
+      MutationObserverInit options
+    );
 
 <h6 id="파라미터">파라미터</h6>
 
-<dl>
- <dt><code>target</code></dt>
- <dd>DOM 변경을 감시할 {{domxref("Node")}}.</dd>
- <dt><code>options</code></dt>
- <dd>DOM 변경이 보고되어야 할 특정 <a href="#MutationObserverInit"><code>MutationObserverInit</code></a> 객체.</dd>
-</dl>
+- `target`
+  - : DOM 변경을 감시할 {{domxref("Node")}}.
+- `options`
+  - : DOM 변경이 보고되어야 할 특정 [`MutationObserverInit`](#MutationObserverInit) 객체.
 
-<div class="note">주: observer를 element에 추가하는 것은 addEventListner와 비슷하며, 여러 번 element를 관찰하더라도 차이가 나지 않습니다. element를 두번 관찰한다고해서 observe callback이 두 번 발생하지 않으며, disconnect()를 두번 실행하지 않아도 됩니다. 다시 말해서, 한번 element를 관찰하면 동일한 observer instance로 다시 관찰하더라도 아무 일이 발생하지 않습니다. 물론 callback object가 다르다면 다른 observer를 추가합니다.</div>
+> **참고:** 주: observer를 element에 추가하는 것은 addEventListner와 비슷하며, 여러 번 element를 관찰하더라도 차이가 나지 않습니다. element를 두번 관찰한다고해서 observe callback이 두 번 발생하지 않으며, disconnect()를 두번 실행하지 않아도 됩니다. 다시 말해서, 한번 element를 관찰하면 동일한 observer instance로 다시 관찰하더라도 아무 일이 발생하지 않습니다. 물론 callback object가 다르다면 다른 observer를 추가합니다.
 
-<h3 id="disconnect"><code>disconnect()</code></h3>
+### `disconnect()`
 
-<p>DOM 변경 알림을 받는 <code>MutationObserver</code> 인스턴스 중지. <a href="#observe()"><code>observe()</code></a> 재사용시까지 감시 콜백은 발동되지 않을 것입니다.</p>
+DOM 변경 알림을 받는 `MutationObserver` 인스턴스 중지. [`observe()`](<#observe()>) 재사용시까지 감시 콜백은 발동되지 않을 것입니다.
 
-<pre class="syntaxbox">void disconnect();
-</pre>
+    void disconnect();
 
-<h3 id="takeRecords"><code>takeRecords()</code></h3>
+### `takeRecords()`
 
-<p><code>MutationObserver</code> 인스턴스의 레코드 큐를 비우고 안에 든것을 반환합니다.</p>
+`MutationObserver` 인스턴스의 레코드 큐를 비우고 안에 든것을 반환합니다.
 
-<pre class="syntaxbox">Array takeRecords();
-</pre>
+    Array takeRecords();
 
 <h6 id="반환값">반환값</h6>
 
-<p>{{domxref("MutationRecord")}}들의 배열을 반환.</p>
+{{domxref("MutationRecord")}}들의 배열을 반환.
 
-<h2 id="MutationObserverInit"><code>MutationObserverInit</code></h2>
+## `MutationObserverInit`
 
-<p><code>MutationObserverInit</code> 는 다음 속성들을 가진 객체입니다:</p>
+`MutationObserverInit` 는 다음 속성들을 가진 객체입니다:
 
-<div class="note">주: 최소한 <code>childList</code>, <code>attributes</code>, 또는 <code>characterData</code>는 <code>true</code>로 설정해야합니다. 그렇지 않으면 'An invalid or ilegal string was specified' 오류가 발생합니다. </div>
+> **참고:** 주: 최소한 `childList`, `attributes`, 또는 `characterData`는 `true`로 설정해야합니다. 그렇지 않으면 'An invalid or ilegal string was specified' 오류가 발생합니다.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td class="header">속성</td>
-   <td class="header">설명</td>
-  </tr>
-  <tr>
-   <td><code>childList</code></td>
-   <td>Set to <code>true</code> if additions and removals of the target node's child elements (including text nodes) are to be observed.</td>
-  </tr>
-  <tr>
-   <td><code>attributes</code></td>
-   <td>Set to <code>true</code> if mutations to target's attributes are to be observed.</td>
-  </tr>
-  <tr>
-   <td><code>characterData</code></td>
-   <td>Set to <code>true</code> if mutations to target's data are to be observed.</td>
-  </tr>
-  <tr>
-   <td><code>subtree</code></td>
-   <td>Set to <code>true</code> if mutations to target and target's descendants are to be observed.</td>
-  </tr>
-  <tr>
-   <td><code>attributeOldValue</code></td>
-   <td>Set to <code>true</code> if <code>attributes</code> is set to <code>true</code> and target's attribute value before the mutation needs to be recorded.</td>
-  </tr>
-  <tr>
-   <td><code>characterDataOldValue</code></td>
-   <td>Set to <code>true</code> if <code>characterData</code> is set to <code>true</code> and target's data before the mutation needs to be recorded.</td>
-  </tr>
-  <tr>
-   <td><code>attributeFilter</code></td>
-   <td>Set to an array of attribute local names (without namespace) if not all attribute mutations need to be observed.</td>
-  </tr>
- </tbody>
-</table>
+| 속성                    | 설명                                                                                                                   |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `childList`             | Set to `true` if additions and removals of the target node's child elements (including text nodes) are to be observed. |
+| `attributes`            | Set to `true` if mutations to target's attributes are to be observed.                                                  |
+| `characterData`         | Set to `true` if mutations to target's data are to be observed.                                                        |
+| `subtree`               | Set to `true` if mutations to target and target's descendants are to be observed.                                      |
+| `attributeOldValue`     | Set to `true` if `attributes` is set to `true` and target's attribute value before the mutation needs to be recorded.  |
+| `characterDataOldValue` | Set to `true` if `characterData` is set to `true` and target's data before the mutation needs to be recorded.          |
+| `attributeFilter`       | Set to an array of attribute local names (without namespace) if not all attribute mutations need to be observed.       |
 
-<h2 id="사용_예">사용 예</h2>
+## 사용 예
 
-<p>다음 예제는 <a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/" rel="freelink">이 블로그 글</a>에서 발췌했습니다.</p>
+다음 예제는 [이 블로그 글](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)에서 발췌했습니다.
 
-<pre class="brush: js">// 대상 node 선택
+```js
+// 대상 node 선택
 var target = document.getElementById('some-id');
 
 // 감시자 인스턴스 만들기
@@ -149,21 +104,19 @@ observer.observe(target, config);
 
 // 나중에, 감시를 중지 가능
 observer.disconnect();
-</pre>
+```
 
-<h2 id="더_보기">더 보기</h2>
+## 더 보기
 
-<ul>
- <li><a class="external" href="http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers" rel="freelink">A brief overview</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/" rel="freelink">A more in-depth discussion</a></li>
- <li><a class="external" href="http://www.youtube.com/watch?v=eRZ4pO0gVWw" rel="freelink">A screencast by Chromium developer Rafael Weinstein</a></li>
- <li><a class="external" href="http://code.google.com/p/mutation-summary/" rel="freelink">The mutation summary library</a></li>
-</ul>
+- [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
+- [A more in-depth discussion](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [A screencast by Chromium developer Rafael Weinstein](http://www.youtube.com/watch?v=eRZ4pO0gVWw)
+- [The mutation summary library](http://code.google.com/p/mutation-summary/)
 
-<h2 id="Specifications">규격</h2>
+## 규격
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.MutationObserver")}}</p>
+{{Compat}}

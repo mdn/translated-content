@@ -10,49 +10,51 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/ondblclick
 original_slug: Web/API/GlobalEventHandlers/ondblclick
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><code><strong>ondblclick</strong></code> property는 현재 요소(element)의 onDblClick 이벤트 핸들러 코드를 돌려줍니다.</p>
+**`ondblclick`** property는 현재 요소(element)의 onDblClick 이벤트 핸들러 코드를 돌려줍니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox notranslate">element.ondblclick = function;
-</pre>
+    element.ondblclick = function;
 
-<ul>
- <li><code>function</code> 은 사용자 정의 함수이며, () 나 변수를 제외하고 생성할 수 있고 또는 아래와 같이 함수명을 선언하지 않고 생성할 수 있습니다.</li>
-</ul>
+- `function` 은 사용자 정의 함수이며, () 나 변수를 제외하고 생성할 수 있고 또는 아래와 같이 함수명을 선언하지 않고 생성할 수 있습니다.
 
-<pre class="brush: js notranslate">element.ondblclick = function() { console.log("ondblclick event detected!"); };
-</pre>
+```js
+element.ondblclick = function() { console.log("ondblclick event detected!"); };
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음 예제는 더블클릭의 위치를 기록합니다.</p>
+다음 예제는 더블클릭의 위치를 기록합니다.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Double click anywhere in this example.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Double click anywhere in this example.</p>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">let log = document.getElementById('log');
+```js
+let log = document.getElementById('log');
 
 document.ondblclick = logDoubleClick;
 
 function logDoubleClick(e) {
   log.textContent = `Position: (${e.clientX}, ${e.clientY})`;
-}</pre>
+}
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample("예제")}}</p>
+{{EmbedLiveSample("예제")}}
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>{{Compat("api.GlobalEventHandlers.ondblclick")}}</div>
+{{Compat}}

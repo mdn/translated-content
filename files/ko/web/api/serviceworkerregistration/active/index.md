@@ -3,39 +3,36 @@ title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
 translation_of: Web/API/ServiceWorkerRegistration/active
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>{{domxref("ServiceWorkerRegistration")}} 인터페이스의 <strong><code>active</code></strong> 속성은 {{domxref("ServiceWorker.state")}} 가 <code style="font-style: normal;">activating</code> 또는 <code style="font-style: normal;">activated</code> 상태인 서비스 워커를 반환한다. 이 속성은 <code style="font-style: normal;">null</code> 로 초기 설정되어 있다.</p>
+{{domxref("ServiceWorkerRegistration")}} 인터페이스의 **`active`** 속성은 {{domxref("ServiceWorker.state")}} 가 `activating` 또는 `activated` 상태인 서비스 워커를 반환한다. 이 속성은 `null` 로 초기 설정되어 있다.
 
-<p>클라이언트들의 URL이 등록 scope 내에 있을 경우 active 워커는 {{domxref("ServiceWorkerClient")}} 를 제어한다. ({{domxref("ServiceWorkerContainer.register")}} 가 처음으로 호출될 때 그 <code>scope</code> 옵션은 정의된다.)</p>
+클라이언트들의 URL이 등록 scope 내에 있을 경우 active 워커는 {{domxref("ServiceWorkerClient")}} 를 제어한다. ({{domxref("ServiceWorkerContainer.register")}} 가 처음으로 호출될 때 그 `scope` 옵션은 정의된다.)
 
-<div class="note">
-<p><strong>Note</strong>: 이 기능은 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 에서 사용 가능하다.</p>
-</div>
+> **참고:** 이 기능은 [Web Workers](/ko/docs/Web/API/Web_Workers_API) 에서 사용 가능하다.
 
-<h2 id="Syntax" name="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox" style="font-size: 14px;">sw = ServiceWorker.active
-</pre>
+```js
+sw = ServiceWorker.active
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>현재 <code>activating</code> 또는 <code>activated</code> 상태에 있다면, {{domxref("ServiceWorker")}} 객체.</p>
+현재 `activating` 또는 `activated` 상태에 있다면, {{domxref("ServiceWorker")}} 객체.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.ServiceWorkerRegistration.active")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/ko/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/ko/docs/Web/Guide/Performance/Using_web_workers)

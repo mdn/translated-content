@@ -10,29 +10,31 @@ tags:
   - fftSize
 browser-compat: api.AnalyserNode.fftSize
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p class="summary">{{domxref("AnalyserNode")}} 인터페이스의 <strong><code>fftSize</code></strong> 속성은 unsigned long 값이고 주파수 영역 데이터를 얻기 위해 <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">고속 푸리에 변환</a>(FFT)을 수행할 때 사용될 샘플에서의 window 사이즈를 나타냅니다.</p>
+{{domxref("AnalyserNode")}} 인터페이스의 **`fftSize`** 속성은 unsigned long 값이고 주파수 영역 데이터를 얻기 위해 [고속 푸리에 변환](https://en.wikipedia.org/wiki/Fast_Fourier_transform)(FFT)을 수행할 때 사용될 샘플에서의 window 사이즈를 나타냅니다.
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: js">var <em>curValue</em> = <em>analyserNode</em>.fftSize;
-<em>analyserNode</em>.fftSize = <em>newValue</em>;
-</pre>
+```js
+var curValue = analyserNode.fftSize;
+analyserNode.fftSize = newValue;
+```
 
-<h3 id="Value">값</h3>
+### 값
 
-<p>FFT의 window 사이즈를 나타내는 샘플의 수로 주어지는 unsigned 정수입니다. 값이 높을수록 주파수 영역의 자세함이 커지는 결과를 낳으나 시간 영역에서의 자세함은 떨어집니다.</p>
+FFT의 window 사이즈를 나타내는 샘플의 수로 주어지는 unsigned 정수입니다. 값이 높을수록 주파수 영역의 자세함이 커지는 결과를 낳으나 시간 영역에서의 자세함은 떨어집니다.
 
-<p>반드시 <math><semantics><msup><mn>2</mn><mn>5</mn></msup><annotation encoding="TeX">2^5</annotation></semantics></math>와 <math><semantics><msup><mn>2</mn><mn>15</mn></msup><annotation encoding="TeX">2^15</annotation></semantics></math> 사이의 2의 제곱이여야만 합니다. 즉 다음 중 하나여야 합니다: <code>32</code>, <code>64</code>, <code>128</code>, <code>256</code>, <code>512</code>, <code>1024</code>, <code>2048</code>, <code>4096</code>, <code>8192</code>, <code>16384</code>, 그리고 <code>32768</code>. 기본값은 <code>2048</code>입니다.</p>
+반드시 <math><semantics><msup><mn>2</mn><mn>5</mn></msup><annotation encoding="TeX">2^5</annotation></semantics></math>와 <math><semantics><msup><mn>2</mn><mn>15</mn></msup><annotation encoding="TeX">2^15</annotation></semantics></math> 사이의 2의 제곱이여야만 합니다. 즉 다음 중 하나여야 합니다: `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, `16384`, 그리고 `32768`. 기본값은 `2048`입니다.
 
-<p class="note"><strong>참고</strong>: 만약 값이 2의 제곱이 아니거나 이 명시된 범위의 바깥에 있다면, <code>IndexSizeError</code>라는 이름의 {{domxref("DOMException")}}이 발생합니다.</p>
+> **참고:** 만약 값이 2의 제곱이 아니거나 이 명시된 범위의 바깥에 있다면, `IndexSizeError`라는 이름의 {{domxref("DOMException")}}이 발생합니다.
 
-<h2 id="Example">예제</h2>
+## 예제
 
-<p>다음의 예제는 <code>AnalyserNode</code>를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 시간 영역의 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 데모를 확인하세요 (관련된 코드를 보려면 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 라인 128–205</a>를 참고하세요).</p>
+다음의 예제는 `AnalyserNode`를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 시간 영역의 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 데모를 확인하세요 (관련된 코드를 보려면 [app.js 라인 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)를 참고하세요).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -61,7 +63,7 @@ function draw() {
       var sliceWidth = WIDTH * 1.0 / bufferLength;
       var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i < bufferLength; i++) {
 
         var v = dataArray[i] / 128.0;
         var y = v * HEIGHT/2;
@@ -79,18 +81,17 @@ function draw() {
       canvasCtx.stroke();
     };
 
-    draw();</pre>
+    draw();
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API 사용하기</a></li>
-</ul>
+- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

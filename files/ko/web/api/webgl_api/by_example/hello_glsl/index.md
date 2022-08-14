@@ -3,37 +3,31 @@ title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
 translation_of: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
-<div>{{IncludeSubnav("/en-US/Learn")}}</div>
+{{IncludeSubnav("/en-US/Learn")}}
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
 
-<div id="hello-glsl">
-<div class="summary">
-<p id="hello-glsl-summary">매우 간단한 색이 있는 단단한 사각형을 그려주는 쉐이더 프로그램</p>
-</div>
+매우 간단한 색이 있는 단단한 사각형을 그려주는 쉐이더 프로그램
 
-<div class="note">
-<p><strong>Note</strong>: 이 예시는 대부분 모든 최신의 데스크탑 브라우저에서 동작합니다. 하지만 어떤 모바일 혹은 낡은 브라우저에서는 동작하지 않습니다. 만약 캔버스가 공백인 상태로 남아있다면, 당신은 정확히 똑같은 것을 그리는 다음 예시의 결과를 확인하실 수 있습니다. 하지만 다음으로 넘어가기 전에, 여기서 설명과 코드를 읽고 가는 것을 기억하세요</p>
-</div>
+> **참고:** 이 예시는 대부분 모든 최신의 데스크탑 브라우저에서 동작합니다. 하지만 어떤 모바일 혹은 낡은 브라우저에서는 동작하지 않습니다. 만약 캔버스가 공백인 상태로 남아있다면, 당신은 정확히 똑같은 것을 그리는 다음 예시의 결과를 확인하실 수 있습니다. 하지만 다음으로 넘어가기 전에, 여기서 설명과 코드를 읽고 가는 것을 기억하세요
 
-<p>{{EmbedLiveSample("hello-glsl-source",660,425)}}</p>
+{{EmbedLiveSample("hello-glsl-source",660,425)}}
 
-<div id="hello-glsl-intro">
-<h3 id="Hello_World_프로그램_in_GLSL">Hello World 프로그램 in GLSL</h3>
+### Hello World 프로그램 in GLSL
 
-<p>매우 간단한 첫 쉐이더 프로그램</p>
-</div>
+매우 간단한 첫 쉐이더 프로그램
 
-<div id="hello-glsl-source">
-<div class="hidden">
-<pre class="brush: html">&lt;p&gt;Hello World! Hello GLSL!&lt;/p&gt;
-</pre>
+```html hidden
+<p>Hello World! Hello GLSL!</p>
+```
 
-<pre class="brush: html">&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html hidden
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<pre class="brush: css">body {
+```css hidden
+body {
   text-align : center;
 }
 canvas {
@@ -50,30 +44,30 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-vertex" id="vertex-shader"&gt;
+```html
+<script type="x-shader/x-vertex" id="vertex-shader">
 #version 100
 void main() {
   gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
   gl_PointSize = 64.0;
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: html">&lt;script type="x-shader/x-fragment" id="fragment-shader"&gt;
+```html
+<script type="x-shader/x-fragment" id="fragment-shader">
 #version 100
 void main() {
   gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<div class="hidden">
-<pre class="brush: js">;(function(){
-</pre>
-</div>
+```js hidden
+;(function(){
+```
 
 <pre class="brush: js" id="livesample-js">"use strict"
 window.addEventListener("load", setupWebGL, false);
@@ -134,8 +128,8 @@ if (program)
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: js">function getRenderingContext() {
+```js hidden
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -153,16 +147,12 @@ if (program)
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
-</div>
+```
 
-<div class="hidden">
-<pre class="brush: js">})();
-</pre>
-</div>
+```js hidden
+})();
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl">GitHub</a>.</p>
-</div>
-</div>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl).
 
-<p>{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}

@@ -3,21 +3,16 @@ title: Document.referrer
 slug: Web/API/Document/referrer
 translation_of: Web/API/Document/referrer
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}링크를 통해 현재 페이지로 이동 시킨, 전 페이지의 URI 정보를 반환.
 
-<div>링크를 통해 현재 페이지로 이동 시킨, 전 페이지의 URI 정보를 반환.</div>
+## Syntax
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+    string = document.referrer;
 
-<pre class="syntaxbox"><var>string</var> = document.referrer;
-</pre>
+## Notes
 
-<h2 id="Notes" name="Notes">Notes</h2>
+페이지로 바로 접근하였을 경우 이 값은 빈 문자열을 반환함.(링크를 통해서 온것이 아닌, 예를 들면, 북마크를 통해서 이동했을 경우). 문자열만을 반환하기 때문에, 참조 페이지(referring page)에 대한 DOM 액세스가 제공되지 않음.
 
-<p>페이지로 바로 접근하였을 경우 이 값은 빈 문자열을 반환함.(링크를 통해서 온것이 아닌, 예를 들면, 북마크를 통해서 이동했을 경우). 문자열만을 반환하기 때문에,  참조 페이지(referring page)에 대한 DOM  액세스가 제공되지 않음. </p>
+## Specification
 
-<h2 id="Specification" name="Specification">Specification</h2>
-
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140">DOM Level 2: referrer</a></li>
-</ul>
+- [DOM Level 2: referrer](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)

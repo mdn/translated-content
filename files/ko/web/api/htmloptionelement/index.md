@@ -3,54 +3,48 @@ title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
 translation_of: Web/API/HTMLOptionElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLOptionElement</code></strong> interface represents {{HTMLElement("option")}} elements and inherits all classes and methods of the {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLOptionElement`** interface represents {{HTMLElement("option")}} elements and inherits all classes and methods of the {{domxref("HTMLElement")}} interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLOptionElement.defaultSelected")}}</dt>
- <dd>Is a {{domxref("Boolean")}} that contains the initial value of the {{htmlattrxref("selected", "option")}} HTML attribute, indicating whether the option is selected by default or not.</dd>
- <dt>{{domxref("HTMLOptionElement.disabled")}}</dt>
- <dd>Is a {{domxref("Boolean")}} representing the value of the {{htmlattrxref("disabled", "option")}} HTML attribute, which indicates that the option is unavailable to be selected. An option can also be disabled if it is a child of an {{HTMLElement("optgroup")}} element that is disabled.</dd>
- <dt>{{domxref("HTMLOptionElement.form")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("HTMLFormElement")}} representing the same value as the <code>form</code> of the corresponding {{HTMLElement("select")}} element, if the option is a descendant of a {{HTMLElement("select")}} element, or null if none is found.</dd>
- <dt>{{domxref("HTMLOptionElement.index")}} {{readonlyInline}}</dt>
- <dd>Is a <code>long</code> representing the position of the option within the list of options it belongs to, in tree-order. If the option is not part of a list of options, like when it is part of the {{HTMLElement("datalist")}} element, the value is <code>0</code>.</dd>
- <dt>{{domxref("HTMLOptionElement.label")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the value of the {{htmlattrxref("label", "option")}} HTML attribute, which provides a label for the option. If this attribute isn't specifically set, reading it returns the element's text content.</dd>
- <dt>{{domxref("HTMLOptionElement.selected")}}</dt>
- <dd>Is a {{domxref("Boolean")}} that indicates whether the option is currently selected.</dd>
- <dt>{{domxref("HTMLOptionElement.text")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that contains the text content of the element.</dd>
- <dt>{{domxref("HTMLOptionElement.value")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the value of the {{htmlattrxref("value", "option")}} HTML attribute, if it exists; otherwise reflects value of the {{domxref("Node.textContent")}} property.</dd>
-</dl>
+- {{domxref("HTMLOptionElement.defaultSelected")}}
+  - : Is a {{domxref("Boolean")}} that contains the initial value of the {{htmlattrxref("selected", "option")}} HTML attribute, indicating whether the option is selected by default or not.
+- {{domxref("HTMLOptionElement.disabled")}}
+  - : Is a {{domxref("Boolean")}} representing the value of the {{htmlattrxref("disabled", "option")}} HTML attribute, which indicates that the option is unavailable to be selected. An option can also be disabled if it is a child of an {{HTMLElement("optgroup")}} element that is disabled.
+- {{domxref("HTMLOptionElement.form")}} {{readonlyInline}}
+  - : Is a {{domxref("HTMLFormElement")}} representing the same value as the `form` of the corresponding {{HTMLElement("select")}} element, if the option is a descendant of a {{HTMLElement("select")}} element, or null if none is found.
+- {{domxref("HTMLOptionElement.index")}} {{readonlyInline}}
+  - : Is a `long` representing the position of the option within the list of options it belongs to, in tree-order. If the option is not part of a list of options, like when it is part of the {{HTMLElement("datalist")}} element, the value is `0`.
+- {{domxref("HTMLOptionElement.label")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMString")}} that reflects the value of the {{htmlattrxref("label", "option")}} HTML attribute, which provides a label for the option. If this attribute isn't specifically set, reading it returns the element's text content.
+- {{domxref("HTMLOptionElement.selected")}}
+  - : Is a {{domxref("Boolean")}} that indicates whether the option is currently selected.
+- {{domxref("HTMLOptionElement.text")}}
+  - : Is a {{domxref("DOMString")}} that contains the text content of the element.
+- {{domxref("HTMLOptionElement.value")}}
+  - : Is a {{domxref("DOMString")}} that reflects the value of the {{htmlattrxref("value", "option")}} HTML attribute, if it exists; otherwise reflects value of the {{domxref("Node.textContent")}} property.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>Option()</dt>
- <dd>Is a constructor creating an <code>HTMLOptionElement</code> object. It has four values: the text to display, <code>text</code>, the value associated, <code>value</code>, the value of <code>defaultSelected</code>, and the value of <code>selected</code>. The last three values are optional.</dd>
-</dl>
+- Option()
+  - : Is a constructor creating an `HTMLOptionElement` object. It has four values: the text to display, `text`, the value associated, `value`, the value of `defaultSelected`, and the value of `selected`. The last three values are optional.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.HTMLOptionElement")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("option")}}.</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("option")}}.
