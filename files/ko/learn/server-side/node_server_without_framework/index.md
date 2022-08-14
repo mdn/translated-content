@@ -4,22 +4,21 @@ slug: Learn/Server-side/Node_server_without_framework
 translation_of: Learn/Server-side/Node_server_without_framework
 original_slug: Node_server_without_framework
 ---
-<h2 id="소개">소개</h2>
+## 소개
 
-<p>물론 <a href="https://nodejs.org/en/">Node</a> 는 서버를 만들고 실행하는데 도움을 주는 많은 프레임워크가 있습니다, 예를 들면:</p>
+물론 [Node](https://nodejs.org/en/) 는 서버를 만들고 실행하는데 도움을 주는 많은 프레임워크가 있습니다, 예를 들면:
 
-<ul>
- <li><a href="http://expressjs.com/">Express</a>: 가장 많이 사용하는 프레임워크</li>
- <li><a href="https://www.totaljs.com/">Total</a>: 올인원 통합 프레임워크로, 다른 프레임워크나 모듈에 의존성이 없습니다.</li>
-</ul>
+- [Express](http://expressjs.com/): 가장 많이 사용하는 프레임워크
+- [Total](https://www.totaljs.com/): 올인원 통합 프레임워크로, 다른 프레임워크나 모듈에 의존성이 없습니다.
 
-<p>하지만, 모든 것에 꼭 맞는 사이즈가 없듯이, 개발자들은 어떤 다른 의존성 없이 스스로 서버를 만들어야 할 때가 있습니다.</p>
+하지만, 모든 것에 꼭 맞는 사이즈가 없듯이, 개발자들은 어떤 다른 의존성 없이 스스로 서버를 만들어야 할 때가 있습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음은 짧고 간단한 정적 파일 nodejs 서버입니다.</p>
+다음은 짧고 간단한 정적 파일 nodejs 서버입니다.
 
-<pre class="brush: js">var http = require('http');
+```js
+var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
@@ -72,4 +71,5 @@ http.createServer(function (request, response) {
     });
 
 }).listen(8125);
-console.log('Server running at http://127.0.0.1:8125/');</pre>
+console.log('Server running at http://127.0.0.1:8125/');
+```
