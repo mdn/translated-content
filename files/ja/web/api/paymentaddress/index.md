@@ -1,6 +1,7 @@
 ---
 title: PaymentAddress
 slug: Web/API/PaymentAddress
+page-type: web-api-interface
 tags:
   - API
   - Interface
@@ -9,69 +10,56 @@ tags:
   - PaymentRequest
   - Reference
   - paymentAddress
+browser-compat: api.PaymentAddress
+l10n:
+  sourceCommit: da3e8fe86e7ae4bb7342c6ccb56188b25f9be55c
 ---
-<div>{{APIRef("Payment Request API")}}{{SecureContext_Header}}</div>
+{{APIRef("Payment Request API")}}{{SecureContext_Header}} {{Deprecated_header}}{{Non-standard_header}}
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/API/Payment_Request_API">Payment Request API</a> の <strong><code>PaymentAddress</code></strong> インターフェースは、配送先または支払い先住所情報を保存するために使用されます。</span></p>
+**`PaymentAddress`** は[支払いリクエスト API](/en-US/docs/Web/API/Payment_Request_API) のインターフェイスで、配送先または支払い先住所情報を保存するために使用されます。
 
-<p>万国郵便連合の Web サイトの <a href="http://www.upu.int/en/activities/addressing/s42-standard.html">Addressing S42 標準資料</a>を参照すると役立つ場合があります。この資料には、住所の国際標準に関する情報が記載されています。</p>
+万国郵便連合のウェブページにある [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) という、郵便宛名の国際標準に関する資料を参照すると便利かもしれません。
 
-<h2 id="Properties">プロパティ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref('PaymentAddress.addressLine')}} {{readonlyinline}}</dt>
- <dd>他のプロパティに含まれていないアドレスの各行を提供する {{domxref("DOMString")}} のオブジェクトの配列。正確なサイズと内容は国や場所によって異なります。例 : 通りの名前、家の番号、アパートの番号、地方の配達ルート、説明の説明、私書箱の番号など。</dd>
- <dt>{{domxref('PaymentAddress.country')}} {{readonlyinline}} </dt>
- <dd>{{interwiki("wikipedia", "ISO-3166-1 alpha-2")}} 標準を使用して、アドレスが配置されている国を指定する {{domxref("DOMString")}}。文字列は常に正規の大文字形式で指定されます。有効な国の値の例：<code>"US"</code>、<code>"GB"</code>、<code>"CN</code>"、<code>"JP"</code>。</dd>
- <dt>{{domxref('PaymentAddress.city')}} {{readonlyinline}}</dt>
- <dd>アドレスの都市または町の部分を含む {{domxref("DOMString")}}。</dd>
- <dt>{{domxref('PaymentAddress.dependentLocality')}} {{readonlyinline}}</dt>
- <dd>都市内の依存する地域またはサブ地域を示し {{domxref("DOMString")}}。例 : 近隣、自治区、地区、または英国の依存する地域。</dd>
- <dt>{{domxref('PaymentAddress.organization')}} {{readonlyinline}}</dt>
- <dd>支払い先住所にある組織、会社、会社、または機関の名前を指定する {{domxref("DOMString")}}。</dd>
- <dt>{{domxref('PaymentAddress.phone')}} {{readonlyinline}}</dt>
- <dd>受信者または連絡担当者の電話番号を指定する {{domxref("DOMString")}}。</dd>
- <dt>{{domxref('PaymentAddress.postalCode')}} {{readonlyinline}}</dt>
- <dd>管轄区域がメールルーティングに使用するコードを指定する {{domxref("DOMString")}}。例 : 米国の郵便番号やインドの PIN コード。</dd>
- <dt>{{domxref('PaymentAddress.recipient')}} {{readonlyinline}}</dt>
- <dd>支払い先住所の受取人、購入者、または連絡先の名前を示す {{domxref("DOMString")}}。</dd>
- <dt>{{domxref('PaymentAddress.region')}} {{readonlyinline}}</dt>
- <dd>国の最上位の行政区画 (州、県、州、都道府県など) を含む {{domxref("DOMString")}}。</dd>
- <dt>{{domxref('PaymentAddress.regionCode')}} {{readonlyinline}}</dt>
- <dd>アドレスの地域を指定する {{domxref("DOMString")}}。<a href="https://en.wikipedia.org/wiki/ISO_3166-2">ISO3166-2</a> の国の行政区画名の "コード要素" として表されます。例 : オーストラリアのクイーンズランド州の "QLD"、カリフォルニア州の "CA" など。</dd>
- <dt>{{domxref('PaymentAddress.sortingCode')}} {{readonlyinline}}</dt>
- <dd>フランスで使用されているような郵便ソートコードを提供する {{domxref("DOMString")}}。</dd>
-</dl>
+- {{domxref('PaymentAddress.addressLine')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 他のプロパティに含まれていない住所の各行を提供する文字列の配列。正確なサイズと内容は国や場所によって異なります。例: 通り名、住居番号、アパートの番号、地方の配達ルート、説明の説明、私書箱の番号など。
+- {{domxref('PaymentAddress.country')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 文字列で、 [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 標準を使用して、住所が配置されている国を指定します。この文字列は常に正規の大文字形式で指定されます。有効な `country` の値の例: `"US"`, `"GB"`, `"CN"`, `"JP"`
+- {{domxref('PaymentAddress.city')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 文字列で、住所の都市名または町名の部分を持ちます。
+- {{domxref('PaymentAddress.dependentLocality')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 文字列で、都市に従属する地区またはサブ地区を示します。例: neighborhood, borough, district, イギリスの dependent locality
+- {{domxref('PaymentAddress.organization')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 文字列で、支払い先住所にある組織、事業所、会社、機関などの名前を指定します。
+- {{domxref('PaymentAddress.phone')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 文字列で、受領者または連絡担当者の電話番号を指定します。
+- {{domxref('PaymentAddress.postalCode')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 文字列で、郵便物の配送経路として管轄の国が使用するコードを指定する文字列です。例: 米国の ZIP コード、インドの PIN コード、日本の郵便番号など。
+- {{domxref('PaymentAddress.recipient')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 文字列で、支払い先住所の受取人、購入者、または連絡先の名前を示します。
+- {{domxref('PaymentAddress.region')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 文字列で、国の最上位の行政区画 (州、都道府県など) を含みます。
+- {{domxref('PaymentAddress.sortingCode')}} {{readonlyinline}} {{deprecated_inline}}
+  - : 文字列で、フランスで使用されているような郵便ソートコードを提供します。
 
-<div class="note">
-<p><strong>注記 :</strong> 値が指定されていないプロパティには、空の文字列が含まれています。</p>
-</div>
+> **Note:** 値が指定されていないプロパティには、空の文字列が含まれています。
 
-<h3 id="Obsolete_properties">廃止されたプロパティ</h3>
+## メソッド
 
-<p>次のプロパティは廃止されたため、使用しないでください。ただし、一部のブラウザバージョンでは引き続き存在する可能性があります。</p>
+- {{domxref('PaymentAddress.toJSON()')}} {{deprecated_inline}}
+  - : `PaymentAddress` オブジェクトのプロパティの JSON 表現を返す標準のシリアライザー。
 
-<dl>
- <dt>{{domxref("PaymentAddress.languageCode")}} {{ReadOnlyInline}} {{obsolete_inline}}</dt>
- <dd>アドレスの言語コードを示す {{domxref("DOMString")}}。これは、アドレスが指定されている言語を識別し、アドレスの表示のローカライズを支援することを目的としています。 </dd>
-</dl>
+## 例
 
-<h2 id="Methods">メソッド</h2>
+次の例では、 {{domxref("PaymentRequest.PaymentRequest","PaymentRequest()")}} コンストラクターを使用して、新しい支払い要求を作成しています。これは、 3 つのオブジェクトを引数して取ります。 1 つは支払いに使用できる支払い方法の詳細を含むオブジェクト、 1 つは実際の注文の詳細（購入アイテムや配送オプションなど）が入ったオブジェクト、もう 1 つは追加のオプションを含むオプションオブジェクトです。
 
-<dl>
- <dt>{{domxref('PaymentAddress.toJSON()')}}</dt>
- <dd><code>PaymentAddress</code> オブジェクトのプロパティの JSON 表現を返す標準のシリアライザー。</dd>
-</dl>
+これら 3 つのうち最初のもの（下の例では `supportedInstruments`）は、支払い方法で定義された構造に準拠しなければならない `data` プロパティを保有しています。
 
-<h2 id="Examples">例</h2>
-
-<p>次の例では、{{domxref("PaymentRequest.PaymentRequest","PaymentRequest()")}} コンストラクターを使用して、新しい支払い要求を作成します。これは、パラメーターとして 3 つのオブジェクトを取ります。1 つは支払いに使用できる支払い方法の詳細を含み、もう 1 つは実際の注文の詳細を含みます (購入したアイテムおよび配送オプションとして)、および追加のオプションを含むオプションのオブジェクト。</p>
-
-<p>これら 3 つのうち最初のもの (以下の例では <code>supportedInstruments</code>) には、{{domxref("BasicCardRequest")}} ディクショナリで定義された構造に準拠する必要があるデータプロパティが含まれています。</p>
-
-<pre class="brush:js">const supportedInstruments = [
+```js
+const supportedInstruments = [
   {
-    supportedMethods: "basic-card",
+    supportedMethods: "https://example.com/pay",
   },
 ];
 
@@ -108,39 +96,10 @@ async function doPaymentRequest() {
   await response.complete(result);
 }
 doPaymentRequest();
-</pre>
+```
 
-<p>{{domxref("PaymentRequest.show()")}} を使用して支払いフローがトリガーされ、Promise が正常に解決されると、履行された Promise (上記の <code>instrumentResponse</code>) 内で使用可能な {{domxref("PaymentResponse")} オブジェクトには、応答の詳細を含む {{domxref("PaymentResponse.details")}} プロパティが含まれます。 これは、<code>BasicCardResponse</code> ディクショナリで定義された構造に準拠している必要があり、次のようになります :</p>
+{{domxref("PaymentRequest.show()")}} を使用して支払いフローが起動され、プロミスが正常に解決されると、満たされたプロミス（上記の `instrumentResponse`）から利用できる {{domxref("PaymentResponse")}} オブジェクトは、レスポンスの詳細を含む {{domxref("PaymentResponse.details")}} プロパティを保有します。これは、支払い方法の提供者によって定義された構造に適合していなければなりません。
 
-<pre class="brush: js">{
-  "cardNumber' : '9999999999999999",
-  "cardholderName' : 'Pat Straw",
-  "cardSecurityCode" : "999",
-  "expiryMonth" : "07",
-  "expiryYear" : "2021",
-  "billingAddress" : {
-    "country" : "GB",
-    // etc. billing address is a <a href="/en-US/docs/Web/API/PaymentAddress">PaymentAddress</a> object
-  }
-}</pre>
+## ブラウザーの互換性
 
-<h2 id="Specifications">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Payment','#paymentaddress-interface','PaymentAddress')}}</td>
-   <td>{{Spec2('Payment')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("api.PaymentAddress")}}</p>
+{{Compat}}
