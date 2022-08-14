@@ -8,47 +8,42 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.LN10</code></strong> 속성은 10의 자연로그 값, 약 2.302의 값을 가집니다.</p>
+**`Math.LN10`** 속성은 10의 자연로그 값, 약 2.302의 값을 가집니다.
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2.302</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2.302</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-ln10.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-ln10.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## 설명
 
+`LN10`은 `Math`의 정적 속성이므로, 사용자가 생성한 `Math` 객체의 속성으로 접근할 수 없고 항상 `Math.LN10`을 사용해야 합니다. (`Math`는 생성자가 아닙니다)
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+## 예제
 
-<h2 id="설명">설명</h2>
+### `Math.LN10` 사용하기
 
-<p><code>LN10</code>은 <code>Math</code>의 정적 속성이므로, 사용자가 생성한 <code>Math</code> 객체의 속성으로 접근할 수 없고 항상 <code>Math.LN10</code>을 사용해야 합니다. (<code>Math</code>는 생성자가 아닙니다)</p>
+다음 함수는 10의 자연 로그 값을 반환합니다.
 
-<h2 id="예제">예제</h2>
-
-<h3 id="Math.LN10_사용하기"><code>Math.LN10</code> 사용하기</h3>
-
-<p>다음 함수는 10의 자연 로그 값을 반환합니다.</p>
-
-<pre class="brush:js">function getNatLog10() {
+```js
+function getNatLog10() {
   return Math.LN10;
 }
 
 getNatLog10(); // 2.302585092994046
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Math.LN10")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}

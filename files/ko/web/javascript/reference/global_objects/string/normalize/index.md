@@ -11,52 +11,43 @@ tags:
   - Unicode
 translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>normalize()</code></strong> 메서드는 주어진 문자열을 유니코드 정규화 방식(Unicode Normalization Form)에 따라 정규화된 형태로 반환합니다. 만약 주어진 값이 문자열이 아닐 경우에는 우선 문자열로 변환 후 정규화합니다.</p>
+**`normalize()`** 메서드는 주어진 문자열을 유니코드 정규화 방식(Unicode Normalization Form)에 따라 정규화된 형태로 반환합니다. 만약 주어진 값이 문자열이 아닐 경우에는 우선 문자열로 변환 후 정규화합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/string-normalize.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-normalize.html")}}
 
+## 구문
 
+    str.normalize([form])
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><code><var>str</var>.normalize([<var>form</var>])</code></pre>
+- `form`
+  - : 유니코드 정규화 방식을 지정합니다. `"NFC"`, `"NFD"`, `"NFKC"`, `"NFKD"` 중 하나이며, 생략되거나 {{jsxref("undefined")}} 일 경우 `"NFC"`가 사용됩니다.\* `NFC` — 정규형 정준 결합(Normalization Form Canonical Composition).
+    - `NFD` — 정규형 정준 분해(Normalization Form Canonical Decomposition).
+    - `NFKC` — 정규형 호환성 결합(Normalization Form Compatibility Composition).
+    - `NFKD` — 정규형 호환성 분해(Normalization Form Compatibility Decomposition).
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>form</code></dt>
- <dd>유니코드 정규화 방식을 지정합니다. <code>"NFC"</code>, <code>"NFD"</code>, <code>"NFKC"</code>, <code>"NFKD"</code> 중 하나이며, 생략되거나 {{jsxref("undefined")}} 일 경우 <code>"NFC"</code>가 사용됩니다.
- <ul>
-  <li><code>NFC</code> — 정규형 정준 결합(Normalization Form Canonical Composition).</li>
-  <li><code>NFD</code> — 정규형 정준 분해(Normalization Form Canonical Decomposition).</li>
-  <li><code>NFKC</code> — 정규형 호환성 결합(Normalization Form Compatibility Composition).</li>
-  <li><code>NFKD</code> — 정규형 호환성 분해(Normalization Form Compatibility Decomposition).</li>
- </ul>
- </dd>
-</dl>
+주어진 문자열을 유니코드 정규화 방식에 따라 정규화된 문자열로 반환합니다.
 
-<h3 id="반환_값">반환 값</h3>
+### 예외
 
-<p>주어진 문자열을 유니코드 정규화 방식에 따라 정규화된 문자열로 반환합니다.</p>
+- {{jsxref("RangeError")}}
+  - : `form`이 위에서 명시된 값 중 하나가 아닐 경우 {{jsxref("RangeError")}} 에러가 발생합니다.
 
-<h3 id="예외">예외</h3>
+## 설명
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd><code>form</code>이 위에서 명시된 값 중 하나가 아닐 경우 {{jsxref("RangeError")}} 에러가 발생합니다.</dd>
-</dl>
+`normalize()` 메서드는 문자열을 유니코드 정규화 방식에 따라 정규화된 형태로 반환합니다. 문자열의 값 자체에는 영향을 주지 않습니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p><code>normalize()</code> 메서드는 문자열을 유니코드 정규화 방식에 따라 정규화된 형태로 반환합니다. 문자열의 값 자체에는 영향을 주지 않습니다.</p>
+### `normalize()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="normalize()_사용하기"><code>normalize()</code> 사용하기</h3>
-
-<pre class="brush: js">// 원본 문자열
+```js
+// 원본 문자열
 
 // U+1E9B: LATIN SMALL LETTER LONG S WITH DOT ABOVE
 // U+0323: COMBINING DOT BELOW
@@ -91,11 +82,12 @@ str.normalize('NFKC'); // '\u1E69'
 // U+0323: COMBINING DOT BELOW
 // U+0307: COMBINING DOT ABOVE
 str.normalize('NFKD'); // '\u0073\u0323\u0307'
-</pre>
+```
 
-<h3 id="한글에_normalize()_사용하기">한글에 <code>normalize()</code> 사용하기</h3>
+### 한글에 `normalize()` 사용하기
 
-<pre class="brush: js">// 결합된 한글 문자열
+```js
+// 결합된 한글 문자열
 
 // U+D55C: 한(HANGUL SYLLABLE HAN)
 // U+AE00: 글(HANGUL SYLLABLE GEUL)
@@ -124,20 +116,18 @@ var third = second.normalize('NFC'); // '\uD55C\uAE00'
 
 
 console.log(second === third); // 같은 글자처럼 보이지만 false를 출력합니다.
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.String.normalize")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="http://www.unicode.org/reports/tr15/">Unicode Standard Annex #15, Unicode Normalization Forms</a></li>
- <li><a href="http://en.wikipedia.org/wiki/Unicode_equivalence">Unicode equivalence</a></li>
- <li><a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C_%EC%A0%95%EA%B7%9C%ED%99%94">유니코드 정규화</a></li>
-</ul>
+- [Unicode Standard Annex #15, Unicode Normalization Forms](http://www.unicode.org/reports/tr15/)
+- [Unicode equivalence](http://en.wikipedia.org/wiki/Unicode_equivalence)
+- [유니코드 정규화](https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C_%EC%A0%95%EA%B7%9C%ED%99%94)

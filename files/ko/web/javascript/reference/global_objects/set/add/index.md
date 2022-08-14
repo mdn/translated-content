@@ -10,54 +10,49 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>add()</strong></code> 메서드는 <code>Set</code> 개체의 맨 뒤에 주어진 <code>value</code>의 새 요소를 추가합니다.</p>
+**`add()`** 메서드는 `Set` 개체의 맨 뒤에 주어진 `value`의 새 요소를 추가합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
+## 구문
 
+    mySet.add(value);
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><em>mySet</em>.add(<em>value</em>);</pre>
+- `value`
+  - : `Set` 객체에 추가할 요소의 값.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>value</code></dt>
- <dd><code>Set</code> 객체에 추가할 요소의 값.</dd>
-</dl>
+`Set` 객체.
 
-<h3 id="반환_값">반환 값</h3>
+## 예제
 
-<p><code>Set</code> 객체.</p>
+### `add` 메서드 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="add_메서드_사용하기"><code>add</code> 메서드 사용하기</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 
 mySet.add(1);
 mySet.add(5).add('어떤 문자열'); // 계속 붙일 수 있음
 
 console.log(mySet);
 // Set [1, 5, "어떤 문자열"]
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Set.add")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
- <li>{{jsxref("Set.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}
+- {{jsxref("Set.prototype.has()")}}

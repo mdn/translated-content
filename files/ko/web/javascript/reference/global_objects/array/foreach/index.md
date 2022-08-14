@@ -10,83 +10,68 @@ tags:
   - Referennce
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>forEach()</strong></code> 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.</p>
+**`forEach()`** 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/array-foreach.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
 
+## 구문
 
+```js
+    arr.forEach(callback(currentvalue[, index[, array]])[, thisArg])
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><var>arr</var>.forEach(<var>callback(currentvalue[, index[, array]])</var>[, <var>thisArg</var>])</pre>
+- `callback`
+  - : 각 요소에 대해 실행할 함수. 
+    다음 세 가지 매개변수를 받습니다.
+    - `currentValue`
+      - : 처리할 현재 요소.
+    - `index` 
+      - : 처리할 현재 요소의 인덱스.<
+    - `array` 
+      - : `forEach()`를 호출한 배열.
+- `thisArg`
+  - : `callback`을 실행할 때 `this`로 사용할 값.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>각 요소에 대해 실행할 함수. 다음 세 가지 매개변수를 받습니다.</dd>
- <dd>
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>처리할 현재 요소.</dd>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>처리할 현재 요소의 인덱스.</dd>
-  <dt><code>array</code> {{optional_inline}}</dt>
-  <dd><code>forEach()</code>를 호출한 배열.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code> {{optional_inline}}</dt>
- <dd><code>callback</code>을 실행할 때 <code>this</code>로 사용할 값.</dd>
-</dl>
+{{jsxref("undefined")}}.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>{{jsxref("undefined")}}.</p>
+`forEach()`는 주어진 `callback`을 배열에 있는 각 요소에 대해 오름차순으로 한 번씩 실행합니다. 삭제했거나 초기화하지 않은 인덱스 속성에 대해서는 실행하지 않습니다. (예: 희소 배열)
 
-<h2 id="설명">설명</h2>
+`callback`은 다음 세 인수와 함께 호출됩니다.
 
-<p><code>forEach()</code>는 주어진 <code>callback</code>을 배열에 있는 각 요소에 대해 오름차순으로 한 번씩 실행합니다. 삭제했거나 초기화하지 않은 인덱스 속성에 대해서는 실행하지 않습니다. (예: 희소 배열)</p>
+- **요소 값**
+- **요소 인덱스**
+- **순회 중인 배열**
 
-<p><code>callback</code>은 다음 세 인수와 함께 호출됩니다.</p>
+`thisArg` 매개변수를 `forEach()`에 제공한 경우 `callback`을 호출할 때 전달해 `this`의 값으로 쓰입니다. 전달하지 않으면 `undefined`를 사용하며, 최종 `this` 값은 {{jsxref("Operators/this", "함수의 <code>this</code>를 결정하는 평소 규칙", "", 0)}}을 따릅니다.
 
-<ul>
- <li><strong>요소 값</strong></li>
- <li><strong>요소 인덱스</strong></li>
- <li><strong>순회 중인 배열</strong></li>
-</ul>
+`forEach()`로 처리할 요소의 범위는 최초 `callback` 호출 전에 설정됩니다. `forEach()` 호출을 시작한 뒤 배열에 추가한 요소는 `callback`이 방문하지 않습니다. 배열의 기존 요소값이 바뀐 경우, `callback`에 전달하는 값은 `forEach()`가 요소를 방문한 시점의 값을 사용합니다. 방문하기 전에 삭제한 요소는 방문하지 않습니다.
 
-<p><code>thisArg</code> 매개변수를 <code>forEach()</code>에 제공한 경우 <code>callback</code>을 호출할 때 전달해 <code>this</code>의 값으로 쓰입니다. 전달하지 않으면 <code>undefined</code>를 사용하며, 최종 <code>this</code> 값은 {{jsxref("Operators/this", "함수의 <code>this</code>를 결정하는 평소 규칙", "", 0)}}을 따릅니다.</p>
+`forEach()`는 각 배열 요소에 대해 한 번씩 `callback` 함수를 실행합니다. {{jsxref("Array.prototype.map()", "map()")}}과 {{jsxref("Array.prototype.reduce()", "reduce()")}}와는 달리 {{jsxref("undefined")}}를 반환하기 때문에 메서드 체인의 중간에 사용할 수 없습니다. 대표적인 사용처는 메서드 체인 끝에서 부작용(side effect)을 실행하는 겁니다.
 
-<p><code>forEach()</code>로 처리할 요소의 범위는 최초 <code>callback</code> 호출 전에 설정됩니다. <code>forEach()</code> 호출을 시작한 뒤 배열에 추가한 요소는 <code>callback</code>이 방문하지 않습니다. 배열의 기존 요소값이 바뀐 경우, <code>callback</code>에 전달하는 값은 <code>forEach()</code>가 요소를 방문한 시점의 값을 사용합니다. 방문하기 전에 삭제한 요소는 방문하지 않습니다.</p>
+`forEach()`는 배열을 변형하지 않습니다. 그러나 `callback`이 변형할 수는 있습니다.
 
-<p><code>forEach()</code>는 각 배열 요소에 대해 한 번씩 <code>callback</code> 함수를 실행합니다. {{jsxref("Array.prototype.map()", "map()")}}과 {{jsxref("Array.prototype.reduce()", "reduce()")}}와는 달리 {{jsxref("undefined")}}를 반환하기 때문에 메서드 체인의 중간에 사용할 수 없습니다. 대표적인 사용처는 메서드 체인 끝에서 부작용(side effect)을 실행하는 겁니다.</p>
+> **참고:** 예외를 던지지 않고는 `forEach()`를 중간에 멈출 수 없습니다. 중간에 멈춰야 한다면 `forEach()`가 적절한 방법이 아닐지도 모릅니다.다음 방법으로는 조기에 반복을 종료할 수 있습니다.\* 간단한 [for](/ko/docs/Web/JavaScript/Reference/Statements/for) 반복문
+>
+> - [for...of](/ko/docs/Web/JavaScript/Reference/Statements/for...of), [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 반복문
+> - {{jsxref("Array.prototype.every()")}}
+> - {{jsxref("Array.prototype.some()")}}
+> - {{jsxref("Array.prototype.find()")}}
+> - {{jsxref("Array.prototype.findIndex()")}}다른 배열 메서드 {{jsxref("Array.prototype.every()", "every()")}}, {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()", "find()")}}, {{jsxref("Array.prototype.findIndex()", "findIndex()")}}는 배열 요소를 판별 함수에 전달하고, 그 결과의 참/거짓 여부에 따라 반복의 종료 여부를 결정합니다.
 
-<p><code>forEach()</code>는 배열을 변형하지 않습니다. 그러나 <code>callback</code>이 변형할 수는 있습니다.</p>
+## 예제
 
-<div class="note">
-<p>예외를 던지지 않고는 <code>forEach()</code>를 중간에 멈출 수 없습니다. 중간에 멈춰야 한다면 <code>forEach()</code>가 적절한 방법이 아닐지도 모릅니다.</p>
+### 초기화하지 않은 값의 반복 생략
 
-<p>다음 방법으로는 조기에 반복을 종료할 수 있습니다.</p>
-
-<ul>
- <li>간단한 <a href="/ko/docs/Web/JavaScript/Reference/Statements/for">for</a> 반복문</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a>, <a href="/ko/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> 반복문</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
-</ul>
-
-<p>다른 배열 메서드 {{jsxref("Array.prototype.every()", "every()")}}, {{jsxref("Array.prototype.some()", "some()")}}, {{jsxref("Array.prototype.find()", "find()")}}, {{jsxref("Array.prototype.findIndex()", "findIndex()")}}는 배열 요소를 판별 함수에 전달하고, 그 결과의 참/거짓 여부에 따라 반복의 종료 여부를 결정합니다.</p>
-</div>
-
-<h2 id="예제">예제</h2>
-
-<h3 id="초기화하지_않은_값의_반복_생략">초기화하지 않은 값의 반복 생략</h3>
-
-<pre class="brush: js">const arraySparse = [1,3,,7]
+```js
+const arraySparse = [1,3,,7]
 let numCallbackRuns = 0
 
 arraySparse.forEach(function(element){
@@ -100,34 +85,34 @@ console.log("numCallbackRuns: ", numCallbackRuns)
 // 3
 // 7
 // numCallbackRuns: 3
-// comment: as you can see the missing value between 3 and 7 didn't invoke callback function.</pre>
+// comment: as you can see the missing value between 3 and 7 didn't invoke callback function.
+```
 
-<h3 id="for_반복문을_forEach로_바꾸기"><code>for</code> 반복문을 <code>forEach()</code>로 바꾸기</h3>
+### `for` 반복문을 `forEach()`로 바꾸기
 
-<pre class="brush: js">const items = ['item1', 'item2', 'item3'];
+```js
+const items = ['item1', 'item2', 'item3'];
 const copy = [];
 
 // 이전
-for (let i=0; i&lt;items.length; i++) {
+for (let i=0; i<items.length; i++) {
   copy.push(items[i]);
 }
 
 // 이후
 items.forEach(function(item){
   copy.push(item);
-});</pre>
+});
+```
 
-<h3 id="배열_콘텐츠_출력">배열 콘텐츠 출력</h3>
+### 배열 콘텐츠 출력
 
-<div class="blockIndicator note">
-<p><strong>참고:</strong> {{domxref("console.table()")}}을 사용하면 배열 내용물을 서식에 맞춰 출력할 수 있습니다.</p>
+> **참고:** **참고:** {{domxref("console.table()")}}을 사용하면 배열 내용물을 서식에 맞춰 출력할 수 있습니다.다음 예제는 `forEach()`를 사용한 다른 방법을 소개합니다.
 
-<p>다음 예제는 <code>forEach()</code>를 사용한 다른 방법을 소개합니다.</p>
-</div>
+다음 코드는 배열의 각 요소에 대해 한 줄을 기록합니다:
 
-<p>다음 코드는 배열의 각 요소에 대해 한 줄을 기록합니다:</p>
-
-<pre class="brush:js">function logArrayElements(element, index, array) {
+```js
+function logArrayElements(element, index, array) {
   console.log('a[' + index + '] = ' + element);
 }
 
@@ -138,13 +123,14 @@ items.forEach(function(item){
 // a[0] = 2
 // a[1] = 5
 // a[3] = 9
-</pre>
+```
 
-<h3 id="thisArg_사용"><code>thisArg</code> 사용</h3>
+### `thisArg` 사용
 
-<p>다음 예제는 배열의 각 항목에서 객체의 속성을 갱신합니다:</p>
+다음 예제는 배열의 각 항목에서 객체의 속성을 갱신합니다:
 
-<pre class="brush:js">function Counter() {
+```js
+function Counter() {
   this.sum = 0
   this.count = 0
 }
@@ -161,21 +147,21 @@ obj.add([2, 5, 9])
 obj.count
 // 3
 obj.sum
-// 16</pre>
+// 16
+```
 
-<p><code>thisArg</code> 매개변수(<code>this</code>)를 <code>forEach()</code>에 제공했기에, <code>callback</code>은 전달받은 <code>this</code>의 값을 자신의 <code>this</code> 값으로 사용할 수 있습니다. </p>
+`thisArg` 매개변수(`this`)를 `forEach()`에 제공했기에, `callback`은 전달받은 `this`의 값을 자신의 `this` 값으로 사용할 수 있습니다.
 
-<div class="note">
-<p><a href="/ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션">화살표 함수 표현식</a>을 사용하여 함수 인수를 전달하는 경우 <code>thisArg</code> 매개변수는 화살표 함수가 {{jsxref("Operators/this", "this")}} 값을 렉시컬(lexical, 정적) 바인딩하기에 생략될 수 있습니다.</p>
-</div>
+> **참고:** [화살표 함수 표현식](/ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션)을 사용하여 함수 인수를 전달하는 경우 `thisArg` 매개변수는 화살표 함수가 {{jsxref("Operators/this", "this")}} 값을 렉시컬(lexical, 정적) 바인딩하기에 생략될 수 있습니다.
 
-<h3 id="객체_복사_함수">객체 복사 함수</h3>
+### 객체 복사 함수
 
-<p>다음 코드는 주어진 객체의 사본을 만듭니다.</p>
+다음 코드는 주어진 객체의 사본을 만듭니다.
 
-<p>객체 사본을 만드는 방법에는 여러가지가 있습니다, 다음은 그 중 한 방법으로, ECMAScript 5 <code>Object.*</code> 메타 속성 함수를 사용하여 <code>Array.prototype.forEach()</code>가 작동하는 법을 설명하기 위한 코드입니다.</p>
+객체 사본을 만드는 방법에는 여러가지가 있습니다, 다음은 그 중 한 방법으로, ECMAScript 5 `Object.*` 메타 속성 함수를 사용하여 `Array.prototype.forEach()`가 작동하는 법을 설명하기 위한 코드입니다.
 
-<pre class="brush: js">function copy(obj) {
+```js
+function copy(obj) {
   const copy = Object.create(Object.getPrototypeOf(obj))
   const propNames = Object.getOwnPropertyNames(obj)
 
@@ -188,17 +174,19 @@ obj.sum
 }
 
 const obj1 = { a: 1, b: 2 }
-const obj2 = copy(obj1)      // obj2 looks like obj1 now</pre>
+const obj2 = copy(obj1)      // obj2 looks like obj1 now
+```
 
-<h3 id="반복_중_배열이_변경으로_인한_반복_생략">반복 중 배열이 변경으로 인한 반복 생략</h3>
+### 반복 중 배열이 변경으로 인한 반복 생략
 
-<p>다음 예제에서는 <code>"one"</code>, <code>"two"</code>, <code>"four"</code>를 기록합니다.</p>
+다음 예제에서는 `"one"`, `"two"`, `"four"`를 기록합니다.
 
-<p><code>forEach()</code>가 값 <code>"two"</code>를 포함하는 항목에 도달하면 전체 배열의 첫 번째 항목을 제거하여, 나머지 모든 항목이 한 위치 앞으로 이동합니다. 요소 <code>"four"</code>는 이제 배열에서 보다 앞에 위치하므로 <code>"three"</code>는 건너 뜁니다.</p>
+`forEach()`가 값 `"two"`를 포함하는 항목에 도달하면 전체 배열의 첫 번째 항목을 제거하여, 나머지 모든 항목이 한 위치 앞으로 이동합니다. 요소 `"four"`는 이제 배열에서 보다 앞에 위치하므로 `"three"`는 건너 뜁니다.
 
-<p><code>forEach()</code>는 반복 전에 배열의 복사본을 만들지 않습니다.</p>
+`forEach()`는 반복 전에 배열의 복사본을 만들지 않습니다.
 
-<pre class="brush:js">let words = ['one', 'two', 'three', 'four']
+```js
+let words = ['one', 'two', 'three', 'four']
 words.forEach(function(word) {
   console.log(word)
   if (word === 'two') {
@@ -207,16 +195,18 @@ words.forEach(function(word) {
 })
 // one
 // two
-// four</pre>
+// four
+```
 
-<h3 id="배열_평탄화">배열 평탄화</h3>
+### 배열 평탄화
 
-<p>다음 예제는 오직 시연 용으로만 추가한 것으로, 평탄화를 하려면 {{jsxref("Array.prototype.flat()")}}을 사용하세요.</p>
+다음 예제는 오직 시연 용으로만 추가한 것으로, 평탄화를 하려면 {{jsxref("Array.prototype.flat()")}}을 사용하세요.
 
-<pre class="brush: js">function flatten(arr) {
+```js
+function flatten(arr) {
   const result = []
 
-  arr.forEach((i) =&gt; {
+  arr.forEach((i) => {
     if (Array.isArray(i)) {
       result.push(...flatten(i))
     } else {
@@ -230,24 +220,23 @@ words.forEach(function(word) {
 // Usage
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
 
-flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
+flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Array.forEach")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Map.prototype.forEach()")}}</li>
- <li>{{jsxref("Set.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Map.prototype.forEach()")}}
+- {{jsxref("Set.prototype.forEach()")}}

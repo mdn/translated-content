@@ -8,42 +8,38 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>BigInt()</code></strong> 생성자는 {{jsxref("BigInt")}} 객체를 생성합니다.</p>
+**`BigInt()`** 생성자는 {{jsxref("BigInt")}} 객체를 생성합니다.
 
-<h2 id="구분">구분</h2>
+## 구분
 
-<pre class="syntaxbox">BigInt(<em>value</em>);
-</pre>
+```js
+    BigInt(value);
+```
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>value</code></dt>
- <dd>생성하는 객체에 할당할 숫자 값. 문자열 또는 정수를 사용할 수 있습니다.</dd>
-</dl>
+- `value`
+  - : 생성하는 객체에 할당할 숫자 값. 문자열 또는 정수를 사용할 수 있습니다.
 
-<div class="blockIndicator note">
-<p><strong>참고</strong>: <code>BigInt()</code>는 {{jsxref("Operators/new", "new")}} 연산자와 함께 사용하지 않습니다.</p>
-</div>
+> **참고:** `BigInt()`는 {{jsxref("Operators/new", "new")}} 연산자와 함께 사용하지 않습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: js">BigInt(123);
+```js
+BigInt(123);
 // 123n
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.BigInt.BigInt")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("BigInt")}} 클래스</li>
-</ul>
+- {{jsxref("BigInt")}} 클래스

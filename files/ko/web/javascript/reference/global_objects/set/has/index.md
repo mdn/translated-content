@@ -10,38 +10,33 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>has()</strong></code> 메서드는 <code>Set</code> 객체에 주어진 요소가 존재하는지 여부를 판별해 반환합니다.</p>
+**`has()`** 메서드는 `Set` 객체에 주어진 요소가 존재하는지 여부를 판별해 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 
+## 구문
 
+    mySet.has(value);
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><em>mySet</em>.has(<em>value</em>);</pre>
+- `value`
+  - : `Set` 객체에서 존재 여부를 판별할 값.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>value</code></dt>
- <dd><code>Set</code> 객체에서 존재 여부를 판별할 값.</dd>
-</dl>
+`Set` 객체에 값이 존재하면 `true`, 아니면 `false`.
 
-<h3 id="반환_값">반환 값</h3>
+> **참고:** 기술적으로, `has()`는 [`sameValueZero`](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#등가0_같음) 알고리즘을 사용해 요소의 존재 여부를 판별합니다.
 
-<p><code>Set</code> 객체에 값이 존재하면 <code>true</code>, 아니면 <code>false</code>.</p>
+## 예제
 
-<div class="blockIndicator note">
-<p><strong>참고:</strong> 기술적으로, <code>has()</code>는 <a href="/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#등가0_같음"><code>sameValueZero</code></a> 알고리즘을 사용해 요소의 존재 여부를 판별합니다.</p>
-</div>
+### `has()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="has()_사용하기"><code>has()</code> 사용하기</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 
 mySet.has('foo');  // true
@@ -54,20 +49,18 @@ set1.add(obj1);
 set1.has(obj1);        // true
 set1.has({'key1': 1}); // false, 형태만 같은 서로 다른 객체의 참조이기 때문
 set1.add({'key1': 1}); // set1의 요소가 2개로 늘어남
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Set.has")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.add()")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.add()")}}
+- {{jsxref("Set.prototype.delete()")}}

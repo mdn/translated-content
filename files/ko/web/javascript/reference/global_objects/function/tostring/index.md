@@ -8,65 +8,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p><code><strong>toSource()</strong></code> 메소드는 객체의 소스 코드를 나타내는 스트링을 반환합니다.</p>
+**`toSource()`** 메소드는 객체의 소스 코드를 나타내는 스트링을 반환합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><var>function</var>.toSource();
-</pre>
+```js
+    function.toSource();
+```
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>객체의 소스 코드를 나타내는 스트링.</p>
+객체의 소스 코드를 나타내는 스트링.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>toSource</code> 메소드는 다음 값들을 반환합니다.</p>
+`toSource` 메소드는 다음 값들을 반환합니다.
 
-<ul>
- <li>내장 {{jsxref("Function")}} 객체에 대한 <code>toSource()</code> 는 소스 코드 사용이 불가함을 나타내는 다음 스트링을 반환합니다.
+- 내장 {{jsxref("Function")}} 객체에 대한 `toSource()` 는 소스 코드 사용이 불가함을 나타내는 다음 스트링을 반환합니다.
 
-  <pre class="brush: js">function Function() {
-    [native code]
-}
-</pre>
- </li>
- <li>커스텀 함수에 대한 <code>toSource()</code> 는 객체를 정의하는 JavaScript 코드를 스트링으로 반환합니다.</li>
- <li>
-  <pre class="brush: js">// 예시:
-function hello() {
-    console.log("Hello, World!");
-}
+  ```js
+  function Function() {
+      [native code]
+  }
+  ```
 
-hello.toSource();
-</pre>
- </li>
- <li>
-  <pre class="brush: js">// 결과:
-"function hello() {
-    console.log(\"Hello, World!\");
-}"</pre>
- </li>
-</ul>
+- 커스텀 함수에 대한 `toSource()` 는 객체를 정의하는 JavaScript 코드를 스트링으로 반환합니다.
+- ```js
+  // 예시:
+  function hello() {
+      console.log("Hello, World!");
+  }
 
-<p>이 메소드는 보통 JavaScript 에 의해 내부적으로 호출되며 코드에서 명시적으로 사용되지 않습니다. 디버깅할 때 객체의 컨텐츠를 검사하기 위해 <code>toSource</code> 를 호출해보실 수 있습니다.</p>
+  hello.toSource();
+  ```
 
-<h2 id="명세">명세</h2>
+- ```js
+  // 결과:
+  "function hello() {
+      console.log(\"Hello, World!\");
+  }"
+  ```
 
-<p>어떠한 표준의 일부도 아닙니다. JavaScript 1.3 에서 구현되었습니다.</p>
+이 메소드는 보통 JavaScript 에 의해 내부적으로 호출되며 코드에서 명시적으로 사용되지 않습니다. 디버깅할 때 객체의 컨텐츠를 검사하기 위해 `toSource` 를 호출해보실 수 있습니다.
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 명세
 
-<div>
+어떠한 표준의 일부도 아닙니다. JavaScript 1.3 에서 구현되었습니다.
 
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Function.toSource")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="함께_보기">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}

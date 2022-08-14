@@ -9,43 +9,42 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>getMilliseconds()</strong></code> 메서드는 <code>Date</code> 인스턴스의 밀리초를 현지 시간 기준으로 반환합니다.</p>
+**`getMilliseconds()`** 메서드는 `Date` 인스턴스의 밀리초를 현지 시간 기준으로 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html")}}
 
+## 구문
 
+```js
+    dateObj.getMilliseconds()
+```
 
-<h2 id="구문">구문</h2>
+### 반환 값
 
-<pre class="syntaxbox"><var>dateObj</var>.getMilliseconds()</pre>
+주어진 날짜의 현지 시간 기준 밀리초를 나타내는 0에서 999 사이의 정수.
 
-<h3 id="반환_값">반환 값</h3>
+## 예제
 
-<p>주어진 날짜의 현지 시간 기준 밀리초를 나타내는 0에서 999 사이의 정수.</p>
+### `getMilliseconds()` 사용하기
 
-<h2 id="예제">예제</h2>
+다음 예제에서는 현재 시간의 밀리초를 변수 `milliseconds`에 할당합니다.
 
-<h3 id="getMilliseconds()_사용하기"><code>getMilliseconds()</code> 사용하기</h3>
-
-<p>다음 예제에서는 현재 시간의 밀리초를 변수 <code>milliseconds</code>에 할당합니다.</p>
-
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var milliseconds = today.getMilliseconds();
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Date.getMilliseconds")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
+- {{jsxref("Date.prototype.setMilliseconds()")}}

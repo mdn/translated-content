@@ -3,64 +3,59 @@ title: WebAssembly.LinkError()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code><strong>WebAssembly.LinkError()</strong></code> constructor creates a new WebAssembly <code>LinkError</code> object, which indicates an error during module instantiation (besides <a href="http://webassembly.org/docs/semantics/#traps">traps</a> from the start function). </p>
+The **`WebAssembly.LinkError()`** constructor creates a new WebAssembly `LinkError` object, which indicates an error during module instantiation (besides [traps](http://webassembly.org/docs/semantics/#traps) from the start function).
 
-<p><code><strong>WebAssembly.LinkError()</strong></code> 생성자는 새 WebAssembly <code>LinkError</code> 객체를 만듭니다. 이 객체는 모듈 인스턴스화 중의 오류를 나타냅니다 (시작 함수의 <a href="http://webassembly.org/docs/semantics/#traps">traps</a>와 함께).</p>
+**`WebAssembly.LinkError()`** 생성자는 새 WebAssembly `LinkError` 객체를 만듭니다. 이 객체는 모듈 인스턴스화 중의 오류를 나타냅니다 (시작 함수의 [traps](http://webassembly.org/docs/semantics/#traps)와 함께).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">new WebAssembly.LinkError(<var>message</var>, <var>fileName</var>, <var>lineNumber</var>)</pre>
+    new WebAssembly.LinkError(message, fileName, lineNumber)
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>message</code> {{optional_inline}}</dt>
- <dd>사람이 읽을 수 있는 오류 설명.</dd>
- <dt><code>fileName</code> {{optional_inline}}{{non-standard_inline}}</dt>
- <dd>예외의 원인이 된 코드가 들어있는 파일의 이름입니다.</dd>
- <dt><code>lineNumber</code> {{optional_inline}}{{non-standard_inline}}</dt>
- <dd>예외의 원인이 된 코드의 행 번호입니다.</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : 사람이 읽을 수 있는 오류 설명.
+- `fileName` {{optional_inline}}{{non-standard_inline}}
+  - : 예외의 원인이 된 코드가 들어있는 파일의 이름입니다.
+- `lineNumber` {{optional_inline}}{{non-standard_inline}}
+  - : 예외의 원인이 된 코드의 행 번호입니다.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>LinkError</code></em> 생성자에는 고유 한 고유 속성이 없지만 프로토 타입 체인을 통해 일부 속성을 상속합니다.</p>
+_`LinkError`_ 생성자에는 고유 한 고유 속성이 없지만 프로토 타입 체인을 통해 일부 속성을 상속합니다.
 
-<dl>
- <dt><code>WebAssembly.LinkError.prototype.constructor</code></dt>
- <dd>인스턴스의 프로토 타입을 작성한 함수를 지정합니다.</dd>
- <dt>{{jsxref("Error.prototype.message", "WebAssembly.LinkError.prototype.message")}}</dt>
- <dd>에러 메시지. ECMA-262는 {{jsxref ( "URIError")}}가 <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>에서 자체 <code>message</code> 속성을 제공하도록 지정했지만 {{jsxref ( "Error.prototype.message")}}를 상속받습니다.</dd>
- <dt>{{jsxref("Error.prototype.name", "WebAssembly.LinkError.prototype.name")}}</dt>
- <dd>에러 이름. {{jsxref("Error")}}를 상속받습니다.</dd>
- <dt>{{jsxref("Error.prototype.fileName", "WebAssembly.LinkError.prototype.fileName")}}</dt>
- <dd>해당 에러가 발생한 파일의 경로. {{jsxref("Error")}}를 상속받습니다.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "WebAssembly.LinkError.prototype.lineNumber")}}</dt>
- <dd>에러가 발생한 파일의 행 번호. {{jsxref("Error")}}를 상속받습니다.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "WebAssembly.LinkError.prototype.columnNumber")}}</dt>
- <dd>이 오류가 발생한 행의 열 번호입니다.. {{jsxref("Error")}}를 상속받습니다.</dd>
- <dt>{{jsxref("Error.prototype.stack", "WebAssembly.LinkError.prototype.stack")}}</dt>
- <dd>스텍 추적. {{jsxref("Error")}}를 상속받습니다.</dd>
-</dl>
+- `WebAssembly.LinkError.prototype.constructor`
+  - : 인스턴스의 프로토 타입을 작성한 함수를 지정합니다.
+- {{jsxref("Error.prototype.message", "WebAssembly.LinkError.prototype.message")}}
+  - : 에러 메시지. ECMA-262는 {{jsxref ( "URIError")}}가 [SpiderMonkey](/ko/docs/Mozilla/Projects/SpiderMonkey)에서 자체 `message` 속성을 제공하도록 지정했지만 {{jsxref ( "Error.prototype.message")}}를 상속받습니다.
+- {{jsxref("Error.prototype.name", "WebAssembly.LinkError.prototype.name")}}
+  - : 에러 이름. {{jsxref("Error")}}를 상속받습니다.
+- {{jsxref("Error.prototype.fileName", "WebAssembly.LinkError.prototype.fileName")}}
+  - : 해당 에러가 발생한 파일의 경로. {{jsxref("Error")}}를 상속받습니다.
+- {{jsxref("Error.prototype.lineNumber", "WebAssembly.LinkError.prototype.lineNumber")}}
+  - : 에러가 발생한 파일의 행 번호. {{jsxref("Error")}}를 상속받습니다.
+- {{jsxref("Error.prototype.columnNumber", "WebAssembly.LinkError.prototype.columnNumber")}}
+  - : 이 오류가 발생한 행의 열 번호입니다.. {{jsxref("Error")}}를 상속받습니다.
+- {{jsxref("Error.prototype.stack", "WebAssembly.LinkError.prototype.stack")}}
+  - : 스텍 추적. {{jsxref("Error")}}를 상속받습니다.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em><code>LinkError</code></em> 생성자에는 자체 메서드가 없지만 프로토 타입 체인을 통해 일부 메서드를 상속합니다.</p>
+_`LinkError`_ 생성자에는 자체 메서드가 없지만 프로토 타입 체인을 통해 일부 메서드를 상속합니다.
 
-<dl>
- <dt>{{jsxref("Error.prototype.toSource", "WebAssembly.LinkError.prototype.toSource()")}}</dt>
- <dd>동일한 오류로 평가 될 수있는 코드를 반환합니다. {{jsxref("Error")}}를 상속받습니다.</dd>
- <dt>{{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toString()")}}</dt>
- <dd>지정된 Error 객체를 나타내는 문자열을 반환합니다. {{jsxref("Error")}}를 상속받습니다.</dd>
-</dl>
+- {{jsxref("Error.prototype.toSource", "WebAssembly.LinkError.prototype.toSource()")}}
+  - : 동일한 오류로 평가 될 수있는 코드를 반환합니다. {{jsxref("Error")}}를 상속받습니다.
+- {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toString()")}}
+  - : 지정된 Error 객체를 나타내는 문자열을 반환합니다. {{jsxref("Error")}}를 상속받습니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>다음 snippet은 새 <code>LinkError</code> 인스턴스를 만들고 콘솔에 세부 정보를 기록합니다.</p>
+다음 snippet은 새 `LinkError` 인스턴스를 만들고 콘솔에 세부 정보를 기록합니다.
 
-<pre class="brush: js">try {
+```js
+try {
   throw new WebAssembly.LinkError('Hello', 'someFile', 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
@@ -70,20 +65,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
   console.log(e.lineNumber);              // 10
   console.log(e.columnNumber);            // 0
   console.log(e.stack);                   // returns the location where the code was run
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-{{Compat("javascript.builtins.WebAssembly.LinkError")}}
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/ko/docs/WebAssembly) overview page
+- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)

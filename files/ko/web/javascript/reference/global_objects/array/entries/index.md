@@ -10,37 +10,41 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>entries()</strong></code> 메서드는 배열의 각 인덱스에 대한 키/값 쌍을 가지는 새로운 <code><strong>Array Iterator</strong></code><strong> </strong>객체를 반환합니다.</p>
+**`entries()`** 메서드는 배열의 각 인덱스에 대한 키/값 쌍을 가지는 새로운 **`Array Iterator`\*\*** \*\*객체를 반환합니다.
 
-<p>{{EmbedInteractiveExample("pages/js/array-entries.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><code><var>arr</var>.entries()</code>
-</pre>
+```js
+    arr.entries()
+```
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>{{jsxref("Array")}} 반복자 인스턴스 객체.</p>
+{{jsxref("Array")}} 반복자 인스턴스 객체.
 
-<h2 id="예시">예시</h2>
+## 예시
 
-<h3 id="인덱스와_요소_이터레이팅">인덱스와 요소 이터레이팅</h3>
+### 인덱스와 요소 이터레이팅
 
-<pre>const a = ['a', 'b', 'c'];
+```js
+    const a = ['a', 'b', 'c'];
 
-for (const [index, element] of a.entries())
-  console.log(index, element);
+    for (const [index, element] of a.entries())
+      console.log(index, element);
 
-// 0 'a'
-// 1 'b'
-// 2 'c'</pre>
+    // 0 'a'
+    // 1 'b'
+    // 2 'c'
+```
 
-<h3 id="for…of_루프_사용"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a> 루프 사용</h3>
+### [for…of](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 루프 사용
 
-<pre class="brush:js">var a = ['a', 'b', 'c'];
+```js
+var a = ['a', 'b', 'c'];
 var iterator = a.entries();
 
 for (let e of iterator) {
@@ -49,24 +53,22 @@ for (let e of iterator) {
 // [0, 'a']
 // [1, 'b']
 // [2, 'c']
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Array.entries")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- [for...of](/ko/docs/Web/JavaScript/Reference/Statements/for...of)
+- [Iteration protocols](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)

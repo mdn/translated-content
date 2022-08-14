@@ -3,47 +3,48 @@ title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>valueOf()</code></strong> 함수는 {{jsxref("Date")}} 객체의 원시값을 반환합니다.</p>
+**`valueOf()`** 함수는 {{jsxref("Date")}} 객체의 원시값을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/date-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-valueof.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>dateObj</var>.valueOf()</code></pre>
+```js
+    dateObj.valueOf()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>반환되는 milliseconds 값은 1 January 1970 00:00:00 UTC 와 주어진 일시 사이의 값입니다.</p>
+반환되는 milliseconds 값은 1 January 1970 00:00:00 UTC 와 주어진 일시 사이의 값입니다.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>valueOf()</code> 함수는 01 January, 1970 UTC 이후의 milliseconds 단위의 자연수 타입인 {{jsxref("Date")}} 객체의 원시값을 반환합니다.</p>
+`valueOf()` 함수는 01 January, 1970 UTC 이후의 milliseconds 단위의 자연수 타입인 {{jsxref("Date")}} 객체의 원시값을 반환합니다.
 
-<p>이 함수는 {{jsxref("Date.prototype.getTime()")}} 함수와 동일한 결과값을 반환합니다.</p>
+이 함수는 {{jsxref("Date.prototype.getTime()")}} 함수와 동일한 결과값을 반환합니다.
 
-<p>이 함수는 사용자 코드에 명시된 것이 아닌, JavaScript 자체에 포함되어 있습니다.</p>
+이 함수는 사용자 코드에 명시된 것이 아닌, JavaScript 자체에 포함되어 있습니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_valueOf()">Using <code>valueOf()</code></h3>
+### Using `valueOf()`
 
-<pre class="brush: js">var x = new Date(56, 6, 17);
+```js
+var x = new Date(56, 6, 17);
 var myVar = x.valueOf();      // myVar에 -424713600000를 할당합니다.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.Date.valueOf")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
- <li>{{jsxref("Date.prototype.getTime()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxref("Date.prototype.getTime()")}}

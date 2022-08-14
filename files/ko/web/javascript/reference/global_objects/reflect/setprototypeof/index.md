@@ -9,46 +9,41 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Reflect</strong></code><strong><code>.setPrototypeOf()</code></strong> 정적 메서드는 주어진 객체의 프로토타입(내부 <code>[[Prototype]]</code> 속성)을 다른 객체나 {{jsxref("null")}}로 바꿉니다. 반환 값을 제외하면 {{jsxref("Object.setPrototypeOf()")}} 메서드와 같습니다.</p>
+**`Reflect`\*\***`.setPrototypeOf()`\*\* 정적 메서드는 주어진 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 다른 객체나 {{jsxref("null")}}로 바꿉니다. 반환 값을 제외하면 {{jsxref("Object.setPrototypeOf()")}} 메서드와 같습니다.
 
+{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}</div>
+## 구문
 
+    Reflect.setPrototypeOf(target, prototype)
 
+### 매개변수
 
-<h2 id="구문">구문</h2>
+- `target`
+  - : 프로토타입을 지정할 대상 객체.
+- `prototype`
+  - : 대상 객체의 새로운 프로토타입. (객체 또는 {{jsxref("null")}}
 
-<pre class="syntaxbox">Reflect.setPrototypeOf(<em>target</em>, <em>prototype</em>)
-</pre>
+### 반환 값
 
-<h3 id="매개변수">매개변수</h3>
+프로토타입 설정 성공 여부를 나타내는 {{jsxref("Boolean")}}.
 
-<dl>
- <dt><code>target</code></dt>
- <dd>프로토타입을 지정할 대상 객체.</dd>
- <dt><code>prototype</code></dt>
- <dd>대상 객체의 새로운 프로토타입. (객체 또는 {{jsxref("null")}}</dd>
-</dl>
+### 예외
 
-<h3 id="반환_값">반환 값</h3>
+`target`이 {{jsxref("Object")}}가 아니거나, `prototype`이 객체도 {{jsxref("null")}}도 아니면 {{jsxref("TypeError")}}.
 
-<p>프로토타입 설정 성공 여부를 나타내는 {{jsxref("Boolean")}}.</p>
+## 설명
 
-<h3 id="예외">예외</h3>
+`Reflect.setPrototypeOf()` 메서드는 주어진 객체의 프로토타입(즉, 내부 `[[Prototype]]` 속성)을 변경합니다.
 
-<p><code>target</code>이 {{jsxref("Object")}}가 아니거나, <code>prototype</code>이 객체도 {{jsxref("null")}}도 아니면 {{jsxref("TypeError")}}.</p>
+## 예제
 
-<h2 id="설명">설명</h2>
+### `Reflect.setPrototypeOf()` 사용하기
 
-<p><code>Reflect.setPrototypeOf()</code> 메서드는 주어진 객체의 프로토타입(즉, 내부 <code>[[Prototype]]</code> 속성)을 변경합니다.</p>
-
-<h2 id="예제">예제</h2>
-
-<h3 id="Reflect.setPrototypeOf_사용하기"><code>Reflect.setPrototypeOf()</code> 사용하기</h3>
-
-<pre class="brush: js">Reflect.setPrototypeOf({}, Object.prototype); // true
+```js
+Reflect.setPrototypeOf({}, Object.prototype); // true
 
 // It can change an object's [[Prototype]] to null.
 Reflect.setPrototypeOf({}, null); // true
@@ -60,19 +55,17 @@ Reflect.setPrototypeOf(Object.freeze({}), null); // false
 const target = {};
 const proto = Object.create(target);
 Reflect.setPrototypeOf(target, proto); // false
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Reflect.setPrototypeOf")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.setPrototypeOf()")}}

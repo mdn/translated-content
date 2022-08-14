@@ -11,74 +11,73 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 browser-compat: javascript.builtins.Date.now
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Date.now()</code></strong> 메소드는 UTC 기준으로 1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 반환합니다.</p>
+**`Date.now()`** 메소드는 UTC 기준으로 1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 반환합니다.
 
-<p>{{EmbedInteractiveExample("pages/js/date-now.html")}}</p>
+{{EmbedInteractiveExample("pages/js/date-now.html")}}
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox"><code>var timeInMs = Date.now();</code></pre>
+```js
+    var timeInMs = Date.now();
+```
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 나타내는 <strong>숫자</strong>입니다.</p>
+1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 나타내는 **숫자**입니다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>now() 메소드는 1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 {{jsxref("Number")}} 형으로 반환합니다.</p>
+now() 메소드는 1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 {{jsxref("Number")}} 형으로 반환합니다.
 
-<p>now()는 {{jsxref("Date")}}의 정적 메소드이기 때문에, 항상 <code>Date.now()</code> 처럼 사용하셔야 합니다.</p>
+now()는 {{jsxref("Date")}}의 정적 메소드이기 때문에, 항상 `Date.now()` 처럼 사용하셔야 합니다.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>이 메소드는 ECMA-262 5판에서 표준화되었습니다. 아직 이 메소드를 지원하도록 갱신되지 않은 엔진들은 이 메소드의 미지원에 대한 차선책으로 다음 코드를 활용하실 수 있습니다.</p>
+이 메소드는 ECMA-262 5판에서 표준화되었습니다. 아직 이 메소드를 지원하도록 갱신되지 않은 엔진들은 이 메소드의 미지원에 대한 차선책으로 다음 코드를 활용하실 수 있습니다.
 
-<pre class="brush: js">if (!Date.now) {
+```js
+if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
 }
+```
 
-</pre>
+## 예시
 
-<h2 id="예시">예시</h2>
+### 감소된 시간 정밀도
 
-<h3 id="감소된_시간_정밀도">감소된 시간 정밀도</h3>
+타이밍 공격 및 핑거 프린팅에 대한 보호를 제공하기 위해 `Date.now ()`의 정밀도는 브라우저 설정에 따라 반올림 될 수 있습니다.
+Firefox에서는 `privacy.reduceTimerPrecision` 기본 설정이 기본적으로 활성화되어 있으며 Firefox 59에서는 기본값이 20µs입니다. 60 분에는 2ms가됩니다.
 
-<p>타이밍 공격 및 핑거 프린팅에 대한 보호를 제공하기 위해 <code>Date.now ()</code>의 정밀도는 브라우저 설정에 따라 반올림 될 수 있습니다.<br>
- Firefox에서는 <code>privacy.reduceTimerPrecision</code> 기본 설정이 기본적으로 활성화되어 있으며 Firefox 59에서는 기본값이 20µs입니다. 60 분에는 2ms가됩니다.</p>
-
-<pre class="syntaxbox">// Firefox 60에서 시간 정밀도 (2ms) 감소
-Date.now();
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// ...
+    // Firefox 60에서 시간 정밀도 (2ms) 감소
+    Date.now();
+    // 1519211809934
+    // 1519211810362
+    // 1519211811670
+    // ...
 
 
-// `privacy.resistFingerprinting`을 활성화하여 시간 정밀도 감소
-Date.now();
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// ...
-</pre>
+    // `privacy.resistFingerprinting`을 활성화하여 시간 정밀도 감소
+    Date.now();
+    // 1519129853500
+    // 1519129858900
+    // 1519129864400
+    // ...
 
-<p>Firefox에서는 <code>privacy.resistFingerprinting</code>을 활성화 할 수도 있습니다. 정밀도는 100ms 또는 <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code> 중 더 큰 값이됩니다.</p>
+Firefox에서는 `privacy.resistFingerprinting`을 활성화 할 수도 있습니다. 정밀도는 100ms 또는 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 중 더 큰 값이됩니다.
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="참고하세요">참고하세요</h2>
+## 참고하세요
 
-<ul>
- <li>{{domxref("Performance.now()")}} — provides timestamps with sub-millisecond resolution for use in measuring web page performance</li>
- <li>{{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}</li>
-</ul>
+- {{domxref("Performance.now()")}} — provides timestamps with sub-millisecond resolution for use in measuring web page performance
+- {{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}

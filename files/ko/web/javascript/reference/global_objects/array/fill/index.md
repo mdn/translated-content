@@ -10,46 +10,47 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>fill()</strong></code> 메서드는 배열의 시작 인덱스부터 끝 인덱스의 이전까지 정적인 값 하나로 채웁니다.</p>
+**`fill()`** 메서드는 배열의 시작 인덱스부터 끝 인덱스의 이전까지 정적인 값 하나로 채웁니다.
 
-<p>{{EmbedInteractiveExample("pages/js/array-fill.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-fill.html")}}
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><code><var>arr</var>.fill(<var>value</var>[, <var>start<var>[, <var>end</var>]])</var></var></code></pre>
+```js
+    arr.fill(value[, start[, end]])
+```
 
-<h3 id="Parameters">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>value</code></dt>
- <dd>배열을 채울 값.</dd>
- <dt><code>start</code> {{optional_inline}}</dt>
- <dd>시작 인덱스, 기본 값은 0.</dd>
- <dt><code>end</code> {{optional_inline}}</dt>
- <dd>끝 인덱스, 기본 값은 <code>this.length</code>.</dd>
-</dl>
+- `value`
+  - : 배열을 채울 값.
+- `start` {{optional_inline}}
+  - : 시작 인덱스, 기본 값은 0.
+- `end` {{optional_inline}}
+  - : 끝 인덱스, 기본 값은 `this.length`.
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>변형한 배열.</p>
+변형한 배열.
 
-<h2 id="Description">설명 </h2>
+## 설명
 
-<p><code>fill</code> 메서드는 <code>value</code>, <code>start</code>, <code>end</code>의 3개 인자를 가집니다. <code>start</code>와 <code>end</code> 인자는 선택 사항으로써 기본값으로 각각 <code>0</code>과, <code>this</code> 객체의 <code>length</code>를 가집니다.</p>
+`fill` 메서드는 `value`, `start`, `end`의 3개 인자를 가집니다. `start`와 `end` 인자는 선택 사항으로써 기본값으로 각각 `0`과, `this` 객체의 `length`를 가집니다.
 
-<p><code>length</code>가 배열의 길이일 때, <code>start</code>가 음수이면 시작 인덱스는 <code>length+start</code>입니다. <code>end</code>가 음수이면 끝 인덱스는 <code>length+end</code>입니다.</p>
+`length`가 배열의 길이일 때, `start`가 음수이면 시작 인덱스는 `length+start`입니다. `end`가 음수이면 끝 인덱스는 `length+end`입니다.
 
-<p><code>fill</code>은 일반 함수이며, <code>this</code> 값이 배열 객체일 필요는 없습니다.</p>
+`fill`은 일반 함수이며, `this` 값이 배열 객체일 필요는 없습니다.
 
-<p><code>fill</code> 메서드는 변경자 메서드로, 복사본이 아니라 <code>this</code> 객체를 변형해 반환합니다.</p>
+`fill` 메서드는 변경자 메서드로, 복사본이 아니라 `this` 객체를 변형해 반환합니다.
 
-<p><code>value</code>에 객체를 받을 경우 그 참조만 복사해서 배열을 채웁니다.</p>
+`value`에 객체를 받을 경우 그 참조만 복사해서 배열을 채웁니다.
 
-<h2 id="Examples">예제</h2>
+## 예제
 
-<pre class="brush: js">[1, 2, 3].fill(4);               // [4, 4, 4]
+```js
+[1, 2, 3].fill(4);               // [4, 4, 4]
 [1, 2, 3].fill(4, 1);            // [1, 4, 4]
 [1, 2, 3].fill(4, 1, 2);         // [1, 4, 3]
 [1, 2, 3].fill(4, 1, 1);         // [1, 2, 3]
@@ -63,66 +64,66 @@ Array(3).fill(4);                // [4, 4, 4]
 // Objects by reference.
 var arr = Array(3).fill({}); // [{}, {}, {}]
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
-</pre>
+```
 
-<h2 id="Polyfill">폴리필</h2>
+## 폴리필
 
-<pre><code>if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, 'fill', {
-    value: function(value) {
+```js
+    if (!Array.prototype.fill) {
+      Object.defineProperty(Array.prototype, 'fill', {
+        value: function(value) {
 
-      // Steps 1-2.
-      if (this == null) {
-        throw new TypeError('this is null or not defined');
-      }
+          // Steps 1-2.
+          if (this == null) {
+            throw new TypeError('this is null or not defined');
+          }
 
-      var O = Object(this);
+          var O = Object(this);
 
-      // Steps 3-5.
-      var len = O.length &gt;&gt;&gt; 0;
+          // Steps 3-5.
+          var len = O.length >>> 0;
 
-      // Steps 6-7.
-      var start = arguments[1];
-      var relativeStart = start &gt;&gt; 0;
+          // Steps 6-7.
+          var start = arguments[1];
+          var relativeStart = start >> 0;
 
-      // Step 8.
-      var k = relativeStart &lt; 0 ?
-        Math.max(len + relativeStart, 0) :
-        Math.min(relativeStart, len);
+          // Step 8.
+          var k = relativeStart < 0 ?
+            Math.max(len + relativeStart, 0) :
+            Math.min(relativeStart, len);
 
-      // Steps 9-10.
-      var end = arguments[2];
-      var relativeEnd = end === undefined ?
-        len : end &gt;&gt; 0;
+          // Steps 9-10.
+          var end = arguments[2];
+          var relativeEnd = end === undefined ?
+            len : end >> 0;
 
-      // Step 11.
-      var final = relativeEnd &lt; 0 ?
-        Math.max(len + relativeEnd, 0) :
-        Math.min(relativeEnd, len);
+          // Step 11.
+          var final = relativeEnd < 0 ?
+            Math.max(len + relativeEnd, 0) :
+            Math.min(relativeEnd, len);
 
-      // Step 12.
-      while (k &lt; final) {
-        O[k] = value;
-        k++;
-      }
+          // Step 12.
+          while (k < final) {
+            O[k] = value;
+            k++;
+          }
 
-      // Step 13.
-      return O;
+          // Step 13.
+          return O;
+        }
+      });
     }
-  });
-}</code></pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>{{Compat("javascript.builtins.Array.fill")}}</div>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("TypedArray.prototype.fill()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("TypedArray.prototype.fill()")}}

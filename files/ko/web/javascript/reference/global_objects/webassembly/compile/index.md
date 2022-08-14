@@ -3,62 +3,56 @@ title: WebAssembly.compile()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>WebAssembly.compile()</code></strong>함수는 WebAssembly 바이너리 코드에서 {{jsxref ( "WebAssembly.Module")}}을 컴파일합니다. 이 함수는 모듈을 인스턴스화하기 전에 컴파일해야하는 경우에 유용합니다. 그렇지 않으면 {{jsxref ( "WebAssembly.instantiate ()")}} 함수를 사용해야합니다.</p>
+**`WebAssembly.compile()`**함수는 WebAssembly 바이너리 코드에서 {{jsxref ( "WebAssembly.Module")}}을 컴파일합니다. 이 함수는 모듈을 인스턴스화하기 전에 컴파일해야하는 경우에 유용합니다. 그렇지 않으면 {{jsxref ( "WebAssembly.instantiate ()")}} 함수를 사용해야합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Promise&lt;WebAssembly.Module&gt; WebAssembly.compile(bufferSource);</pre>
+    Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>bufferSource</em></dt>
- <dd>컴파일 할 .wasm 모듈의 이진 코드가 들어있는 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> 또는 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>입니다.</dd>
-</dl>
+- _bufferSource_
+  - : 컴파일 할 .wasm 모듈의 이진 코드가 들어있는 [typed array](/ko/docs/Web/JavaScript/Typed_arrays) 또는 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)입니다.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>Promise</code>는 컴파일 된 모듈로 표현된 {{jsxref ( "WebAssembly.Module")}} 객체로 반환됩니다.</p>
+`Promise`는 컴파일 된 모듈로 표현된 {{jsxref ( "WebAssembly.Module")}} 객체로 반환됩니다.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
- <li><code>bufferSource</code>가 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>가 아니면 {{jsxref("TypeError")}}가 발생합니다.</li>
- <li>컴파일에 실패하면 promise는 {{jsxref("WebAssembly.CompileError")}}와 함께 reject가 반환됩니다.</li>
-</ul>
+- `bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)가 아니면 {{jsxref("TypeError")}}가 발생합니다.
+- 컴파일에 실패하면 promise는 {{jsxref("WebAssembly.CompileError")}}와 함께 reject가 반환됩니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>다음은 <code>compile()</code> 함수를 사용하여 simple.wasm 바이트 코드를 컴파일 하고 <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a>를 사용하여 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</a>에 보내는 예제입니다.</p>
+다음은 `compile()` 함수를 사용하여 simple.wasm 바이트 코드를 컴파일 하고 [postMessage()](/ko/docs/Web/API/Worker/postMessage)를 사용하여 [worker](/ko/docs/Web/API/Web_Workers_API)에 보내는 예제입니다.
 
-<pre class="brush: js">var worker = new Worker("wasm_worker.js");
+```js
+var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =&gt;
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
-).then(bytes =&gt;
+).then(bytes =>
   WebAssembly.compile(bytes)
-).then(mod =&gt;
+).then(mod =>
   worker.postMessage(mod)
-);</pre>
+);
+```
 
-<div class="note">
-<p><strong>Note</strong>: 대부분의 경우에 {{jsxref("WebAssembly.compileStreaming()")}}를 사용하는 것이 좋습니다. 이는 <code>compile()</code>보다 효율적이기 때문입니다.</p>
-</div>
+> **참고:** 대부분의 경우에 {{jsxref("WebAssembly.compileStreaming()")}}를 사용하는 것이 좋습니다. 이는 `compile()`보다 효율적이기 때문입니다.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.WebAssembly.compile")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/ko/docs/WebAssembly) overview page
+- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)

@@ -8,49 +8,43 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Proxy</strong></code> 객체는 기본적인 동작(속성 접근, 할당, 순회, 열거, 함수 호출 등)의 새로운 행동을 정의할 때 사용합니다.</p>
+**`Proxy`** 객체는 기본적인 동작(속성 접근, 할당, 순회, 열거, 함수 호출 등)의 새로운 행동을 정의할 때 사용합니다.
 
-<h2 id="용어">용어</h2>
+## 용어
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">handler</a></dt>
- <dd>trap들을 가지고 있는 Placeholder 객체.</dd>
- <dt>traps</dt>
- <dd>프로퍼티에 접근할 수 있는 메소드. 운영체제에서 trap 이라는 컨셉과 유사하다.</dd>
- <dt>target</dt>
- <dd>proxy가 가상화하는 실제 객체. 이것은 proxy를 위한  backend 저장소로 사용된다. Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.</dd>
-</dl>
+- [handler](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)
+  - : trap들을 가지고 있는 Placeholder 객체.
+- traps
+  - : 프로퍼티에 접근할 수 있는 메소드. 운영체제에서 trap 이라는 컨셉과 유사하다.
+- target
+  - : proxy가 가상화하는 실제 객체. 이것은 proxy를 위한 backend 저장소로 사용된다. Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">new Proxy(target, handler);
-</pre>
+    new Proxy(target, handler);
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>target</code></dt>
- <dd>proxy와 함께 감싸진 target 객체 (native array, function, 다른 proxy을 포함한 객체)</dd>
- <dt><code>handler</code></dt>
- <dd>프로퍼티들이 function인 객체이다. 동작이 수행될 때, handler는 proxy의 행동을 정의한다.</dd>
-</dl>
+- `target`
+  - : proxy와 함께 감싸진 target 객체 (native array, function, 다른 proxy을 포함한 객체)
+- `handler`
+  - : 프로퍼티들이 function인 객체이다. 동작이 수행될 때, handler는 proxy의 행동을 정의한다.
 
-<h2 id="메서드">메서드</h2>
+## 메서드
 
-<dl>
- <dt>{{jsxref("Proxy.revocable()")}}</dt>
- <dd>폐기할 수 있는(revocable) Proxy 객체를 생성.</dd>
-</dl>
+- {{jsxref("Proxy.revocable()")}}
+  - : 폐기할 수 있는(revocable) Proxy 객체를 생성.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>프로퍼티 이름이 객체에 없을때, 기본값을 숫자 37로 리턴받는 간단한 예제이다. 이것은 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get"><code>get</code></a> handler를 사용하였다.</p>
+프로퍼티 이름이 객체에 없을때, 기본값을 숫자 37로 리턴받는 간단한 예제이다. 이것은 [`get`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get) handler를 사용하였다.
 
-<pre class="brush: js">var handler = {
+```js
+var handler = {
     get: function(target, name){
         return name in target?
             target[name] :
@@ -64,31 +58,33 @@ p.b = undefined;
 
 console.log(p.a, p.b); // 1, undefined
 console.log('c' in p, p.c); // false, 37
-</pre>
+```
 
-<h3 id="No-op_forwarding_proxy">No-op forwarding proxy</h3>
+### No-op forwarding proxy
 
-<p>이 예제에서는, native JavaScript를 사용하겠다. proxy는 적용된 모든 동작으로 보낼 것이다.</p>
+이 예제에서는, native JavaScript를 사용하겠다. proxy는 적용된 모든 동작으로 보낼 것이다.
 
-<pre class="brush: js">var target = {};
+```js
+var target = {};
 var p = new Proxy(target, {});
 
 p.a = 37; // target으로 동작이 전달
 
 console.log(target.a); // 37. 동작이 제대로 전달됨
-</pre>
+```
 
-<h3 id="Validation_(검증)">Validation (검증)</h3>
+### Validation (검증)
 
-<p>Proxy에서, 객체에 전달된 값을 쉽게 검증할 수 있다. 이 예제는 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set"><code>set</code></a> handler를 사용하였다.</p>
+Proxy에서, 객체에 전달된 값을 쉽게 검증할 수 있다. 이 예제는 [`set`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set) handler를 사용하였다.
 
-<pre class="brush: js">let validator = {
+```js
+let validator = {
   set: function(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
         throw new TypeError('The age is not an integer');
       }
-      if (value &gt; 200) {
+      if (value > 200) {
         throw new RangeError('The age seems invalid');
       }
     }
@@ -104,13 +100,14 @@ person.age = 100;
 console.log(person.age); // 100
 person.age = 'young'; // Throws an exception
 person.age = 300; // Throws an exception
-</pre>
+```
 
-<h3 id="Extending_constructor_(생성자_확장)">Extending constructor (생성자 확장)</h3>
+### Extending constructor (생성자 확장)
 
-<p>function proxy는 쉽게 새로운 생성자와 함께 생성자를 확장할 수 있다. 이 예제에서는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct">construct</a></code>와 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply"><code>apply</code></a> handlers를 사용하였다.</p>
+function proxy는 쉽게 새로운 생성자와 함께 생성자를 확장할 수 있다. 이 예제에서는 [`construct`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct)와 [`apply`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply) handlers를 사용하였다.
 
-<pre class="brush: js">function extend(sup,base) {
+```js
+function extend(sup,base) {
   var descriptor = Object.getOwnPropertyDescriptor(
     base.prototype,"constructor"
   );
@@ -145,13 +142,15 @@ Boy.prototype.sex = "M";
 var Peter = new Boy("Peter", 13);
 console.log(Peter.sex);  // "M"
 console.log(Peter.name); // "Peter"
-console.log(Peter.age);  // 13</pre>
+console.log(Peter.age);  // 13
+```
 
-<h3 id="Manipulating_DOM_nodes_(DOM_nodes_조작)">Manipulating DOM nodes (DOM nodes 조작)</h3>
+### Manipulating DOM nodes (DOM nodes 조작)
 
-<p>가끔씩, 두 개의 다른 element의 속성이나 클래스 이름을 바꾸고 싶을 것이다. 아래는 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set"><code>set</code></a> handler를 사용하였다.</p>
+가끔씩, 두 개의 다른 element의 속성이나 클래스 이름을 바꾸고 싶을 것이다. 아래는 [`set`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set) handler를 사용하였다.
 
-<pre class="brush: js">let view = new Proxy({
+```js
+let view = new Proxy({
   selected: null
 },
 {
@@ -178,13 +177,14 @@ console.log(i1.getAttribute('aria-selected')); // 'true'
 let i2 = view.selected = document.getElementById('item-2');
 console.log(i1.getAttribute('aria-selected')); // 'false'
 console.log(i2.getAttribute('aria-selected')); // 'true'
-</pre>
+```
 
-<h3 id="Value_correction_and_an_extra_property_(값_정정과_추가적인_property)">Value correction and an extra property (값 정정과 추가적인 property)</h3>
+### Value correction and an extra property (값 정정과 추가적인 property)
 
-<p><code>products</code>라는 proxy 객체는 전달된 값을 평가하고, 필요할 때 배열로 변환한다. 이 객체는 <code>latestBrowser</code>라는 추가적인 property를 지원하는데, getter와 setter 모두 지원한다.</p>
+`products`라는 proxy 객체는 전달된 값을 평가하고, 필요할 때 배열로 변환한다. 이 객체는 `latestBrowser`라는 추가적인 property를 지원하는데, getter와 setter 모두 지원한다.
 
-<pre class="brush: js">let products = new Proxy({
+```js
+let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 },
 {
@@ -216,18 +216,19 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 console.log(products.browsers); // ['Internet Explorer', 'Netscape']
 products.browsers = 'Firefox'; // pass a string (by mistake)
-console.log(products.browsers); // ['Firefox'] &lt;- no problem, the value is an array
+console.log(products.browsers); // ['Firefox'] <- no problem, the value is an array
 
 products.latestBrowser = 'Chrome';
 console.log(products.browsers); // ['Firefox', 'Chrome']
 console.log(products.latestBrowser); // 'Chrome'
-</pre>
+```
 
-<h3 id="Finding_an_array_item_object_by_its_property_(property로_배열의_객체를_찾기)">Finding an array item object by its property (property로 배열의 객체를 찾기)</h3>
+### Finding an array item object by its property (property로 배열의 객체를 찾기)
 
-<p>proxy 는 유용한 특성을 가진 배열로 확장할 것이다. <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties">Object.defineProperties</a></code>를 사용하지 않고, 유연하게 property들을 유연하게 "정의"할 수 있다. 이 예제는 테이블의 cell을 이용해서 row(열)을 찾는데 적용할 수 있다. 이 경우, target은 <code><a href="/en-US/docs/DOM/table.rows">table.rows</a></code>가 될 것이다.</p>
+proxy 는 유용한 특성을 가진 배열로 확장할 것이다. [`Object.defineProperties`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties)를 사용하지 않고, 유연하게 property들을 유연하게 "정의"할 수 있다. 이 예제는 테이블의 cell을 이용해서 row(열)을 찾는데 적용할 수 있다. 이 경우, target은 [`table.rows`](/en-US/docs/DOM/table.rows)가 될 것이다.
 
-<pre class="brush: js">let products = new Proxy([
+```js
+let products = new Proxy([
   { name: 'Firefox', type: 'browser' },
   { name: 'SeaMonkey', type: 'browser' },
   { name: 'Thunderbird', type: 'mailer' }
@@ -282,13 +283,14 @@ console.log(products['Chrome']); // undefined
 console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
 console.log(products.types); // ['browser', 'mailer']
 console.log(products.number); // 3
-</pre>
+```
 
-<h3 id="A_complete_traps_list_example_(완벽한_traps_리스트_예제)">A complete <code>traps</code> list example (완벽한 <code>traps</code> 리스트 예제)</h3>
+### A complete `traps` list example (완벽한 `traps` 리스트 예제)
 
-<p>이제 완벽한 <code>traps</code> 리스트를 생성하기 위해서, 이러한 유형의 작업에 특히 적합한 <em>non native</em> 객체를 프록시화 할 것이다. [a simple cookie framework](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework)에 의해 생성된 전역 객체 <code>docCookies</code>이다.</p>
+이제 완벽한 `traps` 리스트를 생성하기 위해서, 이러한 유형의 작업에 특히 적합한 _non native_ 객체를 프록시화 할 것이다. \[a simple cookie framework]\(https\://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework)에 의해 생성된 전역 객체 `docCookies`이다.
 
-<pre class="brush: js">/*
+```js
+/*
   var docCookies = ... get the "docCookies" object here:
   https://developer.mozilla.org/en-US/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
@@ -315,7 +317,7 @@ var docCookies = new Proxy(docCookies, {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
   defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc &amp;&amp; "value" in oDesc) { oTarget.setItem(sKey, oDesc.value); }
+    if (oDesc && "value" in oDesc) { oTarget.setItem(sKey, oDesc.value); }
     return oTarget;
   },
   getOwnPropertyDescriptor: function (oTarget, sKey) {
@@ -335,26 +337,25 @@ console.log(docCookies.my_cookie1 = "First value");
 console.log(docCookies.getItem("my_cookie1"));
 
 docCookies.setItem("my_cookie1", "Changed value");
-console.log(docCookies.my_cookie1);</pre>
+console.log(docCookies.my_cookie1);
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Proxy", 2)}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a class="external" href="https://www.youtube.com/watch?v=sClk6aB_CPk">"Proxies are awesome" Brendan Eich presentation at JSConf</a> (<a class="external" href="http://www.slideshare.net/BrendanEich/metaprog-5303821">slides</a>)</li>
- <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">ECMAScript Harmony Proxy proposal page</a> and <a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics">ECMAScript Harmony proxy semantics page</a></li>
- <li><a class="external" href="http://soft.vub.ac.be/~tvcutsem/proxies/">Tutorial on proxies</a></li>
- <li><a href="/en-US/docs/JavaScript/Old_Proxy_API" title="/en-US/docs/JavaScript/Old_Proxy_API">SpiderMonkey specific Old Proxy API</a></li>
- <li>{{jsxref("Object.watch()")}} is a non-standard feature but has been supported in Gecko for a long time.</li>
-</ul>
+- ["Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([slides](http://www.slideshare.net/BrendanEich/metaprog-5303821))
+- [ECMAScript Harmony Proxy proposal page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) and [ECMAScript Harmony proxy semantics page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
+- [Tutorial on proxies](http://soft.vub.ac.be/~tvcutsem/proxies/)
+- [SpiderMonkey specific Old Proxy API](/ko/docs/JavaScript/Old_Proxy_API)
+- {{jsxref("Object.watch()")}} is a non-standard feature but has been supported in Gecko for a long time.
 
-<h2 id="라이센스_참고사항">라이센스 참고사항</h2>
+## 라이센스 참고사항
 
-<p>Some content (text, examples) in this page has been copied or adapted from the <a class="external" href="http://wiki.ecmascript.org/doku.php">ECMAScript wiki</a> which content is licensed <a class="external" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC 2.0 BY-NC-SA</a>.</p>
+Some content (text, examples) in this page has been copied or adapted from the [ECMAScript wiki](http://wiki.ecmascript.org/doku.php) which content is licensed [CC 2.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/).

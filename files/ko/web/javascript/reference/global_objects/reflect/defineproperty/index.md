@@ -9,72 +9,68 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Reflect</strong></code><strong><code>.defineProperty()</code></strong> 정적 메서드는 {{jsxref("Object.defineProperty()")}}와 같은 동작을 하지만 {{jsxref("Boolean")}}을 반환합니다.</p>
+**`Reflect`\*\***`.defineProperty()`\*\* 정적 메서드는 {{jsxref("Object.defineProperty()")}}와 같은 동작을 하지만 {{jsxref("Boolean")}}을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 
+## 구문
 
+    Reflect.defineProperty(target, propertyKey, attributes)
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Reflect.defineProperty(<em>target</em>, <em>propertyKey</em>, <em>attributes</em>)
-</pre>
+- `target`
+  - : 속성을 정의할 대상 객체.
+- `propertyKey`
+  - : 정의하거나 수정할 속성의 이름.
+- `attributes`
+  - : 정의하거나 수정하는 속성을 기술하는 객체.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>target</code></dt>
- <dd>속성을 정의할 대상 객체.</dd>
- <dt><code>propertyKey</code></dt>
- <dd>정의하거나 수정할 속성의 이름.</dd>
- <dt><code>attributes</code></dt>
- <dd>정의하거나 수정하는 속성을 기술하는 객체.</dd>
-</dl>
+속성이 성공적으로 정의됐는지 나타내는 {{jsxref("Boolean")}}.
 
-<h3 id="반환_값">반환 값</h3>
+### 예외
 
-<p>속성이 성공적으로 정의됐는지 나타내는 {{jsxref("Boolean")}}.</p>
+`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
 
-<h3 id="예외">예외</h3>
+## 설명
 
-<p><code>target</code>이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.</p>
+`Reflect.defineProperty` 메서드는 객체에 속성을 정교하게 추가하거나 수정할 수 있습니다. 자세한 내용은 유사한 메서드인 {{jsxref("Object.defineProperty")}}를 참고하세요. `Object.defineProperty`는 성공 시 대상 객체를 반환하고 실패하면 {{jsxref("TypeError")}}를 던지지만, `Reflect.defineProperty`는 성공 여부를 나타내는 {{jsxref("Boolean")}}을 반환합니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p><code>Reflect.defineProperty</code> 메서드는 객체에 속성을 정교하게 추가하거나 수정할 수 있습니다. 자세한 내용은 유사한 메서드인 {{jsxref("Object.defineProperty")}}를 참고하세요. <code>Object.defineProperty</code>는 성공 시 대상 객체를 반환하고 실패하면 {{jsxref("TypeError")}}를 던지지만, <code>Reflect.defineProperty</code>는 성공 여부를 나타내는 {{jsxref("Boolean")}}을 반환합니다.</p>
+### `Reflect.defineProperty()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="Reflect.defineProperty()_사용하기"><code>Reflect.defineProperty()</code> 사용하기</h3>
-
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 Reflect.defineProperty(obj, 'x', {value: 7}); // true
 obj.x; // 7
-</pre>
+```
 
-<h3 id="속성_정의의_성공_여부_알아내기">속성 정의의 성공 여부 알아내기</h3>
+### 속성 정의의 성공 여부 알아내기
 
-<p>{{jsxref("Object.defineProperty")}}는 성공 시 객체를 반환하고, 실패 시 {{jsxref("TypeError")}}를 던지므로 속성 정의 과정에 발생할 수 있는 오류를 <code><a href="/ko/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> 블록으로 잡아야 합니다. 반면 <code>Reflect.defineProperty</code>는 성공 여부를 나타내는 {{jsxref("Boolean")}}을 반환하므로, 간단하게 <code><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code> 블록만 사용하면 됩니다.</p>
+{{jsxref("Object.defineProperty")}}는 성공 시 객체를 반환하고, 실패 시 {{jsxref("TypeError")}}를 던지므로 속성 정의 과정에 발생할 수 있는 오류를 [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) 블록으로 잡아야 합니다. 반면 `Reflect.defineProperty`는 성공 여부를 나타내는 {{jsxref("Boolean")}}을 반환하므로, 간단하게 [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 블록만 사용하면 됩니다.
 
-<pre class="brush: js">if (Reflect.defineProperty(target, property, attributes)) {
+```js
+if (Reflect.defineProperty(target, property, attributes)) {
   // 성공
 } else {
   // 실패
-}</pre>
+}
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Reflect.defineProperty")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.defineProperty()")}}

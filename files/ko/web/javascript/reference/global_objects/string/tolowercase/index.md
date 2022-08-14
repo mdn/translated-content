@@ -9,45 +9,38 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**`toLowerCase()`** 메서드는 문자열을 소문자로 변환해 반환합니다.{{EmbedInteractiveExample("pages/js/string-tolowercase.html")}}
 
-<div><strong><code>toLowerCase()</code></strong> 메서드는 문자열을 소문자로 변환해 반환합니다.</div>
+## 구문
 
-<div> </div>
+    str.toLowerCase()
 
-<div>{{EmbedInteractiveExample("pages/js/string-tolowercase.html")}}</div>
+### 반환값
 
-<h2 id="구문">구문</h2>
+호출 문자열을 소문자로 변환한 새로운 문자열
 
-<pre class="syntaxbox"><code><var>str</var>.toLowerCase()</code></pre>
+## 설명
 
-<h3 id="반환값">반환값</h3>
+`toLowerCase()` 메서드는 호출 문자열을 소문자로 변환해 반환합니다. `toLowerCase()` 는 원래의 `str`에 영향을 주지 않습니다.
 
-<p>호출 문자열을 소문자로 변환한 새로운 문자열</p>
+## 예제
 
-<h2 id="설명">설명</h2>
+### `toLowerCase()`
 
-<p><code>toLowerCase()</code> 메서드는 호출 문자열을 소문자로 변환해 반환합니다.  <code>toLowerCase()</code> 는 원래의 <code>str</code>에 영향을 주지 않습니다.</p>
+```js
+console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+```
 
-<h2 id="예제">예제</h2>
-
-<h3 id="toLowerCase()"> <code>toLowerCase()</code></h3>
-
-<pre class="brush: js">console.log('ALPHABET'.toLowerCase()); // 'alphabet'
-</pre>
-
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.String.toLowerCase")}}</p>
+{{Compat}}
 
-<h2 id="참조">참조</h2>
+## 참조
 
-<ul>
- <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
- <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toUpperCase()")}}

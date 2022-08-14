@@ -3,72 +3,73 @@ title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.sinh()</code></strong> 함수(쌍곡선 함수)는 사인값을 반환합니다 이 값은 아래와같은 식을통해서 표현할 수 있습니다.{{jsxref("Math.E", "constant e", "", 1)}}:</p>
+**`Math.sinh()`** 함수(쌍곡선 함수)는 사인값을 반환합니다 이 값은 아래와같은 식을통해서 표현할 수 있습니다.{{jsxref("Math.E", "constant e", "", 1)}}:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.sinh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh(x)}} = \frac{e^x - e^{-x}}{2}</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.sinh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh(x)}} = \frac{e^x - e^{-x}}{2}</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-sinh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-sinh.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code>Math.sinh(<var>x</var>)</code></pre>
+```js
+    Math.sinh(x)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>x</code></dt>
- <dd>숫자.</dd>
-</dl>
+- `x`
+  - : 숫자.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>사인값.</p>
+사인값.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>sinh()</code> 는 <code>Math</code> 의 정적 함수이기 때문에, 자바스크립트 어디든 <code>Math.sinh()</code> 를 사용할 수 있습니다, 따라서  <code>Math</code> 오브젝트를 생성해서는 안됩니다. (<code>Math</code> 는 constructor(생성자) 가 아닙니다.).</p>
+`sinh()` 는 `Math` 의 정적 함수이기 때문에, 자바스크립트 어디든 `Math.sinh()` 를 사용할 수 있습니다, 따라서 `Math` 오브젝트를 생성해서는 안됩니다. (`Math` 는 constructor(생성자) 가 아닙니다.).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Math.sinh_사용하기"><code>Math.sinh()</code> 사용하기</h3>
+### `Math.sinh()` 사용하기
 
-<pre class="brush: js">Math.sinh(0); // 0
+```js
+Math.sinh(0); // 0
 Math.sinh(1); // 1.1752011936438014
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>This can be emulated with the help of the {{jsxref("Math.exp()")}} function:</p>
+This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
-<pre class="brush: js">Math.sinh = Math.sinh || function(x) {
+```js
+Math.sinh = Math.sinh || function(x) {
   return (Math.exp(x) - Math.exp(-x)) / 2;
 }
-</pre>
+```
 
-<p>or using only one call to the {{jsxref("Math.exp()")}} function:</p>
+or using only one call to the {{jsxref("Math.exp()")}} function:
 
-<pre class="brush: js">Math.sinh = Math.sinh || function(x) {
+```js
+Math.sinh = Math.sinh || function(x) {
   var y = Math.exp(x);
   return (y - 1 / y) / 2;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.Math.sinh")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Math.acosh()")}}</li>
- <li>{{jsxref("Math.asinh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.cosh()")}}</li>
- <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.cosh()")}}
+- {{jsxref("Math.tanh()")}}

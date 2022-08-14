@@ -3,71 +3,65 @@ title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>잘 알려진 <code><strong>Symbol.iterator</strong></code> 심볼은 객체에 대응하는 기본 이터레이터를 지정합니다. <a href="/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a>와 같이 사용됩니다.</p>
+잘 알려진 **`Symbol.iterator`** 심볼은 객체에 대응하는 기본 이터레이터를 지정합니다. [`for...of`](/docs/Web/JavaScript/Reference/Statements/for...of)와 같이 사용됩니다.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}{{js_property_attributes(0,0,0)}}
 
+## 설명
 
+(`for..of` 루프의 시작부분과 같이) 객체가 반환될 필요가 있을때는 언제든지`@@iterator` 메서드는 인수 없이도 호출 할 수 있습니다. 반환된 **iterator**는 반복할 값을 취득하기 위해 사용됩니다.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{jsxref("Object")}}와 같이 반복동작을 내장하고 있는 형태도 있지만 그렇지 않은 경우도 있습니다. `@@iterator` 메서드를 가지고 있는 내장형 타입은 아래와 같습니다.
 
-<h2 id="설명">설명</h2>
+- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
 
-<p>(<code>for..of</code> 루프의 시작부분과 같이) 객체가 반환될 필요가 있을때는 언제든지<code>@@iterator</code> 메서드는 인수 없이도 호출 할 수 있습니다. 반환된 <strong>iterator</strong>는 반복할 값을 취득하기 위해 사용됩니다.</p>
+상세한 내용은 [반복처리 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)도 확인 해 주시기 바랍니다.
 
-<p>{{jsxref("Object")}}와 같이 반복동작을 내장하고 있는 형태도 있지만 그렇지 않은 경우도 있습니다. <code>@@iterator</code> 메서드를 가지고 있는 내장형 타입은 아래와 같습니다.</p>
+## 예제
 
-<ul>
- <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
-</ul>
+### 유저 정의 이터레이터
 
-<p>상세한 내용은 <a href="/ko/docs/Web/JavaScript/Reference/Iteration_protocols">반복처리 프로토콜</a>도 확인 해 주시기 바랍니다.</p>
+앞에서 기술한 바와 같이 독자적으로 이터레이터를 만드는 것이 가능합니다.
 
-<h2 id="예제">예제</h2>
-
-<h3 id="유저_정의_이터레이터">유저 정의 이터레이터</h3>
-
-<p>앞에서 기술한 바와 같이 독자적으로 이터레이터를 만드는 것이 가능합니다.</p>
-
-<pre class="brush: js">var myIterable = {}
+```js
+var myIterable = {}
 myIterable[Symbol.iterator] = function* () {
     yield 1;
     yield 2;
     yield 3;
 };
 [...myIterable] // [1, 2, 3]
-</pre>
+```
 
-<h3 id="비정형_이터레이터">비정형 이터레이터</h3>
+### 비정형 이터레이터
 
-<p>iterable의 <code>@@iterator</code> 메서드가 이터레이터 객체를 반환하지 않는 경우 비정형 이터레이터입니다. 이와 같이 사용하는 경우 실행시 예외 혹은 예상치 못한 버그를 발생할 가능성이 있습니다.</p>
+iterable의 `@@iterator` 메서드가 이터레이터 객체를 반환하지 않는 경우 비정형 이터레이터입니다. 이와 같이 사용하는 경우 실행시 예외 혹은 예상치 못한 버그를 발생할 가능성이 있습니다.
 
-<pre class="brush: js">var nonWellFormedIterable = {}
-nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
+```js
+var nonWellFormedIterable = {}
+nonWellFormedIterable[Symbol.iterator] = () => 1
 [...nonWellFormedIterable] // TypeError: [] is not a function
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.Symbol.iterator")}}</p>
+{{Compat}}
 
-<h2 id="관련_정보">관련 정보</h2>
+## 관련 정보
 
-<ul>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Iteration_protocols">반복처리 프로토콜</a></li>
- <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
-</ul>
+- [반복처리 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}

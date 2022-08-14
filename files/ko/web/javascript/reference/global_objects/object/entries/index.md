@@ -3,40 +3,37 @@ title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.entries()</strong></code> 메서드는 {{jsxref("Statements/for...in", "for...in")}}와 같은 순서로 주어진 객체 자체의 enumerable 속성 <code>[key, value]</code> 쌍의 배열을 반환합니다. (<code>for-in</code> 루프가 다른점은 프로토 타입 체인의 속성도 열거한다는 점입니다).</p>
+**`Object.entries()`** 메서드는 {{jsxref("Statements/for...in", "for...in")}}와 같은 순서로 주어진 객체 자체의 enumerable 속성 `[key, value]` 쌍의 배열을 반환합니다. (`for-in` 루프가 다른점은 프로토 타입 체인의 속성도 열거한다는 점입니다).
 
-<p><code><strong>Object.entries()</strong></code> 에 의해 반환된 배열(array)의 순서는 객체가 정의된 방법과 관련이 없습니다.  배열 순서가 쓸 곳이 있다면, 다음과 같이 정렬을 먼저 하시는 것이 좋습니다 <code>Object.entries(obj).sort((a, b) =&gt; b[0].localeCompare(a[0]));</code>.</p>
+**`Object.entries()`** 에 의해 반환된 배열(array)의 순서는 객체가 정의된 방법과 관련이 없습니다. 배열 순서가 쓸 곳이 있다면, 다음과 같이 정렬을 먼저 하시는 것이 좋습니다 `Object.entries(obj).sort((a, b) => b[0].localeCompare(a[0]));`.
 
-<div>{{EmbedInteractiveExample("pages/js/object-entries.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/object-entries.html", "taller")}}
 
+## Syntax
 
+    Object.entries(obj)
 
-<h2 id="Syntax">Syntax</h2>
+### Parameters
 
-<pre class="syntaxbox ">Object.entries(<var>obj</var>)</pre>
+- `obj`
+  - : 객체 자체의 열거 가능한 문자열 키를 가진 속성 `[key, value]` 쌍이 반환되는 객체입니다.
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>객체 자체의 열거 가능한 문자열 키를 가진 속성 <code>[key, value]</code> 쌍이 반환되는 객체입니다.</dd>
-</dl>
+지정된 객체 자체의 열거 가능한 문자속성 `[key, value]` 쌍의 배열입니다.
 
-<h3 id="Return_value">Return value</h3>
+## Description
 
-<p>지정된 객체 자체의 열거 가능한 문자속성 <code>[key, value]</code> 쌍의 배열입니다.</p>
+`Object.entries()`는 `object`에 직접있는 enumerable 속성 `[key, value]` 쌍에 해당하는 배열을 반환합니다. 속성의 순서는 개체의 속성 값을 수동으로 반복하여 주어진 순서와 동일합니다.
 
-<h2 id="Description">Description</h2>
+## Polyfill
 
-<p><code>Object.entries()</code>는 <code>object</code>에 직접있는 enumerable 속성 <code>[key, value]</code> 쌍에 해당하는 배열을 반환합니다. 속성의 순서는 개체의 속성 값을 수동으로 반복하여 주어진 순서와 동일합니다.</p>
+기본적으로 지원하지 않는 이전 환경에서 호환 가능한 `Object.entries` 지원을 추가하려면 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries)에 Object.entries의 데모 구현을 찾을 수 있습니다 (IE에 대한 지원이 필요하지 않은 경우) , [es-shims/Object.entries](https://github.com/es-shims/Object.entries) 저장소에있는 polyfill을 사용하거나 아래에 나열된 polyfill을 간단하게 배치 할 수 있습니다.
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>기본적으로 지원하지 않는 이전 환경에서 호환 가능한 <code>Object.entries</code> 지원을 추가하려면 <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a>에 Object.entries의 데모 구현을 찾을 수 있습니다 (IE에 대한 지원이 필요하지 않은 경우) , <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a> 저장소에있는 polyfill을 사용하거나 아래에 나열된 polyfill을 간단하게 배치 할 수 있습니다.</p>
-
-<pre class="brush: js ">if (!Object.entries)
+```js
+if (!Object.entries)
   Object.entries = function( obj ){
     var ownProps = Object.keys( obj ),
         i = ownProps.length,
@@ -46,15 +43,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 
     return resArray;
   };
-</pre>
+```
 
-<p>For the above polyfill code snippet, if you need support for IE &lt; 9, then you will also need an Object.keys polyfill (such as the one found on the {{jsxref("Object.keys")}} page).</p>
+For the above polyfill code snippet, if you need support for IE < 9, then you will also need an Object.keys polyfill (such as the one found on the {{jsxref("Object.keys")}} page).
 
-<p>위의 polyfill 코드 스 니펫의 경우 Internet Explorer (9버전 이전)를 지원해야하는 경우 Object.keys polyfill ( {{jsxref("Object.keys")}} 페이지에 있는 것과 같은)도 필요합니다.</p>
+위의 polyfill 코드 스 니펫의 경우 Internet Explorer (9버전 이전)를 지원해야하는 경우 Object.keys polyfill ( {{jsxref("Object.keys")}} 페이지에 있는 것과 같은)도 필요합니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js ">const obj = { foo: 'bar', baz: 42 };
+```js
+const obj = { foo: 'bar', baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // array like object
@@ -83,52 +81,46 @@ for (const [key, value] of Object.entries(obj)) {
 }
 
 // Or, using array extras
-Object.entries(obj).forEach(([key, value]) =&gt; {
+Object.entries(obj).forEach(([key, value]) => {
 console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
 });
-</pre>
+```
 
-<h3 id="Converting_an_Object_to_a_Map">Converting an <code>Object</code> to a <code>Map</code></h3>
+### Converting an `Object` to a `Map`
 
-<p>{{jsxref("Map", "new Map()")}} 생성자는 반복 가능한 항목을 허용합니다. <code>Object.entries</code>를 사용하면 {{jsxref("Object")}}에서 {{jsxref("Map")}}로 쉽게 변환 할 수 있습니다.</p>
+{{jsxref("Map", "new Map()")}} 생성자는 반복 가능한 항목을 허용합니다. `Object.entries`를 사용하면 {{jsxref("Object")}}에서 {{jsxref("Map")}}로 쉽게 변환 할 수 있습니다.
 
-
-
-<pre class="brush: js ">const obj = { foo: 'bar', baz: 42 };
+```js
+const obj = { foo: 'bar', baz: 42 };
 const map = new Map(Object.entries(obj));
 console.log(map); // Map { foo: "bar", baz: 42 }
-</pre>
+```
 
-<h3 id="Iterating_through_an_Object">Iterating through an <code>Object</code></h3>
+### Iterating through an `Object`
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring">Array Destructuring</a>을 사용하면 객체를 쉽게 반복 할 수 있습니다.</p>
+[Array Destructuring](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring)을 사용하면 객체를 쉽게 반복 할 수 있습니다.
 
-<pre class="brush: js ">const obj = { foo: 'bar', baz: 42 };
-Object.entries(obj).forEach(([key, value]) =&gt; console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
-</pre>
+```js
+const obj = { foo: 'bar', baz: 42 };
+Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat("javascript.builtins.Object.entries")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.values()")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Map.prototype.entries()")}}</li>
- <li>{{jsxref("Map.prototype.keys()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.values()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Map.prototype.entries()")}}
+- {{jsxref("Map.prototype.keys()")}}
+- {{jsxref("Map.prototype.values()")}}

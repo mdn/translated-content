@@ -10,69 +10,65 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>delete()</strong></code> 메서드는 지정한 요소를 <code>Set</code> 객체에서 제거합니다.</p>
+**`delete()`** 메서드는 지정한 요소를 `Set` 객체에서 제거합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 
+## 구문
 
+    mySet.delete(value);
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><em>mySet</em>.delete(<em>value</em>);</pre>
+- `value`
+  - : `Set` 객체에서 제거할 요소의 값.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>value</code></dt>
- <dd><code>Set</code> 객체에서 제거할 요소의 값.</dd>
-</dl>
+요소를 제거했으면 `true`, 아니면 `false`.
 
-<h3 id="반환_값">반환 값</h3>
+## 예제
 
-<p>요소를 제거했으면 <code>true</code>, 아니면 <code>false</code>.</p>
+### `delete()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="delete()_사용하기"><code>delete()</code> 사용하기</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 
 mySet.delete('bar'); // Returns false. No "bar" element found to be deleted.
 mySet.delete('foo'); // Returns true.  Successfully removed.
 
 mySet.has('foo');    // Returns false. The "foo" element is no longer present.
-</pre>
+```
 
-<p>다음 예제는 <code>Set</code>에서 객체를 제거하는 방법을 보입니다.</p>
+다음 예제는 `Set`에서 객체를 제거하는 방법을 보입니다.
 
-<pre class="brush: js">var setObj = new Set(); // Create a New Set.
+```js
+var setObj = new Set(); // Create a New Set.
 
 setObj.add({x: 10, y: 20}); // Add object in the set.
 
 setObj.add({x: 20, y: 30}); // Add object in the set.
 
-// Delete any point with `x &gt; 10`.
+// Delete any point with `x > 10`.
 setObj.forEach(function(point){
-  if(point.x &gt; 10){
+  if(point.x > 10){
     setObj.delete(point)
   }
 })
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Set.delete")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.clear()")}}

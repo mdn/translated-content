@@ -9,38 +9,37 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>byteLength</strong></code> 접근자 속성은 {{jsxref("ArrayBuffer")}}의 길이를 바이트 단위로 반환합니다.</p>
+**`byteLength`** 접근자 속성은 {{jsxref("ArrayBuffer")}}의 길이를 바이트 단위로 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
 
+## 구문
 
+```js
+    arraybuffer.byteLength
+```
 
-<h2 id="구문">구문</h2>
+## 설명
 
-<pre class="syntaxbox"><var>arr</var>aybuffer.byteLength</pre>
+`byteLength` 속성은 설정자 속성이 `undefined`인 접근자 속성으로, 오직 읽기만 가능합니다. `byteLength`는 배열 버퍼를 처음 생성할 때 정해지며 바꿀 수 없습니다. `ArrayBuffer`가 분리된 경우 0을 반환합니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p><code>byteLength</code> 속성은 설정자 속성이 <code>undefined</code>인 접근자 속성으로, 오직 읽기만 가능합니다. <code>byteLength</code>는 배열 버퍼를 처음 생성할 때 정해지며 바꿀 수 없습니다. <code>ArrayBuffer</code>가 분리된 경우 0을 반환합니다.</p>
-
-<h2 id="예제">예제</h2>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 buffer.byteLength; // 8
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.ArrayBuffer.byteLength")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}

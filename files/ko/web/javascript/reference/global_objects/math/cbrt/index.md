@@ -9,37 +9,61 @@ tags:
   - 세제곱근
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.cbrt()</code></strong> 함수는 주어진 수의 세제곱근을 반환합니다. 즉,</p>
+**`Math.cbrt()`** 함수는 주어진 수의 세제곱근을 반환합니다. 즉,
 
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi>
+<mi>a</mi>
+<mi>t</mi>
+<mi>h</mi>
+<mo>.</mo>
+<mi>c</mi>
+<mi>b</mi>
+<mi>r</mi>
+<mi>t</mi>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+</mrow></mstyle><mo>=</mo>
+<mroot><mi>x</mi>
+<mn>3</mn>
+</mroot><mo>=</mo>
+<mtext>the unique</mtext>
+<mspace width="thickmathspace"></mspace><mi>y</mi>
+<mspace width="thickmathspace"></mspace><mtext>such that</mtext>
+<mspace width="thickmathspace"></mspace><msup><mi>y</mi>
+<mn>3</mn>
+</msup><mo>=</mo>
+<mi>x</mi>
+</mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique}
+\; y \; \text{such that} \; y^3 = x</annotation></semantics></math>
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{the unique} \; y \; \text{such that} \; y^3 = x</annotation></semantics></math></p>
+## 구문
 
-<h2 id="구문">구문</h2>
+```js
+    Math.cbrt(x)
+```
 
-<pre class="syntaxbox"><code>Math.cbrt(<var>x</var>)</code></pre>
+### 매개변수
 
-<h3 id="매개변수">매개변수</h3>
+- `x`
+  - : 숫자.
 
-<dl>
- <dt><code>x</code></dt>
- <dd>숫자.</dd>
-</dl>
+### 반환 값
 
-<h3 id="반환_값">반환 값</h3>
+주어진 수의 세제곱근.
 
-<p>주어진 수의 세제곱근.</p>
+## 설명
 
-<h2 id="설명">설명</h2>
+`cbrt()`는 `Math`의 정적 메서드이므로, 사용자가 생성한 `Math` 객체의 메서드로 호출할 수 없고 항상 `Math.cbrt()`를 사용해야 합니다. (`Math`는 생성자가 아닙니다)
 
-<p><code>cbrt()</code>는 <code>Math</code>의 정적 메서드이므로, 사용자가 생성한 <code>Math</code> 객체의 메서드로 호출할 수 없고 항상 <code>Math.cbrt()</code>를 사용해야 합니다. (<code>Math</code>는 생성자가 아닙니다)</p>
+## 예제
 
-<h2 id="예제">예제</h2>
+### `Math.cbrt()` 사용하기
 
-<h3 id="Math.cbrt()_사용하기"><code>Math.cbrt()</code> 사용하기</h3>
-
-<pre class="brush: js">Math.cbrt(NaN); // NaN
+```js
+Math.cbrt(NaN); // NaN
 Math.cbrt(-1); // -1
 Math.cbrt(-0); // -0
 Math.cbrt(-Infinity); // -Infinity
@@ -48,32 +72,32 @@ Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
 Math.cbrt(2);  // 1.2599210498948734
-</pre>
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<p>모든 <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math>에서 <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math> 이므로, <code>Math.cbrt()</code>는 다음 함수로 폴리필할 수 있습니다.</p>
+모든 <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="TeX">x \geq 0</annotation></semantics></math>에서 <math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="TeX">\sqrt[3]{x} = x^{1/3}</annotation></semantics></math> 이므로, `Math.cbrt()`는 다음 함수로 폴리필할 수 있습니다.
 
-<pre class="brush: js">if (!Math.cbrt) {
+```js
+if (!Math.cbrt) {
   Math.cbrt = (function(pow) {
     return function cbrt(){
       // ensure negative numbers remain negative:
-      return x &lt; 0 ? -pow(-x, 1/3) : pow(x, 1/3);
+      return x < 0 ? -pow(-x, 1/3) : pow(x, 1/3);
     };
   })(Math.pow); // localize Math.pow to increase efficiency
-}</pre>
+}
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Math.cbrt")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

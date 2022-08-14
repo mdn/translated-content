@@ -9,48 +9,47 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toJSON()</code></strong> 메서드는 {{jsxref("Date")}} 객체의 문자열 표현을 반환합니다.</p>
+**`toJSON()`** 메서드는 {{jsxref("Date")}} 객체의 문자열 표현을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/date-tojson.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tojson.html")}}
 
+## 구문
 
+```js
+    dateObj.toJSON()
+```
 
-<h2 id="구문">구문</h2>
+### 반환 값
 
-<pre class="syntaxbox"><code><var>dateObj</var>.toJSON()</code></pre>
+주어진 날짜의 문자열 표현.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>주어진 날짜의 문자열 표현.</p>
+{{jsxref("Date")}} 인스턴스는 시간의 특정 지점을 가리킵니다. `toJSON()`을 호출하면 {{jsxref("Date.prototype.toISOString()", "toISOString()")}} 사용해 그 인스턴스가 가리키는 시간의 문자열 표현을 반환합니다. `toJSON()`은 `Date` 값을 {{Glossary("JSON")}}으로 직렬화할 때 유용하게 사용할 수 있도록 만들어졌습니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p>{{jsxref("Date")}} 인스턴스는 시간의 특정 지점을 가리킵니다. <code>toJSON()</code>을 호출하면 {{jsxref("Date.prototype.toISOString()", "toISOString()")}} 사용해 그 인스턴스가 가리키는 시간의 문자열 표현을 반환합니다. <code>toJSON()</code>은  <code>Date</code> 값을 {{Glossary("JSON")}}으로 직렬화할 때 유용하게 사용할 수 있도록 만들어졌습니다.</p>
+### `toJSON()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="toJSON()_사용하기"><code>toJSON()</code> 사용하기</h3>
-
-<pre class="brush:js">const jsonDate = (new Date()).toJSON();
+```js
+const jsonDate = (new Date()).toJSON();
 const backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Date.toJSON")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

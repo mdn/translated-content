@@ -4,61 +4,61 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 browser-compat: javascript.builtins.Date.getTime
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>getTime()</strong> 메서드는 표준시에 따라 지정된 날짜의 시간에 해당하는 숫자 값을 반환합니다.</p>
+**getTime()** 메서드는 표준시에 따라 지정된 날짜의 시간에 해당하는 숫자 값을 반환합니다.
 
-<p>이 메서드를 사용하면 다른 {{jsxref ( "Date")}} 객체에 날짜와 시간을 지정할 수 있습니다. 이 메소드는 기능적으로 {{jsxref("Date.valueof", "valueOf()")}} 메소드와 동일합니다.</p>
+이 메서드를 사용하면 다른 {{jsxref ( "Date")}} 객체에 날짜와 시간을 지정할 수 있습니다. 이 메소드는 기능적으로 {{jsxref("Date.valueof", "valueOf()")}} 메소드와 동일합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getTime()</code></pre>
+```js
+    dateObj.getTime()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>1970 년 1 월 1 일 00:00:00 UTC와 주어진 날짜 사이의 경과 시간 (밀리 초)을 나타내는 숫자입니다.</p>
+1970 년 1 월 1 일 00:00:00 UTC와 주어진 날짜 사이의 경과 시간 (밀리 초)을 나타내는 숫자입니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="날짜_복사에_getTime_()_사용">날짜 복사에 getTime () 사용</h3>
+### 날짜 복사에 getTime () 사용
 
-<p>동일한 시간 값으로 날짜 객체를 생성합니다.</p>
+동일한 시간 값으로 날짜 객체를 생성합니다.
 
-<pre class="brush: js">// 월은 0부터 시작하여 생일은 1995 년 1 월 10 일이됩니다.
+```js
+// 월은 0부터 시작하여 생일은 1995 년 1 월 10 일이됩니다.
 var birthday = new Date(1994, 12, 10);
 var copy = new Date();
 copy.setTime(birthday.getTime());
-</pre>
+```
 
-<p> </p>
+### 측정 실행 시간
 
-<h3 id="측정_실행_시간">측정 실행 시간</h3>
+새로 생성 된 {{jsxref ( "Date")}} 객체에서 두 개의 연속 getTime () 호출을 뺀 후에이 두 호출 사이의 시간 범위를 지정하십시오. 일부 작업의 실행 시간을 계산하는 데 사용할 수 있습니다. 불필요한 {{jsxref ( "Date")}} 객체를 인스턴스화하지 않으려면 {{jsxref("Date.now()")}}를 참조하십시오.
 
-<p>새로 생성 된 {{jsxref ( "Date")}} 객체에서 두 개의 연속 getTime () 호출을 뺀 후에이 두 호출 사이의 시간 범위를 지정하십시오. 일부 작업의 실행 시간을 계산하는 데 사용할 수 있습니다. 불필요한 {{jsxref ( "Date")}} 객체를 인스턴스화하지 않으려면 {{jsxref("Date.now()")}}를 참조하십시오.</p>
-
-<pre class="brush: js">var end, start;
+```js
+var end, start;
 
 start = new Date();
-for (var i = 0; i &lt; 1000; i++) {
+for (var i = 0; i < 1000; i++) {
   Math.sqrt(i);
 }
 end = new Date();
 
 console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date.prototype.setTime()")}}</li>
- <li>{{jsxref("Date.prototype.valueOf()")}}</li>
- <li>{{jsxref("Date.now()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.setTime()")}}
+- {{jsxref("Date.prototype.valueOf()")}}
+- {{jsxref("Date.now()")}}

@@ -6,40 +6,39 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p><code><strong>isFinite()</strong></code> 전역 함수는 주어진 값이 유한수인지 판별합니다. 필요한 경우 매개변수를 먼저 숫자로 변환합니다.</p>
+**`isFinite()`** 전역 함수는 주어진 값이 유한수인지 판별합니다. 필요한 경우 매개변수를 먼저 숫자로 변환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
 
+## 구문
 
+```js
+    isFinite(testValue)
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">isFinite(<em>testValue</em>)</pre>
+- `testValue`
+  - : 유한한지 판별할 값.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>testValue</code></dt>
- <dd>유한한지 판별할 값.</dd>
-</dl>
+`testValue`가 양 또는 음의 {{jsxref("Infinity")}}, {{jsxref("NaN")}}, 또는 {{jsxref("undefined")}}면 `false`, 아니면 `true`.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p><code>testValue</code>가 양 또는 음의 {{jsxref("Infinity")}}, {{jsxref("NaN")}}, 또는 {{jsxref("undefined")}}면 <code>false</code>, 아니면 <code>true</code>.</p>
+`isFinite()`은 최상위 함수로 어떤 객체와도 연결되지 않았습니다.
 
-<h2 id="설명">설명</h2>
+숫자가 유한수인지 판별하기 위해 `isFinite()`을 사용할 수 있습니다. `isFinite()`은 주어진 수를 검사해 그 값이 `NaN`, 양의 무한대, 또는 음의 무한대이면 `false`를 반환합니다. 그렇지 않으면 `true`를 반환합니다.
 
-<p><code>isFinite()</code>은 최상위 함수로 어떤 객체와도 연결되지 않았습니다.</p>
+## 예제
 
-<p>숫자가 유한수인지 판별하기 위해 <code>isFinite()</code>을 사용할 수 있습니다. <code>isFinite()</code>은 주어진 수를 검사해 그 값이 <code>NaN</code>, 양의 무한대, 또는 음의 무한대이면 <code>false</code>를 반환합니다. 그렇지 않으면 <code>true</code>를 반환합니다.</p>
+### `isFinite()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="isFinite_사용하기"><code>isFinite()</code> 사용하기</h3>
-
-<pre class="brush: js">isFinite(Infinity);  // false
+```js
+isFinite(Infinity);  // false
 isFinite(NaN);       // false
 isFinite(-Infinity); // false
 
@@ -51,21 +50,20 @@ isFinite(null);      // true, would've been false with the
                      // more robust Number.isFinite(null)
 
 isFinite('0');       // true, would've been false with the
-                     // more robust Number.isFinite("0")</pre>
+                     // more robust Number.isFinite("0")
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.isFinite")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Number.isFinite()")}}</li>
- <li>{{jsxref("Number.NaN()")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
-</ul>
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Number.NaN()")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.NEGATIVE_INFINITY")}}

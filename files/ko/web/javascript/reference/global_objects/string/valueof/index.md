@@ -9,45 +9,44 @@ tags:
   - 프로토타입
 translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>valueOf()</code></strong> 메서드는 {{jsxref("String")}} 객체의 원시값을 반환합니다.</p>
+**`valueOf()`** 메서드는 {{jsxref("String")}} 객체의 원시값을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/string-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><code><var>str</var>.valueOf()</code></pre>
+    str.valueOf()
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>지정된 {{jsxref("String")}} 객체의 원시 값을 나타내는 문자열.</p>
+지정된 {{jsxref("String")}} 객체의 원시 값을 나타내는 문자열.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>{{jsxref("String")}} 의 <code>valueOf()</code> 메서드는 {{jsxref("String")}} 객체의 원시 값을 문자열 데이터 타입으로 반환 합니다. 이 값은 {{jsxref("String.prototype.toString()")}}.과 동일합니다.</p>
+{{jsxref("String")}} 의 `valueOf()` 메서드는 {{jsxref("String")}} 객체의 원시 값을 문자열 데이터 타입으로 반환 합니다. 이 값은 {{jsxref("String.prototype.toString()")}}.과 동일합니다.
 
-<p>이 메서드는 보통 자바스크립트에 의해 내부적으로 호출되며, 코드에서 명시적으로 사용하지는 않습니다.</p>
+이 메서드는 보통 자바스크립트에 의해 내부적으로 호출되며, 코드에서 명시적으로 사용하지는 않습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="valueOf_사용">  <code>valueOf()</code> 사용</h3>
+### `valueOf()` 사용
 
-<pre class="brush: js">var x = new String('Hello world');
+```js
+var x = new String('Hello world');
 console.log(x.valueOf()); // 'Hello world' 가 보여집니다.
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.String.valueOf")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("String.prototype.toString()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

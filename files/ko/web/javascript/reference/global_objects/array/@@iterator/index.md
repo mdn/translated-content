@@ -1,5 +1,5 @@
 ---
-title: 'Array.prototype[@@iterator]()'
+title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 tags:
   - Array
@@ -11,56 +11,60 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <code><strong>@@iterator</strong></code> 속성의 초기 값은 {{jsxref("Array.prototype.values()", "values()")}} 속성의 초기 값과 같은 함수 객체입니다.</p>
+**`@@iterator`** 속성의 초기 값은 {{jsxref("Array.prototype.values()", "values()")}} 속성의 초기 값과 같은 함수 객체입니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><code>arr[Symbol.iterator]()</code></pre>
+```js
+    arr[Symbol.iterator]()
+```
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>{{jsxref("Array.prototype.values()", "values()")}} 반복기가 반환하는 초기 값. <code>arr[Symbol.iterator]</code>의 기본값은 {{jsxref("Array.prototype.values()", "values()")}} 입니다.</p>
+{{jsxref("Array.prototype.values()", "values()")}} 반복기가 반환하는 초기 값. `arr[Symbol.iterator]`의 기본값은 {{jsxref("Array.prototype.values()", "values()")}} 입니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="for…of_반복문을_이용한_순회"><code>for…of</code> 반복문을 이용한 순회</h3>
+### `for…of` 반복문을 이용한 순회
 
-<pre class="brush: js"><code>var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr[Symbol.iterator]();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
 // const and var could also be used
 for (let letter of eArr) {
   console.log(letter);
-}</code></pre>
+}
+```
 
-<h3 id="다른_방법">다른 방법</h3>
+### 다른 방법
 
-<pre class="brush: js"><code>var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y
 console.log(eArr.next().value); // k
 console.log(eArr.next().value); // o
-console.log(eArr.next().value); // p</code></pre>
+console.log(eArr.next().value); // p
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>{{Compat("javascript.builtins.Array.@@iterator")}}</div>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.values()")}}

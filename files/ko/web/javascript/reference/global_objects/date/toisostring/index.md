@@ -10,41 +10,44 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toISOString()</code></strong> 메서드는 단순화한 확장 ISO 형식(<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>)의 문자열을 반환합니다. 반환값은 언제나 24글자 또는 27글자(각각 <strong><code>YYYY-MM-DDTHH:mm:ss.sssZ</code></strong> 또는 <strong><code>±YYYYYY-MM-DDTHH:mm:ss.sssZ</code></strong>)입니다. 시간대는 언제나 UTC이며 접미어 "<code>Z</code>"로 표현합니다.</p>
+**`toISOString()`** 메서드는 단순화한 확장 ISO 형식([ISO 8601](http://en.wikipedia.org/wiki/ISO_8601))의 문자열을 반환합니다. 반환값은 언제나 24글자 또는 27글자(각각 **`YYYY-MM-DDTHH:mm:ss.sssZ`** 또는 **`±YYYYYY-MM-DDTHH:mm:ss.sssZ`**)입니다. 시간대는 언제나 UTC이며 접미어 "`Z`"로 표현합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}
 
+## 구문
 
+```js
+    dateObj.toISOString()
+```
 
-<h2 id="구문">구문</h2>
+### 반환 값
 
-<pre class="syntaxbox"><code><var>dateObj</var>.toISOString()</code></pre>
+주어진 날짜를 국제표준시 기준 [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) 형식으로 표현한 문자열.
 
-<h3 id="반환_값">반환 값</h3>
+## 예제
 
-<p>주어진 날짜를 국제표준시 기준 <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> 형식으로 표현한 문자열.</p>
+### `toISOString()` 사용하기
 
-<h2 id="예제">예제</h2>
+아래 예제는 비표준 문자열의 분석을 포함하고 있어 비 Mozilla 브라우저에서는 올바르게 작동하지 않을 수 있습니다.
 
-<h3 id="toISOString()_사용하기"><code>toISOString()</code> 사용하기</h3>
+```js
+const today = new Date('05 October 2011 14:48 UTC');
 
-<p>아래 예제는 비표준 문자열의 분석을 포함하고 있어 비 Mozilla 브라우저에서는 올바르게 작동하지 않을 수 있습니다.</p>
+console.log(today.toISOString()); // Returns 2011-10-05T14:48:00.000Z
+```
 
-<pre class="brush: js">const today = new Date('05 October 2011 14:48 UTC');
+## 폴리필
 
-console.log(today.toISOString()); // Returns 2011-10-05T14:48:00.000Z</pre>
+`toISOString`은 ECMA-262 제5판에 표준으로 자리잡았습니다. 아직 지원하지 않는 환경에서는 다음 코드를 추가해 대체할 수 있습니다.
 
-<h2 id="폴리필">폴리필</h2>
-
-<p><code>toISOString</code>은 ECMA-262 제5판에 표준으로 자리잡았습니다. 아직 지원하지 않는 환경에서는 다음 코드를 추가해 대체할 수 있습니다.</p>
-
-<pre class="brush: js">if (!Date.prototype.toISOString) {
+```js
+if (!Date.prototype.toISOString) {
   (function() {
 
     function pad(number) {
-      if (number &lt; 10) {
+      if (number < 10) {
         return '0' + number;
       }
       return number;
@@ -63,20 +66,18 @@ console.log(today.toISOString()); // Returns 2011-10-05T14:48:00.000Z</pre>
 
   }());
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Date.toISOString")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

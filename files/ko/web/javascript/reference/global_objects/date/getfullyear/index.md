@@ -9,50 +9,49 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getFullYear()</code></strong> 메서드는 주어진 날짜의 현지 시간 기준 연도를 반환합니다.</p>
+**`getFullYear()`** 메서드는 주어진 날짜의 현지 시간 기준 연도를 반환합니다.
 
-<p>{{jsxref("Date.prototype.getYear()", "getYear()")}} 메서드 대신 이 메서드를 사용하세요.</p>
+{{jsxref("Date.prototype.getYear()", "getYear()")}} 메서드 대신 이 메서드를 사용하세요.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getfullyear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getfullyear.html")}}
 
+## 구문
 
+```js
+    dateObj.getFullYear()
+```
 
-<h2 id="구문">구문</h2>
+### 반환 값
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getFullYear()</code></pre>
+현지 시간에 따라, 주어진 날짜의 연도에 해당하는 숫자.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>현지 시간에 따라, 주어진 날짜의 연도에 해당하는 숫자.</p>
+`getFullYear()`가 반환하는 값은 절댓값입니다. `getFullYear()`는 1000년과 9999년 사이의, 1995년과 같은 날짜에 대해서는 네 자리 숫자를 반환합니다. 이 메서드를 사용해야 2000년 이후의 날짜에 대해서도 호환을 유지할 수 있습니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p><code>getFullYear()</code>가 반환하는 값은 절댓값입니다. <code>getFullYear()</code>는 1000년과 9999년 사이의, 1995년과 같은 날짜에 대해서는 네 자리 숫자를 반환합니다. 이 메서드를 사용해야 2000년 이후의 날짜에 대해서도 호환을 유지할 수 있습니다.</p>
+### `getFullYear()` 사용하기
 
-<h2 id="예제">예제</h2>
+다음 예제에서는 현재 연도의 네 자릿값을 변수 `year`에 할당합니다.
 
-<h3 id="getFullYear()_사용하기"><code>getFullYear()</code> 사용하기</h3>
-
-<p>다음 예제에서는 현재 연도의 네 자릿값을 변수 <code>year</code>에 할당합니다.</p>
-
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var year = today.getFullYear();
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Date.getFullYear")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.getYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxref("Date.prototype.getYear()")}}

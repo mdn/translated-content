@@ -8,92 +8,96 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Boolean</code></strong> 객체는 불리언 값을 감싸고 있는 객체입니다.</p>
+**`Boolean`** 객체는 불리언 값을 감싸고 있는 객체입니다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>첫 번재 매개변수로서 전달한 값은 필요한 경우 불리언 값으로 변환됩니다. 값이 없거나 <code>0</code>, <code>-0</code>, {{jsxref("null")}}, <code>false</code>, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 빈 문자열 (<code>""</code>)이라면 객체의 초기값은 <code>false</code>가 됩니다. 문자열 <code>"false"</code>를 포함한 그 외 모든 다른 값은 초기값을 <code>true</code>로 설정합니다.</p>
+첫 번재 매개변수로서 전달한 값은 필요한 경우 불리언 값으로 변환됩니다. 값이 없거나 `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 빈 문자열 (`""`)이라면 객체의 초기값은 `false`가 됩니다. 문자열 `"false"`를 포함한 그 외 모든 다른 값은 초기값을 `true`로 설정합니다.
 
-<p><code>Boolean</code> 객체의 <code>true</code>와 <code>false</code> 값을 원시 <code>Boolean</code> 값 <code>true</code>, <code>false</code>와 혼동해선 안됩니다.</p>
+`Boolean` 객체의 `true`와 `false` 값을 원시 `Boolean` 값 `true`, `false`와 혼동해선 안됩니다.
 
-<p>값이 {{jsxref("undefined")}}, {{jsxref("null")}}이 아닌 <strong>모든</strong> 객체는 조건문에서 <code>true</code>로 계산됩니다. 이는 값이 <code>false</code>인 <code>Boolean</code> 객체도 포함합니다. 즉 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 참입니다.</p>
+값이 {{jsxref("undefined")}}, {{jsxref("null")}}이 아닌 **모든** 객체는 조건문에서 `true`로 계산됩니다. 이는 값이 `false`인 `Boolean` 객체도 포함합니다. 즉 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 참입니다.
 
-<pre class="brush: js">var x = new Boolean(false);
+```js
+var x = new Boolean(false);
 if (x) {
   // 이 코드는 실행됨
 }
-</pre>
+```
 
-<p>그러나 원시 <code>Boolean</code> 값에는 적용되지 않습니다. 따라서 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 거짓입니다.</p>
+그러나 원시 `Boolean` 값에는 적용되지 않습니다. 따라서 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 거짓입니다.
 
-<pre class="brush: js">var x = false;
+```js
+var x = false;
 if (x) {
   // 이 코드는 실행되지 않음
 }
-</pre>
+```
 
-<p>불리언이 아닌 값을 변환할 때 <code>Boolean</code> 객체를 사용해선 안됩니다. 대신 <code>Boolean</code> 함수를 사용하세요.</p>
+불리언이 아닌 값을 변환할 때 `Boolean` 객체를 사용해선 안됩니다. 대신 `Boolean` 함수를 사용하세요.
 
-<pre class="brush: js">var x = Boolean(expression);     // 추천
-var x = new Boolean(expression); // 사용하지 말것</pre>
+```js
+var x = Boolean(expression);     // 추천
+var x = new Boolean(expression); // 사용하지 말것
+```
 
-<p>값이 <code>false</code>인 <code>Boolean</code> 객체를 포함한 어떠한 객체를 <code>Boolean</code> 객체의 초기값으로 넘겨주더라도 새로운 <code>Boolean</code> 객체는 <code>true</code>를 가집니다.</p>
+값이 `false`인 `Boolean` 객체를 포함한 어떠한 객체를 `Boolean` 객체의 초기값으로 넘겨주더라도 새로운 `Boolean` 객체는 `true`를 가집니다.
 
-<pre class="brush: js">var myFalse = new Boolean(false);   // 초기값 거짓
+```js
+var myFalse = new Boolean(false);   // 초기값 거짓
 var g = Boolean(myFalse);           // 초기값 참
 var myString = new String('Hello'); // 문자열 객체
-var s = Boolean(myString);          // 초기값 참</pre>
+var s = Boolean(myString);          // 초기값 참
+```
 
-<p><code>Boolean</code> 원시 값의 자리에서 <code>Boolean</code> 객체를 이용해선 안됩니다.</p>
+`Boolean` 원시 값의 자리에서 `Boolean` 객체를 이용해선 안됩니다.
 
-<h2 id="생성자">생성자</h2>
+## 생성자
 
-<dl>
- <dt>{{jsxref("Boolean.Boolean", "Boolean()")}}</dt>
- <dd><code>Boolean</code> 객체를 생성합니다.</dd>
-</dl>
+- {{jsxref("Boolean.Boolean", "Boolean()")}}
+  - : `Boolean` 객체를 생성합니다.
 
-<h2 id="인스턴스_메서드">인스턴스 메서드</h2>
+## 인스턴스 메서드
 
-<dl>
- <dt>{{jsxref("Boolean.prototype.toString()")}}</dt>
- <dd>객체의 값에 따라 문자열 <code>"true"</code> 또는 <code>"false"</code>를 반환합니다. {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다.</dd>
- <dt>{{jsxref("Boolean.prototype.valueOf()")}}</dt>
- <dd>{{jsxref("Boolean")}} 객체의 원시값을 반환합니다. {{jsxref("Object.prototype.valueOf()")}} 메서드를 재정의합니다.</dd>
-</dl>
+- {{jsxref("Boolean.prototype.toString()")}}
+  - : 객체의 값에 따라 문자열 `"true"` 또는 `"false"`를 반환합니다. {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다.
+- {{jsxref("Boolean.prototype.valueOf()")}}
+  - : {{jsxref("Boolean")}} 객체의 원시값을 반환합니다. {{jsxref("Object.prototype.valueOf()")}} 메서드를 재정의합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="false_값으로_초기화한_Boolean_객체_만들기"><code>false</code> 값으로 초기화한 <code>Boolean</code> 객체 만들기</h3>
+### `false` 값으로 초기화한 `Boolean` 객체 만들기
 
-<pre class="brush: js">var bNoParam = new Boolean();
+```js
+var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
-var bfalse = new Boolean(false);</pre>
+var bfalse = new Boolean(false);
+```
 
-<h3 id="true_값으로_초기화한_Boolean_객체_만들기"><code>true</code> 값으로 초기화한 <code>Boolean</code> 객체 만들기</h3>
+### `true` 값으로 초기화한 `Boolean` 객체 만들기
 
-<pre class="brush: js">var btrue = new Boolean(true);
+```js
+var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Su Lin');
 var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});</pre>
+var bObjProto = new Boolean({});
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Boolean")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{Glossary("Boolean")}}</li>
- <li><a href="https://ko.wikipedia.org/wiki/%EB%B6%88%EB%A6%AC%EC%96%B8_%EC%9E%90%EB%A3%8C%ED%98%95">불리언 자료형</a></li>
-</ul>
+- {{Glossary("Boolean")}}
+- [불리언 자료형](https://ko.wikipedia.org/wiki/%EB%B6%88%EB%A6%AC%EC%96%B8_%EC%9E%90%EB%A3%8C%ED%98%95)

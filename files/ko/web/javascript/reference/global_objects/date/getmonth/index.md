@@ -9,56 +9,54 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getMonth()</code> </strong>메서드는 <code>Date</code> 객체의 월 값을 현지 시간에 맞춰 반환합니다. 월은 0부터 시작합니다.</p>
+**`getMonth()` **메서드는 `Date` 객체의 월 값을 현지 시간에 맞춰 반환합니다. 월은 0부터 시작합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getmonth.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getmonth.html")}}
 
+## 구문
 
+```js
+    dateObj.getMonth()
+```
 
-<h2 id="구문">구문</h2>
+### 반환 값
 
-<pre class="syntaxbox"><var>dateObj</var>.getMonth()</pre>
+현지 시간 기준 월을 나타내는 0에서 11 사이의 정수. 0은 1월, 1은 2월... 을 나타냅니다.
 
-<h3 id="반환_값">반환 값</h3>
+## 예제
 
-<p>현지 시간 기준 월을 나타내는 0에서 11 사이의 정수. 0은 1월, 1은 2월... 을 나타냅니다.</p>
+### `getMonth()` 사용하기
 
-<h2 id="예제">예제</h2>
+다음 예제는 {{jsxref("Date")}} 객체 `Xmas95`의 값을 사용해 변수 `month`에 11을 할당합니다.
 
-<h3 id="getMonth()_사용하기"><code>getMonth()</code> 사용하기</h3>
-
-<p>다음 예제는 {{jsxref("Date")}} 객체 <code>Xmas95</code>의 값을 사용해 변수 <code>month</code>에 11을 할당합니다.</p>
-
-<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
+```js
+var Xmas95 = new Date('December 25, 1995 23:15:30');
 var month = Xmas95.getMonth();
 
 console.log(month); // 11
-</pre>
+```
 
-<div class="blockIndicator note">
-<p><strong>참고:</strong> 필요한 경우 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat()")}}과 <code>options</code> 매개변수를 사용해 해당하는 달의 이름(<code>"January"</code> 등)을 가져올 수 있습니다. 이 방법을 사용하면 국제화도 보다 편리합니다.</p>
+> **참고:** **참고:** 필요한 경우 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat()")}}과 `options` 매개변수를 사용해 해당하는 달의 이름(`"January"` 등)을 가져올 수 있습니다. 이 방법을 사용하면 국제화도 보다 편리합니다.
 
-<pre class="brush: js">var options = { month: 'long'};
+```js
+var options = { month: 'long'};
 console.log(new Intl.DateTimeFormat('ko-KR', options).format(Xmas95));
 // 12월
 console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
 // December
-</pre>
-</div>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Date.getMonth")}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMonth()")}}</li>
- <li>{{jsxref("Date.prototype.setMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMonth()")}}
+- {{jsxref("Date.prototype.setMonth()")}}

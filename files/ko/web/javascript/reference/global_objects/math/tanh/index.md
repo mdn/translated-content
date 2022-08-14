@@ -9,66 +9,66 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.tanh()</code></strong> 함수는 쌍곡탄젠트 값을 반환합니다. 수식으로는 아래와 같습니다.</p>
+**`Math.tanh()`** 함수는 쌍곡탄젠트 값을 반환합니다. 수식으로는 아래와 같습니다.
 
-<p><math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-tanh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-tanh.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code>Math.tanh(<var>x</var>)</code></pre>
+```js
+    Math.tanh(x)
+```
 
-<h3 id="파라미터">파라미터</h3>
+### 파라미터
 
-<dl>
- <dt><code>x</code></dt>
- <dd>숫자.</dd>
-</dl>
+- `x`
+  - : 숫자.
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>주어진 수의 쌍곡탄젠트 값</p>
+주어진 수의 쌍곡탄젠트 값
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>tanh()</code> 은 <code>Math</code>의 정적 메서드이므로 사용자가 만든 <code>Math</code> 객체의 메서드가 아닌 항상 <code>Math.tanh()</code> 으로 사용합니다 (<code>Math</code> 는 생성자가 아닙니다.).</p>
+`tanh()` 은 `Math`의 정적 메서드이므로 사용자가 만든 `Math` 객체의 메서드가 아닌 항상 `Math.tanh()` 으로 사용합니다 (`Math` 는 생성자가 아닙니다.).
 
-<h2 id="예">예</h2>
+## 예
 
-<h3 id="Using_Math.tanh">Using <code>Math.tanh()</code></h3>
+### Using `Math.tanh()`
 
-<pre class="brush: js">Math.tanh(0);        // 0
+```js
+Math.tanh(0);        // 0
 Math.tanh(Infinity); // 1
 Math.tanh(1);        // 0.7615941559557649
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>This can be emulated with the help of the {{jsxref("Math.exp()")}} function:</p>
+This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
-<pre class="brush: js">Math.tanh = Math.tanh || function(x){
+```js
+Math.tanh = Math.tanh || function(x){
     var a = Math.exp(+x), b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Math.tanh")}}</p>
+{{Compat}}
 
-<h2 id="함께_보기">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li>{{jsxref("Math.acosh()")}}</li>
- <li>{{jsxref("Math.asinh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.cosh()")}}</li>
- <li>{{jsxref("Math.sinh()")}}</li>
-</ul>
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.cosh()")}}
+- {{jsxref("Math.sinh()")}}

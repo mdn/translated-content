@@ -9,32 +9,29 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>isPrototypeOf()</strong></code> 메소드는 해당 객체가 다른 객체의 프로토타입 체인에 속한 객체인지 확인하기 위해 사용됩니다.</p>
+**`isPrototypeOf()`** 메소드는 해당 객체가 다른 객체의 프로토타입 체인에 속한 객체인지 확인하기 위해 사용됩니다.
 
-<div class="note">
-<p><strong>Note:</strong> <code>isPrototypeOf</code> 는 {{jsxref("Operators/instanceof", "instanceof")}} 연산자와 다릅니다. "<code>object instanceof AFunction</code>"표현식에서는 <code>object</code>의 프로토타입 체인을 AFunction 자체가 아니라 <code>AFunction.prototype에 대해 </code>확인을 합니다.</p>
-</div>
+> **참고:** `isPrototypeOf` 는 {{jsxref("Operators/instanceof", "instanceof")}} 연산자와 다릅니다. "`object instanceof AFunction`"표현식에서는 `object`의 프로토타입 체인을 AFunction 자체가 아니라 `AFunction.prototype에 대해 `확인을 합니다.
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><var>prototypeObj</var>.isPrototypeOf(<var>obj</var>)</pre>
+    prototypeObj.isPrototypeOf(obj)
 
-<h3 id="Parameters">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>object</code></dt>
- <dd>프로토타입 체인을 가지고 있는 객체가 검색될 것 입니다.</dd>
-</dl>
+- `object`
+  - : 프로토타입 체인을 가지고 있는 객체가 검색될 것 입니다.
 
-<h2 id="Description">설명</h2>
+## 설명
 
-<p><code>isPrototypeOf</code> 메소드는 또 다른 객체의 프로토타입 체인에 해당 객체가 존재하는지 여부를 확인할수 있습니다.</p>
+`isPrototypeOf` 메소드는 또 다른 객체의 프로토타입 체인에 해당 객체가 존재하는지 여부를 확인할수 있습니다.
 
-<p>예를들어, 다음의 프로토타입체인을 고려해봅시다.</p>
+예를들어, 다음의 프로토타입체인을 고려해봅시다.
 
-<pre class="brush: js">function Fee() {
+```js
+function Fee() {
   // ...
 }
 
@@ -52,35 +49,32 @@ function Fum() {
   // ...
 }
 Fum.prototype = new Fo();
-</pre>
+```
 
-<p>실행되고 나면 <strong>Fum</strong> 인스턴스의 프로토타입체인이 <strong>Fi</strong>의 프로토타입과 연결되어있는지를 확인할 필요가 있습니다. 다음과 같은 방법으로 확인할 수 있습니다:</p>
+실행되고 나면 **Fum** 인스턴스의 프로토타입체인이 **Fi**의 프로토타입과 연결되어있는지를 확인할 필요가 있습니다. 다음과 같은 방법으로 확인할 수 있습니다:
 
-<pre class="brush: js">var fum = new Fum();
+```js
+var fum = new Fum();
 // ...
 
 if (Fi.prototype.isPrototypeOf(fum)) {
   // do something safe
 }
-</pre>
+```
 
-<p>이 메소드는 {{jsxref("Operators/instanceof", "instanceof")}} 연산자와 함께 특정 프로토타입으로부터 상속된 객체만 작동하게 하려는(예를 들어 특정 메소드나 속성이 객체에 있다는걸 보장하려는 때) 코드에서 특히 쓸모가 많다.</p>
+이 메소드는 {{jsxref("Operators/instanceof", "instanceof")}} 연산자와 함께 특정 프로토타입으로부터 상속된 객체만 작동하게 하려는(예를 들어 특정 메소드나 속성이 객체에 있다는걸 보장하려는 때) 코드에서 특히 쓸모가 많다.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Object.isPrototypeOf")}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>
-  <div>{{jsxref("Object.setPrototypeOf()")}}</div>
- </li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Object.prototype.__proto__")}}

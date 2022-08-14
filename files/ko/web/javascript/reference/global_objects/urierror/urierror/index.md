@@ -2,41 +2,40 @@
 title: URIError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 tags:
-- Constructor
-- JavaScript
-- Reference
-- URIError
+  - Constructor
+  - JavaScript
+  - Reference
+  - URIError
 browser-compat: javascript.builtins.URIError.URIError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>URIError()</code></strong> 생성자는 전역 URI 핸들링 함수가 잘못 사용될 때 오류를 생성합니다.</p>
+**`URIError()`** 생성자는 전역 URI 핸들링 함수가 잘못 사용될 때 오류를 생성합니다.
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: js">
+```js
 new URIError()
 new URIError(message)
 new URIError(message, fileName)
 new URIError(message, fileName, lineNumber)
-</pre>
+```
 
-<h3 id="Parameters">매개변수</h3>
+### 매개변수
 
-<dl>
-  <dt><code><var>message</var></code> {{optional_inline}}</dt>
-  <dd>사람이 읽을 수 있는 에러에 대한 설명.</dd>
-  <dt><code><var>fileName</var></code> {{optional_inline}}</dt>
-  <dd>예외를 일으킨 코드가 들어있는 파일 이름.</dd>
-  <dt><code><var>lineNumber</var></code> {{optional_inline}}</dt>
-  <dd>예외를 일으킨 코드의 줄 수.</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : 사람이 읽을 수 있는 에러에 대한 설명.
+- `fileName` {{optional_inline}}
+  - : 예외를 일으킨 코드가 들어있는 파일 이름.
+- `lineNumber` {{optional_inline}}
+  - : 예외를 일으킨 코드의 줄 수.
 
-<h2 id="Examples">예제</h2>
+## 예제
 
-<h3 id="Catching_an_URIError">URIError 잡기</h3>
+### URIError 잡기
 
-<pre class="brush: js">try {
+```js
+try {
   decodeURIComponent('%')
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -47,11 +46,12 @@ new URIError(message, fileName, lineNumber)
   console.log(e.columnNumber)         // 2
   console.log(e.stack)                // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Creating_an_URIError">URIError 생성하기</h3>
+### URIError 생성하기
 
-<pre class="brush: js">try {
+```js
+try {
   throw new URIError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -62,22 +62,20 @@ new URIError(message, fileName, lineNumber)
   console.log(e.columnNumber)         // 0
   console.log(e.stack)                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
-  <li>{{jsxref("Error")}}</li>
-  <li>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</li>
-  <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
-  <li>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</li>
-  <li>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}

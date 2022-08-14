@@ -9,68 +9,69 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Array.of()</strong></code> 메서드는 인자의 수나 유형에 관계없이 가변 인자를 갖는 새 <code>Array</code> 인스턴스를 만듭니다.</p>
+**`Array.of()`** 메서드는 인자의 수나 유형에 관계없이 가변 인자를 갖는 새 `Array` 인스턴스를 만듭니다.
 
-<p><code>Array.of()</code>와 <code>Array</code> 생성자의 차이는 정수형 인자의 처리 방법에 있습니다. <code>Array.of(7)</code>은 하나의 요소 <code>7</code>을 가진 배열을 생성하지만 <code>Array(7)</code>은 <code>length</code> 속성이 7인 빈 배열을 생성합니다.</p>
+`Array.of()`와 `Array` 생성자의 차이는 정수형 인자의 처리 방법에 있습니다. `Array.of(7)`은 하나의 요소 `7`을 가진 배열을 생성하지만 `Array(7)`은 `length` 속성이 7인 빈 배열을 생성합니다.
 
-<pre class="brush: js">Array.of(7);       // [7]
+```js
+Array.of(7);       // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
 
 Array(7);          // [ , , , , , , ]
 Array(1, 2, 3);    // [1, 2, 3]
-</pre>
+```
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="syntaxbox">Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])</pre>
+```js
+    Array.of(element0[, element1[, ...[, elementN]]])
+```
 
-<h3 id="Parameters">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>element<em>N</em></code></dt>
- <dd>배열을 생성할 때 사용할 요소.</dd>
-</dl>
+- `elementN`
+  - : 배열을 생성할 때 사용할 요소.
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>새로운 {{jsxref("Array")}} 객체.</p>
+새로운 {{jsxref("Array")}} 객체.
 
-<h2 id="Description">설명</h2>
+## 설명
 
-<p>이 함수는 ECMAScript 2015 표준 일부입니다. 자세한 정보는 <a href="https://gist.github.com/rwaldron/1074126"><code>Array.of</code>, <code>Array.from</code> 제안 사항</a>과 <a href="https://gist.github.com/rwaldron/3186576"><code>Array.of</code> 폴리필</a>에서 확인하실 수 있습니다.</p>
+이 함수는 ECMAScript 2015 표준 일부입니다. 자세한 정보는 [`Array.of`, `Array.from` 제안 사항](https://gist.github.com/rwaldron/1074126)과 [`Array.of` 폴리필](https://gist.github.com/rwaldron/3186576)에서 확인하실 수 있습니다.
 
-<h2 id="Examples">예제</h2>
+## 예제
 
-<pre class="brush: js">Array.of(1);         // [1]
+```js
+Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
-</pre>
+```
 
-<h2 id="Polyfill">폴리필</h2>
+## 폴리필
 
-<p>아래 코드를 다른 코드 이전에 포함하면 <code>Array.of</code>를 지원하지 않는 환경에서도 사용할 수 있습니다.</p>
+아래 코드를 다른 코드 이전에 포함하면 `Array.of`를 지원하지 않는 환경에서도 사용할 수 있습니다.
 
-<pre class="brush: js">if (!Array.of) {
+```js
+if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Array.of")}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("TypedArray.of()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.of()")}}

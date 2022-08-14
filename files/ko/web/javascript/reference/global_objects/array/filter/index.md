@@ -10,78 +10,76 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>filter()</strong></code> 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.</p>
+**`filter()`** 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/array-filter.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-filter.html")}}
 
+## 구문
 
+```js
+    arr.filter(callback(element[, index[, array]])[, thisArg])
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><code><var>arr.filter(callback(element[, index[, array]])[, thisArg])</var></code></pre>
+- `callback`
+  - : 각 요소를 시험할 함수. `true`를 반환하면 요소를 유지하고, `false`를 반환하면 버립니다. 
+    
+    다음 세 가지 매개변수를 받습니다.
+    
+    - `element`
+      - : 처리할 현재 요소.
+    - `index` {{optional_inline}}
+      - : 처리할 현재 요소의 인덱스.
+    - `array` {{optional_inline}}
+      - : `filter`를 호출한 배열.
 
-<h3 id="매개변수">매개변수</h3>
+- `thisArg` {{optional_inline}}
+  - : `callback`을 실행할 때 `this`로 사용하는 값.
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>각 요소를 시험할 함수. <code>true</code>를 반환하면 요소를 유지하고, <code>false</code>를 반환하면 버립니다. 다음 세 가지 매개변수를 받습니다.</dd>
- <dd>
- <dl>
-  <dt><code>element</code></dt>
-  <dd>처리할 현재 요소.</dd>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>처리할 현재 요소의 인덱스.</dd>
-  <dt><code>array</code> {{optional_inline}}</dt>
-  <dd><code>filter</code>를 호출한 배열.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code> {{optional_inline}}</dt>
- <dd><code>callback</code>을 실행할 때 <code>this</code>로 사용하는 값.</dd>
-</dl>
+### 반환 값
 
-<h3 id="반환_값">반환 값</h3>
+테스트를 통과한 요소로 이루어진 새로운 배열. 어떤 요소도 테스트를 통과하지 못했으면 빈 배열을 반환합니다.
 
-<p>테스트를 통과한 요소로 이루어진 새로운 배열. 어떤 요소도 테스트를 통과하지 못했으면 빈 배열을 반환합니다.</p>
+## 설명
 
-<h2 id="설명">설명</h2>
+`filter()`는 배열 내 각 요소에 대해 한 번 제공된 `callback` 함수를 호출해, `callback`이 [`true`로 강제하는 값](/ko/docs/Glossary/Truthy)을 반환하는 모든 값이 있는 새로운 배열을 생성합니다. `callback`은 할당된 값이 있는 배열의 인덱스에 대해서만 호출됩니다; 삭제됐거나 값이 할당된 적이 없는 인덱스에 대해서는 호출되지 않습니다. `callback` 테스트를 통과하지 못한 배열 요소는 그냥 건너뛰며 새로운 배열에 포함되지 않습니다.
 
-<p><code>filter()</code>는 배열 내 각 요소에 대해 한 번 제공된 <code>callback</code> 함수를 호출해, <code>callback</code>이 <a href="/ko/docs/Glossary/Truthy"><code>true</code>로 강제하는 값</a>을 반환하는 모든 값이 있는 새로운 배열을 생성합니다. <code>callback</code>은 할당된 값이 있는 배열의 인덱스에 대해서만 호출됩니다; 삭제됐거나 값이 할당된 적이 없는 인덱스에 대해서는 호출되지 않습니다. <code>callback</code> 테스트를 통과하지 못한 배열 요소는 그냥 건너뛰며 새로운 배열에 포함되지 않습니다.</p>
+`callback`은 다음 세 인수와 함께 호출됩니다:
 
-<p><code>callback</code>은 다음 세 인수와 함께 호출됩니다:</p>
+1.  요소값
+2.  요소 인덱스
+3.  순회(traverse)되는 배열 객체
 
-<ol>
- <li>요소값</li>
- <li>요소 인덱스</li>
- <li>순회(traverse)되는 배열 객체</li>
-</ol>
+`thisArg` 매개변수가 `filter`에 제공된 경우, 호출될 때 그 값은 `callback`의 `this` 값으로 전달됩니다. 그 이외에, `undefined`값도 `callback`의 `this` 값으로 쓰기 위해 전달됩니다. 결국 `callback`에 의해 관찰될 수 있는 `this` 값은 [`this`를 결정하는 함수의 평소 규칙](/ko/docs/Web/JavaScript/Reference/Operators/this)에 따라 결정됩니다.
 
-<p><code>thisArg</code> 매개변수가 <code>filter</code>에 제공된 경우, 호출될 때 그 값은 <code>callback</code>의 <code>this</code> 값으로 전달됩니다.  그 이외에, <code>undefined</code>값도 <code>callback</code>의 <code>this</code> 값으로 쓰기 위해 전달됩니다. 결국 <code>callback</code>에 의해 관찰될 수 있는 <code>this</code> 값은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/this"><code>this</code>를 결정하는 함수의 평소 규칙</a>에 따라 결정됩니다.</p>
+`filter()`는 호출되는 배열을 변화시키지(mutate) 않습니다.
 
-<p><code>filter()</code>는 호출되는 배열을 변화시키지(mutate) 않습니다.</p>
+`filter()`에 의해 처리되는 요소의 범위는 `callback`의 첫 호출 전에 설정됩니다. `filter()` 호출 시작 이후로 배열에 추가된 요소는 `callback`에 의해 방문되지 않습니다. 배열의 기존 요소가 변경 또는 삭제된 경우, `callback`에 전달된 그 값은 `filter()`가 그 요소를 방문한 시점에 값이 됩니다; 삭제된 요소는 반영되지 않습니다.
 
-<p><code>filter()</code>에 의해 처리되는 요소의 범위는 <code>callback</code>의 첫 호출 전에 설정됩니다. <code>filter()</code> 호출 시작 이후로 배열에 추가된 요소는 <code>callback</code>에 의해 방문되지 않습니다. 배열의 기존 요소가 변경 또는 삭제된 경우, <code>callback</code>에 전달된 그 값은 <code>filter()</code>가 그 요소를 방문한 시점에 값이 됩니다; 삭제된 요소는 반영되지 않습니다.</p>
+## 예제
 
-<h2 id="예제">예제</h2>
+### 모든 작은 값 걸러내기
 
-<h3 id="모든_작은_값_걸러내기">모든 작은 값 걸러내기</h3>
+다음 예는 값이 10 이하인 모든 요소가 제거된 걸러진 배열을 만들기 위해 `filter()`를 사용합니다.
 
-<p>다음 예는 값이 10 이하인 모든 요소가 제거된 걸러진 배열을 만들기 위해 <code>filter()</code>를 사용합니다.</p>
-
-<pre class="brush: js">function isBigEnough(value) {
-  return value &gt;= 10;
+```js
+function isBigEnough(value) {
+  return value >= 10;
 }
 
 var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered 는 [12, 130, 44]
-</pre>
+```
 
-<h3 id="JSON에서_무효한_항목_거르기">JSON에서 무효한 항목 거르기</h3>
+### JSON에서 무효한 항목 거르기
 
-<p>다음 예는 0이 아닌, 숫자 <code>id</code>인 모든 요소의 걸러진 json을 만들기 위해 <code>filter()</code>를 사용합니다.</p>
+다음 예는 0이 아닌, 숫자 `id`인 모든 요소의 걸러진 json을 만들기 위해 `filter()`를 사용합니다.
 
-<pre class="brush: js"><code>var arr = [
+```js
+var arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
@@ -96,11 +94,11 @@ var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 var invalidEntries = 0;
 
 function isNumber(obj) {
-  return obj !== undefined &amp;&amp; typeof(obj) === 'number' &amp;&amp; !isNaN(obj);
+  return obj !== undefined && typeof(obj) === 'number' && !isNaN(obj);
 }
 
 function filterByID(item) {
-  if (isNumber(item.id) &amp;&amp; item.id !== 0) {
+  if (isNumber(item.id) && item.id !== 0) {
     return true;
   }
   invalidEntries++;
@@ -114,54 +112,59 @@ console.log('Filtered Array\n', arrByID);
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
 console.log('Number of Invalid Entries = ', invalidEntries);
-// Number of Invalid Entries = 5</code>
-</pre>
+// Number of Invalid Entries = 5
+```
 
-<h3 id="배열_내용_검색">배열 내용 검색</h3>
+### 배열 내용 검색
 
-<p>다음 예는 배열 내용을 조건에 따라 검색하기 위해 <code>filter()</code> 를 사용합니다.</p>
+다음 예는 배열 내용을 조건에 따라 검색하기 위해 `filter()` 를 사용합니다.
 
-<pre class="brush: js"><code>var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+```js
+var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * 검색 조건에 따른 배열 필터링(쿼리)
  */
 function filterItems(query) {
   return fruits.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) &gt; -1;
+      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
   })
 }
 
 console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']</code></pre>
+console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+```
 
-<h3 id="ES2015로_구현">ES2015로 구현</h3>
+### ES2015로 구현
 
-<pre class="brush: js"><code>const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+```js
+const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * 검색 조건에 따른 배열 필터링(쿼리)
  */
-const filterItems = (query) =&gt; {
-  return fruits.filter((el) =&gt;
-    el.toLowerCase().indexOf(query.toLowerCase()) &gt; -1
+const filterItems = (query) => {
+  return fruits.filter((el) =>
+    el.toLowerCase().indexOf(query.toLowerCase()) > -1
   );
 }
 
 console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']</code></pre>
+console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<p><code>filter</code>는 ECMA-262 표준 제5판에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 환경에서도 <code>filter</code>를 사용할 수 있습니다. 아래 알고리즘은 <code>fn.call</code>의 계산 값이 원래의 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call()</code></a>과 같고, {{jsxref("Array.prototype.push()")}}가 변형되지 않은 경우 ECMA-262 제5판이 명시한 것과 동일합니다.</p>
+`filter`는 ECMA-262 표준 제5판에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 환경에서도 `filter`를 사용할 수 있습니다. 아래 알고리즘은 `fn.call`의 계산 값이 원래의 [`Function.prototype.call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)과 같고, {{jsxref("Array.prototype.push()")}}가 변형되지 않은 경우 ECMA-262 제5판이 명시한 것과 동일합니다.
 
-<pre class="brush: js">if (!Array.prototype.filter){
+```js
+if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
     'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') &amp;&amp; this) )
+    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
         throw new TypeError();
 
-    var len = this.length &gt;&gt;&gt; 0,
+    var len = this.length >>> 0,
         res = new Array(len), // preallocate array
         t = this, c = 0, i = -1;
     if (thisArg === undefined){
@@ -188,21 +191,20 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']</code></pre>
     res.length = c; // shrink down array to proper size
     return res;
   };
-}</pre>
+}
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Array.filter")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.reduce()")}}

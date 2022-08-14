@@ -9,41 +9,37 @@ tags:
   - URIError
 browser-compat: javascript.builtins.URIError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>URIError</strong></code> 객체는 전역 URI 핸들링 함수가 잘못된 방식으로 사용되었을 때의 오류를 표현합니다.</p>
+**`URIError`** 객체는 전역 URI 핸들링 함수가 잘못된 방식으로 사용되었을 때의 오류를 표현합니다.
 
-<h2 id="Constructor">생성자</h2>
+## 생성자
 
-<dl>
- <dt>{{jsxref("Global_Objects/URIError/URIError", "URIError()")}}</dt>
- <dd>새로운 <code>URIError</code> 객체를 만듭니다.</dd>
-</dl>
+- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
+  - : 새로운 `URIError` 객체를 만듭니다.
 
-<h2 id="Instance_properties">인스턴스 속성</h2>
+## 인스턴스 속성
 
-<dl>
- <dt>{{jsxref("Error.prototype.message", "URIError.prototype.message")}}</dt>
- <dd>오류 메시지. 비록 ECMA-262에서 {{jsxref("RangeError")}}는 반드시 자체 <code>message</code> 속성을 제공해야한다고 명시했지만, 
-    <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>는 {{jsxref("Error.prototype.message")}}를 상속합니다.
-</dd>
- <dt>{{jsxref("Error.prototype.name", "URIError.prototype.name")}}</dt>
- <dd>오류 이름. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
- <dt>{{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}}</dt>
- <dd>오류가 발생한 파일 경로. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
- <dt>{{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}}</dt>
- <dd>오류가 발생한 곳의 줄 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
- <dt>{{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}}</dt>
- <dd>오류가 발생한 곳의 열 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
- <dt>{{jsxref("Error.prototype.stack", "URIError.prototype.stack")}}</dt>
- <dd>스택 추적. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
-</dl>
+- {{jsxref("Error.prototype.message", "URIError.prototype.message")}}
+  - : 오류 메시지. 비록 ECMA-262에서 {{jsxref("RangeError")}}는 반드시 자체 `message` 속성을 제공해야한다고 명시했지만,
+    [SpiderMonkey](/ko/docs/Mozilla/Projects/SpiderMonkey)는 {{jsxref("Error.prototype.message")}}를 상속합니다.
+- {{jsxref("Error.prototype.name", "URIError.prototype.name")}}
+  - : 오류 이름. {{jsxref("Error")}}로부터 상속되었습니다.
+- {{jsxref("Error.prototype.fileName", "URIError.prototype.fileName")}}
+  - : 오류가 발생한 파일 경로. {{jsxref("Error")}}로부터 상속되었습니다.
+- {{jsxref("Error.prototype.lineNumber", "URIError.prototype.lineNumber")}}
+  - : 오류가 발생한 곳의 줄 위치. {{jsxref("Error")}}로부터 상속되었습니다.
+- {{jsxref("Error.prototype.columnNumber", "URIError.prototype.columnNumber")}}
+  - : 오류가 발생한 곳의 열 위치. {{jsxref("Error")}}로부터 상속되었습니다.
+- {{jsxref("Error.prototype.stack", "URIError.prototype.stack")}}
+  - : 스택 추적. {{jsxref("Error")}}로부터 상속되었습니다.
 
-<h2 id="Examples">예제</h2>
+## 예제
 
-<h3 id="Catching_an_URIError">URIError 잡아내기</h3>
+### URIError 잡아내기
 
-<pre class="brush: js">try {
+```js
+try {
   decodeURIComponent('%')
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -54,11 +50,12 @@ browser-compat: javascript.builtins.URIError
   console.log(e.columnNumber)         // 2
   console.log(e.stack)                // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Creating_an_URIError">URIError 생성하기</h3>
+### URIError 생성하기
 
-<pre class="brush: js">try {
+```js
+try {
   throw new URIError('Hello', 'someFile.js', 10)
 } catch (e) {
   console.log(e instanceof URIError)  // true
@@ -69,22 +66,20 @@ browser-compat: javascript.builtins.URIError
   console.log(e.columnNumber)         // 0
   console.log(e.stack)                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}

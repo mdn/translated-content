@@ -9,32 +9,31 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>ArrayBuffer.isView()</strong></code> 메서드는 주어진 값이 <code>ArrayBuffer</code> 뷰, 즉 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">형식화 배열 객체</a> 또는 {{jsxref("DataView")}}인지 판별합니다..</p>
+**`ArrayBuffer.isView()`** 메서드는 주어진 값이 `ArrayBuffer` 뷰, 즉 [형식화 배열 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) 또는 {{jsxref("DataView")}}인지 판별합니다..
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html")}}
 
+## 구문
 
+```js
+    ArrayBuffer.isView(value)
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">ArrayBuffer.isView(<em>value</em>)</pre>
+- `value`
+  - : 판별할 값.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>value</code></dt>
- <dd>판별할 값.</dd>
-</dl>
+주어진 값이 {{jsxref("ArrayBuffer")}} 뷰라면 `true`, 아니면 `false`.
 
-<h3 id="반환_값">반환 값</h3>
+## 예제
 
-<p>주어진 값이 {{jsxref("ArrayBuffer")}} 뷰라면 <code>true</code>, 아니면 <code>false</code>.</p>
-
-<h2 id="예제">예제</h2>
-
-<pre class="brush: js">ArrayBuffer.isView();                    // false
+```js
+ArrayBuffer.isView();                    // false
 ArrayBuffer.isView([]);                  // false
 ArrayBuffer.isView({});                  // false
 ArrayBuffer.isView(null);                // false
@@ -48,18 +47,16 @@ ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
 const buffer = new ArrayBuffer(2);
 const dv = new DataView(buffer);
 ArrayBuffer.isView(dv); // true
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.ArrayBuffer.isView")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/JavaScript/Typed_arrays">JavaScript 형식화 배열</a></li>
-</ul>
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)

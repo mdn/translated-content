@@ -9,48 +9,47 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>valueOf()</code></strong> 메서드는 {{jsxref("Number")}} 객체가 감싼(wrapped) {{Glossary("primitive", "원시")}} 값을 반환합니다.</p>
+**`valueOf()`** 메서드는 {{jsxref("Number")}} 객체가 감싼(wrapped) {{Glossary("primitive", "원시")}} 값을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/number-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
 
+## 구문
 
+```js
+    numObj.valueOf()
+```
 
-<h2 id="구문">구문</h2>
+### 반환 값
 
-<pre class="syntaxbox"><var>numObj</var>.valueOf()</pre>
+{{jsxref("Number")}} 객체의 원시 값.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>{{jsxref("Number")}} 객체의 원시 값.</p>
+`valueOf()` 메서드는 보통 JavaScript에 의해 내부적으로 호출되고, 웹 코드에서는 명시적으로 호출하지 않습니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p><code>valueOf()</code> 메서드는 보통 JavaScript에 의해 내부적으로 호출되고, 웹 코드에서는 명시적으로 호출하지 않습니다.</p>
+### `valueOf` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="valueOf_사용하기"><code>valueOf</code> 사용하기</h3>
-
-<pre class="brush: js">var numObj = new Number(10);
+```js
+var numObj = new Number(10);
 console.log(typeof numObj); // object
 
 var num = numObj.valueOf();
 console.log(num);           // 10
 console.log(typeof num);    // number
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Number.valueOf")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Number.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toSource()")}}

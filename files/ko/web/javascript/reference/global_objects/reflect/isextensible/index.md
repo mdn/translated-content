@@ -9,45 +9,41 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Reflect</strong></code><strong><code>.isExtensible()</code></strong> 정적 메서드는 객체의 확장 가능 여부, 즉 속성을 추가할 수 있는지 판별합니다. {{jsxref("Object.isExtensible()")}}과 유사하지만 <a href="#object.isextensible_과의_차이">차이점</a>도 있습니다.</p>
+**`Reflect`\*\***`.isExtensible()`\*\* 정적 메서드는 객체의 확장 가능 여부, 즉 속성을 추가할 수 있는지 판별합니다. {{jsxref("Object.isExtensible()")}}과 유사하지만 [차이점](#object.isextensible_과의_차이)도 있습니다.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
 
+## 구문
 
+    Reflect.isExtensible(target)
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Reflect.isExtensible(<em>target</em>)
-</pre>
+- `target`
+  - : 확장 가능 여부를 판별할 대상 객체.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>target</code></dt>
- <dd>확장 가능 여부를 판별할 대상 객체.</dd>
-</dl>
+객체의 확장 가능 여부를 나타내는 {{jsxref("Boolean")}}.
 
-<h3 id="반환_값">반환 값</h3>
+### 예외
 
-<p>객체의 확장 가능 여부를 나타내는 {{jsxref("Boolean")}}.</p>
+`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
 
-<h3 id="예외">예외</h3>
+## 설명
 
-<p><code>target</code>이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.</p>
+`Reflect.isExtensible()` 메서드는 {{jsxref("Object.isExtensible()")}}와 유사하게, 객체에 새로운 속성을 추가할 수 있는지 판별합니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p><code>Reflect.isExtensible()</code> 메서드는 {{jsxref("Object.isExtensible()")}}와 유사하게, 객체에 새로운 속성을 추가할 수 있는지 판별합니다.</p>
+### `Reflect.isExtensible()` 사용하기
 
-<h2 id="예제">예제</h2>
+{{jsxref("Object.isExtensible()")}}도 참고하세요.
 
-<h3 id="Reflect.isExtensible()_사용하기"><code>Reflect.isExtensible()</code> 사용하기</h3>
-
-<p>{{jsxref("Object.isExtensible()")}}도 참고하세요.</p>
-
-<pre class="brush: js">// 새로운 객체는 확장 가능
+```js
+// 새로운 객체는 확장 가능
 var empty = {};
 Reflect.isExtensible(empty); // === true
 
@@ -62,30 +58,29 @@ Reflect.isExtensible(sealed); // === false
 // 동결한 객체도 확장 불가능함
 var frozen = Object.freeze({});
 Reflect.isExtensible(frozen); // === false
-</pre>
+```
 
-<h3 id="Object.isExtensible()과의_차이점"><code>Object.isExtensible()</code>과의 차이점</h3>
+### `Object.isExtensible()`과의 차이점
 
-<p><code>Reflect.isExtensible()</code>은 첫 번째 매개변수가 {{glossary("Primitive", "원시값")}}이면 {{jsxref("TypeError")}}를 던집니다. 반면 {{jsxref("Object.isExtensible()")}}은 우선 객체로 변환을 시도합니다.</p>
+`Reflect.isExtensible()`은 첫 번째 매개변수가 {{glossary("Primitive", "원시값")}}이면 {{jsxref("TypeError")}}를 던집니다. 반면 {{jsxref("Object.isExtensible()")}}은 우선 객체로 변환을 시도합니다.
 
-<pre class="brush: js">Reflect.isExtensible(1);
+```js
+Reflect.isExtensible(1);
 // TypeError: 1 is not an object
 
 Object.isExtensible(1);
 // false
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Reflect.isExtensible")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.isExtensible()")}}

@@ -9,57 +9,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
 browser-compat: javascript.builtins.Math.imul
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.imul()</code></strong> 함수는 C 언어와 같은 양식으로 2개 파라메터의 32-bit 곱셈 결과를 리턴합니다.</p>
+**`Math.imul()`** 함수는 C 언어와 같은 양식으로 2개 파라메터의 32-bit 곱셈 결과를 리턴합니다.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox"><code>Math.imul(<var>a</var>, <var>b</var>)</code></pre>
+```js
+    Math.imul(a, b)
+```
 
-<h3 id="파라메터">파라메터</h3>
+### 파라메터
 
-<dl>
- <dt><code>a</code></dt>
- <dd>첫 번째 숫자.</dd>
- <dt><code>b</code></dt>
- <dd>두 번째 숫자.</dd>
-</dl>
+- `a`
+  - : 첫 번째 숫자.
+- `b`
+  - : 두 번째 숫자.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>Math.imul()</code> 를 쓰면 C 언어와 같은 양식의 빠른 32-bit 정수 곱셈이 가능합니다. 이 기능은 <a href="http://en.wikipedia.org/wiki/Emscripten">Emscripten</a> 같은 프로젝트에 유용합니다. <code>imul()</code> 이 <code>Math </code> 객체의 정적 메소드이기 때문에, <code>Math 객체를 직접 만들어서 사용하지 않고 (Math 는 생성자가 아닙니다), Math.imul()</code> 같은 형태로 사용합니다.</p>
+`Math.imul()` 를 쓰면 C 언어와 같은 양식의 빠른 32-bit 정수 곱셈이 가능합니다. 이 기능은 [Emscripten](http://en.wikipedia.org/wiki/Emscripten) 같은 프로젝트에 유용합니다. `imul()` 이 `Math `객체의 정적 메소드이기 때문에, `Math 객체를 직접 만들어서 사용하지 않고 (Math 는 생성자가 아닙니다), Math.imul()` 같은 형태로 사용합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="Math.imul()_사용법"><code>Math.imul() 사용법</code></h3>
+### `Math.imul() 사용법`
 
-<pre class="brush: js">Math.imul(2, 4);          // 8
+```js
+Math.imul(2, 4);          // 8
 Math.imul(-1, 8);         // -8
 Math.imul(-2, -2);        // 4
 Math.imul(0xffffffff, 5); // -5
 Math.imul(0xfffffffe, 5); // -10
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>다음과 같은 함수로 Math.imul() 을 흉내낼 수 있습니다.</p>
+다음과 같은 함수로 Math.imul() 을 흉내낼 수 있습니다.
 
-<pre class="brush: js">Math.imul = Math.imul || function(a, b) {
-  var ah = (a &gt;&gt;&gt; 16) &amp; 0xffff;
-  var al = a &amp; 0xffff;
-  var bh = (b &gt;&gt;&gt; 16) &amp; 0xffff;
-  var bl = b &amp; 0xffff;
+```js
+Math.imul = Math.imul || function(a, b) {
+  var ah = (a >>> 16) & 0xffff;
+  var al = a & 0xffff;
+  var bh = (b >>> 16) & 0xffff;
+  var bl = b & 0xffff;
   // the shift by 0 fixes the sign on the high part
   // the final |0 converts the unsigned value into a signed value
-  return ((al * bl) + (((ah * bl + al * bh) &lt;&lt; 16) &gt;&gt;&gt; 0)|0);
+  return ((al * bl) + (((ah * bl + al * bh) << 16) >>> 0)|0);
 };
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}

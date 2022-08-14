@@ -1,56 +1,56 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 tags:
-- ECMAScript 2015
-- JavaScript
-- Math
-- Method
-- Reference
-- Polyfill
+  - ECMAScript 2015
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+  - Polyfill
+translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 browser-compat: javascript.builtins.Math.trunc
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.trunc()</code></strong> 함수는 주어진 값의 소수부분을 제거하고 숫자의 정수부분을 반환합니다.</p>
+**`Math.trunc()`** 함수는 주어진 값의 소수부분을 제거하고 숫자의 정수부분을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/math-trunc.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-trunc.html")}}
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="syntaxbox">Math.trunc(<var>x</var>)
-</pre>
+```js
+    Math.trunc(x)
+```
 
-<h3 id="Parameters">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>x</code></dt>
- <dd>숫자</dd>
-</dl>
+- `x`
+  - : 숫자
 
-<h3 id="Return_value">반환 값</h3>
+### 반환 값
 
-<p>주어진 숫자의 정수부분</p>
+주어진 숫자의 정수부분
 
-<h2 id="Description">설명</h2>
+## 설명
 
-<p><code>Math</code>의 다른 함수 3개 {{jsxref("Math.floor()")}},
-  {{jsxref("Math.ceil()")}} 그리고 {{jsxref("Math.round()")}} 와는 다르게, 
-  <code>Math.trunc()</code> 단순하게 동작합니다. 함수는 주어진 값이 양수이건 음수이건 상관없이
-  소수점 이하 우측부분을 <em>제거</em>하는 매우 단순한 동작을 합니다.</p>
+`Math`의 다른 함수 3개 {{jsxref("Math.floor()")}},
+{{jsxref("Math.ceil()")}} 그리고 {{jsxref("Math.round()")}} 와는 다르게,
+`Math.trunc()` 단순하게 동작합니다. 함수는 주어진 값이 양수이건 음수이건 상관없이
+소수점 이하 우측부분을 *제거*하는 매우 단순한 동작을 합니다.
 
-<p>함수인자는 암묵적으로 숫자로 변환되어 메서드에 전달됩니다.</p>
+함수인자는 암묵적으로 숫자로 변환되어 메서드에 전달됩니다.
 
-<p><code>trunc()</code> 함수는 <code>Math</code>의 정적 메서드이기 때문에 사용자가 생성한 
-  <code>Math</code> 객체의 메서드로 호출하는 것이 아닌 항상 <code>Math.trunc()</code> 형태로 
-  호출해야 합니다. (<code>Math</code> 는 생성자가 아닙니다).</p>
+`trunc()` 함수는 `Math`의 정적 메서드이기 때문에 사용자가 생성한
+`Math` 객체의 메서드로 호출하는 것이 아닌 항상 `Math.trunc()` 형태로
+호출해야 합니다. (`Math` 는 생성자가 아닙니다).
 
-<h2 id="Examples">예제</h2>
+## 예제
 
-<h3 id="Using_Math.trunc()"><code>Math.trunc()</code>사용하기</h3>
+### `Math.trunc()`사용하기
 
-<pre class="brush: js">Math.trunc(13.37);    // 13
+```js
+Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
 Math.trunc(0.123);    //  0
 Math.trunc(-0.123);   // -0
@@ -58,22 +58,20 @@ Math.trunc('-1.123'); // -1
 Math.trunc(NaN);      // NaN
 Math.trunc('foo');    // NaN
 Math.trunc();         // NaN
-</pre>
+```
 
-<h2 id="Specifications">표준</h2>
+## 표준
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}

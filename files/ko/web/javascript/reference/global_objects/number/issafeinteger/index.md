@@ -9,44 +9,40 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.isSafeInteger()</code></strong> 메서드는 전달된 값이 안전한 정숫값인지 확인합니다.</p>
+**`Number.isSafeInteger()`** 메서드는 전달된 값이 안전한 정숫값인지 확인합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
 
+안전한 정숫값이란 다음과 같습니다.
 
+- IEEE-754 배정도수 형태로 정확히 표현될 수 있는 수이고
+- IEEE-754 표현에 맞게 반올림하는 다른 정수의 결과가 아닌 IEEE-754 표현.
 
-<p>안전한 정숫값이란 다음과 같습니다.</p>
+예를 들어, `2^53 - 1`은 안전한 정수입니다. 이 정수는 정확히 표현될 수 있으며, IEEE-754 반올림 모드에서 다른 정숫값이 이 값을 반올림하지 않습니다. 반면에, `2^53` 는 안전하지 않은 정수입니다. 이 정수는 정확히 IEEE-754로 표현될 수 있지만, 정수 `2^53 + 1`은 IEEE-754로 직접 표현될 수 없으며 가까운 수로 반올림하는 것과 0으로 반올림하는 것으로 `2^53`을 반올림합니다.
 
-<ul>
- <li>IEEE-754 배정도수 형태로 정확히 표현될 수 있는 수이고</li>
- <li>IEEE-754 표현에 맞게 반올림하는 다른 정수의 결과가 아닌 IEEE-754 표현.</li>
-</ul>
+안전한 정숫값은 `-(2^53 - 1)` 부터 `2^53 - 1` 사이의 모든 정수값으로 구성됩니다.
 
-<p>예를 들어, <code>2^53 - 1</code>은 안전한 정수입니다. 이 정수는 정확히 표현될 수 있으며, IEEE-754 반올림 모드에서 다른 정숫값이 이 값을 반올림하지 않습니다. 반면에, <code>2^53</code> 는 안전하지 않은 정수입니다. 이 정수는 정확히 IEEE-754로 표현될 수 있지만, 정수 <code>2^53 + 1</code>은 IEEE-754로 직접 표현될 수 없으며 가까운 수로 반올림하는 것과 0으로 반올림하는 것으로 <code>2^53</code>을 반올림합니다.</p>
+## 구문
 
-<p>안전한 정숫값은 <code>-(2^53 - 1)</code> 부터 <code>2^53 - 1</code> 사이의 모든 정수값으로 구성됩니다.</p>
+```js
+    Number.isSafeInteger(testValue)
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Number.isSafeInteger(<var>testValue</var>)
-</pre>
+- `testValue`
+  - : 안전한 정수인지 확인할 값.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>testValue</code></dt>
- <dd>안전한 정수인지 확인할 값.</dd>
-</dl>
+주어진 값이 안전한 정숫값인지 나타내는 {{jsxref("Boolean")}}.
 
-<h3 id="반환_값">반환 값</h3>
+## 예시
 
-<p>주어진 값이 안전한 정숫값인지 나타내는 {{jsxref("Boolean")}}.</p>
-
-<h2 id="예시">예시</h2>
-
-<pre class="brush: js">Number.isSafeInteger(3);                    // true
+```js
+Number.isSafeInteger(3);                    // true
 Number.isSafeInteger(Math.pow(2, 53));      // false
 Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
 Number.isSafeInteger(NaN);                  // false
@@ -54,27 +50,26 @@ Number.isSafeInteger(Infinity);             // false
 Number.isSafeInteger('3');                  // false
 Number.isSafeInteger(3.1);                  // false
 Number.isSafeInteger(3.0);                  // true
-</pre>
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<pre class="brush: js">Number.isSafeInteger = Number.isSafeInteger || function (value) {
-   return Number.isInteger(value) &amp;&amp; Math.abs(value) &lt;= Number.MAX_SAFE_INTEGER;
+```js
+Number.isSafeInteger = Number.isSafeInteger || function (value) {
+   return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
 };
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Number.isSafeInteger")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>메서드가 속한 {{jsxref("Number")}} 객체.</li>
- <li>{{jsxref("Number.MIN_SAFE_INTEGER")}}</li>
- <li>{{jsxref("Number.MAX_SAFE_INTEGER")}}</li>
-</ul>
+- 메서드가 속한 {{jsxref("Number")}} 객체.
+- {{jsxref("Number.MIN_SAFE_INTEGER")}}
+- {{jsxref("Number.MAX_SAFE_INTEGER")}}

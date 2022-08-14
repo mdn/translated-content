@@ -9,45 +9,45 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>valueOf()</strong></code> 메서드는 {{jsxref("Boolean")}} 객체의 원시 값을 반환합니다.</p>
+**`valueOf()`** 메서드는 {{jsxref("Boolean")}} 객체의 원시 값을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}
 
+## 구문
 
+```js
+    bool.valueOf()
+```
 
-<h2 id="구문">구문</h2>
+### 반환 값
 
-<pre class="syntaxbox"><var>bool</var>.valueOf()</pre>
+{{jsxref("Boolean")}} 객체의 원시 값.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>{{jsxref("Boolean")}} 객체의 원시 값.</p>
+`valueOf()` 메서드는 {{jsxref("Boolean")}} 객체나 불리언 리터럴의 원시 값을 Boolean 자료형의 값으로 반환합니다.
 
-<h2 id="설명">설명</h2>
+`valueOf()` 메서드는 보통 JavaScript 내부에서 호출하며 코드에서 명시적으로 사용하지는 않습니다.
 
-<p><code>valueOf()</code> 메서드는 {{jsxref("Boolean")}} 객체나 불리언 리터럴의 원시 값을 Boolean 자료형의 값으로 반환합니다.</p>
+## 예제
 
-<p><code>valueOf()</code> 메서드는 보통 JavaScript 내부에서 호출하며 코드에서 명시적으로 사용하지는 않습니다.</p>
+### `valueOf` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="valueOf_사용하기"><code>valueOf</code> 사용하기</h3>
-
-<pre class="brush: js">var x = new Boolean();
+```js
+var x = new Boolean();
 x.valueOf(); // false
-</pre>
-<h2 id="Specifications">명세</h2>
+```
+
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-{{Compat("javascript.builtins.Boolean.valueOf")}}
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}

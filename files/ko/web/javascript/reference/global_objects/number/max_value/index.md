@@ -7,45 +7,40 @@ tags:
   - Property
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.MAX_VALUE</code></strong> 속성은 JavaScript가 표현할 수 있는 제일 큰 양의 숫자 값을 나타냅니다.</p>
+**`Number.MAX_VALUE`** 속성은 JavaScript가 표현할 수 있는 제일 큰 양의 숫자 값을 나타냅니다.
 
-<div>{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## 설명
 
+`MAX_VALUE`의 값은 약 `1.79E+308`, 2^1024입니다. `MAX_VALUE`보다 큰 값은 {{jsxref("Infinity")}}로 표현됩니다.
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+`MAX_VALUE`는 {{jsxref("Number")}}의 정적 속성이기 때문에, 직접 생성한 {{jsxref("Number")}} 객체의 속성이 아니라 `Number.MAX_VALUE` 형식으로 사용해야 합니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p><code>MAX_VALUE</code>의 값은 약 <code>1.79E+308</code>, 2^1024입니다. <code>MAX_VALUE</code>보다 큰 값은 {{jsxref("Infinity")}}로 표현됩니다.</p>
+### `MAX_VALUE` 사용하기
 
-<p><code>MAX_VALUE</code>는 {{jsxref("Number")}}의 정적 속성이기 때문에, 직접 생성한 {{jsxref("Number")}} 객체의 속성이 아니라 <code>Number.MAX_VALUE</code> 형식으로 사용해야 합니다.</p>
+다음 코드는 두 개의 수를 곱합니다. 만약 결과가 `MAX_VALUE` 이하면 `func1`을 호출하고, 그렇지 않으면 `func2`를 호출합니다.
 
-<h2 id="예제">예제</h2>
-
-<h3 id="MAX_VALUE_사용하기"><code>MAX_VALUE</code> 사용하기</h3>
-
-<p>다음 코드는 두 개의 수를 곱합니다. 만약 결과가 <code>MAX_VALUE</code> 이하면 <code>func1</code>을 호출하고, 그렇지 않으면 <code>func2</code>를 호출합니다.</p>
-
-<pre class="brush: js">if (num1 * num2 &lt;= Number.MAX_VALUE) {
+```js
+if (num1 * num2 <= Number.MAX_VALUE) {
   func1();
 } else {
   func2();
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Number.MAX_VALUE")}}</p>
+{{Compat}}
 
-<h2 id="참고">참고</h2>
+## 참고
 
-<ul>
- <li>{{jsxref("Number.MIN_VALUE")}}</li>
-</ul>
+- {{jsxref("Number.MIN_VALUE")}}

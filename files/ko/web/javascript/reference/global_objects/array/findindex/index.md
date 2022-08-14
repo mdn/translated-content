@@ -11,78 +11,74 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>findIndex()</code></strong> 메서드는 <strong>주어진 판별 함수를 만족하는</strong> 배열의 첫 번째 요소에 대한 <strong>인덱스</strong>를 반환합니다. 만족하는 요소가 없으면 -1을 반환합니다.</p>
+**`findIndex()`** 메서드는 **주어진 판별 함수를 만족하는** 배열의 첫 번째 요소에 대한 **인덱스**를 반환합니다. 만족하는 요소가 없으면 -1을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/array-findindex.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-findindex.html")}}
 
+인덱스 대신 **값**을 반환하는 {{jsxref("Array.prototype.find", "find()")}} 메서드도 참고하세요.
 
+## 구문
 
-<p>인덱스 대신 <strong>값</strong>을 반환하는 {{jsxref("Array.prototype.find", "find()")}} 메서드도 참고하세요.</p>
+```js
+    arr.findIndex(callback(element[, index[, array]])[, thisArg])
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><var>arr</var>.findIndex(<var>callback(element</var>[, index[, array]])[, <var>thisArg</var>])</pre>
+- `callback`
+  - : 3개의 인수를 취하여 배열의 각 값에 대해 실행할 함수입니다.
+    - `element`
+      - : 배열에서 처리중인 현재 요소입니다.
+    - `index`
+      - : 배열에서 처리중인 현재 요소의 인덱스입니다.
+    - `array`
+      - : findIndex 함수가 호출된 배열입니다.
+- `thisArg`
+  - : 선택 사항. 콜백을 실행할 때 this로 사용할 객체입니다.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>3개의 인수를 취하여 배열의 각 값에 대해 실행할 함수입니다.</dd>
- <dd>
- <dl>
-  <dt><code>element</code></dt>
-  <dd>배열에서 처리중인 현재 요소입니다.</dd>
-  <dt><code>index</code></dt>
-  <dd>배열에서 처리중인 현재 요소의 인덱스입니다.</dd>
-  <dt><code>array</code></dt>
-  <dd>findIndex 함수가 호출된 배열입니다.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>선택 사항. 콜백을 실행할 때 this로 사용할 객체입니다.</dd>
-</dl>
+요소가 테스트를 통과하면 배열의 인덱스. 그렇지 않으면 -1입니다.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>요소가 테스트를 통과하면 배열의 인덱스. 그렇지 않으면 -1입니다.</p>
+findIndex 메서드는 콜백 함수가 진리 값 (true를 반환하는 값)을 반환 할 때까지 배열의 모든 배열 인덱스 0..length-1 (포함)에 대해 한 번씩 콜백 함수를 실행합니다. 이러한 요소가 발견되면 findIndex는 해당 반복에 대한 색인을 즉시 반환합니다. 콜백이 진리 값을 반환하지 않거나 배열의 길이가 0 인 경우 findIndex는 -1을 반환합니다. Array # some과 같은 다른 배열 메소드와는 달리, 배열에 존재하지 않는 엔트리의 인덱스에 대해서조차 콜백이 호출됩니다.
 
-<h2 id="설명">설명</h2>
+콜백은 요소의 값, 요소의 인덱스 및 가로 지르는 `Array` 객체의 세 가지 인수로 호출됩니다.
 
-<p>findIndex 메서드는 콜백 함수가 진리 값 (true를 반환하는 값)을 반환 할 때까지 배열의 모든 배열 인덱스 0..length-1 (포함)에 대해 한 번씩 콜백 함수를 실행합니다. 이러한 요소가 발견되면 findIndex는 해당 반복에 대한 색인을 즉시 반환합니다. 콜백이 진리 값을 반환하지 않거나 배열의 길이가 0 인 경우 findIndex는 -1을 반환합니다. Array # some과 같은 다른 배열 메소드와는 달리, 배열에 존재하지 않는 엔트리의 인덱스에 대해서조차 콜백이 호출됩니다.</p>
+thisArg 매개 변수가 findIndex에 제공되면 콜백 호출마다 thisArg 매개 변수가 사용됩니다. 제공되지 않으면 {{jsxref ( "undefined")}}가 사용됩니다.
 
-<p>콜백은 요소의 값, 요소의 인덱스 및 가로 지르는 <code>Array</code> 객체의 세 가지 인수로 호출됩니다.</p>
+`findIndex`는 호출 된 배열을 변경하지 않습니다.
 
-<p>thisArg 매개 변수가 findIndex에 제공되면 콜백 호출마다 thisArg 매개 변수가 사용됩니다. 제공되지 않으면 {{jsxref ( "undefined")}}가 사용됩니다.</p>
+findIndex에 의해 처리되는 요소의 범위는 콜백의 첫 번째 호출 전에 설정됩니다. findIndex 호출이 시작된 후 배열에 추가되는 요소는 콜백에 의해 방문되지 않습니다. 배열의 기존의 방문하지 않은 요소가 콜백에 의해 변경되면 방문 콜백에 전달 된 값은 findIndex가 해당 요소의 인덱스를 방문 할 때의 값이됩니다. 삭제된 요소도 방문합니다.
 
-<p><code>findIndex</code>는 호출 된 배열을 변경하지 않습니다.</p>
+## 예제
 
-<p>findIndex에 의해 처리되는 요소의 범위는 콜백의 첫 번째 호출 전에 설정됩니다. findIndex 호출이 시작된 후 배열에 추가되는 요소는 콜백에 의해 방문되지 않습니다. 배열의 기존의 방문하지 않은 요소가 콜백에 의해 변경되면 방문 콜백에 전달 된 값은 findIndex가 해당 요소의 인덱스를 방문 할 때의 값이됩니다. 삭제된 요소도 방문합니다.</p>
+### 배열에서 소수의 색인 찾기
 
-<h2 id="예제">예제</h2>
+다음 예제에서는 배열에서 소수 (소수가없는 경우 -1을 반환) 인 요소의 인덱스를 찾습니다.
 
-<h3 id="배열에서_소수의_색인_찾기">배열에서 소수의 색인 찾기</h3>
-
-<p>다음 예제에서는 배열에서 소수 (소수가없는 경우 -1을 반환) 인 요소의 인덱스를 찾습니다.</p>
-
-<pre class="brush: js">function isPrime(element, index, array) {
+```js
+function isPrime(element, index, array) {
   var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 console.log([4, 6, 8, 12].findIndex(isPrime)); // -1, not found
 console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
-</pre>
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<pre class="brush: js">if (!Array.prototype.findIndex) {
+```js
+if (!Array.prototype.findIndex) {
   Object.defineProperty(Array.prototype, 'findIndex', {
     value: function(predicate) {
       'use strict';
@@ -93,11 +89,11 @@ console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
         throw new TypeError('predicate must be a function');
       }
       var list = Object(this);
-      var length = list.length &gt;&gt;&gt; 0;
+      var length = list.length >>> 0;
       var thisArg = arguments[1];
       var value;
 
-      for (var i = 0; i &lt; length; i++) {
+      for (var i = 0; i < length; i++) {
         value = list[i];
         if (predicate.call(thisArg, value, i, list)) {
           return i;
@@ -110,19 +106,17 @@ console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
     writable: false
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>{{Compat("javascript.builtins.Array.findIndex")}}</div>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.indexOf()")}}

@@ -3,72 +3,53 @@ title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<div>
-<p><code><strong>ReferenceError</strong></code> 객체는 존재하지 않는 변수를 참조했을 때 발생하는 에러를 나타냅니다.</p>
-</div>
+**`ReferenceError`** 객체는 존재하지 않는 변수를 참조했을 때 발생하는 에러를 나타냅니다.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox"><code>new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+    new ReferenceError([message[, fileName[, lineNumber]]])
 
-<h3 id="파라미터">파라미터</h3>
+### 파라미터
 
-<dl>
- <dt><code>message</code></dt>
- <dd>선택사항. 에러에 대한 설명문</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>선택사항. 예외가 발생한 코드를 포함하는 파일의 이름</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>선택사항. 예외가 발생한 코드의 줄 번호</dd>
-</dl>
+- `message`
+  - : 선택사항. 에러에 대한 설명문
+- `fileName` {{non-standard_inline}}
+  - : 선택사항. 예외가 발생한 코드를 포함하는 파일의 이름
+- `lineNumber` {{non-standard_inline}}
+  - : 선택사항. 예외가 발생한 코드의 줄 번호
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><strong><code>ReferenceError</code></strong>는 선언된 적이 없는 변수를 참조하려고 할 때 발생합니다.</p>
+**`ReferenceError`**는 선언된 적이 없는 변수를 참조하려고 할 때 발생합니다.
 
-<h2>생성자</h2>
-<dl>
-  <dt>{{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}</dt>
-  <dd>
-    <p>Creates a new <code>ReferenceError</code> object.</p>
-  </dd>
-</dl>
+## 생성자
 
-<h2>인스턴스 속성</h2>
-<dl>
-  <dt>{{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}</dt>
-  <dd>
-    <p>Error message.</p>
-  </dd>
-  <dt>{{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}</dt>
-  <dd>
-    <p>Error name. Inherited from {{jsxref("Error")}}.</p>
-  </dd>
-  <dt>{{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}}</dt>
-  <dd>
-    <p>Path to file that raised this error. Inherited from {{jsxref("Error")}}.</p>
-  </dd>
-  <dt>{{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}}</dt>
-  <dd>
-    <p>Line number in file that raised this error. Inherited from {{jsxref("Error")}}.</p>
-  </dd>
-  <dt>{{jsxref("Error.prototype.columnNumber", "ReferenceError.prototype.columnNumber")}}</dt>
-  <dd>
-    <p>Column number in line that raised this error. Inherited from {{jsxref("Error")}}.</p>
-  </dd>
-  <dt>{{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}}</dt>
-  <dd>
-    <p>Stack trace. Inherited from {{jsxref("Error")}}.</p>
-  </dd>
-</dl>
+- {{jsxref("Global_Objects/ReferenceError/ReferenceError", "ReferenceError()")}}
+  - : Creates a new `ReferenceError` object.
 
-<h2 id="예제">예제</h2>
+## 인스턴스 속성
 
-<h3 id="ReferenceError_처리하기"><code>ReferenceError</code> 처리하기</h3>
+- {{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}
+  - : Error message.
+- {{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}
+  - : Error name. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}}
+  - : Path to file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.lineNumber", "ReferenceError.prototype.lineNumber")}}
+  - : Line number in file that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.columnNumber", "ReferenceError.prototype.columnNumber")}}
+  - : Column number in line that raised this error. Inherited from {{jsxref("Error")}}.
+- {{jsxref("Error.prototype.stack", "ReferenceError.prototype.stack")}}
+  - : Stack trace. Inherited from {{jsxref("Error")}}.
 
-<pre class="brush: js">try {
+## 예제
+
+### `ReferenceError` 처리하기
+
+```js
+try {
   var a = undefinedVariable;
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
@@ -79,11 +60,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
   console.log(e.columnNumber);              // 6
   console.log(e.stack);                     // "@Scratchpad/2:2:7\n"
 }
-</pre>
+```
 
-<h3 id="ReferenceError_생성하기"><code>ReferenceError</code> 생성하기</h3>
+### `ReferenceError` 생성하기
 
-<pre class="brush: js">try {
+```js
+try {
   throw new ReferenceError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
@@ -94,19 +76,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
   console.log(e.columnNumber);              // 0
   console.log(e.stack);                     // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-{{Compat("javascript.builtins.ReferenceError")}}
+{{Compat}}
 
-<h2 id="참고">참고</h2>
+## 참고
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("ReferenceError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("ReferenceError.prototype")}}

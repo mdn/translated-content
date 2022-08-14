@@ -3,70 +3,46 @@ title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <strong><code>Math.SQRT2</code></strong> 는 2의 제곱근을 나타내고 약 1.414 입니다:</p>
+**`Math.SQRT2`** 는 2의 제곱근을 나타내고 약 1.414 입니다:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math>
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+{{js_property_attributes(0, 0, 0)}}
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p> <code>SQRT2</code> 는  <code>Math</code>의 정적 메서드 이므로 만든 <code>Math</code> 객체의 메서드가 아니라 항상 <code>Math.SQRT2</code> 함수를 사용해야합니다.  (<code>Math</code>는 생성자가 없습니다.)</p>
+`SQRT2` 는 `Math`의 정적 메서드 이므로 만든 `Math` 객체의 메서드가 아니라 항상 `Math.SQRT2` 함수를 사용해야합니다. (`Math`는 생성자가 없습니다.)
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="Math.SQRT2"><code>Math.SQRT2</code></h3>
+### `Math.SQRT2`
 
-<p>이 함수는 2의 제곱근을 반환합니다.</p>
+이 함수는 2의 제곱근을 반환합니다.
 
-<pre class="brush: js">function getRoot2() {
+```js
+function getRoot2() {
   return Math.SQRT2;
 }
 
 getRoot2(); // 1.4142135623730951
-</pre>
+```
 
-<h2 id="표준">표준</h2>
+## 표준
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">표준</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.8', 'Math.SQRT2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sqrt2', 'Math.SQRT2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sqrt2', 'Math.SQRT2')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 표준                                                                         | 상태                         | 비고                                               |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.8', 'Math.SQRT2')}}         | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.sqrt2', 'Math.SQRT2')}}         | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.sqrt2', 'Math.SQRT2')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Math.SQRT2")}}</p>
+{{Compat}}
 
-<h2 id="참조">참조</h2>
+## 참조
 
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

@@ -3,50 +3,48 @@ title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>repeat()</code></strong> 메서드는 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다.</p>
+**`repeat()`** 메서드는 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre><code><var>str</var>.repeat(<var>count</var>);</code></pre>
+    str.repeat(count);
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>count</code></dt>
- <dd>문자열을 반복할 횟수. 0과 양의 무한대 사이의 정수([0, +∞)).</dd>
-</dl>
+- `count`
+  - : 문자열을 반복할 횟수. 0과 양의 무한대 사이의 정수(\[0, +∞)).
 
-<h3 id="반환값">반환값</h3>
+### 반환값
 
-<p>현재 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열.</p>
+현재 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열.
 
-<h3 id="예외">예외</h3>
+### 예외
 
-<ul>
- <li>{{jsxref("Errors/Negative_repetition_count", "RangeError")}}: 반복 횟수는 양의 정수여야 함.</li>
- <li>{{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: 반복 횟수는 무한대보다 작아야 하며, 최대 문자열 크기를 넘어선 안됨.</li>
-</ul>
+- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: 반복 횟수는 양의 정수여야 함.
+- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: 반복 횟수는 무한대보다 작아야 하며, 최대 문자열 크기를 넘어선 안됨.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: js">'abc'.repeat(-1);   // RangeError
+```js
+'abc'.repeat(-1);   // RangeError
 'abc'.repeat(0);    // ''
 'abc'.repeat(1);    // 'abc'
 'abc'.repeat(2);    // 'abcabc'
 'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
 'abc'.repeat(1/0);  // RangeError
 
-({ toString: () =&gt; 'abc', repeat: String.prototype.repeat }).repeat(2);
+({ toString: () => 'abc', repeat: String.prototype.repeat }).repeat(2);
 // 'abcabc' (repeat() is a generic method)
-</pre>
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<p><code>repeat</code>은 ECMAScript 2015 명세에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 그러나 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 <code>repeat</code>을 사용할 수 있습니다.</p>
+`repeat`은 ECMAScript 2015 명세에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 그러나 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 `repeat`을 사용할 수 있습니다.
 
-<pre class="brush: js"><code>if (!String.prototype.repeat) {
+```js
+if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
     if (this == null) {
@@ -57,7 +55,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
     if (count != count) {
       count = 0;
     }
-    if (count &lt; 0) {
+    if (count < 0) {
       throw new RangeError('repeat count must be non-negative');
     }
     if (count == Infinity) {
@@ -69,8 +67,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
     }
     // Ensuring count is a 31-bit integer allows us to heavily optimize the
     // main part. But anyway, most current (August 2014) browsers can't handle
-    // strings 1 &lt;&lt; 28 chars or longer, so:
-    if (str.length * count &gt;= 1 &lt;&lt; 28) {
+    // strings 1 << 28 chars or longer, so:
+    if (str.length * count >= 1 << 28) {
       throw new RangeError('repeat count must not overflow maximum string size');
     }
     var maxCount = str.length * count;
@@ -82,12 +80,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
     str += str.substring(0, maxCount - str.length);
     return str;
   }
-}</code></pre>
+}
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.String.repeat")}}</p>
+{{Compat}}

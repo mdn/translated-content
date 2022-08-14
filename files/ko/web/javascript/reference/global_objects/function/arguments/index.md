@@ -3,27 +3,28 @@ title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><code><strong><em>function</em>.arguments</strong></code> 속성은 함수로 부터 넘겨 받은 arguments에 해당하는 배열과 같은 객체이다. 간단하게 {{jsxref("Functions/arguments", "arguments")}}를 대신 사용하자. 이 속성은 strict mode에서 <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-addrestrictedfunctionproperties">꼬리 호출 최적화</a> 때문에 금지 된다.</p>
+> **`function.arguments`** 속성은 함수로 부터 넘겨 받은 arguments에 해당하는 배열과 같은 객체이다. 간단하게 {{jsxref("Functions/arguments", "arguments")}}를 대신 사용하자. 이 속성은 strict mode에서 [꼬리 호출 최적화](http://www.ecma-international.org/ecma-262/6.0/#sec-addrestrictedfunctionproperties) 때문에 금지 된다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code><em>function</em>.arguments</code> 문법은 deprecated 되었다. 함수 내 에서 사용 가능한 객체{{jsxref("Functions/arguments", "arguments")}}에 접근하는 추천되는 방법은 단순히 {{jsxref("Functions/arguments", "arguments")}}변수로 참조하는 것이다.</p>
+`function.arguments` 문법은 deprecated 되었다. 함수 내 에서 사용 가능한 객체{{jsxref("Functions/arguments", "arguments")}}에 접근하는 추천되는 방법은 단순히 {{jsxref("Functions/arguments", "arguments")}}변수로 참조하는 것이다.
 
-<p>반복문의 경우, 함수 <code>f</code> 가 여러번 호출 스택에 나타나면, <code>f.arguments</code>의 값은 함수의 가장 최근 호출 arguments를 나타낸다.</p>
+반복문의 경우, 함수 `f` 가 여러번 호출 스택에 나타나면, `f.arguments`의 값은 함수의 가장 최근 호출 arguments를 나타낸다.
 
-<p>arguments의 값은 함수 실행 과정에서 특별한 호출이 없다면 일반적으로 null 이다 (즉, 함수가 호출은 되었으나 반환되지 않음).</p>
+arguments의 값은 함수 실행 과정에서 특별한 호출이 없다면 일반적으로 null 이다 (즉, 함수가 호출은 되었으나 반환되지 않음).
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="arguments_object를_사용한_예시">arguments object를 사용한 예시</h3>
+### arguments object를 사용한 예시
 
-<pre class="brush: js">function f(n) { g(n - 1); }
+```js
+function f(n) { g(n - 1); }
 
 function g(n) {
   console.log('before: ' + g.arguments[0]);
-  if (n &gt; 0) { f(n); }
+  if (n > 0) { f(n); }
   console.log('after: ' + g.arguments[0]);
 }
 
@@ -38,22 +39,17 @@ console.log('returned: ' + g.arguments);
 // after: 0
 // after: 1
 // returned: null
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><code><em>function</em>.arguments</code>는 표준이 아니다. ECMAScript 3에서 {{jsxref("Functions/arguments", "arguments")}}를 참조하기 때문에 deprecated 되었다.</p>
+`function.arguments`는 표준이 아니다. ECMAScript 3에서 {{jsxref("Functions/arguments", "arguments")}}를 참조하기 때문에 deprecated 되었다.
 
-<h2 id="Browser_호환성">Browser 호환성</h2>
+## Browser 호환성
 
-<div>
+{{Compat}}
 
-<p>{{Compat("javascript.builtins.Function.arguments")}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Functions/arguments", "arguments")}} 객체</li>
- <li>{{jsxref("Functions", "Functions and function scope", "", 1)}}</li>
-</ul>
+- {{jsxref("Functions/arguments", "arguments")}} 객체
+- {{jsxref("Functions", "Functions and function scope", "", 1)}}

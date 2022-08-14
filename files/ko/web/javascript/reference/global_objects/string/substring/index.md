@@ -3,51 +3,46 @@ title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>substring()</code></strong> 메소드는 string 객체의 시작 인덱스로 부터 종료 인덱스 전 까지 문자열의 부분 문자열을 반환합니다.</p>
+**`substring()`** 메소드는 string 객체의 시작 인덱스로 부터 종료 인덱스 전 까지 문자열의 부분 문자열을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/string-substring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-substring.html")}}
 
+## 사용방법
 
+    str.substring(indexStart[, indexEnd])
 
-<h2 id="사용방법">사용방법 </h2>
+### 인자값
 
-<pre class="syntaxbox"><code><var>str</var>.substring(<var>indexStart</var>[, <var>indexEnd</var>])</code></pre>
+- `indexStart`
+  - : 반환문자열의 시작 인덱스
+- `indexEnd`
 
-<h3 id="인자값">인자값</h3>
+  - : 옵션. 반환문자열의 마지막 인덱스 (포함하지 않음.)
 
-<dl>
- <dt><code><var>indexStart</var></code></dt>
- <dd>반환문자열의 시작 인덱스 </dd>
- <dt> </dt>
- <dt><code><var>indexEnd</var></code></dt>
- <dd>옵션.  반환문자열의 마지막 인덱스 (포함하지 않음.)</dd>
-</dl>
+### 반환값
 
-<h3 id="반환값">반환값</h3>
+기존문자열의 부분 문자열을 반환합니다.
 
-<p>기존문자열의  부분 문자열을 반환합니다. </p>
+## Description
 
-<h2 id="Description">Description</h2>
+`substring()` 메서드는 `indexStart` 부터 문자를 추출하지만 `indexEnd` 가 포함되지 않아도 괜찮습니다. 특징은 아래와 같습니다.
 
-<p><code>substring()</code> 메서드는 <code><var>indexStart</var></code> 부터 문자를 추출하지만 <code><var>indexEnd</var></code> 가 포함되지 않아도 괜찮습니다. 특징은 아래와 같습니다.</p>
+- 만약 `indexEnd` 가 생략된 경우, `substring()` 문자열의 끝까지 모든 문자를 추출합니다.
+- 만약 `indexStart` 가 `indexEnd`와 같을 경우, `substring()` 빈 문자열을 반환합니다.
+- 만약 `indexStart` 가 `indexEnd`보다 큰 경우, `substring()` 메서드는 마치 두 개의 인자를 바꾼 듯 작동하게 됩니다. 아래 예제를 보세요.
 
-<ul>
- <li>만약 <code><var>indexEnd</var></code> 가 생략된 경우, <code>substring()</code> 문자열의 끝까지 모든 문자를 추출합니다.</li>
- <li>만약 <code><var>indexStart</var></code> 가 <code><var>indexEnd</var></code>와 같을 경우, <code>substring()</code> 빈 문자열을 반환합니다.</li>
- <li>만약 <code><var>indexStart</var></code> 가 <code><var>indexEnd</var></code>보다 큰 경우, <code>substring()</code> 메서드는 마치 두 개의 인자를 바꾼 듯 작동하게 됩니다. 아래 예제를 보세요.</li>
-</ul>
+0보다 작은 인자 값을 가지는 경우에는 0으로, `stringName.length` 보다 큰 인자 값을 가지는 경우, `stringName.length` 로 처리됩니다. {{jsxref("NaN")}} 값은 0으로 처리됩니다.
 
-<p>0보다 작은 인자 값을 가지는 경우에는 0으로, <code>stringName.length</code> 보다 큰 인자 값을 가지는 경우, <code>stringName.length</code> 로 처리됩니다. {{jsxref("NaN")}} 값은 0으로 처리됩니다.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Using `substring()`
 
-<h3 id="Using_substring()">Using <code>substring()</code></h3>
+The following example uses `substring()` to display characters from the string `'Mozilla'`:
 
-<p>The following example uses <code>substring()</code> to display characters from the string <code>'Mozilla'</code>:</p>
-
-<pre class="brush: js">var anyString = 'Mozilla';
+```js
+var anyString = 'Mozilla';
 
 // Displays 'M'
 console.log(anyString.substring(0, 1));
@@ -64,13 +59,14 @@ console.log(anyString.substring(7, 4));
 // Displays 'Mozilla'
 console.log(anyString.substring(0, 7));
 console.log(anyString.substring(0, 10));
-</pre>
+```
 
-<h3 id="Using_substring()_with_length_property">Using <code>substring()</code> with <code>length</code> property</h3>
+### Using `substring()` with `length` property
 
-<p>The following example uses the <code>substring()</code> method and {{jsxref("String.length", "length")}} property to extract the last characters of a particular string. This method may be easier to remember, given that you don't need to know the starting and ending indices as you would in the above examples.</p>
+The following example uses the `substring()` method and {{jsxref("String.length", "length")}} property to extract the last characters of a particular string. This method may be easier to remember, given that you don't need to know the starting and ending indices as you would in the above examples.
 
-<pre class="brush: js">// Displays 'illa' the last 4 characters
+```js
+// Displays 'illa' the last 4 characters
 var anyString = 'Mozilla';
 var anyString4 = anyString.substring(anyString.length - 4);
 console.log(anyString4);
@@ -79,50 +75,56 @@ console.log(anyString4);
 var anyString = 'Mozilla';
 var anyString5 = anyString.substring(anyString.length - 5);
 console.log(anyString5);
-</pre>
+```
 
-<h3 id="The_difference_between_substring()_and_substr()">The difference between <code>substring()</code> and <code>substr()</code></h3>
+### The difference between `substring()` and `substr()`
 
-<p>There's a subtle difference between the <code>substring()</code> and {{jsxref("String.substr", "substr()")}} methods, so you should be careful not to get them confused.</p>
+There's a subtle difference between the `substring()` and {{jsxref("String.substr", "substr()")}} methods, so you should be careful not to get them confused.
 
-<p>The arguments of <code>substring()</code> represent the starting and ending indexes, while the arguments of <code>substr()</code> represent the starting index and the number of characters to include in the returned string.</p>
+The arguments of `substring()` represent the starting and ending indexes, while the arguments of `substr()` represent the starting index and the number of characters to include in the returned string.
 
-<pre class="brush: js">var text = 'Mozilla';
-console.log(text.substring(2,5)); // =&gt; "zil"
-console.log(text.substr(2,3));    // =&gt; "zil"</pre>
+```js
+var text = 'Mozilla';
+console.log(text.substring(2,5)); // => "zil"
+console.log(text.substr(2,3));    // => "zil"
+```
 
-<h3 id="Differences_between_substring()_and_slice()">Differences between <code>substring()</code> and <code>slice()</code></h3>
+### Differences between `substring()` and `slice()`
 
-<p>The <code>substring()</code> and {{jsxref("String.slice", "slice()")}} methods are almost identical, but there are a couple of subtle differences between the two, especially in the way negative arguments are dealt with.</p>
+The `substring()` and {{jsxref("String.slice", "slice()")}} methods are almost identical, but there are a couple of subtle differences between the two, especially in the way negative arguments are dealt with.
 
-<p>The <code>substring()</code> method swaps its two arguments if <code><var>indexStart</var></code> is greater than <code><var>indexEnd</var></code>, meaning that a string is still returned. The {{jsxref("String.slice", "slice()")}} method returns an empty string if this is the case.</p>
+The `substring()` method swaps its two arguments if `indexStart` is greater than `indexEnd`, meaning that a string is still returned. The {{jsxref("String.slice", "slice()")}} method returns an empty string if this is the case.
 
-<pre class="brush: js">var text = 'Mozilla';
-console.log(text.substring(5, 2)); // =&gt; "zil"
-console.log(text.slice(5, 2));     // =&gt; ""
-</pre>
+```js
+var text = 'Mozilla';
+console.log(text.substring(5, 2)); // => "zil"
+console.log(text.slice(5, 2));     // => ""
+```
 
-<p>If either or both of the arguments are negative or <code>NaN</code>, the <code>substring()</code> method treats them as if they were <code>0</code>.</p>
+If either or both of the arguments are negative or `NaN`, the `substring()` method treats them as if they were `0`.
 
-<pre class="brush: js">console.log(text.substring(-5, 2)); // =&gt; "Mo"
-console.log(text.substring(-5, -2)); // =&gt; ""
-</pre>
+```js
+console.log(text.substring(-5, 2)); // => "Mo"
+console.log(text.substring(-5, -2)); // => ""
+```
 
-<p><code>slice()</code> also treats <code>NaN</code> arguments as <code>0</code>, but when it is given negative values it counts backwards from the end of the string to find the indexes.</p>
+`slice()` also treats `NaN` arguments as `0`, but when it is given negative values it counts backwards from the end of the string to find the indexes.
 
-<pre class="brush: js">console.log(text.slice(-5, 2)); // =&gt; ""
-console.log(text.slice(-5, -2)); // =&gt; "zil"
-</pre>
+```js
+console.log(text.slice(-5, 2)); // => ""
+console.log(text.slice(-5, -2)); // => "zil"
+```
 
-<p>See the {{jsxref("String.slice", "slice()")}} page for more examples with negative numbers.</p>
+See the {{jsxref("String.slice", "slice()")}} page for more examples with negative numbers.
 
-<h3 id="Replacing_a_substring_within_a_string">Replacing a substring within a string</h3>
+### Replacing a substring within a string
 
-<p>The following example replaces a substring within a string. It will replace both individual characters and substrings. The function call at the end of the example changes the string <code>Brave New World</code> to <code>Brave New Web</code>.</p>
+The following example replaces a substring within a string. It will replace both individual characters and substrings. The function call at the end of the example changes the string `Brave New World` to `Brave New Web`.
 
-<pre class="brush: js">// Replaces oldS with newS in the string fullS
+```js
+// Replaces oldS with newS in the string fullS
 function replaceString(oldS, newS, fullS) {
-  for (var i = 0; i &lt; fullS.length; ++i) {
+  for (var i = 0; i < fullS.length; ++i) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
       fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
     }
@@ -131,28 +133,27 @@ function replaceString(oldS, newS, fullS) {
 }
 
 replaceString('World', 'Web', 'Brave New World');
-</pre>
+```
 
-<p>Note that this can result in an infinite loop if <code>oldS</code> is itself a substring of <code>newS</code> — for example, if you attempted to replace 'World' with 'OtherWorld' here. A better method for replacing strings is as follows:</p>
+Note that this can result in an infinite loop if `oldS` is itself a substring of `newS` — for example, if you attempted to replace 'World' with 'OtherWorld' here. A better method for replacing strings is as follows:
 
-<pre class="brush: js">function replaceString(oldS, newS, fullS) {
+```js
+function replaceString(oldS, newS, fullS) {
   return fullS.split(oldS).join(newS);
 }
-</pre>
+```
 
-<p>The code above serves as an example for substring operations. If you need to replace substrings, most of the time you will want to use {{jsxref("String.prototype.replace()")}}.</p>
+The code above serves as an example for substring operations. If you need to replace substrings, most of the time you will want to use {{jsxref("String.prototype.replace()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.String.substring")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("String.prototype.substr()")}} {{deprecated_inline}}</li>
- <li>{{jsxref("String.prototype.slice()")}}</li>
-</ul>
+- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
+- {{jsxref("String.prototype.slice()")}}

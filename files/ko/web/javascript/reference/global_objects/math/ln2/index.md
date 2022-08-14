@@ -8,49 +8,44 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Math.LN2</code></strong> property represents the natural logarithm of 2, approximately 0.693:</p>
+The **`Math.LN2`** property represents the natural logarithm of 2, approximately 0.693:
 
-<p><strong><code>Math.LN2</code></strong> 속성은 2의 자연로그 값, 약 0.693의 값을 가집니다.</p>
+**`Math.LN2`** 속성은 2의 자연로그 값, 약 0.693의 값을 가집니다.
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-ln2.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-ln2.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## 설명
 
+`LN2`는 `Math`의 정적 속성이므로, 사용자가 생성한 `Math` 객체의 속성으로 접근할 수 없고 항상 `Math.LN2`를 사용해야 합니다. (`Math`는 생성자가 아닙니다)
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+## Examples
 
-<h2 id="설명">설명</h2>
+### `Math.LN2` 사용하기
 
-<p><code>LN2</code>는 <code>Math</code>의 정적 속성이므로, 사용자가 생성한 <code>Math</code> 객체의 속성으로 접근할 수 없고 항상 <code>Math.LN2</code>를 사용해야 합니다. (<code>Math</code>는 생성자가 아닙니다)</p>
+다음 함수는 2의 자연 로그 값을 반환합니다.
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Math.LN2_사용하기"><code>Math.LN2</code> 사용하기</h3>
-
-<p>다음 함수는 2의 자연 로그 값을 반환합니다.</p>
-
-<pre class="brush:js">function getNatLog2() {
+```js
+function getNatLog2() {
   return Math.LN2;
 }
 
 getNatLog2(); // 0.6931471805599453
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Math.LN2")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log2()")}}

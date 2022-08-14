@@ -3,34 +3,33 @@ title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.values()</strong></code> 메소드는 전달된 파라미터 객체가 가지는 (열거 가능한) 속성의 값들로 이루어진 배열을 리턴합니다. 이 배열은 {{jsxref("Statements/for...in", "for...in")}} 구문과 동일한 순서를 가집니다. (for in 반복문은 프로토타입 체인 또한 열거한다는 점에서 차이가 있습니다.)</p>
+**`Object.values()`** 메소드는 전달된 파라미터 객체가 가지는 (열거 가능한) 속성의 값들로 이루어진 배열을 리턴합니다. 이 배열은 {{jsxref("Statements/for...in", "for...in")}} 구문과 동일한 순서를 가집니다. (for in 반복문은 프로토타입 체인 또한 열거한다는 점에서 차이가 있습니다.)
 
-<div>{{EmbedInteractiveExample("pages/js/object-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-values.html")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Object.values(<var>obj</var>)</pre>
+    Object.values(obj)
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>배열로 변환할 열거 가능한 속성을 가지는 객체</dd>
-</dl>
+- `obj`
+  - : 배열로 변환할 열거 가능한 속성을 가지는 객체
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>전달된 객체의 속성 값들을 포함하는 배열</p>
+전달된 객체의 속성 값들을 포함하는 배열
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>Object.values()</code> 는 파라미터로 전달된 객체가 가지는 열거 가능한 속성의 값들로 구성된 배열을 반환합니다. 배열의 값들이 순서는 오브젝트의 속성을 for in 구문등으로 반복한 결과와 동일합니다. (참고로 for in 구문은 순서를 보장하지 않습니다)</p>
+`Object.values()` 는 파라미터로 전달된 객체가 가지는 열거 가능한 속성의 값들로 구성된 배열을 반환합니다. 배열의 값들이 순서는 오브젝트의 속성을 for in 구문등으로 반복한 결과와 동일합니다. (참고로 for in 구문은 순서를 보장하지 않습니다)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var obj = { foo: 'bar', baz: 42 };
+```js
+var obj = { foo: 'bar', baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // 유사 배열 (숫자를 속성으로 사용하는 객체)
@@ -48,27 +47,25 @@ console.log(Object.values(my_obj)); // ['bar']
 
 // 객체가 아닌 경우에는 객체로 강제로 변환되어 적용됩니다.
 console.log(Object.values('foo')); // ['f', 'o', 'o']
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>Object.values</code> 메소드는 구형 브라우저에서 지원하지 않습니다. 구형 브라우저와의 호환성을 고려하기 위해 폴리필을 찾아 볼 수 있습니다. <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> 혹은 <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a> 를 참조해보세요.</p>
+`Object.values` 메소드는 구형 브라우저에서 지원하지 않습니다. 구형 브라우저와의 호환성을 고려하기 위해 폴리필을 찾아 볼 수 있습니다. [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 혹은 [es-shims/Object.values](https://github.com/es-shims/Object.values) 를 참조해보세요.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.Object.values")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.entries()")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.entries()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

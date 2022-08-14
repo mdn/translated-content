@@ -10,55 +10,54 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code>indexOf()</code> 메서드는 배열에서 지정된 요소를 찾을 수 있는 첫 번째 인덱스를 반환하고 존재하지 않으면 -1을 반환합니다.</p>
+`indexOf()` 메서드는 배열에서 지정된 요소를 찾을 수 있는 첫 번째 인덱스를 반환하고 존재하지 않으면 -1을 반환합니다.
 
-<div class="blockIndicator note">
-<p><strong>참고</strong>: 문자열은 {{jsxref("String.prototype.indexOf()")}}를 참고하세요.</p>
-</div>
+> **참고:** 문자열은 {{jsxref("String.prototype.indexOf()")}}를 참고하세요.
 
-<p>{{EmbedInteractiveExample("pages/js/array-indexof.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><var>arr</var>.indexOf(<var>searchElement[, fromIndex]</var>)
-</pre>
+```js
+    arr.indexOf(searchElement[, fromIndex])
+```
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>searchElement</code></dt>
- <dd>배열에서 찾을 요소입니다.</dd>
- <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>검색을 시작할 색인입니다. 인덱스가 배열의 길이보다 크거나 같은 경우 -1이 반환되므로 배열이 검색되지 않습니다. 제공된 색인 값이 음수이면 배열 끝에서부터의 오프셋 값으로 사용됩니다. 참고 : 제공된 색인이 음수이면 배열은 여전히 앞에서 뒤로 검색됩니다. 계산 된 인덱스가 0보다 작 으면 전체 배열이 검색됩니다. 기본값 : 0 (전체 배열 검색).</dd>
-</dl>
+- `searchElement`
+  - : 배열에서 찾을 요소입니다.
+- `fromIndex` {{optional_inline}}
+  - : 검색을 시작할 색인입니다. 인덱스가 배열의 길이보다 크거나 같은 경우 -1이 반환되므로 배열이 검색되지 않습니다. 제공된 색인 값이 음수이면 배열 끝에서부터의 오프셋 값으로 사용됩니다. 참고 : 제공된 색인이 음수이면 배열은 여전히 앞에서 뒤로 검색됩니다. 계산 된 인덱스가 0보다 작 으면 전체 배열이 검색됩니다. 기본값 : 0 (전체 배열 검색).
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>배열 내의 요소의 최초의 인덱스. 발견되지 않으면 -1.</p>
+배열 내의 요소의 최초의 인덱스. 발견되지 않으면 -1.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>indexOf()</code>는 엄격한 동등성 (<code>===</code> 또는 triple-equals 연산자에서 사용하는 것과 같은 메서드)을 사용하여 검색 요소를 <code>Array</code>의 요소와 비교합니다.</p>
+`indexOf()`는 엄격한 동등성 (`===` 또는 triple-equals 연산자에서 사용하는 것과 같은 메서드)을 사용하여 검색 요소를 `Array`의 요소와 비교합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="indexOf_사용하기"><code>indexOf()</code> 사용하기</h3>
+### `indexOf()` 사용하기
 
-<p>다음 예제에서는 indexOf ()를 사용하여 배열의 값을 찾습니다.</p>
+다음 예제에서는 indexOf ()를 사용하여 배열의 값을 찾습니다.
 
-<pre class="brush: js">var array = [2, 9, 9];
+```js
+var array = [2, 9, 9];
 array.indexOf(2);     // 0
 array.indexOf(7);     // -1
 array.indexOf(9, 2);  // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
-</pre>
+```
 
-<h3 id="요소의_모든_항목_찾기">요소의 모든 항목 찾기</h3>
+### 요소의 모든 항목 찾기
 
-<pre class="brush: js">var indices = [];
+```js
+var indices = [];
 var array = ['a', 'b', 'a', 'c', 'a', 'd'];
 var element = 'a';
 var idx = array.indexOf(element);
@@ -68,15 +67,16 @@ while (idx != -1) {
 }
 console.log(indices);
 // [0, 2, 4]
-</pre>
+```
 
-<h3 id="요소가_배열에_존재하는지_확인하고_배열을_업데이트">요소가 배열에 존재하는지 확인하고 배열을 업데이트</h3>
+### 요소가 배열에 존재하는지 확인하고 배열을 업데이트
 
-<pre class="brush: js">function updateVegetablesCollection (veggies, veggie) {
+```js
+function updateVegetablesCollection (veggies, veggie) {
     if (veggies.indexOf(veggie) === -1) {
         veggies.push(veggie);
         console.log('새로운 veggies 컬렉션 : ' + veggies);
-    } else if (veggies.indexOf(veggie) &gt; -1) {
+    } else if (veggies.indexOf(veggie) > -1) {
         console.log(veggie + ' 은 이미 veggies 컬렉션에 존재합니다.');
     }
 }
@@ -87,11 +87,12 @@ updateVegetablesCollection(veggies, 'spinach');
 // 새로운 veggies 컬렉션 : potato, tomato, chillies, green-pepper, spinach
 updateVegetablesCollection(veggies, 'spinach');
 // spinach 은 이미 veggies 컬렉션에 존재합니다.
-</pre>
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<pre class="brush: js">// ECMA-262, 제 5 판, 15.4.4.14의 생산 단계
+```js
+// ECMA-262, 제 5 판, 15.4.4.14의 생산 단계
 // 참조 : http://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
   Array.prototype.indexOf = function(searchElement, fromIndex) {
@@ -109,7 +110,7 @@ if (!Array.prototype.indexOf) {
     // 2. lenValue를 Get 함수를 호출 한 결과로 둡니다.
      // 인수가 "length"인 o의 내부 메소드.
      // 3. len을 ToUint32 (lenValue)로 지정합니다.
-    var len = o.length &gt;&gt;&gt; 0;
+    var len = o.length >>> 0;
 
     // 4. len이 0이면 -1을 반환합니다.
     if (len === 0) {
@@ -120,18 +121,18 @@ if (!Array.prototype.indexOf) {
     // ToInteger (fromIndex); 그렇지 않으면 n은 0이됩니다.
     var n = fromIndex | 0;
 
-    // 6. If n &gt;= len, return -1.
-    if (n &gt;= len) {
+    // 6. If n >= len, return -1.
+    if (n >= len) {
       return -1;
     }
 
-   // 7. n&gt; = 0 인 경우 k를 n이라고 합니다.
-   // 8. 그렇지 않으면 n &lt;0, k는 len - abs (n)이됩니다.
+   // 7. n> = 0 인 경우 k를 n이라고 합니다.
+   // 8. 그렇지 않으면 n <0, k는 len - abs (n)이됩니다.
    // k가 0보다 작은 경우 k를 0으로 만듭니다.
-    k = Math.max(n &gt;= 0 ? n : len - Math.abs(n), 0);
+    k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
 
-    // 9. k &lt;len 인 동안 반복한다.
-    while (k &lt; len) {
+    // 9. k <len 인 동안 반복한다.
+    while (k < len) {
        // a. Pk를 ToString (k)이라고합시다.
        // 이것은 in 연산자의 LHS 피연산자에 대해 암시 적입니다.
        // b. kPresent를 호출 한 결과라고합시다.
@@ -144,7 +145,7 @@ if (!Array.prototype.indexOf) {
        // 엄격한 평등 비교 알고리즘
        // searchElement 및 elementK.
        // iii. 동일하면 k를 반환합니다.
-      if (k in o &amp;&amp; o[k] === searchElement) {
+      if (k in o && o[k] === searchElement) {
         return k;
       }
       k++;
@@ -152,20 +153,18 @@ if (!Array.prototype.indexOf) {
     return -1;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-{{Compat("javascript.builtins.Array.indexOf")}}
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("String.prototype.indexOf()")}}
