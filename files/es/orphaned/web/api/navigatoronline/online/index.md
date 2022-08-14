@@ -15,7 +15,7 @@ En Chrome y Safari, si el navegador no puede conectarse a la red de area local (
 
 En Firefox e Internet Explorer, cambiando el navegador al modo desconectado envía un valor `false`. Hasta Firefox 41, todas las demás condiciones retornaban un valor `true`; desde Firefox 41, en OS X y Windows, el valor sigue la actual conectividad de red.
 
-Puedes ver los cambios en el estado de red escuchando los eventos `window.ononline y ``window.onoffline.`
+Puedes ver los cambios en el estado de red escuchando los eventos ` window.ononline y ``window.onoffline.`
 
 ## Sintaxis
 

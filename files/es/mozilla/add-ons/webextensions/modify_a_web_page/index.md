@@ -86,7 +86,7 @@ Primero actualiza "manifest.json" para que incluya el contenido a continuación:
 
 Aquí, hemos eliminado la llave `content_scripts` y hemos añadido dos nuevas llaves:
 
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): Para inyectar scripts a las páginas necesitamos los permisos para la página que estamos modificando. El permiso [`activeTab`](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)es una manera de obtener el permiso temporalmente para la lengüeta que esté actualmente abierta. También necesitamos el permiso `contextMenus` para poder añadir items al menu de contexto.
+- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): Para inyectar scripts a las páginas necesitamos los permisos para la página que estamos modificando. El permiso [`activeTab` ](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)es una manera de obtener el permiso temporalmente para la lengüeta que esté actualmente abierta. También necesitamos el permiso `contextMenus` para poder añadir items al menu de contexto.
 - [`background`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): Usamos esto para cargar un ["background script"](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) persistente llamado "background.js", en el cual montamos el menu de contexto e inyectamos el script de contenido.
 
 Ahora generaremos este archivo. Crea un archivo llamado "background.js" en el directorio "modify-page" e introduce el siguiente contenido:

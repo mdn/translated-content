@@ -107,7 +107,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 
 - [Controles de acceso cross-site para HTTP](/es/docs/HTTP_access_control "HTTP access control")
   - : En Firefox 3.5, es ahora posible en las peticiones HTTP, incluyendo aquellas hechas por [`XMLHttpRequest`](/es/docs/XMLHttpRequest "XMLHttpRequest"), trabajar entre dominios si el servidor lo permite.
-- [Eventos de progreso para](/es/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress "Using XMLHttpRequest#Monitoring progress")[`XMLHttpRequest`](/en-US/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress "Using XMLHttpRequest#Monitoring progress")
+- [Eventos de progreso para ](/es/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress "Using XMLHttpRequest#Monitoring progress")[`XMLHttpRequest`](/en-US/docs/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress "Using XMLHttpRequest#Monitoring progress")
   - : Ahora se ofrecen eventos de progreso para que las extensiones puedan monitorizar el progreso de las peticiones.
 - Soporte `XMLHttpRequest` síncrono mejorado
   - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) y [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) son ahora soportados durante un `XMLHttpRequest` síncrono.

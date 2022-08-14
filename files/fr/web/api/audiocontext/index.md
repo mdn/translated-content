@@ -30,8 +30,12 @@ Un contexte audio peut être la cible d'événements, par conséquent il implém
 - {{domxref("AudioContext.destination")}} {{readonlyInline}}
   - : Retourne un {{domxref ("AudioDestinationNode")}} représentant la destination finale de tous les fichiers audio dans un contexte. On peut le considérer comme un dispositif de rendu audio.
 
+<!---->
+
 - {{domxref("AudioContext.listener")}} {{readonlyInline}}
   - : Renvoie l'objet {{domxref("AudioListener")}}, utilisé pour la spatialisation 3D.
+
+<!---->
 
 - {{domxref("AudioContext.sampleRate")}} {{readonlyInline}}
   - : Renvoie un nombre flottant représentant la fréquence d'échantillonnage (échantillons par seconde) utilisée par tous les nœuds dans ce contexte.La fréquence d'échantillonnage d'un contexte audio ne peut pas être modifiée.
@@ -68,8 +72,12 @@ _Met également en œuvre des méthodes de l'interface {{domxref("EventTarget")}
 - {{domxref("AudioContext.createAnalyser()")}}
   - : Crée un objet {{domxref ("AnalyserNode")}} qui expose les données de temps et de fréquence, et peut être utilisé pour créer des visualisations de données.
 
+<!---->
+
 - {{domxref("AudioContext.createBiquadFilter()")}}
   - : Crée un objet {{domxref ("BiquadFilterNode")}}, qui représente un filtre de deuxième niveau, qui combine différents types de filtres de base : fréquences hautes, fréquences basses, passe-bande, etc.
+
+<!---->
 
 - {{domxref("AudioContext.createChannelMerger()")}}
   - : Crée un objet {{domxref ("ChannelMergerNode")}} qui permet de rassembler les canaux de différents flux audio en un seul flux.

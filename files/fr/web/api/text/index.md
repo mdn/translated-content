@@ -34,8 +34,12 @@ _Hérite des propriétés de son parent {{domxref("CharacterData")}}._
 
 _Hérite des méthodes de son parent {{domxref("CharacterData")}}._
 
+<!---->
+
 - {{domxref("Text.replaceWholeText")}} {{deprecated_inline}}
   - : Remplace le texte du noeud en cours et tous les noeuds logiquement adjacents avec le texte spécifié.
+
+<!---->
 
 - {{domxref("Text.splitText")}}
   - : Fractionne le noeud en deux noeuds selon un décalage spécifié.

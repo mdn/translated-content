@@ -29,6 +29,8 @@ Vous devriez également être familiarisé avec les bases du JavaScript avant de
 - [Les bases de JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects/Basics)
   - : Dans le premier article concernant les objets JavaScript, nous découvrirons la syntaxe fondamentale d’un objet JavaScript, et nous revisiterons certaines fonctionnalités du JavaScript que nous avions vues précédemment dans le cours, en insistant sur le fait que bon nombre d'éléments précedemment abordés sont en fait des objets.
 
+<!---->
+
 - [JavaScript orienté objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/JS_orient%C3%A9-objet)
   - : Après avoir vu les notions de base, nous nous pencherons sur le JavaScript orienté objet (JSOO) — cet article présente une vue basique de la théorie de la programmation orientée objet (POO), et explore ensuite comment le JavaScript émule les classes d’objet via les fonctions des constructeurs et comment créer des instances d’objet.
 - [Objets prototypes](/fr/docs/Learn/JavaScript/Objects/Prototypes_Objet)

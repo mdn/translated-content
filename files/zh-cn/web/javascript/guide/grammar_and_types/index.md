@@ -710,8 +710,8 @@ and so is foo.`
 
 - [流程控制与错误处理](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [循环与迭代](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- [函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
-- [](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)[表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
+- [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
 下一章，流程控制与错误处理
 

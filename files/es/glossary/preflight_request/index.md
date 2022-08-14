@@ -10,7 +10,7 @@ Es una petición {{HTTPMethod("OPTIONS")}}, que emplea tres cabeceras HTTP: {{HT
 
 Las peticiones preflight se lanzan automáticamente desde el navegador cuando son necesarias. Normalmente los desarrolladores front-end no necesitan realizar estas peticiones manualmente.
 
-Por ejemplo, un cliente puede preguntar si el servidor permite una petición {{HTTPMethod("DELETE")}} antes de enviar la petición `DELETE`usando una petición preflight:
+Por ejemplo, un cliente puede preguntar si el servidor permite una petición {{HTTPMethod("DELETE")}} antes de enviar la petición `DELETE `usando una petición preflight:
 
     OPTIONS /resource/foo
     Access-Control-Request-Method: DELETE

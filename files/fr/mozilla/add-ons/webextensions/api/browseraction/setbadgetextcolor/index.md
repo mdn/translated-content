@@ -43,6 +43,8 @@ browser.browserAction.setBadgeTextColor(
     - `windowId`{{optional_inline}}
       - : `integer`. Définit la couleur du texte du badge uniquement pour l'onglet donné.
 
+<!---->
+
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la couleur n'est pas définie.
 - Si `windowId` et `tabId` sont tous deux omis, la couleur globale du texte du badge est définie à la place.
 

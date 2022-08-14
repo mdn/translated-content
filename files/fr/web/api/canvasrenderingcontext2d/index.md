@@ -269,6 +269,8 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
   - : Intended for HD backing stores, but removed from canvas specifications.
 
+<!---->
+
 ### Gecko only
 
 - {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}

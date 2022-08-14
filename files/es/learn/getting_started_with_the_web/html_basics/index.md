@@ -32,10 +32,10 @@ Explora este párrafo en mayor profundidad.
 
 Las partes principales del elemento son:
 
-1. **La etiqueta de apertura**: consiste en el nombre del elemento (en este caso, p), encerrado por **paréntesis angulares** (< >) de apertura y cierre. Establece dónde comienza o empieza a tener efecto el elemento —en este caso, dónde es el comienzo del párrafo—.
-2. **La etiqueta de cierre**: es igual que la etiqueta de apertura, excepto que incluye una barra de cierre (/) antes del nombre de la etiqueta. Establece dónde termina el elemento —en este caso dónde termina el párrafo—.
-3. **El contenido**: este es el contenido del elemento, que en este caso es sólo texto.
-4. **El elemento**: la etiqueta de apertura, más la etiqueta de cierre, más el contenido equivale al elemento.
+1.  **La etiqueta de apertura**: consiste en el nombre del elemento (en este caso, p), encerrado por **paréntesis angulares** (< >) de apertura y cierre. Establece dónde comienza o empieza a tener efecto el elemento —en este caso, dónde es el comienzo del párrafo—.
+2.  **La etiqueta de cierre**: es igual que la etiqueta de apertura, excepto que incluye una barra de cierre (/) antes del nombre de la etiqueta. Establece dónde termina el elemento —en este caso dónde termina el párrafo—.
+3.  **El contenido**: este es el contenido del elemento, que en este caso es sólo texto.
+4.  **El elemento**: la etiqueta de apertura, más la etiqueta de cierre, más el contenido equivale al elemento.
 
 Los elementos pueden también tener atributos, que se ven así:
 
@@ -45,9 +45,9 @@ Los atributos contienen información adicional acerca del elemento, la cual no q
 
 Un atributo debe tener siempre:
 
-1. Un espacio entre este y el nombre del elemento (o del atributo previo, si el elemento ya posee uno o más atributos).
-2. El nombre del atributo, seguido por un signo de igual (**=**).
-3. Comillas de apertura y de cierre, encerrando el valor del atributo.
+1.  Un espacio entre este y el nombre del elemento (o del atributo previo, si el elemento ya posee uno o más atributos).
+2.  El nombre del atributo, seguido por un signo de igual (**=**).
+3.  Comillas de apertura y de cierre, encerrando el valor del atributo.
 
 Los atributos siempre se incluyen en la etiqueta de apertura de un elemento, nunca en la de cierre.
 
@@ -107,8 +107,8 @@ Como ya se dijo antes, incrusta una imagen en la página, en la posición en que
 
 También se incluye un atributo `alt` (alternative) el cual contiene un texto que debería describir la imagen, y que podría ser accedido por usuarios que no pueden ver la imagen, quizás porque:
 
-1. Son ciegos o tienen deficiencias visuales. Los usuarios con impedimentos visuales usualmente utilizan herramientas llamadas _Lectores de pantalla (Screen Readers),_ los cuales les leen el texto contenido en el atributo alt.
-2. Se produjo algún error en el código que impide que la imagen sea cargada. Como ejemplo, modifica deliberadamente la ubicación dentro del atributo `src` para que este sea incorrecto. Si guardas y recargas la página, deberías ver algo así en lugar de la imagen:
+1.  Son ciegos o tienen deficiencias visuales. Los usuarios con impedimentos visuales usualmente utilizan herramientas llamadas _Lectores de pantalla (Screen Readers),_ los cuales les leen el texto contenido en el atributo alt.
+2.  Se produjo algún error en el código que impide que la imagen sea cargada. Como ejemplo, modifica deliberadamente la ubicación dentro del atributo `src` para que este sea incorrecto. Si guardas y recargas la página, deberías ver algo así en lugar de la imagen:
 
 ![atributo html](https://mdn.mozillademos.org/files/11917/image.png)
 
@@ -147,8 +147,8 @@ Agrega uno o algunos párrafos a tu texto de ejemplo (deberías tenerlo de cuand
 
 Mucho del contenido web está dado por listas, así que HTML tiene elementos especiales para ellas. El marcado de listas se realiza siempre en al menos dos elementos. Los dos tipos de listas más comunes son las listas ordenadas y las desordenadas:
 
-1. **Las listas desordenadas** son aquellas en las que el orden de los items no es relevante, como en una lista de compras. Estas son encerradas en un elemento {{htmlelement("ul")}} (_unordered list_).
-2. **Las listas ordenadas** son aquellas en las que el orden sí es relevante, como en una receta. Estas son encerradas en un elemento {{htmlelement("ol")}} (_ordered list_).
+1.  **Las listas desordenadas** son aquellas en las que el orden de los items no es relevante, como en una lista de compras. Estas son encerradas en un elemento {{htmlelement("ul")}} (_unordered list_).
+2.  **Las listas ordenadas** son aquellas en las que el orden sí es relevante, como en una receta. Estas son encerradas en un elemento {{htmlelement("ol")}} (_ordered list_).
 
 Cada elemento de la lista se coloca dentro de un elemento {{htmlelement("li")}} _(list item_).
 
@@ -174,16 +174,16 @@ Intenta agregar una lista ordenada o desordenada en tu página de ejemplo**.**
 
 Los vínculos o enlaces son muy importantes —son los que hacen de la web, la web—. Para implementar un vínculo, necesitas usar un vínculo simple — {{htmlelement("a")}} — la _a_ es la abreviatura de la palabra inglesa «anchor» («_ancla_»). Para convertir algún texto dentro de un párrafo en un vínculo, sigue estos pasos:
 
-1. Elige algún texto. Nosotros elegimos «Manifesto Mozilla».
-2. Encierra el texto en un elemento \<a>, así:
+1.  Elige algún texto. Nosotros elegimos «Manifesto Mozilla».
+2.  Encierra el texto en un elemento \<a>, así:
 
         <a>Manifesto Mozilla</a>
 
-3. Proporciónale al elemento \<a> un atributo href, así:
+3.  Proporciónale al elemento \<a> un atributo href, así:
 
         <a href="">Manifesto Mozilla</a>
 
-4. Completa el valor de este atributo con la dirección web con la que quieras conectar al vínculo:
+4.  Completa el valor de este atributo con la dirección web con la que quieras conectar al vínculo:
 
         <a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifesto Mozilla</a>
 

@@ -58,11 +58,15 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("margin")}} sur l'élément {{HTMLElement("td")}}.
 
+<!---->
+
 - {{htmlattrdef("frame")}} {{Deprecated_inline}}
 
   - : Cet attribut à valeurs multiples définit les côtés du tableau sur lesquels dessiner une bordure. Il peut prendre les valeurs suivantes : `above, hsides, lhs, border, void, below, vsides, rhs, box`.
 
     > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, les propriétés {{cssxref("border-style")}} et {{cssxref("border-width")}} doivent être utilisées.
+
+<!---->
 
 - {{htmlattrdef("rules")}} {{Deprecated_inline}}
 
@@ -79,6 +83,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     > - L'apparence de ces traits dépend du navigateur utilisé et ne peut être modifiée.
     > - Cet attribut ayant été déprécié, il ne doit pas être utilisé. La propriété CSS {{cssxref("border")}} doit être appliquée sur les éléments {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}} ou {{HTMLElement("colgroup")}} adéquats.
 
+<!---->
+
 - {{htmlattrdef("summary")}} {{Deprecated_inline}}
 
   - : Cet attribut définit un texte alternatif à utiliser afin de décrire le tableau. Un tel texte peut être utilisé par un agent utilisateur qui ne pourrait pas afficher le tableau. Il est généralement utilisé pour les personnes souffrant d'une déficience visuelle, comme par exemple les aveugles qui navigueront sur des pages web en utilisant un écran Braille. Si l'information contenue dans cet attribut serait également utile aux autres utilisateurs, il faudra plutôt utiliser l'élément {{HTMLElement("caption")}}. L'attribut **`summary`** n'est pas obligatoire et peut être omis lorsqu'un élément {{HTMLElement("caption")}} remplit ce rôle.
@@ -91,6 +97,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     > - En insérant l'élément {{HTMLElement("table")}} dans un élément {{HTMLElement("figure")}} et en ajoutant la description textuelle à côté du tableau.
     > - En insérant l'élément {{HTMLElement("table")}} dans un élément {{HTMLElement("figure")}} et en ajoutant la description textuelle dans un élément {{HTMLElement("figcaption")}}.
     > - En modifiant le tableau afin qu'aucune description supplémentaire ne soit nécessaire : par exemple en utilisant des éléments {{HTMLElement("th")}} et {{HTMLElement("thead")}}.
+
+<!---->
 
 - {{htmlattrdef("width")}} {{Deprecated_inline}}
 

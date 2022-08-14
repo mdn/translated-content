@@ -38,6 +38,8 @@ var gettingText = browser.browserAction.getBadgeText (
     - `windowId`{{optional_inline}}
       - : `integer`. Spécifie la fenêtre à partir de laquelle obtenir le texte du badge.
 
+<!---->
+
 - Si windowId et tabId sont tous les deux fournis, la fonction échoue.
 - Si windowId et tabId sont tous les deux omis, le texte global du badge est renvoyé.
 

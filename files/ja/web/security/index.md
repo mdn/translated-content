@@ -121,6 +121,8 @@ translation_of: Web/Security
 - {{Glossary("Symmetric-key cryptography")}}
 - {{Glossary("TOFU")}}
 
+<!---->
+
 - {{Glossary("TLS")}}
 
 ## 関連情報

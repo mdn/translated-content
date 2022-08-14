@@ -21,8 +21,12 @@ translate( chaîne , abc , XYZ )
 - `chaîne`
   - : La chaîne à évaluer.
 
+<!---->
+
 - `abc`
   - : La chaîne de caractères à remplacer.
+
+<!---->
 
 - `XYZ`
   - : La chaîne de caractères utilisée pour le remplacement. Le premier caractère de `XYZ` remplacera chaque occurrence du premier caractère de `abc` qui apparaît dans `chaîne`.

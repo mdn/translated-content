@@ -42,19 +42,29 @@ _このインターフェイスは親である {{domxref("EventTarget")}} から
 - {{domxref("MediaStream.addTrack()")}}
   - : 引数で指定された {{domxref("MediaStreamTrack")}} のコピーを格納します。トラックが既に `MediaStream` オブジェクトに追加されていた場合は、何も起こりません。
 
+<!---->
+
 - {{domxref("MediaStream.clone()")}}
   - : `MediaStream` オブジェクトの複製を返します。ただし、複製は固有の {{domxref("MediaStream.id", "id")}} の値を持ちます。
 
+<!---->
+
 - {{domxref("MediaStream.getAudioTracks()")}}
   - : {{domxref("MediaStreamTrack")}} オブジェクトのリストで、 `MediaStream` オブジェクトに格納されているものの中で `kind` 属性が `audio` に設定されているものを返します。順序は未定義であり、ブラウザーによって異なるばかりでなく、呼び出し毎に異なる可能性もあります。
+
+<!---->
 
 - {{domxref("MediaStream.getTrackById()")}}
   - : 引数 `trackid` で与えられた ID を持つトラックを返します。引数が与えられなかった場合や、その ID を持つトラックが存在しなかった場合は、 `null` を返します。複数のトラックが同じ ID を持っている場合は、最初の一つを返します。
 - {{domxref("MediaStream.getTracks()")}}
   - : {{domxref("MediaStreamTrack")}} オブジェクトのリストで、 MediaStream オブジェクトに格納されているものをすべて、 `kind` 属性の値に関わらず返します。順序は未定義であり、ブラウザーによって異なるばかりでなく、呼び出し毎に異なる可能性もあります。
 
+<!---->
+
 - {{domxref("MediaStream.getVideoTracks()")}}
   - : {{domxref("MediaStreamTrack")}} オブジェクトのリストで、 MediaStream オブジェクトに格納されているものの中で kind 属性が video に設定されているものを返します。順序は未定義であり、ブラウザーによって異なるばかりでなく、呼び出し毎に異なる可能性もあります。
+
+<!---->
 
 - {{domxref("MediaStream.removeTrack()")}}
   - : 引数として与えられた {{domxref("MediaStreamTrack")}} を除去します。トラックが `MediaStream` オブジェクトに含まれていなかった場合は、何もしません。
@@ -66,8 +76,12 @@ _このインターフェイスは親である {{domxref("EventTarget")}} から
 - {{domxref("MediaStream/removetrack_event", "removetrack")}}
   - : {{domxref("MediaStreamTrack")}} オブジェクトが除去されたときに発行されます。
 
+<!---->
+
 - {{domxref("MediaStream/active_event", "active")}}
   - : この MediaStream がアクティブになったときに発行されます。
+
+<!---->
 
 - {{domxref("MediaStream/inactive_event", "inactive")}}
   - : この MediaStream がアクティブでなくなったときに発行されます。

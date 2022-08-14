@@ -90,10 +90,10 @@ killTween.start();
 
 Veamos esto para que puedas saber lo que está pasando:
 
-1. Al definir una nueva interpolación, debes especificar qué propiedad se interpolará; en nuestro caso, en lugar de ocultar los ladrillos instantáneamente cuando la bola los golpea, haremos que su ancho y altura se ajusten a cero, por lo que desaparecerán. Al final usamos el método, `add.tween()`, especificando `brick.scale` como el argumento, ya que esto es lo que queremos interpolar.
-2. El método `to()` define el estado del objeto al final de la interpolación. Toma un objeto que contenga los valores finales deseados del parámetro elegido (la escala toma un valor de escala, 1 es 100% del tamaño, 0 es 0% del tamaño, etc.), el tiempo de interpolación en milisegundos y el tipo de interpolación.
-3. También añadiremos el controlador de eventos opcional `onComplete`, que define una función que se ejecutará cuando finalice la interpolación.
-4. Lo último que debe hacer es iniciar la interpolación de inmediato utilizando `start()`.
+1.  Al definir una nueva interpolación, debes especificar qué propiedad se interpolará; en nuestro caso, en lugar de ocultar los ladrillos instantáneamente cuando la bola los golpea, haremos que su ancho y altura se ajusten a cero, por lo que desaparecerán. Al final usamos el método, `add.tween()`, especificando `brick.scale` como el argumento, ya que esto es lo que queremos interpolar.
+2.  El método `to()` define el estado del objeto al final de la interpolación. Toma un objeto que contenga los valores finales deseados del parámetro elegido (la escala toma un valor de escala, 1 es 100% del tamaño, 0 es 0% del tamaño, etc.), el tiempo de interpolación en milisegundos y el tipo de interpolación.
+3.  También añadiremos el controlador de eventos opcional `onComplete`, que define una función que se ejecutará cuando finalice la interpolación.
+4.  Lo último que debe hacer es iniciar la interpolación de inmediato utilizando `start()`.
 
 Esa es la versión expandida de la definición de interpolación, pero también podemos usar la sintaxis abreviada:
 

@@ -93,6 +93,8 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
 - Slug: _AudioContext_
 - URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext](/ja/docs/Web/API/AudioContext)
 
+<!---->
+
 - Title: _AudioNode_
 - Slug: _AudioNode_
 - URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioNode](/ja/docs/Web/API/AudioNode)
@@ -127,6 +129,8 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
 - Slug: _state_
 - URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext/state](/ja/docs/Web/API/BaseAudioContext/state)
 
+<!---->
+
 #### メソッドページ
 
 各インターフェイスには 0 個以上のメソッドがあり、インターフェイスのページのサブページで文書化されています。各ページでは、メソッドの目的を説明し、その構文がどのようなものか、使用例、ブラウザーの互換性情報などを示しています。スラッグはメソッドの名前であり、タイトルはインターフェイス名、ドット、メソッド名、括弧の順です。
@@ -136,6 +140,8 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
 - Title: _AudioContext.close()_
 - Slug: _close_
 - URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext/close](/ja/docs/Web/API/AudioContext/close)
+
+<!---->
 
 - Title: _AudioContext.createGain()_
 - Slug: _createGain_

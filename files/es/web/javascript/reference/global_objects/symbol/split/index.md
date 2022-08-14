@@ -46,3 +46,4 @@ console.log('Another one bites the dust'.split(new ReverseSplit()));
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+

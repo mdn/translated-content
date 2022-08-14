@@ -1,0 +1,63 @@
+---
+title: Array.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+tags:
+  - Array
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
+  - Wszystkie_kategorie
+translation_of: Web/JavaScript/Reference/Global_Objects/Array/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<h2 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h2>
+
+<p>Zwraca łańcuch znaków reprezentujący kod źródłowy tablicy.</p>
+
+<h2 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h2>
+
+<pre class="syntaxbox"><code><var>arr</var>.toSource()</code></pre>
+
+<h3 id="Parametry" name="Parametry">Parametry</h3>
+
+<p>Brak.</p>
+
+<h2 id="Opis" name="Opis">Opis</h2>
+
+<p>Metoda <code>toSource</code> zwraca następujące wartości:</p>
+
+<p><span class="comment">This shouldn't be here, but until reorganization where pages are moved to their proper places, the title of this article is ambiguous, so it can stay. After reorganization, this should be removed.</span></p>
+
+<ul>
+ <li>Dla wbudowanego obiektu <code>Array</code>, <code>toSource</code> zwraca następujący łańcuch znaków sygnalizując, że kod źródłowy jest niedostępny:
+
+  <pre class="brush: js">function Array() {
+    [natywny kod]
+}
+</pre>
+ </li>
+ <li>Dla instancji {{jsxref("Array")}}, <code>toSource</code> zwraca łańcuch znaków reprezentujący kod źródłowy.</li>
+</ul>
+
+<p>Metoda ta jest zazwyczaj wywoływana wewnętrznie przez JavaScript, a nie bezpośrednio w kodzie. Możliwe jest wywołanie <code>toSource</code> podczas debugowania, aby zbadać zawartość tablicy.</p>
+
+<h2 id="Przyk.C5.82ady" name="Przyk.C5.82ady">Przykłady</h2>
+
+<h3 id="Przyk.C5.82ad:_Sprawdzanie_kodu_.C5.BAr.C3.B3d.C5.82owego_tablicy" name="Przyk.C5.82ad:_Sprawdzanie_kodu_.C5.BAr.C3.B3d.C5.82owego_tablicy">Przykład: Sprawdzanie kodu źródłowego tablicy</h3>
+
+<p>Do sprawdzania kodu źródłowego tablicy:</p>
+
+<pre class="brush: js">var alpha = new Array("a", "b", "c");
+
+alpha.toSource() //zwraca ["a", "b", "c"]
+</pre>
+
+<h2 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+ <li>{{jsxref("Array.prototype.toString()")}}</li>
+</ul>

@@ -1,0 +1,47 @@
+---
+title: window.setTimeout
+slug: Web/API/setTimeout
+tags:
+  - DOM
+  - DOM_0
+  - Dokumentacja_Gecko_DOM
+  - Gecko
+  - Wszystkie_kategorie
+translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
+original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
+---
+<p>{{ ApiRef() }}</p>
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+<p>Uruchamia fragment kodu bądź funkcję po określonym odstępie czasu.</p>
+<h3 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h3>
+<pre class="eval"><em>id</em> = window.setTimeout(<em>funkcja</em>, <em>opóźnienie</em>[, <em>param1</em>, <em>param2</em>, ...]);
+<em>id</em> = window.setTimeout(<em>kod</em>, <em>opóźnienie</em>);
+</pre>
+<p>gdzie</p>
+<ul>
+ <li><code>funkcja</code> to <a href="/pl/Dokumentacja_języka_JavaScript_1.5/Obiekty/Function" title="pl/Dokumentacja_języka_JavaScript_1.5/Obiekty/Function">funkcja</a>, jaką chcesz uruchomić po opóźnieniu
+  <ul>
+   <li>w alternatywnej składni, <code>kod</code> to ciąg znaków z kodem, który będzie wykonany po upływie podanego czasu</li>
+  </ul>
+ </li>
+ <li><code>opóźnienie</code> to liczba milisekund (tysięcznych części sekundy), po których upływie wykonana zostanie funkcja</li>
+ <li><code>id</code> to identyfikator, którego można użyć z <a href="/pl/DOM/window.clearTimeout" title="pl/DOM/window.clearTimeout">window.clearTimeout</a></li>
+</ul>
+<h3 id="Przyk.C5.82ady" name="Przyk.C5.82ady">Przykłady</h3>
+<pre class="eval">window.setTimeout('window.parent.generateOutput()', 1000);
+</pre>
+<pre class="eval">function generateOutput(aConcise) {
+  if(aConcise)
+    parent.generateConciseOutput();
+  else
+    parent.generateOutput();
+}
+window.setTimeout(generateOutput, 1000, true);
+</pre>
+<p>Zobacz też <a href="/pl/DOM/window.clearTimeout#Example" title="pl/DOM/window.clearTimeout#Example">przykład użycia clearTimeout()</a>.</p>
+<h3 id="Uwagi" name="Uwagi">Uwagi</h3>
+<p>Możesz anulować opóźnienie wywołania funkcji za pomocą <a href="/pl/DOM/window.clearTimeout" title="pl/DOM/window.clearTimeout">window.clearTimeout()</a>.</p>
+<p>Jeśli chcesz, by funkcja była uruchamiana cyklicznie (np. co każde N milisekund), rozważ wykorzystanie <a href="/pl/DOM/window.setInterval" title="pl/DOM/window.setInterval">window.setInterval()</a>.</p>
+<h3 id="Specyfikacja" name="Specyfikacja">Specyfikacja</h3>
+<p>{{ DOM0() }}</p>
+<p>{{ languages( { "en": "en/DOM/window.setTimeout", "fr": "fr/DOM/window.setTimeout", "ja": "ja/DOM/window.setTimeout", "pl": "pl/DOM/window.setTimeout" } ) }}</p>

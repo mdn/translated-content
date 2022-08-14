@@ -74,6 +74,8 @@ var settingIcon = browser.browserAction.setIcon(
     - `windowId`{{optional_inline}}
       - : `integer`. Définit l'icône de la fenêtre donnée.
 
+<!---->
+
 - si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et l'icône n'est pas définie.
 - si `windowId` et `tabId` sont tous les deux omis, l'icône globale est définie.
 

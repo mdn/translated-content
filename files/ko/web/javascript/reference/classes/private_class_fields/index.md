@@ -79,7 +79,7 @@ Private static 필드는 해당 필드를 선언한 class 에서만 접근할 �
 
 ### Private instance fields
 
-private 인스턴스 필드는 **# 이름 ('해쉬 이름' 으로 발음)**, 즉 `#` prefix 를 가진 식별자로 선언된다. `#` 은 그 이름 자체의 일부이며 선언과 접근 시에 모두 사용된다.
+private 인스턴스 필드는 **# 이름 ('해쉬 이름' 으로 발음)**,\*\* \*\*즉 `#` prefix 를 가진 식별자로 선언된다. `#` 은 그 이름 자체의 일부이며 선언과 접근 시에 모두 사용된다.
 
 캡슐화(encapsulation) 는 언어로부터 강제된다(enforced by the language). 즉, scope 밖에서 `#` 이름에 접근하는 것은 syntax error 이다.
 

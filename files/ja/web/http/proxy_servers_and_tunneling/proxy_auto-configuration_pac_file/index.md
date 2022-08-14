@@ -42,6 +42,8 @@ function FindProxyForURL(url, host)
 - 文字列が null である場合、プロキシーは使用されない
 - 文字列にはセミコロン区切りで、以下の構成ブロックを任意の数だけ含むことができる
 
+<!---->
+
 - `DIRECT`
   - : 接続はプロキシーを使用せずに、直接行われる
 - `PROXY host:port`

@@ -1,0 +1,59 @@
+---
+title: NavigatorPlugins.plugins
+slug: orphaned/Web/API/NavigatorPlugins/plugins
+tags:
+  - DOM
+  - DOM_0
+  - Dokumentacja_Gecko_DOM
+  - Gecko
+  - Wszystkie_kategorie
+translation_of: Web/API/NavigatorPlugins/plugins
+original_slug: Web/API/NavigatorPlugins/plugins
+---
+<p>{{ ApiRef() }}</p>
+
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+
+<p>Zwraca obiekt <code><a class="external" href="https://developer.mozilla.org/pl/docs/Web/API/PluginArray">PluginArray</a></code> będący listą wszystkich wtyczek zainstalowanych w aplikacji.</p>
+
+<h3 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h3>
+
+<pre class="eval"><em>plugins</em> = navigator.plugins;
+</pre>
+
+<p><code>plugins</code> jest tabelą <code>PluginArray</code> zawierającą obiekty <code><a class="external" href="https://developer.mozilla.org/pl/docs/Web/API/Plugin">Plugin</a></code> reprezentujące zainstalowane wtyczki.</p>
+
+<p>Zwrócona wartość nie jest jest tablicą JavaScript, ale posiada własność <code>length</code> i obsługuje dostęp do poszczególnych elementów za pomocą notacji nawiasowej (<code>plugins{{ mediawiki.external(2) }}</code>) jak również poprzez metody <code>item(<em>index</em> )</code> i <code>namedItem(<em>"name"</em> )</code>.</p>
+
+<h3 id="Przyk.C5.82ad" name="Przyk.C5.82ad">Przykład</h3>
+
+<p>Poniższy przykład wyświetla wewnątrz zaawansowanego dokumentu informacje o zainstalowanych wtyczkach. Zauważ własności dostępne w obiekcie Plugin: name, filename i description.</p>
+
+<pre>&lt;script type="text/javascript"&gt;
+   var L = navigator.plugins.length;
+   document.write(L.toString().bold() + " Plugin(s)".bold());
+   document.write("&lt;br&gt;");
+   document.write("Nazwa wtyczki | Nazwa pliku | Opis".bold());
+   document.write("&lt;br&gt;");
+   for(var i=0; i&lt;L; i++) {
+     document.write(navigator.plugins[i].name);
+     document.write(" | ");
+     document.write(navigator.plugins[i].filename);
+     document.write(" | ");
+     document.write(navigator.plugins[i].description);
+     document.write("&lt;br&gt;");
+   }
+&lt;/script&gt;
+</pre>
+
+<h3 id="Uwagi" name="Uwagi">Uwagi</h3>
+
+<p>Obiekt <code><a class="external" href="https://developer.mozilla.org/pl/docs/Web/API/Plugin">Plugin</a></code> wyświetla skromny interfejs w celu uzyskania informacji o różnych wtyczkach zainstalowanych w przeglądarce. Lista wtyczek jest również dostępna poprzez wprowadzenie <kbd>about:plugins</kbd> w pasku adresu.</p>
+
+<h3 id="Specyfikacja" name="Specyfikacja">Specyfikacja</h3>
+
+<p>{{ DOM0() }}</p>
+
+<div class="noinclude"> </div>
+
+<p>{{ languages( { "en": "en/DOM/window.navigator.plugins", "ja": "ja/DOM/window.navigator.plugins" } ) }}</p>

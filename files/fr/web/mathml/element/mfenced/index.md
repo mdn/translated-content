@@ -28,6 +28,8 @@ translation_of: Web/MathML/Element/mfenced
 - mathcolor {{Deprecated_Inline()}}
   - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/CSS/valeur_de_couleur#Mots-cl.C3.A9s).
 
+<!---->
+
 - open
   - : Une chaîne de caractère pour le délimiteur ouvrant. La valeur par défaut est « `(` » et tous les blancs sont tronqués.
 - separators

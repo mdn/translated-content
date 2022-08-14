@@ -51,13 +51,13 @@ No solo la etiqueta `<button>` de HTML ya tiene estilos adecuados por defecto (q
 
 No cuesta más tiempo escribir HTML semántico que (mal) marcado no semántico si lo haces consistentemente desde el comienzo de tu proyecto. Y aun mejor, el marcado semántico tiene otros beneficios más allá de la accesibilidad:
 
-1. **Fácil desarrollo** — como mencionamos, obtienes algunas funcionalidades gratis, y podría decirse que es más fácil de entender.
-2. **Mejor en móviles** — el HTML semántico es probablemente más liviano en tamaño de archivo que el código espagueti no semántico y más fácil de hacer responsivo.
-3. **Bueno para SEO** — Los motores de búsqueda dan más importancia a palabras claves dentro de cabeceras, links, etc., que palabras claves en elementos no semánticos como los `<div>`, etc., tus documentos serán más fáciles de encontrar por tus clientes.
+1.  **Fácil desarrollo** — como mencionamos, obtienes algunas funcionalidades gratis, y podría decirse que es más fácil de entender.
+2.  **Mejor en móviles** — el HTML semántico es probablemente más liviano en tamaño de archivo que el código espagueti no semántico y más fácil de hacer responsivo.
+3.  **Bueno para SEO** — Los motores de búsqueda dan más importancia a palabras claves dentro de cabeceras, links, etc., que palabras claves en elementos no semánticos como los `<div>`, etc., tus documentos serán más fáciles de encontrar por tus clientes.
 
 Continuemos y veamos el HTML accesible en más detalle.
 
-> **Nota:** Es buena idea tener configurado un lector de pantalla en tu computador, para que puedas hacer algunas pruebas de los siguientes ejemplos. Mira nuestra [Guía de lectores de pantalla](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)para más detalles.
+> **Nota:** Es buena idea tener configurado un lector de pantalla en tu computador, para que puedas hacer algunas pruebas de los siguientes ejemplos. Mira nuestra [Guía de lectores de pantalla ](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)para más detalles.
 
 ## Buena semántica
 
@@ -97,10 +97,10 @@ Una de las mejores ayudas de accesibilidad que un usuario lector de pantalla pue
 
 Hemos preparado una versión más larga para que pruebes con un lector de pantalla (ver [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si tratas de navegar por ella, notaras que es muy fácil:
 
-1. El lector de pantalla lee cada cabecera a medida que progresas a través del contenido, notificándote qué es una cabecera, qué es un párrafo, etc.
-2. Se detiene después de cada elemento, dejándote ir a un ritmo que sea cómodo para ti.
-3. Puedes saltar al siguiente/anterior encabezado en muchos lectores de pantalla.
-4. También puedes tener una lista de todos los encabezados en muchos lectores de pantalla, permitiéndote usarlos como una tabla de contenidos para encontrar contenido específico.
+1.  El lector de pantalla lee cada cabecera a medida que progresas a través del contenido, notificándote qué es una cabecera, qué es un párrafo, etc.
+2.  Se detiene después de cada elemento, dejándote ir a un ritmo que sea cómodo para ti.
+3.  Puedes saltar al siguiente/anterior encabezado en muchos lectores de pantalla.
+4.  También puedes tener una lista de todos los encabezados en muchos lectores de pantalla, permitiéndote usarlos como una tabla de contenidos para encontrar contenido específico.
 
 Las personas a veces escriben encabezados, párrafos, etc. usando HTML presentacional y saltos de línea, algo como lo siguiente:
 
@@ -533,7 +533,7 @@ El color no debe usarse como el único método para distinguir los enlaces del c
 
 ### Eventos onclick
 
-A menudo se abusa de las etiquetas de anclaje con el evento `onclick` para crear pseudo-botones configurando href a `"#"` o`"javascript:void(0)"` para evitar que la página se actualice.
+A menudo se abusa de las etiquetas de anclaje con el evento `onclick` para crear pseudo-botones configurando href a `"#"` o` "javascript:void(0)"` para evitar que la página se actualice.
 
 Estos valores provocan un comportamiento inesperado al copiar o arrastrar enlaces, abrir enlaces en una nueva pestaña o ventana, marcar como favoritos y cuando JavaScript todavía se está descargando aparecen errores o está deshabilitado. Esto también transmite una semántica incorrecta a las tecnologías de asistencia (por ejemplo, lectores de pantalla). En estos casos, se recomienda utilizar un {{HTMLElement("button")}} en su lugar. En general, solo debe usar un ancla para la navegación utilizando una URL adecuada.
 

@@ -1,0 +1,88 @@
+---
+title: window.setInterval
+slug: Web/API/setInterval
+tags:
+  - DOM
+  - DOM_0
+  - Dokumentacja_Gecko_DOM
+  - Gecko
+  - Wszystkie_kategorie
+translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
+original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
+---
+<p>{{ ApiRef() }}</p>
+
+<h3 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h3>
+
+<p>Ustawia opóźnienie do cyklicznego wywoływania określonej funkcji.</p>
+
+<h3 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h3>
+
+<pre class="eval"><em>var idInterwalu</em> = window.setInterval(<em>funkcja</em>, <em>opóźnienie</em>[, <em>parametr1</em>, <em>parametr2</em>, ...]);
+<em>var idInterwalu</em> = window.setInterval(<em>kod</em>, <em>opóźnienie</em>);</pre>
+
+<p> Parametry</p>
+
+<ul>
+ <li><code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;">idInterwalu</code> to identyfikator ustawianego interwału który można przekazać do funkcji <code><a href="/pl/DOM/window.clearInterval" title="pl/DOM/window.clearInterval">window.clearInterval()</a></code>.</li>
+ <li><code>funkcja</code> to funkcja, dla której ustawiane jest opóźnienie</li>
+ <li><code>kod </code>to ciąg znaków zawierający kod javascript do cyklicznego wykonania. Jest to składnia alternatywna, której wykorzystanie <strong>nie jest zalecane</strong> z tych samych powodów, co stosowanie <code><a href="/en/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!" title="en/JavaScript/Reference/Global Objects/eval#Don't use eval!">eval()</a></code>.</li>
+ <li><code>opóźnienie</code> to liczba milisekund (tysięcznych części sekundy), co którą wywoływana będzie <code>funkcja </code>lub <code>kod</code></li>
+</ul>
+
+<p>Należy zwrócić uwagę, że przekazywanie dodatkowych parametrów w pierwszej składni nie działa w Internet Explorerze.</p>
+
+<h3 id="Przyk.C5.82ad" name="Przyk.C5.82ad">Przykład</h3>
+
+<pre class="brush: js">idInterwalu = window.setInterval(animuj, 500);
+</pre>
+
+<p> W poniższym przykładzie, funkcja <code>zmienKolorTekstu()</code> będzie wykonywana co sekundę, dopóki użytkownik nie naciśnie przycisku Stop, co spowoduje wywołanie <code>clearInterval() </code>z parametrem <code>idInterwalu</code>.</p>
+
+<pre class="brush: js" style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.286em; margin-left: 0px; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: dotted; border-right-style: dotted; border-bottom-style: dotted; border-left-style: dotted; background-clip: initial; background-color: rgb(246, 246, 242); font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace;">&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;przykład z wykorzystaniem setInterval/clearInterval&lt;/title&gt;
+
+&lt;script type="text/javascript"&gt;
+var idInterwalu;
+
+function zmienKolor() {
+  idInterwalu = setInterval(zmienKolorTekstu, 1000);
+}
+
+function zmienKolorTekstu() {
+  var elem = document.getElementById("my_box");
+  if (elem.style.color == 'red') {
+    elem.style.color = 'blue';
+  } else {
+    elem.style.color = 'red';
+  }
+}
+
+function zatrzymajZmianeKoloru() {
+  clearInterval(idInterwalu);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body onload="zmienKolor();"&gt;
+&lt;div id="my_box"&gt;
+&lt;p&gt;Hello World&lt;/p&gt;
+&lt;/div&gt;
+&lt;button onclick="zatrzymajZmianeKoloru();"&gt;Stop&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<h3 id="Uwagi">Uwagi</h3>
+
+<p>Funkcja setInterval() służy do ustawienia opóźnienia dla cyklicznie wywoływanych funkcji, takich jak funkcje animacji.</p>
+
+<p>Możliwe jest anulowanie wykonania fukcji poprzez wywołanie <code><a href="/pl/DOM/window.clearInterval" title="pl/DOM/window.clearInterval">window.clearInterval()</a></code>.</p>
+
+<p>Jeżeli funkcja ma zostać wykonana <em>tylko raz</em> a nie być wykonywana cyklicznie to należy skorzystać z  <code style="font: normal normal normal 100%/normal 'Courier New', 'Andale Mono', monospace; color: inherit; font-weight: inherit;"><a href="/pl/DOM/window.setTimeout" title="pl/DOM/window.setTimeout">window.setTimeout()</a></code>.</p>
+
+<h3 id="Specyfikacja" name="Specyfikacja">Specyfikacja</h3>
+
+<p>{{ DOM0() }}</p>
+
+<p>{{ languages( { "en": "en/DOM/window.setInterval", "fr": "fr/DOM/window.setInterval", "ja": "ja/DOM/window.setInterval", "pl": "pl/DOM/window.setInterval" } ) }}</p>

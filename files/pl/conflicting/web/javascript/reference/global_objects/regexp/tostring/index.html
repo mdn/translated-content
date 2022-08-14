@@ -1,0 +1,48 @@
+---
+title: RegExp.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
+tags:
+  - JavaScript
+  - Method
+  - Prototype
+  - RegExp
+translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+---
+<p>{{JSRef}}{{Non-standard_header}}</p>
+
+<h2 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h2>
+
+<p>Zwraca łańcuch znaków reprezentujący kod źródłowy obiektu.</p>
+
+<h2 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h2>
+
+<pre class="syntaxbox"><code><var>regexObj</var>.toSource()
+</code></pre>
+
+<h3 id="Parametry" name="Parametry">Parametry</h3>
+
+<p>Brak.</p>
+
+<h2 id="Opis" name="Opis">Opis</h2>
+
+<p>Metoda <code>toSource()</code> zwraca następujące wartości:</p>
+
+<ul>
+ <li>Dla wbudowanego obiektu {{jsxref("RegExp")}}, <code>toSource()</code> zwraca następujący łańcuch znaków sygnalizujący, który kod źródłowy nie jest dostępny:
+
+  <pre class="brush: js">function RegExp() {
+   [native code]
+}
+</pre>
+ </li>
+ <li>Dla instancji {{jsxref("RegExp")}}, <code>toSource()</code> zwraca łańcuch znaków reprezentujący kod źródłowy.</li>
+</ul>
+
+<p>Ta metoda jest często nazywana wewnętrzną metodą JavaScriptu i nie jest widoczna w kodzie.</p>
+
+<h2 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

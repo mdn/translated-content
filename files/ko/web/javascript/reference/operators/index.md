@@ -108,6 +108,8 @@ translation_of: Web/JavaScript/Reference/Operators
 - {{JSxRef("Operators/Remainder", "%")}}
   - : 나머지 연산자.
 
+<!---->
+
 - {{JSxRef("Operators/Exponentiation", "**")}}
   - : 거듭제곱 연산자.
 

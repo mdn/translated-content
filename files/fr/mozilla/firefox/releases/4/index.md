@@ -73,6 +73,8 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
 - Le réglage de `lineWidth` pour une valeur négative ne lance plus une exception, mais ignore plutôt les valeurs non-positives.
 - La méthode `putImageData()` supporte désormais les paramètres optionnels `dirtyX`, `dirtyY`, `dirtyWidth` et `dirtyHeight`.
 
+<!---->
+
 #### Autres changements HTML
 
 - L'élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) est maintenant redimensionnable par défaut ; pour le désactiver, vous pouvez utiliser la propriété CSS [`resize`](/fr/docs/Web/CSS/resize).
@@ -581,6 +583,8 @@ Si vous développez des thèmes, vous devez lire [Theme changes in Firefox 4](/f
 #### Autres changements DOM
 
 - La nouvelle notification ["document-element-inserted"](/fr/docs/Observer_Notifications#Documents) est envoyée quand un élément racine d'un document est crée, mais tous les scripts sont exécutés avant.
+
+<!---->
 
 ### XUL
 

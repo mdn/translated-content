@@ -20,6 +20,8 @@ void ctx.fillText(texte, x, y [, largeurMax]);
 - `texte`
   - : Le texte à représenter en utilisant les valeurs en cours de {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, et de {{domxref("CanvasRenderingContext2D.direction","direction")}}.
 
+<!---->
+
 - `x`
   - : La valeur de la coordonnée sur l'axe des x du point de début du texte.
 - `y`

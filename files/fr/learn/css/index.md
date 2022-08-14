@@ -42,6 +42,8 @@ Cet article contient les modules suivants, dans l'ordre suggéré pour le parcou
 - [Styliser les boîtes](/fr/Apprendre/CSS/styliser_boites)
   - : Ensuite, nous examinons la stylisation des boîtes&nbsp;: une des étapes fondamentales de la composition d'une page Web. Dans ce module, nous récapitulons les modèles de boîtes, puis nous nous penchons sur le contrôle de leur disposition en définissant le remplissage, les bordures et les marges, la personnalisation des couleurs d'arrière-plan, les images et autres caractéristiques, les caractéristiques de fantaisie telles que filtres et ombrages des boîtes.
 
+<!---->
+
 - [Composer du texte](/fr/docs/Learn/CSS/Styling_text)
   - : Ici, nous examinons les principes fondamentaux pour composer du texte&nbsp;: réglage de la police, graisse et italique, espacement des lignes et des lettres, les ombrage et autres caractéristiques. Nous complétons le module en appliquant des polices personnalisées à la page, ainsi que des listes de styles et des liens.
 - [Mise en page avec les CSS](/fr/Apprendre/CSS/CSS_layout)

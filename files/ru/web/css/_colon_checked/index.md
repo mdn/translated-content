@@ -55,6 +55,8 @@ option:checked {
 - `input[type="radio"]:checked`
   - : Находит, все отмеченные на странице, радиокнопки
 
+<!---->
+
 - `input[type="checkbox"]:checked`
   - : Находит все отмеченные чекбоксы
 - `option:checked`

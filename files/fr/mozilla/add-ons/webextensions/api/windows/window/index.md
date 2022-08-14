@@ -20,6 +20,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `height`{{optional_inline}}
   - : `integer`. La hauteur de la fenêtre, y compris le cadre, en pixels.
 
+<!---->
+
 - `id`{{optional_inline}}
   - : `integer`. L'ID de la fenêtre. Les identifiants de fenêtre sont uniques dans une session de navigateur.
 - `incognito`

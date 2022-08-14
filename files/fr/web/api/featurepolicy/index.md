@@ -28,6 +28,8 @@ L'interface `FeaturePolicy` de l'[API Feature Policy](/fr/docs/Web/HTTP/Feature_
 - {{DOMxRef("FeaturePolicy.allowedFeatures")}}
   - : Retourne une liste des noms des fonctionnalités supportées par l'agent utilisateur et autorisées par le Feature Policy. Notee que les fonctionnaltiés dont le nom est dans la liste pourraient toujours être bloquées par l'absence de permission de l'utilisateur.
 
+<!---->
+
 - {{DOMxRef("FeaturePolicy.getAllowlistForFeature")}}
   - : Retourne la liste de permissions pour la fonctionnalité spécifiée.
 

@@ -168,6 +168,8 @@ Ce qui change et qui va probablement continuer à changer, c'est la façon dont 
 - John Whitlock
 - ...Et bien d'autres [contributeurs à Kuma.](https://github.com/mozilla/kuma/graphs/contributors)
 
+<!---->
+
 - Chris Mills
 - Will Bamberg
 - David Bruant

@@ -18,3 +18,4 @@ Una referencia de objeto a un `OfflineResourceList`.
 ## Compatibilidad con navegadores
 
 {{Compat}}
+

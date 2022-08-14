@@ -38,6 +38,8 @@ Une nouvelle chaîne de caractères composée du nombre indiqué de copies de la
 - {{jsxref("Erreurs/Negative_repetition_count", "RangeError")}} : le nombre de répétition doit être positif.
 - {{jsxref("Erreurs/Resulting_string_too_large", "RangeError")}} : le nombre de répétition ne doit pas être infini et la taille de la chaîne résultante ne doit pas dépasser la taille maximale pour une chaîne de caractères.
 
+<!---->
+
 - {{jsxref("RangeError")}}
   - : La compteur doit être positif et inférieur à l'infini.
 

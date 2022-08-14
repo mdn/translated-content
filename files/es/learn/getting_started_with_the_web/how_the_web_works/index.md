@@ -54,10 +54,10 @@ Además del cliente y el servidor, también tenemos que saludar a:
 
 Cuando escribes una dirección web en el navegador (usando nuestra analogía para ir a la tienda):
 
-1. El navegador va al servidor DNS y encuentra la dirección real del servidor donde el sitio web vive (encontrar la dirección de la tienda).
-2. El navegador envía un mensaje de petición HTTP al servidor, pidiéndole que envíe una copia de la página web para el cliente (ir a la tienda y hacer un pedido). Este mensaje y todos los datos enviados entre el cliente y el servidor, se envían a través de tu conexión a Internet usando TCP/IP.
-3. Siempre que el servidor apruebe la solicitud del cliente, el servidor enviará al cliente un mensaje «200 OK», que significa, «¡por supuesto que puedes ver ese sitio web! Aquí está.», y comenzará a enviar los archivos de la página web al navegador como una serie de pequeños trozos llamados _paquetes de datos_ (la tienda te entrega tus productos y los llevas de regreso a casa).
-4. El navegador reúne los pequeños trozos, forma un sitio web completo y te lo muestra (llegas a casa con tus nuevas compras).
+1.  El navegador va al servidor DNS y encuentra la dirección real del servidor donde el sitio web vive (encontrar la dirección de la tienda).
+2.  El navegador envía un mensaje de petición HTTP al servidor, pidiéndole que envíe una copia de la página web para el cliente (ir a la tienda y hacer un pedido). Este mensaje y todos los datos enviados entre el cliente y el servidor, se envían a través de tu conexión a Internet usando TCP/IP.
+3.  Siempre que el servidor apruebe la solicitud del cliente, el servidor enviará al cliente un mensaje «200 OK», que significa, «¡por supuesto que puedes ver ese sitio web! Aquí está.», y comenzará a enviar los archivos de la página web al navegador como una serie de pequeños trozos llamados _paquetes de datos_ (la tienda te entrega tus productos y los llevas de regreso a casa).
+4.  El navegador reúne los pequeños trozos, forma un sitio web completo y te lo muestra (llegas a casa con tus nuevas compras).
 
 ## Explicación de los DNS
 
@@ -76,12 +76,12 @@ Anteriormente hemos utilizado el término _**paquetes**_ para describir el forma
 ## Ver también
 
 - [¿Cómo funciona Internet](/es/docs/Learn/Common_questions/How_does_the_Internet_work)
-- [HTTP: Un protocolo de nivel de aplicación](https://dev.opera.com/articles/http-basic-introduction/)(en inglés)
+- [HTTP: Un protocolo de nivel de aplicación ](https://dev.opera.com/articles/http-basic-introduction/)(en inglés)
 - [HTTP: Trabajemos con él](https://dev.opera.com/articles/http-lets-get-it-on/) (en inglés)
 - [Códigos de respuesta: HTTP](https://dev.opera.com/articles/http-response-codes/) (en inglés)
 
 ## Crédito
 
-Foto de la calle: Street Composing, por [Kevin](https://www.flickr.com/photos/kdigga/)D.
+Foto de la calle: Street Composing, por [Kevin ](https://www.flickr.com/photos/kdigga/)D.
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

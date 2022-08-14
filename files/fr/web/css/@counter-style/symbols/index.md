@@ -29,6 +29,8 @@ Le descripteur `symbols` doit être défini lorsque la valeur du descripteur {{c
 - Des images ({{cssxref("&lt;image&gt;")}}) en utilisant la notation fonctionnelle `url(chemin-vers-image.png)`. **Attention : cette fonctionnalité (l'utilisation d'image) est à risque en termes d'implémentation et de conservation dans les spécifications et n'est implémentée par aucun navigateur actuellement.**
 - Des identifiants ({{cssxref("&lt;custom-ident&gt;")}})
 
+<!---->
+
 - `<symbol>`
   - : Représente le symbole à utiliser pour le système de comptage. La valeur du descripteur `symbols` peut être :
 

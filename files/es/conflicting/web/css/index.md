@@ -13,7 +13,6 @@ CSS ofrece una serie de características poderosas que puede ser difíciles de u
 ## Otras herramientas
 
 - #### Animación CSS - [Stylie](http://jeremyckahn.github.io/stylie/)
-
 - Para comprobar la información de la pantalla del dispositivo (helpful in {{Glossary("responsive web design")}}) - [mydevice.io](http://mydevice.io)
 - Menus CSS- [cssmenumaker.com](http://cssmenumaker.com/)
 
