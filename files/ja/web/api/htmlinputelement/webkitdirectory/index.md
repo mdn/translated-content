@@ -23,7 +23,7 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
 ## 構文
 
 ```js
- HTMLInputElement.webkitdirectory = boolValue
+ HTMLInputElement.webkitdirectory = boolValue
 ```
 
 ### 値

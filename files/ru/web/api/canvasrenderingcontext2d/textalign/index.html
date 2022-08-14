@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
 <div>{{APIRef}}</div>
 
-<p>Свойство <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textAlign</code></strong> Canvas 2D API определяет текущее выравнивание текста, использованное при прорисовке. Но следует помнить, что выравнивание основывается на значении x метода {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}}. Так что, если значение <code>textAlign</code> равно <code>"center"</code>, то текст будет прорисован в <code>x - (width / 2)</code>.</p>
+<p>Свойство <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.textAlign</code></strong> Canvas 2D API определяет текущее выравнивание текста, использованное при прорисовке. Но следует помнить, что выравнивание основывается на значении x метода {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}}. Так что, если значение <code>textAlign</code> равно <code>"center"</code>, то текст будет прорисован в <code>x - (width / 2)</code>.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -30,14 +30,14 @@ translation_of: Web/API/CanvasRenderingContext2D/textAlign
  <dt><code>start</code></dt>
  <dd>Выравнивание текста в обычном начале строки (левостороннее выравнивание для языков, направленных слева направо, правостороннее - для направленных справа налево).</dd>
  <dt><code>end</code></dt>
- <dd>Выравнивание текста в конце строки (правостороннее выравнивание для языков, направленных слева направо, левостороннее - для направленных справа налево</dd>
+ <dd>Выравнивание текста в конце строки (правостороннее выравнивание для языков, направленных слева направо, левостороннее - для направленных справа налево</dd>
 </dl>
 
 <p>По умолчанию значение <code>textAlign </code>установлено как <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">"start"</span></font>.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Using_the_textAlign_property">Использование значения <code>textAlign</code></h3>
+<h3 id="Using_the_textAlign_property">Использование значения <code>textAlign</code></h3>
 
 <p>Довольно простой сниппет использования значения <code>textAlign </code>для изменения выравнивания текста.</p>
 
@@ -63,8 +63,8 @@ ctx.strokeText('Hello world', 0, 100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.font = '48px serif';

@@ -24,7 +24,7 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
 
 <h2 id="Un_ejemplo_sencillo_de_lista">Un ejemplo sencillo de lista</h2>
 
-<p>Para empezar, veamos un ejemplo sencillo de una lista. A lo largo de este artículo veremos listas no ordenadas, listas ordenadas y listas de descripciones; todas tienen características de estilo similares, algunas que son particulares del tipo de lista. El ejemplo sin ningún estilo aplicado está <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">disponible en Github</a> (consulta también el <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">código fuente</a>.)</p>
+<p>Para empezar, veamos un ejemplo sencillo de una lista. A lo largo de este artículo veremos listas no ordenadas, listas ordenadas y listas de descripciones; todas tienen características de estilo similares, algunas que son particulares del tipo de lista. El ejemplo sin ningún estilo aplicado está <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">disponible en Github</a> (consulta también el <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">código fuente</a>.)</p>
 
 <p>El HTML para nuestro ejemplo de lista se ve así:</p>
 
@@ -71,16 +71,16 @@ paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p
 <p>Si accedes al ejemplo en vivo e investigas los elementos de la lista usando las <a href="/es/docs/Learn/Common_questions/What_are_browser_developer_tools">herramientas de desarrollador del navegador</a>, observarás un par de valores de estilo predeterminados:</p>
 
 <ul>
- <li>Los elementos {{htmlelement("ul")}} y {{htmlelement("ol")}} tienen un {{cssxref("margin")}} superior e inferior de <code>16px</code> (<code>1em</code>)  y un {{cssxref("padding-left")}} de <code>40px</code> (<code>2.5em</code>.)</li>
- <li>Los elementos de lista {{htmlelement("li")}} no tienen valores de espacio predeterminados.</li>
- <li>El elemento {{htmlelement("dl")}} tiene un {{cssxref("margin")}} superior e inferior de <code>16px</code> (<code>1em</code>), pero no tiene ningún {{cssxref("padding")}} establecido.</li>
- <li>Los elementos {{htmlelement("dd")}} tienen un {{cssxref("margin-left")}} de <code>40px</code> (<code>2.5em</code>).</li>
- <li>Los elementos de referencia {{htmlelement("p")}} que hemos incluido tienen un {{cssxref("margin")}} superior e inferior de <code>16px</code> (<code>1em</code>), al igual que los diferentes tipos de lista.</li>
+ <li>Los elementos {{htmlelement("ul")}} y {{htmlelement("ol")}} tienen un {{cssxref("margin")}} superior e inferior de <code>16px</code> (<code>1em</code>)  y un {{cssxref("padding-left")}} de <code>40px</code> (<code>2.5em</code>.)</li>
+ <li>Los elementos de lista {{htmlelement("li")}} no tienen valores de espacio predeterminados.</li>
+ <li>El elemento {{htmlelement("dl")}} tiene un {{cssxref("margin")}} superior e inferior de <code>16px</code> (<code>1em</code>), pero no tiene ningún {{cssxref("padding")}} establecido.</li>
+ <li>Los elementos {{htmlelement("dd")}} tienen un {{cssxref("margin-left")}} de <code>40px</code> (<code>2.5em</code>).</li>
+ <li>Los elementos de referencia {{htmlelement("p")}} que hemos incluido tienen un {{cssxref("margin")}} superior e inferior de <code>16px</code> (<code>1em</code>), al igual que los diferentes tipos de lista.</li>
 </ul>
 
 <h2 id="Manejar_el_espaciado_de_la_lista">Manejar el espaciado de la lista</h2>
 
-<p>Al diseñar listas, es necesario ajustar el diseño para que mantengan los mismos espaciados verticales (a veces denominados ritmos verticales) que el resto de elementos circundantes, como párrafos e imágenes; y el mismo espaciado horizontal entre uno y otro (en Github puedes ver el <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/">ejemplo de diseño terminado</a>, y también <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html">encontrar el código fuente</a>.)</p>
+<p>Al diseñar listas, es necesario ajustar el diseño para que mantengan los mismos espaciados verticales (a veces denominados ritmos verticales) que el resto de elementos circundantes, como párrafos e imágenes; y el mismo espaciado horizontal entre uno y otro (en Github puedes ver el <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/">ejemplo de diseño terminado</a>, y también <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html">encontrar el código fuente</a>.)</p>
 
 <p>El CSS que se utiliza para aplicar estilo al texto y al espaciado de texto es el siguiente:</p>
 
@@ -122,7 +122,7 @@ dd {
  <li>La primera regla establece un tipo de letra para todo el sitio y un tamaño de letra base de 10px. Estos valores se heredan para toda la página.</li>
  <li>Las reglas 2 y 3 establecen tamaños de letra relativos para los títulos, diferentes tipos de listas (que heredan los hijos de los elementos de listas), y párrafos. Esto significa que todos los párrafos y todas las listas tendrán el mismo tamaño de letra y el mismo espaciado superior e inferior, lo que ayudará a mantener el ritmo vertical constante.</li>
  <li>La regla 4 establece el mismo interlineado ({{cssxref("line-height")}}) en los párrafos y los elementos de las listas, de modo que todos los párrafos y todos los elementos individuales de las listas tendrán el mismo espaciado entre las líneas. Esto también ayudará a mantener el ritmo vertical consistente.</li>
- <li>Las reglas 5 y 6 se aplican a las listas de descripciones; establecemos la misma altura de interlineado (<code>line-height</code>) en los términos y las descripciones de la lista de descripciones, así como hicimos con los párrafos y los elementos de la lista. De nuevo, ¡la coherencia es buena! También establecemos que los términos de las descripciones tengan un estilo de negrita, para que destaquen visualmente.<span id="cke_bm_126E" class="hidden"> </span></li>
+ <li>Las reglas 5 y 6 se aplican a las listas de descripciones; establecemos la misma altura de interlineado (<code>line-height</code>) en los términos y las descripciones de la lista de descripciones, así como hicimos con los párrafos y los elementos de la lista. De nuevo, ¡la coherencia es buena! También establecemos que los términos de las descripciones tengan un estilo de negrita, para que destaquen visualmente.<span id="cke_bm_126E" class="hidden"> </span></li>
 </ul>
 
 <h2 id="Estilos_específicos_de_las_listas">Estilos específicos de las listas</h2>
@@ -191,11 +191,11 @@ ul li {
 
 <ul>
  <li>
-  <p dir="ltr" id="tw-target-text">Reducir el valor de la propiedad {{cssxref("padding-left")}} del elemento {{htmlelement ("ul")}} desde su valor predeterminado de 40 px hasta 20 px. A continuación, establecer<br>
-   la misma cantidad para los elementos de la lista. De este modo, todos los elementos de la lista siguen alineados con los elementos de la lista ordenada y las descripciones, pero los elementos de lista tienen algo de relleno (<code>padding</code>) para poder insertar las imágenes de fondo. Si no hiciéramos esto, las imágenes de fondo se solaparían con el texto de los elementos de la lista y quedaría un aspecto desordenado.</p>
+  <p dir="ltr" id="tw-target-text">Reducir el valor de la propiedad {{cssxref("padding-left")}} del elemento {{htmlelement ("ul")}} desde su valor predeterminado de 40 px hasta 20 px. A continuación, establecer<br>
+   la misma cantidad para los elementos de la lista. De este modo, todos los elementos de la lista siguen alineados con los elementos de la lista ordenada y las descripciones, pero los elementos de lista tienen algo de relleno (<code>padding</code>) para poder insertar las imágenes de fondo. Si no hiciéramos esto, las imágenes de fondo se solaparían con el texto de los elementos de la lista y quedaría un aspecto desordenado.</p>
  </li>
  <li>
-  <p dir="ltr" id="tw-target-text">Establecer la propiedad {{cssxref("list-style-type")}} en <code>none</code>, para que no aparezca la viñeta predeterminada. En lugar de ello, vamos a utilizar las propiedades {{cssxref("background")}} para manejar las viñetas.</p>
+  <p dir="ltr" id="tw-target-text">Establecer la propiedad {{cssxref("list-style-type")}} en <code>none</code>, para que no aparezca la viñeta predeterminada. En lugar de ello, vamos a utilizar las propiedades {{cssxref("background")}} para manejar las viñetas.</p>
  </li>
  <li>Insertar una viñeta en cada elemento de la lista sin ordenar. Las propiedades relevantes son las siguientes:
   <ul>
@@ -227,7 +227,7 @@ ul li {
   list-style: square url(example.png) inside;
 }</pre>
 
-<p>Los valores pueden escribirse en cualquier orden, y puedes usar uno, dos o los tres (los valores por defecto que se utilizan para las propiedades que no están incluidas son <code>disc</code>, <code>none</code> y <code>outside</code>). Si se especifican tanto <code>type</code> como <code>image</code>, el tipo se usa como una segunda opción en el caso de que la imagen no sea posible cargar la imagen por cualquier motivo.</p>
+<p>Los valores pueden escribirse en cualquier orden, y puedes usar uno, dos o los tres (los valores por defecto que se utilizan para las propiedades que no están incluidas son <code>disc</code>, <code>none</code> y <code>outside</code>). Si se especifican tanto <code>type</code> como <code>image</code>, el tipo se usa como una segunda opción en el caso de que la imagen no sea posible cargar la imagen por cualquier motivo.</p>
 
 <h2 id="Control_de_numeración_de_las_listas">Control de numeración de las listas</h2>
 
@@ -322,7 +322,7 @@ ul li {
   &lt;h2&gt;Output&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
+    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
     &lt;input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -346,9 +346,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 solution.addEventListener("click", function() {

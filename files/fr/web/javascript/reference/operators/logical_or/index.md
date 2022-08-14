@@ -15,7 +15,7 @@ L'opérateur OU logique (`||`) (disjonction logique) renvoie vrai si et seulemen
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
 
-## Syntax
+## Syntaxe
 
 ```js
 expr1 || expr2

@@ -11,13 +11,13 @@ original_slug: Web/HTTP/Заголовки/Connection
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>Заголовок <strong><code>Connection</code></strong> определяет, остаётся ли сетевое соединение активным после завершения текущей транзакции (запроса). Если в запросе отправлено значение <code>keep-alive</code>, то соединение остаётся и не завершается, позволяя выполнять последующие запросы на тот же сервер.</p>
+<p>Заголовок <strong><code>Connection</code></strong> определяет, остаётся ли сетевое соединение активным после завершения текущей транзакции (запроса). Если в запросе отправлено значение <code>keep-alive</code>, то соединение остаётся и не завершается, позволяя выполнять последующие запросы на тот же сервер.</p>
 
 <div class="blockIndicator warning">
-<p>Заголовки, связанные с соединением, такие как {{HTTPHeader("Connection")}} и {{HTTPHeader("Keep-Alive")}}, <a href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">запрещены в HTTP/2</a>. Chrome и Firefox просто игнорируют эти заголовки в HTTP/2 ответах, однако Safari, следуя требованиям HTTP/2, вообще не будет загружать какие-либо ответы, которые содержат данные заголовки.</p>
+<p>Заголовки, связанные с соединением, такие как {{HTTPHeader("Connection")}} и {{HTTPHeader("Keep-Alive")}}, <a href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2">запрещены в HTTP/2</a>. Chrome и Firefox просто игнорируют эти заголовки в HTTP/2 ответах, однако Safari, следуя требованиям HTTP/2, вообще не будет загружать какие-либо ответы, которые содержат данные заголовки.</p>
 </div>
 
-<p>За исключением стандартных заголовков <a href="https://en.wikipedia.org/wiki/Hop-by-hop_transport">«hop-by-hop»</a> ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} и {{HTTPHeader("Proxy-Authenticate")}}), любые «hop-by-hop» заголовки, используемые в сообщении, должны быть перечислены в заголовке <code>Connection</code> так, чтобы первый прокси знал, как их использовать, и не передавал дальше. Также могут быть перечислены стандартные «hop-by-hop» заголовки (часто это относится к {{HTTPHeader("Keep-Alive")}}, но это необязательно).</p>
+<p>За исключением стандартных заголовков <a href="https://en.wikipedia.org/wiki/Hop-by-hop_transport">«hop-by-hop»</a> ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} и {{HTTPHeader("Proxy-Authenticate")}}), любые «hop-by-hop» заголовки, используемые в сообщении, должны быть перечислены в заголовке <code>Connection</code> так, чтобы первый прокси знал, как их использовать, и не передавал дальше. Также могут быть перечислены стандартные «hop-by-hop» заголовки (часто это относится к {{HTTPHeader("Keep-Alive")}}, но это необязательно).</p>
 
 <table class="properties">
  <tbody>

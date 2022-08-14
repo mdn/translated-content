@@ -14,7 +14,7 @@ translation_of: Web/API/GamepadHapticActuator/pulse
 ---
 <div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
 
-<p>{{domxref("GamepadHapticActuator")}} インターフェイスの <strong><code>pulse()</code></strong> メソッドは、指定された期間、特定の強度でハードウェアパルスを作成します。</p>
+<p>{{domxref("GamepadHapticActuator")}} インターフェイスの <strong><code>pulse()</code></strong> メソッドは、指定された期間、特定の強度でハードウェアパルスを作成します。</p>
 
 <h2 id="構文">構文</h2>
 
@@ -24,18 +24,18 @@ translation_of: Web/API/GamepadHapticActuator/pulse
 
 <dl>
  <dt><em>value</em></dt>
- <dd>パルスの強度を表す double 。これはハードウェアの型によって異なりますが、通常は 0.0 (強度なし) から 1.0 (完全な強度) の値を取ります。</dd>
+ <dd>パルスの強度を表す double 。これはハードウェアの型によって異なりますが、通常は 0.0 (強度なし) から 1.0 (完全な強度) の値を取ります。</dd>
  <dt><em>duration</em></dt>
  <dd>パルスの持続時間をミリ秒で表す double 。</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: <code>pulse()</code> への繰り返しの呼び出しは、それらがまた進行中である場合、以前の呼び出しをオーバーライドします。</p>
+<p><strong>Note</strong>: <code>pulse()</code> への繰り返しの呼び出しは、それらがまた進行中である場合、以前の呼び出しをオーバーライドします。</p>
 </div>
 
 <h3 id="返り値">返り値</h3>
 
-<p>パルスが正常に完了したときに <code>true</code> の値で解決される promise 。</p>
+<p>パルスが正常に完了したときに <code>true</code> の値で解決される promise 。</p>
 
 <h2 id="例">例</h2>
 

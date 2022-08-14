@@ -4,11 +4,11 @@ slug: >-
   orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Array_物件
 original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Array_物件
 ---
-<p> </p>
+<p> </p>
 <h3 id="Array_物件" name="Array_物件">Array 物件</h3>
 <p>JavaScript 並沒有明確的陣列資料類型。不過你可以在你的應用程式中，使用預先定義的 <code>Array</code> 物件和他的方法來運用陣列。<code>Array</code> 物件有各種陣列的操作方法，如合併、反轉、排序。他還有用來確定陣列的長度的屬性，還有和正規表達式一起使用的屬性。</p>
 <p><em>陣列</em>是值的有序集合，你可以使用名稱或索引來參考這些值。例如，你有一個稱作 <code>emp</code> 的陣列，其中內含職員的名字，並按照職員的編號來索引。於是 <code>emp{{ mediawiki.external(1) }}</code> 就代表編號 1 的職員，<code>emp{{ mediawiki.external(2) }}</code> 就代表編號 2 的職員，依此類推。</p>
-<p> </p>
+<p> </p>
 <h4 id="陣列的建立" name="陣列的建立">陣列的建立</h4>
 <p><code>Array</code> 物件的建立如下︰</p>
 <pre>1. arrayObjectName = new Array(element0, element1, ..., elementN)
@@ -42,77 +42,77 @@ emp[3] = "August West"
 <ul>
  <li><code>concat</code> 合併兩個陣列，並把新的陣列返回。</li>
 </ul>
-<p> </p>
+<p> </p>
 <pre class="eval">   myArray = new Array("1","2","3")
    myArray = myArray.concat("a", "b", "c"); // myArray 現在是 ["1", "2", "3", "a", "b", "c"]
 </pre>
-<p> </p>
+<p> </p>
 <ul>
  <li><code>join(deliminator = ",")</code> 把所有的陣列元素合併成字串。</li>
 </ul>
-<p> </p>
+<p> </p>
 <pre class="eval">   myArray = new Array("Wind","Rain","Fire")
    list = myArray.join(" - "); // list 的內容是 "Wind - Rain - Fire"
 </pre>
-<p> </p>
+<p> </p>
 <ul>
  <li><code>pop</code> 把陣列的最後一個元素移除掉，並把元素返回。</li>
 </ul>
-<p> </p>
+<p> </p>
 <pre class="eval">   myArray = new Array("1", "2", "3");
    last=myArray.pop(); // MyArray 現在是 ["1", "2"], last = "3"
 </pre>
-<p> </p>
+<p> </p>
 <ul>
  <li><code>push</code> 在陣列的末端加入一個以上的元素，並返回陣列的最終長度。</li>
 </ul>
-<p> </p>
+<p> </p>
 <pre class="eval">   myArray = new Array("1", "2");
    myArray.push("3"); // MyArray 現在是 ["1", "2", "3"]
 </pre>
-<p> </p>
+<p> </p>
 <ul>
  <li><code>reverse</code> 調換陣列的元素︰陣列的第一個元素變成最後一個元素，最後一個則變成第一個。</li>
 </ul>
-<p> </p>
+<p> </p>
 <pre class="eval">   myArray = new Array ("1", "2", "3");
    myArray.reverse(); // 調換陣列的結果是 myArray = [ "3", "2", "1" ]
 </pre>
-<p> </p>
+<p> </p>
 <ul>
  <li><code>shift</code> 移除陣列的第一個元素，並返回被移除的元素。</li>
 </ul>
-<p> </p>
+<p> </p>
 <pre class="eval">   myArray = new Array ("1", "2", "3");
    first=myArray.shift(); // MyArray 現在是 ["2", "3"]，first 是 "1"
 </pre>
-<p> </p>
+<p> </p>
 <ul>
  <li><code>slice (start_index, upto_index)</code> 抽出陣列的片斷，並返回新的陣列。</li>
 </ul>
-<p> </p>
+<p> </p>
 <pre class="eval">   myArray = new Array ("a", "b", "c", "d", "e");
    myArray = myArray.slice(1,4); // 從索引 1 為起點抽出所有的元素，直到索引 4 為止，返回 [ "b", "c", "d" ]
 </pre>
-<p> </p>
+<p> </p>
 <ul>
  <li><code>splice(index, count_to_remove, addelement1, addelement2, ...)</code> 加入並/或移除陣列的元素。</li>
 </ul>
-<p> </p>
+<p> </p>
 <pre class="eval">   myArray = new Array ("1", "2", "3", "4", "5");
    myArray.splice(1,3,"a","b","c", "d"); // MyArray 現在是 ["1", "a", "b", "c", "d", "5"]
    // 這個代碼從索引 1（也就是 "2"）開始，把那裡的 3 個元素移除掉，
    // 然後把所有的連續元素插入到那個位置。
 </pre>
-<p> </p>
+<p> </p>
 <ul>
  <li><code>sort</code> 把陣列的元素重新排序。</li>
 </ul>
-<p> </p>
+<p> </p>
 <pre class="eval">   myArray = new Array("Wind","Rain","Fire")
    myArray.sort(); // 排序陣列的結果是 myArrray = [ "Fire", "Rain", "Wind" ]
 </pre>
-<p> </p>
+<p> </p>
 <p><code>sort</code> 也接受 Callback 函數以確定該如何排序陣列的內容。這個函數會對兩個值作比較，並返回三個值的其中一者︰</p>
 <ul>
  <li>如果 a 在排序系統中小於 b，返回 -1（或任意的負數）</li>
@@ -120,7 +120,7 @@ emp[3] = "August West"
  <li>如果 a 和 b 被認為是同等的，返回 0。</li>
 </ul>
 <p>舉例來說，下面的代碼將以陣列最後面的字母來排序︰</p>
-<p> </p>
+<p> </p>
 <pre class="eval">   var sortFn = function(a,b){
        if (a[a.length - 1] &lt; b[b.length - 1]) return -1;
        if (a[a.length - 1] &gt; b[b.length - 1]) return 1;
@@ -128,7 +128,7 @@ emp[3] = "August West"
        }
    myArray.sort(sortFn); // 排序陣列的結果是 myArray = ["Wind","Fire","Rain"]
 </pre>
-<p> </p>
+<p> </p>
 <ul>
  <li><code>unshift</code> 在陣列的前頭加入一個以上的元素，並返回陣列的新長度。</li>
 </ul>

@@ -55,8 +55,8 @@ Intl.supportedValuesOf("calendar").forEach(function(calendar) {
    // "buddhist", "chinese", "coptic", "dangi", ...
 });
 ```
-> **Note :** Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
 
+> **Note :** Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
 
 Les autres valeurs peuvent être obtenues de la même façon&nbsp;:
 
@@ -96,7 +96,6 @@ try {
 
 [Prothèse pour `Intl.supportedValuesOf()` dans la proposition TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
 
-
 ## Spécifications
 
 {{Specifications}}
@@ -108,4 +107,3 @@ try {
 ## Voir aussi
 
 - [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-

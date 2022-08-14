@@ -11,7 +11,7 @@ translation_of: Web/API/Window/vrdisplaypresentchange_event
 ---
 {{APIRef("Window")}}
 
-L'événement **`vrdisplaypresentchange`** de l'[API WebVR](/en-US/docs/Web/API/WebVR_API) est déclenché lorsque l'état de présentation d'un affichage VR change — c'est à dire passe de la présentation à la non présentation, ou vice versa.
+L'événement **`vrdisplaypresentchange`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsque l'état de présentation d'un affichage VR change — c'est à dire passe de la présentation à la non présentation, ou vice versa.
 
 <table class="properties">
   <tbody>
@@ -42,7 +42,7 @@ L'événement **`vrdisplaypresentchange`** de l'[API WebVR](/en-US/docs/Web/API/
 
 ## Exemples
 
-Vous pouvez utiliser l'événement `vrdisplaypresentchange` dans une méthode [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) :
+Vous pouvez utiliser l'événement `vrdisplaypresentchange` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
 
 ```js
 window.addEventListener('vrdisplaypresentchange', function() {
@@ -55,7 +55,7 @@ window.addEventListener('vrdisplaypresentchange', function() {
 });
 ```
 
-Ou utilisez la propriété de gestionnaire d'événements [`onvrdisplaypresentchange`](/en-US/docs/Web/API/Window/onvrdisplaypresentchange) :
+Ou utilisez la propriété de gestionnaire d'événements [`onvrdisplaypresentchange`](/fr/docs/Web/API/Window/onvrdisplaypresentchange) :
 
 ```js
 window.onvrdisplaypresentchange = function() {
@@ -80,5 +80,5 @@ window.onvrdisplaypresentchange = function() {
 
 ## Voir également
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- [WebVR API homepage](/fr/docs/Web/API/WebVR_API)
 - [MozVr.com](http://mozvr.com/) — démos, téléchargements et autres ressources de l'équipe Mozilla VR.

@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 <h2 id="예제">예제</h2>
 
-<h3 id="lastIndexOf_사용하기"><code>lastIndexOf</code> 사용하기</h3>
+<h3 id="lastIndexOf_사용하기"><code>lastIndexOf</code> 사용하기</h3>
 
 <p>다음 예제에서는 <code>lastIndexOf</code>를 사용하여 배열의 값을 찾습니다.</p>
 
@@ -63,9 +63,9 @@ array.lastIndexOf(2, -1); // 3
 var array = ['a', 'b', 'a', 'c', 'a', 'd'];
 var element = 'a';
 var idx = array.lastIndexOf(element);
-while (idx != -1) {
+while (idx != -1) {
   indices.push(idx);
-  idx = (idx &gt; 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = (idx &gt; 0 ? array.lastIndexOf(element, idx - 1) : -1);
 }
 
 console.log(indices);
@@ -74,22 +74,9 @@ console.log(indices);
 
 <p>배열의 첫 번째 요소 인 경우 요소가 fromIndex 매개 변수와 관계없이 항상 발견되므로 idx == 0 사례를 여기에서 개별적으로 처리해야합니다. 이는 {{jsxref ( "Array.prototype.indexOf", "indexOf")}} 메소드와 다릅니다.</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

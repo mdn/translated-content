@@ -131,8 +131,10 @@ Les données sont ajoutées à l'URL sous forme d'une suite de paires nom/valeur
 
 La requête HTTP ressemble à quelque chose comme&nbsp;:
 
-    GET /?say=Hi&to=Mom HTTP/1.1
-    Host: foo.com
+```
+GET /?say=Hi&to=Mom HTTP/1.1
+Host: foo.com
+```
 
 > **Note :** Vous trouverez cet exemple sur GitHub — voyez [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
@@ -160,12 +162,14 @@ Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour
 
 Quand le formulaire est soumis avec la méthode `POST`, aucune donnée n'est ajoutée à l'URL et la requête HTTP ressemble à ceci, les données incorporées au corps de requête&nbsp;:
 
-    POST / HTTP/1.1
-    Host: foo.com
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 13
+```
+POST / HTTP/1.1
+Host: foo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
 
-    say=Hi&to=Mom
+say=Hi&to=Mom
+```
 
 L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-Type` indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.
 
@@ -175,11 +179,11 @@ L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-T
 
 Les requêtes HTTP ne sont jamais montrées à l'utilisateur (si vous voulez les voir, vous devez utiliser des outils comme la [Console Web](/fr/docs/Tools/Web_Console) de Firefox ou les [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). À titre d'exemple, les données de formulaire sont visibles comme suit dans l'onglet Chrome Network. Après avoir soumis le formulaire&nbsp;:
 
-1.  Pressez F12
-2.  Selectionnez «&nbsp;Réseau&nbsp;»
-3.  Selectionnez «&nbsp;Tout&nbsp;»
-4.  Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
-5.  Selectionnez «&nbsp;En‑tête&nbsp;»
+1. Pressez F12
+2. Selectionnez «&nbsp;Réseau&nbsp;»
+3. Selectionnez «&nbsp;Tout&nbsp;»
+4. Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
+5. Selectionnez «&nbsp;En‑tête&nbsp;»
 
 Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
 
@@ -187,8 +191,8 @@ Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
 
 La seule chose affichée à l'utilisateur est l'URL appelée. Comme mentionné ci‑dessus, avec une requête `GET` l'utilisateur verra les données dans la barre de l'URL, mais avec une requête `POST` il ne verra rien. Cela peut être important pour deux raisons&nbsp;:
 
-1.  Si vous avez besoin d'envoyer un mot de passe (ou toute autre donnée sensible), n'utilisez jamais la méthode GET ou vous risquez de l'afficher dans la barre d'URL, ce qui serait très peu sûr.
-2.  Si vous avez besoin d'envoyer une grande quantité de données, la méthode POST est préférable, car certains navigateurs limitent la taille des URLs. De plus, de nombreux serveurs limitent la longueur des URL qu'ils acceptent.
+1. Si vous avez besoin d'envoyer un mot de passe (ou toute autre donnée sensible), n'utilisez jamais la méthode GET ou vous risquez de l'afficher dans la barre d'URL, ce qui serait très peu sûr.
+2. Si vous avez besoin d'envoyer une grande quantité de données, la méthode POST est préférable, car certains navigateurs limitent la taille des URLs. De plus, de nombreux serveurs limitent la longueur des URL qu'ils acceptent.
 
 ## Côté serveur : récupérer les données
 

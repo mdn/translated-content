@@ -5,11 +5,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>{{WebExtAPIRef("downloads")}} API の <strong><code>download()</code></strong> 関数ではURLとそのほかのオプションの設定を行うことでファイルのダウンロードをすることができます。</p>
+<p>{{WebExtAPIRef("downloads")}} API の <strong><code>download()</code></strong> 関数ではURLとそのほかのオプションの設定を行うことでファイルのダウンロードをすることができます。</p>
 
 <ul>
  <li>HTTPもしくはHTTPSのプロトコルを使用したURLを指定した場合、対象のホスト名に対応する全てのcookieを含んだリクエストが送られます。</li>
- <li><code>filename</code> と <code>saveAs</code> が指定されている場合、指定された<code>filename</code>が設定された[名前をつけて保存]のダイアログが開きます。</li>
+ <li><code>filename</code> と <code>saveAs</code> が指定されている場合、指定された<code>filename</code>が設定された[名前をつけて保存]のダイアログが開きます。</li>
 </ul>
 
 <p>この関数は非同期に実行され、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>を返します。</p>
@@ -58,11 +58,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 <h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-<p> </p>
+<p> </p>
 
 <p>{{Compat("webextensions.api.downloads.download")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="例">例</h2>
 
@@ -90,7 +90,7 @@ downloading.then(onStartedDownload, onFailed);</pre>
 
 <div class="note"><strong>Acknowledgements</strong>
 
-<p>このAPIはChromiumの <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> APIを元にしています。</p>
+<p>このAPIはChromiumの <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> APIを元にしています。</p>
 </div>
 
 <div class="hidden">

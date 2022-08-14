@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>Number.isSafeInteger()</code></strong> determina se o valor fornecido é seja um número seguro.</p>
+<p>O método <strong><code>Number.isSafeInteger()</code></strong> determina se o valor fornecido é seja um número seguro.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}</div>
 
@@ -24,11 +24,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
  <li>cuja representação IEEE-754 não pode ser o resultado do arrendodamento de qualquer outro número inteiro para se ajustar ao IEEE-754.</li>
 </ul>
 
-<p>Exemplo, <code>2<sup>53</sup> - 1</code> é um inteiro seguro: pode ser exatamente representado, e nenhum outro numero arredondado existe para ele na represetanção IEEE-754. Em contexto, <code>2<sup>53</sup></code> <em>não</em> é um inteiro seguro: pode ser representado em IEEE-754, mas um inteiro <code>2<sup>53</sup> + 1</code> não pode ser diretamente representado em IEEE-754 mas instanciado do arrendamento de <code>2<sup>53</sup></code> sob arrendamento para o mais próximo e do arrendamento de zero a zero. Os inteiros seguros consistem em todos os inteiros de <code>-(2<sup>53</sup> - 1)</code> inclusive para <code>2<sup>53</sup> - 1</code> (sendo ± <code>9007199254740991</code> ou ± 9,007,199,254,740,991).  </p>
+<p>Exemplo, <code>2<sup>53</sup> - 1</code> é um inteiro seguro: pode ser exatamente representado, e nenhum outro numero arredondado existe para ele na represetanção IEEE-754. Em contexto, <code>2<sup>53</sup></code> <em>não</em> é um inteiro seguro: pode ser representado em IEEE-754, mas um inteiro <code>2<sup>53</sup> + 1</code> não pode ser diretamente representado em IEEE-754 mas instanciado do arrendamento de <code>2<sup>53</sup></code> sob arrendamento para o mais próximo e do arrendamento de zero a zero. Os inteiros seguros consistem em todos os inteiros de <code>-(2<sup>53</sup> - 1)</code> inclusive para <code>2<sup>53</sup> - 1</code> (sendo ± <code>9007199254740991</code> ou ± 9,007,199,254,740,991).  </p>
 
-<p>A manipulação de valores entre ~9 quadrilhões com precisão total requer o uso de <a href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic">arbitrary precision arithmetic library</a> (biblioteca aritmética de precisão arbitrária).  Veja <a href="http://floating-point-gui.de/">What Every Programmer Needs to Know about Floating Point Arithmetic</a> (o que todo programador precisa saber sobre aritmética de ponto flutuante) para mais informações sobre represetanções de número de ponto flutuante.</p>
+<p>A manipulação de valores entre ~9 quadrilhões com precisão total requer o uso de <a href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic">arbitrary precision arithmetic library</a> (biblioteca aritmética de precisão arbitrária).  Veja <a href="http://floating-point-gui.de/">What Every Programmer Needs to Know about Floating Point Arithmetic</a> (o que todo programador precisa saber sobre aritmética de ponto flutuante) para mais informações sobre represetanções de número de ponto flutuante.</p>
 
-<p>Para números inteiros maiores, considere o uso do tipo {{jsxref("BigInt")}}.</p>
+<p>Para números inteiros maiores, considere o uso do tipo {{jsxref("BigInt")}}.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 

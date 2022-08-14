@@ -173,7 +173,7 @@ more information on that area." /&gt;
 
 <h2 id="Los_elementos_marco_frame_deben_estar_etiquetados">Los elementos marco ('frame') deben estar etiquetados</h2>
 
-<p>Los elementos marco ('frame'), tanto {{htmlelement("iframe")}} como el obsoleto y antiguo {{htmlelement("frame")}}, deben tener un título para describir el contenido del marco. Utilice el atributo <code>title</code> para etiquetar un elemento 'frame'. Sin un título, los usuarios que usen una tecnología asistiva tienen que navegar dentro del marco para entender que contiene, lo que puede ser difícil y confuso. </p>
+<p>Los elementos marco ('frame'), tanto {{htmlelement("iframe")}} como el obsoleto y antiguo {{htmlelement("frame")}}, deben tener un título para describir el contenido del marco. Utilice el atributo <code>title</code> para etiquetar un elemento 'frame'. Sin un título, los usuarios que usen una tecnología asistiva tienen que navegar dentro del marco para entender que contiene, lo que puede ser difícil y confuso. </p>
 
 <p>El elemento <code>&lt;frame&gt;</code> ya no forma parte de la especificación HTML en la versión HTML5. El soporte podría ser abandonado por los navegadores en el futuro. Además, es difícil para los lectores de pantalla el navegar páginas con elementos <code>&lt;frame&gt;</code>. Para una mejor accesibilidad y mantenimiento futuro, se debe rediseñar cualquier página que use marcos y reemplazarlos con el uso de CSS para lograr un diseño similar.</p>
 
@@ -182,10 +182,10 @@ more information on that area." /&gt;
 <h3 id="Ejemplos_5">Ejemplos</h3>
 
 <pre>&lt;iframe
-    title="MDN Web docs"
-    width="300"
-    height="200"
-    src="https://developer.mozilla.org"&gt;
+    title="MDN Web docs"
+    width="300"
+    height="200"
+    src="https://developer.mozilla.org"&gt;
 &lt;/iframe&gt;
 
 </pre>
@@ -206,13 +206,13 @@ more information on that area." /&gt;
 
 <h2 id="Utilizar_el_atributo_title_para_describir_el_contenido_de_un_&lt;iframe>">Utilizar el atributo title para describir el contenido de un &lt;iframe&gt;</h2>
 
-<p>Asegurarse que los elementos {{htmlelement("iframe")}} tienen un atributo <code>title</code> para describir el contenido de un marco. Sin un título, los usuarios de tecnologías asistivas tienen que navegar dentro del marco para entender que contiene, lo que puede ser difícil y confuso. </p>
+<p>Asegurarse que los elementos {{htmlelement("iframe")}} tienen un atributo <code>title</code> para describir el contenido de un marco. Sin un título, los usuarios de tecnologías asistivas tienen que navegar dentro del marco para entender que contiene, lo que puede ser difícil y confuso. </p>
 
 <p>Una mejor práctica consiste en proveer un {{htmlelement("title")}} al documento encapsulado por el marco, con un contenido identico al atributo <code>title</code> del marco. (Asumiendo que el documento encapsulado es propio, si no, tratar de hacer coincidir el atributo <code>title</code> del marco con el título del documento.) Algunos lectores de pantalla reemplazan el contenido del atributo <code>title</code> con el contenido del {{htmlelement("title")}} del documento encapsulado. Es más seguro y accesible definir el mismo título en ambos lugares.</p>
 
 <h2 id="Contenido_con_imágenes_deben_ser_etiquetados">Contenido con imágenes deben ser etiquetados</h2>
 
-<p>Proporcionar un texto descriptivo para todas las imágenes y elementos parecidos a imágenes que tengan contenido (es decir que no sean decorativos. Esto incluye imágenes SVG, elementos {{htmlelement("img")}}, {{htmlelement("canvas")}}, {{htmlelement("map")}}, y {{htmlelement("area")}}, así como elementos {{htmlelement("input")}} donde este definido <code>type=image</code> y elementos {{htmlelement("object")}} donde el <code>type</code> empiece con <code>image/</code>. La forma típica de hacer esto es con el atributo <code>alt</code>. Asegurarse de que la descripción trasmite lo que muestra la imagen</p>
+<p>Proporcionar un texto descriptivo para todas las imágenes y elementos parecidos a imágenes que tengan contenido (es decir que no sean decorativos. Esto incluye imágenes SVG, elementos {{htmlelement("img")}}, {{htmlelement("canvas")}}, {{htmlelement("map")}}, y {{htmlelement("area")}}, así como elementos {{htmlelement("input")}} donde este definido <code>type=image</code> y elementos {{htmlelement("object")}} donde el <code>type</code> empiece con <code>image/</code>. La forma típica de hacer esto es con el atributo <code>alt</code>. Asegurarse de que la descripción trasmite lo que muestra la imagen</p>
 
 <h3 id="Ejemplo_3">Ejemplo</h3>
 

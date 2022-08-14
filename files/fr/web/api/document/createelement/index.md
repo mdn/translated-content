@@ -9,7 +9,9 @@ Dans un document [HTML](/fr/docs/Web/HTML), la méthode **`document.createElemen
 
 ## Syntaxe
 
-    var element = document.createElement(tagName[, options]);
+```js
+var element = document.createElement(tagName[, options]);
+```
 
 ### Paramètres
 

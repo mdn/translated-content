@@ -6,7 +6,7 @@ original_slug: Web/API/WindowEventHandlers/onlanguagechange
 ---
 <p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
 
-<p><code><strong>WindowEventHandlers.onlanguagechange</strong></code> 事件是一个属性，包含待执行的代码。当 {{domxref("Event")}} 类型的 {{event("languagechange")}} 事件被这些接口实现的对象（如 {{domxref("Window")}}、{{domxref("HTMLBodyElement")}} 或者 {{domxref("HTMLIFrameElement")}} 等对象）触发时，该事件属性的代码将被运行。这样的事件在浏览器通知更佳的语言列表已被更新后被触发。关于语言列表的介绍，您可访问：{{domxref("NavigatorLanguage.languages")}}。</p>
+<p><code><strong>WindowEventHandlers.onlanguagechange</strong></code> 事件是一个属性，包含待执行的代码。当 {{domxref("Event")}} 类型的 {{event("languagechange")}} 事件被这些接口实现的对象（如 {{domxref("Window")}}、{{domxref("HTMLBodyElement")}} 或者 {{domxref("HTMLIFrameElement")}} 等对象）触发时，该事件属性的代码将被运行。这样的事件在浏览器通知更佳的语言列表已被更新后被触发。关于语言列表的介绍，您可访问：{{domxref("NavigatorLanguage.languages")}}。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -16,7 +16,7 @@ original_slug: Web/API/WindowEventHandlers/onlanguagechange
 <h3 id="值">值</h3>
 
 <ul>
- <li><code>function</code> 是用户定义的函数的名字 ，不需要 <code>()</code> 的后缀或者任何形式参数, 或者是匿名函数，例如 <code>function(event) {...}</code>。事件处理程序总是有一个单一的形式参数，包含一个事件，这里有它的类型 {{domxref("Event")}}.</li>
+ <li><code>function</code> 是用户定义的函数的名字 ，不需要 <code>()</code> 的后缀或者任何形式参数, 或者是匿名函数，例如 <code>function(event) {...}</code>。事件处理程序总是有一个单一的形式参数，包含一个事件，这里有它的类型 {{domxref("Event")}}.</li>
 </ul>
 
 <h2 id="例子">例子</h2>
@@ -24,28 +24,13 @@ original_slug: Web/API/WindowEventHandlers/onlanguagechange
 <pre class="brush: js">window.onlanguagechange = function(ev) { alert("languagechange event detected!"); };
 </pre>
 
-<h2 id="Specifications" name="Specifications">标准</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">标准</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', '#handler-workerglobalscope-onlanguagechange', 'WindowEventHandler.onlanguagechange') }}</td>
-   <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td>初始版本</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-{{Compat("api.WindowEventHandlers.onlanguagechange")}}
+{{Compat}}
 
 <h2 id="参见">参见</h2>
 

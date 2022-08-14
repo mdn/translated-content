@@ -56,21 +56,25 @@ Afin d'éviter des ambiguïtés dangereuses, chaque propriété qui utilise `<cu
 
 Voici des identifiants valides
 
-    nono79            Un mélange de caractères alphanumériques.
-    ground-level      Un mélange de caractères alphanumériques avec un tiret.
-    -test             Un tiret suivi d'un mélange de caractères alphanumériques.
-    _internal         Un tiret bas suivi d'un mélange de caractères alphanumériques.
-    \22 toto          Un caractère Unicode suivi par une série de caractères alphanumériques.
-    bili\.bob         Le point est bien échappé.
+```
+nono79            Un mélange de caractères alphanumériques.
+ground-level      Un mélange de caractères alphanumériques avec un tiret.
+-test             Un tiret suivi d'un mélange de caractères alphanumériques.
+_internal         Un tiret bas suivi d'un mélange de caractères alphanumériques.
+\22 toto          Un caractère Unicode suivi par une série de caractères alphanumériques.
+bili\.bob         Le point est bien échappé.
+```
 
 Voici des identifiants invalides :
 
-    34rem             Il ne doit pas démarrer par un chiffre.
-    -12rad            Il ne doit pas démarrer par un tiret suivi d'un chiffre.
-    bili.bob          Il ne doit contenir que des caractères alphanumériques. _ et - n'ont pas besoin d'être échappés.
-    --toto            Il ne doit pas démarrer avec deux tirets.
-    'bilibob'         Ce n'est pas une valeur <user-ident> mais une {{cssxref("&lt;string&gt;")}}.
-    "bilibob"         Ce n'est pas une valeur <user-ident> mais une {{cssxref("&lt;string&gt;")}}.
+```
+34rem             Il ne doit pas démarrer par un chiffre.
+-12rad            Il ne doit pas démarrer par un tiret suivi d'un chiffre.
+bili.bob          Il ne doit contenir que des caractères alphanumériques. _ et - n'ont pas besoin d'être échappés.
+--toto            Il ne doit pas démarrer avec deux tirets.
+'bilibob'         Ce n'est pas une valeur <user-ident> mais une {{cssxref("&lt;string&gt;")}}.
+"bilibob"         Ce n'est pas une valeur <user-ident> mais une {{cssxref("&lt;string&gt;")}}.
+```
 
 ## Spécifications
 

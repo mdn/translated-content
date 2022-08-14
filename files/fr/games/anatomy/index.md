@@ -31,15 +31,17 @@ Le JavaScript moderne — comme décrit dans les prochaines sections — heureus
 
 JavaScript travaille beaucoup mieux avec des évènements et des fonctions de rappel. Les navigateur modernes s'efforcent d'appeler des méthodes au moment où elles sont nécessaires et mises en pause (ou font leur travail) le reste du temps. Il est de bonne pratique d'attacher votre code au moment le plus approprié. Pensez à quel moment votre fonction à besoin d'être appelée sur un interval de temps strict, à chaque image, ou seulement après que quelque chose se soit passé. Être plus spécifique avec le navigateur quand votre fonction à besoin d'être appelée permet au navigateur d'être optimisé une fois votre boucle appelée. De plus, cela peut rendre votre tâche plus aisée.
 
-Certain programmes ont besoin d'être lancés image-par-image alors pourquoi y attacher quelque chose d'autre que le taux de rafraîchissement du navigateur&nbsp;? Dans le web, `{{ domxref("window.requestAnimationFrame()") }}` sera la fondation de bien des boucles principales. Une fonction de rappel doit lui être passée quand elle est appelée. Cette fonction de rappel sera éxécutée à un moment précis avant le prochain rafraîchissement. Voici un exemple d'une simple boucle principale:
+Certain programmes ont besoin d'être lancés image-par-image alors pourquoi y attacher quelque chose d'autre que le taux de rafraîchissement du navigateur&nbsp;? Dans le web, `{{ domxref("window.requestAnimationFrame()") }}` sera la fondation de bien des boucles principales. Une fonction de rappel doit lui être passée quand elle est appelée. Cette fonction de rappel sera éxécutée à un moment précis avant le prochain rafraîchissement. Voici un exemple d'une simple boucle principale :
 
-    window.main = function () {
-      window.requestAnimationFrame( main );
+```js
+window.main = function () {
+  window.requestAnimationFrame( main );
 
-      //Qu'importe ce que votre boucle principale doit faire.
-    };
+  //Qu'importe ce que votre boucle principale doit faire.
+};
 
-    main(); //Débuter le cycle.
+main(); //Débuter le cycle.
+```
 
 **Note**: Dans chaque méthodes `main()` présentées ici, nous planifions un nouveau `requestAnimationFrame` avant de lancer le contenu de notre boucle. Ce n'est pas par accident et c'est considéré comme une meilleure pratique. Appeler le prochain `requestAnimationFrame` plus tôt assure que le navigateur la recevra à temps pour le planifier convenablement même si vous image courrante rate la fenêtre de synchronisation principale (VSync).
 
@@ -55,51 +57,57 @@ Pourtant n'imaginez pas que les animations requièrent un contrôle image-par-im
 
 Il y a deux problèmes évidents avec notre boucle principale précédente: `main()` pollue l'objet `{{ domxref("window") }}` (où sont stockées toutes les variables globales) et l'exemple donné ne nous permet pas de *stopper* la boucle à moins que l'onglet du navigateur ne soit fermé ou rafraîchit. Pour le premier problème, si vous désirez que la boucle principale tourne simplement sans y accéder directement, vous pouvez en crééer une fonction à accès immédiat -(FAI ou "Immediately-Invoked Function Expression - IIFE").
 
-    /*
-    * Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
-    * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
-    * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-    * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
-    */
+```js
+/*
+* Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
+* s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
+* penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
+* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+*/
 
-    ;(function () {
-      function main() {
-        window.requestAnimationFrame( main );
+;(function () {
+  function main() {
+    window.requestAnimationFrame( main );
 
-        // Contenu de votre boucle principale.
-      }
+    // Contenu de votre boucle principale.
+  }
 
-      main(); // Débute le cycle
-    })();
+  main(); // Débute le cycle
+})();
+```
 
 Quand le navigateur passe à travers la FAI, cela va définir votre boucle principale et immédiatement la mettre en file d'attente pour la prochaine image. Cela ne sera attaché à aucun objet et `main` (ou `main()` pour les méthodes) sera un nom valide inutilisé dans le reste de l'application, libre d'être défini comme quelque chose d'autre.
 
 Note: En pratique, il est plus courant de prévenir le prochain requestAnimationFrame() avec une déclaration "if", plutôt que d'appeler cancelAnimationFrame().
 
-Pour le second problème, arrêter la boucle principale, vous aurez besoin d'annuler l'appel à `main()` avec `{{ domxref("window.cancelAnimationFrame()") }}`. Vous aurez besoin de passer la valeur donneé par `cancelAnimationFrame()` en référence à `requestAnimationFrame()` quand elle a été appelée en dernier. Assumons que vos fonctions de jeu et les variables sont bâties dans un espace de nom appelé `MyGame`. Avec notre dernier exemple étendu, la boucle principale aura maintenant l'air de ceci:
+Pour le second problème, arrêter la boucle principale, vous aurez besoin d'annuler l'appel à `main()` avec `{{ domxref("window.cancelAnimationFrame()") }}`. Vous aurez besoin de passer la valeur donneé par `cancelAnimationFrame()` en référence à `requestAnimationFrame()` quand elle a été appelée en dernier. Assumons que vos fonctions de jeu et les variables sont bâties dans un espace de nom appelé `MyGame`. Avec notre dernier exemple étendu, la boucle principale aura maintenant l'air de ceci :
 
-    /*
-    * Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
-    * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
-    * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-    * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
-    *
-    * Assumons aussi que MyGame est défini précédemment.
-    */
+```js
+/*
+* Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
+* s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
+* penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
+* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+*
+* Assumons aussi que MyGame est défini précédemment.
+*/
 
-    ;(function () {
-      function main() {
-        MyGame.stopMain = window.requestAnimationFrame( main );
+;(function () {
+  function main() {
+    MyGame.stopMain = window.requestAnimationFrame( main );
 
-        // Contenu de votre boucle principale.
-      }
+    // Contenu de votre boucle principale.
+  }
 
-      main(); // Début du cycle
-    })();
+  main(); // Début du cycle
+})();
+```
 
 Nous avons maintenant une variable déclarée dans l'espace de nom `MyGame`, que nous appelons `stopMain`, qui contient la valeur de l'appel de notre boucle principale `requestAnimationFrame()` la plus récente. À tout moment, nous pouvons stopper la boucle principale en disant au navigateur d'annuler la requête qui correspond à notre valeur.
 
-    window.cancelAnimationFrame( MyGame.stopMain );
+```js
+window.cancelAnimationFrame( MyGame.stopMain );
+```
 
 La clé pour programmer une boucle principale, en JavaScript, est d'attacher n'importe quel évènement qui doit diriger votre action et porter attention aux systèmes interconnectés. Vous pourriez avoir différents composants dirigés par différents évènements. Cela paraît comme d'une complexité inutile mais cela peut être une bonne optimisation (pas nécessairement, bien sûr). Le problème c'est que vous ne programmez pas une boucle principale typique. En Javascript, vous utilisez la boucle principale du navigateur et vous essayez de le faire avec efficacité.
 
@@ -109,10 +117,10 @@ En fin de compte, en JavaScript, le navigateur roule sa propre boucle principale
 
 Les versions modernes de Firefox et Google Chrome (et probablement d'autres)*tentent* de connecter les rappels de `requestAnimationFrame` à leur fil principal au tout début de chaque image. De ce fait, le déroulement principal *essaye* d'être le plus possible comme ci-dessous:
 
-1.  Débuter une nouvelle image (pendant que la précédente est prise en charge par l'affichage).
-2.  Passer à travers la liste de retours `requestAnimationFrame` et les appeler.
-3.  Passer le ramasse-miettes et autres tâches par-images quand les retours ci-dessous cessent de controler le fil principal.
-4.  Se mettre en veille (à moins qu'un évènement interrompe la sieste du navigateur) jusqu'à ce que le moniteur ne soit prêt pour votre image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) et répète.
+1. Débuter une nouvelle image (pendant que la précédente est prise en charge par l'affichage).
+2. Passer à travers la liste de retours `requestAnimationFrame` et les appeler.
+3. Passer le ramasse-miettes et autres tâches par-images quand les retours ci-dessous cessent de controler le fil principal.
+4. Se mettre en veille (à moins qu'un évènement interrompe la sieste du navigateur) jusqu'à ce que le moniteur ne soit prêt pour votre image ([VSync](http://www.techopedia.com/definition/92/vertical-sync-vsync)) et répète.
 
 Vous pouvez considérer que développer une application en temps réél est comme avoir un temps donné pour faire le travail. Toutes les étapes ci-dessus doivent prendre effet toutes les 16.5 millisecondes pour fonctionner avec un affichage de 60Hz. Les navigateurs invoquent leur code aussitôt que possible pour donner un maximum de temps aux calculs. Votre fil principal va souvent débuter par les tâches qui ne sont même pas dans le fil principal (tel que la rasterisation ou les ombrages en WebGL). Les longs calculs peuvent être fait par un Web Worker ou une accélération matérielle en même temps que le navigateur utilise son propre fil principal pour passer le ramasse-miette, ces autres tâches, ou gérer les évènements asynchrones.
 
@@ -122,29 +130,33 @@ Bien que nous ne discutons pas du gain de temps, plusieurs navigateur ont un out
 
 Seule, cette valeur n'est pas très utile, considérant qu'il est relatif à un évènement peu intéressant, mais ils peut quand même être soustrait d'une autre prise de temps pour déterminer plus précisément combien de temps s'est déroulé entre ces deux poins. Pour obtenir une de ces prises de temps, vous pouvez appeler la fonction `window.performance.now()` et stocker le résultat dans une variable.
 
-    var tNow = window.performance.now();
+```js
+var tNow = window.performance.now();
+```
 
 Retournons sur le sujet de la boucle principale. Il vous arrivera souvent de vouloir savoir quand votre boucle principale a été invoquée. Parce que cela est commun, la fonction `window.requestAnimationFrame()` fourni toujours un `DOMHighResTimeStamp` avec un argument de retour quand elles sont éxécutées. Cela mène à une amélioration de notre boucle précédente.
 
-    /*
-    * Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
-    * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
-    * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-    * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
-    *
-    * Assumons aussi que MyGame est défini précédemment.
-    */
+```js
+/*
+* Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
+* s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
+* penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
+* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+*
+* Assumons aussi que MyGame est défini précédemment.
+*/
 
-    ;(function () {
-      function main( tFrame ) {
-        MyGame.stopMain = window.requestAnimationFrame( main );
+;(function () {
+  function main( tFrame ) {
+    MyGame.stopMain = window.requestAnimationFrame( main );
 
-        // Contenu de votre boucle principale.
-        // tFrame, provenant de "function main ( tFrame )", est maintenant un DOMHighResTimeStamp (Temps Haute Résolution du DOM) fourni par rAF.
-      }
+    // Contenu de votre boucle principale.
+    // tFrame, provenant de "function main ( tFrame )", est maintenant un DOMHighResTimeStamp (Temps Haute Résolution du DOM) fourni par rAF.
+  }
 
-      main(); // Débute le cycle
-    })();
+  main(); // Débute le cycle
+})();
+```
 
 Plusieurs autres optimisations sont possibles et cela dépend vraiment de ce que votre jeu tente d'accomplir. Le genre de votre jeu va visiblement faire la différence mais il peut être aussi subtil que cela. Vous pourriez dessiner un pixel à la fois sur un canvas ou vous pourriez étager des éléments du DOM (incluant de multiples canvas de WebGL avec des arrières-plans transparents si vous le désirez) en une hierarchie complexe. Chacunes de ces solutions mènera à des contraintes et opportunités différentes.
 
@@ -158,25 +170,27 @@ Vous aurez besoin de faire un choix difficile concernant votre boucle principale
 
 Si votre jeu peut atteindre le maximum du taux de rafraîchissement sur n'importe quel matériel que vous supportez, alors votre travail est plutôt facile. Vous pouvez simplement mettre à jour, effectuer le rendu, et ne rien faire avant la synchronisation verticale (VSync).
 
-    /*
-    * Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
-    * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
-    * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-    * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
-    *
-    * Assumons aussi que MyGame est défini précédemment.
-    */
+```js
+/*
+* Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
+* s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
+* penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
+* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+*
+* Assumons aussi que MyGame est défini précédemment.
+*/
 
-    ;(function () {
-      function main( tFrame ) {
-        MyGame.stopMain = window.requestAnimationFrame( main );
+;(function () {
+  function main( tFrame ) {
+    MyGame.stopMain = window.requestAnimationFrame( main );
 
-        update( tFrame ); //Appelez votre méthode de mise à jour. Dans notre cas, nous lui donnons la capture de temps rAF.
-        render();
-      }
+    update( tFrame ); //Appelez votre méthode de mise à jour. Dans notre cas, nous lui donnons la capture de temps rAF.
+    render();
+  }
 
-      main(); // Start the cycle
-    })();
+  main(); // Start the cycle
+})();
+```
 
 Si le maximum du taux de rafraîchissement ne peut être atteind, les paramètres de qualités pourraient être mis à jour pour rester sous notre gain en temps. L'exemple le plus célèbre de ce concept est le jeu de id Software, RAGE. Ce jeu a retiré à l'utilisateur le contrôle afin de conserver son temps de calcul à environ 16ms (ou environ 60ips). Si le calcul prenait trop de temps alors la résolution serait diminuée, les textures et autres éléments échoueraient au chargement et à l'affichage, et ainsi de suite. Ce cas (non-web) a créé plusieurs hypothèses et faits:
 
@@ -191,7 +205,7 @@ Si le maximum du taux de rafraîchissement ne peut être atteind, les paramètre
 
 D'autres méthodes d'approcher le problème existent.
 
-Une technique commune est de mettre à jour la simulation à une fréquence constante et dessiner autant (ou au moins) que le taux actuel le permet. Cette méthode de mise à jour peut continuer à boucler sans se soucier de ce que l'utilisateur voit. Cette méthode peut voir la dernière mise à jour, et quand elle est arrivée. Quand le dessin sait quand il est représenté, et le temps simulé pour la dernière mise à jour, il peut prédire une image plausible à dessiner. Cela n'a pas d'importance si c'est plus fréquent que la mise à jour officielle (ou même moins fréquente). La méthode de mise à jour établis des points de contrôle, autant que le système le permet, la méthode de rendu va dessiner autour de ces intants de temps. Il y a plusieurs manières de séparer la méthode de mise à jour dans les standards du web:
+Une technique commune est de mettre à jour la simulation à une fréquence constante et dessiner autant (ou au moins) que le taux actuel le permet. Cette méthode de mise à jour peut continuer à boucler sans se soucier de ce que l'utilisateur voit. Cette méthode peut voir la dernière mise à jour, et quand elle est arrivée. Quand le dessin sait quand il est représenté, et le temps simulé pour la dernière mise à jour, il peut prédire une image plausible à dessiner. Cela n'a pas d'importance si c'est plus fréquent que la mise à jour officielle (ou même moins fréquente). La méthode de mise à jour établis des points de contrôle, autant que le système le permet, la méthode de rendu va dessiner autour de ces intants de temps. Il y a plusieurs manières de séparer la méthode de mise à jour dans les standards du web :
 
 - Dessiner à chaque `requestAnimationFrame` et mettre à jour {{ domxref("window.setInterval") }} ou {{ domxref("window.setTimeout") }}.
 
@@ -205,7 +219,7 @@ Une technique commune est de mettre à jour la simulation à une fréquence cons
 
   - Cela se met en veille jusqu'à ce que `requestAnimationFrame` est appelée et ne pollue pas le fil principal, et de plus vous ne vous reposez pas sur d'anciennes méthodes. À nouveau, c'est un peu plus complexe que les deux premières options, et *débuter* chaque mise à jour sera bloqué tant que le navigateur ne décide de lancer les retours rAF.
 
-Chacune de ces méthodes ont un compromis similaire:
+Chacune de ces méthodes ont un compromis similaire :
 
 - Les utilisateurs peuvent éviter le rendu d'images ou interpoler celles en sus dépendant de leurs performances.
 - Vous pouvez compter sur tous les utilisateurs mettant à jours les variables non-cosmetiques à la même fréquence constante, moins quelques hoquets.
@@ -217,69 +231,71 @@ Une méthode séparée de mise à jour et de dessin pourrait avoir l'air de l'ex
 
 _Note: Cet exemple spécifiquement, aurait besoin d'une relecture._
 
-    /*
-    * Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
-    * s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
-    * penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
-    * marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
-    *
-    * Assumons aussi que MyGame est défini précédemment.
-    *
-    *
-    * MyGame.lastRender fait le suivi du dernier poinçon de temps fourni par requestAnimationFrame.
-    * MyGame.lastTick fait le suivi de la dernière mise à jour. Toujours incrémenté par tickLength.
-    * MyGame.tickLength est à quelle fréquence le jeu est mis à jour. C'est 20 Hz (50ms) ici.
-    *
-    * timeSinceTick est le temps entre un retour de requestAnimationFrame et la dernière mise à jour.
-    * numTicks est combien de mises à jour auraient dû avoir lieu entre 2 rendus d'images.
-    *
-    * render() se voit passé tFrame car il est considéré que la méthode de rendu va calculer
-               combien de temps se sera écoulé depuis la mise à jour la plus récente pour
-               extrapolation (purement cosmétique pour des systèmes rapides). La scène est dessinée.
-    *
-    * update() calcule l'état du jeu comme point donné dans le temps. Ça devrait toujours être
-               incrémenté par tickLength. C'est l'autorité de l'état du jeu. On lui passe le
-               DOMHighResTimeStamp pour le temps que cela représente (qui, à nouveau, est toujours
-               la dernière mise à jour + MyGame.tickLength qu'une pause ne soit ajoutée, etc.)
-    *
-    * setInitialState() réalise n'importe quel tâche mise de côté avant que la boucle principale ne doive tourner.
-    *                   Ceci est juste un exemple générique d'une fonction que vous devriez ajouter.
-    */
+```js
+/*
+* Débuter avec le point virgue au cas où le code qui réside au-dessus de cet exemple
+* s'appuie sur l'insertion automatique de point virgule (ASI). Le navigateur peut alors accidentellement
+* penser que c'est un exemple complet provenant de la ligne précédente. Le point virgule de tête
+* marque le début de notre nouvelle ligne si la précédente n'était pas vide ou complétée.
+*
+* Assumons aussi que MyGame est défini précédemment.
+*
+*
+* MyGame.lastRender fait le suivi du dernier poinçon de temps fourni par requestAnimationFrame.
+* MyGame.lastTick fait le suivi de la dernière mise à jour. Toujours incrémenté par tickLength.
+* MyGame.tickLength est à quelle fréquence le jeu est mis à jour. C'est 20 Hz (50ms) ici.
+*
+* timeSinceTick est le temps entre un retour de requestAnimationFrame et la dernière mise à jour.
+* numTicks est combien de mises à jour auraient dû avoir lieu entre 2 rendus d'images.
+*
+* render() se voit passé tFrame car il est considéré que la méthode de rendu va calculer
+            combien de temps se sera écoulé depuis la mise à jour la plus récente pour
+            extrapolation (purement cosmétique pour des systèmes rapides). La scène est dessinée.
+*
+* update() calcule l'état du jeu comme point donné dans le temps. Ça devrait toujours être
+            incrémenté par tickLength. C'est l'autorité de l'état du jeu. On lui passe le
+            DOMHighResTimeStamp pour le temps que cela représente (qui, à nouveau, est toujours
+            la dernière mise à jour + MyGame.tickLength qu'une pause ne soit ajoutée, etc.)
+*
+* setInitialState() réalise n'importe quel tâche mise de côté avant que la boucle principale ne doive tourner.
+*                   Ceci est juste un exemple générique d'une fonction que vous devriez ajouter.
+*/
 
-    ;(function () {
-      function main( tFrame ) {
-        MyGame.stopMain = window.requestAnimationFrame( main );
-        var nextTick = MyGame.lastTick + MyGame.tickLength;
-        var numTicks = 0;
+;(function () {
+  function main( tFrame ) {
+    MyGame.stopMain = window.requestAnimationFrame( main );
+    var nextTick = MyGame.lastTick + MyGame.tickLength;
+    var numTicks = 0;
 
-        //Si tFrame < nextTick alors 0 ticks doit être mis à jour (0 est par défaut pour numTicks).
-        //Si tFrame = nextTick alors 1 tick doit être mis à jour (et ainsi de suite).
-        //Note: Comme nous le mentionons dans le sommaire, vous devriez faire un suivi de la taille de numTicks.
-        //S'il est important, alors soit votre jeu est en veille, soit votre machine ne répond plus.
-        if (tFrame > nextTick) {
-          var timeSinceTick = tFrame - MyGame.lastTick;
-          numTicks = Math.floor( timeSinceTick / MyGame.tickLength );
-        }
+    //Si tFrame < nextTick alors 0 ticks doit être mis à jour (0 est par défaut pour numTicks).
+    //Si tFrame = nextTick alors 1 tick doit être mis à jour (et ainsi de suite).
+    //Note: Comme nous le mentionons dans le sommaire, vous devriez faire un suivi de la taille de numTicks.
+    //S'il est important, alors soit votre jeu est en veille, soit votre machine ne répond plus.
+    if (tFrame > nextTick) {
+      var timeSinceTick = tFrame - MyGame.lastTick;
+      numTicks = Math.floor( timeSinceTick / MyGame.tickLength );
+    }
 
-        queueUpdates( numTicks );
-        render( tFrame );
-        MyGame.lastRender = tFrame;
-      }
+    queueUpdates( numTicks );
+    render( tFrame );
+    MyGame.lastRender = tFrame;
+  }
 
-      function queueUpdates( numTicks ) {
-        for(var i=0; i < numTicks; i++) {
-          MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; //Maitenant lastTick est ce tick.
-          update( MyGame.lastTick );
-        }
-      }
+  function queueUpdates( numTicks ) {
+    for(var i=0; i < numTicks; i++) {
+      MyGame.lastTick = MyGame.lastTick + MyGame.tickLength; //Maitenant lastTick est ce tick.
+      update( MyGame.lastTick );
+    }
+  }
 
-      MyGame.lastTick = performance.now();
-      MyGame.lastRender = MyGame.lastTick; //Prétendre que le premier dessin était sur la première mise à jour.
-      MyGame.tickLength = 50; //Cela positionne votre simulation pour tourner à 20Hz (50ms)
+  MyGame.lastTick = performance.now();
+  MyGame.lastRender = MyGame.lastTick; //Prétendre que le premier dessin était sur la première mise à jour.
+  MyGame.tickLength = 50; //Cela positionne votre simulation pour tourner à 20Hz (50ms)
 
-      setInitialState();
-      main(performance.now()); // Débute le cycle
-    })();
+  setInitialState();
+  main(performance.now()); // Débute le cycle
+})();
+```
 
 Une autre alternative est de simplement faire certaines choses moins souvent. Si une portion de votre boucle de mise à jour est difficile à calculer et intense (en temps), vous devrier considérer réduire sa fréquence et, idéalement, la diviser en portions à travers une période plus allongée. Un exemple implicite de cela est rencontré dans "The Artillery Blog for Artillery Games", où ils [ajustent leur taux de création de miettes](http://blog.artillery.com/2012/10/browser-garbage-collection-and-framerate.html) pour optimiser leur ramasse-miettes. Apparemment, le nettoyage des ressources n'est pas sensible au temps (spécialement si le nettoyage est plus dérangeant que le la miette elle-même).
 

@@ -15,7 +15,7 @@ original_slug: Glossaire/SQL
 
 ### Connaissances Générales
 
-- {{Interwiki("wikipedia", "SQL")}} sur Wikipédia
+- [SQL](https://fr.wikipedia.org/wiki/Structured_Query_Language) sur Wikipédia
 
 ### Apprendre le SQL
 

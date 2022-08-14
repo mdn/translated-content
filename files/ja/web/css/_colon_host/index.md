@@ -31,7 +31,9 @@ translation_of: Web/CSS/:host
 
 ## 構文
 
-    :host
+```css
+:host
+```
 
 ## 例
 

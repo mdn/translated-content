@@ -17,7 +17,9 @@ La propriété en lecture seule **`dir`** de l'interface {{domxref ("Notificatio
 
 ## Syntaxe
 
-    Notification.dir
+```js
+Notification.dir
+```
 
 ### Valeur
 

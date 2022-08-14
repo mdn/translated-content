@@ -11,9 +11,9 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 <div>
 <div>{{jsSidebar("Statements")}}</div>
 
-<div>A condicional <strong>switch </strong>avalia uma <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">expressão</a>, combinando o valor da expressão para um cláusula <strong>case</strong>, e executa as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements">instruções</a>  associadas ao <strong>case</strong>.</div>
+<div>A condicional <strong>switch </strong>avalia uma <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">expressão</a>, combinando o valor da expressão para um cláusula <strong>case</strong>, e executa as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements">instruções</a>  associadas ao <strong>case</strong>.</div>
 
-<div> </div>
+<div> </div>
 </div>
 
 <p id="sect1">{{EmbedInteractiveExample("pages/js/statement-switch.html")}}</p>
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <dl>
  <dt><code>expressão</code></dt>
- <dd>Uma expressão que será comparada á cada cláusula <strong>case</strong>.</dd>
+ <dd>Uma expressão que será comparada á cada cláusula <strong>case</strong>.</dd>
  <dt><code>case expressão</code></dt>
  <dd>Uma cláusula <strong>case</strong> que será comparada á expressão.</dd>
 </dl>
@@ -47,15 +47,15 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <p>Se a condição for correspondida, o programa executa as instruções asssociadas. Se múltiplos casos corresponderem o valor, o primeiro caso que corresponder é selecionado, mesmo se os casos não forem iguais entre si.</p>
 
-<p>O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparação de igualdade estrita</a>, <code>===) </code>transferindo assim o controle para a cláusula encontrada e em seguida executando as instruções associadas. Caso nenhum caso seja correspondido, então o programa procura pela cláusula opcional <code>default</code>, que, se encontrado, tem o controle transferido a ele, executando suas instruções associadas. Se não houver uma cláusula <code>default</code>, o programa continua a execução da instrução seguindo para o final do <code>switch</code>. Por convenção, a cláusula default é a última, mas não é algo obrigatório.</p>
+<p>O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparação de igualdade estrita</a>, <code>===) </code>transferindo assim o controle para a cláusula encontrada e em seguida executando as instruções associadas. Caso nenhum caso seja correspondido, então o programa procura pela cláusula opcional <code>default</code>, que, se encontrado, tem o controle transferido a ele, executando suas instruções associadas. Se não houver uma cláusula <code>default</code>, o programa continua a execução da instrução seguindo para o final do <code>switch</code>. Por convenção, a cláusula default é a última, mas não é algo obrigatório.</p>
 
-<p>A instrução opcional <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> associada com cada <code>case</code> garante que o programa saia da condicional <code>switch</code> assim que a instrução correspondente for executada  e executa a instrução que segue logo após o switch. Caso <code>break</code> seja omitido, o programa continua a execução para a próxima instrução dentro de <code>switch</code>. </p>
+<p>A instrução opcional <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> associada com cada <code>case</code> garante que o programa saia da condicional <code>switch</code> assim que a instrução correspondente for executada  e executa a instrução que segue logo após o switch. Caso <code>break</code> seja omitido, o programa continua a execução para a próxima instrução dentro de <code>switch</code>. </p>
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
-<h3 id="Example:_Using_switch" name="Example:_Using_switch">Exemplo: Usando <code>switch</code></h3>
+<h3 id="Example:_Using_switch" name="Example:_Using_switch">Exemplo: Usando <code>switch</code></h3>
 
-<p>No exemplo a seguir, if <code>expr</code> é avaliado como "Bananas", o programa corresponde o valor com o <code>case</code> "Bananas" e executa a instrução associada. Quando <code>break</code> for encontrado, o programa para (break), saindo de <code>switch</code> e executa a instrução localizada após o <code>switch</code>. Se <code>break</code> fosse omitido, a instrução para "Cherries" também seria executada.</p>
+<p>No exemplo a seguir, if <code>expr</code> é avaliado como "Bananas", o programa corresponde o valor com o <code>case</code> "Bananas" e executa a instrução associada. Quando <code>break</code> for encontrado, o programa para (break), saindo de <code>switch</code> e executa a instrução localizada após o <code>switch</code>. Se <code>break</code> fosse omitido, a instrução para "Cherries" também seria executada.</p>
 
 <pre class="brush: js">switch (expr) {
   case "Laranjas":
@@ -87,20 +87,20 @@ console.log("Tem algo mais que você gostaria de levar?");
 
 <pre class="brush: js">var foo = 0;
 switch (foo) {
-    case -1:
-        console.log('1 negativo');
+    case -1:
+        console.log('1 negativo');
         break;
-    case 0: // foo é 0 então aqui o critério foi correspondido, então esse bloco vai rodar
-        console.log(0)
-        // NOTA: o break esquecido deveria estar aqui
-    case 1: // nenhuma instrução break em 'case 0:' então essa instrução vai rodar também
-        console.log(1);
-        break; // o programa encontra esse break então não vai continuar para o 'case 2:'
-    case 2:
-        console.log(2);
-        break;
-    default:
-        console.log('default');
+    case 0: // foo é 0 então aqui o critério foi correspondido, então esse bloco vai rodar
+        console.log(0)
+        // NOTA: o break esquecido deveria estar aqui
+    case 1: // nenhuma instrução break em 'case 0:' então essa instrução vai rodar também
+        console.log(1);
+        break; // o programa encontra esse break então não vai continuar para o 'case 2:'
+    case 2:
+        console.log(2);
+        break;
+    default:
+        console.log('default');
 }</pre>
 
 <h3 id="Methods_for_Multi-criteria_Case" name="Methods_for_Multi-criteria_Case">Exemplo: Métodos para múltiplos casos</h3>
@@ -111,41 +111,41 @@ switch (foo) {
 
 <h4 id="Multi-Caso_-_Operação_Simples">Multi-Caso - Operação Simples</h4>
 
-<p>Esse método toma vantagem do fato de não existir um break após um case e irá continuara  executar o próximo case independentemente se o case corresponde ao critério. Veja o título desta seção "O que acontece se eu esquecer um break?"</p>
+<p>Esse método toma vantagem do fato de não existir um break após um case e irá continuara  executar o próximo case independentemente se o case corresponde ao critério. Veja o título desta seção "O que acontece se eu esquecer um break?"</p>
 
 <p>Esse é um exemplo de uma operação sequencial simples com a instrução switch, onde quatro valores diferentes fazem a mesma coisa..</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">var Animal = 'Girafa';
 switch (Animal) {
-    case 'Vaca':
-    case 'Girafa':
-    case 'Cachorro':
-    case 'Porco':
-        alert('Esse animal irá para Arca de Noé');
-        break;
+    case 'Vaca':
+    case 'Girafa':
+    case 'Cachorro':
+    case 'Porco':
+        alert('Esse animal irá para Arca de Noé');
+        break;
     case 'Dinossauro':
-    default:
-        alert('Esse animal não vai.');
+    default:
+        alert('Esse animal não vai.');
 }</pre>
 
-<h4 id="Multi-Caso_-_Operações_encadeadas">Multi-Caso - Operações encadeadas </h4>
+<h4 id="Multi-Caso_-_Operações_encadeadas">Multi-Caso - Operações encadeadas </h4>
 
-<p>Esse é um exemplo de múltiplas operações squenciais usando a instrução <code>switch</code>, onde, dependendo do número inteiro, você poderá receber outputs diferentes. Isso mostra que você pode alterar a ordem que você insere as instruções de <code>case</code>, e isso não precisa ser uma sequência numérica. Em JavaScript, você pode até mesmo misturar definições de strings dentro desses <code>cases</code>. </p>
+<p>Esse é um exemplo de múltiplas operações squenciais usando a instrução <code>switch</code>, onde, dependendo do número inteiro, você poderá receber outputs diferentes. Isso mostra que você pode alterar a ordem que você insere as instruções de <code>case</code>, e isso não precisa ser uma sequência numérica. Em JavaScript, você pode até mesmo misturar definições de strings dentro desses <code>cases</code>. </p>
 
 <p>This is an example of a multiple-operation sequential switch statement, where, depending on the provided integer, you can receive different output. This shows you that it wil traverse in the order that you put the case statements, and it does not have to be numerically sequential. In JavaScript, you can even mix in definitions of strings into these case statements as well.</p>
 
 <pre class="brush: js">var foo = 1;
 var output = 'Output: ';
 switch (foo) {
-    case 10:
+    case 10:
         output += 'Então ';
-    case 1:
+    case 1:
         output += 'Qual ';
         output += 'É ';
-    case 2:
-        output += 'O Seu ';
+    case 2:
+        output += 'O Seu ';
     case 3:
         output += 'Nome';
     case 4:
@@ -156,8 +156,8 @@ switch (foo) {
         output += '!';
         alert(output);
         break;
-    default:
-        alert('Favor escolher um número de 0 à 6!');
+    default:
+        alert('Favor escolher um número de 0 à 6!');
 }</pre>
 
 <p>Output para esse exemplo:</p>
@@ -201,7 +201,7 @@ switch (foo) {
 
 <h2 id="Especificações">Especificações</h2>
 
-<p> </p>
+<p> </p>
 
 <table class="standard-table">
  <tbody>
@@ -219,67 +219,19 @@ switch (foo) {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-12.11', 'switch statement')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-switch-statement', 'switch statement')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.statements.switch")}}
 
 <h2 id="See_also" name="See_also">See also</h2>
 

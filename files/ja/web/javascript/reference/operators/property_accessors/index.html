@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 
 <h3 id="Dot_notation">ドット表記法</h3>
 
-<p><code><var>object.property</var></code> の構文では、 <code>property</code> は有効な JavaScript の <a href="/ja/docs/Glossary/Identifier">識別子</a>でなければなりません。 (ECMAScript 標準では、プロパティの名前は技術的には "IdentifierNames" であり、 "Identifiers" ではないので、予約語を使用することができますがお勧めしません)。例えば、 <code><var>object</var>.$1</code> は有効であるのに対し、 <code><var>object</var>.1</code> は有効ではありません。</p>
+<p><code><var>object.property</var></code> の構文では、 <code>property</code> は有効な JavaScript の <a href="/ja/docs/Glossary/Identifier">識別子</a>でなければなりません。 (ECMAScript 標準では、プロパティの名前は技術的には "IdentifierNames" であり、 "Identifiers" ではないので、予約語を使用することができますがお勧めしません)。例えば、 <code><var>object</var>.$1</code> は有効であるのに対し、 <code><var>object</var>.1</code> は有効ではありません。</p>
 
 <pre class="brush: js">const variable = <var>object</var>.<var>property_name;</var>
 
@@ -47,7 +47,7 @@ object.1 = 'bar';        // SyntaxError
 console.log(object.1);   // SyntaxError
 </pre>
 
-<p>ここで、 <code>createElement</code> というメソッドを <code>document</code> から取得し、呼び出します。</p>
+<p>ここで、 <code>createElement</code> というメソッドを <code>document</code> から取得し、呼び出します。</p>
 
 <pre class="brush: js">document.createElement('pre')
 </pre>

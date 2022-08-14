@@ -5,13 +5,13 @@ translation_of: Web/API/WebGLShader
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<div><strong>WebGLShader</strong> 는 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</a> 의 일부이며 정점 혹은 프래그먼트 셰이더가 될 수 있다. {{domxref("WebGLProgram")}} 는 두 타입의 셰이더 모두를 요구한다.</div>
+<div><strong>WebGLShader</strong> 는 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL API</a> 의 일부이며 정점 혹은 프래그먼트 셰이더가 될 수 있다. {{domxref("WebGLProgram")}} 는 두 타입의 셰이더 모두를 요구한다.</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="설명">설명</h2>
 
-<p><strong>WebGLShader</strong> 를 생성하려면 {{domxref("WebGLRenderingContext.createShader")}}를 사용한다. 그러고 나서는  {{domxref("WebGLRenderingContext.shaderSource()")}}를 사용해서 GLSL 소스 코드를 연결한다. 마지막으로{{domxref("WebGLRenderingContext.compileShader()")}}를 호출하고 셰이더를 컴파일한다. 이 시점에서 <strong>WebGLShader</strong> 는 여전히 사용할 수 있는 형식은 아니고{{domxref("WebGLProgram")}}에 부착되어야 한다.</p>
+<p><strong>WebGLShader</strong> 를 생성하려면 {{domxref("WebGLRenderingContext.createShader")}}를 사용한다. 그러고 나서는  {{domxref("WebGLRenderingContext.shaderSource()")}}를 사용해서 GLSL 소스 코드를 연결한다. 마지막으로{{domxref("WebGLRenderingContext.compileShader()")}}를 호출하고 셰이더를 컴파일한다. 이 시점에서 <strong>WebGLShader</strong> 는 여전히 사용할 수 있는 형식은 아니고{{domxref("WebGLProgram")}}에 부착되어야 한다.</p>
 
 <pre class="brush: js">function createShader (gl, sourceCode, type) {
   // 셰이더 타입 gl.VERTEX_SHADER 또는 gl.FRAGMENT_SHADER 중 하나를 컴파일한다.
@@ -26,7 +26,7 @@ translation_of: Web/API/WebGLShader
 }
 </pre>
 
-<p>셰이더 부착에 관한 정보는 {{domxref("WebGLProgram")}} 를 참고한다.</p>
+<p>셰이더 부착에 관한 정보는 {{domxref("WebGLProgram")}} 를 참고한다.</p>
 
 <h2 id="예시들">예시들</h2>
 
@@ -55,22 +55,9 @@ var vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER)
 var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
 </pre>
 
-<h2 id="명세들">명세들</h2>
+<h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">코멘트</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.8", "WebGLShader")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

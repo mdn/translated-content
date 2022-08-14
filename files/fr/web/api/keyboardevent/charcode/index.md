@@ -21,7 +21,9 @@ Pour des constantes équivalant ces codes numériques, voir {{ domxref("Keyboard
 
 ## Syntaxe
 
-    var value = event.charCode;
+```js
+var value = event.charCode;
+```
 
 - _`value`_ est la valeur Unicode du caractère associé à la touche pressée.
 

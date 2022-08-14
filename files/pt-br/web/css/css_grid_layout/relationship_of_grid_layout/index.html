@@ -3,15 +3,15 @@ title: Relationship of grid layout to other layout methods
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
-<p> </p>
+<p> </p>
 
 <p>O CSS Grid Layout foi projetado para funcionar junto com outras partes do CSS, como parte de um sistema completo para fazer o layout. Neste guia, explicarei como uma grade se encaixa com outras técnicas que você já pode estar usando.</p>
 
-<h2 id="Grid_e_flexbox">Grid e flexbox</h2>
+<h2 id="Grid_e_flexbox">Grid e flexbox</h2>
 
 <p>A diferença básica entre CSS Grid Layout e CSS Flexbox Layout é que o flexbox foi projetado para layout em uma dimensão - uma linha ou uma coluna. A grade foi projetada para layout bidimensional - linhas e colunas ao mesmo tempo. As duas especificações compartilham alguns recursos comuns, e se você já aprendeu a usar o flexbox, as semelhanças devem ajudá-lo a se familiarizar com o Grid.</p>
 
-<h3 id="Layout_unidimensional_versus_bidimensional">Layout unidimensional versus bidimensional</h3>
+<h3 id="Layout_unidimensional_versus_bidimensional">Layout unidimensional versus bidimensional</h3>
 
 <p>Um exemplo simples pode demonstrar a diferença entre layouts unidimensionais e bidimensionais.</p>
 
@@ -19,7 +19,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>Eu também defini a propriedade {{cssxref ("flex-wrap")}} para agrupar, de modo que, se o espaço no contêiner ficar muito estreito para manter a base flexível, os itens serão agrupados em uma nova linha.</p>
 
-<p> </p>
+<p> </p>
 
 <div id="onedtwod">
 <div class="hidden">
@@ -62,21 +62,21 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('onedtwod', '500', '230') }}</p>
 
-<p> </p>
+<p> </p>
 
 <p>Na imagem, você pode ver que dois itens foram envolvidos em uma nova linha. Esses itens estão compartilhando o espaço disponível e não se alinhando abaixo dos itens acima. Isso ocorre porque quando você envolve itens flexíveis, cada nova linha (ou coluna ao trabalhar por coluna) se torna um novo contêiner flexível. Distribuição de espaço acontece em toda a linha.</p>
 
 <p>Uma questão comum, então, é como alinhar esses itens. É aqui que você deseja um método de layout bidimensional: Você quer controlar o alinhamento por linha e coluna, e é aí que a grade entra.</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="The_same_layout_with_CSS_grids">The same layout with CSS grids</h3>
 
 <p>Neste próximo exemplo, eu crio o mesmo layout usando Grid. Desta vez, temos três faixas de coluna 1fr. Não precisamos definir nada nos itens em si; eles se estabelecerão em cada célula da grade criada. Como você pode ver, eles ficam em uma grade rígida, alinhando-se em linhas e colunas. Com cinco itens, temos uma lacuna no final da segunda linha.</p>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>
 
 <div class="Two_Dimensional_With_Grid">
 <div class="hidden">
@@ -137,7 +137,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>The alignment properties from the flexbox specification have been added to a new specification called <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>. This means that they can be used in other specifications, including Grid Layout. In the future, they may well apply to other layout methods as well.</p>
 
-<p>In a later guide in this series, I’ll be taking a proper look at Box Alignment and how it works in Grid Layout. For now, here is a comparison between simple examples of flexbox and grid.</p>
+<p>In a later guide in this series, I’ll be taking a proper look at Box Alignment and how it works in Grid Layout. For now, here is a comparison between simple examples of flexbox and grid.</p>
 
 <p>In the first example, which uses flexbox, I have a container with three items inside. The wrapper {{cssxref("min-height")}} is set, so it defines the height of the flex container. I have set {{cssxref("align-items")}} on the flex container to <code>flex-end</code> so the items will line up at the end of the flex container. I have also set the {{cssxref("align-self")}} property on <code>box1</code> so it will override the default and stretch to the height of the container and on <code>box2</code> so it aligns to the start of the flex container.</p>
 
@@ -230,7 +230,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <h3 id="The_fr_unit_and_flex-basis">The <code>fr</code> unit and <code>flex-basis</code></h3>
 
-<p>We have already seen how the <code>fr</code> unit works to assign a proportion of available space in the grid container to our grid tracks. The <code>fr</code> unit, when combined with the {{cssxref("minmax", "minmax()")}} function can give us very similar behavior to the <code>flex</code> properties in flexbox while still enabling the creation of a layout in two dimensions.</p>
+<p>We have already seen how the <code>fr</code> unit works to assign a proportion of available space in the grid container to our grid tracks. The <code>fr</code> unit, when combined with the {{cssxref("minmax", "minmax()")}} function can give us very similar behavior to the <code>flex</code> properties in flexbox while still enabling the creation of a layout in two dimensions.</p>
 
 <p>If we look back at the example where I demonstrated the difference between one and two-dimensional layouts, you can see there is a difference between the way of the two layouts work responsively. With the flex layout, if we drag our window wider and smaller, the flexbox does a nice job of adjusting the number of items in each row according to the available space. If we have a lot of space all five items can fit on one row. If we have a very narrow container we may only have space for one.</p>
 
@@ -278,7 +278,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <h3 id="A_flexible_number_of_tracks">A flexible number of tracks</h3>
 
-<p>This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining <code>auto-fill</code> and the {{cssxref("minmax", "minmax()")}} function. In this next example, I create auto filled tracks with <code>minmax</code>. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be <code>1fr</code>. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the <code>1fr</code> maximum as an instruction to share out the remaining space between the items.</p>
+<p>This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining <code>auto-fill</code> and the {{cssxref("minmax", "minmax()")}} function. In this next example, I create auto filled tracks with <code>minmax</code>. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be <code>1fr</code>. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the <code>1fr</code> maximum as an instruction to share out the remaining space between the items.</p>
 
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
@@ -314,7 +314,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>{{ EmbedLiveSample('A_flexible_number_of_tracks', '500', '170') }}</p>
 
-<p>We now have the ability to create a grid with a flexible number of flexible tracks, but see items laid out on the grid aligned by rows and columns at the same time.</p>
+<p>We now have the ability to create a grid with a flexible number of flexible tracks, but see items laid out on the grid aligned by rows and columns at the same time.</p>
 
 <h2 id="Grid_and_absolutely_positioned_elements">Grid and absolutely positioned elements</h2>
 
@@ -572,7 +572,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use <code>display:</code> <code>contents</code> in a similar way with flexbox to enable nested items to become flex items.</p>
 
-<p>As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don’t be afraid to mix it with other methods of doing layout to get the different effects you need.</p>
+<p>As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don’t be afraid to mix it with other methods of doing layout to get the different effects you need.</p>
 
 <h2 id="See_Also">See Also</h2>
 

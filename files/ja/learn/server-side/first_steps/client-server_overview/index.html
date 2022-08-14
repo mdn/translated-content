@@ -54,7 +54,7 @@ translation_of: Learn/Server-side/First_steps/Client-Server_overview
   <ul>
    <li>URL パラメータ: <code>GET</code> リクエストは、サーバに送信された URL に名前と値のペアを末尾に追加することで、データをエンコードします (例：<code>http://mysite.com<strong>?name=Fred&amp;age=11</strong></code>)。URL パラメータから URL の残りの部分を区切る疑問符 (<code>?</code>)、関連する値から各名前を区切る等号 (<code>=</code>)、および各ペアを区切るアンパサンド (<code>&amp;</code>) が常にあります。URL パラメータは、ユーザが変更して再送信することができるため、本質的に「安全ではありません」。結果として、URL パラメータの <code>GET</code> リクエストは、サーバ上のデータを更新するリクエストには使用されません。</li>
    <li><code>POST</code> データ: <code>POST</code> リクエストは新しいリソースを追加し、そのデータはリクエストボディ内にエンコードされます。</li>
-   <li><span class="hidden"> </span>クライアントサイド Cookie : Cookie には、クライアントに関するセッションデータが含まれており、サーバはそれをログイン状態とリソースへの権限/アクセスを判断するために使用できます。</li>
+   <li><span class="hidden"> </span>クライアントサイド Cookie : Cookie には、クライアントに関するセッションデータが含まれており、サーバはそれをログイン状態とリソースへの権限/アクセスを判断するために使用できます。</li>
   </ul>
  </li>
 </ul>
@@ -67,7 +67,7 @@ translation_of: Learn/Server-side/First_steps/Client-Server_overview
 
 <h3 id="GET_リクエストレスポンス_例">GET リクエスト/レスポンス 例</h3>
 
-<p>リンクをクリックするか (検索エンジンホームページのように) サイトを検索することで簡単な <code>GET</code> リクエストをすることができます。たとえば、MDNで「クライアント - サーバの概要」という用語を検索したときに送信される HTTP リクエストは、次のようになります (メッセージの一部はあなたのブラウザや設定に依存するので、同一にはなりません)。</p>
+<p>リンクをクリックするか (検索エンジンホームページのように) サイトを検索することで簡単な <code>GET</code> リクエストをすることができます。たとえば、MDNで「クライアント - サーバの概要」という用語を検索したときに送信される HTTP リクエストは、次のようになります (メッセージの一部はあなたのブラウザや設定に依存するので、同一にはなりません)。</p>
 
 <div class="note">
 <p>HTTP メッセージのフォーマットは「Web 標準」(<a href="http://www.rfc-editor.org/rfc/rfc7230.txt">RFC7230</a>) で定義されています。このレベルの詳細を知る必要はありませんが、少なくとも今、これら全てがどこから来たのかを知っています！</p>
@@ -307,7 +307,7 @@ def junior(request):
     return render(request, 'best/index.html', context)
 </pre>
 
-<p><code>junior()</code> 関数は、ジュニアチームのリストを取得した後、<code>render()</code> 関数を呼び出して、元の <code>HttpRequest</code>、HTML テンプレート、およびテンプレートに含める情報を定義する  "context"  オブジェクトを渡します。<code>render()</code> 関数は、コンテキストと HTML テンプレートを使用して HTML を生成し、それを <code>HttpResponse</code> オブジェクトに返す便利な関数です。</p>
+<p><code>junior()</code> 関数は、ジュニアチームのリストを取得した後、<code>render()</code> 関数を呼び出して、元の <code>HttpRequest</code>、HTML テンプレート、およびテンプレートに含める情報を定義する  "context"  オブジェクトを渡します。<code>render()</code> 関数は、コンテキストと HTML テンプレートを使用して HTML を生成し、それを <code>HttpResponse</code> オブジェクトに返す便利な関数です。</p>
 
 <p>明らかに Web フレームワークは他にも多くのタスクで役に立ちます。次の記事では、さらに多くの利点といくつかの一般的な Web フレームワークの選択について説明します。</p>
 

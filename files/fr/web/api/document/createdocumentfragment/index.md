@@ -9,7 +9,9 @@ Crée un nouvel objet vide de type {{domxref("DocumentFragment")}}.
 
 ## Syntaxe
 
-    var fragment = document.createDocumentFragment();
+```js
+var fragment = document.createDocumentFragment();
+```
 
 `fragment` est une référence vers un objet vide de type {{domxref("DocumentFragment")}} .
 

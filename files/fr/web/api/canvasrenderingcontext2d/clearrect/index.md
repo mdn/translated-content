@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.clearRect()`** de l'API 2D des Canvas me
 
 ## Syntaxe
 
-    void ctx.clearRect(x, y, largeur, hauteur);
+```js
+void ctx.clearRect(x, y, largeur, hauteur);
+```
 
 ### Paramètres
 

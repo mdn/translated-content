@@ -53,7 +53,7 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 
 <p><strong>using <code>overflow: auto</code></strong></p>
 
-<p>Setting <code>overflow: auto</code> or set other values than the initial value of <code>overflow: visible</code> created a new <abbr title="Block Formatting Context">BFC</abbr> containing the float. Our <code>&lt;div&gt;</code> now becomes a mini-layout inside our layout. Any child element will be contained inside it.</p>
+<p>Setting <code>overflow: auto</code> or set other values than the initial value of <code>overflow: visible</code> created a new <abbr title="Block Formatting Context">BFC</abbr> containing the float. Our <code>&lt;div&gt;</code> now becomes a mini-layout inside our layout. Any child element will be contained inside it.</p>
 
 <p>The problem with using <code>overflow</code> to create a new <abbr title="Block Formatting Context">BFC</abbr> is that the <code>overflow</code> property is meant for telling the browser how you want to deal with overflowing content. There are some occasions in which you will find you get unwanted scrollbars or clipped shadows when you use this property purely to create a <abbr title="Block Formatting Context">BFC</abbr>. In addition, it is potentially not readable for a future developer, as it might not be obvious why you used <code>overflow</code> for this purpose. If you use <code>overflow</code>, it is a good idea to comment the code to explain.</p>
 
@@ -68,44 +68,44 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html notranslate">&lt;section&gt;
-    &lt;div class="box"&gt;
-        &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
-        &lt;p&gt;I am content inside the container.&lt;/p&gt;
-    &lt;/div&gt;
+    &lt;div class="box"&gt;
+        &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
+        &lt;p&gt;I am content inside the container.&lt;/p&gt;
+    &lt;/div&gt;
 &lt;/section&gt;
 &lt;section&gt;
-    &lt;div class="box" style="overflow:auto"&gt;
-        &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
-        &lt;p&gt;I am content inside the &lt;code&gt;overflow:auto&lt;/code&gt; container.&lt;/p&gt;
-    &lt;/div&gt;
+    &lt;div class="box" style="overflow:auto"&gt;
+        &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
+        &lt;p&gt;I am content inside the &lt;code&gt;overflow:auto&lt;/code&gt; container.&lt;/p&gt;
+    &lt;/div&gt;
 &lt;/section&gt;
 &lt;section&gt;
-    &lt;div class="box" style="display:flow-root"&gt;
-        &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
-        &lt;p&gt;I am content inside the &lt;code&gt;display:flow-root&lt;/code&gt; container.&lt;/p&gt;
-    &lt;/div&gt;
+    &lt;div class="box" style="display:flow-root"&gt;
+        &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
+        &lt;p&gt;I am content inside the &lt;code&gt;display:flow-root&lt;/code&gt; container.&lt;/p&gt;
+    &lt;/div&gt;
 &lt;/section&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css notranslate">section {
-    height:150px;
+    height:150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+    background-color: rgb(224, 206, 247);
+    border: 5px solid rebeccapurple;
 }
 .box[style] {
-    background-color: aliceblue;
-    border: 5px solid steelblue;
+    background-color: aliceblue;
+    border: 5px solid steelblue;
 }
 .float {
-    float: left;
+    float: left;
     width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .5);
-    border:1px solid black;
-    padding: 10px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .5);
+    border:1px solid black;
+    padding: 10px;
 }</pre>
 
 <p>{{EmbedLiveSample("example1", 200, 450)}}</p>
@@ -113,17 +113,17 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 <h3 id="Exclude_external_floats">Exclude external floats</h3>
 
 <div id="example2">
-<p>In the following example, we are using <code>display:flow-root</code> and floats to implement double columns layout, beacuse an element in the normal flow that establishes a new <abbr title="Block Formatting Context">BFC</abbr> must not overlap the margin box of any floats in the same block formatting context as the element itself.</p>
+<p>In the following example, we are using <code>display:flow-root</code> and floats to implement double columns layout, beacuse an element in the normal flow that establishes a new <abbr title="Block Formatting Context">BFC</abbr> must not overlap the margin box of any floats in the same block formatting context as the element itself.</p>
 
 <h4 id="HTML_2">HTML</h4>
 
 <pre class="brush: html notranslate">&lt;section&gt;
-  &lt;div class="float"&gt;Try to resize this outer float&lt;/div&gt;
-  &lt;div class="box"&gt;&lt;p&gt;Normal&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="float"&gt;Try to resize this outer float&lt;/div&gt;
+  &lt;div class="box"&gt;&lt;p&gt;Normal&lt;/p&gt;&lt;/div&gt;
 &lt;/section&gt;
 &lt;section&gt;
-  &lt;div class="float"&gt;Try to resize this outer float&lt;/div&gt;
-  &lt;div class="box" style="display:flow-root"&gt;&lt;p&gt;&lt;code&gt;display:flow-root&lt;/code&gt;&lt;p&gt;&lt;/div&gt;
+  &lt;div class="float"&gt;Try to resize this outer float&lt;/div&gt;
+  &lt;div class="box" style="display:flow-root"&gt;&lt;p&gt;&lt;code&gt;display:flow-root&lt;/code&gt;&lt;p&gt;&lt;/div&gt;
 &lt;/section&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
@@ -132,31 +132,31 @@ translation_of: Web/Guide/CSS/Block_formatting_context
     height:150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+    background-color: rgb(224, 206, 247);
+    border: 5px solid rebeccapurple;
 }
 .box[style] {
     background-color: aliceblue;
-    border: 5px solid steelblue;
+    border: 5px solid steelblue;
 }
 .float {
     float: left;
     overflow: hidden; /* required by resize:both */
-    resize: both;
-    margin-right:25px;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .75);
+    resize: both;
+    margin-right:25px;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .75);
     border: 1px solid black;
-    padding: 10px;
+    padding: 10px;
 }
 </pre>
 
 <p>{{EmbedLiveSample("example2", 200, 300)}}</p>
 
-<p>Rather than inline-blocks with width:&lt;percentage&gt;, in this case we don't have to specify the width of the right div.</p>
+<p>Rather than inline-blocks with width:&lt;percentage&gt;, in this case we don't have to specify the width of the right div.</p>
 
-<p>Note that flexbox is a more efficient way to implement muti columns layout in morden CSS.</p>
+<p>Note that flexbox is a more efficient way to implement muti columns layout in morden CSS.</p>
 </div>
 
 <h3 id="여백_상쇄">여백 상쇄</h3>

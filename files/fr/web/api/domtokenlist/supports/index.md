@@ -13,7 +13,9 @@ La méthode **`supports()`** de l'interface {{domxref("DOMTokenList")}} renvoie 
 
 ## Syntaxe
 
-    var boolean = element.supports(token)
+```js
+var boolean = element.supports(token)
+```
 
 ### Paramètres
 

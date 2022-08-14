@@ -23,7 +23,9 @@ img ~ p {
 
 ## Syntaxe
 
-    premier_element ~ second_element { propriétés de style }
+```
+premier_element ~ second_element { propriétés de style }
+```
 
 ## Exemples
 

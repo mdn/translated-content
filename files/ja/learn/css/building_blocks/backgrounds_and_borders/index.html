@@ -22,7 +22,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
+   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -33,7 +33,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h2 id="Styling_backgrounds_in_CSS" name="Styling_backgrounds_in_CSS">CSS による背景の設定</h2>
 
-<p>CSSの {{cssxref("background")}} プロパティは、このレッスンで説明する多くの個別指定プロパティ(<strong>longhand property</strong>)を一度に指定する一括指定プロパティ(<strong>shorthand property</strong>)です。スタイルシートで複雑な背景プロパティを見かけると、一度に多くの値を渡していて理解するのが少し難しく感じるかもしれません。</p>
+<p>CSSの {{cssxref("background")}} プロパティは、このレッスンで説明する多くの個別指定プロパティ(<strong>longhand property</strong>)を一度に指定する一括指定プロパティ(<strong>shorthand property</strong>)です。スタイルシートで複雑な背景プロパティを見かけると、一度に多くの値を渡していて理解するのが少し難しく感じるかもしれません。</p>
 
 <pre class="brush: css notranslate"><code>.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
@@ -45,17 +45,17 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h3 id="Background_colors" name="Background_colors">背景色</h3>
 
-<p> {{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な<a href="/ja/docs/Web/CSS/color_value">&lt;color&gt;</a>値を受け入れます。<code>background-color</code>は、要素の <a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model#Parts_of_a_box"><strong>Content box</strong>, <strong>Padding box</strong></a> の範囲でコンテンツの下に広がります。</p>
+<p> {{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な<a href="/ja/docs/Web/CSS/color_value">&lt;color&gt;</a>値を受け入れます。<code>background-color</code>は、要素の <a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model#Parts_of_a_box"><strong>Content box</strong>, <strong>Padding box</strong></a> の範囲でコンテンツの下に広がります。</p>
 
-<p>次の例では、さまざまな色の値値を使用して、ボックス(<code>.box</code>)、見出し(<code>h2</code>)、および {{htmlelement("span")}} 要素に背景色を指定しています。</p>
+<p>次の例では、さまざまな色の値値を使用して、ボックス(<code>.box</code>)、見出し(<code>h2</code>)、および {{htmlelement("span")}} 要素に背景色を指定しています。</p>
 
-<p><strong>利用可能な <a href="/ja/docs/Web/CSS/color_value">&lt;color&gt;</a> を使ってみましょう。</strong></p>
+<p><strong>利用可能な <a href="/ja/docs/Web/CSS/color_value">&lt;color&gt;</a> を使ってみましょう。</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 600)}}</p>
 
 <h3 id="Background_images" name="Background_images">背景画像</h3>
 
-<p> {{cssxref("background-image")}} プロパティは、要素の背景に表示する画像を指定します。次の例には、2個のボックスがあります。片方のボックスでは背景画像がボックスより大きく、他方のボックスの背景画像は小さな星の画像です。</p>
+<p> {{cssxref("background-image")}} プロパティは、要素の背景に表示する画像を指定します。次の例には、2個のボックスがあります。片方のボックスでは背景画像がボックスより大きく、他方のボックスの背景画像は小さな星の画像です。</p>
 
 <p>この例は、背景画像に関する2つのことを示しています。<br>
  デフォルトでは、大きな画像はボックスに収まるように縮小されず、一部分のみが表示されます。いっぽう、小さな画像はボックスの内側いっぱいまで繰り返されます。この場合、実際の画像は星1個のみです。</p>
@@ -66,7 +66,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h4 id="Controlling_background-repeat" name="Controlling_background-repeat">背景画像の繰り返しの指定</h4>
 
-<p> {{cssxref("background-repeat")}} プロパティは、画像の繰り返し表示の動作を制御するために使用されます。使用可能な値には次のものがあります:</p>
+<p> {{cssxref("background-repeat")}} プロパティは、画像の繰り返し表示の動作を制御するために使用されます。使用可能な値には次のものがあります:</p>
 
 <ul>
  <li><code>no-repeat</code> — 背景画像が繰り返されるのを完全に防ぎます。</li>
@@ -81,9 +81,9 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h4 id="Sizing_the_background_image" name="Sizing_the_background_image">背景画像のサイズ指定</h4>
 
-<p>先ほどの例では、背景を設定したい要素より画像のほうが大きいため画像の一部しか表示されませんでした。 {{cssxref("background-size")}} プロパティを使用して、背景内に収まるように画像のサイズを調整できます。</p>
+<p>先ほどの例では、背景を設定したい要素より画像のほうが大きいため画像の一部しか表示されませんでした。 {{cssxref("background-size")}} プロパティを使用して、背景内に収まるように画像のサイズを調整できます。</p>
 
-<p><code>background-size</code>プロパティは、<a href="/ja/docs/Web/CSS/length">&lt;length&gt;</a> または <a href="/ja/docs/Web/CSS/percentage">&lt;percentage&gt;</a> の値をとることができます。</p>
+<p><code>background-size</code>プロパティは、<a href="/ja/docs/Web/CSS/length">&lt;length&gt;</a> または <a href="/ja/docs/Web/CSS/percentage">&lt;percentage&gt;</a> の値をとることができます。</p>
 
 <p>また、次のキーワードを使うこともできます：</p>
 
@@ -108,7 +108,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h4 id="Positioning_the_background_image" name="Positioning_the_background_image">背景画像の位置の指定</h4>
 
-<p> {{cssxref("background-position")}} プロパティを適用すると、そのボックス上で背景画像を表示する位置を選択できます。このプロパティでは、ボックスの左上隅を<code>(0, 0)</code>として、水平方向の座標軸(<strong>horisontal axis</strong>)を<code>x</code>軸(<strong><code>x</code> axis</strong>, 複数形はaxes）、垂直方向の座標軸(<strong>vertical axis</strong>)を<code>y</code>軸(<strong><code>y</code> axis</strong>)とする座標系にそって画像を配置します。</p>
+<p> {{cssxref("background-position")}} プロパティを適用すると、そのボックス上で背景画像を表示する位置を選択できます。このプロパティでは、ボックスの左上隅を<code>(0, 0)</code>として、水平方向の座標軸(<strong>horisontal axis</strong>)を<code>x</code>軸(<strong><code>x</code> axis</strong>, 複数形はaxes）、垂直方向の座標軸(<strong>vertical axis</strong>)を<code>y</code>軸(<strong><code>y</code> axis</strong>)とする座標系にそって画像を配置します。</p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: デフォルトの<code>background-position</code>の値は<code>(0, 0)</code>です。</p>
@@ -125,7 +125,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 } </code>
 </pre>
 
-<p>そして、 <a href="/ja/docs/Web/CSS/length">&lt;length&gt;</a>および<a href="/ja/docs/Web/CSS/percentage">&lt;percentage&gt;</a>を使用できます:</p>
+<p>そして、 <a href="/ja/docs/Web/CSS/length">&lt;length&gt;</a>および<a href="/ja/docs/Web/CSS/percentage">&lt;percentage&gt;</a>を使用できます:</p>
 
 <pre class="brush: css notranslate"><code>.box {
   background-image: url(star.png);
@@ -155,14 +155,14 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}</p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: <code>background-position</code> は {{cssxref("background-position-x")}} および {{cssxref("background-position-y")}} の一括指定プロパティで、それぞれの座標軸の方向の位置を個別に設定できます。</p>
+<p><strong>注</strong>: <code>background-position</code> は {{cssxref("background-position-x")}} および {{cssxref("background-position-y")}} の一括指定プロパティで、それぞれの座標軸の方向の位置を個別に設定できます。</p>
 </div>
 
 <h3 id="Gradient_backgrounds" name="Gradient_backgrounds">グラデーション背景</h3>
 
 <p>グラデーション(<strong>gradient</strong>, <strong><ruby>勾配<rp>(</rp><rt>こうばい</rt><rp>)</rp> </ruby></strong>)は、背景に使用する場合には画像と同じようにふるまいます。グラデーションは{{cssxref("background-image")}}プロパティを使用して設定されます。</p>
 
-<p><a href="/ja/docs/Web/CSS/gradient">&lt;gradient&gt;</a>データ型のMDNページで、さまざまな種類のグラデーションとそれらを使ってできることについて詳しく読むことができます。Webで数多く提供されているCSSグラデーションジェネレーター(例えば "<cite><a href="https://cssgradient.io/">CSS Gradient</a></cite>")を使用して、グラデーションを楽しく試せます。このWebサービスでは、グラデーションを作成したのち、グラデーションを生成するソースコードをコピー&amp;ペーストできます。</p>
+<p><a href="/ja/docs/Web/CSS/gradient">&lt;gradient&gt;</a>データ型のMDNページで、さまざまな種類のグラデーションとそれらを使ってできることについて詳しく読むことができます。Webで数多く提供されているCSSグラデーションジェネレーター(例えば "<cite><a href="https://cssgradient.io/">CSS Gradient</a></cite>")を使用して、グラデーションを楽しく試せます。このWebサービスでは、グラデーションを作成したのち、グラデーションを生成するソースコードをコピー&amp;ペーストできます。</p>
 
 <p>以下の例でいろいろなグラデーションを試してみましょう。 1つめのボックスには、ボックス全体に広がる線形グラデーション(linear gradient)を指定しています。2つめのボックスには、サイズを設定して(そのために繰り返されている)放射状グラデーション(radial gradinet)を指定しています。</p>
 
@@ -184,7 +184,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px,  top right;</pre>
 
-<p>プロパティに指定した複数のプロパティ値は、他のプロパティの同じ位置にある値と対応します。上の例で、<code>image1</code>の<code>background-repeat</code>値は<code>no-repeat</code>です。では、プロパティごとに値の個数が異なるとどうなるでしょうか？答えは、個数が少ない値が繰り返し使われる、ということです。上の例では、4つの背景画像がありますが、2つの <code>background-position</code> の値しかありません。最初の2つの位置の値は対応する位置の画像に適用され、その後は繰り返されます。つまり、<code>image3</code>には1番目、<code>image4</code>には2番目の値がふたたび使われます。</p>
+<p>プロパティに指定した複数のプロパティ値は、他のプロパティの同じ位置にある値と対応します。上の例で、<code>image1</code>の<code>background-repeat</code>値は<code>no-repeat</code>です。では、プロパティごとに値の個数が異なるとどうなるでしょうか？答えは、個数が少ない値が繰り返し使われる、ということです。上の例では、4つの背景画像がありますが、2つの <code>background-position</code> の値しかありません。最初の2つの位置の値は対応する位置の画像に適用され、その後は繰り返されます。つまり、<code>image3</code>には1番目、<code>image4</code>には2番目の値がふたたび使われます。</p>
 
 <p><strong>実際に試してみましょう。以下の例には2つの画像があります。重ね合わせの順序を確かめるために、どの背景画像を先にするかを変えてみてください。また、他のプロパティを操作して、位置、サイズ、繰り返し方法を変えてみてください。</strong></p>
 
@@ -202,22 +202,22 @@ background-position: 10px 20px,  top right;</pre>
   <code>local</code>値は、多くの場合に<code>scroll</code>値の挙動が期待どおりではないことから新しく追加されました（他の値はInternet Explorer 4以降でサポートされますが、<code>local</code>はIE 9以降のみでサポートされます）。</li>
 </ul>
 
-<p> {{cssxref("background-attachment")}} プロパティはスクロールするコンテンツがある場合にのみ効果があります。3つの値の違いを示す<a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">デモ（background-attachment.html）</a>を作成したのでご覧ください（<a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">ソースコード</a>も公開しています）。</p>
+<p> {{cssxref("background-attachment")}} プロパティはスクロールするコンテンツがある場合にのみ効果があります。3つの値の違いを示す<a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">デモ（background-attachment.html）</a>を作成したのでご覧ください（<a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">ソースコード</a>も公開しています）。</p>
 
 <h3 id="Using_the_background_shorthand_property" name="Using_the_background_shorthand_property">背景に関する指定をまとめておこなう</h3>
 
-<p>このレッスンの冒頭で、 {{cssxref("background")}} プロパティを使って背景が指定されている場合についてふれました。この一括指定プロパティを使うと、複数のプロパティを一度に設定できます。</p>
+<p>このレッスンの冒頭で、 {{cssxref("background")}} プロパティを使って背景が指定されている場合についてふれました。この一括指定プロパティを使うと、複数のプロパティを一度に設定できます。</p>
 
 <p>複数の背景を使用する場合は、最初の背景に対するプロパティをすべて指定してから、カンマで区切って次の背景を追加します。以下の例では、サイズと位置を伴った<a href="#Gradient_backgrounds">グラデーション</a>、<code>no-repeat</code>と位置指定を伴った<a href="#Background_images">背景画像</a>、最後に<a href="#Background_colors">背景色</a>を指定しています。</p>
 
 <p>背景画像に関する一括指定を書くとき、いくつかのルールを守る必要があります。例えば：</p>
 
 <ul>
- <li> <code>background-color</code> は最後のコンマの後にのみ指定できます。</li>
+ <li> <code>background-color</code> は最後のコンマの後にのみ指定できます。</li>
  <li><code>background-size</code>の値は、<code>center / 80％</code>のように、<code>background-position</code>の値の直後に<code>/</code>文字を挟んだ位置でのみ使うことができます。</li>
 </ul>
 
-<p>すべての注意点を確認するには、 {{cssxref("background")}} のMDNページをご覧ください。</p>
+<p>すべての注意点を確認するには、 {{cssxref("background")}} のMDNページをご覧ください。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 700)}}</p>
 
@@ -233,7 +233,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>通常、CSSで要素に枠線を追加するときは、CSSの1行で枠線の色、幅、スタイルを指定する一括指定プロパティを使います。</p>
 
-<p> {{cssxref("border")}}:を使用して、ボックスの4辺すべてに枠線を設定できます。</p>
+<p> {{cssxref("border")}}:を使用して、ボックスの4辺すべてに枠線を設定できます。</p>
 
 <pre class="brush: css notranslate"><code>.box {
   border: 1px solid black;
@@ -285,7 +285,7 @@ background-position: 10px 20px,  top right;</pre>
   border-top-right-radius: 1em 10%;
 } </code></pre>
 
-<p>以下の例では、はじめに4つの角すべてについて角の丸みを設定したのち、右上角を他と異なる値に変更しました。値を変えて試してみましょう。使用できる構文は{{cssxref("border-radius")}} プロパティのページを見て確認してください。</p>
+<p>以下の例では、はじめに4つの角すべてについて角の丸みを設定したのち、右上角を他と異なる値に変更しました。値を変えて試してみましょう。使用できる構文は{{cssxref("border-radius")}} プロパティのページを見て確認してください。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 650)}}</p>
 

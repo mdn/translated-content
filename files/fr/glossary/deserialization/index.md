@@ -16,4 +16,4 @@ En {{Glossary("JavaScript")}}, par exemple, vous pouvez désérialiser une  {{Gl
 
 ### Culture générale
 
-- [Serialization](https://fr.wikipedia.org/wiki/S%C3%A9rialisation) sur Wikipedia
+- [Sérialisation](https://fr.wikipedia.org/wiki/S%C3%A9rialisation) sur Wikipédia

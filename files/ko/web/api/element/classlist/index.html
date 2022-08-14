@@ -14,7 +14,7 @@ translation_of: Web/API/Element/classList
 
 <p><code><strong>Element.classList</strong></code>는 엘리먼트의 클래스 속성의 컬렉션인 활성 {{domxref("DOMTokenList")}}를 반환하는 읽기 전용 프로퍼티이다.</p>
 
-<p><code>classList</code> 사용은 공백으로 구분된 문자열인 {{domxref("element.className")}}을 통해 엘리먼트의 클래스 목록에 접근하는 방식을 대체하는 간편한 방법이다.</p>
+<p><code>classList</code> 사용은 공백으로 구분된 문자열인 {{domxref("element.className")}}을 통해 엘리먼트의 클래스 목록에 접근하는 방식을 대체하는 간편한 방법이다.</p>
 
 <h2 id="구문">구문</h2>
 
@@ -27,19 +27,19 @@ translation_of: Web/API/Element/classList
 
 <dl>
  <dt><code>add( String [, String [, ...]] )</code></dt>
- <dd>지정한 클래스 값을 추가한다. 만약 추가하려는 클래스가 엘리먼트의 <code>class</code> 속성에 이미 존재한다면 무시한다.</dd>
+ <dd>지정한 클래스 값을 추가한다. 만약 추가하려는 클래스가 엘리먼트의 <code>class</code> 속성에 이미 존재한다면 무시한다.</dd>
  <dt><code>remove( String [, String [, ...]] )</code></dt>
  <dd>지정한 클래스 값을 제거한다.</dd>
  <dd>
- <div class="note"><strong>노트:</strong> 존재하지 않는 클래스를 제거하는 것은 <strong>에러를 발생시키지 않습니다.</strong></div>
+ <div class="note"><strong>노트:</strong> 존재하지 않는 클래스를 제거하는 것은 <strong>에러를 발생시키지 않습니다.</strong></div>
  </dd>
  <dt><code><strong>item</strong>( Number )</code></dt>
  <dd>콜렉션의 인덱스를 이용하여 클래스 값을 반환한다.</dd>
  <dt><code><strong>toggle</strong>( String [, force] )</code></dt>
- <dd>하나의 인수만 있을 때: 클래스 값을 토글링한다. 즉, 클래스가 존재한다면 제거하고 <code>false</code>를 반환하며, 존재하지 않으면 클래스를 추가하고 <code>true</code>를 반환한다.</dd>
- <dd>두번째 인수가 있을 때: 두번째 인수가 <code>true</code>로 평가되면 지정한 클래스 값을 추가하고 <code>false</code>로 평가되면 제거한다.</dd>
+ <dd>하나의 인수만 있을 때: 클래스 값을 토글링한다. 즉, 클래스가 존재한다면 제거하고 <code>false</code>를 반환하며, 존재하지 않으면 클래스를 추가하고 <code>true</code>를 반환한다.</dd>
+ <dd>두번째 인수가 있을 때: 두번째 인수가 <code>true</code>로 평가되면 지정한 클래스 값을 추가하고 <code>false</code>로 평가되면 제거한다.</dd>
  <dt><code>contains( String )</code></dt>
- <dd>지정한 클래스 값이 엘리먼트의 <code>class</code> 속성에 존재하는지 확인한다.</dd>
+ <dd>지정한 클래스 값이 엘리먼트의 <code>class</code> 속성에 존재하는지 확인한다.</dd>
  <dt><code>replace( oldClass, newClass )</code></dt>
  <dd>존재하는 클래스를 새로운 클래스로 교체한다.</dd>
 </dl>
@@ -80,14 +80,14 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");</pre>
 
 <div class="note">
-<p>파이어폭스 26 이전의 버전에서는 add/remove/toggle 메서드에서 여러 인수의 사용을 구현하지 않았다. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a> 링크를 참조하라.</p>
+<p>파이어폭스 26 이전의 버전에서는 add/remove/toggle 메서드에서 여러 인수의 사용을 구현하지 않았다. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a> 링크를 참조하라.</p>
 </div>
 
 <h2 id="폴리필">폴리필</h2>
 
-<p>The legacy <code><a href="https://msdn.microsoft.com/en-us/windows/ms536956(v=vs.71)">onpropertychange</a></code> event can be used to create a living <code>classList</code> mockup thanks to a <code>Element.prototype.className</code> property that fires the specified event once it is changed.</p>
+<p>The legacy <code><a href="https://msdn.microsoft.com/en-us/windows/ms536956(v=vs.71)">onpropertychange</a></code> event can be used to create a living <code>classList</code> mockup thanks to a <code>Element.prototype.className</code> property that fires the specified event once it is changed.</p>
 
-<p>The following polyfill for both <code>classList</code> and <code>DOMTokenList</code> ensures <strong>full</strong> compliance (coverage) for all standard methods and properties of <code>Element.prototype.classList</code> for <strong>IE10</strong>-<strong>IE11 </strong>browsers plus <em>nearly</em> compliant behavior for <strong>IE 6-9</strong>. Check it out:</p>
+<p>The following polyfill for both <code>classList</code> and <code>DOMTokenList</code> ensures <strong>full</strong> compliance (coverage) for all standard methods and properties of <code>Element.prototype.classList</code> for <strong>IE10</strong>-<strong>IE11 </strong>browsers plus <em>nearly</em> compliant behavior for <strong>IE 6-9</strong>. Check it out:</p>
 
 <pre>// 1. String.prototype.trim polyfill
 if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s﻿]+|[\s﻿]+$/g, ''); };
@@ -239,35 +239,15 @@ if (typeof DOMTokenList !== "function") (function(window){
 
 <h3 id="Caveats">Caveats</h3>
 
-<p>The polyfill is limited in functionality. It's currently unable to polyfill out-of-document-elements (e.g. elements created by <code>document.createElement</code> before they are appended to a parent node) in IE6-7.</p>
+<p>The polyfill is limited in functionality. It's currently unable to polyfill out-of-document-elements (e.g. elements created by <code>document.createElement</code> before they are appended to a parent node) in IE6-7.</p>
 
-<p>However, it should work just fine in IE9. A major discrepancy between the polyfilled version of <code>classList</code> and the W3 specs is that for IE6-8, there is no way to create an immutable object (an object whose properties cannot be directly modified). In IE9, however, it is possible through extending the prototype, freezing the visible object, and overwritting native property methods. However, such actions would not work in IE6-IE8 and, in IE9, slow the performance of the entire webpage to a snail's crawl, making these modifications completely impractical for this polyfill.</p>
+<p>However, it should work just fine in IE9. A major discrepancy between the polyfilled version of <code>classList</code> and the W3 specs is that for IE6-8, there is no way to create an immutable object (an object whose properties cannot be directly modified). In IE9, however, it is possible through extending the prototype, freezing the visible object, and overwritting native property methods. However, such actions would not work in IE6-IE8 and, in IE9, slow the performance of the entire webpage to a snail's crawl, making these modifications completely impractical for this polyfill.</p>
 
-<p>A minor note is that in IE6-7, this polyfill uses the <code>window[" uCL"]</code> property on the window object for communicating with the CSS expressions, the <code>x-uCLp</code> css property on all elements, and the <code>element[" uCL"]</code> property on all elements to allow garbage collection and boost performance. In all polyfilled browsers (IE6-9), an additional <code>element[" uCLp"]</code> property is added to element to ensure standards compliant prototyping, and a <code>DOMTokenList[" uCL"]</code>property is added to each <code>element["classList"]</code> object to ensure that the DOMTokenList is bounded to its own element.</p>
+<p>A minor note is that in IE6-7, this polyfill uses the <code>window[" uCL"]</code> property on the window object for communicating with the CSS expressions, the <code>x-uCLp</code> css property on all elements, and the <code>element[" uCL"]</code> property on all elements to allow garbage collection and boost performance. In all polyfilled browsers (IE6-9), an additional <code>element[" uCLp"]</code> property is added to element to ensure standards compliant prototyping, and a <code>DOMTokenList[" uCL"]</code>property is added to each <code>element["classList"]</code> object to ensure that the DOMTokenList is bounded to its own element.</p>
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">주석</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

@@ -48,14 +48,14 @@ translation_of: Web/API/XRRigidTransform
 <dl>
  <dt>{{DOMxRef("XRRigidTransform.position")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>変換の平行移動成分を記述する、メートルで表される3次元の点を指定する {{DOMxRef("DOMPointReadOnly")}}。 {{DOMxRef("DOMPointReadonly.w", "w")}} プロパティは常に <code>1.0</code> です。</dd>
- <dt>{{DOMxRef("XRRigidTransform.orientation")}} {{readonlyInline}} {{experimental_inline}}</dt>
+ <dt>{{DOMxRef("XRRigidTransform.orientation")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>変換の回転成分を記述する単位クォータニオンを含む {{DOMxRef("DOMPointReadOnly")}}。 単位クォータニオンとして、その長さは常に <code>1.0</code> に正規化されます。</dd>
- <dt>{{DOMxRef("XRRigidTransform.matrix")}} {{readonlyInline}} {{experimental_inline}}</dt>
+ <dt>{{DOMxRef("XRRigidTransform.matrix")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>16 メンバーの {{DOMxRef("Float32Array")}} の形式で変換行列を返します。 配列を使用して行列を表す方法については、<a href="/ja/docs/Web/API/XRRigidTransform/matrix#Matrix_format">行列のフォーマット</a>のセクションを参照してください。</dd>
 </dl>
 
 <dl>
- <dt>{{DOMxRef("XRRigidTransform.inverse")}} {{readonlyInline}} {{experimental_inline}}</dt>
+ <dt>{{DOMxRef("XRRigidTransform.inverse")}} {{readonlyInline}} {{experimental_inline}}</dt>
  <dd>この変換の逆である <code>XRRigidTransform</code> を返します。 つまり、元の変換によって以前に変換されたオブジェクトに適用された場合、変換が元に戻され、元のオブジェクトが返されます。</dd>
 </dl>
 

@@ -74,7 +74,9 @@ Cela fonctionnerait avec un fichier \_locales/en/messages.json contenant :
 
 Si `target.url` est "https\://developer.mozilla.org", alors la valeur de message, dans la locale "en", serait :
 
-    "You clicked https://developer.mozilla.org."
+```
+"You clicked https://developer.mozilla.org."
+```
 
 {{WebExtExamples}}
 

@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/label
 ---
 <h2 id="Resumo">Resumo</h2>
 
-<p>Um <strong>elemento</strong> <strong>HTML <code>&lt;label&gt;</code> </strong>representa uma legenda para um item em uma interface de usuário. Ele pode estar associado com um elemento de controle, colocando este dentro do elemento <code>label</code>, ou usando o atributo <code>for</code>. Tal controle é chamado o <em>controle etiquetado</em> do elemento etiqueta. Um input pode ser associado a diversas etiquetas (&lt;label&gt;s).</p>
+<p>Um <strong>elemento</strong> <strong>HTML <code>&lt;label&gt;</code> </strong>representa uma legenda para um item em uma interface de usuário. Ele pode estar associado com um elemento de controle, colocando este dentro do elemento <code>label</code>, ou usando o atributo <code>for</code>. Tal controle é chamado o <em>controle etiquetado</em> do elemento etiqueta. Um input pode ser associado a diversas etiquetas (&lt;label&gt;s).</p>
 
 <ul class="htmlelt">
  <li><dfn><a href="/en-US/docs/Web/HTML/Content_categories">As categorias de conteúdo</a></dfn> <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</li>
@@ -63,76 +63,24 @@ translation_of: Web/HTML/Element/label
   <tr>
    <td>{{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-   <td>{{compatversionunknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notes">Notes</h3>
-
-<h4 id="Click_events_in_nested_&lt;label>_elements">Click events in nested <code>&lt;label&gt;</code> elements</h4>
-
-<p>Starting with Gecko 8.0 {{geckoRelease("8.0")}}, a bubbling click event triggers at most one <code>&lt;label&gt;</code>, and the synthetic click event cannot trigger additional <code>&lt;label&gt;</code>s. In Gecko, a click event will still bubble up past a <code>&lt;label&gt;</code>, while in WebKit or Internet Explorer the click event will stop at the <code>&lt;label&gt;</code>. The behavior prior to Gecko 8.0 (triggering multiple <code>&lt;label&gt;</code>s) caused Firefox to stop responding (see {{bug(646157)}}).</p>
+{{Compat("html.elements.label")}}
 
 <h2 id="See_also">See also</h2>
 

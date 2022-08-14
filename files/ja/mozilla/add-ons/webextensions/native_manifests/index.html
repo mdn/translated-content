@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
   <tr>
    <td><a href="#Managed_storage_manifests">Managed storage マニフェスト</a></td>
    <td>
-    <p>{{WebExtAPIRef("storage.managed")}} API  使って拡張機能がアクセスする読み込み専用データを定義します。</p>
+    <p>{{WebExtAPIRef("storage.managed")}} API  使って拡張機能がアクセスする読み込み専用データを定義します。</p>
    </td>
   </tr>
   <tr>
@@ -54,7 +54,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
    <td>
     <p>ネイティブアプリケーションの名前です。</p>
 
-    <p>この名前は拡張機能の {{WebExtAPIRef("runtime.connectNative()")}} か {{WebExtAPIRef("runtime.sendNativeMessage()")}} に渡される名前と一致している必要があります。</p>
+    <p>この名前は拡張機能の {{WebExtAPIRef("runtime.connectNative()")}} か {{WebExtAPIRef("runtime.sendNativeMessage()")}} に渡される名前と一致している必要があります。</p>
 
     <p>OS X と Linux では、native messaging マニフェストの（.json 拡張子を除いた）ファイル名とも一致していなければなりません。</p>
 
@@ -92,9 +92,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
    <td><code>allowed_extensions</code></td>
    <td>Array of String</td>
    <td>
-    <p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> の配列です。配列中のそれぞれの値はこのネイティブアプリケーションとの通信が許可されている拡張機能を表します。</p>
+    <p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Add-on ID</a> の配列です。配列中のそれぞれの値はこのネイティブアプリケーションとの通信が許可されている拡張機能を表します。</p>
 
-    <p>つまり、作成する拡張機能の manifest.json ファイルに <a href="/ja/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーを含めたくなるものと思われるため、開発中に明示的なIDを設定しておくと良いでしょう。</p>
+    <p>つまり、作成する拡張機能の manifest.json ファイルに <a href="/ja/Add-ons/WebExtensions/manifest.json/applications">applications</a> キーを含めたくなるものと思われるため、開発中に明示的なIDを設定しておくと良いでしょう。</p>
    </td>
   </tr>
  </tbody>
@@ -110,7 +110,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
   "allowed_extensions": [ "ping_pong@example.org" ]
 }</pre>
 
-<p>この設定では、"ping_pong@example.org" という ID の拡張機能が "ping_pong" という名前を適切な {{WebExtAPIRef("runtime")}} API 関数に渡すことで接続を許可されます。 アプリケーション自体は "/path/to/native-messaging/app/ping_pong.py" にあります。</p>
+<p>この設定では、"ping_pong@example.org" という ID の拡張機能が "ping_pong" という名前を適切な {{WebExtAPIRef("runtime")}} API 関数に渡すことで接続を許可されます。 アプリケーション自体は "/path/to/native-messaging/app/ping_pong.py" にあります。</p>
 
 <h2 id="Managed_storage_manifests" name="Managed_storage_manifests">Managed storage マニフェスト</h2>
 
@@ -239,11 +239,11 @@ storageItem<span class="punctuation token">.</span><span class="function token">
 <p>例えば:</p>
 
 <pre class="brush: json line-numbers  language-json">{
-  "name": "my_module",
-  "description": "My test module",
-  "type": "pkcs11",
-  "path": "/path/to/libpkcs11testmodule.dylib",
-  "allowed_extensions": ["my-extension@mozilla.org"]
+  "name": "my_module",
+  "description": "My test module",
+  "type": "pkcs11",
+  "path": "/path/to/libpkcs11testmodule.dylib",
+  "allowed_extensions": ["my-extension@mozilla.org"]
 }</pre>
 
 <p>この JSON マニフェストでは、"my_module.json" として保存すれば、"my-extension@mozilla.org" 拡張機能はこのようなコードから "/path/to/libpkcs11testmodule.dylib" のセキュリティーモジュールをインストールすることもできます:</p>
@@ -268,7 +268,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
 <p>Firefox バージョン 64 以降では、32ビットレジストリ view (<a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node) </a>がこれらのキーの中でまずチェックされ、"native" レジストリ view が続いてチェックされます。いずれの view にしてもアプリケーションにふさわしいレジストリを使用してください。</p>
 
-<p><em>Firefox バージョン 63　以前では、もし32ビットのアプリケーションであっても、このキーは <a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node</a> 下に作成しないで下さい。以前のバージョンのブラウザは常に32-bit エミュレーションではなくレジストリの "native" view 下のキーを探します。確実に "native" view にキーを作成するために、KEY_WOW64_64KEY または KEY_WOW64_32KEY フラグを RegCreateKeyEx に渡すことができます。<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx">Accessing an Alternate Registry View</a> を参照して下さい。</em></p>
+<p><em>Firefox バージョン 63　以前では、もし32ビットのアプリケーションであっても、このキーは <a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node</a> 下に作成しないで下さい。以前のバージョンのブラウザは常に32-bit エミュレーションではなくレジストリの "native" view 下のキーを探します。確実に "native" view にキーを作成するために、KEY_WOW64_64KEY または KEY_WOW64_32KEY フラグを RegCreateKeyEx に渡すことができます。<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx">Accessing an Alternate Registry View</a> を参照して下さい。</em></p>
 
 <p>ユーザごとの設定としては、以下の名前のレジストリキーを作成します:</p>
 

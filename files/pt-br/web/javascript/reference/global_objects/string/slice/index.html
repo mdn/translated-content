@@ -79,7 +79,7 @@ console.log(nome.slice(5, i)); // retorna 'Ricardo'
 console.log(nome.slice(-3, 0)); // retorna &lt;empty string&gt;
 </pre>
 
- <p>Caso <code><var>endIndex</var></code> seja definido e <code><var>startIndex</var></code> e <code><var>endIndex</var></code> sejam ambos positivos ou negativos, <code><var>endIndex</var></code> deve ser maior que <code><var>startIndex</var></code>, do contrário uma string vazia é retornada.</p>
+ <p>Caso <code><var>endIndex</var></code> seja definido e <code><var>startIndex</var></code> e <code><var>endIndex</var></code> sejam ambos positivos ou negativos, <code><var>endIndex</var></code> deve ser maior que <code><var>startIndex</var></code>, do contrário uma string vazia é retornada.</p>
 
  <pre class="brush: js notranslate">const nome = 'Ricado';
 console.log(nome.slice(-1, -3)); // retorna &lt;empty string&gt;
@@ -108,9 +108,9 @@ console.log(nome.slice(2, -1)); // retorna 'card'
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
-<h3 id="Example_Using_slice_to_create_a_new_string" name="Example:_Using_slice_to_create_a_new_string">Exemplo: Usando <code>slice()</code> para criar uma nova string</h3>
+<h3 id="Example_Using_slice_to_create_a_new_string" name="Example:_Using_slice_to_create_a_new_string">Exemplo: Usando <code>slice()</code> para criar uma nova string</h3>
 
-<p>O exemplo a seguir usa <em><code>slice()</code></em> para criar uma nova string.</p>
+<p>O exemplo a seguir usa <em><code>slice()</code></em> para criar uma nova string.</p>
 
 <pre class="brush: js notranslate">var str1 = 'A manhã está sobre nós', // o tamanho de str1 é 22
     str2 = str1.slice(3, 10),
@@ -123,7 +123,7 @@ console.log(str4); // retorna 'sobre nós'
 console.log(str5); // retorna &lt;empty string&gt;
 </pre>
 
-<h3 id="Example_Using_slice_with_negative_indexes" name="Example:_Using_slice_with_negative_indexes">Exemplo: Usando <code>slice()</code> com índices negativos.</h3>
+<h3 id="Example_Using_slice_with_negative_indexes" name="Example:_Using_slice_with_negative_indexes">Exemplo: Usando <code>slice()</code> com índices negativos.</h3>
 
 <p>O exemplo a seguir usa o <em><code>slice()</code></em> com índices negativos.</p>
 
@@ -174,55 +174,7 @@ str.slice(0, -1);  // retorna 'A manhã está sobre nó'
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.String.slice")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

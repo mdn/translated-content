@@ -10,7 +10,9 @@ La propriété **`onerror`** de l'interface {{domxref("WorkerGlobalScope")}} rep
 
 ## Syntaxe
 
-    self.onerror = function() { ... };
+```js
+self.onerror = function() { ... };
+```
 
 ## Exemple
 

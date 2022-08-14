@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/escape
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<div>A função obsoleta <code><strong>escape() </strong>retorna uma nova string com</code><span class="short_text" id="result_box" lang="pt"><span> </span><span>certos</span> <span>caracteres</span> <span>substituídos por sua sequência hexadecial. Use </span></span>{{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} em seu lugar.</div>
+<div>A função obsoleta <code><strong>escape() </strong>retorna uma nova string com</code><span class="short_text" id="result_box" lang="pt"><span> </span><span>certos</span> <span>caracteres</span> <span>substituídos por sua sequência hexadecial. Use </span></span>{{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} em seu lugar.</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/escape
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>A função <strong><code>escape </code></strong><code>é uma propriedade do </code><em>global object. </em>Caracteres especiais são codificados, com a exceção de: @*_+-./</p>
+<p>A função <strong><code>escape </code></strong><code>é uma propriedade do </code><em>global object. </em>Caracteres especiais são codificados, com a exceção de: @*_+-./</p>
 
 <p>O formato hexadecimal de caracteres, que o valor unitário do código é <strong>0xFF or less, </strong>é uma sequência de escape de 2 digitos: %xx. Para caracteres com um código unitário maior, uma sequência de 4 digitos %<strong>u</strong>xxxx é usada.</p>
 
@@ -69,55 +69,7 @@ escape("@*_+-./");    // "@*_+-./"</pre>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.escape")}}
 
 <h2 id="Veja_Também">Veja Também</h2>
 

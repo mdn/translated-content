@@ -5,11 +5,11 @@ translation_of: Web/CSS/background-position
 ---
 <div>{{CSSRef}}</div>
 
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>background-position</code></strong> define a posição inicial, relativa a posição de fundo na camada definido por {{cssxref("background-origin")}}, para cada background image definido.</p>
+<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>background-position</code></strong> define a posição inicial, relativa a posição de fundo na camada definido por {{cssxref("background-origin")}}, para cada background image definido.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/background-position.html")}}</div>
 
-<p class="hidden">A fonte deste exemplo interativo está alocado em um repositório GitHub. Se você pudesse contribuir com os exemplos de projetos interativos , por favor "clone" <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie-nos um pull request.</p>
+<p class="hidden">A fonte deste exemplo interativo está alocado em um repositório GitHub. Se você pudesse contribuir com os exemplos de projetos interativos , por favor "clone" <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie-nos um pull request.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -33,9 +33,9 @@ background-position: 0 0, center;
 
 /* Valores de cantos relativos */
 background-position: bottom 10px right 20px;
-background-position: right 3em bottom 10px;
-background-position: bottom 10px right;
-background-position: top right 10px;
+background-position: right 3em bottom 10px;
+background-position: bottom 10px right;
+background-position: top right 10px;
 
 /* Valores globais */
 background-position: inherit;
@@ -43,7 +43,7 @@ background-position: initial;
 background-position: unset;
 </pre>
 
-<p>A propriedade <code>background-position</code> é especificada como um determinado numero de valores de <code><a href="#&lt;position>">&lt;position&gt;</a></code> , separados por espaços.</p>
+<p>A propriedade <code>background-position</code> é especificada como um determinado numero de valores de <code><a href="#&lt;position>">&lt;position&gt;</a></code> , separados por espaços.</p>
 
 <h3 id="Values" name="Values">Values</h3>
 
@@ -161,7 +161,7 @@ div {
 <h3 id="Quantum_CSS_notes">Quantum CSS notes</h3>
 
 <ul>
- <li>Gecko has a bug meaning that <code>background-position</code> can't be {{cssxref("transition","transitioned")}} between two values containing different numbers of {{cssxref("&lt;position&gt;")}} values, for example <code>background-position: 10px 10px;</code> and <code>background-position: 20px 20px, 30px 30px;</code> (see {{bug(1390446)}}). Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, planned for release in Firefox 57) fixes this.</li>
+ <li>Gecko has a bug meaning that <code>background-position</code> can't be {{cssxref("transition","transitioned")}} between two values containing different numbers of {{cssxref("&lt;position&gt;")}} values, for example <code>background-position: 10px 10px;</code> and <code>background-position: 20px 20px, 30px 30px;</code> (see {{bug(1390446)}}). Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, planned for release in Firefox 57) fixes this.</li>
 </ul>
 
 <h2 id="See_also" name="See_also">See also</h2>

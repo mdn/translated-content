@@ -20,7 +20,9 @@ Si l'URL spécifiée n'est pas valide, une {{domxref("DOMException")}} de type `
 
 ## Syntaxe
 
-    object.assign(url);
+```js
+object.assign(url);
+```
 
 ### Paramètres
 

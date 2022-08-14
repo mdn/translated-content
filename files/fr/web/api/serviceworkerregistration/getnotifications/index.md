@@ -19,8 +19,10 @@ La méthode **`getNotifications()`** de l'interface {{domxref ("ServiceWorkerReg
 
 ## Syntaxe
 
-    serviceWorkerRegistration.getNotifications(options)
-    .then(function(notificationsList) { ... })
+```js
+serviceWorkerRegistration.getNotifications(options)
+.then(function(notificationsList) { ... })
+```
 
 ### Paramétres
 

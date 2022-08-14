@@ -44,7 +44,7 @@ translation_of: Learn/Server-side/Django/Models
 
 <p><img alt="LocalLibrary Model UML" src="https://mdn.mozillademos.org/files/16479/local_library_model_uml.png" style="height: 660px; width: 977px;"></p>
 
-<p>We've created models for the book (the generic details of the book), book instance (status of specific physical copies of the book available in the system), and author. We have also decided to have a model for the genre so that values can be created/selected through the admin interface. We've decided not to have a model for the <code>BookInstance:status</code> — we've hardcoded the values (<code>LOAN_STATUS</code>) because we don't expect these to change. Within each of the boxes, you can see the model name, the field names, and types, and also the methods and their return types.</p>
+<p>We've created models for the book (the generic details of the book), book instance (status of specific physical copies of the book available in the system), and author. We have also decided to have a model for the genre so that values can be created/selected through the admin interface. We've decided not to have a model for the <code>BookInstance:status</code> — we've hardcoded the values (<code>LOAN_STATUS</code>) because we don't expect these to change. Within each of the boxes, you can see the model name, the field names, and types, and also the methods and their return types.</p>
 
 <p>The diagram also shows the relationships between the models, including their <em>multiplicities</em>. The multiplicities are the numbers on the diagram showing the numbers (maximum and minimum) of each model that may be present in the relationship. For example, the connecting line between the boxes shows that Book and a Genre are related. The numbers close to the Genre model show that a book must have one or more Genres (as many as you like), while the numbers on the other end of the line next to the Book model show that a Genre can have zero or many associated books.</p>
 
@@ -63,24 +63,24 @@ translation_of: Learn/Server-side/Django/Models
 <pre>from django.db import models
 
 class MyModelName(models.Model):
-    """A typical class defining a model, derived from the Model class."""
+    """A typical class defining a model, derived from the Model class."""
 
-    # Fields
-    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
-    ...
+    # Fields
+    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+    ...
 
-    # Metadata
+    # Metadata
     class Meta:
-        ordering = ['-my_field_name']
+        ordering = ['-my_field_name']
 
-    # Methods
-    def get_absolute_url(self):
-        """Returns the url to access a particular instance of MyModelName."""
-        return reverse('model-detail-view', args=[str(self.id)])
+    # Methods
+    def get_absolute_url(self):
+        """Returns the url to access a particular instance of MyModelName."""
+        return reverse('model-detail-view', args=[str(self.id)])
 
-    def __str__(self):
-        """String for representing the MyModelName object (in Admin site etc.)."""
-        return self.my_field_name</pre>
+    def __str__(self):
+        """String for representing the MyModelName object (in Admin site etc.)."""
+        return self.my_field_name</pre>
 
 <p>In the below sections we'll explore each of the features inside the model in detail:</p>
 
@@ -107,11 +107,11 @@ class MyModelName(models.Model):
 
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#help-text">help_text</a>: Provides a text label for HTML forms (e.g. in the admin site), as described above.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#verbose-name">verbose_name</a>: A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#default">default</a>: The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#null">null</a>: If <code>True</code>, Django will store blank values as <code>NULL</code> in the database for fields where this is appropriate (a <code>CharField</code> will instead store an empty string). The default is <code>False</code>.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#blank">blank</a>: If <code>True</code>, the field is allowed to be blank in your forms. The default is <code>False</code>, which means that Django's form validation will force you to enter a value. This is often used with <code>null=True</code> , because if you're going to allow blank values, you also want the database to be able to represent them appropriately.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#choices">choices</a>: A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#verbose-name">verbose_name</a>: A human-readable name for the field used in field labels. If not specified, Django will infer the default verbose name from the field name.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#default">default</a>: The default value for the field. This can be a value or a callable object, in which case the object will be called every time a new record is created.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#null">null</a>: If <code>True</code>, Django will store blank values as <code>NULL</code> in the database for fields where this is appropriate (a <code>CharField</code> will instead store an empty string). The default is <code>False</code>.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#blank">blank</a>: If <code>True</code>, the field is allowed to be blank in your forms. The default is <code>False</code>, which means that Django's form validation will force you to enter a value. This is often used with <code>null=True</code> , because if you're going to allow blank values, you also want the database to be able to represent them appropriately.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#choices">choices</a>: A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.</li>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#primary-key">primary_key</a>: If <code>True</code>, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records). If no field is specified as the primary key then Django will automatically add a field for this purpose.</li>
 </ul>
 
@@ -119,7 +119,7 @@ class MyModelName(models.Model):
 
 <h5 id="Common_field_types">Common field types</h5>
 
-<p>The following list describes some of the more commonly used types of fields. </p>
+<p>The following list describes some of the more commonly used types of fields. </p>
 
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.CharField">CharField</a> is used to define short-to-mid sized fixed-length strings. You must specify the <code>max_length</code> of the data to be stored.</li>
@@ -168,7 +168,7 @@ class MyModelName(models.Model):
 <p><strong>Minimally, in every model you should define the standard Python class method <code>__str__()</code> to return a human-readable string for each object.</strong> This string is used to represent individual records in the administration site (and anywhere else you need to refer to a model instance). Often this will return a title or name field from the model.</p>
 
 <pre class="brush: python">def __str__(self):
-    return self.field_name</pre>
+    return self.field_name</pre>
 
 <p>Another common method to include in Django models is <code>get_absolute_url()</code>, which returns a URL for displaying individual model records on the website (if you define this method then Django will automatically add a "View on Site" button to the model's record editing screens in the Admin site). A typical pattern for <code>get_absolute_url()</code> is shown below.</p>
 
@@ -178,7 +178,7 @@ class MyModelName(models.Model):
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Assuming you will use URLs like <code>/myapplication/mymodelname/2</code> to display individual records for your model (where "2" is the <code>id</code> for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The <code>reverse()</code> function above is able to "reverse" your url mapper (in the above case named <em>'model-detail-view'</em>) in order to create a URL of the right format.</p>
+<p><strong>Note</strong>: Assuming you will use URLs like <code>/myapplication/mymodelname/2</code> to display individual records for your model (where "2" is the <code>id</code> for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The <code>reverse()</code> function above is able to "reverse" your url mapper (in the above case named <em>'model-detail-view'</em>) in order to create a URL of the right format.</p>
 
 <p>Of course to make this work you still have to write the URL mapping, view, and template!</p>
 </div>
@@ -260,12 +260,12 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 <p>Copy the <code>Genre</code> model code shown below and paste it into the bottom of your <code>models.py</code> file. This model is used to store information about the book category — for example whether it is fiction or non-fiction, romance or military history, etc. As mentioned above, we've created the Genre as a model rather than as free text or a selection list so that the possible values can be managed through the database rather than being hard coded.</p>
 
 <pre class="brush: python">class Genre(models.Model):
-    """Model representing a book genre."""
-    name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction)')
+    """Model representing a book genre."""
+    name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction)')
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return self.name</pre>
+    def __str__(self):
+        """String for representing the Model object."""
+        return self.name</pre>
 
 <p>The model has a single <code>CharField</code> field (<code>name</code>), which is used to describe the genre (this is limited to 200 characters and has some <code>help_text</code>. At the end of the model we declare a <code>__str__()</code> method, which simply returns the name of the genre defined by a particular record. No verbose name has been defined, so the field will be called <code>Name</code> in forms.</p>
 
@@ -276,27 +276,27 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 <pre class="brush: python">from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 
 class Book(models.Model):
-    """Model representing a book (but not a specific copy of a book)."""
-    title = models.CharField(max_length=200)
+    """Model representing a book (but not a specific copy of a book)."""
+    title = models.CharField(max_length=200)
 
     # Foreign Key used because book can only have one author, but authors can have multiple books
     # Author as a string rather than object because it hasn't been declared yet in the file
-    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
 
-    summary = models.TextField(max_length=1000, help_text='Enter a brief description of the book')
-    isbn = models.CharField('ISBN', max_length=13, help_text='13 Character &lt;a href="https://www.isbn-international.org/content/what-isbn"&gt;ISBN number&lt;/a&gt;')
+    summary = models.TextField(max_length=1000, help_text='Enter a brief description of the book')
+    isbn = models.CharField('ISBN', max_length=13, help_text='13 Character &lt;a href="https://www.isbn-international.org/content/what-isbn"&gt;ISBN number&lt;/a&gt;')
 
-    # ManyToManyField used because genre can contain many books. Books can cover many genres.
-    # Genre class has already been defined so we can specify the object above.
+    # ManyToManyField used because genre can contain many books. Books can cover many genres.
+    # Genre class has already been defined so we can specify the object above.
     genre = models.ManyToManyField(Genre, help_text='Select a genre for this book')
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return self.title
+    def __str__(self):
+        """String for representing the Model object."""
+        return self.title
 
-    def get_absolute_url(self):
-        """Returns the url to access a detail record for this book."""
-        return reverse('book-detail', args=[str(self.id)])
+    def get_absolute_url(self):
+        """Returns the url to access a detail record for this book."""
+        return reverse('book-detail', args=[str(self.id)])
 </pre>
 
 <p>The genre is a <code>ManyToManyField</code>, so that a book can have multiple genres and a genre can have many books. The author is declared as <code>ForeignKey</code>, so each book will only have one author, but an author may have many books (in practice a book might have multiple authors, but not in this implementation!)</p>
@@ -362,7 +362,7 @@ class BookInstance(models.Model):
 
 <ul>
  <li>Starting with Python 3.6, you can use the string interpolation syntax (also known as f-strings): <code>f'{self.id} ({self.book.title})'</code>.</li>
- <li>In older versions of this tutorial, we were using a <a href="https://www.python.org/dev/peps/pep-3101/">formatted string</a> syntax, which is also a valid way of formatting strings in Python (e.g. <code>'{0} ({1})'.format(self.id,self.book.title)</code>).</li>
+ <li>In older versions of this tutorial, we were using a <a href="https://www.python.org/dev/peps/pep-3101/">formatted string</a> syntax, which is also a valid way of formatting strings in Python (e.g. <code>'{0} ({1})'.format(self.id,self.book.title)</code>).</li>
 </ul>
 </div>
 

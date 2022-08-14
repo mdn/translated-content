@@ -5,9 +5,9 @@ translation_of: Web/API/Element/getElementsByClassName
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">O método <code><strong>getElementsByClassName()</strong></code> da interface {{domxref("Element")}} retorna um {{domxref("HTMLCollection")}} atualizado simultaneamente que contém todos os elementos descendentes da classe ou das classes especificadas.</span></p>
+<p><span class="seoSummary">O método <code><strong>getElementsByClassName()</strong></code> da interface {{domxref("Element")}} retorna um {{domxref("HTMLCollection")}} atualizado simultaneamente que contém todos os elementos descendentes da classe ou das classes especificadas.</span></p>
 
-<p>O método {{domxref("Document.getElementsByClassName", "getElementsByClassName()")}} da interface {{domxref("Document")}} funciona da mesma forma, exceto que atua em todo o documento, começando da raíz.</p>
+<p>O método {{domxref("Document.getElementsByClassName", "getElementsByClassName()")}} da interface {{domxref("Document")}} funciona da mesma forma, exceto que atua em todo o documento, começando da raíz.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -17,38 +17,38 @@ translation_of: Web/API/Element/getElementsByClassName
 
 <dl>
  <dt><code>names</code></dt>
- <dd>Uma {{domxref("DOMString")}} contendo um ou mais nomes de classes separados por espaço em branco.</dd>
+ <dd>Uma {{domxref("DOMString")}} contendo um ou mais nomes de classes separados por espaço em branco.</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>Um {{domxref("HTMLCollection")}} que contém uma lista de elementos atualizada em tempo real com todos os elementos que são membros das classes especificadas em <code>names</code>.</p>
+<p>Um {{domxref("HTMLCollection")}} que contém uma lista de elementos atualizada em tempo real com todos os elementos que são membros das classes especificadas em <code>names</code>.</p>
 
 <h2 id="Notas_de_uso">Notas de uso</h2>
 
-<p>Habitualmente, o conjunto de elementos retornado será atualizado simultaneamente com as mudanças feitas, refletindo no estado atual da árvore DOM, no elemento em que a função foi chamada. Assim que novos elementos que satisfazem as classes contidas em <code>names</code> são adicionados na subárvore, eles imediatamente aparecem no conjunto de elementos. Em um exemplo similar, se um elemento existente que não satisfaz nenhuma classe contida em <code>names</code> tem as suas classes ajustadas para que satisfaça, ele irá instantaneamente ser adicionado ao conjunto de elementos.</p>
+<p>Habitualmente, o conjunto de elementos retornado será atualizado simultaneamente com as mudanças feitas, refletindo no estado atual da árvore DOM, no elemento em que a função foi chamada. Assim que novos elementos que satisfazem as classes contidas em <code>names</code> são adicionados na subárvore, eles imediatamente aparecem no conjunto de elementos. Em um exemplo similar, se um elemento existente que não satisfaz nenhuma classe contida em <code>names</code> tem as suas classes ajustadas para que satisfaça, ele irá instantaneamente ser adicionado ao conjunto de elementos.</p>
 
-<p>O oposto disso também acontece; os elementos que não satisfazerem mais as classes contidas em <code>name</code> serão removidos instantaneamente do conjunto.</p>
+<p>O oposto disso também acontece; os elementos que não satisfazerem mais as classes contidas em <code>name</code> serão removidos instantaneamente do conjunto.</p>
 
 <div class="note">
-<p>No modo <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks</a>, o nome das classes são comparadas da forma case-insensitive. Caso contrário, considere case sensitive.</p>
+<p>No modo <a href="/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">quirks</a>, o nome das classes são comparadas da forma case-insensitive. Caso contrário, considere case sensitive.</p>
 </div>
 
 <h2 id="Exemplos">Exemplos</h2>
 
 <h3 id="Usando_uma_única_classe">Usando uma única classe</h3>
 
-<p>Para procurarmos elementos que incluem uma classe específica, nós apenas informamos o nome da classe ao chamar <code>getElementsByClassName()</code>:</p>
+<p>Para procurarmos elementos que incluem uma classe específica, nós apenas informamos o nome da classe ao chamar <code>getElementsByClassName()</code>:</p>
 
 <pre class="brush: js">element.getElementsByClassName('test');</pre>
 
-<p>Esse exemplo retorna todos os elementos que possuem a classe <code>test</code>, e que também são filhos do elemento que possui o <code>id</code> com valor <code>main</code>:</p>
+<p>Esse exemplo retorna todos os elementos que possuem a classe <code>test</code>, e que também são filhos do elemento que possui o <code>id</code> com valor <code>main</code>:</p>
 
 <pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 
 <h3 id="Usando_várias_classes">Usando várias classes</h3>
 
-<p>Para retornar elementos que incluem as classes <code>red</code> and <code>test</code>:</p>
+<p>Para retornar elementos que incluem as classes <code>red</code> and <code>test</code>:</p>
 
 <pre class="brush: js">element.getElementsByClassName('red test');</pre>
 

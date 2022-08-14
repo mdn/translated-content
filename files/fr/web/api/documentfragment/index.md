@@ -67,4 +67,4 @@ _Cette interface hérite des méthodes de son parent, {{domxref("Node")}}_, et i
 
 ## Voir aussi
 
-- [Index des interfaces DOM](/en-US/docs/DOM/DOM_Reference)
+- [Index des interfaces DOM](/fr/docs/DOM/DOM_Reference)

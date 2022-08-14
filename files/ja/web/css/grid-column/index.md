@@ -135,7 +135,6 @@ grid-column: unset;
 
 {{EmbedLiveSample("Setting_grid_column_size_and_location", "100%", "100px")}}
 
-
 ## 仕様書
 
 {{Specifications}}

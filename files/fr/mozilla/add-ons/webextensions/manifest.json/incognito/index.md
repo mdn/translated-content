@@ -35,7 +35,7 @@ Utilisez la clé `incognito` pour contrôler la façon dont l'extension fonction
 
 Il s'agit d'une chaîne qui peut prendre l'une des valeurs suivantes:
 
-- "spanning" (la valeur par défaut) : affichera des événements à partir de fenêtres et d'onglets privés et non privés. Fenêtres et onglets obtiendront une propriété `incognito` dans la [`fenêtre`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) ou l'[`onglet `](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)qui les représente. Cette propriété indique si l'objet est ou non privé :
+- "spanning" (la valeur par défaut) : affichera des événements à partir de fenêtres et d'onglets privés et non privés. Fenêtres et onglets obtiendront une propriété `incognito` dans la [`fenêtre`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) ou l'[`onglet`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) qui les représente. Cette propriété indique si l'objet est ou non privé :
 
   ```js
   browser.windows.getLastFocused().then((windowInfo) => {

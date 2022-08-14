@@ -14,15 +14,15 @@ original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>O método <code><strong>elementFromPoint()</strong></code> da interface {{domxref("Document")}} retorna o elemento de maior nível nas coordenadas especificadas.</p>
+<p>O método <code><strong>elementFromPoint()</strong></code> da interface {{domxref("Document")}} retorna o elemento de maior nível nas coordenadas especificadas.</p>
 
-<p>Se o elemento no ponto especificado pertencer à outro documento (por exemplo, um subdocumento em um iframe), será retornado o pai do subdocumento (o próprio iframe). Se o elemento em determinado ponto for anônimo ou for um conteudo gerado por XBL, como por exemplo barras de scroll de caixas de texto, então será retornado o primeiro elemento pai, não-anônimo (por exemplo, a própria caixa de texto).</p>
+<p>Se o elemento no ponto especificado pertencer à outro documento (por exemplo, um subdocumento em um iframe), será retornado o pai do subdocumento (o próprio iframe). Se o elemento em determinado ponto for anônimo ou for um conteudo gerado por XBL, como por exemplo barras de scroll de caixas de texto, então será retornado o primeiro elemento pai, não-anônimo (por exemplo, a própria caixa de texto).</p>
 
 <p>Se o ponto especificado estiver fora dos limites visíveis do documento ou tiver uma coordenada negativa, o resultado é <code>null</code>.</p>
 
 <p>Se você precisa encontrar uma posição específica dentro do elemento, use {{domxref("Document.caretPositionFromPoint()")}}.</p>
 
-<p>{{Note("Chamados por documentos XUL devem esperar até o evento <code>onload</code> ser acionado antes de chamar este método.")}}</p>
+<p>{{Note("Chamados por documentos XUL devem esperar até o evento <code>onload</code> ser acionado antes de chamar este método.")}}</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -39,7 +39,7 @@ original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 
 <h3 id="Valor_retornado">Valor retornado</h3>
 
-<p>O objeto de nível mais alto {{domxref("Element")}} dentro das coordenadas declaradas.</p>
+<p>O objeto de nível mais alto {{domxref("Element")}} dentro das coordenadas declaradas.</p>
 
 <h2 id="Example" name="Example">Exemplo</h2>
 
@@ -83,52 +83,4 @@ function changeColor(newColor) {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td> {{CompatChrome(4.0)}}</td>
-   <td>3</td>
-   <td>5.5</td>
-   <td>10.50</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Document.elementFromPoint")}}

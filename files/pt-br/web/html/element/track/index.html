@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/track
 ---
 <div>{{HTMLRef}}</div>
 
-<p>O <strong>elemento HTML <code>&lt;track&gt;</code> </strong>é usado como filho dos elementos de mídia{{HTMLElement("audio")}} e {{HTMLElement("video")}}. Ele permite que você especifique faixas de texto temporizadas (ou dados baseados em tempo), por exemplo, para lidar automaticamente com legendas. As faixas são formatadas em <a href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format">WebVTT format</a> (arquivos <code>.vtt</code>) — Web Video Text Tracks or <a href="https://w3c.github.io/ttml2/index.html">Timed Text Markup Language (TTML).</a></p>
+<p>O <strong>elemento HTML <code>&lt;track&gt;</code> </strong>é usado como filho dos elementos de mídia{{HTMLElement("audio")}} e {{HTMLElement("video")}}. Ele permite que você especifique faixas de texto temporizadas (ou dados baseados em tempo), por exemplo, para lidar automaticamente com legendas. As faixas são formatadas em <a href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format">WebVTT format</a> (arquivos <code>.vtt</code>) — Web Video Text Tracks or <a href="https://w3c.github.io/ttml2/index.html">Timed Text Markup Language (TTML).</a></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}</div>
 
@@ -54,7 +54,7 @@ translation_of: Web/HTML/Element/track
  <dt>{{htmlattrdef("default")}}</dt>
  <dd>This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one <code>track</code> element per media element.</dd>
  <dt>{{htmlattrdef("kind")}}</dt>
- <dd>How the text track is meant to be used. If omitted the default kind is <code>subtitles</code>. If the attribute is not present, it will use the <code>subtitles</code>. If the attribute contains an invalid value, it will use <code>metadata</code>. (Versions of Chrome earlier than 52 treated an invalid value as <code>subtitles</code>.) The following keywords are allowed:
+ <dd>How the text track is meant to be used. If omitted the default kind is <code>subtitles</code>. If the attribute is not present, it will use the <code>subtitles</code>. If the attribute contains an invalid value, it will use <code>metadata</code>. (Versions of Chrome earlier than 52 treated an invalid value as <code>subtitles</code>.) The following keywords are allowed:
  <ul>
   <li><code>subtitles</code>
    <ul>
@@ -92,7 +92,7 @@ translation_of: Web/HTML/Element/track
  <dt>{{htmlattrdef("src")}}</dt>
  <dd>Address of the track (<code>.vtt</code> file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the <code>track</code> element has a <code><a href="/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></code> attribute.</dd>
  <dt>{{htmlattrdef("srclang")}}</dt>
- <dd>Language of the track text data. It must be a valid <a href="https://r12a.github.io/app-subtags/">BCP 47</a> language tag. If the <code>kind</code> attribute is set to <code>subtitles,</code> then <code>srclang</code> must be defined.</dd>
+ <dd>Language of the track text data. It must be a valid <a href="https://r12a.github.io/app-subtags/">BCP 47</a> language tag. If the <code>kind</code> attribute is set to <code>subtitles,</code> then <code>srclang</code> must be defined.</dd>
 </dl>
 
 <h2 id="Usage_notes">Usage notes</h2>
@@ -139,7 +139,7 @@ translation_of: Web/HTML/Element/track
   <tr>
    <td>{{SpecName('HTML WHATWG','embedded-content.html#the-track-element','track element')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("HTML5 W3C", "embedded-content-0.html#the-track-element", "track element")}}</td>

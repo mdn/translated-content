@@ -12,4 +12,4 @@ Un certificat numérique est un fichier de données qui associe une {{Glossary("
 
 ## Pour approfondir
 
-- {{interwiki("wikipedia", "Public_key_certificate" ,"Certificat électronique")}} sur Wikipédia
+- [Certificat électronique](https://fr.wikipedia.org/wiki/Certificat_%C3%A9lectronique) sur Wikipédia

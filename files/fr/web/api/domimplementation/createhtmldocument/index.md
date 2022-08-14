@@ -17,7 +17,9 @@ La méthode **`DOMImplementation.createHTMLDocument()`**  crée un nouveau {{dom
 
 ## Syntaxe
 
-    newDoc = document.implementation.createHTMLDocument(titre);
+```js
+newDoc = document.implementation.createHTMLDocument(titre);
+```
 
 ### Paramètres
 

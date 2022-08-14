@@ -12,7 +12,9 @@ La fonction `normalize-space` supprime les espaces de début et de fin d'une cha
 
 ### Syntaxe
 
-    normalize-space(chaîne )
+```
+normalize-space(chaîne )
+```
 
 ### Arguments
 

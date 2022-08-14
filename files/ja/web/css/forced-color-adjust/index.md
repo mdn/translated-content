@@ -88,11 +88,11 @@ forced-color-adjust: unset;
 
 ```html
 <div class="box">
-  <p>This is a box which should use your color preferences.</p>
+  <p>This is a box which should use your color preferences.</p>
 </div>
 
 <div class="box forced">
-  <p>This is a box which should stay the colors set by the site.</p>
+  <p>This is a box which should stay the colors set by the site.</p>
 </div>
 ```
 

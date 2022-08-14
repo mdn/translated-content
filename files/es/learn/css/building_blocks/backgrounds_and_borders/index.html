@@ -185,13 +185,13 @@ background-position: 10px 20px,  top right;</pre>
  <li><code>local</code>: Este valor se añadió posteriormente (solo es compatible con Internet Explorer 9+, mientras que los otros son compatibles con IE4+) porque el valor <code>scroll</code> es bastante confuso y en muchos casos no hace lo que deseas. El valor <code>local</code> ancla el fondo al elemento en el que está configurado, de modo que cuando te desplazas por el contenido del elemento, el fondo se desplaza con este.</li>
 </ul>
 
-<p>La propiedad {{cssxref ("background-attachment")}} solo tiene efecto cuando hay contenido por el que puedas desplazarte, por lo que hemos preparado un ejemplo para demostrar las diferencias entre los tres valores: echa un vistazo a <a href="http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a> (También puedes consultar el <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">código fuente</a> aquí).</p>
+<p>La propiedad {{cssxref ("background-attachment")}} solo tiene efecto cuando hay contenido por el que puedas desplazarte, por lo que hemos preparado un ejemplo para demostrar las diferencias entre los tres valores: echa un vistazo a <a href="http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a> (También puedes consultar el <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">código fuente</a> aquí).</p>
 
 <h3 id="Usar_la_propiedad_abreviada_para_el_fondo">Usar la propiedad abreviada para el fondo</h3>
 
 <p>Como mencionamos al comienzo de este artículo, a menudo verás fondos que están especificados usando la propiedad {{cssxref ("background")}}. Esta forma abreviada te permite configurar todas las diferentes propiedades a la vez.</p>
 
-<p>Si utilizas varios fondos, debes especificar todas las propiedades para el primer fondo y luego añadir el fondo siguiente separado por una coma. En el ejemplo siguiente hay un degradado con un tamaño y una posición, luego un fondo de imagen con <code>no-repeat</code> y una posición y, por último, un color.</p>
+<p>Si utilizas varios fondos, debes especificar todas las propiedades para el primer fondo y luego añadir el fondo siguiente separado por una coma. En el ejemplo siguiente hay un degradado con un tamaño y una posición, luego un fondo de imagen con <code>no-repeat</code> y una posición y, por último, un color.</p>
 
 <p>Al escribir los valores abreviados de las imágenes de fondo es necesario seguir algunas reglas, por ejemplo:</p>
 
@@ -252,7 +252,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <h3 id="Esquinas_redondeadas">Esquinas redondeadas</h3>
 
-<p>El redondeo de esquinas en una caja se logra mediante el uso de la propiedad {{cssxref ("border-radius")}} y otras propiedades asociadas que se relacionan con cada esquina de la caja. Como valor pueden usarse dos longitudes o porcentajes: el primer valor define el radio horizontal y el segundo el radio vertical. En muchos casos, solo se pondrá un valor, que se utilizará para ambos.</p>
+<p>El redondeo de esquinas en una caja se logra mediante el uso de la propiedad {{cssxref ("border-radius")}} y otras propiedades asociadas que se relacionan con cada esquina de la caja. Como valor pueden usarse dos longitudes o porcentajes: el primer valor define el radio horizontal y el segundo el radio vertical. En muchos casos, solo se pondrá un valor, que se utilizará para ambos.</p>
 
 <p>Por ejemplo, para hacer que las cuatro esquinas de una caja tengan un radio de 10 píxeles:</p>
 
@@ -260,7 +260,7 @@ background-position: 10px 20px,  top right;</pre>
   border-radius: 10px;
 } </code></pre>
 
-<p>O para hacer que la esquina superior derecha tenga un radio horizontal de 1 em y un radio vertical del 10%:</p>
+<p>O para hacer que la esquina superior derecha tenga un radio horizontal de 1 em y un radio vertical del 10%:</p>
 
 <pre class="brush: css notranslate"><code>.box {
   border-top-right-radius: 1em 10%;

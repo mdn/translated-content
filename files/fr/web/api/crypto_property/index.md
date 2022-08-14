@@ -10,7 +10,9 @@ La propriété, en lecture seule, {{domxref("Window.crypto")}} retourne l'objet 
 
 ## Syntaxe
 
-    var cryptoObj = window.crypto || window.msCrypto; // pour IE 11
+```js
+var cryptoObj = window.crypto || window.msCrypto; // pour IE 11
+```
 
 ## Spécifications
 

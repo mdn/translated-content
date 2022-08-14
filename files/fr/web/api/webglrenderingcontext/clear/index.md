@@ -19,7 +19,9 @@ Les masques d'écriture, de détourage, de tramage et de tampon peuvent affecter
 
 ## Syntaxe
 
-    void gl.clear(masque);
+```js
+void gl.clear(masque);
+```
 
 ### Paramètres
 

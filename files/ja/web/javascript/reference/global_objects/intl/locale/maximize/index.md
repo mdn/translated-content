@@ -7,8 +7,8 @@ tags:
   - JavaScript
   - Locale
   - メソッド
-  - Prototype
-  - Reference
+  - プロトタイプ
+  - リファレンス
 browser-compat: javascript.builtins.Intl.Locale.maximize
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 ---
@@ -17,7 +17,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 **`Intl.Locale.prototype.maximize()`** メソッドは、既存の値に基づいてロケールの言語、文字体系、地域の最も可能性の近い値を取得します。
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}
-
 
 ## 構文
 
@@ -49,7 +48,7 @@ console.log(myLocMaximized.baseName);
 
 // "ja-Jpan-JP-u-ca-gregory-hc-h24" と表示します。
 // なお、拡張タグ ("-u" 以降) はそのまま残ります。
-console.log(myLocMaximized.toString()); 
+console.log(myLocMaximized.toString());
 ```
 
 ## 仕様書

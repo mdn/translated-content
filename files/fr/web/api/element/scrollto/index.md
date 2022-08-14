@@ -15,8 +15,10 @@ La méthode **`scrollTo()`** de l'interface {{domxref("Element")}} permet de fai
 
 ## Syntaxe
 
-    element.scrollTo(x-coord, y-coord)
-    element.scrollTo(options)
+```js
+element.scrollTo(x-coord, y-coord)
+element.scrollTo(options)
+```
 
 ### Paramètres
 

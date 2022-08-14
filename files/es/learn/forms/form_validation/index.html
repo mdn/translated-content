@@ -31,9 +31,9 @@ original_slug: Learn/HTML/Forms/Validacion_formulario_datos
  </tbody>
 </table>
 
-<p>La validación en el lado del cliente es una verificación inicial y una característica importante para garantizar una buena experiencia de usuario; mediante la detección de datos no válidos en el lado del cliente, el usuario puede corregirlos de inmediato. Si el servidor lo recibe y, a continuación, lo rechaza; se produce un retraso considerable en la comunicación entre el servidor y el cliente que insta al usuario a corregir sus datos.</p>
+<p>La validación en el lado del cliente es una verificación inicial y una característica importante para garantizar una buena experiencia de usuario; mediante la detección de datos no válidos en el lado del cliente, el usuario puede corregirlos de inmediato. Si el servidor lo recibe y, a continuación, lo rechaza; se produce un retraso considerable en la comunicación entre el servidor y el cliente que insta al usuario a corregir sus datos.</p>
 
-<p>Sin embargo, ¡la validación en el lado del cliente <em>no debe considerarse </em> una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario <em>en el lado del servidor</em>, <strong>así como también</strong> en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor. Lee <a href="/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web">Seguridad en los sitios web</a> para ver qué <em>podría</em> suceder. Cómo implementar la validación en el lado del servidor está fuera del alcance de este módulo, pero debes tenerlo en cuenta.</p>
+<p>Sin embargo, ¡la validación en el lado del cliente <em>no debe considerarse </em> una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario <em>en el lado del servidor</em>, <strong>así como también</strong> en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor. Lee <a href="/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web">Seguridad en los sitios web</a> para ver qué <em>podría</em> suceder. Cómo implementar la validación en el lado del servidor está fuera del alcance de este módulo, pero debes tenerlo en cuenta.</p>
 
 <h2 id="¿Qué_es_la_validación_de_formularios">¿Qué es la validación de formularios?</h2>
 
@@ -46,26 +46,26 @@ original_slug: Learn/HTML/Forms/Validacion_formulario_datos
  <li>«Su contraseña debe tener entre 8 y 30 caracteres y contener una letra mayúscula, un símbolo y un número». (Se requiere un formato de datos muy específico para tus datos).</li>
 </ul>
 
-<p>Esto se llama <strong>validación de formulario</strong>. Cuando introduces los datos, el navegador y/o el servidor web verifican que estén en el formato correcto y dentro de las restricciones establecidas por la aplicación. La validación realizada en el navegador se denomina validación <strong>en el lado del cliente</strong>, mientras que la validación realizada en el servidor se denomina validación <strong>en el lado del servidor</strong>. En este capítulo nos centraremos en la validación en el lado del cliente.</p>
+<p>Esto se llama <strong>validación de formulario</strong>. Cuando introduces los datos, el navegador y/o el servidor web verifican que estén en el formato correcto y dentro de las restricciones establecidas por la aplicación. La validación realizada en el navegador se denomina validación <strong>en el lado del cliente</strong>, mientras que la validación realizada en el servidor se denomina validación <strong>en el lado del servidor</strong>. En este capítulo nos centraremos en la validación en el lado del cliente.</p>
 
-<p>Si la información está en el formato correcto, la aplicación permite que los datos se envíen al servidor y (en general) que se guarden en una base de datos; si la información no está en el formato correcto, da al usuario un mensaje de error que explica lo que debe corregir y le permite volver a intentarlo.</p>
+<p>Si la información está en el formato correcto, la aplicación permite que los datos se envíen al servidor y (en general) que se guarden en una base de datos; si la información no está en el formato correcto, da al usuario un mensaje de error que explica lo que debe corregir y le permite volver a intentarlo.</p>
 
-<p>Queremos que completar formularios web sea lo más fácil posible. Entonces, ¿por qué insistimos en validar nuestros formularios? Hay tres razones principales:</p>
+<p>Queremos que completar formularios web sea lo más fácil posible. Entonces, ¿por qué insistimos en validar nuestros formularios? Hay tres razones principales:</p>
 
 <ul>
- <li><strong>Queremos obtener los datos correctos en el formato correcto.</strong> Nuestras aplicaciones no funcionarán correctamente si los datos de nuestros usuarios se almacenan en el formato incorrecto, son incorrectos o se omiten por completo.</li>
- <li><strong>Queremos proteger los datos de nuestros usuarios</strong>. Obligar a nuestros usuarios a introducir contraseñas seguras facilita proteger la información de su cuenta.</li>
+ <li><strong>Queremos obtener los datos correctos en el formato correcto.</strong> Nuestras aplicaciones no funcionarán correctamente si los datos de nuestros usuarios se almacenan en el formato incorrecto, son incorrectos o se omiten por completo.</li>
+ <li><strong>Queremos proteger los datos de nuestros usuarios</strong>. Obligar a nuestros usuarios a introducir contraseñas seguras facilita proteger la información de su cuenta.</li>
  <li><strong>Queremos protegernos a nosotros mismo</strong>. Hay muchas formas en que los usuarios maliciosos puedan usar mal los formularios desprotegidos y dañar la aplicación (consulta <a href="/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web">Seguridad del sitio web</a>).</li>
 </ul>
 
-<div class="warning"><strong>Atención:</strong> No confíes nunca en los datos que se pasan al servidor desde el cliente. Incluso si tu formulario se valida correctamente y evita la introducción de datos con formato incorrecto en el lado del cliente, un usuario malintencionado puede alterar la petición de red.</div>
+<div class="warning"><strong>Atención:</strong> No confíes nunca en los datos que se pasan al servidor desde el cliente. Incluso si tu formulario se valida correctamente y evita la introducción de datos con formato incorrecto en el lado del cliente, un usuario malintencionado puede alterar la petición de red.</div>
 
 <h2 id="Diferentes_tipos_de_validación_en_el_lado_del_cliente">Diferentes tipos de validación en el lado del cliente</h2>
 
 <p>Hay dos tipos diferentes de validación por parte del cliente que encontrarás en la web:</p>
 
 <ul>
- <li>La <strong>validación de formularios incorporada</strong> utiliza características de validación de formularios HTML5, que hemos visto en muchos lugares a lo largo de este módulo. Esta validación generalmente no requiere mucho JavaScript. La validación de formularios incorporada tiene un mejor rendimiento que JavaScript, pero no es tan personalizable como la validación con JavaScript.</li>
+ <li>La <strong>validación de formularios incorporada</strong> utiliza características de validación de formularios HTML5, que hemos visto en muchos lugares a lo largo de este módulo. Esta validación generalmente no requiere mucho JavaScript. La validación de formularios incorporada tiene un mejor rendimiento que JavaScript, pero no es tan personalizable como la validación con JavaScript.</li>
  <li>La <strong>validación con JavaScript</strong> se codifica utilizando JavaScript. Esta validación es completamente personalizable, pero debes crearlo todo (o usar una biblioteca).</li>
 </ul>
 
@@ -77,7 +77,7 @@ original_slug: Learn/HTML/Forms/Validacion_formulario_datos
  <li><code><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code>: Especifica si un campo de formulario debe completarse antes de que se pueda enviar el formulario.</li>
  <li><code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> y <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>: Especifican la longitud mínima y máxima de los datos de texto (cadenas).</li>
  <li><code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> y <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code>: Especifican los valores mínimo y máximo de los tipos de entrada numéricos.</li>
- <li><code>type</code>: Especifica si los datos deben ser un número, una dirección de correo electrónico o algún otro tipo de preajuste específico. </li>
+ <li><code>type</code>: Especifica si los datos deben ser un número, una dirección de correo electrónico o algún otro tipo de preajuste específico. </li>
  <li><code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code>: Especifica una <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions">expresión regular</a> que define un patrón que los datos que se introduzcan deben seguir.</li>
 </ul>
 
@@ -283,7 +283,7 @@ div {
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Nota</strong>: <code>&lt;input type="number"&gt;</code> (y otros tipos, como <code>range</code> y <code>date</code>) también pueden tomar un atributo <a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a>, que especifica en qué incremento aumenta o disminuye el valor cuando se utilizan los controles de entrada (como el botones numéricos arriba y abajo). En el ejemplo anterior no hemos incluido un atributo <code>step</code>, por lo que el valor predeterminado es <code>1</code>. Esto significa que los valores de coma flotante, como 3.2, también se mostrarán como no válidos.</p>
+<p><strong>Nota</strong>: <code>&lt;input type="number"&gt;</code> (y otros tipos, como <code>range</code> y <code>date</code>) también pueden tomar un atributo <a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code></a>, que especifica en qué incremento aumenta o disminuye el valor cuando se utilizan los controles de entrada (como el botones numéricos arriba y abajo). En el ejemplo anterior no hemos incluido un atributo <code>step</code>, por lo que el valor predeterminado es <code>1</code>. Esto significa que los valores de coma flotante, como 3.2, también se mostrarán como no válidos.</p>
 </div>
 
 <h3 id="Ejemplo_completo">Ejemplo completo</h3>
@@ -380,7 +380,7 @@ input:focus:invalid {
 
 <p>Debes usar JavaScript si quieres controlar la apariencia de los mensajes de error nativos o tratar con navegadores heredados que no admiten la validación de formularios incorporados en HTML. En esta sección veremos las diferentes formas de hacer esto.</p>
 
-<h3 id="La_API_de_validación_de_restricciones">La API de validación de restricciones</h3>
+<h3 id="La_API_de_validación_de_restricciones">La API de validación de restricciones</h3>
 
 <p>La mayoría de los navegadores admiten la <a href="/en-US/docs/Web/API/Constraint_validation">API de validación de restricciones</a>, que consta de un conjunto de métodos y propiedades disponibles en las interfaces DOM de elementos de formulario siguientes:</p>
 
@@ -400,8 +400,8 @@ input:focus:invalid {
  <li><code>validity</code>: Devuelve un objeto <code>ValidityState</code> que contiene varias propiedades que describen el estado de validez del elemento. Puedes encontrar todos los detalles de todas las propiedades disponibles en la página de referencia {{domxref("ValidityState")}}; a continuación se enumeran algunos de los más comunes:
   <ul>
    <li>{{domxref("ValidityState.patternMismatch", "patternMismatch")}}: Devuelve <code>true</code> si el valor no coincide con el {{htmlattrxref("pattern", "input")}} especificado, y <code>false</code> si coincide. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.</li>
-   <li>{{domxref("ValidityState.tooLong", "tooLong")}}: Devuelve <code>true</code> si el valor es mayor que la longitud máxima especificada por el atributo {{htmlattrxref("maxlength", "input")}}, o <code>false</code> si es menor o igual al máximo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.</li>
-   <li>{{domxref("ValidityState.tooShort", "tooShort")}}: Devuelve <code>true</code> si el valor es menor que la longitud mínima especificada por el atributo {{htmlattrxref("minlength", "input")}}, o <code>false</code> si es mayor o igual al mínmo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.</li>
+   <li>{{domxref("ValidityState.tooLong", "tooLong")}}: Devuelve <code>true</code> si el valor es mayor que la longitud máxima especificada por el atributo {{htmlattrxref("maxlength", "input")}}, o <code>false</code> si es menor o igual al máximo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.</li>
+   <li>{{domxref("ValidityState.tooShort", "tooShort")}}: Devuelve <code>true</code> si el valor es menor que la longitud mínima especificada por el atributo {{htmlattrxref("minlength", "input")}}, o <code>false</code> si es mayor o igual al mínmo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.</li>
    <li>{{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: Devuelve <code>true</code> si el valor es mayor que el máximo especificado por el atributo {{htmlattrxref("max", "input")}}, o <code>false</code> si es menor o igual que el máximo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.</li>
    <li>{{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: Devuelve <code>true</code> si el valor es menor que el mínimo especificado por el atributo {{htmlattrxref("min", "input")}}, o <code>false</code> si es mayor o igual que el mínimo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.</li>
    <li>{{domxref("ValidityState.typeMismatch", "typeMismatch")}}: Devuelve <code>true</code> si el valor no está en la sintaxis requerida (cuando {{htmlattrxref("type", "input")}} es <code>email</code> o <code>url</code>), o <code>false</code> si la sintaxis es correcta. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.</li>
@@ -475,14 +475,14 @@ email.addEventListener("input", function (event) {
 <p>En primer lugar, el código HTML. Una vez más, siéntete libre de construir esto junto con nosotros:</p>
 
 <pre class="brush: html notranslate">&lt;form novalidate&gt;
-  &lt;p&gt;
-    &lt;label for="mail"&gt;
-      &lt;span&gt;Por favor, introduzca una dirección de correo electrónico: &lt;/span&gt;
-      &lt;input type="email" id="mail" name="mail" required minlength="8"&gt;
-      &lt;span class="error" aria-live="polite"&gt;&lt;/span&gt;
-    &lt;/label&gt;
-  &lt;/p&gt;
-  &lt;button&gt;Enviar&lt;/button&gt;
+  &lt;p&gt;
+    &lt;label for="mail"&gt;
+      &lt;span&gt;Por favor, introduzca una dirección de correo electrónico: &lt;/span&gt;
+      &lt;input type="email" id="mail" name="mail" required minlength="8"&gt;
+      &lt;span class="error" aria-live="polite"&gt;&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/p&gt;
+  &lt;button&gt;Enviar&lt;/button&gt;
 &lt;/form&gt;</pre>
 
 <p>Este sencillo formulario usa el atributo <code><a href="/en-US/docs/Web/HTML/Attributes/novalidate">novalidate</a></code> para desactivar la validación automática del navegador; esto permite que nuestra secuencia de comandos tome control sobre la validación. Sin embargo, esto no deshabilita la compatibilidad para la API de validación de restricciones ni la aplicación de pseudoclases de CSS como {{cssxref(":valid")}}, etc. Eso significa que, aunque el navegador no verifica automáticamente la validez del formulario antes de enviar los datos, puedes hacerlo tú mismo y diseñar el formulario en consecuencia.</p>
@@ -806,7 +806,7 @@ addEvent(form, "submit", function () {
 
 <h2 id="Prueba_tus_habilidades!">Prueba tus habilidades!</h2>
 
-<p>Has llegado al final de este artículo pero ¿puedes recordar la información más importante?Puedes encontrar pruebas adicionales para comprovar que has comprendido la información antes de que continue — visita <a href="/en-US/docs/Learn/Forms/Test_your_skills:_Form_validation">Prueba tus habilidades: Validación de formularios</a>.</p>
+<p>Has llegado al final de este artículo pero ¿puedes recordar la información más importante?Puedes encontrar pruebas adicionales para comprovar que has comprendido la información antes de que continue — visita <a href="/en-US/docs/Learn/Forms/Test_your_skills:_Form_validation">Prueba tus habilidades: Validación de formularios</a>.</p>
 
 <h2 id="Resumen">Resumen</h2>
 

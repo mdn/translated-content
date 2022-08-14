@@ -71,7 +71,9 @@ La taille de la police utilisée dans un site web peut être définie en unités
 
 Les unités absolues ne sont pas calculées proportionnellement entre elles mais font plutôt référence à une valeur « dure », la plupart du temps, elles sont exprimées en pixels (`px`). Par exemple, si, dans votre fichier CSS, vous déclarez la règle suivante&nbsp;:
 
-    body { font-size:16px; }
+```css
+body { font-size:16px; }
+```
 
 … vous indiquez au navigateur que, quoi qu'il arrive, la taille de la police doit être 16 pixels. Les navigateurs récents interprèteront cette règle de la façon suivante&nbsp;: « utiliser une police sur 16 pixels quand l'utilisateur a un niveau de zoom de 100% ».
 

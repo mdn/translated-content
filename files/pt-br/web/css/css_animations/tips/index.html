@@ -13,7 +13,7 @@ translation_of: Web/CSS/CSS_Animations/Tips
 
 <h2 id="Run_an_animation_again" name="Run_an_animation_again">Rode uma animação novamente</h2>
 
-<p>A especificação <a href="/en-US/docs/Web/CSS/CSS_Animations">Animações CSS</a> não oferece um modo de rodar uma animação novamente. Não existe um método mágico <code>resetAnimation()</code> nos elementos, e você não pode nem mesmo apenas atribuir o {{cssxref("animation-play-state")}} do elemento para <code>"running"</code> de novo. Ao invés disso, você tem que usar macetes para fazer com que uma animação parada reexecute.</p>
+<p>A especificação <a href="/en-US/docs/Web/CSS/CSS_Animations">Animações CSS</a> não oferece um modo de rodar uma animação novamente. Não existe um método mágico <code>resetAnimation()</code> nos elementos, e você não pode nem mesmo apenas atribuir o {{cssxref("animation-play-state")}} do elemento para <code>"running"</code> de novo. Ao invés disso, você tem que usar macetes para fazer com que uma animação parada reexecute.</p>
 
 <p>Aqui está um modo de fazer o qual achamos estável e confiável o suficiente para sugerir à você.</p>
 
@@ -61,13 +61,13 @@ translation_of: Web/CSS/CSS_Animations/Tips
   animation: colorchange 2s;
 }</pre>
 
-<p>Existem duas classes aqui. A classe "<code>box</code>" é a descrição básica da aparência da caixa, sem nenhuma informação de animação inclusa. Os detalhes da animação são incluídos na classe "<code>changing</code>", a qual diz que o {{cssxref("@keyframes")}} chamado <code>"colorchange"</code> deveria ser usado no decorrer de dois segundos para animar a caixa.</p>
+<p>Existem duas classes aqui. A classe "<code>box</code>" é a descrição básica da aparência da caixa, sem nenhuma informação de animação inclusa. Os detalhes da animação são incluídos na classe "<code>changing</code>", a qual diz que o {{cssxref("@keyframes")}} chamado <code>"colorchange"</code> deveria ser usado no decorrer de dois segundos para animar a caixa.</p>
 
 <p>Perceba que por isso a caixa não começa com nenhum efeito de animação configurado, então não será animada.</p>
 
 <h3 id="Conteúdo_JavaScript">Conteúdo JavaScript</h3>
 
-<p>A seguir vamos olhar para o JavaScript que faz o trabalho. O macete dessa técnica está na função <code>play()</code> , a qual é chamada quando o usuário clica no botão de "rodar".</p>
+<p>A seguir vamos olhar para o JavaScript que faz o trabalho. O macete dessa técnica está na função <code>play()</code> , a qual é chamada quando o usuário clica no botão de "rodar".</p>
 
 <pre class="brush: js">function play() {
   document.querySelector(".box").className = "box";

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
 <div>{{JSRef}} {{SeeCompatTable}}</div>
 
-<p>O método <code><strong>Object.values()</strong></code> retorna um array com os valores das propriedades de um dado objeto, na mesma ordem provida pelo {{jsxref("Statements/for...in", "for...in")}} laço (sendo a diferença que o laço for-in também enumera as propriedades na cadeia prototype).</p>
+<p>O método <code><strong>Object.values()</strong></code> retorna um array com os valores das propriedades de um dado objeto, na mesma ordem provida pelo {{jsxref("Statements/for...in", "for...in")}} laço (sendo a diferença que o laço for-in também enumera as propriedades na cadeia prototype).</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 
 <dl>
  <dt><code>obj</code></dt>
- <dd>O objeto cujos valores das propriedades enumeradas serão retornados.</dd>
+ <dd>O objeto cujos valores das propriedades enumeradas serão retornados.</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 
 <h2 id="Descrição">Descrição</h2>
 
-<p><code>Object.values()</code> retorna um array cujos elementos são os valores das propriedades enumeradas encontradas no objeto. A ordem das propriedades é a mesma que a dada pelo laço sobre os valores da propriedade do objeto manualmente.</p>
+<p><code>Object.values()</code> retorna um array cujos elementos são os valores das propriedades enumeradas encontradas no objeto. A ordem das propriedades é a mesma que a dada pelo laço sobre os valores da propriedade do objeto manualmente.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -50,7 +50,7 @@ console.log(Object.values("foo")); // ['f', 'o', 'o']
 
 <h2 id="Biblioteca_de_Suporte">Biblioteca de Suporte</h2>
 
-<p><code><font face="Open Sans, Arial, sans-serif">Para adicionar compatibilidade ao suporte de  </font>Object.values</code> em ambientes antigos que nativamente não o suportam, você pode encontrar uma biblioteca de suporte nos repositórios <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> ou no <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a>.</p>
+<p><code><font face="Open Sans, Arial, sans-serif">Para adicionar compatibilidade ao suporte de  </font>Object.values</code> em ambientes antigos que nativamente não o suportam, você pode encontrar uma biblioteca de suporte nos repositórios <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> ou no <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a>.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -71,63 +71,9 @@ console.log(Object.values("foo")); // ['f', 'o', 'o']
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat("javascript.builtins.Object.values")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Aspecto</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome(51.0)}} [1]</td>
-   <td>{{CompatGeckoDesktop(47)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}} [2]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Aspecto</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome para Android</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(51.0)}} [1]</td>
-   <td>{{CompatGeckoMobile(47)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(51.0)}} [1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Por trás de uma flag.</p>
-
-<p>[2] Ver <a href="https://bugs.webkit.org/show_bug.cgi?id=150131">bug 150131</a>.</p>
-
-<h2 id="Ver_também">Ver também</h2>
+<h2 id="Ver_também">Ver também</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>

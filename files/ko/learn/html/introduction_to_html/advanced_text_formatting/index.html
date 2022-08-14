@@ -7,13 +7,13 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p class="summary">텍스트 서식에 있어서  <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> 에서 이야기 하지 않은 수많은 요소들이 있습니다. 이 글에서 설명하는 요소들은 비교적 많이 알려져 있지않지만 여전히 유용합니다. (그리고 이것은 완전한 목록이 아닙니다.). 이 글에서 여러분은 인용구, 서술문, 컴퓨터 코드 및 관력 텍스트, 첨자, 위첨자, 연락처 정보 등을 표시하는 방법에 대해 알아봅시다.</p>
+<p class="summary">텍스트 서식에 있어서  <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> 에서 이야기 하지 않은 수많은 요소들이 있습니다. 이 글에서 설명하는 요소들은 비교적 많이 알려져 있지않지만 여전히 유용합니다. (그리고 이것은 완전한 목록이 아닙니다.). 이 글에서 여러분은 인용구, 서술문, 컴퓨터 코드 및 관력 텍스트, 첨자, 위첨자, 연락처 정보 등을 표시하는 방법에 대해 알아봅시다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">요구 기술:</th>
-   <td><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a> 에 설명된 기본적인 HTML 숙련도. <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> 에서 설명하는 텍스트 포맷팅에 대한 지식.</td>
+   <td><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a> 에 설명된 기본적인 HTML 숙련도. <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> 에서 설명하는 텍스트 포맷팅에 대한 지식.</td>
   </tr>
   <tr>
    <th scope="row">목표:</th>
@@ -26,7 +26,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 <h2 id="Description_lists">Description lists</h2>
 
-<p><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> 에서 <a href="/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">mark up basic lists</a> 를 볼 수 있습니다. 하지만 해당 글에는 여러분이 앞으로 종종 마주할 세 번째 리스트 타입인 <strong>description lists</strong>에 대해선 언급하지 않았습니다. 이 리스트의 목적은 용어 및 정의, 질문 및 답변과 같은 일련의 항목 및 관련 설명을 표시하는 것입니다.  아래의 예시를 살펴봅시다.</p>
+<p><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> 에서 <a href="/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">mark up basic lists</a> 를 볼 수 있습니다. 하지만 해당 글에는 여러분이 앞으로 종종 마주할 세 번째 리스트 타입인 <strong>description lists</strong>에 대해선 언급하지 않았습니다. 이 리스트의 목적은 용어 및 정의, 질문 및 답변과 같은 일련의 항목 및 관련 설명을 표시하는 것입니다.  아래의 예시를 살펴봅시다.</p>
 
 <pre class="notranslate">soliloquy
 In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
@@ -35,7 +35,7 @@ In drama, where a character speaks their thoughts out loud to share them with th
 aside
 In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information</pre>
 
-<p>Description lists 는 다른 타입의 리스트와 다르게 {{htmlelement("dl")}} 태그를 사용합니다. 용어, 질문과 같은 상위 항목은 {{htmlelement("dt")}} (description term) 요소를 사용하고,\ 정의, 답변과 같은 하위 항목은 {{htmlelement("dd")}} (description definition) 요소를 사용합니다. 이해를 돕기위해 아래의 마크업 예시가 준비되어 있습니다.</p>
+<p>Description lists 는 다른 타입의 리스트와 다르게 {{htmlelement("dl")}} 태그를 사용합니다. 용어, 질문과 같은 상위 항목은 {{htmlelement("dt")}} (description term) 요소를 사용하고,\ 정의, 답변과 같은 하위 항목은 {{htmlelement("dd")}} (description definition) 요소를 사용합니다. 이해를 돕기위해 아래의 마크업 예시가 준비되어 있습니다.</p>
 
 <pre class="brush: html notranslate">&lt;dl&gt;
   &lt;dt&gt;soliloquy&lt;/dt&gt;
@@ -46,7 +46,7 @@ In drama, where a character shares a comment only with the audience for humorous
   &lt;dd&gt;In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.&lt;/dd&gt;
 &lt;/dl&gt;</pre>
 
-<p>브라우저에서 제공하는 기본 스타일에 의해서 정의, 답변과 같은 하위 항목에 대해서 들여쓰기가 적용됩니다.  현재 보고계시는 description list 는 MDN에서 제공하는 스타일이 적용되어 있습니다. 이는 브라우저에서 제공하는 기본 스타일과 매우 유사하게 정의 되어 있습니다만, 추가적으로 정의된 스타일입니다.</p>
+<p>브라우저에서 제공하는 기본 스타일에 의해서 정의, 답변과 같은 하위 항목에 대해서 들여쓰기가 적용됩니다.  현재 보고계시는 description list 는 MDN에서 제공하는 스타일이 적용되어 있습니다. 이는 브라우저에서 제공하는 기본 스타일과 매우 유사하게 정의 되어 있습니다만, 추가적으로 정의된 스타일입니다.</p>
 
 <dl>
  <dt>soliloquy</dt>
@@ -58,7 +58,7 @@ In drama, where a character shares a comment only with the audience for humorous
  <dt></dt>
 </dl>
 
-<p>아래의 예시와 같이 하나의 <code>&lt;dt&gt;</code> 에는 여러개의 <code>&lt;dd&gt;</code> 가 존재할 수 있습니다. </p>
+<p>아래의 예시와 같이 하나의 <code>&lt;dt&gt;</code> 에는 여러개의 <code>&lt;dd&gt;</code> 가 존재할 수 있습니다. </p>
 
 <pre class="notranslate">&lt;dl&gt;
   &lt;dt&gt;aside&lt;/dt&gt;
@@ -75,7 +75,7 @@ In drama, where a character shares a comment only with the audience for humorous
 
 <h3 id="추가학습_일련의_정의_표시">추가학습: 일련의 정의 표시</h3>
 
-<p>description list 를 직접 시도해볼 시간입니다. input 필드에 요소들을 추가하여 output 필드에 description list 로 표시되도록 하십시오. 원하시는 경우에 추가적인 요소들을 추가하셔도 좋습니다.</p>
+<p>description list 를 직접 시도해볼 시간입니다. input 필드에 요소들을 추가하여 output 필드에 description list 로 표시되도록 하십시오. 원하시는 경우에 추가적인 요소들을 추가하셔도 좋습니다.</p>
 
 <p>실수를 하셨을 경우에는, <em>Reset </em>버튼을 통해서 재시작하실 수 있습니다. 해답을 찾지 못하셨을 경우에 <em>Show solution</em> 버튼을 통해서 해답을 보실 수 있습니다.</p>
 
@@ -93,7 +93,7 @@ A light brown color.&lt;/textarea&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
 &lt;div class="output"&gt;&lt;/div&gt;
 &lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
   &lt;input id="solution" type="button" value="Show solution" /&gt;
 &lt;/div&gt;
 </pre>
@@ -153,14 +153,14 @@ window.addEventListener("load", drawOutput);
 <pre class="brush: html notranslate">&lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
 Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;</pre>
 
-<p>이것을 block quote 로 변경하기 위해서 아래와 같이 할 수 있습니다.</p>
+<p>이것을 block quote 로 변경하기 위해서 아래와 같이 할 수 있습니다.</p>
 
 <pre class="brush: html notranslate">&lt;blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
   &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
   Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
 &lt;/blockquote&gt;</pre>
 
-<p>브라우저 기본 스타일은 인용구를 표현할 때, 들여쓰기 된 단락으로 나타냅니다. MDN은 추가적인 스타일링과 함께 이를 나타냅니다.</p>
+<p>브라우저 기본 스타일은 인용구를 표현할 때, 들여쓰기 된 단락으로 나타냅니다. MDN은 추가적인 스타일링과 함께 이를 나타냅니다.</p>
 
 <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
 <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
@@ -168,18 +168,18 @@ Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended qu
 
 <h3 id="Inline_quotations">Inline quotations</h3>
 
-<p>인라인 인용구는 <code>&lt;q&gt;</code> 요소를 사용한다는 점만 제외하면 블럭 인용구와 동일하게 동작합니다. 아래의 마크업 예시는 MDN <code>&lt;q&gt;</code> 페이지의 인용문을 포함합니다.</p>
+<p>인라인 인용구는 <code>&lt;q&gt;</code> 요소를 사용한다는 점만 제외하면 블럭 인용구와 동일하게 동작합니다. 아래의 마크업 예시는 MDN <code>&lt;q&gt;</code> 페이지의 인용문을 포함합니다.</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;intended
 for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;</pre>
 
-<p>브라우저 기본 스타일은 인라인 인용구를 따옴표로 묶은 일반 텍스트로 표현합니다.</p>
+<p>브라우저 기본 스타일은 인라인 인용구를 따옴표로 묶은 일반 텍스트로 표현합니다.</p>
 
 <p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended for short quotations that don't require paragraph breaks.</q></p>
 
 <h3 id="Citations">Citations</h3>
 
-<p>{{htmlattrxref("cite","blockquote")}}요소의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는  javascript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 <code>cite</code>  컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 <code>&lt;cite&gt;</code> 요소를 사용하는 것이 더 좋습니다. 이는 이름 그대로 출처를 포함하기 위해서 사용됩니다. — <code>&lt;cite&gt;</code> 요소 안에 있는 출처에 대한 링크를 연결할 수 있습니다.</p>
+<p>{{htmlattrxref("cite","blockquote")}}요소의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는  javascript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 <code>cite</code>  컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 <code>&lt;cite&gt;</code> 요소를 사용하는 것이 더 좋습니다. 이는 이름 그대로 출처를 포함하기 위해서 사용됩니다. — <code>&lt;cite&gt;</code> 요소 안에 있는 출처에 대한 링크를 연결할 수 있습니다.</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;According to the &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
 &lt;cite&gt;MDN blockquote page&lt;/cite&gt;&lt;/a&gt;:
@@ -223,7 +223,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 &lt;h2&gt;Output&lt;/h2&gt;
 &lt;div class="output"&gt;&lt;/div&gt;
 &lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
   &lt;input id="solution" type="button" value="Show solution" /&gt;
 &lt;/div&gt;
 </pre>
@@ -287,12 +287,12 @@ window.addEventListener("load", drawOutput);
 <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
 
 <div class="note">
-<p><strong>Note</strong>: 약어를 나타내기 위해 &lt;abbr&gt; 과 동일하게 사용할 수 있는 <code>&lt;acronym&gt;</code> 가 존재합니다. 이는 사용중지 되었으며 브라우저에서도 호환되지 않는 경우가 있습니다. 따라서 <code>&lt;abbr&gt;</code> 을 대신 사용하는 것을 추천드립니다.</p>
+<p><strong>Note</strong>: 약어를 나타내기 위해 &lt;abbr&gt; 과 동일하게 사용할 수 있는 <code>&lt;acronym&gt;</code> 가 존재합니다. 이는 사용중지 되었으며 브라우저에서도 호환되지 않는 경우가 있습니다. 따라서 <code>&lt;abbr&gt;</code> 을 대신 사용하는 것을 추천드립니다.</p>
 </div>
 
 <h3 id="추가학습_약어_만들기">추가학습: 약어 만들기</h3>
 
-<p>아래의 간단한 실습 과제를 통해 약어 사용에 대한 학습을 하고자 합니다. 아래의 샘플을 그대로 사용하시거나 여러분의 샘플로 교체 하실 수 있습니다. </p>
+<p>아래의 간단한 실습 과제를 통해 약어 사용에 대한 학습을 하고자 합니다. 아래의 샘플을 그대로 사용하시거나 여러분의 샘플로 교체 하실 수 있습니다. </p>
 
 <div class="hidden">
 <h6 id="Playable_code_3">Playable code</h6>
@@ -302,7 +302,7 @@ window.addEventListener("load", drawOutput);
 &lt;h2&gt;Output&lt;/h2&gt;
 &lt;div class="output"&gt;&lt;/div&gt;
 &lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
   &lt;input id="solution" type="button" value="Show solution" /&gt;
 &lt;/div&gt;
 </pre>
@@ -387,13 +387,13 @@ window.addEventListener("load", drawOutput);
 
 <ul>
  <li>{{htmlelement("code")}}: 일반적인 컴퓨터 코드를 표시합니다.</li>
- <li>{{htmlelement("pre")}}: 공백(일반적으로 코드 블록)을 유지하기 위해 사용합니다. 택스트 내에서 들여 쓰기 또는 초과 공백을 사용하면 브라우저가 이를 무시하고 렌더링 된 페이지에 공백을 표시하지 않습니다. 그러나 <code>&lt;pre&gt;&lt;/pre&gt;</code> 태그로 텍스트를 감싸면 공백이 텍스트 편집기에서 보는 것과 동일하게 렌더링 됩니다.</li>
+ <li>{{htmlelement("pre")}}: 공백(일반적으로 코드 블록)을 유지하기 위해 사용합니다. 택스트 내에서 들여 쓰기 또는 초과 공백을 사용하면 브라우저가 이를 무시하고 렌더링 된 페이지에 공백을 표시하지 않습니다. 그러나 <code>&lt;pre&gt;&lt;/pre&gt;</code> 태그로 텍스트를 감싸면 공백이 텍스트 편집기에서 보는 것과 동일하게 렌더링 됩니다.</li>
  <li>{{htmlelement("var")}}: 변수이름을 특별하게 표시합니다.</li>
  <li>{{htmlelement("kbd")}}: 컴퓨터에 입력 된 키보드 (및 기타 유형) 입력을 표시합니다.</li>
  <li>{{htmlelement("samp")}}: 컴퓨터 프로그램의 출력을 표시합니다.</li>
 </ul>
 
-<p>몇 가지 예를 살펴 보겠습니다. 이 예제들을 통해서 자유롭게 학습해보십시오. (다른 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a> 샘플 파일의 사본을 사용하실 수 있습니다).</p>
+<p>몇 가지 예를 살펴 보겠습니다. 이 예제들을 통해서 자유롭게 학습해보십시오. (다른 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a> 샘플 파일의 사본을 사용하실 수 있습니다).</p>
 
 <pre class="brush: html notranslate">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
 
@@ -459,7 +459,7 @@ para.onclick = function() {
 
 <h2 id="요약">요약</h2>
 
-<p>HTML 텍스트 시맨틱에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 <a href="/en-US/docs/Web/HTML/Element">HTML element reference</a> 를 살펴보십시오.(<a href="/en-US/docs/Web/HTML/Element#Inline_text_semantics">Inline text semantics</a> 섹션은 시작하기에 좋은 장소입니다.). 다음 문서에서는 HTML 문서의 다른 부분을 구성하는 데 사용할 HTML 요소를 살펴 보겠습니다.</p>
+<p>HTML 텍스트 시맨틱에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 <a href="/en-US/docs/Web/HTML/Element">HTML element reference</a> 를 살펴보십시오.(<a href="/en-US/docs/Web/HTML/Element#Inline_text_semantics">Inline text semantics</a> 섹션은 시작하기에 좋은 장소입니다.). 다음 문서에서는 HTML 문서의 다른 부분을 구성하는 데 사용할 HTML 요소를 살펴 보겠습니다.</p>
 
 <p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}</p>
 

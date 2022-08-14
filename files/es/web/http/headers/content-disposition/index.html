@@ -7,15 +7,15 @@ translation_of: Web/HTTP/Headers/Content-Disposition
 
 <div>En una respuesta HTTP regular, el encabezado <code><strong>Content-Disposition</strong></code> indica si el contenido se espera que se muestre en línea en el navegador, esto es, como una o como parte de una página web, o como un archivo adjunto, que se puede descargar y guardar localmente.</div>
 
-<div> </div>
+<div> </div>
 
-<div>En un cuerpo <code>multipart/form-data</code>, el encabezado general <strong><code>Content-Disposition</code> </strong>puede ser utilizado en la subparte de un cuerpo multipartes para dar información acerca del campo al que aplica. La subparte es delimitada por el <em>boundary</em> (límite) definido en el encabezado {{HTTPHeader("Content-Type")}}. Cuando se utiliza en el propio cuerpo, <code>Content-Disposition</code> no tiene efecto.</div>
+<div>En un cuerpo <code>multipart/form-data</code>, el encabezado general <strong><code>Content-Disposition</code> </strong>puede ser utilizado en la subparte de un cuerpo multipartes para dar información acerca del campo al que aplica. La subparte es delimitada por el <em>boundary</em> (límite) definido en el encabezado {{HTTPHeader("Content-Type")}}. Cuando se utiliza en el propio cuerpo, <code>Content-Disposition</code> no tiene efecto.</div>
 
-<div> </div>
+<div> </div>
 
 <div>El encabezado <code>Content-Disposition </code>está definido en el contexto de mensajes MIME para correos electrónicos, pero sólo un subconjuto de los parámetros posibles aplican a formularios HTTP y peticiones {{HTTPMethod("POST")}}. Sólo el valor <code>form-data</code>, como las directivas opcionales <code>name</code> and <code>filename</code>, pueden ser utilizadas en el contexto HTTP.</div>
 
-<p> </p>
+<p> </p>
 
 <table class="properties">
  <tbody>
@@ -31,7 +31,7 @@ translation_of: Web/HTTP/Headers/Content-Disposition
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -45,7 +45,7 @@ Content-Disposition: attachment; filename="filename.jpg"</pre>
 
 <h3 id="Como_encabezado_para_un_cuerpo_multipartes">Como encabezado para un cuerpo multipartes</h3>
 
-<p>El primer parámetro en el contexto HTTP siempre es <code>form-data</code>; parámetros adicionales son insensibles a mayúsculas y tienen argumentos que usan sintaxis de textos entre comillas después del signo de <code>'='</code>. Múltiples parámetros se separan por punto y coma (<code>';'</code>).</p>
+<p>El primer parámetro en el contexto HTTP siempre es <code>form-data</code>; parámetros adicionales son insensibles a mayúsculas y tienen argumentos que usan sintaxis de textos entre comillas después del signo de <code>'='</code>. Múltiples parámetros se separan por punto y coma (<code>';'</code>).</p>
 
 <pre class="syntaxbox">Content-Disposition: form-data
 Content-Disposition: form-data; name="fieldName"
@@ -55,11 +55,11 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
 
 <dl>
  <dt><code>name</code></dt>
- <dd>Es seguida de un texto que contiene el nombre del campo de HTML en el formulario a la que el contenido de la subparte refiere. Cuando se usan múltiples archivos en el mismo campo (por ejemplo, el atributo {{htmlattrxref("multiple", "input")}} de un elemento <code>{{HTMLElement("input","&lt;input type=file&gt;")}}</code>), puede haber varias subpartes con el mismo nombre.<br>
+ <dd>Es seguida de un texto que contiene el nombre del campo de HTML en el formulario a la que el contenido de la subparte refiere. Cuando se usan múltiples archivos en el mismo campo (por ejemplo, el atributo {{htmlattrxref("multiple", "input")}} de un elemento <code>{{HTMLElement("input","&lt;input type=file&gt;")}}</code>), puede haber varias subpartes con el mismo nombre.<br>
  Un <code>name</code> con valor de <code>'_charset_'</code> indica que la parte no es un campo HTML, sino el conjunto de caracteres predeterminado para partes sin información explícita sobre su conjunto de caracteres.</dd>
  <dt><code>filename</code></dt>
  <dd>
- <p>Es seguida de un texto que contiene el nombre original del archivo transmitido. Siempre es opcional y no debe ser utilizado a ciegas por la aplicación: información sobre la ruta  debe ser despojada, y se debe realizar una conversión a las reglas del sistema de archivos del servidor. Este parámetro provee mayormente información indicativa. Cuando se usa en combinación con <code>Content-Disposition: attachment</code>, es utilizado como el nombre de archivo predeterminado en caso de que se presente al usuario un diálogo de 'Guardar como'.</p>
+ <p>Es seguida de un texto que contiene el nombre original del archivo transmitido. Siempre es opcional y no debe ser utilizado a ciegas por la aplicación: información sobre la ruta  debe ser despojada, y se debe realizar una conversión a las reglas del sistema de archivos del servidor. Este parámetro provee mayormente información indicativa. Cuando se usa en combinación con <code>Content-Disposition: attachment</code>, es utilizado como el nombre de archivo predeterminado en caso de que se presente al usuario un diálogo de 'Guardar como'.</p>
  </dd>
  <dt><code>filename*</code></dt>
  <dd>
@@ -80,7 +80,7 @@ Content-Length: 22
 
 </pre>
 
-<p>Este archivo simple de HTML será guardado como una descarga regular en lugar de mostrarse en el navegador. La mayoría de los navegadores propondrá guardarlo como <code>genial.html</code> ya que es el nombre (predeterminado).</p>
+<p>Este archivo simple de HTML será guardado como una descarga regular en lugar de mostrarse en el navegador. La mayoría de los navegadores propondrá guardarlo como <code>genial.html</code> ya que es el nombre (predeterminado).</p>
 
 <p>Un ejemplo de un formulario HTML, publicado usando el formato <code>multipart/form-data</code> que hace uso del encabezado <code>Content-Disposition</code>:</p>
 

@@ -16,11 +16,13 @@ Le tableau typé **`Float32Array`** représente un tableau de nombres flottants 
 
 ## Syntaxe
 
-    new Float32Array(); // Apparu avec ES2017
-    new Float32Array(longueur);
-    new Float32Array(tableauTypé);
-    new Float32Array(objet);
-    new Float32Array(buffer [, décalageOctets [, longueur]]);
+```js
+new Float32Array(); // Apparu avec ES2017
+new Float32Array(longueur);
+new Float32Array(tableauTypé);
+new Float32Array(objet);
+new Float32Array(buffer [, décalageOctets [, longueur]]);
+```
 
 Pour plus d'informations sur la syntaxe de ce constructeur et les paramètres utilisés, voir la page {{jsxref("Objets_globaux/TypedArray","TypedArray","#Syntaxe")}}.
 

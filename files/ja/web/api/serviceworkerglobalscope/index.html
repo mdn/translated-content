@@ -88,7 +88,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p>このコードスニペットは、<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a>（<a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch example live</a> を参照してください）からのものです。{{domxref("ServiceWorkerGlobalScope.onfetch")}} イベントハンドラーは <code>fetch</code> イベントを監視します。イベントが発火した時、コードは {{domxref("Cache")}} オブジェクト内で、最初にマッチングしたリクエストに対して解決するプロミスを返します。もし、何もマッチしなかった場合は、コードはネットワークからのレスポンスをフェッチします。</p>
+<p>このコードスニペットは、<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a>（<a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch example live</a> を参照してください）からのものです。{{domxref("ServiceWorkerGlobalScope.onfetch")}} イベントハンドラーは <code>fetch</code> イベントを監視します。イベントが発火した時、コードは {{domxref("Cache")}} オブジェクト内で、最初にマッチングしたリクエストに対して解決するプロミスを返します。もし、何もマッチしなかった場合は、コードはネットワークからのレスポンスをフェッチします。</p>
 
 <p>さらに、このコードは {{domxref("GlobalFetch.fetch", "fetch()")}} 演算から投げられた例外をハンドリングします。 HTTP のエラーレスポンス (たとえば、404) は、例外を引き起こさないことにご注意ください。適切なエラーコードセットを持った通常のレスポンスオブジェクトを返します。</p>
 

@@ -59,36 +59,42 @@ Intéressons nous de plus près à la forme la plus répandue d'instruction cond
 
 La syntaxe élémentaire de `if...else` ressemble à cela en {{glossary("pseudocode")}}:
 
-    if (condition) {
-      code à exécuter si la condition est true
-    } else {
-      sinon exécuter cet autre code à la place
-    }
+```
+if (condition) {
+  code à exécuter si la condition est true
+} else {
+  sinon exécuter cet autre code à la place
+}
+```
 
 Ici nous avons:
 
-1.  Le mot‑clé `if` suivie de parenthèses.
-2.  Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur&nbsp;? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
-3.  Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu&nbsp;; il sera exécuté seulement si la condition renvoie `true`.
-4.  Le mot‑clé `else`.
-5.  Une autre paire d'accolades, à l'intérieur de laquelle se trouve du code différent — tout code souhaité et il sera exécuté seulement si la condition ne renvoie pas `true`.
+1. Le mot‑clé `if` suivie de parenthèses.
+2. Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur&nbsp;? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
+3. Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu&nbsp;; il sera exécuté seulement si la condition renvoie `true`.
+4. Le mot‑clé `else`.
+5. Une autre paire d'accolades, à l'intérieur de laquelle se trouve du code différent — tout code souhaité et il sera exécuté seulement si la condition ne renvoie pas `true`.
 
 Ce code est facile à lire pour une personne — il dit «&nbsp;**si** la **condition** renvoie `true`, exécuter le code A, **sinon** exécuter le code B&nbsp;».
 
 Notez qu'il n'est pas nécessaire d'inclure une instruction `else` et le deuxième bloc entre accolades — le code suivant est aussi parfaitement correct&nbsp;:
 
-    if (condition) {
-      code à exécuter si la condition est true
-    }
+```
+if (condition) {
+  code à exécuter si la condition est true
+}
 
-    exécuter un autre code
+exécuter un autre code
+```
 
 Cependant, vous devez faire attention ici — dans ce cas, le deuxième bloc de code n'est pas controlé par l'instruction conditionnelle, donc il sera **toujours** exécuté, que la condition ait renvoyé `true` ou `false`. Ce n'est pas nécessairement une mauvaise chose, mais il se peut que ce ne soit pas ce que vous vouliez — le plus souvent vous voudrez exécuter un bloc de code *ou* l'autre, et non les deux.
 
 Une dernière remarque, vous verrez quelques fois les instructions `if...else` écrites sans accolades, de manière abrégée, ainsi&nbsp;:
 
-    if (condition) code à exécuter si la condition est true
-    else exécute un autre code à la place
+```
+if (condition) code à exécuter si la condition est true
+else exécute un autre code à la place
+```
 
 Ce code est parfaitement valide, mais il n'est pas recommandé — il est nettement plus facile de lire le code et d'en déduire ce qui se passe si vous utilisez des accolades pour délimiter les blocs de code, des lignes séparées et des indentations.
 
@@ -154,10 +160,10 @@ function setWeather() {
 
 {{ EmbedLiveSample('else_if', '100%', 100) }}
 
-1.  Ici nous avons l'élément HTML {{htmlelement("select")}} nous permettant de sélectionner divers choix de temps et un simple paragraphe.
-2.  Dans le JavaScript, nous conservons une référence aussi bien à l'élément {{htmlelement("select")}} qu'à l'élément {{htmlelement("p")}}, et ajoutons un écouteur d'évènement à l'élément `<select>` de sorte que la fonction `setWeather()` soit exécutée quand sa valeur change.
-3.  Quand cette fonction est exécutée, nous commençons par assigner à la variable `choice` la valeur actuellement sélectionnée dans l'élément `<select>`. Nous utilisons ensuite une instruction conditionnelle pour montrer différents textes dans le paragraphe en fonction de la valeur de `choice`. Remarquez comment toutes les conditions sont testées avec des blocs `else if() {...}`, mis à part le tout premier testé avec un `bloc if() {...}`.
-4.  Le tout dernier choix, à l'intérieur du bloc `else {...}`, est simplement une option de "secours" — le code qui s'y trouve ne sera exécuté que si aucune des conditions n'est `true`. Dans ce cas, il faut vider le texte du paragraphe si rien n'est sélectionné, par exemple si un utilisateur décide de resélectionner le texte à substituer «&nbsp;--Choisir--&nbsp;» présenté au début.
+1. Ici nous avons l'élément HTML {{htmlelement("select")}} nous permettant de sélectionner divers choix de temps et un simple paragraphe.
+2. Dans le JavaScript, nous conservons une référence aussi bien à l'élément {{htmlelement("select")}} qu'à l'élément {{htmlelement("p")}}, et ajoutons un écouteur d'évènement à l'élément `<select>` de sorte que la fonction `setWeather()` soit exécutée quand sa valeur change.
+3. Quand cette fonction est exécutée, nous commençons par assigner à la variable `choice` la valeur actuellement sélectionnée dans l'élément `<select>`. Nous utilisons ensuite une instruction conditionnelle pour montrer différents textes dans le paragraphe en fonction de la valeur de `choice`. Remarquez comment toutes les conditions sont testées avec des blocs `else if() {...}`, mis à part le tout premier testé avec un `bloc if() {...}`.
+4. Le tout dernier choix, à l'intérieur du bloc `else {...}`, est simplement une option de "secours" — le code qui s'y trouve ne sera exécuté que si aucune des conditions n'est `true`. Dans ce cas, il faut vider le texte du paragraphe si rien n'est sélectionné, par exemple si un utilisateur décide de resélectionner le texte à substituer «&nbsp;--Choisir--&nbsp;» présenté au début.
 
 > **Note :** Vous trouverez également [cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (ainsi qu'en [version live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) ici.)
 
@@ -196,7 +202,7 @@ if (coursesFaites) { // pas besoin d'écrire explicitement '=== true'
 }
 ```
 
-###  if ... else imbriqué
+### if ... else imbriqué
 
 Il est parfaitement correct d'ajouter une déclaration `if...else` à l'intérieur d'une autre — pour les imbriquer. Par exemple, nous pourrions mettre à jour notre application de prévisions météo pour montrer un autre ensemble de choix en fonction de la température :
 
@@ -302,13 +308,13 @@ switch (expression) {
 
 Ici nous avons
 
-1.  Le mot‑clé `switch` suivi de parenthèses.
-2.  Une expression ou une valeur mise entre les parenthèses.
-3.  Le mot‑clé `case` suivi d'une expression ou d'une valeur, et de deux‑points.
-4.  Le code exécuté si l'expression/valeur de `case` correspond à celles de `switch`.
-5.  Une déclaration `break`, suivie d'un point‑virgule. Si le choix précédent correspond à l'expression/valeur, le navigateur va stopper l'exécution du bloc de code ici et continuer après l'instruction **switch**.
-6.  Vous pouvez rajouter autant de **cas** que vous le souhaitez. (points 3–5)
-7.  Le mot‑clé `default`,  suivi d'une même structure de code qu'aux points 3-5, sauf que `default` n'a pas de choix après lui et n'a donc pas besoin de l'instruction `break`  puisqu'il n'y a plus rien à exécuter après ce bloc. C'est l'option `default` qui sera exécutée si aucun choix ne correspond.
+1. Le mot‑clé `switch` suivi de parenthèses.
+2. Une expression ou une valeur mise entre les parenthèses.
+3. Le mot‑clé `case` suivi d'une expression ou d'une valeur, et de deux‑points.
+4. Le code exécuté si l'expression/valeur de `case` correspond à celles de `switch`.
+5. Une déclaration `break`, suivie d'un point‑virgule. Si le choix précédent correspond à l'expression/valeur, le navigateur va stopper l'exécution du bloc de code ici et continuer après l'instruction **switch**.
+6. Vous pouvez rajouter autant de **cas** que vous le souhaitez. (points 3–5)
+7. Le mot‑clé `default`,  suivi d'une même structure de code qu'aux points 3-5, sauf que `default` n'a pas de choix après lui et n'a donc pas besoin de l'instruction `break`  puisqu'il n'y a plus rien à exécuter après ce bloc. C'est l'option `default` qui sera exécutée si aucun choix ne correspond.
 
 > **Note :** Vous n'avez pas à inclure la section  `default` — elle peut être omise en toute sécurité s'il n'y a aucune chance que l'expression finisse par égaler une valeur inconnue. À contrario, vous devez l'inclure s'il est possible qu'il y ait des cas inconnus.
 
@@ -366,7 +372,9 @@ function setWeather() {
 
 Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'[opérateur ternaire ou conditionnel](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel) est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est `true` et une autre si elle est `false` — elle est utile dans certains cas, et occupe moins de place qu'un bloc `if...else` si votre choix est limité à deux possibilités à choisir via une condition `true`/`false`. Voici le pseudo‑code correspondant&nbsp;:
 
-    ( condition ) ? exécuter ce code : exécuter celui‑ci à la place
+```
+( condition ) ? exécuter ce code : exécuter celui‑ci à la place
+```
 
 Regardons cet exemple simple&nbsp;:
 
@@ -423,8 +431,8 @@ Dans cet exemple nous allons vous aider à finaliser une application de calendri
 
 Vous aurez besoin d'écrire une instruction conditionnelle dans la fonction `onchange`, juste au dessous du commentaire `// AJOUTER LA CONDITION ICI`. Elle doit&nbsp;:
 
-1.  Noter le mois choisi (enregistré dans la variable `choice`. Ce doit être la valeur de l'élément `<select>` après un changement, "Janvier" par exemple).
-2.  Faire en sorte que la variable nommée `days` soit égale au nombre de jours du mois sélectionné. Pour ce faire, examinez le nombre de jours dans chaque mois de l'année. Vous pouvez ignorer les années bissextiles pour les besoins de cet exemple.
+1. Noter le mois choisi (enregistré dans la variable `choice`. Ce doit être la valeur de l'élément `<select>` après un changement, "Janvier" par exemple).
+2. Faire en sorte que la variable nommée `days` soit égale au nombre de jours du mois sélectionné. Pour ce faire, examinez le nombre de jours dans chaque mois de l'année. Vous pouvez ignorer les années bissextiles pour les besoins de cet exemple.
 
 Conseils&nbsp;:
 

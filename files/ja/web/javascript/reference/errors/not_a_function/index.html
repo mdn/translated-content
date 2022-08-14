@@ -33,10 +33,10 @@ TypeError: "x" is not a function
 <ul>
   <li>{{jsxref("Array")}} もしくは {{jsxref("TypedArray")}} オブジェクトを操作する場合:
     <ul>
-      <li>{{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}</li>
+      <li>{{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}</li>
     </ul>
   </li>
-  <li> {{jsxref("Map")}} もしくは {{jsxref("Set")}} を操作する場合:
+  <li> {{jsxref("Map")}} もしくは {{jsxref("Set")}} を操作する場合:
     <ul>
       <li>{{jsxref("Map.prototype.forEach()")}}, {{jsxref("Set.prototype.forEach()")}}</li>
     </ul>
@@ -88,7 +88,7 @@ numbers.map(function(num) {
 <pre class="brush: js example-bad">var Dog = function () {
  this.age = 11;
  this.color = "black";
- this.name = "Ralph";
+ this.name = "Ralph";
  return this;
 }
 
@@ -106,7 +106,7 @@ myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
 <pre class="brush: js example-good">var Dog = function () {
  this.age = 11;
  this.color = "black";
- this.dogName = "Ralph"; //Using this.dogName instead of .name
+ this.dogName = "Ralph"; //Using this.dogName instead of .name
  return this;
 }
 

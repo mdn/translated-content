@@ -45,7 +45,9 @@ La **méthode HTTP GET** demande une représentation de la ressource spécifiée
 
 ## Syntaxe
 
-    GET /index.html
+```
+GET /index.html
+```
 
 ## Spécifications
 

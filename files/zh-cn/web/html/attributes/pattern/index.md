@@ -72,7 +72,7 @@ input:invalid {
 ```html
 <form>
   <div>
-    <label for="uname">选择一个用户名: </label>
+    <label for="uname">选择一个用户名：</label>
     <input type="text" id="uname" name="name" required size="45"
            pattern="[a-z]{4,8}" title="4 到 8 个小写字母">
     <span class="validity"></span>
@@ -124,15 +124,11 @@ input:valid+span:after {
 
 ## 规范
 
-| 规范                                                                      | Status                   | Comment |
-| ------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{ SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML WHATWG')}} |         |
-| {{ SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'pattern') }}     | {{Spec2('HTML5.1')}}     |         |
-| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }}   | {{Spec2('HTML5 W3C')}}   |         |
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## 参见
 

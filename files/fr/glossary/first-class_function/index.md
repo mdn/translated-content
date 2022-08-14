@@ -13,4 +13,4 @@ Un langage de programmation est dit avoir des fonctions de première classe lors
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "First-class functions", "First-class functions")}} (en) sur Wikipedia
+- [<i lang="en">First-class functions</i> (article en anglais)](https://en.wikipedia.org/wiki/First-class_function) sur Wikipédia

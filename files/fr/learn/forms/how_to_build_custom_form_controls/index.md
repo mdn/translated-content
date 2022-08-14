@@ -344,8 +344,6 @@ Maintenant que le design et la structure sont prêts, nous pouvons écrire le co
 
 ### Pourquoi ne fonctionne-t-il pas ?
 
-
-
 Avant de commencer, il est important de se rappeler quelque chose de très important à propos de JavaScript : dans un navigateur, c'est une technique peu fiable. Lorsque vous créez des widgets personnalisés, vous êtes obligé de faire appel à JavaScript parce que c'est un fil nécessaire pour tout lier ensemble. Cependant, il existe de nombreux cas dans lesquels JavaScript n'est pas capable de s'exécuter dans le navigateur :
 
 - L'utilisateur a désactivé le JavaScript : c'est un cas assez inhabituel, peu de personnes désactivent le JavaScript de nos jours.
@@ -355,17 +353,11 @@ Avant de commencer, il est important de se rappeler quelque chose de très impor
 - Le script est en conflit avec, ou est affecté par un extension de navigateur  (comme l'extension « [No script](https://addons.mozilla.org/fr/firefox/addon/noscript/) » de Firefox ou « [Scripts »](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) de Chrome).
 - L'utilisateur utilise un navigateur ancien et l'une des fonctions dont vous avez besoin n'est pas prise en charge. Cela se produira fréquemment lorsque vous utiliserez des API de pointe.s.
 
-
-
-
-
 En raison de ces aléas, il est vraiment important de considérer avec sérieux ce qui se passe si JavaScript ne fonctionne pas. Traiter en détail cette question est hors de la portée de cet article parce qu'elle est étroitement liée à la façon dont vous voulez rendre votre script générique et réutilisable, mais nous prendrons en considération les bases de ce sujet dans notre exemple.
 
 Ainsi, si notre code JavaScript ne s'exécute pas, nous reviendrons à l'affichage d'un élément  {{HTMLElement("select")}} standard. Pour y parvenir, nous avons besoin de deux choses.
 
 Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} régulier avant chaque utilisation de notre widget personnalisé. Ceci est également nécessaire pour pouvoir envoyer les données de notre widget personnalisé avec le reste de nos données du formulaire ; nous reviendrons sur ce point plus tard.
-
-
 
 ```html
 <body class="no-widget">
@@ -393,8 +385,6 @@ Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} réguli
 </body>
 ```
 
-
-
 Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre de cacher l'élément qui ne sert pas (c'est-à-dire l'élément{{HTMLElement("select")}} « réel »  si notre script ne fonctionne pas, ou le widget personnalisé s'il fonctionne). Notez que par défaut, le code HTML cache le widget personnalisé.
 
 ```css
@@ -411,13 +401,7 @@ Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre d
 }
 ```
 
-
-
 Maintenant nous avons juste besoin d'un commutateur JavaScript pour déterminer si le script est en cours d'exécution ou non. Cette bascule est très simple : si au moment du chargement de la page notre script est en cours d'exécution, il supprime la classe no-widget et ajoute la classe widget, échangeant ainsi la visibilité de l'élément {{HTMLElement("select")}} et du widget personnalisé.
-
-
-
-
 
 ```js
 window.addEventListener("load", function () {
@@ -457,18 +441,16 @@ window.addEventListener("load", function () {
 
 ### Rendre le travail plus facile
 
-
-
 Dans le code que nous sommes sur le point de construire, nous utiliserons l'API standard DOM pour faire tout le travail dont nous avons besoin. Cependant, bien que la prise en charge de l'API DOM se soit améliorée dans les navigateurs, il y a toujours des problèmes avec les anciens navigateurs (surtout avec le bon vieux navigateur Internet Explorer).
 
 Si vous voulez éviter les problèmes avec les navigateurs anciens, il y a deux façons de le faire : en utilisant un framework dédié tel que jQuery, $dom, prototype, Dojo, YUI ou similaire, ou bien en remplissant la fonctionnalité manquante que vous voulez utiliser (ce qui peut facilement être fait par un chargement conditionnel, avec la bibliothèque yepnope par exemple).
 
 Les fonctionnalités que nous prévoyons d'utiliser sont les suivantes (classées de la plus risquée à la plus sûre) :
 
-1.  {{domxref("element.classList","classList")}}
-2.  {{domxref("EventTarget.addEventListener","addEventListener")}}
-3.  [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (ce n'est pas du DOM mais du JavaScript moderne)
-4.  {{domxref("element.querySelector","querySelector")}} et {{domxref("element.querySelectorAll","querySelectorAll")}}
+1. {{domxref("element.classList","classList")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener")}}
+3. [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (ce n'est pas du DOM mais du JavaScript moderne)
+4. {{domxref("element.querySelector","querySelector")}} et {{domxref("element.querySelectorAll","querySelectorAll")}}
 
 Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). C'est important, car les objets  `Array` acceptent la fonction [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach"), mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un `Array` et que `forEach` est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de `forEach à` {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :
 
@@ -640,8 +622,6 @@ A ce stade, notre widget change d'état comme nous l'avons conçu, mais sa valeu
 
 ### Gérer la valeur du widget
 
-
-
 Maintenant que notre widget fonctionne, nous devons ajouter du code pour mettre à jour la valeur en fonction des entrées utilisateur et envoyer cette valeur avec les données du formulaire.
 
 La façon la plus simple de le faire est d'utiliser un widget natif sous‑jacent. Un tel widget gardera une trace de la valeur avec tous les contrôles intégrés fournis par le navigateur, et la valeur sera envoyée comme d'habitude lorsque le formulaire sera soumis. Il ne sert à rien de réinventer la roue alors que tout cela peut être fait pour nous.
@@ -764,8 +744,6 @@ Et voilà, nous avons terminé ! Voici le résultat :
 Mais attendez, avons‑nous vraiment terminé ?
 
 ## Le rendre « accessible »
-
-
 
 Nous venons de faire quelque chose qui fonctionne, même si nous sommes loin d'avoir une boîte de sélection avec toutes les fonctionnalités, elle fonctionne parfaitement. Mais ce que nous avons fait n'est rien de plus que de jouer avec les DOM. Elle n'a pas de sémantique réelle, et même si elle ressemble à une boîte de sélection, du point de vue du navigateur, ce n'en est pas une, de sorte que les technologies d'assistance ne pourront pas comprendre que c'est une boîte de sélection. Bref, cette jolie nouvelle boîte de sélection n'est pas accessible !
 

@@ -22,7 +22,7 @@ Tous les principaux {{Glossary("Navigateur","navigateurs")}} prennent maintenant
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "WebGL")}} sur Wikipédia
+- [WebGL](https://fr.wikipedia.org/wiki/WebGL) sur Wikipédia
 - [Vérification du support WebGL](http://get.webgl.org/)
 
 ### Article technique

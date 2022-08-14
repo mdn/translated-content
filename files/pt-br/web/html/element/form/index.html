@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/form
 
 <h2 id="Attributes" name="Attributes">Atributos</h2>
 
-<p><span style="line-height: 21px;">Este elemento inclue os  </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">Atributos global</a><span style="line-height: 21px;">.</span></p>
+<p><span style="line-height: 21px;">Este elemento inclue os  </span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">Atributos global</a><span style="line-height: 21px;">.</span></p>
 
 <dl>
  <dt>{{htmlattrdef("accept")}} {{HTMLVersionInline(4)}} {{obsolete_inline}}</dt>
@@ -53,7 +53,7 @@ translation_of: Web/HTML/Element/form
  <p>This value can be overridden by a {{htmlattrxref("formenctype", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.</p>
  </dd>
  <dt>{{htmlattrdef("method")}}</dt>
- <dd>O <a href="/en-US/docs/HTTP" title="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP</a> method that the browser uses to submit the form. Possible values are:
+ <dd>O <a href="/en-US/docs/HTTP" title="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP</a> method that the browser uses to submit the form. Possible values are:
  <ul>
   <li><code>post</code>: Corresponds to the HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST method</a> ; the data from the form is included in the body of the form and is sent to the server.</li>
   <li><code>get</code>: Corresponds to the HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET method</a>; the data from the form are appended to the <code>action</code> attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.</li>
@@ -118,90 +118,24 @@ translation_of: Web/HTML/Element/form
   <tr>
    <td><label>{{SpecName('HTML WHATWG', 'forms.html#the-form-element', '&lt;form&gt;')}}</label></td>
    <td><label>{{Spec2('HTML WHATWG')}}</label></td>
-   <td><label> </label></td>
+   <td><label> </label></td>
   </tr>
   <tr>
    <td><label>{{SpecName('HTML5 W3C', 'forms.html#the-form-element', '&lt;form&gt;')}}</label></td>
    <td><label>{{Spec2('HTML5 W3C')}}</label></td>
-   <td><label> </label></td>
+   <td><label> </label></td>
   </tr>
   <tr>
    <td><label>{{SpecName('HTML4.01', 'interact/forms.html#h-17.3', '&lt;form&gt;')}}</label></td>
    <td><label>{{Spec2('HTML4.01')}}</label></td>
-   <td><label> </label></td>
+   <td><label> </label></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade do navegador</h2>
 
-<p><label>{{CompatibilityTable}}</label></p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><label>Feature</label></th>
-   <th><label>Chrome</label></th>
-   <th><label>Firefox (Gecko)</label></th>
-   <th><label>Internet Explorer</label></th>
-   <th><label>Opera</label></th>
-   <th><label>Safari</label></th>
-  </tr>
-  <tr>
-   <td><label>Basic support</label></td>
-   <td><label>1.0</label></td>
-   <td><label>{{CompatGeckoDesktop("1.0")}}</label></td>
-   <td><label>{{CompatVersionUnknown}}</label></td>
-   <td><label>{{CompatVersionUnknown}}</label></td>
-   <td><label>{{CompatVersionUnknown}}</label></td>
-  </tr>
-  <tr>
-   <td><label><code>novalidate</code> attribute</label></td>
-   <td><label>1.0</label></td>
-   <td><label>{{CompatGeckoDesktop("2.0")}}</label></td>
-   <td><label>{{CompatNo}}</label></td>
-   <td><label>{{CompatUnknown}}</label></td>
-   <td><label>{{CompatUnknown}}</label></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><label>Feature</label></th>
-   <th><label>Android</label></th>
-   <th><label>Firefox Mobile (Gecko)</label></th>
-   <th><label>IE Mobile</label></th>
-   <th><label>Opera Mobile</label></th>
-   <th><label>Safari Mobile</label></th>
-  </tr>
-  <tr>
-   <td><label>Basic support</label></td>
-   <td><label>{{CompatVersionUnknown}}</label></td>
-   <td><label>{{CompatGeckoMobile("1.0")}}</label></td>
-   <td><label>{{CompatVersionUnknown}}</label></td>
-   <td><label>{{CompatVersionUnknown}}</label></td>
-   <td><label>{{CompatVersionUnknown}}</label></td>
-  </tr>
-  <tr>
-   <td><label><code>novalidate</code> attribute</label></td>
-   <td><label>{{CompatUnknown}}</label></td>
-   <td><label>{{CompatGeckoMobile("2.0")}}</label></td>
-   <td><label>{{CompatUnknown}}</label></td>
-   <td><label>{{CompatUnknown}}</label></td>
-   <td><label>{{CompatUnknown}}</label></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Google_Chrome_notes"><label>Google Chrome notes</label></h3>
-
-<p><label>The Google Chrome UI for auto-complete requests varies, depending on whether <code>autocomplete</code> is set to <code>off</code> on <code>input</code> elements as well as their form. Specifically, when a form has <code>autocomplete</code> set to <code>off</code> and its input element's <code>autocomplete</code> field is <strong>not</strong> set, then if the user asks for autofill suggestions for the input element, Chrome might display a message saying "autocomplete has been disabled for this form." On the other hand, if both the form and the input element have <code>autocomplete</code> set to <code>off</code>, the browser will not display that message. For this reason, you should set <code>autocomplete</code> to <code>off</code> for each input that has custom auto-completion.</label></p>
+{{Compat("html.elements.form")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 
@@ -212,4 +146,4 @@ translation_of: Web/HTML/Element/form
 
 <p><label>{{HTMLRef}}</label></p>
 
-<p> </p>
+<p> </p>

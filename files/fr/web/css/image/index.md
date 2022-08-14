@@ -95,7 +95,7 @@ image-set('chat.jpg' 1x, 'chien.jpg' 1x) /* Chaque image doit avoir une résolut
 
 Les navigateurs ne fournissent pas d'information aux outils d'assistance pour les images d'arrière-plan. Cela est particulièrement important pour les lecteurs d'écran car ces derniers ne pourront pas annoncer la présence de ces informations aux utilisateurs. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
 
-- [Comprendre la règle 1.1 du WCAG](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
+- [Comprendre la règle 1.1 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères pour 1.1.1, comprendre WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Spécifications

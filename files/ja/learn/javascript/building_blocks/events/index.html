@@ -90,7 +90,7 @@ btn.onclick = function() {
 
 <h3 id="Its_not_just_web_pages" name="It's_not_just_web_pages">ただのウェブページではありません</h3>
 
-<p>ここで言及しておくべき事は、イベントは JavaScript 固有のものではないという事です — ほとんどのプログラミング言語はいくつかのイベントモデルを持ち、その動作する方法はしばしは JavaScript の方式とは異なっています。実際、ウェブページの JavaScript のイベントモデルは他の環境で用いられている JavaScript のイベントモデルと異なっています。</p>
+<p>ここで言及しておくべき事は、イベントは JavaScript 固有のものではないという事です — ほとんどのプログラミング言語はいくつかのイベントモデルを持ち、その動作する方法はしばしは JavaScript の方式とは異なっています。実際、ウェブページの JavaScript のイベントモデルは他の環境で用いられている JavaScript のイベントモデルと異なっています。</p>
 
 <p>例えば、<a href="/ja/docs/Learn/Server-side/Express_Nodejs">Node.js</a> は開発者に JavaScript でネットワークとサーバーサイドのアプリケーションを構築することを可能にするとても有名な JavaScript ランタイムです。<a href="https://nodejs.org/docs/latest-v12.x/api/events.html">Node.js event model</a> はイベントを待ち受けるリスナー、イベントを定期的に発生させるエミッターに依拠しています —たいして違ってないように聞こえますが、コードは極めて異なっていて、イベントリスナーを登録する <code>on()</code> や、一度実行したら登録を解除するイベントリスナーを登録するための <code>once() </code> のような関数を使っていきます。<a href="https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect">HTTP connect event docs</a> が使い方の良い例を教えてくれます。</p>
 
@@ -137,7 +137,7 @@ btn.onclick = bgChange;</pre>
  <li><code><a href="/ja/docs/Web/API/GlobalEventHandlers/onmouseover">btn.onmouseover</a></code> と <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onmouseout">btn.onmouseout</a></code> — マウスポインタがボタンの上に来たときとボタンの上から外れた時に色が変わります。</li>
 </ul>
 
-<p>いくつかのイベントはとても汎用的なのでほとんどどこでも使えます(例えば onlick ハンドラはほぼ全ての要素に登録できます)が、いくつかはもっと限定的で、特定の状況でしか使えません(例えば <a href="/ja/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay">onplay </a> は{{htmlelement("video")}}のような特定の要素でのみ意味を持ちます)。</p>
+<p>いくつかのイベントはとても汎用的なのでほとんどどこでも使えます(例えば onlick ハンドラはほぼ全ての要素に登録できます)が、いくつかはもっと限定的で、特定の状況でしか使えません(例えば <a href="/ja/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay">onplay </a> は{{htmlelement("video")}}のような特定の要素でのみ意味を持ちます)。</p>
 
 <h3 id="インラインイベントハンドラー_—_使っちゃだめ">インラインイベントハンドラー — 使っちゃだめ</h3>
 
@@ -152,7 +152,7 @@ btn.onclick = bgChange;</pre>
 }</pre>
 
 <div class="note">
-<p>メモ: <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">こちら</a>に GitHub上のサンプルがあります (また、<a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">こちら</a>で実際に動くところを見られます)。</p>
+<p>メモ: <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">こちら</a>に GitHub上のサンプルがあります (また、<a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">こちら</a>で実際に動くところを見られます)。</p>
 </div>
 
 <p>Web 上で見かける最初期のイベントハンドラー登録方法には、上の例のような<strong>イベントハンドラーHTML属性</strong>(<strong>インラインイベントハンドラー</strong>とも言う)があります — 属性値がイベント発生時に実行したい JavaScript コードそのものです。上の例では{{htmlelement("script")}}要素の中で定義された関数を起動していますが、直接JavsScript そのものを属性の中に入れる事もできます。例えば:</p>
@@ -225,7 +225,7 @@ myElement.addEventListener('click', functionB);</pre>
 
 <p>要素がクリックされると、どちらの関数も走ります。</p>
 
-<p>さらには、この方式ではもっとたくさんのパワフルな機能やオプションが使えます。それらはこの記事の範疇を少しばかり超えているので、知りたければ <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> と <code><a href="/ja/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code> のリファレンスページを見てください</p>
+<p>さらには、この方式ではもっとたくさんのパワフルな機能やオプションが使えます。それらはこの記事の範疇を少しばかり超えているので、知りたければ <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> と <code><a href="/ja/docs/Web/API/EventTarget/removeEventListener">removeEventListener()</a></code> のリファレンスページを見てください</p>
 
 <h3 id="What_mechanism_should_I_use" name="What_mechanism_should_I_use">どの方式を使えば良い?</h3>
 
@@ -366,7 +366,7 @@ for (let i = 0; i &lt; divs.length; i++) {
 </pre>
 </div>
 
-<p> さあちょっとした JavaScript です — ここでは <a href="/ja/docs/Web/API/GlobalEventHandlers/onsubmit">onsubmit</a> イベントハンドラー(フォームがサブミットされるとサブミットイベントが発火します)の中で、テキストフィールドが空かどうかテストするだけのとても簡単なチェックを実装します。もし空なら、イベントオブジェクトの <code><a href="/ja/docs/Web/API/Event/preventDefault">preventDefault()</a></code> 関数— これでフォームの送信を抑制します — を呼び、それからフォームの下にあるパラグラフに、何が問題なのかユーザーに伝えるためのエラーメッセージを表示します:</p>
+<p> さあちょっとした JavaScript です — ここでは <a href="/ja/docs/Web/API/GlobalEventHandlers/onsubmit">onsubmit</a> イベントハンドラー(フォームがサブミットされるとサブミットイベントが発火します)の中で、テキストフィールドが空かどうかテストするだけのとても簡単なチェックを実装します。もし空なら、イベントオブジェクトの <code><a href="/ja/docs/Web/API/Event/preventDefault">preventDefault()</a></code> 関数— これでフォームの送信を抑制します — を呼び、それからフォームの下にあるパラグラフに、何が問題なのかユーザーに伝えるためのエラーメッセージを表示します:</p>
 
 <pre class="brush: js notranslate">const form = document.querySelector('form');
 const fname = document.getElementById('fname');
@@ -560,7 +560,7 @@ video.onclick = function() {
 
 <p>良い例としては、一連のリストアイテムです — どれかがクリックされたらメッセージをポップアップさせたいときには、親の <code>&lt;ul&gt;</code> 要素の <code>click</code> イベントリスナーに設定すれば、イベントはリストアイテムからバブリングしてきます。</p>
 
-<p>この概念はより深く David Walsh のブログで、たくさんの例とともに解説されています。— <a href="https://davidwalsh.name/event-delegate">How JavaScript Event Delegation Works</a> を見てください</p>
+<p>この概念はより深く David Walsh のブログで、たくさんの例とともに解説されています。— <a href="https://davidwalsh.name/event-delegate">How JavaScript Event Delegation Works</a> を見てください</p>
 
 <h2 id="スキルをテストしよう!">スキルをテストしよう!</h2>
 

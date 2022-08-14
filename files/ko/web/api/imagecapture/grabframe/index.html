@@ -33,41 +33,24 @@ var canvas = document.querySelector('canvas');
 grabFrameButton.onclick = grabFrame;
 
 function grabFrame() {
-  imageCapture.grabFrame()
-  .then(function(imageBitmap) {
-    console.log('Grabbed frame:', imageBitmap);
-    canvas.width = imageBitmap.width;
-    canvas.height = imageBitmap.height;
-    canvas.getContext('2d').drawImage(imageBitmap, 0, 0);
-    canvas.classList.remove('hidden');
-  })
+  imageCapture.grabFrame()
+  .then(function(imageBitmap) {
+    console.log('Grabbed frame:', imageBitmap);
+    canvas.width = imageBitmap.width;
+    canvas.height = imageBitmap.height;
+    canvas.getContext('2d').drawImage(imageBitmap, 0, 0);
+    canvas.classList.remove('hidden');
+  })
   .catch(function(error) {
-    console.log('grabFrame() error: ', error);
-  });
+    console.log('grabFrame() error: ', error);
+  });
 }
 </pre>
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('MediaStream Image','#dom-imagecapture-grabframe','grabFrame()')}}</td>
-   <td>{{Spec2('MediaStream Image')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div>
-
-
-<p>{{Compat("api.ImageCapture.grabFrame")}}</p>
-</div>
+{{Compat("api.ImageCapture.grabFrame")}}

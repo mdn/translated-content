@@ -18,7 +18,9 @@ Si l'URL donnée n'est pas valide, une {{domxref("DOMException")}} de type `SYNT
 
 ## Syntaxe
 
-    object.replace(url);
+```js
+object.replace(url);
+```
 
 ### Paramètres
 

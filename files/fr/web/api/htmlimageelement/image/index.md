@@ -15,7 +15,9 @@ C'est fonctionnellement équivalent à {{domxref("Document.createElement()", "do
 
 ## Syntaxe
 
-    Image(width, height)
+```js
+Image(width, height)
+```
 
 ### Paramètres
 

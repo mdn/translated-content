@@ -18,7 +18,9 @@ La méthode statique **`Atomics.compareExchange()`** échange une valeur d'un ta
 
 ## Syntaxe
 
-    Atomics.compareExchange(typedArray, index, valeurAttendue, valeurRemplacement)
+```js
+Atomics.compareExchange(typedArray, index, valeurAttendue, valeurRemplacement)
+```
 
 ### Paramètres
 

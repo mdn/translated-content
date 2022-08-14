@@ -19,7 +19,9 @@ La méthode **`HTMLMediaElement.play()`** essaie de commencer la lecture du méd
 
 ## Syntaxe
 
-    var Promise = HTMLMediaElement.play();
+```js
+var Promise = HTMLMediaElement.play();
+```
 
 ### Paramètres
 

@@ -16,7 +16,7 @@ SyntaxError: непредвиденный токен ( [Chrome]
 
 <p>{{jsxref("SyntaxError")}}</p>
 
-<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
+<h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
 <p>В коде есть оператор function, для которого требуется имя. Вам нужно будет проверить, как определены функции и нужно ли предоставить для них имя, или если рассматриваемая функция должна быть выражением функции, {{Glossary("IIFE")}}, или если код функции вообще правильно размещён в этом контексте.</p>
 
@@ -32,13 +32,13 @@ SyntaxError: непредвиденный токен ( [Chrome]
 // SyntaxError: function statement requires a name
 </pre>
 
-<p>Вы можете использовать выражение функции (назначат) вместо:</p>
+<p>Вы можете использовать выражение функции (назначат) вместо:</p>
 
 <pre class="brush: js example-good">var greet = function() {
   return 'Hello world';
 };</pre>
 
-<p>Или, ваша функция возможно, предназначена для IIFE (немедленно вызываемое выражение функции), которое является функцией, которая запускается, как только она определена. В этом случае вам понадобится ещё несколько брекетов:</p>
+<p>Или, ваша функция возможно, предназначена для IIFE (немедленно вызываемое выражение функции), которое является функцией, которая запускается, как только она определена. В этом случае вам понадобится ещё несколько брекетов:</p>
 
 <pre class="brush: js example-good">(function () {
 
@@ -103,9 +103,9 @@ SyntaxError: непредвиденный токен ( [Chrome]
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Functions in the JavaScript Guide</a> (функции в javascript"e гайд)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Functions in the JavaScript Guide</a> (функции в javascript"e гайд)</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">Оператор функции</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">Выражение функции</a></li>
  <li><a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">label</a> </li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">label</a> </li>
 </ul>

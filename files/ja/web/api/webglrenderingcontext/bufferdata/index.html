@@ -22,7 +22,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 
 <dl>
  <dt>target</dt>
- <dd>結合する場所 (ターゲット) を指定する {{domxref("GLenum")}}。以下の値を取ることができます。
+ <dd>結合する場所 (ターゲット) を指定する {{domxref("GLenum")}}。以下の値を取ることができます。
  <ul>
   <li><code>gl.ARRAY_BUFFER</code>: 頂点の属性を含むバッファーで、頂点座標、テクスチャ座標データや、頂点色データのようなものです。</li>
   <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: 要素の位置指定に使用されるバッファーです。</li>
@@ -41,9 +41,9 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
  <dt>size</dt>
  <dd>{{domxref("GLsizeiptr")}} のバッファーオブジェクトのデータストアのサイズ。</dd>
  <dt>srcData {{optional_inline}}</dt>
- <dd>{{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} か {{domxref("ArrayBufferView")}} の型付き配列型の一つで、データストアへ格納されます。<code>null</code> の場合、データストアは作成されますが、内容は初期化されず未定義です。</dd>
+ <dd>{{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} か {{domxref("ArrayBufferView")}} の型付き配列型の一つで、データストアへ格納されます。<code>null</code> の場合、データストアは作成されますが、内容は初期化されず未定義です。</dd>
  <dt>usage</dt>
- <dd>データストアの用途を指定する {{domxref("GLenum")}}。以下の値を取ることができます。
+ <dd>データストアの用途を指定する {{domxref("GLenum")}}。以下の値を取ることができます。
  <ul>
   <li><code>gl.STATIC_DRAW</code>: バッファーの内容は、何度か使用されてあまり変更されません。バッファーへ書き込まれますが、読み出せません。</li>
   <li><code>gl.DYNAMIC_DRAW</code>: バッファーの内容は、よく使用されて何度か変更されます。バッファーへ書き込まれますが、読み出せません。</li>
@@ -61,7 +61,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
  </ul>
  </dd>
  <dt>srcOffset</dt>
- <dd>バッファー読み出しを開始する要素の位置のオフセットを指定する {{domxref("GLuint")}}。</dd>
+ <dd>バッファー読み出しを開始する要素の位置のオフセットを指定する {{domxref("GLuint")}}。</dd>
  <dt><code>length</code> {{optional_inline}}</dt>
  <dd>{{domxref("GLuint")}}。既定値は 0 です。</dd>
 </dl>
@@ -73,14 +73,14 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 <h3 id="例外">例外</h3>
 
 <ul>
- <li>与えられた <code>size</code> でデータストアを作成できない場合、<code>gl.OUT_OF_MEMORY</code> エラーをスローします。</li>
- <li><code>size</code> が負数の場合、<code>gl.INVALID_VALUE</code> エラーをスローします。</li>
- <li><code>target</code> や <code>usage</code> が許可された列挙のものでない場合、<code>gl.INVALID_ENUM</code> エラーをスローします。</li>
+ <li>与えられた <code>size</code> でデータストアを作成できない場合、<code>gl.OUT_OF_MEMORY</code> エラーをスローします。</li>
+ <li><code>size</code> が負数の場合、<code>gl.INVALID_VALUE</code> エラーをスローします。</li>
+ <li><code>target</code> や <code>usage</code> が許可された列挙のものでない場合、<code>gl.INVALID_ENUM</code> エラーをスローします。</li>
 </ul>
 
 <h2 id="例">例</h2>
 
-<h3 id="bufferData_の使用"><code>bufferData</code> の使用</h3>
+<h3 id="bufferData_の使用"><code>bufferData</code> の使用</h3>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
@@ -121,7 +121,7 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
    <td>{{Spec2('OpenGL ES 3.0')}}</td>
    <td>OpenGL ES 3 API (と同様の) マニュアルページ。<br>
     <br>
-    以下の新しい <code>target</code> バッファーを追加。<br>
+    以下の新しい <code>target</code> バッファーを追加。<br>
     <code>gl.COPY_READ_BUFFER</code>,<br>
     <code>gl.COPY_WRITE_BUFFER</code>,<br>
     <code>gl.TRANSFORM_FEEDBACK_BUFFER</code>,<br>
@@ -129,7 +129,7 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
     <code>gl.PIXEL_PACK_BUFFER</code>,<br>
     <code>gl.PIXEL_UNPACK_BUFFER</code><br>
     <br>
-    以下の新しい <code>usage</code> ヒントを追加。<br>
+    以下の新しい <code>usage</code> ヒントを追加。<br>
     <code>gl.STATIC_READ</code>,<br>
     <code>gl.DYNAMIC_READ</code>,<br>
     <code>gl.STREAM_READ</code>,<br>

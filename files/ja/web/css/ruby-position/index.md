@@ -66,7 +66,7 @@ ruby-position: unset;
 
 ```css
 ruby {
-    ruby-position:over;
+    ruby-position:over;
 }
 ```
 
@@ -89,7 +89,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position:under;
+    ruby-position:under;
 }
 ```
 
@@ -113,7 +113,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position: alternate; /* 初期値でもある */
+    ruby-position: alternate; /* 初期値でもある */
 }
 ```
 

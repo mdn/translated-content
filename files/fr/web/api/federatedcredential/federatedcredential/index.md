@@ -17,7 +17,9 @@ Pour les navigateurs qui le prennent en charge, une instance de cette classe pou
 
 ## Syntaxe
 
-    var mesCredentials = new FederatedCredential(init)
+```js
+var mesCredentials = new FederatedCredential(init)
+```
 
 ### Paramètres
 

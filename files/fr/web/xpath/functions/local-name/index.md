@@ -12,7 +12,9 @@ La fonction `local-name` retourne une chaîne représentant le nom local du prem
 
 ### Syntaxe
 
-    local-name( [ensemble-de-nœuds] )
+```
+local-name( [ensemble-de-nœuds] )
+```
 
 ### Arguments
 

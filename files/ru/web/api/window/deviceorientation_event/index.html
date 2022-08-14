@@ -8,13 +8,13 @@ tags:
   - Сенсоры
 translation_of: Web/API/Window/deviceorientation_event
 ---
-<p>Событие <code>deviceorientation</code> срабатывает, когда с сенсоров ориентации поступают новые данные о текущем положении устройства внутри Земной системы координат. Эти данные собираются с помощью магнитометра устройства. Более детальное объяснение дано в <a href="/en-US/docs/DOM/Orientation_and_motion_data_explained">Ориентация и объяснение данных движения</a>.</p>
+<p>Событие <code>deviceorientation</code> срабатывает, когда с сенсоров ориентации поступают новые данные о текущем положении устройства внутри Земной системы координат. Эти данные собираются с помощью магнитометра устройства. Более детальное объяснение дано в <a href="/en-US/docs/DOM/Orientation_and_motion_data_explained">Ориентация и объяснение данных движения</a>.</p>
 
 <h2 id="Общая_информация">Общая информация</h2>
 
 <dl>
  <dt style="float: left; text-align: right; width: 120px;">Спецификация</dt>
- <dd style="margin: 0 0 0 120px;">Событие <a class="external" href="http://www.w3.org/TR/orientation-event/#deviceorientation">DeviceOrientation</a></dd>
+ <dd style="margin: 0 0 0 120px;">Событие <a class="external" href="http://www.w3.org/TR/orientation-event/#deviceorientation">DeviceOrientation</a></dd>
  <dt style="float: left; text-align: right; width: 120px;">Определение</dt>
  <dd style="margin: 0 0 0 120px;">DeviceOrientationEvent</dd>
  <dt style="float: left; text-align: right; width: 120px;">Всплывает</dt>
@@ -23,8 +23,8 @@ translation_of: Web/API/Window/deviceorientation_event
  <dd style="margin: 0 0 0 120px;">Нет</dd>
  <dt style="float: left; text-align: right; width: 120px;">Целевой элемент</dt>
  <dd style="margin: 0 0 0 120px;">По умолчанию (<code>window</code>)</dd>
- <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию </dt>
- <dd style="margin: 0 0 0 120px;"> </dd>
+ <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию </dt>
+ <dd style="margin: 0 0 0 120px;"> </dd>
  <dd style="margin: 0 0 0 120px;">Нет</dd>
 </dl>
 
@@ -85,20 +85,20 @@ translation_of: Web/API/Window/deviceorientation_event
 <h2 id="Пример">Пример</h2>
 
 <pre class="pass: js">if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis
-        var rotateDegrees = event.alpha;
-        // gamma: left to right
-        var leftToRight = event.gamma;
-        // beta: front back motion
-        var frontToBack = event.beta;
+    window.addEventListener("deviceorientation", function(event) {
+        // alpha: rotation around z-axis
+        var rotateDegrees = event.alpha;
+        // gamma: left to right
+        var leftToRight = event.gamma;
+        // beta: front back motion
+        var frontToBack = event.beta;
 
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
+        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    }, true);
 }
 
 var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    // Сделайте что-нибудь необычное здесь
+    // Сделайте что-нибудь необычное здесь
 };
 </pre>
 
@@ -119,5 +119,5 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
  <li>{{domxref("window.ondeviceorientation")}}</li>
  <li><a href="/en-US/docs/Web/API/Detecting_device_orientation">Определение ориентации устройства</a></li>
  <li><a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained">Ориентация и объяснение данных о движении</a></li>
- <li>Имитация события смены ориентации в настольный браузерах с помощью <a href="http://louisremi.github.com/orientation-devtool/">orientation-devtool</a></li>
+ <li>Имитация события смены ориентации в настольный браузерах с помощью <a href="http://louisremi.github.com/orientation-devtool/">orientation-devtool</a></li>
 </ul>

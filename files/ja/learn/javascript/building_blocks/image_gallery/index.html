@@ -34,10 +34,10 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 
 <h2 id="Starting_point" name="Starting_point">出発点</h2>
 
-<p>この評価を始めるために、サンプルが入っているサイトから <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true">ZIP ファイル</a> を取得して、コンピュータのどこかに展開しておきます。</p>
+<p>この評価を始めるために、サンプルが入っているサイトから <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true">ZIP ファイル</a> を取得して、コンピュータのどこかに展開しておきます。</p>
 
 <div class="note">
-<p><strong>注</strong>: 別の方法として, この評価を行うために <a class="external external-icon" href="https://jsbin.com/">JSBin</a> や <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> のようなサイトを使うことができます。これらのオンラインエディターに HTML、CSS、JavaScript を貼り付けることができます。利用するオンラインエディターが JavaScript/CSS パネルに分かれていなければ、 HTML ページの中の <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> 要素にそれらを貼り付けてください 。</p>
+<p><strong>注</strong>: 別の方法として, この評価を行うために <a class="external external-icon" href="https://jsbin.com/">JSBin</a> や <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> のようなサイトを使うことができます。これらのオンラインエディターに HTML、CSS、JavaScript を貼り付けることができます。利用するオンラインエディターが JavaScript/CSS パネルに分かれていなければ、 HTML ページの中の <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> 要素にそれらを貼り付けてください 。</p>
 </div>
 
 <h2 id="Project_brief" name="Project_brief">プロジェクト概要</h2>
@@ -75,7 +75,7 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 <ul>
  <li>すべての画像をループさせる際、<code>thumb-bar &lt;div&gt;</code> の中にその画像を埋め込む <code>&lt;img&gt;</code> 要素を挿入します。</li>
  <li><code>onclick</code> ハンドラーを <code>thumb-bar &lt;div&gt;</code> の中の <code>&lt;img&gt;</code> それぞれにつけます。それをクリックしたときにその画像が <code>displayed-img &lt;img&gt;</code> 要素に表示されるようにします。</li>
- <li><code>onclick</code> ハンドラーを <code>&lt;button&gt;</code> につけて、クリックされたらフルサイズ画像を暗くするようにします。再度クリックすると暗くする効果を外します。</li>
+ <li><code>onclick</code> ハンドラーを <code>&lt;button&gt;</code> につけて、クリックされたらフルサイズ画像を暗くするようにします。再度クリックすると暗くする効果を外します。</li>
 </ul>
 
 <p>もっとアイデアを加えると、<a href="http://mdn.github.io/learning-area/javascript/building-blocks/gallery/">最終的な例</a> のようになります (ソースコードをのぞかないように！)</p>
@@ -92,7 +92,7 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 
 <ol>
  <li>"Looping through images" コメントの下のセクションのコードを全 5 画像をループする繰り返し処理のなかに置いて下さい — 各画像を表現する5つの数についてループするだけです。</li>
- <li>各ループの反復で、プレースホルダー <code>xxx</code> の値を画像のパスに等しい文字列で置き換えてください。それぞれの場合で <code>src</code> 属性の値をこの値に設定します。いずれの場合も画像は画像ディレクトリーにあり、<code>pic1.jpg</code>、<code>pic2.jpg</code> というようなファイル名になっています。</li>
+ <li>各ループの反復で、プレースホルダー <code>xxx</code> の値を画像のパスに等しい文字列で置き換えてください。それぞれの場合で <code>src</code> 属性の値をこの値に設定します。いずれの場合も画像は画像ディレクトリーにあり、<code>pic1.jpg</code>、<code>pic2.jpg</code> というようなファイル名になっています。</li>
 </ol>
 
 <h3 id="onclick_ハンドラーをそれぞれのサムネール画像に追加する">onclick ハンドラーをそれぞれのサムネール画像に追加する</h3>
@@ -103,7 +103,7 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 
 <h3 id="Adding_an_onclick_handler_to_each_thumbnail_image" name="Adding_an_onclick_handler_to_each_thumbnail_image">暗くする/明るくするボタンを処理するハンドラーを書く</h3>
 
-<p>暗くする/明るくする <code>&lt;button&gt;</code> が残っています。<code>btn</code> という変数に <code>&lt;button&gt;</code>  への参照を格納するコードはすでにご紹介しています。それらに <code>onclick</code> ハンドラーに追加する必要があります:</p>
+<p>暗くする/明るくする <code>&lt;button&gt;</code> が残っています。<code>btn</code> という変数に <code>&lt;button&gt;</code>  への参照を格納するコードはすでにご紹介しています。それらに <code>onclick</code> ハンドラーに追加する必要があります:</p>
 
 <ol>
  <li><code>&lt;button&gt;</code> にセットされている現在のクラス名をチェックしますーこれもまた、<code>getAttribute()</code> を使えば取得できます。</li>

@@ -33,7 +33,7 @@ browser-compat: api.AudioParamDescriptor
 
 ## 예제
 
-아래의 코드는 사용자 정의 `AudioWorkletProcessor` 에서 정의된 static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} 메서드에 의해 반환되는 이 유형의 descriptor를 보여줍니다 (이 코드는 [AudioWorkletNode.parameters](/en-US/docs/Web/API/AudioWorkletNode/parameters#examples) 예제의 일부입니다).
+아래의 코드는 사용자 정의 `AudioWorkletProcessor` 에서 정의된 static {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} 메서드에 의해 반환되는 이 유형의 descriptor를 보여줍니다 (이 코드는 [AudioWorkletNode.parameters](/ko/docs/Web/API/AudioWorkletNode/parameters#examples) 예제의 일부입니다).
 
 ```js
 // white-noise-processor.js

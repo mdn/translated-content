@@ -1,6 +1,6 @@
 # 針對MDN翻譯內容的一般指導原則
 
-本文是針對正體中文（zh-TW）地區的翻譯指南。如果你所在的地區尚未有文件指南，而你又想新建的話，歡迎你開始建立或聯絡[我們負責該地區的翻譯團隊](https://github.com/mdn/translated-content/blob/docs-readme/README.md)。
+本文是針對正體中文（zh-TW）地區的翻譯指南。如果你所在的地區尚未有文件指南，而你又想新建的話，歡迎你開始建立或聯絡[我們負責該地區的翻譯團隊](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams)。
 
 同樣的，如果你對一般指導原則有一些不錯的想法想要補充，不用客氣，去發起問題（issue）來跟我們談談吧。以下進入正體中文翻譯指導原則的主要內容。
 
@@ -85,7 +85,6 @@
 
 - 正確：我們將變數myHeading中innerHTML特性的值設為「Hello, world!」。
 - 不正確：我們將變數myHeading中innerHTML特性的值設為「Hello，world！」。
-
 
 #### 常見錯誤
 

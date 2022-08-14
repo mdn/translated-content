@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>copyWithin()</strong></code> copia parte de um array para outra localização dentro deste mesmo array e o retorna, sem alterar seu tamanho. </p>
+<p>O método <code><strong>copyWithin()</strong></code> copia parte de um array para outra localização dentro deste mesmo array e o retorna, sem alterar seu tamanho. </p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -17,18 +17,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
  <dt><code>target</code></dt>
  <dd>Posição para a qual os elementos serão copiados. Caso negativo, o <code>target</code> será contado a partir do final.</dd>
  <dt><code>start</code></dt>
- <dd>Índice inicial de onde se copiará os elementos. Caso negativo, o <code>start</code> será contado a partir do final.</dd>
- <dt><code>end </code>{{optional_inline}}</dt>
- <dd>Índice final de onde se copiará os elementos. Caso negativo, o <code>end</code> será contado a partir do final.</dd>
+ <dd>Índice inicial de onde se copiará os elementos. Caso negativo, o <code>start</code> será contado a partir do final.</dd>
+ <dt><code>end </code>{{optional_inline}}</dt>
+ <dd>Índice final de onde se copiará os elementos. Caso negativo, o <code>end</code> será contado a partir do final.</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Os argumentos <code>target</code>, <code>start</code> e <code>end</code> são restritos a {{jsxref("Number")}} e truncados para valores inteiros.</p>
+<p>Os argumentos <code>target</code>, <code>start</code> e <code>end</code> são restritos a {{jsxref("Number")}} e truncados para valores inteiros.</p>
 
-<p>Se <code>start</code> for negativo, ele é tratado como <code>length+start</code>, onde <code>length</code> é o comprimento do array. Se <code>end</code> for negativo, ele é tratado como <code>length+end</code>.</p>
+<p>Se <code>start</code> for negativo, ele é tratado como <code>length+start</code>, onde <code>length</code> é o comprimento do array. Se <code>end</code> for negativo, ele é tratado como <code>length+end</code>.</p>
 
-<p>A função <code>copyWithin</code> é intencionalmente <em>genérica</em>, não requer que seu valor <code>this</code> seja um objeto {{jsxref("Array")}} e, adicionalmente, <code>copyWithin</code> é um <em>método mutável</em>, irá mudar o próprio objeto <code>this</code> e retorná-lo, não apenas retornar uma cópia dele.</p>
+<p>A função <code>copyWithin</code> é intencionalmente <em>genérica</em>, não requer que seu valor <code>this</code> seja um objeto {{jsxref("Array")}} e, adicionalmente, <code>copyWithin</code> é um <em>método mutável</em>, irá mudar o próprio objeto <code>this</code> e retorná-lo, não apenas retornar uma cópia dele.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -139,62 +139,14 @@ i32a.copyWithin(0, 2);
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome("45")}}</td>
-   <td>{{CompatGeckoDesktop("32")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("32")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Array.copyWithin")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

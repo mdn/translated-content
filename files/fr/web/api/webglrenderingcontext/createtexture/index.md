@@ -16,7 +16,9 @@ La méthode **`WebGLRenderingContext.createTexture()`** de l'API WebGL crée et 
 
 ## Syntaxe
 
-    WebGLTexture gl.createTexture();
+```js
+WebGLTexture gl.createTexture();
+```
 
 ### Paramètres
 

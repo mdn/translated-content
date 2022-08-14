@@ -9,7 +9,9 @@ La propriété **`CanvasRenderingContext2D.direction`** de l'API Canvas 2D indiq
 
 ## Syntaxe
 
-    ctx.direction = "ltr" || "rtl" || "inherit";
+```js
+ctx.direction = "ltr" || "rtl" || "inherit";
+```
 
 ### Options
 

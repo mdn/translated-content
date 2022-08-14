@@ -19,7 +19,9 @@ La méthode **`Object.defineProperties()`** permet de définir ou de modifier le
 
 ## Syntaxe
 
-    Object.defineProperties(obj, props)
+```js
+Object.defineProperties(obj, props)
+```
 
 ### Paramètres
 

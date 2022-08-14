@@ -5,9 +5,9 @@ translation_of: Web/API/Document/evaluate
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<div><a href="/ja/docs/XPath" title="XPath">XPath</a> 式やその他与えられたパラメータに基づいて <code><a href="/ja/docs/XPathResult" title="XPathResult">XPathResult</a></code> を返します。</div>
+<div><a href="/ja/docs/XPath" title="XPath">XPath</a> 式やその他与えられたパラメータに基づいて <code><a href="/ja/docs/XPathResult" title="XPathResult">XPathResult</a></code> を返します。</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -20,11 +20,11 @@ translation_of: Web/API/Document/evaluate
 );</pre>
 
 <ul>
- <li><code>xpathExpression</code> は評価される Xpath を示す文字列です。</li>
- <li><code>contextNode</code> はクエリの<em>コンテキストノード</em>を指定します(<a href="http://www.w3.org/TR/xpath" rel="freelink">XPath の仕様</a>を参照してください)　コンテキストノードとして <code>document</code> を渡すのが一般的です。</li>
- <li><code>namespaceResolver</code> は、任意の名前空間接頭辞を受け取り、その接頭辞に関連付けられた名前空間 URI を文字列として返す関数です。接頭辞が文書の中でマッチされるように、XPath 自身の中で接頭辞を解決するために使われます。HTML 文書向け、または名前空間接頭辞を使わないときは <code>null</code> を指定するのが一般的です。</li>
- <li><code>resultType</code> は返り値である <code>XPathResult</code> のタイプに対応する整数です。XPathResult コンストラクタの<a href="#Result_types">名前付き定数プロパティ</a> (例えば <code>XPathResult.ANY_TYPE</code>) を使用してください。これらは0から9までの整数に対応しています。</li>
- <li><code>result</code> は結果として使われる既存の <code>XPathResult</code> です。<code>null</code> を指定するのが最も一般的です。<code>null</code> は新しい <code>XPathResult　を生成します。</code></li>
+ <li><code>xpathExpression</code> は評価される Xpath を示す文字列です。</li>
+ <li><code>contextNode</code> はクエリの<em>コンテキストノード</em>を指定します(<a href="http://www.w3.org/TR/xpath" rel="freelink">XPath の仕様</a>を参照してください)　コンテキストノードとして <code>document</code> を渡すのが一般的です。</li>
+ <li><code>namespaceResolver</code> は、任意の名前空間接頭辞を受け取り、その接頭辞に関連付けられた名前空間 URI を文字列として返す関数です。接頭辞が文書の中でマッチされるように、XPath 自身の中で接頭辞を解決するために使われます。HTML 文書向け、または名前空間接頭辞を使わないときは <code>null</code> を指定するのが一般的です。</li>
+ <li><code>resultType</code> は返り値である <code>XPathResult</code> のタイプに対応する整数です。XPathResult コンストラクタの<a href="#Result_types">名前付き定数プロパティ</a> (例えば <code>XPathResult.ANY_TYPE</code>) を使用してください。これらは0から9までの整数に対応しています。</li>
+ <li><code>result</code> は結果として使われる既存の <code>XPathResult</code> です。<code>null</code> を指定するのが最も一般的です。<code>null</code> は新しい <code>XPathResult　を生成します。</code></li>
 </ul>
 
 <h2 id="Example" name="Example">例</h2>

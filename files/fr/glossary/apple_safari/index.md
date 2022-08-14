@@ -14,7 +14,7 @@ original_slug: Glossaire/Apple_Safari
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Safari_(navigateur_web)", "Safari")}} sur Wikipédia
+- [Safari](https://fr.wikipedia.org/wiki/Safari_(navigateur_web)) sur Wikipédia
 - [Safari](https://www.apple.com/fr/safari/) sur le site d'Apple
 
 ### Informations techniques

@@ -36,9 +36,9 @@ original_slug: Web_開發/Historical_artifacts_to_avoid
 
 <ul>
  <li><code>&lt;meta name="MSSmartTagsPreventParsing" content="true"&gt;</code> 這個只有在其中一個 beta 版的 Internet Explorer 6 是有用處的。這個 beta 版已經不再使用，而且這版本的特色聰明標籤（smart tags）已經被移除，也不會再被加回來。</li>
- <li><code>&lt;meta name="robots" content="all"&gt; </code>雖然 <code>robot</code> 屬性是存在且確實合法的，但請不要去使用根本不存在的值，像是 <code>all</code>。 <code>robots</code> 預設的值為 <code>index, follow</code>，其實這就是你寫的 <code>all</code> 想要做的事。因此請直接移除整個 <code>&lt;meta&gt;</code> 標籤即可。</li>
- <li><code>&lt;meta name="copyright" content="…"&gt; </code> 這個 meta 並不存在。移除它並創建一個版權頁面或 <code>div</code>，或是使用 <code>rel="copyright"</code> 的 {{HTMLElement("link")}} HTML 元素之連結。</li>
- <li><code>&lt;meta name="rating" content="…"&gt; </code> 這個 meta 並不存在。只要移除整個 <code>&lt;meta&gt;</code> 即可。</li>
+ <li><code>&lt;meta name="robots" content="all"&gt; </code>雖然 <code>robot</code> 屬性是存在且確實合法的，但請不要去使用根本不存在的值，像是 <code>all</code>。 <code>robots</code> 預設的值為 <code>index, follow</code>，其實這就是你寫的 <code>all</code> 想要做的事。因此請直接移除整個 <code>&lt;meta&gt;</code> 標籤即可。</li>
+ <li><code>&lt;meta name="copyright" content="…"&gt; </code> 這個 meta 並不存在。移除它並創建一個版權頁面或 <code>div</code>，或是使用 <code>rel="copyright"</code> 的 {{HTMLElement("link")}} HTML 元素之連結。</li>
+ <li><code>&lt;meta name="rating" content="…"&gt; </code> 這個 meta 並不存在。只要移除整個 <code>&lt;meta&gt;</code> 即可。</li>
 </ul>
 
 <h2 id="HTML_腳本的註解">HTML 腳本的註解</h2>

@@ -50,7 +50,7 @@ translation_of: Learn/Accessibility/HTML
 
 <pre class="brush: html">&lt;button&gt;Play vídeo&lt;/button&gt;</pre>
 
-<p>O elemento  <code>&lt;button&gt;</code> possui vários estilos já aplicados nele mesmo por padrão (o que você provavelmente vai querer sobrescrever), ele já é embutido com padrões de acessibilidade pelo teclado — botões podem ser navegados através da tecla tab do teclado, e ativados utilizando a tecla Enter / Return.</p>
+<p>O elemento  <code>&lt;button&gt;</code> possui vários estilos já aplicados nele mesmo por padrão (o que você provavelmente vai querer sobrescrever), ele já é embutido com padrões de acessibilidade pelo teclado — botões podem ser navegados através da tecla tab do teclado, e ativados utilizando a tecla Enter / Return.</p>
 
 <p>A semântica do HTML não demora mais para escrever do que a versão não-semântica (ruim) se você escrevê-la consistentemente desde o começo do seu projeto. Existem também outros benefícios de utilizá-la, além da acessibilidade:</p>
 
@@ -295,23 +295,23 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
 &lt;h2&gt;Formulário&lt;/h2&gt;
 
 &lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="name"&gt;Preencha com seu nome:&lt;/label&gt;
-    &lt;input type="text" id="name" name="name"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="age"&gt;Preencha com a sua idade:&lt;/label&gt;
-    &lt;input type="text" id="age" name="age"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="mood"&gt;Escolha o seu humor:&lt;/label&gt;
-    &lt;select id="mood" name="mood"&gt;
-      &lt;option&gt;Feliz&lt;/option&gt;
-      &lt;option&gt;Triste&lt;/option&gt;
-      &lt;option&gt;Bravo&lt;/option&gt;
-      &lt;option&gt;Preocupado&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="name"&gt;Preencha com seu nome:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="age"&gt;Preencha com a sua idade:&lt;/label&gt;
+    &lt;input type="text" id="age" name="age"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="mood"&gt;Escolha o seu humor:&lt;/label&gt;
+    &lt;select id="mood" name="mood"&gt;
+      &lt;option&gt;Feliz&lt;/option&gt;
+      &lt;option&gt;Triste&lt;/option&gt;
+      &lt;option&gt;Bravo&lt;/option&gt;
+      &lt;option&gt;Preocupado&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 <p>Isso significa que utilizar links, botões, elementos de formulário e rótulos adequadamente (incluindo o elemento {{htmlelement("label")}} para controles de formulário).</p>
@@ -324,9 +324,9 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
 
 <p>Mas usar esse código não é recomendado - você perde imediatamente a acessibilidade do teclado que você teria se tivesse usado apenas elementos {{htmlelement ("button")}}, além de não obter nenhum estilo padrão de CSS.</p>
 
-<h4 id="Aplicando_de_volta_a_acessibilidade_do_teclado">Aplicando de volta a acessibilidade do teclado</h4>
+<h4 id="Aplicando_de_volta_a_acessibilidade_do_teclado">Aplicando de volta a acessibilidade do teclado</h4>
 
-<p>Adicionar tais vantagens de volta leva um pouco de trabalho (você pode ver um exemplo de código no nosso exemplo <a class="external external-icon" href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> - e também pode ver o <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Aqui nós acrescentamos aos nossos falsos botões <code>&lt;div&gt;</code> a capacidade de serem focados (inclusive via tab) dando a cada um o atributo <code>tabindex="0"</code>:</p>
+<p>Adicionar tais vantagens de volta leva um pouco de trabalho (você pode ver um exemplo de código no nosso exemplo <a class="external external-icon" href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> - e também pode ver o <a class="external external-icon" href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">source code</a>). Aqui nós acrescentamos aos nossos falsos botões <code>&lt;div&gt;</code> a capacidade de serem focados (inclusive via tab) dando a cada um o atributo <code>tabindex="0"</code>:</p>
 
 <pre class="brush: html">&lt;div data-message="Esse é do primeiro botão" tabindex="0"&gt;Clique em mim!&lt;/div&gt;
 &lt;div data-message="Esse é do segundo botão" tabindex="0"&gt;Clique em mim também!&lt;/div&gt;
@@ -336,7 +336,7 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
 
 <ul>
  <li><code>tabindex="0"</code> — conforme indicado acima, esse valor permite que elementos que normalmente não podem ser tabulados se tornem tabeláveis. Este é o valor mais útil do <code>tabindex</code>.</li>
- <li><code>tabindex="-1"</code> — isso permite que elementos normalmente não tabuláveis recebam foco de maneira programática, por exemplo, via JavaScript, ou como alvo de links. </li>
+ <li><code>tabindex="-1"</code> — isso permite que elementos normalmente não tabuláveis recebam foco de maneira programática, por exemplo, via JavaScript, ou como alvo de links. </li>
 </ul>
 
 <p>Embora a adição acima nos permita acessar os botões, ela não nos permite ativá-los através da tecla Enter/Return. Para fazer isso, temos que adicionar o seguinte truque de JavaScript:</p>
@@ -347,11 +347,11 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
   <span class="punctuation token">}</span>
 <span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
 
-<p> </p>
+<p> </p>
 
 <p>Aqui nós adicionamos um "ouvinte" (listener) ao objeto de documento (<code>document</code>) para detectar quando um botão foi pressionado no teclado. Verificamos qual botão foi pressionado por meio da propriedade <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code> do objeto de evento; se for o código que corresponde a Enter/Return, executamos a função armazenada no manipulador <code>onclick</code> do botão usando <code>document.activeElement.click()</code>. <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement">activeElement</a></code> nos dá o elemento que está atualmente focado na página.</p>
 
-<p>Isso acrescenta um monte de problemas extras para construir a funcionalidade de volta. E não deveríamos ter outros problemas com isso. <strong>É sempre melhor apenas usar o elemento certo.</strong></p>
+<p>Isso acrescenta um monte de problemas extras para construir a funcionalidade de volta. E não deveríamos ter outros problemas com isso. <strong>É sempre melhor apenas usar o elemento certo.</strong></p>
 
 <h4 id="Rótulos_de_texto_significativos">Rótulos de texto significativos</h4>
 
@@ -370,10 +370,10 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
 <pre class="brush: html example-bad">&lt;p&gt;As baleias são criaturas realmente incríveis. Para saber mais sobre baleias, &lt;a href="whales.html"&gt;clique aqui&lt;/a&gt;.&lt;/p&gt;</pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Criando hyperlinks</a>. Você também pode ver alguns bons e maus exemplos em <a href="http://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> e <a href="http://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a>.</p>
+<p><strong>Nota</strong>: Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Criando hyperlinks</a>. Você também pode ver alguns bons e maus exemplos em <a href="http://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> e <a href="http://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a>.</p>
 </div>
 
-<p>Os rótulos de formulário (labels) também são importantes para dar a você uma ideia sobre o que precisa ser preenchido em cada entrada de formulário. O seguinte exemplo aparentemente é bem razoável:</p>
+<p>Os rótulos de formulário (labels) também são importantes para dar a você uma ideia sobre o que precisa ser preenchido em cada entrada de formulário. O seguinte exemplo aparentemente é bem razoável:</p>
 
 <pre class="brush: html example-bad">Preencha seu nome: &lt;input type="text" id="nome" name="nome"&gt;</pre>
 
@@ -386,14 +386,14 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
   &lt;input type="text" id="nome" name="nome"&gt;
 &lt;/div&gt;</pre>
 
-<p>Com o código assim, o rótulo será claramente associado à entrada; a descrição será algo como "Preencha seu nome: editar texto".</p>
+<p>Com o código assim, o rótulo será claramente associado à entrada; a descrição será algo como "Preencha seu nome: editar texto".</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14337/voiceover-good-form-label.png" style="display: block; margin: 0 auto;"></p>
 
-<p>Como um bônus adicional, na maioria dos navegadores a associação de um rótulo a uma entrada de formulário significa que você pode clicar no rótulo para selecionar/ativar o elemento de formulário. Isso consequentemente aumenta o tamanho da área clicável dos elementos, facilitando assim a seleção.</p>
+<p>Como um bônus adicional, na maioria dos navegadores a associação de um rótulo a uma entrada de formulário significa que você pode clicar no rótulo para selecionar/ativar o elemento de formulário. Isso consequentemente aumenta o tamanho da área clicável dos elementos, facilitando assim a seleção.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Você pode ver alguns bons e maus exemplos de formulários em <a href="http://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a> e <a href="http://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a>.</p>
+<p><strong>Nota</strong>: Você pode ver alguns bons e maus exemplos de formulários em <a href="http://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a> e <a href="http://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a>.</p>
 </div>
 
 <h2 id="Tabelas_de_dados_acessíveis">Tabelas de dados acessíveis</h2>
@@ -423,17 +423,17 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
 
-<p>Mas essa tabela possui alguns problemas - não há como um usuário de leitor de telas associar linhas ou colunas como agrupamentos de dados. Para fazer isso, você precisa saber quais são as linhas de cabeçalho e se elas estão direcionando linhas, colunas etc. Isso só pode ser feito visualmente para a tabela acima (veja o exemplo <a href="http://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a> e tente navegar pela tabela você mesmo).</p>
+<p>Mas essa tabela possui alguns problemas - não há como um usuário de leitor de telas associar linhas ou colunas como agrupamentos de dados. Para fazer isso, você precisa saber quais são as linhas de cabeçalho e se elas estão direcionando linhas, colunas etc. Isso só pode ser feito visualmente para a tabela acima (veja o exemplo <a href="http://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a> e tente navegar pela tabela você mesmo).</p>
 
-<p>Agora dê uma olhada no exemplo da nossa <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html">tabela de bandas punk</a> - você pode ver alguns recursos de acessibilidade aqui:</p>
+<p>Agora dê uma olhada no exemplo da nossa <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html">tabela de bandas punk</a> - você pode ver alguns recursos de acessibilidade aqui:</p>
 
 <ul>
  <li>Os cabeçalhos de tabela são definidos usando elementos {{htmlelement ("th")}} - você também pode especificar se eles são cabeçalhos de linhas ou colunas usando o atributo <code>scope</code>. Isso fornece grupos completos de dados que podem ser consumidos pelos leitores de tela como unidades únicas.</li>
- <li>O elemento {{htmlelement ("caption")}} e o atributo de resumo (<code>&lt;table&gt;</code> <code>summary</code>) executam tarefas semelhantes - eles funcionam como texto alternativo para uma tabela, fornecendo ao usuário de leitor de telas um resumo rápido e útil do conteúdo da tabela. <code>&lt;caption&gt;</code> é geralmente mais adequado, pois torna o seu conteúdo acessível para os usuários com visão também, que também poderão achar isso útil. Você não precisa ter os dois.</li>
+ <li>O elemento {{htmlelement ("caption")}} e o atributo de resumo (<code>&lt;table&gt;</code> <code>summary</code>) executam tarefas semelhantes - eles funcionam como texto alternativo para uma tabela, fornecendo ao usuário de leitor de telas um resumo rápido e útil do conteúdo da tabela. <code>&lt;caption&gt;</code> é geralmente mais adequado, pois torna o seu conteúdo acessível para os usuários com visão também, que também poderão achar isso útil. Você não precisa ter os dois.</li>
 </ul>
 
 <div class="note">
-<p><strong>Nota</strong>: Consulte nossos artigos sobre <a href="/en-US/docs/Learn/HTML/Tables/Advanced">Recursos avançados de acessibilidade para tabelas em HTML</a> para obter mais detalhes sobre tabelas de dados acessíveis.</p>
+<p><strong>Nota</strong>: Consulte nossos artigos sobre <a href="/en-US/docs/Learn/HTML/Tables/Advanced">Recursos avançados de acessibilidade para tabelas em HTML</a> para obter mais detalhes sobre tabelas de dados acessíveis.</p>
 </div>
 
 <h2 id="Alternativas_em_textos">Alternativas em textos</h2>
@@ -467,10 +467,10 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
 
 <p>Isso destaca a importância de não apenas usar nomes de arquivos significativos, caso o <strong>texto alternativo</strong> não esteja disponível, mas também garantir que o texto alternativo seja fornecido em atributos <code>alt</code> sempre que possível. Observe que o conteúdo do atributo <code>alt</code> sempre deve fornecer uma representação direta da imagem e o que ela transmite visualmente. Qualquer conhecimento pessoal ou descrição extra não deve ser incluído aqui, já que não é útil para pessoas que não se depararam com a imagem antes.</p>
 
-<p>Uma coisa a considerar é se as imagens possuem algum significado dentro de seu conteúdo ou se elas são puramente decorativas. Se eles são decorativas, é melhor apenas incluí-las na página como imagens de fundo através de CSS.</p>
+<p>Uma coisa a considerar é se as imagens possuem algum significado dentro de seu conteúdo ou se elas são puramente decorativas. Se eles são decorativas, é melhor apenas incluí-las na página como imagens de fundo através de CSS.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Leia <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Imagens em HTML</a> e <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Imagens Responsivas</a> para obter mais informações sobre a implementação de imagens e melhores práticas.</p>
+<p><strong>Nota</strong>: Leia <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Imagens em HTML</a> e <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Imagens Responsivas</a> para obter mais informações sobre a implementação de imagens e melhores práticas.</p>
 </div>
 
 <p>Se você quiser fornecer informações contextuais extras, deverá colocá-las no texto ao redor da imagem ou dentro de um atributo de título (<code>title</code>), como mostrado acima. Nesse caso, a maioria dos leitores de tela lerá o texto alternativo, o atributo de título e o nome do arquivo. Além disso, os navegadores exibem o texto do título como dicas de ferramentas quando estão sobre o mouse.</p>
@@ -486,7 +486,7 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
 <p>Nesse caso, não estamos usando o atributo <code>alt</code> - em vez disso, apresentamos nossa descrição da imagem como um parágrafo de texto regular, atribuímos um <code>id</code> e, em seguida, usamos o atributo <code>aria-labelledby</code> para nos referirmos a esse <code>id</code>, que faz com que os leitores de tela usem esse parágrafo como o texto/rótulo alternativo para essa imagem. Isso é especialmente útil se você quiser usar o mesmo texto como um rótulo para várias imagens - algo que não é possível com <code>alt</code>.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: <code>aria-labelledby</code> é parte da especificação <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a>, que permite aos desenvolvedores adicionar uma semântica extra à sua marcação para melhorar a acessibilidade do leitor de tela quando necessário. Para saber mais sobre como funciona, leia nosso <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">artigo básico sobre WAI-ARIA</a>.</p>
+<p><strong>Nota</strong>: <code>aria-labelledby</code> é parte da especificação <a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a>, que permite aos desenvolvedores adicionar uma semântica extra à sua marcação para melhorar a acessibilidade do leitor de tela quando necessário. Para saber mais sobre como funciona, leia nosso <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">artigo básico sobre WAI-ARIA</a>.</p>
 </div>
 
 <h3 id="Outros_mecanismos_alternativos_de_textos">Outros mecanismos alternativos de textos</h3>
@@ -495,7 +495,7 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
 
 <pre class="brush: html">&lt;img src="dinosaur.png" longdesc="dino-info.html"&gt;</pre>
 
-<p>Isso aparentemente é uma boa ideia, especialmente para infográficos ou gráficos com muitas informações, que talvez possam ser representados como uma tabela de dados acessível (consulte a seção anterior). No entanto, o <code>longdesc</code> não é suportado de forma consistente pelos leitores de tela e o conteúdo é completamente inacessível para usuários que não usam leitores de tela. É sem dúvida muito melhor incluir a descrição longa na mesma página que a imagem ou vinculá-la a um link comum.</p>
+<p>Isso aparentemente é uma boa ideia, especialmente para infográficos ou gráficos com muitas informações, que talvez possam ser representados como uma tabela de dados acessível (consulte a seção anterior). No entanto, o <code>longdesc</code> não é suportado de forma consistente pelos leitores de tela e o conteúdo é completamente inacessível para usuários que não usam leitores de tela. É sem dúvida muito melhor incluir a descrição longa na mesma página que a imagem ou vinculá-la a um link comum.</p>
 
 <p>O HTML5 inclui dois novos elementos - {{htmlelement ("figure")}} e {{htmlelement ("figcaption")}} - que devem associar uma figura de algum tipo (pode ser qualquer coisa, não necessariamente uma imagem) com uma legenda de figura:</p>
 
@@ -515,7 +515,7 @@ Essa é a primeira sub sessão do meu documento. Eu acho que essa é mais intere
 
 <p>Pode haver momentos em que uma imagem é incluída no design de uma página, mas seu objetivo principal é a decoração visual. Você notará no exemplo de código acima que o atributo <code>alt</code> da imagem está vazio - isso é para fazer com que os leitores de tela reconheçam a imagem, mas não tentem descrever a imagem (em vez disso, dizem apenas "imagem" ou similar).</p>
 
-<p>A razão para usar um <code>alt</code> vazio ao invés de não incluí-lo é porque muitos leitores de tela anunciam o URL da imagem inteira se nenhum <code>alt</code> for fornecido. No exemplo acima, a imagem está agindo como uma decoração visual para o título ao qual está associada. Em casos como esse, e nos casos em que uma imagem é apenas decoração e não tem valor de conteúdo, você deve colocar um <code>alt</code> vazio em suas imagens. Outra alternativa é usar o atributo ARIA role (role="presentation") - isso também impede que os leitores de telas leiam textos alternativos.</p>
+<p>A razão para usar um <code>alt</code> vazio ao invés de não incluí-lo é porque muitos leitores de tela anunciam o URL da imagem inteira se nenhum <code>alt</code> for fornecido. No exemplo acima, a imagem está agindo como uma decoração visual para o título ao qual está associada. Em casos como esse, e nos casos em que uma imagem é apenas decoração e não tem valor de conteúdo, você deve colocar um <code>alt</code> vazio em suas imagens. Outra alternativa é usar o atributo ARIA role (role="presentation") - isso também impede que os leitores de telas leiam textos alternativos.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: se possível, você deve usar CSS para exibir imagens que são apenas decorativas.</p>

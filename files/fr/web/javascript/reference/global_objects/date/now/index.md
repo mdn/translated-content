@@ -18,7 +18,9 @@ La méthode **`Date.now()`** renvoie le nombre de millisecondes écoulées depui
 
 ## Syntaxe
 
-    var tempsEnMs = Date.now();
+```js
+var tempsEnMs = Date.now();
+```
 
 ### Valeur de retour
 

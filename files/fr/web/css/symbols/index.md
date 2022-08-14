@@ -14,7 +14,9 @@ La fonction **`symbols()`** permet de définir des styles pour les compteurs en 
 
 ## Syntaxe
 
-    symbols() = symbols( <symbols-type>? [ <string> | <image> ]+ );
+```
+symbols() = symbols( <symbols-type>? [ <string> | <image> ]+ );
+```
 
 `<symbols-type>` est l'un des mots-clés suivants :
 

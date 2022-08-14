@@ -16,15 +16,19 @@ La propriété **`Event.cancelBubble`** est un alias historique de {{domxref("Ev
 
 ## Syntaxe
 
-    event.cancelBubble = bool;
-    var bool = event.cancelBubble;
+```js
+event.cancelBubble = bool;
+var bool = event.cancelBubble;
+```
 
 ## Exemple
 
-    elem.onclick = function(e) {
-     // fais des choses sympas ici
-      e.cancelBubble = true;
-    }
+```js
+elem.onclick = function(e) {
+  // fais des choses sympas ici
+  e.cancelBubble = true;
+}
+```
 
 ## Spécifications
 

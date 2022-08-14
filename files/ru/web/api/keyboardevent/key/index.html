@@ -11,7 +11,7 @@ translation_of: Web/API/KeyboardEvent/key
 ---
 <p>{{APIRef("События DOM")}}</p>
 
-<p><span class="seoSummary">Ключ события {{domxref("KeyboardEvent")}} <code><strong>key</strong></code> доступен только для чтения, возвращает значение клавиши, нажатой пользователем, принимая во внимание состояние клавиш-модификаторов, таких как </span><span class="seoSummary"><kbd>Shift</kbd> , а также локаль и раскладку клавиатуры.</span> Его значение определяется следующим образом:</p>
+<p><span class="seoSummary">Ключ события {{domxref("KeyboardEvent")}} <code><strong>key</strong></code> доступен только для чтения, возвращает значение клавиши, нажатой пользователем, принимая во внимание состояние клавиш-модификаторов, таких как </span><span class="seoSummary"><kbd>Shift</kbd> , а также локаль и раскладку клавиатуры.</span> Его значение определяется следующим образом:</p>
 
 <div class="moreinfo pull-aside">
 <h4 id="Key_values">Key values</h4>
@@ -29,15 +29,15 @@ translation_of: Web/API/KeyboardEvent/key
 
 <h2 id="KeyboardEvent_sequence">KeyboardEvent sequence</h2>
 
-<p>Every <code>KeyboardEvent</code> is fired in a pre-determined sequence. For a given key press, the sequence of <code>KeyboardEvent</code>s fired is as follows assuming that {{domxref("Event.preventDefault")}} is not called:</p>
+<p>Every <code>KeyboardEvent</code> is fired in a pre-determined sequence. For a given key press, the sequence of <code>KeyboardEvent</code>s fired is as follows assuming that {{domxref("Event.preventDefault")}} is not called:</p>
 
 <ol>
- <li>A {{event("keydown")}} event is first fired. If the key is held down further and the key produces a character key, then the event continues to be emitted in a platform implementation dependent interval and the {{domxref("KeyboardEvent.repeat")}} read only property  is set to <code>true</code>.</li>
- <li>If the key produces a character key that would result in a character being inserted into possibly an {{HTMLElement("input")}}, {{HTMLElement("textarea")}} or an element with {{domxref("HTMLElement.contentEditable")}} set to true, the {{event("beforeinput")}} and {{event("input")}} event types are fired in that order. Note that some other implementations may fire {{event("keypress")}} event if supported. The events will be fired repeatedly while the key is held down.</li>
- <li>A {{event("keyup")}} event is fired once the key is released. This completes the process.</li>
+ <li>A {{event("keydown")}} event is first fired. If the key is held down further and the key produces a character key, then the event continues to be emitted in a platform implementation dependent interval and the {{domxref("KeyboardEvent.repeat")}} read only property  is set to <code>true</code>.</li>
+ <li>If the key produces a character key that would result in a character being inserted into possibly an {{HTMLElement("input")}}, {{HTMLElement("textarea")}} or an element with {{domxref("HTMLElement.contentEditable")}} set to true, the {{event("beforeinput")}} and {{event("input")}} event types are fired in that order. Note that some other implementations may fire {{event("keypress")}} event if supported. The events will be fired repeatedly while the key is held down.</li>
+ <li>A {{event("keyup")}} event is fired once the key is released. This completes the process.</li>
 </ol>
 
-<p>In sequence 1 &amp; 3, the <code>KeyboardEvent.key</code> attribute is defined and is set appropriately to a value according to the rules defined ealier.</p>
+<p>In sequence 1 &amp; 3, the <code>KeyboardEvent.key</code> attribute is defined and is set appropriately to a value according to the rules defined ealier.</p>
 
 <h2 id="KeyboardEvent_sequence_example">KeyboardEvent sequence example</h2>
 
@@ -53,23 +53,23 @@ translation_of: Web/API/KeyboardEvent/key
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;div class="fx"&gt;
-  &lt;div&gt;
-    &lt;textarea rows="5" name="test-target" id="test-target"&gt;&lt;/textarea&gt;
-    &lt;button type="button" name="btn-clear-console" id="btn-clear-console"&gt;clear console&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="flex"&gt;
-    &lt;pre id="console-log"&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;textarea rows="5" name="test-target" id="test-target"&gt;&lt;/textarea&gt;
+    &lt;button type="button" name="btn-clear-console" id="btn-clear-console"&gt;clear console&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="flex"&gt;
+    &lt;pre id="console-log"&gt;&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush: css">.fx {
-  -webkit-display: flex;
+  -webkit-display: flex;
   display: flex;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .fx &gt; div {
@@ -83,13 +83,13 @@ translation_of: Web/API/KeyboardEvent/key
 
 .flex {
   -webkit-flex: 1;
-  flex: 1;
+  flex: 1;
 }
 
 #test-target {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
 }
 </pre>
 
@@ -104,30 +104,30 @@ function logMessage(message) {
 }
 
 textarea.addEventListener('keydown', (e) =&gt; {
-  if (!e.repeat)
-    logMessage(`Key "${e.key}" pressed  [event: keydown]`);
-  else
-    logMessage(`Key "${e.key}" repeating  [event: keydown]`);
+  if (!e.repeat)
+    logMessage(`Key "${e.key}" pressed  [event: keydown]`);
+  else
+    logMessage(`Key "${e.key}" repeating  [event: keydown]`);
 });
 
 textarea.addEventListener('beforeinput', (e) =&gt; {
-  logMessage(`Key "${e.data}" about to be input  [event: beforeinput]`);
+  logMessage(`Key "${e.data}" about to be input  [event: beforeinput]`);
 });
 
 textarea.addEventListener('input', (e) =&gt; {
-  logMessage(`Key "${e.data}" input  [event: input]`);
+  logMessage(`Key "${e.data}" input  [event: input]`);
 });
 
 textarea.addEventListener('keyup', (e) =&gt; {
-  logMessage(`Key "${e.key}" released  [event: keyup]`);
+  logMessage(`Key "${e.key}" released  [event: keyup]`);
 });
 
 btnClearConsole.addEventListener('click', (e) =&gt; {
-  let child = consoleLog.firstChild;
-  while (child) {
-   consoleLog.removeChild(child);
-   child = consoleLog.firstChild;
-  }
+  let child = consoleLog.firstChild;
+  while (child) {
+   consoleLog.removeChild(child);
+   child = consoleLog.firstChild;
+  }
 });</pre>
 
 <h3 id="Result">Result</h3>
@@ -140,27 +140,27 @@ btnClearConsole.addEventListener('click', (e) =&gt; {
 
 <h3 id="Case_1">Case 1</h3>
 
-<p>When the shift key is pressed, a {{event("keydown")}} event is first fired, and the <code>key</code> property value is set to the string <code>"Shift"</code>. As we keep holding this key, the {{event("keydown")}} event does not continue to fire repeatedly because it does not produce a character key.</p>
+<p>When the shift key is pressed, a {{event("keydown")}} event is first fired, and the <code>key</code> property value is set to the string <code>"Shift"</code>. As we keep holding this key, the {{event("keydown")}} event does not continue to fire repeatedly because it does not produce a character key.</p>
 
-<p>When <code>key 2</code> is pressed, another {{event("keydown")}} event is fired for this new key press, and the <code>key</code> property value for the event is set to the string <code>"@"</code> for the U.S keyboard type and <code>"""</code> for the UK keyboard type, because of the active modifier <code>shift</code> key. The {{event("beforeinput")}} and {{event("input")}} events are fired next because a character key has been produced.</p>
+<p>When <code>key 2</code> is pressed, another {{event("keydown")}} event is fired for this new key press, and the <code>key</code> property value for the event is set to the string <code>"@"</code> for the U.S keyboard type and <code>"""</code> for the UK keyboard type, because of the active modifier <code>shift</code> key. The {{event("beforeinput")}} and {{event("input")}} events are fired next because a character key has been produced.</p>
 
-<p>As we release the <code>key 2</code>, a {{event("keyup")}} event is fired and the <code>key</code> property will maintain the string values <code>"@"</code> and <code>"""</code> for the different keyboard layouts respectively.</p>
+<p>As we release the <code>key 2</code>, a {{event("keyup")}} event is fired and the <code>key</code> property will maintain the string values <code>"@"</code> and <code>"""</code> for the different keyboard layouts respectively.</p>
 
 <p>As we finally release the <code>shift</code> key, another {{event("keyup")}} event is fired for it, and the key attribute value remains <code>"Shift"</code>.</p>
 
 <h3 id="Case_2">Case 2</h3>
 
-<p>When the shift key is pressed, a {{event("keydown")}} event is first fired, and the <code>key</code> property value is set to be the string <code>"Shift"</code>. As we keep holding this key, the keydown event does not continue to fire repeatedly because it produced no character key.</p>
+<p>When the shift key is pressed, a {{event("keydown")}} event is first fired, and the <code>key</code> property value is set to be the string <code>"Shift"</code>. As we keep holding this key, the keydown event does not continue to fire repeatedly because it produced no character key.</p>
 
-<p>When <code>key 2</code> is pressed, another {{event("keydown")}} event is fired for this new key press, and the <code>key</code> property value for the event is set to be the string <code>"@"</code> for the U.S keyboard type and <code>"""</code> for the UK keyboard type, because of the active modifier <code>shift</code> key. The {{event("beforeinput")}} and {{event("input")}} events are fired next because a character key has been produced. As we keep holding the key, the {{event("keydown")}} event continues to fire repeatedly and the {{domxref("KeyboardEvent.repeat")}}  property is set to <code>true</code>. The {{event("beforeinput")}} and {{event("input")}} events are fired repeatedly as well.</p>
+<p>When <code>key 2</code> is pressed, another {{event("keydown")}} event is fired for this new key press, and the <code>key</code> property value for the event is set to be the string <code>"@"</code> for the U.S keyboard type and <code>"""</code> for the UK keyboard type, because of the active modifier <code>shift</code> key. The {{event("beforeinput")}} and {{event("input")}} events are fired next because a character key has been produced. As we keep holding the key, the {{event("keydown")}} event continues to fire repeatedly and the {{domxref("KeyboardEvent.repeat")}}  property is set to <code>true</code>. The {{event("beforeinput")}} and {{event("input")}} events are fired repeatedly as well.</p>
 
-<p>As we release the <code>shift</code> key, a {{event("keyup")}} event is fired for it, and the key attribute value remains <code>"Shift"</code>. At this point, notice that the <code>key</code> property value for the repeating keydown event of the <code>key 2</code> key press is now "2" because the modifier <code>shift</code> key is no longer active. The same goes for the {{domxref("InputEvent.data")}} property of the {{event("beforeinput")}} and {{event("input")}} events.</p>
+<p>As we release the <code>shift</code> key, a {{event("keyup")}} event is fired for it, and the key attribute value remains <code>"Shift"</code>. At this point, notice that the <code>key</code> property value for the repeating keydown event of the <code>key 2</code> key press is now "2" because the modifier <code>shift</code> key is no longer active. The same goes for the {{domxref("InputEvent.data")}} property of the {{event("beforeinput")}} and {{event("input")}} events.</p>
 
-<p>As we finally release the <code>key 2</code>, a {{event("keyup")}} event is fired but the <code>key</code> property will be set to the string value <code>"2"</code> for both keyboard layouts because the modifier <code>shift</code> key is no longer active.</p>
+<p>As we finally release the <code>key 2</code>, a {{event("keyup")}} event is fired but the <code>key</code> property will be set to the string value <code>"2"</code> for both keyboard layouts because the modifier <code>shift</code> key is no longer active.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{event("keydown")}} events. When they occur,  the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).</p>
+<p>This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{event("keydown")}} events. When they occur,  the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).</p>
 
 <pre class="brush: js">window.addEventListener("keydown", function (event) {
   if (event.defaultPrevented) {

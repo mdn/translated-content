@@ -68,7 +68,7 @@ original_slug: Web/API/HTML_드래그_앤_드롭_API/Drag_operations
 <pre class="brush: js">event.dataTransfer.setData("text/plain", "Text to drag");
 </pre>
 
-<p>이 경우, 데이터 값은 "Text to drag"이고 형식은 <a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" title="text/plain">text/plain</a>입니다.</p>
+<p>이 경우, 데이터 값은 "Text to drag"이고 형식은 <a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" title="text/plain">text/plain</a>입니다.</p>
 
 <p>여러 형식의 데이터를 제공할 수도 있습니다. 이를 위해서는 서로 다른 형식으로 {{domxref("DataTransfer.setData","setData()")}} 메서드를 여러 번 호출합니다. 이 때, 가장 세부적인 형식에서 덜 세부적인 형식의 순으로 호출해야 합니다.</p>
 
@@ -143,7 +143,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 }</span>
 </pre>
 
-<p>이 함수는 해당 패널을 드래그 이미지로 사용하고, HTML 형식의 "&lt;strong&gt;Body&lt;/strong&gt;"을 데이터로 가집니다. 텍스트 편집기에 패널을 드랍하면 "<strong>Body</strong>"라는 텍스트가 드랍된 위치에 삽입됩니다.</p>
+<p>이 함수는 해당 패널을 드래그 이미지로 사용하고, HTML 형식의 "&lt;strong&gt;Body&lt;/strong&gt;"을 데이터로 가집니다. 텍스트 편집기에 패널을 드랍하면 "<strong>Body</strong>"라는 텍스트가 드랍된 위치에 삽입됩니다.</p>
 
 <h2 id="drageffects" name="drageffects">드래그 효과</h2>
 
@@ -179,7 +179,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>드래그 작업 중에 <code>{{event("dragenter")}}</code> 또는 <code>{{event("dragover")}}</code> 이벤트에 대한 리스너는 어떤 작업이 허용되어 있는지 알기 위해 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 속성을 확인할 수 있습니다. 관련된 속성으로, {{domxref("DataTransfer.dropEffect","dropEffect")}}는 이들 이벤트 중 하나에서 수행되어야 하는 단일 작업을 지정하기 위해 설정되어야 할 속성입니다. {{domxref("DataTransfer.dropEffect","dropEffect")}}에 유효한 값은 <code>none</code>, <code>copy</code>, <code>move</code>, 또는 <code>link</code>입니다. 이 속성에 값의 조합은 허용되지 않습니다.</p>
 
-<p><code>{{event("dragenter")}}</code>나 <code>{{event("dragover")}}</code> 이벤트가 발생하면 사용자가 요청하는 효과로 {{domxref("DataTransfer.dropEffect","dropEffect")}} 속성이 초기화됩니다. 사용자는 한정자 키를 눌러 원하는 효과로 수정할 수 있습니다. 플랫폼에 따라 정확한 키가 달라질 수 있지만, 일반적으로 쉬프트(Shift)와 컨트롤(Control) 키가 복사하기, 이동하기, 연결하기 간 전환에 사용됩니다. 마우스 포인터를 원하는 작업을 나타내도록 변경할 수 있습니다; 예를 들어, 복사 작업에 대해서는 마우스 포인터 옆에 더하기 기호가 표시된 커서가 나타날 수 있습니다.</p>
+<p><code>{{event("dragenter")}}</code>나 <code>{{event("dragover")}}</code> 이벤트가 발생하면 사용자가 요청하는 효과로 {{domxref("DataTransfer.dropEffect","dropEffect")}} 속성이 초기화됩니다. 사용자는 한정자 키를 눌러 원하는 효과로 수정할 수 있습니다. 플랫폼에 따라 정확한 키가 달라질 수 있지만, 일반적으로 쉬프트(Shift)와 컨트롤(Control) 키가 복사하기, 이동하기, 연결하기 간 전환에 사용됩니다. 마우스 포인터를 원하는 작업을 나타내도록 변경할 수 있습니다; 예를 들어, 복사 작업에 대해서는 마우스 포인터 옆에 더하기 기호가 표시된 커서가 나타날 수 있습니다.</p>
 
 <p><code>{{event("dragenter")}}</code> 또는 <code>{{event("dragover")}}</code> 이벤트가 발생하는 동안 {{domxref("DataTransfer.dropEffect","dropEffect")}} 속성을 변경할 수 있는데, 예를 들자면, 특정 작업만 지원되는 특수한 드랍 대상(drop target)일 경우가 그렇습니다. {{domxref("DataTransfer.dropEffect","dropEffect")}} 속성을 수정하여 사용자 효과(user effect)를 오버라이드하여 특정한 드랍 작업이 발생하게 할 수 있습니다. 이 효과는 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 속성에 열거된 것 중의 하나 이어야 함에 유의하시기 바랍니다. 그렇지 않을 경우, 허용되는 대체 값으로 설정되게 됩니다.</p>
 
@@ -217,7 +217,7 @@ function doDragOver(event) {
   var isLink = contains( event.dataTransfer.types, "text/uri-list");
   if (isLink) {
     event.preventDefault();
-  }
+  }
 }</pre>
 
 <p>이 예제에서 형식 목록 내에 <a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a> 형식이 존재하는지 확인하기 위해 <code>contains</code> 메서드를사용합니다. 존재할 경우에는 드랍을 허용하기 위해 이벤트가 취소될 것입니다. 드래그 데이터가 링크를 포함하지 않았다면, 해당 이벤트는 취소되지 않을 것이고 그 위치에 대한 드랍이 발생하지 않을 것입니다.</p>
@@ -330,7 +330,7 @@ function doDragOver(event) {
 
 <p>After the <code>{{event("dragend")}}</code> event has finished propagating, the drag and drop operation is complete.</p>
 
-<p>[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}).  <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">bug 460801</a></p>
+<p>[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}).  <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">bug 460801</a></p>
 
 <h2 id="See_also" name="See_also">See also</h2>
 

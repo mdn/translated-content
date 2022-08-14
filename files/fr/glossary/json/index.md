@@ -15,12 +15,7 @@ JSON permet de représenter des nombres, des booléens, des chaînes de caractè
 
 Tout comme XML, JSON permet de conserver des données hiérarchiques, ce qui n'est pas le cas avec le format CSV traditionnel. De nombreux outils permettent de convertir des données entre ces formats comme ce  [convertisseur JSON vers CSV](https://json-csv.com) ou bien [celui-ci](https://jsontoexcel.com/).
 
-## En savoir plus
+## Voir aussi
 
-### Connaissances générales
-
-- {{interwiki("wikipedia", "JSON", "JSON")}} sur Wikipédia
-
-### Référence technique
-
-- {{Link("/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON")}} sur MDN
+- [JSON](https://fr.wikipedia.org/wiki/JSON) sur Wikipédia
+- [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) sur MDN

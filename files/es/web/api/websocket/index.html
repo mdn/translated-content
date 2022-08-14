@@ -5,15 +5,15 @@ translation_of: Web/API/WebSocket
 ---
 <div>{{APIRef("Web Sockets API")}}{{SeeCompatTable}}</div>
 
-<div> </div>
+<div> </div>
 
 <div>El objeto WebSocket provee la API para la creación y administración de una conexión <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket </a>a un servidor, así como también para enviar y recibir datos en la conexión.</div>
 
-<div> </div>
+<div> </div>
 
 <div>El constructor de WebSocket acepta un parámetro requerido y otro opcional.</div>
 
-<p> </p>
+<p> </p>
 
 <pre class="syntaxbox">WebSocket WebSocket(
   in DOMString url,
@@ -26,14 +26,14 @@ WebSocket WebSocket(
 );
 </pre>
 
-<p> </p>
+<p> </p>
 
 <dl>
  <dt><code>url</code></dt>
  <dd><code>La URL a la cual se conecta, debe ser la URL con la cual el servidor WebSocket debe responder.</code></dd>
  <dt><code>protocols</code> {{optional_inline}}</dt>
  <dd>Permite cualquier caso, desde un simple protocolo o un arreglo de cadenas de texto. Estas cadenas de texto son usadas para indicar subprotocolos, en los cuales un único servidor puede implementar múltiples subprotocolos para el WebSocket (por ejemplo, tu podrías esperar que un servido gestione diferentes tipos de interacciones dependiendo de un tipo específico de protocolo). Si no especificas un subprotocolo, se asume una cadena de texto vacía.</dd>
- <dd> </dd>
+ <dd> </dd>
 </dl>
 
 <p>El constructor puede levantar excepciones:</p>
@@ -69,14 +69,14 @@ WebSocket WebSocket(
    <td><code>binaryType</code></td>
    <td>{{DOMXref("DOMString")}}</td>
    <td>
-    <p>Una cadena de texto indicando el tipo de dato binario que es transmitido por la conexión. Debe ser de cualquier manera "blob" si es se unas objetos DOM {{domxref("Blob")}}  o bien "arraybuffer" {{jsxref("ArrayBuffer")}} si se usan otro tipo de objetos</p>
+    <p>Una cadena de texto indicando el tipo de dato binario que es transmitido por la conexión. Debe ser de cualquier manera "blob" si es se unas objetos DOM {{domxref("Blob")}}  o bien "arraybuffer" {{jsxref("ArrayBuffer")}} si se usan otro tipo de objetos</p>
    </td>
   </tr>
   <tr>
    <td><code>bufferedAmount</code></td>
    <td><code>unsigned long</code></td>
    <td>
-    <p>La cantidad de bytes de data que pueden ser almacenadas en cola utilizando llamadas a {{manch("send")}} pero que aún no se han transmitido a la red. Este valor se reestablece a cero una vez que toda la información ha sido enviada. Este valor no vuelve a cero cuando la conexión es cerrada; si mantientes llamando {{manch("send")}}, continuará acumulandose. <strong>Solo de lectura.</strong></p>
+    <p>La cantidad de bytes de data que pueden ser almacenadas en cola utilizando llamadas a <a href="#send">send</a> pero que aún no se han transmitido a la red. Este valor se reestablece a cero una vez que toda la información ha sido enviada. Este valor no vuelve a cero cuando la conexión es cerrada; si mantientes llamando <a href="#send">send</a>, continuará acumulandose. <strong>Solo de lectura.</strong></p>
    </td>
   </tr>
   <tr>
@@ -90,7 +90,7 @@ WebSocket WebSocket(
    <td><code>onclose</code></td>
    <td>{{domxref("EventListener")}}</td>
    <td>
-    <p>Un monitor de eventos que atiende una llamada cuando la conexión del WebSocket cambia a un estado CERRADO (CLOSED). El monitor recibe un <a href="/en-US/docs/Web/API/CloseEvent"><code>CloseEvent</code></a> llamado "cerrado".</p>
+    <p>Un monitor de eventos que atiende una llamada cuando la conexión del WebSocket cambia a un estado CERRADO (CLOSED). El monitor recibe un <a href="/en-US/docs/Web/API/CloseEvent"><code>CloseEvent</code></a> llamado "cerrado".</p>
    </td>
   </tr>
   <tr>
@@ -120,7 +120,7 @@ WebSocket WebSocket(
   <tr>
    <td><code>readyState</code></td>
    <td><code>unsigned short</code></td>
-   <td>El estado actual de la conexión. Este es uno de {{anch("Ready state constants")}}. <strong>Solo lectura.</strong></td>
+   <td>El estado actual de la conexión. Este es uno de <a href="#ready_state_constants">Ready state constants</a>. <strong>Solo lectura.</strong></td>
   </tr>
   <tr>
    <td><code>url</code></td>
@@ -193,11 +193,11 @@ WebSocket WebSocket(
  <dt><code>INVALID_ACCESS_ERR</code></dt>
  <dd>Se ha especificado un código erróneo.</dd>
  <dt><code>SYNTAX_ERR</code></dt>
- <dd>La <code>reason</code> cadena es demasiado larga o continene caracteres no validos.</dd>
+ <dd>La <code>reason</code> cadena es demasiado larga o continene caracteres no validos.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note:</strong> En Gecko, este métido no soporta ningun parámetro antes de Gecko 8.0 {{geckoRelease("8.0")}}.</p>
+<p><strong>Note:</strong> En Gecko, este métido no soporta ningun parámetro antes de Gecko 8.0 {{geckoRelease("8.0")}}.</p>
 </div>
 
 <h3 id="send()">send()</h3>
@@ -230,11 +230,11 @@ void send(
  <dt><code>INVALID_STATE_ERR</code></dt>
  <dd>La conexión no está abierta en este momento.</dd>
  <dt><code>SYNTAX_ERR</code></dt>
- <dd>La data tiene caracteres no válidos que no se pueden decodificar.</dd>
+ <dd>La data tiene caracteres no válidos que no se pueden decodificar.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note: </strong>La implementación del método <code>send() </code>en el  motor de renderizado Gecko puede cambiar de la especificación en {{Gecko("6.0")}}; Gecko devuelve un <code>boolean </code>indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en {{Gecko("8.0")}}.</p>
+<p><strong>Note: </strong>La implementación del método <code>send() </code>en el  motor de renderizado Gecko puede cambiar de la especificación en {{Gecko("6.0")}}; Gecko devuelve un <code>boolean </code>indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en {{Gecko("8.0")}}.</p>
 
 <p>A partir de {{Gecko("11.0")}}, implementa {{jsxref("ArrayBuffer")}} pero no tipos de datos {{domxref("Blob")}}.</p>
 </div>

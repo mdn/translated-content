@@ -16,7 +16,9 @@ L'instruction **`break`** permet de terminer la boucle en cours ou l'instruction
 
 ## Syntaxe
 
-    break [label];
+```js
+break [label];
+```
 
 - `label` {{optional_inline}}
   - : Un identifiant optionnel associé avec l'étiquette (_label_) de l'instruction. Si l'instruction à terminer n'est pas une boucle ou une instruction {{jsxref("Instructions/switch", "switch")}}, ce paramètre est nécessaire.

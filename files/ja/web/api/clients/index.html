@@ -34,34 +34,34 @@ translation_of: Web/API/Clients
 <p>次の例は、ユーザーが通知をクリックしたときに既存のチャットウィンドウを表示するか、新しいチャットウィンドウを作成します。</p>
 
 <pre class="brush: js">addEventListener('notificationclick', event =&gt; {
-  event.waitUntil(async function() {
-    const allClients = await clients.matchAll({
-      includeUncontrolled: true
-    });
+  event.waitUntil(async function() {
+    const allClients = await clients.matchAll({
+      includeUncontrolled: true
+    });
 
-    let chatClient;
+    let chatClient;
 
-    // チャットウィンドウが既に開いているかどうかを確認します。
-    for (const client of allClients) {
-      const url = new URL(client.url);
+    // チャットウィンドウが既に開いているかどうかを確認します。
+    for (const client of allClients) {
+      const url = new URL(client.url);
 
-      if (url.pathname == '/chat/') {
-        // よし、使ってみよう！
-        client.focus();
-        chatClient = client;
-        break;
-      }
-    }
+      if (url.pathname == '/chat/') {
+        // よし、使ってみよう！
+        client.focus();
+        chatClient = client;
+        break;
+      }
+    }
 
     // 既存のチャットウィンドウが見つからなかった場合、
     // 新しいウィンドウを開きます。
-    if (!chatClient) {
-      chatClient = await clients.openWindow('/chat/');
-    }
+    if (!chatClient) {
+      chatClient = await clients.openWindow('/chat/');
+    }
 
-    // クライアントにメッセージを送ります。
-    chatClient.postMessage("新しいチャットメッセージ！");
-  }());
+    // クライアントにメッセージを送ります。
+    chatClient.postMessage("新しいチャットメッセージ！");
+  }());
 });
 </pre>
 

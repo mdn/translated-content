@@ -16,13 +16,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 
 <h2 id="Summary" name="Summary"><span class="short_text" id="result_box" lang="pt"><span class="hps">Resumo</span></span></h2>
 
-<p>O Objeto <strong><code>JSON</code></strong> contém métodos para parsing <a class="external" href="http://json.org/">JavaScript Object Notation</a> ({{glossary("JSON")}}) e conversão de valores para JSON. Ele não pode ser chamado ou construído e, além de suas propriedades de dois métodos, ele não possui uma funcionalidade interessante.</p>
+<p>O Objeto <strong><code>JSON</code></strong> contém métodos para parsing <a class="external" href="http://json.org/">JavaScript Object Notation</a> ({{glossary("JSON")}}) e conversão de valores para JSON. Ele não pode ser chamado ou construído e, além de suas propriedades de dois métodos, ele não possui uma funcionalidade interessante.</p>
 
 <h2 id="Description" name="Description">Descrição</h2>
 
 <h3 id="JavaScript_Object_Notation" name="JavaScript_Object_Notation">JavaScript Object Notation</h3>
 
-<p>JSON é uma sintaxe para serialização de objetos, matrizes, números, strings, booleanos, e {{jsxref ("null")}}. Baseia-se em sintaxe Javascript, mas é distinta desta: alguns Javascript não são JSON, e alguns JSON não são Javascript. </p>
+<p>JSON é uma sintaxe para serialização de objetos, matrizes, números, strings, booleanos, e {{jsxref ("null")}}. Baseia-se em sintaxe Javascript, mas é distinta desta: alguns Javascript não são JSON, e alguns JSON não são Javascript. </p>
 
 <table>
  <caption>JavaScript e JSON diferenças</caption>
@@ -101,7 +101,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON
              <em>or</em> <var>ArrayElements</var> <strong>,</strong> <var>JSON</var>
 </pre>
 
-<p>Espaços em branco podem estar presentes em qualquer lugar, exceto dentro de um JSONNumber (números não devem conter espaço em branco) ou JSONString (onde ele é interpretado como o caractere  correspondente na string, ou causaria um erro). O caractere de tabulação (U+0009), retorno de carro (U+000D), retorno de linha (U+000A), e espaço (U+0020) são os únicos caracteres em branco válidos.</p>
+<p>Espaços em branco podem estar presentes em qualquer lugar, exceto dentro de um JSONNumber (números não devem conter espaço em branco) ou JSONString (onde ele é interpretado como o caractere  correspondente na string, ou causaria um erro). O caractere de tabulação (U+0009), retorno de carro (U+000D), retorno de linha (U+000A), e espaço (U+0020) são os únicos caracteres em branco válidos.</p>
 
 <h2 id="Methods" name="Methods">Métodos</h2>
 
@@ -109,12 +109,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON
  <dt>{{jsxref("JSON.parse()")}}</dt>
  <dd><span id="result_box" lang="pt"><span class="hps">Analisar uma seqüência</span> <span class="hps">como</span> <span class="hps">JSON,</span> <span class="hps">opcionalmente</span> <span class="hps">transformar o valor</span> <span class="hps">produzido e</span> <span class="hps">suas propriedades</span><span>,</span> <span class="hps">e retornar o valor</span><span>.</span></span></dd>
  <dt>{{jsxref("JSON.stringify()")}}</dt>
- <dd><span id="result_box" lang="pt"><span class="hps">Retorna uma string</span> <span class="hps">JSON</span> <span class="hps">correspondente ao valor</span> <span class="hps">especificado, opcionalmente</span><span>, pode incluir</span> <span class="hps">apenas determinados</span> <span class="hps">propriedades</span> <span class="hps">ou substituir</span> <span class="hps">valores de propriedade</span> <span class="hps">de acordo com a definição feita pelo usuário</span><span class="hps">.</span></span></dd>
+ <dd><span id="result_box" lang="pt"><span class="hps">Retorna uma string</span> <span class="hps">JSON</span> <span class="hps">correspondente ao valor</span> <span class="hps">especificado, opcionalmente</span><span>, pode incluir</span> <span class="hps">apenas determinados</span> <span class="hps">propriedades</span> <span class="hps">ou substituir</span> <span class="hps">valores de propriedade</span> <span class="hps">de acordo com a definição feita pelo usuário</span><span class="hps">.</span></span></dd>
 </dl>
 
 <h2 id="Polyfill" name="Polyfill">Polyfill</h2>
 
-<p><span id="result_box" lang="pt"><span class="hps">O objeto</span> <span class="hps">JSON</span> <span class="hps">não é suportado</span> <span class="hps">em navegadores mais antigos</span><span>.</span> <span class="hps">Você pode contornar este problema</span> <span class="hps">inserindo o  seguinte código</span> <span class="hps">no início de</span> <span class="hps">seus scripts,</span> <span class="hps">permitindo o uso de</span> <span class="hps">JSON</span> e navegadores sem suporte<span> (como</span> <span class="hps">Internet</span> <span class="hps">Explorer 6</span><span>)</span><span>.</span></span></p>
+<p><span id="result_box" lang="pt"><span class="hps">O objeto</span> <span class="hps">JSON</span> <span class="hps">não é suportado</span> <span class="hps">em navegadores mais antigos</span><span>.</span> <span class="hps">Você pode contornar este problema</span> <span class="hps">inserindo o  seguinte código</span> <span class="hps">no início de</span> <span class="hps">seus scripts,</span> <span class="hps">permitindo o uso de</span> <span class="hps">JSON</span> e navegadores sem suporte<span> (como</span> <span class="hps">Internet</span> <span class="hps">Explorer 6</span><span>)</span><span>.</span></span></p>
 
 <p><span id="result_box" lang="pt"><span class="hps">O algoritmo a seguir</span> <span class="hps">é</span> <span class="hps">uma imitação do</span> <span class="hps">objeto nativo</span> <span class="hps">JSON</span><span>:</span></span></p>
 
@@ -170,69 +170,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.12', 'JSON')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-json-object', 'JSON')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Navegador compatível</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>{{CompatIE("8.0")}}</td>
-   <td>{{CompatOpera("10.5")}}</td>
-   <td>{{CompatSafari("4.0")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>Baseado em <a class="external" href="http://kangax.github.com/es5-compat-table/">Kangax's compat table</a>.</p>
+{{Compat("javascript.builtins.JSON")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

@@ -13,7 +13,6 @@ Il s'agit d'un tableau d'octets. Il n'est pas possible de manipuler directement 
 
 Le constructeur [`ArrayBuffer()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) permet de créer un nouvel objet `ArrayBuffer` dont la longueur, en octets, est fournie par l'argument. Il est aussi possible d'obtenir un tableau typé à partir de données existantes, par exemple depuis une chaîne en [Base64](/fr/docs/Glossary/Base64) ou [depuis un fichier local](/fr/docs/Web/API/FileReader/readAsArrayBuffer).
 
-
 ## Constructeur
 
 - [`ArrayBuffer()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer)

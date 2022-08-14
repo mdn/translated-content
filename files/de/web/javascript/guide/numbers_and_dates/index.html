@@ -53,7 +53,7 @@ var m = 0644; // 420
 
 <h3 id="Hexadezimalzahlen">Hexadezimalzahlen</h3>
 
-<p>Hexadezimalzahlen können geschrieben werden, indem der Präfix <code>0x</code> oder <code>0X</code> genutzt wird. Wenn die Ziffern nach 0x nicht eines der Zeichen 0123456789ABCDEF entspricht, wird folgender <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>  erzeugt: "Identifier starts immediately after numeric literal".</p>
+<p>Hexadezimalzahlen können geschrieben werden, indem der Präfix <code>0x</code> oder <code>0X</code> genutzt wird. Wenn die Ziffern nach 0x nicht eines der Zeichen 0123456789ABCDEF entspricht, wird folgender <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>  erzeugt: "Identifier starts immediately after numeric literal".</p>
 
 <pre>0xFFFFFFFFFFFFFFFFF // 295147905179352830000
 0x123456789ABCDEF   // 81985529216486900
@@ -236,7 +236,7 @@ var notANum = Number.NaN;
   </tr>
   <tr>
    <td>
-    <p>{{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}}</p>
+    <p>{{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}}</p>
    </td>
    <td>Exponential- und Logarithmus-Funktionen.</td>
   </tr>
@@ -367,7 +367,7 @@ IPOdate.setTime(Date.parse("Aug 9, 1995"));
 }
 </pre>
 
-<p>Die <code>JSClock</code> Funktion erstellt als erstes ein neues <code>Date</code> Objekt mit dem Namen <code>time</code>. Weil dabei keine Argumente angegeben werden, wird <code>time</code> mit dem aktuellen Datum und der aktuellen Zeit erstellt. Danach werden die Methoden <code>getHours</code>, <code>getMinutes</code>, und <code>getSeconds</code> eingesetzt, um den Wert der aktuellen Stunde, Minute und Sekunde in den Variablen  <code>hour</code>, <code>minute</code>, und <code>second</code> zu speichern.</p>
+<p>Die <code>JSClock</code> Funktion erstellt als erstes ein neues <code>Date</code> Objekt mit dem Namen <code>time</code>. Weil dabei keine Argumente angegeben werden, wird <code>time</code> mit dem aktuellen Datum und der aktuellen Zeit erstellt. Danach werden die Methoden <code>getHours</code>, <code>getMinutes</code>, und <code>getSeconds</code> eingesetzt, um den Wert der aktuellen Stunde, Minute und Sekunde in den Variablen  <code>hour</code>, <code>minute</code>, und <code>second</code> zu speichern.</p>
 
 <p>Die nächsten vier Statements bauen einen String-Wert mit der Zeit zusammen. Das erste Statement erstellt eine Variable <code>temp</code> und weist dieser einen Wert mit einem bedingten Ausdruck zu; wenn <code>hour</code> größer als 12 ist wird <code>hour - 12</code> zugewiesen, andernfalls nur <code>hour</code>. Wenn <code>hour</code> dann 0 ist, wird <code>hour</code> auf 12 gesetzt.</p>
 

@@ -12,27 +12,27 @@ translation_of: Web/API/MediaQueryList
 ---
 <div>{{APIRef("CSSOM View")}}{{SeeCompatTable}}</div>
 
-<p>Un objeto <code>MediaQueryList</code> almacena información en un <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a <code>true</code>).</p>
+<p>Un objeto <code>MediaQueryList</code> almacena información en un <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a <code>true</code>).</p>
 
 <p>Esto hace posible observar un documento para detectar cuando sus consultas de medios cambian, en lugar de sondear los valores periódicamente y le permite programar cambios en un documento basado en el estado de consulta de medios.</p>
 
 <h2 id="Propiedades">Propiedades</h2>
 
-<p>La nueva versión de la interfaz de <em><code>MediaQueryList</code> </em> hereda las propiedades de su interfaz principal, <em>{{domxref("EventTarget")}}.</em></p>
+<p>La nueva versión de la interfaz de <em><code>MediaQueryList</code> </em> hereda las propiedades de su interfaz principal, <em>{{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("MediaQueryList.matches")}} {{readonlyInline}}</dt>
- <dd> Un {{domxref("Boolean")}} que devuelve  <code>true</code> si el<br>
-  {{domxref("document")}} actualmente coincide con la lista de consultas de medios, o <code>false</code> si no.</dd>
+ <dd> Un {{domxref("Boolean")}} que devuelve  <code>true</code> si el<br>
+  {{domxref("document")}} actualmente coincide con la lista de consultas de medios, o <code>false</code> si no.</dd>
  <dt>{{domxref("MediaQueryList.media")}} {{readonlyInline}}</dt>
- <dd> Un {{domxref("DOMString")}} representa una consulta de medios serializada.</dd>
+ <dd> Un {{domxref("DOMString")}} representa una consulta de medios serializada.</dd>
 </dl>
 
 <h3 id="Controladores_de_eventos">Controladores de eventos</h3>
 
 <dl>
  <dt>{{domxref("MediaQueryList.onchange")}}</dt>
- <dd>Una propiedad de controlador de eventos que representa una función que se invoca cuando se desencadena el evento {{event("change")}}, es decir, cuando cambia el estado del soporte de consulta de medios. El objeto de evento es una instancia {{domxref("MediaQueryListEvent")}}, que se reconoce como una instancia de <code>MediaListQuery</code> en navegadores antiguos, para propósitos de compatibilidad con versiones anteriores.</dd>
+ <dd>Una propiedad de controlador de eventos que representa una función que se invoca cuando se desencadena el evento {{event("change")}}, es decir, cuando cambia el estado del soporte de consulta de medios. El objeto de evento es una instancia {{domxref("MediaQueryListEvent")}}, que se reconoce como una instancia de <code>MediaListQuery</code> en navegadores antiguos, para propósitos de compatibilidad con versiones anteriores.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
@@ -41,9 +41,9 @@ translation_of: Web/API/MediaQueryList
 
 <dl>
  <dt>{{domxref("MediaQueryList.addListener()")}}</dt>
- <dd> Agrega un escucha al <code>MediaQueryListener</code> que ejecutará una función de devolución de llamada personalizada en respuesta al cambio de estado de consulta de medios. Esto es básicamente un alias para {{domxref("EventTarget.addEventListener()")}}, para propósitos de compatibilidad con versiones anteriores. </dd>
+ <dd> Agrega un escucha al <code>MediaQueryListener</code> que ejecutará una función de devolución de llamada personalizada en respuesta al cambio de estado de consulta de medios. Esto es básicamente un alias para {{domxref("EventTarget.addEventListener()")}}, para propósitos de compatibilidad con versiones anteriores. </dd>
  <dt>{{domxref("MediaQueryList.removeListener()")}}</dt>
- <dd> Elimina un escucha de <code>MediaQueryListener</code>. Esto es básicamente un alias para {{domxref ("EventTarget.removeEventListener ()")}}, para propósitos de compatibilidad con versiones anteriores.</dd>
+ <dd> Elimina un escucha de <code>MediaQueryListener</code>. Esto es básicamente un alias para {{domxref ("EventTarget.removeEventListener ()")}}, para propósitos de compatibilidad con versiones anteriores.</dd>
 </dl>
 
 <dl>
@@ -72,7 +72,7 @@ function screenTest(e) {
 mql.addListener(screenTest);</pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Puedes encontrar este ejemplo en GitHub (ver el <a href="https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html">codigo fuente</a>, y también verlo en <a href="https://mdn.github.io/dom-examples/mediaquerylist/index.html">ejecución</a>).</p>
+<p><strong>Nota</strong>: Puedes encontrar este ejemplo en GitHub (ver el <a href="https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html">codigo fuente</a>, y también verlo en <a href="https://mdn.github.io/dom-examples/mediaquerylist/index.html">ejecución</a>).</p>
 </div>
 
 <h2 id="Especificaciones">Especificaciones</h2>

@@ -16,7 +16,9 @@ Si plusieurs gestionnaires d'évènement sont attachés à un élément pour le 
 
 ## Syntaxe
 
-    event.stopImmediatePropagation();
+```js
+event.stopImmediatePropagation();
+```
 
 ## Spécifications
 

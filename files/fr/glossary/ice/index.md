@@ -14,10 +14,10 @@ original_slug: Glossaire/ICE
 
 L'algorithme du framework recherche le chemin avec la plus faible latence pour connecter les deux pairs, en essayant ces possibilités dans cet ordre :
 
-1.  Connexion UDP directe (dans ce cas—et uniquement dans ce cas—un serveur {{glossary("STUN")}} sert à trouver l'adresse de réseau du pair opposé
-2.  Connexion TCP directe, via le port HTTP
-3.  Connexion TCP directe, via le port HTTPS
-4.  Connexion indirecte via un serveur {{glossary("TURN")}}/relais (si une connexion directe échoue, e.g. si un des pairs est situé derrière un pare-feu qui empêche la traversée du NAT)
+1. Connexion UDP directe (dans ce cas—et uniquement dans ce cas—un serveur {{glossary("STUN")}} sert à trouver l'adresse de réseau du pair opposé
+2. Connexion TCP directe, via le port HTTP
+3. Connexion TCP directe, via le port HTTPS
+4. Connexion indirecte via un serveur {{glossary("TURN")}}/relais (si une connexion directe échoue, e.g. si un des pairs est situé derrière un pare-feu qui empêche la traversée du NAT)
 
 ## Pour approfondir
 

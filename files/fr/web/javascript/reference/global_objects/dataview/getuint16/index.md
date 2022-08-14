@@ -19,7 +19,9 @@ La méthode **`getUint16()`** permet de lire un entier non-signé sur 16 bits (t
 
 ## Syntaxe
 
-    dataview.getUint16(positionOctet [, littleEndian])
+```js
+dataview.getUint16(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 

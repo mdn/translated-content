@@ -306,7 +306,6 @@ Il est possible d'ajouter des étiquettes grâce à l'attribut [`label`](/fr/doc
   </tbody>
 </table>
 
-
 > **Note :** Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/display)`: none;`, ce qui le masque.
 
 ### Créer des contrôles d'intervalle verticaux

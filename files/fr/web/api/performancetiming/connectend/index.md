@@ -30,8 +30,7 @@ let time = performanceTiming.connectEnd;
 
 | Spécification                                                                                                                                        | Statut                                   | Commentaire          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-connectend',
-        'PerformanceTiming.connectEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-connectend', 'PerformanceTiming.connectEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

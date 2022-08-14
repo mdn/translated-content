@@ -74,7 +74,6 @@ html,body,svg { height:100% }
         <strong
           ><a
             href="/fr/SVG/Content_type#Percentage"
-            title="en/SVG/Content_type#Percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -82,7 +81,6 @@ html,body,svg { height:100% }
         <strong
           ><a
             href="/fr/SVG/Content_type#Length"
-            title="en/SVG/Content_type#Length"
             >&#x3C;length></a
           ></strong
         >

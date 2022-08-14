@@ -29,7 +29,9 @@ Google et les autres moteurs de recherche participent au vocabulaire défini par
 
 ### Syntaxe formelle
 
-    itemtype = URL
+```
+itemtype = URL
+```
 
 ### Exemple simple
 

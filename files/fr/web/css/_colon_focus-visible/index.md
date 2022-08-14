@@ -18,7 +18,9 @@ On notera que Firefox prend en charge cette fonctionnalité via une ancienne pse
 
 ## Syntaxe
 
-    :focus-visible
+```css
+:focus-visible
+```
 
 ## Exemples
 

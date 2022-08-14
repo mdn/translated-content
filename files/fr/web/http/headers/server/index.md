@@ -29,7 +29,9 @@ Il est préférable d'éviter les valeurs excessivement longues et/ou détaillé
 
 ## Syntaxe
 
-    Server: <valeur>
+```
+Server: <valeur>
+```
 
 ## Directives
 
@@ -38,7 +40,9 @@ Il est préférable d'éviter les valeurs excessivement longues et/ou détaillé
 
 ## Exemples
 
-    Server: Apache/2.4.1 (Unix)
+```
+Server: Apache/2.4.1 (Unix)
+```
 
 ## Spécifications
 

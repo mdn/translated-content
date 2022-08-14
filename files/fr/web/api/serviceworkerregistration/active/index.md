@@ -9,19 +9,19 @@ La propriété **`active`** de l’interface {{domxref("ServiceWorkerRegistratio
 
 Un _worker_ actif contrôle un {{domxref("ServiceWorkerClient")}} si l’URL du client appartient au domaine de l’inscription (l’option `scope` définie lorsque {{domxref("ServiceWorkerContainer.register")}} est initialement appelé.)
 
-> **Note :** Cette fonctionnalité est disponible dans les [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+> **Note :** Cette fonctionnalité est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
-    sw = ServiceWorker.active
+```js
+sw = ServiceWorker.active
+```
 
 ### Valeur
 
 Un objet {{domxref("ServiceWorker")}}, si le _worker_ est actuellement dans un état `activating` ou `activated`.
 
 ## Spécifications
-
-
 
 | Spécification                                                                                                                                                | Statut                               | Commentaire            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
@@ -33,8 +33,8 @@ Un objet {{domxref("ServiceWorker")}}, si le _worker_ est actuellement dans un �
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Utilisation des web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Utilisation des web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)

@@ -8,7 +8,7 @@ translation_of: Web/API/Element/scrollIntoView
 
 
 
-<p>{{domxref("Element")}} 인터페이스의 <strong><code>scrollIntoView()</code></strong> 메소드는 <code>scrollIntoView()</code>가 호출 된 요소가 사용자에게 표시되도록 요소의 상위 컨테이너를 스크롤합니다.</p>
+<p>{{domxref("Element")}} 인터페이스의 <strong><code>scrollIntoView()</code></strong> 메소드는 <code>scrollIntoView()</code>가 호출 된 요소가 사용자에게 표시되도록 요소의 상위 컨테이너를 스크롤합니다.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">문법</h2>
@@ -21,26 +21,26 @@ translation_of: Web/API/Element/scrollIntoView
  <dt>
  <h3 id="Parameters">Parameters</h3>
  </dt>
- <dt><code>alignToTop</code> {{optional_inline}}</dt>
+ <dt><code>alignToTop</code> {{optional_inline}}</dt>
  <dd>{{jsxref("Boolean")}} 값:
  <ul>
-  <li><code>true</code>일때, the top of the element will be aligned to the top of the visible area of the scrollable ancestor. Corresponds to <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. This is the default value.</li>
-  <li><code>false</code>일때, the bottom of the element will be aligned to the bottom of the visible area of the scrollable ancestor. Corresponds to <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code>.</li>
+  <li><code>true</code>일때, the top of the element will be aligned to the top of the visible area of the scrollable ancestor. Corresponds to <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. This is the default value.</li>
+  <li><code>false</code>일때, the bottom of the element will be aligned to the bottom of the visible area of the scrollable ancestor. Corresponds to <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code>.</li>
  </ul>
  </dd>
- <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
+ <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
  <dd>다음의 프로퍼티를 가지는 객체</dd>
  <dd>
  <dl>
-  <dt><code>behavior</code> {{optional_inline}}</dt>
+  <dt><code>behavior</code> {{optional_inline}}</dt>
   <dd>전환에니메이션을 정의.<br>
-  <code>"auto"</code>, <code>"smooth"</code>중 하나 선택. 기본값은 <code>"auto"</code>.</dd>
-  <dt><code>block</code> {{optional_inline}}</dt>
+  <code>"auto"</code>, <code>"smooth"</code>중 하나 선택. 기본값은 <code>"auto"</code>.</dd>
+  <dt><code>block</code> {{optional_inline}}</dt>
   <dd>수직 정렬을 정의<br>
-  <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, <code>"nearest"</code>중 하나 선택. 기본값은 <code>"start"</code>.</dd>
-  <dt><code>inline</code> {{optional_inline}}</dt>
+  <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, <code>"nearest"</code>중 하나 선택. 기본값은 <code>"start"</code>.</dd>
+  <dt><code>inline</code> {{optional_inline}}</dt>
   <dd>수평 정렬을 정함<br>
-  One of <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, <code>"nearest"</code>중 하나 선택. 기본값은 <code>"nearest"</code>.</dd>
+  One of <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, <code>"nearest"</code>중 하나 선택. 기본값은 <code>"nearest"</code>.</dd>
  </dl>
  </dd>
 </dl>
@@ -62,20 +62,7 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});</
 
 <h2 id="Specifications">Specifications</h2>
 
-<table>
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
@@ -84,5 +71,5 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});</
 <h2 id="더보기">더보기</h2>
 
 <ul>
- <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}<a class="external" href="http://dev.w3.org/csswg/cssom-view/#dom-element-scrollintoview"> </a></li>
+ <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}<a class="external" href="http://dev.w3.org/csswg/cssom-view/#dom-element-scrollintoview"> </a></li>
 </ul>

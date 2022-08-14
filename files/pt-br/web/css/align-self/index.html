@@ -9,7 +9,7 @@ tags:
   - Referencia
 translation_of: Web/CSS/align-self
 ---
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>align-self</code></strong> alinha itens-flex da linha flex alvo, sobreescrevendo o valor {{cssxref("align-items")}}. Se alguma dos eixos das margens do dado item está estabelecido como <code>auto</code>, então <code>align-self</code> é ignorado.</p>
+<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>align-self</code></strong> alinha itens-flex da linha flex alvo, sobreescrevendo o valor {{cssxref("align-items")}}. Se alguma dos eixos das margens do dado item está estabelecido como <code>auto</code>, então <code>align-self</code> é ignorado.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/align-self.html")}}</div>
 
@@ -52,15 +52,15 @@ align-self: unset;</pre>
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>O valor {{cssxref("align-items")}} é originado do valor de seu pai.</dd>
+ <dd>O valor {{cssxref("align-items")}} é originado do valor de seu pai.</dd>
  <dt><code>normal</code></dt>
  <dd>O efeito dessa palavra-chave depende do modo de layout em que nos encontramos:
  <ul>
-  <li>Em layouts absolutamente posicionados, a palavra-chave se comporta como <code>start</code> em caixas absolutamente posicionadas <em>replaced</em>, e como <code>stretch</code> em caixas absolutamente posicionadas <em>all other</em>.</li>
+  <li>Em layouts absolutamente posicionados, a palavra-chave se comporta como <code>start</code> em caixas absolutamente posicionadas <em>replaced</em>, e como <code>stretch</code> em caixas absolutamente posicionadas <em>all other</em>.</li>
   <li>Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como <code>stretch</code>.</li>
-  <li>Para itens-flex, a palavra-chave se comporta como <code>stretch</code>.</li>
-  <li>Para itens-grid, essa palavra-chave leva ao comportamento similar ao de <code>stretch</code>, com exceção de caixas com aspect ratio ou tamanhos intrínsecos onde se comportam como <code>start</code>.</li>
-  <li>A propriedade não se aplica para caixas <em>block-level</em>, e para células de tabela.</li>
+  <li>Para itens-flex, a palavra-chave se comporta como <code>stretch</code>.</li>
+  <li>Para itens-grid, essa palavra-chave leva ao comportamento similar ao de <code>stretch</code>, com exceção de caixas com aspect ratio ou tamanhos intrínsecos onde se comportam como <code>start</code>.</li>
+  <li>A propriedade não se aplica para caixas <em>block-level</em>, e para células de tabela.</li>
  </ul>
  </dd>
  <dt><code>self-start</code></dt>
@@ -68,18 +68,18 @@ align-self: unset;</pre>
  <dt><code>self-end</code></dt>
  <dd>Alinha os itens de maneira a mesclar a borda do alinhamento do container correspondente com o lado final do item no eixo.</dd>
  <dt><code>flex-start</code></dt>
- <dd>A borda da margem inicial do item flex é mesclada com a borda inicial da linha.</dd>
+ <dd>A borda da margem inicial do item flex é mesclada com a borda inicial da linha.</dd>
  <dt><code>flex-end</code></dt>
  <dd>A borda da margem fim do item flex é mesclada com a borda fim da linha.</dd>
  <dt><code>center</code></dt>
- <dd>A caixa-margem do item flex é centralizada ao longo da linha no eixo transversal. Se o tamanho do item é superior to container flex, então ele irá transbordar de maneira equivalente em ambas direções.</dd>
+ <dd>A caixa-margem do item flex é centralizada ao longo da linha no eixo transversal. Se o tamanho do item é superior to container flex, então ele irá transbordar de maneira equivalente em ambas direções.</dd>
  <dt><code>baseline<br>
  first baseline</code><br>
  <code>last baseline</code></dt>
  <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
  The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
  <dt><code>stretch</code></dt>
- <dd>Caso o tamanho combinado dos itens ao longo do eixo transversal seja menor do que o tamanho do container de alinhamento, e caso o tamanho do item segue o estilo <code>auto</code>, seu tamanho cresce igualmente (mas não proporcionalmente), enquanto que ainda respeitando as restrições impostas por {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou a funcionalidade equivalente), de maneira que o tamanho combinado de todos itens tamanho-<code>auto</code> preencha exatamente o container de alinhamento ao longo do eixo transversal.</dd>
+ <dd>Caso o tamanho combinado dos itens ao longo do eixo transversal seja menor do que o tamanho do container de alinhamento, e caso o tamanho do item segue o estilo <code>auto</code>, seu tamanho cresce igualmente (mas não proporcionalmente), enquanto que ainda respeitando as restrições impostas por {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou a funcionalidade equivalente), de maneira que o tamanho combinado de todos itens tamanho-<code>auto</code> preencha exatamente o container de alinhamento ao longo do eixo transversal.</dd>
  <dt><code>safe</code></dt>
  <dd>Caso o tamanho do item supere o alinhamento do container, o item é alinhado como se o modo de alinhamento fosse <code>start</code>.</dd>
  <dt><code>unsafe</code></dt>
@@ -154,7 +154,7 @@ div:nth-child(3) {
 
 
 
-<h3 id="Suporte_em_Flex_layout">Suporte em Flex layout</h3>
+<h3 id="Suporte_em_Flex_layout">Suporte em Flex layout</h3>
 
 <p>{{Compat("css.properties.align-self.flex_context")}}</p>
 
@@ -169,7 +169,7 @@ div:nth-child(3) {
  <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning items in a flex container</a></em></li>
  <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{cssxref("align-items")}} property</li>
+ <li>The {{cssxref("align-items")}} property</li>
 </ul>
 
 <div>{{CSSRef}}</div>

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
 ---
 <div>{{JSRef}}</div>
 
-<p>Объект <strong><code>Int32Array</code></strong> представляет типизированный массив 32-битных целых чисел со знаком с дополнением до двух с платформо-зависимым порядком байт. Если необходим контроль за порядком байт, то вместо этого объекта используйте <a class="new" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/DataView" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>DataView</code></a>. Содержимое инициализируется значением <code>0</code>. Создав экземпляр <strong><code>Int32Array</code></strong>, можно получить доступ к элементам массива, используя методы объекта или стандартный синтаксис доступа к элементу массива по его индексу (с помощью скобочной нотации).</p>
+<p>Объект <strong><code>Int32Array</code></strong> представляет типизированный массив 32-битных целых чисел со знаком с дополнением до двух с платформо-зависимым порядком байт. Если необходим контроль за порядком байт, то вместо этого объекта используйте <a class="new" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/DataView" rel="nofollow" title="Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!"><code>DataView</code></a>. Содержимое инициализируется значением <code>0</code>. Создав экземпляр <strong><code>Int32Array</code></strong>, можно получить доступ к элементам массива, используя методы объекта или стандартный синтаксис доступа к элементу массива по его индексу (с помощью скобочной нотации).</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -21,20 +21,20 @@ new Int32Array(buffer [, byteOffset [, length]]);</pre>
 
 <dl>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.BYTES_PER_ELEMENT")}}</dt>
- <dd>Возвращает числовое значение размера элемента. <code>4</code> в случае с <code>Int32Array</code>.</dd>
+ <dd>Возвращает числовое значение размера элемента. <code>4</code> в случае с <code>Int32Array</code>.</dd>
  <dt>Int32Array.length</dt>
  <dd>Свойство статического размера, значение которого равно 3. Для актуального размера (количества элементов), смотрите {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.</dd>
  <dt>{{jsxref("TypedArray.name", "Int32Array.name")}}</dt>
- <dd>Возвращает строковое значение названия конструктора. В случае с типом <code>Int32Array</code>: "Int32Array".</dd>
+ <dd>Возвращает строковое значение названия конструктора. В случае с типом <code>Int32Array</code>: "Int32Array".</dd>
  <dt>{{jsxref("TypedArray.prototype", "Int32Array.prototype")}}</dt>
- <dd>Прототип для <em>TypedArray</em> объектов.</dd>
+ <dd>Прототип для <em>TypedArray</em> объектов.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
 
 <dl>
  <dt>{{jsxref("TypedArray.from", "Int32Array.from()")}}</dt>
- <dd>Создаёт новый <code>Int32Array</code> из массивоподобного или итеративного объекта. Смотрите также {{jsxref("Array.from()")}}.</dd>
+ <dd>Создаёт новый <code>Int32Array</code> из массивоподобного или итеративного объекта. Смотрите также {{jsxref("Array.from()")}}.</dd>
  <dt>{{jsxref("TypedArray.of", "Int32Array.of()")}}</dt>
  <dd>Создаёт новый <code>Int32Array</code> with a variable number of arguments. See also {{jsxref("Array.of()")}}.</dd>
 </dl>
@@ -96,7 +96,7 @@ new Int32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.reduceRight", "Int32Array.prototype.reduceRight()")}}</dt>
  <dd>Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduceRight()")}}.</dd>
  <dt>{{jsxref("TypedArray.reverse", "Int32Array.prototype.reverse()")}}</dt>
- <dd>Reverses the order of the elements of an array — the first becomes the last, and the last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.</dd>
+ <dd>Reverses the order of the elements of an array — the first becomes the last, and the last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.</dd>
  <dt>{{jsxref("TypedArray.set", "Int32Array.prototype.set()")}}</dt>
  <dd>Stores multiple values in the typed array, reading input values from a specified array.</dd>
  <dt>{{jsxref("TypedArray.slice", "Int32Array.prototype.slice()")}}</dt>
@@ -119,7 +119,7 @@ new Int32Array(buffer [, byteOffset [, length]]);</pre>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Разные способы создания <code>Int32Array</code>:</p>
+<p>Разные способы создания <code>Int32Array</code>:</p>
 
 <pre class="brush: js">// С указанием размера
 var int32 = new Int32Array(2);
@@ -182,7 +182,7 @@ var int32 = new Int32Array(iterable);
 
 <h2 id="Compatibility_notes">Compatibility notes</h2>
 
-<p>Начиная с ECMAScript 2015, конструкторы <code>Int32Array</code> требуют оператор {{jsxref("Operators/new", "new")}}. Вызов <code>Int32Array</code> конструктора как функцию без оператора <code>new</code>, вызовет ошибку {{jsxref("TypeError")}}.</p>
+<p>Начиная с ECMAScript 2015, конструкторы <code>Int32Array</code> требуют оператор {{jsxref("Operators/new", "new")}}. Вызов <code>Int32Array</code> конструктора как функцию без оператора <code>new</code>, вызовет ошибку {{jsxref("TypeError")}}.</p>
 
 <pre class="brush: js example-bad">var dv = Int32Array([1, 2, 3]);
 // TypeError: calling a builtin Int32Array constructor

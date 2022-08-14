@@ -27,13 +27,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>O método <strong><code>now()</code></strong> retorna os milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC até agora como um  {{jsxref("Global_Objects/Number", "Number")}}.</p>
+<p>O método <strong><code>now()</code></strong> retorna os milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC até agora como um  {{jsxref("Global_Objects/Number", "Number")}}.</p>
 
-<p>Por que <strong><code>now</code> </strong>é um método estático de <strong><code>Date</code></strong>, você sempre o usará como <strong><code>Date.now()</code></strong>.</p>
+<p>Por que <strong><code>now</code> </strong>é um método estático de <strong><code>Date</code></strong>, você sempre o usará como <strong><code>Date.now()</code></strong>.</p>
 
 <h2 id="Compatibility" name="Compatibility">Polyfill</h2>
 
-<p>Este método foi padronizado no ECMA-262 5<sup>th</sup> edition. Em ambientes que não estão atualizados para suportar este método você pode suprir esta carência utilizando o seguinte:</p>
+<p>Este método foi padronizado no ECMA-262 5<sup>th</sup> edition. Em ambientes que não estão atualizados para suportar este método você pode suprir esta carência utilizando o seguinte:</p>
 
 <pre class="brush: js">if (!Date.now) {
   Date.now = function now() {
@@ -66,61 +66,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>Baseado em <a href="http://kangax.github.com/es5-compat-table/">Kangax's compat table</a>.</p>
+<p>Baseado em <a href="http://kangax.github.com/es5-compat-table/">Kangax's compat table</a>.</p>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>5</td>
-   <td>3</td>
-   <td>9</td>
-   <td>10.50</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Date.now")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li>{{domxref("window.performance.now")}} - fornece timestamps com sub-millisegundo precisão para uso em medir o desempenho da página</li>
+ <li>{{domxref("window.performance.now")}} - fornece timestamps com sub-millisegundo precisão para uso em medir o desempenho da página</li>
  <li>{{domxref("console.time")}} / {{domxref("console.timeEnd")}}</li>
 </ul>

@@ -49,7 +49,7 @@ translation_of: Web/HTTP/Headers/Expect-CT
 <h2 id="Syntax">構文</h2>
 
 <pre>Expect-CT: report-uri="&lt;uri&gt;",
-           enforce,
+           enforce,
            max-age=&lt;age&gt;</pre>
 
 <h2 id="Directives">ディレクティブ</h2>
@@ -61,11 +61,11 @@ translation_of: Web/HTTP/Headers/Expect-CT
 
  <p>キャッシュが表現可能な値よりも大きな値を受信した場合や、計算でオーバーフローが発生した場合、キャッシュは値を 2,147,483,648 (2^31) または使用している表現方法で最も大きな整数値とみなします。</p>
  </dd>
- <dt><code>report-uri="&lt;uri&gt;"</code> {{optional_inline}}</dt>
+ <dt><code>report-uri="&lt;uri&gt;"</code> {{optional_inline}}</dt>
  <dd>
  <p>ユーザーエージェントが <code>Expect-CT</code> の失敗を報告する URI を指定します。</p>
  <code>enforce</code> ディレクティブと <code>report-uri</code> ディレクティブが両方ともある場合、設定は "enforce-and-report" の設定と呼ばれ、ユーザーエージェントに証明書の透明性ポリシーに従い、違反を報告することを指示します。</dd>
- <dt><code>enforce</code> {{optional_inline}}</dt>
+ <dt><code>enforce</code> {{optional_inline}}</dt>
  <dd>
  <p>ユーザーエージェントに (報告するだけでなく) 証明書の透明性ポリシーに従い、ユーザーエージェントが証明書の透明性ポリシーに違反するコネクションを拒否するよう指示します。</p>
 

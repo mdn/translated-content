@@ -14,7 +14,7 @@ translation_of: Web/API/AudioContext/createMediaStreamDestination
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioContext") }} インターフェイスの <code>createMediaStreamDestination()</code> メソッドは、<a href="/ja/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} と関連付けられた {{domxref("MediaStreamAudioDestinationNode")}} オブジェクトを生成します。このMediaStreamはローカルファイルに格納されたり他のコンピュータに送信されたりする音声ストリームを表します。</p>
+<p>{{ domxref("AudioContext") }} インターフェイスの <code>createMediaStreamDestination()</code> メソッドは、<a href="/ja/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} と関連付けられた {{domxref("MediaStreamAudioDestinationNode")}} オブジェクトを生成します。このMediaStreamはローカルファイルに格納されたり他のコンピュータに送信されたりする音声ストリームを表します。</p>
 </div>
 
 <p>{{domxref("MediaStream")}} はノードが生成されたときに作成され、{{domxref("MediaStreamAudioDestinationNode")}}の <code>stream</code> プロパティを通じてアクセスすることができます。このストリームは {{domxref("navigator.getUserMedia") }} で得られた <code>MediaStream</code> と同じような使い方ができます。例えば、<code>RTCPeerConnection</code> インターフェイスの <code>addStream()</code> メソッドでリモートの端末に送ることができます。</p>

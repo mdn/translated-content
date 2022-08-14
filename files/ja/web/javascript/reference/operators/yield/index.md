@@ -74,7 +74,7 @@ console.log(appleStore.next())      // { value: 5, done: false }
 console.log(appleStore.next())      // { value: undefined, done: true }
 ```
 
-next(value) でジェネレーターに値を送ることができます。 'step' はこの \[_rv_] = **yield** \[_expression_] の構文では返値として評価されます。
+next(value) でジェネレーターに値を送ることができます。 'step' はこの \[_rv_] = **yield** \[_expression_] の構文では返値として評価されます。
 
 ```js
 function* counter(value) {

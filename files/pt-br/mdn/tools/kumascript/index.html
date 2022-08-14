@@ -17,7 +17,7 @@ translation_of: MDN/Tools/KumaScript
 
 <p><span class="seoSummary">On the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a class="link-https" href="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a class="external" href="https://nodejs.org/en/">Node.js</a>.</span> This article provides basic information on how to use KumaScript.</p>
 
-<p>For a detailed overview and Q&amp;A of KumaScript, watch the MDN dev team's <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=">KumaScript Fireside Chat</a> (the meeting starts at 10 minutes into the video). KumaScript replaced DekiScript, which was the template language for MindTouch, the previous platform used by MDN.</p>
+<p>For a detailed overview and Q&amp;A of KumaScript, watch the MDN dev team's <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=">KumaScript Fireside Chat</a> (the meeting starts at 10 minutes into the video). KumaScript replaced DekiScript, which was the template language for MindTouch, the previous platform used by MDN.</p>
 
 <h3 id="What_is_KumaScript">What is KumaScript?</h3>
 
@@ -40,7 +40,7 @@ translation_of: MDN/Tools/KumaScript
 
 <p>KumaScript is used on MDN in <a class="link-https" href="https://github.com/visionmedia/ejs">embedded JavaScript templates</a>. These templates can be invoked in document content by any MDN author, through the use of macros.</p>
 
-<p>A script in KumaScript is a <em>template</em>, and each template is a file in <a href="https://github.com/mdn/kumascript/tree/master/macros">the macros directory of the KumaScript repository</a> on Github. A  <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/macros/hello.ejs" title="hello.ejs">template</a> looks like this:</p>
+<p>A script in KumaScript is a <em>template</em>, and each template is a file in <a href="https://github.com/mdn/kumascript/tree/master/macros">the macros directory of the KumaScript repository</a> on Github. A  <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/macros/hello.ejs" title="hello.ejs">template</a> looks like this:</p>
 
 <pre class="notranslate">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
 Hello #&lt;%= i %&gt;
@@ -201,7 +201,7 @@ Hello #&lt;%= i %&gt;
 
 <h3 id="APIs_and_Modules">APIs and Modules</h3>
 
-<p>KumaScript offers some built-in methods and APIs for KumaScript macros.  Macros can also use <code>module.exports</code> to export new API methods.</p>
+<p>KumaScript offers some built-in methods and APIs for KumaScript macros.  Macros can also use <code>module.exports</code> to export new API methods.</p>
 
 <p>API changes require updating the KumaScript engine or macros via a pull request to the <a href="https://github.com/mdn/kumascript">KumaScript repository</a>.</p>
 
@@ -216,7 +216,7 @@ Hello #&lt;%= i %&gt;
  <dd>Executes and returns the result of the named template with the given list of parameters.</dd>
  <dd>Example: <code>&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.</dd>
  <dd>Example using the <code>domxref</code> macro: <code>&lt;%- template("domxref", ["Event.bubbles", "bubbles"]) %&gt;</code>.</dd>
- <dd>This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></dd>
+ <dd>This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></dd>
  <dt><code>require(name)</code></dt>
  <dd>Loads another template as a module; any output is ignored. Anything assigned to <code>module.exports</code> in the template is returned.</dd>
  <dd>Used in templates like so: <code>&lt;% var my_module = require('MyModule'); %&gt;</code>.</dd>
@@ -259,7 +259,7 @@ module.exports = {
 %&gt;
 </pre>
 
-<p>Assuming this template is saved under <a href="https://github.com/mdn/kumascript/tree/master/macros">https://github.com/mdn/kumascript/tree/master/macros</a> as <code>MathLib.ejs</code>, you can use it in another template like so:</p>
+<p>Assuming this template is saved under <a href="https://github.com/mdn/kumascript/tree/master/macros">https://github.com/mdn/kumascript/tree/master/macros</a> as <code>MathLib.ejs</code>, you can use it in another template like so:</p>
 
 <pre class="notranslate">&lt;%
 var math_lib = require("MathLib");
@@ -398,8 +398,8 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 <p>You can read the contents of an attached file by using the <code>mdn.getFileContent()</code> function, like this:</p>
 
 <pre class="notranslate">&lt;%
-  var contents = mdn.getFileContent(fileUrl);
-  ... do stuff with the contents ...
+  var contents = mdn.getFileContent(fileUrl);
+  ... do stuff with the contents ...
 %&gt;
 </pre>
 

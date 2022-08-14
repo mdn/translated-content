@@ -20,7 +20,9 @@ Si l'enfant donné est un {{domxref("DocumentFragment")}} , le contenu entier du
 
 ## Syntaxe
 
-    var elementAjoute = element.appendChild(enfant);
+```js
+var elementAjoute = element.appendChild(enfant);
+```
 
 ### Paramètres
 
@@ -50,8 +52,6 @@ document.body.appendChild(p);
 ```
 
 ## Spécification
-
-
 
 | Spécification                                                                                            | Statut                           | Commentaire                                            |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |

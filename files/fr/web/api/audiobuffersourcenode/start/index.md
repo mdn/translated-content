@@ -9,7 +9,9 @@ La méthode `start()` de l'interface {{ domxref("AudioBufferSourceNode") }} perm
 
 ## Syntaxe
 
-    AudioBufferSourceNode.start([when][, offset][, duration]);
+```js
+AudioBufferSourceNode.start([when][, offset][, duration]);
+```
 
 ### Paramètres
 

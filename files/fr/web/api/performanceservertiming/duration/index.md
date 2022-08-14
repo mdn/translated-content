@@ -25,8 +25,7 @@ serverTiming.duration;
 
 | Spécification                                                                                                            | Statut                               | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Server Timing','#dom-performanceservertiming-duration',
-        'duration')}} | {{Spec2('Server Timing')}} | Définition initiale. |
+| {{SpecName('Server Timing','#dom-performanceservertiming-duration', 'duration')}} | {{Spec2('Server Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

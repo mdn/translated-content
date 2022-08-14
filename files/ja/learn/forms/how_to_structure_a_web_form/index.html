@@ -45,7 +45,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 <p>{{HTMLElement("form")}} 要素の外部でもフォームウィジェットを使用できますが、そのフォームウィジェットは <a href="/ja/docs/Web/HTML/Attributes/form"><code>form</code></a> 属性を用いて関連付けなければ、どのフォームに対しても何も行わないことに注意してください。これは、実際には {{ HTMLElement("form") }} に包含されていない要素であっても明示的にフォームへ紐付けることを可能にします。</p>
 
-<p>  次に、フォームに含まれる構造的な要素を見ていきましょう。</p>
+<p>  次に、フォームに含まれる構造的な要素を見ていきましょう。</p>
 
 <h2 id="The_&lt;fieldset>_and_&lt;legend>_elements" name="The_&lt;fieldset>_and_&lt;legend>_elements">&lt;fieldset&gt; および &lt;legend&gt; 要素</h2>
 
@@ -159,7 +159,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 <p>上記の違いをふまえると、以降を効率よく見ていけるでしょう:</p>
 
 <ul>
- <li>最初の例では、label 要素すべての入力が読み上げられません  — "edit text blank" だけです。その上に実際のラベルは別々に読まれます。複数の <code>&lt;label&gt;</code> 要素はスクリーンリーダーを混乱させます。</li>
+ <li>最初の例では、label 要素すべての入力が読み上げられません  — "edit text blank" だけです。その上に実際のラベルは別々に読まれます。複数の <code>&lt;label&gt;</code> 要素はスクリーンリーダーを混乱させます。</li>
  <li>2 つ目の例では、少し明確になります "name star name edit text required" というようにラベルが入力と一緒に読み上げられます。しかしラベルはまだ別々に読み上げられます。少し混乱しやすいですが、これは <code>&lt;input&gt;</code> と関連したラベルがあるためまだ良いでしょう。</li>
  <li>3 つ目の例が最も良いです — 実際のラベルがすべて一緒に読み上げられ、"name required edit text" のようにラベルと入力が一緒に読み上げられます。</li>
 </ul>

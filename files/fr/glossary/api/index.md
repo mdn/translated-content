@@ -26,7 +26,7 @@ L'[API Web Animations](/fr/docs/Web/API/Web_Animations_API) peut être utilisée
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Application_programming_interface", "API")}} sur Wikipedia
+- [API](https://fr.wikipedia.org/wiki/Interface_de_programmation) sur Wikipédia
 
 ### Référence technique
 

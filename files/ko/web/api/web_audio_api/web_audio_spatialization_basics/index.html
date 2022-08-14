@@ -388,19 +388,19 @@ moveControls.forEach(function(el) {
     let moving;
     el.addEventListener('mousedown', function() {
 
-        let direction = this.dataset.control;
-        if (moving &amp;&amp; moving.frameId) {
-            window.cancelAnimationFrame(moving.frameId);
-        }
-        moving = moveBoombox(direction);
+        let direction = this.dataset.control;
+        if (moving &amp;&amp; moving.frameId) {
+            window.cancelAnimationFrame(moving.frameId);
+        }
+        moving = moveBoombox(direction);
 
-    }, false);
+    }, false);
 
-    window.addEventListener('mouseup', function() {
-        if (moving &amp;&amp; moving.frameId) {
-            window.cancelAnimationFrame(moving.frameId);
-        }
-    }, false)
+    window.addEventListener('mouseup', function() {
+        if (moving &amp;&amp; moving.frameId) {
+            window.cancelAnimationFrame(moving.frameId);
+        }
+    }, false)
 
 })
 </pre>
@@ -409,7 +409,7 @@ moveControls.forEach(function(el) {
 
 <p>HTML에는 패너 노드에 의해 영향을 받을 audio 요소가 있습니다.</p>
 
-<pre class="brush: html">&lt;audio src="myCoolTrack.mp3"&gt;&lt;/audio&gt;</pre>
+<pre class="brush: html">&lt;audio src="myCoolTrack.mp3"&gt;&lt;/audio&gt;</pre>
 
 <p>이 요소로부터 소스를 취해 {{domxref('AudioContext.createMediaElementSource')}}를 사용해 Web Audio API에 연결합시다.</p>
 

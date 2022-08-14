@@ -78,7 +78,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
  <li><kbd>End</kbd> (任意): 最後のオプションにフォーカスを移動します。 任意で、単一選択リストボックスでは、選択もフォーカスと共に移動することがあります。 5つ以上のオプションがあるリストでは、このキーをサポートすることを強くお勧めします。</li>
  <li>先行入力は、全てのリストボックス、特に7つ以上のオプションがあるリストボックスに対してお勧めします。
   <ul>
-   <li> 文字を入力: フォーカスは、入力された文字で始まる名前を持つ次の項目に移動します。</li>
+   <li> 文字を入力: フォーカスは、入力された文字で始まる名前を持つ次の項目に移動します。</li>
    <li>複数の文字をすばやく続けて入力: フォーカスは、入力された文字列で始まる名前を持つ次の項目に移動します。</li>
   </ul>
  </li>
@@ -135,15 +135,15 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 <pre class="brush: html">&lt;p id="listbox1label" role="label"&gt;色を選択:&lt;/p&gt;
 &lt;div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
   onclick="return listItemClick(event);"
-  onkeydown="return listItemKeyEvent(event);"
+  onkeydown="return listItemKeyEvent(event);"
   onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1"&gt;
-    &lt;div role="option" id="listbox1-1" class="selected" aria-selected="true"&gt;緑&lt;/div&gt;
-    &lt;div role="option" id="listbox1-2"&gt;オレンジ&lt;/div&gt;
-    &lt;div role="option" id="listbox1-3"&gt;赤&lt;/div&gt;
-    &lt;div role="option" id="listbox1-4"&gt;青&lt;/div&gt;
-    &lt;div role="option" id="listbox1-5"&gt;紫&lt;/div&gt;
-    &lt;div role="option" id="listbox1-6"&gt;ペリウィンクル&lt;/div&gt;
+    &lt;div role="option" id="listbox1-1" class="selected" aria-selected="true"&gt;緑&lt;/div&gt;
+    &lt;div role="option" id="listbox1-2"&gt;オレンジ&lt;/div&gt;
+    &lt;div role="option" id="listbox1-3"&gt;赤&lt;/div&gt;
+    &lt;div role="option" id="listbox1-4"&gt;青&lt;/div&gt;
+    &lt;div role="option" id="listbox1-5"&gt;紫&lt;/div&gt;
+    &lt;div role="option" id="listbox1-6"&gt;ペリウィンクル&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -152,11 +152,11 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 <pre class="brush: html">&lt;label for="listbox1"&gt;色を選択:&lt;/label&gt;
 &lt;select id="listbox1"&gt;
    &lt;option selected&gt;緑&lt;/option&gt;
-   &lt;option&gt;オレンジ&lt;/option&gt;
-   &lt;option&gt;赤&lt;/option&gt;
+   &lt;option&gt;オレンジ&lt;/option&gt;
+   &lt;option&gt;赤&lt;/option&gt;
    &lt;option&gt;青&lt;/option&gt;
-   &lt;option&gt;紫&lt;/option&gt;
-   &lt;option&gt;ペリウィンクル&lt;/option&gt;
+   &lt;option&gt;紫&lt;/option&gt;
+   &lt;option&gt;ペリウィンクル&lt;/option&gt;
 &lt;/select&gt;</pre>
 
 <h4 id="More_examples" name="More_examples">より多くの例</h4>

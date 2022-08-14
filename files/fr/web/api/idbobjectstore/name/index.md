@@ -17,8 +17,10 @@ La propriété **`name`**, rattachée à l'interface {{domxref("IDBObjectStore")
 
 ## Syntaxe
 
-    var nomDuMagasin = IDBObjectStore.name;
-    IDBObjectStore.name = nouveauNom;
+```js
+var nomDuMagasin = IDBObjectStore.name;
+IDBObjectStore.name = nouveauNom;
+```
 
 ### Valeur
 

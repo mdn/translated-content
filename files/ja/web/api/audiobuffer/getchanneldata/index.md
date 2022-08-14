@@ -56,13 +56,13 @@ button.onclick = function() {
    var nowBuffering = myArrayBuffer.getChannelData(channel);
    for (var i = 0; i < frameCount; i++) {
      // Math.random() は [0; 1.0] である
-     // 音声は [-1.0; 1.0] である必要がある
+     // 音声は [-1.0; 1.0] である必要がある
      nowBuffering[i] = Math.random() * 2 - 1;
    }
   }
 
   // AudioBufferSourceNode を得る
-  // これは AudioBuffer を再生するときに使う AudioNode である
+  // これは AudioBuffer を再生するときに使う AudioNode である
   var source = audioCtx.createBufferSource();
   // AudioBufferSourceNode にバッファーを設定する
   source.buffer = myArrayBuffer;

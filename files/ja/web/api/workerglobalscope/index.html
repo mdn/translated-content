@@ -14,7 +14,7 @@ translation_of: Web/API/WorkerGlobalScope
 
 <p><a href="/ja/docs/Web/API/Web_Workers_API">Web Workers API</a> の <code><strong>WorkerGlobalScope</strong></code> インターフェースは、いずれかの worker のスコープを表すインターフェースです。worker はブラウジングコンテクストを持ちません； このスコープには、通常 {{domxref("Window")}} オブジェクトによって伝えられた情報が含まれます — この場合、イベントハンドラやコンソール、関連する {{domxref("WorkerNavigator")}} オブジェクトのことです。ぞれぞれの <code>WorkerGlobalScope</code> は独自のイベントループを持ちます。</p>
 
-<p>このインターフェースは通常、 それぞれの work タイプによって特化されます： dedicated workers   のための {{domxref("DedicatedWorkerGlobalScope")}} と shared workers のための {{domxref("SharedWorkerGlobalScope")}}、<a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker</a> のための {{domxref("ServiceWorkerGlobalScope")}} です。<code>self</code> プロパティはそれぞれのコンテキストに特化したスコープを返します。</p>
+<p>このインターフェースは通常、 それぞれの work タイプによって特化されます： dedicated workers   のための {{domxref("DedicatedWorkerGlobalScope")}} と shared workers のための {{domxref("SharedWorkerGlobalScope")}}、<a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker</a> のための {{domxref("ServiceWorkerGlobalScope")}} です。<code>self</code> プロパティはそれぞれのコンテキストに特化したスコープを返します。</p>
 
 <h2 id="プロパティ">プロパティ</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/WorkerGlobalScope
 
 <dl>
  <dt>{{domxref("WorkerGlobalScope.caches")}} {{readOnlyinline}}</dt>
- <dd>現在のコンテキストに関連した {{domxref("CacheStorage")}} オブジェクトを返す。このオブジェクトは、オフラインで使用するために資産を保存することやリクエストに対してカスタムレスポンスを生成するなどの  <a href="/ja/docs/Web/API/ServiceWorker_API">service worker</a> の機能を使用できる。</dd>
+ <dd>現在のコンテキストに関連した {{domxref("CacheStorage")}} オブジェクトを返す。このオブジェクトは、オフラインで使用するために資産を保存することやリクエストに対してカスタムレスポンスを生成するなどの  <a href="/ja/docs/Web/API/ServiceWorker_API">service worker</a> の機能を使用できる。</dd>
  <dt>{{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}</dt>
  <dd>worker に関連した {{domxref("WorkerNavigator")}} を返す。これは特定の navigator オブジェクト、主にブラウジングスコープの {{domxref("Navigator")}} ではなく、worker に適合する。</dd>
  <dt>{{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}</dt>
@@ -61,9 +61,9 @@ translation_of: Web/API/WorkerGlobalScope
  <dt>{{domxref("WorkerGlobalScope.onclose")}} {{non-standard_inline}}</dt>
  <dd>{{event("close")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}}。</dd>
  <dt>{{domxref("WorkerGlobalScope.onrejectionhandled")}} {{non-standard_inline}}</dt>
- <dd><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> の rejection イベントを制御するためのイベントハンドラ。</dd>
+ <dd><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> の rejection イベントを制御するためのイベントハンドラ。</dd>
  <dt>{{domxref("WorkerGlobalScope.onunhandledrejection")}} {{non-standard_inline}}</dt>
- <dd>制御されていない <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> の rejection イベントのためのイベントハンドラ。</dd>
+ <dd>制御されていない <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> の rejection イベントのためのイベントハンドラ。</dd>
 </dl>
 
 <h2 id="メソッド">メソッド</h2>

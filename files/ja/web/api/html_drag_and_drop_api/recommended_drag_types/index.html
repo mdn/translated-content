@@ -181,7 +181,7 @@ function dataProvider(){}
 dataProvider.prototype = {
   QueryInterface : function(iid) {
     if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
-                  || iid.equals(Components.interfaces.nsISupports))
+                  || iid.equals(Components.interfaces.nsISupports))
       return this;
     throw Components.results.NS_NOINTERFACE;
   },

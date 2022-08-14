@@ -16,7 +16,9 @@ Si aucun élement n'est donné en paramètre `nomCle`, cette méthode ne fait ri
 
 ## Syntaxe
 
-    storage.removeItem(nomCle);
+```js
+storage.removeItem(nomCle);
+```
 
 ### Paramètres
 

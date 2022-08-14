@@ -58,16 +58,16 @@ var importObj = {
 };
 ```
 
-<p>最後に {{jsxref("WebAssembly.instantiateStreaming()")}} を使用して wasm モジュール (table2.wasm) をロード し、インスタンス化します。table2.wasm モジュールは2の関数を持っていて (1つは42を、もう1つは83を返す) 、インポートされたテーブルの0、1番目に両方の要素が格納されます (<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>を参照) 。そして、インスタンス化された後、テーブルの長さは2のままです。しかし、今はJSから呼び出し可能な <a href="/en-US/docs/WebAssembly/Exported_functions">エクスポートされたWebAssembly関数</a> が含まれています。</p>
+<p>最後に {{jsxref("WebAssembly.instantiateStreaming()")}} を使用して wasm モジュール (table2.wasm) をロード し、インスタンス化します。table2.wasm モジュールは2の関数を持っていて (1つは42を、もう1つは83を返す) 、インポートされたテーブルの0、1番目に両方の要素が格納されます (<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>を参照) 。そして、インスタンス化された後、テーブルの長さは2のままです。しかし、今はJSから呼び出し可能な <a href="/ja/docs/WebAssembly/Exported_functions">エクスポートされたWebAssembly関数</a> が含まれています。</p>
 
 <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
+  console.log(tbl.length);
+  console.log(tbl.get(0)());
+  console.log(tbl.get(1)());
 });</pre>
 
-<p>内部の値を表示するためには、参照された関数のアクセサの呼び出しの後に、2つ目の関数呼び出しを含める必要があることに注意して下さい (<code>get(0)</code> ではなく <code>get(0)()</code>)。</p>
+<p>内部の値を表示するためには、参照された関数のアクセサの呼び出しの後に、2つ目の関数呼び出しを含める必要があることに注意して下さい (<code>get(0)</code> ではなく <code>get(0)()</code>)。</p>
 
 <p>この例では、JavaScript からテーブルを作成してアクセスしていますが、wasm インスタンス内で同じテーブルを参照して呼び出すこともできます。</p>
 

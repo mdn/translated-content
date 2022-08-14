@@ -30,17 +30,17 @@ if(y + dy &gt; canvas.height-ballRadius || y + dy &lt; ballRadius) {
 
 <p>まず、 <code>setInterval()</code> を最初に呼び出しているところを置き換えます。</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="line-numbers language-html"><code class="language-html">setInterval(draw, 10);</code></pre>
 
-<p> </p>
+<p> </p>
 
 <p>置き換え後</p>
 
 <pre class="line-numbers language-html"><code class="language-html">var interval = setInterval(draw, 10);</code></pre>
 
-<p> </p>
+<p> </p>
 
 <p>次に2番目のif節を次の内容で置き換えましょう。</p>
 

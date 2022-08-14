@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 
 <h2 id="Summary" name="Summary">Resumo</h2>
 
-<p>O método <strong>push() </strong>adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.</p>
+<p>O método <strong>push() </strong>adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.</p>
 
 <pre class="brush: js">var numeros = [1, 2, 3];
 numeros.push(4);
@@ -36,13 +36,13 @@ console.log(numeros); // [1, 2, 3, 4, 5, 6, 7]
 
 <h3 id="Returns" name="Returns">Retorno</h3>
 
-<p>O novo valor da propriedade {{jsxref("Array.length", "length")}} do objeto no qual o método foi chamado.</p>
+<p>O novo valor da propriedade {{jsxref("Array.length", "length")}} do objeto no qual o método foi chamado.</p>
 
 <p><strong style="font-size: 2.14285714285714rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Descrição</strong></p>
 
-<p>O método <code style="font-style: normal;">push</code> adiciona valores a um array.</p>
+<p>O método <code style="font-style: normal;">push</code> adiciona valores a um array.</p>
 
-<p>Esse método é intencionalmente genérico. Podendo ser utilizado por {{jsxref("Function.call", "call()")}} ou {{jsxref("Function.apply", "apply()")}} em objetos que implementam arrays.  O método <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">push </span><span style="line-height: 1.5;">depende da propriedade </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">length</span><span style="line-height: 1.5;"> para determinar onde começar a inserir os valores. Caso a propriedade <code>length</code></span> não possa ser convertida em número, é utilizado 0 como índice. Isto inclui a possibilidade de <code>length </code>não existir, nesse caso, essa propriedade será criada.</p>
+<p>Esse método é intencionalmente genérico. Podendo ser utilizado por {{jsxref("Function.call", "call()")}} ou {{jsxref("Function.apply", "apply()")}} em objetos que implementam arrays.  O método <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">push </span><span style="line-height: 1.5;">depende da propriedade </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: 1.5;">length</span><span style="line-height: 1.5;"> para determinar onde começar a inserir os valores. Caso a propriedade <code>length</code></span> não possa ser convertida em número, é utilizado 0 como índice. Isto inclui a possibilidade de <code>length </code>não existir, nesse caso, essa propriedade será criada.</p>
 
 <p>Os únicos objetos que implementam nativamente array são as {{jsxref("Global_Objects/String", "strings", "", 1)}}, porém elas não são adequadas para a aplicação desse método, pois são imutáveis.</p>
 
@@ -50,7 +50,7 @@ console.log(numeros); // [1, 2, 3, 4, 5, 6, 7]
 
 <h3 id="Example:_Adding_elements_to_an_array" name="Example:_Adding_elements_to_an_array">Exemplo: Adicionando elementos a um array</h3>
 
-<p>O seguinte código cria um array <code>esportes</code> que contém dois elementos. Então adiciona dois elementos a ele. A variável <code>total</code> contém o novo comprimento do array.</p>
+<p>O seguinte código cria um array <code>esportes</code> que contém dois elementos. Então adiciona dois elementos a ele. A variável <code>total</code> contém o novo comprimento do array.</p>
 
 <pre class="brush: js">var esportes = ['futebol', 'beisebol'];
 var total = esportes.push('handebol', 'natacao');
@@ -59,7 +59,7 @@ console.log(esportes); // ['futebol, 'beisebol', 'handebol', 'natacao']
 console.log(total);  // 4
 </pre>
 
-<h3 id="Example:_Adding_elements_to_an_array" name="Example:_Adding_elements_to_an_array" style="line-height: 24px; font-size: 1.71428571428571rem;">Exemplo: Fusão de dois arrays</h3>
+<h3 id="Example:_Adding_elements_to_an_array" name="Example:_Adding_elements_to_an_array" style="line-height: 24px; font-size: 1.71428571428571rem;">Exemplo: Fusão de dois arrays</h3>
 
 <p>Este exemplo utiliza {{jsxref("Function.apply", "apply()")}} para adicionar todos os elementos de um segundo array.</p>
 
@@ -112,67 +112,19 @@ console.log(obj.length);
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade em navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatChrome("1.0")}}</td>
-   <td>{{CompatGeckoDesktop("1.7")}}</td>
-   <td>{{CompatIE("5.5")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th><span style="font-family: 'Open Sans Light',sans-serif; font-size: 16px; line-height: 16px;">Característica</span></th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Móvel (Gecko)</th>
-   <th>IE M<span style="font-family: 'Open Sans Light',sans-serif; font-size: 16px; line-height: 16px;">óvel</span></th>
-   <th>Opera <span style="font-family: 'Open Sans Light',sans-serif; font-size: 16px; line-height: 16px;">Móvel</span></th>
-   <th>Safari <span style="font-family: 'Open Sans Light',sans-serif; font-size: 16px; line-height: 16px;">Móvel</span></th>
-  </tr>
-  <tr>
-   <td><span style="font-size: 12px; line-height: 18px;">Suporte básico</span></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Array.push")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

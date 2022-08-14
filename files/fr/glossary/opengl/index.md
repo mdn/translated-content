@@ -14,4 +14,4 @@ original_slug: Glossaire/OpenGL
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "OpenGL")}} sur Wikipédia
+- [OpenGL](https://fr.wikipedia.org/wiki/OpenGL) sur Wikipédia

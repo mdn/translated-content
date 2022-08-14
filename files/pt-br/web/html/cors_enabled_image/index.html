@@ -15,15 +15,15 @@ original_slug: Web/HTML/CORS_imagens_habilitadas
 
 <h2 id="O_que_é_um_contaminado_canvas">O que é um "contaminado" canvas?</h2>
 
-<p>Embora você possa usar imagens sem aprovação do CORS em seu canvas, criando contaminação ao canvas. Uma vez o canvas tenhya sido "contaminado" você não pode mais "puxar" informações do canvas.Por exemplo, você pode não mais usar os métodos canvas toBlob(), toDataURL(), ou getImageData(), fazendo isto você irá lançar um erro de sergurança.</p>
+<p>Embora você possa usar imagens sem aprovação do CORS em seu canvas, criando contaminação ao canvas. Uma vez o canvas tenhya sido "contaminado" você não pode mais "puxar" informações do canvas.Por exemplo, você pode não mais usar os métodos canvas toBlob(), toDataURL(), ou getImageData(), fazendo isto você irá lançar um erro de sergurança.</p>
 
-<p>Esta proteção de usuário tem tido dados expostos por uso de informações de imagens de site web remoto sem permissão.</p>
+<p>Esta proteção de usuário tem tido dados expostos por uso de informações de imagens de site web remoto sem permissão.</p>
 
 <h2 id="Exemplo_Armazenando_uma_imagem_de_uma_origem_estrangeira">Exemplo: Armazenando uma imagem de uma origem estrangeira</h2>
 
-<p> </p>
+<p> </p>
 
-<p>Você precisa ter um servidor hospedando as imagenscom o apropriado Access-Control-Allow-Origin cabeçalho. Adicionando atributos crossOrigin faz uma requisição ao cabeçalho. Você pode usar este exemplo das <a href="https://github.com/h5bp/server-configs-apache/blob/fc379c45f52a09dd41279dbf4e60ae281110a5b0/src/.htaccess#L36-L53">Configurações Apache Server HTML5 Boilerplate</a> para aproximadamente responder com este cabeçalho de resposta.</p>
+<p>Você precisa ter um servidor hospedando as imagenscom o apropriado Access-Control-Allow-Origin cabeçalho. Adicionando atributos crossOrigin faz uma requisição ao cabeçalho. Você pode usar este exemplo das <a href="https://github.com/h5bp/server-configs-apache/blob/fc379c45f52a09dd41279dbf4e60ae281110a5b0/src/.htaccess#L36-L53">Configurações Apache Server HTML5 Boilerplate</a> para aproximadamente responder com este cabeçalho de resposta.</p>
 
 <pre class="brush:xml">&lt;IfModule mod_setenvif.c&gt;
     &lt;IfModule mod_headers.c&gt;
@@ -34,7 +34,7 @@ original_slug: Web/HTML/CORS_imagens_habilitadas
     &lt;/IfModule&gt;
 &lt;/IfModule&gt;</pre>
 
-<p>Dado que está tudo classificado, você permiti salvar àquelas imagens no <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">Armazenamento DOM</a></p>
+<p>Dado que está tudo classificado, você permiti salvar àquelas imagens no <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">Armazenamento DOM</a></p>
 
 <pre class="brush: js">var img = new Image,
     canvas = document.createElement("canvas"),
@@ -56,55 +56,7 @@ if ( img.complete || img.complete === undefined ) {
     img.src = src;
 }</pre>
 
-<h2 id="Compatiibilidade_do_Browser">Compatiibilidade do Browser</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>13</td>
-   <td>8</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
 <h2 id="Veja_também">Veja também</h2>
 

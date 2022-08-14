@@ -18,7 +18,7 @@ Google Chrome est un {{glossary("navigateur")}} Web gratuit développé par Goog
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Google Chrome", "Google Chrome")}} sur Wikipédia
+- [Google Chrome](https://fr.wikipedia.org/wiki/Google_Chrome) sur Wikipédia
 
 ### Pour les utilisateurs de Chrome
 

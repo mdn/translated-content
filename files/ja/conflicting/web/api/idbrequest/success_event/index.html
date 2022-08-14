@@ -31,7 +31,7 @@ original_slug: Web/API/IDBRequest/onsuccess
 
 <p>下記の例は、指定されたレコードタイトルをリクエストします。リクエストの<code>onsuccess</code>イベントハンドラは{{domxref("IDBObjectStore")}} (<code>objectStoreTitleRequest.result</code>として利用可能)からレコードを取得し、そのプロパティを更新してオブジェクトストアに書き戻します。</p>
 
-<p>完全な例は<span style="line-height: 1.5;"> </span><a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">example live</a>)を参照してください。</p>
+<p>完全な例は<span style="line-height: 1.5;"> </span><a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app (</span><a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">example live</a>)を参照してください。</p>
 
 <pre class="brush: js;highlight:[11]" style="font-size: 14px;">var title = "Walk dog";
 
@@ -52,7 +52,7 @@ objectStoreTitleRequest.onsuccess = function() {
   var updateTitleRequest = objectStore.put(data);
 
   // この新しいリクエストが成功すると、
-  // 表示更新のためにdisplayData()が再度実行される
+  // 表示更新のためにdisplayData()が再度実行される
   <span style="font-size: 1rem;">updateTitleRequest</span><span style="font-size: 1rem;">.onsuccess = function() {</span>
     displayData();
   };

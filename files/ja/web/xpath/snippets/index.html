@@ -15,7 +15,7 @@ translation_of: Web/XPath/Snippets
 
 <p>次のカスタムユーティリティ関数を使用して、指定されたXMLノードのXPath式を評価できます。最初の引数はDOMノードまたはDocumentオブジェクトで、2番目の引数はXPath式を定義する文字列です。</p>
 
-<h5 id="例ノード指定のカスタム_evaluateXPath()_ユーティリティ関数を定義する">例:ノード指定のカスタム <code>evaluateXPath()</code> ユーティリティ関数を定義する</h5>
+<h5 id="例ノード指定のカスタム_evaluateXPath()_ユーティリティ関数を定義する">例:ノード指定のカスタム <code>evaluateXPath()</code> ユーティリティ関数を定義する</h5>
 
 <pre class="brush: js">// Evaluate an XPath expression aExpression against a given DOM node
 // or Document object (aNode), returning the results as an array
@@ -23,8 +23,8 @@ translation_of: Web/XPath/Snippets
 // initial work.
 function evaluateXPath(aNode, aExpr) {
   var xpe = new XPathEvaluator();
-  var nsResolver = xpe.createNSResolver(aNode.ownerDocument == null ?
-    aNode.documentElement : aNode.ownerDocument.documentElement);
+  var nsResolver = xpe.createNSResolver(aNode.ownerDocument == null ?
+    aNode.documentElement : aNode.ownerDocument.documentElement);
   var result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   var found = [];
   var res;
@@ -124,7 +124,7 @@ function docEvaluateArray (expr, doc, context, resolver) {
 	var xpath = '';
 	var pos, tempitem2;
 
-	while(el !== xml.documentElement) {
+	while(el !== xml.documentElement) {
 		pos = 0;
 		tempitem2 = el;
 		while(tempitem2) {

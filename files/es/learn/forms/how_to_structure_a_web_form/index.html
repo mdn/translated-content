@@ -39,28 +39,28 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 <h2 id="Los_elementos_&lt;fieldset>_y_&lt;legend>">Los elementos &lt;fieldset&gt; y &lt;legend&gt;</h2>
 
-<p>El elemento {{HTMLElement ("fieldset")}} es una forma cómoda de crear grupos de controles de formulario (también denominados <em>widgets</em>) que comparten el mismo propósito, con fines semánticos y de aplicación de estilo. Puedes etiquetar un elemento {{HTMLElement ("fieldset")}} incluyendo un elemento {{HTMLElement ("legend")}} justo debajo de la etiqueta de apertura {{HTMLElement ("fieldset")}}. El contenido textual del elemento {{HTMLElement ("legend")}} describe formalmente el propósito del elemento {{HTMLElement ("fieldset")}} que está incluido dentro.</p>
+<p>El elemento {{HTMLElement ("fieldset")}} es una forma cómoda de crear grupos de controles de formulario (también denominados <em>widgets</em>) que comparten el mismo propósito, con fines semánticos y de aplicación de estilo. Puedes etiquetar un elemento {{HTMLElement ("fieldset")}} incluyendo un elemento {{HTMLElement ("legend")}} justo debajo de la etiqueta de apertura {{HTMLElement ("fieldset")}}. El contenido textual del elemento {{HTMLElement ("legend")}} describe formalmente el propósito del elemento {{HTMLElement ("fieldset")}} que está incluido dentro.</p>
 
 <p>Muchas tecnologías de asistencia utilizarán el elemento {{HTMLElement ("legend")}} como si fuera una parte de la etiqueta de cada control dentro del elemento {{HTMLElement ("fieldset")}} correspondiente. Por ejemplo, algunos lectores de pantalla como <a href="http://www.freedomscientific.com/products/software/jaws/" rel="external">Jaws</a> y <a href="http://www.nvda-project.org/" rel="external">NVDA</a> leerán el contenido de la leyenda antes de decir la etiqueta de cada control.</p>
 
 <p>Un pequeño ejemplo:</p>
 
 <pre class="brush:html; notranslate">&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Tamaño del zumo de fruta&lt;/legend&gt;
-    &lt;p&gt;
-      &lt;input type="radio" name="size" id="size_1" value="small"&gt;
-      &lt;label for="size_1"&gt;Pequeño&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;input type="radio" name="size" id="size_2" value="medium"&gt;
-      &lt;label for="size_2"&gt;Mediano&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;input type="radio" name="size" id="size_3" value="large"&gt;
-      &lt;label for="size_3"&gt;Grande&lt;/label&gt;
-    &lt;/p&gt;
-  &lt;/fieldset&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Tamaño del zumo de fruta&lt;/legend&gt;
+    &lt;p&gt;
+      &lt;input type="radio" name="size" id="size_1" value="small"&gt;
+      &lt;label for="size_1"&gt;Pequeño&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;input type="radio" name="size" id="size_2" value="medium"&gt;
+      &lt;label for="size_2"&gt;Mediano&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;input type="radio" name="size" id="size_3" value="large"&gt;
+      &lt;label for="size_3"&gt;Grande&lt;/label&gt;
+    &lt;/p&gt;
+  &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
 
 <div class="note">
@@ -98,14 +98,14 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 <p>Por ejemplo, al hacer clic en el texto de la etiqueta «Me gustan las cerezas» del ejemplo siguiente, cambiará el estado seleccionado de la casilla de verificación <em>taste_cherry</em>:</p>
 
 <pre class="brush:html; notranslate">&lt;form&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" id="taste_1" name="taste_cherry" value="cherry"&gt;
+  &lt;p&gt;
+    &lt;input type="checkbox" id="taste_1" name="taste_cherry" value="cherry"&gt;
     &lt;label for="taste_1"&gt;Me gustan las cerezas&lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" id="taste_2" name="taste_banana" value="banana"&gt;
-    &lt;label for="taste_2"&gt;Me gustan los plátanos&lt;/label&gt;
-  &lt;/p&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;input type="checkbox" id="taste_2" name="taste_banana" value="banana"&gt;
+    &lt;label for="taste_2"&gt;Me gustan los plátanos&lt;/label&gt;
+  &lt;/p&gt;
 &lt;/form&gt;</pre>
 
 <div class="note">
@@ -144,7 +144,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 <p>{{EmbedLiveSample("Etiquetas_múltiples", 120, 120)}}</p>
 
-<p>El párrafo de la parte superior establece una regla para los elementos que son obligatorios. La regla ha de incluirse <em>antes</em> de usarse para que tanto los usuarios videntes como los usuarios que utilizan tecnologías de asistencia y lectores de pantalla, sepan lo que significa antes de encontrar un elemento obligatorio. Pero si bien esto ayuda a informar a los usuarios de lo que significa un asterisco, no es posible confiar plenamente en ello. Cuando un lector de pantalla se encuentre con un asterisco pronunciará «estrella». Cuando un usuario vidente pase el ratón por encima, debería aparecer una etiqueta de «obligatorio», lo cual se logra con el uso del atributo <code>title</code>. Pero los títulos que se leen en voz alta dependen de la configuración del lector de pantalla, por lo que es más fiable incluir también el atributo <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code>, que los lectores de pantalla siempre leen.</p>
+<p>El párrafo de la parte superior establece una regla para los elementos que son obligatorios. La regla ha de incluirse <em>antes</em> de usarse para que tanto los usuarios videntes como los usuarios que utilizan tecnologías de asistencia y lectores de pantalla, sepan lo que significa antes de encontrar un elemento obligatorio. Pero si bien esto ayuda a informar a los usuarios de lo que significa un asterisco, no es posible confiar plenamente en ello. Cuando un lector de pantalla se encuentre con un asterisco pronunciará «estrella». Cuando un usuario vidente pase el ratón por encima, debería aparecer una etiqueta de «obligatorio», lo cual se logra con el uso del atributo <code>title</code>. Pero los títulos que se leen en voz alta dependen de la configuración del lector de pantalla, por lo que es más fiable incluir también el atributo <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a></code>, que los lectores de pantalla siempre leen.</p>
 
 <p>Las variantes anteriores aumentan en efectividad a medida que se avanza por ellas:</p>
 
@@ -231,12 +231,12 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
       &lt;input type="email" id="mail" name="usermail"&gt;
     &lt;/p&gt;
     &lt;p&gt;
-      &lt;label for="pwd"&gt;
-        &lt;span&gt;Contraseña:&lt;/span&gt;
-        &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
-      &lt;/label&gt;
-      &lt;input type="password" id="pwd" name="password"&gt;
-    &lt;/p&gt;
+      &lt;label for="pwd"&gt;
+        &lt;span&gt;Contraseña:&lt;/span&gt;
+        &lt;strong&gt;&lt;abbr title="required"&gt;*&lt;/abbr&gt;&lt;/strong&gt;
+      &lt;/label&gt;
+      &lt;input type="password" id="pwd" name="password"&gt;
+    &lt;/p&gt;
 &lt;/section&gt;</pre>
  </li>
  <li>La segunda <code>&lt;section&gt;</code> de nuestro formulario es la información de pago. Hay tres controles diferentes, junto con sus etiquetas, cada uno contenido dentro de un elemento <code>&lt;p&gt;</code>. El primero es un menú desplegable ({{htmlelement ("select")}}) para seleccionar el tipo de tarjeta de crédito. El segundo es un elemento <code>&lt;input&gt;</code> de tipo <code>tel</code>, para introducir un número de tarjeta de crédito. Si bien podríamos haber usado el tipo <code>number</code>, no queremos una interfaz de usuario con control de número. El último es un elemento <code>&lt;input&gt;</code> de tipo <code>date</code>, para introducir la fecha de caducidad de la tarjeta; aparecerá como un control de selección de fecha en navegadores compatibles, y como una entrada de texto normal en navegadores no compatibles. Estos tipos de entrada más nuevos volverán a aparecer en el artículo <a href="/en-US/docs/Learn/Forms/HTML5_input_types">Tipos de entrada HTML5</a>.<br>
@@ -282,7 +282,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 <h2 id="¡Prueba_tus_habilidades!">¡Prueba tus habilidades!</h2>
 
-<p>Has llegado al final de este artículo pero ¿puedes recordar la información más importante? Puedes encontrar pruebas adicionales para comprobar que has comprendido la información antes de continuar — visita <a class="external external-icon" href="/en-US/docs/Learn/Forms/Test_your_skills:_Form_structure" rel="noopener">Prueba tus habilidades: Estructura de formularios</a>.</p>
+<p>Has llegado al final de este artículo pero ¿puedes recordar la información más importante? Puedes encontrar pruebas adicionales para comprobar que has comprendido la información antes de continuar — visita <a class="external external-icon" href="/en-US/docs/Learn/Forms/Test_your_skills:_Form_structure" rel="noopener">Prueba tus habilidades: Estructura de formularios</a>.</p>
 
 <h2 id="Resumen">Resumen</h2>
 

@@ -19,5 +19,5 @@ Brotli 与大多数现代浏览器兼容，但同时仍需考虑回落机制。
 
 - [brotli.org](https://brotli.org/)
 - [Brotli 的 Github 仓库](https://github.com/google/brotli)
-- 维基百科上的 {{interWiki("wikipedia", "Brotli")}}
+- 维基百科上的 [Brotli](https://zh.wikipedia.org/wiki/Brotli)
 - [Brotli on Caniuse](https://caniuse.com/#feat=brotli)

@@ -17,4 +17,4 @@ C'est une technique utile qui permet aux développeurs Web de se concentrer sur 
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Graceful degradation")}} sur Wikipedia
+- [Tolérance aux pannes](https://fr.wikipedia.org/wiki/Tol%C3%A9rance_aux_pannes) sur Wikipédia

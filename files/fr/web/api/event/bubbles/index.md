@@ -17,7 +17,9 @@ Indique si l'événement donné se propage à travers le DOM ou non.
 
 ## Syntaxe
 
-    event.bubbles
+```js
+event.bubbles
+```
 
 ### Valeur
 
@@ -53,4 +55,4 @@ function goInput(e) {
 
 ## Voir aussi
 
-- [stopPropagation](/en-US/docs/Web/API/Event/stopPropagation) pour empêcher la propagation
+- [stopPropagation](/fr/docs/Web/API/Event/stopPropagation) pour empêcher la propagation

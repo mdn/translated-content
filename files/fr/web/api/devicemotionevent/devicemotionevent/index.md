@@ -16,7 +16,9 @@ Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotion
 
 ## Syntaxe
 
-    var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```js
+var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+```
 
 ### Paramètres
 

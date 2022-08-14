@@ -11,6 +11,6 @@ CalDAV（{{Glossary("WebDAV")}} 的日历扩展 (Calendaring extensions to WebDA
 
 ## 参见
 
-- 维基百科上的 {{Interwiki("wikipedia", "CalDAV")}}
+- 维基百科上的 [CalDAV](https://zh.wikipedia.org/wiki/CalDAV)
 - [RFC 4791: Calendaring extensions to WebDAV (CalDAV)](https://datatracker.ietf.org/doc/html/rfc4791)
 - [RFC 6638: Scheduling Extensions to CalDAV](https://datatracker.ietf.org/doc/html/rfc6638)

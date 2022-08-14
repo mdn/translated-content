@@ -11,7 +11,9 @@ Retourne le temps (en millisecondes) à partir duquel l'événement a été cré
 
 ## Syntaxe
 
-    event.timeStamp
+```js
+event.timeStamp
+```
 
 ### Valeur
 

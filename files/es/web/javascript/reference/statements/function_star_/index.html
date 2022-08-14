@@ -12,10 +12,10 @@ original_slug: Web/JavaScript/Referencia/Sentencias/function*
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>La declaración <code><strong>function*</strong></code> (la palabra clave <code>function</code> seguida de un asterisco) define una <em>función generadora</em>, que devuelve un objeto {{jsxref("Global_Objects/Generator","Generator")}}.</p>
+<p>La declaración <code><strong>function*</strong></code> (la palabra clave <code>function</code> seguida de un asterisco) define una <em>función generadora</em>, que devuelve un objeto {{jsxref("Global_Objects/Generator","Generator")}}.</p>
 
 <div class="noinclude">
-<p>También puedes definir funciones generadoras usando el constructor {{jsxref("GeneratorFunction")}} y una {{jsxref("Operators/function*", "function* expression")}}.</p>
+<p>También puedes definir funciones generadoras usando el constructor {{jsxref("GeneratorFunction")}} y una {{jsxref("Operators/function*", "function* expression")}}.</p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -32,7 +32,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/function*
 
 <dl>
  <dt><code>param</code></dt>
- <dd>El nombre de los argumentos que se le van a pasar a la función. Una función puede tener hasta 255 argumentos.</dd>
+ <dd>El nombre de los argumentos que se le van a pasar a la función. Una función puede tener hasta 255 argumentos.</dd>
 </dl>
 
 <dl>
@@ -44,7 +44,7 @@ original_slug: Web/JavaScript/Referencia/Sentencias/function*
 
 <p>Los generadores son funciones de las que se puede salir y volver a entrar. Su contexto (asociación de variables) será conservado entre las reentradas.</p>
 
-<p>La llamada a una función generadora no ejecuta su cuerpo inmediatamente; se devuelve un objeto <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">iterador</a> para la función en su lugar. Cuando el metodo <code>next()</code> del iterador es llamado , el cuerpo de la función generadora es ejecutado hasta la primera expresión {{jsxref("Operators/yield", "yield")}}, la cual especifica el valor que será retornado por el iterador o con, {{jsxref("Operators/yield*", "yield*")}}, delega a otra función generadora. El método <code>next()</code> retorna un objeto con una propiedad <em>value</em> que contiene el valor bajo el operador yield y una propiedad <em>done </em>que indica, con un booleano, si la función generadora ha hecho yield al último valor.</p>
+<p>La llamada a una función generadora no ejecuta su cuerpo inmediatamente; se devuelve un objeto <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">iterador</a> para la función en su lugar. Cuando el metodo <code>next()</code> del iterador es llamado , el cuerpo de la función generadora es ejecutado hasta la primera expresión {{jsxref("Operators/yield", "yield")}}, la cual especifica el valor que será retornado por el iterador o con, {{jsxref("Operators/yield*", "yield*")}}, delega a otra función generadora. El método <code>next()</code> retorna un objeto con una propiedad <em>value</em> que contiene el valor bajo el operador yield y una propiedad <em>done </em>que indica, con un booleano, si la función generadora ha hecho yield al último valor.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -64,7 +64,7 @@ console.log(gen.next().value); // 2
 console.log(gen.next().value); // undefined
 // ...</pre>
 
-<h3 id="Ejemplo_con_yield*">Ejemplo con yield*</h3>
+<h3 id="Ejemplo_con_yield*">Ejemplo con yield*</h3>
 
 <pre class="brush: js">function* anotherGenerator(i) {
   yield i + 1;
@@ -124,7 +124,7 @@ console.log(gen.next().value); // 20
  <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
  <li>Other web resources:
   <ul>
-   <li><a href="http://facebook.github.io/regenerator/">Regenerator</a> an ES2015 generator compiler to ES5</li>
+   <li><a href="http://facebook.github.io/regenerator/">Regenerator</a> an ES2015 generator compiler to ES5</li>
    <li><a href="http://www.youtube.com/watch?v=qbKWsbJ76-s">Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013</a></li>
    <li><a href="https://www.youtube.com/watch?v=ZrgEZykBHVo&amp;list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&amp;index=1">Hemanth.HM: The New gen of *gen(){}</a></li>
    <li><a href="http://taskjs.org/">Task.js</a></li>

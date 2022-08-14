@@ -110,7 +110,7 @@ p {
 
 <pre class="brush: js">function toggleRadius() {
   var circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
+  circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 }
 </pre>
 
@@ -157,20 +157,20 @@ p {
 
 <pre class="brush: html"><span>&lt;svg height="0"&gt;
 </span>  &lt;filter id="f3"&gt;
-    &lt;feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
-      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/&gt;
-  &lt;/filter&gt;
+    &lt;feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
+      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/&gt;
+  &lt;/filter&gt;
   &lt;filter id="f4"&gt;
-    &lt;feSpecularLighting surfaceScale="5" specularConstant="1"
-                        specularExponent="10" lighting-color="white"&gt;
-      &lt;fePointLight x="-5000" y="-10000" z="20000"/&gt;
-    &lt;/feSpecularLighting&gt;
+    &lt;feSpecularLighting surfaceScale="5" specularConstant="1"
+                        specularExponent="10" lighting-color="white"&gt;
+      &lt;fePointLight x="-5000" y="-10000" z="20000"/&gt;
+    &lt;/feSpecularLighting&gt;
   &lt;/filter&gt;
   &lt;filter id="f5"&gt;
-    &lt;feColorMatrix values="1 0 0 0 0
-                           0 1 0 0 0
-                           0 0 1 0 0
-                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/&gt;
+    &lt;feColorMatrix values="1 0 0 0 0
+                           0 1 0 0 0
+                           0 0 1 0 0
+                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/&gt;
   &lt;/filter&gt;
 <span>&lt;/svg&gt;</span></pre>
 

@@ -35,7 +35,7 @@ translation_of: Learn/Performance/perceived_performance
 
 <p>サイトがどのくらい速く読み込まれるか、ユーザーのインタラクションにどのくらい良く反応すかの知覚はきわめて重要です。それは定量化することが難しい一方、実際のダウンロード時間以上に重要です。サイトにはそれ以上高速化することができない領域があるかもしれません。しかし、他のセクションで議論した統計値がそれ以上改善できない場合でも、サイトをより速く感じさせることは可能です。</p>
 
-<p>ユーザーがどう感じるかを計測するたった一つの統計値 (unicorn metric) はありませんが、統計値は改善（または悪化）を判断するために有用です。関連する計測値には、First Meaningful Paint  (FMP)、Largetst contentful paint (LCP)、Time to interactive (TTI)、render start、DOM interactive、Speed Index があります。</p>
+<p>ユーザーがどう感じるかを計測するたった一つの統計値 (unicorn metric) はありませんが、統計値は改善（または悪化）を判断するために有用です。関連する計測値には、First Meaningful Paint  (FMP)、Largetst contentful paint (LCP)、Time to interactive (TTI)、render start、DOM interactive、Speed Index があります。</p>
 
 <p><strong><a href="/ja/docs/Glossary/First_paint">First paint</a></strong> はブラウザーから報告され、ページの変更が始まる時間をミリ秒単位で提供します。しかし、この変更はシンプルな背景色の更新や、より気付きづらい小さなものである可能性があります。それは変更の完了を意味しておらず、目に見えるものが何も描画されていない時間を報告することもあります。<strong><a href="/ja/docs/Glossary/First_contentful_paint">First Contentful Paint</a> (FCP)</strong> はブラウザーが最初に意味のある何か、テキスト、フォアグラウンド・バックグラウンドの画像、またはキャンバスや SVG を描画した時間を報告します。読み込みの経験のまさに始まりを補足します。しかし、それはただ単なるコンテンツであるため、意味のあるコンテンツ、あるいはユーザーが消費できるコンテンツであることを意味していません。<strong><a href="/ja/docs/Glossary/first_meaningful_paint">First Meaningful Paint</a> (FMP)</strong> は実際に意味のあるコンテンツがスクリーンに映し出された時間です。それは、ユーザーが知覚する読み込みの経験としてより適切な統計値ですが、まだ理想的とは言えません。<strong>Largest contentful paint (LCP)</strong> は、ビューポートの中で最も大きい目に見えるコンテンツの要素が描画される時間を報告する、<a href="https://wicg.github.io/largest-contentful-paint/">Largest Contentful Paint API</a> の中で定義された統計値です。</p>
 

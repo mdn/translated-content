@@ -18,9 +18,11 @@ translation_of: Web/API/HTMLMediaElement/captureStream
 
 **`captureStream()`** est une méthode de l'interface {{domxref("HTMLMediaElement")}} retournant un objet {{domxref('MediaStream')}} qui diffuse en temps réel l'enregistrement d'un contenu obtenu dans un élément média.
 
-## Syntax
+## Syntaxe
 
-    var mediaStream = mediaElement.captureStream()
+```js
+var mediaStream = mediaElement.captureStream();
+```
 
 ### Paramètres
 
@@ -28,7 +30,7 @@ Aucun.
 
 ### Retours
 
-Un objet {{domxref('MediaStream')}} pouvant être utilisé en tant que source pour des données audio et/ou vidéo par d'autres média traitant du code, ou comme source pour [WebRTC](/en-US/docs/Glossary/WebRTC).
+Un objet {{domxref('MediaStream')}} pouvant être utilisé en tant que source pour des données audio et/ou vidéo par d'autres média traitant du code, ou comme source pour [WebRTC](/fr/docs/Glossary/WebRTC).
 
 ## Exemple
 
@@ -42,7 +44,7 @@ document.querySelector('.playAndRecord').addEventListener('click', function() {
 });
 ```
 
-Voir [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element) pour des exemples et explications plus détaillées et complexes.
+Voir [Recording a media element](/fr/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element) pour des exemples et explications plus détaillées et complexes.
 
 ## Spécifications
 
@@ -69,8 +71,8 @@ Cependant, `captureStream()` reste préfixé `mozCaptureStream()` sur Firefox po
 
 ## Voir aussi
 
-- [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
-- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Recording a media element](/fr/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
+- [MediaStream Recording API](/fr/docs/Web/API/MediaStream_Recording_API)
 - {{domxref("HTMLCanvasElement.captureStream()")}}
 - {{domxref("MediaStream")}}
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [WebRTC API](/fr/docs/Web/API/WebRTC_API)

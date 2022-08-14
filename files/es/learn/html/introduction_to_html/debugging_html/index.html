@@ -144,7 +144,7 @@ original_slug: Learn/HTML/Introduccion_a_HTML/Debugging_HTML
 <p>La lista de mensajes de error que nos presenta el validador suele ayudar, pero a veces, no resultan muy útiles; con un poco de práctica aprenderemos a interpretar la lista para arreglar nuestro código. Veamos los mensajes de error y su significado. Observamos que cada mensaje se presenta con un número de línea y de columna, para ayudar a localizar el error más fácilmente.</p>
 
 <ul>
- <li>"<span>Consider adding a </span><code>lang</code><span> attribute to the </span><code>html</code><span> start tag to declare the language of this document.": No se trata de un error, sino de una advertencia (warning). La <a class="external external-icon" href="https://www.w3.org/International/questions/qa-html-language-declarations" rel="noopener">recomendación</a> es definir siempre un idioma, y este "warning" explica cómo hacerlo..</span></li>
+ <li>"<span>Consider adding a </span><code>lang</code><span> attribute to the </span><code>html</code><span> start tag to declare the language of this document.": No se trata de un error, sino de una advertencia (warning). La <a class="external external-icon" href="https://www.w3.org/International/questions/qa-html-language-declarations" rel="noopener">recomendación</a> es definir siempre un idioma, y este "warning" explica cómo hacerlo..</span></li>
  <li>"End tag <code>li</code> implied, but there were open elements" (2 instancias): Estos mensajes indican que un elemento que ha sido abierto debe ser cerrado. La etiqueta de cierre se supone, pero no está ahí. La información de la línea/columna apunta a la primera línea después de donde debería estar la etiqueta de cierre; es una buena pista para ver qué pasa.</li>
  <li>"Unclosed element <code>strong</code>": Un elemento {{htmlelement("strong")}} no ha sido cerrado, y la línea/columna apunta directamente al lugar del error.</li>
  <li>"End tag <code>strong</code> violates nesting rules": Este apunta a elementos que están incorrectamente anidados, y la línea/columna nos indica donde están.</li>
@@ -161,7 +161,7 @@ original_slug: Learn/HTML/Introduccion_a_HTML/Debugging_HTML
 
 <p><span>No debemos preocuparnos si no podemos corregir todos los mensajes de error; es práctico tratar de arreglar unos pocos errores cada vez y volver a pasar el validador para ver los que quedan. A veces, al arreglar unos cuantos se arreglan automáticamente otros muchos; con frecuencia muchos errores los causa uno solo en un efecto dominó.</span></p>
 
-<p><span>Sabremos  que todos los errores están arreglados cuando veamos el mensaje siguiente: </span></p>
+<p><span>Sabremos  que todos los errores están arreglados cuando veamos el mensaje siguiente: </span></p>
 
 <p><img alt='Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."' src="https://mdn.mozillademos.org/files/12445/valid-html-banner.png" style="display: block; margin: 0 auto;"></p>
 

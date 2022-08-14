@@ -22,13 +22,15 @@ Il y a une confusion fréquente autour de la signification et de l'utilisation d
 
 ## Syntaxe
 
-    serviceWorkerContainer.register(scriptURL, options)
-      .then(function(serviceWorkerRegistration) { ... })
+```js
+serviceWorkerContainer.register(scriptURL, options)
+  .then(function(serviceWorkerRegistration) { ... })
+```
 
 ### Paramètres
 
 - `scriptURL`
-  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) valide.
+  - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) valide.
 - `options` {{optional_inline}}
 
   - : Un objet contenant les options d'enregistrement. Les options sont:

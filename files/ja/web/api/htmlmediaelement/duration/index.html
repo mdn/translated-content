@@ -1,62 +1,45 @@
 ---
 title: HTMLMediaElement.duration
 slug: Web/API/HTMLMediaElement/duration
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
   - HTMLMediaElement
   - Property
+  - Read-only
+  - Time
   - Web
+  - duration
+  - seconds
+browser-compat: api.HTMLMediaElement.duration
 translation_of: Web/API/HTMLMediaElement/duration
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLMediaElement.duration</code></strong> プロパティは、メディアの長さを秒単位で示します。 使用可能なメディアデータがない場合はゼロになります。</span></p>
+{{domxref("HTMLMediaElement")}} の読み取り専用プロパティ **`duration`** は、この要素のメディアの長さを秒単位で表します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="brush: js">var <em>myDuration</em> = <em>audioOrVideo</em>.duration</pre>
+メディアの再生時間を秒単位で示す倍精度浮動小数点値。メディアデータがない場合、値 `NaN` を返します。ライブメディアストリームのように、要素のメディアの再生時間が不明な場合、 `duration` の値は `+Infinity` となります。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-<p><code>double</code> 型。 メディアデータは利用可能だが長さが不明な場合、この値は <code>NaN</code> です。 メディアがストリーミングされ、事前定義された長さを持たない場合、値は <code>Inf</code> です。</p>
-
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.duration); // NaN
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-media-duration", "HTMLMediaElement.duration")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.duration")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLMediaElement.duration")}}</p>
-
-<h2 id="See_Also" name="See_Also">関連情報</h2>
-
-<ul>
- <li>これを定義するインターフェース、{{domxref("HTMLMediaElement")}}。</li>
-</ul>
+- [ウェブメディア技術](/ja/docs/Web/Media)
+- {{domxref("HTMLMediaElement.currentTime")}}: メディアの現在の再生位置
+- {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素

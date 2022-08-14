@@ -12,20 +12,20 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 <div>{{jsSidebar("Functions")}}</div>
 </div>
 
-<p>Объект <code><strong>arguments</strong></code> — это подобный массиву объект, который содержит аргументы, переданные в функцию.</p>
+<p>Объект <code><strong>arguments</strong></code> — это подобный массиву объект, который содержит аргументы, переданные в функцию.</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание:</strong> Если вы пишите ES6-совместимый код, то лучше использовать <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточные параметры</a>.</p>
+<p><strong>Примечание:</strong> Если вы пишете ES6-совместимый код, то лучше использовать <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточные параметры</a>.</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Примечание:</strong> "Подобный массиву" означает, что <code>arguments</code> имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при это он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание">§Описании</a>.</p>
+<p><strong>Примечание:</strong> "Подобный массиву" означает, что <code>arguments</code> имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в <a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание">§Описании</a>.</p>
 </div>
 
 <p>{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}</p>
 
 <div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 
 <h2 id="Описание">Описание</h2>
 
-<p>Объект <code>arguments</code> — это локальная переменная, доступная внутри любой (нестрелочной) функции. Объект <code>arguments</code> позволяет ссылаться на аргументы функции внутри неё. Он состоит из переданных в функцию аргументов, индексация начинается с 0. Например, если в функцию было передано 3 аргумента, обратиться к ним можно следующим образом:</p>
+<p>Объект <code>arguments</code> - это локальная переменная, доступная внутри любой (нестрелочной) функции. Объект <code>arguments</code> позволяет ссылаться на аргументы функции внутри неё. Он состоит из переданных в функцию аргументов, индексация начинается с 0. Например, если в функцию было передано 3 аргумента, обратиться к ним можно следующим образом:</p>
 
 <pre class="brush: js">arguments[0]
 arguments[1]
@@ -45,7 +45,7 @@ arguments[2]
 
 <pre class="brush: js">arguments[1] = 'new value';</pre>
 
-<p>Объект <code>arguments</code> не является {{jsxref("Array")}}. Он похож на массив, но не обладает ни одним из его свойств, кроме <code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">length</a></code>. Например, у него нет метода <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="JavaScript/Reference/Global_Objects/Array/pop">pop</a></code>. Однако он может быть преобразован в обычный массив:</p>
+<p>Объект <code>arguments</code> не является {{jsxref("Array")}}. Он похож на массив, но не обладает ни одним из его свойств, кроме <code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">length</a></code>. Например, у него нет метода <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="JavaScript/Reference/Global_Objects/Array/pop">pop</a></code>. Однако, он может быть преобразован в обычный массив:</p>
 
 <pre class="brush: js">var args = Array.prototype.slice.call(arguments);
 <code>var args = [].slice.call(arguments);
@@ -56,27 +56,27 @@ const args = Array.from(arguments);</code>
 </pre>
 
 <div class="warning">
-<p>Использование <code>slice</code> на объекте <code>arguments</code> не позволяет сделать оптимизации в некоторых JavaScript движках (например, V8 — <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">подробнее</a>). Если они важны, можно попробовать вместо этого создать новый массив с аналогичной длиной и заполнить его элементами объекта <code>arguments.</code> Альтернативный вариант — использовать конструктор <code>Array</code> как функцию:</p>
+<p>Использование <code>slice</code> на объекте <code>arguments</code> не позволяет сделать оптимизации в некоторых JavaScript движках (например, V8 — <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">подробнее</a>). Если они важны, можно попробовать вместо этого создать новый массив с аналогичной длиной и заполнить его элементами объекта <code>arguments.</code> Альтернативный вариант — использовать конструктор <code>Array</code> как функцию:</p>
 
 <pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> args <span class="operator token">=</span> <span class="punctuation token">(</span>arguments<span class="punctuation token">.</span>length <span class="operator token">===</span> <span class="number token">1</span> <span class="operator token">?</span> <span class="punctuation token">[</span>arguments<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">]</span> <span class="punctuation token">:</span> Array<span class="punctuation token">.</span><span class="function token">apply</span><span class="punctuation token">(</span><span class="keyword token">null</span><span class="punctuation token">,</span> arguments<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 </div>
 
-<p>Объект <code>arguments</code> можно использовать при вызове функции с большим количеством аргументов, чем было предусмотрено в её объявлении. Такой способ удобен для функций, в которые допустимо передавать переменное количество аргументов. Можно воспользоваться <code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code>, чтобы определить количество переданных в функцию аргументов, а затем обработать каждый из них с помощью объекта <code>arguments</code>. Чтобы определить количество параметров функции, описанных в её <a href="/en-US/docs/Glossary/Signature/Function">сигнатуре</a>, можно использовать свойство <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/length" title="JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code>.</p>
+<p>Объект <code>arguments</code> можно использовать при вызове функции с бо́льшим количеством аргументов, чем было предусмотрено в её объявлении. Такой способ удобен для функций, в которые допустимо передавать переменное количество аргументов. Можно воспользоваться <code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code>, чтобы определить количество переданных в функцию аргументов, а затем обработать каждый из них с помощью объекта <code>arguments</code>. Чтобы определить количество параметров функции, описанных в её <a href="/en-US/docs/Glossary/Signature/Function">сигнатуре</a>, можно использовать свойство <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/length" title="JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code>.</p>
 
 <h3 id="Использование_typeof_с_объектом_arguments">Использование <code>typeof</code> с объектом <code>arguments</code></h3>
 
-<p>Применение оператора <code>typeof</code> к <code>arguments</code> вернёт 'object'.</p>
+<p>Применение оператора <code>typeof</code> к <code>arguments</code> вернёт 'object'.</p>
 
 <pre><code>console.log(typeof arguments); // 'object'</code></pre>
 
-<p>Определение типов аргументов может быть выполнено применением оператора <code>typeof</code> и индексацией.</p>
+<p>Определение типов аргументов может быть выполнено применением оператора <code>typeof</code> и индексацией.</p>
 
 <pre><code>// выведет тип первого аргумента
 console.log(typeof arguments[0]);</code></pre>
 
 <h3 id="Использование_оператора_расширения_для_объекта_arguments">Использование оператора расширения для объекта <code>arguments</code></h3>
 
-<p>Как и с обычными массива-подобными объектами, для преобразования объекта <code>arguments</code> в обычный массив можно использовать метод {{jsxref("Array.from()")}} или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator">оператор расширения:</a></p>
+<p>Как и с обычными массива-подобными объектами, для преобразования объекта <code>arguments</code> в обычный массив можно использовать метод {{jsxref("Array.from()")}} или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator">оператор расширения:</a></p>
 
 <pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> args <span class="operator token">=</span> Array<span class="punctuation token">.</span><span class="keyword token">from</span><span class="punctuation token">(</span>arguments<span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="keyword token">var</span> args <span class="operator token">=</span> <span class="punctuation token">[</span><span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>arguments<span class="punctuation token">]</span><span class="punctuation token">;</span></code></pre>
@@ -85,7 +85,7 @@ console.log(typeof arguments[0]);</code></pre>
 
 <dl>
  <dt><code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee" title="JavaScript/Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a></code></dt>
- <dd>Ссылка на функцию, которая выполняется в текущий момент.</dd>
+ <dd>Ссылка на функцию, которая выполняется в текущий момент.</dd>
  <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller" title="JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a></code> {{ Obsolete_inline() }}</dt>
  <dd>Ссылка на функцию, которая вызвала функцию, выполняющуюся в текущий момент.</dd>
  <dt><code><a href="/ru/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code></dt>
@@ -105,7 +105,7 @@ console.log(typeof arguments[0]);</code></pre>
   <span class="keyword token">return</span> args<span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span>separator<span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span></code></pre>
 
-<p>Вы можете передать любое количество аргументов в эту функцию. Она создаёт строку, используя каждый аргумент:</p>
+<p>Вы можете передать любое количество аргументов в эту функцию. Она создаёт строку, используя каждый аргумент:</p>
 
 <pre class="brush:js">// возвращает "red, orange, blue"
 myConcat(", ", "red", "orange", "blue");
@@ -116,9 +116,9 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 // выводит "sage. basil. oregano. pepper. parsley"
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
-<h3 id="Функция_создающая_HTML_списки"> Функция, создающая HTML списки</h3>
+<h3 id="Функция_создающая_HTML_списки"> Функция, создающая HTML списки</h3>
 
-<p>В данном примере приведена функция, которая создаёт строку с HTML-разметкой для списка. Единственный её аргумент - строка, определяющая вид списка: если его значение равно "u", формируется неупорядоченный (маркированный) список, а если "o", то упорядоченный (нумерованный):</p>
+<p>В данном примере приведена функция, которая создаёт строку с HTML-разметкой для списка. Единственный её аргумент — строка, определяющая вид списка: если его значение равно "u", формируется неупорядоченный (маркированный) список, а если "o" — то упорядоченный (нумерованный):</p>
 
 <pre class="brush:js">function list(type) {
   var result = "&lt;" + type + "l&gt;&lt;li&gt;";
@@ -148,7 +148,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 <span class="punctuation token">}</span>
 <span class="function token">foo</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">,</span> <span class="number token">3</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// { "0": 1, "1": 2, "2": 3 }</span></code></pre>
 
-<p>Тем не менее, в нестрогих функциях <strong>соответствие между их аргументами и объектом <code>arguments</code></strong> существует только в том случае, если функция <strong>не</strong> содержит никаких <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">оставшихся параметров</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметров по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированных параметров</a>. Например, в функции, приведённой ниже, используется параметр по умолчанию, и в данном случае возвращаемый результат будет равен 10, а не 100:</p>
+<p>Тем не менее, в нестрогих функциях <strong>соответствие между их аргументами и объектом <code>arguments</code></strong> существует только в том случае, если функция <strong>не</strong> содержит никаких <a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">остаточных параметров</a>, <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметров по умолчанию</a> или <a href="/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">деструктурированных параметров</a>. Например, в функции, приведённой ниже, используется параметр по умолчанию, и в данном случае возвращаемый результат будет равен 10, а не 100:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">bar</span><span class="punctuation token">(</span>a<span class="operator token">=</span><span class="number token">1</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   arguments<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="number token">100</span><span class="punctuation token">;</span>

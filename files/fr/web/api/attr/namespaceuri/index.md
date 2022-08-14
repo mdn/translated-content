@@ -16,7 +16,9 @@ La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace 
 
 ## Syntaxe
 
-    namespace = attribute.namespaceURI
+```js
+namespace = attribute.namespaceURI
+```
 
 ## Exemple
 

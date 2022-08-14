@@ -16,7 +16,9 @@ La propriété **`Attr.prefix`** en lecture seule renvoie le préfixe de l'espac
 
 ## Syntaxe
 
-    string = attribute.prefix
+```js
+string = attribute.prefix
+```
 
 ## Exemples
 

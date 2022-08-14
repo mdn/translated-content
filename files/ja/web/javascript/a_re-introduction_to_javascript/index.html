@@ -67,7 +67,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <p>ECMAScript には 2 つの組み込み数値型があります。 <strong>Number</strong> と <strong>BigInt</strong> です。</p>
 
-<p>Number 型は<a href="https://ja.wikipedia.org/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0">IEEE 754 倍精度 64 ビットバイナリー値</a> (-(2<sup>53</sup> − 1) と 2<sup>53</sup> − 1 の間の数) です。そして、この記事や他の MDN の記事で「整数」という場合は、ふつう Number 値を使った整数の<em>表現</em>を意味しています。しかし、このような Number 値は本物の整数ではないので、少し注意が必要です。以下の例を見てください。</p>
+<p>Number 型は<a href="https://ja.wikipedia.org/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0">IEEE 754 倍精度 64 ビットバイナリー値</a> (-(2<sup>53</sup> − 1) と 2<sup>53</sup> − 1 の間の数) です。そして、この記事や他の MDN の記事で「整数」という場合は、ふつう Number 値を使った整数の<em>表現</em>を意味しています。しかし、このような Number 値は本物の整数ではないので、少し注意が必要です。以下の例を見てください。</p>
 
 <pre class="brush: js">console.log(3 / 2);             // 1.5, 1 <em>ではない</em>
 console.log(Math.floor(3 / 2)); // 1</pre>
@@ -181,7 +181,7 @@ isFinite(NaN); // false
 
 <h2 id="Other_types">その他の型</h2>
 
-<p>JavaScript は {{jsxref("null")}} と {{jsxref("undefined")}} を区別します。 <code>null</code> は、意図的に値がないことを示す値です (また、<code>null</code> キーワードによってのみアクセスできます)。対して <code>undefined</code> とは、初期化されていない値 — すなわち、まだ値が代入されていないことを示す <code>undefined</code> 型の値です。変数については後で話しますが、 JavaScript では値を代入しないで変数を宣言することができるのです。そのようにした場合、その変数の型は <code>undefined</code> です。実際は、<code>undefined</code> は定数です。</p>
+<p>JavaScript は {{jsxref("null")}} と {{jsxref("undefined")}} を区別します。 <code>null</code> は、意図的に値がないことを示す値です (また、<code>null</code> キーワードによってのみアクセスできます)。対して <code>undefined</code> とは、初期化されていない値 — すなわち、まだ値が代入されていないことを示す <code>undefined</code> 型の値です。変数については後で話しますが、 JavaScript では値を代入しないで変数を宣言することができるのです。そのようにした場合、その変数の型は <code>undefined</code> です。実際は、<code>undefined</code> は定数です。</p>
 
 <p>JavaScript は <code>true</code> と <code>false</code> (これらはともにキーワードです) を取りうる値とする論理型を持っています。どんな値でも以下の規則に基づいて論理値に変換できます。</p>
 
@@ -232,7 +232,7 @@ Pi = 1; // 定数の変数は変更できないため、エラーが発生しま
 <pre class="brush: js">var a;
 var name = 'Simon';</pre>
 
-<p>以下の例は、 <strong><code>var</code></strong> で宣言した変数のスコープを示しています。</p>
+<p>以下の例は、 <strong><code>var</code></strong> で宣言した変数のスコープを示しています。</p>
 
 <pre class="brush: js">// ここでは myVarVariable が *見えます*
 
@@ -474,7 +474,7 @@ obj['for'] = 'Simon'; // うまく動きます
 <p>オブジェクトやプロトタイプについて、詳しくは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object">Object.prototype</a> をご覧ください。オブジェクトプロトタイプやオブジェクトプロトタイプチェーンの説明は、<a href="/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">継承とプロトタイプチェーン</a> をご覧ください。</p>
 
 <div class="note">
-<p>ECMAScript 2015 より、オブジェクトのキーがブラケット記法を使った変数で定義できるようになりました。 <code>{[phoneType]: 12345}</code> が <code>var userPhone = {}; userPhone[phoneType] = 12345</code> の代わりにできます。</p>
+<p>ECMAScript 2015 より、オブジェクトのキーがブラケット記法を使った変数で定義できるようになりました。 <code>{[phoneType]: 12345}</code> が <code>var userPhone = {}; userPhone[phoneType] = 12345</code> の代わりにできます。</p>
 </div>
 
 <h2 id="Arrays">配列</h2>
@@ -943,7 +943,7 @@ s.lastNameCaps(); // WILLISON
 
   function nestedFunc() {
     var b = 4; // parentFunc はこれを使用できない
-    return a + b;
+    return a + b;
   }
   return nestedFunc(); // 5
 }

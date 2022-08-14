@@ -1,81 +1,86 @@
 ---
 title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
+page-type: web-api-constructor
 translation_of: Web/API/SharedWorker/SharedWorker
+browser-compat: api.SharedWorker.SharedWorker
+l10n:
+  sourceCommit: abaa8b38ddf68a2b468e2b46e56b277db25f16cf
 ---
 {{APIRef("Web Workers API")}}
 
-Le constructeur **`SharedWorker()`** crée un objet {{domxref("SharedWorker")}} qui exécute le script depuis l'URL indiquée. Le script doit respecter la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy).
+Le constructeur **`SharedWorker()`** crée un objet [`SharedWorker`](/fr/docs/Web/API/SharedWorker) qui exécute le script depuis l'URL indiquée. Le script doit respecter la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy).
 
-> **Note :** Il y a désaccord entre les fabricants de navigateur pour savoir si l'URI doit avoir la même origine ou non. Bien que Gecko 10.0 {{geckoRelease("10.0")}} et les version supérieurs acceptent des origines différentes, ce n'est pas le cas des autres navigateurs.
+> **Note :** Il y a désaccord entre les éditeurs de navigateur pour savoir si une URL de données partage la même origine. Bien que Gecko 10.0 et les versions supérieures acceptent des URL de données, ce n'est pas le cas de tous les autres navigateurs.
 
 ## Syntaxe
 
-    var monWorker = new SharedWorker(uneURL, nom);
-    var monWorker = new SharedWorker(uneURL, options);
+```js
+new SharedWorker(uneURL)
+new SharedWorker(uneURL, nom)
+new SharedWorker(uneURL, options)
+```
 
-### Paramètre
+### Paramètres
 
-- _uneURL_
-  - : Une {{domxref("DOMString")}} qui représente l'URL du scripte du _worker_ qui sera exécuté. Il doit obéir à la politique de même origine.
-- nom {{optional_inline}}
-  - : Une {{domxref("DOMString")}} indiquant un nom pour le {{domxref("SharedWorkerGlobalScope")}} représentant la portée du _worker_. Souvent utilisé pour le débogage.
-- _options_ {{optional_inline}}
-
-  - : Une objet contenant les propriétés qui peuvent être défini à la création. Les propriété possibles sont:
-
-    - `type`: Une {{domxref("DOMString")}} spécifiant le type de _worker_ à créer. Les valeurs possibles sont: `classic` ou `module`. Si non spécifié, la valeur par défaut est `classic`.
-    - `credentials`: Une {{domxref("DOMString")}} spécifiant le type de crédit à utilisé pour le _worker_. La valeur peut être _`omit`_, `same-origin` ou _`include`. Si non spécifié ou si le type est `classic`, la valeur par défaut sera `omit` (pas de crédit nécéssaire)._
-    - `name`&nbsp;: une [`DOMString`](/fr/docs/Web/API/DOMString) spécifiant un identifiant pour le [`SharedWorkerGlobalScope`](/fr/docs/Web/API/SharedWorkerGlobalScope) représentant la portée du _worker_, souvent utilisé pour déboguer.
-
-### Valeur retournée
-
-Le _woker_ créé.
+- `uneURL`
+  - : Une chaîne de caractères représentant l'URL du script que le <i lang="en">worker</i> exécutera. Cette URL doit respecter la politique de même origine.
+- `name` {{optional_inline}}
+  - : Une chaîne de caractères indiquant un nom permettant d'identifier l'objet [`SharedWorkerGlobalScope`](/fr/docs/Web/API/SharedWorkerGlobalScope) qui représente la portée du <i lang="en">worker</i>. Elle est principalement utile à des fins de débogage.
+- `options` {{optional_inline}}
+  - : Un objet contenant des propriétés d'options qui peuvent être définies lors de la création de l'instance. Les propriétés utilisables sont&nbsp;:
+    - `type`
+      - : Une chaîne de caractères indiquant le type de <i lang="en">worker</i> à créer. La valeur peut être `classic` ou `module`. Si aucune valeur n'est fournie, c'est la valeur `classic` qui est utilisée par défaut.
+    - `credentials`
+      - : Une chaîne de caractères indiquant le type d'informations d'authentification à utiliser pour le <i lang="en">worker</i>. La valeur peut être `omit`,
+        `same-origin`, ou `include`. Si aucune valeur n'est indiquée ou si le type vaut `classic`, la valeur par défaut utilisée est `omit` (aucune information d'authentification n'est nécessaire).
+    - `name`
+      - : Une chaîne de caractères indiquant un nom permettant d'identifier l'objet [`SharedWorkerGlobalScope`](/fr/docs/Web/API/SharedWorkerGlobalScope) qui représente la portée du <i lang="en">worker</i>. Elle est principalement utile à des fins de débogage.
 
 ### Exceptions
 
-- Une `SecurityError` est levé si le document n'est pas autorisé à lancer le _worker_. Par exemple si l'URL a une syntaxe invalide ou si la politique de même origine est violée.
-- Une `NetworkError` est levé si le type MIME du script _worker_ n'est pas correct. Le type MIME doit toujours être `text/javascript`.
-- Une `SyntaxError` est levée si _uneURL_ ne peut pas être analysée.
+- `SecurityError` [`DOMException`](/fr/docs/Web/API/DOMException)
+  - : Déclenchée si le document n'est pas autorisé à démarrer des <i lang="en">workers</i>, par exemple si la syntaxe de l'URL est invalide ou si cette dernière ne respecte pas la règle de même origine.
+- `NetworkError` [`DOMException`](/fr/docs/Web/API/DOMException)
+  - : Déclenchée si le type MIME du script du <i lang="en">worker</i> est incorrect. Ce devrait _toujours_ être `text/javascript` (pour des raisons historiques, [d'autres types MIME JavaScript](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) peuvent être acceptés).
+- `SyntaxError` [`DOMException`](/fr/docs/Web/API/DOMException)
+  - : Déclenchée si `uneURL` ne peut pas être analysée.
 
-## Exemple
+## Exemples
 
-L'extrait de code suivant montre la création d'un objet {{domxref("SharedWorker")}} en utilisant le contructeur `SharedWorker()` et l'usage qui en est fait.
+L'extrait de code suivant montre la création d'un objet [`SharedWorker`](/fr/docs/Web/API/SharedWorker) en utilisant le constructeur `SharedWorker()` et l'usage qui en est fait.
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const monWorker = new SharedWorker('worker.js');
 
-myWorker.port.start();
+monWorker.port.start();
 
-first.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
+premier.onchange = function() {
+  monWorker.port.postMessage([premier.value,second.value]);
+  console.log('Message envoyé depuis le worker');
 }
 
 second.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
+  monWorker.port.postMessage([premier.value,second.value]);
+  console.log('Message envoyé depuis le worker');
 }
 
-myWorker.port.onmessage = function(e) {
+monWorker.port.onmessage = function(e) {
   result1.textContent = e.data;
-  console.log('Message received from worker');
+  console.log('Message reçu du worker');
 }
 ```
 
-Pour l'exemple en complet, voir [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/).)
+Pour un exemple complet, voir [un exemple simple de <i lang="en">worker</i> partagé](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([exécuter le <i lang="en">worker</i> correspondant](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)).
 
 ## Spécifications
 
-| Spécification                                                                            | Statuts                          | Commentaire |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-sharedworker", "SharedWorker()")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SharedWorker.SharedWorker")}}
+{{Compat}}
 
 ## Voir aussi
 
-- L'interface {{domxref("SharedWorker")}} auquel il appartient.
-- [Une autre démonstration de multiplication.](https://anlexn.github.io/shared-worker-mdn/)
+- L'interface [`SharedWorker`](/fr/docs/Web/API/SharedWorker) à laquelle ce constructeur appartient.

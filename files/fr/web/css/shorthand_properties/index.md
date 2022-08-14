@@ -18,7 +18,7 @@ La spécification CSS définit les propriétés raccourcies en regroupant la dé
 
 Bien que les propriétés raccourcies soient pratiques à utiliser. Il est nécessaire de noter certains éléments pour parer aux cas étranges qui peuvent survenir :
 
-1.  Une valeur qui n'est pas définie pour la propriété raccourcie **sera réinitialisée avec sa valeur initiale**. Cela peut sembler anecdotique mais attention aux valeurs qui seront surchargées et à l'ordre des déclarations. Ainsi :
+1. Une valeur qui n'est pas définie pour la propriété raccourcie **sera réinitialisée avec sa valeur initiale**. Cela peut sembler anecdotique mais attention aux valeurs qui seront surchargées et à l'ordre des déclarations. Ainsi :
 
     ```css
     background-color: red;
@@ -27,10 +27,10 @@ Bien que les propriétés raccourcies soient pratiques à utiliser. Il est néce
 
     ne définira pas la couleur d'arrière-plan en rouge mais avec la valeur par défaut de {{cssxref("background-color")}} `transparent` car la deuxième déclaration prend le pas sur la première.
 
-2.  L'héritage des propriétés ne peut avoir lieu qu'avec les propriétés individuelles . En effet, les valeurs absentes sont remplacées par leurs valeurs initiales et il est donc impossible d'hériter des valeurs en les omettant. Le mot-clé {{cssxref("inherit")}} pourra être appliqué à une propriété mais ce sera sur l'ensemble et non pour une valeur donnée ou une autre. Ainsi, pour utiliser une valeur héritée sur une propriété spécifique, il faudra utiliser cette propriété « longue » avec le mot-clé `inherit.`
-3.  Les propriétés raccourcies n'ont pas d'ordre spécifique pour trier les valeurs des propriétés détaillées qu'elles remplacent. Cela fonctionne sans problème lorsque les différentes propriétés utilisent différents types de valeurs car l'ordre n'a alors aucune importance. Toutefois, lorsque les différentes propriétés peuvent prendre les mêmes valeurs, cela n'est pas si simple. On peut regrouper les différents cas en deux catégories distinctes :
+2. L'héritage des propriétés ne peut avoir lieu qu'avec les propriétés individuelles . En effet, les valeurs absentes sont remplacées par leurs valeurs initiales et il est donc impossible d'hériter des valeurs en les omettant. Le mot-clé {{cssxref("inherit")}} pourra être appliqué à une propriété mais ce sera sur l'ensemble et non pour une valeur donnée ou une autre. Ainsi, pour utiliser une valeur héritée sur une propriété spécifique, il faudra utiliser cette propriété « longue » avec le mot-clé `inherit.`
+3. Les propriétés raccourcies n'ont pas d'ordre spécifique pour trier les valeurs des propriétés détaillées qu'elles remplacent. Cela fonctionne sans problème lorsque les différentes propriétés utilisent différents types de valeurs car l'ordre n'a alors aucune importance. Toutefois, lorsque les différentes propriétés peuvent prendre les mêmes valeurs, cela n'est pas si simple. On peut regrouper les différents cas en deux catégories distinctes :
 
-    1.  Les propriétés raccourcies qui gèrent les bords d'une boîte telles que {{cssxref("border-style")}}, {{cssxref("margin")}} ou {{cssxref("padding")}}. Elles utilisent une méthode constante selon qu'elles reçoivent 1 à 4 valeurs :
+    1. Les propriétés raccourcies qui gèrent les bords d'une boîte telles que {{cssxref("border-style")}}, {{cssxref("margin")}} ou {{cssxref("padding")}}. Elles utilisent une méthode constante selon qu'elles reçoivent 1 à 4 valeurs :
 
         <table>
           <tbody>
@@ -71,7 +71,7 @@ Bien que les propriétés raccourcies soient pratiques à utiliser. Il est néce
           </tbody>
         </table>
 
-    2.  De la même façon, les propriétés raccourcies relatives aux coins d'une boîte comme {{cssxref("border-radius")}} utilisent une méthode constante selon qu'elles reçoivent 1 à 4 valeurs :
+    2. De la même façon, les propriétés raccourcies relatives aux coins d'une boîte comme {{cssxref("border-radius")}} utilisent une méthode constante selon qu'elles reçoivent 1 à 4 valeurs :
 
         <table>
           <tbody>
@@ -191,7 +191,7 @@ margin: 10px 5px 10px 5px;
 
 CSS fournit une propriété raccourcie qui permet d'appliquer une même valeur à l'ensemble des propriétés du document : {{cssxref("all")}}.
 
-Voir l'article sur [la cascade et l'héritage](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) pour plus d'informations sur le fonctionnement de l'héritage.
+Voir l'article sur [la cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) pour plus d'informations sur le fonctionnement de l'héritage.
 
 ## Voir aussi
 

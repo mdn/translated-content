@@ -152,9 +152,9 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
 
 Les événements existants sont `keydown`, `keypress` et `keyup`. Pour la plupart des touches, Gecko génère une suite d'événements touche comme suit :
 
-1.  lorsque la touche est d'abord enfoncée, l'événement `keydown` est envoyé ;
-2.  si la touche n'est pas une touche de modification, l'événement `keypress` est envoyé ;
-3.  lorsque l'utilisateur relâche la touche, l'événement `keyup` est envoyé.
+1. lorsque la touche est d'abord enfoncée, l'événement `keydown` est envoyé ;
+2. si la touche n'est pas une touche de modification, l'événement `keypress` est envoyé ;
+3. lorsque l'utilisateur relâche la touche, l'événement `keyup` est envoyé.
 
 ### Cas particuliers
 
@@ -168,29 +168,27 @@ Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock n
 
 Lorsqu'une touche est maintenue enfoncée, elle commence à se répéter automatiquement. Cela a pour résultat qu'une suite d'événements similaire à ce qui suit est générée :
 
-1.  `keydown`
-2.  `keypress`
-3.  `keydown`
-4.  `keypress`
-5.  << répétition jusqu'à ce que l'utilisateur relâche la touche >>
-6.  `keyup`
+1. `keydown`
+2. `keypress`
+3. `keydown`
+4. `keypress`
+5. << répétition jusqu'à ce que l'utilisateur relâche la touche >>
+6. `keyup`
 
 C'est ce que la spécification DOM Niveau 3 dit qu'il devrait se produire. Cependant, il y a quelques mises en garde, comme décrit ci-dessous.
-
-
 
 #### Auto-répétition sur certains environnements GTK tels que Ubuntu 9.4
 
 Dans certains environnements basés sur GTK, l'auto-répétition génère automatiquement un événement natif lors de la répétition automatique, et Gecko n'a aucun moyen de connaître la différence entre une suite répétée de touches et une répétition automatique. Sur ces plateformes, une touche auto-répétée génère donc la suite d'événements suivante :
 
-1.  `keydown`
-2.  `keypress`
-3.  `keyup`
-4.  `keydown`
-5.  `keypress`
-6.  `keyup`
-7.  << répétition jusqu'à ce que l'utilisateur relâche la touche >>
-8.  `keyup`
+1. `keydown`
+2. `keypress`
+3. `keyup`
+4. `keydown`
+5. `keypress`
+6. `keyup`
+7. << répétition jusqu'à ce que l'utilisateur relâche la touche >>
+8. `keyup`
 
 Dans ces environnements, malheureusement, il n'y a aucun moyen pour que le contenu Web puisse faire la différence entre les touches répétées automatiquement et les touches qui sont simplement pressées à plusieurs reprises.
 

@@ -19,11 +19,11 @@ Cette règle @ s'avère notamment utile lorsqu'on utilise des caractères non-AS
 
 Le moteur dispose de différentes méthodes pour déterminer l'encodage d'une feuille de style. Il utilisera ces méthodes dans l'ordre qui suit et s'arrêtera dès qu'un résultat sera obtenu (autrement dit, les règles qui suivent sont triées par priorité décroissante) :
 
-1.  La valeur du caractère indiquant [l'ordre des octets Unicode](https://fr.wikipedia.org/wiki/Indicateur_d'ordre_des_octets) qui est placé au début du fichier (le BOM)
-2.  La valeur fournie par l'attribut `charset` de l'en-tête HTTP `Content-Type` ou l'information équivalente dans le protocole utilisé pour servir la feuille de style.
-3.  La règle @ CSS `@charset`.
-4.  L'encodage défini dans le document appelant la ressource (l'attribut `charset` de l'élément {{HTMLElement("link")}}). Cette méthode est désormais obsolète et ne doit plus être utilisée.
-5.  Dans tous les autres cas, on considère que le document est encodé en UTF-8
+1. La valeur du caractère indiquant [l'ordre des octets Unicode](https://fr.wikipedia.org/wiki/Indicateur_d'ordre_des_octets) qui est placé au début du fichier (le BOM)
+2. La valeur fournie par l'attribut `charset` de l'en-tête HTTP `Content-Type` ou l'information équivalente dans le protocole utilisé pour servir la feuille de style.
+3. La règle @ CSS `@charset`.
+4. L'encodage défini dans le document appelant la ressource (l'attribut `charset` de l'élément {{HTMLElement("link")}}). Cette méthode est désormais obsolète et ne doit plus être utilisée.
+5. Dans tous les autres cas, on considère que le document est encodé en UTF-8
 
 ## Syntaxe
 

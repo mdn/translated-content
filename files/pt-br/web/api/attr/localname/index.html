@@ -10,7 +10,7 @@ translation_of: Web/API/Attr/localName
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>A propriedade read-only <code><strong>Attr.localName</strong></code> retorna a parte do local de um nome qualificado de elemento.</p>
+<p>A propriedade read-only <code><strong>Attr.localName</strong></code> retorna a parte do local de um nome qualificado de elemento.</p>
 
 <div class="note">
 <p>Antes do DOM4 essa API foi definida dentro da interface {{domxref("Node")}}.</p>
@@ -37,8 +37,8 @@ translation_of: Web/API/Attr/localName
 
 <pre class="brush: js">const element = document.querySelector("#example");
 element.addEventListener("click", function() {
-  const attribute = element.attributes[0];
-  alert(attribute.localName);
+  const attribute = element.attributes[0];
+  alert(attribute.localName);
 });
 </pre>
 
@@ -49,7 +49,7 @@ element.addEventListener("click", function() {
 <p>O nome local de um atributo é a parte do nome qualificado do atributo the vem depois da vírgula. Nome qualificados são tipicamente utilizados em XML como parte do namespace(s) de um documento XML em particular.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> No {{Gecko("1.9.2")}} e anteriores, a propriedade retorna uma versão em letras maiúsculas do nome local para o atributo DOM do HTML (oposto a atributos XHTML no DOM do XML). Em versões posteriores, em conformidade com o HTML5, a propriedade retorna no caso de armazenamento interno do DOM, que é em letras minúsculas para ambos os atributos HTML no DOM do HTML  e XHTML no DOM do XML.</p>
+<p><strong>Nota:</strong> No {{Gecko("1.9.2")}} e anteriores, a propriedade retorna uma versão em letras maiúsculas do nome local para o atributo DOM do HTML (oposto a atributos XHTML no DOM do XML). Em versões posteriores, em conformidade com o HTML5, a propriedade retorna no caso de armazenamento interno do DOM, que é em letras minúsculas para ambos os atributos HTML no DOM do HTML  e XHTML no DOM do XML.</p>
 </div>
 
 <h2 id="Especificações">Especificações</h2>
@@ -73,55 +73,7 @@ element.addEventListener("click", function() {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>46.0<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("48.0")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Essa API foi disponibilizada anteriormente na API {{domxref("Node")}}.</p>
+{{Compat("api.Attr.localName")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

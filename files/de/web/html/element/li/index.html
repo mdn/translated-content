@@ -13,7 +13,7 @@ translation_of: Web/HTML/Element/li
 
 <h2 id="Übersicht">Übersicht</h2>
 
-<p>Das HTML Element <em>list item</em> <code>&lt;li&gt; </code>wird verwendet, um einen Listeneintrag innerhalb einer geordneten Liste ({{HTMLElement("ol")}}) oder einer ungeordneten Liste ({{HTMLElement("ul")}}) oder einem Menü ({{HTMLElement("menu")}}) auszuzeichnen. In Menüs und ungeordneten Listen werden Listeneinträge normalerweise mit Aufzählungszeichen dargestellt. In geordneten Listen werden sie normalerweise mit einem aufsteigendem Zähler wie einer Nummer oder einem Buchstaben auf der linken Seite dargestellt.</p>
+<p>Das HTML Element <em>list item</em> <code>&lt;li&gt; </code>wird verwendet, um einen Listeneintrag innerhalb einer geordneten Liste ({{HTMLElement("ol")}}) oder einer ungeordneten Liste ({{HTMLElement("ul")}}) oder einem Menü ({{HTMLElement("menu")}}) auszuzeichnen. In Menüs und ungeordneten Listen werden Listeneinträge normalerweise mit Aufzählungszeichen dargestellt. In geordneten Listen werden sie normalerweise mit einem aufsteigendem Zähler wie einer Nummer oder einem Buchstaben auf der linken Seite dargestellt.</p>
 
 <table class="properties">
  <tbody>
@@ -45,9 +45,8 @@ translation_of: Web/HTML/Element/li
 <p>Dieses Element enthält die <a href="https://developer.mozilla.org/de/docs/Web/HTML/Globale_Attribute">globalen Attribute</a>.</p>
 
 <dl>
- <dt>{{htmlattrdef("value")}} </dt>
- <dd>Legt die Zahl fest, mit der die Nummerierung in einem {{HTMLElement("ol")}} Element beginnen soll. Dies geschieht unabhängig vom Typ der Nummerierung. Römische Zahlen und Buchstaben können allerdings nicht als Wert angegeben werden, der einzig akzeptierte Wert ist eine Zahl. Listeneinträge, die dem Eintrag mit dem <code>value</code> Attribut folgen, werden die Nummerierung fortführen, die festgelegt wurde. Das <code>value</code> Attribut hat für eine ungeordnete Liste keine Bedeutung.</dd>
- <dd>{{Note("Dieses Attribut wurde in HTML4 missbilligt, jedoch in HTML5 neu eingeführt.")}}
+ <dt>{{htmlattrdef("value")}} </dt>
+ <dd>Legt die Zahl fest, mit der die Nummerierung in einem {{HTMLElement("ol")}} Element beginnen soll. Dies geschieht unabhängig vom Typ der Nummerierung. Römische Zahlen und Buchstaben können allerdings nicht als Wert angegeben werden, der einzig akzeptierte Wert ist eine Zahl. Listeneinträge, die dem Eintrag mit dem <code>value</code> Attribut folgen, werden die Nummerierung fortführen, die festgelegt wurde. Das <code>value</code> Attribut hat für eine ungeordnete Liste keine Bedeutung.<br/><br/>{{Note("Dieses Attribut wurde in HTML4 missbilligt, jedoch in HTML5 neu eingeführt.")}}
  <div class="note">
  <p><strong>Hinweis:</strong> Vor {{Gecko("9.0")}} wurden negative Werte fälschlicherweise zu 0 konvertiert. Seit {{Gecko("9.0")}} werden alle Ganzzahlwerte korrekt interpretiert.</p>
  </div>
@@ -56,8 +55,7 @@ translation_of: Web/HTML/Element/li
 
 <dl>
  <dt>{{htmlattrdef("type")}} {{Deprecated_inline}}</dt>
- <dd>Dieses Zeichen legt den Aufzählungstyp fest:</dd>
- <dd>
+ <dd>Dieses Zeichen legt den Aufzählungstyp fest:<br/><br/>
  <ul>
   <li><code>a</code>: Kleinbuchstaben</li>
   <li><code>A</code>: Großbuchstaben</li>
@@ -114,70 +112,24 @@ translation_of: Web/HTML/Element/li
   <tr>
    <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-li-element', '&lt;li&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'the-li-element.html#the-li-element', '&lt;li&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'lists.html#h-10.2', '&lt;li&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Merkmal</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Merkmal</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

@@ -9,7 +9,9 @@ Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canv
 
 ## Syntaxe
 
-    ctx.globalAlpha = valeur;
+```js
+ctx.globalAlpha = valeur;
+```
 
 ### Options
 

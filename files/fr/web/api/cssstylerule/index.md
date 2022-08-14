@@ -7,14 +7,16 @@ translation_of: Web/API/CSSStyleRule
 
 CSSStyleRule représente une règle de style CSS unique. Il implémente l'interface {{domxref ("CSSRule")}} avec une valeur de type 1 (CSSRule STYLE_RULE).
 
-## Syntax
+## Syntaxe
 
 La syntaxe est décrite à l'aide du format WebIDL.
 
-    interface CSSStyleRule : CSSRule {
-        attribute DOMString selectorText;
-        readonly attribute CSSStyleDeclaration style;
-    };
+```
+interface CSSStyleRule : CSSRule {
+    attribute DOMString selectorText;
+    readonly attribute CSSStyleDeclaration style;
+};
+```
 
 ## Properties
 

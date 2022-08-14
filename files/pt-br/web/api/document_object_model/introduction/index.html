@@ -8,13 +8,13 @@ original_slug: DOM/Referencia_do_DOM/Introdução
 
 <h2 id="What_is_the_DOM" name="What_is_the_DOM">O que é o DOM?</h2>
 
-<p>O Document Object Model (<strong>DOM</strong>) é uma interface de programação para os documentos HTML e XML. Representa a página de forma que os programas possam alterar a estrutura do documento, alterar o estilo e conteúdo. O DOM representa o documento com nós e objetos, dessa forma, as linguagens de programação podem se conectar à página.</p>
+<p>O Document Object Model (<strong>DOM</strong>) é uma interface de programação para os documentos HTML e XML. Representa a página de forma que os programas possam alterar a estrutura do documento, alterar o estilo e conteúdo. O DOM representa o documento com nós e objetos, dessa forma, as linguagens de programação podem se conectar à página.</p>
 
 <p>Uma página da Web é um documento. Este documento pode ser exibido na janela do navegador ou como a fonte HTML. Mas é o mesmo documento nos dois casos. O DOM (Document Object Model) representa o mesmo documento para que possa ser manipulado. O DOM é uma representação orientada a objetos da página da web, que pode ser modificada com uma linguagem de script como JavaScript.</p>
 
 <p>Os padrões <a class="external" href="http://www.w3.org/DOM/">W3C DOM</a> e <a class="external" href="https://dom.spec.whatwg.org">WHATWG DOM</a> são implementados na maioria dos navegadores modernos. Muitos navegadores estendem o padrão; portanto, é necessário ter cuidado ao usá-los na Web, onde os documentos podem ser acessados por vários navegadores com diferentes DOMs.</p>
 
-<p>Por exemplo, o DOM padrão especifica que o método <code>getElementsByTagName</code> no código abaixo deve retornar uma lista de todos os elementos <code>&lt;p&gt;</code> no documento:</p>
+<p>Por exemplo, o DOM padrão especifica que o método <code>getElementsByTagName</code> no código abaixo deve retornar uma lista de todos os elementos <code>&lt;p&gt;</code> no documento:</p>
 
 <pre class="brush: js notranslate">var paragraphs = document.getElementsByTagName("p");
 // paragraphs[0] is the first &lt;p&gt; element
@@ -22,7 +22,7 @@ original_slug: DOM/Referencia_do_DOM/Introdução
 alert(paragraphs[0].nodeName);
 </pre>
 
-<p>Todas as propriedades, métodos e eventos disponíveis para manipular e criar páginas da Web são organizados em objetos (por exemplo, o objeto de <code>document</code> que representa o próprio documento, o objeto de <code>table</code> que implementa a Interface especial DOM {{domxref ("HTMLTableElement")}}}}  para acessar tabelas HTML e assim por diante). Esta documentação fornece uma referência objeto a objeto ao DOM.</p>
+<p>Todas as propriedades, métodos e eventos disponíveis para manipular e criar páginas da Web são organizados em objetos (por exemplo, o objeto de <code>document</code> que representa o próprio documento, o objeto de <code>table</code> que implementa a Interface especial DOM {{domxref ("HTMLTableElement")}}}}  para acessar tabelas HTML e assim por diante). Esta documentação fornece uma referência objeto a objeto ao DOM.</p>
 
 <p>O DOM moderno é construído usando várias APIs que trabalham juntas. O <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> principal define os objetos que descrevem fundamentalmente um documento e os objetos dentro dele. Isso é expandido conforme necessário por outras APIs que adicionam novos recursos e capacidades ao DOM. Por exemplo, a <a href="/en-US/docs/Web/API/HTML_DOM">HTML DOM API</a> adiciona suporte para representar documentos HTML no DOM principal.</p>
 
@@ -32,7 +32,7 @@ alert(paragraphs[0].nodeName);
 
 <p>No início, o JavaScript e o DOM estavam fortemente interligados, mas, eventualmente, evoluíram para entidades separadas. O conteúdo da página é armazenado no DOM e pode ser acessado e manipulado via JavaScript, para que possamos escrever esta equação aproximada:</p>
 
-<p>API (página HTML ou XML) = DOM + JS (linguagem de script)</p>
+<p>API (página HTML ou XML) = DOM + JS (linguagem de script)</p>
 
 <p>O DOM foi projetado para ser independente de qualquer linguagem de programação específica, disponibilizando a representação estrutural do documento a partir de uma única API consistente. Embora nos concentremos exclusivamente no JavaScript nesta documentação de referência, as implementações do DOM podem ser construídas para qualquer idioma, como este exemplo em Python demonstra:</p>
 
@@ -43,20 +43,20 @@ doc.nodeName # propriedade do objeto de documento DOM
 p_list = doc.getElementsByTagName("para")
 </pre>
 
-<p>Para obter mais informações sobre quais tecnologias estão envolvidas na criação de JavaScript na Web, consulte <a href="/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript technologies overview</a>.</p>
+<p>Para obter mais informações sobre quais tecnologias estão envolvidas na criação de JavaScript na Web, consulte <a href="/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript technologies overview</a>.</p>
 
 <h2 id="How_Do_I_Access_the_DOM.3F" name="How_Do_I_Access_the_DOM.3F">Acessando o DOM</h2>
 
 <p>Você não precisa fazer nada de especial para começar a usar o DOM. Navegadores diferentes têm implementações diferentes do DOM, e essas implementações exibem graus variados de conformidade com o padrão DOM real (um assunto que tentamos evitar nesta documentação), mas todo navegador usa um modelo de objeto de documento para tornar as páginas da web acessíveis via JavaScript.</p>
 
-<p>Quando você cria um script - seja embutido em um elemento(tag) <code>&lt;script&gt;</code> ou incluído na página da web por meio de uma instrução de carregamento de script - você pode começar imediatamente a usar a API para o {{domxref ("document")}} ou { {domxref ("Window", "window")}} elementos para manipular o próprio documento ou obter os filhos desse documento, que são os vários elementos na página da web. Sua programação DOM pode ser algo tão simples quanto o exemplo seguinte, que exibe uma mensagem de alerta usando a função {{domxref ("window.alert", "alert()")}} da função {{domxref ("Window", " window ")}} ou pode usar métodos DOM mais sofisticados para criar realmente novo conteúdo, como no extenso exemplo abaixo.</p>
+<p>Quando você cria um script - seja embutido em um elemento(tag) <code>&lt;script&gt;</code> ou incluído na página da web por meio de uma instrução de carregamento de script - você pode começar imediatamente a usar a API para o {{domxref ("document")}} ou { {domxref ("Window", "window")}} elementos para manipular o próprio documento ou obter os filhos desse documento, que são os vários elementos na página da web. Sua programação DOM pode ser algo tão simples quanto o exemplo seguinte, que exibe uma mensagem de alerta usando a função {{domxref ("window.alert", "alert()")}} da função {{domxref ("Window", " window ")}} ou pode usar métodos DOM mais sofisticados para criar realmente novo conteúdo, como no extenso exemplo abaixo.</p>
 
 <p>O JavaScript a seguir exibirá um alerta quando o documento for carregado (e quando todo o DOM estiver disponível para uso):</p>
 
 <pre class="brush: html notranslate">&lt;body onload="window.alert('Welcome to my home page!');"&gt;
 </pre>
 
-<p>Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse elemento e, em seguida, adiciona o <code>H1</code> à árvore deste documento:</p>
+<p>Outro exemplo. Esta função cria um novo elemento H1, adiciona texto a esse elemento e, em seguida, adiciona o <code>H1</code> à árvore deste documento:</p>
 
 <pre class="brush: html notranslate">&lt;html&gt;
   &lt;head&gt;
@@ -97,7 +97,7 @@ p_list = doc.getElementsByTagName("para")
  <tbody>
   <tr>
    <td>{{domxref("Document")}}</td>
-   <td>Quando um membro retorna um objeto do tipo <code>document</code> (por exemplo, a propriedade <strong><code>ownerDocument </code></strong>de um elemento retorna o <code>document</code> ao qual ele pertence),esse objeto é o próprio objeto de  <code>document</code> raiz. O capítulo <a href="/en-US/docs/Web/API/Document">DOM <code>document</code> Reference</a> descreve o objeto do <code>document</code> .</td>
+   <td>Quando um membro retorna um objeto do tipo <code>document</code> (por exemplo, a propriedade <strong><code>ownerDocument </code></strong>de um elemento retorna o <code>document</code> ao qual ele pertence),esse objeto é o próprio objeto de  <code>document</code> raiz. O capítulo <a href="/en-US/docs/Web/API/Document">DOM <code>document</code> Reference</a> descreve o objeto do <code>document</code> .</td>
   </tr>
   <tr>
    <td>{{domxref("Node")}}</td>
@@ -106,7 +106,7 @@ p_list = doc.getElementsByTagName("para")
   <tr>
    <td>{{domxref("Element")}}</td>
    <td>
-    <p>O tipo do <code>element</code> é baseado em <code>node</code>. Isso se refere a um elemento ou um nó do tipo <code>element</code> retornado por um membro do DOM API. Ao invés de dizer, por exemplo, que o método {{domxref("document.createElement()")}}  retorna um objeto de referência para um nó, nós apenas dizemos que esse método retorna o <code>element</code> que acabou de ser criado no DOM. Os objetos do <code>element</code>  implementam a interface DOM <code>Element</code> e também a mais básica interface <code>Node</code>, sendo ambas incluídas juntas nessa referência. Em um documento HTML, elementos são ainda mais aprimorados pelas APIs HTML DOM. A interface {{domxref("HTMLElement")}} bem como outras interfaces descrevem capacidades de tipos especifícos de elementos (por exemlo, {{domxref("HTMLTableElement")}} para elementos {{HTMLElement("table")}}).</p>
+    <p>O tipo do <code>element</code> é baseado em <code>node</code>. Isso se refere a um elemento ou um nó do tipo <code>element</code> retornado por um membro do DOM API. Ao invés de dizer, por exemplo, que o método {{domxref("document.createElement()")}}  retorna um objeto de referência para um nó, nós apenas dizemos que esse método retorna o <code>element</code> que acabou de ser criado no DOM. Os objetos do <code>element</code>  implementam a interface DOM <code>Element</code> e também a mais básica interface <code>Node</code>, sendo ambas incluídas juntas nessa referência. Em um documento HTML, elementos são ainda mais aprimorados pelas APIs HTML DOM. A interface {{domxref("HTMLElement")}} bem como outras interfaces descrevem capacidades de tipos especifícos de elementos (por exemlo, {{domxref("HTMLTableElement")}} para elementos {{HTMLElement("table")}}).</p>
    </td>
   </tr>
   <tr>
@@ -116,18 +116,18 @@ p_list = doc.getElementsByTagName("para")
      <li>list.item(1)</li>
      <li>list[1]</li>
     </ul>
-    Esses dois são equivalentes. No primeiro, <strong><code>item()</code></strong> é o método único no objeto da <code>nodeList</code>. O último  usa uma sintaxe típica de array para buscar o segundo item na lista.</td>
+    Esses dois são equivalentes. No primeiro, <strong><code>item()</code></strong> é o método único no objeto da <code>nodeList</code>. O último  usa uma sintaxe típica de array para buscar o segundo item na lista.</td>
   </tr>
   <tr>
    <td>{{domxref("Attribute")}}</td>
-   <td>Quando um <code>attribute</code> é retornado por um membro (por exemplo, pelo método <strong><code>createAttribute()</code></strong>), é um objeto de referência que expõe uma interface especial (embora pequena) para atributos. Atributos são nós no DOM bem como elementos, mesmo que raramente você possa usá-los como tal.</td>
+   <td>Quando um <code>attribute</code> é retornado por um membro (por exemplo, pelo método <strong><code>createAttribute()</code></strong>), é um objeto de referência que expõe uma interface especial (embora pequena) para atributos. Atributos são nós no DOM bem como elementos, mesmo que raramente você possa usá-los como tal.</td>
   </tr>
   <tr>
    <td>{{domxref("NamedNodeMap")}}</td>
    <td>
-    <p> é como um array, mas os itens são acessados por nome ou índice, embora este último caso seja meramente uma conveniência para enumeração, já que eles não estão em uma ordem específica na lista. Um namedNodeMap possui um método item () para esse propósito, e você também pode adicionar e remover itens de um namedNodeMap.</p>
+    <p> é como um array, mas os itens são acessados por nome ou índice, embora este último caso seja meramente uma conveniência para enumeração, já que eles não estão em uma ordem específica na lista. Um namedNodeMap possui um método item () para esse propósito, e você também pode adicionar e remover itens de um namedNodeMap.</p>
 
-    <p>Um <code>namedNodeMap</code> é como um array, mas os itens são acessados por nome ou índice, embora este último caso seja meramente uma conveniência para enumeração, já que eles não estão em uma ordem específica na lista. O <code>namedNodeMap</code> possui um método <code>item()</code> para esse propósito, e você também pode adicionar e remover itens de um <code>namedNodeMap</code>.</p>
+    <p>Um <code>namedNodeMap</code> é como um array, mas os itens são acessados por nome ou índice, embora este último caso seja meramente uma conveniência para enumeração, já que eles não estão em uma ordem específica na lista. O <code>namedNodeMap</code> possui um método <code>item()</code> para esse propósito, e você também pode adicionar e remover itens de um <code>namedNodeMap</code>.</p>
    </td>
   </tr>
  </tbody>

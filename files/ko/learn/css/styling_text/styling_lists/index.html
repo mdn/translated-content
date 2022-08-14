@@ -7,7 +7,7 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
 
 <div>{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary"><a href="/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">목록</a> 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.</p>
+<p class="summary"><a href="/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">목록</a> 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -24,7 +24,7 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
 
 <h2 id="간단한_목록_예제">간단한 목록 예제</h2>
 
-<p>우선, 간단한 목록 예제를 봅시다. 이 기사 전체에서 우리는 순서가 없는, 순서가 있는,  설명 목록을 살펴볼 것입니다 — 모두 유사한 스타일링 기능이 있으며, 일부 유형은 목록 유형과 다릅니다. 스타일이 지정되지 않은 예제는 <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">Github 에서 가능</a> 합니다 (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">소스 코드</a> 도 확인하십시오.)</p>
+<p>우선, 간단한 목록 예제를 봅시다. 이 기사 전체에서 우리는 순서가 없는, 순서가 있는,  설명 목록을 살펴볼 것입니다 — 모두 유사한 스타일링 기능이 있으며, 일부 유형은 목록 유형과 다릅니다. 스타일이 지정되지 않은 예제는 <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">Github 에서 가능</a> 합니다 (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">소스 코드</a> 도 확인하십시오.)</p>
 
 <p>목록 예제의 HTML 은 다음과 같습니다:</p>
 
@@ -71,11 +71,11 @@ paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p
 <p>If you go to the live example now and investigate the list elements using <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, you'll notice a couple of styling defaults:</p>
 
 <ul>
- <li>The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of <code>16px</code> (<code>1em</code>)  and a {{cssxref("padding-left")}} of <code>40px</code> (<code>2.5em</code>.)</li>
+ <li>The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of <code>16px</code> (<code>1em</code>)  and a {{cssxref("padding-left")}} of <code>40px</code> (<code>2.5em</code>.)</li>
  <li>The list items ({{htmlelement("li")}} elements) have no set defaults for spacing.</li>
  <li>The {{htmlelement("dl")}} element has a top and bottom {{cssxref("margin")}} of <code>16px</code> (<code>1em</code>), but no padding set.</li>
  <li>The {{htmlelement("dd")}} elements have {{cssxref("margin-left")}} of <code>40px</code> (<code>2.5em</code>.)</li>
- <li>The {{htmlelement("p")}} elements we've included for reference have a top and bottom {{cssxref("margin")}} of <code>16px</code> (<code>1em</code>), the same as the different list types.</li>
+ <li>The {{htmlelement("p")}} elements we've included for reference have a top and bottom {{cssxref("margin")}} of <code>16px</code> (<code>1em</code>), the same as the different list types.</li>
 </ul>
 
 <h2 id="Handling_list_spacing">Handling list spacing</h2>
@@ -122,7 +122,7 @@ dd {
  <li>The first rule sets a sitewide font and a baseline font size of 10px. These are inherited by everything on the page.</li>
  <li>Rules 2 and 3 set relative font sizes for the headings, different list types (the children of the list elements inherit these), and paragraphs. This means that each paragraph and list will have the same font size and top and bottom spacing, helping to keep the vertical rhythm consistent.</li>
  <li>Rule 4 sets the same {{cssxref("line-height")}} on the paragraphs and list items — so the paragraphs and each individual list item will have the same spacing between lines. This will also help to keep the vertical rhythm consistent.</li>
- <li>Rules 5 and 6 apply to the description list — we set the same <code>line-height</code> on the description list terms and descriptions as we did with the paragraphs and list items. Again, consistency is good! We also make the description terms have bold font, so they visually stand out easier.<span id="cke_bm_126E" class="hidden"> </span></li>
+ <li>Rules 5 and 6 apply to the description list — we set the same <code>line-height</code> on the description list terms and descriptions as we did with the paragraphs and list items. Again, consistency is good! We also make the description terms have bold font, so they visually stand out easier.<span id="cke_bm_126E" class="hidden"> </span></li>
 </ul>
 
 <h2 id="List-specific_styles">List-specific styles</h2>
@@ -226,7 +226,7 @@ ul li {
 
 <h2 id="Controlling_list_counting">Controlling list counting</h2>
 
-<p>Sometimes you might want to count differently on an ordered list — e.g. starting from a number other than 1, or counting backwards, or counting in steps of more than 1. HTML and CSS have some tools to help you here.</p>
+<p>Sometimes you might want to count differently on an ordered list — e.g. starting from a number other than 1, or counting backwards, or counting in steps of more than 1. HTML and CSS have some tools to help you here.</p>
 
 <h3 id="start">start</h3>
 
@@ -259,7 +259,7 @@ ul li {
 <p>{{ EmbedLiveSample('reversed', '100%', 150) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: If there are more list items in a reversed list than the value of the <code>start</code> attribute, the count will continue to zero and then into negative values. </p>
+<p><strong>Note</strong>: If there are more list items in a reversed list than the value of the <code>start</code> attribute, the count will continue to zero and then into negative values. </p>
 </div>
 
 <h3 id="value">value</h3>
@@ -317,7 +317,7 @@ ul li {
   &lt;h2&gt;Output&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
+    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
     &lt;input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -341,9 +341,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 solution.addEventListener("click", function() {
@@ -362,7 +362,7 @@ window.addEventListener("load", drawOutput);
 
 <h2 id="See_also">See also</h2>
 
-<p>CSS counters provide advanced tools for customizing list counting and styling, but they are quite complex. We recommend looking into these if you want to stretch yourself. See:</p>
+<p>CSS counters provide advanced tools for customizing list counting and styling, but they are quite complex. We recommend looking into these if you want to stretch yourself. See:</p>
 
 <ul>
  <li>{{cssxref("@counter-style")}}</li>

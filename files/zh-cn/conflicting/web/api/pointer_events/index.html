@@ -6,7 +6,7 @@ original_slug: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 ---
 <p>{{DefaultAPISidebar("Touch Events")}}</p>
 
-<p>{{domxref("Touch_events","touch")}} 接口使得应用可以提高触屏设备上的用户体验。然而，现在绝大多数的web内容都是为鼠标操作而设计的。因此，即使浏览器支持触屏，也必须要模拟(emulate)鼠标事件，这样即使是那些只能接受鼠标输入的内容，也不需要进行额外修改就可以正常工作。</p>
+<p>{{domxref("Touch_events","touch")}} 接口使得应用可以提高触屏设备上的用户体验。然而，现在绝大多数的web内容都是为鼠标操作而设计的。因此，即使浏览器支持触屏，也必须要模拟(emulate)鼠标事件，这样即使是那些只能接受鼠标输入的内容，也不需要进行额外修改就可以正常工作。</p>
 
 <p>理想状态下，一个基于触屏的应用不需要去明确指定鼠标输入。然而，由于浏览器必须要模拟(emulate)鼠标事件，很有可能有一些特定的交互问题需要去处理。下面列出了这些交互的细节 ，并指导应用开发者该如何去处理它们。</p>
 
@@ -14,7 +14,7 @@ original_slug: Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 
 <p>触摸事件标准定义了一些关于触摸和鼠标交互的浏览器要求（有关详细信息，请参阅<a href="https://w3c.github.io/touch-events/#mouse-events">与鼠标事件的交互和单击部分</a>），注意浏览器可以触发触摸事件和鼠标事件以响应相同的用户输入。本节介绍可能影响应用程序的条件。</p>
 
-<p>如果浏览器因单个用户输入而触发触摸和鼠标事件，则浏览器必须在任何鼠标事件之前触发{{event("touchstart")}}。因此，如果应用程序不希望在特定触摸{{domxref("Touch.target","target")}} 元素上触发鼠标事件，则元素的触摸事件处理程序应调用{{domxref("Event.preventDefault()","preventDefault()")}}并且不会调度其他鼠标事件。</p>
+<p>如果浏览器因单个用户输入而触发触摸和鼠标事件，则浏览器必须在任何鼠标事件之前触发{{event("touchstart")}}。因此，如果应用程序不希望在特定触摸{{domxref("Touch.target","target")}} 元素上触发鼠标事件，则元素的触摸事件处理程序应调用{{domxref("Event.preventDefault()","preventDefault()")}}并且不会调度其他鼠标事件。</p>
 
 <p>这是{{event("touchmove")}}事件处理程序调用的代码片段</p>
 
@@ -41,7 +41,7 @@ function process_touchmove(ev) {
  <li><code>click</code></li>
 </ul>
 
-<p>如果 {{event("touchstart")}}, {{event("touchmove")}} 或者 {{event("touchend")}} 在触摸的过程中触发了touchcancel事件，后面的鼠标事件将不会被触发，由此产生的事件序列只是:</p>
+<p>如果 {{event("touchstart")}}, {{event("touchmove")}} 或者 {{event("touchend")}} 在触摸的过程中触发了touchcancel事件，后面的鼠标事件将不会被触发，由此产生的事件序列只是:</p>
 
 <ul>
  <li><code>touchstart</code></li>

@@ -139,10 +139,10 @@ const xr = getXR("if-needed"); // navigator.xr がない場合にのみポリフ
 
 <pre class="brush: js notranslate">const immersiveOK = await navigator.xr.isSessionSupported("immersive-vr");
 if (immersiveOK) {
-  // 没入型 VR セッションを作成して使用する
+  // 没入型 VR セッションを作成して使用する
 } else {
-  // 代わりにインラインセッションを作成するか、
-  // インラインが必要な場合は非互換性についてユーザーに伝えます
+  // 代わりにインラインセッションを作成するか、
+  // インラインが必要な場合は非互換性についてユーザーに伝えます
 }
 </pre>
 
@@ -151,8 +151,8 @@ if (immersiveOK) {
 <p>WebXR セッションは {{domxref("XRSession")}} オブジェクトによって表されます。 <code>XRSession</code> を取得するには、{{domxref("XRSystem")}} の {{domxref("XRSystem.requestSession", "requestSession()")}} メソッドを呼び出します。 このメソッドは、<code>XRSession</code> を正常に確立できる場合に <code>XRSession</code> で解決する promise を返します。 基本的には、次のようになります。</p>
 
 <pre class="brush: js notranslate">xr.requestSession("immersive-vr").then((session) =&gt; {
-  xrSession = session;
-  /* セッションのセットアップを続行します */
+  xrSession = session;
+  /* セッションのセットアップを続行します */
 });
 </pre>
 
@@ -170,12 +170,12 @@ if (immersiveOK) {
 <p>機能ポリシーがその使用を禁止したり、ユーザーがヘッドセットの使用許可を拒否したりするなど、何らかの理由でセッションを作成できなかった場合、promise は拒否されます。 したがって、起動して WebXR セッションを返すより完全な関数は次のようになります。</p>
 
 <pre class="brush: js notranslate">async function createImmersiveSession(xr) {
-  try {
-    session = await xr.requestSession("immersive-vr");
-    return session;
-  } catch(error) {
-    throw error;
-  }
+  try {
+    session = await xr.requestSession("immersive-vr");
+    return session;
+  } catch(error) {
+    throw error;
+  }
 }
 </pre>
 
@@ -188,28 +188,28 @@ if (immersiveOK) {
 <p>たとえば、無制限（<code>unbounded</code>）の参照空間が必要な場合は、取得するセッションで無制限の空間を使用できるようにするために、それを必須機能として指定できます。</p>
 
 <pre class="brush: js notranslate">async function createImmersiveSession(xr) {
-  try {
-    session = await xr.requestSession("immersive-vr", {
-      requiredFeatures: [ "unbounded" ]
-    });
-    return session;
-  } catch(error) {
-    throw error;
-  }
+  try {
+    session = await xr.requestSession("immersive-vr", {
+      requiredFeatures: [ "unbounded" ]
+    });
+    return session;
+  } catch(error) {
+    throw error;
+  }
 }
 </pre>
 
 <p>一方、<em>インライン</em>セッションが必要で、ローカル（<code>local</code>）参照空間を使用する場合は、次のようにします。</p>
 
 <pre class="brush: js notranslate">async function createInlineSession(xr) {
-  try {
-    session = await xr.requestSession("inline", {
-      optionalFeatures: [ "local" ]
-    });
-    return session;
-  } catch(error) {
-    throw error;
-  }
+  try {
+    session = await xr.requestSession("inline", {
+      optionalFeatures: [ "local" ]
+    });
+    return session;
+  } catch(error) {
+    throw error;
+  }
 }
 </pre>
 
@@ -235,34 +235,34 @@ if (immersiveOK) {
 <p>基本的な形式では、この最終的なセットアップを行うコードは次のようになります。</p>
 
 <pre class="brush: js notranslate">async function runSession(session) {
-  let worldData;
+  let worldData;
 
-  session.addEventListener("end", onSessionEnd);
+  session.addEventListener("end", onSessionEnd);
 
-  let canvas = document.querySelector("canvas");
-  gl = canvas.getContext("webgl", { xrCompatible: true });
+  let canvas = document.querySelector("canvas");
+  gl = canvas.getContext("webgl", { xrCompatible: true });
 
-  // WebGL データなどを設定する
+  // WebGL データなどを設定する
 
-  worldData = loadGLPrograms(session, "worlddata.xml");
-  if (!worldData) {
-    return NULL;
+  worldData = loadGLPrograms(session, "worlddata.xml");
+  if (!worldData) {
+    return NULL;
   }
 
-  // WebGL の構成を完了する
+  // WebGL の構成を完了する
 
-  worldData.session.updateRenderState({
-    baseLayer: new XRWebGLLayer(worldData.session, gl)
-  });
+  worldData.session.updateRenderState({
+    baseLayer: new XRWebGLLayer(worldData.session, gl)
+  });
 
-  // シーンのレンダリングを開始します
+  // シーンのレンダリングを開始します
 
-  referenceSpace = await worldData.session.requestReferenceSpace("unbounded");
+  referenceSpace = await worldData.session.requestReferenceSpace("unbounded");
   worldData.referenceSpace = referenceSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(worldData.playerSpawnPosition, worldData.playerSpawnOrientation));
-  worldData.animationFrameRequestID = worldData.session.requestAnimationFrame(onDrawFrame);
+        new XRRigidTransform(worldData.playerSpawnPosition, worldData.playerSpawnOrientation));
+  worldData.animationFrameRequestID = worldData.session.requestAnimationFrame(onDrawFrame);
 
-  return worldData;
+  return worldData;
 }
 </pre>
 
@@ -301,18 +301,18 @@ if (immersiveOK) {
 <p><code>XRSession</code> の可視性の状態が変化すると（セッションが非表示または表示されたとき、またはユーザーが別のコンテキストにフォーカスしたときなど）、セッションは {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} イベントを受け取ります。</p>
 
 <pre class="brush: js notranslate">session.onvisibilitychange = (event) =&gt; {
-  switch(event.session.visibilityState) {
-    case "hidden":
-      myFrameRate = 10;
-      break;
-    case "blurred-visible":
-      myFrameRate = 30;
-      break;
-    case "visible":
-    default:
-      myFrameRate = 60;
-      break;
-  }
+  switch(event.session.visibilityState) {
+    case "hidden":
+      myFrameRate = 10;
+      break;
+    case "blurred-visible":
+      myFrameRate = 30;
+      break;
+    case "visible":
+    default:
+      myFrameRate = 60;
+      break;
+  }
 };</pre>
 
 <p>この例では、可視性の状態に応じて変数 <code>myFrameRate</code> を変更します。 おそらく、レンダラーはこの値を使用して、アニメーションループの進行に応じて新しいフレームをレンダリングする頻度を計算します。 したがって、シーンの「ぼかし（blurred）」が多くなるほどレンダリングの頻度は低くなります。</p>
@@ -346,11 +346,11 @@ if (immersiveOK) {
 <p>終了時に WebXR セッションを完全に停止するには、セッションの {{domxref("XRSession.end", "end()")}} メソッドを呼び出す必要があります。 これは、停止がいつ完了するかを知るために使用できる <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> を返します。</p>
 
 <pre class="brush: js notranslate">async function shutdownXR(session) {
-  if (session) {
-    await session.end();
+  if (session) {
+    await session.end();
 
-    /* この時点で、WebXR は完全に停止しています */
-  }
+    /* この時点で、WebXR は完全に停止しています */
+  }
 }
 </pre>
 
@@ -363,9 +363,9 @@ if (immersiveOK) {
 <p>以前に確立したように、{{domxref("XRSession.end", "end()")}} メソッドを呼び出したか、ユーザーがヘッドセットをオフにしたか、XR システムで何らかの解決できないエラーが発生したかなど、{{domxref("XRSession")}} に送信される {{domxref("XRSession.end_event", "end")}} イベントを監視することで、WebXR セッションが終了したことを検出できます。</p>
 
 <pre class="brush: js notranslate">session.onend = (event) =&gt; {
-  /* セッションが停止しました */
+  /* セッションが停止しました */
 
-  freeResources();
+  freeResources();
 };</pre>
 
 <p>ここでは、セッションが終了し、<code>end</code> イベントが受信されると、<code>freeResources()</code> 関数が呼び出され、XR の提示を処理するために以前に割り当てたりロードしたりしたリソースが解放されます。 <code>end</code> イベントハンドラーで <code>freeResources()</code> を呼び出すことにより、ユーザーが停止をトリガーするボタンをクリックしたとき（上記の <code>shutdownXR()</code> 関数を呼び出すことなど）と、エラーまたは何らかの理由でセッションが自動的に終了したときの両方で <code>freeResources()</code> を呼び出します。</p>

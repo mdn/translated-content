@@ -32,15 +32,17 @@ Il est recommandé de compresser les données autant que possible et donc d'util
 
 ## Syntaxe
 
-    Content-Encoding: gzip
-    Content-Encoding: compress
-    Content-Encoding: deflate
-    Content-Encoding: identity
-    Content-Encoding: br
+```
+Content-Encoding: gzip
+Content-Encoding: compress
+Content-Encoding: deflate
+Content-Encoding: identity
+Content-Encoding: br
 
-    // Plusieurs valeurs selon l'ordre dans lequel ils ont été appliqués
-    Content-Encoding: gzip, identity
-    Content-Encoding: deflate, gzip
+// Plusieurs valeurs selon l'ordre dans lequel ils ont été appliqués
+Content-Encoding: gzip, identity
+Content-Encoding: deflate, gzip
+```
 
 ## Directives
 
@@ -61,11 +63,15 @@ Il est recommandé de compresser les données autant que possible et donc d'util
 
 Côté client, on peut fournir la liste des mécanismes de compression pris en charge en envoyant l'en-tête {{HTTPHeader("Accept-Encoding")}} lors de la négociation de l'encodage.
 
-    Accept-Encoding: gzip, deflate
+```
+Accept-Encoding: gzip, deflate
+```
 
 Le serveur répondra avec le schéma utilisé avec l'en-tête de réponse `Content-Encoding`.
 
-    Content-Encoding: gzip
+```
+Content-Encoding: gzip
+```
 
 À noter que le serveur n'est pas obligé d'utiliser de méthode de compression. La compression dépend fortement des paramètres du serveur et des modules de serveur utilisés.
 

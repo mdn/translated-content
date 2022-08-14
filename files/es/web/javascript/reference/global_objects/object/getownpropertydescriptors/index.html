@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyD
 ---
 <div>{{JSRef}}</div>
 
-<p>El método<code><strong>Object.getOwnPropertyDescriptors()</strong></code><strong> </strong>regresa todos los descriptores de propiedad propios de un objeto dado.</p>
+<p>El método<code><strong>Object.getOwnPropertyDescriptors()</strong></code><strong> </strong>regresa todos los descriptores de propiedad propios de un objeto dado.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}</div>
 
@@ -33,28 +33,28 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyD
 
 <p>Este método permite la examinación de la descripción precisa de todas las propiedades de un objeto. Una propiedad en JavaScript consiste en un valor-cadena nombre y un descriptor de propiedad. Más información acerca de los tipos de descriptores de propiedad y sus atributos pueden ser encontrados en {{jsxref("Object.defineProperty()")}}.</p>
 
-<p>Un descriptor de propiedad es un registro con algunos de los siguientes atributos:</p>
+<p>Un descriptor de propiedad es un registro con algunos de los siguientes atributos:</p>
 
 <dl>
  <dt><code>value</code></dt>
  <dd>El valor asociado con la propiedad (solo descriptores de datos).</dd>
  <dt><code><strong>writable</strong></code></dt>
- <dd><code>true</code> si y solo si el valor asociado con la propiedad puede ser cambiado (solo descriptores de datos).</dd>
+ <dd><code>true</code> si y solo si el valor asociado con la propiedad puede ser cambiado (solo descriptores de datos).</dd>
  <dt><code>get</code></dt>
- <dd>Un función que sirve como un getter para la propiedad, o {{jsxref("undefined")}} si no hay getter (solo descriptores de acceso).</dd>
+ <dd>Un función que sirve como un getter para la propiedad, o {{jsxref("undefined")}} si no hay getter (solo descriptores de acceso).</dd>
  <dt><code>set</code></dt>
- <dd>Una función que sirve como un setter para la propiedad, o {{jsxref("undefined")}} si no hay setter (solo descriptores de acceso).</dd>
+ <dd>Una función que sirve como un setter para la propiedad, o {{jsxref("undefined")}} si no hay setter (solo descriptores de acceso).</dd>
  <dt><code>configurable</code></dt>
- <dd><code>true</code> si y solo si el tipo de este descriptor de propiedad puede ser cambiado y si la propiedad puede ser borrada de el objeto correspondiente.</dd>
+ <dd><code>true</code> si y solo si el tipo de este descriptor de propiedad puede ser cambiado y si la propiedad puede ser borrada de el objeto correspondiente.</dd>
  <dt><code>enumerable</code></dt>
- <dd><code>true</code> si y solo si esta propiedad aparece durante la enumeración de las propiedad en el objeto correspondiente.</dd>
+ <dd><code>true</code> si y solo si esta propiedad aparece durante la enumeración de las propiedad en el objeto correspondiente.</dd>
 </dl>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
 <h3 id="Creando_un_clon_superficial">Creando un clon superficial</h3>
 
-<p>Mientras el método {{jsxref("Object.assign()")}} solo copiará las propiedades enumerables y propias de un objeto fuente a un objeto destino, puedes usar este método y {{jsxref("Object.create()")}} para una copia superficial entre dos objetos desconocidos:</p>
+<p>Mientras el método {{jsxref("Object.assign()")}} solo copiará las propiedades enumerables y propias de un objeto fuente a un objeto destino, puedes usar este método y {{jsxref("Object.create()")}} para una copia superficial entre dos objetos desconocidos:</p>
 
 <pre class="brush: js">Object.create(
   Object.getPrototypeOf(obj),
@@ -72,8 +72,8 @@ superclass.prototype = {
 };
 function subclass() {}
 subclass.prototype = Object.create(
-  superclass.prototype,
-  {
+  superclass.prototype,
+  {
     // Define tus métodos y propiedades aquí
   }
 );
@@ -96,7 +96,7 @@ subclass.prototype = Object.create(
   <tr>
    <td>{{SpecName('ES2017', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}}</td>
    <td>{{Spec2('ES2017')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

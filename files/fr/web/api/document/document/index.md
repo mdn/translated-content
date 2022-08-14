@@ -15,7 +15,9 @@ Le constructeur **`Document`** crée un nouvel objet de {{domxref("Document")}},
 
 ## Syntaxe
 
-    var document = new Document()
+```js
+var document = new Document()
+```
 
 ### Paramètres
 

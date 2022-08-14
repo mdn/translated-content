@@ -15,9 +15,9 @@ original_slug: Web/CSS/Comprendre_z-index/Empilement_sans_z-index
 
 Lorsqu’aucun élément n'a de {{cssxref("z-index")}} définis, tous les éléments sont empilés dans cet ordre (de bas en haut)&nbsp;:
 
-1.  Arrière-plans et bordures de l'élément racine
-2.  Blocs enfants dans le flux normal, dans leur ordre d'apparition (en HTML)
-3.  Éléments enfants positionnés, dans leur ordre d'apparition (en HTML)
+1. Arrière-plans et bordures de l'élément racine
+2. Blocs enfants dans le flux normal, dans leur ordre d'apparition (en HTML)
+3. Éléments enfants positionnés, dans leur ordre d'apparition (en HTML)
 
 On gardera à l'esprit que, lorsque la propriété {{cssxref("order")}} modifie l'ordre visuel des conteneurs flexibles ({{cssxref("flex")}}), cela modifie également l'ordre du contexte d'empilement.
 

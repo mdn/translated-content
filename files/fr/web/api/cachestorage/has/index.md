@@ -16,13 +16,15 @@ translation_of: Web/API/CacheStorage/has
 
 La méthode **`has()`** de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie `true` si un objet {{domxref("Cache")}} est égal au `cacheName`.
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.
+Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/caches).
 
 ## Syntaxe
 
-    caches.has(cacheName).then(function(true) {
-      // le cache existe!
-    });
+```js
+caches.has(cacheName).then(function(true) {
+  // le cache existe!
+});
+```
 
 ### Paramètres
 

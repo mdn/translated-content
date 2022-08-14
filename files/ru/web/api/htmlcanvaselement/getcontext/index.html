@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLCanvasElement/getContext
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p>Метод <strong><code>HTMLCanvasElement.getContext()</code></strong> возвращает контекст рисования на холсте, или {{jsxref("null")}}, если идентификатор контекста не определён.</p>
+<p>Метод <strong><code>HTMLCanvasElement.getContext()</code></strong> возвращает контекст рисования на холсте, или {{jsxref("null")}}, если идентификатор контекста не определён.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -16,15 +16,15 @@ translation_of: Web/API/HTMLCanvasElement/getContext
 
 <dl>
  <dt>contextType</dt>
- <dd>{{domxref("DOMString")}}, содержащий идентификатор контекста, определяющий контекст рисования, связанный с холстом. Возможные значения:
+ <dd>{{domxref("DOMString")}}, содержащий идентификатор контекста, определяющий контекст рисования, связанный с холстом. Возможные значения:
  <ul>
   <li><code>"2d</code>", ведущий к созданию объекта {{domxref("CanvasRenderingContext2D")}}, представляющий двумерный контекст.</li>
-  <li><code>"webgl"</code> (или <code>"experimental-webgl"</code>), который будет создавать объект {{domxref("WebGLRenderingContext")}}, представляющий трёхмерный контекст. Этот контекст доступен только в браузерах, которые реализуют {{domxref("WebGL")}} первой версии (OpenGL ES 2.0).</li>
-  <li>"<code>webgl2</code>" (или "<code>experimental-webgl2</code>"), который будет создавать объект {{domxref("WebGL2RenderingContext")}}, представляющий трёхмерный контекст. Этот контекст доступен только в браузерах, которые реализуют {{domxref("WebGL")}} второй версии (OpenGL ES 3.0). {{experimental_inline}}</li>
-  <li><code>"bitmaprenderer",</code> который позволит создать {{domxref("ImageBitmapRenderingContext")}}, обеспечивающий только функции для замены содержимого холста с заданным {{domxref("ImageBitmap")}}.</li>
+  <li><code>"webgl"</code> (или <code>"experimental-webgl"</code>), который будет создавать объект {{domxref("WebGLRenderingContext")}}, представляющий трёхмерный контекст. Этот контекст доступен только в браузерах, которые реализуют {{domxref("WebGL")}} первой версии (OpenGL ES 2.0).</li>
+  <li>"<code>webgl2</code>" (или "<code>experimental-webgl2</code>"), который будет создавать объект {{domxref("WebGL2RenderingContext")}}, представляющий трёхмерный контекст. Этот контекст доступен только в браузерах, которые реализуют {{domxref("WebGL")}} второй версии (OpenGL ES 3.0). {{experimental_inline}}</li>
+  <li><code>"bitmaprenderer",</code> который позволит создать {{domxref("ImageBitmapRenderingContext")}}, обеспечивающий только функции для замены содержимого холста с заданным {{domxref("ImageBitmap")}}.</li>
  </ul>
 
- <p>Примечание: Идентификаторы "<code>experimental-webgl</code>" или "<code>experimental-webgl2</code>" используются в новых реализациях WebGL. Эти реализации не достигли испытательного набора на соответствие или ситуация с графическими драйверами на платформе ещё не стабильна The <a href="https://www.khronos.org/">Khronos Group</a> certifies WebGL implementations under certain <a href="https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt">conformance rules</a>.</p>
+ <p>Примечание: Идентификаторы "<code>experimental-webgl</code>" или "<code>experimental-webgl2</code>" используются в новых реализациях WebGL. Эти реализации не достигли испытательного набора на соответствие или ситуация с графическими драйверами на платформе ещё не стабильна The <a href="https://www.khronos.org/">Khronos Group</a> certifies WebGL implementations under certain <a href="https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt">conformance rules</a>.</p>
  </dd>
  <dt><code>contextAttributes</code></dt>
  <dd>
@@ -36,7 +36,7 @@ translation_of: Web/API/HTMLCanvasElement/getContext
  2d атрибуты контекста:
 
  <ul>
-  <li><strong><code>alpha</code></strong>: Логическое значение, означающее, есть ли у холста альфа-канал. Значение <code>false</code> говорит браузеру, что фон холста непрозрачный, что может ускорить рисование прозрачного содержимого и изображений.</li>
+  <li><strong><code>alpha</code></strong>: Логическое значение, означающее, есть ли у холста альфа-канал. Значение <code>false</code> говорит браузеру, что фон холста непрозрачный, что может ускорить рисование прозрачного содержимого и изображений.</li>
   <li>{{non-standard_inline}} (Gecko only) <strong><code>willReadFrequently</code></strong>: Boolean that indicates whether or not a lot of read-back operations are planned. This will force the use of a software (instead of hardware accelerated) 2D canvas and can save memory when calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} frequently. This option is only available, if the flag <code>gfx.canvas.willReadFrequently.enable</code> is set to <code>true</code> (which, by default, is only the case for B2G/Firefox OS).</li>
   <li>{{non-standard_inline}} (Blink only) <strong><code>storage</code></strong>: String that indicates which storage is used ("persistent" by default).</li>
  </ul>
@@ -58,16 +58,16 @@ translation_of: Web/API/HTMLCanvasElement/getContext
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>{{domxref("RenderingContext")}}, который представляет собой</p>
+<p>{{domxref("RenderingContext")}}, который представляет собой</p>
 
 <ul>
- <li>{{domxref("CanvasRenderingContext2D")}} для <code>"2d"</code>,</li>
- <li>{{domxref("WebGLRenderingContext")}} для <code>"webgl"</code> и <code>"experimental-webgl"</code>,</li>
- <li>{{domxref("WebGL2RenderingContext")}} для <code>"webgl2"</code> и <code>"experimental-webgl2"</code>, или</li>
- <li>{{domxref("ImageBitmapRenderingContext")}} для <code>"bitmaprenderer"</code>.</li>
+ <li>{{domxref("CanvasRenderingContext2D")}} для <code>"2d"</code>,</li>
+ <li>{{domxref("WebGLRenderingContext")}} для <code>"webgl"</code> и <code>"experimental-webgl"</code>,</li>
+ <li>{{domxref("WebGL2RenderingContext")}} для <code>"webgl2"</code> и <code>"experimental-webgl2"</code>, или</li>
+ <li>{{domxref("ImageBitmapRenderingContext")}} для <code>"bitmaprenderer"</code>.</li>
 </ul>
 
-<p>Если contextType не соответствует возможному контексту рисунка, то возвращается null.</p>
+<p>Если contextType не соответствует возможному контексту рисунка, то возвращается null.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -98,5 +98,5 @@ console.log(ctx); // CanvasRenderingContext2D { ... }
 <ul>
  <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
  <li>{{domxref("OffscreenCanvas.getContext()")}}</li>
- <li>Available rendering contexts: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and {{domxref("ImageBitmapRenderingContext")}}.</li>
+ <li>Available rendering contexts: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and {{domxref("ImageBitmapRenderingContext")}}.</li>
 </ul>

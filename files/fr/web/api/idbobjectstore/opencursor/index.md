@@ -19,7 +19,9 @@ Afin de déterminer si l'opération s'est déroulée correctement, on pourra sur
 
 ## Syntaxe
 
-    var requete = ObjectStore.openCursor(optionalKeyRange, optionalDirection);
+```js
+var requete = ObjectStore.openCursor(optionalKeyRange, optionalDirection);
+```
 
 ### Paramètres
 

@@ -20,7 +20,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html",
   "taller")}}
 
-
 ## 構文
 
 ```js

@@ -13,4 +13,4 @@ Un **cache** (cache web ou cache HTTP) est un composant stockant temporairement 
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Cache web")}} sur Wikipedia
+- [Cache web](https://fr.wikipedia.org/wiki/Cache_web) sur Wikipédia

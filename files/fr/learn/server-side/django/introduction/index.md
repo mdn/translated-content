@@ -116,12 +116,14 @@ Les sections ci-dessous vous donneront une idée de ce à quoi ressemble ces dif
 
 Le mapper URL est généralement stocké dans un fichier nommé **urls.py**. Dans l'exemple ci-dessous, le mapper (`urlpatterns`) définit une liste de mappings entre des *routes* (des *patterns* d'URL spécifiques*)* et leur fonction de vue correspondante. Si une requête HTTP est reçue dont l'URL correspond à un pattern spécifié, la fonction vue associée sera alors appelée et passée dans la requête.
 
-    urlpatterns = [
-        path('admin/', admin.site.urls),
-        path('book/<int:id>/', views.book-detail, name='book-detail'),
-        path('catalog/', include('catalog.urls')),
-        re_path(r'^([0-9]+)/$', views.best),
-    ]
+```python
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('book/<int:id>/', views.book-detail, name='book-detail'),
+    path('catalog/', include('catalog.urls')),
+    re_path(r'^([0-9]+)/$', views.best),
+]
+```
 
 L'objet `urlpatterns` est une liste de fonctions `path()` et/ou `re_path()`(les listes en Python sont définies en utilisant des crochets), où des éléments sont séparés par des virgules et peuvent avoir une [virgule de traîne optionnelle](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Par exemple : `[item1, item2, item3,]`).
 

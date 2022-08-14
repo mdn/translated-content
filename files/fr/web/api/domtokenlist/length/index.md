@@ -9,7 +9,9 @@ La propriété en lecture seule **`length`** (_longueur_) de l'interface {{domxr
 
 ## Syntaxe
 
-    tokenList.length;
+```js
+tokenList.length;
+```
 
 ### Value
 

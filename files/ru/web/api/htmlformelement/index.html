@@ -20,23 +20,23 @@ translation_of: Web/API/HTMLFormElement
 
 <dl>
  <dt>{{domxref("HTMLFormElement.acceptCharset")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("accept-charset", "form") }} HTML attribute, containing a list of character encodings that the server accepts.</dd>
+ <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("accept-charset", "form") }} HTML attribute, containing a list of character encodings that the server accepts.</dd>
  <dt>{{domxref("HTMLFormElement.action")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.</dd>
+ <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.</dd>
  <dt>{{domxref("HTMLFormElement.autocomplete")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("autocomplete", "form") }} HTML attribute, containing a string that indicates whether the controls in this form can have their values automatically populated by the browser.</dd>
+ <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("autocomplete", "form") }} HTML attribute, containing a string that indicates whether the controls in this form can have their values automatically populated by the browser.</dd>
  <dt>{{domxref("HTMLFormElement.elements")}}<code><a href="/en/DOM/form.elements" title="en/DOM/form.elements"> </a></code>{{readonlyinline}}</dt>
  <dd>Returns a live {{domxref("HTMLFormControlsCollection")}} containing all the form controls belonging to this form element.</dd>
  <dt>{{domxref("HTMLFormElement.encoding")}}</dt>
  <dd>Is a synonym for <code>enctype</code>.</dd>
  <dt>{{domxref("HTMLFormElement.enctype")}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflects the {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set.</dd>
+ <dd>Is a {{domxref("DOMString")}} reflects the {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set.</dd>
  <dt>{{domxref("HTMLFormElement.length")}} {{readonlyinline}}</dt>
  <dd>Returns a <code>long</code> that represents the number of controls in the form.</dd>
  <dt>{{domxref("HTMLFormElement.method")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.</dd>
+ <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.</dd>
  <dt>{{domxref("HTMLFormElement.name")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.</dd>
+ <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.</dd>
  <dt>{{domxref("HTMLFormElement.noValidate")}}</dt>
  <dd>Is a {{jsxref("Boolean")}} that reflects the {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating that the form should not be validated.</dd>
  <dt>{{domxref("HTMLFormElement.target")}}</dt>
@@ -49,7 +49,7 @@ translation_of: Web/API/HTMLFormElement
 
 <dl>
  <dt>{{domxref("HTMLFormElement.checkValidity()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the element's child controls are subject to constraint validation and satify those contraints, <span style="line-height: 1.5;">or </span><code style="font-style: normal; line-height: 1.5;">false</code><span style="line-height: 1.5;"> if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code style="font-style: normal; line-height: 1.5;">false</code>.</span></dd>
+ <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the element's child controls are subject to constraint validation and satify those contraints, <span style="line-height: 1.5;">or </span><code style="font-style: normal; line-height: 1.5;">false</code><span style="line-height: 1.5;"> if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code style="font-style: normal; line-height: 1.5;">false</code>.</span></dd>
  <dt>{{domxref("HTMLFormElement.item()")}}</dt>
  <dd>Gets the item in the <code>elements</code> collection at the specified index, or null if there is no item at that index. You can also specify the index in array-style brackets or parentheses after the form object name, without calling this method explicitly.</dd>
  <dt>{{domxref("HTMLFormElement.namedItem()")}}</dt>
@@ -62,7 +62,7 @@ translation_of: Web/API/HTMLFormElement
 
 <dl>
  <dt>{{domxref("HTMLFormElement.reportValidity()")}}</dt>
- <dd>Returns<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">true</code><span style="line-height: 1.5;"> if the element's child controls satisfy their validation constraints. </span><span style="line-height: 1.5;">When</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">false</code><span style="line-height: 1.5;"> is returned, cancelable</span><span style="line-height: 1.5;"> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid" title="/en-US/docs/Web/Events/invalid">invalid</a></code> events are fired for each invalid child and validation problems are reported to the user.</span></dd>
+ <dd>Returns<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">true</code><span style="line-height: 1.5;"> if the element's child controls satisfy their validation constraints. </span><span style="line-height: 1.5;">When</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">false</code><span style="line-height: 1.5;"> is returned, cancelable</span><span style="line-height: 1.5;"> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid" title="/en-US/docs/Web/Events/invalid">invalid</a></code> events are fired for each invalid child and validation problems are reported to the user.</span></dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -142,22 +142,22 @@ f.submit();
 &lt;title&gt;MDN Example&lt;/title&gt;
 &lt;script type="text/javascript"&gt;
 function popupSend (oFormElement) {
-  if (oFormElement.method &amp;&amp; oFormElement.method.toLowerCase() !== "get") {
-    alert("This script supports the GET method only.");
-    return;
-  }
-  var oField, sFieldType, nFile, sSearch = "";
-  for (var nItem = 0; nItem &lt; oFormElement.elements.length; nItem++) {
-    oField = oFormElement.elements[nItem];
-    if (!oField.hasAttribute("name")) { continue; }
-    sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
-    if (sFieldType === "FILE") {
-      for (nFile = 0; nFile &lt; oField.files.length; sSearch += "&amp;" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));
-    } else if ((sFieldType !== "RADIO" &amp;&amp; sFieldType !== "CHECKBOX") || oField.checked) {
-      sSearch += "&amp;" + escape(oField.name) + "=" + escape(oField.value);
-    }
-  }
-  open(oFormElement.action.replace(/(?:\?.*)?$/, sSearch.replace(/^&amp;/, "?")), "submit-" + (oFormElement.name || Math.floor(Math.random() * 1e6)), "resizable=yes,scrollbars=yes,status=yes");
+  if (oFormElement.method &amp;&amp; oFormElement.method.toLowerCase() !== "get") {
+    alert("This script supports the GET method only.");
+    return;
+  }
+  var oField, sFieldType, nFile, sSearch = "";
+  for (var nItem = 0; nItem &lt; oFormElement.elements.length; nItem++) {
+    oField = oFormElement.elements[nItem];
+    if (!oField.hasAttribute("name")) { continue; }
+    sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
+    if (sFieldType === "FILE") {
+      for (nFile = 0; nFile &lt; oField.files.length; sSearch += "&amp;" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));
+    } else if ((sFieldType !== "RADIO" &amp;&amp; sFieldType !== "CHECKBOX") || oField.checked) {
+      sSearch += "&amp;" + escape(oField.name) + "=" + escape(oField.value);
+    }
+  }
+  open(oFormElement.action.replace(/(?:\?.*)?$/, sSearch.replace(/^&amp;/, "?")), "submit-" + (oFormElement.name || Math.floor(Math.random() * 1e6)), "resizable=yes,scrollbars=yes,status=yes");
 }
 &lt;/script&gt;
 
@@ -166,13 +166,13 @@ function popupSend (oFormElement) {
 &lt;body&gt;
 
 &lt;form name="yourForm" action="test.php" method="get" onsubmit="popupSend(this); return false;"&gt;
-  &lt;p&gt;First name: &lt;input type="text" name="firstname" /&gt;&lt;br /&gt;
-  Last name: &lt;input type="text" name="lastname" /&gt;&lt;br /&gt;
-  Password: &lt;input type="password" name="pwd" /&gt;&lt;br /&gt;
-  &lt;input type="radio" name="sex" value="male" /&gt; Male &lt;input type="radio" name="sex" value="female" /&gt; Female&lt;/p&gt;
-  &lt;p&gt;&lt;input type="checkbox" name="vehicle" value="Bike" /&gt;I have a bike&lt;br /&gt;
-  &lt;input type="checkbox" name="vehicle" value="Car" /&gt;I have a car&lt;/p&gt;
-  &lt;p&gt;&lt;input type="submit" value="Submit" /&gt;&lt;/p&gt;
+  &lt;p&gt;First name: &lt;input type="text" name="firstname" /&gt;&lt;br /&gt;
+  Last name: &lt;input type="text" name="lastname" /&gt;&lt;br /&gt;
+  Password: &lt;input type="password" name="pwd" /&gt;&lt;br /&gt;
+  &lt;input type="radio" name="sex" value="male" /&gt; Male &lt;input type="radio" name="sex" value="female" /&gt; Female&lt;/p&gt;
+  &lt;p&gt;&lt;input type="checkbox" name="vehicle" value="Bike" /&gt;I have a bike&lt;br /&gt;
+  &lt;input type="checkbox" name="vehicle" value="Car" /&gt;I have a car&lt;/p&gt;
+  &lt;p&gt;&lt;input type="submit" value="Submit" /&gt;&lt;/p&gt;
 &lt;/form&gt;
 
 &lt;/body&gt;

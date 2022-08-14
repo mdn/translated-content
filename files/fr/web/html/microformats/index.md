@@ -363,7 +363,7 @@ Pris en charge dans tous les navigateurs prenant en charge l'attribut class et s
 ## Voir aussi
 
 - [attribut `class`](/fr/docs/Web/HTML/Global_attributes/class)
-- [Microformat](https://fr.wikipedia.org/wiki/Microformat) sur Wikipedia
+- [Microformat](https://fr.wikipedia.org/wiki/Microformat) sur Wikipédia
 - [Le site officiel des microformats](http://microformats.org/)
 - [Prise en charge des différents moteurs de recherche](http://microformats.org/wiki/search_engines) sur le site microformats
 - [Les microformats sur IndieWebCamp](https://indiewebcamp.com/microformats)

@@ -15,7 +15,9 @@ La propriété en lecture seule **`target`** de l'interface {{domxref("Intersect
 
 ## Syntaxe
 
-    var target = IntersectionObserverEntry.target;
+```js
+var target = IntersectionObserverEntry.target;
+```
 
 ### Valeur
 

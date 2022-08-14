@@ -18,7 +18,7 @@ Dans les applications JavaScript modernes, nous utilisons des gestionnaires de r
 ### Culture générale
 
 - ["Benefits of dead code elimination during bundling"](http://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) in Axel Rauschmayer's book: "Exploring JS: Modules"
-- {{Interwiki("wikipedia", "Réusinage_de_code#Suppression_du_code_mort","Suppression du code mort")}} sur Wikipédia
+- [Suppression du code mort](https://fr.wikipedia.org/wiki/R%C3%A9usinage_de_code#Suppression_du_code_mort) sur Wikipédia
 
 ### Références techniques
 

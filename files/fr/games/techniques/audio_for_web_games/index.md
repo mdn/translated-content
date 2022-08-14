@@ -166,7 +166,7 @@ lt;audio id="myAudio" src="http://jPlayer.org/tmp/countdown.mp3"></audio>
 
 Maintenant, nous avons des boutons avec des heures de début et de fin en quelques secondes. Le fichier MP3 "countdown.mp3" se compose d'un numéro qui est prononcé toutes les 2 secondes, l'idée étant de lire ce numéro lorsque le bouton correspondant est pressé.
 
-Ajoutons du JavaScript pour que ça marche:
+Ajoutons du JavaScript pour que ça marche :
 
 ```js
 var myAudio = document.getElementById('myAudio');
@@ -298,9 +298,9 @@ Regardons maintenant le code. Nous créons d'abord un nouveau {{domxref ("AudioC
 
 `start()` (anciennement appelé `noteOn ())` commence à lire un élément audio. `start ()` demande trois paramètres (facultatifs) :
 
-1.  when _(quand)_ : le temps absolu pour commencer la lecture .
-2.  where (offset) _(où)_ : la partie de l'audio qui doit commencer à être jouée.
-3.  how long _(combien de temps)_ : la durée pendant laquelle elle doit être jouée.
+1. when _(quand)_ : le temps absolu pour commencer la lecture .
+2. where (offset) _(où)_ : la partie de l'audio qui doit commencer à être jouée.
+3. how long _(combien de temps)_ : la durée pendant laquelle elle doit être jouée.
 
 `stop()` prend un paramètre facultatif - when - qui est le délai avant l'arrêt.
 

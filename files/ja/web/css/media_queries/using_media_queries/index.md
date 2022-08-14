@@ -46,7 +46,6 @@ translation_of: Web/CSS/Media_Queries/Using_media_queries
 > ただし、その内容は、クエリーの結果が `true` にならない限り適用されません。
 > なぜこのようになるかは、 Tomayac 氏のブログ [Why Browser Download Stylesheet with Non-Matching Media Queries](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-queries-eb61b91b85a2) に書かれています。
 
-
 ## メディア種別を対象にする
 
 メディア種別は、その機器の一般的な分類を記述します。ウェブサイトは一般的に画面を想定してデザインされていますが、プリンターや、音声ベースの画面リーダーのような特殊な機器を対象としたスタイルを作成したい場合もあるでしょう。例えば、この CSS はプリンターを対象としています。
@@ -209,7 +208,7 @@ Level 4 の構文に変換すると、次のようになります。
 @media (not(hover)) { ... }
 ```
 
-### 
+### Testing for multiple features with `or`
 
 `or` を使用して複数の特性の中の一つと一致するか検査することができ、特性のうちの何れかが true であれば `true` になります。例えば、次のクエリーは端末がモノクロ画面である、またはホバーができるかどうかを検査します。
 

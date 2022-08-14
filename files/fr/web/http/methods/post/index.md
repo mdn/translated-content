@@ -14,7 +14,7 @@ La **méthode HTTP `POST`** envoie des données au serveur. Le type du corps de 
 
 La différence entre `PUT` et {{HTTPMethod("POST")}} tient au fait que `PUT` est une méthode idempotente. Une requête `PUT`, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet de bord). À l'inverse, des requêtes `POST` successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.
 
-Une requête `POST` est habituellement envoyée via un [formulaire HTML](/en-US/docs/Web/Guide/HTML/Forms) et a pour résultat un changement sur le serveur. Dans ce cas, le type du contenu est sélectionné en mettant la chaîne de caractères adéquate dans l'attribut *{{htmlattrxref("enctype", "form")}} de l'élément {{HTMLElement("form")}} ou dans l'attribut {{htmlattrxref("formenctype", "input")}} de l'élément {{HTMLElement("input") }}, voir celui des éléments {{HTMLElement("button")}}*&nbsp;:
+Une requête `POST` est habituellement envoyée via un [formulaire HTML](/fr/docs/Web/Guide/HTML/Forms) et a pour résultat un changement sur le serveur. Dans ce cas, le type du contenu est sélectionné en mettant la chaîne de caractères adéquate dans l'attribut *{{htmlattrxref("enctype", "form")}} de l'élément {{HTMLElement("form")}} ou dans l'attribut {{htmlattrxref("formenctype", "input")}} de l'élément {{HTMLElement("input") }}, voir celui des éléments {{HTMLElement("button")}}*&nbsp;:
 
 - `application/`_`x-www-form-urlencoded`&nbsp;: les valeurs sont encodées sous forme de couples clé-valeur séparés par `'&'`, avec un `'='` entre la clé et la valeur. Les caractères non alphanumériques sont {{glossary("percent encoded")}}&nbsp;: c'est la raison pour laquelle ce type de format n'est pas adapté à une utilisation avec des données binaires  (utilisez `multipart/form-data` à la place)_
 - _`multipart/form-data`_
@@ -63,33 +63,39 @@ Lorsque la requête `POST` est envoyée par un autre moyen qu'un formulaire HTML
 
 ## Syntaxe
 
-    POST /index.html
+```
+POST /index.html
+```
 
 ## Exemple
 
 Un formulaire simple utilisant le type de contenu par défaut `application/x-www-form-urlencoded`&nbsp;:
 
-    POST / HTTP/1.1
-    Host: foo.com
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 13
+```
+POST / HTTP/1.1
+Host: foo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
 
-    say=Hi&to=Mom
+say=Hi&to=Mom
+```
 
 Un formulaire utilisant le type de contenu `multipart/form-data`&nbsp;:
 
-    POST /test.html HTTP/1.1
-    Host: example.org
-    Content-Type: multipart/form-data;boundary="boundary"
+```
+POST /test.html HTTP/1.1
+Host: example.org
+Content-Type: multipart/form-data;boundary="boundary"
 
-    --boundary
-    Content-Disposition: form-data; name="field1"
+--boundary
+Content-Disposition: form-data; name="field1"
 
-    value1
-    --boundary
-    Content-Disposition: form-data; name="field2"; filename="example.txt"
+value1
+--boundary
+Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-    value2
+value2
+```
 
 ## Spécifications
 

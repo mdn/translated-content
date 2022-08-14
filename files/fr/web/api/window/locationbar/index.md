@@ -15,7 +15,9 @@ Renvoie l'objet `locationbar`, dont la visibilité peut être vérifiée.
 
 ## Syntaxe
 
-    objRef = window.locationbar
+```js
+objRef = window.locationbar
+```
 
 ## Exemple
 

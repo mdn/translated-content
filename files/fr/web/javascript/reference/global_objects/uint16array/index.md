@@ -17,11 +17,13 @@ Le tableau typé **`Uint16Array`** permet de représenter un tableau d'entiers n
 
 ## Syntaxe
 
-    new Uint16Array(); // apparu avec ES2017
-    new Uint16Array(longueur);
-    new Uint16Array(tableauTypé);
-    new Uint16Array(objet);
-    new Uint16Array(tampon [, décalage [, longueur]]);
+```js
+new Uint16Array(); // apparu avec ES2017
+new Uint16Array(longueur);
+new Uint16Array(tableauTypé);
+new Uint16Array(objet);
+new Uint16Array(tampon [, décalage [, longueur]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe)_.
 

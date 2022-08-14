@@ -16,13 +16,13 @@ translation_of: Web/CSS/font
 
 
 
-<p>다른 단축 속성과 마찬가지로, 생략한 속성은 초기값으로 설정하며 이 과정에서 다른 속성으로 설정한 값을 덮어 쓸 수도 있습니다. <code>font</code> 속성으로 설정할 수 없는 {{cssxref("font-stretch")}}, {{ cssxref("font-size-adjust")}}, {{cssxref("font-kerning")}}의 값도 초기값으로 돌아갑니다.</p>
+<p>다른 단축 속성과 마찬가지로, 생략한 속성은 초기값으로 설정하며 이 과정에서 다른 속성으로 설정한 값을 덮어 쓸 수도 있습니다. <code>font</code> 속성으로 설정할 수 없는 {{cssxref("font-stretch")}}, {{ cssxref("font-size-adjust")}}, {{cssxref("font-kerning")}}의 값도 초기값으로 돌아갑니다.</p>
 
 <h2 id="구문">구문</h2>
 
-<p><code>font</code> 속성은 하나의 키워드를 지정해 시스템 폰트를 사용하도록 설정할 수도 있고, 여러 글꼴 관련 속성의 단축 속성으로도 사용할 수 있습니다.</p>
+<p><code>font</code> 속성은 하나의 키워드를 지정해 시스템 폰트를 사용하도록 설정할 수도 있고, 여러 글꼴 관련 속성의 단축 속성으로도 사용할 수 있습니다.</p>
 
-<p><code>font</code>를 시스템 폰트 키워드로 사용하려면 <code><a href="#caption">caption</a></code>, <code><a href="#icon">icon</a></code>, <code><a href="#menu">menu</a></code>, <code><a href="#message-box">message-box</a></code>, <code><a href="#small-caption">small-caption</a></code>, <code><a href="#status-bar">status-bar</a></code> 중 하나를 사용해야 합니다.</p>
+<p><code>font</code>를 시스템 폰트 키워드로 사용하려면 <code><a href="#caption">caption</a></code>, <code><a href="#icon">icon</a></code>, <code><a href="#menu">menu</a></code>, <code><a href="#message-box">message-box</a></code>, <code><a href="#small-caption">small-caption</a></code>, <code><a href="#status-bar">status-bar</a></code> 중 하나를 사용해야 합니다.</p>
 
 <p><code>font</code>를 단축 속성으로 사용하려면,</p>
 
@@ -41,9 +41,9 @@ translation_of: Web/CSS/font
    <li>{{cssxref("&lt;line-height&gt;")}}</li>
   </ul>
  </li>
- <li><code>font-style</code>, <code>font-variant</code>, <code>font-weight</code>는 <code>font-size</code>의 앞에 와야 합니다.</li>
- <li><code>font-variant</code>는 CSS 2.1에서 정의한 <code>normal</code>과 <code>small-caps</code>만 사용할 수 있습니다.</li>
- <li><code>line-height</code>는 <code>font-size</code> 바로 다음에 와야 하며 "/"로 구분해야 합니다. 예: "<code>16px/3</code>"</li>
+ <li><code>font-style</code>, <code>font-variant</code>, <code>font-weight</code>는 <code>font-size</code>의 앞에 와야 합니다.</li>
+ <li><code>font-variant</code>는 CSS 2.1에서 정의한 <code>normal</code>과 <code>small-caps</code>만 사용할 수 있습니다.</li>
+ <li><code>line-height</code>는 <code>font-size</code> 바로 다음에 와야 하며 "/"로 구분해야 합니다. 예: "<code>16px/3</code>"</li>
  <li><code>font-family</code>는 마지막 값이어야 합니다.</li>
 </ul>
 
@@ -82,7 +82,7 @@ translation_of: Web/CSS/font
  <dt id="status-bar"><code>status-bar</code></dt>
  <dd>창의 상태표시줄에 사용하는 시스템 폰트.</dd>
  <dt>추가 시스템 폰트 키워드</dt>
- <dd>각 브라우저마다 더 많은 키워드를 접두사와 함께 구현하고 있습니다. Gecko는 <code>-moz-window</code>, <code>-moz-document</code>, <code>-moz-desktop</code>, <code>-moz-info</code>, <code>-moz-dialog</code>, <code>-moz-button</code>, <code>-moz-pull-down-menu</code>, <code>-moz-list</code>, <code>-moz-field</code>를 가지고 있습니다.</dd>
+ <dd>각 브라우저마다 더 많은 키워드를 접두사와 함께 구현하고 있습니다. Gecko는 <code>-moz-window</code>, <code>-moz-document</code>, <code>-moz-desktop</code>, <code>-moz-info</code>, <code>-moz-dialog</code>, <code>-moz-button</code>, <code>-moz-pull-down-menu</code>, <code>-moz-list</code>, <code>-moz-field</code>를 가지고 있습니다.</dd>
 </dl>
 
 <h3 id="형식_구문">형식 구문</h3>
@@ -306,34 +306,9 @@ setCss();</pre>
 
 <p>{{ EmbedLiveSample('예제','100%', '380px')}}</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Fonts', '#font-prop', 'font')}}</td>
-   <td>{{ Spec2('CSS3 Fonts')}}</td>
-   <td>Added support for <code>font-stretch</code> values.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'fonts.html#font-shorthand', 'font-weight')}}</td>
-   <td>{{ Spec2('CSS2.1')}}</td>
-   <td>Added support for keywords.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#font', 'font')}}</td>
-   <td>{{ Spec2('CSS1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 

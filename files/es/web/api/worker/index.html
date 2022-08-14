@@ -15,9 +15,9 @@ translation_of: Web/API/Worker
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>The <strong><code>Worker</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the <code>Worker()</code> constructor and specifying a script to be run in the worker thread.</p>
+<p>The <strong><code>Worker</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the <code>Worker()</code> constructor and specifying a script to be run in the worker thread.</p>
 
-<p>Workers may in turn spawn new workers as long as those workers are hosted within the same origin as the parent page (Note: nested workers are <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">currently not implemented in Blink</a>).  In addition workers may use <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> for network I/O, with the stipulation that the <code>responseXML</code> and <code>channel</code> attributes on <code>XMLHttpRequest</code> always return <code>null</code>.</p>
+<p>Workers may in turn spawn new workers as long as those workers are hosted within the same origin as the parent page (Note: nested workers are <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">currently not implemented in Blink</a>).  In addition workers may use <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> for network I/O, with the stipulation that the <code>responseXML</code> and <code>channel</code> attributes on <code>XMLHttpRequest</code> always return <code>null</code>.</p>
 
 <p>Not <a href="/En/DOM/Worker/Functions_available_to_workers" title="En/DOM/Worker/Functions available to workers">all interfaces and functions are available</a> to the script associated with a <code>Worker</code>.</p>
 
@@ -91,7 +91,7 @@ first.onchange = function() {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>Support varies for different types of workers. See each worker type's page for specifics.</p>
+<p>Support varies for different types of workers. See each worker type's page for specifics.</p>
 
 {{Compat("api.Worker")}}
 

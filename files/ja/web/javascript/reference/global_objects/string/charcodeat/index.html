@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 <p>Unicode コードポイントの範囲は、 <code>0</code> から <code>1114111</code> (<code>0x10FFFF</code>) です。最初の 128 の Unicode コードポイントは、 ASCII 文字エンコーディングに直接対応しています。 (Unicode についての詳細は、<a href="/ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Java Script ガイド</a>を参照してください。)</p>
 
 <div class="blockIndicator note">
-<p><strong>注:</strong> <code>charCodeAt()</code> は常に <code>65536</code> より小さい値を返すことに注意してください。これは、より高いコードポイントは、実際の文字を含むように使用されている (下の値) の "代理" 擬似文字のペアで表されているためです。</p>
+<p><strong>注:</strong> <code>charCodeAt()</code> は常に <code>65536</code> より小さい値を返すことに注意してください。これは、より高いコードポイントは、実際の文字を含むように使用されている (下の値) の "代理" 擬似文字のペアで表されているためです。</p>
 
 <p>これにより、 <code>65536</code> 以上の値の個々の文字について完全な文字を検証したり再現したりするためには、 <code>charCodeAt(<var>i</var>)</code> だけではなく、 <code>charCodeAt(<var>i</var>+1)</code> (2 文字の文字列を検証/再現する場合) か <code>codePointAt(<var>i</var>)</code> を代わりに使用する必要があります。下記の例 2 と 3 を見てください。</p>
 </div>

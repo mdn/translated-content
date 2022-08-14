@@ -21,7 +21,9 @@ Pour plus de détails sur les tampons audio, consultez la page de référence {{
 
 ## Syntaxe
 
-    var tampon = baseAudioContext.createBuffer(nbDeCanaux, longueur, frequenceDEchantillonnage);
+```js
+var tampon = baseAudioContext.createBuffer(nbDeCanaux, longueur, frequenceDEchantillonnage);
+```
 
 ### Paramètres
 

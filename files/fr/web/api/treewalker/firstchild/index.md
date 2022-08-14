@@ -15,7 +15,9 @@ La méthode **`TreeWalker.firstChild()`** déplace le {{domxref("Node")}} couran
 
 ## Syntaxe
 
-    node = treeWalker.firstChild;
+```js
+node = treeWalker.firstChild;
+```
 
 ## Exemple
 

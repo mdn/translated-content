@@ -14,12 +14,12 @@ translation_of: Web/API/CSSStyleDeclaration
 
 <p><strong><code>CSSStyleDeclaration</code></strong> インターフェースは CSS 宣言ブロックのオブジェクトを表し、スタイル情報や様々なスタイルに関するメソッドやプロパティを提供します。</p>
 
-<p><code>CSSStyleDeclaration</code> オブジェクトは、下記の 3 つの API によって使用されます。</p>
+<p><code>CSSStyleDeclaration</code> オブジェクトは、下記の 3 つの API によって使用されます。</p>
 
 <ul>
  <li>単一の要素のインラインスタイルを扱う {{DOMxRef("HTMLElement.style")}} から (例: <code>&lt;div style="..."&gt;</code>)。</li>
- <li>{{DOMxRef("CSSStyleSheet")}} API から。例えば <code>document.styleSheets[0].cssRules[0].style</code> は、その文書の最初のスタイルシートの最初の CSS 規則を <code>CSSStyleDeclaration</code> を返します。</li>
- <li>{{DOMxRef("Window.getComputedStyle()")}} で、 <code>CSSStyleDeclaration</code> オブジェクトを<strong>読み取り専用</strong>インターフェイスとして返します。</li>
+ <li>{{DOMxRef("CSSStyleSheet")}} API から。例えば <code>document.styleSheets[0].cssRules[0].style</code> は、その文書の最初のスタイルシートの最初の CSS 規則を <code>CSSStyleDeclaration</code> を返します。</li>
+ <li>{{DOMxRef("Window.getComputedStyle()")}} で、 <code>CSSStyleDeclaration</code> オブジェクトを<strong>読み取り専用</strong>インターフェイスとして返します。</li>
 </ul>
 
 <h2 id="属性">属性</h2>
@@ -56,7 +56,7 @@ translation_of: Web/API/CSSStyleDeclaration
  <dd>CSS 宣言ブロックからプロパティを削除します。</dd>
  <dt>{{DOMxRef("CSSStyleDeclaration.setProperty()")}}</dt>
  <dd>宣言ブロック内の既存の CSS プロパティを変更するか、新しい CSS プロパティを生成するかします。</dd>
- <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}</dt>
+ <dt>{{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}</dt>
  <dd><strong>Firefox の getComputedStyle のみ対応</strong> プロパティの値を {{DOMxRef("CSSPrimitiveValue")}} として、または<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定プロパティ</a>では <code>null</code> を返します。</dd>
 </dl>
 

@@ -7,7 +7,7 @@ translation_of: Learn/CSS/Styling_text/Fundamentals
 
 <div>{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary"><span class="seoSummary">이 기사에서는 {{glossary("CSS")}} 를 사용하여 텍스트 스타일링을 마스터하기 위한 과정을 시작합니다.</span> 여기에서는 글꼴 굵기, 종류 및 스타일, 글꼴 약식 (shorthand), 텍스트 정렬 및 기타 효과, 줄 및 문자 간격 설정을 포함하여, 텍스트/글꼴 스타일링의 모든 기본 사항에 대해 자세히 설명합니다.</p>
+<p class="summary"><span class="seoSummary">이 기사에서는 {{glossary("CSS")}} 를 사용하여 텍스트 스타일링을 마스터하기 위한 과정을 시작합니다.</span> 여기에서는 글꼴 굵기, 종류 및 스타일, 글꼴 약식 (shorthand), 텍스트 정렬 및 기타 효과, 줄 및 문자 간격 설정을 포함하여, 텍스트/글꼴 스타일링의 모든 기본 사항에 대해 자세히 설명합니다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -27,10 +27,10 @@ translation_of: Learn/CSS/Styling_text/Fundamentals
 <p>HTML 및 CSS 를 사용한 작업에서 이미 경험한 것처럼 요소 내부의 텍스트는 요소의 내용 박스안에 배치됩니다. 콘텐츠 영역의 왼쪽 상단 (또는 RTL 언어 콘텐츠의 경우, 오른쪽 상단) 에서 시작하여 행의 끝으로 흐릅니다. 끝까지 도달하면 다음 줄로 내려가서 모든 내용이 박스에 들어갈 때까지 다음 줄로 계속 진행합니다. 텍스트 내용은 일련의 인라인 요소처럼 효과적으로 작동하며, 서로 인접한 줄에 배치되면 줄 끝에 도달할 때까지 줄 바꿈을 만들지 않거나, {{htmlelement("br")}} 요소를 사용하여 수동으로 줄 바꿈을 수행하지 않습니다.</p>
 
 <div class="note">
-<p><strong>참고</strong>: 위의 단락으로 인해 혼동을 느끼게 되더라도 상관없이 — go back and review our <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">박스 모델</a> 기사를 검토하여, 박스 모델 이론을 정리하십시오.</p>
+<p><strong>참고</strong>: 위의 단락으로 인해 혼동을 느끼게 되더라도 상관없이 — go back and review our <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">박스 모델</a> 기사를 검토하여, 박스 모델 이론을 정리하십시오.</p>
 </div>
 
-<p>텍스트 스타일을 지정하는 데 사용되는 CSS 속성은 일반적으로 두 가지 카테고리로 분류되며, 이 기사에서는 별도로 살펴보겠습니다.properties used to style text generally fall into two categories, which we'll look at separately in this article:</p>
+<p>텍스트 스타일을 지정하는 데 사용되는 CSS 속성은 일반적으로 두 가지 카테고리로 분류되며, 이 기사에서는 별도로 살펴보겠습니다.properties used to style text generally fall into two categories, which we'll look at separately in this article:</p>
 
 <ul>
  <li><strong>글꼴 스타일</strong>: 텍스트에 적용되는 글꼴에 영향을 주고, 적용되는 글꼴, 크기, 굵기, 이탤릭체 등에 영향을 주는 속성입니다.</li>
@@ -38,12 +38,12 @@ translation_of: Learn/CSS/Styling_text/Fundamentals
 </ul>
 
 <div class="note">
-<p><strong>참고</strong>: 요소 내부의 텍스트는 모두 하나의 단일 entity 로 영향을 받습니다. 텍스트의 하위 섹션은 적절한 요소 (예: {{htmlelement("span")}} 또는 {{htmlelement("strong")}}) 으로 감싸거나, or use a text-specific pseudo-element like <a href="/en-US/docs/Web/CSS/::first-letter">::first-letter</a> (요소 텍스트의 첫 번째 문자 선택), <a href="/en-US/docs/Web/CSS/::first-line">::first-line</a> (요소 텍스트의 첫 번째 행 선택) 또는 <a href="/en-US/docs/Web/CSS/::selection">::selection</a> (커서로 현재 강조 표시된 텍스트 선택) 과 같은 텍스트 특정 pseudo-element 를 사용하십시오.</p>
+<p><strong>참고</strong>: 요소 내부의 텍스트는 모두 하나의 단일 entity 로 영향을 받습니다. 텍스트의 하위 섹션은 적절한 요소 (예: {{htmlelement("span")}} 또는 {{htmlelement("strong")}}) 으로 감싸거나, or use a text-specific pseudo-element like <a href="/en-US/docs/Web/CSS/::first-letter">::first-letter</a> (요소 텍스트의 첫 번째 문자 선택), <a href="/en-US/docs/Web/CSS/::first-line">::first-line</a> (요소 텍스트의 첫 번째 행 선택) 또는 <a href="/en-US/docs/Web/CSS/::selection">::selection</a> (커서로 현재 강조 표시된 텍스트 선택) 과 같은 텍스트 특정 pseudo-element 를 사용하십시오.</p>
 </div>
 
 <h2 id="글꼴">글꼴</h2>
 
-<p>글꼴 스타일링의 속성을 살펴보도록 하겠습니다. 이 예에서는 동일한 HTML 샘플에 몇 가지 다른 CSS 속성을 적용합니다:</p>
+<p>글꼴 스타일링의 속성을 살펴보도록 하겠습니다. 이 예에서는 동일한 HTML 샘플에 몇 가지 다른 CSS 속성을 적용합니다:</p>
 
 <pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
@@ -56,19 +56,19 @@ had met its demise while staring point blank down the cavernous barrel of
 predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;</pre>
 
-<p><a href="http://mdn.github.io/learning-area/css/styling-text/fundamentals/">완성된 예제는 Github</a> 에서 찾을 수 있습니다 (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html">소스 코드</a> 참조.)</p>
+<p><a href="http://mdn.github.io/learning-area/css/styling-text/fundamentals/">완성된 예제는 Github</a> 에서 찾을 수 있습니다 (<a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html">소스 코드</a> 참조.)</p>
 
 <h3 id="색상">색상</h3>
 
 <p>{{cssxref("color")}} 속성은 선택한 요소의 전경 내용의 색상을 설정합니다 (일반적으로 텍스트이지만, {{cssxref("text-decoration")}} 속성을 사용하여 텍스트에 배치되는 밑줄이나 오버라인과 같은 몇 가지 다른 것도 포함할 수 있습니다.</p>
 
-<p><code>color</code> 은 모든 <a href="/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">CSS 색상 단위</a> 를 사용할 수 있습니다. 예를 들면 다음과 같습니다:</p>
+<p><code>color</code> 은 모든 <a href="/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors">CSS 색상 단위</a> 를 사용할 수 있습니다. 예를 들면 다음과 같습니다:</p>
 
 <pre class="brush: css">p {
   color: red;
 }</pre>
 
-<p>이렇게하면 다음과 같이 표준 브라우저 기본값이 검은색이 아닌 빨간색으로 표시됩니다:</p>
+<p>이렇게하면 다음과 같이 표준 브라우저 기본값이 검은색이 아닌 빨간색으로 표시됩니다:</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
@@ -87,21 +87,21 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <h3 id="글꼴_종류">글꼴 종류</h3>
 
-<p>텍스트에 다른 글꼴을 설정하려면, {{cssxref("font-family")}} 속성을 사용하여 브라우저에서 선택한 요소에 적용할 글꼴 (또는 글꼴 목록) 을 지정할 수 있습니다. 브라우저는 웹 사이트에 액세스하는 컴퓨터에서 글꼴을 사용할 수 있는 경우에만 글꼴을 적용합니다; 그렇지 않으면, 브라우저 <a href="#default_fonts">default font</a> 만 사용합니다. 간단한 예는 다음과 같습니다:</p>
+<p>텍스트에 다른 글꼴을 설정하려면, {{cssxref("font-family")}} 속성을 사용하여 브라우저에서 선택한 요소에 적용할 글꼴 (또는 글꼴 목록) 을 지정할 수 있습니다. 브라우저는 웹 사이트에 액세스하는 컴퓨터에서 글꼴을 사용할 수 있는 경우에만 글꼴을 적용합니다; 그렇지 않으면, 브라우저 <a href="#default_fonts">default font</a> 만 사용합니다. 간단한 예는 다음과 같습니다:</p>
 
 <pre class="brush: css">p {
   font-family: arial;
 }</pre>
 
-<p>이렇게하면 페이지의 모든 단락이 임의의 컴퓨터에 있는 arial 글꼴을 채택하게 됩니다.</p>
+<p>이렇게하면 페이지의 모든 단락이 임의의 컴퓨터에 있는 arial 글꼴을 채택하게 됩니다.</p>
 
 <h4 id="웹_안전_글꼴">웹 안전 글꼴</h4>
 
-<p>글꼴 사용가능 여부에 대해 말하자면, 일반적으로 모든 시스템에서 사용할 수 있는 글꼴의 수는 한정되어 있으므로 큰 걱정없이 사용할 수 있습니다. 이른바 <strong>웹 안전 글꼴 </strong>입니다.</p>
+<p>글꼴 사용가능 여부에 대해 말하자면, 일반적으로 모든 시스템에서 사용할 수 있는 글꼴의 수는 한정되어 있으므로 큰 걱정없이 사용할 수 있습니다. 이른바 <strong>웹 안전 글꼴 </strong>입니다.</p>
 
 <p>대부분의 경우, 웹 개발자로서 텍스트 내용을 표시하는 데 사용되는 글꼴을 보다 구체적으로 제어하려고 합니다. 문제는 웹 페이지를 보는 데 사용되는 컴퓨터에서 어떤 글꼴을 사용할 수 있는지 알 수 있는 방법을 찾는 것입니다. 모든 경우에 이것을 알 수 있는 방법은 없지만, 웹 안전 글꼴은 가장 많이 사용되는 운영 체제 (윈도우, 맥, 가장 일반적인 리눅스 배포판, 안드로이드 및 iOS) 의 거의 모든 인스턴스에서 사용할 수 있는 것으로 알려져 있습니다.</p>
 
-<p>실제 웹 안전 글꼴 목록은 운영 체제가 발전함에 따라 변경될 수 있지만, 최소한 다음과 같은 웹 안전 글꼴을 고려하는 것이 좋습니다 (이중 많은 글꼴이 90 년대 후반과 2000 년대 초에 웹 initiative 를 위한 Microsoft <em><a href="https://en.wikipedia.org/wiki/Core_fonts_for_the_Web">Core 글꼴</a></em> 덕분에 많은 사람들이 대중화 되었습니다):</p>
+<p>실제 웹 안전 글꼴 목록은 운영 체제가 발전함에 따라 변경될 수 있지만, 최소한 다음과 같은 웹 안전 글꼴을 고려하는 것이 좋습니다 (이중 많은 글꼴이 90 년대 후반과 2000 년대 초에 웹 initiative 를 위한 Microsoft <em><a href="https://en.wikipedia.org/wiki/Core_fonts_for_the_Web">Core 글꼴</a></em> 덕분에 많은 사람들이 대중화 되었습니다):</p>
 
 <table class="standard-table">
  <thead>
@@ -146,7 +146,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: Among various resources, the <a href="http://www.cssfontstack.com/">cssfontstack.com</a> website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.</p>
+<p><strong>Note</strong>: Among various resources, the <a href="http://www.cssfontstack.com/">cssfontstack.com</a> website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.</p>
 </div>
 
 <div class="note">
@@ -155,7 +155,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <h4 id="기본_글꼴">기본 글꼴</h4>
 
-<p>CSS 는 글꼴의 일반적인 다섯 가지 이름:  <code>serif</code><font face="Open Sans, Arial, sans-serif">, </font><code>sans-serif</code>,<font face="Open Sans, Arial, sans-serif"> </font><code>monospace</code>, <code>cursive</code> 및 <code>fantasy</code> 를 정의합니다. 이러한 일반 이름을 사용할 때 사용되는 정확한 글꼴은 각 브라우저에 달려 있으며, 실행중인 운영체제에 따라 다를 수 있습니다. 브라우저가 최소한 적합한 글꼴을 제공하기 위해 최선을 다하는 최악의 시나리오를 나타나냅니다. <code>serif</code>, <code>sans-serif</code> 및 <code>monospace</code> 는 상당히 예측가능하며 합리적인 무언가를 제공해야 합니다. 반면에 , <code>cursive</code> 및 <code>fantasy</code> 는 예측하기 어렵기 때문에, 테스트할 때 신중하게 사용하는 것이 좋습니다.</p>
+<p>CSS 는 글꼴의 일반적인 다섯 가지 이름:  <code>serif</code><font face="Open Sans, Arial, sans-serif">, </font><code>sans-serif</code>,<font face="Open Sans, Arial, sans-serif"> </font><code>monospace</code>, <code>cursive</code> 및 <code>fantasy</code> 를 정의합니다. 이러한 일반 이름을 사용할 때 사용되는 정확한 글꼴은 각 브라우저에 달려 있으며, 실행중인 운영체제에 따라 다를 수 있습니다. 브라우저가 최소한 적합한 글꼴을 제공하기 위해 최선을 다하는 최악의 시나리오를 나타나냅니다. <code>serif</code>, <code>sans-serif</code> 및 <code>monospace</code> 는 상당히 예측가능하며 합리적인 무언가를 제공해야 합니다. 반면에 , <code>cursive</code> 및 <code>fantasy</code> 는 예측하기 어렵기 때문에, 테스트할 때 신중하게 사용하는 것이 좋습니다.</p>
 
 <p>5 개의 이름은 다음과 같이 정의됩니다:</p>
 
@@ -198,7 +198,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <h4 id="Font_stacks">Font stacks</h4>
 
-<p>웹 페이지에서 글꼴의 사용가능 여부를 보장할 수 없으므로 (어똔 이유로 웹 글꼴이 실패할 수 있음) 브라우저에서 선택할 수 있는 <strong>글꼴 스택 (font stack) </strong>을 제공할 수 있습니다. 여기에는 여러 글꼴 이름으로 구성된 <code>font-family</code> 값이 포함됩니다. 예제:</p>
+<p>웹 페이지에서 글꼴의 사용가능 여부를 보장할 수 없으므로 (어똔 이유로 웹 글꼴이 실패할 수 있음) 브라우저에서 선택할 수 있는 <strong>글꼴 스택 (font stack) </strong>을 제공할 수 있습니다. 여기에는 여러 글꼴 이름으로 구성된 <code>font-family</code> 값이 포함됩니다. 예제:</p>
 
 <pre class="brush: css">p {
   font-family: "Trebuchet MS", Verdana, sans-serif;
@@ -209,7 +209,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 <p>나열된 글꼴 중 사용 가능한 글꼴이 없는 경우, 브라우저가 최소한 대략 비슷한 것을 제공할 수 있도록 스택 끝에 적절한 일반 글꼴 이름을 제공하는 것이 좋습니다.이 점을 강조하기 위해 다른 옵션 — 일반적으로 Time New Roman — 을 사용할 수 없는 경우 단락에 기본 serif 글꼴이 제공됩니다. 이는 san-serif 글꼴에 적합하지 않습니다!</p>
 
 <div class="note">
-<p><strong>참고</strong>: <code>Trebuchet MS</code> 와 같이 둘 이상의 단어가 있는 글꼴 이름은 따옴표로 묶어야합니다, 예를 들면 <code>"Trebuchet MS"</code>.</p>
+<p><strong>참고</strong>: <code>Trebuchet MS</code> 와 같이 둘 이상의 단어가 있는 글꼴 이름은 따옴표로 묶어야합니다, 예를 들면 <code>"Trebuchet MS"</code>.</p>
 </div>
 
 <h4 id="font-family_예제">font-family 예제</h4>
@@ -245,7 +245,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 <ul>
  <li><code>px</code> (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.</li>
  <li><code>em</code>s: 1em is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element.) This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use <code>em</code>s to size everything, not just text. You can have an entire website sized using ems, which makes maintenance easy.</li>
- <li><code>rem</code>s: These work just like <code>em</code>s, except that 1<code>rem</code> is equal to the font size set on the root element of the document (i.e. {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier, but unfortunately <code>rem</code>s are not supported in Internet Explorer 8 and below. If you need to support older browsers with your project, you can either stick to using <code>em</code>s or <code>px</code>, or use a {{glossary("polyfill")}} such as <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a>. </li>
+ <li><code>rem</code>s: These work just like <code>em</code>s, except that 1<code>rem</code> is equal to the font size set on the root element of the document (i.e. {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier, but unfortunately <code>rem</code>s are not supported in Internet Explorer 8 and below. If you need to support older browsers with your project, you can either stick to using <code>em</code>s or <code>px</code>, or use a {{glossary("polyfill")}} such as <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM-unit-polyfill</a>. </li>
 </ul>
 
 <p>The <code>font-size</code> of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the <code>font-size</code> of which is set to 16px as standard across browsers. Any paragraph (or other element that doesn't have a different size set by the browser) inside the root element will have a final size of 16px. Other elements may have different default sizes, for example an {{htmlelement("h1")}} element has a size of 2ems set by default, so will have a final size of 32px.</p>
@@ -307,11 +307,11 @@ p {
    <li><code>oblique</code>: Sets the text to use a simulated version of an italic font, created by <span style="font-style: oblique;">slanting the normal version</span>.</li>
   </ul>
  </li>
- <li>{{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as <em>-light</em>, <em>-normal</em>, <em>-bold</em>, <em>-extrabold</em>, <em>-black</em>, etc.), but realistically you'll rarely use any of them except for <code>normal</code> and <code>bold</code>:
+ <li>{{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as <em>-light</em>, <em>-normal</em>, <em>-bold</em>, <em>-extrabold</em>, <em>-black</em>, etc.), but realistically you'll rarely use any of them except for <code>normal</code> and <code>bold</code>:
   <ul>
    <li><code>normal</code>, <code>bold</code>: Normal and <strong style="font-weight: bold;">bold</strong> font weight</li>
    <li><code>lighter</code>, <code>bolder</code>: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.</li>
-   <li><code>100</code>–<code>900</code>: Numeric boldness values that provide finer grained control than the above keywords, if needed. </li>
+   <li><code>100</code>–<code>900</code>: Numeric boldness values that provide finer grained control than the above keywords, if needed. </li>
   </ul>
  </li>
  <li>{{cssxref("text-transform")}}: Allows you to set your font to be transformed. Values include:
@@ -361,7 +361,7 @@ h1 {
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p {
@@ -423,13 +423,13 @@ h1 {
   font-size: 26px;
   text-transform: capitalize;
   text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+               0px 2px 1px rgba(0,0,0,0.5),
+               2px 2px 2px rgba(0,0,0,0.7),
+               0px 0px 3px rgba(0,0,0,0.4);
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p {
@@ -483,14 +483,14 @@ h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
   text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+               0px 2px 1px rgba(0,0,0,0.5),
+               2px 2px 2px rgba(0,0,0,0.7),
+               0px 0px 3px rgba(0,0,0,0.4);
   text-align: center;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p {
@@ -531,14 +531,14 @@ h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
   text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+               0px 2px 1px rgba(0,0,0,0.5),
+               2px 2px 2px rgba(0,0,0,0.7),
+               0px 0px 3px rgba(0,0,0,0.4);
   text-align: center;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p {
@@ -558,8 +558,8 @@ p {
 <p>So as an example, if we applied the following to the first line of the {{htmlelement("p")}} elements in our example:</p>
 
 <pre class="brush: css">p::first-line {
-  letter-spacing: 2px;
-  word-spacing: 4px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
 }</pre>
 
 <p>We'd get the following:</p>
@@ -585,19 +585,19 @@ h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
   text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+               0px 2px 1px rgba(0,0,0,0.5),
+               2px 2px 2px rgba(0,0,0,0.7),
+               0px 0px 3px rgba(0,0,0,0.4);
   text-align: center;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 p::first-line {
-  letter-spacing: 2px;
-  word-spacing: 4px;
+  letter-spacing: 2px;
+  word-spacing: 4px;
 }
 
 p {
@@ -648,9 +648,9 @@ p {
  <li>{{cssxref("writing-mode")}}: Define whether lines of text are laid out horizontally or vertically and the direction in which subsequent lines flow.</li>
 </ul>
 
-<h2 id="글꼴_약식_shorthand">글꼴 약식 (shorthand)</h2>
+<h2 id="글꼴_약식_shorthand">글꼴 약식 (shorthand)</h2>
 
-<p>Many font properties can also be set through the shorthand property {{cssxref("font")}}. These are written in the following order:  {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, and {{cssxref("font-family")}}.</p>
+<p>Many font properties can also be set through the shorthand property {{cssxref("font")}}. These are written in the following order:  {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, and {{cssxref("font-family")}}.</p>
 
 <p>Among all those properties, only <code>font-size</code> and <code>font-family</code> are required when using the <code>font</code> shorthand property.</p>
 
@@ -682,7 +682,7 @@ p {
   &lt;h2&gt;Output&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
+    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -704,9 +704,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 htmlInput.addEventListener("input", drawOutput);

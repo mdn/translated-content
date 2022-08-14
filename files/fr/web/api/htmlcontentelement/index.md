@@ -11,7 +11,7 @@ translation_of: Web/API/HTMLContentElement
 ---
 {{ APIRef("Web Components") }}
 
-L'interface **`HTMLContentElement`** represente un élément HTML {{HTMLElement("content")}}, utilisé dans le [Shadow DOM](/en-US/docs/Web/Web_Components/Shadow_DOM).
+L'interface **`HTMLContentElement`** represente un élément HTML {{HTMLElement("content")}}, utilisé dans le [Shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM).
 
 ## Propriétés
 
@@ -40,4 +40,4 @@ _Cette interface hérite des methodes de {{domxref("HTMLElement")}}._
 ## Voir aussi
 
 - L'élement HTML {{HTMLElement("content")}}, qui implémente cette interface.
-- [Shadow DOM](/en-US/docs/Web/Web_Components/Shadow_DOM)
+- [Shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM)

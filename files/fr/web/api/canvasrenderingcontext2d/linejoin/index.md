@@ -13,7 +13,9 @@ Cette propriété n'a aucun effet quand deux segments connectés ont la même di
 
 ## Syntaxe
 
-    ctx.lineJoin = "bevel" || "round" || "miter";
+```js
+ctx.lineJoin = "bevel" || "round" || "miter";
+```
 
 ### Options
 

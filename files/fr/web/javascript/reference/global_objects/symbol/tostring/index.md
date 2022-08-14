@@ -19,7 +19,9 @@ La méthode **`toString()`** renvoie une chaîne de caractères représentant l'
 
 ## Syntaxe
 
-    Symbol().toString();
+```js
+Symbol().toString();
+```
 
 ### Valeur de retour
 

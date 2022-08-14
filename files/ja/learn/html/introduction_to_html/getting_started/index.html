@@ -17,7 +17,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 <div>{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p class="summary">この記事では HTML の不変的な基礎を扱って、始められるようにします。要素や属性などの重要な用語 (すでに聞き覚えはあるかもしれません)、それらが言語にどう組み込まれているか説明します。また、HTML 要素の構造、典型的な HTML ページの構造を見せて、その他の重要な基礎言語機能について説明します。それでは、 HTML の例とともに見ていきましょう。</p>
+<p class="summary">この記事では HTML の不変的な基礎を扱って、始められるようにします。要素や属性などの重要な用語 (すでに聞き覚えはあるかもしれません)、それらが言語にどう組み込まれているか説明します。また、HTML 要素の構造、典型的な HTML ページの構造を見せて、その他の重要な基礎言語機能について説明します。それでは、 HTML の例とともに見ていきましょう。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -57,7 +57,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 <p>この要素の主要な部分は次のとおりです:</p>
 
 <ol>
- <li><strong>開始タグ(Opening tag):</strong> 要素名 (この場合は "p")、囲んでいる開き<strong>山括弧</strong>と閉じ<strong>山括弧</strong>で構成されています。これは要素が始まってその効果が開始する位置を宣言しますーこの場合、段落が始まる位置です。</li>
+ <li><strong>開始タグ(Opening tag):</strong> 要素名 (この場合は "p")、囲んでいる開き<strong>山括弧</strong>と閉じ<strong>山括弧</strong>で構成されています。これは要素が始まってその効果が開始する位置を宣言しますーこの場合、段落が始まる位置です。</li>
  <li><strong>終了タグ(Closing tag):</strong> 要素名の前に一つのスラッシュが含まれることを除けば、開始タグと同じです。これは要素の終了を宣言しますーこの場合、段落が終わる位置です。終了タグを忘れるのは初心者にありがちなミスで、おかしな結果になってしまいます。</li>
  <li><strong>内容(Content):</strong> これは要素の内容で、この場合、テキストそのものです。</li>
  <li><strong>要素(Element):</strong> 開始タグ + 内容 + 終了タグが要素になります。</li>
@@ -405,7 +405,7 @@ textarea<span class="punctuation token">.</span>onkeyup <span class="operator to
 <pre>&lt;input type="text" disabled="disabled"&gt;
 </pre>
 
-<p>真偽値属性は、略記法として次のように書くことが文法的に許されています。比較のために "使用不可能に" (disabled, グレーアウト表示) しなかった場合の <code>input</code> 要素も併記しています。</p>
+<p>真偽値属性は、略記法として次のように書くことが文法的に許されています。比較のために "使用不可能に" (disabled, グレーアウト表示) しなかった場合の <code>input</code> 要素も併記しています。</p>
 
 <pre class="brush: html">&lt;input type="text" disabled&gt;
 
@@ -486,17 +486,17 @@ textarea<span class="punctuation token">.</span>onkeyup <span class="operator to
   <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code></pre>
 
-  <p>しかし、今日においては誰も HTML における "doctype" の本来的な役割なんて考えていません。 "doctype" はつじつま合わせのための歴史的な産物です。今日においてには <code>&lt;!DOCTYPE html&gt;</code> は正しい "doctype" と認識させるための最も簡潔な記述です。 "doctype" について、これ以上知る必要はありません。</p>
+  <p>しかし、今日においては誰も HTML における "doctype" の本来的な役割なんて考えていません。 "doctype" はつじつま合わせのための歴史的な産物です。今日においてには <code>&lt;!DOCTYPE html&gt;</code> は正しい "doctype" と認識させるための最も簡潔な記述です。 "doctype" について、これ以上知る必要はありません。</p>
  </li>
  <li><code>&lt;html&gt;&lt;/html&gt;</code>: {{htmlelement("html")}} 要素。 HTML 文書は<code>&lt;html&gt;</code>要素 1 つだけからなります。この要素はページ全体であり、<code>&lt;html&gt;</code> タグはページ全体を囲んでいます。<code>&lt;html&gt;</code> 要素はルート要素とも呼ばれます。</li>
  <li><code>&lt;head&gt;&lt;/head&gt;</code>: {{htmlelement("head")}} 要素。この要素は、HTML ページに入れておきたいが見せたくないすべてのものを入れておくコンテナーの働きをします。例えば、検索結果に出したいページのキーワードや説明や、ページのスタイルを指定するための CSS や、文字エンコーディングの定義などが含まれます。より詳しくは、このシリーズの次の記事で詳しく説明します。</li>
- <li><code>&lt;meta charset="utf-8"&gt;</code>: この要素はこの文書が UTF-8 という文字コードを使用しているということをブラウザーに伝えるためのものです。UTF-8 は世界中の自然言語の大半をカバーしている文字コードです。重要なこととしてあらゆるテキストコンテンツを扱うことができます。文字コードとして UTF-8 を指定しない手はなく、そうしておけば後で説明する問題を回避できます。</li>
+ <li><code>&lt;meta charset="utf-8"&gt;</code>: この要素はこの文書が UTF-8 という文字コードを使用しているということをブラウザーに伝えるためのものです。UTF-8 は世界中の自然言語の大半をカバーしている文字コードです。重要なこととしてあらゆるテキストコンテンツを扱うことができます。文字コードとして UTF-8 を指定しない手はなく、そうしておけば後で説明する問題を回避できます。</li>
  <li><code>&lt;title&gt;&lt;/title&gt;</code>: {{htmlelement("title")}} 要素。これはページのタイトルを指定するもので、ページが読み込まれたブラウザーのタブに表示されます。また、このページをブラウザー上でブックマークしたりお気に入りに追加したりすると <code>&lt;title&gt;</code> 要素の内容がページの説明として使われます。</li>
  <li><code>&lt;body&gt;&lt;/body&gt;</code>: {{htmlelement("body")}} 要素。この中にユーザーがページを訪問した時に表示したいコンテンツ (例えば、テキスト、画像、ビデオ、ゲーム、オーディオトラック等) を記述します。</li>
 </ol>
 
 <div class="note">
-<p>訳者注: 1. の "doctype" は文書型宣言(DTD)と呼ばれております。 HTML 以外のマークアップ言語(XML, SVG, MathML等)においては今日においても重要な意味を持っています。</p>
+<p>訳者注: 1. の "doctype" は文書型宣言(DTD)と呼ばれております。 HTML 以外のマークアップ言語(XML, SVG, MathML等)においては今日においても重要な意味を持っています。</p>
 </div>
 
 <h3 id="Active_learning_Adding_some_features_to_an_HTML_document" name="Active_learning_Adding_some_features_to_an_HTML_document">実習: HTML 文書をカスタマイズする</h3>
@@ -511,10 +511,10 @@ textarea<span class="punctuation token">.</span>onkeyup <span class="operator to
 </ol>
 
 <div class="note">
-<p><strong>脚注</strong>: 元となる HTML テンプレートは <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">MDN ラーニングエリア GitHub リポジトリ </a>にも置いてあります。</p>
+<p><strong>脚注</strong>: 元となる HTML テンプレートは <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">MDN ラーニングエリア GitHub リポジトリ </a>にも置いてあります。</p>
 </div>
 
-<p>ウェブブラウザーでこのファイルを開くとレンダリングされた HTML 文書が表示されます。コードを編集した場合は、ブラウザー上でページの更新 (または、再読み込み) を行うと編集結果が反映されます。最初はこんな表示です。</p>
+<p>ウェブブラウザーでこのファイルを開くとレンダリングされた HTML 文書が表示されます。コードを編集した場合は、ブラウザー上でページの更新 (または、再読み込み) を行うと編集結果が反映されます。最初はこんな表示です。</p>
 
 <p><img alt="A simple HTML page that says This is my page" src="https://mdn.mozillademos.org/files/12279/template-screenshot.png" style="display: block; height: 365px; margin: 0px auto; width: 595px;">この実習では、 上に示したようにあなたのコンピューター内部でコード編集してもいいですが、この節の下の方に編集できるフォーム (Input, Output と付されているものです) を使うこともできます。スマートフォンなどで学習する際はこのフォームが役に立つと思います。この節のフォームの Input の部分は、 {{htmlelement("body")}} 要素の中身を表しています。以下の手順を踏んで、ページをカスタマイズしてみましょう。</p>
 
@@ -523,14 +523,14 @@ textarea<span class="punctuation token">.</span>onkeyup <span class="operator to
 </div>
 
 <ul>
- <li>{{htmlelement("body")}} 要素の開始タグ以降にページのメインタイトルを書きます。このメインタイトルは  <code>&lt;h1&gt;</code> 開始タグと <code>&lt;/h1&gt;</code> 終了タグで囲みます。ちなみにこれは <code>head</code> 要素の中に記述する <code>title</code> 要素とは異なります。実際にやってみると理解できると思います。フォームで編集する場合はすでに <code>body</code> 要素の中なので、コードの先頭にメインタイトルを記述する形になります。</li>
+ <li>{{htmlelement("body")}} 要素の開始タグ以降にページのメインタイトルを書きます。このメインタイトルは  <code>&lt;h1&gt;</code> 開始タグと <code>&lt;/h1&gt;</code> 終了タグで囲みます。ちなみにこれは <code>head</code> 要素の中に記述する <code>title</code> 要素とは異なります。実際にやってみると理解できると思います。フォームで編集する場合はすでに <code>body</code> 要素の中なので、コードの先頭にメインタイトルを記述する形になります。</li>
  <li>すでに<code>&lt;p&gt;</code>要素が記述されていますので、その段落を好きな内容にしてみましょう。また、新しい段落を好きなように追加してみましょう。</li>
- <li>段落 (<code>&lt;p&gt;</code>要素) 内で重要な言葉は <code>&lt;strong&gt;</code> 開始タグと <code>&lt;/strong&gt;</code> 終了タグで囲んで太字で強調しましょう。 </li>
+ <li>段落 (<code>&lt;p&gt;</code>要素) 内で重要な言葉は <code>&lt;strong&gt;</code> 開始タグと <code>&lt;/strong&gt;</code> 終了タグで囲んで太字で強調しましょう。 </li>
  <li><a href="/ja/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element">この記事の前半あたり</a>で説明したリンクを段落のどれかに張ってみましょう。</li>
  <li><a href="/ja/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements">この記事の前半あたり</a>で説明した方法を使って、段落の下に画像を挿入しましょう。説明では Firefox のロゴ画像を使用しましたが、他の画像を持ってくることにチャレンジしてもいいと思います。自分のコンピューターの中のファイルやウェブ上のどこか他の場所にある画像リンクといったものです。</li>
 </ul>
 
-<p>間違えた場合は <em>Reset</em> ボタンを押すことで元に戻すことができます。分からない場合は Show solution ボタンを押して答えを見てみましょう。</p>
+<p>間違えた場合は <em>Reset</em> ボタンを押すことで元に戻すことができます。分からない場合は Show solution ボタンを押して答えを見てみましょう。</p>
 
 <div class="hidden">
 <h6 id="Playable_code3" name="Playable_code3">Playable code3</h6>
@@ -666,7 +666,7 @@ textarea<span class="punctuation token">.</span>onkeyup <span class="operator to
 &lt;p&gt;Dogs        are
          silly.&lt;/p&gt;</pre>
 
-<p>半角スペースをどれ程入力しても (そして、どれ程改行しても)、 HTML パーサはそれを１つの半角スペースとして認識します。ではどうして半角スペースを沢山入力するのでしょうか。それは HTML コードの可読性を向上させるためです。 HTML のコードがいいフォーマット(書式)で記述されていて、１行の中に沢山タグをゴチャゴチャに詰め込まなければ、そのコードの中がどうなっているかが分かりやすくなります。この記事ではインデント(字下げ)として半角スペース２文字分を挿入しています。 HTML のフォーマット(例えば、インデントとして半角スペース何文字分を挿入するのか等)については HTML の書き手によって様々ですが、フォーマットを意識して記述しなければなりません。</p>
+<p>半角スペースをどれ程入力しても (そして、どれ程改行しても)、 HTML パーサはそれを１つの半角スペースとして認識します。ではどうして半角スペースを沢山入力するのでしょうか。それは HTML コードの可読性を向上させるためです。 HTML のコードがいいフォーマット(書式)で記述されていて、１行の中に沢山タグをゴチャゴチャに詰め込まなければ、そのコードの中がどうなっているかが分かりやすくなります。この記事ではインデント(字下げ)として半角スペース２文字分を挿入しています。 HTML のフォーマット(例えば、インデントとして半角スペース何文字分を挿入するのか等)については HTML の書き手によって様々ですが、フォーマットを意識して記述しなければなりません。</p>
 
 <div class="warning">
 <p>訳者注: 全角スペースは、 HTML の文法としては半角スペースや改行とは全く異なる扱いになるので、全角スペースを用いてインデントを行ったりしないでください。また、日本語の文章を段落要素<code>&lt;p&gt;</code>の中で改行すると、半角スペースが挿入されます。</p>
@@ -691,7 +691,7 @@ textarea<span class="punctuation token">.</span>onkeyup <span class="operator to
 <p>訳者注: HTML エンティティ、実体参照、文字参照、文字実体参照、は、それぞれほぼ同じ意味で用いられます。</p>
 </div>
 
-<p>HTML では<code>&lt;</code>、<code>&gt;</code>、<code>"</code>、<code>'</code>、<code>&amp;</code>の５つの文字は特殊文字と呼ばれています。これら５つの文字は HTML の文法自身の一部です。ではこれらの文字そのものを組版したい場合はどうすればいいのでしょうか。例えば「 You &amp; Me 」や「 x &lt; y 」等の表記をしたい場合です。</p>
+<p>HTML では<code>&lt;</code>、<code>&gt;</code>、<code>"</code>、<code>'</code>、<code>&amp;</code>の５つの文字は特殊文字と呼ばれています。これら５つの文字は HTML の文法自身の一部です。ではこれらの文字そのものを組版したい場合はどうすればいいのでしょうか。例えば「 You &amp; Me 」や「 x &lt; y 」等の表記をしたい場合です。</p>
 
 <p>そのような場合は、「文字参照」を使用する必要があります。文字参照とは「文字を表す特別なコード」のことであり、これを使うことで正確な組版を行うことができます。文字参照は必ずアンパサンド (&amp;) で始まり、セミコロン(;)で終わります。</p>
 
@@ -738,7 +738,7 @@ textarea<span class="punctuation token">.</span>onkeyup <span class="operator to
 <p>{{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p>脚注: HTML で使用することのできる文字実体参照のリストはこの Wikipedia の記事で確認することができます: <a class="external text" href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references" rel="nofollow">List of XML and HTML character entity references</a>.</p>
+<p>脚注: HTML で使用することのできる文字実体参照のリストはこの Wikipedia の記事で確認することができます: <a class="external text" href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references" rel="nofollow">List of XML and HTML character entity references</a>.</p>
 </div>
 
 <h2 id="HTML_comments" name="HTML_comments">HTML におけるコメント</h2>
@@ -760,7 +760,7 @@ textarea<span class="punctuation token">.</span>onkeyup <span class="operator to
 <p>この記事の最後にたどり着きました — HTML のほんの初歩のツアーを楽しんでこられたことを望んでいます！ここではこの言語がどのようなものか、基本的にどうやって動作するのかを理解し、いくつかの要素と属性を書くことができるようになったでしょう。あなたがいる場所は完璧な場所です、続きの記事ではすでに見てきたことをもっと詳細に経験して、いくつか新しい言語機能を紹介します。引き続き注目！</p>
 
 <div class="note">
-<p><strong>脚注</strong>: さて、 HTML についてより深く学習するために <a href="/ja/docs/Learn/CSS">CSS</a> (Cascading Style Sheets)の基礎についても理解しておきましょう。 CSS はウェブページのスタイルをカスタマイズするために使用します。具体的には、テキストのフォントや色を変えたり、ページレイアウトを設定したりといったことがあげられます。 HTML と CSS は相互補完、つまり２つで１つです。両方学習するとすぐ気づくでしょう。</p>
+<p><strong>脚注</strong>: さて、 HTML についてより深く学習するために <a href="/ja/docs/Learn/CSS">CSS</a> (Cascading Style Sheets)の基礎についても理解しておきましょう。 CSS はウェブページのスタイルをカスタマイズするために使用します。具体的には、テキストのフォントや色を変えたり、ページレイアウトを設定したりといったことがあげられます。 HTML と CSS は相互補完、つまり２つで１つです。両方学習するとすぐ気づくでしょう。</p>
 </div>
 
 <h2 id="See_also" name="See_also">関連情報</h2>

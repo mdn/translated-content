@@ -23,7 +23,9 @@ L'attribut `itemref` peut uniquement être défini sur des éléments pour lesqu
 
 ### Syntaxe formelle
 
-    itemref
+```
+itemref
+```
 
 ## Exemple
 

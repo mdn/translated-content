@@ -17,7 +17,9 @@ Les différentes implémentations ont été assez divergentes quant au type de c
 
 ## Syntaxe
 
-    flag = document.implementation.hasFeature(feature, version);
+```js
+flag = document.implementation.hasFeature(feature, version);
+```
 
 ### Paramètres
 

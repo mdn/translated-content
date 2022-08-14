@@ -50,4 +50,3 @@ function spawnNotification(theBody, theIcon, theTitle) {
 ## See also
 
 - [Usando la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-

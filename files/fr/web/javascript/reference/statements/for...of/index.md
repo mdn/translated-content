@@ -17,8 +17,11 @@ L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui
 
 ## Syntaxe
 
-    for (variable of iterable)
-      instruction
+```js
+for (variable of iterable) {
+  instruction
+}
+```
 
 - `variable`
   - : À chaque itération, la valeur d'une propriété différente est affectée à `variable` (cette variable peut être déclarée avec `const`, `let` ou `var`).

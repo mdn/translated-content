@@ -13,4 +13,4 @@ Le moteur {{glossary("JavaScript")}} est un interpréteur qui analyse et exécut
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Moteur JavaScript")}} sur Wikipédia
+- [Moteur JavaScript](https://fr.wikipedia.org/wiki/Moteur_JavaScript) sur Wikipédia

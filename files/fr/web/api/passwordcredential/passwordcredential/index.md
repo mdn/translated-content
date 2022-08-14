@@ -17,8 +17,10 @@ Pour les navigateurs qui prennent en charge cette fonctionnalité, une instance 
 
 ## Syntaxe
 
-    var mesCredentials = new PasswordCredential(passwordCredentialData)
-    var mesCredentials = new PasswordCredential(HTMLFormElement)
+```js
+var mesCredentials = new PasswordCredential(passwordCredentialData)
+var mesCredentials = new PasswordCredential(HTMLFormElement)
+```
 
 ### Paramètres
 

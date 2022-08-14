@@ -11,9 +11,11 @@ Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_c
 
 ## Syntaxe
 
-    ctx.strokeStyle = color;
-    ctx.strokeStyle = gradient;
-    ctx.strokeStyle = pattern;
+```js
+ctx.strokeStyle = color;
+ctx.strokeStyle = gradient;
+ctx.strokeStyle = pattern;
+```
 
 ### Options
 

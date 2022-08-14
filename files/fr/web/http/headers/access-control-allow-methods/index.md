@@ -27,16 +27,20 @@ L'entête de réponse **`Access-Control-Allow-Methods`** spécifie les méthodes
 
 ## Syntaxe
 
-    Access-Control-Allow-Methods: <methode>, <methode>, ...
+```
+Access-Control-Allow-Methods: <methode>, <methode>, ...
+```
 
 ## Directives
 
 - \<methode>
-  - : Liste délimitée par des virgules des [méthodes de requêtes HTTP](/en-US/docs/Web/HTTP/Methods) autorisées.
+  - : Liste délimitée par des virgules des [méthodes de requêtes HTTP](/fr/docs/Web/HTTP/Methods) autorisées.
 
 ## Exemples
 
-    Access-Control-Allow-Methods: POST, GET, OPTIONS
+```
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+```
 
 ## Spécifications
 

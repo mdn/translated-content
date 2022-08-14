@@ -6,7 +6,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 <div>
 <p>{{JSRef}}</p>
 
-<p>A função <strong><code>Math.min()</code></strong>  retorna o menor valor passado como parâmetro, ou <span class="seoSummary">{{jsxref("NaN")}}</span>  se o parâmetro não é ou não pode ser convertido para um número.</p>
+<p>A função <strong><code>Math.min()</code></strong>  retorna o menor valor passado como parâmetro, ou <span class="seoSummary">{{jsxref("NaN")}}</span>  se o parâmetro não é ou não pode ser convertido para um número.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -21,25 +21,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Por que  <code>min()</code> é um método estático de <code>Math</code>, você sempre usa como <code>Math.min()</code>,  e não como um método de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
+<p>Por que  <code>min()</code> é um método estático de <code>Math</code>, você sempre usa como <code>Math.min()</code>,  e não como um método de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
 
-<p>Se nenhum argumento for dado, o resultado é {{jsxref("Infinity")}}.</p>
+<p>Se nenhum argumento for dado, o resultado é {{jsxref("Infinity")}}.</p>
 
-<p>Se pelo menos um dos argumentos não pode ser convertido para um número, o resultado é {{jsxref("NaN")}}.</p>
+<p>Se pelo menos um dos argumentos não pode ser convertido para um número, o resultado é {{jsxref("NaN")}}.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_Math.min()">Usando <code>Math.min()</code></h3>
+<h3 id="Usando_Math.min()">Usando <code>Math.min()</code></h3>
 
-<p><font><font>Este encontra o min de </font></font><code><font><font>x</font></font></code><font><font> e </font></font><code><font><font>y</font></font></code><font><font> e atribui a </font></font><code><font><font>z</font></font></code><font><font> </font></font>:</p>
+<p><font><font>Este encontra o min de </font></font><code><font><font>x</font></font></code><font><font> e </font></font><code><font><font>y</font></font></code><font><font> e atribui a </font></font><code><font><font>z</font></font></code><font><font> </font></font>:</p>
 
 <pre>var x = 10, y = -20;
 var z = Math.min(x, y);
 </pre>
 
-<h3 id="Cortando_um_valor_com_Math.min()">Cortando um valor com <code>Math.min()</code></h3>
+<h3 id="Cortando_um_valor_com_Math.min()">Cortando um valor com <code>Math.min()</code></h3>
 
-<p><code>Math.min()</code> é muitas vezes usado para cortar um valor <font>sempre menor do que ou igual a um limite. </font><font>Por exemplo, este.</font></p>
+<p><code>Math.min()</code> é muitas vezes usado para cortar um valor <font>sempre menor do que ou igual a um limite. </font><font>Por exemplo, este.</font></p>
 
 <pre>var x = f(foo);
 
@@ -53,7 +53,7 @@ if (x &gt; boundary) {
 <pre>var x = Math.min(f(foo), boundary);
 </pre>
 
-<p>{{jsxref("Math.max()")}} pode ser usado de uma maneira semelhante ao corte de um valor na outra extremidade.</p>
+<p>{{jsxref("Math.max()")}} pode ser usado de uma maneira semelhante ao corte de um valor na outra extremidade.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -72,72 +72,24 @@ if (x &gt; boundary) {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.8.2.12', 'Math.min')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-math.min', 'Math.min')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.min', 'Math.min')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_do_navegador"><font><font>Compatibilidade do navegador</font></font> </h2>
+<h2 id="Compatibilidade_do_navegador"><font><font>Compatibilidade do navegador</font></font> </h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>
-    <p>Suporte</p>
-
-    <p>básico</p>
-   </td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("javascript.builtins.Math.min")}}
 
 <h2 id="Veja_Também">Veja Também</h2>
 

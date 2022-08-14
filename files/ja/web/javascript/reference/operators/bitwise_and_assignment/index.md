@@ -28,8 +28,8 @@ x &= y // x = x & y
 
 ```js
 let a = 5;
-// 5:     00000000000000000000000000000101
-// 2:     00000000000000000000000000000010
+// 5:     00000000000000000000000000000101
+// 2:     00000000000000000000000000000010
 a &= 2; // 0
 ```
 
@@ -43,5 +43,5 @@ a &= 2; // 0
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
 - [ビット論理積演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)

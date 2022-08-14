@@ -13,7 +13,7 @@ translation_of: Web/CSS/fit-content
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p>La función <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>fit-content()</code></strong> ajusta un tamaño dado a un tamaño disponible de acuerdo a la fórmula: <code>min(<var>maximum size</var>, max(<var>minimum size</var>, <var>argument</var>))</code>.</p>
+<p>La función <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>fit-content()</code></strong> ajusta un tamaño dado a un tamaño disponible de acuerdo a la fórmula: <code>min(<var>maximum size</var>, max(<var>minimum size</var>, <var>argument</var>))</code>.</p>
 
 <pre class="brush: css no-line-numbers">/* &lt;length&gt; values */
 fit-content(200px)
@@ -25,13 +25,13 @@ fit-content(100ch)
 fit-content(40%)
 </pre>
 
-<p>La función se puede usar como un tamaño de track en las propiedades de <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a>, donde el tamaño máximo es definido por <code><a href="/en-US/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> y el mínimo por <code><a href="/en-US/docs/Web/CSS/grid-template-columns#auto">auto</a></code>, el cual es calculado por "<code>auto"</code> (ej. <code><a href="/en-US/docs/Web/CSS/minmax">minmax(auto, max-content)</a></code>), excepto que el tamaño del track se restringe al argumento si éste es mas grande que el "auto" mínimo .</p>
+<p>La función se puede usar como un tamaño de track en las propiedades de <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a>, donde el tamaño máximo es definido por <code><a href="/en-US/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> y el mínimo por <code><a href="/en-US/docs/Web/CSS/grid-template-columns#auto">auto</a></code>, el cual es calculado por "<code>auto"</code> (ej. <code><a href="/en-US/docs/Web/CSS/minmax">minmax(auto, max-content)</a></code>), excepto que el tamaño del track se restringe al argumento si éste es mas grande que el "auto" mínimo .</p>
 
 <p>También puede usarse como tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}, donde el tamañó máximo se refiere al tamaño máximo contenido y el mínimo al tamaño mínimo contenido.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<p>Función que acepta un  <code>&lt;length&gt;</code> o un <code>&lt;percentage&gt;</code> como un argumento.</p>
+<p>Función que acepta un  <code>&lt;length&gt;</code> o un <code>&lt;percentage&gt;</code> como un argumento.</p>
 
 <h3 id="Values">Values</h3>
 
@@ -74,7 +74,7 @@ fit-content(40%)
   &lt;div&gt;Item as wide as the content.&lt;/div&gt;
   &lt;div&gt;
     Item con más texto en él. Porque el contenido que es
-    mas grande que el ancho máximo, está restringido a los
+    mas grande que el ancho máximo, está restringido a los
     300 pixeles.
   &lt;/div&gt;
   &lt;div&gt;Flexible item&lt;/div&gt;
@@ -110,10 +110,10 @@ fit-content(40%)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p> </p>
+<p> </p>
 
 
 
 <p>{{Compat("css.properties.grid-template-columns.fit-content")}}</p>
 
-<p> </p>
+<p> </p>

@@ -16,11 +16,11 @@ translation_of: Web/API/EventSource
 ---
 <div>{{APIRef("Server Sent Events")}}</div>
 
-<p><span class="seoSummary"><strong><code>EventSource</code></strong> 인터페이스는 <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>에 대한 웹 콘텐츠 인터페이스입니다. <code>EventSource</code> 인스턴스는 <code>text/event-stream</code> 포맷으로 이벤트를 보내는 <a href="/en-US/docs/Web/HTTP">HTTP</a> 서버에 지속적인 연결을 합니다. 연결은</span>{{domxref("EventSource.close()")}}<span class="seoSummary"> 호출로 종료되지 전까지 지속됩니다.</span></p>
+<p><span class="seoSummary"><strong><code>EventSource</code></strong> 인터페이스는 <a href="/en-US/docs/Web/API/Server-sent_events">server-sent events</a>에 대한 웹 콘텐츠 인터페이스입니다. <code>EventSource</code> 인스턴스는 <code>text/event-stream</code> 포맷으로 이벤트를 보내는 <a href="/en-US/docs/Web/HTTP">HTTP</a> 서버에 지속적인 연결을 합니다. 연결은</span>{{domxref("EventSource.close()")}}<span class="seoSummary"> 호출로 종료되지 전까지 지속됩니다.</span></p>
 
-<p><span class="seoSummary">연결이 시작되었을 때, 서버로부터 들어오는 메세지들은 이벤트의 형태로 코드에 전달됩니다. 들어온 메시지에 이벤트 필드가 있다면, 트리거된 이벤트는 이벤트 필드의 값과 같게 됩니다. 만약 이벤트 필드가 비어있다면, 그 땐 </span>제네릭 {{event("message")}} 이벤트가 발생됩니다.</p>
+<p><span class="seoSummary">연결이 시작되었을 때, 서버로부터 들어오는 메세지들은 이벤트의 형태로 코드에 전달됩니다. 들어온 메시지에 이벤트 필드가 있다면, 트리거된 이벤트는 이벤트 필드의 값과 같게 됩니다. 만약 이벤트 필드가 비어있다면, 그 땐 </span>제네릭 {{event("message")}} 이벤트가 발생됩니다.</p>
 
-<p><a href="/ko/docs/Web/API/WebSockets_API">웹소켓</a>과 다르게, server-sent 이벤트는 단방향입니다. 데이터 메시지가 서버에서 클라이언트로 (유저의 웹 브라우저 같은) 한 방향으로 전달되는 것입니다. 이 특징은 클라이언트에서 서버로 메시지 형태로 데이터를 보낼 필요가 없을 때, server-sent 이벤트를 훌륭한 선택으로 만든다. 예를 들어,  <code>EventSource</code> 는 소셜 미디어 상태 업데이트, 뉴스피드나 <a href="/ko/docs/Web/API/IndexedDB_API">IndexedDB</a>나 <a href="/ko/docs/Web/API/Web_Storage_API">web storage</a>같은 <a href="/ko/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">클라이언트-사이드 저장</a> 매커니즘으로 데이터를 전달하는 데 유용한 접근법입니다.</p>
+<p><a href="/ko/docs/Web/API/WebSockets_API">웹소켓</a>과 다르게, server-sent 이벤트는 단방향입니다. 데이터 메시지가 서버에서 클라이언트로 (유저의 웹 브라우저 같은) 한 방향으로 전달되는 것입니다. 이 특징은 클라이언트에서 서버로 메시지 형태로 데이터를 보낼 필요가 없을 때, server-sent 이벤트를 훌륭한 선택으로 만든다. 예를 들어,  <code>EventSource</code> 는 소셜 미디어 상태 업데이트, 뉴스피드나 <a href="/ko/docs/Web/API/IndexedDB_API">IndexedDB</a>나 <a href="/ko/docs/Web/API/Web_Storage_API">web storage</a>같은 <a href="/ko/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">클라이언트-사이드 저장</a> 매커니즘으로 데이터를 전달하는 데 유용한 접근법입니다.</p>
 
 <dl>
 </dl>
@@ -58,7 +58,7 @@ translation_of: Web/API/EventSource
 
 <h2 id="Methods">Methods</h2>
 
-<p>이 인터페이스는 부모인 <em>{{domxref("EventTarget")}}</em>으로부터 메소드를 상속받고 있습니다.</p>
+<p>이 인터페이스는 부모인 <em>{{domxref("EventTarget")}}</em>으로부터 메소드를 상속받고 있습니다.</p>
 
 <dl>
  <dt>{{domxref("EventSource.close()")}}</dt>
@@ -67,7 +67,7 @@ translation_of: Web/API/EventSource
 
 <h2 id="예시">예시</h2>
 
-<p>이 기초적인 예시에서, <code>EventSource</code>는 서버로 부터 받은 이벤트로 생성되었습니다; <code>"sse.php"</code>라는 이름을 가진 페이지는 이벤트를 생성할 책임이 있습니다.</p>
+<p>이 기초적인 예시에서, <code>EventSource</code>는 서버로 부터 받은 이벤트로 생성되었습니다; <code>"sse.php"</code>라는 이름을 가진 페이지는 이벤트를 생성할 책임이 있습니다.</p>
 
 <pre class="brush: js">var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
@@ -79,7 +79,7 @@ evtSource.onmessage = function(e) {
   eventList.appendChild(newElement);
 }</pre>
 
-<p>각각의 수신한 이벤트는 우리의  <code>EventSource</code> 객체의 <code>onmessage</code> 이벤트 핸들러가 실행되도록 합니다. 차례가 되었을 때, 새로운 {{HTMLElement("li")}} 요소를 생성하고, 메시지 데이터를 안에 작성합니다. 그 때, 문서에 이미 존재하는 ul 요소에 새로운 요소를 추가하게 됩니다.</p>
+<p>각각의 수신한 이벤트는 우리의  <code>EventSource</code> 객체의 <code>onmessage</code> 이벤트 핸들러가 실행되도록 합니다. 차례가 되었을 때, 새로운 {{HTMLElement("li")}} 요소를 생성하고, 메시지 데이터를 안에 작성합니다. 그 때, 문서에 이미 존재하는 ul 요소에 새로운 요소를 추가하게 됩니다.</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find a full example on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
@@ -87,31 +87,11 @@ evtSource.onmessage = function(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<ul>
-</ul>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-
 <p>{{Compat("api.EventSource")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,7 +10,7 @@ translation_of: Web/API/Window/location
 ---
 <p>{{APIRef}}</p>
 
-<p><strong><code>Window.location</code></strong> 프로퍼티에 접근하면 읽기 전용인 {{domxref("Location")}} 오브젝트를 얻어올 수 있습니다. 이는 현재 도큐먼트의 로케이션에 대한 정보를 담고 있습니다.</p>
+<p><strong><code>Window.location</code></strong> 프로퍼티에 접근하면 읽기 전용인 {{domxref("Location")}} 오브젝트를 얻어올 수 있습니다. 이는 현재 도큐먼트의 로케이션에 대한 정보를 담고 있습니다.</p>
 
 <p>Though <code>Window.location</code> is a <em>read-only</em> <code>Location</code> object, you can also assign a {{domxref("DOMString")}} to it. This means that you can work with <code>location</code> as if it were a string in most cases: <code>location = 'http://www.example.com'</code> is a synonym of <code>location.href = 'http://www.example.com'</code>.</p>
 
@@ -48,16 +48,16 @@ location = "http://www.mozilla.org";
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> The example above works in situations where <code>location.hash</code> does not need to be retained. However, in Gecko-based browsers, setting <code>location.pathname</code> in this manner will erase any information in <code>location.hash</code>, whereas in WebKit (and possibly other browsers), setting the pathname will not alter the hash. If you need to change pathname but keep the hash as is, use the <code>replace()</code> method instead, which should work consistently across browsers.</div>
+<div class="note"><strong>Note:</strong> The example above works in situations where <code>location.hash</code> does not need to be retained. However, in Gecko-based browsers, setting <code>location.pathname</code> in this manner will erase any information in <code>location.hash</code>, whereas in WebKit (and possibly other browsers), setting the pathname will not alter the hash. If you need to change pathname but keep the hash as is, use the <code>replace()</code> method instead, which should work consistently across browsers.</div>
 
 <h3 id="예제_4_Display_the_properties_of_the_current_URL_in_an_alert_dialog">예제 #4: Display the properties of the current URL in an alert dialog:</h3>
 
 <pre class="brush: js">function showLoc() {
-  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
-  for (var sProp in oLocation){
-    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
-  }
-  alert(aLog.join("\n"));
+  var oLocation = location, aLog = ["Property (Typeof): Value", "location (" + (typeof oLocation) + "): " + oLocation ];
+  for (var sProp in oLocation){
+    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
+  }
+  alert(aLog.join("\n"));
 }
 
 // in html: &lt;button onclick="showLoc();"&gt;Show location properties&lt;/button&gt;
@@ -83,23 +83,23 @@ location = "http://www.mozilla.org";
 &lt;title&gt;MDN Example&lt;/title&gt;
 &lt;script&gt;
 function showNode (oNode) {
-  var nLeft = 0, nTop = 0;
-  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);
-  document.documentElement.scrollTop = nTop;
-  document.documentElement.scrollLeft = nLeft;
+  var nLeft = 0, nTop = 0;
+  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);
+  document.documentElement.scrollTop = nTop;
+  document.documentElement.scrollLeft = nLeft;
 }
 
 function showBookmark (sBookmark, bUseHash) {
-  if (arguments.length === 1 || bUseHash) { location.hash = sBookmark; return; }
-  var oBookmark = document.querySelector(sBookmark);
-  if (oBookmark) { showNode(oBookmark); }
+  if (arguments.length === 1 || bUseHash) { location.hash = sBookmark; return; }
+  var oBookmark = document.querySelector(sBookmark);
+  if (oBookmark) { showNode(oBookmark); }
 }
 &lt;/script&gt;
 &lt;style&gt;
 span.intLink {
-    cursor: pointer;
-    color: #0000ff;
-    text-decoration: underline;
+    cursor: pointer;
+    color: #0000ff;
+    text-decoration: underline;
 }
 &lt;/style&gt;
 &lt;/head&gt;
@@ -137,67 +137,49 @@ span.intLink {
 <p>아래는 같은 역할을 하지만, 애니메이션 스크롤이 들어간 버전…:</p>
 
 <pre class="brush: js">var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
-       /*
-       * nDuration: the duration in milliseconds of each frame
-       * nFrames: number of frames for each scroll
-       */
-       nDuration = 200, nFrames = 10;
+  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+       /*
+       * nDuration: the duration in milliseconds of each frame
+       * nFrames: number of frames for each scroll
+       */
+       nDuration = 200, nFrames = 10;
 
-  function _next () {
-    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
-    _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
-    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
-    _itFrame++;
-  }
+  function _next () {
+    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
+    _isBot = true;
+    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
+    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
+    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
+    _itFrame++;
+  }
 
-  function _chkOwner () {
-    if (_isBot) { _isBot = false; return; }
-    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
-  }
+  function _chkOwner () {
+    if (_isBot) { _isBot = false; return; }
+    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
+  }
 
-  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
-  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
+  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
+  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
 
-  return function (sBookmark, bUseHash) {
-    _scrollY = document.documentElement.scrollTop;
-    _scrollX = document.documentElement.scrollLeft;
-    _bookMark = sBookmark;
-    _useHash = arguments.length === 1 || bUseHash;
-    for (
-      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
-      oNode;
-      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
-    );
-    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
-    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
-  };
+  return function (sBookmark, bUseHash) {
+    _scrollY = document.documentElement.scrollTop;
+    _scrollX = document.documentElement.scrollLeft;
+    _bookMark = sBookmark;
+    _useHash = arguments.length === 1 || bUseHash;
+    for (
+      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
+      oNode;
+      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
+    );
+    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
+    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
+  };
 })();
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#the-location-interface", "Window.location")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Window.location")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

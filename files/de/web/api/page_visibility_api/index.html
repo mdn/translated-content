@@ -5,7 +5,7 @@ translation_of: Web/API/Page_Visibility_API
 ---
 <p id="Summary">{{DefaultAPISidebar("Page Visibility API")}}</p>
 
-<p><span class="seoSummary">Die <strong>Page Visibility API</strong> informiert sobald eine Webseite sichtbar ist und sich im Fokus befindet.</span> Mit dem Konzept des "tabbed browsing" ist es recht wahrscheinlich, dass sich jede Webseite irgendwann im Hintergrund befindet und deshalb nicht aktiv sichtbar für den Benutzer ist. Wenn der Benutzer die Webseite minimiert oder in einen anderen Tab wechselt, sendet die API ein {{event("visibilitychange")}} Event über die geänderte Sichtbarkeit der Seite. Anhand des Events können dann spezifische Aktionen ausgeführt oder ein von der Sichtbarkeit abhängiges Verhalten aktiviert werden. Wenn etwa ein Video in der Webseite abgespielt wird, könnte dieses pausieren solange die Seite für den Benutzer unsichtbar ist und automatisch fortsetzen, sobald er zu ihr zurückkehrt. Der Benutzer verliert somit die Stelle in dem Video nicht und kann dieses einfach weiter anschauen.</p>
+<p><span class="seoSummary">Die <strong>Page Visibility API</strong> informiert sobald eine Webseite sichtbar ist und sich im Fokus befindet.</span> Mit dem Konzept des "tabbed browsing" ist es recht wahrscheinlich, dass sich jede Webseite irgendwann im Hintergrund befindet und deshalb nicht aktiv sichtbar für den Benutzer ist. Wenn der Benutzer die Webseite minimiert oder in einen anderen Tab wechselt, sendet die API ein {{event("visibilitychange")}} Event über die geänderte Sichtbarkeit der Seite. Anhand des Events können dann spezifische Aktionen ausgeführt oder ein von der Sichtbarkeit abhängiges Verhalten aktiviert werden. Wenn etwa ein Video in der Webseite abgespielt wird, könnte dieses pausieren solange die Seite für den Benutzer unsichtbar ist und automatisch fortsetzen, sobald er zu ihr zurückkehrt. Der Benutzer verliert somit die Stelle in dem Video nicht und kann dieses einfach weiter anschauen.</p>
 
 <p>Die Status eines {{HTMLElement("iframe")}} sind dieselben wie die des übergeordneten document. Wenn der iframe über CSS Eigenschaften versteckt wird, löst dies nicht die visibility events aus und ändert auch nicht den Status der umliegenden Seite.</p>
 
@@ -19,16 +19,16 @@ translation_of: Web/API/Page_Visibility_API
 
 <ul>
  <li>Eine Webseite beinhaltet ein image carousel, welches nur dann automatisch auf das nächste Bild wechseln soll, wenn der Benutzer die Webseite betrachtet.</li>
- <li>Eine Dashboard-Applikation pollt nur dann nach Updates, wenn diese auch sichtbar ist und pausiert diesen Vorgang solange sie unsichtbar ist.</li>
+ <li>Eine Dashboard-Applikation pollt nur dann nach Updates, wenn diese auch sichtbar ist und pausiert diesen Vorgang solange sie unsichtbar ist.</li>
  <li>Eine Seite benötigt die Information, wenn sie per "prerender" geladen, um die Anzahl der page views richtig zu ermitteln.</li>
  <li>Es können Sounds deaktiviert werden, wenn sich ein Gerät im standby mode befindet (also wenn der Benutzer den Bildschirm seines Smartphones oder Tablets sperrt)</li>
 </ul>
 
-<p>Bisher mussten hierfür Workarounds von den Entwicklern implementiert werden. Dafür wurden Lösungen verwendet etwa auf Basis von onblur/onfocus Event-Handlern auf dem window, worüber sich ermitteln lässt ob die Webseite gerade die aktive ist oder nicht. Allerdings teilt dies nicht mit, ob die Webseite gerade für den Benutzer effektiv sichtbar ist oder nicht. Die Page Visibility API addressiert genau das. (Verglichen mit der onblur/onfocus basierten Lösung ist ein zentraler Unterschied, dass dort die Webseite <em>nicht</em> unsichtbar wurde, wenn ein ganz anderes Fenster aktiv wurde oder der Browser selbst den Fokus verloren hat, weil der Benutzer zu einer anderen Applikation gewechselt ist. Eine Webseite wird hier nur unsichtbar, wenn der Benutzer innerhalb des Browserfensters zu einem anderen Tab wechselt oder das Fenster minimiert.)</p>
+<p>Bisher mussten hierfür Workarounds von den Entwicklern implementiert werden. Dafür wurden Lösungen verwendet etwa auf Basis von onblur/onfocus Event-Handlern auf dem window, worüber sich ermitteln lässt ob die Webseite gerade die aktive ist oder nicht. Allerdings teilt dies nicht mit, ob die Webseite gerade für den Benutzer effektiv sichtbar ist oder nicht. Die Page Visibility API addressiert genau das. (Verglichen mit der onblur/onfocus basierten Lösung ist ein zentraler Unterschied, dass dort die Webseite <em>nicht</em> unsichtbar wurde, wenn ein ganz anderes Fenster aktiv wurde oder der Browser selbst den Fokus verloren hat, weil der Benutzer zu einer anderen Applikation gewechselt ist. Eine Webseite wird hier nur unsichtbar, wenn der Benutzer innerhalb des Browserfensters zu einem anderen Tab wechselt oder das Fenster minimiert.)</p>
 
 <h2 id="Beispiel">Beispiel</h2>
 
-<p>Hier ist ein <a href="http://daniemon.com/tech/webapps/page-visibility/">live Code-Beispiel</a> (eines Videos mit Sound).</p>
+<p>Hier ist ein <a href="http://daniemon.com/tech/webapps/page-visibility/">live Code-Beispiel</a> (eines Videos mit Sound).</p>
 
 <p>Das Beispiel wurde über folgenden Code realisiert:</p>
 
@@ -80,18 +80,18 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 
 <h2 id="Eigenschaften">Eigenschaften</h2>
 
-<h3 id="document.hidden_Read_only"><code>document.hidden</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></h3>
+<h3 id="document.hidden_Read_only"><code>document.hidden</code> {{ReadOnlyInline}}</h3>
 
-<p>Liefert <code>true</code> wenn die Webseite als unsichtbar für den Benutzer gewertet wird und <code>false</code> andernfalls.</p>
+<p>Liefert <code>true</code> wenn die Webseite als unsichtbar für den Benutzer gewertet wird und <code>false</code> andernfalls.</p>
 
-<h3 id="document.visibilityState_Read_only"><code>document.visibilityState</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></h3>
+<h3 id="document.visibilityState_Read_only"><code>document.visibilityState</code> {{ReadOnlyInline}}</h3>
 
-<p>Ist ein <code>string</code> welcher den aktuellen Sichtbarkeitsstatus angibt. Mögliche Werte sind:</p>
+<p>Ist ein <code>string</code> welcher den aktuellen Sichtbarkeitsstatus angibt. Mögliche Werte sind:</p>
 
 <ul>
  <li><code>visible</code> : der Seiteninhalt ist mindestens teilweise oder unvollständig sichtbar. In der Praxis bedeutet dies, dass sich die Seite in dem aktiven Tab eines nicht minimierten Fensters befindet.</li>
  <li><code>hidden</code> : der Seiteninhalt ist nicht für den Benutzer sichtbar. In der Praxis bedeutet dies, die Seite befindet sich in einem nicht aktiven (Hintergrund-)Tab des Browserfensters, das Browserfenster ist minimiert oder die Bildschirmsperre des Betriebssystems ist aktiv.</li>
- <li><code>prerender</code> : der Seiteninhalt wird gerade über "prerender" verarbeitet und ist noch nicht sichtbar für den Benutzer (es gilt somit als "hidden" für <code>document.hidden</code>). Ein Dokument kann den Initialzustand "prerender" erhalten und später den Status zu einem anderen Wert wechseln. Dieser kann aber nicht von einem anderen Status zu "prerender" wechseln. Achtung: Nicht alle Browser unterstützen diesen Status.</li>
+ <li><code>prerender</code> : der Seiteninhalt wird gerade über "prerender" verarbeitet und ist noch nicht sichtbar für den Benutzer (es gilt somit als "hidden" für <code>document.hidden</code>). Ein Dokument kann den Initialzustand "prerender" erhalten und später den Status zu einem anderen Wert wechseln. Dieser kann aber nicht von einem anderen Status zu "prerender" wechseln. Achtung: Nicht alle Browser unterstützen diesen Status.</li>
  <li><code>unloaded</code> : Die Seite wird aus dem Speicher freigegeben / gelöscht. Achtung: Nicht alle Browser unterstützen diesen Status.</li>
 </ul>
 
@@ -128,62 +128,15 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>13 {{property_prefix("webkit")}}<br>
-    33</td>
-   <td>{{CompatGeckoDesktop(18)}} [2]</td>
-   <td>10</td>
-   <td>12.10[1]</td>
-   <td>7</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>[1] Feuert das {{event("visibilitychange")}} Event nicht, wenn das Browserfenster minimiert wird. Ebenso wird <code>hidden</code> nicht auf <code>true </code>gesetzt.</p>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4 {{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoMobile(18)}} [2]</td>
-   <td>10</td>
-   <td>12.10[1]</td>
-   <td>7</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Feuert das {{event("visibilitychange")}} Event nicht, wenn das Browserfenster minimiert wird. Ebenso wird <code>hidden</code> nicht auf <code>true </code>gesetzt.</p>
-
-<p>[2] In den Versionen Firefox 10 bis Firefox 51 einschließlich, konnte diese Eigenschaft verwendet werden mit Vendor-Prefix <code>-moz-</code>.</p>
+<p>[2] In den Versionen Firefox 10 bis Firefox 51 einschließlich, konnte diese Eigenschaft verwendet werden mit Vendor-Prefix <code>-moz-</code>.</p>
 
 <h2 id="Weitere_Informationen">Weitere Informationen</h2>
 
 <ul>
- <li>Beschreibung der <a href="http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx" title="Page Visibility on IEBlog">Page Visibility API</a> im IEBlog.</li>
- <li>Beschreibung der <a href="http://code.google.com/chrome/whitepapers/pagevisibility.html" title="Page Visibility API by Google">Page Visibility API</a> von Google</li>
+ <li>Beschreibung der <a href="http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx" title="Page Visibility on IEBlog">Page Visibility API</a> im IEBlog.</li>
+ <li>Beschreibung der <a href="http://code.google.com/chrome/whitepapers/pagevisibility.html" title="Page Visibility API by Google">Page Visibility API</a> von Google</li>
 </ul>

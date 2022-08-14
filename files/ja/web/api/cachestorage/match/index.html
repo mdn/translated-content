@@ -38,7 +38,7 @@ translation_of: Web/API/CacheStorage/match
  <dd><code>match</code> 操作での照合方法を制御するプロパティを持つオブジェクト。 利用可能なオプションは次のとおりです。
  <ul>
   <li><code>ignoreSearch</code>: 照合方法が URL のクエリ文字列を無視するかどうかを指定する {{jsxref("Boolean")}}。 例えば、<code>true</code> に設定すると、<code>http://foo.com/?value=bar</code> の <code>?value=bar</code> 部分は、照合するときに無視されます。 デフォルトは <code>false</code> です。</li>
-  <li><code>ignoreMethod</code>: <code>true</code> に設定すると、照合方法が {{domxref("Request")}}  <code>http</code> メソッドを検証できないようにする {{jsxref("Boolean")}}（通常は <code>GET</code> と <code>HEAD</code> のみが許可されます）。 デフォルトは <code>false</code> です。</li>
+  <li><code>ignoreMethod</code>: <code>true</code> に設定すると、照合方法が {{domxref("Request")}}  <code>http</code> メソッドを検証できないようにする {{jsxref("Boolean")}}（通常は <code>GET</code> と <code>HEAD</code> のみが許可されます）。 デフォルトは <code>false</code> です。</li>
   <li><code>ignoreVary</code>: <code>true</code> に設定された場合、<code>VARY</code> ヘッダーの照合をしないように照合方法に指示する {{jsxref("Boolean")}}。 つまり、URL が一致する場合、{{domxref("Response")}} オブジェクトに <code>VARY</code> ヘッダーがあるかどうかに関係なく一致します。 デフォルトは <code>false</code> です。</li>
   <li><code>cacheName</code>: 検索する特定のキャッシュを表す {{domxref("DOMString")}}。</li>
  </ul>
@@ -48,7 +48,7 @@ translation_of: Web/API/CacheStorage/match
 <h3 id="Return_value" name="Return_value">戻り値</h3>
 
 <p>一致する {{domxref("Response")}} に解決される {{jsxref("Promise")}}。 指定されたリクエストに対する一致するレスポンスが見つからない場合、<code>Promise</code> は <code>undefined</code> に解決されます。<br>
-  </p>
+  </p>
 
 <h2 id="Examples" name="Examples">例</h2>
 

@@ -31,4 +31,4 @@ _Cette interface implémente les méthodes définies dans {{domxref("RandomSourc
 
 ## Voir aussi
 
-- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)
+- [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)

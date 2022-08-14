@@ -143,7 +143,7 @@ isFinite(NaN); // false
 
 <div class="note">Las funciones {{jsxref("Objetos_Globales/parseInt", "parseInt()")}} y {{jsxref("Objetos_Globales/parseFloat", "parseFloat()")}} analizan una cadena hasta que alcancen un caracter que no es válido para el formato de número especificado, luego devuelve el número analizado hasta ese punto. Sin embargo, el operador "+" simplemente convierte la cadena a <code>NaN</code> si contiene un caracter no válido. Intenta analizar la cadena "10.2abc" con cada método tú mismo en la consola y comprenderás mejor las diferencias.</div>
 
-<h2 id="Strings">Strings)</h2>
+<h2 id="Strings">Strings</h2>
 
 <p>Las cadenas en JavaScript son secuencias de <a href="/es/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">caracteres Unicode</a>. Esta debería ser una buena noticia para cualquiera que haya tenido que lidiar con la internacionalización. Exactamente, son secuencias de unidades de código UTF-16; cada unidad de código está representada por un número de 16 bits. Cada caracter Unicode está representado por 1 o 2 unidades de código.</p>
 
@@ -317,7 +317,7 @@ do {
 }
 </pre>
 
-<p>Los operadores <code>&amp;&amp;</code> y <code>||</code> utilizan lógica de cortocircuito, lo cual significa que si ejecutarán su segundo operando depende del primero. Esto es útil para verificar objetos nulos antes de acceder a sus atributos:</p>
+<p>Los operadores <code>&amp;&amp;</code> y <code>||</code> utilizan evaluación de cortocircuito, lo cual significa que la evaluación del segundo operando depende del valor del primero. Esto es útil para verificar objetos nulos antes de acceder a sus atributos:</p>
 
 <pre class="brush: js notranslate">var name = o &amp;&amp; o.getName();
 </pre>

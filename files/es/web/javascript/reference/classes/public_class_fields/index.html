@@ -39,7 +39,7 @@ class ClassWithPublicInstanceMethod {
 <p>Los campos estáticos públicos se declaran utilizando la palabra clave <code>static</code>. Se agregan al constructor de la clase en el momento de la evaluación de la clase utilizando {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Se accede nuevamente desde el constructor de la clase.</p>
 
 <pre class="brush: js notranslate">class ClassWithStaticField {
-  static staticField = 'static field';
+  static staticField = 'static field';
 }
 
 console.log(ClassWithStaticField.staticField);
@@ -49,7 +49,7 @@ console.log(ClassWithStaticField.staticField);
 <p>Campos sin inicializadores son inicializados como <code>undefined</code>.</p>
 
 <pre class="brush: js notranslate">class ClassWithStaticField {
-  static staticField;
+  static staticField;
 }
 
 console.assert(ClassWithStaticField.hasOwnProperty('staticField'));
@@ -59,11 +59,11 @@ console.log(ClassWithStaticField.staticField);
 <p>Los campos estáticos públicos no se reinicializan en las subclases, pero se puede acceder a ellos a través de la cadena de prototipo.</p>
 
 <pre class="brush: js notranslate">class ClassWithStaticField {
-  static baseStaticField = 'base field';
+  static baseStaticField = 'base field';
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field';
+  static subStaticField = 'sub class field';
 }
 
 console.log(SubClassWithStaticField.subStaticField);
@@ -75,14 +75,14 @@ console.log(SubClassWithStaticField.baseStaticField);
 <p>Cuando se inicializasn campos <code>this</code> se refiere al constuctor de clase. Tambien puede ser referenciado por nombre, y se puede usar <code>super</code> para obtener el constructor de la superclase si lo tiene.</p>
 
 <pre class="brush: js notranslate">class ClassWithStaticField {
-  static baseStaticField = 'base static field';
-  static anotherBaseStaticField = this.baseStaticField;
+  static baseStaticField = 'base static field';
+  static anotherBaseStaticField = this.baseStaticField;
 
-  static baseStaticMethod() { return 'base static method output'; }
+  static baseStaticMethod() { return 'base static method output'; }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod();
+  static subStaticField = super.baseStaticMethod();
 }
 
 console.log(ClassWithStaticField.anotherBaseStaticField);
@@ -96,7 +96,7 @@ console.log(SubClassWithStaticField.subStaticField);
 
 <p>Los campos de instancia públicos existen en cada instancia de la clase que se ha creado. Al declarar un campo publico podemos asegurarnos que dicho campo siempre esta presente, y la definicion de la clase esta auto-documentada.</p>
 
-<p>Los campos de instancia públicos son agregados with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> ya sea a la hora de ser construido en la clase base (antes que el metodo constructor corra), o justo despues que  <code>super()</code> returne en una subclase.</p>
+<p>Los campos de instancia públicos son agregados with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> ya sea a la hora de ser construido en la clase base (antes que el metodo constructor corra), o justo despues que  <code>super()</code> returne en una subclase.</p>
 
 <pre class="brush: js notranslate">class ClassWithInstanceField {
   instanceField = 'instance field';
@@ -109,7 +109,7 @@ console.log(instance.instanceField);
 <p>Campos sin inicializadores son inicilizados en <code>undefined</code>.</p>
 
 <pre class="brush: js notranslate">class ClassWithInstanceField {
-  instanceField;
+  instanceField;
 }
 
 const instance = new ClassWithInstanceField();
@@ -122,7 +122,7 @@ console.log(instance.instanceField);
 <pre class="brush: js notranslate">const PREFIX = 'prefix';
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field';
+    [`${PREFIX}Field`] = 'prefixed field';
 }
 
 const instance = new ClassWithComputedFieldName();
@@ -132,13 +132,13 @@ console.log(instance.prefixField);
 <p>Cuando se inicializan campos <code>this</code> se refiere a la instancia de clase que esta siendo construida. Al igual que con los metodos publicos de instancia, si usted esta en una subclase puede acceder a al prototypo de la superclase usando <code>super</code>.</p>
 
 <pre class="brush: js notranslate">class ClassWithInstanceField {
-  baseInstanceField = 'base field';
-  anotherBaseInstanceField = this.baseInstanceField;
-  baseInstanceMethod() { return 'base method output'; }
+  baseInstanceField = 'base field';
+  anotherBaseInstanceField = this.baseInstanceField;
+  baseInstanceMethod() { return 'base method output'; }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod();
+  subInstanceField = super.baseInstanceMethod();
 }
 
 const base = new ClassWithInstanceField();
@@ -191,19 +191,19 @@ console.log(instance.publicMethod());
   async *asyncGeneratorMethod() { }
 }</pre>
 
-<p>Dentro de un metodo de instancia, <code>this</code> se referie a la instancia como tal. En las subclases, <code>super</code> le permite acceder el prototipo de la superclase, permitiendo así llamar métodos de la superclase.</p>
+<p>Dentro de un metodo de instancia, <code>this</code> se referie a la instancia como tal. En las subclases, <code>super</code> le permite acceder el prototipo de la superclase, permitiendo así llamar métodos de la superclase.</p>
 
 <pre class="brush: js notranslate">class BaseClass {
-  msg = 'hello world';
-  basePublicMethod() {
-    return this.msg;
-  }
+  msg = 'hello world';
+  basePublicMethod() {
+    return this.msg;
+  }
 }
 
 class SubClass extends BaseClass {
-  subPublicMethod() {
-    return super.basePublicMethod();
-  }
+  subPublicMethod() {
+    return super.basePublicMethod();
+  }
 }
 
 const instance = new SubClass();
@@ -214,13 +214,13 @@ console.log(instance.subPublicMethod());
 <p>Existen metodos especiales llamados "Getters" y "Setters" que se vinculan a una propiedad de una clase, y que son ejecutados o llamados cuando esa propiedad es consultada o moditficada. Puede usar las palabras reservaddas <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a> para declarar una instancia pública de "getter" or "setter". [N.T. preferí decir Getter/Setter que decir Consultadores/Mofificadores]</p>
 
 <pre class="brush: js notranslate">class ClassWithGetSet {
-  #msg = 'hello world';
-  get msg() {
-    return this.#msg;
-  }
-  set msg(x) {
-    this.#msg = `hello ${x}`;
-  }
+  #msg = 'hello world';
+  get msg() {
+    return this.#msg;
+  }
+  set msg(x) {
+    this.#msg = `hello ${x}`;
+  }
 }
 
 const instance = new ClassWithGetSet();
@@ -241,12 +241,12 @@ console.log(instance.msg);
 <p>The limitation of static variables being called by only static methods still holds.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+  static #PRIVATE_STATIC_FIELD;
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
-  }
+  static publicStaticMethod() {
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+  }
 }
 
 assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);</pre>
@@ -256,12 +256,12 @@ assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);</pre>
 <p>There is a provenance restriction on private static fields. Only the class which defines the private static field can access the field. This can lead to unexpected behaviour when using <strong><code>this</code></strong></p>
 
 <pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+  static #PRIVATE_STATIC_FIELD;
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42;
-    return this.#PRIVATE_STATIC_FIELD;
-  }
+  static basePublicStaticMethod() {
+    this.#PRIVATE_STATIC_FIELD = 42;
+    return this.#PRIVATE_STATIC_FIELD;
+  }
 }
 
 class SubClass extends BaseClassWithPrivateStaticField { }
@@ -271,17 +271,17 @@ assertThrows(() =&gt; SubClass.basePublicStaticMethod(), TypeError);
 
 <h3 id="Campos_privados_de_instancia">Campos privados de instancia</h3>
 
-<p>Private instance fields are declared with <strong># names </strong>( pronounced "hash names"), which are identifiers prefixed with #. The # is a part of the name itself and is used for declaration and accessing as well.</p>
+<p>Private instance fields are declared with <strong># names </strong>( pronounced "hash names"), which are identifiers prefixed with #. The # is a part of the name itself and is used for declaration and accessing as well.</p>
 
 <p>The encapsulation is enforced by the language. It is a syntax error to refer to # names not in scope.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateField {
-  #privateField;
+  #privateField;
 
-  constructor() {
-    this.#privateField = 42;
-    this.#randomField = 666; # Syntax error
-  }
+  constructor() {
+    this.#privateField = 42;
+    this.#randomField = 666; # Syntax error
+  }
 }
 
 const instance = new ClassWithPrivateField();
@@ -294,16 +294,16 @@ instance.#privateField === 42; // Syntax error
 
 <p>Like their public equivalent, private static methods are called on the class, not instances of the class. Like private static fields, they are only accessible from inside the class declaration.</p>
 
-<p>Private static methods may be generator, async and async generator functions.</p>
+<p>Private static methods may be generator, async and async generator functions.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42;
-    }
+    static #privateStaticMethod() {
+        return 42;
+    }
 
-    static publicStaticMethod() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
+    static publicStaticMethod() {
+        return ClassWithPrivateStaticMethod.#privateStaticMethod();
+    }
 }
 
 assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
@@ -314,13 +314,13 @@ assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
 <p>Private instance methods are methods available on class instances whose access is restricted in the same manner as private instance fields.</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world';
-  }
+  #privateMethod() {
+    return 'hello world';
+  }
 
-  getPrivateMessage() {
-      return #privateMethod();
-  }
+  getPrivateMessage() {
+      return #privateMethod();
+  }
 }
 
 const instance = new ClassWithPrivateMethod();
@@ -330,19 +330,19 @@ console.log(instance.getPrivateMessage());
 <p>Private instance methods may be generator, async or async generator functions. Private getters and setters are also possible:</p>
 
 <pre class="brush: js notranslate">class ClassWithPrivateAccessor {
-  #message;
+  #message;
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`;
-  }
-  set #decoratedMessage(msg) {
-    this.#message = msg;
-  }
+  get #decoratedMessage() {
+    return `✨${this.#message}✨`;
+  }
+  set #decoratedMessage(msg) {
+    this.#message = msg;
+  }
 
-  constructor() {
-    this.#decoratedMessage = 'hello world';
-    console.log(this.#decoratedMessage);
-  }
+  constructor() {
+    this.#decoratedMessage = 'hello world';
+    console.log(this.#decoratedMessage);
+  }
 }
 
 new ClassWithPrivateAccessor();

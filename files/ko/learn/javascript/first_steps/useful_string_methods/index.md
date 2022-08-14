@@ -49,160 +49,56 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 var string = 'This is my string';
 ```
 
-변수가 문자열 객체 인스턴스되면, 결과적으로 수많은 속성과 메서드가 사용 가능하게 됩니다. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> 객체 페이지로 이동하여 페이지 측면의 목록을 내려다 보면 이것을 볼 수 있습니다!
+변수가 문자열 객체 인스턴스되면, 결과적으로 수많은 속성과 메서드가 사용 가능하게 됩니다. <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> 객체 페이지로 이동하여 페이지 측면의 목록을 내려다 보면 이것을 볼 수 있습니다!
 
 이제 뇌가 녹기 시작하기 전에, 걱정하지 마십시오! 학습 여행 중에 초기에 대부분을 알 필요가 없습니다. 그러나 여기에서 살펴볼 몇 가지 사항을 자주 사용하게 될 것입니다.
 
 콘솔에 예제를 작성해 보세요. 아래의 한 가지를 제공합니다(새 탭이나 새 창에서 콘솔을 열 수 있고, 브라우저의 개발자 콘솔을 사용할 수도 있습니다).
 
-<div class="hidden"><h6 id="Hidden_code">Hidden code</h6><pre class="brush: html notranslate">&#x3C;!DOCTYPE html>
-&#x3C;html>
-  &#x3C;head>
-    &#x3C;meta charset="utf-8">
-    &#x3C;title>JavaScript console&#x3C;/title>
-    &#x3C;style>
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        background-color: #0C323D;
-        color: #809089;
-        font-family: monospace;
-      }
-
-      body {
-        max-width: 700px;
-      }
-
-      p {
-        margin: 0;
-        width: 1%;
-        padding: 0 1%;
-        font-size: 16px;
-        line-height: 1.5;
-        float: left;
-      }
-
-      .input p {
-        margin-right: 1%;
-      }
-
-      .output p {
-        width: 100%;
-      }
-
-      .input input {
-        width: 96%;
-        float: left;
-        border: none;
-        font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
-        padding: 0;
-        background: #0C323D;
-        color: #809089;
-      }
-
-      div {
-        clear: both;
-      }
-
-    &#x3C;/style>
-
-&#x3C;/head>
-&#x3C;body>
-
-&#x3C;/body>
-
-&#x3C;script>
-var geval = eval;
-function createInput() {
-var inputDiv = document.createElement('div');
-var inputPara = document.createElement('p');
-var inputForm = document.createElement('input');
-
-      inputDiv.setAttribute('class', 'input');
-      inputPara.textContent = '>';
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
-
-      inputForm.addEventListener('change', executeCode);
-    }
-
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
-      }
-
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
-
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
-
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
-
-      createInput()
-    }
-
-    createInput();
-
-&#x3C;/script>
-&#x3C;/html></pre></div>
-
-{{ EmbedLiveSample('Hidden_code', '100%', 300) }}
-
 ### 문자열의 길이 찾기
 
-간단합니다 — 간단하게  {{jsxref("String.prototype.length", "length")}} 프로퍼티를 사용할 수 있습니다. 다음 코드를 입력해 보세요.
+간단합니다 — 간단하게  {{jsxref("String.prototype.length", "length")}} 프로퍼티를 사용할 수 있습니다. 다음 코드를 입력해 보세요.
 
 ```js
 var browserType = 'mozilla';
 browserType.length;
 ```
 
-결과는 7을 리턴해야 합니다. 'mozilla'는 7글자이기 때문입니다. 이것은 여러 가지 이유로 유용합니다. 예를 들어 이름의 길이에 따라 이름의 순서를 정렬해야 하던가, 유저가 작성한 이름이 특정 길이 이상일 때 너무 길다는 것을 알려줘야 하는 경우에 사용할 수 있습니다.
+결과는 7을 리턴해야 합니다. 'mozilla'는 7글자이기 때문입니다. 이것은 여러 가지 이유로 유용합니다. 예를 들어 이름의 길이에 따라 이름의 순서를 정렬해야 하던가, 유저가 작성한 이름이 특정 길이 이상일 때 너무 길다는 것을 알려줘야 하는 경우에 사용할 수 있습니다.
 
 ### 특정 문자열 찾기
 
-관련하여, 대괄호 표기법을 이용해서 문자열 안의 문자를 구할 수 있습니다. 대괄호 표기법은 변수명 끝에 대괄호를 포함합니다. 대괄호 안에는 구하고 싶은 문자의 숫자를 포함시키면 되며, 예를 들어 아래의 경우 첫 번째 문자를 구할 수 있습니다:
+관련하여, 대괄호 표기법을 이용해서 문자열 안의 문자를 구할 수 있습니다. 대괄호 표기법은 변수명 끝에 대괄호를 포함합니다. 대괄호 안에는 구하고 싶은 문자의 숫자를 포함시키면 되며, 예를 들어 아래의 경우 첫 번째 문자를 구할 수 있습니다:
 
 ```js
 browserType[0];
 ```
 
-컴퓨터는 1이 아니라 0부터 숫자를 셉니다! 문자열의 마지막 문자를 구하기 위해서, 우리는 다음 코드를 사용할 수 있으며, 기술적인 `length` 프로퍼티과 같이 사용하면 아래와 같습니다:
+컴퓨터는 1이 아니라 0부터 숫자를 셉니다! 문자열의 마지막 문자를 구하기 위해서, 우리는 다음 코드를 사용할 수 있으며, 기술적인 `length` 프로퍼티과 같이 사용하면 아래와 같습니다:
 
 ```js
 browserType[browserType.length - 1];
 ```
 
-"mozilla"는 7글자이지만, 숫자는 0부터 시작하기 때문에 글자의 위치는 6입니다. 그렇기 때문에 `length-1`을 사용합니다. 예를 들어, 여러 문자열 중 첫 번째 문자를 찾아 알파벳순으로 정렬해야 할 경우에 사용할 수 있습니다.
+"mozilla"는 7글자이지만, 숫자는 0부터 시작하기 때문에 글자의 위치는 6입니다. 그렇기 때문에 `length-1`을 사용합니다. 예를 들어, 여러 문자열 중 첫 번째 문자를 찾아 알파벳순으로 정렬해야 할 경우에 사용할 수 있습니다.
 
 ### 문자열 내부의 하위 문자열 찾기 및 추출
 
-1.  때때로 큰 문자열 안의 작은 문자열(우리는 이것을 하위 문자열이라고 이야기 한다.)을 찾고 싶을 것입니다. 이 작업은 {{jsxref("String.prototype.indexOf()", "indexOf()")}}를 사용하여 완료할 수 있습니다, which takes a single {{glossary("parameter")}} — 찾기 원하는 하위 문자열을 찾을 수 있습니다. 시도해 봅시다:
+1. 때때로 큰 문자열 안의 작은 문자열(우리는 이것을 하위 문자열이라고 이야기 한다.)을 찾고 싶을 것입니다. 이 작업은 {{jsxref("String.prototype.indexOf()", "indexOf()")}}를 사용하여 완료할 수 있습니다, which takes a single {{glossary("parameter")}} — 찾기 원하는 하위 문자열을 찾을 수 있습니다. 시도해 봅시다:
 
     ```js
     browserType.indexOf('zilla');
     ```
 
-    결과는 2입니다. 하위 문자열인 "zilla"는 "mozilla'의 2번 위치(0, 1, 2— 그러므로 3번째 문자열)에서 시작합니다. 이러한 코드는 문자열을 필터링하는 데 사용될 수 있습니다. 예를 들어 웹 주소 목록에서 "mozilla"가 포함된 주소만 인쇄하고 싶은 경우입니다.
+    결과는 2입니다. 하위 문자열인 "zilla"는 "mozilla'의 2번 위치(0, 1, 2— 그러므로 3번째 문자열)에서 시작합니다. 이러한 코드는 문자열을 필터링하는 데 사용될 수 있습니다. 예를 들어 웹 주소 목록에서 "mozilla"가 포함된 주소만 인쇄하고 싶은 경우입니다.
 
-2.  다른 방법으로도 할 수 있으며, 더욱 효율적일 수 있습니다. 다음 예제를 따라해 봅시다:
+2. 다른 방법으로도 할 수 있으며, 더욱 효율적일 수 있습니다. 다음 예제를 따라해 봅시다:
 
     ```js
     browserType.indexOf('vanilla');
     ```
 
-    이렇게 하면 -1( 하위 문자열 (이 경우 'vanilla')이 기본 문자열에서 발견되지 않으면 반환한다.)의 결과를 얻을 수 있습니다.
+    이렇게 하면 -1( 하위 문자열 (이 경우 'vanilla')이 기본 문자열에서 발견되지 않으면 반환한다.)의 결과를 얻을 수 있습니다.
 
     하위 문자열 'mozilla'가 포함되지 않은 문자열의 모든 인스턴스를 찾으려면 이 연산자를 사용하고 아래에 표시된 것처럼 부정 연산자를 사용해서 작업을 수행할 수 있습니다. 다음과 같이 할 수 있습니다:
 
@@ -212,7 +108,7 @@ browserType[browserType.length - 1];
     }
     ```
 
-3.  문자열 내에서 부분 문자열이 어디에서 시작되고 어떤 문자로 끝나는지 알고 싶으면 {{jsxref("String.prototype.slice()", "slice()")}}를 사용하여 문자열을 추출할 수 있습니다. 다음을 시도해 봅시다:
+3. 문자열 내에서 부분 문자열이 어디에서 시작되고 어떤 문자로 끝나는지 알고 싶으면 {{jsxref("String.prototype.slice()", "slice()")}}를 사용하여 문자열을 추출할 수 있습니다. 다음을 시도해 봅시다:
 
     ```js
     browserType.slice(0, 3);
@@ -220,7 +116,7 @@ browserType[browserType.length - 1];
 
     "moz"를 반환합니다 - 첫 번째 파라메터는 추출을 시작할 문자 위치이고 두 번째 파라메터는 추출할 문자의 갯수입니다. 따라서 슬라이스는 첫 번째 위치에서부터 세 번째 위치까지 포함됩니다.
 
-4.  또한 특정 문자 뒤에 문자열의 나머지 문자를 모두 추출하려는 경우 두 번째 매개 변수를 포함하지 않고 문자열에서 나머지 문자를 추출할 위치의 문자 위치만 포함하면 됩니다. 다음을 시도해보십시오.
+4. 또한 특정 문자 뒤에 문자열의 나머지 문자를 모두 추출하려는 경우 두 번째 매개 변수를 포함하지 않고 문자열에서 나머지 문자를 추출할 위치의 문자 위치만 포함하면 됩니다. 다음을 시도해보십시오.
 
     ```js
     browserType.slice(2);
@@ -256,227 +152,523 @@ browserType.replace('moz', 'van');
 
 이 섹션에서는 문자열을 다루는 방법을 설명합니다. 아래의 각 실습에서는 문자열로 이루어진 배열을 루프문을 사용해 bullet list(불릿 리스트)로 표현하였습니다. 지금 배열이나 루프를 이해할 필요가 없습니다. - 이러한 내용은 추후에 설명합니다. 중요한것은 각각의 문자열이 우리가 원하는 형식으로 출력하는 코드를 작성하는 것입니다.
 
-각 예제에는 리셋 버튼이 있고, 리셋 버튼은 실수를 했거나 코드가 작동하지 않아서 재설정하는데 사용할 수 있습니다. 해결 방법을 모를 때, 해답 버튼(solution button)을 누르면  해답을 볼 수 있습니다.
+각 예제에는 리셋 버튼이 있고, 리셋 버튼은 실수를 했거나 코드가 작동하지 않아서 재설정하는데 사용할 수 있습니다. 해결 방법을 모를 때, 해답 버튼(solution button)을 누르면  해답을 볼 수 있습니다.
 
 ### 인사말 필터링 하기
 
 첫 번째 예제는 간단히 시작해봅시다. 우리는 배열에 들어있는 크리스마스 인사말 메시지를 정렬하려고 합니다. if(...)을 사용해 각 문자열을 비교하고 크리스마스 메시지인 경우의 목록만 인쇄하려고 합니다.
 
-1.  먼저 각 메시지가 크리스마스 메시지인지 여부를 테스트할 수 있는 방법을 생각해봅시다. 메시지들은 어떤 문자열이 있고, 존재하는지 테스트하기 위해 어떤 방법을 사용할 수 있을까요?
-2.  연산자와 피연산자를 사용해 조건문을 만들어야 합니다. 연산자 왼쪽에 있는것과 연산자 오른쪽에 있는 것이 동등한가요? 또는 이 경우 왼쪽 메서드가 오른쪽으로 결과값을 전달합니까?
-3.  힌트 : 이 경우 메서드 호출이 결과값과 같지 않은지 테스트하는 것이 더 유용할 수 있습니다.
+1. 먼저 각 메시지가 크리스마스 메시지인지 여부를 테스트할 수 있는 방법을 생각해봅시다. 메시지들은 어떤 문자열이 있고, 존재하는지 테스트하기 위해 어떤 방법을 사용할 수 있을까요?
+2. 연산자와 피연산자를 사용해 조건문을 만들어야 합니다. 연산자 왼쪽에 있는것과 연산자 오른쪽에 있는 것이 동등한가요? 또는 이 경우 왼쪽 메서드가 오른쪽으로 결과값을 전달합니까?
+3. 힌트 : 이 경우 메서드 호출이 결과값과 같지 않은지 테스트하는 것이 더 유용할 수 있습니다.
 
-<div class="hidden"><h6 id="Playable_code">Playable code</h6><pre class="brush: html notranslate">&#x3C;div class="output" style="min-height: 125px;">
+```html hidden
+<h2>Live output</h2>
 
-&#x3C;ul>
+<div class="output" style="min-height: 125px;">
 
-&#x3C;/ul>
+<ul>
 
-&#x3C;/div>
+</ul>
 
-&#x3C;textarea id="code" class="playable-code" style="height: 290px;">
-var list = document.querySelector('.output ul');
+</div>
+
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+
+<textarea id="code" class="playable-code" style="height: 290px; width: 95%">
+const list = document.querySelector('.output ul');
 list.innerHTML = '';
-var greetings = ['Happy Birthday!',
-'Merry Christmas my love',
-'A happy Christmas to all the family',
-'You\'re all I want for Christmas',
-'Get well soon'];
+const greetings = ['Happy Birthday!',
+                 'Merry Christmas my love',
+                 'A happy Christmas to all the family',
+                 'You\'re all I want for Christmas',
+                 'Get well soon'];
 
-for (var i = 0; i &#x3C; greetings.length; i++) {
-var input = greetings[i];
-// Your conditional test needs to go inside the parentheses
-// in the line below, replacing what's currently there
-if (greetings[i]) {
-var result = input;
-var listItem = document.createElement('li');
-listItem.textContent = result;
-list.appendChild(listItem);
+for (let greeting of greetings) {
+  // Your conditional test needs to go inside the parentheses
+  // in the line below, replacing what's currently there
+  if (greeting) {
+    const listItem = document.createElement('li');
+    listItem.textContent = greeting;
+    list.appendChild(listItem);
+  }
 }
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
+
+```css hidden
+html {
+  font-family: sans-serif;
 }
-&#x3C;/textarea>
 
-&#x3C;div class="playable-buttons">
-&#x3C;input id="reset" type="button" value="Reset">
-&#x3C;input id="solution" type="button" value="Show solution">
-&#x3C;/div>
+h2 {
+  font-size: 16px;
+}
 
-</pre><pre class="brush: js notranslate">var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var code = textarea.value;
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+let code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
-eval(textarea.value);
+  eval(textarea.value);
 }
 
 reset.addEventListener('click', function() {
-textarea.value = code;
-updateCode();
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = jsSolution;
+  solution.value = 'Show solution';
+  updateCode();
 });
 
 solution.addEventListener('click', function() {
-textarea.value = jsSolution;
-updateCode();
+  if(solution.value === 'Show solution') {
+    textarea.value = solutionEntry;
+    solution.value = 'Hide solution';
+  } else {
+    textarea.value = userEntry;
+    solution.value = 'Show solution';
+  }
+  updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n \'Merry Christmas my love\',\n \'A happy Christmas to all the family\',\n \'You\\\'re all I want for Christmas\',\n \'Get well soon\'];\n\nfor(var i = 0; i &#x3C; greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Christmas\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
+const jsSolution = `const list = document.querySelector('.output ul');
+list.innerHTML = '';
+const greetings = ['Happy Birthday!',
+                 'Merry Christmas my love',
+                 'A happy Christmas to all the family',
+                 'You\\\'re all I want for Christmas',
+                 'Get well soon'];
+
+for (let greeting of greetings) {
+  // Your conditional test needs to go inside the parentheses
+  // in the line below, replacing what's currently there
+  if (greeting.includes('Christmas')) {
+    const listItem = document.createElement('li');
+    listItem.textContent = greeting;
+    list.appendChild(listItem);
+  }
+}`;
+
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
-</pre></div>
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
 
-{{ EmbedLiveSample('Playable_code', '100%', 490) }}
+textarea.onkeydown = function(e){
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret('\t');
+  }
 
-### 대/소문자 맞게 수정하기
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+
+function insertAtCaret(text) {
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = (textarea.value).substring(0, caretPos);
+  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+
+// Update the saved userCode every time the user updates the text area code
+
+textarea.onkeyup = function(){
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if(solution.value === 'Show solution') {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+
+  updateCode();
+};
+```
+
+{{ EmbedLiveSample('인사말_필터링_하기', '100%', 600) }}
+
+### 대/소문자 맞게 수정하기
 
 이 예제에는 영국 도시의 이름들을 모아놨습니다만 대/소문자가 잘못되어 있습니다. 우리는 이 문자들을 첫 번째 문자를 제외하고 모두 소문자로 변경해야 합니다. 이것은 다음과 같은 방식으로 할 수 있습니다:
 
-1.  `input` 변수에 담긴 문자열 전체를 소문자로 변환한 후 새로운 변수에 저장하세요.
-2.  새로운 변수에 저장된 문자열의 첫 문자를 다른 변수에 저장하세요
-3.  Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
-4.  Change the value of the `result` variable to equal to the final result, not the `input`.
+1. `input` 변수에 담긴 문자열 전체를 소문자로 변환한 후 새로운 변수에 저장하세요.
+2. 새로운 변수에 저장된 문자열의 첫 문자를 다른 변수에 저장하세요
+3. Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
+4. Change the value of the `result` variable to equal to the final result, not the `input`.
 
 > **참고:** A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
 
-<div class="hidden"><h6 id="Playable_code_2">Playable code 2</h6><pre class="brush: html notranslate">&#x3C;div class="output" style="min-height: 125px;">
+```html hidden
+<h2>Live output</h2>
 
-&#x3C;ul>
+<div class="output" style="min-height: 125px;">
 
-&#x3C;/ul>
+<ul>
 
-&#x3C;/div>
+</ul>
 
-&#x3C;textarea id="code" class="playable-code" style="height: 250px;">
-var list = document.querySelector('.output ul');
+</div>
+
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+
+<textarea id="code" class="playable-code" style="height: 250px; width: 95%">
+const list = document.querySelector('.output ul');
 list.innerHTML = '';
-var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
-for(var i = 0; i &#x3C; cities.length; i++) {
-var input = cities[i];
-// write your code just below here
+const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
-var result = input;
-var listItem = document.createElement('li');
-listItem.textContent = result;
-list.appendChild(listItem);
+for (let city of cities) {
+  // write your code just below here
+
+  const result = city;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
 }
-&#x3C;/textarea>
+</textarea>
 
-&#x3C;div class="playable-buttons">
-&#x3C;input id="reset" type="button" value="Reset">
-&#x3C;input id="solution" type="button" value="Show solution">
-&#x3C;/div>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-</pre><pre class="brush: js notranslate">var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var code = textarea.value;
+```css hidden
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+let code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
-eval(textarea.value);
+  eval(textarea.value);
 }
 
 reset.addEventListener('click', function() {
-textarea.value = code;
-updateCode();
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = jsSolution;
+  solution.value = 'Show solution';
+  updateCode();
 });
 
 solution.addEventListener('click', function() {
-textarea.value = jsSolution;
-updateCode();
+  if(solution.value === 'Show solution') {
+    textarea.value = solutionEntry;
+    solution.value = 'Hide solution';
+  } else {
+    textarea.value = userEntry;
+    solution.value = 'Show solution';
+  }
+  updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i &#x3C; cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
+const jsSolution = `const list = document.querySelector('.output ul');
+list.innerHTML = '';
+const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+for (let city of cities) {
+  // write your code just below here
+  const lower = city.toLowerCase();
+  const firstLetter = lower.slice(0,1);
+  const capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());
+  const result = capitalized;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}`;
+
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
-</pre></div>
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
 
-{{ EmbedLiveSample('Playable_code_2', '100%', 450) }}
+textarea.onkeydown = function(e){
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret('\t');
+  }
+
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+
+function insertAtCaret(text) {
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = (textarea.value).substring(0, caretPos);
+  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+
+// Update the saved userCode every time the user updates the text area code
+
+textarea.onkeyup = function(){
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if(solution.value === 'Show solution') {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+
+  updateCode();
+};
+```
+
+{{ EmbedLiveSample('대/소문자_맞게_수정하기', '100%', 450) }}
 
 ### Making new strings from old parts
 
 In this last exercise the array contains a bunch of strings containing information about train stations in the North of England. The strings are data items that contain the three letter station code, followed by some machine-readable data, followed by a semi-colon, followed by the human-readable station name. For example:
 
-    MAN675847583748sjt567654;Manchester Piccadilly
+```
+MAN675847583748sjt567654;Manchester Piccadilly
+```
 
-We want to extract the station code and name, and put them together in a  string with the following structure:
+We want to extract the station code and name, and put them together in a  string with the following structure:
 
-    MAN: Manchester Piccadilly
+```
+MAN: Manchester Piccadilly
+```
 
 We'd recommend doing it like this:
 
-1.  Extract the three-letter station code and store it in a new variable.
-2.  Find the character index number of the semi-colon.
-3.  Extract the human-readable station name using the semi-colon character index number as a reference point, and store it in a new variable.
-4.  Concatenate the two new variables and a string literal to make the final string.
-5.  Change the value of the `result` variable to equal to the final string, not the `input`.
+1. Extract the three-letter station code and store it in a new variable.
+2. Find the character index number of the semi-colon.
+3. Extract the human-readable station name using the semi-colon character index number as a reference point, and store it in a new variable.
+4. Concatenate the two new variables and a string literal to make the final string.
+5. Change the value of the `result` variable to equal to the final string, not the `input`.
 
-<div class="hidden"><h6 id="Playable_code_3">Playable code 3</h6><pre class="brush: html notranslate">&#x3C;div class="output" style="min-height: 125px;">
+```html hidden
+<h2>Live output</h2>
 
-&#x3C;ul>
+<div class="output" style="min-height: 125px;">
 
-&#x3C;/ul>
+<ul>
 
-&#x3C;/div>
+</ul>
 
-&#x3C;textarea id="code" class="playable-code" style="height: 285px;">
-var list = document.querySelector('.output ul');
+</div>
+
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+
+<textarea id="code" class="playable-code" style="height: 285px; width: 95%">
+const list = document.querySelector('.output ul');
 list.innerHTML = '';
-var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
-'GNF576746573fhdg4737dh4;Greenfield',
-'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
-'SYB4f65hf75f736463;Stalybridge',
-'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                  'GNF576746573fhdg4737dh4;Greenfield',
+                  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                  'SYB4f65hf75f736463;Stalybridge',
+                  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (var i = 0; i &#x3C; stations.length; i++) {
-var input = stations[i];
-// write your code just below here
+for (let station of stations) {
+  // write your code just below here
 
-var result = input;
-var listItem = document.createElement('li');
-listItem.textContent = result;
-list.appendChild(listItem);
+  const result = station;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
 }
-&#x3C;/textarea>
+</textarea>
 
-&#x3C;div class="playable-buttons">
-&#x3C;input id="reset" type="button" value="Reset">
-&#x3C;input id="solution" type="button" value="Show solution">
-&#x3C;/div>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-</pre><pre class="brush: js notranslate">var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var code = textarea.value;
+```css hidden
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+const textarea = document.getElementById('code');
+const reset = document.getElementById('reset');
+const solution = document.getElementById('solution');
+let code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
-eval(textarea.value);
+  eval(textarea.value);
 }
 
 reset.addEventListener('click', function() {
-textarea.value = code;
-updateCode();
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = jsSolution;
+  solution.value = 'Show solution';
+  updateCode();
 });
 
 solution.addEventListener('click', function() {
-textarea.value = jsSolution;
-updateCode();
+  if(solution.value === 'Show solution') {
+    textarea.value = solutionEntry;
+    solution.value = 'Hide solution';
+  } else {
+    textarea.value = userEntry;
+    solution.value = 'Show solution';
+  }
+  updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n \'GNF576746573fhdg4737dh4;Greenfield\',\n \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n \'SYB4f65hf75f736463;Stalybridge\',\n \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i &#x3C; stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var final = code + \': \' + name;\n var result = final;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
+const jsSolution = `const list = document.querySelector('.output ul');
+list.innerHTML = '';
+const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                  'GNF576746573fhdg4737dh4;Greenfield',
+                  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                  'SYB4f65hf75f736463;Stalybridge',
+                  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+for (let station of stations) {
+  // write your code just below here
+  const code = station.slice(0,3);
+  const semiColon = station.indexOf(';');
+  const name = station.slice(semiColon + 1);
+  const result = \`\${code}: \${name}\`;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}`;
+
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 
-</pre></div>
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
 
-{{ EmbedLiveSample('Playable_code_3', '100%', 485) }}
+textarea.onkeydown = function(e){
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret('\t');
+  }
+
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+
+function insertAtCaret(text) {
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = (textarea.value).substring(0, caretPos);
+  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+
+// Update the saved userCode every time the user updates the text area code
+
+textarea.onkeyup = function(){
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if(solution.value === 'Show solution') {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+
+  updateCode();
+};
+```
+
+{{ EmbedLiveSample('Making_new_strings_from_old_parts', '100%', 600) }}
 
 ## 결론
 
-자바스크립트에서 문장과 단어들을 다룰 수 있는 프로그래밍 능력이 매우 중요하다. 웹사이트는 사람들과 소통하는 공간이기 때문이다. 이 문서는 문자열을 다룰 수 있는 기초적인 내용에 대해 다루었다. 이 내용은 앞으로 배우게 될 심화 과정에 도움이 될 것이다. 다음으로 배열에 대해 알아보겠다.
+자바스크립트에서 문장과 단어들을 다룰 수 있는 프로그래밍 능력이 매우 중요하다. 웹사이트는 사람들과 소통하는 공간이기 때문이다. 이 문서는 문자열을 다룰 수 있는 기초적인 내용에 대해 다루었다. 이 내용은 앞으로 배우게 될 심화 과정에 도움이 될 것이다. 다음으로 배열에 대해 알아보겠다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

@@ -106,7 +106,7 @@ for (var i = 0, div; div = divs[i]; i++) {
 
 <p>這樣可以避免檢查陣列長度的開支，並且確保 div 變數被重新指定到每一次循環的使用中項目，以方便加入。</p>
 
-<p> <a class="internal" href="/zh_tw/Core_JavaScript_1.5_%E5%8F%83%E8%80%83/%E5%85%A8%E5%9F%9F%E7%89%A9%E4%BB%B6/Array/forEach" title="zh tw/Core JavaScript 1.5 參考/全域物件/Array/forEach"><code>forEach</code></a> 方法是在 JavaScript 1.6 引入的，提供了另一種迭代陣列的方式︰</p>
+<p> <a class="internal" href="/zh_tw/Core_JavaScript_1.5_%E5%8F%83%E8%80%83/%E5%85%A8%E5%9F%9F%E7%89%A9%E4%BB%B6/Array/forEach" title="zh tw/Core JavaScript 1.5 參考/全域物件/Array/forEach"><code>forEach</code></a> 方法是在 JavaScript 1.6 引入的，提供了另一種迭代陣列的方式︰</p>
 
 <pre class="eval">var colors = ['red', 'green', 'blue'];
 colors.forEach(function(color) {
@@ -240,7 +240,7 @@ print(a); // Wind,Fire,Rain
  <li><code>indexOf(searchElement[, fromIndex)</code> 在陣列中搜尋 <code>searchElement</code> 並返回第一個符合項的索引。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <pre class="eval">   var a = ['a', 'b', 'a', 'b', 'a'];
    alert(a.indexOf('b')); // 警報 1
@@ -249,13 +249,13 @@ print(a); // Wind,Fire,Rain
    alert(a.indexOf('z')); // 警報 -1，因為找不到 'z'
 </pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><code>lastIndexOf(searchElement[, fromIndex)</code> 類似 <code>indexOf</code>，但是最後面開始往回搜尋。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <pre class="eval">   var a = ['a', 'b', 'c', 'd', 'a', 'b'];
    alert(a.lastIndexOf('b')); // 警報 5
@@ -264,51 +264,51 @@ print(a); // Wind,Fire,Rain
    alert(a.lastIndexOf('z')); // 警報 -1
 </pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><code>forEach(callback{{ mediawiki.external(', thisObject') }})</code> 在每一個項目上執行 <code>callback</code>。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <pre class="eval">   var a = ['a', 'b', 'c'];
    a.forEach(alert); // 依序警報每一個項目
 </pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><code>map(callback{{ mediawiki.external(', thisObject') }})</code> 返回在每一個陣列的項目上執行 <code>callback</code> 所返回的值的新陣列。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <pre class="eval">   var a1 = ['a', 'b', 'c'];
    var a2 = a1.map(function(item) { return item.toUpperCase(); });
    alert(a2); // 警報 A,B,C
 </pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><code>filter(callback{{ mediawiki.external(', thisObject') }})</code> 返回內含在 Callback 中返回為 true 的項目的新陣列。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <pre class="eval">   var a1 = ['a', 10, 'b', 20, 'c', 30];
    var a2 = a1.filter(function(item) { return typeof item == 'number'; });
    alert(a2); // 警報 10,20,30
 </pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><code>every(callback{{ mediawiki.external(', thisObject') }})</code> 返回 true，如果 <code>callback</code> 在陣列中的每一項上都返回 true。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <pre class="eval">   function isNumber(value) { return typeof value == 'number'; }
    var a1 = [1, 2, 3];
@@ -317,13 +317,13 @@ print(a); // Wind,Fire,Rain
    alert(a2.every(isNumber)); // 警報 false
 </pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><code>some(callback{{ mediawiki.external(', thisObject') }})</code> 返回 true，如果 <code>callback</code> 在陣列中至少有一個項目返回為 true。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <pre class="eval">   function isNumber(value) { return typeof value == 'number'; }
    var a1 = [1, 2, 3];
@@ -334,7 +334,7 @@ print(a); // Wind,Fire,Rain
    alert(a3.some(isNumber)); // 警報 false
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>上面接受 Callback 的方法又稱為<em>迭代方法</em>，因為他們會以同樣的方式迭代整個陣列。其中第二個選用性的參數稱為 <code>thisObject</code>。如果有提供的話，<code>thisObject</code> 會變成 Callback 函數的本體內部的 <code>this</code> 關鍵字的值。</p>
 
@@ -346,14 +346,14 @@ print(a); // Wind,Fire,Rain
  <li><code>reduce(callback[, initialValue)</code> 使用 <code>callback(firstValue, secondValue)</code> 把項目的列表合併成單一的值。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <pre class="eval">   var a = [10, 20, 30];
    var total = a.reduce(function(first, second) { return first + second; }, 0);
    alert(total) // 警報 60
 </pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><code>reduceRight(callback[, initialValue)</code> 類似 <code>reduce</code>，但是從最後一個元素開始。</li>
@@ -363,7 +363,7 @@ print(a); // Wind,Fire,Rain
 
 <h3 id="近似陣列的物件的運用" name="近似陣列的物件的運用">近似陣列的物件的運用</h3>
 
-<p> 某些 JavaScript 物件，如 <code>document.getElementsByTagName</code> 返回的 NodeList，或者在函數本體內部可以利用的 <code>arguments</code> 物件，表面上看來外觀和行為和陣列很類似，但並未共用所有的方法。例如，<code>arguments</code> 物件提供 <code>length</code> 屬性，但並未實作 <code>forEach</code> 方法。</p>
+<p> 某些 JavaScript 物件，如 <code>document.getElementsByTagName</code> 返回的 NodeList，或者在函數本體內部可以利用的 <code>arguments</code> 物件，表面上看來外觀和行為和陣列很類似，但並未共用所有的方法。例如，<code>arguments</code> 物件提供 <code>length</code> 屬性，但並未實作 <code>forEach</code> 方法。</p>
 
 <p>在 JavaScript 1.6 中引入的通用陣列，為其他類似陣列的物件提供執行 <code>Array</code> 方法的途徑。每一個標準的陣列方法在 <code>Array</code> 物件本身都有相對應的方法；例如︰</p>
 
@@ -428,19 +428,19 @@ alert(doubled); // 警報 2,4,6,8
 <p>簡約式也可以用於選取符合特定表達式的項目。這是只選取偶數的簡約式︰</p>
 
 <pre>var numbers = [1, 2, 3, 21, 22, 30];
-var evens = [i for each (i in numbers) if (i % 2 == 0)];
+var evens = [i for each (i in numbers) if (i % 2 == 0)];
 alert(evens); // 警報 2,22,30
 </pre>
 
 <p><code>filter()</code> 也可以用於同樣的用途︰</p>
 
-<pre>var evens = numbers.filter(function(i) { return i % 2 == 0; });
+<pre>var evens = numbers.filter(function(i) { return i % 2 == 0; });
 </pre>
 
 <p><code>map()</code> 和 <code>filter()</code> 這類型的操作可以合併至單一的陣列簡約式。這是只篩出偶數的簡約式，然後建立內含雙倍數值的新陣列。</p>
 
 <pre>var numbers = [1, 2, 3, 21, 22, 30];
-var doubledEvens = [i * 2 for each (i in numbers) if (i % 2 == 0)];
+var doubledEvens = [i * 2 for each (i in numbers) if (i % 2 == 0)];
 alert(doubledEvens); // 警報 4,44,60
 </pre>
 

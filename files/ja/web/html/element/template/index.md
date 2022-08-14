@@ -30,10 +30,10 @@ translation_of: Web/HTML/Element/template
         <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#metadata_content">メタデータコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#script-supporting_elements">スクリプト対応要素</a>
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
       </td>
     </tr>
     <tr>
@@ -47,9 +47,9 @@ translation_of: Web/HTML/Element/template
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#metadata_content">メタデータコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#script-supporting_elements">スクリプト対応要素</a>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
         を受け付けるすべての要素。また、 {{htmlattrxref("span", "colgroup")}} 属性を持たない {{HTMLElement("colgroup")}} 要素の子になることもできます。
       </td>
     </tr>

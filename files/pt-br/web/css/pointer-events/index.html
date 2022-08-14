@@ -7,7 +7,7 @@ translation_of: Web/CSS/pointer-events
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>A propriedade CSS <code>pointer-events </code>permite autores controlarem sob qualquer circustancia(se houver) um elemento gráfico particular podendo ser o <a href="/en-US/docs/Web/API/event.target">alvo</a> do evento do mouse. Quando essa propriedade não é especificada, as mesmas características do valor  <code>visiblePainted </code>é aplicada no conteúdo SVG.<code> </code></p>
+<p>A propriedade CSS <code>pointer-events </code>permite autores controlarem sob qualquer circustancia(se houver) um elemento gráfico particular podendo ser o <a href="/en-US/docs/Web/API/event.target">alvo</a> do evento do mouse. Quando essa propriedade não é especificada, as mesmas características do valor  <code>visiblePainted </code>é aplicada no conteúdo SVG.<code> </code></p>
 
 <p>Além de indicar que este elemento não é o alvo do evento do mouse, o valor <code>none</code> instrui o evento do mouse a "passar" o elemento e tudo que está "abaixo" deste elemento.</p>
 
@@ -33,7 +33,7 @@ pointer-events: inherit;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>O elemento se comporta como  se a propriedade <code>pointer-events</code> não fosse especificada. Em conteúdo SVG, esse valor e o valor  <code>visiblePainted </code>tem o mesmo efeito.</dd>
+ <dd>O elemento se comporta como  se a propriedade <code>pointer-events</code> não fosse especificada. Em conteúdo SVG, esse valor e o valor  <code>visiblePainted </code>tem o mesmo efeito.</dd>
  <dt><code>none</code></dt>
  <dd>O elemento nunca é o <a href="/en-US/docs/Web/API/event.target">alvo</a> de eventos do mouse; contudo, o evento do mouse pode direcionar seus elementos descendentes se esses descendentes tiverem algum outro valor configurado no <code>pointer-events.</code> Nessas circunstâncias, os eventos do mouse vão acionar eventos de escuta em seus elementos pai conforme apropriado no seu caminho de/para o descendente, durante as fases do evento captura/<a href="/en-US/docs/Web/API/event.bubbles">borbulha.</a></dd>
  <dt><code>visiblePainted</code></dt>
@@ -47,9 +47,9 @@ pointer-events: inherit;
  <dt><code>painted</code></dt>
  <dd>Apenas SVG. O elemento apenas pode ser o alvo de um evento do mouse quando o cursor do mouse estiver sobre o interior (exemplo: “preenchimento”) do elemento e a propriedade <code>fill</code> definida com valor diferente de <code>none</code>, ou quando o cursor do mouse estiver no perímetro(exemplo: “linha”) do elemento e a propriedade <code>stroke</code> definida com valor diferente de <code>none</code>. O valor da propriedade <code>visibility</code> não afeta o processamento do evento.</dd>
  <dt><code>fill</code></dt>
- <dd>Apenas SVG. O elemento apenas pode ser o alvo de um evento do mouse quando o ponteiro estiver sobre o interior (exemplo: preenchimento) do elemento.  Os valores das propriedades <code>fill </code>e <code>visibility</code> não afetam o processamento do evento.</dd>
+ <dd>Apenas SVG. O elemento apenas pode ser o alvo de um evento do mouse quando o ponteiro estiver sobre o interior (exemplo: preenchimento) do elemento.  Os valores das propriedades <code>fill </code>e <code>visibility</code> não afetam o processamento do evento.</dd>
  <dt><code>stroke</code></dt>
- <dd>Apenas SVG. O elemento apenas pode ser o alvo de um evento do mouse quando o ponteiro estiver sobre o perímetro (exemplo: linha) do elemento. Os valores das propriedades <code>stroke</code> e <code>visibility</code>  não afetam o processamento do evento.</dd>
+ <dd>Apenas SVG. O elemento apenas pode ser o alvo de um evento do mouse quando o ponteiro estiver sobre o perímetro (exemplo: linha) do elemento. Os valores das propriedades <code>stroke</code> e <code>visibility</code>  não afetam o processamento do evento.</dd>
  <dt><code>all</code></dt>
  <dd>Apenas SVG. O elemento apenas pode ser alvo do evento do mouse quando o ponteiro estiver sobre o interior (exemplo: preenchimento) ou perímetro (exemplo: linha) do elemento. Os valores das propriedades <code>fill</code>, <code>stroke</code> e <code>visibility</code> não afetam o processamento do evento.</dd>
 </dl>
@@ -104,7 +104,7 @@ img {
   <tr>
    <td>{{SpecName('SVG1.1', 'interact.html#PointerEventsProperty', 'pointer-events')}}</td>
    <td>{{Spec2('SVG1.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -113,61 +113,7 @@ img {
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade do navegador</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte SVG</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.8")}}</td>
-   <td>9.0</td>
-   <td>9.0 (2.0)</td>
-   <td>3.0 (522)</td>
-  </tr>
-  <tr>
-   <td>Conteúdo HTML/XML</td>
-   <td>2.0</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>11.0</td>
-   <td>15.0</td>
-   <td>4.0 (530)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.pointer-events")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

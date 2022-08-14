@@ -17,7 +17,9 @@ La propriété **`Window.frameElement`** renvoie l'élément (tel que {{HTMLElem
 
 ## Syntaxe
 
-    const frameEl = window.frameElement
+```js
+const frameEl = window.frameElement
+```
 
 ### Valeur
 

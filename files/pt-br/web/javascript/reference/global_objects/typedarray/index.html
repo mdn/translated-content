@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
 <div>{{JSRef}}</div>
 
-<p>A <strong><em>TypedArray</em></strong> object describes an array-like view of an underlying <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">binary data buffer</a>. There is no global property named <code>TypedArray</code>, nor is there a directly visible <code>TypedArray</code> constructor.  Instead, there are a number of different global properties, whose values are typed array constructors for specific element types, listed below. On the following pages you will find common properties and methods that can be used with any typed array containing elements of any type.</p>
+<p>A <strong><em>TypedArray</em></strong> object describes an array-like view of an underlying <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">binary data buffer</a>. There is no global property named <code>TypedArray</code>, nor is there a directly visible <code>TypedArray</code> constructor.  Instead, there are a number of different global properties, whose values are typed array constructors for specific element types, listed below. On the following pages you will find common properties and methods that can be used with any typed array containing elements of any type.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -37,22 +37,22 @@ Float64Array();
 
 <dl>
  <dt>length</dt>
- <dd>When called with a <code>length</code> argument, an internal array buffer is created in memory of size <em>length multiplied by BYTES_PER_ELEMENT</em> bytes containing 0 value.</dd>
+ <dd>When called with a <code>length</code> argument, an internal array buffer is created in memory of size <em>length multiplied by BYTES_PER_ELEMENT</em> bytes containing 0 value.</dd>
  <dt>typedArray</dt>
- <dd>When called with a <code>typedArray</code> argument, which can be an object of any of the typed array types (such as <code>Int32Array</code>), the <code>typedArray</code> gets copied into a new typed array. Each value in <code>typedArray</code> is converted to the corresponding type of the constructor before being copied into the new array. Then length of the new typedArray object will be same of length of the typedArray argument.</dd>
+ <dd>When called with a <code>typedArray</code> argument, which can be an object of any of the typed array types (such as <code>Int32Array</code>), the <code>typedArray</code> gets copied into a new typed array. Each value in <code>typedArray</code> is converted to the corresponding type of the constructor before being copied into the new array. Then length of the new typedArray object will be same of length of the typedArray argument.</dd>
  <dt>object</dt>
  <dd>When called with an <code>object</code> argument, a new typed array is created as if by the <code><em>TypedArray</em>.from()</code> method.</dd>
  <dt>buffer, byteOffset, length</dt>
- <dd>When called with a <code>buffer</code>, and optionally a <code>byteOffset</code> and a <code>length</code> argument, a new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}. The <code>byteOffset</code> and <code>length</code> parameters specify the memory range that will be exposed by the typed array view.  If both are omitted, all of <code>buffer</code> is viewed; if only <code>length</code> is omitted, the remainder of <code>buffer</code> is viewed.</dd>
+ <dd>When called with a <code>buffer</code>, and optionally a <code>byteOffset</code> and a <code>length</code> argument, a new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}. The <code>byteOffset</code> and <code>length</code> parameters specify the memory range that will be exposed by the typed array view.  If both are omitted, all of <code>buffer</code> is viewed; if only <code>length</code> is omitted, the remainder of <code>buffer</code> is viewed.</dd>
 </dl>
 
 <h2 id="Description">Description</h2>
 
-<p>ECMAScript 2015 defines a <em>TypedArray</em> constructor that serves as the <code>[[Prototype]]</code> of all <em>TypedArray</em> constructors.  This constructor is not directly exposed: there is no global <code>%TypedArray%</code> or <code>TypedArray</code> property.  It is only directly accessible through <code>Object.getPrototypeOf(Int8Array)</code> and similar.  All <em>TypedArray</em>s constructors inherit common properties from the <code>%TypedArray%</code> constructor function.  Additionally, all typed array prototypes (<em>TypedArray</em><code>.prototype</code>) have <code>%TypedArray%.prototype</code> as their <code>[[Prototype]]</code>.</p>
+<p>ECMAScript 2015 defines a <em>TypedArray</em> constructor that serves as the <code>[[Prototype]]</code> of all <em>TypedArray</em> constructors.  This constructor is not directly exposed: there is no global <code>%TypedArray%</code> or <code>TypedArray</code> property.  It is only directly accessible through <code>Object.getPrototypeOf(Int8Array)</code> and similar.  All <em>TypedArray</em>s constructors inherit common properties from the <code>%TypedArray%</code> constructor function.  Additionally, all typed array prototypes (<em>TypedArray</em><code>.prototype</code>) have <code>%TypedArray%.prototype</code> as their <code>[[Prototype]]</code>.</p>
 
-<p>The <code>%TypedArray%</code> constructor on its own is not particularly useful.  Calling it or using it in a <code>new</code> expression will throw a <code>TypeError</code>, except when used during object creation in JS engines that support subclassing.  There are at present no such engines, so <code>%TypedArray%</code> is only useful to polyfill functions or properties onto all <em>TypedArray</em> constructors.</p>
+<p>The <code>%TypedArray%</code> constructor on its own is not particularly useful.  Calling it or using it in a <code>new</code> expression will throw a <code>TypeError</code>, except when used during object creation in JS engines that support subclassing.  There are at present no such engines, so <code>%TypedArray%</code> is only useful to polyfill functions or properties onto all <em>TypedArray</em> constructors.</p>
 
-<p>When creating a <em>TypedArray </em>instance (i.e. instance of Int8Array or similar), an array buffer is created internally (if ArrayBuffer object is present as constructor argument then this array buffer is used) in memory and this buffer address is saved as internal property of that instances, and all the methods of %<code>TypedArray</code>%.<code>prototype </code>uses that array buffer address to operate on i.e. set value and get value etc.</p>
+<p>When creating a <em>TypedArray </em>instance (i.e. instance of Int8Array or similar), an array buffer is created internally (if ArrayBuffer object is present as constructor argument then this array buffer is used) in memory and this buffer address is saved as internal property of that instances, and all the methods of %<code>TypedArray</code>%.<code>prototype </code>uses that array buffer address to operate on i.e. set value and get value etc.</p>
 
 <h3 id="Property_access">Property access</h3>
 
@@ -140,7 +140,7 @@ Int8Array.prototype.foo = 'bar';
   <tr>
    <td>{{jsxref("Float32Array")}}</td>
    <td>4</td>
-   <td>32-bit IEEE floating point number</td>
+   <td>32-bit IEEE floating point number</td>
    <td><code>unrestricted float</code></td>
    <td><code>float</code></td>
   </tr>
@@ -212,138 +212,14 @@ Int8Array.prototype.foo = 'bar';
   <tr>
    <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(7.0)}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>Indexed properties not consulting prototype</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatGeckoDesktop("25")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Named properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("30")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>new</code> is required</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("44")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Iterable in constructor</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("52")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("2") }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>4.2</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Indexed properties not consulting prototype</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{ CompatGeckoMobile("25") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-  </tr>
-  <tr>
-   <td>Named properties</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("30") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>new</code> is required</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Iterable in constructor</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("52") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] <code>-1</code> and similar are not considered as indexed properties and therefore return the value of the prototype property.</p>
+{{Compat("javascript.builtins.TypedArray")}}
 
 <h2 id="Compatibility_notes">Compatibility notes</h2>
 

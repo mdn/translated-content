@@ -19,7 +19,9 @@ Le constructeur **`WebAssembly.CompileError()`** permet de créer une nouvelle i
 
 ## Syntaxe
 
-    new WebAssembly.CompileError(message, nomFichier, numeroLigne)
+```js
+new WebAssembly.CompileError(message, nomFichier, numeroLigne)
+```
 
 ### Paramètres
 

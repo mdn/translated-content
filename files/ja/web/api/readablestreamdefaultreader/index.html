@@ -24,7 +24,7 @@ translation_of: Web/API/ReadableStreamDefaultReader
 <h2 id="Properties" name="Properties">プロパティ</h2>
 
 <dl>
- <dt>{{domxref("ReadableStreamDefaultReader.closed")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("ReadableStreamDefaultReader.closed")}} {{readonlyInline}}</dt>
  <dd>ストリーミングプロセスの終了に応答するコードを記述できます。 ストリームが閉じられた場合、またはリーダーのロックが解除された場合に満たされる promise を返します。 ストリームがエラーの場合は拒否します。</dd>
 </dl>
 
@@ -46,31 +46,31 @@ translation_of: Web/API/ReadableStreamDefaultReader
 <p>これは {{jsxref("Uint8Array")}} と組み合わせた {{domxref("ReadableStream")}} の使用方法を示します。</p>
 
 <pre class="brush: js">fetch("https://www.example.org/").then((response) =&gt; {
-  const reader = response.body.getReader();
-  const stream = new ReadableStream({
-    start(controller) {
+  const reader = response.body.getReader();
+  const stream = new ReadableStream({
+    start(controller) {
       // 次の関数は各データチャンクを処理します
-      function push() {
+      function push() {
         // done は Boolean で、value は Uint8Array です
-        return reader.read().then(({ done, value }) =&gt; {
+        return reader.read().then(({ done, value }) =&gt; {
           // 読み取るデータはもうありませんか？
-          if (done) {
+          if (done) {
             // データの送信が完了したことをブラウザーに伝えます
-            controller.close();
-            return;
-          }
+            controller.close();
+            return;
+          }
 
           // データを取得し、コントローラー経由でブラウザーに送信します
-          controller.enqueue(value);
+          controller.enqueue(value);
           push();
-        });
-      };
+        });
+      };
 
-      push();
-    }
-  });
+      push();
+    }
+  });
 
-  return new Response(stream, { headers: { "Content-Type": "text/html" } });
+  return new Response(stream, { headers: { "Content-Type": "text/html" } });
 });
 </pre>
 

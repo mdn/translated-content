@@ -17,11 +17,13 @@ L'instruction **`if`** exécute une instruction si une condition donnée est vra
 
 ## Syntaxe
 
-    if (condition) {
-      statement1
-    } else {
-      statement2
-    }
+```js
+if (condition) {
+  statement1
+} else {
+  statement2
+}
+```
 
 - `condition`
   - : Une [expression](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions) qui est évaluée à `true` ou `false`.

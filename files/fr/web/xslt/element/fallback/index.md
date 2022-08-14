@@ -12,9 +12,11 @@ L'élément `<xsl:fallback>` définit le modèle à utiliser si un élément d'e
 
 ### Syntaxe
 
-    <xsl:fallback>
-    	MODÈLE
-    </xsl:fallback>
+```xml
+<xsl:fallback>
+  MODÈLE
+</xsl:fallback>
+```
 
 ### Attributs obligatoires
 

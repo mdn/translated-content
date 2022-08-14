@@ -43,6 +43,7 @@ HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへ
 
 1 つ以上のチャレンジを指定する必要があります。
 複数のチャレンジを指定する場合は、カンマで区切って 1 つのヘッダーに入れたり、個々のヘッダーで指定したりすることができます。
+
 ```http
 // チャレンジを単一のヘッダーで指定
 WWW-Authenticate: challenge1, ..., challengeN
@@ -76,7 +77,6 @@ WWW-Authenticate: Basic realm=<realm>
 WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ```
 
-
 ## ディレクティブ
 
 - `<auth-scheme>`
@@ -93,7 +93,6 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 `<auth-scheme>` とキー `realm` 以外の認証引数は、それぞれの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)に固有のものです。
 通常、これらについては関連する仕様を確認する必要があります (一部のスキームのキーを以下に示します)。
-
 
 ### Basic
 
@@ -130,14 +129,13 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
       セッションで有効な値は `"MD5-sess"`、`"SHA-256-sess"`、`"SHA-512-sess"` です。
 - **`qop`**
   - : 引用符の付いた文字列で、サーバーが対応している保護の品質を示します。これは必ず指定しなければならず、認識できないオプションは無視されます。
-      - `"auth"`: 認証
-      - `"auth-int"`: 完全性保護付きの認証
+    - `"auth"`: 認証
+    - `"auth-int"`: 完全性保護付きの認証
 - **`charset="UTF-8"`** {{optional_inline}}
   - : ユーザー名とパスワードを送信する際に、サーバーが優先するエンコード方式をクライアントに伝えます。
       大文字小文字を区別しない文字列 "UTF-8" のみが許可されます。
 - **`userhash`** {{optional_inline}}
   - : サーバーが `"true"` を指定することで、ユーザー名のハッシュ化に対応していることを示すことができます (既定値は `"false"` です)。
-
 
 ## 例
 
@@ -158,7 +156,6 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 `"Basic"` 認証では、資格情報はまず、ユーザー名とパスワードをコロンで結合し (`aladdin:opensesame`)、その結果の文字列を [`base64`](/ja/docs/Glossary/Base64) でエンコードすることで構築します (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 
 > **Note:** Apache や nginx サーバーで HTTP Basic 認証を使用してサイトを保護する方法の例については、 <a href="/ja/docs/Web/HTTP/Authentication">HTTP 認証</a> を参照してください。
-
 
 ### SHA-256 と MD5 を使用した Digest 認証
 
@@ -217,8 +214,6 @@ Authorization: Digest username="Mufasa",
         6794697cf8db5856cb6c1",
     opaque="FQhe/qaU925kfnzjCev0ciny7QMkPqMAFRtzCUYo5tdS"
 ```
-
-
 
 ## 仕様書
 

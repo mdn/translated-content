@@ -14,10 +14,10 @@ Les images SVG sont très flexibles et lorsqu'on les utilise en CSS avec les pro
 
 Dans la plupart des cas, l'algorithme utilisé pourra être réduit à ces quatre règles. Ces règles ne sont pas exhaustives et ne couvrent pas certains cas aux limites mais cela sera suffisant ici :
 
-1.  Si {{cssxref("background-size")}} définit une dimension fixe (des pourcentages ou des unités relatives fixées par le contexte), cette dimension l'emporte.
-2.  Si l'image possède des proportions intrinsèques (autrement dit, si le ratio largeur/hauteur est constant : 16:9, 4:3, 2.39:1, 1:1), l'arrière-plan sera affiché en conservant ces proportions.
-3.  Si l'image définit une taille et que celle-ci n'est pas modifiée par une contrainte quelconque, cette taille l'emporte.
-4.  Dans tous les autres cas, l'image est affichée avec la taille de la zone dédiée à l'arrière-plan.
+1. Si {{cssxref("background-size")}} définit une dimension fixe (des pourcentages ou des unités relatives fixées par le contexte), cette dimension l'emporte.
+2. Si l'image possède des proportions intrinsèques (autrement dit, si le ratio largeur/hauteur est constant : 16:9, 4:3, 2.39:1, 1:1), l'arrière-plan sera affiché en conservant ces proportions.
+3. Si l'image définit une taille et que celle-ci n'est pas modifiée par une contrainte quelconque, cette taille l'emporte.
+4. Dans tous les autres cas, l'image est affichée avec la taille de la zone dédiée à l'arrière-plan.
 
 On notera ici que l'algorithme ne prend en cas que les dimensions et/ou les proportions de l'image (leur absence éventullement). Ainsi, une image SVG dont les dimensions sont fixées sera traitée comme une image matricielle de la même taille.
 

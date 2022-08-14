@@ -14,9 +14,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 
 <h2 id="설명">설명</h2>
 
-<p>첫 번재 매개변수로서 전달한 값은 필요한 경우 불리언 값으로 변환됩니다. 값이 없거나 <code>0</code>, <code>-0</code>, {{jsxref("null")}}, <code>false</code>, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 빈 문자열 (<code>""</code>)이라면 객체의 초기값은 <code>false</code>가 됩니다. 문자열 <code>"false"</code>를 포함한 그 외 모든 다른 값은 초기값을 <code>true</code>로 설정합니다.</p>
+<p>첫 번재 매개변수로서 전달한 값은 필요한 경우 불리언 값으로 변환됩니다. 값이 없거나 <code>0</code>, <code>-0</code>, {{jsxref("null")}}, <code>false</code>, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 빈 문자열 (<code>""</code>)이라면 객체의 초기값은 <code>false</code>가 됩니다. 문자열 <code>"false"</code>를 포함한 그 외 모든 다른 값은 초기값을 <code>true</code>로 설정합니다.</p>
 
-<p><code>Boolean</code> 객체의 <code>true</code>와 <code>false</code> 값을 원시 <code>Boolean</code> 값 <code>true</code>, <code>false</code>와 혼동해선 안됩니다.</p>
+<p><code>Boolean</code> 객체의 <code>true</code>와 <code>false</code> 값을 원시 <code>Boolean</code> 값 <code>true</code>, <code>false</code>와 혼동해선 안됩니다.</p>
 
 <p>값이 {{jsxref("undefined")}}, {{jsxref("null")}}이 아닌 <strong>모든</strong> 객체는 조건문에서 <code>true</code>로 계산됩니다. 이는 값이 <code>false</code>인 <code>Boolean</code> 객체도 포함합니다. 즉 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 참입니다.</p>
 
@@ -26,7 +26,7 @@ if (x) {
 }
 </pre>
 
-<p>그러나 원시 <code>Boolean</code> 값에는 적용되지 않습니다. 따라서 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 거짓입니다.</p>
+<p>그러나 원시 <code>Boolean</code> 값에는 적용되지 않습니다. 따라서 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 거짓입니다.</p>
 
 <pre class="brush: js">var x = false;
 if (x) {
@@ -46,7 +46,7 @@ var g = Boolean(myFalse);           // 초기값 참
 var myString = new String('Hello'); // 문자열 객체
 var s = Boolean(myString);          // 초기값 참</pre>
 
-<p><code>Boolean</code> 원시 값의 자리에서 <code>Boolean</code> 객체를 이용해선 안됩니다.</p>
+<p><code>Boolean</code> 원시 값의 자리에서 <code>Boolean</code> 객체를 이용해선 안됩니다.</p>
 
 <h2 id="생성자">생성자</h2>
 
@@ -83,18 +83,9 @@ var bSuLin = new Boolean('Su Lin');
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});</pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-boolean-objects', 'Boolean')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
@@ -104,5 +95,5 @@ var bObjProto = new Boolean({});</pre>
 
 <ul>
  <li>{{Glossary("Boolean")}}</li>
- <li>{{interwiki("wikipedia", "불리언 자료형")}}</li>
+ <li><a href="https://ko.wikipedia.org/wiki/%EB%B6%88%EB%A6%AC%EC%96%B8_%EC%9E%90%EB%A3%8C%ED%98%95">불리언 자료형</a></li>
 </ul>

@@ -23,12 +23,12 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_animations
   새로운 장면을 그리기 전에 저장된 상태를 복원합니다.</li>
 </ol>
 <h2 id="Controlling_an_animation" name="Controlling_an_animation">애니메이션 제어하기</h2>
-<p>캔버스 메소드를 사용하거나 사용자 함수를 사용하여 캔버스에 도형들을 그립니다. 보통의 경우에서는, 코드 실행이 완료되면 캔버스에 나타나는 결과만을 보게 됩니다. 예를 들어,  <code>for</code> 반복문 안에서 애니메이션을 실행하는 것은 불가능합니다.</p>
+<p>캔버스 메소드를 사용하거나 사용자 함수를 사용하여 캔버스에 도형들을 그립니다. 보통의 경우에서는, 코드 실행이 완료되면 캔버스에 나타나는 결과만을 보게 됩니다. 예를 들어,  <code>for</code> 반복문 안에서 애니메이션을 실행하는 것은 불가능합니다.</p>
 <p>그래서 정해진 시간마다 그리기 함수를 실행하는 방법이 필요한 것입니다. 아래와 같이 애니메이션을 제어하는 두 가지 방법이 있습니다.</p>
 <h3 id="예정된_변경">예정된 변경</h3>
-<p>정해진 시간마다 특정 함수를 부를 때 사용할 수 있는  {{domxref("window.setInterval()")}}과 {{domxref("window.setTimeout()")}} 함수가 있습니다.</p>
+<p>정해진 시간마다 특정 함수를 부를 때 사용할 수 있는  {{domxref("window.setInterval()")}}과 {{domxref("window.setTimeout()")}} 함수가 있습니다.</p>
 <div class="note">
- <p>알아둘 것: 현재는 애니메이션을 만드는 방법으로  {{domxref("window.requestAnimationFrame()")}} 메소드를 추천합니다. 이에 대한 튜토리얼은 곧 업데이트할 것입니다.</p>
+ <p>알아둘 것: 현재는 애니메이션을 만드는 방법으로  {{domxref("window.requestAnimationFrame()")}} 메소드를 추천합니다. 이에 대한 튜토리얼은 곧 업데이트할 것입니다.</p>
 </div>
 <dl>
  <dt>
@@ -40,14 +40,14 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_animations
  <dd>
   <code>delay</code> 밀리세컨드(1,000분의 1초) 경과후, <code>function</code> 함수를 실행합니다.</dd>
 </dl>
-<p>사용자의 제어를  <strong>필요로 하지 않는</strong> 반복 실행에는  <code>setInterval()</code> 함수가 알맞을 것입니다.</p>
+<p>사용자의 제어를  <strong>필요로 하지 않는</strong> 반복 실행에는  <code>setInterval()</code> 함수가 알맞을 것입니다.</p>
 <h3 id="사용자_상호_작용_변경">사용자 상호 작용 변경</h3>
-<p>애니메이션을 제어하는 두번째 방법은 사용자 입력입니다. 게임을 만들려고 한다면, 애니메이션을 제어하기 위해 키보드나 마우스 이벤트를 사용할 수 있을 것입니다.  {{domxref("EventListener")}}를 설정하여, 사용자와 상호 작용하여 애니메이션 함수를 실행합니다.</p>
+<p>애니메이션을 제어하는 두번째 방법은 사용자 입력입니다. 게임을 만들려고 한다면, 애니메이션을 제어하기 위해 키보드나 마우스 이벤트를 사용할 수 있을 것입니다.  {{domxref("EventListener")}}를 설정하여, 사용자와 상호 작용하여 애니메이션 함수를 실행합니다.</p>
 <p>사용자 상호 작용이 <strong>필요하다면</strong>, 우리가 만든 <a href="/en-US/docs/JavaScript/Timers/Daemons" title="/en-US/docs/JavaScript/Timers/Daemons">애니메이션용 프레임웍(framework)</a>의 <a href="/en-US/docs/DOM/window.setInterval#A_little_framework" title="/en-US/docs/DOM/window.setInterval#A_little_framework">최소 기능 버전</a> 또는 <a href="/en-US/docs/JavaScript/Timers/Daemons" title="/en-US/docs/JavaScript/Timers/Daemons">최대 기능 버전</a>을 사용할 수 있을 것입니다.</p>
 <pre>var myAnimation = new MiniDaemon(null, animateShape, 500, Infinity);</pre>
 <p>또는</p>
 <pre>var myAnimation = new Daemon(null, animateShape, 500, Infinity);</pre>
-<p>아래 예제에서는, 애니메이션을 제어하기 위해 {{domxref("window.setInterval()")}}을 사용할 것입니다. 페이지 제일 아래쪽에 {{domxref("window.setTimeout()")}}을 사용한 예제 링크도 있습니다.</p>
+<p>아래 예제에서는, 애니메이션을 제어하기 위해 {{domxref("window.setInterval()")}}을 사용할 것입니다. 페이지 제일 아래쪽에 {{domxref("window.setTimeout()")}}을 사용한 예제 링크도 있습니다.</p>
 <h4 id="태양계_애니메이션">태양계 애니메이션</h4>
 <p>이 예제에서는 달이 지구를 돌고 지구가 태양을 도는 애니메이션을 만듭니다.</p>
 <pre class="brush: js">var sun = new Image();

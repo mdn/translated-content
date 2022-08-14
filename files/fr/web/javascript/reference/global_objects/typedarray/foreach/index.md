@@ -17,7 +17,9 @@ La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque �
 
 ## Syntaxe
 
-    tableauTypé.forEach(callback[, thisArg])
+```js
+tableauTypé.forEach(callback[, thisArg])
+```
 
 ### Paramètres
 

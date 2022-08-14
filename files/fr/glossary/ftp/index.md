@@ -16,4 +16,4 @@ original_slug: Glossaire/FTP
 ### Connaissances générales
 
 - [Guide du débutant pour mettre en ligne des fichiers via FTP](/fr/Apprendre/Transf%C3%A9rer_des_fichiers_vers_un_serveur_web)
-- {{interwiki("wikipedia", "File_Transfer_Protocol","FTP")}} on Wikipedia
+- [FTP](https://fr.wikipedia.org/wiki/File_Transfer_Protocol) sur Wikipédia

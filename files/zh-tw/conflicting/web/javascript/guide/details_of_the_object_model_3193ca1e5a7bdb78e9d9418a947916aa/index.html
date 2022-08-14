@@ -25,7 +25,7 @@ chris.__proto__.__proto__.__proto__.__proto__.__proto__ == null;
 </pre>
 <p>有鑑於此，你可以編寫 <code>instanceOf</code> 函數如下︰</p>
 <pre>function instanceOf(object, constructor) {
-   while (object != null) {
+   while (object != null) {
       if (object == constructor.prototype)
          return true;
       object = object.__proto__;

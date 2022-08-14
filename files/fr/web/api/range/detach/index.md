@@ -9,7 +9,9 @@ La méthode **`Range.detach()`** n'a aucun effet. Elle permet de désactiver l'o
 
 ## Syntaxe
 
-    range.detach();
+```js
+range.detach();
+```
 
 ## Exemple
 
@@ -33,4 +35,4 @@ range.detach();
 
 ## Voir aussi
 
-- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)
+- [The DOM interfaces index](/fr/docs/Web/API/Document_Object_Model)

@@ -3,9 +3,9 @@ title: FileReader()
 slug: Web/API/FileReader/FileReader
 translation_of: Web/API/FileReader/FileReader
 ---
-<p>O construtor <strong><code>FileReader()</code></strong> cria um novo <code>FileReader</code>.</p>
+<p>O construtor <strong><code>FileReader()</code></strong> cria um novo <code>FileReader</code>.</p>
 
-<p>Para mais detalhes de como usar o <code>FileReader</code>, veja <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a>.</p>
+<p>Para mais detalhes de como usar o <code>FileReader</code>, veja <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a>.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -17,14 +17,14 @@ translation_of: Web/API/FileReader/FileReader
 
 <h2 id="Exemplo">Exemplo</h2>
 
-<p>O seguinte trecho de código ilustra a criação de um objeto <code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code> usando o construtor <code>FileReader()</code> e depois utilizando o objeto:</p>
+<p>O seguinte trecho de código ilustra a criação de um objeto <code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code> usando o construtor <code>FileReader()</code> e depois utilizando o objeto:</p>
 
 <pre class="brush: js">function printFile(file) {
   var reader = new FileReader();
   reader.onload = function(evt) {
-    console.log(evt.target.result);
-  };
-  reader.readAsText(file);
+    console.log(evt.target.result);
+  };
+  reader.readAsText(file);
 }
 </pre>
 

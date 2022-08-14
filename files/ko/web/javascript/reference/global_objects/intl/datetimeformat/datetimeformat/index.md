@@ -30,7 +30,7 @@ new Intl.DateTimeFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : [BCP 47](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8) 언어 태그를 포함하는 문자열이나 문자열의 배열입니다. 브라우저 기본 로케일을 사용하려면 빈 배열을 지정하세요. `en-US-u-ca-buddhist`처럼 유니코드 확장 형태도 지원합니다. 로케일 매개변수의 일반적인 형식 및 해석은 {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} 문서를 참고하세요. 다음의 유니코드 확장 키를 사용할 수 있습니다.
+  - : [BCP 47](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8) 언어 태그를 포함하는 문자열이나 문자열의 배열입니다. 브라우저 기본 로케일을 사용하려면 빈 배열을 지정하세요. `ko-u-ca-buddhist`처럼 유니코드 확장 형태도 지원합니다. 로케일 매개변수의 일반적인 형식 및 해석은 {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} 문서를 참고하세요. 다음의 유니코드 확장 키를 사용할 수 있습니다.
 
     - `nu`
       - : 사용할 기수법. "`arab`",
@@ -174,7 +174,7 @@ new Intl.DateTimeFormat(locales, options)
     - `second`
       - : 초. 가능한 값은 `"numeric"`, `"2-digit"`입니다.
     - `fractionalSecondDigits`
-    
+
       - : 밀리초를 나타낼 소숫점 이하 자릿수. 가능한 값은 다음과 같습니다.
 
         - `0` (밀리초를 표시하지 않음.)
@@ -241,7 +241,7 @@ console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"
 ```js
 var date = Date.UTC(2021, 11, 17, 3, 0, 42);
 const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
-	
+
 for (const zoneName of timezoneNames) {
   var formatter = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/Los_Angeles',
@@ -249,7 +249,7 @@ for (const zoneName of timezoneNames) {
   });
   console.log(zoneName + ": " + formatter.format(date) );
 }
-	
+
 // 예상 출력 결과:
 // > "short: 12/16/2021, PST"
 // > "long: 12/16/2021, Pacific Standard Time"

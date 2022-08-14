@@ -16,7 +16,7 @@ original_slug: Glossaire/MathML
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "MathML", "MathML")}} sur Wikipédia
+- [MathML](https://fr.wikipedia.org/wiki/MathML) sur Wikipédia
 
 ### Référence technique
 

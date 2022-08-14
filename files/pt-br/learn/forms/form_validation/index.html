@@ -6,7 +6,7 @@ original_slug: Web/Guide/HTML/Forms/Form_validation
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}</div>
 
-<p class="summary">A validação de formulário nos ajuda a garantir que os usuários preencham os formulários no formato correto, garantindo que os dados enviados funcionem com êxito em nossos aplicativos. Este artigo apresentará conceitos e exemplos básicos sobre validação de formulário. Para mais informações adicionais, consulte o <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation guide</a>.</p>
+<p class="summary">A validação de formulário nos ajuda a garantir que os usuários preencham os formulários no formato correto, garantindo que os dados enviados funcionem com êxito em nossos aplicativos. Este artigo apresentará conceitos e exemplos básicos sobre validação de formulário. Para mais informações adicionais, consulte o <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation guide</a>.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -23,7 +23,7 @@ original_slug: Web/Guide/HTML/Forms/Form_validation
 
 <h2 id="O_que_é_validação_de_formulário">O que é validação de formulário?</h2>
 
-<p>Vá a qualquer site popular com um formulário de registro, e perceberá que eles dão feedback quando você não insere seus dados no formato esperado. Você receberá mensagens como:</p>
+<p>Vá a qualquer site popular com um formulário de registro, e perceberá que eles dão feedback quando você não insere seus dados no formato esperado. Você receberá mensagens como:</p>
 
 <ul>
  <li>"Sua senha precisa ter entre 8 e 30 caracteres e conter uma letra maiúscula, um símbolo e um número"</li>
@@ -38,10 +38,10 @@ original_slug: Web/Guide/HTML/Forms/Form_validation
  Queremos tornar o preenchimento de formulários da web o mais fácil possível. Então, por que insistimos em validar nossos formulários? Existem três razões principais:</p>
 
 <ul>
- <li><strong>Nos queremos que o dado correto e no formato correto </strong> — nossa aplicação não irá trabalhar de forma correta se os dados dos nossos usuarios estivem armazenados em formato incorreto, ou quando esses dados são omitidos.</li>
- <li><strong>Quemos proteger os dados dos nossos usuários</strong> — Forçarnosos usuários a fornecer senhas seguras facilita na proteção das informações da conta do usuário.</li>
- <li><strong>Queremos proteger nos mesmos</strong> — Existem diversas maneiras de um usuário malicioso usar formulários desprotegidos para danificar nossa aplicação (veja <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a>).<br>
-  {{warning("Nunca confie nos dados passados do cliente para o servidor. Mesmo que seu formulário seja validado de maneira correta e previna a má formação de inputs no lado do cliente, um usuário malicioso ainda pode roubar o request da conexão.")}}</li>
+ <li><strong>Nos queremos que o dado correto e no formato correto </strong> — nossa aplicação não irá trabalhar de forma correta se os dados dos nossos usuarios estivem armazenados em formato incorreto, ou quando esses dados são omitidos.</li>
+ <li><strong>Quemos proteger os dados dos nossos usuários</strong> — Forçarnosos usuários a fornecer senhas seguras facilita na proteção das informações da conta do usuário.</li>
+ <li><strong>Queremos proteger nos mesmos</strong> — Existem diversas maneiras de um usuário malicioso usar formulários desprotegidos para danificar nossa aplicação (veja <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a>).<br>
+  {{warning("Nunca confie nos dados passados do cliente para o servidor. Mesmo que seu formulário seja validado de maneira correta e previna a má formação de inputs no lado do cliente, um usuário malicioso ainda pode roubar o request da conexão.")}}</li>
 </ul>
 
 <h3 id="Different_types_of_form_validation">Different types of form validation</h3>
@@ -53,10 +53,10 @@ original_slug: Web/Guide/HTML/Forms/Form_validation
 
   <ul>
    <li><strong>JavaScript</strong> validation is coded using JavaScript. It is completely customizable.</li>
-   <li><strong>Built-in form validation</strong> using HTML5 form validation features.  This generally does not require JavaScript. Built-in form validation has better performance, but it is not as customizable as JavaScript.</li>
+   <li><strong>Built-in form validation</strong> using HTML5 form validation features.  This generally does not require JavaScript. Built-in form validation has better performance, but it is not as customizable as JavaScript.</li>
   </ul>
  </li>
- <li><strong>Server-side validation</strong> is validation which occurs on the server after the data has been submitted.  Server-side code is used to validate the data before it is saved into the database. If the data fails authentication, a response is sent back to the client to tell the user what corrections to make. Server-side validation is not as user-friendly as client-side validation, as it does not provide errors until the entire form has been submitted.  However, server-side validation is your application's last line of defence against incorrect or even malicious data. All popular <a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">server-side frameworks</a> have features for <strong>validating</strong> and <strong>sanitizing</strong> data (making it safe).</li>
+ <li><strong>Server-side validation</strong> is validation which occurs on the server after the data has been submitted.  Server-side code is used to validate the data before it is saved into the database. If the data fails authentication, a response is sent back to the client to tell the user what corrections to make. Server-side validation is not as user-friendly as client-side validation, as it does not provide errors until the entire form has been submitted.  However, server-side validation is your application's last line of defence against incorrect or even malicious data. All popular <a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">server-side frameworks</a> have features for <strong>validating</strong> and <strong>sanitizing</strong> data (making it safe).</li>
 </ul>
 
 <p>In the real world, developers tend to use a combination of client-side and server-side validation.</p>
@@ -759,7 +759,7 @@ addEvent(form, "submit", function () {
 
 <p>{{EmbedLiveSample("An_example_that_doesn't_use_the_constraint_validation_API", "100%", 130)}}</p>
 
-<p>As you can see, it's not that hard to build a validation system on your own. The difficult part is to make it generic enough to use it both cross-platform and on any form you might create. There are many libraries available to perform form validation; you shouldn't hesitate to use them. Here are a few examples:</p>
+<p>As you can see, it's not that hard to build a validation system on your own. The difficult part is to make it generic enough to use it both cross-platform and on any form you might create. There are many libraries available to perform form validation; you shouldn't hesitate to use them. Here are a few examples:</p>
 
 <ul>
  <li>Standalone library

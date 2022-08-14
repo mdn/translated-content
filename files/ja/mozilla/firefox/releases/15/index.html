@@ -94,11 +94,11 @@ translation_of: Mozilla/Firefox/Releases/15
  <dt><code>nsIDOMWindowUtils</code></dt>
  <dd><code>sendMouseEvent()</code>、<code>sendTouchEvent()</code>、<code>sendMouseEventToWindow()</code>、<code>sendMouseScrollEvent()</code> および <code>sendKeyEvent()</code> の <code>aModifiers</code> は <a href="/ja/docs/DOM/KeyboardEvent#getModifierState%28%29" title="https://developer.mozilla.org/ja/docs/DOM/KeyboardEvent#getModifierState%28%29"><code>KeyboardEvent.getModifierState()</code></a> でサポートされている修飾キーのすべてをサポートします。<code>MODIFIER_*</code> という値を利用してください。 また、<code>sendKeyEvent()</code> の第 5 引数が <code>boolean</code> から <code>unsigned long</code> に変更されました。後方互換性のために、呼び出し元がそれに対して <code>true</code> または false を渡している場合、挙動は変更されません。この変更によって呼び出し元がキーの位置を指定することができるようになります。</dd>
  <dt><code>nsIBrowserHistory</code></dt>
- <dd><code>hidePage()</code> メソッドは一度も実装されずに、かつ、このリリースで完全に削除されます。<a href="/ja/docs/Places" title="Places">Places</a> API のすべてを非同期化する進行中の作業の一部として、<code>addPageWithDetails()</code> メソッドも削除されます。代わりに {{ifmethod("mozIAsyncHistory", "updatePlaces")}} を利用してください。また、<code>count</code> 属性も削除されます。それはときどき実際のカウントを返していませんでした（代わりに、単純にエントリが存在したかどうかを返していました）。代わりに {{ifattribute("nsINavHistoryService", "hasHistoryEntries")}} を利用できます。</dd>
+ <dd><code>hidePage()</code> メソッドは一度も実装されずに、かつ、このリリースで完全に削除されます。<a href="/ja/docs/Places" title="Places">Places</a> API のすべてを非同期化する進行中の作業の一部として、<code>addPageWithDetails()</code> メソッドも削除されます。代わりに <code>mozIAsyncHistory.updatePlaces</code> を利用してください。また、<code>count</code> 属性も削除されます。それはときどき実際のカウントを返していませんでした（代わりに、単純にエントリが存在したかどうかを返していました）。代わりに `nsINavHistoryService.hasHistoryEntries` を利用できます。</dd>
  <dt><code>inIDOMUtils</code></dt>
- <dd>{{ifmethod("inlDOMUtils", "parseStyleSheet")}} メソッドが追加され、CSS の (再) 解析ができるようになりました。</dd>
+ <dd><code>inlDOMUtils.parseStyleSheet</code> メソッドが追加され、CSS の (再) 解析ができるようになりました。</dd>
  <dt><code>nsIINIParserWriter</code></dt>
- <dd>{{ifmethod("nsIINIParserWriter", "writeFile")}} メソッドが <code>flags</code> プロパティを受け入れるようになりました。現在は 1 個のオプションのみを与えます: Windows および特定のインストーラーとの互換性のため、ファイルを UTF-8 形式の代わりに UTF-16 形式で書き込むことを知らせることができます。</dd>
+ <dd><code>nsIINIParserWriter.writeFile</code> メソッドが <code>flags</code> プロパティを受け入れるようになりました。現在は 1 個のオプションのみを与えます: Windows および特定のインストーラーとの互換性のため、ファイルを UTF-8 形式の代わりに UTF-16 形式で書き込むことを知らせることができます。</dd>
 </dl>
 
 <h4 id="New_interfaces" name="New_interfaces">新しいインタフェース</h4>

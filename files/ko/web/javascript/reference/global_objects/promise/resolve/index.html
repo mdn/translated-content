@@ -11,10 +11,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Promise.resolve(value)</strong></code> 메서드는 주어진 값으로 이행하는 {{jsxref("Promise.then")}} 객체를 반환합니다. 그 값이 프로미스인 경우, 해당 프로미스가 반환됩니다. 그 값이 thenable(예, {{jsxref("Promise.then", "\"then\" 메소드")}} 가 있음)인 경우, 반환된 프로미스는 그 thenable을 "따르며", 그 최종 상태를 취합니다. 그렇지 않으면 반환된 프로미스는 그 값으로 이행합니다. 이 함수는 프로미스형의 객체(무언가를 결정하는 프로미스를 결정하는 프로미스 등)의 중첩된 레이어를 단일 레이어로 펼칩니다.</p>
+<p><code><strong>Promise.resolve(value)</strong></code> 메서드는 주어진 값으로 이행하는 {{jsxref("Promise.then")}} 객체를 반환합니다. 그 값이 프로미스인 경우, 해당 프로미스가 반환됩니다. 그 값이 thenable(예, {{jsxref("Promise.then", "\"then\" 메소드")}} 가 있음)인 경우, 반환된 프로미스는 그 thenable을 "따르며", 그 최종 상태를 취합니다. 그렇지 않으면 반환된 프로미스는 그 값으로 이행합니다. 이 함수는 프로미스형의 객체(무언가를 결정하는 프로미스를 결정하는 프로미스 등)의 중첩된 레이어를 단일 레이어로 펼칩니다.</p>
 
 <div class="blockIndicator warning">
-<p><strong>주의</strong>: 스스로를 결정하는 thenable 에서 <code>Promise.resolve</code> 를 호출하면 안됩니다. 이는 무한히 중첩된 프로미스를 펼치려고하므로 무한 재귀를 유발할 것입니다. Angular 에서 <code>async</code> Pipe 를 함께 사용한 <a href="https://stackblitz.com/edit/angular-promiseresovle-with-async-pipe?file=src/app/app.component.ts">예제</a>입니다. 자세한 내용은<a href="https://angular.io/guide/template-syntax#avoid-side-effects"> 여기</a>에서 확인하세요.</p>
+<p><strong>주의</strong>: 스스로를 결정하는 thenable 에서 <code>Promise.resolve</code> 를 호출하면 안됩니다. 이는 무한히 중첩된 프로미스를 펼치려고하므로 무한 재귀를 유발할 것입니다. Angular 에서 <code>async</code> Pipe 를 함께 사용한 <a href="https://stackblitz.com/edit/angular-promiseresovle-with-async-pipe?file=src/app/app.component.ts">예제</a>입니다. 자세한 내용은<a href="https://angular.io/guide/template-syntax#avoid-side-effects"> 여기</a>에서 확인하세요.</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}</div>
@@ -28,20 +28,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 
 <dl>
  <dt>value</dt>
- <dd>이 <code>Promise</code>에 의해 결정되는 인수. <code>Promise</code> 또는 이행할 thenable 일수도 있습니다.</dd>
+ <dd>이 <code>Promise</code>에 의해 결정되는 인수. <code>Promise</code> 또는 이행할 thenable 일수도 있습니다.</dd>
 </dl>
 
 <h3 id="반환_값">반환 값</h3>
 
 <dl>
  <dd>
- <p>주어진 값으로 이행된 {{jsxref("Promise")}} 또는 값이 promise 객체인 경우, 값으로 전달된 promise. </p>
+ <p>주어진 값으로 이행된 {{jsxref("Promise")}} 또는 값이 promise 객체인 경우, 값으로 전달된 promise. </p>
  </dd>
 </dl>
 
 <h2 id="설명">설명</h2>
 
-<p>정적 <code>Promise.resolve</code> 함수는 이행된 <code>Promise</code> 를 반환합니다.</p>
+<p>정적 <code>Promise.resolve</code> 함수는 이행된 <code>Promise</code> 를 반환합니다.</p>
 
 <h2 id="예시">예시</h2>
 
@@ -121,27 +121,9 @@ p3.then(function(v) {
 });
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">코멘트</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-promise.resolve', 'Promise.resolve')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>ECMA 표준에서 초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

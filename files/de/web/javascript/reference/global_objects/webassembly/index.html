@@ -11,16 +11,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 <div>{{JSRef}}</div>
 
-<p>Das <strong><code>WebAssembly</code></strong> JavaScript Objekt existiert als Namensraum für alle <a href="/en-US/docs/WebAssembly">WebAssembly</a>-bezogenen Funktionalitäten.</p>
+<p>Das <strong><code>WebAssembly</code></strong> JavaScript Objekt existiert als Namensraum für alle <a href="/en-US/docs/WebAssembly">WebAssembly</a>-bezogenen Funktionalitäten.</p>
 
-<p>Anders als die meisten anderen globalen Objekte, ist <code>WebAssembly</code> kein Konstruktor (es ist kein Funktionsobjekt). Es kann mit {{jsxref("Math")}} verglichen werden, welches ebenfalls einen Namensraum für mathematische Konstanten und Funktionen bildet. Oder mit {{jsxref("Intl")}}, welches den Namensraum für die Internationalisierunges API mit sprachabhängigen Funktionen bildet. </p>
+<p>Anders als die meisten anderen globalen Objekte, ist <code>WebAssembly</code> kein Konstruktor (es ist kein Funktionsobjekt). Es kann mit {{jsxref("Math")}} verglichen werden, welches ebenfalls einen Namensraum für mathematische Konstanten und Funktionen bildet. Oder mit {{jsxref("Intl")}}, welches den Namensraum für die Internationalisierunges API mit sprachabhängigen Funktionen bildet. </p>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Die primäre Verwendung des <code>WebAssembly</code> Objekts sind:</p>
+<p>Die primäre Verwendung des <code>WebAssembly</code> Objekts sind:</p>
 
 <ul>
- <li>Laden von WebAssembly Code, verwenden der {{jsxref("WebAssembly.instantiate()")}} Funktion.</li>
+ <li>Laden von WebAssembly Code, verwenden der {{jsxref("WebAssembly.instantiate()")}} Funktion.</li>
  <li>Neue Speicher- und Tabelleninstanzen mittels der {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}} Konstruktoren.</li>
  <li>Bereitstellen von Einrichtungen zur Fehlerbehandlung, die in WebAssembly auftreten, mittels der {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} Konstruktoren.</li>
 </ul>
@@ -29,15 +29,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 <dl>
  <dt>{{jsxref("WebAssembly.instantiate()")}}</dt>
- <dd>Die primäre API für das Kompilieren und Instanziieren des WebAssembly Codes. Der Rückgabewert als <code>Promise</code> ergibt ein <code>Module</code> als auch die erste <code>Instance</code>.</dd>
+ <dd>Die primäre API für das Kompilieren und Instanziieren des WebAssembly Codes. Der Rückgabewert als <code>Promise</code> ergibt ein <code>Module</code> als auch die erste <code>Instance</code>.</dd>
  <dt>{{jsxref("WebAssembly.instantiateStreaming()")}}</dt>
- <dd>Kompiliert und instanziiert ein WebAssembly-Modul direkt aus einer Streamingquelle, mit dem Rückgabewert als <code>Promise</code> ergibt sich ein <code>Module</code> als auch die erste <code>Instance</code>.</dd>
+ <dd>Kompiliert und instanziiert ein WebAssembly-Modul direkt aus einer Streamingquelle, mit dem Rückgabewert als <code>Promise</code> ergibt sich ein <code>Module</code> als auch die erste <code>Instance</code>.</dd>
  <dt>{{jsxref("WebAssembly.compile()")}}</dt>
  <dd>Kompiliert ein {{jsxref("WebAssembly.Module")}} aus dem WebAssembly Binärcode, wodurch die Instanziierung als separater Schritt durchgeführt werden kann.</dd>
  <dt>{{jsxref("WebAssembly.compileStreaming()")}}</dt>
  <dd>Kompiliert ein {{jsxref("WebAssembly.Module")}} direkt aus einer Streamingquelle, wodurch die Instanziierung als separater Schritt durchgeführt werden kann.</dd>
  <dt>{{jsxref("WebAssembly.validate()")}}</dt>
- <dd>Validiert das gegebene, typisierte Array eines WebAssembly Binärcodes. Gibt zurück, ob die Bytes validen WebAssembly Code darstellen (<code>true</code>) oder nicht (<code>false</code>).</dd>
+ <dd>Validiert das gegebene, typisierte Array eines WebAssembly Binärcodes. Gibt zurück, ob die Bytes validen WebAssembly Code darstellen (<code>true</code>) oder nicht (<code>false</code>).</dd>
 </dl>
 
 <h2 id="Konstruktoren">Konstruktoren</h2>
@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<p>Das folgende Beispiel (siehe <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> Demo auf GitHub, <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">siehe auch live</a>) streamt ein .wasm Modul direkt aus einer zugrunde liegenden Quelle, um es dann zu kompilieren und zu instanziieren. Das Promise erfüllt sich mit einem <code>ResultObject</code>. Weil die <code>instantiateStreaming()</code> Funktion ein Promise für ein {{domxref("Response")}} akzeptiert, kann ihr ein {{domxref("WindowOrWorkerGlobalScope.fetch()")}} direkt übergeben werden, welches die Antwort an die Funktion weitergibt, sobald das Promise sich erfüllt.</p>
+<p>Das folgende Beispiel (siehe <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> Demo auf GitHub, <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">siehe auch live</a>) streamt ein .wasm Modul direkt aus einer zugrunde liegenden Quelle, um es dann zu kompilieren und zu instanziieren. Das Promise erfüllt sich mit einem <code>ResultObject</code>. Weil die <code>instantiateStreaming()</code> Funktion ein Promise für ein {{domxref("Response")}} akzeptiert, kann ihr ein {{domxref("WindowOrWorkerGlobalScope.fetch()")}} direkt übergeben werden, welches die Antwort an die Funktion weitergibt, sobald das Promise sich erfüllt.</p>
 
 <pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
 
@@ -71,7 +71,7 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 .then(obj =&gt; obj.instance.exports.exported_func());
 </pre>
 
-<p>Auf die <code>ResultObject</code> Instanz wird damit zugegriffen und die beinhaltete, exportierte Funktion aufgerufen.</p>
+<p>Auf die <code>ResultObject</code> Instanz wird damit zugegriffen und die beinhaltete, exportierte Funktion aufgerufen.</p>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
 

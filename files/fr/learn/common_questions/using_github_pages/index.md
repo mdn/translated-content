@@ -18,9 +18,9 @@ GitHub est un outil très populaire et important à l'heure actuelle. Git est [u
 
 ### Mettre en place Git et un compte GitHub
 
-1.  Tout d'abord, [installez Git](http://git-scm.com/downloads) sur votre ordinateur. Git est le logiciel de gestion de version sur lequel fonctionne GitHub.
-2.  Ensuite, [inscrivez-vous sur GitHub](https://github.com/join). La procédure est plutôt simple.
-3.  Une fois inscrit, connectez vous à [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
+1. Tout d'abord, [installez Git](http://git-scm.com/downloads) sur votre ordinateur. Git est le logiciel de gestion de version sur lequel fonctionne GitHub.
+2. Ensuite, [inscrivez-vous sur GitHub](https://github.com/join). La procédure est plutôt simple.
+3. Une fois inscrit, connectez vous à [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
 
 > **Note :** Attention, le site GitHub existe uniquement en anglais. Bien que les étapes mentionnées ici soient relativement simples, il est préférable d'avoir quelques bases d'anglais afin de poursuivre sereinement (nul besoin de connaître Shakespeare ;)). Si vous n'êtes pas à l'aise, rassurez-vous, il existe de nombreux tutoriels en français sur le Web.
 
@@ -30,13 +30,13 @@ Vous pouvez utiliser des dépôts GitHub pour stocker n'importe quel projet logi
 
 Il faut aussi que le répertoire où le code est stocké soit un « dépôt » Git sur votre ordinateur. Autrement dit, on indique qu'on utilise Git pour gérer les différentes versions des fichiers qui seront stockés dans ce dossier. Pour initialiser un dépôt Git, on suivra ces étapes :
 
-1.  Utilisez la ligne de commande pour vous placer dans le répertoire de votre site web (dans cet article, ce répertoire sera appelé `test-site`, remplacez ce nom avec celui de votre répertoire). Pour ce faire, on utilisera la commande `cd` (qui signifie « _change directory_ » ou « changer de répertoire/dossier » en français). Par exemple, si votre répertoire se situe sur votre bureau et se nomme `test-site`, vous pourrez taper :
+1. Utilisez la ligne de commande pour vous placer dans le répertoire de votre site web (dans cet article, ce répertoire sera appelé `test-site`, remplacez ce nom avec celui de votre répertoire). Pour ce faire, on utilisera la commande `cd` (qui signifie « _change directory_ » ou « changer de répertoire/dossier » en français). Par exemple, si votre répertoire se situe sur votre bureau et se nomme `test-site`, vous pourrez taper :
 
     ```bash
     cd Bureau/test-site
     ```
 
-2.  Lorsque vous êtes dans le répertoire de votre site web, utilisez la commande suivante. Celle-ci indiquera à Git que le répertoire doit être considéré comme un dépôt Git :
+2. Lorsque vous êtes dans le répertoire de votre site web, utilisez la commande suivante. Celle-ci indiquera à Git que le répertoire doit être considéré comme un dépôt Git :
 
     ```bash
     git init
@@ -60,35 +60,37 @@ La ligne de commande peut sembler un peu effrayante au début mais ne vous inqui
 
 ### Créer un dépôt sur GitHub pour votre code
 
-1.  Ensuite, vous aurez besoin de créer un dépôt GitHub sur lequel envoyer les fichiers de votre site. Quand vous êtes connecté-e sur GitHub, cliquez sur l'icône Plus (+) en haut à droite de la page d'accueil puis sélectionner l'option _New Repository_ (qui signifie « Créer un nouveau dépôt »).
-2.  Sur la page qui s'affiche, dans le champ « _Repository name_ », entrez un nom pour votre dépôt. Vous pouvez par exemple saisir _mon-premier-depot_.
-3.  Il y a également un champ qui décrit le projet qui sera placé dans ce dépôt. Votre écran devrait ressembler à quelque chose comme :
+1. Ensuite, vous aurez besoin de créer un dépôt GitHub sur lequel envoyer les fichiers de votre site. Quand vous êtes connecté-e sur GitHub, cliquez sur l'icône Plus (+) en haut à droite de la page d'accueil puis sélectionner l'option _New Repository_ (qui signifie « Créer un nouveau dépôt »).
+2. Sur la page qui s'affiche, dans le champ « _Repository name_ », entrez un nom pour votre dépôt. Vous pouvez par exemple saisir _mon-premier-depot_.
+3. Il y a également un champ qui décrit le projet qui sera placé dans ce dépôt. Votre écran devrait ressembler à quelque chose comme :
     ![](create-new-repo.png)
-4.  Ensuite, cliquez sur « _Create repository_ » (pour créer le dépôt). Vous arrieverez alors sur la page suivante :
+4. Ensuite, cliquez sur « _Create repository_ » (pour créer le dépôt). Vous arrieverez alors sur la page suivante :
     ![](github-repo.png)
 
 ### Envoyer vos fichiers vers GitHub
 
-1.  Sur cette page, une section vous intéresse particulièrement : « _…or push an existing repository from the command line_ » (ce qui signifie « ou pousser un dépôt existant grâce à la ligne de commande »). Vous devrez voir deux lignes de codes sous cette section. Copiez la première ligne et collez la dans votre interface en ligne de commande puis tapez sur Entrée. La commande devrait ressembler à :
+1. Sur cette page, une section vous intéresse particulièrement : « _…or push an existing repository from the command line_ » (ce qui signifie « ou pousser un dépôt existant grâce à la ligne de commande »). Vous devrez voir deux lignes de codes sous cette section. Copiez la première ligne et collez la dans votre interface en ligne de commande puis tapez sur Entrée. La commande devrait ressembler à :
 
-        git remote add origin https://github.com/chrisdavidmills/mon-premier-depot.git
+    ```bash
+    git remote add origin https://github.com/chrisdavidmills/mon-premier-depot.git
+    ```
 
-2.  Ensuite, saisissez ces deux commandes en tapant sur la touche Entrée après chacune. Ces commandes permettent d'indiquer à Git qu'il doit gérer tous les fichiers du dossier et d'enregistrer cette action.
+2. Ensuite, saisissez ces deux commandes en tapant sur la touche Entrée après chacune. Ces commandes permettent d'indiquer à Git qu'il doit gérer tous les fichiers du dossier et d'enregistrer cette action.
 
     ```bash
     git add --all
     git commit -m 'ajout des fichiers au dépôt'
     ```
 
-3.  Enfin, envoyez le code sur GitHub en utilisant la seconde commande affichée sur la section de la page GitHub :
+3. Enfin, envoyez le code sur GitHub en utilisant la seconde commande affichée sur la section de la page GitHub :
 
     ```bash
     git push -u origin master
     ```
 
-4.  Votre code est publié sur GitHub. Pour avoir une page GitHub, vous devrez créer une _branche_ `gh-pages` sur votre dépôt. Actualisez la page web de votre dépôt, vous devriez obtenir une page semblable à celle présentée ci-dessous. Ensuite, cliquez que le bouton « Branch: **master** » (GitHub indique que vous êtes sur la branche `master` de votre dépôt). Dans la liste qui s'affiche, saisissez le texte **gh-pages** puis cliquez sur _Create branch: gh-pages_ (« créer la branche intitulée gh-pages »). Cela créera une nouvelle branche pour votre dépôt, cette branche s'appellera gh-pages et sera publiée à un endroit spécifique. L'URL du site sera _nom-utilisateur.github.io/nom-du-depot_. Dans mon exemple, l'URL est donc _https\://chrisdavidmills.github.io/my-repository_. La page qui est affichée à cette URL est la page `index.html` contenue dans le dépôt.
+4. Votre code est publié sur GitHub. Pour avoir une page GitHub, vous devrez créer une _branche_ `gh-pages` sur votre dépôt. Actualisez la page web de votre dépôt, vous devriez obtenir une page semblable à celle présentée ci-dessous. Ensuite, cliquez que le bouton « Branch: **master** » (GitHub indique que vous êtes sur la branche `master` de votre dépôt). Dans la liste qui s'affiche, saisissez le texte **gh-pages** puis cliquez sur _Create branch: gh-pages_ (« créer la branche intitulée gh-pages »). Cela créera une nouvelle branche pour votre dépôt, cette branche s'appellera gh-pages et sera publiée à un endroit spécifique. L'URL du site sera _nom-utilisateur.github.io/nom-du-depot_. Dans mon exemple, l'URL est donc _https\://chrisdavidmills.github.io/my-repository_. La page qui est affichée à cette URL est la page `index.html` contenue dans le dépôt.
     ![](repo-site.png)
-5.  Utilisez votre navigateur préféré pour visiter cette URL. Voici votre site ! Partagez le lien avec vos amis pour leur montrer :)
+5. Utilisez votre navigateur préféré pour visiter cette URL. Voici votre site ! Partagez le lien avec vos amis pour leur montrer :)
 
 > **Note :** Si vous êtes bloqué-e, n'hésitez pas à utiliser [la page d'aide GitHub sur les pages GitHub](https://pages.github.com/) qui est une excellente ressource (en anglais).
 
@@ -96,9 +98,11 @@ La ligne de commande peut sembler un peu effrayante au début mais ne vous inqui
 
 Si vous souhaitez modifier votre site et le mettre à jour sur GitHub, modifiez les fichiers comme vous le faisiez auparavant puis utilisez les commandes suivantes pour indiquer les changements à Git et les envoyer sur GitHub (n'oubliez pas d'appuyer sur Entrée entre chaque commande) :
 
-    git add --all
-    git commit -m 'Un autre commit'
-    git push
+```
+git add --all
+git commit -m 'Un autre commit'
+git push
+```
 
 Vous pouvez utiliser un autre message que « un autre commit »  pour indiquer les changements que vous avez effectués.
 

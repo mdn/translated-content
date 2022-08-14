@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
 <div>{{JSRef}}</div>
 
-<div>O objeto <strong>WeakSet</strong> pertmite que você armazene objetos mantidos “fracamente” na coleção.</div>
+<div>O objeto <strong>WeakSet</strong> pertmite que você armazene objetos mantidos “fracamente” na coleção.</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -22,27 +22,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Objetos <code>WeakSet</code> são coleções de objetos. Um objeto no <code>WeakSet </code>pode ocorrer uma vez; é único na coleção do <code>WeakSet</code>.</p>
+<p>Objetos <code>WeakSet</code> são coleções de objetos. Um objeto no <code>WeakSet </code>pode ocorrer uma vez; é único na coleção do <code>WeakSet</code>.</p>
 
-<p>As principais diferenças para o objeto {{jsxref("Set")}} são:</p>
+<p>As principais diferenças para o objeto {{jsxref("Set")}} são:</p>
 
 <ul>
- <li>Em contraste ao <code>Sets</code>, <code>WeakSets </code>são <strong>coleções apenas de objetos</strong> e não de valores arbitrários de qualquer tipo.</li>
- <li>O <code>WeakSet </code>é <em>fraco</em>. Referências aos objetos nas coleções são mantidas "fracamente". Se não há outra referência para um objeto mantido na <code>WeakSet</code>, eles pode ser coletados pelo gerenciamento de memória (<em>garbage collection</em>).</li>
+ <li>Em contraste ao <code>Sets</code>, <code>WeakSets </code>são <strong>coleções apenas de objetos</strong> e não de valores arbitrários de qualquer tipo.</li>
+ <li>O <code>WeakSet </code>é <em>fraco</em>. Referências aos objetos nas coleções são mantidas "fracamente". Se não há outra referência para um objeto mantido na <code>WeakSet</code>, eles pode ser coletados pelo gerenciamento de memória (<em>garbage collection</em>).</li>
 </ul>
 
 <h2 id="Propriedades">Propriedades</h2>
 
 <dl>
  <dt><code>WeakSet.length</code></dt>
- <dd>O valor da propriedade de  comprimento é 0.</dd>
+ <dd>O valor da propriedade de  comprimento é 0.</dd>
  <dt>{{jsxref("WeakSet.prototype")}}</dt>
  <dd>Representa o protóripo para o construtos <code>Set</code>. Permite a adição de propriedades para todos os objetos do <code>WeakSet</code>.</dd>
 </dl>
 
-<h2 id="Instâncias_WeakSet"><code>Instâncias WeakSet</code></h2>
+<h2 id="Instâncias_WeakSet"><code>Instâncias WeakSet</code></h2>
 
-<p>Todas as instâncias do <code>WeakSet</code> herdam do {{jsxref("WeakSet.prototype")}}.</p>
+<p>Todas as instâncias do <code>WeakSet</code> herdam do {{jsxref("WeakSet.prototype")}}.</p>
 
 <h3 id="Propriedades_2">Propriedades</h3>
 
@@ -54,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_o_objeto_do_WeakSet">Usando o objeto do <code>WeakSet</code></h3>
+<h3 id="Usando_o_objeto_do_WeakSet">Usando o objeto do <code>WeakSet</code></h3>
 
 <pre class="brush: js">var ws = new WeakSet();
 var obj = {};
@@ -87,108 +87,14 @@ ws.has(window);    // false, window foi removido
   <tr>
    <td>{{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Compatilidade_de_Browser">Compatilidade de Browser</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(36)}}</td>
-   <td>{{ CompatGeckoDesktop(34) }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatOpera(23) }}</td>
-   <td>9</td>
-  </tr>
-  <tr>
-   <td><code>new WeakSet(iterable)</code></td>
-   <td>38</td>
-   <td>{{ CompatGeckoDesktop(34) }}</td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>9</td>
-  </tr>
-  <tr>
-   <td>Constructor argument: <code>new WeakSet(null)</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("37")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>9</td>
-  </tr>
-  <tr>
-   <td>Monkey-patched <code>add()</code> in Constructor</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("37")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>9</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile(34) }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>9</td>
-  </tr>
-  <tr>
-   <td><code>new WeakMap(iterable)</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile(34) }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>9</td>
-  </tr>
-  <tr>
-   <td>Constructor argument: <code>new WeakSet(null)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>9</td>
-  </tr>
-  <tr>
-   <td>Monkey-patched <code>add()</code> in Constructor</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>9</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.WeakSet")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

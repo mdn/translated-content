@@ -17,7 +17,9 @@ La méthode **`Document.exitFullscreen()`** extrait le document du mode plein é
 
 ## Syntaxe
 
-    document.exitFullscreen();
+```js
+document.exitFullscreen();
+```
 
 ## Exemple
 

@@ -15,15 +15,19 @@ La propriété **`Element.attributes`** renvoie une collection des noeuds d'attr
 
 ## Syntaxe
 
-    var attr = element.attributes;
+```js
+var attr = element.attributes;
+```
 
 ## Exemple
 
 ### Exemples basiques
 
-    // récupère le premier élément <p> du document
-    var para = document.getElementsByTagName("p")[0];
-    var attr = para.attributes;
+```js
+// récupère le premier élément <p> du document
+var para = document.getElementsByTagName("p")[0];
+var attr = para.attributes;
+```
 
 ### Énumération des attributs d'éléments
 
@@ -69,8 +73,6 @@ L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec
 </body>
 </html>
 ```
-
-
 
 ## Spécifications
 

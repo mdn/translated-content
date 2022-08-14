@@ -35,7 +35,7 @@ console.log([] instanceof MyArray); // true
 
 <pre class="brush: js notranslate">function MyArray() { }
 Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value: function(instance) { return Array.isArray(instance); }
+  value: function(instance) { return Array.isArray(instance); }
 });
 console.log([] instanceof MyArray); // true</pre>
 

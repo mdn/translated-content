@@ -13,7 +13,7 @@ translation_of: Web/API/Location/href
 
 **`href`** は {{domxref("Location")}} インターフェイスのプロパティで、{{Glossary("stringifier", "文字列化")}}であり、 {{domxref("USVString")}} で URL 全体を表し、 href を更新することができます。
 
-href` の値を設定すると、指定された URL に*移動*します。もし、_redirection_が欲しい場合は、{{domxref("Location/replace", "location.replace()")}}を使用してください。href` プロパティ値の設定との違いは、 `location.replace()` メソッドを使用した場合、指定した URL に移動した後、現在のページはセッション [history](/ja/docs/Web/API/History_API) に保存されないことです - つまりユーザーは戻るボタンで移動することはできません。
+`href` の値を設定すると、指定された URL に*移動*します。もし、_redirection_が欲しい場合は、{{domxref("Location/replace", "location.replace()")}}を使用してください。`href` プロパティ値の設定との違いは、 `location.replace()` メソッドを使用した場合、指定した URL に移動した後、現在のページはセッション [history](/ja/docs/Web/API/History_API) に保存されないことです - つまりユーザーは戻るボタンで移動することはできません。
 
 ## 構文
 

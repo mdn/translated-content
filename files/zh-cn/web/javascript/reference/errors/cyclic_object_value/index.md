@@ -47,7 +47,7 @@ JSON.stringify(circularReference);
 // TypeError: cyclic object value
 ```
 
-要处理循环引用的 JSON，可以使用支持这种结构的库(例如[cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)))，或者自己实现，需要通过可序列化值查找、替换或者移除循环引用。
+要处理循环引用的 JSON，可以使用支持这种结构的库 (例如[cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)))，或者自己实现，需要通过可序列化值查找、替换或者移除循环引用。
 
 下面的代码片段演示了如何使用{{jsxref("JSON.stringify()")}}的 `replacer` 参数查找和过滤（会导致数据丢失）循环引用。
 
@@ -73,5 +73,5 @@ JSON.stringify(circularReference, getCircularReplacer());
 
 - {{jsxref("JSON.stringify")}}
 - [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)
-  – 介绍两个方法, `JSON.decycle` 和
+  – 介绍两个方法，`JSON.decycle` 和
   `JSON.retrocycle`，这两个方法能够对循环对象引用结构进行编码和解码，并且使之成为一种扩展的且向下兼容的 JSON 格式。

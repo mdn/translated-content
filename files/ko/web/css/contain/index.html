@@ -59,9 +59,9 @@ contain: unset;</pre>
  <dt><code>none</code></dt>
  <dd>아무것도 격리하지 않고 요소를 평범하게 렌더링합니다.</dd>
  <dt><code>strict</code></dt>
- <dd><code>style</code>을 제외한 모든 격리 규칙을 적용합니다. <code>contain: size layout paint</code>와 같습니다.</dd>
+ <dd><code>style</code>을 제외한 모든 격리 규칙을 적용합니다. <code>contain: size layout paint</code>와 같습니다.</dd>
  <dt><code>content</code></dt>
- <dd><code>size</code>와 <code>style</code>을 제외한 모든 격리 규칙을 적용합니다. <code>contain: layout paint</code>와 같습니다.</dd>
+ <dd><code>size</code>와 <code>style</code>을 제외한 모든 격리 규칙을 적용합니다. <code>contain: layout paint</code>와 같습니다.</dd>
  <dt><code>size</code></dt>
  <dd>요소의 크기를 계산할 때 자손의 크기는 고려하지 않아도 됨을 나타냅니다.</dd>
  <dt><code>layout</code></dt>
@@ -88,13 +88,13 @@ contain: unset;</pre>
 
 <pre class="brush: html notranslate">&lt;h1&gt;My blog&lt;/h1&gt;
 &lt;article&gt;
-  &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
-  &lt;p&gt;Content here.&lt;/p&gt;
+  &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
+  &lt;p&gt;Content here.&lt;/p&gt;
 &lt;/article&gt;
 &lt;article&gt;
-  &lt;h2&gt;Another heading of another article&lt;/h2&gt;
-  &lt;img src="graphic.jpg" alt="photo"&gt;
-  &lt;p&gt;More content here.&lt;/p&gt;
+  &lt;h2&gt;Another heading of another article&lt;/h2&gt;
+  &lt;img src="graphic.jpg" alt="photo"&gt;
+  &lt;p&gt;More content here.&lt;/p&gt;
 &lt;/article&gt;</pre>
 
 <p>각 <code>&lt;article&gt;</code>과 <code>&lt;img&gt;</code>엔 테두리를 부여하고, 이미지는 모두 좌측으로 플로팅합니다.</p>
@@ -116,14 +116,14 @@ article {
 
 <pre class="brush: html notranslate">&lt;h1&gt;My blog&lt;/h1&gt;
 &lt;article&gt;
-  &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
-  &lt;p&gt;Content here.&lt;/p&gt;
-  &lt;img src="i-just-showed-up.jpg" alt="social"&gt;
+  &lt;h2&gt;Heading of a nice article&lt;/h2&gt;
+  &lt;p&gt;Content here.&lt;/p&gt;
+  &lt;img src="i-just-showed-up.jpg" alt="social"&gt;
 &lt;/article&gt;
 &lt;article&gt;
-  &lt;h2&gt;Another heading of another article&lt;/h2&gt;
-  &lt;img src="graphic.jpg" alt="photo"&gt;
-  &lt;p&gt;More content here.&lt;/p&gt;
+  &lt;h2&gt;Another heading of another article&lt;/h2&gt;
+  &lt;img src="graphic.jpg" alt="photo"&gt;
+  &lt;p&gt;More content here.&lt;/p&gt;
 &lt;/article&gt;</pre>
 
 <div class="hidden">
@@ -173,28 +173,11 @@ article {
 
 <p>{{EmbedLiveSample('contain으로_수정하기', '100%', '330')}}</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Containment', '#contain-property', 'contain')}}</td>
-   <td>{{Spec2('CSS Containment')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("css.properties.contain")}}</p>
 

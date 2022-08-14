@@ -14,5 +14,5 @@ _Over The Air_ (**OTA**) se réfère à un système de mise à jour automatique 
 
 ## En savoir plus
 
-- {{Interwiki("wikipedia", "Over-the-air programming")}}
+- [<i lang="en">Over-the-air programming</i>](https://fr.wikipedia.org/wiki/Over-the-air_programming) sur Wikipédia
 - [Créer et appliquer des paquets de mise à jour B2G OS](/fr/docs/Archive/B2G_OS/Building_and_installing_Boot_to_Gecko/B2G_OS_update_packages)

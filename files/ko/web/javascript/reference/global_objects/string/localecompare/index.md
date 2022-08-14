@@ -46,7 +46,7 @@ localeCompare(compareString, locales, options)
     string returned are entirely implementation-dependent.
 
     See the [`Intl.Collator()`
-    constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator) for details on these parameters and how to use them.
+    constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator) for details on these parameters and how to use them.
 
 ### Return value
 

@@ -16,9 +16,9 @@ En implémentant userScripts, les développeurs d'extension peuvent modifier l'a
 
 Implémentez userScripts dans votre extension en suivant les étapes suivantes :
 
-1.  Définissez le script dans le manifeste de l'extension à l'aide de la clé `"user_scripts"`.
-2.  Enregistrer le userScript
-3.  Implémenter les fonctions userScript
+1. Définissez le script dans le manifeste de l'extension à l'aide de la clé `"user_scripts"`.
+2. Enregistrer le userScript
+3. Implémenter les fonctions userScript
 
 Passons en revue les processus à l'aide d'un petit exemple d'extension Web qui illustre le processus. L'exemple est disponible dans le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub.
 

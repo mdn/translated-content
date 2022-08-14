@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
 <div>{{JSRef}}</div>
 
-<p>O construtor <code>Object</code> cria um wrapper de objeto.</p>
+<p>O construtor <code>Object</code> cria um wrapper de objeto.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -28,11 +28,11 @@ new Object([<var>value</var>])</pre>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O construtor <code>Object</code> cria um wrapper de objeto para o valor fornecido. Se o valor for {{jsxref ("null")}} ou {{jsxref ("undefined")}}, ele criará e retornará um objeto vazio, caso contrário, retornará um objeto de um Type que corresponde ao dado valor. Se o valor já for um objeto, ele retornará o valor.</p>
+<p>O construtor <code>Object</code> cria um wrapper de objeto para o valor fornecido. Se o valor for {{jsxref ("null")}} ou {{jsxref ("undefined")}}, ele criará e retornará um objeto vazio, caso contrário, retornará um objeto de um Type que corresponde ao dado valor. Se o valor já for um objeto, ele retornará o valor.</p>
 
-<p>Quando chamado em um contexto não-construtor, o <code>object</code> se comporta de forma idêntica ao <code>new Object ()</code>.</p>
+<p>Quando chamado em um contexto não-construtor, o <code>object</code> se comporta de forma idêntica ao <code>new Object ()</code>.</p>
 
-<p>Veja também <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal syntax</a>.</p>
+<p>Veja também <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal syntax</a>.</p>
 
 <h2 id="Propriedades_do_construtor_Object">Propriedades do construtor <code>Object</code></h2>
 
@@ -59,7 +59,7 @@ new Object([<var>value</var>])</pre>
  <dt>{{jsxref("Object.freeze()")}}</dt>
  <dd>Congela um objeto: outro código não pode excluir ou alterar nenhuma propriedade.</dd>
  <dt>{{jsxref("Object.fromEntries()")}}</dt>
- <dd>Retorna um novo objeto de um iterável de pares de valor-chave (reverso à {{jsxref("Object.entries")}}).</dd>
+ <dd>Retorna um novo objeto de um iterável de pares de valor-chave (reverso à {{jsxref("Object.entries")}}).</dd>
  <dt>{{jsxref("Object.getOwnPropertyDescriptor()")}}</dt>
  <dd>Retorna um descritor de propriedade para uma propriedade nomeada em um objeto.</dd>
  <dt>{{jsxref("Object.getOwnPropertyDescriptors()")}}</dt>
@@ -90,9 +90,9 @@ new Object([<var>value</var>])</pre>
  <dd>Retorna uma matriz contendo os valores que correspondem a todas as propriedades de string enumeráveis ​​do próprio objeto.</dd>
 </dl>
 
-<h2 id="Instâncias_de_Object_e_Object_de_protótipo_de_objeto">Instâncias de <code>Object</code> e <code>Object</code> de protótipo de objeto</h2>
+<h2 id="Instâncias_de_Object_e_Object_de_protótipo_de_objeto">Instâncias de <code>Object</code> e <code>Object</code> de protótipo de objeto</h2>
 
-<p>Todos os objetos em JavaScript são descendentes do <code>Object</code>; todos os objetos herdam métodos e propriedades de {{jsxref("Object.prototype")}}, embora eles possam ser substituídos. Por exemplo, protótipos de outros construtores substituem a propriedade <code>constructor</code> e fornecer seus próprios métodos <code>toString()</code>. As alterações no objeto de protótipo <code>Object</code> são propagadas para todos os objetos, a menos que as propriedades e os métodos sujeitos a essas alterações sejam substituídos na cadeia de protótipos.</p>
+<p>Todos os objetos em JavaScript são descendentes do <code>Object</code>; todos os objetos herdam métodos e propriedades de {{jsxref("Object.prototype")}}, embora eles possam ser substituídos. Por exemplo, protótipos de outros construtores substituem a propriedade <code>constructor</code> e fornecer seus próprios métodos <code>toString()</code>. As alterações no objeto de protótipo <code>Object</code> são propagadas para todos os objetos, a menos que as propriedades e os métodos sujeitos a essas alterações sejam substituídos na cadeia de protótipos.</p>
 
 <h3 id="Propriedades_(enUS)">Propriedades (enUS)</h3>
 
@@ -108,9 +108,9 @@ new Object([<var>value</var>])</pre>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_Object_com_tipos_undefined_e_null">Usando <code>Object</code> com tipos <code>undefined</code> e <code>null</code></h3>
+<h3 id="Usando_Object_com_tipos_undefined_e_null">Usando <code>Object</code> com tipos <code>undefined</code> e <code>null</code></h3>
 
-<p>Os exemplos a seguir armazenam um <code>Object</code> vazio na variável "<code>o</code>":</p>
+<p>Os exemplos a seguir armazenam um <code>Object</code> vazio na variável "<code>o</code>":</p>
 
 <pre class="brush: js">var o = new Object();
 </pre>
@@ -155,12 +155,12 @@ var o = new Object(Boolean());
   <tr>
    <td>{{SpecName('ES6', '#sec-object-objects', 'Object')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>Adicionado <code>Object.assign</code>, <code>Object.getOwnPropertySymbols</code>, <code>Object.setPrototypeOf</code> e <code>Object.is</code></td>
+   <td>Adicionado <code>Object.assign</code>, <code>Object.getOwnPropertySymbols</code>, <code>Object.setPrototypeOf</code> e <code>Object.is</code></td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object-objects', 'Object')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td>Adicionado  <code>Object.entries</code>, <code>Object.values</code> e <code>Object.getOwnPropertyDescriptors</code>.</td>
+   <td>Adicionado  <code>Object.entries</code>, <code>Object.values</code> e <code>Object.getOwnPropertyDescriptors</code>.</td>
   </tr>
  </tbody>
 </table>

@@ -48,8 +48,12 @@ Babel fournit des transformations pour la grande majorité des fonctionnalités 
 
 Ensuite, pour compiler un script individuel, lancez simplement :
 
-    BABEL_ENV=firefox babel <filename>
+```
+BABEL_ENV=firefox babel <filename>
+```
 
 Ou, pour compiler chaque fichier JavaScript sous le répertoire `src` et placer les fichiers compilés dans la `compilation`, en copiant les fichiers non-JavaScript dans le processus, lancez:
 
-    BABEL_ENV=firefox babel -Dd compiled src
+```
+BABEL_ENV=firefox babel -Dd compiled src
+```

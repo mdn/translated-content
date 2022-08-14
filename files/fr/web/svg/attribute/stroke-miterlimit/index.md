@@ -76,7 +76,6 @@ Par exemple, une limite de 1.414 convertit une liaison _miter_ en _bevel_ pour l
         <strong
           ><a
             href="/fr/SVG/Content_type#Number"
-            title="en/SVG/Content_type#Number"
             >&#x3C;number></a
           ></strong
         >

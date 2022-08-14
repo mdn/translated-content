@@ -15,7 +15,9 @@ La propriété `WebGLRenderingContext.canvas` est une référence en lecture seu
 
 ## Syntaxe
 
-    gl.canvas;
+```js
+gl.canvas;
+```
 
 ### Valeur retournée
 

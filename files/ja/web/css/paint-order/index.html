@@ -56,23 +56,23 @@ paint-order: markers stroke fill; /* マーカー、輪郭、塗りつぶしの�
 <h3 id="SVG">SVG</h3>
 
 <pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="400" height="200"&gt;
-  &lt;text x="10" y="75"&gt;stroke in front&lt;/text&gt;
-  &lt;text x="10" y="150" class="stroke-behind"&gt;stroke behind&lt;/text&gt;
+  &lt;text x="10" y="75"&gt;stroke in front&lt;/text&gt;
+  &lt;text x="10" y="150" class="stroke-behind"&gt;stroke behind&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush: css">text {
-  font-family: sans-serif;
-  font-size: 50px;
-  font-weight: bold;
-  fill: black;
-  stroke: red;
-  stroke-width: 4px;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  fill: black;
+  stroke: red;
+  stroke-width: 4px;
 }
 
 .stroke-behind {
-  paint-order: stroke fill;
+  paint-order: stroke fill;
 }</pre>
 
 <h3 id="Result" name="Result">結果</h3>

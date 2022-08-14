@@ -120,7 +120,7 @@ console.log('Server running at http://127.0.0.1:8000/');</pre>
 
 <p>ウェブフレームワークの普及は、それが維持されるかどうかの指標であり、ドキュメンテーション、アドオンライブラリ、テクニカルサポートの面でどのようなリソースが利用される可能性が高いかという点で重要です。</p>
 
-<p>サーバー側のフレームワークの普及率 (<a href="http://hotframeworks.com/">Hot Frameworks</a> のようなサイトでは、GitHub プロジェクトの数や各プラットフォームの StackOverflow の質問数などの仕組みを使って人気を評価しようとしています) は、すぐに利用可能で決定的なものではありません。より良い質問は、人気のないプラットフォームの問題を避けるために Node と Express が「人気がある」かどうかです。それらは進化し続けていますか？あなたがそれを必要としたら助けを得ることができますか？あなたが Express を学ぶならば、あなたは職を得る機会がありますか？</p>
+<p>サーバー側のフレームワークの普及率 (<a href="http://hotframeworks.com/">Hot Frameworks</a> のようなサイトでは、GitHub プロジェクトの数や各プラットフォームの StackOverflow の質問数などの仕組みを使って人気を評価しようとしています) は、すぐに利用可能で決定的なものではありません。より良い質問は、人気のないプラットフォームの問題を避けるために Node と Express が「人気がある」かどうかです。それらは進化し続けていますか？あなたがそれを必要としたら助けを得ることができますか？あなたが Express を学ぶならば、あなたは職を得る機会がありますか？</p>
 
 <p>Express を使用している<a href="https://expressjs.com/en/resources/companies-using-express.html">有名企業</a>の数、コードベースに貢献している人の数、および無料と有料の両方でサポートを提供している人の数に基づけば、Express は一般的なフレームワークです。</p>
 
@@ -213,7 +213,7 @@ console<span class="punctuation token">.</span><span class="function token">log<
 <span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
 
 <div class="note">
-<p><strong>Note:</strong> あなたは <code>exports</code> を与えられたモジュール内の <code>module.exports</code> への<a href="https://nodejs.org/api/modules.html#modules_exports_shortcut">ショートカット</a>として考えることができます。実際、<code>exports</code> は、モジュールが評価される前に <code>module.exports</code> の値に初期化される単なる変数です。 その値はオブジェクト (この場合は空のオブジェクト) への参照です。これは、<code>exports</code> が <code>module.exports</code> によって参照されるのと同じオブジェクトへの参照を保持することを意味します。また、エクスポートに別の値を代入することで、<code>module.exports</code> にバインドされなくなることも意味します。</p>
+<p><strong>Note:</strong> あなたは <code>exports</code> を与えられたモジュール内の <code>module.exports</code> への<a href="https://nodejs.org/api/modules.html#modules_exports_shortcut">ショートカット</a>として考えることができます。実際、<code>exports</code> は、モジュールが評価される前に <code>module.exports</code> の値に初期化される単なる変数です。 その値はオブジェクト (この場合は空のオブジェクト) への参照です。これは、<code>exports</code> が <code>module.exports</code> によって参照されるのと同じオブジェクトへの参照を保持することを意味します。また、エクスポートに別の値を代入することで、<code>module.exports</code> にバインドされなくなることも意味します。</p>
 </div>
 
 <p>モジュールの詳細については、<a href="https://nodejs.org/api/modules.html#modules_modules">モジュール</a> (Node API のドキュメント) を参照してください。</p>
@@ -260,7 +260,7 @@ console<span class="punctuation token">.</span><span class="function token">log<
 
 <p>Express アプリケーションオブジェクトには、他のすべての HTTP 動詞のルートハンドラを定義するためのメソッドもあります。これらのメソッドはほとんど同じ方法で使用されます。</p>
 
-<p><code>checkout()</code>, <code>copy()</code>, <strong><code>delete()</code></strong>, <strong><code>get()</code></strong>, <code>head()</code>, <code>lock()</code>, <code>merge()</code>, <code>mkactivity()</code>, <code>mkcol()</code>, <code>move()</code>, <code>m-search()</code>, <code>notify()</code>, <code>options()</code>, <code>patch()</code>, <strong><code>post()</code></strong>, <code>purge()</code>, <strong><code>put()</code></strong>, <code>report()</code>, <code>search()</code>, <code>subscribe()</code>, <code>trace()</code>, <code>unlock()</code>, <code>unsubscribe()</code>.</p>
+<p><code>checkout()</code>, <code>copy()</code>, <strong><code>delete()</code></strong>, <strong><code>get()</code></strong>, <code>head()</code>, <code>lock()</code>, <code>merge()</code>, <code>mkactivity()</code>, <code>mkcol()</code>, <code>move()</code>, <code>m-search()</code>, <code>notify()</code>, <code>options()</code>, <code>patch()</code>, <strong><code>post()</code></strong>, <code>purge()</code>, <strong><code>put()</code></strong>, <code>report()</code>, <code>search()</code>, <code>subscribe()</code>, <code>trace()</code>, <code>unlock()</code>, <code>unsubscribe()</code>.</p>
 
 <p><code>app.all()</code> という特別なルーティングメソッドがあります。これはあらゆる HTTP メソッドにレスポンスして呼び出されます。これはすべてのリクエストメソッドの特定のパスにミドルウェア機能をロードするために使用されます。次の例　(Express の資料から) は、使用される HTTP 動詞に関係なく、 <code>/secret</code> へのリクエストに対して実行されるハンドラを示しています(<a href="https://nodejs.org/api/http.html#http_http_methods">http モジュール</a>でサポートされている場合)。</p>
 
@@ -394,7 +394,7 @@ http://localhost:3000/media/cry.mp3</code>
 
 <h3 id="エラーの処理">エラーの処理</h3>
 
-<p>エラーは、通常の3つの引数ではなく、4つの引数 <code>(err、req、res、next)</code> を持つ1つ以上の特別なミドルウェア関数によって処理されます。例えば：</p>
+<p>エラーは、通常の3つの引数ではなく、4つの引数 <code>(err、req、res、next)</code> を持つ1つ以上の特別なミドルウェア関数によって処理されます。例えば：</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">app<span class="punctuation token">.</span><span class="function token">use</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>err<span class="punctuation token">,</span> req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span>err<span class="punctuation token">.</span>stack<span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -507,7 +507,7 @@ app<span class="punctuation token">.</span><span class="keyword token">set</span
  <li><a href="https://expressjs.com/ja/guide/using-middleware.html">Using middleware</a> (Express ドキュメント)</li>
  <li><a href="http://expressjs.com/ja/guide/writing-middleware.html">Writing middleware for use in Express apps</a> (Express ドキュメント)</li>
  <li><a href="https://expressjs.com/ja/guide/database-integration.html">Database integration</a> (Express ドキュメント)</li>
- <li><a href="http://expressjs.com/ja/starter/static-files.html">Serving static files in Express</a> (Express ドキュメント)</li>
+ <li><a href="http://expressjs.com/ja/starter/static-files.html">Serving static files in Express</a> (Express ドキュメント)</li>
  <li><a href="http://expressjs.com/ja/guide/error-handling.html">Error handling</a> (Express ドキュメント)</li>
 </ul>
 

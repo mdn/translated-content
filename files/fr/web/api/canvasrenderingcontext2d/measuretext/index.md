@@ -15,7 +15,9 @@ La méthode **`CanvasRenderingContext2D.measureText()`** renvoie un objet {{domx
 
 ## Syntaxe
 
-    ctx.measureText(texte);
+```js
+ctx.measureText(texte);
+```
 
 ### Paramètres
 

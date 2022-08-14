@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.ellipse()`** de l'API Canvas 2D ajoute u
 
 ## Syntaxe
 
-    void ctx.ellipse(x, y, rayonX, rayonY, rotation, angleDébut, angleFin, antihoraire);
+```js
+void ctx.ellipse(x, y, rayonX, rayonY, rotation, angleDébut, angleFin, antihoraire);
+```
 
 ### Paramètres
 

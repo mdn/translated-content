@@ -56,17 +56,17 @@ translation_of: Web/API/Element/matches
 <p>Полифил будет работать только в браузерах, поддерживающих метод document.queryselectorAll.</p>
 
 <pre class="brush: js">;(function(e) {
-    var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
-    !matches ? (e.matches = e.matchesSelector = function matches(selector) {
-        var matches = document.querySelectorAll(selector);
-        var th = this;
-        return Array.prototype.some.call(matches, function(e) {
-            return e === th;
-        });
-    }) : (e.matches = e.matchesSelector = matches);
+    var matches = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.mozMatchesSelector || e.msMatchesSelector || e.oMatchesSelector;
+    !matches ? (e.matches = e.matchesSelector = function matches(selector) {
+        var matches = document.querySelectorAll(selector);
+        var th = this;
+        return Array.prototype.some.call(matches, function(e) {
+            return e === th;
+        });
+    }) : (e.matches = e.matchesSelector = matches);
 })(Element.prototype);</pre>
 
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <h2 id="Спецификация">Спецификация</h2>
 

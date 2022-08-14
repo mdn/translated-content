@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 ---
 <div>{{JSRef}}</div>
 
-<p>A função <strong><code>Math.log2()</code></strong> retorna o logaritmo de base 2 de um número, que é</p>
+<p>A função <strong><code>Math.log2()</code></strong> retorna o logaritmo de base 2 de um número, que é</p>
 
 <p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log2</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0, \mathtt{\operatorname{Math.log2}(x)} = \log_2(x) = \text{the unique} \; y \; \text{such that} \; 2^y = x</annotation></semantics></math></p>
 
@@ -21,15 +21,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 
 <h3 id="Retorno">Retorno</h3>
 
-<p>O logaritmo de base 2 de um número. Caso o número seja negativo, {{jsxref("NaN")}} é retornado.</p>
+<p>O logaritmo de base 2 de um número. Caso o número seja negativo, {{jsxref("NaN")}} é retornado.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
 <p>Caso o valor de <code>x</code> seja menor que 0, então o retorno será sempre {{jsxref("NaN")}}.</p>
 
-<p>Por <code>log2()</code> ser um método estático de <code>Math</code>, você sempre o usará como <code>Math.log2()</code>, ao invés de usá-lo como método de um objeto  <code>Math</code> criado (<code>Math</code> não é um construtor).</p>
+<p>Por <code>log2()</code> ser um método estático de <code>Math</code>, você sempre o usará como <code>Math.log2()</code>, ao invés de usá-lo como método de um objeto  <code>Math</code> criado (<code>Math</code> não é um construtor).</p>
 
-<p>Esta função é equivalente a <code>Math.log(x)/Math.log(2)</code>.  Para log2(e) use a constante {{jsxref("Math.LOG2E")}} que é 1 / {{jsxref("Math.LN2")}}.  </p>
+<p>Esta função é equivalente a <code>Math.log(x)/Math.log(2)</code>.  Para log2(e) use a constante {{jsxref("Math.LOG2E")}} que é 1 / {{jsxref("Math.LN2")}}.  </p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -45,7 +45,7 @@ Math.log2(1024); // 10
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Este Polyfill simula a função <code>Math.log2</code>. Note que é retornado um valor não prcesiso Observe que é retornado valores imprecisos em algumas entradas (like 1 &lt;&lt; 29), envolva em {{jsxref("Math.round()")}} se estiver trabalhando com máscaras de bits.</p>
+<p>Este Polyfill simula a função <code>Math.log2</code>. Note que é retornado um valor não prcesiso Observe que é retornado valores imprecisos em algumas entradas (like 1 &lt;&lt; 29), envolva em {{jsxref("Math.round()")}} se estiver trabalhando com máscaras de bits.</p>
 
 <pre class="brush: js">Math.log2 = Math.log2 || function(x) {
   return Math.log(x) * Math.LOG2E;
@@ -69,7 +69,7 @@ Math.log2(1024); // 10
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -15,8 +15,10 @@ La propriété **className** de l'interface {{domxref("Element")}} récupère et
 
 ## Syntaxe
 
-    var cName = elementNodeReference.className;
-    elementNodeReference.className = cName;
+```js
+var cName = elementNodeReference.className;
+elementNodeReference.className = cName;
+```
 
 - `cName` est une String (chaîne de caractères) représentant la classe (ou les classes séparées par des espaces) de l'élément courant.
 

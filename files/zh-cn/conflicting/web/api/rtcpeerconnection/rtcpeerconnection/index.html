@@ -20,8 +20,8 @@ original_slug: Web/API/RTCConfiguration
  <div class="note">This configuration option cannot be changed after it is first specified; once the certificates have been set, this property is ignored in future calls to {{domxref("RTCPeerConnection.setConfiguration()")}}.</div>
  </dd>
  <dt><code>iceCandidatePoolSize</code> {{optional_inline}}</dt>
- <dd>一个16bit无符号整型值，代表预获取的ICE candidate pool的大小。 默认为 0 (意味着不会发生candidate的预获取)。在某些情况下，由于预获取了ICE candidate，在 {{domxref("RTCPeerConnection.setLocalDescription()")}} 被调用时，被预获取的candidate可被立刻检查，从而导致可以更快的建立连接。
- <div class="note">改变 ICE candidate pool的大小将触发启动 ICE gathering。</div>
+ <dd>一个16bit无符号整型值，代表预获取的ICE candidate pool的大小。 默认为 0 (意味着不会发生candidate的预获取)。在某些情况下，由于预获取了ICE candidate，在 {{domxref("RTCPeerConnection.setLocalDescription()")}} 被调用时，被预获取的candidate可被立刻检查，从而导致可以更快的建立连接。
+ <div class="note">改变 ICE candidate pool的大小将触发启动 ICE gathering。</div>
  </dd>
  <dt><code>iceServers</code> {{optional_inline}}</dt>
  <dd>An array of {{domxref("RTCIceServer")}} objects, each describing one server which may be used by the ICE agent; these are typically STUN and/or TURN servers. If this isn't specified, the ICE agent may choose to use its own ICE servers; otherwise, the connection attempt will be made with no STUN or TURN server available, which limits the connection to local peers.</dd>

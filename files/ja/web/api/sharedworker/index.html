@@ -63,7 +63,7 @@ translation_of: Web/API/SharedWorker
     console.log('Message received from worker');
   }</pre>
 
-<p>Worker の内部では {{domxref("SharedWorkerGlobalScope.onconnect")}} に対してハンドラを設定することで、上述したポートへの接続を処理できます。Worker に関連付けられたポートは  {{event("connect")}} イベントの <code>ports</code> 属性で参照できます。{{domxref("MessagePort")}} <code>の start()</code> メソッドによるポート開始後は、<code>onmessage</code> ハンドラでメインスレッドからのメッセージを処理します。</p>
+<p>Worker の内部では {{domxref("SharedWorkerGlobalScope.onconnect")}} に対してハンドラを設定することで、上述したポートへの接続を処理できます。Worker に関連付けられたポートは  {{event("connect")}} イベントの <code>ports</code> 属性で参照できます。{{domxref("MessagePort")}} <code>の start()</code> メソッドによるポート開始後は、<code>onmessage</code> ハンドラでメインスレッドからのメッセージを処理します。</p>
 
 <pre class="brush: js">onconnect = function(e) {
     var port = e.ports[0];

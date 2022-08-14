@@ -18,7 +18,9 @@ La propriété **`IDBTransaction.error`** de l'interface {{domxref("IDBTransacti
 
 ## Syntaxe
 
-    var myError = transaction.error;
+```js
+var myError = transaction.error;
+```
 
 ### Valeur
 

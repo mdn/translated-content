@@ -3,7 +3,7 @@ title: 'Tutorial Django Parte 9: Trabalhando com formulários'
 slug: Learn/Server-side/Django/Forms
 translation_of: Learn/Server-side/Django/Forms
 ---
-<div> {{LearnSidebar}}</div>
+<div> {{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}</div>
 
@@ -45,9 +45,9 @@ translation_of: Learn/Server-side/Django/Forms
 <p>O formulário é definido no HTML como uma coleção de elementos dentro das tags <code>&lt;form&gt;...&lt;/form&gt;</code>, contendo ao menos um elemento <code>input</code> do tipo <code>type="submit"</code>.</p>
 
 <pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
-    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
-    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
-    &lt;input type="submit" value="OK"&gt;
+    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
+    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
+    &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
 <p>Apesar de aqui nós termos um único para inserir o nome da equipe, um formulário pode ter qualquer quantidade de outros elementos de entrada e suas respectivas legendas. O atributo <code>type</code> de um campo define que tipo de widget será exibido. O <code>name</code> e o <code>id</code> de cada campo são utilizados para identificá-lo no JavaScript/CSS/HTML, enquanto <code>value</code> define o valor preenchido inicialmente no campo quando ele é exibido pela primeira vez. A legenda da equipe é especificada usando a tag <code>label</code> (veja "Enter name" na imagem acima), com um atributo <code>for</code> contendo o valor de <code>id</code> do <code>input</code> a ele associado.</p>
@@ -126,7 +126,7 @@ translation_of: Learn/Server-side/Django/Forms
 <pre class="brush: python">from django import forms
 
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 </pre>
 
 <h4 id="Campos_do_Form">Campos do Form</h4>
@@ -139,7 +139,7 @@ class RenewBookForm(forms.Form):
 
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/#required">required</a>: Se <code>True</code>, o campo não pode ser deixado em branco ou receber um valor <code>None</code>. Os campos são obrigatórios por padrão, então você deve definir <code>required=False</code> para permitir valores em branco no formulário.</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/#label">label</a>: O label a ser usado ao renderizar o campo em HTML. Se um <a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/#label">label</a> não for especificado, o Django criará um a partir do nome do campo colocando em maiúscula a primeira letra e substituindo sublinhados por espaços (e.g. <em>Renewal date</em>).</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/#label">label</a>: O label a ser usado ao renderizar o campo em HTML. Se um <a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/#label">label</a> não for especificado, o Django criará um a partir do nome do campo colocando em maiúscula a primeira letra e substituindo sublinhados por espaços (e.g. <em>Renewal date</em>).</li>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/#label-suffix">label_suffix</a>: Por padrão, dois pontos são exibidos após o rótulo (e.g. Renewal date<strong>:</strong>). Esse argumento permite especificar um sufixo diferente contendo outros caractere(s).</li>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/#initial">initial</a>: O valor inicial para o campo quando o formulário é exibido.</li>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/#widget">widget</a>: O widget de exibição a ser usado.</li>
@@ -163,28 +163,28 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 </strong>
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 
-<strong>    def clean_renewal_date(self):
-        data = self.cleaned_data['renewal_date']
+<strong>    def clean_renewal_date(self):
+        data = self.cleaned_data['renewal_date']
 
-        # Check if a date is not in the past.
-        if data &lt; datetime.date.today():
-            raise ValidationError(_('Invalid date - renewal in past'))
+        # Check if a date is not in the past.
+        if data &lt; datetime.date.today():
+            raise ValidationError(_('Invalid date - renewal in past'))
 
-        # Check if a date is in the allowed range (+4 weeks from today).
-        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+        # Check if a date is in the allowed range (+4 weeks from today).
+        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-        # Remember to always return the cleaned data.
-        return data</strong></pre>
+        # Remember to always return the cleaned data.
+        return data</strong></pre>
 
-<p>Há duas coisas importantes a serem observados. A primeira é que temos nossos dados usando <code>self.cleaned_data['renewal_date']</code> e que nós retornaremos esses dados ou não podemos alterá-lo no final da função. Este passo nos leva a dados "limpos" e higienizados de potencialmente inseguro usando os validadores de entrada padrão e convertidos para o tipo padrão correto para os dados (neste caso, um objeto Python <code>datetime.datetime</code>).</p>
+<p>Há duas coisas importantes a serem observados. A primeira é que temos nossos dados usando <code>self.cleaned_data['renewal_date']</code> e que nós retornaremos esses dados ou não podemos alterá-lo no final da função. Este passo nos leva a dados "limpos" e higienizados de potencialmente inseguro usando os validadores de entrada padrão e convertidos para o tipo padrão correto para os dados (neste caso, um objeto Python <code>datetime.datetime</code>).</p>
 
-<p>O segundo ponto é que, se um valor cai fora da nossa gama que levanta um <code>ValidationError</code>, especificando o texto de erro que deseja exibir no formulário se um valor inválido for inserido. Os exemplos acima também envolvem este texto em um dos <a href="https://docs.djangoproject.com/en/2.1/topics/i18n/translation/">Django's translation functions</a> <code>ugettext_lazy()</code> (importado como <code>_()</code>), que é uma boa prática se você quiser traduzir o seu site mais tarde.</p>
+<p>O segundo ponto é que, se um valor cai fora da nossa gama que levanta um <code>ValidationError</code>, especificando o texto de erro que deseja exibir no formulário se um valor inválido for inserido. Os exemplos acima também envolvem este texto em um dos <a href="https://docs.djangoproject.com/en/2.1/topics/i18n/translation/">Django's translation functions</a> <code>ugettext_lazy()</code> (importado como <code>_()</code>), que é uma boa prática se você quiser traduzir o seu site mais tarde.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Existem muitos outros exemplos e métodos para validar os forms <a href="https://docs.djangoproject.com/en/2.1/ref/forms/validation/">Form e field validation</a> (Django docs). Por exemplo, nos casos em que você tem vários campos que dependem uns dos outros, você pode substituir a função <a href="https://docs.djangoproject.com/en/2.1/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> e novamente levantar uma <code>ValidationError</code>.</p>
+<p><strong>Nota:</strong> Existem muitos outros exemplos e métodos para validar os forms <a href="https://docs.djangoproject.com/en/2.1/ref/forms/validation/">Form e field validation</a> (Django docs). Por exemplo, nos casos em que você tem vários campos que dependem uns dos outros, você pode substituir a função <a href="https://docs.djangoproject.com/en/2.1/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> e novamente levantar uma <code>ValidationError</code>.</p>
 </div>
 
 <p>Isso é tudo que necessitamos para o form neste exemplo?</p>
@@ -197,7 +197,7 @@ class RenewBookForm(forms.Form):
     path('book/&lt;uuid:pk&gt;/renew/', views.renew_book_librarian, name='renew-book-librarian'),
 ]</pre>
 
-<p>A configuração da URL irá redirecionar as URLs com o formato <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> para a função chamada <code>renew_book_librarian()</code> em <strong>views.py</strong>, e enviar o id  <code>BookInstance</code> como parâmetro nomeado <code>pk</code>. O padrão corresponde apenas se <code>pk</code> estiver com a formatação <code>uuid</code> correta.</p>
+<p>A configuração da URL irá redirecionar as URLs com o formato <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> para a função chamada <code>renew_book_librarian()</code> em <strong>views.py</strong>, e enviar o id  <code>BookInstance</code> como parâmetro nomeado <code>pk</code>. O padrão corresponde apenas se <code>pk</code> estiver com a formatação <code>uuid</code> correta.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Podemos citar nos nossos dados capturados na URL "<code>pk</code>" qualquer coisa que quisermos, porque nós temos o controle completo sobra a função view (nós não estamos usando uma view detail genérica, onde se espera os parâmetros com um certo nome). Contudo, a abreviação <code>pk</code> para "chave primária", é uma convenção razoável para uso!</p>
@@ -207,7 +207,7 @@ class RenewBookForm(forms.Form):
 
 <p>Como discutido no <a href="#django_form_handling_process">processo de manipulação de formulários Django </a>acima, a view renderizará o formulário padrão chamado pela primeira vez e então retorná-lo com mensagens de erro se os dados forem inválidos, ou processar os dados e redirecioná-lo para uma nova página se os dados forem válidos.A fim de executar essas ações diferentes, a view deve ser capas de saber se está sendo chamada pela primeira vez para renderizar o form padrão ou um subsequente para a validação dos dados.</p>
 
-<p>Para forms que usam uma solicitação <code>POST</code> para enviar informações para o servidor, o padrão mais comum para a view é testar se o tipo de solicitação é <code>POST</code> (<code>if request.method == 'POST':</code>) para identificar requisições válidas de formulário e <code>GET</code> (usando uma condição <code>else</code>) para identificar a requisição de criação do form inicial. Se você deseja enviar seus dados usando uma reuquisição <code>GET</code> uma abordagem típica para identificar se é a primeira ou subsequente requisição é ler os dados do formulário (por exemplo, ler um valor oculto no form).</p>
+<p>Para forms que usam uma solicitação <code>POST</code> para enviar informações para o servidor, o padrão mais comum para a view é testar se o tipo de solicitação é <code>POST</code> (<code>if request.method == 'POST':</code>) para identificar requisições válidas de formulário e <code>GET</code> (usando uma condição <code>else</code>) para identificar a requisição de criação do form inicial. Se você deseja enviar seus dados usando uma reuquisição <code>GET</code> uma abordagem típica para identificar se é a primeira ou subsequente requisição é ler os dados do formulário (por exemplo, ler um valor oculto no form).</p>
 
 <p>O processo de renovação de livros será gravado em nosso banco de dados, portanto, por convenção, usamos a abordagem de requisição <code>POST</code>. O fragmento de código abaixo mostra o padrão (bem padrão) para esse tipo de exibição de função.</p>
 
@@ -220,101 +220,101 @@ from django.urls import reverse
 from catalog.forms import RenewBookForm
 
 def renew_book_librarian(request, pk):
-    book_instance = get_object_or_404(BookInstance, pk=pk)
+    book_instance = get_object_or_404(BookInstance, pk=pk)
 
-    # If this is a POST request then process the Form data
-<strong>    if request.method == 'POST':</strong>
+    # If this is a POST request then process the Form data
+<strong>    if request.method == 'POST':</strong>
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        <strong>if form.is_valid():</strong>
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_instance.due_back = form.cleaned_data['renewal_date']
-            book_instance.save()
+        # Check if the form is valid:
+        <strong>if form.is_valid():</strong>
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_instance.due_back = form.cleaned_data['renewal_date']
+            book_instance.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form.
-<strong>    else:</strong>
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+    # If this is a GET (or any other method) create the default form.
+<strong>    else:</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
 
     context = {
         'form': form,
         'book_instance': book_instance,
     }
 
-    return render(request, 'catalog/book_renew_librarian.html', context)</pre>
+    return render(request, 'catalog/book_renew_librarian.html', context)</pre>
 
 <p>Primeiro, importamos nosso formulário (<code>RenewBookForm</code>) e outros objetos/métodos úteis usados no corpo da função <em>view</em>:</p>
 
 <ul>
- <li><code><a href="https://docs.djangoproject.com/en/2.1/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>: Retorna um objeto especificado de um modelo com base em seu valor de chave primária, e gera uma exceção <code>Http404</code> (não encontrada) se o registro não existir. </li>
- <li><code><a href="https://docs.djangoproject.com/en/2.1/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>: Isso cria um redirecionamento para uma URL especificada (código de status HTTP 302). </li>
- <li><code><a href="https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#django.urls.reverse">reverse()</a></code>: Isso gera uma URL a partir de uma configuração de nome de URL e um conjunto de argumentos. É o equivalente em Python da tag <code>url</code> que usamos em nossos <em>templates</em>.</li>
+ <li><code><a href="https://docs.djangoproject.com/en/2.1/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>: Retorna um objeto especificado de um modelo com base em seu valor de chave primária, e gera uma exceção <code>Http404</code> (não encontrada) se o registro não existir. </li>
+ <li><code><a href="https://docs.djangoproject.com/en/2.1/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>: Isso cria um redirecionamento para uma URL especificada (código de status HTTP 302). </li>
+ <li><code><a href="https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#django.urls.reverse">reverse()</a></code>: Isso gera uma URL a partir de uma configuração de nome de URL e um conjunto de argumentos. É o equivalente em Python da tag <code>url</code> que usamos em nossos <em>templates</em>.</li>
  <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: Uma biblioteca Python para a manipulação de dadas e tempo.</li>
 </ul>
 
-<p>Na <em>view</em>, primeiro usamos o argumento <code>pk</code> em <code>get_object_or_404()</code> para obter o <code>BookInstance</code> atual (se isso não existir, a <em>view</em> será imediatamente encerrada e a página exibirá um erro "não encontrada"). Se essa não for uma solicitação <code>POST</code> (manipulada pela cláusula <code>else</code>) criamos o formulário padrão passando o valor <code>initial</code> para o campo <code>renewal_date</code> (como mostrado abaixo em negrito, isso é, 3 semanas a partir da data atual). </p>
+<p>Na <em>view</em>, primeiro usamos o argumento <code>pk</code> em <code>get_object_or_404()</code> para obter o <code>BookInstance</code> atual (se isso não existir, a <em>view</em> será imediatamente encerrada e a página exibirá um erro "não encontrada"). Se essa não for uma solicitação <code>POST</code> (manipulada pela cláusula <code>else</code>) criamos o formulário padrão passando o valor <code>initial</code> para o campo <code>renewal_date</code> (como mostrado abaixo em negrito, isso é, 3 semanas a partir da data atual). </p>
 
 <pre class="brush: python">    book_instance = get_object_or_404(BookInstance, pk=pk)
 
-    # If this is a GET (or any other method) create the default form
-    else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
-        <strong>form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})</strong>
+    # If this is a GET (or any other method) create the default form
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
+        <strong>form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})</strong>
 
     context = {
         'form': form,
         'book_instance': book_instance,
     }
 
-    return render(request, 'catalog/book_renew_librarian.html', context)</pre>
+    return render(request, 'catalog/book_renew_librarian.html', context)</pre>
 
-<p>Depois de criar o <em>form</em>, chamamos <code>render()</code> para criar a página HTML, especificando o <em>template</em> e o <em>context</em> que contém o nosso <em>form</em>. Nesse caso, o <em>context</em> também contem nosso <code>BookInstance</code>, que usaremos no <em>template</em> para fornecer informações sobre o livro que estamos renovando.</p>
+<p>Depois de criar o <em>form</em>, chamamos <code>render()</code> para criar a página HTML, especificando o <em>template</em> e o <em>context</em> que contém o nosso <em>form</em>. Nesse caso, o <em>context</em> também contem nosso <code>BookInstance</code>, que usaremos no <em>template</em> para fornecer informações sobre o livro que estamos renovando.</p>
 
-<p>No entenato, se essa for uma solicitação <code>POST</code> , criamos nosso objeto <code>form</code> e prenchemos com dados da requisição. Esse processo é chamado <em>"binding"</em> e permite validar o formulário. Em seguida, verificamos se o formulário é válido, que executa todo o código de validação em todos os campos — incluindo o código genérico para verificar se nosso campo de data é realmente uma data válida e a função específica <code>clean_renewal_date()</code> do nosso formulário para verificar se a data está na faixa certa. </p>
+<p>No entenato, se essa for uma solicitação <code>POST</code> , criamos nosso objeto <code>form</code> e prenchemos com dados da requisição. Esse processo é chamado <em>"binding"</em> e permite validar o formulário. Em seguida, verificamos se o formulário é válido, que executa todo o código de validação em todos os campos — incluindo o código genérico para verificar se nosso campo de data é realmente uma data válida e a função específica <code>clean_renewal_date()</code> do nosso formulário para verificar se a data está na faixa certa. </p>
 
-<pre class="brush: python">    book_instance = get_object_or_404(BookInstance, pk=pk)
+<pre class="brush: python">    book_instance = get_object_or_404(BookInstance, pk=pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-<strong>        form = RenewBookForm(request.POST)</strong>
+        # Create a form instance and populate it with data from the request (binding):
+<strong>        form = RenewBookForm(request.POST)</strong>
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_instance.due_back = form.cleaned_data['renewal_date']
-            book_instance.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_instance.due_back = form.cleaned_data['renewal_date']
+            book_instance.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
     context = {
         'form': form,
         'book_instance': book_instance,
     }
 
-    return render(request, 'catalog/book_renew_librarian.html', context)</pre>
+    return render(request, 'catalog/book_renew_librarian.html', context)</pre>
 
-<p>Se o formulário não é válido, chamamos <code>render()</code> novamente, mas dessa vez o valor passado de <em>form</em> no <em>context</em> incluirá mensagens de erro. </p>
+<p>Se o formulário não é válido, chamamos <code>render()</code> novamente, mas dessa vez o valor passado de <em>form</em> no <em>context</em> incluirá mensagens de erro. </p>
 
-<p>Se o formulário é válido, então podemos começar a utilizar os dados, acessando-o por meio do atributo<code>form.cleaned_data</code> (Ex. <code>data = form.cleaned_data['renewal_date']</code>). Aqui, apenas salvamos os dados no atributo <code>due_back</code> do objeto <code>BookInstance</code> associado.</p>
+<p>Se o formulário é válido, então podemos começar a utilizar os dados, acessando-o por meio do atributo<code>form.cleaned_data</code> (Ex. <code>data = form.cleaned_data['renewal_date']</code>). Aqui, apenas salvamos os dados no atributo <code>due_back</code> do objeto <code>BookInstance</code> associado.</p>
 
 <div class="warning">
-<p><strong>Importante</strong>: Embora você também possa acessar os dados do formulário diretamente por meio do <em>request</em> (por exemplo, <code>request.POST['renewal_date']</code> ou <code>request.GET['renewal_date']</code> se utilizando requisição GET), isso NÃO é recomendado. O dado limpo é "higienizado", validado, e convertido em tipo compatível com Python.</p>
+<p><strong>Importante</strong>: Embora você também possa acessar os dados do formulário diretamente por meio do <em>request</em> (por exemplo, <code>request.POST['renewal_date']</code> ou <code>request.GET['renewal_date']</code> se utilizando requisição GET), isso NÃO é recomendado. O dado limpo é "higienizado", validado, e convertido em tipo compatível com Python.</p>
 </div>
 
-<p>A estapa final da manipulação de formulário na parte da <em>view</em> é redirecionar para outra página, geralmente uma página de "êxito". Nesse caso, usamos  <code>HttpResponseRedirect</code> e <code>reverse()</code> para redirecionar para a <em>view </em>chamada <code>'all-borrowed'</code> (isso foi criado como desafio em <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Tutorial Django Parte 8: Autenticação de usuário e permissões</a>). Se você não criou está página considere redirecionar para a página principal na URL '/').</p>
+<p>A estapa final da manipulação de formulário na parte da <em>view</em> é redirecionar para outra página, geralmente uma página de "êxito". Nesse caso, usamos  <code>HttpResponseRedirect</code> e <code>reverse()</code> para redirecionar para a <em>view </em>chamada <code>'all-borrowed'</code> (isso foi criado como desafio em <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Tutorial Django Parte 8: Autenticação de usuário e permissões</a>). Se você não criou está página considere redirecionar para a página principal na URL '/').</p>
 
-<p>Isso é tudo que é necessário para a manipulação do formulario, mas ainda precisamo restringir o acesso a <em>view</em> aos bibliotecários. Provavelmente devemos criar uma nova permissão em <code>BookInstance</code> ("<code>can_renew</code>"), mas, para simplificar as coisa aqui, apenas usamos o <em>decorator </em>da função<em>,  </em><code>@permission_required</code> com nossa permissão existente  <code>can_mark_returned</code>.</p>
+<p>Isso é tudo que é necessário para a manipulação do formulario, mas ainda precisamo restringir o acesso a <em>view</em> aos bibliotecários. Provavelmente devemos criar uma nova permissão em <code>BookInstance</code> ("<code>can_renew</code>"), mas, para simplificar as coisa aqui, apenas usamos o <em>decorator </em>da função<em>,  </em><code>@permission_required</code> com nossa permissão existente  <code>can_mark_returned</code>.</p>
 
-<p>A <em>view</em> final, é portanto, como mostrado abaixo. Por favor, copie isso na parte inferior de <strong>locallibrary/catalog/views.py</strong>.</p>
+<p>A <em>view</em> final, é portanto, como mostrado abaixo. Por favor, copie isso na parte inferior de <strong>locallibrary/catalog/views.py</strong>.</p>
 
 <pre><strong>import datetime
 
@@ -327,40 +327,40 @@ from catalog.forms import RenewBookForm
 
 <strong>@permission_required('catalog.can_mark_returned')</strong>
 def renew_book_librarian(request, pk):
-    """View function for renewing a specific BookInstance by librarian."""
-    book_instance = get_object_or_404(BookInstance, pk=pk)
+    """View function for renewing a specific BookInstance by librarian."""
+    book_instance = get_object_or_404(BookInstance, pk=pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_instance.due_back = form.cleaned_data['renewal_date']
-            book_instance.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_instance.due_back = form.cleaned_data['renewal_date']
+            book_instance.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form.
-    else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+    # If this is a GET (or any other method) create the default form.
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
 
     context = {
         'form': form,
         'book_instance': book_instance,
     }
 
-    return render(request, 'catalog/book_renew_librarian.html', context)
+    return render(request, 'catalog/book_renew_librarian.html', context)
 </pre>
 
 <h3 id="O_template">O <em>template</em></h3>
 
-<p>Crie o <em>template</em> mencionado na <em>view</em> (<strong>/catalog/templates/catalog/book_renew_librarian.html</strong>) e copie o código abaixo nele:</p>
+<p>Crie o <em>template</em> mencionado na <em>view</em> (<strong>/catalog/templates/catalog/book_renew_librarian.html</strong>) e copie o código abaixo nele:</p>
 
 <pre class="brush: html">{% extends "base_generic.html" %}
 
@@ -371,77 +371,77 @@ def renew_book_librarian(request, pk):
 
 <strong>  &lt;form action="" method="post"&gt;
     {% csrf_token %}
-    &lt;table&gt;
+    &lt;table&gt;
     \{{ form.as_table }}
     &lt;/table&gt;
     &lt;input type="submit" value="Submit"&gt;
   &lt;/form&gt;</strong>
 {% endblock %}</pre>
 
-<p>A maior parte disso será totalmente familiar dos tutoriais anteriores. Estendemos o <em>template</em> base e então redefinimos o bloco <em>content</em>. Somos capazes de referenciar  <code>\{{ book_instance }}</code> (e suas variáveis) porque foi passado no objeto <em>context</em> na função <code>render()</code>, e nós as usamos para listar o título do livro, tomador do empréstimo, e a data de devolução original.</p>
+<p>A maior parte disso será totalmente familiar dos tutoriais anteriores. Estendemos o <em>template</em> base e então redefinimos o bloco <em>content</em>. Somos capazes de referenciar  <code>\{{ book_instance }}</code> (e suas variáveis) porque foi passado no objeto <em>context</em> na função <code>render()</code>, e nós as usamos para listar o título do livro, tomador do empréstimo, e a data de devolução original.</p>
 
-<p>O código do formulário é relativamente simples. Primeiro, declaramos a tag <code>form</code>, especificando onde o formulário deve ser submetido (<code>action</code>) e o <code>method</code> para submeter os dados (nesse caso, um "HTTP POST") — se você lembrar da visão geral de <a href="#HTML_forms">Formulários HTML</a> na parte superior da página, uma <code>action</code> vazia, como mostrada, significa que os dados do formulário serão postados de volta para a URL atual da página (que é o que queremos!). Dentro das tags, definimos a entrada <code>submit</code>, que um usuário pode apertar para submeter os dados. O <code>{% csrf_token %}</code> adicionado apenas dentro das tags do formulário é parte da proteção de falsificação ente sites (cross-site forgery protection) do  Django.</p>
+<p>O código do formulário é relativamente simples. Primeiro, declaramos a tag <code>form</code>, especificando onde o formulário deve ser submetido (<code>action</code>) e o <code>method</code> para submeter os dados (nesse caso, um "HTTP POST") — se você lembrar da visão geral de <a href="#HTML_forms">Formulários HTML</a> na parte superior da página, uma <code>action</code> vazia, como mostrada, significa que os dados do formulário serão postados de volta para a URL atual da página (que é o que queremos!). Dentro das tags, definimos a entrada <code>submit</code>, que um usuário pode apertar para submeter os dados. O <code>{% csrf_token %}</code> adicionado apenas dentro das tags do formulário é parte da proteção de falsificação ente sites (cross-site forgery protection) do  Django.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Adicione o <code>{% csrf_token %}</code> para todos os <em>templates </em>Django que você cria que utiliza <code>POST</code> para submeter dados. Isso reduzirá a chance de que os formulários sejam invadidos por usuários maliciosos.</p>
+<p><strong>Nota:</strong> Adicione o <code>{% csrf_token %}</code> para todos os <em>templates </em>Django que você cria que utiliza <code>POST</code> para submeter dados. Isso reduzirá a chance de que os formulários sejam invadidos por usuários maliciosos.</p>
 </div>
 
-<p>Tudo que resta é  a variável <code>\{{ form }}</code> do <em>template</em>, que passamos para o <em>template</em> no dicionário <em>context</em>. Talvez, sem supresa, quando usado como mostrado, isto fornece a renderização padrão de todos os campos do formulário, incluindo seus <em>labels</em>, <em>widgets</em> e texto de ajuda —  a renderização é como mostrado abaixo:</p>
+<p>Tudo que resta é  a variável <code>\{{ form }}</code> do <em>template</em>, que passamos para o <em>template</em> no dicionário <em>context</em>. Talvez, sem supresa, quando usado como mostrado, isto fornece a renderização padrão de todos os campos do formulário, incluindo seus <em>labels</em>, <em>widgets</em> e texto de ajuda —  a renderização é como mostrado abaixo:</p>
 
 <pre class="brush: html">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-  &lt;td&gt;
-    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required&gt;
-    &lt;br&gt;
-    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
-  &lt;/td&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+  &lt;td&gt;
+    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required&gt;
+    &lt;br&gt;
+    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;/td&gt;
 &lt;/tr&gt;
 </pre>
 
 <div class="note">
-<p><strong>Nota:</strong> Talvez não seja óbvio porque temos apenas um campo, mas, por padrão, todo campo é definido em sua própria linha de tabela. Essa mesma renderização é fornecida se você referenciar a váriavel de <em>template</em> <code>\{{ form.as_table }}</code>.</p>
+<p><strong>Nota:</strong> Talvez não seja óbvio porque temos apenas um campo, mas, por padrão, todo campo é definido em sua própria linha de tabela. Essa mesma renderização é fornecida se você referenciar a váriavel de <em>template</em> <code>\{{ form.as_table }}</code>.</p>
 </div>
 
-<p>Se você fosse inserir uama data inválida, você também obteria uma lista dos erros renderizados na página (mostrado em negrito abaixo).</p>
+<p>Se você fosse inserir uama data inválida, você também obteria uma lista dos erros renderizados na página (mostrado em negrito abaixo).</p>
 
 <pre class="brush: html">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-    &lt;td&gt;
-<strong>      &lt;ul class="errorlist"&gt;
-        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
-      &lt;/ul&gt;</strong>
-      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required&gt;
-      &lt;br&gt;
-      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+    &lt;td&gt;
+<strong>      &lt;ul class="errorlist"&gt;
+        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
+      &lt;/ul&gt;</strong>
+      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required&gt;
+      &lt;br&gt;
+      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
     &lt;/td&gt;
 &lt;/tr&gt;</pre>
 
-<h4 id="Outras_maneiras_de_usar_variável_de_formulário_de_template">Outras maneiras de usar variável de formulário de <em>template</em></h4>
+<h4 id="Outras_maneiras_de_usar_variável_de_formulário_de_template">Outras maneiras de usar variável de formulário de <em>template</em></h4>
 
-<p>Usando <code>\{{ form.as_table }}</code> como mostrado acima, cada campo é renderizado como uma linha da tabela. Você também pode renderizar cada campo como um item da lista (usando <code>\{{ form.as_ul }}</code> ) como um parágrafo (usando <code>\{{ form.as_p }}</code>).</p>
+<p>Usando <code>\{{ form.as_table }}</code> como mostrado acima, cada campo é renderizado como uma linha da tabela. Você também pode renderizar cada campo como um item da lista (usando <code>\{{ form.as_ul }}</code> ) como um parágrafo (usando <code>\{{ form.as_p }}</code>).</p>
 
-<p>Também é possível ter controle completo sobre a renderização de cada parte do formulário, indexando suas propriedades usando notação de ponto. Assim, por exemplo, podemos acessar vários itens separados pelo nosso campo <code>renewal_date</code>:</p>
+<p>Também é possível ter controle completo sobre a renderização de cada parte do formulário, indexando suas propriedades usando notação de ponto. Assim, por exemplo, podemos acessar vários itens separados pelo nosso campo <code>renewal_date</code>:</p>
 
 <ul>
  <li><code>\{{ form.renewal_date }}:</code> O campo todo.</li>
  <li><code>\{{ form.renewal_date.errors }}</code>: A lista de erros.</li>
- <li><code>\{{ form.renewal_date.id_for_label }}</code>: O id do <em>label</em>.</li>
+ <li><code>\{{ form.renewal_date.id_for_label }}</code>: O id do <em>label</em>.</li>
  <li><code>\{{ form.renewal_date.help_text }}</code>: O texto de ajuda do campo.</li>
 </ul>
 
-<p>Para mais exemplos de como renderizar formulários manualmente em <em>templates </em>e fazer loop nos campos de <em>templates</em>, veja <a href="https://docs.djangoproject.com/en/2.1/topics/forms/#rendering-fields-manually">Trabalhando com formulários &gt; Renderizando campos manualmente</a> (Django docs).</p>
+<p>Para mais exemplos de como renderizar formulários manualmente em <em>templates </em>e fazer loop nos campos de <em>templates</em>, veja <a href="https://docs.djangoproject.com/en/2.1/topics/forms/#rendering-fields-manually">Trabalhando com formulários &gt; Renderizando campos manualmente</a> (Django docs).</p>
 
 <h3 id="Testando_a_página">Testando a página</h3>
 
-<p>Se você aceitou o "desafio" em <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Tutorial Django Parte 8: Autenticação de usuário e permissões</a> você terá uma lista de todos os livros emprestados na biblioteca, que é visível apenas aos funcionários da biblioteca. Podemos adicionar um <em>link</em> para nossa página de renovação ao lado de cada item, usando o código de modelo abaixo.</p>
+<p>Se você aceitou o "desafio" em <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Tutorial Django Parte 8: Autenticação de usuário e permissões</a> você terá uma lista de todos os livros emprestados na biblioteca, que é visível apenas aos funcionários da biblioteca. Podemos adicionar um <em>link</em> para nossa página de renovação ao lado de cada item, usando o código de modelo abaixo.</p>
 
 <pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Lembre que seu login de teste precisará ter a permissão  "<code>catalog.can_mark_returned</code>" para acessar a página de renovação de livro (talvez use sua conta de superusuário).</p>
+<p><strong>Nota</strong>: Lembre que seu login de teste precisará ter a permissão  "<code>catalog.can_mark_returned</code>" para acessar a página de renovação de livro (talvez use sua conta de superusuário).</p>
 </div>
 
-<p>Você pode, alternativamente, construir manualmente uma URL de teste como esta — <a href="http://127.0.0.1:8000/catalog/book/&lt;bookinstance id>/renew/">http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</a> (um id válido de <em>bookinstance</em> pode ser obtido navegando para a página de detalhes de um livro em sua biblioteca, e copiando o campo<code>id</code>).</p>
+<p>Você pode, alternativamente, construir manualmente uma URL de teste como esta — <a href="http://127.0.0.1:8000/catalog/book/&lt;bookinstance id>/renew/">http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</a> (um id válido de <em>bookinstance</em> pode ser obtido navegando para a página de detalhes de um livro em sua biblioteca, e copiando o campo<code>id</code>).</p>
 
 <h3 id="Com_o_que_se_parece">Com o que se parece?</h3>
 
@@ -461,9 +461,9 @@ def renew_book_librarian(request, pk):
 
 <p>Criar uma classe<code>Form</code> usando a abordagem descrita acima é muito flexível, permitindo criar qualquer tipo de página de formulário que você desejar e associá-la a qualquer modelo ou modelos.</p>
 
-<p>Contudo, se você só precisa de um formulário para mapear os campos de um único modelo, então seu modelo já definirá a maioria das informações que vocÊ precisa em seu formulário: campos, rótulos, texto de ajuda, etc. Em vez de recriar as definições do modelo em seu formulário, é mais fácil usar a classe auxiliar <a href="https://docs.djangoproject.com/en/2.1/topics/forms/modelforms/">ModelForm</a> para criar o formulário a partir do seu modelo. Esse <code>ModelForm</code> pode ser usado em suas <em>views</em> exatamente da mesma maneira como um <code>Form</code> comum.</p>
+<p>Contudo, se você só precisa de um formulário para mapear os campos de um único modelo, então seu modelo já definirá a maioria das informações que vocÊ precisa em seu formulário: campos, rótulos, texto de ajuda, etc. Em vez de recriar as definições do modelo em seu formulário, é mais fácil usar a classe auxiliar <a href="https://docs.djangoproject.com/en/2.1/topics/forms/modelforms/">ModelForm</a> para criar o formulário a partir do seu modelo. Esse <code>ModelForm</code> pode ser usado em suas <em>views</em> exatamente da mesma maneira como um <code>Form</code> comum.</p>
 
-<p>Uma <code>ModelForm</code> contém o mesmo campo que nossa <code>RenewBookForm</code> original, como mostrado abaixo. Tudo que você precisa fazer para criar o formulário é adicionar <code>class Meta</code> com o <code>model</code> (<code>BookInstance</code>) associado e uma lista dos <code>fields</code> do modelo a serem incluídos no formulário (você pode incluir todos os campos usando <code>fields = '__all__'</code>, ou pode usar <code>exclude</code> (em vez de <code>fields</code>) para especificar os campos do modelo a não incluir).</p>
+<p>Uma <code>ModelForm</code> contém o mesmo campo que nossa <code>RenewBookForm</code> original, como mostrado abaixo. Tudo que você precisa fazer para criar o formulário é adicionar <code>class Meta</code> com o <code>model</code> (<code>BookInstance</code>) associado e uma lista dos <code>fields</code> do modelo a serem incluídos no formulário (você pode incluir todos os campos usando <code>fields = '__all__'</code>, ou pode usar <code>exclude</code> (em vez de <code>fields</code>) para especificar os campos do modelo a não incluir).</p>
 
 <pre class="brush: python">from django.forms import ModelForm
 
@@ -476,10 +476,10 @@ class RenewBookModelForm(ModelForm):
 </pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Isso pode não parecer muito mais simples do que apenas usar um <code>Form</code> (e não é nesse caso, porque temos apenas um campo). No entanto, se você tiver muitos campos, isso pode reduzir a quantidade de código significativamente!</p>
+<p><strong>Nota</strong>: Isso pode não parecer muito mais simples do que apenas usar um <code>Form</code> (e não é nesse caso, porque temos apenas um campo). No entanto, se você tiver muitos campos, isso pode reduzir a quantidade de código significativamente!</p>
 </div>
 
-<p>O restante das informações vem das definições de campo do modelo (ex. rótulos, <em>widgets</em>, texdo de ajuda, mensagens de erro). Se isso não for suficiente, então podemos substituí-los em nossa <code>class Meta</code>, especificando um dicionário contendo o campo para mudar e seu novo valor. Por exemplo, neste formulário podemos querer um rótulo para nosso campo de "<em>Renewal date</em>" (em vez do padrão baseado no padrão com base no nome do campo: <em>Due Back</em>), e também queremos que nosso campo de ajuda seja específico para esse caso de uso. A <code>Meta</code> abaixo mostra como substituir esses campos, e você pode definir <code>widgets</code> and <code>error_messages</code> da mesma forma, se os padrões não forem suficientes.</p>
+<p>O restante das informações vem das definições de campo do modelo (ex. rótulos, <em>widgets</em>, texdo de ajuda, mensagens de erro). Se isso não for suficiente, então podemos substituí-los em nossa <code>class Meta</code>, especificando um dicionário contendo o campo para mudar e seu novo valor. Por exemplo, neste formulário podemos querer um rótulo para nosso campo de "<em>Renewal date</em>" (em vez do padrão baseado no padrão com base no nome do campo: <em>Due Back</em>), e também queremos que nosso campo de ajuda seja específico para esse caso de uso. A <code>Meta</code> abaixo mostra como substituir esses campos, e você pode definir <code>widgets</code> and <code>error_messages</code> da mesma forma, se os padrões não forem suficientes.</p>
 
 <pre class="brush: python">class Meta:
     model = BookInstance
@@ -488,26 +488,26 @@ class RenewBookModelForm(ModelForm):
     help_texts = {'due_back</strong><strong>': _('Enter a date between now and 4 weeks (default 3).')} </strong>
 </pre>
 
-<p>Para adicionar validação você pode usar  a mesma abordagem como uma <code>Form</code> normal — você define uma função chamada <code>clean_<em>field_name</em>()</code> e <em>raise</em> a exceção <code>ValidationError</code> para valores inválidos. A única diferença em relação ao nosso <em>form </em>original é que o campo do modelo é chamdo <code>due_back</code> e não "<code>renewal_date</code>". Essa mudança é necessária pois o campo correspondente em <code>BookInstance</code> é chamado <code>due_back</code>. </p>
+<p>Para adicionar validação você pode usar  a mesma abordagem como uma <code>Form</code> normal — você define uma função chamada <code>clean_<em>field_name</em>()</code> e <em>raise</em> a exceção <code>ValidationError</code> para valores inválidos. A única diferença em relação ao nosso <em>form </em>original é que o campo do modelo é chamdo <code>due_back</code> e não "<code>renewal_date</code>". Essa mudança é necessária pois o campo correspondente em <code>BookInstance</code> é chamado <code>due_back</code>. </p>
 
 <pre class="brush: python">from django.forms import ModelForm
 
 from catalog.models import BookInstance
 
 class RenewBookModelForm(ModelForm):
-<strong>    def clean_due_back(self):
-       data = self.cleaned_data['due_back</strong><strong>']
+<strong>    def clean_due_back(self):
+       data = self.cleaned_data['due_back</strong><strong>']
 
-       # Check if a date is not in the past.
-       if data &lt; datetime.date.today():
-           raise ValidationError(_('Invalid date - renewal in past'))
+       # Check if a date is not in the past.
+       if data &lt; datetime.date.today():
+           raise ValidationError(_('Invalid date - renewal in past'))
 
-       <strong># Check if a date is in the allowed range (+4 weeks from today).</strong>
-       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+       <strong># Check if a date is in the allowed range (+4 weeks from today).</strong>
+       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-       # Remember to always return the cleaned data.
-       return data
+       # Remember to always return the cleaned data.
+       return data
 </strong>
     class Meta:
         model = BookInstance
@@ -516,21 +516,21 @@ class RenewBookModelForm(ModelForm):
         help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')}
 </pre>
 
-<p>A classe <code>RenewBookModelForm</code> acima agora é funcionalmente equivalente a nossa original <code>RenewBookForm</code>. Você poderia importar e usar onde quer que você use <code>RenewBookForm</code> desde que você também atualize o nome da variável do formulário correspondente de <code>renewal_date</code> para <code>due_back</code> como na segunda declaração do formulário: <code>RenewBookModelForm(initial={'due_back': proposed_renewal_date}</code>.</p>
+<p>A classe <code>RenewBookModelForm</code> acima agora é funcionalmente equivalente a nossa original <code>RenewBookForm</code>. Você poderia importar e usar onde quer que você use <code>RenewBookForm</code> desde que você também atualize o nome da variável do formulário correspondente de <code>renewal_date</code> para <code>due_back</code> como na segunda declaração do formulário: <code>RenewBookModelForm(initial={'due_back': proposed_renewal_date}</code>.</p>
 
 <h2 id="Views_genéricas_de_edição">Views genéricas de edição</h2>
 
-<p>O algoritmo de manipulação de formulários que usamos em nosso exemplo de função <em>view</em> acima, representa um padrão extremamente comum nas <em>views</em> de edição de formulário. Django abstrai grande parte desse "<em>boilerplate</em>" (trabalho repetitivo) para você, criando <a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/">views genéricas de edição</a> para views de criação, edição e exclusão baseadas em modelos. Não apenas lidam com o comportamento de visualização, mas também criam automaticamente para você a classe de formulário (uma <code>ModelForm</code>) a partir do modelo.</p>
+<p>O algoritmo de manipulação de formulários que usamos em nosso exemplo de função <em>view</em> acima, representa um padrão extremamente comum nas <em>views</em> de edição de formulário. Django abstrai grande parte desse "<em>boilerplate</em>" (trabalho repetitivo) para você, criando <a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/">views genéricas de edição</a> para views de criação, edição e exclusão baseadas em modelos. Não apenas lidam com o comportamento de visualização, mas também criam automaticamente para você a classe de formulário (uma <code>ModelForm</code>) a partir do modelo.</p>
 
 <div class="note">
-<p><strong>Nota: </strong>Além das <em>views</em> de edição descritas aqui, há também uma classe <a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview">FormView</a>, que fica em algum lugar entre nossa função <em>view</em> e outra <em>view</em> genérica em termos de "flexibilidade" vs "esforço de codificação". Usando <code>FormView</code>, você ainda precisa criar seu <code>Form</code>, mas não precisa implementar todos os padrões de manipulação de formulário. Em vez disso, você tem apenas que fornecer uma implementação da função que será chamada assim que o envio for válido.</p>
+<p><strong>Nota: </strong>Além das <em>views</em> de edição descritas aqui, há também uma classe <a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/#formview">FormView</a>, que fica em algum lugar entre nossa função <em>view</em> e outra <em>view</em> genérica em termos de "flexibilidade" vs "esforço de codificação". Usando <code>FormView</code>, você ainda precisa criar seu <code>Form</code>, mas não precisa implementar todos os padrões de manipulação de formulário. Em vez disso, você tem apenas que fornecer uma implementação da função que será chamada assim que o envio for válido.</p>
 </div>
 
-<p>Nessa seção vamos usar <em>views</em> genericas de edição para criar páginas para adicionar funcionalidades para criar, editar e excluir registros de <code>Author</code> da nossa biblioteca — fornecendo efetivamente uma reimplementação básica de parte do site <em>Admin</em> (isso poderá ser útil se você precisa oferecer funcionalidades de administrador de uma maneira mais flexível que possa ser fornecida pelo dite <em>Admin</em>).</p>
+<p>Nessa seção vamos usar <em>views</em> genericas de edição para criar páginas para adicionar funcionalidades para criar, editar e excluir registros de <code>Author</code> da nossa biblioteca — fornecendo efetivamente uma reimplementação básica de parte do site <em>Admin</em> (isso poderá ser útil se você precisa oferecer funcionalidades de administrador de uma maneira mais flexível que possa ser fornecida pelo dite <em>Admin</em>).</p>
 
 <h3 id="Views"><em>Views</em></h3>
 
-<p>Abra o arquivo das <em>views</em> (<strong>locallibrary/catalog/views.py</strong>) e acrescente o seguinte bloco de código na parte inferior:</p>
+<p>Abra o arquivo das <em>views</em> (<strong>locallibrary/catalog/views.py</strong>) e acrescente o seguinte bloco de código na parte inferior:</p>
 
 <pre class="brush: python">from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -550,17 +550,17 @@ class AuthorDelete(DeleteView):
     model = Author
     success_url = reverse_lazy('authors')</pre>
 
-<p>Como você pode ver, para criar, atualizar e excluir as <em>views</em>, você precisa derivar de <code>CreateView</code>, <code>UpdateView</code>, e <code>DeleteView</code> (respectivamente) e então definir o modelo associado.</p>
+<p>Como você pode ver, para criar, atualizar e excluir as <em>views</em>, você precisa derivar de <code>CreateView</code>, <code>UpdateView</code>, e <code>DeleteView</code> (respectivamente) e então definir o modelo associado.</p>
 
-<p>Para os casos "criar" e "atualizar" você também precisa especificar os campos para mostrar no formulário (usando a mesma sintaxe que para <code>ModelForm</code>). Nesse caso, nós mostramos ambas as sintaxes para mostrar todos (<em>"all"</em>) campos e como você pode listar eles individualmente. Você também pode especificar valores iniciais para cada campo usando um dicionário com pares nome_campo/valor (aqui, arbitrariamente, definimos a data de morte para fins de demonstração — talvez você queira remover isso!). Por padrão, essas <em>views</em> irão redirecionar, se houver sucesso, para uma página mostrando o item do modelo recentemente criado/editado, que no nosso caso será a página de visualização de detalhes do autor que criamos em um tutorial anterior. Você pode especificar ums local de redirecionamento alternativo, declarando explicitamente o parâmetro <code>success_url</code> (como feito na classe <code>AuthorDelete</code>).</p>
+<p>Para os casos "criar" e "atualizar" você também precisa especificar os campos para mostrar no formulário (usando a mesma sintaxe que para <code>ModelForm</code>). Nesse caso, nós mostramos ambas as sintaxes para mostrar todos (<em>"all"</em>) campos e como você pode listar eles individualmente. Você também pode especificar valores iniciais para cada campo usando um dicionário com pares nome_campo/valor (aqui, arbitrariamente, definimos a data de morte para fins de demonstração — talvez você queira remover isso!). Por padrão, essas <em>views</em> irão redirecionar, se houver sucesso, para uma página mostrando o item do modelo recentemente criado/editado, que no nosso caso será a página de visualização de detalhes do autor que criamos em um tutorial anterior. Você pode especificar ums local de redirecionamento alternativo, declarando explicitamente o parâmetro <code>success_url</code> (como feito na classe <code>AuthorDelete</code>).</p>
 
-<p>A classe <code>AuthorDelete</code>  não precisa mostrar nenhum dos campos, então eles não precisam ser especificados. No entanto, você precisa especificar a  <code>success_url</code>, porque  não há um valor padrão óbvio para o Django usar. Nesse caso, usamos a função <code><a href="https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#reverse-lazy">reverse_lazy()</a></code> para redirecioanr para nossa lista de autores depois que um autor é excluido — <code>reverse_lazy()</code> é uma versão executada "preguiçosamente" de <code>reverse()</code>, usada aqui porque estamos fornecendo uma URL para um atributo baseado em classe de <em>view</em>.</p>
+<p>A classe <code>AuthorDelete</code>  não precisa mostrar nenhum dos campos, então eles não precisam ser especificados. No entanto, você precisa especificar a  <code>success_url</code>, porque  não há um valor padrão óbvio para o Django usar. Nesse caso, usamos a função <code><a href="https://docs.djangoproject.com/en/2.1/ref/urlresolvers/#reverse-lazy">reverse_lazy()</a></code> para redirecioanr para nossa lista de autores depois que um autor é excluido — <code>reverse_lazy()</code> é uma versão executada "preguiçosamente" de <code>reverse()</code>, usada aqui porque estamos fornecendo uma URL para um atributo baseado em classe de <em>view</em>.</p>
 
 <h3 id="Templates"><em>Templates</em></h3>
 
-<p>As <em>views</em> "<em>create</em>" e "<em>update</em>"  usam o mesmo <em>template</em> por padrão, que serão nomeadas seguindo o modelo: <em>model_name</em><strong>_form.html</strong> (você pode mudar o sufixo para algo diferente de <strong>_form</strong> usando o campo <code>template_name_suffix</code> em sua <em>view</em>, ex. <code>template_name_suffix = '_other_suffix'</code>)</p>
+<p>As <em>views</em> "<em>create</em>" e "<em>update</em>"  usam o mesmo <em>template</em> por padrão, que serão nomeadas seguindo o modelo: <em>model_name</em><strong>_form.html</strong> (você pode mudar o sufixo para algo diferente de <strong>_form</strong> usando o campo <code>template_name_suffix</code> em sua <em>view</em>, ex. <code>template_name_suffix = '_other_suffix'</code>)</p>
 
-<p>Crie o arquivo de <em>template  </em><strong>locallibrary/catalog/templates/catalog/author_form.html</strong> e copie o texto abaixo.</p>
+<p>Crie o arquivo de <em>template  </em><strong>locallibrary/catalog/templates/catalog/author_form.html</strong> e copie o texto abaixo.</p>
 
 <pre class="brush: html">{% extends "base_generic.html" %}
 
@@ -574,9 +574,9 @@ class AuthorDelete(DeleteView):
   &lt;/form&gt;
 {% endblock %}</pre>
 
-<p>Isso é semelhante aos nossos formulários anteriores e renderiza os campos usando uma tabela. Note também como novamente declaramos o <code>{% csrf_token %}</code> para garantir que nossos formulários são resistentes a ataques CSRF.</p>
+<p>Isso é semelhante aos nossos formulários anteriores e renderiza os campos usando uma tabela. Note também como novamente declaramos o <code>{% csrf_token %}</code> para garantir que nossos formulários são resistentes a ataques CSRF.</p>
 
-<p>A <em>view</em> "delete" espera encontrar um <em>template</em> nomeado com o formato  <em>model_name</em><strong>_confirm_delete.html</strong> (novamente, você pode mudar o sufixo usando <code>template_name_suffix</code> em sua <em>view</em>). Crie o arquivo de <em>template</em> <strong>locallibrary/catalog/templates/catalog/author_confirm_delete</strong><strong>.html</strong> e copie o texto abaixo.</p>
+<p>A <em>view</em> "delete" espera encontrar um <em>template</em> nomeado com o formato  <em>model_name</em><strong>_confirm_delete.html</strong> (novamente, você pode mudar o sufixo usando <code>template_name_suffix</code> em sua <em>view</em>). Crie o arquivo de <em>template</em> <strong>locallibrary/catalog/templates/catalog/author_confirm_delete</strong><strong>.html</strong> e copie o texto abaixo.</p>
 
 <pre class="brush: html">{% extends "base_generic.html" %}
 
@@ -596,41 +596,41 @@ class AuthorDelete(DeleteView):
 
 <h3 id="URL_configurations">URL configurations</h3>
 
-<p>Abra seu arquivo de configuração de URL (<strong>locallibrary/catalog/urls.py</strong>)  e adicione a seguinte configuração no final do arquivo:</p>
+<p>Abra seu arquivo de configuração de URL (<strong>locallibrary/catalog/urls.py</strong>)  e adicione a seguinte configuração no final do arquivo:</p>
 
 <pre class="brush: python">urlpatterns += [
-    path('author/create/', views.AuthorCreate.as_view(), name='author_create'),
-    path('author/&lt;int:pk&gt;/update/', views.AuthorUpdate.as_view(), name='author_update'),
-    path('author/&lt;int:pk&gt;/delete/', views.AuthorDelete.as_view(), name='author_delete'),
+    path('author/create/', views.AuthorCreate.as_view(), name='author_create'),
+    path('author/&lt;int:pk&gt;/update/', views.AuthorUpdate.as_view(), name='author_update'),
+    path('author/&lt;int:pk&gt;/delete/', views.AuthorDelete.as_view(), name='author_delete'),
 ]</pre>
 
-<p>Não há nada particularmente novo aqui! Você pode ver que  as <em>views</em> são classes, e portanto devem ser chamadas via <code>.as_view()</code>, e você deve poder reconhecer os padrões URL em cada caso. Devemos usar <code>pk</code> como o nome para nosso valor capturado de chave primária (<em>primary key</em>), como esse é o nome do parâmetro esperado pelas classes <em>view</em>.</p>
+<p>Não há nada particularmente novo aqui! Você pode ver que  as <em>views</em> são classes, e portanto devem ser chamadas via <code>.as_view()</code>, e você deve poder reconhecer os padrões URL em cada caso. Devemos usar <code>pk</code> como o nome para nosso valor capturado de chave primária (<em>primary key</em>), como esse é o nome do parâmetro esperado pelas classes <em>view</em>.</p>
 
 <p>As páginas de criação, atualização e remoção de autor agora estão prontas para teste (neste caso, não nos incomodaremos em conectá-las a barra lateral do site, embora você possa fazer se desejar).</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Usuários observadores devem ter notado que não fizemos nada para previnir que usuários não autorizadosde acessem as páginas! Deixamos isso como um exercício para você (dica: você pode usar  <code>PermissionRequiredMixin</code> e criar uma nova permissão ou reutilizar nossa permissão <code>can_mark_returned</code>).</p>
+<p><strong>Nota</strong>: Usuários observadores devem ter notado que não fizemos nada para previnir que usuários não autorizadosde acessem as páginas! Deixamos isso como um exercício para você (dica: você pode usar  <code>PermissionRequiredMixin</code> e criar uma nova permissão ou reutilizar nossa permissão <code>can_mark_returned</code>).</p>
 </div>
 
 <h3 id="Testando_a_página_2">Testando a página</h3>
 
-<p>Primeiro, efetue login no site com uma conta que possua as permissões que você decidiu que são necessárias para acessar a página de edição de autor.</p>
+<p>Primeiro, efetue login no site com uma conta que possua as permissões que você decidiu que são necessárias para acessar a página de edição de autor.</p>
 
 <p>Então navegue para a página de criação de autor: <a href="http://127.0.0.1:8000/catalog/author/create/">http://127.0.0.1:8000/catalog/author/create/</a>, que deve parecer como a captura de tela abaixo.</p>
 
 <p><img alt="Form Example: Create Author" src="https://mdn.mozillademos.org/files/14223/forms_example_create_author.png" style="border-style: solid; border-width: 1px; display: block; height: 184px; margin: 0px auto; width: 645px;"></p>
 
-<p>Entre com valores para os campos e então pressione <strong>Submit</strong> para dalvar o registro de autor. Você agora deve ser direcionado para uma visualização detalhada para o seu novo autor, com uma URL de algo como <em>http://127.0.0.1:8000/catalog/author/10</em>.</p>
+<p>Entre com valores para os campos e então pressione <strong>Submit</strong> para dalvar o registro de autor. Você agora deve ser direcionado para uma visualização detalhada para o seu novo autor, com uma URL de algo como <em>http://127.0.0.1:8000/catalog/author/10</em>.</p>
 
-<p>Você pode testar edição de registros enexando <em>/update/</em> ao final da URL da página de detalhe (ex. <em>http://127.0.0.1:8000/catalog/author/10/update/</em>) — não mostramos uma captura de tela, porque se parace com a página de criação</p>
+<p>Você pode testar edição de registros enexando <em>/update/</em> ao final da URL da página de detalhe (ex. <em>http://127.0.0.1:8000/catalog/author/10/update/</em>) — não mostramos uma captura de tela, porque se parace com a página de criação</p>
 
-<p>Finalmente, podemos excluir a página anexando <em>delete</em> ao final da URL da visualização detalhada do autor  (ex. <em>http://127.0.0.1:8000/catalog/author/10/delete/</em>). Django deve exibir a página de exclusão mostrada abaixo. Pressione <strong>Yes, delete.</strong> para remover o registro e ser levado para a lista de todos os autores.</p>
+<p>Finalmente, podemos excluir a página anexando <em>delete</em> ao final da URL da visualização detalhada do autor  (ex. <em>http://127.0.0.1:8000/catalog/author/10/delete/</em>). Django deve exibir a página de exclusão mostrada abaixo. Pressione <strong>Yes, delete.</strong> para remover o registro e ser levado para a lista de todos os autores.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png" style="border-style: solid; border-width: 1px; display: block; height: 194px; margin: 0px auto; width: 561px;"></p>
 
 <h2 id="Desafie-se">Desafie-se</h2>
 
-<p>Crie alguns <em>forms</em> para criar, editar e excluir registros de <code>Book</code>. Você pode utilizar exatamente a mesma estrutura que a de  <code>Authors</code>. Se seu <em>template</em> <strong>book_form.html</strong> é apenas uma cópia renomeada de   <strong>author_form.html</strong> , então a nova página "criar livro" será semelhante a captura de tela abaixo:</p>
+<p>Crie alguns <em>forms</em> para criar, editar e excluir registros de <code>Book</code>. Você pode utilizar exatamente a mesma estrutura que a de  <code>Authors</code>. Se seu <em>template</em> <strong>book_form.html</strong> é apenas uma cópia renomeada de   <strong>author_form.html</strong> , então a nova página "criar livro" será semelhante a captura de tela abaixo:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14225/forms_example_create_book.png" style="border-style: solid; border-width: 1px; display: block; height: 521px; margin: 0px auto; width: 595px;"></p>
 
@@ -639,21 +639,21 @@ class AuthorDelete(DeleteView):
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>Criar e manipular formulários pode ser um processo complicado! Django torna muito mais fácil fornecendo mecanismos programáticos para declarar, renderizar e validar formulários. Além disso, Django fornece <em>views</em> genéricas de edição de formulário, isso pode fazes quase todo trabalho para definir páginas que podem criar, editar e excluir registros associados com uma única instância de <em>model.</em></p>
+<p>Criar e manipular formulários pode ser um processo complicado! Django torna muito mais fácil fornecendo mecanismos programáticos para declarar, renderizar e validar formulários. Além disso, Django fornece <em>views</em> genéricas de edição de formulário, isso pode fazes quase todo trabalho para definir páginas que podem criar, editar e excluir registros associados com uma única instância de <em>model.</em></p>
 
-<p>Há muito mais que pode ser feito com formulários (confira abaixo nossa lista Veja também), mas agora você deve entender como adicionar formulários básicos e o código de manipulação de formulários para seus próprios websites.</p>
+<p>Há muito mais que pode ser feito com formulários (confira abaixo nossa lista Veja também), mas agora você deve entender como adicionar formulários básicos e o código de manipulação de formulários para seus próprios websites.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/forms/">Trabalhando com formulários</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/intro/tutorial04/#write-a-simple-form">Escrevendo seu primeiro <em>app</em> Django, parte 4 &gt; Escrevendo um formulário simples</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/api/">A API <em>Forms</em></a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/">Form fields</a> (Django docs) </li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/validation/">Formulários e validação de campos</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-editing/">Manipulação de formulários com <em>views</em> baseadas em classe</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/forms/modelforms/">Criando formulários com <em>models</em></a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/">Views genéricas de edição</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/topics/forms/">Trabalhando com formulários</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/intro/tutorial04/#write-a-simple-form">Escrevendo seu primeiro <em>app</em> Django, parte 4 &gt; Escrevendo um formulário simples</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/api/">A API <em>Forms</em></a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/fields/">Form fields</a> (Django docs) </li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/forms/validation/">Formulários e validação de campos</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-editing/">Manipulação de formulários com <em>views</em> baseadas em classe</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/topics/forms/modelforms/">Criando formulários com <em>models</em></a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/">Views genéricas de edição</a> (Django docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}</p>
@@ -664,16 +664,16 @@ class AuthorDelete(DeleteView):
  <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Introdução ao Django</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Configurando um ambiente de desenvolvimento Django</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial Django: </a><a rel="nofollow" title="A página ainda não foi criada.">Website de uma Biblioteca Local</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Parte 2: </a><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/skeleton_website">Criando a base do website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Models">Django Parte 3: Usando <em>models</em></a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Parte 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Parte 5: Criando nossa página principal</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Parte 6: </a><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Generic_views">Lista genérica e <em>detail views</em></a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Parte 7: </a><a rel="nofollow" title="A página ainda não foi criada.">Framework de Sessões</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Parte 8: </a><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Authentication">Autenticação de Usuário e permissões</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Parte 9: </a><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Forms">Trabalhando com formulários</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Parte 10: </a><a rel="nofollow" title="A página ainda não foi criada.">Testando uma aplicação web Django</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Parte 11: </a><a rel="nofollow" title="A página ainda não foi criada.">Implantando Django em produção</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Parte 2: </a><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/skeleton_website">Criando a base do website</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Models">Django Parte 3: Usando <em>models</em></a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Parte 4: Django admin site</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Parte 5: Criando nossa página principal</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Parte 6: </a><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Generic_views">Lista genérica e <em>detail views</em></a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Parte 7: </a><a rel="nofollow" title="A página ainda não foi criada.">Framework de Sessões</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Parte 8: </a><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Authentication">Autenticação de Usuário e permissões</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Parte 9: </a><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Forms">Trabalhando com formulários</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Parte 10: </a><a rel="nofollow" title="A página ainda não foi criada.">Testando uma aplicação web Django</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial</a> <a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Parte 11: </a><a rel="nofollow" title="A página ainda não foi criada.">Implantando Django em produção</a></li>
  <li><a rel="nofollow" title="A página ainda não foi criada.">Segurança de aplicações web Django</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>

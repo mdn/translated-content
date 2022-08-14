@@ -12,29 +12,29 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_pag
 <pre class="brush: js">// Display detail page for a specific book.
 exports.book_detail = function(req, res, next) {
 
-<strong>    async.parallel({
-        book: function(callback) {
+<strong>    async.parallel({
+        book: function(callback) {
 
-            Book.findById(req.params.id)
-              .populate('author')
-              .populate('genre')
-              .exec(callback);
-        },
-        book_instance: function(callback) {
+            Book.findById(req.params.id)
+              .populate('author')
+              .populate('genre')
+              .exec(callback);
+        },
+        book_instance: function(callback) {
 
-          BookInstance.find({ 'book': req.params.id })
-          .exec(callback);
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.book==null) { // No results.
-            var err = new Error('Book not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render.
-        res.render('book_detail', { title: 'Title', book: results.book, book_instances: results.book_instance } );
-    });</strong>
+          BookInstance.find({ 'book': req.params.id })
+          .exec(callback);
+        },
+    }, function(err, results) {
+        if (err) { return next(err); }
+        if (results.book==null) { // No results.
+            var err = new Error('Book not found');
+            err.status = 404;
+            return next(err);
+        }
+        // Successful, so render.
+        res.render('book_detail', { title: 'Title', book: results.book, book_instances: results.book_instance } );
+    });</strong>
 
 };
 
@@ -53,37 +53,37 @@ exports.book_detail = function(req, res, next) {
 <pre class="brush: js">extends layout
 
 block content
-  h1 #{title}: #{book.title}
+  h1 #{title}: #{book.title}
 
-  p #[strong Author:]
-    a(href=book.author.url) #{book.author.name}
-  p #[strong Summary:] #{book.summary}
-  p #[strong ISBN:] #{book.isbn}
-  p #[strong Genre:]&amp;nbsp;
-    each val, index in book.genre
-      a(href=val.url) #{val.name}
-      if index &lt; book.genre.length - 1
-        |,
+  p #[strong Author:]
+    a(href=book.author.url) #{book.author.name}
+  p #[strong Summary:] #{book.summary}
+  p #[strong ISBN:] #{book.isbn}
+  p #[strong Genre:]&amp;nbsp;
+    each val, index in book.genre
+      a(href=val.url) #{val.name}
+      if index &lt; book.genre.length - 1
+        |,
 
-  div(style='margin-left:20px;margin-top:20px')
-    h4 Copies
+  div(style='margin-left:20px;margin-top:20px')
+    h4 Copies
 
-    each val in book_instances
-      hr
-      if val.status=='Available'
-        <strong>p.text-success</strong> #{val.status}
-      else if val.status=='Maintenance'
-        p.text-danger #{val.status}
-      else
-        p.text-warning #{val.status}
-      p #[strong Imprint:] #{val.imprint}
-      if val.status!='Available'
-        p #[strong Due back:] #{val.due_back}
-      p #[strong Id:]&amp;nbsp;
-        a(href=val.url) #{val._id}
+    each val in book_instances
+      hr
+      if val.status=='Available'
+        <strong>p.text-success</strong> #{val.status}
+      else if val.status=='Maintenance'
+        p.text-danger #{val.status}
+      else
+        p.text-warning #{val.status}
+      p #[strong Imprint:] #{val.imprint}
+      if val.status!='Available'
+        p #[strong Due back:] #{val.due_back}
+      p #[strong Id:]&amp;nbsp;
+        a(href=val.url) #{val._id}
 
-    else
-      p There are no copies of this book in the library.
+    else
+      p There are no copies of this book in the library.
 </pre>
 
 <p>Almost everything in this template has been demonstrated in previous sections.</p>
@@ -92,10 +92,10 @@ block content
 <p><strong>Note:</strong> The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.</p>
 
 <pre>  p #[strong Genre:]
-    each val, index in book.genre
-      a(href=val.url) #{val.name}
-      if index &lt; book.genre.length - 1
-        |, </pre>
+    each val, index in book.genre
+      a(href=val.url) #{val.name}
+      if index &lt; book.genre.length - 1
+        |, </pre>
 </div>
 
 <h2 id="What_does_it_look_like">What does it look like?</h2>

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 ---
 {{JSRef}}
 
-**`toLocaleString()`** メソッドは、この BigInt 値の言語に合わせた表現の文字列を返します。 
+**`toLocaleString()`** メソッドは、この BigInt 値の言語に合わせた表現の文字列を返します。
 
 {{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
 

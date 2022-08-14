@@ -15,7 +15,9 @@ NOTE : les coordonnées sont globales, aussi soyez conscient du fait que, lors d
 
 ## Syntaxe
 
-    CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```js
+CanvasGradient ctx.createLinearGradient(x0, y0, x1, y1);
+```
 
 ### Paramètres
 

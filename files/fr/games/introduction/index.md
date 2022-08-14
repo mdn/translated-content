@@ -29,23 +29,17 @@ Le Web peut vraiment se concevoir comme une plateforme pour les jeux : "le Web e
 | **Stockage**                           | [IndexedDB](/fr/docs/IndexedDB "/fr/docs/IndexedDB") ou le "cloud"                                                                                                                                                                                                                                                                                                                                                                                       |
 | **Web**                                | [HTML](/fr/docs/Web/HTML "/fr/docs/Web/HTML"), [CSS](/fr/docs/Web/CSS "/fr/docs/Web/CSS"), [SVG](/fr/docs/SVG "/fr/docs/SVG"), [Social API](/fr/docs/Social_API "/fr/docs/Social_API") (et plus encore...)                                                                                                                                                                                                                                               |
 
-
-
 ## L'aspect commercial
 
 En tant que développeur de jeux vidéo, que vous soyez seul ou fassiez partie d'un studio plus grand, vous voulez savoir pourquoi le Web serait pertinent pour votre prochain jeu. Nous verrons ici en quoi le Web peut vous aider :
 
-
-
-1.  La portée du Web est phénoménale : il est partout. Les jeux construits avec HTML5 peuvent fonctionner sur les smartphones, les tablettes, les PCs et les télévisions connectées.
-2.  La visibilité de votre jeu et le marketing en sont améliorés. En effet, la promotion de votre jeu n'est pas limitée à un "app store" _(magasin d'applications)_ maîtrisé par quelqu'un d'autre. Vous pouvez tout à fait promouvoir et faire la publicité de votre jeu sur le Web lui-même comme sur d'autres médias. Les liens, les partages effectués sur le Web sont autant d'avantages pour atteindre de nouveaux utilisateurs.
-3.  Vous disposez d'un contrôle à un endroit important : les paiements. Il n'est pas nécessaire pour vous de reverser 30% de vos revenus à d'autres simplement parce que votre jeu fait partie de leur écosystème. Vous pouvez décider de votre propre politique tarifaire et utiliser le service de paiement que vous voulez.
-4.  Le contrôle, encore. Vous pouvez mettre à jour votre jeu dès que vous le souhaitez. Vous n'avez pas à attendre l'approbation de quelqu'un d'une autre entreprise décidant si oui ou non tel ou tel correctif sera livré aujourd'hui ou demain.
-5.  L'analytique. Plutôt que de vous reposer sur des décisions et influences externes quant aux données dont vous avez besoin, vous pouvez collecter les statistiques que vous voulez, ou bien utiliser un outil analytique tiers de votre choix afin de mesurer les ventes et la portée de votre jeu.
-6.  Vous pouvez gérer la relation clientèle de façon plus directe, sans que les retours des clients soient limités aux mécanismes d'un magasin d'application. Soyez directement au contact de vos clients, sans intermédiaire.
-7.  Le Web est partout et vos joueurs peuvent donc jouer où bon leur semble : leurs téléphones, tablettes, ordinateurs de bureau ou portables...
-
-
+1. La portée du Web est phénoménale : il est partout. Les jeux construits avec HTML5 peuvent fonctionner sur les smartphones, les tablettes, les PCs et les télévisions connectées.
+2. La visibilité de votre jeu et le marketing en sont améliorés. En effet, la promotion de votre jeu n'est pas limitée à un "app store" _(magasin d'applications)_ maîtrisé par quelqu'un d'autre. Vous pouvez tout à fait promouvoir et faire la publicité de votre jeu sur le Web lui-même comme sur d'autres médias. Les liens, les partages effectués sur le Web sont autant d'avantages pour atteindre de nouveaux utilisateurs.
+3. Vous disposez d'un contrôle à un endroit important : les paiements. Il n'est pas nécessaire pour vous de reverser 30% de vos revenus à d'autres simplement parce que votre jeu fait partie de leur écosystème. Vous pouvez décider de votre propre politique tarifaire et utiliser le service de paiement que vous voulez.
+4. Le contrôle, encore. Vous pouvez mettre à jour votre jeu dès que vous le souhaitez. Vous n'avez pas à attendre l'approbation de quelqu'un d'une autre entreprise décidant si oui ou non tel ou tel correctif sera livré aujourd'hui ou demain.
+5. L'analytique. Plutôt que de vous reposer sur des décisions et influences externes quant aux données dont vous avez besoin, vous pouvez collecter les statistiques que vous voulez, ou bien utiliser un outil analytique tiers de votre choix afin de mesurer les ventes et la portée de votre jeu.
+6. Vous pouvez gérer la relation clientèle de façon plus directe, sans que les retours des clients soient limités aux mécanismes d'un magasin d'application. Soyez directement au contact de vos clients, sans intermédiaire.
+7. Le Web est partout et vos joueurs peuvent donc jouer où bon leur semble : leurs téléphones, tablettes, ordinateurs de bureau ou portables...
 
 ## Les technologies Web pour les développeurs de jeux vidéo
 

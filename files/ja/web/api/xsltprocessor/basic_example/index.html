@@ -11,8 +11,8 @@ translation_of: Web/API/XSLTProcessor/Basic_Example
 <p>図 1 は基本的な XSLT の例のソースです。 XML 文書 (example.xml) は記事についての情報を含んでいます。 <code>?xml-stylesheet?</code> で処理を指示すると、その href 属性を通して XSLT スタイルシートへリンクします。</p>
 <p>XSLT スタイルシートは、最終的な出力を生成するためのすべてのテンプレートを含む、<code>xsl:stylesheet</code> 要素で開始します。図 1 の例には二つのテンプレートがあります。一つはルートノードに対応し、一つは Author ノードに対応します。ルートノードが出力する記事のタイトルにテンプレートが一致すると、(<code>apply-templates</code> を通して) Authors ノードの子の、すべての Author ノードに対応するテンプレートが処理されます。</p>
 
-<p>図 1 : 簡単な XSLT の例</p>
-<p>XML 文書 (example.xml) :</p>
+<p>図 1 : 簡単な XSLT の例</p>
+<p>XML 文書 (example.xml) :</p>
 
 <pre class="brush:xml">&lt;?xml version="1.0"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="example.xsl"?&gt;
@@ -25,7 +25,7 @@ translation_of: Web/API/XSLTProcessor/Basic_Example
   &lt;Body&gt;This is my article text.&lt;/Body&gt;
 &lt;/Article&gt;</pre>
 
-<p>XSL スタイルシート (example.xsl) :</p>
+<p>XSL スタイルシート (example.xsl) :</p>
 
 <pre class="brush:xml">&lt;?xml version="1.0"?&gt;
 &lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;

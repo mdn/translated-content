@@ -12,7 +12,9 @@ Permet également de fixer une largeur pour le domaine d'affichage de la fenêtr
 
 ## Syntaxe
 
-    var largeur = window.innerWidth;
+```js
+var largeur = window.innerWidth;
+```
 
 Voir aussi&nbsp;: [window.innerHeight](/fr/docs/Web/API/Window/innerHeight), [window.outerHeight](/fr/docs/Web/API/Window/outerHeight) and [window.outerWidth](/fr/docs/Web/API/Window/outerWidth).
 
@@ -27,17 +29,19 @@ La propriété `innerWidth` est supportée par tous les objet "window" comme par
 
 ## Example
 
-    // Retourne la largeur de la fenêtre
-    var largeur = window.innerWidth;
+```js
+// Retourne la largeur de la fenêtre
+var largeur = window.innerWidth;
 
-    // Retourn la largeur de la fenêtre à l'intérieur d'une "frameset"
-    var largeur = self.innerWidth;
+// Retourn la largeur de la fenêtre à l'intérieur d'une "frameset"
+var largeur = self.innerWidth;
 
-    // Retourne la largeur de la fenêtre du "frameset" parent
-    var largeurDeLaFrame = parent.innerWidth;
+// Retourne la largeur de la fenêtre du "frameset" parent
+var largeurDeLaFrame = parent.innerWidth;
 
-    // Retourne la largeur de la fenêtre du "frameset" principal
-    var largeurDuFrameset = top.innerWidth;
+// Retourne la largeur de la fenêtre du "frameset" principal
+var largeurDuFrameset = top.innerWidth;
+```
 
 Pour changer la taille de la fenêtre, voir {{domxref("window.resizeBy")}} and {{domxref("window.resizeTo")}}.
 

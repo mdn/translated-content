@@ -5,12 +5,12 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> メソッドは、 <code>type</code> パラメータ（デフォルトは<a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>形式）で指定される画像フォーマット形式の <a href="/ja/docs/Web/HTTP/data_URIs">data URI</a> を返すメソッドです。返り値となる画像の解像度は96 dpiです。</p>
+<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> メソッドは、 <code>type</code> パラメータ（デフォルトは<a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>形式）で指定される画像フォーマット形式の <a href="/ja/docs/Web/HTTP/data_URIs">data URI</a> を返すメソッドです。返り値となる画像の解像度は96 dpiです。</p>
 
 <ul>
- <li>キャンバスの幅か高さが、<code>0</code> もしくは <a href="/ja/docs/Web/HTML/Element/canvas#Maximum_canvas_size">maximum canvas size</a> より大きい場合、文字列 <code>"data:,"</code>を返します。</li>
- <li><code>image/png</code> 形式を指定したにもかかわらず返り値が <code>data:image/png</code> で始まる場合、要求された形式には対応していません。</li>
- <li>Chrome は <code>image/webp</code> 形式に対応します。</li>
+ <li>キャンバスの幅か高さが、<code>0</code> もしくは <a href="/ja/docs/Web/HTML/Element/canvas#Maximum_canvas_size">maximum canvas size</a> より大きい場合、文字列 <code>"data:,"</code>を返します。</li>
+ <li><code>image/png</code> 形式を指定したにもかかわらず返り値が <code>data:image/png</code> で始まる場合、要求された形式には対応していません。</li>
+ <li>Chrome は <code>image/webp</code> 形式に対応します。</li>
 </ul>
 
 <h2 id="構文">構文</h2>
@@ -22,15 +22,15 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
 
 <dl>
  <dt><code>type</code> {{optional_inline}}</dt>
- <dd>画像フォーマットを示す {{domxref("DOMString")}} 。 指定しなかった場合、デフォルトのフォーマット形式は <code>image/png</code> です。</dd>
+ <dd>画像フォーマットを示す {{domxref("DOMString")}} 。 指定しなかった場合、デフォルトのフォーマット形式は <code>image/png</code> です。</dd>
  <dt><code>encoderOptions</code> {{optional_inline}}</dt>
- <dd><code>0</code> から <code>1</code> の間の {{jsxref("Number")}} で示す、 <code>image/jpeg</code> や <code>image/webp</code> のような非可逆圧縮を使う画像フォーマットの画質です。<br>
- この引数がその他の値だった場合、デフォルトの画質が使われます。デフォルト値は <code>0.92</code> です。その他の引数は無視されます。</dd>
+ <dd><code>0</code> から <code>1</code> の間の {{jsxref("Number")}} で示す、 <code>image/jpeg</code> や <code>image/webp</code> のような非可逆圧縮を使う画像フォーマットの画質です。<br>
+ この引数がその他の値だった場合、デフォルトの画質が使われます。デフォルト値は <code>0.92</code> です。その他の引数は無視されます。</dd>
 </dl>
 
 <h3 id="戻り値">戻り値</h3>
 
-<p>要求された<a href="/ja/docs/Web/HTTP/data_URIs">data URI</a>を含む {{domxref("DOMString")}} 。</p>
+<p>要求された<a href="/ja/docs/Web/HTTP/data_URIs">data URI</a>を含む {{domxref("DOMString")}} 。</p>
 
 <h3 id="例外">例外</h3>
 

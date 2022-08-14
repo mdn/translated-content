@@ -31,13 +31,13 @@ var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = function() {
   // バッファにホワイトノイズを書き込む;
-  // 単なる -1.0 から 1.0 の間の乱数の値である
+  // 単なる -1.0 から 1.0 の間の乱数の値である
   for (var channel = 0; channel < channels; channel++) {
     // 実際のデータの配列を得る
     var nowBuffering = myArrayBuffer.getChannelData(channel);
     for (var i = 0; i < frameCount; i++) {
       // Math.random() は [0; 1.0] である
-      // 音声は [-1.0; 1.0] である必要がある
+      // 音声は [-1.0; 1.0] である必要がある
       nowBuffering[i] = Math.random() * 2 - 1;
     }
   }

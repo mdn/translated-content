@@ -23,5 +23,5 @@ WHATWG maintient les spécifications du {{Glossary("HTML")}}, du {{Glossary("DOM
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "WHATWG")}} sur Wikipédia
+- [WHATWG](https://fr.wikipedia.org/wiki/Web_Hypertext_Application_Technology_Working_Group) sur Wikipédia
 - [Site Web officiel WHATWG.org](http://wiki.whatwg.org/)

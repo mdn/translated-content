@@ -9,8 +9,10 @@ translation_of: Web/API/HTMLSelectElement/selectedIndex
 
 ## Syntaxe
 
-    var index = selectElem.selectedIndex;
-    selectElem.selectedIndex = index;
+```js
+var index = selectElem.selectedIndex;
+selectElem.selectedIndex = index;
+```
 
 ## Exemple
 

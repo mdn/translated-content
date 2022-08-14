@@ -92,9 +92,9 @@ L'existence d'une telle clé d'API permet au fournisseur tiers de contrôler les
 
 Ajoutons quelques fonctionnalités à cet exemple MapQuest afin d'illustrer le fonctionnement d'autres aspects de l'API.
 
-1.  Pour commencer cette section, copiez [le fichier initial](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html) dans un nouveau répertoire. Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn#obtenir_nos_exemples_de_code), vous disposez déjà d'une copie située sous le répertoire _javascript/apis/third-party-apis/mapquest/start_.
-2.  Ensuite, [rendez-vous sur le site MapQuest pour le développement](https://developer.mapquest.com/), créez un compte puis créez une clé de développement (au moment où nous écrivons ces lignes, sur le site, le nom utilisé est "<i lang="en">consumer key</i>" et la procédure de création demande aussi la saisie d'une URL "<i lang="en">callback URL</i>" qui est optionnelle (vous pouvez la laisser vide).
-3.  Ouvrez un éditeur pour éditer le fichier initial et remplacez la valeur pour la clé d'API avec la vôtre.
+1. Pour commencer cette section, copiez [le fichier initial](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html) dans un nouveau répertoire. Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn#obtenir_nos_exemples_de_code), vous disposez déjà d'une copie située sous le répertoire _javascript/apis/third-party-apis/mapquest/start_.
+2. Ensuite, [rendez-vous sur le site MapQuest pour le développement](https://developer.mapquest.com/), créez un compte puis créez une clé de développement (au moment où nous écrivons ces lignes, sur le site, le nom utilisé est "<i lang="en">consumer key</i>" et la procédure de création demande aussi la saisie d'une URL "<i lang="en">callback URL</i>" qui est optionnelle (vous pouvez la laisser vide).
+3. Ouvrez un éditeur pour éditer le fichier initial et remplacez la valeur pour la clé d'API avec la vôtre.
 
 ### Modifier le type de la carte
 
@@ -171,9 +171,9 @@ Lorsqu'on veut utiliser une API tierce, il est toujours utile de trouver la docu
 
 La plupart des API reposent sur l'obtention et l'utilisation d'une clé de développement (tant pour des raisons de sécurité que de responsabilité). Pour obtenir une clé de développement pour l'API du NYTimes, vous pouvez suivre les instructions de <https://developer.nytimes.com/get-started>.
 
-1.  Demandez une clé pour l'API Article Search — créez une nouvelle application et sélectionnez cette API, fournissez un nom et une description pour votre application, activez le bouton sous "<i lang="en">Article Search API</i>" puis cliquez sur "<i lang="en">Create</i>").
-2.  Vous pouvez alors récupérer la clé d'API à partir de la page suivante.
-3.  Pour construire le socle de notre exemple, copiez le répertoire [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start). Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn#obtenir_nos_exemples_de_code), vous disposez déjà d'un exemplaire de ces fichiers et vous pourrez les trouver sous le répertoire _javascript/apis/third-party-apis/nytimes/start_. L'élément `<script>` contient un certain nombre de variables nécessaires à l'initialisation de l'exemple. Nous allons ensuite remplir les fonctionnalités nécessaires.
+1. Demandez une clé pour l'API Article Search — créez une nouvelle application et sélectionnez cette API, fournissez un nom et une description pour votre application, activez le bouton sous "<i lang="en">Article Search API</i>" puis cliquez sur "<i lang="en">Create</i>").
+2. Vous pouvez alors récupérer la clé d'API à partir de la page suivante.
+3. Pour construire le socle de notre exemple, copiez le répertoire [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start). Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn#obtenir_nos_exemples_de_code), vous disposez déjà d'un exemplaire de ces fichiers et vous pourrez les trouver sous le répertoire _javascript/apis/third-party-apis/nytimes/start_. L'élément `<script>` contient un certain nombre de variables nécessaires à l'initialisation de l'exemple. Nous allons ensuite remplir les fonctionnalités nécessaires.
 
 Au final, on souhaite que l'application permette de saisir un terme de recherche, des dates optionnelles pour le début et la fin de la période à rechercher. Nous utiliserons alors ces paramètres afin d'envoyer des requêtes sur l'API Article Search puis nous afficherons les résultats obtenus.
 
@@ -183,19 +183,19 @@ Au final, on souhaite que l'application permette de saisir un terme de recherche
 
 Tout d'abord, vous devrez créer une connexion entre l'API et votre application. Pour cette API, vous devez fournir la clé d'API comme paramètre [GET](/fr/docs/Web/HTTP/Methods/GET) à chaque requête.
 
-1.  Localisez la ligne qui suit et remplacez la valeur avec la clé de développement que vous avez obtenu plus tôt&nbsp;:
+1. Localisez la ligne qui suit et remplacez la valeur avec la clé de développement que vous avez obtenu plus tôt&nbsp;:
 
     ```js
     const key = 'VOTRE-CLE-D-API';
     ```
 
-2.  Ajoutez la ligne suivante sous le commentaire `// Event listeners to control the functionality`. Cette ligne permet d'exécuter la fonction `submitSearch()` lorsque le formulaire est envoyé (quand on presse le bouton).
+2. Ajoutez la ligne suivante sous le commentaire `// Event listeners to control the functionality`. Cette ligne permet d'exécuter la fonction `submitSearch()` lorsque le formulaire est envoyé (quand on presse le bouton).
 
     ```js
     searchForm.addEventListener('submit', submitSearch);
     ```
 
-3.  Sous cette nouvelle ligne, ajoutons les fonctions `submitSearch()` et `fetchResults()`&nbsp;:
+3. Sous cette nouvelle ligne, ajoutons les fonctions `submitSearch()` et `fetchResults()`&nbsp;:
 
     ```js
     function submitSearch(e) {
@@ -336,14 +336,14 @@ Pour que les boutons de pagination fonctionnent, on incrémente (ou on décréme
 
 En connaissant cela, on peut écrire une fonction pour gérer la pagination.
 
-1.  Après l'appel existant à [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), on ajoute les deux prochaines lignes qui appelleront les fonctions `nextPage()` et `previousPage()` lorsqu'on cliquera sur le bouton correspondant&nbsp;:
+1. Après l'appel existant à [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), on ajoute les deux prochaines lignes qui appelleront les fonctions `nextPage()` et `previousPage()` lorsqu'on cliquera sur le bouton correspondant&nbsp;:
 
     ```js
     nextBtn.addEventListener('click', nextPage);
     previousBtn.addEventListener('click', previousPage);
     ```
 
-2.  À la suite, on définit le corps de ces fonctions&nbsp;:
+2. À la suite, on définit le corps de ces fonctions&nbsp;:
 
     ```js
     function nextPage(e) {

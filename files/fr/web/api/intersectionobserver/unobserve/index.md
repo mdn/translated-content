@@ -17,7 +17,9 @@ La méthode **`unobserve()`** de l'interface [`IntersectionObserver`](/fr/docs/W
 
 ## Syntaxe
 
-    IntersectionObserver.unobserve(target);
+```js
+IntersectionObserver.unobserve(target);
+```
 
 ### Paramètres
 

@@ -5,7 +5,7 @@ translation_of: Web/CSS/fit-content
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>fit-content()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 函数将给定大小夹紧为可用大小 根据公式 <code>min(<var>maximum size</var>, max(<var>minimum size</var>, <var>argument</var>))</code>.</span></p>
+<p><strong><code>fit-content()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 函数将给定大小夹紧为可用大小 根据公式 <code>min(<var>maximum size</var>, max(<var>minimum size</var>, <var>argument</var>))</code>.</p>
 
 <pre class="brush: css no-line-numbers">/* &lt;length&gt; values */
 fit-content(200px)
@@ -17,13 +17,13 @@ fit-content(100ch)
 fit-content(40%)
 </pre>
 
-<p>The function can be used as a track size in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> properties, where the maximum size is defined by <code><a href="/en-US/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> and the minimum size by <code><a href="/en-US/docs/Web/CSS/grid-template-columns#auto">auto</a></code>, which is calculated similar to <code>auto</code> (i.e., <code><a href="/en-US/docs/Web/CSS/minmax">minmax(auto, max-content)</a></code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</p>
+<p>The function can be used as a track size in <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> properties, where the maximum size is defined by <code><a href="/en-US/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> and the minimum size by <code><a href="/en-US/docs/Web/CSS/grid-template-columns#auto">auto</a></code>, which is calculated similar to <code>auto</code> (i.e., <code><a href="/en-US/docs/Web/CSS/minmax">minmax(auto, max-content)</a></code>), except that the track size is clamped at <var>argument</var> if it is greater than the <code>auto</code> minimum.</p>
 
-<p>The function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.</p>
+<p>The function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>The <code>fit-content()</code> function accepts a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code> as an argument.</p>
+<p>The <code>fit-content()</code> function accepts a <code>&lt;length&gt;</code> or a <code>&lt;percentage&gt;</code> as an argument.</p>
 
 <h3 id="Values">Values</h3>
 
@@ -77,27 +77,7 @@ fit-content(40%)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}}</td>
-   <td>{{Spec2("CSS3 Sizing")}}</td>
-   <td>Defines the function as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>Defines the function when used as a track size.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

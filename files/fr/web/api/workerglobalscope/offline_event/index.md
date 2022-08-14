@@ -10,7 +10,9 @@ La propriété **`onoffline`** de l'interface {{domxref("WorkerGlobalScope")}} r
 
 ## Syntaxe
 
-    self.onoffline = function() { ... };
+```js
+self.onoffline = function() { ... };
+```
 
 ## Exemple
 

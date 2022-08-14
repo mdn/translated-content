@@ -27,7 +27,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <ul>
  <li>Los tipos de entrada comunes {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}} y {{HTMLelement('input/text', 'text')}}.</li>
- <li>Algunos de los atributos que comunes para todos los controles de formulario.</li>
+ <li>Algunos de los atributos que comunes para todos los controles de formulario.</li>
 </ul>
 
 <div class="note">
@@ -140,21 +140,21 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 <p>Es posible asociar diversos botones de opción. Si comparten el mismo valor de atributo {{htmlattrxref ("name", "input")}}, se considera que están en el mismo grupo de botones. Solo un botón dentro de un grupo puede estar activado en cada momento. Esto significa que cuando uno de ellos se selecciona, todos los demás se deseleccionan automáticamente. Al enviar el formulario, solo se envía el valor del botón de opción seleccionado. Si ninguno de ellos está seleccionado, se considera que el conjunto completo de botones de opción está en un estado desconocido y no se envía ningún valor con el formulario. Cuando en un grupo de botones con el mismo nombre se selecciona uno de los botones de opción, no es posible deseleccionar todos los botones sin reiniciar el formulario.</p>
 
 <pre class="brush: html notranslate">&lt;fieldset&gt;
-  &lt;legend&gt;¿Cuál es tu comida favorita?&lt;/legend&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;label for="soup"&gt;Sopa&lt;/label&gt;
-      &lt;input type="radio" id="soup" name="meal" value="soup" checked&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="curry"&gt;Curry&lt;/label&gt;
-      &lt;input type="radio" id="curry" name="meal" value="curry"&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="pizza"&gt;Pizza&lt;/label&gt;
-      &lt;input type="radio" id="pizza" name="meal" value="pizza"&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;legend&gt;¿Cuál es tu comida favorita?&lt;/legend&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label for="soup"&gt;Sopa&lt;/label&gt;
+      &lt;input type="radio" id="soup" name="meal" value="soup" checked&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="curry"&gt;Curry&lt;/label&gt;
+      &lt;input type="radio" id="curry" name="meal" value="curry"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="pizza"&gt;Pizza&lt;/label&gt;
+      &lt;input type="radio" id="pizza" name="meal" value="pizza"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/fieldset&gt;</pre>
 
 <p>Las capturas de pantalla siguientes muestran botones de opción sin seleccionar y seleccionados, algunos con el foco y otros desactivados sin seleccionar y seleccionados, en Firefox 71 y Safari 13 en MacOS y Chrome 79 y Edge 18 en Windows 10.</p>
@@ -184,7 +184,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 <p><strong>Nota</strong>: Puedes encontrar los ejemplos de esta sección en GitHub como <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html">button-examples.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html">o consultarlos en vivo</a>).</p>
 </div>
 
-<p>A continuación puedes encontrar ejemplos de cada tipo de botón <code>&lt;input&gt;</code>, junto con el tipo de botón equivalente.</p>
+<p>A continuación puedes encontrar ejemplos de cada tipo de botón <code>&lt;input&gt;</code>, junto con el tipo de botón equivalente.</p>
 
 <h3 id="enviar">enviar</h3>
 
@@ -241,7 +241,7 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 <p>Hay un último tipo de <code>&lt;input&gt;</code> que nos llegó a principios del HTML: el tipo entrada de archivo. Los formularios pueden enviar archivos a un servidor (esta acción específica también se detalla en el artículo <a href="/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Enviar los datos del formulario</a>). El control de selección de archivos se puede usar para elegir uno o más archivos para enviar.</p>
 
-<p>Para crear un <a href="/en-US/docs/Web/HTML/Element/input/file">control de selección de archivos</a>, utilizas el elemento {{HTMLElement ("input")}} con su atributo {{htmlattrxref ("type","input")}} establecido en <code>file</code>. Es posible restringir los tipos de archivos que se aceptan utilizando el atributo {{htmlattrxref ("accept","input")}}. Además, puedes permitir que el usuario elija más de un archivo añadiendo el atributo {{htmlattrxref ("multiple","input")}}.</p>
+<p>Para crear un <a href="/en-US/docs/Web/HTML/Element/input/file">control de selección de archivos</a>, utilizas el elemento {{HTMLElement ("input")}} con su atributo {{htmlattrxref ("type","input")}} establecido en <code>file</code>. Es posible restringir los tipos de archivos que se aceptan utilizando el atributo {{htmlattrxref ("accept","input")}}. Además, puedes permitir que el usuario elija más de un archivo añadiendo el atributo {{htmlattrxref ("multiple","input")}}.</p>
 
 <h4 id="Ejemplo">Ejemplo</h4>
 

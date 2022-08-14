@@ -53,7 +53,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(201, "201 Created")}}</dt>
  <dd>A requisição foi bem sucedida e um novo recurso foi criado como resultado. Esta é uma tipica resposta enviada após uma requisição POST.</dd>
  <dt>{{HTTPStatus(202, "202 Accepted")}}</dt>
- <dd>A requisição foi recebida mas nenhuma ação foi tomada sobre ela. Isto é uma requisição não-comprometedora, o que significa que não há nenhuma maneira no HTTP para enviar uma resposta assíncrona indicando o resultado do processamento da solicitação. Isto é indicado para casos onde outro processo ou servidor lida com a requisição, ou para processamento em lote.</dd>
+ <dd>A requisição foi recebida mas nenhuma ação foi tomada sobre ela. Isto é uma requisição não-comprometedora, o que significa que não há nenhuma maneira no HTTP para enviar uma resposta assíncrona indicando o resultado do processamento da solicitação. Isto é indicado para casos onde outro processo ou servidor lida com a requisição, ou para processamento em lote.</dd>
  <dt>{{HTTPStatus(203, "203 Non-Authoritative Information")}}</dt>
  <dd>Esse código de resposta significa que o conjunto de meta-informações retornadas não é o conjunto exato disponível no servidor de origem, mas coletado de uma cópia local ou de terceiros. Exceto essa condição, a resposta de <code>200 OK</code> deve ser preferida em vez dessa resposta.</dd>
  <dt>{{HTTPStatus(204, "204 No Content")}}</dt>
@@ -61,7 +61,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(205, "205 Reset Content")}}</dt>
  <dd>Esta requisição é enviada após realizanda a solicitação para informar ao <em>user agent</em> redefinir a visualização do documento que enviou essa solicitação.</dd>
  <dt>{{HTTPStatus(206, "206 Partial Content")}}</dt>
- <dd>Esta resposta é usada por causa do cabeçalho de intervalo enviado pelo cliente para separar o download em vários fluxos.</dd>
+ <dd>Esta resposta é usada por causa do cabeçalho de intervalo enviado pelo cliente para separar o download em vários fluxos.</dd>
  <dt>{{HTTPStatus(207, "207 Multi-Status")}} ({{Glossary("WebDAV")}})</dt>
  <dd>Uma resposta Multi-Status transmite informações sobre vários recursos em situações em que vários códigos de status podem ser apropriados.</dd>
  <dt>{{HTTPStatus(208, "208 Multi-Status")}} ({{Glossary("WebDAV")}})</dt>
@@ -85,12 +85,12 @@ translation_of: Web/HTTP/Status
  <dd>Essa resposta é usada para questões de cache. Diz ao cliente que a resposta não foi modificada. Portanto, o cliente pode usar a mesma versão em cache da resposta.</dd>
  <dt><code>305 Use Proxy</code> {{deprecated_inline}}</dt>
  <dd>Foi definida em uma versão anterior da especificação HTTP para indicar que uma resposta deve ser acessada por um proxy. Foi depreciada por questões de segurança em respeito a configuração em banda de um proxy.</dd>
- <dt><code>306 unused </code>{{deprecated_inline}}</dt>
+ <dt><code>306 unused </code>{{deprecated_inline}}</dt>
  <dd>Esse código de resposta não é mais utilizado, encontra-se reservado. Foi usado numa versão anterior da especificação HTTP 1.1.</dd>
  <dt>{{HTTPStatus(307, "307 Temporary Redirect")}}</dt>
- <dd>O servidor mandou essa resposta direcionando o cliente a buscar o recurso requisitado em outra URI com o mesmo método que foi utilizado na requisição original. Tem a mesma semântica do código <code>302 Found</code>, com a exceção de que o user-agent <em>não deve</em> mudar o método HTTP utilizado: se um <code>POST</code> foi utilizado na primeira requisição, um <code>POST</code> deve ser utilizado na segunda.</dd>
+ <dd>O servidor mandou essa resposta direcionando o cliente a buscar o recurso requisitado em outra URI com o mesmo método que foi utilizado na requisição original. Tem a mesma semântica do código <code>302 Found</code>, com a exceção de que o user-agent <em>não deve</em> mudar o método HTTP utilizado: se um <code>POST</code> foi utilizado na primeira requisição, um <code>POST</code> deve ser utilizado na segunda.</dd>
  <dt>{{HTTPStatus(308, "308 Permanent Redirect")}}</dt>
- <dd>Esse código significa que o recurso agora está permanentemente localizado em outra URI, especificada pelo cabeçalho de resposta <code>Location</code>. Tem a mesma semântica do código de resposta HTTP <code>301 Moved Permanently</code>  com a exceção de que o user-agent <em>não deve</em> mudar o método HTTP utilizado: se um <code>POST</code> foi utilizado na primeira requisição, um <code>POST</code> deve ser utilizado na segunda.</dd>
+ <dd>Esse código significa que o recurso agora está permanentemente localizado em outra URI, especificada pelo cabeçalho de resposta <code>Location</code>. Tem a mesma semântica do código de resposta HTTP <code>301 Moved Permanently</code>  com a exceção de que o user-agent <em>não deve</em> mudar o método HTTP utilizado: se um <code>POST</code> foi utilizado na primeira requisição, um <code>POST</code> deve ser utilizado na segunda.</dd>
 </dl>
 
 <h2 id="Respostas_de_erro_do_Cliente">Respostas de erro do Cliente</h2>
@@ -100,18 +100,18 @@ translation_of: Web/HTTP/Status
  <dd>Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.</dd>
  <dt>{{HTTPStatus(401, "401 Unauthorized")}}</dt>
  <dd>Embora o padrão HTTP especifique "unauthorized", semanticamente, essa resposta significa "unauthenticated". Ou seja, o cliente deve se autenticar para obter a resposta solicitada.</dd>
- <dt>{{HTTPStatus(402, "402 Payment Required")}} {{experimental_inline}}</dt>
+ <dt>{{HTTPStatus(402, "402 Payment Required")}} {{experimental_inline}}</dt>
  <dd>Este código de resposta está reservado para uso futuro. O objetivo inicial da criação deste código era usá-lo para sistemas digitais de pagamento porém ele não está sendo usado atualmente.</dd>
  <dt>{{HTTPStatus(403, "403 Forbidden")}}</dt>
  <dd>O cliente não tem direitos de acesso ao conteúdo portanto o servidor está rejeitando dar a resposta. Diferente do código 401, aqui a identidade do cliente é conhecida.</dd>
  <dt>{{HTTPStatus(404, "404 Not Found")}}</dt>
  <dd>O servidor não pode encontrar o recurso solicitado. Este código de resposta talvez seja o mais famoso devido à frequência com que acontece na web.</dd>
  <dt>{{HTTPStatus(405, "405 Method Not Allowed")}}</dt>
- <dd>O método de solicitação é conhecido pelo servidor, mas foi desativado e não pode ser usado. Os dois métodos obrigatórios, GET e HEAD, nunca devem ser desabilitados e não devem retornar este código de erro.</dd>
+ <dd>O método de solicitação é conhecido pelo servidor, mas foi desativado e não pode ser usado.</dd>
  <dt>{{HTTPStatus(406, "406 Not Acceptable")}}</dt>
  <dd>Essa resposta é enviada quando o servidor da Web após realizar a negociação de conteúdo orientada pelo servidor, não encontra nenhum conteúdo seguindo os critérios fornecidos pelo agente do usuário.</dd>
  <dt>{{HTTPStatus(407, "407 Proxy Authentication Required")}}</dt>
- <dd>Semelhante ao <strong>401 </strong>porem é necessário que a autenticação seja feita por um proxy.</dd>
+ <dd>Semelhante ao <strong>401 </strong>porem é necessário que a autenticação seja feita por um proxy.</dd>
  <dt>{{HTTPStatus(408, "408 Request Timeout")}}</dt>
  <dd>Esta resposta é enviada por alguns servidores em uma conexão ociosa, mesmo sem qualquer requisição prévia pelo cliente. Ela significa que o servidor gostaria de derrubar esta conexão em desuso. Esta resposta é muito usada já que alguns navegadores, como Chrome, Firefox 27+, ou IE9, usam mecanismos HTTP de pré-conexão para acelerar a navegação. Note também que alguns servidores meramente derrubam a conexão sem enviar esta mensagem.</dd>
  <dt>{{HTTPStatus(409, "409 Conflict")}}</dt>
@@ -178,7 +178,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(508, "508 Loop Detected")}} ({{Glossary("WebDAV")}})</dt>
  <dd>O servidor detectou um looping infinito ao processar a requisição.</dd>
  <dt>{{HTTPStatus(510, "510 Not Extended")}}</dt>
- <dd>Exigem-se extenções posteriores à requisição para o servidor atendê-la.</dd>
+ <dd>Exigem-se extensões posteriores à requisição para o servidor atendê-la.</dd>
  <dt>{{HTTPStatus(511, "511 Network Authentication Required")}}</dt>
  <dd>O código de status 511 indica que o cliente precisa se autenticar para ganhar acesso à rede.</dd>
 </dl>

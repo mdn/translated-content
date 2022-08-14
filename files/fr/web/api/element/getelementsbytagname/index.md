@@ -19,7 +19,9 @@ Quand elle est appelée sur un élément HTML dans un document HTML, `getElement
 
 ## Syntaxe
 
-    elements = element.getElementsByTagName(tagName)
+```js
+elements = element.getElementsByTagName(tagName)
+```
 
 - `elements` est une {{domxref("HTMLCollection")}} contenant les éléments trouvés, dans l'ordre dans lequel ils apparaissent dans le sous-arbre. Si aucun élément n'a été trouvé, la `HTMLCollection` est vide.
 - `element` est l'élément depuis lequel la recherche doit commencer. Notez que seuls les descendants de cet élément feront partie des résultats, mais pas l'élément lui-même.

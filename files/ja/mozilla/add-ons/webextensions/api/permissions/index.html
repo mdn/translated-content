@@ -23,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/permissions
  <li>拡張機能は必要な時のみAPIに頼ることが可能です。すでに動作していれば、アクセス権は付与されていることになります。</li>
 </ul>
 
-<p>インストールした拡張機能のアクセス権の認証の見た目は、ユーザーにとってシンプルなGUIとは言えません。ユーザーは about:debuggingのページを使用して、"このFirefox"ボタンから"拡張機能"のセクションに行き、参照するアドオンの"マニフェスト URL"のリンクを使用しなければなりません。 このURLは拡張機能で使用されている生のjsonファイルへのリンクです。拡張機能のjsonファイルは"permissions"ブロックを含み、これを確認することによってアドオンが使用しているアクセス権を確認することができます。</p>
+<p>インストールした拡張機能のアクセス権の認証の見た目は、ユーザーにとってシンプルなGUIとは言えません。ユーザーは about:debuggingのページを使用して、"このFirefox"ボタンから"拡張機能"のセクションに行き、参照するアドオンの"マニフェスト URL"のリンクを使用しなければなりません。 このURLは拡張機能で使用されている生のjsonファイルへのリンクです。拡張機能のjsonファイルは"permissions"ブロックを含み、これを確認することによってアドオンが使用しているアクセス権を確認することができます。</p>
 
 <p>拡張機能は実行時に、permissions APIによって追加のパーミッションを求めることができます.These permissions need to be listed in the <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> manifest.json key. Note that some permissions are not allowed in <code>optional_permissions</code>. The main advantages of this are:</p>
 

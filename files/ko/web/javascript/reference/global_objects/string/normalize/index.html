@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>normalize()</code></strong> 메서드는 주어진 문자열을 유니코드 정규화 방식(Unicode Normalization Form)에 따라 정규화된 형태로 반환합니다. 만약 주어진 값이 문자열이 아닐 경우에는 우선 문자열로 변환 후 정규화합니다.</p>
+<p><strong><code>normalize()</code></strong> 메서드는 주어진 문자열을 유니코드 정규화 방식(Unicode Normalization Form)에 따라 정규화된 형태로 반환합니다. 만약 주어진 값이 문자열이 아닐 경우에는 우선 문자열로 변환 후 정규화합니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-normalize.html")}}</div>
 
@@ -27,34 +27,34 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 
 <dl>
  <dt><code>form</code></dt>
- <dd>유니코드 정규화 방식을 지정합니다. <code>"NFC"</code>, <code>"NFD"</code>, <code>"NFKC"</code>, <code>"NFKD"</code> 중 하나이며, 생략되거나 {{jsxref("undefined")}} 일 경우 <code>"NFC"</code>가 사용됩니다.
+ <dd>유니코드 정규화 방식을 지정합니다. <code>"NFC"</code>, <code>"NFD"</code>, <code>"NFKC"</code>, <code>"NFKD"</code> 중 하나이며, 생략되거나 {{jsxref("undefined")}} 일 경우 <code>"NFC"</code>가 사용됩니다.
  <ul>
-  <li><code>NFC</code> — 정규형 정준 결합(Normalization Form Canonical Composition).</li>
-  <li><code>NFD</code> — 정규형 정준 분해(Normalization Form Canonical Decomposition).</li>
-  <li><code>NFKC</code> — 정규형 호환성 결합(Normalization Form Compatibility Composition).</li>
-  <li><code>NFKD</code> — 정규형 호환성 분해(Normalization Form Compatibility Decomposition).</li>
+  <li><code>NFC</code> — 정규형 정준 결합(Normalization Form Canonical Composition).</li>
+  <li><code>NFD</code> — 정규형 정준 분해(Normalization Form Canonical Decomposition).</li>
+  <li><code>NFKC</code> — 정규형 호환성 결합(Normalization Form Compatibility Composition).</li>
+  <li><code>NFKD</code> — 정규형 호환성 분해(Normalization Form Compatibility Decomposition).</li>
  </ul>
  </dd>
 </dl>
 
 <h3 id="반환_값">반환 값</h3>
 
-<p>주어진 문자열을 유니코드 정규화 방식에 따라 정규화된 문자열로 반환합니다.</p>
+<p>주어진 문자열을 유니코드 정규화 방식에 따라 정규화된 문자열로 반환합니다.</p>
 
 <h3 id="예외">예외</h3>
 
 <dl>
  <dt>{{jsxref("RangeError")}}</dt>
- <dd><code>form</code>이 위에서 명시된 값 중 하나가 아닐 경우 {{jsxref("RangeError")}} 에러가 발생합니다.</dd>
+ <dd><code>form</code>이 위에서 명시된 값 중 하나가 아닐 경우 {{jsxref("RangeError")}} 에러가 발생합니다.</dd>
 </dl>
 
 <h2 id="설명">설명</h2>
 
-<p><code>normalize()</code> 메서드는 문자열을 유니코드 정규화 방식에 따라 정규화된 형태로 반환합니다. 문자열의 값 자체에는 영향을 주지 않습니다.</p>
+<p><code>normalize()</code> 메서드는 문자열을 유니코드 정규화 방식에 따라 정규화된 형태로 반환합니다. 문자열의 값 자체에는 영향을 주지 않습니다.</p>
 
 <h2 id="예제">예제</h2>
 
-<h3 id="normalize()_사용하기"><code>normalize()</code> 사용하기</h3>
+<h3 id="normalize()_사용하기"><code>normalize()</code> 사용하기</h3>
 
 <pre class="brush: js">// 원본 문자열
 
@@ -93,7 +93,7 @@ str.normalize('NFKC'); // '\u1E69'
 str.normalize('NFKD'); // '\u0073\u0323\u0307'
 </pre>
 
-<h3 id="한글에_normalize()_사용하기">한글에 <code>normalize()</code> 사용하기</h3>
+<h3 id="한글에_normalize()_사용하기">한글에 <code>normalize()</code> 사용하기</h3>
 
 <pre class="brush: js">// 결합된 한글 문자열
 
@@ -126,27 +126,9 @@ var third = second.normalize('NFC'); // '\uD55C\uAE00'
 console.log(second === third); // 같은 글자처럼 보이지만 false를 출력합니다.
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.prototype.normalize', 'String.prototype.normalize')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.normalize', 'String.prototype.normalize')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

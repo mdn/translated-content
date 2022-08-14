@@ -19,7 +19,9 @@ Les évènements initialisés par ce moyen doivent être créés avec la méthod
 
 ## Syntaxe
 
-    event.initCustomEvent(type, canBubble, cancelable, detail);
+```js
+event.initCustomEvent(type, canBubble, cancelable, detail);
+```
 
 ### Paramètres
 

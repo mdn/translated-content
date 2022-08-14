@@ -12,9 +12,9 @@ translation_of: Glossary/Scope
 <p><strong>{{glossary("function", "関数")}}</strong>は {{glossary("JavaScript")}} の<strong>クロージャ</strong>として機能し、すなわちスコープを作成して、 (例えば) 関数内で排他的に定義された変数に、関数の外側からや他の関数の中からアクセスできないようになります。たとえば、以下は無効です。</p>
 
 <pre class="brush: js notranslate">function exampleFunction() {
-    var x = "declared inside function";  // x can only be used in exampleFunction
-    console.log("Inside function");
-    console.log(x);
+    var x = "declared inside function";  // x can only be used in exampleFunction
+    console.log("Inside function");
+    console.log(x);
 }
 
 console.log(x);  // Causes error</pre>
@@ -27,7 +27,7 @@ exampleFunction();
 
 function exampleFunction() {
     console.log("Inside function");
-    console.log(x);
+    console.log(x);
 }
 
 console.log("Outside function");

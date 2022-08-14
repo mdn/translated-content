@@ -15,7 +15,9 @@ La méthode **`allowedFeatures()`** de l'interface {{DOMxRef("FeaturePolicy")}} 
 
 ## Syntaxe
 
-    const permissions = FeaturePolicy.allowedFeatures()
+```js
+const permissions = FeaturePolicy.allowedFeatures()
+```
 
 ### Paramètres
 

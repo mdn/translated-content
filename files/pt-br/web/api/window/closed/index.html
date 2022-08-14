@@ -28,7 +28,7 @@ translation_of: Web/API/Window/closed
 
 <h3 id="Mudar_a_URL_de_uma_janela_a_partir_de_um_popup">Mudar a URL de uma janela a partir de um popup</h3>
 
-<p>O seguinte exemplo demonstra com uma janela de popup pode alterar a URL da janela que abriu ela. Antes de tentarmos mudar a URL da janela que a abriu, verificamos se a janela atual tem uma janela pai que a abriu usando a propriedade <a href="/en-US/docs/DOM/window.opener">window.opener</a> e que esta não está fechada:</p>
+<p>O seguinte exemplo demonstra com uma janela de popup pode alterar a URL da janela que abriu ela. Antes de tentarmos mudar a URL da janela que a abriu, verificamos se a janela atual tem uma janela pai que a abriu usando a propriedade <a href="/en-US/docs/DOM/window.opener">window.opener</a> e que esta não está fechada:</p>
 
 <pre class="brush:js">// Verifique se o opener existe e não está fechado
 if (window.opener &amp;&amp; !window.opener.closed) {
@@ -39,7 +39,7 @@ if (window.opener &amp;&amp; !window.opener.closed) {
 
 <h3 id="Atualizando_um_popup_anteriormente_aberto">Atualizando um popup anteriormente aberto</h3>
 
-<p>Neste exemplo, a função <code>refreshPopupWindow()</code> chama o método <code>reload</code> do objeto <code>location</code> do popup para atualizar seus dados. Se o popup não foi aberto ainda ou o usuário o fechou,  uma nova janela é aberta.</p>
+<p>Neste exemplo, a função <code>refreshPopupWindow()</code> chama o método <code>reload</code> do objeto <code>location</code> do popup para atualizar seus dados. Se o popup não foi aberto ainda ou o usuário o fechou,  uma nova janela é aberta.</p>
 
 <pre class="brush:js">var popupWindow = null;
 

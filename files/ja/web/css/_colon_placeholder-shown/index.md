@@ -17,7 +17,7 @@ translation_of: Web/CSS/:placeholder-shown
 ```css
 /* プレイスホルダーが有効な要素を選択 */
 :placeholder-shown {
-  border: 2px solid silver;
+  border: 2px solid silver;
 }
 ```
 
@@ -72,7 +72,7 @@ input:placeholder-shown {
 
 ```css
 #input2:placeholder-shown {
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 ```
 
@@ -88,19 +88,19 @@ input:placeholder-shown {
 
 ```html
 <form id="test">
-  <p>
-    <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name"/>
-  </p>
-  <p>
-    <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch"/>
-  </p>
-  <p>
-    <label for="sid">Enter Student ID:</label>
-    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
-  </p>
-  <input type="submit"/>
+  <p>
+    <label for="name">Enter Student Name:</label>
+    <input id="name" placeholder="Student Name"/>
+  </p>
+  <p>
+    <label for="branch">Enter Student Branch:</label>
+    <input id="branch" placeholder="Student Branch"/>
+  </p>
+  <p>
+    <label for="sid">Enter Student ID:</label>
+    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+  </p>
+  <input type="submit"/>
 </form>
 ```
 
@@ -108,14 +108,14 @@ input:placeholder-shown {
 
 ```css
 input {
-  background-color: #E8E8E8;
-  color: black;
+  background-color: #E8E8E8;
+  color: black;
 }
 
 input.studentid:placeholder-shown {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+  background-color: yellow;
+  color: red;
+  font-style: italic;
 }
 ```
 

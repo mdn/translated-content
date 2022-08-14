@@ -24,15 +24,15 @@ audioCtx.suspend().then(function() { ... });
 <p>次のスニペットは<a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states デモ</a>(<a href="http://mdn.github.io/audiocontext-states/">すぐ実行</a>)から取ったものです。suspend/resumeボタンをクリックすると、{{domxref("AudioContext.state")}}を問い合わせます—もし<code>running</code>ならば、<code>suspend()</code>が呼ばれます。<code>suspended</code>ならば、{{domxref("resume")}}が呼ばれます。両方ともプロミスに成功するとボタンのラベルが適したものに更新されます。</p>
 
 <pre class="brush: js">susresBtn.onclick = function() {
-  if(audioCtx.state === 'running') {
-    audioCtx.suspend().then(function() {
-      susresBtn.textContent = 'Resume context';
-    });
-  } else if(audioCtx.state === 'suspended') {
-    audioCtx.resume().then(function() {
-      susresBtn.textContent = 'Suspend context';
-    });
-  }
+  if(audioCtx.state === 'running') {
+    audioCtx.suspend().then(function() {
+      susresBtn.textContent = 'Resume context';
+    });
+  } else if(audioCtx.state === 'suspended') {
+    audioCtx.resume().then(function() {
+      susresBtn.textContent = 'Suspend context';
+    });
+  }
 }
 </pre>
 
@@ -48,7 +48,7 @@ audioCtx.suspend().then(function() { ... });
   <tr>
    <td>{{SpecName('Web Audio API', '#widl-AudioContext-suspend-Promise-void', 'close()')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

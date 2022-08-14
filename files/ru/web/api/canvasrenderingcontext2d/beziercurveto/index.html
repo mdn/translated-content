@@ -13,7 +13,7 @@ translation_of: Web/API/CanvasRenderingContext2D/bezierCurveTo
 
 <h2 id="Summary">Сводка</h2>
 
-<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.bezierCurveTo()</code></strong>, предоставляемый Canvas 2D API, добавляет кубическую кривую Безье к контуру. Для построения требуются три точки. Первые две точки являются контрольными, а третья - конечной. Начальной точкой является последняя точка в текущем контуре, и она может быть изменена методом {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} перед созданием кривой Безье.</p>
+<p>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.bezierCurveTo()</code></strong>, предоставляемый Canvas 2D API, добавляет кубическую кривую Безье к контуру. Для построения требуются три точки. Первые две точки являются контрольными, а третья - конечной. Начальной точкой является последняя точка в текущем контуре, и она может быть изменена методом {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} перед созданием кривой Безье.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -24,17 +24,17 @@ translation_of: Web/API/CanvasRenderingContext2D/bezierCurveTo
 
 <dl>
  <dt><code>cp1x</code></dt>
- <dd>Координата первой контрольной точки по оси x.</dd>
+ <dd>Координата первой контрольной точки по оси x.</dd>
  <dt><code>cp1y</code></dt>
- <dd>Координата первой контрольной точки по оси y.</dd>
+ <dd>Координата первой контрольной точки по оси y.</dd>
  <dt><code>cp2x</code></dt>
  <dd>Координата второй контрольной точки по оси x.</dd>
  <dt><code>cp2y</code></dt>
  <dd>Координата второй контрольной точки по оси y.</dd>
  <dt><code>x</code></dt>
- <dd>Координата конечной точки по оси x.</dd>
+ <dd>Координата конечной точки по оси x.</dd>
  <dt><code>y</code></dt>
- <dd>Координата конечной точки по оси y.</dd>
+ <dd>Координата конечной точки по оси y.</dd>
 </dl>
 
 <h2 id="Examples">Примеры</h2>
@@ -79,8 +79,8 @@ ctx.fillRect(150, 70, 10, 10);</pre>
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.beginPath();

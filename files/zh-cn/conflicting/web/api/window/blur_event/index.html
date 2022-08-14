@@ -1,0 +1,80 @@
+---
+title: GlobalEventHandlers.onblur
+slug: conflicting/Web/API/Window/blur_event
+tags:
+  - Gecko DOM Reference
+translation_of: Web/API/GlobalEventHandlers/onblur
+original_slug: Web/API/GlobalEventHandlers/onblur
+---
+<div>{{ ApiRef("HTML DOM") }}</div>
+
+<h3 id="Summary" name="Summary">概述</h3>
+
+<p><strong>onblur</strong>属性用来获取或设置当前元素的 onBlur 事件的事件处理函数</p>
+
+<h3 id="Syntax" name="Syntax">语法</h3>
+
+<pre class="eval">element.onblur = function;
+</pre>
+
+<ul>
+ <li><code>function</code> 是一个函数名，没有括号 () 和任何参数，也可以是一个匿名函数，如下：</li>
+</ul>
+
+<pre class="eval">element.onblur = function() { alert("检测到 onblur 事件！"); };
+</pre>
+
+<h3 id="Example" name="Example">例子</h3>
+
+<pre>&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;onblur event example&lt;/title&gt;
+
+&lt;script type="text/javascript"&gt;
+
+var elem = null;
+
+function initElement()
+ {
+ elem = document.getElementById("foo");
+ // 注意:doEvent() 和 doEvent(param) 都是不正确的。这里只能是函数名，不能是函数调用。
+ elem.onblur = doEvent;
+ };
+
+function doEvent()
+ {
+ elem.value = 'Bye-Bye';
+ alert("检测到 onblur 事件！")
+ }
+&lt;/script&gt;
+
+&lt;style type="text/css"&gt;
+&lt;!--
+#foo {
+border: solid blue 2px;
+}
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body onload="initElement()";&gt;
+&lt;form&gt;
+&lt;input type="text" id="foo" value="Hello!" /&gt;
+&lt;/form&gt;
+
+&lt;p&gt;点击 input 元素使其获得焦点，然后点击其他页面其他部位&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h3 id="Notes" name="Notes">备注</h3>
+
+<p>当一个元素失去焦点时会触发<code>blur</code>事件。</p>
+
+<p>在 IE 中，几乎所有类型的元素都可以触发 blur 事件，但在基于 gecko 的浏览器中，大部分元素都不能触发 blur 事件。</p>
+
+<h3 id="Specification" name="Specification">规范</h3>
+
+<p>DOM Level 0 不属于任何规范。</p>

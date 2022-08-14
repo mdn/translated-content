@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">O método <strong><code>JSON.parse()</code></strong> analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função <strong>reviver</strong> opcional pode ser fornecida para executar uma transformação no objeto que será retornado.</span></p>
+<p><span class="seoSummary">O método <strong><code>JSON.parse()</code></strong> analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função <strong>reviver</strong> opcional pode ser fornecida para executar uma transformação no objeto que será retornado.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/json-parse.html")}}</div>
 
@@ -48,7 +48,7 @@ JSON.parse('null');            // null
 
 <h3 id="Usando_o_parâmetro_reviver">Usando o parâmetro <code>reviver</code></h3>
 
-<p>Se um <code>reviver</code> for especificado, o valor calculado pela análise será <em>transformado</em> antes de ser retornado. Especificamente, o valor computado e todas as suas propriedades (começando com as propriedades mais aninhadas e prosseguindo para o próprio valor original) são executadas individualmente através do <code>reviver</code>. Em seguida, ele é chamado, com o objeto contendo a propriedade sendo processada como <code>this</code>, e com o nome da propriedade como uma string, e o valor da propriedade como argumentos. Se a função  <code>reviver</code> retornar {{jsxref("undefined")}} (ou não retornar nenhum valor, por exemplo, se a execução cair no final da função), a propriedade será excluída do objeto. Caso contrário, a propriedade é redefinida para ser o valor de retorno.</p>
+<p>Se um <code>reviver</code> for especificado, o valor calculado pela análise será <em>transformado</em> antes de ser retornado. Especificamente, o valor computado e todas as suas propriedades (começando com as propriedades mais aninhadas e prosseguindo para o próprio valor original) são executadas individualmente através do <code>reviver</code>. Em seguida, ele é chamado, com o objeto contendo a propriedade sendo processada como <code>this</code>, e com o nome da propriedade como uma string, e o valor da propriedade como argumentos. Se a função  <code>reviver</code> retornar {{jsxref("undefined")}} (ou não retornar nenhum valor, por exemplo, se a execução cair no final da função), a propriedade será excluída do objeto. Caso contrário, a propriedade é redefinida para ser o valor de retorno.</p>
 
 <p>Se o <code>reviver</code> apenas transformar alguns valores e não outros, certifique-se de retornar todos os valores não transformados como estão, caso contrário, eles serão excluídos do objeto resultante.</p>
 
@@ -98,12 +98,12 @@ JSON.parse('{"foo" : 1, }');
   <tr>
    <td>{{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

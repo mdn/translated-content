@@ -19,7 +19,9 @@ Cela permet également aux animations basées sur JavaScript de rester synchroni
 
 ## Syntaxe
 
-    time = window.mozAnimationStartTime;
+```js
+time = window.mozAnimationStartTime;
+```
 
 ### Paramètres
 

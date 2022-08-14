@@ -16,7 +16,9 @@ La valeur **Document.readyState** est une propriété de {{ domxref("document") 
 
 ## Syntaxe
 
-    var string = document.readyState;
+```js
+var string = document.readyState;
+```
 
 ### Valeurs
 

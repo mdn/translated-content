@@ -72,11 +72,11 @@ x-card:nth-child(3) {
 }
 ```
 
-そこで、最初の 2 列の {{cssxref("width")}} を `30%` とし、3 列目の `width` を `40%` にして、すべての列を左に浮動させています。このようにすると横に並んだ状態になり、ブラウザーのウィンドウの大きさが変わっても、その比率は変わりません。これは簡単なグリッドの例ですが、必要に応じてこの原理をより複雑なグリッドレイアウトに応用することができます。
+そこで、最初の 2 列の {{cssxref("width")}} を `30%` とし、3 列目の `width` を `40%` にして、すべての列を左に浮動させています。このようにすると横に並んだ状態になり、ブラウザーのウィンドウの大きさが変わっても、その比率は変わりません。これは簡単なグリッドの例ですが、必要に応じてこの原理をより複雑なグリッドレイアウトに応用することができます。
 
 ### 寸法を border-box とする
 
-すべての要素の {{cssxref("box-sizing")}} を `border-box` に設定しているため、パディングを設定してもコンテナーの幅や高さに影響しません。
+すべての要素の {{cssxref("box-sizing")}} を `border-box` に設定しているため、パディングを設定してもコンテナーの幅や高さに影響しません。
 
 ```css
 *, *:before, *:after {
@@ -86,7 +86,7 @@ x-card:nth-child(3) {
 }
 ```
 
-これは基本的に、 {{cssxref("width")}} および {{cssxref("height")}} がコンテンツだけでなく、境界を含む要素全体の寸法を設定することを意味します。ですから、 `width: 40%` と設定すると、ボックスの幅は常に親の `40%` となり、 {{cssxref("padding")}} と {{cssxref("border")}} の幅がコンテンツの幅に追加されるのではなく、差し引かれることになります。とても便利ですね。詳しくは、 [\* { Box-sizing: Border-box } FTW](https://www.paulirish.com/2012/box-sizing-border-box-ftw/) (Paul Irish) を参照してください。
+これは基本的に、 {{cssxref("width")}} および {{cssxref("height")}} がコンテンツだけでなく、境界を含む要素全体の寸法を設定することを意味します。ですから、 `width: 40%` と設定すると、ボックスの幅は常に親の `40%` となり、 {{cssxref("padding")}} と {{cssxref("border")}} の幅がコンテンツの幅に追加されるのではなく、差し引かれることになります。とても便利ですね。詳しくは、 [\* { Box-sizing: Border-box } FTW](https://www.paulirish.com/2012/box-sizing-border-box-ftw/) (Paul Irish) を参照してください。
 
 ## 柔軟な置換要素
 
@@ -119,7 +119,7 @@ x-card:nth-child(1) video, x-card:nth-child(2) img {
 
 流動グリッドは素晴らしいスタートですが、特定のポイント（ブレイクポイントと呼ばれる）でレイアウトが崩れ始めることに気づくでしょう。これらのポイントでは、レイアウトの問題を修正するためにレイアウトを変更したいと思うでしょうが、これはメディアクエリーを使って行うことができます。
 
-> **Note:** メディアクエリーとは、 CSS3 の機能の一つで、メディア特性の検査結果に応じて CSS を選択的に適用することができるものです。基本的なことについては、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)を参照してください。
+> **Note:** メディアクエリーとは、 CSS3 の機能の一つで、メディア特性の検査結果に応じて CSS を選択的に適用することができるものです。基本的なことについては、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)を参照してください。
 
 ### 典型的なデスクトップレイアウト
 
@@ -181,17 +181,17 @@ x-card:nth-child(1) video, x-card:nth-child(2) img {
 
 ```css
   x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
-    margin-top: 17.5vw;
-  }
+    margin-top: 17.5vw;
+  }
 
-  x-card:nth-child(1) button, x-card:nth-child(2) button {
-    position: absolute;
-    bottom: 0;
-  }
+  x-card:nth-child(1) button, x-card:nth-child(2) button {
+    position: absolute;
+    bottom: 0;
+  }
 
-  x-card:nth-child(2) button:nth-of-type(2) {
-    bottom: 5.9rem;
-  }
+  x-card:nth-child(2) button:nth-of-type(2) {
+    bottom: 5.9rem;
+  }
 
   x-card:nth-child(1) button {
     font-size: 7vw;
@@ -213,31 +213,31 @@ x-card:nth-child(3) img {
 このルールにより、ギャラリー画像の幅が変更され、 1 行に 2 枚の画像が表示されるようになりました。
 
 ```css
-  nav {
+  nav {
     width: 100%;
-    position: absolute;
-    z-index: 1000;
+    position: absolute;
+    z-index: 1000;
 
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
-  nav button {
-    font-size: 6.8vw;
+  nav button {
+    font-size: 6.8vw;
 
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 
-    border-left: 1px solid rgba(100,100,100,0.4);
-  }
+    border-left: 1px solid rgba(100,100,100,0.4);
+  }
 
-  nav button:first-child {
-    border-left: 0;
-  }
+  nav button:first-child {
+    border-left: 0;
+  }
 }
 ```
 
@@ -294,29 +294,29 @@ body {
 ```css
 @media all and (max-width: 480px) and (orientation: landscape) {
   nav {
-    width: auto;
+    width: auto;
 
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 
-  nav button {
-    font-size: 6.8vh;
-  }
+  nav button {
+    font-size: 6.8vh;
+  }
 
-  nav button {
-    border-left: 0;
-  }
+  nav button {
+    border-left: 0;
+  }
 
-  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
-    margin-top: 0;
-  }
+  x-card:nth-child(1) video, x-card:nth-child(2) img, x-card:nth-child(3) {
+    margin-top: 0;
+  }
 
-  x-card:nth-child(1) button, x-card:nth-child(2) button {
-    font-size: 2rem;
-  }
+  x-card:nth-child(1) button, x-card:nth-child(2) button {
+    font-size: 2rem;
+  }
 }
 ```
 
@@ -340,7 +340,9 @@ body {
 
 このモバイルレンダリングの動作を上書きする方法として、 {{HTMLElement("meta")}} タグの形で HTML ページに挿入される viewport があります。この例では、 HTML の {{HTMLElement("head")}} に以下を追加してみましょう。
 
-    <meta name="viewport" content="width=480">
+```html
+<meta name="viewport" content="width=480">
+```
 
 これにより、ブラウザーはモバイルアプリのレイアウトを適切にレンダリングします。 `width=480` はブラウザーに「このマークアップを 480 ピクセル幅でレンダリングしてください」と伝え、その結果、メディアクエリーが適切に機能するようになります。 viewport meta タグには、他にも多くのオプションがあり、[viewport meta タグを使ってモバイルブラウザーでのレイアウトを制御する](/ja/docs/Mozilla/Mobile/Viewport_meta_tag)で紹介されています。
 

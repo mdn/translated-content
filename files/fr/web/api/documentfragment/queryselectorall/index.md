@@ -19,7 +19,9 @@ Si les sélecteurs spécifiés dans paramètre sont invalides une {{domxref("DOM
 
 ## Syntaxe
 
-    elementList = documentframgment.querySelectorAll(selectors);
+```js
+elementList = documentframgment.querySelectorAll(selectors);
+```
 
 ### Paramètres
 

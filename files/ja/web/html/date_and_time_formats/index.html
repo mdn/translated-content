@@ -108,7 +108,7 @@ translation_of: Web/HTML/Date_and_time_formats
 
 <p>HTML の日付の目的上、年は常に4桁以上の長さになります。1000年より前の年は、先頭にゼロ ("<code>0</code>") を入れますので、72年は <code>0072</code> と書かれます。紀元1年以前の年には対応していないので、 HTML は紀元前1年以前の年に対応していません。</p>
 
-<p>1年はふつうは365日ですが、<strong>{{anch("Leap years", "閏年")}}</strong>は例外です。</p>
+<p>1年はふつうは365日ですが、<strong><a href="#leap_years">閏年</a></strong>は例外です。</p>
 
 <h4 id="Leap_years" name="Leap_years">閏年</h4>
 
@@ -120,7 +120,7 @@ translation_of: Web/HTML/Date_and_time_formats
 
 <h3 id="Months_of_the_year" name="Months_of_the_year">月</h3>
 
-<p>1年には12ヶ月があり、1から12まで番号が振られています。これらは常に2桁の ASCII 文字列、 <code>01</code> から <code>12</code> の範囲で表現されます。{{anch("Days of the month", "日")}}の節にある表で、対応する名前を (と日数) を確認してください。</p>
+<p>1年には12ヶ月があり、1から12まで番号が振られています。これらは常に2桁の ASCII 文字列、 <code>01</code> から <code>12</code> の範囲で表現されます。<a href="#days_of_the_month">日</a>の節にある表で、対応する名前を (と日数) を確認してください。</p>
 
 <h3 id="Days_of_the_month" name="Days_of_the_month">日</h3>
 
@@ -201,7 +201,7 @@ translation_of: Web/HTML/Date_and_time_formats
 
 <h2 id="Week_strings" name="Week_strings">週の文字列</h2>
 
-<p>A week string specifies a week within a particular year. A <strong>valid week string</strong> consists of a valid {{anch("Year numbers", "year number")}}, followed by a hyphen character ("<code>-</code>", or U+002D), then the capital letter "<code>W</code>" (U+0057), followed by a two-digit week of the year value.</p>
+<p>A week string specifies a week within a particular year. A <strong>valid week string</strong> consists of a valid <a href="#year_numbers">year number</a>, followed by a hyphen character ("<code>-</code>", or U+002D), then the capital letter "<code>W</code>" (U+0057), followed by a two-digit week of the year value.</p>
 
 <p>The week of the year is a two-digit string between <code>01</code> and <code>53</code>. Each week begins on Monday and ends on Sunday. That means it's possible for the first few days of January to be considered part of the previous week-year, and for the last few days of December to be considered part of the following week-year. The first week of the year is the week that conains the <em>first Thursday of the year</em>. For example, the first Thursday of 1953 was on January 1, so that week—beginning on Monday, December 29—is considered the first week of the year. Therefore, December 30, 1952 occurs during the week <code>1953-W01</code>.</p>
 
@@ -209,7 +209,7 @@ translation_of: Web/HTML/Date_and_time_formats
 
 <ul>
  <li>The first day of the calendar year (January 1) is a Thursday <strong>or</strong></li>
- <li>The first day of the year (January 1) is a Wednesday and the year is a {{anch("Leap years", "leap year")}}</li>
+ <li>The first day of the year (January 1) is a Wednesday and the year is a <a href="#leap_years">leap year</a></li>
 </ul>
 
 <p>All other years have 52 weeks.</p>
@@ -256,7 +256,7 @@ translation_of: Web/HTML/Date_and_time_formats
 
 <p>A month string represents a specific month in time, rather than a genetic month of the year. That is, rather than representing simply "January," an HTML month string represents a month and year paired, like "January 1972."</p>
 
-<p>A <strong>valid month string</strong> consists of a valid {{anch("Year numbers", "year number")}} (a string of at least four digits), followed by a hyphen character ("<code>-</code>", or U+002D), followed by a two-digit numeric {{anch("Months of the year", "month number")}}, where <code>01</code> represents January and <code>12</code> represents December.</p>
+<p>A <strong>valid month string</strong> consists of a valid <a href="#year_numbers">year number</a> (a string of at least four digits), followed by a hyphen character ("<code>-</code>", or U+002D), followed by a two-digit numeric <a href="#months_of_the_year">month number</a>, where <code>01</code> represents January and <code>12</code> represents December.</p>
 
 <table class="standard-table">
  <caption>有効な月の文字列の例</caption>
@@ -294,7 +294,7 @@ translation_of: Web/HTML/Date_and_time_formats
 
 <h2 id="Date_strings" name="Date_strings">日の文字列</h2>
 
-<p>A valid date string consists of a {{anch("Month strings", "month string")}}, followed by a hyphen character ("<code>-</code>", or U+002D), followed by a two-digit {{anch("Days of the month", "day of the month")}}.</p>
+<p>A valid date string consists of a <a href="#month_strings">month string</a>, followed by a hyphen character ("<code>-</code>", or U+002D), followed by a two-digit <a href="#days_of_the_month">day of the month</a>.</p>
 
 <table class="standard-table">
  <caption>妥当な日の文字列の例</caption>
@@ -404,7 +404,7 @@ translation_of: Web/HTML/Date_and_time_formats
 
 <h2 id="Global_date_and_time_strings" name="Global_date_and_time_strings">グローバル日時の文字列</h2>
 
-<p>A global date and time string specifies a date and time as well as the time zone in which it occurs. A <strong>valid global date and time string</strong> is the same format as a {{anch("Local date and time strings", "local date and time string")}}, except it has a time zone string appended to the end, following the time.</p>
+<p>A global date and time string specifies a date and time as well as the time zone in which it occurs. A <strong>valid global date and time string</strong> is the same format as a <a href="#local_date_and_time_strings">local date and time string</a>, except it has a time zone string appended to the end, following the time.</p>
 
 <h3 id="Time_zone_offset_string" name="Time_zone_offset_string">タイムゾーンオフセット文字列</h3>
 

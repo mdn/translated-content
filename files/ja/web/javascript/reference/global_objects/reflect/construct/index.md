@@ -54,42 +54,44 @@ let obj = Reflect.construct(Foo, args)
 
 `Reflect` が導入される前は、オブジェクトを構築するのにコンストラクターとプロトタイプの任意の組み合わせで {{jsxref("Object.create()")}} を使用して構築することができました。
 
-    function OneClass() {
-        this.name = 'one'
-    }
+```js
+function OneClass() {
+  this.name = 'one'
+}
 
-    function OtherClass() {
-        this.name = 'other'
-    }
+function OtherClass() {
+  this.name = 'other'
+}
 
-    // Calling this:
-    let obj1 = Reflect.construct(OneClass, args, OtherClass)
+// Calling this:
+let obj1 = Reflect.construct(OneClass, args, OtherClass)
 
-    // ...has the same result as this:
-    let obj2 = Object.create(OtherClass.prototype)
-    OneClass.apply(obj2, args)
+// ...has the same result as this:
+let obj2 = Object.create(OtherClass.prototype)
+OneClass.apply(obj2, args)
 
-    console.log(obj1.name)  // 'one'
-    console.log(obj2.name)  // 'one'
+console.log(obj1.name)  // 'one'
+console.log(obj2.name)  // 'one'
 
-    console.log(obj1 instanceof OneClass)  // false
-    console.log(obj2 instanceof OneClass)  // false
+console.log(obj1 instanceof OneClass)  // false
+console.log(obj2 instanceof OneClass)  // false
 
-    console.log(obj1 instanceof OtherClass)  // true
-    console.log(obj2 instanceof OtherClass)  // true
+console.log(obj1 instanceof OtherClass)  // true
+console.log(obj2 instanceof OtherClass)  // true
 
-    //Another example to demonstrate below:
+//Another example to demonstrate below:
 
-    function func1(a, b, c, d) {
-      console.log(arguments[3]);
-    }
+function func1(a, b, c, d) {
+console.log(arguments[3]);
+}
 
-    function func2(d, e, f, g) {
-      console.log(arguments[3]);
-    }
+function func2(d, e, f, g) {
+console.log(arguments[3]);
+}
 
-    let obj1 = Reflect.construct(func1, ['I', 'Love', 'my', 'India'])
-    obj1
+let obj1 = Reflect.construct(func1, ['I', 'Love', 'my', 'India'])
+obj1
+```
 
 この 2 つの手法の最終結果は同じですが、その過程に重要な違いがあります。 `Object.create()` と {{jsxref("Function.prototype.apply()")}} を使用する場合、 `new.target` 演算子はコンストラクター内で `undefined` を返します。これは、 `new` 演算子を用いないためです。
 

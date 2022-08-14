@@ -41,7 +41,7 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
 - [用語集](/ja/docs/Glossary)
 
-   - {{Glossary("CORS")}}
-   - {{Glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}
-   - {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
-   - {{Glossary("Request header", "リクエストヘッダー")}}
+  - {{Glossary("CORS")}}
+  - {{Glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}
+  - {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+  - {{Glossary("Request header", "リクエストヘッダー")}}

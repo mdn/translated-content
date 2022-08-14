@@ -8,40 +8,40 @@ tags:
 translation_of: Mozilla/Firefox/Releases/35
 original_slug: Mozilla/Firefox/Versions/35
 ---
-1.  Notes de versions pour développeurs
+1. Notes de versions pour développeurs
 
-    1.  [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
-2.  Modules complémentaires
+2. Modules complémentaires
 
-    1.  [WebExtensions](/fr/Add-ons/WebExtensions)
-    2.  [Thèmes](/fr/Add-ons/Themes)
+    1. [WebExtensions](/fr/Add-ons/WebExtensions)
+    2. [Thèmes](/fr/Add-ons/Themes)
 
-3.  Fonctionnement interne de Firefox
+3. Fonctionnement interne de Firefox
 
-    1.  [Le projet Mozilla](/fr/docs/Mozilla/)
-    2.  [Gecko](/fr/docs/Mozilla/Gecko)
-    3.  [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-    4.  [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-    5.  [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-    6.  [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-    7.  [MFBT](/fr/docs/Mozilla/MFBT)
-    8.  [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-    9.  [Le système de préférences](/fr/docs/Mozilla/Preferences)
+    1. [Le projet Mozilla](/fr/docs/Mozilla/)
+    2. [Gecko](/fr/docs/Mozilla/Gecko)
+    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+    4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+    5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+    6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+    7. [MFBT](/fr/docs/Mozilla/MFBT)
+    8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+    9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
     10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
     11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
     12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
-4.  Développer et contribuer
+4. Développer et contribuer
 
-    1.  [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-    2.  [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
-    3.  [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-    4.  [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-    5.  [Localisation](/fr/docs/Mozilla/Localization)
-    6.  [Mercurial](/fr/docs/Mozilla/Mercurial)
-    7.  [Assurance qualité](/fr/docs/Mozilla/QA)
-    8.  [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+    2. [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+    4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+    5. [Localisation](/fr/docs/Mozilla/Localization)
+    6. [Mercurial](/fr/docs/Mozilla/Mercurial)
+    7. [Assurance qualité](/fr/docs/Mozilla/QA)
+    8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
 ## Changement concernant les développeurs
 
@@ -67,12 +67,12 @@ Liens:
 
 ### HTML
 
-- Les obsolètes `et non conformes bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributs de l'élement `<body> ` ont été activés en mode non-quirks ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
+- Les obsolètes `et non conformes bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributs de l'élement `<body>` ont été activés en mode non-quirks ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
 - Les [imports HTML](/fr/docs/Web/Web_Components/HTML_Imports) sont maintenant supportés ([bug 877072](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)).
 
 ### JavaScript
 
-- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée.  En conformité avec les sémantiques `let `ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet[ annoncement de newsgroup ](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds)and [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090 'FIXED: Implement ES6 "temporal dead zone" for let').
+- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée.  En conformité avec les sémantiques `let`ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet [annoncement de newsgroup](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) et [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
 
   - Redéclarer des variables existantes ou arguments utilisant `let` sans la même portée dans le corps de fonctions est maintenant une erreur de syntaxe.
   - Utiliser une variable déclarée en utilisant `let` dans le corps de fonctions avant la déclaration de cette variable est maintenant une erreur d'exécution.
@@ -102,10 +102,10 @@ Liens:
 - Non-HTTP [`XHR`](/fr/docs/Web/API/XMLHttpRequest) request now returns `200` in case of success (instead of the erroneous `0`) ([bug 716491](https://bugzilla.mozilla.org/show_bug.cgi?id=716491)).
 - The internal, non-standard, [`File.mozFullPath`](/fr/docs/Web/API/File/mozFullPath) property is no more visible from content ([bug 1048293](https://bugzilla.mozilla.org/show_bug.cgi?id=1048293)).
 - The constructor of [`File`](/fr/docs/Web/API/File) has been extended to match the specification ([bug 10457483](https://bugzilla.mozilla.org/show_bug.cgi?id=10457483)).
-- An experimental implementation of [`AbortablePromise`](/fr/docs/Web/API/AbortablePromise), a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled `property, defaulting to `false` ([bug 1035060](https://bugzilla.mozilla.org/show_bug.cgi?id=1035060)).
+- An experimental implementation of [`AbortablePromise`](/fr/docs/Web/API/AbortablePromise), a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ([bug 1035060](https://bugzilla.mozilla.org/show_bug.cgi?id=1035060)).
 - La propriété non standardisée [`Navigator.mozIsLocallyAvailable`](/fr/docs/Web/API/Navigator/mozIsLocallyAvailable) a été supprimée ([bug 1066826](https://bugzilla.mozilla.org/show_bug.cgi?id=1066826)).
 
-###  MathML
+### MathML
 
 - La fonction  `dtls` OpenType (via les CSS [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings) sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (e.g. dotless i with mathematical hat).
 

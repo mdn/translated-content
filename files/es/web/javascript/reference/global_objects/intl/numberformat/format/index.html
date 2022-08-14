@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat/form
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <strong><code>Intl.NumberFormat.prototype.format()</code></strong> formatea un número de acuerdo con la configuración regional y las opciones de formato de este objeto {{jsxref("NumberFormat")}}.</p>
+<p>El método <strong><code>Intl.NumberFormat.prototype.format()</code></strong> formatea un número de acuerdo con la configuración regional y las opciones de formato de este objeto {{jsxref("NumberFormat")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}</div>
 
@@ -29,17 +29,17 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat/form
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_format">Usando <code>format</code></h3>
+<h3 id="Usando_format">Usando <code>format</code></h3>
 
 <p>Use the <code>format</code> getter function for formatting a single currency value, here for Russia:</p>
 
 <pre class="brush: js">var options = { style: 'currency', currency: 'RUB' };
 var numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
-// → "654 321,99 руб."
+// → "654 321,99 руб."
 </pre>
 
-<h3 id="Usando_format_con_map">Usando <code>format</code> con <code>map</code></h3>
+<h3 id="Usando_format_con_map">Usando <code>format</code> con <code>map</code></h3>
 
 <p>Use the <code>format</code> getter function for formatting all numbers in an array. Note that the function is bound to the {{jsxref("NumberFormat")}} from which it was obtained, so it can be passed directly to {{jsxref("Array.prototype.map")}}.</p>
 

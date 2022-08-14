@@ -18,7 +18,9 @@ La langue elle-même est spécifiée à l'aide d'un {{domxref ("DOMString")}} re
 
 ## Syntaxz
 
-    Notification.lang
+```
+Notification.lang
+```
 
 ### Valeur
 

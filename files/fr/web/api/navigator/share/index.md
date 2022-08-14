@@ -7,9 +7,11 @@ translation_of: Web/API/Navigator/share
 
 La méthode **`Navigator.share()`** invoque le mécanisme de partage natif de l'appareil. Celle-ci appartient à l'API Web Share. Si l'API Web Share n'est pas supportée, alors la méthode sera `undefined`.
 
-## Syntax
+## Syntaxe
 
-    var sharePromise = window.navigator.share(data);
+```js
+var sharePromise = window.navigator.share(data);
+```
 
 ### Paramètres
 

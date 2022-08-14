@@ -85,7 +85,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 var buffer = context.createBuffer(2, 22050, 44100);</pre>
 
 <div class="note">
-<p><strong>노트</strong>: <a href="https://en.wikipedia.org/wiki/Digital_audio" title="Digital audio">디지털 오디오</a>에서, <strong>44,100 <a href="https://en.wikipedia.org/wiki/Hertz">Hz</a></strong> (또한 <strong>44.1 kHz</strong>로 표현되어짐) 은 일반적인 <a href="https://en.wikipedia.org/wiki/Sampling_frequency" title="Sampling frequency">샘플링 주파수</a>입니다. 왜 44.1kHz일까요? <br>
+<p><strong>노트</strong>: <a href="https://en.wikipedia.org/wiki/Digital_audio" title="Digital audio">디지털 오디오</a>에서, <strong>44,100 <a href="https://en.wikipedia.org/wiki/Hertz">Hz</a></strong> (또한 <strong>44.1 kHz</strong>로 표현되어짐) 은 일반적인 <a href="https://en.wikipedia.org/wiki/Sampling_frequency" title="Sampling frequency">샘플링 주파수</a>입니다. 왜 44.1kHz일까요? <br>
  <br>
  첫째로, 왜냐하면 인간의 <a href="https://en.wikipedia.org/wiki/Hearing_range" title="Hearing range">가청 범위</a>(hearing range)는 대략적으로 20 Hz에서 20,000 Hz이기 때문입니다. <a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem" title="Nyquist–Shannon sampling theorem">표본화 정리</a>(Nyquist–Shannon sampling theorem)에 의하여, 샘플링 주파수는 반드시 재생하기를 원하는 최대 주파수의 2배보다 커야 합니다. 그러므로, 샘플링 레이트는 40 kHz보다 커야만 합니다.<br>
  <br>

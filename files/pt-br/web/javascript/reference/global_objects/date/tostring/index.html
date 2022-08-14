@@ -30,12 +30,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Instâncias de {{jsxref("Date")}} herdam o método <code>toString()</code> de {{jsxref("Date.prototype")}}, não {{jsxref("Object.prototype")}}. <code>Date.prototype.toString()</code> retorna uma <em>string</em> com a representação de Date no formato especificado na ECMA-262 que pode ser resumida como:</p>
+<p>Instâncias de {{jsxref("Date")}} herdam o método <code>toString()</code> de {{jsxref("Date.prototype")}}, não {{jsxref("Object.prototype")}}. <code>Date.prototype.toString()</code> retorna uma <em>string</em> com a representação de Date no formato especificado na ECMA-262 que pode ser resumida como:</p>
 
 <ul>
- <li>Dia da semana: 3 letras do nome do dia da semana em Inglês, e.g. "Sat"</li>
+ <li>Dia da semana: 3 letras do nome do dia da semana em Inglês, e.g. "Sat"</li>
  <li>espaço</li>
- <li>Nome do mês: 3 letras do nome do mês em Inglês, e.g. "Sep"</li>
+ <li>Nome do mês: 3 letras do nome do mês em Inglês, e.g. "Sep"</li>
  <li>espaço</li>
  <li>Dia: Dia do mês em 2 dígitos, e.g. "01"</li>
  <li>espaço</li>
@@ -66,11 +66,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
  </li>
 </ul>
 
-<p>E.g. "Sat Sep 01 2018 14:53:26 GMT+1400 (LINT)"</p>
+<p>E.g. "Sat Sep 01 2018 14:53:26 GMT+1400 (LINT)"</p>
 
 <p>Até o ECMAScript 2018 (edição 9), o formato da <em>string</em> retornada pelo <code>Date.prototype.toString</code> era dependente da implementação. Portanto, não se deve confiar que ela está no formato especificado.</p>
 
-<p>O método <code>toString()</code> é automaticamente chamado quando a data deve ser representada como texto, e.g. <code>console.log(new Date())</code>, ou quando a data é utilizada em uma concatenação de <em>string</em>, como <code>var today = 'Today is ' + new Date()</code>.</p>
+<p>O método <code>toString()</code> é automaticamente chamado quando a data deve ser representada como texto, e.g. <code>console.log(new Date())</code>, ou quando a data é utilizada em uma concatenação de <em>string</em>, como <code>var today = 'Today is ' + new Date()</code>.</p>
 
 <p><code>toString()</code> é um método genérico, ele não requer que seu <code>this</code> seja uma instância de {{jsxref("Date")}}. Entretanto, ele deve ter uma propriedade interna <code>[[TimeValue]]</code> que não pode ser construída usando JavaScript nativo, então ela é efetivamente limitada a ser usada com instâncias {{jsxref("Date")}}. Se chamado em uma instância que não seja Date, um {{jsxref("TypeError")}} é jogado.</p>
 

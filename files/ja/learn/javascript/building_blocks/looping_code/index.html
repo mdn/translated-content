@@ -48,9 +48,9 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 <p>ループにはたいてい以下のような機能があります。</p>
 
 <ul>
- <li><strong>カウンター:</strong> ループの開始地点で、初期化される値です。(上記の絵の、"I have no food" [食料がない] の部分です)。</li>
- <li><strong>条件:</strong> ループの実行を継続するか終了するかを決める true/false の判定です。たいていはカウンターがある値に達した場合に終了します。上記の絵の、"Do I have enough food?" [十分な食料があるか？] の部分です。例えば、家族に食べさせる 10 個の食料が必要である、というようなことです。</li>
- <li><strong>イテレーター:</strong> これは一般的には条件が <code>true</code>. では無くなるまで、カウンターの値をループごとに少量ずつ増加させます。上記の絵には明示的には描いていませんが、農家が 1 時間に 2 つの食料を集めることができると考えるとします。この場合、1 時間ごとに 2 つずつ食料が増えていき、農家は十分な食料が集まったかを確認することができます。もし食料が 10 個になったら (条件が true では無くなったため、ループが終了するポイント)、集めるのをやめて家に帰ることができるでしょう。</li>
+ <li><strong>カウンター:</strong> ループの開始地点で、初期化される値です。(上記の絵の、"I have no food" [食料がない] の部分です)。</li>
+ <li><strong>条件:</strong> ループの実行を継続するか終了するかを決める true/false の判定です。たいていはカウンターがある値に達した場合に終了します。上記の絵の、"Do I have enough food?" [十分な食料があるか？] の部分です。例えば、家族に食べさせる 10 個の食料が必要である、というようなことです。</li>
+ <li><strong>イテレーター:</strong> これは一般的には条件が <code>true</code>. では無くなるまで、カウンターの値をループごとに少量ずつ増加させます。上記の絵には明示的には描いていませんが、農家が 1 時間に 2 つの食料を集めることができると考えるとします。この場合、1 時間ごとに 2 つずつ食料が増えていき、農家は十分な食料が集まったかを確認することができます。もし食料が 10 個になったら (条件が true では無くなったため、ループが終了するポイント)、集めるのをやめて家に帰ることができるでしょう。</li>
 </ul>
 
 <p>{{glossary("pseudocode", "疑似コード")}}では、以下のようになるでしょう。</p>
@@ -69,7 +69,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <h3 id="Why_bother" name="Why_bother">どうしてこんなことをするの？</h3>
 
-<p>これで、恐らくループの背後にあるコンセプトが理解できたことでしょう。けれど、「それが JavaScript のコードを書くのにどう役立つの？」と思っているかもしれませんね。先ほど<strong>ループは同じことを繰り返すこと</strong>だと言いいましたが、それは<strong>素早く繰り返し同じ作業を完了させる</strong>のに最適なことなのです。</p>
+<p>これで、恐らくループの背後にあるコンセプトが理解できたことでしょう。けれど、「それが JavaScript のコードを書くのにどう役立つの？」と思っているかもしれませんね。先ほど<strong>ループは同じことを繰り返すこと</strong>だと言いいましたが、それは<strong>素早く繰り返し同じ作業を完了させる</strong>のに最適なことなのです。</p>
 
 <p>たいてい、コードはループの連続する反復のたびごとにわずかに異なるものになります。つまり、似ているけれどわずかに異なる多数のタスク全体を完了出来るのです。もしたくさんの異なる計算をしなければならないとしたら、同じことを何度も何度もするのではなく、それぞれ異なることをしたいですよね。</p>
 
@@ -174,7 +174,7 @@ ctx.fill();</pre>
 
 <h2 id="The_standard_for_loop" name="The_standard_for_loop">標準的な for ループ</h2>
 
-<p>ここからは、具体的なループの構造を見ていきましょう。最初は、特によく使うことになるであろう <a href="/ja/docs/Web/JavaScript/Reference/Statements/for">for</a> ループについてです。構文は以下の通りです。</p>
+<p>ここからは、具体的なループの構造を見ていきましょう。最初は、特によく使うことになるであろう <a href="/ja/docs/Web/JavaScript/Reference/Statements/for">for</a> ループについてです。構文は以下の通りです。</p>
 
 <pre class="notranslate">for (初期化処理; 条件; 最後の式) {
   // 実行するコード
@@ -183,11 +183,11 @@ ctx.fill();</pre>
 <p>ここでは...</p>
 
 <ol>
- <li><code>for</code> キーワードに続き括弧があります。</li>
+ <li><code>for</code> キーワードに続き括弧があります。</li>
  <li>括弧の中にはセミコロンで区切られて以下の項目があります。
   <ol>
    <li><strong>初期化処理</strong>: これはたいていの場合、繰り返し回数分増やしていく変数の初期化処理となります。この変数を<strong>カウンター変数</strong>と呼ぶことがあります。</li>
-   <li><strong>条件</strong>: 既に取り上げた通り、これはループが繰り返しをやめるべき条件を定義します。ほとんどの場合は比較演算子を伴って、終了条件を満たしているかを判定します。</li>
+   <li><strong>条件</strong>: 既に取り上げた通り、これはループが繰り返しをやめるべき条件を定義します。ほとんどの場合は比較演算子を伴って、終了条件を満たしているかを判定します。</li>
    <li><strong>最後の式</strong>: これはループの 1 回が終了する度に評価される (または実行される) コードです。大体、カウンター変数を増やし(または減らし)、条件が <code>true</code> では無くなるポイントに近づけていきます。</li>
   </ol>
  </li>
@@ -245,17 +245,17 @@ para.textContent = info;</pre>
 <p>{{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>注</strong>: <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">このコードは GitHub でも</a>見られます (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">動くデモも</a>ありますよ)。</p>
+<p><strong>注</strong>: <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">このコードは GitHub でも</a>見られます (<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">動くデモも</a>ありますよ)。</p>
 </div>
 
 <p>これは配列のすべての要素に対して、繰り返し何かを実行するループの使用例です。JavaScript ではとてもよく見られるパターンです。</p>
 
 <ol>
  <li><code>i</code> をカウンター変数(イニシャライザーやイテレーター変数ともいう)として、<code>0</code> から開始します (<code>let i = 0</code>)。</li>
- <li><code>i</code> が <code>cats</code> 配列の長さより小さくなくなるまで実行すると、ループには指定されています。これは重要です、条件にはループが継続するための条件が示されています。今回は、<code>i &lt; cats.length</code> が真となるため、ループは継続します。</li>
- <li>ループの内側では、現在繰り返し対象となる項目 (<code>cats[i]</code> は <code>cats[i に入っているそのときの値]</code> となります) を <code>info</code> 変数に対してカンマとスペースとともに結合しています。つまり...
+ <li><code>i</code> が <code>cats</code> 配列の長さより小さくなくなるまで実行すると、ループには指定されています。これは重要です、条件にはループが継続するための条件が示されています。今回は、<code>i &lt; cats.length</code> が真となるため、ループは継続します。</li>
+ <li>ループの内側では、現在繰り返し対象となる項目 (<code>cats[i]</code> は <code>cats[i に入っているそのときの値]</code> となります) を <code>info</code> 変数に対してカンマとスペースとともに結合しています。つまり...
   <ol>
-   <li>初回の実行時には、<code>i = 0</code> なので <code>cats[0] + ', '</code> ("ビル、") が <code>info</code> に対して結合されます。</li>
+   <li>初回の実行時には、<code>i = 0</code> なので <code>cats[0] + ', '</code> ("ビル、") が <code>info</code> に対して結合されます。</li>
    <li>2 回目の実行時には、<code>i = 1</code> なので <code>cats[1] + ', '</code> ("ジェフ、") が <code>info</code> に対して結合されます。</li>
    <li>このように、ループ内の処理が実行されるたび、1 が <code>i</code> に加算され (<code>i++</code>)、次の処理が開始されます。</li>
   </ol>
@@ -264,7 +264,7 @@ para.textContent = info;</pre>
 </ol>
 
 <div class="note">
-<p><strong>注</strong>: 条件を <code>i &lt;= cats.length</code> ではなく、<code>i &lt; cats.length</code> としているのは、コンピューターが数値を 1 からではなく、0 から数えるためです。コードでも <code>i</code> を <code>0</code> から始め、<code>i = 4</code> (配列内の要素の最後のインデックス) となるまで加算していきます。配列内の要素が 5 つなので  <code>cats.length</code> は 5 となりますが、<code>i = 5</code> とすると、(配列に 5 のインデックスの要素がないので) <code>undefined</code> となってしまいます。なので、<code>cats.length</code> と同じ値まで (<code>i &lt;=</code>) ではなく、<code>i</code> の最大値を 1 減らして <code>cats.length</code> より小さくなる (<code>i &lt;</code>) まで加算しています。</p>
+<p><strong>注</strong>: 条件を <code>i &lt;= cats.length</code> ではなく、<code>i &lt; cats.length</code> としているのは、コンピューターが数値を 1 からではなく、0 から数えるためです。コードでも <code>i</code> を <code>0</code> から始め、<code>i = 4</code> (配列内の要素の最後のインデックス) となるまで加算していきます。配列内の要素が 5 つなので  <code>cats.length</code> は 5 となりますが、<code>i = 5</code> とすると、(配列に 5 のインデックスの要素がないので) <code>undefined</code> となってしまいます。なので、<code>cats.length</code> と同じ値まで (<code>i &lt;=</code>) ではなく、<code>i</code> の最大値を 1 減らして <code>cats.length</code> より小さくなる (<code>i &lt;</code>) まで加算しています。</p>
 </div>
 
 <div class="note">
@@ -292,12 +292,12 @@ para.textContent = info;</pre>
 </div>
 
 <div class="warning">
-<p><strong>重要</strong>: for ループ (他のループも同様) では、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が true では無くなるポイントに達するようにする必要があります。もしそうで無い場合、ループは永遠に回り続け、ブラウザーが強制的に停止するか、クラッシュしてしまうでしょう。これは<strong>無限ループ</strong>といいます。</p>
+<p><strong>重要</strong>: for ループ (他のループも同様) では、カウンター変数を増加、もしくは場合により減少させて、最終的に条件が true では無くなるポイントに達するようにする必要があります。もしそうで無い場合、ループは永遠に回り続け、ブラウザーが強制的に停止するか、クラッシュしてしまうでしょう。これは<strong>無限ループ</strong>といいます。</p>
 </div>
 
 <h2 id="Exiting_loops_with_break" name="Exiting_loops_with_break">break でループを終了する</h2>
 
-<p>すべての繰り返し処理が終了する前にループを終了したいとき、<a href="/ja/docs/Web/JavaScript/Reference/Statements/break">break</a> 文を使用して終了させることができます。前回の記事、<a href="/ja/Learn/JavaScript/Building_blocks/conditionals#switch_statements">switch 文</a>で、入力した値が switch 文の case にマッチしたとき、switch 文を抜け、それ以降のコードを実行するために <code>break</code> 文を使用しました。 </p>
+<p>すべての繰り返し処理が終了する前にループを終了したいとき、<a href="/ja/docs/Web/JavaScript/Reference/Statements/break">break</a> 文を使用して終了させることができます。前回の記事、<a href="/ja/Learn/JavaScript/Building_blocks/conditionals#switch_statements">switch 文</a>で、入力した値が switch 文の case にマッチしたとき、switch 文を抜け、それ以降のコードを実行するために <code>break</code> 文を使用しました。 </p>
 
 <p>これはループでも同様で、<code>break</code> 文を使用することで即時にループを抜けて、ブラウザーに続きのコードを実行させることができます。</p>
 
@@ -365,7 +365,7 @@ btn.addEventListener('click', function() {
       for (let i = 0; i &lt; contacts.length; i++) {
         let splitContact = contacts[i].split(':');
         if (splitContact[0] === searchName) {
-          para.textContent = splitContact[0] + ' の電話番号は ' + splitContact[1] + ' です。';
+          para.textContent = splitContact[0] + ' の電話番号は ' + splitContact[1] + ' です。';
           break;
         } else {
           para.textContent = '連絡先が見つかりません。';
@@ -386,12 +386,12 @@ btn.addEventListener('click', function() {
  <li>テキスト入力欄に入力された値を <code>searchName</code> という変数に格納してから、次の検索に備え、入力欄をクリアし、フォーカスを設定しています。検索に大文字小文字を気にしないよう、文字列に <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code> を実行しているのに注意してください。</li>
  <li>ここからが本題の for ループです。
   <ol>
-   <li>カウンター変数を <code>0</code> から始め、<code>contacts.length</code> より小さくなくなるまで、ループの繰り返しの度に <code>i</code> を 1 増やしていきます。</li>
+   <li>カウンター変数を <code>0</code> から始め、<code>contacts.length</code> より小さくなくなるまで、ループの繰り返しの度に <code>i</code> を 1 増やしていきます。</li>
    <li>ループの内側では、まず現在の連絡先 (<code>contacts[i]</code>) をコロンの文字で分割し、<code>splitContact</code> という配列に格納します。</li>
-   <li>それから、条件文を用いて、<code>splitContact[0]</code> (連絡先の名前) が入力された <code>searchName</code> にまた <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code> を使って小文字化したものと等しいかを判定します。もし等しければ、連絡先の電話番号を段落 ({{htmlelement("p")}} 要素) に表示し、<code>break</code> を使用してループを終了しています。</li>
+   <li>それから、条件文を用いて、<code>splitContact[0]</code> (連絡先の名前) が入力された <code>searchName</code> にまた <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase">toLowerCase()</a></code> を使って小文字化したものと等しいかを判定します。もし等しければ、連絡先の電話番号を段落 ({{htmlelement("p")}} 要素) に表示し、<code>break</code> を使用してループを終了しています。</li>
   </ol>
  </li>
- <li>  <code>(contacts.length-1)</code> 回目の繰り返しの後に、もし連絡先の名前が入力された検索語に一致しなければ、段落に「連絡先が見つかりません。」という文字列を表示し、条件が true では無くなるまでループを継続します。</li>
+ <li>  <code>(contacts.length-1)</code> 回目の繰り返しの後に、もし連絡先の名前が入力された検索語に一致しなければ、段落に「連絡先が見つかりません。」という文字列を表示し、条件が true では無くなるまでループを継続します。</li>
 </ol>
 
 <div class="note">
@@ -704,7 +704,7 @@ textarea.onkeyup = function(){
 
 <h2 id="Active_learning_Filling_in_a_guest_list" name="Active_learning_Filling_in_a_guest_list">アクティブラーニング: ゲストリストに記入する</h2>
 
-<p>この演習では、配列に格納された名前のリストを取得して、それらをゲストリストに入れることが必要です。しかし、これはそれほど簡単ではありません — 彼らは貪欲で失礼で、常にすべての食べ物を食べるので、私たちはフィルとローラを入れさせたくありません！ 私たちは 2 つのリストを持っています。1 つは承認するゲストのためのもの、もう 1 つは拒否するゲストのためのものです。<br>
+<p>この演習では、配列に格納された名前のリストを取得して、それらをゲストリストに入れることが必要です。しかし、これはそれほど簡単ではありません — 彼らは貪欲で失礼で、常にすべての食べ物を食べるので、私たちはフィルとローラを入れさせたくありません！ 私たちは 2 つのリストを持っています。1 つは承認するゲストのためのもの、もう 1 つは拒否するゲストのためのものです。<br>
  <br>
  具体的には、</p>
 
@@ -726,7 +726,7 @@ textarea.onkeyup = function(){
  <li><code>admitted.textContent +=</code> — <code>admitted.textContent</code> の後に文字を連結する開始行</li>
 </ul>
 
-<p>特別ボーナス問題 — 上のタスクを正常に完了すると、カンマで区切られた 2 つの名前リストが残されますが、それらは整頓されません。それぞれの末尾にカンマがあります。それぞれの場合に最後のカンマを切り取り、末尾にピリオドを追加した行をどのように書くかという問題を解決出来ますか？ヘルプのため<a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods">便利な文字列メソッド</a>の記事を見てみてください。<br>
+<p>特別ボーナス問題 — 上のタスクを正常に完了すると、カンマで区切られた 2 つの名前リストが残されますが、それらは整頓されません。それぞれの末尾にカンマがあります。それぞれの場合に最後のカンマを切り取り、末尾にピリオドを追加した行をどのように書くかという問題を解決出来ますか？ヘルプのため<a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods">便利な文字列メソッド</a>の記事を見てみてください。<br>
  <br>
  間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。</p>
 
@@ -736,7 +736,7 @@ textarea.onkeyup = function(){
 <pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
-  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
+  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Editable code&lt;/h2&gt;

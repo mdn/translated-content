@@ -28,15 +28,15 @@ while (i &lt; 5) {
 <p><strong>例 2</strong><br>
   <code>checkiandj</code> というラベルの付いた文の中に <code>checkj</code> というラベルの付いた文があります。<code>continue</code> に出くわすと、プログラムは <code>checkj</code> の現在の反復を終了し、次の反復を始めます。<code>continue</code> に出くわすたびに、条件が false になるまで <code>checkj</code> を繰り返します。false が返されると <code>checkiandj</code> 文の残りを完了し、条件が false を返すまで <code>checkiandj</code> を繰り返します。false が返されると <code>checkiandj</code> に続く文が実行されます。</p>
 <p><code>continue</code> が <code>checkiandj</code> というラベルを持っているとプログラムは <code>checkiandj</code> 文の最初から続けます。</p>
-<pre>checkiandj :
+<pre>checkiandj :
    while (i &lt; 4) {
       document.write(i + "&lt;br/&gt;");
       i += 1;
-      checkj :
+      checkj :
          while (j &gt; 4) {
             document.write(j + "&lt;br/&gt;");
             j -= 1;
-            if ((j % 2) == 0)
+            if ((j % 2) == 0)
                continue checkj;
             document.write(j + " is odd.&lt;br/&gt;");
          }

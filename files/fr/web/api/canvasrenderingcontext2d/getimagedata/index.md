@@ -22,7 +22,9 @@ Les pixels en dehors de la zone de canevas sont présents sous forme de valeurs 
 
 ## Syntaxe
 
-    ImageData ctx.getImageData(sx, sy, sw, sh);
+```js
+ImageData ctx.getImageData(sx, sy, sw, sh);
+```
 
 ### Paramètres
 

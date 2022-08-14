@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/input/reset
 ---
 {{HTMLRef}}
 
-Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sous la forme de boutons permettant de réiniatiliser l'ensemble des champs du formulaire avec leurs valeurs initiales.
+Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sous la forme de boutons permettant de réinitialiser l'ensemble des champs du formulaire avec leurs valeurs initiales.
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 

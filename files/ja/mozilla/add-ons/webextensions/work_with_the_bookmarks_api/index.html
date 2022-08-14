@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 <p>Bookmarks API を利用するには、拡張機能の manifest.json ファイルで <code>"bookmarks"</code> 権限を要求する必要があります:</p>
 
 <pre class="brush: json">"permissions": [
-  "bookmarks"
+  "bookmarks"
 ],</pre>
 
 <h2 id="Features" name="Features">機能</h2>
@@ -76,89 +76,89 @@ translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 <p>拡張機能を記述する <a href="https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/manifest.json">manifest.json</a>:</p>
 
 <pre class="brush: json">{
-  "manifest_version": 2,
-  "name": "Bookmark it!",
-  "version": "1.1",
-  "description": "A simple bookmark button",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",</pre>
+  "manifest_version": 2,
+  "name": "Bookmark it!",
+  "version": "1.1",
+  "description": "A simple bookmark button",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",</pre>
 
 <p>アドオンマネージャーの代わりに、拡張機能を表すアイコンを定義します。</p>
 
-<pre class="brush: json">  "icons": {
-    "48": "icons/bookmark-it.png",
-    "96": "icons/bookmark-it@2x.png"
-  },</pre>
+<pre class="brush: json">  "icons": {
+    "48": "icons/bookmark-it.png",
+    "96": "icons/bookmark-it@2x.png"
+  },</pre>
 
 <p>権限のリクエスト。<code>"bookmarks"</code> は Bookmarks API を利用するのに要求されます。アクティブなタブの URL とタイトルを読み込んだり、ページのブックマークを作成/検索するのに、<code>"tabs"</code> が要求されます。こうした詳細にアクセスするのに Tabs API が必要なのは、Bookmark API を Tabs API なしに使うのが考えにくいということです。</p>
 
-<pre class="brush: json">  "permissions": [
-    "bookmarks",
-    "tabs"
-  ],</pre>
+<pre class="brush: json">  "permissions": [
+    "bookmarks",
+    "tabs"
+  ],</pre>
 
 <p>基本的なツールバーボタンの詳細をセットします。ボタン機能の大半は、ページのブックマーク状態が分かった後に、コード内でセットされます。</p>
 
-<pre class="brush: json">  "browser_action": {
-    "default_icon": "icons/star-empty-38.png",
-    "default_title": "Bookmark it!"
-  },</pre>
+<pre class="brush: json">  "browser_action": {
+    "default_icon": "icons/star-empty-38.png",
+    "default_title": "Bookmark it!"
+  },</pre>
 
 <p>ページのブックマークを追加/削除してツールバーボタンの特色をセットするバックグラウンドスクリプトを定義します。</p>
 
-<pre class="brush: json">  "background": {
-    "scripts": ["background.js"]
-  }
+<pre class="brush: json">  "background": {
+    "scripts": ["background.js"]
+  }
 
 }</pre>
 
 <h3 id="background.js" name="background.js">background.js</h3>
 
-<p>他のバックグラウンドスクリプトと同様に、<a href="https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js">background.js</a> は拡張機能が開始してすぐに実行されます。最初にスクリプトは <code>updateActiveTab()</code> を呼び出し、ここでは {{WebExtAPIRef("tabs.query")}} を使って現在のタブの <code>Tabs</code> オブジェクトを取得して開始し、そのオブジェクトを <code>updatetab()</code> に渡します、コードは次の通り:</p>
+<p>他のバックグラウンドスクリプトと同様に、<a href="https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js">background.js</a> は拡張機能が開始してすぐに実行されます。最初にスクリプトは <code>updateActiveTab()</code> を呼び出し、ここでは {{WebExtAPIRef("tabs.query")}} を使って現在のタブの <code>Tabs</code> オブジェクトを取得して開始し、そのオブジェクトを <code>updatetab()</code> に渡します、コードは次の通り:</p>
 
-<pre class="brush: js">  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-  gettingActiveTab.then(updateTab);</pre>
+<pre class="brush: js">  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+  gettingActiveTab.then(updateTab);</pre>
 
 <p><code>updatetab()</code> は 最初にアクティブなタブの URL を <code>isSupportedProtocol()</code> に渡します:</p>
 
-<pre class="brush: js">  function updateTab(tabs) {
-    if (tabs[0]) {
-      currentTab = tabs[0];
-      if (isSupportedProtocol(currentTab.url)) {</pre>
+<pre class="brush: js">  function updateTab(tabs) {
+    if (tabs[0]) {
+      currentTab = tabs[0];
+      if (isSupportedProtocol(currentTab.url)) {</pre>
 
 <p><code>isSupportedProtocol()</code> はアクティブタブに表示される URL がブックマークできるかを決めます。タブの URL からプロトコルを抽出するために、拡張機能は <a href="/ja/docs/Web/API/HTMLHyperlinkElementUtils">HTMLHyperlinkElementUtils</a> を利用して <code>&lt;a&gt;</code> 要素にタブの URL を追加してから、<code>protocol</code> プロパティを使ってプロトコルを取得します。</p>
 
-<pre class="brush: js">  function isSupportedProtocol(urlString) {
-    var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
-    var url = document.createElement('a');
-    url.href = urlString;
-    return supportedProtocols.indexOf(url.protocol) != -1;
-  }</pre>
+<pre class="brush: js">  function isSupportedProtocol(urlString) {
+    var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
+    var url = document.createElement('a');
+    url.href = urlString;
+    return supportedProtocols.indexOf(url.protocol) != -1;
+  }</pre>
 
 <p>ブックマークがプロトコルをサポートしている場合、拡張機能はタブの URL がブックマーク済みかどうかを決めて、その場合に <code>updateIcon()</code> を呼び出します:</p>
 
-<pre class="brush: js">      var searching = browser.bookmarks.search({url: currentTab.url});
-      searching.then((bookmarks) =&gt; {
-        currentBookmark = bookmarks[0];
-        updateIcon();</pre>
+<pre class="brush: js">      var searching = browser.bookmarks.search({url: currentTab.url});
+      searching.then((bookmarks) =&gt; {
+        currentBookmark = bookmarks[0];
+        updateIcon();</pre>
 
 <p><code>updateIcon()</code> は、URL がブックマーク済みかどうかにより、ツールバーボタンのアイコンとタイトルをセットします。</p>
 
 <pre class="brush: js">function updateIcon() {
-  browser.browserAction.setIcon({
-    path: currentBookmark ? {
-      19: "icons/star-filled-19.png",
-      38: "icons/star-filled-38.png"
-    } : {
-      19: "icons/star-empty-19.png",
-      38: "icons/star-empty-38.png"
-    },
-    tabId: currentTab.id
-  });
-  browser.browserAction.setTitle({
-    // Screen readers can see the title
-    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
-    tabId: currentTab.id
-  });
+  browser.browserAction.setIcon({
+    path: currentBookmark ? {
+      19: "icons/star-filled-19.png",
+      38: "icons/star-filled-38.png"
+    } : {
+      19: "icons/star-empty-19.png",
+      38: "icons/star-empty-38.png"
+    },
+    tabId: currentTab.id
+  });
+  browser.browserAction.setTitle({
+    // Screen readers can see the title
+    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
+    tabId: currentTab.id
+  });
 }</pre>
 
 <p>ツールバーボタンが初期化されると、拡張機能はツールバーボタンのクリックを、<code>toggleBookmark()</code> を呼び出して、監視し始めます</p>
@@ -168,11 +168,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 <p><code>toggleBookmark()</code> は、URL がブックマークにあるかどうか探す <code>updateTabs()</code> の検索結果を使い、現在の URL のブックマークを削除するか、追加するのかを決定します。</p>
 
 <pre class="brush: js">function toggleBookmark() {
-  if (currentBookmark) {
-    browser.bookmarks.remove(currentBookmark.id);
-  } else {
-    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
-  }
+  if (currentBookmark) {
+    browser.bookmarks.remove(currentBookmark.id);
+  } else {
+    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
+  }
 }</pre>
 
 <p>ツールバーアイコンを更新するため、拡張機能はブックマークの作成/削除を監視します。この方法の利点は、拡張機能によるブックマーク更新と、拡張機能の外のユーザーの更新の両方を捕捉できることです。</p>

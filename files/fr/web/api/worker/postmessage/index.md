@@ -11,7 +11,9 @@ Le Worker peut renvoyer une information au thread qui l'a créé en utilisant la
 
 ## Syntaxe
 
-    worker.postMessage(aMessage, [transferList]);
+```js
+worker.postMessage(aMessage, [transferList]);
+```
 
 ### Paramètres
 

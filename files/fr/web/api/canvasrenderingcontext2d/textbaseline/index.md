@@ -9,7 +9,9 @@ La propriété **`CanvasRenderingContext2D.textBaseline`** de l'API Canvas 2D sp
 
 ## Syntaxe
 
-    ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+```js
+ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+```
 
 ### Options
 

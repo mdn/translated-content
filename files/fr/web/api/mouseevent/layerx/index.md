@@ -19,7 +19,9 @@ Cette propriété prend en compte le défilement de la page, et retourne une val
 
 ## **Syntaxe**
 
-    var posx = event.layerX
+```js
+var posx = event.layerX
+```
 
 - *`posx`* est une valeur entière en pixels pour la coordonnée x du pointeur de la souris, lorsque l'évènement souris est déclenché.
 

@@ -17,7 +17,9 @@ La propriété **`nodeType`** peut être utilisée pour distinguer les uns des a
 
 ## Syntaxe
 
-    Type = node .nodeType
+```js
+Type = node .nodeType
+```
 
 Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possibles sont listées dans [Constantes](#constantes).
 

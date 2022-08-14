@@ -28,9 +28,9 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <h2 id="Keep_me_in_the_loop">저를 반복 속에 계속 잡아 두세요</h2>
 
-<p>반복, 반복, 반복(loop). <a href="https://en.wikipedia.org/wiki/Froot_Loops">인기있는 아침 시리얼</a>, <a href="https://en.wikipedia.org/wiki/Vertical_loop">롤러 코스터</a> 그리고 <a href="https://en.wikipedia.org/wiki/Loop_(music)">음악 제작</a>과 연관되어 있는 것처럼, 반복은 또한 프로그래밍에서 중요한 개념입니다. 프로그래밍의 반복은 같은 것을 계속 그리고 계속 반복해서 하는 것에 모든 관계가 있는데, 이는 프로그래밍 언어에서 <strong>반복</strong>(iteration)이라고 일컫어집니다.</p>
+<p>반복, 반복, 반복(loop). <a href="https://en.wikipedia.org/wiki/Froot_Loops">인기있는 아침 시리얼</a>, <a href="https://en.wikipedia.org/wiki/Vertical_loop">롤러 코스터</a> 그리고 <a href="https://en.wikipedia.org/wiki/Loop_(music)">음악 제작</a>과 연관되어 있는 것처럼, 반복은 또한 프로그래밍에서 중요한 개념입니다. 프로그래밍의 반복은 같은 것을 계속 그리고 계속 반복해서 하는 것에 모든 관계가 있는데, 이는 프로그래밍 언어에서 <strong>반복</strong>(iteration)이라고 일컫어집니다.</p>
 
-<p>가족들이 일주일동안 먹을 식량이 충분한지 확신하기 위해 고민하는 농부의 상황을 봅시다. 그는 이것을 알기 위해 다음과 같은 반복을 사용할지도 모릅니다:</p>
+<p>가족들이 일주일동안 먹을 식량이 충분한지 확신하기 위해 고민하는 농부의 상황을 봅시다. 그는 이것을 알기 위해 다음과 같은 반복을 사용할지도 모릅니다:</p>
 
 <p><br>
  <img alt="" src="loop_js-02-farm.png" style="display: block; margin: 0 auto;"></p>
@@ -38,7 +38,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 <p>반복은 보통 다음 기능의 하나 또는 그 이상을 가집니다:</p>
 
 <ul>
- <li><strong>카운터</strong>(counter). 이는 어떤 값으로 초기화됩니다  — 이것이 반복문의 시작점입니다 (상기의 그림에서, "시작: I have no food").</li>
+ <li><strong>카운터</strong>(counter). 이는 어떤 값으로 초기화됩니다  — 이것이 반복문의 시작점입니다 (상기의 그림에서, "시작: I have no food").</li>
  <li><strong>조건</strong>(condition). 이는 반복문이 계속 실행될지, 혹은 멈출지를 결정하는 true/false 테스트입니다 — 보통 카운터가 어떤 값에 도달했을 때입니다. 이것은 상기 그림의 "Have I got enough food?" 부분에 나와 있습니다. 그가 가족에게 먹일 10인분의 음식이 필요하다고 해 봅시다.</li>
  <li><strong>반복자</strong>(iterator). 이는 보통 조건이 더 이상 true가 아닐 때까지 각각의 연이은 반복에서 조금씩 카운터를 증가시킵니다. 우리는 위의 그림에서 명시적으로 이를 보이지 않았지만, 농부가 시간당 2인분의 음식을 수집한다고 생각해 볼 수 있습니다. 매 시간 후마다, 그가 모은 음식의 양은 2인분씩 증가되고, 그는 충분한 음식을 가지고 있는지 확인합니다. 만약 그가 10인분에 도달했다면 (조건이 더 이상 참이 아닌 지점, 따라서 반복은 종료됩니다), 그는 수집을 멈추고 집에 갈 수 있습니다.</li>
 </ul>
@@ -147,8 +147,8 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 }</pre>
 
 <ul>
- <li>코드의 앞부분에서 정의한 <code>random()</code>은, <code>0</code>과 <code>x-1</code>사이의 정수를 반환합니다.</li>
- <li><code>WIDTH</code>와 <code>HEIGHT</code> 는 내부 브라우저 윈도우의 너비와 높이입니다.</li>
+ <li>코드의 앞부분에서 정의한 <code>random()</code>은, <code>0</code>과 <code>x-1</code>사이의 정수를 반환합니다.</li>
+ <li><code>WIDTH</code>와 <code>HEIGHT</code> 는 내부 브라우저 윈도우의 너비와 높이입니다.</li>
 </ul>
 
 <p>기본 개념을 잡아야만 합니다 — 우리는 이 코드의 100번의 반복(iteration)을 실행하기 위해 반복문을 사용하고 있는데, 각 반복은 페이지의 무작위의 위치에 원을 그립니다. 우리가 100개의 원을 그리든, 1000개의 원을 그리든, 혹은 10,000개의 원을 그리든 간에 필요한 코드의 양은 같을 것입니다. 오직 숫자 하나만 바뀌면 됩니다.</p>
@@ -181,7 +181,7 @@ ctx.fill();</pre>
    <li><strong>증감식</strong>(final-expression) — 이것은 반복문이 전체 반복을 거쳤을 때마다 항상 평가(혹은 실행)됩니다. 이것은 보통 카운터 변수를 증가 (혹은 몇몇 경우에는 감소)시키기 위해, 조건이 더 이상 <code>true</code>가 아닌 지점에 가까워지게 하기 위해 제공됩니다.</li>
   </ol>
  </li>
- <li>코드 블럭을 감싸는 중괄호 — 이 코드는 반복문이 반복될 때마다 실행될 것입니다.</li>
+ <li>코드 블럭을 감싸는 중괄호 — 이 코드는 반복문이 반복될 때마다 실행될 것입니다.</li>
 </ol>
 
 <p>이것들이 무엇을 하는지를 더욱 확실하게 시각화할 수 있도록 실제 예제를 봅시다.</p>
@@ -245,9 +245,9 @@ para.textContent = info;</pre>
  <li>반복문은 <code>i</code>가 더 이상 <code>cats</code> 배열의 길이(length)보다 작지 않을 때까지 실행되라는 명령을 받았습니다. 이것은 중요합니다 — 조건은 반복문이 여전히 실행되는 것 아래의 조건입니다. 그래서 이 경우, <code>i &lt; cats.length</code>가 여전히 true인 동안, 반복문은 계속 실행될 것입니다.</li>
  <li>반복문 안에서, 우리는 콤마와 공백(space)과 같이 있는 현재 반복 요소(item) (<code>cats[이 때 i가 무엇이든]</code>인, <code>cats[i]</code>)를 <code>info</code> 변수의 끝에 연결시킵니다. 그래서:
   <ol>
-   <li>첫번째 실행 동안에, <code>i = 0</code>이므로, <code>cats[0] + ', '</code> (이는 <code>Bill, </code>과 같습니다)는 <code>info</code>에 연결될 것입니다.
+   <li>첫번째 실행 동안에, <code>i = 0</code>이므로, <code>cats[0] + ', '</code> (이는 <code>Bill, </code>과 같습니다)는 <code>info</code>에 연결될 것입니다.
 </li>
-   <li>두번째 실행 동안에, <code>i = 1</code>이므로, <code>cats[1] + ', '</code> (이는 <code>Jeff, </code>와 같습니다)는 <code>info</code>에 연결될 것입니다.</li>
+   <li>두번째 실행 동안에, <code>i = 1</code>이므로, <code>cats[1] + ', '</code> (이는 <code>Jeff, </code>와 같습니다)는 <code>info</code>에 연결될 것입니다.</li>
    <li>계속 이와 같습니다. 반복문이 실행 된 후마다, <code>i</code>에 1이 더해질 것이고 (<code>i++</code>), 이 과정(process)은 다시 실행될 것입니다.</li>
   </ol>
  </li>
@@ -255,7 +255,7 @@ para.textContent = info;</pre>
 </ol>
 
 <div class="note">
-<p><strong>참고</strong>: 우리는 조건을 <code>i &lt;= cats.length</code>이 아니라 <code>i &lt; cats.length</code>로 만들었는데, 이는 컴퓨터는 카운트를 1부터가 아니라 0부터 세기 때문입니다 — 우리는 <code>i</code>를 0에서 시작했고, <code>i = 4</code>까지 갔습니다 (마지막 배열 원소의 인덱스). 배열에 5개의 원소가 있으므로, <code>cats.length</code>는 5를 반환하지만, 우리는 <code>i = 5</code>까지 가고 싶지는 않습니다. 왜냐하면 이는 마지막 원소에 대해 <code>undefined</code>를 반환할 것이기 때문입니다 (5의 인덱스를 가진 배열 원소는 없습니다). 그래서, 그러므로, 우리는 <code>cats.length</code>과 같은 데까지가 아니라 (<code>i &lt;=</code>), <code>cats.length</code>보다 1 작은 데까지 가기를 원합니다 (<code>i &lt;</code>).</p>
+<p><strong>참고</strong>: 우리는 조건을 <code>i &lt;= cats.length</code>이 아니라 <code>i &lt; cats.length</code>로 만들었는데, 이는 컴퓨터는 카운트를 1부터가 아니라 0부터 세기 때문입니다 — 우리는 <code>i</code>를 0에서 시작했고, <code>i = 4</code>까지 갔습니다 (마지막 배열 원소의 인덱스). 배열에 5개의 원소가 있으므로, <code>cats.length</code>는 5를 반환하지만, 우리는 <code>i = 5</code>까지 가고 싶지는 않습니다. 왜냐하면 이는 마지막 원소에 대해 <code>undefined</code>를 반환할 것이기 때문입니다 (5의 인덱스를 가진 배열 원소는 없습니다). 그래서, 그러므로, 우리는 <code>cats.length</code>과 같은 데까지가 아니라 (<code>i &lt;=</code>), <code>cats.length</code>보다 1 작은 데까지 가기를 원합니다 (<code>i &lt;</code>).</p>
 </div>
 
 <div class="note">
@@ -359,8 +359,8 @@ btn.addEventListener('click', function() {
           para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
           break;
         } else if (i === contacts.length-1)
-              para.textContent = 'Contact not found.';
-        }
+              para.textContent = 'Contact not found.';
+        }
     });
     &lt;/script&gt;
 
@@ -468,11 +468,11 @@ for (let i = 1; i &lt;= num; i++) {
 <p><strong>참고</strong>: 여러분은 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html">전체 소스 코드를 GitHub에서</a> 또한 볼 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html">실제로 작동하는 모습도 볼 수 있습니다</a>).</p>
 </div>
 
-<h2 id="while_and_do_..._while">while 그리고 do ... while</h2>
+<h2 id="while_and_do_..._while">while 그리고 do ... while</h2>
 
-<p><code>for</code> 는 JavaScript에서 사용할 수 있는 유일한 유형의 반복문이 아닙니다. 실제로 많은 다른 것들이 있고, 지금 이 모든 것을 이해할 필요는 없는 반면 여러분이 약간 다른 방식으로 작업에서 같은 기능을 인식할 수 있도록 다른 두 개의 구조를 살펴 볼 가치가 있습니다.</p>
+<p><code>for</code> 는 JavaScript에서 사용할 수 있는 유일한 유형의 반복문이 아닙니다. 실제로 많은 다른 것들이 있고, 지금 이 모든 것을 이해할 필요는 없는 반면 여러분이 약간 다른 방식으로 작업에서 같은 기능을 인식할 수 있도록 다른 두 개의 구조를 살펴 볼 가치가 있습니다.</p>
 
-<p>먼저 <a href="/ko/docs/Web/JavaScript/Reference/Statements/while">while</a> 반복문을 살펴봅시다. 이 반복문의 구문은 다음과 같습니다:</p>
+<p>먼저 <a href="/ko/docs/Web/JavaScript/Reference/Statements/while">while</a> 반복문을 살펴봅시다. 이 반복문의 구문은 다음과 같습니다:</p>
 
 <pre class="notranslate">초기화식
 while (종료 조건) {
@@ -503,7 +503,7 @@ while (i &lt; cats.length) {
 <p><strong>참고</strong>: 예상한 대로 이것은 여전히 똑같이 동작합니다 — 여기서 한 번 봐 보세요 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">running live on GitHub</a> (또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">전체 소스 코드</a>도 보세요).</p>
 </div>
 
-<p><a href="/ko/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> 반복문은 많이 비슷하지만 while 구조에 변형을 제공합니다:</p>
+<p><a href="/ko/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> 반복문은 많이 비슷하지만 while 구조에 변형을 제공합니다:</p>
 
 <pre class="notranslate">초기화식
 do {
@@ -744,7 +744,7 @@ textarea.onkeyup = function(){
 <pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
-  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
+  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Editable code&lt;/h2&gt;

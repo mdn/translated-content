@@ -16,7 +16,9 @@ La propriété en lecture seule **`offsetX`** de l'interface {{domxref("MouseEve
 
 ## Syntaxe
 
-    var xOffset = instanceOfMouseEvent.offsetX;
+```js
+var xOffset = instanceOfMouseEvent.offsetX;
+```
 
 ### Valeur renvoyée
 

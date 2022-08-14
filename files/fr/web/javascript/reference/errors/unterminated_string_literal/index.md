@@ -13,8 +13,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Unterminated_string_literal
 
 ## Message
 
-    SyntaxError: Unterminated string constant (Edge)
-    SyntaxError: unterminated string literal (Firefox)
+```
+SyntaxError: Unterminated string constant (Edge)
+SyntaxError: unterminated string literal (Firefox)
+```
 
 ## Type d'erreur
 

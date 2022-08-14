@@ -6,17 +6,17 @@ original_slug: Web/CSS/transform-function/matrix()
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>matrix()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 함수는 2D 변형 동차 행렬을 선언합니다. 결과는 {{cssxref("&lt;transform-function&gt;")}} 데이터 타입입니다.</p>
+<p><strong><code>matrix()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 함수는 2D 변형 동차 행렬을 선언합니다. 결과는 {{cssxref("&lt;transform-function&gt;")}} 데이터 타입입니다.</p>
 
 <div class="note">
-<p><strong>주의:</strong> <code>matrix(a, b, c, d, tx, ty)</code> 는 <code><a href="/ko/docs/Web/CSS/transform-function/matrix3d">matrix3d</a>(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)</code> 를 짧게 쓴 것입니다.</p>
+<p><strong>주의:</strong> <code>matrix(a, b, c, d, tx, ty)</code> 는 <code><a href="/ko/docs/Web/CSS/transform-function/matrix3d">matrix3d</a>(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)</code> 를 짧게 쓴 것입니다.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p><code>matrix()</code> 함수는 6개의 값을 지정합니다. 상수 값은 묵시적이며, 매개변수(parameter)로 전달하지 않습니다. 다른 매개 변수는 column-major 순서로 설명됩니다.</p>
+<p><code>matrix()</code> 함수는 6개의 값을 지정합니다. 상수 값은 묵시적이며, 매개변수(parameter)로 전달하지 않습니다. 다른 매개 변수는 column-major 순서로 설명됩니다.</p>
 
-<div class="note"><strong>주의:</strong> 파이어폭스 16까지, Gecko(엔진) <code>tx</code>, <code>ty</code> 에{{cssxref("&lt;length&gt;")}} 값을 허용했습니다.</div>
+<div class="note"><strong>주의:</strong> 파이어폭스 16까지, Gecko(엔진) <code>tx</code>, <code>ty</code> 에{{cssxref("&lt;length&gt;")}} 값을 허용했습니다.</div>
 
 <pre class="syntaxbox notranslate">matrix(<em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, <em>tx</em>, <em>ty</em>)
 </pre>

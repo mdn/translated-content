@@ -3,13 +3,13 @@ title: Create genre form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 ---
-<p>В этом подразделе рассказано, как сделать страницу для создания жанра (<code>Genre</code>). Хорошая точка для старта, у жанра всего одно поле - <code>name</code>. Как и для любой другой страницы, здесь потребуется внести изменения в соответствующие маршрут, контроллер и шаблон (route, controller, view).</p>
+<p>В этом подразделе рассказано, как сделать страницу для создания жанра (<code>Genre</code>). Хорошая точка для старта, у жанра всего одно поле - <code>name</code>. Как и для любой другой страницы, здесь потребуется внести изменения в соответствующие маршрут, контроллер и шаблон (route, controller, view).</p>
 
 <h2 id="Import_validation_and_sanitisation_methods">Import validation and sanitisation methods</h2>
 
-<p>To use the <em>express-validator </em>in our controllers we have to <em>require</em> the functions we want to use from the <strong>'express-validator/check</strong>' and <strong>'express-validator/filter</strong>' modules.</p>
+<p>To use the <em>express-validator </em>in our controllers we have to <em>require</em> the functions we want to use from the <strong>'express-validator/check</strong>' and <strong>'express-validator/filter</strong>' modules.</p>
 
-<p>Open <strong>/controllers/genreController.js</strong>, and add the following line at the top of the file:</p>
+<p>Open <strong>/controllers/genreController.js</strong>, and add the following line at the top of the file:</p>
 
 <pre class="brush: js">const validator = require('express-validator');
 </pre>
@@ -79,13 +79,13 @@ exports.genre_create_post =  [
   }
 ];</pre>
 
-<p>The first thing to note is that instead of being a single middleware function (with arguments <code>(req, res, next)</code>) the controller specifies an <em>array</em> of middleware functions. The array is passed to the router function and each method is called in order.</p>
+<p>The first thing to note is that instead of being a single middleware function (with arguments <code>(req, res, next)</code>) the controller specifies an <em>array</em> of middleware functions. The array is passed to the router function and each method is called in order.</p>
 
 <div class="note">
-<p><strong>Note:</strong> This approach is needed, because the sanitisers/validators are middleware functions.</p>
+<p><strong>Note:</strong> This approach is needed, because the sanitisers/validators are middleware functions.</p>
 </div>
 
-<p>The first method in the array defines a validator (<code>validator.body()</code>) from the <code>validator</code>  module to check that the <em>name</em> field is not empty (calling <code>trim()</code> to remove any trailing/leading whitespace before performing the validation). The  second method in the array (<code>validator.sanitizeBody()</code>) creates a sanitizer to <code>escape()</code> any dangerous  HTML characters in the <em>name</em> field.</p>
+<p>The first method in the array defines a validator (<code>validator.body()</code>) from the <code>validator</code>  module to check that the <em>name</em> field is not empty (calling <code>trim()</code> to remove any trailing/leading whitespace before performing the validation). The  second method in the array (<code>validator.sanitizeBody()</code>) creates a sanitizer to <code>escape()</code> any dangerous  HTML characters in the <em>name</em> field.</p>
 
 <pre class="brush: js">// Validate that the name field is not empty.
 validator<code>.</code>body('name', 'Genre name required').isLength({ min: 1 }).trim(),
@@ -93,7 +93,7 @@ validator<code>.</code>body('name', 'Genre name required').isLength({ min: 1 }).
 // Sanitize (escape) the name field.
 validator.sanitizeBody('name').escape()</pre>
 
-<p>After specifying the validators and sanitizers we create a middleware function to extract any validation errors. We use <code>isEmpty()</code> to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitised genre object and the array of error messages (<code>errors.array()</code>).</p>
+<p>After specifying the validators and sanitizers we create a middleware function to extract any validation errors. We use <code>isEmpty()</code> to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitised genre object and the array of error messages (<code>errors.array()</code>).</p>
 
 <pre class="brush: js">// Process request after validation and sanitization.
 (req, res, next) =&gt; {
@@ -136,11 +136,11 @@ Genre.findOne({ 'name': req.body.name })
     }
 });</pre>
 
-<p>This same pattern is used in all our post controllers: we run validators, then sanitisers,  then check for errors and either re-render the form with error information or save the data. </p>
+<p>This same pattern is used in all our post controllers: we run validators, then sanitisers,  then check for errors and either re-render the form with error information or save the data. </p>
 
 <h2 id="View">View</h2>
 
-<p>The same view is rendered in both the <code>GET</code> and <code>POST</code> controllers/routes when we create a new <code>Genre</code> (and later on it is also used when we <em>update</em> a <code>Genre</code>). In the <code>GET</code> case the form is empty, and we just pass a title variable. In the <code>POST</code> case the user has previously entered invalid data—in the <code>genre</code> variable we pass back a sanitized version of the entered data and in the <code>errors</code> variable we pass back an array of error messages.</p>
+<p>The same view is rendered in both the <code>GET</code> and <code>POST</code> controllers/routes when we create a new <code>Genre</code> (and later on it is also used when we <em>update</em> a <code>Genre</code>). In the <code>GET</code> case the form is empty, and we just pass a title variable. In the <code>POST</code> case the user has previously entered invalid data—in the <code>genre</code> variable we pass back a sanitized version of the entered data and in the <code>errors</code> variable we pass back an array of error messages.</p>
 
 <pre class="brush: js">res.render('genre_form', { title: 'Create Genre'});
 res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});</pre>
@@ -181,12 +181,12 @@ block content
 
 <p><img alt="Genre Create Page - Express Local Library site" src="https://mdn.mozillademos.org/files/14476/LocalLibary_Express_Genre_Create_Empty.png" style="border-style: solid; border-width: 1px; display: block; height: 301px; margin: 0px auto; width: 800px;"></p>
 
-<p>The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).</p>
+<p>The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14480/LocalLibary_Express_Genre_Create_Error.png" style="border-style: solid; border-width: 1px; display: block; height: 249px; margin: 0px auto; width: 400px;"></p>
 
 <div class="note">
-<p><strong>Note:</strong> Our validation uses <code>trim()</code> to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value <code>required='true'</code> to the field definition in the form:</p>
+<p><strong>Note:</strong> Our validation uses <code>trim()</code> to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value <code>required='true'</code> to the field definition in the form:</p>
 
 <pre class="brush: js">input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), <strong>required='true'</strong> )</pre>
 </div>

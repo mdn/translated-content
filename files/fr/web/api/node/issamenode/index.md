@@ -9,7 +9,9 @@ La méthode **`Node.isSameNode()`** teste si deux noeuds sont identiques, c'est-
 
 ## Syntaxe
 
-    var isSameNode = node.isSameNode(other);
+```js
+var isSameNode = node.isSameNode(other);
+```
 
 ### Paramètres
 

@@ -22,7 +22,9 @@ Les objets représentant des expressions rationnelles gardent un état en mémoi
 
 ## Syntaxe
 
-    regexObj.exec(chaîne)
+```js
+regexObj.exec(chaîne)
+```
 
 ### Paramètres
 
@@ -151,8 +153,10 @@ while ((monTableau = maRegex.exec(str)) !== null) {
 
 Le script affichera alors :
 
-    Trouvé abb. Prochaine correspondance à partir de 3
-    Trouvé ab. Prochaine correspondance à partir de 9
+```
+Trouvé abb. Prochaine correspondance à partir de 3
+Trouvé ab. Prochaine correspondance à partir de 9
+```
 
 > **Attention :** Il ne faut pas placer un littéral d'expression rationnelle (ou le constructeur {{jsxref("RegExp")}}) au sein de la condition `while` car cela créerait un boucle infinie s'il y a une correspondance car la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} serait redéfinie à chaque itération. Il faut également s'assurer que le drapeau global est défini sinon on aura également une boucle.
 

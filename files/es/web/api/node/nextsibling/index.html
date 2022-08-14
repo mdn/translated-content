@@ -11,7 +11,7 @@ translation_of: Web/API/Node/nextSibling
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>La propiedad de sólo lectura <strong><code>Node.nextSibling</code></strong> devuelve el siguiente nodo con respecto al indicado en la lista de nodos ({{domxref("Node.childNodes","childNodes")}}) a la que este pertenece o <code>null</code> si el nodo especificado es el último en dicha lista.</p>
+<p>La propiedad de sólo lectura <strong><code>Node.nextSibling</code></strong> devuelve el siguiente nodo con respecto al indicado en la lista de nodos ({{domxref("Node.childNodes","childNodes")}}) a la que este pertenece o <code>null</code> si el nodo especificado es el último en dicha lista.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
@@ -40,14 +40,14 @@ translation_of: Web/API/Node/nextSibling
 
 &lt;script type="text/javascript"&gt;
 var el = document.getElementById('div-01').nextSibling,
-    i = 1;
+    i = 1;
 
 console.log('Hermanos de div-01:');
 
 while (el) {
-  console.log(i + '. ' + el.nodeName);
-  el = el.nextSibling;
-  i++;
+  console.log(i + '. ' + el.nodeName);
+  el = el.nextSibling;
+  i++;
 }
 
 &lt;/script&gt;
@@ -55,7 +55,7 @@ while (el) {
 /**************************************************
   Lo siguiente se escribe en la consola cuando carga:
 
-      Nodos hermanos del div-01
+      Nodos hermanos del div-01
 
       1. #text
       2. DIV

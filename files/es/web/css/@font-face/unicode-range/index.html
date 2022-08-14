@@ -10,7 +10,7 @@ translation_of: Web/CSS/@font-face/unicode-range
 ---
 <div>{{cssref}}</div>
 
-<p>La regla CSS <strong><code>unicode-range</code></strong> especifica un rango específico de caracteres a ser usados por una fuente definida  {{cssxref("@font-face")}} y hacerla disponible para su uso en la página actual. Si la página no usa algún caracter en ese rango, la fuente no es descargada; si usa al menos uno de ellos, la fuente es descargada.</p>
+<p>La regla CSS <strong><code>unicode-range</code></strong> especifica un rango específico de caracteres a ser usados por una fuente definida  {{cssxref("@font-face")}} y hacerla disponible para su uso en la página actual. Si la página no usa algún caracter en ese rango, la fuente no es descargada; si usa al menos uno de ellos, la fuente es descargada.</p>
 
 <p>El propósito de esta regla es permitir a las fuente ser segmentados, así el navegador solo necesita descargar la fuente necesitada para el contexto de texto en una página en particular. Por ejemplo, un sitio con muchas localizaciones podría proveer fuentes separadas para el inglés, griego y japonés. Para los usuarios que ven la versión en inglés de la página, las fuentes para el griego y el japonés no son necesarias, y por lo tanto no se descargan, ahorrando ancho de banda.</p>
 
@@ -37,7 +37,7 @@ unicode-range: U+0025-00FF, U+4??; /* multiples valores */
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<p>Hemos creado una etiqueta HTML que contiene un elemento {{HTMLElement("div")}}, que incluye un simbolo &amp;, el cual queremos que se muestre con una fuente diferente. Para hacerlo obvio,  usaremos una fuente sans-serif, <em>Helvetica</em> para el texto, y una fuente serif, <em>Times New Roman</em>, para el caracter &amp;.</p>
+<p>Hemos creado una etiqueta HTML que contiene un elemento {{HTMLElement("div")}}, que incluye un simbolo &amp;, el cual queremos que se muestre con una fuente diferente. Para hacerlo obvio,  usaremos una fuente sans-serif, <em>Helvetica</em> para el texto, y una fuente serif, <em>Times New Roman</em>, para el caracter &amp;.</p>
 
 <div class="example">
 <pre class="brush: html">&lt;div&gt;Me &amp; You = Us&lt;/div&gt;</pre>

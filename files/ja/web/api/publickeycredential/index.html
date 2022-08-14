@@ -25,11 +25,11 @@ translation_of: Web/API/PublicKeyCredential
 <dl>
  <dt><code>PublicKeyCredential.type</code> {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
  <dd>{{domxref("Credential")}} から継承しています。 <code>PublicKeyCredential</code> の場合は、常に <code>public-key</code> に設定されています。</dd>
- <dt>{{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
+ <dt>{{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
  <dd>{{domxref("Credential")}} から継承しており、 {{domxref("PublicKeyCredential.rawId")}} の <a href="/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url 符号化</a>になるようオーバーライドしています。</dd>
  <dt>{{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
  <dd>{{domxref("ArrayBuffer")}} 型で、この <code>PublicKeyCredential</code> のグローバルに固有な識別子を保持します。この識別子は今後の {{domxref("CredentialsContainer.get")}} の呼び出しにおいて、資格情報を検索するのに使用することができます。</dd>
- <dt>{{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}</dt>
+ <dt>{{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}</dt>
  <dd>{{domxref("AuthenticatorResponse")}} オブジェクトのインスタンスです。これは <code>PublicKeyCredential</code> が {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} の呼び出しの結果だった場合であった場合は {{domxref("AuthenticatorAttestationResponse")}} 型に、 <code>PublicKeyCredential</code> が {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} の呼び出しの結果であった場合は {{domxref("AuthenticatorAssertionResponse")}} 型になります。</dd>
 </dl>
 

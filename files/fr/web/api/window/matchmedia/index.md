@@ -5,11 +5,13 @@ translation_of: Web/API/Window/matchMedia
 ---
 {{ApiRef}}
 
-Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères [media query](/en-US/docs/CSS/Media_queries) spécifiée.
+Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères [media query](/fr/docs/CSS/Media_queries) spécifiée.
 
 ## Syntaxe
 
-    mql = window.matchMedia(mediaQueryString)
+```js
+mql = window.matchMedia(mediaQueryString)
+```
 
 Ici, `mediaQueryString` est une chaîne de caractère représentant la media query pour laquelle on retourne un nouvel objet {{domxref("MediaQueryList")}}.
 
@@ -25,7 +27,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 Ce code permet de gérer la mise en page d'une manière différente quand l'écran est moins large.
 
-Voir [Utiliser les media queries avec du code](/en-US/docs/DOM/Using_media_queries_from_code) pour plus d'exemples.
+Voir [Utiliser les media queries avec du code](/fr/docs/DOM/Using_media_queries_from_code) pour plus d'exemples.
 
 ## Spécifications
 
@@ -39,7 +41,7 @@ Voir [Utiliser les media queries avec du code](/en-US/docs/DOM/Using_media_queri
 
 ## Voir aussi
 
-- [Media queries](/en-US/docs/CSS/Media_queries)
-- [Using media queries from code](/en-US/docs/DOM/Using_media_queries_from_code)
+- [Media queries](/fr/docs/CSS/Media_queries)
+- [Using media queries from code](/fr/docs/DOM/Using_media_queries_from_code)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

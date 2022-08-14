@@ -55,6 +55,7 @@ drop-shadow(.5rem .5rem 1rem #e23)
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées

@@ -16,22 +16,28 @@ L'idempotence implique que seul l'état réel du serveur est pris en compte et l
 
 `GET /pageX HTTP/1.1` est idempotente. Appelée plusieurs fois de suite, le client obtient les mêmes résultats :
 
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
+```
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+```
 
 `POST /add_row HTTP/1.1` n'est pas idempotente ; si elle est appelée plusieurs fois, elle ajoute plusieurs lignes :
 
-    POST /add_row HTTP/1.1
-    POST /add_row HTTP/1.1   -> ajoute une 2nde ligne
-    POST /add_row HTTP/1.1   -> ajoute une 3ème ligne
+```
+POST /add_row HTTP/1.1
+POST /add_row HTTP/1.1   -> ajoute une 2nde ligne
+POST /add_row HTTP/1.1   -> ajoute une 3ème ligne
+```
 
 `DELETE /idX/delete HTTP/1.1` est idempotente, même si le code d'état renvoyé peut changer entre les demandes :
 
-    DELETE /idX/delete HTTP/1.1   -> Retourne 200 si idX existe
-    DELETE /idX/delete HTTP/1.1   -> Retourne 404 comme il vient d'être supprimé
-    DELETE /idX/delete HTTP/1.1   -> Retourne 404
+```
+DELETE /idX/delete HTTP/1.1   -> Retourne 200 si idX existe
+DELETE /idX/delete HTTP/1.1   -> Retourne 404 comme il vient d'être supprimé
+DELETE /idX/delete HTTP/1.1   -> Retourne 404
+```
 
 ## En apprendre plus
 

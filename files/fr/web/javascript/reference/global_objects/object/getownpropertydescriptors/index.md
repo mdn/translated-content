@@ -17,7 +17,9 @@ La méthode **`Object.getOwnPropertyDescriptors()`** renvoie l'ensemble des desc
 
 ## Syntaxe
 
-    Object.getOwnPropertyDescriptors(obj)
+```js
+Object.getOwnPropertyDescriptors(obj)
+```
 
 ### Paramètres
 

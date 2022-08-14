@@ -69,7 +69,7 @@ function onVisited(historyItem) {
 browser.history.onVisited.addListener(onVisited);
 ```
 
-履歴 API を使用するには、 "`history`" [権限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルでリクエストする必要があります。
+履歴 API を使用するには、 "`history`" [権限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルでリクエストする必要があります。
 
 ## ウェブページのデザイン
 

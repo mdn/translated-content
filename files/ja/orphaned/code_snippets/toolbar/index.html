@@ -9,8 +9,8 @@ original_slug: Code_snippets/Toolbar
 <h3 id="Adding_a_toolbar_button">ツールバーボタンを追加する</h3>
 <p>二つのチュートリアルが参照可能です。</p>
 <ul>
- <li>初心者向けの詳細な説明のある順を追ったチュートリアル : <a href="ja/Custom_Toolbar_Button">Custom Toolbar Button</a></li>
- <li>すでに拡張を作成しており開発の基本は知っている人向けの、ツールバーボタン追加に必要な手順を述べたチュートリアル : <a href="ja/Creating_toolbar_buttons">Creating toolbar buttons</a></li>
+ <li>初心者向けの詳細な説明のある順を追ったチュートリアル : <a href="ja/Custom_Toolbar_Button">Custom Toolbar Button</a></li>
+ <li>すでに拡張を作成しており開発の基本は知っている人向けの、ツールバーボタン追加に必要な手順を述べたチュートリアル : <a href="ja/Creating_toolbar_buttons">Creating toolbar buttons</a></li>
 </ul>
 <h3 id="Adding_button_by_default">Adding button by default</h3>
 <p>スタマイズされたツールバーパレット用のツールバーボタンを入れて、あなたの拡張を開発・配布したとしても、デフォルトではボタンは有効になりません。ユーザはボタンをツールバーへドラッグする必要があります。下のコードを利用することで、あなたのボタンが最初のインストールおよび XPI の再起動後にデフォルトで表示されるようにできます。</p>
@@ -32,7 +32,7 @@ original_slug: Code_snippets/Toolbar
    {
      var set;
      // Place the button before the urlbar
-     if (curSet.indexOf("urlbar-container") != -1)
+     if (curSet.indexOf("urlbar-container") != -1)
        set = curSet.replace(/urlbar-container/, "my-extension-button,urlbar-container");
      else  // at the end
        set = firefoxnav.currentSet + ",my-extension-button";

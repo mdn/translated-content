@@ -32,24 +32,26 @@ translation_of: Web/CSS/string
 
 ### 有効な文字列の例
 
-    /* 単純な文字列 */
-    "This string is demarcated by double quotes."
-    'This string is demarcated by single quotes.'
+```js
+/* 単純な文字列 */
+"This string is demarcated by double quotes."
+'This string is demarcated by single quotes.'
 
-    /* 文字のエスケープ */
-    "This is a string with \" an escaped double quote."
-    "This string also has \22 an escaped double quote."
-    'This is a string with \' an escaped single quote.'
-    'This string also has \27 an escaped single quote.'
-    "This is a string with \\ an escaped backslash."
+/* 文字のエスケープ */
+"This is a string with \" an escaped double quote."
+"This string also has \22 an escaped double quote."
+'This is a string with \' an escaped single quote.'
+'This string also has \27 an escaped single quote.'
+"This is a string with \\ an escaped backslash."
 
-    /* 文字列内の改行 */
-    "This string has a \Aline break in it."
+/* 文字列内の改行 */
+"This string has a \Aline break in it."
 
-    /* 2 行にわたる文字列 (これら 2 つの文字列は同じ出力になります) */
-    "A really long \
-    awesome string"
-    "A really long awesome string"
+/* 2 行にわたる文字列 (これら 2 つの文字列は同じ出力になります) */
+"A really long \
+awesome string"
+"A really long awesome string"
+```
 
 ## 仕様書
 

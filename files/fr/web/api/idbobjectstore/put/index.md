@@ -21,8 +21,10 @@ La méthode `put()` permet d'ajouter ou de mettre à jour. Si on souhaite unique
 
 ## Syntaxe
 
-    var request = objectStore.put(monElement);
-    var request = objectStore.put(monElement, cleOptionnelle);
+```js
+var request = objectStore.put(monElement);
+var request = objectStore.put(monElement, cleOptionnelle);
+```
 
 ### Paramètres
 

@@ -40,11 +40,11 @@ var form_element = document.getElementById('subscribe_form');
 var vist = form_element.style;
 if (vist.display=='' || vist.display=='none')
 {
-  vist.display = 'block';
+  vist.display = 'block';
 }
 else
 {
-  vist.display = 'none';
+  vist.display = 'none';
 }
 </script>
 ```

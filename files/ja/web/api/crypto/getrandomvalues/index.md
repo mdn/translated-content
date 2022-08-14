@@ -47,7 +47,7 @@ getRandomValues(typedArray)
 
 ### 例外
 
-- `QuotaExceededError`{{domxref("DOMException")}} 
+- `QuotaExceededError`{{domxref("DOMException")}}
   - : `typedArray` の {{jsxref("TypedArray.byteLength", "byteLength")}} が 65,536 バイトを超えた場合に発生します。
 
 ## 使用上の注意

@@ -20,7 +20,9 @@ L'idée des balises de notification est que plusieurs notifications peuvent part
 
 ## Syntaxe
 
-    Notification.tag
+```js
+Notification.tag
+```
 
 ### Valeur
 

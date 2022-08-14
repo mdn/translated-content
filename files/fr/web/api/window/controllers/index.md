@@ -18,9 +18,11 @@ Retourne les contrôleurs XUL de la fenêtre chrome.
 
 ## Syntaxe
 
-    controleurs = window.controllers
+```js
+controleurs = window.controllers
+```
 
-- `controleurs` est un objet de type [`XULControllers`](/en-US/docs/XULControllers) ([`nsIControllers`](/en-US/docs/XPCOM_Interface_Reference/nsIControllers)).
+- `controleurs` est un objet de type [`XULControllers`](/fr/docs/XULControllers) ([`nsIControllers`](/fr/docs/XPCOM_Interface_Reference/nsIControllers)).
 
 ## Spécification
 
@@ -35,4 +37,6 @@ Chaque suppression manquante peut provoquer le
 
 [bug 415775](https://bugzilla.mozilla.org/show_bug.cgi?id=415775):
 
-    ASSERTION: XPConnect is being called on a scope without a 'Components' property!
+```
+ASSERTION: XPConnect is being called on a scope without a 'Components' property!
+```

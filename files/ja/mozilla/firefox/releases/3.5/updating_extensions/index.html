@@ -30,16 +30,16 @@ firefox -createProfile testBeta2
 <h2 id="Places_データベースへのアクセス">Places データベースへのアクセス</h2>
 <p>Firefox 3.1 以前は、<a class="internal" href="/ja/Storage">Storage API</a> を使って Places データベースへ直接アクセスする場合、以下のように少々工夫が必要でした。</p>
 <pre class="brush: js">var places = Components.classes["@mozilla.org/file/directory_service;1"].
-                        getService(Components.interfaces.nsIProperties).
-                        get("ProfD", Components.interfaces.nsIFile);
+                        getService(Components.interfaces.nsIProperties).
+                        get("ProfD", Components.interfaces.nsIFile);
 places.append("places.sqlite");
 var db = Components.classes["@mozilla.org/storage/service;1"].
-                    getService(Components.interfaces.mozIStorageService).openDatabase(places);
+                    getService(Components.interfaces.mozIStorageService).openDatabase(places);
 </pre>
 <p>これは <code>places.sqlite</code> データベースファイルへのパスを自力で作成し、Storage アクセスのためのファイルを開くものでした。</p>
 <p>Firefox 3.1 には、Places データベースへアクセスするための便利な方法を提供する、専用のサービスが追加されており、上記の方法は Firefox 3.1 以降では機能しません。</p>
 <pre class="brush: js">var db = Components.classes["@mozilla.org/browser/nav-history-service;1"].
-                    getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
+                    getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
 </pre>
 <h2 id="テキストボックスの検索">テキストボックスの検索</h2>
 <p><a class="internal" href="/ja/XUL/textbox"><code>textbox</code></a> の種類のひとつ、<code>timed</code> は廃止予定となりました。代わりに <code>search</code> を使ってください。</p>
@@ -52,10 +52,10 @@ var db = Components.classes["@mozilla.org/storage/service;1"].
 <h2 id="JSON">JSON</h2>
 <p>JSON.jsm JavaScript モジュールは Firefox 3.1 では削除され、ネイティブの JSON オブジェクトサポートに置き換えられました。 詳しくは、<a class="internal" href="/ja/Using_JSON_in_Firefox" title="/ja/Using JSON in Firefox">Firefox で JSON を使用する</a> をご覧ください。JSON のより一般的な概要と、各種バージョンの Firefox で JSON を使う方法については、<a class="internal" href="/ja/JSON">JSON</a> のページからリンクされている記事を参照してください。</p>
 <p>Firefox 3 と Firefox 3.1 の両方について互換性を確保するには、以下のように記述します。</p>
-<pre class="brush: js">if (typeof(JSON) == "undefined") {
-  Components.utils.import("resource://gre/modules/JSON.jsm");
-  JSON.parse = JSON.fromString;
-  JSON.stringify = JSON.toString;
+<pre class="brush: js">if (typeof(JSON) == "undefined") {
+  Components.utils.import("resource://gre/modules/JSON.jsm");
+  JSON.parse = JSON.fromString;
+  JSON.stringify = JSON.toString;
 }
 </pre>
 <p>JSON がネイティブサポートされていない場合は JSON.jsm JavaScript モジュールをインポートして、そのモジュールによって提供されているメソッドをネイティブ JSON で使われているものにマッピングします。これによって、同じ呼び出しが可能になります。</p>

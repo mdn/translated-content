@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.deleteShader()`** de l'API WebGL marque l'o
 
 ## Syntaxe
 
-    void gl.deleteShader(shader);
+```js
+void gl.deleteShader(shader);
+```
 
 ### Paramètres
 

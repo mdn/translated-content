@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p>전역 <code><strong>undefined</strong></code> 속성은 <code>{{Glossary("Undefined", "undefined")}}</code> 원시 값을 나타내며, JavaScript의 {{Glossary("Primitive", "원시 자료형")}} 중 하나입니다.</p>
+<p>전역 <code><strong>undefined</strong></code> 속성은 <code>{{Glossary("Undefined", "undefined")}}</code> 원시 값을 나타내며, JavaScript의 {{Glossary("Primitive", "원시 자료형")}} 중 하나입니다.</p>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
 
@@ -20,14 +20,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 <h2 id="설명">설명</h2>
 
-<p><code>undefined</code>는 전역 객체의 속성입니다. 즉, 전역 스코프에서의 변수입니다. <code>undefined</code>의 초기 값은 <code>{{Glossary("Undefined", "undefined")}}</code> 원시 값입니다.</p>
+<p><code>undefined</code>는 전역 객체의 속성입니다. 즉, 전역 스코프에서의 변수입니다. <code>undefined</code>의 초기 값은 <code>{{Glossary("Undefined", "undefined")}}</code> 원시 값입니다.</p>
 
-<p>최신 브라우저에서 <code>undefined</code>는 ECMAScript 5 명세에 따라 설정 불가, 쓰기 불가한 속성입니다. 그렇지 않더라도 덮어쓰는건 피하는게 좋습니다.</p>
+<p>최신 브라우저에서 <code>undefined</code>는 ECMAScript 5 명세에 따라 설정 불가, 쓰기 불가한 속성입니다. 그렇지 않더라도 덮어쓰는건 피하는게 좋습니다.</p>
 
-<p>값을 할당하지 않은 변수는 <code>undefined</code> 자료형입니다. 또한 메서드와 선언도 평가할 변수가 값을 할당받지 않은 경우에 <code>undefined</code>를 반환합니다. 함수는 값을 명시적으로 {{jsxref("Statements/return", "반환", "", 1)}}하지 않으면 <code>undefined</code>를 반환합니다.</p>
+<p>값을 할당하지 않은 변수는 <code>undefined</code> 자료형입니다. 또한 메서드와 선언도 평가할 변수가 값을 할당받지 않은 경우에 <code>undefined</code>를 반환합니다. 함수는 값을 명시적으로 {{jsxref("Statements/return", "반환", "", 1)}}하지 않으면 <code>undefined</code>를 반환합니다.</p>
 
 <div class="note">
-<p><code>undefined</code>는 <a href="/ko/docs/Web/JavaScript/Reference/Reserved_Words">예약어</a>가 아니기 때문에 전역 범위 외에서 {{Glossary("Identifier", "식별자")}}(변수 이름)로 사용할 수 있습니다. 그러나 유지보수와 디버깅 시 어려움을 낳을 수 있으므로 반드시 피해야 합니다.</p>
+<p><code>undefined</code>는 <a href="/ko/docs/Web/JavaScript/Reference/Reserved_Words">예약어</a>가 아니기 때문에 전역 범위 외에서 {{Glossary("Identifier", "식별자")}}(변수 이름)로 사용할 수 있습니다. 그러나 유지보수와 디버깅 시 어려움을 낳을 수 있으므로 반드시 피해야 합니다.</p>
 
 <pre class="brush: js example-bad ">//  DON'T DO THIS
 
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 
 <h2 id="예제">예제</h2>
 
-<h3 id="일치_연산과_undefined">일치 연산과 <code>undefined</code></h3>
+<h3 id="일치_연산과_undefined">일치 연산과 <code>undefined</code></h3>
 
 <p><code>undefined</code>와 일치, 불일치 연산자를 사용해 변수에 값이 할당됐는지 판별할 수 있습니다. 다음 예제에서 변수 <code>x</code>는 초기화되지 않았으므로 <code>if</code>문은 <code>true</code>로 평가됩니다.</p>
 
@@ -59,9 +59,9 @@ else {
 </pre>
 
 <div class="note">
-<p><strong>참고</strong>: 동등 연산자가 아니라 일치 연산자를 사용해야 합니다. 동등 연산자일 때 <code>x == undefined</code>는 <code>x</code>가 {{jsxref("null")}}일 때도 참이기 때문입니다. 즉 <code>null</code>은 <code>undefined</code>와 동등하지만, 일치하지는 않습니다.</p>
+<p><strong>참고</strong>: 동등 연산자가 아니라 일치 연산자를 사용해야 합니다. 동등 연산자일 때 <code>x == undefined</code>는 <code>x</code>가 {{jsxref("null")}}일 때도 참이기 때문입니다. 즉 <code>null</code>은 <code>undefined</code>와 동등하지만, 일치하지는 않습니다.</p>
 
-<p>자세한 내용은 {{jsxref("Operators/Comparison_Operators", "비교 연산자", "", 1)}} 문서를 확인하세요.</p>
+<p>자세한 내용은 {{jsxref("Operators/Comparison_Operators", "비교 연산자", "", 1)}} 문서를 확인하세요.</p>
 </div>
 
 <h3 id="typeof_연산자와_undefined"><code>typeof</code> 연산자와 <code>undefined</code></h3>
@@ -96,7 +96,7 @@ if(x === undefined) { // ReferenceError
 
 <h3 id="void_연산자와_undefined"><code>void</code> 연산자와 <code>undefined</code></h3>
 
-<p>{{jsxref("Operators/void", "void")}} 연산자를 제 3의 대안으로 사용할 수 있습니다.</p>
+<p>{{jsxref("Operators/void", "void")}} 연산자를 제 3의 대안으로 사용할 수 있습니다.</p>
 
 <pre class="brush: js ">var x;
 if (x === void 0) {
@@ -109,22 +109,11 @@ if (y === void 0) {
 }
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-undefined', 'undefined')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("javascript.builtins.undefined")}}</p>
 

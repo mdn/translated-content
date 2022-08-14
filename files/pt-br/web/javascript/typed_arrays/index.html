@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Typed_arrays
 
 <div>Os arrays tipados do Javascript são objetos parecidos com arrays convencionais, e fornecem um mecanismo para lidar com dados binários em sua forma "bruta". Como você já deve saber, objetos do tipo {{jsxref("Array")}} aumentam e encolhem dinamicamente, e podem conter qualquer tipo de valor possível no Javascript. Os interpretadores Javascript realizam otimizações para que estes arrays sejam rápidos de se manipular. Todavia, à medida em que as aplicações web tornam-se mais e mais poderosas, adicionando recursos como manipulação de áudio e vídeo, acesso a dados brutos utilizando WebSockets, e assim por diante, tornou-se claro que há momentos em que seria útil ao código Javascript ser capaz de manipular dados binários "brutos" em arrays tipados, de forma rápida e fácil.</div>
 
-<div> </div>
+<div> </div>
 
 <div>Entretanto, os arrays tipados não devem ser confundidos com arrays convencionais, já que invocar o método {{jsxref("Array.isArray()")}} em um array tipado retornará <code>false</code>. Além disso, nem todos os métodos disponíveis para arrays normais são suportados pelos arrays tipados (ex. push e pop).</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Buffers_e_views_a_arquitetura_dos_arrays_tipados">Buffers e views: a arquitetura dos arrays tipados</h2>
 
@@ -34,17 +34,17 @@ translation_of: Web/JavaScript/Typed_arrays
 
 <h3 id="DataView">DataView</h3>
 
-<p>O objeto do tipo {{jsxref("DataView")}} é uma interface de baixo nível que fornece uma API no estilo <em>getter</em>/<em>setter</em> para ler e escrever dados arbitrários ao buffer. Isto é útil quando se está lidando com diferentes tipos de dados, por exemplo. As views de arrays tipados estão em ordem de bytes nativa (veja {{Glossary("Endianness")}}) da sua plataforma. Com uma <code>DataView</code> você é capaz de controlar a ordem dos bytes. Esta ordem é <em>big-endian</em> por padrão e pode ser alterada para <em>little-endian</em> através dos métodos <em>getters</em> e <em>setters</em> citados anteriormente.</p>
+<p>O objeto do tipo {{jsxref("DataView")}} é uma interface de baixo nível que fornece uma API no estilo <em>getter</em>/<em>setter</em> para ler e escrever dados arbitrários ao buffer. Isto é útil quando se está lidando com diferentes tipos de dados, por exemplo. As views de arrays tipados estão em ordem de bytes nativa (veja {{Glossary("Endianness")}}) da sua plataforma. Com uma <code>DataView</code> você é capaz de controlar a ordem dos bytes. Esta ordem é <em>big-endian</em> por padrão e pode ser alterada para <em>little-endian</em> através dos métodos <em>getters</em> e <em>setters</em> citados anteriormente.</p>
 
 <h2 id="Web_APIs_que_utilizam_arrays_tipados">Web APIs que utilizam arrays tipados</h2>
 
 <dl>
  <dt><a href="/en-US/docs/Web/API/FileReader#readAsArrayBuffer()" title="/en-US/docs/Web/API/FileReader#readAsArrayBuffer()"><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
- <dd>O método <code>FileReader.prototype.readAsArrayBuffer()</code> inicia a leitura do conteúdo de um objeto do tipo <a href="/pt-BR/docs/Web/API/Blob">Blob</a> ou <a href="/pt-BR/docs/Web/API/File">FIle</a> especificado.</dd>
+ <dd>O método <code>FileReader.prototype.readAsArrayBuffer()</code> inicia a leitura do conteúdo de um objeto do tipo <a href="/pt-BR/docs/Web/API/Blob">Blob</a> ou <a href="/pt-BR/docs/Web/API/File">FIle</a> especificado.</dd>
  <dt><a href="/en-US/docs/Web/API/XMLHttpRequest#send()" title="/en-US/docs/Web/API/XMLHttpRequest#send()"><code>XMLHttpRequest.prototype.send()</code></a></dt>
- <dd>O método <code>send()</code> das instâncias de <code>XMLHttpRequest</code> agora suportam arrays tipados e objetos do tipo {{jsxref("ArrayBuffer")}} como argumento.</dd>
+ <dd>O método <code>send()</code> das instâncias de <code>XMLHttpRequest</code> agora suportam arrays tipados e objetos do tipo {{jsxref("ArrayBuffer")}} como argumento.</dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData">ImageData.data</a></code></dt>
- <dd>É objeto do tipo {{jsxref("Uint8ClampedArray")}} que representa uma matriz unidimensional que contém dados na ordem RGBA, com valores numéricos entre <code>0</code> e <code>255</code> inclusive.</dd>
+ <dd>É objeto do tipo {{jsxref("Uint8ClampedArray")}} que representa uma matriz unidimensional que contém dados na ordem RGBA, com valores numéricos entre <code>0</code> e <code>255</code> inclusive.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -70,7 +70,7 @@ translation_of: Web/JavaScript/Typed_arrays
 <pre class="brush:js">var int32View = new Int32Array(buffer);
 </pre>
 
-<p>Agora nós podemos acessar os campos neste array assim como em um array convencional:</p>
+<p>Agora nós podemos acessar os campos neste array assim como em um array convencional:</p>
 
 <pre class="brush:js">for (var i = 0; i &lt; int32View.length; i++) {
   int32View[i] = i * 2;
@@ -81,7 +81,7 @@ translation_of: Web/JavaScript/Typed_arrays
 
 <h3 id="Multiplas_views_dos_mesmos_dados">Multiplas views dos mesmos dados</h3>
 
-<p>As coisas começar a ficar realmente interessantes quando você considera que é possível criar múltiplas views para os mesmos dados. Por exemplo, dado o código acima, nós podemos continuar desta forma:</p>
+<p>As coisas começar a ficar realmente interessantes quando você considera que é possível criar múltiplas views para os mesmos dados. Por exemplo, dado o código acima, nós podemos continuar desta forma:</p>
 
 <pre class="brush:js">var int16View = new Int16Array(buffer);
 
@@ -90,7 +90,7 @@ for (var i = 0; i &lt; int16View.length; i++) {
 }
 </pre>
 
-<p>Aqui nós criamos uma view de inteiros de 16 bits que compartilha o mesmo buffer que a view de 32 bits existente, e emitimos todos os valores no buffer como inteiros de 16 bits. Agora nós obtemos a saída <code>0</code>, <code>0</code>, <code>2</code>, <code>0</code>, <code>4</code>, <code>0</code>, <code>6</code>, <code>0</code>.</p>
+<p>Aqui nós criamos uma view de inteiros de 16 bits que compartilha o mesmo buffer que a view de 32 bits existente, e emitimos todos os valores no buffer como inteiros de 16 bits. Agora nós obtemos a saída <code>0</code>, <code>0</code>, <code>2</code>, <code>0</code>, <code>4</code>, <code>0</code>, <code>6</code>, <code>0</code>.</p>
 
 <p>Você pode ir um pouco mais longe, no entanto. Considere isto:</p>
 
@@ -124,7 +124,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);</pre>
 
 <p>Então você pode acessar, por exemplo, o devido valor com <code>amountDueView[0]</code>.</p>
 
-<div class="note"><strong>Nota:</strong> O <a href="http://en.wikipedia.org/wiki/Data_structure_alignment">alinhamento da estrutura de dados</a> em uma estrutura em C depende da plataforma. Tome precauções e considerações para essas diferenças de preenchumento.</div>
+<div class="note"><strong>Nota:</strong> O <a href="http://en.wikipedia.org/wiki/Data_structure_alignment">alinhamento da estrutura de dados</a> em uma estrutura em C depende da plataforma. Tome precauções e considerações para essas diferenças de preenchumento.</div>
 
 <h3 id="Conversão_para_arrays_normais">Conversão para arrays normais</h3>
 
@@ -158,62 +158,12 @@ normalArray.constructor === Array;
   <tr>
    <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>7.0</td>
-   <td>{{ CompatGeckoDesktop("2") }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("2") }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>4.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
 <h2 id="Veja_também">Veja também</h2>
 

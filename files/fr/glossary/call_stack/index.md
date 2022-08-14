@@ -19,4 +19,4 @@ Une **pile d'exécution** est le mécanisme d'un interpréteur (comme l'interpr�
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Pile_d'exécution","Pile d'exécution")}} sur Wikipédia
+- [Pile d'exécution](https://fr.wikipedia.org/wiki/Pile_d'ex%C3%A9cution) sur Wikipédia

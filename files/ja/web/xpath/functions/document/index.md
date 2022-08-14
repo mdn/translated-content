@@ -12,7 +12,9 @@ translation_of: Web/XPath/Functions/document
 
 ## 構文
 
-    document(URI [,node-set] )
+```
+document(URI [,node-set] )
+```
 
 ## 引数
 

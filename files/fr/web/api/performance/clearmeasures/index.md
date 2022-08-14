@@ -67,8 +67,7 @@ logMeasureCount() // "J'ai trouvé ces nombreuses entrées : 0"
 
 | Spécification                                                                                                                    | Statut                                       | Commentaire                        |
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-clearmeasures',
-        'clearMeasures()')}} | {{Spec2('User Timing Level 2')}} | Carification de `clearMeasures()`. |
+| {{SpecName('User Timing Level 2', '#dom-performance-clearmeasures', 'clearMeasures()')}} | {{Spec2('User Timing Level 2')}} | Carification de `clearMeasures()`. |
 | {{SpecName('User Timing', '#dom-performance-clearmeasures', 'clearMeasures()')}}                     | {{Spec2('User Timing')}}             | Définition initiale.               |
 
 ## Compatibilité des navigateurs

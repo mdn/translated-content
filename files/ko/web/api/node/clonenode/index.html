@@ -5,7 +5,7 @@ translation_of: Web/API/Node/cloneNode
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<div><strong><code>Node.cloneNode()</code></strong> 메서드는 이 메서드를 호출한 Node 의 복제된 Node를 반환합니다.</div>
+<div><strong><code>Node.cloneNode()</code></strong> 메서드는 이 메서드를 호출한 Node 의 복제된 Node를 반환합니다.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -22,9 +22,9 @@ translation_of: Web/API/Node/cloneNode
 </dl>
 
 <div class="note">
-<p><strong>Note:</strong> In the DOM4 specification (as implemented in Gecko 13.0 {{geckoRelease(13)}}), <code>deep</code> is an optional argument. If omitted, the method acts as if the value of <code>deep</code> was <strong><code>true</code></strong>, defaulting to using deep cloning as the default behavior. To create a shallow clone, <code>deep</code> must be set to <code>false</code>.</p>
+<p><strong>Note:</strong> In the DOM4 specification (as implemented in Gecko 13.0 {{geckoRelease(13)}}), <code>deep</code> is an optional argument. If omitted, the method acts as if the value of <code>deep</code> was <strong><code>true</code></strong>, defaulting to using deep cloning as the default behavior. To create a shallow clone, <code>deep</code> must be set to <code>false</code>.</p>
 
-<p>This behavior has been changed in the latest spec, and if omitted, the method will act as if the value of <code>deep</code> was <strong><code>false</code></strong>. Though It's still optional, you should always provide the <code>deep</code> argument both for backward and forward compatibility. With Gecko 28.0 {{geckoRelease(28)}}), the console warned developers not to omit the argument. Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted instead of a deep clone.</p>
+<p>This behavior has been changed in the latest spec, and if omitted, the method will act as if the value of <code>deep</code> was <strong><code>false</code></strong>. Though It's still optional, you should always provide the <code>deep</code> argument both for backward and forward compatibility. With Gecko 28.0 {{geckoRelease(28)}}), the console warned developers not to omit the argument. Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted instead of a deep clone.</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -51,32 +51,7 @@ var p_prime = p.cloneNode(true);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-node-clonenode", "Node.cloneNode()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

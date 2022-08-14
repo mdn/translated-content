@@ -15,7 +15,9 @@ Retourne l'élément {{HTMLElement("script")}} dont le script est en cours de tr
 
 ## Syntaxe
 
-    var curScriptElement = document.currentScript;
+```js
+var curScriptElement = document.currentScript;
+```
 
 ## Exemple
 

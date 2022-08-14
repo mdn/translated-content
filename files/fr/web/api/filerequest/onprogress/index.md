@@ -14,7 +14,9 @@ Cette propriété spécifie une fonction de rappel devant être exécutée de fa
 
 ## Syntaxe
 
-    instanceOfFileRequest.onprogress = function;
+```js
+instanceOfFileRequest.onprogress = function;
+```
 
 Où `instanceOfFileRequest` est un objet {{ domxref("FileRequest") }} et `function` est la fonction JavaScript à exécuter.
 

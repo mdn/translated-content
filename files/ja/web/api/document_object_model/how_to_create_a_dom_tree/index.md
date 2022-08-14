@@ -138,7 +138,7 @@ DOM ツリーの生成は、 [JXON 逆引きアリゴリズム](/ja/docs/JXON#JX
 
 ### 要するに
 
-DOM ツリーは [XPath 式を用いて問い合わせ](/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)したり、文字列に変換したり、 [ XMLSerializer](/ja/docs/Web/Guide/Parsing_and_serializing_XML) を用いてローカルあるいはリモートのファイルに書き出したり（あらかじめ文字列に変換しておく必要はない）、[ウェブサーバーに POST したり](/ja/docs/Web/API/XMLHttpRequest) (`XMLHttpRequest` で)、 [XSLT](/ja/docs/Web/XSLT) で変換したり、[XLink](/ja/docs/Glossary/XLink) を利用したり、 [JXON アルゴリズム](/ja/docs/JXON)で JavaScript オブジェクトに変換したりと、さまざまな利用法があります。
+DOM ツリーは [XPath 式を用いて問い合わせ](/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)したり、文字列に変換したり、 [XMLSerializer](/ja/docs/Web/Guide/Parsing_and_serializing_XML) を用いてローカルあるいはリモートのファイルに書き出したり（あらかじめ文字列に変換しておく必要はない）、[ウェブサーバーに POST したり](/ja/docs/Web/API/XMLHttpRequest) (`XMLHttpRequest` で)、 [XSLT](/ja/docs/Web/XSLT) で変換したり、[XLink](/ja/docs/Glossary/XLink) を利用したり、 [JXON アルゴリズム](/ja/docs/JXON)で JavaScript オブジェクトに変換したりと、さまざまな利用法があります。
 
 RDF には適さないデータを（あるいは RDF が嫌いなだけという場合でも）DOM ツリーを用いて作ることができます。別の応用例として、XUL は XML であるため、アプリケーションの UI を動的に操作したり、ダウンロードやアップロードをしたり、保存や読み込みをしたり、変換したりといったことがかなり簡単にできます。
 

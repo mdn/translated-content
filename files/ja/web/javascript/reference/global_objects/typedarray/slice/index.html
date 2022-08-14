@@ -62,12 +62,12 @@ uint8.slice(0,1); // Uint8Array [ 1 ]
 <p><em>TypedArray</em> という名前のグローバルオブジェクトはないため、ポリフィルの使用は「必要に応じて」の原則で行う必要があります。</p>
 
 <pre class="brush: js notranslate">if (!Uint8Array.prototype.slice) {
-  Object.defineProperty(Uint8Array.prototype, 'slice', {
-    value: function (begin, end)
-     {
-        return new Uint8Array(Array.prototype.slice.call(this, begin, end));
-     }
-  });
+  Object.defineProperty(Uint8Array.prototype, 'slice', {
+    value: function (begin, end)
+     {
+        return new Uint8Array(Array.prototype.slice.call(this, begin, end));
+     }
+  });
 }
 </pre>
 

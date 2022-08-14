@@ -19,7 +19,9 @@ Chaque requête démarre avec l'état `pending` (c'est-à-dire en attente). Cet 
 
 ## Syntaxe
 
-    var currentReadyState = request.readyState;
+```js
+var currentReadyState = request.readyState;
+```
 
 ### Valeur
 

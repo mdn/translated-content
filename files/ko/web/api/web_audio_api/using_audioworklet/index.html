@@ -65,16 +65,16 @@ tags:
 <p>오디오 프로세서 클래스의 가장 기본적인 프레임워크는 다음과 같습니다:</p>
 
 <pre class="brush: js">class MyAudioProcessor extends AudioWorkletProcessor {
-  constructor() {
-    super();
-  }
+  constructor() {
+    super();
+  }
 
-  process(inputList, outputList, parameters) {
-    /* inputs를 사용하여 (혹은 필요하지 않다면 사용하지 않을 수도 있음),
-       각 outputs의 내부에 있는 출력을 작성합니다 */
+  process(inputList, outputList, parameters) {
+    /* inputs를 사용하여 (혹은 필요하지 않다면 사용하지 않을 수도 있음),
+       각 outputs의 내부에 있는 출력을 작성합니다 */
 
-    return true;
-  }
+    return true;
+  }
 };
 
 registerProcessor("my-audio-processor", MyAudioProcessor);
@@ -117,27 +117,27 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (또는 inputList[
 <p>해당하는 출력을 생성하기 위해 사용되는 각 입력을 가지고, 다수의 입력을 처리할 수 있는 <code>process()</code>의 구현을 살펴봅시다. 초과되는 입력은 무시됩니다.</p>
 
 <pre class="brush: js">process(inputList, outputList, parameters) {
-  const sourceLimit = Math.min(inputList.length, outputList.length);
+  const sourceLimit = Math.min(inputList.length, outputList.length);
 
-  for (let inputNum = 0; inputNum &lt; sourceLimit; inputNum++) {
-    let input = inputList[inputNum];
-    let output = outputList[inputNum];
-    let channelCount = Math.min(input.length, output.length);
+  for (let inputNum = 0; inputNum &lt; sourceLimit; inputNum++) {
+    let input = inputList[inputNum];
+    let output = outputList[inputNum];
+    let channelCount = Math.min(input.length, output.length);
 
-    for (let channelNum = 0; channelNum &lt; channelCount; channelNum++) {
-      let sampleCount = input[channelNum].length;
+    for (let channelNum = 0; channelNum &lt; channelCount; channelNum++) {
+      let sampleCount = input[channelNum].length;
 
-      for (let i = 0; i &lt; sampleCount; i++) {
-        let sample = input[channelNum][i];
+      for (let i = 0; i &lt; sampleCount; i++) {
+        let sample = input[channelNum][i];
 
         /* 샘플 조작하기 */
 
-        output[channelNum][i] = sample;
-      }
-    }
-  };
+        output[channelNum][i] = sample;
+      }
+    }
+  };
 
-  return true;
+  return true;
 }
 </pre>
 
@@ -148,30 +148,30 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (또는 inputList[
 <p>많은 노드들은 입력들이 어떤 방법으로 하나의 출력으로 결합되는 <strong>믹싱</strong> 작업을 수행합니다. 이는 아래의 예제에서 시연됩니다.</p>
 
 <pre class="brush: js">process(inputList, outputList, parameters) {
-  const sourceLimit = Math.min(inputList.length, outputList.length);
-   for (let inputNum = 0; inputNum &lt; sourceLimit; inputNum++) {
-     let input = inputList[inputNum];
-     let output = outputList[0];
-     let channelCount = Math.min(input.length, output.length);
+  const sourceLimit = Math.min(inputList.length, outputList.length);
+   for (let inputNum = 0; inputNum &lt; sourceLimit; inputNum++) {
+     let input = inputList[inputNum];
+     let output = outputList[0];
+     let channelCount = Math.min(input.length, output.length);
 
-     for (let channelNum = 0; channelNum &lt; channelCount; channelNum++) {
-       let sampleCount = input[channelNum].length;
+     for (let channelNum = 0; channelNum &lt; channelCount; channelNum++) {
+       let sampleCount = input[channelNum].length;
 
-       for (let i = 0; i &lt; sampleCount; i++) {
-         let sample = output[channelNum][i] + input[channelNum][i];
+       for (let i = 0; i &lt; sampleCount; i++) {
+         let sample = output[channelNum][i] + input[channelNum][i];
 
          if (sample &gt; 1.0) {
-           sample = 1.0;
-         } else if (sample &lt; -1.0) {
-           sample = -1.0;
-         }
+           sample = 1.0;
+         } else if (sample &lt; -1.0) {
+           sample = -1.0;
+         }
 
-         output[channelNum][i] = sample;
-       }
-     }
-   };
+         output[channelNum][i] = sample;
+       }
+     }
+   };
 
-  return true;
+  return true;
 }
 </pre>
 
@@ -188,7 +188,7 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (또는 inputList[
 <p><code>process()</code> 메서드로부터 <code>false</code>를 반환하는 것은 API에게 보통의 로직을 따르고 만약 프로세서 노드를 종료하는 것이 적절하다고 여겨지면 그렇게 해야 한다고 말해주는 것입니다. 만약 API가 여러분의 노드가 더 이상 필요없다고 결정한다면, <code>process()</code>는 다시 호출되지 않을 것입니다.</p>
 
 <div class="notecard note">
-<p><strong>참고:</strong> 이 시점에서, 불행하게도, Chrome은 어떤 의미로는 현재 표준에 일치하는 이 알고리즘을 구현하지 않았습니다. 대신, Chrome은 만약 여러분이 <code>true</code>를 반환하면 노드를 살려두고 <code>false</code>를 반환하면 끕니다. 따라서 호환성의 이유로 적어도 Chrome에서는 여러분은 항상 반드시 <code>process()</code>에서 <code>true</code>를 반환해야 합니다. 그러나, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=921354">이 Chrome 이슈</a>가 수정되고 나면, 이것은 성능에 약간 부정적인 영향을 가질지도 모르므로 여러분은 만약 가능하다면 이 동작을 변경하고자 할 것입니다.</p>
+<p><strong>참고:</strong> 이 시점에서, 불행하게도, Chrome은 어떤 의미로는 현재 표준에 일치하는 이 알고리즘을 구현하지 않았습니다. 대신, Chrome은 만약 여러분이 <code>true</code>를 반환하면 노드를 살려두고 <code>false</code>를 반환하면 끕니다. 따라서 호환성의 이유로 적어도 Chrome에서는 여러분은 항상 반드시 <code>process()</code>에서 <code>true</code>를 반환해야 합니다. 그러나, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=921354">이 Chrome 이슈</a>가 수정되고 나면, 이것은 성능에 약간 부정적인 영향을 가질지도 모르므로 여러분은 만약 가능하다면 이 동작을 변경하고자 할 것입니다.</p>
 </div>
 
 <h2 id="Creating_an_audio_processor_worklet_node">오디오 프로세서 worklet 노드 생성하기</h2>
@@ -206,17 +206,17 @@ const firstByteOfFirstChannel = firstInputFirstChannel[0]; // (또는 inputList[
 <pre class="brush: js">let audioContext = null;
 
 async function createMyAudioProcessor() {
-  if (!audioContext) {
-    try {
-      audioContext = new AudioContext();
-      await audioContext.resume();
-      await audioContext.audioWorklet.addModule("module-url/module.js");
-    } catch(e) {
-      return null;
-    }
+  if (!audioContext) {
+    try {
+      audioContext = new AudioContext();
+      await audioContext.resume();
+      await audioContext.audioWorklet.addModule("module-url/module.js");
+    } catch(e) {
+      return null;
+    }
   }
 
-  return new AudioWorkletNode(audioContext, "processor-name");
+  return new AudioWorkletNode(audioContext, "processor-name");
 }
 </pre>
 
@@ -248,12 +248,12 @@ async function createMyAudioProcessor() {
       minValue: 0,
       maxValue: 1
     },
-    {
-      name: "frequency",
-      defaultValue: 440.0;
-      minValue: 27.5,
-      maxValue: 4186.009
-    }
+    {
+      name: "frequency",
+      defaultValue: 440.0;
+      minValue: 27.5,
+      maxValue: 4186.009
+    }
   ];
 }</pre>
 
@@ -269,30 +269,30 @@ async function createMyAudioProcessor() {
 <p>아래의 코드에서, 우리는 a-rate 또는 k-rate 파라미터로 쓰일 수 있는 <code>gain</code> 파라미터를 다루는 <code>process()</code> 함수를 볼 수 있습니다. 우리의 노드는 오직 하나의 입력만을 지원하므로, 이 노드는 단지 리스트의 첫번째 입력만을 취하고, gain을 이 입력에 적용하고, 결과로 생성된 데이터를 첫번째 출력의 버퍼에 작성합니다.</p>
 
 <pre class="brush: js">process(inputList, outputList, parameters) {
-  const input = inputList[0];
-  const output = outputList[0];
-  const gain = parameters.gain;
+  const input = inputList[0];
+  const output = outputList[0];
+  const gain = parameters.gain;
 
-  for (let channelNum = 0; channelNum &lt; input.length; channel++) {
-    const inputChannel = input[channel];
-    const outputChannel = output[channel];
+  for (let channelNum = 0; channelNum &lt; input.length; channel++) {
+    const inputChannel = input[channel];
+    const outputChannel = output[channel];
 
     // 만약 gain.length가 1이면, 이것은 k-rate 파라미터이므로,
     // 첫번째 엔트리를 모든 프레임에 적용합니다.
     // 그렇지 않으면, 각 엔트리를 해당하는 프레임에 적용합니다.
 
-    if (gain.length === 1) {
-      for (let i = 0; i &lt; inputChannel.length; i++) {
-        outputChannel[i] = inputChannel[i] * gain[0];
-      }
-    } else {
-      for (let i = 0; i &lt; inputChannel.length; i++) {
-        outputChannel[i] = inputChannel[i] * gain[i];
-      }
-    }
-  }
+    if (gain.length === 1) {
+      for (let i = 0; i &lt; inputChannel.length; i++) {
+        outputChannel[i] = inputChannel[i] * gain[0];
+      }
+    } else {
+      for (let i = 0; i &lt; inputChannel.length; i++) {
+        outputChannel[i] = inputChannel[i] * gain[i];
+      }
+    }
+  }
 
-  return true;
+  return true;
 }
 </pre>
 

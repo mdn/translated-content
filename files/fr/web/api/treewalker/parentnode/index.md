@@ -15,7 +15,9 @@ La méthode **`TreeWalker.parentNode()`** déplace le {{domxref("Node")}} couran
 
 ## Syntaxe
 
-    node = treeWalker.parentNode();
+```js
+node = treeWalker.parentNode();
+```
 
 ## Exemple
 

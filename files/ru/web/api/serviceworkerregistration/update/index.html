@@ -5,10 +5,10 @@ translation_of: Web/API/ServiceWorkerRegistration/update
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p>Метод <code><strong>update</strong></code> интерфейса {{domxref("ServiceWorkerRegistration")}} предназначен для обновления service worker. Он обращается по URL service worker-a, и если новый worker побайтно не совпадает с текущим, инсталлирует новую версию. Обращение за новой версией worker обходит любые кеши браузера, если предыдущее обращение произошло более 24 часов назад..</p>
+<p>Метод <code><strong>update</strong></code> интерфейса {{domxref("ServiceWorkerRegistration")}} предназначен для обновления service worker. Он обращается по URL service worker-a, и если новый worker побайтно не совпадает с текущим, инсталлирует новую версию. Обращение за новой версией worker обходит любые кеши браузера, если предыдущее обращение произошло более 24 часов назад..</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Эта возможность доступна в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Примечание</strong>: Эта возможность доступна в <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Синтаксис</h2>
@@ -25,7 +25,7 @@ translation_of: Web/API/ServiceWorkerRegistration/update
 
 <h2 id="Пример">Пример</h2>
 
-<p>В следующем простом примере регистрируется service worker, а затем добавляется обработчик события клика по кнопке, так что вы можете явно обновить service worker по необходимости:</p>
+<p>В следующем простом примере регистрируется service worker, а затем добавляется обработчик события клика по кнопке, так что вы можете явно обновить service worker по необходимости:</p>
 
 <pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
@@ -50,9 +50,9 @@ translation_of: Web/API/ServiceWorkerRegistration/update
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers базовый пример кода</a> </li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Готов ли ServiceWorker?</a></li>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Использование Service Workers</a></li>
+ <li><a href="https://github.com/mdn/sw-test">Service workers базовый пример кода</a> </li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Готов ли ServiceWorker?</a></li>
  <li>{{jsxref("Промисы")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Использование web workers</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Использование web workers</a></li>
 </ul>

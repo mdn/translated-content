@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>Number.isFinite()</code></strong>  determina se o valor passado é um número finito.</p>
+<p>O método <strong><code>Number.isFinite()</code></strong>  determina se o valor passado é um número finito.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -47,7 +47,7 @@ Number.isFinite(null);      // false, teria sido true com a função
 <h2 id="Polyfill">Polyfill</h2>
 
 <pre class="brush: js">Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' &amp;&amp; isFinite(value);
+    return typeof value === 'number' &amp;&amp; isFinite(value);
 }
 </pre>
 
@@ -68,7 +68,7 @@ Number.isFinite(null);      // false, teria sido true com a função
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

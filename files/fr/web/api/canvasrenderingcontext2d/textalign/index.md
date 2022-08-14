@@ -9,7 +9,9 @@ La propriété **`CanvasRenderingContext2D.textAlign`** de l'API Canvas 2D indiq
 
 ## Syntaxe
 
-    ctx.textAlign = "left" || "right" || "center" || "start" || "end";
+```js
+ctx.textAlign = "left" || "right" || "center" || "start" || "end";
+```
 
 ### Options
 

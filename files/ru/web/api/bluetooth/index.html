@@ -15,10 +15,10 @@ translation_of: Web/API/Bluetooth
 <h2 id="Интерфейс">Интерфейс</h2>
 
 <pre class="syntaxbox">interface Bluetooth : EventTarget {
-  [SecureContext] Promise&lt;boolean&gt; getAvailability();
-  [SecureContext] attribute EventHandler onavailabilitychanged;
-  [SecureContext, SameObject] readonly attribute BluetoothDevice? referringDevice;
-  [SecureContext] Promise&lt;BluetoothDevice&gt; requestDevice(optional RequestDeviceOptions options);
+  [SecureContext] Promise&lt;boolean&gt; getAvailability();
+  [SecureContext] attribute EventHandler onavailabilitychanged;
+  [SecureContext, SameObject] readonly attribute BluetoothDevice? referringDevice;
+  [SecureContext] Promise&lt;BluetoothDevice&gt; requestDevice(optional RequestDeviceOptions options);
 };
 Bluetooth implements BluetoothDeviceEventHandlers;
 Bluetooth implements CharacteristicEventHandlers;
@@ -44,7 +44,7 @@ Bluetooth implements ServiceEventHandlers;</pre>
 
 <dl>
  <dt>{{domxref("Bluetooth.getAvailability()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}}, который возвращает {{jsxref("Boolean")}}, указывая, поддерживает ли браузер Bluetooth. Некоторые браузеры дают возможность управлять возвращаемым значением этого метода.</dd>
+ <dd>Возвращает {{jsxref("Promise")}}, который возвращает {{jsxref("Boolean")}}, указывая, поддерживает ли браузер Bluetooth. Некоторые браузеры дают возможность управлять возвращаемым значением этого метода.</dd>
  <dt>{{domxref("Bluetooth.requestDevice()")}}</dt>
  <dd>Возвращает {{jsxref("Promise")}} объекту {{domxref("BluetoothDevice")}} с переданными параметрами.</dd>
 </dl>

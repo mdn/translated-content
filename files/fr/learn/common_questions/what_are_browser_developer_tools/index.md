@@ -107,31 +107,35 @@ La console JavaScript est un outil formidable pour déboguer du code JavaScript 
 
 Pour voir comment la console se comporte, essayez de saisir les fragments de code suivants dans la console (un par un), en appuyant sur Entrée après chaque :
 
-1.  ```js
-    alert('Coucou !');
-    ```
-2.  ```js
-    document.querySelector('html').style.backgroundColor = 'purple';
-    ```
-3.  ```js
-    var monImage = document.createElement('img');
-    monImage.setAttribute('src','https://c1.staticflickr.com/1/572/20463320350_58483f6bed.jpg');
-    document.querySelector('h1').appendChild(monImage);
-    ```
+```js
+alert('Coucou !');
+```
+
+```js
+document.querySelector('html').style.backgroundColor = 'purple';
+```
+
+```js
+var monImage = document.createElement('img');
+monImage.setAttribute('src','https://c1.staticflickr.com/1/572/20463320350_58483f6bed.jpg');
+document.querySelector('h1').appendChild(monImage);
+```
 
 Maintenant, essayez de saisir les fragments de code suivants, qui sont incorrects, pour voir ce qui se passe :
 
-1.  ```js
-    alert('coucou !);
-    ```
-2.  ```js
-    document.cheeseSelector('html').style.backgroundColor = 'purple';
-    ```
-3.  ```js
-    var monImage = document.createElement('img');
-    maBanane.setAttribute('src','https://c1.staticflickr.com/1/572/20463320350_58483f6bed.jpg');
-    document.querySelector('h1').appendChild(monImage);
-    ```
+```js example-bad
+alert('coucou !);
+```
+
+```js example-bad
+document.cheeseSelector('html').style.backgroundColor = 'purple';
+```
+
+```js example-bad
+var monImage = document.createElement('img');
+maBanane.setAttribute('src','https://c1.staticflickr.com/1/572/20463320350_58483f6bed.jpg');
+document.querySelector('h1').appendChild(monImage);
+```
 
 Vous devriez voir différentes erreurs fournies par le navigateur. À première vue, ces erreurs semblent un peu étranges et complexes mais elles devraient être simples à résoudre !
 

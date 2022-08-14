@@ -8,7 +8,7 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 
 <p>O objetivo desta lição é desenvolver sua compreensão para alguns dos conceitos mais fundamentais de CSS - cascata, especificidade e herança - que controlam como o CSS é aplicado ao HTML e como os conflitos são resolvidos.</p>
 
-<p>Embora esta lição possa parecer menos pouco relevante e mais acadêmico do que algumas outras partes do curso, a compreensão desses itens (cascata, especificidade e herança), poupará muito tempo no futuro! Recomendamos que você trabalhe nesta seção com cuidado e verifique se entendeu os conceitos antes de prosseguir.</p>
+<p>Embora esta lição possa parecer menos pouco relevante e mais acadêmico do que algumas outras partes do curso, a compreensão desses itens (cascata, especificidade e herança), poupará muito tempo no futuro! Recomendamos que você trabalhe nesta seção com cuidado e verifique se entendeu os conceitos antes de prosseguir.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -25,13 +25,13 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 
 <h2 id="Regras_de_Conflitos">Regras de Conflitos</h2>
 
-<p>CSS - <strong>Cascading Style Sheets</strong>, <em>cascata</em> (a primeira palavra) é muito importante compreender - a maneira como a<em> cascata </em>se comporta é a chave para entender <strong>CSS</strong>.</p>
+<p>CSS - <strong>Cascading Style Sheets</strong>, <em>cascata</em> (a primeira palavra) é muito importante compreender - a maneira como a<em> cascata </em>se comporta é a chave para entender <strong>CSS</strong>.</p>
 
-<p>Em algum momento, você estará trabalhando em um projeto e descobrirá que o CSS que você pensou que deveria ser aplicado a um elemento não está funcionando. Normalmente, o problema é que você criou duas regras que poderiam se aplicar ao mesmo elemento. A cascata e o conceito intimamente relacionado com especificidade que são mecanismos que controlam qual regra se aplica quando existe tal conflito. A regra que define o estilo do seu elemento pode não ser a esperada, portanto, você precisa entender como esses mecanismos funcionam.</p>
+<p>Em algum momento, você estará trabalhando em um projeto e descobrirá que o CSS que você pensou que deveria ser aplicado a um elemento não está funcionando. Normalmente, o problema é que você criou duas regras que poderiam se aplicar ao mesmo elemento. A cascata e o conceito intimamente relacionado com especificidade que são mecanismos que controlam qual regra se aplica quando existe tal conflito. A regra que define o estilo do seu elemento pode não ser a esperada, portanto, você precisa entender como esses mecanismos funcionam.</p>
 
 <p>Também é importante aqui é o conceito de <strong>herança</strong>, o que significa que algumas propriedades CSS por padrão herdam os valores definidos no elemento pai do elemento atual, e outras não. Isso também pode causar algum comportamento que você não esperava.</p>
 
-<p>Vamos começar dando uma olhada rápida nas nestes itens com os quais estamos lidando (cascata, especificidade e herança), então vamos ver como elas interagem entre si e com o CSS. Isso pode parecer um conjunto de conceitos difíceis de entender, mas a medida que você pratica mais a escrita de CSS, o funcionamento vai se tornando mais óbvio para você.</p>
+<p>Vamos começar dando uma olhada rápida nas nestes itens com os quais estamos lidando (cascata, especificidade e herança), então vamos ver como elas interagem entre si e com o CSS. Isso pode parecer um conjunto de conceitos difíceis de entender, mas a medida que você pratica mais a escrita de CSS, o funcionamento vai se tornando mais óbvio para você.</p>
 
 <h3 id="The_cascade_-_A_Cascata">The cascade - A Cascata</h3>
 
@@ -39,11 +39,11 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 
 <p>No exemplo abaixo, temos duas regras que podem ser aplicadas ao h1. O h1 acaba tendo a cor azul - essas regras têm um seletor idêntico e, portanto, carregam a mesma especificidade, portanto, o último na ordem de origem vence.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 400)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 400)}} </p>
 
 <h3 id="Specificity_-_Especificidade">Specificity - Especificidade</h3>
 
-<p>A especificidade é como o navegador decide/verifica qual regra se aplica se várias regras têm seletores diferentes, que poderiam ser aplicadas ao mesmo elemento. É basicamente uma medição de qual das regras/caracteristicas específica será a mais indicada/específica de um seletor:</p>
+<p>A especificidade é como o navegador decide/verifica qual regra se aplica se várias regras têm seletores diferentes, que poderiam ser aplicadas ao mesmo elemento. É basicamente uma medição de qual das regras/caracteristicas específica será a mais indicada/específica de um seletor:</p>
 
 <ul>
  <li>
@@ -52,11 +52,11 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
  <li>Um seletor de classe é mais específico - ele selecionará apenas os elementos em uma página que possuem um valor de atributo de classe específico - portanto, obterá uma pontuação mais alta.</li>
 </ul>
 
-<p>Hora do exemplo! Abaixo, temos novamente duas regras que podem ser aplicadas ao h1. O h1 abaixo acaba sendo colorido em vermelho - o seletor de classe dá a sua regra uma especificidade mais alta e, portanto, será aplicada mesmo que a regra com o seletor de elemento apareça mais abaixo na ordem de origem.</p>
+<p>Hora do exemplo! Abaixo, temos novamente duas regras que podem ser aplicadas ao h1. O h1 abaixo acaba sendo colorido em vermelho - o seletor de classe dá a sua regra uma especificidade mais alta e, portanto, será aplicada mesmo que a regra com o seletor de elemento apareça mais abaixo na ordem de origem.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 500)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 500)}} </p>
 
-<p>Explicaremos a pontuação de especificidade mais tarde.</p>
+<p>Explicaremos a pontuação de especificidade mais tarde.</p>
 
 <h3 id="Inheritance_-_Herança">Inheritance - Herança</h3>
 
@@ -64,17 +64,17 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 
 <p>Por exemplo, se você definir uma cor e uma família de fontes em um elemento, todos os elementos dentro dele também serão estilizados com essa cor e fonte, a menos que você tenha aplicado cores e valores de fonte diferentes diretamente a eles.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 550)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 550)}} </p>
 
 <p>Algumas propriedades não herdam - por exemplo, se você definir um {{cssxref ("width")}} de 50% em um elemento, todos os seus descendentes não terão uma largura de 50% da largura de seus pais. Se fosse esse o caso, CSS seria muito frustrante de usar!</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Nas páginas de referência de propriedade CSS do MDN, você pode encontrar uma caixa de informações técnicas, geralmente na parte inferior da seção de especificações, que lista uma série de pontos de dados sobre essa propriedade, incluindo se ela é herdada ou não. Veja o <a href="/en-US/docs/Web/CSS/color#Specifications">color property Specifications section</a> (seção de especificações de propriedade de cor) , por exemplo.</p>
+<p><strong>Note</strong>: Nas páginas de referência de propriedade CSS do MDN, você pode encontrar uma caixa de informações técnicas, geralmente na parte inferior da seção de especificações, que lista uma série de pontos de dados sobre essa propriedade, incluindo se ela é herdada ou não. Veja o <a href="/en-US/docs/Web/CSS/color#Specifications">color property Specifications section</a> (seção de especificações de propriedade de cor) , por exemplo.</p>
 </div>
 
 <h2 id="Entendendo_como_os_conceitos_funcionam_juntos">Entendendo como os conceitos funcionam juntos</h2>
 
-<p>Esses três conceitos juntos controlam que caractersticas CSS se aplicam a qual elemento; nas seções a seguir, veremos como eles funcionam juntos. Às vezes pode parecer um pouco complicado, mas você começará a entende-los conforme for ficando mais experiente com CSS, e você sempre poderá consultar os detalhes se esquecer! Mesmo os desenvolvedores experientes não se lembram de todos os detalhes.</p>
+<p>Esses três conceitos juntos controlam que caractersticas CSS se aplicam a qual elemento; nas seções a seguir, veremos como eles funcionam juntos. Às vezes pode parecer um pouco complicado, mas você começará a entende-los conforme for ficando mais experiente com CSS, e você sempre poderá consultar os detalhes se esquecer! Mesmo os desenvolvedores experientes não se lembram de todos os detalhes.</p>
 
 <p>O vídeo a seguir mostra como você pode usar o Firefox DevTools para inspecionar a cascata, a especificidade de uma página e muito mais:</p>
 
@@ -86,7 +86,7 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 
 <p>A cor foi aplicada aos filhos diretos, mas também aos filhos indiretos - os filhos imediatos &lt;li&gt; são aqueles dentro da primeira lista aninhada. Em seguida, adicionamos uma classe especial à segunda lista aninhada e aplicamos uma cor diferente a ela. Isso então é herdado por meio de seus filhos.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 700)}} </p>
 
 <p>Coisas como larguras (conforme mencionado acima), margens, preenchimento e bordas não são herdadas. Se uma borda fosse herdada pelos filhos de nossa lista, cada lista e cada item da lista ganhariam uma borda - provavelmente não é um efeito que desejaríamos!</p>
 
@@ -98,18 +98,18 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 
 <p>{{cssxref("inherit")}}</p>
 
-<p>    Define o valor da propriedade aplicada a um elemento selecionado para ser o mesmo de          seu elemento pai. Efetivamente, isso "ativa a herança".</p>
+<p>    Define o valor da propriedade aplicada a um elemento selecionado para ser o mesmo de          seu elemento pai. Efetivamente, isso "ativa a herança".</p>
 
 <p>{{cssxref("initial")}}</p>
 
 <dl>
- <dd>Define o valor da propriedade aplicada a um elemento selecionado para o valor inicial dessa propriedade.</dd>
+ <dd>Define o valor da propriedade aplicada a um elemento selecionado para o valor inicial dessa propriedade.</dd>
  <dt>{{cssxref("unset")}}</dt>
  <dd>Restaura a propriedade com seu valor natural, o que significa que se a propriedade é herdada naturalmente, ela age como herdada, caso contrário, ela age como inicial.</dd>
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Temos um comando mais recente, {{cssxref("revert")}}, mas nem todos os navegadores suportam</p>
+<p><strong>Note</strong>: Temos um comando mais recente, {{cssxref("revert")}}, mas nem todos os navegadores suportam</p>
 </div>
 
 <div class="blockIndicator note">
@@ -126,7 +126,7 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
  <li>Qual dos links mudará de cor se você definir uma nova cor para o elemento &lt;a&gt; - por exemplo, um {color: red; }?</li>
 </ol>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}} </p>
 
 <h3 id="Redefinindo_todos_os_Valores_de_Propriedade">Redefinindo todos os Valores de Propriedade</h3>
 
@@ -134,7 +134,7 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 
 <p>No exemplo abaixo, temos duas aspas em bloco. O primeiro tem um estilo aplicado ao próprio elemento blockquote, o segundo tem uma classe aplicada ao <em>blockquote</em> que define o valor de <strong>all (todos)</strong> como <strong>unset (indefinido)</strong>.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 700)}} </p>
 
 <p>Tente definir o valor de todos para alguns dos outros valores disponíveis e observe qual é a diferença.</p>
 
@@ -164,9 +164,9 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
  <br>
  Algo a se notar aqui é que, embora estejamos pensando em seletores e nas regras que são aplicadas ao que eles selecionam, não é a regra inteira que é substituída, apenas as propriedades que são iguais.</p>
 
-<p>Esse comportamento ajuda a evitar a repetição em seu CSS. Uma prática comum é definir estilos genéricos para os elementos básicos e, em seguida, criar classes para aqueles que são diferentes. Por exemplo, abaixo definimos estilos genéricos para títulos de nível 2 e, em seguida, criamos algumas classes que alteram apenas algumas das propriedades e valores. Os valores definidos inicialmente são aplicados a todos os títulos, depois os valores mais específicos são aplicados aos títulos com as classes.</p>
+<p>Esse comportamento ajuda a evitar a repetição em seu CSS. Uma prática comum é definir estilos genéricos para os elementos básicos e, em seguida, criar classes para aqueles que são diferentes. Por exemplo, abaixo definimos estilos genéricos para títulos de nível 2 e, em seguida, criamos algumas classes que alteram apenas algumas das propriedades e valores. Os valores definidos inicialmente são aplicados a todos os títulos, depois os valores mais específicos são aplicados aos títulos com as classes.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 700)}} </p>
 
 <p>Vamos agora dar uma olhada em como o navegador calculará a especificidade. Já sabemos que um seletor de elemento tem baixa especificidade e pode ser substituído por uma classe. Essencialmente, um valor em pontos é concedido a diferentes tipos de seletores, e somar esses pontos dá a você o peso daquele seletor específico, que pode então ser avaliado em relação a outras combinações potenciais.</p>
 
@@ -180,10 +180,10 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: O Seletor universal (<code>*</code>), combinadores (<code>+</code>, <code>&gt;</code>, <code>~</code>, ' '), e pseudo-classe de negação (<code>:not</code>) não tem efeito de especificidade.</p>
+<p><strong>Note</strong>: O Seletor universal (<code>*</code>), combinadores (<code>+</code>, <code>&gt;</code>, <code>~</code>, ' '), e pseudo-classe de negação (<code>:not</code>) não tem efeito de especificidade.</p>
 </div>
 
-<p>A tabela a seguir mostra alguns exemplos isolados para colocá-lo no clima. Experimente passar por eles e certifique-se de entender por que eles têm a especificidade que demos a eles. Ainda não cobrimos os seletores em detalhes, mas você pode encontrar detalhes de cada seletor em MDN  <a href="/en-US/docs/Web/CSS/CSS_Selectors">selectors reference</a>.</p>
+<p>A tabela a seguir mostra alguns exemplos isolados para colocá-lo no clima. Experimente passar por eles e certifique-se de entender por que eles têm a especificidade que demos a eles. Ainda não cobrimos os seletores em detalhes, mas você pode encontrar detalhes de cada seletor em MDN  <a href="/en-US/docs/Web/CSS/CSS_Selectors">selectors reference</a>.</p>
 
 <table class="standard-table">
  <thead>
@@ -242,7 +242,7 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 
 <p>Antes de prosseguirmos, vejamos um exemplo em ação.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 700)}} </p>
 
 <p>Então, o que está acontecendo aqui? Em primeiro lugar, estamos interessados ​​apenas nas primeiras sete regras deste exemplo e, como você notará, incluímos seus valores de especificidade em um comentário antes de cada uma.</p>
 
@@ -256,7 +256,7 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Este foi apenas um exemplo aproximado para facilitar a compreensão. Na realidade, cada tipo de seletor tem seu próprio nível de especificidade que não pode ser substituído por seletores com um nível de especificidade inferior. Por exemplo, um milhão de seletores de <strong>classe</strong> combinados não seriam capazes de sobrescrever as regras de um seletor de <strong>id</strong>.</p>
+<p><strong>Note</strong>: Este foi apenas um exemplo aproximado para facilitar a compreensão. Na realidade, cada tipo de seletor tem seu próprio nível de especificidade que não pode ser substituído por seletores com um nível de especificidade inferior. Por exemplo, um milhão de seletores de <strong>classe</strong> combinados não seriam capazes de sobrescrever as regras de um seletor de <strong>id</strong>.</p>
 
 <p>Uma forma mais precisa de avaliar a especificidade seria pontuar os níveis de especificidade individualmente começando do mais alto e passando para o mais baixo quando necessário. Somente quando há um empate entre as pontuações do seletor dentro de um nível de especificidade, você precisa avaliar o próximo nível abaixo; caso contrário, você pode desconsiderar os seletores de nível de especificidade inferior, pois eles nunca podem substituir os níveis de especificidade mais altos.</p>
 </div>
@@ -267,14 +267,14 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
  <br>
  Dê uma olhada neste exemplo onde temos dois parágrafos, um dos quais tem um ID.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/cascade/important.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/cascade/important.html", '100%', 700)}} </p>
 
 <p>Vamos examinar isso para ver o que está acontecendo - tente remover algumas das propriedades para ver o que acontece e se você tiver dificuldade de entender:</p>
 
 <ol>
  <li>Você verá que os valores da terceira regra {{cssxref ("color")}} e {{cssxref ("padding")}} foram aplicados, mas o {{cssxref ("background-color")}} não foram?. Por quê? Na verdade, todos os três devem ser aplicados, porque as regras posteriores na ordem de origem geralmente substituem as regras anteriores.</li>
  <li>No entanto, as regras acima vencem, porque os seletores de classe têm uma especificidade mais alta do que os seletores de elemento.</li>
- <li>Ambos elementos tem {{htmlattrxref("class")}} de <code>better (melhor)</code>, mas o segundo tem um <strong>id</strong> {{htmlattrxref("id")}} que é mais forte. Como os IDs têm uma especificidade ainda maior do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe - os seletores de ID são muito específicos no que se destinam), a cor de fundo vermelha e A borda preta de 1 pixel deve ser aplicada ao segundo elemento, com o primeiro elemento recebendo a cor de fundo cinza, e sem borda, conforme especificado pela classe.</li>
+ <li>Ambos elementos tem {{htmlattrxref("class")}} de <code>better (melhor)</code>, mas o segundo tem um <strong>id</strong> {{htmlattrxref("id")}} que é mais forte. Como os IDs têm uma especificidade ainda maior do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe - os seletores de ID são muito específicos no que se destinam), a cor de fundo vermelha e A borda preta de 1 pixel deve ser aplicada ao segundo elemento, com o primeiro elemento recebendo a cor de fundo cinza, e sem borda, conforme especificado pela classe.</li>
  <li>O segundo elemento obtém a cor de fundo vermelha, mas sem borda. Por quê? Por causa da declaração! Important na segunda regra - incluindo isso depois de border: none significa que essa declaração vai superar o valor de border na regra anterior, embora o ID tenha uma especificidade mais alta.</li>
 </ol>
 
@@ -303,7 +303,7 @@ original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
   <p>Declarações importantes nas folhas de estilo do usuário</p>
 
   <p>Faz sentido que as folhas de estilo dos desenvolvedores da web substituam as folhas de estilo do usuário, para que o design possa ser mantido conforme pretendido, mas às vezes os usuários têm bons motivos para substituir os estilos do desenvolvedor da web, conforme mencionado acima - isso pode ser feito usando! Important em suas regras.<br>
-    </p>
+    </p>
  </li>
 </ol>
 

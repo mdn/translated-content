@@ -46,7 +46,7 @@ Cette méthode renvoie&nbsp;:
 - un nombre positif si elle se situe après
 - 0 si les deux chaînes sont équivalentes selon cet ordre.
 
-> **Attention :** Il ne faut pas tester uniquement les valeurs -1 et 1. 
+> **Attention :** Il ne faut pas tester uniquement les valeurs -1 et 1.
 >
 > En effet les valeurs entières utilisées peuvent varier en fonction des navigateurs et de leurs versions. En effet, la spécification indique uniquement le signe de la valeur à fournir. Par exemple, certains navigateurs pourront renvoyer -2 ou 2 (voire d'autres valeurs).
 

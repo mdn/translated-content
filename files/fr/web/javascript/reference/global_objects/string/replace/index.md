@@ -22,7 +22,9 @@ La chaîne de caractère originale reste inchangée.
 
 ## Syntaxe
 
-    chn.replace(regexp|souschn, nouvSouschn|fonction)
+```js
+chn.replace(regexp|souschn, nouvSouschn|fonction)
+```
 
 ### Paramètres
 

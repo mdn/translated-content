@@ -11,7 +11,7 @@ translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
  <br>
  XSLTは <code>xsl:stylesheet</code> 要素の子である <code>xsl:param</code> 要素を提供します。{{domxref('XSLTProcessor')}} は、これらのパラメータと対話する3つのJavaScriptメソッドを提供します：{{domxref('XSLTProcessor.setParameter()')}}、{{domxref('XSLTProcessor.getParameter()')}} および {{domxref('XSLTProcessor.removeParameter()')}} です。それらはすべて、最初の引数として <code>xsl:param</code> の名前空間URIをとります (通常 param はデフォルトの名前空間に入るため、<code>null</code> を渡すだけで十分です)。<code>xsl:param</code> のローカル名は2番目の引数です。setParameterには3番目の引数、つまりパラメータが設定される値が必要です。</p>
 
-<p><small><strong>Figure 7 : パラメータ</strong></small></p>
+<p><small><strong>Figure 7 : パラメータ</strong></small></p>
 
 <pre class="brush: js">/* XSLT:
 

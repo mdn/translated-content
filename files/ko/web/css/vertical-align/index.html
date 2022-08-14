@@ -37,7 +37,7 @@ vertical-align: unset;
 <p>vertical-align 속성은 두 컨텍스트에서 사용될 수 있습니다:</p>
 
 <ul>
- <li>엘리먼트의 box를 이것이 포함된 line box 내부에서 수직 정렬하고자 할 때. 예를 들어서, {{HTMLElement("img")}} 엘리먼트를 텍스트 엘리먼트의 라인 속에서 정렬할 때 쓰일 수 있습니다:</li>
+ <li>엘리먼트의 box를 이것이 포함된 line box 내부에서 수직 정렬하고자 할 때. 예를 들어서, {{HTMLElement("img")}} 엘리먼트를 텍스트 엘리먼트의 라인 속에서 정렬할 때 쓰일 수 있습니다:</li>
 </ul>
 
 <div id="vertical-align-inline">
@@ -120,7 +120,7 @@ td {
 
 <p>{{EmbedLiveSample("vertical-align-table", 1200, 230)}}</p>
 
-<p><code>vertical-align은 오로지 inline과 table-cell 엘리먼트에만 적용된다는 것에 주의하세요: 이 속성을</code> <a href="/en-US/docs/Web/HTML/Block-level_elements">block level 엘리먼트</a>에 사용할 수 없습니다.</p>
+<p><code>vertical-align은 오로지 inline과 table-cell 엘리먼트에만 적용된다는 것에 주의하세요: 이 속성을</code> <a href="/en-US/docs/Web/HTML/Block-level_elements">block level 엘리먼트</a>에 사용할 수 없습니다.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -134,9 +134,9 @@ td {
 
 <dl>
  <dt><code>baseline</code></dt>
- <dd>부모의 baseline에 맞추어 해당 엘리먼트의 baseline 을 정렬합니다.  몇몇 <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a>의 베이스라인은 예를들면{{HTMLElement("textarea")}}은 HTML 명세에 정의되어 있지 않으므로, 이 키워드는 브라우저마다 다른 결과를 보여줍니다.</dd>
+ <dd>부모의 baseline에 맞추어 해당 엘리먼트의 baseline 을 정렬합니다.  몇몇 <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a>의 베이스라인은 예를들면{{HTMLElement("textarea")}}은 HTML 명세에 정의되어 있지 않으므로, 이 키워드는 브라우저마다 다른 결과를 보여줍니다.</dd>
  <dt><code>sub</code></dt>
- <dd>해당 엘리먼트의 baseline을 부모의 subscript-baseline으로 정렬합니다.</dd>
+ <dd>해당 엘리먼트의 baseline을 부모의 subscript-baseline으로 정렬합니다.</dd>
  <dt><code>super</code></dt>
  <dd>해당 엘리먼트의 baseline을 부모의 superscript-baseline으로 정렬합니다.</dd>
  <dt><code>text-top</code></dt>
@@ -148,7 +148,7 @@ td {
  <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>해당 엘리먼트의 baseline을 부모의 baseline에서 주어진 길이만큼 위로 정렬합니다.</dd>
  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>&lt;length&gt; value와 마찬가지로 해당 엘리먼트의 baseline을 부모의 baseline에서 {{Cssxref("line-height")}}의 퍼센트로 주어진 퍼센트만큼 위로 정렬합니다.</dd>
+ <dd>&lt;length&gt; value와 마찬가지로 해당 엘리먼트의 baseline을 부모의 baseline에서 {{Cssxref("line-height")}}의 퍼센트로 주어진 퍼센트만큼 위로 정렬합니다.</dd>
 </dl>
 
 <p>(&lt;length&gt; 와 &lt;percentage&gt;에 대해서 음수 값이 허용됩니다.)</p>
@@ -167,12 +167,12 @@ td {
 <h3 id="Values_(table_cells에서)">Values (table cells에서)</h3>
 
 <dl>
- <dt><code>baseline</code> (<code>sub</code>, <code>super</code>, <code>text-top</code>, <code>text-bottom</code>, <code>&lt;length&gt;</code>, <code>&lt;percentage&gt;</code>)</dt>
- <dd> 셀의 baseline을 같은 행의 다른 cell들의 baseline과 정렬합니다. </dd>
+ <dt><code>baseline</code> (<code>sub</code>, <code>super</code>, <code>text-top</code>, <code>text-bottom</code>, <code>&lt;length&gt;</code>, <code>&lt;percentage&gt;</code>)</dt>
+ <dd> 셀의 baseline을 같은 행의 다른 cell들의 baseline과 정렬합니다. </dd>
  <dt><code>top</code></dt>
  <dd>셀의 top padding edge를 행의 top으로 정렬합니다.</dd>
  <dt><code>middle</code></dt>
- <dd>셀의  padding box의 중심을 행에서 중앙 정렬합니다.</dd>
+ <dd>셀의  padding box의 중심을 행에서 중앙 정렬합니다.</dd>
  <dt><code>bottom</code></dt>
  <dd>셀의 bottom padding edge를 행의 bottom으로 정렬합니다.</dd>
 </dl>
@@ -204,34 +204,9 @@ img.middle { vertical-align: middle; }
 
 <p>{{EmbedLiveSample("Example")}}</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'vertical-align')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Defines <code>vertical-align</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Add the {{cssxref("&lt;length&gt;")}} value and allows it to be applied to element with a {{cssxref("display")}} type of <code>table-cell</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#vertical-align', 'vertical-align')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

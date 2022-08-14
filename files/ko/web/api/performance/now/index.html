@@ -39,12 +39,12 @@ console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
 
 <p>Unlike other timing data available to JavaScript (for example <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), the timestamps returned by <code>performance.now()</code> are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.</p>
 
-<p>Also unlike <code>Date.now()</code>, the values returned by <code>performance.now() </code>always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, <code>performance.timing.navigationStart + performance.now() </code>will be approximately equal to<code> Date.now()</code>.</p>
+<p>Also unlike <code>Date.now()</code>, the values returned by <code>performance.now() </code>always increase at a constant rate, independent of the system clock (which might be adjusted manually or skewed by software like NTP). Otherwise, <code>performance.timing.navigationStart + performance.now() </code>will be approximately equal to<code> Date.now()</code>.</p>
 
 <h2 id="Reduced_time_precision">Reduced time precision</h2>
 
 <p>To offer protection against timing attacks and fingerprinting, the precision of <code>performance.now()</code> might get rounded depending on browser settings.<br>
- In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by default and defaults to 1ms.</p>
+ In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by default and defaults to 1ms.</p>
 
 <pre class="brush: js">// reduced time precision (1ms) in Firefox 60
 performance.now();
@@ -66,29 +66,9 @@ performance.now();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2', '#dom-performance-now', 'performance.now()')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-   <td>Stricter definitions of interfaces and types.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time', '#dom-performance-now', 'performance.now()')}}</td>
-   <td>{{Spec2('Highres Time')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.Performance.now")}}</p>
 

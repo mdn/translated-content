@@ -15,7 +15,9 @@ C'est une référence à l'objet qui a envoyé l'événement. C'est une proprié
 
 ## Syntaxe
 
-    laCible = event.target
+```js
+laCible = event.target
+```
 
 ## Exemple
 

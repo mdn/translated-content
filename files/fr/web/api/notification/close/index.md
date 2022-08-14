@@ -20,7 +20,9 @@ La méthode `close()` de l'interface {{domxref("Notification")}} est utilisée p
 
 ## Syntaxe
 
-    Notification.close()
+```js
+Notification.close()
+```
 
 ### Paramètres
 

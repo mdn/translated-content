@@ -8,7 +8,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/ideo_and_audio_content
 
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
-<p class="summary">이제 우리는 웹페이지에 간단한 이미지를 추가하는 것에 익숙해졌으므로, 다음 단계는 HTML 문서에 비디오와 오디오 플레이어를 추가하는 것이다! 이 기사에서는 <span class="seoSummary">{{htmlelement("video")}}</span>와 <span class="seoSummary">{{htmlelement("audio")}}</span>  요소들로 그렇게 하는 것에 대해 살펴보고, 동영상에 캡션/자막을 추가하는 방법을 살펴봄으로써 마무리하겠다.</p>
+<p class="summary">이제 우리는 웹페이지에 간단한 이미지를 추가하는 것에 익숙해졌으므로, 다음 단계는 HTML 문서에 비디오와 오디오 플레이어를 추가하는 것이다! 이 기사에서는 <span class="seoSummary">{{htmlelement("video")}}</span>와 <span class="seoSummary">{{htmlelement("audio")}}</span>  요소들로 그렇게 하는 것에 대해 살펴보고, 동영상에 캡션/자막을 추가하는 방법을 살펴봄으로써 마무리하겠다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -49,7 +49,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/ideo_and_audio_content
  <dt>{{htmlattrxref("src","video")}}</dt>
  <dd>In the same way as for the {{htmlelement("img")}} element, the <code>src</code> (source) attribute contains a path to the video you want to embed. It works in exactly the same way.</dd>
  <dt>{{htmlattrxref("controls","video")}}</dt>
- <dd>Users must be able to control video and audio playback (it's especially critical for people who have <a href="https://en.wikipedia.org/wiki/Epilepsy#Epidemiology">epilepsy</a>.) You must either use the <code>controls</code> attribute to include the browser's own control interface, or build your interface using the appropriate <a href="/en-US/docs/Web/API/HTMLMediaElement">JavaScript API</a>. At a minimum, the interface must include a way to start and stop the media, and to adjust the volume.</dd>
+ <dd>Users must be able to control video and audio playback (it's especially critical for people who have <a href="https://en.wikipedia.org/wiki/Epilepsy#Epidemiology">epilepsy</a>.) You must either use the <code>controls</code> attribute to include the browser's own control interface, or build your interface using the appropriate <a href="/en-US/docs/Web/API/HTMLMediaElement">JavaScript API</a>. At a minimum, the interface must include a way to start and stop the media, and to adjust the volume.</dd>
  <dt>The paragraph inside the <code>&lt;video&gt;</code> tags</dt>
  <dd>This is called <strong>fallback content</strong> — this will be displayed if the browser accessing the page doesn't support the <code>&lt;video&gt;</code> element, allowing us to provide a fallback for older browsers. This can be anything you like; in this case, we've provided a direct link to the video file, so the user can at least access it some way regardless of what browser they are using.</dd>
 </dl>

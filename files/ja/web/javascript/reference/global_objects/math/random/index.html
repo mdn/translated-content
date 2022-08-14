@@ -53,8 +53,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 <p>この例は指定した値の間のランダムな整数を返します。返値は <code>min</code> 以上 (<code>min</code> が整数でない場合、 <code>min</code> より大きい次の整数以上)、 <code>max</code> 未満です。</p>
 
 <pre class="brush: js notranslate">function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 </pre>
@@ -68,8 +68,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 <p>上記の <code>getRandomInt()</code> 関数が返す乱数の範囲は <code>min</code> を含みますが、<code>max</code> は除外されます。 <code>min</code> も <code>max</code> も範囲に含まれた乱数を生成したいなら、以下の <code>getRandomIntInclusive()</code> 関数を使うといいでしょう。</p>
 
 <pre class="brush: js notranslate">function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+  min = Math.ceil(min);
+  max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
 }</pre>
 

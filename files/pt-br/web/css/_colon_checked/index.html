@@ -12,7 +12,7 @@ translation_of: 'Web/CSS/:checked'
 ---
 <div>{{CSSRef}}</div>
 
-<p>A <a href="/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classe </a><strong><code>:checked</code></strong> de um seletor CSS representa um elemento <strong>radio </strong>(<code>&lt;input type="radio"&gt;</code>), <strong>checkbox </strong>(<code>&lt;input type="checkbox"&gt;</code>) ou <strong>option</strong> ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }})  que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe <strong>:checked</strong> não se aplica a esse elemento, mas vai para um elemento relevante.</p>
+<p>A <a href="/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classe </a><strong><code>:checked</code></strong> de um seletor CSS representa um elemento <strong>radio </strong>(<code>&lt;input type="radio"&gt;</code>), <strong>checkbox </strong>(<code>&lt;input type="checkbox"&gt;</code>) ou <strong>option</strong> ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }})  que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe <strong>:checked</strong> não se aplica a esse elemento, mas vai para um elemento relevante.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -147,7 +147,7 @@ option:checked {
 
 <p>Você também pode usar a pseudo-classe <code>:checked </code>aplicada a um radioboxe escondido afim de construir, por exemplo, uma <strong>galeria de imagem onde as imagens apenas sejam exibidas no tamanho cheio com o clique do mouse em visualizar. </strong>Veja <a href="/@api/deki/files/6268/=css-checked-gallery.zip">essa demonstração</a> como uma dica.</p>
 
-<div class="note"><strong>Nota: </strong>Para um efeito análogo, mas baseada na pseudo-classe <a class="internal" href="/pt-BR/docs/Web/CSS/%3Ahover" title="CSS/:hover"><code>:hover</code></a><code> </code>sem radioboxes escondidos, veja <a href="/@api/deki/files/6247/=css-gallery.zip">essa demostração</a>, tomadas a partir de uma página <a class="internal" href="/pt-BR/docs/Web/CSS/%3Ahover" title="CSS/:hover"><code>:hover</code></a><code>.</code></div>
+<div class="note"><strong>Nota: </strong>Para um efeito análogo, mas baseada na pseudo-classe <a class="internal" href="/pt-BR/docs/Web/CSS/%3Ahover" title="CSS/:hover"><code>:hover</code></a><code> </code>sem radioboxes escondidos, veja <a href="/@api/deki/files/6247/=css-gallery.zip">essa demostração</a>, tomadas a partir de uma página <a class="internal" href="/pt-BR/docs/Web/CSS/%3Ahover" title="CSS/:hover"><code>:hover</code></a><code>.</code></div>
 
 <h2 id="Specifications" name="Specifications">Especificações</h2>
 
@@ -183,57 +183,11 @@ option:checked {
   <tr>
    <td>{{ SpecName('CSS3 Selectors', '#checked', ':checked') }}</td>
    <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Define a pseudo-classe, mas não <span class="short_text" id="result_box" lang="pt"><span class="hps">associação</span> <span class="hps">semântica</span></span></td>
+   <td>Define a pseudo-classe, mas não <span class="short_text" id="result_box" lang="pt"><span class="hps">associação</span> <span class="hps">semântica</span></span></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade de navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop(1.0) }}</td>
-   <td>9.0</td>
-   <td>9.0</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>2.1</td>
-   <td>{{ CompatGeckoMobile(1.0) }}</td>
-   <td>9.0</td>
-   <td>9.5</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.checked")}}

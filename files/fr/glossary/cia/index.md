@@ -13,4 +13,4 @@ DIC (Disponibilité, Intégrité, Confidentialité) (également appelé triade D
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Sécurité_de_l'information#Critères_de_sensibilité", "DIC")}} sur Wikipédia
+- [DIC](https://fr.wikipedia.org/wiki/S%C3%A9curit%C3%A9_de_l'information#Crit%C3%A8res_de_sensibilit%C3%A9) sur Wikipédia

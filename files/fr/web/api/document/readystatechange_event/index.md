@@ -23,7 +23,7 @@ L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyS
 - Default Action
   - : None.
 
-## propriétés
+## Propriétés
 
 | Property                              | Type                                 | Description                                            |
 | ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
@@ -32,7 +32,7 @@ L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyS
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-## exemple
+## Exemple
 
 ```js
 document.readyState === "complete";

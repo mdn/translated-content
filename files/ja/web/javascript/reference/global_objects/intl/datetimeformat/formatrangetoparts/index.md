@@ -17,9 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 
 **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** メソッドは、 {{jsxref("Intl.DateTimeFormat")}} フォーマッターで生成される期間の各部品を表すロケール特有のトークンを提供します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html",
-	"taller")}}
-
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html", "taller")}}
 
 ## 構文
 

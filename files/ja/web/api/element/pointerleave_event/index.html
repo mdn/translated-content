@@ -1,0 +1,91 @@
+---
+title: GlobalEventHandlers.onpointerleave
+slug: Web/API/Element/pointerleave_event
+tags:
+  - API
+  - GlobalEventHandlers
+  - HTML DOM
+  - Pointer Events
+  - PointerEvent
+  - Property
+  - Reference
+  - onpointerleave
+translation_of: Web/API/GlobalEventHandlers/onpointerleave
+original_slug: Web/API/GlobalEventHandlers/onpointerleave
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p><span class="seoSummary">{{domxref("HTMLElement/pointerleave_event", "pointerleave")}} イベントの{{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}で、ポインター (マウスカーソル、指先など) がヒットテスト領域を出ると (例えば、カーソルが {{domxref("Element")}} や {{domxref("Window")}} のコンテンツ領域を出ると)、{{domxref("Node")}} に配信されます。このイベントは <a href="/ja/docs/Web/API/Pointer_events">Pointer Events API</a> の一部です。</span></p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox notranslate"><var>EventTarget</var>.onpointerleave = <var>leaveHandler</var>;
+
+var <var>leaveHandler</var> = <var>EventTarget</var>.onpointerleave;</pre>
+
+<h3 id="Value" name="Value">値</h3>
+
+<dl>
+ <dt><code><var>leaveHandler</var></code></dt>
+ <dd>{{domxref("EventListener")}} で、ターゲットに送信された {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} イベントを処理するために呼び出されます。</dd>
+</dl>
+
+<h2 id="Example" name="Example">例</h2>
+
+<p>この例では、<code>onpointerleave</code> を使用して要素の <code>pointerleave</code> イベントハンドラーを設定する2つの方法を示します。</p>
+
+<pre class="brush: js notranslate">&lt;html&gt;
+&lt;script&gt;
+function leaveHandler(ev) {
+ // pointerleave イベントの処理
+}
+function init() {
+ var el=document.getElementById("target1");
+ el.onpointerleave = leaveHandler;
+}
+&lt;/script&gt;
+&lt;body onload="init();"&gt;
+&lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
+&lt;div id="target2" onpointerleave="leaveHandler(event)"&gt; Touch me ... &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>詳細については、<a href="/ja/docs/Web/API/Pointer_events/Using_Pointer_Events">Pointer Events の使用</a>を参照してください。</p>
+
+<h2 id="Specification" name="Specification">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerleave', 'onpointerleave')}}</td>
+   <td>{{Spec2('Pointer Events 2')}}</td>
+   <td>不安定版</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerleave', 'onpointerleave')}}</td>
+   <td>{{Spec2('Pointer Events')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.GlobalEventHandlers.onpointerleave")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Pointer_events">ポインターイベント</a></li>
+ <li><a href="/ja/docs/Web/API/Pointer_events/Using_Pointer_Events">ポインターイベントの使用</a></li>
+ <li><code><a href="/ja/docs/Web/API/Document/pointerleave_event">Document: pointerleave</a></code> イベント</li>
+ <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerleave_event">HTMLElement: pointerleave</a></code> イベント</li>
+</ul>

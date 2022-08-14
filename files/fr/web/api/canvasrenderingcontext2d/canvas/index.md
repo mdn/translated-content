@@ -15,7 +15,9 @@ La propriété **`CanvasRenderingContext2D.canvas`** est une référence à l'ob
 
 ## Syntaxe
 
-    ctx.canvas;
+```js
+ctx.canvas;
+```
 
 ## Exemples
 

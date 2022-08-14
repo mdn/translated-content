@@ -16,15 +16,15 @@ original_slug: Web/JavaScript/Introduction_to_Object-Oriented_JavaScript
 ---
 <div>{{jsSidebar("Introductory")}}</div>
 
-<p>深入淺出物件導向，JavaScript 支援強大、彈性的物件導向程式設計 ({{Glossary("OOP")}})。本篇文章會先介紹物件導向程式設計，然後複習 JavaScript 物件模型，最後示範在 JavaScript 物件導向程式設計的概念。本篇文章並不會介紹 <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Classes">在 ECMAScript 6 的物件導向程式設計</a> 的新語法。</p>
+<p>深入淺出物件導向，JavaScript 支援強大、彈性的物件導向程式設計 ({{Glossary("OOP")}})。本篇文章會先介紹物件導向程式設計，然後複習 JavaScript 物件模型，最後示範在 JavaScript 物件導向程式設計的概念。本篇文章並不會介紹 <a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Classes">在 ECMAScript 6 的物件導向程式設計</a> 的新語法。</p>
 
 <h2 id="複習_JavaScript">複習 JavaScript</h2>
 
-<p>若您對 JavaScript 變數、型態、函數及作用範圍的觀念並不是很有信心，您可以閱讀 <a href="/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript">重新膫解 JavaScript</a> 中相關的主題。您也可以參考 <a href="/zh-TW/docs/Web/JavaScript/Guide">JavaScript 指南</a>。</p>
+<p>若您對 JavaScript 變數、型態、函數及作用範圍的觀念並不是很有信心，您可以閱讀 <a href="/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript">重新膫解 JavaScript</a> 中相關的主題。您也可以參考 <a href="/zh-TW/docs/Web/JavaScript/Guide">JavaScript 指南</a>。</p>
 
 <h2 id="物件導向程式設計">物件導向程式設計</h2>
 
-<p>物件導向程式設計 (Object-oriented programming, OOP) 是一種使用 {{glossary("abstraction")}} 概念表達現實世界的程式設計方式。物件導向程式設計運用數個先前所建立的技術所組成，包含模組化 ({{glossary("modularity")}})、多型 ({{glossary("polymorphism")}}) 以及封裝 ({{glossary("encapsulation")}}) 。直到今天許多主流的程式語言 (如 Java, JavaScript, C#, C++, Python, PHP, Ruby 與 Objective-C) 也都支援物件導向程式設計。</p>
+<p>物件導向程式設計 (Object-oriented programming, OOP) 是一種使用 {{glossary("abstraction")}} 概念表達現實世界的程式設計方式。物件導向程式設計運用數個先前所建立的技術所組成，包含模組化 ({{glossary("modularity")}})、多型 ({{glossary("polymorphism")}}) 以及封裝 ({{glossary("encapsulation")}}) 。直到今天許多主流的程式語言 (如 Java, JavaScript, C#, C++, Python, PHP, Ruby 與 Objective-C) 也都支援物件導向程式設計。</p>
 
 <p>物件導向程式設計是將軟體想像成由一群物件交互合作所組成，而非以往以函數 (Function) 或簡單的指令集交互合作所組成。在物件導向的架構中，每個物件都具有接收訊息，處理資料以及發送訊息給其他物件的能力。每個物件都可視為獨一無二的個體，他們扮演不同的角色並有不同的能力及責任。</p>
 
@@ -42,7 +42,7 @@ original_slug: Web/JavaScript/Introduction_to_Object-Oriented_JavaScript
  <dt>{{Glossary("Object")}}</dt>
  <dd>類別 (Class) 的實際案例。</dd>
  <dt>{{Glossary("Property")}}</dt>
- <dd>物件 (Object) 的特徵，例如：顏色。</dd>
+ <dd>物件 (Object) 的特徵，例如：顏色。</dd>
  <dt>{{Glossary("Method")}}</dt>
  <dd>物件 (Object) 的功能，例如：行走。它是與類別相關的子程序或函數。</dd>
  <dt>{{Glossary("Constructor")}}</dt>
@@ -54,25 +54,25 @@ original_slug: Web/JavaScript/Introduction_to_Object-Oriented_JavaScript
  <dt>{{Glossary("Abstraction")}}</dt>
  <dd>結合物件的複雜繼承關係、方法與屬性來充分反映現實的模型。</dd>
  <dt>{{Glossary("Polymorphism")}}</dt>
- <dd>Poly 指的是 "多" 而 Morphism 指的是 "<em>型</em>"。是指不同的類別可以定義相同的方法或屬性。</dd>
+ <dd>Poly 指的是 "多" 而 Morphism 指的是 "<em>型</em>"。是指不同的類別可以定義相同的方法或屬性。</dd>
 </dl>
 
-<p>要了解物件導向程式設計更廣泛的說明，請參考維基百科的  {{interwiki("wikipedia", "Object-oriented programming")}}。</p>
+<p>要了解物件導向程式設計更廣泛的說明，請參考維基百科的 <a href="https://zh.wikipedia.org/wiki/Object-oriented_programming">Object-oriented programming</a>。</p>
 
 <h2 id="以雛型為基礎_Prototype-based_的程式設計">以雛型為基礎 (Prototype-based) 的程式設計</h2>
 
-<p>以雛型為基礎的程式設計是一種不使用類別的物件導向程式設計模式，但它是第一個透過修改 (或者擴充) 既有的 <em>prototype</em> 來達到類別的功能並可重複使用 (等同在以類別為基礎的程式語言中的繼承)。 又稱作無類別 (Classless)、雛型導向 (Prototype-oriented) 或以實例為基的程式語言 (Instance-based programming)。</p>
+<p>以雛型為基礎的程式設計是一種不使用類別的物件導向程式設計模式，但它是第一個透過修改 (或者擴充) 既有的 <em>prototype</em> 來達到類別的功能並可重複使用 (等同在以類別為基礎的程式語言中的繼承)。 又稱作無類別 (Classless)、雛型導向 (Prototype-oriented) 或以實例為基的程式語言 (Instance-based programming)。</p>
 
-<p>最早 (最典型) 以雛型為基礎的程式語言的典範是由 David Ungar 與 Randall Smith 所開發的 {{interwiki("wikipedia", "Self (programming language)", "Self")}}。近年來無類別 (Class-less) 的程式設計風格越來越流行，並且被 JavaScript, Cecil, NewtonScript, Io, MOO, REBOL, Kevo, Squeak (在使用 Viewer 框架來處理 Morphic 元件時)，還有許多其他程式語言所採用。<a href="#cite-2"><sup>2</sup></a></p>
+<p>最早 (最典型) 以雛型為基礎的程式語言的典範是由 David Ungar 與 Randall Smith 所開發的 <a href="https://zh.wikipedia.org/wiki/Self_(programming_language)">Self</a>。近年來無類別 (Class-less) 的程式設計風格越來越流行，並且被 JavaScript, Cecil, NewtonScript, Io, MOO, REBOL, Kevo, Squeak (在使用 Viewer 框架來處理 Morphic 元件時)，還有許多其他程式語言所採用。<a href="#cite-2"><sup>2</sup></a></p>
 
 <h2 id="JavaScript_物件導向程式設計">JavaScript 物件導向程式設計</h2>
 
 <h3 id="命名空間">命名空間</h3>
 
-<p>命名空間是一個可讓開發人員包裝所有功能到一個獨一無二、特定應用程式名稱的容器。在<strong> JavaScript 中命名空間其實是另一個包含方法、屬性及物件的物件。</strong></p>
+<p>命名空間是一個可讓開發人員包裝所有功能到一個獨一無二、特定應用程式名稱的容器。在<strong> JavaScript 中命名空間其實是另一個包含方法、屬性及物件的物件。</strong></p>
 
 <div class="note">
-<p>注意，在 JavaScript 中一般物件與命名空間並無語法上的差異，這於其他許多物件導向的語言並不相同，可能是初學 JavaScript 的程式設計師容易混淆的地方。</p>
+<p>注意，在 JavaScript 中一般物件與命名空間並無語法上的差異，這於其他許多物件導向的語言並不相同，可能是初學 JavaScript 的程式設計師容易混淆的地方。</p>
 </div>
 
 <p>在 JavaScript 建立一個命名空間背後的概念非常的簡單：建立一個全域的物件，然後將所有的變數、方法及函數設為該物件的屬性。使用命名空間可以減少應用程式中名稱衝突發生的機率，由於每個應用程式的物件皆會是應用程式定義的全域物件的屬性。</p>
@@ -82,7 +82,7 @@ original_slug: Web/JavaScript/Introduction_to_Object-Oriented_JavaScript
 <pre class="brush: js notranslate">// 全域命名空間
 var MYAPP = MYAPP || {};</pre>
 
-<p>在上述程式範例，我們會先檢查 <code>MYAPP</code> 是否已經定義過 (不論是定義在同一檔案或在其他檔案)。若已定義過，便會使用現有的 MYAPP 全域物件，否則會建一個稱作 <code>MYAPP</code> 的空物件來包裝方法、函數、變數及物件。</p>
+<p>在上述程式範例，我們會先檢查 <code>MYAPP</code> 是否已經定義過 (不論是定義在同一檔案或在其他檔案)。若已定義過，便會使用現有的 MYAPP 全域物件，否則會建一個稱作 <code>MYAPP</code> 的空物件來包裝方法、函數、變數及物件。</p>
 
 <p>我們也可以建立子命名空間 (要注意，全域物件必須已事先定義)：</p>
 
@@ -125,31 +125,31 @@ MYAPP.event.addListener("yourel", "type", callback);</pre>
 
 <h3 id="標準內建物件">標準內建物件</h3>
 
-<p> JavaScript 的核心內建了許多物件，例如有 {{jsxref("Math")}}, {{jsxref("Object")}}, {{jsxref("Array")}} 以及 {{jsxref("String")}}。以下範例將示範如何使用 Math 物件中的 <code>random()</code> <code>方法</code>來取得一個隨機的數字。</p>
+<p> JavaScript 的核心內建了許多物件，例如有 {{jsxref("Math")}}, {{jsxref("Object")}}, {{jsxref("Array")}} 以及 {{jsxref("String")}}。以下範例將示範如何使用 Math 物件中的 <code>random()</code> <code>方法</code>來取得一個隨機的數字。</p>
 
 <pre class="brush: js notranslate">console.log(Math.random());
 </pre>
 
-<div class="note"><strong>注意：</strong>這個例子及之後的例子會假設全域已經有定義名稱為 {{domxref("console.log()")}} 的函數。<code>console.log()</code> 函數並不算是 JavaScript 的一部份，但是有許多瀏覽器會實作這個功能來協助除錯使用。</div>
+<div class="note"><strong>注意：</strong>這個例子及之後的例子會假設全域已經有定義名稱為 {{domxref("console.log()")}} 的函數。<code>console.log()</code> 函數並不算是 JavaScript 的一部份，但是有許多瀏覽器會實作這個功能來協助除錯使用。</div>
 
-<p>請參考 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects" title="zh-TW/docs/Web/JavaScript/Reference/Global_Objects">JavaScript 參考: 標準內建物件</a> 來取得在 JavaScript 中所有核心物件的清單。</p>
+<p>請參考 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects" title="zh-TW/docs/Web/JavaScript/Reference/Global_Objects">JavaScript 參考: 標準內建物件</a> 來取得在 JavaScript 中所有核心物件的清單。</p>
 
-<p>每個在 JavaScript 中的物件均為物件 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <code>的</code>實例 (Instance)，因此會繼承其所有的屬性與方法。</p>
+<p>每個在 JavaScript 中的物件均為物件 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <code>的</code>實例 (Instance)，因此會繼承其所有的屬性與方法。</p>
 
 <h3 id="自訂物件">自訂物件</h3>
 
 <h4 id="類別_Class">類別 (Class)</h4>
 
-<p>JavaScript 是以雛形為基礎的程式語言，並沒有像在 C++ 或 Java 中看以到的 <code>class</code> 敘述句，這有時會讓習慣使用有 <code>class</code> 敘述句的程式設計師混淆。JavaScript 使用函數來作為類別 (Class) 的建構子 (Constructor)，要定義一個類別 (Class) 如同定義一個函數 (Function)一樣簡單，以下例子中我們使用空的建構子來定義了一個新的 Person 類別。</p>
+<p>JavaScript 是以雛形為基礎的程式語言，並沒有像在 C++ 或 Java 中看以到的 <code>class</code> 敘述句，這有時會讓習慣使用有 <code>class</code> 敘述句的程式設計師混淆。JavaScript 使用函數來作為類別 (Class) 的建構子 (Constructor)，要定義一個類別 (Class) 如同定義一個函數 (Function)一樣簡單，以下例子中我們使用空的建構子來定義了一個新的 Person 類別。</p>
 
 <pre class="brush: js notranslate">var Person = function () {};
 </pre>
 
 <h4 id="物件_Object_-_類別的實例_Instance">物件 (Object) - 類別的實例 (Instance)</h4>
 
-<p>要建立物件 <code>obj</code> 的新實例，我們可以使用 <code>new obj</code> 敘述句，並將結果 (型態為 <code>obj</code>) 指派 (Assign) 到一個變數方便之後存取。</p>
+<p>要建立物件 <code>obj</code> 的新實例，我們可以使用 <code>new obj</code> 敘述句，並將結果 (型態為 <code>obj</code>) 指派 (Assign) 到一個變數方便之後存取。</p>
 
-<p>在先前範例中我們定義了一個名稱為 <code>Person</code> 的類別 (Class)。在以下的例子我們會建立兩個實例 (<code>person1</code> 與 <code>person2</code>)。</p>
+<p>在先前範例中我們定義了一個名稱為 <code>Person</code> 的類別 (Class)。在以下的例子我們會建立兩個實例 (<code>person1</code> 與 <code>person2</code>)。</p>
 
 <pre class="brush: js notranslate">var person1 = new Person();
 var person2 = new Person();
@@ -179,9 +179,9 @@ var person2 = new Person(); // 會記錄 "instance created"
 
 <p>屬性即為在類別中的變數，每個物件的實例都會有同樣的屬性。屬性會在類別的建構子 (函數) 中設定，所以屬性在每個實例產生時才會產生。</p>
 
-<p>關鍵字 <code>this </code>可以引用目前的物件，讓您使用在該類別中的其他屬性。存取 (讀寫或寫入) 一個在類別之外的屬性可以用語法：<code>InstanceName.Property</code>，如同在 C++, Java 以及其他語言。 (在類別內會使用語法 <code>this.Property</code> 來取得或設定屬性的數值。)</p>
+<p>關鍵字 <code>this </code>可以引用目前的物件，讓您使用在該類別中的其他屬性。存取 (讀寫或寫入) 一個在類別之外的屬性可以用語法：<code>InstanceName.Property</code>，如同在 C++, Java 以及其他語言。 (在類別內會使用語法 <code>this.Property</code> 來取得或設定屬性的數值。)</p>
 
-<p>在以下例子中，我們會在實例化時定義 <code>Person</code> 類別的 <code>firstName</code> 屬性：</p>
+<p>在以下例子中，我們會在實例化時定義 <code>Person</code> 類別的 <code>firstName</code> 屬性：</p>
 
 <pre class="brush: js notranslate">var Person = function (firstName) {
   this.firstName = firstName;
@@ -198,9 +198,9 @@ console.log('person2 is ' + person2.firstName); // 會記錄 "person2 is Bob"
 
 <h4 id="方法_Method">方法 (Method)</h4>
 
-<p>方法即為函數 (也如同函數般定義)，但是依照屬性的邏輯來運作，呼叫一個方法如同存取一個屬性，但您需要在函數名稱後加上 <code>()</code> ，並有可能會有參數。要定義一個方法，只需將函數指定 (Assign) 給類別的 <code>prototype</code> 屬性中一個已命名的屬性，接著，您便可用剛指定的屬性名稱來呼叫該物件的方法。</p>
+<p>方法即為函數 (也如同函數般定義)，但是依照屬性的邏輯來運作，呼叫一個方法如同存取一個屬性，但您需要在函數名稱後加上 <code>()</code> ，並有可能會有參數。要定義一個方法，只需將函數指定 (Assign) 給類別的 <code>prototype</code> 屬性中一個已命名的屬性，接著，您便可用剛指定的屬性名稱來呼叫該物件的方法。</p>
 
-<p>以下範例中，我們為 <code>Person</code>  類別定義了方法 <code>sayHello()</code> 並使用。</p>
+<p>以下範例中，我們為 <code>Person</code>  類別定義了方法 <code>sayHello()</code> 並使用。</p>
 
 <pre class="brush: js notranslate">var Person = function (firstName) {
   this.firstName = firstName;
@@ -218,7 +218,7 @@ person1.sayHello(); // 會記錄 "Hello, I'm Alice"
 person2.sayHello(); // 會記錄 "Hello, I'm Bob"
 </pre>
 
-<p>在 JavaScript 中，方法其實是一般的函數物件 (Function object) 連結到一個物件的屬性，這意謂著您可以在  "物件之外" 呼叫方法。請看以下範例程式碼：</p>
+<p>在 JavaScript 中，方法其實是一般的函數物件 (Function object) 連結到一個物件的屬性，這意謂著您可以在  "物件之外" 呼叫方法。請看以下範例程式碼：</p>
 
 <pre class="brush: js notranslate">var Person = function (firstName) {
   this.firstName = firstName;
@@ -251,19 +251,19 @@ console.log(helloFunction === Person.prototype.sayHello);
 // 會記錄 "Hello, I'm Alice"
 helloFunction.call(person1);</pre>
 
-<p>如範例中所示，我們讓所有的參考均指向 <code>sayHello</code> 函數 — 一個在 <code>person1、一個在 Person.prototype、另一個在 helloFunction</code> 變數 — 這些均參考<em>相同的函數</em>。在呼叫的過程中 <code>this</code> 的值會根據我們如何呼叫來決定，最常見的地方是：我們取得函數的物件屬性所在，在表示法中呼叫 <code>this</code> — <code>person1.sayHello()</code>— 會設定 <code>this</code> 為我們取得函數的地方 (<code>person1</code>)，這也是 <code>person1.sayHello() 顯示的名稱為 </code>"Alice" 以及 <code>person2.sayHello() 顯示的</code>名稱為 "Bob" 的原因。但如果我們以其他的方式來呼叫，那麼 <code>this</code> 結果將截然不同：在變數中呼叫 <code>this</code> — <code>helloFunction()</code>— 會設定 <code>this</code> 為所在的全域物件 (在瀏覽器即為 <code>window</code>)。由於物件 (可能) 並沒有 <code>firstName</code> 屬性，因此會得到 "Hello, I'm undefined" 這樣的結果 (在 Loose 模式才有這樣的結果，若在 <a href="/zh-TW/docs/Web/JavaScript/Reference/Strict_mode" title="/en/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a> 則會不同 [會出現錯誤]，為了避免混淆，此處將不會再詳述)。 或者我們可以像最後一個例子使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a> (或 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a>) 來明確的設定 <code>this。</code></p>
+<p>如範例中所示，我們讓所有的參考均指向 <code>sayHello</code> 函數 — 一個在 <code>person1、一個在 Person.prototype、另一個在 helloFunction</code> 變數 — 這些均參考<em>相同的函數</em>。在呼叫的過程中 <code>this</code> 的值會根據我們如何呼叫來決定，最常見的地方是：我們取得函數的物件屬性所在，在表示法中呼叫 <code>this</code> — <code>person1.sayHello()</code>— 會設定 <code>this</code> 為我們取得函數的地方 (<code>person1</code>)，這也是 <code>person1.sayHello() 顯示的名稱為 </code>"Alice" 以及 <code>person2.sayHello() 顯示的</code>名稱為 "Bob" 的原因。但如果我們以其他的方式來呼叫，那麼 <code>this</code> 結果將截然不同：在變數中呼叫 <code>this</code> — <code>helloFunction()</code>— 會設定 <code>this</code> 為所在的全域物件 (在瀏覽器即為 <code>window</code>)。由於物件 (可能) 並沒有 <code>firstName</code> 屬性，因此會得到 "Hello, I'm undefined" 這樣的結果 (在 Loose 模式才有這樣的結果，若在 <a href="/zh-TW/docs/Web/JavaScript/Reference/Strict_mode" title="/en/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a> 則會不同 [會出現錯誤]，為了避免混淆，此處將不會再詳述)。 或者我們可以像最後一個例子使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a> (或 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a>) 來明確的設定 <code>this。</code></p>
 
-<div class="note"><strong>注意：</strong>請參考 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/call">call</a> 及 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply">apply</a> 來取得更多有關 <code>this</code> 的資訊</div>
+<div class="note"><strong>注意：</strong>請參考 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/call">call</a> 及 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply">apply</a> 來取得更多有關 <code>this</code> 的資訊</div>
 
 <h4 id="繼承">繼承</h4>
 
-<p>繼承是一種用一個或多個類別建立一個特殊版本類別的方式 (<em>JavaScript 僅支援單一繼承</em>)。這個特殊的類別通常稱做<em>子類別</em>，而其引用的類別則通常稱作<em>父類別</em>。在 JavaScript 您可以指定父類別的實例到子類別來做到這件事。在最近的瀏覽器中您也可以使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Classical_inheritance_with_Object.create" title="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/create#Classical_inheritance_with_Object.create">Object.create</a> 來實作繼承。</p>
+<p>繼承是一種用一個或多個類別建立一個特殊版本類別的方式 (<em>JavaScript 僅支援單一繼承</em>)。這個特殊的類別通常稱做<em>子類別</em>，而其引用的類別則通常稱作<em>父類別</em>。在 JavaScript 您可以指定父類別的實例到子類別來做到這件事。在最近的瀏覽器中您也可以使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Classical_inheritance_with_Object.create" title="/zh-TW/docs/JavaScript/Reference/Global_Objects/Object/create#Classical_inheritance_with_Object.create">Object.create</a> 來實作繼承。</p>
 
 <div class="note">
-<p><strong>注意：</strong>JavaScript 不會偵測子類別的 <code>prototype.constructor</code> (請參考 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a>)，所以我們必須手動處理。請參考在 Stackoverflow 的問題 "<a href="https://stackoverflow.com/questions/8453887/why-is-it-necessary-to-set-the-prototype-constructor">為什麼一定要設定 prototype 的建構子?</a>"。</p>
+<p><strong>注意：</strong>JavaScript 不會偵測子類別的 <code>prototype.constructor</code> (請參考 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a>)，所以我們必須手動處理。請參考在 Stackoverflow 的問題 "<a href="https://stackoverflow.com/questions/8453887/why-is-it-necessary-to-set-the-prototype-constructor">為什麼一定要設定 prototype 的建構子?</a>"。</p>
 </div>
 
-<p>於以下範例，我們會定義類別 <code>Student</code> 做為 <code>Person</code> 的子類別。然後我們會重新定義 <code>sayHello()</code> 方法然後加入 <code>sayGoodBye()</code> 方法。</p>
+<p>於以下範例，我們會定義類別 <code>Student</code> 做為 <code>Person</code> 的子類別。然後我們會重新定義 <code>sayHello()</code> 方法然後加入 <code>sayGoodBye()</code> 方法。</p>
 
 <pre class="brush: js notranslate">// 定義 Person 建構子
 var Person = function(firstName) {
@@ -322,7 +322,7 @@ console.log(student1 instanceof Person);  // true
 console.log(student1 instanceof Student); // true
 </pre>
 
-<p>於 <code>Student.prototype = Object.create(Person.prototype);</code> 一行：在舊版的 JavaScript 引擎沒有 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create" title="Object.create"><code>Object.create</code></a>，可以使用 "polyfill" (又稱 "shim"，請參考以下文章連結) 或使用函數來達到同樣的效果，如：</p>
+<p>於 <code>Student.prototype = Object.create(Person.prototype);</code> 一行：在舊版的 JavaScript 引擎沒有 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create" title="Object.create"><code>Object.create</code></a>，可以使用 "polyfill" (又稱 "shim"，請參考以下文章連結) 或使用函數來達到同樣的效果，如：</p>
 
 <pre class="brush: js notranslate">function createObject(proto) {
     function ctor() { }
@@ -334,9 +334,9 @@ console.log(student1 instanceof Student); // true
 Student.prototype = createObject(Person.prototype);
 </pre>
 
-<div class="note"><strong>注意：</strong> 請參考 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create" title="Object.create">Object.create</a> 來了解其功能與舊引擎使用的 shim。</div>
+<div class="note"><strong>注意：</strong> 請參考 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create" title="Object.create">Object.create</a> 來了解其功能與舊引擎使用的 shim。</div>
 
-<p>要在不管物件如何實例化的情況下確保 <code>this</code> 指向正確的地方並不簡單，儘管如此，這裡仍有一個簡單的習慣用法讓這件事變的較簡單。</p>
+<p>要在不管物件如何實例化的情況下確保 <code>this</code> 指向正確的地方並不簡單，儘管如此，這裡仍有一個簡單的習慣用法讓這件事變的較簡單。</p>
 
 <pre class="brush: js notranslate">var Person = function(firstName) {
   if (this instanceof Person) {
@@ -349,15 +349,15 @@ Student.prototype = createObject(Person.prototype);
 
 <h4 id="封裝">封裝</h4>
 
-<p>於上述例子中 <code>Student</code> 並不需要知道 <code>Person</code> 類別的 <code>walk()</code> 方法實作的方式，但仍可以使用該方法，除非我們想要更改該函數，否則 <code>Student</code> 類別並不需要明確的定義該函數。這樣的概念稱就叫作<strong>封裝 (Encapsulation)</strong>，透過將每個類別的資料與方法包裝成一個單位。</p>
+<p>於上述例子中 <code>Student</code> 並不需要知道 <code>Person</code> 類別的 <code>walk()</code> 方法實作的方式，但仍可以使用該方法，除非我們想要更改該函數，否則 <code>Student</code> 類別並不需要明確的定義該函數。這樣的概念稱就叫作<strong>封裝 (Encapsulation)</strong>，透過將每個類別的資料與方法包裝成一個單位。</p>
 
-<p>隱藏資訊在其他語言是常見的功能，通當會使用私有 (Private) 與保護 (Protected) 方法/屬性。既使如此，您仍可在 JavaScript 模擬類似的操作，這並不是物件導向程式設計必要的功能。<a href="#cite-3"><sup>3</sup></a></p>
+<p>隱藏資訊在其他語言是常見的功能，通當會使用私有 (Private) 與保護 (Protected) 方法/屬性。既使如此，您仍可在 JavaScript 模擬類似的操作，這並不是物件導向程式設計必要的功能。<a href="#cite-3"><sup>3</sup></a></p>
 
 <h4 id="抽象化">抽象化</h4>
 
 <p>抽象化是一個機制能讓您將工作問題的目前部份進行建立模型，不論是用繼承 (特殊化) 或是組合的方式。JavaScript 可以透過繼承達到特殊化 (Specialization)，並可讓類別實例成為其他物件的屬性來達到組合 (Composition)。</p>
 
-<p>JavaScript 的 Function 類別繼承 Object 類別 (這示範了模型的特殊化) 而 {{jsxref("Function.prototype")}} 屬性是 {{jsxref("Object")}} 的實例 (這示範了組合)。</p>
+<p>JavaScript 的 Function 類別繼承 Object 類別 (這示範了模型的特殊化) 而 {{jsxref("Function.prototype")}} 屬性是 {{jsxref("Object")}} 的實例 (這示範了組合)。</p>
 
 <pre class="brush: js notranslate">var foo = function () {};
 
@@ -369,7 +369,7 @@ console.log('foo.prototype is an Object: ' + (foo.prototype instanceof Object));
 
 <h4 id="Polymorphism" name="Polymorphism">多型</h4>
 
-<p>如同所有方法與屬性會定義在 prototype 之中，不同的類別可以定義相同名稱的方法，而這些方法的有效範圍其所在的類別之中，除非兩個類別之間有父子關係 (例如，其中一個類別是繼承另一個類別而來)。</p>
+<p>如同所有方法與屬性會定義在 prototype 之中，不同的類別可以定義相同名稱的方法，而這些方法的有效範圍其所在的類別之中，除非兩個類別之間有父子關係 (例如，其中一個類別是繼承另一個類別而來)。</p>
 
 <h2 id="注意">注意</h2>
 

@@ -5,34 +5,34 @@ translation_of: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p>Интерфейс {{domxref("RTCDataChannel")}} является функциональностью  <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> , который позволяет открыть канал между узлами соединения, по которому можно отправлять и получать произвольные данные. Эти  API намеренно сходны с  <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>, для использования единой программной модели.</p>
+<p>Интерфейс {{domxref("RTCDataChannel")}} является функциональностью  <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> , который позволяет открыть канал между узлами соединения, по которому можно отправлять и получать произвольные данные. Эти  API намеренно сходны с  <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a>, для использования единой программной модели.</p>
 
-<p>В этом примере мы откроем соединение {{domxref ("RTCDataChannel")}}, связывающее два элемента на одной странице. Хотя это явно надуманный сценарий, он полезен для демонстрации последовательности соединения двух узлов. Мы расскажем о механизме выполнения соединения, передачи и получения данных, но оставим немного информации о поиске и подключении к удалённому компьютеру для другого примера.</p>
+<p>В этом примере мы откроем соединение {{domxref ("RTCDataChannel")}}, связывающее два элемента на одной странице. Хотя это явно надуманный сценарий, он полезен для демонстрации последовательности соединения двух узлов. Мы расскажем о механизме выполнения соединения, передачи и получения данных, но оставим немного информации о поиске и подключении к удалённому компьютеру для другого примера.</p>
 
 <h2 id="Разметка_HTML">Разметка HTML</h2>
 
-<p>Сначала быстро посмотрим на  <a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html" rel="noopener">необходимую разметку HTML </a>. В ней нет ничего сложного. В начале мы определяем пару кнопок, создающих и закрывающих соединение:</p>
+<p>Сначала быстро посмотрим на  <a class="external" href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html" rel="noopener">необходимую разметку HTML </a>. В ней нет ничего сложного. В начале мы определяем пару кнопок, создающих и закрывающих соединение:</p>
 
 <pre class="brush: html">&lt;button id="connectButton" name="connectButton" class="buttonleft"&gt;
-  Connect
+  Connect
 &lt;/button&gt;
 &lt;button id="disconnectButton" name="disconnectButton" class="buttonright" disabled&gt;
-  Disconnect
+  Disconnect
 &lt;/button&gt;</pre>
 
-<p>Затем, определяем блок, который содержит элемент управления ввода текста, в который пользователь печатает текст своего сообщения, предназначенного для отправки, по нажатию кнопки. Элемент {{HTMLElement("div")}} будет представлять первый узел в канале передачи (сторона отправителя).</p>
+<p>Затем, определяем блок, который содержит элемент управления ввода текста, в который пользователь печатает текст своего сообщения, предназначенного для отправки, по нажатию кнопки. Элемент {{HTMLElement("div")}} будет представлять первый узел в канале передачи (сторона отправителя).</p>
 
-<pre class="brush: html">  &lt;div class="messagebox"&gt;
-    &lt;label for="message"&gt;Enter a message:
-      &lt;input type="text" name="message" id="message" placeholder="Message text"
-              inputmode="latin" size=60 maxlength=120 disabled&gt;
-    &lt;/label&gt;
-    &lt;button id="sendButton" name="sendButton" class="buttonright" disabled&gt;
+<pre class="brush: html">  &lt;div class="messagebox"&gt;
+    &lt;label for="message"&gt;Enter a message:
+      &lt;input type="text" name="message" id="message" placeholder="Message text"
+              inputmode="latin" size=60 maxlength=120 disabled&gt;
+    &lt;/label&gt;
+    &lt;button id="sendButton" name="sendButton" class="buttonright" disabled&gt;
       Send
     &lt;/button&gt;
-  &lt;/div&gt;</pre>
+  &lt;/div&gt;</pre>
 
-<p>И наконец, небольшой блок, в который будем помещать получаемое сообщение. Элемент {{HTMLElement("div")}} будет представлять второй узел соединения (сторона получателя).</p>
+<p>И наконец, небольшой блок, в который будем помещать получаемое сообщение. Элемент {{HTMLElement("div")}} будет представлять второй узел соединения (сторона получателя).</p>
 
 <pre class="brush: html">&lt;div class="messagebox" id="receivebox"&gt;
   &lt;p&gt;Messages received:&lt;/p&gt;
@@ -81,7 +81,7 @@ sendChannel.onopen = handleSendChannelStatusChange;
 sendChannel.onclose = handleSendChannelStatusChange;
 </pre>
 
-<p>The first step is to create the "local" end of the connection. This is the peer that will send out the connection request.  The next step is to create the {{domxref("RTCDataChannel")}} by calling {{domxref("RTCPeerConnection.createDataChannel()")}} and set up event listeners to monitor the channel so that we know when it's opened and closed (that is, when the channel is connected or disconnected within that peer connection).</p>
+<p>The first step is to create the "local" end of the connection. This is the peer that will send out the connection request.  The next step is to create the {{domxref("RTCDataChannel")}} by calling {{domxref("RTCPeerConnection.createDataChannel()")}} and set up event listeners to monitor the channel so that we know when it's opened and closed (that is, when the channel is connected or disconnected within that peer connection).</p>
 
 <p>It's important to keep in mind that each end of the channel has its own {{domxref("RTCDataChannel")}} object.</p>
 
@@ -269,4 +269,4 @@ remoteConnection.ondatachannel = receiveChannelCallback;</pre>
 
 <h2 id="Следующие_шаги">Следующие шаги</h2>
 
-<p><a href="https://mdn-samples.mozilla.org/s/webrtc-simple-datachannel">Попробуйте пример в деле</a>  и посмотрите на <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel">исходный код простого примера</a>, доступный на GitHub.</p>
+<p><a href="https://mdn-samples.mozilla.org/s/webrtc-simple-datachannel">Попробуйте пример в деле</a>  и посмотрите на <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel">исходный код простого примера</a>, доступный на GitHub.</p>

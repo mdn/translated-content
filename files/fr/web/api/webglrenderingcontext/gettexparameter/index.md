@@ -16,7 +16,9 @@ La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr-F
 
 ## Syntaxe
 
-    quelconque gl.getTexParameter(cible, nomp);
+```js
+quelconque gl.getTexParameter(cible, nomp);
+```
 
 ### Paramètres
 

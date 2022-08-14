@@ -14,119 +14,125 @@ L'exemple que nous allons voir va charger un fichier XML et lui appliquer une tr
 
 Document XML (example1.xml):
 
-      <?xml version="1.0"?>
-      <myNS:Article
-                             xmlns:myNS="http://devedge.netscape.com/2002/de">
-        <myNS:Title>Mon article</myNS:Title>
-        <myNS:Authors>
-          <myNS:Author company="Foopy Corp.">M. Foo</myNS:Author>
-          <myNS:Author>M. Bar</myNS:Author>
-        </myNS:Authors>
-        <myNS:Body>
-          En <em>Espagne</em>, les <strong>pluies</strong> se concentrent
-          principalement dans les plaines.
-        </myNS:Body>
-      </myNS:Article>
+```xml
+<?xml version="1.0"?>
+<myNS:Article
+                        xmlns:myNS="http://devedge.netscape.com/2002/de">
+  <myNS:Title>Mon article</myNS:Title>
+  <myNS:Authors>
+    <myNS:Author company="Foopy Corp.">M. Foo</myNS:Author>
+    <myNS:Author>M. Bar</myNS:Author>
+  </myNS:Authors>
+  <myNS:Body>
+    En <em>Espagne</em>, les <strong>pluies</strong> se concentrent
+    principalement dans les plaines.
+  </myNS:Body>
+</myNS:Article>
+```
 
 **Figure 5&nbsp;: feuille de style XSLT**
 
 feuille de style XSL (example1.xsl):
 
-      <?xml version="1.0"?>
-      <xsl:stylesheet version="1.0"
-                               xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                               xmlns:myNS="http://devedge.netscape.com/2002/de">
+```xml
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0"
+                          xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                          xmlns:myNS="http://devedge.netscape.com/2002/de">
 
-        <xsl:output method="html" />
+  <xsl:output method="html" />
 
-        <xsl:template match="/">
-          <html>
+  <xsl:template match="/">
+    <html>
 
-            <head>
+      <head>
 
-              <title>
-                <xsl:value-of select="/myNS:Article/myNS:Title"/>
-              </title>
+        <title>
+          <xsl:value-of select="/myNS:Article/myNS:Title"/>
+        </title>
 
-              <style type="text/css">
-                .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
-              </style>
+        <style type="text/css">
+          .myBox {margin:10px 155px 0 50px; border: 1px dotted #639ACE; padding:0 5px 0 5px;}
+        </style>
 
-            </head>
+      </head>
 
-            <body>
-              <p class="myBox">
-                <span class="title">
-                  <xsl:value-of select="/myNS:Article/myNS:Title"/>
-                </span> <br />
+      <body>
+        <p class="myBox">
+          <span class="title">
+            <xsl:value-of select="/myNS:Article/myNS:Title"/>
+          </span> <br />
 
-                Auteurs&nbsp;:   <br />
-                  <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
-                </p>
+          Auteurs&nbsp;:   <br />
+            <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
+          </p>
 
-              <p class="myBox">
-                <xsl:apply-templates select="//myNS:Body"/>
-              </p>
+        <p class="myBox">
+          <xsl:apply-templates select="//myNS:Body"/>
+        </p>
 
-            </body>
+      </body>
 
-          </html>
-        </xsl:template>
+    </html>
+  </xsl:template>
 
-        <xsl:template match="myNS:Author">
-           --   <xsl:value-of select="." />
+  <xsl:template match="myNS:Author">
+      --   <xsl:value-of select="." />
 
-          <xsl:if test="@company">
-          &nbsp;::   <strong>  <xsl:value-of select="@company" />  </strong>
-          </xsl:if>
+    <xsl:if test="@company">
+    &nbsp;::   <strong>  <xsl:value-of select="@company" />  </strong>
+    </xsl:if>
 
-          <br />
-        </xsl:template>
+    <br />
+  </xsl:template>
 
-        <xsl:template match="myNS:Body">
-          <xsl:copy>
-            <xsl:apply-templates select="@*|node()"/>
-          </xsl:copy>
-        </xsl:template>
+  <xsl:template match="myNS:Body">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
 
-        <xsl:template match="@*|node()">
-            <xsl:copy>
-              <xsl:apply-templates select="@*|node()"/>
-            </xsl:copy>
-        </xsl:template>
-      </xsl:stylesheet>
+  <xsl:template match="@*|node()">
+      <xsl:copy>
+        <xsl:apply-templates select="@*|node()"/>
+      </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
+```
 
 L'exemple charge en mémoire les deux fichiers .xsl (`xslStylesheet`) et .xml (`xmlDoc`) à l'aide de `XMLHTTPRequest` synchrone. Le fichier .xsl est alors importé (`xsltProcessor.importStylesheet(xslStylesheet)`) et la transformation exécutée (`xsltProcessor.transformToFragment(xmlDoc, document)`). Cela permet d'extraire des données après le chargement de la page, sans avoir à la rafraîchir.
 
 **Figure 6&nbsp;: Exemple voir l'exemple**
 
-    var xslStylesheet;
-    var xsltProcessor = new XSLTProcessor();
-    var myDOM;
+```js
+var xslStylesheet;
+var xsltProcessor = new XSLTProcessor();
+var myDOM;
 
-    var xmlDoc;
+var xmlDoc;
 
-    function Init(){
+function Init(){
 
-      // chargement du fichier xslt, example1.xsl
-      var myXMLHTTPRequest = new XMLHttpRequest();
-      myXMLHTTPRequest.open("GET", "example1.xsl", false);
-      myXMLHTTPRequest.send(null);
+  // chargement du fichier xslt, example1.xsl
+  var myXMLHTTPRequest = new XMLHttpRequest();
+  myXMLHTTPRequest.open("GET", "example1.xsl", false);
+  myXMLHTTPRequest.send(null);
 
-      xslStylesheet = myXMLHTTPRequest.responseXML;
-      xsltProcessor.importStylesheet(xslStylesheet);
+  xslStylesheet = myXMLHTTPRequest.responseXML;
+  xsltProcessor.importStylesheet(xslStylesheet);
 
-      // chargement du fichier xml, example1.xml
-      myXMLHTTPRequest = new XMLHttpRequest();
-      myXMLHTTPRequest.open("GET", "example1.xml", false);
-      myXMLHTTPRequest.send(null);
+  // chargement du fichier xml, example1.xml
+  myXMLHTTPRequest = new XMLHttpRequest();
+  myXMLHTTPRequest.open("GET", "example1.xml", false);
+  myXMLHTTPRequest.send(null);
 
-      xmlDoc = myXMLHTTPRequest.responseXML;
+  xmlDoc = myXMLHTTPRequest.responseXML;
 
-      var fragment = xsltProcessor.transformToFragment(xmlDoc, document);
+  var fragment = xsltProcessor.transformToFragment(xmlDoc, document);
 
-      document.getElementById("example").innerHTML = "";
+  document.getElementById("example").innerHTML = "";
 
-      myDOM = fragment;
-      document.getElementById("example").appendChild(fragment);
-    }
+  myDOM = fragment;
+  document.getElementById("example").appendChild(fragment);
+}
+```

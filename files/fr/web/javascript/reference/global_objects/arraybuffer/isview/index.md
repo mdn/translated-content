@@ -18,7 +18,9 @@ La méthode **`ArrayBuffer.isView()`** renvoie `true` si l'argument passé est u
 
 ## Syntaxe
 
-    ArrayBuffer.isView(arg)
+```js
+ArrayBuffer.isView(arg)
+```
 
 ### Paramètres
 

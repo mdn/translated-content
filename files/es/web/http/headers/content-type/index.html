@@ -5,11 +5,11 @@ translation_of: Web/HTTP/Headers/Content-Type
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>Content-Type</code></strong> es la propiedad de cabecera (header) usada para indicar el  {{Glossary("MIME type","media type")}} del recurso.</p>
+<p><strong><code>Content-Type</code></strong> es la propiedad de cabecera (header) usada para indicar el  {{Glossary("MIME type","media type")}} del recurso.</p>
 
 <p><code>Content-Type</code> dice al cliente que tipo de contenido será retornado. Browsers will do MIME sniffing in some cases and will not necessarily follow the value of this header; to prevent this behavior, the header {{HTTPHeader("X-Content-Type-Options")}} can be set to <code>nosniff</code>.</p>
 
-<p>En solicitudes (tales como {{HTTPMethod("POST")}} o {{HTTPMethod("PUT")}}), el cliente indica al servidor que tipo de dato es enviado actualmente.</p>
+<p>En solicitudes (tales como {{HTTPMethod("POST")}} o {{HTTPMethod("PUT")}}), el cliente indica al servidor que tipo de dato es enviado actualmente.</p>
 
 <table class="properties">
  <tbody>
@@ -38,7 +38,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <dl>
  <dt><code>media-type</code></dt>
- <dd>El <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> de el recurso o el dato.</dd>
+ <dd>El <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> de el recurso o el dato.</dd>
  <dt>charset</dt>
  <dd>La codificación de caracteres.</dd>
  <dt>boundary</dt>
@@ -49,7 +49,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <h3 id="Content-Type_in_HTML_forms"><code>Content-Type</code> in HTML forms</h3>
 
-<p>En una solicitud {{HTTPMethod("POST")}} , que resulta del envio de un formulario html, el <code>Content-Type</code> de la solicitud es especificado como un atributo <code>enctype</code> del elemento {{HTMLElement("form")}} .</p>
+<p>En una solicitud {{HTTPMethod("POST")}} , que resulta del envio de un formulario html, el <code>Content-Type</code> de la solicitud es especificado como un atributo <code>enctype</code> del elemento {{HTMLElement("form")}} .</p>
 
 <pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
   &lt;input type="text" name="description" value="some text"&gt;

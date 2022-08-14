@@ -15,4 +15,4 @@ En JavaScript, c'est une {{glossary("Property","propriété")}} de l'{{glossary(
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Variable globale")}} sur Wikipédia
+- [Variable globale](https://fr.wikipedia.org/wiki/Variable_globale) sur Wikipédia

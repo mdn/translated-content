@@ -13,4 +13,4 @@ Un robot d'indexation est un programme, souvent appelé bot ou robot, qui parcou
 
 ## Pour approfondir
 
-- {{Interwiki("wikipedia", "Robot d'indexation")}} sur Wikipédia
+- [Robot d'indexation](https://fr.wikipedia.org/wiki/Robot_d'indexation) sur Wikipédia

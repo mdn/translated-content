@@ -16,4 +16,4 @@ Vous pouvez implémenter les ligatures dans vos pages web avec {{cssxref("font-v
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Ligature (écriture)", "Ligature")}} sur Wikipédia
+- [Ligature](https://fr.wikipedia.org/wiki/Ligature_(%C3%A9criture)) sur Wikipédia

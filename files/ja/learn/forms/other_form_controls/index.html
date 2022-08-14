@@ -39,7 +39,7 @@ translation_of: Learn/Forms/Other_form_controls
 
 <p>{{EmbedLiveSample("Multi-line_text_fields", 120, 120)}}</p>
 
-<p> <code>&lt;textarea&gt;</code> と通常の単一行テキストフィールドとの主な違いは、ユーザーが送信データの中に改行を (リターンを押すことで) 入れることができます。</p>
+<p> <code>&lt;textarea&gt;</code> と通常の単一行テキストフィールドとの主な違いは、ユーザーが送信データの中に改行を (リターンを押すことで) 入れることができます。</p>
 
 <p><code>&lt;textarea&gt;</code> は閉じタグを取ることができて、既定のテキストは開始タグと終了タグの間にあるべきです。これに対し、{{HTMLElement("input")}} は閉じタグのない空要素です — <code><a href="/ja/docs/Web/HTML/Attributes/value">value</a></code> 属性の中に既定の値が入ります。</p>
 
@@ -65,7 +65,7 @@ translation_of: Learn/Forms/Other_form_controls
  <dt>{{htmlattrxref("rows","textarea")}}</dt>
  <dd>コントロールの行数を指定します。これは <code>&lt;textarea&gt;</code>をリサイズすることで変更でき、また CSS で上書きもできるため、有効な開始時の高さです。何も指定されていない場合、デフォルト値は 2 です。</dd>
  <dt>{{htmlattrxref("wrap","textarea")}}</dt>
- <dd>コントロールがどのようにテキストを改行するかを制御します。値は <code>soft</code> (デフォルト値)、この値では送信されるテキストは改行されないが、ブラウザーでレンダリングされるテキストは改行される、<code>hard</code> (この値を使うには <code>cols</code> 属性を指定する必要がある)、この値では送信テキストとレンダリングされるテキストの両方が改行される、<code>off</code>、この値では改行が停止、を取ります。</dd>
+ <dd>コントロールがどのようにテキストを改行するかを制御します。値は <code>soft</code> (デフォルト値)、この値では送信されるテキストは改行されないが、ブラウザーでレンダリングされるテキストは改行される、<code>hard</code> (この値を使うには <code>cols</code> 属性を指定する必要がある)、この値では送信テキストとレンダリングされるテキストの両方が改行される、<code>off</code>、この値では改行が停止、を取ります。</dd>
 </dl>
 
 <h3 id="Controlling_textarea_resizability" name="Controlling_textarea_resizability">テキストエリアのリサイズの制御</h3>
@@ -111,16 +111,16 @@ translation_of: Learn/Forms/Other_form_controls
 
 <div id="groups">
 <pre class="brush: html notranslate">&lt;select id="groups" name="groups"&gt;
-  &lt;optgroup label="fruits"&gt;
-    &lt;option&gt;Banana&lt;/option&gt;
-    &lt;option selected&gt;Cherry&lt;/option&gt;
-    &lt;option&gt;Lemon&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="vegetables"&gt;
-    &lt;option&gt;Carrot&lt;/option&gt;
-    &lt;option&gt;Eggplant&lt;/option&gt;
-    &lt;option&gt;Potato&lt;/option&gt;
-  &lt;/optgroup&gt;
+  &lt;optgroup label="fruits"&gt;
+    &lt;option&gt;Banana&lt;/option&gt;
+    &lt;option selected&gt;Cherry&lt;/option&gt;
+    &lt;option&gt;Lemon&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="vegetables"&gt;
+    &lt;option&gt;Carrot&lt;/option&gt;
+    &lt;option&gt;Eggplant&lt;/option&gt;
+    &lt;option&gt;Potato&lt;/option&gt;
+  &lt;/optgroup&gt;
 &lt;/select&gt;</pre>
 </div>
 
@@ -145,16 +145,16 @@ translation_of: Learn/Forms/Other_form_controls
 <p>デフォルトでは、セレクトボックスは、ユーザーに単一の値を選択 さ せ る だけです。{{HTMLElement("select")}}要素に{{htmlattrxref("multiple", "select")}}属性を追加することで、オペレーティングシステムが提供するデフォルトのメカニズム（例えば、<kbd>Cmd</kbd>/<kbd>Ctrl</kbd> を押しながらデスクトップ上で複数の値をクリックするなど）を使用して、ユーザーが複数の値を選択できるようにすることができます。</p>
 
 <pre class="brush: html notranslate">&lt;select id="multi" name="multi" multiple size="2"&gt;
-  &lt;optgroup label="fruits"&gt;
-     &lt;option&gt;Banana&lt;/option&gt;
-     &lt;option selected&gt;Cherry&lt;/option&gt;
-     &lt;option&gt;Lemon&lt;/option&gt;
-   &lt;/optgroup&gt;
-   &lt;optgroup label="vegetables"&gt;
-     &lt;option&gt;Carrot&lt;/option&gt;
-     &lt;option&gt;Eggplant&lt;/option&gt;
-     &lt;option&gt;Potato&lt;/option&gt;
-   &lt;/optgroup&gt;
+  &lt;optgroup label="fruits"&gt;
+     &lt;option&gt;Banana&lt;/option&gt;
+     &lt;option selected&gt;Cherry&lt;/option&gt;
+     &lt;option&gt;Lemon&lt;/option&gt;
+   &lt;/optgroup&gt;
+   &lt;optgroup label="vegetables"&gt;
+     &lt;option&gt;Carrot&lt;/option&gt;
+     &lt;option&gt;Eggplant&lt;/option&gt;
+     &lt;option&gt;Potato&lt;/option&gt;
+   &lt;/optgroup&gt;
 &lt;/select&gt;</pre>
 
 <p>{{EmbedLiveSample("Multiple_choice_select_box", 120, 120)}}</p>
@@ -167,7 +167,7 @@ translation_of: Learn/Forms/Other_form_controls
 
 <h3 id="Autocomplete_box" name="Autocomplete_box">オートコンプリートのボックス</h3>
 
-<p>You can provide suggested, automatically-completed values for form widgets using 表示する値を指定する {{HTMLElement("option")}} 子要素つきの {{HTMLElement("datalist")}} 要素を使って、フォームウィジェット用のオートコンプリートの提案値を提供できます。  <code>&lt;datalist&gt;</code> には <code>id</code>が必要です。</p>
+<p>You can provide suggested, automatically-completed values for form widgets using 表示する値を指定する {{HTMLElement("option")}} 子要素つきの {{HTMLElement("datalist")}} 要素を使って、フォームウィジェット用のオートコンプリートの提案値を提供できます。  <code>&lt;datalist&gt;</code> には <code>id</code>が必要です。</p>
 
 <p>データリストは、 <code>id</code> の値が拘束するデータリストの値となる {{htmlattrxref("list","input")}} 属性を用いて、 {{htmlelement("input")}} 要素 (つまり<code>text</code> や <code>email</code> の入力タイプ) に拘束されます。</p>
 
@@ -179,14 +179,14 @@ translation_of: Learn/Forms/Other_form_controls
 <pre class="brush: html notranslate">&lt;label for="myFruit"&gt;What's your favorite fruit?&lt;/label&gt;
 &lt;input type="text" name="myFruit" id="myFruit" list="mySuggestion"&gt;
 &lt;datalist id="mySuggestion"&gt;
-  &lt;option&gt;Apple&lt;/option&gt;
-  &lt;option&gt;Banana&lt;/option&gt;
-  &lt;option&gt;Blackberry&lt;/option&gt;
-  &lt;option&gt;Blueberry&lt;/option&gt;
-  &lt;option&gt;Lemon&lt;/option&gt;
-  &lt;option&gt;Lychee&lt;/option&gt;
-  &lt;option&gt;Peach&lt;/option&gt;
-  &lt;option&gt;Pear&lt;/option&gt;
+  &lt;option&gt;Apple&lt;/option&gt;
+  &lt;option&gt;Banana&lt;/option&gt;
+  &lt;option&gt;Blackberry&lt;/option&gt;
+  &lt;option&gt;Blueberry&lt;/option&gt;
+  &lt;option&gt;Lemon&lt;/option&gt;
+  &lt;option&gt;Lychee&lt;/option&gt;
+  &lt;option&gt;Peach&lt;/option&gt;
+  &lt;option&gt;Pear&lt;/option&gt;
 &lt;/datalist&gt;</pre>
 
 <p>{{EmbedLiveSample("first_autocomplete", 120, 120)}}</p>
@@ -200,17 +200,17 @@ translation_of: Learn/Forms/Other_form_controls
 &lt;input type="text" id="myFruit" name="fruit" list="fruitList"&gt;
 
 &lt;datalist id="fruitList"&gt;
-  &lt;label for="suggestion"&gt;or pick a fruit&lt;/label&gt;
-  &lt;select id="suggestion" name="altFruit"&gt;
-    &lt;option&gt;Apple&lt;/option&gt;
-    &lt;option&gt;Banana&lt;/option&gt;
-    &lt;option&gt;Blackberry&lt;/option&gt;
-    &lt;option&gt;Blueberry&lt;/option&gt;
-    &lt;option&gt;Lemon&lt;/option&gt;
-    &lt;option&gt;Lychee&lt;/option&gt;
-    &lt;option&gt;Peach&lt;/option&gt;
-    &lt;option&gt;Pear&lt;/option&gt;
-  &lt;/select&gt;
+  &lt;label for="suggestion"&gt;or pick a fruit&lt;/label&gt;
+  &lt;select id="suggestion" name="altFruit"&gt;
+    &lt;option&gt;Apple&lt;/option&gt;
+    &lt;option&gt;Banana&lt;/option&gt;
+    &lt;option&gt;Blackberry&lt;/option&gt;
+    &lt;option&gt;Blueberry&lt;/option&gt;
+    &lt;option&gt;Lemon&lt;/option&gt;
+    &lt;option&gt;Lychee&lt;/option&gt;
+    &lt;option&gt;Peach&lt;/option&gt;
+    &lt;option&gt;Pear&lt;/option&gt;
+  &lt;/select&gt;
 &lt;/datalist&gt;
 </pre>
 
@@ -260,7 +260,7 @@ translation_of: Learn/Forms/Other_form_controls
 
 <h4 id="Meter" name="Meter">Meter</h4>
 
-<p>A meter bar represents a fixed value in a range delimited by {{htmlattrxref("max","meter")}} and {{htmlattrxref("min","meter")}} values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:</p>
+<p>A meter bar represents a fixed value in a range delimited by {{htmlattrxref("max","meter")}} and {{htmlattrxref("min","meter")}} values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:</p>
 
 <ul>
  <li>The {{htmlattrxref("low","meter")}} and {{htmlattrxref("high","meter")}} values divide the range in three parts:

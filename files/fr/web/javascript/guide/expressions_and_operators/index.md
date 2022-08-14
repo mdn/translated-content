@@ -33,17 +33,23 @@ JavaScript possède différents types d'opérateurs. Cette section décrit les o
 
 JavaScript utilise des opérateurs _binaires_ et _unaires_, ainsi qu'un opérateur ternaire spécial (l'opérateur conditionnel). Un opérateur binaire utilise deux opérandes, un précédant l'opérateur et un lui succédant :
 
-    opérande1 opérateur opérande2
+```
+opérande1 opérateur opérande2
+```
 
 Par exemple : « `3+4` » ou « `x*y` ».
 
 Un opérateur unaire ne nécessite qu'un opérande, avant ou après l'opérateur :
 
-    opérateur opérande
+```
+opérateur opérande
+```
 
 ou
 
-    opérande opérateur
+```
+opérande opérateur
+```
 
 Comme « `x++` » ou « `++x` ».
 
@@ -607,7 +613,9 @@ maChaîne += "bet"; // l'expression sera évaluée en "alphabet"
 
 L'[opérateur conditionnel](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_conditionnel) est le seul opérateur JavaScript qui utilise trois opérandes. L'expression utilisant l'opérateur peut prendre une valeur parmi deux selon une condition donnée. Cet opérateur s'utilise avec la syntaxe suivante :
 
-    condition ? val1 : val2
+```js
+condition ? val1 : val2
+```
 
 Si `condition` vaut `true`, l'opérateur vaudra `val1`. Sinon il vaudra `val2`. Il est possible d'utiliser l'opérateur conditionnel aux mêmes endroits qu'un opérateur standard.
 
@@ -692,8 +700,8 @@ if (3 in arbres) {
 
 L'[opérateur `typeof`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_typeof) peut être utilisé de deux façons distinctes :
 
-1.       typeof opérande
-2.       typeof (opérande)
+1. typeof opérande
+2. typeof (opérande)
 
 L'opérateur `typeof` renvoie une chaîne de caractères indiquant le type de l'opérande (qui n'est pas évalué). `opérande` correspond à la chaîne de caractère, la variable, le mot-clé ou l'objet dont on souhaite renvoyer le type. L'utilisation des parenthèses est facultative.
 
@@ -763,8 +771,8 @@ typeof String;   // renvoie "function"
 
 L'[opérateur `void`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_void) peut être utilisé de deux façons :
 
-1.       void (expression)
-2.       void expression
+1. void (expression)
+2. void expression
 
 L'opérateur `void` indique qu'une expression doit être évaluée sans retourner de valeur. `expression` étant une expression JavaScript à évaluer. Les parenthèses sont facultatives mais les utiliser permet d'avoir une meilleur lisibilité du code.
 
@@ -791,7 +799,9 @@ Un opérateur relationnel compare ses opérandes et renvoie une valeur booléenn
 
 L'[opérateur `in`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_in) renvoie `true` si la propriété indiquée fait partie de l'objet donné. Cet opérateur s'utilise avec la syntaxe suivante :
 
-    nomOuNumeroPropriete in monObjet
+```js
+nomOuNumeroPropriete in monObjet
+```
 
 avec `nomOuNumeroPropriete` qui est une chaîne de caractères, une expression numérique ou un symbole correspondant au nom d'une propriété ou un indice de tableau, `monObjet` est le nom d'un objet.
 
@@ -822,7 +832,9 @@ var maVoiture = {fabricant: "Honda", modèle: "Accord", year: 1998};
 
 L'[opérateur instanceof](/fr/docs/Web/JavaScript/Reference/Opérateurs/instanceof) renvoie `true` si l'objet donné est du type spécifié. Cet opérateur s'utilise avec la syntaxe suivante :
 
-    nomObjet instanceof typeObjet
+```js
+nomObjet instanceof typeObjet
+```
 
 avec `nomObjet` qui est le nom de l'objet dont on souhaite comparer le type à `typeObjet`, `typeObjet` étant un type d'objet tel que {{jsxref("Date")}} ou {{jsxref("Array")}}.
 
@@ -890,8 +902,10 @@ Ces expressions correspondent aux mots-clés et aux expressions générales en J
 
 Le [mot-clé `this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) permet de faire référence à l'objet courant. En général, on l'utilise au sein d'une méthode pour faire référence à l'objet qui a utilisé la méthode. Il s'utilise de cette façon :
 
-    this["nomPropriété"]
-    this.nomPropriété
+```js
+this["nomPropriété"]
+this.nomPropriété
+```
 
 Soit une fonction qui valide un objet si sa propriété `value` est comprise entre deux valeurs :
 
@@ -947,8 +961,10 @@ var nomObjet = new typeObjet([param1, param2, ..., paramN]);
 
 Le [mot-clé `super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super) est utilisé afin d'appeler des fonctions disponibles sur un objet parent. Il peut notamment être utilisé avec les [classes](/fr/docs/Web/JavaScript/Reference/Classes) pour appeler le constructeur parent.
 
-    super([arguments]); // invoque le constructeur parent
-    super.functionParent([arguments]);
+```js
+super([arguments]); // invoque le constructeur parent
+super.functionParent([arguments]);
+```
 
 #### Opérateur de décomposition
 

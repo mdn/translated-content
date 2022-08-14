@@ -19,7 +19,9 @@ Dans des versions antérieures de la spécification, cette méthode était intit
 
 ## Syntaxe
 
-    var Promise = CredentialsContainer.preventSilentAccess()
+```js
+var Promise = CredentialsContainer.preventSilentAccess()
+```
 
 ### Paramètres
 

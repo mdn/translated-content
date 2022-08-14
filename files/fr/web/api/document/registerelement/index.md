@@ -20,7 +20,9 @@ La méthode **`Document.registerElement()`** permet d'enregistrer un nouvel [él
 
 ## Syntaxe
 
-    var constructeur = document.registerElement(nom-tag, options);
+```js
+var constructeur = document.registerElement(nom-tag, options);
+```
 
 ### Paramètres
 

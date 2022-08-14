@@ -45,9 +45,9 @@ _index_ が {{jsxref("WebAssembly/Table/length","Table.prototype.length")}} 以�
 ```js
 WebAssembly.instantiateStreaming(fetch('table.wasm'))
 .then(function(obj) {
-  var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
+  var tbl = obj.instance.exports.tbl;
+  console.log(tbl.get(0)());  // 13
+  console.log(tbl.get(1)());  // 42
 });
 ```
 

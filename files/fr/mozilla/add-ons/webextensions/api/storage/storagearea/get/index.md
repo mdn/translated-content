@@ -22,9 +22,11 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ## Syntaxe
 
-    let gettingItem = browser.storage.<storageType>.get(
-      keys    // null, string, object or array of strings
-    )
+```js
+let gettingItem = browser.storage.<storageType>.get(
+  keys    // null, string, object or array of strings
+)
+```
 
 `<storageType>` sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, ou {{WebExtAPIRef("storage.managed", "managed")}}.
 

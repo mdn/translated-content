@@ -319,10 +319,12 @@ De plus, le champ `errorField` est placé en haut de l'ordre source (bien qu'il 
 
 Pour terminer, nous avons utilisé certains attributs de WAI-ARIA dans notre démonstration pour résoudre les problèmes d’accessibilité causés par des zones de contenu constamment mises à jour sans rechargement de page (les lecteurs d’écran ne le détectent pas et n'en avertissent pas les utilisateurs par défaut) :
 
-    <div class="errors" role="alert" aria-relevant="all">
-      <ul>
-      </ul>
-    </div>
+```html
+<div class="errors" role="alert" aria-relevant="all">
+  <ul>
+  </ul>
+</div>
+```
 
 Nous expliquerons ces attributs dans notre prochain article, qui couvre [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics) de manière beaucoup plus détaillée.
 

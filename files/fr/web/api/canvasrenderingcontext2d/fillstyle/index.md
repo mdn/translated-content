@@ -11,9 +11,11 @@ Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_c
 
 ## Syntaxe
 
-    ctx.fillStyle = color;
-    ctx.fillStyle = gradient;
-    ctx.fillStyle = pattern;
+```js
+ctx.fillStyle = color;
+ctx.fillStyle = gradient;
+ctx.fillStyle = pattern;
+```
 
 ### Options
 

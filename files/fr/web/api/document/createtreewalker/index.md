@@ -17,7 +17,9 @@ La méthode de création **`Document.createTreeWalker()`** renvoie un nouvel obj
 
 ## Syntaxe
 
-    treeWalker = document.createTreeWalker(root, whatToShow, filter, entityReferenceExpansion);
+```js
+treeWalker = document.createTreeWalker(root, whatToShow, filter, entityReferenceExpansion);
+```
 
 ### Paramètres
 

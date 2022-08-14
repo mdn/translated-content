@@ -16,7 +16,9 @@ La propriété **`badge`** de l'interface {{domxref ("Notification")}} renvoie l
 
 ## Syntaxe
 
-    const url = Notification.badge
+```js
+const url = Notification.badge
+```
 
 ### Valeur
 

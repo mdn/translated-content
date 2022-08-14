@@ -18,7 +18,9 @@ La méthode **`Number.parseFloat()`** analyse et convertit une chaîne de caract
 
 ## Syntaxe
 
-    Number.parseFloat(chaîne)
+```js
+Number.parseFloat(chaîne)
+```
 
 ### Paramètres
 
@@ -33,7 +35,9 @@ Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères pa
 
 Cette méthode possède les mêmes fonctionnalités que la fonction globale {{jsxref("parseFloat", "parseFloat()")}} :
 
-    Number.parseFloat === parseFloat; // true
+```js
+Number.parseFloat === parseFloat; // true
+```
 
 Cette méthode fait partie d'ECMAScript 2015 et notamment de la modularisation de certaines fonctions globales. Pour plus de détails et d'exemples, voir {{jsxref("parseFloat", "parseFloat()")}}.
 

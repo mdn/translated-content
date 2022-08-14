@@ -9,7 +9,9 @@ La propriété **`value`** (_valeur_) de l'interface {{domxref("DOMTokenList")}}
 
 ## Syntaxe
 
-    tokenList.value;
+```js
+tokenList.value;
+```
 
 ### Valeur
 

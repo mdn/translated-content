@@ -4,13 +4,13 @@ slug: Learn/Forms
 translation_of: Learn/Forms
 original_slug: Learn/HTML/Forms
 ---
-<p><span class="seoSummary">이 가이드는 HTML 폼을 숙달 시키는데 도움이 되는 문서입니다.</span> HTML 폼은 사용자와 상호작용할 수 있는 매우 강력한 도구입니다. 그러나 역사적으로 나 기술적인 이유로 사용자에게 항상 명확하게 기능을 제공할 수 있는 것은 아닙니다. 이 가이드에서 HTML 폼 관점에서 스타일 구조, 사용자 위젯으로 데이터 다루기 등 모든 것을 다룰 것입니다. 이러한 강력한 기술들을 즐기길 바랍니다!</p>
+<p><span class="seoSummary">이 가이드는 HTML 폼을 숙달 시키는데 도움이 되는 문서입니다.</span> HTML 폼은 사용자와 상호작용할 수 있는 매우 강력한 도구입니다. 그러나 역사적으로 나 기술적인 이유로 사용자에게 항상 명확하게 기능을 제공할 수 있는 것은 아닙니다. 이 가이드에서 HTML 폼 관점에서 스타일 구조, 사용자 위젯으로 데이터 다루기 등 모든 것을 다룰 것입니다. 이러한 강력한 기술들을 즐기길 바랍니다!</p>
 
 <h2 id="항목" style="line-height: 30px; font-size: 2.14285714285714rem;">항목</h2>
 
 <ol>
  <li><a href="https://developer.mozilla.org/ko/docs/Web/Guide/HTML/%ED%8F%BC/My_first_HTML_form">나의 첫 HTML 폼</a></li>
- <li><a href="/en-US/docs/HTML/Forms/How_to_structure_an_HTML_form" title="/en-US/docs/HTML/Forms/How_to_structure_an_HTML_form">HTML HTML 폼 구성 방법</a></li>
+ <li><a href="/en-US/docs/HTML/Forms/How_to_structure_an_HTML_form" title="/en-US/docs/HTML/Forms/How_to_structure_an_HTML_form">HTML HTML 폼 구성 방법</a></li>
  <li><a href="/en-US/docs/HTML/Forms/The_native_form_widgets" title="/en-US/docs/HTML/Forms/The_native_form_widgets">기본 폼 위젯</a></li>
  <li>CSS와 HTML 폼
   <ol>
@@ -27,7 +27,7 @@ original_slug: Learn/HTML/Forms
    <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">FormData 객체 사용</a></li>
   </ol>
  </li>
- <li><a href="/en-US/docs/HTML/Forms/HTML_forms_in_legacy_browsers" title="/en-US/docs/HTML/Forms/HTML_forms_in_legacy_browsers">기존 브라우저에서 HTML 폼</a></li>
+ <li><a href="/en-US/docs/HTML/Forms/HTML_forms_in_legacy_browsers" title="/en-US/docs/HTML/Forms/HTML_forms_in_legacy_browsers">기존 브라우저에서 HTML 폼</a></li>
 </ol>
 
 <h2 id="HTML_문서" style="line-height: 30px; font-size: 2.14285714285714rem;">HTML 문서</h2>
@@ -51,78 +51,78 @@ original_slug: Learn/HTML/Forms
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("datalist")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLDataListElement")}}</td>
-   <td style="vertical-align: top;"><span style="font-family: 'Courier New';">datalist</span> 요소는 다른 폼 요소의 값에 대한 가능한 옵션들을 나타내는 {{ HTMLElement("option") }} 요소의 집합을 포함합니다. </td>
+   <td style="vertical-align: top;"><span style="font-family: 'Courier New';">datalist</span> 요소는 다른 폼 요소의 값에 대한 가능한 옵션들을 나타내는 {{ HTMLElement("option") }} 요소의 집합을 포함합니다. </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("fieldset")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLFieldSetElement")}}</td>
-   <td style="vertical-align: top;"><span style="font-family: 'Courier New';">fieldset 요소는</span> 폼 안에 여러 폼 요소들을 그룹화 하는데 사용됩니다.</td>
+   <td style="vertical-align: top;"><span style="font-family: 'Courier New';">fieldset 요소는</span> 폼 안에 여러 폼 요소들을 그룹화 하는데 사용됩니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("form")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLFormElement")}}</td>
-   <td style="vertical-align: top;"><code>form</code>  요소는 사용자가 정보를 웹서버로 전송하도록 상호작용하는 요소를 포함하는 문서의 부분으로 나타냅니다.</td>
+   <td style="vertical-align: top;"><code>form</code>  요소는 사용자가 정보를 웹서버로 전송하도록 상호작용하는 요소를 포함하는 문서의 부분으로 나타냅니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("input")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLInputElement")}}</td>
-   <td style="vertical-align: top;"><code>input 요소는</code> 대화형 컨트롤 폼들을 생성하는데 사용됩니다.</td>
+   <td style="vertical-align: top;"><code>input 요소는</code> 대화형 컨트롤 폼들을 생성하는데 사용됩니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("keygen")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLKeygenElement")}}</td>
-   <td style="vertical-align: top;"><code>keygen</code> 요소는 HTML 폼 요소의 일부로서 쉽게 키 데이터를 발생시키고 공개키를 전송을 위해서 존재 합니다.</td>
+   <td style="vertical-align: top;"><code>keygen</code> 요소는 HTML 폼 요소의 일부로서 쉽게 키 데이터를 발생시키고 공개키를 전송을 위해서 존재 합니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("label")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLLabelElement")}}</td>
-   <td style="vertical-align: top;"><code>label</code> 요소는 사용자 인터페이스 항목에 대한 캡션을 나타냅니다.</td>
+   <td style="vertical-align: top;"><code>label</code> 요소는 사용자 인터페이스 항목에 대한 캡션을 나타냅니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("legend")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLLegendElement")}}</td>
-   <td style="vertical-align: top;"><code>legend</code> 요소는 상위 요소인 {{ HTMLElement("fieldset") }} 컨텐츠를 위한 캡션을 나타냅니다.</td>
+   <td style="vertical-align: top;"><code>legend</code> 요소는 상위 요소인 {{ HTMLElement("fieldset") }} 컨텐츠를 위한 캡션을 나타냅니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("meter")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLMeterElement")}}</td>
-   <td style="vertical-align: top;"><code>meter </code>요소는 알려진 범위 안에 정해 저 있는 스칼라 값이나 소수 값 주 하나를 나타냅니다.</td>
+   <td style="vertical-align: top;"><code>meter </code>요소는 알려진 범위 안에 정해 저 있는 스칼라 값이나 소수 값 주 하나를 나타냅니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("optgroup")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLOptGroupElement")}}</td>
-   <td style="vertical-align: top;"><code>optgroup</code> 요소는 {{ HTMLElement("select") }} 요소 안에 있는 옵션 그룹을 생성합니다.</td>
+   <td style="vertical-align: top;"><code>optgroup</code> 요소는 {{ HTMLElement("select") }} 요소 안에 있는 옵션 그룹을 생성합니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("option")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLOptionElement")}}</td>
-   <td style="vertical-align: top;">HTML<em> </em><code>option<em> </em></code>요소는 {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }} 또는 {{ HTMLElement("datalist") }}요소 안에 항목을 나타내는 컨트롤을 생성하는데 사용됩니다.</td>
+   <td style="vertical-align: top;">HTML<em> </em><code>option<em> </em></code>요소는 {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }} 또는 {{ HTMLElement("datalist") }}요소 안에 항목을 나타내는 컨트롤을 생성하는데 사용됩니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("output")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLOutputElement")}}</td>
-   <td style="vertical-align: top;"><code>output </code>요소는 계산 결과를 나타냅니다.</td>
+   <td style="vertical-align: top;"><code>output </code>요소는 계산 결과를 나타냅니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("progress")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLProgressElement")}}</td>
-   <td style="vertical-align: top;"><code>progress</code> 요소는 작업 완료 진행 상태를 나타내는데 사용됩니다.</td>
+   <td style="vertical-align: top;"><code>progress</code> 요소는 작업 완료 진행 상태를 나타내는데 사용됩니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("select")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLSelectElement")}}</td>
-   <td style="vertical-align: top;"><code>select</code> 요소는 옵션 메뉴를 제공하는 컨트롤을 나타냅니다.</td>
+   <td style="vertical-align: top;"><code>select</code> 요소는 옵션 메뉴를 제공하는 컨트롤을 나타냅니다.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">{{HTMLElement("textarea")}}</td>
    <td style="vertical-align: top;">{{domxref("HTMLTextAreaElement")}}</td>
-   <td style="vertical-align: top;"><code>textarea</code> 요소는 다중 라인 일반 텍스트 편집 컨트롤을 나타냅니다.</td>
+   <td style="vertical-align: top;"><code>textarea</code> 요소는 다중 라인 일반 텍스트 편집 컨트롤을 나타냅니다.</td>
   </tr>
  </tbody>
 </table>
 
 <div class="note">
-<p><strong>Note:</strong> 모든 폼 요소들이나 모든 HTML요소들은 {{domxref("HTMLElement")}} 돔 인터페이스를 지원합니다.</p>
+<p><strong>Note:</strong> 모든 폼 요소들이나 모든 HTML요소들은 {{domxref("HTMLElement")}} 돔 인터페이스를 지원합니다.</p>
 </div>
 
 <h3 id="HTML_속성" style="line-height: 24px; font-size: 1.71428571428571rem;">HTML 속성</h3>
@@ -149,7 +149,7 @@ original_slug: Learn/HTML/Forms
   <tr>
    <td>action</td>
    <td>{{ HTMLElement("form") }}</td>
-   <td>폼을 통해서 전송 정보를 처리하는 프로그램의 URL </td>
+   <td>폼을 통해서 전송 정보를 처리하는 프로그램의 URL </td>
   </tr>
   <tr>
    <td>autocomplete</td>
@@ -172,7 +172,7 @@ original_slug: Learn/HTML/Forms
    <td>checked</td>
    <td>{{ HTMLElement("input") }}</td>
    <td>
-    <p>해당 요소가 페이지가 로드될 때 체크된 상태로 나타나도록 설정합니다. </p>
+    <p>해당 요소가 페이지가 로드될 때 체크된 상태로 나타나도록 설정합니다. </p>
    </td>
   </tr>
   <tr>
@@ -259,7 +259,7 @@ original_slug: Learn/HTML/Forms
   <tr>
    <td>multiple</td>
    <td>{{ HTMLElement("input") }}, {{ HTMLElement("select") }}</td>
-   <td>Indicates whether multiple values can be entered in an input of the type <code>email</code> or <code>file</code>.</td>
+   <td>Indicates whether multiple values can be entered in an input of the type <code>email</code> or <code>file</code>.</td>
   </tr>
   <tr>
    <td>name</td>
@@ -311,7 +311,7 @@ original_slug: Learn/HTML/Forms
   <tr>
    <td>size</td>
    <td>{{ HTMLElement("input") }}, {{ HTMLElement("select") }}</td>
-   <td>Defines the width of the element (in pixels). If the element's <code>type</code> attribute is <code>text</code> or <code>password</code> then it's the number of characters.</td>
+   <td>Defines the width of the element (in pixels). If the element's <code>type</code> attribute is <code>text</code> or <code>password</code> then it's the number of characters.</td>
   </tr>
   <tr>
    <td>src</td>

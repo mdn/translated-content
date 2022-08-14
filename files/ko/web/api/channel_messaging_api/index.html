@@ -17,7 +17,7 @@ translation_of: Web/API/Channel_Messaging_API
 
 <h2 id="Channel_messaging_concepts_and_usage">Channel messaging concepts and usage</h2>
 
-<p>A message channel is created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. Once created, the two ports of the channel can be accessed through the {{domxref("MessageChannel.port1")}} and {{domxref("MessageChannel.port2")}} properties (which both return {{domxref("MessagePort")}} objects.) The app that created the channel uses <code>port1</code>, and the app at the other end of the port uses <code>port2</code> — you send a message to <code>port2</code>, and transfer the port over to the other browsing context using {{domxref("window.postMessage")}} along with two arguments (the message to send, and the object to transfer ownership of, in this case the port itself.)</p>
+<p>A message channel is created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. Once created, the two ports of the channel can be accessed through the {{domxref("MessageChannel.port1")}} and {{domxref("MessageChannel.port2")}} properties (which both return {{domxref("MessagePort")}} objects.) The app that created the channel uses <code>port1</code>, and the app at the other end of the port uses <code>port2</code> — you send a message to <code>port2</code>, and transfer the port over to the other browsing context using {{domxref("window.postMessage")}} along with two arguments (the message to send, and the object to transfer ownership of, in this case the port itself.)</p>
 
 <p>When these transferable objects are transferred, they are 'neutered' on the previous context — the one they previously belonged to. For instance a port, when is sent, cannot be used anymore by the original context. Note that the only two objects that can currently be transferred are {{domxref("ArrayBuffer")}} and {{domxref("MessagePort")}}.</p>
 
@@ -47,20 +47,7 @@ translation_of: Web/API/Channel_Messaging_API
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#channel-messaging', 'Channel messaging')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

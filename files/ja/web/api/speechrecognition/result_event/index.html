@@ -28,17 +28,17 @@ original_slug: Web/API/SpeechRecognition/onresult
 <p>下記のソースコードは <a class="external external-icon" href="https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js">Speech color changer</a> の例文から取り出しました。</p>
 
 <pre class="brush: js">recognition.onresult = function(event) {
-  // SpeechRecognitionEvent プロパティーは SpeechRecognitionResultList オブジェクトを返しました。
-  // SpeechRecognitionResult オブジェクトは SpeechRecognitionResultList オブジェクトにあります。
-  // ゲッターがあるので、配列のように呼び出すことができます。
-  // 最初の[0]は 0 の位置にある SpeechRecognitionResult を返します。
-  // それぞれの結果がある SpeechRecognitionAlternative オブジェクトは各位SpeechRecognitionResult オブジェクトにあります。
-  // それもゲッターがあるので、配列のように呼び出すことができます。
-  // ２つ目の[0]は 0 の位置にある SpeechRecognitionAlternative を返します。
-  // SpeechRecognitionAlternative オブジェクトの transcript プロパティを返します。
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = '結果：' + color + '.';
-  bg.style.backgroundColor = color;
+  // SpeechRecognitionEvent プロパティーは SpeechRecognitionResultList オブジェクトを返しました。
+  // SpeechRecognitionResult オブジェクトは SpeechRecognitionResultList オブジェクトにあります。
+  // ゲッターがあるので、配列のように呼び出すことができます。
+  // 最初の[0]は 0 の位置にある SpeechRecognitionResult を返します。
+  // それぞれの結果がある SpeechRecognitionAlternative オブジェクトは各位SpeechRecognitionResult オブジェクトにあります。
+  // それもゲッターがあるので、配列のように呼び出すことができます。
+  // ２つ目の[0]は 0 の位置にある SpeechRecognitionAlternative を返します。
+  // SpeechRecognitionAlternative オブジェクトの transcript プロパティを返します。
+  var color = event.results[0][0].transcript;
+  diagnostic.textContent = '結果：' + color + '.';
+  bg.style.backgroundColor = color;
 }
 </pre>
 

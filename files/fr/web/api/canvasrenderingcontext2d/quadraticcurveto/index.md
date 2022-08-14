@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.quadraticCurveTo()`** de l'API Canvas 2D
 
 ## Syntaxe
 
-    void contexte2D.quadraticCurveTo(pointContrôleX, pointContrôleY, pointArrivéeX, pointArrivéeY);
+```js
+void contexte2D.quadraticCurveTo(pointContrôleX, pointContrôleY, pointArrivéeX, pointArrivéeY);
+```
 
 ### Paramètress
 

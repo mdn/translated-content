@@ -9,7 +9,9 @@ La méthode **`Node.isEqualNode()`** permet de tester l'égalité entre deux él
 
 ## Syntaxe
 
-    var isEqualNode = node.isEqualNode(otherNode);
+```js
+var isEqualNode = node.isEqualNode(otherNode);
+```
 
 - `otherNode` : Le noeud à comparer.
 

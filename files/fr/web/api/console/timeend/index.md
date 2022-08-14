@@ -18,7 +18,9 @@ Voir [Timers](/fr/docs/Web/API/console#Timers) dans la documentation de {{domxre
 
 ## Syntaxe
 
-    console.timeEnd(label);
+```js
+console.timeEnd(label);
+```
 
 ### Paramètres
 

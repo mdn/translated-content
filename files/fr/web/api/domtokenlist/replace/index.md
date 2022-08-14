@@ -9,7 +9,9 @@ La méthode **`replace()`** de l'interface {{domxref("DOMTokenList")}} remplace 
 
 ## Syntaxe
 
-    tokenList.replace(oldToken,newToken);
+```js
+tokenList.replace(oldToken,newToken);
+```
 
 ### Paramètres
 

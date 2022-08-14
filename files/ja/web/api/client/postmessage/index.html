@@ -40,30 +40,30 @@ translation_of: Web/API/Client/postMessage
 <p>サービスワーカーからクライアントへのメッセージの送信</p>
 
 <pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
-  event.waitUntil(async function() {
-    // クライアントにアクセスできない場合は、早期に終了します。
-    // 例えば、クロスオリジンの場合。
-    if (!event.clientId) return;
+  event.waitUntil(async function() {
+    // クライアントにアクセスできない場合は、早期に終了します。
+    // 例えば、クロスオリジンの場合。
+    if (!event.clientId) return;
 
-    // クライアントを取得します。
-    const client = await clients.get(event.clientId);
-    // クライアントを取得できない場合は、早期に終了します。
-    // 例えば、閉じている場合。
-    if (!client) return;
+    // クライアントを取得します。
+    const client = await clients.get(event.clientId);
+    // クライアントを取得できない場合は、早期に終了します。
+    // 例えば、閉じている場合。
+    if (!client) return;
 
-    // クライアントにメッセージを送信します。
-    client.postMessage({
-      msg: "私はあなたからフェッチされましたよ！",
-      url: event.request.url
-    });
+    // クライアントにメッセージを送信します。
+    client.postMessage({
+      msg: "私はあなたからフェッチされましたよ！",
+      url: event.request.url
+    });
 
-  }());
+  }());
 });</pre>
 
 <p>そのメッセージの受け取り</p>
 
 <pre class="brush: js notranslate">navigator.serviceWorker.addEventListener('message', event =&gt; {
-  console.log(event.data.msg, event.data.url);
+  console.log(event.data.msg, event.data.url);
 });</pre>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>

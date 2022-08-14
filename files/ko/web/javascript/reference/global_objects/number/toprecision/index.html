@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>toPrecision()</code></strong> 메서드는 {{jsxref("Number")}} 객체를 지정된 정밀도로 나타내는 문자열을 반환한다.</p>
+<p><strong><code>toPrecision()</code></strong> 메서드는 {{jsxref("Number")}} 객체를 지정된 정밀도로 나타내는 문자열을 반환한다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}</div>
 
@@ -30,9 +30,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 
 <p>고정 소수점 또는 지수 표기법의 {{jsxref("Number")}} 객체를 정밀 유효 숫자로 반올림 한 문자열입니다. <code>toPrecision()</code>에도 적용되는 {{jsxref("Number.prototype.toFixed()")}} 메서드에 대한 설명에서 반올림에 대한 설명을 참조하세요.</p>
 
-<p><code>precision(정밀도)</code> 인수가 생략되면 {{jsxref("Number.prototype.toString()")}}처럼 작동합니다. <code>precision(정밀도)</code> 인수가 정수가 아닌 값이면 가장 가까운 정수로 반올림됩니다.</p>
+<p><code>precision(정밀도)</code> 인수가 생략되면 {{jsxref("Number.prototype.toString()")}}처럼 작동합니다. <code>precision(정밀도)</code> 인수가 정수가 아닌 값이면 가장 가까운 정수로 반올림됩니다.</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="예외">예외</h3>
 
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 
 <h2 id="예제">예제</h2>
 
-<h3 id="toPrecision_사용"><code>toPrecision</code> 사용</h3>
+<h3 id="toPrecision_사용"><code>toPrecision</code> 사용</h3>
 
 <pre class="brush: js">var numObj = 5.123456;
 
@@ -63,37 +63,9 @@ console.log(numObj.toPrecision(1));   // logs '0.0001'
 console.log((1234.5).toPrecision(2)); // logs '1.2e+3'
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.7', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

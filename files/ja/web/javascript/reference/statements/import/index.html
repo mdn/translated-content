@@ -98,13 +98,13 @@ var promise = import("<em>module-name</em>");
 <pre class="brush: js notranslate">import '/modules/my-module.js';
 </pre>
 
-<p>これは{{anch("Dynamic Imports", "動的インポート")}}にも対応しています。</p>
+<p>これは<a href="#dynamic_imports">動的インポート</a>にも対応しています。</p>
 
 <pre class="brush: js notranslate">(async () =&gt; {
   if (somethingIsTrue) {
-    // 副作用のためのインポートモジュール
-    await import('/modules/my-module.js');
-  }
+    // 副作用のためのインポートモジュール
+    await import('/modules/my-module.js');
+  }
 })();</pre>
 
 <p>プロジェクトで ESM をエクスポートするパッケージを使用している場合は、副作用のためだけにインポートすることもできます。これにより、パッケージエントリーポイントファイル（およびインポートするすべてのファイル）のコードのみが実行されます。</p>
@@ -129,11 +129,11 @@ var promise = import("<em>module-name</em>");
 // 特定の名前つきのインポート
 </pre>
 
-<p>{{anch("Dynamic Imports", "動的インポート")}}を使用してデフォルトのエクスポートをインポートする場合、動作が少し異なります。返されたオブジェクトから "default" キーを破棄して名前を変更する必要があります。</p>
+<p><a href="#dynamic_imports">動的インポート</a>を使用してデフォルトのエクスポートをインポートする場合、動作が少し異なります。返されたオブジェクトから "default" キーを破棄して名前を変更する必要があります。</p>
 
 <pre class="brush: js notranslate">(async () =&gt; {
   if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
+    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
   }
 })();</pre>
 
@@ -154,9 +154,9 @@ var promise = import("<em>module-name</em>");
 <p>モジュールを動的にインポートするために、<code>import</code> キーワードを関数として呼び出すことができます。この方法で使用すると、promise が返されます。</p>
 
 <pre class="brush: js notranslate">import('/modules/my-module.js')
-  .then((module) =&gt; {
-    // module を使った何らかの処理
-  });
+  .then((module) =&gt; {
+    // module を使った何らかの処理
+  });
 </pre>
 
 <p>この方法は <code>await</code> キーワードを使えます。</p>

@@ -9,7 +9,9 @@ La méthode **CanvasRenderingContext2D.translate()** de l'API Canvas 2D ajoute u
 
 ## Syntaxe
 
-    void ctx.translate(x, y);
+```js
+void ctx.translate(x, y);
+```
 
 ![](canvas_grid_translate.png)
 

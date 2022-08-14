@@ -77,7 +77,7 @@ The `-webkit-mask-repeat-y` プロパティは、マスク画像を垂直方向�
 ```css
 .examplethree {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
-  -webkit-mask-repeat-y: repeat, space;
+  -webkit-mask-repeat-y: repeat, space;
 }
 ```
 

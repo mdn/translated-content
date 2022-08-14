@@ -10,7 +10,7 @@ translation_of: Web/API/Network_Information_API
 ---
 <p>{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}</p>
 
-<p>La Network Information (Información de red) API provee información sobre el sistema de conexión en términos genéricos de tipos de conexión (ej., 'wifi', 'cellular', etc.). Esta puede ser usada para elegir contenido en alta definición o contenido  baja definición basándose en la conexión del usuario. Toda la API consiste en la adición de la {{domxref("NetworkInformation")}} interfaz y una única propiedad para la {{domxref("Navigator")}} interfaz: {{domxref("Navigator.connection")}}.</p>
+<p>La Network Information (Información de red) API provee información sobre el sistema de conexión en términos genéricos de tipos de conexión (ej., 'wifi', 'cellular', etc.). Esta puede ser usada para elegir contenido en alta definición o contenido  baja definición basándose en la conexión del usuario. Toda la API consiste en la adición de la {{domxref("NetworkInformation")}} interfaz y una única propiedad para la {{domxref("Navigator")}} interfaz: {{domxref("Navigator.connection")}}.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -31,24 +31,24 @@ conexion.addEventListener('change', updateConnectionStatus);
 
 <h3 id="Precargar_recursos_grandes"><span style="">Precargar recursos grandes</span></h3>
 
-<p><span style="">El objeto de conexión es muy útil por ir decidiendo entre precargar recursos que ocupan mucho ancho de banda o memoria. Este ejemplo puede ser llamado justo después de que la página cargue para verificar el tipo de conexión donde precargar un video tal vez no sea lo deseado.Si se detecta la conexión de un celular, entonces el </span><code style="">preloadVideo</code><span style=""> flag está seteado en </span><code style="">false</code><span style="">. Para simplificación y claridad, este ejemplo sólo testea un tipo de conexión. Una real-word usa case probablemente una declaración de switch o otro método para verificar todos los posibles valores de</span> {{domxref("NetworkInformation.type")}}.<span style=""> <br>
+<p><span style="">El objeto de conexión es muy útil por ir decidiendo entre precargar recursos que ocupan mucho ancho de banda o memoria. Este ejemplo puede ser llamado justo después de que la página cargue para verificar el tipo de conexión donde precargar un video tal vez no sea lo deseado.Si se detecta la conexión de un celular, entonces el </span><code style="">preloadVideo</code><span style=""> flag está seteado en </span><code style="">false</code><span style="">. Para simplificación y claridad, este ejemplo sólo testea un tipo de conexión. Una real-word usa case probablemente una declaración de switch o otro método para verificar todos los posibles valores de</span> {{domxref("NetworkInformation.type")}}.<span style=""> <br>
  <br>
- en caso usaría una declaración de switch o algún otro método para verificar todos los valores posibles de<br>
- use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. </span>Independientemente del valor de tipo, puede obtener una estimación de la velocidad de conexión a través de la propiedad<span style=""> {{domxref("NetworkInformation.effectiveType")}}.</span></p>
+ en caso usaría una declaración de switch o algún otro método para verificar todos los valores posibles de<br>
+ use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. </span>Independientemente del valor de tipo, puede obtener una estimación de la velocidad de conexión a través de la propiedad<span style=""> {{domxref("NetworkInformation.effectiveType")}}.</span></p>
 
 <pre class="brush: js notranslate">let precargarVideo = true;
 var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {
-    precargarVideo = false;
-  }
+    precargarVideo = false;
+  }
 }</pre>
 
 <h2 id="Interfaces">Interfaces</h2>
 
 <dl>
  <dt>{{domxref("NetworkInformation")}}</dt>
- <dd>Provee información sobre la conexión de un dispositivo si está usándose para cominicarse con la red y proveer un tipo de scripts para ser notificado si el tipo de conexión cambia. La intefaz de <code>NetworkInformation</code> no puede ser inicializada. En lugar de esto, se accede a través de la interfaz {{domxref("Navigator")}}.</dd>
+ <dd>Provee información sobre la conexión de un dispositivo si está usándose para cominicarse con la red y proveer un tipo de scripts para ser notificado si el tipo de conexión cambia. La intefaz de <code>NetworkInformation</code> no puede ser inicializada. En lugar de esto, se accede a través de la interfaz {{domxref("Navigator")}}.</dd>
 </dl>
 
 <h2 id="Especificaciones">Especificaciones</h2>

@@ -5,7 +5,7 @@ translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 <div>{{GamesSidebar}}</div>
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}} </div>
+<div>{{IncludeSubnav("/en-US/docs/Games")}} </div>
 
 <div class="summary">
 <p>In this tutorial we’ll go through the process of building an HTML5 mobile game that uses the <a href="https://developer.mozilla.org/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">Device Orientation</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/Vibration">Vibration</a><strong> APIs</strong> to enhance the gameplay and is built using the <a class="external external-icon" href="http://phaser.io/">Phaser</a> framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.</p>
@@ -239,7 +239,7 @@ this.ball.body.bounce.set(0.3, 0.3);</pre>
 
 <pre class="brush: js">this.keys = this.game.input.keyboard.createCursorKeys();</pre>
 
-<p>As you can see there’s a special Phaser function called <code>createCursorKeys()</code>, which will give us an object with event handlers for the four arrow keys to play with: up, down, left and right.</p>
+<p>As you can see there’s a special Phaser function called <code>createCursorKeys()</code>, which will give us an object with event handlers for the four arrow keys to play with: up, down, left and right.</p>
 
 <p>Next we will add the following code to the <code>update()</code> function, so it will be fired on every frame. The <code>this.keys</code> object will be checked against player input, so the ball can react accordingly with the predefined force:</p>
 

@@ -42,11 +42,11 @@ translation_of: Web/CSS/Layout_cookbook/Pagination
 
 ```css
 .pagination {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  column-gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 2px;
 }
 ```
 

@@ -6,7 +6,7 @@ browser-compat: javascript.builtins.Object.setPrototypeOf
 ---
 <p>{{JSRef}}</p>
 
-<p>Object.setPrototypeOf() 메소드는  지정된 객체의 프로토타입 (즉, 내부 [[Prototype]] 프로퍼티)을 다른 객체 또는 {{jsxref("null")}} 로 설정합니다.</p>
+<p>Object.setPrototypeOf() 메소드는  지정된 객체의 프로토타입 (즉, 내부 [[Prototype]] 프로퍼티)을 다른 객체 또는 {{jsxref("null")}} 로 설정합니다.</p>
 
 <div class="warning">
 <p><strong>Warning:</strong> Changing the <code>[[Prototype]]</code> of an object is, by the nature of how modern JavaScript engines optimize property accesses, a very slow operation, in <strong><em>every</em></strong> browser and JavaScript engine. The effects on performance of altering inheritance are subtle and far-flung, and are not limited to simply the time spent in <code>obj.__proto__ = ...</code> statement, but may extend to <strong><em>any</em></strong> code that has access to <strong><em>any</em></strong> object whose <code>[[Prototype]]</code> has been altered. If you care about performance you should avoid setting the <code>[[Prototype]]</code> of an object. Instead, create a new object with the desired <code>[[Prototype]]</code> using {{jsxref("Object.create()")}}.</p>
@@ -20,20 +20,20 @@ browser-compat: javascript.builtins.Object.setPrototypeOf
 
 <dl>
  <dt><code>obj</code></dt>
- <dd>프로토타입을 설정을 가지는 객체</dd>
+ <dd>프로토타입을 설정을 가지는 객체</dd>
  <dt><code>prototype</code></dt>
- <dd>객체의 새로운 프로토 타입  (객체 or {{jsxref("null")}}).</dd>
+ <dd>객체의 새로운 프로토 타입  (객체 or {{jsxref("null")}}).</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
-<p>지정된 객체 </p>
+<p>지정된 객체 </p>
 
 <h2 id="Description">Description</h2>
 
-<p>만일 프로토타입이 변경될 객체가 {{jsxref("Object.isExtensible()")}} 에 의해서 non-extensible 하다면,  {{jsxref("TypeError")}} 예외처리를 해라. 만일 프로토타입 파라미터가 객체가 아니거나 {{jsxref("null")}} (i.e., number, string, boolean,  {{jsxref("undefined")}}) 인 경우가 아니라면 어떠한 작업도 하지마라. 이 방법을 통해서 객제의 프로토타입이 새로운 값으로 변경될 것이다.</p>
+<p>만일 프로토타입이 변경될 객체가 {{jsxref("Object.isExtensible()")}} 에 의해서 non-extensible 하다면,  {{jsxref("TypeError")}} 예외처리를 해라. 만일 프로토타입 파라미터가 객체가 아니거나 {{jsxref("null")}} (i.e., number, string, boolean,  {{jsxref("undefined")}}) 인 경우가 아니라면 어떠한 작업도 하지마라. 이 방법을 통해서 객제의 프로토타입이 새로운 값으로 변경될 것이다.</p>
 
-<p>Object.setPrototypeOf는 ECMAScript 2015 스펙으로 규정되어 있다. 해당 메소드는 일반적으로 객체의 프로토타입과 논쟁이 되는 {{jsxref("Object.prototype.__proto__")}} 프로퍼티를 설정하는 적절한 방법으로 고려된다. </p>
+<p>Object.setPrototypeOf는 ECMAScript 2015 스펙으로 규정되어 있다. 해당 메소드는 일반적으로 객체의 프로토타입과 논쟁이 되는 {{jsxref("Object.prototype.__proto__")}} 프로퍼티를 설정하는 적절한 방법으로 고려된다. </p>
 
 <p>Examples</p>
 
@@ -42,7 +42,7 @@ browser-compat: javascript.builtins.Object.setPrototypeOf
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>예전 버전의 프로퍼티 {{jsxref("Object.prototype.__proto__")}} 를 사용한다면, 우리는 쉽게 Object.setPrototypeOf 가 쉽게 정의 할수 있다.</p>
+<p>예전 버전의 프로퍼티 {{jsxref("Object.prototype.__proto__")}} 를 사용한다면, 우리는 쉽게 Object.setPrototypeOf 가 쉽게 정의 할수 있다.</p>
 
 <pre class="brush: js ">// Only works in Chrome and FireFox, does not work in IE:
 Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
@@ -127,7 +127,7 @@ Object.appendChain(oCat, new Animal());
 console.log(oCat.breathing); // 'yes'
 </pre>
 
-<h4 id="Second_example_객체_Constructor의_인스턴스에_존재하는_원래_값을_변경_및_해당_객체_프로토타입에_Chain_설정하기">Second example: 객체 Constructor의 인스턴스에 존재하는 원래 값을 변경 및 해당 객체 프로토타입에 Chain 설정하기</h4>
+<h4 id="Second_example_객체_Constructor의_인스턴스에_존재하는_원래_값을_변경_및_해당_객체_프로토타입에_Chain_설정하기">Second example: 객체 Constructor의 인스턴스에 존재하는 원래 값을 변경 및 해당 객체 프로토타입에 Chain 설정하기</h4>
 
 <pre class="brush: js ">function MySymbol() {
   this.isSymbol = 'yes';
@@ -171,5 +171,5 @@ george(); // 'Hello guys!!'
  <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
  <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
  <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
+ <li>{{jsxref("Object.prototype.__proto__")}} </li>
 </ul>

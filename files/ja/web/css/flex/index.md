@@ -76,9 +76,9 @@ flex: unset;
 
 - **値 3 つの構文:** 値は以下の順序でなければなりません。
 
-  1.  {{cssxref("&lt;number&gt;")}} で `<flex-grow>` として解釈される。
-  2.  {{cssxref("&lt;number&gt;")}} で `<flex-shrink>` として解釈される。
-  3.  {{cssxref("width")}} として有効な値で、`<flex-basis>` として解釈される。
+  1. {{cssxref("&lt;number&gt;")}} で `<flex-grow>` として解釈される。
+  2. {{cssxref("&lt;number&gt;")}} で `<flex-shrink>` として解釈される。
+  3. {{cssxref("width")}} として有効な値で、`<flex-basis>` として解釈される。
 
 ### 値
 

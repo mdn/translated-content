@@ -15,7 +15,9 @@ La méthode **`NodeList.keys()`** renvoie un {{jsxref("Les_protocoles_iteration"
 
 ## Syntaxe
 
-    nodeList.keys();
+```js
+nodeList.keys();
+```
 
 ### Valeur retournée
 
@@ -43,9 +45,11 @@ for(var key of list.keys()) {
 
 Le résultat est :
 
-    0
-    1
-    2
+```
+0
+1
+2
+```
 
 ## Spécifications
 

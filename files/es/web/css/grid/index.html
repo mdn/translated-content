@@ -3,7 +3,7 @@ title: grid
 slug: Web/CSS/grid
 translation_of: Web/CSS/grid
 ---
-<p>La propiedad CSS <strong><code>grid</code></strong> es un <a href="/es/docs/Web/CSS/Shorthand_properties">shorthand</a> que permite definir todas las propiedades <em>grid</em> explícitas ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, y {{cssxref("grid-template-areas")}}), implícitas ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, y {{cssxref("grid-auto-flow")}}), y relativas a <em>gutter</em><em> </em>({{cssxref("grid-column-gap")}} y {{cssxref("grid-row-gap")}}) en una sola declaración.</p>
+<p>La propiedad CSS <strong><code>grid</code></strong> es un <a href="/es/docs/Web/CSS/Shorthand_properties">shorthand</a> que permite definir todas las propiedades <em>grid</em> explícitas ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, y {{cssxref("grid-template-areas")}}), implícitas ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, y {{cssxref("grid-auto-flow")}}), y relativas a <em>gutter</em><em> </em>({{cssxref("grid-column-gap")}} y {{cssxref("grid-row-gap")}}) en una sola declaración.</p>
 
 <pre class="brush: css no-line-numbers">/* &lt;'grid-template'&gt; values */
 grid: none;
@@ -35,7 +35,7 @@ grid: unset;
 </pre>
 
 <div class="note">
-<p><strong>Nota:</strong> Sólo se pueden especificar las propiedades explícitas <strong><em>o bien</em></strong> las propiedades implícitas en una sola declaración <code>grid</code>. Las sub-propiedades que no se especifican se definen a su valor inicial, como es normal para shorthands. También, las propiedades relativas a gutter se redefinen mediante este shorthand, incluso cuando no pueden ser definidas mediante el mismo.</p>
+<p><strong>Nota:</strong> Sólo se pueden especificar las propiedades explícitas <strong><em>o bien</em></strong> las propiedades implícitas en una sola declaración <code>grid</code>. Las sub-propiedades que no se especifican se definen a su valor inicial, como es normal para shorthands. También, las propiedades relativas a gutter se redefinen mediante este shorthand, incluso cuando no pueden ser definidas mediante el mismo.</p>
 </div>
 
 <p>{{cssinfo}}</p>
@@ -46,13 +46,13 @@ grid: unset;
 
 <dl>
  <dt><code>&lt;'grid-template'&gt;</code></dt>
- <dd>Define el {{cssxref("grid-template")}} incluyendo {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} y {{cssxref("grid-template-areas")}}.</dd>
+ <dd>Define el {{cssxref("grid-template")}} incluyendo {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} y {{cssxref("grid-template-areas")}}.</dd>
  <dt><code>&lt;'grid-template-rows'&gt; / [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-columns'&gt;?</code></dt>
- <dd>Implementa un <em>auto-flow</em> asignando los <em>row tracks</em> explícitamente mediante {{cssxref("grid-template-rows")}} (definiendo {{cssxref("grid-template-columns")}} en <code>none</code>) y especificando como auto-repetir los <em>column tracks</em> mediante {{cssxref("grid-auto-columns")}} (definiendo {{cssxref("grid-auto-rows")}} en <code>auto</code>). {{cssxref("grid-auto-flow")}} es seteado en <code>column</code> en consecuencia, con <code>dense</code> si se especifica.<br>
- Todas las otras sub-propiedades de <code>grid</code> se redefinen a sus valores iniciales.</dd>
+ <dd>Implementa un <em>auto-flow</em> asignando los <em>row tracks</em> explícitamente mediante {{cssxref("grid-template-rows")}} (definiendo {{cssxref("grid-template-columns")}} en <code>none</code>) y especificando como auto-repetir los <em>column tracks</em> mediante {{cssxref("grid-auto-columns")}} (definiendo {{cssxref("grid-auto-rows")}} en <code>auto</code>). {{cssxref("grid-auto-flow")}} es seteado en <code>column</code> en consecuencia, con <code>dense</code> si se especifica.<br>
+ Todas las otras sub-propiedades de <code>grid</code> se redefinen a sus valores iniciales.</dd>
  <dt><code>[ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-rows'&gt;? / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>Implementa un <em>auto-flow</em> asignando los <em>column tracks</em> explícitamente mediante {{cssxref("grid-template-columns")}} (definiendo {{cssxref("grid-template-rows")}} en <code>none</code>) y especificando como auto-repetir los <em>row tracks</em> mediante {{cssxref("grid-auto-rows")}} (definiendo {{cssxref("grid-auto-columns")}} en <code>auto</code>). {{cssxref("grid-auto-flow")}} es seteado en <code>row</code> en consecuencia, con <code>dense</code> si se especifica.<br>
- Todas las otras sub-propiedades de <code>grid</code> se redefinen a sus valores iniciales.</dd>
+ <dd>Implementa un <em>auto-flow</em> asignando los <em>column tracks</em> explícitamente mediante {{cssxref("grid-template-columns")}} (definiendo {{cssxref("grid-template-rows")}} en <code>none</code>) y especificando como auto-repetir los <em>row tracks</em> mediante {{cssxref("grid-auto-rows")}} (definiendo {{cssxref("grid-auto-columns")}} en <code>auto</code>). {{cssxref("grid-auto-flow")}} es seteado en <code>row</code> en consecuencia, con <code>dense</code> si se especifica.<br>
+ Todas las otras sub-propiedades de <code>grid</code> se redefinen a sus valores iniciales.</dd>
 </dl>
 
 <h3 id="Sintaxis_formal">Sintaxis formal</h3>
@@ -105,7 +105,7 @@ grid: unset;
   <tr>
    <td>{{SpecName("CSS3 Grid", "#propdef-grid", "grid")}}</td>
    <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Definición inicial</td>
+   <td>Definición inicial</td>
   </tr>
  </tbody>
 </table>

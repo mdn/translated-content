@@ -18,7 +18,9 @@ La méthode **`navigator.sendBeacon()`** peut être utilisée pour transférer u
 
 ## Syntaxe
 
-    navigator.sendBeacon(url, donnees);
+```js
+navigator.sendBeacon(url, donnees);
+```
 
 ### Paramètres
 

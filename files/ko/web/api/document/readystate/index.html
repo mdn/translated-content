@@ -5,9 +5,9 @@ translation_of: Web/API/Document/readyState
 ---
 <div>{{APIRef("DOM")}}{{gecko_minversion_header("1.9.2")}}</div>
 
-<p><strong><code>Document.readyState</code></strong> 속성을 통해  {{domxref("document")}}의 로딩 상태를 확인할 수 있다.</p>
+<p><strong><code>Document.readyState</code></strong> 속성을 통해  {{domxref("document")}}의 로딩 상태를 확인할 수 있다.</p>
 
-<p>Document.readyState 속성 값이 바뀔 때 {{event("readystatechange")}} 이벤트가 {{domxref("document")}}에서 일어난다.</p>
+<p>Document.readyState 속성 값이 바뀔 때 {{event("readystatechange")}} 이벤트가 {{domxref("document")}}에서 일어난다.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -16,15 +16,15 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="Values">Values</h3>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">document의 </span></font>readyState</code> 상태는 아래 3가지가 될 수 있다.</p>
+<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">document의 </span></font>readyState</code> 상태는 아래 3가지가 될 수 있다.</p>
 
 <dl>
  <dt><code>loading</code></dt>
- <dd> {{domxref("document")}} 로딩 중.</dd>
+ <dd> {{domxref("document")}} 로딩 중.</dd>
  <dt><code>interactive</code></dt>
- <dd>문서의 로딩은 끝이 나고 해석 중 이지만  images, stylesheets, frames과 같은 하위 자원들은 로딩되고 있는 상태이다.</dd>
+ <dd>문서의 로딩은 끝이 나고 해석 중 이지만  images, stylesheets, frames과 같은 하위 자원들은 로딩되고 있는 상태이다.</dd>
  <dt><code>complete</code></dt>
- <dd>문서와 모든 하위 자원들의 로드가 완료된 상태이다. 이 상태는 {{event("load")}}  이벤트가 발생되기 직전 상태이다.</dd>
+ <dd>문서와 모든 하위 자원들의 로드가 완료된 상태이다. 이 상태는 {{event("load")}}  이벤트가 발생되기 직전 상태이다.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -83,36 +83,9 @@ document.onreadystatechange = function () {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="spectable standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#current-document-readiness", "Document readiness")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "#current-document-readiness", "Document readiness")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#current-document-readiness", "Document readiness")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <div>{{Compat("api.Document.readyState")}}</div>
 

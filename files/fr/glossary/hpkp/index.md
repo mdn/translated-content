@@ -14,4 +14,4 @@ original_slug: Glossaire/HPKP
 - {{HTTPHeader("Public-Key-Pins")}}
 - {{HTTPHeader("Public-Key-Pins-Report-Only")}}
 - [RFC 7469](https://tools.ietf.org/html/rfc7469)
-- Wikipedia : [HTTP Public Key Pinning](https://fr.wikipedia.org/wiki/HTTP_Public_Key_Pinning)
+- Wikipédia : [HTTP Public Key Pinning](https://fr.wikipedia.org/wiki/HTTP_Public_Key_Pinning)

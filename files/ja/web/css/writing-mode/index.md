@@ -56,7 +56,7 @@ writing-mode: unset;
   - : SVG1 文書を除き、非推奨です。CSS では、`horizontal-tb` を代わりに使用してください。
 - `tb` {{deprecated_inline}}
   - : SVG1 文書を除き、非推奨です。CSS では、`vertical-rl` を代わりに使用してください。
-- `tb-lr` {{deprecated_inline}}
+- `tb-lr` {{deprecated_inline}}
   - : SVG1 文書を除き、非推奨です。CSS では、`vertical-lr` を代わりに使用してください。
 - `tb-rl` {{deprecated_inline}}
   - : SVG1 文書を除き、非推奨です。CSS では、`vertical-rl` を代わりに使用してください。

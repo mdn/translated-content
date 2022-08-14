@@ -13,7 +13,7 @@ translation_of: Web/API/Request/integrity
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>{{domxref("Request")}} インターフェイスの <strong><code>integrity</code></strong> 読み取り専用プロパティには、リクエストの <a href="/ja/docs/Web/Security/Subresource_Integrity">サブリソース完全性</a> 値が含まれています。</p>
+<p>{{domxref("Request")}} インターフェイスの <strong><code>integrity</code></strong> 読み取り専用プロパティには、リクエストの <a href="/ja/docs/Web/Security/Subresource_Integrity">サブリソース完全性</a> 値が含まれています。</p>
 
 <h2 id="構文">構文</h2>
 
@@ -21,13 +21,13 @@ translation_of: Web/API/Request/integrity
 
 <h3 id="値">値</h3>
 
-<p>リクエストの <a href="/ja/docs/Web/Security/Subresource_Integrity">サブリソース完全性</a> 値 (例, <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>)。</p>
+<p>リクエストの <a href="/ja/docs/Web/Security/Subresource_Integrity">サブリソース完全性</a> 値 (例, <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>)。</p>
 
-<p>完全性が指定されていない場合、 <code>''</code> を返します。</p>
+<p>完全性が指定されていない場合、 <code>''</code> を返します。</p>
 
 <h2 id="例">例</h2>
 
-<p>次のスニペットでは {{domxref("Request.Request()")}} コンストラクタを使用して新しい request を作成し ( script と同じディレクトリにある画像ファイルの場合)、 request の <code>integrity</code> 値を変数に保存します:</p>
+<p>次のスニペットでは {{domxref("Request.Request()")}} コンストラクタを使用して新しい request を作成し ( script と同じディレクトリにある画像ファイルの場合)、 request の <code>integrity</code> 値を変数に保存します:</p>
 
 <pre class="brush: js notranslate">var myRequest = new Request('flowers.jpg');
 var myIntegrity = myRequest.integrity;</pre>

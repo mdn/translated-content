@@ -20,7 +20,9 @@ La _Pointer capture_ (_capture de pointeur_) permet de re-cibler des événement
 
 ## Syntaxe
 
-    .setPointerCapture(pointerId);
+```js
+.setPointerCapture(pointerId);
+```
 
 targetElement
 

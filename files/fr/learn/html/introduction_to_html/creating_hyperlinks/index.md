@@ -271,10 +271,10 @@ Vous aurez besoin de faire des copies locales des quatre pages suivantes, toutes
 
 Vous devez :
 
-1.  Ajouter une liste non-ordonnée à l'endroit indiqué sur une page, qui contiendra les noms des pages à relier. Un menu de navigation n'est habituellement qu'une liste de liens, donc c'est ok sur le plan sémantique.
-2.  Changer chaque nom de page en un lien vers cette page.
-3.  Copier le menu de navigation dans chaque page.
-4.  Sur chaque page, enlever seulement le lien vers cette page, c'est source de confusion et sans objet pour une page que d'inclure un lien vers elle-même, et l'absence d'un lien constitue un bon rappel visuel pour se souvenir sur quelle page vous êtes actuellement.
+1. Ajouter une liste non-ordonnée à l'endroit indiqué sur une page, qui contiendra les noms des pages à relier. Un menu de navigation n'est habituellement qu'une liste de liens, donc c'est ok sur le plan sémantique.
+2. Changer chaque nom de page en un lien vers cette page.
+3. Copier le menu de navigation dans chaque page.
+4. Sur chaque page, enlever seulement le lien vers cette page, c'est source de confusion et sans objet pour une page que d'inclure un lien vers elle-même, et l'absence d'un lien constitue un bon rappel visuel pour se souvenir sur quelle page vous êtes actuellement.
 
 L'exemple terminé devrait finir par ressembler à quelque chose comme ce qui suit :
 

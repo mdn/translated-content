@@ -19,7 +19,9 @@ Cette valeur n'est pas aussi utile que {{domxref("DeviceMotionEvent.acceleration
 
 ## Syntaxe
 
-    var acceleration = instanceOfDeviceMotionEvent.accelerationIncludingGravity;
+```js
+var acceleration = instanceOfDeviceMotionEvent.accelerationIncludingGravity;
+```
 
 ## Valeur
 

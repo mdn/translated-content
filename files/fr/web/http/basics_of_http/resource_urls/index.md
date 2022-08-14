@@ -17,11 +17,15 @@ Les URLs de type ressource sont les URLs préfixées à l'aide du schéma `resou
 
 Les URLs de type ressource sont composées de deux parties, un préfixe (`resource:`) et l'URL qui dirige vers la ressource que l'on souhaite charger :
 
-    resource://<url>
+```
+resource://<url>
+```
 
 Voici un exemple :
 
-    resource://gre/res/svg.css
+```
+resource://gre/res/svg.css
+```
 
 Pour plus de détails, vous pouvez consulter [Identifier des ressources sur le Web](/fr/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web).
 

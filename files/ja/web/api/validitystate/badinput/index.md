@@ -23,9 +23,9 @@ translation_of: Web/API/ValidityState/badInput
 ```js
 var input = document.getElementById("age");
 if (input.validity.badInput) {
-  console.log("Bad input detected…");
+  console.log("Bad input detected…");
 } else {
-  console.log("Content of input OK.");
+  console.log("Content of input OK.");
 }
 ```
 

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 
 <h2 id="Summary" name="Summary"><span class="short_text" id="result_box" lang="pt"><span class="hps">Resumo</span></span></h2>
 
-<p>O <strong><code>construtor Function</code></strong> cria um novo objeto <code>Function</code>. Chamar o construtor diretamente pode criar funções dinamicamente, mas sofre com problemas de segurança e desempenho semelhante (mas muito menos significativo) a {{jsxref("eval")}}. No entanto, diferentemente de eval, a Função construtora cria funções que executam somente no escopo global.</p>
+<p>O <strong><code>construtor Function</code></strong> cria um novo objeto <code>Function</code>. Chamar o construtor diretamente pode criar funções dinamicamente, mas sofre com problemas de segurança e desempenho semelhante (mas muito menos significativo) a {{jsxref("eval")}}. No entanto, diferentemente de eval, a Função construtora cria funções que executam somente no escopo global.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -23,26 +23,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string que corresponde para uma válida identidade JavaScript ou uma lista de certas strings separadas com uma <span class="short_text" id="result_box" lang="pt"><span class="hps">vírgula; por exemplo "x", "theValue". our "a,b".</span></span></dd>
+ <dd>Nomes para serem usados pela função como nomes formais de argumentos. Cada um deve ser uma string que corresponde para uma válida identidade JavaScript ou uma lista de certas strings separadas com uma <span class="short_text" id="result_box" lang="pt"><span class="hps">vírgula; por exemplo "x", "theValue". our "a,b".</span></span></dd>
  <dt><code>functionBody</code></dt>
- <dd>Uma string que contém as <span id="result_box" lang="pt"><span class="hps">instruções </span></span>JavaScript que <span id="result_box" lang="pt"><span class="hps">compõem </span></span><span class="short_text" id="result_box" lang="pt"><span class="hps">a definição da função.</span></span></dd>
+ <dd>Uma string que contém as <span id="result_box" lang="pt"><span class="hps">instruções </span></span>JavaScript que <span id="result_box" lang="pt"><span class="hps">compõem </span></span><span class="short_text" id="result_box" lang="pt"><span class="hps">a definição da função.</span></span></dd>
 </dl>
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>Objetos <code>Function</code> criados com o construtor <code>Function</code> são <em>parseados</em> quando a função é criada. Isto é menos eficiente que criar com uma <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/function">expressão de função</a> ou um <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/function">declaração de função</a> e chamando-a dentro do seu código, porque tais funções são <em>parseadas</em> com o resto do código.</p>
+<p>Objetos <code>Function</code> criados com o construtor <code>Function</code> são <em>parseados</em> quando a função é criada. Isto é menos eficiente que criar com uma <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/function">expressão de função</a> ou um <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/function">declaração de função</a> e chamando-a dentro do seu código, porque tais funções são <em>parseadas</em> com o resto do código.</p>
 
 <p>Todos os argumentos passados para a função são tratados como os nomes dos indetificadores dos parâmetros na função a ser criada, na mesma ordem na qual eles foram passados.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Funções criadas com o construtor <code>Function não criam closures</code> para o seu contexto de criação; elas sempre são criadas no escopo global. Quando executadas, elas terão acesso apenas às suas variáveis locais ou globais, não terão acesso às variáveis do escopo na qual o construtor <code>Function</code> foi chamado. Isto é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com o código de uma expressão de função.</p>
+<p><strong>Nota:</strong> Funções criadas com o construtor <code>Function não criam closures</code> para o seu contexto de criação; elas sempre são criadas no escopo global. Quando executadas, elas terão acesso apenas às suas variáveis locais ou globais, não terão acesso às variáveis do escopo na qual o construtor <code>Function</code> foi chamado. Isto é diferente de usar {{jsxref("Global_Objects/eval", "eval")}} com o código de uma expressão de função.</p>
 </div>
 
-<p>Invocar o construtor <code>Function</code> como uma função (sem usar o operador <code>new</code>) tem o mesmo efeito de chamá-la como um construtor.</p>
+<p>Invocar o construtor <code>Function</code> como uma função (sem usar o operador <code>new</code>) tem o mesmo efeito de chamá-la como um construtor.</p>
 
-<h2 id="Propriedades_e_Métodos_da_Function">Propriedades e Métodos da <code>Function</code></h2>
+<h2 id="Propriedades_e_Métodos_da_Function">Propriedades e Métodos da <code>Function</code></h2>
 
-<p>O objeto global <code>Function</code> não tem métodos ou propriedades próprias, no entanto, como ela é uma função, ela herda alguns métodos e propriedades através do prototype chain do {{jsxref("Function.prototype")}}.</p>
+<p>O objeto global <code>Function</code> não tem métodos ou propriedades próprias, no entanto, como ela é uma função, ela herda alguns métodos e propriedades através do prototype chain do {{jsxref("Function.prototype")}}.</p>
 
 <h2 id="Function_prototype_object"><code>Function</code> prototype object</h2>
 
@@ -175,55 +175,7 @@ domQuery('.testClass')
 
 <h2 id="Compatibilidade">Compatibilidade</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Function")}}
 
 <h2 id="See_also" name="See_also">See also</h2>
 

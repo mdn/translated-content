@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Statements/var
 
 <h2 id="Sumário">Sumário</h2>
 
-<p>O <strong><code>variable</code> statement</strong> declara uma variável, opcionalmente é possível atribuir à ela um valor em sua inicialização.</p>
+<p>O <strong><code>variable</code> statement</strong> declara uma variável, opcionalmente é possível atribuir à ela um valor em sua inicialização.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -29,11 +29,11 @@ translation_of: Web/JavaScript/Reference/Statements/var
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>Declarações de variáveis, onde quer que elas ocorram, são processadas antes que qualquer outro código seja executado. O escopo de uma variável declarada com  <code>var</code> é seu contexto atual em execução, o qual é a função a qual pertence ou, para variáveis declaradas fora de qualquer função, o escopo é o global.</p>
+<p>Declarações de variáveis, onde quer que elas ocorram, são processadas antes que qualquer outro código seja executado. O escopo de uma variável declarada com  <code>var</code> é seu contexto atual em execução, o qual é a função a qual pertence ou, para variáveis declaradas fora de qualquer função, o escopo é o global.</p>
 
 <p>Atribuir um valor a uma variável não declarada anteriormente implica em criar uma variável global (ela se torna uma propriedade do objeto global) quando a atribuição é executada. As diferenças entre uma variável declarada e uma não delcarada são:</p>
 
-<p>1. Variáveis declaradas estão relacionadas com o contexto de execução quando elas são criadas (por exemplo, uma função, objeto). Por outro lado, as variaveis não declaradas sempre são globais.</p>
+<p>1. Variáveis declaradas estão relacionadas com o contexto de execução quando elas são criadas (por exemplo, uma função, objeto). Por outro lado, as variaveis não declaradas sempre são globais.</p>
 
 <pre class="brush: js">function x() {
   y = 1;   // Lança a exceção ReferenceError em modo restrito (strict mode)
@@ -55,7 +55,7 @@ console.log('still going...'); // Nunca será executado.</pre>
 console.log(a);                // mostra "undefined" ou "" dependendo do naveador.
 console.log('still going...'); // mostra "still going...".</pre>
 
-<p>3. Variáveis declaradas são propriedades não configuráveis no contexto de execução (função ou global). Variaveis não declaradas são configuráveis (por exemplo, podem ser excluídas).</p>
+<p>3. Variáveis declaradas são propriedades não configuráveis no contexto de execução (função ou global). Variaveis não declaradas são configuráveis (por exemplo, podem ser excluídas).</p>
 
 <pre class="brush: js">var a = 1;
 b = 2;
@@ -66,11 +66,11 @@ delete this.b;
 console.log(a, b); // Throws a ReferenceError.
 // A propriedade 'b' foi deletada e não existe mais.</pre>
 
-<p>Por conta dessas três diferenças, falha para declarar variáveis, muito provavelmente, levar a resultados inesperados. <strong>Então, é recomendado sempre declarar as variáveis, independentemente se as variáveis estão em escopo de função ou escopo global</strong>. E o modo restrito (<a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>) do ECMAScript 5 sempre lançará uma exceçao quando o código atribuir um valor a uma variável não declarada.</p>
+<p>Por conta dessas três diferenças, falha para declarar variáveis, muito provavelmente, levar a resultados inesperados. <strong>Então, é recomendado sempre declarar as variáveis, independentemente se as variáveis estão em escopo de função ou escopo global</strong>. E o modo restrito (<a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>) do ECMAScript 5 sempre lançará uma exceçao quando o código atribuir um valor a uma variável não declarada.</p>
 
 <h3 id="var_hoisting">var hoisting</h3>
 
-<p>Como as declarações de variáveis (e declarações em geral) são processadas antes de qualquer código seja executado, declarar uma variável em qualquer lugar no código é equivalente a declarar no inicio. Isso também significa que uma variável pode aparecer para ser usada antes dela ser declarada. Esse comportamento é chamado de "hoisting", a variável é movida para o inicio da função ou do código global.</p>
+<p>Como as declarações de variáveis (e declarações em geral) são processadas antes de qualquer código seja executado, declarar uma variável em qualquer lugar no código é equivalente a declarar no inicio. Isso também significa que uma variável pode aparecer para ser usada antes dela ser declarada. Esse comportamento é chamado de "hoisting", a variável é movida para o inicio da função ou do código global.</p>
 
 <pre class="brush: js">bla = 2
 var bla;
@@ -82,7 +82,7 @@ var bla;
 bla = 2;
 </pre>
 
-<p>Por essa razão, recomenda-se sempre declarar variáveis na parte superior do seu escopo de aplicação (o topo do código global e a parte superior do código da função). Por isso, é claro que as variáveis são função de escopo (local) e que são resolvidos na cadeia de escopo.</p>
+<p>Por essa razão, recomenda-se sempre declarar variáveis na parte superior do seu escopo de aplicação (o topo do código global e a parte superior do código da função). Por isso, é claro que as variáveis são função de escopo (local) e que são resolvidos na cadeia de escopo.</p>
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
@@ -101,13 +101,13 @@ var b = a;
 var a, b = a = "A";
 </pre>
 
-<p>É sempre importante lembrar da ordem da declaração das variáveis:</p>
+<p>É sempre importante lembrar da ordem da declaração das variáveis:</p>
 
 <pre class="brush: js">var x = y, y = 'A';
 console.log(x + y); // undefinedA
 </pre>
 
-<p>Então, <span style="font-family: consolas,monaco,andale mono,monospace;">x</span> e <span style="font-family: consolas,monaco,andale mono,monospace;">y</span> são declarados antes de qualquer código seja executado, a atribuição ocorre posteriormente. Quando "<span style="font-family: consolas,monaco,andale mono,monospace;">x = y</span>" for executado, y existe e nenhum exceção <span style="font-family: consolas,monaco,andale mono,monospace;">ReferenceError</span> é lançada, e o valor de y será considerado como '<code style="font-style: normal;">undefined</code>'. Por este motivo, este valor é atribuido a <span style="font-family: consolas,monaco,andale mono,monospace;">x</span>. Depois disso, o valor 'A' é atribuido a variável <span style="font-family: consolas,monaco,andale mono,monospace;">y</span>. Consequentemente, depois da primeira linha, <span style="font-family: consolas,monaco,andale mono,monospace;">x === undefined &amp;&amp; y === 'A'</span>, então o resultado.</p>
+<p>Então, <span style="font-family: consolas,monaco,andale mono,monospace;">x</span> e <span style="font-family: consolas,monaco,andale mono,monospace;">y</span> são declarados antes de qualquer código seja executado, a atribuição ocorre posteriormente. Quando "<span style="font-family: consolas,monaco,andale mono,monospace;">x = y</span>" for executado, y existe e nenhum exceção <span style="font-family: consolas,monaco,andale mono,monospace;">ReferenceError</span> é lançada, e o valor de y será considerado como '<code style="font-style: normal;">undefined</code>'. Por este motivo, este valor é atribuido a <span style="font-family: consolas,monaco,andale mono,monospace;">x</span>. Depois disso, o valor 'A' é atribuido a variável <span style="font-family: consolas,monaco,andale mono,monospace;">y</span>. Consequentemente, depois da primeira linha, <span style="font-family: consolas,monaco,andale mono,monospace;">x === undefined &amp;&amp; y === 'A'</span>, então o resultado.</p>
 
 <h3 id="Iniciando_diversas_variáveis">Iniciando diversas variáveis</h3>
 
@@ -167,67 +167,19 @@ console.log(typeof y); // indefinido já que y é uma variável local da funçã
   <tr>
    <td>{{SpecName('ES5.1', '#sec-12.2', 'var statement')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-variable-statement', 'variable statement')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.statements.var")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

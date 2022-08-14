@@ -11,7 +11,7 @@ translation_of: Web/API/CSSStyleDeclaration/setProperty
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p><span class="seoSummary"><strong><code>CSSStyleDeclaration.setProperty()</code></strong> メソッドインターフェイスは、 CSS スタイル宣言オブジェクトのプロパティに新しい値を設定します。</span></p>
+<p><span class="seoSummary"><strong><code>CSSStyleDeclaration.setProperty()</code></strong> メソッドインターフェイスは、 CSS スタイル宣言オブジェクトのプロパティに新しい値を設定します。</span></p>
 
 <h2 id="Syntax">構文</h2>
 
@@ -21,16 +21,16 @@ translation_of: Web/API/CSSStyleDeclaration/setProperty
 <h3 id="Parameters">引数</h3>
 
 <ul>
-  <li><em><code>propertyName</code></em> は {{domxref('DOMString')}} で、変更する CSS プロパティ名 (ハイフン区切り) です。</li>
-  <li><em><code>value</code></em> {{optional_inline}} は
-    {{domxref('DOMString')}} で、新しいプロパティ値が入ります。指定されなかった場合は、空文字列として扱われます。
+  <li><em><code>propertyName</code></em> は {{domxref('DOMString')}} で、変更する CSS プロパティ名 (ハイフン区切り) です。</li>
+  <li><em><code>value</code></em> {{optional_inline}} は
+    {{domxref('DOMString')}} で、新しいプロパティ値が入ります。指定されなかった場合は、空文字列として扱われます。
     <ul>
-      <li>注: <em><code>value</code></em> は <code>"!important"</code> を含んではいけません。 --
+      <li>注: <em><code>value</code></em> は <code>"!important"</code> を含んではいけません。 --
         これは <em><code>priority</code></em> 引数を使用して設定してください。</li>
     </ul>
   </li>
   <li><em><code>priority</code></em> {{optional_inline}} は
-    {{domxref('DOMString')}} で、 CSS の優先度 "important" を設定することができます。指定されなかった場合は、空文字列として扱われます。以下の値を受け付けます。
+    {{domxref('DOMString')}} で、 CSS の優先度 "important" を設定することができます。指定されなかった場合は、空文字列として扱われます。以下の値を受け付けます。
     <ul>
       <li>文字列値 <code>"important"</code></li>
       <li>キーワード <code>undefined</code></li>
@@ -66,9 +66,9 @@ translation_of: Web/API/CSSStyleDeclaration/setProperty
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button class="border"&gt;Border&lt;/button&gt;
-  &lt;button class="bgcolor"&gt;Background&lt;/button&gt;
-  &lt;button class="color"&gt;Text&lt;/button&gt;
+  &lt;button class="border"&gt;Border&lt;/button&gt;
+  &lt;button class="bgcolor"&gt;Background&lt;/button&gt;
+  &lt;button class="color"&gt;Text&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class="box"&gt;
   &lt;p&gt;Box&lt;/p&gt;

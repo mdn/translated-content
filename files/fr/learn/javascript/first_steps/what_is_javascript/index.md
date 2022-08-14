@@ -186,9 +186,9 @@ Le JavaScript est appliqué à votre page HTML un peu comme le CSS. Les élémen
 
 ### JavaScript interne
 
-1.  Faites d'abord une copie locale de notre fichier d'exemple [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Enregistrez-le dans un répertoire approprié.
-2.  Ouvrez le fichier dans votre navigateur web et dans un éditeur de texte. Vous verrez que le HTML crée une page web simple contenant un bouton cliquable.
-3.  Ensuite, allez dans votre éditeur de texte et ajoutez ce qui suit juste avant la balise fermante `</head>`&nbsp;:
+1. Faites d'abord une copie locale de notre fichier d'exemple [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Enregistrez-le dans un répertoire approprié.
+2. Ouvrez le fichier dans votre navigateur web et dans un éditeur de texte. Vous verrez que le HTML crée une page web simple contenant un bouton cliquable.
+3. Ensuite, allez dans votre éditeur de texte et ajoutez ce qui suit juste avant la balise fermante `</head>`&nbsp;:
 
     ```html
     <script>
@@ -198,7 +198,7 @@ Le JavaScript est appliqué à votre page HTML un peu comme le CSS. Les élémen
     </script>
     ```
 
-4.  Ajoutons maintenant du JavaScript dans notre élément {{htmlelement("script")}} pour rendre la page plus dynamique. Ajoutez le code suivant juste en dessous de la ligne "// JavaScript goes here"&nbsp;:
+4. Ajoutons maintenant du JavaScript dans notre élément {{htmlelement("script")}} pour rendre la page plus dynamique. Ajoutez le code suivant juste en dessous de la ligne "// JavaScript goes here"&nbsp;:
 
     ```js
       document.addEventListener("DOMContentLoaded", function() {
@@ -216,7 +216,7 @@ Le JavaScript est appliqué à votre page HTML un peu comme le CSS. Les élémen
     });
     ```
 
-5.  Enregistrez le fichier et actualisez le navigateur. Vous pouvez maintenant voir que, lorsque vous cliquez sur le bouton, un nouveau paragraphe est généré et placé en dessous.
+5. Enregistrez le fichier et actualisez le navigateur. Vous pouvez maintenant voir que, lorsque vous cliquez sur le bouton, un nouveau paragraphe est généré et placé en dessous.
 
 > **Note :** si l'exemple ne semble pas marcher, reprenez pas à pas chaque étape. Avez-vous bien enregistré le code de départ comme un fichier `.html`&nbsp;? Avez-vous bien ajouté l'élément {{htmlelement("script")}} juste après la balise `</head>`&nbsp;? Avez-vous collé le bon code JavaScript au bon endroit&nbsp;? **JavaScript est sensible à la casse, et assez tatillon, il faut donc respecter scrupuleusement la syntaxe indiquée, sans quoi il peut ne pas fonctionner.**
 
@@ -226,15 +226,15 @@ Le JavaScript est appliqué à votre page HTML un peu comme le CSS. Les élémen
 
 Ça marche très bien, mais si nous voulons mettre notre JavaScript dans un fichier externe&nbsp;? Voyons cela.
 
-1.  Créez d'abord un nouveau fichier dans le même répertoire que votre fichier HTML. Nommez-le `script.js` (vérifiez qu'il a bien l'extension de fichier .js, c'est ainsi qu'il est identifié comme fichier JavaScript).
-2.  Ensuite, copiez-collez tout le script contenu dans l'élément {{htmlelement("script")}} vers le fichier .js, et enregistrez le fichier.
-3.  À présent remplacez l'élément {{htmlelement("script")}} par&nbsp;:
+1. Créez d'abord un nouveau fichier dans le même répertoire que votre fichier HTML. Nommez-le `script.js` (vérifiez qu'il a bien l'extension de fichier .js, c'est ainsi qu'il est identifié comme fichier JavaScript).
+2. Ensuite, copiez-collez tout le script contenu dans l'élément {{htmlelement("script")}} vers le fichier .js, et enregistrez le fichier.
+3. À présent remplacez l'élément {{htmlelement("script")}} par&nbsp;:
 
     ```html
     <script src="script.js" defer></script>
     ```
 
-4.  Enregistrez et rechargez la page dans votre navigateur, et vous devriez voir la même chose qu'avant. C'est la même chose, mais nous avons maintenant le JavaScript dans un fichier externe. C'est une bonne chose en général pour organiser le code et le rendre réutilisable pour plusieurs fichiers HTML. Cela rend aussi le code HTML plus lisible en évitant d'y inclure de gros blocs de JavaScript.
+4. Enregistrez et rechargez la page dans votre navigateur, et vous devriez voir la même chose qu'avant. C'est la même chose, mais nous avons maintenant le JavaScript dans un fichier externe. C'est une bonne chose en général pour organiser le code et le rendre réutilisable pour plusieurs fichiers HTML. Cela rend aussi le code HTML plus lisible en évitant d'y inclure de gros blocs de JavaScript.
 
 **Note :** vous pouvez voir cette version sur GitHub avec [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) et [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([ainsi qu'en live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
 

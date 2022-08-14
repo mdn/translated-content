@@ -16,8 +16,8 @@ translation_of: Web/API/Node/appendChild
 <p>Si el hijo(Child) <strong>es una referencia</strong>(hace referencia) hacia un nodo existente en el documento actual, este es quitado del padre actual para ser puesto en el nodo padre nuevo. La clave está en <strong>si el (Child) es una referencia a un nodo existente en el documento</strong>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Nueva API disponible </strong><br>
- El método {{domxref("ParentNode.append()")}} soporta varios argumentos y cadenas para adjuntar.</p>
+<p><strong>Nueva API disponible </strong><br>
+ El método {{domxref("ParentNode.append()")}} soporta varios argumentos y cadenas para adjuntar.</p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -28,20 +28,20 @@ translation_of: Web/API/Node/appendChild
 
 <dl>
  <dt><strong>aChild</strong></dt>
- <dd>El nodo a adjuntar al nodo padre proporcionado (normalmente un elemento).</dd>
+ <dd>El nodo a adjuntar al nodo padre proporcionado (normalmente un elemento).</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>El valor devuelto es el hijo adjunto excepto cuando el hijo proporcionado es un {{domxref("DocumentFragment")}}, en cuyo caso el {{domxref("DocumentFragment")}} vacío es devuelto.</p>
+<p>El valor devuelto es el hijo adjunto excepto cuando el hijo proporcionado es un {{domxref("DocumentFragment")}}, en cuyo caso el {{domxref("DocumentFragment")}} vacío es devuelto.</p>
 
 <h2 id="Notas">Notas</h2>
 
-<p>El encadenamiento podría no funcionar como se espera debido a que <code>appendChild()</code> devuelve un elemento hijo:</p>
+<p>El encadenamiento podría no funcionar como se espera debido a que <code>appendChild()</code> devuelve un elemento hijo:</p>
 
 <pre class="brush: js">var aBlock = doc.createElement('block').appendChild(doc.createElement('b'));</pre>
 
-<p>Establece <code>aBlock</code> como <code>&lt;b&gt;&lt;/b&gt;</code> sólo, que no es probablemente lo que quieras.</p>
+<p>Establece <code>aBlock</code> como <code>&lt;b&gt;&lt;/b&gt;</code> sólo, que no es probablemente lo que quieras.</p>
 
 <p>Si el <code>child</code> hace una referencia a un nodo existente en el documento, el método <code>appendChild</code> se mueve de su posición actual a su nueva posición (ej. no existen requerimientos para eliminar el nodo desde su nodo padre antes de añadirlo a cualquier otro nodo).</p>
 

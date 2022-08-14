@@ -83,8 +83,8 @@ Object.is(NaN, 0/0);         // true
 <h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
 
 <pre class="brush: js notranslate">if (!Object.is) {
-  Object.defineProperty(Object, "is", {
-    value: function (x, y) {
+  Object.defineProperty(Object, "is", {
+    value: function (x, y) {
       // 同値アルゴリズム
       if (x === y) { // ステップ 1 から 5、および 7 から 10
         // ステップ 6.b から 6.e までの場合: +0 != -0
@@ -93,7 +93,7 @@ Object.is(NaN, 0/0);         // true
         // ステップ 6.a の場合: NaN == NaN
         return x !== x &amp;&amp; y !== y;
       }
-    }
+    }
   });
 }</pre>
 

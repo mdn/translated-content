@@ -8,9 +8,9 @@ tags:
   - Referencia
 translation_of: Web/CSS/align-items
 ---
-<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>align-items</code></strong> estabelece o valor {{cssxref("align-self")}} em todos filhos diretos como um grupo. A propriedade align-self estabelece o alinhamento de um certo item dentro do bloco que o contém. Em Flexbox ele controla o alinhamento dos itens em {{glossary("Cross Axis")}}, enquanto que no Grid Layout, controla o alinhamento dos itens no Eixo de Bloco dentro de sua  <a href="/en-US/docs/Glossary/Grid_Areas">grid area</a>.</p>
+<p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>align-items</code></strong> estabelece o valor {{cssxref("align-self")}} em todos filhos diretos como um grupo. A propriedade align-self estabelece o alinhamento de um certo item dentro do bloco que o contém. Em Flexbox ele controla o alinhamento dos itens em {{glossary("Cross Axis")}}, enquanto que no Grid Layout, controla o alinhamento dos itens no Eixo de Bloco dentro de sua  <a href="/en-US/docs/Glossary/Grid_Areas">grid area</a>.</p>
 
-<p>O exemplo interativo abaixo demonstra alguns dos valores para <code>align-items</code> usando grid layout.</p>
+<p>O exemplo interativo abaixo demonstra alguns dos valores para <code>align-items</code> usando grid layout.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/align-items.html")}}</div>
 
@@ -51,21 +51,21 @@ align-items: unset;
  <dt><code>normal</code></dt>
  <dd>O efeito desta palavra-chave depende do modo de layout em que nos encontramos:
  <ul>
-  <li>Em layouts absolutamente posicionados, a palavra-chave se comporta como <code>start</code> em <em>replaced</em> de caixas absolutamente posicionadas, e como <code>stretch</code> em <em>all others</em> de caixas absolutamente posicionadas.</li>
+  <li>Em layouts absolutamente posicionados, a palavra-chave se comporta como <code>start</code> em <em>replaced</em> de caixas absolutamente posicionadas, e como <code>stretch</code> em <em>all others</em> de caixas absolutamente posicionadas.</li>
   <li>Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como <code>stretch</code>.</li>
   <li>Para itens-flex, a palavra chave se comporto como <code>stretch</code>.</li>
-  <li>Para itens-grid, esta palavra-chave leva a um comportamento similiar ao <code>stretch</code>, exceto para caixas com um aspect ratio ou tamanhos intrínsecos, onde se comporta como <code>start</code>.</li>
+  <li>Para itens-grid, esta palavra-chave leva a um comportamento similiar ao <code>stretch</code>, exceto para caixas com um aspect ratio ou tamanhos intrínsecos, onde se comporta como <code>start</code>.</li>
   <li>A propriedade não se aplica para caixas block-level, e para células de tabela.</li>
  </ul>
  </dd>
  <dt><code>flex-start</code></dt>
- <dd>As bordas da margem superior dos itens-flex são juntados com a borda superior da linha.</dd>
+ <dd>As bordas da margem superior dos itens-flex são juntados com a borda superior da linha.</dd>
  <dt><code>flex-end</code></dt>
- <dd>As bordas da margem inferior dos itens flex são juntados com a borda inferior da linha.</dd>
+ <dd>As bordas da margem inferior dos itens flex são juntados com a borda inferior da linha.</dd>
  <dt><code>center</code></dt>
- <dd>As caixas de margem dos itens flex são centralizados ao longo da linha do eixo. Caso o tamanho de um item seja superior ao container flex, irá transbordar de maneira igual em ambas direções.</dd>
+ <dd>As caixas de margem dos itens flex são centralizados ao longo da linha do eixo. Caso o tamanho de um item seja superior ao container flex, irá transbordar de maneira igual em ambas direções.</dd>
  <dt><code>start</code></dt>
- <dd>Os itens são posicionados, para cada um, em direção a borda início do container de alinhamento no eixo apropriado. </dd>
+ <dd>Os itens são posicionados, para cada um, em direção a borda início do container de alinhamento no eixo apropriado. </dd>
  <dt><code>end</code></dt>
  <dd>Os itens são posicionados, para cada um, em direção a borda fim do container de alinhamento no eixo apropriado.</dd>
  <dt><code>self-start</code></dt>
@@ -78,9 +78,9 @@ align-items: unset;
  <dt><code>baseline</code></dt>
  <dt><code>first baseline</code></dt>
  <dt><code>last baseline</code></dt>
- <dd>Todos itens-flex são alinhados de tal forma que suas  <a href="https://drafts.csswg.org/css-flexbox-1/#flex-baselines" rel="external">baselines de container flex</a> estejam alinhados. O item com a maior distância entre o eixo de início de sua margem e sua baseline é juntado com eixo de início da linha.</dd>
+ <dd>Todos itens-flex são alinhados de tal forma que suas  <a href="https://drafts.csswg.org/css-flexbox-1/#flex-baselines" rel="external">baselines de container flex</a> estejam alinhados. O item com a maior distância entre o eixo de início de sua margem e sua baseline é juntado com eixo de início da linha.</dd>
  <dt><code>stretch</code></dt>
- <dd>Itens-flex são esticados de tal maneira que o tamanho da caixa de margem do item seja o mesmo da linha, respeitando as restrições de comprimento e altura.</dd>
+ <dd>Itens-flex são esticados de tal maneira que o tamanho da caixa de margem do item seja o mesmo da linha, respeitando as restrições de comprimento e altura.</dd>
  <dt><code>safe</code></dt>
  <dd>Usado em conjunto com uma palavra-chave de alinhamento. Se a palavra-chave escolhida signifique que o item transborde o alinhamento do container, causando assim perda de dados, o item é alinhado como estivesse no modo <code>start</code>.</dd>
  <dt><code>unsafe</code></dt>

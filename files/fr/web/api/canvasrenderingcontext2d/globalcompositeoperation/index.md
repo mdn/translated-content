@@ -11,7 +11,9 @@ Voir aussi [Composition et découpe](/fr/docs/Tutoriel_canvas/Composition) dans 
 
 ## Syntaxe
 
-    ctx.globalCompositeOperation = type;
+```js
+ctx.globalCompositeOperation = type;
+```
 
 `type` est de type {{jsxref("String")}} et permet de choisir quelle opération de composition ou de mode fondu utiliser.
 

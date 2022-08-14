@@ -18,7 +18,9 @@ La propriété **`rotationRate`** renvoie la vitesse de rotation de l'appareil a
 
 ## Syntaxe
 
-    var rates = instanceOfDeviceMotionEvent.rotationRate;
+```js
+var rates = instanceOfDeviceMotionEvent.rotationRate;
+```
 
 ## Valeurs
 

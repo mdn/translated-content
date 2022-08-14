@@ -16,7 +16,9 @@ La méthode **`Document.createAttribute()`** crée un nouveau nœud d'attribut e
 
 ## Syntaxe
 
-    attribut = document.createAttribute(nom)
+```js
+attribut = document.createAttribute(nom)
+```
 
 ### Paramètres
 

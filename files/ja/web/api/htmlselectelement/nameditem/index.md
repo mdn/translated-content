@@ -60,4 +60,4 @@ elem1 = document.forms[0]['myFormControl']['o1']; // Returns the HTMLOptionEleme
 
 ## 関連情報
 
-- 実装先の {{domxref("HTMLSelectElement")}} 
+- 実装先の {{domxref("HTMLSelectElement")}}

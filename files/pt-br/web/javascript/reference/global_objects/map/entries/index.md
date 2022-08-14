@@ -34,7 +34,7 @@ Um novo objeto iterador {{jsxref("Map")}}.
 let myMap = new Map()
 myMap.set('0', 'foo')
 myMap.set(1, 'bar')
-myMap.set({}, 'baz)
+myMap.set({}, 'baz')
 
 let mapIter = myMap.entries()
 

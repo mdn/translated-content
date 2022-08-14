@@ -5,7 +5,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 ---
 <div>{{APIRef}}</div>
 
-<p><code>notificationclick</code> 이벤트는 <span style="line-height: 19.0909080505371px;">{{domxref("ServiceWorkerRegistration.showNotification()")}} 에 의해 발생한 시스템 notification 이 클릭되었음을 나타내기 위해 </span>발생된다.</p>
+<p><code>notificationclick</code> 이벤트는 <span style="line-height: 19.0909080505371px;">{{domxref("ServiceWorkerRegistration.showNotification()")}} 에 의해 발생한 시스템 notification 이 클릭되었음을 나타내기 위해 </span>발생된다.</p>
 
 <table class="properties">
  <tbody>
@@ -30,7 +30,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 
 <h2 id="Examples">Examples</h2>
 
-<p><code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> 메소드 내에서 <code>notificationclick</code> 이벤트를 사용할 수 있다:</p>
+<p><code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> 메소드 내에서 <code>notificationclick</code> 이벤트를 사용할 수 있다:</p>
 
 <pre class="brush: js">self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
@@ -52,7 +52,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 });
 </pre>
 
-<p>또는 <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick">onnotificationclick</a></code> 이벤트 핸들러 속성을 사용할 수 있다:</p>
+<p>또는 <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick">onnotificationclick</a></code> 이벤트 핸들러 속성을 사용할 수 있다:</p>
 
 <pre class="brush: js">self.onnotificationclick = function(event) {
   console.log('On notification click: ', event.notification.tag);
@@ -75,26 +75,11 @@ translation_of: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-serviceworkerglobalscope-onnotificationclick','onnotificationclick')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-
 <p>{{Compat("api.ServiceWorkerGlobalScope.notificationclick_event")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

@@ -9,7 +9,9 @@ La propriété en lecture seule **`GeolocationPosition.timestamp`** retourne un 
 
 ## Syntaxe
 
-    var timestamp = geolocationPositionInstance.timestamp
+```js
+var timestamp = geolocationPositionInstance.timestamp
+```
 
 ### Valeur
 

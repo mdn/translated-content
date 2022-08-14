@@ -14,7 +14,9 @@ translation_of: Web/API/Element/getAttributeNS
 
 ## Syntaxe
 
-    attrVal =element.getAttributeNS(namespace,name)
+```js
+attrVal =element.getAttributeNS(namespace,name)
+```
 
 ### Paramètres
 

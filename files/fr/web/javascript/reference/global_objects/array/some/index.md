@@ -22,7 +22,9 @@ La méthode **`some()`** teste si au moins un élément du tableau passe le test
 
 ## Syntaxe
 
-    arr.some(callback[, objetThis])
+```js
+arr.some(callback[, objetThis])
+```
 
 ### Paramètres
 

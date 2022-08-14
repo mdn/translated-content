@@ -64,7 +64,7 @@ filter: unset;</pre>
 
 <h2 id="함수">함수</h2>
 
-<p><code>filter</code> 속성은 <code>none</code> 또는 아래의 함수를 하나 이상 사용해 지정할 수 있습니다. 어떤 함수의 매개변수가 유효하지 않다면, 그 함수는 <code>none</code>을 반환합니다. 따로 명시하지 않으면 백분율 값(<code>34%</code> 등)을 받는 함수는 그 백분율의 소수 표기(<code>0.34</code> 등)도 받을 수 있습니다.</p>
+<p><code>filter</code> 속성은 <code>none</code> 또는 아래의 함수를 하나 이상 사용해 지정할 수 있습니다. 어떤 함수의 매개변수가 유효하지 않다면, 그 함수는 <code>none</code>을 반환합니다. 따로 명시하지 않으면 백분율 값(<code>34%</code> 등)을 받는 함수는 그 백분율의 소수 표기(<code>0.34</code> 등)도 받을 수 있습니다.</p>
 
 <h3 id="SVG_필터">SVG 필터</h3>
 
@@ -78,7 +78,7 @@ filter: unset;</pre>
 
 <h4 id="blur"><code>blur()</code></h4>
 
-<p>{{cssxref("filter-function/blur", "blur()")}} 함수는 주어진 이미지에 가우시안 블러를 적용합니다. <code>radius</code> 값은 정규 분포의 표준 편차, 즉 화면에서 혼합할 픽셀의 수를 지정하므로 값이 클수록 이미지가 흐려집니다. 보간 시 누락값은 <code>0</code>입니다. 매개변수는 CSS 길이로 명시되어 있지만 백분율 값은 받지 않습니다.</p>
+<p>{{cssxref("filter-function/blur", "blur()")}} 함수는 주어진 이미지에 가우시안 블러를 적용합니다. <code>radius</code> 값은 정규 분포의 표준 편차, 즉 화면에서 혼합할 픽셀의 수를 지정하므로 값이 클수록 이미지가 흐려집니다. 보간 시 누락값은 <code>0</code>입니다. 매개변수는 CSS 길이로 명시되어 있지만 백분율 값은 받지 않습니다.</p>
 
 <pre class="brush: css notranslate">filter: blur(5px)
 </pre>
@@ -1103,28 +1103,11 @@ img {
   filter: url(commonfilters.xml#large-blur);
 }</pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#FilterProperty', 'filter') }}</td>
-   <td>{{ Spec2('Filters 1.0') }}</td>
-   <td>초기 정의</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("css.properties.filter")}}</p>
 

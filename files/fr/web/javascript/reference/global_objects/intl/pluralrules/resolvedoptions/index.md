@@ -18,7 +18,9 @@ La méthode **`Intl.PluralRules.prototype.resolvedOptions()`** renvoie un nouvel
 
 ## Syntaxe
 
-    pluralRule.resolvedOptions()
+```js
+pluralRule.resolvedOptions()
+```
 
 ### Valeur de retour
 

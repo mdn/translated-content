@@ -15,7 +15,7 @@ original_slug: Web/API/NodeFilter
 <p><strong><code>NodeFilter</code></strong> 接口表示一个对象，此对象用于过滤 {{ domxref("NodeIterator") }} 或 {{ domxref("TreeWalker") }} 中的节点。它既不能处理 DOM，也不能遍历节点；它只能根据提供的过滤器对单个节点进行判定。</p>
 
 <div class="note">
-<p><strong>注意：</strong>浏览器不提供任何实现该接口的对象。用户需要自己编写该对象，根据需要自行定制 <code>acceptNode()</code> 方法，以用于{{domxref("TreeWalker")}} 或 {{domxref("NodeIterator")}} 对象。</p>
+<p><strong>注意：</strong>浏览器不提供任何实现该接口的对象。用户需要自己编写该对象，根据需要自行定制 <code>acceptNode()</code> 方法，以用于{{domxref("TreeWalker")}} 或 {{domxref("NodeIterator")}} 对象。</p>
 </div>
 
 <h2 id="属性">属性</h2>
@@ -28,7 +28,7 @@ original_slug: Web/API/NodeFilter
 
 <dl>
  <dt>{{domxref("NodeFilter.acceptNode()")}}</dt>
- <dd>返回一个 <code>unsigned short</code>，用于表示提供的{{domxref("Node")}} 是否需要被{{ domxref("NodeIterator") }} 或 {{ domxref("TreeWalker") }} 迭代算法所接受。这个方法应由使用 <code>NodeFilter</code> 的用户编写。可能的值如下：
+ <dd>返回一个 <code>unsigned short</code>，用于表示提供的{{domxref("Node")}} 是否需要被{{ domxref("NodeIterator") }} 或 {{ domxref("TreeWalker") }} 迭代算法所接受。这个方法应由使用 <code>NodeFilter</code> 的用户编写。可能的值如下：
  <table class="standard-table">
   <tbody>
    <tr>
@@ -83,31 +83,11 @@ while ((node = nodeIterator.nextNode())) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-nodefilter', 'NodeFilter')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeFilter', 'NodeFilter')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
-<p>{{Compat("api.NodeFilter")}}</p>
+{{Compat}}
 
 <h2 id="参见">参见</h2>
 

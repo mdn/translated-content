@@ -33,7 +33,7 @@ original_slug: Learn/Forms/The_native_form_widgets
  </tbody>
 </table>
 
-<p>既にいくつかのフォーム要素を見てきました。 {{HTMLelement('form')}}, {{HTMLelement('fieldset')}}, {{HTMLelement('legend')}}, {{HTMLelement('textarea')}}, {{HTMLelement('label')}}, {{HTMLelement('button')}},  {{HTMLelement('input')}} などです。この記事では、以下の要素を扱います。</p>
+<p>既にいくつかのフォーム要素を見てきました。 {{HTMLelement('form')}}, {{HTMLelement('fieldset')}}, {{HTMLelement('legend')}}, {{HTMLelement('textarea')}}, {{HTMLelement('label')}}, {{HTMLelement('button')}},  {{HTMLelement('input')}} などです。この記事では、以下の要素を扱います。</p>
 
 <ul>
  <li>よく使われる入力型である {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}}, {{HTMLelement('input/text', 'text')}}</li>
@@ -132,21 +132,21 @@ original_slug: Learn/Forms/The_native_form_widgets
 <p>関連するチェックボックス項目には、同じ {{htmlattrxref("name","input")}} 属性を使用してください。 <code><a href="/ja/docs/Web/HTML/Attributes/checked">checked</a></code> 属性を含めると、ページが読み込まれたときにチェックボックスが自動的にチェックされます。チェックボックス自体または関連づけられたラベルをクリックすると、チェックボックスのオンとオフが切り替わります。</p>
 
 <pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;Choose all the vegetables you like to eat&lt;/legend&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;label for="carrots"&gt;Carrots&lt;/label&gt;
-      &lt;input type="checkbox" id="carrots" name="vegetable" value="carrots" checked&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="peas"&gt;Peas&lt;/label&gt;
-      &lt;input type="checkbox" id="peas" name="vegetable" value="peas"&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="cabbage"&gt;Cabbage&lt;/label&gt;
-      &lt;input type="checkbox" id="cabbage" name="vegetable" value="cabbage"&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;legend&gt;Choose all the vegetables you like to eat&lt;/legend&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label for="carrots"&gt;Carrots&lt;/label&gt;
+      &lt;input type="checkbox" id="carrots" name="vegetable" value="carrots" checked&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="peas"&gt;Peas&lt;/label&gt;
+      &lt;input type="checkbox" id="peas" name="vegetable" value="peas"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="cabbage"&gt;Cabbage&lt;/label&gt;
+      &lt;input type="checkbox" id="cabbage" name="vegetable" value="cabbage"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/fieldset&gt;</pre>
 
 <p>下記のスクリーンショットは macOS での Firefox 71 と Safari、および Windows 10 の Chrome 79 と Edge 18 において、チェックボックスが既定の場合、フォーカスされた場合、、無効にされた場合を示しています。</p>
@@ -168,21 +168,21 @@ original_slug: Learn/Forms/The_native_form_widgets
 <p>複数のラジオボタンを結びつけることができます。 {{htmlattrxref("name","input")}} 属性の値が同じであれば、同じグループのボタンであるとみなされます。グループ内のボタンは同時に一つしかチェックできません。つまり、あるボタンがチェックされると、他のボタンは自動的にチェックが外されます。フォームが送信される際には、チェックされたラジオボタンの値のみが送信されます。一つもチェックされていない場合、ラジオボタンのグループ全体が未知の状態であるとみなされ、値はフォームと共に送信されません。同じ名前のグループのラジオボタンの一つがチェックされると、ユーザーはフォームをリセットせずに、すべてのボタンのチェックを外すことはできません。</p>
 
 <pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;What is your favorite meal?&lt;/legend&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;label for="soup"&gt;Soup&lt;/label&gt;
-      &lt;input type="radio" id="soup" name="meal" value="soup" checked&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="curry"&gt;Curry&lt;/label&gt;
-      &lt;input type="radio" id="curry" name="meal" value="curry"&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="pizza"&gt;Pizza&lt;/label&gt;
-      &lt;input type="radio" id="pizza" name="meal" value="pizza"&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;legend&gt;What is your favorite meal?&lt;/legend&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label for="soup"&gt;Soup&lt;/label&gt;
+      &lt;input type="radio" id="soup" name="meal" value="soup" checked&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="curry"&gt;Curry&lt;/label&gt;
+      &lt;input type="radio" id="curry" name="meal" value="curry"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="pizza"&gt;Pizza&lt;/label&gt;
+      &lt;input type="radio" id="pizza" name="meal" value="pizza"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/fieldset&gt;</pre>
 
 <p>下記のスクリーンショットは macOS での Firefox 71 と Safari、および Windows 10 の Chrome 79 と Edge 18 において、ラジオボタンがチェックされていない場合といる場合、フォーカスがある場合、無効にされていてチェックされていない場合といる場合を示しています。</p>

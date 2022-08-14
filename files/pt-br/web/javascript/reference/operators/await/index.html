@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Operators/await
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>O operador <code>await</code> é utilizado para esperar por uma {{jsxref("Promise")}}. Ele pode ser usado apenas dentro de uma {{jsxref("Statements/async_function", "async function")}}.</p>
+<p>O operador <code>await</code> é utilizado para esperar por uma {{jsxref("Promise")}}. Ele pode ser usado apenas dentro de uma {{jsxref("Statements/async_function", "async function")}}.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -20,19 +20,19 @@ translation_of: Web/JavaScript/Reference/Operators/await
  <dd>Uma {{jsxref("Promise")}} ou qualquer valor para esperar uma resolução.</dd>
  <dt><code>rv</code></dt>
  <dd>
- <p>Retorna um valor final da promise, ou o próprio valor se ele não for uma <code>Promise</code>.</p>
+ <p>Retorna um valor final da promise, ou o próprio valor se ele não for uma <code>Promise</code>.</p>
  </dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>A expressão <code>await</code> faz a execução de uma função <code>async</code> pausar, para esperar pelo retorno da <code>Promise</code>, e resume a execução da função <code>async</code> quando o valor da Promise é resolvido. Ele então retorna o valor final da Promise. Se esse valor não for uma <code>Promise</code>, ele é convertido para uma <code>Promise </code>resolvida.</p>
+<p>A expressão <code>await</code> faz a execução de uma função <code>async</code> pausar, para esperar pelo retorno da <code>Promise</code>, e resume a execução da função <code>async</code> quando o valor da Promise é resolvido. Ele então retorna o valor final da Promise. Se esse valor não for uma <code>Promise</code>, ele é convertido para uma <code>Promise </code>resolvida.</p>
 
-<p>Se a <code>Promise</code> for rejeitada, a expressão <code>await</code> invoca uma Exception com o valor rejeitado.</p>
+<p>Se a <code>Promise</code> for rejeitada, a expressão <code>await</code> invoca uma Exception com o valor rejeitado.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<p>Se uma <code>Promise</code> é passada para uma expressão <code>await</code>, ele espera pela sefinalização da <code>Promise</code> e retorna seu valor final.</p>
+<p>Se uma <code>Promise</code> é passada para uma expressão <code>await</code>, ele espera pela sefinalização da <code>Promise</code> e retorna seu valor final.</p>
 
 <pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
@@ -49,7 +49,7 @@ async function f1() {
 f1();
 </pre>
 
-<p>Se o valor não for uma <code>Promise</code>, ele converte o valor para uma <code>Promise </code>resolvida,  e espera por ele.</p>
+<p>Se o valor não for uma <code>Promise</code>, ele converte o valor para uma <code>Promise </code>resolvida,  e espera por ele.</p>
 
 <pre class="brush: js">async function f2() {
   var y = await 20;
@@ -57,7 +57,7 @@ f1();
 }
 f2();</pre>
 
-<p>Se a <code>Promise</code> for rejeitada, o valor rejeitado é invocado em uma Exception.</p>
+<p>Se a <code>Promise</code> for rejeitada, o valor rejeitado é invocado em uma Exception.</p>
 
 <pre class="brush: js">async function f3() {
   try {
@@ -89,59 +89,7 @@ f3();</pre>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(55)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("52.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOpera(42)}}</td>
-   <td>10.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(55)}}</td>
-   <td>{{CompatChrome(55)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("52.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(42)}}</td>
-   <td>10.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.operators.await")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

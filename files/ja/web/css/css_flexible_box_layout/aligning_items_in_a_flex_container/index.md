@@ -196,7 +196,6 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 
 {{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
 
-
 ## 関連情報
 
 - [ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)

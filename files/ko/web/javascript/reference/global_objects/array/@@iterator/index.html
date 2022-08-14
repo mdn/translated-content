@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
 <div>{{JSRef}}</div>
 
-<p> <code><strong>@@iterator</strong></code> 속성의 초기 값은 {{jsxref("Array.prototype.values()", "values()")}} 속성의 초기 값과 같은 함수 객체입니다.</p>
+<p> <code><strong>@@iterator</strong></code> 속성의 초기 값은 {{jsxref("Array.prototype.values()", "values()")}} 속성의 초기 값과 같은 함수 객체입니다.</p>
 
 <h2 id="구문">구문</h2>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 
 <h3 id="반환_값">반환 값</h3>
 
-<p>{{jsxref("Array.prototype.values()", "values()")}} 반복기가 반환하는 초기 값. <code>arr[Symbol.iterator]</code>의 기본값은 {{jsxref("Array.prototype.values()", "values()")}} 입니다.</p>
+<p>{{jsxref("Array.prototype.values()", "values()")}} 반복기가 반환하는 초기 값. <code>arr[Symbol.iterator]</code>의 기본값은 {{jsxref("Array.prototype.values()", "values()")}} 입니다.</p>
 
 <h2 id="예제">예제</h2>
 
@@ -46,27 +46,9 @@ console.log(eArr.next().value); // k
 console.log(eArr.next().value); // o
 console.log(eArr.next().value); // p</code></pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

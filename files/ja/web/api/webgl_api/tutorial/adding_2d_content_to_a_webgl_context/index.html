@@ -30,7 +30,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 <p>シェーダーは必要に応じて {{interwiki("wikipedia", "texel_(graphics)", "texel")}} の面のテクスチャ内の座標を決定して頂点に適用したり、法線を適用して頂点に適用する照明係数を決定したりすることもできます。この情報は、フラグメントシェーダーと共有するために、必要に応じて <a href="/ja/docs/Web/API/WebGL_API/Data#Varyings">varyings</a> または <a href="/ja/docs/Web/API/WebGL_API/Data#Attributes">attributes</a> に保存できます。</p>
 
-<p>以下の頂点シェーダーは <code>aVertexPosition</code> と呼ばれる定義した属性から頂点位置の値を受け取ります。次に、その位置に <code>uProjectionMatrix</code> および <code>uModelViewMatrix</code>という 2 つの 4 x 4 行列を乗算します。<code>gl_Position</code> は結果に設定されます。投影法およびその他のマトリックスの詳細については、<a href="https://webglfundamentals.org/webgl/lessons/ja/webgl-3d-perspective.html">この記事が役立つ場合があります</a>。</p>
+<p>以下の頂点シェーダーは <code>aVertexPosition</code> と呼ばれる定義した属性から頂点位置の値を受け取ります。次に、その位置に <code>uProjectionMatrix</code> および <code>uModelViewMatrix</code>という 2 つの 4 x 4 行列を乗算します。<code>gl_Position</code> は結果に設定されます。投影法およびその他のマトリックスの詳細については、<a href="https://webglfundamentals.org/webgl/lessons/ja/webgl-3d-perspective.html">この記事が役立つ場合があります</a>。</p>
 
 <pre class="brush: html line-numbers language-html"><code class="language-html">  // 頂点シェーダーのプログラム
 
@@ -63,7 +63,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 <h3 id="Initializing_the_shaders" name="Initializing_the_shaders">シェーダーの初期化</h3>
 
-<p>2つのシェーダーを定義したので、それらを WebGL に渡してコンパイルし、リンクする必要があります。以下のコードは <code>loadShader()</code> を呼び出して2つのシェーダーを作成し、シェーダーのタイプとソースを渡します。次にプログラムを作成し、シェーダーを接続してそれらをリンクします。コンパイルまたはリンクが失敗した場合、コードはアラートを表示します。</p>
+<p>2つのシェーダーを定義したので、それらを WebGL に渡してコンパイルし、リンクする必要があります。以下のコードは <code>loadShader()</code> を呼び出して2つのシェーダーを作成し、シェーダーのタイプとソースを渡します。次にプログラムを作成し、シェーダーを接続してそれらをリンクします。コンパイルまたはリンクが失敗した場合、コードはアラートを表示します。</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="comment token">//</span>
 <span class="comment token">// Initialize a shader program, so WebGL knows how to draw our data</span>
@@ -144,7 +144,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 <h2 id="Creating_the_square_plane">Creating the square plane</h2>
 
-<p>Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call <code>initBuffers()</code>; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.</p>
+<p>Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call <code>initBuffers()</code>; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">initBuffers</span><span class="punctuation token">(</span><span class="parameter token">gl</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
 
@@ -181,14 +181,14 @@ translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 <p>This routine is pretty simplistic given the basic nature of the scene in this example. It starts by calling the <code>gl</code> object's {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} method to obtain a buffer into which we'll store the vertex positions. This is then bound to the context by calling the {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} method.</p>
 
-<p>Once that's done, we create a JavaScript array containing the position for each vertex of the square plane. This is then converted into an array of floats and passed into the <code>gl</code> object's {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} method to establish the vertex positions for the object.</p>
+<p>Once that's done, we create a JavaScript array containing the position for each vertex of the square plane. This is then converted into an array of floats and passed into the <code>gl</code> object's {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} method to establish the vertex positions for the object.</p>
 
 <h2 id="Rendering_the_scene">Rendering the scene</h2>
 
 <p>Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. Since we're not animating anything in this example, our <code>drawScene()</code> function is very simple. It uses a few utility routines we'll cover shortly.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: You might get a JavaScript error saying " mat4 is not defined". This means there is a dependency on <code>glmatrix</code>. You can include <a href="https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js">gl-matrix.js</a><a href="https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js"> </a>to resolve this issue, as suggested <a href="https://github.com/mdn/webgl-examples/issues/20">here</a>.</p>
+<p><strong>Note</strong>: You might get a JavaScript error saying " mat4 is not defined". This means there is a dependency on <code>glmatrix</code>. You can include <a href="https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js">gl-matrix.js</a><a href="https://mdn.github.io/webgl-examples/tutorial/gl-matrix.js"> </a>to resolve this issue, as suggested <a href="https://github.com/mdn/webgl-examples/issues/20">here</a>.</p>
 </div>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">drawScene</span><span class="punctuation token">(</span><span class="parameter token">gl<span class="punctuation token">,</span> programInfo<span class="punctuation token">,</span> buffers</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
@@ -276,9 +276,9 @@ translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
   <span class="punctuation token">}</span>
 <span class="punctuation token">}</span></code></pre>
 
-<p>The first step is to clear the canvas to our background color; then we establish the camera's perspective. We set a field of view of 45°, with a width to height ratio that match the display dimensions of our canvas. We also specify that we only want objects between 0.1 and 100 units from the camera to be rendered.</p>
+<p>The first step is to clear the canvas to our background color; then we establish the camera's perspective. We set a field of view of 45°, with a width to height ratio that match the display dimensions of our canvas. We also specify that we only want objects between 0.1 and 100 units from the camera to be rendered.</p>
 
-<p>Then we establish the position of the square plane by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the attribute the shader is using for <code>aVertexPosition</code> and we tell WebGL how to pull the data out of it. Finally we draw the object by calling the {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} method.</p>
+<p>Then we establish the position of the square plane by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the attribute the shader is using for <code>aVertexPosition</code> and we tell WebGL how to pull the data out of it. Finally we draw the object by calling the {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} method.</p>
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}</p>
 

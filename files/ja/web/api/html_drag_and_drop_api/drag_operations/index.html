@@ -165,7 +165,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 	<dt><code>all</code></dt>
 	<dd>コピー、移行、リンクの全ての操作が許可されている。</dd>
 	<dt>初期化されていない場合</dt>
-	<dd>既定値は <code>all</code> です。</dd>
+	<dd>既定値は <code>all</code> です。</dd>
 </dl>
 
 <p>上に列挙されている値のいずれかと全く等しい値だけが利用可能であることに注意してください。 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} プロパティを <code>copyMove</code> に設定すると、コピーや移動の操作を許可しますが、ユーザーがリンク操作を行うことを防ぐことができます。 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} プロパティを変更しない場合、「all」が指定された時と同様に、すべての操作が許可されます。ですので、特定の種類の操作を除外したい場合を除いて、プロパティの値を手動で設定する必要はありません。</p>
@@ -189,7 +189,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>{{event("dragenter")}} および {{event("dragover")}} イベントのリスナーは、ドラッグされている項目がどの場所にドロップされようとしているのかを正確に示す働きをすることが多いです。ウェブページやアプリケーションのほとんどの領域は、ドロップデータを受け取る場所としては不適切です。従って、これらのイベントに対する既定の動作はドロップを禁止する働きをします。</p>
 
-<p>ドロップを許可したい場合は、 <code>dragenter</code> および <code>dragover</code> イベントの両方をキャンセルして、既定の処理を防ぐ必要があります。これを行うには、属性に定義されたイベントリスナーから <code>false</code> を返すか、イベントの {{domxref("Event.preventDefault","preventDefault()")}} メソッドを呼び出す必要があります。独立したスクリプトで定義した関数では、後者の方が実現性が高いかもしれません。</p>
+<p>ドロップを許可したい場合は、 <code>dragenter</code> および <code>dragover</code> イベントの両方をキャンセルして、既定の処理を防ぐ必要があります。これを行うには、属性に定義されたイベントリスナーから <code>false</code> を返すか、イベントの {{domxref("Event.preventDefault","preventDefault()")}} メソッドを呼び出す必要があります。独立したスクリプトで定義した関数では、後者の方が実現性が高いかもしれません。</p>
 
 <pre class="brush: html">&lt;div ondragover="return false"&gt;
 &lt;div ondragover="event.preventDefault()"&gt;
@@ -205,7 +205,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
   const isLink = event.dataTransfer.types.includes("text/uri-list");
   if (isLink) {
     event.preventDefault();
-  }
+  }
 }</pre>
 
 <p>この例では、型のリストの中に <a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link" title="text/uri-list">text/uri-list</a> 型があるかどうかを確認するために <code>contains</code> メソッドを使用しています。もし条件が真であれば、イベントはキャンセルされて、ドロップが許可されるでしょう。もしドラッグデータがリンクを含んでいなければ、イベントはキャンセルされず、その場所でのドロップも行われません。</p>

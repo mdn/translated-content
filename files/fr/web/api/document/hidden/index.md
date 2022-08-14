@@ -9,7 +9,9 @@ La propriété **`Document.hidden`** retourne un Booléen qui indique si la page
 
 ## Syntaxe
 
-    var boolean = document.hidden
+```js
+var boolean = document.hidden
+```
 
 ## Exemples
 

@@ -18,14 +18,16 @@ Les littéraux de gabarits sont des littéraux de chaînes de caractères permet
 
 ## Syntaxe
 
-    `texte`
+```js
+`texte`
 
-    `ligne de texte 1
-     ligne de texte 2`
+`ligne de texte 1
+  ligne de texte 2`
 
-    `texte ${expression} texte`
+`texte ${expression} texte`
 
-    etiquette `texte ${expression} texte`
+etiquette `texte ${expression} texte`
+```
 
 ## Description
 

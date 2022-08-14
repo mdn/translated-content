@@ -55,31 +55,31 @@ translation_of: Web/API/ReadableStream
 <p>これは {{domxref("Uint8Array")}} と組み合わせた {{domxref("ReadableStream")}} の使用方法を示しています。</p>
 
 <pre class="brush: js">fetch("https://www.example.org/").then((response) =&gt; {
-  const reader = response.body.getReader();
-  const stream = new ReadableStream({
-    start(controller) {
-      // 次の関数は各データチャンクを処理します
-      function push() {
-        // done は Boolean で、value は Uint8Array です
-        reader.read().then(({ done, value }) =&gt; {
-          // 読み取るデータはもうありませんか？
-          if (done) {
-            // データの送信が完了したことをブラウザーに伝えます
-            controller.close();
-            return;
-          }
+  const reader = response.body.getReader();
+  const stream = new ReadableStream({
+    start(controller) {
+      // 次の関数は各データチャンクを処理します
+      function push() {
+        // done は Boolean で、value は Uint8Array です
+        reader.read().then(({ done, value }) =&gt; {
+          // 読み取るデータはもうありませんか？
+          if (done) {
+            // データの送信が完了したことをブラウザーに伝えます
+            controller.close();
+            return;
+          }
 
-          // データを取得し、コントローラー経由でブラウザーに送信します
-          controller.enqueue(value);
+          // データを取得し、コントローラー経由でブラウザーに送信します
+          controller.enqueue(value);
           push();
-        });
-      };
+        });
+      };
 
-      push();
-    }
-  });
+      push();
+    }
+  });
 
-  return new Response(stream, { headers: { "Content-Type": "text/html" } });
+  return new Response(stream, { headers: { "Content-Type": "text/html" } });
 });
 </pre>
 

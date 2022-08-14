@@ -19,4 +19,4 @@ WebIDL est utilisé dans presque toutes les {{Glossary ("Specification","spécif
 - [Spécification](http://www.w3.org/TR/WebIDL/)
 - [Informations contenues dans un fichier WebIDL](/fr/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file)
 - [Bindings WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-- {{interwiki("wikipedia", "WebIDL")}}
+- [Article en anglais sur Web IDL](https://en.wikipedia.org/wiki/Web_IDL) sur Wikipédia

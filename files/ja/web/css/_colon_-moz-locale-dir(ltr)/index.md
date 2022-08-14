@@ -30,7 +30,6 @@ translation_of: Web/CSS/:-moz-locale-dir(ltr)
 
 この例は、Firefoxを使用していない場合は動作しません。また、セレクタがHTMLコンテンツで正しく動作しない問題があるため、Firefoxでも動作しない場合があります。XUL](/ja/docs/Archive/Mozilla/XUL)で使用するために設計されています。
 
-
 ### HTML
 
 ```html

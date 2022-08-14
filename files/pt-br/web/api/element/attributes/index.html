@@ -14,7 +14,7 @@ translation_of: Web/API/Element/attributes
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p>A propriedade <strong><code>Element.attributes</code></strong> retorna uma coleção de todos os atributos registrados para um nó especificado. É um {{domxref("NamedNodeMap")}}, e não um <code>Array</code>, então não há os métodos de um {{jsxref("Array")}} e os nós indexados {{domxref("Attr")}} podem ser diferentes entre os navegadores. Para ser mais específico, <code>attributes</code> é um par de chave/valor de strings que representa qualquer informação relacionada ao atributo.</p>
+<p>A propriedade <strong><code>Element.attributes</code></strong> retorna uma coleção de todos os atributos registrados para um nó especificado. É um {{domxref("NamedNodeMap")}}, e não um <code>Array</code>, então não há os métodos de um {{jsxref("Array")}} e os nós indexados {{domxref("Attr")}} podem ser diferentes entre os navegadores. Para ser mais específico, <code>attributes</code> é um par de chave/valor de strings que representa qualquer informação relacionada ao atributo.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -64,10 +64,10 @@ var atts = para.attributes;</pre>
  &lt;p id="paragraph" style="color: green;"&gt;Paragrafo de exemplo&lt;/p&gt;
  &lt;form action=""&gt;
   &lt;p&gt;
-    &lt;input type="button" value="Mostra o nome e o valor do atributo"
+    &lt;input type="button" value="Mostra o nome e o valor do atributo"
       onclick="listAttributes();"&gt;
     &lt;input id="result" type="text" value=""&gt;
-  &lt;/p&gt;
+  &lt;/p&gt;
  &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
@@ -106,61 +106,11 @@ var atts = para.attributes;</pre>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }} [1]</td>
-   <td>6.0 [2]</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funcionalidade</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }} [1]</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Antes do Firefox 22, este atributo foi implementado na interface {{domxref("Node")}} (herdada por {{domxref("Element")}}). foi movido para esta interface para obedecer a especificação e o uso em outros navegadores.</p>
-
-<p>[2] Internet Explorer 5.5 retorna um map contendo os valores ao invés dos objetos do atributo.</p>
+{{Compat("api.Element.attributes")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
  <li>{{domxref("NamedNodeMap")}}, a interface do objeto retornado</li>
- <li>Considerações sobre a compatibilidade entre os navegadores: em <a class="external" href="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a></li>
+ <li>Considerações sobre a compatibilidade entre os navegadores: em <a class="external" href="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a></li>
 </ul>

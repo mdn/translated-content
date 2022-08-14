@@ -64,8 +64,8 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### Outils de développement
 
-- La [console Web/a> met à présent en cache les message d'erreurs et les entrées du journal ajoutés grâce à {{domxref("console.log()")}} si la console n'est pas ouverte actuellement, et les affichent lorsque qu'elle s'ouvre.](/fr/docs/Tools/Web_Console)
-- [Vous pouvez désormais réinitialiser le niveau de zoom, panoramique et de rotation dans la ](/fr/docs/Tools/Web_Console)[vue 3D](/fr/docs/Tools/Page_Inspector/3D_view) en appuyant sur la touche "r".
+- La [console Web](/fr/docs/Tools/Web_Console) met à présent en cache les message d'erreurs et les entrées du journal ajoutés grâce à {{domxref("console.log()")}} si la console n'est pas ouverte actuellement, et les affichent lorsque qu'elle s'ouvre.
+- Vous pouvez désormais réinitialiser le niveau de zoom, panoramique et de rotation dans la [vue 3D](/fr/docs/Tools/Page_Inspector/3D_view) en appuyant sur la touche "r".
 - Vous pouvez désormais masquer les nœuds dans la [vue 3D](/fr/docs/Tools/Page_Inspector/3D_view) en appuyant sur la touche "x" après les avoir sélectionnés.
 - L'[éditeur de source](/fr/docs/Tools/Using_the_Source_Editor) a plusieurs nouvelles fonctionnalités d'édition et de raccourcis clavier, voir [Utilisation de l'éditeur de source](/fr/docs/Tools/Using_the_Source_Editor) pour plus de détails
 

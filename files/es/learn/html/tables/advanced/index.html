@@ -38,7 +38,7 @@ original_slug: Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesi
 <p>Los subtítulos se colocan directamente debajo de la etiqueta <code>&lt;table&gt;</code>.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: El atributo {{htmlattrxref("summary","table")}} también se puede usar en el elemento <code>table</code> para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento <code>caption</code>, porque {{htmlattrxref("summary","table")}} está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).</p>
+<p><strong>Nota</strong>: El atributo {{htmlattrxref("summary","table")}} también se puede usar en el elemento <code>table</code> para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento <code>caption</code>, porque {{htmlattrxref("summary","table")}} está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).</p>
 </div>
 
 <h3 id="Aprendizaje_activo_Añadir_un_subtítulo">Aprendizaje activo: Añadir un subtítulo</h3>
@@ -80,7 +80,7 @@ original_slug: Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesi
 <ol>
  <li>En primer lugar, haz una copia local de <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html">spending-record.html</a> y <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css">minimal-table.css</a> en una carpeta nueva de tu ordenador.</li>
  <li>Intenta abrirlo en un navegador: observarás que se ve bien, pero podría mejorarse. La fila «SUM», que contiene una suma de las cantidades gastadas, parece estar en el lugar equivocado, y faltan algunos detalles del código.</li>
- <li>Coloca la fila de encabezados dentro de un elemento <code>&lt;thead&gt;</code>, la fila «SUM» dentro de un elemento <code>&lt;tfoot&gt;</code>, y el resto del contenido dentro de un elemento <code>&lt;tbody&gt;</code>.</li>
+ <li>Coloca la fila de encabezados dentro de un elemento <code>&lt;thead&gt;</code>, la fila «SUM» dentro de un elemento <code>&lt;tfoot&gt;</code>, y el resto del contenido dentro de un elemento <code>&lt;tbody&gt;</code>.</li>
  <li>Guarda y actualiza, y observa que añadir el elemento <code>&lt;tfoot&gt;</code> ha provocado que la fila «SUM» pase al final de la tabla.</li>
  <li>Luego, añade un atributo {{htmlattrxref ("colspan", "td")}} para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».</li>
  <li>Vamos a añadir un estilo adicional sencillo a la tabla para que veas cuán útiles son estos elementos para aplicar CSS. Dentro del encabezado del documento HTML hay un elemento {{htmlelement ("style")}} vacío. Añade a este elemento las líneas de código CSS siguientes:
@@ -363,7 +363,7 @@ tfoot {
 <p>Pero, ¿y si no puedes hacer esas asociaciones visuales? ¿Cómo podrías leer una tabla como la anterior? Las personas con discapacidad visual a menudo usan un lector de pantalla que les lee la información de las páginas web. Esto no resulta un problema cuando lees un texto sin formato, pero interpretar una tabla puede ser un gran desafío para una persona ciega. Sin embargo, con el marcado adecuado podemos reemplazar las asociaciones visuales por otras asociaciones de tipo programático.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Hay en torno a 253 millones de personas con discapacidad visual según los<a href="https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment" title="datos de la OMS sobre la discapacidad visual"> datos de la OMS de 2017</a>.</p>
+<p><strong>Nota</strong>: Hay en torno a 253 millones de personas con discapacidad visual según los<a href="https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment" title="datos de la OMS sobre la discapacidad visual"> datos de la OMS de 2017</a>.</p>
 </div>
 
 <p>Esta sección del artículo proporciona técnicas adicionales para conferir a las tablas la mayor accesibilidad posible.</p>
@@ -402,7 +402,7 @@ tfoot {
 
 <p>Los lectores de pantalla reconocerán el marcado estructurado de esta manera y permitirán a tus usuarios, por ejemplo, leer toda la columna o fila a la vez.</p>
 
-<p>El atributo <code>scope</code> tiene dos valores posibles más: <code>colgroup</code> y <code>rowgroup</code>. Se utilizan para encabezados que se encuentran sobre la parte superior de varias columnas o filas. Si vuelves a echar un vistazo a la tabla «Artículos vendidos en agosto de 2016» al comienzo de esta sección, verás que la celda «Ropa» se encuentra encima de las celdas «Pantalones», «Faldas» y «Vestidos» Todas estas celdas deben estar marcadas como encabezados (<code>&lt;th&gt;</code>), pero «Ropa» es un encabezado que está por encima y define los otros tres subencabezados. Por lo tanto, «Ropa» debería incluir un atributo <code>scope="colgroup"</code>, mientras que los demás tendrían un atributo <code>scope="col"</code>.</p>
+<p>El atributo <code>scope</code> tiene dos valores posibles más: <code>colgroup</code> y <code>rowgroup</code>. Se utilizan para encabezados que se encuentran sobre la parte superior de varias columnas o filas. Si vuelves a echar un vistazo a la tabla «Artículos vendidos en agosto de 2016» al comienzo de esta sección, verás que la celda «Ropa» se encuentra encima de las celdas «Pantalones», «Faldas» y «Vestidos» Todas estas celdas deben estar marcadas como encabezados (<code>&lt;th&gt;</code>), pero «Ropa» es un encabezado que está por encima y define los otros tres subencabezados. Por lo tanto, «Ropa» debería incluir un atributo <code>scope="colgroup"</code>, mientras que los demás tendrían un atributo <code>scope="col"</code>.</p>
 
 <h3 class="attTitle" id="Los_atributos_de_id_y_encabezados">Los atributos de id y encabezados</h3>
 
@@ -410,7 +410,7 @@ tfoot {
 
 <ol>
  <li>Añades un <code>id</code> único a cada elemento <code>&lt;th&gt;</code>.</li>
- <li>Añades un atributo <code>headers</code> a cada elemento <code>&lt;td&gt;</code>. Cada atributo <code>headers</code> debe contener una lista de los <code>id</code> de todos los elementos <code>&lt;th&gt;</code> que actúan como encabezado de esa celda, separados por espacios.</li>
+ <li>Añades un atributo <code>headers</code> a cada elemento <code>&lt;td&gt;</code>. Cada atributo <code>headers</code> debe contener una lista de los <code>id</code> de todos los elementos <code>&lt;th&gt;</code> que actúan como encabezado de esa celda, separados por espacios.</li>
 </ol>
 
 <p>Esto le da a tu tabla HTML una definición explícita de la posición de cada celda en la tabla definida por los encabezados de cada columna y fila de la que forma parte, como en una hoja de cálculo. Para que funcione bien, la tabla necesita tanto encabezados de columna como encabezados de fila.</p>

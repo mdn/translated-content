@@ -12,7 +12,6 @@ Même si la spécification impose que la méthode et le corps ne soient pas alt�
 
 Si vous souhaitez que la méthode utilisée soit changée en [`GET`](/fr/docs/Web/HTTP/Methods/GET), vous pouvez utiliser [`303 See Other`](/fr/docs/Web/HTTP/Status/303) à la place. Ceci s'avère utile lorsqu'on souhaite donner une réponse à une méthode [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) qui n'est pas la ressource téléversée, mais plutôt un message de confirmation (par exemple, «&nbsp;Vous avez téléversé avec succès XYZ&nbsp;»).
 
-
 ## Statut
 
 ```

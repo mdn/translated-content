@@ -12,10 +12,12 @@ original_slug: Web/API/ServiceWorker/onstatechange
 
 Une propriété {{domxref("EventListener")}} appelée quand un évenement de type `statechange` est déclenché; c'est le cas dès que le {{domxref("ServiceWorker.state")}} change.
 
-## Syntax
+## Syntaxe
 
-    ServiceWorker.onstatechange = function(statechangeevent) { ... }
-    ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```js
+ServiceWorker.onstatechange = function(statechangeevent) { ... }
+ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```
 
 ## Examples
 

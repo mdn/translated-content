@@ -93,9 +93,11 @@ Quand nous avons créé [le squelette du site](/fr/docs/Learn/Server-side/Django
 
 L'extrait du code ci-dessous permet d'intégrer dans **locallibrary/urls.py** le configurateur d'URL du module `catalog` :
 
-    urlpatterns += [
-      path('catalog/', include('catalog.urls')),
-    ]
+```python
+urlpatterns += [
+  path('catalog/', include('catalog.urls')),
+]
+```
 
 Il est désormais nécessaire de créer un configurateur d'URL du module `catalog` (_URLConf_ du module est nommé **/catalog/urls.py**). Ajoutez le chemin ci-dessous :
 
@@ -382,11 +384,11 @@ A ce niveau, nous avons créé l'ensemble des ressources nécessaires à l'affic
 
 Voici deux suggestions pour tester votre connaissance de Django et des requêtes, vues et gabarits :
 
-1.  La bibliothèque locale dispose d'un gabarit d'origine qui inclut une section `title`. Surchargez cette section dans le gabarit index et créer un nouveau titre.
+1. La bibliothèque locale dispose d'un gabarit d'origine qui inclut une section `title`. Surchargez cette section dans le gabarit index et créer un nouveau titre.
 
     > **Note :** La section Concevoir un gabarit détaille la manière de modifier une section.
 
-2.  Modifiez la vue pour disposer de décomptes pour les genres et les titres de livre qui contiennent un mot (en repectant la casse) et transmettez cela via le `context.` Pour faire cela utilisez les variables `num_books` et `num_instances_available`. Ensuite vous pourrez mettre à jour le gabarit de la page d'accueil.
+2. Modifiez la vue pour disposer de décomptes pour les genres et les titres de livre qui contiennent un mot (en repectant la casse) et transmettez cela via le `context.` Pour faire cela utilisez les variables `num_books` et `num_instances_available`. Ensuite vous pourrez mettre à jour le gabarit de la page d'accueil.
 
 ## Résumé
 

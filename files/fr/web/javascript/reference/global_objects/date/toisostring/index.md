@@ -19,7 +19,9 @@ La méthode **`toISOString()`** renvoie une chaîne de caractères au format ISO
 
 ## Syntaxe
 
-    dateObj.toISOString()
+```js
+dateObj.toISOString()
+```
 
 ### Valeur de retour
 

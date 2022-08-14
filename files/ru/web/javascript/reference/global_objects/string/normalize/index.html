@@ -36,10 +36,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
  <dt><code>form</code></dt>
  <dd>Одно из значений <code>"NFC"</code>, <code>"NFD"</code>, <code>"NFKC"</code> или <code>"NFKD"</code>, определяющих форму нормализации Юникода. Если параметр опущен или равен {{jsxref("Global_Objects/undefined", "undefined")}}, будет использоваться значение <code>"NFC"</code>.
  <ul>
-  <li><code>NFC</code> —  форма нормализации канонической композицией (Normalization Form Canonical Composition, 'NFC'), по умолчанию;</li>
-  <li><code>NFD</code> — форма нормализации канонической декомпозицией (Normalization Form Canonical Decomposition, 'NFD');</li>
-  <li><code>NFKC</code> — форма нормализации совместимой композицией (Normalization Form Compatibility Composition, 'NFKC');</li>
-  <li><code>NFKD</code> — форма нормализации совместимой декомпозицией (Normalization Form Compatibility Decomposition, 'NFKD').</li>
+  <li><code>NFC</code> —  форма нормализации канонической композицией (Normalization Form Canonical Composition, 'NFC'), по умолчанию;</li>
+  <li><code>NFD</code> — форма нормализации канонической декомпозицией (Normalization Form Canonical Decomposition, 'NFD');</li>
+  <li><code>NFKC</code> — форма нормализации совместимой композицией (Normalization Form Compatibility Composition, 'NFKC');</li>
+  <li><code>NFKD</code> — форма нормализации совместимой декомпозицией (Normalization Form Compatibility Decomposition, 'NFKD').</li>
  </ul>
  </dd>
 </dl>
@@ -60,37 +60,37 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 <h3 id="Example_Using_normalize">Пример: использование метода <code>normalize()</code></h3>
 
 <pre class="brush: js">let valueStr = ['h', 'ĥ', 'æ', 'ae', 'g', 'ġ'],
-    normArr = valueStr.map(function (text) {
+    normArr = valueStr.map(function (text) {
         return text.normalize(); // (по умолчанию 'NFC') normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, h, æ, ġ, ĥ]</span></span></span></span>
-        //return text.normalize('NFD'); // normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, ġ, h, ĥ, æ]</span></span></span></span>
-        //return text.normalize('NFKC'); // normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, h, æ, ġ, ĥ]</span></span></span></span>
-        //return text.normalize('NFKD'); // normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, ġ, h, ĥ, æ]</span></span></span></span>
-    });
+        //return text.normalize('NFD'); // normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, ġ, h, ĥ, æ]</span></span></span></span>
+        //return text.normalize('NFKC'); // normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, h, æ, ġ, ĥ]</span></span></span></span>
+        //return text.normalize('NFKD'); // normArr (после сортировки) -&gt; [<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, ġ, h, ĥ, æ]</span></span></span></span>
+    });
 
 //После приведение строк в нормальную форму, мы можем провести сортировку, массива:
 normArr.sort(function (f,s) {
-    if (f &lt; s) {
-        return -1;
-    } else if (f === s) {
-        return 0;
-    } else {
-        return 1;
-    }
+    if (f &lt; s) {
+        return -1;
+    } else if (f === s) {
+        return 0;
+    } else {
+        return 1;
+    }
 });
 
 //Приведение к нормальной форме можно выполнить во время сортировки. Нормализацию при этом можно выполнять с помощью разных форм нормализации
 let valueStrNorm = ['h', 's', 'ĥ', 'æ', 'ș', 'ae', 'g', 'ġ'];
 valueStrNorm.sort(function (first, second) {
-    let fN = first.normalize(),
-        sN = second.normalize('NFKC');
+    let fN = first.normalize(),
+        sN = second.normalize('NFKC');
 
-    if (fN &lt; sN) {
-        return -1;
-    } else if (fN === sN) {
-        return 0;
-    } else {
-        return 1;
-    }
+    if (fN &lt; sN) {
+        return -1;
+    } else if (fN === sN) {
+        return 0;
+    } else {
+        return 1;
+    }
 });
 
 valueStrNorm.join(', ');//-&gt; <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">ae, g, h, s, æ, ġ, ĥ, ș</span></span></span></span>

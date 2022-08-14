@@ -15,9 +15,11 @@ La méthode **`getAllKeys()`**, rattachée à l'interface {{domxref("IDBIndex")}
 
 ## Syntaxe
 
-    var getAllKeysRequest = IDBIndex.getAllKeys();
-    var getAllKeysRequest = IDBIndex.getAllKeys(requete);
-    var getAllKeysRequest = IDBIndex.getAllKeys(requete, quantite);
+```js
+var getAllKeysRequest = IDBIndex.getAllKeys();
+var getAllKeysRequest = IDBIndex.getAllKeys(requete);
+var getAllKeysRequest = IDBIndex.getAllKeys(requete, quantite);
+```
 
 ### Paramètres
 

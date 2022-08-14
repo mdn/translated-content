@@ -5,13 +5,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
 <div>{{JSRef}}</div>
 
-<p>A função <strong><code>Math.cosh()</code></strong> retorna o cosseno hiperbólico de um número, que pode ser expressada usando {{jsxref("Math.E", "constante e", "", 1)}}:</p>
+<p>A função <strong><code>Math.cosh()</code></strong> retorna o cosseno hiperbólico de um número, que pode ser expressada usando {{jsxref("Math.E", "constante e", "", 1)}}:</p>
 
 <p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math></p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-cosh.html")}}</div>
 
-<p class="hidden">A fonte para este exemplo interativo está armazenada em um repositório do GitHub. Se você gostaria de contribuir com o projeto de exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie um pull request.</p>
+<p class="hidden">A fonte para este exemplo interativo está armazenada em um repositório do GitHub. Se você gostaria de contribuir com o projeto de exemplos interativos, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie um pull request.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 
 <dl>
  <dd><strong><code>x</code></strong></dd>
- <dd>  Um número.</dd>
+ <dd>  Um número.</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
@@ -30,11 +30,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Por <code>cosh()</code> ser um método estático de <code>Math</code>, sempre utilize como <code>Math.cosh()</code>, ao invés de como um método de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
+<p>Por <code>cosh()</code> ser um método estático de <code>Math</code>, sempre utilize como <code>Math.cosh()</code>, ao invés de como um método de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_Math.cosh">Usando <code>Math.cosh()</code></h3>
+<h3 id="Usando_Math.cosh">Usando <code>Math.cosh()</code></h3>
 
 <pre class="brush: js">Math.cosh(0);  // 1
 Math.cosh(1);  // 1.5430806348152437
@@ -43,14 +43,14 @@ Math.cosh(-1); // 1.5430806348152437
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Isto pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:</p>
+<p>Isto pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:</p>
 
 <pre class="brush: js">Math.cosh = Math.cosh || function(x) {
   return (Math.exp(x) + Math.exp(-x)) / 2;
 }
 </pre>
 
-<p>ou usando apenas uma chamada da função {{jsxref("Math.exp()")}}:</p>
+<p>ou usando apenas uma chamada da função {{jsxref("Math.exp()")}}:</p>
 
 <pre class="brush: js">Math.cosh = Math.cosh || function(x) {
   var y = Math.exp(x);

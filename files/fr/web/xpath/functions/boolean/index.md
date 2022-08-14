@@ -12,7 +12,9 @@ la fonction `boolean` évalue une expression et retourne `true` ou `false`.
 
 ### Syntaxe
 
-    boolean( expression )
+```
+boolean( expression )
+```
 
 ### Arguments
 

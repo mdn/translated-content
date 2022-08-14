@@ -15,7 +15,7 @@ Ce concept est important pour le "{{Glossary("garbage collection","ramasse-miett
 
 ### **Culture générale**
 
-- {{interwiki("wikipedia","Ensemble_dominant","Ensemble dominant")}} sur Wikipedia
+- [Ensemble dominant](https://fr.wikipedia.org/wiki/Ensemble_dominant) sur Wikipédia
 
 ### Références techniques
 

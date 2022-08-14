@@ -7,9 +7,11 @@ translation_of: Web/API/XMLHttpRequest/responseText
 
 La lecture seule {{domxref("XMLHttpRequest")}} propriété **`responseText`** renvoie le texte reçu d'un serveur suite à l'envoi d'une requête.
 
-## Syntax
+## Syntaxe
 
-    var resultText = XMLHttpRequest.responseText;
+```js
+var resultText = XMLHttpRequest.responseText;
+```
 
 ### Value
 

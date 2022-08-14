@@ -28,7 +28,7 @@ translation_of: Web/API/DOMImplementation
  <dt>{{domxref("DOMImplementation.createHTMLDocument()")}}</dt>
  <dd>HTML {{domxref("Document")}}を作成して返します。</dd>
  <dt>{{domxref("DOMImplementation.hasFeature()")}}</dt>
- <dd>所与の機能がサポートされているかどうかを返す{{domxref("Boolean")}}。この関数は信頼できず、互換性の目的のためだけに残されていますが、例外は SVG関連の問い合わせで、常に <code>true</code>を返します。古いブラウザーはこのふるまいは、とても不整合を起こします。</dd>
+ <dd>所与の機能がサポートされているかどうかを返す{{domxref("Boolean")}}。この関数は信頼できず、互換性の目的のためだけに残されていますが、例外は SVG関連の問い合わせで、常に <code>true</code>を返します。古いブラウザーはこのふるまいは、とても不整合を起こします。</dd>
 </dl>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
@@ -45,17 +45,17 @@ translation_of: Web/API/DOMImplementation
    <td>{{Spec2('DOM WHATWG')}}</td>
    <td><code>getFeature()</code> メソッドを削除。<br>
     <code>createHTMLDocument()</code> メソッドを追加。<br>
-    <code>createDocument()</code> の返り値の型を {{domxref("Document")}} から {{domxref("XMLDocument")}} に変更。</td>
+    <code>createDocument()</code> の返り値の型を {{domxref("Document")}} から {{domxref("XMLDocument")}} に変更。</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
    <td>{{Spec2('DOM3 Core')}}</td>
-   <td><code>getFeature()</code> メソッド追加 (ユーザーエージェントで実装されることはありません)。</td>
+   <td><code>getFeature()</code> メソッド追加 (ユーザーエージェントで実装されることはありません)。</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}</td>
    <td>{{Spec2('DOM2 Core')}}</td>
-   <td><code>createDocument()</code> および <code>createDocumentType()</code> メソッドが追加。</td>
+   <td><code>createDocument()</code> および <code>createDocumentType()</code> メソッドが追加。</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}}</td>

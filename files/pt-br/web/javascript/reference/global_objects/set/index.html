@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <h2 id="Sumário">Sumário</h2>
 
-<p>O objeto <strong><code>Set</code></strong> permite que você armazene valores <em>únicos</em> de qualquer tipo, desde {{Glossary("Primitive", "valores primitivos")}} a referências a objetos.</p>
+<p>O objeto <strong><code>Set</code></strong> permite que você armazene valores <em>únicos</em> de qualquer tipo, desde {{Glossary("Primitive", "valores primitivos")}} a referências a objetos.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -23,16 +23,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <dl>
  <dt>iterable</dt>
- <dd>Se um <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">objeto iterável </a>é passado, todos os seus elementos serão adicionados ao novo Set. Se tal parâmetro não for específicado, ou se seu valor for <code>null</code>, o novo <code>Set</code> estará vazio.</dd>
+ <dd>Se um <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">objeto iterável </a>é passado, todos os seus elementos serão adicionados ao novo Set. Se tal parâmetro não for específicado, ou se seu valor for <code>null</code>, o novo <code>Set</code> estará vazio.</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Objetos <code style="font-style: normal; line-height: 1.5;">Set</code><span style="line-height: 1.5;"> são coleções de valores nas quais é possível iterar os elementos em ordem de inserção. Um valor no </span><code style="font-style: normal; line-height: 1.5;">Set</code><span style="line-height: 1.5;"> <strong>pode ocorrer apenas uma vez</strong>; ele é único na coleção do </span><code style="font-style: normal; line-height: 1.5;">Set</code><span style="line-height: 1.5;">.</span></p>
+<p>Objetos <code style="font-style: normal; line-height: 1.5;">Set</code><span style="line-height: 1.5;"> são coleções de valores nas quais é possível iterar os elementos em ordem de inserção. Um valor no </span><code style="font-style: normal; line-height: 1.5;">Set</code><span style="line-height: 1.5;"> <strong>pode ocorrer apenas uma vez</strong>; ele é único na coleção do </span><code style="font-style: normal; line-height: 1.5;">Set</code><span style="line-height: 1.5;">.</span></p>
 
 <h3 id="Igualdade_de_valores">Igualdade de valores</h3>
 
-<p>Como cada valor no Set deve ser único, a igualdade será checada e não é baseada no mesmo algoritmo que aquele usado no operador ===. Especificamente, para <code>Set</code>s, <code>+0</code> (que é exatamente igual a - 0) e <code>- 0</code> são valores diferentes. No entanto, isto foi modificado na última especificação ECMAScript 2015. Iniciado com o Gecko 29.0 {{geckoRelease("29")}} ({{bug("952870")}}) e pelo  <a href="https://code.google.com/p/v8/issues/detail?id=3069">recent nightly Chrome</a>, +0 e -0 são tratados com sendo o mesmo valor em objetos conjunto (Set). Também, <code>NaN</code> e <code>undefined </code>podem ser armazenados em um conjunto Set.</p>
+<p>Como cada valor no Set deve ser único, a igualdade será checada e não é baseada no mesmo algoritmo que aquele usado no operador ===. Especificamente, para <code>Set</code>s, <code>+0</code> (que é exatamente igual a - 0) e <code>- 0</code> são valores diferentes. No entanto, isto foi modificado na última especificação ECMAScript 2015. Iniciado com o Gecko 29.0 {{geckoRelease("29")}} ({{bug("952870")}}) e pelo  <a href="https://code.google.com/p/v8/issues/detail?id=3069">recent nightly Chrome</a>, +0 e -0 são tratados com sendo o mesmo valor em objetos conjunto (Set). Também, <code>NaN</code> e <code>undefined </code>podem ser armazenados em um conjunto Set.</p>
 
 <h2 id="Properties" name="Properties">Propriedades</h2>
 
@@ -43,12 +43,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
  <dt>{{jsxref("Set.@@species", "get Set[@@species]")}}</dt>
  <dd>A função construtora usada para criar objetos derivados.</dd>
  <dt>{{jsxref("Set.prototype")}}</dt>
- <dd>Representa o prototype do constructor do <code>Set</code>. Permite a adição de propriedades para todos os objetos do tipo <code>Set</code>.</dd>
+ <dd>Representa o prototype do constructor do <code>Set</code>. Permite a adição de propriedades para todos os objetos do tipo <code>Set</code>.</dd>
 </dl>
 
-<h2 id="Boolean_instances" name="Boolean_instances">Instâncias <code>Set</code> </h2>
+<h2 id="Boolean_instances" name="Boolean_instances">Instâncias <code>Set</code> </h2>
 
-<p>Todas as instâncias de <code>Set</code> herdam de {{jsxref("Set.prototype")}}.</p>
+<p>Todas as instâncias de <code>Set</code> herdam de {{jsxref("Set.prototype")}}.</p>
 
 <h3 id="Propriedades">Propriedades</h3>
 
@@ -193,7 +193,7 @@ meuSet.forEach(function(value) {
 <span class="function token">diferencaSimetrica</span><span class="punctuation token">(</span>setA<span class="punctuation token">,</span> setC<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// =&gt; Set [1, 2, 5, 6]</span>
 <span class="function token">diferenca</span><span class="punctuation token">(</span>setA<span class="punctuation token">,</span> setC<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// =&gt; Set [1, 2]</span></code></pre>
 
-<h3 id="Relação_com_objetos_Array">Relação com objetos <code>Array</code> </h3>
+<h3 id="Relação_com_objetos_Array">Relação com objetos <code>Array</code> </h3>
 
 <pre class="brush: js">var myArray = ["value1", "value2", "value3"];
 

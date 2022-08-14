@@ -19,7 +19,9 @@ La méthode **`match()`** permet d'obtenir le tableau des correspondances entre 
 
 ## Syntaxe
 
-    str.match(regexp)
+```js
+str.match(regexp)
+```
 
 ### Paramètres
 

@@ -37,10 +37,10 @@ div:empty {
 <div class="box"><!-- I will be lime. --></div>
 <div class="box">I will be pink.</div>
 <div class="box">
-	<!-- I will be pink in older browsers because of the whitespace around this comment. -->
+  <!-- I will be pink in older browsers because of the whitespace around this comment. -->
 </div>
 <div class="box">
-	<p><!-- I will be pink in all browsers because of the non-collapsible whitespace and elements around this comment. --></p>
+  <p><!-- I will be pink in all browsers because of the non-collapsible whitespace and elements around this comment. --></p>
 </div>
 ```
 
@@ -90,5 +90,5 @@ body {
 
 ## 関連情報
 
-- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – {{glossary("prefix", "接頭辞付き")}}で、 {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} の変更を実装
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – {{glossary("prefix", "接頭辞付き")}}で、 {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} の変更を実装
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}

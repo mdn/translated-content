@@ -19,7 +19,9 @@ Lorsque la visibilité d'un élément cible franchit l'un des seuils d'intersect
 
 ## Syntaxe
 
-    IntersectionObserver.observe(targetElement);
+```js
+IntersectionObserver.observe(targetElement);
+```
 
 ### Paramètres
 

@@ -14,7 +14,7 @@ translation_of: Web/API/Animation
 ---
 {{ APIRef("Web Animations") }}
 
-**`Animation`** は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)のインターフェイスで、アニメーションプレイヤーを表し、アニメーションノードやソースに対する再生制御やタイムラインを提供します。
+**`Animation`** は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)のインターフェイスで、アニメーションプレイヤーを表し、アニメーションノードやソースに対する再生制御やタイムラインを提供します。
 
 {{InheritanceDiagram}}
 

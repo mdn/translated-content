@@ -104,7 +104,7 @@ CSS グリッドレイアウトは [Box Alignment Level 3](https://drafts.csswg.
 
 {{ EmbedLiveSample('Using_align-items', '500', '500') }}
 
-`align-items: start` を設定すると、それぞれの子である `<div>` の高さはコンテンツの `<div>` によって決定されることを覚えておいてください。また、[`align-items`](/ja/docs/Web/CSS/align-items) を完全に省略すると、それぞれの子である `<div>` の高さはグリッド領域を満たすように広がります。
+`align-items: start` を設定すると、それぞれの子である `<div>` の高さはコンテンツの `<div>` によって決定されることを覚えておいてください。また、[`align-items`](/ja/docs/Web/CSS/align-items) を完全に省略すると、それぞれの子である `<div>` の高さはグリッド領域を満たすように広がります。
 
 {{cssxref("align-items")}} プロパティはすべての子グリッドアイテムに {{cssxref("align-self")}} プロパティを設定します。これは、グリッドアイテム上で `align-self` を使えばプロパティを個別に設定できるということです。
 

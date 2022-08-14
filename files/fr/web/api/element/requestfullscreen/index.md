@@ -18,7 +18,9 @@ Cette méthode doit être invoquée par l'interaction d'un utilisateur ou un cha
 
 ## Syntaxe
 
-    Element.requestFullscreen();
+```js
+Element.requestFullscreen();
+```
 
 ## Exemple
 
@@ -38,7 +40,7 @@ tbd
 
 ## Voir aussi
 
-- [Full-screen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Full-screen API](/fr/docs/Web/API/Fullscreen_API)
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ domxref("Document.fullscreen") }}

@@ -21,17 +21,17 @@ translation_of: Web/SVG/Element/symbol
 <pre class="brush: html">&lt;svg&gt;
 &lt;!-- definição de symbol NUNCA é renderizada --&gt;
 &lt;symbol id="sym01" viewBox="0 0 150 110"&gt;
-  &lt;circle cx="50" cy="50" r="40" stroke-width="8" stroke="red" fill="red"/&gt;
-  &lt;circle cx="90" cy="60" r="40" stroke-width="8" stroke="green" fill="white"/&gt;
+  &lt;circle cx="50" cy="50" r="40" stroke-width="8" stroke="red" fill="red"/&gt;
+  &lt;circle cx="90" cy="60" r="40" stroke-width="8" stroke="green" fill="white"/&gt;
 &lt;/symbol&gt;
 
 &lt;!-- renderização por elementos "use" --&gt;
 &lt;use xlink:href="#sym01"
-     x="0" y="0" width="100" height="50"/&gt;
+     x="0" y="0" width="100" height="50"/&gt;
 &lt;use xlink:href="#sym01"
-     x="0" y="50" width="75" height="38"/&gt;
+     x="0" y="50" width="75" height="38"/&gt;
 &lt;use xlink:href="#sym01"
-     x="0" y="100" width="50" height="25"/&gt;
+     x="0" y="100" width="50" height="25"/&gt;
 &lt;/svg&gt;
 </pre>
 
@@ -42,9 +42,9 @@ translation_of: Web/SVG/Element/symbol
 <h3 id="Atributos_globais">Atributos globais</h3>
 
 <ul>
- <li><a href="/pt-BR/SVG/Attribute#Core" title="pt-BR/SVG/Attribute#Core">Atributos principais</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#GraphicalEvent" title="pt-BR/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
- <li><a href="/pt-BR/SVG/Attribute#Presentation" title="pt-BR/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
+ <li><a href="/pt-BR/SVG/Attribute#Core" title="pt-BR/SVG/Attribute#Core">Atributos principais</a> »</li>
+ <li><a href="/pt-BR/SVG/Attribute#GraphicalEvent" title="pt-BR/SVG/Attribute#GraphicalEvent">Atributos de eventos gráficos</a> »</li>
+ <li><a href="/pt-BR/SVG/Attribute#Presentation" title="pt-BR/SVG/Attribute#Presentation">Atributos de apresentação</a> »</li>
  <li>{{ SVGAttr("class") }}</li>
  <li>{{ SVGAttr("style") }}</li>
  <li>{{ SVGAttr("externalResourcesRequired") }}</li>
@@ -63,55 +63,7 @@ translation_of: Web/SVG/Element/symbol
 
 <h2 id="Compatibilidade">Compatibilidade</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th scope="col">Recurso</th>
-   <th scope="col">Chrome</th>
-   <th scope="col">Firefox (Gecko)</th>
-   <th scope="col">Internet Explorer</th>
-   <th scope="col">Opera</th>
-   <th scope="col">Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop('1.8') }}</td>
-   <td>{{ CompatIE('9.0') }}</td>
-   <td>{{ CompatOpera('9.0') }}</td>
-   <td>{{ CompatSafari('3.0.4') }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatAndroid('3.0') }}</td>
-   <td>{{ CompatGeckoMobile('1.8') }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatSafari('3.0.4') }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>Essa tabela é baseada <a href="/en/SVG/Compatibility_sources" title="en/SVG/Compatibility sources">nessas fontes</a>.</p>
+{{Compat("svg.elements.symbol")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

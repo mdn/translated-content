@@ -11,7 +11,9 @@ Cette propriété est utile pour les jeux à thème pixel-art, lors d'une mise �
 
 ## Syntaxe
 
-    ctx.imageSmoothingEnabled = valeur;
+```js
+ctx.imageSmoothingEnabled = valeur;
+```
 
 ### Options
 

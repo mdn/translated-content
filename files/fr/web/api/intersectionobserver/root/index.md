@@ -17,7 +17,9 @@ La propriété en lecture seule **`root`** de l'interface [`IntersectionObserver
 
 ## Syntaxe
 
-    root = IntersectionObserver.root;
+```js
+root = IntersectionObserver.root;
+```
 
 ### Valeur
 

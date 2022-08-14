@@ -39,7 +39,7 @@ Firefox 17, basé sur Gecko 17.0, est sorti le 20 novembre 2012. Cette page rés
 - Le support expérimental pour l'objet [`ParallelArray`](/fr/docs/JavaScript/R%C3%A9f%C3%A9rence_JavaScript/Objets_globaux/ParallelArray) a été implémenté. ({{bug(778559)}})
 - Support des itérateurs [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map)/[`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set). ({{bug(725909)}})
 - [E4X](/fr/docs/E4X) est désactivé par défaut pour le contenu Web. ({{bug(778851)}})
-- `__exposedProps__` doit désormais être défini pour les objets JavaScript Chrome exposés au contenu. Les tentatives d'accès à des objets de contenu sans Chrome `__exposedProps__ `échoueront ensembles silencieusement. ({{bug(553102)}})
+- `__exposedProps__` doit désormais être défini pour les objets JavaScript Chrome exposés au contenu. Les tentatives d'accès à des objets de contenu sans Chrome `__exposedProps__` échoueront ensembles silencieusement. ({{bug(553102)}})
 
 ### MathML
 

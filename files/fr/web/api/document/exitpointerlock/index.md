@@ -17,7 +17,9 @@ Pour connaître le succès ou l'échec de cette requête, il faut surveiller les
 
 ## Syntaxe
 
-    document.exitPointerLock();
+```js
+document.exitPointerLock();
+```
 
 ## Spécifications
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>bind()</strong></code> cria uma nova função que, quando chamada, tem sua palavra-chave <code>this</code> definida com o valor fornecido, com uma sequência determinada de argumentos precedendo quaisquer outros que sejam fornecidos <span id="result_box" lang="pt"><span>quando</span> <span>a nova</span> <span>função é chamada</span></span>.</p>
+<p>O método <code><strong>bind()</strong></code> cria uma nova função que, quando chamada, tem sua palavra-chave <code>this</code> definida com o valor fornecido, com uma sequência determinada de argumentos precedendo quaisquer outros que sejam fornecidos <span id="result_box" lang="pt"><span>quando</span> <span>a nova</span> <span>função é chamada</span></span>.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}</p>
 
@@ -17,42 +17,42 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <dl>
  <dt><code>thisArg</code></dt>
- <dd><span id="result_box" lang="pt"><span>O valor a ser</span> <span>passado como </span><span>parâmetro <code>this</code> para</span> <span>a função de destino</span> <span>quando a função</span> <span>vinculada</span> <span>é chamada.</span> <span>O</span> <span>valor é ignorado</span> <span>se a função</span> <span>ligada é</span> <span>construída usando o</span></span> operador {{jsxref("Operators/new", "new")}}.</dd>
+ <dd><span id="result_box" lang="pt"><span>O valor a ser</span> <span>passado como </span><span>parâmetro <code>this</code> para</span> <span>a função de destino</span> <span>quando a função</span> <span>vinculada</span> <span>é chamada.</span> <span>O</span> <span>valor é ignorado</span> <span>se a função</span> <span>ligada é</span> <span>construída usando o</span></span> operador {{jsxref("Operators/new", "new")}}.</dd>
  <dt><code>arg1, arg2, ...</code></dt>
- <dd><span id="result_box" lang="pt"><span>Argumentos que precedem outros</span></span><span lang="pt"> <span>argumentos fornecidos</span> <span>para a função</span> vinculada <span>ao invocar</span> <span>a função de destino</span><span>.</span></span></dd>
+ <dd><span id="result_box" lang="pt"><span>Argumentos que precedem outros</span></span><span lang="pt"> <span>argumentos fornecidos</span> <span>para a função</span> vinculada <span>ao invocar</span> <span>a função de destino</span><span>.</span></span></dd>
 </dl>
 
 <h3 id="Valor_de_retorno"><span lang="pt"><span>Valor de retorno</span></span></h3>
 
-<p><span lang="pt"><span>Uma cópia da função fornecida com o valor <code>this</code> especificado e argumentos iniciais.</span></span></p>
+<p><span lang="pt"><span>Uma cópia da função fornecida com o valor <code>this</code> especificado e argumentos iniciais.</span></span></p>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>A função <code>bind()</code> cria uma nova <strong>função vinculada</strong> (<em>bound function</em>). Uma função vinculada é um <strong>objeto de função exótico</strong> (termo da <strong>ECMAScript 2015</strong>) que encapsula o objeto de função original. Chamar uma função vinculada geralmente resulta na execução de sua <strong>função encapsulada</strong>.</p>
+<p>A função <code>bind()</code> cria uma nova <strong>função vinculada</strong> (<em>bound function</em>). Uma função vinculada é um <strong>objeto de função exótico</strong> (termo da <strong>ECMAScript 2015</strong>) que encapsula o objeto de função original. Chamar uma função vinculada geralmente resulta na execução de sua <strong>função encapsulada</strong>.</p>
 
-<p>Uma função vinculada tem as seguintes propriedades internas:</p>
+<p>Uma função vinculada tem as seguintes propriedades internas:</p>
 
 <ul>
- <li><strong>[[BoundTargetFunction]]</strong> - o objeto de função encapsulado;</li>
- <li><strong>[[BoundThis]]</strong> - o valor que sempre é passado como <code>this</code> quando se chama a função encapsulada;</li>
- <li><strong>[[BoundArguments]]</strong> - uma lista de valores cujos elementos são usados como os primeiros argumentos para qualquer chamada da função encapsulada;</li>
- <li><strong>[[Call]]</strong> - executa código associado com este objeto. Invocado através de uma expressão de chamada de função. Os argumentos para o método interno são um valor <code>this</code> e uma lista contendo os argumentos passados para a função por uma expressão de chamada.</li>
+ <li><strong>[[BoundTargetFunction]]</strong> - o objeto de função encapsulado;</li>
+ <li><strong>[[BoundThis]]</strong> - o valor que sempre é passado como <code>this</code> quando se chama a função encapsulada;</li>
+ <li><strong>[[BoundArguments]]</strong> - uma lista de valores cujos elementos são usados como os primeiros argumentos para qualquer chamada da função encapsulada;</li>
+ <li><strong>[[Call]]</strong> - executa código associado com este objeto. Invocado através de uma expressão de chamada de função. Os argumentos para o método interno são um valor <code>this</code> e uma lista contendo os argumentos passados para a função por uma expressão de chamada.</li>
 </ul>
 
-<p>Quando a função vinculada é chamada, ela chama seu método interno <strong>[[Call]]</strong> na <strong>[[BoundTargetFunction]],</strong> na forma <code>Call(boundThis, args)</code>, onde <code>boundThis</code> é <strong>[[BoundThis]]</strong> e <code>args</code> é <strong>[[BoundArguments]]</strong> seguido pelos argumentos passados pela chamada de função.</p>
+<p>Quando a função vinculada é chamada, ela chama seu método interno <strong>[[Call]]</strong> na <strong>[[BoundTargetFunction]],</strong> na forma <code>Call(boundThis, args)</code>, onde <code>boundThis</code> é <strong>[[BoundThis]]</strong> e <code>args</code> é <strong>[[BoundArguments]]</strong> seguido pelos argumentos passados pela chamada de função.</p>
 
-<p>Uma função vinculada também pode ser construída usando-se o operador {{jsxref("Operators/new", "new")}}; ao fazê-lo, o resultado é o mesmo que seria se a função alvo tivesse sido construída. O valor de <code>this</code> fornecido é ignorado, porém os argumentos precedentes são fornecidos à função emulada.</p>
+<p>Uma função vinculada também pode ser construída usando-se o operador {{jsxref("Operators/new", "new")}}; ao fazê-lo, o resultado é o mesmo que seria se a função alvo tivesse sido construída. O valor de <code>this</code> fornecido é ignorado, porém os argumentos precedentes são fornecidos à função emulada.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
 <h3 id="Criando_uma_função_vinculada">Criando uma função vinculada</h3>
 
-<p><span id="result_box" lang="pt"><span>O uso</span> <span>mais simples de</span> <code><span>bind()</span></code> <span class="alt-edited">é fazer com que</span> <span>uma função que</span><span>, independentemente da</span><span> chamada,</span> <span>é chamada com</span> <span>um determinado</span> valor <code><span>this</span></code></span>.<span id="result_box" lang="pt"><span> Um erro comum</span> <span>para </span><span>programadores JavaScript</span> novatos <span>é extrair</span> <span>um método</span> <span>de um objeto e</span></span>, <span id="result_box" lang="pt"><span>em seguida, </span> <span>chamar essa função</span> <span>e esperar que ele</span> <span>use</span> <span>o objeto original</span> <span>como</span> o seu <code><span>this</span></code> <span>(por exemplo,</span> <span>usando</span> <span>esse método</span> <span>num código baseado em</span></span> <em>callback</em><span lang="pt"><span>)</span><span>.</span> <span>Sem</span> <span>a devida atenção</span><span>,</span> <span>no entanto</span><span>,</span> <span>o objeto original</span> <span>é normalmente</span> <span>perdido</span><span>.</span> <span>Criar</span> <span>uma função</span> <span class="alt-edited">vinculada</span> <span>a partir da função</span><span>,</span> <span>usando o objeto</span> <span>original,</span> <span>resolve perfeitamente</span> <span>esse</span> <span>problema:</span></span></p>
+<p><span id="result_box" lang="pt"><span>O uso</span> <span>mais simples de</span> <code><span>bind()</span></code> <span class="alt-edited">é fazer com que</span> <span>uma função que</span><span>, independentemente da</span><span> chamada,</span> <span>é chamada com</span> <span>um determinado</span> valor <code><span>this</span></code></span>.<span id="result_box" lang="pt"><span> Um erro comum</span> <span>para </span><span>programadores JavaScript</span> novatos <span>é extrair</span> <span>um método</span> <span>de um objeto e</span></span>, <span id="result_box" lang="pt"><span>em seguida, </span> <span>chamar essa função</span> <span>e esperar que ele</span> <span>use</span> <span>o objeto original</span> <span>como</span> o seu <code><span>this</span></code> <span>(por exemplo,</span> <span>usando</span> <span>esse método</span> <span>num código baseado em</span></span> <em>callback</em><span lang="pt"><span>)</span><span>.</span> <span>Sem</span> <span>a devida atenção</span><span>,</span> <span>no entanto</span><span>,</span> <span>o objeto original</span> <span>é normalmente</span> <span>perdido</span><span>.</span> <span>Criar</span> <span>uma função</span> <span class="alt-edited">vinculada</span> <span>a partir da função</span><span>,</span> <span>usando o objeto</span> <span>original,</span> <span>resolve perfeitamente</span> <span>esse</span> <span>problema:</span></span></p>
 
 <pre class="brush: js">this.x = 9; //this aqui se refere ao objeto global "window" do navegador
 var module = {
-  x: 81,
-  getX: function() { return this.x; }
+  x: 81,
+  getX: function() { return this.x; }
 };
 
 module.getX(); // 81
@@ -70,7 +70,7 @@ boundGetX(); // 81
 
 <h3 id="Funções_parcialmente_aplicadas">Funções parcialmente aplicadas</h3>
 
-<p>O próximo uso mais simples de <code>bind()</code> é criar uma função com argumentos iniciais pré-especificados. Esses argumentos (caso existam) acompanham o valor <code>this</code> fornecido e então são inseridos no início dos argumentos passados para a função alvo, seguidos pelos argumentos passados para a função vinculada, sempre que a função vinculada é chamada.</p>
+<p>O próximo uso mais simples de <code>bind()</code> é criar uma função com argumentos iniciais pré-especificados. Esses argumentos (caso existam) acompanham o valor <code>this</code> fornecido e então são inseridos no início dos argumentos passados para a função alvo, seguidos pelos argumentos passados para a função vinculada, sempre que a função vinculada é chamada.</p>
 
 <pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments);
@@ -88,9 +88,9 @@ var list3 = leadingThirtysevenList(1, 2, 3);
 // [37, 1, 2, 3]
 </pre>
 
-<h3 id="Com_setTimeout">Com <code>setTimeout</code></h3>
+<h3 id="Com_setTimeout">Com <code>setTimeout</code></h3>
 
-<p>Por padrão, dentro de {{domxref("window.setTimeout()")}} a palavra-chave <code>this</code> vai ser definida com o objeto {{ domxref("window") }} (ou com o objeto <code>global</code>). Ao trabalhar com métodos de classes que requerem que <code>this</code> se refira à instâncias de classes, você pode vincular <code>this</code> explicitamente à função de <em>callback</em>, de modo a manter a instância.</p>
+<p>Por padrão, dentro de {{domxref("window.setTimeout()")}} a palavra-chave <code>this</code> vai ser definida com o objeto {{ domxref("window") }} (ou com o objeto <code>global</code>). Ao trabalhar com métodos de classes que requerem que <code>this</code> se refira à instâncias de classes, você pode vincular <code>this</code> explicitamente à função de <em>callback</em>, de modo a manter a instância.</p>
 
 <pre class="brush: js">function LateBloomer() {
   this.petalCount = Math.ceil(Math.random() * 12) + 1;
@@ -113,10 +113,10 @@ flower.bloom();
 <h3 id="Funções_vinculadas_usadas_como_construtores">Funções vinculadas usadas como construtores</h3>
 
 <div class="warning">
-<p><strong>Aviso:</strong> Esta seção demonstra capacidades do JavaScript e documenta alguns casos de borda do método <code>bind()</code>. Os métodos mostrados abaixo não são os melhores jeitos de se fazer as coisas e provavelmente não deveriam ser usados em nenhum ambiente produtivo.</p>
+<p><strong>Aviso:</strong> Esta seção demonstra capacidades do JavaScript e documenta alguns casos de borda do método <code>bind()</code>. Os métodos mostrados abaixo não são os melhores jeitos de se fazer as coisas e provavelmente não deveriam ser usados em nenhum ambiente produtivo.</p>
 </div>
 
-<p>Funções vinculadas são automaticamente adequadas para uso com o operador {{jsxref("Operators/new", "new")}} para construir novas instâncias criadas pela função alvo. Quando uma função vinculada é usada para construir um valor, o <code>this</code> fornecido é ignorado. Porém, argumentos fornecidos ainda são prefixados à chamada do construtor:</p>
+<p>Funções vinculadas são automaticamente adequadas para uso com o operador {{jsxref("Operators/new", "new")}} para construir novas instâncias criadas pela função alvo. Quando uma função vinculada é usada para construir um valor, o <code>this</code> fornecido é ignorado. Porém, argumentos fornecidos ainda são prefixados à chamada do construtor:</p>
 
 <pre class="brush: js">function Point(x, y) {
   this.x = x;
@@ -146,7 +146,7 @@ axisPoint instanceof YAxisPoint; // true
 new Point(17, 42) instanceof YAxisPoint; // true
 </pre>
 
-<p>Note que você não precisa fazer nada de especial para criar uma função vinculada para usar com {{jsxref("Operators/new", "new")}}. O corolário é que você não precisa fazer nada de especial para criar uma função vinculada que será chamada de forma clara, mesmo que você preferisse que a função vinculada fosse somente chamada usando-se {{jsxref("Operators/new", "new")}}.</p>
+<p>Note que você não precisa fazer nada de especial para criar uma função vinculada para usar com {{jsxref("Operators/new", "new")}}. O corolário é que você não precisa fazer nada de especial para criar uma função vinculada que será chamada de forma clara, mesmo que você preferisse que a função vinculada fosse somente chamada usando-se {{jsxref("Operators/new", "new")}}.</p>
 
 <pre class="brush: js">// Exemplo pode ser executado diretamente no seu console JavaScript
 // ...continuando o exemplo acima
@@ -165,7 +165,7 @@ emptyObj.x + ',' + emptyObj.y;
 
 <p><code>bind()</code> itambém é útil em casos onde você quer criar um atalho para uma função que requer um valor específico de <code>this</code>.</p>
 
-<p>Tome por exemplo {{jsxref("Array.prototype.slice")}}, que você quer usar para converter um objeto <em>array-like</em> em um vetor verdadeiro. Você poderia criar um atalho assim:</p>
+<p>Tome por exemplo {{jsxref("Array.prototype.slice")}}, que você quer usar para converter um objeto <em>array-like</em> em um vetor verdadeiro. Você poderia criar um atalho assim:</p>
 
 <pre class="brush: js">var slice = Array.prototype.slice;
 
@@ -174,7 +174,7 @@ emptyObj.x + ',' + emptyObj.y;
 slice.apply(arguments);
 </pre>
 
-<p>Com <code>bind()</code>, isso pode ser simplificado. No seguinte trecho de código, <code>slice</code> é uma função vinculada à função {{jsxref("Function.prototype.apply()", "apply()")}} de {{jsxref("Function.prototype")}}, com o valor <code>this</code> definido com a função {{jsxref("Array.prototype.slice()", "slice()")}} de {{jsxref("Array.prototype")}}. Isso significa que chamadas adicionais de <code>apply()</code> podem ser eliminadas:</p>
+<p>Com <code>bind()</code>, isso pode ser simplificado. No seguinte trecho de código, <code>slice</code> é uma função vinculada à função {{jsxref("Function.prototype.apply()", "apply()")}} de {{jsxref("Function.prototype")}}, com o valor <code>this</code> definido com a função {{jsxref("Array.prototype.slice()", "slice()")}} de {{jsxref("Array.prototype")}}. Isso significa que chamadas adicionais de <code>apply()</code> podem ser eliminadas:</p>
 
 <pre class="brush: js">// mesmo que "slice" no exemplo anterior
 var unboundSlice = Array.prototype.slice;
@@ -187,7 +187,7 @@ slice(arguments);
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>A função <code>bind</code> é uma adição à ECMA-262, 5ª. edição; como tal, pode não estar presente em todos os navegadores. Você pode contornar isso parcialmente inserindo o seguinte código no começo de seus <em>scripts</em>, permitindo o uso de muita parte da funcionalidade de <code>bind()</code> em implementações que não a suportam nativamente.</p>
+<p>A função <code>bind</code> é uma adição à ECMA-262, 5ª. edição; como tal, pode não estar presente em todos os navegadores. Você pode contornar isso parcialmente inserindo o seguinte código no começo de seus <em>scripts</em>, permitindo o uso de muita parte da funcionalidade de <code>bind()</code> em implementações que não a suportam nativamente.</p>
 
 <pre class="brush: js">if (!Function.prototype.bind) {
   Function.prototype.bind = function(oThis) {
@@ -218,13 +218,13 @@ slice(arguments);
 <p>Algumas das muitas diferenças (é bem possível que haja outras, já que esta lista não pretende seriamente ser completa) entre este algoritmo e o algoritmo especificado são:</p>
 
 <ul>
- <li>Esta implementação parcial depende dos métodos internos {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} e {{jsxref("Function.prototype.apply()")}} possuírem seus valores originais.</li>
- <li>Esta implementação parcial cria funções que não tem um {{jsxref("Function.caller", "caller")}} imutável como "mecanismo de defesa" e propriedades <code>arguments</code> que lançam um {{jsxref("Global_Objects/TypeError", "TypeError")}} ao usar <em>get</em>, <em>set</em>, ou ao deletar. (Isto pode ser adicionado se a implementação suporta {{jsxref("Object.defineProperty")}}, ou parcialmente implementado sem um comportamento <em>throw-on-delete</em> se a implementação suporta as extensões {{jsxref("Object.defineGetter", "__defineGetter__")}} e {{jsxref("Object.defineSetter", "__defineSetter__")}})</li>
- <li>Esta implementação parcial cria funções que tem uma propriedade <code>prototype</code>. (Funções vinculadas apropriadas não a tem.)</li>
+ <li>Esta implementação parcial depende dos métodos internos {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} e {{jsxref("Function.prototype.apply()")}} possuírem seus valores originais.</li>
+ <li>Esta implementação parcial cria funções que não tem um {{jsxref("Function.caller", "caller")}} imutável como "mecanismo de defesa" e propriedades <code>arguments</code> que lançam um {{jsxref("Global_Objects/TypeError", "TypeError")}} ao usar <em>get</em>, <em>set</em>, ou ao deletar. (Isto pode ser adicionado se a implementação suporta {{jsxref("Object.defineProperty")}}, ou parcialmente implementado sem um comportamento <em>throw-on-delete</em> se a implementação suporta as extensões {{jsxref("Object.defineGetter", "__defineGetter__")}} e {{jsxref("Object.defineSetter", "__defineSetter__")}})</li>
+ <li>Esta implementação parcial cria funções que tem uma propriedade <code>prototype</code>. (Funções vinculadas apropriadas não a tem.)</li>
  <li>Esta implementação parcial cria funções vinculadas cuja propriedade {{jsxref("Function.length", "length")}} não cumpre com a regra da ECMA-262: cria funções com comprimento zero, quando uma implementação completa, dependendo do comprimento da função alvo e do número de argumentos pre-especificados, pode retornar um comprimento não-nulo.</li>
 </ul>
 
-<p>Se você escolher utilizar esta implementação parcial, <strong>você não deve confiar em casos onde o comportamento é diferente da ECMA-262, 5ª. edição!</strong> Porém, com algum cuidado (e talvez com modificação adicional para atender necessidades específicas), esta implementação parcial pode ser uma ponte razoável para quando <code>bind()</code> for amplamente implementada de acordo com a especificação.</p>
+<p>Se você escolher utilizar esta implementação parcial, <strong>você não deve confiar em casos onde o comportamento é diferente da ECMA-262, 5ª. edição!</strong> Porém, com algum cuidado (e talvez com modificação adicional para atender necessidades específicas), esta implementação parcial pode ser uma ponte razoável para quando <code>bind()</code> for amplamente implementada de acordo com a especificação.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -250,55 +250,7 @@ slice(arguments);
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("7")}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("11.60")}}</td>
-   <td>{{CompatSafari("5.1")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatAndroid("4.0")}}</td>
-   <td>{{CompatChrome("1")}}</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile("11.5")}}</td>
-   <td>{{CompatSafari("6.0")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Function.bind")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

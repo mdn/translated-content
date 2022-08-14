@@ -21,7 +21,9 @@ Il s'agit d'une liste des actions définies par l'application que l'utilisateur 
 
 ## Syntaxe
 
-    Notification.actions
+```js
+Notification.actions
+```
 
 ### Valeur
 

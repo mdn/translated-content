@@ -9,11 +9,11 @@ translation_of: Web/CSS/display
 ---
 <div>{{CSSRef}}</div>
 
-<p>La propiedad CSS <strong><code>display</code></strong> especifica si un elemento es tratado como <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout" rel="nofollow">block or inline element</a> y el diseño usado por sus hijos, como <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>(Diseño de Flujo), <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout" rel="nofollow">grid</a>(Cuadricula) o <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" rel="nofollow">flex</a>(Flexible). </p>
+<p>La propiedad CSS <strong><code>display</code></strong> especifica si un elemento es tratado como <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout" rel="nofollow">block or inline element</a> y el diseño usado por sus hijos, como <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>(Diseño de Flujo), <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout" rel="nofollow">grid</a>(Cuadricula) o <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" rel="nofollow">flex</a>(Flexible). </p>
 
-<p>Formalmente la propiedad <code>display</code> establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>; la tipo interna establece el layout(Diseño) de los hijos. Algunos valores de <code>display</code> estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando <code>display: flex</code> es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. <strong>Vea</strong> la siguientes tablas para mas especificaciones individuales.</p>
+<p>Formalmente la propiedad <code>display</code> establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout">flow layout</a>; la tipo interna establece el layout(Diseño) de los hijos. Algunos valores de <code>display</code> estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando <code>display: flex</code> es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. <strong>Vea</strong> la siguientes tablas para mas especificaciones individuales.</p>
 
-<p>Además de los Diferentes Tipos de caja de Visualizacion, el valor de <code>none</code> permite Desactivar la Visualizacion DE UN Elemento; cuando no se utiliza <code>none</code>, todos los elementos descendentes también quedan desactivados. El documento se procesa como si el elemento no existiera en el árbol de documentos.</p>
+<p>Además de los Diferentes Tipos de caja de Visualizacion, el valor de <code>none</code> permite Desactivar la Visualizacion DE UN Elemento; cuando no se utiliza <code>none</code>, todos los elementos descendentes también quedan desactivados. El documento se procesa como si el elemento no existiera en el árbol de documentos.</p>
 
 <pre class="brush:css no-line-numbers notranslate">/ * Valores &lt;display-outside&gt; * /
 
@@ -79,7 +79,7 @@ display: unset;
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<p>La propiedad <code>display</code> se especifica mediante valores de palabras clave. Los valores de palabras clave se agrupan en seis categorías:</p>
+<p>La propiedad <code>display</code> se especifica mediante valores de palabras clave. Los valores de palabras clave se agrupan en seis categorías:</p>
 
 <ul>
  <li><a href="#display-outside">&lt;display-outside&gt;</a></li>
@@ -90,7 +90,7 @@ display: unset;
  <li><a href="#display-legacy">&lt;display-legacy&gt;</a></li>
 </ul>
 
-<p>En la actualidad, es mejor especificar <code>display</code> utilizando una sola palabra clave; aunque las últimas especificaciones permiten combinar algunas palabras clave, esto aún no está bien soportado por los navegadores.</p>
+<p>En la actualidad, es mejor especificar <code>display</code> utilizando una sola palabra clave; aunque las últimas especificaciones permiten combinar algunas palabras clave, esto aún no está bien soportado por los navegadores.</p>
 
 <h3 id="Valores">Valores</h3>
 
@@ -159,7 +159,7 @@ display: unset;
     <td>Si el elemento padre tiene <code>display:grid</code>, el elemento en sí y su contenido se establecen de acuerdo con el modelo de cuadrícula.</td>
    </tr>
    <tr>
-    <td><code>ruby</code> {{experimental_inline}}</td>
+    <td><code>ruby</code> {{experimental_inline}}</td>
     <td>El elemento se comporta como un elemento en línea y establece su contenido de acuerdo con el modelo de formato ruby. Se comporta como los elementos HTML {{HTMLElement ("ruby")}} correspondientes.</td>
    </tr>
   </tbody>
@@ -173,7 +173,7 @@ display: unset;
  </dd>
  <dt><a id="display-internal" name="display-internal">&lt;display-internal&gt;</a></dt>
  <dd>
- <p>Algunos modelos de disposición, como <span class="css">table y ruby</span>, tienen una estructura interna completa, con varios papeles diferentes que sus hijos y descendientes pueden llenar. Esta sección define los valores de visualización "internos", que sólo tienen significado dentro de ese modo de disposición particular.</p>
+ <p>Algunos modelos de disposición, como <span class="css">table y ruby</span>, tienen una estructura interna completa, con varios papeles diferentes que sus hijos y descendientes pueden llenar. Esta sección define los valores de visualización "internos", que sólo tienen significado dentro de ese modo de disposición particular.</p>
 
  <p>A menos que se especifique lo contrario, el tipo de visualización interno y el tipo de visualización exterior de los elementos que utilizan estos valores de visualización se establecen en la palabra clave dada.</p>
 
@@ -222,15 +222,15 @@ display: unset;
     <td>Estos elementos se comportan como elementos {{HTMLElement ("rb")}}.</td>
    </tr>
    <tr>
-    <td><code>ruby-text</code> {{experimental_inline}}</td>
+    <td><code>ruby-text</code> {{experimental_inline}}</td>
     <td>Estos elementos se comportan como elementos {{HTMLElement ("rt")}}.</td>
    </tr>
    <tr>
-    <td><code>ruby-base-container</code> {{experimental_inline}}</td>
+    <td><code>ruby-base-container</code> {{experimental_inline}}</td>
     <td>Estos elementos se comportan como elementos {{HTMLElement ("rbc")}} generados como cajas anónimas.</td>
    </tr>
    <tr>
-    <td><code>ruby-text-container</code> {{experimental_inline}}</td>
+    <td><code>ruby-text-container</code> {{experimental_inline}}</td>
     <td>Estos elementos se comportan como elementos {{HTMLElement ("rtc")}}.</td>
    </tr>
   </tbody>
@@ -247,7 +247,7 @@ display: unset;
   </thead>
   <tbody>
    <tr>
-    <td><code>contents</code> {{experimental_inline}}</td>
+    <td><code>contents</code> {{experimental_inline}}</td>
     <td>Estos elementos no producen una caja específica por sí mismos. Son reemplazados por su pseudo-caja y sus cajas infantiles.</td>
    </tr>
    <tr>
@@ -282,9 +282,9 @@ display: unset;
    <tr>
     <td><code>inline-table</code></td>
     <td>
-     <p>El  valor <code>inline-table</code> no tiene una asignación directa en HTML. Se comporta como un elemento HTML {{HTMLElement ("tabla")}}, pero como un cuadro en línea, en el lugar de un cuadro a nivel de bloque. Dentro del cuadro de la tabla hay un contexto de nivel de bloque.</p>
+     <p>El  valor <code>inline-table</code> no tiene una asignación directa en HTML. Se comporta como un elemento HTML {{HTMLElement ("tabla")}}, pero como un cuadro en línea, en el lugar de un cuadro a nivel de bloque. Dentro del cuadro de la tabla hay un contexto de nivel de bloque.</p>
 
-     <p>Es equivalente a  <code>inline table</code>.</p>
+     <p>Es equivalente a  <code>inline table</code>.</p>
     </td>
    </tr>
    <tr>
@@ -292,7 +292,7 @@ display: unset;
     <td>
      <p>El elemento se comporta como un elemento en línea y se establece su contenido de acuerdo con el modelo flexbox.</p>
 
-     <p>Es equivalente a  <code>inline flex</code>.</p>
+     <p>Es equivalente a  <code>inline flex</code>.</p>
     </td>
    </tr>
    <tr>
@@ -323,7 +323,7 @@ display: unset;
 <p>Esto es un bug ya reportado, para encontrar más información por favor referirse a los siguientes artículos</p>
 
 <ul>
- <li><a class="external external-icon" href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
+ <li><a class="external external-icon" href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
  <li><a class="external external-icon" href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents — hiddedevries.nl</a></li>
 </ul>
 
@@ -392,7 +392,7 @@ display: unset;
   <tr>
    <td>{{SpecName ('CSS2.1', 'visuren.html # display-prop', 'display')}}</td>
    <td>{{Spec2 ('CSS2.1')}}</td>
-   <td>Se agregaron los valores del modelo de tabla e <code>inline-block<em>.</em></code></td>
+   <td>Se agregaron los valores del modelo de tabla e <code>inline-block<em>.</em></code></td>
   </tr>
   <tr>
    <td>{{SpecName ('CSS1', '#display', 'display')}}</td>

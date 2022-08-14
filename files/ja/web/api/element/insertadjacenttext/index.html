@@ -5,7 +5,7 @@ translation_of: Web/API/Element/insertAdjacentText
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><code>insertAdjacentText()</code> メソッドは、与えられたテキストノードを、メソッドを実行した要素に対する相対的な位置に挿入します。</p>
+<p><code>insertAdjacentText()</code> メソッドは、与えられたテキストノードを、メソッドを実行した要素に対する相対的な位置に挿入します。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -18,8 +18,8 @@ translation_of: Web/API/Element/insertAdjacentText
  <dd><code>element</code> に対する相対的な位置を {{domxref("DOMString")}} 表現で指定します。次の文字列のうち1つを取ります。
  <ul>
   <li><code style="color: red;">'beforebegin'</code>: <code>element</code> 本体の前。</li>
-  <li><code style="color: green;">'afterbegin'</code>: <code>element</code> のすぐ内側の、最初の子要素の前。</li>
-  <li><code style="color: blue;">'beforeend'</code>: <code>element</code> のすぐ内側の、最後の子要素の後。</li>
+  <li><code style="color: green;">'afterbegin'</code>: <code>element</code> のすぐ内側の、最初の子要素の前。</li>
+  <li><code style="color: blue;">'beforeend'</code>: <code>element</code> のすぐ内側の、最後の子要素の後。</li>
   <li><code style="color: magenta;">'afterend'</code>:<code>element</code> 本体の後。</li>
  </ul>
  </dd>
@@ -58,7 +58,7 @@ foo
 <code style="font-weight: bold;">&lt;/p&gt;</code>
 &lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
 
-<div class="note"><strong>注記:</strong> <code>beforebegin</code> および <code>afterend</code> の positions が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。</div>
+<div class="note"><strong>注記:</strong> <code>beforebegin</code> および <code>afterend</code> の positions が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。</div>
 
 <pre class="brush: js">beforeBtn.addEventListener('click', function() {
   para.insertAdjacentText('afterbegin',textInput.value);
@@ -68,7 +68,7 @@ afterBtn.addEventListener('click', function() {
   para.insertAdjacentText('beforeend',textInput.value);
 });</pre>
 
-<p>私たちが GitHub に用意した <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a> デモを見てください。(同時に <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">source code</a> も読んでください。) ここにはシンプルなパラグラフが1つあります。フォーム要素に好きなテキストを入力してから、<em>Insert before</em> または <em>Insert after</em> ボタンを押すと、<code>insertAdjacentText()</code> が、入力したテキストをパラグラフのテキストの前または後に挿入します。すでにあるテキストノードにテキストが追加されるのではなく、新しい追加テキストが含まれる別のテキストノードが生成されて、それが追加されることに注意してください。</p>
+<p>私たちが GitHub に用意した <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a> デモを見てください。(同時に <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">source code</a> も読んでください。) ここにはシンプルなパラグラフが1つあります。フォーム要素に好きなテキストを入力してから、<em>Insert before</em> または <em>Insert after</em> ボタンを押すと、<code>insertAdjacentText()</code> が、入力したテキストをパラグラフのテキストの前または後に挿入します。すでにあるテキストノードにテキストが追加されるのではなく、新しい追加テキストが含まれる別のテキストノードが生成されて、それが追加されることに注意してください。</p>
 
 <p><strong style="color: #4d4e53; font-size: 2.14286rem; font-weight: 700; letter-spacing: -1px;">仕様</strong></p>
 
@@ -84,7 +84,7 @@ afterBtn.addEventListener('click', function() {
   <tr>
    <td>{{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}}</td>
    <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

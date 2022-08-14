@@ -88,7 +88,9 @@ Notez qu'une fois que vous faites cela, vous ne pouvez plus compter sur les prop
 
 Notez également que le déballage est transitif: lorsque vous utilisez `wrappedJSObject`, toutes les propriétés de l'objet déplié sont elles-mêmes dépliées (et donc peu fiables). C'est donc une bonne pratique, une fois que vous avez l'objet dont vous avez besoin, de le réemballer, ce que vous pouvez faire comme ceci:
 
-    XPCNativeWrapper(window.wrappedJSObject.foo);
+```js
+XPCNativeWrapper(window.wrappedJSObject.foo);
+```
 
 voir le document [vision Xray](/fr/Tech/Xray_vision) pour plus de détails à ce sujet.
 

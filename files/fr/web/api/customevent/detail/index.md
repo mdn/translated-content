@@ -16,7 +16,9 @@ Le **`detail`** de la propriété en lecture seule de l'interface {{domxref("Cus
 
 ## Syntaxe
 
-     let myDetail = customEventInstance.detail;
+```js
+let myDetail = customEventInstance.detail;
+```
 
 ### Valeur retournée
 

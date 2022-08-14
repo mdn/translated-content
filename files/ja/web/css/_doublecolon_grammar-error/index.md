@@ -48,9 +48,9 @@ translation_of: Web/CSS/::grammar-error
 #### CSS
 
 ```css
-::grammar-error  {
-  text-decoration: underline red;
-  color: red;
+::grammar-error  {
+  text-decoration: underline red;
+  color: red;
 }
 ```
 

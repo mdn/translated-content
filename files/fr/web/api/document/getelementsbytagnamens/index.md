@@ -18,7 +18,9 @@ Renvoie une liste d'éléments avec la balise de nom donnée appartenant à l'es
 
 ## Syntaxe
 
-    elements = document.getElementsByTagNameNS(namespace,name)
+```js
+elements = document.getElementsByTagNameNS(namespace,name)
+```
 
 - `elements` est une {{domxref("NodeList")}} (_liste de noeud_) directe (mais voir le note ci-dessous) d'éléments trouvés dans l'ordre de leur apparition dans l'arbre.
 - `namespace` l'URI d'espace de noms des éléments à rechercher (voir [`element.namespaceURI`](/en/DOM/Node.namespaceURI)).
@@ -113,14 +115,14 @@ Si le navigateur souhaité ne supporte pas XPath, une autre approche (comme trav
 
 ```js
 function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
-	if (!doc) {
-		doc = document;
-	}
-	if (!context) {
-		context = doc;
-	}
+  if (!doc) {
+    doc = document;
+  }
+  if (!context) {
+    context = doc;
+  }
 
-	var result = doc.evaluate('//*[local-name()="'+elName+'" and namespace-uri() = "'+ns+'"]', context, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+  var result = doc.evaluate('//*[local-name()="'+elName+'" and namespace-uri() = "'+ns+'"]', context, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 
         var a = [];
         for(var i = 0; i < result.snapshotLength; i++) {

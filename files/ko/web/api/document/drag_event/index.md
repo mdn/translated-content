@@ -1,6 +1,7 @@
 ---
 title: 'Document: drag 이벤트'
 slug: Web/API/Document/drag_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -16,28 +17,28 @@ translation_of: Web/API/Document/drag_event
 ---
 {{APIRef}}
 
-`drag` 이벤트는 사용자가 요소 또는 텍스트를 드래그할 때 수백 밀리초마다 발생합니다.
+`drag` 이벤트는 사용자가 요소 또는 텍스트를 드래그하는 동안 매 수백 밀리초마다 발생합니다.
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">이벤트 버블링</th>
-      <td>Yes</td>
+      <th scope="row">버블링</th>
+      <td>예</td>
     </tr>
     <tr>
-      <th scope="row">이벤트 취소</th>
-      <td>Yes</td>
+      <th scope="row">취소 가능</th>
+      <td>예</td>
     </tr>
     <tr>
-      <th scope="row">기본 액션</th>
-      <td>드래그 앤 드롭을 계속한다.</td>
+      <th scope="row">기본 동작</th>
+      <td>드래그 앤 드롭 작업을 지속합니다.</td>
     </tr>
     <tr>
       <th scope="row">인터페이스</th>
       <td>{{domxref("DragEvent")}}</td>
     </tr>
     <tr>
-      <th scope="row">이벤트 핸들러 속성</th>
+      <th scope="row">이벤트 처리기 속성</th>
       <td>
         {{domxref("GlobalEventHandlers/ondrag", "ondrag")}}
       </td>
@@ -47,27 +48,28 @@ translation_of: Web/API/Document/drag_event
 
 ## 예제
 
-[JSFiddle demo](http://jsfiddle.net/zfnj5rv4/)에서 이 코드를 보거나 아래에서 상호작용 하십시오.
+### 드래그 앤 드롭 예제
 
-### HTML
+#### HTML
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">
+    드래그 가능
+  </div>
 </div>
-<div class="dropzone"></div>
-<div class="dropzone"></div>
 <div class="dropzone"></div>
 ```
 
-### CSS
+#### CSS
 
 ```css
+body {
+  /* 사용자가 예제의 텍스트를 선택하지 못하도록 */
+  user-select: none;
+}
+
 #draggable {
-  width: 200px;
-  height: 20px;
   text-align: center;
   background: white;
 }
@@ -76,68 +78,76 @@ translation_of: Web/API/Document/drag_event
   width: 200px;
   height: 20px;
   background: blueviolet;
-  margin-bottom: 10px;
+  margin: 10px;
   padding: 10px;
+}
+
+.dropzone.dragover {
+  background-color: purple;
+}
+
+.dragging {
+  opacity: .5;
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
-var dragged;
+let dragged;
 
-/* 드래그 가능한 대상에서 이벤트 발생 */
-document.addEventListener("drag", function(event) {
+/* 드래그 가능한 대상에서 발생하는 이벤트 */
+document.addEventListener("drag", event => {
+  console.log("dragging");
+});
 
-}, false);
-
-document.addEventListener("dragstart", function(event) {
-  // 드래그한 요소에 대한 참조 변수
+document.addEventListener("dragstart", event => {
+  // 드래그한 요소에 대한 참조 저장
   dragged = event.target;
-  // 요소를 반투명하게 함
-  event.target.style.opacity = .5;
-}, false);
+  // 반투명하게 만들기
+  event.target.classList.add("dragging");
+});
 
-document.addEventListener("dragend", function(event) {
-  // 투명도를 리셋
-  event.target.style.opacity = "";
-}, false);
+document.addEventListener("dragend", event => {
+  // 투명도 초기화
+  event.target.classList.remove("dragging");
+});
 
-/* 드롭 대상에서 이벤트 발생 */
-document.addEventListener("dragover", function(event) {
-  // 드롭을 허용하도록 preventDefault() 호출
+/* 드롭 대상에서 발생하는 이벤트 */
+document.addEventListener("dragover", event => {
+  // 드롭을 허용하기 위해 기본 동작 취소
   event.preventDefault();
 }, false);
 
-document.addEventListener("dragenter", function(event) {
-  // 요소를 드롭하려는 대상 위로 드래그했을 때 대상의 배경색 변경
-  if (event.target.className == "dropzone") {
-    event.target.style.background = "purple";
+document.addEventListener("dragenter", event => {
+  // 드래그 가능한 요소가 대상 위로 오면 강조
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.add("dragover");
   }
+});
 
-}, false);
-
-document.addEventListener("dragleave", function(event) {
-  // 요소를 드래그하여 드롭하려던 대상으로부터 벗어났을 때 배경색 리셋
-  if (event.target.className == "dropzone") {
-    event.target.style.background = "";
+document.addEventListener("dragleave", event => {
+  // 드래그 가능한 요소가 대상 밖으로 나가면 강조 제거
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
   }
+});
 
-}, false);
-
-document.addEventListener("drop", function(event) {
-  // 기본 액션을 막음 (링크 열기같은 것들)
+document.addEventListener("drop", event => {
+  // 일부 요소의 링크 열기와 같은 기본 동작 취소
   event.preventDefault();
-  // 드래그한 요소를 드롭 대상으로 이동
-  if (event.target.className == "dropzone") {
-    event.target.style.background = "";
-    dragged.parentNode.removeChild( dragged );
-    event.target.appendChild( dragged );
+  // 드래그한 요소를 선택한 드롭 대상으로 이동
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
+    dragged.parentNode.removeChild(dragged);
+    event.target.appendChild(dragged);
   }
-}, false);
+});
 ```
 
-{{EmbedLiveSample('예제', '300', '200', '')}}
+#### 결과
+
+{{EmbedLiveSample('드래그 앤 드롭 예제')}}
 
 ## 명세
 
@@ -156,11 +166,10 @@ document.addEventListener("drop", function(event) {
   - {{domxref("Document/dragover_event", "dragover")}}
   - {{domxref("Document/dragenter_event", "dragenter")}}
   - {{domxref("Document/dragleave_event", "dragleave")}}
-  - {{domxref("Document/dragexit_event", "dragexit")}}
   - {{domxref("Document/drop_event", "drop")}}
 
-- 다른 대상의 `drag` 이벤트:
+- 이 이벤트의 다른 대상:
 
-  - {{domxref("Window")}}: {{domxref("Window/drag_event", "drag")}} event
-  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/drag_event", "drag")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/drag_event", "drag")}} event
+  - {{domxref("Window")}}: {{domxref("Window/drag_event", "drag")}} 이벤트
+  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/drag_event", "drag")}} 이벤트
+  - {{domxref("SVGElement")}}: {{domxref("SVGElement/drag_event", "drag")}} 이벤트

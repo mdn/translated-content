@@ -20,7 +20,9 @@ Cela signifie qu'un nœud ne peut pas se trouver simultanément à deux endroits
 
 ## Syntaxe
 
-    var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```js
+var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```
 
 - `insertedNode`
   - : Le nœud en cours d'insertion (le même que `newNode`).

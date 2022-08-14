@@ -30,14 +30,14 @@ translation_of: Web/API/RTCDataChannel
  <dt>{{domxref("RTCDataChannel.protocol")}} {{readOnlyInline}}</dt>
  <dd>利用している副プロトコルの名前を含む{{Domxref("DOMString")}}を返します。ない場合は <code>""</code>を返します。</dd>
  <dt>{{domxref("RTCDataChannel.id")}} {{readOnlyInline}}</dt>
- <dd>このチャンネルの固有IDを示す <code>unsigned short</code> を返します。この値は、{{domxref("RTCDataChannel")}}オブジェクトの作成時に設定されます。</dd>
+ <dd>このチャンネルの固有IDを示す <code>unsigned short</code> を返します。この値は、{{domxref("RTCDataChannel")}}オブジェクトの作成時に設定されます。</dd>
  <dt>{{domxref("RTCDataChannel.readyState")}} {{readOnlyInline}}</dt>
- <dd>下位のデータコネクションの状態を表現する列挙型の <code>RTCDataChannelState</code> を返します。次のいずれかの値をとります。
+ <dd>下位のデータコネクションの状態を表現する列挙型の <code>RTCDataChannelState</code> を返します。次のいずれかの値をとります。
  <ul>
   <li><code>"connecting"</code>: 下位のコネクションがまだ確立されておらず有効でないことを示します。{{domxref("RTCPeerConnection.createDataChannel()")}}によって生成されたデータチャネルの初期状態です。</li>
-  <li><code>"open"</code>: 下位のコネクションが確立され動作中であることを示します。{{domxref("RTCDataChannelEvent")}} によって、データチャンネルがディスパッチされた時の初期状態です。</li>
-  <li><code>"closing"</code>: 下位のコネクションがシャットダウン処理中であることを示します。新しい送信タスクは受け付けませんが、送信または受信中のキャッシュされたメッセージは処理されます。</li>
-  <li><code>"closed"</code>: 下位のコネクションがシャットダウンされたこと(または、確立できなかったこと)を示します。</li>
+  <li><code>"open"</code>: 下位のコネクションが確立され動作中であることを示します。{{domxref("RTCDataChannelEvent")}} によって、データチャンネルがディスパッチされた時の初期状態です。</li>
+  <li><code>"closing"</code>: 下位のコネクションがシャットダウン処理中であることを示します。新しい送信タスクは受け付けませんが、送信または受信中のキャッシュされたメッセージは処理されます。</li>
+  <li><code>"closed"</code>: 下位のコネクションがシャットダウンされたこと(または、確立できなかったこと)を示します。</li>
  </ul>
  </dd>
  <dt>{{domxref("RTCDataChannel.bufferedAmount")}} {{readOnlyInline}}</dt>
@@ -64,18 +64,18 @@ translation_of: Web/API/RTCDataChannel
  <dt>{{domxref("RTCDataChannel.onmessage")}}</dt>
  <dd>{{event("message")}} イベントを受信した時に呼ばれるイベントハンドラです。このイベントは、データコネクション上でメッセージを受信した時に送信されます。</dd>
  <dt>{{domxref("RTCDataChannel.onclose")}}</dt>
- <dd>{{event("close")}} イベントを受信した時に呼ばれるイベントハンドラです。このイベントは、下位のデータトランスポートが閉じた時に送信されます。</dd>
+ <dd>{{event("close")}} イベントを受信した時に呼ばれるイベントハンドラです。このイベントは、下位のデータトランスポートが閉じた時に送信されます。</dd>
  <dt>{{domxref("RTCDataChannel.onerror")}}</dt>
- <dd>{{event("error")}} イベントを受信した時に呼ばれるイベントハンドラです。このイベントは、エラーに遭遇した時に送信されます。</dd>
+ <dd>{{event("error")}} イベントを受信した時に呼ばれるイベントハンドラです。このイベントは、エラーに遭遇した時に送信されます。</dd>
 </dl>
 
 <h2 id="メソッド">メソッド</h2>
 
 <dl>
  <dt>{{domxref("RTCDataChannel.close()")}}</dt>
- <dd>チャンネルを閉じます。突然でない方法でチャンネルを閉じます。チャンネルの{{domxref("RTCDataChannel.readyState", "state")}} は <code>"closing"</code>に設定され、送信されていないメッセージは送信されてから、チャンネルを閉じます。</dd>
+ <dd>チャンネルを閉じます。突然でない方法でチャンネルを閉じます。チャンネルの{{domxref("RTCDataChannel.readyState", "state")}} は <code>"closing"</code>に設定され、送信されていないメッセージは送信されてから、チャンネルを閉じます。</dd>
  <dt>{{domxref("RTCDataChannel.send()")}}</dt>
- <dd>チャンネルのパラメータに従いデータを送信します。送信可能なデータの型は {{domxref("DOMString")}}　または {{domxref("Blob")}}、 {{domxref("ArrayBuffer")}}、{{domxref("ArrayBufferView")}} です。</dd>
+ <dd>チャンネルのパラメータに従いデータを送信します。送信可能なデータの型は {{domxref("DOMString")}}　または {{domxref("Blob")}}、 {{domxref("ArrayBuffer")}}、{{domxref("ArrayBufferView")}} です。</dd>
 </dl>
 
 <h2 id="例">例</h2>

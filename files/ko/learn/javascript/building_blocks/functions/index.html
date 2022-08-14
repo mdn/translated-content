@@ -26,7 +26,7 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
 
 <p>자바스크립트 어디서든 함수를 찾을 수 있습니다. 사실, 우리는 지금까지 수업에서 함수를 계속 사용해왔습니다. 함수에 대해서 아주 많이 말해오지 않았을 뿐이죠. 그러나 이제 함수에 대해서 분명하게 말하고, 실제로 문법을 탐험할 때가 되었습니다.</p>
 
-<p> <a href="/ko/docs/Learn/JavaScript/Building_blocks/Looping_code#%EB%A3%A8%ED%94%84%EC%9D%98_%ED%91%9C%EC%A4%80">for loop</a>, <a href="/ko/docs/Learn/JavaScript/Building_blocks/Looping_code#while_%EA%B7%B8%EB%A6%AC%EA%B3%A0_do_..._while">while 과 do...while loop</a>, 또는 <a href="/ko/docs/Learn/JavaScript/Building_blocks/%EC%A1%B0%EA%B1%B4%EB%AC%B8#if_..._else_%EB%AC%B8">if...else문</a>과 같은 일반적인 내장 언어 구조를 사용하지 <strong>않고</strong> — <code>()</code> —같은 괄호 쌍을 사용했다면 여러분은 함수를 사용하고 있던 겁니다.</p>
+<p> <a href="/ko/docs/Learn/JavaScript/Building_blocks/Looping_code#%EB%A3%A8%ED%94%84%EC%9D%98_%ED%91%9C%EC%A4%80">for loop</a>, <a href="/ko/docs/Learn/JavaScript/Building_blocks/Looping_code#while_%EA%B7%B8%EB%A6%AC%EA%B3%A0_do_..._while">while 과 do...while loop</a>, 또는 <a href="/ko/docs/Learn/JavaScript/Building_blocks/%EC%A1%B0%EA%B1%B4%EB%AC%B8#if_..._else_%EB%AC%B8">if...else문</a>과 같은 일반적인 내장 언어 구조를 사용하지 <strong>않고</strong> — <code>()</code> —같은 괄호 쌍을 사용했다면 여러분은 함수를 사용하고 있던 겁니다.</p>
 
 <h2 id="브라우저_내장_함수">브라우저 내장 함수</h2>
 
@@ -55,7 +55,7 @@ console.log(madeAString);
 // number between 0 and 1, and returns that
 // number</pre>
 
-<p>...우리는 함수를 사용하고 있었어요!</p>
+<p>...우리는 함수를 사용하고 있었어요!</p>
 
 <div class="note">
 <p><strong>참고</strong>: 만약 필요하다면, 이 기능들에 다시 익숙해지기 위해 여러분의 브라우저 자바스크립트 콘솔에 자유롭게 이 코드들을 입력해 보세요.</p>
@@ -87,17 +87,17 @@ console.log(madeAString);
 
 <pre class="brush: js notranslate">draw();</pre>
 
-<p>우리가 이것을 반복하기를 원할 때마다 모든 코드를 또 작성하지 않고 말이죠. 그리고 함수는 여러분이 원하는 코드를 무엇이든지간에 포함할 수 있습니다. 여러분은 심지어 다른 함수들을 함수 내부에서부터 호출할 수 있습니다. 위의 예시는 아래와 같이 정의된 <code>random()</code> 함수를 세 번이나 호출하고 있죠.</p>
+<p>우리가 이것을 반복하기를 원할 때마다 모든 코드를 또 작성하지 않고 말이죠. 그리고 함수는 여러분이 원하는 코드를 무엇이든지간에 포함할 수 있습니다. 여러분은 심지어 다른 함수들을 함수 내부에서부터 호출할 수 있습니다. 위의 예시는 아래와 같이 정의된 <code>random()</code> 함수를 세 번이나 호출하고 있죠.</p>
 
 <pre class="brush: js notranslate">function random(number) {
   return Math.floor(Math.random()*number);
 }</pre>
 
-<p>브라우저의 내장 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a> 함수는 오직 0과 1사이의 무작위 소수를 생성하기 때문에 우리는 이 함수가 필요했습니다. 우리는 0과 명시된 숫자 사이의 무작위 정수를 원했습니다.</p>
+<p>브라우저의 내장 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a> 함수는 오직 0과 1사이의 무작위 소수를 생성하기 때문에 우리는 이 함수가 필요했습니다. 우리는 0과 명시된 숫자 사이의 무작위 정수를 원했습니다.</p>
 
 <h2 id="함수_호출">함수 호출</h2>
 
-<p>지금까지 꽤 잘 따라온 거 같은데 혹시 모르니깐 말해 주자면... 정의된 함수를 작동시키기 위해선 함수를 '호출' 해야 돼요. 함수 호출은 함수의 이름을 괄호와 함께 코드 내에 적어 주면 됩니다.</p>
+<p>지금까지 꽤 잘 따라온 거 같은데 혹시 모르니깐 말해 주자면... 정의된 함수를 작동시키기 위해선 함수를 '호출' 해야 돼요. 함수 호출은 함수의 이름을 괄호와 함께 코드 내에 적어 주면 됩니다.</p>
 
 <pre class="brush: js notranslate">function myFunction() {
   alert('hello');
@@ -112,7 +112,7 @@ myFunction()
 
 <h2 id="익명_함수">익명 함수</h2>
 
-<p>여러분은 조금 다른 방식으로 정의되거나 호출되는 함수를 본 적 있을 거예요. 이제까지 우리는 이런 식으로 함수를 생성했죠: </p>
+<p>여러분은 조금 다른 방식으로 정의되거나 호출되는 함수를 본 적 있을 거예요. 이제까지 우리는 이런 식으로 함수를 생성했죠: </p>
 
 <pre class="brush: js notranslate">function myFunction() {
   alert('hello');
@@ -124,7 +124,7 @@ myFunction()
   alert('hello');
 }</pre>
 
-<p>이건 <strong>익명 함수</strong>라고 불려요. 이름이 없다는 뜻이죠! 익명함수는 스스로 뭘 어쩌지 못 해요. 익명함수는 주로 이벤트 핸들러와 사용됩니다. 아래의 예시는 함수 내의 코드가 관련된 버튼을 클릭함에 따라 작동한다는 걸 보여주죠. </p>
+<p>이건 <strong>익명 함수</strong>라고 불려요. 이름이 없다는 뜻이죠! 익명함수는 스스로 뭘 어쩌지 못 해요. 익명함수는 주로 이벤트 핸들러와 사용됩니다. 아래의 예시는 함수 내의 코드가 관련된 버튼을 클릭함에 따라 작동한다는 걸 보여주죠. </p>
 
 <pre class="brush: js notranslate">var myButton = document.querySelector('button');
 
@@ -132,7 +132,7 @@ myButton.onclick = function() {
   alert('hello');
 }</pre>
 
-<p>위의 예시는 페이지 상의 클릭을 위해 {{htmlelement("button")}} 요소를 필요로 합니다. 여러분은 코스를 거치며 이런 구조의 코드를 꽤 봐왔을 거예요. 다음 문서에서 더 많은 걸 배워 보자구요.</p>
+<p>위의 예시는 페이지 상의 클릭을 위해 {{htmlelement("button")}} 요소를 필요로 합니다. 여러분은 코스를 거치며 이런 구조의 코드를 꽤 봐왔을 거예요. 다음 문서에서 더 많은 걸 배워 보자구요.</p>
 
 <p>여러분은 변수 속에 익명함수를 넣을 수 있어요. 예시입니다.</p>
 
@@ -144,7 +144,7 @@ myButton.onclick = function() {
 <p>이 형태의 함수 생성은 또한 <em>함수 표현식</em>(function expression)으로도 알려져 있습니다. 함수 선언과는 다르게, 함수 표현식은 호이스팅되지 않습니다.</p>
 </div>
 
-<p>이 함수는 이런 식으로 호출되죠:</p>
+<p>이 함수는 이런 식으로 호출되죠:</p>
 
 <pre class="brush: js notranslate">myGreeting();</pre>
 
@@ -159,13 +159,13 @@ myButton.onclick = function() {
 <pre class="brush: js notranslate">myGreeting();
 anotherGreeting();</pre>
 
-<p>하지만 위의 방식은 사람 헷갈리게 만들어요. 그니깐 쓰진 맙시다! 함수를 만들 땐 아래의 형태를 고수하는 게 나아요.</p>
+<p>하지만 위의 방식은 사람 헷갈리게 만들어요. 그니깐 쓰진 맙시다! 함수를 만들 땐 아래의 형태를 고수하는 게 나아요.</p>
 
 <pre class="brush: js notranslate">function myGreeting() {
   alert('hello');
 }</pre>
 
-<p>익명함수는 이벤트 발생에 따른 수많은 코드를 작동시키기 위해 주로 쓰이게 돼요. 이벤트 핸들러를 사용한 버튼의 클릭과 같은 상황에 말이죠. 자, 그 코드는 아래와 같이 생겼어요.</p>
+<p>익명함수는 이벤트 발생에 따른 수많은 코드를 작동시키기 위해 주로 쓰이게 돼요. 이벤트 핸들러를 사용한 버튼의 클릭과 같은 상황에 말이죠. 자, 그 코드는 아래와 같이 생겼어요.</p>
 
 <pre class="brush: js notranslate">myButton.onclick = function() {
   alert('hello');
@@ -178,23 +178,23 @@ anotherGreeting();</pre>
 <p>몇몇 함수는 호출을 위해 매개변수를 필요로 하는 경우가 있습니다. 이것들은 함수 괄호 안에 포함될 필요가 있는 값들인데, 올바르게 동작하기 위해 필요합니다.</p>
 
 <div class="note">
-<p><strong>참고</strong>: 매개변수는 종종 arguments, properties, 심지어 attributes 라고도 불려요.</p>
+<p><strong>참고</strong>: 매개변수는 종종 arguments, properties, 심지어 attributes 라고도 불려요.</p>
 </div>
 
-<p>예를 들어, 브라우저의 내장 함수인 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a>은 어떤 매개변수도 필요로 하지 않습니다. 이 함수는 호출되면 늘 0과 1사이의 무작위 수를 반환해 주죠. </p>
+<p>예를 들어, 브라우저의 내장 함수인 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a>은 어떤 매개변수도 필요로 하지 않습니다. 이 함수는 호출되면 늘 0과 1사이의 무작위 수를 반환해 주죠. </p>
 
 <pre class="brush: js notranslate">var myNumber = Math.random();</pre>
 
-<p>하지만 브라우저의 내장 문자열 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a> 함수는 두 개의 매개변수를 필요로 합니다. 대체될 문자와 대체할 문자죠.</p>
+<p>하지만 브라우저의 내장 문자열 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a> 함수는 두 개의 매개변수를 필요로 합니다. 대체될 문자와 대체할 문자죠.</p>
 
 <pre class="brush: js notranslate">var myText = 'I am a string';
 var newString = myText.replace('string', 'sausage');</pre>
 
 <div class="note">
-<p><strong>참고</strong>: 여러 개의 매개변수는 콤마에 의해 구분되어집니다. </p>
+<p><strong>참고</strong>: 여러 개의 매개변수는 콤마에 의해 구분되어집니다. </p>
 </div>
 
-<p>매개변수는 이따금 선택 사항이기도 합니다. 여러분이 명시해 줄 필요가 없다는 뜻이죠. 그런 경우, 일반적으로 함수는 기본 기능을 수행합니다. 예를 들어, 배열과 관련된 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join()</a> 함수의 매개변수가 그렇죠.</p>
+<p>매개변수는 이따금 선택 사항이기도 합니다. 여러분이 명시해 줄 필요가 없다는 뜻이죠. 그런 경우, 일반적으로 함수는 기본 기능을 수행합니다. 예를 들어, 배열과 관련된 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join()</a> 함수의 매개변수가 그렇죠.</p>
 
 <pre class="brush: js notranslate">var myArray = ['I', 'love', 'chocolate', 'frogs'];
 var madeAString = myArray.join(' ');
@@ -204,15 +204,15 @@ var madeAString = myArray.join();
 
 <p>결합(joining)/한정(delimiting)하는 문자를 명시할 어떠한 매개변수도 포함되지 않는다면, 콤마가 기본으로 사용될 것입니다.</p>
 
-<h2 id="함수_스코프와_충돌">함수 스코프와 충돌(conflicts)</h2>
+<h2 id="함수_스코프와_충돌">함수 스코프와 충돌(conflicts)</h2>
 
-<p>우리 '<a href="/ko/docs/Glossary/Scope">스코프</a>(scope)'에 대해 얘기해 볼까요? '스코프'는 함수와 관련된 매우 중요한 개념입니다.  함수를 생성할 때, 변수 및 함수 내 정의된 코드들은 그들만의 분리된 '스코프' 안에 자리하게 됩니다. 그 말인 즉슨, 다른 함수의 내부나 외부 함수의 코드가 접근할 수 없는 그들만의 구획에 갇혀 있다는 뜻입니다. </p>
+<p>우리 '<a href="/ko/docs/Glossary/Scope">스코프</a>(scope)'에 대해 얘기해 볼까요? '스코프'는 함수와 관련된 매우 중요한 개념입니다.  함수를 생성할 때, 변수 및 함수 내 정의된 코드들은 그들만의 분리된 '스코프' 안에 자리하게 됩니다. 그 말인 즉슨, 다른 함수의 내부나 외부 함수의 코드가 접근할 수 없는 그들만의 구획에 갇혀 있다는 뜻입니다. </p>
 
 <p>함수 바깥에 선언된 가장 상위 레벨의 스코프를 '<strong>전역 스코프</strong>(global scope)' 라고 부릅니다.전역 스코프 내에 정의된 값들은 어느 코드든 접근이 가능합니다.</p>
 
-<p>자바스크립트는 다양한 이유로 인해 이와 같이 설정되어 있지만, 주로는 안전성과 구조 때문입니다. 어떤 때에는 여러분의 변수가 어느 코드나 접근 가능한 변수가 되는 걸 원치 않을 겁니다. 여러분이 어딘가에서 불러온 외부 스크립트가 문제를 일으킬 수도 있으니깐요. 외부 스크립트의 코드와 같은 변수 이름을 사용하면 충돌이 일어나게 돼요. 이건 악의적일 수도 있고, 아님 뭐 단순한 우연이겠죠.</p>
+<p>자바스크립트는 다양한 이유로 인해 이와 같이 설정되어 있지만, 주로는 안전성과 구조 때문입니다. 어떤 때에는 여러분의 변수가 어느 코드나 접근 가능한 변수가 되는 걸 원치 않을 겁니다. 여러분이 어딘가에서 불러온 외부 스크립트가 문제를 일으킬 수도 있으니깐요. 외부 스크립트의 코드와 같은 변수 이름을 사용하면 충돌이 일어나게 돼요. 이건 악의적일 수도 있고, 아님 뭐 단순한 우연이겠죠.</p>
 
-<p>예를 들어 , 여러분에게 두 개의 외부 자바스크립트 파일을 호출하는 HTML이 있다고 쳐요. 그 둘은 같은 이름으로 정의된 변수와 함수를 사용하고 있습니다.</p>
+<p>예를 들어 , 여러분에게 두 개의 외부 자바스크립트 파일을 호출하는 HTML이 있다고 쳐요. 그 둘은 같은 이름으로 정의된 변수와 함수를 사용하고 있습니다.</p>
 
 <pre class="brush: html notranslate">&lt;!-- Excerpt from my HTML --&gt;
 &lt;script src="first.js"&gt;&lt;/script&gt;
@@ -236,12 +236,12 @@ function greeting() {
 <p>여러분이 호출하고 싶은 두 함수 모두 <code>greeting()</code> 이지만, 여러분은 오직 <code>first.js</code> 파일의 <code>greeting()</code> 함수에만 접근할 수 있을 뿐입니다 (두번째 것은 무시됩니다). 추가적으로, <code>second.js</code> 파일에서 <code>let</code> 키워드로 <code>name</code> 변수를 두 번째로 선언하려고 시도하는 것은 오류를 낳습니다.</p>
 
 <div class="note">
-<p><strong>참고</strong>: 예제를 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">GitHub</a>에서 볼 수 있습니다. (<a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">소스 코드</a> 또한 볼 수 있습니다).</p>
+<p><strong>참고</strong>: 예제를 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">GitHub</a>에서 볼 수 있습니다. (<a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">소스 코드</a> 또한 볼 수 있습니다).</p>
 </div>
 
 <p>함수의 일부를 코드 안에 가두는 것은 이러한 문제를 피할 수 있고, 가장 좋은 방법이라 여겨집니다.</p>
 
-<p>동물원 같네요. 사자, 얼룩말, 호랑이, 그리고 펭귄은 자신들만의 울타리 안에 있으며, 그들의 울타리 내부에 있는 것만 건드릴 수 있어요. 함수 스코프처럼 말이죠. 만약 동물들이 다른 울타리 안으로 들어갈 수 있었다면, 문제가 생겼을 겁니다. 좋게는 다른 동물이 낯선 거주 환경에서 불편함을 느끼는 정도겠죠. 사자나 호랑이가 펭귄의 물기 많고 추운 영역 안에서 끔찍함을 느끼듯이요. 하지만 최악의 상황엔 사자나 호랑이가 펭귄을 먹어 치울지도 모르죠!</p>
+<p>동물원 같네요. 사자, 얼룩말, 호랑이, 그리고 펭귄은 자신들만의 울타리 안에 있으며, 그들의 울타리 내부에 있는 것만 건드릴 수 있어요. 함수 스코프처럼 말이죠. 만약 동물들이 다른 울타리 안으로 들어갈 수 있었다면, 문제가 생겼을 겁니다. 좋게는 다른 동물이 낯선 거주 환경에서 불편함을 느끼는 정도겠죠. 사자나 호랑이가 펭귄의 물기 많고 추운 영역 안에서 끔찍함을 느끼듯이요. 하지만 최악의 상황엔 사자나 호랑이가 펭귄을 먹어 치울지도 모르죠!</p>
 
 <p><img alt="" src="mdn-mozilla-zoo.png" style="display: block; margin: 0 auto;"></p>
 
@@ -252,8 +252,8 @@ function greeting() {
 <p>스코프를 설명하기 위해 스코프 사용의 실례를 한번 봅시다.</p>
 
 <ol>
- <li>먼저, 주어진 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html">function-scope.html</a> 예제의 복사본을 만드세요. 예제에는 2개의 함수 <code>a()</code> 와 <code>b()</code>, 그리고 3개의 변수 — <code>x</code>, <code>y</code>, 와 <code>z</code> —가 있습니다. 그 중 2개는 함수 안에 정의되어 있으며, 1개는 전역 스코프에 정의되어 있습니다. 이것은 또한 세 번째 함수 <code>output()</code>을 포함하고 있는데, 이건 하나의 매개변수만 받으며, 페이지의 단락 안에 그것을 출력합니다.</li>
- <li>예제를 인터넷 브라우저나 텍스트 에디터를 통해 열어봅시다.</li>
+ <li>먼저, 주어진 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html">function-scope.html</a> 예제의 복사본을 만드세요. 예제에는 2개의 함수 <code>a()</code> 와 <code>b()</code>, 그리고 3개의 변수 — <code>x</code>, <code>y</code>, 와 <code>z</code> —가 있습니다. 그 중 2개는 함수 안에 정의되어 있으며, 1개는 전역 스코프에 정의되어 있습니다. 이것은 또한 세 번째 함수 <code>output()</code>을 포함하고 있는데, 이건 하나의 매개변수만 받으며, 페이지의 단락 안에 그것을 출력합니다.</li>
+ <li>예제를 인터넷 브라우저나 텍스트 에디터를 통해 열어봅시다.</li>
  <li>브라우저 개발자 툴에서 자바스크립트 콘솔을 엽시다. 자바스크립트 콘솔에서 아래와 같이 작성해보세요.
   <pre class="brush: js notranslate">output(x);</pre>
   여러분은 브라우저 뷰포트에 출력된 변수 <code>x</code>의 값을 볼 수 있을 것입니다.</li>

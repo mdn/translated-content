@@ -19,7 +19,9 @@ Voir [la section sur l'élément racine et sa marge externe](/fr/docs/Web/API/In
 
 ## Syntaxe
 
-    marginString = IntersectionObserver.rootMargin;
+```js
+marginString = IntersectionObserver.rootMargin;
+```
 
 ### Valeur
 

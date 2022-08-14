@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>search()</code></strong> 메서드는 정규 표현식과  이 {{jsxref("String")}}  객체간에 같은 것을 찾기<br>
+<p><strong><code>search()</code></strong> 메서드는 정규 표현식과  이 {{jsxref("String")}}  객체간에 같은 것을 찾기<br>
  위한 검색을 실행한다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-search.html")}}</div>
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 
 <dl>
  <dt><code>regexp</code></dt>
- <dd>정규 표현식 객체.  non-RegExp 객체 <code>obj</code> 가 전달되면,  그것은  <code>new RegExp(obj)</code> 을 이용하여 {{jsxref("RegExp")}} 으로 암묵적으로 변환된다.</dd>
+ <dd>정규 표현식 객체.  non-RegExp 객체 <code>obj</code> 가 전달되면,  그것은  <code>new RegExp(obj)</code> 을 이용하여 {{jsxref("RegExp")}} 으로 암묵적으로 변환된다.</dd>
 </dl>
 
 <h3 id="반환_값">반환 값</h3>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 
 <h2 id="설명">설명</h2>
 
-<p>When you want to know whether a pattern is found and also its index in a string use <code>search()</code> (if you only want to know if it exists, use the similar {{jsxref("RegExp.prototype.test()", "test()")}} method on the RegExp prototype, which returns a boolean); for more information (but slower execution) use {{jsxref("String.prototype.match()", "match()")}} (similar to the regular expression {{jsxref("RegExp.prototype.exec()", "exec()")}} method).</p>
+<p>When you want to know whether a pattern is found and also its index in a string use <code>search()</code> (if you only want to know if it exists, use the similar {{jsxref("RegExp.prototype.test()", "test()")}} method on the RegExp prototype, which returns a boolean); for more information (but slower execution) use {{jsxref("String.prototype.match()", "match()")}} (similar to the regular expression {{jsxref("RegExp.prototype.exec()", "exec()")}} method).</p>
 
 <h2 id="예">예</h2>
 
@@ -61,17 +61,17 @@ console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation</pre
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -83,7 +83,7 @@ console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation</pre
 <h2 id="Gecko-specific_notes">Gecko-specific notes</h2>
 
 <ul>
- <li><code>flags</code> was a non standard second argument only available in Gecko : <var>str</var>.search(<var>regexp, flags</var>)</li>
+ <li><code>flags</code> was a non standard second argument only available in Gecko : <var>str</var>.search(<var>regexp, flags</var>)</li>
  <li>Prior to {{Gecko("8.0")}}, <code>search()</code> was implemented incorrectly; when it was called with no parameters or with {{jsxref("undefined")}}, it would match against the string 'undefined', instead of matching against the empty string. This is fixed; now <code>'a'.search()</code> and <code>'a'.search(undefined)</code> correctly return 0.</li>
  <li>Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard <code>flags</code> argument is deprecated and throws a console warning ({{bug(1142351)}}).</li>
  <li>Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard <code>flags</code> argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).</li>

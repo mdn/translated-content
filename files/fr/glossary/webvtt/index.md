@@ -14,7 +14,7 @@ Les fichiers WebVTT fournissent des métadonnées alignées sur le temps avec du
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "WebVTT")}} sur Wikipedia
+- [WebVTT](https://fr.wikipedia.org/wiki/WebVTT) sur Wikipédia
 
 ### Technical reference
 

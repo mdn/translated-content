@@ -19,8 +19,10 @@ Les navigateurs récents fournissent la propriété {{domxref("URL.searchParams"
 
 ## Syntaxe
 
-    chaineDeCaractere = objet.search;
-    object.search = chaineDeCaractere;
+```js
+chaineDeCaractere = objet.search;
+object.search = chaineDeCaractere;
+```
 
 ### Valeur
 

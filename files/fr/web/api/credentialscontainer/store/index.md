@@ -17,7 +17,9 @@ La méthode **`store()`**, rattachée à l'interface {{domxref("CredentialsConta
 
 ## Syntaxe
 
-    CredentialsContainer.store(cred).then(function(credRes) { ... } )
+```js
+CredentialsContainer.store(cred).then(function(credRes) { ... } )
+```
 
 ### Paramètres
 

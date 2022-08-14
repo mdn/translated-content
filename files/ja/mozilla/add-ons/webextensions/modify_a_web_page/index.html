@@ -126,7 +126,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
     manifest.json
     page-eater.js</code></pre>
 
-<p><a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">拡張機能を再読み込み</a>して、ページを開きます (任意のページ)  コンテキストメニューを有効化し、"Eat this page" を選択します。</p>
+<p><a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">拡張機能を再読み込み</a>して、ページを開きます (任意のページ)  コンテキストメニューを有効化し、"Eat this page" を選択します。</p>
 
 <p>{{EmbedYouTube("zX4Bcv8VctA")}}</p>
 
@@ -178,11 +178,11 @@ function messageTab(tabs) {
 }
 
 function onExecuted(result) {
-    var querying = browser.tabs.query({
-        active: true,
-        currentWindow: true
-    });
-    querying.then(messageTab);
+    var querying = browser.tabs.query({
+        active: true,
+        currentWindow: true
+    });
+    querying.then(messageTab);
 }
 
 browser.contextMenus.onClicked.addListener(function(info, tab) {
@@ -210,13 +210,13 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
 
 <p><span id="result_box" lang="ja"><span>今すぐページを処理する代わりに、コンテンツスクリプトは </span></span><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code><span lang="ja"><span>を使ってメッセージを取得します。</span> <span>メッセージが到着すると、コンテンツスクリプトは前と同じコードを実行しますが、置換テキストは </span></span><code>request.replacement</code><span lang="ja"><span> から取得されます。</span></span></p>
 
-<p><code><a href="/ja/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code><span lang="ja"><span> は非同期関数であり、リスナーが "page-eater.js" に追加された後にのみメッセージを送信するために、"page-eater.js" を実行した後に呼び出される </span></span><code>onExecuted</code><span lang="ja"><span> を使用します。</span></span></p>
+<p><code><a href="/ja/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code><span lang="ja"><span> は非同期関数であり、リスナーが "page-eater.js" に追加された後にのみメッセージを送信するために、"page-eater.js" を実行した後に呼び出される </span></span><code>onExecuted</code><span lang="ja"><span> を使用します。</span></span></p>
 
 <div class="note">
-<p>Ctrl+Shift+J (Mac では Cmd+Shift+J) を押します。もしくは <code>web-ext run --bc</code> で <a href="/ja/docs/Tools/Browser_Console">Browser Console</a> を開きバックグラウンドスクリプトの <code>console.log</code> を見ます。<span id="result_box" lang="ja"><span>または、</span></span> <a href="/ja/Add-ons/Add-on_Debugger">Add-on Debugger</a>  <span lang="ja"><span>を使用して、ブレークポイントを設定することもできます。</span> <span>現在、</span></span><a href="https://github.com/mozilla/web-ext/issues/759">web-ext から 直接 Add-on Debugger を起動する</a> 方法<span lang="ja"><span>はありません。</span></span></p>
+<p>Ctrl+Shift+J (Mac では Cmd+Shift+J) を押します。もしくは <code>web-ext run --bc</code> で <a href="/ja/docs/Tools/Browser_Console">Browser Console</a> を開きバックグラウンドスクリプトの <code>console.log</code> を見ます。<span id="result_box" lang="ja"><span>または、</span></span> <a href="/ja/Add-ons/Add-on_Debugger">Add-on Debugger</a>  <span lang="ja"><span>を使用して、ブレークポイントを設定することもできます。</span> <span>現在、</span></span><a href="https://github.com/mozilla/web-ext/issues/759">web-ext から 直接 Add-on Debugger を起動する</a> 方法<span lang="ja"><span>はありません。</span></span></p>
 </div>
 
-<p><span id="result_box" lang="ja"><span>コンテンツスクリプトからバックグラウンドページにメッセージを戻したい場合は、</span></span> <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code><span lang="ja"><span> の代わりに </span></span><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code><span lang="ja"><span> を使用します</span></span>。</p>
+<p><span id="result_box" lang="ja"><span>コンテンツスクリプトからバックグラウンドページにメッセージを戻したい場合は、</span></span> <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code><span lang="ja"><span> の代わりに </span></span><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code><span lang="ja"><span> を使用します</span></span>。</p>
 
 <p>例：</p>
 
@@ -224,7 +224,7 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
     title: "from page-eater.js"
 });</pre>
 
-<div class="note"><span id="result_box" lang="ja"><span>これらの例はすべて JavaScript を注入します。</span><span> </span></span><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code> <span lang="ja"><span> 関数を使用してプログラムで CSS を挿入することもできます。</span></span></div>
+<div class="note"><span id="result_box" lang="ja"><span>これらの例はすべて JavaScript を注入します。</span><span> </span></span><code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code> <span lang="ja"><span> 関数を使用してプログラムで CSS を挿入することもできます。</span></span></div>
 
 <h2 id="Learn_more" name="Learn_more">関連項目</h2>
 

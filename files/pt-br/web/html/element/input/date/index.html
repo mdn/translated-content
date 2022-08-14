@@ -17,7 +17,7 @@ original_slug: Web/HTML/Element/Input/data
 ---
 <p>Os elementos {{htmlelement("input")}} do tipo <strong><code>date</code></strong> cria campos de entrada que permite o usuário informar uma data, como também usar uma caixa de texto que valida automaticamente o conteúdo, ou usando uma interface de seleção de data especial. O valor resultante inclui ano, mês e dia, mas não o <code>horário</code>. Os tipos de entrada <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time">time</a> e <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code> permitem informar horário e data/hora.</p>
 
-<p>A interface do usuário do controle varia geralmente de navegador para navegador; neste momento o suporte é irregular, veja <a href="#browser_compatibility">Browser compatibility</a> para maiores detalhes. Nos navegadores sem suporte, o controle é rebaixado graciosamente para um  <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> simples.</p>
+<p>A interface do usuário do controle varia geralmente de navegador para navegador; neste momento o suporte é irregular, veja <a href="#browser_compatibility">Browser compatibility</a> para maiores detalhes. Nos navegadores sem suporte, o controle é rebaixado graciosamente para um  <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> simples.</p>
 
 <pre class="brush: html">&lt;input id="date" type="date"&gt;</pre>
 
@@ -79,7 +79,7 @@ dateControl.value = '2017-06-01';</pre>
 
 <h2 id="Atributos_adicionais">Atributos adicionais</h2>
 
-<p>Além dos atributos disponíveis para todos os elementos {{HTMLElement("input")}}, as caixas de texto de data oferecem os seguintes atributos:</p>
+<p>Além dos atributos disponíveis para todos os elementos {{HTMLElement("input")}}, as caixas de texto de data oferecem os seguintes atributos:</p>
 
 <table class="standard-table" dir="ltr">
  <thead>
@@ -108,7 +108,7 @@ dateControl.value = '2017-06-01';</pre>
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Usando_caixas_de_texto_de_data">Usando caixas de texto de data</h2>
 
@@ -150,7 +150,7 @@ dateControl.value = '2017-06-01';</pre>
 
 <h3 id="Controlando_o_tamanho_da_entrada">Controlando o tamanho da entrada</h3>
 
-<p><code>&lt;input type="date"&gt;</code> não suporta atributos de tamanho de formulário como  {{htmlattrxref("size", "input")}}. Você poderá recorrer ao <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> para modificar o tamanho.</p>
+<p><code>&lt;input type="date"&gt;</code> não suporta atributos de tamanho de formulário como  {{htmlattrxref("size", "input")}}. Você poderá recorrer ao <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> para modificar o tamanho.</p>
 
 <h2 id="Validação">Validação</h2>
 
@@ -205,7 +205,7 @@ input:valid+span:after {
 }</pre>
 
 <div class="warning">
-<p><strong>Importante</strong>: A validação do formulário HTML não subtitui scripts que validam se a entrada de dados está em um formato apropriado.  É muito fácil para alguém fazer ajustes no HTML que permitam sobrepor a validação ou removê-lo inteiramente.  Também é possível simplesmente sobrepor seu HTML inteiramente e submeter os dados diretamente ao seu servidor. Se seu código server-side falhar na validação do dado que recebe pode ocorreu um desaste quando os dados forem submetidos inapropriadamente formatado (ou dado pode ser muito grande, ou é do tipo errado e assim por diante).</p>
+<p><strong>Importante</strong>: A validação do formulário HTML não subtitui scripts que validam se a entrada de dados está em um formato apropriado.  É muito fácil para alguém fazer ajustes no HTML que permitam sobrepor a validação ou removê-lo inteiramente.  Também é possível simplesmente sobrepor seu HTML inteiramente e submeter os dados diretamente ao seu servidor. Se seu código server-side falhar na validação do dado que recebe pode ocorreu um desaste quando os dados forem submetidos inapropriadamente formatado (ou dado pode ser muito grande, ou é do tipo errado e assim por diante).</p>
 </div>
 
 <h2 id="Manipulação_do_suporte_do_navegador">Manipulação do suporte do navegador</h2>
@@ -368,59 +368,7 @@ input:valid + span:after {
 
 <h2 id="Navegadores_compatíveis">Navegadores compatíveis</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>20</td>
-   <td>12</td>
-   <td>{{CompatGeckoDesktop(57)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10.62</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(57)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10.62</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.input.type_date")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

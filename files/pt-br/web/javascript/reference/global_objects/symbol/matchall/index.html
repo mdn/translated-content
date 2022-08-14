@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 ---
 <div>{{JSRef}}</div>
 
-<p>O símbolo <code><strong>Symbol.matchAll</strong></code> é conhecido por retornar um iterador, que produz conrrespondências de uma expressão regular com uma string. Essa função é usada pelo método {{jsxref("String.prototype.matchAll()")}}.</p>
+<p>O símbolo <code><strong>Symbol.matchAll</strong></code> é conhecido por retornar um iterador, que produz conrrespondências de uma expressão regular com uma string. Essa função é usada pelo método {{jsxref("String.prototype.matchAll()")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}</div>
 
@@ -20,14 +20,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 
 /a/[Symbol.matchAll]('abc');</pre>
 
-<p>Esse método existe para costumizar o comportamento conrrespondente com as subclasses {{jsxref("RegExp")}}.</p>
+<p>Esse método existe para costumizar o comportamento conrrespondente com as subclasses {{jsxref("RegExp")}}.</p>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
 </div>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usuando_Symbol.matchAll">Usuando Symbol.matchAll</h3>
+<h3 id="Usuando_Symbol.matchAll">Usuando Symbol.matchAll</h3>
 
 <pre class="brush: js notranslate">let re = /[0-9]+/g;
 let str = '2016-01-02|2019-03-07';
@@ -43,7 +43,7 @@ console.log(Array.from(str.matchAll(numbers)));
 //  Array ["2016", "01", "02", "2019", "03", "07"]
 </pre>
 
-<p>Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} para mais exemplos.</p>
+<p>Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} para mais exemplos.</p>
 
 <h2 id="Especificações">Especificações</h2>
 

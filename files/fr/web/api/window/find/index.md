@@ -21,8 +21,10 @@ La méthode **`Window.find()`** trouve une chaîne dans une fenêtre.
 
 ## Syntaxe
 
-    window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
-                aWholeWord, aSearchInFrames, aShowDialog);
+```js
+window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
+            aWholeWord, aSearchInFrames, aShowDialog);
+```
 
 - `aString`
   - : La chaîne de caractère à rechercher.

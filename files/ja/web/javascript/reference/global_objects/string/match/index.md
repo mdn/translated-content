@@ -104,7 +104,6 @@ console.log(matches_array);
 
 > **Note:** {{jsxref("String.prototype.matchAll()")}} と[フラグを用いた高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)も参照してください。
 
-
 ### 名前付きキャプチャグループの使用
 
 名前付きキャプチャグループに対応しているブラウザーでは、次のコードは "`fox`" または "`cat`" を "`animal`" という名前のグループに入れます。

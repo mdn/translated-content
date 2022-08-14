@@ -39,18 +39,18 @@ translation_of: Web/API/FileReader/readAsDataURL
 <h3 id="JavaScript">JavaScript</h3>
 
 <pre class="brush: js notranslate">function previewFile() {
-  const preview = document.querySelector('img');
-  const file = document.querySelector('input[type=file]').files[0];
-  const reader = new FileReader();
+  const preview = document.querySelector('img');
+  const file = document.querySelector('input[type=file]').files[0];
+  const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    // 画像ファイルを base64 文字列に変換します
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener("load", function () {
+    // 画像ファイルを base64 文字列に変換します
+    preview.src = reader.result;
+  }, false);
 
-  if (file) {
-    reader.readAsDataURL(file);
-  }
+  if (file) {
+    reader.readAsDataURL(file);
+  }
 }</pre>
 
 <h3 id="Live_Result" name="Live_Result">ライブ結果</h3>

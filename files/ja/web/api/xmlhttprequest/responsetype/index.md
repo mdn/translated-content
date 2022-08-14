@@ -55,7 +55,7 @@ XMLHttpRequest.responseType = type;
 ### 例外
 
 - `InvalidAccessError`
-  - : `responseType` の値の変更が同期モードの `XMLHttpRequest` 上で試みられたものの、ワーカー ({{domxref("Worker")}}) の中ではなかった場合。詳細については、下記の{{anch("同期 XHR の制限")}}を参照してください。
+  - : `responseType` の値の変更が同期モードの `XMLHttpRequest` 上で試みられたものの、ワーカー ({{domxref("Worker")}}) の中ではなかった場合。詳細については、下記の[同期 XHR の制限](#同期_xhr_の制限)を参照してください。
 
 ## 使用上の注意
 

@@ -8,13 +8,13 @@ original_slug: Aprender/JavaScript/Client-side_web_APIs/Client-side_storage
 
 <div>{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p class="summary">Os navegadores modernos oferecem suporte a várias maneiras de os sites armazenarem dados no computador do usuário - com a permissão do usuário - e depois recuperá-los quando necessário. Isso permite que você mantenha dados para armazenamento de longo prazo, salve sites ou documentos para uso offline, retenha configurações específicas do usuário para seu site e muito mais. Este artigo explica os princípios básicos de como eles funcionam.</p>
+<p class="summary">Os navegadores modernos oferecem suporte a várias maneiras de os sites armazenarem dados no computador do usuário - com a permissão do usuário - e depois recuperá-los quando necessário. Isso permite que você mantenha dados para armazenamento de longo prazo, salve sites ou documentos para uso offline, retenha configurações específicas do usuário para seu site e muito mais. Este artigo explica os princípios básicos de como eles funcionam.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Pré-requisitos:</th>
-   <td>Noções básicas de JavaScript (consulte as <a href="/en-US/docs/Learn/JavaScript/First_steps">primeiras etapas </a><a href="/en-US/docs/Learn/JavaScript/First_steps"> </a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks">blocos de construção</a> , <a href="/en-US/docs/Learn/JavaScript/Objects">objetos JavaScript</a> ), as <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">noções básicas de APIs do lado do cliente</a></td>
+   <td>Noções básicas de JavaScript (consulte as <a href="/en-US/docs/Learn/JavaScript/First_steps">primeiras etapas </a><a href="/en-US/docs/Learn/JavaScript/First_steps"> </a>, <a href="/en-US/docs/Learn/JavaScript/Building_blocks">blocos de construção</a> , <a href="/en-US/docs/Learn/JavaScript/Objects">objetos JavaScript</a> ), as <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">noções básicas de APIs do lado do cliente</a></td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -25,9 +25,9 @@ original_slug: Aprender/JavaScript/Client-side_web_APIs/Client-side_storage
 
 <h2 id="Armazenamento_do_lado_do_cliente">Armazenamento do lado do cliente?</h2>
 
-<p>Em outro lugar na área de aprendizagem MDN, falamos sobre a diferença entre <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites">sites estáticos</a> e <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites">sites dinâmicos</a> . A maioria dos principais sites modernos são dinâmicos - eles armazenam dados no servidor usando algum tipo de banco de dados (armazenamento do lado do servidor) e, em seguida, executam o código do <a href="/en-US/docs/Learn/Server-side">lado do servidor</a> para recuperar os dados necessários, inserem-nos em modelos de página estática e fornecem o HTML resultante para o cliente a ser exibido pelo navegador do usuário.er.</p>
+<p>Em outro lugar na área de aprendizagem MDN, falamos sobre a diferença entre <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites">sites estáticos</a> e <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites">sites dinâmicos</a> . A maioria dos principais sites modernos são dinâmicos - eles armazenam dados no servidor usando algum tipo de banco de dados (armazenamento do lado do servidor) e, em seguida, executam o código do <a href="/en-US/docs/Learn/Server-side">lado do servidor</a> para recuperar os dados necessários, inserem-nos em modelos de página estática e fornecem o HTML resultante para o cliente a ser exibido pelo navegador do usuário.er.</p>
 
-<p>O armazenamento do lado do cliente funciona em princípios semelhantes, mas tem usos diferentes. Consiste em APIs JavaScript que permitem armazenar dados no cliente (ou seja, na máquina do usuário) e recuperá-los quando necessário. Isso tem muitos usos distintos, como:</p>
+<p>O armazenamento do lado do cliente funciona em princípios semelhantes, mas tem usos diferentes. Consiste em APIs JavaScript que permitem armazenar dados no cliente (ou seja, na máquina do usuário) e recuperá-los quando necessário. Isso tem muitos usos distintos, como:</p>
 
 <ul>
  <li>Personalizar as preferências do site (por exemplo, mostrar a escolha do usuário de widgets personalizados, esquema de cores ou tamanho da fonte).</li>
@@ -36,15 +36,15 @@ original_slug: Aprender/JavaScript/Client-side_web_APIs/Client-side_storage
  <li>Salvar documentos gerados por aplicativos da web localmente para uso offline</li>
 </ul>
 
-<p>Freqüentemente, o armazenamento do lado do cliente e do lado do servidor são usados ​​juntos. Por exemplo, você pode baixar um lote de arquivos de música (talvez usados ​​por um jogo da web ou aplicativo de reprodutor de música), armazená-los em um banco de dados do cliente e reproduzi-los conforme necessário. O usuário só teria que baixar os arquivos de música uma vez - em visitas subsequentes, eles seriam recuperados do banco de dados.</p>
+<p>Freqüentemente, o armazenamento do lado do cliente e do lado do servidor são usados ​​juntos. Por exemplo, você pode baixar um lote de arquivos de música (talvez usados ​​por um jogo da web ou aplicativo de reprodutor de música), armazená-los em um banco de dados do cliente e reproduzi-los conforme necessário. O usuário só teria que baixar os arquivos de música uma vez - em visitas subsequentes, eles seriam recuperados do banco de dados.</p>
 
 <div class="note">
-<p><strong>Nota</strong> : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consulte <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Limites de armazenamento do navegador e critérios de despejo</a> para obter mais informações..</p>
+<p><strong>Nota</strong> : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consulte <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Limites de armazenamento do navegador e critérios de despejo</a> para obter mais informações..</p>
 </div>
 
 <h3 id="Old_school_Cookies">Old school: Cookies</h3>
 
-<p>The concept of client-side storage has been around for <strong>Nota</strong> : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consultea long time. Since the early days of the web, sites have used <a href="/en-US/docs/Web/HTTP/Cookies">cookies</a> to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.</p>
+<p>The concept of client-side storage has been around for <strong>Nota</strong> : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consultea long time. Since the early days of the web, sites have used <a href="/en-US/docs/Web/HTTP/Cookies">cookies</a> to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.</p>
 
 <p>These days, there are easier mechanisms available for storing client-side data, therefore we won't be teaching you how to use cookies in this article. However, this does not mean cookies are completely useless on the modern-day web — they are still used commonly to store data related to user personalization and state, e.g. session IDs and access tokens. For more information on cookies see our <a href="/en-US/docs/Web/HTTP/Cookies">Using HTTP cookies</a> article.</p>
 
@@ -157,7 +157,7 @@ myName</pre>
   <p>First, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html">personal-greeting.html</a> file in a new directory on your computer.</p>
  </li>
  <li>
-  <p>Next, note how our HTML references a JavaScript file called <code>index.js</code> (see line 40). We need to create this and write our JavaScript code into it. Create an <code>index.js</code> file in the same directory as your HTML file. </p>
+  <p>Next, note how our HTML references a JavaScript file called <code>index.js</code> (see line 40). We need to create this and write our JavaScript code into it. Create an <code>index.js</code> file in the same directory as your HTML file. </p>
  </li>
  <li>
   <p>We'll start off by creating references to all the HTML features we need to manipulate in this example — we'll create them all as constants, as these references do not need to change in the lifecycle of the app. Add the following lines to your JavaScript file:</p>
@@ -194,7 +194,7 @@ submitBtn.addEventListener('click', function() {
 });</pre>
  </li>
  <li>
-  <p>At this point we also need an event handler to run a function when the "Forget" button is clicked — this is only displayed after the "Say hello" button has been clicked (the two form states toggle back and forth). In  this function we remove the <code>name</code> item from web storage using <code>removeItem()</code>, then again run <code>nameDisplayCheck()</code> to update the display. Add this to the bottom:</p>
+  <p>At this point we also need an event handler to run a function when the "Forget" button is clicked — this is only displayed after the "Say hello" button has been clicked (the two form states toggle back and forth). In  this function we remove the <code>name</code> item from web storage using <code>removeItem()</code>, then again run <code>nameDisplayCheck()</code> to update the display. Add this to the bottom:</p>
 
   <pre class="brush: js   notranslate">// run function when the 'Forget' button is clicked
 forgetBtn.addEventListener('click', function() {

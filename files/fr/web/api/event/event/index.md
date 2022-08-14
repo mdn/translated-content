@@ -14,7 +14,9 @@ Le constructeur **`Event()`** crée un nouvel {{domxref("Event")}} (_évènement
 
 ## Syntaxe
 
-     event = new Event(typeArg, eventInit);
+```js
+ event = new Event(typeArg, eventInit);
+```
 
 ### Valeurs
 

@@ -19,7 +19,9 @@ La méthode **`Object.seal()`** scelle un objet afin d'empêcher l'ajout de nouv
 
 ## Syntaxe
 
-    Object.seal(obj)
+```js
+Object.seal(obj)
+```
 
 ### Paramètres
 

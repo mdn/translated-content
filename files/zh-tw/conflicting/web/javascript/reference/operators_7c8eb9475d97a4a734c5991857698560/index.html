@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Reference/Operators/Bitwise_Operators
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p><strong>位元運算子</strong>將運算元視為一段 32 位元長的 0 和 1 序列，而不是十進位、十六進位或八進位的 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number" title="/en-US/docs/JavaScript/Reference/Global_Objects/Number">Numbers</a></code>。 舉例來說，十進位的 9 可以用二進位表示為 1001。位元運算子對這樣的二進位表示法進行運算，然後回傳標準 JavaScript 數值。</p>
+<p><strong>位元運算子</strong>將運算元視為一段 32 位元長的 0 和 1 序列，而不是十進位、十六進位或八進位的 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number" title="/en-US/docs/JavaScript/Reference/Global_Objects/Number">Numbers</a></code>。 舉例來說，十進位的 9 可以用二進位表示為 1001。位元運算子對這樣的二進位表示法進行運算，然後回傳標準 JavaScript 數值。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-bitwiseoperators.html")}}</div>
 
@@ -46,17 +46,17 @@ original_slug: Web/JavaScript/Reference/Operators/Bitwise_Operators
   <tr>
    <td><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#%3C%3C_(左移)">左移</a></td>
    <td><code>a &lt;&lt; b</code></td>
-   <td>將 <code>a</code> 的二進位表示法左移 <code>b</code> (&lt; 32) 位元，右側補 <code>0</code>。</td>
+   <td>將 <code>a</code> 的二進位表示法左移 <code>b</code> (&lt; 32) 位元，右側補 <code>0</code>。</td>
   </tr>
   <tr>
    <td><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#%3E%3E_(保持符號右移)">保持符號右移</a></td>
    <td><code>a &gt;&gt; b</code></td>
-   <td>將 <code>a</code> 的二進位表示法右移 <code>b</code> (&lt; 32) 位元，拋棄被移出的位元。</td>
+   <td>將 <code>a</code> 的二進位表示法右移 <code>b</code> (&lt; 32) 位元，拋棄被移出的位元。</td>
   </tr>
   <tr>
    <td><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#%3E%3E%3E_(填零右移)">填零右移</a></td>
-   <td><code>a &gt;&gt;&gt; b</code>  </td>
-   <td>將 <code>a</code> 的二進位表示法右移 <code>b</code> (&lt; 32) 位元，拋棄被移出的位元，並於右側補 <code>0</code>。</td>
+   <td><code>a &gt;&gt;&gt; b</code>  </td>
+   <td>將 <code>a</code> 的二進位表示法右移 <code>b</code> (&lt; 32) 位元，拋棄被移出的位元，並於右側補 <code>0</code>。</td>
   </tr>
  </tbody>
 </table>
@@ -68,39 +68,39 @@ original_slug: Web/JavaScript/Reference/Operators/Bitwise_Operators
 <pre class="brush: js">00000000000000000000000100111010
 </pre>
 
-<p>下面的序列代表 <code>~314</code>，也就是 <code>314</code> 的一補數：</p>
+<p>下面的序列代表 <code>~314</code>，也就是 <code>314</code> 的一補數：</p>
 
 <pre class="brush: js">11111111111111111111111011000101
 </pre>
 
-<p>接著，下面代表著 <code>-314</code>，也就是 <code>314</code> 的二補數：</p>
+<p>接著，下面代表著 <code>-314</code>，也就是 <code>314</code> 的二補數：</p>
 
 <pre class="brush: js">11111111111111111111111011000110
 </pre>
 
 <p>二補數系統確保了正值時最左邊的位元為 0，反之則為 1。因此，最左邊的位元被稱作符號位。</p>
 
-<p>整數 <code>0</code> 全由位元 0組成。</p>
+<p>整數 <code>0</code> 全由位元 0組成。</p>
 
 <pre class="brush: js">0 (base 10) = 00000000000000000000000000000000 (base 2)
 </pre>
 
-<p>整數 <code>-1</code> 全由位元 1組成。</p>
+<p>整數 <code>-1</code> 全由位元 1組成。</p>
 
 <pre class="brush: js">-1 (base 10) = 11111111111111111111111111111111 (base 2)
 </pre>
 
-<p>整數 <code>-2147483648</code> (十六進位： <code>-0x80000000</code>) 除了第一位為 1，其餘皆由位元 0組成。</p>
+<p>整數 <code>-2147483648</code> (十六進位： <code>-0x80000000</code>) 除了第一位為 1，其餘皆由位元 0組成。</p>
 
 <pre class="brush: js">-2147483648 (base 10) = 10000000000000000000000000000000 (base 2)
 </pre>
 
-<p>整數 <code>-2147483648</code> (十六進位： <code>-0x7fffffff</code>) 除了第一位為 0，其餘皆由位元 1組成。</p>
+<p>整數 <code>-2147483648</code> (十六進位： <code>-0x7fffffff</code>) 除了第一位為 0，其餘皆由位元 1組成。</p>
 
 <pre class="brush: js">2147483647 (base 10) = 01111111111111111111111111111111 (base 2)
 </pre>
 
-<p>整數 <code>-2147483648</code> 和 <code>2147483647</code> 分別為帶號32位元整數所能表示的最小值和最大值。</p>
+<p>整數 <code>-2147483648</code> 和 <code>2147483647</code> 分別為帶號32位元整數所能表示的最小值和最大值。</p>
 
 <h2 id="位元邏輯運算子">位元邏輯運算子</h2>
 
@@ -117,7 +117,7 @@ After:              10100000000000000110000000000001</pre>
 
 <h3 id="(位元_AND)"><a id="Bitwise_AND" name="Bitwise_AND">&amp; (位元 AND)</a></h3>
 
-<p>對每一組位元執行 AND 運算。<code>a</code> AND <code>b</code> 只在 <code>a</code> 和 <code>b</code> 同時為 <code>1</code> 時得到 1。AND運算的真值表如下：</p>
+<p>對每一組位元執行 AND 運算。<code>a</code> AND <code>b</code> 只在 <code>a</code> 和 <code>b</code> 同時為 <code>1</code> 時得到 1。AND運算的真值表如下：</p>
 
 <table class="standard-table">
  <tbody>
@@ -155,11 +155,11 @@ After:              10100000000000000110000000000001</pre>
 14 &amp; 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
 </pre>
 
-<p>將任何數 <code>x</code> 和 <code>0</code> 做位元 AND 皆會得到 <code>0</code>。將任何數 <code>x</code> 和 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">-1</span></font> 做位元 AND 皆會得到 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">x</span></font>。</p>
+<p>將任何數 <code>x</code> 和 <code>0</code> 做位元 AND 皆會得到 <code>0</code>。將任何數 <code>x</code> 和 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">-1</span></font> 做位元 AND 皆會得到 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">x</span></font>。</p>
 
-<h3 id="(位元_OR)"><a name="Bitwise_OR">| (位元 OR)</a></h3>
+<h3 id="(位元_OR)"><a name="Bitwise_OR">| (位元 OR)</a></h3>
 
-<p>對每一組位元執行 OR 運算。<code>a</code> OR <code>b</code> 在 <code>a</code> 和 <code>b</code> 有一者為 <code>1</code> 時得到 1。OR運算的真值表如下：</p>
+<p>對每一組位元執行 OR 運算。<code>a</code> OR <code>b</code> 在 <code>a</code> 和 <code>b</code> 有一者為 <code>1</code> 時得到 1。OR運算的真值表如下：</p>
 
 <table class="standard-table">
  <tbody>
@@ -197,11 +197,11 @@ After:              10100000000000000110000000000001</pre>
 14 | 9 (base 10) = 00000000000000000000000000001111 (base 2) = 15 (base 10)
 </pre>
 
-<p>將任何數 <code>x</code> 和 <code>0</code> 做位元 OR 皆會得到 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">x</span></font>。將任何數 <code>x</code> 和 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">-1</span></font> 做位元 OR 皆會得到 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">-1</span></font>。</p>
+<p>將任何數 <code>x</code> 和 <code>0</code> 做位元 OR 皆會得到 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">x</span></font>。將任何數 <code>x</code> 和 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">-1</span></font> 做位元 OR 皆會得到 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">-1</span></font>。</p>
 
-<h3 id="(位元_XOR)"><a name="Bitwise_XOR">^ (位元 XOR)</a></h3>
+<h3 id="(位元_XOR)"><a name="Bitwise_XOR">^ (位元 XOR)</a></h3>
 
-<p>對每一組位元執行 XOR 運算。<code>a</code> XOR <code>b</code> 只在 <code>a</code> 和 <code>b</code> 恰一者為 <code>1</code> 時得到 1。XOR運算的真值表如下：</p>
+<p>對每一組位元執行 XOR 運算。<code>a</code> XOR <code>b</code> 只在 <code>a</code> 和 <code>b</code> 恰一者為 <code>1</code> 時得到 1。XOR運算的真值表如下：</p>
 
 <table class="standard-table">
  <tbody>
@@ -239,11 +239,11 @@ After:              10100000000000000110000000000001</pre>
 14 ^ 9 (base 10) = 00000000000000000000000000000111 (base 2) = 7 (base 10)
 </pre>
 
-<p>將任何數 <code>x</code> 和 <code>0</code> 做位元 AND 皆會得到 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">x</span></font>。將任何數 <code>x</code> 和 <font face="consolas, Liberation Mono, courier, monospace">-1</font> 做位元 AND 皆會得到 <code>~x</code>。</p>
+<p>將任何數 <code>x</code> 和 <code>0</code> 做位元 AND 皆會得到 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">x</span></font>。將任何數 <code>x</code> 和 <font face="consolas, Liberation Mono, courier, monospace">-1</font> 做位元 AND 皆會得到 <code>~x</code>。</p>
 
-<h3 id="(位元_NOT)"><a name="Bitwise_NOT">~ (位元 NOT)</a></h3>
+<h3 id="(位元_NOT)"><a name="Bitwise_NOT">~ (位元 NOT)</a></h3>
 
-<p>對每一個位元執行 NOT 運算。NOT <code>a</code> 會得到 <code>a</code> 的反轉值(也就是一補數)。NOT運算的真值表如下：</p>
+<p>對每一個位元執行 NOT 運算。NOT <code>a</code> 會得到 <code>a</code> 的反轉值(也就是一補數)。NOT運算的真值表如下：</p>
 
 <table class="standard-table">
  <tbody>
@@ -262,14 +262,14 @@ After:              10100000000000000110000000000001</pre>
  </tbody>
 </table>
 
-<pre class="brush: js"> 9 (base 10) = 00000000000000000000000000001001 (base 2)
+<pre class="brush: js"> 9 (base 10) = 00000000000000000000000000001001 (base 2)
                --------------------------------
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 </pre>
 
-<p>將任何數 <code>x</code> 做位元 NOT 皆會得到 <code>-(x + 1)</code>。舉例來說，<code>~-5</code> 會得到 <code>4</code>。</p>
+<p>將任何數 <code>x</code> 做位元 NOT 皆會得到 <code>-(x + 1)</code>。舉例來說，<code>~-5</code> 會得到 <code>4</code>。</p>
 
-<p>值得注意的是，因為使用 32位元表示法表示數值 <code>~-1</code> 和 <code>~4294967295</code> (2<sup>32</sup>-1) 皆會得到 <code>0</code>。</p>
+<p>值得注意的是，因為使用 32位元表示法表示數值 <code>~-1</code> 和 <code>~4294967295</code> (2<sup>32</sup>-1) 皆會得到 <code>0</code>。</p>
 
 <h2 id="位元位移運算子">位元位移運算子</h2>
 
@@ -281,14 +281,14 @@ After:              10100000000000000110000000000001</pre>
 
 <p>將第一個運算元向左位移指定的量。被移出的位元會被拋棄，並從右側補零。</p>
 
-<p>例如，<code>9 &lt;&lt; 2</code> 會得到 36：</p>
+<p>例如，<code>9 &lt;&lt; 2</code> 會得到 36：</p>
 
 <pre class="brush: js">.    9 (base 10): 00000000000000000000000000001001 (base 2)
                   --------------------------------
 9 &lt;&lt; 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
 </pre>
 
-<p>將任意值 <code>x</code> 左移 <code>y</code> 位元會得到 <code>x * 2 ** y</code>。</p>
+<p>將任意值 <code>x</code> 左移 <code>y</code> 位元會得到 <code>x * 2 ** y</code>。</p>
 
 <h3 id=">>_(保持符號右移)"><a name="Right_shift">&gt;&gt; (保持符號右移)</a></h3>
 
@@ -301,7 +301,7 @@ After:              10100000000000000110000000000001</pre>
 9 &gt;&gt; 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 </pre>
 
-<p>同樣地，<code>-9 &gt;&gt; 2</code> 會得到 <code>-3</code>，因為符號會保持不變。</p>
+<p>同樣地，<code>-9 &gt;&gt; 2</code> 會得到 <code>-3</code>，因為符號會保持不變。</p>
 
 <pre class="brush: js">.    -9 (base 10): 11111111111111111111111111110111 (base 2)
                    --------------------------------
@@ -312,14 +312,14 @@ After:              10100000000000000110000000000001</pre>
 
 <p>將第一個運算元向右位移指定的量。被移出的位元會被拋棄，並從左側補零。因為符號位變成 0，所以結果永遠都是正值。</p>
 
-<p>對非負的數來說，填零右移會得到和保持符號右移一樣的結果。例如，<code>9 &gt;&gt;&gt; 2</code> 和 <code>9 &gt;&gt; 2</code> 一樣，皆會得到 2：</p>
+<p>對非負的數來說，填零右移會得到和保持符號右移一樣的結果。例如，<code>9 &gt;&gt;&gt; 2</code> 和 <code>9 &gt;&gt; 2</code> 一樣，皆會得到 2：</p>
 
 <pre class="brush: js">.     9 (base 10): 00000000000000000000000000001001 (base 2)
                    --------------------------------
 9 &gt;&gt;&gt; 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 </pre>
 
-<p>然而對負值來說並不是這麼一回事。例如，<code>-9 &gt;&gt;&gt; 2</code> 會得到 1073741821，跟 <code>-9 &gt;&gt; 2</code> (得到 <code>-3</code>)的結果是不一樣的：</p>
+<p>然而對負值來說並不是這麼一回事。例如，<code>-9 &gt;&gt;&gt; 2</code> 會得到 1073741821，跟 <code>-9 &gt;&gt; 2</code> (得到 <code>-3</code>)的結果是不一樣的：</p>
 
 <pre class="brush: js">.     -9 (base 10): 11111111111111111111111111110111 (base 2)
                     --------------------------------
@@ -341,7 +341,7 @@ After:              10100000000000000110000000000001</pre>
  <li>旗標 D：我們擁有一隻鴨子</li>
 </ul>
 
-<p>這些旗標倍表達成一個位元序列：DCBA。當一個旗標被立起 (set)時，其值為1。當一個旗標被放下 (clear)，其值為0。假設有一變數 <code>flags</code> 的二進位值為 0101：</p>
+<p>這些旗標倍表達成一個位元序列：DCBA。當一個旗標被立起 (set)時，其值為1。當一個旗標被放下 (clear)，其值為0。假設有一變數 <code>flags</code> 的二進位值為 0101：</p>
 
 <pre class="brush: js">var flags = 5;   // 二進位 0101
 </pre>
@@ -350,7 +350,7 @@ After:              10100000000000000110000000000001</pre>
 
 <ul>
  <li>旗標 A為真 (我們有螞蟻問題);</li>
- <li>旗標 B為假 (我們並未擁有一隻蝙蝠);</li>
+ <li>旗標 B為假 (我們並未擁有一隻蝙蝠);</li>
  <li>旗標 C為真 (我們擁有一隻貓);</li>
  <li>旗標 D為假 (我們並未擁有一隻鴨子);</li>
 </ul>
@@ -365,12 +365,12 @@ var FLAG_C = 4; // 0100
 var FLAG_D = 8; // 1000
 </pre>
 
-<p>新的位元遮罩可以透過對初始遮罩進行位元運算獲得。例如，遮罩 1011 可以透過對 FLAG_A、FLAG_B、和 FLAG_D進行 OR運算獲得：</p>
+<p>新的位元遮罩可以透過對初始遮罩進行位元運算獲得。例如，遮罩 1011 可以透過對 FLAG_A、FLAG_B、和 FLAG_D進行 OR運算獲得：</p>
 
 <pre class="brush: js">var mask = FLAG_A | FLAG_B | FLAG_D; // 0001 | 0010 | 1000 =&gt; 1011
 </pre>
 
-<p>Individual flag values can be extracted by ANDing them with a bitmask, where each bit with the value of one will "extract" the corresponding flag. The bitmask <em>masks</em> out the non-relevant flags by ANDing with zeroes (hence the term "bitmask"). For example, the bitmask 0100 can be used to see if flag C is set:</p>
+<p>Individual flag values can be extracted by ANDing them with a bitmask, where each bit with the value of one will "extract" the corresponding flag. The bitmask <em>masks</em> out the non-relevant flags by ANDing with zeroes (hence the term "bitmask"). For example, the bitmask 0100 can be used to see if flag C is set:</p>
 
 <pre class="brush: js">// if we own a cat
 if (flags &amp; FLAG_C) { // 0101 &amp; 0100 =&gt; 0100 =&gt; true
@@ -448,7 +448,7 @@ alert(sBinString); // prints 1011, i.e. 11
 
 <h3 id="Automate_Mask_Creation">Automate Mask Creation</h3>
 
-<p>You can create multiple masks from a set of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="/en-US/docs/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code> values, like this:</p>
+<p>You can create multiple masks from a set of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="/en-US/docs/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code> values, like this:</p>
 
 <pre class="brush: js">function createMask() {
   var nMask = 0, nFlag = 0, nLen = arguments.length &gt; 32 ? 32 : arguments.length;
@@ -510,41 +510,13 @@ alert(string1);
 // prints 00000000000000000000000000001011, i.e. 11
 </pre>
 
-<h2 id="規範">規範</h2>
+<h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.7')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.4.8">Bitwise NOT operator</a>, <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.7">Bitwise shift operators</a>, <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.10">Binary bitwise operators</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-bitwise-shift-operators')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-bitwise-not-operator">Bitwise NOT operator</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-bitwise-shift-operators">Bitwise shift operators</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-binary-bitwise-operators">Binary bitwise operators</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bitwise-shift-operators')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://tc39.github.io/ecma262/#sec-bitwise-not-operator">Bitwise NOT operator</a>, <a href="http://tc39.github.io/ecma262/#sec-bitwise-shift-operators">Bitwise shift operators</a>, <a href="http://tc39.github.io/ecma262/#sec-binary-bitwise-operators">Binary bitwise operators</a></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{Compat("javascript.operators.bitwise")}}</p>
+{{Compat}}
 
 <h2 id="另見">另見</h2>
 

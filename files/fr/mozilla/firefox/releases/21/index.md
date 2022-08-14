@@ -70,7 +70,7 @@ Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changemen
     - `nsIFaviconService::getFaviconImageForPage`
     - `nsIFaviconService::getFaviconDataAsDataURL`
 
-  - Remplacées par `mozIAsyncLivemarks `:
+  - Remplacées par `mozIAsyncLivemarks` :
 
     - `nsILivemarkService::*`
     - `PlacesUtils.itemIsLivemark`

@@ -25,17 +25,19 @@ EXSLT est un ensemble d'extensions à [XSLT](fr/XSLT). Un certain nombre de modu
 
 Pour utiliser une fonction EXSLT, il faut déclarer son espace de noms comme espace de noms d'extension dans votre feuille de style. Par exemple, pour utiliser le package regexp&nbsp;:
 
-    <xsl:stylesheet version="1.0"
-                    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                    xmlns:regexp="http://exslt.org/regular-expressions">
+```xml
+<xsl:stylesheet version="1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:regexp="http://exslt.org/regular-expressions">
 
-      <xsl:template match="/">
-        …
-        <xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/>
-        …
-      </xsl:template>
+  <xsl:template match="/">
+    …
+    <xsl:value-of select="regexp:replace(/root/@value, 'before', 'gi', 'AFTER')"/>
+    …
+  </xsl:template>
 
-    </xsl:stylesheet>
+</xsl:stylesheet>
+```
 
 ### Common
 

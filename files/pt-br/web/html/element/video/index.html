@@ -3,11 +3,11 @@ title: video
 slug: Web/HTML/Element/Video
 translation_of: Web/HTML/Element/video
 ---
-<p> </p>
+<p> </p>
 
 <h2 id="Sumário">Sumário</h2>
 
-<p>O elemento HTML  <code>&lt;video&gt;</code> é utilizado para incorporar conteúdo de vídeo em um documento HTML ou XHTML.</p>
+<p>O elemento HTML  <code>&lt;video&gt;</code> é utilizado para incorporar conteúdo de vídeo em um documento HTML ou XHTML.</p>
 
 <p>Para uma lista de formatos suportados veja <a href="/En/Media_formats_supported_by_the_audio_and_video_elements" title="En/Media formats supported by the audio and video elements">Media formats supported by the audio and video elements</a>.</p>
 
@@ -100,15 +100,15 @@ translation_of: Web/HTML/Element/video
 
 <pre class="brush: html">&lt;!-- Exemplo simples de vídeo --&gt;
 &lt;video src="arquivovideo.ogg" autoplay poster="imagemprevia.jpg"&gt;
-  Desculpa, o seu navegador não suporta vídeos incorporados,
-  mas você pode &lt;a href="videofile.ogg"&gt;baixá-lo&lt;/a&gt;
-  e assistir pelo seu reprodutor de mídia favorito!
+  Desculpa, o seu navegador não suporta vídeos incorporados,
+  mas você pode &lt;a href="videofile.ogg"&gt;baixá-lo&lt;/a&gt;
+  e assistir pelo seu reprodutor de mídia favorito!
 &lt;/video&gt;
 
 &lt;!-- Vídeo com legendas --&gt;
 &lt;video src="foo.ogg"&gt;
-  &lt;track kind="subtitles" src="foo.en.vtt" srclang="en" label="English"&gt;
-  &lt;track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska"&gt;
+  &lt;track kind="subtitles" src="foo.en.vtt" srclang="en" label="English"&gt;
+  &lt;track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska"&gt;
 &lt;/video&gt;
 </pre>
 
@@ -140,197 +140,7 @@ AddType video/ogg .ogg
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>autoplay</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>buffered</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>controls</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>loop</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("11.0") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>muted</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("11.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>played</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("15.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>poster</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("1.9.2") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>preload</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("2.0") }}</td>
-   <td>9.0</td>
-   <td>Suportado sobre o nome antigo de <code>autobuffer</code></td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>src</code></td>
-   <td>3.0</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>9.0</td>
-   <td>10.5</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte Básico</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>autoplay</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>buffered</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>controls</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>loop</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("11.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>muted</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("11.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>played</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("15.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>poster</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>preload</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("2.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Atributo <code>src</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.video")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
@@ -341,7 +151,7 @@ AddType video/ogg .ogg
  <li><a class="internal" href="/En/Manipulating_video_using_canvas" title="En/Manipulating video using canvas">Manipulating video using canvas</a></li>
  <li><a class="internal" href="/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" title="En/NsIDOMHTMLMediaElement"><code>nsIDOMHTMLMediaElement</code></a></li>
  <li><a class="external" href="http://tinyvid.tv/">TinyVid</a> - exemplos utilizando arquivos ogg em HTML5.</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#video">The <code>video</code> element</a> (Especificação HTML 5)</li>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#video">The <code>video</code> element</a> (Especificação HTML 5)</li>
  <li><a class="internal" href="/en/Configuring_servers_for_Ogg_media" title="en/Configuring servers for Ogg media">Configuring servers for Ogg media</a></li>
 </ul>
 

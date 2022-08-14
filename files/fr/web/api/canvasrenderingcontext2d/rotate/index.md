@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.rotate()`** de l'API Canvas 2D ajoute un
 
 ## Syntaxe
 
-    void ctx.rotate(angle);
+```js
+void ctx.rotate(angle);
+```
 
 ![](canvas_grid_rotate.png)
 

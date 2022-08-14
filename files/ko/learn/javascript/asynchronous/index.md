@@ -19,39 +19,38 @@ translation_of: Learn/JavaScript/Asynchronous
 ---
 {{LearnSidebar}}
 
-In this module we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
+이 과정에서 우리는 {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}와 이것이 중요한 이유, 서버에서 리소스를 가져오는 것과 같은 잠재적 블로킹 연산을 어떻게 효과적으로 다룰 수 있을지에 대해 살펴봅니다.
 
 > **Callout:**
 >
-> #### Looking to become a front-end web developer?
+> #### 프론트엔드 웹 개발자가 되고싶으신가요?
 >
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
+> 목표를 향해 나아가기 위해 필요한 모든 필수 정보를 포함한 교육과정을 준비했습니다.
 >
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 
-## Prerequisites
+## 필요한 사전 지식
 
-Asynchronous JavaScript is a fairly advanced topic, and you are advised to work through [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps) and [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks) modules before attempting this.
+Asynchronous Javascript는 상당히 고급 주제에 속하고, 시도해보기 전에 [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps)과 [JavaScript 구성요소](/ko/docs/Learn/JavaScript/Building_blocks) 과정을 거치는것이 좋습니다.
 
-> **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you can try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com).
+> **참고:** 만약 파일을 만들 수 없는 컴퓨터/테블릿/기타 장치를 사용하고 있다면, [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com)와 같은 온라인 코딩 프로그램에서 (대부분의) 예제 코드를 사용해볼 수 있습니다.
 
-## Guides
+## 가이드
 
-- [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - : In this article we'll see what **synchronous** and **asynchronous** programming are, why we often need to use asynchronous techniques, how asynchronous functions have historically been implemented in JavaScript, and what their problems are.
-- [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-  - : Here we'll introduce promises and show how to use promise-based APIs. We'll also introduce the `async` and `await` keywords.
-- [Implementing a promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-  - : This article outlines how to implement your own promise-based API.
-- [Introducing workers](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-  - : Workers enable you to run certain tasks in a separate thread, to keep your main code responsive. In this article we'll rewrite a long-running synchronous function to use a worker.
+- [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
+  - : **동기**와 **비동기** 프로그램이 무엇인지, 비동기 기술을 자주 사용해야하는 이유, 역사적으로 Javascript에서 비동기 함수가 구현된 방식 및 문제를 살펴봅니다.
+- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
+  - : 프로미스와 프로미스 기반 API를 어떻게 사용하는지 알아봅니다. 또한 `async`와  `await` 키워드를 소개합니다.
+- [Implementing a promise-based API](/ko/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+  - : 자신만의 프로미스 기반 API를 구현하는 방법을 간략하게 설명합니다.
+- [Introducing workers](/ko/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+  - : workers를 사용하면 별도의 스레드에서 특정 작업을 실행하여 메인 코드의 응답성을 유지할 수 있습니다. 이 글에서는 workers를 사용하도록 장기 실행 동기 함수를 다시 작성합니다.
 
-## Assessments
+## 평가
 
-- [Sequencing animations](/en-US/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
-  - : The assessment asks you to use promises to play a set of animations in a particular sequence.
+- [Sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
+  - : 프로미스를 사용하여 특정 시퀀스에서 애니메이션 세트를 재생하는 평가입니다.
 
-## See also
+## 같이 보기
 
-- [Asynchronous Programming](https://eloquentjavascript.net/11_async.html) from the fantastic [Eloquent JavaScript](https://eloquentjavascript.net/) online book by Marijn Haverbeke.
+- Marijn Haverbeke의 환상적인 [Eloquent JavaScript](https://eloquentjavascript.net/) 온라인 책 [Asynchronous Programming](https://eloquentjavascript.net/11_async.html).

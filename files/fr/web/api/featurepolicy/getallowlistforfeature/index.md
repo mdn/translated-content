@@ -14,7 +14,9 @@ La méthode **`getAllowlistForFeature()`** de {{DOMxRef("FeaturePolicy")}} perme
 
 ## Syntaxe
 
-    const listePermissions = FeaturePolicy.getAllowlistForFeature(<fonctionnalité>)
+```js
+const listePermissions = FeaturePolicy.getAllowlistForFeature(<fonctionnalité>)
+```
 
 ### Parameter
 

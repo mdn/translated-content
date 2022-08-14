@@ -11,7 +11,9 @@ Par défaut, une unité sur le canevas est exactement un pixel. Si on applique, 
 
 ## Syntaxe
 
-    void ctx.scale(x, y);
+```js
+void ctx.scale(x, y);
+```
 
 ### Paramètres
 

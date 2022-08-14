@@ -22,11 +22,15 @@ Lorsque la méthode `deleteDatabase()` est invoquée, toutes les autres connexio
 
 La syntaxe actuellement standard est :
 
-    var request = indexedDB.deleteDatabase(nom);
+```js
+var request = indexedDB.deleteDatabase(nom);
+```
 
 Une version expérimentale permet de gérer des options (cf. ci-après) :
 
-    var request = indexedDB.deleteDatabase(nom, options);
+```js
+var request = indexedDB.deleteDatabase(nom, options);
+```
 
 ### Paramètres
 

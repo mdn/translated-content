@@ -14,7 +14,7 @@ browser-compat: css.properties.-webkit-print-color-adjust
 ---
 {{CSSRef}}{{Non-standard_header}}
 
-**`-webkit-print-color-adjust`** プロパティは標準外の CSS 拡張で、 WebKit ブラウザー上で印刷時に背景色や背景画像の表示を強制することができます。
+**`-webkit-print-color-adjust`** プロパティは標準外の CSS 拡張で、 WebKit ブラウザー上で印刷時に背景色や背景画像の表示を強制することができます。
 
 ```css
 /* キーワード値 */
@@ -29,7 +29,7 @@ browser-compat: css.properties.-webkit-print-color-adjust
 
 ## 構文
 
-`-webkit-print-color-adjust` プロパティは以下のキーワード値のうちの一つで指定します。
+`-webkit-print-color-adjust` プロパティは以下のキーワード値のうちの一つで指定します。
 
 ### 値
 

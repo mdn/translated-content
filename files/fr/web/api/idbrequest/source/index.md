@@ -17,9 +17,11 @@ La propriété **`source`** est une propriété en lecture seule, rattachée à 
 
 ## Syntaxe
 
-    var IDBIndex = request.source;
-    var IDBCursor = request.source;
-    var IDBObjectStore = request.source;
+```js
+var IDBIndex = request.source;
+var IDBCursor = request.source;
+var IDBObjectStore = request.source;
+```
 
 ### Valeur
 

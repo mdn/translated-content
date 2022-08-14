@@ -9,7 +9,7 @@ translation_of: Web/CSS/max-width
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>max-width</code></strong> <a href="https://developer.mozilla.org/en-US/docs/CSS">CSS</a> 속성은 요소의 최대 너비를 설정합니다. <code>max-width</code>는 {{cssxref("width")}} 속성의 <a href="/ko/docs/Web/CSS/used_value">사용값</a>이 자신의 값보다 커지는걸 방지합니다.</p>
+<p><strong><code>max-width</code></strong> <a href="https://developer.mozilla.org/en-US/docs/CSS">CSS</a> 속성은 요소의 최대 너비를 설정합니다. <code>max-width</code>는 {{cssxref("width")}} 속성의 <a href="/ko/docs/Web/CSS/used_value">사용값</a>이 자신의 값보다 커지는걸 방지합니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/max-width.html")}}</div>
 
@@ -52,13 +52,13 @@ max-width: unset;
 <dl>
  <dt><code>none</code></dt>
  <dd>최대 너비를 정하지 않음.</dd>
- <dt><code>max-content</code> {{experimental_inline()}}</dt>
+ <dt><code>max-content</code> {{experimental_inline()}}</dt>
  <dd>본질적인 선호 높이.</dd>
- <dt><code>min-content</code> {{experimental_inline()}}</dt>
+ <dt><code>min-content</code> {{experimental_inline()}}</dt>
  <dd>본질적인 최소 높이.</dd>
- <dt><code>fill-available</code> {{experimental_inline()}}</dt>
- <dd>컨테이닝 블록의 높이에서 가로축 안쪽 및 바깥 여백과 테두리의 공간을 제외한 높이. (일부 브라우저는 매우 오래 된 이름인 <code>available</code>로 구현함을 참고하세요.)</dd>
- <dt><code>fit-content</code> {{experimental_inline()}}</dt>
+ <dt><code>fill-available</code> {{experimental_inline()}}</dt>
+ <dd>컨테이닝 블록의 높이에서 가로축 안쪽 및 바깥 여백과 테두리의 공간을 제외한 높이. (일부 브라우저는 매우 오래 된 이름인 <code>available</code>로 구현함을 참고하세요.)</dd>
+ <dt><code>fit-content</code> {{experimental_inline()}}</dt>
  <dd><code>max-content</code>와 동일.</dd>
 </dl>
 
@@ -93,7 +93,7 @@ max-width: unset;
 
 <p>{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}</p>
 
-<p><code>fit-content</code> 값을 사용하여 해당 요소의 내용이 필요로 하는 너비만 차지하도록 설정할 수 있습니다.</p>
+<p><code>fit-content</code> 값을 사용하여 해당 요소의 내용이 필요로 하는 너비만 차지하도록 설정할 수 있습니다.</p>
 
 <div id="fit-content-demo">
 <pre class="brush: html" style="display: none;">&lt;div id="parent"&gt;
@@ -121,47 +121,20 @@ max-width: unset;
 
 <h2 id="접근성_고려사항">접근성 고려사항</h2>
 
-<p>페이지의 확대 또는 글씨 크기를 키운 후에도 <code>max-width</code>를 설정한 요소의 내용이 잘리거나, 다른 요소를 가리지 않도록 주의하세요.</p>
+<p>페이지의 확대 또는 글씨 크기를 키운 후에도 <code>max-width</code>를 설정한 요소의 내용이 잘리거나, 다른 요소를 가리지 않도록 주의하세요.</p>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4  | W3C Understanding WCAG 2.0</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4  | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Sizing', '#width-height-keywords', 'max-width') }}</td>
-   <td>{{ Spec2('CSS3 Sizing') }}</td>
-   <td>Adds the <code>max-content</code>, <code>min-content</code>, <code>fit-content</code>, and <code>fill-available</code> keywords.<em> </em>(Both CSS3 Box and CSS3 Writing Modes drafts used to define these keywords, but are superseded by this spec.<em>)</em></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'max-width') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Defines <code>max-width</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visudet.html#min-max-widths', 'max-width') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("css.properties.max-width")}}</p>
 

@@ -54,7 +54,7 @@ Object.isExtensible(empty); // === falso
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
 Object.defineProperty(nonExtensible, 'new', {
-  value: 8675309
+  value: 8675309
 }); // lança um TypeError
 
 // No modo restrito, tentar adicionar novas propriedades a
@@ -62,7 +62,7 @@ Object.defineProperty(nonExtensible, 'new', {
 function fail() {
   'use strict';
   // lança um TypeError
-  nonExtensible.newProperty = 'FAIL';
+  nonExtensible.newProperty = 'FAIL';
 }
 fail();
 </pre>
@@ -101,12 +101,12 @@ Object.preventExtensions(1);
   <tr>
    <td>{{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.preventextensions', 'Object.preventExtensions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

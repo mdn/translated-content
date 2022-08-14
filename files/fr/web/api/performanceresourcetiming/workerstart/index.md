@@ -66,8 +66,7 @@ function print_start_and_end_properties(perfEntry) {
 
 | Spécification                                                                                                                            | Statut                                   | Commentaire          |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-workerstart',
-        'workerStart')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
+| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-workerstart', 'workerStart')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

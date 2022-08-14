@@ -17,7 +17,9 @@ Voir la méthode **{{domxref("Element.setPointerCapture","Element.setPointerCapt
 
 ## Syntaxe
 
-    targetElement.releasePointerCapture(pointerId);
+```js
+targetElement.releasePointerCapture(pointerId);
+```
 
 ### Arguments
 

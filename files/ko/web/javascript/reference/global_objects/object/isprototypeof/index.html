@@ -11,10 +11,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>isPrototypeOf()</strong></code> 메소드는 해당 객체가 다른 객체의 프로토타입 체인에 속한 객체인지 확인하기 위해 사용됩니다.</p>
+<p><code><strong>isPrototypeOf()</strong></code> 메소드는 해당 객체가 다른 객체의 프로토타입 체인에 속한 객체인지 확인하기 위해 사용됩니다.</p>
 
 <div class="note">
-<p><strong>Note:</strong> <code>isPrototypeOf</code> 는 {{jsxref("Operators/instanceof", "instanceof")}} 연산자와 다릅니다. "<code>object instanceof AFunction</code>"표현식에서는 <code>object</code>의 프로토타입 체인을 AFunction 자체가 아니라 <code>AFunction.prototype에 대해 </code>확인을 합니다.</p>
+<p><strong>Note:</strong> <code>isPrototypeOf</code> 는 {{jsxref("Operators/instanceof", "instanceof")}} 연산자와 다릅니다. "<code>object instanceof AFunction</code>"표현식에서는 <code>object</code>의 프로토타입 체인을 AFunction 자체가 아니라 <code>AFunction.prototype에 대해 </code>확인을 합니다.</p>
 </div>
 
 <h2 id="Syntax">구문</h2>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 
 <h2 id="Description">설명</h2>
 
-<p><code>isPrototypeOf</code> 메소드는 또 다른 객체의 프로토타입 체인에 해당 객체가 존재하는지 여부를 확인할수 있습니다.</p>
+<p><code>isPrototypeOf</code> 메소드는 또 다른 객체의 프로토타입 체인에 해당 객체가 존재하는지 여부를 확인할수 있습니다.</p>
 
 <p>예를들어, 다음의 프로토타입체인을 고려해봅시다.</p>
 
@@ -66,36 +66,11 @@ if (Fi.prototype.isPrototypeOf(fum)) {
 
 <p>이 메소드는 {{jsxref("Operators/instanceof", "instanceof")}} 연산자와 함께 특정 프로토타입으로부터 상속된 객체만 작동하게 하려는(예를 들어 특정 메소드나 속성이 객체에 있다는걸 보장하려는 때) 코드에서 특히 쓸모가 많다.</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("javascript.builtins.Object.isPrototypeOf")}}</p>
 
@@ -107,5 +82,5 @@ if (Fi.prototype.isPrototypeOf(fum)) {
  <li>
   <div>{{jsxref("Object.setPrototypeOf()")}}</div>
  </li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
+ <li>{{jsxref("Object.prototype.__proto__")}} </li>
 </ul>

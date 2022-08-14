@@ -17,7 +17,9 @@ La propriété `forms` de {{domxref("Document")}} retourne une collection ({{dom
 
 ## Syntaxe
 
-    collection = document.forms;
+```js
+collection = document.forms;
+```
 
 ### Valeur
 

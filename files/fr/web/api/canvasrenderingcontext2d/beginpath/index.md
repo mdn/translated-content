@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.beginPath()`** de l'API Canvas 2D permet
 
 ## Syntaxe
 
-    void ctx.beginPath();
+```js
+void ctx.beginPath();
+```
 
 ## Exemples
 

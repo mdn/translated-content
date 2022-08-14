@@ -5,19 +5,19 @@ translation_of: Web/API/FormData
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p>A interface <strong><code>FormData</code></strong> fornece uma maneira fácil de construir um conjunto de pares chave/valor representando campos de um elemento f<code>orm</code> e seus valores, os quais podem ser facilmente enviados utilizado o método <a href="/pt-BR/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a> do XMLHttpRequest. Essa interface utiliza o mesmo formato que um <code>form</code> utilizaria se o tipo de codificação estivesse configurado como "multipart/form-data".</p>
+<p>A interface <strong><code>FormData</code></strong> fornece uma maneira fácil de construir um conjunto de pares chave/valor representando campos de um elemento <code>form</code> e seus valores, os quais podem ser facilmente enviados utilizado o método <a href="/pt-BR/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a> do XMLHttpRequest. Essa interface utiliza o mesmo formato que um <code>form</code> utilizaria se o tipo de codificação estivesse configurado como "multipart/form-data".</p>
 
-<p>Um objeto <code>FormData</code> pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} em vez de {{domxref('FormData.entries()', 'entries()')}}: <code>for (var p of myFormData) </code>é o mesmo que <code>for (var p of myFormData.entries())</code>.</p>
+<p>Um objeto <code>FormData</code> pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} em vez de {{domxref('FormData.entries()', 'entries()')}}: <code>for (var p of myFormData) </code>é o mesmo que <code>for (var p of myFormData.entries())</code>.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Esse recurso está disponível em <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API">https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API</a></p>
+<p><strong>Nota</strong>: Esse recurso está disponível em <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API">https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API</a></p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Construtor</h2>
 
 <dl>
  <dt>{{domxref("FormData.FormData","FormData()")}}</dt>
- <dd>Cria um novo objeto <code>FormData</code>.</dd>
+ <dd>Cria um novo objeto <code>FormData</code>.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
@@ -38,7 +38,7 @@ translation_of: Web/API/FormData
 </dl>
 
 <div class="note">
-<p><strong>Nota</strong>: Para ser claro, a diferença entre {{domxref("FormData.set()")}} e {{domxref("FormData.append()")}} é que, se a chave especificada não existir, {{domxref("FormData.set()")}} irá substituir o valor existente por um novo, enquanto {{domxref("FormData.append()")}} irá acrescentar um novo valor no final dos valores existentes. Veja as suas páginas dedicadas para código de exemplo.</p>
+<p><strong>Nota</strong>: Para ser claro, a diferença entre {{domxref("FormData.set()")}} e {{domxref("FormData.append()")}} é que, se a chave especificada não existir, {{domxref("FormData.set()")}} irá substituir o valor existente por um novo, enquanto {{domxref("FormData.append()")}} irá acrescentar um novo valor no final dos valores existentes. Veja as suas páginas dedicadas para código de exemplo.</p>
 </div>
 
 <h2 id="Especificações">Especificações</h2>
@@ -60,105 +60,7 @@ translation_of: Web/API/FormData
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>7+</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>10+</td>
-   <td>12+</td>
-   <td>5+</td>
-  </tr>
-  <tr>
-   <td>append com filename</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("22.0")}}</td>
-   <td>10+</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>delete, get, getAll, has, set</td>
-   <td>Behind Flag</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>3.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>1.0.1</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>12+</p>
-   </td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>append com filename</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("22.0")}}</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>delete, get, getAll, has, set</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div class="note">
-<p><strong>Nota</strong>: XHR in Android 4.0 envia conteúdo vazio para o FormData com blob.</p>
-
-<p><strong>Nota:</strong> Suporte do Chrome aos métodos que não seja append está atualmente atrás da bandeira "Enable Experimental Web Platform Features".</p>
-</div>
-
-<h3 id="Notas_da_Gecko">Notas da Gecko</h3>
-
-<p>Antes do Gecko 7.0 {{geckoRelease("7.0")}}, se você especificasse um {{domxref("Blob")}} como o dado a ser anexado ao objeto, o nome do arquivo relatado no cabeçalho HTTP "Content-Disposition" era uma string vazia; isso resultou em erros sendo relatados por alguns servidores. Começando em Gecko 7.0, o nome do arquivo "blob" é enviado.</p>
+{{Compat("api.FormData")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

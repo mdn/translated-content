@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>bind()</strong></code> 메소드가 호출되면 새로운 함수를 생성합니다. 받게되는 첫 인자의 value로는 <code>this</code> 키워드를 설정하고, 이어지는 인자들은 바인드된 함수의 인수에 제공됩니다.</p>
+<p><code><strong>bind()</strong></code> 메소드가 호출되면 새로운 함수를 생성합니다. 받게되는 첫 인자의 value로는 <code>this</code> 키워드를 설정하고, 이어지는 인자들은 바인드된 함수의 인수에 제공됩니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}</div>
 
@@ -25,42 +25,42 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <dl>
  <dt><code>thisArg</code></dt>
- <dd>바인딩 함수가 대상 함수(target function)의 <code>this</code>에 전달하는 값입니다. 바인딩 함수를 {{jsxref("Operators/new", "new")}} 연산자로 생성한 경우 무시됩니다. <code>bind</code>를 사용하여 <code>setTimeout</code> 내에 콜백 함수를 만들 때, <code>thisArg</code>로 전달된 원시 값은 객체로 변환됩니다. <code>bind</code>할 인수(argument)가 제공되지 않으면  실행 스코프 내의 <code>this</code>는 새로운 함수의 <code>thisArg</code>로 처리됩니다.</dd>
+ <dd>바인딩 함수가 대상 함수(target function)의 <code>this</code>에 전달하는 값입니다. 바인딩 함수를 {{jsxref("Operators/new", "new")}} 연산자로 생성한 경우 무시됩니다. <code>bind</code>를 사용하여 <code>setTimeout</code> 내에 콜백 함수를 만들 때, <code>thisArg</code>로 전달된 원시 값은 객체로 변환됩니다. <code>bind</code>할 인수(argument)가 제공되지 않으면  실행 스코프 내의 <code>this</code>는 새로운 함수의 <code>thisArg</code>로 처리됩니다.</dd>
  <dt><code>arg1, arg2, ...</code></dt>
  <dd>대상 함수의 인수 앞에 사용될 인수.</dd>
 </dl>
 
 <h3 id="반환_값">반환 값</h3>
 
-<p>지정한 <code>this</code> 값 및 초기 인수를 사용하여 변경한 원본 함수의 복제본.</p>
+<p>지정한 <code>this</code> 값 및 초기 인수를 사용하여 변경한 원본 함수의 복제본.</p>
 
 <h2 id="설명">설명</h2>
 
-<p><code>bind()</code> 함수는 새로운 바인딩한 함수를 만듭니다. 바인딩한 함수는 원본 함수 객체를 감싸는 함수로, ECMAScript 2015에서 말하는 특이 함수 객체(exotic function object)입니다. 바인딩한 함수를 호출하면 일반적으로 래핑된 함수가 호출 됩니다.</p>
+<p><code>bind()</code> 함수는 새로운 바인딩한 함수를 만듭니다. 바인딩한 함수는 원본 함수 객체를 감싸는 함수로, ECMAScript 2015에서 말하는 특이 함수 객체(exotic function object)입니다. 바인딩한 함수를 호출하면 일반적으로 래핑된 함수가 호출 됩니다.</p>
 
 <p>바인딩한 함수는 다음과 같은 내부 속성을 가지고 있습니다.</p>
 
 <ul>
- <li><code><strong>[[BoundTargetFunction]]</strong></code> - 바인딩으로 감싼(wrapped) 원본 함수 객체.</li>
- <li><code><strong>[[BoundThis]]</strong></code> - 감싸진 함수를 호출했을 때 항상 전달되는 값.</li>
- <li><code><strong>[[BoundArguments]]</strong></code> - 감싸진 함수가 호출될 때 첫 번째 인수로 사용되는 값들의 목록.</li>
+ <li><code><strong>[[BoundTargetFunction]]</strong></code> - 바인딩으로 감싼(wrapped) 원본 함수 객체.</li>
+ <li><code><strong>[[BoundThis]]</strong></code> - 감싸진 함수를 호출했을 때 항상 전달되는 값.</li>
+ <li><code><strong>[[BoundArguments]]</strong></code> - 감싸진 함수가 호출될 때 첫 번째 인수로 사용되는 값들의 목록.</li>
  <li><code><strong>[[Call]]</strong></code> - 이 객체와 관련된 코드 실행. 함수 호출 식을 통해 호출됨. 내부 메소드의 인수는 this 값 및 호출 식으로 함수에 전달되는 인수를 포함하는 목록입니다.</li>
 </ul>
 
-<p>바인딩된 함수가 호출될 때 <code>[[BoundTargetFunction]]</code>의 내부 메소드 <code>[[Call]]</code>을 호출합니다. <code>[[Call]]</code> 은 <code>Call(<em>boundThis</em>, <em>args</em>)</code>와 같은 인자를 가집니다. 이 때, <code><em>boundThis</em></code>는 <code>[[BoundThis]]</code>이고, <code><em>args</em></code>는 함수가 호출될 때 전달되어 따라오는 <code>[[BoundArguments]]</code> 입니다.</p>
+<p>바인딩된 함수가 호출될 때 <code>[[BoundTargetFunction]]</code>의 내부 메소드 <code>[[Call]]</code>을 호출합니다. <code>[[Call]]</code> 은 <code>Call(<em>boundThis</em>, <em>args</em>)</code>와 같은 인자를 가집니다. 이 때, <code><em>boundThis</em></code>는 <code>[[BoundThis]]</code>이고, <code><em>args</em></code>는 함수가 호출될 때 전달되어 따라오는 <code>[[BoundArguments]]</code> 입니다.</p>
 
-<p>바인딩된 함수는 {{jsxref("Operators/new", "new")}} 연산자를 사용하여 생성될 수도 있습니다: 그렇게 하면 대상 함수가 마치 대신 생성된 것처럼 행동합니다. 제공된 <code>this</code> 값은 무시됩니다, 앞에 붙인(prepend) 인수는 에뮬레이트된 함수에 제공되지만.</p>
+<p>바인딩된 함수는 {{jsxref("Operators/new", "new")}} 연산자를 사용하여 생성될 수도 있습니다: 그렇게 하면 대상 함수가 마치 대신 생성된 것처럼 행동합니다. 제공된 <code>this</code> 값은 무시됩니다, 앞에 붙인(prepend) 인수는 에뮬레이트된 함수에 제공되지만.</p>
 
 <h2 id="예제">예제</h2>
 
 <h3 id="바인딩된_함수_생성">바인딩된 함수 생성</h3>
 
-<p><code>bind()</code>의 가장 간단한 사용법은 호출 방법과 관계없이 특정 <code>this</code> 값으로 호출되는 함수를 만드는 겁니다. 초보 JavaScript 프로그래머로서 흔한 실수는 객체로부터 메소드를 추출한 뒤 그 함수를 호출할때, 원본 객체가 그 함수의 <code>this</code>로 사용될 것이라 기대하는 겁니다(예시 : 콜백 기반 코드에서 해당 메소드 사용). 그러나 특별한 조치가 없으면, 대부분의 경우 원본 객체는 손실됩니다. 원본 객체가 바인딩 되는 함수를 생성하면, 이러한 문제를 깔끔하게 해결할 수 있습니다.</p>
+<p><code>bind()</code>의 가장 간단한 사용법은 호출 방법과 관계없이 특정 <code>this</code> 값으로 호출되는 함수를 만드는 겁니다. 초보 JavaScript 프로그래머로서 흔한 실수는 객체로부터 메소드를 추출한 뒤 그 함수를 호출할때, 원본 객체가 그 함수의 <code>this</code>로 사용될 것이라 기대하는 겁니다(예시 : 콜백 기반 코드에서 해당 메소드 사용). 그러나 특별한 조치가 없으면, 대부분의 경우 원본 객체는 손실됩니다. 원본 객체가 바인딩 되는 함수를 생성하면, 이러한 문제를 깔끔하게 해결할 수 있습니다.</p>
 
 <pre class="brush: js">this.x = 9;
 var module = {
-  x: 81,
-  getX: function() { return this.x; }
+  x: 81,
+  getX: function() { return this.x; }
 };
 
 module.getX(); // 81
@@ -78,7 +78,7 @@ boundGetX(); // 81
 
 <h3 id="부분_적용_함수">부분 적용 함수</h3>
 
-<p><code>bind()</code>의 다음으로 간단한 사용법은 미리 지정된 초기 인수가 있는 함수를 만드는 겁니다. 지정될 초기 인수가 있다면 제공된 <code>this</code> 값을 따르고, 바인딩 된 함수에 전달되어 바인딩 된 함수가 호출될 때마다 대상 함수의 인수 앞에 삽입됩니다.</p>
+<p><code>bind()</code>의 다음으로 간단한 사용법은 미리 지정된 초기 인수가 있는 함수를 만드는 겁니다. 지정될 초기 인수가 있다면 제공된 <code>this</code> 값을 따르고, 바인딩 된 함수에 전달되어 바인딩 된 함수가 호출될 때마다 대상 함수의 인수 앞에 삽입됩니다.</p>
 
 <pre><code>function list() {
   return Array.prototype.slice.call(arguments);
@@ -134,7 +134,7 @@ flower.bloom();
 <h3 id="생성자로_쓰이는_바인딩된_함수">생성자로 쓰이는 바인딩된 함수</h3>
 
 <div class="warning">
-<p><strong>경고:</strong> 이 부분은 JavaScript 능력을 보이고 <code>bind()</code> 메소드의 일부 극단 상황(edge case)을 기록합니다. 아래 보이는 메소드는 일을 하는 가장 좋은 방법은 아니며 아마도 상용 환경에서 전혀 사용되지 않을 겁니다.</p>
+<p><strong>경고:</strong> 이 부분은 JavaScript 능력을 보이고 <code>bind()</code> 메소드의 일부 극단 상황(edge case)을 기록합니다. 아래 보이는 메소드는 일을 하는 가장 좋은 방법은 아니며 아마도 상용 환경에서 전혀 사용되지 않을 겁니다.</p>
 </div>
 
 <p>바인딩된 함수는 자동으로 대상 함수에 의해 생성되는 새로운 인스턴스를 생성하는 {{jsxref("Operators/new", "new")}} 연산자와 함께 쓰기에 적합합니다. 바인딩된 함수가 값을 생성하는 데 쓰이는 경우, 제공된 <code>this</code>는 무시됩니다. 그러나, 제공된 인수는 여전히 생성자 호출에 (인수부) 앞에 붙습니다:</p>
@@ -210,7 +210,7 @@ slice(arguments);
 
 <h2 id="폴리필">폴리필</h2>
 
-<p><code>bind</code> 함수는 ECMA-262 제5판에 추가되었습니다; 그러하기에 모든 브라우저에 없을 수 있습니다. 스크립트 시작 부분에 다음 코드를 삽입함으로써 이 문제를 부분적으로 해결할수 있으며,  bind() 지원하지 않는 구현에서도  대부분의 기능을 사용할 수 있습니다.</p>
+<p><code>bind</code> 함수는 ECMA-262 제5판에 추가되었습니다; 그러하기에 모든 브라우저에 없을 수 있습니다. 스크립트 시작 부분에 다음 코드를 삽입함으로써 이 문제를 부분적으로 해결할수 있으며,  bind() 지원하지 않는 구현에서도  대부분의 기능을 사용할 수 있습니다.</p>
 
 <pre class="brush: js">if (!Function.prototype.bind) {
   Function.prototype.bind = function(oThis) {
@@ -252,32 +252,9 @@ slice(arguments);
 
 <p>이 부분 구현을 쓰기로 고른 경우, <strong>동작이 ECMA-262 제5판을 벗어난 경우에 의존하지 않아야 합니다!</strong> 그러나 주의 약간(과 아마도 특정 요구에 맞추기 위한 추가 수정)으로, 이 부분 구현은 <code>bind()</code>가 스펙에 따라 널리 구현될 때까지 적당한 다리가 될 수 있습니다.</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>초기 정의. JavaScript 1.8.5에서 구현됨.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function.prototype.bind', 'Function.prototype.bind')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function.prototype.bind', 'Function.prototype.bind')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

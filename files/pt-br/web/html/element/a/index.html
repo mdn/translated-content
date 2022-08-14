@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/a
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">O <strong>elemento</strong> <strong><code>&lt;a&gt;</code> </strong>em <strong>HTML </strong>(ou elemento âncora), com o atributo <a href="#href"><code>href</code></a> cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL.</span> O conteúdo dentro de cada <code>&lt;a&gt;</code> <strong>precisará</strong> indicar o destino do link.</p>
+<p><span class="seoSummary">O <strong>elemento</strong> <strong><code>&lt;a&gt;</code> </strong>em <strong>HTML </strong>(ou elemento âncora), com o atributo <a href="#href"><code>href</code></a> cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL.</span> O conteúdo dentro de cada <code>&lt;a&gt;</code> <strong>precisará</strong> indicar o destino do link.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/a.html")}}</div>
 
@@ -22,7 +22,7 @@ translation_of: Web/HTML/Element/a
 
 <h2 id="Atributos">Atributos</h2>
 
-<p>Os atributos do elemento incluem os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+<p>Os atributos do elemento incluem os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
 
 <dl>
  <dt id="download">{{HTMLAttrDef("download")}}{{HTMLVersionInline(5)}}</dt>
@@ -32,18 +32,18 @@ translation_of: Web/HTML/Element/a
   <li>Sem um valor, o <em>browser </em>irá sugerir um nome de arquivo/extensão, gerado a partir de diversas origens:
    <ul>
     <li>O cabeçalho HTTP {{HTTPHeader("Content-Disposition")}}</li>
-    <li>O segmento final no <a href="/en-US/docs/Web/API/URL/pathname">path</a> (caminho) da URL</li>
+    <li>O segmento final no <a href="/en-US/docs/Web/API/URL/pathname">path</a> (caminho) da URL</li>
     <li>The {{Glossary("MIME_type", "media type")}} (from the ({{HTTPHeader("Content-Type")}} header, the start of a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URL</a>, or {{domxref("Blob.type")}} for a <a href="/en-US/docs/Web/API/URL/createObjectURL"><code>blob:</code> URL</a>)</li>
    </ul>
   </li>
-  <li>A definição de um valor o sugere como o nome do arquivo. Caracteres <code>/</code> e <code>\</code> são convertidos para <em>underscores </em>(<code>_</code>).Arquivos de sistema talvez proibam alguns caracteres em nomes de arquivos, então o navegador irá ajustar o nome sugerido caso necessário.  </li>
+  <li>A definição de um valor o sugere como o nome do arquivo. Caracteres <code>/</code> e <code>\</code> são convertidos para <em>underscores </em>(<code>_</code>).Arquivos de sistema talvez proibam alguns caracteres em nomes de arquivos, então o navegador irá ajustar o nome sugerido caso necessário.  </li>
  </ul>
 
  <div class="note"><strong>Notes:</strong>
 
  <ul>
-  <li><code>download</code> somente funciona para <a href="/en-US/docs/Web/Security/Same-origin_policy">URLs de mesma origem </a>, ou os esquemas <code>blob:</code> e <code>data:</code></li>
-  <li>Se  <code>Content-Disposition</code> tiver um diferente <code>filename</code> (nome do arquivo) que <code>download</code>,  o cabeçalho tem prioridade. (Se <code>Content-Disposition: inline</code>, Firefox prioriza o cabeçalho enquanto o Chrome escolhe <code>download</code>.)</li>
+  <li><code>download</code> somente funciona para <a href="/en-US/docs/Web/Security/Same-origin_policy">URLs de mesma origem </a>, ou os esquemas <code>blob:</code> e <code>data:</code></li>
+  <li>Se  <code>Content-Disposition</code> tiver um diferente <code>filename</code> (nome do arquivo) que <code>download</code>,  o cabeçalho tem prioridade. (Se <code>Content-Disposition: inline</code>, Firefox prioriza o cabeçalho enquanto o Chrome escolhe <code>download</code>.)</li>
  </ul>
  </div>
  </dd>
@@ -54,30 +54,30 @@ translation_of: Web/HTML/Element/a
  <ul>
   <li>Sections of a page with fragment URLs(Seções de página com fragmentos URL)</li>
   <li>Pieces of media files with media fragments (Pedaços de arquivos de mídia com fragmentos da própria mídia)</li>
-  <li>Números de telefone com <code>tel:</code> URLs</li>
-  <li>Email addresses with(Endereço de email com) <code>mailto:</code> URLs</li>
-  <li>Alguns navegadores talvez não aguentem certos arranjos em URL, para isso os websites fazem uso do <code><a href="/en-US/docs/Web/API/Navigator/registerProtocolHandler">registerProtocolHandler()</a></code></li>
+  <li>Números de telefone com <code>tel:</code> URLs</li>
+  <li>Email addresses with(Endereço de email com) <code>mailto:</code> URLs</li>
+  <li>Alguns navegadores talvez não aguentem certos arranjos em URL, para isso os websites fazem uso do <code><a href="/en-US/docs/Web/API/Navigator/registerProtocolHandler">registerProtocolHandler()</a></code></li>
  </ul>
  </dd>
  <dt id="hreflang">{{HTMLAttrDef("hreflang")}}</dt>
  <dd>Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as <a href="/en-US/docs/Web/HTML/Global_attributes/lang">the global <code>lang</code> attribute</a>.</dd>
  <dt id="ping">{{HTMLAttrDef("ping")}}</dt>
- <dd>Uma lista de URLs separadas por espaços. Quando o link é seguido, o brrowser enviará requisições {{HTTPMethod("POST")}} com o corpo <code>PING</code> para as URLs. Typically for tracking.</dd>
+ <dd>Uma lista de URLs separadas por espaços. Quando o link é seguido, o brrowser enviará requisições {{HTTPMethod("POST")}} com o corpo <code>PING</code> para as URLs. Typically for tracking.</dd>
  <dt id="referrerpolicy">{{HTMLAttrDef("referrerpolicy")}}{{Experimental_Inline}}</dt>
- <dd>Quanto do <a href="/en-US/docs/Web/HTTP/Headers/Referer">referrer</a> para ser enviado quando acessar o link. Acesse  <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy"><code>Referrer-Policy</code></a> para possíveis valores e seus efeitos.</dd>
+ <dd>Quanto do <a href="/en-US/docs/Web/HTTP/Headers/Referer">referrer</a> para ser enviado quando acessar o link. Acesse  <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy"><code>Referrer-Policy</code></a> para possíveis valores e seus efeitos.</dd>
  <dt id="rel">{{HTMLAttrDef("rel")}}</dt>
  <dd>The relationship of the linked URL as space-separated <a href="/en-US/docs/Web/HTML/Link_types">link types</a>.</dd>
  <dt id="target">{{HTMLAttrDef("target")}}</dt>
  <dd>Where to display the linked URL, as the name for a <em>browsing context</em> (a tab, window, or <code>&lt;iframe&gt;</code>). The following keywords have special meanings for where to load the URL:
  <ul>
   <li><code>_self</code>: No atual contexto de pesquisa. (Default)</li>
-  <li><code>_blank</code>: Normalmente uma nova aba, porém usuários podem configurar seus navegadores para abrir em uma nova janela.</li>
+  <li><code>_blank</code>: Normalmente uma nova aba, porém usuários podem configurar seus navegadores para abrir em uma nova janela.</li>
   <li><code>_parent</code>: the parent browsing context of the current one. If no parent, behaves as <code>_self</code>.</li>
   <li><code>_top</code>: the topmost browsing context (the "highest" context that’s an ancestor of the current one). If no ancestors, behaves as <code>_self</code>.</li>
  </ul>
 
  <div class="note">
- <p><strong>Note:</strong> Quando usando <code>target</code>, adicione <code>rel="noreferrer noopener"</code> para evitar "exploit" para <code>window.opener</code> API;</p>
+ <p><strong>Note:</strong> Quando usando <code>target</code>, adicione <code>rel="noreferrer noopener"</code> para evitar "exploit" para <code>window.opener</code> API;</p>
  </div>
 
  <div class="blockIndicator warning">

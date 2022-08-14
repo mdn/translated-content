@@ -16,7 +16,9 @@ La méthode **`Selection.collapse()`** positionne la sélection en cours en un s
 
 ## Syntaxe
 
-    sel.collapse(parentNode, offset);
+```js
+sel.collapse(parentNode, offset);
+```
 
 ### Paramètres
 

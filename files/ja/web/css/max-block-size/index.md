@@ -3,13 +3,12 @@ title: max-block-size
 slug: Web/CSS/max-block-size
 tags:
   - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - Experimental
-  - レイアウト
+  - CSS Logical Property
+  - CSS Property
+  - Layout
   - Maximum Height
   - Maximum Width
-  - リファレンス
+  - Reference
   - height
   - max-block-size
   - recipe:css-property
@@ -26,7 +25,7 @@ translation_of: Web/CSS/max-block-size
 
 `max-width` は常に水平方向の寸法に使われ、 `max-height` は常に垂直方向の寸法に使われるため、このプロパティはテキストコンテンツの寸法に基づいて寸法を設定する必要がある場合、書字方向を意識して指定する必要がある場合に便利です。
 
-ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す<a href="/ja/docs/Web/CSS/writing-mode#例">例</a>をご覧ください。
+ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す {{cssxref("writing-mode")}} の [例](/ja/docs/Web/CSS/writing-mode#例)をご覧ください。
 
 {{EmbedInteractiveExample("pages/css/max-block-size.html")}}
 
@@ -41,7 +40,7 @@ max-block-size: 25em;
 max-block-size: 75%;
 
 /* キーワード値 */
-max-block-size: auto;
+max-block-size: none;
 max-block-size: max-content;
 max-block-size: min-content;
 max-block-size: fit-content(20em);
@@ -50,6 +49,7 @@ max-block-size: fit-content(20em);
 max-block-size: inherit;
 max-block-size: initial;
 max-block-size: revert;
+max-block-size: revert-layer;
 max-block-size: unset;
 ```
 
@@ -57,14 +57,25 @@ max-block-size: unset;
 
 `max-block-size` プロパティの値は、 {{cssxref("max-width")}} および {{cssxref("max-height")}} プロパティで有効なすべての値を取ることができます。
 
-{{page("/ja/docs/Web/CSS/max-width", "値")}}
+- {{cssxref("&lt;length&gt;")}}
+  - : `max-block-size` を絶対的な値で定義します。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : `max-block-size` を包含ブロックの幅に対するパーセント値で定義します。
+- `none`
+  - : ボックスの寸法を制限しません。
+- `max-content`
+  - : 内容物が推奨する `max-block-size` です。
+- `min-content`
+  - : 内容物の最小の `max-block-size` です。
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
 
 ### 書字方向が方向にどう影響するのか
 
 `writing-mode` の値は次のように `max-block-size` から `max-width` または `max-height` への対応付けに影響します。
 
 | `writing-mode` の値                                                                                                                                                                              | `max-block-size` が等価になるもの |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}  | {{cssxref("max-height")}}  |
 | `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}  |
 
@@ -82,9 +93,9 @@ max-block-size: unset;
 
 ## 例
 
-<h3 id="Setting_max-block-size_with_horizontal_and_vertical_text">横書きおよび縦書きでの max-block-size の設定</h3>
+### 横書きおよび縦書きでの max-block-size の設定
 
-この例では、同じテキスト ({{interwiki("wikipedia", "en:Herman Melville", "Herman Melville")}} の小説 <em>{{interwiki("wikipedia", "en:Moby-Dick", "Moby-Dick")}}</em> の冒頭部分) が `horizontal-tb` および `vertical-rl` の両方の書字方向で表示されます。
+この例では、同じテキスト ({{interwiki("wikipedia", "en:Herman Melville", "Herman Melville")}} の小説 _{{interwiki("wikipedia", "en:Moby-Dick", "Moby-Dick")}}_ の冒頭部分) が `horizontal-tb` および `vertical-rl` の両方の書字方向で表示されます。
 
 二つのボックスついてそれ以外の部分はすべて、 {{cssxref("max-block-size")}} に使われている値を含めて同じです。
 
@@ -95,24 +106,18 @@ max-block-size: unset;
 ```html
 <p>書字方向 <code>horizontal-tb</code> (既定値):</p>
 <div class="standard-box horizontal">
-  Call me Ishmael. Some years ago—never mind how
-  long precisely—having little or no money in my
-  purse, and nothing particular to interest me on
-  shore, I thought I would sail about a little and see
-  the watery part of the world. It is a way I have of
-  driving off the spleen and regulating the
-  circulation.
+  Call me Ishmael. Some years ago—never mind how long precisely—having little or
+  no money in my purse, and nothing particular to interest me on shore, I
+  thought I would sail about a little and see the watery part of the world. It
+  is a way I have of driving off the spleen and regulating the circulation.
 </div>
 
 <p>書字方向 <code>vertical-rl</code>:</p>
 <div class="standard-box vertical">
-  Call me Ishmael. Some years ago—never mind how
-  long precisely—having little or no money in my
-  purse, and nothing particular to interest me on
-  shore, I thought I would sail about a little and see
-  the watery part of the world. It is a way I have of
-  driving off the spleen and regulating the
-  circulation.
+  Call me Ishmael. Some years ago—never mind how long precisely—having little or
+  no money in my purse, and nothing particular to interest me on shore, I
+  thought I would sail about a little and see the watery part of the world. It
+  is a way I have of driving off the spleen and regulating the circulation.
 </div>
 ```
 

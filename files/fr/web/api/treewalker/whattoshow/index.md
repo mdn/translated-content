@@ -30,7 +30,9 @@ La propriété en lecture seule **`TreeWalker.whatToShow`** renvoie un `unsigned
 
 ## Syntaxe
 
-    nodeTypes = treeWalker.whatToShow;
+```js
+nodeTypes = treeWalker.whatToShow;
+```
 
 ## Exemples
 

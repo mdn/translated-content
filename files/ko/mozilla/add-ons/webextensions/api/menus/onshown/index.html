@@ -41,7 +41,7 @@ browser.menus.onHidden.addListener(function() {
   lastMenuInstanceId = 0;
 });</pre>
 
-<p>Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:</p>
+<p>Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:</p>
 
 <pre class="brush: js">browser.menus.onShown.addListener(async function(info, tab) {
   browser.menus.update(menuId, ...);

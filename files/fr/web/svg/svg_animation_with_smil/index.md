@@ -70,7 +70,7 @@ Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.
        from="0 60 60"
        to="360 100 60"
        repeatCount="indefinite"
-			/>
+      />
   </rect>
 </svg>
 ```

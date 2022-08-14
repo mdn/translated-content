@@ -149,7 +149,7 @@ const writableStream = new WritableStream({
 
 <p>また、関連するコンストラクターを使用して新しい {{domxref("TextEncoder")}} インスタンスを作成し、メッセージをチャンクにエンコードしてストリームに入れます。</p>
 
-<p>エンコードされたチャンクを使用して、結果の配列で {{jsxref("Array/forEach")}} を呼び出します。 このブロック内で、{{domxref("WritableStreamDefaultWriter.ready")}}  を使用して、ライターに別のチャンクを書き込む準備ができているかどうかを確認します。 <code>ready</code> は、この場合に満たされるプロミスを返します。 その中で、{{domxref("WritableStreamDefaultWriter.write()")}} を呼び出して、実際にストリームにチャンクを書き込みます。 これにより、前述のように、<code>WritableStream()</code> コンストラクター内で指定された <code>write()</code> メソッドもトリガーされます。</p>
+<p>エンコードされたチャンクを使用して、結果の配列で {{jsxref("Array/forEach")}} を呼び出します。 このブロック内で、{{domxref("WritableStreamDefaultWriter.ready")}}  を使用して、ライターに別のチャンクを書き込む準備ができているかどうかを確認します。 <code>ready</code> は、この場合に満たされるプロミスを返します。 その中で、{{domxref("WritableStreamDefaultWriter.write()")}} を呼び出して、実際にストリームにチャンクを書き込みます。 これにより、前述のように、<code>WritableStream()</code> コンストラクター内で指定された <code>write()</code> メソッドもトリガーされます。</p>
 
 <p>チャンクがすべて書き込まれた後、最後のチャンクの書き込みが完了し、すべての作業が完了したことを確認するために、もう一度 <code>ready</code> のチェックを実行します。この <code>ready</code> のチェックが完了すると、{{domxref("WritableStreamDefaultWriter.close()")}} を呼び出してストリームを閉じます。 これにより、前述のように、<code>WritableStream()</code> コンストラクター内で指定された <code>close()</code> メソッドもトリガーされます。</p>
 

@@ -9,10 +9,10 @@ original_slug: Web/JavaScript/Reference/Statements/funcoes_assincronas
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>A declaração <code><strong>async function</strong></code> define uma <em>função assíncrona</em>, que retorna um objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.</p>
+<p>A declaração <code><strong>async function</strong></code> define uma <em>função assíncrona</em>, que retorna um objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.</p>
 
 <div class="noinclude">
-<p>Você também pode definir funções assíncronas usando uma {{jsxref("Operators/async_function", "expressão async function")}}.</p>
+<p>Você também pode definir funções assíncronas usando uma {{jsxref("Operators/async_function", "expressão async function")}}.</p>
 </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -34,17 +34,17 @@ original_slug: Web/JavaScript/Reference/Statements/funcoes_assincronas
 
 <dl>
  <dt><code>instruções</code></dt>
- <dd>As instruções que compõem o corpo da função.</dd>
+ <dd>As instruções que compõem o corpo da função.</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Quando uma função assíncrona é chamada, ela retorna uma {{jsxref("Promise")}}. Quando a função assíncrona retorna um valor, a <code>Promise</code> será resolvida com o valor retornado. Quando a função assíncrona lança uma exceção ou algum valor, a <code>Promise</code> será rejeitada com o valor lançado.</p>
+<p>Quando uma função assíncrona é chamada, ela retorna uma {{jsxref("Promise")}}. Quando a função assíncrona retorna um valor, a <code>Promise</code> será resolvida com o valor retornado. Quando a função assíncrona lança uma exceção ou algum valor, a <code>Promise</code> será rejeitada com o valor lançado.</p>
 
-<p>Uma função assíncrona pode conter uma expressão {{jsxref("Operators/await", "await")}}, que pausa a execução da função assíncrona e espera pela resolução da <code>Promise </code>passada, e depois retoma a execução da função assíncrona e retorna o valor resolvido.</p>
+<p>Uma função assíncrona pode conter uma expressão {{jsxref("Operators/await", "await")}}, que pausa a execução da função assíncrona e espera pela resolução da <code>Promise </code>passada, e depois retoma a execução da função assíncrona e retorna o valor resolvido.</p>
 
 <div class="note">
-<p>A proposta das funções <code>async/await</code> é de simplificar o uso de forma síncrona das <code>Promises</code> e executar alguns procedimentos em um grupo de <code>Promises</code>. Assim como <code>Promises</code> são similares a <code>callbacks</code> estruturados, funções <code>async/await</code> são similares à junção de <code>generators</code> com <code>P</code><code>romises</code>.</p>
+<p>A proposta das funções <code>async/await</code> é de simplificar o uso de forma síncrona das <code>Promises</code> e executar alguns procedimentos em um grupo de <code>Promises</code>. Assim como <code>Promises</code> são similares a <code>callbacks</code> estruturados, funções <code>async/await</code> são similares à junção de <code>generators</code> com <code>Promises</code>.</p>
 </div>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -80,9 +80,9 @@ adicionar2(10).then(v =&gt; {
 });
 </pre>
 
-<h3 id="Reescrevendo_uma_cadeia_de_Promise_com_uma_função_async">Reescrevendo uma cadeia de <code>Promise</code> com uma função <code>async</code></h3>
+<h3 id="Reescrevendo_uma_cadeia_de_Promise_com_uma_função_async">Reescrevendo uma cadeia de <code>Promise</code> com uma função <code>async</code></h3>
 
-<p>Uma API que retorna uma {{jsxref("Promise")}} vai resultar em uma cadeia de <code>Promises</code> e separa a função em várias partes. Considere o seguinte código:</p>
+<p>Uma API que retorna uma {{jsxref("Promise")}} vai resultar em uma cadeia de <code>Promises</code> e separa a função em várias partes. Considere o seguinte código:</p>
 
 <pre class="brush: js">function pegarDadosProcessados(url) {
   return baixarDados(url) // retorna uma Promise
@@ -95,7 +95,7 @@ adicionar2(10).then(v =&gt; {
 }
 </pre>
 
-<p>pode ser escrita em uma única função <code>async</code> desta forma:</p>
+<p>pode ser escrita em uma única função <code>async</code> desta forma:</p>
 
 <pre class="brush: js">async function pegarDadosProcessados(url) {
   let v;
@@ -108,7 +108,7 @@ adicionar2(10).then(v =&gt; {
 }
 </pre>
 
-<p>Note que no exemplo acima não tem a instrução <code>await</code> na instrução do <code>return</code>, porque o valor retornado de uma função <code>async é </code>implícitamente passado por um {{jsxref("Promise.resolve")}}.</p>
+<p>Note que no exemplo acima não tem a instrução <code>await</code> na instrução do <code>return</code>, porque o valor retornado de uma função <code>async é </code>implícitamente passado por um {{jsxref("Promise.resolve")}}.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -138,7 +138,7 @@ adicionar2(10).then(v =&gt; {
 <h3 id="Notas_específicas_do_Firefox">Notas específicas do Firefox</h3>
 
 <ul>
- <li>A função <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures">expression closure syntax</a> não é permitida com funções assíncronas e irão lançar a exceção <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a> a partir do Firefox 55.</li>
+ <li>A função <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures">expression closure syntax</a> não é permitida com funções assíncronas e irão lançar a exceção <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a> a partir do Firefox 55.</li>
 </ul>
 
 <h2 id="Veja_também">Veja também</h2>

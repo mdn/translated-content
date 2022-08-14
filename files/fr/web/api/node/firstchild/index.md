@@ -15,7 +15,9 @@ La propriété en lecture seule **`Node.firstChild` r**envoie le premier nœud e
 
 ## Syntaxe
 
-    var childNode = node.firstChild;
+```js
+var childNode = node.firstChild;
+```
 
 ## Exemple
 

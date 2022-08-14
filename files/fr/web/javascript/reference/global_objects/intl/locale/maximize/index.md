@@ -18,7 +18,9 @@ La méthode **`Intl.Locale.prototype.maximize()`** permet d'obtenir les valeurs 
 
 ## Syntaxe
 
-    locale.maximize()
+```js
+locale.maximize()
+```
 
 ### Valeur de retour
 

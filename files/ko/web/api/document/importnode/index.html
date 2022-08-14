@@ -16,7 +16,7 @@ translation_of: Web/API/Document/importNode
 
 <dl>
  <dt><code>node</code></dt>
- <dd>문서에 추가될 새로운 노드입니다. 새로운 노드가 문서 트리에 추가되기 전까지, 새로운 노드의 <a href="/en-US/docs/DOM/Node.parentNode" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="DOM/Node.parentNode">parentNode</a><span style="line-height: 1.5;">는 null입니다.</span></dd>
+ <dd>문서에 추가될 새로운 노드입니다. 새로운 노드가 문서 트리에 추가되기 전까지, 새로운 노드의 <a href="/en-US/docs/DOM/Node.parentNode" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="DOM/Node.parentNode">parentNode</a><span style="line-height: 1.5;">는 null입니다.</span></dd>
  <dt><code>externalNode</code></dt>
  <dd>다른 문서에서 가져올 노드입니다.</dd>
  <dt><code>deep</code></dt>
@@ -24,9 +24,9 @@ translation_of: Web/API/Document/importNode
 </dl>
 
 <div class="note">
-<p><strong>Note:</strong> DOM4 스펙 (Gecko 13.0 {{geckoRelease(13)}}에서 적용되어 있습니다)에서, <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">deep</span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">은 선택적 인자입니다. 만약 해당 속성을 생략한다면, 함수는 자동으로 </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">deep을 </span><strong style="line-height: 1.5em;"><code style="font-size: 14px;">true</code></strong><code style="font-size: 14px;">로 인식하여 작동하게 되고, 기본 동작을 하게 됩니다. 만약 자식 노드를 포함하지 않은 해당 노드만 가져오고싶다면, 반드시 <em>deep</em>인자에 false를 주시길 바랍니다.</code></p>
+<p><strong>Note:</strong> DOM4 스펙 (Gecko 13.0 {{geckoRelease(13)}}에서 적용되어 있습니다)에서, <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">deep</span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">은 선택적 인자입니다. 만약 해당 속성을 생략한다면, 함수는 자동으로 </span><span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">deep을 </span><strong style="line-height: 1.5em;"><code style="font-size: 14px;">true</code></strong><code style="font-size: 14px;">로 인식하여 작동하게 되고, 기본 동작을 하게 됩니다. 만약 자식 노드를 포함하지 않은 해당 노드만 가져오고싶다면, 반드시 <em>deep</em>인자에 false를 주시길 바랍니다.</code></p>
 
-<p><code style="font-size: 14px;">이러한 동작 방식은 최신 스펙에서 변경되었고, 만약 deep 속성을 생략하면, 함수는 자동으로 deep을 false로 인식하여 동작합니다. 비록 deep 속성이 선택적 속성이라고 해도, 당신은 항상 deep 속성을 상호 호환성을 위하여 제공하는 것이 좋습니다. <em>Gecko 28.0 {{geckoRelease(28)}} </em>버전부터, deep속성을 입력하지 않을 경우 콘솔에서 에러를 반환합니다.</code></p>
+<p><code style="font-size: 14px;">이러한 동작 방식은 최신 스펙에서 변경되었고, 만약 deep 속성을 생략하면, 함수는 자동으로 deep을 false로 인식하여 동작합니다. 비록 deep 속성이 선택적 속성이라고 해도, 당신은 항상 deep 속성을 상호 호환성을 위하여 제공하는 것이 좋습니다. <em>Gecko 28.0 {{geckoRelease(28)}} </em>버전부터, deep속성을 입력하지 않을 경우 콘솔에서 에러를 반환합니다.</code></p>
 </div>
 
 <h2 id="Example" name="Example">예제</h2>
@@ -45,20 +45,13 @@ document.getElementById("container").appendChild(newNode);
 
 <p>Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many sites break when this rule is enforced). We encourage Web developers to fix their code to follow this rule for improved future compatibility.</p>
 
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
 <h2 id="브라우저_지원율">브라우저 지원율</h2>
 
-<div>
-
-
 <p>{{Compat("api.Document.importNode")}}</p>
-</div>
-
-<h2 id="Specifications" name="Specifications">관련문서</h2>
-
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#Core-Document-importNode">DOM Level 2 Core: Document.importNode</a></li>
- <li><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-importnode">DOM4 (draft): Document.importNode</a></li>
-</ul>
 
 <h2 id="참고">참고</h2>
 

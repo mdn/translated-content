@@ -21,8 +21,10 @@ La méthode **`indexOf()`** renvoie le premier indice pour lequel on trouve un �
 
 ## Syntaxe
 
-    arr.indexOf(élémentRecherché)
-    arr.indexOf(élémentRecherché, indiceDébut)
+```js
+arr.indexOf(élémentRecherché)
+arr.indexOf(élémentRecherché, indiceDébut)
+```
 
 ### Paramètres
 

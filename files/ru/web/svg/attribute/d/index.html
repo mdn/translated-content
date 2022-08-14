@@ -5,11 +5,11 @@ translation_of: Web/SVG/Attribute/d
 ---
 <div>{{SVGRef}}</div>
 
-<p>Атрибут <strong><code>d</code></strong> предоставляет определение пути для рисования.</p>
+<p>Атрибут <strong><code>d</code></strong> предоставляет определение пути для рисования.</p>
 
-<p>Определение пути - это <a href="#Path_commands">список команд пути</a>, в которых каждая команда состоит из буквы и некоторых чисел, представляющих параметр команды. Ниже приведены все возможные команды.</p>
+<p>Определение пути - это <a href="#Path_commands">список команд пути</a>, в которых каждая команда состоит из буквы и некоторых чисел, представляющих параметр команды. Ниже приведены все возможные команды.</p>
 
-<p>Три элемента используют этот атрибут: {{SVGElement("path")}}, {{SVGElement("glyph")}}, и {{SVGElement("missing-glyph")}}</p>
+<p>Три элемента используют этот атрибут: {{SVGElement("path")}}, {{SVGElement("glyph")}}, и {{SVGElement("missing-glyph")}}</p>
 
 <div id="Example">
 <div class="hidden">
@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/d
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path fill="none" stroke="red"
+  &lt;path fill="none" stroke="red"
     d="M 10,30
        A 20,20 0,0,1 50,30
        A 20,20 0,0,1 90,30
@@ -53,7 +53,7 @@ translation_of: Web/SVG/Attribute/d
 
 <p class="warning"><strong>Warning:</strong> Начиная с SVG2 {{SVGElement('glyph')}} устарел и не должен использоваться.</p>
 
-<p>Для {{SVGElement('glyph')}}, <code>d</code> является строкой, содержащей серию команд пути, которые определяют форму контура глифа.</p>
+<p>Для {{SVGElement('glyph')}}, <code>d</code> является строкой, содержащей серию команд пути, которые определяют форму контура глифа.</p>
 
 <table class="standard-table">
  <tbody>
@@ -72,7 +72,7 @@ translation_of: Web/SVG/Attribute/d
  </tbody>
 </table>
 
-<p class="note"><strong>Сноска:</strong> Точка происхождения (координата <code>0</code>,<code>0</code>) обычно является верхним левым углом контекста. Однако элемент {{SVGElement("glyph")}} имеет своё происхождение в левом нижнем углу своего бокса.</p>
+<p class="note"><strong>Сноска:</strong> Точка происхождения (координата <code>0</code>,<code>0</code>) обычно является верхним левым углом контекста. Однако элемент {{SVGElement("glyph")}} имеет своё происхождение в левом нижнем углу своего бокса.</p>
 
 <h2 id="missing-glyph">missing-glyph</h2>
 
@@ -101,7 +101,7 @@ translation_of: Web/SVG/Attribute/d
 
 <p><em>(Path commands)</em></p>
 
-<p>Команды пути - это команды, объединённые вместе в одну строку и определяющие путь, который нужно нарисовать. Каждая команда состоит из буквы, следующей за некоторыми числами, которые представляют параметры команды.</p>
+<p>Команды пути - это команды, объединённые вместе в одну строку и определяющие путь, который нужно нарисовать. Каждая команда состоит из буквы, следующей за некоторыми числами, которые представляют параметры команды.</p>
 
 <p>SVG определяет 6 типов команд пути для всех 20 команд:</p>
 
@@ -116,13 +116,13 @@ translation_of: Web/SVG/Attribute/d
 
 <p class="note"><strong>Примечание:</strong> Команды чувствительны к регистру; команда верхнего регистра указывает свои аргументы как абсолютные позиции, тогда как команда нижнего регистра указывает точки относительно текущей позиции.</p>
 
-<p>Всегда можно указать отрицательное значение в качестве аргумента для команды: отрицательные углы будут вращаться против часовой стрелки, абсолютные позиции x и y будут приниматься за отрицательные координаты, отрицательные относительные значения x будут перемещаться влево, а отрицательные относительные значения y будут двигаться вверх.</p>
+<p>Всегда можно указать отрицательное значение в качестве аргумента для команды: отрицательные углы будут вращаться против часовой стрелки, абсолютные позиции x и y будут приниматься за отрицательные координаты, отрицательные относительные значения x будут перемещаться влево, а отрицательные относительные значения y будут двигаться вверх.</p>
 
 <h3 id="Команды_перемещения">Команды перемещения</h3>
 
 <p><em>(MoveTo path commands)</em></p>
 
-<p><em>MoveTo </em>инструкции можно рассматривать как собирание чертёжного инструмента и установку его в другом месте. Между предыдущей точкой и указанной точкой нет линии.</p>
+<p><em>MoveTo </em>инструкции можно рассматривать как собирание чертёжного инструмента и установку его в другом месте. Между предыдущей точкой и указанной точкой нет линии.</p>
 
 <p class="note"><strong>Примечание:</strong> Хорошей практикой является открытие всех путей с помощью команды <strong>moveto</strong>, потому что без начального <strong>moveto</strong> команды будут выполняться с начальной точки, где бы это ни было ранее, что может привести к неопределённому поведению.</p>
 
@@ -136,15 +136,15 @@ translation_of: Web/SVG/Attribute/d
   <tr>
    <th scope="row">M</th>
    <td>(<code>x</code>, <code>y</code>)+</td>
-   <td>Движение начала следующего под-пути к координатам  <code>x</code>,<code>y</code>. Любая последующая координатная пара(ы) интерпретируется как параметр(ы) для неявных абсолютных команд LineTo(L) (см. Ниже).<br>
-    Формула: P<sub>n</sub> = {<code>x</code>, <code>y</code>}</td>
+   <td>Движение начала следующего под-пути к координатам  <code>x</code>,<code>y</code>. Любая последующая координатная пара(ы) интерпретируется как параметр(ы) для неявных абсолютных команд LineTo(L) (см. Ниже).<br>
+    Формула: P<sub>n</sub> = {<code>x</code>, <code>y</code>}</td>
   </tr>
   <tr>
    <th scope="row">m</th>
    <td>(<code>dx</code>, <code>dy</code>)+</td>
    <td>
     <p>Перемещает начало следующего подпути, сдвинув последнюю известную позицию пути на <code>dx</code> вдоль оси <code>x</code> и на <code>dy</code> вдоль оси <code>y</code>. Любая последующая пара координат считается неявной относительной командой LineTo (<code>l</code>) (см. ниже)<br>
-     Формула: P<sub>n</sub>= {x<sub>o</sub> + <code>dx</code>, y<sub>o</sub> + <code>dy</code>}</p>
+     Формула: P<sub>n</sub>= {x<sub>o</sub> + <code>dx</code>, y<sub>o</sub> + <code>dy</code>}</p>
    </td>
   </tr>
  </tbody>
@@ -157,25 +157,25 @@ translation_of: Web/SVG/Attribute/d
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path fill="none" stroke="red"
+  &lt;path fill="none" stroke="red"
     d="M 10,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 40,20 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 50,50 h 10
-       m-20,10 h 10
-       m-20,10 h 10
-       m-20,10 h 10" /&gt;
+       m  0,10 h 10
+       m  0,10 h 10
+       M 40,20 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       M 50,50 h 10
+       m-20,10 h 10
+       m-20,10 h 10
+       m-20,10 h 10" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Команды_перемещения', '100%', 200)}}</p>
 
 <h3 id="LineTo_path_commands">LineTo path commands</h3>
 
-<p><em>LineTo</em> инструкции проводят прямую линию от <em>current point</em> (P<sub>o</sub>; {x<sub>o</sub>, y<sub>o</sub>}), до <em>end point</em> (P<sub>n</sub>; {x<sub>n</sub>, y<sub>n</sub>}), на основе указанных параметров. Конечная точка <em>end point </em>(P<sub>n</sub>) становится текущей точкой для следующей команды  (P<sub>o</sub><sup>'</sup>).</p>
+<p><em>LineTo</em> инструкции проводят прямую линию от <em>current point</em> (P<sub>o</sub>; {x<sub>o</sub>, y<sub>o</sub>}), до <em>end point</em> (P<sub>n</sub>; {x<sub>n</sub>, y<sub>n</sub>}), на основе указанных параметров. Конечная точка <em>end point </em>(P<sub>n</sub>) становится текущей точкой для следующей команды  (P<sub>o</sub><sup>'</sup>).</p>
 
 <table class="standard-table">
  <tbody>
@@ -188,7 +188,7 @@ translation_of: Web/SVG/Attribute/d
    <th scope="row">L</th>
    <td>(<code>x</code>, <code>y</code>)+</td>
    <td>
-    <p>Рисует линию из <em>текущей точки в конечную точку определённую</em> <code>x</code>,<code>y</code>. Любая последующая пара(ы) координат интерпретируется как параметр(ы) для неявной абсолютной команд(ы) LineTo (<code>L</code>). Формула: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {<code>x</code>, <code>y</code>}</p>
+    <p>Рисует линию из <em>текущей точки в конечную точку определённую</em> <code>x</code>,<code>y</code>. Любая последующая пара(ы) координат интерпретируется как параметр(ы) для неявной абсолютной команд(ы) LineTo (<code>L</code>). Формула: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {<code>x</code>, <code>y</code>}</p>
    </td>
   </tr>
   <tr>
@@ -227,18 +227,18 @@ translation_of: Web/SVG/Attribute/d
 
 <pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- LineTo commands in absolute coordinates --&gt;
-  &lt;path fill="none" stroke="red"
-        d="M 10,10
-           L 90,90
-           V 10
-           H 50" /&gt;
+  &lt;path fill="none" stroke="red"
+        d="M 10,10
+           L 90,90
+           V 10
+           H 50" /&gt;
 
   &lt;!-- LineTo commands in relative coordinates --&gt;
   &lt;path fill="none" stroke="red"
-        d="M 110,10
-           l 80,80
-           v -80
-           h -40" /&gt;
+        d="M 110,10
+           l 80,80
+           v -80
+           h -40" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('LineTo_path_commands', '100%', 200)}}</p>

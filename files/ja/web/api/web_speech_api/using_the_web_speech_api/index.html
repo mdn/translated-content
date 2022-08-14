@@ -9,7 +9,7 @@ translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 
 <p>音声認識ではデバイスのマイクを通して音声を受信し、音声認識サービスによって文法のリスト（基本的には特定のアプリで認識させたいボキャブラリー）と照合されます。単語やフレーズが正常に認識されると、結果（または結果のリスト）がテキスト文字列として返され、その結果としてさらなるアクションを開始することができます。</p>
 
-<p>Web Speech API には、このための主要なコントローラインターフェイスである {{domxref("SpeechRecognition")}} と、文法や結果などを表現するためのいくつかの密接に関連したインターフェースがあります。一般的には、デバイス上で利用可能なデフォルトの音声認識システムが音声認識に使用されます — 最近のほとんどのOSには音声コマンドを発行するための音声認識システムが搭載されています。macOSのDictation、iOSのSiri、Windows 10のCortana、AndroidのSpeechなどを考えてみてください。</p>
+<p>Web Speech API には、このための主要なコントローラインターフェイスである {{domxref("SpeechRecognition")}} と、文法や結果などを表現するためのいくつかの密接に関連したインターフェースがあります。一般的には、デバイス上で利用可能なデフォルトの音声認識システムが音声認識に使用されます — 最近のほとんどのOSには音声コマンドを発行するための音声認識システムが搭載されています。macOSのDictation、iOSのSiri、Windows 10のCortana、AndroidのSpeechなどを考えてみてください。</p>
 
 <div class="note">
 <p><strong>注釈</strong>: Chrome などの一部のブラウザでは、Web ページで音声認識を使用するためにサーバーベースの認識エンジンが必要です。音声が認識処理のためにウェブサービスに送信されるため、オフラインでは機能しません。</p>
@@ -64,12 +64,12 @@ var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colors.joi
  <li>行の区切りはJavaScriptと同じようにセミコロンで区切られています。</li>
  <li>最初の行 — <code>#JSGF V1.0;</code> — は、使用されているフォーマットとバージョンを示します。これは常に最初に含める必要があります。</li>
  <li>2行目は認識したい用語のタイプを示します。<code>public</code> はパブリックルールであることを宣言し、角括弧内の文字列はこの用語の認識名 (<code>color</code>) を定義し、等号の後に続く項目のリストは、用語の適切な値として認識され受け入れられる代替値です。それぞれがパイプ文字で区切られていることに注意してください。</li>
- <li>上記の構造に沿って別の行に好きなだけ多くの用語を定義し、かなり複雑な文法定義を含めることができます。この基本的なデモのために私たちは物事をシンプルにしています。 </li>
+ <li>上記の構造に沿って別の行に好きなだけ多くの用語を定義し、かなり複雑な文法定義を含めることができます。この基本的なデモのために私たちは物事をシンプルにしています。 </li>
 </ul>
 
 <h4 id="文法を音声認識にプラグインする">文法を音声認識にプラグインする</h4>
 
-<p>次にやるべきことは、アプリケーションの認識を制御する音声認識インスタンスを定義することです。これは {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} コンストラクタを使用して行います。また、{{domxref("SpeechGrammarList.SpeechGrammarList()","SpeechGrammarList()")}} コンストラクタを使用して、文法を含む新しい音声文法リストも作成します。</p>
+<p>次にやるべきことは、アプリケーションの認識を制御する音声認識インスタンスを定義することです。これは {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} コンストラクタを使用して行います。また、{{domxref("SpeechGrammarList.SpeechGrammarList()","SpeechGrammarList()")}} コンストラクタを使用して、文法を含む新しい音声文法リストも作成します。</p>
 
 <pre class="brush: js notranslate">var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();</pre>
@@ -78,7 +78,7 @@ var speechRecognitionList = new SpeechGrammarList();</pre>
 
 <pre class="brush: js notranslate">speechRecognitionList.addFromString(grammar, 1);</pre>
 
-<p>次に、 {{domxref("SpeechGrammarList")}} を {{domxref("SpeechRecognition.grammars")}} プロパティの値に設定することで、音声認識インスタンスに {{domxref("SpeechGrammarList")}} を追加します。次に進む前に、認識インスタンスの他のいくつかのプロパティも設定します。</p>
+<p>次に、 {{domxref("SpeechGrammarList")}} を {{domxref("SpeechRecognition.grammars")}} プロパティの値に設定することで、音声認識インスタンスに {{domxref("SpeechGrammarList")}} を追加します。次に進む前に、認識インスタンスの他のいくつかのプロパティも設定します。</p>
 
 <ul>
  <li>{{domxref("SpeechRecognition.continuous")}}: 認識が開始されるたびに連続した結果をキャプチャする (<code>true</code>) か、または単一の結果だけをキャプチャする (<code>false</code>) かを制御します。</li>
@@ -118,13 +118,13 @@ document.body.onclick = function() {
 <p>音声認識が開始されると、結果やその他の周辺情報を取得するために使用できる多くのイベントハンドラがあります（<a href="/ja/docs/Web/API/SpeechRecognition#Event_handlers"><code>SpeechRecognition</code> のイベントハンドラのリスト</a> を参照してください）。最も一般的なものは {{domxref("SpeechRecognition.onresult")}} で、成功した結果を受信したときに発火されます。</p>
 
 <pre class="brush: js notranslate">recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
-  bg.style.backgroundColor = color;
-  console.log('Confidence: ' + event.results[0][0].confidence);
+  var color = event.results[0][0].transcript;
+  diagnostic.textContent = 'Result received: ' + color + '.';
+  bg.style.backgroundColor = color;
+  console.log('Confidence: ' + event.results[0][0].confidence);
 }</pre>
 
-<p>ここの2行目はちょっと複雑そうなので、順を追って説明していきましょう。{{domxref("SpeechRecognitionEvent.results")}}プロパティは、 {{domxref("SpeechRecognitionResult")}} オブジェクトを含む {{domxref("SpeechRecognitionResultList")}} オブジェクトを返します。これはゲッターを持っているので配列のようにアクセスでき、最初の<code>[0]</code>は0の位置にある<code>SpeechRecognitionResult</code>を返します。各 <code>SpeechRecognitionResult</code> オブジェクトには、個々に認識された単語を含む {{domxref("SpeechRecognitionAlternative")}} オブジェクトが含まれています。これらは配列のようにアクセスできるようにゲッターも持っています  — 2 番目の<code>[0]</code>は、したがって位置 0 の <code>SpeechRecognitionAlternative</code> を返します。次に、その <code>transcript</code> プロパティを返して個々の認識結果を含む文字列を文字列として取得し、背景色をその色に設定し、認識された色をUIの診断メッセージとして報告します。</p>
+<p>ここの2行目はちょっと複雑そうなので、順を追って説明していきましょう。{{domxref("SpeechRecognitionEvent.results")}}プロパティは、 {{domxref("SpeechRecognitionResult")}} オブジェクトを含む {{domxref("SpeechRecognitionResultList")}} オブジェクトを返します。これはゲッターを持っているので配列のようにアクセスでき、最初の<code>[0]</code>は0の位置にある<code>SpeechRecognitionResult</code>を返します。各 <code>SpeechRecognitionResult</code> オブジェクトには、個々に認識された単語を含む {{domxref("SpeechRecognitionAlternative")}} オブジェクトが含まれています。これらは配列のようにアクセスできるようにゲッターも持っています  — 2 番目の<code>[0]</code>は、したがって位置 0 の <code>SpeechRecognitionAlternative</code> を返します。次に、その <code>transcript</code> プロパティを返して個々の認識結果を含む文字列を文字列として取得し、背景色をその色に設定し、認識された色をUIの診断メッセージとして報告します。</p>
 
 <p>また、 {{domxref("SpeechRecognition.onspeechend")}} ハンドラを使用して音声認識サービスの実行を停止します（1つの単語が認識され、それが発話され終わったら {{domxref("SpeechRecognition.stop()")}}) を使用します）。</p>
 
@@ -140,7 +140,7 @@ document.body.onclick = function() {
   diagnostic.textContent = 'I didnt recognise that color.';
 }</pre>
 
-<p>{{domxref("SpeechRecognition.onerror")}} は、認識に成功して実際にエラーが発生したケースを処理します — {{domxref("SpeechRecognitionError.error")}} プロパティには、返された実際のエラーが含まれます。</p>
+<p>{{domxref("SpeechRecognition.onerror")}} は、認識に成功して実際にエラーが発生したケースを処理します — {{domxref("SpeechRecognitionError.error")}} プロパティには、返された実際のエラーが含まれます。</p>
 
 <pre class="brush: js notranslate">recognition.onerror = function(event) {
   diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
@@ -158,7 +158,7 @@ document.body.onclick = function() {
 
 <p><img alt="UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices." src="https://mdn.mozillademos.org/files/11977/speak-easy-synthesis.png" style="border: 1px solid black; display: block; height: 533px; margin: 0px auto; width: 300px;"></p>
 
-<p>To run the demo, you can clone (or <a href="https://github.com/mdn/web-speech-api/archive/master.zip">directly download</a>) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the <a href="https://mdn.github.io/web-speech-api/speak-easy-synthesis/">live demo URL</a> in a supporting mobile browser like Chrome, or Firefox OS.</p>
+<p>To run the demo, you can clone (or <a href="https://github.com/mdn/web-speech-api/archive/master.zip">directly download</a>) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the <a href="https://mdn.github.io/web-speech-api/speak-easy-synthesis/">live demo URL</a> in a supporting mobile browser like Chrome, or Firefox OS.</p>
 
 <h3 id="Browser_support">Browser support</h3>
 
@@ -166,7 +166,7 @@ document.body.onclick = function() {
 
 <ul>
  <li>
-  <p>Firefox desktop and mobile support it in Gecko 42+ (Windows)/44+, without prefixes, and it can be turned on by flipping the <code>media.webspeech.synth.enabled</code> flag to <code>true</code> in <code>about:config</code>.</p>
+  <p>Firefox desktop and mobile support it in Gecko 42+ (Windows)/44+, without prefixes, and it can be turned on by flipping the <code>media.webspeech.synth.enabled</code> flag to <code>true</code> in <code>about:config</code>.</p>
  </li>
  <li>
   <p>Firefox OS 2.5+ supports it, by default, and without the need for any permissions.</p>

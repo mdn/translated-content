@@ -60,26 +60,32 @@ En outre, la validité du balisage permet la libre utilisation d'autres outils q
 
 Remplacer la mise en page basé sur des \<table> par des blocs \<div>, plutôt que des \<table> très imbriquée comme dans l'exemple suivant:
 
+```html
+<TABLE>
+  <TABLE>
     <TABLE>
-      <TABLE>
-        <TABLE>
-              ...
-        </TABLE>
-      </TABLE>
+          ...
     </TABLE>
+  </TABLE>
+</TABLE>
+```
 
 Préferez des \<table> non-imbriquées ou \<div> comme dans l'exemple suivant:
 
-    > TABLE <TABLE> ...</
-    > TABLE <TABLE> ...</
-    > TABLE <TABLE> ...</
+```
+> TABLE <TABLE> ...</
+> TABLE <TABLE> ...</
+> TABLE <TABLE> ...</
+```
 
 ### Préciser la taille des images et des tableaux
 
 Si le navigateur peut immédiatement déterminer la hauteur et/ou la largeur de vos images et tableaux, il sera capable d'afficher une page web sans avoir à refondre le contenu. Cela n'augmente pas seulement la vitesse d'affichage de la page, mais aussi à empêcher les changements gênants dans la disposition d'une page lors du chargement. Pour cette raison, la hauteur et la largeur doit être spécifié pour les images, chaque fois que possible.
 Les tableaux doivent utiliser le sélecteur CSS selector:property combination:
 
-      table-layout: fixed;
+```css
+table-layout: fixed;
+```
 
 et doit spécifier la largeur des colonnes en utilisant le COL et les balises html COLGROUP.
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Guide/Grammar_and_types
 translation_of_original: Web/JavaScript/Guide/Obsolete_Pages/Unicode
 original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/Unicode
 ---
-<p> </p>
+<p> </p>
 <h3 id="Unicode" name="Unicode">Unicode</h3>
 <p>Unicode 是一種全球通用的字元編碼標準，用於交換並顯示主要的書寫語言。Unicode 涵括了美國、歐洲、中東、非洲、印度、亞洲以及太平洋地區的語系，但不包括歷史手稿和專門符號。Unicode 可用於交換、處理並顯示多國語系的文書，除了一般的專門符號和數學符號以外。Unicode 期望能夠解決對於不同國家的字元標準的多國語言處理等國際化問題。但目前並未完整支援所有的現代或古代的文字。</p>
 <p>Unicode 字元集可以使用所有已知編碼的字元。Unicode 是繼 ASCII（American Standard Code for Information Interchange；美國資訊交換標準碼）字元集之後的字元集模型。Unicode 為每一個字元分配一個數字和名稱。字元編碼規範了字元的識別資訊及其數值（編碼位置），但未指明數值的位元表示法。16 位元數值（編碼值）是以十六進制數並加上前綴 U 來定義的，例如，U+0041 表示 A。這個數值的專用名稱是 LATIN CAPITAL LETTER A。</p>
@@ -20,7 +20,7 @@ original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/Unico
 <p>以下代碼返回版權符號和字串 "Netscape Communications"。</p>
 <pre>x="\u00A9 Netscape Communications"</pre>
 <p>下表列出最常用的特殊字元及其 Unicode 值。</p>
-<table class="fullwidth-table"> <tbody> <tr> <th>分類</th> <th>Unicode 值</th> <th>名稱</th> <th>格式名稱</th> </tr> <tr> <td>空白的值</td> <td>\u0009</td> <td>Tab</td> <td>&lt;TAB&gt;</td> </tr> <tr> <td> </td> <td>\u000B</td> <td>Vertical Tab</td> <td>&lt;VT&gt;</td> </tr> <tr> <td> </td> <td>\u000C</td> <td>Form Feed</td> <td>&lt;FF&gt;</td> </tr> <tr> <td> </td> <td>\u0020</td> <td>Space</td> <td>&lt;SP&gt;</td> </tr> <tr> <td>行終止的值</td> <td>\u000A</td> <td>Line Feed</td> <td>&lt;LF&gt;</td> </tr> <tr> <td> </td> <td>\u000D</td> <td>Carriage Return</td> <td>&lt;CR&gt;</td> </tr> <tr> <td>額外的 Unicode 跳脫序列的值</td> <td>\u0008</td> <td>Backspace</td> <td>&lt;BS&gt;</td> </tr> <tr> <td> </td> <td>\u0009</td> <td>Horizontal Tab</td> <td>&lt;HT&gt;</td> </tr> <tr> <td> </td> <td>\u0022</td> <td>Double Quote</td> <td>"</td> </tr> <tr> <td> </td> <td>\u0027</td> <td>Single Quote</td> <td>'</td> </tr> <tr> <td> </td> <td>\u005C</td> <td>Backslash</td> <td>\</td> </tr> </tbody>
+<table class="fullwidth-table"> <tbody> <tr> <th>分類</th> <th>Unicode 值</th> <th>名稱</th> <th>格式名稱</th> </tr> <tr> <td>空白的值</td> <td>\u0009</td> <td>Tab</td> <td>&lt;TAB&gt;</td> </tr> <tr> <td> </td> <td>\u000B</td> <td>Vertical Tab</td> <td>&lt;VT&gt;</td> </tr> <tr> <td> </td> <td>\u000C</td> <td>Form Feed</td> <td>&lt;FF&gt;</td> </tr> <tr> <td> </td> <td>\u0020</td> <td>Space</td> <td>&lt;SP&gt;</td> </tr> <tr> <td>行終止的值</td> <td>\u000A</td> <td>Line Feed</td> <td>&lt;LF&gt;</td> </tr> <tr> <td> </td> <td>\u000D</td> <td>Carriage Return</td> <td>&lt;CR&gt;</td> </tr> <tr> <td>額外的 Unicode 跳脫序列的值</td> <td>\u0008</td> <td>Backspace</td> <td>&lt;BS&gt;</td> </tr> <tr> <td> </td> <td>\u0009</td> <td>Horizontal Tab</td> <td>&lt;HT&gt;</td> </tr> <tr> <td> </td> <td>\u0022</td> <td>Double Quote</td> <td>"</td> </tr> <tr> <td> </td> <td>\u0027</td> <td>Single Quote</td> <td>'</td> </tr> <tr> <td> </td> <td>\u005C</td> <td>Backslash</td> <td>\</td> </tr> </tbody>
 </table>
 <p><small><strong>表 2.2: 特殊字元的 Unicode 值</strong></small></p>
 <p>JavaScript 使用的 Unicode 跳脫序列與 Java 不同。在 JavaScript 中，跳脫序列一開始不會被解譯為特殊字元。例如，字串裡的換行的跳脫序列，在給函數解譯以前，並不會使字串換行。JavaScript 會忽略所有使用在註解裡的跳脫序列。在 Java 中，如果跳脫序列使用在單行註解裡，就會被解譯為 Unicode 字元。對於字串的字面表達而言，Java 編譯器將首先解譯跳脫序列。例如，如果在 Java 中使用換行的跳脫字元（即 \u000A），就會使字串的字面表達換行。這在 Java 中會引起錯誤，因為換行不可以用在字串的字面表達。你必須給字串的字面表達的換行替換成 \n。在 JavaScript 中，也同樣使用 \n 作為跳脫序列。</p>

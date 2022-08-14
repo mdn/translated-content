@@ -33,12 +33,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 
 <p>Para calcular a hipotenusa de um triângulo retângulo, ou o módulo de um número complexo, é usada a fórmula <code>Math.sqrt(v1*v1 + v2*v2)</code> (<math><semantics><msqrt><mrow><mi>v</mi><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>2</mn><mn>2</mn></msup></mrow></msqrt><annotation encoding="TeX">\sqrt{v1^2 + v2^2}</annotation></semantics></math>) onde v1 e v2 são, ou os lados de um triângulo, ou a parte real e a imaginário de um número complexo. Para calcular a distância entre duas ou mais dimensões, basta adicionar mais exponenciações dentro da raiz quadrada, por exemplo <code>Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)</code> (<math><semantics><msqrt><mrow><mi>v</mi><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><mi>v</mi><msup><mn>4</mn><mn>2</mn></msup></mrow></msqrt><annotation encoding="TeX">\sqrt{v1^2 + v2^2 + v3^2 + v4^2}</annotation></semantics></math>).</p>
 
-<p>A função Math.hypot() torna esta tarefa mais rápida e mais fácil, basta executar <code>Math.hypot(v1, v2)</code> , or <code>Math.hypot(v1, v2, v3, v4, ...)</code> .</p>
+<p>A função Math.hypot() torna esta tarefa mais rápida e mais fácil, basta executar <code>Math.hypot(v1, v2)</code> , or <code>Math.hypot(v1, v2, v3, v4, ...)</code> .</p>
 
-<p>Dessa maneira também se evita problemas se a magnitude dos seus número for muito grande. O maio número que se pode representar em um <em>double float</em> em JavasScript é <code>Number.MAX_VALUE</code> = <span style="line-height: 1.5;">1.797...e+308</span>. Se os seu números são maior que 1e154, calcular o quadrado deles resultará em <code>Infinity</code>, estragando os seus resultados. Por exemplo, <span style="line-height: 1.5;"><code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code>. Se você usar a função <code>Math.hypot()</code>, você receberá uma resposta aceitável: <code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code>.</span> Isto também é verdade para número muito pequenos. <span style="line-height: 1.5;"><code>Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0</code>, mas </span><code><span style="line-height: 1.5;">Math.hypot(1e-200, 1e-200) = </span></code><span style="line-height: 1.5;"><code>1.4142...e-200</code> é uma boa resposta.</span></p>
+<p>Dessa maneira também se evita problemas se a magnitude dos seus número for muito grande. O maio número que se pode representar em um <em>double float</em> em JavasScript é <code>Number.MAX_VALUE</code> = <span style="line-height: 1.5;">1.797...e+308</span>. Se os seu números são maior que 1e154, calcular o quadrado deles resultará em <code>Infinity</code>, estragando os seus resultados. Por exemplo, <span style="line-height: 1.5;"><code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code>. Se você usar a função <code>Math.hypot()</code>, você receberá uma resposta aceitável: <code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code>.</span> Isto também é verdade para número muito pequenos. <span style="line-height: 1.5;"><code>Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0</code>, mas </span><code><span style="line-height: 1.5;">Math.hypot(1e-200, 1e-200) = </span></code><span style="line-height: 1.5;"><code>1.4142...e-200</code> é uma boa resposta.</span></p>
 
 <div class="note">
-<p>Por <code>hypot()</code> ser um método estático de <code>Math</code>, deve-se sempre usá-lo como <code>Math.hypot()</code>, e não como um método de um objeto <code>Math</code> que você criou.</p>
+<p>Por <code>hypot()</code> ser um método estático de <code>Math</code>, deve-se sempre usá-lo como <code>Math.hypot()</code>, e não como um método de um objeto <code>Math</code> que você criou.</p>
 </div>
 
 <p>Se nenhum parâmetro for passado, o resultado é +0.</p>
@@ -95,7 +95,7 @@ Math.hypot(-3);          // 3, the same as Math.abs(-3)
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

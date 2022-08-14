@@ -7,10 +7,12 @@ translation_of: Web/API/AudioBuffer/AudioBuffer
 
 Le constructeur **`AudioBuffer`** créer un nouvel objet {{domxref("AudioBuffer")}}.
 
-## Syntax
+## Syntaxe
 
-    var audioBuffer = new AudioBuffer([options]);
-    var audioBuffer = new AudioBuffer(context[, options]);
+```js
+var audioBuffer = new AudioBuffer([options]);
+var audioBuffer = new AudioBuffer(context[, options]);
+```
 
 ### Parameters
 

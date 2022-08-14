@@ -11,7 +11,9 @@ L'attribut en lecture seule **`element.scrollHeight`** est une mesure de la haut
 
 ## Syntaxe
 
-    var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
+```js
+var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
+```
 
 `intElemScrollHeight` est une variable contenant un entier correspondant à la valeur en pixels de la hauteur défilable de l'élément. `scrollHeight` est une propriété en lecture seule.
 

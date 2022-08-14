@@ -16,22 +16,22 @@ La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    // WebGL1:
-    void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ArrayBufferView? pixels);
-    void gl.texImage2D(cible, niveau, formatinterne, format, type, ImageData? pixels);
-    void gl.texImage2D(cible, niveau, formatinterne, format, type, HTMLImageElement? pixels);
-    void gl.texImage2D(cible, niveau, formatinterne, format, type, HTMLCanvasElement? pixels);
-    void gl.texImage2D(cible, niveau, formatinterne, format, type, HTMLVideoElement? pixels);
-    void gl.texImage2D(cible, niveau, formatinterne, format, type, ImageBitmap? pixels);
+```js
+// WebGL1:
+void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ArrayBufferView? pixels);
+void gl.texImage2D(cible, niveau, formatinterne, format, type, ImageData? pixels);
+void gl.texImage2D(cible, niveau, formatinterne, format, type, HTMLImageElement? pixels);
+void gl.texImage2D(cible, niveau, formatinterne, format, type, HTMLCanvasElement? pixels);\void gl.texImage2D(cible, niveau, formatinterne, format, type, HTMLVideoElement? pixels);
 
-    // WebGL2:
-    void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, GLintptr decalage);
-    void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, HTMLCanvasElement source);
-    void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, HTMLImageElement source);
-    void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, HTMLVideoElement source);
-    void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ImageBitmap source);
-    void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ImageData source);
-    void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ArrayBufferView donneesSrc, decalageSrc);
+// WebGL2:
+void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, GLintptr decalage);
+void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, HTMLCanvasElement source);
+void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, HTMLImageElement source);
+void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, HTMLVideoElement source);
+void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ImageBitmap source);
+void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ImageData source);
+void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ArrayBufferView donneesSrc, decalageSrc);
+```
 
 ### Paramètres
 

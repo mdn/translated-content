@@ -17,9 +17,11 @@ Cette syntaxe permet d'initialiser des paramètres lors de l'appel de la fonctio
 
 ## Syntaxe
 
-    function [nom]([param1[ = valeurParDéfaut1 ][, ..., paramN[ = valeurParDéfautN ]]]) {
-       instructions
-    }
+```js
+function [nom]([param1[ = valeurParDéfaut1 ][, ..., paramN[ = valeurParDéfautN ]]]) {
+   instructions
+}
+```
 
 ## Description
 

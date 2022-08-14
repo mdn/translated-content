@@ -11,7 +11,7 @@ translation_of: Web/API/Window/document
 ---
 {{APIRef}}
 
-**`window.document`** renvoie une référence au [document](/en-US/docs/Web/API/document) contenu dans la fenêtre.
+**`window.document`** renvoie une référence au [document](/fr/docs/Web/API/document) contenu dans la fenêtre.
 
 ## Exemple
 

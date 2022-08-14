@@ -11,9 +11,9 @@ La propriété **`transform-origin`** permet de modifier l'origine du repère po
 
 Par exemple, l'origine par défaut pour la fonction `rotate()` est le centre de la rotation. Cette propriété est utilisée en :
 
-1.  Translatant l'élément avec l'opposé de la valeur fournie
-2.  Appliquant la transformation souhaitée sur l'élément
-3.  Translatant l'élément avec la valeur fournie pour cette propriété.
+1. Translatant l'élément avec l'opposé de la valeur fournie
+2. Appliquant la transformation souhaitée sur l'élément
+3. Translatant l'élément avec la valeur fournie pour cette propriété.
 
 Les valeurs qui ne sont pas définies explicitement sont réinitialisées avec les valeurs correspondantes.
 

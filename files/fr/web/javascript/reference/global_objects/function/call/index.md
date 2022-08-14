@@ -19,7 +19,9 @@ La méthode **`call()`** réalise un appel à une fonction avec une valeur `this
 
 ## Syntaxe
 
-    fun.call(thisArg[, arg1[, arg2[, ...]]])
+```js
+fun.call(thisArg[, arg1[, arg2[, ...]]])
+```
 
 ### Paramètres
 

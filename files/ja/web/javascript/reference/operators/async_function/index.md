@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Operators/async_function
 
 **`async function`** キーワードは、式の中で `async` 関数を定義するために使用できます。
 
-非同期関数は、 [async function 文](/ja/docs/Web/JavaScript/Reference/Statements/async_function)を使用して定義することもできます。
+非同期関数は、 [async function 文](/ja/docs/Web/JavaScript/Reference/Statements/async_function)を使用して定義することもできます。
 
 ## 構文
 

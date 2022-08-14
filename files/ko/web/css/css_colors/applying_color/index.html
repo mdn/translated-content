@@ -25,7 +25,7 @@ original_slug: Web/HTML/Applying_color
 
 <h2 id="색을_입힐_수_있는_것">색을 입힐 수 있는 것</h2>
 
-<p>요소 차원에서 보자면 HTML의 모든 것에 색을 입힐 수 있습니다. 대신에 글씨와 테두리처럼, 요소 안에 그려지는 것의 종류에 따라 알아보겠습니다. 각각의 종류에 적용할 수 있는 CSS 속성의 목록도 보겠습니다.</p>
+<p>요소 차원에서 보자면 HTML의 모든 것에 색을 입힐 수 있습니다. 대신에 글씨와 테두리처럼, 요소 안에 그려지는 것의 종류에 따라 알아보겠습니다. 각각의 종류에 적용할 수 있는 CSS 속성의 목록도 보겠습니다.</p>
 
 <p>가장 기초적인 단계로는 {{cssxref("color")}} 속성이 HTML 요소의 콘텐츠 전경색을 지정하고, {{cssxref("background-color")}} 속성이 요소의 배경색을 지정합니다. 두 속성은 거의 모든 요소에 사용할 수 있습니다.</p>
 
@@ -50,7 +50,7 @@ original_slug: Web/HTML/Applying_color
 
 <h3 id="박스">박스</h3>
 
-<p>모든 요소는 모종의 콘텐츠를 가진 박스로, 콘텐츠 외에도 배경과 테두리를 가질 수 있습니다.</p>
+<p>모든 요소는 모종의 콘텐츠를 가진 박스로, 콘텐츠 외에도 배경과 테두리를 가질 수 있습니다.</p>
 
 <dl>
  <dt><a href="#테두리">테두리</a></dt>
@@ -145,7 +145,7 @@ original_slug: Web/HTML/Applying_color
 
 <h3 id="HSL_함수형_표기법">HSL 함수형 표기법</h3>
 
-<p>많은 경우, 디자이너와 아티스트는 HSL(색조/채도/명도) 모델을 사용한 색을 선호합니다. 웹에서 HSL 색상은 HSL 함수 표기법을 사용해 나타냅니다. CSS <code>hsl()</code> 함수의 사용법 자체는 <code>rgb()</code> 함수와 매우 유사합니다.</p>
+<p>많은 경우, 디자이너와 아티스트는 HSL(색조/채도/명도) 모델을 사용한 색을 선호합니다. 웹에서 HSL 색상은 HSL 함수 표기법을 사용해 나타냅니다. CSS <code>hsl()</code> 함수의 사용법 자체는 <code>rgb()</code> 함수와 매우 유사합니다.</p>
 
 <div style="padding-bottom: 20px;">
 <figure style="width: 500px;"><img alt="HSL color cylinder" src="1200px-hsl_color_solid_cylinder_alpha_lowgamma.png">
@@ -330,7 +330,7 @@ th {
 
 <h2 id="사용자의_색_선택">사용자의 색 선택</h2>
 
-<p>There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own {{interwiki("wikipedia", "color picker")}}, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using <code>"color"</code> as the value of its {{htmlattrxref("type", "input")}} attribute.</p>
+<p>There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own <a href="https://en.wikipedia.org/wiki/Color_picker">color picker</a>, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using <code>"color"</code> as the value of its {{htmlattrxref("type", "input")}} attribute.</p>
 
 <p>The <code>&lt;input&gt;</code> element represents a color only in the <a href="#hexadecimal_string_notation">hexadecimal string notation</a> covered above.</p>
 
@@ -398,7 +398,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <h4 id="기본색">기본색</h4>
 
-<p>The first step is to choose your <strong>base color</strong>. This is the color that in some way defines your web site or the subject matter of the site. Just as we associate green with the beverage {{interwiki("wikipedia", "Mountain Dew")}} and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:</p>
+<p>The first step is to choose your <strong>base color</strong>. This is the color that in some way defines your web site or the subject matter of the site. Just as we associate green with the beverage <a href="https://en.wikipedia.org/wiki/Mountain_Dew">Mountain Dew</a> and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:</p>
 
 <ul>
  <li>A color that is naturally associated with the topic of your content, such as the existing color identified with a product or idea or a color representative of the emotion you wish to convey.</li>
@@ -437,7 +437,7 @@ colorPicker.addEventListener("change", function(event) {
 <dl>
  <dt><a href="https://www.khanacademy.org/partner-content/pixar/color">Color Science</a> (<a href="https://www.khanacademy.org/">Khan Academy</a> in association with <a href="https://www.pixar.com/">Pixar</a>)</dt>
  <dd>An online course which introduces concepts such as what color is, how it's percieved, and how to use colors to express ideas. Presented by Pixar artists and designers.</dd>
- <dt>{{interwiki("wikipedia", "Color theory")}} on Wikipedia</dt>
+ <dt><a href="https://en.wikipedia.org/wiki/Color_theory">Color theory</a> on Wikipedia</dt>
  <dd>Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color sleection process, but is still full of useful information.</dd>
 </dl>
 
@@ -445,7 +445,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <p>There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a web site or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.</p>
 
-<p>You should do at least basic research into {{interwiki("wikipedia", "color blindness")}}. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.</p>
+<p>You should do at least basic research into <a href="https://en.wikipedia.org/wiki/Color_blindness">color blindness</a>. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.</p>
 
 <div class="note">
 <p>The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.</p>

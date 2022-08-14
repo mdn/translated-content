@@ -9,7 +9,9 @@ La propriété **`CanvasRenderingContext2D.font`** de l'API Canvas 2D API spéci
 
 ## Syntaxe
 
-    ctx.font = value;
+```js
+ctx.font = value;
+```
 
 ### Options
 

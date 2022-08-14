@@ -19,7 +19,9 @@ La propriété en lecture seule **`vibrate`** de l'interface {{domxref ("Notific
 
 ## Syntaxe
 
-    Notification.vibrate
+```js
+Notification.vibrate
+```
 
 ### Valeur
 

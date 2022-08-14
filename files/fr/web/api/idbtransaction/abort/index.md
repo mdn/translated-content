@@ -19,7 +19,9 @@ Tous les objets {{domxref("IDBRequest")}} créés pendant cette transaction verr
 
 ## Syntaxe
 
-    transaction.abort();
+```js
+transaction.abort();
+```
 
 ### Valeur de retour
 

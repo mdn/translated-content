@@ -5,11 +5,9 @@ translation_of: Web/HTML/Element/td
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;td&gt;</code> Element</strong> definiert eine Zelle in einer Datentabelle. Es ist Teil des  <em>table model</em>.</span></p>
+<p><span class="seoSummary">The <strong>HTML <code>&lt;td&gt;</code> Element</strong> definiert eine Zelle in einer Datentabelle. Es ist Teil des  <em>table model</em>.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/td.html","tabbed-taller")}}</div>
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
 <table class="properties">
  <tbody>
@@ -24,7 +22,7 @@ translation_of: Web/HTML/Element/td
   <tr>
    <th scope="row">Tag Wegfall</th>
    <td>Der Start-Tag ist erforderlich.<br>
-    Der Ende Tag kann weggelassen werden, wenn direkt ein {{HTMLElement("th")}}  oder  ein {{HTMLElement("td")}} folgt oder wenn in seinem 'parent element' keine weiteren Daten enthalten sind.</td>
+    Der Ende Tag kann weggelassen werden, wenn direkt ein {{HTMLElement("th")}}  oder  ein {{HTMLElement("td")}} folgt oder wenn in seinem 'parent element' keine weiteren Daten enthalten sind.</td>
   </tr>
   <tr>
    <th scope="row">Erlaubte parents</th>
@@ -43,40 +41,40 @@ translation_of: Web/HTML/Element/td
 
 <h2 id="Eigenschaften">Eigenschaften</h2>
 
-<p>Dieses Element enthält die <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+<p>Dieses Element enthält die <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("abbr")}} {{obsolete_inline("html5")}}</dt>
- <dd>Dieses Attribut enthält eine Kurzbeschreibung des Inhalts der Zelle. Einige user-agents, wie z.B Sparchausgabe Apps, können diese Beschreibung vor dem Inhalt selbst anzeigen.
- <div class="note"><strong>Hinweis:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. Alternativ können Sie die Kurzbeschreibung in die Zelle selbst stellen und den vollständigen Inhalt in die <strong>title</strong>-Eigenschaft schreiben.</div>
+ <dd>Dieses Attribut enthält eine Kurzbeschreibung des Inhalts der Zelle. Einige user-agents, wie z.B Sparchausgabe Apps, können diese Beschreibung vor dem Inhalt selbst anzeigen.
+ <div class="note"><strong>Hinweis:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. Alternativ können Sie die Kurzbeschreibung in die Zelle selbst stellen und den vollständigen Inhalt in die <strong>title</strong>-Eigenschaft schreiben.</div>
  </dd>
  <dt>{{htmlattrdef("align")}} {{obsolete_inline("html5")}}</dt>
- <dd>Diese Listen Attribute legen fest, we der Zellinhalt waagerecht ausgerichtet wird. Mögliche Werte sind:
+ <dd>Diese Listen Attribute legen fest, we der Zellinhalt waagerecht ausgerichtet wird. Mögliche Werte sind:
  <ul>
   <li><code>left</code>: Der Inhalt wird links in der Zelle ausgerichtet.</li>
   <li><code>center</code>: Der inhalt wird innerhalb der Zelle zentriert.</li>
   <li><code>right</code>: Der Inhalt wird innerhalb der Zelle rechts ausgerichtet.</li>
   <li><code>justify</code> (nur bei Text): Der Inhalt wird über die gesamte Breite der Zelle gedehnt.</li>
-  <li><code>char</code> (nur bei Text):  Der Inhalt wird mit minimalem Offset an einem Zeichen innerhalb der des  <code>&lt;th&gt;</code> Elementes ausgerichtet. Das Zeichen wird durch die {{htmlattrxref("char", "td")}}  und  {{htmlattrxref("charoff", "td")}} definiert. {{unimplemented_inline(2212)}}.</li>
+  <li><code>char</code> (nur bei Text):  Der Inhalt wird mit minimalem Offset an einem Zeichen innerhalb der des  <code>&lt;th&gt;</code> Elementes ausgerichtet. Das Zeichen wird durch die {{htmlattrxref("char", "td")}}  und  {{htmlattrxref("charoff", "td")}} definiert. {{unimplemented_inline(2212)}}.</li>
  </ul>
 
- <p>Der Default Wert, wenn das Attribut nicht spezifiziert wird ist <code>left</code>.</p>
+ <p>Der Default Wert, wenn das Attribut nicht spezifiziert wird ist <code>left</code>.</p>
 
- <div class="note"><strong>Hinweis: </strong>Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird.
+ <div class="note"><strong>Hinweis: </strong>Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird.
 
  <ul>
-  <li>Um den gleichen Effekt wie mit den  <code>left</code>, <code>center</code>, <code>right</code> oder <code>justify</code> Werten zu erhalten, verwenden Sie die CSS {{cssxref("text-align")}} Eigenschaft für dieses Element.</li>
-  <li>Um den gleichen Effekt wie bei dem <code>char</code> Wert zu erzielen, geben Sie der {{cssxref("text-align")}} Eigenschaft die gleichen Werte, die Sie auch für das {{htmlattrxref("char", "td")}} Attribut verwendet hätten.<br>
+  <li>Um den gleichen Effekt wie mit den  <code>left</code>, <code>center</code>, <code>right</code> oder <code>justify</code> Werten zu erhalten, verwenden Sie die CSS {{cssxref("text-align")}} Eigenschaft für dieses Element.</li>
+  <li>Um den gleichen Effekt wie bei dem <code>char</code> Wert zu erzielen, geben Sie der {{cssxref("text-align")}} Eigenschaft die gleichen Werte, die Sie auch für das {{htmlattrxref("char", "td")}} Attribut verwendet hätten.<br>
    {{unimplemented_inline}} in CSS3.</li>
  </ul>
  </div>
  </dd>
  <dt>{{htmlattrdef("axis")}} {{obsolete_inline("html5")}}</dt>
- <dd> Dieses Attribute enthält eine Liste von strings, durch Leerzeichen getrennt. Jeder String ist die <code>id</code>  einer Gruppe von Zellen, die diesen Text als Header enthalten.
- <div class="note"><strong>Hinweis:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird.</div>
+ <dd> Dieses Attribute enthält eine Liste von strings, durch Leerzeichen getrennt. Jeder String ist die <code>id</code>  einer Gruppe von Zellen, die diesen Text als Header enthalten.
+ <div class="note"><strong>Hinweis:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird.</div>
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
- <dd>Dieses Attribut definiert die Hintergrundfarbe jeder Zelle in einer Spalte. Es enthält einen 6-stelligen Hexadezimal-Code in <a href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a> definiert mit einem vorangestellten '#'. Für dieses Attribut sind die folgenden 16 Werte mit string-Werten vordefiniert:
+ <dd>Dieses Attribut definiert die Hintergrundfarbe jeder Zelle in einer Spalte. Es enthält einen 6-stelligen Hexadezimal-Code in <a href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a> definiert mit einem vorangestellten '#'. Für dieses Attribut sind die folgenden 16 Werte mit string-Werten vordefiniert:
  <table>
   <tbody>
    <tr>
@@ -130,56 +128,56 @@ translation_of: Web/HTML/Element/td
   </tbody>
  </table>
 
- <div class="note"><strong>Hinweis:</strong> Verwnden Sie dieses Attribut nicht, da es kein Standard ist und nur in einigen Versionen des Microsoft Internet Explorers implementiert ist: Das {{HTMLElement("td")}} Element sollte mittels <a href="/en-US/docs/CSS">CSS</a> formatiert werden Um den gleichen Effekt zu erhalten verwenden Sie stattdessen die {{cssxref("background-color")}} Eigenschaft in <a href="/en-US/docs/CSS">CSS</a>.</div>
+ <div class="note"><strong>Hinweis:</strong> Verwnden Sie dieses Attribut nicht, da es kein Standard ist und nur in einigen Versionen des Microsoft Internet Explorers implementiert ist: Das {{HTMLElement("td")}} Element sollte mittels <a href="/en-US/docs/CSS">CSS</a> formatiert werden Um den gleichen Effekt zu erhalten verwenden Sie stattdessen die {{cssxref("background-color")}} Eigenschaft in <a href="/en-US/docs/CSS">CSS</a>.</div>
  </dd>
 </dl>
 
 <dl>
  <dt>{{htmlattrdef("char")}} {{obsolete_inline("html5")}}</dt>
- <dd> Der Inhalt der Zelle wird an einem Zeichen ausgerichtet. Typische Zeichen sind ein (.) oder (,) um Währungswerte auszurichten. Wenn {{htmlattrxref("align", "td")}} nicht als <code>char</code>, gesetzt ist, wird dieses Attribute ignoriert
- <div class="note"><strong>Hinweis: </strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird.  Um den gleichen Effekt zu erzielen können Sie das Zeichen auch als ersten Wert der {{cssxref("text-align")}} Eigenschaft definieren. <br>
+ <dd> Der Inhalt der Zelle wird an einem Zeichen ausgerichtet. Typische Zeichen sind ein (.) oder (,) um Währungswerte auszurichten. Wenn {{htmlattrxref("align", "td")}} nicht als <code>char</code>, gesetzt ist, wird dieses Attribute ignoriert
+ <div class="note"><strong>Hinweis: </strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird.  Um den gleichen Effekt zu erzielen können Sie das Zeichen auch als ersten Wert der {{cssxref("text-align")}} Eigenschaft definieren. <br>
  {{unimplemented_inline}} in CSS3.</div>
  </dd>
  <dt>{{htmlattrdef("charoff")}} {{obsolete_inline("html5")}}</dt>
- <dd>Dieses Attribut wird verwendet um die Daten einer Spalte rechts von dem Zeichen auszurichten, das durch das <strong>char</strong> Attribut spezifiziert wurde. Sein Wert spezifiziert die Anzahl der Zeichen um die die Daten nach rechts verschoben werden.
- <div class="note"><strong>Hinweis: </strong>Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird.</div>
+ <dd>Dieses Attribut wird verwendet um die Daten einer Spalte rechts von dem Zeichen auszurichten, das durch das <strong>char</strong> Attribut spezifiziert wurde. Sein Wert spezifiziert die Anzahl der Zeichen um die die Daten nach rechts verschoben werden.
+ <div class="note"><strong>Hinweis: </strong>Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird.</div>
  </dd>
  <dt>{{htmlattrdef("colspan")}}</dt>
- <dd>Dieses Attribut enhält eine nicht negative ganze Zahl, die festlegt über wieviele Spalten einer Tabelle sich diese Zelle erstreckt. Der Default-Wert ist <code>1</code>. Größere Werte als 1000 werden nicht akzeptiert und auf den Default-Wert zurückgesetzt (1).</dd>
+ <dd>Dieses Attribut enhält eine nicht negative ganze Zahl, die festlegt über wieviele Spalten einer Tabelle sich diese Zelle erstreckt. Der Default-Wert ist <code>1</code>. Größere Werte als 1000 werden nicht akzeptiert und auf den Default-Wert zurückgesetzt (1).</dd>
  <dt>{{htmlattrdef("headers")}}</dt>
- <dd>Diese Attribut enthält eine durch Leerzeichen getrennte Liste von Strings, von denen jeder mit dem <strong>id</strong> Attribut des {{HTMLElement("th")}} Elementes korrespondiert.</dd>
+ <dd>Diese Attribut enthält eine durch Leerzeichen getrennte Liste von Strings, von denen jeder mit dem <strong>id</strong> Attribut des {{HTMLElement("th")}} Elementes korrespondiert.</dd>
  <dt>{{htmlattrdef("height")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Dieses Attribut wird verwendet um die Höhe einer Zelle festzulegen.
- <div class="note"><strong>Hinweis:</strong> DVerwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. Verwenden Sie stattdessen die  {{cssxref("height")}} Eigenschaft.</div>
+ <dd>Dieses Attribut wird verwendet um die Höhe einer Zelle festzulegen.
+ <div class="note"><strong>Hinweis:</strong> DVerwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. Verwenden Sie stattdessen die  {{cssxref("height")}} Eigenschaft.</div>
  </dd>
  <dt>{{htmlattrdef("rowspan")}}</dt>
- <dd>Dieses Attribut enthält einen nicht negativen ganzahligen Integer Wert, der festlegt, über wieviele Reihen sich eine Zelle erstreckt. Der Default-Wert ist <code>1</code>; wenn der Wert auf <code>0</code>  gesetzt wird, erstreckt sich die Größe der Zelle über den Rest der Tabelle zu der die Zelle gehört auch wenn die Attribute ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}), implizit definiert sind. Werte über 65534 werden auf 65534 gesetzt.</dd>
+ <dd>Dieses Attribut enthält einen nicht negativen ganzahligen Integer Wert, der festlegt, über wieviele Reihen sich eine Zelle erstreckt. Der Default-Wert ist <code>1</code>; wenn der Wert auf <code>0</code>  gesetzt wird, erstreckt sich die Größe der Zelle über den Rest der Tabelle zu der die Zelle gehört auch wenn die Attribute ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}), implizit definiert sind. Werte über 65534 werden auf 65534 gesetzt.</dd>
  <dt>{{htmlattrdef("scope")}} {{obsolete_inline("html5")}}</dt>
- <dd>Dieses Listen Attribut definiert die Zellen, auf die sich das Header-Element bezieht, dass in dem {{HTMLElement("th")}} Element, definiert wurde.
- <div class="note"><strong>Hinweis:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. Verwenden Sie diesesAttributenur mit dem  {{HTMLElement("th")}} Element um eine Reihe oder eine Spalte für die dieses der Header ist zu definieren.</div>
+ <dd>Dieses Listen Attribut definiert die Zellen, auf die sich das Header-Element bezieht, dass in dem {{HTMLElement("th")}} Element, definiert wurde.
+ <div class="note"><strong>Hinweis:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. Verwenden Sie diesesAttributenur mit dem  {{HTMLElement("th")}} Element um eine Reihe oder eine Spalte für die dieses der Header ist zu definieren.</div>
  </dd>
  <dt>{{htmlattrdef("valign")}} {{obsolete_inline("html5")}}</dt>
  <dd>Dieses Attribut legt fest, wie ein Text vertikal innerhalb einer Zelle ausgerichtet ist. Mögliche Werte für dieses Attribut sind:
  <ul>
-  <li><code>baseline</code>: Positioniert den Text mit der <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> der Zeichen am unteren Rand der aus und nicht mit dem unteren Ende der Zeichen. Gibt es keine Zeichen mit Anhängen unterhalb der Zeichengrundlinie, so hat dieser Wert den gleichen Effekt wie <code>bottom</code>.</li>
-  <li><code>bottom</code>: Positioniert den Text am unteren Rand in der Zelle</li>
+  <li><code>baseline</code>: Positioniert den Text mit der <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> der Zeichen am unteren Rand der aus und nicht mit dem unteren Ende der Zeichen. Gibt es keine Zeichen mit Anhängen unterhalb der Zeichengrundlinie, so hat dieser Wert den gleichen Effekt wie <code>bottom</code>.</li>
+  <li><code>bottom</code>: Positioniert den Text am unteren Rand in der Zelle</li>
   <li><code>middle</code>: Zentriert den Text vertikal in der Zelle.</li>
   <li>and <code>top</code>: Positioniert den Text am oberen Rand der Zelle.</li>
  </ul>
 
- <div class="note"><strong>Hinweis:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. <br>
- Verwenden Sie stattdessen die CSS {{cssxref("vertical-align")}} Eigenschaft.</div>
+ <div class="note"><strong>Hinweis:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. <br>
+ Verwenden Sie stattdessen die CSS {{cssxref("vertical-align")}} Eigenschaft.</div>
  </dd>
  <dt>{{htmlattrdef("width")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Dieses Attribut defieniert die benötigte Breite der Zelle.  Zusätzlicher Platz kann mit Hilfe der <a href="/en-US/docs/Web/API/HTMLTableElement/cellSpacing">cellspacing</a> and <a href="/en-US/docs/Web/API/HTMLTableElement/cellPadding">cellpadding</a> Eigenschaftenerreicht werden. Mit Hilfe des {{HTMLElement("col")}} Elementes kann ebenfalls zusätzliche Breite erzeugt werden. Allerdings wird eine Zelle, die zu schmal für die passende Darstellung ihres Inhaltes, bei der Darstellung automatisch auf die richtige Breite erweitert.
- <div class="note"><strong>Note:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. <br>
- Verwenden Sie stattdessen die CSS {{cssxref("width")}} Eigenschaft.</div>
+ <dd>Dieses Attribut defieniert die benötigte Breite der Zelle.  Zusätzlicher Platz kann mit Hilfe der <a href="/en-US/docs/Web/API/HTMLTableElement/cellSpacing">cellspacing</a> and <a href="/en-US/docs/Web/API/HTMLTableElement/cellPadding">cellpadding</a> Eigenschaftenerreicht werden. Mit Hilfe des {{HTMLElement("col")}} Elementes kann ebenfalls zusätzliche Breite erzeugt werden. Allerdings wird eine Zelle, die zu schmal für die passende Darstellung ihres Inhaltes, bei der Darstellung automatisch auf die richtige Breite erweitert.
+ <div class="note"><strong>Note:</strong> Verwenden Sie diese Eigenschaft nicht mehr, da sie von dem neuesten Standard nicht mehr unterstützt wird. <br>
+ Verwenden Sie stattdessen die CSS {{cssxref("width")}} Eigenschaft.</div>
  </dd>
 </dl>
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<p>Siehe {{HTMLElement("table")}} für Beispiele für <code>&lt;td&gt;</code>.</p>
+<p>Siehe {{HTMLElement("table")}} für Beispiele für <code>&lt;td&gt;</code>.</p>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
 

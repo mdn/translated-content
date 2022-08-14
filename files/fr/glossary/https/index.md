@@ -15,4 +15,4 @@ original_slug: Glossaire/https
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "HTTPS")}} sur Wikipédia
+- [HTTPS](https://fr.wikipedia.org/wiki/HyperText_Transfer_Protocol_Secure) sur Wikipédia

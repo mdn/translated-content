@@ -15,15 +15,17 @@ Pour utiliser le protocole WebSocket, il faut créer un objet [`WebSocket`](/en/
 
 Le constructeur WebSocket accepte un paramètre obligatoire et un paramètre optionnel :
 
-    WebSocket WebSocket(
-      in DOMString url,
-      in optional DOMString protocols
-    );
+```
+WebSocket WebSocket(
+  in DOMString url,
+  in optional DOMString protocols
+);
 
-    WebSocket WebSocket(
-      in DOMString url,
-      in optional DOMString[] protocols
-    );
+WebSocket WebSocket(
+  in DOMString url,
+  in optional DOMString[] protocols
+);
+```
 
 - `url`
   - : L'URL à laquelle le client se connecte, et le serveur répond.

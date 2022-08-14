@@ -17,4 +17,4 @@ Autre exemple, dans `developer.mozilla.org`, le SLD `developer` sert à indiquer
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Domaine de deuxième niveau", "SLD")}} on Wikipedia
+- [SLD](https://fr.wikipedia.org/wiki/Domaine_de_deuxi%C3%A8me_niveau) sur Wikipédia

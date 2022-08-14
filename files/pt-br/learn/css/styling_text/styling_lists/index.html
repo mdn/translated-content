@@ -5,7 +5,6 @@ translation_of: Learn/CSS/Styling_text/Styling_lists
 translation_of_original: Web/Guide/CSS/Getting_started/Lists
 original_slug: Web/CSS/Getting_Started/Lists
 ---
-<p>{{ CSSTutorialTOC() }}</p>
 
 <p>{{ previousPage("/en-US/docs/Web/Guide/CSS/Getting_Started/Content", "Content") }}</p>
 
@@ -23,7 +22,7 @@ original_slug: Web/CSS/Getting_Started/Lists
 
 <h3 id="Listas_não_ordenadas"><font><font>Listas não ordenadas</font></font></h3>
 
-<p><font><font>Em uma lista </font></font><em><font><font>desordenada</font></font></em><font><font>, cada item da lista é marcado da mesma forma.</font></font></p>
+<p><font><font>Em uma lista </font></font><em><font><font>desordenada</font></font></em><font><font>, cada item da lista é marcado da mesma forma.</font></font></p>
 
 <p><font><font>CSS tem três tipos de marcadores, e aqui está como seu navegador exibe-os:</font></font></p>
 
@@ -33,7 +32,7 @@ original_slug: Web/CSS/Getting_Started/Lists
  <li style="list-style-type: square;"><code><font><font>square</font></font></code></li>
 </ul>
 
-<p style="list-style-type: square;">        none</p>
+<p style="list-style-type: square;">        none</p>
 
 <p><font><font>Alternativamente, você pode especificar o URL de uma imagem.</font></font></p>
 
@@ -64,9 +63,9 @@ li.closed {list-style: disc;}</font></font>
 
 <h3 id="Listas_ordenadas"><font><font>Listas ordenadas</font></font></h3>
 
-<p><font><font>Em uma lista<em>ordenada</em></font></font><font><font> , cada item da lista é marcado diferentemente para mostrar a sua posição na sequência.</font></font></p>
+<p><font><font>Em uma lista<em>ordenada</em></font></font><font><font> , cada item da lista é marcado diferentemente para mostrar a sua posição na sequência.</font></font></p>
 
-<p><font><font>Use a propriedade {{cssxref ("list-style")}} para especificar o tipo de marcador:</font></font></p>
+<p><font><font>Use a propriedade {{cssxref ("list-style")}} para especificar o tipo de marcador:</font></font></p>
 
 <ul style="padding-left: 2em;">
  <li><code>decimal</code></li>
@@ -110,7 +109,7 @@ li.closed {list-style: disc;}</font></font>
 <h3 id="Contadores"><font><font>Contadores</font></font></h3>
 
 <div style="border: 1px solid red; padding: 6px; margin: 0 0 .5em -6px; width: 100%;">
-<p><strong><font><font>Nota: </font></font></strong><font><font> Alguns navegadores não suportam contadores. </font><font>O </font></font><a class="external" href="http://www.quirksmode.org/css/contents.html"><font><font>conteúdo CSS e compatibilidade do navegador</font></font></a><font><font> página no </font></font><a class="external" href="http://www.quirksmode.org/"><font><font>site de modo Quirks</font></font></a><font><font> contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. </font><font>Páginas individuais na </font></font><a href="/en-US/docs/Web/CSS/Reference" title="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS_Reference"><font><font>referência CSS</font></font></a><font><font> neste local também têm tabelas de compatibilidade do navegador.</font></font></p>
+<p><strong><font><font>Nota: </font></font></strong><font><font> Alguns navegadores não suportam contadores. </font><font>O </font></font><a class="external" href="http://www.quirksmode.org/css/contents.html"><font><font>conteúdo CSS e compatibilidade do navegador</font></font></a><font><font> página no </font></font><a class="external" href="http://www.quirksmode.org/"><font><font>site de modo Quirks</font></font></a><font><font> contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. </font><font>Páginas individuais na </font></font><a href="/en-US/docs/Web/CSS/Reference" title="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS_Reference"><font><font>referência CSS</font></font></a><font><font> neste local também têm tabelas de compatibilidade do navegador.</font></font></p>
 </div>
 
 <p><font><font>Você pode usar contadores para numerar quaisquer elementos, não somente itens da lista. </font><font>Por exemplo, em alguns documentos você pode querer numerar cabeçalhos ou parágrafos.</font></font></p>
@@ -135,7 +134,7 @@ li.closed {list-style: disc;}</font></font>
 <pre class="brush:css"><font><font>h3.numbered {counter-reset: mynum;}
 </font></font></pre>
 
-<p> </p>
+<p> </p>
 
 <p><font><font>Esta regra mostra e incrementa o contador para cada {{HTMLElement ("p")}} elemento com a classe </font><font>numeradas:</font></font></p>
 
@@ -176,30 +175,30 @@ p.numbered:before
 
 <pre class="brush:html;"><font><font>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Sample document 2&lt;/title&gt;
-    &lt;link rel="stylesheet" href="style2.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Sample document 2&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style2.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
 
-    &lt;h3 id="oceans"&gt;The oceans&lt;/h3&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Arctic&lt;/li&gt;
-      &lt;li&gt;Atlantic&lt;/li&gt;
-      &lt;li&gt;Pacific&lt;/li&gt;
-      &lt;li&gt;Indian&lt;/li&gt;
-      &lt;li&gt;Southern&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;h3 id="oceans"&gt;The oceans&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Arctic&lt;/li&gt;
+      &lt;li&gt;Atlantic&lt;/li&gt;
+      &lt;li&gt;Pacific&lt;/li&gt;
+      &lt;li&gt;Indian&lt;/li&gt;
+      &lt;li&gt;Southern&lt;/li&gt;
+    &lt;/ul&gt;
 
-    &lt;h3 class="numbered"&gt;Numbered paragraphs&lt;/h3&gt;
-    &lt;p class="numbered"&gt;Lorem ipsum&lt;/p&gt;
-    &lt;p class="numbered"&gt;Dolor sit&lt;/p&gt;
-    &lt;p class="numbered"&gt;Amet consectetuer&lt;/p&gt;
-    &lt;p class="numbered"&gt;Magna aliquam&lt;/p&gt;
-    &lt;p class="numbered"&gt;Autem veleum&lt;/p&gt;
+    &lt;h3 class="numbered"&gt;Numbered paragraphs&lt;/h3&gt;
+    &lt;p class="numbered"&gt;Lorem ipsum&lt;/p&gt;
+    &lt;p class="numbered"&gt;Dolor sit&lt;/p&gt;
+    &lt;p class="numbered"&gt;Amet consectetuer&lt;/p&gt;
+    &lt;p class="numbered"&gt;Magna aliquam&lt;/p&gt;
+    &lt;p class="numbered"&gt;Autem veleum&lt;/p&gt;
 
-  &lt;/body&gt;
+  &lt;/body&gt;
 &lt;/html&gt;</font></font>
 
 </pre>
@@ -210,9 +209,9 @@ p.numbered:before
 h3.numbered {counter-reset: mynum;}
 
 p.numbered:before {
-  content: counter(mynum) ": ";
-  counter-increment: mynum;
-  font-weight: bold;
+  content: counter(mynum) ": ";
+  counter-increment: mynum;
+  font-weight: bold;
 }</font></font>
 </pre>
 
@@ -245,7 +244,7 @@ p.numbered:before {
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>
 
 <p><font><font>Mude sua folha de estilo para identificar os títulos com letras maiúsculas em parênteses como este:</font></font></p>
 

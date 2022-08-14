@@ -17,7 +17,9 @@ La méthode **`Intl.PluralRules.supportedLocalesOf()`** renvoie un tableau conte
 
 ## Syntaxe
 
-    Intl.PluralRules.supportedLocalesOf(locales[, options])
+```js
+Intl.PluralRules.supportedLocalesOf(locales[, options])
+```
 
 ### Paramètres
 

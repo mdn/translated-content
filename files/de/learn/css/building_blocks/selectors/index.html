@@ -5,7 +5,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors
 translation_of_original: Web/Guide/CSS/Getting_started/Selectors
 original_slug: Web/Guide/CSS/Getting_started/Selektoren
 ---
-<p>{{ CSSTutorialTOC() }}</p>
+<div>{{LearnSidebar}}</div>
 
 <p>{{ previousPage("/de/docs/Web/Guide/CSS/Getting_Started/Kaskadierung_und_vererbung", "Kaskadierung &amp; Vererbung")}}<span class="seoSummary">Das ist der fünfte Abschnitt des <a href="/de/docs/Web/Guide/CSS/Getting_Started" title="/de/docs/Web/Guide/CSS/Getting_Started">CSS Getting Started</a> Tutorials. Er erklärt wie sie Styles selektiv anwenden können und wie verschiedene Arten von Selektoren verschiedene Prioritäten haben können. Sie fügen einige Attribute zu den Tags in Ihrem Beispiel-Dokument hinzu und Sie verwenden diese Attribute in Ihrem Beispielstylesheet.</span></p>
 
@@ -18,7 +18,7 @@ original_slug: Web/Guide/CSS/Getting_started/Selektoren
 }
 </pre>
 
-<p>In der CSS Terminologie ist die gesamte Zeile eine <em>Regel</em>. Diese Regel beginnt mit <code>strong</code>, welches ein <em>Selektor</em> ist. Sie wählt aus, auf welche Elemente im DOM die Regel angewandt wird.</p>
+<p>In der CSS Terminologie ist die gesamte Zeile eine <em>Regel</em>. Diese Regel beginnt mit <code>strong</code>, welches ein <em>Selektor</em> ist. Sie wählt aus, auf welche Elemente im DOM die Regel angewandt wird.</p>
 
 <div class="tuto_details">
 <div class="tuto_type">Mehr Details</div>
@@ -94,7 +94,7 @@ Dieser HTML Tag hat ein <code>class</code> Attribut und ein <code>id</code> Attr
 
 <p>Eine CSS <a href="/de/docs/Web/CSS/Pseudo-classes" title="/de/docs/Web/CSS/Pseudo-classes">pseudo-class</a> ist ein Schlüsselwort, welches einem Selektor hinzugefügt wird. Damit kann ein bestimmter Zustand des selektierten Elements spezifiziert werden. {{ Cssxref(":hover") }} zum Beispiel wenden seinen Style an, wenn der Benutzer mit dem Mauszeiger über das selektierte Element fährt.</p>
 
-<p>Pseudo-classes zusammen mit pseudo-elements lassen Sie eine Style für ein Element nicht nur in Relation zum Inhalt vom Document Tree sondern auch in Relation zu externen Faktoren wie den Verlauf  der Navigation ({{ cssxref(":visited") }}, zum Beispiel), dem Zustand seines Inhalt (wie {{ cssxref(":checked") }} auf manchen form Elementen) oder der Position des Mauszeigers (wie {{ cssxref(":hover") }} das angibt, ob sich der Mauszeiger über dem Element befindet) anwenden. Eine vollständige Liste der Selektoren ist unter <a class="external" href="http://www.w3.org/TR/selectors/#selectors" rel="external nofollow" title="CSS3 Selectors working spec">CSS3 Selectors working spec</a> zu finden.</p>
+<p>Pseudo-classes zusammen mit pseudo-elements lassen Sie eine Style für ein Element nicht nur in Relation zum Inhalt vom Document Tree sondern auch in Relation zu externen Faktoren wie den Verlauf  der Navigation ({{ cssxref(":visited") }}, zum Beispiel), dem Zustand seines Inhalt (wie {{ cssxref(":checked") }} auf manchen form Elementen) oder der Position des Mauszeigers (wie {{ cssxref(":hover") }} das angibt, ob sich der Mauszeiger über dem Element befindet) anwenden. Eine vollständige Liste der Selektoren ist unter <a class="external" href="http://www.w3.org/TR/selectors/#selectors" rel="external nofollow" title="CSS3 Selectors working spec">CSS3 Selectors working spec</a> zu finden.</p>
 
 <div class="tuto_example">
 <div class="tuto_type">Syntax</div>
@@ -130,7 +130,7 @@ Dieser HTML Tag hat ein <code>class</code> Attribut und ein <code>id</code> Attr
 
 <p>CSS hat einige Wege um Elemente basieren auf ihrer Bezieung zu anderen Eementen zu selektieren. Damit können Selektoren spezifischer gemacht werden.</p>
 
-<table id="relselectors">
+<table>
  <caption>Gängige Selektoren basierend auf Beziehungen</caption>
  <tbody>
   <tr>
@@ -332,7 +332,7 @@ Dieser HTML Tag hat ein <code>class</code> Attribut und ein <code>id</code> Attr
 </pre>
  </li>
 </ol>
-<a class="hideAnswer" href="#challenge">Lösung ausblenden</a></div>
+<a href="#challenge">Lösung ausblenden</a></div>
 <a href="#tutochallenge" title="Eine mögliche Lösung für die Herausforderung darstellen">Sehen Sie sich die Lösung an.</a></div>
 
 <h2 id="Aktion_pseudo-classes_Selektoren_verwenden">Aktion: pseudo-classes Selektoren verwenden</h2>
@@ -374,7 +374,7 @@ a.homepage:hover, a.homepage:focus, a.homepage:active {
   <table style="border: 2px outset #3366bb; padding: 1em;">
    <tbody>
     <tr>
-     <td>Go to our <a class="tutospecial" href="#" title="Home page">Home page</a><span class="hidden"> </span><span class="hidden"> </span></td>
+     <td>Go to our <a class="tutospecial" href="#" title="Home page">Home page</a></td>
     </tr>
    </tbody>
   </table>

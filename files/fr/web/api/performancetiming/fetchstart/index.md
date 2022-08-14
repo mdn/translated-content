@@ -30,8 +30,7 @@ let time = performance.timing.fetchStart;
 
 | Spécification                                                                                                                                        | Statut                                   | Commentaire          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-fetchstart',
-        'PerformanceTiming.fetchStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-fetchstart', 'PerformanceTiming.fetchStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

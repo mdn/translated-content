@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.activeTexture()`** de l'[API WebGL](/fr-FR/
 
 ## Syntaxe
 
-    void gl.activeTexture(texture);
+```js
+void gl.activeTexture(texture);
+```
 
 ### Paramètres
 

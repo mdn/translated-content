@@ -23,7 +23,7 @@ translation_of: Web/CSS/At-rule
  <li>{{cssxref("@charset")}} — 스타일 시트에 의해 사용되는 문자 집합을 정의함.</li>
  <li>{{cssxref("@import")}} — CSS 엔진에게 외부 스타일 시트를 포함하도록 알림.</li>
  <li>{{cssxref("@namespace")}} — CSS 엔진에게 모든 콘텐츠가 XML 네임스페이스로 시작하(prefix가 붙)는 것이 고려되어야 함을 알림.</li>
- <li><strong><em>중첩 @-규칙</em></strong> — 중첩 문의 부분 집합으로, 조건부 그룹 규칙 속뿐만 아니라 스타일 시트의 문으로 사용될 수 있습니다:
+ <li><strong><em>중첩 @-규칙</em></strong> — 중첩 문의 부분 집합으로, 조건부 그룹 규칙 속뿐만 아니라 스타일 시트의 문으로 사용될 수 있습니다:
   <ul>
    <li>{{cssxref("@media")}} — 장치가 미디어 질의(<em>media query</em>)를 사용하여 정의된 조건의 기준을 만족하면 해당 콘텐츠를 적용하는 조건부 그룹 규칙.</li>
    <li>{{cssxref("@supports")}} — 브라우저가 주어진 조건의 기준을 만족하면 해당 콘텐츠를 적용하는 조건부 그룹 규칙.</li>
@@ -41,7 +41,7 @@ translation_of: Web/CSS/At-rule
 
 <h2 id="조건부_그룹_규칙">조건부 그룹 규칙</h2>
 
-<p>속성값과 마찬가지로, 각각의 @-규칙은 다른 구문이 있습니다. 그럼에도 불구하고, 그 중 몇몇은 조건부 그룹 규칙(<strong>conditional group rules</strong>)으로 불리는 특별한 범주로 분류될 수 있습니다. 이들 문은 공통 구문을 공유하고 그 각각은 <em>중첩 문</em>(<em>규칙 집합(ruleset)</em> 또는 <em>중첩 @-규칙</em> 중 하나)을 포함할 수 있습니다. 게다가, 그들은 모두 일반 semantic 의미를 전달합니다. 그들은 모두 어떤 유형의 조건을 링크합니다, 언제라도 <strong>참</strong> 또는 <strong>거짓</strong> 중 하나로 평가하는. 조건을 <strong>참</strong>으로 평가하면, 그룹 내 모든 문이 적용됩니다.</p>
+<p>속성값과 마찬가지로, 각각의 @-규칙은 다른 구문이 있습니다. 그럼에도 불구하고, 그 중 몇몇은 조건부 그룹 규칙(<strong>conditional group rules</strong>)으로 불리는 특별한 범주로 분류될 수 있습니다. 이들 문은 공통 구문을 공유하고 그 각각은 <em>중첩 문</em>(<em>규칙 집합(ruleset)</em> 또는 <em>중첩 @-규칙</em> 중 하나)을 포함할 수 있습니다. 게다가, 그들은 모두 일반 semantic 의미를 전달합니다. 그들은 모두 어떤 유형의 조건을 링크합니다, 언제라도 <strong>참</strong> 또는 <strong>거짓</strong> 중 하나로 평가하는. 조건을 <strong>참</strong>으로 평가하면, 그룹 내 모든 문이 적용됩니다.</p>
 
 <p>조건부 그룹 규칙은 <a href="http://dev.w3.org/csswg/css3-conditional/" title="CSS Conditional Rules Module Level 3">CSS 조건부 규칙 모듈 레벨 3</a>에서 정의되고 다음과 같습니다:</p>
 
@@ -53,24 +53,6 @@ translation_of: Web/CSS/At-rule
 
 <p>각 조건부 그룹은 또한 중첩 문을 포함할 수 있기에, 불특정한 양의 중첩이 있을 수 있습니다.</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td>초기 정의</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Compat', '#css-at-rules', 'CSS At-rules')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td><code>@-webkit-keyframes</code> 표준화.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}

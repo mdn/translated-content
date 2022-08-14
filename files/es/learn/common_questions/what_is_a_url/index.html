@@ -12,7 +12,7 @@ original_slug: Learn/Common_questions/Qué_es_una_URL
  <tbody>
   <tr>
    <th scope="row">Prerequisitos:</th>
-   <td>Primero necesitas saber <a href="/en-US/docs/Learn/How_the_Internet_works">Como funciona Internet</a>, <a href="/en-US/docs/Learn/What_is_a_Web_server">qué es un servidor Web</a> y <a href="/en-US/docs/Learn/Understanding_links_on_the_web">los conceptos detrás de los enlaces en la web</a>.</td>
+   <td>Primero necesitas saber <a href="/en-US/docs/Learn/How_the_Internet_works">Como funciona Internet</a>, <a href="/en-US/docs/Learn/What_is_a_Web_server">qué es un servidor Web</a> y <a href="/en-US/docs/Learn/Understanding_links_on_the_web">los conceptos detrás de los enlaces en la web</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -23,9 +23,9 @@ original_slug: Learn/Common_questions/Qué_es_una_URL
 
 <h2 id="Resumen">Resumen</h2>
 
-<p><span class="seoSummary">Junto con el {{Glossary("Hypertext", "Hipertexto")}} y {{Glossary("HTTP")}}, las <strong><dfn>URL</dfn></strong> son uno de los conceptos claves de la Web. Es el mecanismo usado por los {{Glossary("Browser","navegadores")}} para obtener cualquier recurso publicadon en la web.</span></p>
+<p><span class="seoSummary">Junto con el {{Glossary("Hypertext", "Hipertexto")}} y {{Glossary("HTTP")}}, las <strong><dfn>URL</dfn></strong> son uno de los conceptos claves de la Web. Es el mecanismo usado por los {{Glossary("Browser","navegadores")}} para obtener cualquier recurso publicadon en la web.</span></p>
 
-<p><strong>URL</strong> significa <em>Uniform Resource Locator (Localizador de Recursos Uniforme)</em>. Una URL no es más que una direccion que es dada a un recurso único en la Web. En teoria, cada URL valida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la practica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.</p>
+<p><strong>URL</strong> significa <em>Uniform Resource Locator (Localizador de Recursos Uniforme)</em>. Una URL no es más que una direccion que es dada a un recurso único en la Web. En teoria, cada URL valida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la practica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.</p>
 
 <h2 id="Active_Learning">Active Learning</h2>
 
@@ -49,7 +49,7 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 
 <dl>
  <dt><img alt="Protocol" src="https://mdn.mozillademos.org/files/15766/mdn-url-protocol@x2_update.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>http</code> es el protocolo. La primera parte de la URL indica qué protocolo debe usar el navegador. Un protocolo es un método establecido para intercambiar o transferir datos alrededor de una red informática. Por lo general, para sitios web es el protocolo HTTP o su versión segura, HTTPS. La Web requiere uno de estos dos, pero los navegadores también saben cómo manejar otros protocolos como mailto: (para abrir un cliente de correo) o ftp: para manejar la transferencia de archivos, así que no se sorprenda si ve tales protocolos.</dd>
+ <dd><code>http</code> es el protocolo. La primera parte de la URL indica qué protocolo debe usar el navegador. Un protocolo es un método establecido para intercambiar o transferir datos alrededor de una red informática. Por lo general, para sitios web es el protocolo HTTP o su versión segura, HTTPS. La Web requiere uno de estos dos, pero los navegadores también saben cómo manejar otros protocolos como mailto: (para abrir un cliente de correo) o ftp: para manejar la transferencia de archivos, así que no se sorprenda si ve tales protocolos.</dd>
  <dt><img alt="Domaine Name" src="https://mdn.mozillademos.org/files/8015/mdn-url-domain@x2.png" style="height: 70px; width: 440px;"></dt>
  <dd><code>www.example.com</code> es el nombre de dominio. Indica qué servidor web se solicita. Alternativamente, es posible usar directamente un {{Glossary("dirección IP")}}, pero debido a que es menos conveniente, no se usa con frecuencia en la Web.</dd>
  <dt><img alt="Port" src="https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png" style="height: 70px; width: 440px;"></dt>
@@ -62,7 +62,7 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
  <dd><code>#SomewhereInTheDocument</code> es un ancla para otra parte del recurso en sí. Un ancla representa una especie de "marcador" dentro del recurso, dando al navegador las instrucciones para mostrar el contenido ubicado en ese lugar "marcado". En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el ancla; en un video o documento de audio, el navegador intentará ir a la hora que representa el ancla. Vale la pena señalar que la parte después del #, también conocido como el identificador de fragmento, nunca se envía al servidor con la solicitud.</dd>
 </dl>
 
-<p>{{Note('Existen <a href="http://en.wikipedia.org/wiki/Uniform_Resource_Locator">algunas partes extras y reglas extras </a>con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.')}}</p>
+<p>{{Note('Existen <a href="http://en.wikipedia.org/wiki/Uniform_Resource_Locator">algunas partes extras y reglas extras </a>con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.')}}</p>
 
 <p>Puede pensar en una URL como una dirección de correo postal normal: el protocolo representa el servicio postal que desea utilizar, el nombre de dominio es la ciudad o el pueblo y el puerto es como el código postal; la ruta representa el edificio donde se debe entregar su correo; los parámetros representan información adicional como el número de apartamento en el edificio; y, finalmente, el ancla representa a la persona real a la que ha dirigido su correo.</p>
 
@@ -70,12 +70,12 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 
 <p>Se puede escribir cualquier URL dentro de la barra de direcciones del navegador para acceder al recurso que se encuentra detrás. ¡Pero esto es sólo la punta del iceberg!</p>
 
-<p>El lenguaje {{Glossary("HTML")}} — <a href="/en-US/docs/Learn/HTML/HTML_tags">que se discutirá más adelante</a> — hace un uso extensivo de las URL:</p>
+<p>El lenguaje {{Glossary("HTML")}} — <a href="/en-US/docs/Learn/HTML/HTML_tags">que se discutirá más adelante</a> — hace un uso extensivo de las URL:</p>
 
 <ul>
  <li>para crear enlaces a otros documentos con el elemento {{HTMLElement("a")}};</li>
- <li>para vincular un documento con sus recursos relacionados a través de varios elementos como {{HTMLElement("link")}} o {{HTMLElement("script")}};</li>
- <li>para mostrar recursos como imágenes (con el elemento {{HTMLElement("img")}}), videos (con el elemento {{HTMLElement("video")}}), sonido y música (con el elemento {{HTMLElement("audio")}} ), etc.;</li>
+ <li>para vincular un documento con sus recursos relacionados a través de varios elementos como {{HTMLElement("link")}} o {{HTMLElement("script")}};</li>
+ <li>para mostrar recursos como imágenes (con el elemento {{HTMLElement("img")}}), videos (con el elemento {{HTMLElement("video")}}), sonido y música (con el elemento {{HTMLElement("audio")}} ), etc.;</li>
  <li>para mostrar otros documentos HTML con el elemento {{HTMLElement ("iframe")}}.</li>
 </ul>
 
@@ -136,7 +136,7 @@ https://developer.mozilla.org/en-US/search?q=URL</pre>
 
 <h3 id="URL_semánticas">URL semánticas</h3>
 
-<p>A pesar de su sabor muy técnico, las URL representan un punto de entrada legible para un sitio web. Se pueden memorizar y cualquiera puede ingresarlos en la barra de direcciones de un navegador. Las personas están en el centro de la Web, por lo que se considera una buena práctica construir lo que se llama <a href="http://en.wikipedia.org/wiki/Semantic_URL"><em>URL semánticas</em></a>. Las URL semánticas usan palabras con un significado inherente que cualquier persona puede entender, independientemente de sus conocimientos técnicos.</p>
+<p>A pesar de su sabor muy técnico, las URL representan un punto de entrada legible para un sitio web. Se pueden memorizar y cualquiera puede ingresarlos en la barra de direcciones de un navegador. Las personas están en el centro de la Web, por lo que se considera una buena práctica construir lo que se llama <a href="http://en.wikipedia.org/wiki/Semantic_URL"><em>URL semánticas</em></a>. Las URL semánticas usan palabras con un significado inherente que cualquier persona puede entender, independientemente de sus conocimientos técnicos.</p>
 
 <p>La semántica lingüística es, por supuesto, irrelevante para las computadoras. Probablemente has visto URL que parecen mashups de caracteres aleatorios. Pero hay muchas ventajas en la creación de URL legibles por humanos:</p>
 

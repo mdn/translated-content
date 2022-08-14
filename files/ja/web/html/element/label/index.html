@@ -47,7 +47,7 @@ translation_of: Web/HTML/Element/label
 
 <dl>
  <dt>{{htmlattrdef("for")}}</dt>
- <dd><code>&lt;label&gt;</code> 要素と同一の文書内にある<a href="/ja/docs/Web/Guide/HTML/Content_categories#Form_labelable">ラベル付け可能</a>フォーム関連要素の {{htmlattrxref("id")}}。文書中の <code>for</code> 属性の値と合致する <code>id</code> を持つ最初の要素がラベル付け可能な要素であれば、このラベル要素の示す<em>ラベル付きコントロール</em>となります。<a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">ラベル付け可能要素</a>でなければ、 <code>for</code> 属性は効果がありません。一致する <code>id</code> 値を持つ他の要素が文書内のその後にあったとしても、考慮されません。
+ <dd><code>&lt;label&gt;</code> 要素と同一の文書内にある<a href="/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能">ラベル付け可能</a>フォーム関連要素の {{htmlattrxref("id")}}。文書中の <code>for</code> 属性の値と合致する <code>id</code> を持つ最初の要素がラベル付け可能な要素であれば、このラベル要素の示す<em>ラベル付きコントロール</em>となります。<a href="https://html.spec.whatwg.org/multipage/forms.html#category-label">ラベル付け可能要素</a>でなければ、 <code>for</code> 属性は効果がありません。一致する <code>id</code> 値を持つ他の要素が文書内のその後にあったとしても、考慮されません。
  <div class="note"><strong>注</strong>: <code>&lt;label&gt;</code> 要素は、 <code>for</code> 属性が指す要素が包含するコントロール要素である場合、 <code>for</code> 属性を持ちつつ、中にコントロール要素を含めることができます。</div>
  </dd>
 </dl>
@@ -127,11 +127,11 @@ translation_of: Web/HTML/Element/label
  <tbody>
   <tr>
    <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Interactive_content">対話型コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Form-associated_content">フォーム関連要素</a>, 知覚可能コンテンツ</td>
+   <td><a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連要素</a>, 知覚可能コンテンツ</td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>、ただし、子孫に <code>label</code> 要素を持つことはできない。ラベル付けの対象となるコントロール以外の<a href="/ja/docs/Web/Guide/HTML/Content_categories#Form_labelable">ラベル付け可能</a>要素を入れてはならない。</td>
+   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、ただし、子孫に <code>label</code> 要素を持つことはできない。ラベル付けの対象となるコントロール以外の<a href="/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能">ラベル付け可能</a>要素を入れてはならない。</td>
   </tr>
   <tr>
    <th scope="row">タグの省略</th>
@@ -139,7 +139,7 @@ translation_of: Web/HTML/Element/label
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>を受け入れるすべての要素</td>
+   <td><a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素</td>
   </tr>
   <tr>
    <th scope="row">暗黙の ARIA ロール</th>

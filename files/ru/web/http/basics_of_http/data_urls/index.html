@@ -14,14 +14,14 @@ original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<p>Data URL состоит из четырёх сегментов: приставки (<code>data:</code>), <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME типа</a>, описывающего  тип данных, дополнительного ключевого слова <code>base64</code> для нетекстовых данных и самой строки данных:</p>
+<p>Data URL состоит из четырёх сегментов: приставки (<code>data:</code>), <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME типа</a>, описывающего  тип данных, дополнительного ключевого слова <code>base64</code> для нетекстовых данных и самой строки данных:</p>
 
 <pre class="syntaxbox">data:[&lt;тип данных&gt;][;base64],&lt;данные&gt;
 </pre>
 
-<p><code>тип данных</code> описывается строкой в формате <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME типа</a>, например <code>'image/jpeg'</code> для JPEG файла изображения. При не указывании типа данных, браузер автоматически будет интерпретировать строку данных, как  <code>text/plain;charset=US-ASCII</code></p>
+<p><code>тип данных</code> описывается строкой в формате <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME типа</a>, например <code>'image/jpeg'</code> для JPEG файла изображения. При не указывании типа данных, браузер автоматически будет интерпретировать строку данных, как  <code>text/plain;charset=US-ASCII</code></p>
 
-<p>Если данные представляют собой какую-либо текстовую информацию, вы можете просто вставить эту текстовую строку в Data URL (используя соответствующие для типа данных сущности и знаки экранирования). В ином случае вам будет необходимо использовать ключевое слово <code>base64</code> перед вставкой base64-кодированных бинарных данных. Дополнительную информацию о MIME типах вы сможете найти <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">здесь</a> и <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">здесь</a>.</p>
+<p>Если данные представляют собой какую-либо текстовую информацию, вы можете просто вставить эту текстовую строку в Data URL (используя соответствующие для типа данных сущности и знаки экранирования). В ином случае вам будет необходимо использовать ключевое слово <code>base64</code> перед вставкой base64-кодированных бинарных данных. Дополнительную информацию о MIME типах вы сможете найти <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types">здесь</a> и <a href="/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">здесь</a>.</p>
 
 <p>Несколько примеров:</p>
 
@@ -80,7 +80,7 @@ bash -c "echo -n hello`|base64"
 <pre>data:text/html,lots of text...&lt;p&gt;&lt;a name%3D"bottom"&gt;bottom&lt;/a&gt;?arg=val
 </pre>
 
-<p>результатом декодирования которого будет HTML строка:</p>
+<p>результатом декодирования которого будет HTML строка:</p>
 
 <pre>lots of text...&lt;p&gt;&lt;a name="bottom"&gt;bottom&lt;/a&gt;?arg=val
 </pre>
@@ -99,7 +99,7 @@ bash -c "echo -n hello`|base64"
  <p>В связи с неопределённостью типа сегмента данных в Data URL, строка параметров (характерные для страницы параметры, представляющиеся в виде <code>&lt;url&gt;?parameter-data</code>), добавленная к сегменту данных будет рассматриваться, как часть этих данных.</p>
  </dd>
  <dt>Проблемы с безопасностью</dt>
- <dd>Несколько проблем с безопасностью (например: фишинг) связаны с Data URL и переходом по ним из корневого контекста документа. Чтобы избавиться от этих проблем, переход по URI, начинающихся со схемы <code>data://</code>, из корневого контекста документа перестал быть возможен в Firefox, начиная с версии 59 (и начиная с версии 58 в Nightly/Beta вариантах браузера). Надеемся, что остальные браузеры так же последуют этому примеру. Для дополнительной информации смотрите <a href="https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-58/">Blocking Top-Level Navigations to data URLs for Firefox 58</a>.</dd>
+ <dd>Несколько проблем с безопасностью (например: фишинг) связаны с Data URL и переходом по ним из корневого контекста документа. Чтобы избавиться от этих проблем, переход по URI, начинающихся со схемы <code>data://</code>, из корневого контекста документа перестал быть возможен в Firefox, начиная с версии 59 (и начиная с версии 58 в Nightly/Beta вариантах браузера). Надеемся, что остальные браузеры так же последуют этому примеру. Для дополнительной информации смотрите <a href="https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-58/">Blocking Top-Level Navigations to data URLs for Firefox 58</a>.</dd>
 </dl>
 
 <h2 id="Спецификации">Спецификации</h2>

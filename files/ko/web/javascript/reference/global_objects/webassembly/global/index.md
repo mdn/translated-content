@@ -9,38 +9,36 @@ tags:
 browser-compat: javascript.builtins.WebAssembly.Global
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 ---
-{{JSRef}} **`WebAssembly.Global`** 객체는 전역 변수 인스턴스를 나타내며 JavaScript 및 하나 이상의 {{jsxref("WebAssembly.Module")}} 인스턴스에서 가져 오거나 내보낼 수 있습니다. 이렇게하면 여러 모듈을 동적으로 연결할 수 있습니다.
+{{JSRef}} **`WebAssembly.Global`** 객체는 전역 변수 인스턴스를 나타내며 JavaScript 및 하나 이상의 {{jsxref("WebAssembly.Module")}} 인스턴스에서 가져오거나 내보낼 수 있습니다. 이렇게 하면 여러 모듈을 동적으로 연결할 수 있습니다.
 
 ## 생성자
 
-- [`WebAssembly.Global()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
-  - : Creates a new `Global` object.
+- [`WebAssembly.Global()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
+  - : 새로운 `Global` 객체를 생성합니다.
 
 ## 전역 인스턴스
 
-All `Global` instances inherit from the `Global()` constructor's prototype object — this can be modified to affect all `Global` instances.
+모든 `Global` 인스턴스는 `Global()` 생성자의 프로토타입 객체에서 상속합니다. 모든 `Global` 인스턴스에 영향을 미치도록 수정할 수 있습니다.
 
 ### 인스턴스 속성
 
 - `Global.prototype.constructor`
-  - : Returns the function that created this object's instance. By default this is the {{jsxref("WebAssembly.Global()")}} constructor.
+  - : 이 객체의 인스턴스를 생성한 함수를 반환합니다. 기본적으로 이것은 {{jsxref("WebAssembly.Global()")}} 생성자입니다.
 - `Global.prototype[@@toStringTag]`
-  - : The initial value of the [@@toStringTag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the String value "WebAssembly.Global".
+  - : [@@toStringTag](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 프로퍼티의 초기값은 문자열 값 "WebAssembly.Global" 입니다.
 - `Global.prototype.value`
-  - : The value contained inside the global variable — this can be used to directly set and get the global's value.
+  - : 전역 변수 내부에 포함된 값 - 전역 값을 직접 설정하고 가져오는 데 사용할 수 있습니다.
 
 ### 인스턴스 메서드
 
 - `Global.prototype.valueOf()`
-  - : Old-style method that returns the value contained inside the global variable.
+  - : 전역 변수 내부에 포함된 값을 반환하는 구식 메소드입니다.
 
 ## Examples
 
 다음 예제에서는 `WebAssembly.Global()` 생성자를 사용하여 만드는 새 전역 인스턴스를 보여줍니다. 값이 0 인 변경 가능한 `i32` 유형으로 정의됩니다.
 
-The value of the global is then changed, first to `42` using the `Global.value` property, and then to 43 using the `incGlobal()` function exported out of the `global.wasm` module (this adds 1 to whatever value is given to it and then returns the new value).
-
-그런 다음 `global.value` 속성을 사용하여 `42`까지 전역 값을 변경 한 다음 `global.wasm` 모듈에서 내 보낸 `incGlobal()` 함수를 사용하여 43으로 변경합니다.(이것은 값이 주어진 값에 1을 더한 다음 새 값을 반환합니다.)
+먼저 `Global.value` 속성을 사용하여 '42'로 전역 값이 변경되고, `global.wasm` 모듈에서 내보낸 `incGlobal()` 함수를 사용하여 43으로 변경됩니다. (이 함수는 주어진 값에 1을 더한 다음 새 값을 반환합니다).
 
 ```js
 const output = document.getElementById('output');
@@ -67,7 +65,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });
 ```
 
-<div class="note"><p><strong>Note</strong>: GitHub에서 실행중인 예제(<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a>)를 볼 수 있습니다. <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>도 참조하십시오.</p></div>
+<div class="note"><p><strong>Note</strong>: GitHub에서 실행 중인 예제(<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a>)를 볼 수 있습니다. <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>도 참조하십시오.</p></div>
 
 ## Specifications
 

@@ -15,17 +15,19 @@ original_slug: Glossaire/SDP
 
 Voici un message SDP typique :
 
-       v=0
-       o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
-       s=
-       c=IN IP4 host.anywhere.com
-       t=0 0
-       m=audio 49170 RTP/AVP 0
-       a=rtpmap:0 PCMU/8000
-       m=video 51372 RTP/AVP 31
-       a=rtpmap:31 H261/90000
-       m=video 53000 RTP/AVP 32
-       a=rtpmap:32 MPV/90000
+```
+v=0
+o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
+s=
+c=IN IP4 host.anywhere.com
+t=0 0
+m=audio 49170 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+m=video 51372 RTP/AVP 31
+a=rtpmap:31 H261/90000
+m=video 53000 RTP/AVP 32
+a=rtpmap:32 MPV/90000
+```
 
 SDP n'est jamais employé seul, mais des protocoles comme {{Glossary("RTP")}} et {{Glossary("RTSP")}} l'utilisent. SDP est également un composant de {{Glossary("WebRTC")}}, ce dernier se servant de SDP pour décrire une session.
 
@@ -34,4 +36,4 @@ SDP n'est jamais employé seul, mais des protocoles comme {{Glossary("RTP")}} et
 ### Culture générale
 
 - [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
-- {{Interwiki("wikipedia", "Session Description Protocol")}} sur Wikipédia
+- [SDP](https://fr.wikipedia.org/wiki/Session_Description_Protocol) sur Wikipédia

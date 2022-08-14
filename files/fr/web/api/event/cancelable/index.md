@@ -19,7 +19,9 @@ La plupart des événements natifs du navigateur qui peuvent être annulés sont
 
 ## Syntaxe
 
-    bool = event.cancelable
+```js
+bool = event.cancelable
+```
 
 - Le résultat est un `booléen` qui est `true` (_vrai_) si l'événement peut être annulé.
 
@@ -42,8 +44,6 @@ function preventScrollWheel(event) {
 
 document.addEventListener('wheel', preventCancelableEvents);
 ```
-
-
 
 ## Notes
 

@@ -5,9 +5,9 @@ tags:
   - API
 translation_of: Web/API/Web_Crypto_API
 ---
-<p>{{DefaultAPISidebar("Web Crypto API")}}{{SeeCompatTable}}{{draft}}</p>
+<p>{{DefaultAPISidebar("Web Crypto API")}}{{SeeCompatTable}}</p>
 
-<p><strong>Web Crypto API</strong> – интерфейс, позволяющий использовать криптографические примитивы для построения систем, <span style="font-size: 1rem; letter-spacing: -0.00278rem;">манипулировать, хранить секретные ключи без необходимости делать доступными базовые биты ключа для JavaScript.</span></p>
+<p><strong>Web Crypto API</strong> – интерфейс, позволяющий использовать криптографические примитивы для построения систем, <span style="font-size: 1rem; letter-spacing: -0.00278rem;">манипулировать, хранить секретные ключи без необходимости делать доступными базовые биты ключа для JavaScript.</span></p>
 
 <p>Интерфейс открывает доступ к следующим примитивам:</p>
 
@@ -16,16 +16,16 @@ translation_of: Web/API/Web_Crypto_API
  <li><em>mac</em>, the ability to compute a message authentication code.</li>
  <li><em>sign</em> и <em>verify</em>, the ability to digitally sign a document, and to verify a signature.</li>
  <li><em>encrypt</em> и <em>decrypt</em>, the ability to encode or decode a document.</li>
- <li><em>import</em> и <em>export</em>, the ability to import a key or export a key.</li>
+ <li><em>import</em> и <em>export</em>, the ability to import a key or export a key.</li>
  <li><em>key generation</em>, the ability to create a cryptographically secure key, or key pair, without the use of base key, but using the available entropy of the local system.</li>
  <li><em>key wrapping</em> and <em>unwrapping</em>, the ability to transmit, and to receive, a key from a third party, encoded using another key, without exposing the underlying key to JavaScript.</li>
- <li><em>random</em>, способность генерировать криптографически достоверные псевдослучайные числа.</li>
+ <li><em>random</em>, способность генерировать криптографически достоверные псевдослучайные числа.</li>
 </ul>
 
 <p>Web Crypto API не решает всех проблем, которые касаются использования криптографии на Web-сайтах или приложениях:</p>
 
 <ul>
- <li>Она не заменяет "<a href="/en-US/docs/Web/Security/Same-origin_policy">с</a>обственной модели безопасности" браузера (когда на некоторых Web-сайтах используются свои собственные ключи).</li>
+ <li>Она не заменяет "<a href="/en-US/docs/Web/Security/Same-origin_policy">с</a>обственной модели безопасности" браузера (когда на некоторых Web-сайтах используются свои собственные ключи).</li>
  <li>Оно не взаимодействует со специальным аппаратным обеспечением (смарт-карты, USB-ключи или генераторы случайных чисел).</li>
 </ul>
 
@@ -33,14 +33,14 @@ translation_of: Web/API/Web_Crypto_API
 <p><strong>Внимание!</strong></p>
 
 <ul>
- <li>Само по себе использование криптографии не делает систему безопасной. Безопасность – это <strong>процесс</strong> постоянной оценки рисков, возникающих в контексте эксплуатации системы. Контекст, как и риски, изменяются с течением времени.</li>
+ <li>Само по себе использование криптографии не делает систему безопасной. Безопасность – это <strong>процесс</strong> постоянной оценки рисков, возникающих в контексте эксплуатации системы. Контекст, как и риски, изменяются с течением времени.</li>
  <li>When dealing with security, the whole <strong>system</strong> must be considered. In the case of the Web Crypto API, Web developers shouldn't consider only the security of the script, but the security of the connection to the server, because using Web Crypto over HTTP is not secure. The overall security can't be stronger than the security of the weakest part of the overall system.</li>
 </ul>
 </div>
 
 <h2 id="Интерфейсы">Интерфейсы</h2>
 
-<p>Некоторые браузеры реализовали интерфейс {{domxref("Crypto")}}, но сделали это недостаточно точно или без должного уровня безопасности. Чтобы избежать конфуза с модулем {{domxref("Crypto")}} из пакета Node, методы и свойства интерфейса были перенесены в новый интерфейс: {{domxref("SubtleCrypto")}}. Свойство {{domxref("Crypto.subtle")}} даёт доступ к объекту, реализующему Web Crypto API.</p>
+<p>Некоторые браузеры реализовали интерфейс {{domxref("Crypto")}}, но сделали это недостаточно точно или без должного уровня безопасности. Чтобы избежать конфуза с модулем {{domxref("Crypto")}} из пакета Node, методы и свойства интерфейса были перенесены в новый интерфейс: {{domxref("SubtleCrypto")}}. Свойство {{domxref("Crypto.subtle")}} даёт доступ к объекту, реализующему Web Crypto API.</p>
 
 <h2 id="Использование">Использование</h2>
 
@@ -69,4 +69,4 @@ translation_of: Web/API/Web_Crypto_API
 
 <p>{{Compat("api.Crypto")}}</p>
 
-<div id="compat-mobile"> </div>
+<div id="compat-mobile"> </div>

@@ -37,7 +37,7 @@ como não extensível.
 
 ### Adicionando uma nova propriedade para um objeto não extensível
 
-No [modo strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode), 
+No [modo strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode),
 a tentativa de adicionar uma nova propriedade em um objeto não extensível
 lança um `TypeError`. No [modo sloppy](/pt-BR/docs/Glossary/Sloppy_mode), a adição da propriedade "x" é
 silenciosamente ignorada.

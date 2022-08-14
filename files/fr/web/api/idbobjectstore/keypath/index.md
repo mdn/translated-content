@@ -20,7 +20,9 @@ Si cette propriété vaut `null` l'application doit fournir une clé pour chaque
 
 ## Syntaxe
 
-    var mykeyPath = objectStore.keyPath;
+```js
+var mykeyPath = objectStore.keyPath;
+```
 
 ### Valeur
 

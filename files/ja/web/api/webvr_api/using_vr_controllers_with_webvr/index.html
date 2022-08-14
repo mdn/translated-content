@@ -18,9 +18,9 @@ translation_of: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 
 <h2 id="The_WebVR_API">The WebVR API</h2>
 
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> は初期段階ではあるが、開発者がウェブベースのバーチャルリアリティー経験を生み出すことのできるとても興味深いウェブの新しい機能です。コンピュータとつながっているVRヘッドセット（VRディスプレイ）へのアクセスを与えることで，ディスプレイをスタートしたり、ストップする操作ができます．動きのデータ（例：方向や位置）へアクセスして得られたデータは，各アニメーションループのフレームごとにディスプレイをアップデートするためなどに使用されます。</p>
+<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> は初期段階ではあるが、開発者がウェブベースのバーチャルリアリティー経験を生み出すことのできるとても興味深いウェブの新しい機能です。コンピュータとつながっているVRヘッドセット（VRディスプレイ）へのアクセスを与えることで，ディスプレイをスタートしたり、ストップする操作ができます．動きのデータ（例：方向や位置）へアクセスして得られたデータは，各アニメーションループのフレームごとにディスプレイをアップデートするためなどに使用されます。</p>
 
-<p>この記事を読む前提として、Web VR API の基礎についてすでに知っていることを想定しています。 — もしまだ<a href="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a>にを読んでいない場合には、まずはそちらを読んでみましょう．その記事の中では，ブラウザ側がハードウェアの設定をサポートしたり，設定を要求したりすることについて詳しく説明しています。</p>
+<p>この記事を読む前提として、Web VR API の基礎についてすでに知っていることを想定しています。 — もしまだ<a href="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a>にを読んでいない場合には、まずはそちらを読んでみましょう．その記事の中では，ブラウザ側がハードウェアの設定をサポートしたり，設定を要求したりすることについて詳しく説明しています。</p>
 
 <h2 id="The_Gamepad_API">The Gamepad API</h2>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/WebVR_API/Using_VR_controllers_with_WebVR
 
 <ul>
  <li>６軸に対して自由度を持つコントローラーは位置と方向のデータを取得することができる。具体的には、コントローラーがVRシーンや動きや回転のある物体を操作することができる。例えば、HTC VIVEのコントローラーがそれにあたる。</li>
- <li>３軸に対して自由度を持つコントローラーは、位置データは取得できないが方向のデータを取得することができる．例えば Google  Daydreamのコントローラーである。具体的には、3D空間で異なる物体をレーザーポインターのように指し示すことはできるが、3D空間を動き回ることはできない。</li>
+ <li>３軸に対して自由度を持つコントローラーは、位置データは取得できないが方向のデータを取得することができる．例えば Google  Daydreamのコントローラーである。具体的には、3D空間で異なる物体をレーザーポインターのように指し示すことはできるが、3D空間を動き回ることはできない。</li>
 </ul>
 
 <h2 id="コントローラーへのアクセス方法">コントローラーへのアクセス方法</h2>
@@ -58,7 +58,7 @@ if(navigator.getVRDisplays &amp;&amp; navigator.getGamepads) {
   info.textContent = 'WebVR API and/or Gamepad API not supported by this browser.'
 }</pre>
 
-<p>ここでは、<code>initialRun</code>　というトラッキングの変数を使います。これは、「このページを初めてロードした」ことを示します。この点については、あとで詳しく述べます。次に、{{domxref("Navigator.getVRDisplays()")}} と {{domxref("Navigator.getGamepads()")}}メソッドがあるかないかをチェックして、WebVR と Gamepad APIs がサポートされているかどうかを検知します。もし、サポートされていれば、検知するプロセスをOFFにするために、カスタム機能である <code>reportDisplays()</code>    を実行します。  <code>reportDisplays()</code>   は、以下のような構成になっています。</p>
+<p>ここでは、<code>initialRun</code>　というトラッキングの変数を使います。これは、「このページを初めてロードした」ことを示します。この点については、あとで詳しく述べます。次に、{{domxref("Navigator.getVRDisplays()")}} と {{domxref("Navigator.getGamepads()")}}メソッドがあるかないかをチェックして、WebVR と Gamepad APIs がサポートされているかどうかを検知します。もし、サポートされていれば、検知するプロセスをOFFにするために、カスタム機能である <code>reportDisplays()</code>    を実行します。  <code>reportDisplays()</code>   は、以下のような構成になっています。</p>
 
 <pre class="brush: js notranslate">function reportDisplays() {
   navigator.getVRDisplays().then(function(displays) {
@@ -89,7 +89,7 @@ if(navigator.getVRDisplays &amp;&amp; navigator.getGamepads) {
 
 <h3 id="ゲームコントローラーの情報を取得">ゲームコントローラーの情報を取得</h3>
 
-<p><code>reportGamepads()</code> 関数は、このような構成になっています。</p>
+<p><code>reportGamepads()</code> 関数は、このような構成になっています。</p>
 
 <pre class="brush: js notranslate">function reportGamepads() {
     var gamepads = navigator.getGamepads();
@@ -162,7 +162,7 @@ window.addEventListener('gamepaddisconnected', function(e) {
 
 <p>実際のWebVRのデモで使用されたGamepad APIを見てみましょう。このデモは<a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-controller-example">raw-webgl-controller-example</a> (<a href="https://mdn.github.io/webvr-tests/raw-webgl-controller-example/">see it live here also</a>).で見ることができます。</p>
 
-<p>私達の<a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">raw-webgl-example</a> (詳しくは <a href="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a> を御覧ください。)と同じ方法で、このデモにおいても回転する3D立方体をレンダリングしています。また、これをVRディスプレイへ投影することもできます。</p>
+<p>私達の<a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example">raw-webgl-example</a> (詳しくは <a href="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a> を御覧ください。)と同じ方法で、このデモにおいても回転する3D立方体をレンダリングしています。また、これをVRディスプレイへ投影することもできます。</p>
 
 <p>唯一の違いとしては、VRディスプレイへ投影モードでは、VRコントローラーを使って立方体を動かすことができます。（オリジナルのデモ動画では、VRヘッドセットを動かすことで、立方体を動かすことができる。）</p>
 
@@ -170,7 +170,7 @@ window.addEventListener('gamepaddisconnected', function(e) {
 
 <h3 id="コントローラーデータへのアクセス">コントローラーデータへのアクセス</h3>
 
-<p><code>drawVRScene()</code> 関数についてのコードの一部です。</p>
+<p><code>drawVRScene()</code> 関数についてのコードの一部です。</p>
 
 <pre class="brush: js notranslate">var gamepads = navigator.getGamepads();
 var gp = gamepads[0];
@@ -184,7 +184,7 @@ if(gp) {
   }
 }</pre>
 
-<p> {{domxref("Navigator.getGamepads")}}を利用して、コントローラーが接続されました。また <code>gp</code> 変数の中に最初に認識したコントローラーを保存します。 デモでは、コントローラーを一つしか使用しないので、その他のコントローラーは無視します。</p>
+<p> {{domxref("Navigator.getGamepads")}}を利用して、コントローラーが接続されました。また <code>gp</code> 変数の中に最初に認識したコントローラーを保存します。 デモでは、コントローラーを一つしか使用しないので、その他のコントローラーは無視します。</p>
 
 <p>The next thing we do is to get the {{domxref("GamepadPose")}} object for the controller stored in gpPose (by querying {{domxref("Gamepad.pose")}}), and also store the current gamepad position and orientation for this frame in variables so they are easuy to access later. We also display the post stats for this frame in the DOM using the <code>displayPoseStats()</code> function. All of this is only done if <code>gp</code> actually has a value (if a gamepad is connected), which stops the demo erroring if we don't have our gamepad connected.</p>
 
@@ -216,7 +216,7 @@ if(gp) {
 
 <h3 id="コントローラーの姿勢データの表示">コントローラーの姿勢データの表示</h3>
 
-<p><code>displayPoseStats()</code> 関数では、{{domxref("GamepadPose")}} オブジェクトのうちの表示したいすべての情報を取得することができます。そして、そのようなデータを表示するためのデモの中に存在するUI パネルに表示します。</p>
+<p><code>displayPoseStats()</code> 関数では、{{domxref("GamepadPose")}} オブジェクトのうちの表示したいすべての情報を取得することができます。そして、そのようなデータを表示するためのデモの中に存在するUI パネルに表示します。</p>
 
 <pre class="brush: js notranslate">function displayPoseStats(pose) {
   var pos = pose.position;

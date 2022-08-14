@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Dead_object
 
 ## Message
 
-    TypeError: can't access dead object
+```
+TypeError: can't access dead object
+```
 
 ## Type d'erreur
 
@@ -48,4 +50,4 @@ catch (e) {
 - [Que signifie “can’t access dead object” ? (en anglais)](https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/)
 - [Les causes principales des fuites mémoire dans les extensions](/fr/docs/Extensions/Common_causes_of_memory_leaks_in_extensions)
 - [`Components.utils`](/fr/docs/Components.utils)
-- [Compartiments zombies](/en-US/docs/Mozilla/Zombie_compartments#Zombie_compartments)
+- [Compartiments zombies](/fr/docs/Mozilla/Zombie_compartments#Zombie_compartments)

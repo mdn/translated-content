@@ -5,11 +5,11 @@ translation_of: Web/API/Element/innerHTML
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>Свойство интерфейса {{domxref("Element")}} <strong><code>innerHTML</code></strong> устанавливает или получает HTML или XML разметку дочерних элементов.</p>
+<p>Свойство интерфейса {{domxref("Element")}} <strong><code>innerHTML</code></strong> устанавливает или получает HTML или XML разметку дочерних элементов.</p>
 
-<div class="note"><strong>Примечание: </strong>Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы <code>(&amp;), (&lt;),</code> или <code>(&gt;)</code>, <code>innerHTML</code> вернёт эти символы как &amp;amp, &amp;lt и &amp;gt соответственно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов. </div>
+<div class="note"><strong>Примечание: </strong>Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы <code>(&amp;), (&lt;),</code> или <code>(&gt;)</code>, <code>innerHTML</code> вернёт эти символы как &amp;amp, &amp;lt и &amp;gt соответственно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов. </div>
 
-<p> Чтобы вставить HTML в документ, не меняя содержимое элемента, используйте {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
+<p> Чтобы вставить HTML в документ, не меняя содержимое элемента, используйте {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -20,20 +20,20 @@ translation_of: Web/API/Element/innerHTML
 
 <h3 id="Value">Value</h3>
 
-<p>Строка {{domxref("DOMString")}}, которая содержит части HTML разметки. Установка значения <code>innerHTML</code> удаляет всё содержимое элемента и заменяет его на узлы, которые были разобраны как HTML, указанными в строке <var>htmlString.</var></p>
+<p>Строка {{domxref("DOMString")}}, которая содержит части HTML разметки. Установка значения <code>innerHTML</code> удаляет всё содержимое элемента и заменяет его на узлы, которые были разобраны как HTML, указанными в строке <var>htmlString.</var></p>
 
 <h3 id="Исключения">Исключения</h3>
 
 <dl>
  <dt><code>SyntaxError</code></dt>
- <dd>Возникает при попытке установить значение <code>innerHTML</code> строкой, в которой содержится неправильно сформированный HTML.</dd>
+ <dd>Возникает при попытке установить значение <code>innerHTML</code> строкой, в которой содержится неправильно сформированный HTML.</dd>
  <dt><code>NoModificationAllowedError</code></dt>
- <dd>Возникает при попытке вставить HTML в узел, у которого родителем является {{domxref("Document")}}.</dd>
+ <dd>Возникает при попытке вставить HTML в узел, у которого родителем является {{domxref("Document")}}.</dd>
 </dl>
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>Это свойство предоставляет простой способ полностью заменить содержимое элемента. Например, все содержимое элемента body может быть удалено:</p>
+<p>Это свойство предоставляет простой способ полностью заменить содержимое элемента. Например, все содержимое элемента body может быть удалено:</p>
 
 <pre class="brush: js">document.body.innerHTML = "";  // Заменяет содержимое тела пустой строкой.</pre>
 
@@ -58,18 +58,18 @@ el.innerHTML = name; // безвредный в этом случае
 name = "&lt;script&gt;alert('Я Джон в раздражающем alert!')&lt;/script&gt;";
 el.innerHTML = name; // безвредный в этом случае</pre>
 
-<p>Хотя это может выглядеть как атака {{interwiki("wikipedia", "cross-site scripting")}}, результат безопасный. HTML5 указывает на тег {{HTMLElement("script")}} вставленный через InnerHTM <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">должен не выполнится.</a></p>
+<p>Хотя это может выглядеть как атака {{interwiki("wikipedia", "cross-site scripting")}}, результат безопасный. HTML5 указывает на тег {{HTMLElement("script")}} вставленный через InnerHTM <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">должен не выполнится.</a></p>
 
-<p>Однако, есть способы запустить JavaScript без использования элементов {{HTMLElement("script")}}, так что есть риск безопасности всякий раз, когда вы используете innerHTML для набора строк, над которыми у вас нет контроля. Например:</p>
+<p>Однако, есть способы запустить JavaScript без использования элементов {{HTMLElement("script")}}, так что есть риск безопасности всякий раз, когда вы используете innerHTML для набора строк, над которыми у вас нет контроля. Например:</p>
 
 <pre class="brush: js">const name = "&lt;img src='x' onerror='alert(1)'&gt;";
 el.innerHTML = name; // показывает alert</pre>
 
-<p>По этой причине,  рекомендуется не использовать innerHTML при вставке обычного текста; вместо этого, используйте {{domxref("node.textContent")}}. Это не интерпретирует отправленный контент как HTML, но вместо этого он вставляется как не обработанный текст. </p>
+<p>По этой причине,  рекомендуется не использовать innerHTML при вставке обычного текста; вместо этого, используйте {{domxref("node.textContent")}}. Это не интерпретирует отправленный контент как HTML, но вместо этого он вставляется как не обработанный текст. </p>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Этот пример использует <code>innerHTML</code> для создания механизма логирования сообщений внутри элемента на странице.</p>
+<p>Этот пример использует <code>innerHTML</code> для создания механизма логирования сообщений внутри элемента на странице.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -83,7 +83,7 @@ el.innerHTML = name; // показывает alert</pre>
 
 log("Регистрация событий мыши внутри этого контейнера...");</pre>
 
-<p>Функция <code>log()</code> создаёт сообщение получая текущее время из объекта {{jsxref("Date")}}, используя {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, и соединяя строку с временной меткой с текстовым сообщением. Затем сообщение добавляется в элемент с классом <code>"log"</code>.</p>
+<p>Функция <code>log()</code> создаёт сообщение получая текущее время из объекта {{jsxref("Date")}}, используя {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, и соединяя строку с временной меткой с текстовым сообщением. Затем сообщение добавляется в элемент с классом <code>"log"</code>.</p>
 
 <p>Мы добавляем второй метод, который логирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, {{event("mousedown")}}, {{event("click")}}, и {{event("mouseenter")}}):</p>
 
@@ -112,7 +112,7 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
   &lt;div class="log"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{HTMLElement("div")}} c классом <code>"box"</code> – просто контейнер для, который даст содержимому пространство вокруг себя. <code>&lt;div&gt;</code> с классом <code>"log"</code> является контейнером для логирования текста внутри себя.</p>
+<p>{{HTMLElement("div")}} c классом <code>"box"</code> – просто контейнер для, который даст содержимому пространство вокруг себя. <code>&lt;div&gt;</code> с классом <code>"log"</code> является контейнером для логирования текста внутри себя.</p>
 
 <h3 id="CSS">CSS</h3>
 
@@ -147,6 +147,6 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 <ul>
  <li><a class="external" href="http://innerdom.sourceforge.net/"><code>innerDOM</code></a> - Для тех, кто хочет придерживаться стандартов, вот один набор функций JavaScript, предлагающий сериализовать или разобрать XML так, чтобы установить содержимое элемента, определённое как строка(и) через DOM или получить содержимое элемента, полученное из DOM как строку.</li>
  <li>{{domxref("Element.insertAdjacentHTML")}} - <span id="result_box" lang="ru"><span>Альтернатива для innerHTML, позволяющая добавлять новый HTML</span></span>.</li>
- <li><a class="external" href="https://github.com/ndebeiss/jsxmlsaxparser">jssaxparser</a> -  Более надёжным (хотя и более тяжёлым) решением, чем innerDOM (поддерживает парсинг с пространствами имён, однокавычками атрибутов, секциями CDATA и т.д.), является этот SAX2 парсер при использовании с его обработчиком DOM-контента. (Предлагает строку на DOM; DOM на строку <a href="https://app.assembla.com/spaces/brettz9/bize6mebSr3B31ab7jnrAJ/source/DOMToString">значительно проще</a>).</li>
+ <li><a class="external" href="https://github.com/ndebeiss/jsxmlsaxparser">jssaxparser</a> -  Более надёжным (хотя и более тяжёлым) решением, чем innerDOM (поддерживает парсинг с пространствами имён, однокавычками атрибутов, секциями CDATA и т.д.), является этот SAX2 парсер при использовании с его обработчиком DOM-контента. (Предлагает строку на DOM; DOM на строку <a href="https://app.assembla.com/spaces/brettz9/bize6mebSr3B31ab7jnrAJ/source/DOMToString">значительно проще</a>).</li>
  <li>Эффективность соображений: <a class="external" href="http://www.quirksmode.org/dom/innerhtml.html">quirksmode.</a></li>
 </ul>

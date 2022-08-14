@@ -25,7 +25,7 @@ original_slug: Web/API/Streams_API/컨셉
 
 <p>The chunks placed in a stream are said to be <strong>enqueued</strong> — this means they are waiting in a queue ready to be read. An <strong>internal queue</strong> keeps track of the chunks that have not yet been read (see the Internal queues and queueing strategies section below).</p>
 
-<p>The chunks inside the stream are read by a <strong>reader</strong> — this processes the data one chunk at a time, allowing you to do whatever kind of operation you want to do on it. The reader plus the other processing code that goes along with it is called a <strong>consumer</strong>.</p>
+<p>The chunks inside the stream are read by a <strong>reader</strong> — this processes the data one chunk at a time, allowing you to do whatever kind of operation you want to do on it. The reader plus the other processing code that goes along with it is called a <strong>consumer</strong>.</p>
 
 <p>There is also a construct you’ll use called a <strong>controller</strong> — each reader has an associated controller that allows you to control the stream (for example, to cancel it if wished).</p>
 
@@ -86,7 +86,7 @@ original_slug: Web/API/Streams_API/컨셉
 
 <p>An important concept in streams is <strong>backpressure</strong> — this is the process by which a single stream or a pipe chain regulates the speed of reading/writing. When a stream later in the chain is still busy and isn't yet ready to accept more chunks, it sends a signal backwards through the chain to tell earlier transform streams (or the original source) to slow down delivery as appropriate so that you don't end up with a bottleneck anywhere.</p>
 
-<p>To use backpressure in a ReadableStream, we can ask the controller for the chunk size  desired by the consumer by querying the {{domxref("ReadableStreamDefaultController.desiredSize")}} attribute on the controller. If it is too low, our ReadableStream can tell its underlying source to stop sending data, and we backpressure along the stream chain.</p>
+<p>To use backpressure in a ReadableStream, we can ask the controller for the chunk size  desired by the consumer by querying the {{domxref("ReadableStreamDefaultController.desiredSize")}} attribute on the controller. If it is too low, our ReadableStream can tell its underlying source to stop sending data, and we backpressure along the stream chain.</p>
 
 <p>If later on the consumer again wants to receive data, we can use the pull method in the stream creation to tell our underlying source to feed our stream with data.</p>
 

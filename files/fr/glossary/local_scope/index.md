@@ -13,4 +13,4 @@ La portée locale est une caractéristique des {{glossary("Variable","variables"
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Portée (informatique)", "Portée")}} sur Wikipédia
+- [Portée](https://fr.wikipedia.org/wiki/Port%C3%A9e_(informatique)) sur Wikipédia

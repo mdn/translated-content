@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
  <li>순회(traverse)되는 배열 객체</li>
 </ol>
 
-<p><code>thisArg</code> 매개변수가 <code>filter</code>에 제공된 경우, 호출될 때 그 값은 <code>callback</code>의 <code>this</code> 값으로 전달됩니다.  그 이외에, <code>undefined</code>값도 <code>callback</code>의 <code>this</code> 값으로 쓰기 위해 전달됩니다. 결국 <code>callback</code>에 의해 관찰될 수 있는 <code>this</code> 값은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/this"><code>this</code>를 결정하는 함수의 평소 규칙</a>에 따라 결정됩니다.</p>
+<p><code>thisArg</code> 매개변수가 <code>filter</code>에 제공된 경우, 호출될 때 그 값은 <code>callback</code>의 <code>this</code> 값으로 전달됩니다.  그 이외에, <code>undefined</code>값도 <code>callback</code>의 <code>this</code> 값으로 쓰기 위해 전달됩니다. 결국 <code>callback</code>에 의해 관찰될 수 있는 <code>this</code> 값은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/this"><code>this</code>를 결정하는 함수의 평소 규칙</a>에 따라 결정됩니다.</p>
 
 <p><code>filter()</code>는 호출되는 배열을 변화시키지(mutate) 않습니다.</p>
 
@@ -190,32 +190,9 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']</code></pre>
   };
 }</pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.20', 'Array.prototype.filter')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>초기 정의. JavaScript 1.6에서 구현됨.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.filter', 'Array.prototype.filter')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

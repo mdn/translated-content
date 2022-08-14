@@ -34,7 +34,7 @@ translation_of: Web/API/MediaStreamTrack
  <dt>{{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}</dt>
  <dd>오디오 트랙인 경우 <code>"audio"</code>, 비디오 트랙인 경우 <code>"video"</code>인 {{domxref("DOMString")}}을 반환합니다. 트랙이 소스에서 분리된 경우 변하지 않습니다.</dd>
  <dt>{{domxref("MediaStreamTrack.label")}} {{readonlyInline}}</dt>
- <dd>트랙 소스에 대해 사용자 에이전트가 할당한 식별자를 담은 {{domxref("DOMString")}}을 반환합니다. 식별자의 예시는 <code>"internal microphone"</code>입니다. 빈 문자열일 수 있으며, 연결된 소스가 없는 경우 계속 빈 문자열로 남아 있습니다.  트랙이 소스에서 분리되더라도 식별자는 변하지 않습니다.</dd>
+ <dd>트랙 소스에 대해 사용자 에이전트가 할당한 식별자를 담은 {{domxref("DOMString")}}을 반환합니다. 식별자의 예시는 <code>"internal microphone"</code>입니다. 빈 문자열일 수 있으며, 연결된 소스가 없는 경우 계속 빈 문자열로 남아 있습니다.  트랙이 소스에서 분리되더라도 식별자는 변하지 않습니다.</dd>
  <dt>{{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}</dt>
  <dd>기술적인 문제로 인해 트랙이 미디어 데이터를 제공할 수 없음을 나타내는 불리언 값을 반환합니다.
  <div class="note"><strong>참고:</strong> 일반적인 "음소거" 기능은 <code>enabled</code>를 <code>false</code>로 바꿔서 구현할 수 있으며, 음소거 해제는 <code>enabled</code>를 다시 <code>true</code>로 바꾸면 됩니다.</div>
@@ -99,33 +99,11 @@ translation_of: Web/API/MediaStreamTrack
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediastreamtrack', 'MediaStreamTrack')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("WebRTC Identity", "#isolated-track", "Isolated tracks")}}</td>
-   <td>{{Spec2("WebRTC Identity")}}</td>
-   <td>Additional properties for isolated track support</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div>
-
-
-<p>{{Compat("api.MediaStreamTrack")}}</p>
-</div>
+{{Compat("api.MediaStreamTrack")}}
 
 <h2 id="같이_보기">같이 보기</h2>
 

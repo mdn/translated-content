@@ -49,7 +49,7 @@ translation_of: WebAssembly/Rust_to_wasm
 
 <p>Node.js と npm を取得するために、<a href="https://www.npmjs.com/get-npm">Get npm!</a> ページに行き、手順に従ってください。バージョンの選択に関しては、好きなバージョンを選択してください。このチュートリアルはバージョンに特有ではありません。</p>
 
-<p>npm アカウントを取得するために、<a href="https://www.npmjs.com/signup">npm signup page</a> に行き、フォームに記入してください。</p>
+<p>npm アカウントを取得するために、<a href="https://www.npmjs.com/signup">npm signup page</a> に行き、フォームに記入してください。</p>
 
 <p>次に、コマンドラインで <code>npm adduser</code> を実行してください。</p>
 
@@ -159,7 +159,7 @@ pub fn greet(name: &amp;str) {
 
 <p>再び <code>#[wasm_bindgen]</code> アトリビュートが目に入ります。この場合、<code>extern</code> ブロックではなく <code>fn</code> を改変しています。これは JavaScript がこの Rust 関数を呼び出せるようにしてほしいということを意味します。これは <code>extern</code> とは逆です。自分が必要とする関数ではなく、外の世界に渡す関数なのです。</p>
 
-<p>この関数は <code>greet</code> という名前で、引数に (<code>&amp;str</code> と書かれる) 文字列 <code>name</code> を一つ取ります。そしてそれは上の <code>extern</code> ブロックで要求した alert 関数を呼び出します。文字列を結合する <code>format!</code> マクロに呼び出しを渡します。</p>
+<p>この関数は <code>greet</code> という名前で、引数に (<code>&amp;str</code> と書かれる) 文字列 <code>name</code> を一つ取ります。そしてそれは上の <code>extern</code> ブロックで要求した alert 関数を呼び出します。文字列を結合する <code>format!</code> マクロに呼び出しを渡します。</p>
 
 <p><code>format!</code> マクロはこの場合フォーマット文字列とそこに挿入する変数の二つの引数を取ります。フォーマット文字列は <code>"Hello, {}!"</code> の部分です。それは変数が補完される <code>{}</code> を含みます。渡している変数は関数の引数 <code>name</code> なので、<code>greet("Steve")</code> と呼び出すと <code>"Hello, Steve!"</code> が見られるはずです。</p>
 
@@ -204,7 +204,7 @@ wasm-bindgen = "0.2"</pre>
  <li><code>wasm-bindgen</code> をその WebAssembly に対して実行し、WebAssembly ファイルを npm が理解できるモジュールにラップする JavaScript ファイルを生成する。</li>
  <li><code>pkg</code> ディレクトリーを作成し、その JavaScript ファイルと WebAssembly コードをそこに移動する。</li>
  <li><code>Cargo.toml</code> を読み、等価な <code>package.json</code> を生成する。</li>
- <li>(もし存在するなら) <code>README.md</code> をパッケージにコピーする。</li>
+ <li>(もし存在するなら) <code>README.md</code> をパッケージにコピーする。</li>
 </ol>
 
 <p>最終的な結果は？ npm パッケージが <code>pkg</code> ディレクトリーに生成されます。</p>
@@ -250,7 +250,7 @@ $ cd site</pre>
 
 <p>dependencies の項の <code>@</code> の後に自分自身のユーザー名を記入する必要があることに注意してください。</p>
 
-<p>次に、Webpack を設定する必要があります。<code>webpack.config.js</code> を作成し、そこに次のことを記入してください。</p>
+<p>次に、Webpack を設定する必要があります。<code>webpack.config.js</code> を作成し、そこに次のことを記入してください。</p>
 
 <pre class="brush: js">const path = require('path');
 module.exports = {

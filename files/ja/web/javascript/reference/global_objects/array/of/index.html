@@ -55,11 +55,11 @@ Array(1, 2, 3);    // [1, 2, 3]
 <pre class="brush: js notranslate">if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
-    // Or
+    // Or
     let vals = [];
-    for(let prop in arguments){
+    for(let prop in arguments){
         vals.push(arguments[prop]);
-    }
+    }
     return vals;
   }
 }

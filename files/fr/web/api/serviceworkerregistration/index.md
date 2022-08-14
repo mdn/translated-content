@@ -16,11 +16,11 @@ translation_of: Web/API/ServiceWorkerRegistration
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-The `ServiceWorkerRegistration` interface of the [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
+The `ServiceWorkerRegistration` interface of the [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
 
 The lifetime of a service worker registration is beyond that of the `ServiceWorkerRegistration` objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active `ServiceWorkerRegistration` objects.
 
-> **Note :** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+> **Note :** This feature is available in [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Properties
 
@@ -49,7 +49,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 ### Event handlers
 
 - {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/en-US/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+  - : An [`EventListener`](/fr/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Methods
 
@@ -106,8 +106,8 @@ if ('serviceWorker' in navigator) {
 
 ## See also
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Using web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)

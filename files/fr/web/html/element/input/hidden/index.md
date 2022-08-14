@@ -49,9 +49,9 @@ Comme évoqué ci-avant, les éléments `<input type="hidden"`> peuvent être ut
 
 Un usage fréquent de ces éléments est de garder un registre des données qui doivent être mises à jour dans une base de données lorsque le formulaire est envoyé. Le processus est généralement le suivant :
 
-1.  L'utilisateur édite du contenu (un billet de blog, une fiche d'un produit) en commençant par cliquer sur le bouton Éditer.
-2.  Le contenu à modifier est extrait de la base de données et est chargé dans le formulaire HTML afin que l'utilisateur puis appliquer les modifications voulues.
-3.  Après avoir éditer, l'utilisateur envoie le formulaire et les données mises à jour sont envoyées au serveur qui se charge d'appliquer cette mise à jour en base de données.
+1. L'utilisateur édite du contenu (un billet de blog, une fiche d'un produit) en commençant par cliquer sur le bouton Éditer.
+2. Le contenu à modifier est extrait de la base de données et est chargé dans le formulaire HTML afin que l'utilisateur puis appliquer les modifications voulues.
+3. Après avoir éditer, l'utilisateur envoie le formulaire et les données mises à jour sont envoyées au serveur qui se charge d'appliquer cette mise à jour en base de données.
 
 Ici, lors de la deuxième étape, on peut récupérer l'identifiant de l'enregistrement et le placer dans un champ caché du formulaire. Lorsque le formulaire est envoyé à l'étape 3, l'identifiant est automatiquement envoyé au serveur avec le contenu. L'identifiant permet alors au serveur de connaître l'enregistrement de la base de données qui doit être mis à jour.
 

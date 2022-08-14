@@ -18,4 +18,4 @@ Netscape a contribué à rendre l'expérience {{glossary("World Wide Web","Web")
 
 ### **Culture générale**
 
-- {{Interwiki("wikipedia", "Netscape Navigator")}} sur Wikipédia
+- [Netscape Navigator](https://fr.wikipedia.org/wiki/Netscape_Navigator) sur Wikipédia

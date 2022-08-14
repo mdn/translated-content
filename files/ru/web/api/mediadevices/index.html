@@ -17,17 +17,17 @@ translation_of: Web/API/MediaDevices
 ---
 <div>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">Интерфейс <strong><code>MediaDevices</code></strong> предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера, микрофон, а также к совместному использованию экрана. В сущности, он позволяет получать доступ к любому устройству медиа-данных.</span></p>
+<p><span class="seoSummary">Интерфейс <strong><code>MediaDevices</code></strong> предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера, микрофон, а также к совместному использованию экрана. В сущности, он позволяет получать доступ к любому устройству медиа-данных.</span></p>
 
 <h2 id="Свойства">Свойства</h2>
 
-<p><em>Наследует свойство родителя {{domxref("EventTarget")}}.</em></p>
+<p><em>Наследует свойство родителя {{domxref("EventTarget")}}.</em></p>
 
 <h3 id="Handlers">Обработчики событий</h3>
 
 <dl>
  <dt>{{ domxref("MediaDevices.ondevicechange") }}</dt>
- <dd>Это обработчик события {{event("devicechange")}}. Это событие доставляется в объект <code>MediaDevices</code> когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.</dd>
+ <dd>Это обработчик события {{event("devicechange")}}. Это событие доставляется в объект <code>MediaDevices</code> когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
@@ -38,11 +38,11 @@ translation_of: Web/API/MediaDevices
  <dt>{{ domxref("EventTarget.addEventListener()") }}</dt>
  <dd>Регистрирует обработчик событий для определённого типа событий.</dd>
  <dt>{{ domxref("MediaDevices.enumerateDevices()") }}</dt>
- <dd>Получает массив информации о медиа-устройстве ввода-вывода.</dd>
+ <dd>Получает массив информации о медиа-устройстве ввода-вывода.</dd>
  <dt>{{domxref("MediaDevices.getSupportedConstraints()")}}</dt>
- <dd>Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}, чтобы узнать больше об ограничениях и их использовании.</dd>
+ <dd>Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}, чтобы узнать больше об ограничениях и их использовании.</dd>
  <dt>{{ domxref("MediaDevices.getUserMedia()") }}</dt>
- <dd>С разрешения пользователя (у пользователя будет запрошено разрешение) включает камеру, микрофон или общий доступ к экрану и предоставляет {{domxref("MediaStream")}}, содержащий входящую видео- и/или звуковую дорожку. </dd>
+ <dd>С разрешения пользователя (у пользователя будет запрошено разрешение) включает камеру, микрофон или общий доступ к экрану и предоставляет {{domxref("MediaStream")}}, содержащий входящую видео- и/или звуковую дорожку. </dd>
 </dl>
 
 <dl>
@@ -106,5 +106,5 @@ function errorMsg(msg, error) {
  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>: API, частью которого является этот интерфейс.</li>
  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
  <li>{{domxref("Navigator.mediaDevices")}}: Возвращает ссылку на объект <code>MediaDevices</code>, который можно использовать для доступа к устройствам.</li>
- <li><a href="https://github.com/chrisjohndigital/CameraCaptureJS">CameraCaptureJS:</a> HTML5 захват и воспроизведение видео с помощью <code>MediaDevices</code> и MediaStream Recording API (<a href="https://github.com/chrisjohndigital/CameraCaptureJS">исходный код на GitHub</a>)</li>
+ <li><a href="https://github.com/chrisjohndigital/CameraCaptureJS">CameraCaptureJS:</a> HTML5 захват и воспроизведение видео с помощью <code>MediaDevices</code> и MediaStream Recording API (<a href="https://github.com/chrisjohndigital/CameraCaptureJS">исходный код на GitHub</a>)</li>
 </ul>

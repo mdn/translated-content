@@ -15,19 +15,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>JavaScript や CSS がどの時点でタブに挿入されるか。</p>
+<p>JavaScript や CSS がどの時点でタブに挿入されるか。</p>
 
 <h2 id="型">型</h2>
 
-<p>この型の値は文字列です。とりうる値は、<code>"document_start"</code>, <code>"document_end"</code>, <code>"document_idle"</code> です。</p>
+<p>この型の値は文字列です。とりうる値は、<code>"document_start"</code>, <code>"document_end"</code>, <code>"document_idle"</code> です。</p>
 
 <ul>
- <li><code>"document_start"</code>: <code>loading</code> に対応します。DOM はまだ読み込み中の状態です。</li>
- <li><code>"document_end"</code>: <code>interactive</code> に対応します。DOM の読み込みは終わりましたが、スクリプトや画像といったリソースはまだ読み込み中です。</li>
- <li><code>"document_idle"</code>: <code>complete</code> に対応します。ドキュメントとその全てのリソースの読み込みが完了しました。</li>
+ <li><code>"document_start"</code>: <code>loading</code> に対応します。DOM はまだ読み込み中の状態です。</li>
+ <li><code>"document_end"</code>: <code>interactive</code> に対応します。DOM の読み込みは終わりましたが、スクリプトや画像といったリソースはまだ読み込み中です。</li>
+ <li><code>"document_idle"</code>: <code>complete</code> に対応します。ドキュメントとその全てのリソースの読み込みが完了しました。</li>
 </ul>
 
-<p>デフォルトの値は <code>"document_idle"</code> です。</p>
+<p>デフォルトの値は <code>"document_idle"</code> です。</p>
 
 <h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
 
@@ -37,7 +37,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 
 <div class="note"><strong>謝辞</strong>
 
-<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/extensionTypes#type-RunAt"><code>chrome.extensionTypes</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> における Chromium のコードに基づいています。</p>
+<p>この API は Chromium の <a href="https://developer.chrome.com/extensions/extensionTypes#type-RunAt"><code>chrome.extensionTypes</code></a> API に基づいています。また、このドキュメントは <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> における Chromium のコードに基づいています。</p>
 
 <p>Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。</p>
 </div>

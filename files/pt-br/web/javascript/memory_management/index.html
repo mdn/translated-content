@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Memory_Management
 
 <h2 id="Introdução">Introdução</h2>
 
-<p>Linguagens de baixo nível, como C, tem primitivas de gerenciamento de memória de baixo nível como <code>malloc()</code> e <code>free()</code>. Em contrapartida, os valores do JavaScript são alocados quando coisas (objetos, strings, etc.) são criadas e "automaticamente" liberadas quando não são mais usadas. Este último processo se chama <em>garbage collection</em>. Facilmente se torna uma fonte de confusão e dá a impressão aos desenvolvedores JavaScript (e outras linguagens de alto nível) que eles não precisam se preocupar com o consumo de memória. Isto é um erro.</p>
+<p>Linguagens de baixo nível, como C, tem primitivas de gerenciamento de memória de baixo nível como <code>malloc()</code> e <code>free()</code>. Em contrapartida, os valores do JavaScript são alocados quando coisas (objetos, strings, etc.) são criadas e "automaticamente" liberadas quando não são mais usadas. Este último processo se chama <em>garbage collection</em>. Facilmente se torna uma fonte de confusão e dá a impressão aos desenvolvedores JavaScript (e outras linguagens de alto nível) que eles não precisam se preocupar com o consumo de memória. Isto é um erro.</p>
 
 <h2 id="Ciclo_de_vida_da_memória">Ciclo de vida da memória</h2>
 
-<p>Independentemente da linguagem de programação, o ciclo de vida da memória é praticamente sempre o mesmo:</p>
+<p>Independentemente da linguagem de programação, o ciclo de vida da memória é praticamente sempre o mesmo:</p>
 
 <ol>
  <li>Alocar a memória que você precisa</li>
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Memory_Management
  <li>Liberar a memória alocada quando não é mais necessária</li>
 </ol>
 
-<p>A primeira e a segunda parte são explícitas em todas as linguagens. A última parte é explicita em linguagens de baixo nível, porém implícito em linguagens de alto nível como JavaScript.</p>
+<p>A primeira e a segunda parte são explícitas em todas as linguagens. A última parte é explicita em linguagens de baixo nível, porém implícito em linguagens de alto nível como JavaScript.</p>
 
 <h3 id="Alocação_no_JavaScript">Alocação no JavaScript</h3>
 
@@ -54,7 +54,7 @@ someElement.addEventListener('click', function(){
 
 <h4 id="Alocação_via_chamada_de_uma_função">Alocação via chamada de uma função</h4>
 
-<p>Algumas funções quando chamadas resultam na alocação de um objeto.</p>
+<p>Algumas funções quando chamadas resultam na alocação de um objeto.</p>
 
 <pre class="brush: js">var d = new Date();
 // aloca um elemento do DOM
@@ -76,29 +76,29 @@ var a3 = a.concat(a2);
 // a concatenação dos elementos a e a2
 </pre>
 
-<h3 id="Utilização_de_valores">Utilização de valores</h3>
+<h3 id="Utilização_de_valores">Utilização de valores</h3>
 
-<p>A utilização de valores basicamente significa leitura e escrita em memória alocada. Isto pode ser feito ao ler ou escrever o valor de uma variável ou a propriedade de um objeto ou até mesmo ao passar um argumento para uma função.</p>
+<p>A utilização de valores basicamente significa leitura e escrita em memória alocada. Isto pode ser feito ao ler ou escrever o valor de uma variável ou a propriedade de um objeto ou até mesmo ao passar um argumento para uma função.</p>
 
 <h3 id="Libere_quando_a_memória_não_for_mais_necessária">Libere quando a memória não for mais necessária</h3>
 
-<p>A maioria dos problemas relacionados ao gerenciamento de memória aparecem nesta fase. A tarefa mais complicada aqui é descobrir quando "a memória alocada não é mais necessária". Geralmente exige que o desenvolvedor determine a onde no programa tal pedaço da memória não é mais necessária e liberá-la.</p>
+<p>A maioria dos problemas relacionados ao gerenciamento de memória aparecem nesta fase. A tarefa mais complicada aqui é descobrir quando "a memória alocada não é mais necessária". Geralmente exige que o desenvolvedor determine a onde no programa tal pedaço da memória não é mais necessária e liberá-la.</p>
 
-<p>Linguagens de alto nível vêm com um pedaço de software chamado "garbage collector" (coletor de sujeira), cujo trabalho é monitorar a alocação de memória a fim de descobrir quando um pedaço de código não é mais necessário e neste caso, automaticamente liberá-lo. Este processo é algo aproximado já que, em geral, saber se um pedaço de memória é necessário é algo <a class="external" href="http://pt.wikipedia.org/wiki/Decidibilidade">indecidível</a> (que não pode ser resolvido através de um algoritmo).</p>
+<p>Linguagens de alto nível vêm com um pedaço de software chamado "garbage collector" (coletor de sujeira), cujo trabalho é monitorar a alocação de memória a fim de descobrir quando um pedaço de código não é mais necessário e neste caso, automaticamente liberá-lo. Este processo é algo aproximado já que, em geral, saber se um pedaço de memória é necessário é algo <a class="external" href="http://pt.wikipedia.org/wiki/Decidibilidade">indecidível</a> (que não pode ser resolvido através de um algoritmo).</p>
 
 <h2 id="Garbage_collection">Garbage collection</h2>
 
-<p>Como foi mencionado acima, em geral o problema de automaticamente descobrir se a memória "não é mais necessária" é indecidível. Como consequência, os <em>garbage collections</em> implementam uma limitação de uma solução ao problema em geral. Esta seção irá explicar os conceitos necessários para entender os principais algoritmos de garbage collection e suas limitações.</p>
+<p>Como foi mencionado acima, em geral o problema de automaticamente descobrir se a memória "não é mais necessária" é indecidível. Como consequência, os <em>garbage collections</em> implementam uma limitação de uma solução ao problema em geral. Esta seção irá explicar os conceitos necessários para entender os principais algoritmos de garbage collection e suas limitações.</p>
 
 <h3 id="Referências">Referências</h3>
 
-<p>O principal conceito de algoritmos do garbage collection depende do conceito de <em>referência</em>. Dentro do contexto de gerenciamento de memória, é dito que um objeto faz referência a outro, caso o primeiro tenha acesso a este último (de maneira implícita ou explícita). Por exemplo, um objeto JavaScript tem uma referência ao seu <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype</a> (referência implícita) e para os valores de suas propriedades (referência explícita).</p>
+<p>O principal conceito de algoritmos do garbage collection depende do conceito de <em>referência</em>. Dentro do contexto de gerenciamento de memória, é dito que um objeto faz referência a outro, caso o primeiro tenha acesso a este último (de maneira implícita ou explícita). Por exemplo, um objeto JavaScript tem uma referência ao seu <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype</a> (referência implícita) e para os valores de suas propriedades (referência explícita).</p>
 
-<p>Neste contexto, o conceito de "objeto" se extende para algo mais abrangente do que os objetos comuns do JavaScript, e também contém escopos de função (ou o escopo lexical global).</p>
+<p>Neste contexto, o conceito de "objeto" se extende para algo mais abrangente do que os objetos comuns do JavaScript, e também contém escopos de função (ou o escopo lexical global).</p>
 
 <h3 id="Referência_de_contagem_do_garbage_collection">Referência de contagem do garbage collection</h3>
 
-<p>Este é o algoritmo mais ingênuo de garbage collection. este algoritmo reduz a definição de "um objeto não mais necessário" para "um objeto não tem outro objeto referenciando ele". Um objeto pode ser coletado pelo garbage collector se não existir referência apontando para este objeto.</p>
+<p>Este é o algoritmo mais ingênuo de garbage collection. este algoritmo reduz a definição de "um objeto não mais necessário" para "um objeto não tem outro objeto referenciando ele". Um objeto pode ser coletado pelo garbage collector se não existir referência apontando para este objeto.</p>
 
 <h4 id="Exemplo">Exemplo</h4>
 
@@ -115,7 +115,7 @@ var a3 = a.concat(a2);
 var o2 = o; // a varável 'o2' é a segunda coisa que tem
             // uma referência ao objeto
 o = 1;      // agora, o objeto que estava originalmente no 'o'
-            // tem uma referência única
+            // tem uma referência única
             // encorporada pela variável 'o2'
 
 var oa = o2.a; // Referência para a propriedade 'a' do objeto.
@@ -124,9 +124,9 @@ var oa = o2.a; // Referência para a propriedade 'a' do objeto.
 
 o2 = "yo"; // O objeto que estava originalmente em 'o' agora não tem
            // nenhuma referência para ele.
-           // Ele poderia ser coletado pelo garbage collector.
-           // Entretanto o que era sua propriedade 'a' continua sendo referenciada
-           // pela variável 'oa', então ele não pode ser coletado.
+           // Ele poderia ser coletado pelo garbage collector.
+           // Entretanto o que era sua propriedade 'a' continua sendo referenciada
+           // pela variável 'oa', então ele não pode ser coletado.
 
 oa = null; // O que era a propriedade 'a' do objeto original em 'o'
            // não tem mais refêrencia para ele. Então pode ser coletado.
@@ -134,7 +134,7 @@ oa = null; // O que era a propriedade 'a' do objeto original em 'o'
 
 <h4 id="Limitação_ciclos">Limitação : ciclos</h4>
 
-<p>Esse algoritmo ingênuo tem a limitação de que objetos que referenciam um ao outro (e formam um ciclo), podem ser "não mais necessários" e ainda assim não serem coletados.</p>
+<p>Esse algoritmo ingênuo tem a limitação de que objetos que referenciam um ao outro (e formam um ciclo), podem ser "não mais necessários" e ainda assim não serem coletados.</p>
 
 <pre class="brush: js">function f(){
   var o = {};
@@ -166,23 +166,23 @@ window.onload = function(){
 };
 </pre>
 
-<p>No exemplo acima, o elemento do DOM "minhaDiv" tem uma referência circular para ela mesma na propriedade "referenciaCircular". Se a propriedade não for removida ou anulada explicitamente, o contador de referências do coletor sempre terá pelo menos uma referência intacta e irá manter o elemento do DOM na memória mesmo se ele for removido da árvore do DOM. Se o elemento do DOM retém muitos dados (ilustrado no exemplo acima com a propriedade "muitosDados"), a memória consumida por esses dados não será liberada.</p>
+<p>No exemplo acima, o elemento do DOM "minhaDiv" tem uma referência circular para ela mesma na propriedade "referenciaCircular". Se a propriedade não for removida ou anulada explicitamente, o contador de referências do coletor sempre terá pelo menos uma referência intacta e irá manter o elemento do DOM na memória mesmo se ele for removido da árvore do DOM. Se o elemento do DOM retém muitos dados (ilustrado no exemplo acima com a propriedade "muitosDados"), a memória consumida por esses dados não será liberada.</p>
 
 <h3 id="Algoritmo_de_varredura_e_rotulação">Algoritmo de varredura e rotulação</h3>
 
 <p>Esse algoritmo reduz a definição de "um objeto não é mais necessário" para "um objeto é inacessível".</p>
 
-<p>Esse algoritmo assume o conhecimento de uma lista de objetos chamada <em>roots </em>(raízes) (no JavaScript, o root é o objeto global). Periodicamente, o coletor iniciará por esses roots, encontrando todos os objetos que são referenciados por esses roots, então todos os objetos referenciados por eles, etc. Começando pelos roots, o coletor encontrará todos os objetos acessíveis e coletará todos os objetos inacessíveis.</p>
+<p>Esse algoritmo assume o conhecimento de uma lista de objetos chamada <em>roots </em>(raízes) (no JavaScript, o root é o objeto global). Periodicamente, o coletor iniciará por esses roots, encontrando todos os objetos que são referenciados por esses roots, então todos os objetos referenciados por eles, etc. Começando pelos roots, o coletor encontrará todos os objetos acessíveis e coletará todos os objetos inacessíveis.</p>
 
 <p>Esse algoritmo é melhor que o anterior pois "um objeto que não tem referência" leva a esse objeto inacessível. O oposto não é verdadeiro como nós vimos com os ciclos.</p>
 
-<p>A partir de 2012, todos os navegadores modernos vem com um coletor com varredura e rotulação. Todas as melhorias feitas nessa área do coletor do JavaScript (geracional/incremental/concorrência/coletor paralelo) nos últimos anos são implementações melhoradas deste algoritmo, mas não melhorias para o coletor propriamente nem a redução da definição de quando "um objeto não é mais necessário".</p>
+<p>A partir de 2012, todos os navegadores modernos vem com um coletor com varredura e rotulação. Todas as melhorias feitas nessa área do coletor do JavaScript (geracional/incremental/concorrência/coletor paralelo) nos últimos anos são implementações melhoradas deste algoritmo, mas não melhorias para o coletor propriamente nem a redução da definição de quando "um objeto não é mais necessário".</p>
 
 <h4 id="Ciclos_não_são_mais_um_problema">Ciclos não são mais um problema</h4>
 
 <p>No primeiro exemplo, depois do retorno da chamada da função, os 2 objetos não são mais referenciados por algo acessível pelo objeto global. Consequentemente, eles não serão acessíveis pelo coletor.</p>
 
-<p>A mesma coisa acontece com o segundo exemplo. Uma vez que o div e o seu gerenciador de eventos se tornem inacessíveis pelos roots, ambos podem ser coletados, apesar de referenciar um ao outro.</p>
+<p>A mesma coisa acontece com o segundo exemplo. Uma vez que o div e o seu gerenciador de eventos se tornem inacessíveis pelos roots, ambos podem ser coletados, apesar de referenciar um ao outro.</p>
 
 <h4 id="Limitação_objetos_devem_ser_feitos_explicitamente_inacessíveis">Limitação: objetos devem ser feitos explicitamente inacessíveis</h4>
 

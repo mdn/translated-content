@@ -20,7 +20,9 @@ Voir [la section sur les seuils](/fr/docs/Web/API/Intersection_Observer_API#Thre
 
 ## Syntaxe
 
-    thresholds = IntersectionObserver.thresholds;
+```js
+thresholds = IntersectionObserver.thresholds;
+```
 
 ### Valeur
 

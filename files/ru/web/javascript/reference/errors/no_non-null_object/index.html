@@ -42,9 +42,9 @@ Object.defineProperty({}, 'key', null);
 <pre class="brush: js example-good">Object.defineProperty({}, 'key', { value: 'foo', writable: false });
 </pre>
 
-<h3 id="СлабаяКарта_и_СлабыйСет_объектов_требуют_ключей_объектов"><code>СлабаяКарта</code> и <code>СлабыйСет</code> объектов требуют ключей объектов</h3>
+<h3 id="СлабаяКарта_и_СлабыйСет_объектов_требуют_ключей_объектов"><code>СлабаяКарта</code> и <code>СлабыйСет</code> объектов требуют ключей объектов</h3>
 
-<p>{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} объекты хранят ключи объектов. Вы не можете использовать другие типы ключей.</p>
+<p>{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} объекты хранят ключи объектов. Вы не можете использовать другие типы ключей.</p>
 
 <pre class="brush: js example-bad">var ws = new WeakSet();
 ws.add('foo');

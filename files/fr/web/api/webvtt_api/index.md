@@ -255,7 +255,7 @@ Une réplique (<i lang="en">cue</i> en anglais) est un bloc de sous-titre distin
 - Un seul saut de ligne.
 - Le texte de la réplique.
 
-### Exemples 
+### Exemples
 
 #### Exemple n°7 — exemple de réplique
 

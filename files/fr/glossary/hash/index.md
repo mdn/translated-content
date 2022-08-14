@@ -15,4 +15,4 @@ La fonction de hachage prend en entrée un message de taille variable et produit
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Fonction de hachage")}} sur Wikipédia
+- [Fonction de hachage](https://fr.wikipedia.org/wiki/Fonction_de_hachage) sur Wikipédia

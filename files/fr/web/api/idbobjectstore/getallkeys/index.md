@@ -24,9 +24,11 @@ Pour différencier ces deux situations, on peut appeler la méthode {{domxref("I
 
 ## Syntaxe
 
-    var request = objectStore.getAllKeys();
-    var request = objectStore.getAllKeys(query);
-    var request = objectStore.getAllKeys(query, count);
+```js
+var request = objectStore.getAllKeys();
+var request = objectStore.getAllKeys(query);
+var request = objectStore.getAllKeys(query, count);
+```
 
 ### Parameters
 

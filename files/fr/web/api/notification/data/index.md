@@ -19,7 +19,9 @@ Les données de la notification peuvent être des données arbitraires, sans res
 
 ## Syntaxe
 
-    Notification.data
+```js
+Notification.data
+```
 
 ### Valeur
 

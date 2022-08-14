@@ -20,7 +20,9 @@ La clef de chaque paire est une {{domxref("USVString")}}. De la même manière, 
 
 ## Syntaxe
 
-    formData.entries();
+```js
+formData.entries();
+```
 
 ### Valeur retournée
 
@@ -42,8 +44,10 @@ for(var pair of formData.entries()) {
 
 Le resultat est:
 
-    key1, value1
-    key2, value2
+```
+key1, value1
+key2, value2
+```
 
 ## Spécifications
 

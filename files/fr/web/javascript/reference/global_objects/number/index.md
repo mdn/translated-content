@@ -16,11 +16,13 @@ Le type JavaScript `Number` utilise [une représentation binaire à précision d
 
 ## Syntaxe
 
-    new Number(valeur);
-    var a = new Number('123'); // a === 123 donnera false
-    var b = Number('123'); // b === 123 donnera true
-    a instanceof Number; // donnera true
-    b instanceof Number; // donnera false
+```js
+new Number(valeur);
+var a = new Number('123'); // a === 123 donnera false
+var b = Number('123'); // b === 123 donnera true
+a instanceof Number; // donnera true
+b instanceof Number; // donnera false
+```
 
 ### Paramètres
 

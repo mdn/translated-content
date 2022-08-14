@@ -19,7 +19,9 @@ La fonction **`Math.asinh()`** renvoie l'arc sinus hyperbolique d'un nombre :
 
 ## Syntaxe
 
-    Math.asinh(x)
+```js
+Math.asinh(x)
+```
 
 ### Paramètres
 

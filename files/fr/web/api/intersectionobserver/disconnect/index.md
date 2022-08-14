@@ -17,7 +17,9 @@ La méthode **`disconnect()`**, rattachée à l'interface [`IntersectionObserver
 
 ## Syntaxe
 
-    intersectionObserver.disconnect();
+```js
+intersectionObserver.disconnect();
+```
 
 ### Paramètres
 

@@ -1,0 +1,157 @@
+---
+title: GlobalEventHandlers.onmousemove
+slug: conflicting/Web/API/Element/mousemove_event
+translation_of: Web/API/GlobalEventHandlers/onmousemove
+original_slug: Web/API/GlobalEventHandlers/onmousemove
+---
+<div>{{ ApiRef("HTML DOM") }}</div>
+
+<h3 id="概述">概述</h3>
+
+<p><strong>onmousemove</strong>属性用来获取或设置当前元素的<code>mousemove</code>事件的事件处理函数。</p>
+
+<h3 id="语法">语法</h3>
+
+<pre class="eval">element.onmousemove = <em>event handling code</em>
+</pre>
+
+<h3 id="备注">备注</h3>
+
+<p>当用户在当前元素上移动鼠标时会触发<code>mousemove</code>事件。</p>
+
+<h3 id="例子">例子</h3>
+
+<p>下面的例子演示了在显示"提示层"时 <code>onmousemove</code> 的用法。</p>
+
+<pre class="brush: html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;title&gt;Tooltip Example&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+var oTooltip = new (function() {
+  var nOverX, nOverY, nLeftPos, nTopPos, oNode, bOff = true;
+  this.follow = function (oMsEvnt1) {
+    if (bOff) { return; }
+    var nMoveX =  oMsEvnt1.clientX, nMoveY =  oMsEvnt1.clientY;
+    nLeftPos += nMoveX - nOverX; nTopPos += nMoveY - nOverY;
+    oNode.style.left = nLeftPos + "px";
+    oNode.style.top = nTopPos + "px";
+    nOverX = nMoveX; nOverY = nMoveY;
+  };
+  this.remove = function () {
+    if (bOff) { return; }
+    bOff = true; document.body.removeChild(oNode);
+  };
+  this.append = function (oMsEvnt2, sTxtContent) {
+    oNode.innerHTML = sTxtContent;
+    if (bOff) { document.body.appendChild(oNode); bOff = false; }
+    var nScrollX = document.documentElement.scrollLeft || document.body.scrollLeft, nScrollY = document.documentElement.scrollTop || document.body.scrollTop, nWidth = oNode.offsetWidth, nHeight = oNode.offsetHeight;
+    nOverX = oMsEvnt2.clientX; nOverY = oMsEvnt2.clientY;
+    nLeftPos = document.body.offsetWidth - nOverX - nScrollX &gt; nWidth ? nOverX + nScrollX + 10 : document.body.offsetWidth - nWidth + 16;
+    nTopPos = nOverY - nHeight &gt; 6 ? nOverY + nScrollY - nHeight - 7 : nOverY + nScrollY + 20;
+    oNode.style.left = nLeftPos + "px";
+    oNode.style.top = nTopPos + "px";
+  };
+  this.init = function() {
+    oNode = document.createElement("div");
+    oNode.className = "tooltip";
+    oNode.style.position = "absolute";
+  };
+})();
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+div.tooltip {
+  padding: 6px;
+  background: #ffffff;
+  border: 1px #76808C solid;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  z-index: 9999;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body onload="oTooltip.init();"&gt;
+&lt;p&gt;&lt;a href="http://developer.mozilla.org/" onmouseover="oTooltip.append(event,'提示文字 1');" onmousemove="oTooltip.follow(event);" onmouseout="oTooltip.remove();"&gt;将你的鼠标移动到这里&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://developer.mozilla.org/" onmouseover="oTooltip.append(event,'提示文字 2');" onmousemove="oTooltip.follow(event);" onmouseout="oTooltip.remove();"&gt;&amp;hellip;或者这里！!&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>下面的例子演示了在进行拖拽操作时<code>onmousemove</code> 的用法。</p>
+
+<pre class="brush: html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;title&gt;Draggable objects&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+
+var bMouseUp = true, oDragging, nMouseX, nMouseY, nStartX, nStartY, nZFocus = 100 /* the highest z-Index present in your page plus 1 */;
+
+function dragDown(oPssEvt1) {
+  var bExit = true, oMsEvent1 = oPssEvt1 || /* IE */ window.event;
+  for (var iNode = oMsEvent1.target; iNode; iNode = iNode.parentNode) {
+    if (iNode.className === "draggable") { bExit = false; oDragging = iNode; break; }
+  }
+  if (bExit) { return; }
+  bMouseUp = false;
+  nStartX = nStartY = 0;
+  for (var iOffPar = oDragging; iOffPar; iOffPar = iOffPar.offsetParent) {
+    nStartX += iOffPar.offsetLeft;
+    nStartY += iOffPar.offsetTop;
+  }
+  nMouseX = oMsEvent1.clientX;
+  nMouseY = oMsEvent1.clientY;
+  oDragging.style.zIndex = nZFocus++;
+  return false;
+}
+
+function dragMove(oPssEvt2) {
+  if (bMouseUp) { return; }
+  var oMsEvent2 = oPssEvt2 || /* IE */ window.event;
+  oDragging.style.left = String(nStartX + oMsEvent2.clientX - nMouseX) + "px";
+  oDragging.style.top = String(nStartY + oMsEvent2.clientY - nMouseY) + "px";
+}
+
+function dragUp() { bMouseUp = true; }
+
+document.onmousedown = dragDown;
+document.onmousemove = dragMove;
+document.onmouseup = dragUp;
+
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+.draggable {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  cursor: move;
+}
+
+#myDiv {
+  width: 300px;
+  height: 200px;
+  left: 200px;
+  top: 200px;
+  background-color: #00ff00;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class="draggable" id="myDiv"&gt;&lt;p&gt;一个 Hello world!&lt;/p&gt;&lt;/div&gt;
+&lt;div class="draggable" style="background-color:#aaaaaa;"&gt;又一个 hello world!&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h3 id="规范">规范</h3>
+
+<p>不属于任何公开的规范。</p>

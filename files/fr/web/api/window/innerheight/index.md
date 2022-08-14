@@ -18,7 +18,9 @@ Récupère la hauteur (en pixels) de la partie visible de la fenêtre de navigat
 
 ## Syntaxe
 
-    var hauteur = window.innerHeight;
+```js
+var hauteur = window.innerHeight;
+```
 
 ### Valeur
 

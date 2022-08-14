@@ -7,15 +7,15 @@ tags:
   - XML
 translation_of: Web/XML/XML_introduction
 ---
-<p><span class="seoSummary">XML - это язык разметки подобный HTML. Расшифровывается как (англ. Extensible Markup Language - Расширяемый Язык Разметки) и является рекомендацией сообщества <a class="external" href="https://www.w3.org">W3C</a> в качестве языка разметки общего назначения (</span><a href="https://www.w3.org/TR/xml/">W3C recommended</a><span class="seoSummary">). В отличии от остальных языков разметки, XML сам по себе не определён (это означает, что вы должны сами определять используемые теги). Основной целью XML является передача данных между разными системами (даже концептуально разными), такими как интернет.</span></p>
+<p><span class="seoSummary">XML - это язык разметки подобный HTML. Расшифровывается как (англ. Extensible Markup Language - Расширяемый Язык Разметки) и является рекомендацией сообщества <a class="external" href="https://www.w3.org">W3C</a> в качестве языка разметки общего назначения (</span><a href="https://www.w3.org/TR/xml/">W3C recommended</a><span class="seoSummary">). В отличии от остальных языков разметки, XML сам по себе не определён (это означает, что вы должны сами определять используемые теги). Основной целью XML является передача данных между разными системами (даже концептуально разными), такими как интернет.</span></p>
 
-<p>Много языков базируются на XML; Некоторые примеры: <a href="/ru/docs/Glossary/XHTML" title="ru/XHTML">XHTML</a>, <a href="/ru/docs/Web/MathML" title="ru/MathML">MathML</a>, <a href="/ru/docs/Web/SVG" title="ru/SVG">SVG</a>, <a href="/ru/docs/Mozilla/Tech/XUL" title="ru/XUL">XUL</a>, <a href="/en-US/docs/Mozilla/Tech/XBL" title="en/XBL">XBL</a>, <a href="/en-US/docs/Web/RSS" title="en/RSS">RSS</a>, и <a href="/ru/docs/RDF" title="ru/RDF">RDF</a>. Вы можете создать свой.</p>
+<p>Много языков базируются на XML; Некоторые примеры: <a href="/ru/docs/Glossary/XHTML" title="ru/XHTML">XHTML</a>, <a href="/ru/docs/Web/MathML" title="ru/MathML">MathML</a>, <a href="/ru/docs/Web/SVG" title="ru/SVG">SVG</a>, <a href="/ru/docs/Mozilla/Tech/XUL" title="ru/XUL">XUL</a>, <a href="/en-US/docs/Mozilla/Tech/XBL" title="en/XBL">XBL</a>, <a href="/en-US/docs/Web/RSS" title="en/RSS">RSS</a>, и <a href="/ru/docs/RDF" title="ru/RDF">RDF</a>. Вы можете создать свой.</p>
 
 <h2 id="Корректный_XML_(правильно_сформированный)">"Корректный" XML (правильно сформированный)</h2>
 
 <h3 id="Правила_оформления">Правила оформления</h3>
 
-<p>Для корректного XML документа должны исполняться следующие условия: </p>
+<p>Для корректного XML документа должны исполняться следующие условия: </p>
 
 <ul>
  <li>
@@ -25,13 +25,13 @@ translation_of: Web/XML/XML_introduction
   <p>Соблюдаться все синтаксические правила XML.</p>
  </li>
  <li>
-  <p>Документ должен соответствовать семантическим правилам языка (которые обычно заданны в схеме XML или DTD (англ. <strong><a href="/en-US/docs/Glossary/DTD" title="en/DTD">Document Type Definition</a></strong>)). </p>
+  <p>Документ должен соответствовать семантическим правилам языка (которые обычно заданны в схеме XML или DTD (англ. <strong><a href="/en-US/docs/Glossary/DTD" title="en/DTD">Document Type Definition</a></strong>)). </p>
  </li>
 </ul>
 
 <h3 id="Пример">Пример</h3>
 
-<p>Пример ниже показывает документ с тегом, который не закрывает сам себя и не имеет закрывающего тега (это неправильно оформленный XML документ).</p>
+<p>Пример ниже показывает документ с тегом, который не закрывает сам себя и не имеет закрывающего тега (это неправильно оформленный XML документ).</p>
 
 <pre class="brush: xml">&lt;message&gt;
     &lt;warning&gt;
@@ -49,7 +49,7 @@ translation_of: Web/XML/XML_introduction
 &lt;/message&gt;
 </pre>
 
-<p> Документ содержащий неопределённый тег является не корректным. Например, если мы не определили тег <code>&lt;warning&gt;</code>, документ не корректен.</p>
+<p> Документ содержащий неопределённый тег является не корректным. Например, если мы не определили тег <code>&lt;warning&gt;</code>, документ не корректен.</p>
 
 <div class="note">
 <p>В большинство браузеров встроен дебаггер, который может идентифицировать плохо написанный XML документ.</p>
@@ -57,7 +57,7 @@ translation_of: Web/XML/XML_introduction
 
 <h2 id="Entities">Сущности</h2>
 
-<p>HTML и XML предлагают методы (которые называют сущности) для обращения к специальным зарезервированным символам (например угловые скобки, обозначающие начало и конец тега). Существует пять сущностей, которые вы обязательно должны знать:</p>
+<p>HTML и XML предлагают методы (которые называют сущности) для обращения к специальным зарезервированным символам (например угловые скобки, обозначающие начало и конец тега). Существует пять сущностей, которые вы обязательно должны знать:</p>
 
 <table class="standard-table">
  <thead>
@@ -96,7 +96,7 @@ translation_of: Web/XML/XML_introduction
  </tbody>
 </table>
 
-<p>Не смотря на то, что по умолчанию создано всего пять сущностей, вы можете добавить в документ свои сущности используя <a href="/en-US/docs/Glossary/DTD" title="en/DTD">Document Type Definition</a>. Например, создать новую <code>&amp;warning;</code> сущность, можно так:</p>
+<p>Не смотря на то, что по умолчанию создано всего пять сущностей, вы можете добавить в документ свои сущности используя <a href="/en-US/docs/Glossary/DTD" title="en/DTD">Document Type Definition</a>. Например, создать новую <code>&amp;warning;</code> сущность, можно так:</p>
 
 <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE body [
@@ -107,17 +107,17 @@ translation_of: Web/XML/XML_introduction
 &lt;/body&gt;
 </pre>
 
-<p>Также вы можете использовать нумерические ссылки для специфический специальных символов. Например, &amp;#xA9; - это символ "©".</p>
+<p>Также вы можете использовать нумерические ссылки для специфический специальных символов. Например, &amp;#xA9; - это символ "©".</p>
 
 <h2 id="Отображение_XML">Отображение XML</h2>
 
-<p>XML обычно используют для описания чего-то. Существуют методы отображения XML данных, но если вы не определили способ визуализации XML документа, то в браузере он отобразится построчно, как обычный текстовый файл .</p>
+<p>XML обычно используют для описания чего-то. Существуют методы отображения XML данных, но если вы не определили способ визуализации XML документа, то в браузере он отобразится построчно, как обычный текстовый файл .</p>
 
-<p>Один из методов отображения XML - указать <a href="/ru/docs/Web/CSS" title="ru/CSS">CSS</a> (чтобы использовать в документе нужно прописать инструкцию <code>xml-stylesheet</code>, как показано в примере ниже).</p>
+<p>Один из методов отображения XML - указать <a href="/ru/docs/Web/CSS" title="ru/CSS">CSS</a> (чтобы использовать в документе нужно прописать инструкцию <code>xml-stylesheet</code>, как показано в примере ниже).</p>
 
 <pre>&lt;?xml-stylesheet type="text/css" href="stylesheet.css"?&gt;</pre>
 
-<p>Есть также много других мощных методов отображения XML, например, <a href="/en-US/docs/Web/XSLT" title="en/XSLT">XSLT</a>(англ. <strong>Extensible Stylesheet Language Transformations</strong>), который может использоваться для преобразование XML в другие языки такие, как HTML. Это делает XML очень универсальным.</p>
+<p>Есть также много других мощных методов отображения XML, например, <a href="/en-US/docs/Web/XSLT" title="en/XSLT">XSLT</a>(англ. <strong>Extensible Stylesheet Language Transformations</strong>), который может использоваться для преобразование XML в другие языки такие, как HTML. Это делает XML очень универсальным.</p>
 
 <pre>&lt;?xml-stylesheet type="text/xsl" href="transform.xsl"?&gt;</pre>
 
@@ -125,7 +125,7 @@ translation_of: Web/XML/XML_introduction
 
 <p>Эта статья является очень маленьким введением в XML, с очень маленьким количеством примеров и ссылок для того, чтобы вы могли начать работать с этим языком. Чтобы больше узнать про XML, вам придётся искать информацию и более информативные статьи в интернете.</p>
 
-<p>Изучайте <a href="/ru/docs/Web/HTML" title="ru/HTML">HTML</a> (англ. HyperText Markup Language), знание HTML поможет вам лучше понять XML.</p>
+<p>Изучайте <a href="/ru/docs/Web/HTML" title="ru/HTML">HTML</a> (англ. HyperText Markup Language), знание HTML поможет вам лучше понять XML.</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
@@ -136,4 +136,4 @@ translation_of: Web/XML/XML_introduction
  <li><a class="external" href="http://www.alistapart.com/articles/usingxml/">Using XML: A List Apart</a></li>
 </ul>
 
-<p>Статья <a href="http://www.alistapart.com/articles/usingxml/">Using XML</a> - отличный ресурс с большим количеством информации о создании своего языка на основе XML.</p>
+<p>Статья <a href="http://www.alistapart.com/articles/usingxml/">Using XML</a> - отличный ресурс с большим количеством информации о создании своего языка на основе XML.</p>

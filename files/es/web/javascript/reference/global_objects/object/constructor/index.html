@@ -17,7 +17,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/constructor
 
 <h2 id="Description" name="Description">Descripción</h2>
 
-<p>Todos los objetos tienen una propiedad <code>constructor.</code> Los objetos creados sin explicitar el uso de una función (como son los objetos y las cadenas literales) tendrán una propiedad de <code>constructor</code> que apunta al tipo de constructor del Objeto Fundamento para ese objeto.</p>
+<p>Todos los objetos tienen una propiedad <code>constructor.</code> Los objetos creados sin explicitar el uso de una función (como son los objetos y las cadenas literales) tendrán una propiedad de <code>constructor</code> que apunta al tipo de constructor del Objeto Fundamento para ese objeto.</p>
 
 <pre class="brush:js">var o = {};
 o.constructor === Object; // true
@@ -32,7 +32,7 @@ n.constructor === Number; // true</pre>
 
 <h3 id="Example:_Displaying_the_constructor_of_an_object" name="Example:_Displaying_the_constructor_of_an_object">Ejemplo: Mostrando el constructor de un objeto.</h3>
 
-<p>El siguiente ejemplo crea un prototipo, <code>Tree</code>, y un objeto de este tipo, <code>theTree</code>. El ejemplo muestra entonces la propiedad <code>constructor</code> para el objeto <code>theTree</code>.</p>
+<p>El siguiente ejemplo crea un prototipo, <code>Tree</code>, y un objeto de este tipo, <code>theTree</code>. El ejemplo muestra entonces la propiedad <code>constructor</code> para el objeto <code>theTree</code>.</p>
 
 <pre class="brush:js">function Tree (name) {
    this.name = name;
@@ -49,7 +49,7 @@ console.log( "theTree.constructor is " + theTree.constructor );</pre>
 
 <h3 id="Example:_Changing_the_constructor_of_an_object" name="Example:_Changing_the_constructor_of_an_object">Ejemplo: Cambiando el constructor de un objeto.</h3>
 
-<p>El siguiente ejemplo demuestra como modificar el valor del constructor de objetos genéricos. Solo <code>true</code>, <code>1</code> y <code>"test"</code> no serán afectados ya que ellos tienen constructores nativos de solo lectura. Este ejemplo demuestra que no siempre es seguro confiar en la propiedad constructor de un objeto.</p>
+<p>El siguiente ejemplo demuestra como modificar el valor del constructor de objetos genéricos. Solo <code>true</code>, <code>1</code> y <code>"test"</code> no serán afectados ya que ellos tienen constructores nativos de solo lectura. Este ejemplo demuestra que no siempre es seguro confiar en la propiedad constructor de un objeto.</p>
 
 <pre class="brush:js">function Type () {}
 
@@ -97,12 +97,12 @@ console.log( types.join( "\n" ) );</pre>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.2.4.1', 'Objectprototype.constructor')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

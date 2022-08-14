@@ -1,0 +1,162 @@
+---
+title: HTTP Public Key Pinning (HPKP)
+slug: conflicting/Web/Security/Certificate_Transparency
+tags:
+  - Deprecated
+  - Guide
+  - HPKP
+  - HTTP
+  - Obsolete
+  - Security
+translation_of: Web/HTTP/Public_Key_Pinning
+original_slug: Web/HTTP/Public_Key_Pinning
+---
+<p>{{HTTPSidebar}}{{deprecated_header}}</p>
+
+<div class="blockIndicator note"><strong>注:</strong> Public Key Pinning の仕組みは <a href="/ja/docs/Web/Security/Certificate_Transparency">Certificate Transparency</a> および {{HTTPHeader("Expect-CT")}} ヘッダーに置き換えられ、非推奨になりました。</div>
+
+<p class="summary"><strong>HTTP Public Key Pinning</strong> ({{Glossary("HPKP")}}) は、ウェブクライアントに特定の公開鍵をあるウェブサーバーに関連付けさせることで、偽造された証明書による{{Glossary("MITM", "中間者攻撃")}}のリスクを減少させるためのセキュリティ機能でした。これは最近のブラウザーでは削除され、対応がなくなりました。</p>
+
+<p>{{Glossary("TLS")}} セッションで用いられるサーバーの公開鍵の真正性を担保するため、通常その公開鍵は認証局 ({{GLossary("CA")}}) の証明書でラップされます。ブラウザーなどのウェブクライアントがこれらの認証局を信頼することで、認証局は任意のドメイン名に対する証明書を作成できます。攻撃者が1つの認証局を危殆化させることができれば、様々な TLS コネクションで中間者攻撃を仕掛けることが可能になってしまいます。 HPKP はこの {{Glossary("HTTPS")}} プロトコルへの脅威を、そのウェブサーバーにどの公開鍵が所属するのかをクライアントに伝えることで回避することができます。</p>
+
+<p>HPKP は <em>Trust on First Use</em> ({{Glossary("TOFU")}}) 技術の1つです。 HPKP の HTTP ヘッダーがウェブサーバーからクライアントへ最初に送信されて以降、そのウェブサーバーに紐付く公開鍵はクライアントで一定期間記憶されます。クライアントが再びそのサーバーを訪れた際は、既に HPKP で記憶したフィンガープリントと一致する公開鍵が、証明書チェインにおいて最低 1 つの証明書に含まれていることを確認します。そのサーバーから送信されてきた公開鍵が不明なものだった場合、クライアントはユーザーに警告を表示します。</p>
+
+<p class="note">Firefox および Chrome は、認証された証明書チェーンが (内蔵の証明書ではなく) <strong>ユーザー定義の証明書</strong>であった場合、<strong>ピン留めによる認証を無効化します</strong>。つまり、独自のルート証明書をインポートしたユーザーに対しては、ピン留めによる警告が表示されません。</p>
+
+<h2 id="Enabling_HPKP" name="Enabling_HPKP">HPKP の有効化</h2>
+
+<p>サイトでこの機能を有効化するには、サイトに HTTPS でアクセスされたとに、 HTTP の {{HTTPHeader("Public-Key-Pins")}} ヘッダーを返す必要があります。</p>
+
+<pre class="notranslate">Public-Key-Pins: pin-sha256="base64=="; max-age=<em>expireTime</em> [; includeSubDomains][; report-uri="<em>reportURI"</em>]</pre>
+
+<dl>
+ <dt><code>pin-sha256</code></dt>
+ <dd>二重引用符で囲まれた文字列で、 Base64 符号化された <em>Subject Public Key Information</em> ({{Glossary("SPKI")}}) のフィンガープリントです。異なる公開鍵に対する複数のピンを指定することが出来ます。将来のブラウザーでは SHA-256 以外のハッシュアルゴリズムが許容されるかもしれません。証明書や鍵ファイルからこの情報を抽出する方法は次の項で説明します。</dd>
+ <dt><code>max-age</code></dt>
+ <dd>このサイトへのアクセス時に必要となる（唯一ピン留めされた）鍵について、この鍵をブラウザーが記憶するべき時間を指定します。この値は秒単位で表現します。</dd>
+ <dt><code>includeSubDomains</code> {{optional_inline}}</dt>
+ <dd>このパラメータは省略可能です。サイトにおけるすべてのサブドメインにもこのルールが適用されます。</dd>
+ <dt><code>report-uri</code> {{optional_inline}}</dt>
+ <dd>このパラメータは省略可能です。ピンの検証に失敗した際に、失敗した旨を報告する URL を指定します。</dd>
+</dl>
+
+<div class="note">
+<p><strong>注</strong>: 現在の仕様では、本番系で運用されていないバックアップ用の第2のピンを指定することが必須になっています。これにより、既にピンを持っているクライアントからのアクセス性を損なうことなく、サーバの公開鍵を変更することが可能になります。例えば、本番系の鍵が危殆化したときなどに重要となります。</p>
+</div>
+
+<h3 id="Extracting_the_Base64_encoded_public_key_information" name="Extracting_the_Base64_encoded_public_key_information">Base64 エンコードされた公開鍵情報を抽出するには</h3>
+
+<div class="note">
+<p><strong>注:</strong> 以下の例ではサーバ証明書をピン留めする方法を説明していますが、証明書の更新やローテーションを容易にするため、サーバ証明書を発行した CA の中間証明書もピン留めすることを推奨します。</p>
+</div>
+
+<p>まずは証明書や鍵ファイルから公開鍵情報を抽出し、それを Base64 でエンコードする必要があります。</p>
+
+<p>次に示す便利なコマンドで、鍵ファイルや証明書署名要求 (CSR)、または証明書から Base64 エンコードされた情報を抽出できます。</p>
+
+<pre class="notranslate">openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+
+<pre class="notranslate">openssl ec -in my-ecc-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+
+<pre class="notranslate">openssl req -in my-signing-request.csr -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+
+<pre class="notranslate">openssl x509 -in my-certificate.crt -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+
+<p>以下のコマンドを用いると、ウェブサイト向けに情報を抽出することができます。</p>
+
+<pre class="notranslate">openssl s_client -servername www.example.com -connect www.example.com:443 | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</pre>
+
+<h3 id="Example_HPKP_Header" name="Example_HPKP_Header">HPKP ヘッダーの例</h3>
+
+<pre class="notranslate">Public-Key-Pins:
+  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+  max-age=5184000; includeSubDomains;
+  report-uri="<em>https://www.example.org/hpkp-report"</em></pre>
+
+<p>この例では、 <strong>pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="</strong> で本番系で使用されるサーバーの公開鍵をピン止めします。２番目のピン宣言である <strong>pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="</strong> も、バックアップキーをピン止めします。 <strong>max-age=5184000</strong> はクライアントにこの情報を２か月間保存するように伝え、これは IETF RFC によれば合理的な期間です。このキーのピン止めは、 <strong>includeSubDomains</strong> 宣言で指示されているように、すべてのサブドメインでも有効です。最後に、 <strong>report-uri="https://www.example.net/hpkp-report"</strong> はピンの検証の失敗を報告する場所を説明します。</p>
+
+<h3 id="Report-Only_header" name="Report-Only_header">Report-Only ヘッダー</h3>
+
+<p>{{HTTPHeader("Public-Key-Pins")}} ヘッダーを用いる代わりに、 {{HTTPHeader("Public-Key-Pins-Report-Only")}} ヘッダーを利用することも可能です。このヘッダーを用いた場合、ピン留めの認証に失敗した場合でも指定した report-uri にレポートが送信されるのみで、ブラウザーがウェブサーバーへ接続することは可能となります。</p>
+
+<h3 id="Setting_up_your_webserver_to_include_the_HPKP_header" name="Setting_up_your_webserver_to_include_the_HPKP_header">HPKP ヘッダーを送信するためのウェブサーバーの設定</h3>
+
+<p>HPKP ヘッダーを送信するのに必要な具体的な手順はウェブサーバーによって異なります。</p>
+
+<div class="note">
+<p><strong>注:</strong> 以下の例では、2か月間の max-age と includeSubDomains を指定しています。自身のサーバに合った適切な設定をしてください。</p>
+</div>
+
+<div class="warning">
+<p id="HPKP_has_the_potential_to_lock_out_users_for_a_long_time_if_used_incorrectly!_The_use_of_backup_certificates_andor_pinning_the_CA_certificate_is_recommend.">HPKP の設定を間違えると、ユーザーが長期間接続できなくなってしまう可能性があります！バックアップの証明書を用意したり、CA の証明書をピン留めすることを推奨します。</p>
+</div>
+
+<h4 id="Apache">Apache</h4>
+
+<p>次のような行をウェブサーバーの config に追加すると Apache で HPKP が有効になります。 <code>mod_headers</code> モジュールがインストールされている必要があります。</p>
+
+<pre class="notranslate">Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"</pre>
+
+<h4 id="Nginx">Nginx</h4>
+
+<p>次のような行を追加し、適切な <code>pin-sha256="..."</code> の値を設定すると nginx で HPKP が有効になります。 <code>ngx_http_headers_module</code> がインストールされている必要があります。</p>
+
+<pre class="notranslate">add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;</pre>
+
+<h4 id="Lighttpd">Lighttpd</h4>
+
+<p>鍵に関する次のような情報 (pin-sha256="..." フィールド) を含む行を追加すると、 lighttpd で HPKP が有効になります。</p>
+
+<pre class="notranslate">setenv.add-response-header  = ( "Public-Key-Pins" =&gt; "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")</pre>
+
+<p><strong>注:</strong> 以下のように server.module で <code>mod_setenv</code> をあらかじめ読み込んでおく必要があります。</p>
+
+<pre class="notranslate">server.modules += ( "mod_setenv" )</pre>
+
+<h4 id="IIS">IIS</h4>
+
+<p>IIS から <code>Public-Key-Pins</code> ヘッダーを送信するには、以下のような数行を Web.config ファイルに追加してください。</p>
+
+<pre class="brush: xml notranslate">&lt;system.webServer&gt;
+  ...
+
+  &lt;httpProtocol&gt;
+    &lt;customHeaders&gt;
+      &lt;add name="Public-Key-Pins" value="pin-sha256=&amp;quot;base64+primary==&amp;quot;; pin-sha256=&amp;quot;base64+backup==&amp;quot;; max-age=5184000; includeSubDomains" /&gt;
+    &lt;/customHeaders&gt;
+  &lt;/httpProtocol&gt;
+
+  ...
+&lt;/system.webServer&gt;
+</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">題名</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC("7469", "Public-Key-Pins", "2.1")}}</td>
+   <td>Public Key Pinning Extension for HTTP</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("http.headers.Public-Key-Pins")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{HTTPHeader("Public-Key-Pins")}}</li>
+ <li>{{HTTPHeader("Public-Key-Pins-Report-Only")}}</li>
+ <li>Browser test site: <a href="https://projects.dm.id.lv/Public-Key-Pins_test">HSTS and HPKP test</a></li>
+ <li>{{HTTPHeader("Expect-CT")}}</li>
+</ul>

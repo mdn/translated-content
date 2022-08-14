@@ -9,7 +9,9 @@ La méthode `copyToChannel()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/Au
 
 ## Syntaxe
 
-    myArrayBuffer.copyToChannel(source, channelNumber, startInChannel);
+```js
+myArrayBuffer.copyToChannel(source, channelNumber, startInChannel);
+```
 
 ### Paramètres
 

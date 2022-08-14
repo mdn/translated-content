@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>A função <code><strong>Math.random()</strong></code> retorna um número pseudo-aleatório no intervalo <code>[0, 1[</code>, ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo), que depois você pode dimensionar para um intervalo desejado.  A implementação seleciona uma semente para o algoritmo de geração de números aleatórios; esta semente não pode ser escolhida ou reatribuída.</p>
+<p>A função <code><strong>Math.random()</strong></code> retorna um número pseudo-aleatório no intervalo <code>[0, 1[</code>, ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo), que depois você pode dimensionar para um intervalo desejado.  A implementação seleciona uma semente para o algoritmo de geração de números aleatórios; esta semente não pode ser escolhida ou reatribuída.</p>
 
 <div class="note">
 <p><code><strong>Math.random()</strong></code> não gera números criptograficamente seguros. Não a use para nada relacionado a segurança. Use a API Web Crypto, mais precisamente o método {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.</p>
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 <pre class="brush: js">function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min) + min);
 }</pre>
 
 
@@ -87,12 +87,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.8.2.14', 'Math.random')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-math.random', 'Math.random')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

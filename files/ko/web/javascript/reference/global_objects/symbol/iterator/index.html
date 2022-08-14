@@ -15,9 +15,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 
 <h2 id="설명">설명</h2>
 
-<p>(<code>for..of</code> 루프의 시작부분과 같이) 객체가 반환될 필요가 있을때는 언제든지<code>@@iterator</code> 메서드는 인수 없이도 호출 할 수 있습니다. 반환된 <strong>iterator</strong>는 반복할 값을 취득하기 위해 사용됩니다.</p>
+<p>(<code>for..of</code> 루프의 시작부분과 같이) 객체가 반환될 필요가 있을때는 언제든지<code>@@iterator</code> 메서드는 인수 없이도 호출 할 수 있습니다. 반환된 <strong>iterator</strong>는 반복할 값을 취득하기 위해 사용됩니다.</p>
 
-<p>{{jsxref("Object")}}와 같이 반복동작을 내장하고 있는 형태도 있지만 그렇지 않은 경우도 있습니다. <code>@@iterator</code> 메서드를 가지고 있는 내장형 타입은 아래와 같습니다.</p>
+<p>{{jsxref("Object")}}와 같이 반복동작을 내장하고 있는 형태도 있지만 그렇지 않은 경우도 있습니다. <code>@@iterator</code> 메서드를 가지고 있는 내장형 타입은 아래와 같습니다.</p>
 
 <ul>
  <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
  <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
 </ul>
 
-<p>상세한 내용은 <a href="/ko/docs/Web/JavaScript/Reference/Iteration_protocols">반복처리 프로토콜</a>도 확인 해 주시기 바랍니다.</p>
+<p>상세한 내용은 <a href="/ko/docs/Web/JavaScript/Reference/Iteration_protocols">반복처리 프로토콜</a>도 확인 해 주시기 바랍니다.</p>
 
 <h2 id="예제">예제</h2>
 
@@ -53,27 +53,9 @@ nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
 [...nonWellFormedIterable] // TypeError: [] is not a function
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상황</th>
-   <th scope="col">코멘트</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-symbol.iterator', 'Symbol.iterator')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>초기 정의</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.iterator', 'Symbol.iterator')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

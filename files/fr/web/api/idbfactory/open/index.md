@@ -25,8 +25,10 @@ Cette méthode peut également émettre les évènements `upgradeneeded`, `block
 
 La syntaxe standard est la suivante&nbsp;:
 
-    var IDBOpenDBRequest = indexedDB.open(nom);
-    var IDBOpenDBRequest = indexedDB.open(nom, version);
+```js
+var IDBOpenDBRequest = indexedDB.open(nom);
+var IDBOpenDBRequest = indexedDB.open(nom, version);
+```
 
 ### Paramètres
 

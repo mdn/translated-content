@@ -1,24 +1,22 @@
 ---
-title: WindowOrWorkerGlobalScope.caches
+title: caches
 slug: Web/API/caches
-translation_of: Web/API/WindowOrWorkerGlobalScope/caches
+page-type: web-api-global-property
+translation_of: Web/API/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
+browser-compat: api.caches
 ---
 {{APIRef()}}{{SeeCompatTable}}
 
-La propriété en lecture seule  **`caches`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'objet {{domxref("CacheStorage")}} associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
+La propriété globale en lecture seule **`caches`** retourne l'objet [`CacheStorage`](/fr/docs/Web/API/CacheStorage) associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
 
-## Syntaxe
+## Valeur
 
-    var myCacheStorage = self.caches; // ou simplement caches
-
-### Value
-
-Un objet de type {{domxref("CacheStorage")}}.
+Un objet [`CacheStorage`](/fr/docs/Web/API/CacheStorage).
 
 ## Exemple
 
-L'exemple suivant montre comment mettre en cache un contexte de [service worker](/en-US/docs/Web/API/Service_Worker_API) pour stocker des ressources et les utiliser hors-ligne.
+L'exemple suivant montre comment mettre en cache un contexte de [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API) pour stocker des ressources et les utiliser hors-ligne.
 
 ```js
 this.addEventListener('install', function(event) {
@@ -43,40 +41,15 @@ this.addEventListener('install', function(event) {
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Service Workers', '#self-caches', 'caches')}}
-      </td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>
-        <p>
-          Défini dans un <code>WindowOrWorkerGlobalScope</code> partiel dans la
-          nouvelle spec.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers')}}</td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.caches")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
-- [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
-- {{domxref("CacheStorage")}}
-- {{domxref("Cache")}}
+- [L'API <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API)
+- [L'API <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
+- [`CacheStorage`](/fr/docs/Web/API/CacheStorage)
+- [`Cache`](/fr/docs/Web/API/Cache)

@@ -65,8 +65,7 @@ function print_nav_timing_data() {
 
 | Spécification                                                                                                                        | Statut                                               | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing Level 2', '#dom-performancenavigationtiming-type',
-        'type')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
+| {{SpecName('Navigation Timing Level 2', '#dom-performancenavigationtiming-type', 'type')}} | {{Spec2('Navigation Timing Level 2')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

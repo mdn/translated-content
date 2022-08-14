@@ -67,27 +67,29 @@ Cette section fournit une rapide introduction à la définition des objets de co
 
 Les objets sont **toujours** définis dans le fichier **models.py** de chaque application. Ils sont conçus comme sous-classe de `django.db.models.Model`, et sont caractérisés par des attributs ou champs, des méthodes et des métadonnées. L'extrait ci-dessous définit donc la classe `MyModelName`:
 
-    from django.db import models
+```python
+from django.db import models
 
-    class MyModelName(models.Model):
-        """A typical class defining a model, derived from the Model class."""
+class MyModelName(models.Model):
+    """A typical class defining a model, derived from the Model class."""
 
-        # Fields
-        my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
-        ...
+    # Fields
+    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+    ...
 
-        # Metadata
-        class Meta:
-            ordering = ['-my_field_name']
+    # Metadata
+    class Meta:
+        ordering = ['-my_field_name']
 
-        # Methods
-        def get_absolute_url(self):
-            """Returns the url to access a particular instance of MyModelName."""
-            return reverse('model-detail-view', args=[str(self.id)])
+    # Methods
+    def get_absolute_url(self):
+        """Returns the url to access a particular instance of MyModelName."""
+        return reverse('model-detail-view', args=[str(self.id)])
 
-        def __str__(self):
-            """String for representing the MyModelName object (in Admin site etc.)."""
-            return self.my_field_name
+    def __str__(self):
+        """String for representing the MyModelName object (in Admin site etc.)."""
+        return self.my_field_name
+```
 
 Détaillons ce qu'il en retourne :
 
@@ -409,8 +411,10 @@ Désormais les notions manipulées pour définir cet objet vous sont connues. L'
 
 Les objets sont tous décrits dans le fichier dédié à la modélisation. Pour qu'elles soient effectives, il est nécessaire d'exécuter les deux commandes python qui gèrent les migrations de la base de données.
 
-    python3 manage.py makemigrations
-    python3 manage.py migrate
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
 ## Défi — Introduire les langues
 
@@ -425,8 +429,10 @@ Après avoir fait vos choix, modéliser le et ajouter les champs utiles. Vous po
 
 Une dernière chose... n'oubliez pas d'appliquer les modifications en base de données
 
-    python3 manage.py makemigrations
-    python3 manage.py migrate
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
 ## Résumé
 

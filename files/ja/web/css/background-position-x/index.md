@@ -17,7 +17,6 @@ translation_of: Web/CSS/background-position-x
 
 {{EmbedInteractiveExample("pages/css/background-position-x.html")}}
 
-
 このプロパティの値は、その後で一括指定の {{cssxref("background")}} または {{cssxref("background-position")}} プロパティが定義されると上書きされます。
 
 ## 構文
@@ -89,13 +88,13 @@ background-position-x: unset;
 
 ```css
 div {
-  width: 300px;
-  height: 300px;
-  background-color: skyblue;
-  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom 10px;
+  width: 300px;
+  height: 300px;
+  background-color: skyblue;
+  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom 10px;
 }
 ```
 

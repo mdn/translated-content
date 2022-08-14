@@ -12,9 +12,11 @@ L'élément `<xsl:otherwise>` est utilisé pour définir une action qui doit êt
 
 ### Syntaxe
 
-    <xsl:otherwise>
-    	MODÈLE
-    </xsl:otherwise>
+```xml
+<xsl:otherwise>
+  MODÈLE
+</xsl:otherwise>
+```
 
 ### Attributs obligatoires
 

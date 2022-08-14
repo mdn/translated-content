@@ -396,9 +396,9 @@ let a3 = ['1', '2', '3']
 console.log(a3.some(isNumber))  // registra false
 </pre>
 
-<p>{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} aplica <code><var>callback</var>(<var>acumulador</var>, <var>currentValue</var>[, <var>currentIndex</var>[,<var>array</var>]])</code> para cada valor en el arreglo con el fin de reducir la lista de elementos a un solo valor. La función <code>reduce</code> devuelve el valor final devuelto por la función <code><var>callback</var></code>. </p>
+<p>{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} aplica <code><var>callback</var>(<var>acumulador</var>, <var>currentValue</var>[, <var>currentIndex</var>[,<var>array</var>]])</code> para cada valor en el arreglo con el fin de reducir la lista de elementos a un solo valor. La función <code>reduce</code> devuelve el valor final devuelto por la función <code><var>callback</var></code>. </p>
 
-<p>Si se especifica <code><var>initialValue</var></code>, entonces <code><var>callback</var></code> se llama con <code><var>initialValue</var></code> como primer valor de parámetro y el valor del primer elemento del arreglo como segundo valor de parámetro. </p>
+<p>Si se especifica <code><var>initialValue</var></code>, entonces <code><var>callback</var></code> se llama con <code><var>initialValue</var></code> como primer valor de parámetro y el valor del primer elemento del arreglo como segundo valor de parámetro. </p>
 
 <p>Si <code><var>initialValue</var></code> <em>no</em> es especificado, entonces <code><var>callback</var></code> los primeros dos valores de parámetro deberán ser el primer y segundo elemento del arreglo. En <em>cada</em> llamada subsiguiente, el valor del primer parámetro será el valor de <code><var>callback</var></code> devuelto en la llamada anterior, y el valor del segundo parámetro será el siguiente valor en el arreglo.</p>
 

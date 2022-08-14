@@ -57,7 +57,7 @@ max-height: unset;
  <dt><code>min-content</code> {{experimental_inline()}}</dt>
  <dd>본질적인 최소 높이.</dd>
  <dt><code>fill-available</code> {{experimental_inline()}}</dt>
- <dd>컨테이닝 블록의 높이에서 세로축 안쪽 및 바깥 여백과 테두리의 공간을 제외한 높이. (일부 브라우저는 매우 오래 된 이름인 <code>available</code>로 구현함을 참고하세요.)</dd>
+ <dd>컨테이닝 블록의 높이에서 세로축 안쪽 및 바깥 여백과 테두리의 공간을 제외한 높이. (일부 브라우저는 매우 오래 된 이름인 <code>available</code>로 구현함을 참고하세요.)</dd>
  <dt><code>fit-content</code> {{experimental_inline()}}</dt>
  <dd><code>max-content</code>와 동일.</dd>
 </dl>
@@ -75,47 +75,20 @@ form { max-height: none; }
 
 <h2 id="접근성_참고사항">접근성 참고사항</h2>
 
-<p>페이지의 확대 또는 글씨 크기를 키운 후에도 <code>max-height</code>를 설정한 요소의 내용이 잘리거나, 다른 요소를 가리지 않도록 주의하세요.</p>
+<p>페이지의 확대 또는 글씨 크기를 키운 후에도 <code>max-height</code>를 설정한 요소의 내용이 잘리거나, 다른 요소를 가리지 않도록 주의하세요.</p>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Sizing', '#width-height-keywords', 'max-height') }}</td>
-   <td>{{ Spec2('CSS3 Sizing') }}</td>
-   <td>Adds the <code>max-content</code>, <code>min-content</code>, <code>fit-content</code>, and <code>fill-available</code> keywords. (Both CSS3 Box and CSS3 Writing Modes drafts used to define these keywords, but are superseded by this spec.<em>)</em></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'max-height') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Defines <code>max-height</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visudet.html#min-max-heights', 'max-height') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("css.properties.max-height")}}</p>
 

@@ -14,7 +14,9 @@ La propriété **`objectStoreNames`** de l'interface {{domxref("IDBTransaction")
 
 ## Syntaxe
 
-    var maBaseDeDonnees = transactionObj.objectStoreNames;
+```js
+var maBaseDeDonnees = transactionObj.objectStoreNames;
+```
 
 ### Valeur de retour
 

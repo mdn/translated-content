@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Die <code>formatToParts()</code> Methode ist nützlich für benutzerdefinierte Formatierung von Zeitpunktsstrings. <span id="result_box" lang="de"><span>Sie gibt ein {{jsxref ("Array")}} von Objekten zurück, die die länderspezifischen Token enthalten, aus denen benutzerdefinierte Zeichenfolgen erstellt werden können, während die länderspezifischen Teile beibehalten werden.</span> <span>Die Struktur, die die <code>formatToParts()</code>  Methode zurückgibt, sieht so aus:</span></span></p>
+<p>Die <code>formatToParts()</code> Methode ist nützlich für benutzerdefinierte Formatierung von Zeitpunktsstrings. <span id="result_box" lang="de"><span>Sie gibt ein {{jsxref ("Array")}} von Objekten zurück, die die länderspezifischen Token enthalten, aus denen benutzerdefinierte Zeichenfolgen erstellt werden können, während die länderspezifischen Teile beibehalten werden.</span> <span>Die Struktur, die die <code>formatToParts()</code>  Methode zurückgibt, sieht so aus:</span></span></p>
 
 <pre class="brush: js">[
   { type: 'day', value: '17' },
@@ -87,7 +87,7 @@ formatter.format(date);
 // "Monday, 12/17/2012, 3:00:42 AM"
 </pre>
 
-<p>Oftmals ist es in vielen Benutzeroberflächen erwünscht die Formatierung dieser Strings zu verändern. Die <code>formatToParts</code> Methode erlaubt lokalsicheres Formatieren von Strings, die von <code>DateTimeFormat</code> in Teilstrings unterstützt werden:</p>
+<p>Oftmals ist es in vielen Benutzeroberflächen erwünscht die Formatierung dieser Strings zu verändern. Die <code>formatToParts</code> Methode erlaubt lokalsicheres Formatieren von Strings, die von <code>DateTimeFormat</code> in Teilstrings unterstützt werden:</p>
 
 <pre class="brush: js">formatter.formatToParts(date);
 
@@ -111,7 +111,7 @@ formatter.format(date);
 ]
 </pre>
 
-<p>Jetzt sind die Informationen separiert vorhanden und  man kann Formatierungen und Konkatinationen benutzerdefiniert vornehmen. Zum Beispiel unter Einsatz von {{jsxref("Array.prototype.map()")}}, <a href="/de/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow Funktionen</a>, einem <a href="/de/docs/Web/JavaScript/Reference/Statements/switch">switch Statement</a>, <a href="/de/docs/Web/JavaScript/Reference/Template_literals">Templateliteralen</a> und {{jsxref("Array.prototype.reduce()")}}.</p>
+<p>Jetzt sind die Informationen separiert vorhanden und  man kann Formatierungen und Konkatinationen benutzerdefiniert vornehmen. Zum Beispiel unter Einsatz von {{jsxref("Array.prototype.map()")}}, <a href="/de/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow Funktionen</a>, einem <a href="/de/docs/Web/JavaScript/Reference/Statements/switch">switch Statement</a>, <a href="/de/docs/Web/JavaScript/Reference/Template_literals">Templateliteralen</a> und {{jsxref("Array.prototype.reduce()")}}.</p>
 
 <pre class="brush: js">var dateString = formatter.formatToParts(date).map(({type, value}) =&gt; {
   switch (type) {

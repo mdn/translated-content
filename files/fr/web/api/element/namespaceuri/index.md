@@ -18,7 +18,9 @@ La propriété en lecture seule **`Element.namespaceURI`** renvoie l'URI d'espac
 
 ## Syntaxe
 
-    namespace = element.namespaceURI
+```js
+namespace = element.namespaceURI
+```
 
 ## Exemple
 

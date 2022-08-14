@@ -24,7 +24,7 @@ Avec le message lui-même, l'écouteur est transmis :
 
 Cette API ne peut pas être utilisée dans un script de contenu.
 
-## Syntax
+## Syntaxe
 
 ```js
 browser.runtime.onMessageExternal.addListener()

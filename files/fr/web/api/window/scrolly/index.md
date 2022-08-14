@@ -9,7 +9,9 @@ La propriété **`scrollY`** de l'objet {{domxref("Window")}} est une propriét�
 
 ## Syntaxe
 
-    var y = window.scrollY;
+```js
+var y = window.scrollY;
+```
 
 - `y` est le nombre de pixels verticaux défilés.
 
@@ -30,7 +32,9 @@ Utilisez cette propriété pour être sûre que le document n'as pas été défi
 
 La propriété `pageYOffset` est un alias de la propriété `scrollY`:
 
-    window.pageYOffset == window.scrollY; // toujours vrai
+```js
+window.pageYOffset == window.scrollY; // toujours vrai
+```
 
 Pour une compatibilité multi-navigateur, utilisez `window.pageYOffset` à la place de `window.scrollY`. **En outre**, les anciennes versions d'Internet Explorer (< 9) ne supportent pas non plus la propriété et doit-être utilisé à l'aide d'autres propriétés qui ne sont pas standards. Un exemple entièrement compatible :
 

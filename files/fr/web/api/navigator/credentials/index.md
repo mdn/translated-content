@@ -15,7 +15,9 @@ La propriété **`credentials`**, rattachée à l'interface {{domxref("Navigator
 
 ## Syntaxe
 
-    var credentialsContainer = navigator.credentials
+```js
+var credentialsContainer = navigator.credentials
+```
 
 ### Valeur
 

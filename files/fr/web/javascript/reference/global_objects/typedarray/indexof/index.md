@@ -20,7 +20,9 @@ La méthode **`indexOf()`** renvoie le premier indice (le plus petit) auquel on 
 
 ## Syntaxe
 
-    typedarray.indexOf(élémentRecherché[, indiceDébut = 0])
+```js
+typedarray.indexOf(élémentRecherché[, indiceDébut = 0])
+```
 
 ### Paramètres
 

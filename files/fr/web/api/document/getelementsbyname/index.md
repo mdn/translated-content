@@ -15,7 +15,9 @@ Renvoie une liste des éléments portant un {{domxref("element.name","name")}} d
 
 ## Syntaxe
 
-    elements = document.getElementsByName(name)
+```js
+elements = document.getElementsByName(name)
+```
 
 - `elements` est une collection de {{domxref("NodeList")}}
 - `name` est la valeur de l'attribut `name` des éléments.

@@ -14,7 +14,7 @@ translation_of: Web/CSS/:is
 ---
 {{CSSRef}}
 
-> **Note:** `:matches()` は `:is()` に改名されました。 ([CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258))
+> **Note:** `:matches()` は `:is()` に改名されました。 ([CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258))
 
 **`:is()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターのリストを引数に取り、リスト中のセレクターの何れか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。
 
@@ -22,8 +22,8 @@ translation_of: Web/CSS/:is
 /* header, main, footer 要素の中の段落で
    マウスポインターが通過中のものをすべて選択 */
 :is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 /* 上記のものは以下のものと同じ */
@@ -31,7 +31,7 @@ header p:hover,
 main p:hover,
 footer p:hover {
   color: red;
-  cursor: pointer;
+  cursor: pointer;
 }
 ```
 
@@ -62,7 +62,6 @@ footer p:hover {
 ### :is() と :where() の違い
 
 この 2 つの違いは、 `:is()` がセレクター全体の詳細度にカウントされる（最も詳細な引数の詳細度を取る）のに対し、 [`:where()`](/ja/docs/Web/CSS/:where) は詳細度の値が 0 であることです。これは、 [`:where()` 参照ページの例](/ja/docs/Web/CSS/:where#examples)で実証されています。
-
 
 ### セレクターの解釈の許容
 
@@ -119,13 +118,13 @@ footer p:hover {
 }
 
 :matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 :is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 ```
 
@@ -133,21 +132,21 @@ footer p:hover {
 let matchedItems;
 
 try {
-  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
+  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
 } catch(e) {
-  try {
-    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
-    try {
-      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
-      try {
-        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
-        console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
-      }
-    }
-  }
+  try {
+    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
+  } catch(e) {
+    try {
+      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
+    } catch(e) {
+      try {
+        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
+      } catch(e) {
+        console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
+      }
+    }
+  }
 }
 
 matchedItems.forEach(applyHandler);
@@ -245,6 +244,7 @@ h1 {
 ```
 
 ### :is() は擬似要素を選択しない
+
 The `:is()` pseudo-class does not match pseudo-elements. So rather than this:
 
 ```css example-bad

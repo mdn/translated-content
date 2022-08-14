@@ -9,7 +9,9 @@ La méthode **`HTMLSelectElement.remove()`** enlève l'option à l'index choisi 
 
 ## Syntaxe
 
-    collection.remove(index);
+```js
+collection.remove(index);
+```
 
 ### Paramètre
 

@@ -18,7 +18,9 @@ Lorsque `clientWidth` est utilisée sur l'élément racine (l'élément `<html>`
 
 ## Syntaxe
 
-    var intElemClientWidth = element.clientWidth;
+```js
+var intElemClientWidth = element.clientWidth;
+```
 
 `intElemClientWidth` est un entier correspondant à la largeur d'`element`, en pixels. La propriété `clientWidth` est uniquement accessible en lecture-seule.
 

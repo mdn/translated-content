@@ -95,8 +95,6 @@ Si vous suivez cette étude en faisant partie d'un programme de cours organisé,
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
-
-
 ## Dans ce module :
 
 - [Les images en HTML](/fr/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML)

@@ -50,7 +50,7 @@ window.addEventListener('storage', () => {
 });
 ```
 
-La même action peut être réalisée ) l'aide de la propriété du gestionnaire d'événements [`onstorage`](/en-US/docs/Web/API/WindowEventHandlers/onstorage) :
+La même action peut être réalisée ) l'aide de la propriété du gestionnaire d'événements [`onstorage`](/fr/docs/Web/API/WindowEventHandlers/onstorage) :
 
 ```js
 window.onstorage = () => {
@@ -72,5 +72,5 @@ window.onstorage = () => {
 
 ## Voir également
 
-- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
-- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Web Storage API](/fr/docs/Web/API/Web_Storage_API)
+- [Using the Web Storage API](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

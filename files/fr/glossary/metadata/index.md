@@ -15,7 +15,7 @@ Une **métadonnée** est — dans sa définition la plus simple — une donnée 
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Métadonnée", "Métadonnée")}} sur Wikipédia
+- [Métadonnée](https://fr.wikipedia.org/wiki/M%C3%A9tadonn%C3%A9e) sur Wikipédia
 
 ### Métadonnée HTML
 

@@ -9,7 +9,9 @@ La méthode **`DOMTokenList.entries()`** renvoie un {{jsxref("Les_protocoles_ite
 
 ## Syntaxe
 
-    tokenList.entries();
+```js
+tokenList.entries();
+```
 
 ### Valeur retournée
 

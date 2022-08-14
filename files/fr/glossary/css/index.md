@@ -36,7 +36,7 @@ Le principe de « cascade » fait référence aux règles de préséance dans l'
 ### Culture générale
 
 - [Apprendre CSS](/fr/Apprendre/CSS)
-- {{interwiki("wikipedia","Feuilles_de_style_en_cascade", "Feuilles de style en cascade")}} sur Wikipédia
+- [Feuilles de style en cascade](https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade) sur Wikipédia
 
 ### Références techniques
 

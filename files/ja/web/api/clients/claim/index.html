@@ -35,7 +35,7 @@ translation_of: Web/API/Clients/claim
 <p>次の例では、サービスワーカーの <code>"activate"</code> イベントリスナー内で <code>claim()</code> を使用しているため、同じスコープに読み込まれたクライアントは、フェッチがこのサービスワーカーを通過する前に再読み込みする必要がありません。</p>
 
 <pre class="brush: js">self.addEventListener('activate', event =&gt; {
-  event.waitUntil(clients.claim());
+  event.waitUntil(clients.claim());
 });</pre>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>

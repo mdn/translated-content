@@ -20,7 +20,9 @@ Le _panner node_ est spatialisé en relation avec l'{{domxref("AudioListener") }
 
 ## Syntaxe
 
-    baseAudioCtx.createPanner();
+```js
+baseAudioCtx.createPanner();
+```
 
 ### Retourne
 
@@ -133,4 +135,4 @@ function positionPanner() {
 
 ## Voir aussi
 
-- [Utiliser l'API Web Audio](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser l'API Web Audio](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

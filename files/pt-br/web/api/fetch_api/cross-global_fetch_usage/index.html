@@ -4,7 +4,7 @@ slug: Web/API/Fetch_API/Cross-global_fetch_usage
 translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 original_slug: Web/API/Fetch_API/Uso_de_busca_Cross-global
 ---
-<p class="summary"> </p>
+<p class="summary"> </p>
 
 <p class="summary">Este artigo explica um "edge case" (um problema ou situação que ocorre apenas em um parâmetro operacional extremo) que ocorre ao utilizar fetch (e potencialmente outras APIs que exibem o mesmo tipo de comportamento de recuperação de recurso). Quando uma busca de cross-origin envolvendo uma URL relativa é iniciada a partir de um {{htmlelement ("iframe")}}, a URL relativa costumava ser resolvida na localização global atual, em vez da localização do iframe.</p>
 
@@ -16,7 +16,7 @@ original_slug: Web/API/Fetch_API/Uso_de_busca_Cross-global
  <li>Você precisa de um iframe de mesma origem</li>
  <li>Esse iframe de mesma origem precisa ter um local com um URL base diferente</li>
  <li>Você tem que usar a função de busca global, por exemplo, frame.contentWindow.fetch ()</li>
- <li>A URL passada precisa ser relativa</li>
+ <li>A URL passada precisa ser relativa</li>
 </ul>
 
 <h2 id="O_problema">O problema</h2>
@@ -29,7 +29,7 @@ original_slug: Web/API/Fetch_API/Uso_de_busca_Cross-global
 
 <h2 id="A_solução">A solução</h2>
 
-<p>No Firefox 60 em diante, o Mozilla resolve a URL relativa contra o global que possui a função <code>fetch()</code> que está sendo usada (veja {{bug (1432272)}}). Portanto, no caso descrito acima, ele é resolvido em relação à localização do iframe:</p>
+<p>No Firefox 60 em diante, o Mozilla resolve a URL relativa contra o global que possui a função <code>fetch()</code> que está sendo usada (veja {{bug (1432272)}}). Portanto, no caso descrito acima, ele é resolvido em relação à localização do iframe:</p>
 
 <pre class="brush: js">let absolute = new URL(relative, frame.contentWindow.location.href)</pre>
 

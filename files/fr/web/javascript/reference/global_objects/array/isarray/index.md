@@ -24,7 +24,9 @@ Array.isArray(undefined);   // false
 
 ## Syntaxe
 
-    Array.isArray(value)
+```js
+Array.isArray(value)
+```
 
 ### Paramètres
 

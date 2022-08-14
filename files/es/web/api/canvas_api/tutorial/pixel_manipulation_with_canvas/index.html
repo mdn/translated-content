@@ -7,14 +7,14 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}</div>
 
 <div class="summary">
-<p>Hasta ahora, no habíamos mirado los píxeles reales de nuestro <em>canvas</em>. Con el objeto <code>ImageData</code>, puedes leer y escribir directamente un <em>array</em> de datos para manipular píxeles.</p>
+<p>Hasta ahora, no habíamos mirado los píxeles reales de nuestro <em>canvas</em>. Con el objeto <code>ImageData</code>, puedes leer y escribir directamente un <em>array</em> de datos para manipular píxeles.</p>
 
 <p>También veremos cómo se puede controlar el suavizado de la imagen (antialiasing) y cómo guardar imágenes de tu <em>canvas</em>.</p>
 </div>
 
-<h2 id="El_objeto_ImageData">El objeto <code>ImageData</code></h2>
+<h2 id="El_objeto_ImageData">El objeto <code>ImageData</code></h2>
 
-<p>El objeto {{domxref("ImageData")}} representa los datos pixelados subyacentes de un área de un objeto lienzo. Contiene los siguientes atributos de sólo lectura:</p>
+<p>El objeto {{domxref("ImageData")}} representa los datos pixelados subyacentes de un área de un objeto lienzo. Contiene los siguientes atributos de sólo lectura:</p>
 
 <dl>
  <dt><code>width</code></dt>
@@ -22,10 +22,10 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas
  <dt><code>height</code></dt>
  <dd>La altura de la imagen en píxeles.</dd>
  <dt><code>data</code></dt>
- <dd>Un objeto {{jsxref("Uint8ClampedArray")}} que representa un array unidimensional, contiene información en formato RGBA, con valores desde <code>0</code> hasta <code>255</code> (incluído).</dd>
+ <dd>Un objeto {{jsxref("Uint8ClampedArray")}} que representa un array unidimensional, contiene información en formato RGBA, con valores desde <code>0</code> hasta <code>255</code> (incluído).</dd>
 </dl>
 
-<p>La propiedad <code>data</code> devuelve un  {{jsxref("Uint8ClampedArray")}}, al que se puede acceder para ver los datos originales del pixel; cada pixel está representado por cuatro valores (rojo, verde, azul, y alfa, en ese orden; esto es, formato "RGBA"). Cada componente de color se representa con un valor entero entre 0 y 255. Dentro del array, cada componente ocupa un índice consecutivo, comenzando con 0 desde el punto superior izquierdo, continuando de izquierda a derecha y de arriba hacia abajo, a través del array.</p>
+<p>La propiedad <code>data</code> devuelve un  {{jsxref("Uint8ClampedArray")}}, al que se puede acceder para ver los datos originales del pixel; cada pixel está representado por cuatro valores (rojo, verde, azul, y alfa, en ese orden; esto es, formato "RGBA"). Cada componente de color se representa con un valor entero entre 0 y 255. Dentro del array, cada componente ocupa un índice consecutivo, comenzando con 0 desde el punto superior izquierdo, continuando de izquierda a derecha y de arriba hacia abajo, a través del array.</p>
 
 <p>El {{jsxref("Uint8ClampedArray")}} contiene <code>alto</code> × <code>ancho</code> × 4 bytes de datos, con valores de índice en el rango entre 0 y (<code>alto</code>×<code>ancho</code>×4)-1.</p>
 
@@ -57,7 +57,7 @@ var blueForCoord = imageData.data[blueIndex];
 var alphaForCoord = imageData.data[alphaIndex];
 </pre>
 
-<p>O, en ES6 sería algo así:</p>
+<p>O, en ES6 sería algo así:</p>
 
 <pre class="brush: js">const xCoord = 50;
 const yCoord = 100;
@@ -78,15 +78,15 @@ const [redIndex, greenIndex, blueIndex, alphaIndex] = colorIndices;
 <pre class="brush: js">var numBytes = imageData.data.length;
 </pre>
 
-<h2 id="Creando_un_objeto_ImageData">Creando un objeto <code>ImageData</code></h2>
+<h2 id="Creando_un_objeto_ImageData">Creando un objeto <code>ImageData</code></h2>
 
-<p>Para crear un objeto nuevo y vacío tipo <code>ImageData</code>, debes usar el método  {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}. Hay dos versiones del método <code>createImageData()</code>:</p>
+<p>Para crear un objeto nuevo y vacío tipo <code>ImageData</code>, debes usar el método  {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}. Hay dos versiones del método <code>createImageData()</code>:</p>
 
 <pre class="brush: js">var myImageData = ctx.createImageData(width, height);</pre>
 
-<p>Esto crea un nuevo objeto <code>ImageData</code> con las dimensiones especificadas. Todos los pixels tienen valor correspondiente a negro - transparente (0,0,0,0).</p>
+<p>Esto crea un nuevo objeto <code>ImageData</code> con las dimensiones especificadas. Todos los pixels tienen valor correspondiente a negro - transparente (0,0,0,0).</p>
 
-<p>También puedes crear un nuevo objeto <code>ImageData</code> con las mismas dimensiones que otro objeto, especificado por <code>anotherImageData</code>. Los píxels del nuevo objeto tienen valor negro - transparente. <strong>¡Esto no es una copia de los datos de la imagen!</strong></p>
+<p>También puedes crear un nuevo objeto <code>ImageData</code> con las mismas dimensiones que otro objeto, especificado por <code>anotherImageData</code>. Los píxels del nuevo objeto tienen valor negro - transparente. <strong>¡Esto no es una copia de los datos de la imagen!</strong></p>
 
 <pre class="brush: js">var myImageData = ctx.createImageData(anotherImageData);</pre>
 
@@ -226,8 +226,8 @@ function draw(img) {
 &lt;canvas id="zoom" width="300" height="227"&gt;&lt;/canvas&gt;
 &lt;div&gt;
 &lt;label for="smoothbtn"&gt;
-  &lt;input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn"&gt;
-  Enable image smoothing
+  &lt;input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn"&gt;
+  Enable image smoothing
 &lt;/label&gt;
 &lt;/div&gt;
 </pre>

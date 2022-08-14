@@ -17,7 +17,9 @@ L'utilisation de `getAttributeNames()` complété par {{domxref("Element.getAttr
 
 ## Syntaxe
 
-    let attributeNames = element.getAttributeNames();
+```js
+let attributeNames = element.getAttributeNames();
+```
 
 ## Exemple
 
@@ -25,8 +27,8 @@ L'utilisation de `getAttributeNames()` complété par {{domxref("Element.getAttr
 // Itérer sur les attributs de l'élément
 for(let name of element.getAttributeNames())
 {
-	let value = element.getAttribute(name);
-	console.log(name, value);
+  let value = element.getAttribute(name);
+  console.log(name, value);
 }
 ```
 

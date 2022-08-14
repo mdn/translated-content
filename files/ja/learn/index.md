@@ -114,7 +114,7 @@ MDN のこのエリアの目的は、あなたを「初心者」から「エキ�
   - : ゲーミフィケーションされた学習プロセスによる基本的なコーディング理論です。主に初心者向けです。
 - [Code.org](https://code.org/)
   - : 基本的なコーディング理論と実践で、主に子供や完全な初心者を目的としたもの。
-- [EXLskills](https://exlskills.com/learn-en/courses) 
+- [EXLskills](https://exlskills.com/learn-en/courses)
   - : 技術スキルを学ぶための、メンターシップやプロジェクトベースの学習があるフリーでオープンなコースです。
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : ウェブ開発を学習するチュートリアルやプロジェクトのあるインタラクティブなサイト。

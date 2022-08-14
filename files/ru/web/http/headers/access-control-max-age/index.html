@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Access-Control-Max-Age
 translation_of: Web/HTTP/Headers/Access-Control-Max-Age
 original_slug: Web/HTTP/Заголовки/Access-Control-Max-Age
 ---
-<div><code>Заголовок ответа сервера</code><strong><code> Access-Control-Max-Age</code></strong> сообщает браузеру насколько {{glossary("предзапрос")}} (эта информация содержится в заголовках {{HTTPHeader("Access-Control-Allow-Methods")}} и {{HTTPHeader("Access-Control-Allow-Headers")}}) может быть кеширован и опущен при запросах к серверу.</div>
+<div><code>Заголовок ответа сервера</code><strong><code> Access-Control-Max-Age</code></strong> сообщает браузеру насколько {{glossary("предзапрос")}} (эта информация содержится в заголовках {{HTTPHeader("Access-Control-Allow-Methods")}} и {{HTTPHeader("Access-Control-Allow-Headers")}}) может быть кеширован и опущен при запросах к серверу.</div>
 
 <table class="properties">
  <tbody>
@@ -29,8 +29,8 @@ original_slug: Web/HTTP/Заголовки/Access-Control-Max-Age
 <dl>
  <dt>&lt;delta-seconds&gt;</dt>
  <dd>Количество секунд, на которое запрос может быть кеширован.<br>
- Максимальное значение в Firefox составляет <a href="https://dxr.mozilla.org/mozilla-central/rev/7ae377917236b7e6111146aa9fb4c073c0efc7f4/netwerk/protocol/http/nsCORSListenerProxy.cpp#1131">24 часа</a> (86400 секунд), в Chromium <a href="https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?rcl=43ab0ff8fdcf3a10a89c4d0d0421f461967f2bd5&amp;l=36">10 минут</a> (600 секунд). Chromium также определяет значение по умолчанию <a href="https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?rcl=43ab0ff8fdcf3a10a89c4d0d0421f461967f2bd5&amp;l=26">5</a> секунд.<br>
- Значение <strong>-1</strong> отменяет кеширование, отправляя предзапрос перед каждым запросом.</dd>
+ Максимальное значение в Firefox составляет <a href="https://dxr.mozilla.org/mozilla-central/rev/7ae377917236b7e6111146aa9fb4c073c0efc7f4/netwerk/protocol/http/nsCORSListenerProxy.cpp#1131">24 часа</a> (86400 секунд), в Chromium <a href="https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?rcl=43ab0ff8fdcf3a10a89c4d0d0421f461967f2bd5&amp;l=36">10 минут</a> (600 секунд). Chromium также определяет значение по умолчанию <a href="https://cs.chromium.org/chromium/src/services/network/public/cpp/cors/preflight_result.cc?rcl=43ab0ff8fdcf3a10a89c4d0d0421f461967f2bd5&amp;l=26">5</a> секунд.<br>
+ Значение <strong>-1</strong> отменяет кеширование, отправляя предзапрос перед каждым запросом.</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>

@@ -16,12 +16,12 @@ translation_of: Web/API/IDBRequest
 <p>{{APIRef("IndexedDB")}}</p>
 
 <div>
-<p>The <strong><code>IDBRequest</code></strong> interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.</p>
+<p>The <strong><code>IDBRequest</code></strong> interface of the IndexedDB API provides access to results of asynchronous requests to databases and database objects using event handler attributes. Each reading and writing operation on a database is done using a request.</p>
 </div>
 
 <p>The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the <code>IDBRequest</code> instance.</p>
 
-<p>All asynchronous operations immediately return an {{domxref("IDBRequest")}} instance. Each request has a <code>readyState</code> that is set to the <code>'pending'</code> state; this changes to <code>'done'</code> when the request is completed or fails. When the state is set to <code>done</code>, every request returns a <code>result</code> and an <code>error</code>, and an event is fired on the request. When the state is still <code>pending</code>, any attempt to access the <code>result</code> or <code>error</code> raises an <code>InvalidStateError</code> exception.</p>
+<p>All asynchronous operations immediately return an {{domxref("IDBRequest")}} instance. Each request has a <code>readyState</code> that is set to the <code>'pending'</code> state; this changes to <code>'done'</code> when the request is completed or fails. When the state is set to <code>done</code>, every request returns a <code>result</code> and an <code>error</code>, and an event is fired on the request. When the state is still <code>pending</code>, any attempt to access the <code>result</code> or <code>error</code> raises an <code>InvalidStateError</code> exception.</p>
 
 <p>In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the <code>result</code> property and an event indicating success is fired at the request ({{domxref("IDBRequest.onsuccess")}}). If an error occurs while performing the operation, the exception is made available through the <code>result</code> property and an error event is fired ({{domxref("IDBRequest.onerror")}}).</p>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/IDBRequest
  <dt>{{domxref("IDBRequest.source")}} {{readonlyInline}}</dt>
  <dd>The source of the request, such as an {{domxref("IDBIndex")}} or an {{domxref("IDBObjectStore")}}. If no source exists (such as when calling {{domxref("IDBFactory.open")}}), it returns null.</dd>
  <dt>{{domxref("IDBRequest.readyState")}} {{readonlyInline}}</dt>
- <dd>The state of the request. Every request starts in the <code>pending</code> state. The state changes to <code>done</code> when the request completes successfully or when an error occurs.</dd>
+ <dd>The state of the request. Every request starts in the <code>pending</code> state. The state changes to <code>done</code> when the request completes successfully or when an error occurs.</dd>
  <dt>{{domxref("IDBRequest.transaction")}} {{readonlyInline}}</dt>
  <dd>The transaction for the request. This property can be null for certain requests, for example those returned from {{domxref("IDBFactory.open")}} unless an upgrade is needed. (You're just connecting to a database, so there is no transaction to return).</dd>
 </dl>
@@ -69,7 +69,7 @@ translation_of: Web/API/IDBRequest
 
 <h2 id="Example">Example</h2>
 
-<p>In the following code snippet, we open a database asynchronously and make a request; <code>onerror</code> and <code>onsuccess</code> functions are included to handle the success and error cases. For a full working example, see our <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="http://chrisdavidmills.github.io/to-do-notifications/">view example live</a>.)</p>
+<p>In the following code snippet, we open a database asynchronously and make a request; <code>onerror</code> and <code>onsuccess</code> functions are included to handle the success and error cases. For a full working example, see our <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="http://chrisdavidmills.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js">var db;
 
@@ -106,7 +106,7 @@ DBOpenRequest.onsuccess = function(event) {
   <tr>
    <td>{{SpecName("IndexedDB 2", "#request-api", "IDBRequest")}}</td>
    <td>{{Spec2("IndexedDB 2")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -17,7 +17,9 @@ La méthode **`Promise.allSettled()`** renvoie une promesse qui est résolue une
 
 ## Syntaxe
 
-    p.allSettled(iterable);
+```js
+p.allSettled(iterable);
+```
 
 ### Paramètres
 

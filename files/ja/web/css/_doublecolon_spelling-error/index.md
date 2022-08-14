@@ -49,8 +49,8 @@ translation_of: Web/CSS/::spelling-error
 #### CSS
 
 ```css
-::spelling-error  {
-  text-decoration: wavy red;
+::spelling-error  {
+  text-decoration: wavy red;
 }
 ```
 

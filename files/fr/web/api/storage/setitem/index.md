@@ -14,7 +14,9 @@ La méthode `setItem()` de l'interface {{domxref("Storage")}}, lorsque lui sont 
 
 ## Syntaxe
 
-    storage.setItem(nomClé, valeurClé);
+```js
+storage.setItem(nomClé, valeurClé);
+```
 
 ### Paramètres
 

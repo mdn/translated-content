@@ -9,13 +9,13 @@ translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 <p>{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}</p>
 
-<p>WebGL <span id="result_box" lang="es"><span>permite que el contenido web </span></span>utilice una API basada en <a class="external" href="http://www.khronos.org/opengles/" hreflang="en">OpenGL ES</a> 2.0 para llevar a cabo la representación 2D y 3D en un elemento <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a> HTML en los navegadores que lo soporten sin el uso de plug-ins. WebGL consiste en código de control escrito en JavaScript y código de efectos especiales (código shader) que se ejecuta en la unidad de procesamiento gráfico de una computadora (GPU). Los elementos WebGL se pueden mezclar con otros elementos HTML y componerse con otras partes de la página o el fondo de la misma.</p>
+<p>WebGL <span id="result_box" lang="es"><span>permite que el contenido web </span></span>utilice una API basada en <a class="external" href="http://www.khronos.org/opengles/" hreflang="en">OpenGL ES</a> 2.0 para llevar a cabo la representación 2D y 3D en un elemento <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a> HTML en los navegadores que lo soporten sin el uso de plug-ins. WebGL consiste en código de control escrito en JavaScript y código de efectos especiales (código shader) que se ejecuta en la unidad de procesamiento gráfico de una computadora (GPU). Los elementos WebGL se pueden mezclar con otros elementos HTML y componerse con otras partes de la página o el fondo de la misma.</p>
 
-<p>Este artículo le dará a conocer los conceptos básicos de WebGL. Se asume que ya tiene una comprensión de las matemáticas implicadas en gráficos 3D, y este artículo no pretende tratar de enseñar OpenGL en sí.</p>
+<p>Este artículo le dará a conocer los conceptos básicos de WebGL. Se asume que ya tiene una comprensión de las matemáticas implicadas en gráficos 3D, y este artículo no pretende tratar de enseñar OpenGL en sí.</p>
 
 <h2 id="Preparando_el_renderizado_en_3D">Preparando el renderizado en 3D</h2>
 
-<p>Lo primero que necesitas para poder usar WebGL para renderizar en 3D es un HTML <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a>. El fragmento HTML a continuación establece un <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a> y configura un controlador de eventos <code>onload</code> que se utilizarán para inicializar nuestro contexto WebGL.</p>
+<p>Lo primero que necesitas para poder usar WebGL para renderizar en 3D es un HTML <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a>. El fragmento HTML a continuación establece un <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a> y configura un controlador de eventos <code>onload</code> que se utilizarán para inicializar nuestro contexto WebGL.</p>
 
 <pre class="brush: html">&lt;body onload="start()"&gt;
   &lt;canvas id="glcanvas" width="640" height="480"&gt;
@@ -42,13 +42,13 @@ function start() {
     gl.enable(gl.DEPTH_TEST);                               // Habilitar prueba de profundidad
     gl.depthFunc(gl.LEQUAL);                                // Objetos cercanos opacan objetos lejanos
     gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);      // Limpiar el buffer de color asi como el de profundidad
-  }
+  }
 }
 </pre>
 
 <p>La primer cosa que hacemos aqui es obtener una referencia al <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas</a>, ocultándolo en una variable llamada <code>canvas</code>. Obviamente si no necesitas referenciar repetidamente, deberías evitar guardar este valor globalmente, y solo guardarlo en una variable local o miembro de un objeto.</p>
 
-<p>Una vez tenemos el canvas, llamamos a la función llamada <code>initWebGL()</code>; esta es una función que definiremos momentaneamente; su trabajo es inicializar el contexto WebGL.</p>
+<p>Una vez tenemos el canvas, llamamos a la función llamada <code>initWebGL()</code>; esta es una función que definiremos momentaneamente; su trabajo es inicializar el contexto WebGL.</p>
 
 <p>Si el contexto es exitosamente inicializado, <code>gl</code> sera una referencia a este. En este caso, establecemos el color base a negro, después limpiamos el contexto a ese color. Después, el contexto es configurado estableciendo parametros. En este caso, estamos habilitando la prueba de profundidad y especificando que los objetos cercanos opacaran a los objetos lejanos.</p>
 
@@ -62,10 +62,10 @@ function start() {
   gl = null;
 
   try {
-    // Tratar de tomar el contexto estandar. Si falla, retornar al experimental.
-    gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  }
-  catch(e) {}
+    // Tratar de tomar el contexto estandar. Si falla, retornar al experimental.
+    gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+  }
+  catch(e) {}
 
   // Si no tenemos ningun contexto GL, date por vencido ahora
   if (!gl) {

@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/toString
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <strong><code>toString()</code></strong> devuelve una cadena que representa el patrón de la expresión regular.</p>
+<p>El método <strong><code>toString()</code></strong> devuelve una cadena que representa el patrón de la expresión regular.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -18,17 +18,17 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/toString
 
 <h3 id="Valor_de_Retorno">Valor de Retorno</h3>
 
-<p>Una cadena que representa el objeto dado.</p>
+<p>Una cadena que representa el objeto dado.</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>El objeto {{jsxref("RegExp")}} reemplaza el método <code>toString()</code> del objeto {{jsxref("Object")}}; no hereda de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("RegExp")}}, el método <code>toString()</code> retorna una cadena que representa el patrón de la expresión regular.</p>
+<p>El objeto {{jsxref("RegExp")}} reemplaza el método <code>toString()</code> del objeto {{jsxref("Object")}}; no hereda de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("RegExp")}}, el método <code>toString()</code> retorna una cadena que representa el patrón de la expresión regular.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_toString()">Usando <code>toString()</code></h3>
+<h3 id="Usando_toString()">Usando <code>toString()</code></h3>
 
-<p dir="ltr" id="tw-target-text">El siguiente ejemplo muestra la cadena de representación de un objeto {{jsxref("RegExp")}}:</p>
+<p dir="ltr" id="tw-target-text">El siguiente ejemplo muestra la cadena de representación de un objeto {{jsxref("RegExp")}}:</p>
 
 <pre class="brush: js">var myExp = new RegExp('a+b+c');
 console.log(myExp.toString());  // '/a+b+c/'
@@ -39,7 +39,7 @@ console.log(foo.toString());    // '/bar/g'
 
 <h3 id="Expresiones_regulares_vacías_y_escapado">Expresiones regulares vacías y escapado</h3>
 
-<p>A partir de ECMAScript 5, una expresión regular vacía devuelve la cadena "/(?:)/" y los terminadores de línea tales como "\n" son escapados:</p>
+<p>A partir de ECMAScript 5, una expresión regular vacía devuelve la cadena "/(?:)/" y los terminadores de línea tales como "\n" son escapados:</p>
 
 <pre class="brush: js">new RegExp().toString(); // "/(?:)/"
 
@@ -69,12 +69,12 @@ new RegExp('\n').toString() === "/\\n/"; // true, desde ES5
   <tr>
    <td>{{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

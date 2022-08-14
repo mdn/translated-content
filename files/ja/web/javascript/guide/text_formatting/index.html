@@ -126,7 +126,7 @@ hello[0]; // これは "H" を返します
    <td>開始インデックスから終了インデックスまで、または開始インデックスと長さ、このいずれかを指定することで文字列における特定の部分集合を返します。</td>
   </tr>
   <tr>
-   <td>{{jsxref("String.match", "match")}}, {{jsxref("String.matchAll", "matchAll")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.replaceAll", "replaceAll")}}, {{jsxref("String.search", "search")}}</td>
+   <td>{{jsxref("String.match", "match")}}, {{jsxref("String.matchAll", "matchAll")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.replaceAll", "replaceAll")}}, {{jsxref("String.search", "search")}}</td>
    <td>正規表現と共に機能します。</td>
   </tr>
   <tr>
@@ -204,7 +204,7 @@ console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));
 
 const options = { year: '2-digit', month: '2-digit', day: '2-digit',
-                hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
+                hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
 const americanDateTime = new Intl.DateTimeFormat('en-US', options).format;
 
 console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
@@ -215,13 +215,13 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 <p>{{jsxref("NumberFormat")}} オブジェクトは数値、例えば通貨をフォーマットするのに有用です。</p>
 
 <pre class="brush: js notranslate">const gasPrice = new Intl.NumberFormat('en-US',
-                        { style: 'currency', currency: 'USD',
-                          minimumFractionDigits: 3 });
+                        { style: 'currency', currency: 'USD',
+                          minimumFractionDigits: 3 });
 
 console.log(gasPrice.format(5.259)); // $5.259
 
 const hanDecimalRMBInChina = new Intl.NumberFormat('zh-CN-u-nu-hanidec',
-                        { style: 'currency', currency: 'CNY' });
+                        { style: 'currency', currency: 'CNY' });
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 </pre>

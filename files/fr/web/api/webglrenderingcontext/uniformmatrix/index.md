@@ -24,9 +24,11 @@ Les trois versions de cette méthode (`uniformMatrix2fv()`, `uniformMatrix3fv()`
 
 ## Syntaxe
 
-    WebGLRenderingContext.uniformMatrix2fv(emplacement, transposer, valeur);
-    WebGLRenderingContext.uniformMatrix3fv(emplacement, transposer, valeur);
-    WebGLRenderingContext.uniformMatrix4fv(emplacement, transposer, valeur);
+```js
+WebGLRenderingContext.uniformMatrix2fv(emplacement, transposer, valeur);
+WebGLRenderingContext.uniformMatrix3fv(emplacement, transposer, valeur);
+WebGLRenderingContext.uniformMatrix4fv(emplacement, transposer, valeur);
+```
 
 ### Paramètres
 

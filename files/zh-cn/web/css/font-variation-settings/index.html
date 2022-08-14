@@ -8,7 +8,7 @@ translation_of: Web/CSS/font-variation-settings
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>font-variation-settings</code></strong> CSS属性提供了对 <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">variable font</a> 特征的低级控制，通过指定要更改的特征的四个字母轴名称及其值。</p>
+<p><strong><code>font-variation-settings</code></strong> CSS 属性提供了对 <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">variable font</a> 特征的低级控制，通过指定要更改的特征的四个字母轴名称及其值。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}</div>
 
@@ -16,7 +16,7 @@ translation_of: Web/CSS/font-variation-settings
 
 <div class="note"><strong>Note</strong>: This property is a low-level mechanism designed to set variable font features where no other way to enable or access those features exist. You should only use it when no basic properties exist to set those features (e.g. {{cssxref("font-weight")}}, {{cssxref("font-style")}}).</div>
 
-<div class="note"><strong>Note</strong>: font characteristics set using <code>font-variation-settings</code> will always override those set using the corresponding basic font properties, e.g. <code>font-weight</code>, no matter where they appear in the cascade. <span class="zhc-markdown-block zhc-markdown-block--html">In some browsers, this is currently only true when the <code>@font-face</code> declaration includes a <code>font-weight</code> range.</span></div>
+<div class="note"><strong>Note</strong>: font characteristics set using <code>font-variation-settings</code> will always override those set using the corresponding basic font properties, e.g. <code>font-weight</code>, no matter where they appear in the cascade. In some browsers, this is currently only true when the <code>@font-face</code> declaration includes a <code>font-weight</code> range.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -96,7 +96,7 @@ font-variation-settings: unset;
 
 <h2 id="Examples">Examples</h2>
 
-<p>See below for interactive examples demonstrating the registered axes. You can find a number of other variable fonts examples at our <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable fonts guide</a>, <a class="external external-icon" href="https://v-fonts.com/" rel="noopener">v-fonts.com</a>, and <a class="external external-icon" href="https://www.axis-praxis.org/" rel="noopener">axis-praxis.org</a>.</p>
+<p>See below for interactive examples demonstrating the registered axes. You can find a number of other variable fonts examples at our <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable fonts guide</a>, <a href="https://v-fonts.com/">v-fonts.com</a>, and <a href="https://www.axis-praxis.org/">axis-praxis.org</a>.</p>
 
 <div class="warning">
 <p><strong>Warning</strong>: In order to use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS prior to 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.</p>
@@ -116,30 +116,13 @@ font-variation-settings: unset;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#low-level-font-variation-settings-control-the-font-variation-settings-property', 'font-variation-settings')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
-<p>{{Compat("css.properties.font-variation-settings")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

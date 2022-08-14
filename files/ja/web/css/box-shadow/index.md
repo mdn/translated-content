@@ -61,7 +61,7 @@ box-shadow: unset;
   - 値が 2 つだけ与えられた場合、 `<offset-x>` および `<offset-y>` として解釈されます。
   - 3 つ目の値が与えられた場合、 `<blur-radius>` として解釈されます。
   - 4 つ目の値が与えられた場合、 `<spread-radius>` として解釈されます。
-   
+
 - 任意で、 `inset` キーワード
 - 任意で、 [`<color>`](#color) の値
 
@@ -120,11 +120,11 @@ But still, like air, I'll rise.</q>
 
 ```css
 blockquote {
-  padding: 20px;
-  box-shadow:
+  padding: 20px;
+  box-shadow:
        inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 ```
 

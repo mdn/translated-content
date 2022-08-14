@@ -7,10 +7,10 @@ original_slug: Web/API/AudioScheduledSourceNode/onended
 ---
 <p>{{ APIRef("AudioBufferSourceNode") }}</p>
 
-<div><code style="font-style: normal;">AudioBufferSourceNodeの</code><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">onended</code><span style="line-height: 1.5;"> イベントハンドラーは</span><span style="line-height: 1.5;">{{event("ended_(Web_Audio)", "ended")}} イベントに関するコ−ルバック関数を格納します。これによりオーディオトラックの再生終了時に実行するコードを設定することができます。</span></div>
+<div><code style="font-style: normal;">AudioBufferSourceNodeの</code><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">onended</code><span style="line-height: 1.5;"> イベントハンドラーは</span><span style="line-height: 1.5;">{{event("ended_(Web_Audio)", "ended")}} イベントに関するコ−ルバック関数を格納します。これによりオーディオトラックの再生終了時に実行するコードを設定することができます。</span></div>
 
 <div class="note">
-<p><strong>注</strong>: <code>onended</code> ハンドラーは loop プロパティーがtrueに設定されている場合はオーディオが再生終了することが無いので効果がありません。このような場合にこの機能を有効にするには {{ domxref("AudioBufferSourceNode.stop()") }}　を使用してください。</p>
+<p><strong>注</strong>: <code>onended</code> ハンドラーは loop プロパティーがtrueに設定されている場合はオーディオが再生終了することが無いので効果がありません。このような場合にこの機能を有効にするには {{ domxref("AudioBufferSourceNode.stop()") }}　を使用してください。</p>
 </div>
 
 <h2 id="構文">構文</h2>
@@ -42,7 +42,7 @@ source.onended = function() {
   <tr>
    <td>{{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-onended', 'onended')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

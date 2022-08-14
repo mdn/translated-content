@@ -14,7 +14,9 @@ translation_of: Web/API/Document/writeln
 
 ## Syntaxe
 
-    document.writeln(ligne);
+```js
+document.writeln(ligne);
+```
 
 ### Paramètres
 
@@ -22,11 +24,13 @@ translation_of: Web/API/Document/writeln
 
 ## Exemple
 
-    document.writeln("<p>Entrez votre mot de passe :</p>");
+```js
+document.writeln("<p>Entrez votre mot de passe :</p>");
+```
 
 ## Notes
 
-**document.writeln** est identique à [{{domxref("document.write")}}](/en-US/docs/Web/API/Document/write), mais ajoute une nouvelle ligne.
+**document.writeln** est identique à [{{domxref("document.write")}}](/fr/docs/Web/API/Document/write), mais ajoute une nouvelle ligne.
 
 ## Spécifications
 

@@ -11,7 +11,9 @@ La méthode **`setLineDash()`** de l'interface Canvas 2D API's {{domxref("Canvas
 
 ## Syntaxe
 
-    ctx.setLineDash(segments);
+```js
+ctx.setLineDash(segments);
+```
 
 ### Paramètres
 

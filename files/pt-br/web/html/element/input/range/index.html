@@ -42,7 +42,7 @@ translation_of: Web/HTML/Element/input/range
 
 <h2 id="Value">Value</h2>
 
-<p>O atributo {{htmlattrxref("value", "input")}} contém uma {{domxref("DOMString")}}  que conte uma representação dos números selecionados em string. O valor nunca é uma string vazia (<code>""</code>). O valor padrão está entre o mínimo e o máximo especificados, a menos que o valor máximo seja menor que o mínimo, caso em que o padrão é definido como o atributo de valor mínimo. O algoritmo que determina o valor padrão é:</p>
+<p>O atributo {{htmlattrxref("value", "input")}} contém uma {{domxref("DOMString")}}  que conte uma representação dos números selecionados em string. O valor nunca é uma string vazia (<code>""</code>). O valor padrão está entre o mínimo e o máximo especificados, a menos que o valor máximo seja menor que o mínimo, caso em que o padrão é definido como o atributo de valor mínimo. O algoritmo que determina o valor padrão é:</p>
 
 <pre class="brush: js">defaultValue = (rangeElem.max &lt; rangeElem.min) ? rangeElem.min
                : rangeElem.min + (rangeElem.max - rangeElem.min)/2;</pre>
@@ -66,7 +66,7 @@ translation_of: Web/HTML/Element/input/range
 
 <h3 id="Especificando_o_mínimo_e_o_máximo">Especificando o mínimo e o máximo</h3>
 
-<p>Por padrão, o mínimo é 0 e o máximo é 100. Se não é o que você precisa, voce pode facilmente especificar limites diferentes alterando os valores dos atributos  {{htmlattrxref("min", "input")}} e/ou {{htmlattrxref("max", "input")}}. Este pode ser um valor inteiro.</p>
+<p>Por padrão, o mínimo é 0 e o máximo é 100. Se não é o que você precisa, voce pode facilmente especificar limites diferentes alterando os valores dos atributos  {{htmlattrxref("min", "input")}} e/ou {{htmlattrxref("max", "input")}}. Este pode ser um valor inteiro.</p>
 
 <p>Por exemplo, para pedir ao usuário um valor entre -10 e 10, você pode usar:</p>
 
@@ -76,7 +76,7 @@ translation_of: Web/HTML/Element/input/range
 
 <h3 id="Definindo_a_escala_entre_valores">Definindo a escala entre valores</h3>
 
-<p>Por padrão, a escala entre o mínimo e o máximo é 1, significando que este sempre é um valor inteiro. você pode alterar o atributo {{htmlattrxref("step")}} para controlar esta escala. Por exemplo, se você  precisa de um valor de duas casas decimais entre os valores 5 e 10, voce deve definir o valor de <code>step</code> para 0.01:</p>
+<p>Por padrão, a escala entre o mínimo e o máximo é 1, significando que este sempre é um valor inteiro. você pode alterar o atributo {{htmlattrxref("step")}} para controlar esta escala. Por exemplo, se você  precisa de um valor de duas casas decimais entre os valores 5 e 10, voce deve definir o valor de <code>step</code> para 0.01:</p>
 
 <div id="Granularity_sample1">
 <pre class="brush: html">&lt;input type="range" min="5" max="10" step="0.01"&gt;</pre>
@@ -213,7 +213,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}</p>
 
-<p><span id="result_box" lang="pt"><span>Esse controle é horizontal (pelo menos na maioria, senão em todos os principais navegadores, outros podem variar).</span> <span>Fazê-lo vertical é tão simples como adicionar CSS para alterar as dimensões do controle para que ele seja mais alto que o largo, como este:</span></span> </p>
+<p><span id="result_box" lang="pt"><span>Esse controle é horizontal (pelo menos na maioria, senão em todos os principais navegadores, outros podem variar).</span> <span>Fazê-lo vertical é tão simples como adicionar CSS para alterar as dimensões do controle para que ele seja mais alto que o largo, como este:</span></span> </p>
 
 <div id="Orientation_sample2">
 <h4 id="CSS">CSS</h4>
@@ -235,7 +235,7 @@ translation_of: Web/HTML/Element/input/range
 </div>
 </div>
 
-<p>As especificações HTML recomenda que os navegadores mudem automaticamente para um controle vertical quando a largura for menor que à altura. Infortuniamente nenhum dos principais navegadores atualmente oferece tal suporte. No entanto você pode cria-lo pelo seu lado. A maneira mais fácil para isto é usar o CSS:  aplicando um: {{cssxref("transform")}} para rotacionar o elemento tornando-o vertical. Vamos dar uma olhada:</p>
+<p>As especificações HTML recomenda que os navegadores mudem automaticamente para um controle vertical quando a largura for menor que à altura. Infortuniamente nenhum dos principais navegadores atualmente oferece tal suporte. No entanto você pode cria-lo pelo seu lado. A maneira mais fácil para isto é usar o CSS:  aplicando um: {{cssxref("transform")}} para rotacionar o elemento tornando-o vertical. Vamos dar uma olhada:</p>
 
 <div id="Orientation_sample3">
 <h4 id="HTML_2">HTML</h4>
@@ -252,19 +252,19 @@ translation_of: Web/HTML/Element/input/range
 
 <pre class="brush: css">.slider-wrapper {
   display: inline-block;
-  width: 20px;
-  height: 150px;
-  padding: 0;
+  width: 20px;
+  height: 150px;
+  padding: 0;
 }
 </pre>
 <span id="result_box" lang="pt"><span>Em seguida, vem a informação de estilo para o elemento </span></span><code>&lt;input&gt;</code> <span id="result_box" lang="pt"><span>dentro do espaço reservado:</span></span>
 
 <pre class="brush: css">.slider-wrapper input {
-  width: 150px;
-  height: 20px;
-  margin: 0;
-  transform-origin: 75px 75px;
-  transform: rotate(-90deg);
+  width: 150px;
+  height: 20px;
+  margin: 0;
+  transform-origin: 75px 75px;
+  transform: rotate(-90deg);
 }</pre>
 
 <p><span id="result_box" lang="pt"><span>O tamanho do controle está configurado para ter 150 pixels de comprimento por 20 pixels de altura</span></span> . As margins estão configuradas como 0 e a {{cssxref("transform-origin")}} é deslocada para o centro do espaço de giro do controle deslizante;<span id="result_box" lang="pt"><span> uma vez que o controle deslizante está configurado para ter 150 pixels de largura, gira através de uma caixa que é de 150 pixels em cada lado.</span> <span>Compensando a origem por 75px em cada eixo significa que vamos girar em torno do centro desse espaço.</span> <span>Finalmente, giramos no sentido anti-horário em 90 °.</span> <span>O resultado: uma entrada de intervalo que é girada para que o valor máximo esteja na parte superior e o valor mínimo esteja na parte inferior.</span></span></p>
@@ -319,67 +319,7 @@ translation_of: Web/HTML/Element/input/range
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.0<sup>[2]</sup></td>
-   <td>12</td>
-   <td>{{CompatGeckoDesktop(23)}}<sup>[1][4]</sup></td>
-   <td>10</td>
-   <td>10.1</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1<sup>[3]</sup></td>
-   <td>57<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(52)}}<sup>[1]</sup></td>
-   <td>10</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] While the specification says that the range input should be drawn vertically if the height is greater than the width, this behavior is not currently implemented. See these Firefox bugs for more information: {{bug(840820)}} and {{bug(981916)}}.</p>
-
-<p>[2] Chrome implements the <code>slider-vertical</code> value for the non-standard {{cssxref("-webkit-appearance")}} property. <em>You shouldn't use this, since it's proprietary, unless you include appropriate fallbacks for users of other browsers</em>.</p>
-
-<p>[3] The Android browser recognizes the <code>"range"</code> type starting with version 2.1, but doesn't fully implement it until version 4.3.</p>
-
-<p>[4] Drawing of hash/tick marks is not yet implemented. See {{bug(841942)}} for more information.</p>
+{{Compat("html.elements.input.type_range")}}
 
 <h2 id="See_also">See also</h2>
 

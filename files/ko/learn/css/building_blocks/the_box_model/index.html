@@ -15,13 +15,13 @@ original_slug: Learn/CSS/Building_blocks/상자_모델
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}</div>
 
-<p>CSS에 포함되는 모든 요소의 외장은 박스이며, 이 박스를 이해하는 것은 CSS을 통해 레이아웃을 생성하거나, 아이템과 다른 아이템을 정렬하는 것을 가능하게 하는 열쇠입니다. 이번 단원에서 우리는 CSS 박스<em>모델</em>을 제대로 살펴보겠습니다. 박스의 작동 방식과 박스와 관련된 용어를 이해함으로써 더 복잡한 레이아웃 작업으로 넘어갈 수 있도록합니다.</p>
+<p>CSS에 포함되는 모든 요소의 외장은 박스이며, 이 박스를 이해하는 것은 CSS을 통해 레이아웃을 생성하거나, 아이템과 다른 아이템을 정렬하는 것을 가능하게 하는 열쇠입니다. 이번 단원에서 우리는 CSS 박스<em>모델</em>을 제대로 살펴보겠습니다. 박스의 작동 방식과 박스와 관련된 용어를 이해함으로써 더 복잡한 레이아웃 작업으로 넘어갈 수 있도록합니다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">선결 사항:</th>
-   <td>기본 컴퓨터 활용 능력<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">기본 소프트웨어 설치</a>, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">파일 작업에 대한 기본 지식</a>, HTML 기본기 (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> 학습), CSS 작동 방식에 대한 개념 (<a href="/en-US/docs/Learn/CSS/First_steps">CSS 첫 단계</a> 학습.) 등에 대한 기본 지식</td>
+   <td>기본 컴퓨터 활용 능력<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">기본 소프트웨어 설치</a>, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">파일 작업에 대한 기본 지식</a>, HTML 기본기 (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> 학습), CSS 작동 방식에 대한 개념 (<a href="/en-US/docs/Learn/CSS/First_steps">CSS 첫 단계</a> 학습.) 등에 대한 기본 지식</td>
   </tr>
   <tr>
    <th scope="row">목표:</th>
@@ -75,7 +75,7 @@ original_slug: Learn/CSS/Building_blocks/상자_모델
 
 <h2 id="서로_다른_디스플레이_유형의_예">서로 다른 디스플레이 유형의 예</h2>
 
-<p>계속해서 몇 가지 예를 살펴보겠습니다. 아래에 우리는 세 개의 서로 다른 HTML 요소가 있으며, 모두 외부 디스플레이 유형이 <code>block</code>입니다. 첫 번째 단락은 CSS에 테두리가 추가된 단락입니다. 브라우저는 이걸 블록 박스로 렌더링하므로 단락은 새 줄에서 시작되며 확보된 너비 전체까지 확장할 겁니다.</p>
+<p>계속해서 몇 가지 예를 살펴보겠습니다. 아래에 우리는 세 개의 서로 다른 HTML 요소가 있으며, 모두 외부 디스플레이 유형이 <code>block</code>입니다. 첫 번째 단락은 CSS에 테두리가 추가된 단락입니다. 브라우저는 이걸 블록 박스로 렌더링하므로 단락은 새 줄에서 시작되며 확보된 너비 전체까지 확장할 겁니다.</p>
 
 <p>두 번째는 <code>display: flex</code> 사용해 배치된 목록입니다. 이 예제는 컨테이너 내부의 항목에 대해 가변 레이아웃을 수립하지만, 목록 자체는 블록 박스이며 단락과 같이 전체 컨테이너 너비로 확장되어 새 줄로 행갈이를 합니다.</p>
 
@@ -93,7 +93,7 @@ original_slug: Learn/CSS/Building_blocks/상자_모델
 
 <p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1000)}}</p>
 
-<p>나중에 해당 단원에서 가변 레이아웃과 같은 것들을 접하게 될 것입니다. 당장 기억해야 할 핵심은 <code>display</code> 속성 값을 변경하면 박스의 외부 디스플레이 유형이 블록인지 인라인인지를 변경하여, 레이아웃 속 다른 요소 주위에 자신을 표시하는 방법이 달라진다는 것입니다.</p>
+<p>나중에 해당 단원에서 가변 레이아웃과 같은 것들을 접하게 될 것입니다. 당장 기억해야 할 핵심은 <code>display</code> 속성 값을 변경하면 박스의 외부 디스플레이 유형이 블록인지 인라인인지를 변경하여, 레이아웃 속 다른 요소 주위에 자신을 표시하는 방법이 달라진다는 것입니다.</p>
 
 <p>나머지 수업에서는 외부 디스플레이 유형에 집중할 것이다.</p>
 
@@ -103,7 +103,7 @@ original_slug: Learn/CSS/Building_blocks/상자_모델
 
 <h3 id="Box의_구성">Box의 구성</h3>
 
-<p>CSS 블록 박스 구성하기 위한 우리의 준비물은:</p>
+<p>CSS 블록 박스 구성하기 위한 우리의 준비물은:</p>
 
 <ul>
  <li><strong>콘텐츠 박스</strong>: 당신의 콘텐츠가 표시되는 영역으로 그 크기는 {{cssxref("width")}} and {{cssxref("height")}}와 같은 속성을 사용해서 정할 수 있습니다.</li>
@@ -120,7 +120,7 @@ original_slug: Learn/CSS/Building_blocks/상자_모델
 
 <p>표준 box model에서 box에서 <code>width</code>와 <code>height</code>를 부여하면 <em>content box</em>의 너비와 높이가 정의됩니다. 그런 다음 패딩과 테두리는 박스의 너비와 높이에 추가되여 박스가 점유하는 전체 크기가 정해집니다. 그 내용이 아래 이미지에서 제시되었습니다.</p>
 
-<p>우리는 박스의 <code>width</code>와 <code>height</code>, <code>margin</code>과 <code>border</code> 및 <code>padding</code> CSS 값이 다음과 같이 지정되어 있다고 간주합니다:</p>
+<p>우리는 박스의 <code>width</code>와 <code>height</code>, <code>margin</code>과 <code>border</code> 및 <code>padding</code> CSS 값이 다음과 같이 지정되어 있다고 간주합니다:</p>
 
 <pre class="brush: css notranslate">.box {
   width: 350px;
@@ -327,7 +327,7 @@ original_slug: Learn/CSS/Building_blocks/상자_모델
 
 <ol>
  <li><a href="/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">계단식 나열과 상속</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS 선택기</a>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS 선택기</a>
   <ul>
    <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">유형과 클레스, 아이디 선택기 selectors</a></li>
    <li><a href="/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">딸린 속성 선택기</a></li>
@@ -340,9 +340,9 @@ original_slug: Learn/CSS/Building_blocks/상자_모델
  <li><a href="/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">서로 다른 텍스트 방향 처리</a></li>
  <li><a href="/ko/docs/Learn/CSS/Building_blocks/Overflowing_content">대열이탈 콘텐츠</a></li>
  <li><a href="/ko/docs/Learn/CSS/Building_blocks/Values_and_units">속성값과 단위</a></li>
- <li><a href="/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">CSS 항목 크기 설정</a></li>
+ <li><a href="/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">CSS 항목 크기 설정</a></li>
  <li><a href="/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements">이미지와 미디아, 양식 요소</a></li>
  <li><a href="/ko/docs/Learn/CSS/Building_blocks/Styling_tables">테이블 스타일링</a></li>
- <li><a href="/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS">CSS 디버깅</a></li>
- <li><a href="/ko/docs/Learn/CSS/Building_blocks/Organizing">CSS 체계화</a></li>
+ <li><a href="/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS">CSS 디버깅</a></li>
+ <li><a href="/ko/docs/Learn/CSS/Building_blocks/Organizing">CSS 체계화</a></li>
 </ol>

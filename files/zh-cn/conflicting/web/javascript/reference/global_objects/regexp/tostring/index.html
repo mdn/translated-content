@@ -1,0 +1,45 @@
+---
+title: RegExp.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
+tags:
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
+  - RegExp
+translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/toSource
+---
+<p>{{JSRef("Global_Objects", "RegExp")}}{{ Non-standard_header() }}</p>
+
+<h2 id="Summary">概述</h2>
+
+<p>返回一个字符串，代表当前对象的源代码</p>
+
+<h2 id="Syntax">语法</h2>
+
+<pre class="syntaxbox"><code><var>regexObj</var>.toSource()
+</code></pre>
+
+<h2 id="Description">描述</h2>
+
+<p><code>toSource</code>方法返回值如下：</p>
+
+<ul>
+ <li>对于内置的<code>RegExp</code>对象，<code>toSource</code> 如下字符串：</li>
+</ul>
+
+<pre class="brush: js">function RegExp() {
+    [native code]
+}
+</pre>
+
+<ul>
+ <li>对于一个 <code>RegExp</code> 实例, <code>toSource</code> 返回代表该正则的字符串。</li>
+</ul>
+
+<p>该方法通常由 JavaScript 内部隐含调用，而不会明确的出现在用户代码中。</p>
+
+<h2 id="See_Also">相关链接</h2>
+
+<p><a href="/zh-cn/JavaScript/Reference/Global_Objects/Object/toSource" title="zh-cn/JavaScript/Reference/Global_Objects/Object/toSource">Object.prototype.toSource</a></p>

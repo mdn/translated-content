@@ -18,7 +18,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 ## 構文
 
-    Promise.any(iterable);
+```
+Promise.any(iterable);
+```
 
 ### 引数
 

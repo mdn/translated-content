@@ -18,7 +18,9 @@ Quitte le groupe en ligne actuel dans la [console Web](/fr/docs/Outils/Console_W
 
 ## Syntaxe
 
-    console.groupEnd();
+```js
+console.groupEnd();
+```
 
 ## Paramètres
 

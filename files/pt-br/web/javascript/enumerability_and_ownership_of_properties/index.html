@@ -9,19 +9,19 @@ original_slug: Web/JavaScript/Enumerabilidade_e_posse_de_propriedades
 <div>{{JsSidebar("Mais")}}</div>
 
 <div><br>
-Propriedades enumeráveis são aquelas propriedades cuja flag interna [[Enumerable]] é verdadeira (true), que é o padrão para propriedades criadas via assinatura simples ou através de um inicializador (propriedades definidas através de  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> e tipo padrão [[Enumerable]] falso (false)).</div>
+Propriedades enumeráveis são aquelas propriedades cuja flag interna [[Enumerable]] é verdadeira (true), que é o padrão para propriedades criadas via assinatura simples ou através de um inicializador (propriedades definidas através de  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> e tipo padrão [[Enumerable]] falso (false)).</div>
 
-<div> </div>
+<div> </div>
 
-<div>Propriedades enumeráveis aparecem em <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops exceto se o nome da propriedade for um objeto <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a>. Posse de propriedades é determinada pelo fato da propriedade pertencer ao objeto diretamente e não a uma cadeira de protótipos. Propriedades de um objeto pode também ser recuperadas diretamente. Há um número de built-in de detecção, iteração/enumeração e recuperação de propriedades,  com o gráfico mostrando que estão disponíveis. </div>
+<div>Propriedades enumeráveis aparecem em <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops exceto se o nome da propriedade for um objeto <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a>. Posse de propriedades é determinada pelo fato da propriedade pertencer ao objeto diretamente e não a uma cadeira de protótipos. Propriedades de um objeto pode também ser recuperadas diretamente. Há um número de built-in de detecção, iteração/enumeração e recuperação de propriedades,  com o gráfico mostrando que estão disponíveis. </div>
 
-<div> </div>
+<div> </div>
 
 <div>O código de exemplo a seguir demostra como obter as categorias que faltam.</div>
 
-<div> </div>
+<div> </div>
 
-<div> </div>
+<div> </div>
 
 <table>
  <caption>Propriedade de enumerabilidade e posse - métodos internos de detecção, recuperação, e iteração</caption>
@@ -42,13 +42,13 @@ Propriedades enumeráveis são aquelas propriedades cuja flag interna [[Enumerab
       <tr>
        <th scope="col">Enumerável</th>
        <th scope="col">Não enumerável</th>
-       <th scope="col">Enumerável e Não enumerável</th>
+       <th scope="col">Enumerável e Não enumerável</th>
       </tr>
      </thead>
      <tbody>
       <tr>
        <td><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
-       <td><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code> e não <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
+       <td><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code> e não <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
        <td><code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code></td>
       </tr>
      </tbody>
@@ -65,7 +65,7 @@ Propriedades enumeráveis são aquelas propriedades cuja flag interna [[Enumerab
       <tr>
        <th scope="col">Enumerável</th>
        <th scope="col">Não enumerável</th>
-       <th scope="col">Enumerável e Não enumerável</th>
+       <th scope="col">Enumerável e Não enumerável</th>
       </tr>
      </thead>
      <tbody>
@@ -88,16 +88,16 @@ Propriedades enumeráveis são aquelas propriedades cuja flag interna [[Enumerab
       <tr>
        <th scope="col">Enumerável</th>
        <th scope="col">Não enumerável</th>
-       <th scope="col">Enumerável e Não enumerável</th>
+       <th scope="col">Enumerável e Não enumerável</th>
       </tr>
      </thead>
      <tbody>
       <tr>
-       <td>Iterar <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a></code></td>
+       <td>Iterar <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a></code></td>
        <td>
-        <p>itera <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a> </code>filtrou-se para incluir as propriedades quando não passado <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></p>
+        <p>itera <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a> </code>filtrou-se para incluir as propriedades quando não passado <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></p>
        </td>
-       <td><code><font face="Open Sans, Arial, sans-serif">iterar </font><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code></td>
+       <td><code><font face="Open Sans, Arial, sans-serif">iterar </font><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code></td>
       </tr>
      </tbody>
     </table>
@@ -108,7 +108,7 @@ Propriedades enumeráveis são aquelas propriedades cuja flag interna [[Enumerab
       <tr>
        <th scope="col">Enumerável</th>
        <th scope="col">Não enumerável</th>
-       <th scope="col">Enumerável e Não enumerável</th>
+       <th scope="col">Enumerável e Não enumerável</th>
       </tr>
      </thead>
      <tbody>
@@ -127,13 +127,13 @@ Propriedades enumeráveis são aquelas propriedades cuja flag interna [[Enumerab
 
 <h2 id="Obtendo_propriedades_por_enumerabilidadeposse">Obtendo propriedades por enumerabilidade/posse</h2>
 
-<p> </p>
+<p> </p>
 
-<p>Note que não é o algoritmo mais eficiente para todos os casos, mas útil para uma demonstração rápida.</p>
+<p>Note que não é o algoritmo mais eficiente para todos os casos, mas útil para uma demonstração rápida.</p>
 
 <ul>
- <li>Detecção pode ocorrer por <code>SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) &gt; -1</code></li>
- <li>Iteração pode ocorrer por <code>SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});</code> (ou use<code> filter()</code>, <code>map()</code>, etc.)</li>
+ <li>Detecção pode ocorrer por <code>SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) &gt; -1</code></li>
+ <li>Iteração pode ocorrer por <code>SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});</code> (ou use<code> filter()</code>, <code>map()</code>, etc.)</li>
 </ul>
 
 <pre class="brush: js">var SimplePropertyRetriever = {
@@ -204,7 +204,7 @@ Propriedades enumeráveis são aquelas propriedades cuja flag interna [[Enumerab
 <table>
  <thead>
   <tr>
-   <th scope="row"> </th>
+   <th scope="row"> </th>
    <th scope="col"><code>in</code></th>
    <th scope="col"><code>for..in</code></th>
    <th scope="col"><code>hasOwnProperty</code></th>
@@ -236,7 +236,7 @@ Propriedades enumeráveis são aquelas propriedades cuja flag interna [[Enumerab
    <td>true</td>
   </tr>
   <tr>
-   <th scope="row">Inherited Enumerable</th>
+   <th scope="row">Inherited Enumerable</th>
    <td>true</td>
    <td>true</td>
    <td>false</td>

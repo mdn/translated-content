@@ -13,14 +13,14 @@ browser-compat: javascript.builtins.RangeError
 <div>{{JSRef}}</div>
 
 <p>
-    <code><strong>RangeError</strong></code> 객체는 어떤 값이 집합에 없거나 허용되는 범위가 아닐 때
+    <code><strong>RangeError</strong></code> 객체는 어떤 값이 집합에 없거나 허용되는 범위가 아닐 때
   오류를 나타냅니다.
 </p>
 
 <h2 id="설명">설명</h2>
 
 <p>
-    어떤 값을 그 값이 포함되는 범위를 허용하지 않는 함수에 인수로 전달하려 할 때  
+    어떤 값을 그 값이 포함되는 범위를 허용하지 않는 함수에 인수로 전달하려 할 때  
   <code>RangeError</code>가 발생합니다.
 </p>
 
@@ -28,11 +28,11 @@ browser-compat: javascript.builtins.RangeError
 
 <ul>
   <li>허용되는 문자열이 아닌 값을 {{jsxref("String.prototype.normalize()")}}에 전달하거나,</li>
-  <li>{{jsxref("Array")}} 생성자를 통해 잘못된 길이의 배열을 만드려고 시도하거나,  </li>
+  <li>{{jsxref("Array")}} 생성자를 통해 잘못된 길이의 배열을 만드려고 시도하거나,  </li>
   <li>
-        숫자 메서드 {{jsxref("Number.prototype.toExponential()")}},    
+        숫자 메서드 {{jsxref("Number.prototype.toExponential()")}},    
     {{jsxref("Number.prototype.toFixed()")}} 혹은 {{jsxref("Number.prototype.toPrecision()")}}에
-    나쁜 값을 전달하는 경우.  
+    나쁜 값을 전달하는 경우.  
   </li>
 </ul>
 
@@ -48,14 +48,14 @@ browser-compat: javascript.builtins.RangeError
 <dl>
   <dt>{{jsxref("Error.prototype.message", "RangeError.prototype.message")}}</dt>
   <dd>
-    오류 메시지. 비록 ECMA-262에서 {{jsxref("RangeError")}}는 반드시 자체    
-    <code>message</code> 속성을 제공해야한다고 명시했지만, <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>는 {{jsxref("Error.prototype.message")}}를 상속합니다.  
+    오류 메시지. 비록 ECMA-262에서 {{jsxref("RangeError")}}는 반드시 자체    
+    <code>message</code> 속성을 제공해야한다고 명시했지만, <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>는 {{jsxref("Error.prototype.message")}}를 상속합니다.  
   </dd>
   <dt>{{jsxref("Error.prototype.name", "RangeError.prototype.name")}}</dt>
   <dd>오류 이름. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
-  <dt>{{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}  </dt>
+  <dt>{{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}  </dt>
   <dd>오류가 발생한 파일 경로. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
-  <dt>{{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}  </dt>
+  <dt>{{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}  </dt>
   <dd>오류가 발생한 곳의 줄 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
   <dt>{{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}}</dt>
   <dd>오류가 발생한 곳의 열 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>

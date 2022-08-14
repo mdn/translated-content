@@ -1,21 +1,31 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
+tags:
+ - JavaScript
+ - Method
+ - Object
+ - Prototype
+browser-compat: javascript.builtins.Object.toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>O método <code><strong>toString()</strong></code> retorna uma string representando o objeto.</p>
+<p>O método <code>toString()</code> retorna uma string representando o objeto.</p>
+
+{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
-<pre class="syntaxbox"><code><var>obj</var>.toString()</code></pre>
+<pre class="brush: js">
+obj.toString()
+</pre>
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>Todo objeto possui um método <code>toString()</code> que é chamado automaticamente quando o objeto precisa ser representado como um valor em texto ou quando o objeto é referenciado de uma maneira que requeira uma string. Por padrão, o método <code>toString()</code> é herdado de todo objeto descendente de  <code>Object</code>. Se e o método não é sobrescrito em um objeto personalizado, <code>toString()</code> retorna "[object <em>type</em>]", onde <code><em>type</em></code> é o tipo do objeto. O código a seguir ilustra isso:</p>
+<p>Todo objeto possui um método <code>toString()</code> que é chamado automaticamente quando o objeto precisa ser representado como um valor em texto ou quando o objeto é referenciado de uma maneira que requeira uma string. Por padrão, o método <code>toString()</code> é herdado de todo objeto descendente de  <code>Object</code>. Se e o método não é sobrescrito em um objeto personalizado, <code>toString()</code> retorna "[object <em>type</em>]", onde <code><em>type</em></code> é o tipo do objeto. O código a seguir ilustra isso:</p>
 
 <pre class="brush: js">var o = new Object();
 o.toString();           // retorna [object Object]
@@ -27,11 +37,11 @@ o.toString();           // retorna [object Object]
 
 <h2 id="Examples" name="Examples">Examples</h2>
 
-<h3 id="Example:_Overriding_the_default_toString_method" name="Example:_Overriding_the_default_toString_method">Exemplo: Sobrepondo o método inicial <code>toString</code> </h3>
+<h3 id="Example:_Overriding_the_default_toString_method" name="Example:_Overriding_the_default_toString_method">Exemplo: Sobrepondo o método inicial <code>toString</code> </h3>
 
-<p>Você pode criar uma função para ser chamada no lugar do método <code>toString()</code>. O método <code>toString()</code> não requer parâmetros e deve retornar uma string. O método <code>toString()</code> criado por você pode ter o valor que quiser, mas será mais útil se usar informações do objeto.</p>
+<p>Você pode criar uma função para ser chamada no lugar do método <code>toString()</code>. O método <code>toString()</code> não requer parâmetros e deve retornar uma string. O método <code>toString()</code> criado por você pode ter o valor que quiser, mas será mais útil se usar informações do objeto.</p>
 
-<p>O código abaixo define o objeto <code>Dog</code> e cria <code>theDog</code>, um objeto do tipo <code>Dog</code>:</p>
+<p>O código abaixo define o objeto <code>Dog</code> e cria <code>theDog</code>, um objeto do tipo <code>Dog</code>:</p>
 
 <pre class="brush: js">function Dog(name, breed, color, sex) {
   this.name = name;
@@ -43,12 +53,12 @@ o.toString();           // retorna [object Object]
 theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
 </pre>
 
-<p>Se você chamar o método <code>toString()</code> neste objeto, ele retornará o valor original herdado de {{jsxref("Global_Objects/Object", "Object")}}:</p>
+<p>Se você chamar o método <code>toString()</code> neste objeto, ele retornará o valor original herdado de {{jsxref("Global_Objects/Object", "Object")}}:</p>
 
 <pre class="brush: js">theDog.toString(); // returns [object Object]
 </pre>
 
-<p>O código abaixo cria e faz com que <code>dogToString()</code> sobrescreva o <code>toString()</code> original. Esta função gera uma string contendo <strong>name, breed, color, and sex</strong> do objeto, na forma de "<code>propriedade = valor;</code>".</p>
+<p>O código abaixo cria e faz com que <code>dogToString()</code> sobrescreva o <code>toString()</code> original. Esta função gera uma string contendo <strong>name, breed, color, and sex</strong> do objeto, na forma de "<code>propriedade = valor;</code>".</p>
 
 <pre class="brush: js">Dog.prototype.toString = function dogToString() {
   var ret = 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
@@ -56,14 +66,14 @@ theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
 }
 </pre>
 
-<p>Usando este código, toda vez que <code>theDog</code> for usado em um texto (string), JavaScript automaticamente chamará a função <code>dogToString()</code>, a qual retornará:</p>
+<p>Usando este código, toda vez que <code>theDog</code> for usado em um texto (string), JavaScript automaticamente chamará a função <code>dogToString()</code>, a qual retornará:</p>
 
 <pre>Dog Gabby is a female chocolate Lab
 </pre>
 
-<h3 id="Example:_Using_toString_to_detect_object_type" name="Example:_Using_toString_to_detect_object_type">Exemplo: Usando <code>toString()</code> para detectar a classe do objeto</h3>
+<h3 id="Example:_Using_toString_to_detect_object_type" name="Example:_Using_toString_to_detect_object_type">Exemplo: Usando <code>toString()</code> para detectar a classe do objeto</h3>
 
-<p><code>toString()</code> pode ser usado com qualquer objeto e permite que você pegue sua classe. Para usar <code>Object.prototype.toString()</code> com qualquer objeto, deverá chamar {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} nele, passando o objeto que quer inspecionar como o primeiro parâmetro, chamado <code>thisArg</code>.</p>
+<p><code>toString()</code> pode ser usado com qualquer objeto e permite que você determine sua classe. Para usar <code>Object.prototype.toString()</code> com qualquer objeto, deverá chamar {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} nele, passando o objeto que quer inspecionar como o primeiro parâmetro, chamado <code>thisArg</code>.</p>
 
 <pre class="brush: js">var toString = Object.prototype.toString;
 
@@ -78,82 +88,12 @@ toString.call(null);        // [object Null]
 
 <h2 id="Especificações">Especificações</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.2', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Call on {{jsxref("Global_Objects/null", "null")}} returns <code>[object <em>Null</em>]</code>, and {{jsxref("Global_Objects/undefined", "undefined")}} returns <code>[object <em>Undefined</em>]</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.tostring', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+<div>{{Specifications}}</div>
 
 <h2 id="Compatibilidade">Compatibilidade</h2>
 
-<div>{{CompatibilityTable}}</div>
+<div>{{Compat}}</div>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

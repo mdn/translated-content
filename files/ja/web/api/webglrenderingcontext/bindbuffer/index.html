@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.bindBuffer()</code></strong> メソッドは、与えられた {{domxref("WebGLBuffer")}} をターゲットに結合します。</p>
+<p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.bindBuffer()</code></strong> メソッドは、与えられた {{domxref("WebGLBuffer")}} をターゲットに結合します。</p>
 
 <h2 id="構文">構文</h2>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/WebGLRenderingContext/bindBuffer
 
 <p>一つのターゲットにのみ {{domxref("WebGLBuffer")}} を結合できます。バッファーを他のターゲットに結合しようとすると、<code>INVALID_OPERATION</code> エラーをスローして現在のバッファ結合を同じままにします。</p>
 
-<p>{{domxref("WebGLBuffer")}} が {{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}} によって削除されるようにマークされると、(再び) 結合できなくなります。そうしようとしても <code>INVALID_OPERATION</code> エラーが生成されて、現在の結合は変更されません。</p>
+<p>{{domxref("WebGLBuffer")}} が {{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}} によって削除されるようにマークされると、(再び) 結合できなくなります。そうしようとしても <code>INVALID_OPERATION</code> エラーが生成されて、現在の結合は変更されません。</p>
 
 <h2 id="例">例</h2>
 
@@ -59,7 +59,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 
 <h3 id="現在結合されているものの取得">現在結合されているものの取得</h3>
 
-<p>現在のバッファー結合を確認するには、<code>ARRAY_BUFFER_BINDING</code> や <code>ELEMENT_ARRAY_BUFFER_BINDING</code> の定数で問い合わせます。</p>
+<p>現在のバッファー結合を確認するには、<code>ARRAY_BUFFER_BINDING</code> や <code>ELEMENT_ARRAY_BUFFER_BINDING</code> の定数で問い合わせます。</p>
 
 <pre class="brush: js">gl.getParameter(gl.ARRAY_BUFFER_BINDING);
 gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
@@ -90,7 +90,7 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
    <td>
     <p>WebGL 2 のために定義を更新。</p>
 
-    <p>以下の新しい <code>target</code> バッファーを追加。<br>
+    <p>以下の新しい <code>target</code> バッファーを追加。<br>
      <code>gl.COPY_READ_BUFFER</code>,<br>
      <code>gl.COPY_WRITE_BUFFER</code>,<br>
      <code>gl.TRANSFORM_FEEDBACK_BUFFER</code>,<br>
@@ -117,5 +117,5 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
  <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
  <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
  <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
- <li>他のバッファ: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
+ <li>他のバッファ: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
 </ul>

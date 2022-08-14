@@ -65,7 +65,7 @@ function search() {
 browser.browserAction.onClicked.addListener(search);
 ```
 
-Recherche à l'aide de Wikipedia. Les résultats seront affichés dans un nouvel onglet :
+Recherche à l'aide de Wikipédia. Les résultats seront affichés dans un nouvel onglet :
 
 ```js
 function search() {
@@ -78,7 +78,7 @@ function search() {
 browser.browserAction.onClicked.addListener(search);
 ```
 
-Recherche à l'aide de Wikipedia. Les résultats seront affichés dans un nouvel onglet
+Recherche à l'aide de Wikipédia. Les résultats seront affichés dans un nouvel onglet
 
 ```js
 function search(tab) {

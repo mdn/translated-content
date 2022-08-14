@@ -47,7 +47,7 @@ translation_of: Web/API/WebSockets_API
 - [Socket.IO](https://socket.io): 長いポーリングと WevSocket ベースのサードバーティ―の [Node.js](https://nodejs.org) 用転送プロトコルです。
 - [SocketCluster](http://socketcluster.io/): スケーラビリティに焦点を当てた [Node.js](https://nodejs.org) 用の pub/sub WebSocket フレームワークです。
 - [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): [Node.js](https://nodejs.org) 用の WebSocket サーバー API 実装です。
-- [Total.js](http://www.totaljs.com): [Node.js](https://www.nodejs.org) 用の ウェブアプリケーションフレームワーク(使用例: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
+- [Total.js](http://www.totaljs.com): [Node.js](https://www.nodejs.org) 用の ウェブアプリケーションフレームワーク(使用例: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
 - [Faye](https://www.npmjs.com/package/faye-websocket): [Node.js](https://nodejs.org) 用の [WebSocket](/ja/docs/Web/API/WebSockets_API) (双方向接続) と [EventSource](/ja/docs/Web/API/EventSource/) (片方向接続) サーバーおよびクライアント
 - [SignalR](http://signalr.net/): SignalR は単一のコードだけで、もし WebSockets が使用可能な場合、基盤として WebSockets を使用し、そうでない場合はほかの代替技術にフォールバックします。
 - [Caddy](https://caddyserver.com/docs/websocket): WebSocket として任意のコマンド (stdin/stdout) を中継することができるウェブサーバーです。

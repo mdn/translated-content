@@ -6,16 +6,16 @@ original_slug: Web/API/ServiceWorker/onstatechange
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p><code>statechange</code> 타입의 이벤트가 발생될 때마다 호출되는 {{domxref("EventListener")}} 속성. 기본적으로 {{domxref("ServiceWorker.state")}}가 변경되는 시점에 발생한다.</p>
+<p><code>statechange</code> 타입의 이벤트가 발생될 때마다 호출되는 {{domxref("EventListener")}} 속성. 기본적으로 {{domxref("ServiceWorker.state")}}가 변경되는 시점에 발생한다.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">ServiceWorker.onstatechange = function(statechangeevent) { ... }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )</pre>
+ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<p>이 코드 조각은 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>) 으로부터 가져온 것이다. 이 코드는 {{domxref("ServiceWorker.state")}}의 모든 변경 사항을 수신하고 그 값을 반환한다.</p>
+<p>이 코드 조각은 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>) 으로부터 가져온 것이다. 이 코드는 {{domxref("ServiceWorker.state")}}의 모든 변경 사항을 수신하고 그 값을 반환한다.</p>
 
 <pre class="brush: js">var serviceWorker;
 if (registration.installing) {
@@ -36,7 +36,7 @@ if (serviceWorker) {
   });
 }</pre>
 
-<p><code>statechange</code> 가 발생할 때, 서비스워커의 참조들이 변화할 수 있으므로 주의하라. 예시:</p>
+<p><code>statechange</code> 가 발생할 때, 서비스워커의 참조들이 변화할 수 있으므로 주의하라. 예시:</p>
 
 <pre class="brush: js">navigator.serviceWorker.register(..).then(function(swr) {
   swr.installing.state == "installing"
@@ -49,25 +49,8 @@ if (serviceWorker) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-onstatechange-attribute', 'ServiceWorker.onstatechange')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-
 <p>{{Compat("api.ServiceWorker.onstatechange")}}</p>
-</div>

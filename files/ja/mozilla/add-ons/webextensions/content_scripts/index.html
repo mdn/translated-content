@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <p>コンテンツスクリプトは、特定のウェブページのコンテキストで実行される拡張機能の一部です（拡張機能の一部であるバックグラウンドスクリプトや、ウェブサイト自体の一部であるスクリプト、例えば {{HTMLElement("script")}} 要素みたいなものと対をなすような)。</p>
 
-<p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">バックグラウンドスクリプト</a>はすべての <a href="/ja/Add-ons/WebExtensions/API">WebExtension JavaScript API</a> にアクセスできますが、ウェブページのコンテンツに直接アクセスすることはできません。だからあなたの拡張機能がそれを行う必要がある場合は、コンテンツスクリプトが必要です。</p>
+<p><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">バックグラウンドスクリプト</a>はすべての <a href="/ja/Add-ons/WebExtensions/API">WebExtension JavaScript API</a> にアクセスできますが、ウェブページのコンテンツに直接アクセスすることはできません。だからあなたの拡張機能がそれを行う必要がある場合は、コンテンツスクリプトが必要です。</p>
 
 <p>通常のウェブページで読み込まれたスクリプトと同様に、コンテンツスクリプトは、標準の DOM API を使用してページのコンテンツを読み取り、変更することができます。</p>
 
@@ -74,7 +74,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <p>方法 (1) と (2) では<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">マッチパターン</a>を使って表現された URL のスクリプトだけを読み込みできます。</p>
 
-<p>方法 (3) では、拡張機能と一緒にパッケージされたページのスクリプトも読み込みできますが、"about:debugging" や "about:addons"のような権限つきページにはスクリプトを読み込めません。</p>
+<p>方法 (3) では、拡張機能と一緒にパッケージされたページのスクリプトも読み込みできますが、"about:debugging" や "about:addons"のような権限つきページにはスクリプトを読み込めません。</p>
 
 <h2 id="Content_script_environment" name="Content_script_environment">コンテンツスクリプト環境</h2>
 
@@ -85,7 +85,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 <p>しかし、コンテンツスクリプトは "DOM のきれいな見た目" を取得します。これはつまり:</p>
 
 <ul>
- <li>コンテンツスクリプトはページスクリプトにて定義された  JavaScript 変数を見ることができない</li>
+ <li>コンテンツスクリプトはページスクリプトにて定義された  JavaScript 変数を見ることができない</li>
  <li>ページスクリプトが組み込み DOM プロパティを再定義した場合、コンテンツスクリプトはそのプロパティの(再定義後でなく)オリジナル値を見ている</li>
 </ul>
 
@@ -201,7 +201,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 <div class="blockIndicator note">
 <p>Firefox では、コンテンツスクリプトの (例えば、<code><a href="/ja/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code> を使った) リクエストは、拡張機能のコンテキストで起こるので、ページコンテンツを参照する URL を絶対URL で提供せねばなりません。</p>
 
-<p>Chrome では、リクエストはページのコンテ<span class="hidden"> </span>キストで起こるので、相対 URL で行われます。例えば、<code>/api</code> は <code>https://[現在のペー<span class="hidden"> </span>ジの URL]/api</code> に送られます。</p>
+<p>Chrome では、リクエストはページのコンテ<span class="hidden"> </span>キストで起こるので、相対 URL で行われます。例えば、<code>/api</code> は <code>https://[現在のペー<span class="hidden"> </span>ジの URL]/api</code> に送られます。</p>
 </div>
 
 <p>コンテンツスクリプトは拡張機能の他の部分と同一のクロスドメイン権限を取得します: よって拡張機能が <code>manifest.json</code> の <code><a href="/ja/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> キーを使ってあるドメインのクロスドメインアクセスを要求している場合、コンテンツスクリプトも同様にそのドメインのアクセスを取得します。</p>
@@ -209,7 +209,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 <p>これはより多く権限付けられた XHR に晒して、コンテンツスクリプトでインスタンスを取得することで達成し、その副作用としてページ自体からのリクエストがそうであるように <code><a href="/ja/docs/Web/HTTP/Headers/Origin">Origin</a></code> と <code><a href="/ja/docs/Web/HTTP/Headers/Referer">Referer</a></code> ヘッダーがセットされず、リクエストからクロスオリジンな性質を隠すことが好ましいことがよくあります。</p>
 
 <div class="blockIndicator note">
-<p>バージョン 58 以降、コンテンツ自体から送られたかのようなリクエストを必要とする拡張機能は  <code>content.XMLHttpRequest</code> と <code>content.fetch()</code> を代わりに使うことができます。</p>
+<p>バージョン 58 以降、コンテンツ自体から送られたかのようなリクエストを必要とする拡張機能は  <code>content.XMLHttpRequest</code> と <code>content.fetch()</code> を代わりに使うことができます。</p>
 
 <p>クロスブラウザー拡張機能にとってこれらの存在は機能検出となります。</p>
 </div>

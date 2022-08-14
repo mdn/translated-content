@@ -18,7 +18,7 @@ translation_of: Web/API/Window/close
 
 <p>Cuando este método es llamado, la ventana referenciada es cerrada.</p>
 
-<p>Este método solo se permite ser llamado por ventanas que fueron abiertas por un script utilizando el método {{domxref("window.open()")}}. Si la ventana no fue abierta por un script, el siguiente error aparece en la consola de JavaScript: S<code>cripts</code><code> may not close windows that were not opened by script.</code></p>
+<p>Este método solo se permite ser llamado por ventanas que fueron abiertas por un script utilizando el método {{domxref("window.open()")}}. Si la ventana no fue abierta por un script, el siguiente error aparece en la consola de JavaScript: S<code>cripts</code><code> may not close windows that were not opened by script.</code></p>
 
 <h2 id="Examples" name="Examples">Ejemplos</h2>
 
@@ -44,7 +44,7 @@ function closeOpenedWindow()
 
 <h3 id="Closing_the_current_window" name="Closing_the_current_window">Cerrando la ventana actual</h3>
 
-<h3 id="Closing_the_current_window" name="Closing_the_current_window"><span style="font-size: 14px; line-height: 1.5;">Cuando se llama al método del objeto window close() directamente, en vez de llamar a close() en una instancia de la ventana, el navegador cerrará la ventana que está en primer plano,  independientemente si el script fue creado en la ventana o no.</span><span style="font-size: 14px; line-height: 1.5;"> (Firefox 35.0.1: los scripts no pueden cerrar ventanas que ellos no han abierto)</span></h3>
+<h3 id="Closing_the_current_window" name="Closing_the_current_window"><span style="font-size: 14px; line-height: 1.5;">Cuando se llama al método del objeto window close() directamente, en vez de llamar a close() en una instancia de la ventana, el navegador cerrará la ventana que está en primer plano,  independientemente si el script fue creado en la ventana o no.</span><span style="font-size: 14px; line-height: 1.5;"> (Firefox 35.0.1: los scripts no pueden cerrar ventanas que ellos no han abierto)</span></h3>
 
 <pre>&lt;script type="text/javascript"&gt;
 function closeCurrentWindow()
@@ -66,7 +66,7 @@ function closeCurrentWindow()
   <tr>
    <td>{{SpecName('HTML WHATWG', '#dom-window-close', 'window.close()')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

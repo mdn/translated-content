@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 <p>JavaScript は動的で、 <code>class</code> の実装それ自体を提供しないことから、 Java や C++ のようなクラスベースの言語を経験した開発者にとって、やや紛らわしいものです（<code>class</code> キーワードは ES6 で導入されましたが、シンタックスシュガーであり、JavaScript は引き続きプロトタイプベースです）。</p>
 
-<p>JavaScript には1つだけ、継承が発生する要素があります。オブジェクトです。どのオブジェクトも<strong>プロトタイプ</strong>と呼ばれる、他のオブジェクトへの内部的な繋がりを持っています。そのプロトタイプオブジェクトも自身のプロトタイプを持っており、あるオブジェクトのプロトタイプが <code>null</code> に到達するまでそれが続きます。 <code>null</code> は、定義によれば、プロトタイプを持たず、<strong>プロトタイプチェーン</strong>の最終リンクとなります。</p>
+<p>JavaScript には1つだけ、継承が発生する要素があります。オブジェクトです。どのオブジェクトも<strong>プロトタイプ</strong>と呼ばれる、他のオブジェクトへの内部的な繋がりを持っています。そのプロトタイプオブジェクトも自身のプロトタイプを持っており、あるオブジェクトのプロトタイプが <code>null</code> に到達するまでそれが続きます。 <code>null</code> は、定義によれば、プロトタイプを持たず、<strong>プロトタイプチェーン</strong>の最終リンクとなります。</p>
 
 <p>これはしばしば、JavaScript の1つの弱点と見なされますが、プロトタイプの継承モデルは、実際にはクラスのモデルよりも強力です。例えば、プロトタイプのモデルの上にクラスのモデルを構築することは、実にささいなことです。</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 <p>JavaScript のオブジェクトはプロパティ（<strong>自身のプロパティ</strong>を指す）の動的な「かばん」であり、プロトタイプオブジェクトへの繋がりを持っています。あるオブジェクトのプロパティにアクセスを試みるとき、そのオブジェクトのみならず、そのオブジェクトのプロトタイプ、プロトタイプのプロトタイプ…と、一致する名前のプロパティが見つかるか、プロトタイプチェーンの終端に到達するまで、そのプロパティが捜索されます。</p>
 
 <div class="note">
-<p>ECMAScript 標準に基づき、<code>someObject.[[Prototype]]</code> という記法は、 <code>someObject</code> のプロトタイプを示します。これは JavaScript の <code>__proto__</code> プロパティ（現在は非推奨）と同等です。その関数のすべてのインスタンスの <code>[[Prototype]]</code> を代わりに指定する関数の <code><em>func</em>.prototype</code> プロパティと混同するべきではありません。ECMAScript 6 から、<code>[[Prototype]]</code> は、 {{jsxref("Object.getPrototypeOf()")}} と {{jsxref("Object.setPrototypeOf()")}} のアクセサを使ってアクセスされます。</p>
+<p>ECMAScript 標準に基づき、<code>someObject.[[Prototype]]</code> という記法は、 <code>someObject</code> のプロトタイプを示します。これは JavaScript の <code>__proto__</code> プロパティ（現在は非推奨）と同等です。その関数のすべてのインスタンスの <code>[[Prototype]]</code> を代わりに指定する関数の <code><em>func</em>.prototype</code> プロパティと混同するべきではありません。ECMAScript 6 から、<code>[[Prototype]]</code> は、 {{jsxref("Object.getPrototypeOf()")}} と {{jsxref("Object.setPrototypeOf()")}} のアクセサを使ってアクセスされます。</p>
 </div>
 
 <p>では、プロパティにアクセスを試みたときに、何が起こるのかを見てみましょう。</p>
@@ -62,7 +62,7 @@ console.log(o.d); // undefined
 
 <p>JavaScript には、クラスベースの言語が定義する形式の「メソッド」はありません。 JavaScript ではどの関数も、オブジェクトのプロパティという形で追加することができます。継承された関数は、上で見せたような property shadowing （このケースではメソッドのオーバーライドの形）を含めた、他のどのプロパティとも同じようにはたらきます。</p>
 
-<p>継承された関数が実行されるときの <a href="/ja/docs/JavaScript/Reference/Operators/this" title="JavaScript/Reference/Operators/this">this</a> の値は、その関数を自身のプロパティとして持つプロトタイプオブジェクトではなく、継承したオブジェクトを指します。</p>
+<p>継承された関数が実行されるときの <a href="/ja/docs/JavaScript/Reference/Operators/this" title="JavaScript/Reference/Operators/this">this</a> の値は、その関数を自身のプロパティとして持つプロトタイプオブジェクトではなく、継承したオブジェクトを指します。</p>
 
 <pre class="brush: js notranslate">var o = {
   a: 2,
@@ -158,23 +158,23 @@ console.log(d.hasOwnProperty);
 <pre class="brush: js notranslate">"use strict";
 
 class Polygon {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
 }
 
 class Square extends Polygon {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-  }
-  get area() {
-    return this.height * this.width;
-  }
-  set sideLength(newLength) {
-    this.height = newLength;
-    this.width = newLength;
-  }
+  constructor(sideLength) {
+    super(sideLength, sideLength);
+  }
+  get area() {
+    return this.height * this.width;
+  }
+  set sideLength(newLength) {
+    this.height = newLength;
+    this.width = newLength;
+  }
 }
 
 var square = new Square(2);</pre>
@@ -185,9 +185,9 @@ var square = new Square(2);</pre>
 
 <p>また、オブジェクトのプロパティを順に処理する際、プロトタイプチェーンにある<strong>すべての</strong>列挙可能なプロパティが列挙されます。</p>
 
-<p>あるプロパティがプロトタイプチェーンのどこかではなく、オブジェクト自身に定義されたものであるかどうかを調べるには、すべてのオブジェクトが <code>Object.prototype</code> から継承している <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a> メソッドを使う必要があります。</p>
+<p>あるプロパティがプロトタイプチェーンのどこかではなく、オブジェクト自身に定義されたものであるかどうかを調べるには、すべてのオブジェクトが <code>Object.prototype</code> から継承している <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a> メソッドを使う必要があります。</p>
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a> は JavaScript において唯一、プロトタイプチェーンを通らずにプロパティを扱うものです。</p>
+<p><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a> は JavaScript において唯一、プロトタイプチェーンを通らずにプロパティを扱うものです。</p>
 
 <p>注: プロパティが <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a> かどうかを調べるだけでは不十分です。そのプロパティが存在するが、偶然、値に undefined がセットされているだけという可能性も大いにあります。</p>
 
@@ -208,10 +208,10 @@ var square = new Square(2);</pre>
 }
 
 // 上の A 関数の定義で示すように、A.prototype.varA は常に、
-// this.varA によって隠されるのに、 varA を prototype に含む目的は何か？
+// this.varA によって隠されるのに、 varA を prototype に含む目的は何か？
 A.prototype = {
   varA : null,
-      // 我々は何もせず、プロトタイプから varA を叩き落とすべきではないのでしょうか？
+      // 我々は何もせず、プロトタイプから varA を叩き落とすべきではないのでしょうか？
       // 恐らく、最適化として隠れたクラスにスペースを割り当てることを意図したものです。
       // https://developers.google.com/speed/articles/optimizing-javascript#Initializing
       // もし varA がどのインスタンスでも独自に初期化されなかったとしても、インスタンスの変数は妥当となるでしょう。
@@ -257,13 +257,13 @@ b.doSomething();</pre>
 
 <p>JavaScript はすべてが動的で、すべてが実行時であり、一切クラスを持たないことから、 Java や C++から来た開発者にとっていささか紛らわしいものです。すべてはインスタンス（オブジェクト）です。私たちが「クラス」を装っているのは、関数オブジェクトです。</p>
 
-<p>恐らく、<code>function A</code> が <code>prototype</code> という特別なプロパティを持っていることに、既に気付いているでしょう。この特別なプロパティは JavaScript の <code>new</code> 演算子と連携しています。プロトタイプオブジェクトへの参照は、新たなインスタンスの内部 <code>[[Prototype]]</code> プロパティへとコピーされます。例えば、<code>var a1 = new A()</code> とするとき（オブジェクトがメモリ内に生成された後、かつ <code>this</code> が定義されて関数 <code>A()</code> が実行される前） 、JavaScript は <code>a1.[[Prototype]] = A.prototype</code> をセットします。そうしてインスタンスのプロパティにアクセスするとき、 JavaScript は最初にそのオブジェクトに直接、それらが存在するかどうかを調べ、もし存在しなければ、 <code>[[Prototype]]</code> を見ます。これは <code>prototype</code> に定義したすべての要素がすべてのインスタンスで効果的に共有されていることを意味しており、もし望むのであれば、後で prototype の一部を変更して、すべての存在するインスタンスにその変更を及ぼすことができます。</p>
+<p>恐らく、<code>function A</code> が <code>prototype</code> という特別なプロパティを持っていることに、既に気付いているでしょう。この特別なプロパティは JavaScript の <code>new</code> 演算子と連携しています。プロトタイプオブジェクトへの参照は、新たなインスタンスの内部 <code>[[Prototype]]</code> プロパティへとコピーされます。例えば、<code>var a1 = new A()</code> とするとき（オブジェクトがメモリ内に生成された後、かつ <code>this</code> が定義されて関数 <code>A()</code> が実行される前） 、JavaScript は <code>a1.[[Prototype]] = A.prototype</code> をセットします。そうしてインスタンスのプロパティにアクセスするとき、 JavaScript は最初にそのオブジェクトに直接、それらが存在するかどうかを調べ、もし存在しなければ、 <code>[[Prototype]]</code> を見ます。これは <code>prototype</code> に定義したすべての要素がすべてのインスタンスで効果的に共有されていることを意味しており、もし望むのであれば、後で prototype の一部を変更して、すべての存在するインスタンスにその変更を及ぼすことができます。</p>
 
-<p>もし上の例で、 <code>var a1 = new A(); var a2 = new A();</code> とすると、 <code>a1.doSomething</code> は実際には、<code>Object.getPrototypeOf(a1).doSomething</code> （定義した  <code>A.prototype.doSomething</code> と同じ）を参照します。つまり、 <code>Object.getPrototypeOf(a1).doSomething == Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething</code> です。</p>
+<p>もし上の例で、 <code>var a1 = new A(); var a2 = new A();</code> とすると、 <code>a1.doSomething</code> は実際には、<code>Object.getPrototypeOf(a1).doSomething</code> （定義した  <code>A.prototype.doSomething</code> と同じ）を参照します。つまり、 <code>Object.getPrototypeOf(a1).doSomething == Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething</code> です。</p>
 
 <p>要するに、 <code>prototype</code> は型のためのもので、<code>Object.getPrototypeOf()</code> はインスタンスのためのものと同じです。</p>
 
-<p><code>[[Prototype]]</code> は再帰的に見えます。つまり、<code>a1.doSomething</code>、<code>Object.getPrototypeOf(a1).doSomething</code>、<code>Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething </code>…と、それが見つかるか <code>Object.getPrototypeOf</code> が null を返すまで続きます。</p>
+<p><code>[[Prototype]]</code> は再帰的に見えます。つまり、<code>a1.doSomething</code>、<code>Object.getPrototypeOf(a1).doSomething</code>、<code>Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething </code>…と、それが見つかるか <code>Object.getPrototypeOf</code> が null を返すまで続きます。</p>
 
 <p>そう、</p>
 
@@ -279,7 +279,7 @@ Foo.call(o);</pre>
 
 <pre class="brush: js notranslate">o.someProp;</pre>
 
-<p>後にこうすると、 <code>o</code> が <code>someProp</code> プロパティを持っているかどうかを調べ、もし持っていなければ <code>Object.getPrototypeOf(o).someProp</code> を、そこにも存在しなければ <code>Object.getPrototypeOf(Object.getPrototypeOf(o)).someProp</code> を…と調べていきます。</p>
+<p>後にこうすると、 <code>o</code> が <code>someProp</code> プロパティを持っているかどうかを調べ、もし持っていなければ <code>Object.getPrototypeOf(o).someProp</code> を、そこにも存在しなければ <code>Object.getPrototypeOf(Object.getPrototypeOf(o)).someProp</code> を…と調べていきます。</p>
 
 <h2 id="まとめ">まとめ</h2>
 

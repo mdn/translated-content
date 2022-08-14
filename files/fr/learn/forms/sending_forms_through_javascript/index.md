@@ -26,8 +26,6 @@ L'envoi asynchrone de données arbitraires est connu sous le nom AJAX, qui signi
 
 > **Note :** Les techniques AJAX anciennes ne se fondaient pas forcément sur {{domxref("XMLHttpRequest")}}. Par exemple, [JSONP](http://en.wikipedia.org/wiki/JSONP) combiné à la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Cela fonctionne, mais n'est pas recommandé en raison de sérieux problèmes de sécurité. La seule raison d'en poursuivre l'utilisation est l'utilisation de navigateurs anciens qui ne prennent pas en charge {{domxref("XMLHttpRequest")}} ou [JSON](/fr/docs/Glossaire/JSON), mais ce sont vraiment des navigateurs anciens ! **Évitez ces techniques.**
 
-
-
 Historiquement, {{domxref("XMLHttpRequest")}} a été conçu pour récupérer et envoyer du XML comme format d'échange. Cependant, [JSON](/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON) a remplacé XML et est de plus en plus courant aujourd'hui.
 
 Mais ni XML ni JSON ne s'adaptent à l'encodage des demandes de données de formulaire. Les données de formulaire (`application/x-www-form-urlencoded`) sont constituées de listes de paires clé/valeur codées par URL. Pour la transmission de données binaires, la requête HTTP est transformée en données `multipart/form‑data`.
@@ -265,8 +263,6 @@ function sendData(data) {
 Voici le résultat en direct :
 
 {{EmbedLiveSample('Construire_un_DOM_dans_un_iframe_caché', "100%", 50)}}
-
-
 
 ## Gestion des données binaires
 

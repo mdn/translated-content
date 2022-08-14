@@ -168,5 +168,4 @@ Dans un Open Web App, tout élément DOM peut être rendu directement éditable 
 - [Fullscreen API](/fr/docs/Web/Guide/DOM/Using_full_screen_mode)
 - [Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop)
 - [Content Editable](/fr/docs/Web/HTML/Contenu_editable)
-- [Keyboard events in Firefox OS TV](https://developer.mozilla.org/en-US/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV)
-- [Implementing TV remote control navigation](/en-US/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)
+- [Implementing TV remote control navigation](/fr/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)

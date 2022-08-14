@@ -11,11 +11,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>O objeto global <strong><code>String</code></strong>  é um construtor para <strong>strings,</strong> ou uma sequência de caracteres.</p>
+<p>O objeto global <strong><code>String</code></strong>  é um construtor para <strong>strings,</strong> ou uma sequência de caracteres.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
-<p>As formas literais de declaração de <em>String</em>  são:</p>
+<p>As formas literais de declaração de <em>String</em>  são:</p>
 
 <pre class="syntaxbox">'string text'
 "string text"
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
  <tbody>
   <tr>
    <td>\0</td>
-   <td>o  caractere NULL</td>
+   <td>o  caractere NULL</td>
   </tr>
   <tr>
    <td>\'</td>
@@ -96,7 +96,7 @@ new String(thing)</pre>
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>Strings são úteis para guardar dados que podem ser representados em forma de texto. Uma das operações mais usadas nas <strong>strings</strong> é checar seu {{jsxref("String.length", "tamanho")}}, para construir e concatená-las  usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">os operadores</a> <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">+ e +=, </a>checando pela existência ou posição de <em>substrings</em> com o método {{jsxref("String.indexOf", "indexOf")}} , ou extrair <em>substrings</em> com o método {{jsxref("String.substring", "substring")}}.</p>
+<p>Strings são úteis para guardar dados que podem ser representados em forma de texto. Uma das operações mais usadas nas <strong>strings</strong> é checar seu {{jsxref("String.length", "tamanho")}}, para construir e concatená-las  usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">os operadores</a> <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">+ e +=, </a>checando pela existência ou posição de <em>substrings</em> com o método {{jsxref("String.indexOf", "indexOf")}} , ou extrair <em>substrings</em> com o método {{jsxref("String.substring", "substring")}}.</p>
 
 <h3 id="Character_access" name="Character_access">Acesso à caractere</h3>
 
@@ -114,7 +114,7 @@ new String(thing)</pre>
 
 <h3 id="Comparing_strings" name="Comparing_strings">Comparando strings</h3>
 
-<p>Desenvolvedores de C têm a função strcmp() para comparar strings. No JavaScript, basta usar o operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">maior que e menor que</a>:</p>
+<p>Desenvolvedores de C têm a função strcmp() para comparar strings. No JavaScript, basta usar o operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">maior que e menor que</a>:</p>
 
 <pre class="brush: js">var a = "a";
 var b = "b";
@@ -126,9 +126,9 @@ else
   print(a + " e " + b + " são iguais.");
 </pre>
 
-<p>Um resultado similar pode ser alcançado usando o método  {{jsxref("String.localeCompare", "localeCompare")}} herdado pelas instâncias de <code>String</code>.</p>
+<p>Um resultado similar pode ser alcançado usando o método  {{jsxref("String.localeCompare", "localeCompare")}} herdado pelas instâncias de <code>String</code>.</p>
 
-<h3 id="Distinção_entre_String_primitiva_e_objetos_String">Distinção entre String primitiva e objetos String</h3>
+<h3 id="Distinção_entre_String_primitiva_e_objetos_String">Distinção entre String primitiva e objetos String</h3>
 
 <p>Note que o JavaScript distingue entre objetos String e valores de string primitivas. (O mesmo é válido para {{jsxref("Global_Objects/Boolean", "Boolean")}} e {{jsxref("Global_Objects/Number", "Numbers")}}.)</p>
 
@@ -141,7 +141,7 @@ console.log(typeof s_prim); // Loga "string"
 console.log(typeof s_obj);  // Loga "object"
 </pre>
 
-<p>String primitivas e objetos <code>String</code> também dão resultados diferentes quando usado {{jsxref("Global_Objects/eval", "eval")}}. Primitivas passadas para <code>eval</code> são tratadas como código fonte; Objetos <code>String</code> são tratados como todos os outros objetos são, retornando o objeto. Por exemplo:</p>
+<p>String primitivas e objetos <code>String</code> também dão resultados diferentes quando usado {{jsxref("Global_Objects/eval", "eval")}}. Primitivas passadas para <code>eval</code> são tratadas como código fonte; Objetos <code>String</code> são tratados como todos os outros objetos são, retornando o objeto. Por exemplo:</p>
 
 <pre class="brush: js">s1 = "2 + 2";               // cria uma string primitiva
 s2 = new String("2 + 2");   // cria um objeto de String
@@ -149,14 +149,14 @@ console.log(eval(s1));      // retorna o número 4
 console.log(eval(s2));      // retorna a string "2 + 2"
 </pre>
 
-<p>Por estas razões, o código pode quebrar quando encontra objetos <code>String</code> quando espera na verdade uma string primitiva, apesar de que geralmente autores não precisam se preocupar com a distinção.</p>
+<p>Por estas razões, o código pode quebrar quando encontra objetos <code>String</code> quando espera na verdade uma string primitiva, apesar de que geralmente autores não precisam se preocupar com a distinção.</p>
 
-<p>Um objeto <code>String</code> pode ser convertido sempre para sua contraparte primitiva com o método {{jsxref("String.valueOf", "valueOf")}}.</p>
+<p>Um objeto <code>String</code> pode ser convertido sempre para sua contraparte primitiva com o método {{jsxref("String.valueOf", "valueOf")}}.</p>
 
 <pre class="brush: js">console.log(eval(s2.valueOf())); // retorna o número 4
 </pre>
 
-<div class="note"><strong>Note:</strong> Para uma outra possível abordagem para strings em JavaScript, favor ler o artigo sobre <a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</div>
+<div class="note"><strong>Note:</strong> Para uma outra possível abordagem para strings em JavaScript, favor ler o artigo sobre <a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</div>
 
 <h2 id="Properties" name="Properties">Propriedades</h2>
 
@@ -180,15 +180,15 @@ console.log(eval(s2));      // retorna a string "2 + 2"
 
 <h2 id="Métodos_genéricos_de_Strings"><code>Métodos genéricos de Strings</code></h2>
 
-<p>Métodos de instância <code>String</code> também estão disponíveis no Firefox a partir de JavaScript 1.6 (embora não faça parte dos padrões ECMAScript) no objeto String para aplicar métodos String a qualquer objeto:</p>
+<p>Métodos de instância <code>String</code> também estão disponíveis no Firefox a partir de JavaScript 1.6 (embora não faça parte dos padrões ECMAScript) no objeto String para aplicar métodos String a qualquer objeto:</p>
 
 <pre class="brush: js">var num = 15;
 alert(String.replace(num, /5/, '2'));
 </pre>
 
-<p class="brush: js"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Genéricos</a> também estão disponíveis em métodos {{jsxref("Global_Objects/Array", "Array")}}.</p>
+<p class="brush: js"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Genéricos</a> também estão disponíveis em métodos {{jsxref("Global_Objects/Array", "Array")}}.</p>
 
-<p class="brush: js">O seguinte é uma implementação para fornecer suporte a navegadores sem suporte:</p>
+<p class="brush: js">O seguinte é uma implementação para fornecer suporte a navegadores sem suporte:</p>
 
 <pre class="brush: js">/*globals define*/
 // Assume que todos os métodos de instância String fornecidos
@@ -222,7 +222,7 @@ alert(String.replace(num, /5/, '2'));
 }());
 </pre>
 
-<h2 id="Instâncias_de_String">Instâncias de <code>String</code></h2>
+<h2 id="Instâncias_de_String">Instâncias de <code>String</code></h2>
 
 <h3 id="Propriedades">Propriedades</h3>
 
@@ -242,7 +242,7 @@ alert(String.replace(num, /5/, '2'));
 
 <h3 id="Conversão_de_String">Conversão de String</h3>
 
-<p>É possível usar <code>String</code> como uma alternativa "mais segura" {{jsxref("String.toString", "toString")}}, como embora normalmente ainda chama o <code>toString</code> subjacente, também funciona para <code>null</code> e <code>undefined</code>. Por exemplo:</p>
+<p>É possível usar <code>String</code> como uma alternativa "mais segura" {{jsxref("String.toString", "toString")}}, como embora normalmente ainda chama o <code>toString</code> subjacente, também funciona para <code>null</code> e <code>undefined</code>. Por exemplo:</p>
 
 <pre class="brush: js">var outputStrings = [];
 for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
@@ -267,67 +267,19 @@ for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.5', 'String')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-string-objects', 'String')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>0.2</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.String")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

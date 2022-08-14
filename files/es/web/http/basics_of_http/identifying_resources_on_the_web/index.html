@@ -6,21 +6,21 @@ original_slug: Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary">El objetivo de una solicitud HTTP se denomina "recurso", (es decir: datos), y dicho recurso, no posee un tipo definido por defecto; puede ser un documento, o una foto, o cualquier otra posibilidad. Cada recurso es identificado por un Identificador Uniforme de Recursos ({{Glossary("URI")}})  y es utilizado a través de HTTP, para la identificación del tipo de recurso.</p>
+<p class="summary">El objetivo de una solicitud HTTP se denomina "recurso", (es decir: datos), y dicho recurso, no posee un tipo definido por defecto; puede ser un documento, o una foto, o cualquier otra posibilidad. Cada recurso es identificado por un Identificador Uniforme de Recursos ({{Glossary("URI")}})  y es utilizado a través de HTTP, para la identificación del tipo de recurso.</p>
 
-<p>La identidad y la localización del recursos en la Web son en su mayoria proporcionados por una sola dirección URL (Localicador de Recursos Uniforme; un tipo de URI). A veces, el mismo URI no proporciona la identidad ni la ubicación: HTTP usa un encabezado HTTP especifico, {{HTTPHeader("Alt-Svc")}} cuando el recurso solicitado por el cliente quiere acceder a él en otra ubicación.</p>
+<p>La identidad y la localización del recursos en la Web son en su mayoria proporcionados por una sola dirección URL (Localicador de Recursos Uniforme; un tipo de URI). A veces, el mismo URI no proporciona la identidad ni la ubicación: HTTP usa un encabezado HTTP especifico, {{HTTPHeader("Alt-Svc")}} cuando el recurso solicitado por el cliente quiere acceder a él en otra ubicación.</p>
 
 <h2 id="URLs_and_URNs">URLs and URNs</h2>
 
 <h3 id="URLs">URLs</h3>
 
-<p>La forma más común de URI es la ({{Glossary("URL")}}) (de las siglas en ingles: "<em>Uniform Resource Locator</em>", que podría traducirse como: Localizador Uniforme de Recursos), <em>que se conoce como la dirección web.</em></p>
+<p>La forma más común de URI es la ({{Glossary("URL")}}) (de las siglas en ingles: "<em>Uniform Resource Locator</em>", que podría traducirse como: Localizador Uniforme de Recursos), <em>que se conoce como la dirección web.</em></p>
 
 <pre>https://developer.mozilla.org
 https://developer.mozilla.org/en-US/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL</pre>
 
-<p>Cualquiera de estas URLs se pueden escribir en la barra de direcciones de su navegador para decirle que cargue la pagina asociada (recurso).</p>
+<p>Cualquiera de estas URLs se pueden escribir en la barra de direcciones de su navegador para decirle que cargue la pagina asociada (recurso).</p>
 
 <p>Una URL esta compuesta de diferentes partes, algunas obligatorias y otras son opcionales. Un ejemplo más complejo podría tener este aspecto:</p>
 
@@ -37,19 +37,19 @@ urn:ietf:rfc:7230
 <p>Las dos URNs corresponden a</p>
 
 <ul>
- <li>El libro "1984" por George Orwell,</li>
+ <li>El libro "1984" por George Orwell,</li>
  <li>La especificación IETF 7230, Hypertext Transfer Protocol (HTTP/1.1): Sintaxis de Mensajes y Enrutamiento.</li>
 </ul>
 
 <h2 id="Sintaxis_de_Identificador_Uniforme_de_Recursos_(URIs)">Sintaxis de Identificador Uniforme de Recursos (URIs)</h2>
 
-<h3 id="sect1"> </h3>
+<h3 id="sect1"> </h3>
 
 <h3 id="Esquema_o_protocolo">Esquema o protocolo</h3>
 
 <dl>
  <dt><img alt="Protocol" src="https://mdn.mozillademos.org/files/8013/mdn-url-protocol@x2.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>http://</code> es el protocolo. Indica que el protocolo debe utilizar el navegador. Por lo general, es el protocolo HTTP o su versión segura, HTTPS. La Web requiere de uno de estos dos, pero los navegadores también saben como manejar otros protocolos como  <code>mailto:</code> (para abrir un cliente de correo) o <code>ftp:</code> para manejar la transferencia de archivos, por lo que no se sorprenda si usted ve este tipo de protocolos. Los esquemas comunes son:</dd>
+ <dd><code>http://</code> es el protocolo. Indica que el protocolo debe utilizar el navegador. Por lo general, es el protocolo HTTP o su versión segura, HTTPS. La Web requiere de uno de estos dos, pero los navegadores también saben como manejar otros protocolos como  <code>mailto:</code> (para abrir un cliente de correo) o <code>ftp:</code> para manejar la transferencia de archivos, por lo que no se sorprenda si usted ve este tipo de protocolos. Los esquemas comunes son:</dd>
 </dl>
 
 <table class="standard-table">
@@ -70,7 +70,7 @@ urn:ietf:rfc:7230
   </tr>
   <tr>
    <td>ftp</td>
-   <td><a href="/en-US/docs/Glossary/FTP">Protocolo de Transferencia de  Archivos</a></td>
+   <td><a href="/en-US/docs/Glossary/FTP">Protocolo de Transferencia de  Archivos</a></td>
   </tr>
   <tr>
    <td>http/https</td>
@@ -135,7 +135,7 @@ urn:ietf:rfc:7230
 
 <dl>
  <dt><img alt="Anchor" src="https://mdn.mozillademos.org/files/8023/mdn-url-anchor@x2.png" style="height: 70px; width: 440px;"></dt>
- <dd><code>#SomewhereInTheDocument</code> es una referencia a otra parte del propio recurso. Esto representa una especie de "marcador" dentro del recurso, otorgandole al navegador las instrucciones para mostrar el contenido que se encuentra en esa referencia señalada. En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el fragmento; en un video o documento de audio, el navegador intentará ir a la vez que el ancla se presenta. Vale la pena señalar que la parte despues de la  #, también conocido como indentificador de fragmento, nunca se envia al servidor con la solicitud.</dd>
+ <dd><code>#SomewhereInTheDocument</code> es una referencia a otra parte del propio recurso. Esto representa una especie de "marcador" dentro del recurso, otorgandole al navegador las instrucciones para mostrar el contenido que se encuentra en esa referencia señalada. En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el fragmento; en un video o documento de audio, el navegador intentará ir a la vez que el ancla se presenta. Vale la pena señalar que la parte despues de la  #, también conocido como indentificador de fragmento, nunca se envia al servidor con la solicitud.</dd>
 </dl>
 
 <h2 id="Ejemplos">Ejemplos</h2>

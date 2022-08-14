@@ -9,7 +9,7 @@ translation_of: Web/API/AudioDestinationNode
 
 <div>
 <p><code>AudioDestinationNode 은 주어진 컨택스트의 음원의 종착점을 나타냅니다. 보통 스피커를 가리킵니다. 이는 또한 </code><code>OfflineAudioContext를 사용해 데이터가 녹음되는 노드가 되기도 합니다.</code></p>
-<code>AudioDestinationNode</code> has no output (as it <em>is</em> the output, no more <code>AudioNode</code> can be linked after it in the audio graph) and one input.  입력받은 음원의 채널의 총 갯수는 반드시 0과 <code>maxChannelCount값의 사이에 있거나 예외(an exception is raised)가 발생한다.</code>
+<code>AudioDestinationNode</code> has no output (as it <em>is</em> the output, no more <code>AudioNode</code> can be linked after it in the audio graph) and one input.  입력받은 음원의 채널의 총 갯수는 반드시 0과 <code>maxChannelCount값의 사이에 있거나 예외(an exception is raised)가 발생한다.</code>
 
 <p>주어진 <code>AudioContext의 </code><code>AudioDestinationNode는 </code>{{domxref("AudioContext.destination")}}프로퍼티를 통해 검색이 된다.</p>
 
@@ -65,20 +65,7 @@ gainNode.connect(audioCtx.destination);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-audiodestinationnode-interface', 'AudioDestinationNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -19,7 +19,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/reso
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-resolvedoptions.html")}}
 
-
 ## 構文
 
 ```js

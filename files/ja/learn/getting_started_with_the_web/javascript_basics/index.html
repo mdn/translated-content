@@ -175,7 +175,7 @@ myVariable = 'Steve';</pre>
 挟まれているすべてがコメントです。
 */</pre>
 
-<p>コメントに改行が含まれていない場合、次のように 2 つのスラッシュの後ろに記載する方が簡単です :</p>
+<p>コメントに改行が含まれていない場合、次のように 2 つのスラッシュの後ろに記載する方が簡単です :</p>
 
 <pre class="brush: js" style="font-size: 14px;">// これはコメントです
 </pre>
@@ -385,7 +385,7 @@ let myHeading = document.querySelector('h1');</pre>
   let storedName = localStorage.getItem('name');
   myHeading.textContent = 'Mozilla はすばらしいよ、' + storedName;
 }</pre>
-  このブロックでは、最初に <code>name</code> のデータが存在しているかどうかをチェックするために否定演算子 (! で表される論理否定) を使用しています。存在しない場合は、作成するために <code>setUserName()</code> 関数が実行されます。存在する場合は (つまり、以前の訪問時にユーザーが設定した場合)、 <code>getItem()</code> を使用して格納された名前を受け取り、 <code>setUserName()</code> の中で行ったのと同様に、見出しの <code>textContent</code> に文字列とユーザーの名前を設定します。</li>
+  このブロックでは、最初に <code>name</code> のデータが存在しているかどうかをチェックするために否定演算子 (! で表される論理否定) を使用しています。存在しない場合は、作成するために <code>setUserName()</code> 関数が実行されます。存在する場合は (つまり、以前の訪問時にユーザーが設定した場合)、 <code>getItem()</code> を使用して格納された名前を受け取り、 <code>setUserName()</code> の中で行ったのと同様に、見出しの <code>textContent</code> に文字列とユーザーの名前を設定します。</li>
  <li>最後に、以下の <code>onclick</code> イベントハンドラーをボタンに設定します。クリックすると、<code>setUserName()</code> 関数が実行されます。これでユーザーがボタンを押すことで、好きな時に新しい名前を設定できるようになります。
   <pre class="brush: js">myButton.onclick = function() {
   setUserName();

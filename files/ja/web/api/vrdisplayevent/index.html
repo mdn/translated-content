@@ -14,18 +14,18 @@ translation_of: Web/API/VRDisplayEvent
 ---
 <div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VRDisplayEvent</code></strong> インターフェイスは、 WebVR 関連イベントのイベントオブジェクトを表します (<a href="/ja/docs/Web/API/WebVR_API#Window">WebVR ウインドウ拡張機能のリスト</a>を参照)。</p>
+<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VRDisplayEvent</code></strong> インターフェイスは、 WebVR 関連イベントのイベントオブジェクトを表します (<a href="/ja/docs/Web/API/WebVR_API#Window">WebVR ウインドウ拡張機能のリスト</a>を参照)。</p>
 
 <h2 id="コンストラクタ">コンストラクタ</h2>
 
 <dl>
  <dt>{{domxref("VRDisplayEvent.VRDisplayEvent()")}}</dt>
- <dd><code>VRDisplayEvent</code> オブジェクトのインスタンスを生成します。</dd>
+ <dd><code>VRDisplayEvent</code> オブジェクトのインスタンスを生成します。</dd>
 </dl>
 
 <h2 id="プロパティ">プロパティ</h2>
 
-<p><em><code>VRDisplayEvent</code> は、親オブジェクト {{domxref("Event")}} からプロパティも継承します。</em></p>
+<p><em><code>VRDisplayEvent</code> は、親オブジェクト {{domxref("Event")}} からプロパティも継承します。</em></p>
 
 <dl>
  <dt>{{domxref("VRDisplayEvent.display")}} {{readonlyInline}}</dt>
@@ -37,7 +37,7 @@ translation_of: Web/API/VRDisplayEvent
 <h2 id="例">例</h2>
 
 <pre class="brush: js notranslate">window.addEventListener('vrdisplaypresentchange', function(e) {
-  console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+  console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
 })
 </pre>
 

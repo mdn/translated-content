@@ -16,7 +16,9 @@ Le constructeur **`DocumentFragment()`** renvoie un nouvel objet  {{domxref("Doc
 
 ## Syntaxe
 
-    fragment = new DocumentFragment()
+```js
+fragment = new DocumentFragment()
+```
 
 ## Exemple
 

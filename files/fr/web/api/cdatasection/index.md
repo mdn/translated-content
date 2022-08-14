@@ -15,7 +15,9 @@ L'interface **`CDATASection`** représente une section CDATA qui peut être util
 
 En termes de balisage, une section CDATA a la forme suivante :
 
-    <![CDATA[  ... ]]>
+```html
+<![CDATA[  ... ]]>
+```
 
 Par exemple :
 

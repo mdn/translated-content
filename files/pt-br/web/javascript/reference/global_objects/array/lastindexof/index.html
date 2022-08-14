@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>lastIndexOf()</strong></code> retorna o ultimo índice que um certo elemento pode ser encontrado no array, ou -1 se o elemento não estiver presente. O array é pesquisado de trás para frente, começando pelo <code>fromIndex</code>.</p>
+<p>O método <code><strong>lastIndexOf()</strong></code> retorna o ultimo índice que um certo elemento pode ser encontrado no array, ou -1 se o elemento não estiver presente. O array é pesquisado de trás para frente, começando pelo <code>fromIndex</code>.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -15,20 +15,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 <dl>
  <dt><code>searchElement</code></dt>
- <dd>Elemento para ser localizado no array.</dd>
+ <dd>Elemento para ser localizado no array.</dd>
  <dt><code>fromIndex</code></dt>
- <dd>Opcional. O índice ao qual a busca será iniciada de traz para frente. O valor padrão é o tamanho total do array menos um (array.length -1), ou seja, todo o array será pesquisado. Se o índice for maior ou igual ao tamanho do array, o array inteiro será pesquisado. Se for negativo, ele é tomado como deslocamento no final do array. Note que mesmo se o índice for negativo, o array ainda será pesquisado de traz para frente. Se o índice calculado for menor que 0, -1 será retornado, ou seja, o array não será pesquisado.</dd>
+ <dd>Opcional. O índice ao qual a busca será iniciada de traz para frente. O valor padrão é o tamanho total do array menos um (array.length -1), ou seja, todo o array será pesquisado. Se o índice for maior ou igual ao tamanho do array, o array inteiro será pesquisado. Se for negativo, ele é tomado como deslocamento no final do array. Note que mesmo se o índice for negativo, o array ainda será pesquisado de traz para frente. Se o índice calculado for menor que 0, -1 será retornado, ou seja, o array não será pesquisado.</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p><code>lastIndexOf</code> compara <code>searchElement</code> a elementos do Array usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">igualdade rigorosa</a> (o mesmo método usado pelo operador ===, ou "igual triplo").</p>
+<p><code>lastIndexOf</code> compara <code>searchElement</code> a elementos do Array usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">igualdade rigorosa</a> (o mesmo método usado pelo operador ===, ou "igual triplo").</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Examplo_Usando_lastIndexOf">Examplo: Usando <code>lastIndexOf</code></h3>
+<h3 id="Exemplo_Usando_lastIndexOf">Exemplo: Usando <code>lastIndexOf</code></h3>
 
-<p>O seguinte exemplo utiliza <code>lastIndexOf</code> para localizar elementos em um array.</p>
+<p>O seguinte exemplo utiliza <code>lastIndexOf</code> para localizar elementos em um array.</p>
 
 <pre class="brush: js">var array = [2, 5, 9, 2];
 array.lastIndexOf(2);     // 3
@@ -41,26 +41,26 @@ array.lastIndexOf(2, -1); // 3
 
 <h3 id="Exemplo_Encontrando_todas_as_ocorrências_de_um_elemento">Exemplo: Encontrando todas as ocorrências de um elemento</h3>
 
-<p>O seguinte exemplo utiliza <code>lastIndexOf</code> para encontrar todos os índices de um elemento em um dado array, utilizando {{jsxref("Array.prototype.push", "push")}} para adicioná-los em outro array quando são encontrados.</p>
+<p>O seguinte exemplo utiliza <code>lastIndexOf</code> para encontrar todos os índices de um elemento em um dado array, utilizando {{jsxref("Array.prototype.push", "push")}} para adicioná-los em outro array quando são encontrados.</p>
 
 <pre class="brush: js">var indices = [];
 var array = ['a', 'b', 'a', 'c', 'a', 'd'];
 var element = 'a';
 var idx = array.lastIndexOf(element);
-while (idx != -1) {
+while (idx != -1) {
   indices.push(idx);
-  idx = (idx &gt; 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = (idx &gt; 0 ? array.lastIndexOf(element, idx - 1) : -1);
 }
 
 console.log(indices);
 // [4, 2, 0]
 </pre>
 
-<p>Note que devemos tratar o caso <code>idx == 0</code> separadamente aqui pois o elemento será sempre encontrado independente do parâmetro <code>fromIndex</code> se ele for o primeiro elemento do array. Isso é diferente do método {{jsxref("Array.prototype.indexOf", "indexOf")}}.</p>
+<p>Note que devemos tratar o caso <code>idx == 0</code> separadamente aqui pois o elemento será sempre encontrado independente do parâmetro <code>fromIndex</code> se ele for o primeiro elemento do array. Isso é diferente do método {{jsxref("Array.prototype.indexOf", "indexOf")}}.</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>lastIndexOf</code> foi adicionado ao padrão ECMA-262 na 5ª edição; devido a isso, não deve estar presente em outras implementações do padrão. Você pode contornar isso inserindo o seguinte código no início dos seus scripts, permitindo o uso de <code>lastIndexOf</code> em implementações que não o suportam nativamente. Esse algorítimo é exatamente o mesmo especificado no padrão ECMA-262, 5ª edição, assumindo que {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Math.floor")}}, {{jsxref("Math.abs")}}, e {{jsxref("Math.min")}} possuem seus valores originais.</p>
+<p><code>lastIndexOf</code> foi adicionado ao padrão ECMA-262 na 5ª edição; devido a isso, não deve estar presente em outras implementações do padrão. Você pode contornar isso inserindo o seguinte código no início dos seus scripts, permitindo o uso de <code>lastIndexOf</code> em implementações que não o suportam nativamente. Esse algorítimo é exatamente o mesmo especificado no padrão ECMA-262, 5ª edição, assumindo que {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, {{jsxref("Global_Objects/Number", "Number")}}, {{jsxref("Math.floor")}}, {{jsxref("Math.abs")}}, e {{jsxref("Math.min")}} possuem seus valores originais.</p>
 
 <pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.15
 // Reference: http://es5.github.io/#x15.4.4.15
@@ -100,7 +100,7 @@ if (!Array.prototype.lastIndexOf) {
 }
 </pre>
 
-<p>Novamente, perceba que essa implementação foca na absoluta compatibilidade com <code>lastIndexOf</code> no Firefox e no motor JavaScript SpiderMonkey, incluíndo vários casos que são, indiscutivelmente, extremos. Se você pretende usar isso em aplicações reais, é possível calcular <code>from</code> com um código menos complicado se você ignorar esses casos.</p>
+<p>Novamente, perceba que essa implementação foca na absoluta compatibilidade com <code>lastIndexOf</code> no Firefox e no motor JavaScript SpiderMonkey, incluíndo vários casos que são, indiscutivelmente, extremos. Se você pretende usar isso em aplicações reais, é possível calcular <code>from</code> com um código menos complicado se você ignorar esses casos.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -119,62 +119,14 @@ if (!Array.prototype.lastIndexOf) {
   <tr>
    <td>{{SpecName('ES6', '#sec-array.prototype.lastindexof', 'Array.prototype.lastIndexOf')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.Array.lastIndexOf")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

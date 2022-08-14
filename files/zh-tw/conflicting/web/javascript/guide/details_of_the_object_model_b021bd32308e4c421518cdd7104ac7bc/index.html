@@ -61,7 +61,7 @@ Engineer.prototype = new WorkerBee;
 </pre> </td> <td> <pre>
 public class Engineer extends WorkerBee {
    public String machine;
-   public Engineer () {
+   public Engineer () {
       dept = "engineering";
       machine = "";
    }
@@ -77,12 +77,12 @@ JavaScript 的這些定義使用了特殊的用語來設定預設值︰</p>
 <pre>this.name = name || "";
 </pre>
 <p>JavaScript 的邏輯 OR 運算子 (||) 會對他的第一參數求值。如果參數轉換為 true，運算子就返回這個參數。否則，運算子返回第二個參數的值。因此，這一行測試代碼可以看成，如果 <code>name</code> 具有對 <code>name</code> 屬性而言有用的值。如果是的話，他就把 <code>this.name</code> 設定成這個值。否則，他就把 <code>this.name</code> 設定成空字串。為簡單起見，本章使用這個用語；然而，第一眼看到這種用法的時候會使人迷惑不解<span style="font-style: italic;">。</span><em>請注意</em>︰這個用法在數字或布林參數中，可能不會如預期般運作，例如 <code>0</code>（零）和 <code>false</code> 會導致預設值被選取；在這種情況下，你將會需要使用下面更為冗長的用語，他會使所有的資料類型都發生預期般的行為︰</p>
-<pre>this.authorized = typeof(authorized) !== 'undefined' ? authorized : true;
+<pre>this.authorized = typeof(authorized) !== 'undefined' ? authorized : true;
 </pre>
 <p>當你使用這個定義來建立物件的實體的時候，你可以為在局域中定義的屬性來指定值。如同圖 8.5 所示，你可以使用如下語句來建立新的 Engineer︰</p>
 <pre>jane = new Engineer("belau");
 </pre>
-<p> <code>Jane</code> 的屬性現在是︰</p>
+<p> <code>Jane</code> 的屬性現在是︰</p>
 <pre>jane.name == "";
 jane.dept == "engineering";
 jane.projects == [];

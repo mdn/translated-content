@@ -12,8 +12,6 @@ original_slug: Utilisation_du_cache_de_Firefox_1.5
 ---
 {{FirefoxSidebar}}
 
-
-
 ### Introduction
 
 [Firefox 1.5](/fr/Firefox_1.5_pour_les_développeurs) met en mémoire cache des pages Web entières, avec leurs états JavaScript, pour une même session de navigation. Revenir ou avancer entre des pages déjà visitées ne nécessite aucun chargement de page et les états JavaScript sont préservés. Cette fonctionnalité parfois appelée **bfcache** (pour «&nbsp;Back-Forward Cache&nbsp;») rend la navigation très rapide. Ce cache est préservé en mémoire jusqu'à ce que l'utilisateur ferme le navigateur.
@@ -40,9 +38,9 @@ Si vous utilisez ces nouveaux évènements, vos pages continueront à s'afficher
 
 Le comportement standard des pages Web est&nbsp;:
 
-1.  L'utilisateur accède à une page.
-2.  Au cours du chargement de la page, les scripts contenus dans la page (_inline_) s'exécutent.
-3.  Dès que la page est chargée, le gestionnaire `onload` est invoqué.
+1. L'utilisateur accède à une page.
+2. Au cours du chargement de la page, les scripts contenus dans la page (_inline_) s'exécutent.
+3. Dès que la page est chargée, le gestionnaire `onload` est invoqué.
 
 Certaines pages comprennent une quatrième étape. Ce sont celles qui utilisent un gestionnaire `unload` se déclenchant lorsque l'utilisateur quitte la page pour en charger une autre. Si un gestionnaire `unload` est présent, la page ne sera pas mise en cache.
 
@@ -89,89 +87,91 @@ Dans cet exemple&nbsp;:
 - La page calcule et affiche la date et l'heure courantes à chaque chargement de la page. Ce calcul prend en compte les secondes et millisecondes afin que la fonctionnalité puisse être testée facilement.
 - Le curseur est placé dans le champ Nom du formulaire au premier chargement de la page. Dans Firefox 1.5, lorsque l'utilisateur revient sur la page, le curseur reste dans le champ dans lequel il se trouvait lorsqu'il l'a quittée. Dans les autres navigateurs, le curseur retourne dans le champ Nom.
 
-<!---->
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<head>
+<title>Commande&nbsp;: Exemple de Firefox 1.5</title>
+<style type="text/css">
+body, p {
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+      }
+</style>
+<script type="text/javascript">
+function onLoad() {
+  loadOnlyFirst();
+  onPageShow();
+}
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-       "http://www.w3.org/TR/html4/loose.dtd">
-    <HTML>
-    <head>
-    <title>Commande&nbsp;: Exemple de Firefox 1.5</title>
-    <style type="text/css">
-    body, p {
-    	font-family: Verdana, sans-serif;
-    	font-size: 12px;
-       	}
-    </style>
-    <script type="text/javascript">
-    function onLoad() {
-    	loadOnlyFirst();
-    	onPageShow();
-    }
+function onPageShow() {
+// calcule la date et l'heure courantes
+  var currentTime = new Date();
+  var year = currentTime.getFullYear();
+  var month = currentTime.getMonth()+1;
+  var day = currentTime.getDate();
+  var hour = currentTime.getHours();
+  var min = currentTime.getMinutes();
+  var sec = currentTime.getSeconds();
+  var mil = currentTime.getMilliseconds();
+  var displayTime = (day + "/" + month + "/" + year + " " +
+    hour + ":" + min + ":" + sec + ":" + mil);
+  document.getElementById("timefield").value = displayTime;
+}
 
-    function onPageShow() {
-    // calcule la date et l'heure courantes
-    	var currentTime = new Date();
-    	var year = currentTime.getFullYear();
-    	var month = currentTime.getMonth()+1;
-    	var day = currentTime.getDate();
-    	var hour = currentTime.getHours();
-    	var min = currentTime.getMinutes();
-    	var sec = currentTime.getSeconds();
-    	var mil = currentTime.getMilliseconds();
-    	var displayTime = (day + "/" + month + "/" + year + " " +
-    		hour + ":" + min + ":" + sec + ":" + mil);
-    	document.getElementById("timefield").value = displayTime;
-    }
+function loadOnlyFirst() {
+  document.zipForm.name.focus();
+}
+</script>
+</head>
+<body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
+<h2>Commande</h2>
 
-    function loadOnlyFirst() {
-    	document.zipForm.name.focus();
-    }
-    </script>
-    </head>
-    <body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
-    <h2>Commande</h2>
-
-    <form name="zipForm" action="http://www.example.com/formresult.html" method="get">
-    <label for="timefield">Date et heure&nbsp;:</label>
-    <input type="text" id="timefield"><br>
-    <label for="name">Nom&nbsp;:</label>
-    <input type="text" id="name"><br>
-    <label for="address">Adresse e-mail&nbsp;:</label>
-    <input type="text" id="address"><br>
-    <label for="order">Numéro de commande&nbsp;:</label>
-    <input type="text" id="order"><br>
-    <input type="submit" name="submit" value="Soumettre la requête">
-    </form>
-    </body>
-    </html>
+<form name="zipForm" action="http://www.example.com/formresult.html" method="get">
+<label for="timefield">Date et heure&nbsp;:</label>
+<input type="text" id="timefield"><br>
+<label for="name">Nom&nbsp;:</label>
+<input type="text" id="name"><br>
+<label for="address">Adresse e-mail&nbsp;:</label>
+<input type="text" id="address"><br>
+<label for="order">Numéro de commande&nbsp;:</label>
+<input type="text" id="order"><br>
+<input type="submit" name="submit" value="Soumettre la requête">
+</form>
+</body>
+</html>
+```
 
 En revanche, si la page ci-dessus n'avait pas écouté l'évènement `pageshow` et gérait tous les calculs au sein de l'évènement `load` (et était codée à la place comme dans l'exemple de code ci-dessous), la position du curseur et l'heure auraient été mis en cache par Firefox 1.5 lorsque l'utilisateur aurait quitté la page. Lors de son retour, ce seraient la date et l'heure mises en cache qui auraient été affichées.
 
-    <script>
-    function onLoad() {
-    	loadOnlyFirst();
+```html
+<script>
+function onLoad() {
+  loadOnlyFirst();
 
-    // calcule la date et l'heure courante
-    	var currentTime = new Date();
-    	var year = currentTime.getFullYear();
-    	var month = currentTime.getMonth()+1;
-    	var day = currentTime.getDate();
-    	var hour = currentTime.getHours();
-    	var min = currentTime.getMinutes();
-    	var sec = currentTime.getSeconds();
-    	var mil = currentTime.getMilliseconds();
-    	var displayTime = (day + "/" + month + "/" + year + " " +
-    		hour + ":" + min + ":" + sec + ":" + mil);
-    	document.getElementById("timefield").value = displayTime;
-    }
+// calcule la date et l'heure courante
+  var currentTime = new Date();
+  var year = currentTime.getFullYear();
+  var month = currentTime.getMonth()+1;
+  var day = currentTime.getDate();
+  var hour = currentTime.getHours();
+  var min = currentTime.getMinutes();
+  var sec = currentTime.getSeconds();
+  var mil = currentTime.getMilliseconds();
+  var displayTime = (day + "/" + month + "/" + year + " " +
+    hour + ":" + min + ":" + sec + ":" + mil);
+  document.getElementById("timefield").value = displayTime;
+}
 
-    function loadOnlyFirst() {
-    	document.zipForm.name.focus();
-    }
-    </script>
-    </head>
+function loadOnlyFirst() {
+  document.zipForm.name.focus();
+}
+</script>
+</head>
 
-    <body onload="onLoad();">
+<body onload="onLoad();">
+```
 
 ### Développement d'extensions pour Firefox
 

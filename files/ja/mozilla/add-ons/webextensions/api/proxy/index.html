@@ -26,9 +26,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/proxy
 
 // Log any messages from the proxy.
 browser.runtime.onMessage.addListener((message, sender) =&gt; {
-  if (sender.url === browser.extension.getURL(proxyScriptURL)) {
-    console.log(message);
-  }
+  if (sender.url === browser.extension.getURL(proxyScriptURL)) {
+    console.log(message);
+  }
 });
 
 let messageToProxy = {
@@ -55,7 +55,7 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 
 <p>The standard <code>FindProxyForURL()</code> <a href="/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
 
-<p>From Firefox 57 onwards, <code>FindProxyForURL()</code> may still return a string, but may alternatively (and preferably) return an array of objects. Each object has the following properties:</p>
+<p>From Firefox 57 onwards, <code>FindProxyForURL()</code> may still return a string, but may alternatively (and preferably) return an array of objects. Each object has the following properties:</p>
 
 <dl>
  <dt><code>type</code></dt>

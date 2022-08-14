@@ -16,7 +16,9 @@ La méthode **`Document.queryCommandSupported()`** indique si la commande d'édi
 
 ## Syntaxe
 
-    isSupported = document.queryCommandSupported(command);
+```js
+isSupported = document.queryCommandSupported(command);
+```
 
 ### Paramètres
 

@@ -15,7 +15,7 @@ translation_of: Web/API/FetchEvent/respondWith
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">{{domxref("FetchEvent")}} インターフェイスの <strong><code>respondWith()</code></strong> メソッドは、ブラウザー既定の fetch ハンドリングを抑止して、あなたが {{domxref("Response")}} 用の Promise を提供できるようにします。</span></p>
+<p><span class="seoSummary">{{domxref("FetchEvent")}} インターフェイスの <strong><code>respondWith()</code></strong> メソッドは、ブラウザー既定の fetch ハンドリングを抑止して、あなたが {{domxref("Response")}} 用の Promise を提供できるようにします。</span></p>
 
 <p>たいていの場合、あなたは受け手が理解できるどんなレスポンスでも提供できます。例えば、{{HTMLElement('img')}} がリクエストを開始する場合、レスポンスボディには画像データが必要です。セキュリティの理由から、少しのグローバルルールがあります:</p>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/FetchEvent/respondWith
 
 <h3 id="Specifying_the_final_URL_of_a_resource" name="Specifying_the_final_URL_of_a_resource">リソースの最終 URL を指定する</h3>
 
-<p>Firefox 59 以降では、サービスワーカーが {{domxref("FetchEvent.respondWith()")}} に {{domxref("Response")}} を渡すとき、その {{domxref("Response.url")}} の値がインターセプトされたネットワークリクエストの最終 URL として伝搬します。{{domxref("Response.url")}} の値が空文字の場合は、{{domxref("Request.url","FetchEvent.request.url")}} が最終 URL として利用されます。</p>
+<p>Firefox 59 以降では、サービスワーカーが {{domxref("FetchEvent.respondWith()")}} に {{domxref("Response")}} を渡すとき、その {{domxref("Response.url")}} の値がインターセプトされたネットワークリクエストの最終 URL として伝搬します。{{domxref("Response.url")}} の値が空文字の場合は、{{domxref("Request.url","FetchEvent.request.url")}} が最終 URL として利用されます。</p>
 
 <p>かつては {{domxref("Request.url","FetchEvent.request.url")}} がすべての場合に最終 URL として使われていました。与えられた {{domxref("Response.url")}} は実際には無視されていました。</p>
 
@@ -69,7 +69,7 @@ translation_of: Web/API/FetchEvent/respondWith
  <tbody>
   <tr>
    <td><code>NetworkError</code></td>
-   <td>上記の "グローバルルール" にヒントがあるように、ネットワークエラーは {{domxref("Request.mode","FetchEvent.request.mode")}} と {{domxref("Response.type")}}  の値の組み合わせでトリガーされます。</td>
+   <td>上記の "グローバルルール" にヒントがあるように、ネットワークエラーは {{domxref("Request.mode","FetchEvent.request.mode")}} と {{domxref("Response.type")}}  の値の組み合わせでトリガーされます。</td>
   </tr>
   <tr>
    <td><code>InvalidStateError</code></td>

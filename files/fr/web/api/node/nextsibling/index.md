@@ -14,7 +14,9 @@ La propriété en lecture seule  **`Node.nextSibling`** renvoie le nœud (`node`
 
 ## Syntaxe
 
-    nextNode = node.nextSibling
+```js
+nextNode = node.nextSibling
+```
 
 ## Notes
 

@@ -20,7 +20,7 @@ original_slug: Web/JavaScript/Reference/Operators/Comparison_Operators
  <li>Two Boolean operands are strictly equal if both are <code>true</code> or both are <code>false</code>.</li>
  <li>Two distinct objects are never equal for either strict or abstract comparisons.</li>
  <li>An expression comparing Objects is only true if the operands reference the same Object.</li>
- <li>Null and Undefined Types are strictly equal to themselves and abstractly equal to each other.</li>
+ <li>Null and Undefined Types are strictly equal to themselves and abstractly equal to each other.</li>
 </ul>
 
 <h2 id="Equality_operators">Equality operators</h2>
@@ -50,7 +50,7 @@ null  == undefined // true
 
 <h3 id="Inequality_(!)"><a name="Inequality">Inequality (!=)</a></h3>
 
-<p>The inequality operator returns true if the operands are not equal. If the two operands are <strong>not of the same type</strong>, JavaScript attempts to convert the operands to an appropriate type for the comparison. If <strong>both operands are objects</strong>, then JavaScript compares internal references which are not equal when operands refer to different objects in memory.</p>
+<p>The inequality operator returns true if the operands are not equal. If the two operands are <strong>not of the same type</strong>, JavaScript attempts to convert the operands to an appropriate type for the comparison. If <strong>both operands are objects</strong>, then JavaScript compares internal references which are not equal when operands refer to different objects in memory.</p>
 
 <h4 id="Syntax_2">Syntax</h4>
 
@@ -67,7 +67,7 @@ null  == undefined // true
 
 <h3 id="Identity_strict_equality_()"><a name="Identity">Identity / strict equality (===)</a></h3>
 
-<p>The identity operator returns true if the operands are strictly equal (see above) <strong>with no type conversion</strong>. </p>
+<p>The identity operator returns true if the operands are strictly equal (see above) <strong>with no type conversion</strong>. </p>
 
 <h4 id="Syntax_3">Syntax</h4>
 
@@ -80,7 +80,7 @@ null  == undefined // true
 var object1 = {"value":"key"}, object2={"value":"key"};
 object1 === object2 //false</pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Non-identity_strict_inequality_(!)"><a name="Nonidentity">Non-identity / strict inequality (!==)</a></h3>
 
@@ -98,7 +98,7 @@ object1 === object2 //false</pre>
 
 <h2 id="Relational_operators">Relational operators</h2>
 
-<p>Each of these operators will call the <code>valueOf()</code> function on each operand before a comparison is made.</p>
+<p>Each of these operators will call the <code>valueOf()</code> function on each operand before a comparison is made.</p>
 
 <h3 id="Greater_than_operator_(>)"><a name="Greater_than_operator">Greater than operator (&gt;)</a></h3>
 
@@ -188,94 +188,13 @@ a === b
 // is converted to String 'foo' before comparison
 a == 'foo'</pre>
 
-<h2 id="規範">規範</h2>
+<h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Adds <code>===</code> and <code>!==</code> operators. Implemented in JavaScript 1.3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.8')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.8">Relational Operators</a>, <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9">Equality Operators</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-relational-operators')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-relational-operators">Relational Operators</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-equality-operators">Equality Operators</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-relational-operators')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://tc39.github.io/ecma262/#sec-relational-operators">Relational Operators</a>, <a href="http://tc39.github.io/ecma262/#sec-equality-operators">Equality Operators</a></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

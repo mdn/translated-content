@@ -121,17 +121,21 @@ _Met également en œuvre des méthodes de l'interface {{domxref("EventTarget")}
 
 Déclaration basique d'un audio context :
 
-    var contexteAudio = new AudioContext;
+```js
+var contexteAudio = new AudioContext;
+```
 
 Variante avec gestion de la compatibilité navigateur:
 
-    var AudioContext = window.AudioContext || window.webkitAudioContext;
-    var contexteAudio = new AudioContext();
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var contexteAudio = new AudioContext();
 
-    var oscillatorNode = contexteAudio.createOscillator();
-    var gainNode = contexteAudio.createGain();
-    var finish = contexteAudio.destination;
-    // etc.
+var oscillatorNode = contexteAudio.createOscillator();
+var gainNode = contexteAudio.createGain();
+var finish = contexteAudio.destination;
+// etc.
+```
 
 ## Spécifications
 

@@ -9,7 +9,9 @@ Renvoie l'emplacement de la feuille de style.
 
 ## Syntaxe
 
-    Uri = stylesheet.href
+```js
+Uri = stylesheet.href
+```
 
 ### Paramètres
 
@@ -42,6 +44,6 @@ Si la feuille de style est une feuille de style liée, la valeur de son attribut
 
 Cette propriété est en lecture seule sur Firefox, Opera, Google Chrome et Safari, et elle est lue / écrite dans Internet Explorer.
 
-## spécification
+## Spécification
 
 [Href](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)

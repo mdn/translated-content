@@ -17,9 +17,9 @@ translation_of: Web/API/WebGL_API/By_example/Scissor_animation
 <div>
 <h3 id="애니메이션_잘라내기">애니메이션 잘라내기</h3>
 
-<p>이번 예시에서는, 우리는 사각형을 {{domxref("WebGLRenderingContext.scissor()","scissor()")}} 와{{domxref("WebGLRenderingContext.clear()","clear()")}} 을 이용하여 그려볼 것입니다. 우리는 다시 애니메이션 루프를 타이머를 이용하여 구축할 것입니다. 이번에는 매 프레임(우리는 프레임 비율을 대강 매 17ms 마다 설정했습니다.) 대마다 업데이트 되는 사각형(잘라내는 영역)의 경우임을 주목하세요.</p>
+<p>이번 예시에서는, 우리는 사각형을 {{domxref("WebGLRenderingContext.scissor()","scissor()")}} 와{{domxref("WebGLRenderingContext.clear()","clear()")}} 을 이용하여 그려볼 것입니다. 우리는 다시 애니메이션 루프를 타이머를 이용하여 구축할 것입니다. 이번에는 매 프레임(우리는 프레임 비율을 대강 매 17ms 마다 설정했습니다.) 대마다 업데이트 되는 사각형(잘라내는 영역)의 경우임을 주목하세요.</p>
 
-<p>반대로, 사각형의 색 ({{domxref("WebGLRenderingContext.clearColor()","clearColor")}}으로 설정되는)은 오직 새로운 사각형이 생성될 때만 업데이트 됩니다. 이것은 상태 머신으로써 {{Glossary("WebGL")}} 을 보여줄 좋은 데모입니다. 각 사각형에 대하여 우리는 그것의 색을 결정하고, 매 프레임마다 위치를 결정합니다. WebGl의 깨끗한 색 상태는 새로운 사각형이 생성되어 우리가 그것을 다시 바꿀 때까지 설정 값으로 남아있습니다.</p>
+<p>반대로, 사각형의 색 ({{domxref("WebGLRenderingContext.clearColor()","clearColor")}}으로 설정되는)은 오직 새로운 사각형이 생성될 때만 업데이트 됩니다. 이것은 상태 머신으로써 {{Glossary("WebGL")}} 을 보여줄 좋은 데모입니다. 각 사각형에 대하여 우리는 그것의 색을 결정하고, 매 프레임마다 위치를 결정합니다. WebGl의 깨끗한 색 상태는 새로운 사각형이 생성되어 우리가 그것을 다시 바꿀 때까지 설정 값으로 남아있습니다.</p>
 </div>
 
 <div id="scissor-animation-source">

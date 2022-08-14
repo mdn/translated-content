@@ -19,8 +19,10 @@ Il doit être unique dans un document et est souvent utilisé pour extraire l'é
 
 ## Syntaxe
 
-    var idStr = elt.id; // Obtenez l'identifiant
-    elt.id = idStr; // Définir l'identifiant
+```js
+var idStr = elt.id; // Obtenez l'identifiant
+elt.id = idStr; // Définir l'identifiant
+```
 
 - `idStr` est l'identifiant de l'élément.
 

@@ -32,9 +32,9 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 
 > **Note :** Afin de fournir des fonctionnalités d'autocomplétion, un agent utilisateur pourra utiliser les prérequis suivants quant aux éléments `<input>`/`<select>`/`<textarea>`:
 >
-> 1.  Que ceux-ci aient un attribut `name` et/ou `id`
-> 2.  Que ceux-ci descendent d'un élément `<form>`
-> 3.  Que le formulaire associé ait un bouton [submit](/fr/docs/Web/HTML/Element/Input/submit)
+> 1. Que ceux-ci aient un attribut `name` et/ou `id`
+> 2. Que ceux-ci descendent d'un élément `<form>`
+> 3. Que le formulaire associé ait un bouton [submit](/fr/docs/Web/HTML/Element/Input/submit)
 
 ## Valeurs
 

@@ -96,7 +96,7 @@ translation_of: Web/SVG/Tutorial/Paths
 
 <h3 id="베지어_곡선">베지어 곡선</h3>
 
-<p>3차 베지어 곡선인 'C'는 조금 복잡한 곡선이다. 3차 베지어 곡선은 선을 잇는 두 점에 하나씩 제어점을 가지고 있다. 그러므로 3차 베지에 곡선을 그리려면 총 세 개의 좌표가 필요하다.</p>
+<p>3차 베지어 곡선인 'C'는 조금 복잡한 곡선이다. 3차 베지어 곡선은 선을 잇는 두 점에 하나씩 제어점을 가지고 있다. 그러므로 3차 베지에 곡선을 그리려면 총 세 개의 좌표가 필요하다.</p>
 
 <pre> C x1 y1, x2 y2, x y (혹은 c dx1 dy1, dx2 dy2, dx dy)
 </pre>
@@ -127,7 +127,7 @@ translation_of: Web/SVG/Tutorial/Paths
 <pre> S x2 y2, x y (혹은 s dx2 dy2, dx dy)
 </pre>
 
-<p><code>S</code>는 위와 같은 형태의 곡선을 그리지만, 다른 <code>S</code>나 <code>C</code> 명령어 다음에 올 경우 첫 번째 제어점은 이전에 사용했던 제어점을 뒤집은 것으로 간주된다. <code>S</code> 명령어가 다른 <code>S</code>나 <code>C</code> 명령어 다음에 오지 않을 경우에는 현재 커서 위치가 첫 번째 제어점으로 사용되며, 이 경우에 그려지는 결과는 Q 명령어로 같은 파라미터를 사용해서 그린 결과와 같게 된다. 아래에 이 명령어의 예제가 있으며, 왼쪽의 미리보기에서 패스에 명시적으로 표시된 제어점은 빨간색, 생략된 제어점은 파란색으로 표시한다.</p>
+<p><code>S</code>는 위와 같은 형태의 곡선을 그리지만, 다른 <code>S</code>나 <code>C</code> 명령어 다음에 올 경우 첫 번째 제어점은 이전에 사용했던 제어점을 뒤집은 것으로 간주된다. <code>S</code> 명령어가 다른 <code>S</code>나 <code>C</code> 명령어 다음에 오지 않을 경우에는 현재 커서 위치가 첫 번째 제어점으로 사용되며, 이 경우에 그려지는 결과는 Q 명령어로 같은 파라미터를 사용해서 그린 결과와 같게 된다. 아래에 이 명령어의 예제가 있으며, 왼쪽의 미리보기에서 패스에 명시적으로 표시된 제어점은 빨간색, 생략된 제어점은 파란색으로 표시한다.</p>
 
 <p><img alt="ShortCut_Cubic_Bezier_with_grid.png" class="internal" src="https://mdn.mozillademos.org/files/10405/ShortCut_Cubic_Bezier_with_grid.png" style="float: right; height: 160px; width: 190px;"></p>
 

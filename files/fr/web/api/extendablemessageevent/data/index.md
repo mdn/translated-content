@@ -15,7 +15,9 @@ La propriété **`data`** est une propriété en lecture seule rattachée à l'i
 
 ## Syntaxe
 
-    var mesDonnees = ExtendableMessageEventInstance.data;
+```js
+var mesDonnees = ExtendableMessageEventInstance.data;
+```
 
 ### Valeur
 

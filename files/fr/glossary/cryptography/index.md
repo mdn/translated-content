@@ -15,6 +15,6 @@ La **cryptographie**, ou cryptologie, est la science qui étudie comment coder e
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Cryptographie")}} sur Wikipédia
+- [Cryptographie](https://fr.wikipedia.org/wiki/Cryptographie) sur Wikipédia
 - {{glossary("Cryptanalysis","cryptanalyse")}}
 - [Tutoriel sur la sécurité de l'information](/fr/Apprendre/Tutoriels/Les_bases_de_la_s%C3%A9curit%C3%A9_informatique)

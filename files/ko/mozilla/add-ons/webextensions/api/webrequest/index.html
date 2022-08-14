@@ -31,13 +31,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>리스너는 요청 정보가 담긴 <code>details</code> 객체를 받는다. This includes a request ID, which is provided to enable an add-on to correlate events associated with a single request. It is unique within a browser session and the add-on's context. It stays the same throughout a request, even across redirections and authentication exchanges.</p>
 
-<p>webRequest API를 사용하려면 확장 프로그램은 "webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API 권한</a>을 가져야 하고, 대상 호스트에 대해서도 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">호스트 권한</a>을 가져야 한다. "blocking" 기능을  사용하려면 추가로 "webRequestBlocking" API 권한도 가져야 한다.</p>
+<p>webRequest API를 사용하려면 확장 프로그램은 "webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API 권한</a>을 가져야 하고, 대상 호스트에 대해서도 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">호스트 권한</a>을 가져야 한다. "blocking" 기능을  사용하려면 추가로 "webRequestBlocking" API 권한도 가져야 한다.</p>
 
 <p>To intercept resources loaded by a page (such as images, scripts, or stylesheets), the extension must have the host permission for the resource as well as for the main page requesting the resource. For example, if a page at "https://developer.mozilla.org" loads an image from "https://mdn.mozillademos.org", then an extension must have both host permissions if it is to intercept the image request.</p>
 
 <h2 id="Modifying_requests">Modifying requests</h2>
 
-<p>On some of these events, you can modify the request. Specifically, you can:</p>
+<p>On some of these events, you can modify the request. Specifically, you can:</p>
 
 <ul>
  <li>cancel the request in:
@@ -157,11 +157,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>{{Compat("webextensions.api.webRequest")}}</p>
 
-<p> </p>
+<p> </p>
 
 <p><a href="/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webRequest_incompatibilities">Extra notes on Chrome incompatibilities</a>.</p>
 
-<p> </p>
+<p> </p>
 
 <p>{{WebExtExamples("h2")}}</p>
 

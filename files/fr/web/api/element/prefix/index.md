@@ -17,7 +17,9 @@ La propriété en lecture seule **`Element.prefix`** renvoie le préfixe d'espac
 
 ## Syntaxe
 
-    string = element.prefix
+```js
+string = element.prefix
+```
 
 ## Exemples
 

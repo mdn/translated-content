@@ -47,8 +47,7 @@ console.log("PerformanceEntry.toJSON = " + s);
 
 | Spécification                                                                                                                | Statut                                   | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
-| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-tojson',
-        'toJSON')}} | {{Spec2('Resource Timing 2')}} |             |
+| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-tojson', 'toJSON')}} | {{Spec2('Resource Timing 2')}} |             |
 
 ## Compatibilité des navigateurs
 

@@ -133,8 +133,6 @@ Pour les feuilles de style CSS, **l'ordre est important**. Si vous définissez u
 }
 ```
 
-
-
 ```html
 <!-- La plupart du texte est en gras sauf "GE",
      qui est en rouge et sans graisse -->

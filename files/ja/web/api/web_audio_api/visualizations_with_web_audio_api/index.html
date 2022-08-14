@@ -20,7 +20,7 @@ translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 
 <h2 id="Basic_concepts" name="Basic_concepts">基本的な概念</h2>
 
-<p>オーディオソースからデータを抽出するには {{ domxref("AudioContext.createAnalyser()") }} メソッドを使用して作成された {{ domxref("AnalyserNode") }} が必要です。 例:</p>
+<p>オーディオソースからデータを抽出するには {{ domxref("AudioContext.createAnalyser()") }} メソッドを使用して作成された {{ domxref("AnalyserNode") }} が必要です。 例:</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -40,7 +40,7 @@ distortion.connect(audioCtx.destination);</pre>
 <p>アナライザノードは、{{domxref("AnalyserNode.fftSize")}}プロパティ値（指定されていない場合は、デフォルトは 2048 です）として指定する内容に応じて、特定の周波数ドメインで高速フーリエ変換（fft）を使用してオーディオデータをキャプチャします。</p>
 
 <div class="note">
-<p><strong>付記</strong>: {{domxref("AnalyserNode.minDecibels")}}と{{domxref("AnalyserNode.maxDecibels")}}を使用して、fft データスケーリング範囲の最小値と最大値を指定することもできます。{{domxref("AnalyserNode.smoothingTimeConstant")}}。それらの使い方の詳細については、それらのページをお読みください。</p>
+<p><strong>付記</strong>: {{domxref("AnalyserNode.minDecibels")}}と{{domxref("AnalyserNode.maxDecibels")}}を使用して、fft データスケーリング範囲の最小値と最大値を指定することもできます。{{domxref("AnalyserNode.smoothingTimeConstant")}}。それらの使い方の詳細については、それらのページをお読みください。</p>
 </div>
 
 <p>データを取得するには、周波数データを取得するために{{domxref("AnalyserNode.getFloatFrequencyData()")}}および{{domxref("AnalyserNode.getByteFrequencyData()")}}メソッドを使用する必要があります。{{domxref("AnalyserNode.getByteTimeDomainData()")}}と{{domxref(" AnalyserNode.getFloatTimeDomainData()")}}を使用して波形データを取得します。</p>
@@ -53,7 +53,7 @@ distortion.connect(audioCtx.destination);</pre>
 var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);</pre>
 
-<p>実際にデータを取得して配列にコピーするには、配列を引数として渡して、必要なデータ収集メソッドを呼び出します。 例:</p>
+<p>実際にデータを取得して配列にコピーするには、配列を引数として渡して、必要なデータ収集メソッドを呼び出します。 例:</p>
 
 <pre class="brush: js">analyser.getByteTimeDomainData(dataArray);</pre>
 
@@ -63,7 +63,7 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <h2 id="Creating_a_waveformoscilloscope" name="Creating_a_waveformoscilloscope">波形/オシロスコープの作成</h2>
 
-<p>オシロスコープのビジュアライゼーション（ <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a> の元のコードの <a href="http://soledadpenades.com/">Soledad Penadés</a> に感謝します）を作成するには、前のセクションで説明した標準パターンに従って、バッファを設定します。</p>
+<p>オシロスコープのビジュアライゼーション（ <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167">Voice-change-O-matic</a> の元のコードの <a href="http://soledadpenades.com/">Soledad Penadés</a> に感謝します）を作成するには、前のセクションで説明した標準パターンに従って、バッファを設定します。</p>
 
 <pre class="brush: js">analyser.fftSize = 2048;
 var bufferLength = analyser.frequencyBinCount;
@@ -73,11 +73,11 @@ var dataArray = new Uint8Array(bufferLength);</pre>
 
 <pre class="brush: js">canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);</pre>
 
-<p>ここで <code>draw()</code> 関数を定義します。</p>
+<p>ここで <code>draw()</code> 関数を定義します。</p>
 
 <pre class="brush: js">function draw() {</pre>
 
-<p>ここで <code>requestAnimationFrame()</code> を使用して、描画関数が開始後にループを維持します。</p>
+<p>ここで <code>requestAnimationFrame()</code> を使用して、描画関数が開始後にループを維持します。</p>
 
 <pre class="brush: js">var drawVisual = requestAnimationFrame(draw);</pre>
 
@@ -123,13 +123,13 @@ var x = 0;</pre>
       canvasCtx.stroke();
     };</pre>
 
-<p>このコードの最後では、 <code>draw()</code> 関数を呼び出してプロセス全体を開始します。</p>
+<p>このコードの最後では、 <code>draw()</code> 関数を呼び出してプロセス全体を開始します。</p>
 
 <pre class="brush: js">    draw();</pre>
 
 <p>これにより、1秒に数回更新する素晴らしい波形表示が得られます。</p>
 
-<p><img alt="a black oscilloscope line, showing the waveform of an audio signal" src="https://mdn.mozillademos.org/files/7977/wave.png" style="display: block; height: 96px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="a black oscilloscope line, showing the waveform of an audio signal" src="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API/wave.png" style="display: block; height: 96px; margin: 0px auto; width: 640px;"></p>
 
 <h2 id="Creating_a_frequency_bar_graph" name="Creating_a_frequency_bar_graph">周波数棒グラフの作成</h2>
 
@@ -182,10 +182,10 @@ var x = 0;</pre>
 
 <p>このコードでは、次のような結果が得られます。</p>
 
-<p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="https://mdn.mozillademos.org/files/7975/bar-graph.png" style="height: 157px; width: 1260px;"></p>
+<p><img alt="a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal" src="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API/bar-graph.png" style="height: 157px; width: 1260px;"></p>
 
 <div class="note">
-<p><strong>付記</strong>: この記事に記載されている例では、{{domxref("AnalyserNode.getByteFrequencyData()")}}と{{domxref("AnalyserNode.getByteTimeDomainData()")}}で使用法が示されています。実際の例は{{domxref("AnalyserNode.getFloatFrequencyData()")}}と{{domxref("AnalyserNode.getFloatTimeDomainData()")}}にあるので、私たちの <a href="http://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> デモを参照してください（ソースコードも参照してください）— これは、元の <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> とまったく同じですが、符号なしバイトデータではなく、Float データを使用しています。</p>
+<p><strong>付記</strong>: この記事に記載されている例では、{{domxref("AnalyserNode.getByteFrequencyData()")}}と{{domxref("AnalyserNode.getByteTimeDomainData()")}}で使用法が示されています。実際の例は{{domxref("AnalyserNode.getFloatFrequencyData()")}}と{{domxref("AnalyserNode.getFloatTimeDomainData()")}}にあるので、私たちの <a href="http://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> デモを参照してください（<a href="https://github.com/mdn/voice-change-o-matic-float-data">ソースコード</a>も参照してください）— これは、元の <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> とまったく同じですが、符号なしバイトデータではなく、Float データを使用しています。</p>
 </div>
 
-<p> </p>
+<p> </p>

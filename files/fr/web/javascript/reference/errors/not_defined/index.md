@@ -13,7 +13,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Not_defined
 
 ## Message
 
-    ReferenceError: "x" is not defined
+```
+ReferenceError: "x" is not defined
+```
 
 ## Type d'erreur
 

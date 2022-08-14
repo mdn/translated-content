@@ -30,7 +30,7 @@ translation_of: Web/API/Element/innerHTML
 
 <dl>
  <dt><strong><code>SyntaxError</code></strong></dt>
- <dd>Foi feita uma tentativa de definir o valor de um <code>innerHTML</code> usando uma string que não é HTML.</dd>
+ <dd>Foi feita uma tentativa de definir o valor de um <code>innerHTML</code> usando uma string que não é HTML.</dd>
  <dt><code>NoModificationAllowedError</code></dt>
  <dd>Foi feita uma tentativa de inserir HTML dentro de um nó no qual o pai é um {{domxref("Document")}}.</dd>
 </dl>
@@ -110,7 +110,7 @@ el.innerHTML = name; // inofensivo, nesse caso
 name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
 el.innerHTML = name; // inofensivo, nesse caso</pre>
 
-<p>Embora isso talvez se pareça como um ataque  {{interwiki("wikipedia", "cross-site scripting")}}, o resultado é inofensivo. O HTML5 especifica que uma tag {{HTMLElement("script")}}, inserida via <code>innerHTML</code>, <a href="http://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">não deve ser executada</a>.</p>
+<p>Embora isso talvez se pareça como um ataque  {{interwiki("wikipedia", "cross-site scripting")}}, o resultado é inofensivo. O HTML5 especifica que uma tag {{HTMLElement("script")}}, inserida via <code>innerHTML</code>, <a href="http://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">não deve ser executada</a>.</p>
 
 <p>No entanto, há formas de se executar JavaScript sem usar elementos {{HTMLElement("script")}}, por isso ainda há um risco de segurança sempre que você usa <code>innerHTML</code> para definir uma string sobre a qual você não tem controle. Por exemplo:</p>
 

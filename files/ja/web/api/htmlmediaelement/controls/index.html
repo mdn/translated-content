@@ -1,63 +1,39 @@
 ---
 title: HTMLMediaElement.controls
 slug: Web/API/HTMLMediaElement/controls
+page-type: web-api-instance-property
 tags:
   - API
   - HTML DOM
   - HTMLMediaElement
   - Property
   - Web
+browser-compat: api.HTMLMediaElement.controls
 translation_of: Web/API/HTMLMediaElement/controls
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLMediaElement.controls</code></strong> プロパティには、{{htmlattrxref("controls", "video")}} HTML 属性が反映されます。 これは、メディア項目を再生するためのユーザーインターフェイスのコントロールを表示するかどうかを制御します。</span></p>
+**`HTMLMediaElement.controls`** プロパティは、 HTML の {{htmlattrxref("controls", "video")}} 属性を反映し、メディア項目を再生するためのユーザーインターフェイスのコントロールを表示するかどうかを制御します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox">var <em>ctrls</em> = <em>video</em>.controls;
-<em>audio</em>.controls = true;</pre>
+論理値です。値が `true` の場合、コントロールが表示されます。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-<p>{{jsxref("Boolean")}}。 値が <code>true</code> の場合、コントロールが表示されます。</p>
-
-<h2 id="Example" name="Example">例</h2>
-
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 obj.controls = true;
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#dom-media-controls", "HTMLMediaElement.controls")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName('HTML5 W3C')}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.controls")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLMediaElement.controls")}}</p>
-
-<h2 id="See_Also" name="See_Also">関連情報</h2>
-
-<ul>
- <li>これを定義するインターフェース、{{domxref("HTMLMediaElement")}}。</li>
-</ul>
+- これを定義しているインターフェイスである {{domxref("HTMLMediaElement")}}

@@ -2737,7 +2737,7 @@ These media keys are used specifically for controlling audio.
   </thead>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/en-US/docs/Mozilla/B2G_OS).
+\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/fr/docs/Mozilla/B2G_OS).
 
 ## TV control keys
 
@@ -3025,7 +3025,7 @@ Because modern remote controls for media devices often include buttons beyond th
 
 The values below are derived in part form a number of consumer electronics technical specifications:
 
-- [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (part of the {{interwiki("wikipedia", "ATSC")}} specification)
+- [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://en.wikipedia.org/wiki/ATSC_standards) specification)
 - [Open Cable Application Platform 1.1.3](http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
 - [ANSI/CEA-2014-B](http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
@@ -3698,7 +3698,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"Teletext"</code></td>
       <td>
-        Toggles display of {{interwiki("wikipedia", "teletext")}},
+        Toggles display of <a href="https://en.wikipedia.org/wiki/Teletext">teletext</a>,
         if available.
       </td>
       <td><code>VK_TELETEXT</code></td>

@@ -18,7 +18,9 @@ La méthode **`Object.freeze()`** permet de geler un objet, c'est-à-dire qu'on 
 
 ## Syntaxe
 
-    Object.freeze(obj)
+```js
+Object.freeze(obj)
+```
 
 ### Paramètres
 

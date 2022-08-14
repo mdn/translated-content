@@ -15,7 +15,9 @@ translation_of: Web/API/Event/stopPropagation
 
 ## Syntaxe
 
-    event.stopPropagation();
+```js
+event.stopPropagation();
+```
 
 ## Exemple
 

@@ -11,8 +11,8 @@ Le cas d'utilisation le plus simple est la simulation des altérations d'un son 
 
 Créer une spatialisation audio comporte deux principaux aspects :
 
-1.  L'objet {{ domxref("AudioListener") }} représente la position dans l'espace 3D d'une personne qui écoute la source audio; on y accède avec la propriété {{ domxref("AudioContext.listener") }}. On peut paramétrer la position et l'orientation de l'auditeur, entre autres.
-2.  L'objet {{ domxref("PannerNode") }} représente la position dans l'espace 3D d'une source audio; on le crée avec la méthode {{ domxref("AudioContext.createPanner()") }}. On peut paramétrer un certain nombre d'options comme la position, l'orientation, la vitesse, et l'angle s'un cône qui indique dans quelle direction le son peut être entendu (s'il n'est pas omnidirectionnel).
+1. L'objet {{ domxref("AudioListener") }} représente la position dans l'espace 3D d'une personne qui écoute la source audio; on y accède avec la propriété {{ domxref("AudioContext.listener") }}. On peut paramétrer la position et l'orientation de l'auditeur, entre autres.
+2. L'objet {{ domxref("PannerNode") }} représente la position dans l'espace 3D d'une source audio; on le crée avec la méthode {{ domxref("AudioContext.createPanner()") }}. On peut paramétrer un certain nombre d'options comme la position, l'orientation, la vitesse, et l'angle s'un cône qui indique dans quelle direction le son peut être entendu (s'il n'est pas omnidirectionnel).
 
 Dans cet article nous allons nous concentrer sur la position de l'auditeur et du panoramique, tous deux paramétrés à l'aide de la méthode `setPosition()`. Celle-ci accepte trois valeurs qui correspondent à X, Y, et Z dans un système de coordonnées cartésien.
 
@@ -61,7 +61,7 @@ var pannerData = document.querySelector('.panner-data');
 
 Next comes a little bit of slightly fiddly maths. We want to make the `boomBox`, `listener`, and `panner` appear in the center of the screen initially, so we work out the width and height of the viewport, and divide both by two to get our X and Y values for those things. The `zPos` is only used on the panner, and is updated as the zoom controls are used (see later on); the initial value of 295 was decided on fairly arbitrarily — it sounded good. As long as you set the position of the panner appropriately in relation to the listener position, you will be ok.
 
-Next for this section, we set a `leftBound` and `rightBound`, which is the furthest we want our stereo graph to travel left and right. For the layout, we are using [Flexbox](/en-US/docs/Web/Guide/CSS/Flexible_boxes) to initially place the `boomBox` right in the center of the viewport, after which we then use iterative transforms and {{domxref("window.requestAnimationFrame()")}} to apply the `boomBox` movement. Therefore the "0" position is in the center of the viewport so the rightmost position is that position plus half the viewport, but minus 50 (pixels) so the `boomBox` can't shoot all the way off the right of the screen, and the leftmost position is that position minus half the viewport, but plus 50 (pixels), so the `boomBox` can't shoot all the way off the left of the screen.
+Next for this section, we set a `leftBound` and `rightBound`, which is the furthest we want our stereo graph to travel left and right. For the layout, we are using [Flexbox](/fr/docs/Web/Guide/CSS/Flexible_boxes) to initially place the `boomBox` right in the center of the viewport, after which we then use iterative transforms and {{domxref("window.requestAnimationFrame()")}} to apply the `boomBox` movement. Therefore the "0" position is in the center of the viewport so the rightmost position is that position plus half the viewport, but minus 50 (pixels) so the `boomBox` can't shoot all the way off the right of the screen, and the leftmost position is that position minus half the viewport, but plus 50 (pixels), so the `boomBox` can't shoot all the way off the left of the screen.
 
 The last part of this code is the `xIterator` — we set this to a 150th of the screen width, and then move the `boomBox` left and right by this amount when the left and right controls are pressed. We use this rather than a constant so that the app is a little more responsive.
 
@@ -166,13 +166,13 @@ var boomZoom = 0.25;
 
 Now we get to the four functions that control the left, right, zoom in, and zoom out functionality: `moveRight()`, `moveLeft()`, `zoomIn()`, and `zoomOut()`. Each is a little different, but works in a similar way:
 
-1.  The `boomX` or `boomZoom` variables are updated in order to change the `boomBox`'s position on the screen.
-2.  The `xPos` or `zPos` variables are updated in order to change the {{domxref("PannerNode") }}'s position in 3D space. The changes are quite small, but these are the values we found to work.
-3.  A check is done to see if the upper bounds of movement have been reached (a `boomX` equal or less than `leftBound` or greater than `rightBound`, or a `boomZoom` greater than 4 or equal or less than 0.25.) If so, the values are updated to force the `boomBox` to stay in certain constraints, and to force the `xPos` and `zPos` variables to also stay within certain constrants. These are, respectively, 5 greater or less than `WIDTH/2`, and a `zPos` between 295 and 299.9. These are the values we found produced a relatively realistic sounding panning and volume adjustment as the `boomBox` was moved around.
-4.  `boomBox` is transformed (translated and scaled) by the new values of `boomX`, `boomY`, and `boomZoom` to move it around the screen.
-5.  The `positionPanner()` function is run to update the position of the panner.
-6.  A {{domxref("window.requestAnimationFrame") }} instance is called to keep running the function for as long as the mouse button is pressed down.
-7.  The `requestAnimationFrame` ID is returned out of the function so that it can be cancelled when the mouse button is released.
+1. The `boomX` or `boomZoom` variables are updated in order to change the `boomBox`'s position on the screen.
+2. The `xPos` or `zPos` variables are updated in order to change the {{domxref("PannerNode") }}'s position in 3D space. The changes are quite small, but these are the values we found to work.
+3. A check is done to see if the upper bounds of movement have been reached (a `boomX` equal or less than `leftBound` or greater than `rightBound`, or a `boomZoom` greater than 4 or equal or less than 0.25.) If so, the values are updated to force the `boomBox` to stay in certain constraints, and to force the `xPos` and `zPos` variables to also stay within certain constrants. These are, respectively, 5 greater or less than `WIDTH/2`, and a `zPos` between 295 and 299.9. These are the values we found produced a relatively realistic sounding panning and volume adjustment as the `boomBox` was moved around.
+4. `boomBox` is transformed (translated and scaled) by the new values of `boomX`, `boomY`, and `boomZoom` to move it around the screen.
+5. The `positionPanner()` function is run to update the position of the panner.
+6. A {{domxref("window.requestAnimationFrame") }} instance is called to keep running the function for as long as the mouse button is pressed down.
+7. The `requestAnimationFrame` ID is returned out of the function so that it can be cancelled when the mouse button is released.
 
 ```js
 function moveRight() {

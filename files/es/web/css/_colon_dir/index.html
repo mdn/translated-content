@@ -10,7 +10,7 @@ translation_of: 'Web/CSS/:dir'
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <code>:dir</code> de <a href="/es/docs/Web/CSS">CSS</a> coincide con los elementos en función de la direccionalidad del texto contenido en ellos.</p>
+<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <code>:dir</code> de <a href="/es/docs/Web/CSS">CSS</a> coincide con los elementos en función de la direccionalidad del texto contenido en ellos.</p>
 
 <pre class="brush: css">/* Selecciona cualquier elemento con texto de derecha a izquierda */
 :dir(rtl) {
@@ -20,11 +20,11 @@ translation_of: 'Web/CSS/:dir'
 <p>La pseudo-clase <code>:dir()</code> usa solo el valor <em>semántico</em> de la direccionalidad, es decir, el definido en el documento mismo. No tiene en cuenta la direccionalidad del <em>estilo</em>, es decir, la direccionalidad establecida por las propiedades de CSS como {{cssxref("direction")}}.</p>
 
 <div class="note">
-<p><strong>Nota: </strong>Tenga en cuenta que el comportamiento de la pseudo-clase <code>:dir()</code> no es equivalente a los <a href="/es/docs/Web/CSS/Attribute_selectors">selectores de atributo</a> <code>[dir=...]</code>. Estos últimos coinciden con el atributo HTML {{htmlattrxref("dir")}} e ignoran los elementos que carecen de él, incluso si heredan una dirección de su padre. (De forma similar, <code>[dir=rtl]</code> y <code>[dir=ltr]</code> no coincidirán con el valor <code>auto</code>.) En contraste, <code>:dir()</code> coincidirá con el valor calculado por {{glossary("user agent")}}, incluso si se hereda.</p>
+<p><strong>Nota: </strong>Tenga en cuenta que el comportamiento de la pseudo-clase <code>:dir()</code> no es equivalente a los <a href="/es/docs/Web/CSS/Attribute_selectors">selectores de atributo</a> <code>[dir=...]</code>. Estos últimos coinciden con el atributo HTML {{htmlattrxref("dir")}} e ignoran los elementos que carecen de él, incluso si heredan una dirección de su padre. (De forma similar, <code>[dir=rtl]</code> y <code>[dir=ltr]</code> no coincidirán con el valor <code>auto</code>.) En contraste, <code>:dir()</code> coincidirá con el valor calculado por {{glossary("user agent")}}, incluso si se hereda.</p>
 </div>
 
 <div class="note">
-<p><strong>Nota: </strong>En HTML, la dirección está determinada por el atributo {{htmlattrxref("dir")}} . Otros tipos de documentos pueden tener diferentes métodos.</p>
+<p><strong>Nota: </strong>En HTML, la dirección está determinada por el atributo {{htmlattrxref("dir")}} . Otros tipos de documentos pueden tener diferentes métodos.</p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -98,7 +98,7 @@ translation_of: 'Web/CSS/:dir'
 
 <p>{{Compat("css.selectors.dir")}}</p>
 
-<div id="compat-mobile"> </div>
+<div id="compat-mobile"> </div>
 
 <h2 id="Ver_también">Ver también</h2>
 

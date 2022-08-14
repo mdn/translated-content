@@ -15,4 +15,4 @@ La conversion de type (ou transtypage) est le transfert d'une donnée d'un type 
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Conversion de type")}} sur Wikipédia
+- [Conversion de type](https://fr.wikipedia.org/wiki/Conversion_de_type) sur Wikipédia

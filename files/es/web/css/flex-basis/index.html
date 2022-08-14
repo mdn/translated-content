@@ -11,7 +11,7 @@ translation_of: Web/CSS/flex-basis
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>La propiedad de <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>flex-basis</code></strong> especifíca la base flexible, la cual es el <strong>tamaño inicial </strong>de un elemento flexible. Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando {{Cssxref("box-sizing")}}.</p>
+<p>La propiedad de <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>flex-basis</code></strong> especifíca la base flexible, la cual es el <strong>tamaño inicial </strong>de un elemento flexible. Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando {{Cssxref("box-sizing")}}.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -41,19 +41,19 @@ flex-basis: unset;
 
 <dl>
  <dt><code>width</code></dt>
- <dd>Definido por un número seguido de una unidad absoluta tal como <code>px</code>, <code>mm</code> o <code>pt</code>, o un porcentaje del tamaño principal de un contenedor flexible padre. Los valores negativos no son válidos.</dd>
+ <dd>Definido por un número seguido de una unidad absoluta tal como <code>px</code>, <code>mm</code> o <code>pt</code>, o un porcentaje del tamaño principal de un contenedor flexible padre. Los valores negativos no son válidos.</dd>
  <dt><code>content</code></dt>
- <dd>Indica el dimensionamiento automático, basado en el contenido del elemento flexible.</dd>
+ <dd>Indica el dimensionamiento automático, basado en el contenido del elemento flexible.</dd>
  <dd>
- <div class="note"><strong>Nota: </strong>Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando <code>auto</code> junto con un tamaño principal (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> o <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) en auto.</div>
+ <div class="note"><strong>Nota: </strong>Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando <code>auto</code> junto con un tamaño principal (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> o <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) en auto.</div>
 
  <div class="note">
  <p id="comment_text_0"><strong>Nota:</strong> Breve historia</p>
 
  <ul>
-  <li>Originalmente, "flex-basis:auto" significa "observa mi propiedad width o height".</li>
-  <li>Después, flex-basis:auto fue cambiado a automatic-sizing, y fue introducido "main-size" como palabra clave "observa mi propiedad width o height". Ésto fue implementado en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032922" title='RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value'>bug 1032922</a>.</li>
-  <li>Después, ese cambio fue revertido en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1093316" title='RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'>bug 1093316</a>, y nuevamente "auto" significa "observa mi propiedad width o height"; y se está introduciendo una nueva palabra clave 'content' para provocar un dimensionamiento automático. ({{bug("1105111")}} incluye la inclusión de dicha palabra clave).</li>
+  <li>Originalmente, "flex-basis:auto" significa "observa mi propiedad width o height".</li>
+  <li>Después, flex-basis:auto fue cambiado a automatic-sizing, y fue introducido "main-size" como palabra clave "observa mi propiedad width o height". Ésto fue implementado en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032922" title='RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value'>bug 1032922</a>.</li>
+  <li>Después, ese cambio fue revertido en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1093316" title='RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'>bug 1093316</a>, y nuevamente "auto" significa "observa mi propiedad width o height"; y se está introduciendo una nueva palabra clave 'content' para provocar un dimensionamiento automático. ({{bug("1105111")}} incluye la inclusión de dicha palabra clave).</li>
  </ul>
  </div>
  </dd>

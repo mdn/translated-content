@@ -14,7 +14,7 @@ En {{Glossary("JavaScript")}}, **Number** est un type de donnée numérique dans
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Type_(informatique)#Types_prédéfinis", "Types numériques")}} sur Wikipédia
+- [Types de donnée](https://fr.wikipedia.org/wiki/Type_(informatique)#Types_pr%C3%A9d%C3%A9finis) sur Wikipédia
 
 ### Référence technique
 

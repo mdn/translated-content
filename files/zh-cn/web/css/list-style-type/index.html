@@ -10,15 +10,15 @@ translation_of: Web/CSS/list-style-type
 ---
 <div>{{CSSRef}}</div>
 
-<p> <a href="/zh-CN/docs/Web/CSS">CSS</a> 属性 <code>list-style-type</code> 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。</p>
+<p> <a href="/zh-CN/docs/Web/CSS">CSS</a> 属性 <code>list-style-type</code> 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/list-style-type.html")}}</div>
 
 
 
-<p>The <a href="/zh-CN/docs/CSS/color_value" title="color">color</a> of the marker will be the same as the computed color of the element it applies to.</p>
+<p>The <a href="/zh-CN/docs/CSS/color_value">color</a> of the marker will be the same as the computed color of the element it applies to.</p>
 
-<p>只有几个元素 ({{HTMLElement("li")}} 和 {{HTMLElement("summary")}}) 的默认值为 <code>display: list-item</code>。 但是， <code>list-style-type</code> 属性可以应用在任何 {{cssxref("display")}} 的值为 <code>list-item</code> 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}}) 以便应用于所有子元素({{HTMLElement("li")}})。</p>
+<p>只有几个元素 ({{HTMLElement("li")}} 和 {{HTMLElement("summary")}}) 的默认值为 <code>display: list-item</code>。但是， <code>list-style-type</code> 属性可以应用在任何 {{cssxref("display")}} 的值为 <code>list-item</code> 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}}) 以便应用于所有子元素 ({{HTMLElement("li")}})。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -46,13 +46,13 @@ list-style-type: initial;
 list-style-type: unset;
 </pre>
 
-<p>list-style-type 的属性值可以是以下任意一项:</p>
+<p>list-style-type 的属性值可以是以下任意一项：</p>
 
 <ul>
- <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#%3Ccustom-ident%3E">&lt;custom-ident&gt;</a></code> value</li>
- <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#symbols()">symbols()</a></code> value</li>
- <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#%3Cstring%3E">&lt;string&gt;</a></code> value</li>
- <li>the keyword <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#none">none</a></code>.</li>
+ <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#%3Ccustom-ident%3E">&lt;custom-ident&gt;</a></code> value</li>
+ <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#symbols()">symbols()</a></code> value</li>
+ <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#%3Cstring%3E">&lt;string&gt;</a></code> value</li>
+ <li>the keyword <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#none">none</a></code>.</li>
 </ul>
 
 <h3 id="取值">取值</h3>
@@ -99,14 +99,14 @@ list-style-type: unset;
  <dd>
  <ul style="list-style-type: decimal;">
   <li>十进制阿拉伯数字</li>
-  <li>从1开始</li>
+  <li>从 1 开始</li>
  </ul>
  </dd>
  <dt><code>cjk-decimal</code> {{experimental_inline}}</dt>
  <dd>
  <ul style="list-style-type: cjk-decimal;">
   <li>中日韩十进制数</li>
-  <li>例如: 一, 二, 三, ..., 九八, 九九, 一〇〇</li>
+  <li>例如：一，二，三，..., 九八，九九，一〇〇</li>
  </ul>
  </dd>
  <dt><code>decimal-leading-zero</code></dt>
@@ -202,14 +202,14 @@ list-style-type: unset;
  <dd>
  <ul style="list-style-type: hiragana-iroha;">
   <li>i, ro, ha, ni, ho, he, to, …</li>
-  <li>{{interwiki('wikipedia', 'Iroha')}} is the old japanese ordering of syllabs.</li>
+  <li><a href="https://zh.wikipedia.org/wiki/Iroha">Iroha</a> is the old japanese ordering of syllabs.</li>
  </ul>
  </dd>
  <dt><code>katakana-iroha</code> {{experimental_inline}}</dt>
  <dd>
  <ul style="list-style-type: katakana-iroha;">
   <li>I, RO, HA, NI, HO, HE, TO, …</li>
-  <li>{{interwiki('wikipedia', 'Iroha')}} is the old japanese ordering of syllabs.</li>
+  <li><a href="https://zh.wikipedia.org/wiki/Iroha">Iroha</a> is the old japanese ordering of syllabs.</li>
  </ul>
  </dd>
  <dt><code>japanese-informal</code> {{experimental_inline}}</dt>
@@ -499,7 +499,7 @@ ol.shortcut {
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>The <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a> screen reader has an issue where unordered lists with a <code>list-style-type</code>value of <code>none</code> applied to them will not be announced as a list. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="/zh-CN/docs/Web/CSS/content">pseudo content</a> before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
+<p>The <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a> screen reader has an issue where unordered lists with a <code>list-style-type</code>value of <code>none</code> applied to them will not be announced as a list. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="/zh-CN/docs/Web/CSS/content">pseudo content</a> before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
 
 <pre class="notranslate"><code>ul {
   list-style: none;
@@ -512,42 +512,21 @@ ul li::before {
 <ul>
  <li><a href="https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/">VoiceOver and list-style-type: none – Unfettered Thoughts</a></li>
  <li><a href="/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html" rel="noopener">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h2 id="注释">注释</h2>
 
 <ul>
  <li>Some types require a suitable font installed to display as expected.</li>
- <li>The <code>cjk-ideographic</code> is identical to <code>trad-chinese-informal</code>; it exists for legacy reasons.</li>
+ <li>The <code>cjk-ideographic</code> is identical to <code>trad-chinese-informal</code>; it exists for legacy reasons.</li>
 </ul>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#list-style-type', 'list-style-type')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>Adds support for identifiers used in <code>@counter-style</code> rules to keywords.<br>
-    Adds <code>hebrew</code>, <code>cjk-ideographic</code>, <code>hiragana</code>, <code>hiragana-iroha</code>, <code>katakana</code>, <code>katakana-iroha</code>, <code>japanese-formal</code>, <code>japanese-informal</code>, <code>simp-chinese-formal</code>, <code>trad-chinese-formal</code>, <code>simp-chinese-formal</code>, <code>trad-chinese-formal</code>,<code>korean-hangul-formal</code>, <code>korean-hanja-informal</code>, <code><code>korean-hanja-formal</code></code>, <code>cjk<code>-decimal</code></code>, <code>ethiopic</code> style types.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#propdef-list-style-type', 'list-style-type')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <div>{{Compat("css.properties.list-style-type")}}</div>
 

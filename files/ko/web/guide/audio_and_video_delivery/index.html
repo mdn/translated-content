@@ -439,22 +439,22 @@ AddType video/webm webmv</pre>
 <p>Another way to show the fallback content of a video, when none of the sources could be decoded in the current browser, is to add an error handler on the last source element. Then you can replace the video with its fallback content:</p>
 
 <pre class="brush: html">&lt;video controls&gt;
-  &lt;source src="dynamicsearch.mp4" type="video/mp4"&gt;&lt;/source&gt;
-  &lt;a href="dynamicsearch.mp4"&gt;
-    &lt;img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS"&gt;
-  &lt;/a&gt;
-  &lt;p&gt;Click image to play a video demo of dynamic app search&lt;/p&gt;
+  &lt;source src="dynamicsearch.mp4" type="video/mp4"&gt;&lt;/source&gt;
+  &lt;a href="dynamicsearch.mp4"&gt;
+    &lt;img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS"&gt;
+  &lt;/a&gt;
+  &lt;p&gt;Click image to play a video demo of dynamic app search&lt;/p&gt;
 &lt;/video&gt;
 
 </pre>
 
 <pre class="brush: js">var v = document.querySelector('video'),
-    sources = v.querySelectorAll('source'),
-    lastsource = sources[sources.length-1];
+    sources = v.querySelectorAll('source'),
+    lastsource = sources[sources.length-1];
 lastsource.addEventListener('error', function(ev) {
-  var d = document.createElement('div');
-  d.innerHTML = v.innerHTML;
-  v.parentNode.replaceChild(d, v);
+  var d = document.createElement('div');
+  d.innerHTML = v.innerHTML;
+  v.parentNode.replaceChild(d, v);
 }, false);
 </pre>
 

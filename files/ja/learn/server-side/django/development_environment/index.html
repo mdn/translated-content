@@ -99,7 +99,7 @@ translation_of: Learn/Server-side/Django/development_environment
 <p>Python3をインストールすると、すべてのPython3コードで共有される単一のグローバル環境が得られます。 環境に好きなPythonパッケージをインストールすることはできますが、一度に1つのパッケージしかインストールできません。</p>
 
 <div class="note">
-<p><strong>ノート</strong>: グローバル環境にインストールされたPythonアプリケーションは、お互いに衝突する可能性があります（例えば、同じパッケージの異なるバージョンに依存する場合）。 </p>
+<p><strong>ノート</strong>: グローバル環境にインストールされたPythonアプリケーションは、お互いに衝突する可能性があります（例えば、同じパッケージの異なるバージョンに依存する場合）。 </p>
 </div>
 
 <p>Djangoをデフォルト/グローバル環境にインストールすると、コンピュータ上でDjangoの1つのバージョンのみを対象にできます。 古いバージョンに依存しているWebサイトを維持しながら、新しいWebサイト（Djangoの最新バージョンを使用）を作成したい場合、これは問題になる可能性があります。</p>
@@ -142,8 +142,8 @@ translation_of: Learn/Server-side/Django/development_environment
 <ol>
  <li>必要なインストーラをダウンロードします:
   <ol>
-   <li><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> を開きます</li>
-   <li><strong>Download Python 3.6.4</strong> ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。</li>
+   <li><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> を開きます</li>
+   <li><strong>Download Python 3.6.4</strong> ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。</li>
   </ol>
  </li>
  <li>Finderを使用してファイルを探し、パッケージファイルをダブルクリックします。インストールの後、プロンプトが表示されます。</li>
@@ -166,8 +166,8 @@ translation_of: Learn/Server-side/Django/development_environment
 <ol>
  <li>必要なインストーラをダウンロードします:
   <ol>
-   <li><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> を開きます</li>
-   <li><strong>Download Python 3.6.4</strong> ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。</li>
+   <li><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> を開きます</li>
+   <li><strong>Download Python 3.6.4</strong> ボタンを選択します（正確なマイナーバージョン番号は異なる場合があります）。</li>
   </ol>
  </li>
  <li>ダウンロードしたファイルをダブルクリックし、インストールのプロンプトに従ってPythonをインストールします。</li>
@@ -190,7 +190,7 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <h2 id="Python仮想環境内でのDjangoの使用">Python仮想環境内でのDjangoの使用</h2>
 
-<p>仮想環境を作成するために使用するライブラリは、 <a href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper</a> （LinuxとmacOS X）と<a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a>（Windows）です。これらはどちらも<a href="/ja/docs/Python/Virtualenv">virtualenv</a>ツールを使用します。ラッパーツールは、すべてのプラットフォーム上のインターフェイスを管理するための一貫したインターフェイスを作成します。</p>
+<p>仮想環境を作成するために使用するライブラリは、 <a href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper</a> （LinuxとmacOS X）と<a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a>（Windows）です。これらはどちらも<a href="/ja/docs/Python/Virtualenv">virtualenv</a>ツールを使用します。ラッパーツールは、すべてのプラットフォーム上のインターフェイスを管理するための一貫したインターフェイスを作成します。</p>
 
 <h3 id="仮想環境ソフトウェアのインストール">仮想環境ソフトウェアのインストール</h3>
 
@@ -202,7 +202,7 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <pre><code>sudo pip3 install virtualenvwrapper</code></pre>
 
-<p>次に、シェルのスタートアップファイルの最後に次の行を追加します（これはホームディレクトリ内の <strong>.bashrc</strong> という名前の隠しファイルです）。これらは、仮想環境の存在場所、開発プロジェクトディレクトリの場所、およびこのパッケージと共にインストールされるスクリプトの場所を設定します:</p>
+<p>次に、シェルのスタートアップファイルの最後に次の行を追加します（これはホームディレクトリ内の <strong>.bashrc</strong> という名前の隠しファイルです）。これらは、仮想環境の存在場所、開発プロジェクトディレクトリの場所、およびこのパッケージと共にインストールされるスクリプトの場所を設定します:</p>
 
 <pre><code>export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
@@ -211,7 +211,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh</code></pre>
 
 <div class="note">
-<p><strong>ノート</strong>: <code>VIRTUALENVWRAPPER_PYTHON</code>および<code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code>変数は、Python3の通常のインストール場所を指し、<code>source /usr/local/bin/virtualenvwrapper.sh</code>は<code>virtualenvwrapper.sh</code> スクリプトの通常の場所を指します。テスト時にvirtualenvが動作しない場合は、Pythonとスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。<br>
+<p><strong>ノート</strong>: <code>VIRTUALENVWRAPPER_PYTHON</code>および<code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code>変数は、Python3の通常のインストール場所を指し、<code>source /usr/local/bin/virtualenvwrapper.sh</code>は<code>virtualenvwrapper.sh</code> スクリプトの通常の場所を指します。テスト時にvirtualenvが動作しない場合は、Pythonとスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。<br>
  <br>
  あなたのシステムでの正しい場所は、<code>which virtualenvwrapper.sh</code>と<code>which python3</code>というコマンドを使って見つけることができます。</p>
 </div>
@@ -249,9 +249,9 @@ source /usr/local/bin/virtualenvwrapper.sh</code>
 </pre>
 
 <div class="note">
-<p><strong>ノート</strong>: <code>VIRTUALENVWRAPPER_PYTHON</code>変数はPython3の通常のインストール場所を指し、<code>source /usr/local/bin/virtualenvwrapper.sh</code>は<code>virtualenvwrapper.sh</code>スクリプトの通常の場所を指しています。テスト時にvirtualenvが動作しない場合は、Pythonとスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。</p>
+<p><strong>ノート</strong>: <code>VIRTUALENVWRAPPER_PYTHON</code>変数はPython3の通常のインストール場所を指し、<code>source /usr/local/bin/virtualenvwrapper.sh</code>は<code>virtualenvwrapper.sh</code>スクリプトの通常の場所を指しています。テスト時にvirtualenvが動作しない場合は、Pythonとスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。</p>
 
-<p> </p>
+<p> </p>
 
 <p>たとえば、macOSでの1つのインストールテストでは、スタートアップファイルに次の行が必要になりました:</p>
 
@@ -260,13 +260,13 @@ export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.
 export PROJECT_HOME=$HOME/Devel
 source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh</code></pre>
 
-<p> </p>
+<p> </p>
 
 <p>あなたのシステムでの正しい場所は、<code>which virtualenvwrapper.sh</code>と<code>which python3</code>というコマンドを使って見つけることができます。</p>
 </div>
 
 <p><br>
- これらはUbuntuの場合と同じ行ですが、スタートアップファイルはホームディレクトリ内で <strong>.bash_profile</strong> という別の名前の隠しファイルです。</p>
+ これらはUbuntuの場合と同じ行ですが、スタートアップファイルはホームディレクトリ内で <strong>.bash_profile</strong> という別の名前の隠しファイルです。</p>
 
 <div class="note">
 <p><strong>ノート</strong>: 編集する<strong>.bash-profile</strong>がFinderで見つからない場合は、ターミナルでnanoを使用して開くこともできます。</p>
@@ -280,7 +280,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 # Use Ctrl+X to exit nano, Choose Y to save the file.</code>
 </pre>
 
-<p> </p>
+<p> </p>
 </div>
 
 <p>ターミナルで次の呼び出しを行うことによって、スタートアップファイルをリロードします:</p>
@@ -301,7 +301,7 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <p>virtualenvwrapperまたはvirtualenvwrapper-winをインストールすると、仮想環境での作業はすべてのプラットフォームでほとんど同様になります。</p>
 
-<p><code>mkvirtualenv</code> コマンドを使用して新しい仮想環境を作成できます。このコマンドが実行されると、セットアップされる環境が表示されます（表示されるのはプラットフォーム固有のものです）。コマンドが完了すると、新しい仮想環境がアクティブになります。これは、プロンプトの開始が環境の名前（下に示すように）になるので、確認できます。</p>
+<p><code>mkvirtualenv</code> コマンドを使用して新しい仮想環境を作成できます。このコマンドが実行されると、セットアップされる環境が表示されます（表示されるのはプラットフォーム固有のものです）。コマンドが完了すると、新しい仮想環境がアクティブになります。これは、プロンプトの開始が環境の名前（下に示すように）になるので、確認できます。</p>
 
 <pre><code>$ mkvirtualenv my_django_environment
 
@@ -322,10 +322,10 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 <p>他にも知っておくべき便利なコマンドがいくつかあります（ツールのドキュメントには多くのものがありますが、これらはいつも使用するコマンドです）:</p>
 
 <ul>
- <li><code>deactivate</code> — 現在のPython仮想環境を終了します</li>
- <li><code>workon</code> — 利用可能な仮想環境を一覧表示します</li>
- <li><code>workon name_of_environment</code> — 指定したPython仮想環境を有効にします</li>
- <li><code>rmvirtualenv name_of_environment</code> — 指定された環境を削除します</li>
+ <li><code>deactivate</code> — 現在のPython仮想環境を終了します</li>
+ <li><code>workon</code> — 利用可能な仮想環境を一覧表示します</li>
+ <li><code>workon name_of_environment</code> — 指定したPython仮想環境を有効にします</li>
+ <li><code>rmvirtualenv name_of_environment</code> — 指定された環境を削除します</li>
 </ul>
 
 <h2 id="Djangoのインストール">Djangoのインストール</h2>
@@ -343,7 +343,7 @@ python3 -m django --version
 
 # Windows
 py -3 -m django --version
- 2.0
+ 2.0
 </pre>
 
 <div class="note">
@@ -351,7 +351,7 @@ py -3 -m django --version
 </div>
 
 <div class="warning">
-<p><strong>重要</strong>: このモジュールの残りの部分は、 Python 3 (<code>python3</code>) を呼び出すためにLinuxコマンドを使用します。Windowsで作業している場合は、単にこの接頭辞を<code>py -3</code>に置き換えてください。</p>
+<p><strong>重要</strong>: このモジュールの残りの部分は、 Python 3 (<code>python3</code>) を呼び出すためにLinuxコマンドを使用します。Windowsで作業している場合は、単にこの接頭辞を<code>py -3</code>に置き換えてください。</p>
 </div>
 
 <h2 id="インストールのテスト">インストールのテスト</h2>
@@ -387,7 +387,7 @@ Quit the server with CONTROL-C.
 <p><strong>ノート</strong>: 上記のコマンドは、Linux/macOS Xコマンドを示しています。この時点では、 "14 unapplied migration(s)" という警告は無視できます！</p>
 </div>
 
-<p>サーバーが稼働したら、ローカルWebブラウザで <code>http://127.0.0.1:8000/</code> というURLに移動して、サイトを表示できます。次のようなサイトが表示されます:</p>
+<p>サーバーが稼働したら、ローカルWebブラウザで <code>http://127.0.0.1:8000/</code> というURLに移動して、サイトを表示できます。次のようなサイトが表示されます:</p>
 
 <p><img alt="Django Skeleton App Homepage" src="https://mdn.mozillademos.org/files/15728/Django_Skeleton_Website_Homepage.png"></p>
 
@@ -403,7 +403,7 @@ Quit the server with CONTROL-C.
 <h2 id="参考文献"><a id="furtherreading" name="furtherreading">参考文献</a></h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.0/intro/install/">Quick Install Guide</a> （Djangoドキュメント）</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/intro/install/">Quick Install Guide</a> （Djangoドキュメント）</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/install/">How to install Django — Complete guide</a> （Djangoドキュメント） - Djangoを削除する方法ついての情報が含まれています</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/howto/windows/">How to install Django on Windows</a> （Djangoドキュメント）</li>
 </ul>
@@ -430,4 +430,4 @@ Quit the server with CONTROL-C.
  <li><a href="/ja/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django ミニブログ</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

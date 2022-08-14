@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <h2 id="Сводка">Сводка</h2>
 
-<p>Объекты <strong><code>Set</code></strong> позволяют вам сохранять <em>уникальные</em> значения любого типа, как {{Glossary("Primitive", "примитивы")}}, так и другие типы объектов.</p>
+<p>Объекты <strong><code>Set</code></strong> позволяют вам сохранять <em>уникальные</em> значения любого типа, как {{Glossary("Primitive", "примитивы")}}, так и другие типы объектов.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -22,38 +22,38 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <dl>
  <dt>iterable</dt>
- <dd>При передаче <a href="/ru/docs/Web/JavaScript/Reference/Statements/for...of">итерируемого объекта</a>, все его элементы будут добавлены в новый Set. Иначе (или при <code>null</code>) новый <code>Set</code> будет пуст.</dd>
+ <dd>При передаче <a href="/ru/docs/Web/JavaScript/Reference/Statements/for...of">итерируемого объекта</a>, все его элементы будут добавлены в новый Set. Иначе (или при <code>null</code>) новый <code>Set</code> будет пуст.</dd>
  <dt>
  <h3 id="Возвращает">Возвращает</h3>
  </dt>
  <dd>
- <p>Новый <code>Set</code> объект.</p>
+ <p>Новый <code>Set</code> объект.</p>
  </dd>
 </dl>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Объекты <code>Set</code> представляют коллекции значений, по которым вы можете выполнить обход в порядке вставки элементов. Значение элемента в <code>Set</code> может присутствовать <strong>только в одном экземпляре</strong>, что обеспечивает его уникальность в коллекции <code>Set</code>.</p>
+<p>Объекты <code>Set</code> представляют коллекции значений, по которым вы можете выполнить обход в порядке вставки элементов. Значение элемента в <code>Set</code> может присутствовать <strong>только в одном экземпляре</strong>, что обеспечивает его уникальность в коллекции <code>Set</code>.</p>
 
 <h3 id="Сравнение_значений">Сравнение значений</h3>
 
-<p>Поскольку каждое значение в <code>Set</code> должно быть уникальным, сравнение значений основано на алгоритме "подобное значение": <code>NaN</code> равно <code>NaN</code> (несмотря на то, что <code>NaN !== NaN</code>); все другие значения рассматриваются равными исходя из семантики оператора строго равенства ===. В ранних версиях черновика ECMAScript 6 <code>-0</code> и <code>+0</code> считались разными (несмотря на то, что <code>-0 === +0</code>), это было изменено в последующих версиях и адаптировано в Gecko 29 {{geckoRelease("29")}} ({{bug("952870")}}) и <a href="https://code.google.com/p/v8/issues/detail?id=3069">последней ночной сборке Chrome</a>. <code>NaN</code> и <code>undefined</code> также могут сохраняться в <code>Set</code>.</p>
+<p>Поскольку каждое значение в <code>Set</code> должно быть уникальным, сравнение значений основано на алгоритме "подобное значение": <code>NaN</code> равно <code>NaN</code> (несмотря на то, что <code>NaN !== NaN</code>); все другие значения рассматриваются равными исходя из семантики оператора строго равенства ===. В ранних версиях черновика ECMAScript 6 <code>-0</code> и <code>+0</code> считались разными (несмотря на то, что <code>-0 === +0</code>), это было изменено в последующих версиях и адаптировано в Gecko 29 {{geckoRelease("29")}} ({{bug("952870")}}) и <a href="https://code.google.com/p/v8/issues/detail?id=3069">последней ночной сборке Chrome</a>. <code>NaN</code> и <code>undefined</code> также могут сохраняться в <code>Set</code>.</p>
 
 <h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt><code>Set.length</code></dt>
- <dd>Значение свойства <code>length</code> всегда равно 0.</dd>
- <dd>Чтобы узнать количество элементов в <code>Set</code>, используйте {{jsxref("Set.prototype.size")}}.</dd>
+ <dd>Значение свойства <code>length</code> всегда равно 0.</dd>
+ <dd>Чтобы узнать количество элементов в <code>Set</code>, используйте {{jsxref("Set.prototype.size")}}.</dd>
  <dt>{{jsxref("Set.@@species", "get Set[@@species]")}}</dt>
  <dd>Функция-конструктор, которая используется для создания производных объектов.</dd>
  <dt>{{jsxref("Set.prototype")}}</dt>
- <dd>Представляет прототип конструктора <code>Set</code>. Позволяет добавлять свойства всем объектам типа <code>Set</code>.</dd>
+ <dd>Представляет прототип конструктора <code>Set</code>. Позволяет добавлять свойства всем объектам типа <code>Set</code>.</dd>
 </dl>
 
 <h2 id="Set_instances">Экземпляры <code>Set</code></h2>
 
-<p>Все экземпляры <code>Set</code> унаследованы от {{jsxref("Set.prototype")}}.</p>
+<p>Все экземпляры <code>Set</code> унаследованы от {{jsxref("Set.prototype")}}.</p>
 
 <h3 id="Свойства">Свойства</h3>
 
@@ -65,7 +65,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Использование_объекта_Set">Использование объекта <code>Set</code></h3>
+<h3 id="Использование_объекта_Set">Использование объекта <code>Set</code></h3>
 
 <pre class="brush: js">var mySet = new Set();
 
@@ -138,7 +138,7 @@ mySet.forEach(function(value) {
 // 4
 </pre>
 
-<h3 id="Реализация_простых_операций">Реализация простых операций</h3>
+<h3 id="Реализация_простых_операций">Реализация простых операций</h3>
 
 <pre class="brush: js"><code>function isSuperset(set, subset) {
     for (var elem of subset) {
@@ -186,7 +186,7 @@ intersection(setA, setC); // =&gt; Set [3, 4]
 difference(setA, setC);   // =&gt; Set [1, 2]</code>
 </pre>
 
-<h3 id="Взаимоотношения_с_объектом_Array">Взаимоотношения с объектом <code>Array</code></h3>
+<h3 id="Взаимоотношения_с_объектом_Array">Взаимоотношения с объектом <code>Array</code></h3>
 
 <pre class="brush: js">var myArray = ["value1", "value2", "value3"];
 
@@ -199,7 +199,7 @@ mySet.has("value1"); // вернёт true
 console.log([...mySet]); // Отобразит тот же массив, что и myArray
 </pre>
 
-<h3 id="Взаимоотношения_со_String">Взаимоотношения со <code>String</code></h3>
+<h3 id="Взаимоотношения_со_String">Взаимоотношения со <code>String</code></h3>
 
 <pre class="brush: js"><code>var text = 'India';
 

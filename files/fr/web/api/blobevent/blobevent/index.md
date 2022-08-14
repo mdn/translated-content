@@ -15,7 +15,9 @@ Le constructeur **`BlobEvent()`** renvoie un nouvel objet {{domxref("BlobEvent")
 
 ## Syntaxe
 
-    blobEvent = new BlobEvent({data: aSpecificBlob}[, timecode]);
+```js
+blobEvent = new BlobEvent({data: aSpecificBlob}[, timecode]);
+```
 
 ### Arguments
 

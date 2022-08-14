@@ -11,12 +11,16 @@ Le type d'encodage généralement utilisé est "application/x-www-form-urlencode
 
 ## Syntaxe
 
-    string = form.enctype
-    form.enctype = string
+```js
+string = form.enctype
+form.enctype = string
+```
 
 ## Exemple
 
-    form.enctype = "application/x-www-form-urlencoded";
+```js
+form.enctype = "application/x-www-form-urlencoded";
+```
 
 ## Spécification
 

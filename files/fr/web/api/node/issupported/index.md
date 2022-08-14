@@ -14,7 +14,9 @@ La méthode **`Node.isSupported()`** renvoie une marque  {{domxref("Boolean","bo
 
 ### Syntaxe
 
-    boolValue = element.isSupported(feature, version)
+```js
+boolValue = element.isSupported(feature, version)
+```
 
 ### Paramètres
 
@@ -37,8 +39,6 @@ La méthode **`Node.isSupported()`** renvoie une marque  {{domxref("Boolean","bo
 ```
 
 ## Spécifications
-
-
 
 | Spécification                                                                                                        | Statut                           | Commentaire                                            |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |

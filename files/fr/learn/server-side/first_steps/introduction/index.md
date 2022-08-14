@@ -106,7 +106,7 @@ La programmation côté serveur est très utile parce qu'elle nous permet de dé
 
 Des compagnies comme Amazon utilisent la programmation côté serveur pour construire la recherche de produits, faire des suggestions de produit ciblées sur les préférences du client et ses habitudes d'achat, simplifier les achats, etc.
 
-Les banques l'utilisent pour stocker les informations du compte ainsi que faire des transactions et n'autoriser à les consulter que les utilisateurs reconnus. D'autres services comme Facebook, Twitter, Instagram, et Wikipedia utilisent la programmation côté serveur pour mettre en avant, partager et contrôler l'accès au contenu.
+Les banques l'utilisent pour stocker les informations du compte ainsi que faire des transactions et n'autoriser à les consulter que les utilisateurs reconnus. D'autres services comme Facebook, Twitter, Instagram, et Wikipédia utilisent la programmation côté serveur pour mettre en avant, partager et contrôler l'accès au contenu.
 
 Les utilisations les plus courantes et les plus bénéfiques de la programmation côté serveur sont listées ci-dessous. Vous verrez qu'il y a quelques recoupements :
 
@@ -122,9 +122,9 @@ Comme les informations se trouvent dans une base de données, elles peuvent éga
 
 > **Note :** Votre imagination n'a pas à travailler dur pour voir les bénéfices du code côté serveur pour le stockage et distribution de l'information:
 >
-> 1.  Allez sur [Amazon](https://www.amazon.com) ou tout autre site e-commerce.
-> 2.  Cherchez un certain nombre de mot-clés et remarquez que la structure de la page de change pas, même si les résultats oui.
-> 3.  Ouvrez deux ou trois produits. Remarquez que la structure et la disposition de la page sont identiques, mais que le contenu pour les différents produits a été extrait de la base de données.
+> 1. Allez sur [Amazon](https://www.amazon.com) ou tout autre site e-commerce.
+> 2. Cherchez un certain nombre de mot-clés et remarquez que la structure de la page de change pas, même si les résultats oui.
+> 3. Ouvrez deux ou trois produits. Remarquez que la structure et la disposition de la page sont identiques, mais que le contenu pour les différents produits a été extrait de la base de données.
 >
 > Pour un terme de recherche courant  ("poisson", disons) vous pouvez voir littéralement des millions de valeurs retournées. Utiliser une base de données permet à ces données d'être stockées et partagées efficacement, et permet de contrôler la présentation de l'information à partir d'un seul endroit.
 
@@ -138,9 +138,9 @@ Une analyse plus approfondie des habitudes des utilisateurs peut être utilisée
 >
 > Les résultats de recherche Google sont optimisés en fonction des recherches précédentes.
 >
-> 1.  Allez sur [Google](https:\\google.com).
-> 2.  Recherchez "football".
-> 3.  Maintenant tapez "favoris" dans la barre de recherche et regardez les prédictions de recherche de l'autocomplete.
+> 1. Allez sur [Google](https:\\google.com).
+> 2. Recherchez "football".
+> 3. Maintenant tapez "favoris" dans la barre de recherche et regardez les prédictions de recherche de l'autocomplete.
 >
 > Coïncidence ? Nada!
 

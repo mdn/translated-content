@@ -20,8 +20,10 @@ Affiche un message d'avertissement dans la console web.
 
 ## Syntaxe
 
-    console.warn(obj1 [, obj2, ..., objN]);
-    console.warn(msg [, subst1, ..., substN]);
+```js
+console.warn(obj1 [, obj2, ..., objN]);
+console.warn(msg [, subst1, ..., substN]);
+```
 
 ## Paramétres
 

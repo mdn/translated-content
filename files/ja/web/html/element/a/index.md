@@ -127,14 +127,14 @@ translation_of: Web/HTML/Element/a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >,
         <a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         >、知覚可能コンテンツ。
       </td>
@@ -142,7 +142,7 @@ translation_of: Web/HTML/Element/a
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#transparent_content_model">透過的コンテンツ</a>、ただし子孫に<a href="/ja/docs/Web/Guide/HTML/Content_categories#interactive_content">対話型コンテンツ</a> または <a href="/ja/docs/Web/HTML/Element/a">a</a> 要素をがないもの、および <a href="/ja/docs/Web/HTML/Global_attributes/tabindex">tabindex</a> 属性が指定された子孫がないもの。
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#透過的コンテンツ">透過的コンテンツ</a>、ただし子孫に<a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a> または <a href="/ja/docs/Web/HTML/Element/a">a</a> 要素をがないもの、および <a href="/ja/docs/Web/HTML/Global_attributes/tabindex">tabindex</a> 属性が指定された子孫がないもの。
       </td>
     </tr>
     <tr>
@@ -152,7 +152,7 @@ translation_of: Web/HTML/Element/a
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素、ただし他の <code>&#x3C;a></code> 要素でないもの。
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素、ただし他の <code>&#x3C;a></code> 要素でないもの。
       </td>
     </tr>
     <tr>
@@ -258,10 +258,10 @@ a { display: block; margin-bottom: 0.5em }
 
 `tel:` リンクは端末の能力によって様々な動作をします。
 
-  - 携帯電話ではその番号に自動ダイヤルします。
-  - 多くのオペレーティングシステムには、 Skype や FaceTime のように電話をかけるプログラムがあります。
-  - ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} によって `web.skype.com` などを用いて電話を掛けることができます。
-  - 他にも、連絡先の電話番号をしたり、他の端末へ電話番号を送信したりする動作があります。
+- 携帯電話ではその番号に自動ダイヤルします。
+- 多くのオペレーティングシステムには、 Skype や FaceTime のように電話をかけるプログラムがあります。
+- ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} によって `web.skype.com` などを用いて電話を掛けることができます。
+- 他にも、連絡先の電話番号をしたり、他の端末へ電話番号を送信したりする動作があります。
 
 `tel` URL スキームについての構文、追加機能、その他の詳細について、詳しくは {{RFC(3966)}} をご覧ください。
 
@@ -468,7 +468,7 @@ document.querySelector('a').addEventListener('click', event =>
 
 間隔は {{CSSxRef("margin")}} などの CSS プロパティを使用して作成することができます。
 
-  - [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
+- [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
 ## 仕様書
 

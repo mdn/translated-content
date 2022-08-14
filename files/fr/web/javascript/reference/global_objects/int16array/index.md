@@ -16,11 +16,13 @@ Le tableau typé **`Int16Array`** permet de représenter un tableau d'entiers si
 
 ## Syntaxe
 
-    new Int16Array(); // apparu avec ES2017
-    new Int16Array(longueur);
-    new Int16Array(tableauTypé);
-    new Int16Array(objet);
-    new Int16Array(buffer [, positionOctet [, longueur]]);
+```js
+new Int16Array(); // apparu avec ES2017
+new Int16Array(longueur);
+new Int16Array(tableauTypé);
+new Int16Array(objet);
+new Int16Array(buffer [, positionOctet [, longueur]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe) _(TypedArray)_.
 

@@ -22,12 +22,11 @@ This means that static blocks can also be used to share information between clas
 
 {{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
 
-## Syntax
+## Syntaxe
 
 ```js
 static { ... }
 ```
-
 
 ## Description
 
@@ -61,13 +60,12 @@ The scope of the static block is nested _within_ the lexical scope of the class 
 
 A static initialization block may not have decorators (the class itself may).
 
-
 ## Examples
 
 ### Multiple blocks
 
 The code below demonstrates a class with static initialization blocks and interleaved static field initializers.
-The output shows that the blocks and fields are evaluated in execution order. 
+The output shows that the blocks and fields are evaluated in execution order.
 
 ```js
 class MyClass {
@@ -91,7 +89,6 @@ class MyClass {
 
 Note that any static initialization of a super class is performed first, before that of its sub classes.
 
-
 ### Using `this` and `super.property`
 
 The `this` inside a static block refers to the constructor object of the class.
@@ -106,7 +103,7 @@ class A {
 }
 ```
 
-The [`super.property`](/en-US/docs/Web/JavaScript/Reference/Operators/super) can be used inside a `static` block to reference properties of a super class.
+The [`super.property`](/fr/docs/Web/JavaScript/Reference/Operators/super) can be used inside a `static` block to reference properties of a super class.
 This includes static properties, as shown below:
 
 ```js
@@ -124,7 +121,6 @@ class B extends A {
 ### Access to private fields
 
 This example below shows how access can be granted to the private object of a class from an object outside the class (example from the [v8.dev blog](https://v8.dev/features/class-static-initializer-blocks#access-to-private-fields)):
-
 
 ```js
 let getDPrivateField;
@@ -149,7 +145,6 @@ Prior to ES13 more complex static initialization might be achieved by using a st
 
 In both cases the approach is less elegant, and does not grant access to private methods in the class.
 
-
 ## Specifications
 
 {{Specifications}}
@@ -162,6 +157,6 @@ In both cases the approach is less elegant, and does not grant access to private
 
 - [Class static initialization blocks](https://v8.dev/features/class-static-initializer-blocks) (v8.dev blog)
 - [ES2022 feature: class static initialization blocks](https://2ality.com/2021/09/class-static-block.html) (2ality.com blog)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Classes](/fr/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Operators/super", "super()")}}
-- [Object.prototype.constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+- [Object.prototype.constructor](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)

@@ -4,7 +4,7 @@ slug: >-
   orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Date_物件
 original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Date_物件
 ---
-<p> </p>
+<p> </p>
 <h3 id="Date_物件" name="Date_物件">Date 物件</h3>
 <p>JavaScript 並沒有日期的資料類型。不過你可以在你的應用程式中使用 <code>Date</code> 物件及其方法來使用日期和時間。<code>Date</code> 物件有非常大量的方法可用來設定、取得、操作日期。不過沒有任何的屬性。</p>
 <p>JavaScript 處理日期的方式很類似 Java。這兩個語言有很多同樣的日期方法，而且這兩個語言都是以 1970 年 1 月 1 日 00:00:00 開始的毫秒數來儲存日期。</p>
@@ -68,12 +68,12 @@ IPOdate.setTime(Date.parse("Aug 9, 1995"))
    var hour = time.getHours()
    var minute = time.getMinutes()
    var second = time.getSeconds()
-   var temp = "" + ((hour &gt; 12) ? hour - 12 : hour)
+   var temp = "" + ((hour &gt; 12) ? hour - 12 : hour)
    if (hour == 0)
       temp = "12";
-   temp += ((minute &lt; 10) ? ":0" : ":") + minute
-   temp += ((second &lt; 10) ? ":0" : ":") + second
-   temp += (hour &gt;= 12) ? " P.M." : " A.M."
+   temp += ((minute &lt; 10) ? ":0" : ":") + minute
+   temp += ((second &lt; 10) ? ":0" : ":") + second
+   temp += (hour &gt;= 12) ? " P.M." : " A.M."
    return temp
 }
 </pre>

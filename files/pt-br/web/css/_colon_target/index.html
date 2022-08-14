@@ -5,18 +5,18 @@ translation_of: 'Web/CSS/:target'
 ---
 <div>{{CSSRef}}</div>
 
-<p>A <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classe CSS</a> <strong><code>:target</code></strong> representa um único elemento (o elemento alvo) com uma {{htmlattrxref("id")}} correspondente ao fragmento da URL.</p>
+<p>A <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes">pseudo-classe CSS</a> <strong><code>:target</code></strong> representa um único elemento (o elemento alvo) com uma {{htmlattrxref("id")}} correspondente ao fragmento da URL.</p>
 
 <pre class="brush: css no-line-numbers notranslate">/* Seleciona um elemento com a ID correspondente ao fragmento da URL */
 :target {
   border: 2px solid black;
 }</pre>
 
-<p>Por exemplo, a seguinte URL tem um fragmento (denotado pelo sinal de <em>#</em>) que aponta para o elemento chamado <code>section2</code>:</p>
+<p>Por exemplo, a seguinte URL tem um fragmento (denotado pelo sinal de <em>#</em>) que aponta para o elemento chamado <code>section2</code>:</p>
 
 <pre class="notranslate">http://www.example.com/index.html#section2</pre>
 
-<p>O seguinte elemento será selecionado pelo seletor <code>:target</code> quando a URL for igual acima:</p>
+<p>O seguinte elemento será selecionado pelo seletor <code>:target</code> quando a URL for igual acima:</p>
 
 <pre class="brush: html notranslate">&lt;section id="section2"&gt;Exemplo&lt;/section&gt;</pre>
 
@@ -28,7 +28,7 @@ translation_of: 'Web/CSS/:target'
 
 <h3 id="Índice">Índice</h3>
 
-<p>A pseudo-classe <code>:target</code> pode ser usada para destacar uma parte da página que foi vinculada a partir de um índice.</p>
+<p>A pseudo-classe <code>:target</code> pode ser usada para destacar uma parte da página que foi vinculada a partir de um índice.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -44,7 +44,7 @@ translation_of: 'Web/CSS/:target'
 &lt;p id="p1"&gt;Você pode definir &lt;i&gt;este parágrafo&lt;/i&gt; como alvo
    usando um fragmento de URL. Clique no link acima para experimentar!&lt;/p&gt;
 &lt;p id="p2"&gt;Esse é &lt;i&gt;outro parágrafo&lt;/i&gt;, também acessável
-   pelos links acima. Não é incrível?&lt;/p&gt;
+   pelos links acima. Não é incrível?&lt;/p&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
@@ -72,9 +72,9 @@ p:target i {
 
 <h3 id="Lightbox_com_CSS_puro">Lightbox com CSS puro</h3>
 
-<p>Você pode usar a pseudo-classe <code>:target</code> para criar uma lightbox sem usar JavaScript. Essa técnica requer que os links apontem para os elementos que inicialmente estavam escondidas na página. Uma vez designado, o CSS muda o <code>display</code> então, assim o conteúdo pode ser mostrado.</p>
+<p>Você pode usar a pseudo-classe <code>:target</code> para criar uma lightbox sem usar JavaScript. Essa técnica requer que os links apontem para os elementos que inicialmente estavam escondidas na página. Uma vez designado, o CSS muda o <code>display</code> então, assim o conteúdo pode ser mostrado.</p>
 
-<div class="note"><strong>Nota:</strong> Uma lightbox com CSS puro mais completo usando a pseudo-classe <code>:target</code> <a href="https://github.com/madmurphy/takefive.css/">está disponível no GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>).</div>
+<div class="note"><strong>Nota:</strong> Uma lightbox com CSS puro mais completo usando a pseudo-classe <code>:target</code> <a href="https://github.com/madmurphy/takefive.css/">está disponível no GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>).</div>
 
 <h4 id="HTML_2">HTML</h4>
 

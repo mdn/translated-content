@@ -12,9 +12,9 @@ original_slug: Web/CSS/Valeur_spécifiée
 
 La **valeur définie** d'une propriété CSS est celle explicitement définie dans la feuille de style ou grâce au style de son élément parent. Elle est déterminée selon une des trois méthodes suivantes :
 
-1.  Si la feuille de style du document a une valeur définie pour la propriété, alors c'est cette valeur qui est utilisée. Par exemple, si la propriété {{cssxref("color")}} est définie à `green` alors la couleur du texte des éléments correspondants sera verte.
-2.  Si la feuille de style du document n'a pas de valeur définie, alors, si c'est possible, elle sera héritée de l'élément parent. Par exemple, si on a un paragraphe ({{HTMLElement("p")}}) dans un {{HTMLElement("div")}} et que le {{HTMLElement("div")}} est ciblée par une déclaration CSS où `font` vaut `Arial` et qu'il n'y a pas de règle `font` pour {{HTMLElement("p")}}, ce dernier héritera de la police Arial.
-3.  Si aucun des cas précédents ne s'applique, c'est la valeur initiale de la propriété CSS qui est appliquée.
+1. Si la feuille de style du document a une valeur définie pour la propriété, alors c'est cette valeur qui est utilisée. Par exemple, si la propriété {{cssxref("color")}} est définie à `green` alors la couleur du texte des éléments correspondants sera verte.
+2. Si la feuille de style du document n'a pas de valeur définie, alors, si c'est possible, elle sera héritée de l'élément parent. Par exemple, si on a un paragraphe ({{HTMLElement("p")}}) dans un {{HTMLElement("div")}} et que le {{HTMLElement("div")}} est ciblée par une déclaration CSS où `font` vaut `Arial` et qu'il n'y a pas de règle `font` pour {{HTMLElement("p")}}, ce dernier héritera de la police Arial.
+3. Si aucun des cas précédents ne s'applique, c'est la valeur initiale de la propriété CSS qui est appliquée.
 
 ## Exemples
 

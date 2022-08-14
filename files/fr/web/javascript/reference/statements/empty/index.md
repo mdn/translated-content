@@ -16,7 +16,9 @@ Une **instruction vide** est utilisée pour ne fournir aucune instruction là o�
 
 ## Syntaxe
 
-    ;
+```js
+;
+```
 
 ## Description
 

@@ -18,13 +18,17 @@ Retourne un booléen indiquant si {{domxref("event.preventDefault()")}} a été 
 
 ## Syntaxe
 
-    bool = event.defaultPrevented
+```js
+bool = event.defaultPrevented
+```
 
 ## Exemple
 
-     if (e.defaultPrevented) {
-       /* Le comportement par défaut a été inhibé */
-     }
+```js
+if (e.defaultPrevented) {
+  /* Le comportement par défaut a été inhibé */
+}
+```
 
 ## Spécification
 

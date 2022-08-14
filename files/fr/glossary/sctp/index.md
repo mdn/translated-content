@@ -15,4 +15,4 @@ original_slug: Glossaire/SCTP
 ### Culture générale
 
 - {{RFC(4960, "Stream Control Transmission Protocol")}}
-- {{Interwiki("wikipedia","Stream_Control_Transmission_Protocol","Stream Control Transmission Protocol")}} sur Wikipedia
+- [SCTP](https://fr.wikipedia.org/wiki/Stream_Control_Transmission_Protocol) sur Wikipédia

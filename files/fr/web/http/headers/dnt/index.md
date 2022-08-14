@@ -20,10 +20,12 @@ Le header de requête **`DNT`** (**D**o **N**ot **T**rack) indique que les préf
   </tbody>
 </table>
 
-## Syntax
+## Syntaxe
 
-    DNT: 0
-    DNT: 1
+```
+DNT: 0
+DNT: 1
+```
 
 ## Directives
 
@@ -56,7 +58,7 @@ navigator.doNotTrack; // "0" ou "1"
 
 - {{domxref("Navigator.doNotTrack")}}
 - {{HTTPHeader("Tk")}} header
-- [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)
+- [<i lang="en">Do Not Track</i> sur Wikipédia](https://fr.wikipedia.org/wiki/Do_Not_Track)
 - [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
 - [donottrack.us](http://donottrack.us/)
 - DNT browser settings help:

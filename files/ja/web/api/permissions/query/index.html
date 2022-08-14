@@ -63,9 +63,9 @@ translation_of: Web/API/Permissions/query
 
 <pre class="brush: js">navigator.permissions.query({name:'geolocation'}).then(function(result) {
  if (result.state == 'granted') {
-   showLocalNewsWithGeolocation();
+   showLocalNewsWithGeolocation();
  } else if (result.state == 'prompt') {
-   showButtonToEnableLocalNews();
+   showButtonToEnableLocalNews();
  }
  // パーミッションが拒否された場合は何もしないでください。
 });</pre>

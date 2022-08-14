@@ -34,10 +34,10 @@ Actuellement, quelques difficultés subsistent dans l'utilisation des CSS avec l
 
 L'apparence de certains éléments peut être modifiée sans poser beaucoup de problèmes suivant les diverses plateformes. Ceci inclut les éléments structurels suivants&nbsp;:
 
-1.  {{HTMLElement("form")}}
-2.  {{HTMLElement("fieldset")}}
-3.  {{HTMLElement("label")}}
-4.  {{HTMLElement("output")}}
+1. {{HTMLElement("form")}}
+2. {{HTMLElement("fieldset")}}
+3. {{HTMLElement("label")}}
+4. {{HTMLElement("output")}}
 
 Ceci inclut aussi tous les widgets de champs textuels (qu'ils soient mono ou multi‑lignes), ainsi que les boutons.
 
@@ -200,22 +200,18 @@ Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier [ar
 
 C'est ici que le « fun » commence ! Avant de commencer à coder, nous avons besoin de trois ressources supplémentaires :
 
-1.  L'[image de fond](/files/4151/background.jpg "The postcard background") de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.
-2.  Une police de machine à écrire&nbsp;: [«&nbsp;Secret Typewriter&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
-3.  Une police d'écriture manuelle&nbsp;: [«&nbsp;Journal&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
-
-
+1. L'[image de fond](/files/4151/background.jpg "The postcard background") de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.
+2. Une police de machine à écrire&nbsp;: [«&nbsp;Secret Typewriter&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
+3. Une police d'écriture manuelle&nbsp;: [«&nbsp;Journal&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
 
 Les polices demandent un supplément de traitement avant de débuter&nbsp;:
 
-1.  Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de fontsquirrel.
-2.  En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.
-3.  Décompressez le fichier zip fourni.
-4.  Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs&nbsp;; voyez notre article sur les [Web fonts](/fr/docs/Learn/CSS/Styling_text/Web_fonts) pour des informations plus détaillées.
+1. Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de fontsquirrel.
+2. En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.
+3. Décompressez le fichier zip fourni.
+4. Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs&nbsp;; voyez notre article sur les [Web fonts](/fr/docs/Learn/CSS/Styling_text/Web_fonts) pour des informations plus détaillées.
 
 ### Le CSS
-
-
 
 Maintenant nous pouvons approfondir les CSS de l'exemple. Ajoutez tous les blocs de code affichés ci‑dessous dans un élément {{htmlelement("style")}}, l'un après l'autre.
 

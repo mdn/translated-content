@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Reference/Operators/Logical_Operators
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>邏輯運算子通常會搭配 {{jsxref("Boolean")}} (logical) 值。若是，則回傳布林值。然而， <code>&amp;&amp;</code> 和 <code>||</code>  運算子通常回傳其中一運算元的值, 因此若這些運算子搭配非布林值使用，他們會回傳非布林值。</p>
+<p>邏輯運算子通常會搭配 {{jsxref("Boolean")}} (logical) 值。若是，則回傳布林值。然而， <code>&amp;&amp;</code> 和 <code>||</code>  運算子通常回傳其中一運算元的值, 因此若這些運算子搭配非布林值使用，他們會回傳非布林值。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-logicaloperator.html")}}</div>
 
@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Reference/Operators/Logical_Operators
 
 <h2 id="說明">說明</h2>
 
-<p>邏輯運算子的使用方式如下(<code><em>expr</em></code> 可能會是 <a href="/en-US/docs/Glossary/Data_structure">type</a>，不只是布林值)：</p>
+<p>邏輯運算子的使用方式如下(<code><em>expr</em></code> 可能會是 <a href="/en-US/docs/Glossary/Data_structure">type</a>，不只是布林值)：</p>
 
 <table class="fullwidth-table">
  <tbody>
@@ -28,17 +28,17 @@ original_slug: Web/JavaScript/Reference/Operators/Logical_Operators
   <tr>
    <td>邏輯 AND (<code>&amp;&amp;</code>)</td>
    <td><code><em>expr1</em> &amp;&amp; <em>expr2</em></code></td>
-   <td>若 <code>expr<strong>1</strong></code> 可被轉換成 <code>true</code>, 回傳 <code>expr<strong>2</strong></code>; 否則 回傳 <code>expr<strong>1</strong></code>.</td>
+   <td>若 <code>expr<strong>1</strong></code> 可被轉換成 <code>true</code>, 回傳 <code>expr<strong>2</strong></code>; 否則 回傳 <code>expr<strong>1</strong></code>.</td>
   </tr>
   <tr>
    <td>邏輯 OR (<code>||</code>)</td>
    <td><code><em>expr1</em> || <em>expr2</em></code></td>
-   <td>若 <code>expr<strong>1</strong></code> 可被轉換成 <code>true</code>, 回傳 <code>expr<strong>1</strong></code>; 否則 回傳 <code>expr<strong>2</strong></code>.</td>
+   <td>若 <code>expr<strong>1</strong></code> 可被轉換成 <code>true</code>, 回傳 <code>expr<strong>1</strong></code>; 否則 回傳 <code>expr<strong>2</strong></code>.</td>
   </tr>
   <tr>
    <td>邏輯 NOT (<code>!</code>)</td>
    <td><code>!<em>expr</em></code></td>
-   <td>回傳 <code>false</code> 若它的單一運算元可被轉換成 <code>true</code>; 否則回傳 <code>true</code>.</td>
+   <td>回傳 <code>false</code> 若它的單一運算元可被轉換成 <code>true</code>; 否則回傳 <code>true</code>.</td>
   </tr>
  </tbody>
 </table>
@@ -198,43 +198,13 @@ n6 = !!Boolean(false)         // !!falsy returns false
 
 <pre class="brush: js">!(!bCondition1 || !bCondition2 &amp;&amp; !bCondition3)</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.11')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.4.9">Logical NOT Operator</a>, <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.11">Binary Logical Operators</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-binary-logical-operators')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-logical-not-operator">Logical NOT Operator</a>, <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-binary-logical-operators">Binary Logical Operators</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-binary-logical-operators')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Defined in several sections of the specification: <a href="http://tc39.github.io/ecma262/#sec-logical-not-operator">Logical NOT Operator</a>, <a href="http://tc39.github.io/ecma262/#sec-binary-logical-operators">Binary Logical Operators</a></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-
-
-<p>{{Compat("javascript.operators.logical")}}</p>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 
