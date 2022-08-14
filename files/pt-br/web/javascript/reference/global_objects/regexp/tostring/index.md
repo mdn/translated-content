@@ -24,7 +24,7 @@ toString()
 
 ### Valor retornado
 
-A string que represententando o objeto dado
+A string que representa o objeto dado
 
 ## Descrição
 
@@ -37,7 +37,7 @@ representa a expressão regular.
 
 ### Usando toString()
 
-O exemplo a seguir exibe o valor em tring de um objeto {{jsxref("RegExp")}}: 
+O exemplo a seguir exibe o valor em string de um objeto {{jsxref("RegExp")}}: 
 
 ```js
 const myExp = new RegExp('a+b+c');
@@ -50,13 +50,13 @@ console.log(foo.toString());    // logs '/bar/g'
 ### Expressões regulares vazias e escaping
 
 Começando com o ECMAScript 5, uma expressão regular vazia retorna a string "/(?:)/"
-temrinadores de linha como "\n" são inseridos:
+terminadores de linha como "\n" são inseridos:
 
 ```js
 new RegExp().toString(); // "/(?:)/"
 
-new RegExp('\n').toString() === '/\n/';  // true, prior to ES5
-new RegExp('\n').toString() === '/\\n/'; // true, starting with ES5
+new RegExp('\n').toString() === '/\n/';  // true, antes do ES5
+new RegExp('\n').toString() === '/\\n/'; // true, começando o ES5
 ```
 
 ## Especificacões
