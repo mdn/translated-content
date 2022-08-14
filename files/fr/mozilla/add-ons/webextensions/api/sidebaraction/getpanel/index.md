@@ -37,6 +37,8 @@ var gettingPanel = browser.sidebarAction.getPanel(
     - `windowId` {{optional_inline}}
       - : `integer`. Obtenir le panneau pour la barre latérale spécifique à la fenêtre donnée.
 
+<!---->
+
 - Si `windowId` et `tabId`  sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
 - Si `windowId` et `tabId` sont tous les deux omis, le panneau global est renvoyé.
 

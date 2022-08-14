@@ -1,69 +1,70 @@
 ---
-title: MDN Web Docs について
+title: 執筆ガイドライン
 slug: MDN/Writing_guidelines
+page-type: mdn-writing-guide
 tags:
-  - Collaborating
-  - コミュニティ
-  - 著作権
-  - ドキュメント
-  - ガイド
-  - ライセンス
-  - MDN Meta
-translation_of: MDN/About
+  - meta
+  - writing-guide
+translation_of: MDN/Writing_guidelines
 original_slug: MDN/About
 ---
 {{MDNSidebar}}
 
-MDN Web Docs （以前は MDN — Mozilla Developer Network と呼ばれていました）は、ウェブ技術とウェブを支えるソフトウェア、[CSS](/ja/docs/Web/CSS)、[HTML](/ja/docs/Web/HTML)、[JavaScript](/ja/docs/Web/JavaScript) などについて学ぶための進化し続ける学習プラットフォームです。私たちはまた、詳細におよぶ初心者向けの学習素材を所有しています。[ウェブ開発を学ぶ](/ja/docs/Learn)をご覧ください。
+MDN Web Docs はオープンソースのプロジェクトです。以下のセクションは、MDN Web Docs で私たちが*何を*文書化し、*どのように*それを行うかについてのガイドラインを記述したものです。どのように協力するかについては、[協力ガイドライン](/ja/docs/MDN/Community)を参照してください。
 
-## MDN Web Docs のコンテンツの利用
+- [私たちが書くものは何か](/ja/docs/MDN/Writing_guidelines/What_we_write)
 
-MDN のコンテンツは、オープンソースライセンスの下、無償で利用することができます。
+  - : このコーナーでは MDN Web Docs に載せるものと載せないもの、そして新しい技術について書く場合、コンテンツの提案プロセス、外部リンクを受け入れるかどうかなど、他の多くのポリシーについて説明します。私たちのためにコンテンツを書いたり更新したりすることを検討しているのであれば、これは良い出発点です。このコーナーには、以下の記事も載せています。
+    - [掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
+      - : MDN Web Docs に載せるべきコンテンツの詳細な基準、 MDN Web Docs で新しい文書化をしてもらうための申請プロセス、申請する側の希望やガイドラインを提供しています。
 
-### 著作権とライセンス
+- [MDN Web Docs への書き方](/ja/docs/MDN/Writing_guidelines/Howto)
 
-MDN のコンテンツはすべて、さまざまなオープンソースライセンスの下で提供されています。この節では、私たちが提供するコンテンツの種類と、それぞれで有効なライセンスについて説明します。
+  - : このコーナーでは、ページを作成・編集するためのすべての情報に加え、私たちが遵守している特定のプロセスやテクニックについて説明します。このコーナーでは、ページの作成を始めるための情報、このページの構成に関する一般的な概要、および特定の作業に関するハウツーを探すための場所を提供します。このコーナーでは、以下のようなトピックを載せています。
 
-#### ドキュメントと記事
+    - [markdown の使用](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
 
-> **Note:** MDN のコンテンツは、 Mozilla の内外の執筆者の協力により作成されています。特に明記されていない限り、コンテンツは [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 もしくはそれ以上のバージョンの条件の下で利用可能です。
+      - : 私たちが使用している markdown 形式は [GitHub flavored markdown (GFM)](https://github.github.com/gfm/) に由来しています。このコーナーは MDN Web Docs で使用する markdown のガイドであり、メモや 定義リストのような特定のページ内構成要素のための形式を含みます。
 
-MDN のコンテンツを再利用するときは、2 つのことを確認する必要があります。
+    - [画像やメディアの追加](/ja/docs/MDN/Writing_guidelines/Howto/Images_media)
 
-1. 元のコンテンツの帰属表示を付けてください。
+      - : このコーナーでは、画像などのメディアをページに載せるための要件について記述します。
 
-    "Mozilla Contributors" と帰属表示し、ソースとなるコンテンツの特定のウィキページへのハイパーリンク（オンライン）または URL（印刷物）を含めてください。例えば、この記事の帰属表示を行うには、次のように書きます。
+    - [用語集への項目の追加](/ja/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)
 
-    > [MDN Web Docs について](/ja/docs/MDN/About) は [Mozilla Contributors](/ja/docs/MDN/About/contributors.txt) によって [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) の元でライセンスされています。
+      - : この章では MDN Web Docs の用語集に項目を追加してリンクする方法について説明します。また、用語集の項目のレイアウトと内容に関するガイドラインを提供します。
 
-    この例では、"Mozilla Contributors" が引用ページの履歴にリンクしていることに注意してください。詳しい説明は[帰属表示のベストプラクティス](https://wiki.creativecommons.org/wiki/Marking/Users)を参照してください。
+    - [技術の調べ方](/ja/docs/MDN/Writing_guidelines/Howto/Research_technology)
 
-2. 再利用した場合は、元のコンテンツと同じライセンスで公開する必要があります。つまり CC-BY-SA v2.5 またはそれ以降のバージョンです。
+      - : この章では、文書化する技術を調査する際の便利なヒントを紹介します。
 
-#### コードサンプルとスニペット
+    - [ページの移動と削除の方法](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
 
-2010 年 8 月 20 日以降に追加されたコードサンプルは、[パブリックドメイン](https://creativecommons.org/publicdomain/zero/1.0/) ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)) にあります。ライセンス表記は必要ありませんが、必要な場合は、 "すべての著作権はパブリックドメインに帰属します。http\://creativecommons.org/publicdomain/zero/1.0/" を使用できます。
+      - : この章では、ページの移動と削除の方法について説明します。
 
-2010 年 8 月 20 日より前に追加されたコードサンプルは [MIT ライセンス](https://opensource.org/licenses/mit-license.php)の下で利用可能です。帰属情報 "© \<ページの最終改訂日> \<Wiki に掲載した人の名前>" を MIT のテンプレートに挿入する必要があります。
+- [執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-2020 年 12 月 14 日に MDN では新しい Yari プラットフォームが開始されたため、現在、どちらが必要かを判断する方法がありません。これについては、現在対応中であり、近日中にこのコンテンツを更新する予定です。
+  - : 執筆スタイルガイドは、MDN Web Docs で書くために使用する言語とスタイルに応じたものです。また、コード例をどのように書式化するかについても触れています。
 
-#### 貢献
+- [MDN Web Docs のページ種別](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types)
 
-この wiki に協力したい場合は、 Attribution-ShareAlike ライセンス（または編集中のページで既に指定されている代替ライセンス）で文書を公開し、[Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) （パブリックドメインへの寄付）でコードサンプルを公開する必要があります。この wiki に追加することは、あなたの協力がそれらのライセンスの下で利用可能になることにあなたが同意することを意味します。
+  - : MDN Web Docs の各ページには、CSS リファレンスページや JavaScript ガイドページなど、特定のページ の種類があります。この章では、異なるページの種類をリストアップし、それぞれの型に対応したテンプレートを提供します。これらを閲覧して、自分がどのページ種類を入力しているのか理解するのがよい考えです。
 
-一部の古いコンテンツは、前述以外のライセンスで利用可能になりました。これらは[代替ライセンスブロック](/Archive/Meta_docs/Examples/Alternate_License_Block)によって各ページの下部に示されています。
+- [MDN Web Docs のページ構造について](/ja/docs/MDN/Writing_guidelines/Page_structures)
 
-> **Warning:** 新しいページをその他のライセンスで作成してはいけません。
+  - : この章では、MDN Web Docs で一貫した情報の表示を提供するために使用する、さまざまなページ構造について説明します。これには以下が含まれます。
 
-**ユーザーから提供された資料の著作権については、著作者がそれを第三者に譲渡しない限り、著作者に帰属するものとします。**
+    - [コード例](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
 
-ここに記載されている内容について、質問や懸念事項があれば、[MDN 管理者](mailto:mdn-admins@mozilla.org?subject=MDN%20licensing%20question)までご連絡ください。
+      - : ページにコード例を入れるには、さまざまな方法があります。この章では、それらの概要を説明し、異なる言語のための構文ガイドラインを提供します。
 
-#### ロゴ、商標、サービスマーク、ワードマーク
+    - [マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)
 
-Mozilla Foundation の商標、ロゴ、サービスマークの権利、およびこのウェブサイトの操作画面やルックアンドフィールは、 Creative Commons ライセンスに基づいて提供されるものではなく、それらが（ロゴやグラフィックデザインといった）著作物である限り、上記の条件に基づいて許諾される著作物には含まれません。あなたが文書のテキストを利用する場合、上述の権利を行使しようとする場合、またはこのサイトにおける私たちのライセンス条件について、その他の質問がある場合は、 Mozilla Foundation の窓口 [licensing@mozilla.org](mailto:licensing@mozilla.org "mailto:licensing@mozilla.org") までご連絡ください。
+      - : マクロとは、ページ内でサイドバーなどのコンテンツを生成するために使用するショートカットのことです。この章では、使用するマクロとその機能を一覧で紹介します。
 
-### MDN にリンクするには
+- [技術のラベル付け方法](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
 
-MDN へリンクを張る際の手続きや、リンクが許されるかどうかについて、ユーザーからよく質問を受けます。簡単に言うと、**はい、 MDN にリンクできます。** ハイパーテキストリンクは、ウェブの本質であるだけでなく、ユーザーに貴重なリソースを紹介する方法であり、私たちのコミュニティの活動に対する信頼を示すものでもあります。
+  - : この章では、廃止、非推奨、実験的という用語の定義と、MDN Web Docs からコンテンツを削除する場合のガイドラインを説明します。
+
+- [帰属表示と著作権使用許諾情報](/ja/docs/MDN/Writing_guidelines/Attrib_copyright_license)
+  - : このコーナーでは、著作権使用許諾コンテンツとは何か、正しく著作権表示する方法について記述します。

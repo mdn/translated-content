@@ -36,7 +36,7 @@ También puede ayudar [promocionando MDN](/es/docs/MDN/Promociona) en su propio 
 
 ## La Comunidad MDN
 
-¡Somos una comunidad global! Contamos con colaboradores increíbles de todo el mundo, en múltiples idiomas. Si desea aprender más sobre nosotros, o si necesita cualquier tipo de ayuda con MDN. ¡Tómese la libertad de consultar nuestra[](http://lists.mozilla.org/listinfo/dev-mdc)[foro de discusión](https://discourse.mozilla-community.org/c/mdn) o el [Canal IRC](irc://irc.mozilla.org#mdn)!
+¡Somos una comunidad global! Contamos con colaboradores increíbles de todo el mundo, en múltiples idiomas. Si desea aprender más sobre nosotros, o si necesita cualquier tipo de ayuda con MDN. ¡Tómese la libertad de consultar nuestra[ ](http://lists.mozilla.org/listinfo/dev-mdc)[foro de discusión](https://discourse.mozilla-community.org/c/mdn) o el [Canal IRC](irc://irc.mozilla.org#mdn)!
 
 ## Uneté a la comunidad MDN
 
@@ -108,7 +108,7 @@ Consulte [Cómo informar de un problema en MDN](/es/docs/MDN/Contribute/Howto/Re
 
 ## Historia de MDN
 
-El proyecto para el Centro de Desarrollo Mozilla (a.k.a. MDC, a.k.a. _Devmo_) comenzó a principios de 2005, cuando la [Fundación Mozilla](http://www.mozillafoundation.org)[](/en-US/foundation/)obtuvo una licencia de AOL para utilizar el contenido original Netscape [DevEdge](/Project:en/DevEdge). El contenido DevEdge fue revisado en busca de material todavía útil, que luego fue migrado por voluntarios en este Wiki para que fuera más fácil de actualizar y mantener.
+El proyecto para el Centro de Desarrollo Mozilla (a.k.a. MDC, a.k.a. _Devmo_) comenzó a principios de 2005, cuando la [Fundación Mozilla ](http://www.mozillafoundation.org)[](/en-US/foundation/)obtuvo una licencia de AOL para utilizar el contenido original Netscape [DevEdge](/Project:en/DevEdge). El contenido DevEdge fue revisado en busca de material todavía útil, que luego fue migrado por voluntarios en este Wiki para que fuera más fácil de actualizar y mantener.
 
 Desde entonces, el proyecto ha seguido creciendo y ahora forma un nexo central para toda la documentación de desarrollo relacionada con el proyecto Mozilla y las tecnologías de Web Abierta. En 2010, el nombre fue cambiado a Mozilla Developer Network. En 2011 se agregó [Demostraciones de Tecnologías de Web Abierta](/es/docs/Web/Demos_of_open_web_technologies) para que los desarrolladores Web puedan compartir y mostrar su código y páginas de [aprendizaje](/es/docs/Learn) para proporcionar enlaces a los tutoriales. (El nombre de MDC viene de "MDN Doc Center" de la sección de documentación). Se espera que con el tiempo la Red de Desarrolladores de Mozilla se convierta en un recurso que los diseñadores Web, desarrolladores de aplicaciones, de extensiones y escritores visiten de forma regular.
 

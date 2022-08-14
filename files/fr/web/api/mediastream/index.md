@@ -28,6 +28,8 @@ L'interface `MediaStream` représente le contenu d'un flux de média. Un flux es
 - {{domxref("MediaStream.getTrackById()")}}
   - : Retourne la piste dont l'ID correspond à celui passé en paramètre, `trackid`. Si aucun paramètre n'est fourni, ou si aucune piste avec cet id existe, la fonction retourne `null`. Si plusieurs pistes ont le même id, elle retourne la première piste.
 
+<!---->
+
 - {{domxref("MediaStream.addTrack()")}}
   - : Stocke une copie de {{domxref("MediaStreamTrack")}} fourni en paramètre. Si la piste à déjà été ajouté à l'objet `MediaStream`, rien ne se passe; si la piste est au statut `finished`, c'est à dire qu'elle est terminée, l'exception `INVALID_STATE_RAISE` est levée.
 - {{domxref("MediaStream.removeTrack()")}}

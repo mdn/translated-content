@@ -63,3 +63,4 @@ console.log(obj2 + ''); // "true"    — hint es "default"
 - {{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
 - {{jsxref("Object.prototype.toString()")}}
 - {{jsxref("Object.prototype.valueOf()")}}
+

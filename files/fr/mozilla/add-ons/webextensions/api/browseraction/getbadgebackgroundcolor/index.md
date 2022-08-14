@@ -38,6 +38,8 @@ browser.browserAction.getBadgeBackgroundColor (
 - `windowId`{{optional_inline}}
   - : `integer`. Spécifie la fenêtre à partir de laquelle obtenir la couleur de fond du badge.
 
+<!---->
+
 - Si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue..
 - Si `windowId` et `tabId` sont tous les deux omis, la couleur de fond du badge global est retournée.
 

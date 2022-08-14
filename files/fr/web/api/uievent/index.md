@@ -31,6 +31,8 @@ _Cette interface hérite également des propriétés de son parent {{domxref("Ev
 - {{domxref("UIEvent.cancelBubble")}} {{Non-standard_inline}} {{Deprecated_inline}}
   - : {{jsxref("Boolean")}} _(booléen)_ indiquant si les conséquences de l'évènement ont été annulées ou non.
 
+<!---->
+
 - {{domxref("UIEvent.detail")}}{{readonlyinline}}
   - : Retourne un `long` qui donne quelques détails sur l'évènement, dépendant du type d'évènement.
 - {{domxref("UIEvent.isChar")}} {{deprecated_inline}} {{readonlyinline}}

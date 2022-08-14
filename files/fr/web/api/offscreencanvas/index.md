@@ -33,8 +33,12 @@ L'interface `OffscreenCanvas` fournit un canevas qui peut être restitué hors �
 - {{domxref("OffscreenCanvas.getContext()")}}
   - : Retourne un contexte de rendu pour le canevas hors écran.
 
+<!---->
+
 - {{domxref("OffscreenCanvas.toBlob()")}}
   - : Crée un objet {{domxref("Blob")}} représentant l'image contenue dans le canevas.
+
+<!---->
 
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
   - : Crée un objet {{domxref("ImageBitmap")}} à partir de l'image la plus récemment générée du `OffscreenCanvas`.

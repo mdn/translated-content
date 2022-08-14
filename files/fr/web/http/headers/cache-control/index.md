@@ -95,6 +95,8 @@ Une réponse est normalement mise en cache par le navigateur si
   - a un `public`, `max-age` ou `s-maxage` dans `Cache-Control` **ou**
   - a [`Expires`](/fr/docs/Web/HTTP/Headers/Expires) fixé
 
+<!---->
+
 - `public`
   - : Indique que la réponse peut être mise en cache par n'importe quel cache.
 - `private`

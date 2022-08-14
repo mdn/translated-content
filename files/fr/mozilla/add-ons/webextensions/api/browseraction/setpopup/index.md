@@ -51,6 +51,8 @@ browser.browserAction.setPopup(
 
         Sinon, la fenêtre contextuelle globale revient à la valeur par défaut.
 
+<!---->
+
 - Si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue et le popup n'est pas défini.
 - Si `windowId` et `tabId` sont tous les deux omis, la fenêtre contextuelle globale est définie.
 

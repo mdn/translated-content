@@ -8,7 +8,7 @@ original_slug: Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 
 {{AvailableInWorkers}}
 
-La propiedad **`navigator.hardwareConcurrency`**es de solo lectura navigator.hardwareConcurrency devuelve el número de procesadores lógicos disponibles para ejecutar subprocesos en la computadora del usuario.
+La propiedad **`navigator.hardwareConcurrency `**es de solo lectura navigator.hardwareConcurrency devuelve el número de procesadores lógicos disponibles para ejecutar subprocesos en la computadora del usuario.
 
 ## Sintaxi
 

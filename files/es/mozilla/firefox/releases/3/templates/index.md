@@ -20,3 +20,4 @@ Las plantillas se han mejorado enormemente en Firefox 3. La mejora más importan
 ### Véase también
 
 - [Firefox 3 para desarrolladores](/es/docs/Mozilla/Firefox/Releases/3)
+

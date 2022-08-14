@@ -35,6 +35,8 @@ Ce descripteur peut prendre l'une de ces trois formes :
 - Le mot-clé `fixed` avec un entier
 - Le mot-clé `extends` avec un nom correspondant à un {{cssxref("@counter-style")}}.
 
+<!---->
+
 - `cyclic`
   - : Le système itère et boucle parmi la liste des symboles fournis. Une fois que la fin de la liste est atteinte, le système reprend au début de la liste. Ce système est pertinent lorsqu'on a un seul symbole ou une liste non numérotée avec des puces. Afin que le style du compteur soit valide, il faut au moins définir un symbole via le descripteur {{cssxref("symbols()")}}.
 - `fixed`

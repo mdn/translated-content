@@ -30,14 +30,22 @@ Aucun.
 - `select`
   - : Utilise une expression XPath pour définir les nœuds à classer.
 
+<!---->
+
 - `order`
   - : Définit si les nœuds doivent être classés dans l'ordre ascendant ou descendant. La valeur par défaut est `ascending`.
+
+<!---->
 
 - `case-order`
   - : Indique si ce sont les majuscules ou les minuscules qui apparaitront en premier. Les valeurs autorisées sont `upper-first` et `lower-first`.
 
+<!---->
+
 - `lang`
   - : Définit la langue à utiliser pour le classement.
+
+<!---->
 
 - `data-type`
   - : Définit si les éléments doivent être ordonnés alphabétiquement ou numériquement. Les valeurs autorisées sont `text` et `number`&nbsp;; `text` est la valeur par défaut.

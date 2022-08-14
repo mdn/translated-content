@@ -91,6 +91,8 @@ var settingIcon = browser.sidebarAction.setIcon(
     - `windowId` {{optional_inline}}
       - : `integer`. Définit l'icône uniquement pour la fenêtre donnée.
 
+<!---->
+
 - Si `windowId`et `tabId` sont tous deux spécifiés, la fonction échoue et l'icône n'est pas définie.
 - SI `windowId` et `tabId` sont tous deux omis, l'icône est définie globalement.
 

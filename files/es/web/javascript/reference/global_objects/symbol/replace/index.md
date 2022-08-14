@@ -48,3 +48,4 @@ console.log('football'.replace(new CustomReplacer('foo')));
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
 - {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+

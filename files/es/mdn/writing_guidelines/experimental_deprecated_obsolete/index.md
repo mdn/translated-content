@@ -137,17 +137,17 @@ A veces, necesitas reutilizar el mismo texto en varias páginas (o deseas usar e
 
 - Si deseas copiar una página completa:
 
-  1. Mientras visualizas la página que deseas copiar, en el menú **Avanzado** (engrane), elige [**Clona esta página**](/es/docs/MDN/Contribute/Creating_and_editing_pages#Clone_of_an_existing_page). Esto abre la interfaz de usuario del editor para una nueva página, con el contenido de la página clonada ya poblada.
-  2. Introduce un **título** y un **`slug`** nuevo para la página clonada.
-  3. Edita el contenido de la página según sea necesario y guárdalo como usualmente lo haces.
+  1.  Mientras visualizas la página que deseas copiar, en el menú **Avanzado** (engrane), elige [**Clona esta página**](/es/docs/MDN/Contribute/Creating_and_editing_pages#Clone_of_an_existing_page). Esto abre la interfaz de usuario del editor para una nueva página, con el contenido de la página clonada ya poblada.
+  2.  Introduce un **título** y un **`slug`** nuevo para la página clonada.
+  3.  Edita el contenido de la página según sea necesario y guárdalo como usualmente lo haces.
 
 - Si deseas copiar solo una parte de una página, **no solo visites la página y la copies**. Esto introduce bits adicionales de HTML no deseados en la página destino, y alguien tendrá que limpiar eso, tú u otro editor. Nadie quiere eso. Para copiar parte de una página MDN a otra página:
 
-  1. En la página fuente, haz clic en el botón **Editar** en la página de fuente.
-  2. **Copia el contenido que deseas reutilizar desde la interfaz de usuario del editor.**
-  3. Haz clic en **Descartar** para salir de la interfaz de usuario del editor de esa página.
-  4. Abre la interfaz de usuario del editor de la página donde deseas pegar.
-  5. Pega el contenido del portapapeles.
+  1.  En la página fuente, haz clic en el botón **Editar** en la página de fuente.
+  2.  **Copia el contenido que deseas reutilizar desde la interfaz de usuario del editor.**
+  3.  Haz clic en **Descartar** para salir de la interfaz de usuario del editor de esa página.
+  4.  Abre la interfaz de usuario del editor de la página donde deseas pegar.
+  5.  Pega el contenido del portapapeles.
 
   > **Nota:** **Usuarios de Chrome:** Chrome generalmente no incluye las clases aplicadas al contenido al copiar y pegar documentos en nuestro editor. Debes revisar el contenido después de hacer esto y volver a aplicar los estilos perdidos. Checa las tablas, cuadros de sintaxis, resaltado de sintaxis y secciones ocultas de contenido en particular.
 

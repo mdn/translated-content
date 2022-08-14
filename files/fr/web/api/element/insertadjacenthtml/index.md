@@ -23,10 +23,14 @@ element.insertAdjacentHTML(position, text);
 - `position`
   - : une {{domxref("DOMString")}}  représentant la position relative à l'`element`, et doit être une des chaînes de caractères suivantes :
 
+<!---->
+
 - `'beforebegin'` : Avant l'`element`  lui-même.
 - `'afterbegin'` : Juste à l'intérieur de l'`element` , avant son premier enfant.
 - `'beforeend'` : Juste à l'intérieur de l'`element` , après son dernier enfant.
 - `'afterend'` : Après `element` lui-même.
+
+<!---->
 
 - `text`
   - :  est la chaîne de caractères qui doit être analysée en tant qu'HTML ou XML et insérée dans l'arbre du DOM.

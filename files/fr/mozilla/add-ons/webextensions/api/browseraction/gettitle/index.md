@@ -40,6 +40,8 @@ var gettingTitle = browser.browserAction.getTitle(
     - `windowId`{{optional_inline}}
       - : `integer`. Spécifiez la fenêtre à partir de laquelle vous souhaitez obtenir le titre.
 
+<!---->
+
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
 - Si `windowId` et `tabId` sont tous les deux omis, le titre global est renvoyé.
 

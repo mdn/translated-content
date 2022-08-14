@@ -90,6 +90,8 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 - [Evènements server-sent](/fr/docs/Server-sent_events)
   - : Les évènements server-sent permettent à une application Web de demander à un serveur pour envoyer des événements comme n'importe quel événement DOM localement créé.
 
+<!---->
+
 - `navigator.securityPolicy`, qui a depuis longtemps retourné une chaîne vide, a simplement été supprimé.
 - [`BlobBuilder`](/fr/docs/Web/API/BlobBuilder) est maintenant implémenté, même si pour l'instant il est préfixé (vous devez utiliser `MozBlobBuilder`).
 - [`document.height`](/fr/docs/Web/API/Document/height) et [`document.width`](/fr/docs/Web/API/Document/width) ont été supprimées. [bug 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
@@ -133,6 +135,8 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 - [WebSockets](/fr/docs/WebSockets)
   - : Pour Firefox 6, WebSockets a été mis à jour à la version 07 du protocole. De plus, l'objet `WebSocket` a été renommé en `MozWebSocket` pour l'empêcher d'être utilisé de façon incorrecte pour détecter la disponibilité des WebSockets sans préfixe.
+
+<!---->
 
 - L'analyse de l'en-tête `Content-Disposition` a été fixée afin d'interpréter correctement les antislashs des caractères ASCII. Auparavant, il été remplacé par le caractère underscore ("\_").
 - La valeur du champ du chemin de l'en-tête `Set-Cookie` est désormais correctement interprétée lors de l'utilisation de guillements, auparavant, ils étaient considérés comme faisant partie de la chaîne du chemin d'accès à la place d'être des délimiteurs. **Ce changement peut affecter la compatibilité avec certains sites web**, les auteurs doivent vérifier leur code.

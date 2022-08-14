@@ -29,6 +29,8 @@ Une chaîne contenant l'`id` généré.
 
 - Le même `id` doit être généré à chaque fois pour le même nœud dans le document courant pour la transformation courante.
 
+<!---->
+
 - L'`id` généré peut ne pas être le même pour les transformations subséquentes.
 
 Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas partie de la bibliothèque de fonctions XPath principale.

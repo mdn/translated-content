@@ -41,6 +41,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `failoverTimeout`
   - : `number`:  Délais de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par l'écouteur `proxy.onRequest` sera utilisé.
 
+<!---->
+
 - `proxyAuthorizationHeader`
 
   - : `string.` Cette chaîne, si elle est définie sur non-vide, est passée directement en valeur à l'en-tête de requête {{httpheader("Proxy-Authorization")}} envoyé aux proxies HTTP dans le cadre des requêtes HTTP ordinaires et des requêtes CONNECT. Simplement dit, ceci peut être utilisé pour s'authentifier directement sur les proxies HTTP nécessitant une authentification (non contestable).

@@ -109,6 +109,8 @@ gl.getParameter(gl.TEXTURE_BINDING_2D);
 
 ## Voir aussi
 
+<!---->
+
 - {{domxref("WebGLRenderingContext.createTexture()")}}
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}
 - {{domxref("WebGLRenderingContext.isTexture()")}}

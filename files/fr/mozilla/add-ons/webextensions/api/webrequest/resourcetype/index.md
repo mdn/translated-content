@@ -34,6 +34,8 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `imageset`
   - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut {{htmlattrxref("srcset", "img")}} d'un élement `<img>`.
 
+<!---->
+
 - `main_frame`
   - : Documents de niveau chargés dans un objet.
 - `media`

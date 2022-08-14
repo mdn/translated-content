@@ -37,6 +37,8 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
     - `windowId` {{optional_inline}}
       - : `integer`. ID d'une fenêtre à vérifier.
 
+<!---->
+
 - Si windowId et tabId sont tous les deux fournis, la fonction échoue.
 - Si windowId et tabId sont tous les deux omis, l'état global activé/désactivé est renvoyé.
 

@@ -24,6 +24,8 @@ Les objets `table` exposent l'interface [`HTMLTableElement`](http://www.w3.org/T
 - [table.tBodies](/fr/docs/DOM/table.tBodies)
   - : **tBodies** renvoie les corps du tableau.
 
+<!---->
+
 - [table.align](/fr/docs/DOM/table.align) {{ Deprecated_inline() }}
   - : **align** obtient ou définit l'alignement du tableau.
 - [table.bgColor](/fr/docs/DOM/table.bgColor) {{ Deprecated_inline() }}
