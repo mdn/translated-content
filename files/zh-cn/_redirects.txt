@@ -626,7 +626,7 @@
 /zh-CN/docs/JS-ref/Array/shift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 /zh-CN/docs/JS-ref/Array/slice	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 /zh-CN/docs/JS-ref/Array/some	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-/zh-CN/docs/JS-ref/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+/zh-CN/docs/JS-ref/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/JS-ref/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/JS-ref/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/JS-ref/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -814,7 +814,7 @@
 /zh-CN/docs/JavaScript/Reference/Array/shift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 /zh-CN/docs/JavaScript/Reference/Array/slice	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 /zh-CN/docs/JavaScript/Reference/Array/some	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-/zh-CN/docs/JavaScript/Reference/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+/zh-CN/docs/JavaScript/Reference/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/JavaScript/Reference/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/JavaScript/Reference/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/JavaScript/Reference/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -856,7 +856,7 @@
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Array/shift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Array/slice	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Array/some	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/JavaScript/Reference/Global_Objects/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
@@ -2327,7 +2327,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Array/shift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 /zh-CN/docs/Web/JavaScript/Reference/Array/slice	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 /zh-CN/docs/Web/JavaScript/Reference/Array/some	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-/zh-CN/docs/Web/JavaScript/Reference/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+/zh-CN/docs/Web/JavaScript/Reference/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/Web/JavaScript/Reference/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/Web/JavaScript/Reference/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/Web/JavaScript/Reference/Classes/Class_elements	/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields
@@ -2370,7 +2370,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/index	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/of
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/input	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce()用法	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
