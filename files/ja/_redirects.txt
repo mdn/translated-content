@@ -1872,8 +1872,8 @@
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser/Physics	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics
-/ja/docs/Glossary/404	/ja/docs/conflicting/Web/HTTP/Status/404
-/ja/docs/Glossary/502	/ja/docs/conflicting/Web/HTTP/Status/502
+/ja/docs/Glossary/404	/ja/docs/Web/HTTP/Status/404
+/ja/docs/Glossary/502	/ja/docs/Web/HTTP/Status/502
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
 /ja/docs/Glossary/Bézier_curve	/ja/docs/Glossary/Bezier_curve
 /ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
@@ -1882,7 +1882,7 @@
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
-/ja/docs/Glossary/Index	/ja/docs/conflicting/Glossary
+/ja/docs/Glossary/Index	/ja/docs/Glossary
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
@@ -1923,7 +1923,7 @@
 /ja/docs/HTML/Element/b	/ja/docs/Web/HTML/Element/b
 /ja/docs/HTML/Element/base	/ja/docs/Web/HTML/Element/base
 /ja/docs/HTML/Element/base-redirect-1	/ja/docs/Web/HTML/Element/base
-/ja/docs/HTML/Element/basefont	/ja/docs/conflicting/Web/CSS/CSS_Fonts
+/ja/docs/HTML/Element/basefont	/ja/docs/Web/CSS/CSS_Fonts
 /ja/docs/HTML/Element/bdi	/ja/docs/Web/HTML/Element/bdi
 /ja/docs/HTML/Element/bdo	/ja/docs/Web/HTML/Element/bdo
 /ja/docs/HTML/Element/bgsound	/ja/docs/Web/HTML/Element/bgsound
@@ -2817,7 +2817,7 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels
-/ja/docs/Mozilla/Add-ons/WebExtensions/Index	/ja/docs/conflicting/Mozilla/Add-ons/WebExtensions
+/ja/docs/Mozilla/Add-ons/WebExtensions/Index	/ja/docs/Mozilla/Add-ons/WebExtensions
 /ja/docs/Mozilla/Add-ons/WebExtensions/ThunderbirdにおけるWebExtensionsによるアドイン開発	/ja/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 /ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/ja/docs/Mozilla/Add-ons/WebExtensions/API
 /ja/docs/Mozilla/Add-ons/WebExtensions/Walkthrough	/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
@@ -4031,7 +4031,7 @@
 /ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/ja/docs/Learn/CSS/First_steps/How_CSS_works
-/ja/docs/Web/CSS/List_of_Proprietary_CSS_Features	/ja/docs/conflicting/Web/CSS/Reference
+/ja/docs/Web/CSS/List_of_Proprietary_CSS_Features	/ja/docs/Web/CSS/Reference
 /ja/docs/Web/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_Motion_Path
@@ -4355,7 +4355,7 @@
 /ja/docs/Web/HTML/Element/Input1/week	/ja/docs/Web/HTML/Element/input/week
 /ja/docs/Web/HTML/Element/Script1	/ja/docs/Web/HTML/Element/Script
 /ja/docs/Web/HTML/Element/Video/canplay_event	/ja/docs/Web/API/HTMLMediaElement/canplay_event
-/ja/docs/Web/HTML/Element/basefont	/ja/docs/conflicting/Web/CSS/CSS_Fonts
+/ja/docs/Web/HTML/Element/basefont	/ja/docs/Web/CSS/CSS_Fonts
 /ja/docs/Web/HTML/Element/h1	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h2	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h3	/ja/docs/Web/HTML/Element/Heading_Elements
@@ -4422,7 +4422,7 @@
 /ja/docs/Web/HTML/HTML_Elements/strong	/ja/docs/Web/HTML/Element/strong
 /ja/docs/Web/HTML/HTML_Elements/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/Web/HTML/HTML_Elements/var	/ja/docs/Web/HTML/Element/var
-/ja/docs/Web/HTML/Index	/ja/docs/conflicting/Web/HTML
+/ja/docs/Web/HTML/Index	/ja/docs/Web/HTML
 /ja/docs/Web/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/ja/docs/Glossary/speculative_parsing
 /ja/docs/Web/HTML/Preloading_content	/ja/docs/Web/HTML/Link_types/preload
@@ -4454,7 +4454,7 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/vr	/ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
-/ja/docs/Web/HTTP/Index	/ja/docs/conflicting/Web/HTTP
+/ja/docs/Web/HTTP/Index	/ja/docs/Web/HTTP
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /ja/docs/Web/HTTP/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Status
@@ -4732,7 +4732,7 @@
 /ja/docs/Web/Manifest/dir	/ja/docs/conflicting/Web/Manifest
 /ja/docs/Web/Manifest/iarc_rating_id	/ja/docs/conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205
 /ja/docs/Web/Manifest/lang	/ja/docs/conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c
-/ja/docs/Web/MathML/Index	/ja/docs/conflicting/Web/MathML
+/ja/docs/Web/MathML/Index	/ja/docs/Web/MathML
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Reference	/ja/docs/Web
@@ -4770,7 +4770,7 @@
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
 /ja/docs/Web/SVG/Element/animateColor	/ja/docs/conflicting/Web/SVG/Element/animate
-/ja/docs/Web/SVG/Index	/ja/docs/conflicting/Web/SVG
+/ja/docs/Web/SVG/Index	/ja/docs/Web/SVG
 /ja/docs/Web/Security/CSP	/ja/docs/Web/HTTP/CSP
 /ja/docs/Web/Security/CSP/CSP_policy_directives	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
 /ja/docs/Web/Security/CSP/Default_CSP_restrictions	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -4803,7 +4803,7 @@
 /ja/docs/Web/Web_Components/Custom_Elements	/ja/docs/Web/Web_Components/Using_custom_elements
 /ja/docs/Web/Web_Components/HTML_Imports	/ja/docs/conflicting/Web/Web_Components
 /ja/docs/Web/Web_Components/Status_in_Firefox	/ja/docs/orphaned/Web/Web_Components/Status_in_Firefox
-/ja/docs/Web/XPath/Index	/ja/docs/conflicting/Web/XPath
+/ja/docs/Web/XPath/Index	/ja/docs/Web/XPath
 /ja/docs/Web/XSLT/Elements	/ja/docs/Web/XSLT/Element
 /ja/docs/Web/XSLT/Elements/apply-imports	/ja/docs/Web/XSLT/Element/apply-imports
 /ja/docs/Web/XSLT/Elements/apply-templates	/ja/docs/Web/XSLT/Element/apply-templates
@@ -4840,7 +4840,7 @@
 /ja/docs/Web/XSLT/Elements/variable	/ja/docs/Web/XSLT/Element/variable
 /ja/docs/Web/XSLT/Elements/when	/ja/docs/Web/XSLT/Element/when
 /ja/docs/Web/XSLT/Elements/with-param	/ja/docs/Web/XSLT/Element/with-param
-/ja/docs/Web/XSLT/Index	/ja/docs/conflicting/Web/XSLT
+/ja/docs/Web/XSLT/Index	/ja/docs/Web/XSLT
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Basic_Example	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
@@ -4860,7 +4860,7 @@
 /ja/docs/WebAPI/Proximity	/ja/docs/Web/API/Proximity_Events
 /ja/docs/WebAPI/Using_Web_Notifications	/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ja/docs/WebAPI/Using_geolocation	/ja/docs/Web/API/Geolocation_API
-/ja/docs/WebAssembly/Index	/ja/docs/conflicting/WebAssembly
+/ja/docs/WebAssembly/Index	/ja/docs/WebAssembly
 /ja/docs/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/WebGL/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
@@ -4957,7 +4957,7 @@
 /ja/docs/XPath/Functions/translate	/ja/docs/Web/XPath/Functions/translate
 /ja/docs/XPath/Functions/true	/ja/docs/Web/XPath/Functions/true
 /ja/docs/XPath/Functions/unparsed-entity-url	/ja/docs/Web/XPath/Functions/unparsed-entity-url
-/ja/docs/XPath/Index	/ja/docs/conflicting/Web/XPath
+/ja/docs/XPath/Index	/ja/docs/Web/XPath
 /ja/docs/XPath/Snippets	/ja/docs/Web/XPath/Snippets
 /ja/docs/XPath:Axes	/ja/docs/Web/XPath/Axes
 /ja/docs/XPath:Functions	/ja/docs/Web/XPath/Functions
@@ -5027,7 +5027,7 @@
 /ja/docs/XSLT/Elements/variable	/ja/docs/Web/XSLT/Element/variable
 /ja/docs/XSLT/Elements/when	/ja/docs/Web/XSLT/Element/when
 /ja/docs/XSLT/Elements/with-param	/ja/docs/Web/XSLT/Element/with-param
-/ja/docs/XSLT/Index	/ja/docs/conflicting/Web/XSLT
+/ja/docs/XSLT/Index	/ja/docs/Web/XSLT
 /ja/docs/XSLT/PI_Parameters	/ja/docs/Web/XSLT/PI_Parameters
 /ja/docs/XSLT/The_XSLT_JavaScript_Interface_in_Gecko	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /ja/docs/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
