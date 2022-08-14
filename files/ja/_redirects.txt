@@ -2744,7 +2744,7 @@
 /ja/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 /ja/docs/MDN/Contribute/Structures/API_references/What_does_an_API_reference_need	/ja/docs/orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 /ja/docs/MDN/Contribute/Structures/Banners_and_notices	/ja/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices
-/ja/docs/MDN/Contribute/Structures/Code_examples	MDN/Writing_guidelines/Page_structures/Code_examples
+/ja/docs/MDN/Contribute/Structures/Code_examples	/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples
 /ja/docs/MDN/Contribute/Structures/Compatibility_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /ja/docs/MDN/Contribute/Structures/Live_samples	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
@@ -2784,7 +2784,7 @@
 /ja/docs/MDN/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 /ja/docs/MDN/Structures/API_references/What_does_an_API_reference_need	/ja/docs/orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 /ja/docs/MDN/Structures/Banners_and_notices	/ja/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices
-/ja/docs/MDN/Structures/Code_examples	MDN/Writing_guidelines/Page_structures/Code_examples
+/ja/docs/MDN/Structures/Code_examples	/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples
 /ja/docs/MDN/Structures/Compatibility_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /ja/docs/MDN/Structures/Live_samples	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
