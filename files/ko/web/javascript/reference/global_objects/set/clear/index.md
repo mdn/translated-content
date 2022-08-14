@@ -10,24 +10,22 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>clear()</strong></code> 메서드는 <code>Set</code> 객체를 비웁니다.</p>
+**`clear()`** 메서드는 `Set` 객체를 비웁니다.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 
+## 구문
 
+    mySet.clear();
 
-<h2 id="구문">구문</h2>
+## 예제
 
-<pre class="syntaxbox"><em>mySet</em>.clear();
-</pre>
+### `clear()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="clear()_사용하기"><code>clear()</code> 사용하기</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add('foo');
 
@@ -38,19 +36,17 @@ mySet.clear();
 
 mySet.size;       // 0
 mySet.has('bar')  // false
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Set.clear")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}

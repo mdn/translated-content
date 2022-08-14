@@ -8,30 +8,29 @@ tags:
   - Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Promise.reject(reason)</strong></code> 메서드는 주어진 이유(reason)로 거부된 <code>Promise</code> 객체를 반환합니다.</p>
+**`Promise.reject(reason)`** 메서드는 주어진 이유(reason)로 거부된 `Promise` 객체를 반환합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><var>Promise.reject(reason)</var>;</pre>
+    Promise.reject(reason);
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt>reason</dt>
- <dd>이 <code>Promise</code>를 거부한 이유.</dd>
-</dl>
+- reason
+  - : 이 `Promise`를 거부한 이유.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>정적 <code>Promise.reject</code> 함수는 거부된 <code>Promise</code>를 반환합니다. 디버깅 목적 및 까다로운 오류를 잡기 위해, <code>reason</code>을 <code>Error</code>생성자의 인스턴스로 만들면 유용합니다.</p>
+정적 `Promise.reject` 함수는 거부된 `Promise`를 반환합니다. 디버깅 목적 및 까다로운 오류를 잡기 위해, `reason`을 `Error`생성자의 인스턴스로 만들면 유용합니다.
 
-<h2 id="예">예</h2>
+## 예
 
-<h3 id="정적_Promise.reject()_메서드_사용">정적 Promise.reject() 메서드 사용</h3>
+### 정적 Promise.reject() 메서드 사용
 
-<pre class="brush: js">Promise.reject("Testing static reject").then(function(reason) {
+```js
+Promise.reject("Testing static reject").then(function(reason) {
   // 호출되지 않음
 }, function(reason) {
   console.log(reason); // "Testing static reject"
@@ -41,21 +40,18 @@ Promise.reject(new Error("fail")).then(function(error) {
   // 호출되지 않음
 }, function(error) {
   console.log(error); // Stacktrace
-});</pre>
+});
+```
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Promise.reject")}}</p>
+{{Compat}}
 
-<p> </p>
+## 참조
 
-<h2 id="참조">참조</h2>
-
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="https://github.com/petkaantonov/bluebird#error-handling">BlueBird Promise 라이브러리를 사용해 선택된 오류 잡기</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [BlueBird Promise 라이브러리를 사용해 선택된 오류 잡기](https://github.com/petkaantonov/bluebird#error-handling)

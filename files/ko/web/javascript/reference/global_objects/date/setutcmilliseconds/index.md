@@ -4,48 +4,47 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 browser-compat: javascript.builtins.Date.setUTCMilliseconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>setUTCMilliseconds()</strong> 메서드는 표준시에 따라 지정된 날짜의 밀리 초를 설정합니다.</p>
+**setUTCMilliseconds()** 메서드는 표준시에 따라 지정된 날짜의 밀리 초를 설정합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setUTCMilliseconds(<var>millisecondsValue</var>)</code></pre>
+```js
+    dateObj.setUTCMilliseconds(millisecondsValue)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>millisecondsValue</code></dt>
- <dd>밀리 초를 나타내는 0에서 999 사이의 숫자입니다.</dd>
-</dl>
+- `millisecondsValue`
+  - : 밀리 초를 나타내는 0에서 999 사이의 숫자입니다.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>1970 년 1 월 1 일 00:00:00 UTC와 업데이트 된 날짜 사이의 밀리 초 숫자입니다.</p>
+1970 년 1 월 1 일 00:00:00 UTC와 업데이트 된 날짜 사이의 밀리 초 숫자입니다.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>지정한 매개 변수가 예상 범위를 벗어난 경우 setUTCMilliseconds ()는 그에 따라 {{jsxref ( "Date")}} 객체의 날짜 정보를 업데이트하려고 시도합니다. 예를 들어 millisecondsValue에 1100을 사용하면 {{jsxref ( "Date")}} 객체에 저장된 초가 1 씩 증가하고 100은 밀리 초 단위로 사용됩니다.</p>
+지정한 매개 변수가 예상 범위를 벗어난 경우 setUTCMilliseconds ()는 그에 따라 {{jsxref ( "Date")}} 객체의 날짜 정보를 업데이트하려고 시도합니다. 예를 들어 millisecondsValue에 1100을 사용하면 {{jsxref ( "Date")}} 객체에 저장된 초가 1 씩 증가하고 100은 밀리 초 단위로 사용됩니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_setUTCMilliseconds()">Using <code>setUTCMilliseconds()</code></h3>
+### Using `setUTCMilliseconds()`
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCMilliseconds(500);
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
+- {{jsxref("Date.prototype.setMilliseconds()")}}

@@ -4,48 +4,46 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 browser-compat: javascript.builtins.Math.ceil
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}Math.ceil() 함수는 주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자를 integer 로 반환합니다.
 
-<div>Math.ceil() 함수는 주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자를 integer 로 반환합니다.</div>
+## Syntax (문법)
 
-<div> </div>
+```js
+    Math.ceil(x)
+```
 
-<h2 id="Syntax_(문법)">Syntax (문법)</h2>
+### Parameters (매개변수)
 
-<pre class="syntaxbox"><code>Math.ceil(<var>x</var>)</code></pre>
+- `x`
+  - : 숫자
 
-<h3 id="Parameters_(매개변수)">Parameters (매개변수)</h3>
+### Return value (반환값)
 
-<dl>
- <dt><code>x</code></dt>
- <dd>숫자</dd>
-</dl>
+주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자
 
-<h3 id="Return_value_(반환값)">Return value (반환값)</h3>
+## Description (설명)
 
-<p>주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자</p>
+ceil() 은 Math 의 정적 메소드이므로, 사용자가 생성하는 Math 객체의 메소드처럼 사용하지 않고, 언제나 Math.ceil() 의 형태로 사용 합니다. (Math 는 생성자가 아님)
 
-<h2 id="Description_(설명)">Description (설명)</h2>
+## Examples (예제)
 
-<p>ceil() 은 Math 의 정적 메소드이므로, 사용자가 생성하는 Math 객체의 메소드처럼 사용하지 않고, 언제나 Math.ceil() 의 형태로 사용 합니다. (Math 는 생성자가 아님)</p>
+### Math.ceil() 사용 예
 
-<h2 id="Examples_(예제)">Examples (예제)</h2>
+다음은 Math.ceil() 의 사용 예입니다.
 
-<h3 id="Math.ceil()_사용_예">Math.ceil() 사용 예</h3>
-
-<p>다음은 Math.ceil() 의 사용 예입니다.</p>
-
-<pre class="brush: js">Math.ceil(.95);    // 1
+```js
+Math.ceil(.95);    // 1
 Math.ceil(4);      // 4
 Math.ceil(7.004);  // 8
 Math.ceil(-0.95);  // -0
 Math.ceil(-4);     // -4
 Math.ceil(-7.004); // -7
-</pre>
+```
 
-<h3 id="소수점_처리">소수점 처리</h3>
+### 소수점 처리
 
-<pre class="brush: js">// Closure
+```js
+// Closure
 (function() {
   /**
    * Decimal adjustment of a number.
@@ -63,7 +61,7 @@ Math.ceil(-7.004); // -7
     value = +value;
     exp = +exp;
     // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -113,22 +111,20 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also_(추가_참조)">See also (추가 참조)</h2>
+## See also (추가 참조)
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

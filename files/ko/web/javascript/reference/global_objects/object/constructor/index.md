@@ -7,58 +7,63 @@ tags:
   - Property
   - Prototype
   - Reference
-browser-compat: javascript.builtins.Object.constructor
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
+browser-compat: javascript.builtins.Object.constructor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>인스턴스의 프로토타입을 만든 {{jsxref("Object")}} 함수의 참조를 반환합니다. 이 속성값은 함수 자체의 참조임을 주의하세요, 함수 이름을 포함하는 문자열이 아니라. 그 값은 <code>1</code>, <code>true</code> 및 <code>"test"</code>와 같은 원시(primitive) 값에 대해서만 읽기 전용입니다.</p>
+인스턴스의 프로토타입을 만든 {{jsxref("Object")}} 함수의 참조를 반환합니다. 이 속성값은 함수 자체의 참조임을 주의하세요, 함수 이름을 포함하는 문자열이 아니라. 그 값은 `1`, `true` 및 `"test"`와 같은 원시(primitive) 값에 대해서만 읽기 전용입니다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>모든 객체는 자신의 <code>prototype</code>으로부터 <code>constructor</code> 속성을 상속합니다:</p>
+모든 객체는 자신의 `prototype`으로부터 `constructor` 속성을 상속합니다:
 
-<pre>var o = {};
-o.constructor === Object; // true
+```js
+    var o = {};
+    o.constructor === Object; // true
 
-var o = new Object;
-o.constructor === Object; // true
+    var o = new Object;
+    o.constructor === Object; // true
 
-var a = [];
-a.constructor === Array; // true
+    var a = [];
+    a.constructor === Array; // true
 
-var a = new Array;
-a.constructor === Array; // true
+    var a = new Array;
+    a.constructor === Array; // true
 
-var n = new Number(3);
-n.constructor === Number; // true</pre>
+    var n = new Number(3);
+    n.constructor === Number; // true
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="객체의_생성자_표시하기">객체의 생성자 표시하기</h3>
+### 객체의 생성자 표시하기
 
-<p>다음 예는 프로토타입이 <code>Tree</code>인 그 형의 객체 <code>theTree</code>를 만듭니다. 그 다음 객체 <code>theTree</code>의 <code>constructor</code>를 표시합니다.</p>
+다음 예는 프로토타입이 `Tree`인 그 형의 객체 `theTree`를 만듭니다. 그 다음 객체 `theTree`의 `constructor`를 표시합니다.
 
-<pre class="brush: js">function Tree(name) {
+```js
+function Tree(name) {
   this.name = name;
 }
 
 var theTree = new Tree('Redwood');
 console.log('theTree.constructor is ' + theTree.constructor);
-</pre>
+```
 
-<p>이 예는 다음 출력을 표시합니다:</p>
+이 예는 다음 출력을 표시합니다:
 
-<pre class="brush: js">theTree.constructor is function Tree(name) {
+```js
+theTree.constructor is function Tree(name) {
   this.name = name;
 }
-</pre>
+```
 
-<h3 id="객체의_생성자_바꾸기">객체의 생성자 바꾸기</h3>
+### 객체의 생성자 바꾸기
 
-<p>다음 예는 일반 객체의 constructor 값을 수정하는 법을 보입니다. <code>true</code>, <code>1</code> 및 <code>"test"</code>만이 원래 읽기 전용 생성자를 갖기에 영향을 받지 않습니다. 이 예는 객체의 <code>constructor</code> 속성에 의존하는 게 항상 안전하지는 않음을 보입니다.</p>
+다음 예는 일반 객체의 constructor 값을 수정하는 법을 보입니다. `true`, `1` 및 `"test"`만이 원래 읽기 전용 생성자를 갖기에 영향을 받지 않습니다. 이 예는 객체의 `constructor` 속성에 의존하는 게 항상 안전하지는 않음을 보입니다.
 
-<pre class="brush:js">function Type () {}
+```js
+function Type () {}
 
 var types = [
   new Array(),
@@ -80,17 +85,18 @@ var types = [
   'test'            // 바뀌지 않음
 ];
 
-for (var i = 0; i &lt; types.length; i++) {
+for (var i = 0; i < types.length; i++) {
   types[i].constructor = Type;
   types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()];
 }
 
 console.log(types.join('\n'));
-</pre>
+```
 
-<p>이 예는 다음 출력을 표시합니다:</p>
+이 예는 다음 출력을 표시합니다:
 
-<pre class="brush: js">function Type() {},false,
+```js
+function Type() {},false,
 function Type() {},false,
 function Type() {},false,false
 function Boolean() {
@@ -115,12 +121,12 @@ function Type() {},false,
 function String() {
     [native code]
 },false,test
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>{{Compat}}</div>
+{{Compat}}

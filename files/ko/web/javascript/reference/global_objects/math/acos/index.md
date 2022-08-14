@@ -8,66 +8,99 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.acos()</code></strong> 함수는 주어진 수의 아크코사인 값을 숫자(라디안)로 반환합니다. 즉,</p>
+**`Math.acos()`** 함수는 주어진 수의 아크코사인 값을 숫자(라디안)로 반환합니다. 즉,
 
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arccos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mo stretchy="false">[</mo><mn>0</mn><mo>;</mo><mi>π</mi><mo stretchy="false">]</mo><mspace width="thinmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.acos}(x)} = \arccos(x) = \text{ the unique } \; y \in [0; \pi] \, \text{such that} \; \cos(y) = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo>∀</mo>
+<mi>x</mi>
+<mo>∊</mo>
+<mo stretchy="false">[</mo>
+<mrow><mo>-</mo>
+<mn>1</mn>
+</mrow><mo>;</mo>
+<mn>1</mn>
+<mo stretchy="false">]</mo>
+<mo>,</mo>
+<mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acos</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+</mrow></mstyle><mo>=</mo>
+<mo lspace="0em" rspace="0em">arccos</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mtext>the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi>
+<mo>∊</mo>
+<mo stretchy="false">[</mo>
+<mn>0</mn>
+<mo>;</mo>
+<mi>π</mi>
+<mo stretchy="false">]</mo>
+<mspace width="thinmathspace"></mspace><mtext>such that</mtext>
+<mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cos</mo>
+<mo stretchy="false">(</mo>
+<mi>y</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mi>x</mi>
+</mrow><annotation encoding="TeX">\forall x \in
+[{-1};1],\;\mathtt{\operatorname{Math.acos}(x)} = \arccos(x) = \text{ the unique }
+\; y \in [0; \pi] \, \text{such that} \; \cos(y) = x</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-acos.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-acos.html")}}
 
+## 구문
 
+```js
+    Math.acos(x)
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><code>Math.acos(<var>x</var>)</code></pre>
+- `x`
+  - : 각도를 나타내는 라디안.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>x</code></dt>
- <dd>각도를 나타내는 라디안.</dd>
-</dl>
+\-1과 1 사이의 값이 주어진 경우, 그 값의 아크코사인. 아닐 경우 {{jsxref("NaN")}}
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>-1과 1 사이의 값이 주어진 경우, 그 값의 아크코사인. 아닐 경우 {{jsxref("NaN")}}</p>
+The `Math.acos()` method returns a numeric value between 0 and π radians for `x` between -1 and 1. If the value of `x` is outside this range, it returns {{jsxref("NaN")}}.
 
-<h2 id="설명">설명</h2>
+Because `acos()` is a static method of `Math`, you always use it as `Math.acos()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
-<p>The <code>Math.acos()</code> method returns a numeric value between 0 and π radians for <code>x</code> between -1 and 1. If the value of <code>x</code> is outside this range, it returns {{jsxref("NaN")}}.</p>
+## 예제
 
-<p>Because <code>acos()</code> is a static method of <code>Math</code>, you always use it as <code>Math.acos()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
+### Using `Math.acos()`
 
-<h2 id="예제">예제</h2>
-
-<h3 id="Using_Math.acos()">Using <code>Math.acos()</code></h3>
-
-<pre class="brush: js">Math.acos(-2);  // NaN
+```js
+Math.acos(-2);  // NaN
 Math.acos(-1);  // 3.141592653589793
 Math.acos(0);   // 1.5707963267948966
 Math.acos(0.5); // 1.0471975511965979
 Math.acos(1);   // 0
 Math.acos(2);   // NaN
-</pre>
+```
 
-<p>For values less than -1 or greater than 1, <code>Math.acos()</code> returns {{jsxref("NaN")}}.</p>
+For values less than -1 or greater than 1, `Math.acos()` returns {{jsxref("NaN")}}.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Math.acos")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.atan2()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.sin()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.sin()")}}
+- {{jsxref("Math.tan()")}}

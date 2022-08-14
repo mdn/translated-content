@@ -8,77 +8,70 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>padStart()</code></strong> 메서드는 현재 문자열의 시작을 다른 문자열로 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다. 채워넣기는 대상 문자열의 시작(좌측)부터 적용됩니다.</p>
+**`padStart()`** 메서드는 현재 문자열의 시작을 다른 문자열로 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다. 채워넣기는 대상 문자열의 시작(좌측)부터 적용됩니다.
 
-<p> </p>
+{{EmbedInteractiveExample("pages/js/string-padstart.html")}}
 
-<div>{{EmbedInteractiveExample("pages/js/string-padstart.html")}}</div>
+## 구문
 
+    str.padStart(targetLength [, padString])
 
+### 매개변수
 
-<p> </p>
+- `targetLength`
+  - : 목표 문자열 길이. 현재 문자열의 길이보다 작다면 채워넣지 않고 그대로 반환.
+- `padString` {{optional_inline}}
+  - : 현재 문자열에 채워넣을 다른 문자열. 문자열이 너무 길어 목표 문자열 길이를 초과한다면 좌측 일부를 잘라서 넣음. 기본값은 " ". (U+0020)
 
-<h2 id="구문">구문</h2>
+### 반환값
 
-<pre class="syntaxbox"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
+시작점부터 주어진 문자열로 채워 목표 길이를 만족하는 {{jsxref("String")}}.
 
-<h3 id="매개변수">매개변수</h3>
+## 예시
 
-<dl>
- <dt><code>targetLength</code></dt>
- <dd>목표 문자열 길이. 현재 문자열의 길이보다 작다면 채워넣지 않고 그대로 반환.</dd>
- <dt><code>padString</code> {{optional_inline}}</dt>
- <dd>현재 문자열에 채워넣을 다른 문자열. 문자열이 너무 길어 목표 문자열 길이를 초과한다면 좌측 일부를 잘라서 넣음. 기본값은 " ". (U+0020)</dd>
-</dl>
-
-<h3 id="반환값">반환값</h3>
-
-<p>시작점부터 주어진 문자열로 채워 목표 길이를 만족하는 {{jsxref("String")}}.</p>
-
-<h2 id="예시">예시</h2>
-
-<pre class="brush: js">'abc'.padStart(10);         // "       abc"
+```js
+'abc'.padStart(10);         // "       abc"
 'abc'.padStart(10, "foo");  // "foofoofabc"
 'abc'.padStart(6,"123465"); // "123abc"
 'abc'.padStart(8, "0");     // "00000abc"
-'abc'.padStart(1);          // "abc"</pre>
+'abc'.padStart(1);          // "abc"
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<p>다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 <code>String.prototype.padStart()</code> 메서드를 사용할 수 있습니다.</p>
+다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도 `String.prototype.padStart()` 메서드를 사용할 수 있습니다.
 
-<pre class="brush: js">// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
+```js
+// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 if (!String.prototype.padStart) {
     String.prototype.padStart = function padStart(targetLength,padString) {
-        targetLength = targetLength&gt;&gt;0; //truncate if number or convert non-number to 0;
+        targetLength = targetLength>>0; //truncate if number or convert non-number to 0;
         padString = String((typeof padString !== 'undefined' ? padString : ' '));
-        if (this.length &gt; targetLength) {
+        if (this.length > targetLength) {
             return String(this);
         }
         else {
             targetLength = targetLength-this.length;
-            if (targetLength &gt; padString.length) {
+            if (targetLength > padString.length) {
                 padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
             }
             return padString.slice(0,targetLength) + String(this);
         }
     };
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.String.padStart")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("String.prototype.padEnd()")}}</li>
-</ul>
+- {{jsxref("String.prototype.padEnd()")}}

@@ -10,67 +10,65 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Array.from()</strong></code> 메서드는 유사 배열 객체(array-like object)나 반복 가능한 객체(iterable object)를 얕게 복사해 새로운<code>Array</code> 객체를 만듭니다.</p>
+**`Array.from()`** 메서드는 유사 배열 객체(array-like object)나 반복 가능한 객체(iterable object)를 얕게 복사해 새로운`Array` 객체를 만듭니다.
 
-<div>{{EmbedInteractiveExample("pages/js/array-from.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-from.html")}}
 
+## 구문
 
+```js
+    Array.from(arrayLike[, mapFn[, thisArg]])
+```
 
-<h2 id="Syntax">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Array.from(<em>arrayLike</em>[, <em>mapFn</em>[, <em>thisArg</em>]])
-</pre>
+- `arrayLike`
+  - : 배열로 변환하고자 하는유사 배열 객체나 반복 가능한 객체.
+- `mapFn`{{Optional_inline}}
+  - : 배열의 모든 요소에 대해 호출할 맵핑 함수.
+- `thisArg`{{Optional_inline}}
+  - : `mapFn` 실행 시에 `this`로 사용할 값.
 
-<h3 id="Parameters">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>arrayLike</code></dt>
- <dd>배열로 변환하고자 하는유사 배열 객체나 반복 가능한 객체.</dd>
- <dt><code>mapFn</code>{{Optional_inline}}</dt>
- <dd>배열의 모든 요소에 대해 호출할 맵핑 함수.</dd>
- <dt><code>thisArg</code>{{Optional_inline}}</dt>
- <dd><code>mapFn</code> 실행 시에 <code>this</code>로 사용할 값.</dd>
-</dl>
+새로운 {{jsxref("Array")}} 인스턴스.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>새로운 {{jsxref("Array")}} 인스턴스.</p>
+다음과 같은 경우에 `Array.from()`으로새`Array`를 만들 수 있습니다.
 
-<h2 id="Description">설명</h2>
+- 유사 배열 객체 (`length` 속성과 인덱싱 된 요소를 가진 객체)
+- [순회 가능한 객체](/ko/docs/Web/JavaScript/Guide/iterable) ({{jsxref("Map")}}, {{jsxref("Set")}} 등객체의 요소를 얻을 수 있는 객체)
 
-<p>다음과 같은 경우에 <code>Array.from()</code>으로새<code>Array</code>를 만들 수 있습니다.</p>
+`Array.from()`은 선택 매개변수인 `mapFn`를 가지는데, 배열(혹은 배열 서브클래스)의 각 요소를{{jsxref("Array.prototype.map", "맵핑", "", 0)}}할 때 사용할 수 있습니다. 즉,`Array.from(obj, mapFn, thisArg)`는 중간에 다른 배열을 생성하지 않는다는 점을 제외하면`Array.from(obj).map(mapFn, thisArg)`와 같습니다. 이 특징은 [typed arrays](/ko/docs/Web/JavaScript/Typed_arrays)와 같은 특정 배열 서브클래스에서 중간 배열 값이 적절한 유형에 맞게 생략되기 때문에 특히 중요합니다.
 
-<ul>
- <li>유사 배열 객체 (<code>length</code> 속성과 인덱싱 된 요소를 가진 객체)</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/iterable">순회 가능한 객체</a> ({{jsxref("Map")}}, {{jsxref("Set")}} 등객체의 요소를 얻을 수 있는 객체)</li>
-</ul>
+`from()` 메서드의 `length` 속성은 1입니다.
 
-<p><code>Array.from()</code>은 선택 매개변수인 <code>mapFn</code>를 가지는데, 배열(혹은 배열 서브클래스)의 각 요소를{{jsxref("Array.prototype.map", "맵핑", "", 0)}}할 때 사용할 수 있습니다. 즉,<code>Array.from(obj, mapFn, thisArg)</code>는 중간에 다른 배열을 생성하지 않는다는 점을 제외하면<code>Array.from(obj).map(mapFn, thisArg)</code>와 같습니다. 이 특징은 <a href="/ko/docs/Web/JavaScript/Typed_arrays">typed arrays</a>와 같은 특정 배열 서브클래스에서 중간 배열 값이 적절한 유형에 맞게 생략되기 때문에 특히 중요합니다.</p>
+ES2015 이후, 클래스 구문은 내장 및 새 클래스의 상속을 가능케 했습니다. 그 결과로 `Array.from`과 같은 정적 메서드는 `Array`의 서브클래스에 의해 상속되며, `Array` 대신 자신의 인스턴스를 만듭니다.
 
-<p><code>from()</code> 메서드의 <code>length</code> 속성은 1입니다.</p>
+## 예제
 
-<p>ES2015 이후, 클래스 구문은 내장 및 새 클래스의 상속을 가능케 했습니다. 그 결과로 <code>Array.from</code>과 같은 정적 메서드는 <code>Array</code>의 서브클래스에 의해 상속되며, <code>Array</code> 대신 자신의 인스턴스를 만듭니다.</p>
+### `String`에서 배열 만들기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="String에서_배열_만들기"><code>String</code>에서 배열 만들기</h3>
-
-<pre class="brush: js">Array.from('foo');
+```js
+Array.from('foo');
 // ["f", "o", "o"]
-</pre>
+```
 
-<h3 id="Set에서_배열_만들기"><code>Set</code>에서 배열 만들기</h3>
+### `Set`에서 배열 만들기
 
-<pre class="brush: js">const s = new Set(['foo', window]);
+```js
+const s = new Set(['foo', window]);
 Array.from(s);
 // ["foo", window]
-</pre>
+```
 
-<h3 id="Map에서_배열_만들기"><code>Map</code>에서 배열 만들기</h3>
+### `Map`에서 배열 만들기
 
-<pre class="brush: js">const m = new Map([[1, 2], [2, 4], [4, 8]]);
+```js
+const m = new Map([[1, 2], [2, 4], [4, 8]]);
 Array.from(m);
 // [[1, 2], [2, 4], [4, 8]]
 
@@ -80,37 +78,40 @@ Array.from(mapper.values());
 
 Array.from(mapper.keys());
 // ['1', '2'];
-</pre>
+```
 
-<h3 id="배열_형태를_가진_객체(arguments)에서_배열_만들기">배열 형태를 가진 객체(<code>arguments</code>)에서 배열 만들기</h3>
+### 배열 형태를 가진 객체(`arguments`)에서 배열 만들기
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   return Array.from(arguments);
 }
 
 f(1, 2, 3);
 
 // [1, 2, 3]
-</pre>
+```
 
-<h3 id="Array.from과_화살표_함수_사용하기"><code>Array.from</code>과 화살표 함수 사용하기</h3>
+### `Array.from`과 화살표 함수 사용하기
 
-<pre class="brush: js">// Using an arrow function as the map function to
+```js
+// Using an arrow function as the map function to
 // manipulate the elements
-Array.from([1, 2, 3], x =&gt; x + x);
+Array.from([1, 2, 3], x => x + x);
 // [2, 4, 6]
 
 // Generate a sequence of numbers
 // Since the array is initialized with `undefined` on each position,
 // the value of `v` below will be `undefined`
-Array.from({length: 5}, (v, i) =&gt; i);
+Array.from({length: 5}, (v, i) => i);
 // [0, 1, 2, 3, 4]
-</pre>
+```
 
-<h3 id="시퀀스_생성기(range)">시퀀스 생성기(range)</h3>
+### 시퀀스 생성기(range)
 
-<pre class="brush: js">// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
-const range = (start, stop, step) =&gt; Array.from({ length: (stop - start) / step + 1}, (_, i) =&gt; start + (i * step));
+```js
+// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP etc)
+const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
 
 // Generate numbers range 0..4
 range(0, 4, 1);
@@ -121,14 +122,16 @@ range(1, 10, 2);
 // [1, 3, 5, 7, 9]
 
 // Generate the alphabet using Array.from making use of it being ordered as a sequence
-range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x));
-// ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]</pre>
+range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromCharCode(x));
+// ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<p><code>Array.from</code>은 ECMA-262 표준 제6판에 추가됐습니다.따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도<code>Array.from</code>을 사용할 수 있습니다. 아래 알고리즘은<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>와<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a>가 변형되지 않고,<code>callback.call</code>의 계산 값이 원래의<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call()</code></a>과 같은 경우ECMA-262 제6판이 명시한 것과 동일합니다. 또한 반복가능자(iterable)는 완벽하게 폴리필 할 수 없기에 본 구현은 ECMA-262 제6판의 제네릭 반복가능자를 지원하지 않습니다.</p>
+`Array.from`은 ECMA-262 표준 제6판에 추가됐습니다.따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 플랫폼에서도`Array.from`을 사용할 수 있습니다. 아래 알고리즘은[`Object`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)와[`TypeError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError)가 변형되지 않고,`callback.call`의 계산 값이 원래의[`Function.prototype.call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)과 같은 경우ECMA-262 제6판이 명시한 것과 동일합니다. 또한 반복가능자(iterable)는 완벽하게 폴리필 할 수 없기에 본 구현은 ECMA-262 제6판의 제네릭 반복가능자를 지원하지 않습니다.
 
-<pre class="brush: js">// Production steps of ECMA-262, Edition 6, 22.1.2.1
+```js
+// Production steps of ECMA-262, Edition 6, 22.1.2.1
 if (!Array.from) {
   Array.from = (function () {
     var toStr = Object.prototype.toString;
@@ -139,7 +142,7 @@ if (!Array.from) {
       var number = Number(value);
       if (isNaN(number)) { return 0; }
       if (number === 0 || !isFinite(number)) { return number; }
-      return (number &gt; 0 ? 1 : -1) * Math.floor(Math.abs(number));
+      return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
     };
     var maxSafeInteger = Math.pow(2, 53) - 1;
     var toLength = function (value) {
@@ -161,7 +164,7 @@ if (!Array.from) {
       }
 
       // 4. If mapfn is undefined, then let mapping be false.
-      var mapFn = arguments.length &gt; 1 ? arguments[1] : void undefined;
+      var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
       var T;
       if (typeof mapFn !== 'undefined') {
         // 5. else
@@ -171,7 +174,7 @@ if (!Array.from) {
         }
 
         // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
-        if (arguments.length &gt; 2) {
+        if (arguments.length > 2) {
           T = arguments[2];
         }
       }
@@ -188,9 +191,9 @@ if (!Array.from) {
 
       // 16. Let k be 0.
       var k = 0;
-      // 17. Repeat, while k &lt; len… (also steps a - h)
+      // 17. Repeat, while k < len… (also steps a - h)
       var kValue;
-      while (k &lt; len) {
+      while (k < len) {
         kValue = items[k];
         if (mapFn) {
           A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
@@ -205,20 +208,19 @@ if (!Array.from) {
       return A;
     };
   }());
-}</pre>
+}
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Array.from")}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("TypedArray.from()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("TypedArray.from()")}}

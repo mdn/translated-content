@@ -4,39 +4,40 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 browser-compat: javascript.builtins.Date.getUTCSeconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>getUTCSeconds()</strong> 메서드는 표준시에 따라 지정된 날짜의 초를 반환합니다.</p>
+**getUTCSeconds()** 메서드는 표준시에 따라 지정된 날짜의 초를 반환합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCSeconds()</code></pre>
+```js
+    dateObj.getUTCSeconds()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>0부터 59까지의 정수로, 표준시에 따라 지정된 날짜의 초를 나타냅니다.</p>
+0부터 59까지의 정수로, 표준시에 따라 지정된 날짜의 초를 나타냅니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_getUTCSeconds()">Using <code>getUTCSeconds()</code></h3>
+### Using `getUTCSeconds()`
 
-<p>다음 예제에서는 현재 시간의 초 부분을 초 변수에 지정합니다.</p>
+다음 예제에서는 현재 시간의 초 부분을 초 변수에 지정합니다.
 
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var seconds = today.getUTCSeconds();
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date.prototype.getSeconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCSeconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getSeconds()")}}
+- {{jsxref("Date.prototype.setUTCSeconds()")}}

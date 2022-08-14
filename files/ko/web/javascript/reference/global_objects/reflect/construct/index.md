@@ -9,51 +9,48 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Reflect</strong></code><strong><code>.construct()</code></strong> 정적 메서드는 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 연산자</a>처럼 동작하는 함수입니다. <code>new target(...args)</code>를 호출하는 것과 같습니다. 추가 기능으로 다른 프로토타입을 지정할 수도 있습니다.</p>
+**`Reflect`\*\***`.construct()`\*\* 정적 메서드는 [`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)처럼 동작하는 함수입니다. `new target(...args)`를 호출하는 것과 같습니다. 추가 기능으로 다른 프로토타입을 지정할 수도 있습니다.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}
 
+## 구문
 
+    Reflect.construct(target, argumentsList[, newTarget])
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Reflect.construct(<em>target</em>, <em>argumentsList</em>[, <em>newTarget</em>])
-</pre>
+- `target`
+  - : 호출할 대상 함수.
+- `argumentsList`
+  - : `target`의 매개변수로 전달할 배열형 객체.
+- `newTarget` {{optional_inline}}
+  - : 프로토타입으로 사용할 생성자. [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) 연산자도 확인하세요. `newTarget`이 주어지지 않았을 땐 `target`을 사용합니다.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>target</code></dt>
- <dd>호출할 대상 함수.</dd>
- <dt><code>argumentsList</code></dt>
- <dd><code>target</code>의 매개변수로 전달할 배열형 객체.</dd>
- <dt><code>newTarget</code> {{optional_inline}}</dt>
- <dd>프로토타입으로 사용할 생성자. <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code> 연산자도 확인하세요. <code>newTarget</code>이 주어지지 않았을 땐 <code>target</code>을 사용합니다.</dd>
-</dl>
+`target`을 생성자로 하고 주어진 매개변수를 전달해 생성한 `target`(또는, 지정했다면 `newTarget`)의 새로운 인스턴스.
 
-<h3 id="반환_값">반환 값</h3>
+### 예외
 
-<p><code>target</code>을 생성자로 하고 주어진 매개변수를 전달해 생성한 <code>target</code>(또는, 지정했다면 <code>newTarget</code>)의 새로운 인스턴스.</p>
+`target` 또는 `newTarget`이 생성자가 아니면 {{jsxref("TypeError")}}.
 
-<h3 id="예외">예외</h3>
+## 설명
 
-<p><code>target</code> 또는 <code>newTarget</code>이 생성자가 아니면 {{jsxref("TypeError")}}.</p>
+`Reflect.construct()`는 생성자를 가변 길이의 매개변수로 호출할 수 있습니다. ([`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)와 [전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)을 사용해도 가능합니다)
 
-<h2 id="설명">설명</h2>
-
-<p><code>Reflect.construct()</code>는 생성자를 가변 길이의 매개변수로 호출할 수 있습니다. (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 연산자</a>와 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax">전개 구문</a>을 사용해도 가능합니다)</p>
-
-<pre class="brush: js">var obj = new Foo(...args);
+```js
+var obj = new Foo(...args);
 var obj = Reflect.construct(Foo, args);
-</pre>
+```
 
-<h3 id="Reflect.construct()_vs_Object.create()"><code>Reflect.construct()</code> vs <code>Object.create()</code></h3>
+### `Reflect.construct()` vs `Object.create()`
 
-<p><code>Reflect</code>의 도입 이전에는 임의의 생성자와 프로토타입에 {{jsxref("Object.create()")}}를 사용해 객체를 생성할 수 있었습니다.</p>
+`Reflect`의 도입 이전에는 임의의 생성자와 프로토타입에 {{jsxref("Object.create()")}}를 사용해 객체를 생성할 수 있었습니다.
 
-<pre class="brush: js">function OneClass() {
+```js
+function OneClass() {
     this.name = 'one';
 }
 
@@ -76,13 +73,14 @@ console.log(obj2 instanceof OneClass); // false
 
 console.log(obj1 instanceof OtherClass); // true
 console.log(obj2 instanceof OtherClass); // true
-</pre>
+```
 
-<p>그러나, 결과는 동일하더라도 과정에는 중요한 차이가 하나 존재합니다. <code>Object.create()</code>와 {{jsxref("Function.prototype.apply()")}}를 사용할 땐, 객체 생성에 <code>new</code> 키워드가 관여하지 않으므로 <code>new.target</code> 연산자가 <code>undefined</code>를 가리킵니다.</p>
+그러나, 결과는 동일하더라도 과정에는 중요한 차이가 하나 존재합니다. `Object.create()`와 {{jsxref("Function.prototype.apply()")}}를 사용할 땐, 객체 생성에 `new` 키워드가 관여하지 않으므로 `new.target` 연산자가 `undefined`를 가리킵니다.
 
-<p>반면 <code>Reflect.construct()</code>를 호출하면, <code>newTarget</code>이 존재하면 <code>new.target</code> 연산자가 <code>newTarget</code>을, 아니면 <code>target</code>을 가리킵니다.</p>
+반면 `Reflect.construct()`를 호출하면, `newTarget`이 존재하면 `new.target` 연산자가 `newTarget`을, 아니면 `target`을 가리킵니다.
 
-<pre class="brush: js">function OneClass() {
+```js
+function OneClass() {
     console.log('OneClass');
     console.log(new.target);
 }
@@ -106,29 +104,28 @@ OneClass.apply(obj3, args);
 // Output:
 //     OneClass
 //     undefined
-</pre>
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="Reflect.construct()_사용하기"><code>Reflect.construct()</code> 사용하기</h3>
+### `Reflect.construct()` 사용하기
 
-<pre class="brush: js">var d = Reflect.construct(Date, [1776, 6, 4]);
+```js
+var d = Reflect.construct(Date, [1776, 6, 4]);
 d instanceof Date; // true
 d.getFullYear(); // 1776
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Reflect.construct")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code></a></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)
+- [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)

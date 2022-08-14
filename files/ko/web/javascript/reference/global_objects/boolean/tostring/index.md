@@ -9,48 +9,47 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>toString()</strong></code> 메서드는 {{jsxref("Boolean")}} 객체를 나타내는 문자열을 반환합니다.</p>
+**`toString()`** 메서드는 {{jsxref("Boolean")}} 객체를 나타내는 문자열을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}
 
+## 구문
 
+```js
+    bool.toString()
+```
 
-<h2 id="구문">구문</h2>
+### 반환 값
 
-<pre class="syntaxbox"><var>bool</var>.toString()</pre>
+{{jsxref("Boolean")}} 객체를 나타내는 문자열.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>{{jsxref("Boolean")}} 객체를 나타내는 문자열.</p>
+{{jsxref("Boolean")}} 객체는 {{jsxref("Object.prototype.toString()")}} 메서드를 상속받지 않고 재정의합니다. `Boolean` 객체에서 `toString()` 메서드는 객체의 문자열 표현을 반환합니다.
 
-<h2 id="설명">설명</h2>
+JavaScript는 {{jsxref("Boolean")}}을 문자열로 표현해야 할 때나 문자열 결합에 사용할 때 `toString()`을 자동으로 호출합니다.
 
-<p>{{jsxref("Boolean")}} 객체는 {{jsxref("Object.prototype.toString()")}} 메서드를 상속받지 않고 재정의합니다. <code>Boolean</code> 객체에서 <code>toString()</code> 메서드는 객체의 문자열 표현을 반환합니다.</p>
+`toString()`은 불리언 객체의 값에 따라 문자열 "`true`" 또는 "`false`"를 반환합니다.
 
-<p>JavaScript는 {{jsxref("Boolean")}}을 문자열로 표현해야 할 때나 문자열 결합에 사용할 때 <code>toString()</code>을 자동으로 호출합니다.</p>
+## 예제
 
-<p><code>toString()</code>은 불리언 객체의 값에 따라 문자열 "<code>true</code>" 또는 "<code>false</code>"를 반환합니다.</p>
+### `toString()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="toString_사용하기"><code>toString()</code> 사용하기</h3>
-
-<pre class="brush: js">var flag = new Boolean(true);
+```js
+var flag = new Boolean(true);
 flag.toString(); // false
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-{{Compat("javascript.builtins.Boolean.toString")}}
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

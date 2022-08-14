@@ -9,58 +9,56 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 browser-compat: javascript.builtins.Proxy.handler.apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.apply()</code></strong> 메소드는 함수호출 시를 위한 트랩(trap)이다.</p>
+**`handler.apply()`** 메소드는 함수호출 시를 위한 트랩(trap)이다.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   apply: function(target, thisArg, argumentsList) {
   }
 });
-</pre>
+```
 
-<h3 id="인자">인자</h3>
+### 인자
 
-<p>apply 메소드에는 다음과 같은 인자가 들어온다.. <code>this는 </code>handler를 가리킨다.</p>
+apply 메소드에는 다음과 같은 인자가 들어온다.. `this는 `handler를 가리킨다.
 
-<dl>
- <dt><code>target</code></dt>
- <dd>대상이 되는 객체(함수)</dd>
- <dt><code>thisArg</code></dt>
- <dd>호출 시 바인딩 된 this</dd>
- <dt><code>argumentsList</code></dt>
- <dd>호출 시 전달된 인자목록.</dd>
-</dl>
+- `target`
+  - : 대상이 되는 객체(함수)
+- `thisArg`
+  - : 호출 시 바인딩 된 this
+- `argumentsList`
+  - : 호출 시 전달된 인자목록.
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p><code>apply</code> 메소드는 어떤 값이든 반환할 수 있다.</p>
+`apply` 메소드는 어떤 값이든 반환할 수 있다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code><strong>handler.apply</strong></code> 메소드는 함수호출 시를 위한 트랩이다.</p>
+**`handler.apply`** 메소드는 함수호출 시를 위한 트랩이다.
 
-<h3 id="가로채기">가로채기</h3>
+### 가로채기
 
-<p>이 트랩은 다음과 같은 것들을 가로챌 수 있다:</p>
+이 트랩은 다음과 같은 것들을 가로챌 수 있다:
 
-<ul>
- <li><code>proxy(...args)</code></li>
- <li>{{jsxref("Function.prototype.apply()")}} 와 {{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- `proxy(...args)`
+- {{jsxref("Function.prototype.apply()")}} 와 {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Reflect.apply()")}}
 
-<h3 id="기본(불변)조건">기본(불변)조건</h3>
+### 기본(불변)조건
 
-<p><code>handler.apply</code> 메소드에 대한 특별히 지켜야 할 기본조건은 없다.</p>
+`handler.apply` 메소드에 대한 특별히 지켜야 할 기본조건은 없다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음의 코드는 함수 호출 시에 트랩을 건다.</p>
+다음의 코드는 함수 호출 시에 트랩을 건다.
 
-<pre class="brush: js">var p = new Proxy(function() {}, {
+```js
+var p = new Proxy(function() {}, {
   apply: function(target, thisArg, argumentsList) {
     console.log('호출됨: ' + argumentsList.join(', '));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
@@ -69,22 +67,20 @@ browser-compat: javascript.builtins.Proxy.handler.apply
 
 console.log(p(1, 2, 3)); // "호출됨: 1, 2, 3"
                          // 6
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="관련_내용">관련 내용</h2>
+## 관련 내용
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Function.prototype.apply")}}</li>
- <li>{{jsxref("Function.prototype.call")}}</li>
- <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Function.prototype.apply")}}
+- {{jsxref("Function.prototype.call")}}
+- {{jsxref("Reflect.apply()")}}

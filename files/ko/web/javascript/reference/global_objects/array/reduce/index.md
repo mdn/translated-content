@@ -10,78 +10,67 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>reduce()</strong></code><strong> </strong>메서드는 배열의 각 요소에 대해 주어진 <strong>리듀서</strong>(reducer) 함수를 실행하고, 하나의 결과값을 반환합니다.</p>
+**`reduce()`\*\*** **메서드는 배열의 각 요소에 대해 주어진 **리듀서\*\*(reducer) 함수를 실행하고, 하나의 결과값을 반환합니다.
 
+{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
-<div>{{EmbedInteractiveExample("pages/js/array-reduce.html")}}</div>
+**리듀서** 함수는 네 개의 인자를 가집니다.
 
+1.  누산기 (acc)
+2.  현재 값 (cur)
+3.  현재 인덱스 (idx)
+4.  원본 배열 (src)
 
+리듀서 함수의 반환 값은 누산기에 할당되고, 누산기는 순회 중 유지되므로 결국 최종 결과는 하나의 값이 됩니다.
 
-<p><strong>리듀서</strong> 함수는 네 개의 인자를 가집니다.</p>
+## 구문
 
-<ol>
- <li>누산기 (acc)</li>
- <li>현재 값 (cur)</li>
- <li>현재 인덱스 (idx)</li>
- <li>원본 배열 (src)</li>
-</ol>
+```js
+    arr.reduce(callback[, initialValue])
+```
 
-<p>리듀서 함수의 반환 값은 누산기에 할당되고, 누산기는 순회 중 유지되므로 결국 최종 결과는 하나의 값이 됩니다.</p>
+### 매개변수
 
-<h2 id="구문">구문</h2>
+- `callback`
+  - : 배열의 각 요소에 대해 실행할 함수. 
+    다음 네 가지 인수를 받습니다.
+    - `accumulator`
+      - : 누산기는 콜백의 반환값을 누적합니다. 콜백의 이전 반환값 또는, 콜백의 첫 번째 호출이면서 `initialValue`를 제공한 경우에는 `initialValue`의 값입니다.
+    - `currentValue`
+      - : 처리할 현재 요소.
+    - `currentIndex` {{optional_inline}}
+      - : 처리할 현재 요소의 인덱스. `initialValue`를 제공한 경우 0, 아니면 1부터 시작합니다.
+    - `array` {{optional_inline}}
+      - : `reduce()`를 호출한 배열.
+- `initialValue` {{optional_inline}}
+  - : `callback`의 최초 호출에서 첫 번째 인수에 제공하는 값. 초기값을 제공하지 않으면 배열의 첫 번째 요소를 사용합니다. 빈 배열에서 초기값 없이 `reduce()`를 호출하면 오류가 발생합니다.
 
-<pre class="syntaxbox"><var>arr</var>.reduce(<var>callback</var>[, <var>initialValue</var>])</pre>
+### 반환 값
 
-<h3 id="매개변수">매개변수</h3>
+누적 계산의 결과 값.
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>배열의 각 요소에 대해 실행할 함수. 다음 네 가지 인수를 받습니다.</dd>
- <dd>
- <dl>
-  <dt><code>accumulator</code></dt>
-  <dd>누산기는 콜백의 반환값을 누적합니다. 콜백의 이전 반환값 또는, 콜백의 첫 번째 호출이면서 <code>initialValue</code>를 제공한 경우에는 <code>initialValue</code>의 값입니다.</dd>
-  <dt><code>currentValue</code></dt>
-  <dd>처리할 현재 요소.</dd>
-  <dt><code>currentIndex</code> {{optional_inline}}</dt>
-  <dd>처리할 현재 요소의 인덱스. <code>initialValue</code>를 제공한 경우 0, 아니면 1부터 시작합니다.</dd>
-  <dt><code>array</code> {{optional_inline}}</dt>
-  <dd><code>reduce()</code>를 호출한 배열.</dd>
- </dl>
- </dd>
- <dt><code>initialValue</code> {{optional_inline}}</dt>
- <dd><code>callback</code>의 최초 호출에서 첫 번째 인수에 제공하는 값. 초기값을 제공하지 않으면 배열의 첫 번째 요소를 사용합니다. 빈 배열에서 초기값 없이 <code>reduce()</code>를 호출하면 오류가 발생합니다.</dd>
-</dl>
+## 설명
 
-<h3 id="반환_값">반환 값</h3>
+`reduce()`는 빈 요소를 제외하고 배열 내에 존재하는 각 요소에 대해 `callback` 함수를 한 번씩 실행하는데, 콜백 함수는 다음의 네 인수를 받습니다:
 
-<p>누적 계산의 결과 값.</p>
+- `accumulator`
+- `currentValue`
+- `currentIndex`
+- `array`
 
-<h2 id="설명">설명</h2>
+콜백의 최초 호출 때 `accumulator`와 `currentValue`는 다음 두 가지 값 중 하나를 가질 수 있습니다. 만약 `reduce()` 함수 호출에서 `initialValue`를 제공한 경우, `accumulator`는 `initialValue`와 같고 `currentValue`는 배열의 첫 번째 값과 같습니다. `initialValue`를 제공하지 않았다면, `accumulator`는 배열의 첫 번째 값과 같고 `currentValue`는 두 번째와 같습니다.
 
-<p><code>reduce()</code>는 빈 요소를 제외하고 배열 내에 존재하는 각 요소에 대해 <code>callback</code> 함수를 한 번씩 실행하는데, 콜백 함수는 다음의 네 인수를 받습니다:</p>
+> **참고:** `initialValue`를 제공하지 않으면, `reduce()`는 인덱스 1부터 시작해 콜백 함수를 실행하고 첫 번째 인덱스는 건너 뜁니다. `initialValue`를 제공하면 인덱스 0에서 시작합니다.
 
-<ul>
- <li><code>accumulator</code></li>
- <li><code>currentValue</code></li>
- <li><code>currentIndex</code></li>
- <li><code>array</code></li>
-</ul>
+배열이 비어있는데 `initialValue`도 제공하지 않으면 {{jsxref("TypeError")}}가 발생합니다. 배열의 요소가 (위치와 관계없이) 하나 뿐이면서 `initialValue`를 제공되지 않은 경우, 또는 `initialValue`는 주어졌으나 배열이 빈 경우엔 그 단독 값을 `callback` 호출 없이 반환합니다.
 
-<p>콜백의 최초 호출 때 <code>accumulator</code>와 <code>currentValue</code>는 다음 두 가지 값 중 하나를 가질 수 있습니다. 만약 <code>reduce()</code> 함수 호출에서 <code>initialValue</code>를 제공한 경우, <code>accumulator</code>는 <code>initialValue</code>와 같고 <code>currentValue</code>는 배열의 첫 번째 값과 같습니다. <code>initialValue</code>를 제공하지 않았다면, <code>accumulator</code>는 배열의 첫 번째 값과 같고 <code>currentValue</code>는 두 번째와 같습니다.</p>
+다음의 예제처럼 `initialValue`을 제공하지 않으면 출력 가능한 형식이 세 가지이므로, 보통 초기값을 주는 것이 더 안전합니다.
 
-<div class="note">
-<p><strong>참고:</strong> <code>initialValue</code>를 제공하지 않으면, <code>reduce()</code>는 인덱스 1부터 시작해 콜백 함수를 실행하고 첫 번째 인덱스는 건너 뜁니다. <code>initialValue</code>를 제공하면 인덱스 0에서 시작합니다.</p>
-</div>
-
-<p>배열이 비어있는데 <code>initialValue</code>도 제공하지 않으면 {{jsxref("TypeError")}}가 발생합니다. 배열의 요소가 (위치와 관계없이) 하나 뿐이면서 <code>initialValue</code>를 제공되지 않은 경우, 또는 <code>initialValue</code>는 주어졌으나 배열이 빈 경우엔 그 단독 값을 <code>callback</code> 호출 없이 반환합니다.</p>
-
-<p>다음의 예제처럼 <code>initialValue</code>을 제공하지 않으면 출력 가능한 형식이 세 가지이므로, 보통 초기값을 주는 것이 더 안전합니다.</p>
-
-<pre class="brush: js">var maxCallback = ( acc, cur ) =&gt; Math.max( acc.x, cur.x );
-var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
+```js
+var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
+var maxCallback2 = ( max, cur ) => Math.max( max, cur );
 
 // initialValue 없이 reduce()
 [ { x: 22 }, { x: 42 } ].reduce( maxCallback ); // 42
@@ -89,200 +78,125 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
 [                      ].reduce( maxCallback ); // TypeError
 
 // map/reduce로 개선 - 비었거나 더 큰 배열에서도 동작함
-[ { x: 22 }, { x: 42 } ].map( el =&gt; el.x )
-                        .reduce( maxCallback2, -Infinity );</pre>
+[ { x: 22 }, { x: 42 } ].map( el => el.x )
+                        .reduce( maxCallback2, -Infinity );
+```
 
-<h3 id="reduce()_작동_방식"><code>reduce()</code> 작동  방식</h3>
+### `reduce()` 작동 방식
 
-<p>다음의 예제를 생각해 봅시다.</p>
+다음의 예제를 생각해 봅시다.
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
+```js
+[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
   return accumulator + currentValue;
 });
-</pre>
+```
 
-<p>콜백은 4번 호출됩니다. 각 호출의 인수와 반환값은 다음과 같습니다.</p>
+콜백은 4번 호출됩니다. 각 호출의 인수와 반환값은 다음과 같습니다.
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"><code>callback</code></th>
-   <th scope="col"><code>accumulator</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>currentIndex</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">반환 값</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">1번째 호출</th>
-   <td><code>0</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">2번째 호출</th>
-   <td><code>1</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>3</code></td>
-  </tr>
-  <tr>
-   <th scope="row">3번째 호출</th>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>6</code></td>
-  </tr>
-  <tr>
-   <th scope="row">4번째 호출</th>
-   <td><code>6</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
- </tbody>
-</table>
+| `callback` | `accumulator` | `currentValue` | `currentIndex` | `array`           | 반환 값 |
+| ---------- | ------------- | -------------- | -------------- | ----------------- | ------- |
+| 1번째 호출 | `0`           | `1`            | `1`            | `[0, 1, 2, 3, 4]` | `1`     |
+| 2번째 호출 | `1`           | `2`            | `2`            | `[0, 1, 2, 3, 4]` | `3`     |
+| 3번째 호출 | `3`           | `3`            | `3`            | `[0, 1, 2, 3, 4]` | `6`     |
+| 4번째 호출 | `6`           | `4`            | `4`            | `[0, 1, 2, 3, 4]` | `10`    |
 
-<p><code>reduce()</code>가 반환하는 값으로는 마지막 콜백 호출의 반환값(<code>10</code>)을 사용합니다.</p>
+`reduce()`가 반환하는 값으로는 마지막 콜백 호출의 반환값(`10`)을 사용합니다.
 
-<p>완전한 함수 대신에 {{jsxref("Functions/애로우_펑션", "화살표 함수","",1)}}를 제공할 수도 있습니다. 아래 코드는 위의 코드와 같은 결과를 반환합니다.</p>
+완전한 함수 대신에 {{jsxref("Functions/애로우_펑션", "화살표 함수","",1)}}를 제공할 수도 있습니다. 아래 코드는 위의 코드와 같은 결과를 반환합니다.
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce( (prev, curr) =&gt; prev + curr );
-</pre>
+```js
+[0, 1, 2, 3, 4].reduce( (prev, curr) => prev + curr );
+```
 
-<p><code>reduce()</code>의 두 번째 인수로 초기값을 제공하는 경우, 결과는 다음과 같습니다:</p>
+`reduce()`의 두 번째 인수로 초기값을 제공하는 경우, 결과는 다음과 같습니다:
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
+```js
+[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
   return accumulator + currentValue;
 }, 10);
-</pre>
+```
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"> </th>
-   <th scope="col"><code>accumulator</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>currentIndex</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">반환값</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">1번째 호출</th>
-   <td><code>10</code></td>
-   <td><code>0</code></td>
-   <td><code>0</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
-  <tr>
-   <th scope="row">2번째 호출</th>
-   <td><code>10</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>11</code></td>
-  </tr>
-  <tr>
-   <th scope="row">3번째 호출</th>
-   <td><code>11</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>13</code></td>
-  </tr>
-  <tr>
-   <th scope="row">4번째 호출</th>
-   <td><code>13</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>16</code></td>
-  </tr>
-  <tr>
-   <th scope="row">5번째 호출</th>
-   <td><code>16</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>20</code></td>
-  </tr>
- </tbody>
-</table>
+|            | `accumulator` | `currentValue` | `currentIndex` | `array`           | 반환값 |
+| ---------- | ------------- | -------------- | -------------- | ----------------- | ------ |
+| 1번째 호출 | `10`          | `0`            | `0`            | `[0, 1, 2, 3, 4]` | `10`   |
+| 2번째 호출 | `10`          | `1`            | `1`            | `[0, 1, 2, 3, 4]` | `11`   |
+| 3번째 호출 | `11`          | `2`            | `2`            | `[0, 1, 2, 3, 4]` | `13`   |
+| 4번째 호출 | `13`          | `3`            | `3`            | `[0, 1, 2, 3, 4]` | `16`   |
+| 5번째 호출 | `16`          | `4`            | `4`            | `[0, 1, 2, 3, 4]` | `20`   |
 
-<p>이 때 <code>reduce()</code>가 결과로 반환하는 값은 <code>20</code>입니다.</p>
+이 때 `reduce()`가 결과로 반환하는 값은 `20`입니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="배열의_모든_값_합산">배열의 모든 값 합산</h3>
+### 배열의 모든 값 합산
 
-<pre class="brush: js">var sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
+```js
+var sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
   return accumulator + currentValue;
 }, 0);
 // sum is 6
+```
 
-</pre>
+화살표 함수로도 작성할 수 있습니다.
 
-<p>화살표 함수로도 작성할 수 있습니다.</p>
-
-<pre class="brush: js">var total = [ 0, 1, 2, 3 ].reduce(
-  ( accumulator, currentValue ) =&gt; accumulator + currentValue,
+```js
+var total = [ 0, 1, 2, 3 ].reduce(
+  ( accumulator, currentValue ) => accumulator + currentValue,
   0
-);</pre>
+);
+```
 
-<h3 id="객체_배열에서의_값_합산">객체 배열에서의 값 합산</h3>
+### 객체 배열에서의 값 합산
 
-<p>객체로 이루어진 배열에 들어 있는 값을 합산하기 위해서는 <strong>반드시</strong> 초기값을 주어 각 항목이 여러분의 함수를 거치도록 해야 합니다.</p>
+객체로 이루어진 배열에 들어 있는 값을 합산하기 위해서는 **반드시** 초기값을 주어 각 항목이 여러분의 함수를 거치도록 해야 합니다.
 
-<pre class="brush: js">var initialValue = 0;
+```js
+var initialValue = 0;
 var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
     return accumulator + currentValue.x;
 },initialValue)
 
 console.log(sum) // logs 6
-</pre>
+```
 
-<p>화살표 함수(arrow function)로도 작성할 수 있습니다: </p>
+화살표 함수(arrow function)로도 작성할 수 있습니다:
 
-<pre class="brush: js">var initialValue = 0;
+```js
+var initialValue = 0;
 var sum = [{x: 1}, {x:2}, {x:3}].reduce(
-    (accumulator, currentValue) =&gt; accumulator + currentValue.x
+    (accumulator, currentValue) => accumulator + currentValue.x
     ,initialValue
 );
 
-console.log(sum) // logs 6</pre>
+console.log(sum) // logs 6
+```
 
-<h3 id="중첩_배열_펼치기flatten">중첩 배열 펼치기</h3>
+### 중첩 배열 펼치기
 
-<pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+```js
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
   function(accumulator, currentValue) {
     return accumulator.concat(currentValue);
   },
   []
 );
 // 펼친 결과: [0, 1, 2, 3, 4, 5]
-</pre>
+```
 
-<p>화살표 함수로도 작성할 수 있습니다:</p>
+화살표 함수로도 작성할 수 있습니다:
 
-<pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-  ( accumulator, currentValue ) =&gt; accumulator.concat(currentValue),
+```js
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+  ( accumulator, currentValue ) => accumulator.concat(currentValue),
   []
 );
-</pre>
+```
 
-<h3 id="객체_내의_값_인스턴스_개수_세기">객체 내의 값 인스턴스 개수 세기</h3>
+### 객체 내의 값 인스턴스 개수 세기
 
-<pre class="brush: js">var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+```js
+var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
 
 var countedNames = names.reduce(function (allNames, name) {
   if (name in allNames) {
@@ -295,11 +209,12 @@ var countedNames = names.reduce(function (allNames, name) {
 }, {});
 // countedNames is:
 // { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
-</pre>
+```
 
-<h3 id="속성으로_객체_분류하기">속성으로 객체 분류하기</h3>
+### 속성으로 객체 분류하기
 
-<pre class="brush: js">var people = [
+```js
+var people = [
   { name: 'Alice', age: 21 },
   { name: 'Max', age: 20 },
   { name: 'Jane', age: 20 }
@@ -325,11 +240,12 @@ var groupedPeople = groupBy(people, 'age');
 //   ],
 //   21: [{ name: 'Alice', age: 21 }]
 // }
-</pre>
+```
 
-<h3 id="확장_연산자와_초기값을_이용하여_객체로_이루어진_배열에_담긴_배열_연결하기">확장 연산자와 초기값을 이용하여 객체로 이루어진 배열에 담긴 배열 연결하기</h3>
+### 확장 연산자와 초기값을 이용하여 객체로 이루어진 배열에 담긴 배열 연결하기
 
-<pre class="brush: js">// friends - an array of objects
+```js
+// friends - an array of objects
 // where object field "books" - list of favorite books
 var friends = [{
   name: 'Anna',
@@ -356,16 +272,15 @@ var allbooks = friends.reduce(function(accumulator, currentValue) {
 //   'Romeo and Juliet', 'The Lord of the Rings',
 //   'The Shining'
 // ]
-</pre>
+```
 
-<h3 id="배열의_중복_항목_제거">배열의 중복 항목 제거</h3>
+### 배열의 중복 항목 제거
 
-<div class="blockIndicator note">
-<p>참고: {{jsxref("Set")}}과 {{jsxref("Array.from()")}}을 사용할 수 있는 환경이라면, <code>let orderedArray = Array.from(new Set(myArray));</code>를 사용해 중복 요소를 제거할 수도 있습니다.</p>
-</div>
+> **참고:** 참고: {{jsxref("Set")}}과 {{jsxref("Array.from()")}}을 사용할 수 있는 환경이라면, `let orderedArray = Array.from(new Set(myArray));`를 사용해 중복 요소를 제거할 수도 있습니다.
 
-<pre class="brush: js">let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
-let result = arr.sort().reduce((accumulator, current) =&gt; {
+```js
+let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+let result = arr.sort().reduce((accumulator, current) => {
     const length = accumulator.length
     if (length === 0 || accumulator[length - 1] !== current) {
         accumulator.push(current);
@@ -373,11 +288,12 @@ let result = arr.sort().reduce((accumulator, current) =&gt; {
     return accumulator;
 }, []);
 console.log(result); //[1,2,3,4,5]
-</pre>
+```
 
-<h3 id="프로미스를_순차적으로_실행하기">프로미스를 순차적으로 실행하기</h3>
+### 프로미스를 순차적으로 실행하기
 
-<pre class="brush: js">/**
+```js
+/**
  * Runs promises from array of functions that can return promises
  * in chained manner
  *
@@ -386,21 +302,21 @@ console.log(result); //[1,2,3,4,5]
  */
 function runPromiseInSequence(arr, input) {
   return arr.reduce(
-    (promiseChain, currentFunction) =&gt; promiseChain.then(currentFunction),
+    (promiseChain, currentFunction) => promiseChain.then(currentFunction),
     Promise.resolve(input)
   );
 }
 
 // promise function 1
 function p1(a) {
-  return new Promise((resolve, reject) =&gt; {
+  return new Promise((resolve, reject) => {
     resolve(a * 5);
   });
 }
 
 // promise function 2
 function p2(a) {
-  return new Promise((resolve, reject) =&gt; {
+  return new Promise((resolve, reject) => {
     resolve(a * 2);
   });
 }
@@ -412,7 +328,7 @@ function f3(a) {
 
 // promise function 4
 function p4(a) {
-  return new Promise((resolve, reject) =&gt; {
+  return new Promise((resolve, reject) => {
     resolve(a * 4);
   });
 }
@@ -420,18 +336,19 @@ function p4(a) {
 const promiseArr = [p1, p2, f3, p4];
 runPromiseInSequence(promiseArr, 10)
   .then(console.log);   // 1200
-</pre>
+```
 
-<h3 id="함수_구성을_위한_파이프_함수">함수 구성을 위한 파이프 함수</h3>
+### 함수 구성을 위한 파이프 함수
 
-<pre class="brush: js">// Building-blocks to use for composition
-const double = x =&gt; x + x;
-const triple = x =&gt; 3 * x;
-const quadruple = x =&gt; 4 * x;
+```js
+// Building-blocks to use for composition
+const double = x => x + x;
+const triple = x => 3 * x;
+const quadruple = x => 4 * x;
 
 // Function composition enabling pipe functionality
-const pipe = (...functions) =&gt; input =&gt; functions.reduce(
-    (acc, fn) =&gt; fn(acc),
+const pipe = (...functions) => input => functions.reduce(
+    (acc, fn) => fn(acc),
     input
 );
 
@@ -446,11 +363,12 @@ multiply6(6); // 36
 multiply9(9); // 81
 multiply16(16); // 256
 multiply24(10); // 240
-</pre>
+```
 
-<h3 id="reduce()로_map()_작성"><code>reduce()</code>로 <code>map()</code> 작성</h3>
+### `reduce()`로 `map()` 작성
 
-<pre class="brush: js">if (!Array.prototype.mapUsingReduce) {
+```js
+if (!Array.prototype.mapUsingReduce) {
   Array.prototype.mapUsingReduce = function(callback, thisArg) {
     return this.reduce(function(mappedArray, currentValue, index, array) {
       mappedArray[index] = callback.call(thisArg, currentValue, index, array);
@@ -460,14 +378,14 @@ multiply24(10); // 240
 }
 
 [1, 2, , 3].mapUsingReduce(
-  (currentValue, index, array) =&gt; currentValue + index + array.length
+  (currentValue, index, array) => currentValue + index + array.length
 ); // [5, 7, , 10]
+```
 
-</pre>
+## 폴리필
 
-<h2 id="폴리필">폴리필</h2>
-
-<pre class="brush: js">// ECMA-262의 진행 단계, 5판(Edition), 15.4.4.21
+```js
+// ECMA-262의 진행 단계, 5판(Edition), 15.4.4.21
 // 참조: http://es5.github.io/#x15.4.4.21
 // https://tc39.github.io/ecma262/#sec-array.prototype.reduce
 if (!Array.prototype.reduce) {
@@ -486,30 +404,30 @@ if (!Array.prototype.reduce) {
       var o = Object(this);
 
       // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
+      var len = o.length >>> 0;
 
       // Steps 3, 4, 5, 6, 7
       var k = 0;
       var value;
 
-      if (arguments.length &gt;= 2) {
+      if (arguments.length >= 2) {
         value = arguments[1];
       } else {
-        while (k &lt; len &amp;&amp; !(k in o)) {
+        while (k < len && !(k in o)) {
           k++;
         }
 
         // 3. If len is 0 and initialValue is not present,
         //    throw a TypeError exception.
-        if (k &gt;= len) {
+        if (k >= len) {
           throw new TypeError( 'Reduce of empty array ' +
             'with no initial value' );
         }
         value = o[k++];
       }
 
-      // 8. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 8. Repeat, while k < len
+      while (k < len) {
         // a. Let Pk be ! ToString(k).
         // b. Let kPresent be ? HasProperty(O, Pk).
         // c. If kPresent is true, then
@@ -530,18 +448,16 @@ if (!Array.prototype.reduce) {
     }
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array.prototype.reduceRight()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.reduceRight()")}}

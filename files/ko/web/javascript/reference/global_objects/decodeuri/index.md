@@ -5,97 +5,71 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p><code><strong>decodeURI()</strong></code> 함수는 {{jsxref("encodeURI")}}이나 비슷한 루틴으로 사전에 만들어진 URI(Uniform Resource Identifier, 인터넷식별자) 를 해독합니다.</p>
+**`decodeURI()`** 함수는 {{jsxref("encodeURI")}}이나 비슷한 루틴으로 사전에 만들어진 URI(Uniform Resource Identifier, 인터넷식별자) 를 해독합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
 
+## 구문
 
+```js
+    decodeURI(encodedURI)
+```
 
-<h2 id="구문">구문</h2>
+### 파라미터
 
-<pre class="syntaxbox"><code>decodeURI(<em>encodedURI</em>)</code></pre>
+- `encodedURI`
+  - : 완전하고 암호화된 인터넷식별자(URI)
 
-<h3 id="파라미터">파라미터</h3>
+### 리턴 값
 
-<dl>
- <dt><code>encodedURI</code></dt>
- <dd>완전하고 암호화된 인터넷식별자(URI)</dd>
-</dl>
+주어진 암호화된 URI의 암호화되지 않은 버전을 나타내는 새 문자열을 반환합니다.
 
-<h3 id="리턴_값">리턴 값</h3>
+### 예외
 
-<p>주어진 암호화된 URI의 암호화되지 않은 버전을 나타내는 새 문자열을 반환합니다.</p>
+`encodedURI`에 유효하지 않은 문자열이 포함된 경우 {{jsxref("URIError")}} ("malformed URI sequence") 예외를 던집니다.
 
-<h3 id="예외">예외</h3>
+## 설명
 
-<p><code><em>encodedURI</em></code>에 유효하지 않은 문자열이 포함된 경우 {{jsxref("URIError")}} ("malformed URI sequence") 예외를 던집니다.</p>
+암호화된 URI의 각 이스케이프 시퀀스(확장문자열)를 자신을 나타내는 문자로 바꾸지만 {{jsxref ( "encodeURI")}}에서 도입할 수 없었던 이스케이프 시퀀스는 해독하지 않습니다. "#"문자는 이스케이프 시퀀스에서 해독되지 않습니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p>암호화된 URI의 각 이스케이프 시퀀스(확장문자열)를 자신을 나타내는 문자로 바꾸지만 {{jsxref ( "encodeURI")}}에서 도입할 수 없었던 이스케이프 시퀀스는 해독하지 않습니다. "#"문자는 이스케이프 시퀀스에서 해독되지 않습니다.</p>
+### Decoding a Cyrillic URL
 
-<h2 id="예제">예제</h2>
-
-<h3 id="Decoding_a_Cyrillic_URL">Decoding a Cyrillic URL</h3>
-
-<pre class="brush: js">decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+```js
+decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
-</pre>
+```
 
-<h3 id="Catching_errors">Catching errors</h3>
+### Catching errors
 
-<pre>try {
-  var a = decodeURI('%E0%A4%A');
-} catch(e) {
-  console.error(e);
-}
+```js
+    try {
+      var a = decodeURI('%E0%A4%A');
+    } catch(e) {
+      console.error(e);
+    }
 
-// URIError: malformed URI sequence</pre>
+    // URIError: malformed URI sequence
+```
 
-<h2 id="사양">사양</h2>
+## 사양
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.3.1', 'decodeURI')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-decodeuri-encodeduri', 'decodeURI')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-decodeuri-encodeduri', 'decodeURI')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                            | Status                       | Comment             |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.1.3.1', 'decodeURI')}}                     | {{Spec2('ES5.1')}}     |                     |
+| {{SpecName('ES6', '#sec-decodeuri-encodeduri', 'decodeURI')}}         | {{Spec2('ES6')}}         |                     |
+| {{SpecName('ESDraft', '#sec-decodeuri-encodeduri', 'decodeURI')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
+{{Compat}}
 
+## 참조
 
-<p>{{Compat("javascript.builtins.decodeURI")}}</p>
-
-<h2 id="참조">참조</h2>
-
-<ul>
- <li>{{jsxref("decodeURIComponent")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURIComponent")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

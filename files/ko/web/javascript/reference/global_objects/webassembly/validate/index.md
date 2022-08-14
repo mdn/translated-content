@@ -3,54 +3,51 @@ title: WebAssembly.validate()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>WebAssembly.validate()</code> </strong>함수는 바이트가 유효한 wasm 모듈을 형성하는지 (<code>true</code>) 또는 생성하지 않는지 (<code>false</code>)를 반환하여 WebAssembly 바이너리 코드의 지정된 <a href="/ko/docs/Web/JavaScript/Typed_arrays">typed array</a>의 유효성을 검사합니다.</p>
+**`WebAssembly.validate()` **함수는 바이트가 유효한 wasm 모듈을 형성하는지 (`true`) 또는 생성하지 않는지 (`false`)를 반환하여 WebAssembly 바이너리 코드의 지정된 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)의 유효성을 검사합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 <pre class="syntax">WebAssembly.validate(bufferSource);</pre>
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><em>bufferSource</em></code></dt>
- <dd>유효성을 검사 할 WebAssembly 바이너리 코드가 들어있는 <a href="/ko/docs/Web/JavaScript/Typed_arrays">typed array</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>입니다.</dd>
-</dl>
+- `bufferSource`
+  - : 유효성을 검사 할 WebAssembly 바이너리 코드가 들어있는 [typed array](/ko/docs/Web/JavaScript/Typed_arrays) 또는 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)입니다.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>bufferSource</code>가 유효한 wasm 코드 (<code>true</code>)인지 아닌지 (<code>false</code>)를 지정하는 부울입니다.</p>
+`bufferSource`가 유효한 wasm 코드 (`true`)인지 아닌지 (`false`)를 지정하는 부울입니다.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p><code>bufferSource</code>가 <a href="/ko/docs/Web/JavaScript/Typed_arrays">typed array</a>이나 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>가 아닌 경우 {{jsxref ( "TypeError")}}가 발생합니다.</p>
+`bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)이나 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)가 아닌 경우 {{jsxref ( "TypeError")}}가 발생합니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>다음 예제 (validate.html <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html">source code</a> 참조 및 <a href="https://mdn.github.io/webassembly-examples/js-api-examples/validate.html">see it live</a>)는 .wasm 모듈을 가져 와서 형식화 된 배열로 변환합니다. 그런 다음 <code>validate()</code> 메서드를 사용하여 모듈이 유효한지 확인합니다.</p>
+다음 예제 (validate.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html) 참조 및 [see it live](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html))는 .wasm 모듈을 가져 와서 형식화 된 배열로 변환합니다. 그런 다음 `validate()` 메서드를 사용하여 모듈이 유효한지 확인합니다.
 
-<pre class="brush: js">fetch('simple.wasm').then(response =&gt;
+```js
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
 ).then(function(bytes) {
   var valid = WebAssembly.validate(bytes);
   console.log("The given bytes are "
     + (valid ? "" : "not ") + "a valid wasm module");
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.WebAssembly.validate")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/ko/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/ko/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/ko/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/ko/docs/WebAssembly) overview page
+- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)

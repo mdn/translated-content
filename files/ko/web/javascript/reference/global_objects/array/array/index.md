@@ -8,68 +8,69 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Array()</code></strong> 생성자는 새로운 {{jsxref("Array")}} 객체를 생성할 때 사용합니다.</p>
+**`Array()`** 생성자는 새로운 {{jsxref("Array")}} 객체를 생성할 때 사용합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">[<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
+```js
+    [element0, element1, ..., elementN]
 
-new Array(<var>element0</var>, <var>element1</var>[, ...[, <var>elementN</var>]])
-new Array(<var>arrayLength</var>)</pre>
+    new Array(element0, element1[, ...[, elementN]])
+    new Array(arrayLength)
+```
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>element<em>N</em></code></dt>
- <dd>JavaScript 배열을 초기화할 때 채워넣을 요소. 단, 항목이 하나 뿐이며 그 항목의 자료형이 숫자일 경우 아래의 <code>arrayLength</code> 매개변수로 간주합니다.</dd>
- <dt><code>arrayLength</code></dt>
- <dd><code>Array</code> 생성자에 제공한 유일한 매개변수가 0에서 2^32-1 이하의 정수인 경우, <code>length</code> 속성이 해당 값인 새로운 JavaScript 배열을 생성합니다. (<strong>참고:</strong> 이렇게 생성한 배열은 <code>arrayLength</code> 만큼의 빈 슬롯을 가지는 것으로, 실제 {{jsxref("undefined")}}를 채우는 것이 아닙니다.) 값이 범위 밖이거나 정수가 아닌 경우 {{jsxref("RangeError")}}가 발생합니다.</dd>
-</dl>
+- `elementN`
+  - : JavaScript 배열을 초기화할 때 채워넣을 요소. 단, 항목이 하나 뿐이며 그 항목의 자료형이 숫자일 경우 아래의 `arrayLength` 매개변수로 간주합니다.
+- `arrayLength`
+  - : `Array` 생성자에 제공한 유일한 매개변수가 0에서 2^32-1 이하의 정수인 경우, `length` 속성이 해당 값인 새로운 JavaScript 배열을 생성합니다. (**참고:** 이렇게 생성한 배열은 `arrayLength` 만큼의 빈 슬롯을 가지는 것으로, 실제 {{jsxref("undefined")}}를 채우는 것이 아닙니다.) 값이 범위 밖이거나 정수가 아닌 경우 {{jsxref("RangeError")}}가 발생합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="배열_리터럴_표기법">배열 리터럴 표기법</h3>
+### 배열 리터럴 표기법
 
-<p>배열은 <a href="/ko/docs/Web/JavaScript/Reference/Lexical_grammar#배열_리터럴">리터럴 표기법</a>으로 생성할 수도 있습니다.</p>
+배열은 [리터럴 표기법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#배열_리터럴)으로 생성할 수도 있습니다.
 
-<pre class="brush: js">let fruits = ['사과', '바나나']
+```js
+let fruits = ['사과', '바나나']
 
 console.log(fruits.length) // 2
 console.log(fruits[0])     // "사과"
-</pre>
+```
 
-<h3 id="단일_매개변수_배열_생성자">단일 매개변수 배열 생성자</h3>
+### 단일 매개변수 배열 생성자
 
-<p>배열을 생성자와 하나의 숫자 매개변수로 생성할 수 있습니다. 그 결과는 <code>length</code>가 매개변수고, 길이만큼의 빈 슬롯을 가진 배열입니다.</p>
+배열을 생성자와 하나의 숫자 매개변수로 생성할 수 있습니다. 그 결과는 `length`가 매개변수고, 길이만큼의 빈 슬롯을 가진 배열입니다.
 
-<pre class="brush: js">let fruits = new Array(2)
+```js
+let fruits = new Array(2)
 
 console.log(fruits.length) // 2
 console.log(fruits[0])     // undefined
-</pre>
+```
 
-<h3 id="복수_매개변수_배열_생성자">복수 매개변수 배열 생성자</h3>
+### 복수 매개변수 배열 생성자
 
-<p>생성자에 두 개 이상의 매개변수를 제공할 경우, 매개변수를 원소로 하는 새로운 배열을 생성합니다.</p>
+생성자에 두 개 이상의 매개변수를 제공할 경우, 매개변수를 원소로 하는 새로운 배열을 생성합니다.
 
-<pre class="brush: js">let fruits = new Array('사과', '바나나')
+```js
+let fruits = new Array('사과', '바나나')
 
 console.log(fruits.length) // 2
 console.log(fruits[0])     // "사과"
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Array.Array")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array")}} 클래스</li>
-</ul>
+- {{jsxref("Array")}} 클래스

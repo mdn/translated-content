@@ -1,5 +1,5 @@
 ---
-title: 'get Array[@@species]'
+title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 tags:
   - Array
@@ -9,47 +9,50 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Array[@@species]</code> </strong>접근자 속성은 <code>Array</code> 생성자를 반환합니다.</p>
+**`Array[@@species]` **접근자 속성은 `Array` 생성자를 반환합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">Array[Symbol.species]
-</pre>
+```js
+    Array[Symbol.species]
+```
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>{{jsxref("Array")}} 생성자.</p>
+{{jsxref("Array")}} 생성자.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>species</code> 접근자 속성은 <code>Array</code> 객체의 기본 생성자를 반환합니다. 서브클래스 생성자는 생성자 할당을 변경하기 위해 이 속성을 재정의할 수 있습니다.</p>
+`species` 접근자 속성은 `Array` 객체의 기본 생성자를 반환합니다. 서브클래스 생성자는 생성자 할당을 변경하기 위해 이 속성을 재정의할 수 있습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p><code>species</code> 속성은 <code>Array</code> 객체의 <code>Array</code> 생성자를 반환합니다.</p>
+`species` 속성은 `Array` 객체의 `Array` 생성자를 반환합니다.
 
-<pre class="brush: js">Array[Symbol.species]; // function Array()</pre>
+```js
+Array[Symbol.species]; // function Array()
+```
 
-<p>파생 콜렉션 개체(예시: 사용자 설정 배열인 <code>MyArray</code>)에서, <code>MyArray</code> 종(species)은 <code>MyArray</code> 생성자입니다. 그러나 이 속성을 재정의하면 파생 클래스 메서드에서 상위 <code>Array</code> 객체를 반환할 수 있습니다.</p>
+파생 콜렉션 개체(예시: 사용자 설정 배열인 `MyArray`)에서, `MyArray` 종(species)은 `MyArray` 생성자입니다. 그러나 이 속성을 재정의하면 파생 클래스 메서드에서 상위 `Array` 객체를 반환할 수 있습니다.
 
-<pre class="brush: js">class MyArray extends Array {
+```js
+class MyArray extends Array {
   // MyArray species를 부모 Array 생성자로 재설정
   static get [Symbol.species]() { return Array; }
-}</pre>
+}
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Array.@@species")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Symbol.species")}}

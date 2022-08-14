@@ -8,71 +8,69 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.isInteger()</code> </strong>메서드는 주어진 값이 정수인지 판별합니다.</p>
+**`Number.isInteger()` **메서드는 주어진 값이 정수인지 판별합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 
+## 구문
 
+```js
+    Number.isInteger(value)
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Number.isInteger(v<var>alue</var>)</pre>
+- `value`
+  - : 정수인지 확인하려는 값.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>value</code></dt>
- <dd>정수인지 확인하려는 값.</dd>
-</dl>
+주어진 값의 정수 여부를 나타내는 {{jsxref("Boolean")}}.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>주어진 값의 정수 여부를 나타내는 {{jsxref("Boolean")}}.</p>
+매개변수의 값이 정수면 `true`를, 아니면 `false`를 반환합니다. 값이 {{jsxref("NaN")}}이거나 {{jsxref("Infinity")}}여도 `false`를 반환합니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p>매개변수의 값이 정수면 <code>true</code>를, 아니면 <code>false</code>를 반환합니다. 값이 {{jsxref("NaN")}}이거나 {{jsxref("Infinity")}}여도 <code>false</code>를 반환합니다.</p>
+```js
+    Number.isInteger(0);         // true
+    Number.isInteger(1);         // true
+    Number.isInteger(-100000);   // true
+    Number.isInteger(99999999999999999999999); // true
 
-<h2 id="예제">예제</h2>
+    Number.isInteger(0.1);       // false
+    Number.isInteger(Math.PI);   // false
 
-<pre>Number.isInteger(0);         // true
-Number.isInteger(1);         // true
-Number.isInteger(-100000);   // true
-Number.isInteger(99999999999999999999999); // true
+    Number.isInteger(NaN);       // false
+    Number.isInteger(Infinity);  // false
+    Number.isInteger(-Infinity); // false
+    Number.isInteger('10');      // false
+    Number.isInteger(true);      // false
+    Number.isInteger(false);     // false
+    Number.isInteger([1]);       // false
+```
 
-Number.isInteger(0.1);       // false
-Number.isInteger(Math.PI);   // false
+## 폴리필
 
-Number.isInteger(NaN);       // false
-Number.isInteger(Infinity);  // false
-Number.isInteger(-Infinity); // false
-Number.isInteger('10');      // false
-Number.isInteger(true);      // false
-Number.isInteger(false);     // false
-Number.isInteger([1]);       // false
-</pre>
-
-<h2 id="폴리필">폴리필</h2>
-
-<pre class="brush: js">Number.isInteger = Number.isInteger || function(value) {
-  return typeof value === "number" &amp;&amp;
-    isFinite(value) &amp;&amp;
+```js
+Number.isInteger = Number.isInteger || function(value) {
+  return typeof value === "number" &&
+    isFinite(value) &&
     Math.floor(value) === value;
 };
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>{{Compat("javascript.builtins.Number.isInteger")}}</div>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>메서드가 속한 {{jsxref("Number")}} 객체.</li>
-</ul>
+- 메서드가 속한 {{jsxref("Number")}} 객체.

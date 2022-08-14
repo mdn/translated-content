@@ -9,51 +9,49 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> 정적 메서드는 대상 함수를 주어진 매개변수로 호출합니다.</p>
+**`Reflect`\*\***`.apply()`\*\* 정적 메서드는 대상 함수를 주어진 매개변수로 호출합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
 
+## 구문
 
+    Reflect.apply(target, thisArgument, argumentsList)
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Reflect.apply(<em>target</em>, <em>thisArgument</em>, <em>argumentsList</em>)
-</pre>
+- `target`
+  - : 호출할 대상 함수.
+- `thisArgument`
+  - : 호출에서 `target`의 `this`로 사용할 값.
+- `argumentsList`
+  - : `target`을 호출할 때 매개변수로 전달할 배열형 객체.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>target</code></dt>
- <dd>호출할 대상 함수.</dd>
- <dt><code>thisArgument</code></dt>
- <dd>호출에서 <code>target</code>의 <code>this</code>로 사용할 값.</dd>
- <dt><code>argumentsList</code></dt>
- <dd><code>target</code>을 호출할 때 매개변수로 전달할 배열형 객체.</dd>
-</dl>
+주어진 `this` 값과 매개변수로 대상 함수를 호출한 결과.
 
-<h3 id="반환_값">반환 값</h3>
+### 예외
 
-<p>주어진 <code>this</code> 값과 매개변수로 대상 함수를 호출한 결과.</p>
+`target`이 호출 가능한 객체가 아니면 {{jsxref("TypeError")}}.
 
-<h3 id="예외">예외</h3>
+## 설명
 
-<p><code>target</code>이 호출 가능한 객체가 아니면 {{jsxref("TypeError")}}.</p>
+ES5에서는 {{jsxref("Function.prototype.apply()")}} 메서드를 사용해, 함수를 호출할 때 `this` 값을 지정하거나 매개변수를 배열(또는 배열형 객체)에서 넘겨줄 수 있었습니다.
 
-<h2 id="설명">설명</h2>
+```js
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+```
 
-<p>ES5에서는 {{jsxref("Function.prototype.apply()")}} 메서드를 사용해, 함수를 호출할 때 <code>this</code> 값을 지정하거나 매개변수를 배열(또는 배열형 객체)에서 넘겨줄 수 있었습니다.</p>
+`Reflect.apply()` 메서드를 사용해 같은 작업을 더 쉽고 유려하게 수행할 수 있습니다.
 
-<pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
+## 예제
 
-<p><code>Reflect.apply()</code> 메서드를 사용해 같은 작업을 더 쉽고 유려하게 수행할 수 있습니다.</p>
+### `Reflect.apply()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="Reflect.apply_사용하기"><code>Reflect.apply()</code> 사용하기</h3>
-
-<pre class="brush: js">Reflect.apply(Math.floor, undefined, [1.75]);
+```js
+Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
@@ -64,19 +62,17 @@ Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index;
 
 Reflect.apply(''.charAt, 'ponies', [3]);
 // "i"
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Reflect.apply")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Function.prototype.apply()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Function.prototype.apply()")}}

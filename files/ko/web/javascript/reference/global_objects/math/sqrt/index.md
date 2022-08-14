@@ -3,86 +3,62 @@ title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <strong><code>Math.sqrt()</code></strong> 함수는 숫자의 제곱근을 반환합니다.</p>
+**`Math.sqrt()`** 함수는 숫자의 제곱근을 반환합니다.
 
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>s</mi><mi>q</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 0, \mathtt{Math.sqrt(x)} = \sqrt{x} = \text{the unique} \; y \geq 0 \; \text{such that} \; y^2 = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>s</mi><mi>q</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 0, \mathtt{Math.sqrt(x)} = \sqrt{x} = \text{the unique} \; y \geq 0 \; \text{such that} \; y^2 = x</annotation></semantics></math>
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox"><code>Math.sqrt(<var>x</var>)</code></pre>
+```js
+    Math.sqrt(x)
+```
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>x</code></dt>
- <dd>숫자.</dd>
-</dl>
+- `x`
+  - : 숫자.
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>주어진 숫자에 루트(<strong>√ </strong>)를 씌웁니다. 만약 숫자가 음수이면 {{jsxref("NaN")}}를 반환합니다.</p>
+주어진 숫자에 루트(**√** )를 씌웁니다. 만약 숫자가 음수이면 {{jsxref("NaN")}}를 반환합니다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>만약 <code>x</code> 가 음수라면 <code>Math.sqrt()</code> 함수는 {{jsxref("NaN")}}를 반환합니다.</p>
+만약 `x` 가 음수라면 `Math.sqrt()` 함수는 {{jsxref("NaN")}}를 반환합니다.
 
-<p><code>sqrt()</code>는 <code>Math</code>의 정적 메서드 이므로 만든  <code>Math</code> 객체의 메서드가 아니라 항상 <code>Math.sqrt()</code>함수를 사용해야합니다. (<code>Math</code>는 생성자가 없습니다.)</p>
+`sqrt()`는 `Math`의 정적 메서드 이므로 만든 `Math` 객체의 메서드가 아니라 항상 `Math.sqrt()`함수를 사용해야합니다. (`Math`는 생성자가 없습니다.)
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="Math.sqrt()"> <code>Math.sqrt()</code></h3>
+### `Math.sqrt()`
 
-<pre class="brush: js">Math.sqrt(9); // 3
+```js
+Math.sqrt(9); // 3
 Math.sqrt(2); // 1.414213562373095
 
 Math.sqrt(1);  // 1
 Math.sqrt(0);  // 0
 Math.sqrt(-1); // NaN
-</pre>
+```
 
-<h2 id="표준">표준</h2>
+## 표준
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">표준</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sqrt', 'Math.sqrt')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| 표준                                                                     | 상태                         | 비고                                               |
+| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}}     | {{Spec2('ES5.1')}}     |                                                    |
+| {{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}     | {{Spec2('ES6')}}         |                                                    |
+| {{SpecName('ESDraft', '#sec-math.sqrt', 'Math.sqrt')}} | {{Spec2('ESDraft')}} |                                                    |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Math.sqrt")}}</p>
+{{Compat}}
 
-<h2 id="참조">참조</h2>
+## 참조
 
-<ul>
- <li>{{jsxref("Math.cbrt()")}}</li>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.cbrt()")}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.pow()")}}

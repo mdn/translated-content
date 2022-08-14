@@ -15,44 +15,39 @@ tags:
   - 잠금
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
+**`Object.freeze()`** 메서드는 객체를 **동결**합니다. 동결된 객체는 더 이상 변경될 수 없습니다. 즉, 동결된 객체는 새로운 속성을 추가하거나 존재하는 속성을 제거하는 것을 방지하며 존재하는 속성의 불변성, 설정 가능성(configurability), 작성 가능성이 변경되는 것을 방지하고, 존재하는 속성의 값이 변경되는 것도 방지합니다. 또한, 동결 객체는 그 프로토타입이 변경되는것도 방지합니다. `freeze()`는 전달된 동일한 객체를 반환합니다.
 
-<p><code><strong>Object.freeze()</strong></code> 메서드는 객체를 <strong>동결</strong>합니다. 동결된 객체는 더 이상 변경될 수 없습니다. 즉, 동결된 객체는 새로운 속성을 추가하거나 존재하는 속성을 제거하는 것을 방지하며 존재하는 속성의 불변성, 설정 가능성(configurability), 작성 가능성이 변경되는 것을 방지하고, 존재하는 속성의 값이 변경되는 것도 방지합니다. 또한, 동결 객체는 그 프로토타입이 변경되는것도 방지합니다. <code>freeze()</code>는 전달된 동일한 객체를 반환합니다.</p>
+{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
 
+## 구문
 
-<div>{{EmbedInteractiveExample("pages/js/object-freeze.html")}}</div>
+    Object.freeze(obj)
 
+### 매개변수
 
+- `obj`
+  - : 동결할 객체.
 
-<h2 id="Syntax">구문</h2>
+### 반환 값
 
-<pre class="syntaxbox">Object.freeze(<var>obj</var>)</pre>
+함수로 전달된 객체.
 
-<h3 id="Parameters">매개변수</h3>
+## 설명
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>동결할 객체.</dd>
-</dl>
+동결 객체의 속성 집합에는 어떠한 것도 추가하거나 제거할 수 없으며, 그리 하려는 모든 시도는 조용히 넘어가거나, {{jsxref("TypeError")}} 예외가 발생하며 실패합니다. 예외 발생은 보통 {{jsxref("Strict_mode", "엄격 모드", "", 1)}}인 경우 발생하지만, 반드시 엄격 모드로만 제한되는 것은 아닙니다.
 
-<h3 id="반환_값">반환 값</h3>
+동결 객체가 가진 데이터 속성에 대해선, 값을 변경할 수 없으며 설정 가능 여부와 쓰기 가능 여부 속성 모두 거짓이 됩니다. 접근자 속성(접근자와 설정자)도 동일하게 동작합니다(또한 값을 변경하고 있다는 환상을 줍니다). 수정되는 값이 객체이고 동결된 것이 아니라면 여전히 수정이 가능함을 유의하세요. 객체로써, 배열도 동결될 수 있습니다. 동결한 이후에는 그 엘리먼트를 변경할 수 없으며 배열에 어떠한 엘리먼트도 추가하거나 제거할 수 없습니다.
 
-<p>함수로 전달된 객체.</p>
+`freeze()`는 함수에 전달한 객체를 그대로 반환하며, 동결된 객체 사본을 생성하는 것이 아닙니다.
 
-<h2 id="Description">설명</h2>
+## 예제
 
-<p>동결 객체의 속성 집합에는 어떠한 것도 추가하거나 제거할 수 없으며, 그리 하려는 모든 시도는 조용히 넘어가거나, {{jsxref("TypeError")}} 예외가 발생하며 실패합니다. 예외 발생은 보통 {{jsxref("Strict_mode", "엄격 모드", "", 1)}}인 경우 발생하지만, 반드시 엄격 모드로만 제한되는 것은 아닙니다.</p>
+### 객체 동결하기
 
-<p>동결 객체가 가진 데이터 속성에 대해선, 값을 변경할 수 없으며 설정 가능 여부와 쓰기 가능 여부 속성 모두 거짓이 됩니다. 접근자 속성(접근자와 설정자)도 동일하게 동작합니다(또한 값을 변경하고 있다는 환상을 줍니다). 수정되는 값이 객체이고 동결된 것이 아니라면 여전히 수정이 가능함을 유의하세요. 객체로써, 배열도 동결될 수 있습니다. 동결한 이후에는 그 엘리먼트를 변경할 수 없으며 배열에 어떠한 엘리먼트도 추가하거나 제거할 수 없습니다.</p>
-
-<p><code>freeze()</code>는 함수에 전달한 객체를 그대로 반환하며, 동결된 객체 사본을 생성하는 것이 아닙니다.</p>
-
-<h2 id="Examples">예제</h2>
-
-<h3 id="객체_동결하기">객체 동결하기</h3>
-
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   prop: function() {},
   foo: 'bar'
 };
@@ -97,12 +92,12 @@ Object.defineProperty(obj, 'foo', { value: 'eit' });
 // 아래 두 구문 모두에서 TypeError 발생
 Object.setPrototype(obj, { x: 20 });
 obj.__proto__ = { x: 20 };
+```
 
-</pre>
+### 배열 동결
 
-<h3 id="배열_동결">배열 동결</h3>
-
-<pre class="brush: js">let a = [0];
+```js
+let a = [0];
 Object.freeze(a); // 이제 배열을 수정할 수 없음.
 
 a[0]=1; // 조용하게 실패
@@ -115,11 +110,13 @@ function fail() {
   a.push(2);
 }
 
-fail();</pre>
+fail();
+```
 
-<p>동결된 객체는 변경할 수 없습니다. 하지만, 꼭 그렇지만은 않습니다. 다음 예제는 동결된 객체가 변경될 수 있음을(얕은 동결) 보여줍니다.</p>
+동결된 객체는 변경할 수 없습니다. 하지만, 꼭 그렇지만은 않습니다. 다음 예제는 동결된 객체가 변경될 수 있음을(얕은 동결) 보여줍니다.
 
-<pre class="brush: js">obj = {
+```js
+obj = {
   internal: {}
 };
 
@@ -127,15 +124,16 @@ Object.freeze(obj);
 obj.internal.a = 'aValue';
 
 obj.internal.a // 'aValue'
-</pre>
+```
 
-<p>변경될 수 없는 객체가 되려면, 모든 참조 그래프(다른 객체로의 직간접적 참조)가 오로지 불변의 동결 객체만을 참조해야 합니다. 동결된 객체는 객체 내의 모든 상태(다른 객체로의 값과 참조)가 고정되기 때문에 불변하다고 합니다. 문자열, 숫자, 불리언 값은 언제나 불변하고, 함수와 배열은 객체임을 유의하세요.</p>
+변경될 수 없는 객체가 되려면, 모든 참조 그래프(다른 객체로의 직간접적 참조)가 오로지 불변의 동결 객체만을 참조해야 합니다. 동결된 객체는 객체 내의 모든 상태(다른 객체로의 값과 참조)가 고정되기 때문에 불변하다고 합니다. 문자열, 숫자, 불리언 값은 언제나 불변하고, 함수와 배열은 객체임을 유의하세요.
 
-<h4 id="얕은_동결이_무엇인가요">"얕은 동결"이 무엇인가요?</h4>
+#### "얕은 동결"이 무엇인가요?
 
-<p><code>Object.freeze(object)</code> 호출의 결과는 <code>object</code> 스스로의 직속 속성에만 적용되며, <code>object</code>에 대해서만 속성 추가, 제거, 재할당 연산을 방지합니다. 만약 그 속성의 값이 객체라면, 그 객체는 동결되지 않으며 속성 추가, 제거, 재할당의 대상이 될 수 있습니다.</p>
+`Object.freeze(object)` 호출의 결과는 `object` 스스로의 직속 속성에만 적용되며, `object`에 대해서만 속성 추가, 제거, 재할당 연산을 방지합니다. 만약 그 속성의 값이 객체라면, 그 객체는 동결되지 않으며 속성 추가, 제거, 재할당의 대상이 될 수 있습니다.
 
-<pre class="brush: js">var employee = {
+```js
+var employee = {
   name: "Mayank",
   designation: "Developer",
   address: {
@@ -150,11 +148,12 @@ employee.name = "Dummy"; // 비엄격 모드에서 조용하게 실패
 employee.address.city = "Noida"; // 자식 객체의 속성은 수정 가능
 
 console.log(employee.address.city) // 출력: "Noida"
-</pre>
+```
 
-<p>객체를 불변하게 만들려면, 각 객체 타입의 속성을 재귀적으로 동결해야합니다(깊은 동결). 객체가 그 참조 그래프에서 <a href="https://en.wikipedia.org/wiki/Cycle_(graph_theory)">순환</a>을 포함하지 않는다는 것을 인지하고 있을 때, 디자인을 기반으로 상황에 따라 패턴을 적용해야하며, 그렇지 않을 경우 반복문이 무한히 실행될 수 있습니다. <code>deepFreeze()</code>에 대한 개선은 객체가 불변하게 되는 과정에 있을 때 <code>deepFreeze()</code>의 재귀적인 호출을 차단할 수 있도록 경로(예, 배열) 인자를 받는 내부 함수를 소유하는 것입니다. [window]와 같은, 동결되면 안되는 객체를 동결하는 것에 대한 위험은 여전히 남아 있습니다.</p>
+객체를 불변하게 만들려면, 각 객체 타입의 속성을 재귀적으로 동결해야합니다(깊은 동결). 객체가 그 참조 그래프에서 [순환](<https://en.wikipedia.org/wiki/Cycle_(graph_theory)>)을 포함하지 않는다는 것을 인지하고 있을 때, 디자인을 기반으로 상황에 따라 패턴을 적용해야하며, 그렇지 않을 경우 반복문이 무한히 실행될 수 있습니다. `deepFreeze()`에 대한 개선은 객체가 불변하게 되는 과정에 있을 때 `deepFreeze()`의 재귀적인 호출을 차단할 수 있도록 경로(예, 배열) 인자를 받는 내부 함수를 소유하는 것입니다. \[window]와 같은, 동결되면 안되는 객체를 동결하는 것에 대한 위험은 여전히 남아 있습니다.
 
-<pre class="brush: js">function deepFreeze(object) {
+```js
+function deepFreeze(object) {
 
   // 객체에 정의된 속성명을 추출
   var propNames = Object.getOwnPropertyNames(object);
@@ -164,7 +163,7 @@ console.log(employee.address.city) // 출력: "Noida"
   for (let name of propNames) {
     let value = object[name];
 
-    object[name] = value &amp;&amp; typeof value === "object" ?
+    object[name] = value && typeof value === "object" ?
       deepFreeze(value) : value;
   }
 
@@ -181,56 +180,57 @@ deepFreeze(obj2);
 
 obj2.internal.a = 'anotherValue'; // 비엄격 모드에서 조용하게 실패
 obj2.internal.a; // null
-</pre>
+```
 
-<h2 id="Notes">사용 노트</h2>
+## 사용 노트
 
-<p>ES5에서는, 이 메소드에 대한 인자가 객체(원시형)가 아닐 경우, {{jsxref("TypeError")}}가 발생합니다. ES2015에서는, 비객체 인자가 동결된 평범한 객체인것처럼 다루어져 반환됩니다.</p>
+ES5에서는, 이 메소드에 대한 인자가 객체(원시형)가 아닐 경우, {{jsxref("TypeError")}}가 발생합니다. ES2015에서는, 비객체 인자가 동결된 평범한 객체인것처럼 다루어져 반환됩니다.
 
-<pre class="brush: js">&gt; Object.freeze(1)
+```js
+> Object.freeze(1)
 TypeError: 1 is not an object // ES5 code
 
-&gt; Object.freeze(1)
+> Object.freeze(1)
 1                             // ES2015 code
-</pre>
+```
 
-<p>엘리먼트를 갖는 {{domxref("ArrayBufferView")}}는 메모리를 통한 뷰이므로 다른 가능한 문제를 유발 할 수 있어 {{jsxref("TypeError")}}가 발생합니다.</p>
+엘리먼트를 갖는 {{domxref("ArrayBufferView")}}는 메모리를 통한 뷰이므로 다른 가능한 문제를 유발 할 수 있어 {{jsxref("TypeError")}}가 발생합니다.
 
-<pre class="brush: js">&gt; Object.freeze(new Uint8Array(0)) // 엘리먼트가 없음
+```js
+> Object.freeze(new Uint8Array(0)) // 엘리먼트가 없음
 Uint8Array []
 
-&gt; Object.freeze(new Uint8Array(1)) // 엘리먼트를 가짐
+> Object.freeze(new Uint8Array(1)) // 엘리먼트를 가짐
 TypeError: Cannot freeze array buffer views with elements
 
-&gt; Object.freeze(new DataView(new ArrayBuffer(32))) // 엘리먼트가 없음
+> Object.freeze(new DataView(new ArrayBuffer(32))) // 엘리먼트가 없음
 DataView {}
 
-&gt; Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // 엘리먼트가 없음
+> Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // 엘리먼트가 없음
 Float64Array []
 
-&gt; Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // 엘리먼트를 가짐
-TypeError: Cannot freeze array buffer views with elements</pre>
+> Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // 엘리먼트를 가짐
+TypeError: Cannot freeze array buffer views with elements
+```
 
-<p>세 가지 표준 속성(<code>buf.byteLength</code>, <code>buf.byteOffset</code>, <code>buf.buffer</code>)은 읽기 전용(이들은 {jsxref("ArrayBuffer")}} 또는 {{jsxref("SharedArrayBuffer")}}이므로)이므로, 이러한 속성에 대해 동결을 시도할 이유가 없음을 유의합니다.</p>
+세 가지 표준 속성(`buf.byteLength`, `buf.byteOffset`, `buf.buffer`)은 읽기 전용(이들은 {jsxref("ArrayBuffer")}} 또는 {{jsxref("SharedArrayBuffer")}}이므로)이므로, 이러한 속성에 대해 동결을 시도할 이유가 없음을 유의합니다.
 
-<h3 id="Object.seal과의_비교"><code>Object.seal()</code>과의 비교</h3>
+### `Object.seal()`과의 비교
 
-<p>{{jsxref("Object.seal()")}}을 사용해 봉인된 객체는 존재하는 속성을 변경할 수 있습니다. <code>Object.freeze()</code>로 동결된 객체에서는 존재하는 속성이 불변입니다.</p>
+{{jsxref("Object.seal()")}}을 사용해 봉인된 객체는 존재하는 속성을 변경할 수 있습니다. `Object.freeze()`로 동결된 객체에서는 존재하는 속성이 불변입니다.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Object.freeze")}}</p>
+{{Compat}}
 
-<h2 id="함께_보기">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li>{{jsxref("Object.isFrozen()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

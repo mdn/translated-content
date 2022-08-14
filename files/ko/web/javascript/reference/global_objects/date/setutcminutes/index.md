@@ -4,54 +4,53 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 browser-compat: javascript.builtins.Date.setUTCMinutes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>setUTCMinutes()</strong> 메서드는 표준시에 따라 지정된 날짜의 분을 설정합니다.</p>
+**setUTCMinutes()** 메서드는 표준시에 따라 지정된 날짜의 분을 설정합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setUTCMinutes(<var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]])</code></pre>
+```js
+    dateObj.setUTCMinutes(minutesValue[, secondsValue[, msValue]])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>minutesValue</code></dt>
- <dd>분을 나타내는 0에서 59 사이의 정수입니다.</dd>
- <dt><code>secondsValue</code></dt>
- <dd>선택 과목. 초를 나타내는 0에서 59 사이의 정수입니다. secondsValue 매개 변수를 지정하면 minutesValue도 지정해야합니다.</dd>
- <dt><code>msValue</code></dt>
- <dd>선택 과목. 밀리 초를 나타내는 0에서 999 사이의 숫자입니다. msValue 매개 변수를 지정하는 경우 minutesValue 및 secondsValue도 지정해야합니다.</dd>
-</dl>
+- `minutesValue`
+  - : 분을 나타내는 0에서 59 사이의 정수입니다.
+- `secondsValue`
+  - : 선택 과목. 초를 나타내는 0에서 59 사이의 정수입니다. secondsValue 매개 변수를 지정하면 minutesValue도 지정해야합니다.
+- `msValue`
+  - : 선택 과목. 밀리 초를 나타내는 0에서 999 사이의 숫자입니다. msValue 매개 변수를 지정하는 경우 minutesValue 및 secondsValue도 지정해야합니다.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>1970 년 1 월 1 일 00:00:00 UTC와 업데이트 된 날짜 사이의 밀리 초 숫자입니다.</p>
+1970 년 1 월 1 일 00:00:00 UTC와 업데이트 된 날짜 사이의 밀리 초 숫자입니다.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>secondsValue 및 msValue 매개 변수를 지정하지 않으면 {{jsxref ( "Date.prototype.getUTCSeconds()", "getUTCSeconds()")}} 및 {{jsxref ("Date.prototype.getUTCMilliseconds","getUTCMilliseconds()")}} 메소드가 사용됩니다.</p>
+secondsValue 및 msValue 매개 변수를 지정하지 않으면 {{jsxref ( "Date.prototype.getUTCSeconds()", "getUTCSeconds()")}} 및 {{jsxref ("Date.prototype.getUTCMilliseconds","getUTCMilliseconds()")}} 메소드가 사용됩니다.
 
-<p>지정한 매개 변수가 예상 범위를 벗어나면 setUTCMinutes ()는 그에 따라 {{jsxref("Date")}} 객체의 날짜 정보를 업데이트하려고 시도합니다. 예를 들어 secondsValue에 100을 사용하면 분은 1 (minutesValue + 1)만큼 증가하고 40은 초 단위로 사용됩니다.</p>
+지정한 매개 변수가 예상 범위를 벗어나면 setUTCMinutes ()는 그에 따라 {{jsxref("Date")}} 객체의 날짜 정보를 업데이트하려고 시도합니다. 예를 들어 secondsValue에 100을 사용하면 분은 1 (minutesValue + 1)만큼 증가하고 40은 초 단위로 사용됩니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_setUTCMinutes()">Using <code>setUTCMinutes()</code></h3>
+### Using `setUTCMinutes()`
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCMinutes(43);
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMinutes()")}}</li>
- <li>{{jsxref("Date.prototype.setMinutes()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMinutes()")}}
+- {{jsxref("Date.prototype.setMinutes()")}}

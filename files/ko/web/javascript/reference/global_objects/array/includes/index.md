@@ -10,59 +10,56 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>includes()</code></strong> 메서드는 배열이 특정 요소를 포함하고 있는지 판별합니다.</p>
+**`includes()`** 메서드는 배열이 특정 요소를 포함하고 있는지 판별합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/array-includes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-includes.html")}}
 
+## 구문
 
+```js
+    arr.includes(valueToFind[, fromIndex])
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><var>arr</var>.includes(<em>valueToFind</em>[, <em>fromIndex</em>])
-</pre>
+- `valueToFind`
+  - : 탐색할 요소.> **참고:** 문자나 문자열을 비교할 때, `includes()`는 **대소문자를 구분**합니다.
+- `fromIndex` {{optional_inline}}
+  - : 이 배열에서 searchElement 검색을 시작할 위치입니다. 음의 값은 array.length + fromIndex의 인덱스를 asc로 검색합니다. 기본값은 0입니다.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>valueToFind</code></dt>
- <dd>탐색할 요소.
- <div class="blockIndicator note">
- <p><strong>참고</strong>: 문자나 문자열을 비교할 때, <code>includes()</code>는 <strong>대소문자를 구분</strong>합니다.</p>
- </div>
- </dd>
- <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>이 배열에서 searchElement 검색을 시작할 위치입니다. 음의 값은 array.length + fromIndex의 인덱스를 asc로 검색합니다. 기본값은 0입니다.</dd>
-</dl>
+{{jsxref("Boolean")}}.
 
-<h3 id="반환_값">반환 값</h3>
+## 예제
 
-<p>{{jsxref("Boolean")}}.</p>
-
-<h2 id="예제">예제</h2>
-
-<pre class="brush: js">[1, 2, 3].includes(2);     // true
+```js
+[1, 2, 3].includes(2);     // true
 [1, 2, 3].includes(4);     // false
 [1, 2, 3].includes(3, 3);  // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
-</pre>
+```
 
-<h3 id="fromIndex_가_배열의_길이보다_같거나_큰_경우"><code>fromIndex</code> 가 배열의 길이보다 같거나 큰 경우</h3>
+### `fromIndex` 가 배열의 길이보다 같거나 큰 경우
 
-<p><code>fromIndex</code> 가 배열의 길이보다 같거나 크다면, <code>false</code> 를 반환합니다. 배열은 검색되지 않을 것입니다.</p>
+`fromIndex` 가 배열의 길이보다 같거나 크다면, `false` 를 반환합니다. 배열은 검색되지 않을 것입니다.
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 
 arr.includes('c', 3);   // false
-arr.includes('c', 100); // false</pre>
+arr.includes('c', 100); // false
+```
 
-<h3 id="0보다_작은_인덱스의_계산">0보다 작은 인덱스의 계산</h3>
+### 0보다 작은 인덱스의 계산
 
-<p><code>fromIndex</code> 가 음수라면, 이 계산된 인덱스는 <code>valueToFind</code> 를 찾기 시작할 배열의 위치로 사용되기 위해 연산됩니다. 만약 계산된 인덱스가 <code>-1 * array.length</code> 보다 작거나 같다면, 전체 배열이 검색될 것입니다.</p>
+`fromIndex` 가 음수라면, 이 계산된 인덱스는 `valueToFind` 를 찾기 시작할 배열의 위치로 사용되기 위해 연산됩니다. 만약 계산된 인덱스가 `-1 * array.length` 보다 작거나 같다면, 전체 배열이 검색될 것입니다.
 
-<pre class="brush: js">// array length is 3
+```js
+// array length is 3
 // fromIndex is -100
 // computed index is 3 + (-100) = -97
 
@@ -71,20 +68,24 @@ var arr = ['a', 'b', 'c'];
 arr.includes('a', -100); // true
 arr.includes('b', -100); // true
 arr.includes('c', -100); // true
-arr.includes('a', -2); // false</pre>
+arr.includes('a', -2); // false
+```
 
-<h3 id="제네릭_메소드로_사용되는_includes">제네릭 메소드로 사용되는 <code>includes()</code></h3>
+### 제네릭 메소드로 사용되는 `includes()`
 
-<p><code>includes()</code> 메서드는 의도적으로 제네릭입니다. 배열 객체가 되기 위한 <code>this</code> 값을 요구하지 않아, 다른 종류의 객체에 적용될 수 있습니다 (e.g. 유사 배열 객체). 아래 예시는  이 함수의 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> 객체로 호출되는 <code>includes()</code> 메소드를 보여줍니다.</p>
+`includes()` 메서드는 의도적으로 제네릭입니다. 배열 객체가 되기 위한 `this` 값을 요구하지 않아, 다른 종류의 객체에 적용될 수 있습니다 (e.g. 유사 배열 객체). 아래 예시는 이 함수의 [arguments](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체로 호출되는 `includes()` 메소드를 보여줍니다.
 
-<pre class="brush: js">(function() {
+```js
+(function() {
   console.log([].includes.call(arguments, 'a')); // true
   console.log([].includes.call(arguments, 'd')); // false
-})('a','b','c');</pre>
+})('a','b','c');
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<pre class="brush: js"><code>// https://tc39.github.io/ecma262/#sec-array.prototype.includes
+```js
+// https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
   Object.defineProperty(Array.prototype, 'includes', {
     value: function(searchElement, fromIndex) {
@@ -97,7 +98,7 @@ if (!Array.prototype.includes) {
       var o = Object(this);
 
       // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
+      var len = o.length >>> 0;
 
       // 3. If len is 0, return false.
       if (len === 0) {
@@ -110,17 +111,17 @@ if (!Array.prototype.includes) {
 
       // 5. If n ≥ 0, then
       //  a. Let k be n.
-      // 6. Else n &lt; 0,
+      // 6. Else n < 0,
       //  a. Let k be len + n.
-      //  b. If k &lt; 0, let k be 0.
-      var k = Math.max(n &gt;= 0 ? n : len - Math.abs(n), 0);
+      //  b. If k < 0, let k be 0.
+      var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
 
       function sameValueZero(x, y) {
-        return x === y || (typeof x === 'number' &amp;&amp; typeof y === 'number' &amp;&amp; isNaN(x) &amp;&amp; isNaN(y));
+        return x === y || (typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y));
       }
 
-      // 7. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 7. Repeat, while k < len
+      while (k < len) {
         // a. Let elementK be the result of ? Get(O, ! ToString(k)).
         // b. If SameValueZero(searchElement, elementK) is true, return true.
         if (sameValueZero(o[k], searchElement)) {
@@ -134,22 +135,21 @@ if (!Array.prototype.includes) {
       return false;
     }
   });
-}</code></pre>
+}
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>{{Compat("javascript.builtins.Array.includes")}}</div>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}

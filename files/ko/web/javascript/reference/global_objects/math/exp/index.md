@@ -3,86 +3,60 @@ title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <strong><code>Math.exp()</code></strong>함수는 <code>x</code>를 인수로 하는 <code>e^x</code> 값을 반환합니다. 그리고 <code>e</code>는 {{jsxref("Math.E", "오일러 상수(또는 네이피어 상수)", "", 1)}}는 자연 로그의 밑입니다.</p>
+**`Math.exp()`**함수는 `x`를 인수로 하는 `e^x` 값을 반환합니다. 그리고 `e`는 {{jsxref("Math.E", "오일러 상수(또는 네이피어 상수)", "", 1)}}는 자연 로그의 밑입니다.
 
-<div>{{EmbedInteractiveExample("pages/js/math-exp.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-exp.html")}}
 
+## 구문
 
+```js
+    Math.exp(x)
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><code>Math.exp(<var>x</var>)</code></pre>
+- `x`
+  - : 숫자
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>x</code></dt>
- <dd>숫자</dd>
-</dl>
+`e`는 {{jsxref("Math.E", "오일러 상수", "", 1)}}이고 `x`는 인수인 `e^x`값
 
-<h3 id="반환_값">반환 값</h3>
+## Description
 
-<p><code>e</code>는 {{jsxref("Math.E", "오일러 상수", "", 1)}}이고 <code>x</code>는 인수인 <code>e^x</code>값</p>
+`exp()`는 `Math`의 정적 메소드이기 때문에 새로 작성한 `Math` 오브젝트 대신에 항상 `Math.exp()`의 형태로 써야 합니다. (`Math`는 생성자가 아닙니다.)
 
-<h2 id="Description">Description</h2>
+## 예시
 
-<p><code>exp()</code>는 <code>Math</code>의 정적 메소드이기 때문에 새로 작성한 <code>Math</code> 오브젝트 대신에 항상 <code>Math.exp()</code>의 형태로 써야 합니다. (<code>Math</code>는 생성자가 아닙니다.)</p>
+### `Math.exp()` 사용 예
 
-<h2 id="예시">예시</h2>
-
-<h3 id="Math.exp_사용_예"> <code>Math.exp()</code> 사용 예</h3>
-
-<pre class="brush: js">Math.exp(-1); // 0.36787944117144233
+```js
+Math.exp(-1); // 0.36787944117144233
 Math.exp(0);  // 1
 Math.exp(1);  // 2.718281828459045
-</pre>
+```
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">설명</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>최초의 정의. JavaScript 1.0.에서 첫 시행.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| 설명                                                                 | 상태                         | 비고                                      |
+| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | 최초의 정의. JavaScript 1.0.에서 첫 시행. |
+| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}} | {{Spec2('ES5.1')}}     |                                           |
+| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}     | {{Spec2('ES6')}}         |                                           |
+| {{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}} | {{Spec2('ESDraft')}} |                                           |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Math.exp")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Math.E")}}</li>
- <li>{{jsxref("Math.expm1()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.E")}}
+- {{jsxref("Math.expm1()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

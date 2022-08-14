@@ -11,38 +11,37 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 browser-compat: javascript.builtins.Object.create
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.create()</strong></code> 메서드는 지정된 프로토타입 객체 및 속성(property)을 갖는 새 객체를 만듭니다.</p>
+**`Object.create()`** 메서드는 지정된 프로토타입 객체 및 속성(property)을 갖는 새 객체를 만듭니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">Object.create(<var>proto</var>[, <var>propertiesObject</var>])</pre>
+    Object.create(proto[, propertiesObject])
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>proto</code></dt>
- <dd>새로 만든 객체의 프로토타입이어야 할 객체.</dd>
- <dt><code>propertiesObject</code></dt>
- <dd>선택사항. 지정되고 {{jsxref("undefined")}}가 아니면, 자신의 속성(즉, 자체에 정의되어 그 프로토타입 체인에서 열거가능하지 <em>않은</em> 속성)이 열거가능한 객체는 해당 속성명으로 새로 만든 객체에 추가될 속성 설명자(descriptor)를 지정합니다. 이러한 속성은 {{jsxref("Object.defineProperties()")}}의 두 번째 인수에 해당합니다.</dd>
-</dl>
+- `proto`
+  - : 새로 만든 객체의 프로토타입이어야 할 객체.
+- `propertiesObject`
+  - : 선택사항. 지정되고 {{jsxref("undefined")}}가 아니면, 자신의 속성(즉, 자체에 정의되어 그 프로토타입 체인에서 열거가능하지 _않은_ 속성)이 열거가능한 객체는 해당 속성명으로 새로 만든 객체에 추가될 속성 설명자(descriptor)를 지정합니다. 이러한 속성은 {{jsxref("Object.defineProperties()")}}의 두 번째 인수에 해당합니다.
 
-<h3 id="반환값">반환값</h3>
+### 반환값
 
-<p>지정된 프로토타입 개체와 속성을 갖는 새로운 개체.</p>
+지정된 프로토타입 개체와 속성을 갖는 새로운 개체.
 
-<h3 id="예외">예외</h3>
+### 예외
 
-<p><code>proto</code> 매개변수가 {{jsxref("null")}} 또는 객체가 아닌 경우 {{jsxref("TypeError")}} 예외가 발생(throw).</p>
+`proto` 매개변수가 {{jsxref("null")}} 또는 객체가 아닌 경우 {{jsxref("TypeError")}} 예외가 발생(throw).
 
-<h2 id="예">예</h2>
+## 예
 
-<h3 id="Object.create()를_사용한_고전적인_상속방법"><code>Object.create()</code>를 사용한 고전적인 상속방법</h3>
+### `Object.create()`를 사용한 고전적인 상속방법
 
-<p>아래는 고전적인 상속방법으로 사용된 <code>Object.create()</code> 사용 예입니다. 이는 단일 상속 용으로, JavaScript가 지원하는 전부입니다.</p>
+아래는 고전적인 상속방법으로 사용된 `Object.create()` 사용 예입니다. 이는 단일 상속 용으로, JavaScript가 지원하는 전부입니다.
 
-<pre class="brush: js">// Shape - 상위클래스
+```js
+// Shape - 상위클래스
 function Shape() {
   this.x = 0;
   this.y = 0;
@@ -69,11 +68,12 @@ var rect = new Rectangle();
 console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
 console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
-</pre>
+```
 
-<p>여러 객체에서 상속하고 싶은 경우엔 mixin이 사용가능합니다.</p>
+여러 객체에서 상속하고 싶은 경우엔 mixin이 사용가능합니다.
 
-<pre class="brush: js">function MyClass() {
+```js
+function MyClass() {
   SuperClass.call(this);
   OtherSuperClass.call(this);
 }
@@ -84,13 +84,14 @@ mixin(MyClass.prototype, OtherSuperClass.prototype); // mixin
 MyClass.prototype.myMethod = function() {
   // 기능 수행
 };
-</pre>
+```
 
-<p><code>mixin</code> 함수는 상위(super)클래스 프로토타입에서 하위(sub)클래스 프로토타입으로 함수를 복사하고, mixin 함수는 사용자에 의해 공급될 필요가 있습니다. mixin 같은 함수의 예는 <a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a>입니다.</p>
+`mixin` 함수는 상위(super)클래스 프로토타입에서 하위(sub)클래스 프로토타입으로 함수를 복사하고, mixin 함수는 사용자에 의해 공급될 필요가 있습니다. mixin 같은 함수의 예는 [jQuery.extend()](https://api.jquery.com/jQuery.extend/)입니다.
 
-<h3 id="Object.create()와_함께_propertiesObject_인수_사용하기"><code>Object.create()</code>와 함께 <code>propertiesObject</code> 인수 사용하기</h3>
+### `Object.create()`와 함께 `propertiesObject` 인수 사용하기
 
-<pre class="brush: js">var o;
+```js
+var o;
 
 // 프로토타입이 null인 객체 생성
 o = Object.create(null);
@@ -153,19 +154,20 @@ o2 = Object.create({}, {
     configurable: true
   }
 });
-</pre>
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<p>이 폴리필에서는 새 개체에 대한 프로토타입이 선택되었지만 두번째 인수가 없이 개체를 생성하는 사례를 보여줍니다.</p>
+이 폴리필에서는 새 개체에 대한 프로토타입이 선택되었지만 두번째 인수가 없이 개체를 생성하는 사례를 보여줍니다.
 
-<p><code>[[Prototype]]</code>에 <code>null</code> 을 설정하는 것이 실제 ES5 <code>Object.create</code>에서는 지원되지만, ECMAScript 5 보다 낮은 버전에서는 상속에 제한이 있기 때문에 이 폴리필에서는 지원할 수 없음에 주의하세요.</p>
+`[[Prototype]]`에 `null` 을 설정하는 것이 실제 ES5 `Object.create`에서는 지원되지만, ECMAScript 5 보다 낮은 버전에서는 상속에 제한이 있기 때문에 이 폴리필에서는 지원할 수 없음에 주의하세요.
 
-<pre class="brush: js">if (typeof Object.create != 'function') {
+```js
+if (typeof Object.create != 'function') {
   Object.create = (function(undefined) {
     var Temp = function() {};
     return function (prototype, propertiesObject) {
-      if(prototype !== Object(prototype) &amp;&amp; prototype !== null) {
+      if(prototype !== Object(prototype) && prototype !== null) {
         throw TypeError('Argument must be an object, or null');
       }
       Temp.prototype = prototype || {};
@@ -181,21 +183,20 @@ o2 = Object.create({}, {
       return result;
     };
   })();
-}</pre>
+}
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="참조">참조</h2>
+## 참조
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>John Resig의 <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf()</a> 포스트</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- John Resig의 [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/) 포스트

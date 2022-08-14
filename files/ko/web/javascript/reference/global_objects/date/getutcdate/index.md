@@ -4,40 +4,41 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 browser-compat: javascript.builtins.Date.getUTCDate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>getUTCDate()</strong> 메서드는 표준시에 따라 지정된 날짜에 해당 월의 요일 (날짜)을 반환합니다.</p>
+**getUTCDate()** 메서드는 표준시에 따라 지정된 날짜에 해당 월의 요일 (날짜)을 반환합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCDate()</code></pre>
+```js
+    dateObj.getUTCDate()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>보편적 인 시간에 따라 지정된 날짜의 달의 날짜를 나타내는 1에서 31 사이의 정수입니다.</p>
+보편적 인 시간에 따라 지정된 날짜의 달의 날짜를 나타내는 1에서 31 사이의 정수입니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_getUTCDate()">Using <code>getUTCDate()</code></h3>
+### Using `getUTCDate()`
 
-<p>다음 예제에서는 현재 날짜의 일 부분을 day 변수에 할당합니다.</p>
+다음 예제에서는 현재 날짜의 일 부분을 day 변수에 할당합니다.
 
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var day = today.getUTCDate();
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date.prototype.getDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setUTCDate()")}}

@@ -9,42 +9,41 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Promise.race()</strong></code> 메소드는 Promise 객체를 반환합니다. 이 프로미스 객체는 iterable 안에 있는 프로미스 중에 가장 먼저 완료된 것의 결과값으로 그대로 이행하거나 거부합니다.</p>
+**`Promise.race()`** 메소드는 Promise 객체를 반환합니다. 이 프로미스 객체는 iterable 안에 있는 프로미스 중에 가장 먼저 완료된 것의 결과값으로 그대로 이행하거나 거부합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/promise-race.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-race.html")}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">Promise.race(<em>iterable</em>);</pre>
+    Promise.race(iterable);
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>iterable</code></dt>
- <dd>{{jsxref("Array")}}와 같은 iterable 객체. <a href="/ko/docs/Web/JavaScript/Reference/Iteration_protocols">iterable</a>을 참고하세요.</dd>
-</dl>
+- `iterable`
+  - : {{jsxref("Array")}}와 같은 iterable 객체. [iterable](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)을 참고하세요.
 
-<h3 id="반환값">반환값</h3>
+### 반환값
 
-<p>주어진 iterable에서 처음으로 이행하거나 거부한 프로미스의 값을 <strong>비동기적으로</strong> 전달받는 <strong>대기 중</strong>인 {{jsxref("Promise")}}.</p>
+주어진 iterable에서 처음으로 이행하거나 거부한 프로미스의 값을 **비동기적으로** 전달받는 **대기 중**인 {{jsxref("Promise")}}.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>race</code> 함수는 인자로 주어진 iterable의 프로미스 중 가장 먼저 완료(settle)되는 것과 같은 방식으로 완료(이행/거부)되고, 같은 결과값을 전달하는 <code>Promise</code>를 반환합니다.</p>
+`race` 함수는 인자로 주어진 iterable의 프로미스 중 가장 먼저 완료(settle)되는 것과 같은 방식으로 완료(이행/거부)되고, 같은 결과값을 전달하는 `Promise`를 반환합니다.
 
-<p>전달받은 iterable이 비어 있을 경우, 반환한 프로미스는 영원히 대기 상태가 됩니다.</p>
+전달받은 iterable이 비어 있을 경우, 반환한 프로미스는 영원히 대기 상태가 됩니다.
 
-<p>Iterable에 프로미스가 아닌 값이나 이미 완료된 프로미스가 포함되어 있을 경우, <code>Promise.race</code>는 전달받은 iterable에서 처음으로 등장하는 이러한 값을 결과값으로 이행합니다.</p>
+Iterable에 프로미스가 아닌 값이나 이미 완료된 프로미스가 포함되어 있을 경우, `Promise.race`는 전달받은 iterable에서 처음으로 등장하는 이러한 값을 결과값으로 이행합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="Promise.race의_비동기성"><code>Promise.race</code>의 비동기성</h3>
+### `Promise.race`의 비동기성
 
-<p>다음 예제에서 <code>Promise.race</code>의 비동기성을 확인할 수 있습니다.</p>
+다음 예제에서 `Promise.race`의 비동기성을 확인할 수 있습니다.
 
-<pre class="brush: js">// Promise.race를 최대한 빨리 완료시키기 위해
+```js
+// Promise.race를 최대한 빨리 완료시키기 위해
 // 이미 이행된 프로미스로 배열을 만들어 인자로 전달
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -59,13 +58,15 @@ setTimeout(function(){
 });
 
 // 로그 출력 결과 (순서대로):
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 33 }</pre>
+// Promise { <state>: "fulfilled", <value>: 33 }
+```
 
-<p>비어 있는 iterable을 전달하면 반환한 프로미스는 영원히 대기 상태가 됩니다.</p>
+비어 있는 iterable을 전달하면 반환한 프로미스는 영원히 대기 상태가 됩니다.
 
-<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
+```js
+var foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
 setTimeout(function(){
     console.log('the stack is now empty');
@@ -73,14 +74,15 @@ setTimeout(function(){
 });
 
 // 로그 출력 결과 (순서대로):
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "pending" }
-</pre>
+// Promise { <state>: "pending" }
+```
 
-<p>Iterable에 프로미스가 아닌 값이나 이미 완료된 프로미스가 포함되어 있을 경우, <code>Promise.race</code>는 전달받은 iterable에서 처음으로 등장하는 이러한 값을 결과값으로 이행합니다.</p>
+Iterable에 프로미스가 아닌 값이나 이미 완료된 프로미스가 포함되어 있을 경우, `Promise.race`는 전달받은 iterable에서 처음으로 등장하는 이러한 값을 결과값으로 이행합니다.
 
-<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
+```js
+var foreverPendingPromise = Promise.race([]);
 var alreadyFulfilledProm = Promise.resolve(666);
 
 var arr = [foreverPendingPromise, alreadyFulfilledProm, "프로미스 아님"];
@@ -97,20 +99,21 @@ setTimeout(function(){
 });
 
 // 로그 출력 결과 (순서대로):
-// Promise { &lt;state&gt;: "pending" }
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 666 }
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: "프로미스 아님" }
-</pre>
+// Promise { <state>: "fulfilled", <value>: 666 }
+// Promise { <state>: "fulfilled", <value>: "프로미스 아님" }
+```
 
-<h3 id="setTimeout과_함께_Promise.race_사용_예"><code>setTimeout</code>과 함께 <code>Promise.race</code> 사용 예</h3>
+### `setTimeout`과 함께 `Promise.race` 사용 예
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">var p1 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('하나'), 500);
+```js
+var p1 = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve('하나'), 500);
 });
 var p2 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('둘'), 100);
+    setTimeout(() => resolve('둘'), 100);
 });
 
 Promise.race([p1, p2])
@@ -120,10 +123,10 @@ Promise.race([p1, p2])
 });
 
 var p3 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('셋'), 100);
+    setTimeout(() => resolve('셋'), 100);
 });
 var p4 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; reject(new Error('넷')), 500);
+    setTimeout(() => reject(new Error('넷')), 500);
 });
 
 Promise.race([p3, p4])
@@ -135,10 +138,10 @@ Promise.race([p3, p4])
 });
 
 var p5 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; resolve('다섯'), 500);
+    setTimeout(() => resolve('다섯'), 500);
 });
 var p6 = new Promise(function(resolve, reject) {
-    setTimeout(() =&gt; reject(new Error('여섯')), 100);
+    setTimeout(() => reject(new Error('여섯')), 100);
 });
 
 Promise.race([p5, p6])
@@ -147,19 +150,18 @@ Promise.race([p5, p6])
 }, function(error) {
   console.log(error.message); // "여섯"
   // p6이 더 빠르므로 거부함
-});</code></pre>
+});
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Promise.race")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.all()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}

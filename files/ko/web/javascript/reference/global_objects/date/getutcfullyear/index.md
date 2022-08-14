@@ -4,43 +4,44 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 browser-compat: javascript.builtins.Date.getUTCFullYear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>getUTCFullYear()</strong> 메서드는 표준시에 따라 지정된 날짜의 연도를 반환합니다.</p>
+**getUTCFullYear()** 메서드는 표준시에 따라 지정된 날짜의 연도를 반환합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCFullYear()</code></pre>
+```js
+    dateObj.getUTCFullYear()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>주어진 날짜의 연도를 표준시에 따라 나타내는 숫자입니다.</p>
+주어진 날짜의 연도를 표준시에 따라 나타내는 숫자입니다.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><strong>getUTCFullYear()</strong>에 의해 반환 된 값은 1995 년과 같이 2000 년과 호환되는 절대 숫자입니다.</p>
+**getUTCFullYear()**에 의해 반환 된 값은 1995 년과 같이 2000 년과 호환되는 절대 숫자입니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_getUTCFullYear()">Using <code>getUTCFullYear()</code></h3>
+### Using `getUTCFullYear()`
 
-<p>다음 예제에서는 현재 연도의 4 자리 값을 변수 year에 할당합니다.</p>
+다음 예제에서는 현재 연도의 4 자리 값을 변수 year에 할당합니다.
 
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var year = today.getUTCFullYear();
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date.prototype.getFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}

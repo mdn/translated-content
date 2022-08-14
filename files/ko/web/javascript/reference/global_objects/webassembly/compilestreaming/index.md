@@ -3,58 +3,52 @@ title: WebAssembly.compileStreaming()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>WebAssembly.compileStreaming()</code></strong>함수는 스트림 된 원본 소스에서 직접 {{jsxref ( "WebAssembly.Module")}}을 컴파일합니다. 이 함수는 모듈을 인스턴스화하기 전에 컴파일해야하는 경우 유용합니다 (그렇지 않으면 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 함수를 사용해야합니다).</p>
+**`WebAssembly.compileStreaming()`**함수는 스트림 된 원본 소스에서 직접 {{jsxref ( "WebAssembly.Module")}}을 컴파일합니다. 이 함수는 모듈을 인스턴스화하기 전에 컴파일해야하는 경우 유용합니다 (그렇지 않으면 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 함수를 사용해야합니다).
 
-<p> </p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+    Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
 
-<pre class="syntaxbox">Promise&lt;WebAssembly.Module&gt; WebAssembly.compileStreaming(<em>source</em>);</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- _source_
+  - : 스트리밍 및 컴파일하려는 .wasm 모듈의 기본 소스를 나타내는 {{domxref ( "Response")}} 객체 또는 약속을 수행합니다.
 
-<dl>
- <dt><em>source</em></dt>
- <dd>스트리밍 및 컴파일하려는 .wasm 모듈의 기본 소스를 나타내는 {{domxref ( "Response")}} 객체 또는 약속을 수행합니다.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+`Promise`는 컴파일 된 모듈로 표현된 [`WebAssembly.Module`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module "The documentation about this has not yet been written; please consider contributing!") 객체로 반환됩니다.
 
-<p><code>Promise</code>는 컴파일 된 모듈로 표현된 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module" title="The documentation about this has not yet been written; please consider contributing!"><code>WebAssembly.Module</code></a> 객체로 반환됩니다.</p>
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+- `bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)가 아니면 [`TypeError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError)가 발생합니다.
+- 컴파일에 실패하면 promise는 [`WebAssembly.CompileError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError "The documentation about this has not yet been written; please consider contributing!")와 함께 reject가 반환됩니다.
 
-<ul>
- <li><code>bufferSource</code>가 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>가 아니면 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a>가 발생합니다.</li>
- <li>컴파일에 실패하면 promise는 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!"><code>WebAssembly.CompileError</code></a>와 함께 reject가 반환됩니다.</li>
-</ul>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+다음 예제 (GitHub의 [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) 데모 및 [라이브보기](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html))에서 기본 소스의 .wasm 모듈을 직접 스트리밍 한 다음 {{jsxref ( "WebAssembly.Module")}} 객체로 컴파일합니다. `compileStreaming()` 함수는 {{domxref ( "Response")}} 객체에 대한 promise를 받으므로 직접 {{domxref ( "WindowOrWorkerGlobalScope.fetch ()")}} 호출을 전달할 수 있습니다.
 
-<p>다음 예제 (GitHub의 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html">compile-streaming.html</a> 데모 및 <a href="https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html">라이브보기</a>)에서 기본 소스의 .wasm 모듈을 직접 스트리밍 한 다음 {{jsxref ( "WebAssembly.Module")}} 객체로 컴파일합니다. <code>compileStreaming()</code> 함수는 {{domxref ( "Response")}} 객체에 대한 promise를 받으므로 직접 {{domxref ( "WindowOrWorkerGlobalScope.fetch ()")}} 호출을 전달할 수 있습니다.</p>
-
-<pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
+```js
+var importObject = { imports: { imported_func: arg => console.log(arg) } };
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(module =&gt; WebAssembly.instantiate(module, importObject))
-.then(instance =&gt; instance.exports.exported_func());</pre>
+.then(module => WebAssembly.instantiate(module, importObject))
+.then(instance => instance.exports.exported_func());
+```
 
-<p>결과 모듈 인스턴스는 {{jsxref ( "WebAssembly.instantiate ()")}}를 사용하여 인스턴스화되고 내 보낸 함수가 호출됩니다.</p>
+결과 모듈 인스턴스는 {{jsxref ( "WebAssembly.instantiate ()")}}를 사용하여 인스턴스화되고 내 보낸 함수가 호출됩니다.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.WebAssembly.compileStreaming")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/ko/docs/WebAssembly) overview page
+- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)

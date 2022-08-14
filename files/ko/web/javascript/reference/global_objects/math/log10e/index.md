@@ -8,47 +8,42 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.LOG10E</code></strong> 속성은 e의 로그 10 값, 약 0.434의 값을 가집니다.</p>
+**`Math.LOG10E`** 속성은 e의 로그 10 값, 약 0.434의 값을 가집니다.
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG10E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>0.434</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG10E}} = \log_10(e) \approx 0.434</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG10E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>0.434</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG10E}} = \log_10(e) \approx 0.434</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-log10e.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-log10e.html")}}{{js_property_attributes(0, 0, 0)}}
 
+## 설명
 
+`LOG10E`는 `Math`의 정적 속성이므로, 사용자가 생성한 `Math` 객체의 속성으로 접근할 수 없고 항상 `Math.LOG10E`를 사용해야 합니다. (`Math`는 생성자가 아닙니다)
 
-<div>{{js_property_attributes(0, 0, 0)}}</div>
+## 예제
 
-<h2 id="설명">설명</h2>
+### `Math.LOG10E` 사용하기
 
-<p><code>LOG10E</code>는 <code>Math</code>의 정적 속성이므로, 사용자가 생성한 <code>Math</code> 객체의 속성으로 접근할 수 없고 항상 <code>Math.LOG10E</code>를 사용해야 합니다. (<code>Math</code>는 생성자가 아닙니다)</p>
+다음 함수는 e의 로그 10 값을 반환합니다.
 
-<h2 id="예제">예제</h2>
-
-<h3 id="Math.LOG10E_사용하기"><code>Math.LOG10E</code> 사용하기</h3>
-
-<p>다음 함수는 e의 로그 10 값을 반환합니다.</p>
-
-<pre class="brush:js">function getLog10e() {
+```js
+function getLog10e() {
   return Math.LOG10E;
 }
 
 getLog10e(); // 0.4342944819032518
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Math.LOG10E")}}</p>
+{{Compat}}
 
-<h2 id="참조">참조</h2>
+## 참조
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}

@@ -2,58 +2,56 @@
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 tags:
-- JavaScript
-- Math
-- Method
-- Reference
+  - JavaScript
+  - Math
+  - Method
+  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 browser-compat: javascript.builtins.Math.floor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.floor()</code></strong> 함수는 주어진 숫자와 같거나 작은 정수 중에서 가장 큰 수를 반환합니다.</p>
+**`Math.floor()`** 함수는 주어진 숫자와 같거나 작은 정수 중에서 가장 큰 수를 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/math-floor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-floor.html")}}
 
+## 구문
 
+```js
+    Math.floor(x)
+```
 
-<h2 id="Syntax">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Math.floor(<var>x</var>)</pre>
+- `x`
+  - : 숫자.
 
-<h3 id="Parameters">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>x</code></dt>
- <dd>숫자.</dd>
-</dl>
+주어진 수 이하의 가장 큰 정수.
 
-<h3 id="Return_value">반환 값</h3>
+## 설명
 
-<p>주어진 수 이하의 가장 큰 정수.</p>
+`floor()`는 `Math`의 정적 메서드이므로, 사용자가 생성한 `Math` 객체의 메서드로 호출할 수 없고 항상 `Math.floor()`를 사용해야 합니다. (`Math`는 생성자가 아닙니다)
 
-<h2 id="Description">설명</h2>
+> **참고:** `Math.floor(null)`은 {{jsxref("NaN")}} 대신 0을 반환합니다.
 
-<p><code>floor()</code>는 <code>Math</code>의 정적 메서드이므로, 사용자가 생성한 <code>Math</code> 객체의 메서드로 호출할 수 없고 항상 <code>Math.floor()</code>를 사용해야 합니다. (<code>Math</code>는 생성자가 아닙니다)</p>
+## 예제
 
-<div class="blockIndicator note">
-<p><strong>참고</strong>: <code>Math.floor(null)</code>은 {{jsxref("NaN")}} 대신 0을 반환합니다.</p>
-</div>
+### `Math.floor()` 사용하기
 
-<h2 id="Examples">예제</h2>
-
-<h3 id="Using_Math.floor"><code>Math.floor()</code> 사용하기</h3>
-
-<pre class="brush: js">Math.floor( 45.95); //  45
+```js
+Math.floor( 45.95); //  45
 Math.floor( 45.05); //  45
 Math.floor(  4   ); //   4
 Math.floor(-45.05); // -46
 Math.floor(-45.95); // -46
-</pre>
+```
 
-<h3 id="Decimal_adjustment">십진수 조절</h3>
+### 십진수 조절
 
-<pre class="brush: js">// Closure
+```js
+// Closure
 (function() {
   /**
    * 십진수 조절
@@ -71,7 +69,7 @@ Math.floor(-45.95); // -46
     value = +value;
     exp = +exp;
     // 값이 숫자가 아니거나 정수형이 아닌 경우...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -121,22 +119,20 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

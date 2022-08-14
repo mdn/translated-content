@@ -11,52 +11,50 @@ tags:
   - 정규식
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>test()</code></strong> 메서드는 주어진 문자열이 정규 표현식을 만족하는지 판별하고, 그 여부를 <code>true</code> 또는 <code>false</code>로 반환합니다.</p>
+**`test()`** 메서드는 주어진 문자열이 정규 표현식을 만족하는지 판별하고, 그 여부를 `true` 또는 `false`로 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
 
+## 구문
 
+    regexObj.test(str)
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox "><var>regexObj</var>.test(<var>str</var>)</pre>
+- `str`
+  - : 정규 표현식 일치를 수행할 문자열.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code><var>str</var></code></dt>
- <dd>정규 표현식 일치를 수행할 문자열.</dd>
-</dl>
+주어진 문자열 `str` 중 정규 표현식이 일치하는 부분이 있으면 `true`, 아니면, `false`.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>주어진 문자열 <code>str</code> 중 정규 표현식이 일치하는 부분이 있으면 <code>true</code>, 아니면, <code>false</code>.</p>
+패턴이 문자열 내에 존재하는지에 대한 여부를 알아보고자 할 때 `test()`를 사용하세요. 일치의 위치 인덱스, 또는 일치하지 않으면 `-1`을 반환하는 {{jsxref("String.prototype.search()")}}와 달리 `test()`는 불리언을 반환합니다.
 
-<h2 id="설명">설명</h2>
+더 느리지만 더 많은 정보가 필요하면 {{jsxref("RegExp.prototype.exec()", "exec()")}} 메서드를 사용하세요. ({{jsxref("String.prototype.match()")}} 메서드와 비슷합니다.)
 
-<p>패턴이 문자열 내에 존재하는지에 대한 여부를 알아보고자 할 때 <code>test()</code>를 사용하세요. 일치의 위치 인덱스, 또는 일치하지 않으면 <code>-1</code>을 반환하는 {{jsxref("String.prototype.search()")}}와 달리 <code>test()</code>는 불리언을 반환합니다.</p>
+`exec()`처럼, `test()`도 전역 탐색 플래그를 제공한 정규 표현식에서 여러 번 호출하면 이전 일치 이후부터 탐색합니다. `exec()`와 `test()`를 혼용해 사용하는 경우에도 해당됩니다.
 
-<p>더 느리지만 더 많은 정보가 필요하면 {{jsxref("RegExp.prototype.exec()", "exec()")}} 메서드를 사용하세요. ({{jsxref("String.prototype.match()")}} 메서드와 비슷합니다.)</p>
+## 예제
 
-<p><code>exec()</code>처럼, <code>test()</code>도 전역 탐색 플래그를 제공한 정규 표현식에서 여러 번 호출하면 이전 일치 이후부터 탐색합니다. <code>exec()</code>와 <code>test()</code>를 혼용해 사용하는 경우에도 해당됩니다.</p>
+### `test()` 사용하기
 
-<h2 id="예제">예제</h2>
+문자열의 맨 처음에 `"hello"`가 포함됐는지 알아보는 간단한 예제 코드입니다.
 
-<h3 id="test_사용하기"><code>test()</code> 사용하기</h3>
-
-<p>문자열의 맨 처음에 <code>"hello"</code>가 포함됐는지 알아보는 간단한 예제 코드입니다.</p>
-
-<pre class="brush: js ">const str = 'hello world!';
+```js
+const str = 'hello world!';
 const result = /^hello/.test(str);
 
 console.log(result); // true
-</pre>
+```
 
-<p>다음은 일치 여부에 따라 다른 메시지를 기록하는 예제입니다.</p>
+다음은 일치 여부에 따라 다른 메시지를 기록하는 예제입니다.
 
-<pre class="brush: js ">function testInput(re, str) {
+```js
+function testInput(re, str) {
   let midstring;
   if (re.test(str)) {
     midstring = 'contains';
@@ -65,23 +63,22 @@ console.log(result); // true
   }
   console.log(`${str} ${midstring} ${re.source}`);
 }
-</pre>
+```
 
-<h3 id="전역_플래그와_test">전역 플래그와 <code>test()</code></h3>
+### 전역 플래그와 `test()`
 
-<p>정규 표현식에 <a href="/ko/docs/Web/JavaScript/Guide/Regular_Expressions#플래그를_사용한_고급검색">전역 플래그</a>를 설정한 경우, <code>test()</code> 메서드는 정규 표현식의 {{jsxref("RegExp.lastIndex", "lastIndex")}}를 업데이트합니다. ({{jsxref("RegExp.prototype.exec()")}}도 <code>lastIndex</code> 속성을 업데이트합니다.)</p>
+정규 표현식에 [전역 플래그](/ko/docs/Web/JavaScript/Guide/Regular_Expressions#플래그를_사용한_고급검색)를 설정한 경우, `test()` 메서드는 정규 표현식의 {{jsxref("RegExp.lastIndex", "lastIndex")}}를 업데이트합니다. ({{jsxref("RegExp.prototype.exec()")}}도 `lastIndex` 속성을 업데이트합니다.)
 
-<p><code>test(<var>str</var>)</code>을 또 호출하면 <code><var>str</var></code> 검색을 <code>lastIndex</code>부터 계속 진행합니다. <code>lastIndex</code> 속성은 매 번 <code>test()</code>가 <code>true</code>를 반환할 때마다 증가하게 됩니다.</p>
+`test(str)`을 또 호출하면 `str` 검색을 `lastIndex`부터 계속 진행합니다. `lastIndex` 속성은 매 번 `test()`가 `true`를 반환할 때마다 증가하게 됩니다.
 
-<div class="blockIndicator note">
-<p><strong>참고:</strong> <code>test()</code>가 <code>true</code>를 반환하기만 하면 <code>lastIndex</code>는 초기화되지 않습니다. 심지어 이전과 다른 문자열을 매개변수로 제공해도 그렇습니다!</p>
-</div>
+> **참고:** `test()`가 `true`를 반환하기만 하면 `lastIndex`는 초기화되지 않습니다. 심지어 이전과 다른 문자열을 매개변수로 제공해도 그렇습니다!
 
-<p><code>test()</code>가 <code>false</code>를 반환할 땐 <code>lastIndex</code> 속성이 <code>0</code>으로 초기화됩니다.</p>
+`test()`가 `false`를 반환할 땐 `lastIndex` 속성이 `0`으로 초기화됩니다.
 
-<p>이 행동에 대한 예제가 다음 코드입니다.</p>
+이 행동에 대한 예제가 다음 코드입니다.
 
-<pre class="brush: js ">const regex = /foo/g; // the "global" flag is set
+```js
+const regex = /foo/g; // the "global" flag is set
 
 // regex.lastIndex is at 0
 regex.test('foo')     // true
@@ -97,20 +94,18 @@ regex.test('foobar')  //false
 
 // regex.lastIndex is at 0
 // (...and so on)
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.RegExp.test")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript 안내서의 정규 표현식 장</a></li>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("RegExp.prototype")}}</li>
-</ul>
+- [JavaScript 안내서의 정규 표현식 장](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
+- {{jsxref("RegExp")}}
+- {{jsxref("RegExp.prototype")}}

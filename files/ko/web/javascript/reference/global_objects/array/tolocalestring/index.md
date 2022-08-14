@@ -10,44 +10,43 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>toLocaleString()</strong></code> 메서드는 배열의 요소를 나타내는 문자열을 반환합니다. 요소는 <code>toLocaleString</code> 메서드를 사용하여 문자열로 변환되고 이 문자열은 locale 고유 문자열(가령 쉼표 “,”)에 의해 분리됩니다.</p>
+**`toLocaleString()`** 메서드는 배열의 요소를 나타내는 문자열을 반환합니다. 요소는 `toLocaleString` 메서드를 사용하여 문자열로 변환되고 이 문자열은 locale 고유 문자열(가령 쉼표 “,”)에 의해 분리됩니다.
 
-<p>{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><var>arr</var>.toLocaleString([locales[, options]]);</pre>
+```js
+    arr.toLocaleString([locales[, options]]);
+```
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>locales</code> {{optional_inline}}</dt>
- <dd>A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the <code>locales</code> argument, see the {{jsxref("Intl")}} page.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>An object with configuration properties, for numbers see {{jsxref("Number.prototype.toLocaleString()")}}, and for dates see {{jsxref("Date.prototype.toLocaleString()")}}.</dd>
-</dl>
+- `locales` {{optional_inline}}
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see the {{jsxref("Intl")}} page.
+- `options` {{optional_inline}}
+  - : An object with configuration properties, for numbers see {{jsxref("Number.prototype.toLocaleString()")}}, and for dates see {{jsxref("Date.prototype.toLocaleString()")}}.
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>배열의 요소를 표현하는 문자열.</p>
+배열의 요소를 표현하는 문자열.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>배열의 요소는 <code>toLocaleString</code> 메서드를 사용하여 문자열로 변환됩니다:</p>
+배열의 요소는 `toLocaleString` 메서드를 사용하여 문자열로 변환됩니다:
 
-<ul>
- <li><code>Object</code>: {{jsxref("Object.prototype.toLocaleString()")}}</li>
- <li><code>Number</code>: {{jsxref("Number.prototype.toLocaleString()")}}</li>
- <li><code>Date</code>: {{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
+- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
+- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
+- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="toLocaleString_사용"><code>toLocaleString</code> 사용</h3>
+### `toLocaleString` 사용
 
-<pre class="brush: js">var number = 1337;
+```js
+var number = 1337;
 var date = new Date();
 var myArr = [number, date, 'foo'];
 
@@ -56,11 +55,12 @@ var str = myArr.toLocaleString();
 console.log(str);
 // '1337,6.12.2013 19:37:35,foo' 출력(log)
 // Europe/Berlin 시간대로 German (de-DE) locale에서 실행하는 경우
-</pre>
+```
 
-<h2 id="폴리필">폴리필</h2>
+## 폴리필
 
-<pre class="brush: js">// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
+```js
+// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
   Object.defineProperty(Array.prototype, 'toLocaleString', {
     value: function(locales, options) {
@@ -72,7 +72,7 @@ if (!Array.prototype.toLocaleString) {
       var a = Object(this);
 
       // 2. Let len be ? ToLength(? Get(A, "length")).
-      var len = a.length &gt;&gt;&gt; 0;
+      var len = a.length >>> 0;
 
       // 3. Let separator be the String value for the
       //    list-separator String appropriate for the
@@ -105,8 +105,8 @@ if (!Array.prototype.toLocaleString) {
       // 8. Let k be 1.
       var k = 1;
 
-      // 9. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 9. Repeat, while k < len
+      while (k < len) {
         // a. Let S be a String value produced by
         //   concatenating R and separator.
         var s = r + separator;
@@ -141,22 +141,20 @@ if (!Array.prototype.toLocaleString) {
     }
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Array.toLocaleString")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
- <li>{{jsxref("Intl")}}</li>
- <li>{{jsxref("Object.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("Intl")}}
+- {{jsxref("Object.prototype.toLocaleString()")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}

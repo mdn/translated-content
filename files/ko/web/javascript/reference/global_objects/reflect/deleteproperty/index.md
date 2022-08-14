@@ -9,45 +9,41 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Reflect</strong></code><strong><code>.deleteProperty()</code></strong> 정적 메서드는 속성을 제거할 수 있습니다. <a href="/ko/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> 연산자</a>의 함수판이라고 할 수 있습니다.</p>
+**`Reflect`\*\***`.deleteProperty()`\*\* 정적 메서드는 속성을 제거할 수 있습니다. [`delete` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)의 함수판이라고 할 수 있습니다.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
 
+## 구문
 
+    Reflect.deleteProperty(target, propertyKey)
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">Reflect.deleteProperty(<em>target</em>, <em>propertyKey</em>)
-</pre>
+- `target`
+  - : 속성을 제거할 대상 객체.
+- `propertyKey`
+  - : 제거할 속성의 이름.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>target</code></dt>
- <dd>속성을 제거할 대상 객체.</dd>
- <dt><code>propertyKey</code></dt>
- <dd>제거할 속성의 이름.</dd>
-</dl>
+속성이 성공적으로 제거됐는지 나타내는 {{jsxref("Boolean")}}.
 
-<h3 id="반환_값">반환 값</h3>
+### Exceptions
 
-<p>속성이 성공적으로 제거됐는지 나타내는 {{jsxref("Boolean")}}.</p>
+`target`이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+## 설명
 
-<p><code>target</code>이 {{jsxref("Object")}}가 아니면 {{jsxref("TypeError")}}.</p>
+`Reflect.deleteProperty` 메서드는 객체의 속성을 제거할 수 있습니다. 반환값은 속성의 제거 성공 여부를 나타내는 {{jsxref("Boolean")}}입니다. 비엄격 모드의 [`delete` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)와 거의 동일합니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p><code>Reflect.deleteProperty</code> 메서드는 객체의 속성을 제거할 수 있습니다. 반환값은 속성의 제거 성공 여부를 나타내는 {{jsxref("Boolean")}}입니다. 비엄격 모드의 <a href="/ko/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> 연산자</a>와 거의 동일합니다.</p>
+### `Reflect.deleteProperty()` 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="Reflect.deleteProperty()_사용하기"><code>Reflect.deleteProperty()</code> 사용하기</h3>
-
-<pre class="brush: js">var obj = { x: 1, y: 2 };
+```js
+var obj = { x: 1, y: 2 };
 Reflect.deleteProperty(obj, 'x'); // true
 obj; // { y: 2 }
 
@@ -60,19 +56,17 @@ Reflect.deleteProperty({}, 'foo'); // true
 
 // 주어진 속성이 설정 불가능하면 false 반환
 Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo'); // false
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Reflect.deleteProperty")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> 연산자</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [`delete` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)

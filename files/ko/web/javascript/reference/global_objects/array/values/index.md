@@ -11,59 +11,60 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>values()</code></strong> 메서드는 배열의 각 인덱스에 대한 값을 가지는 새로운 <strong><code>Array Iterator</code></strong> 객체를 반환합니다.</p>
+**`values()`** 메서드는 배열의 각 인덱스에 대한 값을 가지는 새로운 **`Array Iterator`** 객체를 반환합니다.
 
-<p>{{EmbedInteractiveExample("pages/js/array-values.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-values.html")}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><var>arr</var>.values()
-</pre>
+```js
+    arr.values()
+```
 
-<h3 id="반환_값">반환 값</h3>
+### 반환 값
 
-<p>새로운 {{jsxref("Array")}} 반복기 객체.</p>
+새로운 {{jsxref("Array")}} 반복기 객체.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="for...of_루프를_통한_반복"><code>for...of</code> 루프를 통한 반복</h3>
+### `for...of` 루프를 통한 반복
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr.values();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
 for (let letter of eArr) {
   console.log(letter);
 }
-</pre>
+```
 
-<h3 id="다른_반복법">다른 반복법</h3>
+### 다른 반복법
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr.values();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y
 console.log(eArr.next().value); // k
 console.log(eArr.next().value); // o
 console.log(eArr.next().value); // p
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Array.values")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}

@@ -9,36 +9,33 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.isFrozen()</strong></code>은 객체가 {{jsxref("Object.freeze()", "동결", "", 1)}}됐는지 판별합니다.</p>
+**`Object.isFrozen()`**은 객체가 {{jsxref("Object.freeze()", "동결", "", 1)}}됐는지 판별합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
 
+## 구문
 
+    Object.isFrozen(obj)
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><code>Object.isFrozen(<var>obj</var>)</code></pre>
+- `obj`
+  - : 판별할 객체.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>판별할 객체.</dd>
-</dl>
+객체의 동결 여부를 나타내는 {{jsxref("Boolean")}}.
 
-<h3 id="반환_값">반환 값</h3>
+## 설명
 
-<p>객체의 동결 여부를 나타내는 {{jsxref("Boolean")}}.</p>
+객체는 {{jsxref("Object.isExtensible()", "확장 불가", "", 1)}}이며 모든 속성이 설정 불가 및 모든 데이터 속성(즉, getter 또는 setter 요소가 있는 접근자 속성이 아닌 속성)이 쓰기 불가인 경우에만 동결됩니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p>객체는 {{jsxref("Object.isExtensible()", "확장 불가", "", 1)}}이며 모든 속성이 설정 불가 및 모든 데이터 속성(즉, getter 또는 setter 요소가 있는 접근자 속성이 아닌 속성)이 쓰기 불가인 경우에만 동결됩니다.</p>
-
-<h2 id="예제">예제</h2>
-
-<pre class="brush: js">// 새로운 객체는 확장 가능해서 동결되지 않습니다.
+```js
+// 새로운 객체는 확장 가능해서 동결되지 않습니다.
 Object.isFrozen({}); // === false
 
 // 확장 불가인 빈 객체는 빈 채로 동결됩니다.
@@ -98,33 +95,32 @@ Object.isExtensible(frozen); // === false
 
 // 또한 정의에 의해, 동결된 객체는 봉인됩니다.
 Object.isSealed(frozen); // === true
-</pre>
+```
 
-<h2 id="주의">주의</h2>
+## 주의
 
-<p>ES5에서, 이 메서드의 인수가 비객체(원시형)인 경우, 그러면 {{jsxref("TypeError")}}가 발생합니다. ES6에서, 비객체 인수는 마치 동결된 보통 객체였던 것처럼 취급됩니다, 그저 <code>true</code>를 반환하는.</p>
+ES5에서, 이 메서드의 인수가 비객체(원시형)인 경우, 그러면 {{jsxref("TypeError")}}가 발생합니다. ES6에서, 비객체 인수는 마치 동결된 보통 객체였던 것처럼 취급됩니다, 그저 `true`를 반환하는.
 
-<pre class="brush: js">Object.isFrozen(1);
+```js
+Object.isFrozen(1);
 // TypeError: 1은 객체가 아닙니다 (ES5 코드)
 
 Object.isFrozen(1);
 // true                          (ES6 코드)
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.Object.isFrozen")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

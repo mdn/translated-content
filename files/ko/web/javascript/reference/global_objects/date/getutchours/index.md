@@ -4,39 +4,40 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 browser-compat: javascript.builtins.Date.getUTCHours
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>getUTCHours () 메서드는 표준시에 따라 지정된 날짜의 시간을 반환합니다.</p>
+getUTCHours () 메서드는 표준시에 따라 지정된 날짜의 시간을 반환합니다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCHours()</code></pre>
+```js
+    dateObj.getUTCHours()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>0부터 23까지의 정수로, 표준시에 따라 지정된 날짜의 시간을 나타냅니다.</p>
+0부터 23까지의 정수로, 표준시에 따라 지정된 날짜의 시간을 나타냅니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_getUTCHours()">Using <code>getUTCHours()</code></h3>
+### Using `getUTCHours()`
 
-<p>다음 예제에서는 현재 시간의 시간 부분을 시간 변수로 지정합니다.</p>
+다음 예제에서는 현재 시간의 시간 부분을 시간 변수로 지정합니다.
 
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var hours = today.getUTCHours();
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date.prototype.getHours()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getHours()")}}
+- {{jsxref("Date.prototype.setUTCHours()")}}
