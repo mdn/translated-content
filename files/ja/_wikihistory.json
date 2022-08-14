@@ -46025,13 +46025,6 @@
       "silverskyvicto"
     ]
   },
-  "conflicting/Glossary": {
-    "modified": "2019-01-16T21:36:54.645Z",
-    "contributors": [
-      "mfuji09",
-      "x2357"
-    ]
-  },
   "conflicting/Glossary/Plugin": {
     "modified": "2019-03-18T21:35:38.258Z",
     "contributors": [
@@ -46104,12 +46097,6 @@
     "contributors": [
       "chrisdavidmills",
       "dvincent"
-    ]
-  },
-  "conflicting/Mozilla/Add-ons/WebExtensions": {
-    "modified": "2020-03-07T04:25:12.950Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "conflicting/Web/API/AudioTrackList/addtrack_event": {
@@ -46695,15 +46682,6 @@
       "teoli"
     ]
   },
-  "conflicting/Web/CSS/CSS_Fonts": {
-    "modified": "2020-10-15T21:19:16.759Z",
-    "contributors": [
-      "mfuji09",
-      "yyss",
-      "fscholz",
-      "ethertank"
-    ]
-  },
   "conflicting/Web/CSS/CSS_Scroll_Snap": {
     "modified": "2020-02-21T23:37:52.316Z",
     "contributors": [
@@ -46739,39 +46717,11 @@
       "inkusu"
     ]
   },
-  "conflicting/Web/HTML": {
-    "modified": "2020-09-19T11:13:50.506Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/HTTP": {
-    "modified": "2019-03-18T21:35:45.067Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": [
       "mfuji09",
       "tamura4278"
-    ]
-  },
-  "conflicting/Web/HTTP/Status/404": {
-    "modified": "2020-07-25T11:09:55.890Z",
-    "contributors": [
-      "pcw",
-      "reodog",
-      "mfuji09",
-      "aokashi"
-    ]
-  },
-  "conflicting/Web/HTTP/Status/502": {
-    "modified": "2019-03-18T21:43:46.251Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
@@ -46831,18 +46781,6 @@
       "mfuji09"
     ]
   },
-  "conflicting/Web/MathML": {
-    "modified": "2019-01-16T21:55:31.944Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/SVG": {
-    "modified": "2019-01-16T21:55:52.943Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2020-10-15T21:27:02.463Z",
     "contributors": [
@@ -46868,30 +46806,10 @@
       "reodog"
     ]
   },
-  "conflicting/Web/XPath": {
-    "modified": "2019-03-30T15:46:42.224Z",
-    "contributors": [
-      "silverskyvicto",
-      "ExE-Boss"
-    ]
-  },
-  "conflicting/Web/XSLT": {
-    "modified": "2019-03-18T20:50:34.547Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "conflicting/Web/XSLT/Transforming_XML_with_XSLT": {
     "modified": "2019-03-18T20:50:34.704Z",
     "contributors": [
       "mfuji09",
-      "silverskyvicto"
-    ]
-  },
-  "conflicting/WebAssembly": {
-    "modified": "2019-03-18T21:24:03.527Z",
-    "contributors": [
       "silverskyvicto"
     ]
   },
