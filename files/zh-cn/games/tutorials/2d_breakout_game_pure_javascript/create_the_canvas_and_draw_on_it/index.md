@@ -2,8 +2,6 @@
 title: 创建、绘制画布
 slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-translation_of: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
 {{GamesSidebar}}
 

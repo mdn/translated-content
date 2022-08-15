@@ -1,11 +1,6 @@
 ---
 title: Web 游戏开发简介
 slug: Games/Introduction
-tags:
-  - 指引
-  - 游戏
-  - 移动端
-translation_of: Games/Introduction
 original_slug: Games/简介
 ---
 {{GamesSidebar}}

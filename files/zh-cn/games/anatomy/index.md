@@ -1,12 +1,6 @@
 ---
 title: 剖析游戏结构
 slug: Games/Anatomy
-tags:
-  - Games
-  - JavaScript
-  - Main Loop
-  - requestAnimationFrame
-translation_of: Games/Anatomy
 ---
 {{GamesSidebar}}
 
