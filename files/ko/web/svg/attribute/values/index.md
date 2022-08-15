@@ -3,84 +3,48 @@ title: values
 slug: Web/SVG/Attribute/values
 translation_of: Web/SVG/Attribute/values
 ---
-<p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
 
-<p><code>values</code> 속성은 사용하는 맥락에 따라 크게 두 가지 의미가 있습니다.</p>
+`values` 속성은 사용하는 맥락에 따라 크게 두 가지 의미가 있습니다.
 
-<p>애니메이션 요소의 경우, values 속성은 세미콜론으로 구분된 하나 이상의 값 목록입니다. 애니메이션은 애니메이션 과정에서 순서대로 값을 적용합니다. 값 목록이 지정되면  {{ SVGAttr("from") }}, {{ SVGAttr("to") }} 그리고 {{ SVGAttr("by") }} 속성 값은 무시됩니다.</p>
+애니메이션 요소의 경우, values 속성은 세미콜론으로 구분된 하나 이상의 값 목록입니다. 애니메이션은 애니메이션 과정에서 순서대로 값을 적용합니다. 값 목록이 지정되면 {{ SVGAttr("from") }}, {{ SVGAttr("to") }} 그리고 {{ SVGAttr("by") }} 속성 값은 무시됩니다.
 
-<p>{{ SVGElement("feColorMatrix") }} 요소의 경우 값의 내용은 {{ SVGAttr("type") }} 속성의 값에 따라 다릅니다: </p>
+{{ SVGElement("feColorMatrix") }} 요소의 경우 값의 내용은 {{ SVGAttr("type") }} 속성의 값에 따라 다릅니다:
 
-<ul>
- <li>For <code>type="matrix"</code>, <code>values</code> is a list of 20 matrix values (a00 a01 a02 a03 a04 a10 a11 ... a34), separated by whitespace and/or a comma.</li>
- <li>For <code>type="saturate"</code>, <code>values</code> is a single real number value (0 to 1).</li>
- <li>For <code>type="hueRotate"</code>, <code>values</code> is a single one real number value (degrees).</li>
- <li>For <code>type="luminanceToAlpha"</code>, <code>values</code> is not applicable.</li>
-</ul>
+- For `type="matrix"`, `values` is a list of 20 matrix values (a00 a01 a02 a03 a04 a10 a11 ... a34), separated by whitespace and/or a comma.
+- For `type="saturate"`, `values` is a single real number value (0 to 1).
+- For `type="hueRotate"`, `values` is a single one real number value (degrees).
+- For `type="luminanceToAlpha"`, `values` is not applicable.
 
-<p>If the attribute is not specified, then the default behavior depends on the value of attribute {{ SVGAttr("type") }}.</p>
+If the attribute is not specified, then the default behavior depends on the value of attribute {{ SVGAttr("type") }}.
 
-<ul>
- <li>If <code>type="matrix"</code>, then this attribute defaults to the identity matrix.</li>
- <li>If <code>type="saturate"</code>, then this attribute defaults to the value 1, which results in the identity matrix.</li>
- <li>If <code>type="hueRotate"</code>, then this attribute defaults to the value 0, which results in the identity matrix.</li>
-</ul>
+- If `type="matrix"`, then this attribute defaults to the identity matrix.
+- If `type="saturate"`, then this attribute defaults to the value 1, which results in the identity matrix.
+- If `type="hueRotate"`, then this attribute defaults to the value 0, which results in the identity matrix.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<h3 id="For_animation_elements">For animation elements</h3>
+### For animation elements
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>Animation value attribute</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>&lt;list&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/animate.html#ValuesAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | Animation value attribute                                                        |
+| ------------------ | -------------------------------------------------------------------------------- |
+| Value              | <list>                                                                           |
+| Animatable         | No                                                                               |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/animate.html#ValuesAttribute) |
 
-<h3 id="For_the_SVGElement(feColorMatrix)_element">For the {{ SVGElement("feColorMatrix") }} element</h3>
+### For the {{ SVGElement("feColorMatrix") }} element
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>&lt;list&gt; | <a href="/en/SVG/Content_type#Number" title="en/SVG/Content_type#Paint">&lt;number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feColorMatrixValuesAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | _None_                                                                                        |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| Value              | <list> \| [<number>](/en/SVG/Content_type#Number "en/SVG/Content_type#Paint")                 |
+| Animatable         | Yes                                                                                           |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feColorMatrixValuesAttribute) |
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following elements can use the <code>values</code> attribute</p>
+The following elements can use the `values` attribute
 
-<ul>
- <li><a href="/en/SVG/Element#Animation" title="en/SVG/Element#Animation">Animation elements</a> »</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
-</ul>
+- [Animation elements](/en/SVG/Element#Animation "en/SVG/Element#Animation") »
+- {{ SVGElement("feColorMatrix") }}

@@ -7,58 +7,52 @@ tags:
   - "altGlyph\_엘리먼트"
 translation_of: Web/SVG/Element/altGlyph
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p><code>altGlyph</code> 엘리먼트는 하위 문자 데이타를 랜더링 하기 위해 사용되는 매우복잡한 상형문자의 섹션을 허용한다.</p>
+`altGlyph` 엘리먼트는 하위 문자 데이타를 랜더링 하기 위해 사용되는 매우복잡한 상형문자의 섹션을 허용한다.
 
-<h2 id="사용예_컨텍스트">사용예 컨텍스트</h2>
+## 사용예 컨텍스트
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="속성들">속성들</h2>
+## 속성들
 
-<h3 id="글로벌_속성들">글로벌 속성들</h3>
+### 글로벌 속성들
 
-<ul>
- <li><a href="/en-US/SVG/Attribute#ConditionalProccessing">Conditional processing attributes</a> »</li>
- <li><a href="/en-US/SVG/Attribute#Core">Core attributes</a> »</li>
- <li><a href="/en-US/SVG/Attribute#GraphicalEvent">Graphical event attributes</a> »</li>
- <li><a href="/en-US/SVG/Attribute#Presentation">Presentation attributes</a> »</li>
- <li><a href="/en-US/SVG/Attribute#XLink">XLink attributes</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [Conditional processing attributes](/en-US/SVG/Attribute#ConditionalProccessing) »
+- [Core attributes](/en-US/SVG/Attribute#Core) »
+- [Graphical event attributes](/en-US/SVG/Attribute#GraphicalEvent) »
+- [Presentation attributes](/en-US/SVG/Attribute#Presentation) »
+- [XLink attributes](/en-US/SVG/Attribute#XLink) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="특정_속성들">특정 속성들</h3>
+### 특정 속성들
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("dx")}}</li>
- <li>{{SVGAttr("dy")}}</li>
- <li>{{SVGAttr("rotate")}}</li>
- <li>{{SVGAttr("glyphRef")}}</li>
- <li>{{SVGAttr("format")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("dx")}}
+- {{SVGAttr("dy")}}
+- {{SVGAttr("rotate")}}
+- {{SVGAttr("glyphRef")}}
+- {{SVGAttr("format")}}
+- {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_인터페이스">DOM 인터페이스</h2>
+## DOM 인터페이스
 
-<p>이 엘리먼트는 <code><a href="/en-US/docs/Web/API/SVGAltGlyphElement">SVGAltGlyphElement</a></code> 인터페이스를 구현한다..</p>
+이 엘리먼트는 [`SVGAltGlyphElement`](/en-US/docs/Web/API/SVGAltGlyphElement) 인터페이스를 구현한다..
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("svg.elements.altGlyph")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("tspan")}}</li>
- <li>{{SVGElement("glyph")}}</li>
- <li>{{SVGElement("altGlyphDef")}}</li>
-</ul>
+- {{SVGElement("tspan")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("altGlyphDef")}}

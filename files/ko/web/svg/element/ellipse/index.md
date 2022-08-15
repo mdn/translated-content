@@ -8,81 +8,71 @@ tags:
   - SVG Grahpics
 translation_of: Web/SVG/Element/ellipse
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>&lt;ellipse&gt;</code></strong> 요소는 SVG의 기본 모양 중 하나로, 중심좌표와 x축, y축 반지름을 이용하여 타원을 생성합니다.</p>
+**`<ellipse>`** 요소는 SVG의 기본 모양 중 하나로, 중심좌표와 x축, y축 반지름을 이용하여 타원을 생성합니다.
 
-<div class="blockIndicator note">
-<p><strong>참고:</strong> 타원은 정확한 방향을 특정할 수 없습니다. (예를 들어, 45도 기울어진 타원을 그리려고 할 경우) 하지만 {{SVGAttr("transform")}}속성을 사용함으로써 회전할 수는 있습니다.</p>
-</div>
+> **참고:** 타원은 정확한 방향을 특정할 수 없습니다. (예를 들어, 45도 기울어진 타원을 그리려고 할 경우) 하지만 {{SVGAttr("transform")}}속성을 사용함으로써 회전할 수는 있습니다.
 
-<div id="LiveSample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;ellipse cx="100" cy="50" rx="100" ry="50" /&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="100" cy="50" rx="100" ry="50" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('LiveSample', 100, '100%')}}</p>
-</div>
+{{EmbedLiveSample('LiveSample', 100, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("cx")}}</dt>
- <dd>The x position of the ellipse.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("cy")}}</dt>
- <dd>The y position of the ellipse.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("rx")}}</dt>
- <dd>The radius of the ellipse on the x axis.<br>
- <small><em>Value type</em>: <code>auto</code>|<a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>auto</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("ry")}}</dt>
- <dd>The radius of the ellipse on the y axis.<br>
- <small><em>Value type</em>: <code>auto</code>|<a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>auto</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("pathLength")}}</dt>
- <dd>This attribute lets specify the total length for the path, in user units.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Number"><strong>&lt;number&gt;</strong></a> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+- {{SVGAttr("cx")}}
+  - : The x position of the ellipse.
+    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("cy")}}
+  - : The y position of the ellipse.
+    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+- {{SVGAttr("rx")}}
+  - : The radius of the ellipse on the x axis.
+    _Value type_: `auto`|[**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+- {{SVGAttr("ry")}}
+  - : The radius of the ellipse on the y axis.
+    _Value type_: `auto`|[**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `auto`; _Animatable_: **yes**
+- {{SVGAttr("pathLength")}}
+  - : This attribute lets specify the total length for the path, in user units.
+    _Value type_: [**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Default value_: _none_; _Animatable_: **yes**
 
-<div class="note">
-<p><strong>Note:</strong> Starting with SVG2 <code>cx</code>, <code>cy</code>, <code>rx</code> and <code>ry</code> are <em>Geometry Propertie</em>s, meaning those attributes can also be used as CSS properties for that element.</p>
-</div>
+> **참고:** Starting with SVG2 `cx`, `cy`, `rx` and `ry` are \_Geometry Propertie_s, meaning those attributes can also be used as CSS properties for that element.
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">Global event attributes</a>, <a href="/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes">Graphical event attributes</a></small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>ARIA Attributes</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- Event Attributes
+  - [: Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
+  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- ARIA Attributes
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-{{Compat("svg.elements.ellipse")}}
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other SVG basic shapes: <strong>{{ SVGElement('circle') }}</strong>, {{ SVGElement('line') }}, {{ SVGElement('polygon') }}, {{ SVGElement('polyline') }}, {{ SVGElement('rect') }}</li>
-</ul>
+- Other SVG basic shapes: **{{ SVGElement('circle') }}**, {{ SVGElement('line') }}, {{ SVGElement('polygon') }}, {{ SVGElement('polyline') }}, {{ SVGElement('rect') }}
