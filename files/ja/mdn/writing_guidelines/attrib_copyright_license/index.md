@@ -45,7 +45,7 @@ MDN Web Docs に協力したい場合は、 Attribution-ShareAlike ライセン�
 
 #### ロゴ、商標、サービスマーク、ワードマーク
 
-Mozilla Foundation の商標、ロゴ、サービスマークの権利、およびこのウェブサイトの操作画面やルックアンドフィールは、 Creative Commons ライセンスに基づいて提供されるものではなく、それらが（ロゴやグラフィックデザインといった）著作物である限り、上記の条件に基づいて許諾される著作物には含まれません。あなたが文書のテキストを利用する場合、上述の権利を行使しようとする場合、またはこのサイトにおける私たちのライセンス条件について、その他の質問がある場合は、 Mozilla Foundation の窓口 [licensing@mozilla.org](mailto:licensing@mozilla.org "mailto:licensing@mozilla.org") までご連絡ください。
+Mozilla Foundation の商標、ロゴ、サービスマークの権利、およびこのウェブサイトの操作画面やルックアンドフィールは、 Creative Commons ライセンスに基づいて提供されるものではなく、それらが（ロゴやグラフィックデザインといった）著作物である限り、上記の条件に基づいて許諾される著作物には含まれません。あなたが文書のテキストを利用する場合、上述の権利を行使しようとする場合、またはこのサイトにおける私たちのライセンス条件について、その他の質問がある場合は、 Mozilla Foundation の窓口 [licensing@mozilla.org](mailto:licensing@mozilla.org) までご連絡ください。
 
 ## MDN Web Docs における他の場所からのコンテンツの使用
 
