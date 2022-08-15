@@ -99,4 +99,4 @@ IIFE에 대해 더 많은 설명이 필요하다면 위키피디아의 다음 �
 
 ### 기술적 참조
 
-- [Functions](/ko/docs/Web/JavaScript/Guide/Functions "en-US/docs/Web/JavaScript/Guide/Functions")
+- [Functions](/ko/docs/Web/JavaScript/Guide/Functions)

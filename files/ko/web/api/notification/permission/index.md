@@ -40,4 +40,4 @@ var permission = Notification.permission;
 ## 같이 보기
 
 - {{domxref("Notification")}}
-- [Using Web Notifications](/ko/docs/WebAPI/Using_Web_Notifications "/ko/docs/WebAPI/Using_Web_Notifications")
+- [Using Web Notifications](/ko/docs/WebAPI/Using_Web_Notifications)

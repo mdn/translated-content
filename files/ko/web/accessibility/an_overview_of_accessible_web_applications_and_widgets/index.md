@@ -7,7 +7,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 ## 문제
 
-대부분의 자바스크립트 개발도구는 데스크톱 인터페이스의 동작을 유사하게 만들 수 있도록 클라이언트-사이드 위젯 라이브러리를 제공하고 있습니다. Slider, Menu bar, Filelist View 등을 JavaScript, CSS, HTML을 이용해서 만들 수 있습니다. HTML4 명세가 나왔을 때는 HTML 태그에서 이런 위젯들의 설명이 제공되지 않았으며, 개발자들은 보통 \<div>나 \<span>같은 것들을 활용하여 개발하였습니다. 이런 시대의 결과로 데스크톱 위젯들은 충분한 정보를 제공하지 못하였으며 이는 기술적으로 전혀 도움이 되지 않았습니다. 동적 콘텐츠는 이유가 어떻든 스크린을 보지 못하는 사람에게 문제가 되었습니다. 주식 시세 표시 위젯, 트위터 라이브 피드 갱신, 프로그레스바 같은 것들을 보조공학기술(AT)로 인식하지 못하는 경우가 많았습니다. [ARIA](/en/ARIA "ARIA")가 필요한 이유가 여기에 있습니다.
+대부분의 자바스크립트 개발도구는 데스크톱 인터페이스의 동작을 유사하게 만들 수 있도록 클라이언트-사이드 위젯 라이브러리를 제공하고 있습니다. Slider, Menu bar, Filelist View 등을 JavaScript, CSS, HTML을 이용해서 만들 수 있습니다. HTML4 명세가 나왔을 때는 HTML 태그에서 이런 위젯들의 설명이 제공되지 않았으며, 개발자들은 보통 \<div>나 \<span>같은 것들을 활용하여 개발하였습니다. 이런 시대의 결과로 데스크톱 위젯들은 충분한 정보를 제공하지 못하였으며 이는 기술적으로 전혀 도움이 되지 않았습니다. 동적 콘텐츠는 이유가 어떻든 스크린을 보지 못하는 사람에게 문제가 되었습니다. 주식 시세 표시 위젯, 트위터 라이브 피드 갱신, 프로그레스바 같은 것들을 보조공학기술(AT)로 인식하지 못하는 경우가 많았습니다. [ARIA](/en/ARIA)가 필요한 이유가 여기에 있습니다.
 
 Example 1: 탭 위젯을 ARIA 레이블링 없이 만든 마크업. 마크업에서 위젯의 폼과 동작에 대해 설명하고 있지 않습니다.
 
@@ -196,7 +196,7 @@ Do not do this. Instead, implement the "view" mode using a different element alt
 
 ### Asynchronous content changes
 
-> **참고:** Under construction. See also [Live Regions](/ko/ARIA/Live_Regions "Live Regions")
+> **참고:** Under construction. See also [Live Regions](/ko/ARIA/Live_Regions)
 
 ## Keyboard navigation
 
@@ -212,14 +212,14 @@ Here's a summary of how keyboard navigation should work in an ARIA-enabled web a
 - Within a form, the Spacebar key should select or activate the control, while the Enter key should submit the form's default action.
 - If in doubt, mimic the standard desktop behavior of the control you are creating.
 
-So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the `<ol>` in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the `<li>` elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en/Accessibility/Keyboard-navigable_JavaScript_widgets "en/Accessibility/Keyboard-navigable JavaScript widgets") describes how to implement this behavior with JavaScript.
+So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the `<ol>` in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the `<li>` elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
 
 For more detail about desktop-style keyboard navigation conventions, a comprehensive [DHTML style guide](http://dev.aol.com/dhtml_style_guide) is available. It provides an overview of how keyboard navigation should work for each type of widget supported by ARIA. The W3C also offers a helpful [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html) document that includes keyboard navigation and shortcut conventions for a variety of widgets.
 
 ## See also
 
-- [ARIA](/en/ARIA "ARIA")
-- [Web applications and ARIA FAQ](/en/Accessibility/Web_applications_and_ARIA_FAQ "Web applications and ARIA FAQ")
+- [ARIA](/en/ARIA)
+- [Web applications and ARIA FAQ](/en/Accessibility/Web_applications_and_ARIA_FAQ)
 - [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
 - [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://dev.aol.com/dhtml_style_guide)
