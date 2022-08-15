@@ -27,43 +27,36 @@ for (const [key, value] of mySearchParams.entries()) {}
 
 ## Construtor
 
-* {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
+- {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
 
-* : Retorna uma instância do objeto `URLSearchParams`.
+  - : Retorna uma instância do objeto `URLSearchParams`.
 
 ## Métodos
 
-* {{domxref("URLSearchParams.append()")}}
-
-* : Adiciona o par chave/valor especificado como um novo parâmetro de busca.
-* {{domxref("URLSearchParams.delete()")}}
-
-* : Exclui o parâmetro de pesquisa fornecido e seu valor associado da lista de todos os parâmetros de pesquisa.
-* {{domxref("URLSearchParams.entries()")}}
-
-* : Retorna um {{jsxref("Iteration_protocols","iterator")}} permitindo a iteração através de todos os pares de chave/valor contidos neste objeto na mesma ordem em que aparecem na string de consulta.
-* {{domxref("URLSearchParams.forEach()")}}
-
-* : Permite a iteração através de todos os valores contidos neste objeto por meio de uma função de retorno de chamada.
-* {{domxref("URLSearchParams.get()")}}
-
-* : Retorna o primeiro valor associado ao parâmetro de pesquisa fornecido.
-* {{domxref("URLSearchParams.getAll()")}}
-
-* : Retorna todos os valores associados a um determinado parâmetro de pesquisa.
-* {{domxref("URLSearchParams.has()")}}
-
-* : Retorna um valor booleano indicando se tal parâmetro existe.
-* {{domxref("URLSearchParams.keys()")}}
-* : Retorna um {{jsxref("Iteration_protocols", "iterator")}} permitindo a iteração através de todas as chaves dos pares chave/valor contidos neste objeto.
-* {{domxref("URLSearchParams.set()")}}
-* : Define o valor associado a um determinado parâmetro de pesquisa para o valor fornecido. Se houver vários valores, os demais serão excluídos.
-* {{domxref("URLSearchParams.sort()")}}
-* : Ordena todos os pares de chave/valor, se houver, por suas chaves.
-* {{domxref("URLSearchParams.toString()")}}
-* : Retorna uma string contendo uma string de consulta adequada para uso em uma URL.
-* {{domxref("URLSearchParams.values()")}}
-* : Retorna um {{jsxref("Iteration_protocols", "iterator")}} permitindo a iteração através de todos os valores dos pares chave/valor contidos neste objeto.
+- {{domxref("URLSearchParams.append()")}}
+  - : Adiciona o par chave/valor especificado como um novo parâmetro de busca.
+- {{domxref("URLSearchParams.delete()")}}
+  - : Exclui o parâmetro de pesquisa fornecido e seu valor associado da lista de todos os parâmetros de pesquisa.
+- {{domxref("URLSearchParams.entries()")}}
+  - : Retorna um {{jsxref("Iteration_protocols","iterator")}} permitindo a iteração através de todos os pares de chave/valor contidos neste objeto na mesma ordem em que aparecem na string de consulta.
+- {{domxref("URLSearchParams.forEach()")}}
+  - : Permite a iteração através de todos os valores contidos neste objeto por meio de uma função de retorno de chamada.
+- {{domxref("URLSearchParams.get()")}}
+  - : Retorna o primeiro valor associado ao parâmetro de pesquisa fornecido.
+- {{domxref("URLSearchParams.getAll()")}}
+  - : Retorna todos os valores associados a um determinado parâmetro de pesquisa.
+- {{domxref("URLSearchParams.has()")}}
+  - : Retorna um valor booleano indicando se tal parâmetro existe.
+- {{domxref("URLSearchParams.keys()")}}
+  - : Retorna um {{jsxref("Iteration_protocols", "iterator")}} permitindo a iteração através de todas as chaves dos pares chave/valor contidos neste objeto.
+- {{domxref("URLSearchParams.set()")}}
+  - : Define o valor associado a um determinado parâmetro de pesquisa para o valor fornecido. Se houver vários valores, os demais serão excluídos.
+- {{domxref("URLSearchParams.sort()")}}
+  - : Ordena todos os pares de chave/valor, se houver, por suas chaves.
+- {{domxref("URLSearchParams.toString()")}}
+  - : Retorna uma string contendo uma string de consulta adequada para uso em uma URL.
+- {{domxref("URLSearchParams.values()")}}
+  - : Retorna um {{jsxref("Iteration_protocols", "iterator")}} permitindo a iteração através de todos os valores dos pares chave/valor contidos neste objeto.
 
 ## Exemplos
 
@@ -182,6 +175,6 @@ console.log(noEquals.toString()); // 'foo=&bar=baz'
 
 ## Veja também
 
-* [Polyfill de `URLSearchParams` no `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
-* A interface {{domxref("URL")}}.
-* [Google Developers: Manipulação de URL fácil com URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)
+- [Polyfill de `URLSearchParams` no `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- A interface {{domxref("URL")}}.
+- [Google Developers: Manipulação de URL fácil com URLSearchParams](https://developer.chrome.com/blog/urlsearchparams/)

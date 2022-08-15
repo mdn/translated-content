@@ -176,15 +176,17 @@ document.addEventListener("click", function(e) {
 
 附加组件的结构最后看上去应该像下面这样：
 
-    button/
-        icons/
-            page-16.png
-            page-32.png
-        popup/
-            choose_page.css
-            choose_page.html
-            choose_page.js
-        manifest.json
+```
+button/
+    icons/
+        page-16.png
+        page-32.png
+    popup/
+        choose_page.css
+        choose_page.html
+        choose_page.js
+    manifest.json
+```
 
 重新加载附加组件，再次单击按钮，并尝试在弹出菜单中单击某个选择项：
 

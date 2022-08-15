@@ -151,7 +151,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
 ### 建立字串
 
-1.  首先，先輸入下面幾行程式碼：
+1. 首先，先輸入下面幾行程式碼：
 
     ```js
     let string = 'The revolution will not be televised.';
@@ -160,7 +160,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
     就像我們對數字的操作，我們聲明一個變數，並用一個值（字串）來初始化它，而後傳回這個值。唯一的差異在於，你需要用引號包住你的值。
 
-2.  如果你沒有使用引號包住值，或缺少單一邊的引號，都會導致錯誤產生。試著輸入下面幾行程式碼：
+2. 如果你沒有使用引號包住值，或缺少單一邊的引號，都會導致錯誤產生。試著輸入下面幾行程式碼：
 
     ```js example-bad
     let badString = This is a test;
@@ -170,7 +170,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
     上述的程式無法運作，因為未使用引號包圍的文字都將被視為變數名稱、屬性名稱和保留字等。如果瀏覽器無法辨識它，便會產生錯誤（例如：「missing ; before statement」）。如果瀏覽器可以識別字段從哪裡開始，但無法找到字段的終點，意即缺少第二個引號，則會產生「unterminated string literal」的錯誤。如果你的程式出現了這樣的錯誤，檢查並確認自己的字串是否遺漏了任何引號。
 
-3.  如果你先定義了變數 `string` ，則以下程式碼可以正常運作。馬上來試試看：
+3. 如果你先定義了變數 `string` ，則以下程式碼可以正常運作。馬上來試試看：
 
     ```js
     let badString = string;
@@ -181,7 +181,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
 ### 單引號與雙引號
 
-1.  在 JavaScript 中，你可以選擇用單引號或雙引號來包住字串。兩種方式都可行：
+1. 在 JavaScript 中，你可以選擇用單引號或雙引號來包住字串。兩種方式都可行：
 
     ```js
     let sgl = 'Single quotes.';
@@ -190,13 +190,13 @@ translation_of: Learn/JavaScript/First_steps/Strings
     dbl;
     ```
 
-2.  兩種之間的差異非常小，取決於你個人的習慣與喜好。你可以選擇一種，並且固定使用它。交互使用兩種方式，容易造成混亂。特別是當你使用兩種不同的引號包住一個字串！這會導致錯誤回傳：
+2. 兩種之間的差異非常小，取決於你個人的習慣與喜好。你可以選擇一種，並且固定使用它。交互使用兩種方式，容易造成混亂。特別是當你使用兩種不同的引號包住一個字串！這會導致錯誤回傳：
 
     ```js example-bad
     let badQuotes = 'What on earth?";
     ```
 
-3.  瀏覽器會認為字串並沒有結束，沒有作為包住字串的引號，是可以出現在字串裡面的。看看下面的例子，兩種都是可行的：
+3. 瀏覽器會認為字串並沒有結束，沒有作為包住字串的引號，是可以出現在字串裡面的。看看下面的例子，兩種都是可行的：
 
     ```js
     let sglDbl = 'Would you eat a "fish supper"?';
@@ -205,7 +205,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
     dblSgl;
     ```
 
-4.  但是，字串中不可以再使用那個作為包住字串的引號。以下的程式行會出錯，因為瀏覽器無法判斷字串的結尾：
+4. 但是，字串中不可以再使用那個作為包住字串的引號。以下的程式行會出錯，因為瀏覽器無法判斷字串的結尾：
 
     ```js example-bad
     let bigmouth = 'I've got no right to take my place...';
@@ -226,8 +226,9 @@ bigmouth;
 
 ## 連接字串（Concatenating strings）
 
-1.  連接（Concatenate）是一個新潮的程式用語。在 JavaScript 中，使用加號（+）將字串連接；這也是我們做數字相加的方式。但在這個狀況下，它有不同的作用。讓我們在 console 中示範：
-2.  ```js
+1. 連接（Concatenate）是一個新潮的程式用語。在 JavaScript 中，使用加號（+）將字串連接；這也是我們做數字相加的方式。但在這個狀況下，它有不同的作用。讓我們在 console 中示範：
+
+2. ```js
     let one = 'Hello, ';
     let two = 'how are you?';
     let joined = one + two;
@@ -236,14 +237,14 @@ bigmouth;
 
     這邊的結果是 `joined` 這個變數中，有了 「Hello, how are you?」這個值。
 
-3.  在上一個範例中，我們只連接了兩個字串。但只要你在兩個字串之間加上 `+` ，那你要連接幾個都可以。試試看這個：
+3. 在上一個範例中，我們只連接了兩個字串。但只要你在兩個字串之間加上 `+` ，那你要連接幾個都可以。試試看這個：
 
     ```js
     let multiple = one + one + one + one + two;
     multiple;
     ```
 
-4.  你也可以結合變數和字串。試試看這個：
+4. 你也可以結合變數和字串。試試看這個：
 
     ```js
     let response = one + 'I am fine — ' + two;
@@ -275,7 +276,7 @@ button.onclick = function() {
 
 ### 數字 vs. 字串
 
-1.  那麼我們將字串和數字連接會發生什麼事呢？讓我們在 console 中試試看：
+1. 那麼我們將字串和數字連接會發生什麼事呢？讓我們在 console 中試試看：
 
     ```js
     'Front ' + 242;
@@ -283,14 +284,14 @@ button.onclick = function() {
 
     或許你預期會跑出錯誤訊息，但看來依然正常運作。若將字串表示成數字似乎不太合理，但將數字表示成字串看來是可行的，所以瀏覽器便會巧妙地將數字轉換成字串，並將這兩個字串連接在一起。
 
-2.  你也可以用兩個數字做這個例子 — 將這兩個數字包在引號中強制將它們轉換成字串。試試看（並使用 typeof 這個運算子去檢查變數是數字或字串）：
+2. 你也可以用兩個數字做這個例子 — 將這兩個數字包在引號中強制將它們轉換成字串。試試看（並使用 typeof 這個運算子去檢查變數是數字或字串）：
 
     ```js
     let myDate = '19' + '67';
     typeof myDate;
     ```
 
-3.  如果你想轉換數字變數成字串，但不要更動到原本的變數；或是想轉換字串變數成數字，也不要更動到原本的變數，你可以使用以下兩種方式：
+3. 如果你想轉換數字變數成字串，但不要更動到原本的變數；或是想轉換字串變數成數字，也不要更動到原本的變數，你可以使用以下兩種方式：
 
     - 物件 {{jsxref("Number")}} 會將欲處理的變數轉換成數字（如果可行的話）。試試以下例子：
 
@@ -343,7 +344,7 @@ output = `I like the song "${ song }". I gave it a score of ${ score/highestScor
 ```
 
 全部一串都只需要包含在一對重音符號裡，不再需要切開、合起一堆字串碎片。
-當你想要包含變數或者算式在字串裡時，你只需要將它放在 _佔位符_ `${ } `裡。
+當你想要包含變數或者算式在字串裡時，你只需要將它放在 _佔位符_ `${ }` 裡。
 
 你能將複雜的算式包含在模版字符串裡，舉個例子:
 

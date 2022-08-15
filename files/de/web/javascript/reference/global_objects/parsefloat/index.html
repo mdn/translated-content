@@ -15,8 +15,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <div>{r{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}</div>
 
-<p class="hidden">Die Quelle für dieses Beispiel ist in einem GitHub-Repository abgelegt. Wenn Sie etwas zu dem Interactive Examples Project beitragen möchten, klonen Sie bitte <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> und senden uns einen Pull-Request.</p>
-
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">parseFloat(<em>value</em>)</pre>
@@ -36,15 +34,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <p><code>parseFloat</code> ist eine Top-Level-Funktion und mit keinen Objekt assoziiert.</p>
 
-<p><code>parseFloat</code> übersetzt ihr Argument in eine Fließkommazahl. Trifft sie dabei auf ein anderes Zeichen als ein Vorzeichen (+ oder -), einen numerischen Werten (0-9), einen Dezimalpunkt, oder einen Exponenten, so gibt es den Wert zurück bis zu diesem Punkt und ignoriert dieses Zeichen, sowie alle nachfolgenden. Anführende und abschließende Leerzeichen sind erlaubt.</p>
+<p><code>parseFloat</code> übersetzt ihr Argument in eine Fließkommazahl. Trifft sie dabei auf ein anderes Zeichen als ein Vorzeichen (+ oder -), einen numerischen Werten (0-9), einen Dezimalpunkt, oder einen Exponenten, so gibt es den Wert zurück bis zu diesem Punkt und ignoriert dieses Zeichen, sowie alle nachfolgenden. Anführende und abschließende Leerzeichen sind erlaubt.</p>
 
 <p>Wenn der Wert eine Zeichenkette ist und die ersten Zeichen nicht in eine Zahl konvertiert werden können, gibt <code>parseFloat</code> den Wert {{jsxref("NaN")}} zurück.</p>
 
-<p>Für arithmetische Zwecke ist <code>NaN</code> keine Zahl für jede Basis eines Zahlensystems. Man kann die {{jsxref("isNaN")}}-Funktion aufrufen um festzustellen, ob <code>NaN</code> das Ergebnis von <code>parseFloat</code> ist. Wenn <code>NaN</code> Operand einer arithmetischen Operation ist, dann ist das Ergebnis ebenfalls <code>NaN</code>.</p>
+<p>Für arithmetische Zwecke ist <code>NaN</code> keine Zahl für jede Basis eines Zahlensystems. Man kann die {{jsxref("isNaN")}}-Funktion aufrufen um festzustellen, ob <code>NaN</code> das Ergebnis von <code>parseFloat</code> ist. Wenn <code>NaN</code> Operand einer arithmetischen Operation ist, dann ist das Ergebnis ebenfalls <code>NaN</code>.</p>
 
-<p><code>parseFloat</code> kann ebenfalls den Wert <code>Infinity</code> parsen und zurückgeben. Man kann die {{jsxref("isFinite")}}-Funktion benutzen um festzustellen, ob das Ergebnis eine endliche Zahl ist (nicht <code>Infinity</code>,  <code>-Infinity</code>, oder <code>NaN</code>).</p>
+<p><code>parseFloat</code> kann ebenfalls den Wert <code>Infinity</code> parsen und zurückgeben. Man kann die {{jsxref("isFinite")}}-Funktion benutzen um festzustellen, ob das Ergebnis eine endliche Zahl ist (nicht <code>Infinity</code>,  <code>-Infinity</code>, oder <code>NaN</code>).</p>
 
-<p><code>parseFloat</code> kann zudem Objekte parsen, wenn diese eine <code>toString</code>- oder <code>valueOf</code>-Methode haben. Das Ergebnis ist dasselbe, als wenn <code>parseFloat</code> mit dem Ergebnis einer dieser beiden Methoden ausgerufen wurde.</p>
+<p><code>parseFloat</code> kann zudem Objekte parsen, wenn diese eine <code>toString</code>- oder <code>valueOf</code>-Methode haben. Das Ergebnis ist dasselbe, als wenn <code>parseFloat</code> mit dem Ergebnis einer dieser beiden Methoden ausgerufen wurde.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -115,17 +113,17 @@ console.log(filterFloat('hop1.61803398875'));  // NaN
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.1.2.3', 'parseFloat')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-parsefloat-string', 'parseFloat')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-parsefloat-string', 'parseFloat')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

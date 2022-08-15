@@ -1,14 +1,6 @@
 ---
 title: TextDecoderStream.writable
 slug: Web/API/TextDecoderStream/writable
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TextDecoderStream
-translation_of: Web/api/TextDecoderStream/writable
 ---
 {{APIRef("Encoding API")}}
 

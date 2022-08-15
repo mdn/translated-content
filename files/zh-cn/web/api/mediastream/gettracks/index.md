@@ -1,13 +1,6 @@
 ---
 title: MediaStream.getTracks()
 slug: Web/API/MediaStream/getTracks
-tags:
-  - 参考
-  - 媒体流
-  - 媒体流 API
-  - 媒体轨道
-  - 方法
-translation_of: Web/API/MediaStream/getTracks
 ---
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 

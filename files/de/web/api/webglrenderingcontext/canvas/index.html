@@ -9,7 +9,7 @@ translation_of: Web/API/WebGLRenderingContext/canvas
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p>Die Eigenschaft <code><strong>WebGLRenderingContext.canvas</strong></code> ist eine schreibgeschütze Referenz auf das {{domxref("HTMLCanvasElement")}} oder das {{domxref("OffscreenCanvas")}} Objekt, welches mit dem Context verknüpft ist. Es kann auch den Wert {{jsxref("null")}} annehmen, wenn es keinem {{HTMLElement("canvas")}} Element oder {{domxref("OffscreenCanvas")}} Objekt zugeordnet ist.</p>
+<p>Die Eigenschaft <code><strong>WebGLRenderingContext.canvas</strong></code> ist eine schreibgeschütze Referenz auf das {{domxref("HTMLCanvasElement")}} oder das {{domxref("OffscreenCanvas")}} Objekt, welches mit dem Context verknüpft ist. Es kann auch den Wert {{jsxref("null")}} annehmen, wenn es keinem {{HTMLElement("canvas")}} Element oder {{domxref("OffscreenCanvas")}} Objekt zugeordnet ist.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/WebGLRenderingContext/canvas
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
 
-<p>Entweder ein {{domxref("HTMLCanvasElement")}}, ein {{domxref("OffscreenCanvas")}} Objekt oder {{jsxref("null")}}.</p>
+<p>Entweder ein {{domxref("HTMLCanvasElement")}}, ein {{domxref("OffscreenCanvas")}} Objekt oder {{jsxref("null")}}.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/WebGLRenderingContext/canvas
 <pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>Du kannst die Eigenschaft <code>canvas</code> aus dem <code>WebGLRenderingContext</code> auslesen um eine Referenz darauf zu erhalten.</p>
+<p>Du kannst die Eigenschaft <code>canvas</code> aus dem <code>WebGLRenderingContext</code> auslesen um eine Referenz darauf zu erhalten.</p>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
@@ -37,7 +37,7 @@ gl.canvas; // HTMLCanvasElement
 
 <h3 id="Offscreen_Canvas">Offscreen Canvas</h3>
 
-<p>Beispiel des experimentellen {{domxref("OffscreenCanvas")}} Objektes.</p>
+<p>Beispiel des experimentellen {{domxref("OffscreenCanvas")}} Objektes.</p>
 
 <pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext('webgl');

@@ -58,7 +58,7 @@ translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 
 在學習本系列教程時，我們會提供合適的代碼片段，你可以粘貼複製，但是有些代碼我們希望你能自己擴展（在提示下）。
 
-如果你卡在某個地方，你可以在 [Github ](https://github.com/mdn/django-locallibrary-tutorial)裡找到網站的完整代碼。
+如果你卡在某個地方，你可以在 [Github](https://github.com/mdn/django-locallibrary-tutorial) 裡找到網站的完整代碼。
 
 ## 總結
 

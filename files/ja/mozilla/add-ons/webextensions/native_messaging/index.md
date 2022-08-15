@@ -408,7 +408,7 @@ while True:
 "No such native application <name>"
 ```
 
--  `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
+- `runtime.connectNative()` に渡した名前がアプリマニフェスト中の名前と一致しているか確認してください。
 - OS X/Linux: アプリマニフェストのファイル名が `<name>.json` となっていることを確認してください。
 - OS X/Linux: ネイティブアプリのマニフェストの場所が[ここ](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#mac_OS_X)で述べているところにあるのを確認してください。
 - Windows: レジストリキーが正しい場所にあり、その名前がアプリマニフェスト中の名前と一致していることを確認してください。

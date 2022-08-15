@@ -1,17 +1,6 @@
 ---
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Input
-  - InputEvent
-  - Property
-  - Reference
-  - events
-  - inputType
-translation_of: Web/API/InputEvent/inputType
 ---
 {{APIRef("DOM Events")}}
 

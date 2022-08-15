@@ -74,18 +74,20 @@ _No change._
 
 - New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ({{bug("907352")}}):
 
-      {
-        mandatory: {
-          width: { min: 640 },
-          height: { min: 480 }
-        },
-        optional: [
-          { width: 650 },
-          { width: { min: 650 }},
-          { frameRate: 60 },
-          { width: { max: 800 }},
-        ]
-      }
+  ```
+  {
+    mandatory: {
+      width: { min: 640 },
+      height: { min: 480 }
+    },
+    optional: [
+      { width: 650 },
+      { width: { min: 650 }},
+      { frameRate: 60 },
+      { width: { max: 800 }},
+    ]
+  }
+  ```
 
 - WebRTC methods which previously used callback functions as input parameters are now also available using JavaScript [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

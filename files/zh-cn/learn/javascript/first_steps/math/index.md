@@ -52,7 +52,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 **[在新窗口中打开](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
-1.  首先，我们先声明一对变量，并分别用一个整数和一个浮点数来初始化它们，然后再输入变量名来检查是否正确：
+1. 首先，我们先声明一对变量，并分别用一个整数和一个浮点数来初始化它们，然后再输入变量名来检查是否正确：
 
     ```js
     let myInt = 5;
@@ -61,8 +61,8 @@ translation_of: Learn/JavaScript/First_steps/Math
     myFloat;
     ```
 
-2.  数值键入不带引号 —— 在继续之前尝试声明和初始化更多包含数字的变量。
-3.  现在我们来看看我们的原始变量是否是相同的数据类型。在 JavaScript 中有一个称为{{jsxref("Operators / typeof", "typeof")}} 的运算符。输入如下所示的两行：
+2. 数值键入不带引号 —— 在继续之前尝试声明和初始化更多包含数字的变量。
+3. 现在我们来看看我们的原始变量是否是相同的数据类型。在 JavaScript 中有一个称为{{jsxref("Operators / typeof", "typeof")}} 的运算符。输入如下所示的两行：
 
     ```js
     typeof myInt;
@@ -140,7 +140,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 我们可能不需要教你如何做基础数学，但我们想测试你对所涉及的语法的理解。尝试将下面的示例输入到[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Discover_browser_developer_tools)中。
 
-1.  首先尝试输入一些简单的例子，例如
+1. 首先尝试输入一些简单的例子，例如
 
     ```js
     10 + 7
@@ -148,7 +148,7 @@ translation_of: Learn/JavaScript/First_steps/Math
     60 % 3
     ```
 
-2.  您还可以尝试声明变量并用数字初始化变量，然后尝试使用这些变量来求和 - 求和中变量的行为与直接用其持有的数来求和完全一样。例如：
+2. 您还可以尝试声明变量并用数字初始化变量，然后尝试使用这些变量来求和 - 求和中变量的行为与直接用其持有的数来求和完全一样。例如：
 
     ```js
     let num1 = 10;
@@ -158,7 +158,7 @@ translation_of: Learn/JavaScript/First_steps/Math
     num2 / num1;
     ```
 
-3.  最后在本节中，尝试输入一些更复杂的表达式，如：
+3. 最后在本节中，尝试输入一些更复杂的表达式，如：
 
     ```js
     5 + 10 * 3;

@@ -1,16 +1,6 @@
 ---
 title: SpeechSynthesis.getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - getVoices
-  - speech
-  - synthesis
-translation_of: Web/API/SpeechSynthesis/getVoices
 ---
 {{APIRef("Web Speech API")}}
 

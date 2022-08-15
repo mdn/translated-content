@@ -24,7 +24,7 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 **ICE トリクリング**とは、最初の提案や回答がすでに相手に送られた後も、候補を送り続けるプロセスのことです。
 
-このプロパティは {{domxref("RTCPeerConnection.setRemoteDescription()")}} を呼び出した後にのみ設定されます。理想的には、シグナルプロトコルがトリクルサポートを検出する方法を提供し、このプロパティに依存する必要がないようにすることです。　WebRTC ブラウザーは、常にトリクル ICE に対応しています。トリクリングに対応していない場合、または指示することができない場合は、このプロパティの偽値をチェックし、 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} の値が `"completed" ` に変わるまで待ってから最初の提案を作成し送信することができます。そうすることで、提案にすべての候補が含まれるようになります。
+このプロパティは {{domxref("RTCPeerConnection.setRemoteDescription()")}} を呼び出した後にのみ設定されます。理想的には、シグナルプロトコルがトリクルサポートを検出する方法を提供し、このプロパティに依存する必要がないようにすることです。　WebRTC ブラウザーは、常にトリクル ICE に対応しています。トリクリングに対応していない場合、または指示することができない場合は、このプロパティの偽値をチェックし、 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} の値が `"completed"` に変わるまで待ってから最初の提案を作成し送信することができます。そうすることで、提案にすべての候補が含まれるようになります。
 
 ## 値
 

@@ -12,24 +12,24 @@ translation_of: Web/API/Document/createDocumentFragment
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>Erzeugt ein neues {{domxref("DocumentFragment")}} Objekt.</p>
+<p>Erzeugt ein neues {{domxref("DocumentFragment")}} Objekt.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox">var <var>fragment</var> = document.createDocumentFragment();
 </pre>
 
-<p><code>fragment</code> ist hierbei eine Referenz zu einem neu erstellten, leeren {{domxref("DocumentFragment")}} Objekt.</p>
+<p><code>fragment</code> ist hierbei eine Referenz zu einem neu erstellten, leeren {{domxref("DocumentFragment")}} Objekt.</p>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p><code>DocumentFragment</code>s sind DOM Knoten (DOM Nodes). Sie sind nicht Teil des Haupt- oder Seiten-DOM-Baums. Üblicherweise werden sie verwendet, um einen Teilbaum mit Objekten und Unterobjekten zu erstellen und das Ergebnis anschließend in den Seiten-DOM-Baum einzufügen. In dem DOM-Baum wird das document fragment dann ersetzt mit allen Kindelementen.</p>
+<p><code>DocumentFragment</code>s sind DOM Knoten (DOM Nodes). Sie sind nicht Teil des Haupt- oder Seiten-DOM-Baums. Üblicherweise werden sie verwendet, um einen Teilbaum mit Objekten und Unterobjekten zu erstellen und das Ergebnis anschließend in den Seiten-DOM-Baum einzufügen. In dem DOM-Baum wird das document fragment dann ersetzt mit allen Kindelementen.</p>
 
-<p>Da das gesamte DocumentFragment <strong>nur im Speicher</strong> vorliegt ("in memory"<strong>)</strong> und nicht Teil des Seiten-DOM-Baums ist, führen Veränderungen in dem DocumentFragment, wie etwa das Hinzufügen von Elementen, nicht zu einem page <a href="https://developers.google.com/speed/articles/reflow?csw=1">reflow</a> (die Berechnung der Element Positionen und Geometrie). Dementsprechend führt die Nutzung von DocumentFragments zu einer <a href="http://ejohn.org/blog/dom-documentfragments/">besseren Performance</a>.</p>
+<p>Da das gesamte DocumentFragment <strong>nur im Speicher</strong> vorliegt ("in memory"<strong>)</strong> und nicht Teil des Seiten-DOM-Baums ist, führen Veränderungen in dem DocumentFragment, wie etwa das Hinzufügen von Elementen, nicht zu einem page <a href="https://developers.google.com/speed/articles/reflow?csw=1">reflow</a> (die Berechnung der Element Positionen und Geometrie). Dementsprechend führt die Nutzung von DocumentFragments zu einer <a href="http://ejohn.org/blog/dom-documentfragments/">besseren Performance</a>.</p>
 
 <h2 id="Beispiel">Beispiel</h2>
 
-<p>Dieses Beispiel erzeugt eine Liste gängiger Browser.</p>
+<p>Dieses Beispiel erzeugt eine Liste gängiger Browser.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -77,57 +77,7 @@ element.appendChild(fragment);
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

@@ -1,12 +1,6 @@
 ---
 title: 游戏货币化
 slug: Games/Publishing_games/Game_monetization
-tags:
-  - 推广
-  - 收入
-  - 游戏
-  - 销售
-translation_of: Games/Publishing_games/Game_monetization
 original_slug: Games/Publishing_games/游戏货币化
 ---
 {{GamesSidebar}}

@@ -16,12 +16,12 @@ translation_of: 'Web/CSS/:not'
 
 <p>Die <a href="/de/docs/Web/CSS">CSS</a> <a href="/de/docs/Web/CSS/Pseudo-classes" title="Pseudo-classes">Pseudoklasse</a> <code>:not(X)</code> ist eine Negation zu einem Selektor <var>X</var> als Argument und wird als Funktion angegeben. Sie passt auf Elemente, die nicht durch das Argument repräsentiert werden. X darf keinen weiteren Negationsselektor beinhalten.</p>
 
-<p>Die <a href="/de/docs/Web/CSS/Spezifit%C3%A4t">Spezifität</a> der <code>:not</code> Pseudoklasse entspricht der Spezifität seines Arguments. Die <code>:not</code> Pseudoklasse hat im Gegensatz zu anderen Pseudoklassen keinen Einfluss auf die Spezifität.</p>
+<p>Die <a href="/de/docs/Web/CSS/Spezifit%C3%A4t">Spezifität</a> der <code>:not</code> Pseudoklasse entspricht der Spezifität seines Arguments. Die <code>:not</code> Pseudoklasse hat im Gegensatz zu anderen Pseudoklassen keinen Einfluss auf die Spezifität.</p>
 
 <div class="note"><strong>Hinweise:</strong>
 
 <ul>
- <li>Mit der Negation können auch irrationale Selektoren erstellt werden, z. B.  <code>:not(*)</code>, welche alle Elemente auswählen würde, die keine Elemente sind.</li>
+ <li>Mit der Negation können auch irrationale Selektoren erstellt werden, z. B.  <code>:not(*)</code>, welche alle Elemente auswählen würde, die keine Elemente sind.</li>
  <li>Es ist möglich, andere Regeln zu überschreiben. <code>A:not(B)</code> hat den selben Effekt wie <code>A</code>, aber eine höhere Spezifität.</li>
  <li><code>:not(bla){}</code> passt auf alle Elemente, die nicht <code>bla</code> sind <strong>einschließlich <code>html</code> und <code>body</code></strong>.</li>
 </ul>

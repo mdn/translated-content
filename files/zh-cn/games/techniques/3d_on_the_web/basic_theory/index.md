@@ -1,12 +1,6 @@
 ---
 title: 解释基本的 3D 原理
 slug: Games/Techniques/3D_on_the_web/Basic_theory
-tags:
-  - 3D
-  - 坐标
-  - 片段
-  - 顶点
-translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 ---
 {{GamesSidebar}}
 

@@ -55,7 +55,7 @@ console.log(Object.keys(my_obj)); // console: ['foo']</pre>
 
 <h2 id="Notes" name="Notes">Notizen</h2>
 
-<p>In ES5 wird, wenn das Argument für die Funktion kein Objekt ist, ein {{jsxref("TypeError")}} Fehler geworfen. In ES2015 wird das Argument, welches kein Objekt ist, in ein Objekt umgewandelt, das aber nicht mehr dem eigentlichen Wert entspricht (siehe Beispiel).</p>
+<p>In ES5 wird, wenn das Argument für die Funktion kein Objekt ist, ein {{jsxref("TypeError")}} Fehler geworfen. In ES2015 wird das Argument, welches kein Objekt ist, in ein Objekt umgewandelt, das aber nicht mehr dem eigentlichen Wert entspricht (siehe Beispiel).</p>
 
 <pre class="brush: js">&gt; Object.keys("foo")
 TypeError: "foo" is not an object // ES5 code
@@ -132,67 +132,19 @@ if (!Object.keys) {
   <tr>
    <td>{{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}}</td>
    <td>{{Spec2('ES2015')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("12")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also" name="See_also">Siehe auch</h2>
 

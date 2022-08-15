@@ -29,14 +29,25 @@ translation_of: Web/Accessibility/ARIA/forms/Multipart_labels
 
 **aria-labelledby** および **aria-describedby** はどちらもラベル付けされる要素、例えば \<input> で指定します。どちらの場合もラベルとコントロールの紐付けがあってもかまいませんが、 **aria-labelledby** によって上書きされます。**aria-labelledby** を提供する HTML ページでは、 ARIA に対応していない古いブラウザーにも対応できるように構成したラベルも提供してください。 Firefox 3 では新しい属性により、目の不自由なユーザーが自動的によりよいアクセシビリティを得ることができますが、古いブラウザーのユーザーは、この方法でアクセシビリティがない状態を抜けることができません。
 
-例:
-<input><span id="labelShutdown">Shut down computer after</span> <input> <span id="shutdownUnit"> minutes</span>
+### 例
 
-<pre class="brush: html">&lt;input aria-labelledby="labelShutdown shutdownTime shutdownUnit" type="checkbox" /&gt;
-&lt;span id="labelShutdown"&gt;Shut down computer after&lt;/span&gt;
-&lt;input aria-labelledby="labelShutdown shutdownTime shutdownUnit" id="shutdownTime" type="text" value="10" /&gt;
-&lt;span id="shutdownUnit"&gt; minutes&lt;/span&gt;
-</pre>
+{{ EmbedLiveSample("例") }}
+
+```css hidden
+body {
+  margin: 1rem;
+}
+```
+
+```html
+<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" type="checkbox" />
+
+<span id="labelShutdown">Shut down computer after</span>
+
+<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" id="shutdownTime" type="text" value="10" />
+
+<span id="shutdownUnit"> minutes</span>
+```
 
 ## JAWS 8 ユーザーへの注意
 

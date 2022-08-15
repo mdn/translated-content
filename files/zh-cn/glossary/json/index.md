@@ -26,4 +26,4 @@ JSON 可以表示数字、布尔值、字符串、`null`、数组（有序序列
 
 ### Technical reference
 
-- {{Link("/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON")}}（MDN）
+- [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)（MDN）

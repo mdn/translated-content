@@ -38,7 +38,7 @@ This documentation is not yet complete. Want to help document Firefox 10? See th
 - The attribute {{ domxref("document.xmlEncoding") }} has been removed as it has been deprecated in the DOM4 specification.
 - The attribute {{ domxref("text.isElementContentWhiteSpace") }} has been removed as it has been deprecated in the DOM4 specification.
 - The method {{ domxref("text.replaceWholeText") }} has been removed as it has been deprecated in the DOM4 specification.
-- The method {{ domxref("node.isSameNode") }} has been removed as it has been deprecated in the DOM4 specification. Instead of `node1.isSameNode(node2)`, you can simply use the `===` operator, like this: ` node1 ===`` node2  `.
+- The method {{ domxref("node.isSameNode") }} has been removed as it has been deprecated in the DOM4 specification. Instead of `node1.isSameNode(node2)`, you can simply use the `===` operator, like this: `node1 === node2`.
 
 #### Page Visibility API
 
@@ -77,7 +77,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - When encountering an unknown optional parameter in [`IDBObjectStore.createIndex()`](/en/IndexedDB/IDBObjectStore#createIndex) or [`IDBDatabase.createObjectStore()`](/en/IndexedDB/IDBDatabase#createObjectStore), Gecko will not fire an exception anymore, but simply ignore it.
 - When [`IDBTransaction.abort()`](/en/IndexedDB/IDBTransaction#abort%28%29) is called, all pending [`IDBRequest`](/en/IndexedDB/IDBRequest) have their `errorCode` set to `ABORT_ERROR`.
 - The methods [`IDBObjectStore.delete()`](</en/IndexedDB/IDBObjectStore#delete()>) and [`IDBCursor.delete()`](</en/IndexedDB/IDBCursor#delete()>) now set the `result` attribute of the returned [`IDBRequest`](/en/IndexedDB/IDBRequest) to `undefined`.
-- The method [`IDBDatabase.setVersion()`](</en/IndexedDB/IDBDatabase#setVersion()>) has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en/IndexedDB/IDBFactory#open) method which has been updated and the `onupgradeneeded `callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The [`IDBVersionChangeRequest`](/en/IndexedDB/IDBVersionChangeRequest) interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en/IndexedDB/IDBOpenDBRequest) interface.
+- The method [`IDBDatabase.setVersion()`](</en/IndexedDB/IDBDatabase#setVersion()>) has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en/IndexedDB/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The [`IDBVersionChangeRequest`](/en/IndexedDB/IDBVersionChangeRequest) interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en/IndexedDB/IDBOpenDBRequest) interface.
 - The method [`IDBFactory.deleteDatabase()`](/en/IndexedDB/IDBFactory#deleteDatabase%28%29) method has been added.
 
 #### Other
