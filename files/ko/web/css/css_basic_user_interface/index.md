@@ -9,42 +9,36 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Basic_User_Interface
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Basic User Interface</strong>는 사용자 인터페이스와 연관된 렌더링 및 기능의 동작 방식을 정의하는 CSS 모듈입니다.</p>
+**CSS Basic User Interface**는 사용자 인터페이스와 연관된 렌더링 및 기능의 동작 방식을 정의하는 CSS 모듈입니다.
 
-<h2 id="참고서">참고서</h2>
+## 참고서
 
-<h3 id="속성">속성</h3>
+### 속성
 
-<div class="index">
-<ul>
- <li>{{CSSxRef("appearance")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("box-sizing")}}</li>
- <li>{{CSSxRef("cursor")}}</li>
- <li>{{CSSxRef("ime-mode")}} {{Deprecated_Inline}}</li>
- <li>{{CSSxRef("nav-down")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("nav-left")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("nav-right")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("nav-up")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("outline")}}</li>
- <li>{{CSSxRef("outline-width")}}</li>
- <li>{{CSSxRef("outline-style")}}</li>
- <li>{{CSSxRef("outline-color")}}</li>
- <li>{{CSSxRef("outline-offset")}}</li>
- <li>{{CSSxRef("resize")}}</li>
- <li>{{CSSxRef("text-overflow")}}</li>
- <li>{{CSSxRef("user-select")}}</li>
-</ul>
-</div>
+- {{CSSxRef("appearance")}} {{Experimental_Inline}}
+- {{CSSxRef("box-sizing")}}
+- {{CSSxRef("cursor")}}
+- {{CSSxRef("ime-mode")}} {{Deprecated_Inline}}
+- {{CSSxRef("nav-down")}} {{Experimental_Inline}}
+- {{CSSxRef("nav-left")}} {{Experimental_Inline}}
+- {{CSSxRef("nav-right")}} {{Experimental_Inline}}
+- {{CSSxRef("nav-up")}} {{Experimental_Inline}}
+- {{CSSxRef("outline")}}
+- {{CSSxRef("outline-width")}}
+- {{CSSxRef("outline-style")}}
+- {{CSSxRef("outline-color")}}
+- {{CSSxRef("outline-offset")}}
+- {{CSSxRef("resize")}}
+- {{CSSxRef("text-overflow")}}
+- {{CSSxRef("user-select")}}
 
-<h2 id="안내서">안내서</h2>
+## 안내서
 
-<dl>
- <dt><a href="/ko/docs/Web/CSS/cursor/Using_URL_values_for_the_cursor_property"><code>cursor</code> 속성값에 URL 사용하기</a></dt>
- <dd>URL을 {{cssxref("cursor")}} 속성에 사용해 사용자 지정 커서를 생성하는 방법을 설명합니다.</dd>
-</dl>
+- [`cursor` 속성값에 URL 사용하기](/ko/docs/Web/CSS/cursor/Using_URL_values_for_the_cursor_property)
+  - : URL을 {{cssxref("cursor")}} 속성에 사용해 사용자 지정 커서를 생성하는 방법을 설명합니다.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}

@@ -6,98 +6,94 @@ tags:
   - CSS Positioninng
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>position</code></strong> 속성은 문서 상에 요소를 배치하는 방법을 지정합니다. {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} 속성이 요소를 배치할 최종 위치를 결정합니다.</p>
+[CSS](/ko/docs/Web/CSS) **`position`** 속성은 문서 상에 요소를 배치하는 방법을 지정합니다. {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} 속성이 요소를 배치할 최종 위치를 결정합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/position.html")}}
 
+## 구문
 
+`position` 속성은 아래의 목록에서 하나의 키워드 값을 선택해 지정할 수 있습니다.
 
-<h2 id="구문">구문</h2>
+### 값
 
-<p><code>position</code> 속성은 아래의 목록에서 하나의 키워드 값을 선택해 지정할 수 있습니다.</p>
+- `static`
+  - : 요소를 일반적인 문서 흐름에 따라 배치합니다. {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("z-index")}} 속성이 아무런 영향도 주지 않습니다. 기본값입니다.
+- `relative`
+  - : 요소를 일반적인 문서 흐름에 따라 배치하고, 자기 자신을 기준으로 `top`, `right`, `bottom`, `left`의 값에 따라 오프셋을 적용합니다. 오프셋은 다른 요소에는 영향을 주지 않습니다. 따라서 페이지 레이아웃에서 요소가 차지하는 공간은 `static`일 때와 같습니다.
+    
+    {{cssxref("z-index")}}의 값이 `auto`가 아니라면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context)을 생성합니다. `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` 요소에 적용했을 때의 작동 방식은 정의되지 않았습니다.
+- `absolute`
+  - : 요소를 일반적인 문서 흐름에서 제거하고, 페이지 레이아웃에 공간도 배정하지 않습니다. 대신 가장 가까운 위치 지정 조상 요소에 대해 상대적으로 배치합니다. 단, 조상 중 위치 지정 요소가 없다면 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block)을 기준으로 삼습니다. 최종 위치는 `top`, `right`, `bottom`, `left` 값이 지정합니다.
+    
+    {{cssxref("z-index")}}의 값이 `auto`가 아니라면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context)을 생성합니다. 절대 위치 지정 요소의 바깥 여백은 서로 [상쇄](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)되지 않습니다.
+- `fixed`
+  - : 요소를 일반적인 문서 흐름에서 제거하고, 페이지 레이아웃에 공간도 배정하지 않습니다. 대신 {{glossary("viewport", "뷰포트")}}의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block)을 기준으로 삼아 배치합니다. 단, 요소의 조상 중 하나가 `transform`, `perspective`, `filter` 속성 중 어느 하나라도 `none`이 아니라면 ([CSS Transforms 명세](https://www.w3.org/TR/css-transforms-1/#propdef-transform) 참조) 뷰포트 대신 그 조상을 컨테이닝 블록으로 삼습니다. (`perspective`와 `filter`의 경우 브라우저별로 결과가 다름에 유의) 최종 위치는 `top`, `right`, `bottom`, `left` 값이 지정합니다.
+    
+    이 값은 항상 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context)을 생성합니다. 문서를 인쇄할 때는 해당 요소가 모든 페이지의 같은 위치에 출력됩니다.
+- `sticky`
+  - : 요소를 일반적인 문서 흐름에 따라 배치하고, 테이블 관련 요소를 포함해 가장 가까운, 스크롤 되는 조상과, 표 관련 요소를 포함한 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block)(가장 가까운 블록 레벨 조상) 을 기준으로 `top`, `right`, `bottom`, `left`의 값에 따라 오프셋을 적용합니다. 오프셋은 다른 요소에는 영향을 주지 않습니다.
+    
+    이 값은 항상 새로운 [쌓임 맥락](/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context)을 생성합니다. 끈끈한 요소는 "스크롤 동작"(`overflow`가 `hidden`, `scroll`, `auto` 혹은 `overlay`)이 존재하는 가장 가까운 조상에 달라붙으며, 사실 그 조상은 스크롤 불가하며 실제로 스크롤 가능한 조상이 따로 존재할 경우 "끈끈한" 동작을 보이지 않는 점에 주의하세요. ([W3C CSSWG의 Github 이슈](https://github.com/w3c/csswg-drafts/issues/865) 참조)
 
-<h3 id="값">값</h3>
+## 설명
 
-<dl>
- <dt><code>static</code></dt>
- <dd>요소를 일반적인 문서 흐름에 따라 배치합니다. {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("z-index")}} 속성이 <u>아무런</u> 영향도 주지 않습니다. 기본값입니다.</dd>
- <dt><code>relative</code></dt>
- <dd>요소를 일반적인 문서 흐름에 따라 배치하고, <u>자기 자신</u>을 기준으로 <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>의 값에 따라 오프셋을 적용합니다. 오프셋은 다른 요소에는 영향을 주지 않습니다. 따라서 페이지 레이아웃에서 요소가 차지하는 공간은 <code>static</code>일 때와 같습니다.</dd>
- <dd>{{cssxref("z-index")}}의 값이 <code>auto</code>가 아니라면 새로운 <a href="/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context">쌓임 맥락</a>을 생성합니다. <code>table-*-group</code>, <code>table-row</code>, <code>table-column</code>, <code>table-cell</code>, <code>table-caption</code> 요소에 적용했을 때의 작동 방식은 정의되지 않았습니다.</dd>
- <dt><code>absolute</code></dt>
- <dd>요소를 일반적인 문서 흐름에서 제거하고, 페이지 레이아웃에 공간도 배정하지 않습니다. 대신 가장 가까운 위치 지정 조상 요소에 대해 상대적으로 배치합니다. 단, 조상 중 위치 지정 요소가 없다면 초기 <a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a>을 기준으로 삼습니다. 최종 위치는 <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> 값이 지정합니다.</dd>
- <dd>{{cssxref("z-index")}}의 값이 <code>auto</code>가 아니라면 새로운 <a href="/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context">쌓임 맥락</a>을 생성합니다. 절대 위치 지정 요소의 바깥 여백은 서로 <a href="/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">상쇄</a>되지 않습니다.</dd>
- <dt><code>fixed</code></dt>
- <dd>요소를 일반적인 문서 흐름에서 제거하고, 페이지 레이아웃에 공간도 배정하지 않습니다. 대신 {{glossary("viewport", "뷰포트")}}의 초기 <a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a>을 기준으로 삼아 배치합니다. 단, 요소의 조상 중 하나가 <code>transform</code>, <code>perspective</code>, <code>filter</code> 속성 중 어느 하나라도 <code>none</code>이 아니라면 (<a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms 명세</a> 참조) 뷰포트 대신 그 조상을 컨테이닝 블록으로 삼습니다. (<code>perspective</code>와 <code>filter</code>의 경우 브라우저별로 결과가 다름에 유의) 최종 위치는 <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> 값이 지정합니다.</dd>
- <dd>이 값은 항상 새로운 <a href="/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context">쌓임 맥락</a>을 생성합니다. 문서를 인쇄할 때는 해당 요소가 <u>모든 페이지</u>의 같은 위치에 출력됩니다.</dd>
- <dt><code>sticky</code></dt>
- <dd>요소를 일반적인 문서 흐름에 따라 배치하고, 테이블 관련 요소를 포함해 <u>가장 가까운, 스크롤 되는 조상</u>과, 표 관련 요소를 포함한 <a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a>(가장 가까운 블록 레벨 조상) 을 기준으로 <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>의 값에 따라 오프셋을 적용합니다. 오프셋은 다른 요소에는 영향을 주지 않습니다.</dd>
- <dd>이 값은 항상 새로운 <a href="/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context">쌓임 맥락</a>을 생성합니다. 끈끈한 요소는 "스크롤 동작"(<code>overflow</code>가 <code>hidden</code>, <code>scroll</code>, <code>auto</code> 혹은 <code>overlay</code>)이 존재하는 가장 가까운 조상에 달라붙으며, 사실 그 조상은 스크롤 불가하며 실제로 스크롤 가능한 조상이 따로 존재할 경우 "끈끈한" 동작을 보이지 않는 점에 주의하세요. (<a href="https://github.com/w3c/csswg-drafts/issues/865">W3C CSSWG의 Github 이슈</a> 참조)</dd>
-</dl>
+### 배치 유형
 
-<h2 id="설명">설명</h2>
+- **위치 지정 요소**란 `position`의 [계산값](/ko/docs/Web/CSS/computed_value)이 `relative`, `absolute`, `fixed`, `sticky` 중 하나인 요소입니다. 즉, 값이 `static`이 아닌 모든 요소를 말합니다.
+- **상대 위치 지정 요소**는`position`의 [계산값](/ko/docs/Web/CSS/computed_value)이 `relative`인 요소입니다. {{cssxref("top")}}과 {{cssxref("bottom")}}은 원래 위치에서의 세로축 거리를, {{cssxref("left")}}와 {{cssxref("right")}}은 원래 위치에서의 가로축 거리를 지정합니다.
+- **절대 위치 지정 요소**는`position`의 [계산값](/ko/docs/Web/CSS/computed_value)이 `absolute` 또는 `fixed`인 요소입니다.{{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}는 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block)(위치의 기준점이 되는 조상 요소) 모서리로부터의 거리를 지정합니다. 요소가 바깥 여백을 가진다면 거리에 더합니다. 절대 위치 지정 요소는 새로운 [블록 서식 맥락](/ko/docs/Web/Guide/CSS/Block_formatting_context)을 생성합니다.
+- **끈끈한 위치 지정 요소**는 `position`의 [계산값](/ko/docs/Web/CSS/computed_value)이 `sticky`인 요소입니다. 평소에는 상대 위치 지정 요소로 처리하지만, [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block)이 자신의 플로우 루트(또는, 스크롤 컨테이너)에서 지정한 임계값({{cssxref("top")}} 등으로 지정)을 넘으면 마치 `fixed`처럼 화면에 고정합니다. 고정 상태는 컨테이닝 블록의 반대편 모서리를 만나면 해제됩니다.
 
-<h3 id="배치_유형">배치 유형</h3>
+대부분의 경우, {{cssxref("height")}}와 {{cssxref("width")}}가 `auto`로 지정된 절대 위치 지정 요소는 자신의 콘텐츠에 맞춰 크기가 바뀝니다. 반면 [비대체](/ko/docs/Web/CSS/Replaced_element) 절대 위치 지정 요소는 {{Cssxref("top")}}과 {{Cssxref("bottom")}}을 지정하고 {{Cssxref("height")}}는 지정하지 않으면 (즉, `auto`로 두면) 사용 가능한 수직 공간을 가득 채웁니다. 마찬가지로 {{Cssxref("left")}}와 {{Cssxref("right")}}을 지정하고, {{Cssxref("width")}}는 `auto`로 두면 사용 가능한 수평 공간을 가득 채웁니다.
 
-<ul>
- <li><strong>위치 지정 요소</strong>란 <code>position</code>의 <a href="/ko/docs/Web/CSS/computed_value">계산값</a>이 <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code> 중 하나인 요소입니다. 즉, 값이 <code>static</code>이 아닌 모든 요소를 말합니다.</li>
- <li><strong>상대 위치 지정 요소</strong>는<code>position</code>의 <a href="/ko/docs/Web/CSS/computed_value">계산값</a>이 <code>relative</code>인 요소입니다. {{cssxref("top")}}과 {{cssxref("bottom")}}은 원래 위치에서의 세로축 거리를, {{cssxref("left")}}와 {{cssxref("right")}}은 원래 위치에서의 가로축 거리를 지정합니다.</li>
- <li><strong>절대 위치 지정 요소</strong>는<code>position</code>의 <a href="/ko/docs/Web/CSS/computed_value">계산값</a>이 <code>absolute</code> 또는 <code>fixed</code>인 요소입니다.{{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}는 요소의 <a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a>(위치의 기준점이 되는 조상 요소) 모서리로부터의 거리를 지정합니다. 요소가 바깥 여백을 가진다면 거리에 더합니다. 절대 위치 지정 요소는 새로운 <a href="/ko/docs/Web/Guide/CSS/Block_formatting_context">블록 서식 맥락</a>을 생성합니다.</li>
- <li><strong>끈끈한 위치 지정 요소</strong>는 <code>position</code>의 <a href="/ko/docs/Web/CSS/computed_value">계산값</a>이 <code>sticky</code>인 요소입니다. 평소에는 상대 위치 지정 요소로 처리하지만, <a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a>이 자신의 플로우 루트(또는, 스크롤 컨테이너)에서 지정한 임계값({{cssxref("top")}} 등으로 지정)을 넘으면 마치 <code>fixed</code>처럼 화면에 고정합니다. 고정 상태는 컨테이닝 블록의 반대편 모서리를 만나면 해제됩니다.</li>
-</ul>
+위에서 설명한 경우(공간을 꽉 채우는 경우)가 아니라면 다음 규칙을 따릅니다.
 
-<p>대부분의 경우, {{cssxref("height")}}와 {{cssxref("width")}}가 <code>auto</code>로 지정된 절대 위치 지정 요소는 자신의 콘텐츠에 맞춰 크기가 바뀝니다. 반면 <a href="/ko/docs/Web/CSS/Replaced_element">비대체</a> 절대 위치 지정 요소는 {{Cssxref("top")}}과 {{Cssxref("bottom")}}을 지정하고 {{Cssxref("height")}}는 지정하지 않으면 (즉, <code>auto</code>로 두면) 사용 가능한 수직 공간을 가득 채웁니다. 마찬가지로 {{Cssxref("left")}}와 {{Cssxref("right")}}을 지정하고, {{Cssxref("width")}}는 <code>auto</code>로 두면 사용 가능한 수평 공간을 가득 채웁니다.</p>
+- `top`과 `bottom`을 지정한 경우(`auto`가 아닌 경우), `top`이 우선 적용됩니다.
+- `left`와 `right`를 지정한 경우, {{Cssxref("direction")}}이 `ltr`(영어, 한국어 등)이면 `left`를 우선 적용하고, {{Cssxref("direction")}}이 `rtl`(페르시아어, 아랍어, 히브리어 등)이면 `right`를 우선 적용합니다.
 
-<p>위에서 설명한 경우(공간을 꽉 채우는 경우)가 아니라면 다음 규칙을 따릅니다.</p>
+## 접근성 고려사항
 
-<ul>
- <li><code>top</code>과 <code>bottom</code>을 지정한 경우(<code>auto</code>가 아닌 경우), <code>top</code>이 우선 적용됩니다.</li>
- <li><code>left</code>와 <code>right</code>를 지정한 경우, {{Cssxref("direction")}}이 <code>ltr</code>(영어, 한국어 등)이면 <code>left</code>를 우선 적용하고,<font face="Open Sans, arial, sans-serif"> </font>{{Cssxref("direction")}}이 <code>rtl</code>(페르시아어, 아랍어, 히브리어 등)이면 <code>right</code>를 우선 적용합니다.</li>
-</ul>
+화면을 확대해서 텍스트가 크게 보이게 했을 때 `absolute`나 `fixed`로 배치된 요소가 내용을 가리지 않도록 주의해야 합니다.
 
-<h2 id="Specifications" name="Specifications">접근성 고려사항</h2>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-<p>화면을 확대해서 텍스트가 크게 보이게 했을 때 <code>absolute</code>나 <code>fixed</code>로 배치된 요소가 내용을 가리지 않도록 주의해야 합니다.</p>
+### 성능 및 접근성 문제
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener">Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0</a></li>
-</ul>
+`fixed`나 `sticky`를 포함하는 스크롤 요소가 성능 및 접근성 문제를 유발할 수 있습니다. 브라우저는 사용자가 스크롤을 할 때마다 끈끈하거나 고정인 요소를 새로운 위치에 페인트 해야 하는데, 표시해야 되는 내용의 양, 브라우저 및 기기의 성능에 따라 60 fps를 유지하지 못해 일부 민감한 사용자에게는 접근성 문제가, 다른 모두에게는 사용자 경험 악화가 생깁니다. 이 문제의 해결책 중 하나는 {{cssxref("will-change", "will-change: transform")}}을 추가하여 요소를 자신만의 레이어에서 렌더링 하여 페인트 속도를 향상하고, 나아가 성능과 접근성을 높일 수 있습니다.
 
-<h3 id="성능_및_접근성_문제">성능 및 접근성 문제</h3>
+## 형식 정의
 
-<p><code>fixed</code>나 <code>sticky</code>를 포함하는 스크롤 요소가 성능 및 접근성 문제를 유발할 수 있습니다. 브라우저는 사용자가 스크롤을 할 때마다 끈끈하거나 고정인 요소를 새로운 위치에 페인트 해야 하는데, 표시해야 되는 내용의 양, 브라우저 및 기기의 성능에 따라 60 <abbr title="frames per second">fps</abbr>를 유지하지 못해 일부 민감한 사용자에게는 접근성 문제가, 다른 모두에게는 사용자 경험 악화가 생깁니다. 이 문제의 해결책 중 하나는 {{cssxref("will-change", "will-change: transform")}}을 추가하여 요소를 자신만의 레이어에서 렌더링 하여 페인트 속도를 향상하고, 나아가 성능과 접근성을 높일 수 있습니다.</p>
+{{cssinfo}}
 
-<h2 id="형식_정의">형식 정의</h2>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="상대_위치_지정">상대 위치 지정</h3>
+### 상대 위치 지정
 
-<p>상대적으로 배치된 요소는 문서 내에서 정상적인(normal) 위치에서 주어진 오프셋만큼 떨어지지만, 다른 요소에는 영향을 주지 않습니다. 아래 예제에서는 다른 요소들이 "Two"가 원래 위치에 있는 것처럼 배치되는 것을 확인할 수 있습니다.</p>
+상대적으로 배치된 요소는 문서 내에서 정상적인(normal) 위치에서 주어진 오프셋만큼 떨어지지만, 다른 요소에는 영향을 주지 않습니다. 아래 예제에서는 다른 요소들이 "Two"가 원래 위치에 있는 것처럼 배치되는 것을 확인할 수 있습니다.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="box" id="one"&gt;One&lt;/div&gt;
-&lt;div class="box" id="two"&gt;Two&lt;/div&gt;
-&lt;div class="box" id="three"&gt;Three&lt;/div&gt;
-&lt;div class="box" id="four"&gt;Four&lt;/div&gt;
-</pre>
+```html
+<div class="box" id="one">One</div>
+<div class="box" id="two">Two</div>
+<div class="box" id="three">Three</div>
+<div class="box" id="four">Four</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -111,24 +107,27 @@ translation_of: Web/CSS/position
   left: 20px;
   background: blue;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('상대_위치_지정', '600px', '200px') }}</p>
+{{ EmbedLiveSample('상대_위치_지정', '600px', '200px') }}
 
-<h3 id="절대_위치_지정">절대 위치 지정</h3>
+### 절대 위치 지정
 
-<p>상대적으로 배치된 요소가 일반적인 문서 흐름에 따르는 것과 달리, 절대적으로 배치된 요소는 흐름에서 제거됩니다. 따라서 다른 요소는 그 요소가 존재하지 않는 것처럼 배치됩니다. 절대적으로 배치된 요소는 <em>가장 가까운 위치 지정 조상</em>(즉, <code>static</code>이 아닌 가장 가까운 조상)을 기준으로 배치됩니다. 그런 요소가 존재하지 않는다면, 초기 컨테이닝 블록이 기준이 됩니다.</p>
+상대적으로 배치된 요소가 일반적인 문서 흐름에 따르는 것과 달리, 절대적으로 배치된 요소는 흐름에서 제거됩니다. 따라서 다른 요소는 그 요소가 존재하지 않는 것처럼 배치됩니다. 절대적으로 배치된 요소는 _가장 가까운 위치 지정 조상_(즉, `static`이 아닌 가장 가까운 조상)을 기준으로 배치됩니다. 그런 요소가 존재하지 않는다면, 초기 컨테이닝 블록이 기준이 됩니다.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="box" id="one"&gt;One&lt;/div&gt;
-&lt;div class="box" id="two"&gt;Two&lt;/div&gt;
-&lt;div class="box" id="three"&gt;Three&lt;/div&gt;
-&lt;div class="box" id="four"&gt;Four&lt;/div&gt;</pre>
+```html
+<div class="box" id="one">One</div>
+<div class="box" id="two">Two</div>
+<div class="box" id="three">Three</div>
+<div class="box" id="four">Four</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -141,18 +140,20 @@ translation_of: Web/CSS/position
   top: 20px;
   left: 20px;
   background: blue;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('절대_위치_지정', '800px', '200px') }}</p>
+{{ EmbedLiveSample('절대_위치_지정', '800px', '200px') }}
 
-<h3 id="고정_위치_지정">고정 위치 지정</h3>
+### 고정 위치 지정
 
-<p>고정 위치 지정은 절대 위치 지정과 비슷하지만, <code>fixed</code>는 요소의 컨테이닝 블록이 <em>뷰포트</em>의 초기 <a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a>이라는 점에서 다릅니다(<code>transform</code>, <code>perspective</code>, <code>filter</code> 속성이 <code>none</code>이 아닌 조상이 있다면 그 조상이 컨테이닝 블록이 됩니다. <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform">CSS Transforms Spec</a> 참조). 따라서 스크롤에 관계 없이 화면의 특정 지점에 고정되는, "떠다니는"(floating) 요소를 생성할 수 있습니다. 아래 예제에서, "One" 상자는 페이지 위에서 80픽셀, 왼쪽에서 10픽셀 떨어진 위치에 고정됩니다. 스크롤을 하더라도, 뷰포트를 기준으로 같은 위치에 고정된 채로 유지됩니다.</p>
+고정 위치 지정은 절대 위치 지정과 비슷하지만, `fixed`는 요소의 컨테이닝 블록이 *뷰포트*의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block)이라는 점에서 다릅니다(`transform`, `perspective`, `filter` 속성이 `none`이 아닌 조상이 있다면 그 조상이 컨테이닝 블록이 됩니다. [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform) 참조). 따라서 스크롤에 관계 없이 화면의 특정 지점에 고정되는, "떠다니는"(floating) 요소를 생성할 수 있습니다. 아래 예제에서, "One" 상자는 페이지 위에서 80픽셀, 왼쪽에서 10픽셀 떨어진 위치에 고정됩니다. 스크롤을 하더라도, 뷰포트를 기준으로 같은 위치에 고정된 채로 유지됩니다.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="outer"&gt;
-  &lt;p&gt;
+```html
+<div class="outer">
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
     Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
@@ -160,8 +161,8 @@ translation_of: Web/CSS/position
     Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
     Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
     Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-  &lt;/p&gt;
-  &lt;p&gt;
+  </p>
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
     Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
@@ -169,14 +170,15 @@ translation_of: Web/CSS/position
     Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
     Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
     Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-  &lt;/p&gt;
-  &lt;div class="box" id="one"&gt;One&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </p>
+  <div class="box" id="one">One</div>
+</div>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   width: 100px;
   height: 100px;
   background: red;
@@ -196,63 +198,67 @@ translation_of: Web/CSS/position
   overflow: scroll;
   padding-left: 150px;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('고정_위치_지정', '800px', '300px') }}</p>
+{{ EmbedLiveSample('고정_위치_지정', '800px', '300px') }}
 
-<h3 id="끈끈한_위치_지정">끈끈한 위치 지정</h3>
+### 끈끈한 위치 지정
 
-<p>끈끈한 위치 지정은 상대와 고정 위치 지정을 합친 것으로 생각할 수 있습니다. 끈끈하게 배치된 요소는 상대적으로 배치된 요소로 취급하지만, 주어진 경계선을 지나면 고정 위치를 갖게 됩니다. 예를 들어,</p>
+끈끈한 위치 지정은 상대와 고정 위치 지정을 합친 것으로 생각할 수 있습니다. 끈끈하게 배치된 요소는 상대적으로 배치된 요소로 취급하지만, 주어진 경계선을 지나면 고정 위치를 갖게 됩니다. 예를 들어,
 
-<pre class="brush: css notranslate">#one { position: sticky; top: 10px; }</pre>
+```css
+#one { position: sticky; top: 10px; }
+```
 
-<p>이때 id가 one인 요소는 그 위치가 위에서 10픽셀 떨어진 위치까지는 상대적으로 배치되지만, 그 경계를 넘어가면 위에서 10픽셀 떨어진 위치에 고정됩니다.</p>
+이때 id가 one인 요소는 그 위치가 위에서 10픽셀 떨어진 위치까지는 상대적으로 배치되지만, 그 경계를 넘어가면 위에서 10픽셀 떨어진 위치에 고정됩니다.
 
-<p>끈끈한 위치 지정은 흔히 사전순 리스트의 레이블에 사용할 수 있습니다. 예를 들어, "ㄴ" 레이블은 "ㄱ"으로 시작하는 목록이 화면 밖으로 나갈 때까지는 그 바로 밑에 표시되고, 그 다음에는 "ㄱ"을 따라 화면 밖으로 나가는 대신 화면 위에 고정시킬 수 있습니다. 그러다가 "ㄴ" 목록이 화면 바깥으로 나가면 그 자리에 "ㄷ" 레이블을 고정시킬 수 있습니다.</p>
+끈끈한 위치 지정은 흔히 사전순 리스트의 레이블에 사용할 수 있습니다. 예를 들어, "ㄴ" 레이블은 "ㄱ"으로 시작하는 목록이 화면 밖으로 나갈 때까지는 그 바로 밑에 표시되고, 그 다음에는 "ㄱ"을 따라 화면 밖으로 나가는 대신 화면 위에 고정시킬 수 있습니다. 그러다가 "ㄴ" 목록이 화면 바깥으로 나가면 그 자리에 "ㄷ" 레이블을 고정시킬 수 있습니다.
 
-<p>끈끈한 위치 지정이 의도한 대로 동작하게 하려면 <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> 중 적어도 하나의 임계값을 설정해야 합니다. 임계값을 설정하지 않으면 상대 위치 지정과 다를 바가 없습니다.</p>
+끈끈한 위치 지정이 의도한 대로 동작하게 하려면 `top`, `right`, `bottom`, `left` 중 적어도 하나의 임계값을 설정해야 합니다. 임계값을 설정하지 않으면 상대 위치 지정과 다를 바가 없습니다.
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;dl&gt;
-  &lt;div&gt;
-    &lt;dt&gt;A&lt;/dt&gt;
-    &lt;dd&gt;Andrew W.K.&lt;/dd&gt;
-    &lt;dd&gt;Apparat&lt;/dd&gt;
-    &lt;dd&gt;Arcade Fire&lt;/dd&gt;
-    &lt;dd&gt;At The Drive-In&lt;/dd&gt;
-    &lt;dd&gt;Aziz Ansari&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;C&lt;/dt&gt;
-    &lt;dd&gt;Chromeo&lt;/dd&gt;
-    &lt;dd&gt;Common&lt;/dd&gt;
-    &lt;dd&gt;Converge&lt;/dd&gt;
-    &lt;dd&gt;Crystal Castles&lt;/dd&gt;
-    &lt;dd&gt;Cursive&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;E&lt;/dt&gt;
-    &lt;dd&gt;Explosions In The Sky&lt;/dd&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;dt&gt;T&lt;/dt&gt;
-    &lt;dd&gt;Ted Leo &amp;amp; The Pharmacists&lt;/dd&gt;
-    &lt;dd&gt;T-Pain&lt;/dd&gt;
-    &lt;dd&gt;Thrice&lt;/dd&gt;
-    &lt;dd&gt;TV On The Radio&lt;/dd&gt;
-    &lt;dd&gt;Two Gallants&lt;/dd&gt;
-  &lt;/div&gt;
-&lt;/dl&gt;
-</pre>
+```html
+<dl>
+  <div>
+    <dt>A</dt>
+    <dd>Andrew W.K.</dd>
+    <dd>Apparat</dd>
+    <dd>Arcade Fire</dd>
+    <dd>At The Drive-In</dd>
+    <dd>Aziz Ansari</dd>
+  </div>
+  <div>
+    <dt>C</dt>
+    <dd>Chromeo</dd>
+    <dd>Common</dd>
+    <dd>Converge</dd>
+    <dd>Crystal Castles</dd>
+    <dd>Cursive</dd>
+  </div>
+  <div>
+    <dt>E</dt>
+    <dd>Explosions In The Sky</dd>
+  </div>
+  <div>
+    <dt>T</dt>
+    <dd>Ted Leo &amp; The Pharmacists</dd>
+    <dd>T-Pain</dd>
+    <dd>Thrice</dd>
+    <dd>TV On The Radio</dd>
+    <dd>Two Gallants</dd>
+  </div>
+</dl>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">* {
+```css
+* {
   box-sizing: border-box;
 }
 
-dl &gt; div {
+dl > div {
   background: #FFF;
   padding: 24px 0 0 0;
 }
@@ -280,14 +286,14 @@ dd {
 dd + dd {
   border-top: 1px solid #CCC;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('끈끈한_위치_지정', '500px', '300px') }}</p>
+{{ EmbedLiveSample('끈끈한_위치_지정', '500px', '300px') }}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>{{Compat("css.properties.position")}}</div>
+{{Compat}}

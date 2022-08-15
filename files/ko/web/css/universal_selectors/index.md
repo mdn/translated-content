@@ -7,35 +7,37 @@ tags:
   - Selectors
 translation_of: Web/CSS/Universal_selectors
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong>전체 선택자</strong>(<code>*</code>)는 모든 형태의 모든 요소를 선택합니다.</p>
+[CSS](/ko/docs/Web/CSS) **전체 선택자**(`*`)는 모든 형태의 모든 요소를 선택합니다.
 
-<pre class="brush: css notranslate">/* Selects all elements */
+```css
+/* Selects all elements */
 * {
   color: green;
 }
-</pre>
+```
 
-<p>CSS 3부터는 별표를 {{cssxref("CSS_Namespaces", "네임스페이스")}}와 함께 사용할 수 있습니다.</p>
+CSS 3부터는 별표를 {{cssxref("CSS_Namespaces", "네임스페이스")}}와 함께 사용할 수 있습니다.
 
-<ul>
- <li><code>ns|*</code> - 네임스페이스 ns 안의 모든 요소 선택</li>
- <li><code>*|*</code> - 모든 요소 선택</li>
- <li><code>|*</code> - 네임스페이스 없는 모든 요소 선택</li>
-</ul>
+- `ns|*` - 네임스페이스 ns 안의 모든 요소 선택
+- `*|*` - 모든 요소 선택
+- `|*` - 네임스페이스 없는 모든 요소 선택
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox notranslate">* { <em>style properties</em> }</pre>
+```
+* { style properties }
+```
 
-<p>단순 선택자에서 별표는 선택사항입니다. 즉 <code>*.warning</code>과 <code>.warning</code>은 같습니다.</p>
+단순 선택자에서 별표는 선택사항입니다. 즉 `*.warning`과 `.warning`은 같습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">* [lang^=en] {
+```css
+* [lang^=en] {
   color: green;
 }
 
@@ -54,25 +56,28 @@ translation_of: Web/CSS/Universal_selectors
 /* automatically clear the next sibling after a floating element */
 .floating + * {
   clear: left;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p class="warning"&gt;
-  &lt;span lang="en-us"&gt;A green span&lt;/span&gt; in a red paragraph.
-&lt;/p&gt;
-&lt;p id="maincontent" lang="en-gb"&gt;
-  &lt;span class="warning"&gt;A red span&lt;/span&gt; in a green paragraph.
-&lt;/p&gt;</pre>
+```html
+<p class="warning">
+  <span lang="en-us">A green span</span> in a red paragraph.
+</p>
+<p id="maincontent" lang="en-gb">
+  <span class="warning">A red span</span> in a green paragraph.
+</p>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample('예제')}}</p>
+{{EmbedLiveSample('예제')}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.selectors.universal")}}</p>
+{{Compat}}

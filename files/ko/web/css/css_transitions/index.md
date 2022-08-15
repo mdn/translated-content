@@ -8,37 +8,29 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Transitions
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Transitions</strong>는 특정 CSS 속성의 값을 점진적으로 바꿀 수 있는 CSS 모듈입니다. 타이밍 함수, 시간 등 여러 속성을 통해 값이 바뀌는 방식을 조절할 수 있습니다.</p>
+**CSS Transitions**는 특정 CSS 속성의 값을 점진적으로 바꿀 수 있는 CSS 모듈입니다. 타이밍 함수, 시간 등 여러 속성을 통해 값이 바뀌는 방식을 조절할 수 있습니다.
 
-<h2 id="참고서">참고서</h2>
+## 참고서
 
-<h3 id="속성">속성</h3>
+### 속성
 
-<div class="index">
-<ul>
- <li>{{cssxref("transition")}}</li>
- <li>{{cssxref("transition-delay")}}</li>
- <li>{{cssxref("transition-duration")}}</li>
- <li>{{cssxref("transition-property")}}</li>
- <li>{{cssxref("transition-timing-function")}}</li>
-</ul>
-</div>
+- {{cssxref("transition")}}
+- {{cssxref("transition-delay")}}
+- {{cssxref("transition-duration")}}
+- {{cssxref("transition-property")}}
+- {{cssxref("transition-timing-function")}}
 
-<h2 id="안내서">안내서</h2>
+## 안내서
 
-<dl>
- <dt><a href="/ko/docs/Web/Guide/CSS/Using_CSS_transitions">CSS 트랜지션 사용하기</a></dt>
- <dd>CSS 트랜지션을 사용하는 법이 단계별로 적혀있습니다. 각각의 CSS 트랜지션 속성의 설명과, 서로 합치면 어떻게 동작하는지 설명합니다.</dd>
-</dl>
+- [CSS 트랜지션 사용하기](/ko/docs/Web/Guide/CSS/Using_CSS_transitions)
+  - : CSS 트랜지션을 사용하는 법이 단계별로 적혀있습니다. 각각의 CSS 트랜지션 속성의 설명과, 서로 합치면 어떻게 동작하는지 설명합니다.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/CSS/CSS_Animations">CSS Animations</a>를 사용하면 값의 전환을 CSS Transitions보다 더 세밀하게 조절할 수 있습니다.</li>
-</ul>
+- [CSS Animations](/ko/docs/Web/CSS/CSS_Animations)를 사용하면 값의 전환을 CSS Transitions보다 더 세밀하게 조절할 수 있습니다.

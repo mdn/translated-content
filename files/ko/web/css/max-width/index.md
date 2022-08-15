@@ -7,22 +7,21 @@ tags:
   - Reference
 translation_of: Web/CSS/max-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>max-width</code></strong> <a href="https://developer.mozilla.org/en-US/docs/CSS">CSS</a> 속성은 요소의 최대 너비를 설정합니다. <code>max-width</code>는 {{cssxref("width")}} 속성의 <a href="/ko/docs/Web/CSS/used_value">사용값</a>이 자신의 값보다 커지는걸 방지합니다.</p>
+**`max-width`** [CSS](/ko/docs/CSS) 속성은 요소의 최대 너비를 설정합니다. `max-width`는 {{cssxref("width")}} 속성의 [사용값](/ko/docs/Web/CSS/used_value)이 자신의 값보다 커지는걸 방지합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/max-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/max-width.html")}}
 
+`max-width`가 {{cssxref("width")}}를 재설정하고, {{cssxref("min-height")}}가 `max-width`를 재설정합니다.
 
+## 구문
 
-<p><code>max-width</code>가 {{cssxref("width")}}를 재설정하고, {{cssxref("min-height")}}가 <code>max-width</code>를 재설정합니다.</p>
-
-<h2 id="구문">구문</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; 값 */
+```css
+/* <length> 값 */
 max-width: 3.5em;
 
-/* &lt;percentage&gt; 값 */
+/* <percentage> 값 */
 max-width: 75%;
 
 /* 키워드 값 */
@@ -36,49 +35,46 @@ max-width: fill-available;
 max-width: inherit;
 max-width: initial;
 max-width: unset;
-</pre>
+```
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>고정 길이로 나타낸 최대 너비.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd><a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a> 너비에 대한 백분율로 나타낸 최대 너비.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 고정 길이로 나타낸 최대 너비.
+- {{cssxref("&lt;percentage&gt;")}}
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비에 대한 백분율로 나타낸 최대 너비.
 
-<h4 id="키워드_값">키워드 값</h4>
+#### 키워드 값
 
-<dl>
- <dt><code>none</code></dt>
- <dd>최대 너비를 정하지 않음.</dd>
- <dt><code>max-content</code> {{experimental_inline()}}</dt>
- <dd>본질적인 선호 높이.</dd>
- <dt><code>min-content</code> {{experimental_inline()}}</dt>
- <dd>본질적인 최소 높이.</dd>
- <dt><code>fill-available</code> {{experimental_inline()}}</dt>
- <dd>컨테이닝 블록의 높이에서 가로축 안쪽 및 바깥 여백과 테두리의 공간을 제외한 높이. (일부 브라우저는 매우 오래 된 이름인 <code>available</code>로 구현함을 참고하세요.)</dd>
- <dt><code>fit-content</code> {{experimental_inline()}}</dt>
- <dd><code>max-content</code>와 동일.</dd>
-</dl>
+- `none`
+  - : 최대 너비를 정하지 않음.
+- `max-content` {{experimental_inline()}}
+  - : 본질적인 선호 높이.
+- `min-content` {{experimental_inline()}}
+  - : 본질적인 최소 높이.
+- `fill-available` {{experimental_inline()}}
+  - : 컨테이닝 블록의 높이에서 가로축 안쪽 및 바깥 여백과 테두리의 공간을 제외한 높이. (일부 브라우저는 매우 오래 된 이름인 `available`로 구현함을 참고하세요.)
+- `fit-content` {{experimental_inline()}}
+  - : `max-content`와 동일.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음 예제에서, 자식(<code>child</code>) 요소의 너비는 150픽셀과 부모(<code>parent</code>) 요소의 너비 중 더 작은 값이 됩니다.</p>
+다음 예제에서, 자식(`child`) 요소의 너비는 150픽셀과 부모(`parent`) 요소의 너비 중 더 작은 값이 됩니다.
 
-<div id="basic-max-width-demo">
-<pre class="brush: html">&lt;div id="parent"&gt;
-  &lt;div id="child"&gt;
+```html
+<div id="parent">
+  <div id="child">
     Fusce pulvinar vestibulum eros, sed luctus ex lobortis quis.
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+</div>
+```
 
-<pre class="brush: css">#parent {
+```css
+#parent {
   background: lightblue;
   width: 300px;
 }
@@ -88,22 +84,22 @@ max-width: unset;
   width: 100%;
   max-width: 150px;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}</p>
+{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}
 
-<p><code>fit-content</code> 값을 사용하여 해당 요소의 내용이 필요로 하는 너비만 차지하도록 설정할 수 있습니다.</p>
+`fit-content` 값을 사용하여 해당 요소의 내용이 필요로 하는 너비만 차지하도록 설정할 수 있습니다.
 
-<div id="fit-content-demo">
-<pre class="brush: html" style="display: none;">&lt;div id="parent"&gt;
-    &lt;div id="child"&gt;
+```html
+<div id="parent">
+    <div id="child">
         Child Text
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </div>
+</div>
+```
 
-<pre class="brush: css">#parent {
+```css
+#parent {
   background: lightblue;
   width: 300px;
 }
@@ -114,33 +110,28 @@ max-width: unset;
   max-width: -moz-fit-content;
   max-width: -webkit-fit-content;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("fit-content-demo", 400, 100)}}</p>
+{{EmbedLiveSample("fit-content-demo", 400, 100)}}
 
-<h2 id="접근성_고려사항">접근성 고려사항</h2>
+## 접근성 고려사항
 
-<p>페이지의 확대 또는 글씨 크기를 키운 후에도 <code>max-width</code>를 설정한 요소의 내용이 잘리거나, 다른 요소를 가리지 않도록 주의하세요.</p>
+페이지의 확대 또는 글씨 크기를 키운 후에도 `max-width`를 설정한 요소의 내용이 잘리거나, 다른 요소를 가리지 않도록 주의하세요.
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.max-width")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">박스 모델 입문</a></li>
- <li>{{cssxref("box-sizing")}}, {{cssxref("width")}}, {{ Cssxref("min-width") }}</li>
-</ul>
+- [박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("box-sizing")}}, {{cssxref("width")}}, {{ Cssxref("min-width") }}

@@ -1,6 +1,6 @@
 ---
 title: ':first-of-type'
-slug: 'Web/CSS/:first-of-type'
+slug: Web/CSS/:first-of-type
 tags:
   - CSS
   - Layout
@@ -8,83 +8,88 @@ tags:
   - Reference
   - Selector
   - Web
-translation_of: 'Web/CSS/:first-of-type'
+translation_of: Web/CSS/:first-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>:first-of-type</code></strong> <a href="/ko/docs/Web/CSS/Pseudo-classes">의사 클래스</a>는 형제 요소 중 자신의 유형과 일치하는 제일 첫 요소를 나타냅니다.</p>
+[CSS](/ko/docs/Web/CSS) **`:first-of-type`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 요소 중 자신의 유형과 일치하는 제일 첫 요소를 나타냅니다.
 
-<pre class="brush: css no-line-numbers notranslate">/* Selects any &lt;p&gt; that is the first element
+```css
+/* Selects any <p> that is the first element
    of its type among its siblings */
 p:first-of-type {
   color: red;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>참고</strong>: 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. Selectors Level 4부터는 이 제한이 사라졌습니다.</p>
-</div>
+> **참고:** 초기 정의에서는 부모가 있는 요소만 선택할 수 있었습니다. Selectors Level 4부터는 이 제한이 사라졌습니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="첫_문단_스타일링">첫 문단 스타일링</h3>
+### 첫 문단 스타일링
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;h2&gt;Heading&lt;/h2&gt;
-&lt;p&gt;Paragraph 1&lt;/p&gt;
-&lt;p&gt;Paragraph 2&lt;/p&gt;</pre>
+```html
+<h2>Heading</h2>
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">p:first-of-type {
+```css
+p:first-of-type {
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{EmbedLiveSample('첫_문단_스타일링')}}</p>
+{{EmbedLiveSample('첫_문단_스타일링')}}
 
-<h3 id="중첩_요소">중첩 요소</h3>
+### 중첩 요소
 
-<p>아래 코드는 중첩 요소를 선택하는 방법을 보입니다. 기본 선택자를 지정하지 않은 경우 <a href="/ko/docs/Web/CSS/Universal_selectors">전체 선택자</a>(<code>*</code>)가 암시된다는 점도 볼 수 있습니다.</p>
+아래 코드는 중첩 요소를 선택하는 방법을 보입니다. 기본 선택자를 지정하지 않은 경우 [전체 선택자](/ko/docs/Web/CSS/Universal_selectors)(`*`)가 암시된다는 점도 볼 수 있습니다.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;article&gt;
-  &lt;div&gt;This `div` is first!&lt;/div&gt;
-  &lt;div&gt;This &lt;span&gt;nested `span` is first&lt;/span&gt;!&lt;/div&gt;
-  &lt;div&gt;This &lt;em&gt;nested `em` is first&lt;/em&gt;, but this &lt;em&gt;nested `em` is last&lt;/em&gt;!&lt;/div&gt;
-  &lt;div&gt;This &lt;span&gt;nested `span` gets styled&lt;/span&gt;!&lt;/div&gt;
-  &lt;b&gt;This `b` qualifies!&lt;/b&gt;
-  &lt;div&gt;This is the final `div`.&lt;/div&gt;
-&lt;/article&gt;
-</pre>
+```html
+<article>
+  <div>This `div` is first!</div>
+  <div>This <span>nested `span` is first</span>!</div>
+  <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
+  <div>This <span>nested `span` gets styled</span>!</div>
+  <b>This `b` qualifies!</b>
+  <div>This is the final `div`.</div>
+</article>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">article :first-of-type {
+```css
+article :first-of-type {
   background-color: pink;
-}</pre>
+}
+```
 
-<h4 id="결과_2">결과</h4>
+#### 결과
 
-<p>{{EmbedLiveSample('중첩_요소', 500)}}</p>
+{{EmbedLiveSample('중첩_요소', 500)}}
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}

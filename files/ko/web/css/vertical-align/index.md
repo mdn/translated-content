@@ -7,11 +7,12 @@ tags:
   - Reference
 translation_of: Web/CSS/vertical-align
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>vertical-align</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 속성은 inline 또는 table-cell box에서의 수직 정렬을 지정합니다.</p>
+**`vertical-align`** [CSS](/ko/docs/Web/CSS) 속성은 inline 또는 table-cell box에서의 수직 정렬을 지정합니다.
 
-<pre class="brush: css no-line-numbers">/* keyword values */
+```css
+/* keyword values */
 vertical-align: baseline;
 vertical-align: sub;
 vertical-align: super;
@@ -21,45 +22,43 @@ vertical-align: middle;
 vertical-align: top;
 vertical-align: bottom;
 
-/* &lt;length&gt; values */
+/* <length> values */
 vertical-align: 10em;
 vertical-align: 4px;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 vertical-align: 20%;
 
 /* Global values */
 vertical-align: inherit;
 vertical-align: initial;
 vertical-align: unset;
-</pre>
+```
 
-<p>vertical-align 속성은 두 컨텍스트에서 사용될 수 있습니다:</p>
+vertical-align 속성은 두 컨텍스트에서 사용될 수 있습니다:
 
-<ul>
- <li>엘리먼트의 box를 이것이 포함된 line box 내부에서 수직 정렬하고자 할 때. 예를 들어서, {{HTMLElement("img")}} 엘리먼트를 텍스트 엘리먼트의 라인 속에서 정렬할 때 쓰일 수 있습니다:</li>
-</ul>
+- 엘리먼트의 box를 이것이 포함된 line box 내부에서 수직 정렬하고자 할 때. 예를 들어서, {{HTMLElement("img")}} 엘리먼트를 텍스트 엘리먼트의 라인 속에서 정렬할 때 쓰일 수 있습니다:
 
-<div id="vertical-align-inline">
-<pre class="hidden brush: html">&lt;p&gt;
-top:&lt;img style="vertical-align:top" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-middle:&lt;img style="vertical-align:middle" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-bottom:&lt;img style="vertical-align:bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-super:&lt;img style="vertical-align:super" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-sub:&lt;img style="vertical-align:sub" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-&lt;/p&gt;
-&lt;p&gt;
-text-top:&lt;img style="vertical-align:text-top" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-text-bottom:&lt;img  style="vertical-align:text-bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-0.2em:&lt;img style="vertical-align:0.2em" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
--1em:&lt;img  style="vertical-align:-1em" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-20%:&lt;img style="vertical-align:20%" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
--100%:&lt;img  style="vertical-align:-100%" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-&lt;/p&gt;
+```html hidden
+<p>
+top:<img style="vertical-align:top" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+middle:<img style="vertical-align:middle" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+bottom:<img style="vertical-align:bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+super:<img style="vertical-align:super" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+sub:<img style="vertical-align:sub" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+</p>
+<p>
+text-top:<img style="vertical-align:text-top" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+text-bottom:<img  style="vertical-align:text-bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+0.2em:<img style="vertical-align:0.2em" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+-1em:<img  style="vertical-align:-1em" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+20%:<img style="vertical-align:20%" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+-100%:<img  style="vertical-align:-100%" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+</p>
+```
 
-</pre>
-
-<pre class="hidden brush: css">#* {
+```css hidden
+#* {
   box-sizing: border-box;
 }
 
@@ -76,32 +75,29 @@ p {
   margin-right: auto;
   width: 80%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("vertical-align-inline", 1200, 160)}}</p>
+{{EmbedLiveSample("vertical-align-inline", 1200, 160)}}
 
-<ul>
- <li>table의 한 셀에서 포함하고 있는 내용을 수직 정렬할 때:</li>
-</ul>
+- table의 한 셀에서 포함하고 있는 내용을 수직 정렬할 때:
 
-<div id="vertical-align-table">
-<pre class="hidden brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td style="vertical-align: baseline"&gt;baseline&lt;/td&gt;
-    &lt;td style="vertical-align: top"&gt;top&lt;/td&gt;
-    &lt;td style="vertical-align: middle"&gt;middle&lt;/td&gt;
-    &lt;td style="vertical-align: bottom"&gt;bottom&lt;/td&gt;
-    &lt;td&gt;
-      &lt;p&gt;There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.&lt;/p&gt;
-&lt;p&gt;There is another theory which states that this has already happened.&lt;/p&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+```html hidden
+<table>
+  <tr>
+    <td style="vertical-align: baseline">baseline</td>
+    <td style="vertical-align: top">top</td>
+    <td style="vertical-align: middle">middle</td>
+    <td style="vertical-align: bottom">bottom</td>
+    <td>
+      <p>There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.</p>
+<p>There is another theory which states that this has already happened.</p>
+    </td>
+  </tr>
+</table>
+```
 
-</pre>
-
-<pre class="hidden brush: css">table {
+```css hidden
+table {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -115,107 +111,100 @@ td {
   padding: 0.5em;
   font-family: monospace;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("vertical-align-table", 1200, 230)}}</p>
+{{EmbedLiveSample("vertical-align-table", 1200, 230)}}
 
-<p><code>vertical-align은 오로지 inline과 table-cell 엘리먼트에만 적용된다는 것에 주의하세요: 이 속성을</code> <a href="/en-US/docs/Web/HTML/Block-level_elements">block level 엘리먼트</a>에 사용할 수 없습니다.</p>
+`vertical-align은 오로지 inline과 table-cell 엘리먼트에만 적용된다는 것에 주의하세요: 이 속성을` [block level 엘리먼트](/ko/docs/Web/HTML/Block-level_elements)에 사용할 수 없습니다.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<p>이 속성은 아래의 키워드들로 지정됩니다.</p>
+이 속성은 아래의 키워드들로 지정됩니다.
 
-<h3 id="Values_(inline_elements에서)">Values (inline elements에서)</h3>
+### Values (inline elements에서)
 
-<p><em>주로 부모 엘리먼트에 대하여 상대적으로 수직정렬하는 값들:</em></p>
+_주로 부모 엘리먼트에 대하여 상대적으로 수직정렬하는 값들:_
 
-<dl>
- <dt><code>baseline</code></dt>
- <dd>부모의 baseline에 맞추어 해당 엘리먼트의 baseline 을 정렬합니다.  몇몇 <a href="/en-US/docs/Web/CSS/Replaced_element">replaced elements</a>의 베이스라인은 예를들면{{HTMLElement("textarea")}}은 HTML 명세에 정의되어 있지 않으므로, 이 키워드는 브라우저마다 다른 결과를 보여줍니다.</dd>
- <dt><code>sub</code></dt>
- <dd>해당 엘리먼트의 baseline을 부모의 subscript-baseline으로 정렬합니다.</dd>
- <dt><code>super</code></dt>
- <dd>해당 엘리먼트의 baseline을 부모의 superscript-baseline으로 정렬합니다.</dd>
- <dt><code>text-top</code></dt>
- <dd>해당 엘리먼트의 top을 부모 엘리먼트 폰트의 top으로 정렬합니다.</dd>
- <dt><code>text-bottom</code></dt>
- <dd>해당 엘리먼트의 bottom을 부모 엘리먼트 폰트의 bottom으로 정렬합니다.</dd>
- <dt><code>middle</code></dt>
- <dd>해당 엘리먼트의 middle을 부모의 baseline + x-height / 2 로 정렬합니다.</dd>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>해당 엘리먼트의 baseline을 부모의 baseline에서 주어진 길이만큼 위로 정렬합니다.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>&lt;length&gt; value와 마찬가지로 해당 엘리먼트의 baseline을 부모의 baseline에서 {{Cssxref("line-height")}}의 퍼센트로 주어진 퍼센트만큼 위로 정렬합니다.</dd>
-</dl>
+- `baseline`
+  - : 부모의 baseline에 맞추어 해당 엘리먼트의 baseline 을 정렬합니다. 몇몇 [replaced elements](/ko/docs/Web/CSS/Replaced_element)의 베이스라인은 예를들면{{HTMLElement("textarea")}}은 HTML 명세에 정의되어 있지 않으므로, 이 키워드는 브라우저마다 다른 결과를 보여줍니다.
+- `sub`
+  - : 해당 엘리먼트의 baseline을 부모의 subscript-baseline으로 정렬합니다.
+- `super`
+  - : 해당 엘리먼트의 baseline을 부모의 superscript-baseline으로 정렬합니다.
+- `text-top`
+  - : 해당 엘리먼트의 top을 부모 엘리먼트 폰트의 top으로 정렬합니다.
+- `text-bottom`
+  - : 해당 엘리먼트의 bottom을 부모 엘리먼트 폰트의 bottom으로 정렬합니다.
+- `middle`
+  - : 해당 엘리먼트의 middle을 부모의 baseline + x-height / 2 로 정렬합니다.
+- {{cssxref("&lt;length&gt;")}}
+  - : 해당 엘리먼트의 baseline을 부모의 baseline에서 주어진 길이만큼 위로 정렬합니다.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : \<length> value와 마찬가지로 해당 엘리먼트의 baseline을 부모의 baseline에서 {{Cssxref("line-height")}}의 퍼센트로 주어진 퍼센트만큼 위로 정렬합니다.
 
-<p>(&lt;length&gt; 와 &lt;percentage&gt;에 대해서 음수 값이 허용됩니다.)</p>
+(\<length> 와 \<percentage>에 대해서 음수 값이 허용됩니다.)
 
-<p><em>다음 두 value는 부모가 아닌 전체 라인에 대해,수직정렬하는 값입니다:</em></p>
+_다음 두 value는 부모가 아닌 전체 라인에 대해,수직정렬하는 값입니다:_
 
-<dl>
- <dt><code>top</code></dt>
- <dd>해당 엘리먼트의 top과 이것의 자손들의 top을 전체 라인의 top으로 정렬합니다.</dd>
- <dt><code>bottom</code></dt>
- <dd>해당 엘리먼트의 bottom과 이것의 자손들의 bottom을 전체 라인의 bottom으로 정렬합니다.</dd>
-</dl>
+- `top`
+  - : 해당 엘리먼트의 top과 이것의 자손들의 top을 전체 라인의 top으로 정렬합니다.
+- `bottom`
+  - : 해당 엘리먼트의 bottom과 이것의 자손들의 bottom을 전체 라인의 bottom으로 정렬합니다.
 
-<p>Baseline이 없는 엘리먼트에 대해서는 bottom margin edge가 baseline을 대신하여 사용됩니다.</p>
+Baseline이 없는 엘리먼트에 대해서는 bottom margin edge가 baseline을 대신하여 사용됩니다.
 
-<h3 id="Values_(table_cells에서)">Values (table cells에서)</h3>
+### Values (table cells에서)
 
-<dl>
- <dt><code>baseline</code> (<code>sub</code>, <code>super</code>, <code>text-top</code>, <code>text-bottom</code>, <code>&lt;length&gt;</code>, <code>&lt;percentage&gt;</code>)</dt>
- <dd> 셀의 baseline을 같은 행의 다른 cell들의 baseline과 정렬합니다. </dd>
- <dt><code>top</code></dt>
- <dd>셀의 top padding edge를 행의 top으로 정렬합니다.</dd>
- <dt><code>middle</code></dt>
- <dd>셀의  padding box의 중심을 행에서 중앙 정렬합니다.</dd>
- <dt><code>bottom</code></dt>
- <dd>셀의 bottom padding edge를 행의 bottom으로 정렬합니다.</dd>
-</dl>
+- `baseline` (`sub`, `super`, `text-top`, `text-bottom`, `<length>`, `<percentage>`)
+  - : 셀의 baseline을 같은 행의 다른 cell들의 baseline과 정렬합니다.
+- `top`
+  - : 셀의 top padding edge를 행의 top으로 정렬합니다.
+- `middle`
+  - : 셀의 padding box의 중심을 행에서 중앙 정렬합니다.
+- `bottom`
+  - : 셀의 bottom padding edge를 행의 bottom으로 정렬합니다.
 
-<p>음수 값이 허용됩니다.</p>
+음수 값이 허용됩니다.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;An &lt;img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a default alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="top" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-top alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="bottom" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-bottom alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="middle" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a middle alignment.&lt;/div&gt;
-</pre>
+```html
+<div>An <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> image with a default alignment.</div>
+<div>An <img class="top" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> image with a text-top alignment.</div>
+<div>An <img class="bottom" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> image with a text-bottom alignment.</div>
+<div>An <img class="middle" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> image with a middle alignment.</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">img.top { vertical-align: text-top; }
+```css
+img.top { vertical-align: text-top; }
 img.bottom { vertical-align: text-bottom; }
 img.middle { vertical-align: middle; }
-</pre>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.vertical-align")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}</li>
- <li><a href="http://phrogz.net/css/vertical-align/index.html">Understanding <code>vertical-align</code>, or "How (Not) To Vertically Center Content"</a></li>
- <li><a href="http://christopheraue.net/2014/03/05/vertical-align/">All You Need To Know About Vertical-Align</a></li>
-</ul>
+- {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
+- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
+- [All You Need To Know About Vertical-Align](http://christopheraue.net/2014/03/05/vertical-align/)

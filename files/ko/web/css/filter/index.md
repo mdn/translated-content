@@ -7,25 +7,24 @@ tags:
   - Reference
   - SVG
   - SVG Filter
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/filter
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>filter</code></strong> 속성은 흐림 효과나 색상 변형 등 그래픽 효과를 요소에 적용합니다.</span> 보통 필터는 이미지, 배경, 테두리 렌더링을 조정하는 데 쓰입니다.</p>
+[CSS](/ko/docs/Web/CSS) **`filter`** 속성은 흐림 효과나 색상 변형 등 그래픽 효과를 요소에 적용합니다. 보통 필터는 이미지, 배경, 테두리 렌더링을 조정하는 데 쓰입니다.
 
-<p>CSS 표준은 미리 정의된 효과를 내는 몇 가지 함수를 포함하고 있습니다. <a href="/ko/docs/Web/SVG/Element/filter">SVG 필터 요소</a>를 가리키는 URL 참조를 사용하여 SVG 필터를 적용할 수도 있습니다.</p>
+CSS 표준은 미리 정의된 효과를 내는 몇 가지 함수를 포함하고 있습니다. [SVG 필터 요소](/ko/docs/Web/SVG/Element/filter)를 가리키는 URL 참조를 사용하여 SVG 필터를 적용할 수도 있습니다.
 
-<div>{{EmbedInteractiveExample("pages/css/filter.html")}}</div>
+{{EmbedInteractiveExample("pages/css/filter.html")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+## 구문
 
-<h2 id="구문">구문</h2>
-
-<pre class="brush: css notranslate">/* SVG 필터를 가리키는 URL */
+```css
+/* SVG 필터를 가리키는 URL */
 filter: url("filters.svg#filter-id");
 
-/* &lt;filter-function&gt; 값 */
+/* <filter-function> 값 */
 filter: blur(5px);
 filter: brightness(0.4);
 filter: contrast(200%);
@@ -46,69 +45,77 @@ filter: none;
 /* 전역 값 */
 filter: inherit;
 filter: initial;
-filter: unset;</pre>
+filter: unset;
+```
 
-<p>함수를 사용하려면 다음 구문을 사용하세요.</p>
+함수를 사용하려면 다음 구문을 사용하세요.
 
-<pre class="syntaxbox notranslate">filter: &lt;filter-function&gt; [&lt;filter-function&gt;]* | none
-</pre>
+```
+filter: <filter-function> [<filter-function>]* | none
+```
 
-<p>SVG {{SVGElement("filter")}} 요소에 대한 참조를 사용하려면 다음 구문을 사용하세요.</p>
+SVG {{SVGElement("filter")}} 요소에 대한 참조를 사용하려면 다음 구문을 사용하세요.
 
-<pre class="syntaxbox notranslate">filter: url(svg-url#element-id)
-</pre>
+```
+filter: url(svg-url#element-id)
+```
 
-<h3 id="보간">보간</h3>
+### 보간
 
-<p>보간의 처음과 끝 필터의 함수 목록 길이가 같고, 그 안에 {{cssxref("&lt;url&gt;")}} 값이 없으면, 각 필터 함수는 스스로의 특정 규칙을 따라 보간됩니다. 함수의 길이가 서로 다를 때는 긴 필터 목록에만 존재하는 필터를 짧은 필터 목록에 추가하며, 이 때 추가된 필터의 값으로는 누락 값(누락 시의 기본값)을 사용합니다. 이후 각 필터 함수는 서로 동일한 길이일 때와 같은 방식으로 보간합니다. 만약 한쪽의 필터가 <code>none</code>일 경우 다른 쪽 필터 목록을 모두 가져오고, 각각에 누락 값을 대입한 후 보간합니다. 이 외의 경우에는 이산적 보간을 사용합니다.</p>
+보간의 처음과 끝 필터의 함수 목록 길이가 같고, 그 안에 {{cssxref("&lt;url&gt;")}} 값이 없으면, 각 필터 함수는 스스로의 특정 규칙을 따라 보간됩니다. 함수의 길이가 서로 다를 때는 긴 필터 목록에만 존재하는 필터를 짧은 필터 목록에 추가하며, 이 때 추가된 필터의 값으로는 누락 값(누락 시의 기본값)을 사용합니다. 이후 각 필터 함수는 서로 동일한 길이일 때와 같은 방식으로 보간합니다. 만약 한쪽의 필터가 `none`일 경우 다른 쪽 필터 목록을 모두 가져오고, 각각에 누락 값을 대입한 후 보간합니다. 이 외의 경우에는 이산적 보간을 사용합니다.
 
-<h2 id="함수">함수</h2>
+## 함수
 
-<p><code>filter</code> 속성은 <code>none</code> 또는 아래의 함수를 하나 이상 사용해 지정할 수 있습니다. 어떤 함수의 매개변수가 유효하지 않다면, 그 함수는 <code>none</code>을 반환합니다. 따로 명시하지 않으면 백분율 값(<code>34%</code> 등)을 받는 함수는 그 백분율의 소수 표기(<code>0.34</code> 등)도 받을 수 있습니다.</p>
+`filter` 속성은 `none` 또는 아래의 함수를 하나 이상 사용해 지정할 수 있습니다. 어떤 함수의 매개변수가 유효하지 않다면, 그 함수는 `none`을 반환합니다. 따로 명시하지 않으면 백분율 값(`34%` 등)을 받는 함수는 그 백분율의 소수 표기(`0.34` 등)도 받을 수 있습니다.
 
-<h3 id="SVG_필터">SVG 필터</h3>
+### SVG 필터
 
-<h4 id="url"><code>url()</code></h4>
+#### `url()`
 
-<p><a href="/ko/docs/Web/SVG/Element/filter">SVG 필터</a>를 가리키는 URI를 받습니다. 외부 XML 파일에 포함된 필터도 가능합니다.</p>
+[SVG 필터](/ko/docs/Web/SVG/Element/filter)를 가리키는 URI를 받습니다. 외부 XML 파일에 포함된 필터도 가능합니다.
 
-<pre class="brush: css notranslate">filter: url(resources.svg#c1)</pre>
+```css
+filter: url(resources.svg#c1)
+```
 
-<h3 id="필터_함수">필터 함수</h3>
+### 필터 함수
 
-<h4 id="blur"><code>blur()</code></h4>
+#### `blur()`
 
-<p>{{cssxref("filter-function/blur", "blur()")}} 함수는 주어진 이미지에 가우시안 블러를 적용합니다. <code>radius</code> 값은 정규 분포의 표준 편차, 즉 화면에서 혼합할 픽셀의 수를 지정하므로 값이 클수록 이미지가 흐려집니다. 보간 시 누락값은 <code>0</code>입니다. 매개변수는 CSS 길이로 명시되어 있지만 백분율 값은 받지 않습니다.</p>
+{{cssxref("filter-function/blur", "blur()")}} 함수는 주어진 이미지에 가우시안 블러를 적용합니다. `radius` 값은 정규 분포의 표준 편차, 즉 화면에서 혼합할 픽셀의 수를 지정하므로 값이 클수록 이미지가 흐려집니다. 보간 시 누락값은 `0`입니다. 매개변수는 CSS 길이로 명시되어 있지만 백분율 값은 받지 않습니다.
 
-<pre class="brush: css notranslate">filter: blur(5px)
-</pre>
+```css
+filter: blur(5px)
+```
 
-<div id="blur_example" class="hidden">
-<pre class="brush: html notranslate">  &lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form.jpg" id="img1" class="internal default" src="/files/3710/Test_Form_2.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form.jpg" id="img2" class="internal default" src="/files/3710/Test_Form_2.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg id="img3" viewbox="0 0 233 176"&gt;
-  &lt;filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%" &gt;
-    &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5" /&gt;
-  &lt;/filter&gt;
-  &lt;image xlink:href="/files/3710/Test_Form_2.jpeg" filter="url(#svgBlur)" x="5%" y="5%" width="212px" height="161px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3711/Test_Form_2_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html hidden
+  <table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form.jpg" id="img1" class="internal default" src="/files/3710/Test_Form_2.jpg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form.jpg" id="img2" class="internal default" src="/files/3710/Test_Form_2.jpg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg id="img3" viewbox="0 0 233 176">
+  <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%" >
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+  </filter>
+  <image xlink:href="/files/3710/Test_Form_2.jpeg" filter="url(#svgBlur)" x="5%" y="5%" width="212px" height="161px" />
+</svg><div></td>
+      <td><img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3711/Test_Form_2_s.jpg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -151,64 +158,70 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: html notranslate">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%"&gt;
-    &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5"/&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+  <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+  </filter>
+</svg>
+```
 
-<p>{{EmbedLiveSample('blur_example','100%','236px','','', 'no-codepen')}}</p>
+{{EmbedLiveSample('blur_example','100%','236px','','', 'no-codepen')}}
 
-<h4 id="brightness"><code>brightness()</code></h4>
+#### `brightness()`
 
-<p>{{cssxref("filter-function/brightness", "brightness()")}} 함수는 주어진 이미지에 선형 배수를 적용하여 이미지를 밝거나 어둡게 표시합니다. <code>0%</code>일 경우 완전히 검은색 이미지가 되고, <code>100%</code>일 경우 이미지가 그대로 유지되며, 이외의 값은 효과의 선형 배수로 작용합니다. <code>100%</code>보다 큰 값도 허용되며, 이때는 더 밝은 이미지가 생성됩니다. 보간 시 누락값은 <code>1</code>입니다.</p>
+{{cssxref("filter-function/brightness", "brightness()")}} 함수는 주어진 이미지에 선형 배수를 적용하여 이미지를 밝거나 어둡게 표시합니다. `0%`일 경우 완전히 검은색 이미지가 되고, `100%`일 경우 이미지가 그대로 유지되며, 이외의 값은 효과의 선형 배수로 작용합니다. `100%`보다 큰 값도 허용되며, 이때는 더 밝은 이미지가 생성됩니다. 보간 시 누락값은 `1`입니다.
 
-<pre class="brush: css notranslate">filter: brightness(0.5)</pre>
+```css
+filter: brightness(0.5)
+```
 
-<pre class="brush: html notranslate">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="brightness"&gt;
-    &lt;feComponentTransfer&gt;
-      &lt;feFuncR type="linear" slope="[amount]"/&gt;
-      &lt;feFuncG type="linear" slope="[amount]"/&gt;
-      &lt;feFuncB type="linear" slope="[amount]"/&gt;
-    &lt;/feComponentTransfer&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+  <filter id="brightness">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="[amount]"/>
+      <feFuncG type="linear" slope="[amount]"/>
+      <feFuncB type="linear" slope="[amount]"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
+```
 
-<div id="brightness_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form.jpg" id="img1" class="internal default" src="/files/3708/Test_Form.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form.jpg" id="img2" class="internal default" src="/files/3708/Test_Form.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 286 217"&gt;
- &lt;filter id="brightness"&gt;
-    &lt;feComponentTransfer&gt;
-        &lt;feFuncR type="linear" slope="2"/&gt;
-        &lt;feFuncG type="linear" slope="2"/&gt;
-        &lt;feFuncB type="linear" slope="2"/&gt;
-    &lt;/feComponentTransfer&gt;
-  &lt;/filter&gt;
-  &lt;image xlink:href="/files/3708/Test_Form.jpg" filter="url(#brightness)" width="286px" height="217px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3709/Test_Form_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form.jpg" id="img1" class="internal default" src="/files/3708/Test_Form.jpg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form.jpg" id="img2" class="internal default" src="/files/3708/Test_Form.jpg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 286 217">
+ <filter id="brightness">
+    <feComponentTransfer>
+        <feFuncR type="linear" slope="2"/>
+        <feFuncG type="linear" slope="2"/>
+        <feFuncB type="linear" slope="2"/>
+    </feComponentTransfer>
+  </filter>
+  <image xlink:href="/files/3708/Test_Form.jpg" filter="url(#brightness)" width="286px" height="217px" />
+</svg><div></td>
+      <td><img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3709/Test_Form_s.jpg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -251,59 +264,62 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('brightness_example','100%','231px','','', 'no-codepen')}}</p>
+{{EmbedLiveSample('brightness_example','100%','231px','','', 'no-codepen')}}
 
-<h4 id="contrast"><code>contrast()</code></h4>
+#### `contrast()`
 
-<p>{{cssxref("filter-function/constrast", "constrast()")}} 함수는 주어진 이미지의 대비를 조정합니다. <code>0%</code>일 경우 완전히 회색 이미지가 되고, <code>100%</code>일 경우 이미지가 그대로 유지됩니다. <code>100%</code>보다 큰 값도 허용되며, 이때는 대비가 더 큰 이미지가 생성됩니다. 보간 시 누락값은 <code>1</code>입니다.</p>
+{{cssxref("filter-function/constrast", "constrast()")}} 함수는 주어진 이미지의 대비를 조정합니다. `0%`일 경우 완전히 회색 이미지가 되고, `100%`일 경우 이미지가 그대로 유지됩니다. `100%`보다 큰 값도 허용되며, 이때는 대비가 더 큰 이미지가 생성됩니다. 보간 시 누락값은 `1`입니다.
 
-<pre class="brush: css notranslate">filter: contrast(200%)
-</pre>
+```css
+filter: contrast(200%)
+```
 
-<pre class="brush: html notranslate">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="contrast"&gt;
-    &lt;feComponentTransfer&gt;
-      &lt;feFuncR type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/&gt;
-      &lt;feFuncG type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/&gt;
-      &lt;feFuncB type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/&gt;
-    &lt;/feComponentTransfer&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+  <filter id="contrast">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
+      <feFuncG type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
+      <feFuncB type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
+```
 
-<div id="contrast_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_3.jpeg" id="img1" class="internal default" src="/files/3712/Test_Form_3.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_3.jpg" id="img2" class="internal default" src="/files/3712/Test_Form_3.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 240 151"&gt;
- &lt;filter id="contrast"&gt;
-    &lt;feComponentTransfer&gt;
-      &lt;feFuncR type="linear" slope="2" intercept="-0.5"/&gt;
-      &lt;feFuncG type="linear" slope="2" intercept="-0.5"/&gt;
-      &lt;feFuncB type="linear" slope="2" intercept="-0.5"/&gt;
-    &lt;/feComponentTransfer&gt;
-  &lt;/filter&gt;
-  &lt;image xlink:href="/files/3712/Test_Form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3713/Test_Form_3_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form_3.jpeg" id="img1" class="internal default" src="/files/3712/Test_Form_3.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_3.jpg" id="img2" class="internal default" src="/files/3712/Test_Form_3.jpeg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 240 151">
+ <filter id="contrast">
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="2" intercept="-0.5"/>
+      <feFuncG type="linear" slope="2" intercept="-0.5"/>
+      <feFuncB type="linear" slope="2" intercept="-0.5"/>
+    </feComponentTransfer>
+  </filter>
+  <image xlink:href="/files/3712/Test_Form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" />
+</svg><div></td>
+      <td><img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3713/Test_Form_3_s.jpg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -346,92 +362,94 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('contrast_example','100%','203px','','', 'no-codepen')}}</p>
+{{EmbedLiveSample('contrast_example','100%','203px','','', 'no-codepen')}}
 
-<h4 id="drop-shadow"><code>drop-shadow()</code></h4>
+#### `drop-shadow()`
 
-<p>{{cssxref("filter-function/drop-shadow", "drop-shadow()")}} 함수는 주어진 이미지에 그림자 효과를 적용합니다. 이때 추가하는 그림자는, 주어진 이미지의 알파 마스크에 특정한 색상과 오프셋, 흐림 효과를 적용하고 이미지 밑에 합성한 것입니다. 이 함수는 <code>inset</code> 키워드를 제외하고 (CSS3 Backgrounds에 정의된) <code>&lt;shadow&gt;</code> 자료형의 매개변수를 그대로 받을 수 있습니다. <code>drop-shadow()</code>는 보다 확립된 {{cssxref("box-shadow")}} 속성과 비슷하지만, 일부 브라우저에서는 필터를 사용했을 때 성능 향상을 위해 하드웨어 가속을 사용한다는 차이점이 있습니다. <code>&lt;shadow&gt;</code> 값의 매개변수는 다음과 같습니다.</p>
+{{cssxref("filter-function/drop-shadow", "drop-shadow()")}} 함수는 주어진 이미지에 그림자 효과를 적용합니다. 이때 추가하는 그림자는, 주어진 이미지의 알파 마스크에 특정한 색상과 오프셋, 흐림 효과를 적용하고 이미지 밑에 합성한 것입니다. 이 함수는 `inset` 키워드를 제외하고 (CSS3 Backgrounds에 정의된) `<shadow>` 자료형의 매개변수를 그대로 받을 수 있습니다. `drop-shadow()`는 보다 확립된 {{cssxref("box-shadow")}} 속성과 비슷하지만, 일부 브라우저에서는 필터를 사용했을 때 성능 향상을 위해 하드웨어 가속을 사용한다는 차이점이 있습니다. `<shadow>` 값의 매개변수는 다음과 같습니다.
 
-<dl>
- <dt><code>&lt;offset-x&gt;</code> <code>&lt;offset-y&gt;</code> <small>(필수)</small></dt>
- <dd>그림자 오프셋을 설정하는 두 {{cssxref("&lt;length&gt;")}} 값입니다. <code>&lt;offset-x&gt;</code>는 가로 거리를 지정하며, 음수일 경우 그림자가 왼쪽에 배치됩니다. <code>&lt;offset-y&gt;</code>는 세로 거리를 지정하며, 음수일 경우 그림자가 위쪽에 배치됩니다. 가능한 단위는 {{cssxref("&lt;length&gt;")}}를 참조하세요.<br>
- 두 값이 모두 <code>0</code>이면 그림자가 요소 바로 밑에 배치되며, <code>&lt;blur-radius&gt;</code>나 <code>&lt;spread-radius&gt;</code>를 설정한 경우 흐림 효과를 표시할 수 있습니다.</dd>
- <dt><code>&lt;blur-radius&gt;</code> <small>(선택)</small></dt>
- <dd>세 번째 {{cssxref("&lt;length&gt;")}} 값입니다. 클수록 흐려지는 반경이 커지고 그림자가 옅어집니다. 음수 값은 사용할 수 없습니다. 값을 지정하지 않으면 <code>0</code>으로 취급하여 그림자 가장자리가 날카로워집니다.</dd>
- <dt><code>&lt;color&gt;</code> <small>(선택)</small></dt>
- <dd>가능한 키워드 및 표기법은 {{cssxref("&lt;color&gt;")}}를 참조하세요. 값을 지정하지 않았을 때의 색상은 브라우저에 따라 다릅니다. 보통 {{cssxref("&lt;color&gt;")}} 속성의 값을 사용하지만, 현재 사파리는 투명한 그림자를 그리는 것을 주의하세요.</dd>
-</dl>
+- `<offset-x>` `<offset-y>` (필수)
+  - : 그림자 오프셋을 설정하는 두 {{cssxref("&lt;length&gt;")}} 값입니다. `<offset-x>`는 가로 거리를 지정하며, 음수일 경우 그림자가 왼쪽에 배치됩니다. `<offset-y>`는 세로 거리를 지정하며, 음수일 경우 그림자가 위쪽에 배치됩니다. 가능한 단위는 {{cssxref("&lt;length&gt;")}}를 참조하세요.
+    두 값이 모두 `0`이면 그림자가 요소 바로 밑에 배치되며, `<blur-radius>`나 `<spread-radius>`를 설정한 경우 흐림 효과를 표시할 수 있습니다.
+- `<blur-radius>` (선택)
+  - : 세 번째 {{cssxref("&lt;length&gt;")}} 값입니다. 클수록 흐려지는 반경이 커지고 그림자가 옅어집니다. 음수 값은 사용할 수 없습니다. 값을 지정하지 않으면 `0`으로 취급하여 그림자 가장자리가 날카로워집니다.
+- `<color>` (선택)
+  - : 가능한 키워드 및 표기법은 {{cssxref("&lt;color&gt;")}}를 참조하세요. 값을 지정하지 않았을 때의 색상은 브라우저에 따라 다릅니다. 보통 {{cssxref("&lt;color&gt;")}} 속성의 값을 사용하지만, 현재 사파리는 투명한 그림자를 그리는 것을 주의하세요.
 
-<pre class="brush: css notranslate">filter: drop-shadow(16px 16px 10px black)</pre>
+```css
+filter: drop-shadow(16px 16px 10px black)
+```
 
-<pre class="brush: html notranslate">&lt;svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg"&gt;
- &lt;filter id="drop-shadow"&gt;
-    &lt;feGaussianBlur in="SourceAlpha" stdDeviation="[radius]"/&gt;
-    &lt;feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur"/&gt;
-    &lt;feFlood flood-color="[color]"/&gt;
-    &lt;feComposite in2="offsetblur" operator="in"/&gt;
-    &lt;feMerge&gt;
-      &lt;feMergeNode/&gt;
-      &lt;feMergeNode in="SourceGraphic"/&gt;
-    &lt;/feMerge&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
+ <filter id="drop-shadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="[radius]"/>
+    <feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur"/>
+    <feFlood flood-color="[color]"/>
+    <feComposite in2="offsetblur" operator="in"/>
+    <feMerge>
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</svg>
+```
 
-<div id="shadow_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4.jpeg" id="img1" class="internal default" src="/files/3714/Test_Form_4.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4.jpg" id="img2" class="internal default" src="/files/3714/Test_Form_4.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 239 187"&gt;
- &lt;filter id="drop-shadow"&gt;
-    &lt;feGaussianBlur in="SourceAlpha" stdDeviation="5"/&gt;
-    &lt;feOffset dx="16" dy="16"/&gt;
-    &lt;feMerge&gt;
-      &lt;feMergeNode/&gt;
-      &lt;feMergeNode in="SourceGraphic"/&gt;
-    &lt;/feMerge&gt;
- &lt;/filter&gt;
- &lt;image xlink:href="/files/3714/Test_Form_4.jpeg" filter="url(#drop-shadow)" width="213px" height="161px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4_s.jpg" id="img4" class="internal default" src="/files/3715/Test_Form_4_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Original image" id="img11" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Live example" id="img12" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="svg-container"&gt;
-          &lt;svg xmlns="http://www.w3.org/2000/svg" id="img13" viewbox="0 0 239 187"&gt;
-            &lt;filter id="drop-shadow2"&gt;
-              &lt;feGaussianBlur in="SourceAlpha" stdDeviation="4"/&gt;
-              &lt;feOffset dx="8" dy="10"/&gt;
-              &lt;feMerge&gt;
-                &lt;feMergeNode/&gt;
-                &lt;feMergeNode in="SourceGraphic"/&gt;
-              &lt;/feMerge&gt;
-            &lt;/filter&gt;
-            &lt;image xlink:href="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png<span style="font-size: 1rem;">" filter="url(#drop-shadow2)" width="213px" height="161px" /&gt;</span>
-          &lt;/svg&gt;
-        &lt;div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border drop shadow - Static example" id="img14" class="internal default" src="/files/8469/Test_Form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form_4.jpeg" id="img1" class="internal default" src="/files/3714/Test_Form_4.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_4.jpg" id="img2" class="internal default" src="/files/3714/Test_Form_4.jpeg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 239 187">
+ <filter id="drop-shadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="16" dy="16"/>
+    <feMerge>
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+ </filter>
+ <image xlink:href="/files/3714/Test_Form_4.jpeg" filter="url(#drop-shadow)" width="213px" height="161px" />
+</svg><div></td>
+      <td><img alt="Test_Form_4_s.jpg" id="img4" class="internal default" src="/files/3715/Test_Form_4_s.jpg" style="width: 100%;" /></td>
+    </tr>
+    <tr>
+      <td><img alt="Test_Form_4 distorded border - Original image" id="img11" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_4 distorded border - Live example" id="img12" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /></td>
+      <td>
+        <div class="svg-container">
+          <svg xmlns="http://www.w3.org/2000/svg" id="img13" viewbox="0 0 239 187">
+            <filter id="drop-shadow2">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+              <feOffset dx="8" dy="10"/>
+              <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <image xlink:href="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" filter="url(#drop-shadow2)" width="213px" height="161px" />
+          </svg>
+        <div>
+      </td>
+      <td><img alt="Test_Form_4 distorded border drop shadow - Static example" id="img14" class="internal default" src="/files/8469/Test_Form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -487,48 +505,50 @@ table.standard-table td {
 #img3, #img13 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('shadow_example','100%','300px','','','no-codepen')}}</p>
+{{EmbedLiveSample('shadow_example','100%','300px','','','no-codepen')}}
 
-<h4 id="grayscale"><code>grayscale()</code></h4>
+#### `grayscale()`
 
-<p>{{cssxref("filter-function/grayscale", "grayscale()")}} 함수는 주어진 이미지를 흑백으로 변환합니다. <code>amount</code> 값은 흑백으로 전환하는 비율을 지정합니다. <code>100%</code>일 경우 완전히 흑백 이미지가 되고, <code>0%</code>일 경우 이미지가 그대로 유지되며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 보간 시 누락 값은 <code>0</code>입니다.</p>
+{{cssxref("filter-function/grayscale", "grayscale()")}} 함수는 주어진 이미지를 흑백으로 변환합니다. `amount` 값은 흑백으로 전환하는 비율을 지정합니다. `100%`일 경우 완전히 흑백 이미지가 되고, `0%`일 경우 이미지가 그대로 유지되며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 보간 시 누락 값은 `0`입니다.
 
-<pre class="brush: css notranslate">filter: grayscale(100%)</pre>
+```css
+filter: grayscale(100%)
+```
 
-<div id="grayscale_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_5.jpeg" id="img1" class="internal default" src="/files/3716/Test_Form_5.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_5.jpg" id="img2" class="internal default" src="/files/3716/Test_Form_5.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 184"&gt;
- &lt;filter id="grayscale"&gt;
-    &lt;feColorMatrix type="matrix"
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form_5.jpeg" id="img1" class="internal default" src="/files/3716/Test_Form_5.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_5.jpg" id="img2" class="internal default" src="/files/3716/Test_Form_5.jpeg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 184">
+ <filter id="grayscale">
+    <feColorMatrix type="matrix"
                values="0.2126 0.7152 0.0722 0 0
                        0.2126 0.7152 0.0722 0 0
                        0.2126 0.7152 0.0722 0 0
-                       0 0 0 1 0"/&gt;
-  &lt;/filter&gt;
-  &lt;image xlink:href="/files/3716/Test_Form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_5_s.jpg" id="img4" class="internal default" src="/files/3717/Test_Form_5_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+                       0 0 0 1 0"/>
+  </filter>
+  <image xlink:href="/files/3716/Test_Form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" />
+</svg><div></td>
+      <td><img alt="Test_Form_5_s.jpg" id="img4" class="internal default" src="/files/3717/Test_Form_5_s.jpg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -571,45 +591,47 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('grayscale_example','100%','209px','','','no-codepen')}}</p>
+{{EmbedLiveSample('grayscale_example','100%','209px','','','no-codepen')}}
 
-<h4 id="hue-rotate"><code>hue-rotate()</code></h4>
+#### `hue-rotate()`
 
-<p>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}} 함수는 주어진 이미지에 색조 회전을 적용합니다. <code>angle</code> 값은 입력 샘플을 조절할 색상환 각도입니다. <code>0deg</code>일 경우 이미지가 그대로 유지됩니다. 보간 시 누락 값은 <code>0</code>입니다. 최댓값이 존재하지는 않지만, <code>360deg</code> 이상의 값은 <code>0deg</code>와 <code>360deg</code> 사이를 순환합니다.</p>
+{{cssxref("filter-function/hue-rotate", "hue-rotate()")}} 함수는 주어진 이미지에 색조 회전을 적용합니다. `angle` 값은 입력 샘플을 조절할 색상환 각도입니다. `0deg`일 경우 이미지가 그대로 유지됩니다. 보간 시 누락 값은 `0`입니다. 최댓값이 존재하지는 않지만, `360deg` 이상의 값은 `0deg`와 `360deg` 사이를 순환합니다.
 
-<pre class="brush: css notranslate">filter: hue-rotate(90deg)</pre>
+```css
+filter: hue-rotate(90deg)
+```
 
-<div id="huerotate_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_6.jpeg" id="img1" class="internal default" src="/files/3718/Test_Form_6.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_6.jpg" id="img2" class="internal default" src="/files/3718/Test_Form_6.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 266 190"&gt;
- &lt;filter id="hue-rotate"&gt;
-    &lt;feColorMatrix type="hueRotate"
-               values="90"/&gt;
-  &lt;/filter&gt;
-  &lt;image xlink:href="/files/3718/Test_Form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_6_s.jpg" id="img4" class="internal default" src="/files/3719/Test_Form_6_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form_6.jpeg" id="img1" class="internal default" src="/files/3718/Test_Form_6.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_6.jpg" id="img2" class="internal default" src="/files/3718/Test_Form_6.jpeg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 266 190">
+ <filter id="hue-rotate">
+    <feColorMatrix type="hueRotate"
+               values="90"/>
+  </filter>
+  <image xlink:href="/files/3718/Test_Form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" />
+</svg><div></td>
+      <td><img alt="Test_Form_6_s.jpg" id="img4" class="internal default" src="/files/3719/Test_Form_6_s.jpg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -652,54 +674,58 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: html notranslate">&lt;svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="svgHueRotate" &gt;
-    &lt;feColorMatrix type="hueRotate" values="[angle]" /&gt;
-  &lt;filter /&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
+  <filter id="svgHueRotate" >
+    <feColorMatrix type="hueRotate" values="[angle]" />
+  <filter />
+</svg>
+```
 
-<p>{{EmbedLiveSample('huerotate_example','100%','221px','','','no-codepen')}}</p>
+{{EmbedLiveSample('huerotate_example','100%','221px','','','no-codepen')}}
 
-<h4 id="invert"><code>invert()</code></h4>
+#### `invert()`
 
-<p>{{cssxref("filter-function/invert", "invert()")}} 함수는 주어진 이미지의 색을 반전합니다. <code>amount</code> 값이 변형 정도를 지정합니다. <code>100%</code>일 경우 색을 정반대로 바꾸고, <code>0%</code>일 경우 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 보간 시 누락 값은 <code>0</code>입니다.</p>
+{{cssxref("filter-function/invert", "invert()")}} 함수는 주어진 이미지의 색을 반전합니다. `amount` 값이 변형 정도를 지정합니다. `100%`일 경우 색을 정반대로 바꾸고, `0%`일 경우 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 보간 시 누락 값은 `0`입니다.
 
-<pre class="brush: css notranslate">filter: invert(100%)</pre>
+```css
+filter: invert(100%)
+```
 
-<div id="invert_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_7.jpeg" id="img1" class="internal default" src="/files/3720/Test_Form_7.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_7.jpg" id="img2" class="internal default" src="/files/3720/Test_Form_7.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 183 276"&gt;
- &lt;filter id="invert"&gt;
-    &lt;feComponentTransfer&gt;
-        &lt;feFuncR type="table" tableValues="1 0"/&gt;
-        &lt;feFuncG type="table" tableValues="1 0"/&gt;
-        &lt;feFuncB type="table" tableValues="1 0"/&gt;
-    &lt;/feComponentTransfer&gt;
- &lt;/filter&gt;
- &lt;image xlink:href="/files/3720/Test_Form_7.jpeg" filter="url(#invert)" width="183px" height="276px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_7_s.jpg" id="img4" class="internal default" src="/files/3721/Test_Form_7_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form_7.jpeg" id="img1" class="internal default" src="/files/3720/Test_Form_7.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_7.jpg" id="img2" class="internal default" src="/files/3720/Test_Form_7.jpeg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 183 276">
+ <filter id="invert">
+    <feComponentTransfer>
+        <feFuncR type="table" tableValues="1 0"/>
+        <feFuncG type="table" tableValues="1 0"/>
+        <feFuncB type="table" tableValues="1 0"/>
+    </feComponentTransfer>
+ </filter>
+ <image xlink:href="/files/3720/Test_Form_7.jpeg" filter="url(#invert)" width="183px" height="276px" />
+</svg><div></td>
+      <td><img alt="Test_Form_7_s.jpg" id="img4" class="internal default" src="/files/3721/Test_Form_7_s.jpg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -742,46 +768,48 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('invert_example','100%','407px','','','no-codepen')}}</p>
+{{EmbedLiveSample('invert_example','100%','407px','','','no-codepen')}}
 
-<h4 id="opacity"><code>opacity()</code></h4>
+#### `opacity()`
 
-<p>{{cssxref("filter-function/opacity", "opacity()")}} 함수는 주어진 이미지의 불투명도를 설정합니다. <code>amount</code> 값이 변형 정도를 지정합니다. <code>0%</code>일 경우 완전히 투명해지고, <code>100%</code>일 경우 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 즉 주어진 이미지 샘플을 <code>amount</code>와 곱하는 것과 같습니다. 보간 시 누락 값은 <code>1</code>입니다. 이 함수는 보다 확립된 {{cssxref("opacity")}} 속성과 비슷하지만, 일부 브라우저에서는 필터를 사용했을 때 성능 향상을 위해 하드웨어 가속을 사용한다는 차이점이 있습니다.</p>
+{{cssxref("filter-function/opacity", "opacity()")}} 함수는 주어진 이미지의 불투명도를 설정합니다. `amount` 값이 변형 정도를 지정합니다. `0%`일 경우 완전히 투명해지고, `100%`일 경우 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 즉 주어진 이미지 샘플을 `amount`와 곱하는 것과 같습니다. 보간 시 누락 값은 `1`입니다. 이 함수는 보다 확립된 {{cssxref("opacity")}} 속성과 비슷하지만, 일부 브라우저에서는 필터를 사용했을 때 성능 향상을 위해 하드웨어 가속을 사용한다는 차이점이 있습니다.
 
-<pre class="brush: css notranslate">filter: opacity(50%)</pre>
+```css
+filter: opacity(50%)
+```
 
-<div id="opacity_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_14.jpeg" id="img1" class="internal default" src="/files/3725/Test_Form_14.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_14.jpg" id="img2" class="internal default" src="/files/3725/Test_Form_14.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 183"&gt;
- &lt;filter id="opacity"&gt;
-    &lt;feComponentTransfer&gt;
-        &lt;feFuncA type="table" tableValues="0 0.5"&gt;
-    &lt;/feComponentTransfer&gt;
- &lt;/filter&gt;
- &lt;image xlink:href="/files/3725/Test_Form_14.jpeg" filter="url(#opacity)" width="276px" height="183px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_14_s.jpg" id="img4" class="internal default" src="/files/3726/Test_Form_14_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form_14.jpeg" id="img1" class="internal default" src="/files/3725/Test_Form_14.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_14.jpg" id="img2" class="internal default" src="/files/3725/Test_Form_14.jpeg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 276 183">
+ <filter id="opacity">
+    <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.5">
+    </feComponentTransfer>
+ </filter>
+ <image xlink:href="/files/3725/Test_Form_14.jpeg" filter="url(#opacity)" width="276px" height="183px" />
+</svg><div></td>
+      <td><img alt="Test_Form_14_s.jpg" id="img4" class="internal default" src="/files/3726/Test_Form_14_s.jpg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -824,45 +852,47 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('opacity_example','100%','210px','','','no-codepen')}}</p>
+{{EmbedLiveSample('opacity_example','100%','210px','','','no-codepen')}}
 
-<h4 id="saturate"><code>saturate()</code></h4>
+#### `saturate()`
 
-<p>{{cssxref("filter-function/saturate", "saturate()")}} 함수는 주어진 이미지의 채도를 변경합니다. <code>amount</code> 값이 변형 정도를 지정합니다. <code>0%</code>일 경우 완전히 무채색이 되고, <code>100%</code>일 경우 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. <code>100%</code>보다 큰 값도 허용되며, 이때는 원본보다 채도가 큰 이미지를 생성합니다. 보간 시 누락 값은 <code>1</code>입니다.</p>
+{{cssxref("filter-function/saturate", "saturate()")}} 함수는 주어진 이미지의 채도를 변경합니다. `amount` 값이 변형 정도를 지정합니다. `0%`일 경우 완전히 무채색이 되고, `100%`일 경우 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. `100%`보다 큰 값도 허용되며, 이때는 원본보다 채도가 큰 이미지를 생성합니다. 보간 시 누락 값은 `1`입니다.
 
-<pre class="brush: css notranslate">filter: saturate(200%)</pre>
+```css
+filter: saturate(200%)
+```
 
-<div id="saturate_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_9.jpeg" id="img1" class="internal default" src="/files/3722/Test_Form_9.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_9.jpg" id="img2" class="internal default" src="/files/3722/Test_Form_9.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 201 239"&gt;
- &lt;filter id="saturate"&gt;
-    &lt;feColorMatrix type="saturate"
-               values="2"/&gt;
- &lt;/filter&gt;
- &lt;image xlink:href="/files/3722/Test_Form_9.jpeg" filter="url(#saturate)" width="201px" height="239px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_9_s.jpg" id="img4" class="internal default" src="/files/3724/Test_Form_9_s.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form_9.jpeg" id="img1" class="internal default" src="/files/3722/Test_Form_9.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_9.jpg" id="img2" class="internal default" src="/files/3722/Test_Form_9.jpeg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 201 239">
+ <filter id="saturate">
+    <feColorMatrix type="saturate"
+               values="2"/>
+ </filter>
+ <image xlink:href="/files/3722/Test_Form_9.jpeg" filter="url(#saturate)" width="201px" height="239px" />
+</svg><div></td>
+      <td><img alt="Test_Form_9_s.jpg" id="img4" class="internal default" src="/files/3724/Test_Form_9_s.jpeg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -905,48 +935,50 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('saturate_example','100%','332px','','','no-codepen')}}</p>
+{{EmbedLiveSample('saturate_example','100%','332px','','','no-codepen')}}
 
-<h4 id="sepia"><code>sepia()</code></h4>
+#### `sepia()`
 
-<p>{{cssxref("filter-function/sepia", "sepia()")}} 함수는 주어진 이미지를 세피아로 변환합니다. <code>amount</code> 값이 변형 정도를 지정합니다. <code>100%</code>일 경우 완전히 세피아가 되고, <code>0%</code>에서는 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 보간 시 누락 값은 <code>0</code>입니다.</p>
+{{cssxref("filter-function/sepia", "sepia()")}} 함수는 주어진 이미지를 세피아로 변환합니다. `amount` 값이 변형 정도를 지정합니다. `100%`일 경우 완전히 세피아가 되고, `0%`에서는 이미지를 그대로 유지하며, 그 사이의 값은 효과의 선형 배수로 작용합니다. 보간 시 누락 값은 `0`입니다.
 
-<pre class="brush: css notranslate">filter: sepia(100%)</pre>
+```css
+filter: sepia(100%)
+```
 
-<div id="sepia_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;SVG Equivalent&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_12.jpeg" id="img1" class="internal default" src="/files/3727/Test_Form_12.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_12.jpg" id="img2" class="internal default" src="/files/3727/Test_Form_12.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;div class="svg-container"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 259 194"&gt;
- &lt;filter id="sepia"&gt;
-    &lt;feColorMatrix type="matrix"
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">SVG Equivalent</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form_12.jpeg" id="img1" class="internal default" src="/files/3727/Test_Form_12.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_12.jpg" id="img2" class="internal default" src="/files/3727/Test_Form_12.jpeg" style="width: 100%;" /></td>
+      <td><div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id="img3" viewbox="0 0 259 194">
+ <filter id="sepia">
+    <feColorMatrix type="matrix"
                values="0.393 0.769 0.189 0 0
                        0.349 0.686 0.168 0 0
                        0.272 0.534 0.131 0 0
-                       0 0 0 1 0"/&gt;
- &lt;/filter&gt;
- &lt;image xlink:href="/files/3727/Test_Form_12.jpeg" filter="url(#sepia)" width="259px" height="194px" /&gt;
-&lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_12_s.jpg" id="img4" class="internal default" src="/files/3728/Test_Form_12_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+                       0 0 0 1 0"/>
+ </filter>
+ <image xlink:href="/files/3727/Test_Form_12.jpeg" filter="url(#sepia)" width="259px" height="194px" />
+</svg><div></td>
+      <td><img alt="Test_Form_12_s.jpg" id="img4" class="internal default" src="/files/3728/Test_Form_12_s.jpg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -989,37 +1021,39 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('sepia_example','100%','229px','','','no-codepen')}}</p>
+{{EmbedLiveSample('sepia_example','100%','229px','','','no-codepen')}}
 
-<h2 id="함수_조합">함수 조합</h2>
+## 함수 조합
 
-<p>원하는 만큼 함수를 조합해서 그려지는 모습을 바꿀 수 있습니다. 다음 에제는 이미지의 대비와 밝기를 동시에 높입니다.</p>
+원하는 만큼 함수를 조합해서 그려지는 모습을 바꿀 수 있습니다. 다음 에제는 이미지의 대비와 밝기를 동시에 높입니다.
 
-<pre class="brush: css notranslate">filter: contrast(175%) brightness(103%)</pre>
+```css
+filter: contrast(175%) brightness(103%)
+```
 
-<div id="combination_example" class="hidden">
-<pre class="brush: html notranslate">&lt;table class="standard-table"&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th align="left" scope="col"&gt;Original image&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Live example&lt;/th&gt;
-      &lt;th align="left" scope="col"&gt;Static example&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_8.jpeg" id="img1" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_8.jpg" id="img2" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_8_s.jpg" id="img4" class="internal default" src="/files/3730/Test_Form_8_s.jpeg" style="width: 100%;" /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html hidden
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th align="left" scope="col">Original image</th>
+      <th align="left" scope="col">Live example</th>
+      <th align="left" scope="col">Static example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="Test_Form_8.jpeg" id="img1" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_8.jpg" id="img2" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /></td>
+      <td><img alt="Test_Form_8_s.jpg" id="img4" class="internal default" src="/files/3730/Test_Form_8_s.jpeg" style="width: 100%;" /></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<pre class="brush: css notranslate">html {
+```css hidden
+html {
   height:100%;
 }
 body {
@@ -1063,59 +1097,60 @@ table.standard-table td {
 #img3 {
   height:100%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample('combination_example','100%','209px','','','no-codepen')}}</p>
+{{EmbedLiveSample('combination_example','100%','209px','','','no-codepen')}}
 
-<h2 id="형식_정의">형식 정의</h2>
+## 형식 정의
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="필터_함수_적용하기">필터 함수 적용하기</h3>
+### 필터 함수 적용하기
 
-<p>미리 정의된 함수는 다음 예제처럼 사용할 수 있습니다. 각 함수 문서에서 더 자세한 내용을 살펴보세요.</p>
+미리 정의된 함수는 다음 예제처럼 사용할 수 있습니다. 각 함수 문서에서 더 자세한 내용을 살펴보세요.
 
-<pre class="brush: css notranslate">.mydiv {
+```css
+.mydiv {
   filter: grayscale(50%);
 }
 
 /* 모든 이미지를 50% 흑백 처리하고 10px 흐리게 */
 img {
   filter: grayscale(0.5) blur(10px);
-}</pre>
+}
+```
 
-<h3 id="SVG_필터_적용하기">SVG 필터 적용하기</h3>
+### SVG 필터 적용하기
 
-<p>URL 함수와 SVG 리소스를 사용하는 방법은 다음과 같습니다.</p>
+URL 함수와 SVG 리소스를 사용하는 방법은 다음과 같습니다.
 
-<pre class="brush: css notranslate">.target {
+```css
+.target {
   filter: url(#c1);
 }
 
 .mydiv {
   filter: url(commonfilters.xml#large-blur);
-}</pre>
+}
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.filter")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a class="internal" href="/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">HTML 콘텐츠에 SVG 효과 적용하기</a></li>
- <li>{{cssxref("mask")}} 속성</li>
- <li><a class="internal" href="/ko/docs/Web/SVG">SVG</a></li>
- <li><a class="external" href="http://www.html5rocks.com/en/tutorials/filters/understanding-css/">Understanding CSS filters</a> (HTML5Rocks! 글)</li>
-</ul>
+- [HTML 콘텐츠에 SVG 효과 적용하기](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- {{cssxref("mask")}} 속성
+- [SVG](/ko/docs/Web/SVG)
+- [Understanding CSS filters](http://www.html5rocks.com/en/tutorials/filters/understanding-css/) (HTML5Rocks! 글)

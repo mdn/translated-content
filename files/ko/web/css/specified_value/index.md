@@ -6,34 +6,35 @@ tags:
   - CSS Reference
 translation_of: Web/CSS/specified_value
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> 속성의 <strong>지정값</strong>은 세 가지 방법 중 하나로 설정됩니다.</p>
+[CSS](/ko/docs/Web/CSS) 속성의 **지정값**은 세 가지 방법 중 하나로 설정됩니다.
 
-<ol>
- <li>문서의 스타일시트가 속성값을 지정했다면 그러면 그 값이 사용됩니다. 예를 들어, {{cssxref("color")}} 속성이 <code>green</code> 으로 설정된 경우 대응하는 요소(element)의 텍스트 색은 녹색이 됩니다.</li>
- <li>문서의 스타일시트가 값을 지정하지 않은 경우 부모 요소로부터 상속됩니다(가능하다면). 예를 들어, {{HTMLElement("div")}} 내부에 단락({{HTMLElement("p")}})이 있고 {{HTMLElement("div")}}의 CSS <code>font</code> 속성값이 "Arial", {{HTMLElement("p")}}가 정의된 <code>font</code> 속성이 없다면 Arial font가 상속됩니다.</li>
- <li>위 중 어느 것도 이용할 수 없는 경우, CSS 스펙에 지정된 대로 요소의 초기값이 적용됩니다.</li>
-</ol>
+1.  문서의 스타일시트가 속성값을 지정했다면 그러면 그 값이 사용됩니다. 예를 들어, {{cssxref("color")}} 속성이 `green` 으로 설정된 경우 대응하는 요소(element)의 텍스트 색은 녹색이 됩니다.
+2.  문서의 스타일시트가 값을 지정하지 않은 경우 부모 요소로부터 상속됩니다(가능하다면). 예를 들어, {{HTMLElement("div")}} 내부에 단락({{HTMLElement("p")}})이 있고 {{HTMLElement("div")}}의 CSS `font` 속성값이 "Arial", {{HTMLElement("p")}}가 정의된 `font` 속성이 없다면 Arial font가 상속됩니다.
+3.  위 중 어느 것도 이용할 수 없는 경우, CSS 스펙에 지정된 대로 요소의 초기값이 적용됩니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;My specified color is given explicitly in the CSS.&lt;/p&gt;
+```html
+<p>My specified color is given explicitly in the CSS.</p>
 
-&lt;div&gt;The specified values of all my properties default to their
-    initial values, because none of them are given in the CSS.&lt;/div&gt;
+<div>The specified values of all my properties default to their
+    initial values, because none of them are given in the CSS.</div>
 
-&lt;div class="fun"&gt;
-  &lt;p&gt;The specified value of my font family is not given explicitly
+<div class="fun">
+  <p>The specified value of my font family is not given explicitly
       in the CSS, so it is inherited from my parent. However,
-      the border is not an inheriting property.&lt;/p&gt;
-&lt;/div&gt;</pre>
+      the border is not an inheriting property.</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.fun {
+```css
+.fun {
   border: 1px dotted pink;
   font-family: fantasy;
 }
@@ -41,12 +42,12 @@ translation_of: Web/CSS/specified_value
 p {
   color: green;
 }
-</pre>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample("예제", 500, 220)}}</p>
+{{EmbedLiveSample("예제", 500, 220)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}

@@ -7,11 +7,12 @@ tags:
 translation_of: Web/CSS/animation-fill-mode
 browser-compat: css.properties.animation-fill-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>animation-fill-mode</code></strong> <a href="/en/CSS" title="CSS">CSS</a> 속성은 CSS 애니메이션이 실행 전과 후에 대상에 스타일을 적용하는 방법을 지정합니다.</p>
+**`animation-fill-mode`** [CSS](/en/CSS "CSS") 속성은 CSS 애니메이션이 실행 전과 후에 대상에 스타일을 적용하는 방법을 지정합니다.
 
-<pre class="brush: css no-line-numbers">/* Single animation */
+```css
+/* Single animation */
 animation-fill-mode: none;
 animation-fill-mode: forwards;
 animation-fill-mode: backwards;
@@ -20,111 +21,67 @@ animation-fill-mode: both;
 /* Multiple animations */
 animation-fill-mode: none, backwards;
 animation-fill-mode: both, forwards, none;
-</pre>
+```
 
-<p>축약 속성 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/animation" title="CSS의 animation 속성은 animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction 값들을 지정가능한 축약된 속성(shorthand property)이다."><code>animation</code></a>을 사용하여 모든 애니메이션 속성을 한꺼번에 설정하는 것이 편리합니다.</p>
+축약 속성 [`animation`](/ko/docs/Web/CSS/animation "CSS의 animation 속성은 animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction 값들을 지정가능한 축약된 속성(shorthand property)이다.")을 사용하여 모든 애니메이션 속성을 한꺼번에 설정하는 것이 편리합니다.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="문법(Syntax)">문법(Syntax)</h2>
+## 문법(Syntax)
 
-<h3 id="값(Values)">값(Values)</h3>
+### 값(Values)
 
-<dl>
- <dt><code>none</code></dt>
- <dd>애니메이션은 실행되지 않을 때 대상에 스타일을 적용하지 않습니다. 요소는 대신 적용된 다른 CSS 규칙을 사용하여 표시됩니다. 이것은 기본값입니다.</dd>
- <dt><code>forwards</code></dt>
- <dd>대상은 실행 된 애니메이션의 마지막 <a href="https://developer.mozilla.org/en-US/docs/CSS/@keyframes">keyframe</a>에 의해 설정된 계산 된 값을 유지합니다. 마지막 키 프레임은 {{cssxref("animation-direction")}}및 {{cssxref("animation-iteration-count")}}의 값에 따라 다릅니다.
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col"><code>animation-iteration-count</code></th>
-    <th scope="col">last keyframe encountered</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code></td>
-    <td>even or odd</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code></td>
-    <td>even or odd</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>even</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>odd</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>even</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>odd</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>backwards</code></dt>
- <dd>애니메이션은 대상에 적용되는 즉시 첫 번째 관련 <a href="/en-US/docs/CSS/@keyframes">keyframe</a> 에 정의 된 값을 적용하고  {{cssxref("animation-delay")}} 기간 동안 이 값을 유지합니다. 첫 번째 관련 키프레임은 {{cssxref("animation-direction")}}의 값에 따라 다릅니다.
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col">first relevant keyframe</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code> or <code>alternate</code></td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code> or <code>alternate-reverse</code></td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>both</code></dt>
- <dd>애니메이션은 앞뒤 양쪽 모두의 규칙을 따르므로 애니메이션 속성이 양방향으로 확장됩니다.</dd>
-</dl>
+- `none`
+  - : 애니메이션은 실행되지 않을 때 대상에 스타일을 적용하지 않습니다. 요소는 대신 적용된 다른 CSS 규칙을 사용하여 표시됩니다. 이것은 기본값입니다.
+- `forwards`
 
-<div class="note">
-<p><span style="font-size: 14px;"><strong>노트</strong></span>: animation- * 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 <a href="https://developer.mozilla.org/ko/docs/Web/CSS/animation-name" title="The documentation about this has not yet been written; please consider contributing!"><code>animation-name</code></a> 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values">여러 애니메이션 속성 값 설정</a>을 참조하십시오.</p>
-</div>
+  - : 대상은 실행 된 애니메이션의 마지막 [keyframe](/ko/docs/CSS/@keyframes)에 의해 설정된 계산 된 값을 유지합니다. 마지막 키 프레임은 {{cssxref("animation-direction")}}및 {{cssxref("animation-iteration-count")}}의 값에 따라 다릅니다.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+    | `animation-direction` | `animation-iteration-count` | last keyframe encountered |
+    | --------------------- | --------------------------- | ------------------------- |
+    | `normal`              | even or odd                 | `100%` or `to`            |
+    | `reverse`             | even or odd                 | `0%` or `from`            |
+    | `alternate`           | even                        | `0%` or `from`            |
+    | `alternate`           | odd                         | `100%` or `to`            |
+    | `alternate-reverse`   | even                        | `100%` or `to`            |
+    | `alternate-reverse`   | odd                         | `0%` or `from`            |
+
+- `backwards`
+
+  - : 애니메이션은 대상에 적용되는 즉시 첫 번째 관련 [keyframe](/ko/docs/CSS/@keyframes) 에 정의 된 값을 적용하고 {{cssxref("animation-delay")}} 기간 동안 이 값을 유지합니다. 첫 번째 관련 키프레임은 {{cssxref("animation-direction")}}의 값에 따라 다릅니다.
+
+    | `animation-direction`            | first relevant keyframe |
+    | -------------------------------- | ----------------------- |
+    | `normal` or `alternate`          | `0%` or `from`          |
+    | `reverse` or `alternate-reverse` | `100%` or `to`          |
+
+- `both`
+  - : 애니메이션은 앞뒤 양쪽 모두의 규칙을 따르므로 애니메이션 속성이 양방향으로 확장됩니다.
+
+> **참고:** **노트**: animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 [`animation-name`](/ko/docs/Web/CSS/animation-name "The documentation about this has not yet been written; please consider contributing!") 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values)을 참조하십시오.
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">예제(Examples)</h2>
+## 예제(Examples)
 
-<p>다음 예제에서 animation-fill-mode의 효과를 볼 수 있습니다. 무한 시간 동안 실행되는 애니메이션의 경우 원래 상태 (기본값)로 되돌리기보다는 최종 상태로 유지하는 방법을 보여줍니다.</p>
+다음 예제에서 animation-fill-mode의 효과를 볼 수 있습니다. 무한 시간 동안 실행되는 애니메이션의 경우 원래 상태 (기본값)로 되돌리기보다는 최종 상태로 유지하는 방법을 보여줍니다.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;회색 박스 위에 마우스를 올려보세요!&lt;/p&gt;
-&lt;div class="demo"&gt;
-  &lt;div class="grows"&gt;이 글씨는 커집니다.&lt;/div&gt;
-  &lt;div class="growsandstays"&gt;이 글씨는 커지며, 커진 상태를 유지합니다.&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<p>회색 박스 위에 마우스를 올려보세요!</p>
+<div class="demo">
+  <div class="grows">이 글씨는 커집니다.</div>
+  <div class="growsandstays">이 글씨는 커지며, 커진 상태를 유지합니다.</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.demo {
+```css
+.demo {
   border-top: 100px solid #ccc;
   height: 300px;
 }
@@ -143,23 +100,22 @@ animation-fill-mode: both, forwards, none;
   animation-name: grow;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Example',700,300)}}</p>
+{{EmbedLiveSample('Example',700,300)}}
 
-<p>자세한 예제는 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS/CSS_animations">CSS animations</a>를 보십시오.</p>
+자세한 예제는 [CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS/CSS_animations")를 보십시오.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성(Browser compatibility)</h2>
+## 브라우저 호환성(Browser compatibility)
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="같이_보기(See_also)">같이 보기(See also)</h2>
+## 같이 보기(See also)
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Using CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- JavaScript {{domxref("AnimationEvent")}} API

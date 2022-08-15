@@ -8,17 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/border-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-style</code> </strong><a href="/ko/docs/Web/CSS">CSS</a> <a href="/ko/docs/Web/CSS/Shorthand_properties">단축 속성</a>은 요소 테두리 네 면의 스타일을 지정합니다.</p>
+**`border-style` **[CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소 테두리 네 면의 스타일을 지정합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/border-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-style.html")}}
 
+## 구문
 
-
-<h2 id="구문">구문</h2>
-
-<pre class="brush: css no-line-numbers">/* 키워드 값 */
+```css
+/* 키워드 값 */
 border-style: none;
 border-style: hidden;
 border-style: dotted;
@@ -43,137 +42,72 @@ border-style: none solid dotted dashed;
 border-style: inherit;
 border-style: initial;
 border-style: unset;
-</pre>
+```
 
-<p><code>border-style</code> 속성은 한 개에서 네 개의 값을 사용해 지정할 수 있습니다.</p>
+`border-style` 속성은 한 개에서 네 개의 값을 사용해 지정할 수 있습니다.
 
-<ul>
- <li><strong>한 개의 값</strong>은 모든 네 면의 테두리 스타일을 설정합니다.</li>
- <li><strong>두 개의 값</strong>을 지정하면 첫 번째는 <strong>위와 아래</strong>, 두 번째는 <strong>왼쪽과 오른쪽</strong> 테두리 스타일을 설정합니다.</li>
- <li><strong>세 개의 값</strong>을 지정하면 첫 번째는 <strong>위</strong>, 두 번째는 <strong>왼쪽과 오른쪽,</strong> 세 번째 값은 <strong>아래</strong> 테두리 스타일을 설정합니다.</li>
- <li><strong>네 개의 값</strong>을 지정하면 각각 <strong>상, 우, 하, 좌</strong> 순서로 테두리 스타일을 지정합니다. (시계방향)</li>
-</ul>
+- **한 개의 값**은 모든 네 면의 테두리 스타일을 설정합니다.
+- **두 개의 값**을 지정하면 첫 번째는 **위와 아래**, 두 번째는 **왼쪽과 오른쪽** 테두리 스타일을 설정합니다.
+- **세 개의 값**을 지정하면 첫 번째는 **위**, 두 번째는 **왼쪽과 오른쪽,** 세 번째 값은 **아래** 테두리 스타일을 설정합니다.
+- **네 개의 값**을 지정하면 각각 **상, 우, 하, 좌** 순서로 테두리 스타일을 지정합니다. (시계방향)
 
-<p>각각의 값은 아래 목록 중 하나로 지정합니다.</p>
+각각의 값은 아래 목록 중 하나로 지정합니다.
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>&lt;line-style&gt;</code></dt>
- <dd>테두리의 스타일을 설명합니다. 다음 표의 값을 사용할 수 있습니다.
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td style="vertical-align: middle;"><code>none</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: none; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;"><code>hidden</code> 키워드와 마찬가지로 테두리를 표시하지 않습니다. {{cssxref("background-image")}}를 지정하지 않았으면 해당 면의 {{cssxref("border-width")}} 계산값은 지정값을 무시하고 <code>0</code>이 됩니다. 표에서, 칸의 테두리 상쇄 시 <code>none</code>은 제일 낮은 우선순위를 가집니다. 따라서 주변 칸이 테두리를 가진다면 테두리를 그립니다.</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>hidden</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-width: 3px; border-style: hidden; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;"><code>none</code> 키워드와 마찬가지로 테두리를 표시하지 않습니다. Unless a {{cssxref("background-image")}}를 지정하지 않았으면 해당 면의 {{cssxref("border-width")}} 계산값은 지정값을 무시하고 <code>0</code>이 됩니다. 표에서, 칸의 테두리 상쇄 시 <code>hidden</code>은 제일 높은 우선순위를 가집니다. 따라서 주변 칸이 테두리를 가지더라도 그리지 않습니다.</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>dotted</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-width: 3px; border-style: dotted; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">테두리를 둥근 점 여러개로 그립니다. 점 간격은 명세에서 지정하지 않으며 구현마다 다릅니다. 점의 반지름은 해당 면 {{cssxref("border-width")}}의 절반입니다.</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>dashed</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-width: 3px; border-style: dashed; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">테두리를 직사각형 여러개로 그립니다. 사각형의 크기와 길이는 명세에서 지정하지 않으며 구현마다 다릅니다.</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>solid</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-width: 3px; border-style: solid; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">테두리를 하나의 직선으로 그립니다.</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>double</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-width: 3px; border-style: double; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">테두리를 두 개의 평행한 직선으로 그립니다.</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>groove</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-width: 3px; border-style: groove; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">테두리가 파인 것처럼 그립니다.<code>ridge</code>의 반대입니다.</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>ridge</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-width: 3px; border-style: ridge; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">테두리가 튀어나온 것처럼 그립니다. <code>groove</code>의 반대입니다.</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>inset</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-width: 3px; border-style: inset; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">요소가 파인 것처럼 테두리를 그립니다.<code>outset</code>의 반대입니다. {{cssxref("border-collapse")}}가 <code>collapsed</code>인 칸에서는 <code>groove</code>와 동일합니다.</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>outset</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-width: 3px; border-style: outset; background-color: palegreen;"> </div>
-    </td>
-    <td style="vertical-align: middle;">
-     <p>요소가 튀어나온 것처럼 그립니다. <code>inset</code>의 반대입니다. {{cssxref("border-collapse")}}가 <code>collapsed</code>인 칸에서는 <code>ridge</code>와 동일합니다.</p>
-    </td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- `<line-style>`
 
-<h3 id="형식_구문">형식 구문</h3>
+  - : 테두리의 스타일을 설명합니다. 다음 표의 값을 사용할 수 있습니다.
+
+    | `none`   |     | `hidden` 키워드와 마찬가지로 테두리를 표시하지 않습니다. {{cssxref("background-image")}}를 지정하지 않았으면 해당 면의 {{cssxref("border-width")}} 계산값은 지정값을 무시하고 `0`이 됩니다. 표에서, 칸의 테두리 상쇄 시 `none`은 제일 낮은 우선순위를 가집니다. 따라서 주변 칸이 테두리를 가진다면 테두리를 그립니다.          |
+    | -------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `hidden` |     | `none` 키워드와 마찬가지로 테두리를 표시하지 않습니다. Unless a {{cssxref("background-image")}}를 지정하지 않았으면 해당 면의 {{cssxref("border-width")}} 계산값은 지정값을 무시하고 `0`이 됩니다. 표에서, 칸의 테두리 상쇄 시 `hidden`은 제일 높은 우선순위를 가집니다. 따라서 주변 칸이 테두리를 가지더라도 그리지 않습니다. |
+    | `dotted` |     | 테두리를 둥근 점 여러개로 그립니다. 점 간격은 명세에서 지정하지 않으며 구현마다 다릅니다. 점의 반지름은 해당 면 {{cssxref("border-width")}}의 절반입니다.                                                                                                                                                                               |
+    | `dashed` |     | 테두리를 직사각형 여러개로 그립니다. 사각형의 크기와 길이는 명세에서 지정하지 않으며 구현마다 다릅니다.                                                                                                                                                                                                                                          |
+    | `solid`  |     | 테두리를 하나의 직선으로 그립니다.                                                                                                                                                                                                                                                                                                               |
+    | `double` |     | 테두리를 두 개의 평행한 직선으로 그립니다.                                                                                                                                                                                                                                                                                                       |
+    | `groove` |     | 테두리가 파인 것처럼 그립니다.`ridge`의 반대입니다.                                                                                                                                                                                                                                                                                              |
+    | `ridge`  |     | 테두리가 튀어나온 것처럼 그립니다. `groove`의 반대입니다.                                                                                                                                                                                                                                                                                        |
+    | `inset`  |     | 요소가 파인 것처럼 테두리를 그립니다.`outset`의 반대입니다. {{cssxref("border-collapse")}}가 `collapsed`인 칸에서는 `groove`와 동일합니다.                                                                                                                                                                                             |
+    | `outset` |     | 요소가 튀어나온 것처럼 그립니다. `inset`의 반대입니다. {{cssxref("border-collapse")}}가 `collapsed`인 칸에서는 `ridge`와 동일합니다.                                                                                                                                                                                                   |
+
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="속성_값의_예시_표">속성 값의 예시 표</h3>
+### 속성 값의 예시 표
 
-<p>가능한 모든 값을 나열한 표입니다.</p>
+가능한 모든 값을 나열한 표입니다.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td class="b1"&gt;none&lt;/td&gt;
-    &lt;td class="b2"&gt;hidden&lt;/td&gt;
-    &lt;td class="b3"&gt;dotted&lt;/td&gt;
-    &lt;td class="b4"&gt;dashed&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b5"&gt;solid&lt;/td&gt;
-    &lt;td class="b6"&gt;double&lt;/td&gt;
-    &lt;td class="b7"&gt;groove&lt;/td&gt;
-    &lt;td class="b8"&gt;ridge&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b9"&gt;inset&lt;/td&gt;
-    &lt;td class="b10"&gt;outset&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td class="b1">none</td>
+    <td class="b2">hidden</td>
+    <td class="b3">dotted</td>
+    <td class="b4">dashed</td>
+  </tr>
+  <tr>
+    <td class="b5">solid</td>
+    <td class="b6">double</td>
+    <td class="b7">groove</td>
+    <td class="b8">ridge</td>
+  </tr>
+  <tr>
+    <td class="b9">inset</td>
+    <td class="b10">outset</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* 테이블 스타일 */
+```css
+/* 테이블 스타일 */
 table {
   border-width: 3px;
   background-color: #52E396;
@@ -192,22 +126,21 @@ tr, td {
 .b7 {border-style:groove;}
 .b8 {border-style:ridge;}
 .b9 {border-style:inset;}
-.b10 {border-style:outset;}</pre>
+.b10 {border-style:outset;}
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{EmbedLiveSample('속성_값의_예시_표', 300, 200)}}</p>
+{{EmbedLiveSample('속성_값의_예시_표', 300, 200)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.border-style")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>테두리 관련 CSS 단축 속성: {{Cssxref("border")}}, {{Cssxref("border-width")}}, {{Cssxref("border-color")}}, {{Cssxref("border-radius")}}</li>
-</ul>
+- 테두리 관련 CSS 단축 속성: {{Cssxref("border")}}, {{Cssxref("border-width")}}, {{Cssxref("border-color")}}, {{Cssxref("border-radius")}}

@@ -8,17 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-wrap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code><strong>overflow</strong></code><strong><code>-wrap</code></strong> CSS 요소는 어떤 문자가 내용 칸 밖으로 넘치지 않게 브라우저가 단어 마디 안에 줄을 바꿔야 할 것인지 아닌지를 정할 때 사용됩니다.</p>
+**`overflow`\*\***`-wrap`\*\* CSS 요소는 어떤 문자가 내용 칸 밖으로 넘치지 않게 브라우저가 단어 마디 안에 줄을 바꿔야 할 것인지 아닌지를 정할 때 사용됩니다.
 
-<div class="note"><strong>Note:</strong> {{cssxref("word-break")}}와는 달리, <code>overflow-wrap</code>은 모든 단어가 넘치지 않으면 자신의 줄 안에 놓여 있을 수 없을 때 줄 바꿈을 한 번만 할 것입니다.</div>
+> **참고:** {{cssxref("word-break")}}와는 달리, `overflow-wrap`은 모든 단어가 넘치지 않으면 자신의 줄 안에 놓여 있을 수 없을 때 줄 바꿈을 한 번만 할 것입니다.
 
-<p>이 속성은 처음에 마이크로소프트에서 표준이 아니고 접두어가 없는 <code>word-wrap</code>으로 나왔고, 대부분 브라우저에서 똑같은 이름으로 구현되었습니다. 요즘은 <code>overflow-wrap</code>으로 다시 지어지고, <code>word-wrap</code>은 동의어가 되었습니다.</p>
+이 속성은 처음에 마이크로소프트에서 표준이 아니고 접두어가 없는 `word-wrap`으로 나왔고, 대부분 브라우저에서 똑같은 이름으로 구현되었습니다. 요즘은 `overflow-wrap`으로 다시 지어지고, `word-wrap`은 동의어가 되었습니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 overflow-wrap: normal;
 overflow-wrap: break-word;
 
@@ -26,45 +27,46 @@ overflow-wrap: break-word;
 overflow-wrap: inherit;
 overflow-wrap: initial;
 overflow-wrap: unset;
-</pre>
+```
 
-<p><code>overflow-wrap</code> 속성은 아래에 나열돼 있는 값들 중 단 하나로 정해집니다.</p>
+`overflow-wrap` 속성은 아래에 나열돼 있는 값들 중 단 하나로 정해집니다.
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>줄이 오직 (두 단어 사이의 공백과 같이) 보통의 줄 바꿈 지점에서만 줄을 바꿉니다.</dd>
- <dt><code>break-word</code></dt>
- <dd>보통 안 바꿔지는 단어들을 한 줄에서 대신 줄을 바꿀 만한 지점이 없을 시 임의의 지점에서 줄을 바꿉니다.</dd>
-</dl>
+- `normal`
+  - : 줄이 오직 (두 단어 사이의 공백과 같이) 보통의 줄 바꿈 지점에서만 줄을 바꿉니다.
+- `break-word`
+  - : 보통 안 바꿔지는 단어들을 한 줄에서 대신 줄을 바꿀 만한 지점이 없을 시 임의의 지점에서 줄을 바꿉니다.
 
-<h3 id="기본적인_구문">기본적인 구문</h3>
+### 기본적인 구문
 
 {{csssyntax}}
 
-<h2 id="예시">예시</h2>
+## 예시
 
-<p>이 예시는 긴 단어를 넘길 때 <code>overflow-wrap</code>, <code>word-break</code>, 그리고 <code>hyphens</code>의 결과를 비교합니다.</p>
+이 예시는 긴 단어를 넘길 때 `overflow-wrap`, `word-break`, 그리고 `hyphens`의 결과를 비교합니다.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="normal"&gt;They say the fishing is excellent at
+```html
+<p class="normal">They say the fishing is excellent at
   Lake Chargoggagoggmanchauggagoggchaubunagungamaugg,
-  though I've never been there myself. (normal)&lt;/p&gt;
-&lt;p class="overflow-wrap"&gt;They say the fishing is excellent at
+  though I've never been there myself. (normal)</p>
+<p class="overflow-wrap">They say the fishing is excellent at
   Lake Chargoggagoggmanchauggagoggchaubunagungamaugg,
-  though I've never been there myself. (overflow-wrap)&lt;/p&gt;
-&lt;p class="word-break"&gt;They say the fishing is excellent at
+  though I've never been there myself. (overflow-wrap)</p>
+<p class="word-break">They say the fishing is excellent at
   Lake Chargoggagoggmanchauggagoggchaubunagungamaugg,
-  though I've never been there myself. (word-break)&lt;/p&gt;
-&lt;p class="hyphens"&gt;They say the fishing is excellent at
+  though I've never been there myself. (word-break)</p>
+<p class="hyphens">They say the fishing is excellent at
   Lake Chargoggagoggmanchauggagoggchaubunagungamaugg,
-  though I've never been there myself. (hyphens)&lt;/p&gt;</pre>
+  though I've never been there myself. (hyphens)</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 13em;
   background: gold;
 }
@@ -80,39 +82,22 @@ overflow-wrap: unset;
 .hyphens {
   hyphens: auto;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', '100%', 260) }}</p>
+{{ EmbedLiveSample('Example', '100%', 260) }}
 
-<h2 id="사양">사양</h2>
+## 사양
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }}</td>
-   <td>{{ Spec2('CSS3 Text') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                | Status                           | Comment            |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| {{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }} | {{ Spec2('CSS3 Text') }} | Initial definition |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.overflow-wrap")}}</p>
+{{Compat}}
 
+## 바로 보기
 
-
-<h2 id="See_also" name="See_also">바로 보기</h2>
-
-<ul>
- <li>{{cssxref("word-break")}}</li>
-</ul>
+- {{cssxref("word-break")}}

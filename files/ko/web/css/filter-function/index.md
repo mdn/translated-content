@@ -8,73 +8,74 @@ tags:
   - Reference
 translation_of: Web/CSS/filter-function
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><span class="seoSummary"><a href="/ko/docs/Web/CSS">CSS</a> <code><strong>&lt;filter-function&gt;</strong></code> <a href="/ko/docs/Web/CSS/CSS_Types">자료형</a>은 입력 이미지의 모습을 변형할 수 있는 그래픽 효과를 나타냅니다.</span> {{cssxref("filter")}}와 {{cssxref("backdrop-filter")}} 속성에서 사용합니다.</p>
+[CSS](/ko/docs/Web/CSS) **`<filter-function>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 입력 이미지의 모습을 변형할 수 있는 그래픽 효과를 나타냅니다. {{cssxref("filter")}}와 {{cssxref("backdrop-filter")}} 속성에서 사용합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<p><code>&lt;filter-function&gt;</code> 자료형은 다음 목록의 필터 중 하나를 사용해 지정할 수 있습니다. 각 함수는 매개변수를 받아야 하며, 유효하지 않은 값을 전달하면 필터를 적용하지 않습니다.</p>
+`<filter-function>` 자료형은 다음 목록의 필터 중 하나를 사용해 지정할 수 있습니다. 각 함수는 매개변수를 받아야 하며, 유효하지 않은 값을 전달하면 필터를 적용하지 않습니다.
 
-<dl>
- <dt>{{cssxref("filter-function/blur", "blur()")}}</dt>
- <dd>이미지를 흐리게 만듭니다.</dd>
- <dt>{{cssxref("filter-function/brightness", "brightness()")}}</dt>
- <dd>이미지의 밝기를 조절합니다.</dd>
- <dt>{{cssxref("filter-function/contrast", "contrast()")}}</dt>
- <dd>이미지의 대비를 조절합니다.</dd>
- <dt>{{cssxref("filter-function/drop-shadow", "drop-shadow()")}}</dt>
- <dd>이미지의 뒤에 그림자를 적용합니다.</dd>
- <dt>{{cssxref("filter-function/grayscale", "grayscale()")}}</dt>
- <dd>이미지를 흑백으로 변환합니다.</dd>
- <dt>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}</dt>
- <dd>이미지의 전체 색조를 조절합니다.</dd>
- <dt>{{cssxref("filter-function/invert", "invert()")}}</dt>
- <dd>이미지의 색을 반전합니다.</dd>
- <dt>{{cssxref("filter-function/opacity", "opacity()")}}</dt>
- <dd>이미지의 투명도를 조절합니다.</dd>
- <dt>{{cssxref("filter-function/saturate", "saturate()")}}</dt>
- <dd>이미지의 채도를 조절합니다.</dd>
- <dt>{{cssxref("filter-function/sepia", "sepia()")}}</dt>
- <dd>이미지에 세피아 톤을 적용합니다.</dd>
-</dl>
+- {{cssxref("filter-function/blur", "blur()")}}
+  - : 이미지를 흐리게 만듭니다.
+- {{cssxref("filter-function/brightness", "brightness()")}}
+  - : 이미지의 밝기를 조절합니다.
+- {{cssxref("filter-function/contrast", "contrast()")}}
+  - : 이미지의 대비를 조절합니다.
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+  - : 이미지의 뒤에 그림자를 적용합니다.
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+  - : 이미지를 흑백으로 변환합니다.
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+  - : 이미지의 전체 색조를 조절합니다.
+- {{cssxref("filter-function/invert", "invert()")}}
+  - : 이미지의 색을 반전합니다.
+- {{cssxref("filter-function/opacity", "opacity()")}}
+  - : 이미지의 투명도를 조절합니다.
+- {{cssxref("filter-function/saturate", "saturate()")}}
+  - : 이미지의 채도를 조절합니다.
+- {{cssxref("filter-function/sepia", "sepia()")}}
+  - : 이미지에 세피아 톤을 적용합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="필터_함수_비교">필터 함수 비교</h3>
+### 필터 함수 비교
 
-<p>이 예제는 간단한 그래픽과 함께 여러 가지 필터를 선택할 수 있는 선택 메뉴와, 필터의 값을 조절할 수 있는 슬라이더를 제공합니다. 컨트롤을 조절하면 필터가 실시간으로 변화하므로 각 필터의 효과를 편리하게 알아볼 수 있습니다.</p>
+이 예제는 간단한 그래픽과 함께 여러 가지 필터를 선택할 수 있는 선택 메뉴와, 필터의 값을 조절할 수 있는 슬라이더를 제공합니다. 컨트롤을 조절하면 필터가 실시간으로 변화하므로 각 필터의 효과를 편리하게 알아볼 수 있습니다.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;label for="filter-select"&gt;필터 함수 선택:&lt;/label&gt;
-    &lt;select id="filter-select"&gt;
-      &lt;option selected&gt;blur&lt;/option&gt;
-      &lt;option&gt;brightness&lt;/option&gt;
-      &lt;option&gt;contrast&lt;/option&gt;
-      &lt;option&gt;drop-shadow&lt;/option&gt;
-      &lt;option&gt;grayscale&lt;/option&gt;
-      &lt;option&gt;hue-rotate&lt;/option&gt;
-      &lt;option&gt;invert&lt;/option&gt;
-      &lt;option&gt;opacity&lt;/option&gt;
-      &lt;option&gt;saturate&lt;/option&gt;
-      &lt;option&gt;sepia&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;input type="range"&gt;&lt;output&gt;&lt;/output&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Current value: &lt;code&gt;&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<div></div>
+<ul>
+  <li>
+    <label for="filter-select">필터 함수 선택:</label>
+    <select id="filter-select">
+      <option selected>blur</option>
+      <option>brightness</option>
+      <option>contrast</option>
+      <option>drop-shadow</option>
+      <option>grayscale</option>
+      <option>hue-rotate</option>
+      <option>invert</option>
+      <option>opacity</option>
+      <option>saturate</option>
+      <option>sepia</option>
+    </select>
+  </li>
+  <li>
+    <input type="range"><output></output>
+  </li>
+  <li>
+    <p>Current value: <code></code></p>
+  </li>
+</ul>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   width: 300px;
   height: 300px;
   background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
@@ -99,22 +100,24 @@ output {
 select {
   width: 40%;
   margin-left: 2px;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">const selectElem = document.querySelector('select');
+```js
+const selectElem = document.querySelector('select');
 const divElem = document.querySelector('div');
 const slider = document.querySelector('input');
 const output = document.querySelector('output');
 const curValue = document.querySelector('p code');
 
-selectElem.addEventListener('change', () =&gt; {
+selectElem.addEventListener('change', () => {
   setSlider(selectElem.value);
   setDiv(selectElem.value);
 });
 
-slider.addEventListener('input', () =&gt; {
+slider.addEventListener('input', () => {
   setDiv(selectElem.value);
 });
 
@@ -178,33 +181,19 @@ function updateCurValue() {
 }
 
 setSlider(selectElem.value);
-setDiv(selectElem.value);</pre>
+setDiv(selectElem.value);
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{EmbedLiveSample('필터_함수_비교', '100%', 500)}}</p>
+{{EmbedLiveSample('필터_함수_비교', '100%', 500)}}
 
-<h2 id="명세">명세</h2>
+## 명세
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }}</td>
-   <td>{{ Spec2('Filters 1.0') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Status                               | Comments            |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Initial definition. |
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>자료형을 사용하는 속성: {{cssxref("filter")}}, {{cssxref("backdrop-filter")}}</li>
-</ul>
+- 자료형을 사용하는 속성: {{cssxref("filter")}}, {{cssxref("backdrop-filter")}}

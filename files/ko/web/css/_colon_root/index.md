@@ -1,6 +1,6 @@
 ---
 title: ':root'
-slug: 'Web/CSS/:root'
+slug: Web/CSS/:root
 tags:
   - CSS
   - Layout
@@ -8,49 +8,50 @@ tags:
   - Reference
   - Selector
   - Web
-translation_of: 'Web/CSS/:root'
+translation_of: Web/CSS/:root
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>:root</code></strong> <a href="/ko/docs/Web/CSS/Pseudo-classes">의사 클래스</a>는 문서 트리의 루트 요소를 선택합니다 HTML의 루트 요소는 {{htmlelement("html")}} 요소이므로, <code>:root</code>의 <a href="/ko/docs/Web/CSS/Specificity">명시도</a>가 더 높다는 점을 제외하면 <code>html</code> 선택자와 똑같습니다.</p>
+[CSS](/ko/docs/Web/CSS) **`:root`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 문서 트리의 루트 요소를 선택합니다 HTML의 루트 요소는 {{htmlelement("html")}} 요소이므로, `:root`의 [명시도](/ko/docs/Web/CSS/Specificity)가 더 높다는 점을 제외하면 `html` 선택자와 똑같습니다.
 
-<pre class="brush: css no-line-numbers notranslate">/* 문서의 루트 요소 선택
-   HTML에서는 &lt;html&gt; */
+```css
+/* 문서의 루트 요소 선택
+   HTML에서는 <html> */
 :root {
   background: yellow;
-}</pre>
+}
+```
 
-<h2 id="구문">구문</h2>
+## 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="전역_CSS_변수_선언하기">전역 CSS 변수 선언하기</h3>
+### 전역 CSS 변수 선언하기
 
-<p><code>:root</code>는 전역 <a href="/ko/docs/Web/CSS/Using_CSS_custom_properties">CSS 변수</a> 선언에 유용하게 사용할 수 있습니다.</p>
+`:root`는 전역 [CSS 변수](/ko/docs/Web/CSS/Using_CSS_custom_properties) 선언에 유용하게 사용할 수 있습니다.
 
-<pre class="brush: css notranslate">:root {
+```css
+:root {
   --main-color: hotpink;
   --pane-padding: 5px 42px;
 }
-</pre>
+```
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.selectors.root")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{htmlelement("html")}}</li>
- <li>{{domxref("Document.rootElement")}}</li>
- <li>{{domxref("Node.getRootNode()")}}</li>
- <li>{{domxref("Node.rootNode")}}</li>
- <li>{{domxref("Element.shadowRoot")}}</li>
- <li>{{domxref("ShadowRoot")}}</li>
-</ul>
+- {{htmlelement("html")}}
+- {{domxref("Document.rootElement")}}
+- {{domxref("Node.getRootNode()")}}
+- {{domxref("Node.rootNode")}}
+- {{domxref("Element.shadowRoot")}}
+- {{domxref("ShadowRoot")}}

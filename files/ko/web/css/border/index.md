@@ -7,30 +7,27 @@ tags:
   - CSS Property
   - Layout
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 translation_of: Web/CSS/border
 ---
-<div>{{CSSRef("CSS Borders")}}</div>
+{{CSSRef("CSS Borders")}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>border</code></strong> <a href="/ko/docs/Web/CSS/Shorthand_properties">단축 속성</a>은 요소의 테두리를 설정합니다. {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}의 값을 설정합니다.</p>
+[CSS](/ko/docs/Web/CSS) **`border`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 테두리를 설정합니다. {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}의 값을 설정합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/border.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border.html")}}
 
+## 구성 속성
 
+`border`는 단축 속성으로서 다음의 하위 속성을 포함합니다.
 
-<h2 id="구성_속성">구성 속성</h2>
+- {{cssxref("border-color")}}
+- {{cssxref("border-style")}}
+- {{cssxref("border-width")}}
 
-<p><code>border</code>는 단축 속성으로서 다음의 하위 속성을 포함합니다.</p>
+## 구문
 
-<ul>
- <li>{{cssxref("border-color")}}</li>
- <li>{{cssxref("border-style")}}</li>
- <li>{{cssxref("border-width")}}</li>
-</ul>
-
-<h2 id="구문">구문</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* 스타일 */
+```css
+/* 스타일 */
 border: solid;
 
 /* 너비 | 스타일 */
@@ -46,59 +43,56 @@ border: medium dashed green;
 border: inherit;
 border: initial;
 border: unset;
-</pre>
+```
 
-<p><code>border</code> 속성은 다음의 값 중 한 개에서 세 개를 선택해서 지정할 수 있습니다. 순서는 영향을 주지 않습니다.</p>
+`border` 속성은 다음의 값 중 한 개에서 세 개를 선택해서 지정할 수 있습니다. 순서는 영향을 주지 않습니다.
 
-<div class="note">
-<p><strong>참고:</strong> 스타일을 지정하지 않으면 기본값인 <code>none</code>이 사용돼 테두리가 보이지 않습니다.</p>
-</div>
+> **참고:** 스타일을 지정하지 않으면 기본값인 `none`이 사용돼 테두리가 보이지 않습니다.
 
-<h3 id="Values" name="Values">값</h3>
+### 값
 
-<dl>
- <dt id="&lt;line-width>"><code>&lt;line-width&gt;</code></dt>
- <dd>테두리의 굵기로 기본값은 <code>medium</code>입니다. {{Cssxref("border-width")}}를 참고하세요.</dd>
- <dt id="&lt;line-style>"><code>&lt;line-style&gt;</code></dt>
- <dd>테두리의 스타일로 기본값은 <code>none</code>입니다. {{Cssxref("border-style")}}을 참고하세요.</dd>
- <dt id="&lt;color>">{{cssxref("&lt;color&gt;")}}</dt>
- <dd>테두리의 색상으로 기본값은 <code>currentcolor</code>입니다. {{Cssxref("border-color")}}를 참고하세요.</dd>
-</dl>
+- `<line-width>`
+  - : 테두리의 굵기로 기본값은 `medium`입니다. {{Cssxref("border-width")}}를 참고하세요.
+- `<line-style>`
+  - : 테두리의 스타일로 기본값은 `none`입니다. {{Cssxref("border-style")}}을 참고하세요.
+- {{cssxref("&lt;color&gt;")}}
+  - : 테두리의 색상으로 기본값은 `currentcolor`입니다. {{Cssxref("border-color")}}를 참고하세요.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>다른 단축 속성과 마찬가지로, 생략한 속성은 <a href="/ko/docs/Web/CSS/initial_value">초깃값</a>으로 설정됩니다. 한 가지 중요한 점은, <code>border</code>를 사용해서는 {{cssxref("border-image")}}에 원하는 값을 지정할 수는 없고 대신 초깃값인 <code>none</code>이 자동으로 설정됩니다.</p>
+다른 단축 속성과 마찬가지로, 생략한 속성은 [초깃값](/ko/docs/Web/CSS/initial_value)으로 설정됩니다. 한 가지 중요한 점은, `border`를 사용해서는 {{cssxref("border-image")}}에 원하는 값을 지정할 수는 없고 대신 초깃값인 `none`이 자동으로 설정됩니다.
 
-<p><code>border</code> 단축 속성은 요소의 테두리를 모두 동일하게 설정하고 싶을 때 특히 유용합니다. 그러나 서로의 테두리를 다르게 하고 싶다면 네 면을 각각 설정할 수 있는 본디 속성 {{Cssxref("border-width")}}, {{Cssxref("border-style")}},{{Cssxref("border-color")}}를 사용하면 됩니다. 아니면 한 면의 테두리를 절대 기준({{Cssxref("border-top")}} 등)이나 상대 기준({{Cssxref("border-block-start")}} 등) 속성을 사용해서 따로 정해줄 수도 있습니다.</p>
+`border` 단축 속성은 요소의 테두리를 모두 동일하게 설정하고 싶을 때 특히 유용합니다. 그러나 서로의 테두리를 다르게 하고 싶다면 네 면을 각각 설정할 수 있는 본디 속성 {{Cssxref("border-width")}}, {{Cssxref("border-style")}},{{Cssxref("border-color")}}를 사용하면 됩니다. 아니면 한 면의 테두리를 절대 기준({{Cssxref("border-top")}} 등)이나 상대 기준({{Cssxref("border-block-start")}} 등) 속성을 사용해서 따로 정해줄 수도 있습니다.
 
-<h3 id="테두리_vs외곽선">테두리 vs외곽선</h3>
+### 테두리 vs외곽선
 
-<p>테두리와 <a href="/ko/docs/Web/CSS/outline">외곽선</a>은 매우 유사하지만, 다음의 두 가지 차이점이 존재합니다.</p>
+테두리와 [외곽선](/ko/docs/Web/CSS/outline)은 매우 유사하지만, 다음의 두 가지 차이점이 존재합니다.
 
-<ul>
- <li>외곽선은 요소 콘텐츠의 밖에 그려지며 절대 공간을 차지하지 않습니다.</li>
- <li>명세에 따르면 외곽선은 직사각형일 필요가 없습니다. 보통 직사각형으로 그리기는 합니다.</li>
-</ul>
+- 외곽선은 요소 콘텐츠의 밖에 그려지며 절대 공간을 차지하지 않습니다.
+- 명세에 따르면 외곽선은 직사각형일 필요가 없습니다. 보통 직사각형으로 그리기는 합니다.
 
-<h2 id="형식_정의">형식 정의</h2>
+## 형식 정의
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 구문
+
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="튀어나오는_듯한_분홍색_테두리_추가하기">튀어나오는 듯한 분홍색 테두리 추가하기</h3>
+### 튀어나오는 듯한 분홍색 테두리 추가하기
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;테두리와 외곽선에 더해 그림자까지, 정말 멋지지 않나요?&lt;/div&gt;
-</pre>
+```html
+<div>테두리와 외곽선에 더해 그림자까지, 정말 멋지지 않나요?</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   border: 0.5rem outset pink;
   outline: 0.5rem solid khaki;
   box-shadow: 0 0 0 2rem skyblue;
@@ -107,27 +101,25 @@ border: unset;
   margin: 2rem;
   padding: 1rem;
   outline-offset: 0.5rem;
-}</pre>
+}
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{EmbedLiveSample('튀어나오는_듯한_분홍색_테두리_추가하기')}}</p>
+{{EmbedLiveSample('튀어나오는_듯한_분홍색_테두리_추가하기')}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
-{{Specifications}}
+{{Specifications}}{{cssinfo}}
 
-<div>{{cssinfo}}</div>
+## 브라우저 호환성
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
+{{Compat}}
 
-<p>{{Compat("css.properties.border")}}</p>
+## 같이 보기
 
-<h2 id="see_also">같이 보기</h2>
-<ul>
-  <li>{{Cssxref("border-width")}}</li>
-  <li>{{Cssxref("border-style")}}</li>
-  <li>{{Cssxref("border-color")}}</li>
-  <li><a href="/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders">배경 및 테두리</a></li>
-  <li><a href="/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">CSS 배우기: 배경 및 테두리</a></li>
-</ul>
+- {{Cssxref("border-width")}}
+- {{Cssxref("border-style")}}
+- {{Cssxref("border-color")}}
+- [배경 및 테두리](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [CSS 배우기: 배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

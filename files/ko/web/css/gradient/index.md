@@ -12,127 +12,135 @@ tags:
   - 그레이디언트
 translation_of: Web/CSS/gradient
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>&lt;gradient&gt;</code></strong> <a href="/ko/docs/Web/CSS">CSS</a> <a href="/ko/docs/Web/CSS/CSS_Types">자료형</a>은 {{cssxref("&lt;image&gt;")}}의 특별한 종류로 여러 색의 점진적인 변화를 나타냅니다.</p>
+**`<gradient>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{cssxref("&lt;image&gt;")}}의 특별한 종류로 여러 색의 점진적인 변화를 나타냅니다.
 
-<div>{{EmbedInteractiveExample("pages/css/type-gradient.html")}}</div>
+{{EmbedInteractiveExample("pages/css/type-gradient.html")}}
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>CSS 그레이디언트는 <a href="/ko/docs/Web/CSS/image#no_intrinsic">원본 크기가 없습니다</a>. 즉 실제 크기나 선호 크기가 없습니다. 그레이디언트의 크기는 적용하는 요소의 크기와 동일해집니다.</p>
+CSS 그레이디언트는 [원본 크기가 없습니다](/ko/docs/Web/CSS/image#no_intrinsic). 즉 실제 크기나 선호 크기가 없습니다. 그레이디언트의 크기는 적용하는 요소의 크기와 동일해집니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<h3 id="그레이디언트_함수">그레이디언트 함수</h3>
+### 그레이디언트 함수
 
-<p><code>&lt;gradient&gt;</code> 자료형은 아래 나열한 함수 중 하나를 사용해 생성합니다.</p>
+`<gradient>` 자료형은 아래 나열한 함수 중 하나를 사용해 생성합니다.
 
-<h4 id="선형_그레이디언트">선형 그레이디언트</h4>
+#### 선형 그레이디언트
 
-<p>가상의 선을 따라 여러 색 사이를 전이합니다. {{cssxref("linear-gradient()")}} 함수를 사용해 생성합니다.</p>
+가상의 선을 따라 여러 색 사이를 전이합니다. {{cssxref("linear-gradient()")}} 함수를 사용해 생성합니다.
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;선형 그레이디언트&lt;/div&gt;
-</pre>
+```html hidden
+<div class="linear-gradient">선형 그레이디언트</div>
+```
 
-<pre class="brush: css">div {
+```css hidden
+div {
   width: 240px;
   height: 80px;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background: linear-gradient(to right,
       red, orange, yellow, green, blue, indigo, violet);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('선형_그레이디언트', 240, 80)}}</p>
+{{EmbedLiveSample('선형_그레이디언트', 240, 80)}}
 
-<h4 id="원형_그레이디언트">원형 그레이디언트</h4>
+#### 원형 그레이디언트
 
-<p>중심점으로부터 바깥으로 여러 색 사이를 전이합니다. {{cssxref("radial-gradient()")}} 함수를 사용해 생성합니다.</p>
+중심점으로부터 바깥으로 여러 색 사이를 전이합니다. {{cssxref("radial-gradient()")}} 함수를 사용해 생성합니다.
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="radial-gradient"&gt;원형 그레이디언트&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-gradient">원형 그레이디언트</div>
+```
 
-<pre class="brush: css">div {
+```css hidden
+div {
   width: 240px;
   height: 80px;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">.radial-gradient {
+```css
+.radial-gradient {
   background: radial-gradient(red, yellow, rgb(30, 144, 255));
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('원형_그레이디언트', 240, 80)}}</p>
+{{EmbedLiveSample('원형_그레이디언트', 240, 80)}}
 
-<h4 id="반복_그레이디언트">반복 그레이디언트</h4>
+#### 반복 그레이디언트
 
-<p>요소를 꽉 채울 때까지 그레이디언트를 필요한 만큼 반복합니다. {{cssxref("repeating-linear-gradient()")}}나 {{cssxref("repeating-radial-gradient()")}} 함수를 사용해 생성합니다.</p>
+요소를 꽉 채울 때까지 그레이디언트를 필요한 만큼 반복합니다. {{cssxref("repeating-linear-gradient()")}}나 {{cssxref("repeating-radial-gradient()")}} 함수를 사용해 생성합니다.
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="linear-repeat"&gt;반복하는 선형 그레이디언트&lt;/div&gt;
-&lt;br&gt;
-&lt;div class="radial-repeat"&gt;반복하는 원형 그레이디언트&lt;/div&gt;
-</pre>
+```html hidden
+<div class="linear-repeat">반복하는 선형 그레이디언트</div>
+<br>
+<div class="radial-repeat">반복하는 원형 그레이디언트</div>
+```
 
-<pre class="brush: css">div {
+```css hidden
+div {
   width: 240px;
   height: 80px;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">.linear-repeat {
+```css
+.linear-repeat {
   background: repeating-linear-gradient(to top left,
       lightpink, lightpink 5px, white 5px, white 10px);
 }
 
 .radial-repeat {
   background: repeating-radial-gradient(powderblue, powderblue 8px, white 8px, white 16px);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('반복_그레이디언트', 220, 180)}}</p>
+{{EmbedLiveSample('반복_그레이디언트', 220, 180)}}
 
-<h4 id="원뿔_그레이디언트">원뿔 그레이디언트</h4>
+#### 원뿔 그레이디언트
 
-<p>원을 따라 여러 색 사이를 전이합니다. {{cssxref("conic-gradient", "conic-gradient()")}} 함수를 사용해 생성합니다.</p>
+원을 따라 여러 색 사이를 전이합니다. {{cssxref("conic-gradient", "conic-gradient()")}} 함수를 사용해 생성합니다.
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="conic-gradient"&gt;원뿔 그레이디언트&lt;/div&gt;
-</pre>
+```html hidden
+<div class="conic-gradient">원뿔 그레이디언트</div>
+```
 
-<pre class="brush: css">div {
+```css hidden
+div {
   width: 200px;
   height: 200px;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">.conic-gradient {
+```css
+.conic-gradient {
   background: conic-gradient(lightpink, white, powderblue);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('원뿔_그레이디언트', 240, 80)}}</p>
+{{EmbedLiveSample('원뿔_그레이디언트', 240, 80)}}
 
-<h2 id="보간">보간</h2>
+## 보간
 
-<p>색과 관련한 다른 보간과 마찬가지로, 그레이디언트도 색과 투명도가 동시에 변할 때 예상하지 못한 회색이 등장하는걸 방지하기 위해 알파 채널을 미리 곱한 색 공간을 사용해 계산합니다. 오래 된 브라우저에서 {{cssxref("&lt;color&gt;", "", "#transparent_키워드")}} 키워드를 사용할 땐 다르게 행동할 수 있음을 주의하세요.</p>
+색과 관련한 다른 보간과 마찬가지로, 그레이디언트도 색과 투명도가 동시에 변할 때 예상하지 못한 회색이 등장하는걸 방지하기 위해 알파 채널을 미리 곱한 색 공간을 사용해 계산합니다. 오래 된 브라우저에서 {{cssxref("&lt;color&gt;", "", "#transparent_키워드")}} 키워드를 사용할 땐 다르게 행동할 수 있음을 주의하세요.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.types.image.gradient")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/CSS/Using_CSS_gradients" title="Using gradients">CSS 그레이디언트 사용하기</a></li>
- <li>그레이디언트 함수: {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}</li>
-</ul>
+- [CSS 그레이디언트 사용하기](/ko/docs/CSS/Using_CSS_gradients "Using gradients")
+- 그레이디언트 함수: {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}

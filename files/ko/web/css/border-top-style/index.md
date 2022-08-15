@@ -8,19 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/border-top-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-top-style</code></strong> <a href="/ko/docs/Web/CSS">CSS</a> 속성은 요소 테두리의 위쪽 스타일을 지정합니다.</p>
+**`border-top-style`** [CSS](/ko/docs/Web/CSS) 속성은 요소 테두리의 위쪽 스타일을 지정합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 
+> **참고:** 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다.
 
+## 구문
 
-<div class="note"><strong>참고:</strong> 명세는 서로 다른 스타일의 테두리가 꼭지점에서 만날 때 어떻게 그려야 할지는 정의하고 있지 않습니다.</div>
-
-<h2 id="Syntax" name="Syntax">구문</h2>
-
-<pre class="brush:css no-line-numbers">/* 키워드 값 */
+```css
+/* 키워드 값 */
 border-top-style: none;
 border-top-style: hidden;
 border-top-style: dotted;
@@ -36,40 +35,43 @@ border-top-style: outset;
 border-top-style: inherit;
 border-top-style: initial;
 border-top-style: unset;
-</pre>
+```
 
-<p><code>border-top-style</code> 속성은 {{cssxref("border-style")}} 속성에 사용할 수 있는 키워드 중 하나를 사용해 지정할 수 있습니다.</p>
+`border-top-style` 속성은 {{cssxref("border-style")}} 속성에 사용할 수 있는 키워드 중 하나를 사용해 지정할 수 있습니다.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td class="b1"&gt;none&lt;/td&gt;
-    &lt;td class="b2"&gt;hidden&lt;/td&gt;
-    &lt;td class="b3"&gt;dotted&lt;/td&gt;
-    &lt;td class="b4"&gt;dashed&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b5"&gt;solid&lt;/td&gt;
-    &lt;td class="b6"&gt;double&lt;/td&gt;
-    &lt;td class="b7"&gt;groove&lt;/td&gt;
-    &lt;td class="b8"&gt;ridge&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td class="b9"&gt;inset&lt;/td&gt;
-    &lt;td class="b10"&gt;outset&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td class="b1">none</td>
+    <td class="b2">hidden</td>
+    <td class="b3">dotted</td>
+    <td class="b4">dashed</td>
+  </tr>
+  <tr>
+    <td class="b5">solid</td>
+    <td class="b6">double</td>
+    <td class="b7">groove</td>
+    <td class="b8">ridge</td>
+  </tr>
+  <tr>
+    <td class="b9">inset</td>
+    <td class="b10">outset</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Define look of the table */
+```css
+/* Define look of the table */
 table {
   border-width: 2px;
   background-color: #52E385;
@@ -88,25 +90,24 @@ tr, td {
 .b7 {border-top-style: groove;}
 .b8 {border-top-style: ridge;}
 .b9 {border-top-style: inset;}
-.b10 {border-top-style: outset;}</pre>
+.b10 {border-top-style: outset;}
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{EmbedLiveSample('예제', 300, 200)}}</p>
+{{EmbedLiveSample('예제', 300, 200)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.border-top-style")}}</p>
+{{Compat}}
 
-<h2 id="See_Also" name="See_Also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>테두리 스타일 관련 CSS 속성: {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}}, {{cssxref("border-style")}}.</li>
- <li>위쪽 테두리 관련 CSS 속성: {{cssxref("border-top")}}, {{cssxref("border-top-color")}}, {{cssxref("border-top-width")}}.</li>
-</ul>
+- 테두리 스타일 관련 CSS 속성: {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}}, {{cssxref("border-style")}}.
+- 위쪽 테두리 관련 CSS 속성: {{cssxref("border-top")}}, {{cssxref("border-top-color")}}, {{cssxref("border-top-width")}}.

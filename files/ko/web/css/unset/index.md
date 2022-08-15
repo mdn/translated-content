@@ -8,28 +8,30 @@ tags:
   - Reference
 translation_of: Web/CSS/unset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">CSS <strong><code>unset</code></strong> 키워드를 적용한 속성은, 부모로부터 상속할 값이 존재하면 상속값을, 그렇지 않다면 <a href="/ko/docs/Web/CSS/initial_value">초깃값</a>을 사용합니다.</span> 다르게 표현하자면, 전자일 땐 {{cssxref("inherit")}} 키워드처럼, 후자일 땐 {{cssxref("initial")}} 키워드처럼 동작합니다. {{cssxref("all")}} 단축 속성을 포함한 모든 속성에 사용할 수 있습니다.</p>
+CSS **`unset`** 키워드를 적용한 속성은, 부모로부터 상속할 값이 존재하면 상속값을, 그렇지 않다면 [초깃값](/ko/docs/Web/CSS/initial_value)을 사용합니다. 다르게 표현하자면, 전자일 땐 {{cssxref("inherit")}} 키워드처럼, 후자일 땐 {{cssxref("initial")}} 키워드처럼 동작합니다. {{cssxref("all")}} 단축 속성을 포함한 모든 속성에 사용할 수 있습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="글자_색">글자 색</h3>
+### 글자 색
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This text is red.&lt;/p&gt;
-&lt;div class="foo"&gt;
-  &lt;p&gt;This text is also red.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="bar"&gt;
-  &lt;p&gt;This text is green (default inherited value).&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p>This text is red.</p>
+<div class="foo">
+  <p>This text is also red.</p>
+</div>
+<div class="bar">
+  <p>This text is green (default inherited value).</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.foo {
+```css
+.foo {
   color: blue;
 }
 .bar {
@@ -42,28 +44,30 @@ p {
 .bar p {
   color: unset;
 }
-</pre>
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{ EmbedLiveSample('글자_색') }}</p>
+{{ EmbedLiveSample('글자_색') }}
 
-<h3 id="테두리">테두리</h3>
+### 테두리
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This text has a red border.&lt;/p&gt;
-&lt;div&gt;
-  &lt;p&gt;This text has a red border.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="bar"&gt;
-  &lt;p&gt;This text has has a black border (initial default, not inherited).&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p>This text has a red border.</p>
+<div>
+  <p>This text has a red border.</p>
+</div>
+<div class="bar">
+  <p>This text has has a black border (initial default, not inherited).</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: 1px solid green;
 }
 
@@ -74,25 +78,23 @@ p {
 .bar p {
   border-color: unset;
 }
-</pre>
+```
 
-<h4 id="결과_2">결과</h4>
+#### 결과
 
-<p>{{ EmbedLiveSample('테두리', 'auto', 200) }}</p>
+{{ EmbedLiveSample('테두리', 'auto', 200) }}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.types.global_keywords.unset")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{cssxref("initial")}}을 사용해 속성의 초깃값을 사용하세요.</li>
- <li>{{cssxref("revert")}}를 사용해 사용자 에이전트가 지정한 값(또는 사용자가 수정한 값)으로 속성을 되돌리세요.</li>
- <li>{{cssxref("inherit")}}을 사용해 속성의 값이 부모와 같도록 지정하세요.</li>
- <li>{{cssxref("all")}} 속성을 사용하면 요소의 모든 속성을 한꺼번에 <code>initial</code>, <code>inherit</code>, <code>revert</code>, <code>unset</code>할 수 있습니다.</li>
-</ul>
+- {{cssxref("initial")}}을 사용해 속성의 초깃값을 사용하세요.
+- {{cssxref("revert")}}를 사용해 사용자 에이전트가 지정한 값(또는 사용자가 수정한 값)으로 속성을 되돌리세요.
+- {{cssxref("inherit")}}을 사용해 속성의 값이 부모와 같도록 지정하세요.
+- {{cssxref("all")}} 속성을 사용하면 요소의 모든 속성을 한꺼번에 `initial`, `inherit`, `revert`, `unset`할 수 있습니다.

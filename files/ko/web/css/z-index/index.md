@@ -8,27 +8,24 @@ tags:
   - Reference
 translation_of: Web/CSS/z-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>z-index</code></strong> 속성은 <a href="/ko/docs/Web/CSS/position">위치 지정 요소</a>와, 그 자손 또는 하위 플렉스 아이템의 Z축 순서를 지정합니다. 더 큰 <code>z-index</code> 값을 가진 요소가 작은 값의 요소 위를 덮습니다.</p>
+[CSS](/ko/docs/Web/CSS) **`z-index`** 속성은 [위치 지정 요소](/ko/docs/Web/CSS/position)와, 그 자손 또는 하위 플렉스 아이템의 Z축 순서를 지정합니다. 더 큰 `z-index` 값을 가진 요소가 작은 값의 요소 위를 덮습니다.
 
-<div>{{EmbedInteractiveExample("pages/css/z-index.html")}}</div>
+{{EmbedInteractiveExample("pages/css/z-index.html")}}
 
+위치 지정 요소(`position`이 `static` 외의 다른 값인 요소)의 박스에 대해, `z-index` 속성은 다음 항목을 지정합니다.
 
+1.  현재 [쌓임 맥락](/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context)에서 자신의 위치.
+2.  자신만의 쌓임 맥락 생성 여부.
 
-<p>위치 지정 요소(<code>position</code>이 <code>static</code> 외의 다른 값인 요소)의 박스에 대해, <code>z-index</code> 속성은 다음 항목을 지정합니다.</p>
+## 구문
 
-<ol>
- <li>현재 <a href="/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context">쌓임 맥락</a>에서 자신의 위치.</li>
- <li>자신만의 쌓임 맥락 생성 여부.</li>
-</ol>
-
-<h2 id="구문">구문</h2>
-
-<pre class="brush: css">/* 키워드 값 */
+```css
+/* 키워드 값 */
 z-index: auto;
 
-/* &lt;integer&gt; 값 */
+/* <integer> 값 */
 z-index: 0;
 z-index: 3;
 z-index: 289;
@@ -37,36 +34,37 @@ z-index: -1; /* 음수 값으로 우선순위를 낮출 수 있음 */
 /* 전역 값 */
 z-index: inherit;
 z-index: initial;
-z-index: unset;</pre>
+z-index: unset;
+```
 
-<p>z-index 속성은 <code><a href="#auto">auto</a></code> 키워드 또는 <code><a href="#&lt;integer&gt;">&lt;integer&gt;</a></code> 값을 사용해 지정할 수 있습니다.</p>
+z-index 속성은 [`auto`](#auto) 키워드 또는 [`<integer>`](#<integer>) 값을 사용해 지정할 수 있습니다.
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><a id="auto" name="auto"><code>auto</code></a></dt>
- <dd>박스가 새로운 쌓임 맥락을 생성하지 않습니다. 현재 쌓임 맥락에서의 위치는 부모 요소와 동일합니다.</dd>
- <dt><a id="&lt;integer>" name="&lt;integer>">{{cssxref("&lt;integer&gt;")}}</a></dt>
- <dd>현재 쌓임 맥락에서의 위치로 이 값을 사용합니다. 또한 자신만의 쌓임 맥락을 생성하고, 해당 맥락에서 자신의 위치를 <code>0</code>으로 설정합니다. 이로 인해 자손의 <code>z-index</code>를 자기 외의 바깥 요소와 비교하지 않습니다.</dd>
-</dl>
+- `auto`
+  - : 박스가 새로운 쌓임 맥락을 생성하지 않습니다. 현재 쌓임 맥락에서의 위치는 부모 요소와 동일합니다.
+- {{cssxref("&lt;integer&gt;")}}
+  - : 현재 쌓임 맥락에서의 위치로 이 값을 사용합니다. 또한 자신만의 쌓임 맥락을 생성하고, 해당 맥락에서 자신의 위치를 `0`으로 설정합니다. 이로 인해 자손의 `z-index`를 자기 외의 바깥 요소와 비교하지 않습니다.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="dashed-box"&gt;Dashed box
-  &lt;span class="gold-box"&gt;Gold box&lt;/span&gt;
-  &lt;span class="green-box"&gt;Green box&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="dashed-box">Dashed box
+  <span class="gold-box">Gold box</span>
+  <span class="green-box">Green box</span>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight:[3,11,19]">.dashed-box {
+```css
+.dashed-box {
   position: relative;
   z-index: 1;
   border: dashed;
@@ -92,25 +90,23 @@ z-index: unset;</pre>
   height: 7em;
   opacity: 0.9;
 }
-</pre>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{ EmbedLiveSample('예제', '550', '200', '') }}</p>
+{{ EmbedLiveSample('예제', '550', '200', '') }}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.z-index")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>CSS {{ Cssxref("position") }} 속성</li>
- <li><a href="/ko/docs/Web/CSS/Understanding_z-index" title="ko/CSS/Understanding_z-index">CSS z-index 이해하기</a></li>
-</ul>
+- CSS {{ Cssxref("position") }} 속성
+- [CSS z-index 이해하기](/ko/docs/Web/CSS/Understanding_z-index "ko/CSS/Understanding_z-index")

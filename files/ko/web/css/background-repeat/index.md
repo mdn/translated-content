@@ -6,22 +6,21 @@ tags:
   - CSS Background
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/background-repeat
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>background-repeat</code></strong> 속성은 배경 이미지의 반복 방법을 지정합니다. 가로축 및 세로축을 따라 반복할 수 있고, 아예 반복하지 않을 수도 있습니다.</p>
+[CSS](/ko/docs/Web/CSS) **`background-repeat`** 속성은 배경 이미지의 반복 방법을 지정합니다. 가로축 및 세로축을 따라 반복할 수 있고, 아예 반복하지 않을 수도 있습니다.
 
-<div>{{EmbedInteractiveExample("pages/css/background-repeat.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-repeat.html")}}
 
+반복한 이미지는 기본값에선 요소 크기에 따라 잘릴 수 있지만, 잘리지 않도록 배경 이미지 크기를 조절하거나(`round`) 끝에서 끝까지 고르게 분배(`space`)할 수 있습니다.
 
+## 구문
 
-<p>반복한 이미지는 기본값에선 요소 크기에 따라 잘릴 수 있지만, 잘리지 않도록 배경 이미지 크기를 조절하거나(<code>round</code>) 끝에서 끝까지 고르게 분배(<code>space</code>)할 수 있습니다.</p>
-
-<h2 id="구문">구문</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* 키워드 값 */
+```css
+/* 키워드 값 */
 background-repeat: repeat-x;
 background-repeat: repeat-y;
 background-repeat: repeat;
@@ -39,110 +38,111 @@ background-repeat: no-repeat round;
 background-repeat: inherit;
 background-repeat: initial;
 background-repeat: unset;
-</pre>
+```
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>&lt;repeat-style&gt;</code></dt>
- <dd>한 개 값 구문은 두 개 값 구문의 단축 형태입니다.</dd>
- <dd>
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><strong>한 개 값</strong></td>
-    <td><strong>두 개 값</strong></td>
-   </tr>
-   <tr>
-    <td><code>repeat-x</code></td>
-    <td><code>repeat no-repeat</code></td>
-   </tr>
-   <tr>
-    <td><code>repeat-y</code></td>
-    <td><code>no-repeat repeat</code></td>
-   </tr>
-   <tr>
-    <td><code>repeat</code></td>
-    <td><code>repeat repeat</code></td>
-   </tr>
-   <tr>
-    <td><code>space</code></td>
-    <td><code>space space</code></td>
-   </tr>
-   <tr>
-    <td><code>round</code></td>
-    <td><code>round round</code></td>
-   </tr>
-   <tr>
-    <td><code>no-repeat</code></td>
-    <td><code>no-repeat no-repeat</code></td>
-   </tr>
-  </tbody>
- </table>
- 두 개 값 구문의 앞쪽은 가로 반복 방법을, 뒤쪽은 세로 반복 방법을 설정합니다. 각 방법의 동작 방식은 아래 표와 같습니다.</dd>
- <dd>
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>repeat</code></td>
-    <td>요소의 배경 영역을 채울 때까지 이미지를 반복합니다. 마지막 반복 이미지가 넘칠 경우 잘라냅니다.</td>
-   </tr>
-   <tr>
-    <td><code>space</code></td>
-    <td>요소가 잘리지 않을 만큼 이미지를 반복합니다. 제일 처음과 마지막 반복 이미지는 요소의 양쪽 끝에 고정되고, 각 이미지 사이에 남은 여백을 고르게 분배합니다. 잘리지 않고 배치할 수 있는 이미지가 단 한 장인 경우가 아니라면 {{cssxref("background-position")}} 속성은 무시합니다. <code>space</code>를 사용했는데 이미지가 잘리는 경우는 그 크기가 너무 커서 한 장 조차 넣을 수 없는 경우뿐입니다.</td>
-   </tr>
-   <tr>
-    <td><code>round</code></td>
-    <td>가용 영역이 늘어나면 반복 이미지도 늘어나 여백을 남기지 않습니다. 이미지를 하나 더 추가할 공간이 생기면 (남은 공간 &gt;= 이미지 너비의 절반) 비로소 반복 횟수를 하나 추가합니다. 이 때, 원래 존재하던 이미지는 모두 줄어들어 새로운 이미지를 위한 공간을 확보합니다. 예시: 원래 너비가 260px이고, 세 번 반복된 이미지는 각자 300px 너비가 될 때까지 늘어날 수 있습니다. 그 후에는 이미지를 추가하고, 각자 225px로 줄어듭니다.</td>
-   </tr>
-   <tr>
-    <td><code>no-repeat</code></td>
-    <td>이미지를 반복하지 않습니다. 따라서 배경 이미지 영역이 다 차지 않을 수 있습니다. 반복하지 않은 이미지의 위치는 {{cssxref("background-position")}} CSS속성이 설정합니다.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- `<repeat-style>`
+  - : 한 개 값 구문은 두 개 값 구문의 단축 형태입니다.
+  
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td><strong>한 개 값</strong></td>
+          <td><strong>두 개 값</strong></td>
+        </tr>
+        <tr>
+          <td><code>repeat-x</code></td>
+          <td><code>repeat no-repeat</code></td>
+        </tr>
+        <tr>
+          <td><code>repeat-y</code></td>
+          <td><code>no-repeat repeat</code></td>
+        </tr>
+        <tr>
+          <td><code>repeat</code></td>
+          <td><code>repeat repeat</code></td>
+        </tr>
+        <tr>
+          <td><code>space</code></td>
+          <td><code>space space</code></td>
+        </tr>
+        <tr>
+          <td><code>round</code></td>
+          <td><code>round round</code></td>
+        </tr>
+        <tr>
+          <td><code>no-repeat</code></td>
+          <td><code>no-repeat no-repeat</code></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    두 개 값 구문의 앞쪽은 가로 반복 방법을, 뒤쪽은 세로 반복 방법을 설정합니다. 각 방법의 동작 방식은 아래 표와 같습니다.
+    
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td><code>repeat</code></td>
+          <td>요소의 배경 영역을 채울 때까지 이미지를 반복합니다. 마지막 반복 이미지가 넘칠 경우 잘라냅니다.</td>
+        </tr>
+        <tr>
+          <td><code>space</code></td>
+          <td>요소가 잘리지 않을 만큼 이미지를 반복합니다. 제일 처음과 마지막 반복 이미지는 요소의 양쪽 끝에 고정되고, 각 이미지 사이에 남은 여백을 고르게 분배합니다. 잘리지 않고 배치할 수 있는 이미지가 단 한 장인 경우가 아니라면 {{cssxref("background-position")}} 속성은 무시합니다. <code>space</code>를 사용했는데 이미지가 잘리는 경우는 그 크기가 너무 커서 한 장 조차 넣을 수 없는 경우뿐입니다.</td>
+        </tr>
+        <tr>
+          <td><code>round</code></td>
+          <td>가용 영역이 늘어나면 반복 이미지도 늘어나 여백을 남기지 않습니다. 이미지를 하나 더 추가할 공간이 생기면 (남은 공간 >= 이미지 너비의 절반) 비로소 반복 횟수를 하나 추가합니다. 이 때, 원래 존재하던 이미지는 모두 줄어들어 새로운 이미지를 위한 공간을 확보합니다. 예시: 원래 너비가 260px이고, 세 번 반복된 이미지는 각자 300px 너비가 될 때까지 늘어날 수 있습니다. 그 후에는 이미지를 추가하고, 각자 225px로 줄어듭니다.</td>
+        </tr>
+        <tr>
+          <td><code>no-repeat</code></td>
+          <td>이미지를 반복하지 않습니다. 따라서 배경 이미지 영역이 다 차지 않을 수 있습니다. 반복하지 않은 이미지의 위치는 {{cssxref("background-position")}} CSS속성이 설정합니다.</td>
+        </tr>
+      </tbody>
+    </table>
 
-<h2 id="형식_정의">형식 정의</h2>
+## 형식 정의
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;ol&gt;
-  &lt;li&gt;no-repeat
-    &lt;div class="one"&gt;&lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;repeat
-    &lt;div class="two"&gt;&lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;repeat-x
-    &lt;div class="three"&gt;&lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;repeat-y
-    &lt;div class="four"&gt;&lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;space
-    &lt;div class="five"&gt;&lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;round
-    &lt;div class="six"&gt;&lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;repeat-x, repeat-y (multiple images)
-    &lt;div class="seven"&gt;&lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>no-repeat
+    <div class="one"></div>
+  </li>
+  <li>repeat
+    <div class="two"></div>
+  </li>
+  <li>repeat-x
+    <div class="three"></div>
+  </li>
+  <li>repeat-y
+    <div class="four"></div>
+  </li>
+  <li>space
+    <div class="five"></div>
+  </li>
+  <li>round
+    <div class="six"></div>
+  </li>
+  <li>repeat-x, repeat-y (multiple images)
+    <div class="seven"></div>
+  </li>
+</ol>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">/* Shared for all DIVS in example */
+```css
+/* Shared for all DIVS in example */
 ol,
 li {
   margin: 0;
@@ -184,22 +184,21 @@ div {
   background-repeat: repeat-x,
                      repeat-y;
   height: 144px;
-}</pre>
+}
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample('예제', 240, 560)}}</p>
+{{EmbedLiveSample('예제', 240, 560)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.background-repeat")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">한 번에 여러 배경 사용하기</a></li>
-</ul>
+- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)

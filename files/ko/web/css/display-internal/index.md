@@ -10,63 +10,64 @@ tags:
   - 참조
 translation_of: Web/CSS/display-internal
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary"><code>table</code>과 <code>ruby</code> 같은 몇몇 레이아웃 모델은 복잡한 내부 구조를 가지고 있으며, 자식이나 자손들로 채울 수 있는 다양한 역할을 가지고 있습니다. 이 페이지는 이러한 "내재적인" 디스플레이 값을 정의하며, 이들은 특정 레이아웃 모드 안에서만 의미를 가집니다.</p>
+`table`과 `ruby` 같은 몇몇 레이아웃 모델은 복잡한 내부 구조를 가지고 있으며, 자식이나 자손들로 채울 수 있는 다양한 역할을 가지고 있습니다. 이 페이지는 이러한 "내재적인" 디스플레이 값을 정의하며, 이들은 특정 레이아웃 모드 안에서만 의미를 가집니다.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<p>유효한 <code>&lt;display-internal&gt;</code> 값들:</p>
+유효한 `<display-internal>` 값들:
 
-<dl>
- <dt><code>table-row-group</code></dt>
- <dd>이 요소는 {{HTMLElement("tbody")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>table-header-group</code></dt>
- <dd>이 요소는 {{HTMLElement("thead")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>table-footer-group</code></dt>
- <dd>이 요소는 {{HTMLElement("tfoot")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>table-row</code></dt>
- <dd>이 요소는 {{HTMLElement("tr")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>table-cell</code></dt>
- <dd>이 요소는 {{HTMLElement("td")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>table-column-group</code></dt>
- <dd>이 요소는 {{HTMLElement("colgroup")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>table-column</code></dt>
- <dd>이 요소는 {{HTMLElement("col")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>table-caption</code></dt>
- <dd>이 요소는 {{HTMLElement("caption")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>ruby-base</code> {{Experimental_Inline}}</dt>
- <dd>이 요소는 {{HTMLElement("rb")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>ruby-text</code> {{Experimental_Inline}}</dt>
- <dd>이 요소는 {{HTMLElement("rt")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>ruby-base-container</code> {{Experimental_Inline}}</dt>
- <dd>이 요소는 익명의 박스로 만들어지는 {{HTMLElement("rbc")}} HTML 요소처럼 동작합니다.</dd>
- <dt><code>ruby-text-container</code> {{Experimental_Inline}}</dt>
- <dd>이 요소는 {{HTMLElement("rtc")}} HTML 요소처럼 동작합니다.</dd>
-</dl>
+- `table-row-group`
+  - : 이 요소는 {{HTMLElement("tbody")}} HTML 요소처럼 동작합니다.
+- `table-header-group`
+  - : 이 요소는 {{HTMLElement("thead")}} HTML 요소처럼 동작합니다.
+- `table-footer-group`
+  - : 이 요소는 {{HTMLElement("tfoot")}} HTML 요소처럼 동작합니다.
+- `table-row`
+  - : 이 요소는 {{HTMLElement("tr")}} HTML 요소처럼 동작합니다.
+- `table-cell`
+  - : 이 요소는 {{HTMLElement("td")}} HTML 요소처럼 동작합니다.
+- `table-column-group`
+  - : 이 요소는 {{HTMLElement("colgroup")}} HTML 요소처럼 동작합니다.
+- `table-column`
+  - : 이 요소는 {{HTMLElement("col")}} HTML 요소처럼 동작합니다.
+- `table-caption`
+  - : 이 요소는 {{HTMLElement("caption")}} HTML 요소처럼 동작합니다.
+- `ruby-base` {{Experimental_Inline}}
+  - : 이 요소는 {{HTMLElement("rb")}} HTML 요소처럼 동작합니다.
+- `ruby-text` {{Experimental_Inline}}
+  - : 이 요소는 {{HTMLElement("rt")}} HTML 요소처럼 동작합니다.
+- `ruby-base-container` {{Experimental_Inline}}
+  - : 이 요소는 익명의 박스로 만들어지는 {{HTMLElement("rbc")}} HTML 요소처럼 동작합니다.
+- `ruby-text-container` {{Experimental_Inline}}
+  - : 이 요소는 {{HTMLElement("rtc")}} HTML 요소처럼 동작합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="CSS_테이블의_예시">CSS 테이블의 예시</h3>
+### CSS 테이블의 예시
 
-<p>다음 예시에서는 CSS 테이블 레이아웃을 이용해 간단한 폼을 배치합니다.</p>
+다음 예시에서는 CSS 테이블 레이아웃을 이용해 간단한 폼을 배치합니다.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;main&gt;
-  &lt;div&gt;
-    &lt;label for="name"&gt;Name&lt;/label&gt;
-    &lt;input type="text" id="name" name="name"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="age"&gt;Age&lt;/label&gt;
-    &lt;input type="text" id="age" name="age"&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+```html
+<main>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+  </div>
+  <div>
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age">
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">main {
+```css
+main {
   display: table;
 }
 
@@ -77,53 +78,29 @@ div {
 label, input {
   display: table-cell;
   margin: 5px;
-}</pre>
+}
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{EmbedLiveSample('CSS_tables_example', '100%', 100)}}</p>
+{{EmbedLiveSample('CSS_tables_example', '100%', 100)}}
 
-<h2 id="사양">사양</h2>
+## 사양
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">사양</th>
-   <th scope="col">상태</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}}</td>
-   <td>{{Spec2('CSS3 Display')}}</td>
-  </tr>
- </tbody>
-</table>
+| 사양                                                                                                     | 상태                             |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| {{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}} | {{Spec2('CSS3 Display')}} |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<h3 id="Table_관련_값의_지원">Table 관련 값의 지원</h3>
+{{Compat}}
 
-<p><code>table</code>, <code>table-cell</code>, <code>table-column</code>, <code>table-column-group</code>, <code>table-footer-group</code>, <code>table-header-group</code>, <code>table-row</code>, <code>table-row-group</code></p>
+## 같이 보기
 
-<p>{{Compat("css.properties.display.table_values", 10)}}</p>
+- {{CSSxRef("display")}}
 
-<h3 id="Ruby_관련_값의_지원">Ruby 관련 값의 지원</h3>
-
-<p><code>ruby</code>, <code>ruby-base</code>, <code>ruby-base-container</code>, <code>ruby-text</code>, <code>ruby-text-container</code></p>
-
-<p>{{Compat("css.properties.display.ruby_values", 10)}}</p>
-
-<h2 id="같이_보기">같이 보기</h2>
-
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-  </ul>
- </li>
-</ul>
+  - {{CSSxRef("&lt;display-outside&gt;")}}
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-listitem&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{CSSxRef("&lt;display-legacy&gt;")}}

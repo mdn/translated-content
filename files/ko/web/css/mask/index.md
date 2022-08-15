@@ -10,19 +10,18 @@ tags:
   - Web
 translation_of: Web/CSS/mask
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>mask</code></strong> <a href="/ko/docs/Web/CSS">CSS</a> 속성은 아이템이 부분적으로만 보여지게 하거나 혹은 완전히 가려서 보여지지 않게 할 수 있는 기능을 가지고 있습니다. 이 속성은 마스킹 혹은 특정한 점을 기준으로 이미지를 잘라내는 기능을 함께 제공합니다.</span></p>
+**`mask`** [CSS](/ko/docs/Web/CSS) 속성은 아이템이 부분적으로만 보여지게 하거나 혹은 완전히 가려서 보여지지 않게 할 수 있는 기능을 가지고 있습니다. 이 속성은 마스킹 혹은 특정한 점을 기준으로 이미지를 잘라내는 기능을 함께 제공합니다.
 
-<div class="note">
-<p><code>mask</code> 는 {{cssxref("mask-border")}}를 초기값으로 재정의합니다. 그러므로 캐스캐이드 이전 단계에 어떠한 마스크 설정을 덮어씌우는 개별 속성아니 여타 다른 속성보다는 <code>mask</code> 를 사용하는 것을 추천합니다. This will ensure that <code>mask-border</code> has also been reset to allow the new styles to take effect.</p>
-</div>
+> **참고:** `mask` 는 {{cssxref("mask-border")}}를 초기값으로 재정의합니다. 그러므로 캐스캐이드 이전 단계에 어떠한 마스크 설정을 덮어씌우는 개별 속성아니 여타 다른 속성보다는 `mask` 를 사용하는 것을 추천합니다. This will ensure that `mask-border` has also been reset to allow the new styles to take effect.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="brush:css">/* 키워드 값 */
+```css
+/* 키워드 값 */
 mask: none;
 
 /* 이미지 값 */
@@ -41,56 +40,53 @@ mask: url(masks.svg#star) exclude;         /* Element within SVG graphic used as
 mask: inherit;
 mask: initial;
 mask: unset;
-</pre>
+```
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>&lt;mask-reference&gt;</code></dt>
- <dd>마스크 이미지 파일 설정하기. {{cssxref("mask-image")}}를 확인하세요.</dd>
- <dt><code>&lt;masking-mode&gt;</code></dt>
- <dd>마스크 이미지의 마스킹 모드 설정하기. {{cssxref("mask-mode")}}를 확인하세요.</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>마스크 이미지의 위치 설정하기. {{cssxref("mask-position")}}를 확인하세요.</dd>
- <dt><code>&lt;bg-size&gt;</code></dt>
- <dd>마스크 이미지의 크기 설정하기. {{cssxref("mask-size")}}를 확인하세요.</dd>
- <dt><code>&lt;repeat-style&gt;</code></dt>
- <dd>마스크 이미지의 반복 설정하기. See {{cssxref("mask-repeat")}}를 확인하세요.</dd>
- <dt><code>&lt;geometry-box&gt;</code></dt>
- <dd>단 하나의 &lt;geometry-box&gt; 값만 주어진다면 {{cssxref("mask-origin")}}와(과)( {{cssxref("mask-clip")}} 모두 같은 값으로 설정하는 것을 의미합니다. 두개의&lt;geometry-box&gt; 값이 주어진다면 첫번째 값은 {{cssxref("mask-origin")}}을(를), 두번쨰 값은 {{cssxref("mask-clip")}}를 설정하는 것을 의미합니다.</dd>
- <dt><code>&lt;geometry-box&gt; | no-clip</code></dt>
- <dd>마스크 이미지에 영향을 받는 구역을 설정하기. {{cssxref("mask-clip")}}를 확인하세요.</dd>
- <dt><code>&lt;compositing-operator&gt;</code></dt>
- <dd>현재 마스크 레이어 위의 합성 설정하기. {{cssxref("mask-composite")}}를 확인하세요.</dd>
-</dl>
+- `<mask-reference>`
+  - : 마스크 이미지 파일 설정하기. {{cssxref("mask-image")}}를 확인하세요.
+- `<masking-mode>`
+  - : 마스크 이미지의 마스킹 모드 설정하기. {{cssxref("mask-mode")}}를 확인하세요.
+- `<position>`
+  - : 마스크 이미지의 위치 설정하기. {{cssxref("mask-position")}}를 확인하세요.
+- `<bg-size>`
+  - : 마스크 이미지의 크기 설정하기. {{cssxref("mask-size")}}를 확인하세요.
+- `<repeat-style>`
+  - : 마스크 이미지의 반복 설정하기. See {{cssxref("mask-repeat")}}를 확인하세요.
+- `<geometry-box>`
+  - : 단 하나의 \<geometry-box> 값만 주어진다면 {{cssxref("mask-origin")}}와(과)( {{cssxref("mask-clip")}} 모두 같은 값으로 설정하는 것을 의미합니다. 두개의\<geometry-box> 값이 주어진다면 첫번째 값은 {{cssxref("mask-origin")}}을(를), 두번쨰 값은 {{cssxref("mask-clip")}}를 설정하는 것을 의미합니다.
+- `<geometry-box> | no-clip`
+  - : 마스크 이미지에 영향을 받는 구역을 설정하기. {{cssxref("mask-clip")}}를 확인하세요.
+- `<compositing-operator>`
+  - : 현재 마스크 레이어 위의 합성 설정하기. {{cssxref("mask-composite")}}를 확인하세요.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: css">.target {
+```css
+.target {
   mask: url(#c1) luminance;
 }
 
 .anothertarget {
   mask: url(resources.svg#c1) 50px 30px/10px 10px repeat-x exclude;
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.mask")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{Cssxref("clip-path")}}, {{Cssxref("filter")}}</li>
- <li><a href="/en-US/docs/Applying_SVG_effects_to_HTML_content">HTML에 SVG 효과 적용하기</a></li>
- <li><a href="/en-US/docs/SVG">SVG</a></li>
-</ul>
+- {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
+- [HTML에 SVG 효과 적용하기](/ko/docs/Applying_SVG_effects_to_HTML_content)
+- [SVG](/ko/docs/SVG)

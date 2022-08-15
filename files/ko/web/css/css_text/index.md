@@ -8,34 +8,30 @@ tags:
   - Overview
 translation_of: Web/CSS/CSS_Text
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Text</strong>는 줄 바꿈, 정돈 및 정렬, 공백 처리 및 텍스트 변환 같은 텍스트 조작을 수행하는 법을 정의하는 CSS 모듈입니다.</p>
+**CSS Text**는 줄 바꿈, 정돈 및 정렬, 공백 처리 및 텍스트 변환 같은 텍스트 조작을 수행하는 법을 정의하는 CSS 모듈입니다.
 
-<h2 id="참고서">참고서</h2>
+## 참고서
 
-<h3 id="속성">속성</h3>
+### 속성
 
-<div class="index">
-<ul>
- <li>{{cssxref("hanging-punctuation")}}</li>
- <li>{{cssxref("hyphens")}}</li>
- <li>{{cssxref("letter-spacing")}}</li>
- <li>{{cssxref("line-break")}}</li>
- <li>{{cssxref("overflow-wrap")}}</li>
- <li>{{cssxref("tab-size")}}</li>
- <li>{{cssxref("text-align")}}</li>
- <li>{{cssxref("text-align-last")}}</li>
- <li>{{cssxref("text-indent")}}</li>
- <li>{{cssxref("text-justify")}}</li>
- <li>{{cssxref("text-size-adjust")}}</li>
- <li>{{cssxref("text-transform")}}</li>
- <li>{{cssxref("white-space")}}</li>
- <li>{{cssxref("word-break")}}</li>
- <li>{{cssxref("word-spacing")}}</li>
-</ul>
-</div>
+- {{cssxref("hanging-punctuation")}}
+- {{cssxref("hyphens")}}
+- {{cssxref("letter-spacing")}}
+- {{cssxref("line-break")}}
+- {{cssxref("overflow-wrap")}}
+- {{cssxref("tab-size")}}
+- {{cssxref("text-align")}}
+- {{cssxref("text-align-last")}}
+- {{cssxref("text-indent")}}
+- {{cssxref("text-justify")}}
+- {{cssxref("text-size-adjust")}}
+- {{cssxref("text-transform")}}
+- {{cssxref("white-space")}}
+- {{cssxref("word-break")}}
+- {{cssxref("word-spacing")}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}

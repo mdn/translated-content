@@ -1,48 +1,49 @@
 ---
 title: '::before (:before)'
-slug: 'Web/CSS/::before'
+slug: Web/CSS/::before
 tags:
   - CSS
   - Layout
   - Pseudo-element
   - Reference
   - Web
-translation_of: 'Web/CSS/::before'
+translation_of: Web/CSS/::before
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary">CSS에서, <strong><code>::before</code></strong>는 선택한 요소의 첫 자식으로 <a href="/ko/docs/Web/CSS/Pseudo-elements">의사 요소</a>를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다.</span> 기본값은 인라인입니다.</p>
+CSS에서, **`::before`**는 선택한 요소의 첫 자식으로 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다. 기본값은 인라인입니다.
 
-<pre class="brush: css no-line-numbers  language-css"><code class="language-css"><span class="comment token">/* 링크 앞에 하트 추가 */</span>
-<span class="selector token">a<span class="pseudo-class token">::after</span> </span><span class="punctuation token">{</span>
-  <span class="property token">content: "</span></code>♥<code class="language-css"><span class="property token">";</span>
-<span class="punctuation token">}</span></code></pre>
+```css
+/* 링크 앞에 하트 추가 */
+a::after {
+  content: "♥";
+}
+```
 
-<div class="note">
-<p><strong>참고:</strong> <code>::before</code>와 <code>::after</code>로 생성한 의사 요소는 <a href="https://www.w3.org/TR/CSS2/generate.html#before-after-content">원본 요소의 서식 박스에 포함되므로</a>,<em> </em>{{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 <a href="/ko/docs/Web/CSS/Replaced_element">대체 요소</a>에 적용할 수 없습니다.</p>
-</div>
+> **참고:** `::before`와 `::after`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.org/TR/CSS2/generate.html#before-after-content),\_ \_{{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 [대체 요소](/ko/docs/Web/CSS/Replaced_element)에 적용할 수 없습니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
 {{csssyntax}}
 
-<div class="note">
-<p><strong>참고:</strong> <a href="/ko/docs/Web/CSS/Pseudo-classes">의사 클래스</a>와 <a href="/ko/docs/Web/CSS/Pseudo-elements">의사 요소</a>를 구분하기 위해 CSS3부터<code>::before</code> 구문을 도입했습니다. 그러나 브라우저는 CSS2 구문인 <code>:before</code>도 허용합니다.</p>
-</div>
+> **참고:** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 구분하기 위해 CSS3부터`::before` 구문을 도입했습니다. 그러나 브라우저는 CSS2 구문인 `:before`도 허용합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="인용_표시_추가">인용 표시 추가</h3>
+### 인용 표시 추가
 
-<p>One simple example of using <code>::before</code> pseudo-elements is to provide quotation marks. Here we use both <code>::before</code> and <code>{{Cssxref("::after")}}</code> to insert quotation characters.</p>
+One simple example of using `::before` pseudo-elements is to provide quotation marks. Here we use both `::before` and `{{Cssxref("::after")}}` to insert quotation characters.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;q&gt;Some quotes,&lt;/q&gt; he said, &lt;q&gt;are better than none.&lt;/q&gt;</pre>
+```html
+<q>Some quotes,</q> he said, <q>are better than none.</q>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">q::before {
+```css
+q::before {
   content: "«";
   color: blue;
 }
@@ -50,23 +51,27 @@ translation_of: 'Web/CSS/::before'
 q::after {
   content: "»";
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('인용_표시_추가', '500', '50', '')}}</p>
+{{EmbedLiveSample('인용_표시_추가', '500', '50', '')}}
 
-<h3 id="장식_예제">장식 예제</h3>
+### 장식 예제
 
-<p>We can style text or images in the {{cssxref("content")}} property almost any way we want.</p>
+We can style text or images in the {{cssxref("content")}} property almost any way we want.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;span class="ribbon"&gt;Notice where the orange box is.&lt;/span&gt;</pre>
+```html
+<span class="ribbon">Notice where the orange box is.</span>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.ribbon {
+```css
+.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -75,31 +80,34 @@ q::after {
   background-color: #FFBA10;
   border-color: black;
   border-style: dotted;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('장식_예제', 450, 60)}}</p>
+{{EmbedLiveSample('장식_예제', 450, 60)}}
 
-<h3 id="할_일_목록">할 일 목록</h3>
+### 할 일 목록
 
-<p>In this example we will create a simple to-do list using pseudo-elements. This method can often be used to add small touches to the UI and improve user experience.</p>
+In this example we will create a simple to-do list using pseudo-elements. This method can often be used to add small touches to the UI and improve user experience.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Buy milk&lt;/li&gt;
-  &lt;li&gt;Take the dog for a walk&lt;/li&gt;
-  &lt;li&gt;Exercise&lt;/li&gt;
-  &lt;li&gt;Write code&lt;/li&gt;
-  &lt;li&gt;Play music&lt;/li&gt;
-  &lt;li&gt;Relax&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+  <li>Buy milk</li>
+  <li>Take the dog for a walk</li>
+  <li>Exercise</li>
+  <li>Write code</li>
+  <li>Play music</li>
+  <li>Relax</li>
+</ul>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">li {
+```css
+li {
   list-style-type: none;
   position: relative;
   margin: 2px;
@@ -124,45 +132,49 @@ li.done::before {
   margin-top: -1em;
   transform: rotate(45deg);
   width: 0.5em;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var list = document.querySelector('ul');
+```js
+var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
      ev.target.classList.toggle('done');
   }
 }, false);
-</pre>
+```
 
-<p>Here is the above code example running live. Note that there are no icons used, and the check-mark is actually the <code>::before</code> that has been styled in CSS. Go ahead and get some stuff done.</p>
+Here is the above code example running live. Note that there are no icons used, and the check-mark is actually the `::before` that has been styled in CSS. Go ahead and get some stuff done.
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('할_일_목록', 400, 300)}}</p>
+{{EmbedLiveSample('할_일_목록', 400, 300)}}
 
-<h3 id="특수문자">특수문자</h3>
+### 특수문자
 
-<p>As this is CSS; not HTML, you can <strong>not </strong>use markup entities in content values. If you need to use a special character, and can not enter it literally into your CSS content string, use a unicodeescape sequence, consistingof a backslash followed by the hexadecimal unicode value.</p>
+As this is CSS; not HTML, you can **not** use markup entities in content values. If you need to use a special character, and can not enter it literally into your CSS content string, use a unicodeescape sequence, consistingof a backslash followed by the hexadecimal unicode value.
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;Crack Eggs into bowl&lt;/li&gt;
-  &lt;li&gt;Add Milk&lt;/li&gt;
-  &lt;li&gt;Add Flour&lt;/li&gt;
-  &lt;li aria-current='step'&gt;Mix thoroughly into a smooth batter&lt;/li&gt;
-  &lt;li&gt;Pour a ladleful of batter onto a hot, greased, flat frying pan&lt;/li&gt;
-  &lt;li&gt;Fry until the top of the pancake loses its gloss&lt;/li&gt;
-  &lt;li&gt;Flip it over and fry for a couple more minutes&lt;/li&gt;
-  &lt;li&gt;serve with your favorite topping&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+```html
+<ol>
+  <li>Crack Eggs into bowl</li>
+  <li>Add Milk</li>
+  <li>Add Flour</li>
+  <li aria-current='step'>Mix thoroughly into a smooth batter</li>
+  <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
+  <li>Fry until the top of the pancake loses its gloss</li>
+  <li>Flip it over and fry for a couple more minutes</li>
+  <li>serve with your favorite topping</li>
+</ol>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css"><code class="language-css">
+```css
+
 li {
   padding:0.5em;
 }
@@ -175,24 +187,21 @@ li[aria-current='step']::after {
   content: " \21E6"; /* Hexadecimal for Unicode Leftwards white arrow*/
   display: inline;
 }
-</code>
-</pre>
+```
 
-<h4 id="Result_4">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('특수문자', 400, 200)}}</p>
+{{EmbedLiveSample('특수문자', 400, 200)}}
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-{{Compat("css.selectors.before")}}
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{Cssxref("::after")}}</li>
- <li>{{Cssxref("content")}}</li>
-</ul>
+- {{Cssxref("::after")}}
+- {{Cssxref("content")}}

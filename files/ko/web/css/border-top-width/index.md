@@ -6,25 +6,24 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/border-top-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>border-top-width</code></strong> 속성은 요소의 위쪽 테두리 너비를 지정합니다.</p>
+[CSS](/ko/docs/Web/CSS) **`border-top-width`** 속성은 요소의 위쪽 테두리 너비를 지정합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-width.html")}}
 
+## 구문
 
-
-<h2 id="구문">구문</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* 키워드 값*/
+```css
+/* 키워드 값*/
 border-top-width: thin;
 border-top-width: medium;
 border-top-width: thick;
 
-/* &lt;length&gt; 값 */
+/* <length> 값 */
 border-top-width: 10em;
 border-top-width: 3vmax;
 border-top-width: 6px;
@@ -33,63 +32,42 @@ border-top-width: 6px;
 border-top-width: inherit;
 border-top-width: initial;
 border-top-width: unset;
-</pre>
+```
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>thin</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-top-style: solid; border-top-width: thin; background-color: palegreen;"></div>
-    </td>
-    <td>얇은 테두리</td>
-   </tr>
-   <tr>
-    <td><code>medium</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-top-style: solid; border-top-width: medium; background-color: palegreen;"></div>
-    </td>
-    <td>중간 테두리</td>
-   </tr>
-   <tr>
-    <td><code>thick</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-top-style: solid; border-top-width: thick; background-color: palegreen;"></div>
-    </td>
-    <td>넓은 테두리</td>
-   </tr>
-  </tbody>
- </table>
+- `<line-width>`
 
- <div class="note">
- <p><strong>참고:</strong> 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 <code>thin ≤ medium ≤ thick</code>이고, 하나의 문서 내에서 동일합니다.</p>
- </div>
- </dd>
-</dl>
+  - : 테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
 
-<h2 id="형식_정의">형식 정의</h2>
+    | `thin`   |     | 얇은 테두리 |
+    | -------- | --- | ----------- |
+    | `medium` |     | 중간 테두리 |
+    | `thick`  |     | 넓은 테두리 |
 
-<p>{{cssinfo}}</p>
+    > **참고:** 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
 
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 정의
+
+{{cssinfo}}
+
+## 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;Element 1&lt;/div&gt;
-&lt;div&gt;Element 2&lt;/div&gt;</pre>
+```html
+<div>Element 1</div>
+<div>Element 2</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   border: 1px solid red;
   margin: 1em 0;
 }
@@ -99,23 +77,22 @@ div:nth-child(1) {
 }
 div:nth-child(2) {
   border-top-width: 2em;
-}</pre>
+}
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample('예제', '100%')}}</p>
+{{EmbedLiveSample('예제', '100%')}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.border-top-width")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>테두리 너비 관련 CSS 속성: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.</li>
- <li>위쪽 테두리 관련 CSS 속성: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-top-color")}}.</li>
-</ul>
+- 테두리 너비 관련 CSS 속성: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.
+- 위쪽 테두리 관련 CSS 속성: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-top-color")}}.

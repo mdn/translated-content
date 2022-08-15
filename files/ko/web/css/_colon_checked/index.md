@@ -1,64 +1,65 @@
 ---
 title: ':checked'
-slug: 'Web/CSS/:checked'
+slug: Web/CSS/:checked
 tags:
   - CSS
   - Layout
   - Pseudo-class
   - Reference
   - Web
-translation_of: 'Web/CSS/:checked'
+translation_of: Web/CSS/:checked
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:checked</code></strong> <a href="/ko/docs/Web/CSS">CSS</a> <a href="/ko/docs/Web/CSS/Pseudo-classes">의사 클래스</a> 선택자는 선택했거나 <code>on</code> 상태인 <strong>라디오</strong>(<code><a href="/ko/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code>), <strong>체크박스</strong>(<code><a href="/ko/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>), <strong>옵션</strong>({{HTMLElement("option")}} 요소를 나타냅니다.</p>
+**`:checked`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) 선택자는 선택했거나 `on` 상태인 **라디오**([`<input type="radio">`](/ko/docs/Web/HTML/Element/input/radio)), **체크박스**([`<input type="checkbox">`](/ko/docs/Web/HTML/Element/input/checkbox)), **옵션**({{HTMLElement("option")}} 요소를 나타냅니다.
 
-<pre class="brush: css no-line-numbers">/* Matches any checked/selected radio, checkbox, or option */
+```css
+/* Matches any checked/selected radio, checkbox, or option */
 :checked {
   margin-left: 25px;
   border: 1px solid blue;
 }
-</pre>
+```
 
-<p>사용자가 요소를 체크했거나 선택한 경우 활성화되고, 체크나 선택을 해제하는 경우 비활성화됩니다.</p>
+사용자가 요소를 체크했거나 선택한 경우 활성화되고, 체크나 선택을 해제하는 경우 비활성화됩니다.
 
-<div class="note">
-<p><strong>참고:</strong> 많은 경우 브라우저는 <code>&lt;option&gt;</code> 요소를 <a href="/ko/docs/Web/CSS/Replaced_element">대체 요소</a>로 취급하므로, <code>:checked</code> 의사 클래스를 사용한 스타일을 적용할 수 있는 범위도 브라우저마다 다릅니다.</p>
-</div>
+> **참고:** 많은 경우 브라우저는 `<option>` 요소를 [대체 요소](/ko/docs/Web/CSS/Replaced_element)로 취급하므로, `:checked` 의사 클래스를 사용한 스타일을 적용할 수 있는 범위도 브라우저마다 다릅니다.
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+## 구문
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">예제</h2>
+## 예제
 
-<h3 id="기본_예제">기본 예제</h3>
+### 기본 예제
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;input type="radio" name="my-input" id="yes"&gt;
-  &lt;label for="yes"&gt;Yes&lt;/label&gt;
+```html
+<div>
+  <input type="radio" name="my-input" id="yes">
+  <label for="yes">Yes</label>
 
-  &lt;input type="radio" name="my-input" id="no"&gt;
-  &lt;label for="no"&gt;No&lt;/label&gt;
-&lt;/div&gt;
+  <input type="radio" name="my-input" id="no">
+  <label for="no">No</label>
+</div>
 
-&lt;div&gt;
-  &lt;input type="checkbox" name="my-checkbox" id="opt-in"&gt;
-  &lt;label for="opt-in"&gt;Check me!&lt;/label&gt;
-&lt;/div&gt;
+<div>
+  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <label for="opt-in">Check me!</label>
+</div>
 
-&lt;select name="my-select" id="fruit"&gt;
-  &lt;option value="opt1"&gt;Apples&lt;/option&gt;
-  &lt;option value="opt2"&gt;Grapes&lt;/option&gt;
-  &lt;option value="opt3"&gt;Pears&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select name="my-select" id="fruit">
+  <option value="opt1">Apples</option>
+  <option value="opt2">Grapes</option>
+  <option value="opt3">Pears</option>
+</select>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div,
+```css
+div,
 select {
   margin: 8px;
 }
@@ -83,39 +84,41 @@ option:checked {
   box-shadow: 0 0 0 3px lime;
   color: red;
 }
-</pre>
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{EmbedLiveSample("기본_예제")}}</p>
+{{EmbedLiveSample("기본_예제")}}
 
-<h3 id="숨겨진_체크박스를_사용해_요소_켜고_끄기">숨겨진 체크박스를 사용해 요소 켜고 끄기</h3>
+### 숨겨진 체크박스를 사용해 요소 켜고 끄기
 
-<p>다음 예제 코드는 <code>:checked</code> 의사 클래스와 체크박스를 사용해, <a href="/ko/docs/Web/JavaScript">JavaScript</a> 없이도 사용자가 켜거나 끌 수 있는 콘텐츠를 구현합니다.</p>
+다음 예제 코드는 `:checked` 의사 클래스와 체크박스를 사용해, [JavaScript](/ko/docs/Web/JavaScript) 없이도 사용자가 켜거나 끌 수 있는 콘텐츠를 구현합니다.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="checkbox" id="expand-toggle" /&gt;
+```html
+<input type="checkbox" id="expand-toggle" />
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;&lt;th&gt;Column #1&lt;/th&gt;&lt;th&gt;Column #2&lt;/th&gt;&lt;th&gt;Column #3&lt;/th&gt;&lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;td&gt;[cell text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr class="expandable"&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;td&gt;[more text]&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr><th>Column #1</th><th>Column #2</th><th>Column #3</th></tr>
+  </thead>
+  <tbody>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+  </tbody>
+</table>
 
-&lt;label for="expand-toggle" id="expand-btn"&gt;Toggle hidden rows&lt;/label&gt;
-</pre>
+<label for="expand-toggle" id="expand-btn">Toggle hidden rows</label>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Hide the toggle checkbox */
+```css
+/* Hide the toggle checkbox */
 #expand-toggle {
   display: none;
 }
@@ -144,16 +147,17 @@ option:checked {
 /* Style the button when the checkbox is checked */
 #expand-toggle:checked ~ #expand-btn {
   background-color: #ccc;
-}</pre>
+}
+```
 
-<h4 id="결과_2">결과</h4>
+#### 결과
 
-<p>{{EmbedLiveSample("숨겨진_체크박스를_사용해_요소_켜고_끄기", "auto", 220)}}</p>
+{{EmbedLiveSample("숨겨진_체크박스를_사용해_요소_켜고_끄기", "auto", 220)}}
 
-<h2 id="Specifications" name="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.selectors.checked")}}</p>
+{{Compat}}
