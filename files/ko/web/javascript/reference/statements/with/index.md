@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Statements/with
 - `expression`
   - : 명령문을 평가할 때 사용되는 범위 체인에 지정된 표현식을 추가합니다. 표현식을 중괄호로 감싸는 것은 필수입니다.
 - `statement`
-  - : 모든 구문을 말합니다. 여러개의 명령문을 실행하려면 [블록](/en-US/docs/Web/JavaScript/Reference/Statements/block "JavaScript/Reference/Statements/block")명령문 ({...})을 사용하여 해당 명령문을 그룹화 하세요.
+  - : 모든 구문을 말합니다. 여러개의 명령문을 실행하려면 [블록](/en-US/docs/Web/JavaScript/Reference/Statements/block)명령문 ({...})을 사용하여 해당 명령문을 그룹화 하세요.
 
 ## Description
 
@@ -63,7 +63,7 @@ If you call `f([1,2,3], obj)` in an ECMAScript 5 environment, then the `values` 
 
 ### Using `with`
 
-The following `with` statement specifies that the [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math "JavaScript/Reference/Global_Objects/Math") object is the default object. The statements following the `with` statement refer to the [`PI`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI "JavaScript/Reference/Global_Objects/Math/PI") property and the [`cos`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos "JavaScript/Reference/Global_Objects/Math/cos") and [`sin`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin "JavaScript/Reference/Global_Objects/Math/sin") methods, without specifying an object. JavaScript assumes the `Math` object for these references.
+The following `with` statement specifies that the [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) object is the default object. The statements following the `with` statement refer to the [`PI`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI) property and the [`cos`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) and [`sin`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) methods, without specifying an object. JavaScript assumes the `Math` object for these references.
 
 ```js
 var a, x, y;
