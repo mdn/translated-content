@@ -51,8 +51,8 @@ translation_of: Web/CSS/position
 
 <dl>
  <dt><code>sticky</code></dt>
- <dd>元素根据正常文档流进行定位，然后相对它的<em>最近滚动祖先（nearest scrolling ancestor）</em>和 <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> (最近块级祖先 nearest block-level ancestor)，包括 table-related 元素，基于<code>top</code>, <code>right</code>, <code>bottom</code>, 和 <code>left</code>的值进行偏移。偏移值不会影响任何其他元素的位置。</dd>
- <dd>该值总是创建一个新的<a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">层叠上下文（stacking context</a>）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的<code>overflow</code> 是 <code>hidden</code>, <code>scroll</code>, <code>auto</code>, 或 <code>overlay</code>时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见<a href="https://github.com/w3c/csswg-drafts/issues/865">Github issue on W3C CSSWG</a>）。</dd>
+ <dd>元素根据正常文档流进行定位，然后相对它的<em>最近滚动祖先（nearest scrolling ancestor）</em>和 <a href="/en-US/docs/Web/CSS/Containing_Block">containing block</a> (最近块级祖先 nearest block-level ancestor)，包括 table-related 元素，基于<code>top</code>, <code>right</code>, <code>bottom</code>, 和 <code>left</code>的值进行偏移。偏移值不会影响任何其他元素的位置。<br>
+ 该值总是创建一个新的<a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">层叠上下文（stacking context</a>）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的<code>overflow</code> 是 <code>hidden</code>, <code>scroll</code>, <code>auto</code>, 或 <code>overlay</code>时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见<a href="https://github.com/w3c/csswg-drafts/issues/865">Github issue on W3C CSSWG</a>）。</dd>
 </dl>
 
 <h3 id="常见语法">常见语法</h3>

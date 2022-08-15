@@ -52,8 +52,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</code></pre>
  <dt><code>&lt;color-stop&gt;</code></dt>
  <dd>表示某个确定位置的固定色值，包含一个{{cssxref("&lt;color&gt;")}}值加上可选的位置值（相对虚拟渐变射线的{{cssxref("&lt;percentage&gt;")}}或者{{cssxref("&lt;length&gt;")}}长度值）。百分比值<code>0%</code>，或者长度值<code>0</code>，表示渐变中心点；百分比值<code>100%</code>表示渐变射线与边缘形状相交的点。 其间的百分比值线性对应渐变射线上的点。</dd>
  <dt><code>&lt;extent-keyword&gt;</code></dt>
- <dd>关键字用于描述边缘轮廓的具体位置。以下为关键字常量：</dd>
- <dd>
+ <dd>关键字用于描述边缘轮廓的具体位置。以下为关键字常量：
  <table class="standard-table">
   <tbody>
    <tr>
@@ -87,10 +86,11 @@ radial-gradient(circle at center, red 0, blue, green 100%)</code></pre>
  <dd>A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of <code>0%</code>, or a length of <code>0</code>, represents the center of the gradient; the value <code>100%</code> represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.</dd>
  <dt><code>&lt;color-hint&gt;</code></dt>
  <dd>Th color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.</dd>
- <dt>
- <h3 id="Formal_syntax">Formal syntax</h3>
+</dl>
 
- <pre class="notranslate">radial-gradient(
+<h3 id="Formal_syntax">Formal syntax</h3>
+
+<pre class="notranslate">radial-gradient(
   [ [ circle || <a href="/zh-CN/docs/CSS/length">&lt;length&gt;</a> ]                         [ at <a href="/zh-CN/docs/CSS/position_value">&lt;position&gt;</a> ]? , |
     [ ellipse || [ <a href="/zh-CN/docs/CSS/length">&lt;length&gt;</a> | <a href="/zh-CN/docs/CSS/percentage">&lt;percentage&gt;</a> ]{2} ]  [ at <a href="/zh-CN/docs/CSS/position_value">&lt;position&gt;</a> ]? , |
     [ [ circle | ellipse ] || &lt;extent-keyword&gt; ] [at <a href="/zh-CN/docs/CSS/position_value">&lt;position&gt;</a> ]? , |
@@ -105,11 +105,9 @@ where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner |
    and &lt;color-hint&gt; = [ &lt;percentage&gt; | &lt;length&gt; ]
 </pre>
 
- <div class="blockIndicator warning">
- <p>Note that negative <code>&lt;length&gt;</code>'s are not allowed, however browsers had implemented negative lengths which are now being removed. <a href="https://www.fxsitecompat.dev/en-CA/docs/2019/css-radial-gradients-no-longer-accept-negative-radii/">See the Firefox site compat note</a>.</p>
- </div>
- </dt>
-</dl>
+<div class="blockIndicator warning">
+<p>Note that negative <code>&lt;length&gt;</code>'s are not allowed, however browsers had implemented negative lengths which are now being removed. <a href="https://www.fxsitecompat.dev/en-CA/docs/2019/css-radial-gradients-no-longer-accept-negative-radii/">See the Firefox site compat note</a>.</p>
+</div>
 
 <h2 id="示例">示例</h2>
 

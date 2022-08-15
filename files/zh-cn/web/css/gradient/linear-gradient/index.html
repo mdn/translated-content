@@ -86,19 +86,13 @@ linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);</code><
  <dd>用角度值指定渐变的方向（或角度）。角度顺时针增加。 </dd>
  <dt><code>&lt;linear-color-stop&gt;</code></dt>
  <dd>由一个{{cssxref("&lt;color&gt;")}}值组成，并且跟随着一个可选的终点位置（可以是一个百分比值或者是沿着渐变轴的{{cssxref("&lt;length&gt;")}}）。CSS 渐变的颜色渲染采取了与 SVG 相同的规则。</dd>
-</dl>
-
-<dl>
  <dt><code>&lt;color-hint&gt;</code></dt>
+ <dd>颜色中转点是一个插值提示，它定义了在相邻颜色之间渐变如何进行。长度定义了在两种颜色之间的哪个点停止渐变颜色应该达到颜色过渡的中点。如果省略，颜色转换的中点是两个颜色停止之间的中点。</dd>
 </dl>
 
-<p>颜色中转点是一个插值提示，它定义了在相邻颜色之间渐变如何进行。长度定义了在两种颜色之间的哪个点停止渐变颜色应该达到颜色过渡的中点。如果省略，颜色转换的中点是两个颜色停止之间的中点。 </p>
+<div class="note"><strong>提示：</strong>渲染颜色中间点的规则 <a href="#Gradient_with_multiple_color_stops">color stops in CSS gradients</a>与一致 <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>。</div>
 
-<dl>
- <dt>
- <div class="note"><strong>提示：</strong>渲染颜色中间点的规则 <a href="#Gradient_with_multiple_color_stops">color stops in CSS gradients</a>与一致 <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>。</div>
-
- <h3 id="正式语法">正式语法</h3>
+<h3 id="正式语法">正式语法</h3>
 
  <pre class="notranslate">linear-gradient(
   [ <a href="/zh-CN/CSS/angle">&lt;angle&gt;</a> | to &lt;side-or-corner&gt; ,]? &lt;color-stop-list&gt; )
@@ -111,8 +105,6 @@ where &lt;side-or-corner&gt; = [ left | right ] || [ top | bottom ]
   and &lt;color-stop-length&gt; = [ &lt;percentage&gt; | &lt;length&gt; ]{1,2}
   and &lt;color-hint&gt; = [ &lt;percentage&gt; | &lt;length&gt; ]
 </pre>
- </dt>
-</dl>
 
 <h3 id="语法历史">语法历史</h3>
 

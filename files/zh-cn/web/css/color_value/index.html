@@ -146,9 +146,9 @@ translation_of: Web/CSS/color_value
 
 <dl>
  <dt>Functional notation: <code>hsl[a](H, S, L[, A])</code></dt>
- <dd><code>H</code> (hue)<strong> </strong>is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in <a href="https://drafts.csswg.org/css-color/#the-hsl-notation">CSS Color Module Level 4</a>. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in <a href="https://drafts.csswg.org/css-color-3/#hsl-color">CSS Color Module Level 3</a>. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</dd>
- <dd><code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”</dd>
- <dd><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
+ <dd><code>H</code> (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in <a href="https://drafts.csswg.org/css-color/#the-hsl-notation">CSS Color Module Level 4</a>. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in <a href="https://drafts.csswg.org/css-color-3/#hsl-color">CSS Color Module Level 3</a>. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.<br>
+ <code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”<br>
+ <code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
  <dt>Functional notation: <code>hsl[a](H S L[ / A])</code></dt>
  <dd>CSS Colors Level 4 adds support for space-separated values in the functional notation.</dd>
 </dl>
@@ -320,9 +320,6 @@ translation_of: Web/CSS/color_value
 <h3 id="Mozilla_System_Color_Extensions">Mozilla System Color Extensions</h3>
 
 <dl>
- <dt>
- <div class="twocolumns">
- <dl>
   <dt>-moz-ButtonDefault</dt>
   <dd>
   <p>The border color that goes around buttons that represent the default action for a dialog box.</p>
@@ -360,6 +357,7 @@ translation_of: Web/CSS/color_value
   <p>Text color for dialog boxes. Should be used with the <code>-moz-Dialog</code> background color.</p>
   </dd>
   <dt>-moz-dragtargetzone</dt>
+  <dd>TBD</dd>
   <dt>-moz-EvenTreeRow</dt>
   <dd>
   <p>Background color for even-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-OddTreeRow</code>.</p>
@@ -373,22 +371,31 @@ translation_of: Web/CSS/color_value
   <p>Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlight</code> background color. Prior to Gecko 1.9, use <code>-moz-CellHighlightText</code>.</p>
   </dd>
   <dt>-moz-mac-accentdarkestshadow</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-accentdarkshadow</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-accentface</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-accentlightesthighlight</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-accentlightshadow</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-accentregularhighlight</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-accentregularshadow</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-chrome-active</dt>
-  <dd>
-  </dd>
+  <dd>TBD</dd>
   <dt>-moz-mac-chrome-inactive</dt>
-  <dd>
-  </dd>
+  <dd>TBD</dd>
   <dt>-moz-mac-focusring</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-menuselect</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-menushadow</dt>
+  <dd>TBD</dd>
   <dt>-moz-mac-menutextselect</dt>
+  <dd>TBD</dd>
   <dt>-moz-MenuHover</dt>
   <dd>
   <p>Background color for hovered menu items. Often similar to <code>Highlight</code>. Should be used with the <code>-moz-MenuHoverText</code> or <code>-moz-MenuBarHoverText</code> foreground color.</p>
@@ -429,10 +436,6 @@ translation_of: Web/CSS/color_value
   <dd>
   <p>Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.</p>
   </dd>
- </dl>
- </div>
- </dt>
- <dd></dd>
 </dl>
 
 <h3 id="Mozilla_Color_Preference_Extensions">Mozilla Color Preference Extensions</h3>
