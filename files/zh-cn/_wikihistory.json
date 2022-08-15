@@ -46311,13 +46311,6 @@
       "ziyunfei"
     ]
   },
-  "conflicting/Web/HTML/Element/input/datetime-local": {
-    "modified": "2019-07-13T11:00:17.487Z",
-    "contributors": [
-      "853419196",
-      "wizardforcel"
-    ]
-  },
   "conflicting/Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-24T00:17:27.134Z",
     "contributors": [
