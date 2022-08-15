@@ -6,32 +6,27 @@ tags:
   - Infraestructura
 translation_of: Glossary/PHP
 ---
-PHP (una inicialización recursiva para PHP: preprocesador de hipertexto) es un lenguaje de script de código abierto del lado del servidor que puede integrarse en HTML para crear aplicaciones web y sitios web dinámicos.
+<p>PHP (una inicialización recursiva para PHP: preprocesador de hipertexto) es un lenguaje de script de código abierto del lado del servidor que puede integrarse en HTML para crear aplicaciones web y sitios web dinámicos.</p>
 
-## Examples
+<h2 id="Examples">Examples</h2>
 
-### Basic syntax
+<h3 id="Basic_syntax">Basic syntax</h3>
 
-```php
-  // inicio del codigo de PHP
-<?php
+<pre class="brush: php">  // inicio del codigo de PHP
+&lt;?php
      // PHP code va aqui
- ?>
-// fin del codigo PHP
-```
+ ?&gt;
+// fin del codigo PHP</pre>
 
-### Printing data on screen
+<h3 id="Printing_data_on_screen">Printing data on screen</h3>
 
-```php
-<?php
+<pre class="brush: php">&lt;?php
    echo "Hola Mundo!";
-?>
-```
+?&gt;</pre>
 
-### PHP variables
+<h3 id="PHP_variables">PHP variables</h3>
 
-```php
-​​​​​​​<?php
+<pre class="brush: php">​​​​​​​&lt;?php
  // variables
  $nome='Danilo';
  $sobrenome='Santos';
@@ -43,15 +38,20 @@ PHP (una inicialización recursiva para PHP: preprocesador de hipertexto) es un 
  echo $sobrenome;
  echo $pais;
  echo $email;
-?>
-```
+?&gt;</pre>
 
-1.  [Official website](http://php.net/)
-2.  {{Interwiki("wikipedia", "PHP")}} en Wikipedia
-3.  [PHP](https://en.wikibooks.org/wiki/PHP_Programming) en Wikibooks
-4.  [MDN Web Docs Glossary](/es/docs/Glossary)
-
-    1.  {{Glossary("Java")}}
-    2.  {{Glossary("JavaScript")}}
-    3.  {{Glossary("Python")}}
-    4.  {{Glossary("Ruby")}}
+<section id="Quick_links">
+<ol>
+ <li><a href="http://php.net/">Official website</a></li>
+ <li>{{Interwiki("wikipedia", "PHP")}} en Wikipedia</li>
+ <li><a href="https://en.wikibooks.org/wiki/PHP_Programming">PHP</a> en Wikibooks</li>
+ <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
+  <ol>
+   <li>{{Glossary("Java")}}</li>
+   <li>{{Glossary("JavaScript")}}</li>
+   <li>{{Glossary("Python")}}</li>
+   <li>{{Glossary("Ruby")}}</li>
+  </ol>
+ </li>
+</ol>
+</section>

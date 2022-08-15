@@ -8,10 +8,12 @@ tags:
 translation_of: Glossary/Information_architecture
 original_slug: Glossary/Arquitectura_de_la_información
 ---
-La arquitectura de la información, aplicada al diseño y desarrollo web, es la práctica de organizar la información, contenido y funcionalidad de un sitio web para que presente la mejor experiencia de usuario posible, con información y servicios fáciles de usar y encontrar.
+<p>La arquitectura de la información, aplicada al diseño y desarrollo web, es la práctica de organizar la información, contenido y funcionalidad de un sitio web para que presente la mejor experiencia de usuario posible, con información y servicios fáciles de usar y encontrar.</p>
 
-## Aprende más
+<h2 id="Aprende_más">Aprende más</h2>
 
-### Conocimientos generales
+<h3 id="Conocimientos_generales">Conocimientos generales</h3>
 
-- {{Interwiki("wikipedia", "Arquitectura_de_la_información", "Arquitectura de la información")}} en Wikipedia
+<ul>
+ <li>{{Interwiki("wikipedia", "Arquitectura_de_la_información", "Arquitectura de la información")}} en Wikipedia</li>
+</ul>

@@ -5,16 +5,20 @@ tags:
   - Glosario
 translation_of: Glossary/Hypertext
 ---
-El hipertexto es texto que contiene enlaces a otros textos, y no un flujo único y lineal como el de una novela.
+<p>El hipertexto es texto que contiene enlaces a otros textos, y no un flujo único y lineal como el de una novela.</p>
 
-El término fue acuñado por Ted Nelson alrededor del año 1965.
+<p>El término fue acuñado por Ted Nelson alrededor del año 1965.</p>
 
-## Aprenda más
+<h2 id="Aprenda_más">Aprenda más</h2>
 
-### Conocimiento general
+<h3 id="Conocimiento_general">Conocimiento general</h3>
 
-- {{interwiki("wikipedia", "Hipertexto", "Hipertexto")}} en Wikipedia
+<ul>
+ <li>{{interwiki("wikipedia", "Hipertexto", "Hipertexto")}} en Wikipedia</li>
+</ul>
 
-### Referencia Técnica
+<h3 id="Referencia_Técnica">Referencia Técnica</h3>
 
-- [Hypertext Information Base](http://www.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/aixuser/aix6kdov/hyperv1aix.htm)
+<ul>
+ <li><a href="http://www.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/aixuser/aix6kdov/hyperv1aix.htm">Hypertext Information Base</a></li>
+</ul>

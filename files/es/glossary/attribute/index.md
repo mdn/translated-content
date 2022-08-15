@@ -4,11 +4,13 @@ slug: Glossary/Attribute
 translation_of: Glossary/Attribute
 original_slug: Glossary/Atributo
 ---
-Un atributo amplía una etiqueta ({{Glossary("tag")}}), cambiando su comportamiento o proporcionando metadatos. Un atributo tiene la forma nombre=valor (especificando el identificador del atributo y el valor asociado al atributo).
+<p>Un atributo amplía una etiqueta ({{Glossary("tag")}}), cambiando su comportamiento o proporcionando metadatos. Un atributo tiene la forma nombre=valor (especificando el identificador del atributo y el valor asociado al atributo).</p>
 
-## Saber más
+<h2 id="Saber_más">Saber más</h2>
 
-### Referencia técnica
+<h3 id="Referencia_técnica"><span style="font-size: 1.71428571428571rem;">Referencia técnica</span></h3>
 
-- [HTML attribute reference](/es/docs/Web/HTML/Attributes)
-- Information about HTML's [global attributes](/es/docs/Web/HTML/Global_attributes).
+<ul>
+ <li><a href="/en-US/docs/Web/HTML/Attributes">HTML attribute reference</a></li>
+ <li>Information about HTML's <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
+</ul>

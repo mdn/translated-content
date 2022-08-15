@@ -7,8 +7,5 @@ tags:
 translation_of: MDN/Guidelines
 original_slug: MDN/Guidelines
 ---
-{{MDNSidebar}}
-
-Estas guías proveen detalles de cómo debería estar escrita y qué formato debería tener la documentación MDN, así como también cómo deberían ser presentados nuestros códigos de ejemplo y otro contenido. Siguiendo estas guías, puedes asegurarte de que el material que produces es limpio y fácil de usar.
-
-{{LandingPageListSubpages}}
+<div>{{MDNSidebar}}</div><p><span class="seoSummary">Estas guías proveen detalles de cómo debería estar escrita y qué formato debería tener la documentación MDN, así como también cómo deberían ser presentados nuestros códigos de ejemplo y otro contenido.</span> Siguiendo estas guías, puedes asegurarte de que el material que produces es limpio y fácil de usar.</p>
+<p>{{LandingPageListSubpages}}</p>

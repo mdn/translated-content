@@ -6,14 +6,18 @@ tags:
   - TecnologíasWeb
 translation_of: Glossary/Codec
 ---
-Un _códec_ (acrónimo de "_**co**\_dificador-_**dec**\_odificador") es un programa, algoritmo, o dispositivo que codifica o decodifica un flujo de datos. Cada códec sabe cómo tratar un estándar específico de codificado o compresión.
+<p>Un <em>códec</em> (acrónimo de "<em><strong>co</strong></em>dificador-<em><strong>dec</strong></em>odificador") es un programa, algoritmo, o dispositivo que codifica o decodifica un flujo de datos. Cada códec sabe cómo tratar un estándar específico de codificado o compresión.</p>
 
-## Saber más
+<h2 id="Saber_más">Saber más</h2>
 
-### Conocimiento general
+<h3 id="Conocimiento_general">Conocimiento general</h3>
 
-- {{Interwiki("wikipedia", "Códec")}} en Wikipedia
+<ul>
+ <li>{{Interwiki("wikipedia", "Códec")}} en Wikipedia</li>
+</ul>
 
-### Referencias técnicas
+<h3 id="Referencias_técnicas">Referencias técnicas</h3>
 
-- [Formatos de medios admitidos por los elementos HTML audio y video](es/docs/Web/HTML/Formatos_admitidos_de_audio_y_video_en_html5)
+<ul>
+ <li><a href="es/docs/Web/HTML/Formatos_admitidos_de_audio_y_video_en_html5">Formatos de medios admitidos por los elementos HTML audio y video</a></li>
+</ul>

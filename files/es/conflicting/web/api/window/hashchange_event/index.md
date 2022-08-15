@@ -11,31 +11,37 @@ tags:
 translation_of: Web/API/WindowEventHandlers/onhashchange
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
-{{APIRef("HTML DOM")}}
+<div>
+<div>{{APIRef("HTML DOM")}}</div>
+</div>
 
-El evento **hashchange** se dispara cuando la almohadilla ha cambiado (ver {{domxref("Window.location", "location.hash")}}).
+<p>El evento <strong>hashchange</strong> se dispara cuando la almohadilla ha cambiado (ver {{domxref("Window.location", "location.hash")}}).</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    window.onhashchange = funcRef;
+<pre class="syntaxbox">window.onhashchange = funcRef;
+</pre>
 
-**ó**
+<p><strong>ó</strong></p>
 
-    <body onhashchange="funcRef();">
+<pre class="syntaxbox">&lt;body onhashchange="funcRef();"&gt;
+</pre>
 
-**ó**
+<p><strong>ó</strong></p>
 
-    window.addEventListener("hashchange", funcRef, false);
+<pre class="syntaxbox">window.addEventListener("hashchange", funcRef, false);
+</pre>
 
-### Parámetros
+<h3 id="Parámetros">Parámetros</h3>
 
-- `funcRef`
-  - : Una referencia a una función.
+<dl>
+ <dt><code>funcRef</code></dt>
+ <dd>Una referencia a una función.</dd>
+</dl>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-if ("onhashchange" in window) {
+<pre class="brush:js">if ("onhashchange" in window) {
     alert("¡El navegador soporta el evento hashchange!");
 }
 
@@ -46,25 +52,61 @@ function locationHashChanged() {
 }
 
 window.onhashchange = locationHashChanged;
-```
+</pre>
 
-## El evento hashchange
+<h2 id="El_evento_hashchange">El evento hashchange</h2>
 
-El evento `hashchange` enviado, tiene los siguientes campos:
+<p>El evento <code>hashchange</code> enviado, tiene los siguientes campos:</p>
 
-| Campo                                                 | Tipo        | Descripción                                           |
-| ----------------------------------------------------- | ----------- | ----------------------------------------------------- |
-| `newURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | La URL nueva hacia la cual la ventana está navegando. |
-| `oldURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | La URL anterior desde la cual la ventana navegó.      |
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Campo</td>
+   <td class="header">Tipo</td>
+   <td class="header">Descripción</td>
+  </tr>
+  <tr>
+   <td><code>newURL</code> {{gecko_minversion_inline("6.0")}}</td>
+   <td><code>DOMString</code></td>
+   <td>La URL nueva hacia la cual la ventana está navegando.</td>
+  </tr>
+  <tr>
+   <td><code>oldURL</code> {{gecko_minversion_inline("6.0")}}</td>
+   <td><code>DOMString</code></td>
+   <td>La URL anterior desde la cual la ventana navegó.</td>
+  </tr>
+ </tbody>
+</table>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-| Especificacion                                                                                       | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     |            |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     |            |
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificacion</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
 
-## Compatibilidad en navegadores
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad en navegadores</h2>
 
 {{Compat("api.WindowEventHandlers.onhashchange")}}

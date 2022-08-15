@@ -8,10 +8,12 @@ tags:
 translation_of: Glossary/Pseudocode
 original_slug: Glossary/Pseudocódigo
 ---
-El pseudocódigo se refiere a la sintaxis del código que generalmente se usa para indicar a los humanos cómo funciona dicho código, o para ilustrar el diseño de un elemento. No funcionará si intentas ejecutarlo como código.
+<p>El pseudocódigo se refiere a la sintaxis del código que generalmente se usa para indicar a los humanos cómo funciona dicho código, o para ilustrar el diseño de un elemento. No funcionará si intentas ejecutarlo como código.</p>
 
-## Saber más
+<h2 id="Saber_más"><strong>Saber más</strong></h2>
 
-### Conocimientos generales
+<h3 id="Conocimientos_generales"><strong>Conocimientos generales</strong></h3>
 
-- {{interwiki("wikipedia", "Pseudocódigo", "Pseudocódigo")}} en Wikipedia.
+<ul>
+ <li>{{interwiki("wikipedia", "Pseudocódigo", "Pseudocódigo")}} en Wikipedia.</li>
+</ul>

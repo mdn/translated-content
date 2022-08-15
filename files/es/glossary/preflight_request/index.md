@@ -4,29 +4,31 @@ slug: Glossary/Preflight_request
 translation_of: Glossary/Preflight_request
 original_slug: Glossary/Preflight_peticion
 ---
-Una petición preflight CORS es una petición [CORS](/es/docs/Glossary/CORS) realizada para comprobar si el protocolo {{Glossary("CORS")}} es comprendido.
+<p>Una petición preflight CORS es una petición <a href="/en-US/docs/Glossary/CORS">CORS</a> realizada para comprobar si el protocolo {{Glossary("CORS")}} es comprendido.</p>
 
-Es una petición {{HTTPMethod("OPTIONS")}}, que emplea tres cabeceras HTTP: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, y la cabecera {{HTTPHeader("Origin")}} .
+<p>Es una petición {{HTTPMethod("OPTIONS")}}, que emplea tres cabeceras HTTP: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, y la cabecera {{HTTPHeader("Origin")}} .</p>
 
-Las peticiones preflight se lanzan automáticamente desde el navegador cuando son necesarias. Normalmente los desarrolladores front-end no necesitan realizar estas peticiones manualmente.
+<p>Las peticiones preflight se lanzan automáticamente desde el navegador cuando son necesarias. Normalmente los desarrolladores front-end no necesitan realizar estas peticiones manualmente.</p>
 
-Por ejemplo, un cliente puede preguntar si el servidor permite una petición {{HTTPMethod("DELETE")}} antes de enviar la petición `DELETE `usando una petición preflight:
+<p>Por ejemplo, un cliente puede preguntar si el servidor permite una petición {{HTTPMethod("DELETE")}} antes de enviar la petición <code>DELETE </code>usando una petición preflight:</p>
 
-    OPTIONS /resource/foo
-    Access-Control-Request-Method: DELETE
-    Access-Control-Request-Headers: origin, x-requested-with
-    Origin: https://foo.bar.org
+<pre>OPTIONS /resource/foo
+Access-Control-Request-Method: DELETE
+Access-Control-Request-Headers: origin, x-requested-with
+Origin: https://foo.bar.org</pre>
 
-Si el servidor lo permite responderá a la petición preflight con una cabecera de respuesta {{HTTPHeader("Access-Control-Allow-Methods")}} que incluirá el método `DELETE`:
+<p>Si el servidor lo permite responderá a la petición preflight con una cabecera de respuesta {{HTTPHeader("Access-Control-Allow-Methods")}} que incluirá el método <code>DELETE</code>:</p>
 
-    HTTP/1.1 200 OK
-    Content-Length: 0
-    Connection: keep-alive
-    Access-Control-Allow-Origin: https://foo.bar.org
-    Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-    Access-Control-Max-Age: 86400
+<pre>HTTP/1.1 200 OK
+Content-Length: 0
+Connection: keep-alive
+Access-Control-Allow-Origin: https://foo.bar.org
+Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Max-Age: 86400</pre>
 
-## See also
+<h2 id="See_also">See also</h2>
 
-- [CORS](/es/docs/Glossary/CORS)
-- {{HTTPMethod("OPTIONS")}}
+<ul>
+ <li><a href="/en-US/docs/Glossary/CORS">CORS</a></li>
+ <li>{{HTTPMethod("OPTIONS")}}</li>
+</ul>

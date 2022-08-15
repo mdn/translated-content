@@ -8,14 +8,18 @@ tags:
 translation_of: Glossary/Dynamic_typing
 original_slug: Glossary/Tipado_dinámico
 ---
-**Los lenguajes de tipado dinámico** son aquellos (como {{glossary("JavaScript")}}) donde el intérprete asigna a las {{glossary("variable","variables")}} un {{glossary("tipo")}} durante el tiempo de ejecución basado en su {{glossary("valor")}} en ese momento.
+<p><strong>Los lenguajes de tipado dinámico</strong> son aquellos (como {{glossary("JavaScript")}}) donde el intérprete asigna a las {{glossary("variable","variables")}} un {{glossary("tipo")}} durante el tiempo de ejecución basado en su {{glossary("valor")}} en ese momento.</p>
 
-## Ver más
+<h2 id="Ver_más">Ver más</h2>
 
-### Conoce sobre el tema
+<h3 id="Conoce_sobre_el_tema">Conoce sobre el tema</h3>
 
-- [Tipos de datos y estructuras de datos en Javascript](/es/docs/Web/JavaScript/Data_structures)
+<ul>
+ <li><a href="/es/docs/Web/JavaScript/Data_structures">Tipos de datos y estructuras de datos en Javascript</a></li>
+</ul>
 
-### Conocimientos generales
+<h3 id="Conocimientos_generales">Conocimientos generales</h3>
 
-- {{interwiki("wikipedia", "Sistema_de_tipos", "Sistema de tipos")}} en Wikipedia
+<ul>
+ <li>{{interwiki("wikipedia", "Sistema_de_tipos", "Sistema de tipos")}} en Wikipedia</li>
+</ul>

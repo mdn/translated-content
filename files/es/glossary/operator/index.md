@@ -7,10 +7,12 @@ tags:
 translation_of: Glossary/Operator
 original_slug: Glossary/Operador
 ---
-Parte de la sintaxis reservada consistente en signos de puntuación o carácteres alfanuméricos que tienen funcionalidades incorporadas. Por ejemplo, "+" indica el operador suma y "!" indica el operador "not" (negación).
+<p>Parte de la sintaxis reservada consistente en signos de puntuación o carácteres alfanuméricos que tienen funcionalidades incorporadas. Por ejemplo, "+" indica el operador suma y "!" indica el operador "not" (negación).</p>
 
-## Aprende más
+<h2 id="Aprende_más">Aprende más</h2>
 
-### Referencias técnicas
+<h3 id="Referencias_técnicas">Referencias técnicas</h3>
 
-- [Operadores en JavaScript](/es/docs/Web/JavaScript/Reference/Operators)
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators">Operadores en JavaScript</a></li>
+</ul>

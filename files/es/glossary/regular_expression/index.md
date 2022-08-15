@@ -8,18 +8,22 @@ tags:
   - JavaScript
 translation_of: Glossary/Regular_expression
 ---
-**Expresiones regulares** (o _regex_) son reglas que definen las secuencias de caracteres obtenidas en una busqueda.
+<p><strong>Expresiones regulares</strong> (o <em>regex</em>) son reglas que definen las secuencias de caracteres obtenidas en una busqueda.</p>
 
-Las expresiones regulares están incluidas en varios lenguages, pero las más conocida es la de Perl, que ha dado lugar a su propio ecosistema llamado PCRE (_Perl Compatible Regular Expression_). En la web, {{glossary("JavaScript")}} proporciona otra implementación de expresiones regulares a través del objeto {{jsxref("RegExp")}}.
+<p>Las expresiones regulares están incluidas en varios lenguages, pero las más conocida es la de Perl, que ha dado lugar a su propio ecosistema llamado PCRE (<em>Perl Compatible Regular Expression</em>). En la web, {{glossary("JavaScript")}} proporciona otra implementación de expresiones regulares a través del objeto {{jsxref("RegExp")}}.</p>
 
-## Saber más
+<h2 id="Saber_más">Saber más</h2>
 
-### Conocimientos generales
+<h3 id="Conocimientos_generales">Conocimientos generales</h3>
 
-- {{Interwiki("wikipedia", "Regular expressions")}} en Wikipedia
-- [Interactive tutorial](http://regexone.com/)
-- [Visualized Regular Expression](http://regexper.com/)
+<ul>
+ <li>{{Interwiki("wikipedia", "Regular expressions")}} en Wikipedia</li>
+ <li><a href="http://regexone.com/">Interactive tutorial</a></li>
+ <li><a href="http://regexper.com/">Visualized Regular Expression</a></li>
+</ul>
 
-### Referencia técnica
+<h3 id="Referencia_técnica">Referencia técnica</h3>
 
-- [Writing regular expressions in JavaScript](/es/docs/Web/JavaScript/Guide/Regular_Expressions)
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Writing regular expressions in JavaScript</a></li>
+</ul>

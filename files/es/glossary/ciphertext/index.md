@@ -9,10 +9,12 @@ tags:
 translation_of: Glossary/Ciphertext
 original_slug: Glossary/TextoCifrado
 ---
-En {{glossary("Cryptography", "Criptografía")}}, un texto cifrado es un mensaje codificado que transmite información pero no es legible a menos que se {{glossary("decryption","descifre")}} con el {{glossary("cipher", "algoritmo criptográfico")}} correcto y el secreto correcto (generalmente una {{glossary("key","clave")}}), reproduciendo el {{glossary("cleartext", "texto simple")}} original. La seguridad de un texto cifrado, y por lo tanto el secreto de la información contenida, depende de usar un cifrado seguro y mantener la clave en secreto.
+<p>En {{glossary("Cryptography", "Criptografía")}}, un texto cifrado es un mensaje codificado que transmite información pero no es legible a menos que se {{glossary("decryption","descifre")}} con el {{glossary("cipher", "algoritmo criptográfico")}} correcto y el secreto correcto (generalmente una {{glossary("key","clave")}}), reproduciendo el {{glossary("cleartext", "texto simple")}} original. La seguridad de un texto cifrado, y por lo tanto el secreto de la información contenida, depende de usar un cifrado seguro y mantener la clave en secreto.</p>
 
-## Saber más
+<h2 id="Saber_más">Saber más</h2>
 
-### Conocimiento general
+<h3 id="Conocimiento_general">Conocimiento general</h3>
 
-- {{Interwiki("wikipedia", "Ciphertext")}} on Wikipedia
+<ul>
+ <li>{{Interwiki("wikipedia", "Ciphertext")}} on Wikipedia</li>
+</ul>

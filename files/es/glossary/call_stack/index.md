@@ -8,17 +8,18 @@ tags:
 translation_of: Glossary/Call_stack
 original_slug: Glossary/Pila_llamadas
 ---
-Una **pila de llamadas** es un mecanismo para que un intérprete (como el intérprete de JavaScript en un navegador web) realice un seguimiento de en que lugar se llama a múltiples {{glossary("function","funciones")}}, qué función se esta ejecutando actualmente y qué funciones son llamadas desde esa función, etc.
+<p>Una <strong>pila de llamadas</strong> es un mecanismo para que un intérprete (como el intérprete de JavaScript en un navegador web) realice un seguimiento de en que lugar se llama a múltiples {{glossary("function","funciones")}}, qué función se esta ejecutando actualmente y qué funciones son llamadas desde esa función, etc.</p>
 
-- Cuando un script llama a una función, el intérprete la añade a la pila de llamadas y luego empieza a ejecutar la función.
-- Cualquier función o funciones que sean llamadas por esa función son añadidas arriba de la pila de llamadas y serán ejecutadas cuando su llamada sea alcanzada.
-- Cuando la función actual termina, el intérprete la elimina de la pila y reanuda la ejecución donde se quedó.
-- Si la pila necesita más espacio del que se le asignó, se producirá un error de "desbordamiento de pila".
+<ul>
+ <li>Cuando un script llama a una función, el intérprete la añade a la pila de llamadas y luego empieza a ejecutar la función.</li>
+ <li>Cualquier función o funciones que sean llamadas por esa función son añadidas arriba de la pila de llamadas y serán ejecutadas cuando su llamada sea alcanzada.</li>
+ <li>Cuando la función actual termina, el intérprete la elimina de la pila y reanuda la ejecución donde se quedó.</li>
+ <li>Si la pila necesita más espacio del que se le asignó, se producirá un error de "desbordamiento de pila".</li>
+</ul>
 
-## Ejemplo
+<h2 id="Ejemplo">Ejemplo</h2>
 
-```js
-function saludar() {
+<pre class="brush: js">function saludar() {
    // [1] Código
    diHola();
    // [2] Código
@@ -31,48 +32,62 @@ function diHola() {
 saludar();
 
 // [3] Código
-```
+</pre>
 
-El código del ejemplo se ejecutaría de la siguiente manera:
+<p>El código del ejemplo se ejecutaría de la siguiente manera:</p>
 
-1.  Ignora todas las funciones hasta que alcanza la invocación de la función `saludar()`.
-2.  Añade la función `saludar()` a la lista de la pila de llamadas.
+<ol>
+ <li>Ignora todas las funciones hasta que alcanza la invocación de la función <code>saludar()</code>.</li>
+ <li>Añade la función <code>saludar()</code> a la lista de la pila de llamadas.
+  <div class="note">
+  <p>Lista de la pila de llamadas:<br>
+   - saludar</p>
+  </div>
+ </li>
+ <li>Ejecuta todas las líneas de código de dentro de la función <code>saludar()</code>.</li>
+ <li>Llega a la incovación de la función <code>diHola()</code>.</li>
+ <li>Añade la función <code>diHola()</code> a la lista de la pila de llamadas.
+  <div class="note">
+  <p>Lista de la pila de llamadas:<br>
+   - saludar<br>
+   - diHola</p>
+  </div>
+ </li>
+ <li>Ejecuta todas las líneas de código de dentro de la función <code>diHola()</code> hasta que llega al final.</li>
+ <li>Devuelve la ejecución a la línea que invocó a la función <code>diHola()</code> y continua con la ejecuación del resto de código de la función <code>saludar()</code>.</li>
+ <li>Elimina la función <code>diHola()</code> de la lista de la pila de llamadas.
+  <div class="note">
+  <p>Lista de la pila de llamadas:<br>
+   - saludar</p>
+  </div>
+ </li>
+ <li>Cuando todo el código dentro de la función <code>saludar()</code> ha sido ejecutado, vuelve a la línea que la invocó y continua ejecutando el resto de código JavaScript.</li>
+ <li>Elimina la función <code>saludar()</code> de la lista de la pila de llamadas.
+  <div class="note">
+  <p>Lista de la pila de llamadas:<br>
+   VACÍA</p>
+  </div>
+ </li>
+</ol>
 
-    > **Nota:** Lista de la pila de llamadas:
-    > \- saludar
+<p>En resumen, empezamos con una lista de la pila llamadas vacía. Cuando invocamos una función, ésta es automáticamente añadida a la pila de llamadas. Una vez ha ejecutado todo su código, también de manera automática es eliminada de la pila de llamadas. Finalmente, la pila de llamadas vuelve a estar vacía.</p>
 
-3.  Ejecuta todas las líneas de código de dentro de la función `saludar()`.
-4.  Llega a la incovación de la función `diHola()`.
-5.  Añade la función `diHola()` a la lista de la pila de llamadas.
+<h2 id="Saber_más">Saber más</h2>
 
-    > **Nota:** Lista de la pila de llamadas:
-    > \- saludar
-    > \- diHola
+<h3 id="Conocimiento_general">Conocimiento general</h3>
 
-6.  Ejecuta todas las líneas de código de dentro de la función `diHola()` hasta que llega al final.
-7.  Devuelve la ejecución a la línea que invocó a la función `diHola()` y continua con la ejecuación del resto de código de la función `saludar()`.
-8.  Elimina la función `diHola()` de la lista de la pila de llamadas.
+<ul>
+ <li>{{Interwiki("wikipedia", "Pila de llamadas")}} en Wikipedia</li>
+</ul>
 
-    > **Nota:** Lista de la pila de llamadas:
-    > \- saludar
+<section id="Quick_links">
+<ul>
+ <li><a href="/es-ES/docs/Glossary">Glosario</a>
 
-9.  Cuando todo el código dentro de la función `saludar()` ha sido ejecutado, vuelve a la línea que la invocó y continua ejecutando el resto de código JavaScript.
-10. Elimina la función `saludar()` de la lista de la pila de llamadas.
-
-    > **Nota:** Lista de la pila de llamadas:
-    > VACÍA
-
-En resumen, empezamos con una lista de la pila llamadas vacía. Cuando invocamos una función, ésta es automáticamente añadida a la pila de llamadas. Una vez ha ejecutado todo su código, también de manera automática es eliminada de la pila de llamadas. Finalmente, la pila de llamadas vuelve a estar vacía.
-
-## Saber más
-
-### Conocimiento general
-
-- {{Interwiki("wikipedia", "Pila de llamadas")}} en Wikipedia
-
-<!---->
-
-- [Glosario](/es/docs/Glossary)
-
-  - {{Glossary("Call stack", "Pila de llamadas")}}
-  - {{Glossary("function", "Función")}}
+  <ul>
+   <li>{{Glossary("Call stack", "Pila de llamadas")}}</li>
+   <li>{{Glossary("function", "Función")}}</li>
+  </ul>
+ </li>
+</ul>
+</section>

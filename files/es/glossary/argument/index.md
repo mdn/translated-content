@@ -4,14 +4,18 @@ slug: Glossary/Argument
 translation_of: Glossary/Argument
 original_slug: Glossary/Argumento
 ---
-Un argumento es un valor (primitivo u objeto) (Véase {{glossary("value")}}, {{Glossary("primitive")}}, {{Glossary("object")}}) pasado como valor de entrada a una función ({{Glossary("function")}}).
+<p>Un argumento es un valor (primitivo u objeto) (Véase {{glossary("value")}},  {{Glossary("primitive")}}, {{Glossary("object")}}) pasado como valor de entrada a una función ({{Glossary("function")}}).</p>
 
-## Saber más
+<h2 id="Saber_más">Saber más</h2>
 
-### Conocimiento general
+<h3 id="Conocimiento_general">Conocimiento general</h3>
 
-- {{Interwiki("wikipedia", "Parameter_(computer_programming)", "Difference between Parameter and Argument")}} on Wikipedia
+<ul>
+ <li>{{Interwiki("wikipedia", "Parameter_(computer_programming)", "Difference between Parameter and Argument")}} on Wikipedia</li>
+</ul>
 
-### Referencia técnica
+<h3 id="Referencia_técnica">Referencia técnica</h3>
 
-- The {{jsxref("Functions/arguments","arguments")}} object in {{glossary("JavaScript")}}
+<ul>
+ <li>The {{jsxref("Functions/arguments","arguments")}} object in {{glossary("JavaScript")}}</li>
+</ul>

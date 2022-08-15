@@ -6,4 +6,4 @@ tags:
 translation_of: Web/HTML/Index
 original_slug: Web/HTML/Index
 ---
-{{Index("/es/docs/Web/HTML")}}
+<p>{{Index("/es/docs/Web/HTML")}}</p>

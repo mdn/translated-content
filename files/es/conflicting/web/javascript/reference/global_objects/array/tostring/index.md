@@ -4,56 +4,58 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 ---
-{{JSRef}} {{non-standard_header}}
+<div>{{JSRef}} {{non-standard_header}}</div>
 
-El método **`toSource()`** devuelve un string representando el código fuente de un arreglo.
+<p>El método <code><strong>toSource()</strong></code> devuelve un string representando el código fuente de un arreglo.</p>
 
-## Sintaxis
+<h2 id="Sintaxis">Sintaxis</h2>
 
-    arr.toSource()
+<pre class="syntaxbox"><var>arr</var>.toSource()</pre>
 
-### Valor devuelto
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-Un string representando el código fuente del arreglo.
+<p>Un string representando el código fuente del arreglo.</p>
 
-## Descripción
+<h2 id="Descripción">Descripción</h2>
 
-El método `toSource`r retorna los siguientes valores:
+<p>El método <code>toSource</code>r retorna los siguientes valores:</p>
 
-- Para el objeto global {{jsxref("Array")}}, `toSource` devuelve el siguiente string indicando que el código fuente no está disponible:
+<ul>
+ <li>Para el objeto global {{jsxref("Array")}}, <code>toSource</code> devuelve el siguiente string indicando que el código fuente no está disponible:
 
-  ```js
-  function Array() {
-      [native code]
-  }
-  ```
+  <pre class="brush: js">function Array() {
+    [native code]
+}
+</pre>
+ </li>
+ <li>Para instancias de {{jsxref("Array")}}, <code>toSource</code> devuelve un string representando el código fuente.</li>
+</ul>
 
-- Para instancias de {{jsxref("Array")}}, `toSource` devuelve un string representando el código fuente.
+<p>Este método suele ser llamado internamente por JavaScript y no explícitamente en código. Puede usar <code>toSource</code> mientras depura para examinar el contenido de un arreglo.</p>
 
-Este método suele ser llamado internamente por JavaScript y no explícitamente en código. Puede usar `toSource` mientras depura para examinar el contenido de un arreglo.
+<h2 id="Ejemplos">Ejemplos</h2>
 
-## Ejemplos
+<h3 id="Examinar_el_código_fuente_de_un_arreglo">Examinar el código fuente de un arreglo</h3>
 
-### Examinar el código fuente de un arreglo
+<p>Para examinar el código fuente de un arreglo:</p>
 
-Para examinar el código fuente de un arreglo:
-
-```js
-var alpha = new Array('a', 'b', 'c');
+<pre class="brush: js">var alpha = new Array('a', 'b', 'c');
 
 alpha.toSource();
 //devuelve ['a', 'b', 'c']
-```
+</pre>
 
-## Especificaciones
+<h2 id="Especificaciones">Especificaciones</h2>
 
-No hace parte de ningún estándar. Implementado en JavaScript 1.3.
+<p>No hace parte de ningún estándar. Implementado en JavaScript 1.3.</p>
 
-## Compatibilidad con navegadores
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 {{Compat("javascript.builtins.Array.toSource")}}
 
-## Ver también
+<h2 id="Ver_también">Ver también</h2>
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("Array.prototype.toString()")}}
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+ <li>{{jsxref("Array.prototype.toString()")}}</li>
+</ul>

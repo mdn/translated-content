@@ -3,120 +3,133 @@ title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
 translation_of: Mozilla/Firefox/Releases/61
 ---
-{{FirefoxSidebar}}
+<div>{{FirefoxSidebar}}</div>
 
-Este artículo muestra información sobre los cambios en Firefox 61 que afectarán a los desarrolladores. Firefox 61 es la versión beta actual de Firefox, y se lanzará el 26 de Junio de 2018.
+<p class="summary">Este artículo muestra información sobre los cambios en Firefox 61 que afectarán a los desarrolladores. Firefox 61 es la versión beta actual de Firefox, y se lanzará el 26 de Junio de 2018.</p>
 
-## Cambios para desarrolladores web
+<h2 id="Cambios_para_desarrolladores_web">Cambios para desarrolladores web</h2>
 
-### Herramientas de desarrollador
+<h3 id="Herramientas_de_desarrollador">Herramientas de desarrollador</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### HTML
+<h3 id="HTML">HTML</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### CSS
+<h3 id="CSS">CSS</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### SVG
+<h3 id="SVG">SVG</h3>
 
-- Las propiedades `ping`, `rel`, `referrerPolicy`, `relList`, `hreflang`, `type` y `text` han sido añadidas al elemento {{SVGElement("a")}} ({{domxref("SVGAElement")}}) para ser consistente con el elemento HTML {{HTMLElement("a")}} ({{bug("1451823")}}).
-- El elemento {{SVGElement("textPath")}}({{domxref("SVGTextPathElement")}}) ahora soporta el `path` SVG2 y los atributos `side` ({{bug("1446617")}} y {{bug("1446650")}}).
-- La interfaz {{domxref("SVGGeometryElement")}} ahora es soportada por más elementos y no solo para el elemento {{SVGElement("path")}} ({{bug("1325320")}}).
+<ul>
+ <li>Las propiedades <code>ping</code>, <code>rel</code>, <code>referrerPolicy</code>, <code>relList</code>, <code>hreflang</code>, <code>type</code> y <code>text</code> han sido añadidas al elemento {{SVGElement("a")}}  ({{domxref("SVGAElement")}}) para ser consistente con el elemento HTML {{HTMLElement("a")}} ({{bug("1451823")}}).</li>
+ <li> El elemento {{SVGElement("textPath")}}({{domxref("SVGTextPathElement")}}) ahora soporta el <code>path</code> SVG2 y los atributos <code>side</code> ({{bug("1446617")}} y {{bug("1446650")}}).</li>
+ <li>La interfaz {{domxref("SVGGeometryElement")}} ahora es soportada por más elementos y no solo para el elemento {{SVGElement("path")}}  ({{bug("1325320")}}).</li>
+</ul>
 
-### JavaScript
+<h3 id="JavaScript">JavaScript</h3>
 
-- Los metodos {{jsxref("String.prototype.trimStart()")}} y {{jsxref("String.prototype.trimEnd()")}} han sido implementados (mira {{bug(1434007)}}). `trimLeft` y `trimRight` permanecen como alias por razones de compatibilidad web.
+<ul>
+ <li>Los metodos {{jsxref("String.prototype.trimStart()")}} y {{jsxref("String.prototype.trimEnd()")}} han sido implementados (mira {{bug(1434007)}}). <code>trimLeft</code> y <code>trimRight</code> permanecen como alias por razones de compatibilidad web.</li>
+</ul>
 
-### APIs
+<h3 id="APIs">APIs</h3>
 
-#### Nueva APIs
+<h4 id="Nueva_APIs">Nueva APIs</h4>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-#### DOM
+<h4 id="DOM">DOM</h4>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-#### Eventos DOM
+<h4 id="Eventos_DOM">Eventos DOM</h4>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-#### Trabajadores del servicio
+<h4 id="Trabajadores_del_servicio">Trabajadores del servicio</h4>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-#### Media y WebRTC
+<h4 id="Media_y_WebRTC">Media y WebRTC</h4>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-#### Canvas y WebGL
+<h4 id="Canvas_y_WebGL">Canvas y WebGL</h4>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### CSSOM
+<h3 id="CSSOM">CSSOM</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### HTTP
+<h3 id="HTTP">HTTP</h3>
 
-- La cookie **`SameSite`** ha sido implementada. Mira [Set-Cookie](/es/docs/Web/HTTP/Headers/Set-Cookie) y [HTTP cookies](/es/docs/Web/HTTP/Cookies) ({{bug(795346)}}).
+<ul>
+ <li>La cookie <code><strong>SameSite</strong></code> ha sido implementada. Mira <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a> y <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> ({{bug(795346)}}).</li>
+</ul>
 
-### Seguridad
+<h3 id="Seguridad">Seguridad</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### Plugins
+<h3 id="Plugins">Plugins</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### Otros
+<h3 id="Otros">Otros</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-## Eliminaciones de la plataforma web
+<h2 id="Eliminaciones_de_la_plataforma_web">Eliminaciones de la plataforma web</h2>
 
-### HTML
+<h3 id="HTML_2">HTML</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### CSS
+<h3 id="CSS_2">CSS</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### APIs
+<h3 id="APIs_2">APIs</h3>
 
-_No hay cambios._
+<p><em>No hay cambios.</em></p>
 
-### SVG
+<h3 id="SVG_2">SVG</h3>
 
-- La obsoleta (y nunca implementada correctamente) propiedad {{domxref("SVGViewElement")}}`.viewTarget` ha sido eliminada ({{bug(1455763)}}).
-- Las siguientes propiedades obsoletas han sido eliminadas de {{domxref("SVGSVGElement")}} ({{bug(1133172)}}):
+<ul>
+ <li>La obsoleta (y nunca implementada correctamente) propiedad {{domxref("SVGViewElement")}}<code>.viewTarget</code> ha sido eliminada ({{bug(1455763)}}).</li>
+ <li>Las siguientes propiedades obsoletas han sido eliminadas de {{domxref("SVGSVGElement")}} ({{bug(1133172)}}):
+  <ul>
+   <li><code>pixelUnitToMillimeterX</code></li>
+   <li><code>pixelUnitToMillimeterY</code></li>
+   <li><code>screenPixelToMillimeterX</code></li>
+   <li><code>screenPixelToMillimeterY</code></li>
+  </ul>
+ </li>
+ <li>El constructor no-estandar <code>SVGNumber()</code> ha sido eliminado ({{bug("1455940")}}).</li>
+</ul>
 
-  - `pixelUnitToMillimeterX`
-  - `pixelUnitToMillimeterY`
-  - `screenPixelToMillimeterX`
-  - `screenPixelToMillimeterY`
+<h3 id="Otros_2">Otros</h3>
 
-- El constructor no-estandar `SVGNumber()` ha sido eliminado ({{bug("1455940")}}).
+<p><em>No hay cambios.</em></p>
 
-### Otros
+<h2 id="Cambios_para_modificaciones_y_desarrolladores_de_Mozilla">Cambios para modificaciones y desarrolladores de Mozilla</h2>
 
-_No hay cambios._
+<h3 id="Extensiones_web">Extensiones web</h3>
 
-## Cambios para modificaciones y desarrolladores de Mozilla
+<p><em>No hay cambios.</em></p>
 
-### Extensiones web
+<h2 id="También_puedes_ver">También puedes ver</h2>
 
-_No hay cambios._
+<ul>
+ <li>Compatibilidad de sitios para Firefox 61</li>
+</ul>
 
-## También puedes ver
+<h2 id="Versiones_anteriores">Versiones anteriores</h2>
 
-- Compatibilidad de sitios para Firefox 61
+<p>{{Firefox_for_developers(60)}}</p>
 
-## Versiones anteriores
-
-{{Firefox_for_developers(60)}}
+<p> </p>

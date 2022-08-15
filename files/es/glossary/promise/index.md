@@ -8,19 +8,23 @@ tags:
   - Promesas
 translation_of: Glossary/Promise
 ---
-Una **{{jsxref("Promesa")}}** es un {{Glossary("objeto")}} devuelto por una {{Glossary("función")}} que no ha completado su tarea. La promesa representa literalmente una promesa creada por una función a la que le llegará un resultado en un futuro.
+<p>Una <strong>{{jsxref("Promesa")}}</strong> es un {{Glossary("objeto")}} devuelto por una {{Glossary("función")}} que no ha completado su tarea. La promesa representa literalmente una promesa creada por una función a la que le llegará un resultado en un futuro.</p>
 
-Cuando la función termina su tarea {{Glossary("asynchronous", "de forma asíncrona")}}, una función del objeto "promesa" será ejecutada.
+<p>Cuando la función termina su tarea {{Glossary("asynchronous", "de forma asíncrona")}}, una función del objeto "promesa" será ejecutada.</p>
 
-## Saber más
+<h2 id="Saber_más">Saber más</h2>
 
-Para obtener más información, echa un vistazo a los siguientes enlaces
+<p>Para obtener más información, echa un vistazo a los siguientes enlaces</p>
 
-### Conocimientos generales
+<h3 id="Conocimientos_generales">Conocimientos generales</h3>
 
-- {{interwiki("wikipedia", "Valor_futuro_(informática)", "Valor futuro")}}
+<ul>
+ <li>{{interwiki("wikipedia", "Valor_futuro_(informática)", "Valor futuro")}}</li>
+</ul>
 
-### Referencias técnicas
+<h3 id="Referencias_técnicas">Referencias técnicas</h3>
 
-- {{jsxref("Promise")}} in the [JavaScript Reference](/es/docs/Web/JavaScript/Reference).
-- [Using promises](/es/docs/Web/JavaScript/Guide/Using_promises)
+<ul>
+ <li>{{jsxref("Promise")}} in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>.</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
+</ul>

@@ -10,16 +10,20 @@ tags:
   - XML
 translation_of: Glossary/RSS
 ---
-_RSS_ (Really Simple Syndication en español Sindicación Realmente Simple) hace referencia a los diferentes formatos de [XML](/es/docs/Glossary/XML) diseñados para sitios web de noticias.
+<p><em>RSS </em>(Really Simple Syndication en español Sindicación Realmente Simple) hace referencia a los diferentes formatos de <a href="/es/docs/Glossary/XML">XML</a> diseñados para sitios web de noticias.</p>
 
-Cuando te subscribes a un _feed_ RSS _(\_boletín de noticias de servicios web), éste te envía información y actualizaciones al \_feed_ de tu lector RSS, y de esta manera no es necesario que el usuario busque manuelmente en cada sitio web.
+<p>Cuando te subscribes a un <em>feed </em>RSS <em>(</em>boletín de noticias de servicios web), éste te envía información y actualizaciones al <em>feed</em> de tu lector RSS, y de esta manera no es necesario que el usuario busque manuelmente en cada sitio web.</p>
 
-## Para saber más...
+<h2 id="Para_saber_más...">Para saber más...</h2>
 
-### Cultura General
+<h3 id="Cultura_General">Cultura General</h3>
 
-- {{Interwiki("wikipedia", "RSS")}} en Wikipedia
+<ul>
+ <li>{{Interwiki("wikipedia", "RSS")}} en Wikipedia</li>
+</ul>
 
-### Referencia Técnica
+<h3 id="Referencia_Técnica">Referencia Técnica</h3>
 
-- [Última especificación de RSS](http://www.rssboard.org/rss-specification)
+<ul>
+ <li><a href="http://www.rssboard.org/rss-specification">Última especificación de RSS</a></li>
+</ul>

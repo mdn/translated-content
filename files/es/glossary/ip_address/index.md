@@ -3,12 +3,14 @@ title: Dirección IP
 slug: Glossary/IP_Address
 translation_of: Glossary/IP_Address
 ---
-Una dirección IP es un número asignado a cada dispositivo conectado a una red que utiliza el protocolo de Internet.
+<p>Una dirección IP es un número asignado a cada dispositivo conectado a una red que utiliza el protocolo de Internet.</p>
 
-La «dirección IP» normalmente se sigue refiriendo a las direcciones IPv4 de 32 bits hasta que el IPv6 se despliegue más ampliamente.
+<p>La «dirección IP» normalmente se sigue refiriendo a las direcciones IPv4 de 32 bits hasta que el IPv6 se despliegue más ampliamente.</p>
 
-## Aprenda más
+<h2 id="Aprenda_más">Aprenda más</h2>
 
-### Conocimiento general
+<h3 id="Conocimiento_general">Conocimiento general</h3>
 
-- [Dirección IP](https://es.wikipedia.org/wiki/Dirección_IP) en Wikipedia
+<ul>
+ <li><a href="https://es.wikipedia.org/wiki/Dirección_IP">Dirección IP</a> en Wikipedia</li>
+</ul>

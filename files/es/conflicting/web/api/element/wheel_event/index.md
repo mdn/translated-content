@@ -10,22 +10,23 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onwheel
 original_slug: Web/API/GlobalEventHandlers/onwheel
 ---
-{{ ApiRef("DOM") }}
+<p>{{ ApiRef("DOM") }}</p>
 
-{{ non-standard_header() }}
+<p>{{ non-standard_header() }}</p>
 
-### Sumario
+<h3 id="Sumario">Sumario</h3>
 
-La propiedad `onwheel` devuelve el código del controlador de eventos `onwheel` en el elemento actual.
+<p>La propiedad  <code>onwheel</code> devuelve el código del controlador de eventos <code>onwheel</code> en el elemento actual.</p>
 
-### Syntax
+<h3 id="Syntax">Syntax</h3>
 
-    element.onwheel = event handling code
+<pre class="eval">element.onwheel = <em>event handling code</em>
+</pre>
 
-### Notas
+<h3 id="Notas">Notas</h3>
 
-El evento `wheel` se genera cuando el usuario desplaza el contenido de un elemento.
+<p>El evento <code>wheel</code> se genera cuando el usuario desplaza el contenido de un elemento.</p>
 
-### Ver también
+<h3 id="Ver_también">Ver también</h3>
 
-[Bug 18542 – el atributo onmousewheel debe ser reemplazado con onwheel](https://www.w3.org/Bugs/Public/show_bug.cgi?id=18542)
+<p><a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=18542">Bug 18542 – el atributo onmousewheel  debe ser reemplazado con onwheel</a></p>
