@@ -8,23 +8,20 @@ tags:
 translation_of: Web/CSS/margin
 translation_of_original: Web/CSS/margin-new
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>margin</code></strong> CSS 속성은 요소의 네 방향 <a href="/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">바깥 여백 영역</a>을 설정합니다. {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}의 단축 속성입니다.</p>
+**`margin`** CSS 속성은 요소의 네 방향 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)을 설정합니다. {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}의 단축 속성입니다.
 
-<div>{{EmbedInteractiveExample("pages/css/margin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin.html")}}
 
+위와 아래 여백은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)가 아닌 {{HTMLElement("span")}}, {{HTMLElement("code")}} 등 인라인 요소에선 아무 효과도 없습니다.
 
+> **참고:** margin은 요소의 주위에 빈 공간을 추가합니다. 반면 {{cssxref("padding")}}은 요소의 **내부**에 빈 공간을 만듭니다.
 
-<p>위와 아래 여백은 <a href="/ko/docs/Web/CSS/Replaced_element">대체 요소</a>가 아닌 {{HTMLElement("span")}}, {{HTMLElement("code")}} 등 인라인 요소에선 아무 효과도 없습니다.</p>
+## 구문
 
-<div class="note">
-<p><strong>참고:</strong> <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">margin</span></font>은 요소의 주위에 빈 공간을 추가합니다. 반면 {{cssxref("padding")}}은 요소의 <strong>내부</strong>에 빈 공간을 만듭니다.</p>
-</div>
-
-<h2 id="구문">구문</h2>
-
-<pre class="syntaxbox">/* 네 면 모두 적용 */
+```
+/* 네 면 모두 적용 */
 margin: 1em;
 margin: -3px;
 
@@ -41,44 +38,43 @@ margin: 2px 1em 0 auto;
 margin: inherit;
 margin: initial;
 margin: unset;
-</pre>
+```
 
-<p><code>margin</code> 속성은 한 개, 두 개, 세 개, 혹은 네 개의 값으로 지정할 수 있습니다. 각 값은 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} 또는 키워드 <code><a href="#auto">auto</a></code> 중 하나입니다. 음수 값은 요소와 이웃의 거리가 더 가까워지도록 합니다.</p>
+`margin` 속성은 한 개, 두 개, 세 개, 혹은 네 개의 값으로 지정할 수 있습니다. 각 값은 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} 또는 키워드 [`auto`](#auto) 중 하나입니다. 음수 값은 요소와 이웃의 거리가 더 가까워지도록 합니다.
 
-<ul>
- <li><strong>한 개의 값</strong>은 모든 네 면의 여백을 설정합니다.</li>
- <li><strong>두 개의 값</strong>을 지정하면 첫 번째는 <strong>위와 아래</strong>, 두 번째는 <strong>왼쪽과 오른쪽</strong> 여백을 설정합니다.</li>
- <li><strong>세 개의 값</strong>을 지정하면 첫 번째는 <strong>위</strong>, 두 번째는 <strong>왼쪽과 오른쪽,</strong> 세 번째 값은 <strong>아래</strong> 여백을 설정합니다.</li>
- <li><strong>네 개의 값</strong>을 지정하면 각각 <strong>상, 우, 하, 좌</strong> 순서로 여백을 지정합니다. (시계방향)</li>
-</ul>
+- **한 개의 값**은 모든 네 면의 여백을 설정합니다.
+- **두 개의 값**을 지정하면 첫 번째는 **위와 아래**, 두 번째는 **왼쪽과 오른쪽** 여백을 설정합니다.
+- **세 개의 값**을 지정하면 첫 번째는 **위**, 두 번째는 **왼쪽과 오른쪽,** 세 번째 값은 **아래** 여백을 설정합니다.
+- **네 개의 값**을 지정하면 각각 **상, 우, 하, 좌** 순서로 여백을 지정합니다. (시계방향)
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><a id="&lt;length>" name="&lt;length>">{{cssxref("length")}}</a></dt>
- <dd>여백의 크기로 고정값 사용.</dd>
- <dt><a id="&lt;percentage>" name="&lt;percentage>">{{cssxref("&lt;percentage&gt;")}}</a></dt>
- <dd>여백의 크기로 <a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a> 너비의 백분율 사용.</dd>
- <dt><a id="auto" name="auto"><code>auto</code></a></dt>
- <dd>브라우저가 적절한 여백 크기를 선택. 예를 들어 요소를 중앙 정렬하고 싶을 때 사용할 수 있습니다.</dd>
-</dl>
+- {{cssxref("length")}}
+  - : 여백의 크기로 고정값 사용.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비의 백분율 사용.
+- `auto`
+  - : 브라우저가 적절한 여백 크기를 선택. 예를 들어 요소를 중앙 정렬하고 싶을 때 사용할 수 있습니다.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="간단한_예제">간단한 예제</h3>
+### 간단한 예제
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="center"&gt;이 요소는 중앙 정렬입니다.&lt;/div&gt;
-&lt;div class="outside"&gt;이 요소는 컨테이너 밖으로 빠져 나갔습니다.&lt;/div&gt;</pre>
+```html
+<div class="center">이 요소는 중앙 정렬입니다.</div>
+<div class="outside">이 요소는 컨테이너 밖으로 빠져 나갔습니다.</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.center {
+```css
+.center {
   margin: auto;
   background: lime;
   width: 66%;
@@ -88,13 +84,15 @@ margin: unset;
   margin: 3rem 0 0 -3rem;
   background: cyan;
   width: 66%;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('간단한_예제') }}</p>
+{{ EmbedLiveSample('간단한_예제') }}
 
-<h3 id="더_많은_예제">더 많은 예제</h3>
+### 더 많은 예제
 
-<pre class="brush: css">margin: 5%;                 /* 모두 5% */
+```css
+margin: 5%;                 /* 모두 5% */
 
 margin: 10px;               /* 모두 10px */
 
@@ -114,34 +112,33 @@ margin: 2em auto;           /* 상하: 2em */
                             /* 수평 중앙정렬 */
 
 margin: auto;               /* 상하: 0 */
-                            /* 수평 중앙정렬 */</pre>
+                            /* 수평 중앙정렬 */
+```
 
-<h2 id="참고">참고</h2>
+## 참고
 
-<h3 id="수평_중앙정렬">수평 중앙정렬</h3>
+### 수평 중앙정렬
 
-<p>현대 브라우저에서 어떤 요소를 중앙에 배치하려면 {{cssxref("display")}}<code>: flex; </code>{{cssxref("justify-content")}}<code>: center;</code>를 사용하면 됩니다.</p>
+현대 브라우저에서 어떤 요소를 중앙에 배치하려면 {{cssxref("display")}}`: flex; `{{cssxref("justify-content")}}`: center;`를 사용하면 됩니다.
 
-<p>하지만 플렉스 박스 레이아웃을 지원하지 않는 Internet Explorer 8-9 등 오래된 브라우저를 지원해야 하면 <code>margin: 0 auto;</code>를 대신 사용하세요.</p>
+하지만 플렉스 박스 레이아웃을 지원하지 않는 Internet Explorer 8-9 등 오래된 브라우저를 지원해야 하면 `margin: 0 auto;`를 대신 사용하세요.
 
-<h3 id="여백_상쇄">여백 상쇄</h3>
+### 여백 상쇄
 
-<p>두 개 요소의 위와 아래 여백은 종종 합쳐져 하나의 여백이 되고, 그 크기는 둘 중 더 큰 여백과 같아집니다. 더 자세한 정보는 <a href="/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">여백 상쇄 정복</a>을 참고하세요.</p>
+두 개 요소의 위와 아래 여백은 종종 합쳐져 하나의 여백이 되고, 그 크기는 둘 중 더 큰 여백과 같아집니다. 더 자세한 정보는 [여백 상쇄 정복](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)을 참고하세요.
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.margin")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS 기본 박스 모델 입문</a></li>
- <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">여백 상쇄 정복</a></li>
- <li>{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}</li>
-</ul>
+- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [여백 상쇄 정복](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}

@@ -9,103 +9,99 @@ tags:
   - Selectors
 translation_of: Web/CSS/Pseudo-classes
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong>의사 클래스</strong>(가상 클래스)는 선택자에 추가하는 키워드로, 선택한 요소가 특별한 상태여야 만족할 수 있습니다. 예를 들어 {{cssxref(":hover")}}를 사용하면 포인터를 올렸을 때에만 글씨 색을 바꾸고 싶을 때 사용할 수 있습니다.</p>
+[CSS](/ko/docs/Web/CSS) **의사 클래스**(가상 클래스)는 선택자에 추가하는 키워드로, 선택한 요소가 특별한 상태여야 만족할 수 있습니다. 예를 들어 {{cssxref(":hover")}}를 사용하면 포인터를 올렸을 때에만 글씨 색을 바꾸고 싶을 때 사용할 수 있습니다.
 
-<pre class="brush: css notranslate">/* Any button over which the user's pointer is hovering */
+```css
+/* Any button over which the user's pointer is hovering */
 button:hover {
   color: blue;
-}</pre>
+}
+```
 
-<p>의사 클래스를 사용하면 문서 트리 콘텐츠와 관련된 경우 뿐만 아니라 탐색기 히스토리({{cssxref(":visited")}} 등), 콘텐츠의 상태(특정 폼 요소에 적용한 {{cssxref(":checked")}} 등), 마우스의 위치(커서가 마우스 위인지 아닌지 알 수 있는 {{cssxref(":hover")}} 등)처럼 외부 인자와 관련된 경우에도 스타일을 적용할 수 있습니다.</p>
+의사 클래스를 사용하면 문서 트리 콘텐츠와 관련된 경우 뿐만 아니라 탐색기 히스토리({{cssxref(":visited")}} 등), 콘텐츠의 상태(특정 폼 요소에 적용한 {{cssxref(":checked")}} 등), 마우스의 위치(커서가 마우스 위인지 아닌지 알 수 있는 {{cssxref(":hover")}} 등)처럼 외부 인자와 관련된 경우에도 스타일을 적용할 수 있습니다.
 
-<div class="blockIndicator note">
-<p><strong>참고</strong>: <a href="/ko/docs/Web/CSS/Pseudo-elements">의사 요소</a>는 의사 클래스와 달리 요소의 <strong>특정 부분</strong>에 스타일을 적용할 때 사용합니다.</p>
-</div>
+> **참고:** [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 의사 클래스와 달리 요소의 **특정 부분**에 스타일을 적용할 때 사용합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox notranslate">selector:pseudo-class {
+```
+selector:pseudo-class {
   property: value;
-}</pre>
+}
+```
 
-<p>일반적인 클래스와 같이 여러 개의 의사 클래스를 조합해 복잡한 선택자를 만들 수 있습니다.</p>
+일반적인 클래스와 같이 여러 개의 의사 클래스를 조합해 복잡한 선택자를 만들 수 있습니다.
 
-<h2 id="표준_의사_클래스_색인">표준 의사 클래스 색인</h2>
+## 표준 의사 클래스 색인
 
-<div class="index" id="index">
-<ul>
- <li>{{CSSxRef(":active")}}</li>
- <li>{{CSSxRef(":any-link")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":blank")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":checked")}}</li>
- <li>{{CSSxRef(":current")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":default")}}</li>
- <li>{{CSSxRef(":defined")}}</li>
- <li>{{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":disabled")}}</li>
- <li>{{CSSxRef(":drop")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":empty")}}</li>
- <li>{{CSSxRef(":enabled")}}</li>
- <li>{{CSSxRef(":first")}}</li>
- <li>{{CSSxRef(":first-child")}}</li>
- <li>{{CSSxRef(":first-of-type")}}</li>
- <li>{{CSSxRef(":fullscreen")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":future")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":focus")}}</li>
- <li>{{CSSxRef(":focus-visible")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":focus-within")}}</li>
- <li>{{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":host")}}</li>
- <li>{{CSSxRef(":host()")}}</li>
- <li>{{CSSxRef(":host-context()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":hover")}}</li>
- <li>{{CSSxRef(":indeterminate")}}</li>
- <li>{{CSSxRef(":in-range")}}</li>
- <li>{{CSSxRef(":invalid")}}</li>
- <li>{{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":lang", ":lang()")}}</li>
- <li>{{CSSxRef(":last-child")}}</li>
- <li>{{CSSxRef(":last-of-type")}}</li>
- <li>{{CSSxRef(":left")}}</li>
- <li>{{CSSxRef(":link")}}</li>
- <li>{{CSSxRef(":local-link")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":not", ":not()")}}</li>
- <li>{{CSSxRef(":nth-child", ":nth-child()")}}</li>
- <li>{{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":nth-last-child", ":nth-last-child()")}}</li>
- <li>{{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}</li>
- <li>{{CSSxRef(":nth-of-type", ":nth-of-type()")}}</li>
- <li>{{CSSxRef(":only-child")}}</li>
- <li>{{CSSxRef(":only-of-type")}}</li>
- <li>{{CSSxRef(":optional")}}</li>
- <li>{{CSSxRef(":out-of-range")}}</li>
- <li>{{CSSxRef(":past")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":placeholder-shown")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":read-only")}}</li>
- <li>{{CSSxRef(":read-write")}}</li>
- <li>{{CSSxRef(":required")}}</li>
- <li>{{CSSxRef(":right")}}</li>
- <li>{{CSSxRef(":root")}}</li>
- <li>{{CSSxRef(":scope")}}</li>
- <li>{{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":target")}}</li>
- <li>{{CSSxRef(":target-within")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":user-invalid")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":valid")}}</li>
- <li>{{CSSxRef(":visited")}}</li>
- <li>{{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}</li>
-</ul>
-</div>
+- {{CSSxRef(":active")}}
+- {{CSSxRef(":any-link")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":checked")}}
+- {{CSSxRef(":current")}} {{Experimental_Inline}}
+- {{CSSxRef(":default")}}
+- {{CSSxRef(":defined")}}
+- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
+- {{CSSxRef(":disabled")}}
+- {{CSSxRef(":drop")}} {{Experimental_Inline}}
+- {{CSSxRef(":empty")}}
+- {{CSSxRef(":enabled")}}
+- {{CSSxRef(":first")}}
+- {{CSSxRef(":first-child")}}
+- {{CSSxRef(":first-of-type")}}
+- {{CSSxRef(":fullscreen")}} {{Experimental_Inline}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
+- {{CSSxRef(":focus")}}
+- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
+- {{CSSxRef(":focus-within")}}
+- {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
+- {{CSSxRef(":host")}}
+- {{CSSxRef(":host()")}}
+- {{CSSxRef(":host-context()")}} {{Experimental_Inline}}
+- {{CSSxRef(":hover")}}
+- {{CSSxRef(":indeterminate")}}
+- {{CSSxRef(":in-range")}}
+- {{CSSxRef(":invalid")}}
+- {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}
+- {{CSSxRef(":lang", ":lang()")}}
+- {{CSSxRef(":last-child")}}
+- {{CSSxRef(":last-of-type")}}
+- {{CSSxRef(":left")}}
+- {{CSSxRef(":link")}}
+- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
+- {{CSSxRef(":not", ":not()")}}
+- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
+- {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
+- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
+- {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
+- {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
+- {{CSSxRef(":only-child")}}
+- {{CSSxRef(":only-of-type")}}
+- {{CSSxRef(":optional")}}
+- {{CSSxRef(":out-of-range")}}
+- {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":placeholder-shown")}} {{Experimental_Inline}}
+- {{CSSxRef(":read-only")}}
+- {{CSSxRef(":read-write")}}
+- {{CSSxRef(":required")}}
+- {{CSSxRef(":right")}}
+- {{CSSxRef(":root")}}
+- {{CSSxRef(":scope")}}
+- {{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}
+- {{CSSxRef(":target")}}
+- {{CSSxRef(":target-within")}} {{Experimental_Inline}}
+- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
+- {{CSSxRef(":valid")}}
+- {{CSSxRef(":visited")}}
+- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/CSS/Pseudo-elements">의사 요소</a></li>
-</ul>
+- [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)

@@ -6,22 +6,21 @@ tags:
   - CSS Background
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/background-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>background-origin</code></strong> 속성은 배경의 원점을 테두리 시작점, 테두리 내부, 안쪽 여백 내부 중 하나로 지정합니다.</p>
+[CSS](/ko/docs/Web/CSS) **`background-origin`** 속성은 배경의 원점을 테두리 시작점, 테두리 내부, 안쪽 여백 내부 중 하나로 지정합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/background-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-origin.html")}}
 
+{{cssxref("background-attachment")}}가 `fixed`인 경우 `background-origin`은 무시됩니다.
 
+## 구문
 
-<p>{{cssxref("background-attachment")}}가 <code>fixed</code>인 경우 <code>background-origin</code>은 무시됩니다.</p>
-
-<h2 id="구문">구문</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* 키워드 값 */
+```css
+/* 키워드 값 */
 background-origin: border-box;
 background-origin: padding-box;
 background-origin: content-box;
@@ -30,67 +29,67 @@ background-origin: content-box;
 background-origin: inherit;
 background-origin: initial;
 background-origin: unset;
-</pre>
+```
 
-<p><code>background-origin</code> 속성은 다음 목록의 키워드 중 하나를 선택해 지정할 수 있습니다.</p>
+`background-origin` 속성은 다음 목록의 키워드 중 하나를 선택해 지정할 수 있습니다.
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>배경을 테두리 박스에 상대적으로 배치합니다.</dd>
- <dt><code>padding-box</code></dt>
- <dd>배경을 안쪽 여백 박스에 상대적으로 배치합니다.</dd>
- <dt><code>content-box</code></dt>
- <dd>배경을 콘텐츠 박스에 상대적으로 배치합니다.</dd>
-</dl>
+- `border-box`
+  - : 배경을 테두리 박스에 상대적으로 배치합니다.
+- `padding-box`
+  - : 배경을 안쪽 여백 박스에 상대적으로 배치합니다.
+- `content-box`
+  - : 배경을 콘텐츠 박스에 상대적으로 배치합니다.
 
-<h2 id="형식_정의">형식 정의</h2>
+## 형식 정의
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="배경_원점_설정하기">배경 원점 설정하기</h3>
+### 배경 원점 설정하기
 
-<pre class="brush:css; highlight:[6]; notranslate">.example {
+```css
+.example {
   border: 10px double;
   padding: 10px;
   background: url('image.jpg');
   background-position: center left;
   background-origin: content-box;
 }
-</pre>
+```
 
-<pre class="brush:css; highlight:[6]; notranslate">#example2 {
+```css
+#example2 {
   border: 4px solid black;
   padding: 10px;
   background: url('image.gif');
   background-repeat: no-repeat;
   background-origin: border-box;
 }
-</pre>
+```
 
-<pre class="brush:css; highlight:[4]; notranslate">div {
+```css
+div {
   background-image: url('logo.jpg'), url('mainback.png'); /* Applies two images to the background */
   background-position: top right, 0px 0px;
   background-origin: content-box, padding-box;
-}</pre>
+}
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.background-origin")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{cssxref("background-clip")}}</li>
-</ul>
+- {{cssxref("background-clip")}}

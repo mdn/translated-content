@@ -8,15 +8,14 @@ tags:
   - Reference
 translation_of: Web/CSS/animation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>animation</code></strong> <a href="/ko/docs/Web/CSS" title="CSS">CSS</a><strong> </strong>속성은 다수의 스타일을 전환하는 애니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}의 <a href="/ko/docs/Web/CSS/Shorthand_properties">단축 속성</a>입니다.</p>
+**`animation`** [CSS](/ko/docs/Web/CSS "CSS")\*\* \*\*속성은 다수의 스타일을 전환하는 애니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
 
-<div>{{EmbedInteractiveExample("pages/css/animation.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation.html")}}
 
-
-
-<pre class="brush:css no-line-numbers">/* @keyframes duration | timing-function | delay |
+```css
+/* @keyframes duration | timing-function | delay |
 iteration-count | direction | fill-mode | play-state | name */
 animation: 3s ease-in 1s 2 reverse both paused slidein;
 
@@ -25,49 +24,51 @@ animation: 3s linear 1s slidein;
 
 /* @keyframes duration | name */
 animation: 3s slidein;
-</pre>
+```
 
-<div class="hidden" id="animation">
-<pre class="brush: html">&lt;div class="grid"&gt;
-  &lt;div class="col"&gt;
-    &lt;div class="note"&gt;
+```html hidden
+<div class="grid">
+  <div class="col">
+    <div class="note">
       Given the following animation:
-      &lt;pre&gt;@keyframes slidein {
+      <pre>@keyframes slidein {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
-}&lt;/pre&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt;
-        &lt;button class="play" title="PLAY"&gt;&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class="cell flx"&gt;
-        &lt;div class="overlay"&gt;animation: 3s ease-in 1s 2 reverse both paused slidein;&lt;/div&gt;
-        &lt;div class="animation a1"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt;
-        &lt;button class="pause" title="PAUSE"&gt;&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class="cell flx"&gt;
-        &lt;div class="overlay"&gt;animation: 3s linear 1s slidein;&lt;/div&gt;
-        &lt;div class="animation a2"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div class="cell"&gt;
-        &lt;button class="pause" title="PAUSE"&gt;&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class="cell flx"&gt;
-        &lt;div class="overlay"&gt;animation: 3s slidein;&lt;/div&gt;
-        &lt;div class="animation a3"&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+}</pre>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <button class="play" title="PLAY"></button>
+      </div>
+      <div class="cell flx">
+        <div class="overlay">animation: 3s ease-in 1s 2 reverse both paused slidein;</div>
+        <div class="animation a1"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <button class="pause" title="PAUSE"></button>
+      </div>
+      <div class="cell flx">
+        <div class="overlay">animation: 3s linear 1s slidein;</div>
+        <div class="animation a2"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell">
+        <button class="pause" title="PAUSE"></button>
+      </div>
+      <div class="cell flx">
+        <div class="overlay">animation: 3s slidein;</div>
+        <div class="animation a3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
-<pre class="brush: css">html,body {
+```css hidden
+html,body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -157,9 +158,11 @@ button.restart {
   width: 100%;
   height: calc(100% - 1.5em);
   transform-origin: left center;
-}</pre>
+}
+```
 
-<pre class="brush: js">window.addEventListener('load', function () {
+```js hidden
+window.addEventListener('load', function () {
   var ANIMATION = Array.from(document.querySelectorAll('.animation'));
   var BUTTON    = Array.from(document.querySelectorAll('button'));
 
@@ -197,69 +200,66 @@ button.restart {
   BUTTON.forEach(function (btn, index) {
     btn.addEventListener('click', function () { playPause(index); });
   });
-})</pre>
-</div>
+})
+```
 
-<p>{{EmbedLiveSample("animation", "100%", 260, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("animation", "100%", 260, "", "", "example-outcome-frame")}}
 
-<p><a href="/ko/docs/Web/CSS/CSS_animated_properties">애니메이션 가능한 속성</a>을 확인해보세요. <a href="/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS 트랜지션</a>에도 적용된다는 점을 참고하세요.</p>
+[애니메이션 가능한 속성](/ko/docs/Web/CSS/CSS_animated_properties)을 확인해보세요. [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)에도 적용된다는 점을 참고하세요.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<p>The <code>animation</code> property is specified as one or more single animations, separated by commas.</p>
+The `animation` property is specified as one or more single animations, separated by commas.
 
-<p>Each individual animation is specified as:</p>
+Each individual animation is specified as:
 
-<ul>
- <li>zero or one occurrences of the following values:
-  <ul>
-   <li>{{cssxref("&lt;single-transition-timing-function&gt;")}}</li>
-   <li>{{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#&lt;single-animation-iteration-count&gt;")}}</li>
-   <li>{{cssxref("animation", "&lt;single-animation-direction&gt;", "#&lt;single-animation-direction&gt;")}}</li>
-   <li>{{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#&lt;single-animation-fill-mode&gt;")}}</li>
-   <li>{{cssxref("animation", "&lt;single-animation-play-state&gt;", "#&lt;single-animation-play-state&gt;")}}</li>
-  </ul>
- </li>
- <li>an optional name for the animation, which may be <code>none</code>, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}</li>
- <li>zero, one, or two {{cssxref("&lt;time&gt;")}} values</li>
-</ul>
+- zero or one occurrences of the following values:
 
-<p>The order of values within each animation definition is important: the first value that can be parsed as a {{cssxref("&lt;time&gt;")}} is assigned to the {{cssxref("animation-duration")}}, and the second one is assigned to {{cssxref("animation-delay")}}.</p>
+  - {{cssxref("&lt;single-transition-timing-function&gt;")}}
+  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#&lt;single-animation-iteration-count&gt;")}}
+  - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#&lt;single-animation-direction&gt;")}}
+  - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#&lt;single-animation-fill-mode&gt;")}}
+  - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#&lt;single-animation-play-state&gt;")}}
 
-<p>The order within each animation definition is also important for distinguishing {{cssxref("animation-name")}} values from other keywords. When parsed, keywords that are valid for properties other than {{cssxref("animation-name")}}, and whose values were not found earlier in the shorthand, must be accepted for those properties rather than for {{cssxref("animation-name")}}. Furthermore, when serialized, default values of other properties must be output in at least the cases necessary to distinguish an {{cssxref("animation-name")}} that could be a value of another property, and may be output in additional cases.</p>
+- an optional name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}
+- zero, one, or two {{cssxref("&lt;time&gt;")}} values
 
-<h3 id="값">값</h3>
+The order of values within each animation definition is important: the first value that can be parsed as a {{cssxref("&lt;time&gt;")}} is assigned to the {{cssxref("animation-duration")}}, and the second one is assigned to {{cssxref("animation-delay")}}.
 
-<dl>
- <dt><code><a id="&lt;single-animation-iteration-count>" name="&lt;single-animation-iteration-count>">&lt;single-animation-iteration-count&gt;</a></code></dt>
- <dd>The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}.</dd>
- <dt><a id="&lt;single-animation-direction>" name="&lt;single-animation-direction>"><code>&lt;single-animation-direction&gt;</code></a></dt>
- <dd>The direction in which the animation is played. The value must be one of those available in {{cssxref("animation-direction")}}.</dd>
- <dt><a id="&lt;single-animation-fill-mode>" name="&lt;single-animation-fill-mode>"><code>&lt;single-animation-fill-mode&gt;</code></a></dt>
- <dd>Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in {{cssxref("animation-fill-mode")}}.</dd>
- <dt><code><a id="&lt;single-animation-play-state>" name="&lt;single-animation-play-state>">&lt;single-animation-play-state&gt;</a></code></dt>
- <dd>Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}.</dd>
-</dl>
+The order within each animation definition is also important for distinguishing {{cssxref("animation-name")}} values from other keywords. When parsed, keywords that are valid for properties other than {{cssxref("animation-name")}}, and whose values were not found earlier in the shorthand, must be accepted for those properties rather than for {{cssxref("animation-name")}}. Furthermore, when serialized, default values of other properties must be output in at least the cases necessary to distinguish an {{cssxref("animation-name")}} that could be a value of another property, and may be output in additional cases.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 값
+
+- [`<single-animation-iteration-count>`]()
+  - : The number of times the animation is played. The value must be one of those available in {{cssxref("animation-iteration-count")}}.
+- `<single-animation-direction>`
+  - : The direction in which the animation is played. The value must be one of those available in {{cssxref("animation-direction")}}.
+- `<single-animation-fill-mode>`
+  - : Determines how styles should be applied to the animation's target before and after its execution. The value must be one of those available in {{cssxref("animation-fill-mode")}}.
+- [`<single-animation-play-state>`]()
+  - : Determines whether the animation is playing or not. The value must be one of those available in {{cssxref("animation-play-state")}}.
+
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="Cylon_Eye">Cylon Eye</h3>
+### Cylon Eye
 
-<pre class="brush: html">&lt;div class="view_port"&gt;
-  &lt;div class="polling_message"&gt;
+```html
+<div class="view_port">
+  <div class="polling_message">
     Listening for dispatches
-  &lt;/div&gt;
-  &lt;div class="cylon_eye"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+  <div class="cylon_eye"></div>
+</div>
+```
 
-<pre class="brush: css">.polling_message {
+```css
+.polling_message {
   color: white;
   float: left;
   margin-right: 2%;
@@ -288,45 +288,39 @@ button.restart {
 
 @-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
         @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Cylon_Eye')}}</p>
+{{EmbedLiveSample('Cylon_Eye')}}
 
-<p>See <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Examples">Using CSS animations</a> for additional examples.</p>
+See [Using CSS animations](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Examples) for additional examples.
 
-<h2 id="접근성_고려사항">접근성 고려사항</h2>
+## 접근성 고려사항
 
-<p>Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.</p>
+Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
-<p>Consider providing a mechanism for pausing or disabling animation, as well as using the <a href="/en-US/docs/Web/CSS/@media/prefers-reduced-motion">Reduced Motion Media Query</a> to create a complimentary experience for users who have expressed a preference for no animated experiences.</p>
+Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/ko/docs/Web/CSS/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for no animated experiences.
 
-<ul>
- <li><a href="https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity">Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article </a></li>
- <li><a href="https://css-tricks.com/introduction-reduced-motion-media-query/">An Introduction to the Reduced Motion Media Query | CSS-Tricks</a></li>
- <li><a href="https://webkit.org/blog/7551/responsive-design-for-motion/">Responsive Design for Motion | WebKit</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content">MDN Understanding WCAG, Guideline 2.2 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html">Understanding Success Criterion 2.2.2  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
+- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
+- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.animation")}}</p>
+{{Compat}}
 
-<h3 id="Quantum_CSS_notes">Quantum CSS notes</h3>
+### Quantum CSS notes
 
-<ul>
- <li>Gecko has a bug whereby when you animate an offscreen element onscreen but specify a delay, Gecko does not repaint on some platforms, e.g. Windows ({{bug(1383239)}}). This has been fixed in Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, planned for release in Firefox 57).</li>
- <li>Another Gecko bug means that {{htmlelement("details")}} elements can't be made open by default using the <code>open</code> attribute if they have an animation active on them ({{bug(1382124)}}). Quantum CSS fixes this.</li>
- <li>A further bug means that animations using em units are not affected by changes to the {{cssxref("font-size")}} on the animated element's parent, whereas they should be ({{bug(1254424)}}). Quantum CSS fixes this.</li>
-</ul>
+- Gecko has a bug whereby when you animate an offscreen element onscreen but specify a delay, Gecko does not repaint on some platforms, e.g. Windows ({{bug(1383239)}}). This has been fixed in Firefox's new parallel CSS engine (also known as [Quantum CSS](https://wiki.mozilla.org/Quantum) or [Stylo](https://wiki.mozilla.org/Quantum/Stylo), planned for release in Firefox 57).
+- Another Gecko bug means that {{htmlelement("details")}} elements can't be made open by default using the `open` attribute if they have an animation active on them ({{bug(1382124)}}). Quantum CSS fixes this.
+- A further bug means that animations using em units are not affected by changes to the {{cssxref("font-size")}} on the animated element's parent, whereas they should be ({{bug(1254424)}}). Quantum CSS fixes this.
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS 애니메이션 사용하기</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- JavaScript {{domxref("AnimationEvent")}} API

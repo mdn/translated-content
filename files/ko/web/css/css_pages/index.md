@@ -8,41 +8,29 @@ tags:
   - Overview
 translation_of: Web/CSS/CSS_Pages
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Paged Media</strong>는 페이지 전환을 처리하는 방법을 정의하는 CSS 모듈입니다.</p>
+**CSS Paged Media**는 페이지 전환을 처리하는 방법을 정의하는 CSS 모듈입니다.
 
-<h2 id="참고서">참고서</h2>
+## 참고서
 
-<h3 id="CSS_속성">CSS 속성</h3>
+### CSS 속성
 
-<div class="index">
-<ul>
- <li>{{cssxref("page-break-after")}}</li>
- <li>{{cssxref("page-break-before")}}</li>
- <li>{{cssxref("page-break-inside")}}</li>
-</ul>
-</div>
+- {{cssxref("page-break-after")}}
+- {{cssxref("page-break-before")}}
+- {{cssxref("page-break-inside")}}
 
-<h3 id="규칙">@규칙</h3>
+### @규칙
 
-<div class="index">
-<ul>
- <li>{{cssxref('@page')}}</li>
-</ul>
-</div>
+- {{cssxref('@page')}}
 
-<h3 id="의사_클래스">의사 클래스</h3>
+### 의사 클래스
 
-<div class="index">
-<ul>
- <li>{{cssxref(':blank')}}</li>
- <li>{{cssxref(':first')}}</li>
- <li>{{cssxref(':left')}}</li>
- <li>{{cssxref(':right')}}</li>
-</ul>
-</div>
+- {{cssxref(':blank')}}
+- {{cssxref(':first')}}
+- {{cssxref(':left')}}
+- {{cssxref(':right')}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}

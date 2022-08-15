@@ -8,39 +8,38 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-area
 ---
-<p><strong><code>grid-area</code></strong> 속성은 {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} and {{cssxref("grid-column-end")}} 값을 한번에 설정하는 <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> property 입니다. 해당 속성값은 grid item의 크기와 위치를 결정합니다., specifying a grid item’s size and location within the {{glossary("grid rows", "grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its {{glossary("grid areas", "grid area")}}.</p>
+**`grid-area`** 속성은 {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} and {{cssxref("grid-column-end")}} 값을 한번에 설정하는 [shorthand](/ko/docs/Web/CSS/Shorthand_properties) property 입니다. 해당 속성값은 grid item의 크기와 위치를 결정합니다., specifying a grid item’s size and location within the {{glossary("grid rows", "grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its {{glossary("grid areas", "grid area")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-area.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-area.html")}}
 
+If four `<grid-line>` values are specified, `grid-row-start` is set to the first value, `grid-column-start` is set to the second value, `grid-row-end` is set to the third value, and `grid-column-end` is set to the fourth value.
 
+When `grid-column-end` is omitted, if `grid-column-start` is a {{cssxref("&lt;custom-ident&gt;")}}, `grid-column-end` is set to that `<custom-ident>`; otherwise, it is set to `auto`.
 
-<p>If four <code>&lt;grid-line&gt;</code> values are specified, <code>grid-row-start</code> is set to the first value, <code>grid-column-start</code> is set to the second value, <code>grid-row-end</code> is set to the third value, and <code>grid-column-end</code> is set to the fourth value.</p>
+When `grid-row-end` is omitted, if `grid-row-start` is a `<custom-ident>`, `grid-row-end` is set to that `<custom-ident>`; otherwise, it is set to `auto`.
 
-<p>When <code>grid-column-end</code> is omitted, if <code>grid-column-start</code> is a {{cssxref("&lt;custom-ident&gt;")}}, <code>grid-column-end</code> is set to that <code>&lt;custom-ident&gt;</code>; otherwise, it is set to <code>auto</code>.</p>
+When `grid-column-start` is omitted, if `grid-row-start` is a `<custom-ident>`, all four longhands are set to that value. Otherwise, it is set to `auto`.
 
-<p>When <code>grid-row-end</code> is omitted, if <code>grid-row-start</code> is a <code>&lt;custom-ident&gt;</code>, <code>grid-row-end</code> is set to that <code>&lt;custom-ident&gt;</code>; otherwise, it is set to <code>auto</code>.</p>
+The grid-area property can also be set to a {{cssxref("&lt;custom-ident&gt;")}} which acts as a name for the area, which can then be placed using {{cssxref("grid-template-areas")}}.
 
-<p>When <code>grid-column-start</code> is omitted, if <code>grid-row-start</code> is a <code>&lt;custom-ident&gt;</code>, all four longhands are set to that value. Otherwise, it is set to <code>auto</code>.</p>
+## Syntax
 
-<p>The grid-area property can also be set to a {{cssxref("&lt;custom-ident&gt;")}} which acts as a name for the area, which can then be placed using {{cssxref("grid-template-areas")}}.</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 grid-area: auto;
 grid-area: auto / auto;
 grid-area: auto / auto / auto;
 grid-area: auto / auto / auto / auto;
 
-/* &lt;custom-ident&gt; values */
+/* <custom-ident> values */
 grid-area: some-grid-area;
 grid-area: some-grid-area / another-grid-area;
 
-/* &lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;? values */
+/* <integer> && <custom-ident>? values */
 grid-area: some-grid-area 4;
 grid-area: some-grid-area 4 / 2 another-grid-area;
 
-/* span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ] values */
+/* span && [ <integer> || <custom-ident> ] values */
 grid-area: span 3;
 grid-area: span 3 / span some-grid-area;
 grid-area: 2 span / another-grid-area span;
@@ -49,50 +48,56 @@ grid-area: 2 span / another-grid-area span;
 grid-area: inherit;
 grid-area: initial;
 grid-area: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement or a default span of <code>1</code>.</dd>
- <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>If there is a named line with the name '<code>&lt;custom-ident&gt;-start</code>'/'<code>&lt;custom-ident&gt;-end</code>', it contributes the first such line to the grid item’s placement.
- <p class="note"><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-area: foo;</code> will choose the start/end edge of that named grid area (unless another line named <code>foo-start</code>/<code>foo-end</code> was explicitly specified before it).</p>
+- `auto`
+  - : Is a keyword indicating that the property contributes nothing to the grid item’s placement, indicating auto-placement or a default span of `1`.
+- `<custom-ident>`
 
- <p>Otherwise, this is treated as if the integer <code>1</code> had been specified along with the <code>&lt;custom-ident&gt;</code>.</p>
- </dd>
- <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
- <dd>Contributes the <em>n</em>th grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
- <p>If a name is given as a {{cssxref("&lt;custom-ident&gt;")}}, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.</p>
+  - : If there is a named line with the name '`<custom-ident>-start`'/'`<custom-ident>-end`', it contributes the first such line to the grid item’s placement.
 
- <p>An {{cssxref("&lt;integer&gt;")}} value of <code>0</code> is invalid.</p>
- </dd>
- <dt><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code></dt>
- <dd>Contributes a grid span to the grid item’s placement such that the corresponding edge of the grid item’s grid area is <em>n</em> lines from the opposite edge.
- <p>If a name is given as a {{cssxref("&lt;custom-ident&gt;")}}, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.</p>
+    > **참고:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-area: foo;` will choose the start/end edge of that named grid area (unless another line named `foo-start`/`foo-end` was explicitly specified before it).
 
- <p>If the {{cssxref("&lt;integer&gt;")}} is omitted, it defaults to <code>1</code>. Negative integers or 0 are invalid.</p>
- </dd>
-</dl>
+    Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+- `<integer> && <custom-ident>?`
+
+  - : Contributes the \_n_th grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
+
+    If a name is given as a {{cssxref("&lt;custom-ident&gt;")}}, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines are assumed to have that name for the purpose of finding this position.
+
+    An {{cssxref("&lt;integer&gt;")}} value of `0` is invalid.
+
+- `span && [ <integer> || <custom-ident> ]`
+
+  - : Contributes a grid span to the grid item’s placement such that the corresponding edge of the grid item’s grid area is _n_ lines from the opposite edge.
+
+    If a name is given as a {{cssxref("&lt;custom-ident&gt;")}}, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid corresponding to the search direction are assumed to have that name for the purpose of counting this span.
+
+    If the {{cssxref("&lt;integer&gt;")}} is omitted, it defaults to `1`. Negative integers or 0 are invalid.
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML_content">HTML content</h3>
+### HTML content
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+</div>
+```
 
-<h3 id="CSS_content">CSS content</h3>
+### CSS content
 
-<pre class="brush: css; highlight[9]">#grid {
+```css
+#grid {
   display: grid;
   height: 100px;
   grid-template: repeat(4, 1fr) / 50px 100px;
@@ -110,80 +115,70 @@ grid-area: unset;
 #item3 {
   background-color: blue;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Example", "100%", "150px")}}</p>
+{{EmbedLiveSample("Example", "100%", "150px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("css.properties.grid-area")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></em></li>
- <li>Video tutorial: <em><a href="http://gridbyexample.com/video/grid-template-areas/">Grid Template Areas</a></em></li>
-</ul>
+- Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
+- Grid Layout Guide: _[Grid template areas](/ko/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
+- Video tutorial: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+1.  [**CSS**](/ko/docs/Web/CSS)
+2.  [**CSS Reference**](/ko/docs/Web/CSS/Reference)
+3.  [CSS Grid Layout](/ko/docs/Web/CSS/CSS_Grid_Layout)
+4.  **Guides**
+
+    1.  [Basics concepts of grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2.  [Relationship to other layout methods](/ko/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3.  [Line-based placement](/ko/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4.  [Grid template areas](/ko/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5.  [Layout using named grid lines](/ko/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6.  [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7.  [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8.  [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9.  [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+    11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+
+5.  **Properties**
+
+    1.  [grid](/ko/docs/Web/CSS/grid)
+    2.  [grid-area](/ko/docs/Web/CSS/grid-area)
+    3.  [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
+    4.  [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
+    5.  [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
+    6.  [grid-column](/ko/docs/Web/CSS/grid-column)
+    7.  [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
+    8.  [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
+    9.  [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
+    10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
+    11. [grid-row](/ko/docs/Web/CSS/grid-row)
+    12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
+    13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
+    14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
+    15. [grid-template](/ko/docs/Web/CSS/grid-template)
+    16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
+    17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
+    18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
+
+6.  **Glossary**
+
+    1.  [Grid lines](/ko/docs/Glossary/Grid_lines)
+    2.  [Grid tracks](/ko/docs/Glossary/Grid_tracks)
+    3.  [Grid cell](/ko/docs/Glossary/Grid_cell)
+    4.  [Grid areas](/ko/docs/Glossary/Grid_areas)
+    5.  [Gutters](/ko/docs/Glossary/Gutters)
+    6.  [Grid row](/ko/docs/Glossary/Grid_rows)
+    7.  [Grid column](/ko/docs/Glossary/Grid_column)

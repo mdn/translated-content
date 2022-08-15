@@ -6,52 +6,45 @@ tags:
   - Reference
 translation_of: Web/CSS/actual_value
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> 속성의 <strong>실제값</strong>은 모든 근사치(approximation)가 적용된 뒤의 <a href="/ko/docs/Web/CSS/used_value">사용값</a>입니다. 예를 들어, 사용자 에이전트는 오직 정수 픽셀값으로 테두리(border)를 렌더링할 수도 있고 테두리의 계산된 폭(width)에 근접하도록 강제할 지도 모릅니다.</p>
+[CSS](/ko/docs/Web/CSS) 속성의 **실제값**은 모든 근사치(approximation)가 적용된 뒤의 [사용값](/ko/docs/Web/CSS/used_value)입니다. 예를 들어, 사용자 에이전트는 오직 정수 픽셀값으로 테두리(border)를 렌더링할 수도 있고 테두리의 계산된 폭(width)에 근접하도록 강제할 지도 모릅니다.
 
-<h2 id="Calculating_a_property's_actual_value">Calculating a property's actual value</h2>
+## Calculating a property's actual value
 
-<p>The {{glossary("user agent")}} performs four steps to calculate a property's actual (final) value:</p>
+The {{glossary("user agent")}} performs four steps to calculate a property's actual (final) value:
 
-<ol>
- <li>First, the <a href="/ko/docs/CSS/specified_value" title="https://developer.mozilla.org/en/CSS/specified_value">specified value</a> is determined based on the result of <a href="/ko/docs/Web/CSS/Cascade">cascading</a>, <a href="/ko/docs/Web/CSS/inheritance" title="en/CSS/inheritance">inheritance</a>, or using the <a href="/ko/docs/Web/CSS/initial_value">initial value</a>.</li>
- <li>Next, the <a href="/ko/docs/Web/CSS/computed_value" title="en/CSS/computed value">computed value</a> is calculated according to the specification (for example, a <code>span</code> with <code>position: absolute</code> will have its computed <code>display</code> changed to <code>block</code>).</li>
- <li>Then, layout is calculated, resulting in the <a href="/ko/docs/Web/CSS/used_value">used value</a>.</li>
- <li>Finally, the used value is transformed according to the limitations of the local environment, resulting in the actual value.</li>
-</ol>
+1.  First, the [specified value](/ko/docs/CSS/specified_value "https://developer.mozilla.org/en/CSS/specified_value") is determined based on the result of [cascading](/ko/docs/Web/CSS/Cascade), [inheritance](/ko/docs/Web/CSS/inheritance "en/CSS/inheritance"), or using the [initial value](/ko/docs/Web/CSS/initial_value).
+2.  Next, the [computed value](/ko/docs/Web/CSS/computed_value "en/CSS/computed value") is calculated according to the specification (for example, a `span` with `position: absolute` will have its computed `display` changed to `block`).
+3.  Then, layout is calculated, resulting in the [used value](/ko/docs/Web/CSS/used_value).
+4.  Finally, the used value is transformed according to the limitations of the local environment, resulting in the actual value.
 
-<h2 id="명세">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
-  <li>CSS 주요 개념
-    <ul>
-      <li><a href="/ko/docs/Web/CSS/Syntax">CSS 문법</a></li>
-      <li><a href="/ko/docs/Web/CSS/At-rule">@규칙</a></li>
-      <li><a href="/ko/docs/Web/CSS/Comments">주석</a></li>
-      <li><a href="/ko/docs/Web/CSS/Specificity">명시도</a></li>
-      <li><a href="/ko/docs/Web/CSS/inheritance">상속</a></li>
-      <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">박스 모델</a></li>
-      <li><a href="/ko/docs/Web/CSS/Layout_mode">레이아웃 모드</a></li>
-      <li><a href="/ko/docs/Web/CSS/Visual_formatting_model">시각적 서식 모델</a></li>
-      <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">마진 중첩</a></li>
-      <li>값
-        <ul>
-          <li><a href="/ko/docs/Web/CSS/initial_value">초깃값</a></li>
-          <li><a href="/ko/docs/Web/CSS/computed_value">계산값</a></li>
-          <li><a href="/ko/docs/Web/CSS/resolved_value">결정값</a></li>
-          <li><a href="/ko/docs/Web/CSS/specified_value">지정값</a></li>
-          <li><a href="/ko/docs/Web/CSS/used_value">사용값</a></li>
-          <li><a href="/ko/docs/Web/CSS/actual_value">실제값</a></li>
-        </ul>
-      </li>
-      <li><a href="/ko/docs/Web/CSS/Value_definition_syntax">값 정의 구문</a></li>
-      <li><a href="/ko/docs/Web/CSS/Shorthand_properties">단축 속성</a></li>
-      <li><a href="/ko/docs/Web/CSS/Replaced_element">대체 요소</a></li>
-    </ul>
-  </li>
-</ul>
+- CSS 주요 개념
+
+  - [CSS 문법](/ko/docs/Web/CSS/Syntax)
+  - [@규칙](/ko/docs/Web/CSS/At-rule)
+  - [주석](/ko/docs/Web/CSS/Comments)
+  - [명시도](/ko/docs/Web/CSS/Specificity)
+  - [상속](/ko/docs/Web/CSS/inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
+  - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
+  - [마진 중첩](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 값
+
+    - [초깃값](/ko/docs/Web/CSS/initial_value)
+    - [계산값](/ko/docs/Web/CSS/computed_value)
+    - [결정값](/ko/docs/Web/CSS/resolved_value)
+    - [지정값](/ko/docs/Web/CSS/specified_value)
+    - [사용값](/ko/docs/Web/CSS/used_value)
+    - [실제값](/ko/docs/Web/CSS/actual_value)
+
+  - [값 정의 구문](/ko/docs/Web/CSS/Value_definition_syntax)
+  - [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)
+  - [대체 요소](/ko/docs/Web/CSS/Replaced_element)

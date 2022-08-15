@@ -6,15 +6,16 @@ tags:
   - Reference
 translation_of: Web/CSS/text-shadow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code><strong>text-shadow</strong></code> <a href="/ko/docs/Web/CSS">CSS</a> 속성은 텍스트에 그림자(shadow)를 추가합니다. 텍스트와 그 장식에 적용 할 쉼표로 구분 된 그림자 목록을 허용합니다. 각 그림자는 요소, 흐림 반경 및 색상의 X 및 Y 오프셋 조합으로 설명됩니다.</p>
+**`text-shadow`** [CSS](/ko/docs/Web/CSS) 속성은 텍스트에 그림자(shadow)를 추가합니다. 텍스트와 그 장식에 적용 할 쉼표로 구분 된 그림자 목록을 허용합니다. 각 그림자는 요소, 흐림 반경 및 색상의 X 및 Y 오프셋 조합으로 설명됩니다.
 
-<p>{{EmbedInteractiveExample("pages/css/text-shadow.html")}}</p>
+{{EmbedInteractiveExample("pages/css/text-shadow.html")}}
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+## 구문
 
-<pre><code>/* offset-x | offset-y | blur-radius | color */
+```css
+/* offset-x | offset-y | blur-radius | color */
 text-shadow: 1px 1px 2px black;
 
 /* color | offset-x | offset-y | blur-radius */
@@ -33,73 +34,82 @@ text-shadow: 5px 10px;
 /* Global values */
 text-shadow: inherit;
 text-shadow: initial;
-text-shadow: unset;</code></pre>
+text-shadow: revert;
+text-shadow: revert-layer;
+text-shadow: unset;
+```
 
-<p>This property is specified as a comma-separated list of shadows.</p>
+This property is specified as a comma-separated list of shadows.
 
-<p>Each shadow is specified as two or three <code>&lt;length&gt;</code> values, followed optionally by a <code>&lt;color&gt;</code> value. The first two <code>&lt;length&gt;</code> values are the <code>&lt;offset-x&gt;</code> and <code>&lt;offset-y&gt;</code> values. The third, optional, <code>&lt;length&gt;</code> value is the <code>&lt;blur-radius&gt;</code>. The<code>&lt;color&gt;</code> value is the shadow's color.</p>
+Each shadow is specified as two or three `<length>` values, followed optionally by a `<color>` value. The first two `<length>` values are the `<offset-x>` and `<offset-y>` values. The third, optional, `<length>` value is the `<blur-radius>`. The`<color>` value is the shadow's color.
 
-<p>When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.</p>
+When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.
 
-<p>This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>.</p>
+This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).
 
-<h3 id="Values" name="Values">값</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>선택값(생략가능). 위치값(offset)이전/이후에 설정이 가능하다. 색상(color)값이 설정되지 않으면, 브라우저 기본값(UA-chosen color)이 사용된다.</dd>
- <dt><code>&lt;offset-x&gt; &lt;offset-y&gt;</code></dt>
- <dd>Required. These {{cssxref("&lt;length&gt;")}} values specify the shadow's distance from the text. <code>&lt;offset-x&gt;</code> specifies the horizontal distance; a negative value places the shadow to the left of the text. <code>&lt;offset-y&gt;</code> specifies the vertical distance; a negative value places the shadow above the text. If both values are <code>0</code>, the shadow is placed directly behind the text, although it may be partly visible due to the effect of <code>&lt;blur-radius&gt;</code>.</dd>
- <dt><code>&lt;blur-radius&gt;</code></dt>
- <dd>Optional. This is a {{cssxref("&lt;length&gt;")}} value. The higher the value, the bigger the blur; the shadow becomes wider and lighter. If not specified, it defaults to <code>0</code>.</dd>
- <dt>
- <h3 id="Formal_syntax">Formal syntax</h3>
+- {{cssxref("&lt;color&gt;")}}
+  - : Optional. The color of the shadow. It can be specified either before or after the offset values. If unspecified, the color's value is left up to the user agent, so when consistency across browsers is desired you should define it explicitly.
+- `<offset-x> <offset-y>`
+  - : Required. These {{cssxref("&lt;length&gt;")}} values specify the shadow's distance from the text. `<offset-x>` specifies the horizontal distance; a negative value places the shadow to the left of the text. `<offset-y>` specifies the vertical distance; a negative value places the shadow above the text. If both values are `0`, the shadow is placed directly behind the text, although it may be partly visible due to the effect of `<blur-radius>`.
+- `<blur-radius>`
+  - : Optional. This is a {{cssxref("&lt;length&gt;")}} value. The higher the value, the bigger the blur; the shadow becomes wider and lighter. If not specified, it defaults to `0`.
 
- {{csssyntax}}
+## Formal definition
 
- <h2 id="Examples">Examples</h2>
+{{CSSInfo}}
 
- <h3 id="Simple_shadow">Simple shadow</h3>
+## Formal syntax
 
- <pre><code>.red-text-shadow {
+{{csssyntax}}
+
+## Examples
+
+### Simple shadow
+
+```css
+.red-text-shadow {
   text-shadow: red 0 -2px;
-}</code></pre>
+}
+```
 
- <pre><code>&lt;p class="red-text-shadow"&gt;Sed ut perspiciatis unde omnis iste
+```html
+<p class="red-text-shadow">Sed ut perspiciatis unde omnis iste
     natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.&lt;/p&gt;</code></pre>
+    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+```
 
- <p>{{EmbedLiveSample('Simple_shadow', '660px', '90px')}}</p>
+{{EmbedLiveSample('Simple_shadow', '660px', '90px')}}
 
- <h3 id="Multiple_shadows">Multiple shadows</h3>
+### Multiple shadows
 
- <pre><code>.white-text-with-blue-shadow {
+```css
+.white-text-with-blue-shadow {
   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
   color: white;
   font: 1.5em Georgia, serif;
-}</code></pre>
+}
+```
 
- <pre><code>&lt;p class="white-text-with-blue-shadow"&gt;Sed ut perspiciatis unde omnis iste
+```html
+<p class="white-text-with-blue-shadow">Sed ut perspiciatis unde omnis iste
     natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.&lt;/p&gt;</code></pre>
+    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+```
 
- <p>{{EmbedLiveSample('Multiple_shadows', '660px', '170px')}}</p>
+{{EmbedLiveSample('Multiple_shadows', '660px', '170px')}}
 
- <h2 id="Specifications">Specifications</h2>
+## Specifications
 
- {{Specifications}}
+{{Specifications}}
 
- <p id="Syntax">{{cssinfo}}</p>
+## Browser compatibility
 
- <h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
- <p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+## See also
 
- <p>{{Compat("css.properties.text-shadow")}}</p>
-
- <h3 id="Quantum_CSS_notes">Quantum CSS notes</h3>
- Gecko has a bug whereby {{cssxref("transition")}}s will not work when transitioning from a <code>text-shadow</code> with a color specified to a <code>text-shadow</code> without a color specified ({{bug(726550)}}). This has been fixed in Firefox's new parallel CSS engine (also known as <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> or <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, planned for release in Firefox 57).
-
- <h2 id="See_also">See also</h2>
- <a href="https://cssgenerator.org/text-shadow-css-generator.html">Text Shadow CSS Generator</a> - An interactive text shadow CSS generator. {{cssxref("box-shadow")}} The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color) <a href="/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></dt>
-</dl>
+- {{cssxref("box-shadow")}}
+- The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)

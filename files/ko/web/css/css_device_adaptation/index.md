@@ -8,20 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Device_Adaptation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Device Adapation</strong>은 뷰포트의 크기, 줌 배율(factor) 및 방향을 정의할 수 있는 CSS 모듈입니다.</p>
+**CSS Device Adapation**은 뷰포트의 크기, 줌 배율(factor) 및 방향을 정의할 수 있는 CSS 모듈입니다.
 
-<h2 id="참고서">참고서</h2>
+## 참고서
 
-<h3 id="규칙">@규칙</h3>
+### @규칙
 
-<div class="index">
-<ul>
- <li>{{cssxref("@viewport")}}</li>
-</ul>
-</div>
+- {{cssxref("@viewport")}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}

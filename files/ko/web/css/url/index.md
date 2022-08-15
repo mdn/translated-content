@@ -10,45 +10,44 @@ translation_of: Web/CSS/url()
 translation_of_original: Web/CSS/url
 original_slug: Web/CSS/url()
 ---
-<div>{{ CssRef() }}</div>
+{{ CssRef() }}
 
-<p><strong><code>&lt;url&gt;</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">자료형</a>은 이미지나 글꼴 등 리소스를 가리키는 문자열을 나타냅니다. URL은 {{ Cssxref("background-image") }}, {{ Cssxref("cursor") }}, {{ cssxref("list-style") }} 등 다양한 속성에서 사용할 수 있습니다.</p>
+**`<url>`** [CSS](/ko/docs/Web/CSS "CSS") [자료형](/ko/docs/Web/CSS/CSS_Types)은 이미지나 글꼴 등 리소스를 가리키는 문자열을 나타냅니다. URL은 {{ Cssxref("background-image") }}, {{ Cssxref("cursor") }}, {{ cssxref("list-style") }} 등 다양한 속성에서 사용할 수 있습니다.
 
-<div class="note">
-<p><strong>URI와 URL</strong> <a class="external" href="http://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a>와 <a class="external" href="http://en.wikipedia.org/wiki/Uniform_Resource_Locator">URL</a>은 다릅니다. URI는 단순히 리소스의 식별자입니다. URL은 URI의 종류 중 하나로, 리소스의 <u>위치</u>를 표현합니다. URI는 URL일 수도 있고, 리소스의 이름(<a class="external" href="http://en.wikipedia.org/wiki/Uniform_Resource_Name">URN</a>)일 수도 있습니다.</p>
+> **참고:** **URI와 URL** [URI](http://en.wikipedia.org/wiki/Uniform_Resource_Identifier)와 [URL](http://en.wikipedia.org/wiki/Uniform_Resource_Locator)은 다릅니다. URI는 단순히 리소스의 식별자입니다. URL은 URI의 종류 중 하나로, 리소스의 **위치**를 표현합니다. URI는 URL일 수도 있고, 리소스의 이름([URN](http://en.wikipedia.org/wiki/Uniform_Resource_Name))일 수도 있습니다.
+>
+> CSS Level 1의 `url()` 함수형 표기법은 순수 URL을 나타낼 때만 사용했고, CSS Level 2에서 범위가 늘어나 URL이나 URN 등 어떤 URI도 사용할 수 있도록 바뀌었습니다. 이로써 `url()`을 사용해 `<uri>` CSS 자료형을 표현할 수 있었는데, 이상한 방식인데다 실제 CSS에서 URN은 거의 사용하지 않았으므로 불필요하다고 생각할만한 점이었습니다. CSS3에서는 혼란을 잠재우기 위해 초기의 더 좁은 정의로 돌아갔기 때문에 이제 `url()`은 `<url>`만을 나타낼 수 있습니다.
 
-<p>CSS Level 1의 <code>url()</code> 함수형 표기법은 순수 URL을 나타낼 때만 사용했고, CSS Level 2에서 범위가 늘어나 URL이나 URN 등 어떤 URI도 사용할 수 있도록 바뀌었습니다. 이로써 <code>url()</code>을 사용해 <code>&lt;uri&gt;</code> CSS 자료형을 표현할 수 있었는데, 이상한 방식인데다 실제 CSS에서 URN은 거의 사용하지 않았으므로 불필요하다고 생각할만한 점이었습니다. CSS3에서는 혼란을 잠재우기 위해 초기의 더 좁은 정의로 돌아갔기 때문에 이제 <code>url()</code>은 <code>&lt;url&gt;</code>만을 나타낼 수 있습니다.</p>
-</div>
+## 구문
 
-<h2 id="구문">구문</h2>
+`<url>` 자료형은 `url()` 함수형 표기법을 사용해 설정합니다. 따옴표는 선택사항으로 작은따옴표, 큰따옴표 둘 다 사용할 수 있습니다. 상대 URL도 사용할 수 있으며, 웹페이지의 URL이 아닌 스타일시트의 URL을 기준으로 사용합니다.
 
-<p><code>&lt;url&gt;</code> 자료형은 <code>url()</code> 함수형 표기법을 사용해 설정합니다. 따옴표는 선택사항으로 작은따옴표, 큰따옴표 둘 다 사용할 수 있습니다. 상대 URL도 사용할 수 있으며, 웹페이지의 URL이 아닌 스타일시트의 URL을 기준으로 사용합니다.</p>
+```
+<a_css_property>: url("http://mysite.example.com/mycursor.png")
+<a_css_property>: url('http://mysite.example.com/mycursor.png')
+<a_css_property>: url(http://mysite.example.com/mycursor.png)
+```
 
-<pre class="syntaxbox">&lt;a_css_property&gt;: url("http://mysite.example.com/mycursor.png")
-&lt;a_css_property&gt;: url('http://mysite.example.com/mycursor.png')
-&lt;a_css_property&gt;: url(http://mysite.example.com/mycursor.png)
-</pre>
+> **참고:** Firefox 15부터, 0x7e을 초과하는 제어 문자는 URL을 따옴표로 둘러싸야 유요합니다. 자세한 내용은 {{Bug(752230)}}을 참고하세요.
 
-<div class="note">
-<p><strong>참고:</strong> Firefox 15부터, <span id="summary_alias_container"><span id="short_desc_nonedit_display">0x7e을 초과하는 제어 문자는 URL을 따옴표로 둘러싸야 유요합니다. 자세한 내용은</span></span> {{Bug(752230)}}을 참고하세요.</p>
-</div>
+## 예제
 
-<h2 id="예제">예제</h2>
-
-<pre class="brush: css">.topbanner {
+```css
+.topbanner {
   background: url("topbanner.png") #00D no-repeat fixed;
 }
-</pre>
+```
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style: square url(http://www.example.com/redball.png);
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.types.url")}}</p>
+{{Compat}}

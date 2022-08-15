@@ -8,23 +8,20 @@ tags:
   - Reference
 translation_of: Web/CSS/padding
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>padding</code></strong> <a href="/ko/CSS">CSS</a> 속성은 요소의 네 방향 <a href="/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area">안쪽 여백 영역</a>을 설정합니다. {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}의 단축 속성입니다.</p>
+**`padding`** [CSS](/ko/CSS) 속성은 요소의 네 방향 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다. {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}의 단축 속성입니다.
 
-<div>{{EmbedInteractiveExample("pages/css/padding.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding.html")}}
 
+요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다.
 
+> **참고:** `padding`은 요소의 내부에 빈 공간을 추가합니다. 반면 {{cssxref("margin")}}은 요소의 **주위**에 빈 공간을 만듭니다.
 
-<p>요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다.</p>
+## 구문
 
-<div class="note">
-<p><strong>참고:</strong> <code>padding</code>은 요소의 내부에 빈 공간을 추가합니다. 반면 {{cssxref("margin")}}은 요소의 <strong>주위</strong>에 빈 공간을 만듭니다.</p>
-</div>
-
-<h2 id="구문">구문</h2>
-
-<pre class="brush:css no-line-numbers">/* 네 면 모두 적용 */
+```css
+/* 네 면 모두 적용 */
 padding: 1em;
 
 /* 세로방향 | 가로방향 */
@@ -40,43 +37,41 @@ padding: 5px 1em 0 2em;
 padding: inherit;
 padding: initial;
 padding: unset;
-</pre>
+```
 
-<p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">padding</span></font> 속성은 한 개, 두 개, 세 개, 혹은 네 개의 값으로 지정할 수 있습니다. 각 값은 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} 중 하나로, 음수 값은 유효하지 않습니다.</p>
+padding 속성은 한 개, 두 개, 세 개, 혹은 네 개의 값으로 지정할 수 있습니다. 각 값은 {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} 중 하나로, 음수 값은 유효하지 않습니다.
 
-<ul>
- <li><strong>한 개의 값</strong>은 모든 네 면의 여백을 설정합니다.</li>
- <li><strong>두 개의 값</strong>을 지정하면 첫 번째는 <strong>위와 아래</strong>, 두 번째는 <strong>왼쪽과 오른쪽</strong> 여백을 설정합니다.</li>
- <li><strong>세 개의 값</strong>을 지정하면 첫 번째는 <strong>위</strong>, 두 번째는 <strong>왼쪽과 오른쪽,</strong> 세 번째 값은 <strong>아래</strong> 여백을 설정합니다.</li>
- <li><strong>네 개의 값</strong>을 지정하면 각각 <strong>상, 우, 하, 좌</strong> 순서로 여백을 지정합니다. (시계방향)</li>
-</ul>
+- **한 개의 값**은 모든 네 면의 여백을 설정합니다.
+- **두 개의 값**을 지정하면 첫 번째는 **위와 아래**, 두 번째는 **왼쪽과 오른쪽** 여백을 설정합니다.
+- **세 개의 값**을 지정하면 첫 번째는 **위**, 두 번째는 **왼쪽과 오른쪽,** 세 번째 값은 **아래** 여백을 설정합니다.
+- **네 개의 값**을 지정하면 각각 **상, 우, 하, 좌** 순서로 여백을 지정합니다. (시계방향)
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><strong>{{cssxref("length")}}</strong></dt>
- <dd>여백의 크기로 고정값 사용.</dd>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>여백의 크기로 <a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a> 너비의 백분율 사용.</dd>
-</dl>
+- **{{cssxref("length")}}**
+  - : 여백의 크기로 고정값 사용.
+- {{cssxref("percentage")}}
+  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비의 백분율 사용.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="간단한_예제">간단한 예제</h3>
+### 간단한 예제
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h4&gt;평범한 안쪽 여백을 가진 요소.&lt;/h4&gt;
-&lt;h3&gt;엄청난 안쪽 여백을 가진 요소!&lt;/h3&gt;
-</pre>
+```html
+<h4>평범한 안쪽 여백을 가진 요소.</h4>
+<h3>엄청난 안쪽 여백을 가진 요소!</h3>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">h4 {
+```css
+h4 {
   background-color: lime;
   padding: 20px 50px;
 }
@@ -85,13 +80,14 @@ h3 {
   background-color: cyan;
   padding: 110px 50px 50px 110px;
 }
-</pre>
+```
 
-<p><span>{{EmbedLiveSample('간단한_예제', '100%', 300)}}</span></p>
+{{EmbedLiveSample('간단한_예제', '100%', 300)}}
 
-<h3 id="더_많은_예제"><span>더 많은 예제</span></h3>
+### 더 많은 예제
 
-<pre class="brush: css">padding: 5%;                /* 모두 5% */
+```css
+padding: 5%;                /* 모두 5% */
 
 padding: 10px;              /* 모두 10px */
 
@@ -106,21 +102,19 @@ padding: 1em 3px 30px 5px;  /* 상:  1em */
                             /* 우:  3px */
                             /* 하: 30px */
                             /* 좌:  5px */
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.padding")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS 기본 박스 모델 입문</a></li>
- <li>{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.</li>
-</ul>
+- [CSS 기본 박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.

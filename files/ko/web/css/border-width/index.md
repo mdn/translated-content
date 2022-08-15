@@ -6,39 +6,36 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-shorthand-property'
+  - recipe:css-shorthand-property
 translation_of: Web/CSS/border-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>border-width</code></strong> <a href="/ko/docs/Web/CSS/Shorthand_properties">단축 속성</a>은 요소 네 면 테두리의 너비를 설정합니다.</p>
+[CSS](/ko/docs/Web/CSS) **`border-width`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소 네 면 테두리의 너비를 설정합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/border-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-width.html")}}
 
+## 구성 속성
 
+`border-width`는 단축 속성으로서 다음의 하위 속성을 포함합니다.
 
-<h2 id="구성_속성">구성 속성</h2>
+- {{cssxref("border-bottom-width")}}
+- {{cssxref("border-left-width")}}
+- {{cssxref("border-right-width")}}
+- {{cssxref("border-top-width")}}
 
-<p><code>border-width</code>는 단축 속성으로서 다음의 하위 속성을 포함합니다.</p>
+## 구문
 
-<ul>
- <li>{{cssxref("border-bottom-width")}}</li>
- <li>{{cssxref("border-left-width")}}</li>
- <li>{{cssxref("border-right-width")}}</li>
- <li>{{cssxref("border-top-width")}}</li>
-</ul>
-
-<h2 id="구문">구문</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* 키워드 값 */
+```css
+/* 키워드 값 */
 border-width: thin;
 border-width: medium;
 border-width: thick;
 
-/* &lt;length&gt; 값 */<em>
-</em>border-width: 4px;
-border-width: 1.2rem;<em>
-</em>
+/* <length> 값 */
+border-width: 4px;
+border-width: 1.2rem;
+
 /* 세로방향 | 가로방향 */
 border-width: 2px 1.5em;
 
@@ -52,80 +49,57 @@ border-width: 1px 2em 0 4rem;
 border-width: inherit;
 border-width: initial;
 border-width: unset;
-</pre>
+```
 
-<p><code>border-width</code> 속성은 한 개에서 네 개의 값을 사용해 지정할 수 있습니다.</p>
+`border-width` 속성은 한 개에서 네 개의 값을 사용해 지정할 수 있습니다.
 
-<ul>
- <li><strong>한 개의 값</strong>은 네 면 모두의 테두리 너비를 설정합니다.</li>
- <li><strong>두 개의 값</strong>을 지정하면 첫 번째는 <strong>위와 아래</strong>, 두 번째는 <strong>왼쪽과 오른쪽</strong> 테두리 너비를 설정합니다.</li>
- <li><strong>세 개의 값</strong>을 지정하면 첫 번째는 <strong>위</strong>, 두 번째는 <strong>왼쪽과 오른쪽,</strong> 세 번째 값은 <strong>아래</strong> 테두리 너비를 설정합니다.</li>
- <li><strong>네 개의 값</strong>을 지정하면 각각 <strong>상, 우, 하, 좌</strong> 순서로 테두리 너비를 지정합니다. (시계방향)</li>
-</ul>
+- **한 개의 값**은 네 면 모두의 테두리 너비를 설정합니다.
+- **두 개의 값**을 지정하면 첫 번째는 **위와 아래**, 두 번째는 **왼쪽과 오른쪽** 테두리 너비를 설정합니다.
+- **세 개의 값**을 지정하면 첫 번째는 **위**, 두 번째는 **왼쪽과 오른쪽,** 세 번째 값은 **아래** 테두리 너비를 설정합니다.
+- **네 개의 값**을 지정하면 각각 **상, 우, 하, 좌** 순서로 테두리 너비를 지정합니다. (시계방향)
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td style="vertical-align: middle;"><code>thin</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thin; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">얇은 테두리</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>medium</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: medium; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">중간 테두리</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>thick</code></td>
-    <td style="vertical-align: middle;">
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thick; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">굵은 테두리</td>
-   </tr>
-  </tbody>
- </table>
+- `<line-width>`
 
- <div class="note">
- <p><strong>참고:</strong> 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 <code>thin ≤ medium ≤ thick</code>이고, 하나의 문서 내에서 동일합니다.</p>
- </div>
- </dd>
-</dl>
+  - : 테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
 
-<h2 id="형식_정의">형식 정의</h2>
+    | `thin`   |     | 얇은 테두리 |
+    | -------- | --- | ----------- |
+    | `medium` |     | 중간 테두리 |
+    | `thick`  |     | 굵은 테두리 |
 
-<p>{{cssinfo}}</p>
+    > **참고:** 각 키워드의 굵기를 정의한 명세는 없기 때문에 결과는 구현별로 상이할 수 있습니다. 다만 굵기는 언제나 `thin ≤ medium ≤ thick`이고, 하나의 문서 내에서 동일합니다.
 
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 정의
+
+{{cssinfo}}
+
+## 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="서로_다른_값의_조합">서로 다른 값의 조합</h3>
+### 서로 다른 값의 조합
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p id="sval"&gt;
-    한 개의 값: 모든 네 면이 6px 테두리&lt;/p&gt;
-&lt;p id="bival"&gt;
-    두 개의 다른 값: 위아래에 2px 테두리, 좌우에 10px 테두리&lt;/p&gt;
-&lt;p id="treval"&gt;
-    세 개의 다른 값: 위에 0.3em, 아래에 9px, 좌우에 0&lt;/p&gt;
-&lt;p id="fourval"&gt;
-    네 개의 다른 값: "얇은" 위, "중간" 오른쪽, "두꺼운" 아래, 왼쪽 1em&lt;/p&gt;</pre>
+```html
+<p id="sval">
+    한 개의 값: 모든 네 면이 6px 테두리</p>
+<p id="bival">
+    두 개의 다른 값: 위아래에 2px 테두리, 좌우에 10px 테두리</p>
+<p id="treval">
+    세 개의 다른 값: 위에 0.3em, 아래에 9px, 좌우에 0</p>
+<p id="fourval">
+    네 개의 다른 값: "얇은" 위, "중간" 오른쪽, "두꺼운" 아래, 왼쪽 1em</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">#sval {
+```css
+#sval {
   border: ridge #ccc;
   border-width: 6px;
 }
@@ -145,23 +119,22 @@ p {
   width: auto;
   margin: 0.25em;
   padding: 0.25em;
-}</pre>
+}
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{ EmbedLiveSample('서로_다른_값의_조합', 320, 320) }}</p>
+{{ EmbedLiveSample('서로_다른_값의_조합', 320, 320) }}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.border-width")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>테두리 관련 단축 속성: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}</li>
- <li>테두리 너비 속성: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}</li>
-</ul>
+- 테두리 관련 단축 속성: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}
+- 테두리 너비 속성: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}

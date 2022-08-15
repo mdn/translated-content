@@ -8,44 +8,34 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Transforms
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Transforms</strong> is a module of CSS that defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.</p>
+**CSS Transforms** is a module of CSS that defines how elements styled with CSS can be transformed in two-dimensional or three-dimensional space.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<div class="index">
-<ul>
- <li>{{cssxref("backface-visibility")}}</li>
- <li>{{cssxref("perspective")}}</li>
- <li>{{cssxref("perspective-origin")}}</li>
- <li>{{cssxref("rotate")}}</li>
- <li>{{cssxref("scale")}}</li>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("transform-box")}}</li>
- <li>{{cssxref("transform-origin")}}</li>
- <li>{{cssxref("transform-style")}}</li>
- <li>{{cssxref("translate")}}</li>
-</ul>
-</div>
+- {{cssxref("backface-visibility")}}
+- {{cssxref("perspective")}}
+- {{cssxref("perspective-origin")}}
+- {{cssxref("rotate")}}
+- {{cssxref("scale")}}
+- {{cssxref("transform")}}
+- {{cssxref("transform-box")}}
+- {{cssxref("transform-origin")}}
+- {{cssxref("transform-style")}}
+- {{cssxref("translate")}}
 
-<h3 id="Data_types">Data types</h3>
+### Data types
 
-<div class="index">
-<ul>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
-</div>
+- {{cssxref("&lt;transform-function&gt;")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></dt>
- <dd>Step-by-step tutorial about how to transform elements styled with CSS.</dd>
-</dl>
+- [Using CSS transforms](/ko/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+  - : Step-by-step tutorial about how to transform elements styled with CSS.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}

@@ -6,64 +6,60 @@ tags:
   - CSS Fonts
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/font-synthesis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>font-synthesis</code></strong> 속성은 브라우저가 굵은 글꼴과 이탤릭 글꼴을 합성하는 것을 허용할지 설정합니다.</p>
+[CSS](/ko/docs/Web/CSS) **`font-synthesis`** 속성은 브라우저가 굵은 글꼴과 이탤릭 글꼴을 합성하는 것을 허용할지 설정합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/font-synthesis.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-synthesis.html")}}
 
+## 구문
 
+`font-synthesis`는 다음 방법 중 하나를 사용해 지정합니다.
 
-<h2 id="구문">구문</h2>
+- `none` 키워드.
+- `weight` 또는 `style` 키워드.
+- `weight`와 `style` 키워드.
 
-<p><code>font-synthesis</code>는 다음 방법 중 하나를 사용해 지정합니다.</p>
+### 값
 
-<ul>
- <li><code>none</code> 키워드.</li>
- <li><code>weight</code> 또는 <code>style</code> 키워드.</li>
- <li><code>weight</code>와 <code>style</code> 키워드.</li>
-</ul>
+- `none`
+  - : 굵은 글꼴과 이탤릭 글꼴의 합성을 금지합니다.
+- `weight`
+  - : 필요한 경우 굵은 글꼴을 합성할 수 있습니다.
+- `style`
+  - : 필요한 경우 이탤릭 글꼴을 합성할 수 있습니다.
 
-<h3 id="값">값</h3>
+## 설명
 
-<dl>
- <dt><code>none</code></dt>
- <dd>굵은 글꼴과 이탤릭 글꼴의 합성을 금지합니다.</dd>
- <dt><code>weight</code></dt>
- <dd>필요한 경우 굵은 글꼴을 합성할 수 있습니다.</dd>
- <dt><code>style</code></dt>
- <dd>필요한 경우 이탤릭 글꼴을 합성할 수 있습니다.</dd>
-</dl>
+대부분의 표준 서양 글꼴은 이탤릭과 굵은 글꼴을 포함하고 있으나 상용 글꼴은 그렇지 않은 경우도 많습니다. 한국, 중국, 일본을 포함한 비 알파벳 문화권의 문자 체계는 보통 이런 변형을 포함하지 않으며 브라우저의 글꼴 합성으로 인해 가독성이 떨어질 수 있습니다. 이 두 가지 경우에 대해 `font-synthesis`를 사용해 기본 글꼴 합성을 끄는 것이 좋을 수도 있습니다.
 
-<h2 id="설명">설명</h2>
+## 형식 정의
 
-<p>대부분의 표준 서양 글꼴은 이탤릭과 굵은 글꼴을 포함하고 있으나 상용 글꼴은 그렇지 않은 경우도 많습니다. 한국, 중국, 일본을 포함한 비 알파벳 문화권의 문자 체계는 보통 이런 변형을 포함하지 않으며 브라우저의 글꼴 합성으로 인해 가독성이 떨어질 수 있습니다. 이 두 가지 경우에 대해 <code>font-synthesis</code>를 사용해 기본 글꼴 합성을 끄는 것이 좋을 수도 있습니다.</p>
+{{cssinfo}}
 
-<h2 id="형식_정의">형식 정의</h2>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="글꼴_합성_비활성화">글꼴 합성 비활성화</h3>
+### 글꼴 합성 비활성화
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;em class="syn"&gt;절 합성하세요! Synthesize!&lt;/em&gt;
-&lt;br/&gt;
-&lt;em class="no-syn"&gt;절 합성하지 마세요! Synthesize!&lt;/em&gt;
-</pre>
+```html
+<em class="syn">절 합성하세요! Synthesize!</em>
+<br/>
+<em class="no-syn">절 합성하지 마세요! Synthesize!</em>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">em {
+```css
+em {
   font-weight: bold;
 }
 .syn {
@@ -72,23 +68,21 @@ translation_of: Web/CSS/font-synthesis
 .no-syn {
   font-synthesis: none;
 }
-</pre>
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{ EmbedLiveSample('글꼴_합성_비활성화', '', '50') }}</p>
+{{ EmbedLiveSample('글꼴_합성_비활성화', '', '50') }}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.font-synthesis")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-weight")}}</li>
-</ul>
+- {{cssxref("font-style")}}
+- {{cssxref("font-weight")}}

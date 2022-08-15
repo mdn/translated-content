@@ -12,45 +12,45 @@ tags:
 translation_of: Web/CSS/var()
 original_slug: Web/CSS/var()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>var()</code></strong> 함수는 <a href="/ko/docs/Web/CSS/--*">사용자 지정 속성</a>, 또는 "CSS 변수"의 값을 다른 속성의 값으로 지정할 때 사용합니다.</span></p>
+[CSS](/ko/docs/Web/CSS) **`var()`** 함수는 [사용자 지정 속성](/ko/docs/Web/CSS/--*), 또는 "CSS 변수"의 값을 다른 속성의 값으로 지정할 때 사용합니다.
 
-<pre class="brush: css line-numbers  language-css no-line-numbers"><code class="language-css">var(--header-color, blue);</code></pre>
+```css
+var(--header-color, blue);
+```
 
-<p><code>var()</code> 함수는 값이 아닌 속성 이름, 선택자 등 다른 곳에 사용할 수 없습니다. 시도할 경우 유효하지 않은 구문이 되거나, 변수와 관계없는 값이 됩니다.</p>
+`var()` 함수는 값이 아닌 속성 이름, 선택자 등 다른 곳에 사용할 수 없습니다. 시도할 경우 유효하지 않은 구문이 되거나, 변수와 관계없는 값이 됩니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<p>첫 번째 인수는 값을 가져올 사용자 지정 속성의 이름입니다. 선택적으로 제공할 수 있는 두 번째 인수는 대체값으로, 대상 사용자 지정 속성이 유효하지 않은 경우 대신 사용합니다.</p>
+첫 번째 인수는 값을 가져올 사용자 지정 속성의 이름입니다. 선택적으로 제공할 수 있는 두 번째 인수는 대체값으로, 대상 사용자 지정 속성이 유효하지 않은 경우 대신 사용합니다.
 
 {{csssyntax}}
 
-<div class="note">
-<p><strong>참고:</strong> 대체값 구문은 사용자 지정 속성 구문과 동일하게 쉼표를 허용합니다. 그러므로 <code>var(--foo, red, blue)</code>의 대체값은 쉼표까지 포함한 <code>red, blue</code>입니다. 말하자면 첫 번째 쉼표의 뒤쪽은 모두 대체값이 되는 것입니다.</p>
-</div>
+> **참고:** 대체값 구문은 사용자 지정 속성 구문과 동일하게 쉼표를 허용합니다. 그러므로 `var(--foo, red, blue)`의 대체값은 쉼표까지 포함한 `red, blue`입니다. 말하자면 첫 번째 쉼표의 뒤쪽은 모두 대체값이 되는 것입니다.
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>&lt;custom-property-name&gt;</code></dt>
- <dd>두 개의 대시로 시작하는, 사용자 지정 속성의 이름을 나타내는 식별자.</dd>
- <dt><code>&lt;declaration-value&gt;</code></dt>
- <dd>현재 맥락에서, 주어진 사용자 지정 속성이 유효하지 않으면 대신 사용할 대체값. 새 줄, 짝 없이 닫는 괄호(<code>)</code>, <code>]</code>, <code>}</code>) 세미콜론, 느낌표 등 특별한 의미를 가진 문자를 제외한 모든 문자를 사용할 수 있습니다.</dd>
-</dl>
+- `<custom-property-name>`
+  - : 두 개의 대시로 시작하는, 사용자 지정 속성의 이름을 나타내는 식별자.
+- `<declaration-value>`
+  - : 현재 맥락에서, 주어진 사용자 지정 속성이 유효하지 않으면 대신 사용할 대체값. 새 줄, 짝 없이 닫는 괄호(`)`, `]`, `}`) 세미콜론, 느낌표 등 특별한 의미를 가진 문자를 제외한 모든 문자를 사용할 수 있습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: css">:root {
+```css
+:root {
   --main-bg-color: pink;
 }
 
 body {
   background-color: var(--main-bg-color);
 }
-</pre>
+```
 
-<pre class="brush: css">/* Fallback */
+```css
+/* Fallback */
 /* In the component’s style: */
 .component .header {
   color: var(--header-color, blue); /* header-color isn’t set, and so remains blue, the fallback value */
@@ -64,19 +64,17 @@ body {
 .component {
   --text-color: #080;
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.custom-property.var")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{cssxref("env","env(…)")}} – 사용자 에이전트가 통제하는 읽기 전용 환경 변수.</li>
- <li><a href="/ko/docs/Web/CSS/Using_CSS_variables">CSS 변수 사용하기</a></li>
-</ul>
+- {{cssxref("env","env(…)")}} – 사용자 에이전트가 통제하는 읽기 전용 환경 변수.
+- [CSS 변수 사용하기](/ko/docs/Web/CSS/Using_CSS_variables)

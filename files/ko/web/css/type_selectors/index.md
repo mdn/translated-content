@@ -10,45 +10,50 @@ tags:
   - 선택자
 translation_of: Web/CSS/Type_selectors
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong>유형 선택자</strong>는 노드 이름을 사용해 요소를 선택합니다. 즉 문서 내에서 주어진 유형의 모든 요소를 선택합니다.</p>
+[CSS](/ko/docs/Web/CSS) **유형 선택자**는 노드 이름을 사용해 요소를 선택합니다. 즉 문서 내에서 주어진 유형의 모든 요소를 선택합니다.
 
-<pre class="brush: css notranslate">/* All &lt;a&gt; elements. */
+```css
+/* All <a> elements. */
 a {
   color: red;
-}</pre>
+}
+```
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox notranslate">element { <em>style properties</em> }
-</pre>
+```
+element { style properties }
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">span {
+```css
+span {
   background-color: DodgerBlue;
   color: #ffffff;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;span&gt;텍스트를 가진 span입니다.&lt;/span&gt;
-&lt;p&gt;텍스트를 가진 p입니다.&lt;/p&gt;
-&lt;span&gt;또 다시 텍스트를 가진 span입니다.&lt;/span&gt;
-</pre>
+```html
+<span>텍스트를 가진 span입니다.</span>
+<p>텍스트를 가진 p입니다.</p>
+<span>또 다시 텍스트를 가진 span입니다.</span>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample('예제', 200, 150)}}</p>
+{{EmbedLiveSample('예제', 200, 150)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.selectors.type")}}</p>
+{{Compat}}

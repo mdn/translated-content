@@ -10,20 +10,21 @@ tags:
   - SVG
   - SVG Filter
   - Web
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/backdrop-filter
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>backdrop-filter</code></strong>는 요소 뒤 영역에 흐림이나 색상 시프트 등 그래픽 효과를 적용할 수 있는 속성입니다.</span> 요소 "뒤"에 적용하기 때문에, 효과를 확인하려면 요소나 요소의 배경을 적어도 반투명하게는 설정해야 합니다.</p>
+[CSS](/ko/docs/Web/CSS) **`backdrop-filter`**는 요소 뒤 영역에 흐림이나 색상 시프트 등 그래픽 효과를 적용할 수 있는 속성입니다. 요소 "뒤"에 적용하기 때문에, 효과를 확인하려면 요소나 요소의 배경을 적어도 반투명하게는 설정해야 합니다.
 
-<pre class="brush: css no-line-numbers notranslate">/* 키워드 값 */
+```css
+/* 키워드 값 */
 backdrop-filter: none;
 
 /* SVG 필터를 가리키는 URL */
 backdrop-filter: url(commonfilters.svg#filter);
 
-/* &lt;filter-function&gt; 값 */
+/* <filter-function> 값 */
 backdrop-filter: blur(2px);
 backdrop-filter: brightness(60%);
 backdrop-filter: contrast(40%);
@@ -42,32 +43,31 @@ backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
 backdrop-filter: inherit;
 backdrop-filter: initial;
 backdrop-filter: unset;
-</pre>
+```
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>none</code></dt>
- <dd>뒤에 아무런 필터도 적용하지 않습니다.</dd>
- <dt><code>&lt;filter-function-list&gt;</code></dt>
- <dd>뒤에 적용할 {{cssxref("&lt;filter-function&gt;")}} 또는 <a href="/en-US/docs/Web/SVG/Element/filter">SVG필터</a>의 공백 구분 목록입니다.</dd>
-</dl>
+- `none`
+  - : 뒤에 아무런 필터도 적용하지 않습니다.
+- `<filter-function-list>`
+  - : 뒤에 적용할 {{cssxref("&lt;filter-function&gt;")}} 또는 [SVG필터](/ko/docs/Web/SVG/Element/filter)의 공백 구분 목록입니다.
 
-<h2 id="형식_정의">형식 정의</h2>
+## 형식 정의
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   font-family: sans-serif;
@@ -99,31 +99,31 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
-  &lt;div class="box"&gt;
-    &lt;p&gt;backdrop-filter: blur(10px)&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="container">
+  <div class="box">
+    <p>backdrop-filter: blur(10px)</p>
+  </div>
+</div>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample("예제", 600, 400)}}</p>
+{{EmbedLiveSample("예제", 600, 400)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.backdrop-filter")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{cssxref("filter")}}</li>
-</ul>
+- {{cssxref("filter")}}

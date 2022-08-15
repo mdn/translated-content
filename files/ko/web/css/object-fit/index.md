@@ -6,82 +6,81 @@ tags:
   - CSS Images
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/object-fit
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/ko/docs/Web/CSS">CSS</a> <strong><code>object-fit</code></strong> 속성은 {{HTMLElement("img")}}나 {{HTMLElement("video")}} 요소와 같은 <a href="/ko/docs/Web/CSS/Replaced_element">대체 요소</a>의 콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정합니다.</p>
+[CSS](/ko/docs/Web/CSS) **`object-fit`** 속성은 {{HTMLElement("img")}}나 {{HTMLElement("video")}} 요소와 같은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)의 콘텐츠 크기를 어떤 방식으로 조절해 요소에 맞출 것인지 지정합니다.
 
-<p>{{cssxref("object-position")}} 속성을 사용해 대체 요소 콘텐츠가 콘텐츠 박스 내에 위치할 지점을 바꿀 수 있습니다.</p>
+{{cssxref("object-position")}} 속성을 사용해 대체 요소 콘텐츠가 콘텐츠 박스 내에 위치할 지점을 바꿀 수 있습니다.
 
-<div>{{EmbedInteractiveExample("pages/css/object-fit.html")}}</div>
+{{EmbedInteractiveExample("pages/css/object-fit.html")}}
 
+## 구문
 
+`object-fit` 속성은 다음 목록 중 하나의 키워드를 사용해 지정합니다.
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+### 값
 
-<p><code>object-fit</code> 속성은 다음 목록 중 하나의 키워드를 사용해 지정합니다.</p>
+- `contain`
+  - : 대체 콘텐츠의 가로세로비를 유지하면서, 요소의 콘텐츠 박스 내부에 들어가도록 크기를 맞춤 조절합니다. 콘텐츠가 콘텐츠 박스 크기에 맞도록 하면서도 가로세로비를 유지하게 되므로, 서로의 가로세로비가 일치하지 않으면 객체가 ["레터박스"](https://ko.wikipedia.org/wiki/%EB%A0%88%ED%84%B0%EB%B0%95%EC%8A%A4)처럼 됩니다.
+- `cover`
+  - : 대체 콘텐츠의 가로세로비를 유지하면서, 요소 콘텐츠 박스를 가득 채웁니다. 서로의 가로세로비가 일치하지 않으면 객체 일부가 잘려나갑니다.
+- `fill`
+  - : 요소 콘텐츠 박스 크기에 맞춰 대체 콘텐츠의 크기를 조절합니다. 콘텐츠가 콘텐츠 박스를 가득 채웁니다. 서로의 가로세로비가 일치하지 않으면 콘텐츠가 늘어납니다.
+- `none`
+  - : 대체 콘텐츠의 크기를 조절하지 않습니다.
+- `scale-down`
+  - : `none`과 `contain` 중 대체 콘텐츠의 크기가 더 작아지는 값을 선택합니다.
 
-<h3 id="Values" name="Values">값</h3>
+## 형식 정의
 
-<dl>
- <dt><code>contain</code></dt>
- <dd>대체 콘텐츠의 가로세로비를 유지하면서, 요소의 콘텐츠 박스 내부에 들어가도록 크기를 맞춤 조절합니다. 콘텐츠가 콘텐츠 박스 크기에 맞도록 하면서도 가로세로비를 유지하게 되므로, 서로의 가로세로비가 일치하지 않으면 객체가 <a href="https://ko.wikipedia.org/wiki/%EB%A0%88%ED%84%B0%EB%B0%95%EC%8A%A4">"레터박스"</a>처럼 됩니다.</dd>
- <dt><code>cover</code></dt>
- <dd>대체 콘텐츠의 가로세로비를 유지하면서, 요소 콘텐츠 박스를 가득 채웁니다. 서로의 가로세로비가 일치하지 않으면 객체 일부가 잘려나갑니다.</dd>
- <dt><code>fill</code></dt>
- <dd>요소 콘텐츠 박스 크기에 맞춰 대체 콘텐츠의 크기를 조절합니다. 콘텐츠가 콘텐츠 박스를 가득 채웁니다. 서로의 가로세로비가 일치하지 않으면 콘텐츠가 늘어납니다.</dd>
- <dt><code>none</code></dt>
- <dd>대체 콘텐츠의 크기를 조절하지 않습니다.</dd>
- <dt><code>scale-down</code></dt>
- <dd><code>none</code>과 <code>contain</code> 중 대체 콘텐츠의 크기가 더 작아지는 값을 선택합니다.</dd>
-</dl>
+{{cssinfo}}
 
-<h2 id="형식_정의">형식 정의</h2>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="형식_구문">형식 구문</h2>
+## 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="이미지에_object-fit_지정">이미지에 <code>object-fit</code> 지정</h3>
+### 이미지에 `object-fit` 지정
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;section&gt;
-  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
-  &lt;img class="fill" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+```html
+<section>
+  <h2>object-fit: fill</h2>
+  <img class="fill" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="fill narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="fill narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
-  &lt;img class="contain" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: contain</h2>
+  <img class="contain" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="contain narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="contain narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
-  &lt;img class="cover" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: cover</h2>
+  <img class="cover" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="cover narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="cover narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: none&lt;/h2&gt;
-  &lt;img class="none" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: none</h2>
+  <img class="none" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="none narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <img class="none narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
-  &lt;img class="scale-down" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
+  <h2>object-fit: scale-down</h2>
+  <img class="scale-down" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
 
-  &lt;img class="scale-down narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"&gt;
-&lt;/section&gt;</pre>
+  <img class="scale-down narrow" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">h2 {
+```css
+h2 {
   font-family: Courier New, monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
@@ -126,23 +125,21 @@ img {
 .scale-down {
   object-fit: scale-down;
 }
-</pre>
+```
 
-<h4 id="결과">결과</h4>
+#### 결과
 
-<p>{{ EmbedLiveSample('이미지에_object-fit_지정', 500, 1100) }}</p>
+{{ EmbedLiveSample('이미지에_object-fit_지정', 500, 1100) }}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.object-fit")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>이미지 관련 다른 CSS 속성: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
- <li>{{cssxref("background-size")}}</li>
-</ul>
+- 이미지 관련 다른 CSS 속성: {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- {{cssxref("background-size")}}

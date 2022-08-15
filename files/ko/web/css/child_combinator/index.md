@@ -7,59 +7,62 @@ tags:
   - Selectors
 translation_of: Web/CSS/Child_combinator
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><strong>자식 결합자</strong>(<code>&gt;</code>)는 두 개의 CSS 선택자 사이에 위치하여 뒤쪽 선택자의 요소가 앞쪽 선택자 요소의 바로 밑에 위치할 경우에만 선택합니다.</p>
+**자식 결합자**(`>`)는 두 개의 CSS 선택자 사이에 위치하여 뒤쪽 선택자의 요소가 앞쪽 선택자 요소의 바로 밑에 위치할 경우에만 선택합니다.
 
-<pre class="brush: css no-line-numbers">/* List items that are children of the "my-things" list */
-ul.my-things &gt; li {
+```css
+/* List items that are children of the "my-things" list */
+ul.my-things > li {
   margin: 2em;
-}</pre>
+}
+```
 
-<p>뒤쪽 선택자의 요소는 앞쪽 선택자 요소의 바로 아래에 위치해야 하므로, DOM 트리의 깊이에 상관하지 않고 아래의 모든 요소를 선택하는 <a href="/ko/docs/Web/CSS/Descendant_combinator">자손 결합자</a>보다 더 엄격합니다.</p>
+뒤쪽 선택자의 요소는 앞쪽 선택자 요소의 바로 아래에 위치해야 하므로, DOM 트리의 깊이에 상관하지 않고 아래의 모든 요소를 선택하는 [자손 결합자](/ko/docs/Web/CSS/Descendant_combinator)보다 더 엄격합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">selector1 &gt; selector2 { <em>style properties</em> }
-</pre>
+```
+selector1 > selector2 { style properties }
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span {
+```css
+span {
   background-color: white;
 }
 
-div &gt; span {
+div > span {
   background-color: DodgerBlue;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;Span #1, in the div.
-    &lt;span&gt;Span #2, in the span that's in the div.&lt;/span&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-&lt;span&gt;Span #3, not in the div at all.&lt;/span&gt;
-</pre>
+```html
+<div>
+  <span>Span #1, in the div.
+    <span>Span #2, in the span that's in the div.</span>
+  </span>
+</div>
+<span>Span #3, not in the div at all.</span>
+```
 
-<h3 id="결과">결과</h3>
+### 결과
 
-<p>{{EmbedLiveSample("예제", "100%", 100)}}</p>
+{{EmbedLiveSample("예제", "100%", 100)}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.selectors.child")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/CSS/Descendant_combinator">자손 결합자</a></li>
-</ul>
+- [자손 결합자](/ko/docs/Web/CSS/Descendant_combinator)

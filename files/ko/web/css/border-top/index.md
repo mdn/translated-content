@@ -9,57 +9,59 @@ tags:
   - 테두리
 translation_of: Web/CSS/border-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><span class="seoSummary"><strong><code>border-top</code></strong> <a href="/ko/docs/Web/CSS">CSS</a> <a href="/ko/docs/Web/CSS/Shorthand_properties">단축 속성</a>은 요소의 위쪽 테두리를 설정합니다.</span> {{cssxref("border-top-width")}}, {{cssxref("border-top-style")}}, {{cssxref("border-top-color")}}의 값을 지정합니다.</p>
+**`border-top`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 위쪽 테두리를 설정합니다. {{cssxref("border-top-width")}}, {{cssxref("border-top-style")}}, {{cssxref("border-top-color")}}의 값을 지정합니다.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top.html")}}
 
+다른 단축 속성과 마찬가지로, `border-top`는 자신이 포함한 모든 값을 지정하며 사용자가 명시하지 않은 속성도 기본값으로 설정합니다. 즉, 아래 두 코드는 사실 동일합니다.
 
-
-<p>다른 단축 속성과 마찬가지로, <code>border-top</code>는 자신이 포함한 모든 값을 지정하며 사용자가 명시하지 않은 속성도 기본값으로 설정합니다. 즉, 아래 두 코드는 사실 동일합니다.</p>
-
-<pre class="brush: css">border-top-style: dotted;
+```css
+border-top-style: dotted;
 border-top: thick green;
-</pre>
+```
 
-<pre class="brush: css">border-top-style: dotted;
+```css
+border-top-style: dotted;
 border-top: none thick green;
-</pre>
+```
 
-<p>따라서 <code>border-top</code>보다 먼저 지정한 {{cssxref("border-top-style")}}의 값은 무시됩니다. {{cssxref("border-top-style")}}의 기본값은 <code>none</code>이므로, <code>border-style</code>을 명시하지 않으면 테두리를 만들지 않습니다.</p>
+따라서 `border-top`보다 먼저 지정한 {{cssxref("border-top-style")}}의 값은 무시됩니다. {{cssxref("border-top-style")}}의 기본값은 `none`이므로, `border-style`을 명시하지 않으면 테두리를 만들지 않습니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="brush: css no-line-numbers">border-top: 1px;
+```css
+border-top: 1px;
 border-top: 2px dotted;
 border-top: medium dashed green;
-</pre>
+```
 
-<p><code>border-top</code>은 한 개에서 세 개의 값을 사용해 지정할 수 있고, 순서는 상관하지 않습니다.</p>
+`border-top`은 한 개에서 세 개의 값을 사용해 지정할 수 있고, 순서는 상관하지 않습니다.
 
-<h3 id="값">값</h3>
+### 값
 
-<dl>
- <dt><code>&lt;br-width&gt;</code></dt>
- <dd>{{cssxref("border-top-width")}}.</dd>
- <dt><code>&lt;br-style&gt;</code></dt>
- <dd>{{cssxref("border-top-style")}}.</dd>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>{{cssxref("border-top-color")}}.</dd>
-</dl>
+- `<br-width>`
+  - : {{cssxref("border-top-width")}}.
+- `<br-style>`
+  - : {{cssxref("border-top-style")}}.
+- {{cssxref("&lt;color&gt;")}}
+  - : {{cssxref("border-top-color")}}.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: html">&lt;div&gt;
+```html
+<div>
   위쪽 테두리를 가진 요소입니다.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border-top: 4px dashed blue;
   background-color: gold;
   height: 100px;
@@ -67,16 +69,14 @@ border-top: medium dashed green;
   font-weight: bold;
   text-align: center;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('예제')}}</p>
+{{EmbedLiveSample('예제')}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
-{{Specifications}}
+{{Specifications}}{{cssinfo}}
 
-<div>{{cssinfo}}</div>
+## 브라우저 호환성
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
-
-<p>{{Compat("css.properties.border-top")}}</p>
+{{Compat}}

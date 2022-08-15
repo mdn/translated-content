@@ -8,19 +8,20 @@ tags:
   - Reference
 translation_of: Web/CSS/box-shadow
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><code>box-shadow</code> CSS 속성은 요소의 테두리를 감싼 그림자 효과를 추가합니다. 쉼표로 구문해서 여러 그림자 효과를 입힐 수 있습니다. 박스 그림자는 요소에서의 수평수직 거리(오프셋), 흐릿함과 확산 정도, 색상으로 이루어집니다.</p>
+`box-shadow` CSS 속성은 요소의 테두리를 감싼 그림자 효과를 추가합니다. 쉼표로 구문해서 여러 그림자 효과를 입힐 수 있습니다. 박스 그림자는 요소에서의 수평수직 거리(오프셋), 흐릿함과 확산 정도, 색상으로 이루어집니다.
 
-<p>{{EmbedInteractiveExample("pages/css/box-shadow.html")}}</p>
+{{EmbedInteractiveExample("pages/css/box-shadow.html")}}
 
-<p><code>box-shadow</code> 속성은 거의 모든 요소의 테두리에서 그림자를 드리울 수 있도록 도와줍니다. {{cssxref("border-radius")}}가 요소에 함께 적용됐다면 박스 그림자의 모서리도 똑같이 둥근 모서리를 갖게 됩니다. 여러 그림자의 z축 순서는 {{cssxref("text-shadow")}}와 동일하게 처음 그림자일수록 위로 올라옵니다.</p>
+`box-shadow` 속성은 거의 모든 요소의 테두리에서 그림자를 드리울 수 있도록 도와줍니다. {{cssxref("border-radius")}}가 요소에 함께 적용됐다면 박스 그림자의 모서리도 똑같이 둥근 모서리를 갖게 됩니다. 여러 그림자의 z축 순서는 {{cssxref("text-shadow")}}와 동일하게 처음 그림자일수록 위로 올라옵니다.
 
-<p><a href="/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator">박스 그림자 생성기</a>는 상호작용형 도구로, 쉽게 <code>box-shadow</code>의 값을 생성할 수 있습니다.</p>
+[박스 그림자 생성기](/ko/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator)는 상호작용형 도구로, 쉽게 `box-shadow`의 값을 생성할 수 있습니다.
 
-<h2 id="Syntax" name="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: css"><code>/* offset-x | offset-y | color */
+```css
+/* offset-x | offset-y | color */
 box-shadow: 60px -16px teal;
 
 /* offset-x | offset-y | blur-radius | color */
@@ -38,73 +39,67 @@ box-shadow: 3px 3px red, -1em 0 0.4em olive;
 /* Global keywords */
 box-shadow: inherit;
 box-shadow: initial;
-box-shadow: unset;</code>
-</pre>
+box-shadow: unset;
+```
 
-<p>하나의 <code>box-shadow</code>는 다음 구성요소로 지정할 수 있습니다.</p>
+하나의 `box-shadow`는 다음 구성요소로 지정할 수 있습니다.
 
-<ul>
- <li>두 개에서 네 개의 {{cssxref("&lt;length&gt;")}} 값.
-  <ul>
-   <li>두 개의 값을 사용하면 <code>&lt;offset-x&gt;&lt;offset-y&gt;</code>로 분석합니다.</li>
-   <li>세 번째 값이 주어지면 <code>&lt;blur-radius&gt;</code>로 분석합니다.</li>
-   <li>네 번째 값이 주어지면 <code>&lt;spread-radius&gt;</code>로 분석합니다.</li>
-  </ul>
- </li>
- <li>선택사항으로 <code>inset</code> 키워드.</li>
- <li>선택사항으로 {{cssxref("&lt;color&gt;")}} 값.</li>
-</ul>
+- 두 개에서 네 개의 {{cssxref("&lt;length&gt;")}} 값.
 
-<h3 id="Values" name="Values">값</h3>
+  - 두 개의 값을 사용하면 `<offset-x><offset-y>`로 분석합니다.
+  - 세 번째 값이 주어지면 `<blur-radius>`로 분석합니다.
+  - 네 번째 값이 주어지면 `<spread-radius>`로 분석합니다.
 
-<dl>
- <dt><code>inset</code></dt>
- <dd>값을 지정하지 않으면(기본값) 요소가 공중에 떠있는 것처럼 밖에 드리우는 그림자가 됩니다.<br>
- <code>inset</code> 키워드가 존재하면 요소가 움푹 들어간 것처럼 그림자가 요소의 테두리 안, 배경색 위, 내부 콘텐츠 밑에 그려집니다.</dd>
- <dt><code>&lt;offset-x&gt;</code> <code>&lt;offset-y&gt;</code></dt>
- <dd>그림자의 위치를 설정하는 두 개의 {{cssxref("&lt;length&gt;")}} 값입니다. <code>&lt;offset-x&gt;</code>는 수평 거리를 의미하며 음수 값은 그림자를 요소의 왼쪽에 표시합니다. <code>&lt;offset-y&gt;</code>는 수직 거리를 의미하며 음수 값은 그림자를 요소의 위쪽에 표시합니다. 가능한 단위는 {{cssxref("&lt;length&gt;")}}를 참고하세요.<br>
- 두 값이 모두 <code>0</code>이면 그림자가 요소 바로 뒤쪽에 위치하며, <code>&lt;blur-radius&gt;</code> 또는 <code>&lt;spread-radius&gt;</code>가 존재하면 흐려지는 효과를 볼 수 있습니다.</dd>
- <dt><code>&lt;blur-radius&gt;</code></dt>
- <dd>세 번째 {{cssxref("&lt;length&gt;")}} 값입니다. 크면 클 수록 그림자 테두리가 흐려지므로 크기는 더 커지고 색은 더 밝아집니다. 음수 값은 사용할 수 없습니다. 값을 설정하지 않으면 <code>0</code>이 되어 테두리가 선명해집니다. 명세는 흐림 효과의 지름을 어떻게 계산해야 하는지 정확한 알고리즘은 명시하지 않았지만 대신 다음과 같이 설명하고 있습니다.</dd>
- <dd>
- <p class="summary">…for a long, straight shadow edge, this should create a color transition the length of the blur distance that is perpendicular to and centered on the shadow’s edge, and that ranges from the full shadow color at the radius endpoint inside the shadow to fully transparent at the endpoint outside it.</p>
- </dd>
- <dt><code>&lt;spread-radius&gt;</code></dt>
- <dd>네 번째 {{cssxref("&lt;length&gt;")}} 값입니다. 양수 값은 그림자가 더 커지고 확산하며, 음수 값은 그림자가 줄어듭니다. 기본값은 <code>0</code>(그림자와 요소 크기 동일)입니다. </dd>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>가능한 키워드와 표기법은 {{cssxref("&lt;color&gt;")}}를 참고하세요.<br>
- 기본값은 브라우저에 따라 다릅니다. 보통 {{cssxref("color")}} 속성의 값을 사용하지만, Safari는 투명한 그림자가 기본값입니다.</dd>
-</dl>
+- 선택사항으로 `inset` 키워드.
+- 선택사항으로 {{cssxref("&lt;color&gt;")}} 값.
 
-<h3 id="보간">보간</h3>
+### 값
 
-<p>Each shadow in the list (treating <code>none</code> as a 0-length list) is interpolated via the color (as color) component, and x, y, blur, and (when appropriate) spread (as length) components. For each shadow, if both input shadows are or are not <code>inset</code>, then the interpolated shadow must match the input shadows in that regard. If any pair of input shadows has one <code>inset</code> and the other not <code>inset</code>, the entire shadow list is uninterpolable. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is <code>transparent</code>, all lengths are <code>0</code>, and whose <code>inset</code> (or not) matches the longer list.</p>
+- `inset`
+  - : 값을 지정하지 않으면(기본값) 요소가 공중에 떠있는 것처럼 밖에 드리우는 그림자가 됩니다.
+  
+    `inset` 키워드가 존재하면 요소가 움푹 들어간 것처럼 그림자가 요소의 테두리 안, 배경색 위, 내부 콘텐츠 밑에 그려집니다.
+- `<offset-x>` `<offset-y>`
+  - : 그림자의 위치를 설정하는 두 개의 {{cssxref("&lt;length&gt;")}} 값입니다. `<offset-x>`는 수평 거리를 의미하며 음수 값은 그림자를 요소의 왼쪽에 표시합니다. `<offset-y>`는 수직 거리를 의미하며 음수 값은 그림자를 요소의 위쪽에 표시합니다. 가능한 단위는 {{cssxref("&lt;length&gt;")}}를 참고하세요.
+  
+  두 값이 모두 `0`이면 그림자가 요소 바로 뒤쪽에 위치하며, `<blur-radius>` 또는 `<spread-radius>`가 존재하면 흐려지는 효과를 볼 수 있습니다.
+- `<blur-radius>`
+  - : 세 번째 {{cssxref("&lt;length&gt;")}} 값입니다. 크면 클 수록 그림자 테두리가 흐려지므로 크기는 더 커지고 색은 더 밝아집니다. 음수 값은 사용할 수 없습니다. 값을 설정하지 않으면 `0`이 되어 테두리가 선명해집니다. 명세는 흐림 효과의 지름을 어떻게 계산해야 하는지 정확한 알고리즘은 명시하지 않았지만 대신 다음과 같이 설명하고 있습니다.
+  
+  …for a long, straight shadow edge, this should create a color transition the length of the blur distance that is perpendicular to and centered on the shadow’s edge, and that ranges from the full shadow color at the radius endpoint inside the shadow to fully transparent at the endpoint outside it.
+  
+- `<spread-radius>`
+  - : 네 번째 {{cssxref("&lt;length&gt;")}} 값입니다. 양수 값은 그림자가 더 커지고 확산하며, 음수 값은 그림자가 줄어듭니다. 기본값은 `0`(그림자와 요소 크기 동일)입니다.
+- `<color>`
+  - : 가능한 키워드와 표기법은 {{cssxref("&lt;color&gt;")}}를 참고하세요.
+  
+    기본값은 브라우저에 따라 다릅니다. 보통 {{cssxref("color")}} 속성의 값을 사용하지만, Safari는 투명한 그림자가 기본값입니다.
 
-<h3 id="형식_구문">형식 구문</h3>
+### 보간
+
+Each shadow in the list (treating `none` as a 0-length list) is interpolated via the color (as color) component, and x, y, blur, and (when appropriate) spread (as length) components. For each shadow, if both input shadows are or are not `inset`, then the interpolated shadow must match the input shadows in that regard. If any pair of input shadows has one `inset` and the other not `inset`, the entire shadow list is uninterpolable. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, all lengths are `0`, and whose `inset` (or not) matches the longer list.
+
+### 형식 구문
 
 {{csssyntax}}
 
-<h2 id="Live_examples" name="Live_examples">예제</h2>
+## 예제
 
-<ul>
- <li><a class="external" href="http://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html">box-shadow test</a></li>
- <li><a class="external" href="http://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/">box-shadow tutorial and examples</a></li>
-</ul>
+- [box-shadow test](http://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
+- [box-shadow tutorial and examples](http://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("css.properties.box-shadow")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{cssxref("&lt;color&gt;")}} 자료형</li>
- <li>Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-</ul>
+- {{cssxref("&lt;color&gt;")}} 자료형
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- [Applying color to HTML elements using CSS](/ko/docs/Web/HTML/Applying_color)

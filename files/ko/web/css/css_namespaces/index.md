@@ -8,20 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Namespaces
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Namespaces</strong>는 CSS에서 <a href="/ko/docs/Namespaces">XML 네임스페이스</a>를 지정할 수 있는 CSS 모듈입니다.</p>
+**CSS Namespaces**는 CSS에서 [XML 네임스페이스](/ko/docs/Namespaces)를 지정할 수 있는 CSS 모듈입니다.
 
-<h2 id="참고서">참고서</h2>
+## 참고서
 
-<h3 id="규칙">@규칙</h3>
+### @규칙
 
-<div class="index">
-<ul>
- <li>{{cssxref("@namespace")}}</li>
-</ul>
-</div>
+- {{cssxref("@namespace")}}
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
