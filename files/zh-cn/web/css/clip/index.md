@@ -3,46 +3,53 @@ title: clip
 slug: Web/CSS/clip
 translation_of: Web/CSS/clip
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><code>clip</code> 属性定义了元素的哪一部分是可见的。<code>clip</code> 属性只适用于 {{ cssxref("position","position:absolute") }} 的元素。</p>
+`clip` 属性定义了元素的哪一部分是可见的。`clip` 属性只适用于 {{ cssxref("position","position:absolute") }} 的元素。
 
-<div class="warning">
-<p>警告：这个属性已被废弃。建议使用 {{cssxref("clip-path")}} 。</p>
-</div>
+> **警告：** 这个属性已被废弃。建议使用 {{cssxref("clip-path")}} 。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<a href="/en-US/docs/CSS/Value_definition_syntax">形式语法</a>: {{csssyntax("clip")}}
+[形式语法](/zh-CN/docs/CSS/Value_definition_syntax): {{csssyntax("clip")}}
 
-<pre>clip: rect(1px, 10em, 3rem, 2ch)
+```
+clip: rect(1px, 10em, 3rem, 2ch)
 clip: auto
 
-clip: inherit</pre>
+clip: inherit
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>&lt;shape&gt;</code></dt>
- <dd>一个矩形 {{cssxref("&lt;shape&gt;")}}
- <pre class="brush: css">rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)   /* 标准语法 */
-</pre>
- 或
+- `<shape>`
 
- <pre class="brush: css">rect(&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;)      /* 向后兼容语法 */</pre>
- <code>&lt;top&gt;</code> 和 <code>&lt;bottom&gt;</code> 指定相对于盒子<em>上边框边界 </em>的偏移，<code>&lt;right&gt;</code> 和 <code>&lt;left&gt;</code> 指定了相对于盒子<em>左边框边界 </em>的偏移。<br>
- <code>&lt;top&gt;</code>、<code>&lt;right&gt;</code>、<code>&lt;bottom&gt;</code> 和 <code>&lt;left&gt;</code> 的值可以是 {{cssxref("&lt;length&gt;")}} 值或 <code>auto</code>。</dd>
- <dt><code>auto</code></dt>
- <dd>元素不裁剪 (默认值)</dd>
-</dl>
+  - : 一个矩形 {{cssxref("&lt;shape&gt;")}}
 
-<h2 id="示例">示例</h2>
+    ```css
+    rect(<top>, <right>, <bottom>, <left>)   /* 标准语法 */
+    ```
 
-<pre class="brush:css">p { border:dotted;  position:relative; }
+    或
+
+    ```css
+    rect(<top> <right> <bottom> <left>)      /* 向后兼容语法 */
+    ```
+
+    `<top>` 和 `<bottom>` 指定相对于盒子*上边框边界* 的偏移，`<right>` 和 `<left>` 指定了相对于盒子*左边框边界* 的偏移。
+    `<top>`、`<right>`、`<bottom>` 和 `<left>` 的值可以是 {{cssxref("&lt;length&gt;")}} 值或 `auto`。
+
+- `auto`
+  - : 元素不裁剪 (默认值)
+
+## 示例
+
+```css
+p { border:dotted;  position:relative; }
 
 #img2 {
   position:absolute;  left:263px;
@@ -56,20 +63,19 @@ clip: inherit</pre>
 
   clip: rect(40px  200px  150px  30px);
   /* 非标准语法，但是包括火狐与 IE 在内的主要浏览器均支持 */
-}</pre>
+}
+```
 
-<p><img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg"> <img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg" style=""> <img alt="hut.jpg" src="/@api/deki/files/3613/=hut.jpg" style=""></p>
+![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("overflow") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}</li>
-</ul>
+- Related CSS properties: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("overflow") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}

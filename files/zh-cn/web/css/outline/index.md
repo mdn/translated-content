@@ -10,26 +10,25 @@ tags:
   - 轮廓
 translation_of: Web/CSS/outline
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="https://developer.mozilla.org/en-US/docs/CSS">CSS</a> 的 <code>outline</code> 属性是在一条声明中设置多个轮廓属性的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Shorthand_properties">简写属性</a> ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。 </p>
+[CSS](/zh-CN/docs/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
 
-<p>{{EmbedInteractiveExample("pages/css/outline.html")}}</p>
+{{EmbedInteractiveExample("pages/css/outline.html")}}
 
-<p>与其他简写属性一样，忽略的子属性会被设为 <a href="/zh-CN/docs/Web/CSS/initial_value">初始值</a>。</p>
+与其他简写属性一样，忽略的子属性会被设为 [初始值](/zh-CN/docs/Web/CSS/initial_value)。
 
-<h3 id="border_和_outline">border 和 outline</h3>
+### border 和 outline
 
-<p><a href="/zh-CN/docs/Web/CSS/border">border</a> 和 outline 很类似，但有如下区别：</p>
+[border](/zh-CN/docs/Web/CSS/border) 和 outline 很类似，但有如下区别：
 
-<ul>
- <li>outline 不占据空间，绘制于元素内容周围。</li>
- <li>根据规范，outline 通常是矩形，但也可以是非矩形的。</li>
-</ul>
+- outline 不占据空间，绘制于元素内容周围。
+- 根据规范，outline 通常是矩形，但也可以是非矩形的。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="notranslate">/* 样式 */
+```
+/* 样式 */
 outline: solid;
 
 /* 颜色 | 样式 */
@@ -44,39 +43,38 @@ outline: green solid 3px;
 /* 全局值 */
 outline: inherit;
 outline: initial;
-outline: unset;</pre>
+outline: unset;
+```
 
-<p><code>outline</code> 属性可使用以下一个、两个或三个值来声明，且顺序不重要。</p>
+`outline` 属性可使用以下一个、两个或三个值来声明，且顺序不重要。
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>对于很多元素来说，如果没有设置样式，轮廓是不可见的。因为样式（style）的默认值是 <code>none</code>。但 <code>input</code> 元素是例外，其样式默认值由浏览器决定。</p>
-</div>
+> **备注：** 对于很多元素来说，如果没有设置样式，轮廓是不可见的。因为样式（style）的默认值是 `none`。但 `input` 元素是例外，其样式默认值由浏览器决定。
 
-<h3 id="Values">取值</h3>
+### 取值
 
-<dl>
- <dt><strong><code>&lt;'outline-color'&gt;</code></strong></dt>
- <dd>设置轮廓的颜色。没有设置时默认值为 <code>currentcolor</code>。参见 {{cssxref("outline-color")}}。</dd>
- <dt><code>&lt;'outline-style'&gt;</code></dt>
- <dd>设置轮廓的样式。没有设置时默认值为 <code>none</code>。参见 {{cssxref("outline-style")}}。</dd>
- <dt><code>&lt;'outline-width'&gt;</code></dt>
- <dd>设置轮廓的宽度。没有设置时默认值为 <code>medium</code>。参见 {{cssxref("outline-width")}}。</dd>
-</dl>
+- **`<'outline-color'>`**
+  - : 设置轮廓的颜色。没有设置时默认值为 `currentcolor`。参见 {{cssxref("outline-color")}}。
+- `<'outline-style'>`
+  - : 设置轮廓的样式。没有设置时默认值为 `none`。参见 {{cssxref("outline-style")}}。
+- `<'outline-width'>`
+  - : 设置轮廓的宽度。没有设置时默认值为 `medium`。参见 {{cssxref("outline-width")}}。
 
-<h3 id="形式语法">形式语法</h3>
+### 形式语法
 
 {{csssyntax("outline")}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="notranslate">&lt;a href="#"&gt;This link has a special focus style.&lt;/a&gt;
-</pre>
+```
+<a href="#">This link has a special focus style.</a>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="notranslate">a {
+```
+a {
   border: 1px solid;
   border-radius: 3px;
   display: inline-block;
@@ -89,27 +87,23 @@ a:focus {
   outline-offset: 4px;
   background: #ffa;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<h2 id="可访问性考虑">可访问性考虑</h2>
+## 可访问性考虑
 
-<p>将 <code>outline</code> 设置为 <code>0</code> 或 <code>none</code> 会移除浏览器的默认聚焦样式。如果一个元素可交互，这个元素必须有一个可见的聚焦提示。若移除了默认聚焦样式，记得提供一个显眼的聚焦样式。</p>
+将 `outline` 设置为 `0` 或 `none` 会移除浏览器的默认聚焦样式。如果一个元素可交互，这个元素必须有一个可见的聚焦提示。若移除了默认聚焦样式，记得提供一个显眼的聚焦样式。
 
-<ul>
- <li><a href="https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/">How to Design Useful and Usable Focus Indicators</a></li>
- <li>
-  <p><abbr>WCAG</abbr> 2.1: <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html">Understanding Success Criterion 2.4.7: Focus Visible</a></p>
- </li>
-</ul>
+- [How to Design Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+- WCAG 2.1: [Understanding Success Criterion 2.4.7: Focus Visible](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.outline")}}</p>
+{{Compat("css.properties.outline")}}

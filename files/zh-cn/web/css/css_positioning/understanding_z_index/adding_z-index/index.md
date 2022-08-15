@@ -4,39 +4,44 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Adding_z-index
 ---
-<p>« <a href="/en/CSS">CSS</a> «<a href="/en/CSS/Understanding_z-index">理解 z-index</a></p>
-<h3 id="使用_cssxref(z-index)">使用 {{ cssxref("z-index") }}</h3>
-<p>在第一个例子 <a href="/en/CSS/Understanding_z-index/Stacking_without_z-index">Stacking without z-index</a>中，我们描述了默认的摆放顺序。当你需要指定不同的排列顺序时，只要给元素指定一个 z-index 的数值就可以了。 </p>
-<p> </p>
-<p>该属性必须是整数 (正负均可)，它体现了元素在 z 轴的位置。如果你对 z 轴体系不了解，你也可以把它理解成“层叠”，每个层都有一个顺序数，顺序数大的层在上面，小的在下面。 </p>
-<p><strong>注意！z-index 只对指定了</strong> <a href="/en/CSS/position">positioned</a><strong>属性的元素有效。</strong></p>
-<ul>
- <li><em>底层：距离观察者最远</em></li>
- <li>...</li>
- <li> -3 层</li>
- <li> -2 层</li>
- <li> -1 层</li>
- <li> 0 层 <em>默认层</em></li>
- <li> 1 层</li>
- <li> 2 层</li>
- <li> 3 层</li>
- <li>...</li>
- <li><em>顶部：最接近观察者</em></li>
-</ul>
-<div class="note">
- <p><strong>注释：</strong></p>
- <ul>
-  <li>当没有指定 z-index 的时候，所有元素都在会被渲染在默认层 (0 层)</li>
-  <li>当多个元素的 z-index 属性相同的时候 (在同一个层里面)，那么将按照 <a href="/en/CSS/Understanding_z-index/Stacking_without_z-index">Stacking without z-index</a> 中描述的规则进行布局。 </li>
- </ul>
-</div>
-<p>在下一个例子中，所有的层都是用 z-index 进行排序的。元素 div#5 的 z-index 无效，因为他没有被指定 position 属性。 </p>
-<p><img alt="Example of stacking rules modified using z-index" class="internal" src="/@api/deki/files/912/=Understanding_zindex_03.png"></p>
-<h3 id="Example_source_code"><strong>Example source code</strong></h3>
-<pre class="brush: html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html&gt;
-&lt;head&gt;&lt;style type="text/css"&gt;
+« [CSS](/en/CSS) «[理解 z-index](/en/CSS/Understanding_z-index)
+
+### 使用 {{ cssxref("z-index") }}
+
+在第一个例子 [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index)中，我们描述了默认的摆放顺序。当你需要指定不同的排列顺序时，只要给元素指定一个 z-index 的数值就可以了。
+
+该属性必须是整数 (正负均可)，它体现了元素在 z 轴的位置。如果你对 z 轴体系不了解，你也可以把它理解成“层叠”，每个层都有一个顺序数，顺序数大的层在上面，小的在下面。
+
+**注意！z-index 只对指定了** [positioned](/en/CSS/position)**属性的元素有效。**
+
+- _底层：距离观察者最远_
+- ...
+- \-3 层
+- \-2 层
+- \-1 层
+- 0 层 _默认层_
+- 1 层
+- 2 层
+- 3 层
+- ...
+- _顶部：最接近观察者_
+
+> **备注：**
+>
+> - 当没有指定 z-index 的时候，所有元素都在会被渲染在默认层 (0 层)
+> - 当多个元素的 z-index 属性相同的时候 (在同一个层里面)，那么将按照 [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) 中描述的规则进行布局。
+
+在下一个例子中，所有的层都是用 z-index 进行排序的。元素 div#5 的 z-index 无效，因为他没有被指定 position 属性。
+
+![Example of stacking rules modified using z-index](/@api/deki/files/912/=Understanding_zindex_03.png)
+
+### Example source code
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><style type="text/css">
 
 div {
    opacity: 0.7;
@@ -101,58 +106,56 @@ span.bold { font-weight: bold; }
    text-align: center;
 }
 
-&lt;/style&gt;&lt;/head&gt;
+</style></head>
 
-&lt;body&gt;
+<body>
 
-&lt;br /&gt;&lt;br /&gt;
+<br /><br />
 
-&lt;div id="absdiv1"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #1&lt;/span&gt;
-   &lt;br /&gt;position: absolute;
-   &lt;br /&gt;z-index: 5;
-&lt;/div&gt;
-
-&lt;div id="reldiv1"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #2&lt;/span&gt;
-   &lt;br /&gt;position: relative;
-   &lt;br /&gt;z-index: 3;
-&lt;/div&gt;
-
-&lt;div id="reldiv2"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #3&lt;/span&gt;
-   &lt;br /&gt;position: relative;
-   &lt;br /&gt;z-index: 2;
-&lt;/div&gt;
-
-&lt;div id="absdiv2"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #4&lt;/span&gt;
-   &lt;br /&gt;position: absolute;
-   &lt;br /&gt;z-index: 1;
-&lt;/div&gt;
-
-&lt;div id="normdiv"&gt;
-   &lt;br /&gt;&lt;span class="bold"&gt;DIV #5&lt;/span&gt;
-   &lt;br /&gt;no positioning
-   &lt;br /&gt;z-index: 8;
-&lt;/div&gt;
-
-&lt;/body&gt;&lt;/html&gt;
-</pre>
-<h3 id="See_also">See also</h3>
-<ul>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_without_z-index">Stacking without z-index</a> : Default stacking rules</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float">Stacking and float</a> : How floating elements are handled</li>
- <li><a href="/en/CSS/Understanding_z-index/The_stacking_context">The stacking context</a> : Notes on the stacking context</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level</li>
-</ul>
-<div class="originaldocinfo">
- <h3 id="Original_Document_Information">Original Document Information</h3>
- <ul>
-  <li>Author(s): Paolo Lombardi</li>
-  <li>This article is the english translation of an article I wrote in italian for <a href="http://www.yappy.it">YappY</a>. I grant the right to share all the content under <a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a></li>
-  <li>Last Updated Date: July 9th, 2005</li>
- </ul>
+<div id="absdiv1">
+   <br /><span class="bold">DIV #1</span>
+   <br />position: absolute;
+   <br />z-index: 5;
 </div>
+
+<div id="reldiv1">
+   <br /><span class="bold">DIV #2</span>
+   <br />position: relative;
+   <br />z-index: 3;
+</div>
+
+<div id="reldiv2">
+   <br /><span class="bold">DIV #3</span>
+   <br />position: relative;
+   <br />z-index: 2;
+</div>
+
+<div id="absdiv2">
+   <br /><span class="bold">DIV #4</span>
+   <br />position: absolute;
+   <br />z-index: 1;
+</div>
+
+<div id="normdiv">
+   <br /><span class="bold">DIV #5</span>
+   <br />no positioning
+   <br />z-index: 8;
+</div>
+
+</body></html>
+```
+
+### See also
+
+- [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
+- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
+- [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+
+### Original Document Information
+
+- Author(s): Paolo Lombardi
+- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- Last Updated Date: July 9th, 2005

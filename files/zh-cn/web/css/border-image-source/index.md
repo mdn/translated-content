@@ -3,19 +3,20 @@ title: border-image-source
 slug: Web/CSS/border-image-source
 translation_of: Web/CSS/border-image-source
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> 属性 <strong><code>border-image-source</code></strong>  用于声明元素的<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image">边框图片（border-image）</a>的资源 </p>
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-image-source`** 用于声明元素的[边框图片（border-image）](/zh-CN/docs/Web/CSS/border-image)的资源
 
-<p>{{EmbedInteractiveExample("pages/css/border-image-source.html")}}</p>
+{{EmbedInteractiveExample("pages/css/border-image-source.html")}}
 
-<p>属性 {{cssxref("border-image-slice")}} 被用于切割资源图片的区域，然后将其动态的应用到最终的边框图片</p>
+属性 {{cssxref("border-image-slice")}} 被用于切割资源图片的区域，然后将其动态的应用到最终的边框图片
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* no border-image, use the specified border-style */
+```css
+/* no border-image, use the specified border-style */
 border-image-source: none;
 
 /* the image.jpg is used as image */
@@ -28,37 +29,29 @@ border-image-source: linear-gradient(to top, red, yellow);
 border-image-source: inherit;
 border-image-source: initial;
 border-image-source: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>不会使用图片边框。会被{{cssxref("border-style")}}属性所设置的边框样式替换掉</dd>
- <dt><code>&lt;image&gt;</code></dt>
- <dd>用作边框的图片</dd>
-</dl>
+- `none`
+  - : 不会使用图片边框。会被{{cssxref("border-style")}}属性所设置的边框样式替换掉
+- `<image>`
+  - : 用作边框的图片
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Examples</h2>
+## Examples
 
-<p>请查看示例 {{cssxref("border-image")}}。</p>
+请查看示例 {{cssxref("border-image")}}。
 
-<h2 id="Specifications">Specifications</h2>
-
-
+## Specifications
 
 {{Specifications}}
 
+{{cssinfo}}
 
+## Browser compatibility
 
-<p>{{cssinfo}}</p>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div>{{Compat("css.properties.border-image-source")}}</div>
-
-<div id="compat-mobile"></div>
+{{Compat("css.properties.border-image-source")}}

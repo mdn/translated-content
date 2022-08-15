@@ -8,117 +8,112 @@ tags:
   - 参考
 translation_of: Web/CSS/background
 ---
-<div>{{CSSRef("CSS Background")}}</div>
+{{CSSRef("CSS Background")}}
 
-<p><strong><code>background</code></strong> 是一种 <a href="/en-US/docs/Web/CSS">CSS</a> 简写属性，用于一次性集中定义各种背景属性，包括 color, image, origin 与 size, repeat 方式等等。</p>
+**`background`** 是一种 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用于一次性集中定义各种背景属性，包括 color, image, origin 与 size, repeat 方式等等。
 
-<div>{{EmbedInteractiveExample("pages/css/background.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background.html")}}
 
+此属性是一个 [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，可以在一次声明中定义一个或多个属性：{{cssxref("background-clip")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-origin")}}、{{cssxref("background-position")}}、{{cssxref("background-repeat")}}、{{cssxref("background-size")}}，和 {{cssxref("background-attachment")}}。
 
+对于所有简写属性，任何没有被指定的值都会被设定为它们的 [初始值](/zh-CN/docs/Web/CSS/initial_value)。
 
-<p>此属性是一个 <a href="/zh-CN/docs/Web/CSS/Shorthand_properties">简写属性</a>，可以在一次声明中定义一个或多个属性：{{cssxref("background-clip")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-origin")}}、{{cssxref("background-position")}}、{{cssxref("background-repeat")}}、{{cssxref("background-size")}}，和 {{cssxref("background-attachment")}}。</p>
+## 语法
 
-<p>对于所有简写属性，任何没有被指定的值都会被设定为它们的 <a href="/zh-CN/docs/Web/CSS/initial_value">初始值</a>。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers">/* 使用 &lt;background-color&gt; */
+```css
+/* 使用 <background-color> */
 background: green;
 
-/* 使用 &lt;bg-image&gt; 和 &lt;repeat-style&gt; */
+/* 使用 <bg-image> 和 <repeat-style> */
 background: url("test.jpg") repeat-y;
 
-/* 使用 &lt;box&gt; 和 &lt;background-color&gt; */
+/* 使用 <box> 和 <background-color> */
 background: border-box red;
 
 /* 将背景设为一张居中放大的图片 */
 background: no-repeat center/80% url("../img/image.png");
-</pre>
+```
 
-<p><code>background</code> 属性被指定多个背景层时，使用逗号分隔每个背景层。</p>
+`background` 属性被指定多个背景层时，使用逗号分隔每个背景层。
 
-<p>每一层的语法如下：</p>
+每一层的语法如下：
 
-<ul>
- <li>在每一层中，下列的值可以出现 0 次或 1 次：
-  <ul>
-   <li><code><a href="#&lt;attachment>">&lt;attachment&gt;</a></code></li>
-   <li><code><a href="#&lt;bg-image>">&lt;bg-image&gt;</a></code></li>
-   <li><code><a href="#&lt;position>">&lt;position&gt;</a></code></li>
-   <li><code><a href="#&lt;bg-size>">&lt;bg-size&gt;</a></code></li>
-   <li><code><a href="#&lt;repeat-style>">&lt;repeat-style&gt;</a></code></li>
-  </ul>
- </li>
- <li><code><a href="#&lt;bg-size>">&lt;bg-size&gt;</a></code> 只能紧接着 <code><a href="#&lt;position>">&lt;position&gt;</a></code> 出现，以"/"分割，如： "<code>center/80%</code>".</li>
- <li><code><a href="#&lt;box>">&lt;box&gt;</a></code> 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 {{cssxref("background-origin")}} 和 {{cssxref("background-clip")}}。如果出现 2 次，第一次的出现设置 {{cssxref("background-origin")}}，第二次的出现设置 {{cssxref("background-clip")}}。</li>
- <li><code><a href="#&lt;background-color>">&lt;background-color&gt;</a></code> 只能被包含在最后一层。</li>
-</ul>
+- 在每一层中，下列的值可以出现 0 次或 1 次：
 
-<div class="note"><strong>注意：</strong>  {{cssxref("background-color")}} 只能在 background 的最后一个属性上定义，因为整个元素只有一种背景颜色。</div>
+  - [`<attachment>`](#<attachment>)
+  - [`<bg-image>`](#<bg-image>)
+  - [`<position>`](#<position>)
+  - [`<bg-size>`](#<bg-size>)
+  - [`<repeat-style>`](#<repeat-style>)
 
-<h2 id="值">值</h2>
+- [`<bg-size>`](#<bg-size>) 只能紧接着 [`<position>`](#<position>) 出现，以"/"分割，如： "`center/80%`".
+- [`<box>`](#<box>) 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 {{cssxref("background-origin")}} 和 {{cssxref("background-clip")}}。如果出现 2 次，第一次的出现设置 {{cssxref("background-origin")}}，第二次的出现设置 {{cssxref("background-clip")}}。
+- [`<background-color>`](#<background-color>) 只能被包含在最后一层。
 
-<p>下面的一个或多个值，可以按任意顺序放置：</p>
+> **备注：** {{cssxref("background-color")}} 只能在 background 的最后一个属性上定义，因为整个元素只有一种背景颜色。
 
-<dl>
- <dt>"><code>&lt;attachment&gt;</code></dt>
- <dd>参见 {{ cssxref("background-attachment") }}</dd>
- <dt>"><code>&lt;box&gt;</code></dt>
- <dd>参见 {{ cssxref("background-clip") }} 和 {{cssxref("background-origin")}}</dd>
- <dt>"><code>&lt;background-color&gt;</code></dt>
- <dd>参见 {{ cssxref("background-color") }}</dd>
- <dt>"><code>&lt;bg-image&gt;</code></dt>
- <dd>参见 {{ Cssxref("background-image") }}</dd>
- <dt>"><code>&lt;position&gt;</code></dt>
- <dd>参见 {{ cssxref("background-position") }}</dd>
- <dt>"><code>&lt;repeat-style&gt;</code></dt>
- <dd>参见 {{ cssxref("background-repeat") }}</dd>
- <dt>"><code>&lt;bg-size&gt;</code></dt>
- <dd>参见 {{ cssxref("background-size") }}。</dd>
-</dl>
+## 值
 
-<h3 id="标准语法">标准语法</h3>
+下面的一个或多个值，可以按任意顺序放置：
+
+- ">`<attachment>`
+  - : 参见 {{ cssxref("background-attachment") }}
+- ">`<box>`
+  - : 参见 {{ cssxref("background-clip") }} 和 {{cssxref("background-origin")}}
+- ">`<background-color>`
+  - : 参见 {{ cssxref("background-color") }}
+- ">`<bg-image>`
+  - : 参见 {{ Cssxref("background-image") }}
+- ">`<position>`
+  - : 参见 {{ cssxref("background-position") }}
+- ">`<repeat-style>`
+  - : 参见 {{ cssxref("background-repeat") }}
+- ">`<bg-size>`
+  - : 参见 {{ cssxref("background-size") }}。
+
+### 标准语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="topbanner"&gt;
-  Starry sky&lt;br/&gt;
-  Twinkle twinkle&lt;br/&gt;
+```html
+<p class="topbanner">
+  Starry sky<br/>
+  Twinkle twinkle<br/>
   Starry sky
-&lt;/p&gt;
-&lt;p class="warning"&gt;Here is a paragraph&lt;p&gt;</pre>
+</p>
+<p class="warning">Here is a paragraph<p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.warning {
+```css
+.warning {
   background: red;
 }
 
 .topbanner {
   background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #99f repeat-y fixed;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.background")}}</p>
+{{Compat("css.properties.background")}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li>{{ cssxref("-moz-background-size") }}, {{ cssxref("-moz-background-inline-policy") }}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_gradients">使用渐变背景</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Multiple_backgrounds">多重背景 </a></li>
-</ul>
+- {{ cssxref("-moz-background-size") }}, {{ cssxref("-moz-background-inline-policy") }}
+- [使用渐变背景](/zh-CN/docs/CSS/Using_CSS_gradients)
+- [多重背景](/zh-CN/docs/CSS/Multiple_backgrounds)

@@ -3,98 +3,99 @@ title: <display-legacy>
 slug: Web/CSS/display-legacy
 translation_of: Web/CSS/display-legacy
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 2 使用单个关键字来指定 display 的属性，对于相同布局模式的 block 级和 inline 级变体需要使用单独的关键字。本文详述这些关键字。</p>
+CSS 2 使用单个关键字来指定 display 的属性，对于相同布局模式的 block 级和 inline 级变体需要使用单独的关键字。本文详述这些关键字。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<dl>
- <dt><code>inline-block</code></dt>
- <dd>元素会产生一个块元素盒子，并且像内联盒子一样（表现得更像一个被替换的元素），可以融入到周围内容中。<br>
- <br>
- 等同于 <code>inline flow-root</code>。</dd>
- <dt><code>inline-table</code></dt>
- <dd>在 HTML 中， <code>inline-table</code> 没有直接对应关系。它表现为一个 HTML {{HTMLElement("table")}} 元素， 但是又表现为一个不同于块级盒子的内联盒子。表盒子内部是一个块级上下文。<br>
- <br>
- 等同于 <code>inline table</code>。</dd>
- <dt><code>inline-flex</code></dt>
- <dd>元素表现为一个内联元素，并对内容采用弹性盒子模型进行布局。<br>
- <br>
- 等同于 <code>inline flex</code>。</dd>
- <dt><code>inline-grid</code></dt>
- <dd>元素表现为一个内联元素，并对内容采用网格模型进行布局。<br>
- <br>
- 等同于 <code>inline grid</code>。</dd>
-</dl>
+- `inline-block`
 
-<h3 id="正式语法">正式语法</h3>
+  - : 元素会产生一个块元素盒子，并且像内联盒子一样（表现得更像一个被替换的元素），可以融入到周围内容中。
+
+    等同于 `inline flow-root`。
+
+- `inline-table`
+
+  - : 在 HTML 中， `inline-table` 没有直接对应关系。它表现为一个 HTML {{HTMLElement("table")}} 元素， 但是又表现为一个不同于块级盒子的内联盒子。表盒子内部是一个块级上下文。
+
+    等同于 `inline table`。
+
+- `inline-flex`
+
+  - : 元素表现为一个内联元素，并对内容采用弹性盒子模型进行布局。
+
+    等同于 `inline flex`。
+
+- `inline-grid`
+
+  - : 元素表现为一个内联元素，并对内容采用网格模型进行布局。
+
+    等同于 `inline grid`。
+
+### 正式语法
 
 {{CSSSyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在下面的例子中，我们使用 inline-flex 关键字（遗留关键字），创建一个 inline flex 的容器。</p>
+在下面的例子中，我们使用 inline-flex 关键字（遗留关键字），创建一个 inline flex 的容器。
 
-<div id="Example">
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div&gt;Flex Item&lt;/div&gt;
-  &lt;div&gt;Flex Item&lt;/div&gt;
-&lt;/div&gt;
-
-Not a flex item
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">.container {
-  display: inline-flex;
-}
-</pre>
-
-<h3 id="结果">结果</h3>
-
-<p>{{EmbedLiveSample("Example", 300, 150)}}</p>
+```html
+<div class="container">
+  <div>Flex Item</div>
+  <div>Flex Item</div>
 </div>
 
-<p>新的语法中，使用两个关键字来创建 inline flex 容器，inline 用来指定外部显示类型，flex 用来指定内部显示类型。</p>
+Not a flex item
+```
 
-<pre class="brush: css">.container {
+### CSS
+
+```css
+.container {
+  display: inline-flex;
+}
+```
+
+### 结果
+
+{{EmbedLiveSample("Example", 300, 150)}}
+
+新的语法中，使用两个关键字来创建 inline flex 容器，inline 用来指定外部显示类型，flex 用来指定内部显示类型。
+
+```css
+.container {
   display: inline flex;
-}</pre>
+}
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+### 支持 `inline-block`
 
+{{Compat("css.properties.display.inline-block", 10)}}
 
-<h3 id="支持_inline-block">支持 <code>inline-block</code></h3>
+### 支持 `inline-table`
 
-<p>{{Compat("css.properties.display.inline-block", 10)}}</p>
+{{Compat("css.properties.display.inline-table", 10)}}
 
-<h3 id="支持_inline-table">支持 <code>inline-table</code></h3>
+### 支持 `inline-flex`
 
-<p>{{Compat("css.properties.display.inline-table", 10)}}</p>
+{{Compat("css.properties.display.inline-flex", 10)}}
 
-<h3 id="支持_inline-flex">支持 <code>inline-flex</code></h3>
+### 支持 `inline-grid`
 
-<p>{{Compat("css.properties.display.inline-flex", 10)}}</p>
+{{Compat("css.properties.display.inline-grid", 10)}}
 
-<h3 id="支持_inline-grid">支持 <code>inline-grid</code></h3>
+## 相关链接
 
-<p>{{Compat("css.properties.display.inline-grid", 10)}}</p>
+- {{CSSxRef("display")}}
 
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-  </ul>
- </li>
-</ul>
+  - {{CSSxRef("&lt;display-outside&gt;")}}
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-listitem&gt;")}}
+  - {{CSSxRef("&lt;display-internal&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}

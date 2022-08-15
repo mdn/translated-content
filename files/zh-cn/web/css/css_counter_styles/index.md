@@ -6,53 +6,41 @@ tags:
   - CSS 计数
 translation_of: Web/CSS/CSS_Counter_Styles
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><strong>CSS 计数器样式</strong> is 是一个让你自定义计数器样式的 CSS 模块。</p>
+**CSS 计数器样式** is 是一个让你自定义计数器样式的 CSS 模块。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<div class="index">
-<ul>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("counter-reset")}}</li>
-</ul>
-</div>
+- {{cssxref("counter-increment")}}
+- {{cssxref("counter-reset")}}
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<dl>
- <dt>{{cssxref("@counter-style")}}</dt>
- <dd>
- <div class="index">
- <ul>
-  <li>{{cssxref("@counter-style/system","system")}}</li>
-  <li>{{cssxref("@counter-style/additive-symbols", "additive-symbols")}}</li>
-  <li>{{cssxref("@counter-style/negative", "negative")}}</li>
-  <li>{{cssxref("@counter-style/prefix", "prefix")}}</li>
-  <li>{{cssxref("@counter-style/suffix", "suffix")}}</li>
-  <li>{{cssxref("@counter-style/range", "range")}}</li>
-  <li>{{cssxref("@counter-style/pad", "pad")}}</li>
-  <li>{{cssxref("@counter-style/speak-as", "speak-as")}}</li>
-  <li>{{cssxref("@counter-style/fallback", "fallback")}}</li>
- </ul>
- </div>
- </dd>
-</dl>
+- ## {{cssxref("@counter-style")}}
 
-<h2 id="Specifications">指南</h2>
+      :
+      -   {{cssxref("@counter-style/system","system")}}
+      -   {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
+      -   {{cssxref("@counter-style/negative", "negative")}}
+      -   {{cssxref("@counter-style/prefix", "prefix")}}
+      -   {{cssxref("@counter-style/suffix", "suffix")}}
+      -   {{cssxref("@counter-style/range", "range")}}
+      -   {{cssxref("@counter-style/pad", "pad")}}
+      -   {{cssxref("@counter-style/speak-as", "speak-as")}}
+      -   {{cssxref("@counter-style/fallback", "fallback")}}
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">使用 CSS 计数器</a></dt>
- <dd>描述如何使用计数器来给 HTML 元素计数，或者执行复杂的计数</dd>
-</dl>
+## 指南
 
-<h2 id="Specifications">规范</h2>
+- [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - : 描述如何使用计数器来给 HTML 元素计数，或者执行复杂的计数
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

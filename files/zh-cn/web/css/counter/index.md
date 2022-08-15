@@ -8,61 +8,63 @@ tags:
 translation_of: Web/CSS/counter()
 original_slug: Web/CSS/counter()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div><a href="/en-US/docs/Web/CSS">CSS</a> 函数 <code><strong>counter</strong></code><strong><code>()</code></strong>，返回一个代表计数器的当前值的字符串。它通常和伪元素搭配使用，但是理论上可以在支持&lt;string&gt;值的任何地方使用。</div>
+[CSS](/zh-CN/docs/Web/CSS) 函数 **`counter()`**，返回一个代表计数器的当前值的字符串。它通常和伪元素搭配使用，但是理论上可以在支持\<string>值的任何地方使用。
 
-<pre class="brush: css notranslate">/* 简单使用 */
+```css
+/* 简单使用 */
 counter(计数器名称);
 
 /* 更改计数器显示 */
-counter(countername, upper-roman)</pre>
+counter(countername, upper-roman)
+```
 
-<p>一个<a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">计数器</a>本身没有可见的效果，而是通过<code>counter()</code>函数（和<code><a href="/en-US/docs/Web/CSS/counters">counters()</a></code>函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。</p>
+一个[计数器](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)本身没有可见的效果，而是通过`counter()`函数（和[`counters()`](/en-US/docs/Web/CSS/counters)函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。
 
-<div class="blockIndicator note">
-<p><strong>注释：</strong><code>counter()</code>函数可以与任何 CSS 属性一起使用，但是对<code><a href="/en-US/docs/Web/CSS/content">"content"</a></code>以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。</p>
+> **备注：** `counter()`函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/en-US/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
+>
+> 在使用此功能之前，请仔细检查[浏览器兼容性表](#Browser_compatibility)。
 
-<p>在使用此功能之前，请仔细检查<a href="#Browser_compatibility">浏览器兼容性表</a>。</p>
-</div>
+**语法**
 
-<p><strong>语法</strong></p>
+### 值
 
-<h3 id="值">值</h3>
+- `<custom-ident> 自定义标识`
+  - : 一个标识计数器的名称，区分大小写，并且与{{cssxref("counter-reset")}}和{{cssxref("counter-increment")}}中的“名称”相同。名称不能以两个破折号开头，并且不能为`none`, `unset`, `initial`, 或 `inherit`。
+- `<counter-style> 计数器样式`
+  - : 计数器样式名称或 [`symbols()`](/en-US/docs/Web/CSS/symbols) 函数，其中计数器样式名称是数字，字母或符号的简单预定义计数器样式，复杂的东亚或埃塞俄比亚长手预定义计数器样式，或其他[预定义计数器样式](/zh-CN/docs/Web/CSS/CSS_Counter_Styles)。如果省略，则计数器样式默认为十进制。
 
-<dl>
- <dt><code><a href="/zh-CN/docs/Web/CSS/custom-ident">&lt;custom-ident&gt;</a> 自定义标识</code></dt>
- <dd>一个标识计数器的名称，区分大小写，并且与{{cssxref("counter-reset")}}和{{cssxref("counter-increment")}}中的“名称”相同。名称不能以两个破折号开头，并且不能为<code>none</code>, <code>unset</code>, <code>initial</code>, 或 <code>inherit</code>。</dd>
- <dt><code style="white-space: nowrap;">&lt;counter-style&gt; 计数器样式</code></dt>
- <dd>计数器样式名称或 <code><a href="/en-US/docs/Web/CSS/symbols">symbols()</a></code> 函数，其中计数器样式名称是数字，字母或符号的简单预定义计数器样式，复杂的东亚或埃塞俄比亚长手预定义计数器样式，或其他<a href="/en-US/docs/Web/CSS/CSS_Counter_Styles">预定义计数器样式</a>。如果省略，则计数器样式默认为十进制。</dd>
-</dl>
+### 正式语法
 
-<h3 id="正式语法">正式语法</h3>
-
-<pre class="syntaxbox notranslate">counter( <a href="/zh-CN/docs/Web/CSS/custom-ident">&lt;custom-ident&gt;</a>, <a href="/zh-CN/docs/Web/CSS/counter#counter-style">&lt;counter-style&gt;</a><a href="/zh-CN/docs/CSS/Value_definition_syntax#Question_mark_()">?</a> )
+```
+counter( <custom-ident>, <counter-style>? )
 
 where
-<code>&lt;counter-style&gt; = <a href="/zh-CN/docs/Web/CSS/counter#counter-style-name">&lt;counter-style-name&gt;</a> <a href="/zh-CN/docs/CSS/Value_definition_syntax#Single_bar">|</a> symbols()</code>
+<counter-style> = <counter-style-name> | symbols()
 
 where
-<code>&lt;counter-style-name&gt; = <a href="/zh-CN/docs/Web/CSS/custom-ident">&lt;custom-ident&gt;</a></code></pre>
+<counter-style-name> = <custom-ident>
+```
 
-<p><strong>示例</strong></p>
+**示例**
 
+### default value compared to upper Roman
 
-<h3 id="default_value_compared_to_upper_Roman">default value compared to upper Roman</h3>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+```
 
-<pre class="brush: html; notranslate">&lt;ol&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;</pre>
+#### CSS
 
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css; highlight[2] notranslate">ol {
+```css
+ol {
   counter-reset: listCounter;
 }
 li {
@@ -71,56 +73,57 @@ li {
 li::after {
   content: "[" counter(listCounter) "] == ["
                counter(listCounter, upper-roman) "]";
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}</p>
+{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}
 
-<h3 id="decimal-leading-zero_compared_to_lower-alpha"><dfn>decimal-leading-zero</dfn> compared to lower-alpha</h3>
+### _decimal-leading-zero_ compared to lower-alpha
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html; notranslate">&lt;ol&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[2] notranslate">ol {
+```css
+ol {
   counter-reset: count;
 }
 li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, <dfn>decimal-leading-zero</dfn>) "] == ["
+  content: "[" counter(count, decimal-leading-zero) "] == ["
                counter(count, lower-alpha) "]";
-}</pre>
+}
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("decimal-leading-zero_compared_to_lower-alpha", "100%", 150)}}</p>
+{{EmbedLiveSample("decimal-leading-zero_compared_to_lower-alpha", "100%", 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.types.counter")}}
 
+**另请参阅**
 
-<p>{{Compat("css.types.counter")}}</p>
-
-<p><strong>另请参阅</strong></p>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">使用 CSS 计数器</a></li>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("counter-set")}}</li>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("@counter-style")}}</li>
- <li>CSS <code><a href="/en-US/docs/Web/CSS/counters">counters()</a></code> 函数</li>
-</ul>
+- [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- {{cssxref("counter-reset")}}
+- {{cssxref("counter-set")}}
+- {{cssxref("counter-increment")}}
+- {{cssxref("@counter-style")}}
+- CSS [`counters()`](/en-US/docs/Web/CSS/counters) 函数

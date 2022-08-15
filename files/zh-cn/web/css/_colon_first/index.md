@@ -1,32 +1,34 @@
 ---
 title: ':first'
-slug: 'Web/CSS/:first'
-translation_of: 'Web/CSS/:first'
+slug: Web/CSS/:first
+translation_of: Web/CSS/:first
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="简介">简介</h2>
+## 简介
 
-<p><code>:first</code> {{cssxref("@page")}} <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类选择器</a> 描述的是：打印文档的时候，第一页的样式。</p>
+`:first` {{cssxref("@page")}} [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) 描述的是：打印文档的时候，第一页的样式。
 
-<div class="note"><strong>提示：</strong>你不能改变所有的 css 属性。你只能改变 margins、 orphans、 widows、文档什么时候换页。别的所有 css 样式都会被忽略。</div>
+> **备注：** 你不能改变所有的 css 属性。你只能改变 margins、 orphans、 widows、文档什么时候换页。别的所有 css 样式都会被忽略。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;First Page.&lt;/p&gt;
-&lt;p&gt;Second Page.&lt;/p&gt;
-&lt;button&gt;Print!&lt;/button&gt;
-</pre>
+```html
+<p>First Page.</p>
+<p>Second Page.</p>
+<button>Print!</button>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@page :first {
+```css
+@page :first {
   margin-left: 50%;
   margin-top: 50%;
 }
@@ -34,33 +36,32 @@ translation_of: 'Web/CSS/:first'
 p {
   page-break-after: always;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.querySelector("button").onclick = function(){ window.print() }
-</pre>
+```js
+document.querySelector("button").onclick = function(){ window.print() }
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>点击下面的 print 按钮来打印这个例子。第一页的文字会在中间显示， 其他页的内容在默认位置显示。</p>
+点击下面的 print 按钮来打印这个例子。第一页的文字会在中间显示， 其他页的内容在默认位置显示。
 
-<p>{{ EmbedLiveSample('Example', '80%', '150px') }}</p>
+{{ EmbedLiveSample('Example', '80%', '150px') }}
 
-<div class="note"><strong>提示：</strong>在定义 margin 的时候，你可以只用绝对长度单位， 点击 <a href="/zh-CN/docs/Web/CSS/length#绝对长度单位">length</a> 查看更多内容。</div>
+> **备注：** 在定义 margin 的时候，你可以只用绝对长度单位， 点击 [length](/zh-CN/docs/Web/CSS/length#绝对长度单位) 查看更多内容。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.first")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{Cssxref("@page")}}</li>
- <li>{{Cssxref(":left")}}</li>
- <li>{{Cssxref(":right")}}</li>
-</ul>
+- {{Cssxref("@page")}}
+- {{Cssxref(":left")}}
+- {{Cssxref(":right")}}

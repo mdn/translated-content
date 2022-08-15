@@ -3,11 +3,12 @@ title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 translation_of: Web/CSS/font-variant-alternates
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>font-variant-alternates</code></strong> CSS 属性控制备用字体的使用。这些替代字体可以通过{{cssxref("@font-feature-values")}}中定义的替代名称来引用。</p>
+**`font-variant-alternates`** CSS 属性控制备用字体的使用。这些替代字体可以通过{{cssxref("@font-feature-values")}}中定义的替代名称来引用。
 
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+```css
+/* Keyword values */
 font-variant-alternates: normal;
 font-variant-alternates: historical-forms;
 
@@ -24,61 +25,61 @@ font-variant-alternates: swash(ident1) annotation(ident2);
 font-variant-alternates: initial;
 font-variant-alternates: inherit;
 font-variant-alternates: unset;
-</pre>
+```
 
-<p>在 {{cssxref("@font-feature-values")}} 规则中可以定义替代字体的函数 (<code>stylistic</code>, <code>styleset</code>, <code>character-variant</code>, <code>swash</code>, <code>ornament</code> 或 <code>annotation</code>), 将名称与 OpenType 参数相关联。此属性允许样式表中使用那些易于理解的名称 (定义于 {{cssxref("@font-feature-values")}})。</p>
+在 {{cssxref("@font-feature-values")}} 规则中可以定义替代字体的函数 (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` 或 `annotation`), 将名称与 OpenType 参数相关联。此属性允许样式表中使用那些易于理解的名称 (定义于 {{cssxref("@font-feature-values")}})。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><strong><code>font-variant-alternates</code></strong>属性可以采用以下两种形式之一：</p>
+**`font-variant-alternates`**属性可以采用以下两种形式之一：
 
-<ul>
- <li>默认值 <code>normal</code></li>
- <li>一个或多个关键词及函数，使用任意顺序用空格分隔。</li>
-</ul>
+- 默认值 `normal`
+- 一个或多个关键词及函数，使用任意顺序用空格分隔。
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>此关键字禁用备用字体。</dd>
- <dt><code>historical-forms</code></dt>
- <dd>此关键字启用历史类型 - 过去常见但今天不常见的字体。它对应于 OpenType 值 <code>hist</code>.</dd>
- <dt><code><a name="stylistic()"></a>stylistic()</code></dt>
- <dd>此函数可以为个别字体启用字体样式替换。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 <code>salt</code>，例如<code>salt 2</code>。</dd>
- <dt><code><a name="styleset()"></a>styleset()</code></dt>
- <dd>此函数可以对字符集启用字体样式替换。该参数是特定于字体映射到数字的名称。它对应于 OpenType 的值 <code>ssXY</code>，例如 <code>ss02</code>。</dd>
- <dt><code><a name="character-variant()"></a>character-variant()</code></dt>
- <dd>此函数启用字符的特定样式替代。它与 styleset（）类似，但是不会为一组字符创建连贯的字形；单个字符将具有独立且不一定一致的样式。该参数是映射到数字的特定于字体的名称。它对应于 OpenType 值 <code>cvXY</code>，例如<code>cv02</code>。</dd>
- <dt><code><a name="swash()"></a>swash()</code></dt>
- <dd>此函数启用斜字体。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 <code>swsh</code> 和 <code>cswh</code>，例如<code>swsh 2</code> 和<code>cswh 2</code>。</dd>
- <dt><code><a name="ornaments()"></a>ornaments()</code></dt>
- <dd>此函数可启用装饰物，例如 <a href="http://en.wikipedia.org/wiki/Fleuron_%28typography%29">fleurons</a> 与其他 dingbat 字形。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 <code>ornm</code>，例如 <code>ornm 2</code>。
- <div class="note"><strong>注意：</strong> 为了保留文本语义，字体设计师应该包括与 Unicode dingbat 字符不匹配的装饰，作为项目符号字符（U + 2022）的装饰变体。请注意，某些现有字体不遵循此建议。</div>
- </dd>
- <dt><code><a name="annotation()"></a>annotation()</code></dt>
- <dd>此函数支持注释，如带圆圈的数字或倒置的字符。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值<code>nalt</code>，例如 <code>nalt 2</code>。</dd>
-</dl>
+- `normal`
+  - : 此关键字禁用备用字体。
+- `historical-forms`
+  - : 此关键字启用历史类型 - 过去常见但今天不常见的字体。它对应于 OpenType 值 `hist`.
+- `stylistic()`
+  - : 此函数可以为个别字体启用字体样式替换。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 `salt`，例如`salt 2`。
+- `styleset()`
+  - : 此函数可以对字符集启用字体样式替换。该参数是特定于字体映射到数字的名称。它对应于 OpenType 的值 `ssXY`，例如 `ss02`。
+- `character-variant()`
+  - : 此函数启用字符的特定样式替代。它与 styleset（）类似，但是不会为一组字符创建连贯的字形；单个字符将具有独立且不一定一致的样式。该参数是映射到数字的特定于字体的名称。它对应于 OpenType 值 `cvXY`，例如`cv02`。
+- `swash()`
+  - : 此函数启用斜字体。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 `swsh` 和 `cswh`，例如`swsh 2` 和`cswh 2`。
+- `ornaments()`
 
-<h2 id="正式定义">正式定义</h2>
+  - : 此函数可启用装饰物，例如 [fleurons](http://en.wikipedia.org/wiki/Fleuron_%28typography%29) 与其他 dingbat 字形。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 `ornm`，例如 `ornm 2`。
 
-<p>{{CSSInfo}}</p>
+    > **备注：** 为了保留文本语义，字体设计师应该包括与 Unicode dingbat 字符不匹配的装饰，作为项目符号字符（U + 2022）的装饰变体。请注意，某些现有字体不遵循此建议。
 
-<h2 id="正式语法">正式语法</h2>
+- `annotation()`
+  - : 此函数支持注释，如带圆圈的数字或倒置的字符。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值`nalt`，例如 `nalt 2`。
+
+## 正式定义
+
+{{CSSInfo}}
+
+## 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Firefox rocks!&lt;/p&gt;
-&lt;p class="variant"&gt;Firefox rocks!&lt;/p&gt;
-</pre>
+```html
+<p>Firefox rocks!</p>
+<p class="variant">Firefox rocks!</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">@font-feature-values "Leitura Display Swashes" {
+```css
+@font-feature-values "Leitura Display Swashes" {
     @swash { fancy: 1 }
 }
 
@@ -89,22 +90,19 @@ p {
 .variant {
   font-family: Leitura Display Swashes;
   font-variant-alternates: swash(fancy);
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<div class="note">
-<p><strong>注意：</strong> 你需要安装 OpenType 字体 <em>Leitura Display Swashes</em> 才能使这个例子正常运行。您可以找到一些免费版本进行测试，例如从 <a href="http://fontsgeek.com/fonts/Leitura-Display-Swashes">fontsgeek.com</a>.</p>
-</div>
+> **备注：** 你需要安装 OpenType 字体 _Leitura Display Swashes_ 才能使这个例子正常运行。您可以找到一些免费版本进行测试，例如从 [fontsgeek.com](http://fontsgeek.com/fonts/Leitura-Display-Swashes).
 
-<p>{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/font-variant-alternates') }}</p>
+{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/font-variant-alternates') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何标准。</p>
+不属于任何标准。
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-
-
-<p>{{Compat("css.properties.font-variant-alternates")}}</p>
+{{Compat("css.properties.font-variant-alternates")}}

@@ -8,22 +8,18 @@ tags:
   - 参考
 translation_of: Web/CSS/flex-basis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/zh-CN/docs/Web/css">CSS</a> 属性 <strong><code>flex-basis</code></strong> 指定了 flex 元素在主轴方向上的初始大小。如果不使用  {{Cssxref("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸。</p>
+[CSS](/zh-CN/docs/Web/css) 属性 **`flex-basis`** 指定了 flex 元素在主轴方向上的初始大小。如果不使用 {{Cssxref("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸。
 
-<div>{{EmbedInteractiveExample("pages/css/flex-basis.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
+> **备注：** 当一个元素同时被设置了 `flex-basis` (除值为 `auto` 外) 和 `width` (或者在 `flex-direction: column` 情况下设置了`height`) , `flex-basis` 具有更高的优先级。
 
+## 语法
 
-
-<div class="note">
-<p><strong>Note:</strong> 当一个元素同时被设置了 <code>flex-basis</code> (除值为 <code>auto</code> 外) 和 <code>width</code> (或者在 <code>flex-direction: column</code> 情况下设置了<code>height</code>) , <code>flex-basis</code> 具有更高的优先级。</p>
-</div>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* 指定&lt;'width'&gt; */
+```css
+/* 指定<'width'> */
 flex-basis: 10em;
 flex-basis: 3px;
 flex-basis: auto;
@@ -41,57 +37,54 @@ flex-basis: content;
 flex-basis: inherit;
 flex-basis: initial;
 flex-basis: unset;
-</pre>
+```
 
-<p>这个 <code>flex-basis</code> 属性 被指定为关键词 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#content">content</a></code> 或者 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#%3C'width'%3E">&lt;'width'&gt;</a></code>.</p>
+这个 `flex-basis` 属性 被指定为关键词 [`content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#content) 或者 [`<'width'>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis$edit#%3C'width'%3E).
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;'width'&gt;</code></dt>
- <dd>
- <p>width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 <code>auto</code>。</p>
- </dd>
- <dt><code>content</code></dt>
- <dd>基于 flex 的元素的内容自动调整大小。
- <div class="note"><strong>Note:</strong>由于最初规范中没有包括这个值，在一些早期的浏览器实现的 flex 布局中，content 值无效，可以利用设置 (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> 或 <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) 为 auto 达到同样的效果。</div>
+- ## `<'width'>`
 
- <div class="note">
- <p><strong>简史</strong></p>
+      : width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 `auto`。
 
- <ul>
-  <li>最初，"flex-basis:auto" 的含义是 "参照我的<code>width</code>和<code>height</code>属性".</li>
-  <li>在此之后，"flex-basis:auto" 的含义变成了自动尺寸，而 "main-size" 变成了 "参照我的<code>width</code>和<code>height</code>属性"。实际执行于 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032922">bug 1032922</a>.</li>
-  <li>然后呢，这个更改又在 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1093316">bug 1093316</a> 中被撤销了，所以 "auto" 变回了原来的含义; 而一个新的关键字 'content' 变成了自动尺寸。 ({{bug("1105111")}} 包括了增加这个关键字).</li>
- </ul>
- </div>
- </dd>
-</dl>
+- `content`
 
-<h3 id="规范">规范</h3>
+  - : 基于 flex 的元素的内容自动调整大小。
+
+    > **备注：**由于最初规范中没有包括这个值，在一些早期的浏览器实现的 flex 布局中，content 值无效，可以利用设置 ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) 或 [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) 为 auto 达到同样的效果。
+
+    > **备注：** **简史**
+    >
+    > - 最初，"flex-basis:auto" 的含义是 "参照我的`width`和`height`属性".
+    > - 在此之后，"flex-basis:auto" 的含义变成了自动尺寸，而 "main-size" 变成了 "参照我的`width`和`height`属性"。实际执行于 [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
+    > - 然后呢，这个更改又在 [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316) 中被撤销了，所以 "auto" 变回了原来的含义; 而一个新的关键字 'content' 变成了自动尺寸。 ({{bug("1105111")}} 包括了增加这个关键字).
+
+### 规范
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul class="container"&gt;
-  &lt;li class="flex flex1"&gt;1: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex2"&gt;2: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex3"&gt;3: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex4"&gt;4: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex5"&gt;5: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul class="container">
+  <li class="flex flex1">1: flex-basis test</li>
+  <li class="flex flex2">2: flex-basis test</li>
+  <li class="flex flex3">3: flex-basis test</li>
+  <li class="flex flex4">4: flex-basis test</li>
+  <li class="flex flex5">5: flex-basis test</li>
+</ul>
 
-&lt;ul class="container"&gt;
-  &lt;li class="flex flex6"&gt;6: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<ul class="container">
+  <li class="flex flex6">6: flex-basis test</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.container {
+```css
+.container {
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -169,28 +162,24 @@ flex-basis: unset;
 .flex6:after {
   content: 'fill/-webkit-fill-available/-moz-available';
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('例子', '860', '360', '', 'Web/CSS/flex-basis')}}</p>
+{{EmbedLiveSample('例子', '860', '360', '', 'Web/CSS/flex-basis')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div class="note"></div>
+{{Compat("css.properties.flex-basis")}}
 
-<p>{{Compat("css.properties.flex-basis")}}</p>
+## 参见
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>CSS 弹性盒子指南: <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS 弹性盒子指南: <em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
- <li>{{cssxref("width")}}</li>
-</ul>
+- CSS 弹性盒子指南: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS 弹性盒子指南: _[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- {{cssxref("width")}}

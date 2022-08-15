@@ -9,45 +9,43 @@ tags:
   - 媒体查询
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
-<p><strong><code>prefers-color-scheme</code></strong> <a href="/zh-CN/docs/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">媒体特性</a>用于检测用户是否有将系统的主题色设置为亮色或者暗色。</p>
+**`prefers-color-scheme`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features)用于检测用户是否有将系统的主题色设置为亮色或者暗色。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>表示系统未得知用户在这方面的选项。在<a href="https://drafts.csswg.org/mediaqueries-5/#boolean-context">布尔值上下文</a>中，其执行结果为 <code>false</code>。</dd>
- <dt><code><dfn>light</dfn></code></dt>
- <dd>表示用户已告知系统他们选择使用浅色主题的界面。</dd>
- <dt><code><dfn>dark</dfn></code></dt>
- <dd>表示用户已告知系统他们选择使用暗色主题的界面。</dd>
-</dl>
+- `no-preference`
+  - : 表示系统未得知用户在这方面的选项。在[布尔值上下文](https://drafts.csswg.org/mediaqueries-5/#boolean-context)中，其执行结果为 `false`。
+- `light`
+  - : 表示用户已告知系统他们选择使用浅色主题的界面。
+- `dark`
+  - : 表示用户已告知系统他们选择使用暗色主题的界面。
 
-<div class="note">
-<p>“未得知”、“已告知”等用语，英文原文如此。<br>
- “未得知”可理解为：浏览器的宿主系统不支持设置主题色，或者支持主题色并默认为/被设为了未设置/无偏好。<br>
- “已告知”为：浏览器的宿主系统支持设置主题色，且被设置为了亮色或者暗色。</p>
+> **备注：** “未得知”、“已告知”等用语，英文原文如此。
+> “未得知”可理解为：浏览器的宿主系统不支持设置主题色，或者支持主题色并默认为/被设为了未设置/无偏好。
+> “已告知”为：浏览器的宿主系统支持设置主题色，且被设置为了亮色或者暗色。
+>
+> 目前，若结果为 `no-preference`，无法通过此媒体特性获知宿主系统是否支持设置主题色，或者用户是否主动将其设置为无偏好。出于隐私保护等方面的考虑，用户或用户代理也可能在一些情况下在浏览器内部将其设置为 `no-preference`。
 
-<p>目前，若结果为 <code>no-preference</code>，无法通过此媒体特性获知宿主系统是否支持设置主题色，或者用户是否主动将其设置为无偏好。出于隐私保护等方面的考虑，用户或用户代理也可能在一些情况下在浏览器内部将其设置为 <code>no-preference</code>。</p>
-</div>
+## 样例
 
-<h2 id="样例">样例</h2>
+这个例子使用了一个有黑色背景和白色文字的元素，当用户使用浅色主题时，会翻转黑白颜色。
 
-<p>这个例子使用了一个有黑色背景和白色文字的元素，当用户使用浅色主题时，会翻转黑白颜色。</p>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<div class="day">Day (initial)</div>
+<div class="day light-scheme">Day (changes in light scheme)</div>
+<div class="day dark-scheme">Day (changes in dark scheme)</div> <br>
 
-<pre class="brush: html">&lt;div class="day"&gt;Day (initial)&lt;/div&gt;
-&lt;div class="day light-scheme"&gt;Day (changes in light scheme)&lt;/div&gt;
-&lt;div class="day dark-scheme"&gt;Day (changes in dark scheme)&lt;/div&gt; &lt;br&gt;
+<div class="night">Night (initial)</div>
+<div class="night light-scheme">Night (changes in light scheme)</div>
+<div class="night dark-scheme">Night (changes in dark scheme)</div>
+```
 
-&lt;div class="night"&gt;Night (initial)&lt;/div&gt;
-&lt;div class="night light-scheme"&gt;Night (changes in light scheme)&lt;/div&gt;
-&lt;div class="night dark-scheme"&gt;Night (changes in dark scheme)&lt;/div&gt;
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">.day   { background: #eee; color: black; }
+```css
+.day   { background: #eee; color: black; }
 .night { background: #333; color: white; }
 
 @media (prefers-color-scheme: dark) {
@@ -67,28 +65,24 @@ translation_of: Web/CSS/@media/prefers-color-scheme
   height: 2em;
   vertical-align: middle;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.at-rules.media.prefers-color-scheme")}}
 
+## 参见
 
-<p>{{Compat("css.at-rules.media.prefers-color-scheme")}}</p>
+- [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
+- [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
+- Changing color schemes in [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/) and [Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019).
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="https://www.youtube.com/watch?v=jmepqJ5UbuM">Video tutorial: Coding a Dark Mode for your Website</a></li>
- <li><a href="https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode">Redesigning your product and website for dark mode</a></li>
- <li>Changing color schemes in <a href="https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/">Windows</a>, <a href="https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/">macOS</a> and <a href="https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019">Android</a>.</li>
-</ul>
-
-<div>{{QuickLinksWithSubpages("/zh-CN/docs/Web/CSS/@media/")}}</div>
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/CSS/@media/")}}

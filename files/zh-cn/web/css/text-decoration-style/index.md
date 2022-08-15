@@ -9,21 +9,20 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/CSS">CSS</a> 属性 <strong><code>text-decoration-style</code></strong> 用于设置由 {{ cssxref("text-decoration-line") }} 设定的线的样式。线的样式会应用到所有被 <code>text-decoration-line</code> 设定的线，不能为其中的每条线设置不同的样式。当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。</p>
+[CSS](/zh-CN/docs/CSS) 属性 **`text-decoration-style`** 用于设置由 {{ cssxref("text-decoration-line") }} 设定的线的样式。线的样式会应用到所有被 `text-decoration-line` 设定的线，不能为其中的每条线设置不同的样式。当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}
 
+如果设定的修饰效果具有特定的语义，例如删除线的意味着某些文本被删除了，开发者最好使用有语义的 HTML 标签来表达，比如 {{ HTMLElement("del") }} 或 {{ HTMLElement("s") }} 标签，因为浏览器有时可能会屏蔽某些样式，但语义化的标签则不会出现这样的问题。
 
+当一次使用多个 line-decoration 属性时，使用 {{cssxref("text-decoration")}} 简写属性会更方便。
 
-<p>如果设定的修饰效果具有特定的语义，例如删除线的意味着某些文本被删除了，开发者最好使用有语义的 HTML 标签来表达，比如 {{ HTMLElement("del") }} 或 {{ HTMLElement("s") }} 标签，因为浏览器有时可能会屏蔽某些样式，但语义化的标签则不会出现这样的问题。</p>
+## 语法
 
-<p>当一次使用多个 line-decoration 属性时，使用 {{cssxref("text-decoration")}} 简写属性会更方便。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 text-decoration-style: solid;
 text-decoration-style: double;
 text-decoration-style: dotted;
@@ -34,64 +33,62 @@ text-decoration-style: wavy;
 text-decoration-style: inherit;
 text-decoration-style: initial;
 text-decoration-style: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>solid</dt>
- <dd>画一条实线。</dd>
- <dt>double</dt>
- <dd>画一条双实线。</dd>
- <dt>dotted</dt>
- <dd>画一条点划线。</dd>
- <dt>dashed</dt>
- <dd>画一条虚线。</dd>
- <dt>wavy</dt>
- <dd>画一条波浪线。</dd>
- <dt>-moz-none{{ non-standard_inline }}</dt>
- <dd>不画线。亦可用 {{ cssxref("text-decoration-line") }}<code>: none</code> 替代。</dd>
-</dl>
+- solid
+  - : 画一条实线。
+- double
+  - : 画一条双实线。
+- dotted
+  - : 画一条点划线。
+- dashed
+  - : 画一条虚线。
+- wavy
+  - : 画一条波浪线。
+- \-moz-none{{ non-standard_inline }}
+  - : 不画线。亦可用 {{ cssxref("text-decoration-line") }}`: none` 替代。
 
-<h3 id="格式化语法">格式化语法</h3>
+### 格式化语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<div id="Examples">
-<pre class="brush: css" class="hidden">.example {
+```css
+.example {
        -moz-text-decoration-line: underline;
        -moz-text-decoration-style: wavy;
        -moz-text-decoration-color: red;
     -webkit-text-decoration-line: underline;
     -webkit-text-decoration-style: wavy;
     -webkit-text-decoration-color: red;
-}</pre>
+}
+```
 
-<pre class="brush: css">.wavy {
+```css
+.wavy {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;p class="wavy"&gt;This text has a wavy red line beneath it.&lt;/p&gt;
-</pre>
+```html
+<p class="wavy">This text has a wavy red line beneath it.</p>
+```
 
-<p>{{ EmbedLiveSample('Examples', '', '', '') }}</p>
-</div>
+{{ EmbedLiveSample('Examples', '', '', '') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便</li>
-</ul>
+- 当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便

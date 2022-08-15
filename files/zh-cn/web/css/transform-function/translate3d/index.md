@@ -9,61 +9,78 @@ tags:
 translation_of: Web/CSS/transform-function/translate3d()
 original_slug: Web/CSS/transform-function/translate3d()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>translate3d()</code> CSS 函数在 3D 空间内移动一个元素的位置。这个移动由一个三维向量来表达，分别表示他在三个方向上移动的距离。</p>
+`translate3d()` CSS 函数在 3D 空间内移动一个元素的位置。这个移动由一个三维向量来表达，分别表示他在三个方向上移动的距离。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">translate3d(tx, ty, tz)</pre>
+```
+translate3d(tx, ty, tz)
+```
 
-<dl>
- <dt>
- <h2 id="常量">常量</h2>
- </dt>
- <dt><em>tx</em></dt>
- <dd>是一个 {{cssxref("&lt;length&gt;")}} 代表移动向量的横坐标。</dd>
- <dt><em>ty</em></dt>
- <dd>是一个{{cssxref("&lt;length&gt;")}} 代表移动向量的纵坐标。</dd>
- <dt><em>tz</em></dt>
- <dd>是一个 {{cssxref("&lt;length&gt;")}} 代表移动向量的 z 坐标。它不能是{{cssxref("&lt;percentage&gt;")}} 值；那样的移动是没有意义的。</dd>
-</dl>
+- ## 常量
+
+  _tx_
+
+  - : 是一个 {{cssxref("&lt;length&gt;")}} 代表移动向量的横坐标。
+
+- _ty_
+  - : 是一个{{cssxref("&lt;length&gt;")}} 代表移动向量的纵坐标。
+- _tz_
+  - : 是一个 {{cssxref("&lt;length&gt;")}} 代表移动向量的 z 坐标。它不能是{{cssxref("&lt;percentage&gt;")}} 值；那样的移动是没有意义的。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">
-    <p> 此变换适用于 3D 空间，并不适用于这两种情况。</p>
-   </td>
-   <td colspan="1" rowspan="2">
-    <p>平移不是ℝ<sup>3</sup>中的线性变换，不能使用笛卡尔坐标矩阵表示。</p>
-   </td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>tz</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
+      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="2">
+        <p>此变换适用于 3D 空间，并不适用于这两种情况。</p>
+      </td>
+      <td colspan="1" rowspan="2">
+        <p>平移不是ℝ<sup>3</sup>中的线性变换，不能使用笛卡尔坐标矩阵表示。</p>
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>tz</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="单轴变化示例">单轴变化示例</h3>
+### 单轴变化示例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;foo&lt;/p&gt;
-&lt;p class="transformed"&gt;bar&lt;/p&gt;
-&lt;p&gt;foo&lt;/p&gt;</pre>
+```html
+<p>foo</p>
+<p class="transformed">bar</p>
+<p>foo</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -73,23 +90,27 @@ original_slug: Web/CSS/transform-function/translate3d()
   transform: perspective(500px) translate3d(10px,0px,0px);
   /* equivalent to perspective(500px) translateX(10px)*/
   background-color: blue;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Using_a_single_axis_translation","100%","250")}}</p>
+{{EmbedLiveSample("Using_a_single_axis_translation","100%","250")}}
 
-<h3 id="z轴与x轴变化">z 轴与 x 轴变化</h3>
+### z 轴与 x 轴变化
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;foo&lt;/p&gt;
-&lt;p class="transformed"&gt;bar&lt;/p&gt;
-&lt;p&gt;foo&lt;/p&gt;</pre>
+```html
+<p>foo</p>
+<p class="transformed">bar</p>
+<p>foo</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -98,23 +119,22 @@ original_slug: Web/CSS/transform-function/translate3d()
 .transformed {
   transform: perspective(500px) translate3d(10px,0px,100px);
   background-color: blue;
-}</pre>
+}
+```
 
-<h3 id="结果_2">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Combining_z-axis_and_x-axis_translation","100%","250")}}</p>
+{{EmbedLiveSample("Combining_z-axis_and_x-axis_translation","100%","250")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

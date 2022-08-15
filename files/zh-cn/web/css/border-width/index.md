@@ -3,21 +3,22 @@ title: border-width
 slug: Web/CSS/border-width
 translation_of: Web/CSS/border-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><strong><code>border-width</code></strong> 属性可以设置盒子模型的边框宽度。</p>
+**`border-width`** 属性可以设置盒子模型的边框宽度。
 
-<p>{{EmbedInteractiveExample("pages/css/border-width.html")}}</p>
+{{EmbedInteractiveExample("pages/css/border-width.html")}}
 
-<p>它是{{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} 和 {{cssxref("border-left-width")}}的简写;</p>
+它是{{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} 和 {{cssxref("border-left-width")}}的简写;
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* 用法一：明确指定宽度值 */
-/* 当给定一个宽度时，该宽度作用于选定元素的所有边框<em> */
-</em>border-width: 5px;
+```css
+/* 用法一：明确指定宽度值 */
+/* 当给定一个宽度时，该宽度作用于选定元素的所有边框 */
+border-width: 5px;
 /* 当给定两个宽度时，该宽度分别依次作用于选定元素的横边与纵边 */
 border-width: 2px 1.5em;
 /* 当给定三个宽度时，该宽度分别依次作用于选定元素的上横边、纵边、下横边 */
@@ -33,73 +34,41 @@ border-width: inherit;
 border-width: thin;
 border-width: medium;
 border-width: thick;
+```
 
-</pre>
-
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td style="vertical-align: middle;">关键字</td>
-      <td style="vertical-align: middle;">实例</td>
-      <td style="vertical-align: middle;">说明</td>
-    </tr>
-    <tr>
-      <td style="vertical-align: middle;"><code>thin</code></td>
-      <td style="vertical-align: middle;">
-        <div
-          style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thin; background-color: palegreen;">
-        </div>
-      </td>
-      <td style="vertical-align: middle;">细边线</td>
-    </tr>
-    <tr>
-      <td style="vertical-align: middle;"><code>medium</code></td>
-      <td style="vertical-align: middle;">
-        <div
-          style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: medium; background-color: palegreen;">
-        </div>
-      </td>
-      <td style="vertical-align: middle;">中等边线</td>
-    </tr>
-    <tr>
-      <td style="vertical-align: middle;"><code>thick</code></td>
-      <td style="vertical-align: middle;">
-        <div
-          style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thick; background-color: palegreen;">
-        </div>
-      </td>
-      <td style="vertical-align: middle;">宽边线</td>
-    </tr>
-  </tbody>
-</table>
+| 关键字   | 实例 | 说明     |
+| -------- | ---- | -------- |
+| `thin`   |      | 细边线   |
+| `medium` |      | 中等边线 |
+| `thick`  |      | 宽边线   |
 
+> **备注：** 规范并没有规定关键字的实际值故在不同浏览器效果是不一样的，但显然 thin≤medium≤thick，并且值在单个文档中是恒定的
 
-<div class="blockIndicator note">
-<p><strong>提示：</strong>规范并没有规定关键字的实际值故在不同浏览器效果是不一样的，但显然 thin≤medium≤thick，并且值在单个文档中是恒定的</p>
-</div>
+## 示例
 
-<h2 id="示例">示例</h2>
+### A mix of values and lengths
 
-<h3 id="A_mix_of_values_and_lengths">A mix of values and lengths</h3>
+HTML
 
-<p>HTML</p>
+```html
+<p id="sval">
+    one value: 6px wide border on all 4 sides</p>
+<p id="bival">
+    two different values: 2px wide top and bottom border, 10px wide right and left border</p>
+<p id="treval">
+    three different values: 0.3em top, 9px bottom, and zero width right and left</p>
+<p id="fourval">
+    four different values: "thin" top, "medium" right, "thick" bottom, and 1em right</p>
+```
 
-<pre class="brush: html">&lt;p id="sval"&gt;
-    one value: 6px wide border on all 4 sides&lt;/p&gt;
-&lt;p id="bival"&gt;
-    two different values: 2px wide top and bottom border, 10px wide right and left border&lt;/p&gt;
-&lt;p id="treval"&gt;
-    three different values: 0.3em top, 9px bottom, and zero width right and left&lt;/p&gt;
-&lt;p id="fourval"&gt;
-    four different values: "thin" top, "medium" right, "thick" bottom, and 1em right&lt;/p&gt;</pre>
+#### CSS
 
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">#sval {
+```css
+#sval {
     border: ridge #ccc;
     border-width: 6px;
 }
@@ -119,23 +88,22 @@ p {
     width: auto;
     margin: 0.25em;
     padding: 0.25em;
-}</pre>
+}
+```
 
-<h4 id="运行结果">运行结果</h4>
+#### 运行结果
 
-<p>{{ EmbedLiveSample('A_mix_of_values_and_lengths', 300, 180) }}</p>
+{{ EmbedLiveSample('A_mix_of_values_and_lengths', 300, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>The border-related shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}</li>
- <li>The border-width-related properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}</li>
-</ul>
+- The border-related shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}
+- The border-width-related properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}

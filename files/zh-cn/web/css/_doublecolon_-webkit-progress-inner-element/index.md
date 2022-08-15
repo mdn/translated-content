@@ -1,65 +1,60 @@
 ---
 title: '::-webkit-progress-inner-element'
-slug: 'Web/CSS/::-webkit-progress-inner-element'
+slug: Web/CSS/::-webkit-progress-inner-element
 tags:
   - CSS
   - 伪元素
   - 非标准
-translation_of: 'Web/CSS/::-webkit-progress-inner-element'
+translation_of: Web/CSS/::-webkit-progress-inner-element
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p><strong><code>::-webkit-progress-inner-element</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 伪元素选择了 {{HTMLElement("progress")}} 元素。他是 {{cssxref("::-webkit-progress-bar")}} 伪元素的父元素。</p>
+**`::-webkit-progress-inner-element`** [CSS](/zh-CN/docs/Web/CSS) 伪元素选择了 {{HTMLElement("progress")}} 元素。他是 {{cssxref("::-webkit-progress-bar")}} 伪元素的父元素。
 
-<div class="note">
-<p><strong>注意：</strong> 为了使 <code>::-webkit-progress-value</code> 生效， <code>&lt;progress&gt;</code> 元素的{{cssxref("-webkit-appearance")}} 需要设置为 <code>none</code> 。</p>
-</div>
+> **备注：** 为了使 `::-webkit-progress-value` 生效， `<progress>` 元素的{{cssxref("-webkit-appearance")}} 需要设置为 `none` 。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;progress value="10" max="50"&gt;
-</pre>
+```html
+<progress value="10" max="50">
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">progress {
+```css
+progress {
   -webkit-appearance: none;
 }
 
 ::-webkit-progress-inner-element {
   border: 2px solid black;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 200, 50)}}</p>
+{{EmbedLiveSample("Example", 200, 50)}}
 
-<p>应用了上述样式的进度条如下：</p>
+应用了上述样式的进度条如下：
 
-<p><img src="-webkit-progress-inner-element_example.png"></p>
+![](-webkit-progress-inner-element_example.png)
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何规范。这是 WebKit/Blink 专有的一个伪元素。</p>
+不属于任何规范。这是 WebKit/Blink 专有的一个伪元素。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.selectors.-webkit-progress-inner-element")}}
 
+## 参考
 
-<p>{{Compat("css.selectors.-webkit-progress-inner-element")}}</p>
+- The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
 
-<h2 id="参考">参考</h2>
+  - {{cssxref("::-webkit-progress-bar")}}
+  - {{cssxref("::-webkit-progress-value")}}
 
-<ul>
- <li>The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
-  <ul>
-   <li>{{cssxref("::-webkit-progress-bar")}}</li>
-   <li>{{cssxref("::-webkit-progress-value")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("::-moz-progress-bar")}}</li>
- <li>{{cssxref("::-ms-fill")}}</li>
-</ul>
+- {{cssxref("::-moz-progress-bar")}}
+- {{cssxref("::-ms-fill")}}

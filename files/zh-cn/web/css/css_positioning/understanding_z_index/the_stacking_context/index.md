@@ -10,145 +10,128 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>我们假定用户正面向（浏览器）视窗或网页，而 HTML 元素沿着其相对于用户的一条虚构的 z 轴排开，<strong>层叠上下文</strong>就是对这些 HTML 元素的一个三维构想。众 HTML 元素基于其元素属性按照优先级顺序占据这个空间。</p>
+我们假定用户正面向（浏览器）视窗或网页，而 HTML 元素沿着其相对于用户的一条虚构的 z 轴排开，**层叠上下文**就是对这些 HTML 元素的一个三维构想。众 HTML 元素基于其元素属性按照优先级顺序占据这个空间。
 
-<h2 id="层叠上下文">层叠上下文</h2>
+## 层叠上下文
 
-<p>在本篇之前的部分——<a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">运用 z-index</a>，（我们认识到）某些元素的渲染顺序是由其 <code>z-index</code> 的值影响的。这是因为这些元素具有能够使他们形成一个<em>层叠上下文</em>的特殊属性<em>。</em></p>
+在本篇之前的部分——[运用 z-index](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index)，（我们认识到）某些元素的渲染顺序是由其 `z-index` 的值影响的。这是因为这些元素具有能够使他们形成一个*层叠上下文*的特殊属性*。*
 
-<p>文档中的层叠上下文由满足以下任意一个条件的元素形成：</p>
+文档中的层叠上下文由满足以下任意一个条件的元素形成：
 
-<ul>
- <li>文档根元素（<code>&lt;html&gt;</code>）；</li>
- <li>{{cssxref("position")}} 值为 <code>absolute</code>（绝对定位）或  <code>relative</code>（相对定位）且 {{cssxref("z-index")}} 值不为 <code>auto</code> 的元素；</li>
- <li>{{cssxref("position")}} 值为 <code>fixed</code>（固定定位）或 <code>sticky</code>（粘滞定位）的元素（沾滞定位适配所有移动设备上的浏览器，但老的桌面浏览器不支持）；</li>
- <li>flex ({{cssxref("flex")}}) 容器的子元素，且 {{cssxref("z-index")}} 值不为 <code>auto</code>；</li>
- <li>grid ({{cssxref("grid")}}) 容器的子元素，且 {{cssxref("z-index")}} 值不为 <code>auto</code>；</li>
- <li>{{cssxref("opacity")}} 属性值小于 <code>1</code> 的元素（参见 <a href="https://www.w3.org/TR/css3-color/#transparency">the specification for opacity</a>）；</li>
- <li>{{cssxref("mix-blend-mode")}} 属性值不为 <code>normal</code> 的元素；</li>
- <li>以下任意属性值不为 <code>none</code> 的元素：
-  <ul>
-   <li>{{cssxref("transform")}}</li>
-   <li>{{cssxref("filter")}}</li>
-   <li>{{cssxref("backdrop-filter")}}</li> 
-   <li>{{cssxref("perspective")}}</li>
-   <li>{{cssxref("clip-path")}}</li>
-   <li>{{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("isolation")}} 属性值为 <code>isolate</code> 的元素；</li>
- <li>{{cssxref("will-change")}} 值设定了任一属性而该属性在 non-initial 值时会创建层叠上下文的元素（参考<a href="https://dev.opera.com/articles/css-will-change-property/">这篇文章</a>）；</li>
- <li>{{cssxref("contain")}} 属性值为 <code>layout</code>、<code>paint</code> 或包含它们其中之一的合成值（比如 <code>contain: strict</code>、<code>contain: content</code>）的元素。</li>
-</ul>
+- 文档根元素（`<html>`）；
+- {{cssxref("position")}} 值为 `absolute`（绝对定位）或 `relative`（相对定位）且 {{cssxref("z-index")}} 值不为 `auto` 的元素；
+- {{cssxref("position")}} 值为 `fixed`（固定定位）或 `sticky`（粘滞定位）的元素（沾滞定位适配所有移动设备上的浏览器，但老的桌面浏览器不支持）；
+- flex ({{cssxref("flex")}}) 容器的子元素，且 {{cssxref("z-index")}} 值不为 `auto`；
+- grid ({{cssxref("grid")}}) 容器的子元素，且 {{cssxref("z-index")}} 值不为 `auto`；
+- {{cssxref("opacity")}} 属性值小于 `1` 的元素（参见 [the specification for opacity](https://www.w3.org/TR/css3-color/#transparency)）；
+- {{cssxref("mix-blend-mode")}} 属性值不为 `normal` 的元素；
+- 以下任意属性值不为 `none` 的元素：
 
-<p>在层叠上下文中，子元素同样也按照上面解释的规则进行层叠。重要的是，其子级层叠上下文的 <code>z-index</code> 值只在父级中才有意义。子级层叠上下文被自动视为父级层叠上下文的一个独立单元。</p>
+  - {{cssxref("transform")}}
+  - {{cssxref("filter")}}
+  - {{cssxref("backdrop-filter")}}
+  - {{cssxref("perspective")}}
+  - {{cssxref("clip-path")}}
+  - {{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}
 
-<p>总结：</p>
+- {{cssxref("isolation")}} 属性值为 `isolate` 的元素；
+- {{cssxref("will-change")}} 值设定了任一属性而该属性在 non-initial 值时会创建层叠上下文的元素（参考[这篇文章](https://dev.opera.com/articles/css-will-change-property/)）；
+- {{cssxref("contain")}} 属性值为 `layout`、`paint` 或包含它们其中之一的合成值（比如 `contain: strict`、`contain: content`）的元素。
 
-<ul>
- <li>层叠上下文可以包含在其他层叠上下文中，并且一起创建一个层叠上下文的层级。</li>
- <li>每个层叠上下文都完全独立于它的兄弟元素：当处理层叠时只考虑子元素。</li>
- <li>每个层叠上下文都是自包含的：当一个元素的内容发生层叠后，该元素将被作为整体在父级层叠上下文中按顺序进行层叠。</li>
-</ul>
+在层叠上下文中，子元素同样也按照上面解释的规则进行层叠。重要的是，其子级层叠上下文的 `z-index` 值只在父级中才有意义。子级层叠上下文被自动视为父级层叠上下文的一个独立单元。
 
-<div class="note"><strong>Note:</strong> 层叠上下文的层级是 HTML 元素层级的一个子级，因为只有某些元素才会创建层叠上下文。可以这样说，没有创建自己的层叠上下文的元素会被父层叠上下文<em>同化</em>。</div>
+总结：
 
-<h2 id="示例">示例</h2>
+- 层叠上下文可以包含在其他层叠上下文中，并且一起创建一个层叠上下文的层级。
+- 每个层叠上下文都完全独立于它的兄弟元素：当处理层叠时只考虑子元素。
+- 每个层叠上下文都是自包含的：当一个元素的内容发生层叠后，该元素将被作为整体在父级层叠上下文中按顺序进行层叠。
 
-<p><img alt="Example of stacking rules modified using z-index" src="/@api/deki/files/913/=Understanding_zindex_04.png"></p>
+> **备注：** 层叠上下文的层级是 HTML 元素层级的一个子级，因为只有某些元素才会创建层叠上下文。可以这样说，没有创建自己的层叠上下文的元素会被父层叠上下文*同化*。
 
-<p>在这个例子中，每个被定位的元素都创建了独自的层叠上下文，因为他们被指定了定位属性和 <code>z-index</code> 值。我们把层叠上下文的层级列在下面：</p>
+## 示例
 
-<ul>
- <li>Root
-  <ul>
-   <li>DIV #1</li>
-   <li>DIV #2</li>
-   <li>DIV #3
-    <ul>
-     <li>DIV #4</li>
-     <li>DIV #5</li>
-     <li>DIV #6</li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+![Example of stacking rules modified using z-index](/@api/deki/files/913/=Understanding_zindex_04.png)
 
-<p>请一定要注意 DIV #4，DIV #5 和 DIV #6 是 DIV #3 的子元素，所以它们的层叠完全在 DIV #3 中被处理。一旦 DIV #3 中的层叠和渲染处理完成，DIV #3 元素就被作为一个整体传递与兄弟元素的 DIV 在 root（根）元素进行层叠。</p>
+在这个例子中，每个被定位的元素都创建了独自的层叠上下文，因为他们被指定了定位属性和 `z-index` 值。我们把层叠上下文的层级列在下面：
 
-<div class="note">
-<p><strong>注意：</strong></p>
+- Root
 
-<ul>
- <li>DIV #4 被渲染在 DIV #1 之下，因为 DIV #1 的 z-index (5) 在 root 元素的层叠上下文中生效，而 DIV #4 的 z-index (6) 在 DIV #3 的层叠上下文中生效。因此，DIV #4 在 DIV #1 之下，因为 DIV #4 归属于 z-index 值较低的 DIV #3 元素。</li>
- <li>由此可得 DIV #2 (z-index 2) 被渲染在 DIV #5 (z-index 1) 之下，因为 DIV #5 归属于 z-index 较高的 DIV #3 元素。</li>
- <li>DIV #3 的 z-index 值是 4，但是这个值独立于 DIV #4，DIV #5 和 DIV #6 的 z-index 值，因为他们从属于不同的层叠上下文。</li>
- <li>分辨出层叠的元素在 Z 轴上的<em>渲染顺序</em>的一个简单方法是将它们想象成一系列的版本号，子元素是其父元素版本号之下的次要版本。通过这个方法我们可以轻松地看出为什么一个 z-index 为 1 的元素（DIV #5）层叠于一个 z-index 为 2 的元素（DIV #2）之上，而一个 z-index 为 6 的元素（DIV #4）层叠于 z-index 为 5 的元素（DIV #1）之下。在我们的例子中（依照最终渲染次序排列）：
-  <ul>
-   <li>Root
-    <ul>
-     <li>DIV #2 - z-index 为 2</li>
-     <li>DIV #3 - z-index 为 4
-      <ul>
-       <li>DIV #5 - z-index 为 1，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.1</li>
-       <li>DIV #6 - z-index 为 3，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.3</li>
-       <li>DIV #4 - z-index 为 6，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.6</li>
-      </ul>
-     </li>
-     <li>DIV #1 - z-index 为 5</li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+  - DIV #1
+  - DIV #2
+  - DIV #3
+
+    - DIV #4
+    - DIV #5
+    - DIV #6
+
+请一定要注意 DIV #4，DIV #5 和 DIV #6 是 DIV #3 的子元素，所以它们的层叠完全在 DIV #3 中被处理。一旦 DIV #3 中的层叠和渲染处理完成，DIV #3 元素就被作为一个整体传递与兄弟元素的 DIV 在 root（根）元素进行层叠。
+
+> **备注：**
+>
+> - DIV #4 被渲染在 DIV #1 之下，因为 DIV #1 的 z-index (5) 在 root 元素的层叠上下文中生效，而 DIV #4 的 z-index (6) 在 DIV #3 的层叠上下文中生效。因此，DIV #4 在 DIV #1 之下，因为 DIV #4 归属于 z-index 值较低的 DIV #3 元素。
+> - 由此可得 DIV #2 (z-index 2) 被渲染在 DIV #5 (z-index 1) 之下，因为 DIV #5 归属于 z-index 较高的 DIV #3 元素。
+> - DIV #3 的 z-index 值是 4，但是这个值独立于 DIV #4，DIV #5 和 DIV #6 的 z-index 值，因为他们从属于不同的层叠上下文。
+> - 分辨出层叠的元素在 Z 轴上的*渲染顺序*的一个简单方法是将它们想象成一系列的版本号，子元素是其父元素版本号之下的次要版本。通过这个方法我们可以轻松地看出为什么一个 z-index 为 1 的元素（DIV #5）层叠于一个 z-index 为 2 的元素（DIV #2）之上，而一个 z-index 为 6 的元素（DIV #4）层叠于 z-index 为 5 的元素（DIV #1）之下。在我们的例子中（依照最终渲染次序排列）：
+>
+>   - Root
+>
+>     - DIV #2 - z-index 为 2
+>     - DIV #3 - z-index 为 4
+>
+>       - DIV #5 - z-index 为 1，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.1
+>       - DIV #6 - z-index 为 3，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.3
+>       - DIV #4 - z-index 为 6，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.6
+>
+>     - DIV #1 - z-index 为 5
+
+## 示例源码
+
+### HTML
+
+```
+<div id="div1">
+  <h1>Division Element #1</h1>
+  <code>position: relative;<br/>
+  z-index: 5;</code>
 </div>
 
-<h2 id="示例源码">示例源码</h2>
+<div id="div2">
+  <h1>Division Element #2</h1>
+  <code>position: relative;<br/>
+  z-index: 2;</code>
+</div>
 
-<h3 id="HTML">HTML</h3>
+<div id="div3">
+  <div id="div4">
+    <h1>Division Element #4</h1>
+    <code>position: relative;<br/>
+    z-index: 6;</code>
+  </div>
 
-<pre><code>&lt;div id="div1"&gt;
-  &lt;h1&gt;Division Element #1&lt;/h1&gt;
-  &lt;code&gt;position: relative;&lt;br/&gt;
-  z-index: 5;&lt;/code&gt;
-&lt;/div&gt;
+  <h1>Division Element #3</h1>
+  <code>position: absolute;<br/>
+  z-index: 4;</code>
 
-&lt;div id="div2"&gt;
-  &lt;h1&gt;Division Element #2&lt;/h1&gt;
-  &lt;code&gt;position: relative;&lt;br/&gt;
-  z-index: 2;&lt;/code&gt;
-&lt;/div&gt;
+  <div id="div5">
+    <h1>Division Element #5</h1>
+    <code>position: relative;<br/>
+    z-index: 1;</code>
+  </div>
 
-&lt;div id="div3"&gt;
-  &lt;div id="div4"&gt;
-    &lt;h1&gt;Division Element #4&lt;/h1&gt;
-    &lt;code&gt;position: relative;&lt;br/&gt;
-    z-index: 6;&lt;/code&gt;
-  &lt;/div&gt;
+  <div id="div6">
+    <h1>Division Element #6</h1>
+    <code>position: absolute;<br/>
+    z-index: 3;</code>
+  </div>
+</div>
+```
 
-  &lt;h1&gt;Division Element #3&lt;/h1&gt;
-  &lt;code&gt;position: absolute;&lt;br/&gt;
-  z-index: 4;&lt;/code&gt;
+### CSS
 
-  &lt;div id="div5"&gt;
-    &lt;h1&gt;Division Element #5&lt;/h1&gt;
-    &lt;code&gt;position: relative;&lt;br/&gt;
-    z-index: 1;&lt;/code&gt;
-  &lt;/div&gt;
-
-  &lt;div id="div6"&gt;
-    &lt;h1&gt;Division Element #6&lt;/h1&gt;
-    &lt;code&gt;position: absolute;&lt;br/&gt;
-    z-index: 3;&lt;/code&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">* {
+```css
+* {
     margin: 0;
 }
 html {
@@ -213,29 +196,24 @@ h1 {
     padding-top: 125px;
     background-color: #ddf;
     text-align: center;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('示例源码', '100%', '396') }}</p>
+{{EmbedLiveSample('示例源码', '100%', '396') }}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level</li>
-</ul>
+- [Stacking without the z-index property](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+- [Stacking with floated blocks](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float): How floating elements are handled with stacking.
+- [Using z-index](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index): How to use `z-index` to change default stacking.
+- [Stacking context example 1](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
-<div class="originaldocinfo">
-<h2 id="Original_Document_Information">原始文档信息</h2>
+## 原始文档信息
 
-<ul>
- <li>作者：Paolo Lombardi</li>
- <li>此文是我用意大利语写给 <a href="http://www.yappy.it">YappY</a> 的英文版本。我授权以 <a href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license </a>将所有内容分享。</li>
- <li>上次更新时间：July 9th, 2005</li>
-</ul>
-</div>
+- 作者：Paolo Lombardi
+- 此文是我用意大利语写给 [YappY](http://www.yappy.it) 的英文版本。我授权以 [Creative Commons: Attribution-Sharealike license ](http://creativecommons.org/licenses/by-sa/2.0/)将所有内容分享。
+- 上次更新时间：July 9th, 2005

@@ -5,66 +5,64 @@ tags:
   - CSS
 translation_of: Web/CSS/all
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <code><strong>all</strong></code> <a href="/zh-CN/docs/Web/CSS/Shorthand_properties">简写属性</a> 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值，或继承值。</p>
+[CSS](/zh-CN/docs/Web/CSS) **`all`** [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值，或继承值。
 
-<div>{{EmbedInteractiveExample("pages/css/all.html")}}</div>
+{{EmbedInteractiveExample("pages/css/all.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* Global values */
+```css
+/* Global values */
 all: initial
 all: inherit
 all: unset
 
 /* CSS Cascading and Inheritance Level 4 */
 all: revert;
-</pre>
+```
 
-<p><code>all</code> 属性被作为 CSS 全局关键词的其中之一。不过需要注意的是，{{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 这两个属性是不受 <code>all</code> 影响的</p>
+`all` 属性被作为 CSS 全局关键词的其中之一。不过需要注意的是，{{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 这两个属性是不受 `all` 影响的
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt>{{cssxref("initial")}}</dt>
- <dd>该关键字代表改变该元素或其父元素的所有属性至初始值。</dd>
- <dt>{{cssxref("inherit")}}</dt>
- <dd>该关键字代表改变该元素或其父元素的所有属性的值至他们的父元素属性的值。<a href="/en-US/docs/Web/CSS/inheritance">inherited values</a></dd>
- <dt>{{cssxref("unset")}}</dt>
- <dd>该关键字代表如果该元素的属性的值是可继承的，则改变该元素或该元素的父元素的所有属性的值为他们父元素的属性值，反之则改变为初始值。</dd>
- <dt>{{cssxref("revert")}}</dt>
- <dd>指定依赖于声明所属的样式表原点的行为：
- <dl>
-  <dt><a href="/en-US/docs/Web/CSS/Cascade#User-agent_stylesheets">User-agent origin</a></dt>
-  <dd>相当于 <code>unset</code></dd>
-  <dt><a href="/en-US/docs/Web/CSS/Cascade#User_stylesheets">User origin</a></dt>
-  <dd>将层叠回滚到用户代理级别，以便计算指定的值，就好像没有为该元素指定作者级别或用户级别规则。</dd>
-  <dt><a href="/en-US/docs/Web/CSS/Cascade#Author_stylesheets">Author origin</a></dt>
-  <dd>将层叠回滚到用户级别，以便计算指定的值，就好像没有为元素指定作者级规则。出于<code>revert</code>的目的，“作者”原点包括“覆盖”和“动画”原点。</dd>
- </dl>
- </dd>
-</dl>
+- {{cssxref("initial")}}
+  - : 该关键字代表改变该元素或其父元素的所有属性至初始值。
+- {{cssxref("inherit")}}
+  - : 该关键字代表改变该元素或其父元素的所有属性的值至他们的父元素属性的值。[inherited values](/zh-CN/docs/Web/CSS/inheritance)
+- {{cssxref("unset")}}
+  - : 该关键字代表如果该元素的属性的值是可继承的，则改变该元素或该元素的父元素的所有属性的值为他们父元素的属性值，反之则改变为初始值。
+- {{cssxref("revert")}}
 
-<h3 id="正式语法">正式语法</h3>
+  - : 指定依赖于声明所属的样式表原点的行为：
+
+    - [User-agent origin](/zh-CN/docs/Web/CSS/Cascade#User-agent_stylesheets)
+      - : 相当于 `unset`
+    - [User origin](/zh-CN/docs/Web/CSS/Cascade#User_stylesheets)
+      - : 将层叠回滚到用户代理级别，以便计算指定的值，就好像没有为该元素指定作者级别或用户级别规则。
+    - [Author origin](/zh-CN/docs/Web/CSS/Cascade#Author_stylesheets)
+      - : 将层叠回滚到用户级别，以便计算指定的值，就好像没有为元素指定作者级规则。出于`revert`的目的，“作者”原点包括“覆盖”和“动画”原点。
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;blockquote id="quote"&gt;
+```html
+<blockquote id="quote">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-&lt;/blockquote&gt;
+</blockquote>
 Phasellus eget velit sagittis.
-</pre>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   font-size: small;
   background-color: #F0F0F0;
   color: blue;
@@ -74,80 +72,83 @@ blockquote {
   background-color: skyblue;
   color: red;
 }
-</pre>
+```
 
-<p>结果</p>
+结果
 
-<div id="ex0" style="display: inline-block; width: 225px; vertical-align: top;">
-<h4 id="没有_all_属性">没有 <code>all</code> 属性</h4>
+#### 没有 `all` 属性
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.
-</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
-</pre>
+```
+
 {{EmbedLiveSample("ex0", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} 使用浏览器默认样式，以及另外的定义的背景色与文字颜色。它是一个 block 元素：它之后的文字位于它的下方。</p>
-</div>
+{{HTMLElement("blockquote")}} 使用浏览器默认样式，以及另外的定义的背景色与文字颜色。它是一个 block 元素：它之后的文字位于它的下方。
 
-<div id="ex1" style="display: inline-block; width: 225px; vertical-align: top;">
-<h4 id="allunset"><code>all:unset</code></h4>
+#### `all:unset`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
 blockquote { all: unset; }
-</pre>
+```
+
 {{EmbedLiveSample("ex1", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 <code>transparent</code> (初始值)，但其 {{cssxref("font-size")}} 仍为 <code>small</code> (继承值) ，其 {{cssxref("color")}} 为 <code>blue</code> (继承值)。</p>
-</div>
+{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 `transparent` (初始值)，但其 {{cssxref("font-size")}} 仍为 `small` (继承值) ，其 {{cssxref("color")}} 为 `blue` (继承值)。
 
-<div id="ex2" style="display: inline-block; width: 225px; vertical-align: top;">
-<h4 id="allinitial"><code>all:initial</code></h4>
+#### `all:initial`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.
-</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
 blockquote { all: initial; }
-</pre>
+```
+
 {{EmbedLiveSample("ex2", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 <code>transparent</code> (初始值)，其 {{cssxref("font-size")}} 为 <code>normal</code> (初始值)，其 {{cssxref("color")}} 为 <code>black</code>(初始值)。</p>
-</div>
+{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 inline 元素 (初始值)，其 {{cssxref("background-color")}} 为 `transparent` (初始值)，其 {{cssxref("font-size")}} 为 `normal` (初始值)，其 {{cssxref("color")}} 为 `black`(初始值)。
 
-<div id="ex3" style="display: inline-block; width: 225px; vertical-align: top;">
-<h4 id="allinherit"><code>all:inherit</code></h4>
+#### `all:inherit`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.
-</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue; color: red; }
 blockquote { all: inherit; }
-</pre>
+```
+
 {{EmbedLiveSample("ex3", "200", "125")}}
 
-<p>{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 block 元素（继承自其父元素 {{HTMLElement("body")}}），其 {{cssxref("background-color")}} 为 <code>transparent</code> (继承值)，其 {{cssxref("font-size")}} 为 <code>small</code> (继承值) ，其 {{cssxref("color")}} 为 <code>blue</code> (继承值)。</p>
-</div>
+{{HTMLElement("blockquote")}} 没有使用浏览器默认样式：它现在是一个 block 元素（继承自其父元素 {{HTMLElement("body")}}），其 {{cssxref("background-color")}} 为 `transparent` (继承值)，其 {{cssxref("font-size")}} 为 `small` (继承值) ，其 {{cssxref("color")}} 为 `blue` (继承值)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.all")}}
 
+## 参见
 
-<p>{{Compat("css.properties.all")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<p>CSS 通用属性值： {{cssxref("initial")}}, {{cssxref("inherit")}} and {{cssxref("unset")}}.</p>
+CSS 通用属性值： {{cssxref("initial")}}, {{cssxref("inherit")}} and {{cssxref("unset")}}.

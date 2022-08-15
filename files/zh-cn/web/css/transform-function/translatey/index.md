@@ -4,74 +4,109 @@ slug: Web/CSS/transform-function/translateY
 translation_of: Web/CSS/transform-function/translateY()
 original_slug: Web/CSS/transform-function/translateY()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>translateY()</code> 在页面垂直移动元素，结果是 CSS 数据类型 {{cssxref("&lt;transform-function&gt;")}}。</p>
+`translateY()` 在页面垂直移动元素，结果是 CSS 数据类型 {{cssxref("&lt;transform-function&gt;")}}。
 
-<p><img src="https://mdn.mozillademos.org/files/12125/translateY.png" style="height: 195px; width: 243px;"></p>
+![](https://mdn.mozillademos.org/files/12125/translateY.png)
 
-<div class="note">
-<p><strong>注意：</strong> <code>translateY(ty)</code> 对应 <code><a href="/en-US/docs/Web/CSS/transform-function/translate">translate</a>(0, ty)</code> 或<code><a href="/en-US/docs/Web/CSS/transform-function/translate3d">translate3d</a>(0, ty, 0)</code>。</p>
-</div>
+> **备注：** `translateY(ty)` 对应 `translate(0, ty)` 或`translate3d(0, ty, 0)`。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="notranslate"><code>/* &lt;length-percentage&gt; values */
+```css
+/* <length-percentage> values */
 transform: translateY(200px);
-transform: translateY(50%);</code></pre>
+transform: translateY(50%);
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>表示变换向量的纵坐标。百分比指的是盒子高度，盒子由属性 {{cssxref("transform-box")}} 定义。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}
+  - : 表示变换向量的纵坐标。百分比指的是盒子高度，盒子由属性 {{cssxref("transform-box")}} 定义。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">笛卡尔坐标 ℝ<sup>2</sup></th>
-   <th scope="col">
-    <p>在ℝℙ<sup>2</sup>上的同类坐标</p>
-   </th>
-   <th scope="col">
-    <p>在ℝ<sup>3</sup>上的笛卡尔坐标</p>
-   </th>
-   <th scope="col">
-    <p>在ℝℙ<sup>3</sup>同类坐标</p>
-   </th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2">
-    <p>在ℝ<sup>2 </sup>上的转换不会是线性变换但是并不能代表在笛卡尔坐标系统中使用矩阵</p>
-   </td>
-   <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>t</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[1 0 0 1 0 t]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">笛卡尔坐标 ℝ<sup>2</sup></th>
+      <th scope="col"><p>在ℝℙ<sup>2</sup>上的同类坐标</p></th>
+      <th scope="col"><p>在ℝ<sup>3</sup>上的笛卡尔坐标</p></th>
+      <th scope="col"><p>在ℝℙ<sup>3</sup>同类坐标</p></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <p>
+          在ℝ<sup>2 </sup
+          >上的转换不会是线性变换但是并不能代表在笛卡尔坐标系统中使用矩阵
+        </p>
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><math
+            ><mfenced
+              ><mtable
+                ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
+                ><mtr>0<mtd>1</mtd><mtd>t</mtd></mtr
+                ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>t</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 0 0 1 0 t]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="语法_2">语法</h3>
+### 语法
 
-<pre class="notranslate">translateY({{cssxref("&lt;length-percentage&gt;")}})</pre>
+```
+translateY({{cssxref("&lt;length-percentage&gt;")}})
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="notranslate"><code>&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;
-&lt;div&gt;Static&lt;/div&gt;</code></pre>
+```
+<div>Static</div>
+<div class="moved">Moved</div>
+<div>Static</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="notranslate"><code>div {
+```
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
@@ -80,23 +115,22 @@ transform: translateY(50%);</code></pre>
 .moved {
   transform: translateY(10px);
   background-color: pink;
-}</code></pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Examples", 250, 250)}}</p>
+{{EmbedLiveSample("Examples", 250, 250)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

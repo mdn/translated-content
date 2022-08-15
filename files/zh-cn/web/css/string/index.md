@@ -3,27 +3,24 @@ title: <string>
 slug: Web/CSS/string
 translation_of: Web/CSS/string
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}在 CSS 中，**`<string>`** 是用来表示一串字符的数据类型，它被用在众多 CSS 属性中，例如{{cssxref("content")}}、{{cssxref("font-family")}}、和{{cssxref("quotes")}}。
 
-<div>在 CSS 中，<strong><code>&lt;string&gt;</code></strong> 是用来表示一串字符的数据类型，它被用在众多 CSS 属性中，例如{{cssxref("content")}}、{{cssxref("font-family")}}、和{{cssxref("quotes")}}。</div>
+## 使用规则
 
-<h2 id="使用规则">使用规则</h2>
+**`<string>`** 数据类型是由包含在英文双引号（**`"`**）或英文单引号（**'**）中的任意数量的 Unicode 字符组成。
 
-<p><strong><code>&lt;string&gt;</code></strong> 数据类型是由包含在英文双引号（<strong><code>"</code></strong>）或英文单引号（<strong>'</strong>）中的任意数量的 Unicode 字符组成。</p>
+大多数字符都可以写成字面量的形式，并且所有字符都可以写成以反斜线（**`\`**）开头的十六进制 Unicode 码点的形式。比如说：**`\22`**表示一个双引号，**`\27`**表示一个单引号，**`\A9`**表示版权声明符号（**`©`**）。
 
-<p>大多数字符都可以写成字面量的形式，并且所有字符都可以写成以反斜线（<code><strong>\</strong></code>）开头的十六进制 Unicode 码点的形式。比如说：<code><strong>\22</strong></code>表示一个双引号，<code><strong>\27</strong></code>表示一个单引号，<code><strong>\A9</strong></code>表示版权声明符号（<code><strong>©</strong></code>）。</p>
+需要注意的是，在使用某些特殊字符时需要在前面加上反斜线来转义，包括但不限于在双引号字符串中使用双引号字符，在单引号字符串中使用单引号字符，以及反斜线字符，比如**`\\`**表示一个反斜线字符。
 
-<p>需要注意的是，在使用某些特殊字符时需要在前面加上反斜线来转义，包括但不限于在双引号字符串中使用双引号字符，在单引号字符串中使用单引号字符，以及反斜线字符，比如<code><strong>\\</strong></code>表示一个反斜线字符。</p>
+当你想换行的时候，必须使用像 **`\A`** 或者 **`\00000A`** 这样的换行符。不过在你的代码中，可以通过在每行末尾增加一个反斜线（**`\`**）的方式来创建一个多行的字符串。
 
-<p>当你想换行的时候，必须使用像<code><strong>\A</strong></code>或者<code><strong>\00000A</strong></code>这样的换行符。不过在你的代码中，可以通过在每行末尾增加一个反斜线（<code><strong>\</strong></code>）的方式来创建一个多行的字符串。</p>
+> **备注：** CSS **`<string>`** 中不能使用像 **`&nbsp;`** 或者 **`&#8212;`** 这样的实体。
 
-<div class="note">
-<p><strong>注意：</strong> CSS<code><strong>&lt;string&gt;</strong></code>中不能使用像<code><strong>&amp;nbsp;</strong></code>或者<code><strong>&amp;#8212;</strong></code>这样的实体。</p>
-</div>
+## 例子
 
-<h2 id="例子">例子</h2>
-
-<pre>/* Simple strings */
+```
+/* Simple strings */
 "This string is demarkated by double quotes."
 'This string is demarkated by single quotes.'
 
@@ -41,12 +38,12 @@ translation_of: Web/CSS/string
 "A really long \
 awesome string"
 "A really long awesome string"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.types.string")}}

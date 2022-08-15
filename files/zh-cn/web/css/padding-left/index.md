@@ -3,23 +3,20 @@ title: padding-left
 slug: Web/CSS/padding-left
 translation_of: Web/CSS/padding-left
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 属性 <code><strong>padding-left</strong></code> 是指一个元素在内边距区域（padding area）中左边的宽度。内边距（padding）是指一个元素的内容和边框之间的区域。</p>
+CSS 属性 **`padding-left`** 是指一个元素在内边距区域（padding area）中左边的宽度。内边距（padding）是指一个元素的内容和边框之间的区域。
 
-<div>{{EmbedInteractiveExample("pages/css/padding-left.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding-left.html")}}
 
+元素的“填充区域”是其内容和边框之间的空间。
 
+> **备注：** {{cssxref("padding")}} 属性可用于通过一个声明在元素的四个边（上、下、左、右）上设置填充。
 
-<p>元素的“填充区域”是其内容和边框之间的空间。</p>
+## 语法
 
-<div class="note">
-<p><strong>贴士：</strong> {{cssxref("padding")}} 属性可用于通过一个声明在元素的四个边（上、下、左、右）上设置填充。</p>
-</div>
-
-<h2 id="Syntax">语法</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* 长度单位参数 */
+```css
+/* 长度单位参数 */
 padding-left: 0.5em;
 padding-left: 0;
 padding-left: 2cm;
@@ -31,49 +28,44 @@ padding-left: 10%;
 padding-left: inherit;
 padding-left: initial;
 padding-left: unset;
-</pre>
+```
 
-<p><code>padding left</code>属性指定为从下表中选择的单个值。与外边距（margins）不同，可以接受的值不允许是负数。</p>
+`padding left`属性指定为从下表中选择的单个值。与外边距（margins）不同，可以接受的值不允许是负数。
 
-<h3 id="Values">参数</h3>
+### 参数
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>填充内边距的长度。它必须是非负的。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>以与父级盒子的百分比表示的填充大小。它也必须是非负的。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 填充内边距的长度。它必须是非负的。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 以与父级盒子的百分比表示的填充大小。它也必须是非负的。
 
-<h2 id="标准定义">标准定义</h2>
+## 标准定义
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="标准语法">标准语法</h2>
+## 标准语法
 
 {{csssyntax}}
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<h3 id="使用“px”单位和百分比设置_padding-left的样例">使用“px”单位和百分比设置 padding-left 的样例</h3>
+### 使用“px”单位和百分比设置 padding-left 的样例
 
-<pre class="brush: css notranslate">.content { padding-left: 5%; }
+```css
+.content { padding-left: 5%; }
 .sidebox { padding-left: 10px; }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.padding-left")}}
 
+## 另见
 
-<p>{{Compat("css.properties.padding-left")}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS basic box model</a></li>
- <li>{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and the {{cssxref("padding")}} shorthand</li>
- <li>The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}</li>
-</ul>
+- [Introduction to the CSS basic box model](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and the {{cssxref("padding")}} shorthand
+- The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}

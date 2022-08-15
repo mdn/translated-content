@@ -3,21 +3,22 @@ title: transition-property
 slug: Web/CSS/transition-property
 translation_of: Web/CSS/transition-property
 ---
-<div>{{CSSRef("CSS Transitions")}} {{SeeCompatTable}}</div>
+{{CSSRef("CSS Transitions")}} {{SeeCompatTable}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><strong><code>transition-property</code></strong> 指定应用过渡属性的名称。</p>
+**`transition-property`** 指定应用过渡属性的名称。
 
-<div class="note"><strong>注意：</strong><a href="/en-US/docs/Web/CSS/CSS_animated_properties">可被用于动画的属性集合</a>文章近期将会变更，应该避免使用列表中出现的但目前没有动画的属性。否则，将会出现一些不可预料的结果。</div>
+> **备注：** [可被用于动画的属性集合](/zh-CN/docs/Web/CSS/CSS_animated_properties)文章近期将会变更，应该避免使用列表中出现的但目前没有动画的属性。否则，将会出现一些不可预料的结果。
 
-<p>如果指定简写属性（比如 {{cssxref("background")}}），那么其完整版中所有可以动画的属性都会被应用过渡。</p>
+如果指定简写属性（比如 {{cssxref("background")}}），那么其完整版中所有可以动画的属性都会被应用过渡。
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 transition-property: none;
 transition-property: all;
 transition-property: test_05;
@@ -33,38 +34,34 @@ transition-property: all, -moz-specific, sliding;
 transition-property: inherit;
 transition-property: initial;
 transition-property: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>没有过渡动画。</dd>
- <dt><code>all</code></dt>
- <dd>所有可被动画的属性都表现出过渡动画。</dd>
- <dt><code>IDENT</code></dt>
- <dd>属性名称。由小写字母 <code>a</code> 到 <code>z</code>，数字 <code>0</code> 到 <code>9</code>，下划线（<code>_</code>）和破折号（<code>-</code>）。第一个非破折号字符不能是数字。同时，不能以两个破折号开头。</dd>
-</dl>
+- `none`
+  - : 没有过渡动画。
+- `all`
+  - : 所有可被动画的属性都表现出过渡动画。
+- `IDENT`
+  - : 属性名称。由小写字母 `a` 到 `z`，数字 `0` 到 `9`，下划线（`_`）和破折号（`-`）。第一个非破折号字符不能是数字。同时，不能以两个破折号开头。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在 <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transitions</a> 中有几个示例可以参考。</p>
+在 [CSS transitions](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 中有几个示例可以参考。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("css.properties.transition-property")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/Web/Guide/CSS/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- [Using CSS transitions](/Web/Guide/CSS/Using_CSS_transitions)
+- {{domxref("TransitionEvent")}}

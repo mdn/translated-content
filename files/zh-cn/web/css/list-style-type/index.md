@@ -8,21 +8,20 @@ tags:
   - Reference
 translation_of: Web/CSS/list-style-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p> <a href="/zh-CN/docs/Web/CSS">CSS</a> 属性 <code>list-style-type</code> 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。</p>
+[CSS](/zh-CN/docs/Web/CSS) 属性 `list-style-type` 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。
 
-<div>{{EmbedInteractiveExample("pages/css/list-style-type.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style-type.html")}}
 
+The [color](/zh-CN/docs/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
 
+只有几个元素 ({{HTMLElement("li")}} 和 {{HTMLElement("summary")}}) 的默认值为 `display: list-item`。但是， `list-style-type` 属性可以应用在任何 {{cssxref("display")}} 的值为 `list-item` 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}}) 以便应用于所有子元素 ({{HTMLElement("li")}})。
 
-<p>The <a href="/zh-CN/docs/CSS/color_value">color</a> of the marker will be the same as the computed color of the element it applies to.</p>
+## 语法
 
-<p>只有几个元素 ({{HTMLElement("li")}} 和 {{HTMLElement("summary")}}) 的默认值为 <code>display: list-item</code>。但是， <code>list-style-type</code> 属性可以应用在任何 {{cssxref("display")}} 的值为 <code>list-item</code> 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}}) 以便应用于所有子元素 ({{HTMLElement("li")}})。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* Partial list of types */
+```css
+/* Partial list of types */
 list-style-type: disc;
 list-style-type: circle;
 list-style-type: square;
@@ -31,7 +30,7 @@ list-style-type: georgian;
 list-style-type: trad-chinese-informal;
 list-style-type: kannada;
 
-/* &lt;string&gt; value */
+/* <string> value */
 list-style-type: '-';
 
 /* Identifier matching an @counter-style rule */
@@ -44,494 +43,447 @@ list-style-type: none;
 list-style-type: inherit;
 list-style-type: initial;
 list-style-type: unset;
-</pre>
+```
 
-<p>list-style-type 的属性值可以是以下任意一项：</p>
+list-style-type 的属性值可以是以下任意一项：
 
-<ul>
- <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#%3Ccustom-ident%3E">&lt;custom-ident&gt;</a></code> value</li>
- <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#symbols()">symbols()</a></code> value</li>
- <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#%3Cstring%3E">&lt;string&gt;</a></code> value</li>
- <li>the keyword <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#none">none</a></code>.</li>
-</ul>
+- a [`<custom-ident>`](/zh-CN/docs/Web/CSS/list-style-type$edit#%3Ccustom-ident%3E) value
+- a [`symbols()`](</zh-CN/docs/Web/CSS/list-style-type$edit#symbols()>) value
+- a [`<string>`](/zh-CN/docs/Web/CSS/list-style-type$edit#%3Cstring%3E) value
+- the keyword [`none`](/zh-CN/docs/Web/CSS/list-style-type$edit#none).
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt>{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</dt>
- <dd>A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:</dd>
-</dl>
+- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+  - : A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
+- {{cssxref("symbols()")}}
+  - : Defines an anonymous style of the list.
+- {{cssxref("&lt;string&gt;")}}
+  - : The specified string will be used as the item's marker.
+- `none`
+  - : 不显示列表项的标记。
 
-<dl>
- <dt>{{cssxref("symbols()")}}</dt>
- <dd>Defines an anonymous style of the list.</dd>
- <dt>{{cssxref("&lt;string&gt;")}}</dt>
- <dd>The specified string will be used as the item's marker.</dd>
-</dl>
+关键字的取值是下列之一：
 
-<dl>
- <dt><code>none</code></dt>
- <dd>不显示列表项的标记。</dd>
-</dl>
+- ## `disc`
 
-<p>关键字的取值是下列之一：</p>
+      :
+      -   实心圆点 (默认值)
 
-<dl style="">
- <dt><code>disc</code></dt>
- <dd>
- <ul style="list-style-type: disc;">
-  <li>实心圆点 (默认值)</li>
- </ul>
- </dd>
- <dt><code>circle</code></dt>
- <dd>
- <ul style="list-style-type: circle;">
-  <li>空心圆点</li>
- </ul>
- </dd>
- <dt><code>square</code></dt>
- <dd>
- <ul style="list-style-type: square;">
-  <li>实心方块</li>
- </ul>
- </dd>
- <dt><code>decimal</code></dt>
- <dd>
- <ul style="list-style-type: decimal;">
-  <li>十进制阿拉伯数字</li>
-  <li>从 1 开始</li>
- </ul>
- </dd>
- <dt><code>cjk-decimal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: cjk-decimal;">
-  <li>中日韩十进制数</li>
-  <li>例如：一，二，三，..., 九八，九九，一〇〇</li>
- </ul>
- </dd>
- <dt><code>decimal-leading-zero</code></dt>
- <dd>
- <ul style="list-style-type: decimal-leading-zero;">
-  <li>Decimal numbers</li>
-  <li>Padded by initial zeros</li>
-  <li>E.g. 01, 02, 03, … 98, 99</li>
- </ul>
- </dd>
- <dt><code>lower-roman</code></dt>
- <dd>
- <ul style="list-style-type: lower-roman;">
-  <li>Lowercase roman numerals</li>
-  <li>E.g. i, ii, iii, iv, v…</li>
- </ul>
- </dd>
- <dt><code>upper-roman</code></dt>
- <dd>
- <ul style="list-style-type: upper-roman;">
-  <li>Uppercase roman numerals</li>
-  <li>E.g. I, II, III, IV, V…</li>
- </ul>
- </dd>
- <dt><code>lower-greek</code></dt>
- <dd>
- <ul style="list-style-type: lower-greek;">
-  <li>Lowercase classical Greek</li>
-  <li>alpha, beta, gamma…</li>
-  <li>E.g. α, β, γ…</li>
- </ul>
- </dd>
- <dt><code>lower-alpha</code></dt>
- <dt><code>lower-latin</code></dt>
- <dd>
- <ul style="list-style-type: lower-alpha;">
-  <li>Lowercase ASCII letters</li>
-  <li>E.g. a, b, c, … z</li>
-  <li><code>lower-latin</code> is unsupported in IE7 and earlier</li>
-  <li>See <a href="#browser_compatibility">Browser compatibility</a> section.</li>
- </ul>
- </dd>
- <dt><code>upper-alpha</code></dt>
- <dt><code>upper-latin</code></dt>
- <dd>
- <ul style="list-style-type: upper-alpha;">
-  <li>Uppercase ASCII letters</li>
-  <li>E.g. A, B, C, … Z</li>
-  <li><code>upper-latin</code> is unsupported in IE7 and earlier</li>
- </ul>
- </dd>
- <dt><code>armenian</code></dt>
- <dd>
- <ul style="list-style-type: armenian;">
-  <li>Traditional Armenian numbering</li>
-  <li>(ayb/ayp, ben/pen, gim/keem…</li>
- </ul>
- </dd>
- <dt><code>georgian</code></dt>
- <dd>
- <ul style="list-style-type: georgian;">
-  <li>Traditional Georgian numbering</li>
-  <li>E.g. an, ban, gan, … he, tan, in…</li>
- </ul>
- </dd>
- <dt><code>hebrew</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: hebrew;">
-  <li>Traditional Hebrew numbering</li>
- </ul>
- </dd>
- <dt>ethiopic-numeric {{experimental_inline}}</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt><code>hiragana</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: hiragana;">
-  <li>a, i, u, e, o, ka, ki, …</li>
-  <li>(Japanese)</li>
- </ul>
- </dd>
- <dt><code>katakana</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: katakana;">
-  <li>A, I, U, E, O, KA, KI, …</li>
-  <li>(Japanese)</li>
- </ul>
- </dd>
- <dt><code>hiragana-iroha</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: hiragana-iroha;">
-  <li>i, ro, ha, ni, ho, he, to, …</li>
-  <li><a href="https://zh.wikipedia.org/wiki/Iroha">Iroha</a> is the old japanese ordering of syllabs.</li>
- </ul>
- </dd>
- <dt><code>katakana-iroha</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: katakana-iroha;">
-  <li>I, RO, HA, NI, HO, HE, TO, …</li>
-  <li><a href="https://zh.wikipedia.org/wiki/Iroha">Iroha</a> is the old japanese ordering of syllabs.</li>
- </ul>
- </dd>
- <dt><code>japanese-informal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: japanese-informal;">
-  <li>Japanese informal numbering</li>
- </ul>
- </dd>
- <dt><code>japanese-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: japanese-formal;">
-  <li>Japanese formal numbering to be used in legal or financial document.</li>
-  <li>E.g., 壱萬壱阡壱百壱拾壱</li>
-  <li>The kanjis are designed so that they can't be modified to look like another correct one</li>
- </ul>
- </dd>
- <dt><code>korean-hangul-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: korean-hangul-formal;">
-  <li>Korean hangul numbering.</li>
-  <li>E.g., 일만 일천일백일십일</li>
- </ul>
- </dd>
- <dt><code>korean-hanja-informal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: korean-hanja-informal;">
-  <li>Korean hanja numbering.</li>
-  <li>E.g., 萬 一千百十一</li>
- </ul>
- </dd>
- <dt><code>korean-hanja-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: korean-hanja-formal;">
-  <li>Formal Korean Han numberging.</li>
-  <li>E.g. 壹萬 壹仟壹百壹拾壹</li>
- </ul>
- </dd>
- <dt><code>simp-chinese-informal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: simp-chinese-informal;">
-  <li>Simplified Chinese informal numberging.</li>
-  <li>E.g. 一万一千一百一十一</li>
- </ul>
- </dd>
- <dt><code>cjk-ideographic</code>{{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: cjk-ideographic;">
-  <li>Identical to <code>simp-chinese-informal</code></li>
-  <li>E.g. 一万一千一百一十一</li>
- </ul>
- </dd>
- <dt><code>simp-chinese-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: simp-chinese-formal;">
-  <li>Simplified Chinese formal numberging.</li>
-  <li>E.g. 壹万壹仟壹佰壹拾壹</li>
- </ul>
- </dd>
- <dt><code>trad-chinese-informal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: trad-chinese-informal;">
-  <li>Traditional Chinese informal numberging.</li>
-  <li>E.g. 一萬一千一百一十一</li>
- </ul>
- </dd>
- <dt><code>trad-chinese-formal</code> {{experimental_inline}}</dt>
- <dd>
- <ul style="list-style-type: cjk-ideographic;">
-  <li>Traditional Chinese formal numberging.</li>
-  <li>E.g. 壹萬壹仟壹佰壹拾壹</li>
- </ul>
- </dd>
-</dl>
+- ## `circle`
 
-<h3 id="非标准扩展">非标准扩展</h3>
+      :
+      -   空心圆点
 
-<p>Extended set of values provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers supports which extension.</p>
+- ## `square`
 
-<dl style="">
- <dt>arabic-indic</dt>
- <dt>-moz-arabic-indic</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>bengali</dt>
- <dt>-moz-bengali</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>cjk-earthly-branch</dt>
- <dt>-moz-cjk-earthly-branch</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>cjk-heavenly-stem</dt>
- <dt>-moz-cjk-heavenly-stem</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>devanagari</dt>
- <dt>-moz-devanagari</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>-moz-ethiopic-halehame</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>-moz-ethiopic-halehame-am</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>ethiopic-halehame-ti-er</dt>
- <dt>-moz-ethiopic-halehame-ti-er</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>ethiopic-halehame-ti-et</dt>
- <dt>-moz-ethiopic-halehame-ti-et</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>gujarati</dt>
- <dt>-moz-gujarati</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>gurmukhi</dt>
- <dt>-moz-gurmukhi</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>hangul</dt>
- <dt>-moz-hangul</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
-  <li>Example</li>
-  <li>Example</li>
- </ul>
- </dd>
- <dt>hangul-consonant</dt>
- <dt>-moz-hangul-consonant</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
-  <li>Example</li>
-  <li>Example</li>
- </ul>
- </dd>
- <dt>kannada</dt>
- <dt>-moz-kannada</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>khmer</dt>
- <dt>-moz-khmer</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>lao</dt>
- <dt>-moz-lao</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>malayalam</dt>
- <dt>-moz-malayalam</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>myanmar</dt>
- <dt>-moz-myanmar</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>oriya</dt>
- <dt>-moz-oriya</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>persian</dt>
- <dt>-moz-persian</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>-moz-tamil</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>telugu</dt>
- <dt>-moz-telugu</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>thai</dt>
- <dt>-moz-thai</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
- <dt>urdu</dt>
- <dt>-moz-urdu</dt>
- <dd>
- <ul style="">
-  <li>Example</li>
- </ul>
- </dd>
-</dl>
+      :
+      -   实心方块
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+- ## `decimal`
+
+      :
+      -   十进制阿拉伯数字
+      -   从 1 开始
+
+- ## `cjk-decimal` {{experimental_inline}}
+
+      :
+      -   中日韩十进制数
+      -   例如：一，二，三，..., 九八，九九，一〇〇
+
+- ## `decimal-leading-zero`
+
+      :
+      -   Decimal numbers
+      -   Padded by initial zeros
+      -   E.g. 01, 02, 03, … 98, 99
+
+- ## `lower-roman`
+
+      :
+      -   Lowercase roman numerals
+      -   E.g. i, ii, iii, iv, v…
+
+- ## `upper-roman`
+
+      :
+      -   Uppercase roman numerals
+      -   E.g. I, II, III, IV, V…
+
+- ## `lower-greek`
+
+      :
+      -   Lowercase classical Greek
+      -   alpha, beta, gamma…
+      -   E.g. α, β, γ…
+
+- `lower-alpha`
+
+  ## `lower-latin`
+
+      :
+      -   Lowercase ASCII letters
+      -   E.g. a, b, c, … z
+      -   `lower-latin` is unsupported in IE7 and earlier
+      -   See [Browser compatibility](#browser_compatibility) section.
+
+- `upper-alpha`
+
+  ## `upper-latin`
+
+      :
+      -   Uppercase ASCII letters
+      -   E.g. A, B, C, … Z
+      -   `upper-latin` is unsupported in IE7 and earlier
+
+- ## `armenian`
+
+      :
+      -   Traditional Armenian numbering
+      -   (ayb/ayp, ben/pen, gim/keem…
+
+- ## `georgian`
+
+      :
+      -   Traditional Georgian numbering
+      -   E.g. an, ban, gan, … he, tan, in…
+
+- ## `hebrew` {{experimental_inline}}
+
+      :
+      -   Traditional Hebrew numbering
+
+- ## ethiopic-numeric {{experimental_inline}}
+
+      :
+      -   Example
+
+- ## `hiragana` {{experimental_inline}}
+
+      :
+      -   a, i, u, e, o, ka, ki, …
+      -   (Japanese)
+
+- ## `katakana` {{experimental_inline}}
+
+      :
+      -   A, I, U, E, O, KA, KI, …
+      -   (Japanese)
+
+- ## `hiragana-iroha` {{experimental_inline}}
+
+      :
+      -   i, ro, ha, ni, ho, he, to, …
+      -   [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+
+- ## `katakana-iroha` {{experimental_inline}}
+
+      :
+      -   I, RO, HA, NI, HO, HE, TO, …
+      -   [Iroha](https://zh.wikipedia.org/wiki/Iroha) is the old japanese ordering of syllabs.
+
+- ## `japanese-informal` {{experimental_inline}}
+
+      :
+      -   Japanese informal numbering
+
+- ## `japanese-formal` {{experimental_inline}}
+
+      :
+      -   Japanese formal numbering to be used in legal or financial document.
+      -   E.g., 壱萬壱阡壱百壱拾壱
+      -   The kanjis are designed so that they can't be modified to look like another correct one
+
+- ## `korean-hangul-formal` {{experimental_inline}}
+
+      :
+      -   Korean hangul numbering.
+      -   E.g., 일만 일천일백일십일
+
+- ## `korean-hanja-informal` {{experimental_inline}}
+
+      :
+      -   Korean hanja numbering.
+      -   E.g., 萬 一千百十一
+
+- ## `korean-hanja-formal` {{experimental_inline}}
+
+      :
+      -   Formal Korean Han numberging.
+      -   E.g. 壹萬 壹仟壹百壹拾壹
+
+- ## `simp-chinese-informal` {{experimental_inline}}
+
+      :
+      -   Simplified Chinese informal numberging.
+      -   E.g. 一万一千一百一十一
+
+- ## `cjk-ideographic`{{experimental_inline}}
+
+      :
+      -   Identical to `simp-chinese-informal`
+      -   E.g. 一万一千一百一十一
+
+- ## `simp-chinese-formal` {{experimental_inline}}
+
+      :
+      -   Simplified Chinese formal numberging.
+      -   E.g. 壹万壹仟壹佰壹拾壹
+
+- ## `trad-chinese-informal` {{experimental_inline}}
+
+      :
+      -   Traditional Chinese informal numberging.
+      -   E.g. 一萬一千一百一十一
+
+- ## `trad-chinese-formal` {{experimental_inline}}
+
+      :
+      -   Traditional Chinese formal numberging.
+      -   E.g. 壹萬壹仟壹佰壹拾壹
+
+### 非标准扩展
+
+Extended set of values provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers supports which extension.
+
+- arabic-indic
+
+  ## \-moz-arabic-indic
+
+      :
+      -   Example
+
+- bengali
+
+  ## \-moz-bengali
+
+      :
+      -   Example
+
+- cjk-earthly-branch
+
+  ## \-moz-cjk-earthly-branch
+
+      :
+      -   Example
+
+- cjk-heavenly-stem
+
+  ## \-moz-cjk-heavenly-stem
+
+      :
+      -   Example
+
+- devanagari
+
+  ## \-moz-devanagari
+
+      :
+      -   Example
+
+- ## \-moz-ethiopic-halehame
+
+      :
+      -   Example
+
+- ## \-moz-ethiopic-halehame-am
+
+      :
+      -   Example
+
+- ethiopic-halehame-ti-er
+
+  ## \-moz-ethiopic-halehame-ti-er
+
+      :
+      -   Example
+
+- ethiopic-halehame-ti-et
+
+  ## \-moz-ethiopic-halehame-ti-et
+
+      :
+      -   Example
+
+- gujarati
+
+  ## \-moz-gujarati
+
+      :
+      -   Example
+
+- gurmukhi
+
+  ## \-moz-gurmukhi
+
+      :
+      -   Example
+
+- hangul
+
+  ## \-moz-hangul
+
+      :
+      -   Example
+      -   Example
+      -   Example
+
+- hangul-consonant
+
+  ## \-moz-hangul-consonant
+
+      :
+      -   Example
+      -   Example
+      -   Example
+
+- kannada
+
+  ## \-moz-kannada
+
+      :
+      -   Example
+
+- khmer
+
+  ## \-moz-khmer
+
+      :
+      -   Example
+
+- lao
+
+  ## \-moz-lao
+
+      :
+      -   Example
+
+- malayalam
+
+  ## \-moz-malayalam
+
+      :
+      -   Example
+
+- myanmar
+
+  ## \-moz-myanmar
+
+      :
+      -   Example
+
+- oriya
+
+  ## \-moz-oriya
+
+      :
+      -   Example
+
+- persian
+
+  ## \-moz-persian
+
+      :
+      -   Example
+
+- ## \-moz-tamil
+
+      :
+      -   Example
+
+- telugu
+
+  ## \-moz-telugu
+
+      :
+      -   Example
+
+- thai
+
+  ## \-moz-thai
+
+      :
+      -   Example
+
+- urdu
+
+  ## \-moz-urdu
+
+      :
+      -   Example
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">ol.normal {
+```css
+ol.normal {
   list-style-type: upper-alpha;
 }
 
 /* or use the shortcut "list-style": */
 ol.shortcut {
   list-style: upper-alpha;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;ol class="normal"&gt;List 1
-  &lt;li&gt;Hello&lt;/li&gt;
-  &lt;li&gt;World&lt;/li&gt;
-  &lt;li&gt;What's up?&lt;/li&gt;
-&lt;/ol&gt;
+```html
+<ol class="normal">List 1
+  <li>Hello</li>
+  <li>World</li>
+  <li>What's up?</li>
+</ol>
 
-&lt;ol class="shortcut"&gt;List 2
-  &lt;li&gt;Looks&lt;/li&gt;
-  &lt;li&gt;Like&lt;/li&gt;
-  &lt;li&gt;The&lt;/li&gt;
-  &lt;li&gt;Same&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+<ol class="shortcut">List 2
+  <li>Looks</li>
+  <li>Like</li>
+  <li>The</li>
+  <li>Same</li>
+</ol>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("例子","200","300")}}</p>
+{{EmbedLiveSample("例子","200","300")}}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>The <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a> screen reader has an issue where unordered lists with a <code>list-style-type</code>value of <code>none</code> applied to them will not be announced as a list. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="/zh-CN/docs/Web/CSS/content">pseudo content</a> before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
+The [VoiceOver](https://help.apple.com/voiceover/info/guide/) screen reader has an issue where unordered lists with a `list-style-type`value of `none` applied to them will not be announced as a list. To address this, add a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space) as [pseudo content](/zh-CN/docs/Web/CSS/content) before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.
 
-<pre class="notranslate"><code>ul {
+```
+ul {
   list-style: none;
 }
 
 ul li::before {
   content: "\200B";
-}</code></pre>
+}
+```
 
-<ul>
- <li><a href="https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/">VoiceOver and list-style-type: none – Unfettered Thoughts</a></li>
- <li><a href="/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
-<h2 id="注释">注释</h2>
+## 注释
 
-<ul>
- <li>Some types require a suitable font installed to display as expected.</li>
- <li>The <code>cjk-ideographic</code> is identical to <code>trad-chinese-informal</code>; it exists for legacy reasons.</li>
-</ul>
+- Some types require a suitable font installed to display as expected.
+- The `cjk-ideographic` is identical to `trad-chinese-informal`; it exists for legacy reasons.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat("css.properties.list-style-type")}}</div>
+{{Compat("css.properties.list-style-type")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}

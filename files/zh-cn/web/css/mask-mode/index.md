@@ -3,11 +3,12 @@ title: mask-mode
 slug: Web/CSS/mask-mode
 translation_of: Web/CSS/mask-mode
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>mask-mode</code></strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>属性指示由{{cssxref("mask-image")}} 指向的遮罩被视为亮度或阿尔法遮罩。</p>
+**`mask-mode`**[CSS](/zh-CN/docs/Web/CSS)属性指示由{{cssxref("mask-image")}} 指向的遮罩被视为亮度或阿尔法遮罩。
 
-<pre class="brush:css no-line-numbers">/* 关取值的键字 */
+```css
+/* 关取值的键字 */
 mask-mode: alpha;
 mask-mode: luminance;
 mask-mode: match-source;
@@ -19,81 +20,79 @@ mask-mode: alpha, match-source;
 mask-mode: inherit;
 mask-mode: initial;
 mask-mode: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>下面列出 <code>mask-mode</code> 的一个或多个关键字值，以逗号分隔。</p>
+下面列出 `mask-mode` 的一个或多个关键字值，以逗号分隔。
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>alpha</code></dt>
- <dd>此关键字指示应使用掩码层图像的透明度（阿尔法通道）值作为掩码值。</dd>
- <dt><code>luminance</code></dt>
- <dd>此关键字指示掩膜层图像的亮度值应用作掩码值。</dd>
- <dt><code>match-source</code></dt>
- <dd>
- <p>If the {{cssxref("mask-image")}} property is of type <code>&lt;mask-source&gt;</code>, the luminance values of the mask layer image should be used as the mask values.</p>
+- `alpha`
+  - : 此关键字指示应使用掩码层图像的透明度（阿尔法通道）值作为掩码值。
+- `luminance`
+  - : 此关键字指示掩膜层图像的亮度值应用作掩码值。
+- ## `match-source`
 
- <p>If it is of type {{cssxref("&lt;image&gt;")}}, the alpha values of the mask layer image should be used as the mask values.</p>
+      : If the {{cssxref("mask-image")}} property is of type `<mask-source>`, the luminance values of the mask layer image should be used as the mask values.
 
- <p>如果{{cssxref("mask-image")}}属性是<code>&lt;mask-source&gt;</code>类型，掩模层图像的亮度值会被作为掩模值。</p>
 
- <p>如果它是类型{{cssxref("&lt;image&gt;")}}，掩码层图像的 alpha 值应用作掩码值。</p>
- </dd>
-</dl>
 
-<h3 id="正式语法">正式语法</h3>
+      If it is of type {{cssxref("&lt;image&gt;")}}, the alpha values of the mask layer image should be used as the mask values.
+
+
+
+      如果{{cssxref("mask-image")}}属性是`<mask-source>`类型，掩模层图像的亮度值会被作为掩模值。
+
+
+
+      如果它是类型{{cssxref("&lt;image&gt;")}}，掩码层图像的 alpha 值应用作掩码值。
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[6]">#masked {
+```css
+#masked {
   width: 227px;
   height: 200px;
   background: blue linear-gradient(red, blue);
   mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg);
   mask-mode: alpha; /* Can be changed in the live sample */
 }
-</pre>
+```
 
-<div class="hidden">
-<h3 id="HTML">HTML</h3>
+```html hidden
+<div id="masked">
+</div>
+<select id="maskMode">
+  <option value="alpha">alpha</option>
+  <option value="luminance">luminance</option>
+  <option value="match-source">match-source</option>
+</select>
+```
 
-<pre class="brush: html">&lt;div id="masked"&gt;
-&lt;/div&gt;
-&lt;select id="maskMode"&gt;
-  &lt;option value="alpha"&gt;alpha&lt;/option&gt;
-  &lt;option value="luminance"&gt;luminance&lt;/option&gt;
-  &lt;option value="match-source"&gt;match-source&lt;/option&gt;
-&lt;/select&gt;
-</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">var maskMode = document.getElementById("maskMode");
+```js hidden
+var maskMode = document.getElementById("maskMode");
 maskMode.addEventListener("change", function (evt) {
   document.getElementById("masked").style.maskMode = evt.target.value;
 });
-</pre>
-</div>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Example", 240, 240)}}</p>
+{{EmbedLiveSample("Example", 240, 240)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.properties.mask-mode")}}</p>
+{{Compat("css.properties.mask-mode")}}

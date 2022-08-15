@@ -11,83 +11,170 @@ translation_of: Web/CSS/transform-function/translateX()
 original_slug: Web/CSS/transform-function/translateX()
 browser-compat: css.types.transform-function.translateX
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>translateX() 函数表示在二维平面上水平方向移动元素。 其结果的数据类型是{{cssxref("&lt;transform-function&gt;")}}。</p>
+translateX() 函数表示在二维平面上水平方向移动元素。 其结果的数据类型是{{cssxref("&lt;transform-function&gt;")}}。
 
-<p><img src="https://mdn.mozillademos.org/files/3544/transform-functions-translateX_2.png" style="height: 146px; width: 243px;"></p>
+![](https://mdn.mozillademos.org/files/3544/transform-functions-translateX_2.png)
 
-<div class="note">
-<p><strong>注意</strong>： <code>translateX(tx)</code>等同于 <a href="/en-US/docs/Web/CSS/transform-function/translate">translate</a>(tx, 0) 或者 <a href="/en-US/docs/Web/CSS/transform-function/translate3d">translate3d</a>(tx, 0, 0)。</p>
-</div>
+> **备注：** `translateX(tx)`等同于 [translate](/zh-CN/docs/Web/CSS/transform-function/translate)(tx, 0) 或者 [translate3d](/zh-CN/docs/Web/CSS/transform-function/translate3d)(tx, 0, 0)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">translateX(t)
-</pre>
+```css
+translateX(t)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>t</code></dt>
- <dd>代表了向量平移的横坐标长度{{cssxref("&lt;length&gt;")}}。</dd>
-</dl>
+- `t`
+  - : 代表了向量平移的横坐标长度{{cssxref("&lt;length&gt;")}}。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">ℝ<sup>2</sup>空间中的笛卡尔坐标</th>
-   <th scope="col">在ℝℙ<sup>2</sup>上的投影坐标</th>
-   <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
-   <th scope="col">在ℝℙ<sup>3</sup>上的投影坐标</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2">
-    <p>在ℝ<sup>2 </sup>空间中的平移并非线性变化，因此不能表示为笛卡尔坐标矩阵。</p>
-   </td>
-   <td>
-    <p><math> <mfenced><mtable><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable></mfenced></math></p>
-
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
-
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></p>
-   </td>
-   <td colspan="1" rowspan="2">
-    <p><math> <mfenced><mtable><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable></mfenced></math></p>
-
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
-
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></p>
-   </td>
-   <td colspan="1" rowspan="2">
-    <p><math> <mfenced><mtable><mtr>1 <mtd>0 </mtd><mtd>0 </mtd><mtd>t</mtd></mtr></mtable></mfenced></math></p>
-
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr>0 <mtd>1 </mtd><mtd>0 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
-
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
-
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>[1 0 0 1 t 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">ℝ<sup>2</sup>空间中的笛卡尔坐标</th>
+      <th scope="col">在ℝℙ<sup>2</sup>上的投影坐标</th>
+      <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
+      <th scope="col">在ℝℙ<sup>3</sup>上的投影坐标</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <p>
+          在ℝ<sup>2 </sup
+          >空间中的平移并非线性变化，因此不能表示为笛卡尔坐标矩阵。
+        </p>
+      </td>
+      <td>
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr><mtd></mtd></mtr
+                ><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr><mtd></mtd></mtr
+                ><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+      </td>
+      <td colspan="1" rowspan="2">
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr><mtd></mtd></mtr
+                ><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr><mtd></mtd></mtr
+                ><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+      </td>
+      <td colspan="1" rowspan="2">
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr>1 <mtd>0 </mtd><mtd>0 </mtd><mtd>t</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr><mtd></mtd></mtr
+                ><mtr>0 <mtd>1 </mtd><mtd>0 </mtd><mtd>0</mtd></mtr></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr><mtd></mtd></mtr
+                ><mtr
+                  ><mtd>0 </mtd><mtd>0 </mtd><mtd>1 </mtd><mtd>0</mtd></mtr
+                ></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr><mtd></mtd></mtr
+                ><mtr
+                  ><mtd>0 </mtd><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr
+                ></mtable
+              ></mfenced
+            ></math
+          >
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 0 0 1 t 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html"><code>&lt;div&gt;Static&lt;/div&gt;
-&lt;div class="moved"&gt;Moved&lt;/div&gt;
-&lt;div&gt;Static&lt;/div&gt;</code></pre>
+```html
+<div>Static</div>
+<div class="moved">Moved</div>
+<div>Static</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css"><code>div {
+```css
+div {
   width: 60px;
   height: 60px;
   background-color: skyblue;
@@ -96,23 +183,22 @@ browser-compat: css.types.transform-function.translateX
 .moved {
   transform: translateX(10px); /* 等同于 translate(10px) */
   background-color: pink;
-}</code></pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Examples", 250, 250)}}</p>
+{{EmbedLiveSample("Examples", 250, 250)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

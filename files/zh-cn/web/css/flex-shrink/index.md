@@ -10,55 +10,58 @@ tags:
   - 弹性盒
 translation_of: Web/CSS/flex-shrink
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <strong><code>flex-shrink</code></strong> 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。</p>
+[CSS](/zh-CN/docs/Web/CSS) **`flex-shrink`** 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。
 
-<pre class="brush: css">flex-shrink: 2;
+```css
+flex-shrink: 2;
 flex-shrink: 0.6;
 
 /* Global values */
 flex-shrink: inherit;
 flex-shrink: initial;
-flex-shrink: unset</pre>
+flex-shrink: unset
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>更多属性和定义请参见<a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">使用 CSS 弹性盒子</a></p>
+更多属性和定义请参见[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>flex-shrink</code> 属性只能是一个 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink$edit#&lt;number>">&lt;number&gt;</a>。</code></p>
+`flex-shrink` 属性只能是一个 `<number>。`
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;number</code>&gt;</dt>
- <dd>负值是不被允许的。参考 {{cssxref("&lt;number&gt;")}}。</dd>
-</dl>
+- `<number`>
+  - : 负值是不被允许的。参考 {{cssxref("&lt;number&gt;")}}。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;the width of content is 500px, flex-basic of flex item is 120px.&lt;/p&gt;
-&lt;p&gt;A, B, C are flex-shrink:1. D and E are flex-shrink:2&lt;/p&gt;
-&lt;p&gt;the width of D is not the same as A's&lt;/p&gt;
-&lt;div id="content"&gt;
-  &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
-  &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-  &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-  &lt;div class="box1" style="background-color:brown;"&gt;D&lt;/div&gt;
-  &lt;div class="box1" style="background-color:lightgreen;"&gt;E&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<p>the width of content is 500px, flex-basic of flex item is 120px.</p>
+<p>A, B, C are flex-shrink:1. D and E are flex-shrink:2</p>
+<p>the width of D is not the same as A's</p>
+<div id="content">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+  <div class="box1" style="background-color:brown;">D</div>
+  <div class="box1" style="background-color:lightgreen;">E</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#content {
+```css
+#content {
   display: flex;
   width: 500px;
 }
@@ -74,22 +77,21 @@ flex-shrink: unset</pre>
 
 .box1 {
   flex-shrink: 2;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例', '500px', '300px', '', 'Web/CSS/flex-shrink')}}</p>
+{{EmbedLiveSample('示例', '500px', '300px', '', 'Web/CSS/flex-shrink')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.flex-shrink")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">使用 CSS 弹性盒子</a></li>
-</ul>
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)

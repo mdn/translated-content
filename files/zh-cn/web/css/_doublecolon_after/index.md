@@ -1,6 +1,6 @@
 ---
 title: '::after (:after)'
-slug: 'Web/CSS/::after'
+slug: Web/CSS/::after
 tags:
   - CSS 伪元素
   - getComputedStyle
@@ -8,61 +8,72 @@ tags:
   - setProperty
   - 布局
   - 需要移动端浏览器兼容性
-translation_of: 'Web/CSS/::after'
+translation_of: Web/CSS/::after
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p>CSS<a href="/zh-CN/CSS/Pseudo-elements">伪元素</a><code>::after</code>用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合{{ cssxref("content") }}属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。</p>
+CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合{{ cssxref("content") }}属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。
 
-<pre><code>/* Add an arrow after links */
+```
+/* Add an arrow after links */
 a::after {
-  content: "</code>→<code>";
-}</code></pre>
+  content: "→";
+}
+```
 
-<p>{{ fx_minversion_note("3.5", "Firefox 3.5 之前版本仅实现了 CSS 2.0 版本的语法<code> :after</code>. 且不允许在<code> position, float, list-style-* </code>等属性中使用。Firefox 3.5 开始没有了这项限制。") }}</p>
+{{ fx_minversion_note("3.5", "Firefox 3.5 之前版本仅实现了 CSS 2.0 版本的语法<code> :after</code>. 且不允许在<code> position, float, list-style-* </code>等属性中使用。Firefox 3.5 开始没有了这项限制。") }}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">element:after  { <em>style properties</em> }  /* CSS2 语法 */
+```
+element:after  { style properties }  /* CSS2 语法 */
 
-element::after { <em>style properties</em> }  /* CSS3 语法 */</pre>
+element::after { style properties }  /* CSS3 语法 */
+```
 
-<p><code>::after 表示法是在</code>CSS 3 中引入的，::符号是用来区分<a href="/zh-CN/CSS/Pseudo-classes">伪类</a>和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法<code>:after。</code></p>
+`::after 表示法是在`CSS 3 中引入的，::符号是用来区分[伪类](/zh-CN/CSS/Pseudo-classes)和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法`:after。`
 
-<div class="note"><strong>注：</strong> IE8 仅支持<code>:after。</code></div>
+> **备注：** IE8 仅支持`:after`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="简单用法">简单用法</h3>
+### 简单用法
 
-<p>让我们创建两个类：一个无趣的和一个有趣的。我们可以在每个段尾添加伪元素来标记他们。</p>
+让我们创建两个类：一个无趣的和一个有趣的。我们可以在每个段尾添加伪元素来标记他们。
 
-<pre class="brush: html">&lt;p class="boring-text"&gt;这是些无聊的文字&lt;/p&gt;
-&lt;p&gt;这是不无聊也不有趣的文字&lt;/p&gt;
-&lt;p class="exciting-text"&gt;在 MDN 上做贡献简单又轻松。
-按右上角的编辑按钮添加新示例或改进旧示例！&lt;/p&gt;</pre>
+```html
+<p class="boring-text">这是些无聊的文字</p>
+<p>这是不无聊也不有趣的文字</p>
+<p class="exciting-text">在 MDN 上做贡献简单又轻松。
+按右上角的编辑按钮添加新示例或改进旧示例！</p>
+```
 
-<pre class="brush: css">.exciting-text::after {
-  content: "&lt;- 让人兴兴兴奋！";
+```css
+.exciting-text::after {
+  content: "<- 让人兴兴兴奋！";
   color: green;
 }
 
 .boring-text::after {
-  content: "&lt;- 无聊！";
+  content: "<- 无聊！";
   color: red;
-}</pre>
+}
+```
 
-<h4 id="输出">输出</h4>
+#### 输出
 
-<p>{{ EmbedLiveSample('Simple_usage', 500, 170) }}</p>
+{{ EmbedLiveSample('Simple_usage', 500, 170) }}
 
-<h3 id="装饰用法">装饰用法</h3>
+### 装饰用法
 
-<p>我们几乎可以用想要的任何方法给 {{ cssxref("content") }} 属性里的文字和图片的加上样式。</p>
+我们几乎可以用想要的任何方法给 {{ cssxref("content") }} 属性里的文字和图片的加上样式。
 
-<pre class="brush: html">&lt;span class="ribbon"&gt;Notice where the orange box is.&lt;/span&gt;</pre>
+```html
+<span class="ribbon">Notice where the orange box is.</span>
+```
 
-<pre class="brush: css">.ribbon {
+```css
+.ribbon {
  background-color: #5BC8F7;
 }
 
@@ -71,24 +82,27 @@ element::after { <em>style properties</em> }  /* CSS3 语法 */</pre>
  background-color: #FFBA10;
  border-color: black;
  border-style: dotted;
-}</pre>
+}
+```
 
-<h4 id="输出_2">输出</h4>
+#### 输出
 
-<p>{{ EmbedLiveSample('Decorative_example', 450, 20) }}</p>
+{{ EmbedLiveSample('Decorative_example', 450, 20) }}
 
-<h3 id="提示用法">提示用法</h3>
+### 提示用法
 
-<p>接下来的示例展示了用<code>::after</code><a href="/en/CSS/Pseudo-elements">伪元素</a>，<a href="/en-US/docs/CSS/attr"><code>attr()</code></a>CSS 表达式和一个<a href="/en/HTML/Global_attributes#attr-data-*">自定义数据属性</a> <code>data-descr</code> 创建一个纯 CSS，词汇表提示工具。在<a href="https://developer.mozilla.org/files/4591/css-only_tooltips.html">单独页面</a>看这个例子。</p>
+接下来的示例展示了用`::after`[伪元素](/en/CSS/Pseudo-elements)，[`attr()`](/zh-CN/docs/CSS/attr)CSS 表达式和一个[自定义数据属性](/en/HTML/Global_attributes#attr-data-*) `data-descr` 创建一个纯 CSS，词汇表提示工具。在[单独页面](https://developer.mozilla.org/files/4591/css-only_tooltips.html)看这个例子。
 
-<pre class="brush: html">&lt;p&gt;这是上面代码的实现&lt;br /&gt;
-  我们有一些 &lt;span data-descr="collection of words and punctuation"&gt;文字&lt;/span&gt; 有一些
-  &lt;span data-descr="small popups which also hide again"&gt;提示&lt;/span&gt;。&lt;br /&gt;
-  把鼠标放上去&lt;span data-descr="not to be taken literally"&gt;看看&lt;/span&gt;。
-&lt;/p&gt;
-</pre>
+```html
+<p>这是上面代码的实现<br />
+  我们有一些 <span data-descr="collection of words and punctuation">文字</span> 有一些
+  <span data-descr="small popups which also hide again">提示</span>。<br />
+  把鼠标放上去<span data-descr="not to be taken literally">看看</span>。
+</p>
+```
 
-<pre class="brush: css">span[data-descr] {
+```css
+span[data-descr] {
  position: relative;
  text-decoration: underline;
  color: #00F;
@@ -108,30 +122,29 @@ span[data-descr]:hover::after {
  color: #000000;
  font-size: 14px;
  z-index: 1;
-}</pre>
+}
+```
 
-<h4 id="输出_3">输出</h4>
+#### 输出
 
-<p>{{ EmbedLiveSample('Tooltips', 450, 160) }}</p>
+{{ EmbedLiveSample('Tooltips', 450, 160) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.selectors.after")}}
 
+## 相关链接
 
-<p>{{Compat("css.selectors.after")}}</p>
+{{ Cssxref("::before") }}, {{ cssxref("content") }}
 
-<h2 id="相关链接">相关链接</h2>
+### 高级用法
 
-<p>{{ Cssxref("::before") }}, {{ cssxref("content") }}</p>
+[getComputedStyle](/zh-CN/docs/Web/API/Window/getComputedStyle)
 
-<h3 id="高级用法">高级用法</h3>
+[getPropertyValue](/zh-CN/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
 
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getComputedStyle">getComputedStyle</a></p>
-
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CSSStyleDeclaration/getPropertyValue">getPropertyValue</a></p>
-
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CSSStyleDeclaration/setProperty">setProperty</a></p>
+[setProperty](/zh-CN/docs/Web/API/CSSStyleDeclaration/setProperty)

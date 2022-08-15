@@ -1,58 +1,66 @@
 ---
 title: ':target'
-slug: 'Web/CSS/:target'
+slug: Web/CSS/:target
 tags:
   - CSS
   - Layou
-translation_of: 'Web/CSS/:target'
+translation_of: Web/CSS/:target
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:target</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> 代表一个唯一的页面元素 (目标元素)，其{{htmlattrxref("id")}} 与当前 URL 片段匹配。</p>
+**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 代表一个唯一的页面元素 (目标元素)，其{{htmlattrxref("id")}} 与当前 URL 片段匹配。
 
-<pre class="brush: css">/* 选择一个 ID 与当前 URL 片段匹配的元素*/
+```css
+/* 选择一个 ID 与当前 URL 片段匹配的元素*/
 :target {
   border: 2px solid black;
-}</pre>
+}
+```
 
-<p>例如，以下 URL 拥有一个片段 (以#标识的) ，该片段指向一个 ID 为 section2 的页面元素：</p>
+例如，以下 URL 拥有一个片段 (以#标识的) ，该片段指向一个 ID 为 section2 的页面元素：
 
-<pre>http://www.example.com/index.html#section2</pre>
+```
+http://www.example.com/index.html#section2
+```
 
-<p>若当前 URL 等于上面的 URL，下面的元素可以通过 :target 选择器被选中：</p>
+若当前 URL 等于上面的 URL，下面的元素可以通过 :target 选择器被选中：
 
-<pre class="brush: html">&lt;section id="section2"&gt;Example&lt;/section&gt;</pre>
+```html
+<section id="section2">Example</section>
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="一个内容列表">一个内容列表</h3>
+### 一个内容列表
 
-<p><code>:target</code> 伪类可用于加亮显示页面中可从表格内容中链接到的部分。</p>
+`:target` 伪类可用于加亮显示页面中可从表格内容中链接到的部分。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h3&gt;Table of Contents&lt;/h3&gt;
-&lt;ol&gt;
- &lt;li&gt;&lt;a href="#p1"&gt;Jump to the first paragraph!&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#p2"&gt;Jump to the second paragraph!&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="#nowhere"&gt;This link goes nowhere,
-   because the target doesn't exist.&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+```html
+<h3>Table of Contents</h3>
+<ol>
+ <li><a href="#p1">Jump to the first paragraph!</a></li>
+ <li><a href="#p2">Jump to the second paragraph!</a></li>
+ <li><a href="#nowhere">This link goes nowhere,
+   because the target doesn't exist.</a></li>
+</ol>
 
-&lt;h3&gt;My Fun Article&lt;/h3&gt;
-&lt;p id="p1"&gt;You can target &lt;i&gt;this paragraph&lt;/i&gt; using a
-  URL fragment. Click on the link above to try out!&lt;/p&gt;
-&lt;p id="p2"&gt;This is &lt;i&gt;another paragraph&lt;/i&gt;, also accessible
-  from the links above. Isn't that delightful?&lt;/p&gt;
-</pre>
+<h3>My Fun Article</h3>
+<p id="p1">You can target <i>this paragraph</i> using a
+  URL fragment. Click on the link above to try out!</p>
+<p id="p2">This is <i>another paragraph</i>, also accessible
+  from the links above. Isn't that delightful?</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p:target {
+```css
+p:target {
   background-color: gold;
 }
 
@@ -67,45 +75,49 @@ p:target::before {
 /*在目标元素中使用 italic 样式*/
 p:target i {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('一个内容列表', 500, 300)}}</p>
+{{EmbedLiveSample('一个内容列表', 500, 300)}}
 
-<h3 id="纯_css_高亮">纯 CSS 高亮</h3>
+### 纯 CSS 高亮
 
-<p>你可以不使用任何 Javascript 代码，只使用<code>:target</code>伪类创建一个加亮框。该技术依赖于初始化时就隐藏在页面中的链接到指定元素的锚。一旦定位，CSS 就会更改其<code>display</code> 以便显示它们。</p>
+你可以不使用任何 Javascript 代码，只使用`:target`伪类创建一个加亮框。该技术依赖于初始化时就隐藏在页面中的链接到指定元素的锚。一旦定位，CSS 就会更改其`display` 以便显示它们。
 
-<div class="note">一个基于<code>:target</code>伪类的更为完善的纯-CSS 加亮框可以在<a href="https://github.com/madmurphy/takefive.css/">GitHub</a> (<a href="https://madmurphy.github.io/takefive.css/">demo</a>) 上找到。</div>
+> **备注：** 一个基于`:target`伪类的更为完善的纯-CSS 加亮框可以在[GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)) 上找到。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#example1"&gt;Open example #1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#example2"&gt;Open example #2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul>
+  <li><a href="#example1">Open example #1</a></li>
+  <li><a href="#example2">Open example #2</a></li>
+</ul>
 
-&lt;div class="lightbox" id="example1"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
+<div class="lightbox" id="example1">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+  </figure>
+</div>
 
-&lt;div class="lightbox" id="example2"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="close"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Cras risus odio, pharetra nec ultricies et,
+<div class="lightbox" id="example2">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>Cras risus odio, pharetra nec ultricies et,
       mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;</pre>
+      Quisque quis neque arcu, nec gravida magna.</figcaption>
+  </figure>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Unopened lightbox */
+```css
+/* Unopened lightbox */
 .lightbox {
   display: none;
 }
@@ -163,24 +175,21 @@ p:target i {
   background-color: rgba(0,0,0,.7);
   content: "";
   cursor: default;
-}</pre>
+}
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('纯 CSS 高亮', 500, 220)}}</p>
+{{EmbedLiveSample('纯 CSS 高亮', 500, 220)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("css.selectors.target")}}</p>
-</div>
+{{Compat("css.selectors.target")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Using_the_:target_selector">Using the :target pseudo-class in selectors</a></li>
-</ul>
+- [Using the :target pseudo-class in selectors](/zh-CN/docs/Using_the_:target_selector)

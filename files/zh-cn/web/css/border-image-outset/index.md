@@ -8,59 +8,59 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image-outset
 ---
-<div>{{CSSRef("CSS Borders")}}</div>
+{{CSSRef("CSS Borders")}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><code>border-image-outset属性定义边框图像可超出边框盒的大小。</code></p>
+`border-image-outset属性定义边框图像可超出边框盒的大小。`
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("border-image-outset")}}
-</pre>
+```
+Formal syntax: {{csssyntax("border-image-outset")}}
+```
 
-<pre>/* border-image-outset: <em>sides</em> */
+```
+/* border-image-outset: sides */
 border-image-outset: 30%;
 
-/* border-image-outset:<em>垂直 水平</em> */
+/* border-image-outset:垂直 水平 */
 border-image-outset: 10% 30%;
 
-/* border-image-outset: 顶 水平 底<em> */</em>
+/* border-image-outset: 顶 水平 底 */
 border-image-outset: 30px 30% 45px;
 
-/* border-image-outset:<em>顶 右 底 左</em> <em> */</em>
+/* border-image-outset:顶 右 底 左  */
 border-image-outset: 7px 12px 14px 5px;
 
 border-image-repeat: inherit;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><em>sides</em></dt>
- <dd>边框图像在四个方向超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。</dd>
- <dt><em>horizontal</em></dt>
- <dd>边框图像在水平方向（左和右）超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。</dd>
- <dt><em>vertical</em></dt>
- <dd>边框图像在垂直方向（上和下）超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。</dd>
- <dt><em>top</em></dt>
- <dd>边框图像在上方超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。</dd>
- <dt><em>bottom</em></dt>
- <dd>边框图像在下方超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。</dd>
- <dt><em>right</em></dt>
- <dd>边框图像在右方超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。</dd>
- <dt><em>left</em></dt>
- <dd>边框图像在左方超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。</dd>
- <dt><code>inherit</code></dt>
- <dd>四个方向的值都继承于父元素的该属性计算后值。</dd>
-</dl>
+- _sides_
+  - : 边框图像在四个方向超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。
+- _horizontal_
+  - : 边框图像在水平方向（左和右）超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。
+- _vertical_
+  - : 边框图像在垂直方向（上和下）超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。
+- _top_
+  - : 边框图像在上方超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。
+- _bottom_
+  - : 边框图像在下方超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。
+- _right_
+  - : 边框图像在右方超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。
+- _left_
+  - : 边框图像在左方超出边框盒的{{cssxref("&lt;length&gt;")}}或{{cssxref("&lt;number&gt;")}}数量。
+- `inherit`
+  - : 四个方向的值都继承于父元素的该属性计算后值。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

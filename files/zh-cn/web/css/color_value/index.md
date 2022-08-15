@@ -16,485 +16,448 @@ tags:
   - 颜色
 translation_of: Web/CSS/color_value
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/CSS_Types">数据类型</a> <code>&lt;color&gt;</code> 表示一种<a href="http://en.wikipedia.org/wiki/SRGB">标准 RGB 色彩空间（sRGB color space）</a>的颜色。一个颜色可以包括一个<a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha 通道</a>透明度值，来表明颜色如何与它的背景色<a href="http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">混合（composite）</a>。</p>
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) `<color>` 表示一种[标准 RGB 色彩空间（sRGB color space）](http://en.wikipedia.org/wiki/SRGB)的颜色。一个颜色可以包括一个[alpha 通道](https://en.wikipedia.org/wiki/Alpha_compositing)透明度值，来表明颜色如何与它的背景色[混合（composite）](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending)。
 
-<p>一个<code>&lt;color&gt;</code>可以以如下方式定义：</p>
+一个`<color>`可以以如下方式定义：
 
-<ul>
- <li>使用一个关键字（比如<code>blue</code>或<code>transparent</code>）</li>
- <li>使用<a href="http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB 立体坐标（RGB cubic-coordinate）</a>系统（以“#”加十六进制或者 <code>rgb()</code> 和 <code>rgba()</code> 函数表达式的形式）</li>
- <li>使用<a href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSL 圆柱坐标（HSL cylindrical-coordinate）</a>系统（以 <code>hsl()</code> 和 <code>hsla()</code> 函数表达式的形式）</li>
-</ul>
+- 使用一个关键字（比如`blue`或`transparent`）
+- 使用[RGB 立体坐标（RGB cubic-coordinate）](http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation)系统（以“#”加十六进制或者 `rgb()` 和 `rgba()` 函数表达式的形式）
+- 使用[HSL 圆柱坐标（HSL cylindrical-coordinate）](http://en.wikipedia.org/wiki/HSL_and_HSV)系统（以 `hsl()` 和 `hsla()` 函数表达式的形式）
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>本文章详细描述了<code>&lt;color&gt;</code>数据类型。如要了解更多关于在 HTML 中使用颜色的信息，请参阅<a href="/zh-CN/docs/Web/HTML/Applying_color">使用 CSS 为 HTML 元素应用颜色</a>。</p>
-</div>
+> **备注：** 本文章详细描述了`<color>`数据类型。如要了解更多关于在 HTML 中使用颜色的信息，请参阅[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/HTML/Applying_color)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>&lt;color&gt;</code>可以以以下方式指定。</p>
+`<color>`可以以以下方式指定。
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能显示不一。它们大多数是不可被校准的，而且有些浏览器不支持输出设备的<a href="http://en.wikipedia.org/wiki/ICC_profile">色彩配置（color profile）</a>。</p>
-</div>
+> **备注：** 尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能显示不一。它们大多数是不可被校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](http://en.wikipedia.org/wiki/ICC_profile)。
 
-<h3 id="颜色关键字">颜色关键字</h3>
+### 颜色关键字
 
-<p>颜色关键字（color keywords）是不区分大小写的标识符，它表示一个具体的颜色，例如 <code>red</code>、<code>blue</code>、<code>brown</code>或者<code>lightseagreen</code> 。尽管名称或多或少描述了分别的颜色，但必定是人工的，其后没有严格的标准。</p>
+颜色关键字（color keywords）是不区分大小写的标识符，它表示一个具体的颜色，例如 `red`、`blue`、`brown`或者`lightseagreen` 。尽管名称或多或少描述了分别的颜色，但必定是人工的，其后没有严格的标准。
 
-<p>在使用关键字时有几个需要留意的注意事项：</p>
+在使用关键字时有几个需要留意的注意事项：
 
-<ul>
- <li>除了通常的 16 个 HTML 基本颜色，其它的不能被用于 HTML。HTML 将通过一个特定的计算程序转换这些未知的值，这将导致成为完全不同的颜色。这些关键字应只被用于 SVG 和 CSS。</li>
- <li>未知的关键字会让 CSS 属性无效。无效的属性将被忽略，该颜色将没有作用。这是一个和 HTML 相比不同的行为。</li>
- <li>未使用关键字定义的颜色在 CSS 中有任意的透明度，它们是单实色。</li>
- <li>一些关键字表示同样的颜色：
-  <ul>
-   <li><code>darkgray</code> / <code>darkgrey</code></li>
-   <li><code>darkslategray</code> / <code>darkslategrey</code></li>
-   <li><code>dimgray</code> / <code>dimgrey</code></li>
-   <li><code>lightgray</code> / <code>lightgrey</code></li>
-   <li><code>lightslategray</code> / <code>lightslategrey</code></li>
-   <li><code>gray</code> / <code>grey</code></li>
-   <li><code>slategray</code> / <code>slategrey</code></li>
-  </ul>
- </li>
- <li>虽然关键字的名称取自常见的 X11 颜色名，然而由于生产商为具体的硬件所做的定制，颜色可能与 X11 系统上相应的颜色有所偏差。</li>
-</ul>
+- 除了通常的 16 个 HTML 基本颜色，其它的不能被用于 HTML。HTML 将通过一个特定的计算程序转换这些未知的值，这将导致成为完全不同的颜色。这些关键字应只被用于 SVG 和 CSS。
+- 未知的关键字会让 CSS 属性无效。无效的属性将被忽略，该颜色将没有作用。这是一个和 HTML 相比不同的行为。
+- 未使用关键字定义的颜色在 CSS 中有任意的透明度，它们是单实色。
+- 一些关键字表示同样的颜色：
 
-<div class="blockIndicator note">
-<p>注意：可接受的关键字列表在 CSS 的演变过程中发生了改变：</p>
+  - `darkgray` / `darkgrey`
+  - `darkslategray` / `darkslategrey`
+  - `dimgray` / `dimgrey`
+  - `lightgray` / `lightgrey`
+  - `lightslategray` / `lightslategrey`
+  - `gray` / `grey`
+  - `slategray` / `slategrey`
 
-<ul>
- <li>CSS 标准 1 只接受 16 个基本颜色，称为<em>VGA 颜色</em>，因为它们来源于 <a href="http://en.wikipedia.org/wiki/VGA">VGA</a> 显卡所显示的颜色集合而被称为 <em>VGA colors</em> （视频图形阵列色彩）。</li>
- <li>CSS 标准 2 增加了 <code>orange</code> 关键字。</li>
- <li>从一开始，浏览器接受其它的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作<em>扩张的颜色关键字</em>， <em>X11 颜色</em>或 <em>SVG 颜色</em> 。</li>
- <li>CSS 颜色标准 4 添加可<code>rebeccapurple</code>关键字来<a href="https://codepen.io/trezy/post/honoring-a-great-man">纪念 web 先锋 Eric Meyer</a>。</li>
-</ul>
-</div>
+- 虽然关键字的名称取自常见的 X11 颜色名，然而由于生产商为具体的硬件所做的定制，颜色可能与 X11 系统上相应的颜色有所偏差。
 
-<h3 id="transparent_关键字"><code>transparent</code> 关键字</h3>
+> **备注：** 可接受的关键字列表在 CSS 的演变过程中发生了改变：
+>
+> - CSS 标准 1 只接受 16 个基本颜色，称为*VGA 颜色*，因为它们来源于 [VGA](http://en.wikipedia.org/wiki/VGA) 显卡所显示的颜色集合而被称为 _VGA colors_ （视频图形阵列色彩）。
+> - CSS 标准 2 增加了 `orange` 关键字。
+> - 从一开始，浏览器接受其它的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作*扩张的颜色关键字*， *X11 颜色*或 _SVG 颜色_ 。
+> - CSS 颜色标准 4 添加可`rebeccapurple`关键字来[纪念 web 先锋 Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man)。
 
-<p><code>transparent</code> 关键字表示一个完全透明的颜色，即该颜色看上去将是背景色。从技术上说，它是带有阿尔法通道为最小值的黑色，是 <code>rgba(0,0,0,0)</code> 的简写。</p>
+### `transparent` 关键字
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> 为避免未预料的行为，比如{{cssxref("gradient")}}中，the current CSS spec states that <code>transparent</code> should be calculated in the <a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax">alpha-premultiplied color space</a>. 但是，注意旧的浏览器可能将其作为 alpha 值为 0 的黑色。</p>
-</div>
+`transparent` 关键字表示一个完全透明的颜色，即该颜色看上去将是背景色。从技术上说，它是带有阿尔法通道为最小值的黑色，是 `rgba(0,0,0,0)` 的简写。
 
-<div class="note"><strong>过去的注释：</strong><code>transparent</code> 关键字在 CSS Level 2 (Revision 1) 中不是一个真实的颜色。它是一个特殊的关键字，可以代替一个普通的 <code>&lt;color&gt;</code> 值用于两个 CSS 属性中： {{ Cssxref("background") }} 和 {{ Cssxref("border") }}。本质上使用它可以覆盖一个继承的单色。随着经由<a href="http://en.wikipedia.org/wiki/Alpha_compositing">阿尔法通道（alpha channels）</a>透明度的支持，<code>transparent</code> 在 CSS Colors Level 3 中被重新定义为一个真实的颜色，允许在任何一个需要 <code>&lt;color&gt;</code> 值的地方使用，像 {{ Cssxref("color") }} 属性。</div>
+> **备注：** 为避免未预料的行为，比如{{cssxref("gradient")}}中，the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax). 但是，注意旧的浏览器可能将其作为 alpha 值为 0 的黑色。
 
-<h3 id="currentColor_关键字"><code>currentColor</code> 关键字</h3>
+> **备注：** `transparent` 关键字在 CSS Level 2 (Revision 1) 中不是一个真实的颜色。它是一个特殊的关键字，可以代替一个普通的 `<color>` 值用于两个 CSS 属性中： {{ Cssxref("background") }} 和 {{ Cssxref("border") }}。本质上使用它可以覆盖一个继承的单色。随着经由[阿尔法通道（alpha channels）](http://en.wikipedia.org/wiki/Alpha_compositing)透明度的支持，`transparent` 在 CSS Colors Level 3 中被重新定义为一个真实的颜色，允许在任何一个需要 `<color>` 值的地方使用，像 {{ Cssxref("color") }} 属性。
 
-<p><code>currentColor</code> 关键字代表原始的 {{ Cssxref("color") }} 属性的计算值。它允许让继承自属性或子元素的属性颜色属性以默认值不再继承。</p>
+### `currentColor` 关键字
 
-<p>它也能用于那些继承了元素的 {{ Cssxref("color") }} 属性计算值的属性，相当于在这些元素上使用 <code>inherit</code> 关键字，如果这些元素有该关键字的话。</p>
+`currentColor` 关键字代表原始的 {{ Cssxref("color") }} 属性的计算值。它允许让继承自属性或子元素的属性颜色属性以默认值不再继承。
 
-<h4 id="currentcolor示例">currentcolor 示例</h4>
+它也能用于那些继承了元素的 {{ Cssxref("color") }} 属性计算值的属性，相当于在这些元素上使用 `inherit` 关键字，如果这些元素有该关键字的话。
 
-<p>该行的颜色（一个填充颜色的 div）应用它继承自父级的 {{ Cssxref("color") }} 属性。</p>
+#### currentcolor 示例
 
-<h5 id="HTML">HTML</h5>
+该行的颜色（一个填充颜色的 div）应用它继承自父级的 {{ Cssxref("color") }} 属性。
 
-<pre class="brush: html notranslate">&lt;div style="color:blue; border: 1px dashed currentcolor;"&gt;
+##### HTML
+
+```html
+<div style="color:blue; border: 1px dashed currentcolor;">
   The color of this text is blue.
-  &lt;div style="background:currentcolor; height:9px;"&gt;&lt;/div&gt;
+  <div style="background:currentcolor; height:9px;"></div>
   This block is surrounded by a blue border.
-&lt;/div&gt;</pre>
-
-<h5 id="结果">结果</h5>
-
-<p>{{EmbedLiveSample('currentcolor_example')}}</p>
-
-<h3 id="RGB颜色">RGB 颜色</h3>
-
-<p>颜色可以使用红 - 绿-蓝（red-green-blue (RGB)）模式的两种方式被定义：</p>
-
-<h4 id="语法_2">语法</h4>
-
-<p>RGB 颜色可以通过以<code>#</code>为前缀的十六进制字符和函数（<code>rgb()</code>、<code>rgba()</code>）标记表示。</p>
-
-<div class="blockIndicator note">
-<p><strong>注意：</strong>在 CSS 颜色标准 4 中，rgba() 是 rgb() 的别称。在实行第 4 级标准的浏览器中，它们接受相同的参数，作用效果也相同。</p>
 </div>
+```
 
-<dl>
- <dt>十六进制符号：<code>#RRGGBB[AA] </code></dt>
- <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）和<code>A</code> （alpha）是十六进制字符（0–9、A–F）。<code>A</code>是可选的。比如，<code>#ff0000</code>等价于<code>#ff0000ff</code>。</dd>
- <dt>十六进制符号：<code>#RGB[A]</code></dt>
- <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）和<code>A</code> （alpha）是十六进制字符（0–9、A–F）。<code>A</code>是可选的。三位数符号（<code>#RGB</code>）是六位数形式（<code>#RRGGBB</code>）的减缩版。比如，<code>#f09</code>和<code>#ff0099</code>表示同一颜色。类似地，四位数符号（<code>#RGBA</code>）是八位数形式（<code>#RRGGBBAA</code>）的减缩版。比如，<code>#0f38</code>和<code>#00ff3388</code>表示相同颜色。</dd>
- <dt>函数符： <code>rgb[a](R, G, B[, A])</code></dt>
- <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）可以是{{cssxref("&lt;number&gt;")}}（数字），或者{{cssxref("&lt;percentage&gt;")}}（百分比），255 相当于 100%。<code>A</code>（alpha）可以是<code>0</code>到<code>1</code>之间的数字，或者百分比，数字<code>1</code>相当于<code>100%</code>（完全不透明）。</dd>
- <dt>函数符：<code>rgb[a](R G B[ / A])</code></dt>
- <dd>CSS 颜色级别 4 支持用空格分开的值。</dd>
-</dl>
+##### 结果
 
-<h3 id="HSL颜色">HSL 颜色</h3>
+{{EmbedLiveSample('currentcolor_example')}}
 
-<p>颜色也可以使用 <code>hsl()</code> 函数符被定义为色相 - 饱和度 - 亮度（Hue-saturation-lightness）模式。HSL 相比 RGB 的优点是更加直观：你可以估算你想要的颜色，然后微调。它也更易于创建相称的颜色集合。（通过保持相同的色相并改变亮度/暗度和饱和度）。</p>
+### RGB 颜色
 
-<p>Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).</p>
+颜色可以使用红 - 绿-蓝（red-green-blue (RGB)）模式的两种方式被定义：
 
-<h4 id="语法_3">语法</h4>
+#### 语法
 
-<p>HSL colors are expressed through the functional <code id="hsl()">hsl()</code> and <code id="hsla()">hsla()</code> notations.</p>
+RGB 颜色可以通过以`#`为前缀的十六进制字符和函数（`rgb()`、`rgba()`）标记表示。
 
-<div class="note">
-<p><strong>Note</strong>: As of CSS Colors Level 4, <code>hsla()</code> is an alias for <code>hsl()</code>. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.</p>
-</div>
+> **备注：** 在 CSS 颜色标准 4 中，rgba() 是 rgb() 的别称。在实行第 4 级标准的浏览器中，它们接受相同的参数，作用效果也相同。
 
-<dl>
- <dt>Functional notation: <code>hsl[a](H, S, L[, A])</code></dt>
- <dd><code>H</code> (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in <a href="https://drafts.csswg.org/css-color/#the-hsl-notation">CSS Color Module Level 4</a>. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in <a href="https://drafts.csswg.org/css-color-3/#hsl-color">CSS Color Module Level 3</a>. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.<br>
- <code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”<br>
- <code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
- <dt>Functional notation: <code>hsl[a](H S L[ / A])</code></dt>
- <dd>CSS Colors Level 4 adds support for space-separated values in the functional notation.</dd>
-</dl>
+- 十六进制符号：`#RRGGBB[AA]`
+  - : `R`（红）、`G`（绿）、`B` （蓝）和`A` （alpha）是十六进制字符（0–9、A–F）。`A`是可选的。比如，`#ff0000`等价于`#ff0000ff`。
+- 十六进制符号：`#RGB[A]`
+  - : `R`（红）、`G`（绿）、`B` （蓝）和`A` （alpha）是十六进制字符（0–9、A–F）。`A`是可选的。三位数符号（`#RGB`）是六位数形式（`#RRGGBB`）的减缩版。比如，`#f09`和`#ff0099`表示同一颜色。类似地，四位数符号（`#RGBA`）是八位数形式（`#RRGGBBAA`）的减缩版。比如，`#0f38`和`#00ff3388`表示相同颜色。
+- 函数符： `rgb[a](R, G, B[, A])`
+  - : `R`（红）、`G`（绿）、`B` （蓝）可以是{{cssxref("&lt;number&gt;")}}（数字），或者{{cssxref("&lt;percentage&gt;")}}（百分比），255 相当于 100%。`A`（alpha）可以是`0`到`1`之间的数字，或者百分比，数字`1`相当于`100%`（完全不透明）。
+- 函数符：`rgb[a](R G B[ / A])`
+  - : CSS 颜色级别 4 支持用空格分开的值。
 
-<h3 id="系统颜色">系统颜色</h3>
+### HSL 颜色
 
-<p>In <em>forced colors mode</em> (detectable with the <a href="/zh-CN/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers. </p>
+颜色也可以使用 `hsl()` 函数符被定义为色相 - 饱和度 - 亮度（Hue-saturation-lightness）模式。HSL 相比 RGB 的优点是更加直观：你可以估算你想要的颜色，然后微调。它也更易于创建相称的颜色集合。（通过保持相同的色相并改变亮度/暗度和饱和度）。
 
-<p>The keywords in the following list are defined by the CSS Color Module Level 4 specification.</p>
+Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).
 
-<div class="blockIndicator note">
-<p>Note that these keywords are <em>case insensitive</em>, but are listed here with mixed case for readability.</p>
-</div>
+#### 语法
 
-<dl>
- <dt>ActiveText</dt>
- <dd>
- <p>Text of active links</p>
- </dd>
- <dt>ButtonFace</dt>
- <dd>
- <p>Background of push buttons</p>
- </dd>
- <dt>ButtonText</dt>
- <dd>
- <p>Text of push buttons</p>
- </dd>
- <dt>Canvas</dt>
- <dd>
- <p>Background of application content or documents</p>
- </dd>
- <dt>CanvasText</dt>
- <dd>
- <p>Text in application content or documents</p>
- </dd>
- <dt>Field</dt>
- <dd>
- <p>Background of input fields</p>
- </dd>
- <dt>FieldText</dt>
- <dd>
- <p>Text in input fields</p>
- </dd>
- <dt>GrayText</dt>
- <dd>
- <p>Text that is disabled</p>
- </dd>
- <dt>Highlight</dt>
- <dd>
- <p>Background of items that are selected in a control</p>
- </dd>
- <dt>HighlightText</dt>
- <dd>
- <p>Text of items that are selected in a control</p>
- </dd>
- <dt>LinkText</dt>
- <dd>
- <p>Text of non-active, non-visited links</p>
- </dd>
- <dt>VisitedText</dt>
- <dd>
- <p>Text of visited links</p>
- </dd>
-</dl>
+HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 
-<h4 id="Deprecated_system_color_keywords">Deprecated system color keywords</h4>
+> **备注：** As of CSS Colors Level 4, `hsla()` is an alias for `hsl()`. In browsers that implement the Level 4 standard, they accept the same parameters and behave the same way.
 
-<p>The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated. {{deprecated_inline}} for use on public web pages.</p>
+- Functional notation: `hsl[a](H, S, L[, A])`
+  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in [CSS Color Module Level 4](https://drafts.csswg.org/css-color/#the-hsl-notation). When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in [CSS Color Module Level 3](https://drafts.csswg.org/css-color-3/#hsl-color). By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is “normal.”
+    `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+- Functional notation: `hsl[a](H S L[ / A])`
+  - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
-<div class="twocolumns">
-<dl>
- <dt>ActiveBorder</dt>
- <dd>
- <p>Active window border.</p>
- </dd>
- <dt>ActiveCaption</dt>
- <dd>
- <p>Active window caption. Should be used with <code>CaptionText</code> as foreground color.</p>
- </dd>
- <dt>AppWorkspace</dt>
- <dd>
- <p>Background color of multiple document interface.</p>
- </dd>
- <dt>Background</dt>
- <dd>
- <p>Desktop background.</p>
- </dd>
- <dt>ButtonHighlight</dt>
- <dd>
- <p>The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border.</p>
- </dd>
- <dt>ButtonShadow</dt>
- <dd>
- <p>The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border.</p>
- </dd>
- <dt>CaptionText</dt>
- <dd>
- <p>Text in caption, size box, and scrollbar arrow box. Should be used with the <code>ActiveCaption</code> background color.</p>
- </dd>
- <dt>InactiveBorder</dt>
- <dd>
- <p>Inactive window border.</p>
- </dd>
- <dt>InactiveCaption</dt>
- <dd>
- <p>Inactive window caption. Should be used with the <code>InactiveCaptionText</code> foreground color.</p>
- </dd>
- <dt>InactiveCaptionText</dt>
- <dd>
- <p>Color of text in an inactive caption. Should be used with the <code>InactiveCaption</code> background color.</p>
- </dd>
- <dt>InfoBackground</dt>
- <dd>
- <p>Background color for tooltip controls. Should be used with the <code>InfoText</code> foreground color.</p>
- </dd>
- <dt>InfoText</dt>
- <dd>
- <p>Text color for tooltip controls. Should be used with the <code>InfoBackground</code> background color.</p>
- </dd>
- <dt>Menu</dt>
- <dd>
- <p>Menu background. Should be used with the <code>MenuText</code> or <code>-moz-MenuBarText</code> foreground color.</p>
- </dd>
- <dt>MenuText</dt>
- <dd>
- <p>Text in menus. Should be used with the <code>Menu</code> background color.</p>
- </dd>
- <dt>Scrollbar</dt>
- <dd>
- <p>Background color of scroll bars.</p>
- </dd>
- <dt>ThreeDDarkShadow</dt>
- <dd>
- <p>The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.</p>
- </dd>
- <dt>ThreeDFace</dt>
- <dd>
- <p>The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the <code>ButtonText</code> foreground color.</p>
- </dd>
- <dt>ThreeDHighlight</dt>
- <dd>
- <p>The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.</p>
- </dd>
- <dt>ThreeDLightShadow</dt>
- <dd>
- <p>The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.</p>
- </dd>
- <dt>ThreeDShadow</dt>
- <dd>
- <p>The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.</p>
- </dd>
- <dt>Window</dt>
- <dd>
- <p>Window background. Should be used with the <code>WindowText</code> foreground color.</p>
- </dd>
- <dt>WindowFrame</dt>
- <dd>
- <p>Window frame.</p>
- </dd>
- <dt>WindowText</dt>
- <dd>
- <p>Text in windows. Should be used with the <code>Window</code> background color.</p>
- </dd>
-</dl>
-</div>
+### 系统颜色
 
+In _forced colors mode_ (detectable with the [forced-colors](/zh-CN/docs/Web/CSS/@media/forced-colors) media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers.
 
+The keywords in the following list are defined by the CSS Color Module Level 4 specification.
 
-<h3 id="Mozilla_System_Color_Extensions">Mozilla System Color Extensions</h3>
+> **备注：** Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
 
-<dl>
-  <dt>-moz-ButtonDefault</dt>
-  <dd>
-  <p>The border color that goes around buttons that represent the default action for a dialog box.</p>
-  </dd>
-  <dt>-moz-ButtonHoverFace</dt>
-  <dd>
-  <p>The background color of a button that the mouse pointer is over (which would be <code>ThreeDFace</code> or <code>ButtonFace</code> when the mouse pointer is not over it). Should be used with the <code>-moz-ButtonHoverText</code> foreground color.</p>
-  </dd>
-  <dt>-moz-ButtonHoverText</dt>
-  <dd>
-  <p>The text color of a button that the mouse pointer is over (which would be ButtonText when the mouse pointer is not over it). Should be used with the <code>-moz-ButtonHoverFace background</code> color.</p>
-  </dd>
-  <dt>-moz-CellHighlight</dt>
-  <dd>
-  <p>Background color for selected item in a tree widget. Should be used with the <code>-moz-CellHighlightText</code> foreground color. See also <code>-moz-html-CellHighlight</code>.</p>
-  </dd>
-  <dt>-moz-CellHighlightText</dt>
-  <dd>
-  <p>Text color for a selected item in a tree. Should be used with the <code>-moz-CellHighlight background</code> color. See also <code>-moz-html-CellHighlightText</code>.</p>
-  </dd>
-  <dt>-moz-Combobox</dt>
-  <dd>
-  <p>Background color for combo-boxes. Should be used with the <code>-moz-ComboboxText</code> foreground color. In versions prior to 1.9.2, use <code>-moz-Field</code> instead.</p>
-  </dd>
-  <dt>-moz-ComboboxText</dt>
-  <dd>
-  <p>Text color for combo-boxes. Should be used with the <code>-moz-Combobox</code> background color. In versions prior to 1.9.2, use <code>-moz-FieldText</code> instead.</p>
-  </dd>
-  <dt>-moz-Dialog</dt>
-  <dd>
-  <p>Background color for dialog boxes. Should be used with the <code>-moz-DialogText</code> foreground color.</p>
-  </dd>
-  <dt>-moz-DialogText</dt>
-  <dd>
-  <p>Text color for dialog boxes. Should be used with the <code>-moz-Dialog</code> background color.</p>
-  </dd>
-  <dt>-moz-dragtargetzone</dt>
-  <dd>TBD</dd>
-  <dt>-moz-EvenTreeRow</dt>
-  <dd>
-  <p>Background color for even-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-OddTreeRow</code>.</p>
-  </dd>
-  <dt>-moz-html-CellHighlight</dt>
-  <dd>
-  <p>Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlightText</code> foreground color. Prior to Gecko 1.9, use <code>-moz-CellHighlight</code>.</p>
-  </dd>
-  <dt>-moz-html-CellHighlightText</dt>
-  <dd>
-  <p>Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the <code>-moz-html-CellHighlight</code> background color. Prior to Gecko 1.9, use <code>-moz-CellHighlightText</code>.</p>
-  </dd>
-  <dt>-moz-mac-accentdarkestshadow</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-accentdarkshadow</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-accentface</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-accentlightesthighlight</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-accentlightshadow</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-accentregularhighlight</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-accentregularshadow</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-chrome-active</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-chrome-inactive</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-focusring</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-menuselect</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-menushadow</dt>
-  <dd>TBD</dd>
-  <dt>-moz-mac-menutextselect</dt>
-  <dd>TBD</dd>
-  <dt>-moz-MenuHover</dt>
-  <dd>
-  <p>Background color for hovered menu items. Often similar to <code>Highlight</code>. Should be used with the <code>-moz-MenuHoverText</code> or <code>-moz-MenuBarHoverText</code> foreground color.</p>
-  </dd>
-  <dt>-moz-MenuHoverText</dt>
-  <dd>
-  <p>Text color for hovered menu items. Often similar to <code>HighlightText</code>. Should be used with the <code>-moz-MenuHover</code> background color.</p>
-  </dd>
-  <dt>-moz-MenuBarText</dt>
-  <dd>
-  <p>Text color in menu bars. Often similar to <code>MenuText</code>. Should be used on top of <code>Menu</code> background.</p>
-  </dd>
-  <dt>-moz-MenuBarHoverText</dt>
-  <dd>
-  <p>Color for hovered text in menu bars. Often similar to <code>-moz-MenuHoverText</code>. Should be used on top of <code>-moz-MenuHover</code> background.</p>
-  </dd>
-  <dt>-moz-nativehyperlinktext</dt>
-  <dd>
-  <p>Default platform hyperlink color.</p>
-  </dd>
-  <dt>-moz-OddTreeRow</dt>
-  <dd>
-  <p>Background color for odd-numbered rows in a tree. Should be used with the <code>-moz-FieldText</code> foreground color. In Gecko versions prior to 1.9, use <code>-moz-Field</code>. See also <code>-moz-EvenTreeRow</code>.</p>
-  </dd>
-  <dt>-moz-win-communicationstext</dt>
-  <dd>
-  <p>Should be used for text in objects with <code>{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;</code>.</p>
-  </dd>
-  <dt>-moz-win-mediatext</dt>
-  <dd>
-  <p>Should be used for text in objects with <code>{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox</code>.</p>
-  </dd>
-  <dt>-moz-win-accentcolor</dt>
-  <dd>
-  <p>Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.</p>
-  </dd>
-  <dt>-moz-win-accentcolortext</dt>
-  <dd>
-  <p>Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.</p>
-  </dd>
-</dl>
+- ## ActiveText
 
-<h3 id="Mozilla_Color_Preference_Extensions">Mozilla Color Preference Extensions</h3>
+      : Text of active links
 
-<dl>
- <dt>-moz-activehyperlinktext</dt>
- <dd>
- <p>User's preference for text color of active links. Should be used with the default document background color.</p>
- </dd>
- <dt>-moz-default-background-color</dt>
- <dd>
- <p>User's preference for the document background color.</p>
- </dd>
- <dt>-moz-default-color</dt>
- <dd>
- <p>User's preference for the text color.</p>
- </dd>
- <dt>-moz-hyperlinktext</dt>
- <dd>
- <p>User's preference for the text color of unvisited links. Should be used with the default document background color.</p>
- </dd>
- <dt>-moz-visitedhyperlinktext</dt>
- <dd>
- <p>User's preference for the text color of visited links. Should be used with the default document background color.</p>
- </dd>
-</dl>
+- ## ButtonFace
 
-<h2 id="插值">插值</h2>
+      : Background of push buttons
 
-<p>在动画和<a href="/zh-CN/docs/Web/SVG/Tutorial/Gradients">渐变</a>中， <code>&lt;color&gt;</code> 值会在每个红绿蓝成分中插值。每一个成分都会插值为浮点实数。注意颜色的插值发生在 <a href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">alpha-premultiplied sRGBA color space</a> 中，以避免出现未预料的灰色。在动画中，插值速度由<a href="/zh-CN/docs/">时间函数</a>决定。</p>
+- ## ButtonText
 
-<h2 id="Accessibility_considerations">Accessibility considerations</h2>
+      : Text of push buttons
 
-<p>Some people have difficulty distinguishing colors. The <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
+- ## Canvas
 
-<h2 id="示例">示例</h2>
+      : Background of application content or documents
 
-<h3 id="颜色值检测器">颜色值检测器</h3>
+- ## CanvasText
 
-<p>在这个示例中，我们提供一个<code>&lt;div&gt;</code>和文本输入框。输入一个有效的颜色，则<code>&lt;div&gt;</code>会显示这个颜色，可以让你检测颜色值。</p>
+      : Text in application content or documents
 
-<h4 id="HTML_2">HTML</h4>
+- ## Field
 
-<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;label for="color"&gt;Enter a valid color value:&lt;/label&gt;
-&lt;input type="text" id="color"&gt;</pre>
+      : Background of input fields
 
-<h4 id="CSS">CSS</h4>
+- ## FieldText
 
-<pre class="brush: css notranslate">div {
+      : Text in input fields
+
+- ## GrayText
+
+      : Text that is disabled
+
+- ## Highlight
+
+      : Background of items that are selected in a control
+
+- ## HighlightText
+
+      : Text of items that are selected in a control
+
+- ## LinkText
+
+      : Text of non-active, non-visited links
+
+- ## VisitedText
+
+      : Text of visited links
+
+#### Deprecated system color keywords
+
+The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated. {{deprecated_inline}} for use on public web pages.
+
+- ## ActiveBorder
+
+      : Active window border.
+
+- ## ActiveCaption
+
+      : Active window caption. Should be used with `CaptionText` as foreground color.
+
+- ## AppWorkspace
+
+      : Background color of multiple document interface.
+
+- ## Background
+
+      : Desktop background.
+
+- ## ButtonHighlight
+
+      : The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
+
+- ## ButtonShadow
+
+      : The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
+
+- ## CaptionText
+
+      : Text in caption, size box, and scrollbar arrow box. Should be used with the `ActiveCaption` background color.
+
+- ## InactiveBorder
+
+      : Inactive window border.
+
+- ## InactiveCaption
+
+      : Inactive window caption. Should be used with the `InactiveCaptionText` foreground color.
+
+- ## InactiveCaptionText
+
+      : Color of text in an inactive caption. Should be used with the `InactiveCaption` background color.
+
+- ## InfoBackground
+
+      : Background color for tooltip controls. Should be used with the `InfoText` foreground color.
+
+- ## InfoText
+
+      : Text color for tooltip controls. Should be used with the `InfoBackground` background color.
+
+- ## Menu
+
+      : Menu background. Should be used with the `MenuText` or `-moz-MenuBarText` foreground color.
+
+- ## MenuText
+
+      : Text in menus. Should be used with the `Menu` background color.
+
+- ## Scrollbar
+
+      : Background color of scroll bars.
+
+- ## ThreeDDarkShadow
+
+      : The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
+
+- ## ThreeDFace
+
+      : The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the `ButtonText` foreground color.
+
+- ## ThreeDHighlight
+
+      : The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
+
+- ## ThreeDLightShadow
+
+      : The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
+
+- ## ThreeDShadow
+
+      : The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
+
+- ## Window
+
+      : Window background. Should be used with the `WindowText` foreground color.
+
+- ## WindowFrame
+
+      : Window frame.
+
+- ## WindowText
+
+      : Text in windows. Should be used with the `Window` background color.
+
+### Mozilla System Color Extensions
+
+- ## \-moz-ButtonDefault
+
+      : The border color that goes around buttons that represent the default action for a dialog box.
+
+- ## \-moz-ButtonHoverFace
+
+      : The background color of a button that the mouse pointer is over (which would be `ThreeDFace` or `ButtonFace` when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverText` foreground color.
+
+- ## \-moz-ButtonHoverText
+
+      : The text color of a button that the mouse pointer is over (which would be ButtonText when the mouse pointer is not over it). Should be used with the `-moz-ButtonHoverFace background` color.
+
+- ## \-moz-CellHighlight
+
+      : Background color for selected item in a tree widget. Should be used with the `-moz-CellHighlightText` foreground color. See also `-moz-html-CellHighlight`.
+
+- ## \-moz-CellHighlightText
+
+      : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
+
+- ## \-moz-Combobox
+
+      : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
+
+- ## \-moz-ComboboxText
+
+      : Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
+
+- ## \-moz-Dialog
+
+      : Background color for dialog boxes. Should be used with the `-moz-DialogText` foreground color.
+
+- ## \-moz-DialogText
+
+      : Text color for dialog boxes. Should be used with the `-moz-Dialog` background color.
+
+- \-moz-dragtargetzone
+  - : TBD
+- ## \-moz-EvenTreeRow
+
+      : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
+
+- ## \-moz-html-CellHighlight
+
+      : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
+
+- ## \-moz-html-CellHighlightText
+
+      : Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
+
+- \-moz-mac-accentdarkestshadow
+  - : TBD
+- \-moz-mac-accentdarkshadow
+  - : TBD
+- \-moz-mac-accentface
+  - : TBD
+- \-moz-mac-accentlightesthighlight
+  - : TBD
+- \-moz-mac-accentlightshadow
+  - : TBD
+- \-moz-mac-accentregularhighlight
+  - : TBD
+- \-moz-mac-accentregularshadow
+  - : TBD
+- \-moz-mac-chrome-active
+  - : TBD
+- \-moz-mac-chrome-inactive
+  - : TBD
+- \-moz-mac-focusring
+  - : TBD
+- \-moz-mac-menuselect
+  - : TBD
+- \-moz-mac-menushadow
+  - : TBD
+- \-moz-mac-menutextselect
+  - : TBD
+- ## \-moz-MenuHover
+
+      : Background color for hovered menu items. Often similar to `Highlight`. Should be used with the `-moz-MenuHoverText` or `-moz-MenuBarHoverText` foreground color.
+
+- ## \-moz-MenuHoverText
+
+      : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
+
+- ## \-moz-MenuBarText
+
+      : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
+
+- ## \-moz-MenuBarHoverText
+
+      : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
+
+- ## \-moz-nativehyperlinktext
+
+      : Default platform hyperlink color.
+
+- ## \-moz-OddTreeRow
+
+      : Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
+
+- ## \-moz-win-communicationstext
+
+      : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
+
+- ## \-moz-win-mediatext
+
+      : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
+
+- ## \-moz-win-accentcolor
+
+      : Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.
+
+- ## \-moz-win-accentcolortext
+
+      : Used to access the color of text placed over the Windows 10 custom accent color in the start menu, taskbar, title bars, etc.
+
+### Mozilla Color Preference Extensions
+
+- ## \-moz-activehyperlinktext
+
+      : User's preference for text color of active links. Should be used with the default document background color.
+
+- ## \-moz-default-background-color
+
+      : User's preference for the document background color.
+
+- ## \-moz-default-color
+
+      : User's preference for the text color.
+
+- ## \-moz-hyperlinktext
+
+      : User's preference for the text color of unvisited links. Should be used with the default document background color.
+
+- ## \-moz-visitedhyperlinktext
+
+      : User's preference for the text color of visited links. Should be used with the default document background color.
+
+## 插值
+
+在动画和[渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中， `<color>` 值会在每个红绿蓝成分中插值。每一个成分都会插值为浮点实数。注意颜色的插值发生在 [alpha-premultiplied sRGBA color space](https://www.gimp.org/docs/plug-in/appendix-alpha.html) 中，以避免出现未预料的灰色。在动画中，插值速度由[时间函数](/zh-CN/docs/)决定。
+
+## Accessibility considerations
+
+Some people have difficulty distinguishing colors. The [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [Color and color contrast](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast) for more information.
+
+## 示例
+
+### 颜色值检测器
+
+在这个示例中，我们提供一个`<div>`和文本输入框。输入一个有效的颜色，则`<div>`会显示这个颜色，可以让你检测颜色值。
+
+#### HTML
+
+```html
+<div></div>
+<hr>
+<label for="color">Enter a valid color value:</label>
+<input type="text" id="color">
+```
+
+#### CSS
+
+```css
+div {
   width: 100%;
   height: 200px;
-}</pre>
+}
+```
 
-<div class="hidden">
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js notranslate">const inputElem = document.querySelector('input');
+```js hidden
+const inputElem = document.querySelector('input');
 const divElem = document.querySelector('div');
 
 function validTextColor(stringToTest) {
@@ -511,7 +474,7 @@ function validTextColor(stringToTest) {
   return image.style.color !== "rgb(255, 255, 255)";
 }
 
-inputElem.addEventListener('change', () =&gt; {
+inputElem.addEventListener('change', () => {
   if(validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
     divElem.textContent = '';
@@ -519,18 +482,19 @@ inputElem.addEventListener('change', () =&gt; {
     divElem.style.backgroundColor = 'white';
     divElem.textContent = 'Invalid color value';
   }
-});</pre>
-</div>
+});
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Color_value_tester','100%', 300)}}</p>
+{{EmbedLiveSample('Color_value_tester','100%', 300)}}
 
-<h3 id="RGB的多种语法">RGB 的多种语法</h3>
+### RGB 的多种语法
 
-<p>这个例子显示了一个颜色可以以多种 RGB 颜色语法表示。</p>
+这个例子显示了一个颜色可以以多种 RGB 颜色语法表示。
 
-<pre class="notranslate">/* 这些语法都表示同一个颜色：a fully opaque hot pink */
+```
+/* 这些语法都表示同一个颜色：a fully opaque hot pink */
 
 /* 十六进制语法 */
 #f09
@@ -563,33 +527,37 @@ rgb(255 0 153 / 100%)
 
 /* 带有浮点值的函数语法 */
 rgb(255, 0, 153.6, 1)
-rgb(1e2, .5e1, .5e0, +.25e2%)</pre>
+rgb(1e2, .5e1, .5e0, +.25e2%)
+```
 
-<h3 id="RGB的多种透明度">RGB 的多种透明度</h3>
+### RGB 的多种透明度
 
-<pre class="notranslate">/* 十六进制语法 */
-#3a30                    /*   完全透明的绿色 */ 
-#3A3F                    /* 完全不透明的绿色 */ 
-#33aa3300                /*   完全透明的绿色 */ 
-#33AA3380                /*  50% 不透明的绿色 */ 
+```
+/* 十六进制语法 */
+#3a30                    /*   完全透明的绿色 */
+#3A3F                    /* 完全不透明的绿色 */
+#33aa3300                /*   完全透明的绿色 */
+#33AA3380                /*  50% 不透明的绿色 */
 
 /* 函数语法 */
-rgba(51, 170, 51, .1)    /*  10% 不透明的绿色 */ 
-rgba(51, 170, 51, .4)    /*  40% 不透明的绿色 */ 
-rgba(51, 170, 51, .7)    /*  70% 不透明的绿色 */ 
-rgba(51, 170, 51,  1)    /* 完全不透明的绿色 */ 
+rgba(51, 170, 51, .1)    /*  10% 不透明的绿色 */
+rgba(51, 170, 51, .4)    /*  40% 不透明的绿色 */
+rgba(51, 170, 51, .7)    /*  70% 不透明的绿色 */
+rgba(51, 170, 51,  1)    /* 完全不透明的绿色 */
 
 /* 空格语法 */
-rgba(51 170 51 / 0.4)    /*  40% 不透明的绿色 */ 
-rgba(51 170 51 / 40%)    /*  40% 不透明的绿色 */ 
+rgba(51 170 51 / 0.4)    /*  40% 不透明的绿色 */
+rgba(51 170 51 / 40%)    /*  40% 不透明的绿色 */
 
 /* 带有浮点值的函数语法 */
 rgba(255, 0, 153.6, 1)
-rgba(1e2, .5e1, .5e0, +.25e2%)</pre>
+rgba(1e2, .5e1, .5e0, +.25e2%)
+```
 
-<h3 id="HSL的多种语法">HSL 的多种语法</h3>
+### HSL 的多种语法
 
-<pre class="notranslate">/* 以下示例都表示同一颜色：a lavender */
+```
+/* 以下示例都表示同一颜色：a lavender */
 hsl(270,60%,70%)
 hsl(270, 60%, 70%)
 hsl(270 60% 70%)
@@ -602,200 +570,73 @@ hsl(270, 60%, 50%, .15)
 hsl(270, 60%, 50%, 15%)
 hsl(270 60% 50% / .15)
 hsl(270 60% 50% / 15%)
-</pre>
+```
 
-<h3 id="完全饱和颜色">完全饱和颜色</h3>
+### 完全饱和颜色
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">符号</th>
-   <th scope="col">描述</th>
-   <th scope="col">展示</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>hsl(0, 100%, 50%)</code></td>
-   <td>红色</td>
-   <td style="background: hsl(0,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(30, 100%, 50%)</code></td>
-   <td>橙色</td>
-   <td style="background: hsl(30,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(60, 100%, 50%)</code></td>
-   <td>黄色</td>
-   <td style="background: hsl(60,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(90, 100%, 50%)</code></td>
-   <td>黄绿色</td>
-   <td style="background: hsl(90,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 100%, 50%)</code></td>
-   <td>绿色</td>
-   <td style="background: hsl(120,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(150, 100%, 50%)</code></td>
-   <td>蓝绿色（青绿色）</td>
-   <td style="background: hsl(150,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(180, 100%, 50%)</code></td>
-   <td>青色</td>
-   <td style="background: hsl(180,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(210, 100%, 50%)</code></td>
-   <td>天蓝色</td>
-   <td style="background: hsl(210,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(240, 100%, 50%)</code></td>
-   <td>蓝色</td>
-   <td style="background: hsl(240,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(270, 100%, 50%)</code></td>
-   <td>紫色</td>
-   <td style="background: hsl(270,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(300, 100%, 50%)</code></td>
-   <td>品红色（洋红色）</td>
-   <td style="background: hsl(300,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(330, 100%, 50%)</code></td>
-   <td>粉红色</td>
-   <td style="background: hsl(330,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(360, 100%, 50%)</code></td>
-   <td>红色</td>
-   <td style="background: hsl(360,100%,50%);"></td>
-  </tr>
- </tbody>
-</table>
+| 符号                  | 描述             | 展示 |
+| --------------------- | ---------------- | ---- |
+| `hsl(0, 100%, 50%)`   | 红色             |      |
+| `hsl(30, 100%, 50%)`  | 橙色             |      |
+| `hsl(60, 100%, 50%)`  | 黄色             |      |
+| `hsl(90, 100%, 50%)`  | 黄绿色           |      |
+| `hsl(120, 100%, 50%)` | 绿色             |      |
+| `hsl(150, 100%, 50%)` | 蓝绿色（青绿色） |      |
+| `hsl(180, 100%, 50%)` | 青色             |      |
+| `hsl(210, 100%, 50%)` | 天蓝色           |      |
+| `hsl(240, 100%, 50%)` | 蓝色             |      |
+| `hsl(270, 100%, 50%)` | 紫色             |      |
+| `hsl(300, 100%, 50%)` | 品红色（洋红色） |      |
+| `hsl(330, 100%, 50%)` | 粉红色           |      |
+| `hsl(360, 100%, 50%)` | 红色             |      |
 
-<h3 id="不同明暗度的绿色">不同明暗度的绿色</h3>
+### 不同明暗度的绿色
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">符号</th>
-   <th scope="col">描述</th>
-   <th scope="col">展示</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>hsl(120, 100%, 0%)</code></td>
-   <td>黑色</td>
-   <td style="background: hsl(120,100%,0%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 100%, 20%)</code></td>
-   <td></td>
-   <td style="background: hsl(120,100%,20%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 100%, 40%)</code></td>
-   <td></td>
-   <td style="background: hsl(120,100%,40%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 100%, 60%)</code></td>
-   <td></td>
-   <td style="background: hsl(120,100%,60%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 100%, 80%)</code></td>
-   <td></td>
-   <td style="background: hsl(120,100%,80%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 100%, 100%)</code></td>
-   <td>白色</td>
-   <td style="background: hsl(120,100%,100%);"></td>
-  </tr>
- </tbody>
-</table>
+| 符号                   | 描述 | 展示 |
+| ---------------------- | ---- | ---- |
+| `hsl(120, 100%, 0%)`   | 黑色 |      |
+| `hsl(120, 100%, 20%)`  |      |      |
+| `hsl(120, 100%, 40%)`  |      |      |
+| `hsl(120, 100%, 60%)`  |      |      |
+| `hsl(120, 100%, 80%)`  |      |      |
+| `hsl(120, 100%, 100%)` | 白色 |      |
 
-<h3 id="饱和的和不饱和的绿色">饱和的和不饱和的绿色</h3>
+### 饱和的和不饱和的绿色
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">符号</th>
-   <th scope="col">描述</th>
-   <th scope="col">展示</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>hsl(120, 100%, 50%)</code></td>
-   <td>绿色</td>
-   <td style="background: hsl(120,100%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 80%, 50%)</code></td>
-   <td></td>
-   <td style="background: hsl(120,80%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 60%, 50%)</code></td>
-   <td></td>
-   <td style="background: hsl(120,60%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 40%, 50%)</code></td>
-   <td></td>
-   <td style="background: hsl(120,40%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 20%, 50%)</code></td>
-   <td></td>
-   <td style="background: hsl(120,20%,50%);"></td>
-  </tr>
-  <tr>
-   <td><code>hsl(120, 0%, 50%)</code></td>
-   <td>灰色</td>
-   <td style="background: hsl(120,0%,50%);"></td>
-  </tr>
- </tbody>
-</table>
+| 符号                  | 描述 | 展示 |
+| --------------------- | ---- | ---- |
+| `hsl(120, 100%, 50%)` | 绿色 |      |
+| `hsl(120, 80%, 50%)`  |      |      |
+| `hsl(120, 60%, 50%)`  |      |      |
+| `hsl(120, 40%, 50%)`  |      |      |
+| `hsl(120, 20%, 50%)`  |      |      |
+| `hsl(120, 0%, 50%)`   | 灰色 |      |
 
-<h3 id="HSL不同的透明度">HSL 不同的透明度</h3>
+### HSL 不同的透明度
 
-<pre class="notranslate">hsla(240, 100%, 50%, .05)     /*   5% opaque blue */ 
-hsla(240, 100%, 50%, .4)      /*  40% opaque blue */ 
-hsla(240, 100%, 50%, .7)      /*  70% opaque blue */ 
-hsla(240, 100%, 50%, 1)       /* full opaque blue */ 
+```
+hsla(240, 100%, 50%, .05)     /*   5% opaque blue */
+hsla(240, 100%, 50%, .4)      /*  40% opaque blue */
+hsla(240, 100%, 50%, .7)      /*  70% opaque blue */
+hsla(240, 100%, 50%, 1)       /* full opaque blue */
 
 /* Whitespace syntax */
-hsla(240 100% 50% / .05)      /*   5% opaque blue */ 
+hsla(240 100% 50% / .05)      /*   5% opaque blue */
 
 /* Percentage value for alpha */
-hsla(240 100% 50% / 5%)       /*   5% opaque blue */ </pre>
+hsla(240 100% 50% / 5%)       /*   5% opaque blue */
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>The {{ Cssxref("opacity") }} property, allowing to define the transparency of color at the element level.</li>
- <li>The {{ Cssxref("color") }}, {{ Cssxref("background-color") }}, {{ Cssxref("border-color") }}, {{ Cssxref("outline-color") }}, {{ Cssxref("text-shadow") }}, {{ Cssxref("box-shadow") }} properties.</li>
- <li><a href="/en/CSS/CSS_Reference">CSS Reference</a> index</li>
-</ul>
+- The {{ Cssxref("opacity") }} property, allowing to define the transparency of color at the element level.
+- The {{ Cssxref("color") }}, {{ Cssxref("background-color") }}, {{ Cssxref("border-color") }}, {{ Cssxref("outline-color") }}, {{ Cssxref("text-shadow") }}, {{ Cssxref("box-shadow") }} properties.
+- [CSS Reference](/en/CSS/CSS_Reference) index

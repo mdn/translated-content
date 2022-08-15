@@ -3,79 +3,70 @@ title: grid-column
 slug: Web/CSS/grid-column
 translation_of: Web/CSS/grid-column
 ---
-<p><code>grid-column</code> CSS 属性是 {{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 的简写属性，用于指定网格项目的大小和位置{ 通过为它的网格位置贡献线条，跨度或不添加任何内容（自动），从而指定其 {{glossary("grid area","grid area","网格区域")}}。</p>
+`grid-column` CSS 属性是 {{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 的简写属性，用于指定网格项目的大小和位置{ 通过为它的网格位置贡献线条，跨度或不添加任何内容（自动），从而指定其 {{glossary("grid area","grid area","网格区域")}}。
 
-<div>{{EmbedInteractiveExample("pages/css/grid-column.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-column.html")}}
 
+## 语法
 
+如果给出两个`<grid-line>`值，它们之间用“ /”分隔。将`grid-column-start`的正手设置为斜线之前的值，并将`grid-column-end`的正手设置为斜线之后的值。
 
-<h2 id="语法">语法</h2>
+每个`<grid-line>`值可以指定为：
 
-<p>如果给出两个<code>&lt;grid-line&gt;</code>值，它们之间用“ /”分隔。将<code>grid-column-start</code>的正手设置为斜线之前的值，并将<code>grid-column-end</code>的正手设置为斜线之后的值。</p>
+- 要么是`auto`关键字
+- 或`<custom-ident>`值
+- 或`<integer>`值
+- 或者`<custom-ident>`和`<integer>`，两者之间用空格分隔
+- 或关键字 span 与`<custom-ident>`或`<integer>`或两者一起使用。
 
-<p>每个<code>&lt;grid-line&gt;</code>值可以指定为：</p>
+### 值
 
-<ul>
- <li>要么是<code>auto</code>关键字</li>
- <li>或<code>&lt;custom-ident&gt;</code>值</li>
- <li>或<code>&lt;integer&gt;</code>值</li>
- <li>或者<code>&lt;custom-ident&gt;</code>和<code>&lt;integer&gt;</code>，两者之间用空格分隔</li>
- <li>或关键字 span 与<code>&lt;custom-ident&gt;</code>或<code>&lt;integer&gt;</code>或两者一起使用。</li>
-</ul>
+`auto`
 
-<h3 id="值">值</h3>
+是一个关键字，指示该属性对网格项目的放置没有任何作用，表示自动放置，自动跨度或默认跨度为 1。
 
-<p><br>
- <code>auto</code></p>
+`<custom-ident>`
 
-<p><br>
- 是一个关键字，指示该属性对网格项目的放置没有任何作用，表示自动放置，自动跨度或默认跨度为 1。</p>
+如果有一个名为"\<custom-ident>-start"/"\<custom-ident>-start"的命名行，则它将第一行添加到网格项目的位置。
 
-<p><br>
- <code>&lt;custom-ident&gt;</code></p>
+> **警告：** 命名网格区域会自动生成这种形式的隐式命名行，因此请指定`grid-column: foo;`将选择该命名网格区域的开始/结束边缘（除非在其之前明确指定了另一条名为`foo-start / foo-end`的行）。
 
-<p><br>
- 如果有一个名为"&lt;custom-ident&gt;-start"/"&lt;custom-ident&gt;-start"的命名行，则它将第一行添加到网格项目的位置。</p>
+否则，将其视为与`<custom-ident>`一起指定了整数 1。
 
-<div class="blockIndicator warning">
-<p>注意：命名网格区域会自动生成这种形式的隐式命名行，因此请指定<code>grid-column: foo;</code>将选择该命名网格区域的开始/结束边缘（除非在其之前明确指定了另一条名为<code>foo-start / foo-end</code>的行）。</p>
-</div>
+`<integer> && <custom-ident>?`
 
-<p>否则，将其视为与<code>&lt;custom-ident&gt;</code>一起指定了整数 1。</p>
+将第 n 条网格线贡献到网格项目的位置。如果给定一个负整数，则从显式网格的末端开始，反向计数。
 
-<p><br>
- <code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></p>
+如果将名称指定为\<custom-ident>，则仅计算具有该名称的行。如果没有足够多的具有该名称的线，则假定所有隐式网格线都具有该名称，以查找该位置。
 
-<p><br>
- 将第 n 条网格线贡献到网格项目的位置。如果给定一个负整数，则从显式网格的末端开始，反向计数。</p>
+{{cssxref("integer")}}的值为`0`无效。
 
-<p>如果将名称指定为&lt;custom-ident&gt;，则仅计算具有该名称的行。如果没有足够多的具有该名称的线，则假定所有隐式网格线都具有该名称，以查找该位置。</p>
+`span && [ <integer> || <custom-ident> ]`
+将网格范围扩展到该网格项目的位置，以使该网格项目的网格区域的相应边缘距离相对边缘 n 行。
+如果将名称指定为\<custom-ident>，则仅计算具有该名称的行。如果没有足够多的具有该名称的线，则为计算此跨度，假定与搜索方向相对应的显式网格侧的所有隐式网格线均具有该名称。
 
-<p>{{cssxref("integer")}}的值为<code>0</code>无效。</p>
+如果省略\<integer>，则默认为`1`。负整数或 0 无效。
 
-<p><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code><br>
- 将网格范围扩展到该网格项目的位置，以使该网格项目的网格区域的相应边缘距离相对边缘 n 行。<br>
- 如果将名称指定为&lt;custom-ident&gt;，则仅计算具有该名称的行。如果没有足够多的具有该名称的线，则为计算此跨度，假定与搜索方向相对应的显式网格侧的所有隐式网格线均具有该名称。</p>
-
-<p>如果省略&lt;integer&gt;，则默认为<code>1</code>。负整数或 0 无效。</p>
-
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html notranslate">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+</div>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css; highlight[14,19] notranslate">#grid {
+```css
+#grid {
   display: grid;
   height: 100px;
   grid-template-columns: repeat(6, 1fr);
@@ -95,86 +86,74 @@ translation_of: Web/CSS/grid-column
   background-color: blue;
   grid-column: span 2 / 7;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Example", "100%", "100px")}}</p>
+{{EmbedLiveSample("Example", "100%", "100px")}}
 
-<h2 id="IE问题">IE 问题</h2>
+## IE 问题
 
-<p>IE11 不支持自动放置网格项目。除非用-ms-{{cssxref("grid-column")}}和-ms-{{cssxref("grid-row")}}显式注释，否则所有项目都以网格的第一行/列结尾。可以使用一些 JavaScript 来启用自动注释：源存储库。</p>
+IE11 不支持自动放置网格项目。除非用-ms-{{cssxref("grid-column")}}和-ms-{{cssxref("grid-row")}}显式注释，否则所有项目都以网格的第一行/列结尾。可以使用一些 JavaScript 来启用自动注释：源存储库。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.grid-column")}}
 
+## 参见
 
-<p>{{Compat("css.properties.grid-column")}}</p>
+- Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
 
-<h2 id="参见">参见</h2>
+1.  [**CSS**](/zh-CN/docs/Web/CSS)
+2.  [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
+3.  [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+4.  **Guides**
 
-<ul>
- <li>Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Video tutorial: <em><a href="http://gridbyexample.com/video/series-line-based-placement/">Line-based placement</a></em></li>
-</ul>
+    1.  [Basics concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2.  [Relationship to other layout methods](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3.  [Line-based placement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4.  [Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5.  [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6.  [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7.  [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8.  [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9.  [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    10. [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+    11. [Realizing common layouts using grids](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>Glossary</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+5.  **Properties**
+
+    1.  [grid](/zh-CN/docs/Web/CSS/grid)
+    2.  [grid-area](/zh-CN/docs/Web/CSS/grid-area)
+    3.  [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
+    4.  [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
+    5.  [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
+    6.  [grid-column](/zh-CN/docs/Web/CSS/grid-column)
+    7.  [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
+    8.  [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
+    9.  [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
+    10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
+    11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
+    12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
+    13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
+    14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
+    15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
+    16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
+    17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
+    18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
+
+6.  **Glossary**
+
+    1.  [Grid lines](/zh-CN/docs/Glossary/Grid_lines)
+    2.  [Grid tracks](/zh-CN/docs/Glossary/Grid_tracks)
+    3.  [Grid cell](/zh-CN/docs/Glossary/Grid_cell)
+    4.  [Grid areas](/zh-CN/docs/Glossary/Grid_areas)
+    5.  [Gutters](/zh-CN/docs/Glossary/Gutters)
+    6.  [Grid row](/zh-CN/docs/Glossary/Grid_rows)
+    7.  [Grid column](/zh-CN/docs/Glossary/Grid_column)

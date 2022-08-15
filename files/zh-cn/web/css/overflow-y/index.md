@@ -5,21 +5,22 @@ tags:
   - 元素单一方向溢出
 translation_of: Web/CSS/overflow-y
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p>当一个块级元素（div 元素、p 元素之类的）的内容在垂直方向发生溢出时，</p>
+当一个块级元素（div 元素、p 元素之类的）的内容在垂直方向发生溢出时，
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a>属性<code>overflow-y </code>决定如何处理溢出的内容。</p>
+[CSS](/zh-CN/docs/Web/CSS)属性`overflow-y `决定如何处理溢出的内容。
 
-<p>隐藏溢出内容（hidden），或者显示滚动条（scroll），或者直接显示溢出内容（visible），或者让浏览器来处理（auto）。</p>
+隐藏溢出内容（hidden），或者显示滚动条（scroll），或者直接显示溢出内容（visible），或者让浏览器来处理（auto）。
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax[语法]</h2>
+## Syntax\[语法]
 
-<pre>/* 在当前 css 选择器元素下，元素内容在垂直方向上溢出时 */
+```
+/* 在当前 css 选择器元素下，元素内容在垂直方向上溢出时 */
 
 /* overflow-y 属性 可选值 */
 
@@ -34,71 +35,64 @@ overflow-y: auto; /*浏览器决定*/
 overflow-y: inherit; /*继承*/
 overflow-y: initial; /*默认值*/
 overflow-y: unset; /*未设置*/
-</pre>
+```
 
-<p>当 {{cssxref("overflow-x")}} 值为 <code>hidden</code>、<code>scroll</code> 或者 <code>auto</code>，而本属性的值为 <code>visible</code>（默认值）时，本属性会被隐式的计算为 <code>auto</code>。</p>
+当 {{cssxref("overflow-x")}} 值为 `hidden`、`scroll` 或者 `auto`，而本属性的值为 `visible`（默认值）时，本属性会被隐式的计算为 `auto`。
 
-<h3 id="Values">Values[可选值]</h3>
+### Values\[可选值]
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>内容不会被截断，且可以显示在内容盒之外。</dd>
- <dt><code>hidden</code></dt>
- <dd>内容会被截断，且不会显示滚动条。</dd>
-</dl>
+- `visible`
+  - : 内容不会被截断，且可以显示在内容盒之外。
+- `hidden`
+  - : 内容会被截断，且不会显示滚动条。
+- `clip` {{experimental_inline}}
+  - : 像 `hidden` 一样，内容被剪切到元素的填充框中。 `clip` 和 `hidden` 的区别是 `clip` 还禁止所有滚动，包括程序性滚动（programmatic scrolling）。包含框不再是滚动容器，并且不会启动新的格式设置上下文。如果要启动新的格式设置上下文，可以使用 {{cssxref("display", "display: flow-root", "#flow-root")}} 。
+- `scroll`
+  - : 桌面浏览器总是显示滚动条，无论内容是否发生溢出。这可以避免滚动条的显示与消失所导致的元素尺寸不确定的问题。而打印机可能会打印溢出的内容。
+- `auto`
+  - : 取决于浏览器本身。当内容发生溢出时，桌面浏览器如 Firefox 会显示滚动条。
 
-<dl>
- <dt><code>clip</code> {{experimental_inline}}</dt>
- <dd>像 <code>hidden</code> 一样，内容被剪切到元素的填充框中。 <code>clip</code> 和 <code>hidden</code> 的区别是 <code>clip</code> 还禁止所有滚动，包括程序性滚动（programmatic scrolling）。包含框不再是滚动容器，并且不会启动新的格式设置上下文。如果要启动新的格式设置上下文，可以使用 {{cssxref("display", "display: flow-root", "#flow-root")}} 。</dd>
-</dl>
-
-<dl>
- <dt><code>scroll</code></dt>
- <dd>桌面浏览器总是显示滚动条，无论内容是否发生溢出。这可以避免滚动条的显示与消失所导致的元素尺寸不确定的问题。而打印机可能会打印溢出的内容。</dd>
- <dt><code>auto</code></dt>
- <dd>取决于浏览器本身。当内容发生溢出时，桌面浏览器如 Firefox 会显示滚动条。</dd>
-</dl>
-
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax("overflow-y")}}
 
-<h2 id="Example">Example[示例]</h2>
+## Example\[示例]
 
-<h3 id="Exampe_HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;overflow-y:scroll&lt;/code&gt; — 总是显示滚动条
-  &lt;div id="div1"&gt;
+```html
+<ul>
+  <li><code>overflow-y:scroll</code> — 总是显示滚动条
+  <div id="div1">
    歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
-  &lt;/div&gt;
-  &lt;/li&gt;
+  </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:hidden&lt;/code&gt; — 在盒子外隐藏溢出的内容
-  &lt;div id="div2"&gt;
+  <li><code>overflow-y:hidden</code> — 在盒子外隐藏溢出的内容
+  <div id="div2">
   歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
-  &lt;/div&gt;
-  &lt;/li&gt;
+  </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:visible&lt;/code&gt; — 在盒子外显示溢出的内容
-  &lt;div id="div3"&gt;
+  <li><code>overflow-y:visible</code> — 在盒子外显示溢出的内容
+  <div id="div3">
     歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:auto&lt;/code&gt; — 在大多数浏览器中，&lt;code&gt;auto&lt;/code&gt; 效果等于 &lt;code&gt;scroll&lt;/code&gt;
-  &lt;div id="div4"&gt;
+  <li><code>overflow-y:auto</code> — 在大多数浏览器中，<code>auto</code> 效果等于 <code>scroll</code>
+  <div id="div4">
     歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-&lt;/ul&gt;
+</ul>
+```
 
-</pre>
+### CSS
 
-<h3 id="Example_CSS">CSS</h3>
-
-<pre class="brush: css">#div1,
+```css
+#div1,
 #div2,
 #div3,
 #div4 {
@@ -115,23 +109,20 @@ overflow-y: unset; /*未设置*/
 #div3 { overflow-y: visible; margin-bottom: 150px;  }
 
 #div4 { overflow-y: auto; margin-bottom: 12px;  }
+```
 
-</pre>
+### 结果
 
-<h3 id="Example_Result">结果</h3>
+{{EmbedLiveSample("Example", "100%", "760")}}
 
-<figure>{{EmbedLiveSample("Example", "100%", "760")}}</figure>
-
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li>相关 CSS 属性：{{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>
-</ul>
+- 相关 CSS 属性：{{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}

@@ -7,23 +7,24 @@ tags:
   - 实验性
 translation_of: Web/CSS/background-position-y
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><strong><code>background-position-y</code></strong> 属性用于设置初始状态时背景图片在垂直方向上的位置，这个位置相对于通过 {{cssxref("background-origin")}} 定义的背景层的原点进行定位。需要获得更多的信息可以查看{{cssxref("background-position")}} 属性，这个属性已经得到了长久且广泛的支持。</p>
+**`background-position-y`** 属性用于设置初始状态时背景图片在垂直方向上的位置，这个位置相对于通过 {{cssxref("background-origin")}} 定义的背景层的原点进行定位。需要获得更多的信息可以查看{{cssxref("background-position")}} 属性，这个属性已经得到了长久且广泛的支持。
 
-<div class="note"><strong>注意：</strong> <code>background-position-y</code> 设定的值会被 {{cssxref("background")}} 或者是 {{cssxref("background-position")}} 的简写属性的<code>background-position-x</code>后面的值所覆盖。</div>
+> **备注：** `background-position-y` 设定的值会被 {{cssxref("background")}} 或者是 {{cssxref("background-position")}} 的简写属性的`background-position-x`后面的值所覆盖。
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 background-position-y: top;
 background-position-y: center;
 background-position-y: bottom;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 background-position-y: 25%;
 
-/* &lt;length&gt; values */
+/* <length> values */
 background-position-y: 0px;
 background-position-y: 1cm;
 background-position-y: 8em;
@@ -39,45 +40,41 @@ background-position-y: 0px, center;
 background-position-y: inherit;
 background-position-y: initial;
 background-position-y: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<h3 id="合法值">合法值</h3>
+### 合法值
 
-<dl>
- <dt><code>top</code></dt>
- <dd>将背景图片的上边界与背景位置层的上边界对齐。</dd>
- <dt><code>center</code></dt>
- <dd>将背景图片垂直方向上的中线与背景位置层的垂直方向中线对齐。</dd>
- <dt><code>bottom</code></dt>
- <dd>将背景图片的下边界与背景位置层的下边界对齐。</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd> 通过{{cssxref("&lt;length&gt;")}} 直接设定具体的数值，该数值定义了背景图片垂直方向的上边界相对于当前背景层 (content-box/padding-box/border-box) 的垂直方向上边界的偏移量，默认情况下是 padding-box.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>通过{{cssxref("&lt;percentage&gt;")}} 百分比的设置，该百分比定义了背景图片垂直方向的上边界相对于当前背景层 (content-box/padding-box/border-box) 的垂直方向上边界的偏移百分比，从而得到偏移量，该偏移量的计算方法是:(当前背景层的高 - 背景图片的高) * 百分比，高度差和百分比都保留符号，例如 (100px - 200px) * (-10%) = 10px 那么偏移量就是正的 10px(向下为正方向),默认情况下是 padding-box.</dd>
-</dl>
+- `top`
+  - : 将背景图片的上边界与背景位置层的上边界对齐。
+- `center`
+  - : 将背景图片垂直方向上的中线与背景位置层的垂直方向中线对齐。
+- `bottom`
+  - : 将背景图片的下边界与背景位置层的下边界对齐。
+- `<length>`
+  - : 通过{{cssxref("&lt;length&gt;")}} 直接设定具体的数值，该数值定义了背景图片垂直方向的上边界相对于当前背景层 (content-box/padding-box/border-box) 的垂直方向上边界的偏移量，默认情况下是 padding-box.
+- `<percentage>`
+  - : 通过{{cssxref("&lt;percentage&gt;")}} 百分比的设置，该百分比定义了背景图片垂直方向的上边界相对于当前背景层 (content-box/padding-box/border-box) 的垂直方向上边界的偏移百分比，从而得到偏移量，该偏移量的计算方法是:(当前背景层的高 - 背景图片的高) \* 百分比，高度差和百分比都保留符号，例如 (100px - 200px) \* (-10%) = 10px 那么偏移量就是正的 10px(向下为正方向),默认情况下是 padding-box.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.background-position-y")}}</p>
+{{Compat("css.properties.background-position-y")}}
 
-<h2 id="See_also">另见</h2>
+## 另见
 
-<ul>
- <li>{{cssxref("background-position")}}</li>
- <li>{{cssxref("background-position-x")}}</li>
- <li>{{cssxref("background-position-inline")}}</li>
- <li>{{cssxref("background-position-block")}}</li>
- <li><a href="/en-US/docs/CSS/Multiple_backgrounds">Multiple backgrounds</a></li>
-</ul>
+- {{cssxref("background-position")}}
+- {{cssxref("background-position-x")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
+- [Multiple backgrounds](/zh-CN/docs/CSS/Multiple_backgrounds)

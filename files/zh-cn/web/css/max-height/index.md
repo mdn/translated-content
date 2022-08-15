@@ -3,20 +3,21 @@ title: max-height
 slug: Web/CSS/max-height
 translation_of: Web/CSS/max-height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>属性 <strong><code>max-height</code></strong> 设置元素的最大高度。它防止{{cssxref("height")}}属性的使用值（<a href="/en-US/docs/Web/CSS/used_value">used value</a>） 大于 <code>max-height</code> 的指定值。</p>
+[CSS](/zh-CN/docs/Web/CSS)属性 **`max-height`** 设置元素的最大高度。它防止{{cssxref("height")}}属性的使用值（[used value](/zh-CN/docs/Web/CSS/used_value)） 大于 `max-height` 的指定值。
 
-<div>{{EmbedInteractiveExample("pages/css/max-height.html")}}</div>
+{{EmbedInteractiveExample("pages/css/max-height.html")}}
 
-<p><code>max-height</code> 会覆盖{{cssxref("height")}}, 而{{cssxref("min-height")}} 会覆盖 <code>max-height</code>.</p>
+`max-height` 会覆盖{{cssxref("height")}}, 而{{cssxref("min-height")}} 会覆盖 `max-height`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;length&gt; value */
+```css
+/* <length> value */
 max-height: 3.5em;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 max-height: 75%;
 
 /* Keyword values */
@@ -29,60 +30,55 @@ max-height: fit-content(20em);
 max-height: inherit;
 max-height: initial;
 max-height: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Defines the <code>max-height</code> as an absolute value.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Defines the <code>max-height</code> as a percentage of the containing block's height.</dd>
- <dt><code>auto</code></dt>
- <dd>The browser will calculate and select a <code>max-height</code> for the specified element.</dd>
- <dt><code>none</code></dt>
- <dd>No limit on the size of the box.</dd>
- <dt><code>max-content</code></dt>
- <dd>The intrinsic preferred <code>max-height</code>.</dd>
- <dt><code>min-content</code></dt>
- <dd>The intrinsic minimum <code>max-height</code>.</dd>
- <dt><code>fit-content({{cssxref("&lt;length-percentage&gt;")}})</code></dt>
- <dd>Uses the <code>fit-content</code> formula with the available space replaced by the specified argument, i.e. <code>min(max-content, max(min-content, <var>argument</var>))</code>.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Defines the `max-height` as an absolute value.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Defines the `max-height` as a percentage of the containing block's height.
+- `auto`
+  - : The browser will calculate and select a `max-height` for the specified element.
+- `none`
+  - : No limit on the size of the box.
+- `max-content`
+  - : The intrinsic preferred `max-height`.
+- `min-content`
+  - : The intrinsic minimum `max-height`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: css notranslate">table { max-height: 75%; }
+```css
+table { max-height: 75%; }
 
 form { max-height: none; }
-</pre>
+```
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Ensure that elements set with a <code>max-height</code> are not truncated and/or do not obscure other content when the page is zoomed to increase text size.</p>
+Ensure that elements set with a `max-height` are not truncated and/or do not obscure other content when the page is zoomed to increase text size.
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("css.properties.max-height")}}</p>
+{{Compat("css.properties.max-height")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">The box model</a>, {{cssxref("box-sizing")}}</li>
- <li>{{Cssxref("height")}}, {{Cssxref("min-height")}}</li>
-</ul>
+- [The box model](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- {{Cssxref("height")}}, {{Cssxref("min-height")}}

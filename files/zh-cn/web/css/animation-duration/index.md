@@ -9,55 +9,51 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-duration
 ---
-<div>{{ CSSRef() }}{{ SeeCompatTable() }}</div>
+{{ CSSRef() }}{{ SeeCompatTable() }}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><code>animation-duration</code>属性指定一个动画周期的时长。</p>
+`animation-duration`属性指定一个动画周期的时长。
 
-<p>默认值为 0s，表示无动画。</p>
+默认值为 0s，表示无动画。
 
-<p>使用简写属性{{cssxref("animation")}}很方便地同时设置所有的动画属性。</p>
+使用简写属性{{cssxref("animation")}}很方便地同时设置所有的动画属性。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="twopartsyntaxbox notranslate"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("animation-duration")}}
-</pre>
+```
+Formal syntax: {{csssyntax("animation-duration")}}
+```
 
-<pre class="notranslate">animation-duration: 6s
+```
+animation-duration: 6s
 animation-duration: 120ms
 animation-duration: 1s, 15s
 animation-duration: 10s, 30s, 230ms
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>一个动画周期的时长，单位为秒 (s) 或者毫秒 (ms)，无单位值无效。</dd>
-</dl>
+- `<time>`
+  - : 一个动画周期的时长，单位为秒 (s) 或者毫秒 (ms)，无单位值无效。
 
-<div class="note">
- <p><strong>备注：</strong>负值无效，浏览器会忽略该声明，但是一些早期的带前缀的声明会将负值当作 0s。</p>
-</div>
+> **备注：**负值无效，浏览器会忽略该声明，但是一些早期的带前缀的声明会将负值当作 0s。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>See <a href="/en/CSS/CSS_animations">CSS animations</a> for examples.</p>
+See [CSS animations](/en/CSS/CSS_animations) for examples.
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("css.properties.animation-duration")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations">Using CSS animations</a></li>
- <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
-</ul>
+- [Using CSS animations](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- {{ domxref("AnimationEvent", "AnimationEvent") }}

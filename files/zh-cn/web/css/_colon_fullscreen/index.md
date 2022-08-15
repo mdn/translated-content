@@ -1,41 +1,40 @@
 ---
 title: ':fullscreen'
-slug: 'Web/CSS/:fullscreen'
+slug: Web/CSS/:fullscreen
 tags:
   - CSS
   - CSS Pseudo-class
   - Experimental
   - Full-screen
   - Reference
-translation_of: 'Web/CSS/:fullscreen'
+translation_of: Web/CSS/:fullscreen
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="总结">总结</h2>
+## 总结
 
-<p><code>css 伪类 :fullscreen 应用于当前处于全屏显示模式的元素。</code> 它不仅仅选择顶级元素，还包括所有已显示的栈内元素。</p>
+`css 伪类 :fullscreen 应用于当前处于全屏显示模式的元素。` 它不仅仅选择顶级元素，还包括所有已显示的栈内元素。
 
-<div class="note">W3C 标准使用不带破折号的单词:fullscreen，但 Webkit 和 Gecko 应用接口各自使用前缀带有破折号的变量：<code>:-webkit-full-screen</code> 和<code>:-moz-full-screen。</code>微软的 Edge 和 Internet Explorer 各自使用标准语法：<code>:fullscreen</code>和<code>:-ms-fullscreen。</code></div>
+> **备注：** W3C 标准使用不带破折号的单词:fullscreen，但 Webkit 和 Gecko 应用接口各自使用前缀带有破折号的变量：`:-webkit-full-screen` 和`:-moz-full-screen。`微软的 Edge 和 Internet Explorer 各自使用标准语法：`:fullscreen`和`:-ms-fullscreen。`
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="fullscreen"&gt;
-  &lt;h1&gt;:fullscreen Demo&lt;/h1&gt;
-  &lt;p&gt; This will become a big red text when on fullscreen.&lt;/p&gt;
-  &lt;button id="fullscreen-button"&gt;Enter Fullscreen&lt;/button&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="fullscreen">
+  <h1>:fullscreen Demo</h1>
+  <p> This will become a big red text when on fullscreen.</p>
+  <button id="fullscreen-button">Enter Fullscreen</button>
+</div>
+```
 
-<div class="hidden">
-<h3 id="Javascript">Javascript</h3>
-
-<pre class="brush: js">var fullscreenButton = document.getElementById("fullscreen-button");
+```js hidden
+var fullscreenButton = document.getElementById("fullscreen-button");
 var fullscreenDiv    = document.getElementById("fullscreen");
 var fullscreenFunc   = fullscreenDiv.requestFullscreen;
 if (!fullscreenFunc) {
@@ -49,11 +48,10 @@ function enterFullscreen() {
   fullscreenFunc.call(fullscreenDiv);
 }
 fullscreenButton.addEventListener('click', enterFullscreen);
-</pre>
+```
 
-<h3 id="Browser-Specific_CSS">Browser-Specific CSS</h3>
-
-<pre class="brush: css">#fullscreen:-moz-full-screen {
+```css hidden
+#fullscreen:-moz-full-screen {
   padding: 42px;
   background-color: pink;
   border:2px solid #f00;
@@ -72,83 +70,81 @@ fullscreenButton.addEventListener('click', enterFullscreen);
   font-size: 200%;
 }
 
-#fullscreen:-moz-full-screen &gt; h1 {
+#fullscreen:-moz-full-screen > h1 {
   color: red;
 }
-#fullscreen:-ms-fullscreen &gt; h1 {
+#fullscreen:-ms-fullscreen > h1 {
   color: red;
 }
-#fullscreen:-webkit-full-screen &gt; h1 {
+#fullscreen:-webkit-full-screen > h1 {
   color: red;
 }
 
-#fullscreen:-moz-full-screen &gt; p {
+#fullscreen:-moz-full-screen > p {
   color: DarkRed;
 }
-#fullscreen:-ms-fullscreen &gt; p {
+#fullscreen:-ms-fullscreen > p {
   color: DarkRed;
 }
-#fullscreen:-webkit-full-screen &gt; p {
+#fullscreen:-webkit-full-screen > p {
   color: DarkRed;
 }
 
-#fullscreen:-moz-full-screen &gt; button {
+#fullscreen:-moz-full-screen > button {
   display: none;
 }
-#fullscreen:-ms-fullscreen &gt; button {
+#fullscreen:-ms-fullscreen > button {
   display: none;
 }
-#fullscreen:-webkit-full-screen &gt; button {
+#fullscreen:-webkit-full-screen > button {
   display: none;
 }
-</pre>
-</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#fullscreen:fullscreen {
+```css
+#fullscreen:fullscreen {
   padding: 42px;
   background-color: pink;
   border:2px solid #f00;
   font-size: 200%;
 }
 
-#fullscreen:fullscreen &gt; h1 {
+#fullscreen:fullscreen > h1 {
   color: red;
 }
 
-#fullscreen:fullscreen &gt; p {
+#fullscreen:fullscreen > p {
   color: DarkRed;
 }
 
-#fullscreen:fullscreen &gt; button {
+#fullscreen:fullscreen > button {
   display: none;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ LiveSampleLink('Example', "(If the 'Enter Fullscreen' button doesn't work, try here)") }}</p>
+{{ LiveSampleLink('Example', "(If the 'Enter Fullscreen' button doesn't work, try here)") }}
 
-<p>{{ EmbedLiveSample('Example','80%','200px') }}</p>
+{{ EmbedLiveSample('Example','80%','200px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.fullscreen")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref("::backdrop")}}</li>
- <li><a href="/zh-CN/docs/Web/API/Fullscreen_API">Using full-screen mode</a></li>
- <li>{{ domxref("Element.requestFullscreen()") }}</li>
- <li>{{ domxref("Document.exitFullscreen()") }}</li>
- <li>{{ domxref("Document.fullscreen") }}</li>
- <li>{{ domxref("Document.fullscreenElement") }}</li>
- <li>{{HTMLAttrXRef("allowfullscreen", "iframe")}}</li>
- <li>{{cssxref(":-moz-full-screen-ancestor")}}</li>
-</ul>
+- {{cssxref("::backdrop")}}
+- [Using full-screen mode](/zh-CN/docs/Web/API/Fullscreen_API)
+- {{ domxref("Element.requestFullscreen()") }}
+- {{ domxref("Document.exitFullscreen()") }}
+- {{ domxref("Document.fullscreen") }}
+- {{ domxref("Document.fullscreenElement") }}
+- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- {{cssxref(":-moz-full-screen-ancestor")}}

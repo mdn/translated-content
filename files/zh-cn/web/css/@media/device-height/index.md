@@ -3,24 +3,26 @@ title: device-height
 slug: Web/CSS/@media/device-height
 translation_of: Web/CSS/@media/device-height
 ---
-<div>{{cssref}} {{deprecated_header}}</div>
+{{cssref}} {{deprecated_header}}
 
-<p> <strong><code>device-height</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">media feature</a> 可以用来测试设备的渲染高度。注意，该条媒体查询将会在 媒体查询 level4（目前处于候选草案）中废弃</p>
+**`device-height`** [CSS](/zh-CN/docs/CSS) [media feature](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 可以用来测试设备的渲染高度。注意，该条媒体查询将会在 媒体查询 level4（目前处于候选草案）中废弃
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>device-height</code> feature is specified as a {{cssxref("&lt;length&gt;")}} value. It is a range feature, meaning that you can also use the prefixed <strong><code>min-device-height</code></strong> and <code><strong>max-device-height</strong></code> variants to query minimum and maximum values, respectively.</p>
+`device-height` feature is specified as a {{cssxref("&lt;length&gt;")}} value. It is a range feature, meaning that you can also use the prefixed **`min-device-height`** and **`max-device-height`** variants to query minimum and maximum values, respectively.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在高度低于 800px 时加载指定样式</p>
+在高度低于 800px 时加载指定样式
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://foo.bar.com/short-styles.css" /&gt;</pre>
+```html
+<link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://foo.bar.com/short-styles.css" />
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

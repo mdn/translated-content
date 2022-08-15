@@ -4,70 +4,122 @@ slug: Web/CSS/transform-function/matrix
 translation_of: Web/CSS/transform-function/matrix()
 original_slug: Web/CSS/transform-function/matrix()
 ---
-<p>CSS 函数 <code>matrix()</code> 指定了一个由指定的 6 个值组成的 2D 变换矩阵。这种矩阵的常量值是隐含的，而不是由参数传递的；其他的参数是以列优先的顺序描述的。</p>
+CSS 函数 `matrix()` 指定了一个由指定的 6 个值组成的 2D 变换矩阵。这种矩阵的常量值是隐含的，而不是由参数传递的；其他的参数是以列优先的顺序描述的。
 
-<p><code>matrix(a, b, c, d, tx, ty)</code> 是 <code>matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)</code> 的简写。</p>
+`matrix(a, b, c, d, tx, ty)` 是 `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` 的简写。
 
-<div class="note"><strong>注意：</strong> 直到 Firefox 16, Gecko 才接受对于 <strong>tx</strong> 和<strong> ty </strong>的 {{cssxref("&lt;length&gt;")}} 值。</div>
+> **备注：** 直到 Firefox 16, Gecko 才接受对于 **tx** 和 **ty** 的 {{cssxref("&lt;length&gt;")}} 值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">matrix(<em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, <em>tx</em>, <em>ty</em>)
-</pre>
+```
+matrix(a, b, c, d, tx, ty)
+```
 
-<h2 id="参数值">参数值</h2>
+## 参数值
 
-<dl>
- <dt><em>a</em> <em>b</em> <em>c</em> <em>d</em></dt>
- <dd>描述线性变换的 {{cssxref("&lt;number&gt;")}} 。</dd>
- <dt><em>tx</em> <em>ty</em></dt>
- <dd>描述如何应用这个变换的 {{cssxref("&lt;number&gt;")}} 。</dd>
-</dl>
+- _a_ _b_ _c_ _d_
+  - : 描述线性变换的 {{cssxref("&lt;number&gt;")}} 。
+- _tx_ _ty_
+  - : 描述如何应用这个变换的 {{cssxref("&lt;number&gt;")}} 。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">ℝ<sup>2 </sup>下的<a href="https://zh.wikipedia.org/wiki/%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9D%90%E6%A0%87%E7%B3%BB">笛卡尔坐标</a></th>
-   <th scope="col">ℝℙ<sup>2  </sup>下<a href="https://zh.wikipedia.org/wiki/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87">齐次坐标</a></th>
-   <th scope="col">ℝ<sup>3</sup>下的<a href="https://zh.wikipedia.org/wiki/%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9D%90%E6%A0%87%E7%B3%BB">笛卡尔坐标</a></th>
-   <th scope="col">ℝℙ<sup>3</sup>下的<a href="https://zh.wikipedia.org/wiki/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87">齐次坐标</a></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>a</mtd><mtd>c</mtd></mtr> <mtr><mtd>b</mtd><mtd>d</mtd></mtr> </mtable> </mfenced> </math></td>
-   <td>
-    <p><math> <mfenced> <mtable> <mtr><mtd></mtd></mtr></mtable></mfenced></math><br>
-     a  c  tx<br>
-     b  d  ty<br>
-     0  0  1</p>
-   </td>
-   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd></mtd></mtr>a  c  tx</mtable></mfenced></math><br>
-    b  d  ty<br>
-    0  0  1<mtr><mtd></mtd></mtr>  </td>
-   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>a</mtd><mtd>c</mtd><mtd>0</mtd><mtd>tx</mtd></mtr><mtr><mtd>b</mtd><mtd>d</mtd><mtd>0</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[a b c d tx ty]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">
+        ℝ<sup>2 </sup>下的<a
+          href="https://zh.wikipedia.org/wiki/%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9D%90%E6%A0%87%E7%B3%BB"
+          >笛卡尔坐标</a
+        >
+      </th>
+      <th scope="col">
+        ℝℙ<sup>2 </sup>下<a
+          href="https://zh.wikipedia.org/wiki/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87"
+          >齐次坐标</a
+        >
+      </th>
+      <th scope="col">
+        ℝ<sup>3</sup>下的<a
+          href="https://zh.wikipedia.org/wiki/%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9D%90%E6%A0%87%E7%B3%BB"
+          >笛卡尔坐标</a
+        >
+      </th>
+      <th scope="col">
+        ℝℙ<sup>3</sup>下的<a
+          href="https://zh.wikipedia.org/wiki/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87"
+          >齐次坐标</a
+        >
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>a</mtd><mtd>c</mtd></mtr>
+              <mtr><mtd>b</mtd><mtd>d</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <p>
+          <math
+            ><mfenced
+              ><mtable
+                ><mtr><mtd></mtd></mtr></mtable></mfenced></math
+          ><br />a c tx<br />b d ty<br />0 0 1
+        </p>
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd></mtd></mtr>a c tx</mtable
+            ></mfenced
+          ></math
+        ><br />b d ty<br />0 0 1<mtr><mtd></mtd></mtr>
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>a</mtd><mtd>c</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
+              ><mtr><mtd>b</mtd><mtd>d</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[a b c d tx ty]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>这些值表示以下函数：</p>
+这些值表示以下函数：
 
-<p>matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )</p>
+matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="notranslate">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="changed"&gt;Changed&lt;/div&gt;
-</pre>
+```
+<div>Normal</div>
+<div class="changed">Changed</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="notranslate">div {
+```
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -77,13 +129,12 @@ original_slug: Web/CSS/transform-function/matrix()
   transform: matrix(1, 2, -1, 1, 80, 80);
   background-color: pink;
 }
+```
 
-</pre>
+### 结果
 
-<h3 id="结果">结果</h3>
+请看英文版案例 [/zh-CN/docs/Web/CSS/transform-function/matrix#Result](/zh-CN/docs/Web/CSS/transform-function/matrix#Result)
 
-<p>请看英文版案例 <a href="/zh-CN/docs/Web/CSS/transform-function/matrix#Result">/zh-CN/docs/Web/CSS/transform-function/matrix#Result</a></p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

@@ -3,20 +3,21 @@ title: min-height
 slug: Web/CSS/min-height
 translation_of: Web/CSS/min-height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 属性 <code><strong>min-height</strong></code> 能够设置元素的最小高度。这样能够防止 <code>{{cssxref("height")}}</code> 属性的<a href="/zh-CN/docs/Web/CSS/used_value">应用值</a>小于 <code>min-height</code> 的值。</p>
+CSS 属性 **`min-height`** 能够设置元素的最小高度。这样能够防止 `{{cssxref("height")}}` 属性的[应用值](/zh-CN/docs/Web/CSS/used_value)小于 `min-height` 的值。
 
-<div>{{EmbedInteractiveExample("pages/css/min-height.html")}}</div>
+{{EmbedInteractiveExample("pages/css/min-height.html")}}
 
-<p>当 <code>min-height</code> 大于 {{cssxref("max-height")}} 或 {{cssxref("height")}} 时，元素的高度会设置为 <code>min-height</code> 的值。</p>
+当 `min-height` 大于 {{cssxref("max-height")}} 或 {{cssxref("height")}} 时，元素的高度会设置为 `min-height` 的值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush:css no-line-numbers notranslate">/* &lt;长度&gt; 数值 */
+```css
+/* <长度> 数值 */
 min-height: 3.5em;
 
-/* &lt;百分比&gt; 数值 */
+/* <百分比> 数值 */
 min-height: 10%;
 
 /* 关键词 */
@@ -28,57 +29,52 @@ min-height: fit-content(20em);
 min-height: inherit;
 min-height: initial;
 min-height: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>定义 <code>min-height</code> 为一个绝对数值。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>定义 <code>min-height</code> 为一个相对于父容器高度的百分数。</dd>
- <dt><code>auto</code></dt>
- <dd>浏览器将通过计算为指定元素选择一个 <code>min-height</code> 值。</dd>
- <dt><code>none</code></dt>
- <dd>不限制盒容器的尺寸。</dd>
- <dt><code>max-content</code></dt>
- <dd>The intrinsic preferred <code>min-height</code>.</dd>
- <dt><code>min-content</code></dt>
- <dd>The intrinsic minimum <code>min-height</code>.</dd>
- <dt><code>fit-content({{cssxref("&lt;length-percentage&gt;")}})</code></dt>
- <dd>Uses the <code>fit-content</code> formula with the available space replaced by the specified argument, i.e. <code>min(max-content, max(min-content, <var>argument</var>))</code>.</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 定义 `min-height` 为一个绝对数值。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 定义 `min-height` 为一个相对于父容器高度的百分数。
+- `auto`
+  - : 浏览器将通过计算为指定元素选择一个 `min-height` 值。
+- `none`
+  - : 不限制盒容器的尺寸。
+- `max-content`
+  - : The intrinsic preferred `min-height`.
+- `min-content`
+  - : The intrinsic minimum `min-height`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Setting_min-height">Setting min-height</h3>
+### Setting min-height
 
-<pre class="brush:css; notranslate">table { min-height: 75%; }
+```css
+table { min-height: 75%; }
 
 form { min-height: 0; }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.min-height")}}
 
+## 相关链接
 
-<p>{{Compat("css.properties.min-height")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">The box model</a>, {{cssxref("box-sizing")}}</li>
- <li>{{cssxref("height")}}, {{cssxref("max-height")}}</li>
-</ul>
+- [The box model](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- {{cssxref("height")}}, {{cssxref("max-height")}}

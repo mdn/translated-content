@@ -3,62 +3,54 @@ title: CSS Scroll Snap
 slug: Web/CSS/CSS_Scroll_Snap
 translation_of: Web/CSS/CSS_Scroll_Snap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS 滚动快照</strong>是 CSS 的模块，它引入滚动捕捉位置，它强制滚动位置，即 {{Glossary("滚动容器")}}的 {{Glossary("滚动端口")}} 在滚动操作完成后可能结束的滚动位置。</p>
+**CSS 滚动快照**是 CSS 的模块，它引入滚动捕捉位置，它强制滚动位置，即 {{Glossary("滚动容器")}}的 {{Glossary("滚动端口")}} 在滚动操作完成后可能结束的滚动位置。
 
-<div class="note">
-<p><strong>注意</strong>：此模块的早期版本称为滚动捕捉点，已被弃用。CSS 滚动快照是当前实现。</p>
-</div>
+> **备注：** 此模块的早期版本称为滚动捕捉点，已被弃用。CSS 滚动快照是当前实现。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="容器上的_CSS_属性">容器上的 CSS 属性</h3>
+### 容器上的 CSS 属性
 
-<ul>
- <li>{{cssxref("scroll-snap-type")}}</li>
- <li>{{cssxref("scroll-snap-stop")}}</li>
- <li>{{cssxref("scroll-padding")}}</li>
- <li>{{cssxref("scroll-padding-top")}}</li>
- <li>{{cssxref("scroll-padding-right")}}</li>
- <li>{{cssxref("scroll-padding-bottom")}}</li>
- <li>{{cssxref("scroll-padding-left")}}</li>
- <li>{{cssxref("scroll-padding-inline")}}</li>
- <li>{{cssxref("scroll-padding-inline-start")}}</li>
- <li>{{cssxref("scroll-padding-inline-end")}}</li>
- <li>{{cssxref("scroll-padding-block")}}</li>
- <li>{{cssxref("scroll-padding-block-start")}}</li>
- <li>{{cssxref("scroll-padding-block-end")}}</li>
-</ul>
+- {{cssxref("scroll-snap-type")}}
+- {{cssxref("scroll-snap-stop")}}
+- {{cssxref("scroll-padding")}}
+- {{cssxref("scroll-padding-top")}}
+- {{cssxref("scroll-padding-right")}}
+- {{cssxref("scroll-padding-bottom")}}
+- {{cssxref("scroll-padding-left")}}
+- {{cssxref("scroll-padding-inline")}}
+- {{cssxref("scroll-padding-inline-start")}}
+- {{cssxref("scroll-padding-inline-end")}}
+- {{cssxref("scroll-padding-block")}}
+- {{cssxref("scroll-padding-block-start")}}
+- {{cssxref("scroll-padding-block-end")}}
 
-<h3 id="子上的_CSS_属性">子上的 CSS 属性</h3>
+### 子上的 CSS 属性
 
-<ul>
- <li>{{cssxref("scroll-snap-align")}}</li>
- <li>{{cssxref("scroll-margin")}}</li>
- <li>{{cssxref("scroll-margin-top")}}</li>
- <li>{{cssxref("scroll-margin-right")}}</li>
- <li>{{cssxref("scroll-margin-bottom")}}</li>
- <li>{{cssxref("scroll-margin-left")}}</li>
- <li>{{cssxref("scroll-margin-inline")}}</li>
- <li>{{cssxref("scroll-margin-inline-start")}}</li>
- <li>{{cssxref("scroll-margin-inline-end")}}</li>
- <li>{{cssxref("scroll-margin-block")}}</li>
- <li>{{cssxref("scroll-margin-block-start")}}</li>
- <li>{{cssxref("scroll-margin-block-end")}}</li>
-</ul>
+- {{cssxref("scroll-snap-align")}}
+- {{cssxref("scroll-margin")}}
+- {{cssxref("scroll-margin-top")}}
+- {{cssxref("scroll-margin-right")}}
+- {{cssxref("scroll-margin-bottom")}}
+- {{cssxref("scroll-margin-left")}}
+- {{cssxref("scroll-margin-inline")}}
+- {{cssxref("scroll-margin-inline-start")}}
+- {{cssxref("scroll-margin-inline-end")}}
+- {{cssxref("scroll-margin-block")}}
+- {{cssxref("scroll-margin-block-start")}}
+- {{cssxref("scroll-margin-block-end")}}
 
-<h2 id="指南">指南</h2>
+## 指南
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts">CSS 滚动快照的基本概念</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap/compat">浏览器兼容性和滚动快照</a></li>
-</ul>
+- [CSS 滚动快照的基本概念](/zh-CN/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
+- [浏览器兼容性和滚动快照](/zh-CN/docs/Web/CSS/CSS_Scroll_Snap/compat)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>The individual property pages detail the browser compatibility situation for Scroll Snap. Note that at the present time Firefox still implements an old version of the specification. <a href="/en-US/docs/Web/CSS/CSS_Scroll_Snap/compat">Read the guide to browser compatibility</a> for an overview of how to support both the old and new specification. </p>
+The individual property pages detail the browser compatibility situation for Scroll Snap. Note that at the present time Firefox still implements an old version of the specification. [Read the guide to browser compatibility](/zh-CN/docs/Web/CSS/CSS_Scroll_Snap/compat) for an overview of how to support both the old and new specification.

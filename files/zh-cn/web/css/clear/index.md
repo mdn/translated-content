@@ -8,34 +8,32 @@ tags:
   - 参考
 translation_of: Web/CSS/clear
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p> <strong><code>clear</code></strong> <a href="/en-US/docs/CSS">CSS</a> 属性指定一个元素是否必须移动 (清除浮动后) 到在它之前的浮动元素下面。<code>clear</code> 属性适用于浮动和非浮动元素。</p>
+**`clear`** [CSS](/zh-CN/docs/CSS) 属性指定一个元素是否必须移动 (清除浮动后) 到在它之前的浮动元素下面。`clear` 属性适用于浮动和非浮动元素。
 
-<div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
+{{EmbedInteractiveExample("pages/css/clear.html")}}
 
+当应用于非浮动块时，它将非浮动块的[边框边界](/zh-CN/docs/CSS/box_model)移动到所有相关浮动元素[外边界](/zh-CN/docs/CSS/box_model)的下方。这个非浮动块的[垂直外边距](/zh-CN/docs/CSS/margin_collapsing)会折叠。
 
+另一方面，两个浮动元素的垂直外边距将不会折叠。当应用于浮动元素时，它将元素的[外边界](/zh-CN/docs/CSS/box_model)移动到所有相关的浮动元素[外边框边界](/zh-CN/docs/CSS/box_model)的下方。这会影响后面浮动元素的布局，后面的浮动元素的位置无法高于它之前的元素。
 
-<p>当应用于非浮动块时，它将非浮动块的<a href="/en-US/docs/CSS/box_model">边框边界</a>移动到所有相关浮动元素<a href="/en-US/docs/CSS/box_model">外边界</a>的下方。这个非浮动块的<a href="/en-US/docs/CSS/margin_collapsing">垂直外边距</a>会折叠。</p>
+要被清除的相关浮动元素指的是在相同[块级格式化上下文](/zh-CN/docs/CSS/block_formatting_context)中的前置浮动。
 
-<p>另一方面，两个浮动元素的垂直外边距将不会折叠。当应用于浮动元素时，它将元素的<a href="/en-US/docs/CSS/box_model">外边界</a>移动到所有相关的浮动元素<a href="/en-US/docs/CSS/box_model">外边框边界</a>的下方。这会影响后面浮动元素的布局，后面的浮动元素的位置无法高于它之前的元素。</p>
+> **备注：** 如果一个元素里只有浮动元素，那它的高度会是 0。如果你想要它自适应即包含所有浮动元素，那你需要清除它的子元素。一种方法叫做**clearfix**，即`clear`一个不浮动的 {{cssxref("::after")}} [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)。
+>
+> ```css
+> #container::after {
+>   content: "";
+>   display: block;
+>   clear: both;
+> }
+> ```
 
-<p>要被清除的相关浮动元素指的是在相同<a href="https://developer.mozilla.org/en-US/docs/CSS/block_formatting_context">块级格式化上下文</a>中的前置浮动。</p>
+## 语法
 
-<div class="note">
-<p><strong>注意：</strong>如果一个元素里只有浮动元素，那它的高度会是 0。如果你想要它自适应即包含所有浮动元素，那你需要清除它的子元素。一种方法叫做<strong>clearfix</strong>，即<code>clear</code>一个不浮动的 {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a>。</p>
-
-<pre><code>#container::after {
-  content: "";
-  display: block;
-  clear: both;
-}</code>
-</pre>
-</div>
-
-<h2 id="Syntax">语法</h2>
-
-<pre class="twopartsyntaxbox"><code>/* Keyword values */
+```
+/* Keyword values */
 clear: none;
 clear: left;
 clear: right;
@@ -46,44 +44,46 @@ clear: inline-end;
 /* Global values */
 clear: inherit;
 clear: initial;
-clear: unset;</code></pre>
+clear: unset;
+```
 
-<h3 id="Values">值</h3>
+### 值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>元素<em>不会</em>被向下移动以清除浮动。</dd>
- <dt><code>left</code></dt>
- <dd>元素被向下移动以清除左浮动。</dd>
- <dt><code>right</code></dt>
- <dd>元素被向下移动以清除右浮动。</dd>
- <dt><code>both</code></dt>
- <dd>元素被向下移动以清除左右浮动。</dd>
- <dt><code>inline-start</code></dt>
- <dd>元素被向下移动以清除其包含块的起始侧浮动，即 ltr 时清除左浮动，rtl 时清除右浮动。</dd>
- <dt><code>inline-end</code></dt>
- <dd>元素被向下移动以清除其包含块的结束侧浮动，即 ltr 时清除右浮动，rtl 时清除左浮动。</dd>
-</dl>
+- `none`
+  - : 元素*不会*被向下移动以清除浮动。
+- `left`
+  - : 元素被向下移动以清除左浮动。
+- `right`
+  - : 元素被向下移动以清除右浮动。
+- `both`
+  - : 元素被向下移动以清除左右浮动。
+- `inline-start`
+  - : 元素被向下移动以清除其包含块的起始侧浮动，即 ltr 时清除左浮动，rtl 时清除右浮动。
+- `inline-end`
+  - : 元素被向下移动以清除其包含块的结束侧浮动，即 ltr 时清除右浮动，rtl 时清除左浮动。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="clear_left">clear: left</h3>
+### clear: left
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html"><code>&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="left"&gt;This paragraph clears left.&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="left">This paragraph clears left.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css"><code>.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -106,23 +106,27 @@ clear: unset;</code></pre>
 }
 p {
   width: 50%;
-}</code></pre>
+}
+```
 
-<p>{{ EmbedLiveSample('clear: left','100%','250') }}</p>
+{{ EmbedLiveSample('clear: left','100%','250') }}
 
-<h3 id="clear_right">clear: right</h3>
+### clear: right
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html"><code>&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="right"&gt;This paragraph clears right.&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="right">This paragraph clears right.</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css"><code>.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -145,23 +149,27 @@ p {
 }
 p {
   width: 50%;
-}</code></pre>
+}
+```
 
-<p>{{ EmbedLiveSample('clear: right','100%','250') }}</p>
+{{ EmbedLiveSample('clear: right','100%','250') }}
 
-<h3 id="clear_both">clear: both</h3>
+### clear: both
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html"><code>&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="both"&gt;This paragraph clears both.&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="both">This paragraph clears both.</p>
+</div>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css"><code>.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -184,20 +192,19 @@ p {
 }
 p {
   width: 45%;
-}</code></pre>
+}
+```
 
-<p>{{ EmbedLiveSample('clear: both','100%','300') }}</p>
+{{ EmbedLiveSample('clear: both','100%','300') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.clear")}}</p>
+{{Compat("css.properties.clear")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/CSS/box_model">盒模型</a></li>
-</ul>
+- [盒模型](/zh-CN/docs/CSS/box_model)

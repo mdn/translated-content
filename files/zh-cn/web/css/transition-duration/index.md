@@ -3,19 +3,20 @@ title: transition-duration
 slug: Web/CSS/transition-duration
 translation_of: Web/CSS/transition-duration
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><strong><code>transition-duration</code></strong> 属性以秒或毫秒为单位指定过渡动画所需的时间。默认值为 <code>0s ，表示不出现过渡动画。</code></p>
+**`transition-duration`** 属性以秒或毫秒为单位指定过渡动画所需的时间。默认值为 `0s ，表示不出现过渡动画。`
 
-<p>可以指定多个时长，每个时长会被应用到由 {{ cssxref("transition-property") }} 指定的对应属性上。如果指定的时长个数小于属性个数，那么时长列表会重复。如果时长列表更长，那么该列表会被裁减。两种情况下，属性列表都保持不变。</p>
+可以指定多个时长，每个时长会被应用到由 {{ cssxref("transition-property") }} 指定的对应属性上。如果指定的时长个数小于属性个数，那么时长列表会重复。如果时长列表更长，那么该列表会被裁减。两种情况下，属性列表都保持不变。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css">/* &lt;time&gt; 值 */
+```css
+/* <time> 值 */
 transition-duration: 6s;
 transition-duration: 120ms;
 transition-duration: 1s, 15s;
@@ -25,32 +26,30 @@ transition-duration: 10s, 30s, 230ms;
 transition-duration: inherit;
 transition-duration: initial;
 transition-duration: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>{{cssxref("&lt;time&gt;")}} 类型。表示过渡属性从旧的值转变到新的值所需要的时间。如果时长是 <code>0s</code> ，表示不会呈现过渡动画，属性会瞬间完成转变。不接受负值。</dd>
-</dl>
+- `<time>`
+  - : {{cssxref("&lt;time&gt;")}} 类型。表示过渡属性从旧的值转变到新的值所需要的时间。如果时长是 `0s` ，表示不会呈现过渡动画，属性会瞬间完成转变。不接受负值。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<div>
-<div id="duration_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 0.5s</code></p>
+`transition-duration: 0.5s`
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
+</div>
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```
+
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -84,9 +83,10 @@ transition-duration: unset;
     transition-duration:0.5s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -100,22 +100,21 @@ transition-duration: unset;
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("duration_0_5s",275,150)}}
+
+`transition-duration: 1s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("duration_0_5s",275,150)}}</div>
-</div>
+```
 
-<div id="duration_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 1s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -149,9 +148,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:1s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -165,22 +165,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("duration_1s",275,150)}}
+
+`transition-duration: 2s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("duration_1s",275,150)}}</div>
-</div>
+```
 
-<div id="duration_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 2s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -214,9 +213,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -230,22 +230,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("duration_2s",275,150)}}
+
+`transition-duration: 4s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("duration_2s",275,150)}}</div>
-</div>
+```
 
-<div id="duration_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-duration: 4s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -279,9 +278,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:4s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -295,24 +295,19 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
+```
 
-<div>{{EmbedLiveSample("duration_4s",275,150)}}</div>
-</div>
-</div>
+{{EmbedLiveSample("duration_4s",275,150)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.transition-duration")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>{{ domxref("TransitionEvent") }}</li>
-</ul>
+- [Using CSS transitions](/zh-CN/docs/CSS/Using_CSS_transitions)
+- {{ domxref("TransitionEvent") }}

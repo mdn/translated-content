@@ -9,21 +9,20 @@ tags:
   - 表格
 translation_of: Web/CSS/caption-side
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/zh-CN/CSS">CSS </a>中 <strong><code>caption-side</code></strong> 属性会将表格的标题{{HTMLElement("caption")}} 放到规定的位置。但是具体显示的位置与表格的 {{cssxref('writing-mode')}} 属性值有关。</p>
+[CSS ](/zh-CN/CSS)中 **`caption-side`** 属性会将表格的标题{{HTMLElement("caption")}} 放到规定的位置。但是具体显示的位置与表格的 {{cssxref('writing-mode')}} 属性值有关。
 
-<div>{{EmbedInteractiveExample("pages/css/caption-side.html")}}</div>
+{{EmbedInteractiveExample("pages/css/caption-side.html")}}
 
+## 语法
 
+`caption-side` 属性的取值必须是下面所列值中的一个。
 
-<h2 id="语法">语法</h2>
+### CSS
 
-<p> <code>caption-side</code> 属性的取值必须是下面所列值中的一个。</p>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">/* Directional values */
+```css
+/* Directional values */
 caption-side: top;
 caption-side: bottom;
 
@@ -37,59 +36,66 @@ caption-side: bottom-outside;
 caption-side: inherit;
 caption-side: initial;
 caption-side: unset;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>top</code></dt>
- <dd>标题会出现在表格的上方。</dd>
- <dt><code>bottom</code></dt>
- <dd>标题会出现在表格的下方。</dd>
- <dt><code>left</code> {{non-standard_inline}}</dt>
- <dd>标题会出现在表格的左侧。
- <div class="note">在 CSS 2 阶段，这个值被建议加入到规范中，但是在在最终的 CSS 2.1 规范中被移除。它是非标准属性。</div>
- </dd>
- <dt><code>right</code> {{non-standard_inline}}</dt>
- <dd>标题会出现在表格的右侧。
- <div class="note">在 CSS 2 阶段，这个值被建议加入到规范中，但是在在最终的 CSS 2.1 规范中被移除。它是非标准属性。</div>
- </dd>
- <dt><code>top-outside</code> {{non-standard_inline}}</dt>
- <dd>标题会被放置在表格上方，但是标题的宽度和水平对齐方式不受表格水平布局的约束。
- <div class="note">在 CSS 2.1 规范中提到：CSS 2 规范中对 <code>top</code> 值产生的效果有不同的定义，在未来可能会重新定义这个值产生的影响效果。</div>
- </dd>
- <dt><code>bottom-outside</code> {{non-standard_inline}}</dt>
- <dd>标题会被放置在表格下方，但是标题的宽度和水平对齐方式不受表格水平布局的约束。
- <div class="note">在 CSS 2.1 规范中提到：CSS 2 规范中对 <code>top</code> 值产生的效果有不同的定义，在未来可能会重新定义这个值产生的影响效果。</div>
- </dd>
-</dl>
+- `top`
+  - : 标题会出现在表格的上方。
+- `bottom`
+  - : 标题会出现在表格的下方。
+- `left` {{non-standard_inline}}
 
-<h2 id="示例">示例</h2>
+  - : 标题会出现在表格的左侧。
 
-<h3 id="HTML">HTML</h3>
+    > **备注：** 在 CSS 2 阶段，这个值被建议加入到规范中，但是在在最终的 CSS 2.1 规范中被移除。它是非标准属性。
 
-<pre class="brush: html">&lt;table class="top"&gt;
-  &lt;caption&gt;Caption ABOVE the table&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Some data&lt;/td&gt;
-    &lt;td&gt;Some more data&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+- `right` {{non-standard_inline}}
 
-&lt;br&gt;
+  - : 标题会出现在表格的右侧。
 
-&lt;table class="bottom"&gt;
-  &lt;caption&gt;Caption BELOW the table&lt;/caption&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Some data&lt;/td&gt;
-    &lt;td&gt;Some more data&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+    > **备注：** 在 CSS 2 阶段，这个值被建议加入到规范中，但是在在最终的 CSS 2.1 规范中被移除。它是非标准属性。
 
-<h3 id="CSS_2">CSS</h3>
+- `top-outside` {{non-standard_inline}}
 
-<pre class="brush: css">.top caption {
+  - : 标题会被放置在表格上方，但是标题的宽度和水平对齐方式不受表格水平布局的约束。
+
+    > **备注：** 在 CSS 2.1 规范中提到：CSS 2 规范中对 `top` 值产生的效果有不同的定义，在未来可能会重新定义这个值产生的影响效果。
+
+- `bottom-outside` {{non-standard_inline}}
+
+  - : 标题会被放置在表格下方，但是标题的宽度和水平对齐方式不受表格水平布局的约束。
+
+    > **备注：** 在 CSS 2.1 规范中提到：CSS 2 规范中对 `top` 值产生的效果有不同的定义，在未来可能会重新定义这个值产生的影响效果。
+
+## 示例
+
+### HTML
+
+```html
+<table class="top">
+  <caption>Caption ABOVE the table</caption>
+  <tr>
+    <td>Some data</td>
+    <td>Some more data</td>
+  </tr>
+</table>
+
+<br>
+
+<table class="bottom">
+  <caption>Caption BELOW the table</caption>
+  <tr>
+    <td>Some data</td>
+    <td>Some more data</td>
+  </tr>
+</table>
+```
+
+### CSS
+
+```css
+.top caption {
   caption-side: top;
 }
 
@@ -104,18 +110,16 @@ table {
 td {
   border: 1px solid blue;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例', 'auto', 160)}}</p>
+{{EmbedLiveSample('示例', 'auto', 160)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.properties.caption-side")}}</p>
+{{Compat("css.properties.caption-side")}}

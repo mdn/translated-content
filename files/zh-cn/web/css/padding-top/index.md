@@ -7,60 +7,58 @@ tags:
   - CSS 属性
 translation_of: Web/CSS/padding-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 属性 <strong>padding-top </strong>是指一个元素在内边距区域（padding area）中上方的高度。内边距（padding）是指一个元素的内容和边框之间的区域。和外边距（margin）不同，内边距（padding）是不允许有负值的。内边距（padding）可以用四个值声明一个元素的四个方向的内边距（paddings），这是一种 CSS 缩写属性。</p>
+CSS 属性 **padding-top** 是指一个元素在内边距区域（padding area）中上方的高度。内边距（padding）是指一个元素的内容和边框之间的区域。和外边距（margin）不同，内边距（padding）是不允许有负值的。内边距（padding）可以用四个值声明一个元素的四个方向的内边距（paddings），这是一种 CSS 缩写属性。
 
-<p><img alt="The effect of the CSS padding-top property on the element box" src="/files/4105/padding-top.svg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![The effect of the CSS padding-top property on the element box](/files/4105/padding-top.svg)
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 padding-top: 0.5em;
 padding-top: 0;
 padding-top: 2cm;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 padding-top: 10%;
 
 /* Global values */
 padding-top: inherit;
 padding-top: initial;
 padding-top: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法规则</h2>
+## 语法规则
 
-<h3 id="Values">取值</h3>
+### 取值
 
-<dl>
- <dt>{{cssxref("length")}}</dt>
- <dd>当内边距（padding）大小是一个固定单位数值的时候，一定不能为负数。</dd>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>当内边距（padding）是一个百分比的时候，百分比是和<strong>包含块（containing block）的宽度</strong>有关的，同样一定不能为负数。</dd>
-</dl>
+- {{cssxref("length")}}
+  - : 当内边距（padding）大小是一个固定单位数值的时候，一定不能为负数。
+- {{cssxref("percentage")}}
+  - : 当内边距（padding）是一个百分比的时候，百分比是和**包含块（containing block）的宽度**有关的，同样一定不能为负数。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="Examples">实例</h2>
+## 实例
 
-<pre class="brush: css">.content { padding-top: 5%; }
+```css
+.content { padding-top: 5%; }
 .sidebox { padding-top: 10px; }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器的兼容性</h2>
+## 浏览器的兼容性
 
 {{Compat("css.properties.padding-top")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en/CSS/box_model">CSS Box Model</a></li>
- <li>The {{cssxref("padding")}} shorthand property can be used to set paddings on all four sides of an element with a single declaration: <code>padding-top</code>, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}.</li>
-</ul>
+- [CSS Box Model](/en/CSS/box_model)
+- The {{cssxref("padding")}} shorthand property can be used to set paddings on all four sides of an element with a single declaration: `padding-top`, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}.

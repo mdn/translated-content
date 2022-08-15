@@ -1,20 +1,12 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-tags:
-  - CSS
-  - CSS 函数
-  - CSS 网格
-  - Web
-  - 参考
-  - 实验
-  - 布局
-translation_of: Web/CSS/minmax()
 original_slug: Web/CSS/minmax()
 ---
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a>函数<code><strong>minmax</strong></code><strong><code>()</code></strong>定义了一个长宽范围的闭区间， 它与<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">CSS 网格布局</a>一起使用。</p>
+[CSS](/zh-CN/docs/Web/CSS)函数 **`minmax()`** 定义了一个长宽范围的闭区间， 它与[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)一起使用。
 
-<pre class="brush: css no-line-numbers notranslate">/* &lt;inflexible-breadth&gt;, &lt;track-breadth&gt; values */
+```css
+/* <inflexible-breadth>, <track-breadth> values */
 minmax(200px, 1fr)
 minmax(400px, 50%)
 minmax(30%, 300px)
@@ -24,7 +16,7 @@ minmax(max-content, auto)
 minmax(auto, 300px)
 minmax(min-content, auto)
 
-/* &lt;fixed-breadth&gt;, &lt;track-breadth&gt; values */
+/* <fixed-breadth>, <track-breadth> values */
 minmax(200px, 1fr)
 minmax(30%, 300px)
 minmax(400px, 50%)
@@ -32,48 +24,47 @@ minmax(50%, min-content)
 minmax(300px, max-content)
 minmax(200px, auto)
 
-/* &lt;inflexible-breadth&gt;, &lt;fixed-breadth&gt; values */
+/* <inflexible-breadth>, <fixed-breadth> values */
 minmax(400px, 50%)
 minmax(30%, 300px)
 minmax(min-content, 200px)
 minmax(max-content, 200px)
 minmax(auto, 300px)
-</pre>
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>此函数包含两个参数，<em>最小值</em> 和 <em>最大值</em>.</p>
+此函数包含两个参数，_最小值_ 和 _最大值_.
 
-<p>每个参数分别是<code>&lt;length&gt;</code>、<code>&lt;percentage&gt;</code>、<code>&lt;flex&gt;</code>的一种，或者是<code>max-content</code>、<code>min-content</code>、或<code>auto</code>之一。</p>
+每个参数分别是`<length>`、`<percentage>`、`<flex>`的一种，或者是`max-content`、`min-content`、或`auto`之一。
 
-<p>如果 <em>最大值</em> &lt; <em>最小值</em>，则<em>最大值</em>被忽略并且<code>minmax(最小值,最大值)</code>被看成<em>最小值</em>。{{cssxref("flex_value","&lt;flex&gt;")}} 值作为最大值时设置网格轨道的弹性系数；作为最小值时无效。</p>
+如果 _最大值_ < _最小值_，则*最大值*被忽略并且`minmax(最小值,最大值)`被看成*最小值*。{{cssxref("flex_value","&lt;flex&gt;")}} 值作为最大值时设置网格轨道的弹性系数；作为最小值时无效。
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>非负长度。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>相对于列轨道中网格容器的内联大小的非负百分比，以及行轨道中网格容器的块长宽。如果网格容器的长宽取决于其轴的长宽，则<code>&lt;percentage&gt;</code> 必须取值为<code>auto</code>。{{glossary("user agent")}} 可将轨道的内部长宽贡献调整为网格容器的长宽，并按将导致百分比达到的最小值来增加轨道的最终长宽。</dd>
- <dt>{{cssxref("&lt;flex&gt;")}}</dt>
- <dd>单位为<code>fr</code>的非负维度，指定轨道弹性布局的系数值。每个<code>&lt;flex&gt;</code>长度的轨道都以其系数值比例均分剩余空间。</dd>
- <dt><code>max-content</code></dt>
- <dd>表示网格的轨道长度自适应内容最大的那个单元格。</dd>
- <dt><code>min-content</code></dt>
- <dd>表示网格的轨道长度自适应内容最小的那个单元格。</dd>
- <dt><code>auto</code></dt>
- <dd>作为最大值时，等价于 <code>max-content</code>。作为最小值时，它表示轨道中单元格最小长宽 (由{{cssxref("min-width")}}/{{cssxref("min-height")}}) 的最大值。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 非负长度。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 相对于列轨道中网格容器的内联大小的非负百分比，以及行轨道中网格容器的块长宽。如果网格容器的长宽取决于其轴的长宽，则`<percentage>` 必须取值为`auto`。{{glossary("user agent")}} 可将轨道的内部长宽贡献调整为网格容器的长宽，并按将导致百分比达到的最小值来增加轨道的最终长宽。
+- {{cssxref("&lt;flex&gt;")}}
+  - : 单位为`fr`的非负维度，指定轨道弹性布局的系数值。每个`<flex>`长度的轨道都以其系数值比例均分剩余空间。
+- `max-content`
+  - : 表示网格的轨道长度自适应内容最大的那个单元格。
+- `min-content`
+  - : 表示网格的轨道长度自适应内容最小的那个单元格。
+- `auto`
+  - : 作为最大值时，等价于 `max-content`。作为最小值时，它表示轨道中单元格最小长宽 (由{{cssxref("min-width")}}/{{cssxref("min-height")}}) 的最大值。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
-<div id="example">
-<h3 id="CSS">CSS</h3>
+## 示例
 
-<pre class="brush: css; highlight[3] notranslate">#container {
+### CSS
+
+```css
+#container {
   display: grid;
   grid-template-columns: minmax(max-content, 300px) minmax(200px, 1fr) 150px;
   grid-gap: 5px;
@@ -84,101 +75,93 @@ minmax(auto, 300px)
   padding: 10px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   padding: 5px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div id="container"&gt;
-  &lt;div&gt;
-    Item as wide as the content,&lt;br/&gt;
+```html
+<div id="container">
+  <div>
+    Item as wide as the content,<br/>
     but at most 300 pixels.
-  &lt;/div&gt;
-  &lt;div&gt;
+  </div>
+  <div>
     Item with flexible width but a minimum of 200 pixels.
-  &lt;/div&gt;
-  &lt;div&gt;
+  </div>
+  <div>
     Inflexible item of 150 pixels width.
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
 </div>
-<h3 id="Result">Result</h3>
+```
 
-<p>{{EmbedLiveSample("example", "100%", 200)}}</p>
+### Result
 
-<h2 id="规范">规范</h2>
+{{EmbedLiveSample("example", "100%", 200)}}
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.grid-template-columns.minmax")}}</p>
+{{Compat("css.properties.grid-template-columns.minmax")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>网格布局指南：<em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()">Basic concepts of grid layout - track sizing with minmax()</a></em></li>
- <li>视频教程：<em><a href="http://gridbyexample.com/video/series-minmax/">Introducing minmax()</a></em></li>
-</ul>
+- 网格布局指南：_[Basic concepts of grid layout - track sizing with minmax()](</zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()>)_
+- 视频教程：_[Introducing minmax()](http://gridbyexample.com/video/series-minmax/)_
 
-<section id="Quick_links">
-<ol>
- <li> </li>
- <li><a href="/zh-CN/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS 索引</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></li>
- <li><a href="#"><strong>指南</strong></a>
-  <ol>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">网格布局的基本概念</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">与其他布局方法的关系</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">基于线的定位</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">网格模板区域</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">使用命名线布局</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">网格布局中的自动定位</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">网格布局中的盒模型对齐</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">网格、逻辑值和书写模式</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS 网格布局和可及性</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 网格布局和渐进增强</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用网格实现常见布局</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>属性</strong></a>
-  <ol>
-   <li><a href="/zh-CN/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>术语表</strong></a>
-  <ol>
-   <li><a href="/zh-CN/docs/Glossary/Grid">网格（Grid）</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_lines">网格线（Grid lines）</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_tracks">网格轨道（Grid tracks）</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_cell">网格单元格（Grid cell）</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_areas">网格区域（Grid areas）</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Gutters">网格间隙（Gutters）</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_Axis">网格轴（Grid Axis）</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_rows">网格行（Grid row）</a></li>
-   <li><a href="/zh-CN/docs/Glossary/Grid_column">网格列（Grid column）</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+1.
+2. [**CSS**](/zh-CN/docs/Web/CSS)
+3. [**CSS 索引**](/zh-CN/docs/Web/CSS/Reference)
+4. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+5. **指南**
+
+   1. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+   2. [与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+   3. [基于线的定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+   4. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+   5. [使用命名线布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+   6. [网格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+   7. [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+   8. [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+   9. [CSS 网格布局和可及性](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+   10. [CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+   11. [使用网格实现常见布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+
+6. **属性**
+
+   1. [grid](/zh-CN/docs/Web/CSS/grid)
+   2. [grid-area](/zh-CN/docs/Web/CSS/grid-area)
+   3. [grid-auto-columns](/zh-CN/docs/Web/CSS/grid-auto-columns)
+   4. [grid-auto-flow](/zh-CN/docs/Web/CSS/grid-auto-flow)
+   5. [grid-auto-rows](/zh-CN/docs/Web/CSS/grid-auto-rows)
+   6. [grid-column](/zh-CN/docs/Web/CSS/grid-column)
+   7. [grid-column-end](/zh-CN/docs/Web/CSS/grid-column-end)
+   8. [grid-column-gap](/zh-CN/docs/Web/CSS/grid-column-gap)
+   9. [grid-column-start](/zh-CN/docs/Web/CSS/grid-column-start)
+   10. [grid-gap](/zh-CN/docs/Web/CSS/grid-gap)
+   11. [grid-row](/zh-CN/docs/Web/CSS/grid-row)
+   12. [grid-row-end](/zh-CN/docs/Web/CSS/grid-row-end)
+   13. [grid-row-gap](/zh-CN/docs/Web/CSS/grid-row-gap)
+   14. [grid-row-start](/zh-CN/docs/Web/CSS/grid-row-start)
+   15. [grid-template](/zh-CN/docs/Web/CSS/grid-template)
+   16. [grid-template-areas](/zh-CN/docs/Web/CSS/grid-template-areas)
+   17. [grid-template-columns](/zh-CN/docs/Web/CSS/grid-template-columns)
+   18. [grid-template-rows](/zh-CN/docs/Web/CSS/grid-template-rows)
+
+7. **术语表**
+
+   1. [网格（Grid）](/zh-CN/docs/Glossary/Grid)
+   2. [网格线（Grid lines）](/zh-CN/docs/Glossary/Grid_lines)
+   3. [网格轨道（Grid tracks）](/zh-CN/docs/Glossary/Grid_tracks)
+   4. [网格单元格（Grid cell）](/zh-CN/docs/Glossary/Grid_cell)
+   5. [网格区域（Grid areas）](/zh-CN/docs/Glossary/Grid_areas)
+   6. [网格间隙（Gutters）](/zh-CN/docs/Glossary/Gutters)
+   7. [网格轴（Grid Axis）](/zh-CN/docs/Glossary/Grid_Axis)
+   8. [网格行（Grid row）](/zh-CN/docs/Glossary/Grid_rows)
+   9. [网格列（Grid column）](/zh-CN/docs/Glossary/Grid_column)

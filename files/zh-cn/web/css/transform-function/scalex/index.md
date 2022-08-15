@@ -8,66 +8,108 @@ tags:
 translation_of: Web/CSS/transform-function/scaleX()
 original_slug: Web/CSS/transform-function/scaleX()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>scaleX()</code></strong> CSS 函数将每个元素点的横坐标修改为一个常数因子，除了该比例因子为 1，在这种情况下，函数是身份变换。缩放不是各向同性的，并且元素的角度不保守。</p>
+**`scaleX()`** CSS 函数将每个元素点的横坐标修改为一个常数因子，除了该比例因子为 1，在这种情况下，函数是身份变换。缩放不是各向同性的，并且元素的角度不保守。
 
-<p><img src="https://mdn.mozillademos.org/files/12117/scaleX.png" style="height: 315px; width: 372px;"></p>
+![](https://mdn.mozillademos.org/files/12117/scaleX.png)
 
-<p><code>scaleX(sx)</code> 是 <code>scale(sx, 1)</code> 或 <code>scale3d(sx, 1, 1) </code>的一个速记/缩写。</p>
+`scaleX(sx)` 是 `scale(sx, 1)` 或 `scale3d(sx, 1, 1) `的一个速记/缩写。
 
-<div class="note">
-<p>Note:</p>
+> **备注：** Note:
+>
+> **`scaleX(-1)` **定义一个 [轴向对称性 (axial symmetry)](http://en.wikipedia.org/wiki/Axial_symmetry) ，它具有一个垂直轴通过原点 (由 {{cssxref("transform-origin")}} 属性规定)。
 
-<p><strong><code>scaleX(-1)</code> </strong>定义一个 <a href="http://en.wikipedia.org/wiki/Axial_symmetry">轴向对称性 (axial symmetry)</a> ，它具有一个垂直轴通过原点 (由 {{cssxref("transform-origin")}} 属性规定)。</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```
+scaleX(s)
+```
 
-<pre class="syntaxbox">scaleX(<em>s</em>)
-</pre>
+## Values
 
-<h2 id="Values">Values</h2>
-
-<dl>
- <dt><em>s</em></dt>
- <dd>Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the abscissa of each point of the element.</dd>
-</dl>
+- _s_
+  - : Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the abscissa of each point of the element.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"><math> <mfenced> <mtable> <mtr><mtd>s</mtd><mtd>0</mtd></mtr> <mtr><mtd>0</mtd><mtd>1</mtd></mtr> </mtable> </mfenced> </math></td>
-   <td><math> <mfenced><mtable><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>s<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[s 0 0 1 0 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
+      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>s</mtd><mtd>0</mtd></mtr>
+              <mtr><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>s<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[s 0 0 1 0 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Without_changing_the_origin">Without changing the origin</h3>
+### Without changing the origin
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;foo&lt;/p&gt;
-&lt;p class="transformed"&gt;bar&lt;/p&gt;</pre>
+```html
+<p>foo</p>
+<p class="transformed">bar</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -77,22 +119,25 @@ original_slug: Web/CSS/transform-function/scaleX()
   transform: scaleX(2);
   background-color: blue;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Without_changing_the_origin","100%","200")}}</p>
+{{EmbedLiveSample("Without_changing_the_origin","100%","200")}}
 
-<h3 id="Translating_the_origin_of_the_transformation">Translating the origin of the transformation</h3>
+### Translating the origin of the transformation
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;foo&lt;/p&gt;
-&lt;p class="transformed"&gt;bar&lt;/p&gt;</pre>
+```html
+<p>foo</p>
+<p class="transformed">bar</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -103,12 +148,12 @@ original_slug: Web/CSS/transform-function/scaleX()
   transform-origin: left;
   background-color: blue;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Translating_the_origin_of_the_transformation","100%","200")}}</p>
+{{EmbedLiveSample("Translating_the_origin_of_the_transformation","100%","200")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

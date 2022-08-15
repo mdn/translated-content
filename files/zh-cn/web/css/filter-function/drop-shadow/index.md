@@ -4,61 +4,60 @@ slug: Web/CSS/filter-function/drop-shadow
 translation_of: Web/CSS/filter-function/drop-shadow()
 original_slug: Web/CSS/filter-function/drop-shadow()
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>The <strong><code>drop-shadow()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> function applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.</p>
+The **`drop-shadow()`** [CSS](/zh-CN/docs/Web/CSS) function applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}
 
+投影实际上是输入图像的 alpha 蒙版的一个模糊的、偏移的版本，用特定的颜色绘制并合成在图像下面。
 
-<p>投影实际上是输入图像的 alpha 蒙版的一个模糊的、偏移的版本，用特定的颜色绘制并合成在图像下面。</p>
+> **备注：** 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性. `box-shadow` 属性在元素的整个框后面创建一个矩形阴影，而 `drop-shadow()` 过滤器则是创建一个符合图像本身形状 (alpha 通道) 的阴影。
 
-<div class="note">
-<p><strong>注意：</strong> 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性.  <code>box-shadow</code> 属性在元素的整个框后面创建一个矩形阴影，而 <code>drop-shadow()</code> 过滤器则是创建一个符合图像本身形状 (alpha 通道) 的阴影。</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```
+drop-shadow(offset-x offset-y blur-radius spread-radius color)
+```
 
-<pre class="syntaxbox notranslate">drop-shadow(<em>offset-x</em> <em>offset-y</em> <em>blur-radius</em> <em>spread-radius</em> <em>color</em>)</pre>
+The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in the {{cssxref("box-shadow")}} property), with the exception that the `inset` keyword is not allowed.
 
-<p>The <code>drop-shadow()</code> function accepts a parameter of type <code>&lt;shadow&gt;</code> (defined in the {{cssxref("box-shadow")}} property), with the exception that the <code>inset</code> keyword is not allowed.</p>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `offset-x` `offset-y` (required)
+  - : `offset-x`指定水平距离，其中负值将阴影放置到元素的左侧。`offset-y`指定垂直距离，其中负值将阴影置于元素之上。如果两个值都为 `0`，则阴影直接放置在元素后面。
+- `blur-radius` (optional)
+  - : 阴影的模糊半径，指定为 {{cssxref("&lt;length&gt;")}}。值越大，阴影就越大，也越模糊。如果未指定，则默认为 `0`，从而产生清晰、不模糊的边缘。不允许有负值。
+- `spread-radius` (optional)
 
-<dl>
- <dt><code>offset-x</code> <code>offset-y</code> <small>(required)</small></dt>
- <dd><code>offset-x</code>指定水平距离，其中负值将阴影放置到元素的左侧。<code>offset-y</code>指定垂直距离，其中负值将阴影置于元素之上。如果两个值都为 <code>0</code>，则阴影直接放置在元素后面。</dd>
- <dt><code>blur-radius</code> <small>(optional)</small></dt>
- <dd>阴影的模糊半径，指定为 {{cssxref("&lt;length&gt;")}}。值越大，阴影就越大，也越模糊。如果未指定，则默认为 <code>0</code>，从而产生清晰、不模糊的边缘。不允许有负值。</dd>
- <dt><code>spread-radius</code> <small>(optional)</small></dt>
- <dd>阴影的扩展半径，指定为 {{cssxref("&lt;length&gt;")}}. 正的值会导致阴影扩大和变大，而负的值会导致阴影缩小。如果未指定，则默认为 0，阴影的大小将与输入图像相同。
- <div class="warning">大多数浏览器不支持这个参数;如果使用，效果将不会呈现。截止 2020 年 10,14 日，Chrome  v.85.0.4183.121（正式版本）,Microsoft Edge Beta  v85.0.564.63(64 位), Firefox v.85.0.564.63 暂未支持</div>
- </dd>
- <dt><code>color</code> <small>(optional)</small></dt>
- <dd>阴影的颜色，指定为 {{cssxref("&lt;color&gt;")}}。如果未指定，则使用 {{cssxref("color")}} 属性的值。</dd>
-</dl>
+  - : 阴影的扩展半径，指定为 {{cssxref("&lt;length&gt;")}}. 正的值会导致阴影扩大和变大，而负的值会导致阴影缩小。如果未指定，则默认为 0，阴影的大小将与输入图像相同。
 
-<h2 id="Examples">Examples</h2>
+    > **警告：** 大多数浏览器不支持这个参数;如果使用，效果将不会呈现。截止 2020 年 10,14 日，Chrome v.85.0.4183.121（正式版本）,Microsoft Edge Beta v85.0.564.63(64 位), Firefox v.85.0.564.63 暂未支持
 
-<pre class="brush: css notranslate">/* Black shadow with 10px blur */
+- `color` (optional)
+  - : 阴影的颜色，指定为 {{cssxref("&lt;color&gt;")}}。如果未指定，则使用 {{cssxref("color")}} 属性的值。
+
+## Examples
+
+```css
+/* Black shadow with 10px blur */
 drop-shadow(16px 16px 10px black)
 
 /* Reddish shadow with 1rem blur and .3rem spread */
 /* WARNING: not generally supported by browsers */
-drop-shadow(.5rem .5rem 1rem .3rem #e23)</pre>
+drop-shadow(.5rem .5rem 1rem .3rem #e23)
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>CSS {{cssxref("box-shadow")}} property</li>
- <li>{{cssxref("filter-function/blur", "blur()")}}</li>
- <li>{{cssxref("filter-function/brightness", "brightness()")}}</li>
- <li>{{cssxref("filter-function/contrast", "contrast()")}}</li>
- <li>{{cssxref("filter-function/grayscale", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}</li>
- <li>{{cssxref("filter-function/invert", "invert()")}}</li>
- <li>{{cssxref("filter-function/opacity", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia", "sepia()")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- CSS {{cssxref("box-shadow")}} property
+- {{cssxref("filter-function/blur", "blur()")}}
+- {{cssxref("filter-function/brightness", "brightness()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
+- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}

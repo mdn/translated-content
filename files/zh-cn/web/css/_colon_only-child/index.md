@@ -1,116 +1,112 @@
 ---
 title: ':only-child'
-slug: 'Web/CSS/:only-child'
+slug: Web/CSS/:only-child
 tags:
   - CSS
   - Layout
   - Pseudo-class
   - Reference
   - Web
-translation_of: 'Web/CSS/:only-child'
+translation_of: Web/CSS/:only-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
+CSS[伪类](/zh-CN/docs/CSS/Pseudo-classes)`:only-child` 匹配没有任何兄弟元素的元素。等效的选择器还可以写成 `:first-child:last-child`或者`:nth-child(1):nth-last-child(1)`,当然，前者的权重会低一点。
 
-
-<p>CSS<a href="/zh-CN/docs/CSS/Pseudo-classes">伪类</a><code>:only-child</code> 匹配没有任何兄弟元素的元素。等效的选择器还可以写成 <code>:first-child:last-child</code>或者<code>:nth-child(1):nth-last-child(1)</code>,当然，前者的权重会低一点。</p>
-
-<pre class="brush: css no-line-numbers">/* Selects each &lt;p&gt;, but only if it is the */
+```css
+/* Selects each <p>, but only if it is the */
 /* only child of its parent */
 p:only-child {
   background-color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note</strong>: 在起初定义，被选择的元素必须拥有一个父级元素。从 Selectors Level 4 开始，这不再是必须的了。</p>
-</div>
+> **备注：** 在起初定义，被选择的元素必须拥有一个父级元素。从 Selectors Level 4 开始，这不再是必须的了。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="基础示例">基础示例</h3>
+### 基础示例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;div&gt;
-    &lt;i&gt;I am a lonely only child.&lt;/i&gt;
-  &lt;/div&gt;
+```html
+<main>
+  <div>
+    <i>I am a lonely only child.</i>
+  </div>
 
-  &lt;div&gt;
-    &lt;i&gt;I have siblings.&lt;/i&gt;&lt;br&gt;
-    &lt;b&gt;So do I!&lt;/b&gt;&lt;br&gt;
-    &lt;span&gt;I also have siblings, &lt;span&gt;but this is an only child.&lt;/span&gt;&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+  <div>
+    <i>I have siblings.</i><br>
+    <b>So do I!</b><br>
+    <span>I also have siblings, <span>but this is an only child.</span></span>
+  </div>
+</main>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">main :only-child {
+```css
+main :only-child {
   color: red;
 }
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('基础示例','100%',180)}}</p>
+{{EmbedLiveSample('基础示例','100%',180)}}
 
-<h3 id="一个列表示例">一个列表示例</h3>
+### 一个列表示例
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;First
-    &lt;ul&gt;
-      &lt;li&gt;This list has just one element.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Second
-    &lt;ul&gt;
-      &lt;li&gt;This list has three elements.&lt;/li&gt;
-      &lt;li&gt;This list has three elements.&lt;/li&gt;
-      &lt;li&gt;This list has three elements.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+```html
+<ol>
+  <li>First
+    <ul>
+      <li>This list has just one element.</li>
+    </ul>
+  </li>
+  <li>Second
+    <ul>
+      <li>This list has three elements.</li>
+      <li>This list has three elements.</li>
+      <li>This list has three elements.</li>
+    </ul>
+  </li>
+</ol>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">li li {
+```css
+li li {
   list-style-type: disc;
 }
 li:only-child {
   color: red;
   list-style-type: square;
-}</pre>
+}
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('一个列表示例', '100%', 210)}}</p>
+{{EmbedLiveSample('一个列表示例', '100%', 210)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<div>
+{{Compat("css.selectors.only-child")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.only-child")}}</p>
-</div>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{Cssxref(":only-of-type")}}</li>
- <li>{{Cssxref(":first-child")}}</li>
- <li>{{Cssxref(":last-child")}}</li>
- <li>{{Cssxref(":nth-child")}}</li>
-</ul>
+- {{Cssxref(":only-of-type")}}
+- {{Cssxref(":first-child")}}
+- {{Cssxref(":last-child")}}
+- {{Cssxref(":nth-child")}}

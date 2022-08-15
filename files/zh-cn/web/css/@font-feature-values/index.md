@@ -3,13 +3,14 @@ title: '@font-feature-values'
 slug: Web/CSS/@font-feature-values
 translation_of: Web/CSS/@font-feature-values
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><strong><code>@font-feature-values</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> 允许作者在{{cssxref("font-variant-alternates")}} 中使用通用名称，用于在 OpenType 中以不同方式激活功能。它允许在使用几种字体时简化 CSS。</p>
+**`@font-feature-values`** [CSS](/zh-CN/docs/Web/CSS) [at-rule](/zh-CN/docs/Web/CSS/At-rule) 允许作者在{{cssxref("font-variant-alternates")}} 中使用通用名称，用于在 OpenType 中以不同方式激活功能。它允许在使用几种字体时简化 CSS。
 
-<pre class="brush: css notranslate">@font-feature-values Font One { /* How to activate nice-style in Font One */
+```css
+@font-feature-values Font One { /* How to activate nice-style in Font One */
   @styleset {
     nice-style: 12;
   }
@@ -24,43 +25,39 @@ translation_of: Web/CSS/@font-feature-values
 …
 
 .nice-look { font-variant-alternates: styleset(nice-style); } /* Independent of the font */
-</pre>
+```
 
-<p>The <code>@font-feature-values</code> at-rule may be used at the top level of a CSS, but also inside any <a href="/en-US/docs/Web/CSS/At-rule#Conditional_Group_Rules">CSS conditional-group at-rule</a>.</p>
+The `@font-feature-values` at-rule may be used at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/zh-CN/docs/Web/CSS/At-rule#Conditional_Group_Rules).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Feature_value_blocks">Feature value blocks</h3>
+### Feature value blocks
 
-<dl>
- <dt><a name="@swash"><code>@swash</code></a></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "swash()", "#swash()")}} functional notation of {{cssxref("font-variant-alternates")}}. A swash feature value definition allows only one value: <code>ident1: 2</code> is valid when <code>ident2: 2 4</code> isn't.</dd>
- <dt><a name="@annotation"><code>@annotation</code></a></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "annotation()", "#annotation()")}} functional notation of {{cssxref("font-variant-alternates")}}. An annotation feature value definition allows only one value: <code>ident1: 2</code> is valid when <code>ident2: 2 4</code> isn't.</dd>
- <dt><a name="@ornaments"><code>@ornaments</code></a></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "ornaments()", "#ornaments()")}} functional notation of {{cssxref("font-variant-alternates")}}. An ornaments feature value definition allows only one value: <code>ident1: 2</code> is valid when <code>ident2: 2 4</code> isn't.</dd>
- <dt><a name="@stylistic"><code>@stylistic</code></a></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylistice feature value definition allows only one value: <code>ident1: 2</code> is valid when <code>ident2: 2 4</code> isn't.</dd>
- <dt><a name="@styleset"><code>@styleset</code></a></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylset feature value definition allows and illimited amount of values: <code>ident1: 2 4 12 1</code>maps to the OpenType values <code>ss02</code>, <code>ss04</code>, <code>ss12</code>, <code>ss01</code>. Note that values higher than <code>99</code> are valid, but doesn't map to any OpenType values and are ignored.</dd>
- <dt><a name="@character-variant"><code>@character-variant</code></a></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}} functional notation of {{cssxref("font-variant-alternates")}}. A character-variant feature value definition allows one or two values: <code>ident1: 2</code>  maps to <code>cv02=1</code> and <code>ident2: 2 4</code> maps to <code>cv02)4</code> and <code>ident2: 2 4 5</code> isn't valid.</dd>
-</dl>
+- `@swash`
+  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "swash()", "#swash()")}} functional notation of {{cssxref("font-variant-alternates")}}. A swash feature value definition allows only one value: `ident1: 2` is valid when `ident2: 2 4` isn't.
+- `@annotation`
+  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "annotation()", "#annotation()")}} functional notation of {{cssxref("font-variant-alternates")}}. An annotation feature value definition allows only one value: `ident1: 2` is valid when `ident2: 2 4` isn't.
+- `@ornaments`
+  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "ornaments()", "#ornaments()")}} functional notation of {{cssxref("font-variant-alternates")}}. An ornaments feature value definition allows only one value: `ident1: 2` is valid when `ident2: 2 4` isn't.
+- `@stylistic`
+  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylistice feature value definition allows only one value: `ident1: 2` is valid when `ident2: 2 4` isn't.
+- `@styleset`
+  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylset feature value definition allows and illimited amount of values: `ident1: 2 4 12 1`maps to the OpenType values `ss02`, `ss04`, `ss12`, `ss01`. Note that values higher than `99` are valid, but doesn't map to any OpenType values and are ignored.
+- `@character-variant`
+  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}} functional notation of {{cssxref("font-variant-alternates")}}. A character-variant feature value definition allows one or two values: `ident1: 2` maps to `cv02=1` and `ident2: 2 4` maps to `cv02)4` and `ident2: 2 4 5` isn't valid.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.at-rules.font-feature-values")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{cssxref("font-variant-alternates")}} property that uses values that this at-rule defines.</li>
-</ul>
+- The {{cssxref("font-variant-alternates")}} property that uses values that this at-rule defines.

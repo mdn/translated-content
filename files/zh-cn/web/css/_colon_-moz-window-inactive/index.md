@@ -1,29 +1,32 @@
 ---
 title: ':-moz-window-inactive'
-slug: 'Web/CSS/:-moz-window-inactive'
-translation_of: 'Web/CSS/:-moz-window-inactive'
+slug: Web/CSS/:-moz-window-inactive
+translation_of: Web/CSS/:-moz-window-inactive
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>在<a href="/zh-CN/docs/Web/CSS">CSS </a><a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>是<a href="/zh-CN/docs/Web/CSS/Mozilla_Extensions">Mozilla 的扩展</a>匹配任何元素，而它在非活动窗口。<strong><code>:-moz-window-inactive</code></strong></p>
+在[CSS ](/zh-CN/docs/Web/CSS)[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是[Mozilla 的扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)匹配任何元素，而它在非活动窗口。**`:-moz-window-inactive`**
 
-<p><code>:-moz-window-inactive</code> 也在内容 HTML 文档中工作。</p>
+`:-moz-window-inactive` 也在内容 HTML 文档中工作。
 
-<div class="note"><strong>注意：</strong>在添加此伪类之前，通过<code>active="true"</code>在顶级 XUL chrome 窗口上设置 attribute（）来实现为背景窗口提供不同样式。该属性不再使用。</div>
+> **备注：** 在添加此伪类之前，通过`active="true"`在顶级 XUL chrome 窗口上设置 attribute（）来实现为背景窗口提供不同样式。该属性不再使用。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>此示例根据窗口是否处于活动状态来改变框背景的外观。</p>
+此示例根据窗口是否处于活动状态来改变框背景的外观。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id=“mybox”&gt;
-  &lt;p&gt;这是一个盒子！&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div id=“mybox”>
+  <p>这是一个盒子！</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre><code>#mybox {
+```
+#mybox {
   background: linear-gradient(to bottom, yellow, cyan);
   width: 200px;
   height: 200px;
@@ -31,18 +34,19 @@ translation_of: 'Web/CSS/:-moz-window-inactive'
 
 #mybox:-moz-window-inactive {
   background: cyan;
-}</code></pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Example', 220, 220)}}</p>
+{{EmbedLiveSample('Example', 220, 220)}}
 
-<p>您可以将其视为{{LiveSampleLink('Example', 'live sample here')}}。</p>
+您可以将其视为{{LiveSampleLink('Example', 'live sample here')}}。
 
-<h2 id="产品规格">产品规格</h2>
+## 产品规格
 
-<p>不属于任何规范。这是专门针对 Gecko 的专有伪类。</p>
+不属于任何规范。这是专门针对 Gecko 的专有伪类。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.-moz-window-inactive")}}

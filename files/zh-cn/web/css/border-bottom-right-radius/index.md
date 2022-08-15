@@ -3,12 +3,13 @@ title: border-bottom-right-radius
 slug: Web/CSS/border-bottom-right-radius
 translation_of: Web/CSS/border-bottom-right-radius
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>border-bottom-right-radius</code></strong> CSS property sets the rounding of the bottom-right corner of the element.</p>
+The **`border-bottom-right-radius`** CSS property sets the rounding of the bottom-right corner of the element.
 
-<pre class="brush:css no-line-numbers">/* The corner is a circle */
-/* border-bottom-right-radius: <em>radius</em> */
+```css
+/* The corner is a circle */
+/* border-bottom-right-radius: radius */
 border-bottom-right-radius: 3px;
 
 /* Percentage values */
@@ -20,138 +21,184 @@ border-bottom-right-radius: 20% 10%; /* 20% of horizontal(width) and 10% of vert
 /* border-bottom-right-radius: horizontal vertical */
 border-bottom-right-radius: 0.5em 1em;
 
-border-bottom-right-radius: inherit;</pre>
+border-bottom-right-radius: inherit;
+```
 
-<p>The rounding can be a circle or an ellipse, or if one of the value is <code>0</code> no rounding is done and the corner is square.</p>
+The rounding can be a circle or an ellipse, or if one of the value is `0` no rounding is done and the corner is square.
 
-<div style="text-align: center;"><img alt="border-bottom-right-radius.png" class="default internal" src="/@api/deki/files/6134/=border-bottom-right-radius.png"></div>
+![border-bottom-right-radius.png](/@api/deki/files/6134/=border-bottom-right-radius.png)
 
-<p>A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.</p>
+A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.
 
-<div class="note">If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the <code>border-bottom-right-radius</code> CSS property, the value of this property is then reset to its initial value by the <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand property</a>.</div>
+> **备注：** If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the `border-bottom-right-radius` CSS property, the value of this property is then reset to its initial value by the [shorthand property](/zh-CN/docs/Web/CSS/Shorthand_properties).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>With one value:</p>
+With one value:
 
-<ul>
- <li>the value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the radius of the circle to use for the border in that corner.</li>
-</ul>
+- the value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the radius of the circle to use for the border in that corner.
 
-<p>With two values:</p>
+With two values:
 
-<ul>
- <li>the first value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the horizontal semi-major axis of the ellipsis to use for the border in that corner.</li>
- <li>the second value is a {{cssxref("&lt;percentage&gt;")}} denoting the vertical semi-major axis of the ellipsis to use for the border in that corner.</li>
-</ul>
+- the first value is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} denoting the horizontal semi-major axis of the ellipsis to use for the border in that corner.
+- the second value is a {{cssxref("&lt;percentage&gt;")}} denoting the vertical semi-major axis of the ellipsis to use for the border in that corner.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Denotes the size of the circle radius or the semi-major and semi-minor axes of the ellipsis. As absolute length it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages for the horizontal axis refer to the width of the box, percentages for the vertical axis refer to the height of the box. Negative values are invalid.</dd>
-</dl>
+- `<length-percentage>`
+  - : Denotes the size of the circle radius or the semi-major and semi-minor axes of the ellipsis. As absolute length it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages for the horizontal axis refer to the width of the box, percentages for the vertical axis refer to the height of the box. Negative values are invalid.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th>Live example</th>
-   <th>Code</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div style="background-color: lightgreen; border: solid 1px black; border-bottom-right-radius: 40px 40px; width: 100px; height: 100px;">
-    <div class="hidden">.</div>
-    </div>
-   </td>
-   <td>An arc of circle is used as the border
-    <pre class="brush: css">
+  <thead>
+    <tr>
+      <th>Live example</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 1.5em">
+        <div
+          style="
+            background-color: lightgreen;
+            border: solid 1px black;
+            border-bottom-right-radius: 40px 40px;
+            width: 100px;
+            height: 100px;
+          "
+        >
+          <div class="hidden">.</div>
+        </div>
+      </td>
+      <td>
+        An arc of circle is used as the border
+        <pre class="brush: css">
 div {
   border-bottom-right-radius: 40px 40px;
 }
-</pre>
-   </td>
-  </tr>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div style="background-color: lightgreen; border: solid 1px black; border-bottom-right-radius: 40px 20px; width: 100px; height: 100px;">
-    <div class="hidden">.</div>
-    </div>
-   </td>
-   <td>An arc of ellipse is used as the border
-    <pre class="brush: css">
+</pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 1.5em">
+        <div
+          style="
+            background-color: lightgreen;
+            border: solid 1px black;
+            border-bottom-right-radius: 40px 20px;
+            width: 100px;
+            height: 100px;
+          "
+        >
+          <div class="hidden">.</div>
+        </div>
+      </td>
+      <td>
+        An arc of ellipse is used as the border
+        <pre class="brush: css">
 div {
   border-bottom-right-radius: 40px 20px;
 }
-</pre>
-   </td>
-  </tr>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div style="background-color: lightgreen; border: solid 1px black; border-bottom-right-radius: 40%; width: 100px; height: 100px;">
-    <div class="hidden">.</div>
-    </div>
-   </td>
-   <td>The box is a square: an arc of circle is used as the border
-    <pre class="brush: css">
+</pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 1.5em">
+        <div
+          style="
+            background-color: lightgreen;
+            border: solid 1px black;
+            border-bottom-right-radius: 40%;
+            width: 100px;
+            height: 100px;
+          "
+        >
+          <div class="hidden">.</div>
+        </div>
+      </td>
+      <td>
+        The box is a square: an arc of circle is used as the border
+        <pre class="brush: css">
 div {
   border-bottom-right-radius: 40%;
 }
-</pre>
-   </td>
-  </tr>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div style="background-color: lightgreen; border: solid 1px black; border-bottom-right-radius: 40%; width: 100px; height: 200px;">
-    <div class="hidden">.</div>
-    </div>
-   </td>
-   <td>The box is not a square: an arc of ellipse is used as the border
-    <pre class="brush: css">
+</pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 1.5em">
+        <div
+          style="
+            background-color: lightgreen;
+            border: solid 1px black;
+            border-bottom-right-radius: 40%;
+            width: 100px;
+            height: 200px;
+          "
+        >
+          <div class="hidden">.</div>
+        </div>
+      </td>
+      <td>
+        The box is not a square: an arc of ellipse is used as the border
+        <pre class="brush: css">
 div {
   border-bottom-right-radius: 40%;
 }
-</pre>
-   </td>
-  </tr>
-  <tr>
-   <td style="padding: 1.5em;">
-    <div style="border: black 3px double; border-bottom-right-radius: 40%; height: 100px; width: 100px; background-color: rgb(250,20,70); background-clip: content-box;">
-    <div class="hidden">.</div>
-    </div>
-   </td>
-   <td>The background color is clipped at the border
-    <pre class="brush: css">
+</pre
+        >
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 1.5em">
+        <div
+          style="
+            border: black 3px double;
+            border-bottom-right-radius: 40%;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(250, 20, 70);
+            background-clip: content-box;
+          "
+        >
+          <div class="hidden">.</div>
+        </div>
+      </td>
+      <td>
+        The background color is clipped at the border
+        <pre class="brush: css">
 div {
   border-bottom-right-radius:40%;
   border-style: black 3px double;
   background-color: rgb(250,20,70);
   background-clip: content-box;
 }
-</pre>
-   </td>
-  </tr>
- </tbody>
+</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The border-radius-related CSS properties: the CSS shorthand {{cssxref("border-radius")}}, the properties for the other corners: {{cssxref("border-top-right-radius")}}, {{cssxref("border-top-left-radius")}}, and {{cssxref("border-bottom-left-radius")}}.</p>
+The border-radius-related CSS properties: the CSS shorthand {{cssxref("border-radius")}}, the properties for the other corners: {{cssxref("border-top-right-radius")}}, {{cssxref("border-top-left-radius")}}, and {{cssxref("border-bottom-left-radius")}}.

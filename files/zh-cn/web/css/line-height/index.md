@@ -6,84 +6,83 @@ tags:
   - 参考
 translation_of: Web/CSS/line-height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>line-height</code></strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> 属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非<a href="/en-US/docs/Web/CSS/Replaced_element">替代</a>的 inline 元素，它用于计算行盒（line box）的高度。</p>
+**`line-height`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非[替代](/zh-CN/docs/Web/CSS/Replaced_element)的 inline 元素，它用于计算行盒（line box）的高度。
 
-<p>{{EmbedInteractiveExample("pages/css/line-height.html")}}</p>
+{{EmbedInteractiveExample("pages/css/line-height.html")}}
 
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 line-height: normal;
 
 /* Unitless values: use this number multiplied
 by the element's font size */
 line-height: 3.5;
 
-/* &lt;length&gt; values */
+/* <length> values */
 line-height: 3em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 line-height: 34%;
 
 /* Global values */
 line-height: inherit;
 line-height: initial;
 line-height: unset;
-</pre>
+```
 
-<p><code>line-height</code> 属性被指定为以下任何一个：</p>
+`line-height` 属性被指定为以下任何一个：
 
-<ul>
- <li>一个 <code><a href="#&lt;number>">&lt;数字&gt;</a></code></li>
- <li>一个 <code><a href="#&lt;length>">&lt;长度&gt;</a></code></li>
- <li>一个 <code><a href="#&lt;percentage>">&lt;百分比&gt;</a></code></li>
- <li>关键词 <code><a href="#normal">normal</a></code>。</li>
-</ul>
+- 一个 [`<数字>`](#<number>)
+- 一个 [`<长度>`](#<length>)
+- 一个 [`<百分比>`](#<percentage>)
+- 关键词 [`normal`](#normal)。
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt> </dt>
- <dt><code>normal</code></dt>
- <dd>取决于用户端。桌面浏览器（包括 Firefox）使用默认值，约为<code>1.2</code>，这取决于元素的 <code>font-family</code>。</dd>
- <dt><code>&lt;数字&gt;</code></dt>
- <dd>该属性的应用值是这个无单位数字{{cssxref("&lt;number&gt;", "&lt;数字&gt;")}}乘以该元素的字体大小。计算值与指定值相同。大多数情况下，这是设置<code>line-height</code>的<strong>推荐方法</strong>，不会在继承时产生不确定的结果。</dd>
- <dt><code>&lt;长度&gt;</code></dt>
- <dd>指定{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}用于计算 line box 的高度。参考{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}了解可使用的单位。以 <strong>em</strong> 为单位的值可能会产生不确定的结果（见下面的例子）。</dd>
- <dt><code>&lt;百分比&gt;</code></dt>
- <dd>与元素自身的字体大小有关。计算值是给定的百分比值乘以元素计算出的字体大小。<strong>百分比</strong>值可能会带来不确定的结果（见下面第二个例子）。</dd>
- <dt><code id="-moz-block-height">-moz-block-height</code> {{non-standard_inline}}</dt>
- <dd>将行高设置为当前块的内容区域高度。</dd>
-</dl>
+- `normal`
 
-<h3 id="形式化语法">形式化语法</h3>
+  - : 取决于用户端。桌面浏览器（包括 Firefox）使用默认值，约为`1.2`，这取决于元素的 `font-family`。
+
+- `<数字>`
+  - : 该属性的应用值是这个无单位数字{{cssxref("&lt;number&gt;", "&lt;数字&gt;")}}乘以该元素的字体大小。计算值与指定值相同。大多数情况下，这是设置`line-height`的**推荐方法**，不会在继承时产生不确定的结果。
+- `<长度>`
+  - : 指定{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}用于计算 line box 的高度。参考{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}了解可使用的单位。以 **em** 为单位的值可能会产生不确定的结果（见下面的例子）。
+- `<百分比>`
+  - : 与元素自身的字体大小有关。计算值是给定的百分比值乘以元素计算出的字体大小。**百分比**值可能会带来不确定的结果（见下面第二个例子）。
+- `-moz-block-height` {{non-standard_inline}}
+  - : 将行高设置为当前块的内容区域高度。
+
+### 形式化语法
 
 {{csssyntax}}
 
-<h2 id="示例"><strong>示例</strong></h2>
+## 示例
 
-<h3 id="基本示例">基本示例</h3>
+### 基本示例
 
-<pre class="brush: css">/* 理论上，以下所有规则拥有相同的行高 */
+```css
+/* 理论上，以下所有规则拥有相同的行高 */
 
 div { line-height: 1.2;   font-size: 10pt; }   /* 无单位数值 number/unitless */
 div { line-height: 1.2em; font-size: 10pt; }   /* 长度 length */
 div { line-height: 120%;  font-size: 10pt; }   /* 百分比 percentage */
 div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font 简写属性 font shorthand */
-</pre>
+```
 
-<p>为了简便，可以通过 {{cssxref("font")}} 简写来设置 <code>line-height</code>，但这要求在使用该简写属性时同时设置 <code>font-family</code> 属性。</p>
+为了简便，可以通过 {{cssxref("font")}} 简写来设置 `line-height`，但这要求在使用该简写属性时同时设置 `font-family` 属性。
 
-<h3 id="推荐在设置_line-height_时使用无单位数值">推荐在设置 line-height 时使用无单位数值</h3>
+### 推荐在设置 line-height 时使用无单位数值
 
-<p>这个示例说明了为什么给 <code>line-height</code> 赋值时使用 {{cssxref("&lt;number&gt;", "&lt;数字&gt;")}} 值比使用 {{cssxref("&lt;length&gt;","&lt;长度&gt;")}} 更好。我们会到用两个 {{HTMLElement("div")}} 元素。第一个 <code>div</code> 为绿色边框，使用无单位的 <code>line-height</code>值。第二个 <code>div</code> 带红色边框，使用 <code>em</code> 定义 <code>line-height</code> 的值。</p>
+这个示例说明了为什么给 `line-height` 赋值时使用 {{cssxref("&lt;number&gt;", "&lt;数字&gt;")}} 值比使用 {{cssxref("&lt;length&gt;","&lt;长度&gt;")}} 更好。我们会到用两个 {{HTMLElement("div")}} 元素。第一个 `div` 为绿色边框，使用无单位的 `line-height`值。第二个 `div` 带红色边框，使用 `em` 定义 `line-height` 的值。
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.green {
+```css
+.green {
   line-height: 1.1;
   border: solid limegreen;
 }
@@ -103,51 +102,46 @@ h1 {
   vertical-align: top;
   font-size: 15px;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box green"&gt;
- &lt;h1&gt;Avoid unexpected results by using unitless line-height.&lt;/h1&gt;
+```html
+<div class="box green">
+ <h1>Avoid unexpected results by using unitless line-height.</h1>
   length and percentage line-heights have poor inheritance behavior ...
-&lt;/div&gt;
+</div>
 
-&lt;div class="box red"&gt;
- &lt;h1&gt;Avoid unexpected results by using unitless line-height.&lt;/h1&gt;
+<div class="box red">
+ <h1>Avoid unexpected results by using unitless line-height.</h1>
   length and percentage line-heights have poor inheritance behavior ...
-&lt;/div&gt;
+</div>
 
-&lt;!-- The first &lt;h1&gt; line-height is calculated from its own font-size   (30px × 1.1) = 33px  --&gt;
-&lt;!-- The second &lt;h1&gt; line-height results from the red div's font-size  (15px × 1.1) = 16.5px,  probably not what you want --&gt;
-</pre>
+<!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px  -->
+<!-- The second <h1> line-height results from the red div's font-size  (15px × 1.1) = 16.5px,  probably not what you want -->
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}</p>
+{{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}
 
-<h2 id="无障碍方面">无障碍方面</h2>
+## 无障碍方面
 
-<p>主段落内容的 <code>line-height</code> 至少应为 <code>1.5</code>。 这将有助于改善低可视条件下的体验，也对认知阻碍者，如阅读困难者，有帮助。如果文字的大小要随页面的缩放而变化，请使用无单位的值，以确保行高也会等比例缩放。</p>
+主段落内容的 `line-height` 至少应为 `1.5`。 这将有助于改善低可视条件下的体验，也对认知阻碍者，如阅读困难者，有帮助。如果文字的大小要随页面的缩放而变化，请使用无单位的值，以确保行高也会等比例缩放。
 
-<p><a href="https://www.w3.org/TR/WCAG21/#visual-presentation">W3C Understanding WCAG 2.1</a></p>
+[W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.properties.line-height")}}
 
+## 参见
 
-<p>{{Compat("css.properties.line-height")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{Cssxref("font")}}</li>
- <li>{{Cssxref("font-size")}}</li>
-</ul>
+- {{Cssxref("font")}}
+- {{Cssxref("font-size")}}

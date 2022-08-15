@@ -3,431 +3,398 @@ title: CSS 属性值定义语法
 slug: Web/CSS/Value_definition_syntax
 translation_of: Web/CSS/Value_definition_syntax
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p><strong>CSS 属性值定义语法</strong>（CSS value definition syntax）是用来限定 CSS 属性合法取值的专门语法。在此基础之上，一个 CSS 属性的合法取值也由语义所限制，比如一些数字必须是正数。</p>
+**CSS 属性值定义语法**（CSS value definition syntax）是用来限定 CSS 属性合法取值的专门语法。在此基础之上，一个 CSS 属性的合法取值也由语义所限制，比如一些数字必须是正数。
 
-<p>CSS 属性值定义语法描述了哪些值是可取的 CSS 属性，基本组成元素包括关键字、符号与带类型的参数。</p>
+CSS 属性值定义语法描述了哪些值是可取的 CSS 属性，基本组成元素包括关键字、符号与带类型的参数。
 
-<h2 id="基本组成元素">基本组成元素</h2>
+## 基本组成元素
 
-<h3 id="关键字">关键字</h3>
+### 关键字
 
-<h4 id="一般关键字">一般关键字</h4>
+#### 一般关键字
 
-<p>有预定义含义的一般关键字按字面意义出现，不需要引号，如<code>auto</code>, <code>smaller</code> 或 <code>ease-in</code>。</p>
+有预定义含义的一般关键字按字面意义出现，不需要引号，如`auto`, `smaller` 或 `ease-in`。
 
-<h4 id="特殊关键字：inherit、initial和unset">特殊关键字：<code>inherit</code>、<code>initial</code>和<code>unset</code></h4>
+#### 特殊关键字：`inherit`、`initial`和`unset`
 
-<p>所有 CSS 属性值都可以使用<code>inherit</code>、<code>initial</code>和<code>unset</code>，它们的定义贯穿 CSS 始终。它们未显示在值定义中，但都是隐含可用的。</p>
+所有 CSS 属性值都可以使用`inherit`、`initial`和`unset`，它们的定义贯穿 CSS 始终。它们未显示在值定义中，但都是隐含可用的。
 
-<h3 id="符号">符号</h3>
+### 符号
 
-<p>CSS 中，有一些符号是可以出现的，比如斜杠 ('<code>/</code>') 或者逗号 ('<code>,</code>') 等。它们用来分隔属性值：逗号用来分隔数个并列值，或者分隔函数的参数；斜杠用来分隔一个值的多个部分，通常用在 CSS 缩写中分离具有相同类型但属于不同属性的组件。</p>
+CSS 中，有一些符号是可以出现的，比如斜杠 ('`/`') 或者逗号 ('`,`') 等。它们用来分隔属性值：逗号用来分隔数个并列值，或者分隔函数的参数；斜杠用来分隔一个值的多个部分，通常用在 CSS 缩写中分离具有相同类型但属于不同属性的组件。
 
-<p>这两种符号会以其字面意义出现在 CSS 属性值定义中。</p>
+这两种符号会以其字面意义出现在 CSS 属性值定义中。
 
-<h3 id="带类型的参数">带类型的参数</h3>
+### 带类型的参数
 
-<h4 id="基本类型">基本类型</h4>
+#### 基本类型
 
-<p>一些类型在 CSS 中经常出现，CSS 规范中将其专门定义，称为<em>基本类型</em>，用一对尖括号表示：'<code>&lt;</code>'与'<code>&gt;</code>'，例如：{{ cssxref("&lt;angle&gt;") }}, {{cssxref("&lt;string&gt;")}}, …</p>
+一些类型在 CSS 中经常出现，CSS 规范中将其专门定义，称为*基本类型*，用一对尖括号表示：'`<`'与'`>`'，例如：{{ cssxref("&lt;angle&gt;") }}, {{cssxref("&lt;string&gt;")}}, …
 
-<h4 id="其他类型">其他类型</h4>
+#### 其他类型
 
-<p>其他类型同样也用一对尖括号表示：'<code>&lt;</code>'与'<code>&gt;</code>'。</p>
+其他类型同样也用一对尖括号表示：'`<`'与'`>`'。
 
-<p>其他类型分为两种：</p>
+其他类型分为两种：
 
-<ul>
- <li><em>共享同一个属性名称</em>的数个类型。在这种情况下，数据类型与属性共享同一组值。它们出现在一对引号之中，经常用于属性的缩写。</li>
- <li><em>不共享同一个属性名称</em>的数个类型，它们与基本类型很相似，不同是：这种参数仅在规范中相关属性的描述处定义，而基本类型在规范中有专门定义。</li>
-</ul>
+- *共享同一个属性名称*的数个类型。在这种情况下，数据类型与属性共享同一组值。它们出现在一对引号之中，经常用于属性的缩写。
+- *不共享同一个属性名称*的数个类型，它们与基本类型很相似，不同是：这种参数仅在规范中相关属性的描述处定义，而基本类型在规范中有专门定义。
 
-<h2 id="组合符号">组合符号</h2>
+## 组合符号
 
-<h3 id="方括号">方括号</h3>
+### 方括号
 
-<p><em>方括号</em>将数个基本元素组成一个整体，用来<strong>强调组合的优先级</strong>。例如：</p>
+*方括号*将数个基本元素组成一个整体，用来**强调组合的优先级**。例如：
 
-<pre class="syntaxbox"><code>bold [ thin &amp;&amp; &lt;length&gt; ]</code></pre>
+```
+bold [ thin && <length> ]
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>bold thin 2vh</code></li>
- <li><code>bold 0 thin</code></li>
- <li><code>bold thin 3.5em</code></li>
-</ul>
+- `bold thin 2vh`
+- `bold 0 thin`
+- `bold thin 3.5em`
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>thin bold 3em</code> 因为<code>bold</code>被放置在方括号定义的整体之中。根据定义，<code>bold</code>必须出现在方括号定义的整体之前。</li>
-</ul>
+- `thin bold 3em` 因为`bold`被放置在方括号定义的整体之中。根据定义，`bold`必须出现在方括号定义的整体之前。
 
-<h3 id="并置">并置</h3>
+### 并置
 
-<p><em>并置</em>是指将数个关键字、符号或类型，用空格分开写在一起。并置中所有的元素都<strong>必须出现并且按所规定的顺序出现</strong>。例如：</p>
+*并置*是指将数个关键字、符号或类型，用空格分开写在一起。并置中所有的元素都**必须出现并且按所规定的顺序出现**。例如：
 
-<pre class="syntaxbox">bold &lt;length&gt; , thin
-</pre>
+```
+bold <length> , thin
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>bold 1em, thin</code></li>
- <li><code>bold 0, thin</code></li>
- <li><code>bold 2.5cm, thin</code></li>
- <li><code>bold 3vh, thin</code></li>
-</ul>
+- `bold 1em, thin`
+- `bold 0, thin`
+- `bold 2.5cm, thin`
+- `bold 3vh, thin`
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>thin 1em, bold</code>因为顺序有错。</li>
- <li><code>bold 1em thin</code>因为所有元素都必须出现，包括逗号。</li>
- <li><code>bold 0.5ms, thin</code>因为<code>ms</code>是时间值，不是长度值：{{cssxref("&lt;length&gt;")}}</li>
-</ul>
+- `thin 1em, bold`因为顺序有错。
+- `bold 1em thin`因为所有元素都必须出现，包括逗号。
+- `bold 0.5ms, thin`因为`ms`是时间值，不是长度值：{{cssxref("&lt;length&gt;")}}
 
-<h3 id="“与”组合符：">“与”组合符：&amp;&amp;</h3>
+### “与”组合符：&&
 
-<p><em>“与”组合符</em>连接的各个部分都<strong>必须出现，但是顺序任意</strong>。例如：</p>
+*“与”组合符*连接的各个部分都**必须出现，但是顺序任意**。例如：
 
-<pre class="syntaxbox">bold &amp;&amp; &lt;length&gt;
-</pre>
+```
+bold && <length>
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>bold 1em</code></li>
- <li><code>bold 0</code></li>
- <li><code>2.5cm bold</code></li>
- <li><code>3vh bold</code></li>
-</ul>
+- `bold 1em`
+- `bold 0`
+- `2.5cm bold`
+- `3vh bold`
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>bold</code>因为长度值没有出现。</li>
- <li><code>bold 1em bold</code>因为各部分必须恰好出现一次。</li>
-</ul>
+- `bold`因为长度值没有出现。
+- `bold 1em bold`因为各部分必须恰好出现一次。
 
-<div class="note"><strong>注：</strong>并置的优先级高于“与”组合符。例如<code>bold thin &amp;&amp; &lt;length&gt;</code>等价于<code>[ </code><code>bold thin ] &amp;&amp; &lt;length&gt;</code>。它们的合法取值是：<code>bold thin &lt;length&gt;</code>或<code>&lt;length&gt;</code><code> bold thin</code>但不是<code>bold &lt;length&gt;</code><code> thin</code>。</div>
+> **备注：** 并置的优先级高于“与”组合符。例如`bold thin && <length>`等价于` [ ``bold thin ] && <length> `。它们的合法取值是：`bold thin <length>`或` <length>`` bold thin `但不是` bold <length>`` thin `。
 
-<h3 id="“或”组合符：">“或”组合符：||</h3>
+### “或”组合符：||
 
-<p><em>“或”组合符</em>表示其连接的所有组成元素是可选的，<strong>次序任意，但是至少其中一个要出现</strong>。“或”组合符通常用来描述<a href="/zh-CN/docs/CSS/Shorthand_properties">属性缩写</a>中的各部分。</p>
+*“或”组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。“或”组合符通常用来描述[属性缩写](/zh-CN/docs/CSS/Shorthand_properties)中的各部分。
 
-<pre class="syntaxbox">&lt;'border-width'&gt; || &lt;'border-style'&gt; || &lt;'border-color'&gt;
-</pre>
+```
+<'border-width'> || <'border-style'> || <'border-color'>
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>1em solid blue</code></li>
- <li><code>blue 1em</code></li>
- <li><code>solid 1px yellow</code></li>
-</ul>
+- `1em solid blue`
+- `blue 1em`
+- `solid 1px yellow`
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>blue yellow</code>因为一个组成部分最多出现一次。</li>
- <li><code>bold</code>因为它不允许出现。</li>
-</ul>
+- `blue yellow`因为一个组成部分最多出现一次。
+- `bold`因为它不允许出现。
 
-<div class="note"><strong>注：</strong>“与”组合符的优先级高于“或”组合符，比如<code>bold || thin &amp;&amp; &lt;length&gt;</code>等价于<code>bold || [ thin &amp;&amp; &lt;length&gt; ]</code>。它们的合法取值是：<code>bold</code>, <code>thin</code> <code>&lt;length&gt;</code>, <code>bold thin</code> <code>&lt;length&gt;</code>, 或者<code>thin &lt;length&gt; bold</code> ，但不是：<code>&lt;length&gt;</code><code> bold thin</code>因为 bold 若出现，则必须出现在<code>thin &amp;&amp; &lt;length&gt;</code>整体的前面或后面。</div>
+> **备注：** “与”组合符的优先级高于“或”组合符，比如`bold || thin && <length>`等价于`bold || [ thin && <length> ]`。它们的合法取值是：`bold`, `thin` `<length>`, `bold thin` `<length>`, 或者`thin <length> bold` ，但不是：` <length>`` bold thin `因为 bold 若出现，则必须出现在`thin && <length>`整体的前面或后面。
 
-<h3 id="“互斥”组合符：">“互斥”组合符：|</h3>
+### “互斥”组合符：|
 
-<p><em>“互斥”组合符</em>表示各组成部分中只能<strong>恰好出现一个</strong>，通常用来分隔一个属性的所有可选值。例如：</p>
+*“互斥”组合符*表示各组成部分中只能**恰好出现一个**，通常用来分隔一个属性的所有可选值。例如：
 
-<pre class="syntaxbox">&lt;percentage&gt; | &lt;length&gt; | left | center | right | top | bottom</pre>
+```
+<percentage> | <length> | left | center | right | top | bottom
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>3%</code></li>
- <li><code>0</code></li>
- <li><code>3.5em</code></li>
- <li><code>left</code></li>
- <li><code>center</code></li>
- <li><code>right</code></li>
- <li><code>top</code></li>
- <li><code>bottom</code></li>
-</ul>
+- `3%`
+- `0`
+- `3.5em`
+- `left`
+- `center`
+- `right`
+- `top`
+- `bottom`
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>center 3%</code> as only one of the components must be present.</li>
- <li><code>3em 4.5em</code> as a component must be present at most one time.</li>
-</ul>
+- `center 3%` as only one of the components must be present.
+- `3em 4.5em` as a component must be present at most one time.
 
-<div class="note">
-<p><strong>注：</strong>“或”组合符的优先级高于“互斥”组合符，比如<code>bold | thin || &lt;length&gt;</code>等价于<code>bold | [ thin || &lt;length&gt; ]</code>。它们的合法取值是：<code>bold</code>, <code>thin</code>, <code>&lt;length&gt;</code>, <code>&lt;length&gt; thin</code>, 或<code>thin &lt;length&gt;，但不能是bold &lt;length&gt;，</code>因为“互斥”组合符所连接的数个部分中，只有一个能出现。</p>
-</div>
+> **备注：** “或”组合符的优先级高于“互斥”组合符，比如`bold | thin || <length>`等价于`bold | [ thin || <length> ]`。它们的合法取值是：`bold`, `thin`, `<length>`, `<length> thin`, 或 `thin <length>`，但不能是 `bold <length>`，因为“互斥”组合符所连接的数个部分中，只有一个能出现。
 
-<h2 id="数量符号">数量符号</h2>
+## 数量符号
 
-<p>数量符号用来描述一个元素可以出现多少次。若不标注，则这个元素比如恰好出现一次。</p>
+数量符号用来描述一个元素可以出现多少次。若不标注，则这个元素比如恰好出现一次。
 
-<p>注意数量描述符不能叠加出现，并且优先级最高。</p>
+注意数量描述符不能叠加出现，并且优先级最高。
 
-<h3 id="星号_*">星号 (<code>*</code>)</h3>
+### 星号 (`*`)
 
-<p><em>星号</em>表示可以出现<strong>零次（即不出现），一次，或任意多次</strong>。例如：</p>
+*星号*表示可以出现**零次（即不出现），一次，或任意多次**。例如：
 
-<pre class="syntaxbox"><code>bold smaller*</code></pre>
+```
+bold smaller*
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>bold</code></li>
- <li><code>bold smaller</code></li>
- <li><code>bold smaller smaller</code></li>
- <li><code>bold smaller smaller smaller</code> and so on.</li>
-</ul>
+- `bold`
+- `bold smaller`
+- `bold smaller smaller`
+- `bold smaller smaller smaller` and so on.
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>smaller</code> 因为<code>bold</code>并置于<code>smaller</code>，必须出现在任何<code>smaller</code>之前。</li>
-</ul>
+- `smaller` 因为`bold`并置于`smaller`，必须出现在任何`smaller`之前。
 
-<h3 id="加号">加号 (<code>+</code>)</h3>
+### 加号 (`+`)
 
-<p><em>加号</em>表示可以出现<strong>一次或多次</strong>。例如：</p>
+*加号*表示可以出现**一次或多次**。例如：
 
-<pre class="syntaxbox"><code>bold smaller+</code></pre>
+```
+bold smaller+
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>bold smaller</code></li>
- <li><code>bold smaller smaller</code></li>
- <li><code>bold smaller smaller smaller</code> and so on.</li>
-</ul>
+- `bold smaller`
+- `bold smaller smaller`
+- `bold smaller smaller smaller` and so on.
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>bold</code> 因为<code>smaller</code>必须出现至少一次。</li>
- <li><code>smaller</code> 因为<code>bold</code> 是并置关系，必须在<code>smaller</code>之前出现。</li>
-</ul>
+- `bold` 因为`smaller`必须出现至少一次。
+- `smaller` 因为`bold` 是并置关系，必须在`smaller`之前出现。
 
-<h3 id="问号">问号 (<code>?</code>)</h3>
+### 问号 (`?`)
 
-<p><em>问号</em>表示可选，即出现<strong>零次或一次</strong>。例如：</p>
+*问号*表示可选，即出现**零次或一次**。例如：
 
-<pre class="syntaxbox"><code>bold smaller?</code></pre>
+```
+bold smaller?
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>bold</code></li>
- <li><code>bold smaller</code></li>
-</ul>
+- `bold`
+- `bold smaller`
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>bold smaller smaller</code> 因为<code>smaller</code>最多出现一次。</li>
- <li><code>smaller</code> 因为<code>bold</code>是并置关系，必须出现在<code>smaller</code>之前。</li>
-</ul>
+- `bold smaller smaller` 因为`smaller`最多出现一次。
+- `smaller` 因为`bold`是并置关系，必须出现在`smaller`之前。
 
-<h3 id="大括号">大括号 (<code>{ }</code>)</h3>
+### 大括号 (`{ }`)
 
-<p><em>大括号</em>包含两个以逗号分隔的整数 A 与 B，表示<strong>最少出现 A 次，且最多出现 B 次</strong>。例如：</p>
+*大括号*包含两个以逗号分隔的整数 A 与 B，表示**最少出现 A 次，且最多出现 B 次**。例如：
 
-<pre class="syntaxbox"><code>bold smaller{1,3}</code></pre>
+```
+bold smaller{1,3}
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>bold smaller</code></li>
- <li><code>bold smaller smaller</code></li>
- <li><code>bold smaller smaller smaller</code></li>
-</ul>
+- `bold smaller`
+- `bold smaller smaller`
+- `bold smaller smaller smaller`
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>bold</code> 因为<code>smaller</code> 至少要出现一次。</li>
- <li><code>bold smaller smaller smaller smaller</code> 因为<code>smaller</code> 最多出现三次。</li>
- <li><code>smaller</code> 因为<code>bold</code>是并置关系，必须出现在<code>smaller</code>之前。</li>
-</ul>
+- `bold` 因为`smaller` 至少要出现一次。
+- `bold smaller smaller smaller smaller` 因为`smaller` 最多出现三次。
+- `smaller` 因为`bold`是并置关系，必须出现在`smaller`之前。
 
-<h3 id="井号">井号 (<code>#</code>)</h3>
+### 井号 (`#`)
 
-<p><em>井号</em>表示<strong>可以出现一次或多次</strong>，与<em>加号</em>相似。但是其多次出现必须<strong>以逗号分隔</strong>。例如：</p>
+*井号*表示**可以出现一次或多次**，与*加号*相似。但是其多次出现必须**以逗号分隔**。例如：
 
-<pre class="syntaxbox"><code>bold smaller#</code></pre>
+```
+bold smaller#
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>bold smaller</code></li>
- <li><code>bold smaller, smaller</code></li>
- <li><code>bold smaller, smaller, smaller</code> and so on.</li>
-</ul>
+- `bold smaller`
+- `bold smaller, smaller`
+- `bold smaller, smaller, smaller` and so on.
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>bold</code> 因为<code>smaller</code>必须至少出现一次。</li>
- <li><code>bold smaller smaller smaller</code> 因为多个<code>smaller</code>必须以逗号分隔。</li>
- <li><code>smaller</code> 因为<code>bold</code>是并置关系，必须出现在<code>smaller</code>之前。</li>
-</ul>
+- `bold` 因为`smaller`必须至少出现一次。
+- `bold smaller smaller smaller` 因为多个`smaller`必须以逗号分隔。
+- `smaller` 因为`bold`是并置关系，必须出现在`smaller`之前。
 
-<h3 id="Exclamation_point">叹号 (<code>!</code>)</h3>
+### 叹号 (`!`)
 
-<p>组后面的叹号表示该组是必需的，并且至少产生一个值；即使组内项目的语法允许省略全部的值，也至少要保留一个值。</p>
+组后面的叹号表示该组是必需的，并且至少产生一个值；即使组内项目的语法允许省略全部的值，也至少要保留一个值。
 
-<pre class="syntaxbox">[ bold? smaller? ]!
-</pre>
+```
+[ bold? smaller? ]!
+```
 
-<p>以下均为该例的合法取值：</p>
+以下均为该例的合法取值：
 
-<ul>
- <li><code>bold</code></li>
- <li><code>smaller</code></li>
- <li><code>bold smaller</code></li>
-</ul>
+- `bold`
+- `smaller`
+- `bold smaller`
 
-<p>但以下不是合法取值：</p>
+但以下不是合法取值：
 
-<ul>
- <li><code>bold</code> 和 <code>smaller</code>都没有：因为至少要出现一个。</li>
- <li><code>smaller bold</code>：因为 <code>bold</code> 必须出现在 <code>smaller</code> 前面。</li>
- <li><code>bold smaller bold</code>：因为 <code>bold</code> 只能出现一次。</li>
-</ul>
+- `bold` 和 `smaller`都没有：因为至少要出现一个。
+- `smaller bold`：因为 `bold` 必须出现在 `smaller` 前面。
+- `bold smaller bold`：因为 `bold` 只能出现一次。
 
-<h2 id="总结">总结</h2>
+## 总结
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">符号</th>
-   <th scope="col">名称</th>
-   <th scope="col">描述</th>
-   <th scope="col">示例</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th colspan="4">组合符号</th>
-  </tr>
-  <tr>
-   <td></td>
-   <td>并置</td>
-   <td>各部分必须出现且按顺序出现</td>
-   <td><code>solid &lt;length&gt;</code></td>
-  </tr>
-  <tr>
-   <td><code>&amp;&amp;</code></td>
-   <td>“与”组合符</td>
-   <td>各部分必须出现，但可以不按顺序</td>
-   <td><code>&lt;length&gt; &amp;&amp; &lt;string&gt;</code></td>
-  </tr>
-  <tr>
-   <td><code>||</code></td>
-   <td>“或”组合符</td>
-   <td>各部分至少出现一个，可以不按顺序</td>
-   <td><code>&lt;'border-image-outset'&gt; || &lt;'border-image-slice'&gt;</code></td>
-  </tr>
-  <tr>
-   <td><code>|</code></td>
-   <td>“互斥”组合符</td>
-   <td>各部分恰好出现一个</td>
-   <td><code>smaller | small | normal | big | bigger</code></td>
-  </tr>
-  <tr>
-   <td><code>[ ]</code></td>
-   <td>方括号</td>
-   <td>强调优先级</td>
-   <td><code>bold [ thin &amp;&amp; &lt;length&gt; ]</code></td>
-  </tr>
-  <tr>
-   <th colspan="4">数量符号</th>
-  </tr>
-  <tr>
-   <td></td>
-   <td>无数量符号</td>
-   <td>恰好一次</td>
-   <td><code>solid</code></td>
-  </tr>
-  <tr>
-   <td><code>*</code></td>
-   <td>星号</td>
-   <td>零次、一次或多次</td>
-   <td><code>bold smaller*</code></td>
-  </tr>
-  <tr>
-   <td><code>+</code></td>
-   <td>加号</td>
-   <td>一次或多次</td>
-   <td><code>bold smaller+</code></td>
-  </tr>
-  <tr>
-   <td><code>?</code></td>
-   <td>问号</td>
-   <td>零次或一次（即可选）</td>
-   <td><code>bold smaller?</code></td>
-  </tr>
-  <tr>
-   <td><code>{A,B}</code></td>
-   <td>大括号</td>
-   <td>至少<code>A</code>次，至多<code>B</code>次</td>
-   <td><code>bold smaller{1,3}</code></td>
-  </tr>
-  <tr>
-   <td><code>#</code></td>
-   <td>井号</td>
-   <td>一次或多次，但多次出现必须以逗号分隔</td>
-   <td><code>bold smaller#</code></td>
-  </tr>
-  <tr>
-   <td><code>!</code></td>
-   <td>叹号</td>
-   <td>组必须产生一个值</td>
-   <td><code>[ bold? smaller? ]!</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">符号</th>
+      <th scope="col">名称</th>
+      <th scope="col">描述</th>
+      <th scope="col">示例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="4">组合符号</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>并置</td>
+      <td>各部分必须出现且按顺序出现</td>
+      <td><code>solid &#x3C;length></code></td>
+    </tr>
+    <tr>
+      <td><code>&#x26;&#x26;</code></td>
+      <td>“与”组合符</td>
+      <td>各部分必须出现，但可以不按顺序</td>
+      <td><code>&#x3C;length> &#x26;&#x26; &#x3C;string></code></td>
+    </tr>
+    <tr>
+      <td><code>||</code></td>
+      <td>“或”组合符</td>
+      <td>各部分至少出现一个，可以不按顺序</td>
+      <td>
+        <code>&#x3C;'border-image-outset'> || &#x3C;'border-image-slice'></code>
+      </td>
+    </tr>
+    <tr>
+      <td><code>|</code></td>
+      <td>“互斥”组合符</td>
+      <td>各部分恰好出现一个</td>
+      <td><code>smaller | small | normal | big | bigger</code></td>
+    </tr>
+    <tr>
+      <td><code>[ ]</code></td>
+      <td>方括号</td>
+      <td>强调优先级</td>
+      <td><code>bold [ thin &#x26;&#x26; &#x3C;length> ]</code></td>
+    </tr>
+    <tr>
+      <th colspan="4">数量符号</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>无数量符号</td>
+      <td>恰好一次</td>
+      <td><code>solid</code></td>
+    </tr>
+    <tr>
+      <td><code>*</code></td>
+      <td>星号</td>
+      <td>零次、一次或多次</td>
+      <td><code>bold smaller*</code></td>
+    </tr>
+    <tr>
+      <td><code>+</code></td>
+      <td>加号</td>
+      <td>一次或多次</td>
+      <td><code>bold smaller+</code></td>
+    </tr>
+    <tr>
+      <td><code>?</code></td>
+      <td>问号</td>
+      <td>零次或一次（即可选）</td>
+      <td><code>bold smaller?</code></td>
+    </tr>
+    <tr>
+      <td><code>{A,B}</code></td>
+      <td>大括号</td>
+      <td>至少<code>A</code>次，至多<code>B</code>次</td>
+      <td><code>bold smaller{1,3}</code></td>
+    </tr>
+    <tr>
+      <td><code>#</code></td>
+      <td>井号</td>
+      <td>一次或多次，但多次出现必须以逗号分隔</td>
+      <td><code>bold smaller#</code></td>
+    </tr>
+    <tr>
+      <td><code>!</code></td>
+      <td>叹号</td>
+      <td>组必须产生一个值</td>
+      <td><code>[ bold? smaller? ]!</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>CSS 重要概念：
-  <ul>
-    <li><a href="/zh-CN/docs/Web/CSS/Syntax">CSS 语法</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/At-rule">@ 规则</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Comments">注释</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Specificity">优先级</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/inheritance">继承</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">盒模型</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Layout_mode">布局模式</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Visual_formatting_model">视觉格式化模型</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距合并</a></li>
-    <li>值
-      <ul>
-        <li><a href="/zh-CN/docs/Web/CSS/initial_value">初始值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/computed_value">计算值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/resolved_value">解析值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/specified_value">指定值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/used_value">应用值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/actual_value">实际值</a></li>
-      </ul>
-    </li>
-    <li><a href="/zh-CN/docs/Web/CSS/Value_definition_syntax">属性值定义语法</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Shorthand_properties">简写属性</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a></li>
-  </ul>
- </li>
-</ul>
+- CSS 重要概念：
+
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 值
+
+    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
+    - [指定值](/zh-CN/docs/Web/CSS/specified_value)
+    - [应用值](/zh-CN/docs/Web/CSS/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)

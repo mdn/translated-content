@@ -3,74 +3,77 @@ title: flex-direction
 slug: Web/CSS/flex-direction
 translation_of: Web/CSS/flex-direction
 ---
-<p>{{ CSSRef("CSS Flexible Boxes") }}</p>
+{{ CSSRef("CSS Flexible Boxes") }}
 
-<p><a href="/zh-CN/docs/CSS">CSS</a> <code><strong>flex-direction</strong></code> 属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向 (正方向或反方向)。</p>
+[CSS](/zh-CN/docs/CSS) **`flex-direction`** 属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向 (正方向或反方向)。
 
-<pre><code>/* The direction text is laid out in a line */
+```
+/* The direction text is laid out in a line */
 flex-direction: row;
 
-/* Like &lt;row&gt;, but reversed */
+/* Like <row>, but reversed */
 flex-direction: row-reverse;
 
 /* The direction in which lines of text are stacked */
 flex-direction: column;
 
-/* Like &lt;column&gt;, but reversed */
+/* Like <column>, but reversed */
 flex-direction: column-reverse;
 
 /* Global values */
 flex-direction: inherit;
 flex-direction: initial;
-flex-direction: unset;</code></pre>
+flex-direction: unset;
+```
 
-<p>请注意，值 <code>row</code> 和 <code>row-reverse</code> 受 flex 容器的方向性的影响。如果它的 dir 属性是 ltr，row 表示从左到右定向的水平轴，而 row-reverse 表示从右到左; 如果 dir 属性是 rtl，row 表示从右到左定向的轴，而 row-reverse 表示从左到右。</p>
+请注意，值 `row` 和 `row-reverse` 受 flex 容器的方向性的影响。如果它的 dir 属性是 ltr，row 表示从左到右定向的水平轴，而 row-reverse 表示从右到左; 如果 dir 属性是 rtl，row 表示从右到左定向的轴，而 row-reverse 表示从左到右。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>查看 <a href="/zh-CN/docs/Web/Guide/CSS/Flexible_boxes">使用 CSS 弹性盒子</a> 以了解更多的属性和信息。</p>
+查看 [使用 CSS 弹性盒子](/zh-CN/docs/Web/Guide/CSS/Flexible_boxes) 以了解更多的属性和信息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<p>接受以下取值：</p>
+接受以下取值：
 
-<dl>
- <dt><code>row</code></dt>
- <dd>flex 容器的主轴被定义为与文本方向相同。主轴起点和主轴终点与内容方向相同。</dd>
- <dt><code>row-reverse</code></dt>
- <dd>表现和 row 相同，但是置换了主轴起点和主轴终点</dd>
- <dt><code>column</code></dt>
- <dd>flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同</dd>
- <dt><code>column-reverse</code></dt>
- <dd>表现和<code>column</code>相同，但是置换了主轴起点和主轴终点</dd>
-</dl>
+- `row`
+  - : flex 容器的主轴被定义为与文本方向相同。主轴起点和主轴终点与内容方向相同。
+- `row-reverse`
+  - : 表现和 row 相同，但是置换了主轴起点和主轴终点
+- `column`
+  - : flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同
+- `column-reverse`
+  - : 表现和`column`相同，但是置换了主轴起点和主轴终点
 
-<h3 id="语法格式">语法格式</h3>
+### 语法格式
 
 {{csssyntax("flex-direction")}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html"><code>&lt;h4&gt;This is a Column-Reverse&lt;/h4&gt;
-&lt;div id="content"&gt;
-    &lt;div id="box" style="background-color:red;"&gt;A&lt;/div&gt;
-    &lt;div id="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-    &lt;div id="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;This is a Row-Reverse&lt;/h4&gt;
-&lt;div id="content1"&gt;
-    &lt;div id="box1" style="background-color:red;"&gt;A&lt;/div&gt;
-    &lt;div id="box1" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-    &lt;div id="box1" style="background-color:yellow;"&gt;C&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+```html
+<h4>This is a Column-Reverse</h4>
+<div id="content">
+    <div id="box" style="background-color:red;">A</div>
+    <div id="box" style="background-color:lightblue;">B</div>
+    <div id="box" style="background-color:yellow;">C</div>
+</div>
+<h4>This is a Row-Reverse</h4>
+<div id="content1">
+    <div id="box1" style="background-color:red;">A</div>
+    <div id="box1" style="background-color:lightblue;">B</div>
+    <div id="box1" style="background-color:yellow;">C</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css"><code>#content {
+```css
+#content {
   width: 200px;
   height: 200px;
   border: 1px solid #c3c3c3;
@@ -78,7 +81,7 @@ flex-direction: unset;</code></pre>
   -webkit-flex-direction: column-reverse;
   display: flex;
   flex-direction: column-reverse;
-}</code>
+}
 
 #box {
   width: 50px;
@@ -98,22 +101,21 @@ flex-direction: unset;</code></pre>
 #box1 {
   width: 50px;
   height: 50px;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('例子', '', '300', '', 'Web/CSS/flex-direction') }}</p>
+{{ EmbedLiveSample('例子', '', '300', '', 'Web/CSS/flex-direction') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.flex-direction")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">使用 CSS 弹性盒子</a></li>
-</ul>
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)

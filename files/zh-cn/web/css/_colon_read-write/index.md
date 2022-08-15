@@ -1,13 +1,14 @@
 ---
 title: ':read-write'
-slug: 'Web/CSS/:read-write'
-translation_of: 'Web/CSS/:read-write'
+slug: Web/CSS/:read-write
+translation_of: Web/CSS/:read-write
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:read-write</code></strong> <code><a href="/zh-CN/docs/Web/CSS">CSS</a></code> <code><a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a></code> 代表一个元素（例如可输入文本的 input 元素）可以被用户编辑。</p>
+**`:read-write`** [`CSS`](/zh-CN/docs/Web/CSS) [`伪类`](/zh-CN/docs/Web/CSS/Pseudo-classes) 代表一个元素（例如可输入文本的 input 元素）可以被用户编辑。
 
-<pre class="brush: css no-line-numbers">/* 选择所有可编辑的 &lt;input&gt; 元素 */
+```css
+/* 选择所有可编辑的 <input> 元素 */
 /* Firefox 中需要加前缀 */
 input:-moz-read-write {
   background-color: #bbf;
@@ -16,53 +17,51 @@ input:-moz-read-write {
 /* Supported in Blink/WebKit/Edge without a prefix */
 input:read-write {
   background-color: #bbf;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>注意：</strong>这个选择器不仅仅选择 {{htmlElement("input")}} 元素，它也会选择所有可以被用户编辑的元素，例如设置了 {{htmlattrxref("contenteditable")}} 属性的  {{htmlelement("p")}} 元素。</p>
-</div>
+> **备注：** 这个选择器不仅仅选择 {{htmlElement("input")}} 元素，它也会选择所有可以被用户编辑的元素，例如设置了 {{htmlattrxref("contenteditable")}} 属性的 {{htmlelement("p")}} 元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="text" value="Type whatever you want here."&gt;
-&lt;input type="text" value="This is a read-only field." readonly&gt;
-&lt;p&gt;This is a normal paragraph.&lt;/p&gt;
-&lt;p contenteditable="true"&gt;You can edit this paragraph!&lt;/p&gt;</pre>
+```html
+<input type="text" value="Type whatever you want here.">
+<input type="text" value="This is a read-only field." readonly>
+<p>This is a normal paragraph.</p>
+<p contenteditable="true">You can edit this paragraph!</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css line-numbers  language-css">input { min-width: 25em; }
+```css
+input { min-width: 25em; }
 input:-moz-read-write { background: cyan; }
 input:read-write { background: cyan; }
 
 p:-moz-read-write { background: lightgray; }
 p:read-write { background: lightgray; }
 p[contenteditable="true"] { color: blue; }
-</pre>
+```
 
-<h3 id="输出">输出</h3>
+### 输出
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.selectors.read-write")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.read-write")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{cssxref(":read-only")}}</li>
- <li>HTML {{htmlattrxref("contenteditable")}} attribute</li>
-</ul>
+- {{cssxref(":read-only")}}
+- HTML {{htmlattrxref("contenteditable")}} attribute

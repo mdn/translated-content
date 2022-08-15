@@ -3,67 +3,57 @@ title: 应用值
 slug: Web/CSS/used_value
 translation_of: Web/CSS/used_value
 ---
-<p>CSS 属性的应用值（used value）是完成所有计算后最终使用的值，可以由 <a href="/en-US/docs/DOM/window.getComputedStyle">window.getComputedStyle</a> 获取。尺寸 (例如 <code>width</code>, <code>line-height</code>) 单位为像素，简写属性 (例如 background) 与组成属性相符 (例如 <code>background-color，</code><code>display</code>) 与 <code>position</code> <code>、float相符，</code>每个 CSS 属性都有值。</p>
+CSS 属性的应用值（used value）是完成所有计算后最终使用的值，可以由 [window.getComputedStyle](/zh-CN/docs/DOM/window.getComputedStyle) 获取。尺寸 (例如 `width`, `line-height`) 单位为像素，简写属性 (例如 background) 与组成属性相符 (例如 ` background-color，``display `) 与 `position` `、float相符，`每个 CSS 属性都有值。
 
-<h2 id="详情">详情</h2>
+## 详情
 
-<p>计算出 CSS 属性的最终值有三个步骤。首先，<a href="/en-US/docs/CSS/specified_value">指定值 specified value</a> 取自样式层叠 (选取样式表里权重最高的规则), <a href="/en-US/docs/CSS/inheritance">继承</a> (如果属性可以继承则取父元素的值)，或者默认值。然后，按规范算出 <a href="/en-US/docs/CSS/computed_value">计算值 computed value</a>  (例如， <code>span</code> 指定 <code>position: absolute</code> 后<code>display</code> 变为 <code>block</code>)。最后，计算布局 (尺寸比如 <code>auto</code> 或 百分数 换算为像素值 )，结果即 <strong>应用值 used value</strong>。这些步骤是在内部完成的，脚本只能使用 <a href="/en-US/docs/DOM/window.getComputedStyle">window.getComputedStyle</a> 获得最终的应用值。</p>
+计算出 CSS 属性的最终值有三个步骤。首先，[指定值 specified value](/zh-CN/docs/CSS/specified_value) 取自样式层叠 (选取样式表里权重最高的规则), [继承](/zh-CN/docs/CSS/inheritance) (如果属性可以继承则取父元素的值)，或者默认值。然后，按规范算出 [计算值 computed value](/zh-CN/docs/CSS/computed_value) (例如， `span` 指定 `position: absolute` 后`display` 变为 `block`)。最后，计算布局 (尺寸比如 `auto` 或 百分数 换算为像素值 )，结果即 **应用值 used value**。这些步骤是在内部完成的，脚本只能使用 [window.getComputedStyle](/zh-CN/docs/DOM/window.getComputedStyle) 获得最终的应用值。
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<div style="border: 1px solid red;">没有明确的宽度。指定的宽度：auto (默认). 计算的宽度：auto. 应用的宽度：998px (举例而言)。
-<div style="border: 1px solid green; width: 50%;">明确的宽度：50%. 指定的宽度：50%. 计算的宽度：50%. 应用的宽度：447px
-<div style="border: 1px solid blue; width: inherit;">明确的宽度：inherit. 指定的宽度：50%. 计算的宽度：50%. 应用的宽度：221px .</div>
-</div>
-</div>
+没有明确的宽度。指定的宽度：auto (默认). 计算的宽度：auto. 应用的宽度：998px (举例而言)。明确的宽度：50%. 指定的宽度：50%. 计算的宽度：50%. 应用的宽度：447px 明确的宽度：inherit. 指定的宽度：50%. 计算的宽度：50%. 应用的宽度：221px .
 
-<h2 id="与计算值的区别">与计算值的区别</h2>
+## 与计算值的区别
 
-<p>CSS 2.0 只定义了 <a href="/en-US/docs/CSS/computed_value">计算值 computed value</a> 作为属性计算的最后一步。CSS 2.1 引进了定义明显不同的的应用值，这样当父元素的计算值为百分数时子元素可以显式地继承其高宽。对于不依赖于布局的 CSS 属性 (例如 display, font-size, line-height) 计算值与应用值一样，否则就会不一样  (引自 <a href="http://www.w3.org/TR/CSS2/changes.html#q36">CSS 2.1 Changes: Specified, computed, and actual values</a>):</p>
+CSS 2.0 只定义了 [计算值 computed value](/zh-CN/docs/CSS/computed_value) 作为属性计算的最后一步。CSS 2.1 引进了定义明显不同的的应用值，这样当父元素的计算值为百分数时子元素可以显式地继承其高宽。对于不依赖于布局的 CSS 属性 (例如 display, font-size, line-height) 计算值与应用值一样，否则就会不一样 (引自 [CSS 2.1 Changes: Specified, computed, and actual values](http://www.w3.org/TR/CSS2/changes.html#q36)):
 
-<ul style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 25px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">
- <li>background-position</li>
- <li>bottom, left, right, top</li>
- <li>height, width</li>
- <li>margin-bottom, margin-left, margin-right, margin-top,</li>
- <li>min-height, min-width</li>
- <li>padding-bottom, padding-left, padding-right, padding-top</li>
- <li>text-indent</li>
-</ul>
+- background-position
+- bottom, left, right, top
+- height, width
+- margin-bottom, margin-left, margin-right, margin-top,
+- min-height, min-width
+- padding-bottom, padding-left, padding-right, padding-top
+- text-indent
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p><a href="http://www.w3.org/TR/CSS2/cascade.html#used-value">CSS Level 2: Used Values</a></p>
+[CSS Level 2: Used Values](http://www.w3.org/TR/CSS2/cascade.html#used-value)
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/CSS_Reference">CSS Reference</a></li>
- <li>CSS 重要概念：
-  <ul>
-    <li><a href="/zh-CN/docs/Web/CSS/Syntax">CSS 语法</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/At-rule">@ 规则</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Comments">注释</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Specificity">优先级</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/inheritance">继承</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">盒模型</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Layout_mode">布局模式</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Visual_formatting_model">视觉格式化模型</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距合并</a></li>
-    <li>值
-      <ul>
-        <li><a href="/zh-CN/docs/Web/CSS/initial_value">初始值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/computed_value">计算值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/resolved_value">解析值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/specified_value">指定值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/used_value">应用值</a></li>
-        <li><a href="/zh-CN/docs/Web/CSS/actual_value">实际值</a></li>
-      </ul>
-    </li>
-    <li><a href="/zh-CN/docs/Web/CSS/Value_definition_syntax">属性值定义语法</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Shorthand_properties">简写属性</a></li>
-    <li><a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a></li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/DOM/window.getComputedStyle">window.getComputedStyle</a></li>
-</ul>
+- [CSS Reference](/zh-CN/docs/CSS_Reference)
+- CSS 重要概念：
+
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 值
+
+    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
+    - [指定值](/zh-CN/docs/Web/CSS/specified_value)
+    - [应用值](/zh-CN/docs/Web/CSS/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+
+- [window.getComputedStyle](/zh-CN/docs/DOM/window.getComputedStyle)

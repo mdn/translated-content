@@ -8,22 +8,20 @@ tags:
 translation_of: Web/CSS/margin
 translation_of_original: Web/CSS/margin-new
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code><strong>margin</strong></code> 属性为给定元素设置所有四个（上下左右）方向的外边距属性。也就是 {{cssxref("margin-top")}}，{{cssxref("margin-right")}}，{{cssxref("margin-bottom")}}，和 {{cssxref("margin-left")}} 四个外边距属性设置的<a href="/zh-CN/docs/Web/CSS/Shorthand_properties">简写</a>。</p>
+**`margin`** 属性为给定元素设置所有四个（上下左右）方向的外边距属性。也就是 {{cssxref("margin-top")}}，{{cssxref("margin-right")}}，{{cssxref("margin-bottom")}}，和 {{cssxref("margin-left")}} 四个外边距属性设置的[简写](/zh-CN/docs/Web/CSS/Shorthand_properties)。
 
-<div>{{EmbedInteractiveExample("pages/css/margin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin.html")}}
 
+上、下外边框的设置对*不[可替换](/zh-CN/docs/Web/CSS/Replaced_element)*内联元素，如 {{HTMLElement("span")}} 和 {{HTMLElement("code")}}，无效。
 
-<p>上、下外边框的设置对<em>不<a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换</a></em>内联元素，如 {{HTMLElement("span")}} 和 {{HTMLElement("code")}}，无效。</p>
+> **备注：** 外边距控制的是元素外部空出的空间。相反，{{cssxref("padding")}} 操作元素*内部*空出的空间。
 
-<div class="note">
-<p><strong>注意：</strong> 外边距控制的是元素外部空出的空间。相反，{{cssxref("padding")}} 操作元素<em>内部</em>空出的空间。</p>
-</div>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* 应用于所有边 */
+```css
+/* 应用于所有边 */
 margin: 1em;
 margin: -3px;
 
@@ -40,45 +38,44 @@ margin: 2px 1em 0 auto;
 margin: inherit;
 margin: initial;
 margin: unset;
-</pre>
+```
 
-<p><code>margin</code> 属性接受 1~4 个值。每个值可以是 {{cssxref("&lt;length&gt;")}}，{{cssxref("&lt;percentage&gt;")}}，或 <code><a href="#auto">auto</a></code>。取值为负时元素会比原来更接近临近元素。</p>
+`margin` 属性接受 1\~4 个值。每个值可以是 {{cssxref("&lt;length&gt;")}}，{{cssxref("&lt;percentage&gt;")}}，或 [`auto`](#auto)。取值为负时元素会比原来更接近临近元素。
 
-<ul>
- <li>当只指定<strong>一个</strong>值时，该值会统一应用到<strong>全部四个边</strong>的外边距上。</li>
- <li>指定<strong>两个</strong>值时，第一个值会应用于<strong>上边和下边</strong>的外边距，第二个值应用于<strong>左边和右边</strong>。</li>
- <li>指定<strong>三个</strong>值时，第一个值应用于<strong>上边</strong>，第二个值应用于<strong>右边和左边</strong>，第三个则应用于<strong>下边</strong>的外边距。</li>
- <li>指定<strong>四个</strong>值时，依次（顺时针方向）作为<strong>上边</strong>，<strong>右边</strong>，<strong>下边</strong>，和<strong>左边</strong>的外边距。</li>
-</ul>
+- 当只指定**一个**值时，该值会统一应用到**全部四个边**的外边距上。
+- 指定**两个**值时，第一个值会应用于**上边和下边**的外边距，第二个值应用于**左边和右边**。
+- 指定**三个**值时，第一个值应用于**上边**，第二个值应用于**右边和左边**，第三个则应用于**下边**的外边距。
+- 指定**四个**值时，依次（顺时针方向）作为**上边**，**右边**，**下边**，和**左边**的外边距。
 
-<h3 id="可取值">可取值</h3>
+### 可取值
 
-<dl>
- <dt><strong>{{cssxref("length")}}</strong></dt>
- <dd>以固定值为外边距。</dd>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>相对于<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Containing_block">包含块</a>的<em>宽度</em>，以百分比值为外边距。</dd>
- <dt><code>auto</code></dt>
- <dd>让浏览器自己选择一个合适的外边距。有时，在一些特殊情况下，该值可以使元素居中。</dd>
-</dl>
+- **{{cssxref("length")}}**
+  - : 以固定值为外边距。
+- {{cssxref("percentage")}}
+  - : 相对于[包含块](/zh-CN/docs/Web/CSS/Containing_block)的*宽度*，以百分比值为外边距。
+- `auto`
+  - : 让浏览器自己选择一个合适的外边距。有时，在一些特殊情况下，该值可以使元素居中。
 
-<h3 id="语法格式">语法格式</h3>
+### 语法格式
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="简单的例子">简单的例子</h3>
+### 简单的例子
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="center"&gt;此元素会被居中。&lt;/div&gt;
+```html
+<div class="center">此元素会被居中。</div>
 
-&lt;div class="outside"&gt;此元素会显示在包含块之外。&lt;/div&gt;</pre>
+<div class="outside">此元素会显示在包含块之外。</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight:[2,8] notranslate">.center {
+```css
+.center {
   margin: auto;
   background: lime;
   width: 66%;
@@ -88,13 +85,15 @@ margin: unset;
   margin: 3rem 0 0 -3rem;
   background: cyan;
   width: 66%;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('简单的例子','100%',120) }}</p>
+{{ EmbedLiveSample('简单的例子','100%',120) }}
 
-<h3 id="更多的例子">更多的例子</h3>
+### 更多的例子
 
-<pre class="brush: css notranslate">margin: 5%;                 /* 所有边：5% 的外边距 */
+```css
+margin: 5%;                 /* 所有边：5% 的外边距 */
 
 margin: 10px;               /* 所有边：10px 的外边距 */
 
@@ -115,35 +114,33 @@ margin: 2em auto;           /* 上边和下边：2em 的外边距 */
 
 margin: auto;               /* 上边和下边：无外边距 */
                             /* 水平方向居中        */
-</pre>
+```
 
-<h2 id="贴士">贴士</h2>
+## 贴士
 
-<h3 id="水平居中">水平居中</h3>
+### 水平居中
 
-<p>在现代浏览器中实现水平居中，可以使用 {{cssxref("display")}}<code>: flex; </code>{{cssxref("justify-content")}}<code>: center;</code>。</p>
+在现代浏览器中实现水平居中，可以使用 {{cssxref("display")}}`: flex; `{{cssxref("justify-content")}}`: center;`。
 
-<p>不过，在 IE8-9 这样的不支持弹性盒布局的旧式浏览器中，上述代码并不会生效。此时要实现在父元素中居中，可使用 <code>margin: 0 auto;</code>。</p>
+不过，在 IE8-9 这样的不支持弹性盒布局的旧式浏览器中，上述代码并不会生效。此时要实现在父元素中居中，可使用 `margin: 0 auto;`。
 
-<h3 id="外边距重叠">外边距重叠</h3>
+### 外边距重叠
 
-<p>上下元素的下上外边距有时会重叠，实际空出的空间长度变为两外边距中的较长值。查看<a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距重叠</a>可找到更多信息。</p>
+上下元素的下上外边距有时会重叠，实际空出的空间长度变为两外边距中的较长值。查看[外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)可找到更多信息。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.margin")}}</p>
+{{Compat("css.properties.margin")}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">CSS 基础框盒模型介绍 </a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距重叠</a></li>
- <li>{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}</li>
- <li>逻辑相关的属性：{{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}，和 {{cssxref("margin-inline-end")}} 与其简称 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}}</li>
-</ul>
+- [CSS 基础框盒模型介绍](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
+- 逻辑相关的属性：{{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}，和 {{cssxref("margin-inline-end")}} 与其简称 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}}

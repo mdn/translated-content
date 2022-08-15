@@ -1,42 +1,44 @@
 ---
 title: ':in-range'
-slug: 'Web/CSS/:in-range'
-translation_of: 'Web/CSS/:in-range'
+slug: Web/CSS/:in-range
+translation_of: Web/CSS/:in-range
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}**`in-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 代表一个 {{htmlelement("input")}} 元素，其当前值处于属性{{htmlattrxref("min", "input")}} 和{{htmlattrxref("max","input")}} 限定的范围之内。
 
-<div><strong><code>in-range</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/CSS/Pseudo-classes">伪类</a> 代表一个 {{htmlelement("input")}} 元素，其当前值处于属性{{htmlattrxref("min", "input")}} 和{{htmlattrxref("max","input")}} 限定的范围之内。</div>
-
-<pre class="brush: css no-line-numbers">/* 该伪类可选定任意的&lt;input&gt;, 但只有在该元素指定了取值范围，并且元素值处于指定范围时才有效*/
+```css
+/* 该伪类可选定任意的<input>, 但只有在该元素指定了取值范围，并且元素值处于指定范围时才有效*/
 input:in-range {
   background-color: rgba(0, 255, 0, 0.25);
-}</pre>
+}
+```
 
-<p>该伪类用于给用户一个可视化的提示，表示输入域的当前值处于允许范围内。</p>
+该伪类用于给用户一个可视化的提示，表示输入域的当前值处于允许范围内。
 
-<div class="note">注意：该伪类仅适用于那些拥有（或可以接受）取值范围设定的元素。若缺少此类设定，元素值就无所谓“in-range”和“out-range”。</div>
+> **备注：** 该伪类仅适用于那些拥有（或可以接受）取值范围设定的元素。若缺少此类设定，元素值就无所谓“in-range”和“out-range”。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<div id="example">
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form action="" id="form1"&gt;
-  &lt;ul&gt;Values between 1 and 10 are valid.
-    &lt;li&gt;
-      &lt;input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12"&gt;
-      &lt;label for="value1"&gt;Your value is &lt;/label&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="" id="form1">
+  <ul>Values between 1 and 10 are valid.
+    <li>
+      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+      <label for="value1">Your value is </label>
+    </li>
+  </ul>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">li {
+```css
+li {
   list-style: none;
   margin-bottom: 1em;
 }
@@ -60,30 +62,22 @@ input:in-range + label::after {
 
 input:out-of-range + label::after {
   content: 'out of range!';
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
-</div>
+### 结果
 
-<div>{{EmbedLiveSample('Example', 600, 140)}}</div>
+{{EmbedLiveSample('Example', 600, 140)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<div>
+{{Compat("css.selectors.in-range")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.in-range")}}</p>
-</div>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{cssxref(":out-of-range")}}</li>
- <li><a href="/zh-CN/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
-</ul>
+- {{cssxref(":out-of-range")}}
+- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)

@@ -10,79 +10,61 @@ tags:
   - 概述
 translation_of: Web/CSS/CSS_Columns
 ---
-<div>{{CSSRef("CSS3 Multicol")}}</div>
+{{CSSRef("CSS3 Multicol")}}
 
-<p><strong>CSS 多列布局（CSS Multi-column Layout）</strong>是一种定义了多栏布局的模块，可支持在布局中建立列（column）的数量，以及内容如何在列之间流动（flow）、列之间的间距（gap）大小，以及列的分隔线（column rules）。</p>
+**CSS 多列布局（CSS Multi-column Layout）**是一种定义了多栏布局的模块，可支持在布局中建立列（column）的数量，以及内容如何在列之间流动（flow）、列之间的间距（gap）大小，以及列的分隔线（column rules）。
 
-<h2 id="基本示例">基本示例</h2>
+## 基本示例
 
-<p>在下列示例中，{{cssxref("column-count")}}属性应用于带有容器类的元素。因为<code>column-count</code>的值为<code>3</code>，所以内容排成等宽的 3 列。</p>
+在下列示例中，{{cssxref("column-count")}}属性应用于带有容器类的元素。因为`column-count`的值为`3`，所以内容排成等宽的 3 列。
 
-<p>{{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}</p>
+{{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
 
-<h2 id="Relationship_to_Fragmentation">Relationship to Fragmentation</h2>
+## Relationship to Fragmentation
 
-<p>Multiple-column Layout is closely related to <a href="/zh-CN/docs/Web/CSS/CSS_Pages">Paged Media</a>, in that each column box becomes a fragment, much like a printed page becomes a fragment of an overall document. Therefore the properties now defined in the <a href="/zh-CN/docs/Web/CSS/CSS_Fragmentation">CSS Fragmentation</a> specification are required in order to control how content breaks between columns. </p>
+Multiple-column Layout is closely related to [Paged Media](/zh-CN/docs/Web/CSS/CSS_Pages), in that each column box becomes a fragment, much like a printed page becomes a fragment of an overall document. Therefore the properties now defined in the [CSS Fragmentation](/zh-CN/docs/Web/CSS/CSS_Fragmentation) specification are required in order to control how content breaks between columns.
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="多列布局属性">多列布局属性</h3>
+### 多列布局属性
 
-<div class="index">
-<ul>
- <li>{{cssxref("column-count")}}</li>
- <li>{{cssxref("column-fill")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("column-rule")}}</li>
- <li>{{cssxref("column-rule-color")}}</li>
- <li>{{cssxref("column-rule-style")}}</li>
- <li>{{cssxref("column-rule-width")}}</li>
- <li>{{cssxref("column-span")}}</li>
- <li>{{cssxref("column-width")}}</li>
- <li>{{cssxref("columns")}}</li>
-</ul>
-</div>
+- {{cssxref("column-count")}}
+- {{cssxref("column-fill")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("column-rule")}}
+- {{cssxref("column-rule-color")}}
+- {{cssxref("column-rule-style")}}
+- {{cssxref("column-rule-width")}}
+- {{cssxref("column-span")}}
+- {{cssxref("column-width")}}
+- {{cssxref("columns")}}
 
-<h3 id="有关的_css_碎片化属性">有关的 CSS 碎片化属性</h3>
+### 有关的 CSS 碎片化属性
 
-<div class="index">
-<ul>
- <li>{{cssxref("break-after")}}</li>
- <li>{{cssxref("break-before")}}</li>
- <li>{{cssxref("break-inside")}}</li>
-</ul>
-</div>
+- {{cssxref("break-after")}}
+- {{cssxref("break-before")}}
+- {{cssxref("break-inside")}}
 
-<h2 id="指南">指南</h2>
+## 指南
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol">多列的基本概念</a></dt>
- <dd>多列布局的概述</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/CSS_Columns/Styling_Columns">设置列的样式</a></dt>
- <dd>如何使用列的分隔线，以及设置列间距。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/CSS_Columns/Spanning_Columns">Spanning and Balancing</a></dt>
- <dd>How to make elements span across all columns and controlling the way columns are filled.</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol">Handling Overflow in Multicol</a></dt>
- <dd>What happens when an item overflows the column it is in and what happens when there is too much columned content to fit a container.</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol">Content Breaks in Multicol</a></dt>
- <dd>Introduction to the Fragmentation specification and how to control where column content breaks.</dd>
-</dl>
+- [多列的基本概念](/zh-CN/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+  - : 多列布局的概述
+- [设置列的样式](/zh-CN/docs/Web/CSS/CSS_Columns/Styling_Columns)
+  - : 如何使用列的分隔线，以及设置列间距。
+- [Spanning and Balancing](/zh-CN/docs/Web/CSS/CSS_Columns/Spanning_Columns)
+  - : How to make elements span across all columns and controlling the way columns are filled.
+- [Handling Overflow in Multicol](/zh-CN/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol)
+  - : What happens when an item overflows the column it is in and what happens when there is too much columned content to fit a container.
+- [Content Breaks in Multicol](/zh-CN/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)
+  - : Introduction to the Fragmentation specification and how to control where column content breaks.
 
-
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<p>其它 CSS 布局方法包括：</p>
+其它 CSS 布局方法包括：
 
-<ul>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS 弹性盒子布局</a>（CSS flexbox）</li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></li>
-</ul>
-
-<dl>
-</dl>
-</div>
+- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)（CSS flexbox）
+- [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)

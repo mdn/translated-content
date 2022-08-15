@@ -10,19 +10,20 @@ tags:
   - 布局
 translation_of: Web/CSS/border-style
 ---
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>{{ CSSRef("CSS Borders") }}</p>
+{{ CSSRef("CSS Borders") }}
 
-<p><code>border-style</code> 是一个 <a href="/en-US/docs/CSS">CSS</a> 简写属性，用来设定元素所有边框的样式。</p>
+`border-style` 是一个 [CSS](/zh-CN/docs/CSS) 简写属性，用来设定元素所有边框的样式。
 
-<div class="note"><strong>注意：</strong><code>border-style</code> 默认值是 <code>none</code>，这意味着如果您只修改 {{ Cssxref("border-width") }} 和 {{ Cssxref("border-color") }} 是不会出现边框的。</div>
+> **备注：** `border-style` 默认值是 `none`，这意味着如果您只修改 {{ Cssxref("border-width") }} 和 {{ Cssxref("border-color") }} 是不会出现边框的。
 
-<p>{{EmbedInteractiveExample("pages/css/border-style.html")}}</p>
+{{EmbedInteractiveExample("pages/css/border-style.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* Apply to all four sides */
+```css
+/* Apply to all four sides */
 border-style: dashed;
 
 /* horizontal | vertical */
@@ -38,126 +39,63 @@ border-style: none solid dotted dashed;
 border-style: inherit;
 border-style: initial;
 border-style: unset;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;br-style&gt;</code></dt>
- <dd>关键字用于描述边框样式。它可以有以下取值：
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td style="vertical-align: middle;"><code>none</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">和关键字 <code>hidden</code> 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 <code>0</code>，即使先前已经指定过它的值。在单元格边框重叠情况下，<code>none</code> 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>hidden</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; border-style: hidden; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">和关键字 <code>none</code> 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 <code style="font-style: normal; font-size: 13.63636302948px; line-height: 19.0909080505371px;">0</code>，即使先前已经指定过它的值。在单元格边框重叠情况下，<code>hidden</code> 值优先级最高，意味着如果存在其他的重叠边框，边框不会显示。</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>dotted</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; border-style: dotted; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">显示为一系列圆点。标准中没有定义两点之间的间隔大小，视不同实现而定。圆点半径是 {{ cssxref("border-width") }} 计算值的一半。</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>dashed</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; border-style: dashed; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">显示为一系列短的方形虚线。标准中没有定义线段的长度和大小，视不同实现而定。</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>solid</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; border-style: solid; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">显示为一条实线。</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>double</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; border-style: double; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">显示为一条双实线，宽度是 {{ cssxref("border-width") }} 。</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>groove</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; border-style: groove; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">显示为有雕刻效果的边框，样式与 <code>ridge</code> 相反。</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>ridge</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; border-style: ridge; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">显示为有浮雕效果的边框，样式与 <code>groove</code> 相反。</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>inset</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; border-style: inset; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">显示为有陷入效果的边框，样式与 <code>outset</code> 相反。当它指定到 {{ cssxref("border-collapse") }} 为 <code>collapsed</code> 的单元格时，会显示为 <code>groove</code> 的样式。</td>
-   </tr>
-   <tr>
-    <td style="vertical-align: middle;"><code>outset</code></td>
-    <td style="vertical-align: middle;">
-     <div style="border-width: 3px; border-style: outset; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
-    </td>
-    <td style="vertical-align: middle;">
-     <p>显示为有突出效果的边框，样式与 <code>inset</code> 相反。当它指定到 {{ cssxref("border-collapse") }} 为 <code>collapsed</code> 的单元格时，会显示为 <code>ridge</code> 的样式。</p>
-    </td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- `<br-style>`
 
-<h3 id="正式语法">正式语法</h3>
+  - : 关键字用于描述边框样式。它可以有以下取值：
+
+    | `none`   |     | 和关键字 `hidden` 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 `0`，即使先前已经指定过它的值。在单元格边框重叠情况下，`none` 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。 |
+    | -------- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `hidden` |     | 和关键字 `none` 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 `0`，即使先前已经指定过它的值。在单元格边框重叠情况下，`hidden` 值优先级最高，意味着如果存在其他的重叠边框，边框不会显示。       |
+    | `dotted` |     | 显示为一系列圆点。标准中没有定义两点之间的间隔大小，视不同实现而定。圆点半径是 {{ cssxref("border-width") }} 计算值的一半。                                                                                                                         |
+    | `dashed` |     | 显示为一系列短的方形虚线。标准中没有定义线段的长度和大小，视不同实现而定。                                                                                                                                                                                     |
+    | `solid`  |     | 显示为一条实线。                                                                                                                                                                                                                                               |
+    | `double` |     | 显示为一条双实线，宽度是 {{ cssxref("border-width") }} 。                                                                                                                                                                                           |
+    | `groove` |     | 显示为有雕刻效果的边框，样式与 `ridge` 相反。                                                                                                                                                                                                                  |
+    | `ridge`  |     | 显示为有浮雕效果的边框，样式与 `groove` 相反。                                                                                                                                                                                                                 |
+    | `inset`  |     | 显示为有陷入效果的边框，样式与 `outset` 相反。当它指定到 {{ cssxref("border-collapse") }} 为 `collapsed` 的单元格时，会显示为 `groove` 的样式。                                                                                                    |
+    | `outset` |     | 显示为有突出效果的边框，样式与 `inset` 相反。当它指定到 {{ cssxref("border-collapse") }} 为 `collapsed` 的单元格时，会显示为 `ridge` 的样式。                                                                                                      |
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Table_with_all_property_values">包含所有属性取值的表格</h3>
+### 包含所有属性取值的表格
 
-<p>以下是一个所有取值的例子</p>
+以下是一个所有取值的例子
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-    &lt;tr&gt;
-        &lt;td class="b1"&gt;none&lt;/td&gt;
-        &lt;td class="b2"&gt;hidden&lt;/td&gt;
-        &lt;td class="b3"&gt;dotted&lt;/td&gt;
-        &lt;td class="b4"&gt;dashed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td class="b5"&gt;solid&lt;/td&gt;
-        &lt;td class="b6"&gt;double&lt;/td&gt;
-        &lt;td class="b7"&gt;groove&lt;/td&gt;
-        &lt;td class="b8"&gt;ridge&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td class="b9"&gt;inset&lt;/td&gt;
-        &lt;td class="b10"&gt;outset&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+    <tr>
+        <td class="b1">none</td>
+        <td class="b2">hidden</td>
+        <td class="b3">dotted</td>
+        <td class="b4">dashed</td>
+    </tr>
+    <tr>
+        <td class="b5">solid</td>
+        <td class="b6">double</td>
+        <td class="b7">groove</td>
+        <td class="b8">ridge</td>
+    </tr>
+    <tr>
+        <td class="b9">inset</td>
+        <td class="b10">outset</td>
+    </tr>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* 定义表格外观 */
+```css
+/* 定义表格外观 */
 table {
     border-width: 3px;
     background-color: #52E396;
@@ -176,26 +114,21 @@ tr, td {
 .b7 {border-style:groove;}
 .b8 {border-style:ridge;}
 .b9 {border-style:inset;}
-.b10 {border-style:outset;}</pre>
+.b10 {border-style:outset;}
+```
 
-<h4 id="输出">输出</h4>
+#### 输出
 
-<p>{{ EmbedLiveSample('Table_with_all_property_values', 300, 200) }}</p>
+{{ EmbedLiveSample('Table_with_all_property_values', 300, 200) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.border-style")}}</p>
+{{Compat("css.properties.border-style")}}
 
+## 另请参阅
 
-
-<div id="compat-mobile"></div>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li>和边框有关的 CSS 简写属性：{{ Cssxref("border") }}, {{ Cssxref("border-width") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-radius") }}</li>
-</ul>
+- 和边框有关的 CSS 简写属性：{{ Cssxref("border") }}, {{ Cssxref("border-width") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-radius") }}

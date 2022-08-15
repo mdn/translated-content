@@ -6,15 +6,16 @@ tags:
   - CSS Fonts
 translation_of: Web/CSS/font-weight
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p> {{Cssxref("font-weight")}} <a href="/en-US/docs/CSS">CSS</a> 属性指定了字体的粗细程度。一些字体只提供 <code>normal</code> 和 <code>bold</code> 两种值。</p>
+{{Cssxref("font-weight")}} [CSS](/zh-CN/docs/CSS) 属性指定了字体的粗细程度。一些字体只提供 `normal` 和 `bold` 两种值。
 
-<div>{{EmbedInteractiveExample("pages/css/font-weight.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-weight.html")}}
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 font-weight: normal;
 font-weight: bold;
 
@@ -42,36 +43,38 @@ font-weight: 1000;
 font-weight: inherit;
 font-weight: initial;
 font-weight: unset;
-</pre>
+```
 
-<div class="hidden" id="font-weight">
-<pre class="brush: html">&lt;div class="row"&gt;
-  &lt;ul class="cell"&gt;
-    &lt;li&gt;&lt;em&gt;lighter:&lt;/em&gt; &lt;span class="fwLighter"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt; normal:&lt;/em&gt; &lt;span class="fwNormal"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;   bold:&lt;/em&gt; &lt;span class="fwBold"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt; bolder:&lt;/em&gt; &lt;span class="fwBolder"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+```html hidden
+<div class="row">
+  <ul class="cell">
+    <li><em>lighter:</em> <span class="fwLighter">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em> normal:</em> <span class="fwNormal">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em>   bold:</em> <span class="fwBold">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em> bolder:</em> <span class="fwBolder">The quick brown fox jumps over the lazy dog</span></li>
+  </ul>
 
-  &lt;ul class="cell"&gt;
-    &lt;li&gt;&lt;em&gt;    100:&lt;/em&gt; &lt;span class="fw100"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;    200:&lt;/em&gt; &lt;span class="fw200"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;    300:&lt;/em&gt; &lt;span class="fw300"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;    400:&lt;/em&gt; &lt;span class="fw400"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;    500:&lt;/em&gt; &lt;span class="fw500"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;    600:&lt;/em&gt; &lt;span class="fw600"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;    700:&lt;/em&gt; &lt;span class="fw700"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;    800:&lt;/em&gt; &lt;span class="fw800"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;em&gt;    900:&lt;/em&gt; &lt;span class="fw900"&gt;The quick brown fox jumps over the lazy dog&lt;/span&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+  <ul class="cell">
+    <li><em>    100:</em> <span class="fw100">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em>    200:</em> <span class="fw200">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em>    300:</em> <span class="fw300">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em>    400:</em> <span class="fw400">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em>    500:</em> <span class="fw500">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em>    600:</em> <span class="fw600">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em>    700:</em> <span class="fw700">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em>    800:</em> <span class="fw800">The quick brown fox jumps over the lazy dog</span></li>
+    <li><em>    900:</em> <span class="fw900">The quick brown fox jumps over the lazy dog</span></li>
+  </ul>
 
-  &lt;div class="cell note"&gt;
+  <div class="cell note">
     The weight above can vary, depending on the font you are using:
-    &lt;input id="fontName" value="Gill Sans"&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+    <input id="fontName" value="Gill Sans">
+  </div>
+</div>
+```
 
-<pre class="brush: css">html,body {
+```css hidden
+html,body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -135,9 +138,11 @@ li em {
 .fw600 { font-weight: 600; }
 .fw700 { font-weight: 700; }
 .fw800 { font-weight: 800; }
-.fw900 { font-weight: 900; }</pre>
+.fw900 { font-weight: 900; }
+```
 
-<pre class="brush: js">function updateFontFamily() {
+```js hidden
+function updateFontFamily() {
   var fontName   = document.getElementById('fontName').value;
   var fontFamily = '"' + fontName + '", monospace';
   var UL = document.querySelectorAll('ul.cell');
@@ -150,163 +155,112 @@ window.addEventListener('load', function () {
   var INPUT = document.getElementById('fontName');
   INPUT.addEventListener('change', updateFontFamily);
   INPUT.addEventListener('input', updateFontFamily);
-});</pre>
-</div>
+});
+```
 
-<p>{{EmbedLiveSample("font-weight", "100%", 500, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("font-weight", "100%", 500, "", "", "example-outcome-frame")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>正常粗细。与<code>400等值。</code></dd>
- <dt><code>bold</code></dt>
- <dd> 加粗。与<code>700等值。</code></dd>
- <dt><code>lighter</code></dt>
- <dd>比从父元素继承来的值更细 (处在字体可行的粗细值范围内)。</dd>
- <dt><code>bolder</code></dt>
- <dd>比从父元素继承来的值更粗 (处在字体可行的粗细值范围内)。</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>一个介于 1 和 1000 (包含) 之间的 <a href="/en-US/docs/Web/CSS/number"><code>&lt;number&gt;</code></a> 类型值。更大的数值代表字体重量粗于更小的数值 (或一样粗)。一些常用的数值对应于通用的字体重量名称，如章节<a href="#常见粗细值名称和数值对应">常见粗细值名称和数值对应</a>所描述。</dd>
-</dl>
+- `normal`
+  - : 正常粗细。与`400等值。`
+- `bold`
+  - : 加粗。与`700等值。`
+- `lighter`
+  - : 比从父元素继承来的值更细 (处在字体可行的粗细值范围内)。
+- `bolder`
+  - : 比从父元素继承来的值更粗 (处在字体可行的粗细值范围内)。
+- `<number>`
+  - : 一个介于 1 和 1000 (包含) 之间的 [`<number>`](/zh-CN/docs/Web/CSS/number) 类型值。更大的数值代表字体重量粗于更小的数值 (或一样粗)。一些常用的数值对应于通用的字体重量名称，如章节[常见粗细值名称和数值对应](#常见粗细值名称和数值对应)所描述。
 
-<h3 id="回退机制">回退机制</h3>
+### 回退机制
 
-<p>如果指定的权重值不可用，则使用以下规则来确定实际呈现的权重：</p>
+如果指定的权重值不可用，则使用以下规则来确定实际呈现的权重：
 
-<ul>
- <li>如果指定的权重值在 <code>400</code>和 <code>500</code>之间（包括<code>400</code>和<code>500</code>）：
+- 如果指定的权重值在 `400`和 `500`之间（包括`400`和`500`）：
 
-  <ul>
-   <li>按升序查找指定值与<code>500</code>之间的可用权重；</li>
-   <li>如果未找到匹配项，按<strong>降序</strong>查找小于指定值的可用权重；</li>
-   <li>如果未找到匹配项，按<strong>升序</strong>查找大于<code>500</code>的可用权重。</li>
-  </ul>
- </li>
- <li>如果指定值小于<code>400</code>，按<strong>降序</strong>查找小于指定值的可用权重。如果未找到匹配项，按<strong>升序</strong>查找大于指定值的可用权重（先尽可能的小，再尽可能的大）。</li>
- <li>如果指定值大于<code>500</code>，按<strong>升序</strong>查找大于指定值的可用权重。如果未找到匹配项，按<strong>降序</strong>查找小于指定值的可用权重（先尽可能的大，再尽可能的小）。</li>
-</ul>
+  - 按升序查找指定值与`500`之间的可用权重；
+  - 如果未找到匹配项，按**降序**查找小于指定值的可用权重；
+  - 如果未找到匹配项，按**升序**查找大于`500`的可用权重。
 
-<p>以上策略意味着，如果一个字体只有 <code>normal</code> 和 <code>bold</code> 两种粗细值选择，指定粗细值为 <code>100-500</code> 时，实际渲染时将使用 <code>normal</code>，指定粗细值为 <code>600-900</code> 时，实际渲染时将使用 <code>bold</code> 。</p>
+- 如果指定值小于`400`，按**降序**查找小于指定值的可用权重。如果未找到匹配项，按**升序**查找大于指定值的可用权重（先尽可能的小，再尽可能的大）。
+- 如果指定值大于`500`，按**升序**查找大于指定值的可用权重。如果未找到匹配项，按**降序**查找小于指定值的可用权重（先尽可能的大，再尽可能的小）。
 
-<h3 id="相对粗细值的解析">相对粗细值的解析</h3>
+以上策略意味着，如果一个字体只有 `normal` 和 `bold` 两种粗细值选择，指定粗细值为 `100-500` 时，实际渲染时将使用 `normal`，指定粗细值为 `600-900` 时，实际渲染时将使用 `bold` 。
 
-<p>当指定的是相对粗细值 <code>lighter</code> 或 <code>bolder</code> 时，将使用如下图表来决定元素渲染时的绝对粗细值：</p>
+### 相对粗细值的解析
 
-<table>
- <thead>
-  <tr>
-   <th>继承值（Inherited value）</th>
-   <th><code>bolder</code></th>
-   <th><code>lighter</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>100</th>
-   <td>400</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>200</th>
-   <td>400</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>300</th>
-   <td>400</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>400</th>
-   <td>700</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>500</th>
-   <td>700</td>
-   <td>100</td>
-  </tr>
-  <tr>
-   <th>600</th>
-   <td>900</td>
-   <td>400</td>
-  </tr>
-  <tr>
-   <th>700</th>
-   <td>900</td>
-   <td>400</td>
-  </tr>
-  <tr>
-   <th>800</th>
-   <td>900</td>
-   <td>700</td>
-  </tr>
-  <tr>
-   <th>900</th>
-   <td>900</td>
-   <td>700</td>
-  </tr>
- </tbody>
-</table>
+当指定的是相对粗细值 `lighter` 或 `bolder` 时，将使用如下图表来决定元素渲染时的绝对粗细值：
 
-<h3 id="常见粗细值名称和数值对应">常见粗细值名称和数值对应</h3>
+| 继承值（Inherited value） | `bolder` | `lighter` |
+| ------------------------- | -------- | --------- |
+| 100                       | 400      | 100       |
+| 200                       | 400      | 100       |
+| 300                       | 400      | 100       |
+| 400                       | 700      | 100       |
+| 500                       | 700      | 100       |
+| 600                       | 900      | 400       |
+| 700                       | 900      | 400       |
+| 800                       | 900      | 700       |
+| 900                       | 900      | 700       |
 
-<p>100 到 900 之间的数值大致对应如下的常见粗细值名称：</p>
+### 常见粗细值名称和数值对应
 
-<dl>
- <dt><code>100</code></dt>
- <dd>Thin (Hairline)</dd>
- <dt><code>200</code></dt>
- <dd>Extra Light (Ultra Light)</dd>
- <dt><code>300</code></dt>
- <dd>Light</dd>
- <dt><code>400</code></dt>
- <dd>Normal</dd>
- <dt><code>500</code></dt>
- <dd>Medium</dd>
- <dt><code>600</code></dt>
- <dd>Semi Bold (Demi Bold)</dd>
- <dt><code>700</code></dt>
- <dd>Bold</dd>
- <dt><code>800</code></dt>
- <dd>Extra Bold (Ultra Bold)</dd>
- <dt><code>900</code></dt>
- <dd>Black (Heavy)</dd>
-</dl>
+100 到 900 之间的数值大致对应如下的常见粗细值名称：
 
-<h3 id="插值规律">插值规律</h3>
+- `100`
+  - : Thin (Hairline)
+- `200`
+  - : Extra Light (Ultra Light)
+- `300`
+  - : Light
+- `400`
+  - : Normal
+- `500`
+  - : Medium
+- `600`
+  - : Semi Bold (Demi Bold)
+- `700`
+  - : Bold
+- `800`
+  - : Extra Bold (Ultra Bold)
+- `900`
+  - : Black (Heavy)
 
-<p><code>font-weight</code> 数值采取离散式定义（使用 100 的整倍数）。数值为实数，非 100 的整数倍的值将被四舍五入转换为 100 的整倍数，遇到 *50 时，将向上转换，如 150 将转换为 200。</p>
+### 插值规律
 
-<h3 id="正式的语法">正式的语法</h3>
+`font-weight` 数值采取离散式定义（使用 100 的整倍数）。数值为实数，非 100 的整数倍的值将被四舍五入转换为 100 的整倍数，遇到 \*50 时，将向上转换，如 150 将转换为 200。
+
+### 正式的语法
 
 {{csssyntax("font-weight")}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Alice was beginning to get very tired of sitting by her sister on the
   bank, and of having nothing to do: once or twice she had peeped into the
   book her sister was reading, but it had no pictures or conversations in
   it, 'and what is the use of a book,' thought Alice 'without pictures or
   conversations?'
-&lt;/p&gt;
+</p>
 
-&lt;div&gt;I'm heavy&lt;br/&gt;
-  &lt;span&gt;I'm lighter&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+<div>I'm heavy<br/>
+  <span>I'm lighter</span>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">/* Set paragraph text to be bold. */
+```css
+/* Set paragraph text to be bold. */
 p {
   font-weight: bold;
 }
@@ -321,16 +275,17 @@ div {
    to be one step lighter than the parent. */
 span {
   font-weight: lighter;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Examples","400","300")}}</p>
+{{EmbedLiveSample("Examples","400","300")}}
 
-<h2 id="Notes">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.font-weight")}}</p>
+{{Compat("css.properties.font-weight")}}

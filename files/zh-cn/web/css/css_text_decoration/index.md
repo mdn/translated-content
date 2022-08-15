@@ -3,39 +3,35 @@ title: CSS 文本装饰
 slug: Web/CSS/CSS_Text_Decoration
 translation_of: Web/CSS/CSS_Text_Decoration
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS 文本装饰 </strong>是 CSS 的一个模块，用于定义与文本修饰相关的功能，例如下划线，文本阴影和强调标记。</p>
+**CSS 文本装饰** 是 CSS 的一个模块，用于定义与文本修饰相关的功能，例如下划线，文本阴影和强调标记。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<div class="index">
-<ul>
- <li>{{cssxref("letter-spacing")}}</li>
- <li>{{cssxref("text-align")}}</li>
- <li>{{cssxref("text-decoration")}}</li>
- <li>{{cssxref("text-decoration-color")}}</li>
- <li>{{cssxref("text-decoration-line")}}</li>
- <li>{{cssxref("text-decoration-style")}}</li>
- <li>{{cssxref("text-emphasis")}}</li>
- <li>{{cssxref("text-emphasis-color")}}</li>
- <li>{{cssxref("text-emphasis-position")}}</li>
- <li>{{cssxref("text-emphasis-style")}}</li>
- <li>{{cssxref("text-indent")}}</li>
- <li>{{cssxref("text-rendering")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
- <li>{{cssxref("text-transform")}}</li>
- <li>{{cssxref("white-space")}}</li>
- <li>{{cssxref("word-spacing")}}</li>
-</ul>
-</div>
+- {{cssxref("letter-spacing")}}
+- {{cssxref("text-align")}}
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-style")}}
+- {{cssxref("text-emphasis")}}
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-emphasis-position")}}
+- {{cssxref("text-emphasis-style")}}
+- {{cssxref("text-indent")}}
+- {{cssxref("text-rendering")}}
+- {{cssxref("text-shadow")}}
+- {{cssxref("text-transform")}}
+- {{cssxref("white-space")}}
+- {{cssxref("word-spacing")}}
 
-<h2 id="指南">指南</h2>
+## 指南
 
-<p><em>无。</em></p>
+_无。_
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

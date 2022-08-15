@@ -7,17 +7,16 @@ tags:
   - CSS 边框
 translation_of: Web/CSS/border-left-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/CSS">CSS</a> 的 <strong><code>border-left-width</code></strong> 属性用来设置盒子的左边框的宽度。</p>
+[CSS](/zh-CN/docs/CSS) 的 **`border-left-width`** 属性用来设置盒子的左边框的宽度。
 
-<div>{{EmbedInteractiveExample("pages/css/border-left-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-left-width.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* 关键字数值  */
+```css
+/* 关键字数值  */
 border-left-width: thin;
 border-left-width: medium;
 border-left-width: thick;
@@ -30,59 +29,38 @@ border-left-width: 6px;
 /* 全局关键字 */
 border-left-width: inherit;
 border-left-width: initial;
-border-left-width: unset;</pre>
+border-left-width: unset;
+```
 
-<h3 id="数值">数值</h3>
+### 数值
 
-<dl>
- <dt><code>&lt;br-width&gt;</code></dt>
- <dd>定义边框的宽度，或者作为显性非负的长度值 {{cssxref("&lt;length&gt;")}} 或者是关键字。如果他是一个关键字，它必须是下列值的一种：
- <table>
-  <tbody>
-   <tr>
-    <td><code>thin</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-left-style: solid; border-left-width: thin; background-color: palegreen;"> </div>
-    </td>
-    <td>一个细边框</td>
-   </tr>
-   <tr>
-    <td><code>medium</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-left-style: solid; border-left-width: medium; background-color: palegreen;"> </div>
-    </td>
-    <td>一个中等边框</td>
-   </tr>
-   <tr>
-    <td><code>thick</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-left-style: solid; border-left-width: thick; background-color: palegreen;"> </div>
-    </td>
-    <td>一个粗边框</td>
-   </tr>
-  </tbody>
- </table>
+- `<br-width>`
 
- <div class="note">
- <p><strong>笔记：</strong> 因为规范没有定义每个关键字表示的确切厚度，当使用其中之一的关键字时，需要具体实施才知道确切结果。不过，它们通常遵循下面的模式 <code>thin ≤ medium ≤ thick</code>, 在单独文档中这些值内部是恒定不变的。</p>
- </div>
- </dd>
-</dl>
+  - : 定义边框的宽度，或者作为显性非负的长度值 {{cssxref("&lt;length&gt;")}} 或者是关键字。如果他是一个关键字，它必须是下列值的一种：
 
-<h3 id="形式语法">形式语法</h3>
+    - `thin` 一个细边框
+    - `medium` 一个中等边框
+    - `thick` 一个粗边框
+
+    > **备注：** 因为规范没有定义每个关键字表示的确切厚度，当使用其中之一的关键字时，需要具体实施才知道确切结果。不过，它们通常遵循下面的模式 `thin ≤ medium ≤ thick`, 在单独文档中这些值内部是恒定不变的。
+
+### 形式语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Element 1&lt;/div&gt;
-&lt;div&gt;Element 2&lt;/div&gt;</pre>
+```html
+<div>Element 1</div>
+<div>Element 2</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: 1px solid red;
   margin: 1em 0;
 }
@@ -92,27 +70,24 @@ div:nth-child(1) {
 }
 div:nth-child(2) {
   border-left-width: 2em;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Example', '100%')}}</p>
+{{EmbedLiveSample('Example', '100%')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.border-left-width")}}
 
+## 其他
 
-<p>{{Compat("css.properties.border-left-width")}}</p>
-
-<h2 id="其他">其他</h2>
-
-<ul>
- <li>The other border-width-related CSS properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, and {{Cssxref("border-width")}}.</li>
- <li>The other border-left-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, and {{Cssxref("border-left-color")}}.</li>
-</ul>
+- The other border-width-related CSS properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, and {{Cssxref("border-width")}}.
+- The other border-left-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, and {{Cssxref("border-left-color")}}.

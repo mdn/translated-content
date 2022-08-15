@@ -3,23 +3,24 @@ title: mask-image
 slug: Web/CSS/mask-image
 translation_of: Web/CSS/mask-image
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><strong><code>mask-image</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>属性用于设置元素上遮罩层的图像。</p>
+**`mask-image`** [CSS](/zh-CN/docs/Web/CSS)属性用于设置元素上遮罩层的图像。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css">/* Keyword value */
+```css
+/* Keyword value */
 mask-image: none;
 
-/* &lt;mask-source&gt; value */
+/* <mask-source> value */
 mask-image: url(masks.svg#mask1);
 
-/* &lt;image&gt; values */
+/* <image> values */
 mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
 mask-image: image(url(mask.png), skyblue);
 
@@ -30,47 +31,47 @@ mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1.0), t
 mask-image: inherit;
 mask-image: initial;
 mask-image: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>none</code></dt>
- <dd>默认值，透明的黑色图像层，也就是没有遮罩层。</dd>
- <dt><code>&lt;mask-source&gt;</code></dt>
- <dd><code>&lt;mask&gt;</code>或 CSS 图像的 url</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>图片作为遮罩层</dd>
-</dl>
+- `none`
+  - : 默认值，透明的黑色图像层，也就是没有遮罩层。
+- `<mask-source>`
+  - : `<mask>`或 CSS 图像的 url
+- {{cssxref("&lt;image&gt;")}}
+  - : 图片作为遮罩层
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[5]">#masked {
+```css
+#masked {
   width: 100px;
   height: 100px;
   background-color: #8cffa0;
   mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
   -webkit-mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="masked"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="masked"></div>
+```
 
-<p>{{EmbedLiveSample('例子', '100px', '100px')}}</p>
+{{EmbedLiveSample('例子', '100px', '100px')}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.mask-image")}}

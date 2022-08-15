@@ -9,19 +9,18 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-fill-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en/CSS">CSS</a> 属性 <strong><code>animation-fill-mode</code></strong> 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。</p>
+[CSS](/en/CSS) 属性 **`animation-fill-mode`** 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。
 
-<div>{{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}
 
+使用简写属性 {{cssxref("animation")}} 一次性设置所有动画属性通常很方便。
 
+## 语法
 
-<p>使用简写属性 {{cssxref("animation")}} 一次性设置所有动画属性通常很方便。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers">/* Single animation */
+```css
+/* Single animation */
 animation-fill-mode: none;
 animation-fill-mode: forwards;
 animation-fill-mode: backwards;
@@ -30,105 +29,61 @@ animation-fill-mode: both;
 /* Multiple animations */
 animation-fill-mode: none, backwards;
 animation-fill-mode: both, forwards, none;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>当动画未执行时，动画将不会将任何样式应用于目标，而是已经赋予给该元素的 CSS 规则来显示该元素。这是默认值。</dd>
- <dt><code>forwards</code></dt>
- <dd>目标将保留由执行期间遇到的最后一个<a href="/en-US/docs/CSS/@keyframes">关键帧</a>计算值。最后一个关键帧取决于{{cssxref("animation-direction")}}和{{cssxref("animation-iteration-count")}}的值：
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col"><code>animation-iteration-count</code></th>
-    <th scope="col">last keyframe encountered</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code></td>
-    <td>even or odd</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code></td>
-    <td>even or odd</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>even</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>odd</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>even</td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>odd</td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>backwards</code></dt>
- <dd>动画将在应用于目标时立即应用第一个关键帧中定义的值，并在{{cssxref("animation-delay")}}期间保留此值。第一个关键帧取决于{{cssxref("animation-direction")}}的值：
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col">first relevant keyframe</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code> or <code>alternate</code></td>
-    <td><code>0%</code> or <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code> or <code>alternate-reverse</code></td>
-    <td><code>100%</code> or <code>to</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>both</code></dt>
- <dd>动画将遵循<code>forwards</code>和<code>backwards</code>的规则，从而在两个方向上扩展动画属性。</dd>
-</dl>
+- `none`
+  - : 当动画未执行时，动画将不会将任何样式应用于目标，而是已经赋予给该元素的 CSS 规则来显示该元素。这是默认值。
+- `forwards`
 
-<div class="note">
-<p><strong>注意</strong>：当您在<code>animation-*</code>属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅<a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values">设置多个动画属性值</a>。</p>
-</div>
+  - : 目标将保留由执行期间遇到的最后一个[关键帧](/zh-CN/docs/CSS/@keyframes)计算值。最后一个关键帧取决于{{cssxref("animation-direction")}}和{{cssxref("animation-iteration-count")}}的值：
 
-<h3 id="正式语法">正式语法</h3>
+    | `animation-direction` | `animation-iteration-count` | last keyframe encountered |
+    | --------------------- | --------------------------- | ------------------------- |
+    | `normal`              | even or odd                 | `100%` or `to`            |
+    | `reverse`             | even or odd                 | `0%` or `from`            |
+    | `alternate`           | even                        | `0%` or `from`            |
+    | `alternate`           | odd                         | `100%` or `to`            |
+    | `alternate-reverse`   | even                        | `100%` or `to`            |
+    | `alternate-reverse`   | odd                         | `0%` or `from`            |
+
+- `backwards`
+
+  - : 动画将在应用于目标时立即应用第一个关键帧中定义的值，并在{{cssxref("animation-delay")}}期间保留此值。第一个关键帧取决于{{cssxref("animation-direction")}}的值：
+
+    | `animation-direction`            | first relevant keyframe |
+    | -------------------------------- | ----------------------- |
+    | `normal` or `alternate`          | `0%` or `from`          |
+    | `reverse` or `alternate-reverse` | `100%` or `to`          |
+
+- `both`
+  - : 动画将遵循`forwards`和`backwards`的规则，从而在两个方向上扩展动画属性。
+
+> **备注：** 当您在`animation-*`属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values)。
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<p>您可以在以下示例中看到 <code>animation-fill-mode</code> 的效果。它演示了如何对于运行无限时间的动画，可以使其保持最终状态而不是恢复到原始状态（这是默认状态）。</p>
+您可以在以下示例中看到 `animation-fill-mode` 的效果。它演示了如何对于运行无限时间的动画，可以使其保持最终状态而不是恢复到原始状态（这是默认状态）。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Move your mouse over the gray box!&lt;/p&gt;
-&lt;div class="demo"&gt;
- &lt;div class="growsandstays"&gt;This grows and stays big.&lt;/div&gt;
-  &lt;div class="grows"&gt;This just grows.&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<p>Move your mouse over the gray box!</p>
+<div class="demo">
+ <div class="growsandstays">This grows and stays big.</div>
+  <div class="grows">This just grows.</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.demo {
+```css
+.demo {
   border-top: 100px solid #ccc;
   height: 300px;
 }
@@ -147,25 +102,24 @@ animation-fill-mode: both, forwards, none;
   animation-name: grow;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Example',700,300)}}</p>
+{{EmbedLiveSample('Example',700,300)}}
 
-<p>更多示例请查看 <a href="/en/CSS/CSS_animations">CSS 动画</a> 。</p>
+更多示例请查看 [CSS 动画](/en/CSS/CSS_animations) 。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></li>
- <li>JavaScript {{domxref("AnimationEvent")}} API</li>
-</ul>
+- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- JavaScript {{domxref("AnimationEvent")}} API

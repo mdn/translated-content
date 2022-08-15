@@ -9,19 +9,14 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-name
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}`animation-name`属性指定应用的一系列动画，每个名称代表一个由{{cssxref("@keyframes")}}定义的动画序列。
 
-
-
-<div><code>animation-name</code>属性指定应用的一系列动画，每个名称代表一个由{{cssxref("@keyframes")}}定义的动画序列。</div>
-
-
-
-<pre class="brush: css"><code>/* Single animation */
+```css
+/* Single animation */
 animation-name: none;
 animation-name: test_05;
 animation-name: -specific;
-animation-name: sliding-vertically;</code>
+animation-name: sliding-vertically;
 
 /* Multiple animations */
 animation-name: test1, animation4;
@@ -30,42 +25,39 @@ animation-name: none, -moz-specific, sliding;
 /* Global values */
 animation-name: initial
 animation-name: inherit
-animation-name: unset</pre>
+animation-name: unset
+```
 
-<p>使用简写属性{{cssxref("animation")}}可以很方便地同时设置所有的动画属性。</p>
+使用简写属性{{cssxref("animation")}}可以很方便地同时设置所有的动画属性。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>特殊关键字，表示无关键帧。可以不改变其他标识符的顺序而使动画失效，或者使层叠的动画样式失效。</dd>
- <dt><code>IDENT</code></dt>
- <dd>标识动画的字符串，由大小写敏感的字母 a-z、数字 0-9、下划线 (_) 和/或横线 (-) 组成。第一个非横线字符必须是字母，数字不能在字母前面，不允许两个横线出现在开始位置。</dd>
-</dl>
+- `none`
+  - : 特殊关键字，表示无关键帧。可以不改变其他标识符的顺序而使动画失效，或者使层叠的动画样式失效。
+- `IDENT`
+  - : 标识动画的字符串，由大小写敏感的字母 a-z、数字 0-9、下划线 (\_) 和/或横线 (-) 组成。第一个非横线字符必须是字母，数字不能在字母前面，不允许两个横线出现在开始位置。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax("animation-name")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>See <a href="/en-US/docs/CSS/CSS_animations">CSS animations</a> for examples.</p>
+See [CSS animations](/zh-CN/docs/CSS/CSS_animations) for examples.
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations">Using CSS animations</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Using CSS animations](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- {{domxref("AnimationEvent", "AnimationEvent")}}

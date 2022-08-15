@@ -8,21 +8,22 @@ tags:
   - 动画过渡
 translation_of: Web/CSS/transition-delay
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>CSS 的<strong>transition-delay</strong>属性规定了在<a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">过渡效果</a>开始作用之前需要等待的时间。</p>
+CSS 的**transition-delay**属性规定了在[过渡效果](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)开始作用之前需要等待的时间。
 
-<p>值以秒（s）或毫秒（ms）为单位，表明动画过渡效果将在何时开始。取值为正时会延迟一段时间来响应过渡效果；取值为负时会导致过渡立即开始。</p>
+值以秒（s）或毫秒（ms）为单位，表明动画过渡效果将在何时开始。取值为正时会延迟一段时间来响应过渡效果；取值为负时会导致过渡立即开始。
 
-<p>你可以指定多个延迟时间，每个延迟将会分别作用于你所指定的相符合的 css 属性（<strong>transition-property</strong>）</p>
+你可以指定多个延迟时间，每个延迟将会分别作用于你所指定的相符合的 css 属性（**transition-property**）
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* &lt;time&gt;?值 */
+```css
+/* <time>?值 */
 transition-delay: 3s;
 transition-delay: 2s, 4ms;
 
@@ -30,32 +31,30 @@ transition-delay: 2s, 4ms;
 transition-delay: inherit;
 transition-delay: initial;
 transition-delay: unset;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>表明动画效果属性生效之前需要等待的时间。</dd>
-</dl>
+- `<time>`
+  - : 表明动画效果属性生效之前需要等待的时间。
 
-<h3 id="语法形式">语法形式</h3>
+### 语法形式
 
 {{csssyntax}}
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<div>
-<div id="delay_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 0.5s</code></p>
+`transition-delay: 0.5s`
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
+</div>
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```
+
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -91,9 +90,10 @@ transition-delay: unset;
     transition-delay:0.5s;
     transition-timing-function: linear;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -107,22 +107,21 @@ transition-delay: unset;
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("delay_0_5s",275,150)}}
+
+`transition-delay: 1s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("delay_0_5s",275,150)}}</div>
-</div>
+```
 
-<div id="delay_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 1s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -158,9 +157,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-delay:1s;
     transition-timing-function: linear;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -174,22 +174,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("delay_1s",275,150)}}
+
+`transition-delay: 2s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("delay_1s",275,150)}}</div>
-</div>
+```
 
-<div id="delay_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 2s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -225,9 +224,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-delay:2s;
     transition-timing-function: linear;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -241,22 +241,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("delay_2s",275,150)}}
+
+`transition-delay: 4s`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("delay_2s",275,150)}}</div>
-</div>
+```
 
-<div id="delay_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 4s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -292,9 +291,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-delay:4s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -308,24 +308,19 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
+```
 
-<div>{{EmbedLiveSample("delay_4s",275,150)}}</div>
-</div>
-</div>
+{{EmbedLiveSample("delay_4s",275,150)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.transition-delay")}}
 
-<h2 id="扩展阅读">扩展阅读</h2>
+## 扩展阅读
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{domxref("TransitionEvent")}}

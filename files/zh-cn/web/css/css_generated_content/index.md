@@ -5,25 +5,21 @@ tags:
   - CSS
 translation_of: Web/CSS/CSS_Generated_Content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Generated Content 是 CSS 其中一个模块，定义了如何给一个元素添加内容</strong></p>
+**CSS Generated Content 是 CSS 其中一个模块，定义了如何给一个元素添加内容**
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<div class="index">
-<ul>
- <li>{{cssxref("content")}}</li>
- <li>{{cssxref("quotes")}}</li>
-</ul>
-</div>
+- {{cssxref("content")}}
+- {{cssxref("quotes")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

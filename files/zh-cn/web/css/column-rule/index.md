@@ -7,58 +7,55 @@ tags:
   - CSS 属性
 translation_of: Web/CSS/column-rule
 ---
-<div>{{CSSRef("CSS Multi-columns")}}</div>
+{{CSSRef("CSS Multi-columns")}}{{EmbedInteractiveExample("pages/css/column-rule.html")}}
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule.html")}}</div>
+## 概述
 
-<h2 id="概述">概述</h2>
+在多列布局中，`column-rule` 属性规定了列与列之间的直线，也称“规则”。该简写可以避免单独设置各个 `column-rule-*` 属性：{{Cssxref("column-rule-width")}}，{{Cssxref("column-rule-style")}} 和 {{Cssxref("column-rule-color")}}。
 
-<p>在多列布局中，<code>column-rule</code> 属性规定了列与列之间的直线，也称“规则”。该简写可以避免单独设置各个 <code>column-rule-*</code> 属性：{{Cssxref("column-rule-width")}}，{{Cssxref("column-rule-style")}} 和 {{Cssxref("column-rule-color")}}。</p>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## 语法
 
-<h2 id="语法">语法</h2>
+```
+Formal syntax: {{csssyntax("column-rule")}}
+```
 
-<pre class="twopartsyntaxbox notranslate"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("column-rule")}}
-</pre>
-
-<pre class="notranslate">column-rule: dotted;
+```
+column-rule: dotted;
 column-rule: solid blue;
 column-rule: solid 8px;
 column-rule: thick inset blue;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<p><code>column-rule</code> 属性可以按任何顺序指定为下面列出的一个，两个或三个值。</p>
+`column-rule` 属性可以按任何顺序指定为下面列出的一个，两个或三个值。
 
-<dl>
- <dt><code>&lt;'column-rule-width'&gt;</code> </dt>
- <dd>定义为 {{cssxref("&lt;length&gt;")}} 或是 <code>thin</code>，<code>medium</code>，<code>thick</code> 关键字的其中一个。请参阅 {{cssxref("border-width")}} 。</dd>
- <dt><code>&lt;'column-rule-style'&gt;</code></dt>
- <dd>请参阅 {{cssxref("border-style")}}。</dd>
- <dt><code>&lt;'column-rule-color'&gt;</code></dt>
- <dd>一个 {{cssxref("&lt;color&gt;")}} 值。</dd>
-</dl>
+- `<'column-rule-width'>`
+  - : 定义为 {{cssxref("&lt;length&gt;")}} 或是 `thin`，`medium`，`thick` 关键字的其中一个。请参阅 {{cssxref("border-width")}} 。
+- `<'column-rule-style'>`
+  - : 请参阅 {{cssxref("border-style")}}。
+- `<'column-rule-color'>`
+  - : 一个 {{cssxref("&lt;color&gt;")}} 值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="notranslate">p.foo { column-rule: dotted; }          /* 与 "medium dotted currentColor" 相同 */
+```
+p.foo { column-rule: dotted; }          /* 与 "medium dotted currentColor" 相同 */
 p.bar { column-rule: solid blue; }      /* 与 "medium solid blue" 相同 */
 p.baz { column-rule: solid 8px; }       /* 与 "8px solid currentColor" 相同 */
 p.abc { column-rule: thick inset blue; }
-</pre>
+```
 
-<h3 id="运行实例">运行实例</h3>
+### 运行实例
 
-<div style="">
-<p>padding:0.3em; background:gold; border:groove 2px gold; <strong>column-rule: inset 2px gold;</strong> <strong>column-width:17em;</strong></p>
-</div>
+padding:0.3em; background:gold; border:groove 2px gold; **column-rule: inset 2px gold;** **column-width:17em;**
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.column-rule")}}

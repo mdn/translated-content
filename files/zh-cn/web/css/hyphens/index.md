@@ -3,21 +3,22 @@ title: hyphens
 slug: Web/CSS/hyphens
 translation_of: Web/CSS/hyphens
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p><a href="/en-US/docs/CSS">CSS</a> 属性 <strong><code>hyphens</code></strong> 告知浏览器在换行时如何使用连字符连接单词。可以完全阻止使用连字符，也可以控制浏览器什么时候使用，或者让浏览器决定什么时候使用。</p>
+[CSS](/zh-CN/docs/CSS) 属性 **`hyphens`** 告知浏览器在换行时如何使用连字符连接单词。可以完全阻止使用连字符，也可以控制浏览器什么时候使用，或者让浏览器决定什么时候使用。
 
-<p>连字规则具有语言特定性。在 HTML 中，语言由 lang 属性决定，浏览器只会在当前属性存在且有合适的连字字典可用的情况使用连字进行连接。 在 XML 中，必须使用 <code>xml:lang</code> 属性。</p>
+连字规则具有语言特定性。在 HTML 中，语言由 lang 属性决定，浏览器只会在当前属性存在且有合适的连字字典可用的情况使用连字进行连接。 在 XML 中，必须使用 `xml:lang` 属性。
 
-<div class="note"><strong>注意：</strong>：在规范中，没有明确定义连字符的实现规则，所以具体的连字符在不同浏览器中可能有所区别。</div>
+> **备注：** 在规范中，没有明确定义连字符的实现规则，所以具体的连字符在不同浏览器中可能有所区别。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css">hyphens: none;
+```css
+hyphens: none;
 hyphens: manual;
 hyphens: auto;
 
@@ -25,54 +26,52 @@ hyphens: auto;
 hyphens: inherit;
 hyphens: initial;
 hyphens: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>换行时单词不会被打断，甚至在单词内的字符建议有换行点时。行只会在空白符处换行。</dd>
- <dt><code>manual</code></dt>
- <dd>Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See <a href="#suggesting_line_break_opportunities">Suggesting line break opportunities</a> for details.</dd>
- <dt><code>auto</code></dt>
- <dd>The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use. Suggested line break opportunities, as covered in <a href="#suggesting_line_break_opportunities">Suggesting line break opportunities</a>, should be preferred over automatically selecting break points whenever possible.</dd>
-</dl>
+- `none`
+  - : 换行时单词不会被打断，甚至在单词内的字符建议有换行点时。行只会在空白符处换行。
+- `manual`
+  - : Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See [Suggesting line break opportunities](#suggesting_line_break_opportunities) for details.
+- `auto`
+  - : The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use. Suggested line break opportunities, as covered in [Suggesting line break opportunities](#suggesting_line_break_opportunities), should be preferred over automatically selecting break points whenever possible.
 
-<div class="note"><strong>Note:</strong> The <code>auto</code> setting's behavior depends on the language being properly tagged so that the appropriate hyphenation rules can be selected. You must specify a language using the <code>lang</code> HTML attribute in order to guarantee that automatic hyphenation is applied in the language of your choice.</div>
+> **备注：** The `auto` setting's behavior depends on the language being properly tagged so that the appropriate hyphenation rules can be selected. You must specify a language using the `lang` HTML attribute in order to guarantee that automatic hyphenation is applied in the language of your choice.
 
-<h2 id="Suggesting_line_break_opportunities">Suggesting line break opportunities</h2>
+## Suggesting line break opportunities
 
-<p>There are two Unicode characters that can be used to manually specify potential line break points within text:</p>
+There are two Unicode characters that can be used to manually specify potential line break points within text:
 
-<dl>
- <dt>U+2010 (HYPHEN)</dt>
- <dd>The "hard" hyphen character indicates a visible line break opportunity. Even if the line is not actually broken at that point, the hyphen is still rendered.</dd>
- <dt>U+00AD (SHY)</dt>
- <dd>An invisible, "soft" hyphen. This character is not rendered visibly; instead, it suggests a place where the browser might choose to break the word if necessary. In HTML, you can use <code>&amp;shy;</code> to insert a soft hyphen.</dd>
-</dl>
+- U+2010 (HYPHEN)
+  - : The "hard" hyphen character indicates a visible line break opportunity. Even if the line is not actually broken at that point, the hyphen is still rendered.
+- U+00AD (SHY)
+  - : An invisible, "soft" hyphen. This character is not rendered visibly; instead, it suggests a place where the browser might choose to break the word if necessary. In HTML, you can use `&shy;` to insert a soft hyphen.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下代码段展示了<code>hyphens</code>属性取none/manual/auto这三类值的效果。</p>
+以下代码段展示了`hyphens`属性取 none/manual/auto 这三类值的效果。
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;none&lt;/code&gt;: no hyphen; overflow if needed
-    &lt;p lang="en" class="none"&gt;An extreme&amp;shy;ly long English word&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;manual&lt;/code&gt;: hyphen only at &amp;amp;hyphen; or &amp;amp;shy; (if needed)
-    &lt;p lang="en" class="manual"&gt;An extreme&amp;shy;ly long English word&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;auto&lt;/code&gt;: hyphen where the algo is deciding (if needed)
-    &lt;p lang="en" class="auto"&gt;An extreme&amp;shy;ly long English word&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+  <li><code>none</code>: no hyphen; overflow if needed
+    <p lang="en" class="none">An extreme&shy;ly long English word</p>
+  </li>
+  <li><code>manual</code>: hyphen only at &amp;hyphen; or &amp;shy; (if needed)
+    <p lang="en" class="manual">An extreme&shy;ly long English word</p>
+  </li>
+  <li><code>auto</code>: hyphen where the algo is deciding (if needed)
+    <p lang="en" class="auto">An extreme&shy;ly long English word</p>
+  </li>
+</ul>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   width: 55px;
   border: 1px solid black;
  }
@@ -91,22 +90,18 @@ p.auto {
   -ms-hyphens: auto;
   hyphens: auto;
 }
-</pre>
+```
 
-<figure>
-<p>{{EmbedLiveSample("Example", "100%", "470'")}}</p>
-</figure>
+{{EmbedLiveSample("Example", "100%", "470'")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.hyphens")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("content")}}</li>
-</ul>
+- {{Cssxref("content")}}

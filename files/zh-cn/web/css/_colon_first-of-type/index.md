@@ -1,92 +1,93 @@
 ---
 title: ':first-of-type'
-slug: 'Web/CSS/:first-of-type'
+slug: Web/CSS/:first-of-type
 tags:
   - CSS
   - Layout
   - Pseudo-class
   - Reference
   - 伪类
-translation_of: 'Web/CSS/:first-of-type'
+translation_of: Web/CSS/:first-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> <strong><code>:first-of-type</code></strong>表示一组兄弟元素中其类型的第一个元素。</p>
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:first-of-type`**表示一组兄弟元素中其类型的第一个元素。
 
-<pre>/* 选择在父元素中第一个出现的&lt;p&gt;，而不管其在兄弟内的位置如何 */
+```
+/* 选择在父元素中第一个出现的<p>，而不管其在兄弟内的位置如何 */
 p:first-of-type {
   color: red;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>注意：</strong>按原来定义，所选元素必须有一个父元素。 从 Selectors Level 4 开始，就不需要这样了。</p>
-</div>
+> **备注：** 按原来定义，所选元素必须有一个父元素。 从 Selectors Level 4 开始，就不需要这样了。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<h3 id="装饰第一个段落">装饰第一个段落</h3>
+### 装饰第一个段落
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;Heading&lt;/h2&gt;
-&lt;p&gt;Paragraph 1&lt;/p&gt;
-&lt;p&gt;Paragraph 1&lt;/p&gt;</pre>
+```html
+<h2>Heading</h2>
+<p>Paragraph 1</p>
+<p>Paragraph 1</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p:first-of-type {
+```css
+p:first-of-type {
   color: red;
-<code>  font-style: italic;</code>
+  font-style: italic;
 }
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("装饰第一个段落")}}</p>
+{{EmbedLiveSample("装饰第一个段落")}}
 
-<h3 id="嵌套元素">嵌套元素</h3>
+### 嵌套元素
 
-<p>下面这个例子展示了如何选中多层嵌套元素。注意当不存在简单选择器时，<a href="/zh-CN/docs/Web/CSS/Universal_selectors">通配符</a>(<code>*</code>) 是默认应用的。 </p>
+下面这个例子展示了如何选中多层嵌套元素。注意当不存在简单选择器时，[通配符](/zh-CN/docs/Web/CSS/Universal_selectors)(`*`) 是默认应用的。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;article&gt;
-  &lt;div&gt;This `div` is first!&lt;/div&gt;
-  &lt;div&gt;This &lt;span&gt;nested `span` is first&lt;/span&gt;!&lt;/div&gt;
-  &lt;div&gt;This &lt;em&gt;nested `em` is first&lt;/em&gt;, but this &lt;em&gt;nested `em` is last&lt;/em&gt;!&lt;/div&gt;
-  &lt;div&gt;This &lt;span&gt;nested `span` gets styled&lt;/span&gt;!&lt;/div&gt;
-  &lt;b&gt;This `b` qualifies!&lt;/b&gt;
-  &lt;div&gt;This is the final `div`.&lt;/div&gt;
-&lt;/article&gt;</pre>
+```html
+<article>
+  <div>This `div` is first!</div>
+  <div>This <span>nested `span` is first</span>!</div>
+  <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
+  <div>This <span>nested `span` gets styled</span>!</div>
+  <b>This `b` qualifies!</b>
+  <div>This is the final `div`.</div>
+</article>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">article :first-of-type {
+```css
+article :first-of-type {
   background-color: pink;
-}</pre>
+}
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("嵌套元素")}}</p>
+{{EmbedLiveSample("嵌套元素")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<div>
+{{Compat("css.selectors.first-of-type")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.first-of-type")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}

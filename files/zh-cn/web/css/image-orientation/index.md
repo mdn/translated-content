@@ -3,31 +3,27 @@ title: image-orientation
 slug: Web/CSS/image-orientation
 translation_of: Web/CSS/image-orientation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div>{{SeeCompatTable}}</div>
+## 概述
 
-<h2 id="概述">概述</h2>
+`CSS 属性 image-orientation` 用来修正某些图片的预设方向。
 
-<p><code><a href="/en-US/docs/CSS">CSS</a> 属性 image-orientation</code> 用来修正某些图片的预设方向。</p>
+> **备注：**
+>
+> - 该属性不是用来对图片进行任意角度旋转的，它是用来修正那些带有不正确的预设方向的图片的。因此该属性值会被四舍五入到 90 度的整数倍。
+> - Similarly this property is not intented to handle the layout -> portrait changing. As `image-orientation` affects only images, it won't work: the changes must happen at the layout-level
 
-<div class="note style-wrap">
-<p><strong>注意：</strong></p>
+{{cssinfo}}
 
-<ul>
- <li>该属性不是用来对图片进行任意角度旋转的，它是用来修正那些带有不正确的预设方向的图片的。因此该属性值会被四舍五入到 90 度的整数倍。</li>
- <li>Similarly this property is not intented to handle the layout -&gt; portrait changing. As <code>image-orientation</code> affects only images, it won't work: the changes must happen at the layout-level</li>
-</ul>
-</div>
+## 语法
 
-<p>{{cssinfo}}</p>
+```
+语法形式: {{csssyntax("image-orientation")}}
+```
 
-<h2 id="语法">语法</h2>
-
-<pre class="twopartsyntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">语法形式</a>: {{csssyntax("image-orientation")}}
-</pre>
-
-<pre>image-orientation: 0deg
+```
+image-orientation: 0deg
 image-orientation: 6.4deg     /* 非 90 度的整数倍，所以会被四舍五入到 0 度 */
 image-orientation: -90deg     /* 相当于 270deg */
 image-orientation: from-image /* 使用图片的 EXIF 数据 */
@@ -35,35 +31,27 @@ image-orientation: 90deg flip /* 旋转 90deg, 再水平翻转 */
 image-orientation: flip       /* 不旋转，只进行水平翻转 */
 
 image-orientation: inherit
-</pre>
+```
 
-<h3 id="属性值">属性值</h3>
+### 属性值
 
-<dl>
- <dt><code>from-image</code></dt>
- <dd>根据图片的 EXIF 数据来旋转图片，EXIF 中有一个控制图片旋转度的属性。</dd>
- <dt><code>&lt;angle&gt;</code></dt>
- <dd>图片旋转值 {{cssxref("&lt;angle&gt;")}} , 会被自动四舍五入到 <code>90deg</code> (<code>0.25turn</code>) 的整数倍。</dd>
- <dt><code>flip</code></dt>
- <dd>对图片进行水平翻转，先进行第二个参数执行的旋转，再进行此次翻转。</dd>
-</dl>
+- `from-image`
+  - : 根据图片的 EXIF 数据来旋转图片，EXIF 中有一个控制图片旋转度的属性。
+- `<angle>`
+  - : 图片旋转值 {{cssxref("&lt;angle&gt;")}} , 会被自动四舍五入到 `90deg` (`0.25turn`) 的整数倍。
+- `flip`
+  - : 对图片进行水平翻转，先进行第二个参数执行的旋转，再进行此次翻转。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.properties.image-orientation")}}
 
+## 相关链接
 
-<p>{{Compat("css.properties.image-orientation")}}</p>
-</div>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>其它和图片相关的 CSS 属性：{{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.</li>
-</ul>
+- 其它和图片相关的 CSS 属性：{{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.

@@ -9,28 +9,24 @@ tags:
   - 试验性的
 translation_of: Web/CSS/CSSOM_View
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>CSSOM 视图是一个模块，允许操作文档的可视化视图，尤其是其滚动行为。</p>
+CSSOM 视图是一个模块，允许操作文档的可视化视图，尤其是其滚动行为。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<div class="index">
-<ul>
- <li>{{cssxref("scroll-behavior")}}</li>
-</ul>
-</div>
+- {{cssxref("scroll-behavior")}}
 
-<h2 id="指南">指南</h2>
+## 指南
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.scroll-behavior")}}

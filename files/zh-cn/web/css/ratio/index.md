@@ -3,70 +3,43 @@ title: <ratio>
 slug: Web/CSS/ratio
 translation_of: Web/CSS/ratio
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>&lt;ratio&gt; CSS 数据类型，用于描述媒体查询中的宽高比，表示两个无单位值之间的比例。</p>
+\<ratio> CSS 数据类型，用于描述媒体查询中的宽高比，表示两个无单位值之间的比例。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<p>在 Media Queries Level 3 中，&lt;ratio&gt;数据类型包括一个正数的<a href="/zh-CN/docs/Web/CSS/integer">&lt;integer&gt;</a>值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的<a href="/zh-CN/docs/Web/CSS/integer">&lt;integer&gt;</a>值。斜杠前后的空格是可选的。第一个数字代表宽度，第二个数字代表高度。</p>
+在 Media Queries Level 3 中，\<ratio>数据类型包括一个正数的[\<integer>](/zh-CN/docs/Web/CSS/integer)值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的[\<integer>](/zh-CN/docs/Web/CSS/integer)值。斜杠前后的空格是可选的。第一个数字代表宽度，第二个数字代表高度。
 
-<p>在 Media Queries Level 4 中，&lt;ratio&gt;数据类型包括一个正数的<a href="/zh-CN/docs/Web/CSS/number">&lt;number&gt;</a>值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的<a href="/zh-CN/docs/Web/CSS/number">&lt;number&gt;</a>值。此外，允许使用单个<a href="/zh-CN/docs/Web/CSS/number">&lt;number&gt;</a>作为值。</p>
+在 Media Queries Level 4 中，\<ratio>数据类型包括一个正数的[\<number>](/zh-CN/docs/Web/CSS/number)值，后跟一个正斜杠（'/'，Unicode U + 002F SOLIDUS）和第二个正数的[\<number>](/zh-CN/docs/Web/CSS/number)值。此外，允许使用单个[\<number>](/zh-CN/docs/Web/CSS/number)作为值。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="在媒体查询中使用">在媒体查询中使用</h3>
+### 在媒体查询中使用
 
-<pre class="brush: css notranslate">@media screen and (min-aspect-ratio: 16/9) { ... }</pre>
+```css
+@media screen and (min-aspect-ratio: 16/9) { ... }
+```
 
-<h3 id="常见的宽高比">常见的宽高比</h3>
+### 常见的宽高比
 
-<p>( (</p>
+( (
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"></th>
-   <th scope="col">比</th>
-   <th scope="col">用法</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><img alt="Ratio4_3.png" class="default internal" src="/@api/deki/files/5714/=Ratio4_3.png"></td>
-   <td><code>4/3</code></td>
-   <td>在 20 传统电视制式格式。</td>
-  </tr>
-  <tr>
-   <td><img alt="Ratio16_9.png" src="/@api/deki/files/5711/=Ratio16_9.png"></td>
-   <td><code>16/9</code></td>
-   <td>现代"宽屏”电视格式。</td>
-  </tr>
-  <tr>
-   <td><img alt="Ratio1_1.85.png" src="/@api/deki/files/5712/=Ratio1_1.85.png"></td>
-   <td><code>185/100</code>= <code>91/50</code><br>
-    <em>(不允许非整数除数和除数)</em></td>
-   <td>自 20 世纪 60 年代以来最常见的电影格式。</td>
-  </tr>
-  <tr>
-   <td><img alt="Ratio1_2.39.png" src="/@api/deki/files/5713/=Ratio1_2.39.png"></td>
-   <td><code>239/100</code><br>
-    <em>(不允许使用非整数红利和除数)</em></td>
-   <td>"宽屏”,变形电影格式。</td>
-  </tr>
- </tbody>
-</table>
+|                                                            | 比                                            | 用法                                     |
+| ---------------------------------------------------------- | --------------------------------------------- | ---------------------------------------- |
+| ![Ratio4_3.png](/@api/deki/files/5714/=Ratio4_3.png)       | `4/3`                                         | 在 20 传统电视制式格式。                 |
+| ![Ratio16_9.png](/@api/deki/files/5711/=Ratio16_9.png)     | `16/9`                                        | 现代"宽屏”电视格式。                     |
+| ![Ratio1_1.85.png](/@api/deki/files/5712/=Ratio1_1.85.png) | `185/100`= `91/50` _(不允许非整数除数和除数)_ | 自 20 世纪 60 年代以来最常见的电影格式。 |
+| ![Ratio1_2.39.png](/@api/deki/files/5713/=Ratio1_2.39.png) | `239/100` _(不允许使用非整数红利和除数)_      | "宽屏”,变形电影格式。                    |
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><code><a href="/en-US/docs/Web/CSS/@media/aspect-ratio">aspect-ratio</a></code> 媒体功能</li>
-</ul>
+- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) 媒体功能

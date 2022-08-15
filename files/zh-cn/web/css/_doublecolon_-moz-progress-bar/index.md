@@ -1,54 +1,56 @@
 ---
 title: '::-moz-progress-bar'
-slug: 'Web/CSS/::-moz-progress-bar'
+slug: Web/CSS/::-moz-progress-bar
 tags:
   - CSS
   - CSS 伪类
   - 非标准特性
-translation_of: 'Web/CSS/::-moz-progress-bar'
+translation_of: Web/CSS/::-moz-progress-bar
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a><a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a> <strong><code>::-moz-progress-bar</code></strong> 是{{HTMLElement("progress")}} 元素中，Mozilla 独有的特性（<a href="/zh-CN/docs/Web/CSS/Mozilla_Extensions">Mozilla extension</a>），用于对进度条完成的部分进行选择。</p>
+[CSS](/zh-CN/docs/Web/CSS)[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) **`::-moz-progress-bar`** 是{{HTMLElement("progress")}} 元素中，Mozilla 独有的特性（[Mozilla extension](/zh-CN/docs/Web/CSS/Mozilla_Extensions)），用于对进度条完成的部分进行选择。
 
-<p>如果你想选择未完成的部分，请直接选择 {{HTMLElement("progress")}} 。</p>
+如果你想选择未完成的部分，请直接选择 {{HTMLElement("progress")}} 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html; notranslate">&lt;progress value="30" max="100"&gt;30%&lt;/progress&gt;
-&lt;progress max="100"&gt;Indeterminate&lt;/progress&gt;</pre>
+```html
+<progress value="30" max="100">30%</progress>
+<progress max="100">Indeterminate</progress>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">::-moz-progress-bar {
+```css
+::-moz-progress-bar {
   background-color: red;
 }
 
 /* Force indeterminate bars to have zero width */
 :indeterminate::-moz-progress-bar {
   width: 0;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<p>上面第一段样式的进度条会如下图所示：</p>
+上面第一段样式的进度条会如下图所示：
 
-<p><img alt="Custom styled progress bar" class="default internal" src="/@api/deki/files/5387/=redbar.png"></p>
+![Custom styled progress bar](/@api/deki/files/5387/=redbar.png)
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTMLElement("progress")}}</li>
- <li>{{ cssxref("::-ms-fill") }}</li>
- <li>{{ cssxref("::-webkit-progress-bar") }}</li>
- <li>{{ cssxref("::-webkit-progress-value") }}</li>
- <li>{{ cssxref("::-webkit-progress-inner-element") }}</li>
-</ul>
+- {{HTMLElement("progress")}}
+- {{ cssxref("::-ms-fill") }}
+- {{ cssxref("::-webkit-progress-bar") }}
+- {{ cssxref("::-webkit-progress-value") }}
+- {{ cssxref("::-webkit-progress-inner-element") }}

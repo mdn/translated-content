@@ -7,64 +7,106 @@ tags:
 translation_of: Web/CSS/transform-function/scaleY()
 original_slug: Web/CSS/transform-function/scaleY()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>scaleY()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> function defines a transformation that resizes an element along the y-axis (vertically). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.</p>
+The **`scaleY()`** [CSS](/zh-CN/docs/Web/CSS) function defines a transformation that resizes an element along the y-axis (vertically). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-<p><img src="https://mdn.mozillademos.org/files/12119/scaleY.png" style="height: 381px; width: 365px;"></p>
+![](https://mdn.mozillademos.org/files/12119/scaleY.png)
 
-<p>It modifies the ordinate of each element point by a constant factor, except when the scale factor is 1, in which case the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved. <code>scaleY(-1)</code> defines an <a href="http://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</a>, with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}} property).</p>
+It modifies the ordinate of each element point by a constant factor, except when the scale factor is 1, in which case the function is the identity transform. The scaling is not isotropic, and the angles of the element are not conserved. `scaleY(-1)` defines an [axial symmetry](http://en.wikipedia.org/wiki/Axial_symmetry), with a horizontal axis passing through the origin (as specified by the {{cssxref("transform-origin")}} property).
 
-<div class="note">
-<p><strong>Note:</strong> <code>scaleY(sy)</code> is equivalent to <code><a href="/en-US/docs/Web/CSS/transform-function/scale">scale</a>(1, sy)</code> or <code><a href="/en-US/docs/Web/CSS/transform-function/scale3d">scale3d</a>(1, sy, 1)</code>.</p>
+> **备注：** `scaleY(sy)` is equivalent to `scale(1, sy)` or `scale3d(1, sy, 1)`.
+>
+> `transform: rotateX(180deg);` === `transform: scaleY(-1);`
 
-<p><code>transform: rotateX(180deg);</code>  === <code>transform: scaleY(-1);</code></p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```
+scaleY(s)
+```
 
-<pre class="syntaxbox notranslate">scaleY(s)
-</pre>
+### Values
 
-<h3 id="Values">Values</h3>
-
-<dl>
- <dt><code>s</code></dt>
- <dd>Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the ordinate of each point of the element.</dd>
-</dl>
+- `s`
+  - : Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the ordinate of each point of the element.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd></mtr> <mtr><mtd>0</mtd><mtd>s</mtd></mtr> </mtable> </mfenced> </math></td>
-   <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>s</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[1 0 0 s 0 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
+      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
+      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd></mtr>
+              <mtr><mtd>0</mtd><mtd>s</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>s</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>s</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 0 0 s 0 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Scaled&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Scaled</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -74,23 +116,21 @@ original_slug: Web/CSS/transform-function/scaleY()
   transform: scaleY(0.6);
   background-color: pink;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 200, 200)}}</p>
+{{EmbedLiveSample("Examples", 200, 200)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

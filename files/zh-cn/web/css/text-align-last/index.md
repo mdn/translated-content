@@ -6,13 +6,12 @@ tags:
   - 布局
 translation_of: Web/CSS/text-align-last
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
+CSS 属性 **`text-align-last`** 描述的是一段文本中最后一行在被强制换行之前的对齐规则。
 
-
-<p>CSS 属性 <strong><code>text-align-last</code></strong>  描述的是一段文本中最后一行在被强制换行之前的对齐规则。</p>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 text-align-last: auto;
 text-align-last: start;
 text-align-last: end;
@@ -25,68 +24,65 @@ text-align-last: justify;
 text-align-last: inherit;
 text-align-last: initial;
 text-align-last: unset;
-</pre>
+```
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="属性值">属性值</h3>
+### 属性值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>每一行的对齐规则由 {{cssxref("text-align")}} 的值来确定，当 {{cssxref("text-align")}} 的值是 <code>justify</code>，<code>text-align-last</code> 的表现和设置了 <code>start</code> 的表现是一样的，即如果文本的展示方向是从左到右，则最后一行左侧对齐与内容盒子。</dd>
- <dt><code>start</code></dt>
- <dd>与 {{cssxref("direction")}} 的设置有关。<br>
- 如果文本展示方向是从左到右，起点在左侧，则是左对齐；<br>
- 如果文本展示方向是从右到左，起点在右侧，则是右对齐。<br>
- 如果没有设置 {{cssxref("direction")}} ，则按照浏览器文本的默认显示方向来确定。</dd>
- <dt><code>end</code></dt>
- <dd>与 {{cssxref("direction")}} 的设置有关。<br>
- 如果文本展示方向是从左到右，末尾在右侧，则是右对齐；<br>
- 如果文本展示方向是从右到左，末尾在左侧，则是左对齐。<br>
- 如果没有设置 {{cssxref("direction")}} ，则按照浏览器文本的默认显示方向来确定。</dd>
- <dt><code>left</code></dt>
- <dd>最后一行文字与内容盒子的左侧对齐</dd>
- <dt><code>right</code></dt>
- <dd>最后一行文字与内容盒子的右侧对齐</dd>
- <dt><code>center</code></dt>
- <dd>最后一行文字与内容盒子居中对齐</dd>
- <dt><code>justify</code></dt>
- <dd>最后一行文字的开头与内容盒子的左侧对齐，末尾与右侧对齐。</dd>
-</dl>
+- `auto`
+  - : 每一行的对齐规则由 {{cssxref("text-align")}} 的值来确定，当 {{cssxref("text-align")}} 的值是 `justify`，`text-align-last` 的表现和设置了 `start` 的表现是一样的，即如果文本的展示方向是从左到右，则最后一行左侧对齐与内容盒子。
+- `start`
+  - : 与 {{cssxref("direction")}} 的设置有关。
+    如果文本展示方向是从左到右，起点在左侧，则是左对齐；
+    如果文本展示方向是从右到左，起点在右侧，则是右对齐。
+    如果没有设置 {{cssxref("direction")}} ，则按照浏览器文本的默认显示方向来确定。
+- `end`
+  - : 与 {{cssxref("direction")}} 的设置有关。
+    如果文本展示方向是从左到右，末尾在右侧，则是右对齐；
+    如果文本展示方向是从右到左，末尾在左侧，则是左对齐。
+    如果没有设置 {{cssxref("direction")}} ，则按照浏览器文本的默认显示方向来确定。
+- `left`
+  - : 最后一行文字与内容盒子的左侧对齐
+- `right`
+  - : 最后一行文字与内容盒子的右侧对齐
+- `center`
+  - : 最后一行文字与内容盒子居中对齐
+- `justify`
+  - : 最后一行文字的开头与内容盒子的左侧对齐，末尾与右侧对齐。
 
-<h3 id="语法_2">语法</h3>
+### 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<div class="hidden">
-<pre class="brush: html">&lt;p&gt;Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula.&lt;/p&gt;
-</pre>
-</div>
+```html hidden
+<p>Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula.</p>
+```
 
-<pre class="brush: css">p {
+```css
+p {
   font-size: 1.4em;
   text-align: justify;
   -moz-text-align-last: center;
   text-align-last: center;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Example','100%')}}</p>
+{{EmbedLiveSample('Example','100%')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.text-align-last")}}</p>
+{{Compat("css.properties.text-align-last")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref("text-align")}}</li>
- <li>{{cssxref("direction")}}</li>
-</ul>
+- {{cssxref("text-align")}}
+- {{cssxref("direction")}}

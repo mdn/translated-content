@@ -3,115 +3,91 @@ title: Box alignment in Flexbox
 slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div> </div>
+[Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment) 规范详细说明了对齐 (alignment) 在各种布局方法中的工作原理; 在此页面中，我们将探讨盒子对齐（box aligment）在 Flexbox 环境中的工作原理。由于此页面旨在详细说明特定于 Flexbox 和框对齐的内容，因此应与[Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment) 页面一起阅读，该页面详细说明了不同布局方法的框对齐的常见方法。
 
-<p><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> 规范详细说明了对齐 (alignment) 在各种布局方法中的工作原理; 在此页面中，我们将探讨盒子对齐（box aligment）在 Flexbox 环境中的工作原理。由于此页面旨在详细说明特定于 Flexbox 和框对齐的内容，因此应与<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> 页面一起阅读，该页面详细说明了不同布局方法的框对齐的常见方法。</p>
+## 基础示例
 
-<h2 id="基础示例">基础示例</h2>
+在此示例中，使用{{cssxref("justify-content")}}在主轴上对齐三个弹性元素（flex items），并使用{{cssxref("align-items")}}在十字轴上对齐。第一个元素通过将{{cssxref("align-self")}}设置为居中来覆盖在父元素设置的 align-items 值。
 
-<p>在此示例中，使用{{cssxref("justify-content")}}在主轴上对齐三个弹性元素（flex items），并使用{{cssxref("align-items")}}在十字轴上对齐。第一个元素通过将{{cssxref("align-self")}}设置为居中来覆盖在父元素设置的 align-items 值。</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}</p>
+## 轴 与 flex-direction
 
-<h2 id="轴_与_flex-direction">轴 与 flex-direction</h2>
+Flexbox 与文档的写入模式有关，因此如果您使用英语并将{{cssxref("justify-content")}}设置为 flex-end，则会将项目对齐到 Flex 容器的末尾。如果您将{{cssxref("flex-direction")}}设置为行，则此对齐将处于内联方向。
 
-<p>Flexbox 与文档的写入模式有关，因此如果您使用英语并将{{cssxref("justify-content")}}设置为 flex-end，则会将项目对齐到 Flex 容器的末尾。如果您将{{cssxref("flex-direction")}}设置为行，则此对齐将处于内联方向。</p>
+但是，在 Flexbox 中，您可以通过将 flex-direction 设置为 column 来更改主轴。在这种情况下，justify-content 将在块方向上对齐项目。因此，在 Flexbox 中工作时最容易考虑主轴和纵轴，如下所示：
 
-<p>但是，在 Flexbox 中，您可以通过将 flex-direction 设置为 column 来更改主轴。在这种情况下，justify-content 将在块方向上对齐项目。因此，在 Flexbox 中工作时最容易考虑主轴和纵轴，如下所示：</p>
+- 主轴由`flex-direction`设置方向，通过`justify-content` 属性对齐
+- 纵轴穿过主轴，通过`align-content`，`align-self` / `align-items`对齐
 
-<ul>
- <li>主轴由<code>flex-direction</code>设置方向，通过<code>justify-content</code> 属性对齐</li>
- <li>纵轴穿过主轴，通过<code>align-content</code>，<code>align-self</code> / <code>align-items</code>对齐</li>
-</ul>
+### 主轴
 
-<h3 id="主轴">主轴</h3>
+- {{cssxref("justify-content")}}
 
-<ul>
- <li>{{cssxref("justify-content")}}</li>
-</ul>
+### 纵轴
 
-<h3 id="纵轴">纵轴</h3>
+- {{cssxref("align-self")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-content")}}
 
-<ul>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-content")}}</li>
-</ul>
+### justify-self 在 Flexbox 布局中失效
 
-<h3 id="justify-self_在_Flexbox布局中失效">justify-self 在 Flexbox 布局中失效</h3>
+在主轴上，Flexbox 将我们的内容作为一个组进行处理。计算布置子元素所需的空间量，然后剩余空间可用于分配。 `justify-content`属性控制剩余空间的使用方式。设置`justify-content：flex-end`，额外空间放在所有子元素之前，`justify-content：space-around`，它放在该维度的子元素的两侧，等等。
 
-<p>在主轴上，Flexbox 将我们的内容作为一个组进行处理。计算布置子元素所需的空间量，然后剩余空间可用于分配。 <code>justify-content</code>属性控制剩余空间的使用方式。设置<code>justify-content：flex-end</code>，额外空间放在所有子元素之前，<code>justify-content：space-around</code>，它放在该维度的子元素的两侧，等等。</p>
+这意味着在 Flexbox 中，`justify-self`属性没有意义，因为我们总是处理移动整个元素组。
 
-<p>这意味着在 Flexbox 中，<code>justify-self</code>属性没有意义，因为我们总是处理移动整个元素组。</p>
+在十字轴上，`align-self`是有意义的，因为我们可能在该维度中的 flex 容器中有额外的空间，其中单个元素可以移动到开始和结束位置。
 
-<p>在十字轴上，<code>align-self</code>是有意义的，因为我们可能在该维度中的 flex 容器中有额外的空间，其中单个元素可以移动到开始和结束位置。</p>
+## 对齐 与 auto margins
 
-<h2 id="对齐_与_auto_margins">对齐 与 auto margins</h2>
+在 Flexbox 中有一个特定的用例，我们可能会认为`justify-self`是我们需要的，这就是我们想要分割一组 flex items，也许是为了创建一个分割导航模式。对于此用例，我们可以使用自动边距。设置为 auto 的边距将吸收其维度中的所有可用空间。这就是以自动边距为中心的块的工作原理。通过将左右边距设置为 auto，我们块的两侧都会尝试占用所有可用空间，因此将盒子推入中心。
 
-<p>在 Flexbox 中有一个特定的用例，我们可能会认为<code>justify-self</code>是我们需要的，这就是我们想要分割一组 flex items，也许是为了创建一个分割导航模式。对于此用例，我们可以使用自动边距。设置为 auto 的边距将吸收其维度中的所有可用空间。这就是以自动边距为中心的块的工作原理。通过将左右边距设置为 auto，我们块的两侧都会尝试占用所有可用空间，因此将盒子推入中心。</p>
+通过在一组弹性项目中的一个项目上设置 auto 的{{cssxref("margin")}}全部对齐以开始，我们可以创建拆分导航。这适用于 Flexbox 和对齐属性。一旦没有可用于自动边距的空间，该项目的行为与所有其他弹性项目的行为相同，并且收缩以尝试适合空间。
 
-<p>通过在一组弹性项目中的一个项目上设置 auto 的{{cssxref("margin")}}全部对齐以开始，我们可以创建拆分导航。这适用于 Flexbox 和对齐属性。一旦没有可用于自动边距的空间，该项目的行为与所有其他弹性项目的行为相同，并且收缩以尝试适合空间。</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}</p>
+## `gap` 属性
 
-<h2 id="gap_属性"><code>gap</code> 属性</h2>
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
-<ul>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
+### 在子元素之间创建固定大小的差距
 
-<h3 id="在子元素之间创建固定大小的差距">在子元素之间创建固定大小的差距</h3>
+在主轴上，`column-gap`属性将在相邻项之间创建固定大小的间隙。
 
-<p>在主轴上，<code>column-gap</code>属性将在相邻项之间创建固定大小的间隙。</p>
+在纵轴上，`row-gap`属性将在相邻的子元素之间创建间距，因此还必须将`flex-wrap`设置为`wrap`,以使其具有任何效果。
 
-<p>在纵轴上，<code>row-gap</code>属性将在相邻的子元素之间创建间距，因此还必须将<code>flex-wrap</code>设置为<code>wrap</code>,以使其具有任何效果。</p>
+> **备注：** 从 Firefox 63 开始，Firefox 是唯一实现 Flexbox gap 属性的浏览器。
 
-<div class="note">
-<p><strong>注意</strong>: 从 Firefox 63 开始，Firefox 是唯一实现 Flexbox gap 属性的浏览器。</p>
-</div>
+## Reference
 
-<h2 id="Reference">Reference</h2>
+### CSS Properties
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+- {{cssxref("justify-content")}}
+- {{cssxref("align-content")}}
+- {{cssxref("place-content")}}
+- {{cssxref("justify-items")}}
+- {{cssxref("align-items")}}
+- {{cssxref("place-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
-<div class="index">
-<ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("place-content")}}</li>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("place-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
-</div>
+### Glossary Entries
 
-<h3 id="Glossary_Entries">Glossary Entries</h3>
+- {{Glossary("Cross axis")}}
+- {{Glossary("Main axis")}}
 
-<div class="index">
-<ul>
- <li>{{Glossary("Cross axis")}}</li>
- <li>{{Glossary("Main axis")}}</li>
-</ul>
-</div>
+## Guides
 
-<h2 id="Guides">Guides</h2>
+- [Alignment in flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Alignment in flexbox</a></li>
-</ul>
+## External Resources
 
-<h2 id="External_Resources">External Resources</h2>
-
-<ul>
- <li><a href="https://rachelandrew.co.uk/css/cheatsheets/box-alignment">Box alignment cheatsheet</a></li>
- <li><a href="https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/">CSS Grid, Flexbox and Box Alignment</a></li>
- <li><a href="https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/">Thoughts on partial implementations of Box Alignment</a></li>
-</ul>
+- [Box alignment cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
+- [CSS Grid, Flexbox and Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
+- [Thoughts on partial implementations of Box Alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

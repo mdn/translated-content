@@ -3,11 +3,12 @@ title: text-decoration-skip
 slug: Web/CSS/text-decoration-skip
 translation_of: Web/CSS/text-decoration-skip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS <strong><code>text-decoration-skip</code></strong> 属性定义了元素哪些部分的内容需要被文本修饰所跳过。它可以控制所有该元素或该元素的祖先所绘制的文本修饰线。</p>
+CSS **`text-decoration-skip`** 属性定义了元素哪些部分的内容需要被文本修饰所跳过。它可以控制所有该元素或该元素的祖先所绘制的文本修饰线。
 
-<pre class="brush:css no-line-numbers">/* 关键字 */
+```css
+/* 关键字 */
 text-decoration-skip: none;
 text-decoration-skip: objects;
 text-decoration-skip: spaces;
@@ -23,65 +24,63 @@ text-decoration-skip: objects edges box-decoration;
 text-decoration-skip: inherit;
 text-decoration-skip: initial;
 text-decoration-skip: unset;
-</pre>
+```
 
-<div class="note">
-<p><strong>注意：</strong> <code>ink</code> 值被移动至 {{cssxref("text-decoration-skip-ink")}} 属性。</p>
-</div>
+> **备注：** `ink` 值被移动至 {{cssxref("text-decoration-skip-ink")}} 属性。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>没有任何内容被跳过。因此，文本修饰会为所有文本内容和行内元素进行绘制。</dd>
- <dt><code>objects</code></dt>
- <dd>拥有完整盒模型的原子行内元素会被跳过，例如图片和行内块元素。</dd>
- <dt><code>spaces</code></dt>
- <dd>所有的空格会被跳过，包括：所有的 <a href="https://www.unicode.org/reports/tr44/#White_Space">Unicode 空白字符</a> 和所有的分词符，以及任意相邻的 {{cssxref("letter-spacing")}} 或 {{cssxref("word-spacing")}}。</dd>
- <dt><code>leading-spaces</code></dt>
- <dd>除了只跳过开始的空格外，与 <code>spaces</code> 相同。</dd>
- <dt><code>trailing-spaces</code></dt>
- <dd>除了只跳过结尾的空格外，与 <code>spaces</code> 相同。</dd>
- <dt><code>edges</code></dt>
- <dd>文本修饰的开始与结束会比原有的装饰范围向内收缩（例如半个线宽）。这样，相邻的元素的下划线就可以分开。（这对于中文很重要，因为在中文中，下划线也是一种形式的标点符号。）
- <img alt='An example of "text-decoration-skip: edges;".' src="decoration-skip-edges.png"></dd>
- <dt><code>box-decoration</code></dt>
- <dd>文本修饰会跳过盒模型的内边距、边框、外边距。这只会影响到祖先元素定义的修饰；修饰的盒不会渲染本身的盒修饰。</dd>
-</dl>
+- `none`
+  - : 没有任何内容被跳过。因此，文本修饰会为所有文本内容和行内元素进行绘制。
+- `objects`
+  - : 拥有完整盒模型的原子行内元素会被跳过，例如图片和行内块元素。
+- `spaces`
+  - : 所有的空格会被跳过，包括：所有的 [Unicode 空白字符](https://www.unicode.org/reports/tr44/#White_Space) 和所有的分词符，以及任意相邻的 {{cssxref("letter-spacing")}} 或 {{cssxref("word-spacing")}}。
+- `leading-spaces`
+  - : 除了只跳过开始的空格外，与 `spaces` 相同。
+- `trailing-spaces`
+  - : 除了只跳过结尾的空格外，与 `spaces` 相同。
+- `edges`
+  - : 文本修饰的开始与结束会比原有的装饰范围向内收缩（例如半个线宽）。这样，相邻的元素的下划线就可以分开。（这对于中文很重要，因为在中文中，下划线也是一种形式的标点符号。）
+    ![An example of "text-decoration-skip: edges;".](decoration-skip-edges.png)
+- `box-decoration`
+  - : 文本修饰会跳过盒模型的内边距、边框、外边距。这只会影响到祖先元素定义的修饰；修饰的盒不会渲染本身的盒修饰。
 
-<h3 id="语法格式">语法格式</h3>
+### 语法格式
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;&lt;em&gt;Hey,&lt;/em&gt; &lt;em&gt;grab a cup of coffee!&lt;/em&gt;&lt;/p&gt;</pre>
+```html
+<p><em>Hey,</em> <em>grab a cup of coffee!</em></p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight[4]">p {
+```css
+p {
   margin: 0;
   font-size: 3em;
   text-decoration: underline;
   text-decoration-skip: edges;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Example", "100%", 60)}}</p>
+{{EmbedLiveSample("Example", "100%", 60)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
-
-
-<p>{{Compat("css.properties.text-decoration-skip")}}</p>
+{{Compat("css.properties.text-decoration-skip")}}

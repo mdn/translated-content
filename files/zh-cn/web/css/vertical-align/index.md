@@ -7,40 +7,36 @@ tags:
   - Reference
 translation_of: Web/CSS/vertical-align
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="https://developer.mozilla.org/en-US/docs/CSS">CSS</a> 的属性 <strong><code>vertical-align</code></strong> 用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。</p>
+[CSS](/zh-CN/docs/CSS) 的属性 **`vertical-align`** 用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。
 
-<div>{{EmbedInteractiveExample("pages/css/vertical-align.html")}}</div>
+{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
 
+vertical-align 属性可被用于两种环境：
 
+- 使行内元素盒模型与其行内元素容器垂直对齐。例如，用于垂直对齐一行文本内的图片{{HTMLElement("img")}}：
 
-<p>vertical-align 属性可被用于两种环境：</p>
+```html hidden
+<p>
+top:<img style="vertical-align:top" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+middle:<img style="vertical-align:middle" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+bottom:<img style="vertical-align:bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+super:<img style="vertical-align:super" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+sub:<img style="vertical-align:sub" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+</p>
+<p>
+text-top:<img style="vertical-align:text-top" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+text-bottom:<img  style="vertical-align:text-bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+0.2em:<img style="vertical-align:0.2em" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+-1em:<img  style="vertical-align:-1em" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+20%:<img style="vertical-align:20%" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+-100%:<img  style="vertical-align:-100%" src="https://mdn.mozillademos.org/files/15189/star.png"/>
+</p>
+```
 
-<ul>
- <li>使行内元素盒模型与其行内元素容器垂直对齐。例如，用于垂直对齐一行文本内的图片{{HTMLElement("img")}}：</li>
-</ul>
-
-<div id="vertical-align-inline">
-<pre class="hidden brush: html">&lt;p&gt;
-top:&lt;img style="vertical-align:top" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-middle:&lt;img style="vertical-align:middle" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-bottom:&lt;img style="vertical-align:bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-super:&lt;img style="vertical-align:super" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-sub:&lt;img style="vertical-align:sub" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-&lt;/p&gt;
-&lt;p&gt;
-text-top:&lt;img style="vertical-align:text-top" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-text-bottom:&lt;img  style="vertical-align:text-bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-0.2em:&lt;img style="vertical-align:0.2em" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
--1em:&lt;img  style="vertical-align:-1em" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-20%:&lt;img style="vertical-align:20%" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
--100%:&lt;img  style="vertical-align:-100%" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
-&lt;/p&gt;
-
-</pre>
-
-<pre class="hidden brush: css">#* {
+```css hidden
+#* {
   box-sizing: border-box;
 }
 
@@ -57,32 +53,29 @@ p {
   margin-right: auto;
   width: 80%;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("vertical-align-inline", 1200, 160)}}</p>
+{{EmbedLiveSample("vertical-align-inline", 1200, 160)}}
 
-<ul>
- <li>垂直对齐表格单元内容：</li>
-</ul>
+- 垂直对齐表格单元内容：
 
-<div id="vertical-align-table">
-<pre class="hidden brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td style="vertical-align: baseline"&gt;baseline&lt;/td&gt;
-    &lt;td style="vertical-align: top"&gt;top&lt;/td&gt;
-    &lt;td style="vertical-align: middle"&gt;middle&lt;/td&gt;
-    &lt;td style="vertical-align: bottom"&gt;bottom&lt;/td&gt;
-    &lt;td&gt;
-      &lt;p&gt;There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.&lt;/p&gt;
-&lt;p&gt;There is another theory which states that this has already happened.&lt;/p&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+```html hidden
+<table>
+  <tr>
+    <td style="vertical-align: baseline">baseline</td>
+    <td style="vertical-align: top">top</td>
+    <td style="vertical-align: middle">middle</td>
+    <td style="vertical-align: bottom">bottom</td>
+    <td>
+      <p>There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.</p>
+<p>There is another theory which states that this has already happened.</p>
+    </td>
+  </tr>
+</table>
+```
 
-</pre>
-
-<pre class="hidden brush: css">table {
+```css hidden
+table {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -96,16 +89,16 @@ td {
   padding: 0.5em;
   font-family: monospace;
 }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("vertical-align-table", 1200, 230)}}</p>
+{{EmbedLiveSample("vertical-align-table", 1200, 230)}}
 
-<p>注意 <code>vertical-align</code> 只对行内元素、行内块元素和表格单元格元素生效：不能用它垂直对齐<a href="/zh-CN/docs/Web/HTML/Block-level_elements">块级元素</a>。</p>
+注意 `vertical-align` 只对行内元素、行内块元素和表格单元格元素生效：不能用它垂直对齐[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 vertical-align: baseline;
 vertical-align: sub;
 vertical-align: super;
@@ -115,116 +108,108 @@ vertical-align: middle;
 vertical-align: top;
 vertical-align: bottom;
 
-/* &lt;length&gt; values */
+/* <length> values */
 vertical-align: 10em;
 vertical-align: 4px;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 vertical-align: 20%;
 
 /* Global values */
 vertical-align: inherit;
 vertical-align: initial;
 vertical-align: unset;
-</pre>
+```
 
-<p><code>vertical-align</code> 属性指定为下面列出的值之一。</p>
+`vertical-align` 属性指定为下面列出的值之一。
 
-<h3 id="行内元素的值">行内元素的值</h3>
+### 行内元素的值
 
-<h4 id="相对父元素的值">相对父元素的值</h4>
+#### 相对父元素的值
 
-<p>这些值使元素相对其父元素垂直对齐：</p>
+这些值使元素相对其父元素垂直对齐：
 
-<dl>
- <dt><code>baseline</code></dt>
- <dd>使元素的基线与父元素的基线对齐。HTML 规范没有详细说明部分<a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a>的基线，如{{HTMLElement("textarea")}} ，这意味着这些元素使用此值的表现因浏览器而异。</dd>
- <dt><code>sub</code></dt>
- <dd>使元素的基线与父元素的下标基线对齐。</dd>
- <dt><code>super</code></dt>
- <dd>使元素的基线与父元素的上标基线对齐。</dd>
- <dt><code>text-top</code></dt>
- <dd>使元素的顶部与父元素的字体顶部对齐。</dd>
- <dt><code>text-bottom</code></dt>
- <dd>使元素的底部与父元素的字体底部对齐。</dd>
- <dt><code>middle</code></dt>
- <dd>使元素的中部与父元素的基线加上父元素 x-height（译注：<a href="https://www.zhangxinxu.com/wordpress/2015/06/about-letter-x-of-css/">x 高度</a>）的一半对齐。</dd>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>使元素的基线对齐到父元素的基线之上的给定长度。可以是负数。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>使元素的基线对齐到父元素的基线之上的给定百分比，该百分比是{{Cssxref("line-height")}}属性的百分比。可以是负数。</dd>
-</dl>
+- `baseline`
+  - : 使元素的基线与父元素的基线对齐。HTML 规范没有详细说明部分[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的基线，如{{HTMLElement("textarea")}} ，这意味着这些元素使用此值的表现因浏览器而异。
+- `sub`
+  - : 使元素的基线与父元素的下标基线对齐。
+- `super`
+  - : 使元素的基线与父元素的上标基线对齐。
+- `text-top`
+  - : 使元素的顶部与父元素的字体顶部对齐。
+- `text-bottom`
+  - : 使元素的底部与父元素的字体底部对齐。
+- `middle`
+  - : 使元素的中部与父元素的基线加上父元素 x-height（译注：[x 高度](https://www.zhangxinxu.com/wordpress/2015/06/about-letter-x-of-css/)）的一半对齐。
+- {{cssxref("&lt;length&gt;")}}
+  - : 使元素的基线对齐到父元素的基线之上的给定长度。可以是负数。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 使元素的基线对齐到父元素的基线之上的给定百分比，该百分比是{{Cssxref("line-height")}}属性的百分比。可以是负数。
 
-<h4 id="相对行的值">相对行的值</h4>
+#### 相对行的值
 
-<p>下列值使元素相对整行垂直对齐：</p>
+下列值使元素相对整行垂直对齐：
 
-<dl>
- <dt><code>top</code></dt>
- <dd>使元素及其后代元素的顶部与整行的顶部对齐。</dd>
- <dt><code>bottom</code></dt>
- <dd>使元素及其后代元素的底部与整行的底部对齐。</dd>
-</dl>
+- `top`
+  - : 使元素及其后代元素的顶部与整行的顶部对齐。
+- `bottom`
+  - : 使元素及其后代元素的底部与整行的底部对齐。
 
-<p>没有基线的元素，使用外边距的下边缘替代。</p>
+没有基线的元素，使用外边距的下边缘替代。
 
-<h3 id="表格单元格的值">表格单元格的值</h3>
+### 表格单元格的值
 
-<dl>
- <dt><code>baseline</code> (以及 <code>sub</code>, <code>super</code>, <code>text-top</code>, <code>text-bottom</code>, <code>&lt;length&gt;</code>, <code>&lt;percentage&gt;</code>)</dt>
- <dd>使单元格的基线，与该行中所有以基线对齐的其它单元格的基线对齐。</dd>
- <dt><code>top</code></dt>
- <dd>使单元格内边距的上边缘与该行顶部对齐。</dd>
- <dt><code>middle</code></dt>
- <dd>使单元格内边距盒模型在该行内居中对齐。</dd>
- <dt><code>bottom</code></dt>
- <dd>使单元格内边距的下边缘与该行底部对齐。</dd>
-</dl>
+- `baseline` (以及 `sub`, `super`, `text-top`, `text-bottom`, `<length>`, `<percentage>`)
+  - : 使单元格的基线，与该行中所有以基线对齐的其它单元格的基线对齐。
+- `top`
+  - : 使单元格内边距的上边缘与该行顶部对齐。
+- `middle`
+  - : 使单元格内边距盒模型在该行内居中对齐。
+- `bottom`
+  - : 使单元格内边距的下边缘与该行底部对齐。
 
-<p>可以是负数。</p>
+可以是负数。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;An &lt;img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a default alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="top" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-top alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="bottom" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a text-bottom alignment.&lt;/div&gt;
-&lt;div&gt;An &lt;img class="middle" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; image with a middle alignment.&lt;/div&gt;
-</pre>
+```html
+<div>An <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> image with a default alignment.</div>
+<div>An <img class="top" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> image with a text-top alignment.</div>
+<div>An <img class="bottom" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> image with a text-bottom alignment.</div>
+<div>An <img class="middle" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /> image with a middle alignment.</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">img.top { vertical-align: text-top; }
+```css
+img.top { vertical-align: text-top; }
 img.bottom { vertical-align: text-bottom; }
 img.middle { vertical-align: middle; }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例")}}</p>
+{{EmbedLiveSample("示例")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.vertical-align")}}
 
+## 参见
 
-<p>{{Compat("css.properties.vertical-align")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item">Typical use cases of Flexbox, section "Center item"</a></li>
- <li>{{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}</li>
- <li><a href="http://phrogz.net/css/vertical-align/index.html">Understanding <code>vertical-align</code>, or "How (Not) To Vertically Center Content"</a></li>
- <li><a href="https://christopheraue.net/design/vertical-align">Vertical-Align: All You Need To Know</a></li>
-</ul>
+- [Typical use cases of Flexbox, section "Center item"](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item)
+- {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
+- [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
+- [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

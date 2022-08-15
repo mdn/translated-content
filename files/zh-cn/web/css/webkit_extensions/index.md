@@ -3,242 +3,242 @@ title: Webkit Extensions
 slug: Web/CSS/WebKit_Extensions
 translation_of: Web/CSS/WebKit_Extensions
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p>WebKit 支持大量的<a href="/zh-cn/CSS">CSS</a>扩展，这种 css 属性的前缀<code>为-webkit-</code>.</p>
-<p>这些属性其中的一部分已经被包含在 CSS 规范草案中，并且可能成为最后的推荐标准，但目前仍然是试验性的属性，  还有一些属性是不规范的属性，它们没有出现在跟踪规范中。</p>
-<h3 id="WebKit-前缀属性_(跟踪规范)">WebKit-前缀属性 (跟踪规范)</h3>
-<div style="-moz-column-width: 20em; -webkit-columns: 20em; columns: 20em;">
- A
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-animation") }}</li>
-  <li>{{ Cssxref("-webkit-animation-delay") }}</li>
-  <li>{{ Cssxref("-webkit-animation-direction") }}</li>
-  <li>{{ Cssxref("-webkit-animation-duration") }}</li>
-  <li>{{ Cssxref("-webkit-animation-fill-mode") }}</li>
-  <li>{{ Cssxref("-webkit-animation-iteration-count") }}</li>
-  <li>{{ Cssxref("-webkit-animation-name") }}</li>
-  <li>{{ Cssxref("-webkit-animation-play-state") }}</li>
-  <li>{{ Cssxref("-webkit-animation-timing-function") }}</li>
-  <li>{{ Cssxref("-webkit-appearance") }}</li>
- </ul>
- B
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-backface-visibility") }}</li>
-  <li>{{ Cssxref("-webkit-border-image") }}</li>
- </ul>
- C D E
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-column-count") }}</li>
-  <li>{{ Cssxref("-webkit-column-gap") }}</li>
-  <li>{{ Cssxref("-webkit-column-width") }}</li>
-  <li>{{ Cssxref("-webkit-column-rule") }}</li>
-  <li>{{ Cssxref("-webkit-column-rule-width") }}</li>
-  <li>{{ Cssxref("-webkit-column-rule-style") }}</li>
-  <li>{{ Cssxref("-webkit-column-rule-color") }}</li>
-  <li>{{ Cssxref("-webkit-columns") }}</li>
-  <li>{{ Cssxref("-webkit-column-span") }}</li>
- </ul>
- F<br>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-font-feature-settings") }}</li>
-  <li>{{ Cssxref("-webkit-font-kerning") }}</li>
-  <li>{{ Cssxref("-webkit-font-size-delta") }}</li>
-  <li>{{ Cssxref("-webkit-font-variant-ligatures") }}</li>
- </ul>
- G<br>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-grid-column") }}</li>
-  <li>{{ Cssxref("-webkit-grid-columns") }}</li>
-  <li>{{ Cssxref("-webkit-grid-row") }}</li>
-  <li>{{ Cssxref("-webkit-grid-rows") }}</li>
- </ul>
- H—O<br>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-hyphens") }}</li>
- </ul>
- P
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-moz-perspective") }}</li>
-  <li>{{ Cssxref("-moz-perspective-origin") }}</li>
-  <li>{{ Cssxref("pointer-events") }} (applying to more than SVG)</li>
- </ul>
- Q—T<br>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ cssxref("-moz-text-align-last") }}</li>
-  <li>{{ Cssxref("text-decoration-color","-moz-text-decoration-color") }}</li>
-  <li>{{ Cssxref("text-decoration-line","-moz-text-decoration-line") }}</li>
-  <li>{{ Cssxref("text-decoration-style","-moz-text-decoration-style") }}</li>
-  <li>{{ Cssxref("-moz-transform") }}</li>
-  <li>{{ Cssxref("-moz-transform-origin") }}</li>
-  <li>{{ Cssxref("-moz-transform-style") }}</li>
-  <li>{{ cssxref("-moz-transition") }}</li>
-  <li>{{ cssxref("-moz-transition-delay") }}</li>
-  <li>{{ cssxref("-moz-transition-duration") }}</li>
-  <li>{{ cssxref("-moz-transition-property") }}</li>
-  <li>{{ cssxref("-moz-transition-timing-function") }}</li>
- </ul>
-</div>
-<h3 id="WebKit-prefixed_properties_with_an_unprefixed_counterpart">WebKit-prefixed properties with an unprefixed counterpart</h3>
-<p>A B</p>
-<ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
- <li>{{ Cssxref("-webkit-background-clip") }}</li>
- <li>{{ Cssxref("-webkit-background-origin") }}</li>
- <li>{{ Cssxref("-webkit-background-size") }}</li>
- <li>{{ Cssxref("-webkit-border-bottom-left-radius") }}</li>
- <li>{{ Cssxref("-webkit-border-bottom-right-radius") }}</li>
- <li>{{ Cssxref("-webkit-border-radius") }}</li>
- <li>{{ Cssxref("-webkit-border-top-left-radius") }}</li>
- <li>{{ Cssxref("-webkit-border-top-right-radius") }}</li>
- <li>{{ Cssxref("-webkit-box-sizing") }}</li>
- <li>{{ Cssxref("-epub-caption-side") }}</li>
-</ul>
-<h3 id="私有WebKit-前缀属性（不使用网页上）">私有 WebKit-前缀属性（不使用网页上）</h3>
-<div style="-moz-column-width: 20em; -webkit-columns: 20em; columns: 20em;">
- <p>A</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-aspect-ratio") }}</li>
-  <li>B</li>
-  <li>{{ Cssxref("-webkit-background-composite") }}</li>
-  <li>{{ Cssxref("-webkit-border-after") }}</li>
-  <li>{{ Cssxref("-webkit-border-after-color") }}</li>
-  <li>{{ Cssxref("-webkit-border-after-style") }}</li>
-  <li>{{ Cssxref("-webkit-border-after-width") }}</li>
-  <li>{{ Cssxref("-webkit-border-before") }}</li>
-  <li>{{ Cssxref("-webkit-border-before-color") }}</li>
-  <li>{{ Cssxref("-webkit-border-before-style") }}</li>
-  <li>{{ Cssxref("-webkit-border-before-width") }}</li>
-  <li>{{ Cssxref("-webkit-border-end") }}</li>
-  <li>{{ Cssxref("-webkit-border-end-color") }}</li>
-  <li>{{ Cssxref("-webkit-border-end-style") }}</li>
-  <li>{{ Cssxref("-webkit-border-end-width") }}</li>
-  <li>{{ Cssxref("-webkit-border-fit") }}</li>
-  <li>{{ Cssxref("-webkit-border-horizontal-spacing") }}</li>
-  <li>{{ Cssxref("-webkit-border-start") }}</li>
-  <li>{{ Cssxref("-webkit-border-start-color") }}</li>
-  <li>{{ Cssxref("-webkit-border-start-style") }}</li>
-  <li>{{ Cssxref("-webkit-border-start-width") }}{{ Cssxref("-webkit-border-vertical-spacing") }}</li>
-  <li>{{ Cssxref("-webkit-box-align") }}</li>
-  <li>{{ Cssxref("-webkit-box-direction") }}</li>
-  <li>{{ Cssxref("-webkit-box-flex") }}</li>
-  <li>{{ Cssxref("-webkit-box-flex-group") }}</li>
-  <li>{{ Cssxref("-webkit-box-lines") }}</li>
-  <li>{{ Cssxref("-webkit-box-ordinal-groups") }}</li>
-  <li>{{ Cssxref("-webkit-box-orient") }}</li>
-  <li>{{ Cssxref("-webkit-box-reflect") }}</li>
-  <li>{{ cssxref("-webkit-box-pack") }}</li>
-  <li>{{ Cssxref("-webkit-box-reflect") }}</li>
-  <li>{{ Cssxref("-webkit-box-shadow") }}</li>
- </ul>
- <p>C</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-column-axis") }}</li>
-  <li>{{ Cssxref("-webkit-column-break-after") }}</li>
-  <li>{{ Cssxref("-webkit-column-break-before") }}</li>
-  <li>{{ Cssxref("-webkit-column-break-inside") }}</li>
-  <li>D</li>
-  <li>{{ Cssxref("-webkit-dashboard-region") }}</li>
-  <li>E—G</li>
-  <li>{{ Cssxref("-webkit-filter") }}</li>
-  <li>{{ Cssxref("-webkit-font-smoothing") }}</li>
- </ul>
- <p>H</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-highlight") }}</li>
-  <li>{{ Cssxref("-webkit-hyphenate-charset") }}</li>
-  <li>{{ Cssxref("-webkit-hyphenate-limit-after") }}</li>
-  <li>{{ Cssxref("-webkit-hyphenate-limit-before") }}</li>
-  <li>{{ Cssxref("-webkit-hyphenate-limit-lines") }}</li>
- </ul>
- <p>I—L</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-line-align") }}</li>
-  <li>{{ Cssxref("-webkit-line-box-contain") }}</li>
-  <li>{{ Cssxref("-webkit-line-break") }}</li>
-  <li>{{ Cssxref("-webkit-line-clamp") }}</li>
-  <li>{{ Cssxref("-webkit-line-grid") }}</li>
-  <li>{{ Cssxref("-webkit-line-snap") }}</li>
-  <li>{{ Cssxref("-webkit-locale") }}</li>
-  <li>{{ Cssxref("-webkit-logical-height") }}</li>
-  <li>{{ Cssxref("-webkit-logical-width") }}</li>
- </ul>
- <p>M</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-margin-after") }}</li>
-  <li>{{ Cssxref("-webkit-margin-after-collapse") }}</li>
-  <li>{{ Cssxref("-webkit-margin-before") }}</li>
-  <li>{{ Cssxref("-webkit-margin-before-collapse") }}</li>
-  <li>{{ Cssxref("-webkit-margin-bottom-collapse") }}</li>
-  <li>{{ Cssxref("-webkit-margin-collapse") }}</li>
-  <li>{{ Cssxref("-webkit-margin-end") }}</li>
-  <li>{{ Cssxref("-webkit-margin-start") }}</li>
-  <li>{{ Cssxref("-webkit-margin-top-collapse") }}</li>
-  <li>{{ Cssxref("-webkit-marquee") }}</li>
-  <li>{{ Cssxref("-webkit-marquee-direction") }}</li>
-  <li>{{ Cssxref("-webkit-marquee-increment") }}</li>
-  <li>{{ Cssxref("-webkit-marquee-repetition") }}</li>
-  <li>{{ Cssxref("-webkit-marquee-speed") }}</li>
-  <li>{{ Cssxref("-webkit-marquee-style") }}</li>
-  <li>{{ Cssxref("-webkit-mask") }}</li>
-  <li>{{ Cssxref("-webkit-mask-attachment") }}</li>
-  <li>{{ Cssxref("-webkit-mask-box-image") }}</li>
-  <li>{{ Cssxref("-webkit-mask-box-image-outset") }}</li>
-  <li>{{ Cssxref("-webkit-mask-box-image-repeat") }}</li>
-  <li>{{ Cssxref("-webkit-mask-box-image-slice") }}</li>
-  <li>{{ Cssxref("-webkit-mask-boximage-source") }}</li>
-  <li>{{ Cssxref("-webkit-mask-box-image-width") }}</li>
-  <li>{{ Cssxref("-webkit-mask-clip") }}</li>
-  <li>{{ Cssxref("-webkit-mask-composite") }}</li>
-  <li>{{ Cssxref("-webkit-mask-image") }}</li>
-  <li>{{ Cssxref("-webkit-mask-origin") }}</li>
-  <li>{{ Cssxref("-webkit-mask-position") }}</li>
-  <li>{{ Cssxref("-webkit-mask-position-x") }}</li>
-  <li>{{ Cssxref("-webkit-mask-position-y") }}</li>
-  <li>{{ Cssxref("-webkit-mask-repeat") }}</li>
-  <li>{{ Cssxref("-webkit-mask-repeat-x") }}</li>
-  <li>{{ Cssxref("-webkit-mask-repeat-y") }}</li>
-  <li>{{ Cssxref("-webkit-mask-size") }}</li>
-  <li>{{ Cssxref("-webkit-match-nearest-mail-blockquote-color") }}</li>
-  <li>{{ Cssxref("-webkit-max-logical-height") }}</li>
-  <li>{{ Cssxref("-webkit-max-logical-width") }}</li>
-  <li>{{ Cssxref("-webkit-min-logical-height") }}</li>
-  <li>{{ Cssxref("-webkit-min-logical-width") }}</li>
- </ul>
- <p>N</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-webkit-nbsp-mode") }}</li>
- </ul>
- <p>O</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ cssxref("-moz-orient") }}</li>
-  <li>{{ Cssxref("-moz-outline-radius") }}</li>
-  <li>{{ Cssxref("-moz-outline-radius-bottomleft") }}</li>
-  <li>{{ Cssxref("-moz-outline-radius-bottomright") }}</li>
-  <li>{{ Cssxref("-moz-outline-radius-topleft") }}</li>
-  <li>{{ Cssxref("-moz-outline-radius-topright") }}</li>
- </ul>
- <p>P Q R</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-moz-padding-end") }}</li>
-  <li>{{ Cssxref("-moz-padding-start") }}</li>
- </ul>
- <p>S</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-moz-script-level") }}</li>
-  <li>{{ Cssxref("-moz-script-min-size") }}</li>
-  <li>{{ Cssxref("-moz-script-size-multiplier") }}</li>
-  <li>{{ Cssxref("-moz-stack-sizing") }}</li>
- </ul>
- <p>T U V</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-moz-text-blink") }}</li>
-  <li>{{ Cssxref("-moz-user-focus") }}</li>
-  <li>{{ Cssxref("-moz-user-input") }}</li>
-  <li>{{ Cssxref("-moz-user-modify") }}</li>
-  <li>{{ Cssxref("-moz-user-select") }}</li>
- </ul>
- <p>W—Z</p>
- <ul style="margin-left: 0; padding-left: 0; list-style-type: none;">
-  <li>{{ Cssxref("-moz-window-shadow") }}</li>
- </ul>
-</div>
+WebKit 支持大量的[CSS](/zh-cn/CSS)扩展，这种 css 属性的前缀`为-webkit-`.
+
+这些属性其中的一部分已经被包含在 CSS 规范草案中，并且可能成为最后的推荐标准，但目前仍然是试验性的属性， 还有一些属性是不规范的属性，它们没有出现在跟踪规范中。
+
+### WebKit-前缀属性 (跟踪规范)
+
+A
+
+- {{ Cssxref("-webkit-animation") }}
+- {{ Cssxref("-webkit-animation-delay") }}
+- {{ Cssxref("-webkit-animation-direction") }}
+- {{ Cssxref("-webkit-animation-duration") }}
+- {{ Cssxref("-webkit-animation-fill-mode") }}
+- {{ Cssxref("-webkit-animation-iteration-count") }}
+- {{ Cssxref("-webkit-animation-name") }}
+- {{ Cssxref("-webkit-animation-play-state") }}
+- {{ Cssxref("-webkit-animation-timing-function") }}
+- {{ Cssxref("-webkit-appearance") }}
+
+B
+
+- {{ Cssxref("-webkit-backface-visibility") }}
+- {{ Cssxref("-webkit-border-image") }}
+
+C D E
+
+- {{ Cssxref("-webkit-column-count") }}
+- {{ Cssxref("-webkit-column-gap") }}
+- {{ Cssxref("-webkit-column-width") }}
+- {{ Cssxref("-webkit-column-rule") }}
+- {{ Cssxref("-webkit-column-rule-width") }}
+- {{ Cssxref("-webkit-column-rule-style") }}
+- {{ Cssxref("-webkit-column-rule-color") }}
+- {{ Cssxref("-webkit-columns") }}
+- {{ Cssxref("-webkit-column-span") }}
+
+F
+
+- {{ Cssxref("-webkit-font-feature-settings") }}
+- {{ Cssxref("-webkit-font-kerning") }}
+- {{ Cssxref("-webkit-font-size-delta") }}
+- {{ Cssxref("-webkit-font-variant-ligatures") }}
+
+G
+
+- {{ Cssxref("-webkit-grid-column") }}
+- {{ Cssxref("-webkit-grid-columns") }}
+- {{ Cssxref("-webkit-grid-row") }}
+- {{ Cssxref("-webkit-grid-rows") }}
+
+H—O
+
+- {{ Cssxref("-webkit-hyphens") }}
+
+P
+
+- {{ Cssxref("-moz-perspective") }}
+- {{ Cssxref("-moz-perspective-origin") }}
+- {{ Cssxref("pointer-events") }} (applying to more than SVG)
+
+Q—T
+
+- {{ cssxref("-moz-text-align-last") }}
+- {{ Cssxref("text-decoration-color","-moz-text-decoration-color") }}
+- {{ Cssxref("text-decoration-line","-moz-text-decoration-line") }}
+- {{ Cssxref("text-decoration-style","-moz-text-decoration-style") }}
+- {{ Cssxref("-moz-transform") }}
+- {{ Cssxref("-moz-transform-origin") }}
+- {{ Cssxref("-moz-transform-style") }}
+- {{ cssxref("-moz-transition") }}
+- {{ cssxref("-moz-transition-delay") }}
+- {{ cssxref("-moz-transition-duration") }}
+- {{ cssxref("-moz-transition-property") }}
+- {{ cssxref("-moz-transition-timing-function") }}
+
+### WebKit-prefixed properties with an unprefixed counterpart
+
+A B
+
+- {{ Cssxref("-webkit-background-clip") }}
+- {{ Cssxref("-webkit-background-origin") }}
+- {{ Cssxref("-webkit-background-size") }}
+- {{ Cssxref("-webkit-border-bottom-left-radius") }}
+- {{ Cssxref("-webkit-border-bottom-right-radius") }}
+- {{ Cssxref("-webkit-border-radius") }}
+- {{ Cssxref("-webkit-border-top-left-radius") }}
+- {{ Cssxref("-webkit-border-top-right-radius") }}
+- {{ Cssxref("-webkit-box-sizing") }}
+- {{ Cssxref("-epub-caption-side") }}
+
+### 私有 WebKit-前缀属性（不使用网页上）
+
+A
+
+- {{ Cssxref("-webkit-aspect-ratio") }}
+- B
+- {{ Cssxref("-webkit-background-composite") }}
+- {{ Cssxref("-webkit-border-after") }}
+- {{ Cssxref("-webkit-border-after-color") }}
+- {{ Cssxref("-webkit-border-after-style") }}
+- {{ Cssxref("-webkit-border-after-width") }}
+- {{ Cssxref("-webkit-border-before") }}
+- {{ Cssxref("-webkit-border-before-color") }}
+- {{ Cssxref("-webkit-border-before-style") }}
+- {{ Cssxref("-webkit-border-before-width") }}
+- {{ Cssxref("-webkit-border-end") }}
+- {{ Cssxref("-webkit-border-end-color") }}
+- {{ Cssxref("-webkit-border-end-style") }}
+- {{ Cssxref("-webkit-border-end-width") }}
+- {{ Cssxref("-webkit-border-fit") }}
+- {{ Cssxref("-webkit-border-horizontal-spacing") }}
+- {{ Cssxref("-webkit-border-start") }}
+- {{ Cssxref("-webkit-border-start-color") }}
+- {{ Cssxref("-webkit-border-start-style") }}
+- {{ Cssxref("-webkit-border-start-width") }}{{ Cssxref("-webkit-border-vertical-spacing") }}
+- {{ Cssxref("-webkit-box-align") }}
+- {{ Cssxref("-webkit-box-direction") }}
+- {{ Cssxref("-webkit-box-flex") }}
+- {{ Cssxref("-webkit-box-flex-group") }}
+- {{ Cssxref("-webkit-box-lines") }}
+- {{ Cssxref("-webkit-box-ordinal-groups") }}
+- {{ Cssxref("-webkit-box-orient") }}
+- {{ Cssxref("-webkit-box-reflect") }}
+- {{ cssxref("-webkit-box-pack") }}
+- {{ Cssxref("-webkit-box-reflect") }}
+- {{ Cssxref("-webkit-box-shadow") }}
+
+C
+
+- {{ Cssxref("-webkit-column-axis") }}
+- {{ Cssxref("-webkit-column-break-after") }}
+- {{ Cssxref("-webkit-column-break-before") }}
+- {{ Cssxref("-webkit-column-break-inside") }}
+- D
+- {{ Cssxref("-webkit-dashboard-region") }}
+- E—G
+- {{ Cssxref("-webkit-filter") }}
+- {{ Cssxref("-webkit-font-smoothing") }}
+
+H
+
+- {{ Cssxref("-webkit-highlight") }}
+- {{ Cssxref("-webkit-hyphenate-charset") }}
+- {{ Cssxref("-webkit-hyphenate-limit-after") }}
+- {{ Cssxref("-webkit-hyphenate-limit-before") }}
+- {{ Cssxref("-webkit-hyphenate-limit-lines") }}
+
+I—L
+
+- {{ Cssxref("-webkit-line-align") }}
+- {{ Cssxref("-webkit-line-box-contain") }}
+- {{ Cssxref("-webkit-line-break") }}
+- {{ Cssxref("-webkit-line-clamp") }}
+- {{ Cssxref("-webkit-line-grid") }}
+- {{ Cssxref("-webkit-line-snap") }}
+- {{ Cssxref("-webkit-locale") }}
+- {{ Cssxref("-webkit-logical-height") }}
+- {{ Cssxref("-webkit-logical-width") }}
+
+M
+
+- {{ Cssxref("-webkit-margin-after") }}
+- {{ Cssxref("-webkit-margin-after-collapse") }}
+- {{ Cssxref("-webkit-margin-before") }}
+- {{ Cssxref("-webkit-margin-before-collapse") }}
+- {{ Cssxref("-webkit-margin-bottom-collapse") }}
+- {{ Cssxref("-webkit-margin-collapse") }}
+- {{ Cssxref("-webkit-margin-end") }}
+- {{ Cssxref("-webkit-margin-start") }}
+- {{ Cssxref("-webkit-margin-top-collapse") }}
+- {{ Cssxref("-webkit-marquee") }}
+- {{ Cssxref("-webkit-marquee-direction") }}
+- {{ Cssxref("-webkit-marquee-increment") }}
+- {{ Cssxref("-webkit-marquee-repetition") }}
+- {{ Cssxref("-webkit-marquee-speed") }}
+- {{ Cssxref("-webkit-marquee-style") }}
+- {{ Cssxref("-webkit-mask") }}
+- {{ Cssxref("-webkit-mask-attachment") }}
+- {{ Cssxref("-webkit-mask-box-image") }}
+- {{ Cssxref("-webkit-mask-box-image-outset") }}
+- {{ Cssxref("-webkit-mask-box-image-repeat") }}
+- {{ Cssxref("-webkit-mask-box-image-slice") }}
+- {{ Cssxref("-webkit-mask-boximage-source") }}
+- {{ Cssxref("-webkit-mask-box-image-width") }}
+- {{ Cssxref("-webkit-mask-clip") }}
+- {{ Cssxref("-webkit-mask-composite") }}
+- {{ Cssxref("-webkit-mask-image") }}
+- {{ Cssxref("-webkit-mask-origin") }}
+- {{ Cssxref("-webkit-mask-position") }}
+- {{ Cssxref("-webkit-mask-position-x") }}
+- {{ Cssxref("-webkit-mask-position-y") }}
+- {{ Cssxref("-webkit-mask-repeat") }}
+- {{ Cssxref("-webkit-mask-repeat-x") }}
+- {{ Cssxref("-webkit-mask-repeat-y") }}
+- {{ Cssxref("-webkit-mask-size") }}
+- {{ Cssxref("-webkit-match-nearest-mail-blockquote-color") }}
+- {{ Cssxref("-webkit-max-logical-height") }}
+- {{ Cssxref("-webkit-max-logical-width") }}
+- {{ Cssxref("-webkit-min-logical-height") }}
+- {{ Cssxref("-webkit-min-logical-width") }}
+
+N
+
+- {{ Cssxref("-webkit-nbsp-mode") }}
+
+O
+
+- {{ cssxref("-moz-orient") }}
+- {{ Cssxref("-moz-outline-radius") }}
+- {{ Cssxref("-moz-outline-radius-bottomleft") }}
+- {{ Cssxref("-moz-outline-radius-bottomright") }}
+- {{ Cssxref("-moz-outline-radius-topleft") }}
+- {{ Cssxref("-moz-outline-radius-topright") }}
+
+P Q R
+
+- {{ Cssxref("-moz-padding-end") }}
+- {{ Cssxref("-moz-padding-start") }}
+
+S
+
+- {{ Cssxref("-moz-script-level") }}
+- {{ Cssxref("-moz-script-min-size") }}
+- {{ Cssxref("-moz-script-size-multiplier") }}
+- {{ Cssxref("-moz-stack-sizing") }}
+
+T U V
+
+- {{ Cssxref("-moz-text-blink") }}
+- {{ Cssxref("-moz-user-focus") }}
+- {{ Cssxref("-moz-user-input") }}
+- {{ Cssxref("-moz-user-modify") }}
+- {{ Cssxref("-moz-user-select") }}
+
+W—Z
+
+- {{ Cssxref("-moz-window-shadow") }}

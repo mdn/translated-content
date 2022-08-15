@@ -1,47 +1,44 @@
 ---
 title: ':optional'
-slug: 'Web/CSS/:optional'
-translation_of: 'Web/CSS/:optional'
+slug: Web/CSS/:optional
+translation_of: Web/CSS/:optional
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><code>:optional</code> CSS <a href="/zh-CN/CSS/Pseudo-classes">伪类</a> 表示任意没有{{ htmlattrxref("required","input") }}属性的 {{ HTMLElement("input") }}，{{HTMLElement("select")}} 或  {{ HTMLElement("textarea") }} 元素使用它。</p>
+`:optional` CSS [伪类](/zh-CN/CSS/Pseudo-classes) 表示任意没有{{ htmlattrxref("required","input") }}属性的 {{ HTMLElement("input") }}，{{HTMLElement("select")}} 或 {{ HTMLElement("textarea") }} 元素使用它。
 
-<pre><code>/* Selects any optional &lt;input&gt; */
+```
+/* Selects any optional <input> */
 input:optional {
   border: 1px dashed black;
-}</code>
-</pre>
+}
+```
 
-<p>它允许表单容易的展示可选字段并且渲染其外观。</p>
+它允许表单容易的展示可选字段并且渲染其外观。
 
-<div class="note">
-<p>注：为必填字段设置外观，请使用 {{ cssxref(":required") }}伪类。</p>
-</div>
+> **备注：** 为必填字段设置外观，请使用 {{ cssxref(":required") }}伪类。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>查看{{ cssxref(":invalid") }} 示例。</p>
+查看{{ cssxref(":invalid") }} 示例。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.optional")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ cssxref(":required") }}</li>
- <li>{{ cssxref(":invalid") }}</li>
- <li>{{ cssxref(":valid") }}</li>
- <li><a href="/zh-CN/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
-</ul>
+- {{ cssxref(":required") }}
+- {{ cssxref(":invalid") }}
+- {{ cssxref(":valid") }}
+- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)

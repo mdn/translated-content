@@ -10,41 +10,35 @@ tags:
   - 颜色选择
 translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 ---
-<div class="hidden">
-<h2 id="ColorPicker_Tool">ColorPicker tool</h2>
+```html hidden
+    <div id="container">
+        <div id="palette" class="block">
+            <div id="color-palette"></div>
+            <div id="color-info">
+                <div class="title"> CSS Color </div>
+            </div>
+        </div>
 
-<h3 id="HTML_Content">HTML Content</h3>
+        <div id="picker" class="block">
+            <div class="ui-color-picker" data-topic="picker" data-mode="HSL"></div>
+            <div id="picker-samples" sample-id="master"></div>
+            <div id="controls">
+                <div id="delete">
+                    <div id="trash-can"></div>
+                </div>
+                <div id="void-sample" class="icon"></div>
+            </div>
+        </div>
 
-<pre class="brush: html">    &lt;div id="container"&gt;
-        &lt;div id="palette" class="block"&gt;
-            &lt;div id="color-palette"&gt;&lt;/div&gt;
-            &lt;div id="color-info"&gt;
-                &lt;div class="title"&gt; CSS Color &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        <div id="canvas" data-tutorial="drop">
+            <div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index"
+                data-max="20" data-sensivity="10"></div>
+        </div>
+    </div>
+```
 
-        &lt;div id="picker" class="block"&gt;
-            &lt;div class="ui-color-picker" data-topic="picker" data-mode="HSL"&gt;&lt;/div&gt;
-            &lt;div id="picker-samples" sample-id="master"&gt;&lt;/div&gt;
-            &lt;div id="controls"&gt;
-                &lt;div id="delete"&gt;
-                    &lt;div id="trash-can"&gt;&lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div id="void-sample" class="icon"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div id="canvas" data-tutorial="drop"&gt;
-            &lt;div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index"
-                data-max="20" data-sensivity="10"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-</pre>
-
-<h3 id="CSS_Content">CSS Content</h3>
-
-<pre class="brush: css">/*
+```css hidden
+/*
  * COLOR PICKER TOOL
  */
 
@@ -226,11 +220,11 @@ translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 	width: 93px;
 }
 
-.ui-color-picker .input[data-topic="alpha"] &gt; .name {
+.ui-color-picker .input[data-topic="alpha"] > .name {
 	width: 60px;
 }
 
-.ui-color-picker .input[data-topic="alpha"] &gt; input {
+.ui-color-picker .input[data-topic="alpha"] > input {
 	float: right;
 }
 
@@ -240,11 +234,11 @@ translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 	margin: 6px 8px 0 0;
 }
 
-.ui-color-picker .input[data-topic="hexa"] &gt; .name {
+.ui-color-picker .input[data-topic="hexa"] > .name {
 	display: none;
 }
 
-.ui-color-picker .input[data-topic="hexa"] &gt; input {
+.ui-color-picker .input[data-topic="hexa"] > input {
 	width: 90px;
 	height: 24px;
 	padding: 2px 0;
@@ -321,7 +315,7 @@ translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 
 /* Input Slider */
 
-.ui-input-slider &gt; input {
+.ui-input-slider > input {
 	margin: 0;
 	padding: 0;
 	width: 50px;
@@ -615,7 +609,7 @@ body {
 	cursor: pointer;
 }
 
-#controls .switch &gt; * {
+#controls .switch > * {
 	width: 50%;
 	padding: 2px 0;
 	background-color: #EEE;
@@ -716,7 +710,7 @@ body {
 	line-height: 30px;
 }
 
-#color-info .property &gt; * {
+#color-info .property > * {
 	float: left;
 }
 
@@ -798,7 +792,7 @@ body {
 	transition: all 0.5s;
 }
 
-#color-palette .container &gt; * {
+#color-palette .container > * {
 	float: left;
 }
 
@@ -838,11 +832,11 @@ body {
 #color-palette .controls {
 }
 
-#color-palette .controls &gt; * {
+#color-palette .controls > * {
 	float: left;
 }
 
-#color-palette .controls &gt; *:hover {
+#color-palette .controls > *:hover {
 	cursor: pointer;
 }
 
@@ -958,7 +952,7 @@ body {
 	z-index: 2;
 }
 
-#canvas .sample:hover &gt; * {
+#canvas .sample:hover > * {
 	cursor: pointer;
 	display: block !important;
 }
@@ -1043,12 +1037,10 @@ body {
 	top: 0;
 	opacity: 1;
 }
+```
 
-</pre>
-
-<h3 id="JavaScript_Content">JavaScript Content</h3>
-
-<pre class="brush: js">'use strict';
+```js hidden
+'use strict';
 
 var UIColorPicker = (function UIColorPicker() {
 
@@ -1152,8 +1144,8 @@ var UIColorPicker = (function UIColorPicker() {
 	/*========== Methods to set Color Properties ==========*/
 
 	Color.prototype.isValidRGBValue = function isValidRGBValue(value) {
-		return (typeof(value) === 'number' &amp;&amp; isNaN(value) === false &amp;&amp;
-			value &gt;= 0 &amp;&amp; value &lt;= 255);
+		return (typeof(value) === 'number' && isNaN(value) === false &&
+			value >= 0 && value <= 255);
 	};
 
 	Color.prototype.setRGBA = function setRGBA(red, green, blue, alpha) {
@@ -1196,7 +1188,7 @@ var UIColorPicker = (function UIColorPicker() {
 
 	Color.prototype.setHue = function setHue(value) {
 		if (typeof(value) !== 'number' || isNaN(value) === true ||
-			value &lt; 0 || value &gt; 359)
+			value < 0 || value > 359)
 			return;
 		this.hue = value;
 		this.updateRGB();
@@ -1204,7 +1196,7 @@ var UIColorPicker = (function UIColorPicker() {
 
 	Color.prototype.setSaturation = function setSaturation(value) {
 		if (typeof(value) !== 'number' || isNaN(value) === true ||
-			value &lt; 0 || value &gt; 100)
+			value < 0 || value > 100)
 			return;
 		this.saturation = value;
 		this.updateRGB();
@@ -1212,7 +1204,7 @@ var UIColorPicker = (function UIColorPicker() {
 
 	Color.prototype.setValue = function setValue(value) {
 		if (typeof(value) !== 'number' || isNaN(value) === true ||
-			value &lt; 0 || value &gt; 100)
+			value < 0 || value > 100)
 			return;
 		this.value = value;
 		this.HSVtoRGB();
@@ -1220,7 +1212,7 @@ var UIColorPicker = (function UIColorPicker() {
 
 	Color.prototype.setLightness = function setLightness(value) {
 		if (typeof(value) !== 'number' || isNaN(value) === true ||
-			value &lt; 0 || value &gt; 100)
+			value < 0 || value > 100)
 			return;
 		this.lightness = value;
 		this.HSLtoRGB();
@@ -1303,12 +1295,12 @@ var UIColorPicker = (function UIColorPicker() {
 		X = (X + m) * precision | 0;
 		m = m * precision | 0;
 
-		if (H &gt;= 0 &amp;&amp; H &lt; 1) {	this.setRGBA(C, X, m);	return; }
-		if (H &gt;= 1 &amp;&amp; H &lt; 2) {	this.setRGBA(X, C, m);	return; }
-		if (H &gt;= 2 &amp;&amp; H &lt; 3) {	this.setRGBA(m, C, X);	return; }
-		if (H &gt;= 3 &amp;&amp; H &lt; 4) {	this.setRGBA(m, X, C);	return; }
-		if (H &gt;= 4 &amp;&amp; H &lt; 5) {	this.setRGBA(X, m, C);	return; }
-		if (H &gt;= 5 &amp;&amp; H &lt; 6) {	this.setRGBA(C, m, X);	return; }
+		if (H >= 0 && H < 1) {	this.setRGBA(C, X, m);	return; }
+		if (H >= 1 && H < 2) {	this.setRGBA(X, C, m);	return; }
+		if (H >= 2 && H < 3) {	this.setRGBA(m, C, X);	return; }
+		if (H >= 3 && H < 4) {	this.setRGBA(m, X, C);	return; }
+		if (H >= 4 && H < 5) {	this.setRGBA(X, m, C);	return; }
+		if (H >= 5 && H < 6) {	this.setRGBA(C, m, X);	return; }
 	};
 
 	Color.prototype.HSLtoRGB = function HSLtoRGB() {
@@ -1324,12 +1316,12 @@ var UIColorPicker = (function UIColorPicker() {
 		X = (X + m) * precision | 0;
 		m = m * precision | 0;
 
-		if (H &gt;= 0 &amp;&amp; H &lt; 1) {	this.setRGBA(C, X, m);	return; }
-		if (H &gt;= 1 &amp;&amp; H &lt; 2) {	this.setRGBA(X, C, m);	return; }
-		if (H &gt;= 2 &amp;&amp; H &lt; 3) {	this.setRGBA(m, C, X);	return; }
-		if (H &gt;= 3 &amp;&amp; H &lt; 4) {	this.setRGBA(m, X, C);	return; }
-		if (H &gt;= 4 &amp;&amp; H &lt; 5) {	this.setRGBA(X, m, C);	return; }
-		if (H &gt;= 5 &amp;&amp; H &lt; 6) {	this.setRGBA(C, m, X);	return; }
+		if (H >= 0 && H < 1) {	this.setRGBA(C, X, m);	return; }
+		if (H >= 1 && H < 2) {	this.setRGBA(X, C, m);	return; }
+		if (H >= 2 && H < 3) {	this.setRGBA(m, C, X);	return; }
+		if (H >= 3 && H < 4) {	this.setRGBA(m, X, C);	return; }
+		if (H >= 4 && H < 5) {	this.setRGBA(X, m, C);	return; }
+		if (H >= 5 && H < 6) {	this.setRGBA(C, m, X);	return; }
 	};
 
 	Color.prototype.RGBtoHSV = function RGBtoHSV() {
@@ -1351,7 +1343,7 @@ var UIColorPicker = (function UIColorPicker() {
 		}
 
 		this.hue = 60 * hue | 0;
-		if (this.hue &lt; 0) this.hue += 360;
+		if (this.hue < 0) this.hue += 360;
 		this.saturation = (saturation * 100) | 0;
 		this.value = (cmax * 100) | 0;
 	};
@@ -1377,7 +1369,7 @@ var UIColorPicker = (function UIColorPicker() {
 		}
 
 		this.hue = 60 * hue | 0;
-		if (this.hue &lt; 0) this.hue += 360;
+		if (this.hue < 0) this.hue += 360;
 		this.saturation = (saturation * 100) | 0;
 		this.lightness = (lightness * 100) | 0;
 	};
@@ -1388,9 +1380,9 @@ var UIColorPicker = (function UIColorPicker() {
 		var r = this.r.toString(16);
 		var g = this.g.toString(16);
 		var b = this.b.toString(16);
-		if (this.r &lt; 16) r = '0' + r;
-		if (this.g &lt; 16) g = '0' + g;
-		if (this.b &lt; 16) b = '0' + b;
+		if (this.r < 16) r = '0' + r;
+		if (this.g < 16) g = '0' + g;
+		if (this.b < 16) b = '0' + b;
 		var value = '#' + r + g + b;
 		return value.toUpperCase();
 	};
@@ -1611,10 +1603,10 @@ var UIColorPicker = (function UIColorPicker() {
 		// width and height should be the same
 		var size = this.picking_area.clientWidth;
 
-		if (x &gt; size) x = size;
-		if (y &gt; size) y = size;
-		if (x &lt; 0) x = 0;
-		if (y &lt; 0) y = 0;
+		if (x > size) x = size;
+		if (y > size) y = size;
+		if (x < 0) x = 0;
+		if (y < 0) y = 0;
 
 		var value = 100 - (y * 100 / size) | 0;
 		var saturation = x * 100 / size | 0;
@@ -1646,10 +1638,10 @@ var UIColorPicker = (function UIColorPicker() {
 		var x = e.pageX - this.hue_area.offsetLeft;
 		var width = this.hue_area.clientWidth;
 
-		if (x &lt; 0) x = 0;
-		if (x &gt; width) x = width;
+		if (x < 0) x = 0;
+		if (x > width) x = width;
 
-		// TODO 360 =&gt; 359
+		// TODO 360 => 359
 		var hue = ((359 * x) / width) | 0;
 		// if (hue === 360) hue = 359;
 
@@ -1661,8 +1653,8 @@ var UIColorPicker = (function UIColorPicker() {
 		var x = e.pageX - this.alpha_area.offsetLeft;
 		var width = this.alpha_area.clientWidth;
 
-		if (x &lt; 0) x = 0;
-		if (x &gt; width) x = width;
+		if (x < 0) x = 0;
+		if (x > width) x = width;
 
 		this.color.a = (x / width).toFixed(2);
 
@@ -1815,8 +1807,8 @@ var UIColorPicker = (function UIColorPicker() {
 	ColorPicker.prototype.inputChangeAlpha = function inputChangeAlpha(e) {
 		var value = parseFloat(e.target.value);
 
-		if (typeof value === 'number' &amp;&amp; isNaN(value) === false &amp;&amp;
-			value &gt;= 0 &amp;&amp; value &lt;= 1)
+		if (typeof value === 'number' && isNaN(value) === false &&
+			value >= 0 && value <= 1)
 			this.color.a = value.toFixed(2);
 
 		e.target.value = this.color.a;
@@ -1880,7 +1872,7 @@ var UIColorPicker = (function UIColorPicker() {
 	};
 
 	ColorPicker.prototype.setPickerMode = function setPickerMode(mode) {
-		if (mode !== 'HSV' &amp;&amp; mode !== 'HSL')
+		if (mode !== 'HSV' && mode !== 'HSL')
 			return;
 
 		this.picker_mode = mode;
@@ -1931,7 +1923,7 @@ var UIColorPicker = (function UIColorPicker() {
 	var init = function init() {
 		var elem = document.querySelectorAll('.ui-color-picker');
 		var size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			new ColorPicker(elem[i]);
 	};
 
@@ -2033,12 +2025,12 @@ var InputSliderManager = (function InputSliderManager() {
 
 		this.min = isNaN(min) ? 0 : min;
 		this.max = isNaN(max) ? 100 : max;
-		this.precision = precision &gt;= 0 ? precision : 0;
-		this.step = step &lt; 0 || isNaN(step) ? 1 : step.toFixed(precision);
+		this.precision = precision >= 0 ? precision : 0;
+		this.step = step < 0 || isNaN(step) ? 1 : step.toFixed(precision);
 		this.topic = topic;
 		this.node = node;
 		this.unit = unit === null ? '' : unit;
-		this.sensivity = sensivity &gt; 0 ? sensivity : 5;
+		this.sensivity = sensivity > 0 ? sensivity : 5;
 		value = isNaN(value) ? this.min : value;
 
 		var input = new InputComponent(this);
@@ -2075,8 +2067,8 @@ var InputSliderManager = (function InputSliderManager() {
 
 		value = parseFloat(value.toFixed(slider.precision));
 
-		if (value &gt; slider.max) value = slider.max;
-		if (value &lt; slider.min)	value = slider.min;
+		if (value > slider.max) value = slider.max;
+		if (value < slider.min)	value = slider.min;
 
 		slider.value = value;
 		slider.node.setAttribute('data-value', value);
@@ -2147,7 +2139,7 @@ var InputSliderManager = (function InputSliderManager() {
 
 		value = value | 0;
 
-		slider.sensivity = value &gt; 0 ? value : 5;
+		slider.sensivity = value > 0 ? value : 5;
 	};
 
 	var getNode =  function getNode(topic) {
@@ -2176,7 +2168,7 @@ var InputSliderManager = (function InputSliderManager() {
 	var notify = function notify() {
 		if (subscribers[this.topic] === undefined)
 			return;
-		for (var i = 0; i &lt; subscribers[this.topic].length; i++)
+		for (var i = 0; i < subscribers[this.topic].length; i++)
 			subscribers[this.topic][i](this.value);
 	};
 
@@ -2195,7 +2187,7 @@ var InputSliderManager = (function InputSliderManager() {
 	var init = function init() {
 		var elem = document.querySelectorAll('.ui-input-slider');
 		var size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			new InputSlider(elem[i]);
 	};
 
@@ -2261,9 +2253,9 @@ var ColorPickerTool = (function ColorPickerTool() {
 			};
 
 			var mouseMove = function mouseMove(e) {
-				if (action &gt;= 0)
+				if (action >= 0)
 					elem.style.width = e.clientX - valueX + 'px';
-				if (action &lt;= 0)
+				if (action <= 0)
 					elem.style.height = e.clientY - valueY + 'px';
 			};
 
@@ -2382,14 +2374,14 @@ var ColorPickerTool = (function ColorPickerTool() {
 		ColorSample.prototype.updateHue = function updateHue(color, degree, steps) {
 			this.color.copy(color);
 			var hue = (steps * degree + this.color.hue) % 360;
-			if (hue &lt; 0) hue += 360;
+			if (hue < 0) hue += 360;
 			this.color.setHue(hue);
 			this.updateBgColor();
 		};
 
 		ColorSample.prototype.updateSaturation = function updateSaturation(color, value, steps) {
 			var saturation = color.saturation + value * steps;
-			if (saturation &lt;= 0) {
+			if (saturation <= 0) {
 				this.node.setAttribute('data-hidden', 'true');
 				return;
 			}
@@ -2402,7 +2394,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 
 		ColorSample.prototype.updateLightness = function updateLightness(color, value, steps) {
 			var lightness = color.lightness + value * steps;
-			if (lightness &lt;= 0) {
+			if (lightness <= 0) {
 				this.node.setAttribute('data-hidden', 'true');
 				return;
 			}
@@ -2414,7 +2406,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 
 		ColorSample.prototype.updateBrightness = function updateBrightness(color, value, steps) {
 			var brightness = color.value + value * steps;
-			if (brightness &lt;= 0) {
+			if (brightness <= 0) {
 				this.node.setAttribute('data-hidden', 'true');
 				return;
 			}
@@ -2426,7 +2418,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 
 		ColorSample.prototype.updateAlpha = function updateAlpha(color, value, steps) {
 			var alpha = parseFloat(color.a) + value * steps;
-			if (alpha &lt;= 0) {
+			if (alpha <= 0) {
 				this.node.setAttribute('data-hidden', 'true');
 				return;
 			}
@@ -2472,7 +2464,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 				lock.setAttribute('locked-state', this.locked);
 			}.bind(this));
 
-			for(var i = 0; i &lt; size; i++) {
+			for(var i = 0; i < size; i++) {
 				var sample = new ColorSample();
 				this.samples.push(sample);
 				palette.appendChild(sample.node);
@@ -2489,7 +2481,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 				if (palette.locked === true)
 					return;
 
-				for(var i = 0; i &lt; 12; i++) {
+				for(var i = 0; i < 12; i++) {
 					palette.samples[i].updateHue(color, 30, i);
 				}
 			});
@@ -2504,7 +2496,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 				if (palette.locked === true)
 					return;
 
-				for(var i = 0; i &lt; 11; i++) {
+				for(var i = 0; i < 11; i++) {
 					palette.samples[i].updateSaturation(color, -10, i);
 				}
 			});
@@ -2522,12 +2514,12 @@ var ColorPickerTool = (function ColorPickerTool() {
 
 				if(color.format === 'HSL') {
 					palette.title.textContent = 'Lightness';
-					for(var i = 0; i &lt; 11; i++)
+					for(var i = 0; i < 11; i++)
 						palette.samples[i].updateLightness(color, -10, i);
 				}
 				else {
 					palette.title.textContent = 'Value';
-					for(var i = 0; i &lt; 11; i++)
+					for(var i = 0; i < 11; i++)
 						palette.samples[i].updateBrightness(color, -10, i);
 				}
 			});
@@ -2552,7 +2544,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 				if (palette.locked === true)
 					return;
 
-				for(var i = 0; i &lt; 10; i++) {
+				for(var i = 0; i < 10; i++) {
 					palette.samples[i].updateAlpha(color, -0.1, i);
 				}
 			});
@@ -2561,7 +2553,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 		};
 
 		var getSampleColor = function getSampleColor(id) {
-			if (samples[id] !== undefined &amp;&amp; samples[id]!== null)
+			if (samples[id] !== undefined && samples[id]!== null)
 				return new Color(samples[id].color);
 		};
 
@@ -2740,7 +2732,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 
 			var index = 0;
 			var nr = samples.length;
-			for (var i=0; i &lt; nr; i++)
+			for (var i=0; i < nr; i++)
 				if (samples[i] !== null) {
 					samples[i].updatePosition(index);
 					index++;
@@ -2788,7 +2780,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 		};
 
 		var getSampleColor = function getSampleColor(id) {
-			if (samples[id] !== undefined &amp;&amp; samples[id]!== null)
+			if (samples[id] !== undefined && samples[id]!== null)
 				return new Color(samples[id].color);
 		};
 
@@ -2845,7 +2837,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 
 			AddSampleButton.init();
 
-			for (var i=0; i&lt;16; i++) {
+			for (var i=0; i<16; i++) {
 				var sample = new ColorSample();
 				container.appendChild(sample.node);
 			}
@@ -3209,29 +3201,25 @@ var ColorPickerTool = (function ColorPickerTool() {
 	};
 
 })();
+```
 
-</pre>
-</div>
+{{CSSRef}}
 
-<p>{{CSSRef}}</p>
+这个工具让创建、修改和测试自定义网页颜色变得简单。它还可以轻松实现多种 CSS 支持的[颜色格式](/zh-CN/docs/Web/CSS/color_value)之间的转换，包括：HEXA、RGB（Red/Green/Blue）和 HSL（Hue/Saturation/Lightness）。其中 RGB（rgba）和 HSL（hsla）格式也支持控制阿尔法通道（alpha channel）
 
-<p>这个工具让创建、修改和测试自定义网页颜色变得简单。它还可以轻松实现多种 CSS 支持的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value">颜色格式</a>之间的转换，包括：HEXA、RGB（Red/Green/Blue）和 HSL（Hue/Saturation/Lightness）。其中 RGB（rgba）和 HSL（hsla）格式也支持控制阿尔法通道（alpha channel）</p>
+随着调整，每种颜色都呈现为三种标准 CSS 格式；此外，基于当前选择的颜色，会创建一个 HSL 和 HSV 调色板和阿尔法通道。滴管风格的色彩选择框能在 HSL 或 HSV 格式间切换。你也可以拖拽多种颜色至色彩选择框的底部使它们重叠，来测试它们的混合效果。调整它们的相对 Z 值，可以使它们前后移动。
 
-<p>随着调整，每种颜色都呈现为三种标准 CSS 格式；此外，基于当前选择的颜色，会创建一个 HSL 和 HSV 调色板和阿尔法通道。滴管风格的色彩选择框能在 HSL 或 HSV 格式间切换。你也可以拖拽多种颜色至色彩选择框的底部使它们重叠，来测试它们的混合效果。调整它们的相对 Z 值，可以使它们前后移动。</p>
+这个工具将帮助你找到最理想的 CSS 颜色应用到你的[HTML](/zh-CN/docs/Web/HTML)。
 
-<p>这个工具将帮助你找到最理想的 CSS 颜色应用到你的<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML">HTML</a>。</p>
+{{ EmbedLiveSample('ColorPicker_Tool', '100%', '900') }}
+除非另有说明，否则你所创建生成的颜色可以应用到 CSS 和 HTML 的任何一个地方。
 
-<p>{{ EmbedLiveSample('ColorPicker_Tool', '100%', '900') }}<br>
- 除非另有说明，否则你所创建生成的颜色可以应用到 CSS 和 HTML 的任何一个地方。</p>
+## 其他参考
 
-<h2 id="其他参考">其他参考</h2>
+更多关于颜色使用，参看：
 
-<p>更多关于颜色使用，参看：</p>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Applying_color">通过 CSS 将颜色（color）应用到 HTML 元素上</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">基础文本（text）和字体（font）样式</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">通过 CSS 编辑边界（border）样式</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">通过 CSS 改变背景（background）样式</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">颜色及颜色对比（col</a><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">or contrast）</a></li>
-</ul>
+- [通过 CSS 将颜色（color）应用到 HTML 元素上](/zh-CN/docs/Web/HTML/Applying_color)
+- [基础文本（text）和字体（font）样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+- [通过 CSS 编辑边界（border）样式](/zh-CN/docs/Learn/CSS/Styling_boxes/Backgrounds)
+- [通过 CSS 改变背景（background）样式](/zh-CN/docs/Learn/CSS/Styling_boxes/Backgrounds)
+- [颜色及颜色对比（col](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)[or contrast）](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)

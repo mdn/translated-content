@@ -7,61 +7,59 @@ tags:
   - CSS 属性
 translation_of: Web/CSS/padding-bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 属性 <strong>padding-bottom</strong> 是指一个元素在内边距区域（padding area）中下方的高度。内边距（padding）是指一个元素的内容和边框之间的区域。和外边距（margin）不同，内边距（padding）是不允许有负值的。内边距（padding）可以用四个值声明一个元素的四个方向的内边距（paddings），这是一种 CSS 缩写属性。</p>
+CSS 属性 **padding-bottom** 是指一个元素在内边距区域（padding area）中下方的高度。内边距（padding）是指一个元素的内容和边框之间的区域。和外边距（margin）不同，内边距（padding）是不允许有负值的。内边距（padding）可以用四个值声明一个元素的四个方向的内边距（paddings），这是一种 CSS 缩写属性。
 
-<p><img alt="The effect of the CSS padding-bottom property on the element box" src="/files/4109/padding-bottom.svg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![The effect of the CSS padding-bottom property on the element box](/files/4109/padding-bottom.svg)
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 padding-bottom: 0.5em;
 padding-bottom: 0;
 padding-bottom: 2cm;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 padding-bottom: 10%;
 
 /* Global values */
 padding-bottom: inherit;
 padding-bottom: initial;
 padding-bottom: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("length")}}</dt>
- <dd>当内边距（padding）大小是一个固定单位数值的时候，一定不能为负数。</dd>
- <dt> </dt>
- <dt>{{cssxref("percentage")}}</dt>
- <dd>当内边距（padding）是一个百分比的时候，百分比是和本身包含的元素的宽度有关的，同样一定不能为负数。</dd>
-</dl>
+- {{cssxref("length")}}
+  - : 当内边距（padding）大小是一个固定单位数值的时候，一定不能为负数。
+- {{cssxref("percentage")}}
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+  - : 当内边距（padding）是一个百分比的时候，百分比是和本身包含的元素的宽度有关的，同样一定不能为负数。
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="eval">.content { padding-bottom: 5%; }
+```
+.content { padding-bottom: 5%; }
 .sidebox { padding-bottom: 10px; }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.padding-bottom")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en/CSS/box_model">CSS Box Model</a></li>
- <li>The {{cssxref("padding")}} shorthand property can be used to set paddings on all four sides of an element with a single declaration: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, <code>padding-bottom</code>, and {{cssxref("padding-left")}}.</li>
-</ul>
+- [CSS Box Model](/en/CSS/box_model)
+- The {{cssxref("padding")}} shorthand property can be used to set paddings on all four sides of an element with a single declaration: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, `padding-bottom`, and {{cssxref("padding-left")}}.

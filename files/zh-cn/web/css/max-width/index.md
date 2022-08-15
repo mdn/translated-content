@@ -3,22 +3,23 @@ title: max-width
 slug: Web/CSS/max-width
 translation_of: Web/CSS/max-width
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p>max-width 属性用来给元素设置最大宽度值。定义了 max-width 的元素会在达到 max-width 值之后避免进一步按照 width 属性设置变大。</p>
+max-width 属性用来给元素设置最大宽度值。定义了 max-width 的元素会在达到 max-width 值之后避免进一步按照 width 属性设置变大。
 
-<p>{{ Cssxref("max-width") }} 会覆盖{{cssxref("width")}}设置，但 {{ Cssxref("min-width") }}设置会覆盖 {{ Cssxref("max-width") }}.</p>
+{{ Cssxref("max-width") }} 会覆盖{{cssxref("width")}}设置，但 {{ Cssxref("min-width") }}设置会覆盖 {{ Cssxref("max-width") }}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css">/* &lt;长度&gt; 值 */
+```css
+/* <长度> 值 */
 max-width: 3.5em;
 
-/* &lt;百分比&gt; 值 */
+/* <百分比> 值 */
 max-width: 75%;
 
 /* 关键字 */
@@ -32,65 +33,64 @@ max-width: fill-available;
 max-width: inherit;
 max-width: initial;
 max-width: unset;
-</pre>
+```
 
-<h3 id="可选值">可选值</h3>
+### 可选值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>元素未设置最大值</dd>
- <dt><code>&lt;长度&gt;</code></dt>
- <dd>请参阅{{cssxref("&lt;length&gt;")}}所提及的长度单位。</dd>
- <dt><code>&lt;百分比&gt;</code></dt>
- <dd>以父级块级容器宽度的百分比{{cssxref("&lt;percentage&gt;")}}作为最大宽度。</dd>
- <dt><code>max-content</code>{{experimental_inline()}}</dt>
- <dd>The intrinsic preferred width.</dd>
- <dt><code>min-content</code>{{experimental_inline()}}</dt>
- <dd>The intrinsic minimum width.</dd>
- <dt><code>fill-available</code>{{experimental_inline()}}</dt>
- <dd>The containing block width minus horizontal margin, border, and padding. Some browsers implement an ancient name for this keyword, <code>available</code>.</dd>
- <dt><code>fit-content</code>{{experimental_inline()}}</dt>
- <dd>与<code>max-content等价.</code></dd>
-</dl>
+- `none`
+  - : 元素未设置最大值
+- `<长度>`
+  - : 请参阅{{cssxref("&lt;length&gt;")}}所提及的长度单位。
+- `<百分比>`
+  - : 以父级块级容器宽度的百分比{{cssxref("&lt;percentage&gt;")}}作为最大宽度。
+- `max-content`{{experimental_inline()}}
+  - : The intrinsic preferred width.
+- `min-content`{{experimental_inline()}}
+  - : The intrinsic minimum width.
+- `fill-available`{{experimental_inline()}}
+  - : The containing block width minus horizontal margin, border, and padding. Some browsers implement an ancient name for this keyword, `available`.
+- `fit-content`{{experimental_inline()}}
+  - : 与`max-content等价.`
 
-<h3 id="形式语法">形式语法</h3>
+### 形式语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在下面的例子里，id 为"child"的&lt;div&gt;元素设置了 width 值，使它的宽度与父元素"parent"相等 (100%),但是 max-width 值限制了它最大宽度只能到 150px.</p>
+在下面的例子里，id 为"child"的\<div>元素设置了 width 值，使它的宽度与父元素"parent"相等 (100%),但是 max-width 值限制了它最大宽度只能到 150px.
 
-<div id="basic-max-width-demo">
-<pre class="brush: html">&lt;div id="parent"&gt;
-    &lt;div id="child"&gt;
+```html
+<div id="parent">
+    <div id="child">
         The Mozilla community produces a lot of great software.
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </div>
+</div>
+```
 
-<pre class="brush: css">#parent { width: 300px; }
+```css
+#parent { width: 300px; }
 
 #child  { background: gold;
           width: 100%;
           max-width: 150px;
         }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}</p>
+{{EmbedLiveSample("basic-max-width-demo", 350, 100)}}
 
-<p>fit-content 值可以用来给元素设置基于其内容大小的宽度：</p>
+fit-content 值可以用来给元素设置基于其内容大小的宽度：
 
-<div id="fit-content-demo">
-<pre class="brush: html" style="display: none;">&lt;div id="parent"&gt;
-    &lt;div id="child"&gt;
+```html
+<div id="parent">
+    <div id="child">
         Child Text
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </div>
+</div>
+```
 
-<pre class="brush: css">#parent { background: lightblue;
+```css
+#parent { background: lightblue;
           width: 300px; }
 
 #child  { background: gold;
@@ -98,22 +98,19 @@ max-width: unset;
           max-width: -moz-fit-content;
           max-width: -webkit-fit-content;
         }
-</pre>
-</div>
+```
 
-<p>{{EmbedLiveSample("fit-content-demo", 400, 100)}}</p>
+{{EmbedLiveSample("fit-content-demo", 400, 100)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.max-width")}}
 
-<h2 id="参考链接">参考链接</h2>
+## 参考链接
 
-<ul>
- <li>{{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}</li>
- <li><a href="/en/CSS/box_model">The box model</a>, {{ Cssxref("box-sizing") }}</li>
-</ul>
+- {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
+- [The box model](/en/CSS/box_model), {{ Cssxref("box-sizing") }}

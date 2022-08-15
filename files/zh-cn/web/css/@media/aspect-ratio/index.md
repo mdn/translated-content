@@ -3,28 +3,30 @@ title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
 translation_of: Web/CSS/@media/aspect-ratio
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><strong><code>aspect-ratio</code></strong> <a href="/zh-CN/docs/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">媒体属性</a> 可以用来测试 {{glossary("viewport")}} 的宽高比。</p>
+**`aspect-ratio`** [CSS](/zh-CN/docs/CSS) [媒体属性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 可以用来测试 {{glossary("viewport")}} 的宽高比。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>宽高比属性被指定为{{cssxref("&lt;ratio&gt;")}}值来代表 viewport 的宽高比。其为一个范围，这意味着你可以使用<strong><code>min-aspect-ratio</code></strong>和<code><strong>max-aspect-ratio</strong></code>分别查询最小和最大的值。</p>
+宽高比属性被指定为{{cssxref("&lt;ratio&gt;")}}值来代表 viewport 的宽高比。其为一个范围，这意味着你可以使用**`min-aspect-ratio`**和**`max-aspect-ratio`**分别查询最小和最大的值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的例子包含一个 {{htmlElement("iframe")}}，拥有它自身的 viewport。调整的 <code>&lt;iframe&gt;</code> 宽高来观察 <code>aspect-ratio</code> 的变化。</p>
+下面的例子包含一个 {{htmlElement("iframe")}}，拥有它自身的 viewport。调整的 `<iframe>` 宽高来观察 `aspect-ratio` 的变化。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div id='inner'&gt;
+```html
+<div id='inner'>
   Watch this element as you resize your viewport's width and height.
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">/* 最小宽高比 */
+```css
+/* 最小宽高比 */
 @media (min-aspect-ratio: 8/5) {
   div {
     background: #9af; /* blue */
@@ -44,18 +46,16 @@ translation_of: Web/CSS/@media/aspect-ratio
     background: #f9a; /* red */
   }
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('示例', '300px', '400px') }}</p>
+{{ EmbedLiveSample('示例', '300px', '400px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.at-rules.media.aspect-ratio")}}</p>
+{{Compat("css.at-rules.media.aspect-ratio")}}

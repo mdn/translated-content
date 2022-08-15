@@ -4,19 +4,18 @@ slug: Web/CSS/offset
 translation_of: Web/CSS/offset
 original_slug: Web/CSS/偏移
 ---
-<div>{{SeeCompatTable}}{{CSSRef}}</div>
+{{SeeCompatTable}}{{CSSRef}}
 
-<p>这个 <strong><code>offset</code></strong> 是 CSS 属性的快速属性动画元素沿着定义的路径。</p>
+这个 **`offset`** 是 CSS 属性的快速属性动画元素沿着定义的路径。
 
-<div class="note">
-<p>早期版本 规格 属性叫做 <code>motion</code>.</p>
-</div>
+> **备注：** 早期版本 规格 属性叫做 `motion`.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* 偏移位置 */
+```css
+/* 偏移位置 */
 offset: auto
 offset: 10px 30px;
 offset: none;
@@ -36,22 +35,24 @@ offset: url(circle.svg) 50px 20deg;
 offset: ray(45deg closest-side) / 40px 20px;
 offset: url(arc.svg) 2cm / 0.5cm 3cm;
 offset: url(arc.svg) 30deg / 50px 100px;
-</pre>
+```
 
-<h3 id="语法形式">语法形式</h3>
+### 语法形式
 
 {{csssyntax}}
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="offsetElement"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="offsetElement"></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@keyframes move {
+```css
+@keyframes move {
   from {
     offset-distance: 0%;
   }
@@ -68,17 +69,16 @@ offset: url(arc.svg) 30deg / 50px 100px;
   offset: path("M 100 100 L 300 100 L 200 300 z") auto;
   animation: move 3s linear infinite;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 350, 350)}}</p>
+{{EmbedLiveSample("Example", 350, 350)}}
 
-<h2 id="规格">规格</h2>
+## 规格
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-<p>{{Compat("css.properties.offset")}}</p>
+{{Compat("css.properties.offset")}}

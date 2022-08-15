@@ -7,21 +7,14 @@ tags:
   - Transforms
 translation_of: Web/CSS/transform
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}CSS**`transform`**属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS 视觉格式化模型的坐标空间来实现的。{{EmbedInteractiveExample("pages/css/transform.html")}}
 
-<div>CSS<strong><code>transform</code></strong>属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS 视觉格式化模型的坐标空间来实现的。</div>
+> **警告：** 只能转换由盒模型定位的元素。根据经验，如果元素具有`display: block`，则由盒模型定位元素。
 
-<div>{{EmbedInteractiveExample("pages/css/transform.html")}}</div>
+## 语法
 
-
-
-<div class="warning">
-<p>只能转换由盒模型定位的元素。根据经验，如果元素具有<code>display: block</code>，则由盒模型定位元素。</p>
-</div>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 transform: none;
 
 /* Function values */
@@ -54,58 +47,58 @@ transform: translateX(10px) rotate(10deg) translateY(5px);
 transform: inherit;
 transform: initial;
 transform: unset;
-</pre>
+```
 
-<p><code>transform</code>属性可以指定为关键字值<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform$edit#none">none</a></code> 或一个或多个<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform$edit#%3Ctransform-function%3E">&lt;transform-function&gt;</a></code>值。</p>
+`transform`属性可以指定为关键字值[`none`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform$edit#none) 或一个或多个[`<transform-function>`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform$edit#%3Ctransform-function%3E)值。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("&lt;transform-function&gt;")}}</dt>
- <dd>要应用的一个或多个 CSS 变换函数。变换函数按从左到右的顺序相乘，这意味着复合变换按从右到左的顺序有效地应用。</dd>
- <dt><code>none</code></dt>
- <dd>不应用任何变换。</dd>
-</dl>
+- {{cssxref("&lt;transform-function&gt;")}}
+  - : 要应用的一个或多个 CSS 变换函数。变换函数按从左到右的顺序相乘，这意味着复合变换按从右到左的顺序有效地应用。
+- `none`
+  - : 不应用任何变换。
 
-<h3 id="语法格式">语法格式</h3>
+### 语法格式
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html"><code>&lt;div&gt;Transformed element&lt;/div&gt;</code></pre>
+```html
+<div>Transformed element</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css"><code>div {
+```css
+div {
   border: solid red;
   transform: translate(30px, 20px) rotate(20deg);
   width: 140px;
   height: 60px;
-}</code></pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例", "400", "160")}}</p>
+{{EmbedLiveSample("示例", "400", "160")}}
 
-<p>有关更多示例，请参阅<a href="/zh-CN/docs/Web/CSS/CSS_Transitions">使用 CSS 变换</a>和{{cssxref("&lt;transform-function&gt;")}}。</p>
+有关更多示例，请参阅[使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_Transitions)和{{cssxref("&lt;transform-function&gt;")}}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.transform")}}</p>
+{{Compat("css.properties.transform")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
- <li>{{cssxref("&lt;transform-function&gt;")}} data type</li>
- <li>A cross-browser 2D <a href="https://louisremi.github.io/jquery.transform.js/">transform plugin for jQuery</a></li>
-</ul>
+- [Using CSS transforms](/zh-CN/docs/CSS/Using_CSS_transforms)
+- {{cssxref("&lt;transform-function&gt;")}} data type
+- A cross-browser 2D [transform plugin for jQuery](https://louisremi.github.io/jquery.transform.js/)

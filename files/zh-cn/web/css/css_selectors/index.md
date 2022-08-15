@@ -13,92 +13,78 @@ tags:
   - 选择器
 translation_of: Web/CSS/CSS_Selectors
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><strong>CSS 选择器</strong>规定了 CSS 规则会被应用到哪些元素上。</p>
+**CSS 选择器**规定了 CSS 规则会被应用到哪些元素上。
 
-<div class="blockIndicator note">
-<p><strong>备注</strong>：暂时没有能够选择 父元素、父元素的同级元素，或 父元素的同级元素的子元素 的选择器或者组合器。</p>
-</div>
+> **备注：** 暂时没有能够选择 父元素、父元素的同级元素，或 父元素的同级元素的子元素 的选择器或者组合器。
 
-<h2 id="基本选择器">基本选择器</h2>
+## 基本选择器
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/CSS/Universal_selectors">通用选择器</a>（<a href="/zh-CN/docs/Web/CSS/Universal_selectors">Universal selector</a>）</dt>
- <dd>选择所有元素。（可选）可以将其限制为特定的名称空间或所有名称空间。<br>
- <strong>语法：</strong><code>*</code> <code><var>ns</var>|*</code> <code>*|*</code><br>
- <strong>例子：</strong><code>*</code> 将匹配文档的所有元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Type_selectors">元素选择器</a>（<a href="/zh-CN/docs/Web/CSS/Type_selectors">Type selector</a>）</dt>
- <dd>按照给定的节点名称，选择所有匹配的元素。<br>
- <strong>语法：</strong><code><var>elementname</var></code><br>
- <strong>例子：</strong><code>input</code> 匹配任何 {{HTMLElement( "input" )}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Class_selectors">类选择器</a>（<a href="/zh-CN/docs/Web/CSS/Class_selectors">Class selector</a>）</dt>
- <dd>按照给定的 <code>class</code> 属性的值，选择所有匹配的元素。<br>
- <strong>语法</strong>：<code>.<var>classname</var></code><br>
- <strong>例子</strong>：<code>.index</code> 匹配任何 <code>class</code> 属性中含有 "index" 类的元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/ID_selectors">ID 选择器</a>（<a href="/zh-CN/docs/Web/CSS/ID_selectors">ID selector</a>）</dt>
- <dd>按照 <code>id</code> 属性选择一个与之匹配的元素。需要注意的是，一个文档中，每个 ID 属性都应当是唯一的。<br>
- <strong>语法：</strong><code>#<var>idname</var></code><br>
- <strong>例子：</strong><code>#toc</code> 匹配 ID 为 "toc" 的元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器</a>（<a href="/zh-CN/docs/Web/CSS/Attribute_selectors">Attribute selector</a>）</dt>
- <dd>按照给定的属性，选择所有匹配的元素。<br>
- <strong>语法：</strong><code>[<var>attr</var>]</code> <code>[<var>attr</var>=<var>value</var>]</code> <code>[<var>attr</var>~=<var>value</var>]</code> <code>[<var>attr</var>|=<var>value</var>]</code> <code>[<var>attr</var>^=<var>value</var>]</code> <code>[<var>attr</var>$=<var>value</var>]</code> <code>[<var>attr</var>*=<var>value</var>]</code><br>
- <strong>例子：</strong><code>[autoplay]</code> 选择所有具有 <code>autoplay</code> 属性的元素（不论这个属性的值是什么）。</dd>
-</dl>
+- [通用选择器](/zh-CN/docs/Web/CSS/Universal_selectors)（[Universal selector](/zh-CN/docs/Web/CSS/Universal_selectors)）
+  - : 选择所有元素。（可选）可以将其限制为特定的名称空间或所有名称空间。
+    **语法：**`*` `ns|*` `*|*`
+    **例子：**`*` 将匹配文档的所有元素。
+- [元素选择器](/zh-CN/docs/Web/CSS/Type_selectors)（[Type selector](/zh-CN/docs/Web/CSS/Type_selectors)）
+  - : 按照给定的节点名称，选择所有匹配的元素。
+    **语法：**`elementname`
+    **例子：**`input` 匹配任何 {{HTMLElement( "input" )}} 元素。
+- [类选择器](/zh-CN/docs/Web/CSS/Class_selectors)（[Class selector](/zh-CN/docs/Web/CSS/Class_selectors)）
+  - : 按照给定的 `class` 属性的值，选择所有匹配的元素。
+    **语法**：`.classname`
+    **例子**：`.index` 匹配任何 `class` 属性中含有 "index" 类的元素。
+- [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors)（[ID selector](/zh-CN/docs/Web/CSS/ID_selectors)）
+  - : 按照 `id` 属性选择一个与之匹配的元素。需要注意的是，一个文档中，每个 ID 属性都应当是唯一的。
+    **语法：**`#idname`
+    **例子：**`#toc` 匹配 ID 为 "toc" 的元素。
+- [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)（[Attribute selector](/zh-CN/docs/Web/CSS/Attribute_selectors)）
+  - : 按照给定的属性，选择所有匹配的元素。
+    **语法：**`[attr]` `[attr=value]` `[attr~=value]` `[attr|=value]` `[attr^=value]` `[attr$=value]` `[attr*=value]`
+    **例子：**`[autoplay]` 选择所有具有 `autoplay` 属性的元素（不论这个属性的值是什么）。
 
-<h2 id="分组选择器（Grouping_selectors）">分组选择器（Grouping selectors）</h2>
+## 分组选择器（Grouping selectors）
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/CSS/Selector_list">选择器列表</a>（<a href="/zh-CN/docs/Web/CSS/Selector_list">Selector list</a>）</dt>
- <dd><code>,</code> 是将不同的选择器组合在一起的方法，它选择所有能被列表中的任意一个选择器选中的节点。<br>
- <strong>语法</strong>：<code style="white-space: nowrap;"><var>A</var>, <var>B</var></code><br>
- <strong>示例</strong>：<code>div, span</code> 会同时匹配 {{HTMLElement("span")}} 元素和 {{HTMLElement("div")}} 元素。</dd>
-</dl>
+- [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)（[Selector list](/zh-CN/docs/Web/CSS/Selector_list)）
+  - : `,` 是将不同的选择器组合在一起的方法，它选择所有能被列表中的任意一个选择器选中的节点。
+    **语法**：`A, B`
+    **示例**：`div, span` 会同时匹配 {{HTMLElement("span")}} 元素和 {{HTMLElement("div")}} 元素。
 
-<h2 id="组合器（Combinators）">组合器（Combinators）</h2>
+## 组合器（Combinators）
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/CSS/Descendant_selectors">后代组合器</a>（<a href="/zh-CN/docs/Web/CSS/Descendant_combinator">Descendant combinator</a>）</dt>
- <dd><code> </code>（空格）组合器选择前一个元素的后代节点。<br>
- <strong>语法：</strong><code style="white-space: nowrap;"><var>A</var> <var>B</var></code><br>
- <strong>例子：</strong><code>div span</code> 匹配所有位于任意 {{HTMLElement("div")}} 元素之内的 {{HTMLElement("span")}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Child_selectors">直接子代组合器</a>（<a href="/zh-CN/docs/Web/CSS/Child_combinator">Child combinator</a>）</dt>
- <dd><code>&gt;</code> 组合器选择前一个元素的直接子代的节点。<br>
- <strong>语法</strong>：<code><var>A</var> &gt; <var>B</var></code><br>
- <strong>例子</strong>：<code>ul &gt; li</code> 匹配直接嵌套在 {{HTMLElement("ul")}} 元素内的所有 {{HTMLElement("li")}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/General_sibling_selectors">一般兄弟组合器</a>（<a href="/zh-CN/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a>）</dt>
- <dd><code>~</code> 组合器选择兄弟元素，也就是说，后一个节点在前一个节点后面的任意位置，并且共享同一个父节点。<br>
- <strong>语法</strong>：<code><var>A</var> ~ <var>B</var></code><br>
- <strong>例子</strong>：<code>p ~ span</code> 匹配同一父元素下，{{HTMLElement("p")}} 元素后的所有 {{HTMLElement("span")}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Adjacent_sibling_selectors">紧邻兄弟组合器</a>（<a href="/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a>）</dt>
- <dd><code>+</code> 组合器选择相邻元素，即后一个元素紧跟在前一个之后，并且共享同一个父节点。<br>
- <strong>语法：</strong><code><var>A</var> + <var>B</var></code><br>
- <strong>例子：</strong><code>h2 + p</code> 会匹配所有紧邻在 {{HTMLElement("h2")}} 元素后的 {{HTMLElement("p")}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Column_combinator">列组合器</a>（<a href="/en-US/docs/Web/CSS/Column_combinator">Column combinator</a>）{{Experimental_Inline}}</dt>
- <dd><code>||</code> 组合器选择属于某个表格行的节点。<br>
- <strong>语法：</strong> <code style="white-space: nowrap;"><var>A</var> || <var>B</var></code><br>
- <strong>例子：</strong> <code>col || td</code> 会匹配所有 {{HTMLElement("col")}} 作用域内的 {{HTMLElement("td")}} 元素。</dd>
-</dl>
+- [后代组合器](/zh-CN/docs/Web/CSS/Descendant_selectors)（[Descendant combinator](/zh-CN/docs/Web/CSS/Descendant_combinator)）
+  - : ``（空格）组合器选择前一个元素的后代节点。 **语法：**`A B` **例子：**`div span` 匹配所有位于任意 {{HTMLElement("div")}} 元素之内的 {{HTMLElement("span")}} 元素。
+- [直接子代组合器](/zh-CN/docs/Web/CSS/Child_selectors)（[Child combinator](/zh-CN/docs/Web/CSS/Child_combinator)）
+  - : `>` 组合器选择前一个元素的直接子代的节点。
+    **语法**：`A > B`
+    **例子**：`ul > li` 匹配直接嵌套在 {{HTMLElement("ul")}} 元素内的所有 {{HTMLElement("li")}} 元素。
+- [一般兄弟组合器](/zh-CN/docs/Web/CSS/General_sibling_selectors)（[General sibling combinator](/zh-CN/docs/Web/CSS/General_sibling_combinator)）
+  - : `~` 组合器选择兄弟元素，也就是说，后一个节点在前一个节点后面的任意位置，并且共享同一个父节点。
+    **语法**：`A ~ B`
+    **例子**：`p ~ span` 匹配同一父元素下，{{HTMLElement("p")}} 元素后的所有 {{HTMLElement("span")}} 元素。
+- [紧邻兄弟组合器](/zh-CN/docs/Web/CSS/Adjacent_sibling_selectors)（[Adjacent sibling combinator](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator)）
+  - : `+` 组合器选择相邻元素，即后一个元素紧跟在前一个之后，并且共享同一个父节点。
+    **语法：**`A + B`
+    **例子：**`h2 + p` 会匹配所有紧邻在 {{HTMLElement("h2")}} 元素后的 {{HTMLElement("p")}} 元素。
+- [列组合器](/zh-CN/docs/Web/CSS/Column_combinator)（[Column combinator](/zh-CN/docs/Web/CSS/Column_combinator)）{{Experimental_Inline}}
+  - : `||` 组合器选择属于某个表格行的节点。
+    **语法：** `A || B`
+    **例子：** `col || td` 会匹配所有 {{HTMLElement("col")}} 作用域内的 {{HTMLElement("td")}} 元素。
 
-<h2 id="伪选择器（Pseudo）">伪选择器（Pseudo）</h2>
+## 伪选择器（Pseudo）
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a></dt>
- <dd><code>:</code> 伪选择器支持按照未被包含在文档树中的状态信息来选择元素。<br>
- <strong>例子：</strong><code>a:visited</code> 匹配所有曾被访问过的 {{HTMLElement("a")}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a></dt>
- <dd><code>::</code> 伪选择器用于表示无法用 HTML 语义表达的实体。<br>
- <strong>例子：</strong><code>p::first-line</code> 匹配所有 {{HTMLElement("p")}} 元素的第一行。</dd>
-</dl>
+- [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
+  - : `:` 伪选择器支持按照未被包含在文档树中的状态信息来选择元素。
+    **例子：**`a:visited` 匹配所有曾被访问过的 {{HTMLElement("a")}} 元素。
+- [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
+  - : `::` 伪选择器用于表示无法用 HTML 语义表达的实体。
+    **例子：**`p::first-line` 匹配所有 {{HTMLElement("p")}} 元素的第一行。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p><a href="/zh-CN/docs/Web/CSS/Pseudo-classes#Specifications">伪类</a>和<a href="/zh-CN/docs/Web/CSS/Pseudo-elements#Specifications">伪元素</a>的规范位于各自的页面中。</p>
+[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#Specifications)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements#Specifications)的规范位于各自的页面中。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/Specificity">CSS 优先级</a></li>
-</ul>
+- [CSS 优先级](/zh-CN/docs/Web/CSS/Specificity)
